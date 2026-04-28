@@ -36,7 +36,7 @@ quality_assessed: 2026-04-26
 
 ## Cut profile
 
-Beef liver is one of the densest, most nutrient-rich offal cuts in the carcass — a chocolate-coloured, finely-textured mass of hepatocyte tissue with very little connective tissue and a thin filmy capsule. Its iron-and-mineral profile gives a pronounced metallic flavour that mellows dramatically with brief soaking in milk before cooking — a step common to most European traditions. Pan frying is the classic method: 6–8 mm slices flashed in hot fat, browned hard on both sides, and pulled before the centre passes about 65 °C. Above that temperature the proteins seize and the slice turns chalky and grey-brown; the visual cue for correctly-pulled liver is a faint pink line through the centre. Carryover is short and small (1–2 °C) given the thin slices, but the slices continue cooking on the plate — serving immediately is essential.
+Beef liver is the hepatic organ — a large, lobed, dark-chocolate-coloured mass of hepatocyte tissue with an extremely fine, smooth texture and a thin connective-tissue capsule (*Glisson's capsule*). It is one of the most nutrient-dense foods available: extremely high in iron (haem iron), vitamin A, B12, zinc, and copper. The intense metallic flavour, characteristic of the high iron and bile compound content, is reduced by soaking in milk for 30–60 minutes before cooking — a near-universal preparatory step in European traditions. Retail beef liver is sold as thin slices (6–10 mm), which is the correct format for pan frying. Fat content is very low; the thin slices have minimal carryover (1–2 °C) and must be pulled before the centre passes 65 °C to avoid chalky grey-brown dry meat.
 
 
 ## Research files by cooking method

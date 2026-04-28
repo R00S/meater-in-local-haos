@@ -10,7 +10,10 @@ cut_type: Other / Offal
 # Beef Liver × Pan Sear — Recipe Temperature Research
 
 ## Cut profile
-Beef liver is one of the densest, most nutrient-rich offal cuts in the carcass — a chocolate-coloured, finely-textured mass of hepatocyte tissue with very little connective tissue and a thin filmy capsule. Its iron-and-mineral profile gives a pronounced metallic flavour that mellows dramatically with brief soaking in milk before cooking — a step common to most European traditions. Pan frying is the classic method: 6–8 mm slices flashed in hot fat, browned hard on both sides, and pulled before the centre passes about 65 °C. Above that temperature the proteins seize and the slice turns chalky and grey-brown; the visual cue for correctly-pulled liver is a faint pink line through the centre. Carryover is short and small (1–2 °C) given the thin slices, but the slices continue cooking on the plate — serving immediately is essential.
+
+Pan searing liver (without onions) is the faster, more minimalist method — and the approach used in South Asian, East African, and South American traditions where bold spice marinades replace the European onion-sauce approach. Very hot, dry or lightly oiled cast-iron or stainless pan; liver slices (6–8 mm) go in to sear hard without moving for 2 minutes per side. The goal is a deep brown Maillard crust on both faces with a faint pink interior — the same visual target as the pan-fry method but achieved without the onions and deglazing step.
+
+MEATER probe inserted sideways through the thickest point of the slice. Pull at 62–63 °C; carryover 1–2 °C. The slices are best served directly from the pan — no resting required since there is nothing for the thin slices to redistribute.
 
 ## Source recipes
 

@@ -42,7 +42,7 @@ quality_assessed: 2026-04-26
 
 ## Cut profile
 
-Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.
+Pork belly (*svinekam* / *flæskesteg*, Danish; *Schweinebauch*, German; *pancetta tesa*, Italian; *lardo*, cured Italian; *bak kwa*, Chinese) is the ventral thoracic wall — the layered structure of skin, subcutaneous fat, *serratus ventralis* muscle, more fat, intercostal fat, and the *transversus abdominis* muscle layers. This layered structure is the defining anatomical feature: alternating lean muscle and fat sheets running in a horizontal laminar pattern across the cross-section. Skin-on pork belly has a thick dermis (*svær* / *Schwarte*) that — when properly scored and salted — blisters and crackles into one of the most texturally complex foods in all of cooking. Belly fat content is high (20–35%), making it one of the most forgiving pork cuts — it retains moisture at wide temperature ranges (65–80 °C).
 
 
 ## Research files by cooking method
