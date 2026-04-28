@@ -126,3 +126,40 @@ Two root causes:
 - `www/kitchen-cooking-panel.js` — auto-generated (PANEL_VERSION 342 → 343)
 - `docs/update-select-cut-menu-0.6.5.x.md` — this entry
 
+---
+
+## v0.6.5.3 — 2026-04-28
+
+### CHORES only
+
+- Bumped version 0.6.5.2 → 0.6.5.3.
+- No USER_GUIDE changes needed: no user-facing features changed.
+- No `_openHelp(...)` anchor changes needed: all anchors verified against current
+  USER_GUIDE headings — all match.
+
+### Context: Grok comparison artefact
+
+`step1_extracted_profiles_swedish.json` was committed to the branch root by the repo
+owner for comparison purposes ("For comparison only"). It contains Grok's attempt at
+Swedish `## Styckesprofil` translations, structured as a JSON map of entry number →
+`{profile, files[]}`.
+
+A side-by-side evaluation was performed:
+- Grok's profiles are **longer and more detailed** (anatomy breakdowns, sub-muscle
+  names, probe placement), and the Swedish prose reads naturally.
+- Grok has a factual naming error: "Nötbog" for beef shank (bog = shoulder/chuck,
+  not shank — correct is "Oxlägg").
+- Copilot (this branch) uses correct Swedish anatomical names but has one significant
+  error: "Entrecôtebiff" for the sirloin steak (entrecôte = ribeye in Swedish; sirloin
+  should be "ryggbiff").
+- Neither set is error-free; Grok profiles are richer in detail overall.
+
+The JSON file is a dev artefact only — no markdown or code was modified by this commit.
+
+### Files changed
+
+- `manifest.json` — version 0.6.5.2 → 0.6.5.3
+- `__init__.py` — version bump + Last Change
+- `const.py` — Last Change
+- `www/kitchen-cooking-panel.js` — auto-generated (PANEL_VERSION 343 → 344)
+- `docs/update-select-cut-menu-0.6.5.x.md` — this entry

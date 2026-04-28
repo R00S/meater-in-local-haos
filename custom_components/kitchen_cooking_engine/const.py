@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 28 Apr 2026, 17:40 UTC
-Last Change: v0.6.5.2 - i18n: apply ## Styckesprofil SV translations to all 534 cut markdown files; CUT_PROFILES_SV now 163 entries
+Last Change: v0.6.5.3 - chores: bump version; add Grok SV-translation comparison file step1_extracted_profiles_swedish.json (dev artefact, no functional change)
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "343"
+PANEL_VERSION = "344"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

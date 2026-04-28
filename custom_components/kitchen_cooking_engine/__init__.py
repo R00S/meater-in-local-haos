@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 28 Apr 2026, 17:40 UTC
-Last Change: v0.6.5.2 - i18n: apply ## Styckesprofil SV translations to all 534 cut markdown files; CUT_PROFILES_SV now 163 entries
+Last Change: v0.6.5.3 - chores: bump version; add Grok SV-translation comparison file step1_extracted_profiles_swedish.json (dev artefact, no functional change)
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -72,7 +72,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.6.5.2"
+__version__ = "0.6.5.3"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
