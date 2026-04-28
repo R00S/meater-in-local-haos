@@ -22,9 +22,11 @@ cut_type: Dark Meat
 
 ## Cut profile
 
-Chicken drumsticks (the lower portion of the leg) are dark-meat cuts with more fat and connective tissue than breast, making them forgiving and flavourful. High-heat oven roasting renders the fat, crisps the skin, and breaks down collagen for juicy, tender meat. USDA minimum is 165 °F (74 °C), but dark meat is best at 170–175 °F (77–79 °C) where collagen converts to gelatin.
+High-heat oven roasting is the most accessible method for chicken drumsticks at home. The hot oven (200–230 °C) simultaneously renders the subcutaneous fat under the skin, drives off surface moisture, and browns the exterior via the Maillard reaction — producing golden, crispy skin and juicy dark meat. Unlike breast meat, drumsticks do not dry out at 165 °F (74 °C) because the higher fat and collagen content keeps the meat moist; most recipes explicitly target 170–175 °F (77–79 °C) to convert more collagen to gelatin.
 
-Target internal temperature: **170–175 °F (77–79 °C)** — recommended for dark meat drumsticks
+Key technique: pat dry before coating (surface moisture blocks crisping), arrange on a wire rack or well-spaced on the sheet pan (steam trapped under the drumstick prevents the underside from crisping), and allow 5 minutes resting after removing from the oven.
+
+The MEATER probe should be inserted along the bone axis from the meatier end, directed into the centre of the largest muscle mass, avoiding the bone. Carryover from a 220–230 °C oven is 2–4 °C.
 
 ## Source recipes
 
