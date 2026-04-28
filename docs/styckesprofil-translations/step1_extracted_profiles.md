@@ -7426,7 +7426,7 @@ Whole garlic heads (*Allium sativum*) oven-roasted are entirely transformed: the
 
 **SV:**
 
-*(to translate)*
+Hela vitlökshuvuden (*Allium sativum*) ugnsrostade transformeras fullständigt: den skarpa, stickande råa allicinsmaken mjuknar under 35–50 minuter vid 180–200 °C till en söt, nötig, spredbar pasta. Skär toppen av huvudet, ringla olivolja, linda i folie. Klar när kärnan är djupt gyllenbrun och mjuk. Innertemperatur: 90–95 °C i kärnorna.
 
 ---
 
@@ -7441,7 +7441,7 @@ Whole onions (*Allium cepa*) on the grill are a traditional technique in culture
 
 **SV:**
 
-*(to translate)*
+Hela lökar (*Allium cepa*) på grillen är en traditionell teknik i kulturer så skilda som Argentina (Mallmanns *cebollas enteras a las brasas*), Mexiko och Japan. Löken placeras direkt på glöden i 30–40 minuter, ytterskinnet förkolnas men insidan mjuknar till en söt, silkeslen massa. Serveras direkt från skalet.
 
 ---
 
@@ -7456,7 +7456,7 @@ Whole or halved onions (*Allium cepa*) oven-roasted concentrate the natural suga
 
 **SV:**
 
-*(to translate)*
+Hela eller halverade lökar (*Allium cepa*) ugnsrostade koncentrerar de naturliga sockerarterna, mjukar de fibrosa lagren och karameliserar snittytan. Vid 180–200 °C i 40–60 minuter halverade, eller 60–80 minuter hela. Klar när genomgående mjuk och djupt gyllenbrun.
 
 ---
 
@@ -7472,7 +7472,7 @@ Onions (*Allium cepa*) sautéed as a roasted-style preparation — thick wedges,
 
 **SV:**
 
-*(to translate)*
+Lökar (*Allium cepa*) sauterade som en ugnsrostningsstil — tjocka klyftor, stora rundlar eller kvartsade halvor sauterade vid medel-hög värme — befinner sig i territoriet mellan karameliserad lök och ugnsrostad lök. 10–15 minuter vid hög värme ger gyllenbrun yta och halvmjuk insida.
 
 ---
 
@@ -7487,7 +7487,7 @@ Corn on the cob (*Zea mays*) in the air fryer achieves results similar to oven-r
 
 **SV:**
 
-*(to translate)*
+Majs på kolven (*Zea mays*) i airfryern uppnår resultat liknande ugnsstekning men på 12–16 minuter snarare än 25–30, med den cirkulerande heta luften som krisprnar de yttre kärnorna. Pensla med smör och salt. Klar när kärnorna är lätt gyllenbruna och köttiga.
 
 ---
 
@@ -7503,7 +7503,7 @@ Corn on the cob (*Zea mays*) boiled is the simplest and most globally common coo
 
 **SV:**
 
-*(to translate)*
+Majs på kolven (*Zea mays*) kokt är den enklaste och mest globalt vanliga tillagningsmetoden. Kokning uppnår jämn värmedistribution som mjukar alla kärnor på en gång. Koka i osaltat vatten 5–8 minuter. Klar när kärnorna är mjuka och söta.
 
 ---
 
@@ -7518,7 +7518,7 @@ Corn on the cob (*Zea mays*) grilled develops a deeply caramelised, smoky exteri
 
 **SV:**
 
-*(to translate)*
+Majs på kolven (*Zea mays*) grillad utvecklar en djupt karameliserad, rökig exteriör när skalen avlägsnas och den bara kolven kontaktar grillgallret. De naturliga sockerarterna karameliseras på 10–15 minuter vid hög direktvärme med vändning var 2:a minut.
 
 ---
 
@@ -7533,7 +7533,7 @@ Corn on the cob (*Zea mays*) oven-roasted in its husk, or stripped and oven-roas
 
 **SV:**
 
-*(to translate)*
+Majs på kolven (*Zea mays*) ugnsrostad i sina skal, eller skalad och ugnsrostad vid hög värme, ger ett varsamt resultat än grillning men koncentrerar fortfarande de naturliga sockerarterna. Ugn vid 200–220 °C i 20–25 minuter. Klar när kärnorna är lätt gyllenbruna.
 
 ---
 
@@ -7548,7 +7548,7 @@ Sweet corn on the cob (*Zea mays saccharata*, husked or husk-on) is a dense rack
 
 **SV:**
 
-*(to translate)*
+Söt majs på kolven (*Zea mays saccharata*, skalad eller med skal) ångkokas i 8–12 minuter ovanför kokande vatten. Ångkokning bevarar fler vattenlösliga vitaminer och den naturliga sötan jämfört med kokning. Klar när kärnorna är möra och söta.
 
 ---
 
@@ -7564,7 +7564,7 @@ Cabbage (*Brassica oleracea* var. *capitata*) braised is one of the most globall
 
 **SV:**
 
-*(to translate)*
+Kål (*Brassica oleracea* var. *capitata*) bräserad är en av de mest globalt spridda grönsaksberedningarna: tyskt Rotkohl, franskt *chou braisé*, polskt *kapusta duszona*, indisk *patta gobi ki sabzi*. Tillagas i vätska (vin, fond, ättika) vid 85–95 °C i 1–2 timmar. Klar när mjuk och genomsmakad.
 
 ---
 
@@ -7579,7 +7579,7 @@ Cabbage (*Brassica oleracea* var. *capitata*) on the grill is most dramatic as t
 
 **SV:**
 
-*(to translate)*
+Kål (*Brassica oleracea* var. *capitata*) på grillen är mest dramatisk som tjocka klyftor eller halvor placerade direkt på heta grillgallret, och utvecklar förkolnade ytterblad och en krämig insida. Grilla med olja i 5–6 minuter per sida vid direkt hög värme.
 
 ---
 
@@ -7594,7 +7594,7 @@ Cabbage (*Brassica oleracea* var. *capitata*) is a dense, layered head of overla
 
 **SV:**
 
-*(to translate)*
+Kål (*Brassica oleracea* var. *capitata*) är ett tätt, laminerat huvud av överlappande blad. Skivad i klyftor med stammen intakt håller bladen samman under ugnsstekning. Ugn vid 200–220 °C i 30–40 minuter. Klar när ytterbladen är förkolnade och insidan mjuk.
 
 ---
 
@@ -7609,7 +7609,7 @@ Cabbage (*Brassica oleracea* var. *capitata*) sautéed is one of the fastest and
 
 **SV:**
 
-*(to translate)*
+Kål (*Brassica oleracea* var. *capitata*) sauterad är en av de snabbaste och mest smakrika beredningarna: strimlad eller tunt skivad kål i en het, olja-smord panna vissnar och sötar sig under 8–12 minuter. Klar när mjuk och lätt gyllenbrun.
 
 ---
 
@@ -7624,7 +7624,7 @@ Cauliflower (*Brassica oleracea* var. *botrytis*) in the air fryer achieves cris
 
 **SV:**
 
-*(to translate)*
+Blomkål (*Brassica oleracea* var. *botrytis*) i airfryern ger knaprig, gyllenbrun blomma på 12–16 minuter — snabbare än en konventionell ugn och med mindre olja. Dela i buketter, olja, krydda. Klar när gyllenbrun och crispy.
 
 ---
 
@@ -7639,7 +7639,7 @@ Cauliflower (*Brassica oleracea* var. *botrytis*) oven-roasted in florets at 200
 
 **SV:**
 
-*(to translate)*
+Blomkål (*Brassica oleracea* var. *botrytis*) ugnsrostad i buketter vid 200–230 °C utvecklar gyllenbruna, karameliserade ytor och en mör, nötig insida på 20–30 minuter. Denna metod transformerar blomkålens milda, lite starka råsmak.
 
 ---
 
@@ -7655,7 +7655,7 @@ Cauliflower (*Brassica oleracea* var. *botrytis*) is a tightly clustered head of
 
 **SV:**
 
-*(to translate)*
+Blomkål (*Brassica oleracea* var. *botrytis*) är ett tätt klustring av omogna blomknoppar fästa på en tjock fibrös stam. Sauteras i het olja-smord panna i 8–12 minuter. Klar när gyllenbrun och genomstekt.
 
 ---
 
@@ -7670,7 +7670,7 @@ Cauliflower (*Brassica oleracea* var. *botrytis*) steamed preserves more of the 
 
 **SV:**
 
-*(to translate)*
+Blomkål (*Brassica oleracea* var. *botrytis*) ångad bevarar fler av glukosinolat-föreningarna (som har hälsofördelar) och den delikata smaken jämfört med kokning. Ånga i 10–15 minuter (buketter) ovanför kokande vatten. Klar när genomstekt och mjuk men inte mosig.
 
 ---
 
@@ -7685,7 +7685,7 @@ Whole-roasted cauliflower (*Brassica oleracea* var. *botrytis*) has become one o
 
 **SV:**
 
-*(to translate)*
+Helrostad blomkål (*Brassica oleracea* var. *botrytis*) har blivit ett av de moderna internationella matlagningens signatur-vegetabiliska showpieces. Koka först i saltat vatten 10 min, pensla med kryddsmör, rosta vid 200–220 °C i 40–50 minuter. Klar när djupt gyllenbrun på alla sidor.
 
 ---
 
@@ -7700,7 +7700,7 @@ Eggplant (*Solanum melongena*) in the air fryer follows the same principle as ov
 
 **SV:**
 
-*(to translate)*
+Aubergine (*Solanum melongena*) i airfryern följer samma princip som ugnsstekning men i en mindre, snabbare miljö: konvektionsvärmen vid 200–210 °C dehydrerar svampstrukturen på 12–15 minuter. Skiv i 2 cm skivor, olja, krydda. Klar när gyllenbrun och mjuk.
 
 ---
 
@@ -7716,7 +7716,7 @@ Eggplant (*Solanum melongena*; UK aubergine) achieves its most dramatic transfor
 
 **SV:**
 
-*(to translate)*
+Aubergine (*Solanum melongena*) uppnår sin mest dramatiska transformation på levande låga eller riktigt het grill. Ytterskinnet förkolnas till ett sprött svart skal, insidan smälter till rökig, silkeslen pasta. Grilla hel direkt på flamman i 20–30 minuter, vändandes regelbundet.
 
 ---
 
@@ -7731,7 +7731,7 @@ Eggplant (*Solanum melongena*) oven-roasted develops rich, caramelised surfaces 
 
 **SV:**
 
-*(to translate)*
+Aubergine (*Solanum melongena*) ugnsrostad utvecklar rika, karameliserade ytor längs snittytor på skivor, halvor eller tärningar, medan insidan omvandlas från tät och svampig till silkeslen. Ugn vid 200–220 °C i 25–35 minuter. Klar när gyllenbrun och mjuk.
 
 ---
 
@@ -7746,7 +7746,7 @@ Eggplant (*Solanum melongena*; UK aubergine) is a sponge-textured fruit of the n
 
 **SV:**
 
-*(to translate)*
+Aubergine (*Solanum melongena*) är en svampstrukturerad frukt av nattskuggfamiljen. Pannsteks i rikligt het olja vid medel-hög värme i 4–5 minuter per sida. Klar när djupt gyllenbrun och genomstekt. Kräver mer olja än de flesta grönsaker.
 
 ---
 
@@ -7761,7 +7761,7 @@ Eggplant (*Solanum melongena*) sautéed in a hot, well-oiled pan produces intens
 
 **SV:**
 
-*(to translate)*
+Aubergine (*Solanum melongena*) sauterad i en het, väl-oljad panna ger intensivt brynnade, djupt smakrika bitar på bråkdelen av den tid som krävs för ugnsstekning. Sautera i 8–10 minuter vid hög värme. Klar när djupt gyllenbrun och mjuk.
 
 ---
 
@@ -7776,7 +7776,7 @@ Asparagus (*Asparagus officinalis*) on the grill develops an ideal contrast betw
 
 **SV:**
 
-*(to translate)*
+Sparris (*Asparagus officinalis*) på grillen utvecklar en idealisk kontrast mellan de förkolnade, lätt bittra topparna och de möra, söta stjälkarna. Grilla oljad sparris direkt på gallret vid hög värme i 4–6 minuter med vändning. Klar när lätt förkolnad med synliga grillränder.
 
 ---
 
@@ -7791,7 +7791,7 @@ Asparagus (*Asparagus officinalis*) oven-roasted at 200–220 °C achieves golde
 
 **SV:**
 
-*(to translate)*
+Sparris (*Asparagus officinalis*) ugnsrostad vid 200–220 °C uppnår gyllenknapriga toppar och möra stjälkar på 12–18 minuter. Den torra ugns-värmen koncentrerar smaken och karameliserar de naturliga sockerarterna. Olja generöst, rosta på ugnsplåt i ett lager.
 
 ---
 
@@ -7807,7 +7807,7 @@ Asparagus (*Asparagus officinalis*) sautéed in a hot pan is the fastest prepara
 
 **SV:**
 
-*(to translate)*
+Sparris (*Asparagus officinalis*) sauterad i het panna är den snabbaste beredningen: 4–6 minuter vid medel-hög till hög värme, vilket ger tender-crispy sparrisar med lätt brynnad yta. Klar när knäcks rent vid böjning och lätt gyllenbrun.
 
 ---
 
@@ -7822,7 +7822,7 @@ Asparagus (*Asparagus officinalis*) steamed is the most flavour-preserving metho
 
 **SV:**
 
-*(to translate)*
+Sparris (*Asparagus officinalis*) ångad är den mest smakbevarande metoden: sparrisarna vilar i en ångkogskorge ovanför kokande vatten i 4–8 minuter (beroende på tjocklek). Klar när knäcks rent vid böjning och ljusgröna.
 
 ---
 
@@ -7837,7 +7837,7 @@ Broccoli (*Brassica oleracea* var. *italica*) in the air fryer becomes golden-cr
 
 **SV:**
 
-*(to translate)*
+Broccoli (*Brassica oleracea* var. *italica*) i airfryern blir gyllenkrispa vid blomtopparna och mjuk vid stjälkarna på 10–14 minuter vid 190–200 °C — snabbare och krispigare än ugn. Dela i buketter, olja, krydda. Klar när topparna är gyllenbryna och krispa.
 
 ---
 
@@ -7852,7 +7852,7 @@ Broccoli (*Brassica oleracea* var. *italica*) oven-roasted at 200–220 °C deve
 
 **SV:**
 
-*(to translate)*
+Broccoli (*Brassica oleracea* var. *italica*) ugnsrostad vid 200–220 °C utvecklar gyllenbrun, karameliserade blomtoppar och möra stjälkar på 18–22 minuter. Nyckeln är maximal värme, generös olja och ett enda lager. Klar när topparna är djupt brynnade.
 
 ---
 
@@ -7868,7 +7868,7 @@ Broccoli (*Brassica oleracea* var. *italica*) sautéed in a hot pan — or stir-
 
 **SV:**
 
-*(to translate)*
+Broccoli (*Brassica oleracea* var. *italica*) sauterad i het panna — eller wokad — ger guldblåsiga buketter med karameliserad stjälk. Sautera i het olja i 6–8 minuter. Klar när lätt bränd i punkter och genomstekt men fortfarande krispig.
 
 ---
 
@@ -7883,7 +7883,7 @@ Broccoli (*Brassica oleracea* var. *italica*) steamed retains its vivid green co
 
 **SV:**
 
-*(to translate)*
+Broccoli (*Brassica oleracea* var. *italica*) ångad bevarar sin livliga gröna färg och glukosinolat-föreningarna bättre än kokning. Ånga i 6–8 minuter (buketter). Klar när genomstekt men fortfarande krispig och klargrön.
 
 ---
 
@@ -7898,7 +7898,7 @@ Brussels sprouts (*Brassica oleracea* var. *gemmifera*) in the air fryer become 
 
 **SV:**
 
-*(to translate)*
+Brysselkål (*Brassica oleracea* var. *gemmifera*) i airfryern blir intensivt karameliserad och gyllenbrun på snittytan på 12–16 minuter vid 190–200 °C. Halvera, olja, krydda. Klar när snittytan är djupt karameliserad och ytterbladen är knapriga.
 
 ---
 
@@ -7913,7 +7913,7 @@ Brussels sprouts (*Brassica oleracea* var. *gemmifera*) oven-roasted at 200–22
 
 **SV:**
 
-*(to translate)*
+Brysselkål (*Brassica oleracea* var. *gemmifera*) ugnsrostad vid 200–220 °C blir bränd, gyllenbrun och söt på 22–28 minuter. Halverad snittytan ned på ugnsplåt maximerar karameliseringen. Klar när snittytan är djupt gyllenbrun och ytterbladen knapriga.
 
 ---
 
@@ -7929,7 +7929,7 @@ Brussels sprouts (*Brassica oleracea* var. *gemmifera*) pan-fried (halved, cut-f
 
 **SV:**
 
-*(to translate)*
+Brysselkål (*Brassica oleracea* var. *gemmifera*) pannstekta (halverade, snittytan ned i het panna) är den snabbaste tekniken för intensivt karameliserade resultat: 8–12 minuter i het olja. Klar när snittytan är djupt gyllenbrun och kärnan genomstekt.
 
 ---
 
@@ -7944,7 +7944,7 @@ Brussels sprouts (*Brassica oleracea* var. *gemmifera*) sautéed — frequently 
 
 **SV:**
 
-*(to translate)*
+Brysselkål (*Brassica oleracea* var. *gemmifera*) sauterade — frekvent vänds i het panna — skiljer sig från pannstekning (hålls stilla för searing). Sauterade kål är typiskt trimmade men hela och kastas i het olja i 8–12 minuter. Klar när gyllenbrun och genomstekta.
 
 ---
 
@@ -7960,7 +7960,7 @@ Green beans (*Phaseolus vulgaris* and *Vigna unguiculata* — runner beans, Fren
 
 **SV:**
 
-*(to translate)*
+Gröna bönor (*Phaseolus vulgaris* och *Vigna unguiculata* — brytbönor, franska haricots verts, långa bönor) kokade är den klassiska beredningen i fransk haute cuisine, amerikansk husmanskost och asiatisk matlagning. Koka i saltat vatten i 3–6 minuter. Klar när genomstekta men fortfarande krispiga.
 
 ---
 
@@ -7975,7 +7975,7 @@ Green beans (*Phaseolus vulgaris*) oven-roasted at 200–220 °C caramelise and 
 
 **SV:**
 
-*(to translate)*
+Gröna bönor (*Phaseolus vulgaris*) ugnsrostade vid 200–220 °C karameliseras och blåsar på 18–22 minuter, och ger en koncentrerad, lätt bränd smak helt annorlunda från kokning. Olja generöst, ett lager. Klar när mörkgyllenbrun med brynnade fläckar.
 
 ---
 
@@ -7990,7 +7990,7 @@ Green beans (*Phaseolus vulgaris*) sautéed in a hot pan — Chinese *gan bian* 
 
 **SV:**
 
-*(to translate)*
+Gröna bönor (*Phaseolus vulgaris*) sauterade i het panna — kinesisk *gan bian* torrstekning, thai wok, indisk tadka-tossed eller franska *haricots verts sautés* — ger blåsiga, brynnade bönor. Sautera i 5–8 minuter vid hög värme. Klar när genomstekta och lätt brynnade.
 
 ---
 
@@ -8005,7 +8005,7 @@ Green beans (*Phaseolus vulgaris*) steamed retain their bright-green colour, wat
 
 **SV:**
 
-*(to translate)*
+Gröna bönor (*Phaseolus vulgaris*) ångade bevarar sin klargrön färg, vattenlösliga vitaminer och ren söt-grönsmak bättre än kokning. Ånga i 4–6 minuter. Klar när genomstekta men fortfarande knapriga och klargrön.
 
 ---
 
@@ -8021,7 +8021,7 @@ Spinach (*Spinacia oleracea*) sautéed wilts dramatically in 1–3 minutes in a 
 
 **SV:**
 
-*(to translate)*
+Spenat (*Spinacia oleracea*) sauterad vissnar dramatiskt på 1–3 minuter i het panna med lite olja eller smör — färsk spenat förlorar ungefär 90 % av volymen vid tillagning. Klar när fullständigt vissnad och ljusgrön. Salta efter vissning för att undvika för mycket vätska.
 
 ---
 
@@ -8036,7 +8036,7 @@ Spinach (*Spinacia oleracea*) steamed — held over boiling water in a steamer b
 
 **SV:**
 
-*(to translate)*
+Spenat (*Spinacia oleracea*) ångad — hålls ovanför kokande vatten i en ångkorg eller durkslag med lock — vissnar på 2–4 minuter och bevarar sin färg och näring bättre än kokning. Klar när fullständigt vissnad och ljusgrön.
 
 ---
 
@@ -8051,7 +8051,7 @@ Button mushrooms (*Agaricus bisporus*) in the air fryer roast in 8–12 minutes 
 
 **SV:**
 
-*(to translate)*
+Champinjoner (*Agaricus bisporus*) i airfryern rostas på 8–12 minuter vid 200 °C — väsentligt snabbare än ugn — med den cirkulerande heta luften som dehydrerar ytan. Hela eller halverade, lite olja, krydda. Klar när gyllenbrun och skrumpna.
 
 ---
 
@@ -8067,7 +8067,7 @@ Button mushrooms (*Agaricus bisporus*, immature white form) are roughly 92 % wat
 
 **SV:**
 
-*(to translate)*
+Champinjoner (*Agaricus bisporus*, omogen vit form) på het grill: ytvattnet avdunstar snabbt och de naturliga sockerarterna och proteinerna karameliseras i Maillard-reaktion. Grilla hela eller halverade i 4–6 minuter per sida. Klar när gyllenbrun med grillränder.
 
 ---
 
@@ -8082,7 +8082,7 @@ Button mushrooms (*Agaricus bisporus*) oven-roasted at 200–220 °C concentrate
 
 **SV:**
 
-*(to translate)*
+Champinjoner (*Agaricus bisporus*) ugnsrostade vid 200–220 °C koncentrerar sin smak dramatiskt när fuktigheten avdunstar. Omvandlas från runda vita sfärer till gyllenbrun, skrumpna, intensivt smakrika bitar på 20–25 minuter. Klar när djupt gyllenbrun och skrumpna.
 
 ---
 
@@ -8097,7 +8097,7 @@ Button mushrooms (*Agaricus bisporus*) sautéed in a very hot pan are the classi
 
 **SV:**
 
-*(to translate)*
+Champinjoner (*Agaricus bisporus*) sauterade i en riktigt het panna är den klassiska restaurangtekniken för maximal smakkoncentration. Nyckelprincipen: het torr panna utan lock, ett lager, rör sällan. Sautera i 5–8 minuter. Klar när djupt gyllenbrun och skrumpna utan ångad konsistens.
 
 ---
 
@@ -8113,7 +8113,7 @@ Portobello mushrooms (*Agaricus bisporus* — the same species as button mushroo
 
 **SV:**
 
-*(to translate)*
+Portabello-svampar (*Agaricus bisporus* — samma art som champinjoner, odlade till mognad) i airfryern tillagas på 12–16 minuter vid 190–200 °C. Deras stora hattar (8–15 cm) kräver lite mer tid. Klar när gyllenbrun och skrumpna med koncentrerad umami-smak.
 
 ---
 
@@ -8128,7 +8128,7 @@ Portobello mushrooms (*Agaricus bisporus* mature) on the grill develop a spectac
 
 **SV:**
 
-*(to translate)*
+Portabello-svampar (*Agaricus bisporus* mogna) på grillen utvecklar spektakulär rökig förkolning på hattens yta medan gälarna fångar och koncentrerar saften. Grilla hattssidan ned vid medel-hög värme i 4–5 minuter, vänd för 3–4 minuter. Klar när skrumpna och djupt brynnade.
 
 ---
 
@@ -8143,7 +8143,7 @@ Portobello mushrooms (*Agaricus bisporus* mature) oven-roasted at 200–220 °C 
 
 **SV:**
 
-*(to translate)*
+Portabello-svampar (*Agaricus bisporus* mogna) ugnsrostade vid 200–220 °C koncentrerar smaken dramatiskt. Placeras med gällsidan upp, olja, krydda. 20–25 minuter i ugn. Klar när djupt gyllenbrun och skrumpna med koncentrerad saft i gälarna.
 
 ---
 
@@ -8158,7 +8158,7 @@ Portobello mushrooms (*Agaricus bisporus* mature) sautéed whole or in thick sli
 
 **SV:**
 
-*(to translate)*
+Portabello-svampar (*Agaricus bisporus* mogna) sauterade hela eller i tjocka skivor utvecklar djup umami-rikedom i het panna — det täta köttet koncentreras när fukt avdunstar. Sautera i het olja i 5–8 minuter. Klar när djupt gyllenbrun och skrumpna.
 
 ---
 
@@ -8173,7 +8173,7 @@ Bell peppers (*Capsicum annuum*) in the air fryer roast beautifully in 12–18 m
 
 **SV:**
 
-*(to translate)*
+Paprika (*Capsicum annuum*) i airfryern rostas vackert på 12–18 minuter utan behov av högtrycksugnsförvärmning. Luften blåsar skinnet och karameliserar de naturliga sockerarterna. Skuren i strimlor eller hel, lite olja. Klar när skinnet är blåst och paprikapjäserna mjuka.
 
 ---
 
@@ -8188,7 +8188,7 @@ Bell peppers (*Capsicum annuum*) on the grill transform dramatically: the skin b
 
 **SV:**
 
-*(to translate)*
+Paprika (*Capsicum annuum*) på grillen transformeras dramatiskt: skinnet blåser och förkolnas, insidan mjuknar från krispig till silkeslen, och de naturliga sockerarterna koncentreras. Grilla hel direkt på flamman i 20–30 minuter tills helt förkolnad. Klar när fullständigt mjuk och skinnet lätt avlägsnas efter ångning i påse.
 
 ---
 
@@ -8203,7 +8203,7 @@ Bell peppers (*Capsicum annuum*) oven-roasted at 220–230 °C follow the same s
 
 **SV:**
 
-*(to translate)*
+Paprika (*Capsicum annuum*) ugnsrostad vid 220–230 °C följer samma skin-blåsningsförlopp som grillad paprika men med långsammare, jämnare värmedistribution. 30–40 minuter hel. Klar när skinnet blåst och paprikapjäserna genommjuka. Skinn avlägsnas lätt efter ångning i förseglad påse.
 
 ---
 
@@ -8219,7 +8219,7 @@ Bell peppers (*Capsicum annuum*) sautéed in strips or rings are one of the most
 
 **SV:**
 
-*(to translate)*
+Paprika (*Capsicum annuum*) sauterade i strimlor eller ringar är en av de mest globalt mångsidiga grönsaksberedningarna. Sautera i het olja i 8–12 minuter. Klar när mjuka och lätt gyllenbruna med karameliserade kanter.
 
 ---
 
@@ -8234,7 +8234,7 @@ Whole baked potato (*Solanum tuberosum*) in the air fryer achieves a crispy, sal
 
 **SV:**
 
-*(to translate)*
+Hel bakad potatis (*Solanum tuberosum*) i airfryern uppnår knaprig, salt yta och fluffig insida på 35–45 minuter vid 200 °C — väsentligt snabbare än konventionell ugn. Stick hål, olja, salt. Klar när skinnet är knaprig och insidan 98–100 °C.
 
 ---
 
@@ -8250,7 +8250,7 @@ Whole baked potato (*Solanum tuberosum*) in the conventional oven is the archety
 
 **SV:**
 
-*(to translate)*
+Hel bakad potatis (*Solanum tuberosum*) i konventionell ugn är arketypen av lång, långsam torrvärme-tillagning: 60–80 minuter vid 200–220 °C, vilket ger ett djupt knaprig, saltinkrustat skinn och en helt fluffig, ångande insida. Klar när insidan är 98–100 °C.
 
 ---
 
@@ -8266,7 +8266,7 @@ Whole beetroot (*Beta vulgaris*) oven-roasted, still in the skin, at 190–200 �
 
 **SV:**
 
-*(to translate)*
+Hel rödbeta (*Beta vulgaris*) ugnsrostad fortfarande i skalet vid 190–200 °C är den mest smakbevarande tekniken: skalet skyddar köttet från direkt värme, förhindrar fuktförlust och koncentrerar den naturliga sötan. 50–70 minuter beroende på storlek. Klar när genomstekt och lätt skrumpna; skalet avlägsnas enkelt efter tillagning.
 
 ---
 
@@ -8281,7 +8281,7 @@ Carrots (*Daucus carota*) in the air fryer become caramelised, golden, and sweet
 
 **SV:**
 
-*(to translate)*
+Morötter (*Daucus carota*) i airfryern blir karameliserade, gyllenbrun och söta på 15–20 minuter vid 190–200 °C — snabbare än ugnsstekning. Skiv i bitar, olja, krydda. Klar när gyllenbrun med karameliserade kanter och genomstekt.
 
 ---
 
@@ -8296,7 +8296,7 @@ Carrots (*Daucus carota*) oven-roasted at 200–220 °C develop intensely carame
 
 **SV:**
 
-*(to translate)*
+Morötter (*Daucus carota*) ugnsrostade vid 200–220 °C utvecklar intensivt karameliserade, gyllenbruna ytor på 25–35 minuter. De naturliga sockerarterna (6–8 g/100 g — högre än de flesta grönsaker) reagerar kraftigt med Maillard-reaktion. Klar när gyllenbrun och genomstekt.
 
 ---
 
@@ -8312,7 +8312,7 @@ Carrots (*Daucus carota*) sautéed in a hot pan — whether as Chinese stir-frie
 
 **SV:**
 
-*(to translate)*
+Morötter (*Daucus carota*) sauterade i het panna — kinesiska wokade matchsticks, japanska *kimpira gobo*-glassade rundlar, indisk tempering eller franska *carottes glacées* — ger karameliserade, söta morötter. Sautera i 6–10 minuter. Klar när gyllenbrun och genomstekt.
 
 ---
 
@@ -8328,7 +8328,7 @@ Parsnips (*Pastinaca sativa*) in the air fryer become golden, caramelised and cr
 
 **SV:**
 
-*(to translate)*
+Palsternacka (*Pastinaca sativa*) i airfryern blir gyllenbrun, karameliserad och krispig vid topparna på 16–20 minuter vid 190–200 °C — snabbare än ugnsstekning. Skär i klyftor, olja. Klar när gyllenbrun och genomstekt med karameliserade kanter.
 
 ---
 
@@ -8343,7 +8343,7 @@ Parsnips (*Pastinaca sativa*) oven-roasted at 190–210 °C become deeply carame
 
 **SV:**
 
-*(to translate)*
+Palsternacka (*Pastinaca sativa*) ugnsrostad vid 190–210 °C blir djupt karameliserad, gyllenbrun vid topparna och fluffig inuti på 25–35 minuter. Högt stärkelse- och sockerinnehåll gör dem naturligt söta och benägna till karamelisering. Klar när gyllenbrun och genomstekt.
 
 ---
 
@@ -8360,7 +8360,7 @@ At 200 °C in an air fryer: potato cubes (2–3 cm) are done in 20–25 minutes 
 
 **SV:**
 
-*(to translate)*
+Airfryer-tillagning av potatis ger resultat nära ugnsstekning men på ungefär halva tiden och med mindre fett, eftersom den höghastighets-heta luftcirkulationen ger knaprig yta snabbt. Skär i klyftor, olja, krydda. 20–25 minuter vid 200 °C. Klar när gyllenknaprig.
 
 ---
 
@@ -8377,7 +8377,7 @@ Target internal: 95–100 °C for full starch gelatinisation and a fluffy interi
 
 **SV:**
 
-*(to translate)*
+Ugnsstekning är den klassiska och mest använda metoden för rostade potatisar. Nyckelvariablerna är: (1) förkoka tills ytan är grov och fluffig (5–8 min för skurna bitar); (2) förvärm olja i ugnsform vid 220 °C; (3) skaka väl för rugglad yta. Klar när djupt gyllenknaprig och genomstekt.
 
 ---
 
@@ -8392,7 +8392,7 @@ Roasting potatoes (*Solanum tuberosum*) converts raw starch to a crisp, carameli
 
 **SV:**
 
-*(to translate)*
+Rostning av potatis (*Solanum tuberosum*) omvandlar rå stärkelse till en krispig, karameliserad exteriör och fluffig insida. Potatisens cellstruktur avgör rostningsframgång: hög-stärkelsepotatis (Russet, King Edward) ger bäst resultat. Klar när 98–100 °C inuti och gyllenknaprig utanpå.
 
 ---
 
@@ -8407,7 +8407,7 @@ Sweet potato (*Ipomoea batatas*) in the air fryer achieves crispy, caramelised s
 
 **SV:**
 
-*(to translate)*
+Sötpotatis (*Ipomoea batatas*) i airfryern uppnår knaprig, karameliserad yta och mjuk, söt insida på 35–45 minuter (hel) eller 20–25 minuter (halverad eller i tärningar). Sötpotatisens höga sockerhalt gör den naturligt benägen till karamelisering. Klar när insidan är 98–100 °C.
 
 ---
 
@@ -8423,7 +8423,7 @@ Whole baked sweet potato (*Ipomoea batatas*) in the conventional oven at 190–2
 
 **SV:**
 
-*(to translate)*
+Hel bakad sötpotatis (*Ipomoea batatas*) i konventionell ugn vid 190–200 °C uppnår en djupt karameliserad, lätt skrumpna yta och mjuk, syltliknande insida på 50–70 minuter. Klar när insidan är 98–100 °C och sötpotatisskalet är knaprig och karameliserad.
 
 ---
 
@@ -8438,7 +8438,7 @@ Sweet potato (*Ipomoea batatas*) cut into chunks or wedges and oven-roasted at 2
 
 **SV:**
 
-*(to translate)*
+Sötpotatis (*Ipomoea batatas*) skuren i bitar eller klyftor och ugnsrostad vid 200–220 °C karameliseras på 25–35 minuter, vilket ger knapriga, gyllenbruna kanter och mjuk, söt insida. Klar när gyllenbrun och genomstekt.
 
 ---
 
@@ -8454,7 +8454,7 @@ Acorn squash (*Cucurbita pepo* var. *turbinata*) oven-baked whole or halved at 1
 
 **SV:**
 
-*(to translate)*
+Ekollon-squash (*Cucurbita pepo* var. *turbinata*) ugnsbakas hel eller halverad vid 180–200 °C. Halverad och urholkad, sedan bakad med snittytan ned. 40–50 minuter. Klar när köttet är genomstekt och lätt brynt vid kanterna.
 
 ---
 
@@ -8469,7 +8469,7 @@ Acorn squash (*Cucurbita pepo*) oven-roasted in wedges or half-shells at 200–2
 
 **SV:**
 
-*(to translate)*
+Ekollon-squash (*Cucurbita pepo*) ugnsrostad i klyftor eller halvskal vid 200–220 °C utvecklar karameliserade, gyllenbruna snittytor på 30–40 minuter. Klar när köttet är genomstekt och snittytan är djupt gyllenbrun.
 
 ---
 
@@ -8484,7 +8484,7 @@ Butternut squash (*Cucurbita moschata*) oven-roasted in halves or chunks at 190�
 
 **SV:**
 
-*(to translate)*
+Butternut-squash (*Cucurbita moschata*) ugnsrostad i halvor eller bitar vid 190–220 °C är en av de mest använda höst/vinter-grönsaksberedningarna globalt. Halvor rostade snittytan ned i 40–50 minuter ger djup karamelisering. Klar när köttet är genomstekt och gyllenbrun.
 
 ---
 
@@ -8500,7 +8500,7 @@ Butternut squash (*Cucurbita moschata*) in a pressure cooker cooks in 8–12 min
 
 **SV:**
 
-*(to translate)*
+Butternut-squash (*Cucurbita moschata*) i tryckkokare tillagas på 8–12 minuter vid högtryck (tärnad), vilket ger mycket mjukt, fullt tillagat kött lämpat för soppor och pureer. Klar när fullständigt genomstekt och lätt att mosa.
 
 ---
 
@@ -8515,7 +8515,7 @@ Butternut squash (*Cucurbita moschata*) cut into 3–4 cm cubes and steamed over
 
 **SV:**
 
-*(to translate)*
+Butternut-squash (*Cucurbita moschata*) skuren i 3–4 cm tärningar och ångad ovanför kokande vatten ger silkeslent, sött kött idealiskt som tillbehör eller för mosning och purering. Ånga i 15–20 minuter. Klar när fullständigt genomstekt och lätt att genomborra med gaffel.
 
 ---
 
@@ -8531,7 +8531,7 @@ Spaghetti squash (*Cucurbita pepo*) is baked whole or halved at 180–200 °C un
 
 **SV:**
 
-*(to translate)*
+Spagetti-squash (*Cucurbita pepo*) bakas hel eller halverad vid 180–200 °C tills köttet separeras i nudellika strängar när man skrapar med gaffel. Halverad bakas med snittytan ned i 40–50 minuter. Klar när strängarna separerar lätt.
 
 ---
 
@@ -8546,7 +8546,7 @@ Spaghetti squash (*Cucurbita pepo*) oven-roasted at higher heat (200–220 °C) 
 
 **SV:**
 
-*(to translate)*
+Spagetti-squash (*Cucurbita pepo*) ugnsrostad vid högre värme (200–220 °C) jämfört med bakning, med snittytan oljad och placerad snittytan ned för att karamelisera kanterna. 35–45 minuter. Klar när strängarna separerar och kanterna är gyllenbruna.
 
 ---
 
@@ -8562,7 +8562,7 @@ Zucchini (*Cucurbita pepo* var. *cylindrica*) cut into 1–2 cm rounds, half-moo
 
 **SV:**
 
-*(to translate)*
+Zucchini (*Cucurbita pepo* var. *cylindrica*) skuren i 1–2 cm rundlar, halvmånar eller stavar airfryed vid 190–200 °C i 8–12 minuter ger gyllenbrun, lätt knaprig exteriör med mör insida. Klar när gyllenbrun och genomstekt.
 
 ---
 
@@ -8577,7 +8577,7 @@ Zucchini (*Cucurbita pepo*) cut lengthways into 1–1.5 cm planks or thick round
 
 **SV:**
 
-*(to translate)*
+Zucchini (*Cucurbita pepo*) skuren längsmed i 1–1,5 cm plankor eller tjocka rundlar är en av de definierande sommargrillgrönsakerna världen över. Grilla oljad zucchini direkt på gallret vid hög värme i 3–4 minuter per sida. Klar när synliga grillränder och genomstekt.
 
 ---
 
@@ -8592,7 +8592,7 @@ Zucchini (*Cucurbita pepo*) halved lengthways or cut into thick rounds/spears ov
 
 **SV:**
 
-*(to translate)*
+Zucchini (*Cucurbita pepo*) halverad längsmed eller skuren i tjocka rundlar/stavar och ugnsrostad vid 200–220 °C utvecklar karameliserade, gyllenbruna snittytor medan insidan förblir mör och saftig. 20–25 minuter. Klar när gyllenbrun och genomstekt.
 
 ---
 
@@ -8607,7 +8607,7 @@ Zucchini (*Cucurbita pepo*) sliced into 1 cm rounds, half-moons or batons is one
 
 **SV:**
 
-*(to translate)*
+Zucchini (*Cucurbita pepo*) skivad i 1 cm rundlar, halvmånar eller stavar är en av de snabbaste och mest universella grönsaksautéer. Målet är torrvärme-brynning av snittytan. Sautera i het olja i 6–8 minuter. Klar när gyllenbrun och genomstekt utan att vara mosig.
 
 ---
 
@@ -8623,7 +8623,7 @@ Tomatoes (*Solanum lycopersicum*) in the air fryer roast in 8–15 minutes depen
 
 **SV:**
 
-*(to translate)*
+Tomater (*Solanum lycopersicum*) i airfryern rostas på 8–15 minuter beroende på storlek och mål: körsbärstomater brister och karameliseras på 8–10 minuter vid 200 °C; halverade plomtomater i 12–15 minuter. Klar när karameliserade och mjuka med koncentrerad smak.
 
 ---
 
@@ -8638,7 +8638,7 @@ Tomatoes (*Solanum lycopersicum*) oven-roasted undergo a profound transformation
 
 **SV:**
 
-*(to translate)*
+Tomater (*Solanum lycopersicum*) ugnsrostade genomgår en djupgående transformation: det höga vatteninnehållet (≈ 94 %) avdunstar i ugns-värmen, vilket koncentrerar de glutamat-rika köttet, karameliserar sockerarterna och intensifierar smaken avsevärt. 160–200 °C i 45–90 minuter beroende på storlek och metod. Klar när skrumpna, karameliserade och intensivt smakrika.
 
 ---
 
