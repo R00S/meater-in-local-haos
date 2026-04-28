@@ -512,7 +512,8 @@ category names, meat names, cut-type names, cut names, and doneness names to Swe
 | Cut names | `name_sv:` field in the cut's `<!-- KCE:CUT … -->` tag |
 | Doneness names | `name_sv:` field in each doneness entry in the `doneness:` list |
 | UI labels (headings, buttons, messages) | Loaded from `i18n/sv.json` |
-| Method descriptions | `description_sv:` field in the `<!-- KCE:CUT_METHOD … -->` tag (optional; falls back to English or nothing) |
+| Cut-profile body text (Styckesprofil card) | `## Styckesprofil` section in the cut's `{slug}.md` overview file (optional; falls back to English) |
+| Method descriptions (Tillagningsmetod card) | `## Styckesprofil` section in the method's `{slug}-{method}.md` file (optional; falls back to English) |
 
 Any cut without a `name_sv:` field falls back to the English slug-derived name.
 
@@ -531,12 +532,16 @@ declared stable the classic fork is deleted and experimental becomes the default
 
 Each file carries a `<!-- KCE:CUT … -->` or `<!-- KCE:CUT_METHOD … -->` tag that describes
 its position in the meat hierarchy, cooking temperatures, and supported methods.
+A `## Cut profile` body section provides the English cut description; a sibling
+`## Styckesprofil` section provides the Swedish translation shown when the UI is set to Svenska.
 
 At release time the **create-test-release** GitHub Actions workflow automatically runs
 `generate_frontend_data.py`, which scans both forks and bakes `RECIPE_INDEX` /
-`CLASSIC_RECIPE_INDEX`, `EXP_TREE`, and `CUT_PROFILES` / `CLASSIC_CUT_PROFILES` into
-`kitchen-cooking-panel.js`. This happens on the CI runner — the developer does not need
-to run the generator locally before creating a release.
+`CLASSIC_RECIPE_INDEX`, `EXP_TREE`, `CUT_PROFILES` / `CLASSIC_CUT_PROFILES`,
+`CUT_PROFILES_SV` / `CLASSIC_CUT_PROFILES_SV`, and `CUT_METHOD_PROFILES` /
+`CLASSIC_CUT_METHOD_PROFILES` into `kitchen-cooking-panel.js`. This happens on the
+CI runner — the developer does not need to run the generator locally before creating
+a release.
 
 To add a new cut to the experimental path:
 
