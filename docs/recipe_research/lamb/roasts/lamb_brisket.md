@@ -22,7 +22,7 @@ doneness:
   usda_safe: true
 quality_score: 5
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-27
+quality_assessed: 2026-04-28
 -->
 # Lamb Brisket — Cut Overview
 
@@ -36,7 +36,7 @@ Lamb brisket (UK: lamb breast) comes from the belly of the lamb — anatomically
 
 ## Quality score
 
-**Score: 5 / 20** — assessed 2026-04-27
+**Score: 5 / 20** — assessed 2026-04-28
 
 | Criterion | Status |
 |-----------|--------|
@@ -55,6 +55,6 @@ Lamb brisket (UK: lamb breast) comes from the belly of the lamb — anatomically
 ### Improvement priorities
 
 1. **Methods survey** — Do a proper survey of all cooking methods used for lamb brisket across culinary traditions (is oven_roast/smoked/grill applicable?). Update `methods:` list and set `cooking_methods_researched: 1` only after that survey is done.
-2. **slow_cooker** leaf not yet researched — create `lamb_brisket-slow_cooker.md` with 4+ real source recipes across culinary traditions
+2. **slow_cooker** leaf not yet researched — create `lamb_brisket-slow_cooker.md` with 4+ real source recipes across culinary traditions. Note: 30+ URL probes across 2 sessions (2026-04-27, 2026-04-28) found no accessible specific "lamb brisket/breast slow cooker" recipes: recipetineats.com/slow-cooker-lamb-breast-rolled (404), bbcgoodfood.com/recipes/slow-cooked-lamb-breast (404), bbc.co.uk/food/recipes/slow_roast_breast_of_lamb_46505 (404), slowcookerclub.com/lamb-breast (403), greatbritishchefs.com/recipes/slow-cooked-lamb-breast (404), tasteofhome.com/recipes/slow-cooker-lamb-breast (404). The slow cooker method is applicable in principle (same temperature targets as braise); accessible recipes use lamb shoulder or diced lamb instead.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

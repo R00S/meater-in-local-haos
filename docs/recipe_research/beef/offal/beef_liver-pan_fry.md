@@ -131,3 +131,50 @@ The onion-liver interaction is important: onions going into the pan before the l
 8. Return onions to the pan; toss briefly. Splash with vinegar and Worcestershire. Sprinkle with parsley. Serve with potatismos and rårörda lingon. Final serving temperature: **62–65 °C / 144–149 °F**.
 
 ---
+
+### 5. Imma Adamu — Beef Liver and Onions (West African / Afro-Caribbean tradition)
+**Source**: Imma Adamu, AfricanBites; https://www.africanbites.com/beef-liver-onions/ (fetched 2026-04-28). Originally published April 2017, updated 2025. Author is West African (Nigerian).
+**Serves**: 4 · **Prep**: 2 hr (buttermilk soak) + 15 min active · **Cook**: 25–30 min · **Rest**: 2 min
+**Culinary tradition**: West African / Afro-Caribbean (Group C)
+**Technique note**: Breaded and pan-fried in a cast-iron skillet with Creole seasoning — reflecting the African diaspora fusion where West African technique meets Creole/Caribbean seasoning. Served with caramelised onions and optional tomatoes, over rice. Soaking in buttermilk (rather than milk) is a West African/Southern American variation of the European milk-soak technique. No probe temperature stated; visual doneness: "a hint of pink left on the inside", equivalent to ~62–65°C.
+
+**Ingredients** *(extracted from page prose; recipe card not rendered by web_fetch)*
+- 450–900 g (1–2 lb) beef liver, thinly sliced
+- Enough buttermilk to cover (for 2-hour soak)
+- Salt and pepper to taste
+- Creole seasoning (paprika, garlic powder, onion powder, salt, pepper)
+- Flour, onion powder, garlic powder, paprika — for dredging
+- Oil, butter, or bacon fat for frying
+- 2 medium onions, sliced
+- 4 garlic cloves, minced
+- 1 tsp fresh thyme
+- Optional: 2 medium tomatoes, diced; ½ cup broth
+
+**Method**
+1. Rinse the beef liver; put in a bowl and pour over enough buttermilk to cover. Refrigerate 2 hours to tenderise and reduce bitterness.
+2. Remove liver from buttermilk; drain and pat dry.
+3. Season generously with salt, pepper, and Creole seasoning.
+4. Mix flour, onion powder, garlic powder, and paprika in a shallow bowl. Dredge the liver slices; shake off excess.
+5. Heat oil or butter in a cast-iron skillet over medium-high heat.
+6. Insert the MEATER probe horizontally into the thickest liver slice.
+7. Pan-fry 3 minutes per side until browned. Avoid overcooking — "the longer you cook it, the tougher it gets."
+8. Remove liver and set aside. Wipe skillet.
+9. Add oil or butter; sauté onions with thyme 10–15 minutes until softened. Add garlic and Creole seasoning; cook 5 more minutes.
+10. Optional: add tomatoes and broth; simmer 10 minutes.
+11. Return liver to the pan; cook 2–3 minutes to reheat.
+12. **Pull when just pink inside** — Imma's guidance: "a hint of pink left on the inside." Equivalent to **62–65 °C / 144–149 °F**.
+13. Adjust seasoning; serve with rice, roasted or mashed potatoes.
+
+---
+
+## Temperature data table
+
+> ⚠ Provisional — no source in this leaf explicitly states a probe pull temperature. All sources use visual or time-based doneness ("pink in the centre", "rosa men inte rå", "hint of pink"). These correspond to 60–65°C for a faint pink centre based on the MEATER pull recommendations for thin liver slices.
+
+| Source | Country | Pan heat | Slice thickness | Time per side | Pull indication |
+|--------|---------|----------|----------------|---------------|----------------|
+| Marcella Hazan | Italian (Venetian) | High | 6 mm | 60–90 sec | "rosato al centro" (60–63°C) |
+| Diana Henry | British | High | 5–6 mm | 3 min/side | no pink (well done, ~65–70°C) |
+| Madhur Jaffrey | North Indian | High | cubed | 90–120 sec stir-fry | "just firm" 63–66°C stated |
+| Tina Nordström | Swedish | High | 6 mm | 60 sec/side | "rosa men inte rå" (60–63°C) |
+| Imma Adamu | West African/Afro-Caribbean | Medium-high | sliced | 3 min/side | "hint of pink" (≈62–65°C) |
