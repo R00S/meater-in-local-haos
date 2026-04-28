@@ -6526,7 +6526,7 @@ Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)
 
 **SV:**
 
-*(to translate)*
+Kycklinglår är ett förlåtande, smakrikt mörkt köttstycke. Deras högre fettinnehåll gör dem väl lämpade för airfryerns snabbt cirkulerande värme, som smälter fettet och gör skinnet vackert knaprig. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C. Tillagnings tid: 18–22 minuter vid 180–200 °C.
 
 ---
 
@@ -6545,7 +6545,7 @@ Target internal temperature: **165 °F (74 °C)** minimum — **170 °F (77 °C)
 
 **SV:**
 
-*(to translate)*
+Kycklinglår är det idealiska grillsnittet: deras högre fettinnehåll innebär att de förblir saftiga även vid hög, direkt värme och de är mycket mer förlåtande än bröst om de blir lite överstekta. Benfritt med skinn-på ger bäst resultat. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C. Tillagnings tid: 6–8 minuter per sida.
 
 ---
 
@@ -6564,7 +6564,7 @@ Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)
 
 **SV:**
 
-*(to translate)*
+Kycklinglår (*biceps femoris* och relaterade muskler i övre benet) är ett mörkt köttstycke med signifikant högre fett och bindväv än bröstet. Högre fett (6–10 % vs 1–2 % för bröst) innebär att det gynnas av hög ugnstemperatur för knaprig skinnkrusta. Innertemperatur: 74 °C. Eftertillagning: 3–4 °C. Tillagnings tid: 35–40 minuter vid 200–220 °C.
 
 ---
 
@@ -6582,7 +6582,7 @@ Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)
 
 **SV:**
 
-*(to translate)*
+Kycklinglår är ett förlåtande, smakrikt mörkt köttstycke med högre fettinnehåll än bröst. Innertemperatur: 74 °C. Eftertillagning: 3–4 °C. Tillagnings tid varierar med metod: airfryer 18–22 min, grill 6–8 min/sida, ugn 35–40 min.
 
 ---
 
@@ -6601,7 +6601,7 @@ Carryover is minimal for wings (1–2 °C) because the thin bones and high surfa
 
 **SV:**
 
-*(to translate)*
+Airfryern arbetar genom att cirkulera riktigt het, torr luft med hög hastighet runt maten i en kompakt kammare. För kycklingvingar skapar detta förhållanden liknande en konvektionsugn men mer intensivt: skinnet krisprnas vackert utan djupfritering. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C. Tillagnings tid: 20–25 minuter vid 190–200 °C.
 
 ---
 
@@ -6620,7 +6620,7 @@ Wings are dark meat and can tolerate slight overcooking; pulling them at 165–1
 
 **SV:**
 
-*(to translate)*
+Grillning av kycklingvingar vid direkt värme skapar en kombination av strålnings- och konvektionsvärme som ingen annan metod replikerar. Skinnet smälter långsammare än i airfryer men ger djupare Maillard-karaktär. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C. Tillagnings tid: 20–25 minuter med vändning.
 
 ---
 
@@ -6639,7 +6639,7 @@ Wings come out with golden-brown, crispy skin and fully cooked dark meat. The th
 
 **SV:**
 
-*(to translate)*
+Ugnsstekning av kycklingvingar vid hög värme (200–230 °C) är den mest tillgängliga metoden för hemmakockar som vill ha knapriga resultat utan specialutrustning. Ugnen omger vingarna med cirkulerande varm luft. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C. Tillagnings tid: 35–45 minuter.
 
 ---
 
@@ -6656,7 +6656,7 @@ Because dark-meat chicken is safe at 165 °F (74 °C) but more palatable (less c
 
 **SV:**
 
-*(to translate)*
+Kycklingvingar består av tre sektioner: trumpinnen (enkelt-bens övre sektionen, anatomiskt *humerus*), flatsen/vingetten (tvåbens mellansektionen, *radius* och *ulna*) och spetsen (den distala lilla benvingen). Innertemperatur: 74 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -6673,7 +6673,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 
 **SV:**
 
-*(to translate)*
+Malt kyckling bräserad i vätska är en fuktig värme-metod som håller det magra köttet från att torka ut och utvecklar en smakrik sås samtidigt. Eftersom malt fjäderfä är blandat med bakterier igenom måste det tillagas till en säker innertemperatur. Innertemperatur: 74 °C. Eftertillagning: minimal.
 
 ---
 
@@ -6690,7 +6690,7 @@ Target internal temperature: **74 °C (165 °F)** — the USDA minimum for all g
 
 **SV:**
 
-*(to translate)*
+Malt kyckling (tavuk kıyması/poulet haché/Hühnerhackfleisch) är ett magert, mångsidigt protein som grillas som köfte (avlånga köttbullar), biffar eller platta burgare. Eftersom malt kyckling är ljusare och magrare än nötkött torkar det ut snabbare. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -6707,7 +6707,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 
 **SV:**
 
-*(to translate)*
+Malt kyckling tillagad genom pannstekning täcker två relaterade tillämpningar: formade biffar (burgare, köttbullar) brunstekta i stekpanna, och smulade malt kyckling tillagad löst. Malt kyckling är mycket magert och klibbigt; bindemedel är viktiga för formade produkter. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -6725,7 +6725,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 
 **SV:**
 
-*(to translate)*
+Malt kyckling bräserad i vätska är en fuktig värme-metod. Innertemperatur: 74 °C. Eftertillagning: minimal. Bräsering håller det magra kycklingköttets fuktighet och utvecklar smak.
 
 ---
 
@@ -6744,7 +6744,7 @@ The MEATER probe is placed in the thigh, from the cavity side, directed towards 
 
 **SV:**
 
-*(to translate)*
+Ugnsstekning är den vanligaste metoden för hel kyckling världen över och bäst lämpad för att producera det gyllenbruna, knapriga skinnet som de flesta recept siktar på. Ugnen omger fågeln med cirkulerande varm luft. Innertemperatur: 74 °C (bröst), 80 °C (lår). Eftertillagning: 4–6 °C för hel fågel. Tillagnings tid: 1–1,5 timmar vid 190–210 °C.
 
 ---
 
@@ -6761,7 +6761,7 @@ Techniques to manage this differential include: starting the bird breast-side do
 
 **SV:**
 
-*(to translate)*
+En hel kyckling är en komplett fågel — bestående av bröstködet (vitt, magert *pectoralis major*), låren (*biceps femoris* och omgivande mörkt kött), trumpinnarna, vingarna och ryggraden, alla förbundna av skinn. Innertemperatur: 74 °C (bröst), 80 °C (lår). Eftertillagning: 4–6 °C.
 
 ---
 
@@ -6778,7 +6778,7 @@ Target internal temperature: **135–145 °F (57–63 °C)** — medium-rare, pu
 
 **SV:**
 
-*(to translate)*
+Ankbröst är ett mörkt, rikt snitt med ett tjockt lager subcutant fett under ett inristat skinn. Till skillnad från kycklingbröst tillagas ankbröst bäst till medium-rare (57–63 °C), där köttet förblir rosa och saftigt. Ugnsstekning efter initial pannsearing: ugn vid 180–200 °C i 6–10 minuter. Innertemperatur: 57–60 °C. Eftertillagning: 3–4 °C.
 
 ---
 
@@ -6795,7 +6795,7 @@ Target internal temperature: **135–145 °F (57–63 °C)** — medium-rare; pu
 
 **SV:**
 
-*(to translate)*
+Ankbröst är ett rikt, mörkt-kötts snitt kännetecknat av dess tjocka subcutana fettkappa. Till skillnad från alla andra vanliga fjäderfäbröst serveras det rutinmässigt medium-rare (57–63 °C). Pannsearing: kallt panna start (skinnsidan ned, ingen förvärmt panna), låt fettet smälta långsamt i 6–8 minuter, vänd och avsluta 2–3 minuter. Innertemperatur: 57–60 °C. Eftertillagning: 3–4 °C.
 
 ---
 
@@ -6813,7 +6813,7 @@ Target internal temperature: **135–145 °F (57–63 °C)** — medium-rare, pu
 
 **SV:**
 
-*(to translate)*
+Ankbröst är ett mörkt, rikt snitt med tjockt subcutant fett. Till skillnad från kycklingbröst tillagas det bäst till medium-rare (57–63 °C). Innertemperatur: 57–60 °C. Eftertillagning: 3–4 °C. Alltid börja med kallt panna (skinnsidan ned) för att smälta fettet långsamt.
 
 ---
 
@@ -6828,7 +6828,7 @@ Duck leg confit cooked in the oven is the definitive application of the confit m
 
 **SV:**
 
-*(to translate)*
+Anklägg confit tillagad i ugnen är den definitiva tillämpningen av confit-metoden: anklägg med ben och skinn torrmarineras först i salt, örter och kryddor i 12–24 timmar för att krydda köttet djupt, sedan tillagas det nedsänkt i ankfett (eller olivolja) vid 100–140 °C i 2–4 timmar. Innertemperatur: 82–85 °C (mjukt, genomstekt, faller lätt från benet).
 
 ---
 
@@ -6851,7 +6851,7 @@ Duck leg confit (_confit de canard_) refers specifically to the bone-in, skin-on
 
 **SV:**
 
-*(to translate)*
+Anklägg confit (*confit de canard*) avser specifikt anklägg med ben och skinn (lår + trumpinne, känd som *maryland*-snittet i Australien) tillagad med den traditionella franska confit-metoden. Innertemperatur: 82–85 °C. Confit-beredda anklägg är sedan krispiga i het panna eller ugn vid 220 °C i 15 minuter för knaprig skinnyta.
 
 ---
 
@@ -6868,7 +6868,7 @@ Target internal temperature: **165 °F (74 °C) in the thigh** — USDA minimum 
 
 **SV:**
 
-*(to translate)*
+En hel anka presenterar en signifikant tillagningsutmaning: bröstkötten är bäst vid medium-rare (57–63 °C) medan benen och låren behöver högre temperaturer (74–80 °C) för att bryta ner deras tuffare kollagen. Ugnsstekning: starta vid 160 °C i 1–1,5 timmar, avsluta vid 220–230 °C för knaprig hud. Innertemperatur: 63 °C (bröst). Eftertillagning: 4–6 °C.
 
 ---
 
@@ -6886,7 +6886,7 @@ Target internal temperature: **165 °F (74 °C) in the thigh** — USDA minimum 
 
 **SV:**
 
-*(to translate)*
+En hel anka presenterar en tillagningsutmaning: bröstet är bäst vid 57–63 °C medan benen och låren behöver 74–80 °C. Innertemperatur: 63 °C (mäts i bröstet). Eftertillagning: 4–6 °C. Tillagnings tid: 2–2,5 timmar totalt för en 2–3 kg anka.
 
 ---
 
@@ -6903,7 +6903,7 @@ Target internal temperature: **145–155 °F (63–68 °C)** — medium; pull at
 
 **SV:**
 
-*(to translate)*
+Gåsbröst är ett rikt, djupt smakrikt mörkt kött med ett kraftigt fettlager, liknande ankbröst i karaktär men större och mer uttalad smak. Liksom ankbröst serveras det ofta medium-rare. Ugnsstekning efter pannsearing: ugn vid 180 °C i 8–12 minuter. Innertemperatur: 57–63 °C. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -6920,7 +6920,7 @@ Target internal temperature: **145–155 °F (63–68 °C)** — medium; pull at
 
 **SV:**
 
-*(to translate)*
+Gåsbröst delar samma kall-panna fettsmeltningsteknik som ankbröst. Skinnsidan läggs i en kall torr stekpanna och det tjocka fettkappan smälts långsamt vid medel-låg värme innan bröstet steks färdigt. Innertemperatur: 57–63 °C. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -6938,7 +6938,7 @@ Target internal temperature: **145–155 °F (63–68 °C)** — medium; pull at
 
 **SV:**
 
-*(to translate)*
+Gåsbröst är ett rikt, djupt smakrikt mörkt kött med ett kraftigt fettlager. Innertemperatur: 57–63 °C. Eftertillagning: 3–5 °C. Serveras medium-rare för bäst konsistens och smak.
 
 ---
 
@@ -6955,7 +6955,7 @@ Target internal temperature: **175–185 °F (79–85 °C)** — well above USDA
 
 **SV:**
 
-*(to translate)*
+Gåsben är stora, sega, intensivt smakrika snitt rika på bindväv och intramuskulärt fett. Brässering — bryning i fett, sedan tillagning nedsänkt eller delvis nedsänkt i aromatisk vätska — är den idealiska metoden. Innertemperatur: 80–85 °C (mört, faller lätt från benet). Tillagnings tid: 2–3 timmar bräserad.
 
 ---
 
@@ -6972,7 +6972,7 @@ Target internal temperature: **175–185 °F (79–85 °C)** — best texture; U
 
 **SV:**
 
-*(to translate)*
+Gåsben är stora, kollagenrika snitt som gynnas av måttliga till låga ugnstemperaturer och förlängda stekningstider. Till skillnad från bröstet torkar gåsben inte ut av värme — de behöver ihållande värme för att bryta ner bindväven. Innertemperatur: 80–85 °C. Tillagnings tid: 2–3 timmar vid 160–170 °C.
 
 ---
 
@@ -6990,7 +6990,7 @@ Target internal temperature: **175–185 °F (79–85 °C)** — well above USDA
 
 **SV:**
 
-*(to translate)*
+Gåsben är stora, sega, intensivt smakrika snitt rika på bindväv. Innertemperatur: 80–85 °C (mört, faller lätt från benet). Eftertillagning: försumbar. Bräsering eller confit är de klassiska metoderna.
 
 ---
 
@@ -7007,7 +7007,7 @@ Target internal temperature: **175–185 °F (79–85 °C)** — optimal for col
 
 **SV:**
 
-*(to translate)*
+Gåslår är kanske den mest smakrika delen av gåsen — rikare än benet med högre andel intramuskulärt fett och bindväv. Brässering är idealisk: den fuktiga värme-miljön håller köttet saftigt under den långa tillagning som krävs. Innertemperatur: 80–85 °C. Tillagnings tid: 2–3 timmar bräserad.
 
 ---
 
@@ -7022,7 +7022,7 @@ Goose thigh is perhaps the most flavourful part of the goose — richer than the
 
 **SV:**
 
-*(to translate)*
+Gåslår är kanske den mest smakrika delen av gåsen. Ugnsstekning fungerar vid lägre temperaturer med bastning. Innertemperatur: 80–85 °C. Tillagnings tid: 2–2,5 timmar vid 160–170 °C. Basteras regelbundet med eget fett.
 
 ---
 
@@ -7040,7 +7040,7 @@ Target internal temperature: **175–185 °F (79–85 °C)** — optimal for col
 
 **SV:**
 
-*(to translate)*
+Gåslår (*gåslår*, svenska; *Gänseschenkel*, tyska; *cuisse d'oie*, franska) är den övre delen av benet — *biceps femoris*, *semitendinosus*, *semimembranosus* och *gracilis*-musklerna omgivna av eget fett. Innertemperatur: 80–85 °C. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -7057,7 +7057,7 @@ A medium goose (4.5 kg / 10 lb) typically takes 2.5–3 hours at 190 °C (375 °
 
 **SV:**
 
-*(to translate)*
+En hel gås (typiskt 4–6 kg) är den fetaste av de vanliga stekfåglarna — en signifikant del av kroppsvikten är subcutant fett som måste smältas bort under tillagningen. Ugnsstekning: börja vid 180 °C med bröstsidan ned i 1 timme, vänd och fortsätt i 1–1,5 timmar. Innertemperatur: 80 °C (lår). Eftertillagning: 5–8 °C. Avfetta regelbundet under tillagningen.
 
 ---
 
@@ -7078,7 +7078,7 @@ A medium goose (4.5 kg / 10 lb) typically takes 2.5–3 hours at 190 °C (375 °
 
 **SV:**
 
-*(to translate)*
+En hel gås (typiskt 4–6 kg) är den fetaste av de vanliga stekfåglarna. Innertemperatur: 80 °C (mäts i låret). Eftertillagning: 5–8 °C. Tillagnings tid: 3–4 timmar totalt vid 160–180 °C. Avfetta varannan timme.
 
 ---
 
@@ -7094,7 +7094,7 @@ Ground turkey (minced turkey) is made by grinding dark meat (thigh and leg), whi
 
 **SV:**
 
-*(to translate)*
+Malt kalkon (malt kykling) tillverkas av malning av mörkt kött (lår och ben), vitt kött (bröst) eller en blandning. En blandning med mörkt kött (typiskt 93/7 mager/fett) har märkbart bättre smak och fuktighet. Brässering håller det magra köttet saftigt. Innertemperatur: 74 °C. Eftertillagning: minimal.
 
 ---
 
@@ -7111,7 +7111,7 @@ Target internal temperature: **74 °C (165 °F)** — the USDA minimum for all g
 
 **SV:**
 
-*(to translate)*
+Malt kalkon (hindi kıyması/Putenhackfleisch/tacchino macinato) är ett magert alternativ till nötkött i grillbiffar och köfte. Kalkonfärs torkar ut lättare än nötkött eller till och med kycklingfärs, så fuktighetsbevarare är viktiga. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -7128,7 +7128,7 @@ Ground turkey is primarily used in North American cooking as a leaner substitute
 
 **SV:**
 
-*(to translate)*
+Malt kalkon tillverkas av malning av mörkt kött, vitt kött eller en blandning. Innertemperatur: 74 °C. Eftertillagning: minimal. Välj blandning med mörkt kött för bäst smak och saftighet.
 
 ---
 
@@ -7144,7 +7144,7 @@ Turkey breast can be purchased bone-in (half breast on the rib rack, 1.5–2.5 k
 
 **SV:**
 
-*(to translate)*
+Kalkonbröst kan köpas med ben (halvbröst på revbensstål, 1,5–2,5 kg) eller benfritt (rullat och bundet, 1–2 kg). Båda har dramatiskt lägre fett än mörkt kalkonkött och torkar ut lätt. Ugnsstekning: 160–180 °C i 1,5–2,5 timmar beroende på storlek. Innertemperatur: 74 °C. Eftertillagning: 4–6 °C. Basteras regelbundet.
 
 ---
 
@@ -7159,7 +7159,7 @@ An air-fried turkey burger is the same 150–180 g ground-thigh patty as the gri
 
 **SV:**
 
-*(to translate)*
+En airfryer-tillagad kalkonburger är samma 150–180 g malt-lårbiff som grill- eller pannsearing-beredningen, tillagad i konvektionsfläkt-miljön av en airfryer vid 190–200 °C. Den höga lufthastigheten ger en jämt krispig yta utan olja. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C. Tillagnings tid: 12–15 minuter.
 
 ---
 
@@ -7175,7 +7175,7 @@ A grilled turkey burger is a 150–180 g shaped patty made from coarsely-ground 
 
 **SV:**
 
-*(to translate)*
+En grillad kalkonburger är en 150–180 g formad biff gjord av grovmalt kalkontlår — standarden för fuktighet och smak eftersom kalkonbröst (1–4 % fett) torkar ut på grillens höga värme. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C. Tillagnings tid: 5–6 minuter per sida.
 
 ---
 
@@ -7190,7 +7190,7 @@ A pan-fried turkey burger is the same 150–180 g shaped patty as the grilled ve
 
 **SV:**
 
-*(to translate)*
+En pannstekt kalkonburger är samma 150–180 g formade biff som den grillvarianten, tillagad i en tung panna vid medel-hög värme med en film av olja och smör. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C. Tillagnings tid: 5–6 minuter per sida.
 
 ---
 
@@ -7221,7 +7221,7 @@ sources. This gap is legitimate.
 
 **SV:**
 
-*(to translate)*
+Kalkonstjälken inkluderar trumpinnen (undre benet, nedanför knäleden) och ibland låret (fäst ovanför knäleden). Ugnsstekning: höga ugnstemperaturer (180–200 °C) i 1,5–2 timmar. Innertemperatur: 80 °C. Eftertillagning: 4–5 °C. Basteras regelbundet för saftig konsistens.
 
 ---
 
@@ -7249,7 +7249,7 @@ tibia bone, which conducts heat faster than the surrounding meat and gives false
 
 **SV:**
 
-*(to translate)*
+Kalkonstjälken (trumpinnen) är det nedre segmentet av fågelns bakre extremitet — *tibia* och *fibula* med omgivande mörkt-kötts-muskler från knäleden till ankeln. Det är det mest träningsintensiva partiet. Innertemperatur: 80 °C. Eftertillagning: 4–5 °C.
 
 ---
 
@@ -7272,7 +7272,7 @@ Target internal temperature: **165 °F (74 °C)** minimum — **170–175 °F (7
 
 **SV:**
 
-*(to translate)*
+Kalkontlår (*biceps femoris* och tillhörande muskler i övre benet) är ett mörkt köttstycke med högre fett och bindväv än bröstet. Fettinnehåll ≈ 5–8 % vs ≈ 1–2 % för bröst; det innebär att det tål högre temperaturer och längre tillagning utan att torka ut. Innertemperatur: 80 °C. Eftertillagning: 4–5 °C. Tillagnings tid: 45–60 minuter vid 190–210 °C.
 
 ---
 
@@ -7295,7 +7295,7 @@ Target internal temperature: **165 °F (74 °C)** minimum — **170–175 °F (7
 
 **SV:**
 
-*(to translate)*
+Kalkontlår är den övre benets mörka köttssektion av kalkon, från höften till knäleden. Det säljs benfritt med skinn på eller benfritt skinnat. Innertemperatur: 80 °C. Eftertillagning: 4–5 °C. Mer saftigt och förlåtande än kalkonbröst.
 
 ---
 
@@ -7312,7 +7312,7 @@ Typical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) un
 
 **SV:**
 
-*(to translate)*
+En hel kalkon presenterar samma grundläggande utmaning som en hel kyckling men i större skala och med mer extrema skillnader mellan bröst och ben/lår: bröstkötet är magert och kan torka ut snabbt, medan benen och låren behöver mer värme för att bryta ner deras tuffare bindväv. Innertemperatur: 74 °C (bröst), 80 °C (lår). Eftertillagning: 6–10 °C för hela fågeln. Tillagnings tid: 3–4 timmar vid 160–180 °C för en 5–7 kg kalkon.
 
 ---
 
@@ -7333,7 +7333,7 @@ Typical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) un
 
 **SV:**
 
-*(to translate)*
+En hel kalkon presenterar samma utmaning som hel kyckling men i stor skala. Innertemperatur: 74 °C (bröst), 80 °C (lår). Eftertillagning: 6–10 °C. Tillaga alltid med bröstsidan ned de första 2 timmarna för saftigare bröst; vänd sedan.
 
 ---
 
@@ -7349,7 +7349,7 @@ Caramelised onions via pan-frying refers to the style in which sliced or halved 
 
 **SV:**
 
-*(to translate)*
+Karameliserade lökar via pannstekning avser stilen där skivad eller halvad lök tillagas i rikligt hett fett vid medel till hög värme, med medveten bryning som primärt mål. Löken mjuknar och sötar sig under 15–25 minuter. Sötman från Maillard-reaktion och sockerkaramellisering skapar djupa, komplexa smaker. Innertemperatur: inte relevant — stek tills djupt guldenbrun och mjuk.
 
 ---
 
@@ -7364,7 +7364,7 @@ Slow-caramelised onions via sauté are one of the most fundamental flavour-build
 
 **SV:**
 
-*(to translate)*
+Långsamt karameliserade lökar via sauté är en av de mest grundläggande smaksättningstekniker i global matlagning. Skivad lök sauterad vid medel-låg värme förlorar 60–70 % av sin vattenhalt under 30–45 minuter och omvandlas till en söt, djupbrun massa. Nyckeln är tid och tålamod — inte hög värme. Innertemperatur: inte relevant — lök är klara när de är djupt gyllenbruna och silkeslena.
 
 ---
 
@@ -7380,7 +7380,7 @@ Leeks (*Allium ampeloprasum* var. *porrum*) braised are one of the most refined 
 
 **SV:**
 
-*(to translate)*
+Purjolök (*Allium ampeloprasum* var. *porrum*) bräserad är en av de mest raffinerade av alla grönsaksberedningar. De långa vita stjälkarna mjuknar under 20–40 minuter av varsam sjudning i fond, vin eller smör-vatten. Innertemperatur: inte relevant — serveras när mjuk och genomkokt (kärnan vid 70–75 °C).
 
 ---
 
@@ -7395,7 +7395,7 @@ Leeks (*Allium ampeloprasum* var. *porrum*) oven-roasted achieve a caramelised s
 
 **SV:**
 
-*(to translate)*
+Purjolök (*Allium ampeloprasum* var. *porrum*) ugnsrostad uppnår en karameliserad sötma och förkolnad ytterlager som den bräserade versionen saknar. Vid 200–220 °C skrumpnar de yttre lagren och blåshärdar medan de inre mjuknar. Innertemperatur: inte relevant — serveras när mjuk med karameliserade kanter.
 
 ---
 
@@ -7410,7 +7410,7 @@ Leeks (*Allium ampeloprasum* var. *porrum*) sautéed in a pan deliver the most v
 
 **SV:**
 
-*(to translate)*
+Purjolök (*Allium ampeloprasum* var. *porrum*) sauterad i panna ger den mest mångsidiga vardagsberedningen av purjolök: skivad i rundlar eller stavar, tillagas i smör eller olja vid medelvärme tills mjuk och lätt gyllenbrun. Innertemperatur: inte relevant — serveras när mjuk och genomkokt.
 
 ---
 
