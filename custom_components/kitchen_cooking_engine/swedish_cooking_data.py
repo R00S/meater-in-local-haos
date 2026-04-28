@@ -865,7 +865,7 @@ SWEDISH_PORK_STEAKS = [
     MeatCut(
         id=3142,
         name="flaskbogskiva",
-        name_long="Fläskbogskiva",
+        name_long="Bogskiva",
         cut_order=6,
         estimated_thickness_mm=20,
         usda_safe_c=63,

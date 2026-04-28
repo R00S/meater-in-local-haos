@@ -5503,9 +5503,9 @@ The *Schopfsteak* (Austrian) and *nakkesteak* (Danish) are both cooked identical
 
 **SV:**
 
-Pannstekning av fläskbogskiva: medel-hög värme (180–200 °C pannyta), tillräckligt med fett eller olja för att säkerställa kontakt över den ojämna steksytan, och 3–4 minuter per sida. Den kraftiga marmoreringen av halsen innebär att fettet smälter ned snabbt och ger naturlig bastning.
+Pannstekning av bogskiva: medel-hög värme (180–200 °C pannyta), tillräckligt med fett eller olja för att säkerställa kontakt över den ojämna steksytan, och 3–4 minuter per sida. Den kraftiga marmoreringen av halsen innebär att fettet smälter ned snabbt och ger naturlig bastning.
 
-Innertemperatur: **70–74 °C (158–165 °F)** för genomstekt med saftighet kvar. USDA-minimum: **63 °C** med 3 minuters vila för bogsnitt. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till steakens mitt. Vila 5 minuter täckt.
+Innertemperatur: **70–74 °C (158–165 °F)** för genomstekt med saftighet kvar. USDA-minimum: **63 °C** med 3 minuters vila för detta snitt. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till steakens mitt. Vila 5 minuter täckt.
 
 ---
 
@@ -5520,7 +5520,7 @@ Pork shoulder steak (*nakkesteak* in Danish, *Schweinenackensteak* / *Schopfstea
 
 **SV:**
 
-Fläskbogskiva (*nakkesteak* danska, *Schweinenackensteak* / *Schopfsteak* tyska/österrikiska) är skuren från halssektionen av fläskbogen. Denna muskel är tätare marmorerad än loin-snitten — typiskt 8–15 % intramuskulärt fett — vilket gör bogskiva saftigare och mer förlåtande vid hög värme.
+Bogskiva (*nakkesteak* danska, *Schweinenackensteak* / *Schopfsteak* tyska/österrikiska) är skuren från halssektionen av fläskbogen. Denna muskel är tätare marmorerad än loin-snitten — typiskt 8–15 % intramuskulärt fett — vilket gör bogskiva saftigare och mer förlåtande vid hög värme.
 
 Pannstekning: medel-hög värme, 3–4 minuter per sida. Innertemperatur: **70–74 °C (158–165 °F)** för genomstekt med saftighet kvar; **63 °C** USDA-minimum. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till mitten av steaken. Inte lika känslig för överkokning som magra snitten.
 
@@ -5698,7 +5698,7 @@ Ground pork (minced pork) is made by grinding pork shoulder, belly, or a blend o
 
 **SV:**
 
-Malet fläsk (malet fläskkött) är gjort av malt fläskbog, mage eller blandade primär-trimmings. Standard malet fläsk är typiskt 70–80 % magert med 20–30 % fett. Det höga fettinnehållet ger en saftig, sammanhängande textur vid tillagning och gör det mer tolerant mot lätt överkokning.
+Malet fläsk (malet fläskkött) är gjort av malt bogfläsk, mage eller blandade primär-trimmings. Standard malet fläsk är typiskt 70–80 % magert med 20–30 % fett. Det höga fettinnehållet ger en saftig, sammanhängande textur vid tillagning och gör det mer tolerant mot lätt överkokning.
 
 USDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond in i tjockaste delen av biff eller köttfärskula. Används i diverse köttbullar, sausageblandningar, köfte och löst kokat i saucer.
 
@@ -5719,7 +5719,7 @@ Target internal temperatures (pan fry):
 
 **SV:**
 
-Malet fläsk (malet fläskkött) görs av fläskbog, mage eller blandade primär-trimmings med 20–30 % fett. Det höga fettinnehållet ger saftig konsistens och gör malet fläsk tolerant mot lätt överkokning.
+Malet fläsk (malet fläskkött) görs av bog av fläsk, mage eller blandade primär-trimmings med 20–30 % fett. Det höga fettinnehållet ger saftig konsistens och gör malet fläsk tolerant mot lätt överkokning.
 
 USDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertemperatur: **72–75 °C (162–167 °F)** för USDA-säkert malet fläsk. Eftertillagning: 2–3 °C. Sond in i tjockaste delen av biff, köttbullar eller köttfärskula. Pannstekning: 4–5 minuter per sida vid medel-hög värme tills genomstekt.
 
@@ -6748,7 +6748,7 @@ Target internal temperatures (slow cooker / very-low oven):
 
 Fläskbog (*Schweinenacken* / *Schweineschulter* tyska; *nakkefilet* / *svinenakke* danska/norska) slow-kokad vid mycket låga temperaturer ger den ultimata pulled pork — smält-i-munnen kött med rik, koncentrerad smak och gelatinös konsistens. Sous vide (74–85 °C, 24–48 timmar) eller slow cooker (LÅG, 8–10 timmar) uppnår pull-apart-mörhet med ett minimum av tillsyn.
 
-Sond in i tjockaste köttmassan, borta från skulderbladsben. Innertemperatur: **85–95 °C (185–203 °F)** för pull-apart. Eftertillagning: noll (fuktig metod). Sear bogen hårt i het panna efter slow cooking för att skapa Maillard-arom och crispy yta.
+Sond in i tjockaste köttmassan, borta från skulderbladsben. Innertemperatur: **85–95 °C (185–203 °F)** för pull-apart. Eftertillagning: noll (fuktig metod). Bryn bogen hårt i het panna efter slow cooking för att skapa Maillard-arom och krispig yta.
 
 ---
 

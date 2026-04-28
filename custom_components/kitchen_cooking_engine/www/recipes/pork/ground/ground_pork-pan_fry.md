@@ -19,7 +19,7 @@ Target internal temperatures (pan fry):
 
 ## Styckesprofil
 
-Malet fläsk (malet fläskkött) görs av fläskbog, mage eller blandade primär-trimmings med 20–30 % fett. Det höga fettinnehållet ger saftig konsistens och gör malet fläsk tolerant mot lätt överkokning.
+Malet fläsk (malet fläskkött) görs av bog av fläsk, mage eller blandade primär-trimmings med 20–30 % fett. Det höga fettinnehållet ger saftig konsistens och gör malet fläsk tolerant mot lätt överkokning.
 
 USDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertemperatur: **72–75 °C (162–167 °F)** för USDA-säkert malet fläsk. Eftertillagning: 2–3 °C. Sond in i tjockaste delen av biff, köttbullar eller köttfärskula. Pannstekning: 4–5 minuter per sida vid medel-hög värme tills genomstekt.
 

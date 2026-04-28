@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 28 Apr 2026, 19:00 UTC
-Last Change: v0.7.0.3 - purge fläskaxel everywhere; correct to fläskbog/fläskbogskiva
+Last Change: v0.7.0.5 - pork_shoulder_steak name_sv: Bogkotlett → Bogskiva
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -72,7 +72,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.7.0.3"
+__version__ = "0.7.0.5"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
