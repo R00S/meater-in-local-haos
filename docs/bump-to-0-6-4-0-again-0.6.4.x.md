@@ -747,3 +747,50 @@ No anchor changes required.
 | Game | bison_steak, buffalo_steak, buffalo_roast, ostrich_steak, ostrich_fillet, reindeer_steak, reindeer_loin, venison_roast, venison_loin, venison_leg, venison_shoulder, goat_chop, goat_shank, goat_leg, wild_boar_shoulder, kangaroo_fillet, mutton_shoulder_alt | Cut profiles; new method leaves |
 | Vegetables | roasted_potatoes | New air_fryer + oven_roast leaves with real sources |
 
+
+---
+
+## Session start — Session 13 (2026-04-28)
+
+### Output 1 — Culinary group definitions (verbatim from `RECIPE_COLLECTION_TOR.md`)
+
+| Culinary Group | Includes |
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Bengali, Ceylon, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+---
+
+### Output 2 — Analysis gate rule (verbatim from `RECIPE_ANALYSIS_TOR.md`)
+
+> Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
+
+---
+
+### Output 3 — Source integrity rule (verbatim from `SOURCE_SURVEY.md`)
+
+> The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
+
+---
+
+### Output 4 — My understanding of this file (my own words)
+
+The primary task is to incrementally improve the 8 lowest-scoring cut files by finding real, fetched source recipes — following RECIPE_COLLECTION_TOR and RECIPE_ANALYSIS_TOR for leaf structure, source diversity, and temperature data — committing after each file and continuing to the next without stopping. "This is not a race" means: I never fabricate or guess, I never skip a hard file because it is hard, I never aim for a perfect score, a small genuine improvement is worth more than a large fabricated one, and I do not set `cooking_methods_researched: 1` unless thorough method research was actually done. After all 8 are done (not before), I execute CHORES.md.
+
+---
+
+### 8 lowest-scoring files (assessed 2026-04-28, start of session 13)
+
+| # | File | Score | Key gap |
+|---|------|-------|---------|
+| 1 | lamb/roasts/lamb_brisket.md | 5 | methods survey + slow_cooker leaf |
+| 2 | poultry/turkey/turkey_thigh.md | 5 | more sources for oven_roast; Groups A/C/D |
+| 3 | poultry/turkey/turkey_ground.md | 6 | complete grill+pan_fry leaves; Group A |
+| 4 | game/venison/venison_loin.md | 7 | oven_roast leaf; fix duplicate profile text; Groups A/C/D |
+| 5 | beef/braising/brisket.md | 8 | methods not researched |
+| 6 | beef/braising/chuck_roast.md | 8 | methods not researched |
+| 7 | beef/offal/beef_liver.md | 8 | methods not researched |
+| 8 | beef/roasts/prime_rib.md | 8 | methods not researched |
+
