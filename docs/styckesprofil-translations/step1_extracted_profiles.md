@@ -5565,7 +5565,7 @@ Pork jowl is the cheek and jaw area of the pig, encompassing both the buccinator
 
 **SV:**
 
-*(to translate)*
+Griskäke är käk- och underkäkspartiet hos grisen, och omfattar *buccinator* (samma muskel som *cheek*/*pork_cheek*) och det omgivande subcutana fettet och skinnet. Den tillagas vanligast som bräserad griskind (*guanciale*) eller rökt (*jowl bacon* i USA-södra cuisine). Innertemperatur: 88–95 °C pull-apart (bräserad). Eftertillagning: försumbar.
 
 ---
 
@@ -5582,7 +5582,7 @@ Standard liver and onions: caramelise sliced onions first (10–15 min in butter
 
 **SV:**
 
-*(to translate)*
+Pannstekning av fläsklever följer samma kärnteknik som nötlever: hett fett, hög direktvärme, minimal tid. Nyckeln jämfört med pannsearing är närvaron av en stärkelsebeläggning (mjöl, fint ströbröd) som ger en krispigare yta. Innertemperatur: 71 °C. Tillagnings tid: 2–3 minuter per sida. Överkoka inte — fläsklever torkar och grynras snabbt.
 
 ---
 
@@ -5599,7 +5599,7 @@ At 6–12 mm thickness, sear 60–90 seconds per side. The interior must remain 
 
 **SV:**
 
-*(to translate)*
+Pannsearing av fläsklever skiljer sig från pannstekning i att beläggningen är minimal eller frånvarande — målet är en ren, obelagd sear direkt på leverens yta, för en djupt karameliserad krusta. Innertemperatur: 71 °C. Tillagnings tid: 2–3 minuter per sida. Överkoka inte.
 
 ---
 
@@ -5614,7 +5614,7 @@ Pork liver is a large, bilobed organ weighing 1–1.5 kg whole (commonly pre-sli
 
 **SV:**
 
-*(to translate)*
+Fläsklever är ett stort, bilobformat organ som väger 1–1,5 kg hela (vanligast förskivad till 6–12 mm portioner i detaljhandeln). Det är mildare, lätt sötare och mer delikat i konsistens än nötlever — mer tillgängligt. Innertemperatur: 71 °C. Pannstekta skivor: 2–3 minuter per sida.
 
 ---
 
@@ -5630,7 +5630,7 @@ Pork tongue is the smaller, more delicate sibling of beef tongue — typically 2
 
 **SV:**
 
-*(to translate)*
+Fläsktungue är det mindre, mer delikata syskonet till nöttungue — typiskt 250–400 g per tunga jämfört med 1,5–2 kg för nöt. Strukturen är identisk: en enda tät tungmuskel insvept i ett tjockt yttre skinn. Brässering i 1,5–2 timmar vid 85–90 °C. Innertemperatur: 80–85 °C. Det yttre skinnet peelas av strax efter tillagning medan det fortfarande är varmt.
 
 ---
 
@@ -5645,7 +5645,7 @@ Pork tongue cooked in an electric slow cooker is the same long-braise preparatio
 
 **SV:**
 
-*(to translate)*
+Fläsktungue tillagad i elektrisk slow cooker är samma långa brässering som på spisen, utförd i en förseglad miljö som håller vätskan stabil vid 85–95 °C utan bevakning. Innertemperatur: 80–85 °C. Slow cooker: 4–6 timmar vid låg temperatur. Det yttre skinnet avlägsnas enkelt efter tillagning medan tungan fortfarande är varm.
 
 ---
 
@@ -5664,7 +5664,7 @@ Target internal temperatures (air fryer):
 
 **SV:**
 
-*(to translate)*
+Baby back-revben (även kallade ryggsrevben eller *kamben* på danska; *Rippchen* på tyska) är de övre revbenen från fläskryggsområdet — magrare, mer böjda och mindre än spareribs. I airfryern ger den hög-volym hetluftscirkulation en knaprig yttre glasyring. Innertemperatur: 82–88 °C (möra, lätt separerade från benet). Tillagnings tid: 25–30 minuter vid 190–200 °C.
 
 ---
 
@@ -5683,7 +5683,7 @@ Target internal temperatures (grill):
 
 **SV:**
 
-*(to translate)*
+Baby back-revben på grillen: den mest populära metoden är indirekt värme vid ~150 °C i 1 timme insvept i folie (utan förkokada), sedan folie av och avsluta 5–7 minuter per sida med BBQ-sås. Innertemperatur: 82–88 °C. Benet ska separera lätt vid dragning.
 
 ---
 
@@ -5702,7 +5702,7 @@ Target internal temperatures (oven roast):
 
 **SV:**
 
-*(to translate)*
+Baby back-revben ugnsstekta tillagas typiskt lågt och långsamt insvept i folie vid 150 °C i 1–2 timmar, sedan folie av och avsluta vid högre värme med BBQ-sås. Innertemperatur: 82–88 °C. Eftertillagning: försumbar.
 
 ---
 
@@ -5721,7 +5721,7 @@ Target internal temperatures (smoker):
 
 **SV:**
 
-*(to translate)*
+Baby back-revben från rökaren är guldstandarden för lång-och-långsam barbecue. Revbenen (Schälrippchen/Rippchen vom Loin) tillagas bensidan ned i en kammare vid 110–120 °C med hardwood-rök (ca 3 timmar). Innertemperatur: 82–88 °C (möra, lätt separerade). Tillagnings tid: 3–4 timmar.
 
 ---
 
@@ -5741,7 +5741,7 @@ Target internal temperatures (air fryer):
 
 **SV:**
 
-*(to translate)*
+Baby back-revben (även kallade ryggsrevben eller *kamben* på danska) är de övre revbenen från fläskryggsområdet. Innertemperatur: 82–88 °C (möra, lätt separerade från benet). Eftertillagning: försumbar.
 
 ---
 
@@ -5760,7 +5760,7 @@ Both methods target **88–95 °C (190–203 °F)** internal — the temperature
 
 **SV:**
 
-*(to translate)*
+Ugnsstekning är den vanligaste hemmametoden för spareribs och tillåter två distinkta tillvägagångssätt: (1) **lågt och långsamt insvept i folie** (120–140 °C i 3–4 timmar, folie förseglad för fuktfångst, sedan folie av och avsluta med glasyring); (2) **direkt torr ugnsstekning** (160–180 °C utan folie, 2–3 timmar med regelbunden bastning). Innertemperatur: 82–92 °C. Eftertillagning: försumbar.
 
 ---
 
@@ -5775,7 +5775,7 @@ Spare ribs (*revelsben*/*kamben* in Danish; *Spareribs* in German/Austrian; *cos
 
 **SV:**
 
-*(to translate)*
+Spareribs (*revelsben*/*kamben* på danska; *Spareribs* på tyska/österrikiska; *costillas* på spanska) är de nedre bukrevsrevbenen (sternum-angränsande), större och plattare än baby back-revben, med avsevärd mängd intramuskulärt fett och bindväv. Innertemperatur: 82–92 °C. Eftertillagning: försumbar.
 
 ---
 
@@ -5796,7 +5796,7 @@ The MEATER probe must be inserted lengthwise along the widest bone in the centre
 
 **SV:**
 
-*(to translate)*
+Ugnsstekning är den mest tillgängliga metoden för St. Louis-style revben, och ger resultat jämförbara med en bakgårdsrökare med standardhushållsutrustning. Innertemperatur: 82–92 °C. Tillagnings tid: 2,5–3 timmar insvept i folie vid 150 °C, sedan avsluta öppet med glasyring.
 
 ---
 
@@ -5841,7 +5841,7 @@ parallel to the bone. The centre third of the rack gives the most representative
 
 **SV:**
 
-*(to translate)*
+St. Louis-style revben är den rektangulära, trimmade versionen av fullständiga fläskspareribs. De kommer från den nedre delen av revbensburen — under baby back-revbenen där ryggen har avlägsnats, och löper längs buken mot bröstbenet. Innertemperatur: 82–92 °C. Eftertillagning: försumbar.
 
 ---
 
@@ -5860,7 +5860,7 @@ Target internal temperatures (oven roast):
 
 **SV:**
 
-*(to translate)*
+Cured skinka (skinke på danska; Schinken på tyska/österrikiska) för ugnsstekning encompasserar både förkokt glaserad skinka och direktugnsversioner. Det klassiska tillvägagångssättet är att förkoka en mild-cured skinka till innertemperatur, sedan glasera med honungssennep och avsluta i het ugn. Innertemperatur: 68–72 °C. Eftertillagning: 4–6 °C.
 
 ---
 
@@ -5882,7 +5882,7 @@ Target internal temperatures (oven roast):
 
 **SV:**
 
-*(to translate)*
+Cured skinka för ugnsstekning. Det klassiska tillvägagångssättet i Skandinavien och Tyskland: förkoka, glasera, avsluta i ugn. Innertemperatur: 68–72 °C. Eftertillagning: 4–6 °C.
 
 ---
 
@@ -5909,7 +5909,7 @@ which gives a lagging reading.
 
 **SV:**
 
-*(to translate)*
+Skinka är grisets bakben, cured med salt, rök eller båda innan försäljning. Till skillnad från andra fläsksnitt anländer den till ugnen redan transformerad: curing har dragit ihop proteinerna, drivit ut fukt och vanligtvis delvis denaturerat muskelproteinerna. Målet är uppvärmning, inte tillagning. Innertemperatur: 60–68 °C (cured skinka). Eftertillagning: 4–6 °C.
 
 ---
 
@@ -5944,7 +5944,7 @@ and basted repeatedly to build a lacquered crust over the scored fat.
 
 **SV:**
 
-*(to translate)*
+Skinka är grisets bakben — *biceps femoris* och omgivande muskler — cured med salt, rök eller båda. Curing transformerar köttet; ugnen värmer och glaserar. Innertemperatur: 60–68 °C. Eftertillagning: 4–6 °C.
 
 ---
 
@@ -5960,7 +5960,7 @@ Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is
 
 **SV:**
 
-*(to translate)*
+Fläskbuk (svinekam/flæskesteg på danska; Schweinebauch på tyska/österrikiska) är den quintessentiella nordiska och tyska söndagsrostningen. Nyckeln till framgång är svålen (svær/Kruste): svålen måste vara djupt inritsad, väl torkad och exponerad för intensiv värme för att blåsa upp. Airfryer ger intensivt koncentrerad hetluft. Innertemperatur: 70–75 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -5979,7 +5979,7 @@ Target internal temperatures (braise):
 
 **SV:**
 
-*(to translate)*
+Fläskbuk bräserad i täckt kärl med aromatisk vätska ger ett extraordinärt silkeslent, isärfallande resultat. Det tjocka fettlagret smälter ner i bräseringsvätskan och ger rik, kropp och smak. Innertemperatur: 82–90 °C pull-apart. Eftertillagning: försumbar.
 
 ---
 
@@ -5999,7 +5999,7 @@ Target internal temperatures (oven roast):
 
 **SV:**
 
-*(to translate)*
+Fläskbuk (svinekam/flæskesteg på danska; Schweinebauch på tyska/österrikiska) är den quintessentiella nordiska och tyska söndagsrostningen. Nyckeln till svålen: djupt inritsad, väl torkad, exponerad för intensiv ugnsövervärme i slutet. Innertemperatur: 70–75 °C. Eftertillagning: 2–3 °C. Ugnstemperatur: 160–180 °C i 1,5–2 timmar, sedan 230–250 °C i 15–20 minuter för svål.
 
 ---
 
@@ -6018,7 +6018,7 @@ Target internal temperatures (pan fry):
 
 **SV:**
 
-*(to translate)*
+Pannstekt fläskbuk ger det mest direkt karameliserade resultatet — het panna, fett sidan ned, kraftig Maillard-bryning. Innertemperatur: 70–75 °C. Eftertillagning: 2–3 °C. Skivor av fläskbuk pannsteks i 3–4 minuter per sida.
 
 ---
 
@@ -6039,7 +6039,7 @@ Target internal temperatures (slow cook method):
 
 **SV:**
 
-*(to translate)*
+Fläskbuk (svinekam/Schweinebauch/pancetta fresca) är ett av de rikaste snitten för lågt-och-långsamt. Det tjocka fettlagret smälter under lång tillagning och gör köttet exceptionellt fuktigt och smakrikt. Slow cooker: 6–8 timmar vid låg temperatur. Innertemperatur: 82–90 °C pull-apart.
 
 ---
 
@@ -6060,7 +6060,7 @@ Target internal temperatures (smoker method):
 
 **SV:**
 
-*(to translate)*
+Fläskbuk (svinekam/flæskesteg på danska; Schweinebauch på tyska) är den quintessentiella nordiska och tyska söndagsrostningen. Rökt fläskbuk tillagas lågt och långsamt i rökaren vid 110–120 °C i 3–4 timmar. Innertemperatur: 70–75 °C (hel) eller 82–90 °C (pull-apart). Eftertillagning: 2–4 °C.
 
 ---
 
@@ -6079,7 +6079,7 @@ Target internal temperatures (sous vide):
 
 **SV:**
 
-*(to translate)*
+Fläskbuk lämpar sig utmärkt för sous vide. Det rikliga intramuskulära fettet och bindväven smälter och omvandlas till gelatin vid låga temperaturer (60–75 °C), vilket ger en silkeslen, smörsmjuk konsistens. Sous vide: 65–72 °C i 24–36 timmar. Avsluta med het panna för svålkruspighet. Eftertillagning: minimal.
 
 ---
 
@@ -6094,7 +6094,7 @@ Pork belly (*svinekam* / *flæskesteg*, Danish; *Schweinebauch*, German; *pancet
 
 **SV:**
 
-*(to translate)*
+Fläskbuk (*svinekam*/*flæskesteg*, danska; *Schweinebauch*, tyska; *pancetta tesa*, italienska; *bak kwa*, kinesiska) är den ventrala bröstväggen — den laminerade strukturen av skinn, subkutant fett, *obliques*-muskler och *rectus abdominis* i alternerande lager. Innertemperatur: 70–75 °C (hel) eller 82–90 °C (pull-apart). Eftertillagning: 2–4 °C.
 
 ---
 
@@ -6111,7 +6111,7 @@ Target internal temperature: **75–80 °C (167–176 °F)** for sliceable, tend
 
 **SV:**
 
-*(to translate)*
+Fläsklägg och svinknopp (Schweinshaxe/stinco di maiale/kuzu incik) är ett kollagenrikt snitt med tjock bindväv, benmärg och hårt arbetat muskel. Brässering låser upp snittets fulla potential. Innertemperatur: 82–90 °C pull-apart. Tillagnings tid: 2–3 timmar bräserad.
 
 ---
 
@@ -6128,7 +6128,7 @@ Target internal temperature: **75–85 °C (167–185 °F)** as explicitly state
 
 **SV:**
 
-*(to translate)*
+Fläsklägg och svinknopp (Schweinshaxe/stinco di maiale) kan ugnsrostas tills genomstekt och möras. Ugnsstekning vid 180–200 °C i 2–3 timmar med regelbunden bastning. Innertemperatur: 82–90 °C pull-apart. Eftertillagning: försumbar.
 
 ---
 
@@ -6145,7 +6145,7 @@ Target internal temperature: **85–90 °C (185–194 °F)** pull-apart. The slo
 
 **SV:**
 
-*(to translate)*
+Fläsklägg och svinknopp (Schweinshaxe/Stelze) är ett idealiskt slow cooker-snitt. Den täta bindväven och benmärgen kräver lång, låg fuktig värme. Slow cooker: 6–8 timmar vid låg temperatur. Innertemperatur: 82–90 °C pull-apart. Eftertillagning: noll.
 
 ---
 
@@ -6163,7 +6163,7 @@ Target internal temperature: **75–80 °C (167–176 °F)** for sliceable, tend
 
 **SV:**
 
-*(to translate)*
+Fläsklägg (*Schweinshaxe*, tyskt/österrikiskt — egentligen knoge/skaft; *stinco di maiale*, italienska; *pernil*, karibisk/filippinsk; *jamón fresco*, spanska) avser två distinkta detaljhandelsnitt i olika länder. Innertemperatur: 82–90 °C pull-apart. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -6182,7 +6182,7 @@ Target internal temperatures (oven roast):
 
 **SV:**
 
-*(to translate)*
+Fläskryggstek (svinekam på danska; Schweinerücken/Kotelettstrang på tyska/österrikiska) med svål är den quintessentiella skandinaviska och tyska söndagsmiddagen. Ryggen är magrare än skulder. Ugnsstekning: 160–180 °C i 1–1,5 timmar, avsluta med 230 °C för svål. Innertemperatur: 68–72 °C. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -6202,7 +6202,7 @@ Target internal temperatures (oven roast):
 
 **SV:**
 
-*(to translate)*
+Fläskryggstek (svinekam på danska; Schweinerücken/Kotelettstrang på tyska/österrikiska) med svål. Innertemperatur: 68–72 °C. Eftertillagning: 3–5 °C. Svålen kräver 230 °C i 15–20 minuter för att blåsa upp.
 
 ---
 
@@ -6221,7 +6221,7 @@ Target internal temperatures (oven roast):
 
 **SV:**
 
-*(to translate)*
+Fläskskuldra/hals (nakkefilet/nakkekam/svinekølle på danska; Schweinenacken/Schweineschulter på tyska/österrikiska) är ett av de mest förlåtande snitten för ugnen — dess fettmarmorering förhindrar uttorkning. Innertemperatur: 68–75 °C (medium). Eftertillagning: 4–6 °C för hel stek.
 
 ---
 
@@ -6240,7 +6240,7 @@ Target internal temperatures (slow cooker / very-low oven):
 
 **SV:**
 
-*(to translate)*
+Fläskskuldra (Schweinenacken/Schweineschulter på tyska; nakkefilet/svinenakke på danska/norska) slow-cooked vid låga temperaturer ger ultimate pulled pork — smält-i-munnen kött. Slow cooker: 8–10 timmar vid låg temperatur. Innertemperatur: 88–95 °C pull-apart. Eftertillagning: noll.
 
 ---
 
@@ -6259,7 +6259,7 @@ Target internal temperatures (smoker):
 
 **SV:**
 
-*(to translate)*
+Fläskskuldra/hals (Schweinenacken/Schweineschulter på tyska/österrikiska; nakkefilet/svinekam på danska/norska) är det mest populära snittet för rökt pulled pork. Högt fettinnehåll och generös bindväv gör det idealiskt för låg-och-långsam rök. Rökare: 107–120 °C i 10–14 timmar. Innertemperatur: 88–95 °C pull-apart.
 
 ---
 
@@ -6279,7 +6279,7 @@ Target internal temperatures (oven roast):
 
 **SV:**
 
-*(to translate)*
+Fläskskuldra/hals (nakkefilet/nakkekam/svinekølle på danska; Schweinenacken/Schweineschulter på tyska/österrikiska) är ett av de mest förlåtande snitten. Innertemperatur: 68–75 °C (medium) eller 88–95 °C (pull-apart). Eftertillagning: 4–6 °C.
 
 ---
 
@@ -6296,7 +6296,7 @@ The critical technique is achieving an even cross-section: pound the thick end o
 
 **SV:**
 
-*(to translate)*
+Airfryer-tillagning av kycklingbröst är bland de mest bekväma metoderna för en snabb vardagsmåltid. Airfryern cirkulerar riktigt het luft vid 180–200 °C runt bröstet, och ger en lätt krispig, gyllenbrun exteriör. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C. Tillagnings tid: 15–20 minuter beroende på tjocklek.
 
 ---
 
@@ -6315,7 +6315,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 
 **SV:**
 
-*(to translate)*
+Benfritt skinnat kycklingbröst är ett av de mest populära grillsnitten. Eftersom det är mycket magert gynnas det enormt av en marinad som tillsätter fukt och smak innan den höga, torra grillvärmen. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C. Tillagnings tid: 6–8 minuter per sida.
 
 ---
 
@@ -6334,7 +6334,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry, 
 
 **SV:**
 
-*(to translate)*
+Benfritt, skinnat kycklingbröst är ett extremt magert snitt som kokar snabbt och kan torka ut lätt. Nyckelteknikerna är: hamra till jämn tjocklek; använd hög ugnstemperatur (200–220 °C); undvik överkokad. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C. Tillagnings tid: 20–25 minuter.
 
 ---
 
@@ -6351,7 +6351,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 
 **SV:**
 
-*(to translate)*
+Benfritt, skinnat kycklingbröst är *pectoralis major*-muskeln — den största muskeln hos fågeln. Eftersom tamhöns sällan flasar kraftigt har denna muskel nästan ingen bindväv eller intramuskulärt fett — det är orsaken till dess magerhet och känsliga konsistens. Pannsearing: 4–5 minuter per sida i het panna med olja. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -6366,7 +6366,7 @@ Chicken breast is the *pectoralis major* muscle — the largest muscle of the bi
 
 **SV:**
 
-*(to translate)*
+Kycklingbröst är *pectoralis major*-muskeln — den största muskeln hos fågeln, placerad på bröstbenet. Eftersom tamhöns sällan flyger eller flasar kraftigt har denna muskel nästan ingen bindväv eller intramuskulärt fett. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -6381,7 +6381,7 @@ Oven roasting bone-in, skin-on chicken breast uses dry convective heat to cook t
 
 **SV:**
 
-*(to translate)*
+Ugnsstekning av kycklingbröst med ben och skinn använder torr konvektionsvärme för att tillaga bröstet utifrån och in medan skinnet krisprnas och bastar köttet. Innertemperatur: 74 °C. Eftertillagning: 3–4 °C. Tillagnings tid: 35–45 minuter vid 200–220 °C.
 
 ---
 
@@ -6404,7 +6404,7 @@ Bone-in, skin-on chicken breast is the largest section of the bird — the split
 
 **SV:**
 
-*(to translate)*
+Kycklingbröst med ben och skinn är den största sektionen av fågeln — det halverade eller splitade bröstet — med bröstbenet, revbenen och ibland önsketelsbenet fortfarande fästat, täckt av skinnet. Innertemperatur: 74 °C. Eftertillagning: 3–4 °C.
 
 ---
 
@@ -6421,7 +6421,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 
 **SV:**
 
-*(to translate)*
+Mald kycklingburger är formade biffar av malt kyckling, typiskt 85–93 % mager. Eftersom malt fjäderfä måste tillagas till en högre innertemperatur än hel muskel tillagas kycklingburgare alltid genomstekt. Airfryer ger snabb konvektionskrusta. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -6438,7 +6438,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 
 **SV:**
 
-*(to translate)*
+En kycklingburgerbiff är gjord av malt kyckling — typiskt en blandning av mörkt kött (lår och ben) för smak och fett, eller vitt kött (bröst) för magrare produkt. Grillning ger goda resultat. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -6455,7 +6455,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 
 **SV:**
 
-*(to translate)*
+Mald kycklingburger pannstekta tillagas på spisen i en stekpanna. Malt kyckling är magrare och klibbigare än nötkött, så bindemedel som ägg och panko (panademetod) är nödvändiga för att hålla biffarna samman. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -6473,7 +6473,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 
 **SV:**
 
-*(to translate)*
+Mald kycklingburger är formade biffar av malt kyckling, typiskt 85–93 % mager. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C. Alltid genomstekt av livsmedelssäkerhetsskäl.
 
 ---
 
@@ -6492,7 +6492,7 @@ The MEATER probe should be inserted along the bone axis from the meatier end, di
 
 **SV:**
 
-*(to translate)*
+Ugnsstekning vid hög värme är den mest tillgängliga metoden för kycklinglår/-trumpinne hemma. Den heta ugnen (200–230 °C) smälter samtidigt subcutant fett under skinnet, driver av ytfuktighet och producerar karamelliserat skinn. Innertemperatur: 74 °C. Eftertillagning: 3–4 °C. Tillagnings tid: 35–45 minuter.
 
 ---
 
@@ -6509,7 +6509,7 @@ The drumstick has a single bone (tibia/fibula) with a club-shaped muscle mass ar
 
 **SV:**
 
-*(to translate)*
+Kycklingbenet består av låret (femurben och omgivande muskel) och trumpinnen (tibiotarsuben och omgivande muskel). I detaljhandeln avser *trumpinne* specifikt den nedre sektionen nedanför knäleden. Innertemperatur: 74 °C. Eftertillagning: 3–4 °C.
 
 ---
 
