@@ -11,8 +11,7 @@ start_cook:
     cut_id:
       name: Cut ID
       description: >
-        The cut identifier. Either an EXP_TREE slug string (e.g. "ribeye_steak")
-        for the new path, or a legacy integer ID from cooking_data.py. Required.
+        The EXP_TREE slug for the cut (e.g. "ribeye_steak"). Required.
       required: true
       example: ribeye_steak
       selector:

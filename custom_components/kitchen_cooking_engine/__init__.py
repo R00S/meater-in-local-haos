@@ -52,15 +52,7 @@ from .const import (
     SERVICE_START_SIMPLE_PROBE_COOK,
 )
 from .cooking_data import (
-    get_cut_by_id,
-    get_doneness_for_cut,
-    get_recommended_doneness,
     CookingMethod,
-    MEAT_CATEGORIES,
-)
-from .swedish_cooking_data import (
-    get_swedish_cut_by_id,
-    SWEDISH_MEAT_CATEGORIES,
 )
 from .api import async_register_api
 
@@ -184,7 +176,7 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.7.0.11"
+__version__ = "0.7.0.12"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
@@ -194,10 +186,7 @@ DATA_SOURCE_SWEDISH = "swedish"
 SERVICE_START_COOK_SCHEMA = vol.Schema(
     {
         vol.Required(ATTR_ENTITY_ID): cv.entity_ids,
-        vol.Required("cut_id"): vol.Any(
-            vol.All(vol.Coerce(int), vol.Range(min=1, max=9999)),  # legacy integer ID
-            str,  # EXP_TREE slug (e.g. "ribeye_steak")
-        ),
+        vol.Required("cut_id"): str,  # EXP_TREE slug (e.g. "ribeye_steak")
         vol.Required("doneness"): vol.In([
             "rare", "medium_rare", "medium", "medium_well", "well_done",
             "pulled", "safe", "tender", "crisp_tender", "caramelized",
@@ -533,25 +522,6 @@ def _get_cooking_session_entities(hass: HomeAssistant, entity_ids: list[str]) ->
     return entities
 
 
-def _get_protein_name_for_cut(cut) -> str | None:
-    """Get the protein category name for a cut."""
-    for category in MEAT_CATEGORIES:
-        for meat in category.meats:
-            for cut_type in meat.cut_types:
-                if cut in cut_type.cuts:
-                    return category.name
-    return None
-
-
-def _get_protein_name_for_cut_with_categories(cut, categories) -> str | None:
-    """Get the protein category name for a cut from specified categories."""
-    for category in categories:
-        for meat in category.meats:
-            for cut_type in meat.cut_types:
-                if cut in cut_type.cuts:
-                    return category.name
-    return None
-
 
 async def _async_register_services(hass: HomeAssistant) -> None:
     """Register integration services."""
@@ -576,121 +546,49 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         data_source = call.data.get("data_source", DATA_SOURCE_INTERNATIONAL)
         custom_target_temp_c = call.data.get("custom_target_temp_c")
 
-        # --- EXP_TREE path: cut_id is a string slug ---
-        if isinstance(cut_id, str):
-            exp_data = await hass.async_add_executor_job(
-                _get_exp_cut_data, cut_id, cooking_method
-            )
-            if not exp_data:
-                _LOGGER.error("EXP_TREE cut slug '%s' not found in recipe files", cut_id)
-                return
-            doneness_info = exp_data["doneness_temps"].get(doneness)
-            if not doneness_info:
-                _LOGGER.error("Doneness '%s' not valid for cut '%s'", doneness, cut_id)
-                return
-
-            target_temp_c = custom_target_temp_c if custom_target_temp_c else doneness_info["target_c"]
-            target_temp_f = int(target_temp_c * 9 / 5 + 32) if custom_target_temp_c else doneness_info["target_f"]
-
-            _LOGGER.info(
-                "Starting cook (EXP): %s (%s) at %d°C (%d°F) using %s",
-                exp_data["name_long"], doneness, target_temp_c, target_temp_f, cooking_method,
-            )
-
-            entities = _get_cooking_session_entities(hass, entity_ids)
-            if not entities:
-                _LOGGER.error(
-                    "No cooking session entities found for %s.", entity_ids,
-                )
-                return
-
-            for entity in entities:
-                entity.start_cook(
-                    protein=exp_data["category"] or "unknown",
-                    cut=exp_data["name"],
-                    doneness=doneness,
-                    cooking_method=cooking_method,
-                    target_temp_c=target_temp_c,
-                    target_temp_f=target_temp_f,
-                    min_temp_c=doneness_info.get("min_c") or target_temp_c - 3,
-                    min_temp_f=doneness_info.get("min_f") or target_temp_f - 5,
-                    max_temp_c=doneness_info.get("max_c") or target_temp_c + 3,
-                    max_temp_f=doneness_info.get("max_f") or target_temp_f + 5,
-                    rest_time_min=exp_data["rest_time_min"],
-                    rest_time_max=exp_data["rest_time_max"],
-                    usda_safe=doneness_info.get("usda_safe", False),
-                    carryover_temp_c=exp_data["carryover_temp_c"],
-                    cut_display=exp_data["name_long"],
-                    cut_id=cut_id,
-                    custom_target_temp_c=custom_target_temp_c,
-                    data_source=data_source,
-                )
+        exp_data = await hass.async_add_executor_job(
+            _get_exp_cut_data, cut_id, cooking_method
+        )
+        if not exp_data:
+            _LOGGER.error("EXP_TREE cut slug '%s' not found in recipe files", cut_id)
+            return
+        doneness_info = exp_data["doneness_temps"].get(doneness)
+        if not doneness_info:
+            _LOGGER.error("Doneness '%s' not valid for cut '%s'", doneness, cut_id)
             return
 
-        # --- Legacy path: cut_id is an integer from cooking_data.py ---
-        # Get the cut data based on data source
-        if data_source == DATA_SOURCE_SWEDISH:
-            cut = get_swedish_cut_by_id(cut_id)
-            categories = SWEDISH_MEAT_CATEGORIES
-        else:
-            cut = get_cut_by_id(cut_id)
-            categories = MEAT_CATEGORIES
-        
-        if not cut:
-            _LOGGER.error("Cut ID %s not found in %s data source", cut_id, data_source)
-            return
-
-        # Get the doneness level
-        temp_range = get_doneness_for_cut(cut, doneness)
-        if not temp_range:
-            _LOGGER.error("Doneness %s not valid for cut %s", doneness, cut.name)
-            return
-
-        # Use custom target temperature if provided, otherwise use standard
-        target_temp_c = custom_target_temp_c if custom_target_temp_c else temp_range.target_temp_c
-        target_temp_f = int(target_temp_c * 9 / 5 + 32) if custom_target_temp_c else temp_range.target_temp_f
+        target_temp_c = custom_target_temp_c if custom_target_temp_c else doneness_info["target_c"]
+        target_temp_f = int(target_temp_c * 9 / 5 + 32) if custom_target_temp_c else doneness_info["target_f"]
 
         _LOGGER.info(
-            "Starting cook: %s (%s) at %d°C (%d°F) using %s [data: %s]%s",
-            cut.name_long,
-            doneness,
-            target_temp_c,
-            target_temp_f,
-            cooking_method,
-            data_source,
-            " (custom temp)" if custom_target_temp_c else "",
+            "Starting cook: %s (%s) at %d°C (%d°F) using %s",
+            exp_data["name_long"], doneness, target_temp_c, target_temp_f, cooking_method,
         )
 
-        # Get the category name for the protein
-        protein_name = _get_protein_name_for_cut_with_categories(cut, categories)
-        
-        # Find and update the target entities
         entities = _get_cooking_session_entities(hass, entity_ids)
         if not entities:
             _LOGGER.error(
-                "No cooking session entities found for %s. "
-                "Make sure the entity exists and the integration is properly set up.",
-                entity_ids,
+                "No cooking session entities found for %s.", entity_ids,
             )
             return
-            
+
         for entity in entities:
             entity.start_cook(
-                protein=protein_name or "unknown",
-                cut=cut.name,
+                protein=exp_data["category"] or "unknown",
+                cut=exp_data["name"],
                 doneness=doneness,
                 cooking_method=cooking_method,
                 target_temp_c=target_temp_c,
                 target_temp_f=target_temp_f,
-                min_temp_c=temp_range.min_temp_c,
-                min_temp_f=temp_range.min_temp_f,
-                max_temp_c=temp_range.max_temp_c,
-                max_temp_f=temp_range.max_temp_f,
-                rest_time_min=cut.rest_time_min,
-                rest_time_max=cut.rest_time_max,
-                usda_safe=temp_range.usda_safe,
-                carryover_temp_c=cut.carryover_temp_c,
-                cut_display=cut.name_long,
+                min_temp_c=doneness_info.get("min_c") or target_temp_c - 3,
+                min_temp_f=doneness_info.get("min_f") or target_temp_f - 5,
+                max_temp_c=doneness_info.get("max_c") or target_temp_c + 3,
+                max_temp_f=doneness_info.get("max_f") or target_temp_f + 5,
+                rest_time_min=exp_data["rest_time_min"],
+                rest_time_max=exp_data["rest_time_max"],
+                usda_safe=doneness_info.get("usda_safe", False),
+                carryover_temp_c=exp_data["carryover_temp_c"],
+                cut_display=exp_data["name_long"],
                 cut_id=cut_id,
                 custom_target_temp_c=custom_target_temp_c,
                 data_source=data_source,

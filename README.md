@@ -31,7 +31,7 @@ Full installation, configuration, and feature documentation:
 Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional. See [STATUS.md](STATUS.md) for full progress tracking.
 
 ### v0.7.0.9–0.7.0.11 Changes — start_cook service & bug fixes (April 2026)
-- ✅ **`start_cook` accepts EXP_TREE slugs** — `cut_id` now accepts a string slug (e.g. `"ribeye_steak"`) in addition to legacy integer IDs; the service looks up temperatures and rest times from the recipe markdown files
+- ✅ **`start_cook` accepts EXP_TREE slugs** — `cut_id` is a string slug (e.g. `"ribeye_steak"`); the service looks up temperatures and rest times from the recipe markdown files
 - ✅ **Rest time and carryover data in KCE:CUT** — `rest_time_min`, `rest_time_max`, and `carryover_temp_c` optional fields added to the cut overview format; the generator populates these into `EXP_TREE` for use by the cooking engine
 - ✅ **Per-method rest/carryover overrides in KCE:CUT_METHOD** — braise, sous_vide, and slow_cooker files can now override the cut-level rest/carryover defaults for their specific method
 - ✅ **Fix: `PLATFORMS` undefined** — `PLATFORMS = [Platform.SENSOR]` was missing from `__init__.py`; this caused a `NameError` that silently prevented all config entries from setting up sensor entities, causing every service call to fail
@@ -498,26 +498,12 @@ The integration provides services to control cooking sessions. You can call thes
 
 ### Start a Cook
 
-Use the EXP_TREE slug (preferred) or a legacy integer cut ID:
-
 ```yaml
 service: kitchen_cooking_engine.start_cook
 target:
   entity_id: sensor.cooking_session
 data:
-  cut_id: ribeye_steak  # EXP_TREE slug (preferred)
-  doneness: medium_rare
-  cooking_method: pan_sear
-```
-
-Legacy integer IDs still work for backwards compatibility:
-
-```yaml
-service: kitchen_cooking_engine.start_cook
-target:
-  entity_id: sensor.cooking_session
-data:
-  cut_id: 100  # Legacy integer ID (Ribeye Steak)
+  cut_id: ribeye_steak  # EXP_TREE slug
   doneness: medium_rare
   cooking_method: pan_sear
 ```

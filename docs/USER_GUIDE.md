@@ -1149,7 +1149,7 @@ Start a temperature-monitored cook session.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `entity_id` | string | ✅ | Target cooking session sensor entity |
-| `cut_id` | string or integer | ✅ | EXP_TREE slug (e.g. `ribeye_steak`) or legacy integer from `cooking_data.py` |
+| `cut_id` | string | ✅ | EXP_TREE slug (e.g. `ribeye_steak`) |
 | `doneness` | string | ✅ | e.g. `medium_rare`, `well_done`, `pulled` |
 | `cooking_method` | string | ✅ | e.g. `oven_roast`, `pan_sear`, `grill` |
 | `data_source` | string | | `international` (default) or `swedish` |
