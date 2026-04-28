@@ -38,7 +38,7 @@ Beef brisket is taken from the breast and lower chest of the animal, comprising 
 - [Oven Roast](./brisket-oven_roast.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-27
+**Score: 8 / 20** — assessed 2026-04-28
 
 | Criterion | Status |
 |-----------|--------|
@@ -56,6 +56,6 @@ Beef brisket is taken from the breast and lower chest of the animal, comprising 
 
 1. **−8** · Cooking methods not researched
 2. **−1 each** · Missing `brisket-braise.md`, `brisket-slow_cooker.md`, `brisket-smoker.md`
-3. **−1** · Group D missing
+3. **−1** · Group D missing — 25+ URL probes on 2026-04-28: natashaskitchen.com (brisket URLs), koket.se (oxbringa, bringa, brisket, kalops-with-bringa), ica.se (braiserad-brisket, oxbringa), cookinpolish.com (brisket, wolowina-duszona), tasteline.com — all 404. In Scandinavian tradition, beef brisket (bringa/oxbringa) is not typically oven-roasted — it is used in boiled or stovetop-braised dishes. No accessible Group D oven_roast brisket recipe found.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
