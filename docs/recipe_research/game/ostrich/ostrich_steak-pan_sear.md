@@ -22,9 +22,9 @@ cut_type: Ostrich
 
 ## Cut profile
 
-Ostrich (*Struthio camelus*) steak is produced primarily in South Africa, Namibia, and increasingly in France, Belgium, and Germany. Despite being a bird, ostrich meat is red, very low in fat, and treated culinarily exactly like beef or venison. Fan fillet (outerfilé) and top loin are the main steak cuts. The meat is extremely lean and must not be overcooked: medium-rare (54–57 °C) is the South African standard. Above 70 °C the meat becomes tough and liver-like.
+Pan searing is the most controlled method for ostrich steak because the conductive heat from a hot cast-iron or carbon-steel pan is consistent and can be adjusted by lifting the pan from the burner, something that cannot be done on a grill. The complete absence of fat in ostrich steak means the pan itself must supply the cooking fat — use enough butter, ghee, or oil to fully coat the pan surface and prevent sticking. Very high heat (smoking-hot pan) is essential to develop the Maillard crust before the interior overcooks; a moderately hot pan produces greyish, steamed meat instead.
 
-Target internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pull at 52 °C.
+At 2.5–3 cm thickness: 2–3 minutes per side in a smoking-hot pan achieves medium-rare (54–57 °C). Insert the MEATER probe lengthwise through the side of the steak into the geometric centre. Pull at 52 °C to rest to target 54–57 °C. Carryover from pan searing is 3–5 °C. Serve immediately — the zero-fat meat loses heat faster than beef.
 
 ## Source recipes
 

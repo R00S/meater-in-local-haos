@@ -22,9 +22,9 @@ cut_type: Ostrich
 
 ## Cut profile
 
-Ostrich (*Struthio camelus*) steak is produced primarily in South Africa, Namibia, and increasingly in France, Belgium, and Germany. Despite being a bird, ostrich meat is red, very low in fat, and treated culinarily exactly like beef or venison. Fan fillet (outerfilé) and top loin are the main steak cuts. The meat is extremely lean and must not be overcooked: medium-rare (54–57 °C) is the South African standard. Above 70 °C the meat becomes tough and liver-like.
+Grilling ostrich steak requires significantly more attention than grilling beef because of the complete absence of intramuscular fat. Fat insulates and slows the rise of internal temperature; without it, ostrich can go from perfect medium-rare to dry and overcooked in under a minute at high heat. Direct high heat (230–260 °C / 450–500 °F at grate level) is necessary to generate a Maillard crust before the interior overcooks, but total grill time is very short — 2–3 minutes per side for a 2.5 cm steak. Oil the grill grates generously and brush oil on the steak before placing it down; the zero-fat meat will stick to inadequately oiled grates.
 
-Target internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pull at 52 °C and rest.
+South African *braai* tradition (charcoal) is the indigenous method for ostrich; the smoke compounds add complexity that compensates for the meat's mild flavour. Pull at 52 °C to rest to 54–57 °C medium-rare. Carryover from a very hot grill is 3–5 °C — pull early. Above 65 °C the meat becomes dry and chewy.
 
 ## Source recipes
 
