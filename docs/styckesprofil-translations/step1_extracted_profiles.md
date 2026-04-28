@@ -2891,7 +2891,7 @@ American bison (Bison bison) roasts braise extremely well. The lean, dense muscl
 
 **SV:**
 
-*(to translate)*
+Amerikansk bison (*Bison bison*) stekgrytor bräseras utmärkt väl. De magra, täta muskelfibrerna som gör bison känsliga för uttorkning i hög torrvärme-metoder är en fördel vid brässering: lång tillagning i fuktig värme med generös vätska omvandlar kollagenet fullständigt till gelatin. Innertemperatur: 88–95 °C för mörhet som faller isär. Eftertillagning: försumbar — den omgivande bräseringsvätskan buffertar temperatursvängningar.
 
 ---
 
@@ -2912,7 +2912,7 @@ The National Bison Association notes: "Roasts should be cooked to an internal te
 
 **SV:**
 
-*(to translate)*
+Bisonets magerhet (ca 2,4 g fett per 100 g kokt vikt, jämfört med 10+ g för nötkött) gör ugnsstekning mer tekniskt krävande än nötkött. Det fettlocket och den intramuskulära marmoreringen som självbastar en nötstek saknas hos bison. Innertemperatur: 54–60 °C medium-rare; för högre temperatur torkar det snabbt ut. Laga vid låg ugnstemperatur (120–150 °C), vila generöst. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -2927,7 +2927,7 @@ American bison (Bison bison) roasts share the same primal cut nomenclature as be
 
 **SV:**
 
-*(to translate)*
+Amerikansk bison (*Bison bison*) stekgrytor delar samma primärsnittsnomenklatur som nötkött men skiljer sig fundamentalt i fettfördelning. Bison är frilandsdjur vars muskulatur är tät, djupt röd (hög halt myoglobin och järn) och extremt mager. Innertemperatur: 54–60 °C medium-rare. Eftertillagning: 3–5 °C. Tillagning till pull-apart kräver brässering snarare än torr ugnsstekning.
 
 ---
 
@@ -2948,7 +2948,7 @@ Target internal temperature: **57–63 °C (135–145 °F)** for medium-rare to 
 
 **SV:**
 
-*(to translate)*
+Grillning av vattenbuffelsbiff (carabeef) är den vanligaste metoden på Filippinerna, Indien, Vietnam och Sri Lanka. **Kontextnot: I detta projekt avser *buffalo* vattenbuffel (*Bubalus bubalis*).** Köttet är mörkrött, magert och smakrikt — mer besläktat med nötkött i smak än bison. Direkt hög värme i 3–4 minuter per sida. Innertemperatur: 54–60 °C medium. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -2965,7 +2965,7 @@ Target internal temperature: **60–65 °C (140–149 °F)** for medium.
 
 **SV:**
 
-*(to translate)*
+**Kontextnot: I detta projekt avser *buffalo* vattenbuffel (*Bubalus bubalis* — carabao på Filippinerna, bhaisa i Indien) snarare än amerikansk bison.** Vattenbuffelsbiff är mörkrött, kraftigt smakrikt och magrare än vanligt nötkött. Pannsearing: het panna, smör, 3–4 minuter per sida. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -2982,7 +2982,7 @@ Water buffalo steak is cut from the same primal positions as beef (loin, rib, ru
 
 **SV:**
 
-*(to translate)*
+**Kontextnot: I detta projekt avser *buffalo* vattenbuffel (*Bubalus bubalis* — carabao på Filippinerna, bhaisa i Indien) snarare än amerikansk bison.** Vattenbuffelsbiff är mörkrött, kraftigt smakrikt och magrare än vanligt nötkött med uttalad minerallsmak. Innertemperatur: 54–60 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -3001,7 +3001,7 @@ Target internal temperature: **70–74 °C (158–165 °F)**.
 
 **SV:**
 
-*(to translate)*
+Grillning av getkotletter vid direkt värme är den traditionella beredningen i Väst-Afrika, Karibien och Mellanöstern. Det magra köttet och det begränsade fettinnehållet innebär att grilltiden måste kontrolleras noggrant — getkotletter torkar snabbt ut. Innertemperatur: 63–70 °C (get tillagas vanligtvis mer genomstekt än lamm). Eftertillagning: 2–3 °C.
 
 ---
 
@@ -3020,7 +3020,7 @@ Target internal temperature: **70–74 °C (158–165 °F)**.
 
 **SV:**
 
-*(to translate)*
+Pannsearing av getkotletter är primärt en sydasiatisk (*tawa gosht*) och mellanösternsk metod — kotletterna marineras i yoghurt och kryddor, sedan sears hårt på en platt järngriddle (*tawa*) eller het panna. Innertemperatur: 63–70 °C. Gett kräver vanligtvis mer genomstekad tillagning för optimal konsistens.
 
 ---
 
@@ -3038,7 +3038,7 @@ Target internal temperature: **70–74 °C (158–165 °F)**.
 
 **SV:**
 
-*(to translate)*
+Getlårkotletter (*côtelettes de chèvre*; indisk *bakri ki champ*; arabisk *karrī lahm al-maāz*) kommer från ländpartiet mellan sista revbenet och höften — samma anatomiska position som ett lammkotlett. De är T-bone-formade med filé och ytterfilé på varje sida av kotlettryggen. Innertemperatur: 63–70 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -3055,7 +3055,7 @@ Target internal temperature: **75–82 °C (167–180 °F)** for fully cooked, m
 
 **SV:**
 
-*(to translate)*
+Hel rostad getlår är en festberedning i Tyskland (Ziegenkeule), Grekland (katsiki sto fourno), Karibien, Syd- och Väst-Afrika samt Mellanöstern. Köttet har måttligt fett och gynnas av marinering och lång, långsam ugnsstekning. Innertemperatur: 70–75 °C (get tillagas vanligtvis mer genomstekt). Tillagnings tid: 2–3 timmar vid 160–170 °C för ett 2–3 kg lår.
 
 ---
 
@@ -3072,7 +3072,7 @@ Goat leg is a defining ingredient in Caribbean (curried goat), West African (pep
 
 **SV:**
 
-*(to translate)*
+Hel getlår (*Capra hircus*) är bakbenet och består av femur och de stora musklerna: *biceps femoris*, *semimembranosus*, *semitendinosus* och *quadriceps femoris*. Till skillnad från lammlägg — som kan serveras rosa vid 60–63 °C — tillagas get vanligtvis mer genomstekt vid 70–75 °C för bästa konsistens och smak. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -3089,7 +3089,7 @@ Target: 88–93 °C internal AND sustained time at that temperature — temperat
 
 **SV:**
 
-*(to translate)*
+Brässering är den definitiva metoden för getlägg — den enda metoden som pålitligt omvandlar dess täta kollagen till gelatin. Lägget brässeras i aromata grönsaker och vätska (fond, vin, öl eller vatten) i 2–3 timmar vid 85–93 °C. Innertemperatur: 88–93 °C för mörhet som faller isär. Eftertillagning: försumbar.
 
 ---
 
@@ -3106,7 +3106,7 @@ Oven at 180 °C (350 °F); initial uncovered roast 20–30 min for browning; add
 
 **SV:**
 
-*(to translate)*
+Ugnsrostning av getlägg (torrt eller halvtorrt, utan lock eller lätt tält) används primärt i mellanösternska, medelhavsiska och sydasiatiska traditioner där lägget rostas hela vid måttlig temperatur tills köttet är mört. Innertemperatur: 70–75 °C. Tillagnings tid: 2–3 timmar vid 150–160 °C. Yttre resultat: krispigt skinn, mört kött.
 
 ---
 
@@ -3121,7 +3121,7 @@ The goat shank (*getlägg*, Swedish; *jarrete de cabra*, Spanish; *kuzu kolu*, T
 
 **SV:**
 
-*(to translate)*
+Getlägg (svenska: *getlägg*; spanska: *jarrete de cabra*; turkiska: *kuzu kolu*; urdu: *paaya*) är den nedre delen av benet — *radius/ulna* (fram) eller *tibia/fibula* (bak) och den omgivande muskulaturen, tätt insvept i tjockt kollagenrikt bindvävsmantel. Kollageninnehållet är högt; bräsering vid 85–93 °C i 2–3 timmar omvandlar det till gelatin. Innertemperatur: 88–93 °C pull-apart.
 
 ---
 
@@ -3137,7 +3137,7 @@ Goat shoulder (Swedish *getskuldra* / *getbog*) is the upper foreleg — heavily
 
 **SV:**
 
-*(to translate)*
+Getskuldra (svenska: *getskuldra*/*getbog*) är det övre frambenet — hårt arbetat, tätt med kollagen och intramuskulärt fett. Liksom lammskuldra är det ett quintessentiellt lågt-och-långsamt snitt: seg bortom tjälighet om tillagat snabbt men transformerande när bräserat i timmar. Innertemperatur: 88–95 °C pull-apart. Eftertillagning: försumbar vid brässering.
 
 ---
 
@@ -3154,7 +3154,7 @@ Target internal temperature: **82–88 °C (180–190 °F)** for pull-apart.
 
 **SV:**
 
-*(to translate)*
+Getskuldra innehåller mer bindväv än lären och belönas av längre, långsammare tillagning. Det är det traditionella snittet för jamaicansk curry goat, indiska roganjosh-liknande beredningar, karibiska slow-roasts och marockanska tagines. Innertemperatur: 88–95 °C pull-apart. Tillagnings tid: 3–4 timmar vid 150–160 °C ugn.
 
 ---
 
@@ -3169,7 +3169,7 @@ Slow-cooker goat shoulder (Swedish *getskuldra* / *getbog*) takes the same brais
 
 **SV:**
 
-*(to translate)*
+Slow cooker-getskuldra tar samma bräseringsprinciper men använder en 6–8 timmar låg-temperaturscykel i en förseglad crock-pot vid ~88–93 °C. Den låg-och-långsamma miljön är idealisk för att omvandla getskuldrans täta kollagen och ge djupa, koncentrerade smaker. Innertemperatur: 88–95 °C pull-apart. Eftertillagning: noll.
 
 ---
 
@@ -3184,7 +3184,7 @@ Grilling the kangaroo fillet (backstrap) requires maximum heat and minimum time.
 
 **SV:**
 
-*(to translate)*
+Grillning av kängurufil (backstrap) kräver maximal värme och minimal tid. Den extrema magreten innebär att grillgallret måste oljelas och förvärmas till högsta möjliga temperatur. Innertemperatur: 54–57 °C medium-rare. Tillagnings tid: 2–3 minuter per sida. Överkoka absolut inte — kängurufil är extremt känslig för överkokad.
 
 ---
 
@@ -3199,7 +3199,7 @@ The kangaroo fillet (backstrap) is ideal for pan searing: its thin, lean profile
 
 **SV:**
 
-*(to translate)*
+Kängurufil (backstrap) är idealisk för pannsearing: dess tunna, magra profil värms igenom snabbt vid mycket hög värme, utvecklar en mörk, karameliserad Maillard-krusta på 2–3 minuter per sida medan den behåller en varm röd insida. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C. Överkoka inte.
 
 ---
 
@@ -3214,7 +3214,7 @@ The kangaroo fillet (also called backstrap or loin fillet) is the longissimus do
 
 **SV:**
 
-*(to translate)*
+Kängurufil (även kallad backstrap eller ländfilé) är *longissimus dorsi*-muskeln längs var sida av ryggraden på *Macropus*-arterna. Det är det mest uppskattade kängurusnittet: konsekvent det möraste, magraste och renast smakande. Extremt mager (under 2 % fett), djup rubinfärg, rik järnsmak. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -3231,7 +3231,7 @@ Target internal temperature: **52–55 °C (126–131 °F)** for medium-rare. Pu
 
 **SV:**
 
-*(to translate)*
+Kängurubiff från bakkvarter och ländfilé är de föredragna snitten för grillning. Extr magreten (under 2 % fett) innebär att grillen måste förvärmas till mycket hög temperatur och tillagningstiden måste vara kort — typiskt 2–3 minuter per sida. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C. Överkoka absolut inte.
 
 ---
 
@@ -3248,7 +3248,7 @@ Target internal temperature: **54–57 °C (130–135 °F)** for medium-rare. Ma
 
 **SV:**
 
-*(to translate)*
+Kängurubiff (*Macropus* spp.), vanligast från bakkvarter/rumpa eller ländfilé, är ett av de magraste röda kött tillgängliga — typiskt under 2 % fett. Köttet är djupt karmosinrött, med lätt viltsmak och järnrik smak. Pannsearing ger bäst kontroll. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -3266,7 +3266,7 @@ Target internal temperature: **54–57 °C (130–135 °F)** for medium-rare. Ma
 
 **SV:**
 
-*(to translate)*
+Kängurubiff (*Macropus* spp.), vanligast från bakkvarter/rumpa eller ländfilé, är ett av de magraste röda kött tillgängliga — typiskt under 2 % fett. Köttet är djupt karmosinrött, med lätt viltsmak och järnrik smak. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -3283,7 +3283,7 @@ Target internal temperature: **60–65 °C (140–149 °F)** for medium (pink ce
 
 **SV:**
 
-*(to translate)*
+Älg (*Alces alces*) — kallad älg på svenska, elg på norska och Elch på tyska — är den största hjortarten på norra halvklotet. Bakkvartsstek (lår/skulder) har djupt, mörkt rött kött med minimal fett. Ugnsstekning kräver varsamhet: älg överkokat snabbt. Innertemperatur: 54–60 °C medium-rare. Eftertillagning: 4–6 °C för en hel stek. Rekommenderas omvänd searing.
 
 ---
 
@@ -3301,7 +3301,7 @@ Target internal temperature: **60–65 °C (140–149 °F)** for medium (pink ce
 
 **SV:**
 
-*(to translate)*
+Älg (*Alces alces*) — kallad älg på svenska — är den största hjortarten. Bakkvartsstek har djupt, mörkt rött kött med minimal fett och intensiv viltsmak. Innertemperatur: 54–60 °C medium-rare. Eftertillagning: 4–6 °C. Tillagning till pull-apart kräver brässering.
 
 ---
 
@@ -3318,7 +3318,7 @@ Target internal temperature: **57–62 °C (135–144 °F)** for medium-rare to 
 
 **SV:**
 
-*(to translate)*
+Älgbiff (Elchsteak / älgbiff) skärs från rygg eller bakkvarter. Det är mycket magert med rik, jordnära smak. Grillning vid hög värme under kort tid är den traditionella nordiska metoden; köttet bör sears snabbt och serveras rare till medium-rare. Innertemperatur: 54–60 °C. Eftertillagning: 2–3 °C. Överkoka absolut inte.
 
 ---
 
@@ -3335,7 +3335,7 @@ Target internal temperature: **58–63 °C (136–145 °F)** for medium-rare to 
 
 **SV:**
 
-*(to translate)*
+Pannsearing av älgbiff (rygg, backstrap eller bakkvartsskiva) är standardmetoden inomhus i Skandinavien, Finland och norra Kanada. Det magra köttet sears hett och snabbt i smör eller klarat smör — 3–5 minuter totalt. Innertemperatur: 54–60 °C. Eftertillagning: 2–3 °C. Serveras traditionellt med lingon och kokt potatis.
 
 ---
 
@@ -3353,7 +3353,7 @@ Target internal temperature: **57–62 °C (135–144 °F)** for medium-rare to 
 
 **SV:**
 
-*(to translate)*
+Älgbiff (Elchsteak / älgbiff) skärs från rygg eller bakkvarter. Det är mycket magert med rik, jordnära viltsmak. Innertemperatur: 54–60 °C medium-rare. Eftertillagning: 2–3 °C. Överkoka inte — utan fett torkar älg snabbt.
 
 ---
 
@@ -3370,7 +3370,7 @@ Target internal temperature: **70–74 °C (158–165 °F)**.
 
 **SV:**
 
-*(to translate)*
+Fårkött avser köttet av ett får äldre än ett år (typiskt 2–4 år), med starkare, mer uttalad smak än lamm. Fårkotletter (rygg- eller skulderkotletter) är populära i Tyskland, Storbritannien, Mellanöstern och Centralasien. Grillning: direkt hög värme, 4–5 minuter per sida. Innertemperatur: 63–70 °C (fårkött tillagas vanligtvis mer genomstekt). Eftertillagning: 2–3 °C.
 
 ---
 
@@ -3387,7 +3387,7 @@ Target internal temperature: **70–75 °C (158–167 °F)** — cooked through 
 
 **SV:**
 
-*(to translate)*
+Fårkött avser köttet av ett får äldre än ett år. Fårkotletter pannsears vid hög värme; den starka, karakteristiska smaken gör dem populära i mellanösternsk, brittisk och centralasiatisk matlagning. Innertemperatur: 63–70 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -3405,7 +3405,7 @@ Target internal temperature: **70–74 °C (158–165 °F)**.
 
 **SV:**
 
-*(to translate)*
+Fårkött avser köttet av ett får äldre än ett år (typiskt 2–4 år), med starkare, mer uttalad smak än lamm. Fårkotletter (rygg- eller skulderkotletter) är populära i Storbritannien, Mellanöstern och Centralasien. Innertemperatur: 63–70 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -3422,7 +3422,7 @@ Target internal temperature: **75–80 °C (167–176 °F)** for fully cooked, s
 
 **SV:**
 
-*(to translate)*
+Hel fårlår (benfritt, 2–3 kg) är ett festsnitt i Mellanöstern, Pakistan, Afghanistan, Storbritannien och delar av Europa. Dess starka, mogna smak gynnas av marinering och lång, långsam ugnsstekning. Innertemperatur: 70–75 °C (fårkött tillagas genomstekt). Tillagnings tid: 3–4 timmar vid 150–160 °C.
 
 ---
 
@@ -3440,7 +3440,7 @@ Target internal temperature: **75–80 °C (167–176 °F)** for fully cooked, s
 
 **SV:**
 
-*(to translate)*
+Hel fårlår (benfritt, 2–3 kg) är ett festsnitt med stark, mogen smak. Innertemperatur: 70–75 °C. Eftertillagning: 4–6 °C för hela låret. Tillagnings tid: 3–4 timmar vid 150–160 °C.
 
 ---
 
@@ -3457,7 +3457,7 @@ Target internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bo
 
 **SV:**
 
-*(to translate)*
+Fårskuldra är ett hårt arbetat, intensivt smakrikt snitt från ett äldre djur (12 månader eller mer). Den extra åldern innebär djupare smak men också tätare bindväv, vilket kräver längre brässeringstider än lamm — typiskt 3–4 timmar vid 85–93 °C. Innertemperatur: 88–95 °C pull-apart. Eftertillagning: försumbar.
 
 ---
 
@@ -3474,7 +3474,7 @@ Target internal temperature: **82–90 °C (180–194 °F)** for pull-apart. Min
 
 **SV:**
 
-*(to translate)*
+Fårskuldra är ett fett, välarbetat snitt med uttalad smak och gott kollageninnehåll. Det gynnas av lång, långsam stekning (4–5 timmar vid 150–160 °C) för att bryta ner bindväven och nå pull-apart konsistens. Innertemperatur: 88–95 °C. Eftertillagning: försumbar.
 
 ---
 
@@ -3491,7 +3491,7 @@ Target internal temperature: **88–95 °C (190–203 °F)** — mutton requires
 
 **SV:**
 
-*(to translate)*
+Fårskuldra från ett äldre djur (12 månader eller mer) är ett av de bästa möjliga snitten för slow cooker. Den tätare bindväven och starkare smaken som gör fårkött utmanande med snabba metoder blir tillgångar i slow cooker: 6–8 timmar vid låg temperatur (88–93 °C) omvandlar kollagenet fullständigt. Innertemperatur: 88–95 °C pull-apart.
 
 ---
 
@@ -3509,7 +3509,7 @@ Target internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bo
 
 **SV:**
 
-*(to translate)*
+Fårskuldra är ett hårt arbetat, intensivt smakrikt snitt från ett äldre djur. Den extra åldern innebär djupare smak men tätare bindväv. Kräver lång brässering eller slow cooker. Innertemperatur: 88–95 °C pull-apart. Eftertillagning: försumbar.
 
 ---
 
@@ -3529,7 +3529,7 @@ See the primary research documentation at `docs/recipe_research/game/mutton/mutt
 
 **SV:**
 
-*(to translate)*
+Denna post (*mutton_shoulder_alt*, *name_long: "Shoulder"*) är ett systemduplikat av *mutton_shoulder* introducerat under en frontend-datasammanslagning. Snittet är identiskt med fårskuldran: den hårt arbetade underarmsmuskeln tätt med kollagen och intramuskulärt fett. Se *mutton_shoulder* för fullständig beskrivning. Innertemperatur: 88–95 °C pull-apart.
 
 ---
 
@@ -3544,7 +3544,7 @@ Ostrich fillet (loin fillet / fan fillet) braises well when cut into cubes or th
 
 **SV:**
 
-*(to translate)*
+Strutsfilé (ländsfilé / fanfilé) bräseras bra när den skärs i kuber eller tjocka strimlor. Trots ländursprunget kan kubad struts bräseras kortfattat i vätska (20–40 minuter vid försiktig sjudning, inte flertimmars brässering som nötkött). Innertemperatur: 70–74 °C (genomstekt). Eftertillagning: 1–2 °C.
 
 ---
 
@@ -3559,7 +3559,7 @@ Ostrich fillet grills similarly to kangaroo fillet or a very lean beef tenderloi
 
 **SV:**
 
-*(to translate)*
+Strutsfilé grillas liknande kängurufil eller en mycket mager nötfilé. Hög, direkt värme (230–260 °C) krävs. Olja grillgallret och pensla filetytan med olja. Innertemperatur: 60–65 °C (medium-well för struts). Tillagnings tid: 3–5 minuter per sida. Överkoka inte.
 
 ---
 
@@ -3574,7 +3574,7 @@ The ostrich fillet (loin/fan fillet), when seared whole, behaves like a very lea
 
 **SV:**
 
-*(to translate)*
+Strutsfilé (rygg/fanfilé), när den sears hel, beter sig som en mycket mager nötfilé vid hög värme. En riktigt het panna är väsentlig — otillräcklig värme ger grå ångad kött snarare än brynad krusta. Innertemperatur: 60–65 °C. Eftertillagning: 2–3 °C. Olja pannan — struts är så mager att den annars fastnar.
 
 ---
 
@@ -3589,7 +3589,7 @@ Ostrich (*Struthio camelus*) fillet is the loin or fan fillet — the most tende
 
 **SV:**
 
-*(to translate)*
+Struts (*Struthio camelus*) filé är rygg- eller fanfilén — det möraste snittet från strutsen längs ryggraden. Trots att det är en fågel är strutsfilé djupt rött, järnrikt kött med smakprofil liknande nötkött. Extremt magert. Innertemperatur: 60–65 °C (medium). Eftertillagning: 2–3 °C.
 
 ---
 
@@ -3606,7 +3606,7 @@ South African *braai* tradition (charcoal) is the indigenous method for ostrich;
 
 **SV:**
 
-*(to translate)*
+Grillning av strutsbiff kräver avsevärt mer uppmärksamhet än grillning av nötkött på grund av total avsaknad av intramuskulärt fett. Fett isolerar och bromsar ökning av innertemperaturen; utan det kan struts gå från rare till överkokad på 1–2 minuter. Innertemperatur: 60–65 °C. Tillagnings tid: 2–3 minuter per sida på het grill.
 
 ---
 
@@ -3623,7 +3623,7 @@ At 2.5–3 cm thickness: 2–3 minutes per side in a smoking-hot pan achieves me
 
 **SV:**
 
-*(to translate)*
+Pannsearing är den mest kontrollerade metoden för strutsbiff eftersom ledningsvärmen från en het gjutjärns- eller kolstålpanna är konsekvent och kan justeras genom att lyfta pannan från brännaren. Innertemperatur: 60–65 °C. Eftertillagning: 2–3 °C. Avsluta med smör för att kompensera för det låga fettinnehållet.
 
 ---
 
@@ -3641,7 +3641,7 @@ Target internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pu
 
 **SV:**
 
-*(to translate)*
+Strutsbiff (*Struthio camelus*) produceras primärt i Sydafrika, Namibia och allt mer i Frankrike, Belgien och Tyskland. Trots att det är en fågel är strutskött rött, mycket lågt i fett och behandlas kulinariskt precis som nötkött. Innertemperatur: 60–65 °C (medium). Eftertillagning: 2–3 °C.
 
 ---
 
@@ -3660,7 +3660,7 @@ Target internal temperature: **74–77 °C (165–175 °F)** — rabbit, like ch
 
 **SV:**
 
-*(to translate)*
+Kaninlägg (*Oryctolagus cuniculus*) (fram och bak) är det vanligast bräserade snittet. Bakbenen bär mer kött och är det primära bräseringssnittet; frambenen inkluderas ofta för smak. Kanin är mager, låg i fett och kollagenrik. Brässering i 1–2 timmar vid 85–90 °C ger mört, smakrikt resultat. Innertemperatur: 74–77 °C (genomstekt).
 
 ---
 
@@ -3677,7 +3677,7 @@ Target internal temperature: **74–77 °C (165–175 °F)** — cooked through,
 
 **SV:**
 
-*(to translate)*
+Kaninlägg (*Oryctolagus cuniculus*) (fram och bak) kan ugnsrostas i stället för bräseras. Benen oljeblandas, kryddas och rostas vid 180–190 °C i 40–60 minuter. Kanin är mager och kan torka ut om överstekt; bastas regelbundet. Innertemperatur: 74–77 °C (genomstekt).
 
 ---
 
@@ -3697,7 +3697,7 @@ Target internal temperature: **74–77 °C (165–175 °F)** — rabbit, like ch
 
 **SV:**
 
-*(to translate)*
+Kaninlägg (*Oryctolagus cuniculus*) (fram och bak) är de vanligast tillagade kaningsnitten. Bakbenen bär mer kött; frambenen inkluderas för smak. Kanin är mager och kollagenrik. Innertemperatur: 74–77 °C (genomstekt). Eftertillagning: 2–3 °C.
 
 ---
 
@@ -3722,7 +3722,7 @@ time because the stuffing moderates heat transfer into the loin.
 
 **SV:**
 
-*(to translate)*
+Kaninsadeln är den ryggradssektion av kaninen som bär två benfria ländar och, om den lämnas med ben, tunna magliskor som skyddar längderna under stekning. Ugnsstekning passar sadeln när den är fjärillad eller med ben: 180–190 °C i 20–25 minuter. Innertemperatur: 65–68 °C (medium, lätt rosa). Eftertillagning: 2–3 °C.
 
 ---
 
@@ -3745,7 +3745,7 @@ temperature; nevertheless, a 3–5 minute rest redistributes juices before slici
 
 **SV:**
 
-*(to translate)*
+Kaninsadeln är ländavsnittet längs ryggraden från revbensbotten till bakbenen, bestående av två långa benfria ländar fästade på ryggraden; det är det möraste, magraste partiet av kaninen. Pannsearing av sadeln: het panna, smör, 3–4 minuter totalt. Innertemperatur: 65–68 °C (medium, lätt rosa). Eftertillagning: 2–3 °C.
 
 ---
 
