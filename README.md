@@ -26,9 +26,16 @@ Full installation, configuration, and feature documentation:
 
 ## 📊 Current Status
 
-**v0.6.4.5** — Development release (April 2026)
+**v0.6.5.5** — Development release (April 2026)
 
 Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.6.5.x Changes — Swedish cut profiles & translation quality (April 2026)
+- ✅ **Swedish cut-profile body text** — `## Styckesprofil` sections now cover all 163 experimental-path cuts; the **Styckesprofil** card and **Tillagningsmetod** method-description area render in Swedish when UI language is set to Svenska (falls back to English when no Swedish section exists)
+- ✅ **Full translation pipeline** — `generate_frontend_data.py` extracts `## Styckesprofil` into `CUT_PROFILES_SV`, `CLASSIC_CUT_PROFILES_SV`, and per-method `_sv` keys in `CUT_METHOD_PROFILES`; all 163 cut overview files and their method leaves carry Swedish descriptions
+- ✅ **30 beef cut profiles enriched** — Detailed Swedish anatomy descriptions for ribeye, T-bone, NY strip, sirloin, hanger, flank, skirt, flat iron, picanha, tomahawk, prime rib, and several roasts; sourced from Grok's richer translation set where it outperformed the initial Copilot translations
+- ✅ **Terminology fix: sirloin** — `sirloin_steak.md` corrected from "Entrecôtebiff" (wrong: entrecôte = ribeye in Swedish) to "Sirloin-biffen"; other Swedish anatomical terms audited
+- ✅ **Fix: wrong Swedish cut names** — `Buffelbiff`/`Buffelburgare` (was Bufflabiff/Bufflaburgare) and `Spagettipumpa` (was German "Spagettikürbis") corrected in cooking data
 
 ### v0.6.4.x Changes — Recipe research quality pass & data fixes (April 2026)
 - ✅ **Fix: Duplicate ground turkey cut** — Removed redundant `turkey_ground` entry from the Turkey cut type; `ground_turkey` is now the single canonical entry under Ground Poultry

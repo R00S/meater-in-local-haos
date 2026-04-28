@@ -200,3 +200,32 @@ improve quality over existing Copilot translations.
 - `www/kitchen-cooking-panel.js` — auto-generated (PANEL_VERSION 344 → 345)
 - 30 markdown files in `docs/recipe_research/beef/` — `## Styckesprofil` sections updated
 - `docs/update-select-cut-menu-0.6.5.x.md` — this entry
+
+---
+
+## v0.6.5.5 — CHORES: prepare for merge (2026-04-28)
+
+### CHORES
+
+- Bumped version 0.6.5.4 → 0.6.5.5.
+- Updated `README.md`:
+  - Version header updated to v0.6.5.5.
+  - Added **v0.6.5.x Changes** changelog entry summarising: Swedish cut-profile body
+    text, full translation pipeline, 30 beef profiles enriched, sirloin terminology fix,
+    Swedish cut-name corrections.
+- Updated `USER_GUIDE.md` §5.9:
+  - Language support table: clarified `## Styckesprofil` as falling back to English
+    (was "optional").
+  - Added note: as of v0.6.5.x all 163 experimental-path cut overview files carry
+    `## Styckesprofil`; method files fall back to English where no Swedish section exists.
+- All `_openHelp(...)` anchors verified against current USER_GUIDE headings — all match.
+
+### Files changed
+
+- `manifest.json` — version 0.6.5.4 → 0.6.5.5
+- `__init__.py` — version bump + Last Change
+- `const.py` — Last Change
+- `www/kitchen-cooking-panel.js` — auto-generated (PANEL_VERSION 345 → 346)
+- `README.md` — version header + v0.6.5.x changelog entry
+- `docs/USER_GUIDE.md` — §5.9 language table coverage note
+- `docs/update-select-cut-menu-0.6.5.x.md` — this entry

@@ -512,8 +512,10 @@ category names, meat names, cut-type names, cut names, and doneness names to Swe
 | Cut names | `name_sv:` field in the cut's `<!-- KCE:CUT … -->` tag |
 | Doneness names | `name_sv:` field in each doneness entry in the `doneness:` list |
 | UI labels (headings, buttons, messages) | Loaded from `i18n/sv.json` |
-| Cut-profile body text (Styckesprofil card) | `## Styckesprofil` section in the cut's `{slug}.md` overview file (optional; falls back to English) |
-| Method descriptions (Tillagningsmetod card) | `## Styckesprofil` section in the method's `{slug}-{method}.md` file (optional; falls back to English) |
+| Cut-profile body text (Styckesprofil card) | `## Styckesprofil` section in the cut's `{slug}.md` overview file (falls back to English if absent) |
+| Method descriptions (Tillagningsmetod card) | `## Styckesprofil` section in the method's `{slug}-{method}.md` file (falls back to English if absent) |
+
+As of v0.6.5.x, **all 163 experimental-path cut overview files** carry a `## Styckesprofil` section, so Swedish users see a Swedish cut description for every cut in the experimental tree. Method files fall back to English where no `## Styckesprofil` has been added yet.
 
 Any cut without a `name_sv:` field falls back to the English slug-derived name.
 
