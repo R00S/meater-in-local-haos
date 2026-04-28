@@ -727,14 +727,12 @@ def build_experimental_tree(base_dir):
 def copy_recipe_files_to_www(base_dir):
     """Copy recipe markdown files from docs/ to www/ for serving by HA.
 
-    Copies two trees:
-      docs/recipe_research/        → www/recipes/          (experimental / active)
-      docs/recipe_research_classic/ → www/recipes_classic/  (frozen classic fork)
+    Copies:
+      docs/recipe_research/ → www/recipes/
 
     Only runs in the developer environment (when docs/recipe_research/ exists).
-    On real HA installs, www/recipes/ and www/recipes_classic/ are pre-populated
-    by the HACS package and must NOT be wiped — so this function is a no-op
-    when the source is absent.
+    On real HA installs, www/recipes/ is pre-populated by the HACS package and
+    must NOT be wiped — so this function is a no-op when the source is absent.
     """
     repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
 
@@ -742,10 +740,6 @@ def copy_recipe_files_to_www(base_dir):
         (
             os.path.join(repo_root, "docs", "recipe_research"),
             os.path.join(base_dir, "www", "recipes"),
-        ),
-        (
-            os.path.join(repo_root, "docs", "recipe_research_classic"),
-            os.path.join(base_dir, "www", "recipes_classic"),
         ),
     ]
 
@@ -885,29 +879,12 @@ def generate_js_data():
                 except Exception as e:
                     print(f"Warning: Could not load translation {filename}: {e}")
 
-    # Build recipe index from docs/recipe_research/ (experimental / active fork)
+    # Build recipe index from docs/recipe_research/
     recipe_index, cut_profiles, cut_profiles_sv, cut_method_profiles, recipe_titles = build_recipe_index(base_dir)
-    print(f"  Recipe index (experimental): {sum(len(v) for v in recipe_index.values())} files across {len(recipe_index)} cuts")
+    print(f"  Recipe index: {sum(len(v) for v in recipe_index.values())} files across {len(recipe_index)} cuts")
 
-    # Build recipe index from docs/recipe_research_classic/ (frozen classic fork)
-    repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
-    classic_dir = os.path.join(repo_root, "docs", "recipe_research_classic")
-    classic_www_dir = os.path.join(base_dir, "www", "recipes_classic")
-    classic_recipe_dir = classic_dir if os.path.isdir(classic_dir) else (classic_www_dir if os.path.isdir(classic_www_dir) else None)
-    if classic_recipe_dir:
-        classic_recipe_index, classic_cut_profiles, classic_cut_profiles_sv, classic_cut_method_profiles, classic_recipe_titles = build_recipe_index(
-            base_dir,
-            recipe_dir=classic_recipe_dir,
-            url_prefix="recipes_classic",
-        )
-        print(f"  Recipe index (classic):      {sum(len(v) for v in classic_recipe_index.values())} files across {len(classic_recipe_index)} cuts")
-    else:
-        classic_recipe_index, classic_cut_profiles, classic_cut_profiles_sv, classic_cut_method_profiles, classic_recipe_titles = {}, {}, {}, {}, {}
-        print("  Recipe index (classic):      0 files (docs/recipe_research_classic/ not found)")
-
-    # Report international cut → recipe coverage. The experimental MEATER path
-    # is locked to international data (see panel-class-template.js
-    # _getDataCategories), and every international MeatCut.name is expected to
+    # Report international cut → recipe coverage. The MEATER path is locked to
+    # international data (see panel-class-template.js _getDataCategories), and every international MeatCut.name is expected to
     # match a recipe filename slug under docs/recipe_research/. Cuts with no
     # match simply show no recipe card — that is correct behaviour, not an
     # error. We surface the breakdown so coverage can be tracked over time.
@@ -1011,25 +988,10 @@ def generate_js_data():
     lines.append("// Recipe titles per cut × method: {cut_slug: {method_slug: [title, ...]}}")
     lines.append(f"const RECIPE_TITLES_INDEX = {json.dumps(recipe_titles, indent=2, ensure_ascii=False)};")
     lines.append("")
-    lines.append("// Classic (frozen) recipe index — snapshot of docs/recipe_research_classic/")
-    lines.append(f"const CLASSIC_RECIPE_INDEX = {json.dumps(classic_recipe_index, indent=2, ensure_ascii=False)};")
-    lines.append("")
-    lines.append("// Classic cut profile texts")
-    lines.append(f"const CLASSIC_CUT_PROFILES = {json.dumps(classic_cut_profiles, indent=2, ensure_ascii=False)};")
-    lines.append("")
-    lines.append("// Classic Swedish cut profile texts")
-    lines.append(f"const CLASSIC_CUT_PROFILES_SV = {json.dumps(classic_cut_profiles_sv, indent=2, ensure_ascii=False)};")
-    lines.append("")
-    lines.append("// Classic cut × method profile texts")
-    lines.append(f"const CLASSIC_CUT_METHOD_PROFILES = {json.dumps(classic_cut_method_profiles, indent=2, ensure_ascii=False)};")
-    lines.append("")
-    lines.append("// Classic recipe titles per cut × method")
-    lines.append(f"const CLASSIC_RECIPE_TITLES_INDEX = {json.dumps(classic_recipe_titles, indent=2, ensure_ascii=False)};")
-    lines.append("")
-    lines.append("// Experimental MEATER tree — built from KCE:CUT tagged cut files")
+    lines.append("// MEATER tree — built from KCE:CUT tagged cut files")
     lines.append(f"const EXP_TREE = {json.dumps(exp_tree, indent=2, ensure_ascii=False)};")
     lines.append("")
-    lines.append("// Experimental MEATER doneness options — collected from KCE:CUT doneness blocks")
+    lines.append("// MEATER doneness options — collected from KCE:CUT doneness blocks")
     lines.append(f"const EXP_DONENESS_OPTIONS = {json.dumps(exp_doneness, indent=2, ensure_ascii=False)};")
 
     return "\n".join(lines)

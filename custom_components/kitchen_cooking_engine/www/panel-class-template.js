@@ -89,7 +89,7 @@ class KitchenCookingPanel extends LitElement {
       _messageDialogContent: { type: String },
       _messageDialogIsError: { type: Boolean },
       // Phase 1: GUI Redesign - Navigation state
-      _currentPath: { type: String },  // 'welcome', 'meater', 'ninja_combi', 'ai_recipe_builder', 'previous_cooks', 'recent_meater'
+      _currentPath: { type: String },  // 'welcome', 'meater_experimental', 'ninja_combi', 'ai_recipe_builder', 'previous_cooks', 'recent_meater'
       _selectedAppliance: { type: Object },  // Selected appliance from welcome screen
       _showMeaterCooking: { type: Boolean },  // Show MEATER cooking form in MEATER path
       // Phase 5/6: Recipe and AI builder states
@@ -957,53 +957,39 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _getDataCategories() {
-    // The experimental MEATER path is driven by EXP_TREE — built at generation
-    // time from the KCE:CUT tagged cut files under docs/recipe_research/.
+    // The MEATER path is driven by EXP_TREE — built at generation time from
+    // the KCE:CUT tagged cut files under docs/recipe_research/.
     // Adding a new cut requires only a new {slug}.md with a KCE:CUT tag;
     // cooking_data.py does not need to be touched.
-    // Swedish support on this path is postponed (no verified slug mapping yet).
-    if (this._currentPath === 'meater_experimental') return EXP_TREE;
-    return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_MEAT_CATEGORIES : MEAT_CATEGORIES;
+    return EXP_TREE;
   }
 
   _getDonenessOptions() {
-    // See _getDataCategories: experimental MEATER path uses EXP_DONENESS_OPTIONS.
-    if (this._currentPath === 'meater_experimental') return EXP_DONENESS_OPTIONS;
-    return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
+    return EXP_DONENESS_OPTIONS;
   }
 
   // ---------------------------------------------------------------------------
-  // Recipe library helpers
-  //
-  // The experimental MEATER path reads the actively developed recipe library
-  // (RECIPE_INDEX / CUT_PROFILES / CUT_METHOD_PROFILES / RECIPE_TITLES_INDEX).
-  // Every other path (classic MEATER) reads the frozen snapshot
-  // (CLASSIC_RECIPE_INDEX / CLASSIC_CUT_PROFILES / …).
-  //
-  // Cutover instructions (when experimental is declared stable):
-  //   1. Remove the CLASSIC_* branches below so all paths return the live set.
-  //   2. Remove CLASSIC_* constant declarations from generate_frontend_data.py.
-  //   3. Delete docs/recipe_research_classic/ and www/recipes_classic/.
+  // Recipe library helpers — all paths read the live recipe library.
   // ---------------------------------------------------------------------------
 
   _getRecipeIndex() {
-    return this._currentPath === 'meater_experimental' ? RECIPE_INDEX : CLASSIC_RECIPE_INDEX;
+    return RECIPE_INDEX;
   }
 
   _getCutProfiles() {
-    return this._currentPath === 'meater_experimental' ? CUT_PROFILES : CLASSIC_CUT_PROFILES;
+    return CUT_PROFILES;
   }
 
   _getCutProfilesSv() {
-    return this._currentPath === 'meater_experimental' ? CUT_PROFILES_SV : CLASSIC_CUT_PROFILES_SV;
+    return CUT_PROFILES_SV;
   }
 
   _getCutMethodProfiles() {
-    return this._currentPath === 'meater_experimental' ? CUT_METHOD_PROFILES : CLASSIC_CUT_METHOD_PROFILES;
+    return CUT_METHOD_PROFILES;
   }
 
   _getRecipeTitles() {
-    return this._currentPath === 'meater_experimental' ? RECIPE_TITLES_INDEX : CLASSIC_RECIPE_TITLES_INDEX;
+    return RECIPE_TITLES_INDEX;
   }
 
   _findCookingEntities() {
@@ -1492,26 +1478,7 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Navigate to MEATER path
-   * @param {Object} appliance - Selected MEATER appliance
-   */
-  _navigateToMeaterPath(appliance) {
-    this._currentPath = 'meater';
-    this._selectedAppliance = appliance;
-    // Don't show cooking form immediately - show path buttons first
-    this._showMeaterCooking = false;
-    // Reset old navigation flags
-    this._showHistory = false;
-    this._showNinjaCombi = false;
-    this._showAppliances = false;
-    this._showRecipes = false;
-    this._showAIRecipeBuilder = false;
-    this.requestUpdate();
-  }
-
-  /**
-   * Navigate to MEATER+ (experimental) path — same flow as the standard MEATER path
-   * but with safety indicators on doneness options.
+   * Navigate to MEATER+ path
    * @param {Object} appliance - Selected MEATER appliance
    */
   _navigateToMeaterExperimentalPath(appliance) {
@@ -1581,7 +1548,7 @@ class KitchenCookingPanel extends LitElement {
     
     // Check for MEATER probe (cook type 6.1)
     if (brand.includes('meater') || model.includes('meater') || name.includes('meater')) {
-      this._navigateToMeaterPath(appliance);
+      this._navigateToMeaterExperimentalPath(appliance);
       return;
     }
     
@@ -3082,9 +3049,6 @@ class KitchenCookingPanel extends LitElement {
       case 'meater_experimental':
         return this._renderMeaterExperimental();
       
-      case 'meater':
-        return this._renderMeaterPath();
-      
       case 'recent_meater':
         return this._renderRecentMeaterCooks();
       
@@ -3169,7 +3133,7 @@ class KitchenCookingPanel extends LitElement {
                              this._selectedEntity.toLowerCase().includes('meater');
       
       if (!this._selectedEntity || !isMeaterEntity) {
-        this._selectedEntity = entities[0];  // First entity (MEATER after sorting in _renderMeaterPath)
+        this._selectedEntity = entities[0];  // First entity (MEATER after sorting)
       }
     }
     
@@ -3971,17 +3935,6 @@ class KitchenCookingPanel extends LitElement {
                 </div>
               </ha-card>
             `];
-            if (isMeater) {
-              cards.push(html`
-                <ha-card class="appliance-card clickable meater-exp-card" @click=${() => this._navigateToMeaterExperimentalPath(appliance)}>
-                  <div class="card-content appliance-card-content">
-                    <div class="appliance-icon" style="font-size: 2em;">🧪🌡️</div>
-                    <div class="appliance-name">MEATER+ <span style="font-size:0.75em;color:var(--secondary-text-color);">(experimental)</span></div>
-                    <div class="appliance-model" style="color:var(--accent-color);">Safety indicators · per-cut temps</div>
-                  </div>
-                </ha-card>
-              `);
-            }
             return cards;
           })}
         </div>
@@ -4357,7 +4310,7 @@ class KitchenCookingPanel extends LitElement {
           <button class="back-btn" @click=${() => this._navigateToWelcome()}>
             ${this._t('nav.back_to_appliances')}
           </button>
-          <h2>🧪🌡️ MEATER+ <span style="font-size:0.75em;color:var(--secondary-text-color);">(experimental)</span></h2>
+          <h2>🌡️ MEATER+</h2>
           <button class="help-btn" @click=${() => this._openHelp('#51-starting-a-cook')} title="Open User Guide">?</button>
         </div>
         
@@ -4371,7 +4324,7 @@ class KitchenCookingPanel extends LitElement {
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
           ${this._t('nav.back_to_appliances')}
         </button>
-        <h2>🧪🌡️ MEATER+ <span style="font-size:0.75em;color:var(--secondary-text-color);">(experimental)</span></h2>
+        <h2>🌡️ MEATER+</h2>
         <button class="help-btn" @click=${() => this._openHelp('#59-meater-experimental--cut-profile--recipe-links')} title="Open User Guide">?</button>
       </div>
 
@@ -4396,7 +4349,7 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Setup form for the experimental MEATER path (matches source-reference v0.5.3.5 _renderSetupForm).
+   * Setup form for the MEATER+ path.
    */
   _renderExpSetupForm(entities) {
     const categories = this._getDataCategories();
@@ -4426,7 +4379,7 @@ class KitchenCookingPanel extends LitElement {
                              this._selectedEntity.toLowerCase().includes('meater');
       
       if (!this._selectedEntity || !isMeaterEntity) {
-        this._selectedEntity = entities[0];  // First entity (MEATER after sorting in _renderMeaterPath)
+        this._selectedEntity = entities[0];  // First entity (MEATER after sorting)
       }
     }
     
@@ -5052,72 +5005,8 @@ class KitchenCookingPanel extends LitElement {
     return parts.join('');
   }
 
-  // ─── End MEATER+ (experimental) path ─────────────────────────────────────────
+  // ─── End MEATER+ path ─────────────────────────────────────────────────────
 
-
-  _renderMeaterPath() {
-    // If in cooking mode, show the setup form
-    if (this._showMeaterCooking) {
-      let entities = this._findCookingEntities();
-      
-      // v0.5.0.51: Sort entities by entity ID pattern (more reliable than attributes)
-      // Entity IDs like "kitchen_cooking_engine_bt_proxy_meater_tip_temperature_cooking_session"
-      // contain "meater" - use this to identify and sort MEATER entities first
-      entities = entities.sort((a, b) => {
-        const aIsMeater = a.toLowerCase().includes('meater');
-        const bIsMeater = b.toLowerCase().includes('meater');
-        
-        // MEATER entities first, others after
-        if (aIsMeater && !bIsMeater) return -1;
-        if (!aIsMeater && bIsMeater) return 1;
-        return 0;  // Preserve original order for same type
-      });
-      
-      return html`
-        <div class="path-header">
-          <button class="back-btn" @click=${() => { 
-            this._showMeaterCooking = false;
-            this.requestUpdate();
-          }}>
-            ${this._t('nav.back_to_meater_path')}
-          </button>
-          <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
-          <button class="help-btn" @click=${() => this._openHelp('#51-starting-a-cook')} title="Open User Guide">?</button>
-        </div>
-        
-        ${this._renderSetupForm(entities)}
-      `;
-    }
-    
-    // Otherwise show the path buttons
-    return html`
-      <div class="path-header">
-        <button class="back-btn" @click=${() => this._navigateToWelcome()}>
-          ${this._t('nav.back_to_appliances')}
-        </button>
-        <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
-        <button class="help-btn" @click=${() => this._openHelp('#5-meater-probe-cooking')} title="Open User Guide">?</button>
-      </div>
-
-      <div class="path-buttons">
-        <ha-card class="path-card clickable" @click=${() => this._startMeaterCooking()}>
-          <div class="card-content path-card-content">
-            <div class="path-icon">🌡️</div>
-            <h3>${this._t('meater.start_meater_cooking')}</h3>
-            <p>${this._t('meater.start_meater_desc')}</p>
-          </div>
-        </ha-card>
-
-        <ha-card class="path-card clickable" @click=${() => this._showRecentMeaterCooks()}>
-          <div class="card-content path-card-content">
-            <div class="path-icon">📋</div>
-            <h3>${this._t('meater.recent_meater_cooks')}</h3>
-            <p>${this._t('meater.recent_meater_desc')}</p>
-          </div>
-        </ha-card>
-      </div>
-    `;
-  }
 
   /**
    * Render Recent MEATER Cooks (filtered history)
@@ -5144,7 +5033,7 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => {
-          this._currentPath = 'meater';
+          this._currentPath = 'meater_experimental';
           this.requestUpdate();
         }}>
           ${this._t('nav.back_to_meater_path')}
@@ -6744,7 +6633,7 @@ class KitchenCookingPanel extends LitElement {
 
     // Legacy fallback: if cook has target_temp but no cut_id, navigate to meater setup
     if (cook.target_temp_c && cook.protein) {
-      this._currentPath = 'meater';
+      this._currentPath = 'meater_experimental';
       this._showMeaterCooking = true;
       this.requestUpdate();
       return;
