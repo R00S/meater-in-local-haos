@@ -28,7 +28,7 @@ quality_assessed: 2026-04-26
 
 ## Cut profile
 
-A goat shank (Swedish *getlägg*) is the lower portion of the animal's leg — heavily worked, dense with collagen, intramuscular fat (limited; goat is leaner than lamb) and bone marrow. Like the lamb shank, it is a quintessentially braising cut: tough beyond chewing if cooked to medium-rare, but transformed by long, slow cooking in liquid into fork-tender, gelatin-rich meat that falls off the bone. Internal temperature is the wrong metric: the cut needs time at 88–93 °C internal (the collagen-melting band) for 1.5–2 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, parallel to the bone (avoid touching bone).
+The goat shank (*getlägg*, Swedish; *jarrete de cabra*, Spanish; *kuzu kolu*, Turkish; *paaya*, Urdu) is the lower portion of the leg — the *radius/ulna* (fore) or *tibia/fibula* (hind) segments and the surrounding musculature. The shank muscles are among the most heavily worked in the carcass; they are dense, tight-fibred, and packed with collagen-rich connective tissue and bone marrow. Goat shank is leaner than lamb shank but has the same collagen density and braise requirement: prolonged moist heat at 88–93 °C internal for 1.5–2 hours to fully convert collagen to gelatin. A single shank serves one person. The bone marrow enriches braising liquid significantly. MEATER probe horizontally through the thickest part of the muscle, parallel to the bone.
 
 
 ## Research files by cooking method

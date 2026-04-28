@@ -22,9 +22,11 @@ cut_type: Buffalo
 
 ## Cut profile
 
-**Context note**: In this project, *buffalo* refers to **water buffalo** (*Bubalus bubalis* — carabao in the Philippines, bhaisa in India) rather than American bison (which is in the `bison/` category). Water buffalo is the most widely eaten large ruminant in Asia, with large production in India, China, Pakistan, and Southeast Asia. The lean, slightly sweeter, darker-red meat is typically treated like beef in most culinary traditions.
+> **Context note**: In this project, *buffalo* refers to **water buffalo** (*Bubalus bubalis*). See parent cut file for anatomy.
 
-Grilling water buffalo steak (carabeef) is common in India, Vietnam, and the Philippines. The meat is slightly tougher than beef and benefits from marinating.
+Grilling water buffalo steak (carabeef) is the most common method in the Philippines, India, and Vietnam. The meat is lean — marinating in acid before grilling is strongly recommended to tenderise the outer surface and add moisture. A brief marinade of soy sauce, calamansi or lime, garlic, and a small amount of oil is the standard Filipino approach (marinade 1–3 hours); Indian preparations use yoghurt and spices.
+
+Hot direct grill (230–260 °C) for 3–4 minutes per side for a 2.5 cm steak achieves medium-rare to medium. Monitor carefully: the lean meat dries out above 65 °C. Carryover: 3–4 °C. Pull at 54–58 °C to rest to 57–63 °C. Oil the grates before placing steaks to prevent sticking.Grilling water buffalo steak (carabeef) is common in India, Vietnam, and the Philippines. The meat is slightly tougher than beef and benefits from marinating.
 
 Target internal temperature: **57–63 °C (135–145 °F)** for medium-rare to medium. The meat is leaner than beef and becomes tough above 70 °C.
 

@@ -1,4 +1,24 @@
+<!-- KCE:CUT_METHOD
+type: cut_method
+slug: lamb_loin_roast
+method: oven_roast
+name: Lamb Loin Roast × Oven Roast
+category: lamb
+meat: lamb
+cut_type: Roasts
+-->
 # Lamb Loin Roast × Oven Roast — Recipe Temperature Research
+
+## Tree position
+
+| Field | Value |
+|-------|-------|
+| Category | `lamb` |
+| Cut type folder | `roasts/` |
+| Cut slug | `lamb_loin_roast` |
+| Method slug | `oven_roast` |
+| File | `lamb_loin_roast-oven_roast.md` |
+| Full path | `docs/recipe_research/lamb/roasts/lamb_loin_roast-oven_roast.md` |
 
 ## Cut profile
 

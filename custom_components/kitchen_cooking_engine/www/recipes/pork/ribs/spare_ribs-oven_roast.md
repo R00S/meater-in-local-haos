@@ -11,9 +11,9 @@ cut_type: Ribs
 
 ## Cut profile
 
-Spare ribs (revelsben/kamben in Danish; Spareribs in German/Austrian) are the lower belly ribs, larger and flatter than baby back ribs with more fat and connective tissue. They benefit particularly from low-and-slow oven cooking: either pre-boiled then finished high, or foil-wrapped at low heat then glazed. The higher fat content makes them more forgiving than baby backs. Target internal: 88–95 °C, the same range as baby back ribs — collagen renders at these temperatures giving the characteristic tender, pull-off-bone texture and glossy glaze.
+Oven roasting is the most common home method for spare ribs and admits two distinct approaches: (1) **low-and-slow foil wrapped** (120–140 °C for 3–4 hours, foil sealed to trap moisture, then unwrapped and glazed at 220 °C for 15–20 minutes for caramelisation); (2) **pre-boil then roast** (simmer in seasoned water for 45–60 minutes to pre-render fat and jump-start collagen conversion, then roast at 200–220 °C for 30–45 minutes to develop a sticky crust and glaze).
 
-Target internal temperatures (oven roast):
+Both methods target **88–95 °C (190–203 °F)** internal — the temperature at which collagen has fully converted and the meat pulls cleanly from the bone. MEATER probe placed between two rib bones into the thickest muscle area, not touching bone. Carryover: negligible at these temperatures.
 - Fall-off-bone tender: **88–95 °C (190–203 °F)**
 - ⚠️ Below 80 °C spare ribs are food-safe but still tough
 

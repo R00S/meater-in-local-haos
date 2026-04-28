@@ -10,7 +10,10 @@ cut_type: Braising Cuts
 # Chuck Roast × Braise — Recipe Temperature Research
 
 ## Cut profile
-Chuck roast is cut from the shoulder region of the animal (the chuck primal, roughly ribs 1–5 and the neck), and is one of the most collagen-dense roasting cuts in the carcass. The shoulder muscles endure constant movement throughout the animal's life, producing densely bundled muscle fibres interlaced with thick seams of connective tissue and fat — a structure that is aggressively tough at low internal temperatures but transforms into richly flavoured, pull-apart tenderness when braised gently over several hours. Braising is particularly suited to chuck because the submerging or partial immersion in liquid accelerates the hydrolysis of collagen into gelatin, producing a self-thickening braising sauce and a meltingly tender interior simultaneously. Carryover is negligible for chuck in a braise because the surrounding liquid buffers against temperature swings; the meat stays at cooking temperature until removed.
+
+Braising is the definitive method for chuck roast because liquid-medium cooking at 150–165 °C directly accelerates the hydrolysis of collagen to gelatin: collagen begins softening at around 70 °C but fully converts in 1.5–4 hours depending on oven temperature and piece size. The surrounding braising liquid (wine, stock, aromatics) absorbs the rendered fat and dissolved gelatin to produce a self-thickening sauce. The chuck is typically seared well first — developing a Maillard-browned crust — then placed in a covered Dutch oven or braiser, partially or fully submerged.
+
+Pull temperature for fall-apart texture: **90–96 °C (194–205 °F)**. At these temperatures the connective tissue has fully converted and the muscle fibres shred with the grain. Carryover is negligible because the surrounding braising liquid buffers against temperature swings.
 
 ## Source recipes
 

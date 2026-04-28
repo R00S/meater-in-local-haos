@@ -10,7 +10,7 @@ cut_type: Other / Offal
 # Pork Cheek × Braise — Recipe Temperature Research
 
 ## Cut profile
-Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the small dense muscle of the jaw — roughly 80–120 g per cheek, marbled with thin sheets of intramuscular fat and rich in collagen from the constant chewing motion the muscle performs in life. For pan frying (rather than the more common braise), the cheeks are typically butterflied to expose the interior, dusted lightly, and seared at high heat — the goal is to crust the surface while keeping the centre at a tender medium-rare. This works because the cheek's collagen network, while extensive, is fine-grained enough that a brief flash sear (rather than a long braise) leaves the muscle bouncy rather than rubbery. The carryover is small (2–3 °C) given the thin butterflied cuts.
+Braising is the classic match for pork cheek. The dense collagen network — built up by the jaw's constant chewing motion — converts fully to gelatin during extended moist heat (150–160 °C oven, 2–3 hours), giving the finished cheek a spoon-tender, gelatinous texture and enriching the braising liquid. The cheeks are cooked whole (unbutterflied), submerged roughly three-quarters in aromatic liquid. High intramuscular fat slowly renders and mingles with the sauce. Target pull temperature is 91–94 °C (196–201 °F); at lower temperatures the collagen remains rubbery. Carryover carry-on after pulling is 3–5 °C given the thick, fat-insulated geometry.
 
 ## Source recipes
 

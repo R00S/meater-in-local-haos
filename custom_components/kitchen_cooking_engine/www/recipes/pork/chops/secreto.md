@@ -30,20 +30,15 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 7
+quality_score: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_assessed: 2026-04-27
 -->
 # Secreto (Ibérico Pork) — Cut Overview
 
 ## Cut profile
 
-The secreto (Spanish: "secret") is a hidden fat-marbled cut from the shoulder/neck area of the Iberian pig (or any pork). It is thin, uneven, and highly marbled, making it one of the most flavourful pork cuts for the griddle or grill. Because it is thin and irregular, it is cut into 3–4 uniform pieces before cooking. Key rules: de-chill 2 hours; dry sear without oil; no salt before; one flip only; rest 1–2 min then season. Target: 65–70 °C (pink to fully done) — internal temperature rises fast due to the thin cross-section.
-
-
-Target internal temperatures (pan sear):
-- Pink inside: **63–65 °C (145–149 °F)**
-- Well done (recommended for high-fat secreto): **68–72 °C (154–162 °F)**
+The *secreto* (Spanish: "secret") is cut from the junction between the shoulder blade and the belly of the Iberian pig — the *serratus ventralis* and *subscapularis* muscles in the deepest layer of the shoulder, running diagonally. It is called "secret" because it is hidden beneath the outer shoulder and was historically an undiscovered, unadvertised cut consumed by the butcher. Standard dimensions: roughly 30–40 cm long × 5–8 cm wide × 1–2 cm thick; irregular in shape, covered with coarse intramuscular fat seams. In Iberian-breed pigs specifically, the fat carries acorn-derived oleic acids and the characteristic *bellota* aroma. Non-Iberian secreto has similar structure but milder flavour.
 
 
 ## Research files by cooking method
@@ -51,21 +46,24 @@ Target internal temperatures (pan sear):
 - [Pan Sear](./secreto-pan_sear.md)
 ## Quality score
 
-**Score: 7 / 20** — assessed 2026-04-26
+**Score: 8 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing method leaf files (2 of 3 declared) | −2 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Method file `secreto-pan_sear.md` copies parent cut profile | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods not researched | − **NOT DONE** (−8) |
+| Pan sear cut profile method-specific | ✓ (fixed 2026-04-27) |
+| charcoal_grill leaf missing | − missing (−1) |
+| grill leaf missing | − missing (−1) |
+| Culinary Group A covered | − missing (−1) |
+| Culinary Group C covered | − missing (−1) |
+| Culinary Groups B, D | ✓ |
+
+**Deductions**: −8 methods · −2 missing leaves · −1 Group A · −1 Group C = −12 → **8**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `secreto-charcoal_grill.md`, `secreto-grill.md`
-3. **−2** · Missing Culinary Group A and Culinary Group C tradition(s) — add Culinary Group A and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
-4. **−1** · Method file `secreto-pan_sear.md` copies parent cut profile — rewrite `secreto-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−8** · Cooking methods not researched
+2. **−1 each** · Missing `secreto-charcoal_grill.md`, `secreto-grill.md`
+3. **−1 each** · Groups A, C missing
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

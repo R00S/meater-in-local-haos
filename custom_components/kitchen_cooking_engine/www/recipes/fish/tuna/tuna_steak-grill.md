@@ -11,7 +11,9 @@ cut_type: Tuna
 
 ## Cut profile
 
-Tuna steak — most commonly bluefin (*hon maguro*), yellowfin (*ahi*), or bigeye (*mebachi*) — is cut transversely from the loin muscles of a large pelagic fish. Tuna flesh is deep crimson (from high myoglobin content), very lean, and densely muscled compared to most fish; it has almost no connective tissue between muscle segments, which means it behaves more like a red meat steak than a typical white-flake fish. Pan searing suits tuna precisely because the high heat drives rapid Maillard browning on the lean surface, while the brief cook time leaves the interior at the desired rare state. Overcooking is the defining risk: above 60 °C the proteins tighten dramatically, and the lean flesh becomes dry and crumbly. The conventional sushi-bar preference for *tataki* (briefly seared, cold-raw centre) means the entire temperature spectrum from raw to fully cooked is culinarily acknowledged. Carryover in a seared tuna steak is 2–3 °C and dissipates quickly.
+Grilling tuna steak over a gas or charcoal grill produces a slightly different result than pan searing: the open grate allows drip smoke to contribute flavour, and the dry radiant heat creates char marks on the surface without the oil-bath environment of a pan. The grate must be very clean, very hot, and well-oiled before the tuna goes on — tuna sticks aggressively to a dirty or cool grate and will tear apart.
+
+Typical approach: grate at 250–270 °C, 1–2 minutes per side for rare (38–45 °C centre). For a 3 cm steak, 90 seconds per side over the hottest zone. MEATER probe from the side, aimed at the geometric centre. Pull at 38–42 °C for rare (cold-raw centre) or 50–55 °C for medium-rare (lightly warmed centre). Always rest 2–3 min and slice across the grain for presentation. Carryover: 3–5 °C from a hot grate.
 
 ## Source recipes
 

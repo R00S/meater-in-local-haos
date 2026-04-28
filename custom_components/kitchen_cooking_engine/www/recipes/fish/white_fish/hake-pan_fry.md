@@ -11,7 +11,7 @@ cut_type: White Fish
 
 ## Cut profile
 
-Hake (*Merluccius merluccius*, European hake; *Merluccius capensis/paradoxus*, Cape hake; *Merluccius productus*, Pacific hake) is a lean white fish with firm, dense, large-flaked flesh and a mild, slightly sweet flavour. It occupies a central position in Iberian and Basque cuisine — in Spain (*merluza*) and Portugal (*pescada*) it is arguably the most important food fish — and is also important in Moroccan and West African seafood traditions. The flesh is slightly softer than cod when raw but firms up well under heat to produce the characteristic large, clean flakes. Pan frying is one of the dominant preparations: simply floured and pan-fried in olive oil (*merluza a la plancha*) is a Spanish staple; batter-fried (*pescada frita*) is a Portuguese and Moroccan tradition. Carryover is minimal (2–3 °C); pull at 60–63 °C for moist flakes.
+Pan frying hake is the dominant cooking method in Iberian, North African, and British traditions. The fillet is typically dusted in seasoned flour (*merluza a la plancha*) or dipped in a light batter (*pescada frita*, fish and chips) before being fried in olive oil or neutral fat. Hake flesh is slightly softer than cod when raw — it does not withstand aggressive handling, so a gentle placement in hot fat and minimal flipping (one flip only) is standard. The flour or batter coating creates the structural protection the delicate flesh needs. Pull at 60–63 °C; the flesh should be opaque throughout with large moist flakes separating cleanly. Carryover is minimal (2–3 °C) given the lean, thin geometry.
 
 ## Source recipes
 

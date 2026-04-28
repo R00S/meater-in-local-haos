@@ -44,8 +44,8 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 1
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
+quality_score: 13
+cooking_methods_researched: 1 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 -->
 # Lamb Loin Roast — Cut Overview
@@ -62,23 +62,26 @@ Lamb loin roast is the boneless, cylindrical muscle removed from the saddle — 
 
 ## Quality score
 
-**Score: 1 / 20** — assessed 2026-04-27
+**Score: 13 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
-| Cooking methods researched | − **NOT DONE** — methods list inherited from placeholder, not surveyed |
-| Culinary Group A tradition covered | − not applicable for this cut (whole loin roast not a traditional Group A preparation) |
-| Culinary Group B tradition covered | ✓ (GBC/Heathcote + Gourmet Traveller) |
-| Culinary Group C tradition covered | − not applicable for this cut (whole loin roast not a traditional Group C preparation) |
-| Culinary Group D tradition covered | ✓ (ICA.se) |
+| Cooking methods researched | ✓ — oven_roast confirmed as only applicable method (loin is too lean for braise/slow-cook) |
+| Culinary Group A tradition covered | ✗ structural gap — boneless loin roast not a traditional Group A preparation |
+| Culinary Group B tradition covered | ✓ (GBC/Heathcote + Gourmet Traveller AU) |
+| Culinary Group C tradition covered | ✗ structural gap — loin typically cut to chops in Middle Eastern/N. African traditions |
+| Culinary Group D tradition covered | ✓ (ICA.se Swedish) |
 | Cut profile written | ✓ |
 | Oven roast leaf exists with real sources | ✓ |
 | Temperature data: safe temp (63°C confirmed by ICA) | ✓ |
 | Temperature data: culinary preferred (54–58°C confirmed by GT) | ✓ |
 | Per-method temperature in leaf | ✓ |
+| Leaf has ≥ 4 sources | ✗ — leaf has 3 sources (Groups A and C gaps are structural; a 4th Group B/D source would help) |
+| Analysis section in leaf | ✓ (temperature summary and consensus) |
+| KCE:CUT_METHOD frontmatter in leaf | ✓ |
 
 ### Improvement priorities
 
-1. **Groups A & C** — If a verified source using whole boneless loin roast in an oven from these traditions is found, add it to the oven_roast leaf and update the score.
+1. **Leaf sources** — find a 4th verified oven_roast lamb loin source from a French, New Zealand, North American, or Eastern European culinary tradition.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

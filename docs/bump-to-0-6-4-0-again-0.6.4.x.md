@@ -679,3 +679,71 @@ Structural fixes + 2 new leaf files created.
 
 Third consecutive session where lamb brisket slow_cooker leaf URLs cannot be found. Specific 404 results logged in URL probe table above. Slow_cooker leaf remains blocked.
 
+
+---
+
+## Session start — Session 12 (CHORES, 2026-04-28)
+
+### CHORES.md execution
+
+**1. Version bump: 0.6.4.3 → 0.6.4.4**
+
+Updated all 4 required locations:
+- `manifest.json` → `"version": "0.6.4.4"`
+- `__init__.py` → `__version__ = "0.6.4.4"` + Last Change comment
+- `const.py` → Last Change comment
+- `generate_frontend_data.py` run → PANEL_VERSION auto-incremented 329 → 330
+
+**2. Branch history (this file) updated**
+
+Sessions 3–11 were already recorded in this file. Session 12 adds the CHORES completion entry.
+
+**3. User guide updated**
+
+- Version line updated: `0.6.4.3 → 0.6.4.4` (line 3)
+- Section 5.9: no changes needed — all anchors verified correct against headings
+- No new UI features were added in this branch (all work was recipe_research docs)
+
+**4. Anchor audit — all _openHelp() anchors verified correct**
+
+| Anchor | Heading in USER_GUIDE.md | Match |
+|--------|--------------------------|-------|
+| `#41-welcome-screen` | `### 4.1 Welcome Screen` | ✅ |
+| `#9-shelf-management` | `## 9. Shelf Management` | ✅ |
+| `#10-shopping-list` | `## 10. Shopping List` | ✅ |
+| `#51-starting-a-cook` | `### 5.1 Starting a Cook` | ✅ |
+| `#59-meater-experimental--cut-profile--recipe-links` | `### 5.9 MEATER+ (experimental) — Cut Profile & Recipe Links` | ✅ |
+| `#5-meater-probe-cooking` | `## 5. MEATER Probe Cooking` | ✅ |
+| `#57-recent-meater-cooks` | `### 5.7 Recent MEATER Cooks` | ✅ |
+| `#6-ninja-combi-cooking` | `## 6. Ninja Combi Cooking` | ✅ |
+| `#7-ai-recipe-builder` | `## 7. AI Recipe Builder` | ✅ |
+| `#8-recipe-cook-flow` | `## 8. Recipe Cook Flow` | ✅ |
+| `#61-built-in-recipes` | `### 6.1 Built-in Recipes` | ✅ |
+| `#64-recent-ninja-cooks` | `### 6.4 Recent Ninja Cooks` | ✅ |
+| `#72-selecting-ingredients` | `### 7.2 Selecting Ingredients` | ✅ |
+| `#73-choosing-a-cooking-style` | `### 7.3 Choosing a Cooking Style` | ✅ |
+| `#11-cook-history` | `## 11. Cook History` | ✅ |
+
+No anchor changes required.
+
+---
+
+### Summary of all work done in this branch (sessions 3–12)
+
+**Version journey:** 0.6.3.5 → 0.6.4.0 → 0.6.4.1 → 0.6.4.2 → 0.6.4.3 → **0.6.4.4**
+
+**Recipe research quality improvements (50+ cut files):**
+
+| Category | Files improved | Key changes |
+|----------|---------------|-------------|
+| Beef steaks | ribeye_steak, ny_strip, sirloin_steak, picanha, t_bone, skirt_steak | Anatomy-based cut profiles; method-specific leaves fixed; new oven_roast/grill leaves |
+| Beef roasts | sirloin_tip_roast, round_roast, rump, rump_roast, top_round_roast | New oven_roast leaves; cut profiles |
+| Beef braising | brisket, chuck_roast | Cut profiles fixed |
+| Beef offal | beef_liver | Pan_fry + pan_sear cut profiles |
+| Fish | cod_fillet, hake, haddock, mahi_mahi, swordfish, tuna_steak, lobster_tail | Method-specific cut profiles; new pan_fry/pan_sear leaves |
+| Lamb | lamb_loin_roast, lamb_shoulder, lamb_neck, lamb_burger, lamb_kofta | Cut profiles + new research leaves |
+| Pork | pork_cheek, pork_liver, pork_sausage, spare_ribs, secreto, pork_shoulder_steak, pork_loin_steak, pork_tenderloin, pork_belly, pork_leg | Method-specific cut profiles |
+| Poultry | turkey_ground, turkey_thigh, chicken_wing, chicken_breast, chicken_leg, whole_chicken | New method leaves; anatomy cut profiles |
+| Game | bison_steak, buffalo_steak, buffalo_roast, ostrich_steak, ostrich_fillet, reindeer_steak, reindeer_loin, venison_roast, venison_loin, venison_leg, venison_shoulder, goat_chop, goat_shank, goat_leg, wild_boar_shoulder, kangaroo_fillet, mutton_shoulder_alt | Cut profiles; new method leaves |
+| Vegetables | roasted_potatoes | New air_fryer + oven_roast leaves with real sources |
+

@@ -10,7 +10,10 @@ cut_type: Other / Offal
 # Pork Liver × Pan Fry — Recipe Temperature Research
 
 ## Cut profile
-Pork liver is milder, slightly sweeter and more delicate in texture than beef liver — a paler chestnut-brown rather than the deep mahogany of beef, with a finer-grained hepatocyte structure and a thinner capsule. The same mineral-iron flavour profile is present but at lower intensity. The standard preparation across European traditions is identical to the beef-liver pan-fry: brief soak in milk to mellow the iron, dust in flour, sear hard in fat, and pull while the centre is still faintly pink. The narrower flavour also means pork liver tolerates assertive aromatics — onions, sage, juniper, allspice, capers — better than the more bold-tasting calf's or beef liver. Carryover is small (1–2 °C); slices continue cooking on the plate, so serve immediately.
+
+Pan frying pork liver follows the same core technique as beef liver: hot fat, high direct heat, minimal time. The key difference from pan searing is the presence of a starchy coating (flour, fine breadcrumbs, or cornstarch) and the use of enough fat to create a shallow-fry environment where the crust forms by contact with the hot fat, not just the hot pan surface. A flour dusting draws out surface moisture, forms a thin protective crust, and promotes even browning across the entire face of the slice.
+
+Standard liver and onions: caramelise sliced onions first (10–15 min in butter over medium heat), remove from pan; increase heat to high; add more butter and oil; fry liver slices 1–2 minutes per side. The onions are returned to the pan for final 30 seconds and serve together. The liver must not stack — crowding drops pan temperature and causes steaming. Carryover: 1–2 °C for thin slices. Pull at 60–65 °C for a pink, tender centre; 71 °C for USDA compliance.
 
 ## Source recipes
 

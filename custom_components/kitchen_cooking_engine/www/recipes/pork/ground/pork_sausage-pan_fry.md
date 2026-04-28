@@ -11,11 +11,9 @@ cut_type: Ground
 
 ## Cut profile
 
-Pork sausage is a processed meat product made from finely minced or coarsely ground pork, seasoned with salt, pepper, herbs and spices, and encased in natural pig intestine or synthetic collagen casing. Fat content is typically 20–30%, essential for juiciness and flavour development. Fresh sausages require cooking to a minimum internal temperature of 71°C (160°F); pre-cooked or smoked sausages require only reheating to serving temperature (60–65°C). The casing is the critical monitoring challenge: if it ruptures early, moisture and fat escape and the sausage dries out. Probing from one end into the centre avoids puncturing the casing mid-body. Carryover is 2–3°C.
+Pan frying pork sausages on the stove provides a more controlled environment than grilling: the covered pan traps steam during the initial cooking phase, helping the interior reach safe temperature without burning the casing exterior. The standard technique is to place sausages in a cold pan with a small amount of water (2–3 tablespoons), bring to a gentle simmer covered for 5–7 minutes to cook through, then remove the lid and continue over medium heat to brown the casing in the rendered fat. This steam-then-fry sequence virtually eliminates casing rupture and produces evenly cooked, juicy sausages.
 
-Target internal temperatures (pan fry):
-- Fully cooked/safe: **71–75 °C (160–167 °F)**
-- ⚠️ Pork sausage must reach 71 °C minimum
+An alternative: start over medium-low heat in a thin film of oil, turning every 2–3 minutes for 15–20 minutes total. The low heat lets the fat render gradually through the intact casing, producing a deeply browned exterior. Probe from one end only, into the centre, avoiding the casing mid-body. Target: 71–75 °C (160–167 °F). Carryover: 2–3 °C.
 
 ## Source recipes
 

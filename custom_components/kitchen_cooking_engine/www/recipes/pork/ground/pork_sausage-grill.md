@@ -11,11 +11,9 @@ cut_type: Ground
 
 ## Cut profile
 
-Pork sausage is a processed meat product made from finely minced or coarsely ground pork, seasoned with salt, pepper, herbs and spices, and encased in natural pig intestine or synthetic collagen casing. Fat content is typically 20–30%, essential for juiciness and flavour development. Fresh sausages require cooking to a minimum internal temperature of 71°C (160°F); pre-cooked or smoked sausages require only reheating to serving temperature (60–65°C). The casing is the critical monitoring challenge: if it ruptures early, moisture and fat escape and the sausage dries out. Probing from one end into the centre avoids puncturing the casing mid-body. Carryover is 2–3°C.
+Grilling pork sausages over direct heat is the classic preparation for summer cookouts, *braai*, and street food worldwide. The key challenge is preventing the casing from rupturing before the interior reaches a safe temperature: a flare-up or too-high heat causes the fat inside to expand faster than the casing can accommodate, splitting it and losing both the steam that keeps the interior moist and the fat that contributes to flavour. Medium direct heat (175–200 °C at grate) with the lid open allows steady rendering. Turning every 3–5 minutes ensures even browning on all sides without sustained high heat on one face.
 
-Target internal temperatures (grill):
-- Fully cooked/safe: **71–75 °C (160–167 °F)**
-- ⚠️ Do not pull before 71 °C — pork sausage must be fully cooked
+For fresh sausages over 3 cm diameter, use a two-zone grill: start indirect heat (covered, ~150 °C) for 10 minutes to bring the interior to near-safe temperature, then finish over direct heat for 5 minutes to brown and char the casing. This eliminates the flare-up risk. Probe enters from one end only, into the centre, to avoid puncturing the casing mid-body. Target: 71–75 °C (160–167 °F). Carryover: 2–3 °C.
 
 ## Source recipes
 

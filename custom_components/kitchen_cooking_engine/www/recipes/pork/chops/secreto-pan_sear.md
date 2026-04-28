@@ -11,11 +11,9 @@ cut_type: Chops & Tenderloin
 
 ## Cut profile
 
-The secreto (Spanish: "secret") is a hidden fat-marbled cut from the shoulder/neck area of the Iberian pig (or any pork). It is thin, uneven, and highly marbled, making it one of the most flavourful pork cuts for the griddle or grill. Because it is thin and irregular, it is cut into 3–4 uniform pieces before cooking. Key rules: de-chill 2 hours; dry sear without oil; no salt before; one flip only; rest 1–2 min then season. Target: 65–70 °C (pink to fully done) — internal temperature rises fast due to the thin cross-section.
+Pan searing is the traditional preparation for secreto: a dry, very hot iron griddle (*plancha*) or cast-iron skillet, no oil, no salt before cooking. The abundant intramuscular fat renders immediately on contact with the hot surface, creating its own cooking fat within 30 seconds. Key technique: de-chill the secreto 1–2 hours before cooking so it sears rather than steams; salt only after cooking; one flip only; rest 1–2 min then season generously with sea salt and perhaps smoked paprika.
 
-Target internal temperatures (pan sear):
-- Pink inside: **63–65 °C (145–149 °F)**
-- Well done (recommended for high-fat secreto): **68–72 °C (154–162 °F)**
+Because the cut is thin (1–2 cm), internal temperature rises fast: 2–3 minutes per side achieves 63–65 °C (pink). Carryover: 2–3 °C. MEATER probe at the thickest end, inserted along the length of the cut parallel to the surface. Target: 63–65 °C for pink interior, 68–72 °C for fully cooked.
 
 ## Source recipes
 

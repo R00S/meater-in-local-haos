@@ -31,41 +31,47 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 6
+quality_score: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_assessed: 2026-04-27
 -->
 # Chicken Leg / Drumstick — Cut Overview
 
 ## Cut profile
 
-Chicken drumsticks (the lower portion of the leg) are dark-meat cuts with more fat and connective tissue than breast, making them forgiving and flavourful. High-heat oven roasting renders the fat, crisps the skin, and breaks down collagen for juicy, tender meat. USDA minimum is 165 °F (74 °C), but dark meat is best at 170–175 °F (77–79 °C) where collagen converts to gelatin.
+The chicken leg comprises the thigh (femur bone and surrounding muscle) and the drumstick (tibiotarsus bone and surrounding muscle). In retail, *drumstick* refers specifically to the lower section below the knee joint; *leg quarter* includes the thigh. Both are dark meat, characterised by higher myoglobin content, more intramuscular fat, and significantly more connective tissue (collagen) than breast. This composition makes the leg the most forgiving chicken cut to cook — it does not dry out at safe temperatures, and improves in texture as temperature rises from 165 °F (74 °C) to 175–180 °F (79–82 °C) as collagen converts to gelatin.
 
-
-Target internal temperature: **170–175 °F (77–79 °C)** — recommended for dark meat drumsticks
+The drumstick has a single bone (tibia/fibula) with a club-shaped muscle mass around it. The bone conducts heat and can make the innermost meat near the joint run slightly below the surface temperature. The MEATER probe is inserted from the meaty end along the bone axis, into the largest muscle mass, avoiding the bone itself.
 
 
 ## Research files by cooking method
 
-- [Oven Roast](./chicken_leg-oven_roast.md)
+- [`chicken_leg-oven_roast.md`](chicken_leg-oven_roast.md) — 4 sources: Group A (Swasthi Shreekanth/Indian), Group B (Jessica Gavin/American, BBC Good Food/British), Group D (Natasha's Kitchen/Ukrainian-American counted as Group B in prior assessment)
+
 ## Quality score
 
-**Score: 6 / 20** — assessed 2026-04-26
+**Score: 8 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing method leaf files (2 of 3 declared) | −2 |
-| Missing Culinary Group B tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Method file `chicken_leg-oven_roast.md` copies parent cut profile | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods researched (full survey) | − **NOT DONE** |
+| Cut profile written with anatomy | ✓ (fixed 2026-04-27) |
+| Oven roast leaf exists with 4 sources | ✓ |
+| Grill leaf | − missing |
+| Air fryer leaf | − missing |
+| Culinary Group A covered | ✓ (oven_roast: Swasthi/Indian) |
+| Culinary Group B covered | ✓ (oven_roast: Jessica Gavin, BBC Good Food) |
+| Culinary Group C covered | − missing |
+| Culinary Group D covered | − missing (Natasha's Kitchen assessed as Group B, no confirmed Group D source) |
+| Oven_roast cut profile method-specific | ✓ (fixed 2026-04-27) |
+
+**Deductions**: −8 methods not researched · −1 missing grill leaf · −1 missing air_fryer leaf · −1 Group C · −1 Group D = −12 → 20−12 = **8**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `chicken_leg-air_fryer.md`, `chicken_leg-grill.md`
-3. **−3** · Missing Culinary Group B, Culinary Group C and Culinary Group D tradition(s) — add Culinary Group B, Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
-4. **−1** · Method file `chicken_leg-oven_roast.md` copies parent cut profile — rewrite `chicken_leg-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−8** · Cooking methods not researched — survey all cooking methods for chicken legs/drumsticks; update `methods:` list; set `cooking_methods_researched: 1`
+2. **−1 each** · Grill and air fryer leaves missing — create `chicken_leg-grill.md` and `chicken_leg-air_fryer.md` with verified sources
+3. **−1** · Group C tradition missing — find an African, Arabic, or Caribbean drumstick recipe
+4. **−1** · Group D tradition missing — find a Swedish, Polish, Baltic, or Slavic/Ukrainian drumstick recipe
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

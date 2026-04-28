@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 27 Apr 2026, 21:55 UTC
-Last Change: v0.6.4.3 - CHORES: pork_jowl braise research (score 1→9); 3 GBC Group B sources (Smeddle, Wishart, Campbell)
+Last Updated: 28 Apr 2026, 00:42 UTC
+Last Change: v0.6.4.4 - CHORES: recipe research quality pass — 50+ cut files improved, anatomy-based cut profiles, new method leaves
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "329"
+PANEL_VERSION = "330"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
