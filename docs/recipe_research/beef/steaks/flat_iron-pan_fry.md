@@ -13,6 +13,12 @@ cut_type: Steaks
 
 The flat iron steak, taken from the infraspinatus of the shoulder blade, brings a rich buttery fat content that rewards pan frying: the marbling bastes the meat internally as it cooks while the fat in contact with a hot pan adds to the flavour-laden fond that forms the basis of classic sauces. Pan frying, in European culinary tradition, typically involves a moderately hot pan — lighter than a full sear — allowing the cook to baste repeatedly in butter, aromatics and wine as the interior approaches its target temperature. Individual flat iron steaks at 2–3 cm thickness cook through in 8–12 minutes in a pan, making them well-suited to à la minute bistro service. Carryover cooking after removing from the pan is moderate at 2–4 °C, calling for a pull temperature of 53–54 °C (127–130 °F) to land at medium-rare.
 
+## Styckesprofil
+
+Flat iron-biffen, tagen från *infraspinatus* i skulderbladspartiet, har ett rikt smörigt fettinnehåll som belönar pannstekning: marmoreringen bastar köttet inifrån under tillagningen medan fettet i kontakt med en het panna bidrar till den smakrika lagen som utgör grunden för klassiska såser.
+
+Pannstekning, i europeisk kulinarisk tradition, innebär vanligtvis en måttligt het panna — lättare än en fullständig searing — vilket tillåter kocken att basta upprepade gånger i smör, aromater och vin när insidan närmar sig måltemperaturen. Individuella flat iron-biffar med 2–3 cm tjocklek tillagas på 8–12 minuter i en panna, vilket gör dem väl lämpade för à la minute bistro-servering. Eftertillagning efter att ha tagits bort från pannan är måttlig vid 2–4 °C, vilket kräver en dragtemperatur på 53–54 °C för att landa vid medium-rare. Innertemperatur: 54–57 °C medium-rare.
+
 ## Source recipes
 
 ### 1. Jacques Pépin — Steak à la Poêle, Sauce au Poivre (French bistro tradition)

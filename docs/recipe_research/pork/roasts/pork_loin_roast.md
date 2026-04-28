@@ -46,6 +46,12 @@ Target internal temperatures (oven roast):
 - Traditional firm, fully white (German-style): **70–75 °C (158–167 °F)**
 
 
+## Styckesprofil
+
+Fläskloin-stek (*svinekam* danska; *Schweinerücken* / *Kotelettstrang* tyska) med svål är den nordiska och tyska söndagsmiddagens kärna. Djup ritsning av svålen, salt i ritsorna, ugnsrostning vid 180–200 °C.
+
+Innertemperatur: **68–72 °C (154–162 °F)** för genomstekt, saftig loin. USDA-minimum: **63 °C** med 3 min vila. Eftertillagning: 3–4 °C. Sond in i tjockaste köttmassan, borta från benet och svålen. Vila täckt 15 minuter. Avsluta alltid under grillelementet för knäppande svål.
+
 ## Research files by cooking method
 
 - [Oven Roast](./pork_loin_roast-oven_roast.md)

@@ -12,6 +12,10 @@ cut_type: Eggplant
 ## Cut profile
 Eggplant (*Solanum melongena*) in the air fryer follows the same principle as oven roasting but in a smaller, faster environment: the convective heat at 200–210 °C dehydrates the surface rapidly, browning it in 15–20 minutes rather than 25–30. The air fryer is particularly effective for slices, cubes, and halves because the circulating air reaches all surfaces simultaneously, reducing the need to flip. Crowding is the main enemy — pieces must have air space between them or they steam rather than roast. The internal target is 82–88 °C (180–190 °F) for cubes and slices (creamy-tender, slightly collapsed at edges), and 88–92 °C (190–198 °F) for halves intended for mashing. Carryover in the air fryer is small (1–2 °C) but the pieces dry out if left in the basket after the cook. MEATER Plus is compatible with most air fryer baskets; insert the probe before the cook begins.
 
+## Styckesprofil
+
+Aubergine (*Solanum melongena*) i airfryern följer samma princip som ugnsstekning men i en mindre, snabbare miljö: konvektionsvärmen vid 200–210 °C dehydrerar svampstrukturen på 12–15 minuter. Skiv i 2 cm skivor, olja, krydda. Klar när gyllenbrun och mjuk.
+
 ## Source recipes
 
 ### 1. Swasthi Shreekanth — Air Fryer Baingan Bharta (Indian / Punjabi tradition)

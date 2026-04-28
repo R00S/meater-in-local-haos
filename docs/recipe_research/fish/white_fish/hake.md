@@ -42,6 +42,12 @@ quality_assessed: 2026-04-27
 Hake (*Merluccius merluccius*, European hake; *Merluccius capensis/paradoxus*, Cape hake; *Merluccius productus*, Pacific hake) is a slender, elongated fish of the family Merlucciidae. The fillet is cut from the flanks, running from behind the pectoral fins to the tail; the flesh is lean (< 1% fat), firm when raw, and produces large clean flakes when cooked. The lateral muscle is composed of W-shaped myotomes separated by collagen-rich myosepta; this structure gives hake its characteristically large flake and means it separates cleanly at the natural seams when cooked. The flesh is slightly softer than cod raw but firms to a similar texture under heat. It is the dominant food fish of Iberian cuisine (*merluza* in Spanish, *pescada* in Portuguese) and important in Moroccan, West African, and British traditions. Carryover is minimal (2–3 °C); pull at 60–63 °C for moist flakes.
 
 
+## Styckesprofil
+
+Hake (*Merluccius merluccius*, europeisk hake; *Merluccius capensis/paradoxus*, kapsk hake; *Merluccius productus*, stillahavshake) är en slank, utsträckt fisk av familjen Merlucciidae. Filén är skärd från flankerna och löper från bakom bröstfenorna till stjärten; köttet är magert (< 1% fett), fast rått och ger stora rena fjäll när kokt.
+
+Sidans muskler är sammansatta av W-formade myotomer separerade av kollagenrika myosepta; denna struktur ger hake sin karakteristiska stora fjällning och innebär att den separerar rent vid de naturliga sömmarna när kokt. Köttet är något mjukare än torsk rått men hårdnar till en liknande textur under värme. Det är den dominerande matfisken i iberisk cuisine (*merluza* på spanska, *pescada* på portugisiska) och viktig i marockanska, västafrikanska och brittiska traditioner. Eftertillagning är minimal (2–3 °C); dra vid 60–63 °C för fuktiga fjäll. Innertemperatur: 60–63 °C.
+
 ## Research files by cooking method
 
 - [Pan Fry](./hake-pan_fry.md)

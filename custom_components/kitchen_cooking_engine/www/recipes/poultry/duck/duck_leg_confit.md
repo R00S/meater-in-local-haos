@@ -39,6 +39,10 @@ Duck leg confit (_confit de canard_) refers specifically to the bone-in, skin-on
 
 **Probe placement**: insert the probe from the thick cut end of the thigh, pushing the tip toward the geometric centre of the thigh muscle. The tip must be in the lean muscle, not resting against the femur or in a fat pocket. Do not probe the drumstick — it is thinner and will equilibrate faster, giving a false-high reading for the thigh. Insert the probe before the duck goes into the fat bath.
 
+## Styckesprofil
+
+Anklägg confit (*confit de canard*) avser specifikt anklägg med ben och skinn (lår + trumpinne, känd som *maryland*-snittet i Australien) tillagad med den traditionella franska confit-metoden. Innertemperatur: 82–85 °C. Confit-beredda anklägg är sedan krispiga i het panna eller ugn vid 220 °C i 15 minuter för knaprig skinnyta.
+
 ## Research files by cooking method
 
 | Method | Leaf file | Status |

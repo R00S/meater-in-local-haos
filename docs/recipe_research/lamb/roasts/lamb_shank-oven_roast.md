@@ -26,6 +26,12 @@ Lamb shank (the lower leg, hind or fore) is one of the most prized braising cuts
 
 Target internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bone tenderness across all traditions.
 
+## Styckesprofil
+
+Lammlägg (underbenet, bak eller fram) är ett av de mest uppskattade braiseringsnittten i världen. Den täta bindväven, benmärgen och de rika muskelfibrerna omvandlas under 2–3 timmars fuktig värme till fall-från-benet-mört, gelatinöst kött. Det är flaggskeppsrätten i medelhavs-, mellanösternsk och nordafrikansk matlagning.
+
+Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertillagning: försumbar. Sond in i tjockaste köttmassan, borta från benet. Klassiska beredningar: *osso buco* (Italian), *braised lamb shank* (brittisk), *kuzu incik* (turkisk), *gjarret me speca* (albansk).
+
 ## Source recipes
 
 ### 1. Nefis Yemek Tarifleri — Fırında Kuzu İncik (Turkish tradition)

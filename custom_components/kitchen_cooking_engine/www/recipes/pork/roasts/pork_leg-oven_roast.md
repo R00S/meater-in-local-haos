@@ -26,6 +26,12 @@ Pork leg and hock (Schweinshaxe / stinco di maiale / kuzu incik) is a collagen-r
 
 Target internal temperature: **75–85 °C (167–185 °F)** as explicitly stated by Giallo Zafferano. Pull-apart fall-off-the-bone is achieved closer to 88–90 °C.
 
+## Styckesprofil
+
+Fläsklåg och lägg (*Schweinshaxe* / *stinco di maiale* / *kuzu incik*) är ett kollagenrikt snitt med tjock bindväv, benmärg och hårt arbetad muskulatur. Ugnsrostningsmetod: börja vid hög temperatur (220 °C) för att brynna ytan, sänk sedan till 160 °C för 2–3 timmars långsam tillagning.
+
+Klassiska beredningar: bayrisk *Schweinshaxe* (krisp svål), italiensk *stinco di maiale* (med vin och rosmarintomater). Innertemperatur: **85–90 °C (185–194 °F)** för pull-apart. Eftertillagning: 3–4 °C. Sond in i tjockaste köttmassan, borta från benet.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Knusprige Schweinshaxe aus dem Ofen (German tradition)

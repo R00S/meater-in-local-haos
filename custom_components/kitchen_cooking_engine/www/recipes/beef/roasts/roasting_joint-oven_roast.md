@@ -27,6 +27,10 @@ The defining characteristic shared by all roasting joint cuts is their size (typ
 
 **Probe placement**: For any boneless roasting joint, enter the probe from the end into the geometric centre of the thickest lean muscle section. For bone-in rib, keep the tip at least 2 cm from any rib bone — bone conducts heat differently from muscle and will produce misleading readings.
 
+## Styckesprofil
+
+"Stekbit" är en brittisk och australiensisk samlingsterm för ett urval av stora, benfria nötstycken lämpade för ugnsstekning: övre innanlår (*topside*), innanlår (*silverside*), yttersida av innanlår (*outside round*), fransyska (*chuck*), entrecôte (*sirloin*) och revbensspjäll. Termen indikerar tillagningsmetod — ugnsstekning — snarare än ett specifikt anatomiskt snitt. Kvaliteten och lämplig innertemperatur varierar kraftigt beroende på vilket snitt som avses: magra, hårt arbetade muskler (innanlår, yttersida) kräver lägre temperaturer (54–60 °C) för att inte torka ut; mer marmorerade snitt (entrecôte, revben) tål ett bredare temperaturspann.
+
 ## Source recipes
 
 ### 1. Nagi Maehashi — Marinated Roast Beef (Australian tradition, designed for economical roasting joints)

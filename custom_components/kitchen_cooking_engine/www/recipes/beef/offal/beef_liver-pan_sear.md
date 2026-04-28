@@ -15,6 +15,10 @@ Pan searing liver (without onions) is the faster, more minimalist method — and
 
 MEATER probe inserted sideways through the thickest point of the slice. Pull at 62–63 °C; carryover 1–2 °C. The slices are best served directly from the pan — no resting required since there is nothing for the thin slices to redistribute.
 
+## Styckesprofil
+
+Pannstek av lever (utan lök) är den snabbare, mer minimalistiska metoden — och den elegantare om råvaran är av hög kvalitet. Utan löksötman som motbalans kräver metoden välkontrollerad värme och tidprecision: en riktigt het panna, smör + olja, hög direkt värme, 60–70 sekunder per sida för tunna skivor (8–10 mm), 90 sekunder för tjockare (12–15 mm). Maillardytan bildas snabbt på grund av leverns höga proteininnehåll och lägre fett; varje sekund för länge leder till överkokad, grynig konsistens. Innertemperatur: 71 °C. Eftertillagning är 1–2 °C.
+
 ## Source recipes
 
 ### 1. Fergus Henderson — Calf's Liver, Bacon and Onions (British nose-to-tail tradition)

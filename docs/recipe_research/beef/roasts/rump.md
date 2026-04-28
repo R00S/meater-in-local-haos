@@ -71,6 +71,10 @@ via pan-sear or grill. As a whole joint, it can be oven-roasted.
 **Best uses**: Pan sear (most common), grill (charcoal or grill pan), oven roast (less common).
 Not typically braised in Western traditions.
 
+## Styckesprofil
+
+Nötrumpa skärs från rumpprimalen — toppen av bakkvarteret, vid korsningen av kotlett och lår. Det är ett område med blandad mörhet: de övre musklerna (*gluteus medius*, *gluteus accessorius*) är relativt möra och lämpar sig för ugnsstekning eller pannsearing; de nedre musklerna är hårdare och passar bättre för lång tillagning eller marinering. Rumpa är mager med begränsad marmorering men intensiv nötssmak. Den klassiska yttre fettlisten — traditionellt kvarlämnad — skyddar köttet under ugnsstekning och smälter för att basta ytan. Eftertillagning: 3–5 °C för ett helt rumpstycke i ugnsform.
+
 ## Research files by cooking method
 
 | Method | Leaf file | Status |

@@ -37,6 +37,12 @@ See the primary research documentation at `docs/recipe_research/game/mutton/mutt
 - [mutton_shoulder-oven_roast.md](./mutton_shoulder-oven_roast.md)
 - [mutton_shoulder-slow_cooker.md](./mutton_shoulder-slow_cooker.md)
 
+## Styckesprofil
+
+Fåraxel (systemduplicat av primärfil) är den hårt arbetade framlemmsmuskelmassan hos mogna får (12+ månader), karakteriserad av djup kraftfull smak, högt kollageninnehåll och en stor central skulderbladsben. Alla kulinariska egenskaper — djup smak; tät bindväv som kräver lång lågtemperaturtillagning; lämplighet för bräsering, långsam ugnsstekning och slow cooker för att nå pull-apart-mörhet vid 88–96 °C — är identiska med primärposten.
+
+Se primär dokumentation i `docs/recipe_research/game/mutton/mutton_shoulder.md`. Innertemperatur: **88–96 °C** (190–205 °F) för pull-apart.
+
 ## Research files by cooking method
 
 All methods inherit from the primary `mutton_shoulder` entry. Independent leaf files are not created here to avoid data duplication. Any cut-specific research (not covered by `mutton_shoulder`) would be added here.

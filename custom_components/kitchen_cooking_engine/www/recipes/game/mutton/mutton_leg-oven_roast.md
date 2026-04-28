@@ -26,6 +26,12 @@ A whole mutton leg (bone-in, 2–3 kg) is a festive cut in the Middle East, Paki
 
 Target internal temperature: **75–80 °C (167–176 °F)** for fully cooked, still juicy. Some Pakistani and Indian recipes cook to 85 °C for fall-apart texture.
 
+## Styckesprofil
+
+Ett helt fårben (med ben, 2–3 kg) är ett festsnitt i Mellanöstern, Pakistan, Afghanistan, Storbritannien och delar av Europa. Den starka, mogna smaken gynnas av marinering och lång, långsam ugnsstekning. De flesta traditioner rostar vid 160–180 °C i 2,5–4 timmar, täckt för majoriteten av tiden för att förhindra uttorkning.
+
+Innertemperatur: **75–80 °C (167–176 °F)** för fullt genomstekt, fortfarande saftigt. Vissa pakistanska och indiska recept tillagar till 85 °C för fall-apart-textur. Eftertillagning: 3–5 °C. Sond i den tjockaste köttdelen borta från lårbenet. Vila 15–20 minuter täckt före skärning.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Hammel aus dem Ofen (German tradition)

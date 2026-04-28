@@ -12,6 +12,10 @@ cut_type: Mushrooms
 ## Cut profile
 Button mushrooms (*Agaricus bisporus*) oven-roasted at 200–220 °C concentrate their flavour dramatically as moisture evaporates, converting from plump white spheres to golden-brown, intensely flavoured morsels. The key is a hot, preheated oven and a dry sheet pan with generous space between caps — this maximises surface contact and airflow so mushrooms roast rather than steam. Roasting time is 20–25 minutes. Whole caps (8–30 g each) need 20–25 minutes; halved or sliced, 15–18 minutes. Pull temperature: 80–86 °C (176–187 °F) for slices/halves; 82–88 °C (180–190 °F) for whole caps. A MEATER probe is inserted through the top of the largest whole cap into its geometric centre.
 
+## Styckesprofil
+
+Champinjoner (*Agaricus bisporus*) ugnsrostade vid 200–220 °C koncentrerar sin smak dramatiskt när fuktigheten avdunstar. Omvandlas från runda vita sfärer till gyllenbrun, skrumpna, intensivt smakrika bitar på 20–25 minuter. Klar när djupt gyllenbrun och skrumpna.
+
 ## Source recipes
 
 ### 1. Harumi Kurihara — Kinoko no Oven Yaki (Japanese oven-roasted mushrooms)

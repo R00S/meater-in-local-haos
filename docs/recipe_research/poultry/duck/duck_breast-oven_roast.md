@@ -26,6 +26,10 @@ Duck breast is a dark, rich cut with a thick layer of subcutaneous fat beneath a
 
 Target internal temperature: **135–145 °F (57–63 °C)** — medium-rare, pull at 130 °F and rest; carryover brings it to target. For well-done (USDA), pull at 160 °F for a final resting temp of 165 °F.
 
+## Styckesprofil
+
+Ankbröst är ett mörkt, rikt snitt med ett tjockt lager subcutant fett under ett inristat skinn. Till skillnad från kycklingbröst tillagas ankbröst bäst till medium-rare (57–63 °C), där köttet förblir rosa och saftigt. Ugnsstekning efter initial pannsearing: ugn vid 180–200 °C i 6–10 minuter. Innertemperatur: 57–60 °C. Eftertillagning: 3–4 °C.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Slow-Roast Duck (adapted for breast)

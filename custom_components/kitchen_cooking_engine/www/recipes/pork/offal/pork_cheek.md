@@ -34,6 +34,12 @@ quality_assessed: 2026-04-26
 Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the small dense jaw muscle — roughly 80–120 g per cheek — composed of tightly interleaved fast-twitch fibres permeated by a dense collagen network built up through the animal's constant chewing. This makes it one of the toughest muscles on the pig at rest but one of the most flavourful and texturally rewarding when properly cooked. Intramuscular fat is distributed in thin sheets between the muscle bundles, basting the meat from within during long cooking. Depending on method: braising and slow cooking dissolve the collagen fully into gelatin, producing a spoon-tender or pull-apart result (91–94 °C); oven roasting in shallow liquid gives a caramelised crust with a fork-tender interior (91–93 °C); pan frying with butterflied cheeks creates a quick-crusted result at a lower internal temperature (65–67 °C) where the collagen hasn't converted but the fine-grained fibre structure remains bouncy rather than rubbery. The cut weighs 80–120 g per cheek, making precise probe placement critical.
 
 
+## Styckesprofil
+
+Fläskkind (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) är den täta käkmuskeln på ca 80–120 g sammansatt av tätt sammanflätade fibrer genomsyrade av ett kollagennät. Det är det mest kollagenrika snittet av fläsk.
+
+Bräsering (160–170 °C, 2–3 timmar) är den definitiva metoden: kollagen smälter till gelatin och ger spoon-tender textur. Innertemperatur: **85–90 °C (185–194 °F)** för bräserad; **68–72 °C** för pannstekt. Eftertillagning: försumbar (bräsering). Sond in i tjockaste köttmassan.
+
 ## Research files by cooking method
 
 - [Braise](./pork_cheek-braise.md)

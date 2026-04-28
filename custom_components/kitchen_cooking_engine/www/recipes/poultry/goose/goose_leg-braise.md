@@ -26,6 +26,10 @@ Goose legs are large, tough, highly flavoured cuts rich in connective tissue and
 
 Target internal temperature: **175–185 °F (79–85 °C)** — well above USDA minimum; extended time at this temperature melts collagen and produces best texture. Minimum safe: 165 °F (74 °C).
 
+## Styckesprofil
+
+Gåsben är stora, sega, intensivt smakrika snitt rika på bindväv och intramuskulärt fett. Brässering — bryning i fett, sedan tillagning nedsänkt eller delvis nedsänkt i aromatisk vätska — är den idealiska metoden. Innertemperatur: 80–85 °C (mört, faller lätt från benet). Tillagnings tid: 2–3 timmar bräserad.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Slow-Roast Duck (low-and-slow fat-rendering principle adapted for goose leg braise)

@@ -73,6 +73,12 @@ Target internal temperatures (charcoal grill):
 - Medium-rare: **pull at 54–57 °C (129–135 °F)**
 
 
+## Styckesprofil
+
+Tri-tip på träkol drar nytta av den klassiska Santa Maria BBQ-traditionen — den ursprungliga californiska beredningen. Nyckeln är en tvåzons kolarinställning: sear direkt över kolarna för en skorpa, avsluta sedan på den indirekta sidan för att föra insidan till måltemperaturen säkert. Tri-tipens avsmalnande form innebär att den tunna änden alltid är mer genomstekt; sond den tjockaste sektionen.
+
+Rödek är det traditionella Santa Maria-trädet; hickory och mesquite är alternativ. Träkolsröken ger tri-tip en djup, jordnära rökig karaktär som gasgrillning inte kan matcha. Eftertillagning från en het träkolsgrill: 4–5 °C. Innertemperatur: 54–57 °C (medium-rare). Skär alltid tvärs mot fibern.
+
 ## Research files by cooking method
 
 - [Charcoal Grill](./tri_tip-charcoal_grill.md)

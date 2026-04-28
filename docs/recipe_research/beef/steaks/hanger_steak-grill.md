@@ -13,6 +13,10 @@ cut_type: Steaks
 
 Hanger steak (*onglet* in French, *bavette de flanchet* regionally, *butcher's secret* in American tradition — so named because it "hangs" from the diaphragm between the loin and the rib) is a single coarsely-grained, deeply beefy muscle cut from the plate section. There is only one per animal. Its intense beefy, slightly offal-like flavour is beloved in French bistro cooking (*onglet à l'échalote*) and in American steakhouse menus. Hanger steak is highly suited to direct-heat grilling: its loose, open grain browns quickly and the flavourful drippings cause brief flare-ups that add charred notes. It must be served no hotter than medium (57 °C); beyond that the loose grain becomes unpleasantly dry. A central sinew that runs along the steak must be removed before serving — it separates the two muscles. Carryover is 4–5 °C.
 
+## Styckesprofil
+
+Hängarbiff (*onglet* på franska, *bavette de flanchet* regionalt, *butcher's secret* i amerikansk tradition — så kallad eftersom den "hänger" från mellangärdet mellan kotletten och revbenen) är en enda grovfibrigt, djupt nötsmakig muskel skärd från tallrikspartiet. Det finns bara en per djur. Dess höga halt myoglobin ger en intensiv järnig smak; den grova fiberstrukturen kräver att man alltid skär tvärs mot fibern för möra skivor. Innertemperatur: 52–57 °C medium-rare. Eftertillagning: 2–3 °C. Butikarna håller den ibland för sig själva — därav namnet.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Grilled Hanger Steak (American bistro tradition)

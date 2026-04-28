@@ -52,6 +52,12 @@ Ostrich (*Struthio camelus*) steak is produced primarily in South Africa, Namibi
 Target internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pull at 52 °C and rest.
 
 
+## Styckesprofil
+
+Struts (*Struthio camelus*) stek produceras primärt i Sydafrika, Namibia och allt mer i Frankrike, Belgien och Tyskland. Trots att det är en fågel är strutsköttret rött, mycket fettfattigt och behandlas kulinärt exakt som nötkött eller viltkött. Fan-filén (outerfilé) och top-loin är de viktigaste steksnitten.
+
+Köttet är extremt magert och får inte tillagas bortom medium (63 °C) — ovanför denna punkt förvandlas de magra, täta fibrerna snabbt till en torr, seg textur. Sond in till mitten av snittet, parallellt med stekens yta. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Välgenomstekt avråds starkt.
+
 ## Research files by cooking method
 
 - [Grill](./ostrich_steak-grill.md)

@@ -41,6 +41,12 @@ quality_assessed: 2026-04-27
 
 Pork loin steak (*koteletsteg* in Danish, *Lendensteak vom Schwein* in German) is cut from the *longissimus dorsi* muscle of the pork loin — the same muscle as a boneless pork chop but without the rib bone. It is lean, uniform in cross-section (typically 2–3 cm thick), and composed primarily of fast-twitch white muscle fibres with minimal intramuscular fat. Because of its lean composition, it dries out faster than shoulder steak and must be pulled at a lower temperature.
 
+## Styckesprofil
+
+Fläskloin-stek (*koteletsteg* danska, *Lendensteak vom Schwein* tyska) är skuren från *longissimus dorsi*-muskeln i fläskloinen — samma muskel som en benfri fläskkotlett men utan revbensbenet. Den är mager, enhetlig i tvärsnitt (typiskt 2,5–3,5 cm tjockt) och behöver kortare tillagningstid än kotletter.
+
+Pannstekning: 3–4 minuter per sida i smör vid hög värme. Innertemperatur: **63–65 °C (145–149 °F)** USDA (med 3 minuters vila); **70 °C** genomstekt. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till mitten. Vila 5 minuter täckt.
+
 ## Research files by cooking method
 
 - [Pan Fry](./pork_loin_steak-pan_fry.md)

@@ -45,6 +45,12 @@ Chicken wings consist of three sections: the drumette (the single-bone upper sec
 Because dark-meat chicken is safe at 165 °F (74 °C) but more palatable (less chewy, more tender) at 170–175 °F (77–79 °C), most cooks target the upper end of the safe range. The thin bones conduct heat quickly; carryover is minimal (1–2 °C).
 
 
+## Styckesprofil
+
+Kycklingvingar består av tre sektioner: trommelstocken (enkelbenet övre sektionen, anatomiskt humerus), plattingen/vingetten (tvåbenets mittsektion, radius och ulna) och spetsen (distal vingspets). Trommelstockar och plattar är de ätbara sektionerna; spetsen kastas vanligtvis men kan användas för buljong.
+
+Alla tillagningsmetoder (air fryer, grill, ugn, fritering) kräver minst 74 °C (165 °F) internt. Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond insatt i trommelstockens tjockaste del, borta från humerusbenet.
+
 ## Research files by cooking method
 
 - [`chicken_wing-air_fryer.md`](chicken_wing-air_fryer.md) — 4 sources: Group A (Pailin/Thai), Group B (Natasha's Kitchen/USA, Skinnytaste/USA), Group C (Immaculate Bites/Cameroonian)

@@ -100,3 +100,29 @@ Two root causes:
 - `const.py` — Last Change
 - `docs/USER_GUIDE.md` — §5.8, §5.9, §5.10, §12 updated
 - `docs/update-select-cut-menu-0.6.4.x.md` — v0.6.5.0 entry added there
+
+---
+
+## v0.6.5.2 — 2026-04-28
+
+### i18n: Apply ## Styckesprofil translations to all cut markdown files
+
+**Problem**: 537 markdown files had `## Cut profile` (English) but only 3 had `## Styckesprofil` (Swedish). The `CUT_PROFILES_SV` constant in the generated JS had only 3 entries — the beef shank files from v0.6.5.0.
+
+**Fix**: Applied all 480 SV translations from `docs/styckesprofil-translations/step1_extracted_profiles.md` to their corresponding markdown files, adding `## Styckesprofil` sections after `## Cut profile` in each file.
+
+**Result**:
+- 534 files received `## Styckesprofil` (3 already had it from v0.6.5.0)
+- `CUT_PROFILES_SV` now has **163 entries** (one per unique cut slug in the international tree)
+- Generator produces correct Swedish profiles for all 163 cuts
+- `PANEL_VERSION` incremented to 343
+
+### Files changed
+
+- `docs/recipe_research/**/*.md` — 534 files received `## Styckesprofil` section
+- `manifest.json` — version 0.6.5.1 → 0.6.5.2
+- `__init__.py` — version bump + Last Change
+- `const.py` — Last Change
+- `www/kitchen-cooking-panel.js` — auto-generated (PANEL_VERSION 342 → 343)
+- `docs/update-select-cut-menu-0.6.5.x.md` — this entry
+

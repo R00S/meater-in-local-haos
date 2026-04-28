@@ -29,6 +29,10 @@ quality_assessed: 2026-04-27
 Roasting potatoes (*Solanum tuberosum*) converts raw starch to a crisp, caramelised exterior and fluffy interior. The potato's cell structure determines roasting success: high-starch varieties (Maris Piper, Russet, King Edward, Desirée) have more amylose-rich starch granules that swell dramatically and burst on parboiling, producing a rough, "chuffed" exterior surface that absorbs fat and crisps intensely. Waxy varieties (Charlotte, Jersey Royal, fingerling) have more amylopectin, retain their shape better, but produce less crisp results. The Maillard reaction at the potato surface (starting around 150 °C) creates the characteristic golden-brown crust; starch gelatinisation at the interior requires reaching 95–100 °C core temperature.
 
 
+## Styckesprofil
+
+Rostning av potatis (*Solanum tuberosum*) omvandlar rå stärkelse till en krispig, karameliserad exteriör och fluffig insida. Potatisens cellstruktur avgör rostningsframgång: hög-stärkelsepotatis (Russet, King Edward) ger bäst resultat. Klar när 98–100 °C inuti och gyllenknaprig utanpå.
+
 ## Research files by cooking method
 
 - [Air Fryer](./roasted_potatoes-air_fryer.md)

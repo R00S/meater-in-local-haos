@@ -34,6 +34,10 @@ quality_assessed: 2026-04-27
 Beef brisket is taken from the breast and lower chest of the animal, comprising two muscles — the flat (*pectoralis profundus*) and the point (*pectoralis superficialis*) — that together support much of the animal's standing weight. The flat is a large, lean slab of dense muscle; the point (also called the deckle) lies over and across the flat, separated by a fat seam, and is more heavily marbled. Both muscles are extremely collagen-dense from a lifetime of supporting the animal's weight. Collagen begins softening at around 70 °C but fully converts to gelatin only with prolonged cooking at or above 85–90 °C. At gelatin conversion, the brisket transforms from a tough, chewy slab to a silky, pull-apart masterpiece.
 
 
+## Styckesprofil
+
+Nötbringa tas från bröstet och nedre delen av djurets bröstkorg och består av två muskler — det platta stycket (*pectoralis profundus*) och spetsen (*pectoralis superficialis*) — som tillsammans bär en stor del av djurets vikt. Det platta stycket är en stor, mager och tät muskelskiva; spetsen (även kallad *deckle*) ligger ovanpå och över det platta stycket, separerade av ett fettlager, och är kraftigare marmorerad. Båda musklerna är extremt kollagenrika efter ett liv av att bära djurets tyngd. Kollagen börjar mjukna vid ungefär 70 °C men omvandlas fullständigt till gelatin först efter lång tillagning vid 85–90 °C eller högre. Vid gelatinomvandlingen förvandlas bringan från en seg, tuggig skiva till ett silkeslent mästerverk som faller isär.
+
 ## Research files by cooking method
 
 - [Oven Roast](./brisket-oven_roast.md)

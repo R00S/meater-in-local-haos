@@ -12,6 +12,10 @@ cut_type: Eggplant
 ## Cut profile
 Eggplant (*Solanum melongena*; UK aubergine) is a sponge-textured fruit of the nightshade family, structurally a cluster of air-filled cells around a seed-bearing core. Raw, those cells absorb fat aggressively; cooked, the cell walls collapse and the texture turns silky and almost custard-like. Pan-frying in slices or batons concentrates the cooking on the cut surfaces — at 180–200 °C in 5–8 mm of oil, those surfaces caramelise to deep mahogany while the centre transitions from chalky to tender. The classic salt-and-press preparation draws out enough water (and, in older heritage varieties, bitterness) so that the slices brown rather than steam. Carryover is small (1–2 °C) but the slices continue to drink up surface oil after removal — a wire rack drain is standard.
 
+## Styckesprofil
+
+Aubergine (*Solanum melongena*) är en svampstrukturerad frukt av nattskuggfamiljen. Pannsteks i rikligt het olja vid medel-hög värme i 4–5 minuter per sida. Klar när djupt gyllenbrun och genomstekt. Kräver mer olja än de flesta grönsaker.
+
 ## Source recipes
 
 ### 1. Marcella Hazan — Melanzane Saltate (Italian tradition)

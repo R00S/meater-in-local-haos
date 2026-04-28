@@ -19,6 +19,10 @@ Target sous vide bath temperatures (ribeye):
 - Medium: **60–62 °C (140–144 °F)** × 1.5–2 hr
 - Well done: **65 °C (149 °F)** × 1.5–2 hr
 
+## Styckesprofil
+
+Entrecôte skärs från *longissimus dorsi*-muskeln i ribprimalen (revben 6–12), en muskel som utför minimalt arbete och därför utvecklar exceptionellt intramuskulärt fett (marmorering) i hela fibern. Den marmoreringen är det definierande draget: fettfickorna likvideras under värme och bastar muskelfibrerna inifrån. Sous vide är perfekt anpassad för entrecôte: lång koktid vid exakt temperatur förstärker marmorerings bastning och ger en konsistens som omedelbar pannsearing inte kan matcha. Innertemperatur: 54–57 °C medium-rare.
+
 ## Source recipes
 
 ### 1. Madens Verden — Ribeye sous vide (Danish tradition)

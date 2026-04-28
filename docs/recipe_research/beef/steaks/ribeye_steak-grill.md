@@ -17,6 +17,16 @@ Target internal temperatures (grill, pull temps):
 - Medium-rare: **pull at 52–54 °C (126–129 °F)**, resting to **57 °C (135 °F)**
 - Medium: **pull at 57–59 °C (135–138 °F)**, resting to **62 °C (144 °F)**
 
+## Styckesprofil
+
+Entrecôte lämpar sig idealiskt för grillning — marmoreringen smälter och bastar köttet inifrån medan grillen ger direkt strålningsvärme för yttre karamelisering. På gassgrill används hög direkt värme hela vägen, med frekvent vändning (var 30:e sekund) för den jämnaste skorpbildningen. Entrecôten bör väga minst 200–250 g per biff för framgångsrik tillagning; lättare bitar torkar ut innan en ordentlig skorpa hinner bildas.
+
+Entrecôtens höga fettinnehåll gör den förlåtande mot ojämn värme, men kan skapa uppflammor på en öppen kolgrill — ett tvåzons-upplägg (direkt searing sedan indirekt avslutning) ger finare kontroll. Eftertillagning är 3–5 °C från en het grill.
+
+Måltemperaturer (grill, dragtemperaturer):
+- Medium-rare: **dra vid 52–54 °C**, vilar till **57 °C**
+- Medium: **dra vid 57–59 °C**, vilar till **62 °C**
+
 ## Source recipes
 
 ### 1. Madens Verden — Ribeye på gasgrill (Danish tradition)

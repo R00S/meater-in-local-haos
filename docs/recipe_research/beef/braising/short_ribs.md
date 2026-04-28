@@ -37,6 +37,14 @@ The bone runs along the underside of each rib section; in the English cut (bone-
 
 Korean short rib preparations (galbi-jjim for braising, galbi for grilling) treat the cut as a secondary category in `cooking_data.py` under the name `short_ribs` with method `grill`. The temperatures and methods differ substantially from the Western braising tradition: bone-in short ribs for galbi are sliced thinly across the ribs and marinated overnight in a soy-pear-sesame brine before grilling to medium-rare, which corresponds to a different doneness target than the braised pulled preparation.
 
+## Styckesprofil
+
+Revbensspjäll skärs från den nedre delen av nötdjurets revbenskorg — antingen chuck-revbensspjäll (revben 1–5, med tjockare kött och mer marmorering) eller tallriksrevbensspjäll (revben 6–10, det längre, köttrikare "dino rib"-snittet som är populärt i amerikanskt grillkök). Köttet består av mellangärdes- och serratus-ventralis-muskler, bland de hårdast arbetade i djuret: ständig rörelse bygger täta, kollagenrika fiberknippen som hade varit oätliga om de tillagats snabbt. Den höga halten bindväv är källan till deras kulinariska värde — efter lång och långsam tillagning löses kollagenet till gelatin, det intramuskulära fettet smälter ut och resultatet är en självbastande, isärfallande konsistens med ovanlig smakdjup.
+
+Benet löper längs undersidan av varje revbensdel; i det engelska snittet (benfasta tvärsnittsdelar) syns benet och det omgivande märget i tvärsnittet. Engelskt snittade revbensspjäll är standardformatet för brässering och slow cooker. Flanken-snittade revbensspjäll skär tvärs över flera ben i tunna strimlor — det koreanska galbi-formatet — och lämpar sig för snabb grillning snarare än lång brässering. Benfria revbensspjäll säljs ibland som "nötspareribs"; de tillagas på liknande sätt som med ben men blir klara något snabbare eftersom benet fungerar som värmebuffert.
+
+Koreanska revbensspjällstillagningar (galbi-jjim för brässering, galbi för grillning) behandlar styckdelen som en sekundär kategori i `cooking_data.py` under namnet `short_ribs` med metoden `grill`. Temperaturerna och metoderna skiljer sig väsentligt från den västerländska bräseringstraditionen: benfasta revbensspjäll för galbi skärs tunt tvärs över revbenen och marineras över natten i en soja-päron-sesamlake innan de grillas till medium-rare, vilket motsvarar ett annat mörhetsmål än den bräserade, isärpullsade varianten.
+
 ## Research files by cooking method
 
 | Method | Leaf file | Status |

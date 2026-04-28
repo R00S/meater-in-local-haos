@@ -12,6 +12,10 @@ cut_type: Green Vegetables
 ## Cut profile
 Asparagus (*Asparagus officinalis*) oven-roasted at 200–220 °C achieves golden-crisp tips and tender stems in 12–18 minutes. The dry oven heat concentrates flavour and caramelises the cut tips and natural sugars. Thin spears (≤ 6 mm) need 10–12 minutes; medium (8–12 mm) need 14–16 minutes; thick (≥ 15 mm) need 16–20 minutes. Pull temperature: 82–86 °C (180–187 °F) for crispy-tipped, tender-stemmed asparagus. MEATER probe inserted along the long axis of the thickest spear from the cut base end.
 
+## Styckesprofil
+
+Sparris (*Asparagus officinalis*) ugnsrostad vid 200–220 °C uppnår gyllenknapriga toppar och möra stjälkar på 12–18 minuter. Den torra ugns-värmen koncentrerar smaken och karameliserar de naturliga sockerarterna. Olja generöst, rosta på ugnsplåt i ett lager.
+
 ## Source recipes
 
 ### 1. Marcella Hazan — Asparagi al Forno (Italian tradition)

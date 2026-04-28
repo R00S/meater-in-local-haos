@@ -13,6 +13,12 @@ cut_type: Steaks
 
 Pan frying a sirloin steak uses a moderate-to-high heat with a small amount of fat (oil or butter) in the pan. Compared to pan searing, pan frying is slightly gentler — the fat acts as a heat-transfer buffer and self-bastes the meat, helping the lean sirloin retain more moisture. The steak is flipped every 1–2 minutes to build even crust development and prevent localized overcooking. Adding butter, garlic and thyme during the last 2 minutes and basting continuously is the French bistro standard (*beurre monté* technique) and compensates for the lean cut's lower intramuscular fat. Carryover is 4–5 °C from a hot pan.
 
+## Styckesprofil
+
+Pannstekning av entrecôtebiff använder måttlig till hög värme med en liten mängd fett (olja eller smör) i pannan. Jämfört med pannsearing är pannstekning något varsam — fettet fungerar som värmeöverföringsbuffert och bastar köttet, vilket hjälper den magra entrecôten att behålla mer fuktighet. Biffen vänds var 1–2 minut för att bygga jämn skorputveckling och förhindra lokaliserad överkokning.
+
+Att tillsätta smör, vitlök och timjan under de sista 2 minuterna och basta kontinuerligt är den franska bistro-standarden (*beurre monté*-teknik) och kompenserar för snittets lägre intramuskulära fett. Eftertillagning är 4–5 °C från en het panna. Innertemperatur: 54–57 °C medium-rare. Dra vid 50–52 °C.
+
 ## Source recipes
 
 ### 1. Delia Smith — Pan-Fried Sirloin with Blue Cheese Sauce (British tradition)

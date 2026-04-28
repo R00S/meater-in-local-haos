@@ -15,6 +15,12 @@ Pan frying is the ideal method for pork shoulder steak: medium-high heat (180–
 
 The *Schopfsteak* (Austrian) and *nakkesteak* (Danish) are both cooked identically: hot pan, moderate heat, single flip, rest briefly. Because of the fat content, the steak withstands a slightly higher internal temperature without drying: 65–68 °C gives a juicy pink interior; 70–72 °C is fully cooked and still moist. MEATER probe from the side of the steak into the geometric centre. Carryover: 3–4 °C.
 
+## Styckesprofil
+
+Pannstekning av fläskaxel-stek: medel-hög värme (180–200 °C pannyta), tillräckligt med fett eller olja för att säkerställa kontakt över den ojämna steksytan, och 3–4 minuter per sida. Den kraftiga marmoreringen av halsen innebär att fettet smälter ned snabbt och ger naturlig bastning.
+
+Innertemperatur: **70–74 °C (158–165 °F)** för genomstekt med saftighet kvar. USDA-minimum: **63 °C** med 3 minuters vila för axelsnitt. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till steakens mitt. Vila 5 minuter täckt.
+
 ## Source recipes
 
 ### 1. Madens Verden — Langtidsstegt nakkesteg som bøffer (adapted for pan-fried shoulder steak) (Danish tradition)

@@ -37,6 +37,12 @@ Ground chicken burgers are formed patties made from minced chicken, typically 85
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry
 
 
+## Styckesprofil
+
+Kycklingburgarbiffar (formade biffar av malet kyckling) är typiskt 85–93% magert. Malt fjäderfä måste tillagas till en högre innertemperatur än hel muskel för livsmedelssäkerhet.
+
+Grill, ugn, air fryer eller panna — alla metoder kräver minst 74 °C (165 °F) internt. Innertemperatur: **74 °C (165 °F)** USDA. Eftertillagning: 2–3 °C. Sond horisontellt från sidan in till biffens mitt. Binda alltid med ägg och panko för att hålla biffarna ihop under tillagning.
+
 ## Research files by cooking method
 
 - [Air Fryer](./chicken_burger-air_fryer.md)

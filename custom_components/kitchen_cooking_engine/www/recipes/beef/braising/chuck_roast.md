@@ -33,6 +33,10 @@ quality_assessed: 2026-04-28
 Chuck roast is cut from the shoulder region of the animal (the chuck primal, roughly ribs 1–5 and the neck). The shoulder muscles endure constant movement throughout the animal's life, producing densely bundled muscle fibres interlaced with thick seams of connective tissue (*collagen*) and intermuscular fat — a structure that is aggressively tough at low internal temperatures but transforms into richly flavoured, pull-apart tenderness after prolonged cooking. The chuck encompasses multiple muscles: *triceps brachii*, *supraspinatus*, *infraspinatus*, and the *longissimus costarum*. Most are heavily worked, heavily collagen-rich, and unsuitable for quick cooking methods.
 
 
+## Styckesprofil
+
+Fransyska skärs från djurets skulderparti (chuckprimalen, ungefär revben 1–5 och halsen). Skuldermusklerna arbetar ständigt under djurets hela liv, vilket producerar tätt sammanpackade muskelfibrerknippen genomvävda med tjocka lager bindväv (*kollagen*) och intermuskulärt fett — en struktur som är extremt seg vid låga innertemperaturer men förvandlas till rik, mörnande smak efter lång tillagning. Fransyskan omfattar flera muskler: *triceps brachii*, *supraspinatus*, *infraspinatus* och *longissimus costarum*. De flesta är hårt arbetade, kollagenrika och olämpliga för snabba tillagningsmetoder.
+
 ## Research files by cooking method
 
 - [Braise](./chuck_roast-braise.md)

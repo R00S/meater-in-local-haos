@@ -32,6 +32,12 @@ quality_assessed: 2026-04-27
 Lamb burger is a patty made from ground (minced) lamb — primarily shoulder and neck trimmings — with a typical fat content of 15–25%, noticeably higher than ground beef. The higher fat content produces a very juicy patty that is more forgiving of slight overcooking, but also causes more fat drip on the grill. Ground lamb has a characteristic sweet-gamey flavour that pairs well with bold aromatics: garlic, cumin, harissa, mint, za'atar, feta. Because grinding distributes surface bacteria throughout the mass, the USDA minimum safe temperature is 71 °C (160 °F) for all ground meat including lamb.
 
 
+## Styckesprofil
+
+Lammburgare är en biff gjord av malet lamm — primärt skuldra och hals-trimmings — med typiskt fettinnehåll på 15–25 %, märkbart högre än malet nötkött. Det höga fettinnehållet ger en mycket saftig biff som är mer tolerant mot lätt överkokning, men orsakar också mer fettdroppning på grillen.
+
+Vid grillning eller pannstekning kräver USDA-standarden att malet lamm tillagas till 72 °C (160 °F) för livsmedelssäkerhet. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond horisontellt från sidan in mot biffens mitt.
+
 ## Research files by cooking method
 
 - [Grill](./lamb_burger-grill.md)

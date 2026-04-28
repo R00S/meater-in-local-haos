@@ -26,6 +26,12 @@ Lamb neck (Lammhals / collo di agnello / kuzu gerdan / lammehals) is one of the 
 
 Target internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bone oven tenderness.
 
+## Styckesprofil
+
+Lammhals (*Lammhals* / *collo di agnello* / *kuzu gerdan* / *lammehals*) är ett av de mest underskattade braiseringsnittten. Det är rikt marmerat, hårt arbetat och packat med bindväv och djup smak. Skuret i tvärsnitt eller bräserat hel, mjuknar det magnifikt under 1,5–2,5 timmars skonsam bräsering.
+
+Täckt bräsering: spissimmer eller 160–170 °C ugn i 1,5–2,5 timmar. Innertemperatur: **85–90 °C (185–194 °F)** för fall-från-benet. Eftertillagning: försumbar (braiseringsvätska). Sond in i tjockaste köttmassan, borta från halskotor. Användes i *Irish stew*, *navarin de mouton* och nordafrikanska tagines.
+
 ## Source recipes
 
 ### 1. Nefis Yemek Tarifleri — Fırında Kuzu Gerdan (Turkish tradition)

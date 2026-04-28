@@ -26,6 +26,12 @@ Ground chicken pan-fried burgers cook on the stovetop in a skillet. Ground chick
 
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry
 
+## Styckesprofil
+
+Pannstekta kycklingburgare tillagas i en stekpanna vid medel-hög värme. Malet kyckling är magrare och klibbigare än nötkött, varför binda med ägg och panko (panade-metoden) är avgörande för att hålla biffarna ihop och förhindra uttorkning.
+
+Pannsteka vid medel-hög värme, 4–5 minuter per sida, med lock för att fånga ånga och hjälpa insidan nå säker temperatur. Innertemperatur: **74 °C (165 °F)** USDA. Eftertillagning: 2–3 °C. Sond horisontellt från sidan in till biffens mitt.
+
 ## Source recipes
 
 ### 1. Jessica Gavin — Turkey Burgers (adapted for ground chicken pan-fry)

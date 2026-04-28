@@ -26,6 +26,12 @@ cut_type: Buffalo
 
 Target internal temperature: **60–65 °C (140–149 °F)** for medium.
 
+## Styckesprofil
+
+**Kontextanmärkning**: I detta projekt avser *buffalo* **vattenbuffel** (*Bubalus bubalis* — carabao på Filippinerna, bhaisa i Indien) snarare än amerikansk bison. Vattenbuffel är det mest ätna stora idisslaren i Asien, med stor produktion i Indien, Kina, Pakistan och Sydostasien.
+
+Det magra, lätt sötare, mörkrödare köttet behandlas i allmänhet som nötkött i kulinariska tillämpningar men har lägre fetthalt och något fastare muskelstruktur. Steaks tillagas vanligtvis till medium (63–65 °C) snarare än medium-rare på grund av kulturella preferenser. Innertemperatur: **60–65 °C** (140–149 °F). Eftertillagning: 3–4 °C.
+
 ## Source recipes
 
 ### 1. Panlasang Pinoy — Bistek Tagalog (Filipino beef/carabeef steak)

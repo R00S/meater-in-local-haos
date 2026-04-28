@@ -48,6 +48,12 @@ quality_assessed: 2026-04-27
 
 The kangaroo fillet (also called backstrap or loin fillet) is the longissimus dorsi muscle running along each side of the spine of the *Macropus* species. It is the most prized kangaroo cut: consistently the most tender due to the spine-parallel muscle orientation and low load-bearing, with a fine grain and deep crimson colour from elevated myoglobin and iron content. Fat content is exceptionally low (under 1.5%), which makes the backstrap the leanest of all common red meat cuts. That same leanness demands very short cooking times at high heat — 2–3 minutes per side in a very hot pan or over a high direct grill — to produce a caramelised exterior while keeping the interior rare to medium-rare. Beyond medium, the tight fibres seize entirely and the meat becomes liver-textured and dry. Unlike the kangaroo rump steak (which can handle slightly longer cooking due to higher collagen content), the backstrap/fillet must be pulled quickly; carryover is typically only 2–4°C / 4–7°F due to the very thin, lean profile. Kangaroo fillet is widely used in Australian bush-to-table cuisine, and is available in specialty game meat shops across Europe and Southeast Asia.
 
+## Styckesprofil
+
+Känguru-filé (ryggsträng eller *loin fillet*) är *longissimus dorsi*-muskeln längs var sida av ryggraden på *Macropus*-arterna. Det är det mest uppskattade känguru-snittet: konsekvent mörast tack vare låg belastning, fin fiber och djup karmosinröd färg från förhöjt myoglobin- och järninnehåll. Fettinnehållet är exceptionellt lågt (under 1,5 %).
+
+Denna magerhet kräver mycket korta tillagningstider vid hög värme — 2–3 minuter per sida i en mycket het panna eller grill — för att producera en karameliserad yta och hålla insidan rare till medium-rare. Utöver medium låser de täta fibrerna och köttet blir torrt. Innertemperatur: **52–55 °C** (126–131 °F). Eftertillagning: 2–4 °C.
+
 ## Research files by cooking method
 
 - [Pan Sear](./kangaroo_fillet-pan_sear.md) — 2 sources collected (Groups B and D; Groups A and C needed)

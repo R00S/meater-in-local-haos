@@ -4,6 +4,12 @@
 
 Venison shoulder braised low and slow becomes fall-apart tender as the substantial collagen content (higher than in the leg or loin) converts to gelatin over 1.5–3 hours of gentle moist-heat cooking. The typical European method: sear all over in hot oil to develop colour and Maillard flavour, then braise covered in a roasting pan with vegetables, wine, berry juice or stock at 150–170°C / 300–340°F. British tradition often cubes the shoulder for a casserole/stew rather than braising it whole. German tradition (*Rehschulter geschmort*) typically keeps the shoulder bone-in and uses juniper berries, game herbs (thyme, rosemary), and elderberry or pear juice as the braising medium. No probe temperature target for pulled results — the meat is done when it is fork-tender and falling away from the bone; at this stage internal temperature is typically 85–95°C / 185–203°F.
 
+## Styckesprofil
+
+Viltbog bräserad lågt och långsamt blir fall-från-benet-mört då det betydande kollageninnehållet (högre än i benet eller loin) omvandlas till gelatin under 1,5–3 timmar av skonsam fuktig tillagning. Europeisk standardmetod: sear all om i het olja för att utveckla färg och Maillard-aromer, sedan braisera täckt i ugn vid 160–170 °C.
+
+Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertillagning: försumbar (braiseringsvätska). Sond i tjockaste köttmassan, borta från skulderbladsben.
+
 ## Source recipes
 
 ### 1. BBC Good Food (Good Food Magazine, January 2006) — Succulent Braised Venison

@@ -72,6 +72,10 @@ The ribeye steak is cut from the *longissimus dorsi* muscle of the rib primal (r
 The ribeye is composed of the eye muscle (*longissimus*), the rib cap (*spinalis dorsi*, the richest and most prized portion), and the rib intercostal (finger meat). The rib cap, separated by an internal fat seam, cooks slightly faster than the eye. The MEATER probe should enter from the side and travel to the centre of the eye muscle, avoiding the internal fat seam and any bone.
 
 
+## Styckesprofil
+
+Entrecôte skärs från *longissimus dorsi*-muskeln i ribprimalen (revben 6–12), en muskel som utför minimalt arbete och därför utvecklar exceptionellt intramuskulärt fett (marmorering) i hela fibern. Marmoreringen är entrecôtens definierande drag — fettfickorna likvideras under värme och bastar muskelfibrerna inifrån, håller snittet saftigt vid ett bredare temperaturspann och bidrar med smak som magra snitt inte kan ge. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 3–5 °C.
+
 ## Research files by cooking method
 
 - [Air Fryer](./ribeye_steak-air_fryer.md)

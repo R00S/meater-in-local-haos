@@ -15,6 +15,10 @@ Air-frying potatoes produces results close to oven roasting but in roughly half 
 
 At 200 °C in an air fryer: potato cubes (2–3 cm) are done in 20–25 minutes with one toss halfway through. Target internal: 95–100 °C. The air-fryer method is less effective than oven roasting for very large Sunday-roast-style chunks (whole-surface crisping is harder in a loaded basket) but excels for individual portions.
 
+## Styckesprofil
+
+Airfryer-tillagning av potatis ger resultat nära ugnsstekning men på ungefär halva tiden och med mindre fett, eftersom den höghastighets-heta luftcirkulationen ger knaprig yta snabbt. Skär i klyftor, olja, krydda. 20–25 minuter vid 200 °C. Klar när gyllenknaprig.
+
 ## Source recipes
 
 ### 1. Madhur Jaffrey — Air-Fried Aloo Masala (Indian tradition)

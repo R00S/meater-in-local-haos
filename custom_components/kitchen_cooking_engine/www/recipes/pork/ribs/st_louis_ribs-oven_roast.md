@@ -21,6 +21,12 @@ Oven roasting is the most accessible method for St. Louis-style ribs, producing 
 
 The MEATER probe must be inserted lengthwise along the widest bone in the centre of the rack, with the tip in the thickest continuous lean intercostal section, 1–2 cm clear of the bone surface. Run parallel to the bone. Insert before the foil is sealed for low-and-slow; can be inserted just before the baste-and-finish phase for high-heat methods.
 
+## Styckesprofil
+
+Ugnsrostning är den mest tillgängliga metoden för St. Louis-style ribs och ger resultat jämförbara med BBQ-grill eller smoker med standardutrustning. St. Louis ribs är tjocka, fettskiktade spareribs (snitt från revben 3–12 med bröstben och broskbitar borttagna) som kräver lång, långsam tillagning.
+
+Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertillagning: försumbar. Sond längs benets riktning in till köttmassan. Metod: folinrad vid 150 °C i 3–4 timmar, sedan öppnad och glaserad vid 220 °C.
+
 ## Source recipes
 
 ### 1. Judy and Bill Leung, Kaitlin and Sarah Leung — Char Siu-Style Oven Baked Ribs (Cantonese-American tradition, Culinary Group A)

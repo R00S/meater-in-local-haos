@@ -52,6 +52,12 @@ juices. A mozzarella-mustard herb crust, applied before the oven phase, is a dis
 German preparation that acts as an insulating layer and baste, partially compensating for
 the low fat content.
 
+## Styckesprofil
+
+Bison-ugnssteknitt tas från samma primärsnitt som nötköttsgrytor — vanligast skuldrepartiet (chuck/bog), övre innanlåret (topside), nedre innanlåret (silverside) eller ryggen (loin). Som bisonsteak är bison-ugnsstekar avsevärt magrare än ekvivalenta nötköttsnitt: marmoreringen är sparsam och det yttre fettlagret tunt.
+
+Denna magerhet kräver låg ugnstemperatur (max 135 °C) med fuktbevaring. Omvänd searing — långsam lågtemperaturugn sedan snabb avslutande searing — är standardmetoden. Innertemperatur: **54–60 °C (130–140 °F)** för medium-rare till medium. Eftertillagning: 4–6 °C. Sond horisontellt in i den tjockaste köttdelen, borta från ben.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Bisonbraten (German tradition, high-heat oven)

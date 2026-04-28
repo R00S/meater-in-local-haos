@@ -13,6 +13,10 @@ cut_type: Steaks
 
 Air-frying a T-bone steak is practical for steaks up to 3 cm thick and 700 g — the bone makes the T-bone bulkier than simple steak cuts, so it must fit in the air fryer basket. Air fryers circulate extremely hot air at 200–220 °C and produce a crisped surface resembling oven-roasted rather than pan-seared beef, without the mess of oil splatter. The two-muscle T-bone geometry (striploin + fillet) requires monitoring the striploin temperature — the MEATER probe goes in the striploin side, away from the bone. The result is less dramatic in crust quality than a cast-iron sear, but significantly more convenient for weeknight cooking. Carryover from the air fryer basket is 3–5 °C.
 
+## Styckesprofil
+
+Airfryer-tillagning av T-bone är praktisk för biffar upp till 3 cm tjocka och 700 g — benet gör T-bonen mer skrymmande än enkla biffskivor, så den måste få plats i korgen. Airfryern cirkulerar extremt het luft vid 200–220 °C och ger en knaprig yta som liknar ugnsrostning snarare än pannstekt. Utmaningen med T-bonens tvåmuskelgeometri kvarstår: filéns tunnare del kokas snabbare. Innertemperatur: 54–57 °C (mäts i striploin-delen). Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air Fryer T-Bone Steak (American tradition)

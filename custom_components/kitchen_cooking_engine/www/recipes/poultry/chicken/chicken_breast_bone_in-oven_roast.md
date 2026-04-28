@@ -15,6 +15,12 @@ cut_type: Breast
 
 Oven roasting bone-in, skin-on chicken breast uses dry convective heat to cook the breast from the outside in while the skin crisps and bastes the meat. Unlike braising or poaching, oven roasting develops a flavoured, browned crust on the skin through Maillard reaction and fat rendering while the interior rises to the pull temperature of 74 °C / 165 °F — the USDA minimum and culinary standard for safe, juicy breast meat. The bone slows heat penetration relative to boneless breast, requiring an additional 10–15 minutes of cook time; this also means the skin has more time to colour and crisp before the interior overheats. Oven temperatures for bone-in breast typically range from 190–220 °C / 375–425 °F, with cook times of 30–45 minutes depending on size. The MEATER probe must be inserted from the thick end of the breast, horizontal to the bone and at least 1 cm away from it, to the geometric centre of the pectoralis major.
 
+## Styckesprofil
+
+Ugnsrostning av benbibehållet, skinnklätt kycklingbröst (*split breast*) använder torr konvektiv värme för att tillaga brösten utifrån medan skinnet krispar och bastar köttet. Den benbibehållna varianten ger mer smakfull, saftigare bröst än benfri version — benet isolerar och saktar temperaturstegringen, vilket minskar risken för överkokning.
+
+Ugn 200–220 °C, 35–45 minuter. Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond längsmed bröstets tjockaste del, borta från benet. Vila 5–10 minuter täckt.
+
 ## Source recipes
 
 ### 1. Suzy Karadsheh — Baked Chicken Thighs / Bone-in Breast adaptation (Mediterranean tradition, Culinary Group B)

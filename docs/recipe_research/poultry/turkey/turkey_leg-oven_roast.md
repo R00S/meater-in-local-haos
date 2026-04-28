@@ -29,6 +29,10 @@ quality downside to targeting 79–82 °C for turkey dark meat specifically.
 Filipino, Thai, and Indonesian turkey recipes, none were found on confirmed-reachable Group A
 sources. This gap is legitimate.
 
+## Styckesprofil
+
+Kalkonstjälken inkluderar trumpinnen (undre benet, nedanför knäleden) och ibland låret (fäst ovanför knäleden). Ugnsstekning: höga ugnstemperaturer (180–200 °C) i 1,5–2 timmar. Innertemperatur: 80 °C. Eftertillagning: 4–5 °C. Basteras regelbundet för saftig konsistens.
+
 ## Source recipes
 
 ### 1. Good Food (provided by Apetit Online) — Roast Turkey Leg with Garlic & Rosemary (Czech tradition)

@@ -13,6 +13,12 @@ cut_type: Steaks
 
 The New York strip over live hardwood charcoal benefits from the distinctive smoke compounds — guaiacol, syringol, and related phenolics — that gas grilling cannot replicate. The intense radiant heat from a well-managed charcoal fire sears the strip's firm muscle rapidly, rendering the fat cap and producing a deeply flavoured crust. The charcoal method also permits the cook to modulate the fire by adjusting air vents and coal arrangement; a two-zone fire (direct coals on one side, indirect on the other) allows initial searing then gentle finishing by indirect heat for thick-cut strips. Carryover from a very hot charcoal fire is 5–6 °C for a thick steak; this must be factored into the pull temperature.
 
+## Styckesprofil
+
+New York strip över levande hardwood-träkol drar nytta av de karakteristiska rökföreningarna — guajakol, syringol och besläktade fenoler — som gasgrillning inte kan replikera. Den intensiva strålningsvärmen från en välskött träkolseld searar stripens fasta muskel snabbt och ger fettlisten en djupt smakrik skorpa. Träkolsmetoden tillåter också kocken att modulera elden genom att justera luftventiler och kolarrangemang.
+
+En tvåzons eld (direkta kolar på ena sidan, indirekt på den andra) möjliggör initial searing och sedan varsam avslutning med indirekt värme för tjockt skivade strips. Eftertillagning från en mycket het träkolseld är 5–6 °C för en tjock biff; detta måste beaktas i dragtemperaturen. Skär alltid tvärs mot fibern vid servering. Innertemperatur: 54–57 °C medium-rare. Dra vid 50–52 °C.
+
 ## Source recipes
 
 ### 1. Francis Mallmann — Charcoal-Grilled Strip Steak (Argentine asado tradition)

@@ -21,6 +21,12 @@ Lamb rump (also called lamb rump steak or rump roast) is the rear-end, triangula
 
 **Probe placement**: insert from the tapered end of the rump portion, pushing the tip to the geometric centre of the thickest part. The probe should run parallel to the length of the muscle grain, not into the fat cap. If multiple rumps are in the pan, probe the thickest piece.
 
+## Styckesprofil
+
+Lamprumpa (även kallad lamprumpstek) är den bakre, triangulära muskelmassan — *biceps femoris* och tillhörande glutealsmuskler — sittande precis ovanför bakbenet. Varje portion väger 150–280 g och har ett generöst fettlock längs en sida som självbastar köttet under rostning.
+
+Sear fettlocket nedåt i het torr panna tills rendat och gyllene, sedan sear alla sidor. Avsluta i 190–200 °C ugn. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Eftertillagning: 3–4 °C. Dra vid 53–58 °C. Sond insatt horisontellt in till mitten. Vila 5–8 minuter.
+
 ## Source recipes
 
 ### 1. Richard Corrigan — Lamb Rump with Salsify and Wild Mushrooms (British/Irish tradition, Culinary Group B)

@@ -26,6 +26,12 @@ Grilling reindeer steak — in the Sámi and Nordic tradition, over birch wood o
 
 Oil the grill grate and brush the steak surface with oil or butter to prevent sticking. Because the meat is lean, resting on a warm plate is important to allow juices to redistribute before carving. Pull at 52 °C; carryover from a hot grill is 4–5 °C to reach the target 55–57 °C. Do not leave on the grill unattended — this meat has a very narrow window.
 
+## Styckesprofil
+
+Grillning av rensteak — i den samiska och nordiska traditionen, över björkved eller lövträ-kol — är en metod som kräver samma omsorg som grillning av struts eller magert viltkött: den totala avsaknaden av isolerande intramuskulärt fett innebär att värmen penetrerar muskeln mycket snabbt.
+
+Vid 2–3 cm tjocklek ger 2–3 minuter per sida vid hög direkt värme (230–250 °C) medium-rare. Dra vid 52 °C — eftertillagning av 3–4 °C tillkommer. Innertemperatur: **54–57 °C (130–135 °F)** för medium-rare. Välgenomstekt avråds starkt. Pensla köttet med smör under grillning.
+
 ## Source recipes
 
 ### 1. Köket.se temperature guide — Grillad renfilé (Swedish grilling tradition)

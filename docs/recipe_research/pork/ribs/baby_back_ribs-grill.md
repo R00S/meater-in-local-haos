@@ -17,6 +17,12 @@ Target internal temperatures (grill):
 - Tender/fall-off-bone: **85–95 °C (185–203 °F)**
 - ⚠️ Below 80 °C ribs are technically safe but not yet tender
 
+## Styckesprofil
+
+Baby back ribs på grillen: den populäraste metoden är indirekt värme vid ca 150 °C i 1 timme inlindat i folie (utan förkokning), sedan ta bort foliet och avsluta 5–7 min per sida med BBQ-sås.
+
+Alternativt: förkoka 40–50 min sedan 20–25 min vid 220 °C indirekt. Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertillagning: försumbar. Sond längs benets riktning in till köttmassan. Vila 5 minuter täckt. BBQ-sås appliceras de sista 5 minuterna för att karamelisera.
+
 ## Source recipes
 
 ### 1. Madens Verden — Verdens bedste spareribs (Danish tradition)

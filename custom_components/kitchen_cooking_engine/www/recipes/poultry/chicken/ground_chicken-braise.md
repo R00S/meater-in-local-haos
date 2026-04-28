@@ -26,6 +26,12 @@ Ground chicken braised in liquid is a moist-heat method that keeps the lean meat
 
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry; visual: no pink inside
 
+## Styckesprofil
+
+Malet kyckling bräserat i vätska är en fuktig-värme-metod som håller det magra köttet från att torka ut och utvecklar en smakfull sås samtidigt. Eftersom malt fjäderfä är blandat genomgående med bakterier kräver det fullständig genomkokning.
+
+Tillaga till 74 °C (165 °F) internt, rör om regelbundet för att säkerställa jämn tillagning. Innertemperatur: **74 °C (165 °F)** USDA. Eftertillagning: 2–3 °C. Sond in i tjockaste delen av köttfärsblandningen. Används i asiatiska mapo-stilrätter, indisk keema matar och mexicansk picadillo.
+
 ## Source recipes
 
 ### 1. Natasha's Kitchen — Chicken Meatballs in Cream Sauce (Tefteli)

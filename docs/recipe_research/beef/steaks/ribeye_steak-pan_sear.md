@@ -17,6 +17,10 @@ Carryover in a pan-seared ribeye is moderate, typically 3–5 °C for a standard
 
 Probe placement requires care because of the ribeye's internal fat structure. For a boneless cut the probe should enter from the side of the steak, aimed at the geometric centre of the eye muscle — the densest lean section. It must avoid the internal fat seam that often runs between the eye and the spinalis (cap muscle): inserting into fat gives a false-low reading. On bone-in versions (côte de bœuf, cowboy ribeye), the probe must enter from the meaty side and travel to the centre of the eye, never near the bone — bone conducts heat differently from muscle and will produce a misleading reading in either direction depending on pan orientation.
 
+## Styckesprofil
+
+Pannsearing och entrecôte är ett exceptionellt bra par just på grund av snittets definierande egenskap: dess kraftiga intramuskulära fett. När en entrecôtes yta kommer i kontakt med en rykande het gjutjärns- eller kolstålpanna, driver två simultana reaktioner resultatet — de magra muskelproteinerna i ytterytan genomgår Maillard-reaktion och bildar komplexa, nötiga aromer, medan fettfickorna likvideras och sipprar ut i pannan och hämmar bränning och bidrar till den karakteristiska entrecôte-foundsmaken. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 3–4 °C.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Butter-Basted Pan-Seared Thick-Cut Ribeye (American tradition)

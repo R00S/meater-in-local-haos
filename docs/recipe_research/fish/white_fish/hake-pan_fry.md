@@ -13,6 +13,12 @@ cut_type: White Fish
 
 Pan frying hake is the dominant cooking method in Iberian, North African, and British traditions. The fillet is typically dusted in seasoned flour (*merluza a la plancha*) or dipped in a light batter (*pescada frita*, fish and chips) before being fried in olive oil or neutral fat. Hake flesh is slightly softer than cod when raw — it does not withstand aggressive handling, so a gentle placement in hot fat and minimal flipping (one flip only) is standard. The flour or batter coating creates the structural protection the delicate flesh needs. Pull at 60–63 °C; the flesh should be opaque throughout with large moist flakes separating cleanly. Carryover is minimal (2–3 °C) given the lean, thin geometry.
 
+## Styckesprofil
+
+Pannstekning av hake är den dominerande tillagningsmetoden i iberiska, nordafrikanska och brittiska traditioner. Filén beläggs typiskt med kryddad mjöl (*merluza a la plancha*) eller doppas i lätt smet (*pescada frita*, fish and chips) innan den steks i olivolja eller neutralt fett.
+
+Hakeköttet är något mjukare än torsk rått — det tål inte aggressiv hantering, varför en varsam placering i het fett och minimal vändning (bara en vändning) är standard. Mjölet eller smeten skapar det strukturella skydd som det känsliga köttet behöver. Dra vid 60–63 °C; köttet ska vara ogenomskinligt genomgående med stora fuktiga fjäll som separerar rent. Eftertillagning är minimal (2–3 °C) given den magra, tunna geometrin. Innertemperatur: 60–63 °C.
+
 ## Source recipes
 
 ### 1. José Andrés — Merluza a la Plancha (Spanish / Basque tradition)

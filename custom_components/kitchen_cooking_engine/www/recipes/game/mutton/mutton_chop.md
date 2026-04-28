@@ -68,6 +68,12 @@ Mutton refers to the meat of a sheep older than one year (typically 2–4 years)
 Target internal temperature: **70–74 °C (158–165 °F)**.
 
 
+## Styckesprofil
+
+Fårkött avser köttet från ett får äldre än ett år (typiskt 2–4 år), med starkare, mer uttalad smak än lamm. Fårköttkotletter är populära i tyska, brittiska, mellanösternska och sydasiatiska traditioner. Den starkare smaken gynnas av aromatisk kryddning (vitlök, lök, timjan, spiskummin) och köttet tillagas typiskt genomstekt.
+
+Fårköttets röda fiber och täta muskelstruktur tål höga temperaturer utan att bli torrt i samma utsträckning som lamm. Pannsteka i smör med rosmarin och vitlök tills genomstekt — 4–5 minuter per sida. Innertemperatur: **70–74 °C (158–165 °F)**. Eftertillagning: 3–4 °C.
+
 ## Research files by cooking method
 
 - [Grill](./mutton_chop-grill.md)

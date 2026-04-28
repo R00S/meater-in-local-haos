@@ -16,6 +16,10 @@ The tri-tip on the grill benefits from a two-zone setup (direct for crust, indir
 Target internal temperatures (grill):
 - Medium-rare: **pull at 54–57 °C (129–135 °F)**, rest 10–15 min to **57–60 °C (135–140 °F)**
 
+## Styckesprofil
+
+Tri-tip på grillen drar nytta av tvåzonsuppställning (direkt för krusta, indirekt för insida). Eftersom det är ett oregelbundet triangelformat snitt (tjockare i mitten, avsmalnande i ändarna) kokar den tunna änden fortare. Hantera formen genom att lägga den tunna spetsen mot den svalare kanten av indirekt zon. Innertemperatur: 54–60 °C. Eftertillagning: 3–5 °C. Skär alltid tvärs mot fibern för möra skivor.
+
 ## Source recipes
 
 ### 1. Madens Verden — Ball tip i grill (Danish tradition)

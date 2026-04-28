@@ -13,6 +13,12 @@ cut_type: Steaks
 
 The flat iron steak, cut from the infraspinatus of the shoulder blade, is one of the most marbled non-loin cuts on the carcass, making it exceptionally well-suited to the aggressive dry heat of charcoal. Charcoal produces radiant heat in the 230–300 °C range alongside aromatic smoke from combusting wood volatiles and rendered fat dripping onto the embers, layering a mineral, smoky character onto the cut's natural beefiness. Individual flat iron steaks at 2–3 cm thickness are ideal for direct charcoal: thick enough to develop a deeply charred exterior while the centre remains rosy, yet thin enough to cook through in 8–12 minutes without a two-zone setup. Carryover over live coals is more pronounced than in an oven — expect a 3–5 °C rise — because dense radiant heat continues driving surface energy inward during the first minute of rest; pulling 4–5 °C below target is advisable.
 
+## Styckesprofil
+
+Flat iron-biffen, skärd från *infraspinatus* i skulderbladspartiet, är ett av de mest välmarmorerade icke-ryggbiffsskivorna på slaktkroppen, vilket gör den utomordentligt väl lämpad för den aggressiva torra värmen från träkol. Träkol producerar strålningsvärme i 230–300 °C-intervallet vid sidan av aromatisk rök från förbränning av trädflytande ämnen och smälande fett som droppar på glöden, vilket skapar ett mineraliskt, rökigt karaktärsdrag till snittets naturliga nötssmak.
+
+Individuella flat iron-biffar med 2–3 cm tjocklek är idealiska för direkt träkol: tillräckligt tjocka för att utveckla en djupt förkolnad yta medan mitten förblir rosenröd, men tillräckligt tunna för att tillagas på 8–12 minuter utan en tvåzonsinställning. Eftertillagning över levande kolar är mer uttalad än i ugn — förvänta 3–5 °C stigning — eftersom tät strålningsvärme fortsätter driva ytenergini mot centrum under den första vilominuten; att dra 4–5 °C under målet rekommenderas. Innertemperatur: 54–57 °C medium-rare.
+
 ## Source recipes
 
 ### 1. Francis Mallmann — Asado de Campo Flat Iron (Argentine tradition)

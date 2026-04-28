@@ -48,6 +48,10 @@ A whole turkey presents the same fundamental challenge as a whole chicken but at
 Typical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) unstuffed. A 4.5 kg (10 lb) bird takes approximately 2.5–3 hours; a 7 kg (15 lb) bird takes approximately 3.5–4 hours.
 
 
+## Styckesprofil
+
+En hel kalkon presenterar samma utmaning som hel kyckling men i stor skala. Innertemperatur: 74 °C (bröst), 80 °C (lår). Eftertillagning: 6–10 °C. Tillaga alltid med bröstsidan ned de första 2 timmarna för saftigare bröst; vänd sedan.
+
 ## Research files by cooking method
 
 - [Oven Roast](./whole_turkey-oven_roast.md)

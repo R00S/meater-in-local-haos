@@ -26,6 +26,12 @@ Rabbit (*Oryctolagus cuniculus*) legs (front and hind) are the most commonly bra
 
 Target internal temperature: **74–77 °C (165–175 °F)** — cooked through, juicy, not dry.
 
+## Styckesprofil
+
+Kanin (*Oryctolagus cuniculus*) lår (fram och bak) är det vanligaste bräserade snittet. Bakbenen bär mer kött och är det primära braiseringsnittet. Kanin är mager, fettfattig och benägen att torka ut om överkokad — bräsering i vin, fond eller grädde håller köttet fuktigt under lång tillagning.
+
+Bräsera på spis eller i ugn vid 160–170 °C i 1–2 timmar. Traditionella beredningar: fransk *lapin à la moutarde* (senap, crème fraîche), italiensk *coniglio alla cacciatora* (tomater, oliver, vitlök). Innertemperatur: **75–80 °C (167–176 °F)**. Sond i den tjockaste köttmassan i bakbenet.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Roast Rabbit with Thyme (British tradition)

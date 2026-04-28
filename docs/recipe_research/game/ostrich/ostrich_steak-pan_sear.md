@@ -26,6 +26,12 @@ Pan searing is the most controlled method for ostrich steak because the conducti
 
 At 2.5–3 cm thickness: 2–3 minutes per side in a smoking-hot pan achieves medium-rare (54–57 °C). Insert the MEATER probe lengthwise through the side of the steak into the geometric centre. Pull at 52 °C to rest to target 54–57 °C. Carryover from pan searing is 3–5 °C. Serve immediately — the zero-fat meat loses heat faster than beef.
 
+## Styckesprofil
+
+Pannstekning är den mest kontrollerade metoden för strutsfilé eftersom den konduktiva värmen från en het gjutjärns- eller kolfpanna kan justeras genom att lyfta pannan från brännaren — något som inte kan göras på en grill. Den totala avsaknaden av fett i strutsfilé innebär att pannan måste tillhandahålla tillagningsfettet — använd tillräckligt med smör eller rapsolja.
+
+Tillagningstid: 2–3 minuter per sida. Sond insatt parallellt med stekens yta in till mitten. Innertemperatur: **60–63 °C (140–145 °F)** för medium. Välgenomstekt avråds starkt. Eftertillagning: 2–3 °C. Vila täckt 5 minuter.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Straußensteaks aus dem Ofen (German tradition)

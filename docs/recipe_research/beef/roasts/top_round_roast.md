@@ -66,6 +66,12 @@ internal.
 **Slicing**: Always slice against the grain — the tight, flat grain of top round makes
 slicing direction the primary determinant of tenderness in the finished roast.
 
+## Styckesprofil
+
+Övre innanlårsstek är den enda stora inre lårmuskeln i rundbottenprimalen — höftpartiet i bakkvarteret. I brittisk styckningsnomenklatur är den anatomiska motsvarigheten **topside**. Det är det magraste av rundbottendelprimalerna (övre innanlår, nedre innanlår, runda innanlår), med en plan, enhetlig fiber och minimalt intramuskulärt fett. Denna magra profil innebär att det inte tolererar höga temperaturer väl: ovanför ~68 °C drar muskelfibrerna ihop sig och steket blir torrt. Snittet gynnas av ugnsstekning vid måttliga temperaturer (120–190 °C) till 54–65 °C inre temperatur.
+
+**Skärning**: Skär alltid tvärs mot fibern — det platta, täta fibrermönstret i övre innanlår gör skärriktningen till den primära avgöraren för mörhet i det färdiga steket. Innertemperatur: 54–60 °C. Eftertillagning: 3–5 °C.
+
 ## Research files by cooking method
 
 | Method | Leaf file | Status |

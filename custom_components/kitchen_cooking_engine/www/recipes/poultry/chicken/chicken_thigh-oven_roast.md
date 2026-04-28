@@ -28,6 +28,12 @@ Oven-roasted chicken thighs are a centrepiece dish across global cuisines. In Eg
 
 Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)** preferred for dark meat
 
+## Styckesprofil
+
+Kycklinglår (*biceps femoris* och liknande muskler i övre benet) är ett mörkt köttsnitt med avsevärt högre fett och bindväv än bröst. Högre fett (6–10% vs 1–2% för bröst) innebär att lår är mer förlåtande och förblir fuktiga vid tillagning till 74 °C.
+
+Alla metoder (grill, ugn, panna, air fryer) ger utmärkta resultat. Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond längsmed lårets tjockaste del, borta från femurbenet. Vila 5 minuter täckt.
+
 ## Source recipes
 
 ### 1. Natasha's Kitchen — BBQ Oven-Baked Chicken Thighs

@@ -12,6 +12,10 @@ cut_type: Alliums
 ## Cut profile
 Leeks (*Allium ampeloprasum* var. *porrum*) sautéed in a pan deliver the most versatile everyday leek preparation: sliced into rounds or batons, they are cooked in butter or oil over medium heat until their harsh rawness transforms into a sweet, mildly pungent softness. Unlike the long braise, the sauté takes 8–15 minutes and aims for a tender-but-intact result with some residual structure. Internal temperature at the ideal sauté doneness — tender, translucent, slightly caramelised at the edges — is 80–86 °C (176–187 °F). A MEATER probe is inserted horizontally into the thickest round or baton near the centre of the pan.
 
+## Styckesprofil
+
+Purjolök (*Allium ampeloprasum* var. *porrum*) sauterad i panna ger den mest mångsidiga vardagsberedningen av purjolök: skivad i rundlar eller stavar, tillagas i smör eller olja vid medelvärme tills mjuk och lätt gyllenbrun. Innertemperatur: inte relevant — serveras när mjuk och genomkokt.
+
 ## Source recipes
 
 ### 1. Harumi Kurihara — Negi no Itame (Japanese leek sauté)

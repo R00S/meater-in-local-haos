@@ -15,6 +15,10 @@ Pan searing mahi-mahi produces a beautifully golden, Maillard-browned crust on t
 
 MEATER probe inserted from the thin end of the fillet, parallel to the flesh, into the thickest point. Pull at 58–60 °C; carryover 3–4 °C brings it to 61–63 °C. Flesh transitions from moist-and-flaky to dry and stringy above 65 °C — pull early.
 
+## Styckesprofil
+
+Pannsearing av mahi-mahi ger en vackert guldbryn, Maillard-brynnad krusta på det fasta köttet. En het gjutjärns- eller rostfrihetspanna med en liten mängd olja (200–210 °C yttemperatur) sears den plana sidan av en 2–3 cm filé på 3–4 minuter; vänd för 2–3 minuter. Innertemperatur: 60–63 °C. Mahi-mahi är känslig för överkokad — det torra vita köttet torkar snabbt över 65 °C.
+
 ## Source recipes
 
 ### 1. Emeril Lagasse — Blackened Mahi-Mahi (American / Louisiana Creole tradition)

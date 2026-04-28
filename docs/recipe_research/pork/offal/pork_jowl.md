@@ -40,6 +40,12 @@ Pork jowl is the cheek and jaw area of the pig, encompassing both the buccinator
 
 **Probe placement (braise)**: insert from one end of the jowl, tip at the geometric centre of the thickest meat (not into a fat pocket). In a braise vessel with multiple pieces, insert into the largest. For flat BBQ-style slabs, insert horizontally from the side.
 
+## Styckesprofil
+
+Fläskkäk / fläskkind är kind- och käkpartiet av grisen, som inkluderar både *buccinator* (samma muskel som `cheek`/`pork_cheek`) och det omgivande subcutana fettet och skinnet. Det tillagas vanligast på ett av två sätt: (1) **härdad som guanciale** — saltad och torkad in 3–4 veckor; (2) **tillagad färsk** — bräserad, pannstekt eller ugnsrostad.
+
+Färsk fläskkäk bräseras som fläskkind, till **85–90 °C (185–194 °F)** för spoon-tender. Eftertillagning: försumbar. Sond in i tjockaste köttmassan. Bryn i panna innan bräsering för optimal smakutveckling.
+
 ## Research files by cooking method
 
 - [Braise](pork_jowl-braise.md) — 3 sources (all Culinary Group B; Groups A, C, D needed)

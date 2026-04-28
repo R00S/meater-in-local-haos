@@ -15,6 +15,12 @@ Pan searing is the traditional preparation for secreto: a dry, very hot iron gri
 
 Because the cut is thin (1–2 cm), internal temperature rises fast: 2–3 minutes per side achieves 63–65 °C (pink). Carryover: 2–3 °C. MEATER probe at the thickest end, inserted along the length of the cut parallel to the surface. Target: 63–65 °C for pink interior, 68–72 °C for fully cooked.
 
+## Styckesprofil
+
+Pannstekning är den traditionella beredningen för secreto: en torr, mycket het järngriddle (*plancha*) eller gjutjärnspanna, ingen olja, inget salt före tillagning. Det rikliga intramuskulära fettet smälter ned omedelbart vid kontakt med den heta ytan och skapar sin eget tillagningsfett.
+
+Tillagningstid: 3–4 minuter per sida vid hög värme; vila 5 minuter täckt. Innertemperatur: **60–65 °C (140–149 °F)** för medium (spansk preferens). Eftertillagning: 2–3 °C. Sond insatt längsvis parallellt med den tunna filén in till mitten.
+
 ## Source recipes
 
 ### 1. Directo al Paladar — Secreto de cerdo a la plancha (Spanish tradition)

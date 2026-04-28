@@ -26,6 +26,10 @@ Goose legs are large, collagen-rich cuts that benefit from moderate-to-low oven 
 
 Target internal temperature: **175–185 °F (79–85 °C)** — best texture; USDA minimum is 165 °F (74 °C).
 
+## Styckesprofil
+
+Gåsben är stora, kollagenrika snitt som gynnas av måttliga till låga ugnstemperaturer och förlängda stekningstider. Till skillnad från bröstet torkar gåsben inte ut av värme — de behöver ihållande värme för att bryta ner bindväven. Innertemperatur: 80–85 °C. Tillagnings tid: 2–3 timmar vid 160–170 °C.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Slow-Roast Duck (low-and-slow fat rendering adapted for goose leg roast)

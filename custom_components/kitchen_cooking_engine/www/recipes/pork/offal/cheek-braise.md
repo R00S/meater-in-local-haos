@@ -15,6 +15,12 @@ cut_type: Other / Offal
 
 Pork cheek braised in a covered vessel with liquid (wine, stock, aromatics) is one of the most rewarding preparations in modern restaurant cooking. The dense, collagen-rich jaw muscle, roughly 80–120 g, benefits from long gentle oven- or stove-braising at 150–170 °C / 300–340 °F oven or gentle stovetop simmer for 1–2.5 hours. During this time collagen hydrolyses to gelatin, the cheeks absorb the braising liquid's aromatics, and the intramuscular fat renders fully, leaving an exceptionally silky texture that no lean cut can replicate. The culinary target pull temperature is 88–96 °C / 190–205 °F — confirming that collagen has fully converted. The MEATER probe is inserted from the thickest end of the largest cheek, to the geometric centre, parallel to the length of the muscle, clear of the braising liquid surface.
 
+## Styckesprofil
+
+Fläskkind bräserat i ett täckt kärl med vätska (vin, fond, aromater) är en av de mest givande beredningarna i modern restaurang- och hemmatlagning. Den täta, kollagenrika käkmuskeln — ungefär 80–120 g — gynnas av lång, skonsam ugns- eller spisbräsering.
+
+Bräsera: het panna för att brynna, sedan 160–170 °C ugn 2–3 timmar i täckt form med fond, vin, mirepoix, timjan och lagerblad. Innertemperatur: **85–90 °C (185–194 °F)** för spoon-tender, gelatinös konsistens. Eftertillagning: försumbar (braiseringsvätska). Sond in i tjockaste köttmassan.
+
 ## Source recipes
 
 ### 1. Geoffrey Smeddle — Pork Cheek with Crispy Ham Hock Bon Bon (Scottish fine dining tradition, Culinary Group B)

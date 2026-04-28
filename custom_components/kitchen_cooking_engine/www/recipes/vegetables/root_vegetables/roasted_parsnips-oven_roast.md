@@ -12,6 +12,10 @@ cut_type: Root Vegetables
 ## Cut profile
 Parsnips (*Pastinaca sativa*) oven-roasted at 190–210 °C become deeply caramelised, golden at the tips and fluffy inside in 25–35 minutes. High-starch, high-sugar content (12 g/100 g natural sugars) makes parsnips excellent roasters — their surface browns readily and their interior fluffs. Parsnips are classically roasted alongside a joint in the UK, but also served solo with honey, miso, or spiced glazes in the contemporary global kitchen. Pull temperature: 88–92 °C (190–198 °F). MEATER probe along the long axis of the thickest piece.
 
+## Styckesprofil
+
+Palsternacka (*Pastinaca sativa*) ugnsrostad vid 190–210 °C blir djupt karameliserad, gyllenbrun vid topparna och fluffig inuti på 25–35 minuter. Högt stärkelse- och sockerinnehåll gör dem naturligt söta och benägna till karamelisering. Klar när gyllenbrun och genomstekt.
+
 ## Source recipes
 
 ### 1. Nigel Slater — Honey-Roasted Parsnips with Mustard (British tradition)

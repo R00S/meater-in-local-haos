@@ -19,6 +19,12 @@ Target internal temperatures (slow cook method):
 - **Pull-tender**: **85–90 °C (185–194 °F)** — for shredding/pulled styles
 - Most recipes target 75–80 °C when slicing; crockpot recipes rarely probe but 4 h HIGH or 6–8 h LOW reliably reaches 80+ °C
 
+## Styckesprofil
+
+Fläskbuk (*svinekam* / *Schweinebauch* / *pancetta fresca*) är ett av de rikaste snitten för låg-och-långsam tillagning. Det tjocka fettlocket smälter ned under långa tillagningstider och gör köttet exceptionellt fuktigt.
+
+Slow cooker-metod: LÅG i 7–8 timmar med fond och aromater. Ugnsrostnig lågt: 140–150 °C i 3–4 timmar. Innertemperatur: **80–88 °C (176–190 °F)** för genomstekt, saftig. Eftertillagning: försumbar (fuktig metod). Sond in i tjockaste köttmassan, borta från revbensben.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Slow Cooker Pork Belly (UK, crockpot method)

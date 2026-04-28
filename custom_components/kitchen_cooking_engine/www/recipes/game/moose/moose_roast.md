@@ -52,6 +52,12 @@ Moose (*Alces alces*) — called älg in Swedish, elg in Norwegian, and Elch in 
 Target internal temperature: **60–65 °C (140–149 °F)** for medium (pink centre); **70 °C (158 °F)** for fully cooked. The Swedish national tradition prefers 60–65 °C.
 
 
+## Styckesprofil
+
+Ugnsrostad älgstek kräver omsorg på grund av magreten och viltsmakens känslighet för överkokning. Hög inledande värme för skorpa, sedan låg ugn (125–160 °C) med regelbunden pensling. Den svenska traditionen rostar älg till 60–65 °C inre temperatur — rosa, saftig och med mild viltsmak.
+
+Klassiska tillbehör: gräddsås, lingon, rödbetor, kokt potatis. Sondplacering: stick in i den tjockaste köttmassan, borta från ben. Innertemperatur: **60–65 °C (140–149 °F)** för medium (rosa mitt); **70 °C** för genomstekt. Eftertillagning: 4–6 °C. Dra stek 5–6 °C under måltemperatur och vila täckt i 15–20 minuter.
+
 ## Research files by cooking method
 
 - [Oven Roast](./moose_roast-oven_roast.md)

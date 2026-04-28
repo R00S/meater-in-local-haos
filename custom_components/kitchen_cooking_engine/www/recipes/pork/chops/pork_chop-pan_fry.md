@@ -19,6 +19,12 @@ Target internal temperatures (pan fry):
 - Juicy/slightly pink: **63–65 °C (145–149 °F)** (safe and recommended)
 - Well done: **70–72 °C (158–162 °F)**
 
+## Styckesprofil
+
+En fläskkotlett är ett tvärsnitt av fläskloinen — rygg-kotlett (ett ben), lumbar-kotlett (T-ben), eller benfritt loin-öga. Air-fryer-metod: 180–200 °C, 12–16 minuter med vändning halvvägs, ger en lätt krispig yta med saftig insida.
+
+Innertemperatur: **63–65 °C (145–149 °F)** USDA-rekommendation (med 3 minuters vila); **70 °C** för genomstekt. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till mitten av kotletten, borta från eventuellt ben. Vila täckt 5 minuter.
+
 ## Source recipes
 
 ### 1. Madens Verden — Pandestegning af koteletter (Danish tradition)

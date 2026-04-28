@@ -49,6 +49,12 @@ quality_assessed: 2026-04-27
 
 Ostrich (*Struthio camelus*) fillet is the loin or fan fillet — the most tender cut from the ostrich, running along the spine of this large, flightless bird. Despite being avian, ostrich fillet is a deep red, iron-rich meat treated by virtually all culinary traditions as a red meat equivalent to beef tenderloin. South Africa and Namibia produce over 95% of the world's commercial ostrich meat; European farms (France, Belgium, Germany) account for most of the remainder. The fillet has virtually no fat (typically 1–2% intramuscular fat), no connective tissue, and no bones — a very clean cut. This extreme leanness means the same rule applies as to kangaroo fillet: cook hot and fast (pan sear or grill, 2–3 minutes per side) to medium-rare maximum, or braise in moist heat when cutting into smaller pieces. Cooking past 65–70°C causes irreversible toughening and liver-textured results. The USDA classifies ostrich as poultry (safe temp 74°C / 165°F), but culinarily both South African and European standards treat it like red game meat and consider medium-rare (54–57°C / 130–135°F) both safe (as a farmed product under modern processing) and optimal. Carryover is very low (2–4°C / 4–7°F) due to the lean, thin profile.
 
+## Styckesprofil
+
+Struts (*Struthio camelus*) filé är loin- eller fan-filén — det möraste snittet från strutsen, längs ryggraden. Trots att det är fjäderfä behandlas strutsfilé av i princip alla kulinariska traditioner som ett rödköttekvivalent till nötbiff. Sydafrika och Namibia producerar över 90 % av världens strutsköttproduktion.
+
+Köttet är djupt rött med litet fettinnehåll (under 2 %), högt järninnehåll och en mild, karakteristisk smak — varken starkt viltartad som hjort eller distinkt fågel-liknande. Det tillagas exakt som magert nötkött: högt och snabbt, dras vid medium-rare. Innertemperatur: **57–63 °C (135–145 °F)**. Välgenomstekt avråds starkt.
+
 ## Research files by cooking method
 
 - [Braise](./ostrich_fillet-braise.md) — 1 source collected (Group D; Groups A, B, C still needed)

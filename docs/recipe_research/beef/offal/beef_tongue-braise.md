@@ -12,6 +12,10 @@ cut_type: Other / Offal
 ## Cut profile
 Beef tongue (*Bos taurus* lingual muscle) is a single dense cylindrical muscle wrapped in a thick, papillae-covered skin. The muscle itself is rich in collagen and intramuscular fat; the skin is inedible and must be peeled after cooking — the standard method is to braise the whole tongue at 85–95 °C until the collagen converts to gelatin, then peel the skin while the tongue is still warm. Cooking times of 3–4 hours for a 1.5–2 kg tongue are standard. Carryover is essentially zero (the surrounding liquid buffers the temperature) but the tongue retains heat well after removal — the skin must be peeled within 5 minutes of lifting from the braise or it cools and tightens. Pull is timed by the texture of the muscle: a paring knife should slide in with no resistance.
 
+## Styckesprofil
+
+Nöttungue (*Bos taurus* lingvalmuskel) är en enda tät cylindrisk muskel som arbetar konstant under djurets liv — ungefär lika belastad som hjärtmuskeln, men strukturellt mer lik en benmuskel. Den är tätt insvept i ett tjockt, grovt hudlager som måste avlägsnas efter tillagning; det underliggande köttet är fint fibrerat, marmorerat och extremt kollagenrikt. Korrekt tillagad (bräserad i 3–4 timmar tills innertemperaturen når 85–90 °C) är tungan silkeslent mör med en smak som liknar nötkindsmuskeln. Det yttre skinnet skalar lätt av strax efter kokning medan tungan fortfarande är varm.
+
 ## Source recipes
 
 ### 1. Fergus Henderson — Salt Ox Tongue with Green Sauce (British nose-to-tail tradition)

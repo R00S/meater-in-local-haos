@@ -13,6 +13,10 @@ cut_type: Steaks
 
 Pan searing uses a dry, very hot pan — cast iron or stainless steel — with minimal oil, to achieve rapid, intense Maillard browning on the sirloin surface. Unlike pan frying, the steak goes into an almost-smoking pan with only a light film of high-smoke-point oil; the intense conduction heat produces a thicker, darker, more flavourful crust faster than pan frying. This is critical for the lean sirloin because the crust is the primary flavour contribution. The steak is pressed down at the start to maximise contact, then typically basted with butter in the final 60–90 seconds. Carryover is 4–5 °C.
 
+## Styckesprofil
+
+Pannsearing använder en torr, riktigt het panna — gjutjärn eller rostfritt stål — med minimal olja för att uppnå snabb, intensiv Maillard-brynning på entrecôteytan. Till skillnad från pannstekning läggs biffen i en nästan rykande panna med bara en tunn film av fett med hög rökpunkt; den intensiva ledningsvärmen producerar en djup, mahognybrun krusta snabbt. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Pan-Seared Top Sirloin (American tradition)

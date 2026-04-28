@@ -15,6 +15,12 @@ Oven roasting brisket is the most accessible slow-cook method, and can take two 
 
 At 150–160 °C, brisket reaches the target internal temperature (90–96 °C for pull-apart) in 4–6 hours depending on size and whether sealed. The MEATER probe should be placed in the flat, at the thickest point, avoiding the internal fat seam. Carryover is negligible — the high moisture content and dense mass absorb and release heat slowly; the internal temperature barely moves after the brisket is removed.
 
+## Styckesprofil
+
+Ugnsbräsering av bringa är den mest lättillgängliga metoden för lång tillagning och kan ta två former: (1) en förseglad gjutjärnsgryta med vätska (rödvin, fond, lök, tomat — i praktiken en brässering i ugnen) vid 150–160 °C i 3–5 timmar, eller (2) ett äkta torrt ugnsstek (judisk stil, tätt insvept i folie eller i täckt långpanna) där bringan ångas i sin egna frislappade fukt. Båda metoderna fungerar eftersom den stängda ugnsmiljön behåller fuktigheten som avgår från köttet och hindrar ytan från att torka ut under den långa tillagningen.
+
+Vid 150–160 °C når bringan måltemperaturen (90–96 °C för mörhet som faller isär) på 4–6 timmar beroende på storlek och om den är förseglad. MEATER-sonden bör placeras i det platta stycket (*flat*), vid tjockaste punkten, och undvika det inre fettlagret. Eftertillagning är försumbar — det höga fuktinnehållet och den täta massan absorberar och avger värme långsamt; innertemperaturen rör sig knappt efter att bringan tagits ut.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Oven-Braised Brisket

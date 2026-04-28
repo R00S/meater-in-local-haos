@@ -15,6 +15,12 @@ Grilling tuna steak over a gas or charcoal grill produces a slightly different r
 
 Typical approach: grate at 250–270 °C, 1–2 minutes per side for rare (38–45 °C centre). For a 3 cm steak, 90 seconds per side over the hottest zone. MEATER probe from the side, aimed at the geometric centre. Pull at 38–42 °C for rare (cold-raw centre) or 50–55 °C for medium-rare (lightly warmed centre). Always rest 2–3 min and slice across the grain for presentation. Carryover: 3–5 °C from a hot grate.
 
+## Styckesprofil
+
+Grillning av tonfiskbiff över gas- eller träkolsgrill ger ett något annorlunda resultat än pannstekning: det öppna gallret låter droppröken bidra med smak, och den torra strålningsvärmen skapar kolmärken på ytan utan oljebadsmiljön i en panna. Gallret måste vara mycket rent, mycket hett och välolja innan tonfisken läggs på — tonfisk fastnar aggressivt i ett smutsigt eller svalt galler och slits sönder.
+
+Typisk ansats: galler vid 250–270 °C, 1–2 minuter per sida för rare (38–45 °C centrum). För en 3 cm biff, 90 sekunder per sida över den hetaste zonen. MEATER-sond från sidan, riktad mot den geometriska mitten. Dra vid 38–42 °C för rare (kallrå mitt) eller 50–55 °C för medium-rare (lätt uppvärmd mitt). Vila alltid 2–3 minuter och skär tvärs mot fibern för presentation. Eftertillagning: 3–5 °C från ett hett galler.
+
 ## Source recipes
 
 ### 1. Steven Raichlen — Grilled Yellowfin Tuna Steaks (American tradition)

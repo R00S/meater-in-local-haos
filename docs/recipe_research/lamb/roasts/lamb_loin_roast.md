@@ -57,6 +57,12 @@ Lamb loin roast is the boneless, cylindrical muscle removed from the saddle — 
 
 **Note on culinary traditions**: The whole boneless lamb loin roast is primarily a British, French, and Australasian preparation. It is not a standard whole-cut oven preparation in South/East/SE Asian or African/Middle Eastern/Levantine culinary traditions, where the loin area is typically cut into individual chops, used in curries and stews, or prepared as part of a whole saddle. Groups A and C coverage gaps are structural — not a research failure.
 
+## Styckesprofil
+
+Lammloin-stek är den benfria, cylindriska muskeln löst från sadeln — sektionen mellan sista revbenet och höften. Det är bland de möraste snitten på djuret, ekvivalent med filén i nötkött: magert, finkornigt, med liten bindväv och snabbtillagat.
+
+Ugnsrostning: sear i en het panna, sedan avsluta i 180–200 °C ugn. Vid 2–3 cm tjocklek: 8–12 minuter i ugnen. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Eftertillagning: 3–4 °C. Dra vid 53–58 °C. Sond insatt längsvis in till mitten av loinen. Vila täckt 5 minuter.
+
 ## Research files by cooking method
 
 - [`lamb_loin_roast-oven_roast.md`](lamb_loin_roast-oven_roast.md) — 3 verified sources: Group B × 2 (Great British Chefs / Paul Heathcote, Gourmet Traveller AU), Group D × 1 (ICA.se). Groups A and C not covered — see coverage note in leaf.

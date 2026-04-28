@@ -38,6 +38,12 @@ Target internal temperatures (oven roast):
 - Very tender (approaching pulled): **80–85 °C (176–185 °F)**
 
 
+## Styckesprofil
+
+Fläskaxel / nacke (*nakkefilet* / *nakkekam* danska; *Schweinenacken* / *Schweineschulter* tyska) — ett av de mest förlåtande snitten. Fettmarmoreringen förhindrar uttorkning. Ugnsrostning vid 160–200 °C i 2–4 timmar.
+
+Innertemperatur: **75–80 °C (167–176 °F)** för genomstekt, saftig axel; **88–95 °C** för pull-apart. Eftertillagning: 3–5 °C. Sond in i tjockaste köttmassan, borta från skulderbladsben. Vila täckt 15–20 minuter. Fläskaxel är ett av de mest kollagenrika snitten och belönar lång tillagning.
+
 ## Research files by cooking method
 
 - [Oven Roast](./pork_shoulder-oven_roast.md)

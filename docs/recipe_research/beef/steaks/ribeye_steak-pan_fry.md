@@ -19,6 +19,10 @@ Target internal temperatures (pan fry, resting temp):
 - Medium: **60–63 °C (140–145 °F)**
 - Well done: **70+ °C (158+ °F)**
 
+## Styckesprofil
+
+Entrecôte (även kallad entrecôte, Scotch fillet, antrikot, costata, chuletón, Rib-Eye eller μπριζόλα rib eye) skärs från nötdjurets ribsektion, revben 7–12. Den är rikligt marmorerad med intramuskulärt fett, vilket gör den till ett av de mest smakrika och förlåtande snitten för pannstekning — fettet bastar köttet inifrån under tillagningen och smälter ut i pannan och bidrar till en rik, aromatisk fond. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 3–4 °C.
+
 ## Source recipes
 
 ### 1. ichkoche.at — Rib-eye-Steak mit Rosmarinpommes (Austrian tradition)

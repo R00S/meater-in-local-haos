@@ -15,6 +15,12 @@ Grilling pork sausages over direct heat is the classic preparation for summer co
 
 For fresh sausages over 3 cm diameter, use a two-zone grill: start indirect heat (covered, ~150 °C) for 10 minutes to bring the interior to near-safe temperature, then finish over direct heat for 5 minutes to brown and char the casing. This eliminates the flare-up risk. Probe enters from one end only, into the centre, to avoid puncturing the casing mid-body. Target: 71–75 °C (160–167 °F). Carryover: 2–3 °C.
 
+## Styckesprofil
+
+Grillning av fläskkorv över direkt värme är den klassiska beredningen för sommargrill, *braai* och gatukök globalt. Nyckelutmaningen är att förhindra att höljet brister innan insidan når säker temperatur: ett uppflammande eller för hög värme förkolnar höljet.
+
+Metod: medel indirekt värme (ca 180 °C) eller tvåzonsupplägg med grillocket stängt. Tillagningstid: 15–20 minuter med regelbunden vändning. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond insatt längsvis från änden in till mitten av korven. Vila 3–5 minuter.
+
 ## Source recipes
 
 ### 1. Madens Verden — Grillpølse — sådan griller du pølser (Danish tradition)

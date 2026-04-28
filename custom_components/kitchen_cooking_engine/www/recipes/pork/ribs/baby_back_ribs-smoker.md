@@ -17,6 +17,12 @@ Target internal temperatures (smoker):
 - Fall-off-bone tender: **88–95 °C (190–203 °F)**
 - ⚠️ Below 80 °C ribs are food-safe but collagen is incompletely rendered
 
+## Styckesprofil
+
+Baby back ribs från rökaren är guld-standarden för låg-och-långsam BBQ. Revbenen tillagas bennedåt i ett rökröret vid 110–120 °C med hårt trä-rök (äpple, körsbär, hickory, bok) i 3–4 timmar med valfri 3-2-1-metod (3 timmar rökning, 2 timmar folie, 1 timme glasering).
+
+Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertillagning: försumbar. Sond längs benets riktning in till köttmassan, borta från benet. Den ultimata indikatorn: böjtest (revbenen böjer sig mjukt med sprickor i köttskorpan).
+
 ## Source recipes
 
 ### 1. Chefkoch — Baby Back Ribs (German tradition)

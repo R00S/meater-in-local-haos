@@ -12,6 +12,10 @@ cut_type: Green Vegetables
 ## Cut profile
 Green beans (*Phaseolus vulgaris*) sautéed in a hot pan — Chinese *gan bian* dry-frying, Thai stir-fry, Indian tadka-tossed, or French *haricots verts sautés* — produce blistered, slightly charred beans with a concentrated sweet-green flavour. The technique requires very high heat and very dry beans (surface moisture prevents browning). Pull temperature: 78–82 °C (172–180 °F) for tender-crisp with blistered skin. MEATER probe inserted horizontally through the thickest bean mid-point.
 
+## Styckesprofil
+
+Gröna bönor (*Phaseolus vulgaris*) sauterade i het panna — kinesisk *gan bian* torrstekning, thai wok, indisk tadka-tossed eller franska *haricots verts sautés* — ger blåsiga, brynnade bönor. Sautera i 5–8 minuter vid hög värme. Klar när genomstekta och lätt brynnade.
+
 ## Source recipes
 
 ### 1. Fuchsia Dunlop — Gān Biān Sìjìdòu (干煸四季豆 — Chinese Dry-Fried Green Beans)

@@ -12,6 +12,10 @@ cut_type: Mushrooms
 ## Cut profile
 Portobello mushrooms (*Agaricus bisporus* mature) on the grill develop a spectacular smoky char on the cap skin while the gills trap and concentrate the juices that the heat drives from the flesh. The convex cap skin is placed down first on the hot grates, giving time for the dense flesh to heat through; then the cap is flipped gill-side-down briefly (or gill-side-up for a moister, juicier result). Pull temperature: 84–90 °C (183–194 °F), where the flesh is tender, juicy and fully cooked but the cap holds its shape. A MEATER probe is inserted through the cap skin on the convex top into the thickest central part of the flesh. Grilled portobello is used as a meat substitute, a burger base, and as a vehicle for stuffings across many cuisines.
 
+## Styckesprofil
+
+Portabello-svampar (*Agaricus bisporus* mogna) på grillen utvecklar spektakulär rökig förkolning på hattens yta medan gälarna fångar och koncentrerar saften. Grilla hattssidan ned vid medel-hög värme i 4–5 minuter, vänd för 3–4 minuter. Klar när skrumpna och djupt brynnade.
+
 ## Source recipes
 
 ### 1. Maangchi — Portobello Gui (Korean tradition)

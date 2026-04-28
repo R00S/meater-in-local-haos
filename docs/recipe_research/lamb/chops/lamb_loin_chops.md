@@ -59,6 +59,12 @@ Lamb loin chops are the T-bone of lamb — cut from the saddle, containing both 
 Target: **57–62 °C (135–144 °F)** for medium (slightly pink). Africanbites.com: 135–140°F (57–60°C).
 
 
+## Styckesprofil
+
+Lammryggstek (lumbarsnitt, T-ben) är lammets T-ben — innehåller både loin och en liten del av filén. De är större och köttigare än ryggkotletter. I UK säljs de som "lamb chump chops" (något annorlunda snitt, från rumpen). 
+
+Het gjutjärns- eller tung panna, 4–5 minuter per sida, sedan vila. Sond in i den tjockaste loin-muskeldelen borta från benet. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Eftertillagning: 3–4 °C. Basta med rosmarin-vitlökssmör under de sista minuterna.
+
 ## Research files by cooking method
 
 - [Pan Sear](./lamb_loin_chops-pan_sear.md)

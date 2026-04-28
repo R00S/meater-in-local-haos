@@ -95,6 +95,12 @@ at 80 °C (as described in two German sources below) is the one acceptable excep
 the sear provides Maillard flavour and the short oven time (25 min at 80 °C) simply holds
 
 
+## Styckesprofil
+
+Bison (amerikansk buffel, *Bison bison*) är ett stort nordamerikanskt nötdjur uppfött primärt på öppet bete. Dess steaks — vanligast från rygg (filé/filé), revben (entrecôte/ribeye) eller striploin — är strukturellt likartade med nötköttsnitt men skiljer sig avgörande i fettinnehåll och smakkemi. Bison bär under 3 % intramuskulärt fett (jämfört med 10–25 % för nötkött) och har praktiskt taget inget yttre fettlock.
+
+Den mörka röda färgen speglar hög myoglobinhalt. Behandla som ett extremt magert nötkött: dra alltid 5 °C lägre än för nötkött och förvänta 3–5 °C eftertillagning. Innertemperatur: **54–57 °C** för medium-rare.
+
 ## Research files by cooking method
 
 - [Grill](./bison_steak-grill.md)

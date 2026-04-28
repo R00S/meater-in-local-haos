@@ -32,6 +32,12 @@ quality_assessed: 2026-04-26
 Pork tongue is the smaller, more delicate sibling of beef tongue — typically 250–400 g per tongue versus 1.5–2 kg for beef. The structure is identical: a single dense lingual muscle wrapped in a thick, papillae-covered skin that must be peeled after cooking. The smaller mass means a shorter braise (60–90 minutes rather than 3–4 hours) and a milder, sweeter flavour. Pork tongue is fundamental to many traditions — Mexican *lengua de cerdo*, Chinese cha-shu pig tongue, French *langue de porc sauce ravigote*, Polish *ozór wieprzowy*. The peel-while-warm rule still applies, and the tongue is best sliced thin and either dressed with a sharp vinaigrette or warmed in a piquant sauce. Carryover is essentially zero (the surrounding liquid buffers temperature).
 
 
+## Styckesprofil
+
+Fläsktunga är den lille, mer delikate syskon till nöttunga — typiskt 250–400 g per tunga jämfört med 1,5–2 kg för nötkött. Strukturen är identisk: en enda tät lingual muskel lindad i ett tjockt, papill-täckt skin som måste skalas av efter tillagning.
+
+Koka i kryddad vätska 1,5–2 timmar; skala sedan skinnet av. Innertemperatur: **85–92 °C (185–198 °F)** för fullt genomstekt med mjuk konsistens. Eftertillagning: försumbar (kokt). Sond in i den tjockaste mittdelen av tungan. Kan sedan pannstekas, pressas eller kalls som pålägg.
+
 ## Research files by cooking method
 
 - [Braise](./pork_tongue-braise.md)

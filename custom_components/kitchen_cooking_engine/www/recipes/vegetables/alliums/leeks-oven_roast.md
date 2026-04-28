@@ -12,6 +12,10 @@ cut_type: Alliums
 ## Cut profile
 Leeks (*Allium ampeloprasum* var. *porrum*) oven-roasted achieve a caramelised sweetness and charred outer layer that the braised version lacks. At 200–220 °C, the outer layers shrivel and blister while the inner white shaft steams in its own moisture, yielding a dual texture: slightly charred and papery outside, silky and jammy within. Leeks are typically halved lengthwise and roasted cut-side-down (or cut-side-up for more moisture retention) for 25–35 minutes. The internal temperature of a fully roasted leek is 86–92 °C (187–198 °F), where the inner layers are completely soft and sweet. A MEATER probe inserted along the axis into the thickest white base gives the most reliable reading; insert before the oven so the probe is set from the start.
 
+## Styckesprofil
+
+Purjolök (*Allium ampeloprasum* var. *porrum*) ugnsrostad uppnår en karameliserad sötma och förkolnad ytterlager som den bräserade versionen saknar. Vid 200–220 °C skrumpnar de yttre lagren och blåshärdar medan de inre mjuknar. Innertemperatur: inte relevant — serveras när mjuk med karameliserade kanter.
+
 ## Source recipes
 
 ### 1. Yotam Ottolenghi — Charred Leeks with Salsa Verde (Middle Eastern / Israeli tradition)

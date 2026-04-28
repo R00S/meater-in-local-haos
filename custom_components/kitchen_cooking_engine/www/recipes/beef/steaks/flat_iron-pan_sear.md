@@ -13,6 +13,12 @@ cut_type: Steaks
 
 The flat iron, cut from the infraspinatus of the shoulder blade, is an excellent candidate for high-heat pan searing: its strong intramuscular fat resists drying at searing temperatures, its 2–3 cm thickness produces a favourable surface-to-volume ratio for crust formation, and its flat, even profile makes full-face contact with a hot pan straightforward. Pan searing at the highest achievable stovetop temperature (240–280 °C in a carbon steel or cast-iron pan) drives the Maillard reaction almost instantaneously, producing the characteristic dark, crackling crust that is the hallmark of restaurant steak cookery. Because of the extremely high surface temperature, carryover is among the most pronounced of any method — typically 4–5 °C — and pulling at 52–53 °C (126–127 °F) is required to land at a medium-rare serving temperature.
 
+## Styckesprofil
+
+Flat iron, skärd från *infraspinatus* i skulderbladspartiet, är en utmärkt kandidat för höghets pannsearing: dess kraftiga intramuskulära fett motverkar uttorkning vid searingtemperaturer, dess 2–3 cm tjocklek ger ett gynnsamt yta/volym-förhållande för skorpbildning, och dess plana, jämna profil gör full yta-kontakt med en het panna okomplicerad.
+
+Pannsearing vid högsta möjliga spishetstemperatur (240–280 °C i en kolstål- eller gjutjärnspanna) driver Maillardreaktionen nästan omedelbart och producerar den karakteristiska mörka, krispiga skorpan som är kännetecknet för restaurangstelkokning. På grund av den extremt höga ytemperaturen är eftertillagning bland de mest uttalade av alla metoder — typiskt 4–5 °C — och att dra vid 52–53 °C krävs för att landa vid en medium-rare serveringstemperatur. Innertemperatur: 54–57 °C medium-rare.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Dry-Brined Pan-Seared Flat Iron with Butter Basting (American tradition)

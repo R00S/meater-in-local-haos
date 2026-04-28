@@ -26,6 +26,12 @@ Whole roasted goat leg is a festive preparation in Germany (Ziegenkeule), Greece
 
 Target internal temperature: **75–82 °C (167–180 °F)** for fully cooked, moist goat.
 
+## Styckesprofil
+
+Hel rostad getlägg är en festlig beredning i Tyskland (*Ziegenkeule*), Grekland (*katsiki sto fourno*), Karibien, Syd- och Västafrika och i hela Mellanöstern. Köttet har måttligt fett och gynnas av marinering (speciellt i kärnmjölk, yoghurt eller vin) för att minska viltighet.
+
+Långsam ugnsstekning vid 160–200 °C i 2–3 timmar ger bäst resultat. Innertemperatur: **75–82 °C (167–180 °F)** för genomstekt med fuktighet kvar. Eftertillagning: 3–5 °C. Sondplacering: stick in i den tjockaste köttdelen (lårmuskulaturen), borta från lårbenet.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Ziegenkeule im Römertopf (German tradition)

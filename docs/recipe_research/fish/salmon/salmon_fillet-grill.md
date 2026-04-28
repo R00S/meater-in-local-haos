@@ -13,6 +13,12 @@ cut_type: Salmon
 
 Salmon fillet on the grill is exposed to intense radiant and convective heat from below; if skin-on, the skin acts as a protective buffer between the direct flame and the delicate flesh. The fat content — particularly high in farmed Atlantic salmon — causes flare-ups when it renders and drips onto hot coals or burner elements, so heat management is critical. Wild salmon (sockeye, chinook) is leaner and more forgiving of moderate heat but more sensitive to overcooking. The key structural challenge of grilling salmon is the transition from firm, raw myotomes to the characteristic flake: this happens rapidly above 60 °C, so the cook window between underdone and overdone is narrow. Carryover is 2–3 °C from a screaming-hot grill surface; skin-side-down cooking provides a buffer and allows the cook to monitor visual cues (the translucency line moving up the fillet from below) without flipping.
 
+## Styckesprofil
+
+Laxfilé på grillen exponeras för intensiv strålnings- och konvektionsvärme underifrån; om skinnet är på fungerar det som ett skyddande buffertlager mellan den direkta flamman och det känsliga köttet. Fettinnehållet — särskilt högt i odlad atlantlax — orsakar uppflammor när det smälter och droppar på heta kolar eller brännarelement, varför värmehantering är kritisk. Vild lax (sockeye, chinook) är magrare och mer förlåtande mot måttlig värme men känsligare mot överkokning.
+
+Den viktigaste strukturella utmaningen vid grillning av lax är övergången från fasta, råa myotomer till den karakteristiska fjälliga texturen: detta sker snabbt ovanför 60 °C, varför koktiden är smal mellan underkokad och överkokad. Eftertillagning: 2–3 °C från en glödhet grillyta. Skinnsidan-ned-tillagning ger en buffert och tillåter visuell övervakning (den genomskinlighetslinjen som rör sig uppåt i filén). Innertemperatur: 52–60 °C beroende på preferens.
+
 ## Source recipes
 
 ### 1. Steven Raichlen — Plank-Grilled Salmon (American tradition)

@@ -12,6 +12,12 @@ cut_type: Ground
 ## Cut profile
 Ground pork (minced pork) is made by grinding pork shoulder, belly, or a blend of primal trimmings. Standard ground pork is typically 70–80% lean with 20–30% fat; the higher fat content gives it a juicy, cohesive texture when cooked and makes it more forgiving than ground beef or turkey. Ground pork is the basis of countless preparations worldwide — from Italian ragù and Swedish köttbullar to Chinese dumplings and Mexican chorizo. Because grinding distributes any surface bacteria throughout the mass, the USDA minimum safe internal temperature is 71°C (160°F). Carryover is negligible.
 
+## Styckesprofil
+
+Malet fläsk (malet fläskkött) är gjort av malt fläskaxel, mage eller blandade primär-trimmings. Standard malet fläsk är typiskt 70–80 % magert med 20–30 % fett. Det höga fettinnehållet ger en saftig, sammanhängande textur vid tillagning och gör det mer tolerant mot lätt överkokning.
+
+USDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond in i tjockaste delen av biff eller köttfärskula. Används i diverse köttbullar, sausageblandningar, köfte och löst kokat i saucer.
+
 ## Source recipes
 
 ### 1. Marcella Hazan — Ragù Bianco di Maiale (Italian tradition)

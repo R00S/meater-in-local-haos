@@ -12,6 +12,12 @@ cut_type: Goat
 ## Cut profile
 Slow-cooker goat shoulder (Swedish *getskuldra* / *getbog*) takes the same braising principles but uses a 6–8 hour low-temperature cycle in a sealed countertop crock-pot at ~88–93 °C. The lower-and-slower environment is gentler than oven-braising and tolerates inattention, but the lid traps all the steam, so the surface never browns; chefs always sear the shoulder first in a separate pan. Internal target is the same collagen-melt band: 88–93 °C, sustained for 4–5 hours. Probe horizontally through the thickest part of the muscle, away from bone.
 
+## Styckesprofil
+
+Slow cooker-getaxel (*getskuldra* / *getbog*, svenska) tillämpar braiseringsprinciperna men använder en 6–8 timmars lågtemperaturcykel i en förseglad bordspanna vid ~88–93 °C. Den lägre-och-långsammare miljön är varsam och tolererar inaktivitet, men locket fångar all ånga — ytan bryns inte; kockar steker alltid axeln i en separat panna först för att skapa Maillard-arom.
+
+Internmålet är kollagensmeltsband: 88–93 °C, hållet i 4–5 timmar. Sond horisontellt genom den tjockaste delen av muskeln, borta från ben. Innertemperatur: **88–93 °C** (190–199 °F). Eftertillagning: noll.
+
 ## Source recipes
 
 ### 1. Yotam Ottolenghi & Sami Tamimi — Slow-Cooker Goat Shoulder with Pomegranate (Levantine tradition)

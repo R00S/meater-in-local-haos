@@ -15,6 +15,12 @@ Pan frying pork liver follows the same core technique as beef liver: hot fat, hi
 
 Standard liver and onions: caramelise sliced onions first (10–15 min in butter over medium heat), remove from pan; increase heat to high; add more butter and oil; fry liver slices 1–2 minutes per side. The onions are returned to the pan for final 30 seconds and serve together. The liver must not stack — crowding drops pan temperature and causes steaming. Carryover: 1–2 °C for thin slices. Pull at 60–65 °C for a pink, tender centre; 71 °C for USDA compliance.
 
+## Styckesprofil
+
+Pannstekning av fläsklever följer samma kärntekniken som nötlever: het fett, hög direkt värme, minimal tid. Skillnaden mot pannstekning (pan sear) är närvaron av ett stärkelsehölje (mjöl, fina brödsmulor eller majsstärkelse) och användning av tillräckligt fett.
+
+Mjölhölje + smör + hög värme: 2–3 minuter per sida. Innertemperatur: **70–75 °C (158–167 °F)** för genomstekt. Eftertillagning: 2–3 °C. Sond insatt horisontellt in till mitten av skivan. Servera omedelbart — lever överkokkas snabbt och förlorar sin mjuka konsistens.
+
 ## Source recipes
 
 ### 1. Marcella Hazan — Fegato di Maiale alla Salvia (Italian tradition)

@@ -17,6 +17,12 @@ Target internal temperatures (air fryer):
 - Fall-off-bone tender: **88–95 °C (190–203 °F)**
 - ⚠️ Below 80 °C ribs are food-safe but still tough
 
+## Styckesprofil
+
+Baby back ribs (även kallad *loin ribs* eller *kamben* på danska; *Rippchen* tyska) är de övre revbenen från fläskloin-området — magrare, mer krökta och mindre än spareribs. I air fryer ger den höghastighets varma luften ett lätt rökigt resultat i 30–40 minuter vid 180–200 °C.
+
+Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet (USDA-standard för revben). Eftertillagning: försumbar. Sond insatt horisontellt längs benets längsriktning in till mitten av köttmassan, borta från benet.
+
 ## Source recipes
 
 ### 1. Madens Verden — Ribben i airfryer (Danish tradition)

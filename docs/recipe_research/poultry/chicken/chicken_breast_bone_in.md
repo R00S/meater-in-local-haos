@@ -41,6 +41,12 @@ Bone-in, skin-on chicken breast is the largest section of the bird — the split
 
 **Comparison with boneless breast**: boneless, skinless breast cooks faster (typically 15–20 min at 220 °C / 425 °F vs. 30–40 min at 190–220 °C for bone-in) but has the same 165 °F internal temperature target. Cook time differences are solely from the thermal insulation of the bone; the pull temperature and doneness criteria are identical.
 
+## Styckesprofil
+
+Benbibehållet, skinnklätt kycklingbröst (*split* eller halverat bröst) är bröstets storsta sektionen av fågeln — med bröstben, revben och ibland önskekilsbenet kvar, täckt av skinnet. Det är distinkt från benfritt skinnfritt bröst: fetare, saftigare och mer smakrikt.
+
+Ugnsrostning: 200–220 °C, 35–45 minuter. Innertemperatur: **74 °C (165 °F)** USDA. Eftertillagning: 2–3 °C. Sond längsmed bröstets tjockaste del, borta från benet. Vila 5–10 minuter täckt.
+
 ## Research files by cooking method
 
 | Method | Leaf file | Status |

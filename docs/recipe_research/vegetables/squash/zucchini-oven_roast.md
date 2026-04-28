@@ -12,6 +12,10 @@ cut_type: Squash
 ## Cut profile
 Zucchini (*Cucurbita pepo*) halved lengthways or cut into thick rounds/spears oven-roasted at 200–220 °C develops caramelised, golden cut faces while the interior stays tender and moist. At high oven heat surface moisture evaporates before the outside can steam, allowing real browning. Roasting time: 20–30 minutes for halves; 15–20 minutes for spears at 210 °C. Pull temperature: 82–85 °C (180–185 °F) at the thickest piece. MEATER probe inserted along the long axis of the thickest half or spear.
 
+## Styckesprofil
+
+Zucchini (*Cucurbita pepo*) halverad längsmed eller skuren i tjocka rundlar/stavar och ugnsrostad vid 200–220 °C utvecklar karameliserade, gyllenbruna snittytor medan insidan förblir mör och saftig. 20–25 minuter. Klar när gyllenbrun och genomstekt.
+
 ## Source recipes
 
 ### 1. Marcella Hazan — Zucchine al Forno (Italian tradition)

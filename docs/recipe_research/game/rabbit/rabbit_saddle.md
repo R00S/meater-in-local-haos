@@ -55,6 +55,12 @@ inside. The saddle is lean enough that it needs a hot oven (190–200°C) to bro
 and carryover is 2–3°C, so the cut demands close monitoring. Stuffed or rolled
 
 
+## Styckesprofil
+
+Kaninryggen (sadelstycket) är ryggradens sektion med de mest möra, magraste musklerna. Ugnsrostning passar ryggen bra — speciellt hel med ben, fylld eller knuten. Stekningstid är kort: 20–25 minuter vid 180 °C för en hel rygg.
+
+Innertemperatur: **65–72 °C (149–162 °F)** för fullt genomstekt och saftig. Överskrid inte 75 °C — den magra muskeln torkar snabbt. Eftertillagning: 2–3 °C. Sond insatt längsvis i den tjockaste ländryggen, parallellt med ryggraden. Vila 5–8 minuter täckt före skärning.
+
 ## Research files by cooking method
 
 - [Oven Roast](./rabbit_saddle-oven_roast.md)

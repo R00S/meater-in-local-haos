@@ -12,6 +12,10 @@ cut_type: Squash
 ## Cut profile
 Acorn squash (*Cucurbita pepo*) oven-roasted in wedges or half-shells at 200–220 °C develops caramelised, golden cut faces in 30–40 minutes. Wedges (the squash cut into 6–8 wedges) give maximum surface browning; half-shells give a more dramatic presentation. Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe through the skin into the thickest flesh part.
 
+## Styckesprofil
+
+Ekollon-squash (*Cucurbita pepo*) ugnsrostad i klyftor eller halvskal vid 200–220 °C utvecklar karameliserade, gyllenbruna snittytor på 30–40 minuter. Klar när köttet är genomstekt och snittytan är djupt gyllenbrun.
+
 ## Source recipes
 
 ### 1. Yotam Ottolenghi — Roasted Acorn Squash with Za'atar and Pomegranate (Israeli / Middle Eastern tradition)

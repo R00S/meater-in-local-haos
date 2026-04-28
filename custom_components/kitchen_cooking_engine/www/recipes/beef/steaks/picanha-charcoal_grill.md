@@ -13,6 +13,12 @@ cut_type: Steaks
 
 Picanha over live charcoal is the definitive Brazilian *churrasco* preparation — in Brazil, the whole *rump cap* is threaded onto long metal skewers in a horseshoe shape (fat cap outside) and rotated continuously above the charcoal fire of the *churrascaria*, the fat dripping and basting the meat as it cooks. At home on a kettle or kamado grill, the rotisserie method can be replicated or a simplified two-zone direct-then-indirect approach is used. The charcoal smoke compounds penetrate the fat cap and impart a distinctive aroma that is a signature of Brazilian *churrasco*. Carryover from a hot charcoal fire is 5–7 °C.
 
+## Styckesprofil
+
+Picanha över levande träkol är den definitiva brasilianska *churrasco*-beredningen — i Brasilien trädas hela *rump cap* på långa metallspett i hästskoform (fettlocket utåt) och roteras kontinuerligt ovanför träkolselden i *churrascarian*, medan fettet droppar och bastar köttet under rotationen. Hemma på en kettle- eller kamado-grill kan rotisseriemetoden replikeras, eller ett förenklat tvåzons direkt-sedan-indirekt-tillvägagångssätt används.
+
+Träkolsrökföreningarna tränger in i fettlocket och ger ett karakteristiskt arom som är ett signum för brasilianskt *churrasco*. Eftertillagning från en het träkolseld är 5–7 °C — dra tidigt. Sond placeras i den tjockaste delen av den magra muskeln, undvik fettlocket och eventuellt ben. Innertemperatur: 52–57 °C medium-rare.
+
 ## Source recipes
 
 ### 1. Francis Mallmann — Churrasco Picanha over Charcoal (Brazilian / Argentine tradition)

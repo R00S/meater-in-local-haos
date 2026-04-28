@@ -31,6 +31,10 @@ produces dry, rubbery fish. The MEATER probe must be inserted laterally (from th
 edge) in thin fillets. Flouring the fillets before frying (as in the German and British
 traditions) creates a protective crust that helps moisture retention and even browning.
 
+## Styckesprofil
+
+Pannstekning är den definitiva vardagsmetoden för kolja. De två dominerande tillvägagångssätten är: (1) **lätt mjölad** — pudra fileten i kryddat mjöl, stek skinnsidan ned i smör eller olja vid måttlig-hög värme i 2–3 minuter, vänd och stek 1–2 minuter; (2) **fiskaroma** — stek i smör med lök, vitlök och örter. Innertemperatur: 63–65 °C. Kolja flinkar upp och torkar ut snabbt om överkokad.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Zesty Haddock with Crushed Potatoes & Peas (British tradition)

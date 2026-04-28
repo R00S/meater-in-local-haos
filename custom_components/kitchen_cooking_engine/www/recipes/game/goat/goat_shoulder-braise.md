@@ -12,6 +12,12 @@ cut_type: Goat
 ## Cut profile
 Goat shoulder (Swedish *getskuldra* / *getbog*) is the upper foreleg — heavily worked, dense with collagen and intramuscular fat. Like the lamb shoulder, it is a quintessentially low-and-slow cut: tough beyond chewing if cooked to medium-rare, but transformed by long, wet cooking into fork-tender, gelatin-rich meat that pulls in long strands. Internal temperature is necessary but insufficient: the cut needs time at 88–93 °C internal for 2–3 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, away from bone or large connective sheets.
 
+## Styckesprofil
+
+Getaxel (*getskuldra* / *getbog*, svenska) är den övre frambenet — hårt arbetat, tätt med kollagen och intramuskulärt fett. Som lammaxeln är det ett quintessentiellt lågt-och-långsamt-snitt: för segt att äta om det tillagas till medium-rare, men förvandlat av lång, fuktig tillagning till gaffelömt, gelatin-rikt kött.
+
+Innertemperaturen är nödvändig men otillräcklig: snittet behöver tid vid 88–93 °C i 2–3 timmar efter att ha nått den temperaturen. Sond horisontellt genom den tjockaste delen av muskeln, borta från ben eller stora bindvävsark. Innertemperatur: **88–93 °C** (190–199 °F). Eftertillagning: försumbar.
+
 ## Source recipes
 
 ### 1. Yotam Ottolenghi & Sami Tamimi — Slow-Braised Goat Shoulder with Pomegranate, Cumin & Walnuts (Levantine tradition)

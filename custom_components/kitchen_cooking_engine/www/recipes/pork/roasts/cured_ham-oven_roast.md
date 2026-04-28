@@ -17,6 +17,12 @@ Target internal temperatures (oven roast):
 - Juicy, glazed: **70–75 °C (158–167 °F)**
 - Very low-and-slow: **75 °C** (when oven is held at 80 °C)
 
+## Styckesprofil
+
+Härdad skinka (*skinke* danska; *Schinken* tyska) för ugnsrostning inkluderar både förkokt glaserad skinka och direkt-till-ugn-versioner. Det klassiska tillvägagångssättet: koka en milt härdad eller rökt skinka först (ta bort överskottssalt och förkoka), sedan avsluta i 200–220 °C ugn med söt-salt glasering.
+
+Innertemperatur: **68–75 °C (154–167 °F)** för varm, saftig härdad skinka. Eftertillagning: 3–4 °C. Sond in i tjockaste köttmassan (*biceps femoris*), borta från benets kärna. Vila 15 minuter täckt.
+
 ## Source recipes
 
 ### 1. Madens Verden — Glaseret Skinke (Danish glazed ham)

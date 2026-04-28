@@ -13,6 +13,12 @@ cut_type: White Fish
 
 Pan frying cod uses hot fat (butter, olive oil, or a combination) in a skillet to cook the fillet quickly over moderate-high heat. The high direct-contact heat produces the characteristic golden-brown Maillard crust on the presentation side (skin-side or flesh-side first) while the interior cooks by conduction. A light dusting of seasoned flour or the bare flesh both work — flour increases crust crunchiness and prevents sticking. Because cod is lean (< 1% fat), the fat in the pan is the only basting agent; adequate fat quantity prevents the flesh from drying. Cooking time is typically 3–4 minutes per side for a 2.5 cm fillet. Pull at 60–63 °C; carryover is 2–3 °C.
 
+## Styckesprofil
+
+Pannstekning av torsk använder het fett (smör, olivolja eller kombination) i en stekpanna för att snabbt tillaga filén vid måttlig till hög värme. Den höga direktkontaktsvärmen producerar den karakteristiska gyllenbruna Maillard-skorpan på presentationssidan (skinnsidan eller köttsidan först) medan insidan tillagar via ledning.
+
+En lätt beläggning av kryddad mjöl eller det nakna köttet fungerar båda — mjöl ökar skorpans krispighet och förhindrar fastsnande. Eftersom torsk är mager (< 1% fett) är fettet i pannan det enda bastamedlet; tillräcklig fettmängd förhindrar att köttet torkar ut. Tillagningstid är typiskt 3–4 minuter per sida för en 2,5 cm filé. Dra vid 60–63 °C; eftertillagning är 2–3 °C. Innertemperatur: 60–63 °C.
+
 ## Source recipes
 
 ### 1. Heston Blumenthal — Fish and Chips at Home (British tradition)

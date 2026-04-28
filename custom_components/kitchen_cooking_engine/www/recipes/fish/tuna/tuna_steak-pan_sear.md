@@ -15,6 +15,12 @@ Pan searing is the definitive restaurant method for tuna steak — a screaming-h
 
 Key technique: tuna must be at room temperature before searing; a cold steak will lower the pan temperature and produce steaming instead of searing. Season only with salt and pepper just before cooking (not in advance — salt draws moisture). MEATER probe from the side, aimed at the geometric centre. Pull at 36–40 °C for rare (opaque outside, raw inside); carryover 2–3 °C.
 
+## Styckesprofil
+
+Pannsekning är den definitiva restaurangmetoden för tonfiskbiff — en skrikande het torr gjutjärns- eller kolstålspanna, ingen olja behövs initialt (den magra ytan sears torr), 60–90 sekunder per sida för rare. Den heta pannan driver en intensiv Maillard-skorpa över de platta ytorna medan insidan förblir vid 38–45 °C. Denna *tataki*-ansats är standarden i japanska restauranger (sear alla fyra sidor av ett loinstycke kort) och amerikansk/europeisk fine dining (sear båda platta ytorna av en biffportion).
+
+Viktig teknik: tonfisk måste vara i rumstemperatur före seering; en kall biff sänker panntemperaturen och ger ångning istället för searing. Krydda bara med salt och peppar precis innan tillagning (inte i förväg — salt drar ut fuktighet). MEATER-sond från sidan, riktad mot den geometriska mitten. Dra vid 36–40 °C för rare (ogenomskinlig utsida, rå insida); eftertillagning 2–3 °C.
+
 ## Source recipes
 
 ### 1. Nobu Matsuhisa — Tuna Tataki with Ponzu (Japanese tradition)

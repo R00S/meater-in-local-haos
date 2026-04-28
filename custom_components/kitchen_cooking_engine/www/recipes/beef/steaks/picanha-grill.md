@@ -17,6 +17,12 @@ The standard home approach is a two-zone setup: sear the fat-cap side over direc
 
 The MEATER probe should be placed lengthwise in the thickest part of the lean muscle, away from the fat cap and bone (if any). Carryover from a hot gas grill is 4–5 °C.
 
+## Styckesprofil
+
+Tillagning av picanha på gassgrill skiljer sig från träkol på två viktiga sätt: gas saknar rökföreningarna och levande glöd-strålningsvärmen som definierar *churrasco*, men ger mer precis temperaturkontroll och större repeterbarhet. Fettlisten smälter fortfarande och bastar det magra köttet, och en het gassgrill (250–280 °C vid gallret) kan producera en god Maillard-skorpa på fettlockets yta.
+
+Standardmässig hemmaapproach är en tvåzonsinställning: sear fettlockets sida över direkt hög värme i 3–5 minuter för att smälta och kola fettlocket, vänd sedan och sear den magra sidan i 2–3 minuter, flytta sedan till den indirekta zonen för att avsluta till måltemperatur med locket stängt. Alternativt kan hela picanhan skäras tvärs mot fibern i tjocka biffar (2–3 cm) och varje bit grillas individuellt. Sonden placeras längsvis i den tjockaste delen av den magra muskeln, borta från fettlocket. Eftertillagning: 4–5 °C. Innertemperatur: 52–57 °C medium-rare.
+
 ## Source recipes
 
 ### 1. Francis Mallmann — Grilled Picanha on the Parilla (Argentine/Brazilian tradition)

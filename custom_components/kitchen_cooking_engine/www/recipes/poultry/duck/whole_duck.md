@@ -44,6 +44,10 @@ A whole duck presents a significant cooking challenge: the breast meat is best a
 Target internal temperature: **165 °F (74 °C) in the thigh** — USDA minimum for whole poultry. Breast will be well-done at this point; accept this or use the low-and-slow method which keeps breast juicier.
 
 
+## Styckesprofil
+
+En hel anka presenterar en tillagningsutmaning: bröstet är bäst vid 57–63 °C medan benen och låren behöver 74–80 °C. Innertemperatur: 63 °C (mäts i bröstet). Eftertillagning: 4–6 °C. Tillagnings tid: 2–2,5 timmar totalt för en 2–3 kg anka.
+
 ## Research files by cooking method
 
 - [Oven Roast](./whole_duck-oven_roast.md)

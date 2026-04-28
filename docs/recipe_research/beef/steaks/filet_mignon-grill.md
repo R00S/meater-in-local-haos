@@ -12,6 +12,10 @@ cut_type: Steaks
 ## Cut profile
 Filet mignon (from the narrow end of the psoas major) is the most tender, least-exercised muscle in the beef carcass, with virtually no connective tissue or intramuscular fat. Its mild, delicate flavour benefits from the grilled char and smokiness that a gas or charcoal grill provides — without it, the cut's flavour can seem bland. A gas grill produces consistent, controllable heat with minimal smoke, making it more precise than charcoal but less aromatic. The lean fibres dry out rapidly above medium, so precise temperature management is critical. Carryover is minimal given the small, uniform geometry of a filet mignon, but the brief intense heat of a grill can produce rapid late-stage temperature rises.
 
+## Styckesprofil
+
+Filet mignon (från den smala änden av *psoas major*) är den möraste, magraste och mest delikata biffen i vilket djur som helst. På grillen kräver fileten kortast exponeringstid av alla biffar — hög direkt värme i 2–3 minuter per sida för standardtjocklek (4–5 cm). Utan det intramuskulära fettet som ger skydd i ribeye och entrecôte torkar fileten ut snabbt om den överkokas; precision är allt. Innertemperatur: 52–55 °C rare, 55–58 °C medium-rare. Eftertillagning: 3–5 °C.
+
 ## Source recipes
 
 ### 1. Weber Grills / America's Test Kitchen — Classic Grilled Filet Mignon

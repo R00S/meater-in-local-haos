@@ -28,6 +28,12 @@ Hot cast-iron or heavy stainless pan, medium-high heat with a little oil. 3–4 
 
 Target internal temperature: **70–74 °C (158–165 °F)**.
 
+## Styckesprofil
+
+Pannstekning av getkotletter är primärt en sydasiatisk (*tawa gosht*) och mellanösternsk metod — kotletterna marineras i yoghurt och kryddor, sedan sears de hårt på en flat järngrillplatta (*tawa*) eller tung gjutjärnspanna. Yoghurtmarinaden skapar en lätt kol-svartnad skorpa som är djupt smakfull.
+
+Het gjutjärns- eller tung rostfri panna, medel-hög värme, 3–4 minuter per sida. Avsluta i ugn vid 160 °C vid behov för tjockare kotletter. Get tolererar och gynnas av något högre sluttemperaturer (68–74 °C) — bindväven har mjuknat vid dessa temperaturer. Innertemperatur: **68–74 °C** (155–165 °F). Eftertillagning: 3–4 °C.
+
 ## Source recipes
 
 ### 1. African Bites — Asun (Nigerian spicy roast goat — pan method)

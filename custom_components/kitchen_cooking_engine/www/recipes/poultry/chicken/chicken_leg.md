@@ -45,6 +45,12 @@ The chicken leg comprises the thigh (femur bone and surrounding muscle) and the 
 The drumstick has a single bone (tibia/fibula) with a club-shaped muscle mass around it. The bone conducts heat and can make the innermost meat near the joint run slightly below the surface temperature. The MEATER probe is inserted from the meaty end along the bone axis, into the largest muscle mass, avoiding the bone itself.
 
 
+## Styckesprofil
+
+Kycklinglägg består av låret (lårben och omgivande muskel) och trommelstocken (skenben och omgivande muskel). I detaljhandeln avser *trommelstock* specifikt den nedre sektionen nedan knäleden.
+
+Ugnsrostning: 200–220 °C, 35–45 minuter med vändning. Innertemperatur: **74 °C (165 °F)** USDA-minimum (mörk kyckling kräver alltid 74 °C; rosa kött vid benet vid 74 °C är okej pga myoglobin). Eftertillagning: 2–3 °C. Sond längsmed trommelstockens tjockaste del, borta från tibiabenet.
+
 ## Research files by cooking method
 
 - [`chicken_leg-oven_roast.md`](chicken_leg-oven_roast.md) — 4 sources: Group A (Swasthi Shreekanth/Indian), Group B (Jessica Gavin/American, BBC Good Food/British), Group D (Natasha's Kitchen/Ukrainian-American counted as Group B in prior assessment)

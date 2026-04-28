@@ -12,6 +12,10 @@ cut_type: Steaks
 ## Cut profile
 Filet mignon is the small, round, lean medallion cut from the narrow end of the psoas major (beef tenderloin). It has no marbling to speak of and no connective tissue, making it extraordinarily tender but simultaneously susceptible to drying at temperatures above medium. Oven roasting a filet mignon is typically a two-stage process: a stovetop sear creates the Maillard crust the lean exterior cannot achieve in the oven alone, followed by a transfer to the oven to gently bring the interior to the target temperature without burning the crust. The reverse-sear variant (low oven first, high-heat sear last) achieves the flattest possible temperature gradient through the small, round cross-section. Carryover is meaningful — a 4–5 cm filet mignon will rise after leaving the oven, and the pull temperature must account for this.
 
+## Styckesprofil
+
+Filet mignon är den lilla, runda, magra medaljongen skärd från den smala änden av nötfilén. Ugnsstekning av filet mignon — vanligtvis som omvänd searing — innebär en låg ugnstemperatur (120–135 °C) till 5–7 °C under slutmålet, sedan hög avslutningsvärme (panna eller ugnsöverhet) för maillardyta. Filétens låga fettinnehåll gör den känslig för värme; precision är avgörande. Innertemperatur: 52–55 °C rare, 55–58 °C medium-rare. Eftertillagning: 3–5 °C.
+
 ## Source recipes
 
 ### 1. Ina Garten — Pan-Seared Oven-Finished Filet Mignon

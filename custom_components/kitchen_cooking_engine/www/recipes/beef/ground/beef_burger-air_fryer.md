@@ -12,6 +12,10 @@ cut_type: Ground
 ## Cut profile
 The beef burger patty cooked in an air fryer is a relatively recent home-kitchen variant of the same fundamental cut — coarsely ground beef of around 80/20 fat/lean ratio, formed into a patty 1.5–2.5 cm thick. The air fryer is essentially a small high-velocity convection oven; it concentrates radiant heat from a top element while a fan circulates 175–205 °C air across the patty surface. That circulation produces evenly browned faces without flipping in some models, although a single mid-cook flip improves uniformity. The trade-off versus pan-frying is no rendered-fat puddle to baste in, and versus grilling no smoke — but the convection allows surface browning at lower equipment temperatures than direct radiant heat would require. Carryover is small (2–3 °C) because the patty is thin and the cook short.
 
+## Styckesprofil
+
+Nötburgaren tillagad i airfryer är en relativt ny hushållsvariant av samma grundläggande styckdel — grovmalet nötkött med ungefär 80/20 fett/magert-förhållande, format till en biff 1,5–2,5 cm tjock. Airfryern är i grunden en liten konvektionsugn med hög lufthastighet; den koncentrerar strålningsvärme från ett övre värmeelement medan en fläkt cirkulerar 175–205 °C varm luft runt biffens yta. Den cirkulationen ger jämnt brynt yta utan vändning i vissa modeller, men en vändning mitt under tillagningen förbättrar jämnheten. Kompromissen jämfört med stekning i panna är att det saknas en pöl av utsmält fett att basta i, och jämfört med grillning saknas rök — men konvektionen möjliggör ytbryning vid lägre utrustningstemperaturer än direktstrålningsvärme. Eftertillagning är liten (2–3 °C) eftersom biffen är tunn och tillagningen kort.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air-Fryer Diner-Style Burgers (American tradition)

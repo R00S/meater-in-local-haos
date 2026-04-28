@@ -26,6 +26,10 @@ Ground turkey (hindi kıyması / Putenhackfleisch / tacchino macinato) is a lean
 
 Target internal temperature: **74 °C (165 °F)** — the USDA minimum for all ground poultry; explicitly confirmed by multiple sources.
 
+## Styckesprofil
+
+Malt kalkon (hindi kıyması/Putenhackfleisch/tacchino macinato) är ett magert alternativ till nötkött i grillbiffar och köfte. Kalkonfärs torkar ut lättare än nötkött eller till och med kycklingfärs, så fuktighetsbevarare är viktiga. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. Nefis Yemek Tarifleri — Hindi Köftesi (Turkish tradition)

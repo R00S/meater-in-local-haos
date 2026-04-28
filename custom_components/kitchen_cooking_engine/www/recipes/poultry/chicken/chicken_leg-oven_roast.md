@@ -28,6 +28,12 @@ Key technique: pat dry before coating (surface moisture blocks crisping), arrang
 
 The MEATER probe should be inserted along the bone axis from the meatier end, directed into the centre of the largest muscle mass, avoiding the bone. Carryover from a 220–230 °C oven is 2–4 °C.
 
+## Styckesprofil
+
+Högtempersugnsrostning är den mest tillgängliga hemmetoden för kycklingtrommelstockar. Den heta ugnen (200–230 °C) smälter ned subcutant fett under skinnet, driver av ytfukt och brynner exteriören. Trommelstocken är ett mycket förlåtande snitt på grund av sin mörkare, fetare muskulatur — de torkar inte ut lika lätt som bröst.
+
+Tillagningstid: 35–45 minuter vid 200–220 °C med vändning halvvägs. Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond insatt längsmed trommelstockens tjockaste del, borta från tibiabenet. Vila 5 minuter täckt.
+
 ## Source recipes
 
 ### 1. Jessica Gavin — Baked Chicken Legs

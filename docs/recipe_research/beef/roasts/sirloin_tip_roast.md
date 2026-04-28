@@ -56,6 +56,10 @@ quality_assessed: 2026-04-27
 
 The sirloin tip roast (known as the "knuckle" in UK/Australian butchery, "pointe de culotte" in French, "Rinderknolle" in German, and "Patinho" in Brazilian Portuguese) is cut from the quadriceps femoris muscle group at the front of the hindquarter, immediately below the sirloin and above the shank. It is a boneless, lean roast with tight, dense muscle fibres and minimal intramuscular fat. The low fat content means it relies entirely on technique — slow oven roasting at low temperatures or braising in liquid — to remain tender and juicy. Sliced thinly against the grain it produces clean, pronounced beef flavour; sliced thick or overcooked it becomes tough and dry. The cut sits between the premium loin cuts and the cheaper round cuts in price and tenderness, making it a popular choice for economical Sunday roasts and deli-style sliced beef. Carryover after oven roasting is 3–8°C / 5–14°F depending on the oven temperature used (higher carryover at lower roasting temperatures).
 
+## Styckesprofil
+
+Sirloin tip-stek (känd som "knuckle" i brittisk/australiensisk styckningsnomenklatur, "pointe de surlonge" på franska, "Nuss" på tyska) är en tät, triangulär muskelgrupp från utsidan av lårets bakre del — ett av de magrare snittarna från bakkvarteret men med bättre konsistens än innanlår om det tillagas korrekt. Lämpar sig för ugnsstekning till rare eller medium-rare; överkokad torkar det snabbt ut. Eftertillagning: 4–6 °C.
+
 ## Research files by cooking method
 
 - [Oven Roast](./sirloin_tip_roast-oven_roast.md) — 2 sources collected (Groups B only; Groups A, C, D still needed)

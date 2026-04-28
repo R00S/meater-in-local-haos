@@ -39,6 +39,12 @@ Target internal temperatures (oven roast):
 - Very low-and-slow: **75 °C** (when oven is held at 80 °C)
 
 
+## Styckesprofil
+
+Härdad skinka (*skinke* danska; *Schinken* tyska) för ugnsrostning — från förkokt glaserad till direkt-till-ugn. Det klassiska tillvägagångssättet: förskållning i vatten (tar bort överskottssalt), sedan glasering och avslutning i 200–220 °C ugn.
+
+Innertemperatur: **68–75 °C (154–167 °F)** för varm, saftig härdad skinka. Eftertillagning: 3–4 °C. Sond in i tjockaste köttmassan, borta från lårbenets kärna. Vila 15–20 minuter täckt. Glaseringen (senap+socker eller honungssenap) appliceras de sista 20–30 minuterna.
+
 ## Research files by cooking method
 
 - [Oven Roast](./cured_ham-oven_roast.md)

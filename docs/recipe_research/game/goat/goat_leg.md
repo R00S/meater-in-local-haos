@@ -60,6 +60,12 @@ Whole goat leg (*Capra hircus*) is the hind limb, comprising the femur and the m
 Goat leg is a defining ingredient in Caribbean (curried goat), West African (pepper soup, oven-roasted), Greek (katsiki sto fourno), and Middle Eastern (whole roast with spices) festive cooking.
 
 
+## Styckesprofil
+
+Hel getlägg (*Capra hircus*) är baklemmen, bestående av lårbenet och de stora musklerna: *biceps femoris*, *semimembranosus*, *semitendinosus* och *quadriceps femoris*. Till skillnad från lammbenet — som kan serveras rosa vid 60–65 °C — har getbenet mer bindväv och en mer kraftfull, viltig fettprofil.
+
+De flesta kulinariska traditioner föredrar getbenet tillagat till 75–82 °C där bindväven har mjuknat och smakens viltighet mildrats. Vid dessa temperaturer har köttet fortfarande struktur — det är inte fall-från-benet-mörat om det inte tillagas ännu längre (88+ °C). Innertemperatur: **75–82 °C** (167–180 °F). Eftertillagning: 3–5 °C.
+
 ## Research files by cooking method
 
 - [Oven Roast](./goat_leg-oven_roast.md)

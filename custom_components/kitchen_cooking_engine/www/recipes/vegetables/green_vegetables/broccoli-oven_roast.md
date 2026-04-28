@@ -12,6 +12,10 @@ cut_type: Green Vegetables
 ## Cut profile
 Broccoli (*Brassica oleracea* var. *italica*) oven-roasted at 200–220 °C develops golden, caramelised floret tips and tender stems in 18–22 minutes. The key is maximum heat, generous spacing, and a completely dry surface. Broccoli contains enough natural sugars that Maillard browning begins quickly at 200+ °C, producing the "roasted broccoli" flavour that converted many vegetable-averse diners to its cause. Pull temperature: 80–85 °C (176–185 °F) for golden-crisp at the tips, tender at the stem.
 
+## Styckesprofil
+
+Broccoli (*Brassica oleracea* var. *italica*) ugnsrostad vid 200–220 °C utvecklar gyllenbrun, karameliserade blomtoppar och möra stjälkar på 18–22 minuter. Nyckeln är maximal värme, generös olja och ett enda lager. Klar när topparna är djupt brynnade.
+
 ## Source recipes
 
 ### 1. Marcella Hazan — Broccoli al Forno con Aglio (Italian tradition)

@@ -49,6 +49,12 @@ at 80 °C (as described in two German sources below) is the one acceptable excep
 the sear provides Maillard flavour and the short oven time (25 min at 80 °C) simply holds
 the meat at medium without further cooking.
 
+## Styckesprofil
+
+Grillning av bisonsteak är den nordamerikanska quintessens-beredningen och en av de få metoder där bisonens magra profil är en fördel: det minimala yttre fettlocket ger inga flammor från droppande fett. Använd direkt hög värme (230–260 °C / 450–500 °F) med grillen föruppvärmd och gallret olját.
+
+Vid 2,5–3 cm tjocklek ger 3–4 minuter per sida medium-rare. Viktigaste grillregeln för bison: dra 5–8 °C lägre än för nötkött — bison överkokkas snabbare, har kortare eftertillagning och straffar hårt för överkokning. Innertemperatur: **54–57 °C (130–135 °F)**. Dra vid 50–52 °C. Eftertillagning: 4–5 °C.
+
 ## Source recipes
 
 ### 1. Daskochrezept.de — Gegrilltes Bison-Filet-Steak in süß-scharfer Bier-Chili-Marinade (German tradition)

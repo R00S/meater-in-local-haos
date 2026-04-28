@@ -31,6 +31,12 @@ horizontally, aiming at the geometric centre. Keep the tip at least 1 cm clear o
 central spine bone, which conducts heat and gives a lagging reading. For a foil/parchment
 papillote, route the probe lead so the parcel can still be sealed.
 
+## Styckesprofil
+
+En laxbiff är ett tvärssnitt igenom hela fisken, vinkelrätt mot ryggraden, och behåller det centrala ryggradsbendet, de böjda revbenen och skinnet runt hela yttre kanten. Ugnsbakning passar detta snitt eftersom den allrunt-strålningsvärme arbetar på varje yta på en gång — tvärsnittsprofilen är ett ungefärligt hästskoformat utan platt botten, varför en panna är onödig men en ugnsform eller foliepaket omger biffen med het luft och ånga.
+
+De centrala benen leder varsamt värme mot den geometriska mitten, vilket något accelererar tillagningen jämfört med en fillet av samma tjocklek ugnsrostad på samma sätt. De tunna magliskorna överkokkar relativt ryggköttet om biffen läggs platt; att vika och säkra dem inåt, eller linda hela biffen i folie/bakplåtspapper med lite vätska (*en papillote*), är standardlösningen. Sondplacering: stick in från yttre kanten av ryggköttet horisontellt mot den geometriska mitten — håll spetsen minst 1 cm från ryggradsbendet. Eftertillagning: 1–2 °C. Innertemperatur: 52–60 °C.
+
 ## Source recipes
 
 ### 1. CuisineAZ — Darne de saumon en papillote facile (French / Culinary Group B tradition)

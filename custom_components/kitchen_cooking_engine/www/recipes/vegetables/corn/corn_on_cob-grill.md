@@ -12,6 +12,10 @@ cut_type: Corn
 ## Cut profile
 Corn on the cob (*Zea mays*) grilled develops a deeply caramelised, smoky exterior when the husks are removed and the bare cob contacts the grill grates. The natural sugars in the kernels (sucrose, which converts to fructose and glucose over time after harvest) caramelise and char where they contact the hot grates, producing the blistered, char-marked kernels characteristic of Mexican elote, Japanese yakimorokoshi, and Indian bhutta. The cob can be grilled in its husk (which steams the kernels) or stripped for direct contact charring. Internal kernel temperature at the ideal doneness — fully cooked, tender and slightly caramelised — is 82–90 °C (180–194 °F). A MEATER probe is inserted through the rows of kernels into the dense cob at the mid-point of the ear, with the tip in the centre of the cob. This monitors the temperature at the kernel-cob interface.
 
+## Styckesprofil
+
+Majs på kolven (*Zea mays*) grillad utvecklar en djupt karameliserad, rökig exteriör när skalen avlägsnas och den bara kolven kontaktar grillgallret. De naturliga sockerarterna karameliseras på 10–15 minuter vid hög direktvärme med vändning var 2:a minut.
+
 ## Source recipes
 
 ### 1. Diana Kennedy — Elote Asado con Chile y Crema (Mexican tradition)

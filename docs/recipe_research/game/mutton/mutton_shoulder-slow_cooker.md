@@ -26,6 +26,12 @@ Mutton shoulder from an older animal (12 months or more) is one of the best poss
 
 Target internal temperature: **88–95 °C (190–203 °F)** — mutton requires higher temperatures than lamb due to denser, older muscle fibres.
 
+## Styckesprofil
+
+Fåraxel från ett äldre djur (12+ månader) är ett av de bästa möjliga snitten för slow cooker. Den tätare bindväven och den starkare smaken som gör fårkött utmanande med snabba metoder blir tillgångar i slow cooker: under 7–9 timmar på LÅG löses kollagenet fullständigt, fettet smälter ned i en rik braiseringsvätska och axeln ger en extraordinärt djup, koncentrerad smak som yngre lamm inte kan matcha.
+
+MEATER-sonden stickas in i den tjockaste muskeln i axeln, borta från skulderbladsben. Innertemperatur: **88–95 °C (190–203 °F)** — fårkött kräver högre temperaturer än lamm på grund av tätare, äldre muskelfibrer. Eftertillagning: noll.
+
 ## Source recipes
 
 ### 1. Indian Healthy Recipes — Mutton Korma (slow cooker adaptation) (Indian / Mughlai tradition)

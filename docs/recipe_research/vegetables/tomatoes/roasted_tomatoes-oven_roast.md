@@ -12,6 +12,10 @@ cut_type: Tomatoes
 ## Cut profile
 Tomatoes (*Solanum lycopersicum*) oven-roasted undergo a profound transformation: the high water content (≈ 94 %) evaporates in the oven heat, concentrating the glutamate-rich flesh into an intensely sweet, umami-packed result. Low-and-slow roasting (120–150 °C for 1–3 hours) produces almost-dried, jammy results with deep flavour concentration; high-heat roasting (200–230 °C for 20–35 min) achieves blistered, caramelised edges while the interior stays juicy. Cherry tomatoes, plum tomatoes cut lengthwise, and whole large tomatoes all lend themselves to oven roasting. A MEATER probe inserted through the wall of a plum tomato or a larger cherry tomato monitors the internal temperature: at 82–88 °C (180–190 °F) the skin is blistered and the interior is collapsing but still holds shape; at 88–95 °C the tomato has fully collapsed and is releasing concentrated juices. Carryover is negligible — the high water content prevents heat accumulation.
 
+## Styckesprofil
+
+Tomater (*Solanum lycopersicum*) ugnsrostade genomgår en djupgående transformation: det höga vatteninnehållet (≈ 94 %) avdunstar i ugns-värmen, vilket koncentrerar de glutamat-rika köttet, karameliserar sockerarterna och intensifierar smaken avsevärt. 160–200 °C i 45–90 minuter beroende på storlek och metod. Klar när skrumpna, karameliserade och intensivt smakrika.
+
 ## Source recipes
 
 ### 1. Diana Kennedy — Jitomates Asados (Mexican tradition)

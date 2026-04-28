@@ -12,6 +12,10 @@ cut_type: Steaks
 ## Cut profile
 Flank steak is a flat, boneless cut from the abdominal wall, with prominent, long muscle fibres running along its length and minimal intramuscular fat. Gas grilling provides controllable, consistent heat for this thin, wide cut — the two-zone setup (direct high heat for searing, indirect zone for temperature equilibration) is essential because the thin cross-section can overshoot medium-rare very quickly under direct gas flames. Marinating is standard across most culinary traditions because the coarse muscle fibres benefit from acidic tenderisation and the mild flavour welcomes added aromatics. Carryover in a thin flank steak on a gas grill is minimal but present — the steak should be pulled slightly before the target to allow the brief rest to complete the temperature.
 
+## Styckesprofil
+
+Flank steak är ett platt, benfritt snitt från bukväggen med tydliga, långa fibrer längs hela stycket. Fibermönstret bestämmer skärningsdirektionen: alltid tvärs mot fibern efter tillagning — annars är steken seg och svårtuggad oavsett tillagningsnivå. Direkt grill vid hög värme (230–260 °C) ger bäst resultat: 3–5 minuter per sida för medium-rare. Marinering ökar smaken och mörheten. Innertemperatur: 52–57 °C. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Gas-Grilled Flank Steak

@@ -48,6 +48,10 @@ Turkey thigh is primarily cooked by oven roasting in Western culinary traditions
 
 Target internal temperature: **165 °F (74 °C)** minimum — **170–175 °F (77–79 °C)** preferred for dark meat
 
+## Styckesprofil
+
+Kalkontlår är den övre benets mörka köttssektion av kalkon, från höften till knäleden. Det säljs benfritt med skinn på eller benfritt skinnat. Innertemperatur: 80 °C. Eftertillagning: 4–5 °C. Mer saftigt och förlåtande än kalkonbröst.
+
 ## Research files by cooking method
 
 | Method | Leaf file | Status |

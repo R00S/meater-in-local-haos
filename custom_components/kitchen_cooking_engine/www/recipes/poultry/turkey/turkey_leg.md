@@ -54,6 +54,10 @@ muscle is thick (450–900 g / 1–2 lbs per leg).
 geometric centre of the thickest muscle mass. Keep the tip at least 1 cm from the central
 tibia bone, which conducts heat faster than the surrounding meat and gives falsely high readings.
 
+## Styckesprofil
+
+Kalkonstjälken (trumpinnen) är det nedre segmentet av fågelns bakre extremitet — *tibia* och *fibula* med omgivande mörkt-kötts-muskler från knäleden till ankeln. Det är det mest träningsintensiva partiet. Innertemperatur: 80 °C. Eftertillagning: 4–5 °C.
+
 ## Research files by cooking method
 
 | Method | Leaf file | Status |

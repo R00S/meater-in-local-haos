@@ -70,6 +70,14 @@ toward the geometric centre of the cross-section. Keep the tip at least 1 cm fro
 spine bone, which conducts heat and will give a lagging reading. Never insert from the belly-flap
 side — too thin.
 
+## Styckesprofil
+
+En laxbiff är ett tvärssnitt genom hela fisken, vinkelrätt mot ryggraden. Den resulterande formen är ett ungefärligt hästskoformat tvärsnitt: den tjockaste ryggköttsektionen sitter ovanför och runt det centrala ryggradsbendet, medan två magliskelober kurvar inåt nedanför. Skinn finns på alla yttre kanter. Till skillnad från en filé (sidsnitt) behåller en laxbiff det centrala ryggradsbendet plus de böjda revbenen, som leder värme mot insidan — något accelererat tillagning runt benet jämfört med den sanna mitten.
+
+Ryggköttsektionen innehåller samma skiktade myotom- och myokommat-struktur som en filé; tillagningstemperaturmålen är identiska. Magliskorna är väsentligt tunnare och överkokkar relativt ryggavsnittet om biffen läggs platt; erfarna kockar antingen viker och säkrar liskorna inåt eller accepterar att de blir välgenomstkta.
+
+**Temperaturmål**: USDA säkert minimum: 63 °C. Kulinarisk preferens: **54 °C** (varm, precis ogenomskinlig, fuktig mitt). Medium-rare: 49 °C (lätt genomskinlig, inte USDA-säker). Sondplacering: stick in från yttre ryggköttkanten mot tvärsnittets geometriska mitt, minst 1 cm från ryggradsbendet.
+
 ## Research files by cooking method
 
 | Method | Leaf file | Status |

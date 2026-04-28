@@ -62,6 +62,12 @@ collagen to gelatin — the collagen-dissolution range is 88–96 °C / 190–20
 keeping the tip in the thickest continuous lean intercostal section, clear of bone surface. Run
 parallel to the bone. The centre third of the rack gives the most representative reading.
 
+## Styckesprofil
+
+St. Louis-style ribs är den rektangulära, trimmade versionen av hela fläskspareribs, skurna från revbenens nedre del — under baby back ribs, från ca revben 3 till 12. De är tjockare, fetare och köttiga än baby back ribs och kräver längre tillagningstid.
+
+Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertillagning: försumbar. Sond längs benets riktning in till köttmassan, borta från benet. Tillagningstid: 3–4 timmar vid 150 °C i folie, sedan 20–30 min öppen med BBQ-glasering.
+
 ## Research files by cooking method
 
 | Method | Leaf file | Status |

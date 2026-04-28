@@ -29,6 +29,10 @@ same method and temperature targets apply across these sub-cuts.
 **Culinary Group A gap**: Dry oven roasting a whole round joint is not documented in
 confirmed-reachable South Asian, East Asian, or South-East Asian recipe sources.
 
+## Styckesprofil
+
+"Rundbitsstek" är ett generiskt begrepp för vilken ugnstek som helst skuren från rundbotten — bakkvartersprimalen — inklusive övre innanlår, yttersida, sirloin tip och ögonbiff. Det är ett av de magrare, hårt arbetade områdena av djuret; lite intramuskulärt fett och tät muskelstruktur innebär att felaktig tillagning ger torrt, segt resultat. Rätt tillagad (långsamt, till rare–medium-rare) är rundbitten utmärkt med en fin, jämn textur.
+
 ## Source recipes
 
 ### 1. Good Food — Easy Roast Beef (British tradition)

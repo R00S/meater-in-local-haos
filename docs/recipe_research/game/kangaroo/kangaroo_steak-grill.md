@@ -26,6 +26,12 @@ Kangaroo rump steak and loin fillet are the preferred cuts for grilling. The ext
 
 Target internal temperature: **52–55 °C (126–131 °F)** for medium-rare. Pull at 50 °C to account for carry-over on the grill.
 
+## Styckesprofil
+
+Känguru-rumpstek och loin-filé är de föredragna snitten för grillning. Den extrema magreten (under 2 % fett) innebär att grillen måste förvärmas till mycket hög temperatur och tillagningstiden vara kort — typiskt 2–3 minuter per sida över direkt hög värme. Längre tid ger torrt, hårt kött.
+
+Marinering i olja före grillning rekommenderas i stor utsträckning för att förhindra fastsnande och tillföra ett yta-barriär mot fuktförlust. Innertemperatur: **52–55 °C (126–131 °F)** för medium-rare. Dra vid 50 °C för att ta hänsyn till eftertillagning. Välgenomstekt avråds starkt.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Gegrilltes Kängurusteak auf australische Art (German/Australian tradition)

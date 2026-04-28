@@ -26,6 +26,12 @@ Wild boar (*Sus scrofa*) loin chops (Wildschwein-Koteletts / côtelettes de sang
 
 Target internal temperature: **70–72 °C (158–162 °F)** for safe consumption of wild-caught pork. Some grillmasters pull at 65 °C for a pink interior.
 
+## Styckesprofil
+
+Vildsvinskotletter (*Sus scrofa*; *Wildschwein-Koteletts* / *côtelettes de sanglier*) tas från djurets rygg och inkluderar ett revbenslben, liknande fläskkotletter men med mörkare, tätare kött och en uttalad vildarom. Fettinnehållet varierar beroende på årstid — höstens vildsvin bär mer fett.
+
+Det mörkare köttet och starka smaken gynnas av kraftfull kryddning: enbär, rosmarin, timjan, rödvin, senap. Grilla eller steka i gjutjärnspanna vid medel-hög värme, 4–5 minuter per sida. Innertemperatur: **65–70 °C (149–158 °F)** för genomstekt rosa till genomstekt. Eftertillagning: 3–4 °C. Sond i tjockaste muskeldelen borta från revbensbenet.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Grilled Wild Boar Chops (UK tradition)

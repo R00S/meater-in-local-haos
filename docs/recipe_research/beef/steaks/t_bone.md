@@ -70,6 +70,12 @@ The T-bone steak is defined by the T-shaped lumbar vertebra that separates two a
 T-bone is cut from the short loin, anterior to the sirloin. Thickness is typically 2.5–4 cm; a *porterhouse* is cut from the same region but thicker and with a larger fillet portion. The MEATER probe is always placed in the striploin portion, away from the bone, for the most reliable temperature reading.
 
 
+## Styckesprofil
+
+T-bone-biffen definieras av det T-formade ländkotan som separerar två anatomiskt distinkta muskler: det större *striploin* (*longissimus dorsi*) på benets långa sida, och det mindre *filén* (*psoas major*) på den korta sidan. Detta är T-bonens definierande strukturella drag — den levererar två olika matupplevelser i en biff, men skapar en tillagningsutmaning: filén tillagas snabbare och torkar ut ovanför 60 °C, medan stripen tål något högre temperaturer. Benet i sig fungerar som en termisk isolator, vilket innebär att köttet omedelbart intill benet ligger 3–5 °C efter den öppna muskeln.
+
+T-bone skärs från den korta länden, framför entrecôten. Tjockleken är typiskt 2,5–4 cm; en *porterhouse* skärs från samma region men tjockare och med en större filéandel. MEATER-sonden placeras alltid i striploin-portionen, borta från benet, för den mest tillförlitliga temperaturavläsningen. Innertemperatur: 54–57 °C (striploin). Eftertillagning: 4–5 °C.
+
 ## Research files by cooking method
 
 - [Air Fryer](./t_bone-air_fryer.md)

@@ -15,6 +15,10 @@ Pan frying liver is the classic European preparation — and the caramelised oni
 
 The onion-liver interaction is important: onions going into the pan before the liver means the flavours integrate in the pan juices. MEATER probe inserted sideways through the centre of a 6–8 mm slice. Pull at 62–63 °C; carryover 1–2 °C. Serve immediately — liver continues cooking on the plate from retained heat.
 
+## Styckesprofil
+
+Stekning av lever i panna är den klassiska europeiska beredningen — och den karameliserade löken är inte ett komplement utan en smakbalans: leverns järnrika bitterhet möter löksötman. Lever är ett körtelvävnadsorgan med hög vatteninnehåll och lågt fettinnehåll; vid pannstek karameliseras ytan snabbt i direkt kontakt med en het panna. Tillagning ska vara snabb — 2–3 minuter per sida vid hög värme — och innertemperaturen ska nå 71 °C. Överkokad lever blir grynig och torr; underkokad lever har en järnig, blodig smak som avskräcker många. Eftertillagning är liten på grund av organets tunna geometri.
+
 ## Source recipes
 
 ### 1. Marcella Hazan — Fegato di Manzo alla Veneziana (Venetian Italian tradition)

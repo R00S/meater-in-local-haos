@@ -48,6 +48,12 @@ Target internal temperatures (grill):
 - Juicy/slightly pink: **63–65 °C (145–149 °F)**
 
 
+## Styckesprofil
+
+Fläskfilé (*svinemørbrad* danska/norska; *Schweinefilet* tyska; *solomillo de cerdo* spanska; *filet mignon de porc* franska) är *psoas major* — den långa, avsmalnande loin-muskeln längs insidan av ländkotorna. Det är det mest möra snittet av fläsk och extremt magert (< 2 % fett).
+
+Pannstekning, grillning, ugnsrostning och sous vide ger alla bra resultat. Alla metoder kräver noggrann temperaturkontroll. Innertemperatur: **63 °C (145 °F)** USDA (med 3 min vila); **68 °C** för lätt rosa mitt. Eftertillagning: 2–3 °C. Sond längsvis in till mitten av filén. Vila 5 minuter täckt.
+
 ## Research files by cooking method
 
 - [Air Fryer](./pork_tenderloin-air_fryer.md)

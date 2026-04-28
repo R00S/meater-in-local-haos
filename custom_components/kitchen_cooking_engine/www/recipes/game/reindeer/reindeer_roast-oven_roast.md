@@ -26,6 +26,12 @@ Reindeer roast (renstek) is a traditional Sami and Scandinavian festive dish. Th
 
 Target internal temperature: **57–62 °C (135–144 °F)** for medium. Pull at 55 °C and rest.
 
+## Styckesprofil
+
+Renstek (*renstek*) är en traditionell samisk och skandinavisk festrätt. Innanlåret (innanlår) eller sadeln är de vanligaste snitten. Skandinavisk metod: sear i en het panna, sedan avsluta i en mycket låg ugn (100–125 °C) med sonden insatt för att uppnå exakt tillagning utan risk för överkokning av det magra köttet.
+
+Klassiska tillbehör: rensålt smör, lingon, pressgurka, rostad potatis, kokt kål. Innertemperatur: **57–62 °C (135–144 °F)** för medium (rosa mitt); **68 °C** för medium-well. Eftertillagning: 4–5 °C. Sond in i den tjockaste köttmassan, borta från ben. Dra steken 5–6 °C under mål och vila täckt 15 minuter.
+
 ## Source recipes
 
 ### 1. Köket.se — Reninnanlår à la Norrland (Swedish tradition, oven method)

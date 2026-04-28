@@ -26,6 +26,12 @@ A chicken burger patty is made from ground chicken — typically a blend of dark
 
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry
 
+## Styckesprofil
+
+En kycklingburgerbiff är gjord av malet kyckling — typiskt en blandning av mörkt kött (lår och lägg) för smak och fett, eller vitt kött (bröst) för ett magrare alternativ. Malet kyckling är magrare och klibbigare än nötkött, varför binda med ägg och panko är avgörande.
+
+Tillaga alltid malet kyckling till 74 °C (165 °F) internt. Innertemperatur: **74 °C (165 °F)** USDA. Eftertillagning: 2–3 °C. Sond horisontellt från sidan in till biffens mitt. Vila 3–5 minuter.
+
 ## Source recipes
 
 ### 1. Skinnytaste — Grilled Turkey / Chicken Cheeseburger (Juicy Lucy)

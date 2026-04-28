@@ -12,6 +12,10 @@ cut_type: Cruciferous
 ## Cut profile
 Cabbage (*Brassica oleracea* var. *capitata*) on the grill is most dramatic as thick wedges or halves placed directly on high-heat grates, developing charred outer leaves and a creamy-tender core. The outer leaves act as insulation and protectors: they carbonise at the surface while the inner leaves steam. The technique is particularly popular in Korean BBQ (ssam-style grilled cabbage leaves), Indian street-food style (whole cabbage on coal), Japanese *yakiniku* preparations, and in the new American vegetable-forward grilling style. Pull temperature: 85–90 °C (185–194 °F) at the core of a grilled wedge — the outermost leaves will be charred, the inner ones silky-tender. MEATER probe is inserted through the outer leaves into the thickest part of the core.
 
+## Styckesprofil
+
+Kål (*Brassica oleracea* var. *capitata*) på grillen är mest dramatisk som tjocka klyftor eller halvor placerade direkt på heta grillgallret, och utvecklar förkolnade ytterblad och en krämig insida. Grilla med olja i 5–6 minuter per sida vid direkt hög värme.
+
 ## Source recipes
 
 ### 1. Maangchi — Yangbaechu Gui (Korean Grilled Cabbage — BBQ style)

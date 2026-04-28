@@ -26,6 +26,12 @@ Grilling ostrich steak requires significantly more attention than grilling beef 
 
 South African *braai* tradition (charcoal) is the indigenous method for ostrich; the smoke compounds add complexity that compensates for the meat's mild flavour. Pull at 52 °C to rest to 54–57 °C medium-rare. Carryover from a very hot grill is 3–5 °C — pull early. Above 65 °C the meat becomes dry and chewy.
 
+## Styckesprofil
+
+Grillning av strutsfilé kräver avsevärt mer uppmärksamhet än nötkött på grund av den totala avsaknaden av intramuskulärt fett. Direkt hög värme (230–260 °C / 450–500 °F vid gallernivå) med grillen föruppvärmd och gallret olját och strutsens yta penslade med olja.
+
+Vid 2,5–3 cm tjocklek ger 2–3 minuter per sida en brynnad skorpa och ett rosa inre. Dra vid 57 °C — eftertillagning tar struts snabbt från perfekt medium-rare till torr och överkokad på under ett minut. Innertemperatur: **60–63 °C (140–145 °F)** för medium. Välgenomstekt avråds starkt. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. South African Braai tradition — Classic braaied ostrich steak

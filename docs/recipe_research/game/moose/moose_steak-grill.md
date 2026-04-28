@@ -26,6 +26,12 @@ Moose steak (Elchsteak / älgbiff) is cut from the loin or haunch. It is very le
 
 Target internal temperature: **57–62 °C (135–144 °F)** for medium-rare to medium.
 
+## Styckesprofil
+
+Älgstek (*Elchsteak* / älgbiff) skärs från rygg eller haunch. Det är mycket magert med en rik, jordig smak. Grillning vid hög värme under kort tid är det traditionella nordiska tillvägagångssättet; köttet ska sears snabbt och dras vid medium-rare för att förhindra torrhet.
+
+Marinering i olja och sura komponenter (vin, vinäger, citron) före grillning är standardpraxis. Tillagningstid: 3–4 minuter per sida vid direkt hög värme (230–260 °C). Innertemperatur: **57–62 °C (135–144 °F)** för medium-rare till medium. Eftertillagning: 3–4 °C. Dra vid 54–58 °C.
+
 ## Source recipes
 
 ### 1. Tasteline.com — Grillad älgbiff (Swedish grilled moose steak)

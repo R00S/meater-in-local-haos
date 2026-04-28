@@ -61,6 +61,10 @@ quality_assessed: 2026-04-26
 Flank steak is a flat, thin muscle cut from the abdominal wall of the animal (the flank primal), with long, coarse muscle fibres running visibly along its length. The cut is lean, relatively tough, and has minimal intramuscular fat — it lacks the marbling of a ribeye but compensates with bold, beefy flavour. Charcoal grilling is the quintessential method for flank steak: the high, direct radiant heat from glowing embers creates a rapid, intense Maillard crust across the wide flat surface before the interior has time to overcook. Flank steak must be cooked quickly over very high heat and sliced thinly across the grain for tenderness — cooking it slowly defeats the purpose. Carryover is minimal in a thin flank steak, but because it is typically cooked over extremely high heat, the brief internal temperature rise after removal from the grill can bring the steak from medium-rare to medium if not watched carefully.
 
 
+## Styckesprofil
+
+Flank steak är en platt, tunn muskel skärd från bukväggen på djuret (*rectus abdominis* + *obliques*) — ett av de hårt arbetade, kraftigt fibermarkerade och smakrika snitten som kräver rätt hantering för att ge bästa resultat. Träkol tillsätter karaktäristisk rökighet till det redan intensiva flank-köttet; höga temperaturer och snabb tillagning är avgörande. Innertemperatur: 52–57 °C medium-rare. Det är kritiskt att skära tvärs mot fibern efter tillagning — längs med fibern gör steken tuggig och svårätlig. Eftertillagning: 2–3 °C.
+
 ## Research files by cooking method
 
 - [Charcoal Grill](./flank_steak-charcoal_grill.md)

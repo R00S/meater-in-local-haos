@@ -12,6 +12,12 @@ cut_type: Other / Offal
 ## Cut profile
 Braising is the classic match for pork cheek. The dense collagen network — built up by the jaw's constant chewing motion — converts fully to gelatin during extended moist heat (150–160 °C oven, 2–3 hours), giving the finished cheek a spoon-tender, gelatinous texture and enriching the braising liquid. The cheeks are cooked whole (unbutterflied), submerged roughly three-quarters in aromatic liquid. High intramuscular fat slowly renders and mingles with the sauce. Target pull temperature is 91–94 °C (196–201 °F); at lower temperatures the collagen remains rubbery. Carryover carry-on after pulling is 3–5 °C given the thick, fat-insulated geometry.
 
+## Styckesprofil
+
+Bräsering är det klassiska alternativet för fläskkind. Det täta kollagennätet — byggt upp av käkens konstanta tuggande rörelse — omvandlas fullständigt till gelatin under förlängd fuktig värme (150–160 °C ugn, 2–3 timmar), vilket ger ett spoon-tender, gelatinöst resultat.
+
+Bryn kinden i het panna, lägg i braiseringskärl med fond, sherry, vin och aromater, täck och koka vid 160 °C i 2–3 timmar. Innertemperatur: **85–90 °C (185–194 °F)** för spoon-tender. Eftertillagning: försumbar. Sond in i tjockaste köttmassan.
+
 ## Source recipes
 
 ### 1. José Pizarro — Carrillera de Cerdo al Vino Tinto (Spanish tradition)

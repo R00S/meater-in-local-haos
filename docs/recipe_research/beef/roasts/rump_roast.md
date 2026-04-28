@@ -74,6 +74,10 @@ braising, covered cooking with wine/stock transforms the cut into pull-apart ten
 **Slicing**: Always slice against the grain for the most tender result. The tight grain of
 round/rump cuts makes slicing direction critical.
 
+## Styckesprofil
+
+Rumpbiffstek skärs från primalen **rundbotten** — höftpartiet vid bakkvarteret. I Nordamerika är "rump roast" ett snitt från övre bakkvarteret med måttlig mörhet, inte jämförbart med de mörare brittiska/australiensiska rumpsnitten. Det är ett magrare, tät muskelverk med viss intramuskulär fettinlagring. Lång, långsam ugnsstekning till antingen medium (60–63 °C) eller pull-apart-mörhet (88–95 °C vid brässering) ger bäst resultat. Eftertillagning: 3–5 °C vid normal ugnsstekning.
+
 ## Research files by cooking method
 
 | Method | Leaf file | Status |

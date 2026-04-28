@@ -13,6 +13,12 @@ cut_type: White Fish
 
 Air frying cod creates a hot-air convection environment that efficiently dries and browns the surface coating (breadcrumbs, panko, or seasoned flour) without submerging the fillet in fat. The result is a crust with lower fat content than deep frying but more surface crunch than oven baking. Cod's lean flesh (< 1% fat) responds well because the forced air circulation prevents steam-soaking of the crust, which is a common oven-baking problem. Fillets of 2–3 cm thickness cook in 10–14 minutes at 190–200 °C. Pull at 60–63 °C; carryover is minimal (2–3 °C) given the lean, thin geometry.
 
+## Styckesprofil
+
+Airfryer-tillagning av torskfilé skapar en hetluftskonvektionsmiljö som effektivt torkar och bryner ytbeläggningen (ströbröd, panko eller kryddad mjöl) utan att sänka ner filén i fett. Resultatet är en skorpa med lägre fettinnehåll än fritering men mer yta-krunch än ugnsbakning.
+
+Torskens magra kött (< 1% fett) reagerar bra eftersom den forcerade luftcirkulationen förhindrar ångsoakande av skorpan, vilket är ett vanligt ugnsbakningsproblem. Filéer med 2–3 cm tjocklek tillagas på 10–14 minuter vid 190–200 °C. Dra vid 60–63 °C; eftertillagning är minimal (2–3 °C) given den magra, tunna geometrin. Innertemperatur: 60–63 °C.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air-Fryer Cod (American tradition)

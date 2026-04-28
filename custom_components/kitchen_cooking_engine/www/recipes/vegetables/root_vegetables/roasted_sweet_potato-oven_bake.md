@@ -12,6 +12,10 @@ cut_type: Root Vegetables
 ## Cut profile
 Whole baked sweet potato (*Ipomoea batatas*) in the conventional oven at 190–200 °C achieves a deeply caramelised, slightly wrinkled skin and a soft, jammy interior in 50–70 minutes depending on size. The low-and-slow heat allows the amylase enzymes in the sweet potato to convert starches to sugars, producing an intensely sweet result (particularly with Japanese *satsuma-imo* varieties). Pull temperature: 96–98 °C (205–208 °F) at the thickest centre. MEATER probe along long axis into the geometric centre.
 
+## Styckesprofil
+
+Hel bakad sötpotatis (*Ipomoea batatas*) i konventionell ugn vid 190–200 °C uppnår en djupt karameliserad, lätt skrumpna yta och mjuk, syltliknande insida på 50–70 minuter. Klar när insidan är 98–100 °C och sötpotatisskalet är knaprig och karameliserad.
+
 ## Source recipes
 
 ### 1. Harumi Kurihara — Whole Baked Yakiimo (Japanese tradition)

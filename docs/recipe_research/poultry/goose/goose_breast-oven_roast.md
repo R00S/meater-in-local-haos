@@ -26,6 +26,10 @@ Goose breast is a rich, deeply flavoured dark meat with a substantial fat layer,
 
 Target internal temperature: **145–155 °F (63–68 °C)** — medium; pull at 140 °F and rest. USDA safe minimum: 165 °F (74 °C) — pull at 160 °F and rest.
 
+## Styckesprofil
+
+Gåsbröst är ett rikt, djupt smakrikt mörkt kött med ett kraftigt fettlager, liknande ankbröst i karaktär men större och mer uttalad smak. Liksom ankbröst serveras det ofta medium-rare. Ugnsstekning efter pannsearing: ugn vid 180 °C i 8–12 minuter. Innertemperatur: 57–63 °C. Eftertillagning: 3–5 °C.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Slow-Roast Duck (fat-rendering principles adapted for goose breast)

@@ -28,6 +28,12 @@ Target internal temperature: **54–57 °C (130–135 °F)** for medium-rare. Pu
 
 The European tradition — particularly German and Swiss cooks who receive bison via specialist game suppliers — finishes pan-seared bison at 80 °C oven temperature after an initial sear (the "low-and-slow after sear" method). North American tradition is typically direct high-heat pan only.
 
+## Styckesprofil
+
+Bisonsteak (*Bison bison*) — vanligast skärd från entrecôte, rygg eller övre entrecôte — är magrare än nötkött men liknande strukturerat, med djup rubinröd färg och lätt söt, jordig smak. Eftersom bison har mycket litet intramuskulärt fett överkokkas det snabbt.
+
+Pannstekning vid hög värme till medium-rare och vilning är standardmetoden. Dra bisonsteak 3–5 °C lägre än motsvarande nötköttstemperatur — eftertillagning är liknande (3–5 °C) men fönstret mellan perfekt och överkokad är smalt. Innertemperatur: **54–57 °C (130–135 °F)**. Välj aldrig well-done.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Bisonsteak mit Büffelmozzarella auf Wildpilzgemüse (German tradition)

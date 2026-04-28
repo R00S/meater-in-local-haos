@@ -12,6 +12,10 @@ cut_type: Cruciferous
 ## Cut profile
 Cauliflower (*Brassica oleracea* var. *botrytis*) in the air fryer achieves crispy, golden-brown florets in 12–16 minutes — faster than a conventional oven and with less oil required. The rapid convection is particularly effective at evaporating the cauliflower's surface moisture (florets are ≈ 92 % water) before Maillard browning begins. Air-fried cauliflower is a globally popular preparation: from Indian gobi tikka (marinated in spiced yoghurt) to Korean spicy *gobi*, Israeli za'atar cauliflower, and plain roasted Western versions. Pull temperature: 80–86 °C (176–187 °F) for golden, fully tender florets. A MEATER probe is inserted through the stem of the largest floret into its centre before the cook begins.
 
+## Styckesprofil
+
+Blomkål (*Brassica oleracea* var. *botrytis*) i airfryern ger knaprig, gyllenbrun blomma på 12–16 minuter — snabbare än en konventionell ugn och med mindre olja. Dela i buketter, olja, krydda. Klar när gyllenbrun och crispy.
+
 ## Source recipes
 
 ### 1. Madhur Jaffrey — Gobi Tikka (Air Fryer — Indian tradition)

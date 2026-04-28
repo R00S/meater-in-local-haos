@@ -15,6 +15,10 @@ Gas-grill skirt steak requires maximum direct heat — all burners on high, lid 
 
 Marinating before grilling is highly recommended: 30 minutes to 2 hours in citrus/acid + oil + garlic/spices (fajita marinade) tenderises the coarse fibres and adds flavour. MEATER probe inserted from the end of the steak, angling toward the thickest section. Pull at 49–54 °C; carryover from a hot grate is 4–5 °C, reaching 52–57 °C (medium-rare). Always rest 5 minutes and slice against the grain.
 
+## Styckesprofil
+
+Gassgrill-skirt steak kräver maximal direkt värme — alla brännare på högt, lock stängt för att förvärma gallret till 260–280 °C yttemperatur. Biffen läggs på den hetaste delen av gallret; målet är en mörk, mahognybrun sear på båda sidorna på så få minuter som möjligt för att insidan inte hinner överkoka. Innertemperatur: 52–57 °C medium-rare. Skär alltid tvärs mot fibern. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. Bobby Flay — Grilled Skirt Steak Fajitas (Tex-Mex tradition)

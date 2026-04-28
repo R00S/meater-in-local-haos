@@ -15,6 +15,12 @@ Pan searing pork liver differs from pan frying in that the coating is minimal or
 
 At 6–12 mm thickness, sear 60–90 seconds per side. The interior must remain pink to be tender; fully grey liver is overcooked regardless of temperature. Pull at 60–65 °C for European-style pink centre, or 71 °C for USDA compliance. Carryover: 1–2 °C for thin slices — pull early. Serve immediately; liver continues cooking on the plate.
 
+## Styckesprofil
+
+Pannstekning av fläsklever (utan hölje) syftar till en ren, ohöljd searing direkt på leverköttytan, vilket producerar en djupt karameliserad skorpa vid direkt kontakt med den heta, nästan torra pannan.
+
+Het gjutjärnspanna med minimal olja, max värme, 2–3 minuter per sida. Innertemperatur: **70–75 °C (158–167 °F)** för genomstekt. Eftertillagning: 2–3 °C. Sond insatt horisontellt in till mitten av leverbitens tjockaste del. Servera omedelbart. Undvik överkokad (> 78 °C) — lever härdnar snabbt.
+
 ## Source recipes
 
 ### 1. Fergus Henderson — Pig's Liver, Bacon and Onions (British nose-to-tail tradition)

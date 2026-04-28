@@ -12,6 +12,10 @@ cut_type: Steaks
 ## Cut profile
 Filet mignon (psoas major, small end of the tenderloin) is the leanest and most tender steak cut — the muscle does almost no physical work during the animal's life, producing a fine-grained, almost fat-free texture. Pan searing differs from pan frying in that it uses very high heat and minimal fat, relying on the Maillard reaction at the immediate contact surface rather than on fat submersion. For filet mignon, pan searing creates the same surface crust as pan frying but with a drier, more intense browning character and without the pooled-fat basting effect — finishing with a compound butter or glaze compensates. Carryover in a pan-seared filet mignon is minimal because the hot metal contact ceases immediately on removal; the probe reading at removal is very close to the final serving temperature.
 
+## Styckesprofil
+
+Filet mignon (*psoas major*, liten ände av filén) är den magraste och möraste biffen i vilket slakteri som helst — med minimalt intramuskulärt fett och utan bindvävsinslag. Pannsearing ger den förtjänad maillardyta utan överkokad risk om värmen och timingen är rätt. Het panna, smör + neutralt fett, hög värme, 2–3 minuter per sida för standardtjocklek (4–5 cm). Innertemperatur: 52–55 °C rare, 55–58 °C medium-rare. Eftertillagning: 3–5 °C — ta av från pannan tidigt.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Rapid-Flip Pan Sear (Serious Eats method)

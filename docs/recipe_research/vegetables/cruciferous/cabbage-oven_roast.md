@@ -12,6 +12,10 @@ cut_type: Cruciferous
 ## Cut profile
 Cabbage (*Brassica oleracea* var. *capitata*) is a dense, layered head of overlapping leaves built around a thick stem. Sliced into wedges with the stem intact, the leaves stay attached and the wedge holds together through the cook; sliced into "steaks" across the stem axis, the inner ribs caramelise into deeply sweet, almost meat-like slabs. Oven roasting at 200–220 °C drives off surface water rapidly so that the outer leaves blister and brown via Maillard reactions while the dense interior softens through gentle steam from the leaves' own moisture. Carryover is moderate (3–5 °C) because the layered structure traps heat in the centre. Pulling slightly under target keeps the inner leaves silken rather than collapsed.
 
+## Styckesprofil
+
+Kål (*Brassica oleracea* var. *capitata*) är ett tätt, laminerat huvud av överlappande blad. Skivad i klyftor med stammen intakt håller bladen samman under ugnsstekning. Ugn vid 200–220 °C i 30–40 minuter. Klar när ytterbladen är förkolnade och insidan mjuk.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Roasted Cabbage Wedges (American tradition)

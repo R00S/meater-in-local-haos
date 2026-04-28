@@ -12,6 +12,10 @@ cut_type: Ground
 ## Cut profile
 Ground beef burger patties pan-fried in a skillet are the indoor standard for domestic cooking, relying on the same fat-in-meat mechanics as grilled burgers but with a different heat-transfer medium: a heavy iron or steel pan rather than open grill grates. Chuck-based blends (80/20) are standard; the high fat content is essential because pan frying occurs in a shallow pool of rendered fat that accumulates during the cook. The enclosed pan environment retains moisture more than an open grill, and the solid flat surface creates full contact Maillard browning across the entire patty face — broader coverage but less char-and-smoke complexity than a grill. Carryover in pan-fried burgers is minimal to negligible given the thin geometry, though cast-iron skillets retain heat and can continue cooking the bottom face even after removal.
 
+## Styckesprofil
+
+Köttburgarbiffar stekta i panna är hemmakökstandarden för doneness-kontroll inomhus: pannan producerar en intensiv maillardyta på de plana sidorna och möjliggör visuell bedömning av stekningsgrad längs kanten. Den utsmälta fettet samlas i pannan och agerar som basting, vilket håller botten fuktig och hjälper till att värma biffens inre. Eftertillagning är minimal för tunnare biffar (1,5–2 cm) men märkbar (3–4 °C) för restaurangstjocka patties (2,5–3 cm); avläsning kort innan sluttemperatur och vila utanför pannan ger bättre precision.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Pan-Fried Smash Burger

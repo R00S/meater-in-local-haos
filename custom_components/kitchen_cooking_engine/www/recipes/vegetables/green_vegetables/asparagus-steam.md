@@ -12,6 +12,10 @@ cut_type: Green Vegetables
 ## Cut profile
 Asparagus (*Asparagus officinalis*) steamed is the most flavour-preserving method: spears rest in a steamer basket above boiling water for 4–8 minutes (depending on thickness), emerging bright green, tender-crisp, and with their delicate grassy-sweet flavour intact. Unlike boiling, the water-soluble sugars and vitamins are not lost. The steamed asparagus is then dressed with various sauces from butter and lemon (French) to sesame and soy (Chinese/Japanese) to hollandaise (classic European). Pull temperature: 78–82 °C (172–180 °F) for tender-crisp; 82–85 °C (180–185 °F) for fully tender. MEATER probe inserted along the long axis of the thickest spear from the cut end, tip at mid-point.
 
+## Styckesprofil
+
+Sparris (*Asparagus officinalis*) ångad är den mest smakbevarande metoden: sparrisarna vilar i en ångkogskorge ovanför kokande vatten i 4–8 minuter (beroende på tjocklek). Klar när knäcks rent vid böjning och ljusgröna.
+
 ## Source recipes
 
 ### 1. Julia Child — Asperges à la Vapeur, Sauce Hollandaise (French tradition)

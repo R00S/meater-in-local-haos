@@ -21,6 +21,10 @@ The sirloin roast (top sirloin roast in North American butchery) is a boneless o
 
 **Group A gap**: Oven-roasting a whole sirloin joint is not a documented culinary tradition in the cooking cultures of South Asia, East Asia, or South-East Asia as accessed through verified sources in this project. The closest approximation — Chinese *red-braised* beef or Kerala stovetop beef roast — uses braising liquids and stovetop heat, not a dry oven. No Group A recipe is cited in this leaf; the gap is noted and will remain open until a verified source is found.
 
+## Styckesprofil
+
+Entrecôtestek (övre entrecôtestek i nordamerikansk styckningsnomenklatur) är en benfri, tät muskel från entrecôteprimalen ovanför bakkvarteret. Den är mager med begränsad marmorering men en utmärkt nötssmak från de måttligt aktiva musklerna. Ugnsstekning ger bäst resultat med omvänd searing: låg ugnstemperatur (120–135 °C) till 5–8 °C under måltemperaturen, sedan hög avslutningsvärme för maillardyta. Innertemperatur: 54–57 °C för medium-rare, max 60 °C för medium. Eftertillagning: 3–5 °C.
+
 ## Source recipes
 
 ### 1. Chef Simon — Rôti de Boeuf (French classical tradition)

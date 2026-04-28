@@ -35,6 +35,12 @@ Buffalo/bison burger (ground buffalo patty, grilled) is one of the most popular 
 Target internal temperature: **70–74 °C (158–165 °F)** (ground meat food safety standard in the US and EU); some chefs serve at 63 °C (medium) as a restaurant preference.
 
 
+## Styckesprofil
+
+Buffalo/bisonburgare (malet bison, grillad) är en populär beredning i Nordamerika. Det magra malade köttet ger en fast, smakrik biff. Bisonens extrema magerhet innebär att grillbiffar behöver kortare tillagningstid än nötkötsbiffar — övervaka noggrant för att undvika torr konsistens.
+
+Att tillsätta en liten mängd fett till blandningen förhindrar torrhet. Innertemperatur: **71 °C (160 °F)** USDA-minimum för malet kött. Eftertillagning: 2–3 °C. Tillagningstid: 3–4 minuter per sida vid medel-hög grillvärme. Sond från sidan in mot mitten av biffens tjockaste del.
+
 ## Research files by cooking method
 
 - [Grill](./buffalo_burger-grill.md)

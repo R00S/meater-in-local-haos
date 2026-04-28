@@ -28,6 +28,12 @@ Target internal temperatures (sous vide):
 - **INKBIRD app default**: **68 °C / 154 °F × 24 h** — moist, silky, slight chew
 - **Author's preference**: **75 °C / 167 °F × 24 h** — slightly firmer, fat fully rendered, easier to crisp afterwards
 
+## Styckesprofil
+
+Fläskbuk lämpar sig idealiskt för sous vide. Det rikliga intramuskulära fettet och bindväven smälter ned och omvandlas till gelatin vid låga temperaturer (60–75 °C), vilket ger en silkig, smörsoft textur som är omöjlig att uppnå med snabbare metoder.
+
+Sous vide-parametrar: **72–80 °C** i 24–48 timmar; sear sedan snabbt i skrikhet panna med svålen nedåt för kris. Innertemperatur: **72–80 °C** beroende på önskad textur — lägre för mjukare, gelatinöst resultat. Eftertillagning: försumbar (sous vide). Sond insatt längsvis in till mitten av buken.
+
 ## Source recipes
 
 ### 1. INKBIRD Blog / tastybits.de — Asian-style Pork Belly Sous Vide (75 °C × 24 h)

@@ -12,6 +12,12 @@ cut_type: Other / Offal
 ## Cut profile
 Oven roasting pork cheeks is a hybrid method: the cheeks sit in a small amount of liquid (sherry, wine, or stock at roughly 1 cm depth) so the submerged underside gently braises while the exposed top caramelises in dry oven heat. This gives a dual texture — a roasted, slightly firm exterior crust and a gelatinous interior — that differs from a full braise's uniformly spoon-tender result. Target pull temperature is 91–93 °C (196–199 °F), as collagen must still fully dissolve. Regular basting (every 20 minutes) replenishes the surface glaze and prevents drying. Carryover is 3–4 °C after resting.
 
+## Styckesprofil
+
+Ugnsrostning av fläskkind är en hybridmetod: kinden sitter i lite vätska (sherry, vin eller fond, ca 1 cm djupt) så att den submergeradeundersidan sakta bräseras medan den exponerade toppen karameliserar i torr ugnsvarme. Detta ger en dubbel textur.
+
+Ugn 180–200 °C, 1,5–2 timmar. Innertemperatur: **82–88 °C (180–190 °F)** för karameliserad yta med gelatinöst inre. Eftertillagning: 2–3 °C. Sond in i tjockaste köttmassan. Spanska *carrilleras al vino de Jerez* och *carrilleras a la sevillana* är representativa recept.
+
 ## Source recipes
 
 ### 1. José Pizarro — Carrillera al Horno con Pimentón (Spanish tradition)

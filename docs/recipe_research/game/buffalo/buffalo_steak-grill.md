@@ -30,6 +30,14 @@ Hot direct grill (230–260 °C) for 3–4 minutes per side for a 2.5 cm steak a
 
 Target internal temperature: **57–63 °C (135–145 °F)** for medium-rare to medium. The meat is leaner than beef and becomes tough above 70 °C.
 
+## Styckesprofil
+
+> **Kontextanmärkning**: I detta projekt avser *buffalo* **vattenbuffel** (*Bubalus bubalis*). Se modersnittsfilen för anatomi.
+
+Grillning av vattenbuffelsteak (carabeef) är den vanligaste metoden på Filippinerna, i Indien och Vietnam. Köttet är magert — marinering i syra före grillning rekommenderas starkt för att mjuka upp ytan och tillföra fuktighet. En marinad av sojasås, calamansi (eller lime), vitlök och olja i 1–2 timmar förbättrar resultaten dramatiskt.
+
+Direkt hög värme, 2–3 minuter per sida, dra vid 60–63 °C (Filippinerna föredrar genomstekt men fortfarande saftigt). Skär alltid tvärs mot fibern. Innertemperatur: **60–65 °C** (140–149 °F). Eftertillagning: 3–4 °C.
+
 ## Source recipes
 
 ### 1. Yummy.ph — Filipino Bistek Tagalog Carabeef, grilled version (Filipino tradition)

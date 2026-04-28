@@ -12,6 +12,10 @@ cut_type: Green Vegetables
 ## Cut profile
 Broccoli (*Brassica oleracea* var. *italica*) in the air fryer becomes golden-crisp at the floret tips and tender at the stems in 10–14 minutes at 190–200 °C — faster and crispier than a conventional oven. The air fryer's rapid convection dehydrates the floret surface quickly, enabling Maillard browning before the interior overcooks. Florets should be 3–5 cm, similar in size for even cooking, and patted completely dry. Pull temperature: 80–85 °C (176–185 °F) for crispy-golden, tender-stemmed florets. MEATER probe inserted through the stem of the largest floret.
 
+## Styckesprofil
+
+Broccoli (*Brassica oleracea* var. *italica*) i airfryern blir gyllenkrispa vid blomtopparna och mjuk vid stjälkarna på 10–14 minuter vid 190–200 °C — snabbare och krispigare än ugn. Dela i buketter, olja, krydda. Klar när topparna är gyllenbryna och krispa.
+
 ## Source recipes
 
 ### 1. Madhur Jaffrey — Broccoli Tikka in the Air Fryer (Indian tradition)

@@ -4,6 +4,10 @@
 
 The sirloin tip roast (also called "knuckle" in UK/Australian butchery, "pointe de culotte" in French, and "Rinderknolle" in German) is a lean, boneless roast cut from the quadriceps femoris muscle group at the front of the round, just below the sirloin. Because the quadriceps are heavily used muscles, the meat has low marbling and dense, tight muscle fibres — the structural opposite of the heavily marbled ribeye. This leanness is both its challenge and its advantage: cooked correctly to medium-rare and sliced thinly against the grain, it produces clean, beefy flavour with very little waste; overcooked even slightly, it becomes dry and difficult to chew. Oven roasting suits the sirloin tip in two ways: gentle, low-temperature roasting (200–250°F / 93–120°C) allows enzymatic tenderisation to work on the dense fibres without seizing them, while a high-heat initial blast or reverse-sear delivers the Maillard browning that a lean exterior requires for flavour. Carryover is modest — approximately 3–5°C (5–9°F) in a standard oven roast — because the lean mass has no fat layer to retain heat once removed; the carryover is larger (up to 8°C / 14°F) after a slow low-temp roast where the oven cools the surface slowly.
 
+## Styckesprofil
+
+Sirloin tip-stek (kallad "knuckle" i brittisk/australiensisk styckningsnomenklatur, "pointe de surlonge" på franska, "Nuss" på tyska, "marushine" på japanska) är en köttig, triangulär muskelgrupp från utsidan av lårets bakre del. Det är ett relativt magert snitt med liten marmorering, men fint grovt för en bakkvartesmuskel och utmärkt om tillagat rätt. Lämpar sig för omvänd ugnsstekning vid låg temperatur till medium-rare (54–57 °C). Eftertillagning: 4–6 °C.
+
 ## Source recipes
 
 ### 1. Nagi (RecipeTin Eats) — Marinated Roast Beef

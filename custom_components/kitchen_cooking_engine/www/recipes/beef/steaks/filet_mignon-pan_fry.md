@@ -12,6 +12,10 @@ cut_type: Steaks
 ## Cut profile
 Filet mignon (psoas major, narrow end) is the most tender, leanest steak in any carcass — virtually free of connective tissue and intramuscular fat. Pan frying in a small amount of oil or fat over high heat is a classic French bistro method for fillet steak, producing a full-contact Maillard crust on both faces while the lean interior heats gently from conductive transfer through the crust. Because filet mignon has no fat to render and self-baste, pan frying must rely on added fats (butter, oil, or bone marrow) to replicate the basting function. Carryover is minimal for a small, dense medallion on a pan-fry, where removing the steak from the hot metal surface stops the conductive heat transfer almost immediately.
 
+## Styckesprofil
+
+Filet mignon (*psoas major*, smal ände) är den möraste, magraste biffen av alla snitt. Pannstekt filet mignon kräver en het panna — gjutjärn eller rostfritt stål — smör + matolja, hög direkt värme och kortare exponering än tjockare biffar. Utan det intramuskulära fettet som skyddar ribeye och entrecôte måste panntemperatur och tid kontrolleras noggrant. Innertemperatur: 52–55 °C rare, 55–58 °C medium-rare. Eftertillagning: 3–5 °C.
+
 ## Source recipes
 
 ### 1. Julia Child — Pan-Fried Filet de Bœuf (French bistro tradition)

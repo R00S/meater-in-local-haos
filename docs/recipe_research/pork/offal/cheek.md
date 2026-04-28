@@ -39,6 +39,12 @@ Pork cheek (also catalogued as `pork_cheek` in this system) is the small, intens
 
 **Relationship to `pork_cheek` entry**: both this slug (`cheek`) and the `pork_cheek` slug represent the same anatomical cut. `pork_cheek` has a broader `methods:` list (braise, oven_roast, pan_fry, slow_cooker) and its own leaf files. The research here is independently useful; additional recipe sources are cross-referenced in `pork_cheek-braise.md`.
 
+## Styckesprofil
+
+Fläskkind (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) är den lilla täta käkmuskeln — ungefär 80–120 g — sammansatt av tätt sammanflätade snabbrycksfibrer genomsyrade av ett tätt kollagennät byggt upp genom djurets livstids tuggande.
+
+Denna intensiva muskelaktivitet skapar den djupaste smak och högsta kollageninnehållet av alla fläsksnitt. Bräsering är den definitiva metoden: kollagen smälter till gelatin vid 88–90 °C, vilket ger en spoon-tender, silkig textur. Innertemperatur: **85–90 °C (185–194 °F)**. Eftertillagning: försumbar (braiseringsvätska).
+
 ## Research files by cooking method
 
 | Method | Leaf file | Status |

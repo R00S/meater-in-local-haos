@@ -34,6 +34,12 @@ Lamb kofta (also spelled köfte, kefta, kafta, kufta) is a preparation of ground
 Kofta is widespread across Turkish, Iranian, Levantine, North African, Pakistani, and Afghan culinary traditions. Because it is ground meat, the USDA minimum safe temperature is 71 °C (160 °F). At this temperature, well-made kofta is still juicy from the fat content.
 
 
+## Styckesprofil
+
+Lammköfte (även stavat *köfte*, *kefta*, *kafta*, *kufta*) är en beredning av malet lamm blandat med finhackat lök, färska örter (persilja, mynta, koriander) och varma kryddor (spiskummin, korianderfrö, kanel, kryddpeppar, svartpeppar). Det formas på platta metallspett.
+
+Tillagas alltid till fullt genomstekt för säkerhet och optimal smak. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond insatt längsvis från änden in till mitten av spettet. Vila 3–5 minuter täckt. Tjocklek 3–4 cm; grilltid 3–4 minuter per sida.
+
 ## Research files by cooking method
 
 - [Grill](./lamb_kofta-grill.md)

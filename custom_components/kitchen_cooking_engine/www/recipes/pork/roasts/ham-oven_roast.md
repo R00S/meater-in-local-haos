@@ -25,6 +25,12 @@ centre of the largest lean muscle section, at least 1 cm clear of the central bo
 multiple muscle groups separated by fat seams — the probe tip must not rest in a fat seam,
 which gives a lagging reading.
 
+## Styckesprofil
+
+Skinka är grisens bakben, härdad med salt, rökning eller båda. Till skillnad från alla andra fläsksnitt anländer den till ugnen redan transformerad: härdning har dragit ihop proteinerna, expellerat fukt och byggt en tät, samarig struktur.
+
+Uppvärmning till servering: 160 °C ugn, 15 min per 500 g. Innertemperatur: **68–72 °C (154–162 °F)** för genomvarm med saftighet kvar. Eftertillagning: 3–4 °C. Sond in i tjockaste köttmassan, borta från benet. Glaseringen appliceras de sista 20 minuterna.
+
 ## Source recipes
 
 ### 1. Anna och Fanny Bergenström — Ugnsbakad Julskinka med Senapsgriljering (Swedish / Culinary Group D tradition)

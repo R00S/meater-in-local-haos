@@ -23,6 +23,12 @@ Pork jowl / pork cheeks braised in a covered vessel with aromatic liquid (wine, 
 
 **Probe placement**: insert from the thickest end of the largest cheek, tip at the geometric centre of the muscle, parallel to the long axis of the muscle, clear of any bone fragment or fat pocket. For a whole braised jowl slab, insert horizontally from the side into the thickest meaty section, avoiding the thick fat cap.
 
+## Styckesprofil
+
+Fläskkind / fläskkäk bräserat i ett täckt kärl med aromatisk vätska (vin, fond, sojasås, mirin) är en av de mest givande beredningarna i modern matlagning. Den täta, kollagenrika *buccinator*-muskeln — ca 80–120 g per kind — gynnas av lång, skonsam bräsering.
+
+Bryn kinden, lägg i braiseringskärl med fond, vin eller sojasås-mirin, täck och koka vid 160 °C i 2–3 timmar. Innertemperatur: **85–90 °C (185–194 °F)** för spoon-tender, gelatinöst resultat. Eftertillagning: försumbar (braiseringsvätska). Sond in i tjockaste köttmassan.
+
 ## Source recipes
 
 ### 1. Geoffrey Smeddle — Pork Cheek with Crispy Ham Hock Bon Bon (Scottish fine dining, Culinary Group B)

@@ -40,6 +40,10 @@ quality_assessed: 2026-04-26
 Cabbage (*Brassica oleracea* var. *capitata*) braised is one of the most globally distributed vegetable preparations: German Rotkohl, French *chou braisé*, Polish *kapusta duszona*, Indian dum-cooked cabbage, and Chinese red-braised cabbage all transform the pungent, crunchy raw leaves through long, moist cooking into a tender, sweet, and deeply flavourful result. The technique involves long gentle simmering in a small amount of liquid (wine, vinegar, stock, or a combination) with a lid on, allowing the cabbage to stew in its own juices. Pull temperature for a fully braised cabbage wedge or shred: 88–95 °C (190–203 °F) — at this point the cell walls have fully collapsed, the harsh glucosinolates have converted to gentler compounds, and the texture is yielding and silky. A MEATER probe is inserted through the outer layers of a wedge into the thickest part of the core, or into the densest part of the shred pile.
 
 
+## Styckesprofil
+
+Kål (*Brassica oleracea* var. *capitata*) bräserad är en av de mest globalt spridda grönsaksberedningarna: tyskt Rotkohl, franskt *chou braisé*, polskt *kapusta duszona*, indisk *patta gobi ki sabzi*. Tillagas i vätska (vin, fond, ättika) vid 85–95 °C i 1–2 timmar. Klar när mjuk och genomsmakad.
+
 ## Research files by cooking method
 
 - [Braise](./cabbage-braise.md)

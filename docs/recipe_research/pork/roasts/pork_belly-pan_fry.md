@@ -17,6 +17,12 @@ Target internal temperatures (pan fry):
 - Cooked through, still juicy: **72–75 °C (162–167 °F)**
 - Traditional stegt flæsk (crispy and well-rendered): **80°C+ / 176°F+** (visual indicator: deeply golden and crispy)
 
+## Styckesprofil
+
+Fläskbuk med svål — den nordiska och tyska söndagssteken — tillagas med djupt ritsad, saltad svål för optimal knäppande-kris. Air fryer-metoden: 200 °C, 30–40 min med svålen uppåt, ger intensivt krispig svål snabbare än konventionell ugn.
+
+Innertemperatur: **80–88 °C (176–190 °F)** för genomstekt, saftig fläskbuk. Eftertillagning: 3–4 °C. Sond in i tjockaste köttmassan, borta från revbensben och svål. Vila täckt 10 minuter.
+
 ## Source recipes
 
 ### 1. Madens Verden — Stegt Flæsk med Persillesovs (Danish national dish)

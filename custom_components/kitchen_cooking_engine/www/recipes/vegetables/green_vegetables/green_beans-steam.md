@@ -12,6 +12,10 @@ cut_type: Green Vegetables
 ## Cut profile
 Green beans (*Phaseolus vulgaris*) steamed retain their bright-green colour, water-soluble vitamins, and clean sweet-grassy flavour better than boiling. Steam-cooking at 100 °C for 5–8 minutes (depending on thickness) produces vivid, tender-crisp beans. The classic follow-up step — a quick toss in butter and seasoning (French), a dressing of sesame and soy (Japanese), a tempering of mustard and curry leaves (Indian), or a drizzle of extra-virgin olive oil (Italian/Mediterranean) — transforms the simply steamed bean into a finished dish. Pull temperature: 78–82 °C (172–180 °F). MEATER probe inserted through the side of the thickest bean at the mid-point.
 
+## Styckesprofil
+
+Gröna bönor (*Phaseolus vulgaris*) ångade bevarar sin klargrön färg, vattenlösliga vitaminer och ren söt-grönsmak bättre än kokning. Ånga i 4–6 minuter. Klar när genomstekta men fortfarande knapriga och klargrön.
+
 ## Source recipes
 
 ### 1. Harumi Kurihara — Steamed Beans with Sesame Dressing (Japanese tradition)

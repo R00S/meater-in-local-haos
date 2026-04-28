@@ -28,6 +28,12 @@ The French tradition (lapin aux pruneaux, lapin à la moutarde) is the most inte
 
 Target internal temperature: **74–77 °C (165–175 °F)** — rabbit, like chicken, should be cooked through. Fork-tender braised rabbit reads 74–80 °C.
 
+## Styckesprofil
+
+Kanin (*Oryctolagus cuniculus*) lår (fram och bak) är det vanligaste bräserade snittet. Bakbenen bär mer kött och är det primära braiseringsnittet; frambenen inkluderas ofta för smak. Kanin är mager, fettfattig och benägen att torka ut om överkokad — bräsering i vin, fond eller grädde håller köttet fuktigt.
+
+Bräsera på spis eller i ugn vid 160–170 °C i 1–2 timmar, tills köttet lätt faller från benet. Innertemperatur: **75–80 °C (167–176 °F)** för fullt genomstekt. Eftertillagning: försumbar (bräseringsvätska dämpar temperaturvariationer). Sond i den tjockaste köttmassan bakom lårets bakre muskel.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Geschmorte Kaninchenkeulen (German tradition)

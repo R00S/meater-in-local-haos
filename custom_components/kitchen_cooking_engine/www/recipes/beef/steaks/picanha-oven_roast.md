@@ -17,6 +17,10 @@ For whole picanha without slicing, oven roasting at 180–200 °C roasts the who
 
 Score the fat cap in a crosshatch pattern (cuts through fat, not into muscle) before roasting to help it render more evenly and prevent it from curling. MEATER probe goes lengthwise in the thickest part of the muscle, avoiding the fat cap. Carryover from a 120–140 °C oven is 4–6 °C; from a 200 °C oven, 5–7 °C.
 
+## Styckesprofil
+
+Ugnsstekning av picanha passar utmärkt för hela muskeln och är särskilt effektiv med omvänd searing: börja vid låg temperatur (120–140 °C) för att föra hela stycket till inom 10 °C av måltemperaturen, searas sedan i en riktigt het stekpanna eller under övervärme i 90 sekunder per sida för att bilda skorpan. Innertemperatur: 52–57 °C medium-rare. Eftertillagning: 3–5 °C för hela muskeln.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Oven-Roasted Picanha (American tradition)

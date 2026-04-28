@@ -15,6 +15,12 @@ Braising is the definitive method for goat shank — the only method that reliab
 
 Target: 88–93 °C internal AND sustained time at that temperature — temperature alone is insufficient; the collagen needs 1–1.5 hours at 88 °C or above to fully hydrolyse. MEATER probe horizontally through the thickest muscle, parallel to the bone. The shank is done when the meat pulls away from the bone easily; the braising liquid will have concentrated into a rich, gelatin-thickened sauce.
 
+## Styckesprofil
+
+Bräsering är den definitiva metoden för getlägg — den enda metoden som tillförlitligt omvandlar dess täta kollagen till gelatin. Skaftet läggs i ett bräseringskärl med aromatiska grönsaker, vätska (fond, vin, öl eller vatten) och kryddor.
+
+Täckt, låg ugn (160–170 °C / 325 °F) i 2,5–3 timmar; eller spissimmer; eller slow cooker på LÅG i 6–8 timmar. Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet-möra resultat. Sond i den tjockaste köttmassan, borta från benet. Eftertillagning: försumbar (omgivande vätska dämpar temperatursvängningar).
+
 ## Source recipes
 
 ### 1. Yotam Ottolenghi & Sami Tamimi — Slow-Braised Goat Shanks with Pomegranate & Cumin (Levantine tradition)

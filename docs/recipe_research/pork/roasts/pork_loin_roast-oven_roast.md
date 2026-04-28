@@ -17,6 +17,12 @@ Target internal temperatures (oven roast):
 - Juicy, slightly rosy (Danish-style): **60–65 °C (140–149 °F)**
 - Traditional firm, fully white (German-style): **70–75 °C (158–167 °F)**
 
+## Styckesprofil
+
+Fläskloin-stek (*svinekam* danska; *Schweinerücken* / *Kotelettstrang* tyska) med svål är den quintessentiella skandinaviska och tyska söndagsmiddagen. Loinen är magrare än magen, varför den behöver noggrannare temperaturkontroll för att förbli saftig.
+
+Standardteknik: djup ritsning av svålen, salt i ritsorna, ugn 180–200 °C i 1–1,5 timmar, avsluta under grillelementet för knäppande svål. Innertemperatur: **68–72 °C (154–162 °F)** för genomstekt, saftig loin. Eftertillagning: 3–4 °C. Sond in i tjockaste köttmassan, borta från benet och svålen. Vila 15 minuter täckt.
+
 ## Source recipes
 
 ### 1. Valdemarsro — Flæskesteg med sprød svær (Danish tradition)

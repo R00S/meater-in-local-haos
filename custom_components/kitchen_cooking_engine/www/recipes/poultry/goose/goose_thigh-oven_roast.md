@@ -12,6 +12,10 @@ cut_type: Goose
 ## Cut profile
 Goose thigh is perhaps the most flavourful part of the goose — richer than the leg and with a higher ratio of intramuscular fat and connective tissue. Braising is ideal: the moist-heat environment keeps the thigh succulent while sustained heat above 160 °F converts collagen to gelatin. Target 175–185 °F (79–85 °C) for the most tender, silky texture. The braising liquid, enriched by rendered goose fat and gelatin, reduces to an intensely flavourful sauce. Goose thighs are widely used in European traditional cooking, similar to duck confit but with a braise instead of a fat immersion.
 
+## Styckesprofil
+
+Gåslår är kanske den mest smakrika delen av gåsen. Ugnsstekning fungerar vid lägre temperaturer med bastning. Innertemperatur: 80–85 °C. Tillagnings tid: 2–2,5 timmar vid 160–170 °C. Basteras regelbundet med eget fett.
+
 ## Source recipes
 
 ### 1. Hugh Fearnley-Whittingstall — Slow-Roast Goose Thighs with Garlic & Thyme (British River Cottage tradition)

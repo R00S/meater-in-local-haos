@@ -28,6 +28,12 @@ Swedish temperature guide (köket.se):
 - Renfilé: rare 52 °C, medium 57 °C, well done 65 °C
 - Ren stekdetaljer: 55–62–68 °C
 
+## Styckesprofil
+
+Ren (*Rangifer tarandus*) är det traditionella viltköttet i Sápmi (Lappland), norra Finland, Norge och Sverige. Filén (renfilé) och sadelryggen är de bästa snitten för pannstekning. Renkött är mycket magert, djupt rött med en delikat sötjordsmak mildare än älg.
+
+Pannstekas i smör vid hög värme — 3–4 minuter per sida — sedan kort vila. Dra 3–5 °C under mål för att kompensera eftertillagning. Innertemperatur: **52–57 °C (126–135 °F)** för medium-rare. Eftertillagning: 3–4 °C. Sond insatt parallellt med stekens yta in till mitten. Välgenomstekt avråds starkt.
+
 ## Source recipes
 
 ### 1. Köket.se / TV4 Halv åtta hos mig — Renfilé med smörig blåbärssås (Swedish tradition)

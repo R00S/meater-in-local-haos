@@ -36,6 +36,12 @@ Lamb shank (the lower leg, hind or fore) is one of the most prized braising cuts
 Target internal temperature: **82–88 °C (180–190 °F)** for fall-off-the-bone tender. USDA minimum for lamb is 63 °C, but for braised shanks this is far too early — braising is not complete until collagen has dissolved.
 
 
+## Styckesprofil
+
+Lammlägg (underbenet) är ett av de mest prisbelönta braiseringsnittten globalt. Den täta bindväven och benmärgen omvandlas under 2–3 timmars fuktig värme till fall-från-benet-mört, gelatinöst kött. Det är flaggskeppsrätten i hela Medelhavsregionen, Mellanöstern och nordafrikansk matlagning.
+
+Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertillagning: försumbar. Sond in i tjockaste köttmassan, borta från benet. Ugnsbraisering: 160–170 °C i täckt form 2–3 timmar med fond, vin, lök, vitlök, tomat och kryddor.
+
 ## Research files by cooking method
 
 - [Braise](./lamb_shank-braise.md)

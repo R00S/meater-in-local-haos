@@ -12,6 +12,12 @@ cut_type: Other / Offal
 ## Cut profile
 Pork tongue cooked in an electric slow cooker is the same long-braise preparation as the stove-top method, executed in a sealed environment that holds the cooking liquid steady at 85–95 °C without monitoring. Because the tongue is small (250–400 g per tongue), the cook time is shorter than for beef tongue — 5–6 hours on Low or 3 hours on High is standard for a batch of 6 tongues. The peel-while-warm rule still applies; the skin must come off within 5–10 minutes of lifting from the cooker. Carryover is zero — the tongue stays at cooker temperature until removed. Sear the tongue base briefly in a hot skillet first if you want a deeper-flavoured stock, but it is optional.
 
+## Styckesprofil
+
+Fläsktunga tillagad i en elektrisk slow cooker är samma lång-bräseringsmetod som spis-metoden, utförd i en förseglad miljö som håller tillagningsvätskan stabil vid 85–95 °C utan tillsyn.
+
+Slow cooker: LÅG i 6–7 timmar med kryddad fond och aromater. Innertemperatur: **85–92 °C (185–198 °F)** för fullt genomstekt. Eftertillagning: noll (slow cooker). Sond in i den tjockaste mittdelen av tungan. Skala skinnet av genast medan tungan fortfarande är varm.
+
 ## Source recipes
 
 ### 1. Hugh Acheson — Slow-Cooker Pork Tongue Confit (American Culinary Group C tradition)

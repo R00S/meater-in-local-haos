@@ -40,6 +40,10 @@ quality_assessed: 2026-04-26
 Broccoli (*Brassica oleracea* var. *italica*) sautéed in a hot pan — or stir-fried in a wok — produces golden-blistered florets with a caramelised stem and bright-green colour. The pan must be very hot; broccoli must be completely dry; it should not be crowded. Cooking time: 6–8 minutes. Pull temperature: 78–83 °C (172–181 °F) for tender-crisp, golden broccoli. MEATER probe through the stem of the largest floret.
 
 
+## Styckesprofil
+
+Broccoli (*Brassica oleracea* var. *italica*) sauterad i het panna — eller wokad — ger guldblåsiga buketter med karameliserad stjälk. Sautera i het olja i 6–8 minuter. Klar när lätt bränd i punkter och genomstekt men fortfarande krispig.
+
 ## Research files by cooking method
 
 - [Air Fryer](./broccoli-air_fryer.md)

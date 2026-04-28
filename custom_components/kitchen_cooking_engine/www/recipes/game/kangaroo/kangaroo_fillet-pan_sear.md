@@ -4,6 +4,12 @@
 
 The kangaroo fillet (backstrap) is ideal for pan searing: its thin, lean profile heats through rapidly at very high heat, developing a dark, caramelised Maillard crust in 2–3 minutes per side while retaining a warm red interior. Because there is virtually no fat cap, the searing must occur in a well-oiled, very hot pan (cast iron preferred) — adding oil to an inadequately hot pan results in poaching rather than searing. The backstrap is even thinner than most kangaroo rump cuts, so timing precision is more critical: 2 minutes per side at maximum heat is sufficient for medium-rare in fillets under 3 cm thick; 3 minutes per side risks medium-well. A probe thermometer inserted lengthwise (parallel to the fillet, towards the centre) is the most accurate approach for fillets this thin, but experienced cooks use the firm-to-touch method (rare: no resistance; medium-rare: slight spring back). Rest time of 5 minutes is mandatory — skipping rest leads to immediate moisture loss. Carryover is typically 2–4°C / 4–7°F for the thin fillet profile.
 
+## Styckesprofil
+
+Känguru-filé (ryggsträng) lämpar sig idealiskt för pannstekning: dess tunna, magra profil värms upp snabbt vid mycket hög värme och utvecklar en mörk, karameliserad Maillard-skorpa på 2–3 minuter per sida med ett varmt rött inre kvar.
+
+Ryggsträngen är ännu tunnare än känguru-rumps, varför timingprecision är mer kritisk: 2 minuter per sida vid maximal värme är tillräcklig för medium-rare i filéer under 3 cm tjocka. Sond insatt längsvis (parallellt med filén, mot mitten) är det mest exakta tillvägagångssättet. Vilotid 5 minuter obligatorisk. Innertemperatur: **52–55 °C** (126–131 °F). Eftertillagning: 2–4 °C.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Kängurufilet mit Pflaumensauce, geschmorten Kirschtomaten und Potatoes Wedges

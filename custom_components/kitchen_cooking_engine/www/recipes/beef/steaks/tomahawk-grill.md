@@ -17,6 +17,10 @@ Target internal temperatures:
 - Medium-rare: **pull from oven at 50 °C (122 °F)**, rest 10 min, then grill to **55–57 °C (131–135 °F)**
 - Core temperature at table: **57–60 °C (135–140 °F)**
 
+## Styckesprofil
+
+Tomahawk-biff är en tjockt skärd entrecôte (typiskt 5–8 cm tjock, 1,2–1,8 kg) med det fulla revbenet fortfarande fäst och ger den dess karakteristiska yxa-liknande utseende. På grund av den enorma tjockleken kan den inte tillagas på grillen ensam utan risk för ett tjockt band av grå, överkokad kött runt en underkokt kärna — omvänd searing är nödvändig. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 4–6 °C.
+
 ## Source recipes
 
 ### 1. GialloZafferano — Tomahawk alla griglia (Italian tradition)

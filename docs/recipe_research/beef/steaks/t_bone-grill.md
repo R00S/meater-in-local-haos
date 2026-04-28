@@ -15,6 +15,12 @@ Grilling a T-bone on a gas grill requires managing the two-muscle geometry and t
 
 Grill marks are primarily decorative; the even Maillard crust achieved by full surface contact in a cast-iron pan is not replicable on grill grates, but the open-flame smoke flavour more than compensates. Monitor flare-ups from the fat trim. MEATER probe in the striploin side, away from the bone. Carryover from a hot gas grill is 4–5 °C.
 
+## Styckesprofil
+
+Grillning av T-bone på gassgrill kräver hantering av tvåmuskelgeometrin och det isolerande benet. Standardtekniken är en het tvåzonsinställning: sear över direkt hög värme (250–280 °C) i 2–3 minuter per sida för att utveckla skorpan på båda ytorna, flytta sedan till den indirekta zonen (lock stängt, 150–180 °C) för att föra stryplånet till måltemperaturen utan att överkoka filén.
+
+Att rotera biffen på benets kant under den indirekta fasen är ett argentinskt *parrilla*-knep som låter benet leda värme till det innersta köttet utan direkt flamkontakt. Grillränder är primärt dekorativa; den jämna Maillard-skorpan från en gjutjärnspanna kan inte replikeras på grillgallret, men den öppna flamröksmaken kompenserar mer än väl. Håll koll på uppflammor från fettet. MEATER-sond i stryplånssidan, borta från benet. Eftertillagning: 4–5 °C från en het gassgrill. Innertemperatur: 54–57 °C (striploin).
+
 ## Source recipes
 
 ### 1. Steven Raichlen — Grilled T-Bone (American BBQ tradition)

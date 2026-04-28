@@ -33,6 +33,12 @@ quality_assessed: 2026-04-27
 Lamb shoulder comprises the scapula, humerus, and associated muscles — primarily the *supraspinatus*, *infraspinatus*, *triceps brachii*, and *deltoideus*. These are heavily worked muscles, fattier and with more connective tissue than the leg, because the shoulder carries the weight of the front of the animal. The higher collagen density and better fat distribution make it the preferred shoulder cut for slow cooking: gelatin conversion transforms the tough fibres into silky, spoonable meat. The shoulder can be bone-in (whole shoulder, most flavourful) or bone-out (butterflied, faster cooking, easier carving). Typical weight: 1.5–3 kg bone-in.
 
 
+## Styckesprofil
+
+Lammaxel är *supraspinatus*, *infraspinatus*, *triceps brachii* och *deltoideus*-musklerna — hårt arbetade, fettare och med mer bindväv än benet. Det är ett quintessentiellt lågt-och-långsamt-snitt: kollagenrik, smakrik och bäst bräserat eller ugnsrostat till pull-apart-mörhet.
+
+Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagning: försumbar (fuktig bräsering). Sond in i tjockaste muskeldelen, borta från skulderbladsben. Populära beredningar: australisk pulled lamb, mexicansk barbacoa-stil, brittisk slow-roast shoulder med rosmarin och vitlök.
+
 ## Research files by cooking method
 
 - [Oven Roast](./lamb_shoulder-oven_roast.md)

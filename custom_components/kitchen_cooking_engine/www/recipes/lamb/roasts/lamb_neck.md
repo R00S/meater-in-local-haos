@@ -36,6 +36,12 @@ Lamb neck comprises the cervical vertebrae and associated muscles — primarily 
 Target internal temperature: **85–90 °C (185–194 °F)** for full braised tenderness.
 
 
+## Styckesprofil
+
+Lammhals är ett av de kollagenrikaste snitten på djuret — de cervikala kotsmusklerna är konstant belastade, tätt genomträngda med bindvävsark och intramuskulärt fett. Det är det mest smakrika snittet för bräsering och slow cooking.
+
+Det kulinariska målet är kollagensmältning: 85–90 °C, hållet i 2–3 timmar (bräsering) eller 7–8 timmar (slow cooker). Innertemperatur: **85–90 °C (185–194 °F)** för pull-apart och gelatinös konsistens. Eftertillagning: försumbar. Sond in i tjockaste köttmassan, borta från halskotor.
+
 ## Research files by cooking method
 
 - [Braise](./lamb_neck-braise.md)

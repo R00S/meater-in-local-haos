@@ -12,6 +12,10 @@ cut_type: Steaks
 ## Cut profile
 Flank steak (bavette d'aloyau in French bistro tradition, matambre in South America) is cut from the abdominal wall muscles — lean, intensely beefy, with long parallel muscle fibres that run the full length of the cut. Unlike marbled steaks, flank has almost no intramuscular fat, so high heat from a very hot pan creates crust through the Maillard reaction alone rather than through fat rendering. Pan searing suits flank well because the flat, wide cut covers a large contact surface at once, producing a fast, even sear on both faces. The cut's leanness means temperature discipline is critical: above 60 °C the long fibres tighten and the steak becomes dry and stringy regardless of resting. Carryover is minimal — 2–3 °C at most — because the thin cross-section loses heat quickly after leaving the pan.
 
+## Styckesprofil
+
+Flank steak (*bavette d'aloyau* i fransk bistrotradition, *matambre* i Sydamerika) är ett brett, platt bukväggsmuskel med uttalade långa fibrer och intensiv nötssmak. Pannsearing ger utmärkt maillardyta snabbt; det tunna snittet kräver hög värme och kortare tillagningstid. Det är kritiskt att skära tvärs mot fibern efter vila — längs med fibern gör biffen seg oavsett tillagningsnivå. Innertemperatur: 52–57 °C. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Pan-Seared Flank Steak (Serious Eats)

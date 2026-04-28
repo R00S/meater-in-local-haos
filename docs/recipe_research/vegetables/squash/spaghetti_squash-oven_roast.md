@@ -12,6 +12,10 @@ cut_type: Squash
 ## Cut profile
 Spaghetti squash (*Cucurbita pepo*) oven-roasted at higher heat (200–220 °C) compared to baking, with the cut face oiled and placed cut-face-down to caramelise the edges before flipping. The higher temperature yields golden, slightly caramelised strands rather than steamed ones. Halves take 35–45 min at 210 °C. Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe through the skin into the flesh.
 
+## Styckesprofil
+
+Spagetti-squash (*Cucurbita pepo*) ugnsrostad vid högre värme (200–220 °C) jämfört med bakning, med snittytan oljad och placerad snittytan ned för att karamelisera kanterna. 35–45 minuter. Klar när strängarna separerar och kanterna är gyllenbruna.
+
 ## Source recipes
 
 ### 1. José Andrés — Espagueti Vegetal Asado (Spanish / American tradition)

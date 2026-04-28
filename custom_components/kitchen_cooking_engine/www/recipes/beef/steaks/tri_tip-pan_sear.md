@@ -16,6 +16,10 @@ Pan-searing a tri-tip requires choosing between two approaches: (1) sear the who
 Target internal temperatures (pan sear):
 - Medium-rare: **pull at 54–57 °C (129–135 °F)**
 
+## Styckesprofil
+
+Pannsearing av tri-tip kräver val av en av två tillvägagångssätt: (1) sear hela steken och avsluta i ugn — bäst för hel tri-tip 700 g+; (2) skär i 2 cm biffar och pannsear var och en — snabbaste metoden. För helsteken ger konstant vändningsteknik (var 60:e sekund) en jämnare krusta. Innertemperatur: 54–60 °C. Eftertillagning: 3–5 °C. Skär alltid tvärs mot fibern.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Das perfekte Steak mit Steakkruste (German tradition)

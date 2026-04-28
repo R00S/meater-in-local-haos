@@ -12,6 +12,10 @@ cut_type: Mushrooms
 ## Cut profile
 Portobello mushrooms (*Agaricus bisporus* mature) sautéed whole or in thick slices develop a deep umami-richness in a hot pan — the dense flesh concentrates as moisture evaporates, producing an almost meaty character at the target internal temperature of 80–88 °C (176–190 °F). A portobello cap is typically sliced into 1.5–2 cm slabs for sautéing (so the MEATER probe sits in the thickest slab) or sautéed whole if the pan is large enough. The pan must be very hot before adding the mushrooms, and they must not be crowded, or they will steam. Unlike button mushrooms, portobello caps tend to release more liquid, making deglazing an important part of most sauté recipes.
 
+## Styckesprofil
+
+Portabello-svampar (*Agaricus bisporus* mogna) sauterade hela eller i tjocka skivor utvecklar djup umami-rikedom i het panna — det täta köttet koncentreras när fukt avdunstar. Sautera i het olja i 5–8 minuter. Klar när djupt gyllenbrun och skrumpna.
+
 ## Source recipes
 
 ### 1. Fuchsia Dunlop — Sautéed Portobello with Black Bean Sauce (Chinese tradition)

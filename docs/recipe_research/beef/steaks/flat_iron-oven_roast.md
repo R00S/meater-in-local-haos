@@ -13,6 +13,12 @@ cut_type: Steaks
 
 The flat iron steak is cut from the infraspinatus muscle of the shoulder blade, a section that develops pronounced intramuscular fat despite its forequarter origin. Oven roasting applied to individual flat iron steaks (200–350 g) typically takes one of two forms: a reverse-sear approach (gentle low oven to bring the interior to temperature, followed by a fierce stovetop or broiler sear) or a high-heat direct roast (220–230 °C oven, which simultaneously browns the exterior and cooks the interior). The reverse-sear method is particularly well-suited to the flat iron because it achieves edge-to-edge even doneness across the whole steak, minimising the grey band that a conventional high-heat approach produces. Carryover after oven cooking is mild (1–2 °C) compared to searing, but after a finishing sear it rises to 2–4 °C; the recommended pull temperature is therefore 3–4 °C below the intended serving temperature.
 
+## Styckesprofil
+
+Flat iron-biffen skärs från *infraspinatus*-muskeln i skulderbladspartiet, ett avsnitt som utvecklar uttalad intramuskulär fett trots sitt framkvarters ursprung. Ugnsstekning av individuella flat iron-biffar (200–350 g) tar vanligtvis en av två former: en omvänd searing (varsam låg ugnstemperatur för att föra insidan till temperatur, följt av en intensiv stekpanna- eller broilersearing) eller en direkthög ugnsstekning (220–230 °C ugn, som simultant brynar ytan och tillagar insidan).
+
+Omvänd searing-metoden lämpar sig särskilt väl för flat iron eftersom den uppnår jämn tillagning från kant till kant över hela biffen, vilket minimerar det grå bandet som ett konventionellt höghettillvägagångssätt ger. Eftertillagning efter ugnsstekning är mild (1–2 °C) jämfört med searing, men efter en avslutande searing stiger den till 2–4 °C; den rekommenderade dragtemperaturen är därför 3–4 °C under den avsedda serveringstemperaturen. Innertemperatur: 54–57 °C medium-rare.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Reverse-Sear Flat Iron (American tradition)

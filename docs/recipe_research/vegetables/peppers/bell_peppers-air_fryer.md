@@ -12,6 +12,10 @@ cut_type: Peppers
 ## Cut profile
 Bell peppers (*Capsicum annuum*) in the air fryer roast beautifully in 12–18 minutes without the need for high-heat oven preheating. The circulating air blisters the skin and caramelises the sugars of sliced strips faster than a conventional oven. Whole peppers can be air-fried for peel-and-serve preparations (same result as oven or grill, just faster). Halves or strips aimed for eating without peeling are done at 200 °C (390 °F) in 12–15 minutes, reaching an internal temperature of 82–90 °C (180–194 °F) where the flesh is tender and juicy with slightly blistered skin. A MEATER probe is inserted through the side wall of a whole pepper or horizontally into a thick strip before starting the cook. The air fryer is particularly popular for Asian-spiced pepper dishes since the intense dry heat replicates the wok-scorched texture without a wok.
 
+## Styckesprofil
+
+Paprika (*Capsicum annuum*) i airfryern rostas vackert på 12–18 minuter utan behov av högtrycksugnsförvärmning. Luften blåsar skinnet och karameliserar de naturliga sockerarterna. Skuren i strimlor eller hel, lite olja. Klar när skinnet är blåst och paprikapjäserna mjuka.
+
 ## Source recipes
 
 ### 1. Maangchi — Gochu Jeon (Air-Fried Stuffed Peppers — Korean tradition)

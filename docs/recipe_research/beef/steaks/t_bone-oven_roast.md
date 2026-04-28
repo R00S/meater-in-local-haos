@@ -15,6 +15,10 @@ Oven roasting a T-bone is most effective as a reverse-sear: start at 120–135 �
 
 The two-muscle geometry (striploin + tenderloin) is actually *helped* by the reverse sear: the slow low oven equilibrates the temperature across both muscles, minimising the differential. The insulating bone still causes the meat nearest the bone to lag 3–5 °C behind — this is desirable for anyone who prefers the tenderloin slightly rarer than the strip. MEATER probe in the striploin side, away from the bone. Carryover after the oven phase is 4–6 °C; after the final high-heat sear, 2–3 °C.
 
+## Styckesprofil
+
+Ugnsstekning av T-bone är mest effektiv som omvänd searing: börja vid 120–135 °C för att föra hela biffen till inom 10 °C av måltemperaturen utan gradient, searas sedan i gjutjärnspanna eller under övervärme vid maxvärme i 60–90 sekunder per sida. Denna metod eliminerar tvåmuskelproblemen: den jämna ugnsförvärmningen ger båda musklerna lika starttillstånd. Innertemperatur: 54–57 °C (mäts i striploin-sidan). Eftertillagning: 3–5 °C.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Reverse-Sear T-Bone (American tradition)

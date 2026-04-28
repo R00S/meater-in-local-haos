@@ -26,6 +26,10 @@ Goose breast shares the same cold-pan fat-rendering technique as duck breast. Th
 
 Target internal temperature: **145–155 °F (63–68 °C)** — medium; pull at 138–140 °F and rest. USDA well-done: 165 °F (74 °C).
 
+## Styckesprofil
+
+Gåsbröst delar samma kall-panna fettsmeltningsteknik som ankbröst. Skinnsidan läggs i en kall torr stekpanna och det tjocka fettkappan smälts långsamt vid medel-låg värme innan bröstet steks färdigt. Innertemperatur: 57–63 °C. Eftertillagning: 3–5 °C.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Slow-Roast Duck (fat-rendering technique adapted for goose breast pan sear)

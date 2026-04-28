@@ -12,6 +12,10 @@ cut_type: Cruciferous
 ## Cut profile
 Cauliflower (*Brassica oleracea* var. *botrytis*) oven-roasted in florets at 200–230 °C develops golden, caramelised surfaces and a tender, nutty interior in 20–30 minutes. This is one of the most globally versatile roasted vegetable preparations: with Moroccan spicing (chermoula), Indian masala, Israeli za'atar, Italian *aglio e olio*, or simple olive oil and salt. The outer floret surface undergoes Maillard browning while the interior steams in the oven heat. Pull temperature for golden, fully tender florets: 82–88 °C (180–190 °F). MEATER probe inserted through the stem of the largest floret into its geometric centre.
 
+## Styckesprofil
+
+Blomkål (*Brassica oleracea* var. *botrytis*) ugnsrostad i buketter vid 200–230 °C utvecklar gyllenbruna, karameliserade ytor och en mör, nötig insida på 20–30 minuter. Denna metod transformerar blomkålens milda, lite starka råsmak.
+
 ## Source recipes
 
 ### 1. Claudia Roden — Chou-fleur Rôti à la Chermoula (Moroccan / North African tradition)

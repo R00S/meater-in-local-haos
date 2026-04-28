@@ -12,6 +12,12 @@ cut_type: Steaks
 ## Cut profile
 Flank steak is a lean, flat, long-fibred abdominal muscle with almost no intramuscular fat. Sous vide is particularly well-suited to flank because the extended time in the water bath at a precise temperature gently relaxes the coarse, parallel muscle fibres without the risk of surface overcooking that plagues this cut on a grill or in a pan. Unlike well-marbled cuts where sous vide's benefit is primarily edge-to-edge doneness control, for flank the main value is time-enabled fibre relaxation — holding at the target temperature for one to three hours produces a noticeably more tender result than a quick sear method. Because the bag is sealed, there is no moisture loss during the bath. The post-bath sear is brief and serves only to develop crust; the core temperature at this point is already at target, so carryover is negligible.
 
+## Styckesprofil
+
+Flank steak är en mager, platt, långfibrig bukmuskel med nästan inget intramuskulärt fett. Sous vide lämpar sig särskilt väl för flank eftersom den förlängda tiden i vattenbadet vid en exakt temperatur varsamt relaxar de grova, parallella muskelfibrerna utan risken för ytöverkokning som plågar detta snitt på en grill eller i en panna.
+
+Till skillnad från välmarmorerade snitt där sous vide:s fördel primärt handlar om jämn tillagning från kant till kant, är det för flank steak det tidsaktiverade fiberrelaxationen som är det huvudsakliga värdet — att hålla vid måltemperaturen i en till tre timmar ger ett märkbart mörare resultat än en snabb searing-metod. Eftersom påsen är förseglad sker ingen fuktförlust under badet. Den efterföljande searingen är kort och tjänar bara till att utveckla en skorpa; kärntemperaturen vid det här laget är redan vid målet, så eftertillagning är försumbar. Skär alltid tvärs mot fibern efter badet och searing. Innertemperatur: 52–57 °C medium-rare.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Sous Vide Flank Steak (Serious Eats / ChefSteps)

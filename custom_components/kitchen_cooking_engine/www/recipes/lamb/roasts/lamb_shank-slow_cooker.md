@@ -26,6 +26,12 @@ Lamb shank is one of the most naturally suited cuts for the slow cooker. The den
 
 Target internal temperature: **85–90 °C (185–194 °F)** for full fall-off-the-bone tenderness.
 
+## Styckesprofil
+
+Lammlägg är ett naturligt lämpat slow cooker-snitt. Den täta, kollagenrika underbenet kräver 6–8 timmar på LÅG för att fullständigt lösa upp bindväven till rik gelatin. Den långa fuktiga miljön i slow cooker replicerar effekten av en traditionell bräseringskruka eller lerugn — lägre temperatur, längre tid, likvärdiga resultat.
+
+Bryn alltid lägget i en het panna med olja och smör innan det läggs i slow cooker för att skapa arom. Innertemperatur: **85–92 °C (185–198 °F)** i slow cooker. Eftertillagning: noll. Sond in i tjockaste köttmassan, borta från benet.
+
 ## Source recipes
 
 ### 1. Nefis Yemek Tarifleri — Düdüklü Tencerede Kuzu İncik (Turkish tradition)

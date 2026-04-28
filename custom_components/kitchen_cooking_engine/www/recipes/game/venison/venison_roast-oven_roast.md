@@ -26,6 +26,12 @@ Venison haunch or saddle roast is a classic British, German, French, and Scandin
 
 Target internal temperature: **55–60 °C (131–140 °F)** for a pink, moist result. Some German recipes use the "Niedergarmethode" (low-temperature method) at 80–90 °C to hit exactly 58 °C core.
 
+## Styckesprofil
+
+Vilthaunche eller sadel-stek är en klassisk brittisk, tysk, fransk och skandinavisk festrätt. Standardmetod: torrlagra om möjligt, sedan sear all om i en het panna och avsluta i ugnen (180–200 °C för medium/well, eller lågt 120–140 °C för precision med sond). Sadeln är särskilt lämpad för ugnsrostning: lärningsmetoden — sear i panna, sedan lång lågtemperaturugn — ger utmärkt kontroll.
+
+Innertemperatur: **60–65 °C (140–149 °F)** för medium (skandinavisk preferens); **70–75 °C** för genomstekt (brittisk/tysk preferens). Eftertillagning: 4–6 °C. Sond i tjockaste köttmassan, borta från ben.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Stuffed Saddle of Venison with Prunes and Brioche (British tradition)

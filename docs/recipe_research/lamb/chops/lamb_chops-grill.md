@@ -28,6 +28,12 @@ Target internal temperatures (from Africanbites.com):
 - Rib chops: **55 °C (131 °F)** for medium-rare
 - Loin chops: **57–60 °C (135–140 °F)** for medium
 
+## Styckesprofil
+
+Lammkotletter (rygg- och lumbarkotletter) är de klassiska grillningssnitten, populära globalt från Australien och Nya Zeeland till UK, Medelhavet, Mellanöstern och Västafrika. Ryggkotletter är mindre, magrare och mer delikatta; lumbarkotletter är större och fetare.
+
+Grilla vid direkt medel-hög värme (200–230 °C), 4–5 minuter per sida. Sond in i den tjockaste muskeldelen borta från benet. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium (rosa mitt, internationell standard); **70 °C** för genomstekt (mellanösternsk preferens). Eftertillagning: 3–4 °C.
+
 ## Source recipes
 
 ### 1. African Bites — Grilled Lamb Chops with Peppercorn Sauce (West African/International tradition)

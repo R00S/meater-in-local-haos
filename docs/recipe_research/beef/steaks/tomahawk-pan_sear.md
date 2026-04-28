@@ -16,6 +16,10 @@ The tomahawk is too large to fit in a standard frying pan, so "pan sear" for a t
 Target internal temperatures:
 - Medium-rare: **pull from oven at 55 °C (131 °F)**, rest to **57–58 °C (135–136 °F)**
 
+## Styckesprofil
+
+Tomahawken är för stor för att passa i en standardstekpanna, så "pannsearing" för en tomahawk refererar till en kantstekningsteknik + stor stekpanna eller gjutjärnsgriddle, vanligtvis kombinerat med ugnsavslutning. Benet (30–40 cm) måste positioneras utanför pannan. En stor gjutjärnspanna (30+ cm) eller en paellpanna är nödvändig; alternativt sears varje sida med en handbränslamp efter ugnsförvärmning. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 4–6 °C.
+
 ## Source recipes
 
 ### 1. ichkoche.at — Tomahawk Steak (Austrian tradition)

@@ -12,6 +12,10 @@ cut_type: Eggplant
 ## Cut profile
 Eggplant (*Solanum melongena*) oven-roasted develops rich, caramelised surfaces across the cut faces of slices, halves, or cubes, while the interior transitions from dense and spongy to silky and almost melting. Unlike pan-frying, the dry oven heat draws moisture outward without submersion in oil, producing a less greasy result; the sacrifice is a slower and less intense browning than stovetop contact. The technique suits whole eggplants destined for mashing (baked at 200–220 °C until skin chars and flesh collapses), thick slices or halves (roasted at 200–220 °C cut-face-down on an oiled sheet pan), and cubes or batons (tossed in oil and roasted at 220 °C until deeply golden). A MEATER probe inserted into the thickest part of the flesh monitors the interior: the target for slices or cubes is 85–90 °C (185–194 °F); for a whole eggplant intended for mashing, 90–95 °C is the pull point. Carryover is minimal for vegetables at this degree of doneness.
 
+## Styckesprofil
+
+Aubergine (*Solanum melongena*) ugnsrostad utvecklar rika, karameliserade ytor längs snittytor på skivor, halvor eller tärningar, medan insidan omvandlas från tät och svampig till silkeslen. Ugn vid 200–220 °C i 25–35 minuter. Klar när gyllenbrun och mjuk.
+
 ## Source recipes
 
 ### 1. 小麦芽15 — 好吃到连皮都不剩的烤茄子 (Chinese Oven Roasted Eggplant with Garlic-Cumin Sauce)

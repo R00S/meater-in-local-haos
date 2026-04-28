@@ -13,6 +13,10 @@ cut_type: Steaks
 
 The T-bone steak is defined by the T-shaped vertebral bone that separates two distinct muscles: the larger striploin (*longissimus dorsi*) on the long side of the bone, and the smaller tenderloin (*psoas major*) fillet on the shorter side. This presents a unique cooking challenge: the two muscles have different ideal internal temperatures (the tenderloin cooks faster and is best at 52–54 °C, the strip benefits from 55–57 °C), and the bone itself acts as an insulator — the meat nearest the bone always lags behind by 3–5 °C. Pan searing a T-bone requires a pan large enough to accommodate the steak flat, very high heat, and careful probe placement. The MEATER probe should be placed in the striploin side (the larger portion), away from the bone, for the most representative reading. Carryover is 4–5 °C.
 
+## Styckesprofil
+
+T-bonebiffen definieras av det T-formade ryggkotsbenet som separerar två distinkta muskler: den större striplouinen (*longissimus dorsi*) på benets långa sida och den mindre filén (*psoas major*) på den kortare sidan. Detta skapar en unik tillagningsutmaning: de två musklerna har olika kötningstjocklekar, fettinnehåll och värmeledningsförmåga, vilket innebär att de når sina respektive ideala innertemperaturer vid olika tidpunkter. Pannsearing av T-bone kräver benetorientering: ben mot pannytan hjälper till att leda värme jämnt till båda musklerna. Innertemperatur: 54–57 °C (striploin). Eftertillagning: 3–5 °C.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Pan-Seared T-Bone (American steakhouse tradition)

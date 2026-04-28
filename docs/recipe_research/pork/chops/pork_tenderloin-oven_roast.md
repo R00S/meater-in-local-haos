@@ -18,6 +18,12 @@ Oven-roasted whole pork tenderloin is a technique used across global cuisines. I
 Target internal temperatures (oven roast):
 - Juicy/slightly pink: **63–65 °C (145–149 °F)**
 
+## Styckesprofil
+
+Fläskfilé (*svinemørbrad* / *Schweinefilet* / *solomillo de cerdo* / 猪里脊) är det magraste snittet av fläsk — en lång, smal muskel längs ländryggen innanför revbenskorgret. Den är extremt mager (< 2 % fett), mör och snabbkokad.
+
+Strukturen är lämpad för alla snabbkokningsmetoder: pannstekning, grillning, ugnsrostning, air fryer och sous vide. Alla kräver noggrann temperaturkontroll på grund av magreten. Innertemperatur: **63 °C (145 °F)** USDA (med 3 min vila) till **68 °C** för lite rosa. Eftertillagning: 2–3 °C. Sond insatt längsvis in till mitten.
+
 ## Source recipes
 
 ### 1. Directo al Paladar — Solomillo de cerdo al horno con patatas (Spanish tradition)

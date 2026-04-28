@@ -59,6 +59,10 @@ for fully cooked flesh that is just opaque. The MEATER probe must be inserted fr
 thickest edge (lateral insertion) in thin fillets, or through the shoulder of a whole fish.
 
 
+## Styckesprofil
+
+Regnbågsforell (*Oncorhynchus mykiss*) och brun öring (*Salmo trutta*, svenska: forell, norska: ørret, tyska: Forelle, italienska: trota) är bland de mest kokta sötvattensfiskarna i norra Europa och Nordamerika. Köttet är delikat, med ett milt sötvattensmak och en rosa till vit kötttjäll. Pannsearing av forell — hela fisken eller filé med skinn — ger knaprig yta och saftig insida. Skinnsidan ned i het smörpanna i 3–4 minuter; vänd för 2 minuter. Innertemperatur: 58–62 °C.
+
 ## Research files by cooking method
 
 - [Pan Sear](./trout-pan_sear.md)

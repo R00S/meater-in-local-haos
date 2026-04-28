@@ -17,6 +17,10 @@ Target sous vide bath temperatures (tri-tip):
 - Medium-rare: **56–57 °C (133–135 °F)** × 1.5–3 hr
 - Medium: **60–62 °C (140–144 °F)** × 1.5–3 hr
 
+## Styckesprofil
+
+Tri-tip (även känd som triangelbiff, Santa Maria-biff eller *culotte de bœuf* på franska) är en triangelformad muskel tagen från nedre entrecôteprimalen — specifikt *tensor fasciae latae*. Den väger 400–900 g och fibern löper i två riktningar, vilket gör skärningsdirektionen kritisk. Sous vide är idealisk för tri-tip: lång koktid vid exakt temperatur ger jämn mörhet och mjukar upp det lätt sega snittet. Avsluta med searing. Innertemperatur: 54–57 °C medium-rare.
+
 ## Source recipes
 
 ### 1. Madens Verden — Ball tip sous vide (Danish tradition)

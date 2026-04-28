@@ -12,6 +12,12 @@ cut_type: Ham
 ## Cut profile
 A fresh (uncured, unsmoked) ham is the entire hind leg of a pig — bone-in, skin-on, with the femur and aitchbone running through the centre and a thick layer of subcutaneous fat under the rind. Anatomically distinct from cured (julskinka) or smoked ham preparations: the muscle has its full natural moisture, the rind is supple rather than salted-firm, and the fat has not been altered by brine. Roasting requires a long, moderate-temperature cook (140–160 °C) that drives the centre to safe temperature without overcooking the surface meat under the fat. Carryover is significant — 4–6 °C in a 4–6 kg leg — because the bone, fat and dense muscle store heat well. Rest 30–45 minutes loosely tented before carving.
 
+## Styckesprofil
+
+En färsk (ej härdad, ej rökt) skinka är grisens hela bakben — med ben, skinnet kvar, med lårben och bäckenlben genom mitten och ett tjockt lager subcutant fett under svålen. Anatomiskt distinkt från härdad (julskinka) eller rökt skinka.
+
+Tillaga i ugn vid 160–175 °C, ca 20–25 min per 500 g. Innertemperatur: **75–80 °C (167–176 °F)** för fullt genomstekt. Eftertillagning: 4–5 °C. Sond in i tjockaste köttmassan (*biceps femoris*), borta från lårbenets kärna. Vila täckt 15–20 minuter.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Slow-Roasted Fresh Ham with Cider Glaze (American tradition)

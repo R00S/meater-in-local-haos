@@ -17,6 +17,10 @@ For thinner strips, a standard oven roast at 220–230 °C following a brief sto
 
 MEATER probe enters from the thin end of the strip, aimed at the geometric centre, away from the fat cap edge. Carryover from a 120 °C oven: 4–6 °C; from 220 °C oven: 5–7 °C.
 
+## Styckesprofil
+
+Ugnsstekning av New York strip fungerar bäst som omvänd searing för tjockt skurna biffar (3 cm+): lägg den kryddade stripen på ett galler över en ugnsplåt i en 120–135 °C ugn tills innertemperaturen är 45–47 °C (ca 20–30 min), överför sedan omedelbart till en rykande het gjutjärnspanna och sear i 60–90 sekunder per sida. Denna metod ger jämn mörhet från kant till kant utan grå överstekta ytterlager. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Reverse-Sear New York Strip (American tradition)

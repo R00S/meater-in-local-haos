@@ -18,6 +18,12 @@ Grilled pork chops are central to culinary traditions far beyond Europe. In Viet
 Target internal temperatures (grill):
 - Juicy/pink: **62–65 °C (144–149 °F)**
 
+## Styckesprofil
+
+En fläskkotlett är ett tvärsnitt av fläskloinen från grisens rygg. Pannstekning är den klassiska inomhusmetoden: hög direkt värme, 3–4 minuter per sida, sedan kort vila.
+
+Innertemperatur: **63–65 °C (145–149 °F)** USDA-rekommendation (med 3 minuters vila); **70 °C** för genomstekt utan rosa kvar. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till mitten av kotletten, borta från benet. Vila täckt 5 minuter innan skärning.
+
 ## Source recipes
 
 ### 1. Madens Verden — Svinekoteletter på grill (Danish tradition)

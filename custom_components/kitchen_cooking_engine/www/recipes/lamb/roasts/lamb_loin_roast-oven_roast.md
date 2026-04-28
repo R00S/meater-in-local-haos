@@ -28,6 +28,10 @@ Lamb loin roast is the boneless, cylindrical muscle removed from the saddle (the
 
 ---
 
+## Styckesprofil
+
+Lammryggstek är den benfria, cylindriska muskeln borttagen från sadeln (avsnittet mellan sista revbenet och höften). Det är lammets ekvivalent av en nötfilé vad gäller mörhet — mager, finkornig, låg i kollagen. Ugnsstekning ger bäst resultat. Innertemperatur: 57–60 °C (medium-rare). Eftertillagning: 3–4 °C.
+
 ## Source recipes
 
 ### 1. Paul Heathcote / Great British Chefs — Best-end of Lamb 'Provençale herbs'

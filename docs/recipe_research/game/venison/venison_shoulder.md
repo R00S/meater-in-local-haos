@@ -32,6 +32,12 @@ quality_assessed: 2026-04-27
 
 The venison shoulder (forequarter; *Rehschulter* in German, *épaule de chevreuil* in French) is the forelimb from the shoulder blade to the knee joint. It is a heavily worked, muscular cut from the deer's forequarter — denser in connective tissue than the loin or leg, and with a more pronounced gamey flavour. Like beef chuck or lamb shoulder, it is best cooked low and slow in moist heat (braising, slow cooker) to convert the collagen-rich connective tissue into gelatin. Pulled venison shoulder at 88–96°C / 190–205°F is the target for most braising or slow-cooker preparations. In Germany, the whole shoulder (*Rehschulter*) is braised bone-in in a covered roasting pan at 160°C / 320°F for 1.5–2 hours with juniper berries, game stock, and berry juices. In British tradition, the shoulder is cut into chunks and braised as a stew (casserole) with redcurrant jelly and red wine. The shoulder can also be slow-roasted whole in the oven, barded with fat to compensate for the lean meat.
 
+## Styckesprofil
+
+Viltbogen (frambenet; *Rehschulter* på tyska, *épaule de chevreuil* på franska) är frambenet från skulderblad till knäled. Det är ett hårt arbetat, muskulöst snitt med tätare bindväv än loin eller benet, och med en mer uttalad viltsmak.
+
+Dessa egenskaper gör bogen idealisk för bräsering och slow cooking — metoderna som omvandlar segheten till mört, gelatinöst kött med koncentrerad smak. Innertempemål för pull-apart mörhet: **88–95 °C (190–203 °F)**. Eftertillagning: försumbar (fuktig bräsering). Sond i tjockaste muskeldelen, borta från skulderbladsben.
+
 ## Research files by cooking method
 
 - [Braise](./venison_shoulder-braise.md) — 2 sources collected (Groups B and D; Groups A and C needed)

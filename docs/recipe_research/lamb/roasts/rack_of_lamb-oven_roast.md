@@ -28,6 +28,12 @@ Because the meat is from the loin and has very little connective tissue, rack of
 
 Target internal temperature: **52–57 °C (126–135 °F)** for medium-rare (the universal preference). Pull at 50–52 °C.
 
+## Styckesprofil
+
+Rack of lamb (rev-sektionen med 7–8 frenserade revbensben) är ett av de mest prestigefyllda och visuellt dramatiska rostningsnittten i europeisk och nordamerikansk matlagning. En Frenchad rack of lamb, belagd med en örtkorpa (*persillade* eller Dijon-ströbröd), är ett klassisk elegant middagsstycke.
+
+Standardteknik: sear i het panna, belägg med örtkorpa, rosta i 200–220 °C ugn 15–20 minuter. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare (standard). Eftertillagning: 4–5 °C. Dra vid 52–58 °C. Sond in i loin-muskeln (*longissimus dorsi*) borta från benet. Vila 5–8 minuter täckt.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Herb-Crusted Rack of Lamb (British/French tradition)

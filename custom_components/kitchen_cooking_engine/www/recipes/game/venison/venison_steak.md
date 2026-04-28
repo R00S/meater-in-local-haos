@@ -65,6 +65,12 @@ The European tradition across the UK, Germany, Scandinavia and Italy pairs venis
 Target internal temperature: pull at **54–57°C (130–135°F)** for medium-rare. Venison dries out rapidly above 65°C and should never be cooked to well-done.
 
 
+## Styckesprofil
+
+Viltsteak avser vanligen snittet från haunchen (bakbenet), loin eller ryggsträng av hjort. Ryggsträngen och loin-medaljonger är de bästa pannstekssnitten: magra, finkorniga och snabbkokade.
+
+Sear i smör eller klarat smör vid hög värme — 3–4 minuter per sida — sedan avsluta kort i ugn om nödvändigt för tjockare snitt. Vila täckt 5 minuter. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Välgenomstekt avråds starkt. Eftertillagning: 3–4 °C. Sond insatt parallellt med stekens yta in till mitten.
+
 ## Research files by cooking method
 
 - [Grill](./venison_steak-grill.md)

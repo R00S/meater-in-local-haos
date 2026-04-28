@@ -16,6 +16,10 @@ The tomahawk oven roast uses the reverse-sear method: slow oven first at low tem
 Target internal temperatures (oven pull temps before sear):
 - For medium-rare: **pull from oven at 50 °C (122 °F)**, sear to 55 °C, rest to **57 °C (135 °F)**
 
+## Styckesprofil
+
+Tomahawk ugnsstekning använder omvänd searing-metoden: lång ugn vid låg temperatur för att tillaga insidan jämnt, sedan het searing (på spisen eller under grill) för krusta. På grund av tjockleken 5–8 cm är enbart spistillagning omöjlig — utsidan skulle vara förkolnad innan kärnan är rätt tillagad. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 4–6 °C. Placera MEATER-sonden horisontellt genom tjockaste punkten, undvika benet.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Tomahawk-Steak im Backofen, rückwärts gegart (German tradition)

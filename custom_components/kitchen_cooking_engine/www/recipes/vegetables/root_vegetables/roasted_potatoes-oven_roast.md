@@ -15,6 +15,10 @@ Oven roasting is the classic and most widely used method for roast potatoes. The
 
 Target internal: 95–100 °C for full starch gelatinisation and a fluffy interior. Total oven time: 45–60 minutes depending on chunk size and oven temperature. The British Sunday roast tradition (goose fat, high oven) is the benchmark preparation for this method.
 
+## Styckesprofil
+
+Ugnsstekning är den klassiska och mest använda metoden för rostade potatisar. Nyckelvariablerna är: (1) förkoka tills ytan är grov och fluffig (5–8 min för skurna bitar); (2) förvärm olja i ugnsform vid 220 °C; (3) skaka väl för rugglad yta. Klar när djupt gyllenknaprig och genomstekt.
+
 ## Source recipes
 
 ### 1. Nigel Slater — Perfect Roast Potatoes (British tradition)

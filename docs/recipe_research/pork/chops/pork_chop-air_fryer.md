@@ -18,6 +18,12 @@ Air-frying is one of the fastest and most consistent methods for pork chops — 
 Target internal temperatures (air fryer):
 - Juicy/slightly pink: **63–65 °C (145–149 °F)**
 
+## Styckesprofil
+
+En fläskkotlett är ett tvärsnitt av fläskloinen från grisens rygg mellan skulder och lägg. Beroende på position längs loinen kan det vara en rygg-kotlett (ett revbenslben, mestadels loin-muskel), lumbarkotlett (T-ben), eller ryggkotlett utan ben (*eye of loin*).
+
+Grillning vid medel-hög direkt värme: 4–5 minuter per sida för 2–3 cm tjocka kotletter. Innertemperatur: **63–65 °C (145–149 °F)** USDA-rekommendation (med 3 minuters vila); **70 °C** för genomstekt utan rosa kvar. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till mitten, borta från benet.
+
 ## Source recipes
 
 ### 1. Madens Verden — Herregårdskotelet i airfryer (Danish tradition)

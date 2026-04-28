@@ -26,6 +26,10 @@ Goose thigh is perhaps the most flavourful part of the goose — richer than the
 
 Target internal temperature: **175–185 °F (79–85 °C)** — optimal for collagen breakdown; USDA minimum: 165 °F (74 °C).
 
+## Styckesprofil
+
+Gåslår är kanske den mest smakrika delen av gåsen — rikare än benet med högre andel intramuskulärt fett och bindväv. Brässering är idealisk: den fuktiga värme-miljön håller köttet saftigt under den långa tillagning som krävs. Innertemperatur: 80–85 °C. Tillagnings tid: 2–3 timmar bräserad.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Slow-Roast Duck (low-and-slow principle adapted for goose thigh braise)

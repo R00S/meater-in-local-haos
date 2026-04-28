@@ -71,6 +71,10 @@ quality_assessed: 2026-04-27
 
 **Probe placement**: Enter from the end of the joint to the geometric centre of the lean section. Stay 2 cm clear of any bones (bone-in rib roast).
 
+## Styckesprofil
+
+"Stekbit" är en brittisk och australiensisk samlingsterm för vilken som helst stor nötstycke lämpad för ugnsstekning: övre innanlår, innanlår, yttersida, fransyska, revbensspjäll, entrecôte, nötrygg. Termen indikerar tillagningsmetod, inte ett specifikt anatomiskt snitt. Magra, hårt arbetade muskler (innanlår, yttersida) kräver lägre innertemperaturer (54–57 °C rare/medium-rare) för att behålla sin saftighet; mer marmorerade snitt (entrecôte, revbensstycken) tål högre temperaturer bättre. Eftertillagning varierar med stekens massa och ugnstemperatur: 3–6 °C i en hel stekbit på 1–2 kg är vanligt.
+
 ## Research files by cooking method
 
 | Method | Leaf file | Status |

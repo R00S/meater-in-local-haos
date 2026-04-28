@@ -26,6 +26,12 @@ Lamb neck is an excellent slow cooker cut. Its dense marbling, connective tissue
 
 Target internal temperature: **85–90 °C (185–194 °F)** for full fall-off-the-bone tenderness.
 
+## Styckesprofil
+
+Lammhals är ett utmärkt snitt för slow cooker. Tät marmorering, bindväv och halskotsben gynnas alla av 7–8 timmar på LÅG fuktig värme — halsen blir gelatinös och rikt smakrik och lämnar all seghet bakom sig vid slutet av den långa tillagningen.
+
+Slow cooker-metod: bryn snitt i panna, lägg i med fond, lök, morot, rosmarin, timjan. Koka på LÅG 7–8 timmar. Innertemperatur: **85–90 °C (185–194 °F)**. Eftertillagning: noll (slow cooker). Sond in i tjockaste köttmassan, borta från halskotor.
+
 ## Source recipes
 
 ### 1. Nefis Yemek Tarifleri — Fırında Kuzu Gerdan (slow cooker adaptation) (Turkish tradition)

@@ -13,6 +13,12 @@ cut_type: Steaks
 
 The flat iron steak, from the infraspinatus of the shoulder blade, is exceptionally well-matched to sous vide: its strong marbling prevents the cut from drying during extended low-temperature baths, and its thin, even profile (2–3 cm) means it reaches thermal equilibrium with the circulator water quickly. Sous vide produces edge-to-edge even doneness that no other method can match — there is no grey band, no overcooking at the edges — and the moist, sealed environment retains every gram of juices that other methods lose to evaporation. **Important sous vide note:** the probe cannot be inserted into the steak during the sealed-bag cooking stage; the circulator temperature itself is the target temperature. A probe can be used post-bath to verify internal temperature after removing the steak from the bag, and is useful for confirming temperature hold before the finishing sear. Typical cook times for a 2–3 cm flat iron are 1–4 hours at 55–57 °C (131–135 °F); beyond 4 hours the texture can begin to degrade as enzymes continue to work. Carryover during the finishing sear adds 2–4 °C, so when searing post-bath, the bath temperature should be set 2–3 °C below the intended final serving temperature, or the sear should be brief and aggressive.
 
+## Styckesprofil
+
+Flat iron-biffen, från *infraspinatus* i skulderbladspartiet, passar utomordentligt väl för sous vide: dess kraftiga marmorering förhindrar att snittet torkar ut under förlängda låg-temperatursbad, och dess tunna, jämna profil (2–3 cm) innebär att det når termisk jämvikt med cirkulationsvattnet snabbt.
+
+Sous vide producerar jämn tillagning från kant till kant som ingen annan metod kan matcha — inget grått band, ingen överkokning vid kanterna — och den fuktiga, förseglade miljön behåller varje gram juicer som andra metoder förlorar till avdunstning. **Viktigt sous vide-notat:** sonden kan inte sättas in i biffen under den förseglade påsen-tillagningsfasen; cirkulationstemperaturen i sig är måltemperaturen. En sond kan användas efter badet för att bekräfta innertemperaturen efter att biffen tagits ur påsen, och är användbar för att bekräfta temperaturen före den avslutande searing. Typiska tillagningstider för en 2–3 cm flat iron är 1–4 timmar vid 55–57 °C; bortom 4 timmar kan texturen börja försämras. Eftertillagning under den avslutande searing lägger till 2–4 °C. Innertemperatur: 54–57 °C medium-rare.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt / Serious Eats — Sous Vide Flat Iron at 55 °C (American modernist tradition)

@@ -26,6 +26,12 @@ Wild boar shoulder is a large, heavily worked muscle containing significant conn
 
 Target internal temperature: **80–90 °C (176–194 °F)** for fall-apart texture. Food-safety minimum is 70 °C (158 °F) for safe serving, but the collagen conversion to gelatin that makes the shoulder delicious requires 80+ °C.
 
+## Styckesprofil
+
+Vildsvinsbog är en stor, hårt arbetat muskel med betydande bindväv. Den gynnas av lång, långsam rostning (3–4 timmar) vid måttlig temperatur (160–200 °C) i braiseringsvätska för att uppnå pull-apart-mörhet. Den tyska traditionen använder vin, vildfond, enbär och rotvinstgrönsaker.
+
+Innertemperatur: **85–95 °C (185–203 °F)** för pull-apart. Eftertillagning: försumbar (bräserat i vätska). Sond in i tjockaste köttmassan, borta från skulderbladsben. Marinering 24–48 timmar med rödvin, rosmarin, enbär och lagerblad förbättrar smak och mörnhet avsevärt.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Wildschweinschulter ganz einfach (German tradition)

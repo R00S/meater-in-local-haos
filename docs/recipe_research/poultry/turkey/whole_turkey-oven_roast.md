@@ -26,6 +26,10 @@ A whole turkey presents the same fundamental challenge as a whole chicken but at
 
 Typical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) unstuffed. A 4.5 kg (10 lb) bird takes approximately 2.5–3 hours; a 7 kg (15 lb) bird takes approximately 3.5–4 hours.
 
+## Styckesprofil
+
+En hel kalkon presenterar samma grundläggande utmaning som en hel kyckling men i större skala och med mer extrema skillnader mellan bröst och ben/lår: bröstkötet är magert och kan torka ut snabbt, medan benen och låren behöver mer värme för att bryta ner deras tuffare bindväv. Innertemperatur: 74 °C (bröst), 80 °C (lår). Eftertillagning: 6–10 °C för hela fågeln. Tillagnings tid: 3–4 timmar vid 160–180 °C för en 5–7 kg kalkon.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — The Best Roast Turkey (American tradition, dry-brined and spatchcocked)

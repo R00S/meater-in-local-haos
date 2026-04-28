@@ -54,6 +54,12 @@ The French tradition (lapin aux pruneaux, lapin à la moutarde) is the most inte
 Target internal temperature: **74–77 °C (165–175 °F)** — rabbit, like chicken, should be cooked through. Fork-tender braised rabbit reads 74–80 °C.
 
 
+## Styckesprofil
+
+Kanin (*Oryctolagus cuniculus*) lår (fram och bak) är det vanligaste bräserade snittet. Bakbenen bär mer kött och är det primära braiseringsnittet. Slow cooker-metoden — LÅG i 6–7 timmar — ger identiska resultat med minimal tillsyn. Tillsätt vin, fond, lök, morötter, rosmarin och vitlök.
+
+Kanin är mager, fettfattig och benägen att torka ut om överkokad — braiseringsvätska är avgörande för att förhindra uttorkning. Innertemperatur: **75–82 °C (167–180 °F)** för fullt genomstekt. Eftertillagning: noll (slow cooker). Sond i den tjockaste köttmassan i bakbenet.
+
 ## Research files by cooking method
 
 - [Braise](./rabbit_legs-braise.md)

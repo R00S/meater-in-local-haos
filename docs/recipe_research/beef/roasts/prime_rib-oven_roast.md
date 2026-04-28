@@ -17,6 +17,10 @@ Two temperature philosophies exist in oven roasting: the **reverse sear** (90–
 
 Carryover is the dominant concern for the home cook: a 3–5 kg prime rib loses 2–8 °C after removal depending on size, oven type, and ambient temperature — pull 3–6 °C before the target. MEATER probe is placed at the geometric centre of the eye, inserted from the large cut face parallel to the rib bones, avoiding bone and the fat seam.
 
+## Styckesprofil
+
+Ugnsstekning framhäver prime ribs exceptionella marmorering på ett sätt som ingen annan metod kan matcha. Det höga fettinnehållet gör att ribbet självbastars under tillagningen; det utsmälta fettet cirkulerar runt köttet, håller ytan fuktig och ger löpande smak åt ytan. Tillagningsprincipen — lång, låg värme för optimal möring — kombinerar maillardbrunt yta (från inledande eller avslutande hög värme) med jämn pastörisering av det inre. Målet är att hålla den centrala temperaturen precis i det smakoptimala fönstret (54–60 °C för medium-rare) utan att överkoka ytlagren.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Reverse-Sear Prime Rib

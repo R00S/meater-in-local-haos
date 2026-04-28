@@ -26,6 +26,12 @@ Ground chicken cooked by pan-frying covers two related applications: formed patt
 
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry; visual: no pink, juices clear
 
+## Styckesprofil
+
+Malet kyckling tillagat genom pannstekning täcker två relaterade tillämpningar: formade biffar (burgare, köttbullar) brynnade i en stekpanna, och löst kokat malet kyckling. Malet kyckling är mycket magert och klibbigt.
+
+Binda formade biffar med ägg och panko. Pannsteka vid medel-hög värme tills genomstekt och lätt brynnat. Innertemperatur: **74 °C (165 °F)** USDA. Eftertillagning: 2–3 °C. Sond in i tjockaste delen av biff eller formblandning. Vila 3–5 minuter.
+
 ## Source recipes
 
 ### 1. Jessica Gavin — Turkey Burgers (ground poultry patty technique adapted for chicken)

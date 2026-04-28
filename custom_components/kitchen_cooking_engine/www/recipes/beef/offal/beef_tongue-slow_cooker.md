@@ -12,6 +12,10 @@ cut_type: Other / Offal
 ## Cut profile
 Beef tongue cooked in an electric slow cooker is the same long-collagen-conversion process as a stove-top or oven braise, but executed in a sealed environment that holds the cooking liquid at a steady 85–95 °C (low setting) or 95–100 °C (high setting) without monitoring. The slow cooker is well suited to this cut because the unattended 6–10 hour cook completely converts the tongue's collagen to gelatin, the steam-tight environment keeps the muscle fully submerged in its liquid, and there is no risk of accidental boil-over (which would toughen the muscle). The peel-while-warm rule still applies — the skin must come off within 5–10 minutes of lifting from the cooker. Carryover is zero; the tongue stays at cooker temperature until removed.
 
+## Styckesprofil
+
+Nöttungue tillagad i elektrisk slow cooker genomgår samma långa kollagenomvandling som en brässering på spisen eller i ugn, men i en ångfylld, förseglad miljö som håller vätskan vid stabil 85–95 °C utan bevakning. Det grova yttre skinnet behåller sin form under hela tillagningen och avlägsnas enkelt efter det att tungan är klar och fortfarande varm. Searing före slow-cooker-tillagnaden tillsätter Maillard-smaker som apparaten själv inte kan producera. Eftertillagning: noll — innertemperaturen stabiliseras i slow cookerns fuktighetsmiljö.
+
 ## Source recipes
 
 ### 1. Hugh Acheson — Slow-Cooker Pot-au-Feu Tongue (American Culinary Group C tradition)

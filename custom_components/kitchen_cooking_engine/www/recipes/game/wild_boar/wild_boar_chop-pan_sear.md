@@ -28,6 +28,12 @@ Pan-searing wild boar chops over medium-high heat for 6–10 minutes per side is
 
 Target internal temperature: **70–72 °C (158–162 °F)** (safe). Some chefs cook to 65 °C (149 °F) for a pale-pink interior.
 
+## Styckesprofil
+
+Vildsvinskotletter (*Sus scrofa*; *Wildschwein-Koteletts* / *côtelettes de sanglier*) tas från djurets rygg med revbenslben kvar. Köttet är mörkare, tätare och mer viltartat än vanlig fläsk. Panntekningsmetod: het gjutjärn, medel-hög värme, 4–5 minuter per sida.
+
+Kraftfull kryddning krävs — enbär, rosmarin, rödvin marinad, senap och svamp är klassiska smakkompanjoner. Innertemperatur: **65–70 °C (149–158 °F)** för genomstekt rosa. Eftertillagning: 3–4 °C. Sond i tjockaste muskeldelen borta från benet. Kryddor och marinad kan appliceras 24 timmar i förväg.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Wildschweinkoteletts mit Wacholdercreme (German tradition)

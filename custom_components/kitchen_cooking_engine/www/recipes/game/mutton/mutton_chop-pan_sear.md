@@ -26,6 +26,12 @@ Mutton refers to the meat of a sheep older than one year (typically 2–4 years)
 
 Target internal temperature: **70–75 °C (158–167 °F)** — cooked through with some pink. Fully cooked traditional: 75–80 °C.
 
+## Styckesprofil
+
+Fårkött avser köttet från ett får äldre än ett år (typiskt 2–4 år), med starkare, mer uttalad smak än lamm. Fårköttkotletter (rygg- eller axelkotletter) är populära i tyska, brittiska, mellanösternska och sydasiatiska traditioner. Den starkare smaken gynnas av aromatisk kryddning och köttet föredras typiskt medium till välgenomstekt.
+
+Spiskummin, koriander, ingefära och chili fungerar särskilt bra med fårköttets robusta smak. Innertemperatur: **70–75 °C (158–167 °F)** — genomstekt med lite saftighet kvar. Traditionellt fullt genomstekt: 75–80 °C. Eftertillagning: 3–4 °C. Sond i tjockaste muskeldelen.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Hammelkoteletts (German tradition)

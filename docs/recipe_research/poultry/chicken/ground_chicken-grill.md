@@ -26,6 +26,12 @@ Ground chicken (tavuk kıyması / poulet haché / Hühnerhackfleisch) is a lean,
 
 Target internal temperature: **74 °C (165 °F)** — the USDA minimum for all ground poultry; confirmed by multiple sources.
 
+## Styckesprofil
+
+Malet kyckling (*tavuk kıyması* / *poulet haché* / *Hühnerhackfleisch*) grillas som köfte (avlånga köttbullar), biffar eller platta burgare. Eftersom malet kyckling är ljust och magert krävs smaktillsats (lök, örter, kryddor) och fuktbindare (ägg, brödsmulor) för att hålla formen och förhindra uttorkning.
+
+Grilla vid medel-hög direkt värme, 3–4 minuter per sida för köfte/biffar. Innertemperatur: **74 °C (165 °F)** USDA. Eftertillagning: 2–3 °C. Sond längsmed köfte-spettet in till mitten. Vila 3–5 minuter täckt.
+
 ## Source recipes
 
 ### 1. Nefis Yemek Tarifleri — Izgara Tavuk Köftesi (Turkish tradition)

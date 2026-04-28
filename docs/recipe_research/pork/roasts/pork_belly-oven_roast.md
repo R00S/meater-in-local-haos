@@ -18,6 +18,12 @@ Target internal temperatures (oven roast):
 - German Krustenbraten: **72–75 °C (162–167 °F)** — firmer but crackling-focused
 - Boil + glaze methods: **already cooked; glaze at high temp**
 
+## Styckesprofil
+
+Fläskbuk (*svinekam* / *Schweinebauch*) med svål är en quintessentiell nordisk och tysk söndagsstek. Svålen ritsas djupt, saltas generöst. Ugnsrostning: 180–200 °C, 1,5–2 timmar, med buljong och grönsaker i botten av formen.
+
+Avsluta under grillelementet för knäppande svål. Innertemperatur: **80–88 °C (176–190 °F)** för genomstekt, saftig fläskbuk. Eftertillagning: 3–4 °C. Sond in i tjockaste köttmassan, borta från revbensben och svål. Vila täckt 10–15 minuter.
+
 ## Source recipes
 
 ### 1. Madens Verden — Perfekt Flæskesteg i Ovn (Danish tradition)

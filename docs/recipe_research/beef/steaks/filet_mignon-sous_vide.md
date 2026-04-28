@@ -12,6 +12,10 @@ cut_type: Steaks
 ## Cut profile
 Filet mignon (psoas major, small end) is the most tender, leanest, and most delicately flavoured steak in the carcass. Sous vide is arguably the ideal method for this cut: the water bath maintains a precise target temperature throughout the full cooking period, eliminating any possibility of overcooking, and the sealed-bag environment retains all juices that would otherwise be lost to a pan or grill. Because filet mignon has no connective tissue or collagen to break down, sous vide cooking time is purely about temperature equilibration — a 4 cm filet mignon typically equilibrates within 45–60 minutes. The finishing sear (always required after sous vide) provides the Maillard crust the lean exterior cannot develop in the sealed bag. Carryover after sous vide is essentially zero for the water bath stage; the finishing sear adds a negligible rise in the outermost layer only.
 
+## Styckesprofil
+
+Filet mignon (*psoas major*, smal ände) är den möraste, magraste och mest delikata av alla biffar. Sous vide-tillagning är perfekt anpassad för filet mignon: det exakta temperaturkontrollen undanröjer risken för överkokad och säkerställer jämn mörhet från kant till kant. Filetens brist på intramuskulärt fett innebär att den torkar ut snabbt om den tillagas vid fel temperatur; sous vide håller den vid exakt rätt temperatur i exakt rätt tid. Avsluta alltid med snabb searing i het panna direkt efter sous vide för maillardyta. Innertemperatur: 52–55 °C rare, 55–58 °C medium-rare.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Sous Vide Filet Mignon

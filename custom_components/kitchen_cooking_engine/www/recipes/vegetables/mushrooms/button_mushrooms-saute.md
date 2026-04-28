@@ -12,6 +12,10 @@ cut_type: Mushrooms
 ## Cut profile
 Button mushrooms (*Agaricus bisporus*) sautéed in a very hot pan are the classic restaurant technique for achieving maximum flavour concentration in minimum time. The key principle, articulated by Sanjay Aggarwal and confirmed by numerous food scientists: the pan must be scorching hot and uncrowded, so mushrooms brown rapidly before their expelled moisture creates steam. Crowded, slow-cooked mushrooms stew rather than sauté, and their flavour is diluted and flat. The target for sautéed button mushrooms is 78–85 °C (172–185 °F) internal temperature: golden-brown exterior, silky-juicy interior, and the characteristic umami-concentrated flavour of properly sautéed funghi. Carryover is negligible.
 
+## Styckesprofil
+
+Champinjoner (*Agaricus bisporus*) sauterade i en riktigt het panna är den klassiska restaurangtekniken för maximal smakkoncentration. Nyckelprincipen: het torr panna utan lock, ett lager, rör sällan. Sautera i 5–8 minuter. Klar när djupt gyllenbrun och skrumpna utan ångad konsistens.
+
 ## Source recipes
 
 ### 1. Fuchsia Dunlop — Sù Chǎo Shuāng Gū (素炒双菇 — Chinese Stir-Fried Button Mushrooms)

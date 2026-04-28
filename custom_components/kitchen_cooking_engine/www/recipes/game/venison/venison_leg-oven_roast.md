@@ -9,6 +9,12 @@ For the venison leg specifically:
 - A boneless leg, tied, follows similar timing to a beef joint but requires a lower target temperature (54–60°C / 130–140°F for a pink interior vs beef conventions)
 - Barding (wrapping in bacon or fatback) is recommended to compensate for the complete absence of marbling; without barding, the exterior dries before the interior reaches temperature
 
+## Styckesprofil
+
+Viltstekslägg (haunchen) lämpar sig utmärkt för slow cooker: 7–9 timmar på LÅG ger fall-apart-mört resultat liknande ugnsbraisering. Sörja alltid lagg i en het panna med olja och smör innan det läggs i slow cooker — slow cookern brynner inte köttet.
+
+Lägg i med rödvin, vildfond, lök, rotselleri, morötter, enbär och rosmarin. Täck och koka på LÅG i 7–9 timmar. Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertillagning: noll (slow cooker). Sond in i tjockaste köttmassan, borta från ben.
+
 ## Source recipes
 
 See [`venison_roast-oven_roast.md`](./venison_roast-oven_roast.md) for source recipes that cover general venison roasting.

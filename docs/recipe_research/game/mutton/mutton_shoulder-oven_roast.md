@@ -26,6 +26,12 @@ Mutton shoulder is a fatty, well-worked cut with pronounced flavour and good col
 
 Target internal temperature: **82–90 °C (180–194 °F)** for pull-apart. Minimum food-safe for fully cooked: 70 °C.
 
+## Styckesprofil
+
+Fåraxel är ett fett, välarbetat snitt med uttalad smak och bra kollageninnehåll. Det gynnas av lång, långsam ugnsstekning (4–5 timmar vid 150–160 °C) för att bryta ned bindväven och uppnå pull-apart-textur. Det är snittet som används för långsamt ugnsrostad söndagsstek i Storbritannien, och för turkiska/mellanösternska *kelle-paça*- och *tandır*-traditioner.
+
+Innertemperatur: **82–90 °C (180–194 °F)** för pull-apart. Minimum livsmedelssäkert för fullt genomstekt: 70 °C. Eftertillagning: försumbar. Sond i tjockaste muskeldelen, borta från skulderbladsben.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Slow-roasted Mutton Shoulder (British tradition)

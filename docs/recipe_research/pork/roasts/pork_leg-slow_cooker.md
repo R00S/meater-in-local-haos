@@ -26,6 +26,12 @@ Pork leg and hock (Schweinshaxe / Stelze) is an ideal slow-cooker cut. The dense
 
 Target internal temperature: **85–90 °C (185–194 °F)** pull-apart. The slow cooker environment will hold the meat at this range safely for extended periods.
 
+## Styckesprofil
+
+Fläsklåg och lägg (*Schweinshaxe* / *Stelze*) är ett idealiskt slow cooker-snitt. Den täta bindväven och benmärgen kräver lång, låg fuktig värme — exakt vad slow cooker levererar.
+
+Slow cooker-metod: LÅG i 8–10 timmar med aromatiska grönsaker, fond och öl (för bayrisk stil) eller vin och örter (för italien-stil). Innertemperatur: **85–92 °C (185–198 °F)**. Eftertillagning: noll (slow cooker). Sond in i tjockaste köttmassan, borta från benet.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Zwiebelschweinshaxen im Crockpot (German tradition)

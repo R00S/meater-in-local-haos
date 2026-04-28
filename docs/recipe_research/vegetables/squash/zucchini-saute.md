@@ -12,6 +12,10 @@ cut_type: Squash
 ## Cut profile
 Zucchini (*Cucurbita pepo*) sliced into 1 cm rounds, half-moons or batons is one of the fastest and most universal vegetable sautés. The goal is dry-heat browning on the cut faces before the interior becomes mushy; this requires a hot pan, minimal stirring and working in batches if necessary. Sauté time: 6–10 minutes total in a single layer. Pull temperature: 82–85 °C (180–185 °F) — at this internal temperature the flesh is completely tender while the cut faces show golden colour. MEATER probe inserted horizontally through the thickest round from the cut face.
 
+## Styckesprofil
+
+Zucchini (*Cucurbita pepo*) skivad i 1 cm rundlar, halvmånar eller stavar är en av de snabbaste och mest universella grönsaksautéer. Målet är torrvärme-brynning av snittytan. Sautera i het olja i 6–8 minuter. Klar när gyllenbrun och genomstekt utan att vara mosig.
+
 ## Source recipes
 
 ### 1. Fuchsia Dunlop — Stir-Fried Courgette with Black Bean Sauce (Chinese Sichuan tradition)

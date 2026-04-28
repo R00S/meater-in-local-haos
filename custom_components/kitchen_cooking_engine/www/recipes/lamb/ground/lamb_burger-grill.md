@@ -26,6 +26,12 @@ Grilling lamb burgers requires managing the high fat content: lamb fat drips ont
 
 Cook 4–5 minutes per side at medium-high heat (about 200 °C at grate), flipping once. MEATER probe inserted from the side of the patty into the geometric centre. Target: 71 °C (160 °F) for ground meat food safety. Carryover: 3–5 °C. Pull at 66–68 °C to rest to 71 °C.
 
+## Styckesprofil
+
+Grillning av lammburgare kräver hantering av det höga fettinnehållet: lammfettet droppar på grillen och orsakar uppflammningar som kan förbränna utsidan innan insidan är genomkokt. Använd en tvåzonsgrill eller medel-direkt värme (inte maximum), med grillocket stängt mellan vändningar.
+
+Biffar ska vara 150–180 g, 2,5–3 cm tjocka. Innertemperatur: **72–75 °C (162–167 °F)** för USDA-säkert malet lamm. Eftertillagning: 2–3 °C. Sond insatt horisontellt från sidan in till biffens mitt. Vila 3–5 minuter.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Lamb Burgers with Harissa (British/North African tradition)

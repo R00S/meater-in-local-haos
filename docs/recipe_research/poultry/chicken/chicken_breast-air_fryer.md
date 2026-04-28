@@ -26,6 +26,12 @@ Air-frying chicken breast is among the most convenient methods for a quick weekn
 
 The critical technique is achieving an even cross-section: pound the thick end or butterfly the breast before cooking so the whole piece reaches 74 °C simultaneously. Brining (30 min in salted water) before air-frying significantly improves juiciness. MEATER probe in the thickest part. Carryover from the air fryer: 2–3 °C. Pull at 72 °C to rest to 74 °C.
 
+## Styckesprofil
+
+Air frying av kycklingbröst är bland de mest praktiska metoderna för en snabb vardagsrätt. Air fryern cirkulerar mycket varm luft vid 180–200 °C runt brösten och ger en lätt krispig, gyllene yta.
+
+Tillagningstid: 18–22 minuter vid 180–200 °C för ett 150–200 g benfritt bröst. Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond insatt längsmed bröstets tjockaste del. Vila 5 minuter täckt.
+
 ## Source recipes
 
 ### 1. Skinnytaste — Air Fryer Chicken Breast

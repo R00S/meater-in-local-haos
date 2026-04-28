@@ -12,6 +12,10 @@ cut_type: Squash
 ## Cut profile
 Butternut squash (*Cucurbita moschata*) in a pressure cooker cooks in 8–12 minutes at high pressure (cubed), producing very soft, fully cooked flesh suitable for soups and purées. Pull temperature (measured via MEATER before sealing, or in the depressurised pot): 95–98 °C (203–208 °F). MEATER probe into the thickest cube before closing the lid.
 
+## Styckesprofil
+
+Butternut-squash (*Cucurbita moschata*) i tryckkokare tillagas på 8–12 minuter vid högtryck (tärnad), vilket ger mycket mjukt, fullt tillagat kött lämpat för soppor och pureer. Klar när fullständigt genomstekt och lätt att mosa.
+
 ## Source recipes
 
 ### 1. Madhur Jaffrey — Pressure-Cooked Kaddu for Dal (Indian tradition)

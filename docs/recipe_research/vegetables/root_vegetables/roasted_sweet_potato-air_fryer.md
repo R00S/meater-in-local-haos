@@ -12,6 +12,10 @@ cut_type: Root Vegetables
 ## Cut profile
 Sweet potato (*Ipomoea batatas*) in the air fryer achieves crispy, caramelised skin and a soft, sweet interior in 35–45 minutes (whole) or 20–25 minutes (halved or cubed). Sweet potato contains much higher natural sugars (6–8 g/100 g cooked) than white potato, which means it caramelises more readily. In Japan, *yakiimo* (焼き芋 — stone-roasted sweet potato) is a beloved street food. In Korea, *goguma* (고구마) is roasted and enjoyed as a snack. Pull temperature: 96–98 °C (205–208 °F) at the thickest centre for whole sweet potato. MEATER probe along the long axis into the geometric centre.
 
+## Styckesprofil
+
+Sötpotatis (*Ipomoea batatas*) i airfryern uppnår knaprig, karameliserad yta och mjuk, söt insida på 35–45 minuter (hel) eller 20–25 minuter (halverad eller i tärningar). Sötpotatisens höga sockerhalt gör den naturligt benägen till karamelisering. Klar när insidan är 98–100 °C.
+
 ## Source recipes
 
 ### 1. Harumi Kurihara — Yakiimo (焼き芋 — Japanese Air-Fried Sweet Potato)

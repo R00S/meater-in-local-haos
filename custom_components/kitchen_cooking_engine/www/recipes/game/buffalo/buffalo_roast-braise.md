@@ -4,6 +4,12 @@
 
 American bison (Bison bison) roasts braise extremely well. The lean, dense muscle fibres that make bison susceptible to drying in high dry-heat methods become an advantage in braising: long cooking in moist heat with gentle, consistent temperatures (typically 250–325°F / 120–165°C) allows the fibres to soften without the fat-driven self-basting that compensates for dryness in beef. What braising provides instead is moisture from the cooking liquid — stock, wine, or Indigenous preparations like corn stock — and collagen breakdown from the connective tissue. Bison's higher collagen-to-fat ratio compared to the equivalent beef cut means bison braises can become deeply gelatinous and rich when cooked long enough. Braising also allows aromatic complexity that complements bison's naturally sweeter, more mineral flavour compared to beef. Probe placement should be in the thickest portion of the meat, away from the cooking liquid; internal temperature is less critical in braising (fork-tender is the primary indicator), but the cooking temperature keeps the internal temperature well above any safety threshold throughout.
 
+## Styckesprofil
+
+Amerikansk bison (*Bison bison*) bräseras utomordentligt väl. De magra, täta muskelfibrerna som gör bison sårbar för torrhet vid höga torrvärme-metoder blir en fördel vid bräsering: lång tillagning i fuktig värme med milda, konsistenta temperaturer (typiskt 120–165 °C) tillåter fibrerna att mjukna.
+
+Vid 88–95 °C internt, hållet i 2–3 timmar, ger bison-bogbräsering otroligt rik, gelatinös konsistens. Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet-möra resultat. Eftertillagning: försumbar (braiseringsvätska dämpar temperatursvängningar). Sond i tjockaste köttmassan, borta från ben.
+
 ## Source recipes
 
 ### 1. Sean Sherman (The Sioux Chef) — Cedar-Braised Bison
