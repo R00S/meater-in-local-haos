@@ -30,6 +30,14 @@ Remove the classic MEATER path (`_currentPath = 'meater'`) and make the experime
 - [x] Delete `www/recipes_classic/`
 - [x] Run `python3 generate_frontend_data.py` ✅
 
+### Single source of truth for recipe files
+- [x] Move 4 meta-docs (README, TOR-filer, SOURCE_SURVEY) till `www/recipes/`
+- [x] `generate_frontend_data.py`: läser alltid från `www/recipes/`, tar bort `docs/recipe_research/`-prioritet
+- [x] Ta bort `copy_recipe_files_to_www()` funktion och anrop
+- [x] Ta bort oanvänd `import shutil`
+- [x] Ersätt `docs/recipe_research/` med git-symlänk → `www/recipes/`
+- [x] Generator verifierad: 539 filer, inga fel
+
 ### CHORES
 - [x] Bump version `0.7.0.0` → `0.7.0.1`
 - [x] Update USER_GUIDE.md: version line, section 5, 5.3, 5.8, 5.9, ToC
@@ -68,3 +76,10 @@ Remove the classic MEATER path (`_currentPath = 'meater'`) and make the experime
   - ToC anchors updated for 5.8 and 5.9
 - Bumped version to `0.7.0.1`
 - Generator: PANEL_VERSION 347→348
+
+### 2026-04-28 (Session 4 — single source of truth)
+- Moved 4 meta-docs (README, TOR-filer, SOURCE_SURVEY) till `www/recipes/`
+- Uppdaterade `generate_frontend_data.py`: läser alltid från `www/recipes/` (inget `docs/`-fallback)
+- Tog bort `copy_recipe_files_to_www()` funktion och anrop, tog bort oanvänd `import shutil`
+- Ersatte `docs/recipe_research/` (katalog) med git-symlänk → `custom_components/kitchen_cooking_engine/www/recipes`
+- Generator verifierad: 539 filer, 164 cuts, inga fel

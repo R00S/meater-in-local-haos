@@ -17,7 +17,6 @@ This will regenerate www/kitchen-cooking-panel.js with data from the backend.
 
 import json
 import re
-import shutil
 import sys
 import os
 import yaml
@@ -311,9 +310,8 @@ def _extract_recipe_titles(content):
 def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
     """Scan recipe files and build index, cut profiles, method profiles and recipe titles.
 
-    When ``recipe_dir`` is None the function uses the standard resolution order:
-    docs/recipe_research/ first (developer environment), then www/recipes/
-    (pre-populated in HACS releases on real HA installs).
+    When ``recipe_dir`` is None the function reads from www/recipes/ — the
+    single source of truth for recipe markdown files.
 
     Pass an explicit ``recipe_dir`` path and a matching ``url_prefix`` to build
     an index for a different tree (e.g. the frozen classic fork).
@@ -330,16 +328,8 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
         recipe_titles:       {cut_slug: {method_slug: ["title", ...]}}
     """
     if recipe_dir is None:
-        repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
-        docs_recipe_dir = os.path.join(repo_root, "docs", "recipe_research")
-        www_recipe_dir = os.path.join(base_dir, "www", "recipes")
-
-        if os.path.isdir(docs_recipe_dir):
-            recipe_dir = docs_recipe_dir
-        elif os.path.isdir(www_recipe_dir):
-            recipe_dir = www_recipe_dir
-            print("  (using www/recipes/ as recipe source — docs/recipe_research/ not found)")
-        else:
+        recipe_dir = os.path.join(base_dir, "www", "recipes")
+        if not os.path.isdir(recipe_dir):
             return {}, {}, {}, {}
     elif not os.path.isdir(recipe_dir):
         return {}, {}, {}, {}
@@ -547,15 +537,8 @@ def build_experimental_tree(base_dir):
         exp_tree: {category_id: {id, name, icon, color, meats: [...]}}
         exp_doneness: {doneness_name: {value, name, icon, temp_c, temp_f, ...}}
     """
-    repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
-    docs_recipe_dir = os.path.join(repo_root, "docs", "recipe_research")
-    www_recipe_dir = os.path.join(base_dir, "www", "recipes")
-
-    if os.path.isdir(docs_recipe_dir):
-        recipe_dir = docs_recipe_dir
-    elif os.path.isdir(www_recipe_dir):
-        recipe_dir = www_recipe_dir
-    else:
+    recipe_dir = os.path.join(base_dir, "www", "recipes")
+    if not os.path.isdir(recipe_dir):
         return {}, {}
 
     _excluded = {
@@ -722,58 +705,6 @@ def build_experimental_tree(base_dir):
         exp_tree[cat_key] = cat_entry
 
     return exp_tree, exp_doneness
-
-
-def copy_recipe_files_to_www(base_dir):
-    """Copy recipe markdown files from docs/ to www/ for serving by HA.
-
-    Copies:
-      docs/recipe_research/ → www/recipes/
-
-    Only runs in the developer environment (when docs/recipe_research/ exists).
-    On real HA installs, www/recipes/ is pre-populated by the HACS package and
-    must NOT be wiped — so this function is a no-op when the source is absent.
-    """
-    repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
-
-    _trees = [
-        (
-            os.path.join(repo_root, "docs", "recipe_research"),
-            os.path.join(base_dir, "www", "recipes"),
-        ),
-    ]
-
-    _excluded = {
-        "README.md", "RECIPE_COLLECTION_TOR.md",
-        "RECIPE_ANALYSIS_TOR.md", "SOURCE_SURVEY.md",
-    }
-
-    for recipe_dir, www_recipes_dir in _trees:
-        if not os.path.isdir(recipe_dir):
-            # On HA installs the www/ directory is already in place from the
-            # HACS package.  Do NOT delete it; just leave it as-is.
-            continue
-
-        # Remove and recreate target directory for a clean copy
-        if os.path.exists(www_recipes_dir):
-            shutil.rmtree(www_recipes_dir)
-
-        for root, _dirs, files in os.walk(recipe_dir):
-            for filename in files:
-                if not filename.endswith(".md") or filename in _excluded:
-                    continue
-                src = os.path.join(root, filename)
-                rel = os.path.relpath(src, recipe_dir)
-                dst = os.path.join(www_recipes_dir, rel)
-                os.makedirs(os.path.dirname(dst), exist_ok=True)
-                shutil.copy2(src, dst)
-
-        count = sum(
-            len([f for f in files if f.endswith(".md")])
-            for _, _, files in os.walk(www_recipes_dir)
-        )
-        label = os.path.basename(www_recipes_dir)
-        print(f"  Copied {count} recipe files → www/{label}/")
 
 
 def generate_js_data():
@@ -1090,9 +1021,6 @@ import {{
 """
     new_content += class_code
 
-    # Copy recipe files to www/recipes/ so they can be served by HA
-    copy_recipe_files_to_www(base_dir)
-    
     # Update panel version in JS - increment from const.py version
     # Read current version from const.py first
     const_file = os.path.join(base_dir, "const.py")
