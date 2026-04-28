@@ -27,7 +27,7 @@ Beef shank is the lower portion of the front (foreshank) or hind (hindshank) leg
 
 **SV:**
 
-*(to translate)*
+Nötlägg är den nedre delen av fram- (framlägg) eller bakbenet (baklägg), strukturellt en av de mest belastade musklerna i slaktkroppen: den ständiga rörelsen vid gång och stående bygger täta muskelfibrerknippen inslagna i tjocka lager bindväv, med ett kraftigt centralt märgben genom tvärskurna bitar (den s.k. *osso buco*-snittet). Rått lägg tillhör de segaste styckningsdetaljerna; bräseras det långsamt i 3–4 timmar vid 85–95 °C löser sig bindväven till rik gelatin, märgen smälter ner i såsen och muskeln blir så mör att den faller isär. Det benfasta tvärsnittet håller formen tack vare den bindvävsring som omger muskeln under tillagningen. Eftertillagning är försumbar — den omgivande vätskan jämnar ut temperatursvängningar.
 
 ---
 
@@ -42,7 +42,7 @@ Beef shank cooked in an electric slow cooker is the same long-collagen-conversio
 
 **SV:**
 
-*(to translate)*
+Nötlägg tillagat i elektrisk slow cooker genomgår samma långa kollagenomvandling som en brässering i gjutjärnsgryta, men i en förseglad miljö som håller tillagnadsvätskan konstant vid 85–95 °C (lågt läge) utan övervakning. Styckdelens kombination av tät bindväv och centralt märgben gör den idealisk för slow cooker — den långa osedda tillagningen omvandlar kollagen till gelatin fullständigt, märgen smälter ner i såsen och den ångtäta miljön håller muskeln nedsänkt i sin berikade vätska hela vägen. Att bryna bitarna ordentligt innan de läggs i slow cookern är avgörande för djup smak; slow cookern bidrar inte själv med någon maillard-bryning som en stekpanna eller ugn ger. Eftertillagning är noll.
 
 ---
 
@@ -59,7 +59,9 @@ At 150–160 °C, brisket reaches the target internal temperature (90–96 °C f
 
 **SV:**
 
-*(to translate)*
+Ugnsbräsering av bringa är den mest lättillgängliga metoden för lång tillagning och kan ta två former: (1) en förseglad gjutjärnsgryta med vätska (rödvin, fond, lök, tomat — i praktiken en brässering i ugnen) vid 150–160 °C i 3–5 timmar, eller (2) ett äkta torrt ugnsstek (judisk stil, tätt insvept i folie eller i täckt långpanna) där bringan ångas i sin egna frislappade fukt. Båda metoderna fungerar eftersom den stängda ugnsmiljön behåller fuktigheten som avgår från köttet och hindrar ytan från att torka ut under den långa tillagningen.
+
+Vid 150–160 °C når bringan måltemperaturen (90–96 °C för mörhet som faller isär) på 4–6 timmar beroende på storlek och om den är förseglad. MEATER-sonden bör placeras i det platta stycket (*flat*), vid tjockaste punkten, och undvika det inre fettlagret. Eftertillagning är försumbar — det höga fuktinnehållet och den täta massan absorberar och avger värme långsamt; innertemperaturen rör sig knappt efter att bringan tagits ut.
 
 ---
 
@@ -74,7 +76,7 @@ Beef brisket is taken from the breast and lower chest of the animal, comprising 
 
 **SV:**
 
-*(to translate)*
+Nötbringa tas från bröstet och nedre delen av djurets bröstkorg och består av två muskler — det platta stycket (*pectoralis profundus*) och spetsen (*pectoralis superficialis*) — som tillsammans bär en stor del av djurets vikt. Det platta stycket är en stor, mager och tät muskelskiva; spetsen (även kallad *deckle*) ligger ovanpå och över det platta stycket, separerade av ett fettlager, och är kraftigare marmorerad. Båda musklerna är extremt kollagenrika efter ett liv av att bära djurets tyngd. Kollagen börjar mjukna vid ungefär 70 °C men omvandlas fullständigt till gelatin först efter lång tillagning vid 85–90 °C eller högre. Vid gelatinomvandlingen förvandlas bringan från en seg, tuggig skiva till ett silkeslent mästerverk som faller isär.
 
 ---
 
@@ -91,7 +93,9 @@ Pull temperature for fall-apart texture: **90–96 °C (194–205 °F)**. At the
 
 **SV:**
 
-*(to translate)*
+Brässering är den självklara metoden för fransyska eftersom vätskebaserad tillagning vid 150–165 °C direkt påskyndar hydrolys av kollagen till gelatin: kollagen börjar mjukna vid ungefär 70 °C men omvandlas fullständigt på 1,5–4 timmar beroende på ugnstemperatur och bitens storlek. Den omgivande bräseringsvätskan (vin, fond, aromater) absorberar det utsmälta fettet och det lösta gelatinet och bildar en självtjocknande sås. Fransyskan bryns vanligtvis ordentligt först — för att utveckla en maillardbrunt yta — och läggs sedan i en täckt gjutjärnsgryta eller bräseringskärl, delvis eller helt nedsänkt.
+
+Dragtemperatur för konsistens som faller isär: **90–96 °C (194–205 °F)**. Vid dessa temperaturer har bindväven omvandlats fullständigt och muskelfibrerna delas längs fiberns riktning. Eftertillagning är försumbar eftersom den omgivande bräseringsvätskan motverkar temperatursvängningar.
 
 ---
 
@@ -106,7 +110,7 @@ Chuck roast is cut from the shoulder region of the animal (the chuck primal, rou
 
 **SV:**
 
-*(to translate)*
+Fransyska skärs från djurets skulderparti (chuckprimalen, ungefär revben 1–5 och halsen). Skuldermusklerna arbetar ständigt under djurets hela liv, vilket producerar tätt sammanpackade muskelfibrerknippen genomvävda med tjocka lager bindväv (*kollagen*) och intermuskulärt fett — en struktur som är extremt seg vid låga innertemperaturer men förvandlas till rik, mörnande smak efter lång tillagning. Fransyskan omfattar flera muskler: *triceps brachii*, *supraspinatus*, *infraspinatus* och *longissimus costarum*. De flesta är hårt arbetade, kollagenrika och olämpliga för snabba tillagningsmetoder.
 
 ---
 
@@ -125,7 +129,11 @@ Probe placement for braised short ribs is straightforward but requires inserting
 
 **SV:**
 
-*(to translate)*
+Brässering är inte ett av flera alternativ för revbensspjäll — det är metoden som revbensspjäll som kulinarisk styckdel är gjord för. Det engelska revbensspjället (med ben, chuckände, revben 1–5 eller det kortare tallriksänden, revben 6–10) består av hårt arbetade mellangärdes- och serratus-ventralis-muskelfibrer bundna av täta kollagenlagerskivor: rå är strukturen gummiaktig och motständig; efter tre eller fler timmar av fuktig värme vid 88–96 °C (190–205 °F) hydrolyseras kollagenet till gelatin, fettet smälter ner i bräseringsvätskan och fibrerna som hade varit oätliga vid medium-rare-temperatur blir mjuka som smör med en silkeslen munbild.
+
+Metoden fungerar eftersom bräseringsvätskan håller köttet nära 100 °C utifrån medan mitten långsamt equilibreras — mycket långsamt, eftersom kollagen och fett leder värme dåligt — till 88–96 °C. Det är 30–40 °C över den temperatur som en normal biff serveras vid, och det är bara möjligt utan uttorkning eftersom den omgivande vätskan ersätter den ytfukt som avdunstning annars skulle ta bort. De tre eller fler timmarna av ihållande värme vid detta intervall fulländar kollagen-till-gelatin-omvandlingen i hela snittets tvärsnitt.
+
+Sondens placering för bräserade revbensspjäll är enkel men kräver att sonden sätts in innan köttet läggs i bräseringsvätskan: sätt in sonden från det skurna ändets sida (ytan längst från benet) och sikta mot det geometriska centret i den största muskelns tvärsnitt. Sondens spets måste omges av magert muskelkött, inte vila mot benet eller i en stor ficka av intramuskulärt fett — båda ger för låga avläsningar eftersom de equiliseras långsammare än de omgivande magra fibrerna.
 
 ---
 
@@ -144,7 +152,11 @@ Korean short rib preparations (galbi-jjim for braising, galbi for grilling) trea
 
 **SV:**
 
-*(to translate)*
+Revbensspjäll skärs från den nedre delen av nötdjurets revbenskorg — antingen chuck-revbensspjäll (revben 1–5, med tjockare kött och mer marmorering) eller tallriksrevbensspjäll (revben 6–10, det längre, köttrikare "dino rib"-snittet som är populärt i amerikanskt grillkök). Köttet består av mellangärdes- och serratus-ventralis-muskler, bland de hårdast arbetade i djuret: ständig rörelse bygger täta, kollagenrika fiberknippen som hade varit oätliga om de tillagats snabbt. Den höga halten bindväv är källan till deras kulinariska värde — efter lång och långsam tillagning löses kollagenet till gelatin, det intramuskulära fettet smälter ut och resultatet är en självbastande, isärfallande konsistens med ovanlig smakdjup.
+
+Benet löper längs undersidan av varje revbensdel; i det engelska snittet (benfasta tvärsnittsdelar) syns benet och det omgivande märget i tvärsnittet. Engelskt snittade revbensspjäll är standardformatet för brässering och slow cooker. Flanken-snittade revbensspjäll skär tvärs över flera ben i tunna strimlor — det koreanska galbi-formatet — och lämpar sig för snabb grillning snarare än lång brässering. Benfria revbensspjäll säljs ibland som "nötspareribs"; de tillagas på liknande sätt som med ben men blir klara något snabbare eftersom benet fungerar som värmebuffert.
+
+Koreanska revbensspjällstillagningar (galbi-jjim för brässering, galbi för grillning) behandlar styckdelen som en sekundär kategori i `cooking_data.py` under namnet `short_ribs` med metoden `grill`. Temperaturerna och metoderna skiljer sig väsentligt från den västerländska bräseringstraditionen: benfasta revbensspjäll för galbi skärs tunt tvärs över revbenen och marineras över natten i en soja-päron-sesamlake innan de grillas till medium-rare, vilket motsvarar ett annat mörhetsmål än den bräserade, isärpullsade varianten.
 
 ---
 
@@ -159,7 +171,7 @@ The beef burger patty cooked in an air fryer is a relatively recent home-kitchen
 
 **SV:**
 
-*(to translate)*
+Nötburgaren tillagad i airfryer är en relativt ny hushållsvariant av samma grundläggande styckdel — grovmalet nötkött med ungefär 80/20 fett/magert-förhållande, format till en biff 1,5–2,5 cm tjock. Airfryern är i grunden en liten konvektionsugn med hög lufthastighet; den koncentrerar strålningsvärme från ett övre värmeelement medan en fläkt cirkulerar 175–205 °C varm luft runt biffens yta. Den cirkulationen ger jämnt brynt yta utan vändning i vissa modeller, men en vändning mitt under tillagningen förbättrar jämnheten. Kompromissen jämfört med stekning i panna är att det saknas en pöl av utsmält fett att basta i, och jämfört med grillning saknas rök — men konvektionen möjliggör ytbryning vid lägre utrustningstemperaturer än direktstrålningsvärme. Eftertillagning är liten (2–3 °C) eftersom biffen är tunn och tillagningen kort.
 
 ---
 
@@ -175,7 +187,7 @@ Ground beef burgers are formed patties of minced beef, most commonly from a blen
 
 **SV:**
 
-*(to translate)*
+Köttburgare är formade biffar av malet nötkött, vanligast från en blandning av fransyska (för smak) och innanlår eller bringa (för bindning), med ett fettinnehåll på typiskt 15–25 % av vikten. Till skillnad från hela muskelstycken har en burgarbiff ingen inre bindvävsstruktur — malningen har redan brutit upp muskelfibrerna — så utmaningen vid tillagningen är värmepenetration genom biffens tvärsnitt snarare än kollagenomvandling. Direkt värme på grillen skapar en kraftig maillardyta på båda platta sidorna, vilket är den primära smakmekanismen; fettinnehållet håller insidan saftig även vid högre innertemperaturer. Eftertillagning i en burgarbiff är minimal — den tunna geometrin avger värme snabbt när den tas från grillen — men genuint carryover sker i tjockare restaurangformats-biffar, vilket gör det lämpligt att ta av från grillen något innan slutmålet.
 
 ---
 
@@ -190,7 +202,7 @@ Ground beef burger patties pan-fried in a skillet are the indoor standard for do
 
 **SV:**
 
-*(to translate)*
+Köttburgarbiffar stekta i panna är hemmakökstandarden för doneness-kontroll inomhus: pannan producerar en intensiv maillardyta på de plana sidorna och möjliggör visuell bedömning av stekningsgrad längs kanten. Den utsmälta fettet samlas i pannan och agerar som basting, vilket håller botten fuktig och hjälper till att värma biffens inre. Eftertillagning är minimal för tunnare biffar (1,5–2 cm) men märkbar (3–4 °C) för restaurangstjocka patties (2,5–3 cm); avläsning kort innan sluttemperatur och vila utanför pannan ger bättre precision.
 
 ---
 
@@ -207,7 +219,7 @@ Ground beef (minced beef) is made by grinding beef, most commonly from the chuck
 
 **SV:**
 
-*(to translate)*
+Malet nötkött (köttfärs) framställs av nötmalning, vanligast från fransyska, bringa eller blandningar av dessa, och innehåller 15–30 % fett. Till skillnad från hela muskelstycken saknar köttfärs inre bindvävsstruktur — malningen har redan söndrat muskelfibrerna — så "brässering" av malet nötkött innebär att man kokar det i vätska för att mjuka smöret, absorbera smaker och eventuellt tjockna en sås snarare än att omvandla kollagen. Fuktigt tillagad köttfärs producerar ett mjukt, grynigt resultat; den interna temperaturen bör nå 74 °C av livsmedelssäkerhetsskäl (inte av texturskäl som för hela muskler).
 
 ---
 
@@ -223,7 +235,7 @@ Meatloaf is a free-formed loaf of seasoned, bound ground meat (typically beef al
 
 **SV:**
 
-*(to translate)*
+Köttfärslimpa är en fritt formad limpa av kryddad, bunden malet kött (vanligtvis nötkött alternativt blandningar med fläsk eller kalv) bakad i ugn. Bindningen — ägg, ströbröd, mjölk — håller loafen sammanhållen under tillagningen och bevarar fukt. Till skillnad från hela musklar har köttfärslimpa ingen kollagenstruktur att bryta ner; målet är att värma igenom till 74 °C för livsmedelssäkerhet medan ytan glaseras eller karameliseras. Eftertillagning är måttlig (3–5 °C) beroende på limpans tjocklek och ugnstemperatur.
 
 ---
 
@@ -240,7 +252,7 @@ The onion-liver interaction is important: onions going into the pan before the l
 
 **SV:**
 
-*(to translate)*
+Stekning av lever i panna är den klassiska europeiska beredningen — och den karameliserade löken är inte ett komplement utan en smakbalans: leverns järnrika bitterhet möter löksötman. Lever är ett körtelvävnadsorgan med hög vatteninnehåll och lågt fettinnehåll; vid pannstek karameliseras ytan snabbt i direkt kontakt med en het panna. Tillagning ska vara snabb — 2–3 minuter per sida vid hög värme — och innertemperaturen ska nå 71 °C. Överkokad lever blir grynig och torr; underkokad lever har en järnig, blodig smak som avskräcker många. Eftertillagning är liten på grund av organets tunna geometri.
 
 ---
 
@@ -257,7 +269,7 @@ MEATER probe inserted sideways through the thickest point of the slice. Pull at 
 
 **SV:**
 
-*(to translate)*
+Pannstek av lever (utan lök) är den snabbare, mer minimalistiska metoden — och den elegantare om råvaran är av hög kvalitet. Utan löksötman som motbalans kräver metoden välkontrollerad värme och tidprecision: en riktigt het panna, smör + olja, hög direkt värme, 60–70 sekunder per sida för tunna skivor (8–10 mm), 90 sekunder för tjockare (12–15 mm). Maillardytan bildas snabbt på grund av leverns höga proteininnehåll och lägre fett; varje sekund för länge leder till överkokad, grynig konsistens. Innertemperatur: 71 °C. Eftertillagning är 1–2 °C.
 
 ---
 
@@ -272,7 +284,7 @@ Beef liver is the hepatic organ — a large, lobed, dark-chocolate-coloured mass
 
 **SV:**
 
-*(to translate)*
+Nötlever är det hepatiska organet — en stor, lobformad, mörk chokladfärgad massa som filtrerar blod och lagrar glykogen. Strukturellt är det en kompakt körtelvävnad med tätt packade celler, liten mängd fett och hög halt järn, A-vitamin och B12. Smaken är kraftig, järnig och djup — karaktäristisk för organkött och uppskattad i europeisk husmanskost men otillgänglig för dem som inte är vana vid den. Nötlever är tunnare och mildare än kalvlever (det föredragna valet i fin matlagning) och kräver snabb, hög värme för att undvika övertillagning. Skär bort alla synliga ådror och membran före tillagning.
 
 ---
 
@@ -288,7 +300,7 @@ Beef tongue (*Bos taurus* lingual muscle) is a single dense cylindrical muscle w
 
 **SV:**
 
-*(to translate)*
+Nöttungue (*Bos taurus* lingvalmuskel) är en enda tät cylindrisk muskel som arbetar konstant under djurets liv — ungefär lika belastad som hjärtmuskeln, men strukturellt mer lik en benmuskel. Den är tätt insvept i ett tjockt, grovt hudlager som måste avlägsnas efter tillagning; det underliggande köttet är fint fibrerat, marmorerat och extremt kollagenrikt. Korrekt tillagad (bräserad i 3–4 timmar tills innertemperaturen når 85–90 °C) är tungan silkeslent mör med en smak som liknar nötkindsmuskeln. Det yttre skinnet skalar lätt av strax efter kokning medan tungan fortfarande är varm.
 
 ---
 
@@ -303,7 +315,7 @@ Beef tongue cooked in an electric slow cooker is the same long-collagen-conversi
 
 **SV:**
 
-*(to translate)*
+Nöttungue tillagad i elektrisk slow cooker genomgår samma långa kollagenomvandling som en brässering på spisen eller i ugn, men i en ångfylld, förseglad miljö som håller vätskan vid stabil 85–95 °C utan bevakning. Det grova yttre skinnet behåller sin form under hela tillagningen och avlägsnas enkelt efter det att tungan är klar och fortfarande varm. Searing före slow-cooker-tillagnaden tillsätter Maillard-smaker som apparaten själv inte kan producera. Eftertillagning: noll — innertemperaturen stabiliseras i slow cookerns fuktighetsmiljö.
 
 ---
 
@@ -319,7 +331,7 @@ The beef tenderloin (psoas major) runs along the interior of the spine and does 
 
 **SV:**
 
-*(to translate)*
+Nötfilé (*psoas major*) löper längs ryggradens insida och utför minimalt arbete under djurets liv — det är den muskel som minst belastas i hela kroppen, vilket är anledningen till dess exceptionella mörhet. Hel nötfilé är en avlång, konisk muskel som väger 2–3 kg; den delas vanligtvis i tre delar: huvud (tjock ände), mittbiten och svansen (smalaste delen). Filén saknar i stort sett kollagen men har lite intramuskulärt fett — precis tillräckligt för att hålla den mör under en snabb ugnsstekning. Drar man den till för hög temperatur uttorkar den snabbt. Laga den till 52–55 °C (rare) eller 55–58 °C (medium-rare) för bästa resultat. Eftertillagning är märkbar (3–5 °C) och måste beaktas.
 
 ---
 
@@ -338,7 +350,7 @@ Carryover is the dominant concern for the home cook: a 3–5 kg prime rib loses 
 
 **SV:**
 
-*(to translate)*
+Ugnsstekning framhäver prime ribs exceptionella marmorering på ett sätt som ingen annan metod kan matcha. Det höga fettinnehållet gör att ribbet självbastars under tillagningen; det utsmälta fettet cirkulerar runt köttet, håller ytan fuktig och ger löpande smak åt ytan. Tillagningsprincipen — lång, låg värme för optimal möring — kombinerar maillardbrunt yta (från inledande eller avslutande hög värme) med jämn pastörisering av det inre. Målet är att hålla den centrala temperaturen precis i det smakoptimala fönstret (54–60 °C för medium-rare) utan att överkoka ytlagren.
 
 ---
 
@@ -353,7 +365,7 @@ Prime rib (also called standing rib roast) is cut from the rib primal (ribs 6–
 
 **SV:**
 
-*(to translate)*
+Prime rib (även kallat stående revbenstek) skärs från ribprimalen (revben 6–12), den mest marmorerade delen av nötdjuret. Den "primala" beteckningen syftar på den anatomiska klassificeringen av ribprimalen — inte på USDA:s betygssystem (Prime-köttet är ett separat begrepp). Prime rib säljs med benen fästade (stående revbenstek) eller urbenad (ribbyfé); benfasta stekar är mer smakrika eftersom benet leder värme och skyddar angränsande kött. Det primära muskelet — *longissimus dorsi* — är en stor, relativt lite belastad muskel med regelbunden marmorering och en skyddande fettlins. *Spinalis dorsi* (den "Scotch cap" som löper längs krönet) är ännu mer marmorerad och är den mest eftertraktade biten.
 
 ---
 
@@ -382,7 +394,7 @@ The defining characteristic shared by all roasting joint cuts is their size (typ
 
 **SV:**
 
-*(to translate)*
+"Stekbit" är en brittisk och australiensisk samlingsterm för ett urval av stora, benfria nötstycken lämpade för ugnsstekning: övre innanlår (*topside*), innanlår (*silverside*), yttersida av innanlår (*outside round*), fransyska (*chuck*), entrecôte (*sirloin*) och revbensspjäll. Termen indikerar tillagningsmetod — ugnsstekning — snarare än ett specifikt anatomiskt snitt. Kvaliteten och lämplig innertemperatur varierar kraftigt beroende på vilket snitt som avses: magra, hårt arbetade muskler (innanlår, yttersida) kräver lägre temperaturer (54–60 °C) för att inte torka ut; mer marmorerade snitt (entrecôte, revben) tål ett bredare temperaturspann.
 
 ---
 
@@ -405,7 +417,7 @@ The defining characteristic shared by all roasting joint cuts is their size (typ
 
 **SV:**
 
-*(to translate)*
+"Stekbit" är en brittisk och australiensisk samlingsterm för vilken som helst stor nötstycke lämpad för ugnsstekning: övre innanlår, innanlår, yttersida, fransyska, revbensspjäll, entrecôte, nötrygg. Termen indikerar tillagningsmetod, inte ett specifikt anatomiskt snitt. Magra, hårt arbetade muskler (innanlår, yttersida) kräver lägre innertemperaturer (54–57 °C rare/medium-rare) för att behålla sin saftighet; mer marmorerade snitt (entrecôte, revbensstycken) tål högre temperaturer bättre. Eftertillagning varierar med stekens massa och ugnstemperatur: 3–6 °C i en hel stekbit på 1–2 kg är vanligt.
 
 ---
 
@@ -436,7 +448,7 @@ confirmed-reachable South Asian, East Asian, or South-East Asian recipe sources.
 
 **SV:**
 
-*(to translate)*
+"Rundbitsstek" är ett generiskt begrepp för vilken ugnstek som helst skuren från rundbotten — bakkvartersprimalen — inklusive övre innanlår, yttersida, sirloin tip och ögonbiff. Det är ett av de magrare, hårt arbetade områdena av djuret; lite intramuskulärt fett och tät muskelstruktur innebär att felaktig tillagning ger torrt, segt resultat. Rätt tillagad (långsamt, till rare–medium-rare) är rundbitten utmärkt med en fin, jämn textur.
 
 ---
 
@@ -467,7 +479,7 @@ slow cooker.
 
 **SV:**
 
-*(to translate)*
+"Rundbitsstek" är ett generiskt begrepp för ugnstek skärd från rundbotten — nötdjurets bakkvartersprimerområde. Det är en mager, tät muskelgrupp med lite intramuskulärt fett; hårt arbete under djurets hela liv ger tät fiberstruktur. Överkokad rundbitsteks torkar ut snabbt. Tillagning till rare eller medium-rare (54–60 °C) med omvänd searing (låg ugn, hög avslutningsvärme) ger bäst resultat. Eftertillagning är 3–5 °C beroende på stekets storlek.
 
 ---
 
@@ -505,7 +517,7 @@ marocmama.com, or africanbites.com after URL probing.
 
 **SV:**
 
-*(to translate)*
+Nötrumpa i biffform skärs från rumpprimalen — det område vid korsningen av bakkvarteret och ryggen, bakåt om entrecôten. Rumpsbiffen är mager med minimal marmorering men en tydlig, intensiv nötköttssmak från det lite hårt arbetade köttet. Den karakteristiska yttre fettlisten, om den lämnas kvar, smälter och bidrar med smak under tillagning vid hög värme. Pansearing ger bästa resultat för rumpsbiffen: en het panna skapar en maillardyta och sätter smaken snabbt. Innertemperatur: 54–57 °C för medium-rare, max 60 °C för medium — vid 63 °C och över torkar det magra köttet snabbt. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -534,7 +546,7 @@ Not typically braised in Western traditions.
 
 **SV:**
 
-*(to translate)*
+Nötrumpa skärs från rumpprimalen — toppen av bakkvarteret, vid korsningen av kotlett och lår. Det är ett område med blandad mörhet: de övre musklerna (*gluteus medius*, *gluteus accessorius*) är relativt möra och lämpar sig för ugnsstekning eller pannsearing; de nedre musklerna är hårdare och passar bättre för lång tillagning eller marinering. Rumpa är mager med begränsad marmorering men intensiv nötssmak. Den klassiska yttre fettlisten — traditionellt kvarlämnad — skyddar köttet under ugnsstekning och smälter för att basta ytan. Eftertillagning: 3–5 °C för ett helt rumpstycke i ugnsform.
 
 ---
 
@@ -581,7 +593,7 @@ recipe sources. The gap is noted and will remain open until a verified source is
 
 **SV:**
 
-*(to translate)*
+Rumpbiffstek (nordamerikanskt begrepp) skärs från rundbotten-primalen — höftpartiet. I Nordamerika betecknar "rump roast" ofta ett snitt från det övre bakkvarteret med måttlig mörhet; i brittisk och australiensisk nomenklatur kan "rump" referera till ett mörnare, mer värdefullt snitt. Nordamerikansk rumpbiffstek är måttligt mager med viss intramuskulär fettinlagring. Lång ugnsstekning vid låg temperatur (120–150 °C) till 60–65 °C innerltemperatur för medium ger bäst resultat; tillagning till pull-apart (88–95 °C) fungerar också om steken bräseras. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -613,7 +625,7 @@ round/rump cuts makes slicing direction critical.
 
 **SV:**
 
-*(to translate)*
+Rumpbiffstek skärs från primalen **rundbotten** — höftpartiet vid bakkvarteret. I Nordamerika är "rump roast" ett snitt från övre bakkvarteret med måttlig mörhet, inte jämförbart med de mörare brittiska/australiensiska rumpsnitten. Det är ett magrare, tät muskelverk med viss intramuskulär fettinlagring. Lång, långsam ugnsstekning till antingen medium (60–63 °C) eller pull-apart-mörhet (88–95 °C vid brässering) ger bäst resultat. Eftertillagning: 3–5 °C vid normal ugnsstekning.
 
 ---
 
@@ -636,7 +648,7 @@ The sirloin roast (top sirloin roast in North American butchery) is a boneless o
 
 **SV:**
 
-*(to translate)*
+Entrecôtestek (övre entrecôtestek i nordamerikansk styckningsnomenklatur) är en benfri, tät muskel från entrecôteprimalen ovanför bakkvarteret. Den är mager med begränsad marmorering men en utmärkt nötssmak från de måttligt aktiva musklerna. Ugnsstekning ger bäst resultat med omvänd searing: låg ugnstemperatur (120–135 °C) till 5–8 °C under måltemperaturen, sedan hög avslutningsvärme för maillardyta. Innertemperatur: 54–57 °C för medium-rare, max 60 °C för medium. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -659,7 +671,7 @@ The sirloin roast (top sirloin roast in North American butchery) is a boneless o
 
 **SV:**
 
-*(to translate)*
+Entrecôtestek (övre entrecôtestek i nordamerikansk styckningsnomenklatur) är ett benfritt, medelstort snitt från entrecôteprimalen ovanför bakkvarteret. Mager med begränsad marmorering och intensiv nötssmak. Lämpar sig för ugnsstekning med omvänd searing eller direktsearing beroende på tjocklek. Innertemperatur: 54–60 °C. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -674,7 +686,7 @@ The sirloin tip roast (also called "knuckle" in UK/Australian butchery, "pointe 
 
 **SV:**
 
-*(to translate)*
+Sirloin tip-stek (kallad "knuckle" i brittisk/australiensisk styckningsnomenklatur, "pointe de surlonge" på franska, "Nuss" på tyska, "marushine" på japanska) är en köttig, triangulär muskelgrupp från utsidan av lårets bakre del. Det är ett relativt magert snitt med liten marmorering, men fint grovt för en bakkvartesmuskel och utmärkt om tillagat rätt. Lämpar sig för omvänd ugnsstekning vid låg temperatur till medium-rare (54–57 °C). Eftertillagning: 4–6 °C.
 
 ---
 
@@ -689,7 +701,7 @@ The sirloin tip roast (known as the "knuckle" in UK/Australian butchery, "pointe
 
 **SV:**
 
-*(to translate)*
+Sirloin tip-stek (känd som "knuckle" i brittisk/australiensisk styckningsnomenklatur, "pointe de surlonge" på franska, "Nuss" på tyska) är en tät, triangulär muskelgrupp från utsidan av lårets bakre del — ett av de magrare snittarna från bakkvarteret men med bättre konsistens än innanlår om det tillagas korrekt. Lämpar sig för ugnsstekning till rare eller medium-rare; överkokad torkar det snabbt ut. Eftertillagning: 4–6 °C.
 
 ---
 
@@ -727,7 +739,7 @@ noted.
 
 **SV:**
 
-*(to translate)*
+Övre innanlårsstek kommer från lårrets insida — det översta lagret av rundbottenprimalen, och det möraste snittet från bakkvarteret. Det är en stor, relativt mager muskel med minimal marmorering men en fastare, fin konsistens som fungerar bra vid korrekt tillagning. Omvänd searing (lång ugn låg temperatur + snabb avslutningssear) ger bäst resultat. Innertemperatur: 54–60 °C. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -751,7 +763,7 @@ slicing direction the primary determinant of tenderness in the finished roast.
 
 **SV:**
 
-*(to translate)*
+Övre innanlårsstek är den enda stora inre lårmuskeln i rundbottenprimalen — det möraste snittet från bakkvarteret men fortfarande magrare och tätare än entrecôte eller revbenstek. Liten marmorering innebär att överkokad stek torkar ut snabbt; tillagning till rare (54–57 °C) med omvänd searing ger bäst resultat. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -767,7 +779,7 @@ Filet mignon is cut from the narrow end (small end) of the beef tenderloin — t
 
 **SV:**
 
-*(to translate)*
+Filet mignon skärs från den smala änden (lilla änden) av nötfilén — den minst belastade muskeln i djurkroppen och den absolut möraste biten av nötkött. Luftfryer-tillagning av filet mignon utsätter den för intensivt cirkulerad het luft — praktiskt taget en kompakt konvektionsugn. Filetens extrema mörhet och låga fettinnehåll gör den känslig för överkokad: eftertillagning (2–4 °C) måste beaktas, och sonden bör tas ut vid 3–4 °C under slutmålet. Maillardytan från airfryern är sämre än från pansearing; ett snabbt avslutande i smörpanna efter airfryer-tillagning förbättrar resultatet väsentligt.
 
 ---
 
@@ -782,7 +794,7 @@ Filet mignon is cut from the narrow end of the beef tenderloin (psoas major), th
 
 **SV:**
 
-*(to translate)*
+Filet mignon skärs från den smala änden av nötfilén (*psoas major*), den mest delikata och kostavlöna muskeln i djurkroppen — dess exceptionella mörhet är en direkt följd av att den gör minimalt arbete. Träkol ger filet mignon tillgång till ett smakdjup som gasgrillning inte kan matcha: träkolsröken och det irregulära värmemönstret sätter sig på det magra köttet och tillsätter en subtil rökighet till den annars milda filéten. Innertemperatur: 52–55 °C rare, 55–58 °C medium-rare. Eftertillagning: 3–5 °C — ta av från grillen tidigt.
 
 ---
 
@@ -797,7 +809,7 @@ Filet mignon (from the narrow end of the psoas major) is the most tender, least-
 
 **SV:**
 
-*(to translate)*
+Filet mignon (från den smala änden av *psoas major*) är den möraste, magraste och mest delikata biffen i vilket djur som helst. På grillen kräver fileten kortast exponeringstid av alla biffar — hög direkt värme i 2–3 minuter per sida för standardtjocklek (4–5 cm). Utan det intramuskulära fettet som ger skydd i ribeye och entrecôte torkar fileten ut snabbt om den överkokas; precision är allt. Innertemperatur: 52–55 °C rare, 55–58 °C medium-rare. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -812,7 +824,7 @@ Filet mignon is the small, round, lean medallion cut from the narrow end of the 
 
 **SV:**
 
-*(to translate)*
+Filet mignon är den lilla, runda, magra medaljongen skärd från den smala änden av nötfilén. Ugnsstekning av filet mignon — vanligtvis som omvänd searing — innebär en låg ugnstemperatur (120–135 °C) till 5–7 °C under slutmålet, sedan hög avslutningsvärme (panna eller ugnsöverhet) för maillardyta. Filétens låga fettinnehåll gör den känslig för värme; precision är avgörande. Innertemperatur: 52–55 °C rare, 55–58 °C medium-rare. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -827,7 +839,7 @@ Filet mignon (psoas major, narrow end) is the most tender, leanest steak in any 
 
 **SV:**
 
-*(to translate)*
+Filet mignon (*psoas major*, smal ände) är den möraste, magraste biffen av alla snitt. Pannstekt filet mignon kräver en het panna — gjutjärn eller rostfritt stål — smör + matolja, hög direkt värme och kortare exponering än tjockare biffar. Utan det intramuskulära fettet som skyddar ribeye och entrecôte måste panntemperatur och tid kontrolleras noggrant. Innertemperatur: 52–55 °C rare, 55–58 °C medium-rare. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -842,7 +854,7 @@ Filet mignon (psoas major, small end of the tenderloin) is the leanest and most 
 
 **SV:**
 
-*(to translate)*
+Filet mignon (*psoas major*, liten ände av filén) är den magraste och möraste biffen i vilket slakteri som helst — med minimalt intramuskulärt fett och utan bindvävsinslag. Pannsearing ger den förtjänad maillardyta utan överkokad risk om värmen och timingen är rätt. Het panna, smör + neutralt fett, hög värme, 2–3 minuter per sida för standardtjocklek (4–5 cm). Innertemperatur: 52–55 °C rare, 55–58 °C medium-rare. Eftertillagning: 3–5 °C — ta av från pannan tidigt.
 
 ---
 
@@ -857,7 +869,7 @@ Filet mignon (psoas major, small end) is the most tender, leanest, and most deli
 
 **SV:**
 
-*(to translate)*
+Filet mignon (*psoas major*, smal ände) är den möraste, magraste och mest delikata av alla biffar. Sous vide-tillagning är perfekt anpassad för filet mignon: det exakta temperaturkontrollen undanröjer risken för överkokad och säkerställer jämn mörhet från kant till kant. Filetens brist på intramuskulärt fett innebär att den torkar ut snabbt om den tillagas vid fel temperatur; sous vide håller den vid exakt rätt temperatur i exakt rätt tid. Avsluta alltid med snabb searing i het panna direkt efter sous vide för maillardyta. Innertemperatur: 52–55 °C rare, 55–58 °C medium-rare.
 
 ---
 
@@ -873,7 +885,7 @@ Flank steak is a flat, thin muscle cut from the abdominal wall of the animal (th
 
 **SV:**
 
-*(to translate)*
+Flank steak är en platt, tunn muskel skärd från bukväggen på djuret (*rectus abdominis* + *obliques*) — ett av de hårt arbetade, kraftigt fibermarkerade och smakrika snitten som kräver rätt hantering för att ge bästa resultat. Träkol tillsätter karaktäristisk rökighet till det redan intensiva flank-köttet; höga temperaturer och snabb tillagning är avgörande. Innertemperatur: 52–57 °C medium-rare. Det är kritiskt att skära tvärs mot fibern efter tillagning — längs med fibern gör steken tuggig och svårätlig. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -888,7 +900,7 @@ Flank steak is a flat, boneless cut from the abdominal wall, with prominent, lon
 
 **SV:**
 
-*(to translate)*
+Flank steak är ett platt, benfritt snitt från bukväggen med tydliga, långa fibrer längs hela stycket. Fibermönstret bestämmer skärningsdirektionen: alltid tvärs mot fibern efter tillagning — annars är steken seg och svårtuggad oavsett tillagningsnivå. Direkt grill vid hög värme (230–260 °C) ger bäst resultat: 3–5 minuter per sida för medium-rare. Marinering ökar smaken och mörheten. Innertemperatur: 52–57 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -903,7 +915,7 @@ Flank steak, from the abdominal wall, is a wide, flat, and relatively thin cut w
 
 **SV:**
 
-*(to translate)*
+Flank steak, från bukväggen, är ett brett, platt och relativt tunt snitt med synliga långa fibrer. Ugnsstekning av flank steak fungerar bäst som omvänd searing: låg ugnstemperatur (120–135 °C) till 5 °C under slutmålet, sedan snabb avslutningssearing i het panna. Skär alltid tvärs mot fibern. Innertemperatur: 52–57 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -918,7 +930,7 @@ Flank steak is a wide, flat cut from the abdominal muscles with visible long fib
 
 **SV:**
 
-*(to translate)*
+Flank steak är ett brett, platt snitt från bukväggens muskler med synliga långa fibrer. Pannstekning fungerar bra: hög direkt värme, minimal olja, 3–4 minuter per sida. Skär alltid tvärs mot fibern — det är den mest kritiska tekniken för detta snitt. Innertemperatur: 52–57 °C medium-rare. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -933,7 +945,7 @@ Flank steak (bavette d'aloyau in French bistro tradition, matambre in South Amer
 
 **SV:**
 
-*(to translate)*
+Flank steak (*bavette d'aloyau* i fransk bistrotradition, *matambre* i Sydamerika) är ett brett, platt bukväggsmuskel med uttalade långa fibrer och intensiv nötssmak. Pannsearing ger utmärkt maillardyta snabbt; det tunna snittet kräver hög värme och kortare tillagningstid. Det är kritiskt att skära tvärs mot fibern efter vila — längs med fibern gör biffen seg oavsett tillagningsnivå. Innertemperatur: 52–57 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -948,7 +960,7 @@ Flank steak is a lean, flat, long-fibred abdominal muscle with almost no intramu
 
 **SV:**
 
-*(to translate)*
+Flank steak är ett magert, platt, långfibrigt bukmuskel utan intramuskulärt fett. Sous vide är idealisk för flank steak: den exakta temperaturkontrollen och fuktbevarande egenskaperna förhindrar den uttorkning som snabb höghettillagning kan ge för detta magra snitt. Avsluta alltid med snabb searing för maillardyta. Skär alltid tvärs mot fibern. Innertemperatur: 52–57 °C medium-rare.
 
 ---
 
@@ -964,7 +976,7 @@ The flat iron steak is taken from the infraspinatus muscle of the beef shoulder 
 
 **SV:**
 
-*(to translate)*
+Flat iron-biffen tas från *infraspinatus*-muskeln i nötdjurets skulderparti — specifikt det övre bladbenet. Det är det näst möraste snittet av hela djuret efter filén, med utmärkt marmorering och intensiv smak. Airfryer-tillagning ger intensiv cirkulerad luft runt biffen; effekten är jämförbar med snabb konvektionsugn. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C. Avsluta gärna med ett kort searing i het panna för optimal yta.
 
 ---
 
@@ -979,7 +991,7 @@ The flat iron steak, cut from the infraspinatus of the shoulder blade, is one of
 
 **SV:**
 
-*(to translate)*
+Flat iron-biffen, skärd från *infraspinatus* i skuldebladspartiet, är ett av de mest välbalanserade biffskiven: extremt mör (näst efter filén), välmarmorerad och med intensiv, komplex smak. Träkol ger flat iron en rökig karaktär som gasgrillning inte kan matcha. Direkt hög värme i 3–4 minuter per sida. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C. Skär tvärs mot fibern.
 
 ---
 
