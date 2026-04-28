@@ -77,7 +77,17 @@ Remove the classic MEATER path (`_currentPath = 'meater'`) and make the experime
 - Bumped version to `0.7.0.1`
 - Generator: PANEL_VERSION 347→348
 
-### 2026-04-28 (Session 5 — CHORES v0.7.0.8)
+### 2026-04-28 (Session 6 — start_cook bug fixes v0.7.0.10)
+- **Root cause found**: `PLATFORMS = [Platform.SENSOR]` was never defined in `__init__.py`
+  - This caused `NameError: name 'PLATFORMS' is not defined` at line 479
+  - ALL 5 config entries failed to set up → sensor entities never stored in `hass.data[DOMAIN]`
+  - `_get_cooking_session_entities()` returned empty list → every service call silently failed
+- **Fix 1**: Added `PLATFORMS = [Platform.SENSOR]` immediately after `_LOGGER` (line ~70)
+- **Fix 2**: `_get_exp_cut_data` used `os.walk()` + `open()` inside async event loop
+  - HA detected blocking calls and logged warnings for each service invocation
+  - Fixed by wrapping call with `await hass.async_add_executor_job(_get_exp_cut_data, cut_id, cooking_method)`
+- Bumped version to `0.7.0.10` in all 3 locations (manifest.json, __init__.py, const.py)
+- Generator: PANEL_VERSION 358→359
 - Git history audit: scanned all commits touching `www/recipes/` that did NOT touch `docs/recipe_research/`; confirmed all 8 such commits were generator copies (www and docs content identical at each commit) — no data loss
 - Bumped version to `0.7.0.8`
 - Updated README: added `v0.7.0.x Changes` section summarising all work done in this branch

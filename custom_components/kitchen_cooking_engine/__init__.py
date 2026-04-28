@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 28 Apr 2026, 21:00 UTC
-Last Change: v0.7.0.9 - fix: start_cook accepts EXP_TREE slug cut_id; rest/carryover defaults in KCE:CUT; per-method overrides in KCE:CUT_METHOD (braise/sous_vide/slow_cooker)
+Last Change: v0.7.0.10 - fix: PLATFORMS constant missing (NameError broke all config entry setups); fix: blocking os.walk/open in _get_exp_cut_data moved to executor
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -65,6 +65,8 @@ from .swedish_cooking_data import (
 from .api import async_register_api
 
 _LOGGER = logging.getLogger(__name__)
+
+PLATFORMS = [Platform.SENSOR]
 
 _KCE_RECIPE_DIR = os.path.join(os.path.dirname(__file__), "www", "recipes")
 
@@ -182,7 +184,7 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.7.0.9"
+__version__ = "0.7.0.10"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
@@ -576,7 +578,9 @@ async def _async_register_services(hass: HomeAssistant) -> None:
 
         # --- EXP_TREE path: cut_id is a string slug ---
         if isinstance(cut_id, str):
-            exp_data = _get_exp_cut_data(cut_id, cooking_method)
+            exp_data = await hass.async_add_executor_job(
+                _get_exp_cut_data, cut_id, cooking_method
+            )
             if not exp_data:
                 _LOGGER.error("EXP_TREE cut slug '%s' not found in recipe files", cut_id)
                 return
