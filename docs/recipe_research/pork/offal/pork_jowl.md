@@ -2,6 +2,7 @@
 type: cut
 slug: pork_jowl
 name: Pork Jowl / Guanciale
+name_sv: Kindkött
 category: pork
 meat: pig
 cut_type: Other / Offal

@@ -2,6 +2,7 @@
 type: cut
 slug: sirloin_steak
 name: Sirloin Steak
+name_sv: Ryggbiff
 category: beef
 meat: cow
 cut_type: Steaks

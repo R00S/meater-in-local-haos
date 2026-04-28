@@ -2,6 +2,7 @@
 type: cut
 slug: rabbit_saddle
 name: Rabbit Saddle
+name_sv: Kaninsadel
 category: game
 meat: rabbit
 cut_type: Rabbit

@@ -2,6 +2,7 @@
 type: cut
 slug: pork_shoulder
 name: Pork Shoulder / Boston Butt
+name_sv: Fläskstek (bog)
 category: pork
 meat: pig
 cut_type: Roasts

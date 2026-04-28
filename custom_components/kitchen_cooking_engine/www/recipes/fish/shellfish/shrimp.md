@@ -2,6 +2,7 @@
 type: cut
 slug: shrimp
 name: Shrimp
+name_sv: Räkor
 category: fish
 meat: shellfish
 cut_type: Shellfish

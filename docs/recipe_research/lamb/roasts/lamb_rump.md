@@ -2,6 +2,7 @@
 type: cut
 slug: lamb_rump
 name: Lamb Rump
+name_sv: Lammrumstek
 category: lamb
 meat: lamb
 cut_type: Roasts

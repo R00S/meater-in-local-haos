@@ -2,6 +2,7 @@
 type: cut
 slug: lamb_loin_roast
 name: Lamb Loin Roast
+name_sv: Lammlårstek
 category: lamb
 meat: lamb
 cut_type: Roasts

@@ -2,6 +2,7 @@
 type: cut
 slug: duck_leg_confit
 name: Duck Leg Confit
+name_sv: Andlår confit
 category: poultry
 meat: duck
 cut_type: Duck

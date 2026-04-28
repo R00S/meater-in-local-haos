@@ -2,6 +2,7 @@
 type: cut
 slug: fresh_ham
 name: Fresh Ham
+name_sv: Färsk skinka
 category: pork
 meat: pig
 cut_type: Ham

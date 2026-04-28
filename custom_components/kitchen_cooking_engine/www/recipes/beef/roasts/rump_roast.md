@@ -2,6 +2,7 @@
 type: cut
 slug: rump_roast
 name: Rump Roast
+name_sv: Rumpstek
 category: beef
 meat: cow
 cut_type: Roasts

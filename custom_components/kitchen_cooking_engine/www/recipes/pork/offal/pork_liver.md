@@ -2,6 +2,7 @@
 type: cut
 slug: pork_liver
 name: Pork Liver
+name_sv: Fläsklever
 category: pork
 meat: pig
 cut_type: Other / Offal

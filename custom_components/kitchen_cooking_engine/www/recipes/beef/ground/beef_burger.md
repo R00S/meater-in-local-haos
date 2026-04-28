@@ -2,6 +2,7 @@
 type: cut
 slug: beef_burger
 name: Beef Burger / Ground Beef Patty
+name_sv: Nötburgare
 category: beef
 meat: cow
 cut_type: Ground

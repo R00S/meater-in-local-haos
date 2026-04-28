@@ -4365,9 +4365,9 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
-          ← Back to Appliances
+          ${this._t('nav.back_to_appliances')}
         </button>
-        <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
+        <h2>🧪🌡️ MEATER+ <span style="font-size:0.75em;color:var(--secondary-text-color);">(experimental)</span></h2>
         <button class="help-btn" @click=${() => this._openHelp('#59-meater-experimental--cut-profile--recipe-links')} title="Open User Guide">?</button>
       </div>
 
@@ -4375,16 +4375,16 @@ class KitchenCookingPanel extends LitElement {
         <ha-card class="path-card clickable" @click=${() => this._startMeaterCooking()}>
           <div class="card-content path-card-content">
             <div class="path-icon">🌡️</div>
-            <h3>Start MEATER Cooking</h3>
-            <p>Select protein, set target, monitor temperature</p>
+            <h3>${this._t('meater.start_meater_cooking')}</h3>
+            <p>${this._t('meater.start_meater_desc')}</p>
           </div>
         </ha-card>
 
         <ha-card class="path-card clickable" @click=${() => this._showRecentMeaterCooks()}>
           <div class="card-content path-card-content">
             <div class="path-icon">📋</div>
-            <h3>Recent MEATER Cooks</h3>
-            <p>View and restart previous temperature-based cooks</p>
+            <h3>${this._t('meater.recent_meater_cooks')}</h3>
+            <p>${this._t('meater.recent_meater_desc')}</p>
           </div>
         </ha-card>
       </div>
@@ -4428,14 +4428,14 @@ class KitchenCookingPanel extends LitElement {
     
     return html`
       <div class="status-banner idle">
-        <h2>🍳 Ready to Cook</h2>
-        <p>Select your protein and preferences below</p>
+        <h2>${this._t('meater.ready_to_cook')}</h2>
+        <p>${this._t('meater.select_protein')}</p>
       </div>
       
       ${entities.length > 1 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>Select Session</h3>
+            <h3>${this._t('meater.select_session')}</h3>
             <select 
               .value=${this._selectedEntity}
               @change=${(e) => this._selectedEntity = e.target.value}
@@ -4453,19 +4453,19 @@ class KitchenCookingPanel extends LitElement {
       <!-- Step 1: Select Category -->
       <ha-card>
         <div class="card-content">
-          <h3>1️⃣ Select Category</h3>
+          <h3>${this._t('meater.select_category')}</h3>
           <div class="button-group">
             ${Object.entries(categories).map(([key, cat]) => html`
               <button 
                 class="category-btn ${this._selectedCategory === key ? 'selected' : ''}" 
                 @click=${() => this._selectCategory(key)}>
-                ${cat.icon} ${cat.name}
+                ${cat.icon} ${(this._language === 'sv' && cat.name_sv) ? cat.name_sv : cat.name}
               </button>
             `)}
             <button 
               class="category-btn ${this._selectedCategory === 'custom' ? 'selected' : ''}" 
               @click=${() => this._selectCategory('custom')}>
-              🎯 Custom
+              ${this._t('meater.custom')}
             </button>
           </div>
         </div>
@@ -4475,14 +4475,14 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCategory === 'custom' ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🎯 Custom Temperature Cook</h3>
-            <p>Set a target temperature and start monitoring — no protein or doneness selection needed.</p>
+            <h3>${this._t('meater.custom_temp_cook')}</h3>
+            <p>${this._t('meater.custom_temp_description')}</p>
             
             <div style="margin: 16px 0;">
-              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Session Name (optional)</label>
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">${this._t('meater.session_name')} (${this._t('common.optional')})</label>
               <input 
                 type="text" 
-                placeholder="e.g. My Cook"
+                placeholder="${this._t('meater.session_name_placeholder')}"
                 .value=${this._customProfileName || ''}
                 @input=${(e) => { this._customProfileName = e.target.value; }}
                 style="width: 100%; padding: 10px; border: 2px solid var(--divider-color); border-radius: 8px; font-size: 14px; background: var(--card-background-color); color: var(--primary-text-color); box-sizing: border-box;"
@@ -4490,11 +4490,10 @@ class KitchenCookingPanel extends LitElement {
             </div>
             
             <div style="margin: 16px 0;">
-              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Target Temperature</label>
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">${this._t('meater.target_temperature')}</label>
               <div class="temp-display-setup">
                 <div class="target-temp">
-                  <span class="temp-value">${this._customProfileTempC}°C</span>
-                  <span class="temp-fahrenheit">(${Math.round(this._customProfileTempC * 9 / 5 + 32)}°F)</span>
+                  <span class="temp-value">${this._convertTemp(this._customProfileTempC)}</span>
                 </div>
               </div>
               <input 
@@ -4525,7 +4524,7 @@ class KitchenCookingPanel extends LitElement {
         
         <div class="action-container">
           <ha-button unelevated @click=${() => this._startCustomCook()}>
-            🔥 Start Cooking at ${this._customProfileTempC}°C
+            ${this._t('meater.start_cooking')} ${this._convertTemp(this._customProfileTempC)}
           </ha-button>
         </div>
       ` : ''}
@@ -4534,13 +4533,13 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCategory && showMeatSelector ? html`
         <ha-card>
           <div class="card-content">
-            <h3>2️⃣ Select Type</h3>
+            <h3>2️⃣ ${this._t('meater.select_type')}</h3>
             <div class="button-group">
               ${meats.map(meat => html`
                 <button 
                   class="category-btn ${this._selectedMeat === meat.id ? 'selected' : ''}" 
                   @click=${() => this._selectMeat(meat.id)}>
-                  ${meat.name}
+                  ${(this._language === 'sv' && meat.name_sv) ? meat.name_sv : meat.name}
                 </button>
               `)}
             </div>
@@ -4552,13 +4551,13 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedMeat && cutTypes.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} Select Cut Type</h3>
+            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} ${this._t('meater.select_cut_type')}</h3>
             <div class="button-group">
               ${cutTypes.map(ct => html`
                 <button 
                   class="category-btn ${this._selectedCutType === ct.id ? 'selected' : ''}" 
                   @click=${() => this._selectCutType(ct.id)}>
-                  ${ct.name}
+                  ${(this._language === 'sv' && ct.name_sv) ? ct.name_sv : ct.name}
                 </button>
               `)}
             </div>
@@ -4570,13 +4569,13 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCutType && cuts.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} Select Cut</h3>
+            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} ${this._t('meater.select_cut')}</h3>
             <div class="button-group">
               ${cuts.map(cut => html`
                 <button
                   class="category-btn ${this._selectedCut === cut.id ? 'selected' : ''}"
                   @click=${() => this._selectCut(cut.id)}>
-                  ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
+                  ${(this._language === 'sv' && cut.name_sv) ? cut.name_sv : (cut.name_long || cut.name)}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
                 </button>
               `)}
             </div>
@@ -4591,9 +4590,9 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCut ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🌡️ Doneness Level ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = recommended)</span>` : ''}</h3>
+            <h3>🌡️ ${this._t('meater.select_doneness')} ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = ${this._t('meater.recommended')})</span>` : ''}</h3>
             <p style="font-size:0.8em;margin:0 0 10px;color:var(--secondary-text-color);">
-              🟢 safe &nbsp;·&nbsp; 🟠 caution (widely practised) &nbsp;·&nbsp; 🔴 below guidelines
+              ${this._t('meater.safety_legend')}
             </p>
             <div class="doneness-grid">
               ${this._getAvailableDoneness().map(opt => html`
@@ -4602,10 +4601,10 @@ class KitchenCookingPanel extends LitElement {
                   @click=${() => this._selectDoneness(opt.value)}
                   title="${opt.description || ''}">
                   <span class="icon">${opt.icon}</span>
-                  ${opt.name}
+                  ${(this._language === 'sv' && opt.name_sv) ? opt.name_sv : opt.name}
                   ${opt.value === recommendedDoneness ? html`<span class="star">⭐</span>` : ''}
-                  ${opt.safety_level ? html`<span class="safety-dot ${opt.safety_level}" title="${opt.safety_level === 'safe' ? '✅ Meets food safety guidelines' : opt.safety_level === 'caution' ? '⚠️ Below safety guidelines – widely practiced' : '⛔ Well below safety guidelines'}"></span>` : ''}
-                  <span class="temp-hint">${opt.temp_c}°C</span>
+                  ${opt.safety_level ? html`<span class="safety-dot ${opt.safety_level}" title="${opt.safety_level === 'safe' ? this._t('meater.safety_dot_safe') : opt.safety_level === 'caution' ? this._t('meater.safety_dot_caution') : this._t('meater.safety_dot_unsafe')}"></span>` : ''}
+                  <span class="temp-hint">${opt.temp_c !== null && opt.temp_c !== undefined ? this._convertTemp(opt.temp_c) : ''}</span>
                 </button>
               `)}
             </div>
@@ -4616,29 +4615,28 @@ class KitchenCookingPanel extends LitElement {
         ${this._selectedDoneness ? html`
           <ha-card>
             <div class="card-content">
-              <h3>🎯 Target Temperature</h3>
+              <h3>🎯 ${this._t('meater.target_temperature')}</h3>
               <div class="temp-display-setup">
                 <div class="target-temp">
-                  <span class="temp-value">${displayTemp}°C</span>
-                  <span class="temp-fahrenheit">(${displayTempF}°F)</span>
+                  <span class="temp-value">${displayTemp !== null && displayTemp !== undefined ? this._convertTemp(displayTemp) : '—'}</span>
                 </div>
                 ${this._customTargetTempC ? html`
-                  <span class="custom-indicator">Custom</span>
+                  <span class="custom-indicator">${this._t('meater.custom')}</span>
                 ` : ''}
               </div>
               
               ${showSafetyWarning ? html`
                 <div style="margin:10px 0;padding:10px 12px;background:rgba(244,67,54,0.08);border-left:3px solid #f44336;border-radius:4px;font-size:0.84em;line-height:1.5;">
-                  <div>⚠️ <strong>Culinary preferred:</strong> ${displayTemp}°C (${displayTempF}°F)</div>
-                  <div>🛡️ <strong>USDA safe minimum for this cut:</strong> ${cutUsdaSafeC}°C (${cutUsdaSafeF}°F)</div>
-                  <div style="color:var(--secondary-text-color);margin-top:4px;">Consuming undercooked meat carries food safety risk.</div>
+                  <div>⚠️ <strong>${this._t('meater.culinary_preferred')}</strong> ${this._convertTemp(displayTemp)}</div>
+                  <div>🛡️ <strong>${this._t('meater.usda_safe_minimum')}</strong> ${this._convertTemp(cutUsdaSafeC)}</div>
+                  <div style="color:var(--secondary-text-color);margin-top:4px;">${this._t('meater.undercooked_risk')}</div>
                 </div>
               ` : ''}
               
               <button 
                 class="adjust-btn ${this._showTempAdjust ? 'active' : ''}"
                 @click=${() => this._toggleTempAdjust()}>
-                ${this._showTempAdjust ? '✓ Done Adjusting' : '⚙️ Fine-tune Temperature'}
+                ${this._showTempAdjust ? this._t('meater.done_adjusting') : this._t('meater.fine_tune_temp')}
               </button>
               
               ${this._showTempAdjust ? html`
@@ -4667,7 +4665,7 @@ class KitchenCookingPanel extends LitElement {
                   <button 
                     class="reset-btn"
                     @click=${() => { this._customTargetTempC = null; }}>
-                    Reset to ${donenessTemps?.c}°C (${this._selectedDoneness ? this._selectedDoneness.replace('_', ' ') : ''})
+                    ${this._t('meater.reset_to')} ${donenessTemps ? this._convertTemp(donenessTemps.c) : ''} (${this._selectedDoneness ? this._selectedDoneness.replace('_', ' ') : ''})
                   </button>
                 </div>
               ` : ''}
@@ -4683,7 +4681,7 @@ class KitchenCookingPanel extends LitElement {
              runtime file parsing until the user opens a specific recipe. -->
         <ha-card>
           <div class="card-content">
-            <h3>🍳 Cooking Method</h3>
+            <h3>${this._t('meater.select_method')}</h3>
             <div class="method-grid">
               ${(() => {
                 const cutData = this._getSelectedCutData();
@@ -4691,7 +4689,10 @@ class KitchenCookingPanel extends LitElement {
                   ? cutData.supported_methods
                   : COOKING_METHODS.map(m => m.value);
                 return methods.map(methodSlug => {
-                  const name = methodSlug.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+                  const translated = this._t('cooking_methods.' + methodSlug);
+                  const name = (translated && translated !== 'cooking_methods.' + methodSlug)
+                    ? translated
+                    : methodSlug.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
                   return html`
                     <button
                       class="method-btn ${this._selectedMethod === methodSlug ? 'selected' : ''}"
@@ -4715,7 +4716,10 @@ class KitchenCookingPanel extends LitElement {
               const cutData = this._getSelectedCutData();
               const slug = cutData && (cutData.recipe_slug || cutData.slug);
               if (!slug) return '';
-              const desc   = this._getCutMethodProfiles()[slug] && this._getCutMethodProfiles()[slug][this._selectedMethod];
+              const methodProfiles = this._getCutMethodProfiles()[slug];
+              const descEn  = methodProfiles && methodProfiles[this._selectedMethod];
+              const descSv  = methodProfiles && methodProfiles[this._selectedMethod + '_sv'];
+              const desc    = (this._language === 'sv' && descSv) ? descSv : descEn;
               const titles = this._getRecipeTitles()[slug] && this._getRecipeTitles()[slug][this._selectedMethod];
               const url    = this._getRecipeIndex()[slug] && this._getRecipeIndex()[slug][this._selectedMethod];
               if (!desc && (!titles || titles.length === 0)) return '';
@@ -4737,16 +4741,16 @@ class KitchenCookingPanel extends LitElement {
                     </div>
                   ` : ''}
                   ${this._recipeFileLoading && isOpen ? html`
-                    <div style="text-align:center;padding:12px;color:var(--secondary-text-color);">⏳ Loading…</div>
+                    <div style="text-align:center;padding:12px;color:var(--secondary-text-color);">⏳ ${this._t('common.loading')}</div>
                   ` : ''}
                   ${isOpen && this._selectedFileRecipe !== null && this._recipeFileContent && !this._recipeFileLoading ? html`
                     <div style="display:flex;align-items:center;margin-bottom:10px;">
                       <button @click=${() => { this._selectedFileRecipe = null; this.requestUpdate(); }} style="${closeBtnStyle}">
-                        ← Back to recipes
+                        ${this._t('meater.back_to_recipes')}
                       </button>
                     </div>
                     <div class="recipe-md-content"
-                         .innerHTML=${this._mdToHtml(this._getRecipeContent(this._selectedFileRecipe))}>
+                         .innerHTML=${this._mdToHtml(this._convertIngredientText(this._getRecipeContent(this._selectedFileRecipe)))}>
                     </div>
                   ` : ''}
                 </div>
@@ -4758,7 +4762,7 @@ class KitchenCookingPanel extends LitElement {
         <!-- Start Button -->
         <div class="action-container">
           <ha-button unelevated @click=${this._startCook} ?disabled=${!this._selectedDoneness}>
-            🔥 Start Cooking${this._customTargetTempC ? ` at ${this._customTargetTempC}°C` : ''}
+            ${this._t('meater.start_cooking')}${this._customTargetTempC ? ` ${this._convertTemp(this._customTargetTempC)}` : ''}
           </ha-button>
         </div>
       ` : ''}
@@ -4783,16 +4787,6 @@ class KitchenCookingPanel extends LitElement {
     const recipes = this._getRecipeIndex()[slug];
     if (!profile && !recipes) return html``;
 
-    const METHOD_LABELS = {
-      oven_roast: 'Oven Roast', oven_bake: 'Oven Bake',
-      pan_sear: 'Pan Sear', pan_fry: 'Pan Fry',
-      grill: 'Grill', smoker: 'Smoker', charcoal_grill: 'Charcoal Grill',
-      air_fryer: 'Air Fryer', sous_vide: 'Sous Vide',
-      slow_cooker: 'Slow Cooker', braise: 'Braise',
-      boil: 'Boil', steam: 'Steam', poach: 'Poach',
-      saute: 'Sauté', simmer: 'Simmer',
-    };
-
     const methodEntries = recipes
       ? Object.entries(recipes).filter(([m]) => m !== 'overview')
       : [];
@@ -4804,7 +4798,10 @@ class KitchenCookingPanel extends LitElement {
     const recipeBtnStyle = 'text-align:left;width:100%;cursor:pointer;border:1px solid var(--divider-color);border-radius:8px;padding:8px 12px;background:var(--secondary-background-color);font-size:0.87em;color:var(--primary-text-color);';
 
     const sel = this._selectedResearchMethod;
-    const selDesc = sel && this._getCutMethodProfiles()[slug] && this._getCutMethodProfiles()[slug][sel];
+    const methodProfiles = this._getCutMethodProfiles()[slug];
+    const selDescEn  = sel && methodProfiles && methodProfiles[sel];
+    const selDescSv  = sel && methodProfiles && methodProfiles[sel + '_sv'];
+    const selDesc    = (this._language === 'sv' && selDescSv) ? selDescSv : selDescEn;
     const selTitles = sel && this._getRecipeTitles()[slug] && this._getRecipeTitles()[slug][sel];
     const selUrl = sel && recipes && recipes[sel];
 
@@ -4819,7 +4816,7 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <ha-card>
         <div class="card-content">
-          <h3>📖 Cut Profile</h3>
+          <h3>${this._t('meater.cut_profile')}</h3>
           ${profile ? html`
             <p style="font-size:0.88em;line-height:1.55;color:var(--secondary-text-color);margin:0 0 12px 0;">
               ${profile}
@@ -4829,26 +4826,32 @@ class KitchenCookingPanel extends LitElement {
           ${methodEntries.length > 0 ? html`
             <div>
               <span style="font-size:0.82em;font-weight:600;color:var(--secondary-text-color);">
-                📚 Method Research:
+                ${this._t('meater.method_research')}
               </span>
               <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">
-                ${methodEntries.map(([method]) => html`
-                  <button
-                    @click=${() => {
-                      if (this._selectedResearchMethod === method) {
-                        closeResearch();
-                      } else {
-                        this._selectedResearchMethod = method;
-                        this._selectedFileRecipe = null;
-                        this._recipeFileContent = null;
-                        this._recipeFileUrl = null;
-                        this.requestUpdate();
-                      }
-                    }}
-                    style="${sel === method ? activeStyle : methodStyle}">
-                    ${METHOD_LABELS[method] || method.replace(/_/g, ' ')}${sel === method ? ' ▲' : ''}
-                  </button>
-                `)}
+                ${methodEntries.map(([method]) => {
+                  const translated = this._t('cooking_methods.' + method);
+                  const label = (translated && translated !== 'cooking_methods.' + method)
+                    ? translated
+                    : method.replace(/_/g, ' ');
+                  return html`
+                    <button
+                      @click=${() => {
+                        if (this._selectedResearchMethod === method) {
+                          closeResearch();
+                        } else {
+                          this._selectedResearchMethod = method;
+                          this._selectedFileRecipe = null;
+                          this._recipeFileContent = null;
+                          this._recipeFileUrl = null;
+                          this.requestUpdate();
+                        }
+                      }}
+                      style="${sel === method ? activeStyle : methodStyle}">
+                      ${label}${sel === method ? ' ▲' : ''}
+                    </button>
+                  `;
+                })}
               </div>
             </div>
           ` : ''}
@@ -4860,9 +4863,9 @@ class KitchenCookingPanel extends LitElement {
           <div class="card-content">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
               <span style="font-size:0.88em;font-weight:600;color:var(--secondary-text-color);">
-                📚 ${METHOD_LABELS[sel] || sel.replace(/_/g, ' ')} — Research
+                📚 ${(() => { const t = this._t('cooking_methods.' + sel); return (t && t !== 'cooking_methods.' + sel) ? t : sel.replace(/_/g, ' '); })()} — ${this._t('meater.research_label')}
               </span>
-              <button @click=${closeResearch} style="${closeBtnStyle}">✕ Close</button>
+              <button @click=${closeResearch} style="${closeBtnStyle}">${this._t('meater.close_research')}</button>
             </div>
 
             ${selDesc ? html`
@@ -4884,7 +4887,7 @@ class KitchenCookingPanel extends LitElement {
             ` : ''}
 
             ${this._recipeFileLoading ? html`
-              <div style="text-align:center;padding:12px;color:var(--secondary-text-color);">⏳ Loading…</div>
+              <div style="text-align:center;padding:12px;color:var(--secondary-text-color);">⏳ ${this._t('common.loading')}</div>
             ` : ''}
 
             ${this._selectedFileRecipe !== null && this._recipeFileContent && !this._recipeFileLoading ? html`
@@ -4892,11 +4895,11 @@ class KitchenCookingPanel extends LitElement {
                 <button
                   @click=${() => { this._selectedFileRecipe = null; this.requestUpdate(); }}
                   style="${closeBtnStyle}">
-                  ← Back to recipes
+                  ${this._t('meater.back_to_recipes')}
                 </button>
               </div>
               <div class="recipe-md-content"
-                   .innerHTML=${this._mdToHtml(this._getRecipeContent(this._selectedFileRecipe))}>
+                   .innerHTML=${this._mdToHtml(this._convertIngredientText(this._getRecipeContent(this._selectedFileRecipe)))}>
               </div>
             ` : ''}
           </div>

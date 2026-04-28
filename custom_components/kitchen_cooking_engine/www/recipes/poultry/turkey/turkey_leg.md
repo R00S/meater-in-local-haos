@@ -2,6 +2,7 @@
 type: cut
 slug: turkey_leg
 name: Turkey Leg
+name_sv: Kalkonklubba
 category: poultry
 meat: turkey
 cut_type: Turkey

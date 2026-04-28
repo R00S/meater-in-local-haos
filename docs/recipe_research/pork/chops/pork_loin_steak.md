@@ -2,6 +2,7 @@
 type: cut
 slug: pork_loin_steak
 name: Pork Loin Steak
+name_sv: Karré
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin

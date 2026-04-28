@@ -2,6 +2,7 @@
 type: cut
 slug: leeks
 name: Leeks
+name_sv: Purjolök
 category: vegetables
 meat: alliums
 cut_type: Alliums

@@ -2,6 +2,7 @@
 type: cut
 slug: halibut_fillet
 name: Halibut Fillet
+name_sv: Hälleflundrafilé
 category: fish
 meat: white_fish
 cut_type: White Fish

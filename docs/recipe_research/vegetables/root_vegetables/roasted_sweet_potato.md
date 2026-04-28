@@ -2,6 +2,7 @@
 type: cut
 slug: roasted_sweet_potato
 name: Roasted Sweet Potato
+name_sv: Rostad sötpotatis
 category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables

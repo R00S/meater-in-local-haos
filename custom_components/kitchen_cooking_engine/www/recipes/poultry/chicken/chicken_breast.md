@@ -2,6 +2,7 @@
 type: cut
 slug: chicken_breast
 name: Chicken Breast
+name_sv: Kycklingfilé
 category: poultry
 meat: chicken
 cut_type: Breast

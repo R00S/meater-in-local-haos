@@ -2,6 +2,7 @@
 type: cut
 slug: beef_liver
 name: Beef Liver
+name_sv: Nötlever
 category: beef
 meat: cow
 cut_type: Other / Offal

@@ -2,6 +2,7 @@
 type: cut
 slug: pork_tongue
 name: Pork Tongue
+name_sv: Fläsktunga
 category: pork
 meat: pig
 cut_type: Other / Offal

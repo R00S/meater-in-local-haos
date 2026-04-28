@@ -2,6 +2,7 @@
 type: cut
 slug: chuck_roast
 name: Chuck Roast / Pot Roast
+name_sv: Grytbiff
 category: beef
 meat: cow
 cut_type: Braising Cuts

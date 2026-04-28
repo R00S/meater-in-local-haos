@@ -2,6 +2,7 @@
 type: cut
 slug: lamb_kofta
 name: Kofta / Kebab
+name_sv: Lammkofta
 category: lamb
 meat: lamb
 cut_type: Ground

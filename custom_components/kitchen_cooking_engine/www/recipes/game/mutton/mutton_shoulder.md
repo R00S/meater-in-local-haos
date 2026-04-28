@@ -2,6 +2,7 @@
 type: cut
 slug: mutton_shoulder
 name: Mutton Shoulder
+name_sv: Fårskuldra
 category: game
 meat: mutton
 cut_type: Mutton

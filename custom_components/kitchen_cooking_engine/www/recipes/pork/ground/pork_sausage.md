@@ -2,6 +2,7 @@
 type: cut
 slug: pork_sausage
 name: Pork Sausage
+name_sv: Fläskkorv
 category: pork
 meat: pig
 cut_type: Ground

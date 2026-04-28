@@ -2,6 +2,7 @@
 type: cut
 slug: flank_steak
 name: Flank Steak
+name_sv: Flankstek
 category: beef
 meat: cow
 cut_type: Steaks

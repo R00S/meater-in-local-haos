@@ -2,6 +2,7 @@
 type: cut
 slug: turkey_breast
 name: Turkey Breast
+name_sv: Kalkonfilé
 category: poultry
 meat: turkey
 cut_type: Turkey

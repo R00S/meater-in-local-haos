@@ -2,6 +2,7 @@
 type: cut
 slug: eggplant
 name: Eggplant / Aubergine
+name_sv: Aubergine
 category: vegetables
 meat: eggplant
 cut_type: Eggplant

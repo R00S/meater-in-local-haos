@@ -2,6 +2,7 @@
 type: cut
 slug: scallops
 name: Scallops
+name_sv: Pilgrimsmusslor
 category: fish
 meat: shellfish
 cut_type: Shellfish

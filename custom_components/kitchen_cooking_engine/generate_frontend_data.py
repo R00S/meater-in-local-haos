@@ -397,6 +397,11 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
                     if cut_slug not in cut_profiles:
                         cut_profiles[cut_slug] = desc
 
+                # Swedish description (optional field in KCE:CUT_METHOD tag)
+                desc_sv = data.get("description_sv")
+                if desc_sv:
+                    cut_method_profiles.setdefault(cut_slug, {})[method_slug + "_sv"] = desc_sv
+
                 titles = _extract_recipe_titles(content)
                 if titles:
                     recipe_titles.setdefault(cut_slug, {})[method_slug] = titles
@@ -426,13 +431,13 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
 
 # Category display data (mirrors cooking_data.py MeatCategory definitions)
 _CATEGORY_META = {
-    "beef":       {"icon": "🥩", "color": "#8B0000"},
-    "pork":       {"icon": "🐷", "color": "#FFB6C1"},
-    "poultry":    {"icon": "🍗", "color": "#FFD700"},
-    "fish":       {"icon": "🐟", "color": "#4682B4"},
-    "lamb":       {"icon": "🐑", "color": "#800020"},
-    "game":       {"icon": "🦌", "color": "#2F4F4F"},
-    "vegetables": {"icon": "🥬", "color": "#228B22"},
+    "beef":       {"icon": "🥩", "color": "#8B0000", "name_sv": "Nötkött"},
+    "pork":       {"icon": "🐷", "color": "#FFB6C1", "name_sv": "Fläskkött"},
+    "poultry":    {"icon": "🍗", "color": "#FFD700", "name_sv": "Fågel"},
+    "fish":       {"icon": "🐟", "color": "#4682B4", "name_sv": "Fisk"},
+    "lamb":       {"icon": "🐑", "color": "#800020", "name_sv": "Lamm"},
+    "game":       {"icon": "🦌", "color": "#2F4F4F", "name_sv": "Vilt"},
+    "vegetables": {"icon": "🥬", "color": "#228B22", "name_sv": "Grönsaker"},
 }
 
 _DONENESS_ICONS = {
@@ -516,6 +521,8 @@ def build_experimental_tree(base_dir):
             cut_type_name = data.get("cut_type")
             slug = data.get("slug") or stem
             name = data.get("name") or slug.replace("_", " ").title()
+            name_sv = data.get("name_sv")
+            description_sv = data.get("description_sv")
             rec_doneness = data.get("recommended_doneness")
             methods = data.get("methods") or []
             doneness_list = data.get("doneness") or []
@@ -544,7 +551,7 @@ def build_experimental_tree(base_dir):
                         safety_level = "caution"
                     else:
                         safety_level = None
-                    exp_doneness[d_name] = {
+                    entry = {
                         "value": d_name,
                         "name": d_name.replace("_", " ").title(),
                         "icon": _DONENESS_ICONS.get(d_name, "🔥"),
@@ -553,6 +560,9 @@ def build_experimental_tree(base_dir):
                         "temp_f": d.get("target_f"),
                         "safety_level": safety_level,
                     }
+                    if d.get("name_sv"):
+                        entry["name_sv"] = d["name_sv"]
+                    exp_doneness[d_name] = entry
 
             # Build hierarchy
             if category not in cats:
@@ -560,6 +570,7 @@ def build_experimental_tree(base_dir):
                 cats[category] = {
                     "id": category,
                     "name": category.title(),
+                    "name_sv": meta.get("name_sv"),
                     "icon": meta["icon"],
                     "color": meta["color"],
                     "_meats": {},
@@ -574,6 +585,10 @@ def build_experimental_tree(base_dir):
                 }
 
             meat_obj = cat["_meats"][meat]
+            # First cut seen for this meat provides the Swedish name, if any
+            if name_sv and not meat_obj.get("name_sv"):
+                meat_obj["name_sv"] = name_sv
+
             # Normalise cut_type to a safe id: lowercase, spaces/slashes → underscore
             ct_id = re.sub(r"[^a-z0-9]+", "_", cut_type_name.lower()).strip("_")
             if ct_id not in meat_obj["_cut_types"]:
@@ -582,6 +597,9 @@ def build_experimental_tree(base_dir):
                     "name": cut_type_name,
                     "cuts": [],
                 }
+            # First cut seen for this cut_type provides the Swedish name, if any
+            if name_sv and not meat_obj["_cut_types"][ct_id].get("name_sv"):
+                meat_obj["_cut_types"][ct_id]["name_sv"] = name_sv
 
             cut_obj = {
                 "id": slug,
@@ -589,6 +607,10 @@ def build_experimental_tree(base_dir):
                 "slug": slug,
                 "doneness": doneness_keys,
             }
+            if name_sv:
+                cut_obj["name_sv"] = name_sv
+            if description_sv:
+                cut_obj["description_sv"] = description_sv
             if rec_doneness:
                 cut_obj["recommended_doneness"] = rec_doneness
             if methods:
@@ -609,18 +631,24 @@ def build_experimental_tree(base_dir):
             # Remove the private key
             for ct in cut_types_list:
                 ct.pop("_cut_types", None)
-            meats_list.append({
+            meat_entry = {
                 "id": meat_obj["id"],
                 "name": meat_obj["name"],
                 "cutTypes": cut_types_list,
-            })
-        exp_tree[cat_key] = {
+            }
+            if meat_obj.get("name_sv"):
+                meat_entry["name_sv"] = meat_obj["name_sv"]
+            meats_list.append(meat_entry)
+        cat_entry = {
             "id": cat["id"],
             "name": cat["name"],
             "icon": cat["icon"],
             "color": cat["color"],
             "meats": meats_list,
         }
+        if cat.get("name_sv"):
+            cat_entry["name_sv"] = cat["name_sv"]
+        exp_tree[cat_key] = cat_entry
 
     return exp_tree, exp_doneness
 

@@ -2,6 +2,7 @@
 type: cut
 slug: chicken_wing
 name: Chicken Wing
+name_sv: Kycklingvinge
 category: poultry
 meat: chicken
 cut_type: Dark Meat

@@ -2,6 +2,7 @@
 type: cut
 slug: brussels_sprouts
 name: Brussels Sprouts
+name_sv: Brysselkål
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables

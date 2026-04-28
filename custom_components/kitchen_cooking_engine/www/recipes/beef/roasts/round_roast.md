@@ -2,6 +2,7 @@
 type: cut
 slug: round_roast
 name: Round Roast
+name_sv: Rundstek
 category: beef
 meat: cow
 cut_type: Roasts

@@ -2,6 +2,7 @@
 type: cut
 slug: tri_tip
 name: Tri-Tip
+name_sv: Tri-tip
 category: beef
 meat: cow
 cut_type: Steaks

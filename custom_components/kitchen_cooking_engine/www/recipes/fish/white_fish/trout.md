@@ -2,6 +2,7 @@
 type: cut
 slug: trout
 name: Trout Fillet
+name_sv: Forell
 category: fish
 meat: white_fish
 cut_type: White Fish

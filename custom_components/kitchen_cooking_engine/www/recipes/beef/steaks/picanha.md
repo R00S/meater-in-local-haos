@@ -2,6 +2,7 @@
 type: cut
 slug: picanha
 name: Picanha
+name_sv: Picanha
 category: beef
 meat: cow
 cut_type: Steaks

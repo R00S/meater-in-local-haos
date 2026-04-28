@@ -2,6 +2,7 @@
 type: cut
 slug: pork_tenderloin
 name: Pork Tenderloin
+name_sv: Fläskfilé
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin

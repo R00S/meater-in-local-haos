@@ -2,6 +2,7 @@
 type: cut
 slug: pork_leg
 name: Pork Leg Roast
+name_sv: Fläsklägg
 category: pork
 meat: pig
 cut_type: Roasts

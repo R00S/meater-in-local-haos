@@ -2,6 +2,7 @@
 type: cut
 slug: cauliflower
 name: Cauliflower
+name_sv: Blomkål
 category: vegetables
 meat: cruciferous
 cut_type: Cruciferous

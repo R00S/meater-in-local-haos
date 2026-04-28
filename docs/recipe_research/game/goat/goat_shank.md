@@ -2,6 +2,7 @@
 type: cut
 slug: goat_shank
 name: Goat Shank
+name_sv: Getlägg
 category: game
 meat: goat
 cut_type: Goat

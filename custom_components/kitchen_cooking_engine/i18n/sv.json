@@ -144,7 +144,22 @@
     "target_label": "mål",
     "peak_label": "topp",
     "final_label": "slutlig",
-    "after_rest_label": "efter vila"
+    "after_rest_label": "efter vila",
+    "safety_dot_safe": "✅ Uppfyller livsmedelssäkerhetskrav",
+    "safety_dot_caution": "⚠️ Under säkerhetsgränsen – vanlig praxis",
+    "safety_dot_unsafe": "⛔ Långt under säkerhetsgränsen",
+    "safety_legend": "🟢 säker · 🟠 försiktig (vanlig praxis) · 🔴 under riktlinjer",
+    "culinary_preferred": "Kulinarisk preferens:",
+    "usda_safe_minimum": "USDA lägsta säkerhetsgräns för detta stycke:",
+    "undercooked_risk": "Att äta otillräckligt tillagat kött medför livsmedelssäkerhetsrisk.",
+    "cut_profile": "📖 Styckesprofil",
+    "method_research": "📚 Metodforskning:",
+    "back_to_recipes": "← Tillbaka till recept",
+    "close_research": "✕ Stäng",
+    "research_label": "Forskning",
+    "fine_tune_temp": "⚙️ Finjustera temperatur",
+    "reset_to": "Återställ till",
+    "select_type": "Välj typ"
   },
   "ninja": {
     "title": "🥷 Ninja Combi",

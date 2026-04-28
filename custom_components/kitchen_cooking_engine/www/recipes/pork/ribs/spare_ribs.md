@@ -2,6 +2,7 @@
 type: cut
 slug: spare_ribs
 name: Spare Ribs
+name_sv: Spareribs
 category: pork
 meat: pig
 cut_type: Ribs

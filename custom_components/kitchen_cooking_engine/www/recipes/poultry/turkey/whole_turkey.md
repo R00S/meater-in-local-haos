@@ -2,6 +2,7 @@
 type: cut
 slug: whole_turkey
 name: Whole Turkey
+name_sv: Hel kalkon
 category: poultry
 meat: turkey
 cut_type: Turkey

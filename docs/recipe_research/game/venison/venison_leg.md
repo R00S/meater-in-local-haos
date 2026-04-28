@@ -2,6 +2,7 @@
 type: cut
 slug: venison_leg
 name: Leg
+name_sv: Hjortlår
 category: game
 meat: venison
 cut_type: Venison

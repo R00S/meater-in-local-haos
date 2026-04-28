@@ -2,6 +2,7 @@
 type: cut
 slug: lamb_shoulder
 name: Shoulder
+name_sv: Lammskuldra
 category: lamb
 meat: lamb
 cut_type: Ground

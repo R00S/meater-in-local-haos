@@ -2,6 +2,7 @@
 type: cut
 slug: roasted_onion
 name: Roasted Onion
+name_sv: Rostad lök
 category: vegetables
 meat: alliums
 cut_type: Alliums

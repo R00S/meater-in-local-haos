@@ -2,6 +2,7 @@
 type: cut
 slug: cod_fillet
 name: Cod Fillet
+name_sv: Torskfilé
 category: fish
 meat: white_fish
 cut_type: White Fish

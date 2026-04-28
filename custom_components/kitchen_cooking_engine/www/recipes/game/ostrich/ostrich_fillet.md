@@ -2,6 +2,7 @@
 type: cut
 slug: ostrich_fillet
 name: Ostrich Fillet
+name_sv: Strutsfilé
 category: game
 meat: ostrich
 cut_type: Ostrich

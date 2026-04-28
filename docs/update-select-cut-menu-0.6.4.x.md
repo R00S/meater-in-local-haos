@@ -6,7 +6,67 @@ Fix the "Select Cut" step in the MEATER setup flow: it was rendered as a `<selec
 dropdown instead of the button grid used by all other selector steps (Select Cut Type,
 Doneness Level). The fix makes the UI consistent throughout.
 
-## v0.6.4.7 — 2026-04-28
+## v0.6.4.8 — 2026-04-28
+
+### Problem
+The experimental MEATER+ path did not respect the user's language or measurement-system
+selection made on the front screen. All labels were hardcoded English, all temperatures
+were hardcoded °C, and category/cut/doneness names had no Swedish equivalents.
+
+### Fixes — four layers
+
+**Layer 1 — UI strings**: All hardcoded English strings in `_renderMeaterExperimental()`,
+`_renderExpSetupForm()`, and `_renderCutProfileCard()` replaced with `_t()` calls.
+- Landing-page path buttons: `start_meater_cooking`, `start_meater_desc`, `recent_meater_cooks`, `recent_meater_desc`
+- Status banner, session selector, category heading, meat/cut-type/cut step headings, doneness heading
+- Safety legend, safety dot tooltips, safety warning block (culinary preferred / USDA minimum / risk text)
+- Temperature fine-tune panel: heading, custom indicator, done/fine-tune toggles, reset label
+- Cooking method panel: heading, method names via `cooking_methods.*` keys, recipe loading indicator
+- Cut profile card: heading, method research label, close button, back-to-recipes button
+- Start cooking button
+- New i18n keys added to both `en.json` and `sv.json`:
+  `safety_dot_safe`, `safety_dot_caution`, `safety_dot_unsafe`, `safety_legend`,
+  `culinary_preferred`, `usda_safe_minimum`, `undercooked_risk`,
+  `cut_profile`, `method_research`, `back_to_recipes`, `close_research`,
+  `research_label`, `fine_tune_temp`, `reset_to`, `select_type`
+
+**Layer 2 — Temperatures and measurements**: Every temperature display uses `_convertTemp()`.
+- Doneness button temp hints
+- Custom cook target temp display
+- Fine-tuning: target temp display, safety warning values (culinary preferred + USDA safe minimum)
+- Reset-to label in fine-tune panel
+- Start cooking at temp label
+- Recipe markdown content piped through `_convertIngredientText()` before `_mdToHtml()` in both
+  the inline method panel and the cut profile research panel — so ingredient measurements and
+  temperatures in recipe text automatically convert to the user's units
+
+**Layer 3 — EXP_TREE Swedish names**: Infrastructure + data for `name_sv` in exp tree nodes.
+- `_CATEGORY_META` extended with `name_sv` for all 7 categories
+- Generator reads `name_sv` from KCE:CUT tag; propagates to cut objects, cut_type objects,
+  and meat objects (first cut seen provides the name), and category objects
+- `name_sv` added to KCE:CUT header blocks in 163 recipe research files
+- JS display in category, meat, cut-type, cut buttons uses `name_sv` when `_language === 'sv'`
+- `name_sv` also read from doneness entries in KCE:CUT doneness list
+
+**Layer 4 — Swedish method descriptions**: Infrastructure for `description_sv` in method profiles.
+- Generator reads `description_sv` field from KCE:CUT_METHOD YAML tag; stores it as
+  `{method_slug}_sv` key in `CUT_METHOD_PROFILES` and `CLASSIC_CUT_METHOD_PROFILES`
+- JS method description display uses `description_sv` when `_language === 'sv'`
+- Data entry (adding `description_sv:` to individual method files) is incremental — any file
+  without the field shows no Swedish description (falls back to English or nothing)
+
+### Files changed
+- `www/panel-class-template.js` — all four layers
+- `www/kitchen-cooking-panel.js` — auto-generated (PANEL_VERSION 333 → 334)
+- `i18n/en.json` — 15 new keys added
+- `i18n/sv.json` — 15 new keys added (Swedish translations)
+- `generate_frontend_data.py` — `_CATEGORY_META` name_sv, exp tree name_sv propagation, CUT_METHOD description_sv
+- `docs/recipe_research/**/*.md` — 163 KCE:CUT files updated with `name_sv:`
+- `manifest.json` — version 0.6.4.7 → 0.6.4.8
+- `__init__.py` — version bump + Last Change
+- `const.py` — Last Change (PANEL_VERSION auto-updated by generator)
+- `docs/update-select-cut-menu-0.6.4.x.md` — this file updated
+
 
 ### Problems reported (screenshot)
 The MEATER+ (experimental) setup form showed three bugs:

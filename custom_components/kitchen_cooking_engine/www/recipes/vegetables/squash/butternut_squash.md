@@ -2,6 +2,7 @@
 type: cut
 slug: butternut_squash
 name: Butternut Squash
+name_sv: Butternutpumpa
 category: vegetables
 meat: squash
 cut_type: Squash

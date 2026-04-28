@@ -2,6 +2,7 @@
 type: cut
 slug: tuna_steak
 name: Tuna Steak
+name_sv: Tonfiskbiff
 category: fish
 meat: tuna
 cut_type: Tuna

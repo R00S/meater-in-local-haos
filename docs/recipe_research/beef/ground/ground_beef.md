@@ -2,6 +2,7 @@
 type: cut
 slug: ground_beef
 name: Ground Beef
+name_sv: Nötfärs
 category: beef
 meat: cow
 cut_type: Ground

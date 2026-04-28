@@ -2,6 +2,7 @@
 type: cut
 slug: rabbit_legs
 name: Rabbit Legs
+name_sv: Kaninlår
 category: game
 meat: rabbit
 cut_type: Rabbit

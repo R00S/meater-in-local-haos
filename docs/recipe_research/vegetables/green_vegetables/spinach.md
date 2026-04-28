@@ -2,6 +2,7 @@
 type: cut
 slug: spinach
 name: Spinach
+name_sv: Spenat
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables

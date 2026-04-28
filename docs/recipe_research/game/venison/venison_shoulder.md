@@ -2,6 +2,7 @@
 type: cut
 slug: venison_shoulder
 name: Shoulder
+name_sv: Hjortskuldra
 category: game
 meat: venison
 cut_type: Venison

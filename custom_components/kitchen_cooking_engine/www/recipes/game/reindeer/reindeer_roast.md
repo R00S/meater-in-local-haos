@@ -2,6 +2,7 @@
 type: cut
 slug: reindeer_roast
 name: Reindeer Roast
+name_sv: Renstek
 category: game
 meat: reindeer
 cut_type: Reindeer

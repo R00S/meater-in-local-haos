@@ -2,6 +2,7 @@
 type: cut
 slug: ham
 name: Ham
+name_sv: Skinka
 category: pork
 meat: pig
 cut_type: Roasts

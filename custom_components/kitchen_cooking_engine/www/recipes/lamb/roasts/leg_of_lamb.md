@@ -2,6 +2,7 @@
 type: cut
 slug: leg_of_lamb
 name: Leg of Lamb
+name_sv: Lammlår
 category: lamb
 meat: lamb
 cut_type: Roasts

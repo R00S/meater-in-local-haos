@@ -2,6 +2,7 @@
 type: cut
 slug: beef_shank
 name: Beef Shank / Osso Buco
+name_sv: Oxlägg
 category: beef
 meat: cow
 cut_type: Braising Cuts

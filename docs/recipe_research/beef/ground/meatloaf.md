@@ -2,6 +2,7 @@
 type: cut
 slug: meatloaf
 name: Meatloaf
+name_sv: Köttfärslimpa
 category: beef
 meat: cow
 cut_type: Ground

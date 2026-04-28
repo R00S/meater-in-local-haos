@@ -2,6 +2,7 @@
 type: cut
 slug: sirloin_roast
 name: Sirloin Roast
+name_sv: Ryggbiffsstek
 category: beef
 meat: cow
 cut_type: Roasts

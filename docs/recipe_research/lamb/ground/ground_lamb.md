@@ -2,6 +2,7 @@
 type: cut
 slug: ground_lamb
 name: Ground Lamb
+name_sv: Lammfärs
 category: lamb
 meat: lamb
 cut_type: Ground

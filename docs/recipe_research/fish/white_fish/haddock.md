@@ -2,6 +2,7 @@
 type: cut
 slug: haddock
 name: Haddock Fillet
+name_sv: Kolja
 category: fish
 meat: white_fish
 cut_type: White Fish

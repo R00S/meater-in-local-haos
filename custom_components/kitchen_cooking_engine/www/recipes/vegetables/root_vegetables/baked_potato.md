@@ -2,6 +2,7 @@
 type: cut
 slug: baked_potato
 name: Baked Potato
+name_sv: Bakad potatis
 category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables

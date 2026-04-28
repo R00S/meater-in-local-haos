@@ -2,6 +2,7 @@
 type: cut
 slug: roasted_parsnips
 name: Roasted Parsnips
+name_sv: Rostade palsternackor
 category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables

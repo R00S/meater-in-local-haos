@@ -2,6 +2,7 @@
 type: cut
 slug: chicken_breast_bone_in
 name: Chicken Breast (Bone-in)
+name_sv: Kycklingfilé med ben
 category: poultry
 meat: chicken
 cut_type: Breast

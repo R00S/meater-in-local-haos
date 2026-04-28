@@ -2,6 +2,7 @@
 type: cut
 slug: roasted_carrots
 name: Roasted Carrots
+name_sv: Rostade morötter
 category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables

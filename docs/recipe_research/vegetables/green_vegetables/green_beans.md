@@ -2,6 +2,7 @@
 type: cut
 slug: green_beans
 name: Green Beans
+name_sv: Haricots verts
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables

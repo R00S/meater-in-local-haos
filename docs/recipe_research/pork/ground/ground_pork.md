@@ -2,6 +2,7 @@
 type: cut
 slug: ground_pork
 name: Ground Pork
+name_sv: Fläskfärs
 category: pork
 meat: pig
 cut_type: Ground

@@ -2,6 +2,7 @@
 type: cut
 slug: lamb_brisket
 name: Lamb Brisket
+name_sv: Lammbringa
 category: lamb
 meat: lamb
 cut_type: Roasts

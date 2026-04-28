@@ -2,6 +2,7 @@
 type: cut
 slug: lamb_burger
 name: Lamb Burger
+name_sv: Lammburgare
 category: lamb
 meat: lamb
 cut_type: Ground

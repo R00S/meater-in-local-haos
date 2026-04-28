@@ -2,6 +2,7 @@
 type: cut
 slug: kangaroo_steak
 name: Kangaroo Steak
+name_sv: Kängurufilé
 category: game
 meat: kangaroo
 cut_type: Kangaroo

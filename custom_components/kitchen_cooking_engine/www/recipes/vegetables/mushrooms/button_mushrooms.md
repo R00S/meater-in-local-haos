@@ -2,6 +2,7 @@
 type: cut
 slug: button_mushrooms
 name: Button/Cremini Mushrooms
+name_sv: Champinjoner
 category: vegetables
 meat: mushrooms
 cut_type: Mushrooms

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 28 Apr 2026, 08:17 CET
+ * AUTO-GENERATED: 28 Apr 2026, 08:51 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 28 Apr 2026, 08:17 CET
+// Last generated: 28 Apr 2026, 08:51 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -15379,7 +15379,22 @@ const I18N_STRINGS = {
       "target_label": "target",
       "peak_label": "peak",
       "final_label": "final",
-      "after_rest_label": "after rest"
+      "after_rest_label": "after rest",
+      "safety_dot_safe": "✅ Meets food safety guidelines",
+      "safety_dot_caution": "⚠️ Below safety guidelines – widely practiced",
+      "safety_dot_unsafe": "⛔ Well below safety guidelines",
+      "safety_legend": "🟢 safe · 🟠 caution (widely practised) · 🔴 below guidelines",
+      "culinary_preferred": "Culinary preferred:",
+      "usda_safe_minimum": "USDA safe minimum for this cut:",
+      "undercooked_risk": "Consuming undercooked meat carries food safety risk.",
+      "cut_profile": "📖 Cut Profile",
+      "method_research": "📚 Method Research:",
+      "back_to_recipes": "← Back to recipes",
+      "close_research": "✕ Close",
+      "research_label": "Research",
+      "fine_tune_temp": "⚙️ Fine-tune Temperature",
+      "reset_to": "Reset to",
+      "select_type": "Select Type"
     },
     "ninja": {
       "title": "🥷 Ninja Combi",
@@ -15992,7 +16007,22 @@ const I18N_STRINGS = {
       "target_label": "mål",
       "peak_label": "topp",
       "final_label": "slutlig",
-      "after_rest_label": "efter vila"
+      "after_rest_label": "efter vila",
+      "safety_dot_safe": "✅ Uppfyller livsmedelssäkerhetskrav",
+      "safety_dot_caution": "⚠️ Under säkerhetsgränsen – vanlig praxis",
+      "safety_dot_unsafe": "⛔ Långt under säkerhetsgränsen",
+      "safety_legend": "🟢 säker · 🟠 försiktig (vanlig praxis) · 🔴 under riktlinjer",
+      "culinary_preferred": "Kulinarisk preferens:",
+      "usda_safe_minimum": "USDA lägsta säkerhetsgräns för detta stycke:",
+      "undercooked_risk": "Att äta otillräckligt tillagat kött medför livsmedelssäkerhetsrisk.",
+      "cut_profile": "📖 Styckesprofil",
+      "method_research": "📚 Metodforskning:",
+      "back_to_recipes": "← Tillbaka till recept",
+      "close_research": "✕ Stäng",
+      "research_label": "Forskning",
+      "fine_tune_temp": "⚙️ Finjustera temperatur",
+      "reset_to": "Återställ till",
+      "select_type": "Välj typ"
     },
     "ninja": {
       "title": "🥷 Ninja Combi",
@@ -24797,6 +24827,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "medium"
                 ],
+                "name_sv": "Strutsfilé",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "braise",
@@ -24815,6 +24846,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "medium"
                 ],
+                "name_sv": "Strutsfilé",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -24823,9 +24855,11 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Strutsfilé"
           }
-        ]
+        ],
+        "name_sv": "Strutsfilé"
       },
       {
         "id": "venison",
@@ -24844,6 +24878,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "medium"
                 ],
+                "name_sv": "Hjortlår",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "braise",
@@ -24861,6 +24896,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "medium"
                 ],
+                "name_sv": "Hjortfilé",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast",
@@ -24879,6 +24915,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "medium"
                 ],
+                "name_sv": "Hjortstek",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "braise",
@@ -24894,6 +24931,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Hjortskuldra",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -24913,6 +24951,7 @@ const EXP_TREE = {
                   "medium",
                   "medium_well"
                 ],
+                "name_sv": "Hjortbiff",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -24922,9 +24961,11 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Hjortlår"
           }
-        ]
+        ],
+        "name_sv": "Hjortlår"
       },
       {
         "id": "rabbit",
@@ -24943,6 +24984,7 @@ const EXP_TREE = {
                   "dark_meat_optimal",
                   "pulled"
                 ],
+                "name_sv": "Kaninlår",
                 "recommended_doneness": "dark_meat_optimal",
                 "supported_methods": [
                   "braise",
@@ -24959,6 +25001,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Kaninsadel",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast",
@@ -24967,9 +25010,11 @@ const EXP_TREE = {
                 "usda_safe_c": 71,
                 "usda_safe_f": 160
               }
-            ]
+            ],
+            "name_sv": "Kaninlår"
           }
-        ]
+        ],
+        "name_sv": "Kaninlår"
       },
       {
         "id": "wild_boar",
@@ -24986,6 +25031,7 @@ const EXP_TREE = {
                 "doneness": [
                   "well_done"
                 ],
+                "name_sv": "Vildsvinskotlett",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -25001,6 +25047,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Vildsvinsskuldra",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -25010,9 +25057,11 @@ const EXP_TREE = {
                 "usda_safe_c": 71,
                 "usda_safe_f": 160
               }
-            ]
+            ],
+            "name_sv": "Vildsvinskotlett"
           }
-        ]
+        ],
+        "name_sv": "Vildsvinskotlett"
       },
       {
         "id": "mutton",
@@ -25033,6 +25082,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Fårkotlett",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -25051,6 +25101,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Fårlår",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "oven_roast"
@@ -25065,6 +25116,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Fårskuldra",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -25081,6 +25133,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Fårskuldra",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -25090,9 +25143,11 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Fårkotlett"
           }
-        ]
+        ],
+        "name_sv": "Fårkotlett"
       },
       {
         "id": "kangaroo",
@@ -25111,6 +25166,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "medium"
                 ],
+                "name_sv": "Kängurufilé",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -25128,6 +25184,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "medium"
                 ],
+                "name_sv": "Kängurufilé",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -25136,9 +25193,11 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Kängurufilé"
           }
-        ]
+        ],
+        "name_sv": "Kängurufilé"
       },
       {
         "id": "reindeer",
@@ -25157,6 +25216,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "medium"
                 ],
+                "name_sv": "Renfilé",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast",
@@ -25174,6 +25234,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "medium"
                 ],
+                "name_sv": "Renstek",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
@@ -25191,6 +25252,7 @@ const EXP_TREE = {
                   "medium",
                   "medium_well"
                 ],
+                "name_sv": "Renfilé",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -25199,9 +25261,11 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Renfilé"
           }
-        ]
+        ],
+        "name_sv": "Renfilé"
       },
       {
         "id": "goat",
@@ -25221,6 +25285,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Getkotlett",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -25239,6 +25304,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Getlår",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -25255,6 +25321,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Getlägg",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -25270,6 +25337,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Getskuldra",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -25279,9 +25347,11 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Getkotlett"
           }
-        ]
+        ],
+        "name_sv": "Getkotlett"
       },
       {
         "id": "moose",
@@ -25300,6 +25370,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "medium"
                 ],
+                "name_sv": "Älgstek",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "braise",
@@ -25318,6 +25389,7 @@ const EXP_TREE = {
                   "medium",
                   "medium_well"
                 ],
+                "name_sv": "Älgbiff",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -25326,9 +25398,11 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Älgstek"
           }
-        ]
+        ],
+        "name_sv": "Älgstek"
       },
       {
         "id": "buffalo",
@@ -25345,6 +25419,7 @@ const EXP_TREE = {
                 "doneness": [
                   "well_done"
                 ],
+                "name_sv": "Bufflaburgare",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -25362,6 +25437,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "medium"
                 ],
+                "name_sv": "Buffelstek",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "braise",
@@ -25380,6 +25456,7 @@ const EXP_TREE = {
                   "medium",
                   "medium_well"
                 ],
+                "name_sv": "Bufflabiff",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -25389,9 +25466,11 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Bufflaburgare"
           }
-        ]
+        ],
+        "name_sv": "Bufflaburgare"
       },
       {
         "id": "bison",
@@ -25408,6 +25487,7 @@ const EXP_TREE = {
                 "doneness": [
                   "well_done"
                 ],
+                "name_sv": "Bisonburgare",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -25425,6 +25505,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "medium"
                 ],
+                "name_sv": "Bisonstek",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
@@ -25442,6 +25523,7 @@ const EXP_TREE = {
                   "medium",
                   "medium_well"
                 ],
+                "name_sv": "Bisonbiff",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -25451,11 +25533,14 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Bisonburgare"
           }
-        ]
+        ],
+        "name_sv": "Bisonburgare"
       }
-    ]
+    ],
+    "name_sv": "Vilt"
   },
   "beef": {
     "id": "beef",
@@ -25478,6 +25563,7 @@ const EXP_TREE = {
                 "doneness": [
                   "well_done"
                 ],
+                "name_sv": "Nötburgare",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -25495,6 +25581,7 @@ const EXP_TREE = {
                 "doneness": [
                   "well_done"
                 ],
+                "name_sv": "Nötfärs",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -25510,6 +25597,7 @@ const EXP_TREE = {
                 "doneness": [
                   "done"
                 ],
+                "name_sv": "Köttfärslimpa",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
@@ -25517,7 +25605,8 @@ const EXP_TREE = {
                 "usda_safe_c": 71,
                 "usda_safe_f": 160
               }
-            ]
+            ],
+            "name_sv": "Nötburgare"
           },
           {
             "id": "steaks",
@@ -25534,6 +25623,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Oxfilé",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "air_fryer",
@@ -25557,6 +25647,7 @@ const EXP_TREE = {
                   "medium",
                   "medium_well"
                 ],
+                "name_sv": "Flankstek",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -25580,6 +25671,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Flat Iron",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "air_fryer",
@@ -25602,6 +25694,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "medium"
                 ],
+                "name_sv": "Hängare",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -25623,6 +25716,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "New York Strip",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "air_fryer",
@@ -25647,6 +25741,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Picanha",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "charcoal_grill",
@@ -25668,6 +25763,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Entrecôte",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "air_fryer",
@@ -25692,6 +25788,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Ryggbiff",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "air_fryer",
@@ -25714,6 +25811,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "medium"
                 ],
+                "name_sv": "Skirt",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -25735,6 +25833,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "T-benstek",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "air_fryer",
@@ -25757,6 +25856,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Tomahawk",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -25779,6 +25879,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Tri-tip",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -25791,7 +25892,8 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Oxfilé"
           },
           {
             "id": "other_offal",
@@ -25805,6 +25907,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Nötlever",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -25820,6 +25923,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Oxtunga",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -25828,7 +25932,8 @@ const EXP_TREE = {
                 "usda_safe_c": 71,
                 "usda_safe_f": 160
               }
-            ]
+            ],
+            "name_sv": "Nötlever"
           },
           {
             "id": "braising_cuts",
@@ -25841,6 +25946,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Oxlägg",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -25856,6 +25962,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Bringa",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -25873,6 +25980,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Grytbiff",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -25889,6 +25997,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Korta revben",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -25899,7 +26008,8 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Oxlägg"
           },
           {
             "id": "roasts",
@@ -25915,6 +26025,7 @@ const EXP_TREE = {
                   "medium",
                   "medium_well"
                 ],
+                "name_sv": "Oxfiléstek",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
@@ -25933,6 +26044,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Entrecôtestek",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
@@ -25951,6 +26063,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Stekkött",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
@@ -25968,6 +26081,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Rundstek",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "braise",
@@ -25987,6 +26101,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Rumstek",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -26006,6 +26121,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Rumpstek",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "braise",
@@ -26026,6 +26142,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Ryggbiffsstek",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
@@ -26043,6 +26160,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Spetsrumstek",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "braise",
@@ -26061,6 +26179,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Innanlårstek",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "braise",
@@ -26070,11 +26189,14 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Oxfiléstek"
           }
-        ]
+        ],
+        "name_sv": "Nötburgare"
       }
-    ]
+    ],
+    "name_sv": "Nötkött"
   },
   "poultry": {
     "id": "poultry",
@@ -26099,6 +26221,7 @@ const EXP_TREE = {
                   "medium",
                   "safe"
                 ],
+                "name_sv": "Gåsbröst",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast",
@@ -26115,6 +26238,7 @@ const EXP_TREE = {
                   "safe",
                   "dark_meat_optimal"
                 ],
+                "name_sv": "Gåslår",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -26131,6 +26255,7 @@ const EXP_TREE = {
                   "safe",
                   "dark_meat_optimal"
                 ],
+                "name_sv": "Gåslår",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -26147,6 +26272,7 @@ const EXP_TREE = {
                   "safe",
                   "thigh_rendered"
                 ],
+                "name_sv": "Hel gås",
                 "recommended_doneness": "thigh_rendered",
                 "supported_methods": [
                   "oven_roast"
@@ -26154,9 +26280,11 @@ const EXP_TREE = {
                 "usda_safe_c": 74,
                 "usda_safe_f": 165
               }
-            ]
+            ],
+            "name_sv": "Gåsbröst"
           }
-        ]
+        ],
+        "name_sv": "Gåsbröst"
       },
       {
         "id": "duck",
@@ -26175,6 +26303,7 @@ const EXP_TREE = {
                   "medium",
                   "safe"
                 ],
+                "name_sv": "Andbröst",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast",
@@ -26191,6 +26320,7 @@ const EXP_TREE = {
                 "doneness": [
                   "confit"
                 ],
+                "name_sv": "Andlår confit",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
@@ -26206,6 +26336,7 @@ const EXP_TREE = {
                   "safe",
                   "leg_rendered"
                 ],
+                "name_sv": "Hel and",
                 "recommended_doneness": "leg_rendered",
                 "supported_methods": [
                   "oven_roast"
@@ -26213,9 +26344,11 @@ const EXP_TREE = {
                 "usda_safe_c": 74,
                 "usda_safe_f": 165
               }
-            ]
+            ],
+            "name_sv": "Andbröst"
           }
-        ]
+        ],
+        "name_sv": "Andbröst"
       },
       {
         "id": "ground_poultry",
@@ -26232,6 +26365,7 @@ const EXP_TREE = {
                 "doneness": [
                   "safe"
                 ],
+                "name_sv": "Kalkonfärs",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -26248,6 +26382,7 @@ const EXP_TREE = {
                 "doneness": [
                   "safe"
                 ],
+                "name_sv": "Kalkonburgare",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -26264,6 +26399,7 @@ const EXP_TREE = {
                 "doneness": [
                   "safe"
                 ],
+                "name_sv": "Kycklingburgare",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -26280,6 +26416,7 @@ const EXP_TREE = {
                 "doneness": [
                   "safe"
                 ],
+                "name_sv": "Kycklingfärs",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -26289,9 +26426,11 @@ const EXP_TREE = {
                 "usda_safe_c": 74,
                 "usda_safe_f": 165
               }
-            ]
+            ],
+            "name_sv": "Kalkonfärs"
           }
-        ]
+        ],
+        "name_sv": "Kalkonfärs"
       },
       {
         "id": "turkey",
@@ -26308,6 +26447,7 @@ const EXP_TREE = {
                 "doneness": [
                   "safe"
                 ],
+                "name_sv": "Kalkonfilé",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast",
@@ -26324,6 +26464,7 @@ const EXP_TREE = {
                   "safe",
                   "dark_meat_optimal"
                 ],
+                "name_sv": "Kalkonklubba",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast",
@@ -26340,6 +26481,7 @@ const EXP_TREE = {
                   "safe",
                   "dark_meat_optimal"
                 ],
+                "name_sv": "Kalkonlår",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
@@ -26355,6 +26497,7 @@ const EXP_TREE = {
                   "safe",
                   "thigh_optimal"
                 ],
+                "name_sv": "Hel kalkon",
                 "recommended_doneness": "thigh_optimal",
                 "supported_methods": [
                   "oven_roast",
@@ -26363,9 +26506,11 @@ const EXP_TREE = {
                 "usda_safe_c": 74,
                 "usda_safe_f": 165
               }
-            ]
+            ],
+            "name_sv": "Kalkonfilé"
           }
-        ]
+        ],
+        "name_sv": "Kalkonfilé"
       },
       {
         "id": "chicken",
@@ -26382,6 +26527,7 @@ const EXP_TREE = {
                 "doneness": [
                   "safe"
                 ],
+                "name_sv": "Kycklingfilé",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -26401,6 +26547,7 @@ const EXP_TREE = {
                 "doneness": [
                   "safe"
                 ],
+                "name_sv": "Kycklingfilé med ben",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -26410,7 +26557,8 @@ const EXP_TREE = {
                 "usda_safe_c": 74,
                 "usda_safe_f": 165
               }
-            ]
+            ],
+            "name_sv": "Kycklingfilé"
           },
           {
             "id": "dark_meat",
@@ -26424,6 +26572,7 @@ const EXP_TREE = {
                   "safe",
                   "dark_meat_optimal"
                 ],
+                "name_sv": "Kycklingklubba",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -26441,6 +26590,7 @@ const EXP_TREE = {
                   "safe",
                   "dark_meat_optimal"
                 ],
+                "name_sv": "Kycklinglår",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -26460,6 +26610,7 @@ const EXP_TREE = {
                   "safe",
                   "dark_meat_optimal"
                 ],
+                "name_sv": "Kycklingvinge",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -26469,7 +26620,8 @@ const EXP_TREE = {
                 "usda_safe_c": 74,
                 "usda_safe_f": 165
               }
-            ]
+            ],
+            "name_sv": "Kycklingklubba"
           },
           {
             "id": "whole",
@@ -26483,6 +26635,7 @@ const EXP_TREE = {
                   "safe",
                   "thigh_optimal"
                 ],
+                "name_sv": "Hel kyckling",
                 "recommended_doneness": "thigh_optimal",
                 "supported_methods": [
                   "air_fryer",
@@ -26492,11 +26645,14 @@ const EXP_TREE = {
                 "usda_safe_c": 74,
                 "usda_safe_f": 165
               }
-            ]
+            ],
+            "name_sv": "Hel kyckling"
           }
-        ]
+        ],
+        "name_sv": "Kycklingfilé"
       }
-    ]
+    ],
+    "name_sv": "Fågel"
   },
   "vegetables": {
     "id": "vegetables",
@@ -26520,6 +26676,7 @@ const EXP_TREE = {
                   "crisp_tender",
                   "tender"
                 ],
+                "name_sv": "Sparris",
                 "supported_methods": [
                   "grill",
                   "oven_roast",
@@ -26535,6 +26692,7 @@ const EXP_TREE = {
                   "crisp_tender",
                   "tender"
                 ],
+                "name_sv": "Broccoli",
                 "supported_methods": [
                   "air_fryer",
                   "oven_roast",
@@ -26550,6 +26708,7 @@ const EXP_TREE = {
                   "tender",
                   "caramelized"
                 ],
+                "name_sv": "Brysselkål",
                 "supported_methods": [
                   "air_fryer",
                   "oven_roast",
@@ -26565,6 +26724,7 @@ const EXP_TREE = {
                   "crisp_tender",
                   "tender"
                 ],
+                "name_sv": "Haricots verts",
                 "supported_methods": [
                   "boil",
                   "oven_roast",
@@ -26579,14 +26739,17 @@ const EXP_TREE = {
                 "doneness": [
                   "tender"
                 ],
+                "name_sv": "Spenat",
                 "supported_methods": [
                   "saute",
                   "steam"
                 ]
               }
-            ]
+            ],
+            "name_sv": "Sparris"
           }
-        ]
+        ],
+        "name_sv": "Sparris"
       },
       {
         "id": "tomatoes",
@@ -26604,15 +26767,18 @@ const EXP_TREE = {
                   "tender",
                   "caramelized"
                 ],
+                "name_sv": "Rostade tomater",
                 "supported_methods": [
                   "air_fryer",
                   "oven_broil",
                   "oven_roast"
                 ]
               }
-            ]
+            ],
+            "name_sv": "Rostade tomater"
           }
-        ]
+        ],
+        "name_sv": "Rostade tomater"
       },
       {
         "id": "cruciferous",
@@ -26630,6 +26796,7 @@ const EXP_TREE = {
                   "crisp_tender",
                   "tender"
                 ],
+                "name_sv": "Kål",
                 "supported_methods": [
                   "braise",
                   "grill",
@@ -26645,6 +26812,7 @@ const EXP_TREE = {
                   "tender",
                   "caramelized"
                 ],
+                "name_sv": "Blomkål",
                 "supported_methods": [
                   "air_fryer",
                   "oven_roast",
@@ -26653,9 +26821,11 @@ const EXP_TREE = {
                   "whole_roast"
                 ]
               }
-            ]
+            ],
+            "name_sv": "Kål"
           }
-        ]
+        ],
+        "name_sv": "Kål"
       },
       {
         "id": "mushrooms",
@@ -26672,6 +26842,7 @@ const EXP_TREE = {
                 "doneness": [
                   "caramelized"
                 ],
+                "name_sv": "Champinjoner",
                 "supported_methods": [
                   "air_fryer",
                   "grill",
@@ -26687,6 +26858,7 @@ const EXP_TREE = {
                   "tender",
                   "caramelized"
                 ],
+                "name_sv": "Portobellosvamp",
                 "supported_methods": [
                   "air_fryer",
                   "grill",
@@ -26694,9 +26866,11 @@ const EXP_TREE = {
                   "saute"
                 ]
               }
-            ]
+            ],
+            "name_sv": "Champinjoner"
           }
-        ]
+        ],
+        "name_sv": "Champinjoner"
       },
       {
         "id": "eggplant",
@@ -26714,6 +26888,7 @@ const EXP_TREE = {
                   "tender",
                   "charred"
                 ],
+                "name_sv": "Aubergine",
                 "supported_methods": [
                   "air_fryer",
                   "grill",
@@ -26722,9 +26897,11 @@ const EXP_TREE = {
                   "saute"
                 ]
               }
-            ]
+            ],
+            "name_sv": "Aubergine"
           }
-        ]
+        ],
+        "name_sv": "Aubergine"
       },
       {
         "id": "peppers",
@@ -26742,6 +26919,7 @@ const EXP_TREE = {
                   "crisp_tender",
                   "charred"
                 ],
+                "name_sv": "Paprika",
                 "supported_methods": [
                   "air_fryer",
                   "grill",
@@ -26749,9 +26927,11 @@ const EXP_TREE = {
                   "saute"
                 ]
               }
-            ]
+            ],
+            "name_sv": "Paprika"
           }
-        ]
+        ],
+        "name_sv": "Paprika"
       },
       {
         "id": "corn",
@@ -26769,6 +26949,7 @@ const EXP_TREE = {
                   "tender",
                   "charred"
                 ],
+                "name_sv": "Majskolv",
                 "supported_methods": [
                   "air_fryer",
                   "boil",
@@ -26777,9 +26958,11 @@ const EXP_TREE = {
                   "steam"
                 ]
               }
-            ]
+            ],
+            "name_sv": "Majskolv"
           }
-        ]
+        ],
+        "name_sv": "Majskolv"
       },
       {
         "id": "squash",
@@ -26796,6 +26979,7 @@ const EXP_TREE = {
                 "doneness": [
                   "tender"
                 ],
+                "name_sv": "Ekolonpumpa",
                 "supported_methods": [
                   "oven_bake",
                   "oven_roast"
@@ -26809,6 +26993,7 @@ const EXP_TREE = {
                   "tender",
                   "caramelized"
                 ],
+                "name_sv": "Butternutpumpa",
                 "supported_methods": [
                   "oven_roast",
                   "pressure_cooker",
@@ -26822,6 +27007,7 @@ const EXP_TREE = {
                 "doneness": [
                   "tender"
                 ],
+                "name_sv": "Spagettikürbis",
                 "supported_methods": [
                   "oven_bake",
                   "oven_roast"
@@ -26835,6 +27021,7 @@ const EXP_TREE = {
                   "crisp_tender",
                   "tender"
                 ],
+                "name_sv": "Zucchini",
                 "supported_methods": [
                   "air_fryer",
                   "grill",
@@ -26842,9 +27029,11 @@ const EXP_TREE = {
                   "saute"
                 ]
               }
-            ]
+            ],
+            "name_sv": "Ekolonpumpa"
           }
-        ]
+        ],
+        "name_sv": "Ekolonpumpa"
       },
       {
         "id": "alliums",
@@ -26861,6 +27050,7 @@ const EXP_TREE = {
                 "doneness": [
                   "caramelized"
                 ],
+                "name_sv": "Karamelliserade lökar",
                 "supported_methods": [
                   "pan_fry",
                   "saute"
@@ -26874,6 +27064,7 @@ const EXP_TREE = {
                   "tender",
                   "caramelized"
                 ],
+                "name_sv": "Purjolök",
                 "supported_methods": [
                   "braise",
                   "oven_roast",
@@ -26888,6 +27079,7 @@ const EXP_TREE = {
                   "tender",
                   "caramelized"
                 ],
+                "name_sv": "Rostad vitlök",
                 "supported_methods": [
                   "oven_roast"
                 ]
@@ -26900,15 +27092,18 @@ const EXP_TREE = {
                   "tender",
                   "caramelized"
                 ],
+                "name_sv": "Rostad lök",
                 "supported_methods": [
                   "grill",
                   "oven_roast",
                   "saute"
                 ]
               }
-            ]
+            ],
+            "name_sv": "Karamelliserade lökar"
           }
-        ]
+        ],
+        "name_sv": "Karamelliserade lökar"
       },
       {
         "id": "root_vegetables",
@@ -26925,6 +27120,7 @@ const EXP_TREE = {
                 "doneness": [
                   "tender"
                 ],
+                "name_sv": "Bakad potatis",
                 "supported_methods": [
                   "air_fryer",
                   "oven_bake"
@@ -26937,6 +27133,7 @@ const EXP_TREE = {
                 "doneness": [
                   "tender"
                 ],
+                "name_sv": "Rostade rödbetor",
                 "supported_methods": [
                   "oven_roast"
                 ]
@@ -26949,6 +27146,7 @@ const EXP_TREE = {
                   "tender",
                   "caramelized"
                 ],
+                "name_sv": "Rostade morötter",
                 "supported_methods": [
                   "air_fryer",
                   "oven_roast",
@@ -26963,6 +27161,7 @@ const EXP_TREE = {
                   "tender",
                   "caramelized"
                 ],
+                "name_sv": "Rostade palsternackor",
                 "supported_methods": [
                   "air_fryer",
                   "oven_roast"
@@ -26975,6 +27174,7 @@ const EXP_TREE = {
                 "doneness": [
                   "caramelized"
                 ],
+                "name_sv": "Rostad potatis",
                 "supported_methods": [
                   "air_fryer",
                   "oven_roast"
@@ -26988,17 +27188,21 @@ const EXP_TREE = {
                   "tender",
                   "caramelized"
                 ],
+                "name_sv": "Rostad sötpotatis",
                 "supported_methods": [
                   "air_fryer",
                   "oven_bake",
                   "oven_roast"
                 ]
               }
-            ]
+            ],
+            "name_sv": "Bakad potatis"
           }
-        ]
+        ],
+        "name_sv": "Bakad potatis"
       }
-    ]
+    ],
+    "name_sv": "Grönsaker"
   },
   "fish": {
     "id": "fish",
@@ -27023,6 +27227,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "medium"
                 ],
+                "name_sv": "Tonfiskbiff",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -27031,9 +27236,11 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Tonfiskbiff"
           }
-        ]
+        ],
+        "name_sv": "Tonfiskbiff"
       },
       {
         "id": "salmon",
@@ -27052,6 +27259,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Laxfilé",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "air_fryer",
@@ -27072,6 +27280,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Laxbiff",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "grill",
@@ -27081,9 +27290,11 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Laxfilé"
           }
-        ]
+        ],
+        "name_sv": "Laxfilé"
       },
       {
         "id": "shellfish",
@@ -27101,6 +27312,7 @@ const EXP_TREE = {
                   "tender",
                   "well_done"
                 ],
+                "name_sv": "Hummersvans",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -27117,6 +27329,7 @@ const EXP_TREE = {
                   "medium_rare",
                   "well_done"
                 ],
+                "name_sv": "Pilgrimsmusslor",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_sear"
@@ -27132,6 +27345,7 @@ const EXP_TREE = {
                   "just_cooked",
                   "well_done"
                 ],
+                "name_sv": "Räkor",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry"
@@ -27139,9 +27353,11 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Hummersvans"
           }
-        ]
+        ],
+        "name_sv": "Hummersvans"
       },
       {
         "id": "white_fish",
@@ -27159,6 +27375,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Torskfilé",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -27177,6 +27394,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Kolja",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -27194,6 +27412,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Kummel",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast",
@@ -27212,6 +27431,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Hälleflundrafilé",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -27229,6 +27449,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Mahi-mahi",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -27247,6 +27468,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Havsabborre",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -27264,6 +27486,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Svärdfisk",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "charcoal_grill",
@@ -27282,6 +27505,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Forell",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "grill",
@@ -27291,11 +27515,14 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Torskfilé"
           }
-        ]
+        ],
+        "name_sv": "Torskfilé"
       }
-    ]
+    ],
+    "name_sv": "Fisk"
   },
   "lamb": {
     "id": "lamb",
@@ -27318,6 +27545,7 @@ const EXP_TREE = {
                 "doneness": [
                   "well_done"
                 ],
+                "name_sv": "Lammfärs",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -27333,6 +27561,7 @@ const EXP_TREE = {
                 "doneness": [
                   "well_done"
                 ],
+                "name_sv": "Lammburgare",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -27348,6 +27577,7 @@ const EXP_TREE = {
                 "doneness": [
                   "well_done"
                 ],
+                "name_sv": "Lammkofta",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -27363,6 +27593,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Lammlägg",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -27379,6 +27610,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Lammskuldra",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -27388,7 +27620,8 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Lammfärs"
           },
           {
             "id": "roasts",
@@ -27401,6 +27634,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Lammbringa",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -27419,6 +27653,7 @@ const EXP_TREE = {
                   "medium",
                   "medium_well"
                 ],
+                "name_sv": "Lammlårstek",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
@@ -27433,6 +27668,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Lammhals",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -27452,6 +27688,7 @@ const EXP_TREE = {
                   "medium",
                   "medium_well"
                 ],
+                "name_sv": "Lammrev",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast",
@@ -27471,6 +27708,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Lammrumstek",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -27491,6 +27729,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Lammlår",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -27509,6 +27748,7 @@ const EXP_TREE = {
                   "medium",
                   "medium_well"
                 ],
+                "name_sv": "Lammracks",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -27517,7 +27757,8 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Lammbringa"
           },
           {
             "id": "chops",
@@ -27534,6 +27775,7 @@ const EXP_TREE = {
                   "medium_well",
                   "well_done"
                 ],
+                "name_sv": "Lammkotlett",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -27552,6 +27794,7 @@ const EXP_TREE = {
                   "medium",
                   "medium_well"
                 ],
+                "name_sv": "Lammkotlett",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -27570,6 +27813,7 @@ const EXP_TREE = {
                   "medium",
                   "medium_well"
                 ],
+                "name_sv": "Lammlårkotlett",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -27588,6 +27832,7 @@ const EXP_TREE = {
                   "medium",
                   "medium_well"
                 ],
+                "name_sv": "Lammhalsfilé",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -27597,11 +27842,14 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Lammkotlett"
           }
-        ]
+        ],
+        "name_sv": "Lammfärs"
       }
-    ]
+    ],
+    "name_sv": "Lamm"
   },
   "pork": {
     "id": "pork",
@@ -27624,6 +27872,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Revbensspjäll",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -27641,6 +27890,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Spareribs",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -27657,6 +27907,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "St. Louis-revben",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -27666,7 +27917,8 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Revbensspjäll"
           },
           {
             "id": "ground",
@@ -27679,6 +27931,7 @@ const EXP_TREE = {
                 "doneness": [
                   "well_done"
                 ],
+                "name_sv": "Fläskfärs",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -27694,6 +27947,7 @@ const EXP_TREE = {
                 "doneness": [
                   "well_done"
                 ],
+                "name_sv": "Fläskkorv",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -27702,7 +27956,8 @@ const EXP_TREE = {
                 "usda_safe_c": 71,
                 "usda_safe_f": 160
               }
-            ]
+            ],
+            "name_sv": "Fläskfärs"
           },
           {
             "id": "ham",
@@ -27716,6 +27971,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Färsk skinka",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
@@ -27730,6 +27986,7 @@ const EXP_TREE = {
                 "doneness": [
                   "heated_through"
                 ],
+                "name_sv": "Rökt skinka",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
@@ -27737,7 +27994,8 @@ const EXP_TREE = {
                 "usda_safe_c": 60,
                 "usda_safe_f": 140
               }
-            ]
+            ],
+            "name_sv": "Färsk skinka"
           },
           {
             "id": "other_offal",
@@ -27750,6 +28008,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Kindkött",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -27765,6 +28024,7 @@ const EXP_TREE = {
                 "doneness": [
                   "well_done"
                 ],
+                "name_sv": "Fläsklever",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -27780,6 +28040,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Fläskkind",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -27797,6 +28058,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Kindkött",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -27813,6 +28075,7 @@ const EXP_TREE = {
                 "doneness": [
                   "well_done"
                 ],
+                "name_sv": "Fläsklever",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -27828,6 +28091,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Fläsktunga",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -27836,7 +28100,8 @@ const EXP_TREE = {
                 "usda_safe_c": 71,
                 "usda_safe_f": 160
               }
-            ]
+            ],
+            "name_sv": "Kindkött"
           },
           {
             "id": "roasts",
@@ -27850,6 +28115,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Skinka",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
@@ -27865,6 +28131,7 @@ const EXP_TREE = {
                   "well_done",
                   "crispy"
                 ],
+                "name_sv": "Sidfläsk",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -27887,6 +28154,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Fläsklägg",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -27904,6 +28172,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Karréstek",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast",
@@ -27919,6 +28188,7 @@ const EXP_TREE = {
                 "doneness": [
                   "pulled"
                 ],
+                "name_sv": "Fläskstek (bog)",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast",
@@ -27928,7 +28198,8 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Skinka"
           },
           {
             "id": "chops_tenderloin",
@@ -27942,6 +28213,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Fläskkotlett",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -27961,6 +28233,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Karré",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -27978,6 +28251,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Bogkotlett",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -27995,6 +28269,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Fläskfilé",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -28014,6 +28289,7 @@ const EXP_TREE = {
                   "medium",
                   "well_done"
                 ],
+                "name_sv": "Secreto",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "charcoal_grill",
@@ -28023,11 +28299,14 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ]
+            ],
+            "name_sv": "Fläskkotlett"
           }
-        ]
+        ],
+        "name_sv": "Revbensspjäll"
       }
-    ]
+    ],
+    "name_sv": "Fläskkött"
   }
 };
 
@@ -32596,9 +32875,9 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
-          ← Back to Appliances
+          ${this._t('nav.back_to_appliances')}
         </button>
-        <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
+        <h2>🧪🌡️ MEATER+ <span style="font-size:0.75em;color:var(--secondary-text-color);">(experimental)</span></h2>
         <button class="help-btn" @click=${() => this._openHelp('#59-meater-experimental--cut-profile--recipe-links')} title="Open User Guide">?</button>
       </div>
 
@@ -32606,16 +32885,16 @@ class KitchenCookingPanel extends LitElement {
         <ha-card class="path-card clickable" @click=${() => this._startMeaterCooking()}>
           <div class="card-content path-card-content">
             <div class="path-icon">🌡️</div>
-            <h3>Start MEATER Cooking</h3>
-            <p>Select protein, set target, monitor temperature</p>
+            <h3>${this._t('meater.start_meater_cooking')}</h3>
+            <p>${this._t('meater.start_meater_desc')}</p>
           </div>
         </ha-card>
 
         <ha-card class="path-card clickable" @click=${() => this._showRecentMeaterCooks()}>
           <div class="card-content path-card-content">
             <div class="path-icon">📋</div>
-            <h3>Recent MEATER Cooks</h3>
-            <p>View and restart previous temperature-based cooks</p>
+            <h3>${this._t('meater.recent_meater_cooks')}</h3>
+            <p>${this._t('meater.recent_meater_desc')}</p>
           </div>
         </ha-card>
       </div>
@@ -32659,14 +32938,14 @@ class KitchenCookingPanel extends LitElement {
     
     return html`
       <div class="status-banner idle">
-        <h2>🍳 Ready to Cook</h2>
-        <p>Select your protein and preferences below</p>
+        <h2>${this._t('meater.ready_to_cook')}</h2>
+        <p>${this._t('meater.select_protein')}</p>
       </div>
       
       ${entities.length > 1 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>Select Session</h3>
+            <h3>${this._t('meater.select_session')}</h3>
             <select 
               .value=${this._selectedEntity}
               @change=${(e) => this._selectedEntity = e.target.value}
@@ -32684,19 +32963,19 @@ class KitchenCookingPanel extends LitElement {
       <!-- Step 1: Select Category -->
       <ha-card>
         <div class="card-content">
-          <h3>1️⃣ Select Category</h3>
+          <h3>${this._t('meater.select_category')}</h3>
           <div class="button-group">
             ${Object.entries(categories).map(([key, cat]) => html`
               <button 
                 class="category-btn ${this._selectedCategory === key ? 'selected' : ''}" 
                 @click=${() => this._selectCategory(key)}>
-                ${cat.icon} ${cat.name}
+                ${cat.icon} ${(this._language === 'sv' && cat.name_sv) ? cat.name_sv : cat.name}
               </button>
             `)}
             <button 
               class="category-btn ${this._selectedCategory === 'custom' ? 'selected' : ''}" 
               @click=${() => this._selectCategory('custom')}>
-              🎯 Custom
+              ${this._t('meater.custom')}
             </button>
           </div>
         </div>
@@ -32706,14 +32985,14 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCategory === 'custom' ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🎯 Custom Temperature Cook</h3>
-            <p>Set a target temperature and start monitoring — no protein or doneness selection needed.</p>
+            <h3>${this._t('meater.custom_temp_cook')}</h3>
+            <p>${this._t('meater.custom_temp_description')}</p>
             
             <div style="margin: 16px 0;">
-              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Session Name (optional)</label>
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">${this._t('meater.session_name')} (${this._t('common.optional')})</label>
               <input 
                 type="text" 
-                placeholder="e.g. My Cook"
+                placeholder="${this._t('meater.session_name_placeholder')}"
                 .value=${this._customProfileName || ''}
                 @input=${(e) => { this._customProfileName = e.target.value; }}
                 style="width: 100%; padding: 10px; border: 2px solid var(--divider-color); border-radius: 8px; font-size: 14px; background: var(--card-background-color); color: var(--primary-text-color); box-sizing: border-box;"
@@ -32721,11 +33000,10 @@ class KitchenCookingPanel extends LitElement {
             </div>
             
             <div style="margin: 16px 0;">
-              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Target Temperature</label>
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">${this._t('meater.target_temperature')}</label>
               <div class="temp-display-setup">
                 <div class="target-temp">
-                  <span class="temp-value">${this._customProfileTempC}°C</span>
-                  <span class="temp-fahrenheit">(${Math.round(this._customProfileTempC * 9 / 5 + 32)}°F)</span>
+                  <span class="temp-value">${this._convertTemp(this._customProfileTempC)}</span>
                 </div>
               </div>
               <input 
@@ -32756,7 +33034,7 @@ class KitchenCookingPanel extends LitElement {
         
         <div class="action-container">
           <ha-button unelevated @click=${() => this._startCustomCook()}>
-            🔥 Start Cooking at ${this._customProfileTempC}°C
+            ${this._t('meater.start_cooking')} ${this._convertTemp(this._customProfileTempC)}
           </ha-button>
         </div>
       ` : ''}
@@ -32765,13 +33043,13 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCategory && showMeatSelector ? html`
         <ha-card>
           <div class="card-content">
-            <h3>2️⃣ Select Type</h3>
+            <h3>2️⃣ ${this._t('meater.select_type')}</h3>
             <div class="button-group">
               ${meats.map(meat => html`
                 <button 
                   class="category-btn ${this._selectedMeat === meat.id ? 'selected' : ''}" 
                   @click=${() => this._selectMeat(meat.id)}>
-                  ${meat.name}
+                  ${(this._language === 'sv' && meat.name_sv) ? meat.name_sv : meat.name}
                 </button>
               `)}
             </div>
@@ -32783,13 +33061,13 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedMeat && cutTypes.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} Select Cut Type</h3>
+            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} ${this._t('meater.select_cut_type')}</h3>
             <div class="button-group">
               ${cutTypes.map(ct => html`
                 <button 
                   class="category-btn ${this._selectedCutType === ct.id ? 'selected' : ''}" 
                   @click=${() => this._selectCutType(ct.id)}>
-                  ${ct.name}
+                  ${(this._language === 'sv' && ct.name_sv) ? ct.name_sv : ct.name}
                 </button>
               `)}
             </div>
@@ -32801,13 +33079,13 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCutType && cuts.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} Select Cut</h3>
+            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} ${this._t('meater.select_cut')}</h3>
             <div class="button-group">
               ${cuts.map(cut => html`
                 <button
                   class="category-btn ${this._selectedCut === cut.id ? 'selected' : ''}"
                   @click=${() => this._selectCut(cut.id)}>
-                  ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
+                  ${(this._language === 'sv' && cut.name_sv) ? cut.name_sv : (cut.name_long || cut.name)}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
                 </button>
               `)}
             </div>
@@ -32822,9 +33100,9 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCut ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🌡️ Doneness Level ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = recommended)</span>` : ''}</h3>
+            <h3>🌡️ ${this._t('meater.select_doneness')} ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = ${this._t('meater.recommended')})</span>` : ''}</h3>
             <p style="font-size:0.8em;margin:0 0 10px;color:var(--secondary-text-color);">
-              🟢 safe &nbsp;·&nbsp; 🟠 caution (widely practised) &nbsp;·&nbsp; 🔴 below guidelines
+              ${this._t('meater.safety_legend')}
             </p>
             <div class="doneness-grid">
               ${this._getAvailableDoneness().map(opt => html`
@@ -32833,10 +33111,10 @@ class KitchenCookingPanel extends LitElement {
                   @click=${() => this._selectDoneness(opt.value)}
                   title="${opt.description || ''}">
                   <span class="icon">${opt.icon}</span>
-                  ${opt.name}
+                  ${(this._language === 'sv' && opt.name_sv) ? opt.name_sv : opt.name}
                   ${opt.value === recommendedDoneness ? html`<span class="star">⭐</span>` : ''}
-                  ${opt.safety_level ? html`<span class="safety-dot ${opt.safety_level}" title="${opt.safety_level === 'safe' ? '✅ Meets food safety guidelines' : opt.safety_level === 'caution' ? '⚠️ Below safety guidelines – widely practiced' : '⛔ Well below safety guidelines'}"></span>` : ''}
-                  <span class="temp-hint">${opt.temp_c}°C</span>
+                  ${opt.safety_level ? html`<span class="safety-dot ${opt.safety_level}" title="${opt.safety_level === 'safe' ? this._t('meater.safety_dot_safe') : opt.safety_level === 'caution' ? this._t('meater.safety_dot_caution') : this._t('meater.safety_dot_unsafe')}"></span>` : ''}
+                  <span class="temp-hint">${opt.temp_c !== null && opt.temp_c !== undefined ? this._convertTemp(opt.temp_c) : ''}</span>
                 </button>
               `)}
             </div>
@@ -32847,29 +33125,28 @@ class KitchenCookingPanel extends LitElement {
         ${this._selectedDoneness ? html`
           <ha-card>
             <div class="card-content">
-              <h3>🎯 Target Temperature</h3>
+              <h3>🎯 ${this._t('meater.target_temperature')}</h3>
               <div class="temp-display-setup">
                 <div class="target-temp">
-                  <span class="temp-value">${displayTemp}°C</span>
-                  <span class="temp-fahrenheit">(${displayTempF}°F)</span>
+                  <span class="temp-value">${displayTemp !== null && displayTemp !== undefined ? this._convertTemp(displayTemp) : '—'}</span>
                 </div>
                 ${this._customTargetTempC ? html`
-                  <span class="custom-indicator">Custom</span>
+                  <span class="custom-indicator">${this._t('meater.custom')}</span>
                 ` : ''}
               </div>
               
               ${showSafetyWarning ? html`
                 <div style="margin:10px 0;padding:10px 12px;background:rgba(244,67,54,0.08);border-left:3px solid #f44336;border-radius:4px;font-size:0.84em;line-height:1.5;">
-                  <div>⚠️ <strong>Culinary preferred:</strong> ${displayTemp}°C (${displayTempF}°F)</div>
-                  <div>🛡️ <strong>USDA safe minimum for this cut:</strong> ${cutUsdaSafeC}°C (${cutUsdaSafeF}°F)</div>
-                  <div style="color:var(--secondary-text-color);margin-top:4px;">Consuming undercooked meat carries food safety risk.</div>
+                  <div>⚠️ <strong>${this._t('meater.culinary_preferred')}</strong> ${this._convertTemp(displayTemp)}</div>
+                  <div>🛡️ <strong>${this._t('meater.usda_safe_minimum')}</strong> ${this._convertTemp(cutUsdaSafeC)}</div>
+                  <div style="color:var(--secondary-text-color);margin-top:4px;">${this._t('meater.undercooked_risk')}</div>
                 </div>
               ` : ''}
               
               <button 
                 class="adjust-btn ${this._showTempAdjust ? 'active' : ''}"
                 @click=${() => this._toggleTempAdjust()}>
-                ${this._showTempAdjust ? '✓ Done Adjusting' : '⚙️ Fine-tune Temperature'}
+                ${this._showTempAdjust ? this._t('meater.done_adjusting') : this._t('meater.fine_tune_temp')}
               </button>
               
               ${this._showTempAdjust ? html`
@@ -32898,7 +33175,7 @@ class KitchenCookingPanel extends LitElement {
                   <button 
                     class="reset-btn"
                     @click=${() => { this._customTargetTempC = null; }}>
-                    Reset to ${donenessTemps?.c}°C (${this._selectedDoneness ? this._selectedDoneness.replace('_', ' ') : ''})
+                    ${this._t('meater.reset_to')} ${donenessTemps ? this._convertTemp(donenessTemps.c) : ''} (${this._selectedDoneness ? this._selectedDoneness.replace('_', ' ') : ''})
                   </button>
                 </div>
               ` : ''}
@@ -32914,7 +33191,7 @@ class KitchenCookingPanel extends LitElement {
              runtime file parsing until the user opens a specific recipe. -->
         <ha-card>
           <div class="card-content">
-            <h3>🍳 Cooking Method</h3>
+            <h3>${this._t('meater.select_method')}</h3>
             <div class="method-grid">
               ${(() => {
                 const cutData = this._getSelectedCutData();
@@ -32922,7 +33199,10 @@ class KitchenCookingPanel extends LitElement {
                   ? cutData.supported_methods
                   : COOKING_METHODS.map(m => m.value);
                 return methods.map(methodSlug => {
-                  const name = methodSlug.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+                  const translated = this._t('cooking_methods.' + methodSlug);
+                  const name = (translated && translated !== 'cooking_methods.' + methodSlug)
+                    ? translated
+                    : methodSlug.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
                   return html`
                     <button
                       class="method-btn ${this._selectedMethod === methodSlug ? 'selected' : ''}"
@@ -32946,7 +33226,10 @@ class KitchenCookingPanel extends LitElement {
               const cutData = this._getSelectedCutData();
               const slug = cutData && (cutData.recipe_slug || cutData.slug);
               if (!slug) return '';
-              const desc   = this._getCutMethodProfiles()[slug] && this._getCutMethodProfiles()[slug][this._selectedMethod];
+              const methodProfiles = this._getCutMethodProfiles()[slug];
+              const descEn  = methodProfiles && methodProfiles[this._selectedMethod];
+              const descSv  = methodProfiles && methodProfiles[this._selectedMethod + '_sv'];
+              const desc    = (this._language === 'sv' && descSv) ? descSv : descEn;
               const titles = this._getRecipeTitles()[slug] && this._getRecipeTitles()[slug][this._selectedMethod];
               const url    = this._getRecipeIndex()[slug] && this._getRecipeIndex()[slug][this._selectedMethod];
               if (!desc && (!titles || titles.length === 0)) return '';
@@ -32968,16 +33251,16 @@ class KitchenCookingPanel extends LitElement {
                     </div>
                   ` : ''}
                   ${this._recipeFileLoading && isOpen ? html`
-                    <div style="text-align:center;padding:12px;color:var(--secondary-text-color);">⏳ Loading…</div>
+                    <div style="text-align:center;padding:12px;color:var(--secondary-text-color);">⏳ ${this._t('common.loading')}</div>
                   ` : ''}
                   ${isOpen && this._selectedFileRecipe !== null && this._recipeFileContent && !this._recipeFileLoading ? html`
                     <div style="display:flex;align-items:center;margin-bottom:10px;">
                       <button @click=${() => { this._selectedFileRecipe = null; this.requestUpdate(); }} style="${closeBtnStyle}">
-                        ← Back to recipes
+                        ${this._t('meater.back_to_recipes')}
                       </button>
                     </div>
                     <div class="recipe-md-content"
-                         .innerHTML=${this._mdToHtml(this._getRecipeContent(this._selectedFileRecipe))}>
+                         .innerHTML=${this._mdToHtml(this._convertIngredientText(this._getRecipeContent(this._selectedFileRecipe)))}>
                     </div>
                   ` : ''}
                 </div>
@@ -32989,7 +33272,7 @@ class KitchenCookingPanel extends LitElement {
         <!-- Start Button -->
         <div class="action-container">
           <ha-button unelevated @click=${this._startCook} ?disabled=${!this._selectedDoneness}>
-            🔥 Start Cooking${this._customTargetTempC ? ` at ${this._customTargetTempC}°C` : ''}
+            ${this._t('meater.start_cooking')}${this._customTargetTempC ? ` ${this._convertTemp(this._customTargetTempC)}` : ''}
           </ha-button>
         </div>
       ` : ''}
@@ -33014,16 +33297,6 @@ class KitchenCookingPanel extends LitElement {
     const recipes = this._getRecipeIndex()[slug];
     if (!profile && !recipes) return html``;
 
-    const METHOD_LABELS = {
-      oven_roast: 'Oven Roast', oven_bake: 'Oven Bake',
-      pan_sear: 'Pan Sear', pan_fry: 'Pan Fry',
-      grill: 'Grill', smoker: 'Smoker', charcoal_grill: 'Charcoal Grill',
-      air_fryer: 'Air Fryer', sous_vide: 'Sous Vide',
-      slow_cooker: 'Slow Cooker', braise: 'Braise',
-      boil: 'Boil', steam: 'Steam', poach: 'Poach',
-      saute: 'Sauté', simmer: 'Simmer',
-    };
-
     const methodEntries = recipes
       ? Object.entries(recipes).filter(([m]) => m !== 'overview')
       : [];
@@ -33035,7 +33308,10 @@ class KitchenCookingPanel extends LitElement {
     const recipeBtnStyle = 'text-align:left;width:100%;cursor:pointer;border:1px solid var(--divider-color);border-radius:8px;padding:8px 12px;background:var(--secondary-background-color);font-size:0.87em;color:var(--primary-text-color);';
 
     const sel = this._selectedResearchMethod;
-    const selDesc = sel && this._getCutMethodProfiles()[slug] && this._getCutMethodProfiles()[slug][sel];
+    const methodProfiles = this._getCutMethodProfiles()[slug];
+    const selDescEn  = sel && methodProfiles && methodProfiles[sel];
+    const selDescSv  = sel && methodProfiles && methodProfiles[sel + '_sv'];
+    const selDesc    = (this._language === 'sv' && selDescSv) ? selDescSv : selDescEn;
     const selTitles = sel && this._getRecipeTitles()[slug] && this._getRecipeTitles()[slug][sel];
     const selUrl = sel && recipes && recipes[sel];
 
@@ -33050,7 +33326,7 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <ha-card>
         <div class="card-content">
-          <h3>📖 Cut Profile</h3>
+          <h3>${this._t('meater.cut_profile')}</h3>
           ${profile ? html`
             <p style="font-size:0.88em;line-height:1.55;color:var(--secondary-text-color);margin:0 0 12px 0;">
               ${profile}
@@ -33060,26 +33336,32 @@ class KitchenCookingPanel extends LitElement {
           ${methodEntries.length > 0 ? html`
             <div>
               <span style="font-size:0.82em;font-weight:600;color:var(--secondary-text-color);">
-                📚 Method Research:
+                ${this._t('meater.method_research')}
               </span>
               <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">
-                ${methodEntries.map(([method]) => html`
-                  <button
-                    @click=${() => {
-                      if (this._selectedResearchMethod === method) {
-                        closeResearch();
-                      } else {
-                        this._selectedResearchMethod = method;
-                        this._selectedFileRecipe = null;
-                        this._recipeFileContent = null;
-                        this._recipeFileUrl = null;
-                        this.requestUpdate();
-                      }
-                    }}
-                    style="${sel === method ? activeStyle : methodStyle}">
-                    ${METHOD_LABELS[method] || method.replace(/_/g, ' ')}${sel === method ? ' ▲' : ''}
-                  </button>
-                `)}
+                ${methodEntries.map(([method]) => {
+                  const translated = this._t('cooking_methods.' + method);
+                  const label = (translated && translated !== 'cooking_methods.' + method)
+                    ? translated
+                    : method.replace(/_/g, ' ');
+                  return html`
+                    <button
+                      @click=${() => {
+                        if (this._selectedResearchMethod === method) {
+                          closeResearch();
+                        } else {
+                          this._selectedResearchMethod = method;
+                          this._selectedFileRecipe = null;
+                          this._recipeFileContent = null;
+                          this._recipeFileUrl = null;
+                          this.requestUpdate();
+                        }
+                      }}
+                      style="${sel === method ? activeStyle : methodStyle}">
+                      ${label}${sel === method ? ' ▲' : ''}
+                    </button>
+                  `;
+                })}
               </div>
             </div>
           ` : ''}
@@ -33091,9 +33373,9 @@ class KitchenCookingPanel extends LitElement {
           <div class="card-content">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
               <span style="font-size:0.88em;font-weight:600;color:var(--secondary-text-color);">
-                📚 ${METHOD_LABELS[sel] || sel.replace(/_/g, ' ')} — Research
+                📚 ${(() => { const t = this._t('cooking_methods.' + sel); return (t && t !== 'cooking_methods.' + sel) ? t : sel.replace(/_/g, ' '); })()} — ${this._t('meater.research_label')}
               </span>
-              <button @click=${closeResearch} style="${closeBtnStyle}">✕ Close</button>
+              <button @click=${closeResearch} style="${closeBtnStyle}">${this._t('meater.close_research')}</button>
             </div>
 
             ${selDesc ? html`
@@ -33115,7 +33397,7 @@ class KitchenCookingPanel extends LitElement {
             ` : ''}
 
             ${this._recipeFileLoading ? html`
-              <div style="text-align:center;padding:12px;color:var(--secondary-text-color);">⏳ Loading…</div>
+              <div style="text-align:center;padding:12px;color:var(--secondary-text-color);">⏳ ${this._t('common.loading')}</div>
             ` : ''}
 
             ${this._selectedFileRecipe !== null && this._recipeFileContent && !this._recipeFileLoading ? html`
@@ -33123,11 +33405,11 @@ class KitchenCookingPanel extends LitElement {
                 <button
                   @click=${() => { this._selectedFileRecipe = null; this.requestUpdate(); }}
                   style="${closeBtnStyle}">
-                  ← Back to recipes
+                  ${this._t('meater.back_to_recipes')}
                 </button>
               </div>
               <div class="recipe-md-content"
-                   .innerHTML=${this._mdToHtml(this._getRecipeContent(this._selectedFileRecipe))}>
+                   .innerHTML=${this._mdToHtml(this._convertIngredientText(this._getRecipeContent(this._selectedFileRecipe)))}>
               </div>
             ` : ''}
           </div>
@@ -39323,7 +39605,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "333";
+const PANEL_VERSION = "335";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

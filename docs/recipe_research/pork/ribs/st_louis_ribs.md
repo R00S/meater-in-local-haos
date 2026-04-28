@@ -2,6 +2,7 @@
 type: cut
 slug: st_louis_ribs
 name: St. Louis Style Ribs
+name_sv: St. Louis-revben
 category: pork
 meat: pig
 cut_type: Ribs

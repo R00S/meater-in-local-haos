@@ -2,6 +2,7 @@
 type: cut
 slug: corn_on_cob
 name: Corn on the Cob
+name_sv: Majskolv
 category: vegetables
 meat: corn
 cut_type: Corn

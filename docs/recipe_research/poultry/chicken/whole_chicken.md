@@ -2,6 +2,7 @@
 type: cut
 slug: whole_chicken
 name: Whole Chicken
+name_sv: Hel kyckling
 category: poultry
 meat: chicken
 cut_type: Whole

@@ -2,6 +2,7 @@
 type: cut
 slug: ground_turkey
 name: Ground Turkey
+name_sv: Kalkonfärs
 category: poultry
 meat: ground_poultry
 cut_type: Ground

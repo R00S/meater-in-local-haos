@@ -2,6 +2,7 @@
 type: cut
 slug: lamb_neck
 name: Lamb Neck
+name_sv: Lammhals
 category: lamb
 meat: lamb
 cut_type: Roasts

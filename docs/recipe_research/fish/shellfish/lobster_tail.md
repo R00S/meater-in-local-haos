@@ -2,6 +2,7 @@
 type: cut
 slug: lobster_tail
 name: Lobster Tail
+name_sv: Hummersvans
 category: fish
 meat: shellfish
 cut_type: Shellfish

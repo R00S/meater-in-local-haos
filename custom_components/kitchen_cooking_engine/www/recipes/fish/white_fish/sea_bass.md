@@ -2,6 +2,7 @@
 type: cut
 slug: sea_bass
 name: Sea Bass
+name_sv: Havsabborre
 category: fish
 meat: white_fish
 cut_type: White Fish

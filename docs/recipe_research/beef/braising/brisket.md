@@ -2,6 +2,7 @@
 type: cut
 slug: brisket
 name: Brisket
+name_sv: Bringa
 category: beef
 meat: cow
 cut_type: Braising Cuts

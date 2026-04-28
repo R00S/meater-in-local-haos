@@ -2,6 +2,7 @@
 type: cut
 slug: zucchini
 name: Zucchini
+name_sv: Zucchini
 category: vegetables
 meat: squash
 cut_type: Squash

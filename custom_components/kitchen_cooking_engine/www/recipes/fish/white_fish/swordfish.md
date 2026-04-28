@@ -2,6 +2,7 @@
 type: cut
 slug: swordfish
 name: Swordfish Steak
+name_sv: Svärdfisk
 category: fish
 meat: white_fish
 cut_type: White Fish

@@ -2,6 +2,7 @@
 type: cut
 slug: pork_cheek
 name: Pork Cheek
+name_sv: Fläskkind
 category: pork
 meat: pig
 cut_type: Other / Offal
