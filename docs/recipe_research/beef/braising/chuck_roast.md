@@ -29,7 +29,7 @@ quality_assessed: 2026-04-26
 
 ## Cut profile
 
-Chuck roast is cut from the shoulder region of the animal (the chuck primal, roughly ribs 1–5 and the neck), and is one of the most collagen-dense roasting cuts in the carcass. The shoulder muscles endure constant movement throughout the animal's life, producing densely bundled muscle fibres interlaced with thick seams of connective tissue and fat — a structure that is aggressively tough at low internal temperatures but transforms into richly flavoured, pull-apart tenderness when braised gently over several hours. Braising is particularly suited to chuck because the submerging or partial immersion in liquid accelerates the hydrolysis of collagen into gelatin, producing a self-thickening braising sauce and a meltingly tender interior simultaneously. Carryover is negligible for chuck in a braise because the surrounding liquid buffers against temperature swings; the meat stays at cooking temperature until removed.
+Chuck roast is cut from the shoulder region of the animal (the chuck primal, roughly ribs 1–5 and the neck). The shoulder muscles endure constant movement throughout the animal's life, producing densely bundled muscle fibres interlaced with thick seams of connective tissue (*collagen*) and intermuscular fat — a structure that is aggressively tough at low internal temperatures but transforms into richly flavoured, pull-apart tenderness after prolonged cooking. The chuck encompasses multiple muscles: *triceps brachii*, *supraspinatus*, *infraspinatus*, and the *longissimus costarum*. Most are heavily worked, heavily collagen-rich, and unsuitable for quick cooking methods.
 
 
 ## Research files by cooking method

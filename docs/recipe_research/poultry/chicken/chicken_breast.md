@@ -33,10 +33,7 @@ quality_assessed: 2026-04-26
 
 ## Cut profile
 
-Chicken breast is a lean, boneless cut that dries out quickly when overcooked. Pounding to even thickness and brining are the two most effective techniques for retaining moisture. Because there is minimal fat to buffer heat, precise temperature monitoring is critical.
-
-
-Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
+Chicken breast is the *pectoralis major* muscle — the largest muscle of the bird, positioned on the sternum. Because domesticated chickens rarely fly or flap vigorously, this muscle has almost no connective tissue or intramuscular fat. It is white meat: lower myoglobin content, lighter colour, leaner composition, and a more delicate flavour than dark meat. Typical uncooked weight: 170–280 g per single breast (boneless, skinless). Thicker breasts often have an uneven cross-section that creates doneness gradients — the thick end overcooks before the thin end is safe. The USDA minimum safe temperature is 74 °C (165 °F); at this temperature white meat is cooked through but not dry if pulled immediately.
 
 
 ## Research files by cooking method

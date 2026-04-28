@@ -30,7 +30,7 @@ quality_assessed: 2026-04-26
 
 ## Cut profile
 
-Beef brisket is taken from the breast and lower chest of the animal, comprising two muscles — the flat (*pectoralis profundus*) and the point (*pectoralis superficialis*) — that support much of the animal's weight. The cut is dense with collagen-rich connective tissue and interspersed fat, making it exceptionally tough when cooked quickly but extraordinarily silky and tender once held at the collagen-conversion threshold long enough for connective tissue to dissolve into gelatin. Oven roasting at low temperature replicates the gentle, prolonged dry heat that the cut demands — the enclosed oven environment retains moisture driven off from the meat, preventing the surface from desiccating during the long cook. Carryover is negligible for brisket because the high moisture content and dense mass absorb and retain heat slowly; the internal temperature barely moves after the brisket is removed from the oven.
+Beef brisket is taken from the breast and lower chest of the animal, comprising two muscles — the flat (*pectoralis profundus*) and the point (*pectoralis superficialis*) — that together support much of the animal's standing weight. The flat is a large, lean slab of dense muscle; the point (also called the deckle) lies over and across the flat, separated by a fat seam, and is more heavily marbled. Both muscles are extremely collagen-dense from a lifetime of supporting the animal's weight. Collagen begins softening at around 70 °C but fully converts to gelatin only with prolonged cooking at or above 85–90 °C. At gelatin conversion, the brisket transforms from a tough, chewy slab to a silky, pull-apart masterpiece.
 
 
 ## Research files by cooking method

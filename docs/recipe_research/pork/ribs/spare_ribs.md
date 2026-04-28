@@ -29,12 +29,7 @@ quality_assessed: 2026-04-26
 
 ## Cut profile
 
-Spare ribs (revelsben/kamben in Danish; Spareribs in German/Austrian) are the lower belly ribs, larger and flatter than baby back ribs with more fat and connective tissue. They benefit particularly from low-and-slow oven cooking: either pre-boiled then finished high, or foil-wrapped at low heat then glazed. The higher fat content makes them more forgiving than baby backs. Target internal: 88–95 °C, the same range as baby back ribs — collagen renders at these temperatures giving the characteristic tender, pull-off-bone texture and glossy glaze.
-
-
-Target internal temperatures (oven roast):
-- Fall-off-bone tender: **88–95 °C (190–203 °F)**
-- ⚠️ Below 80 °C spare ribs are food-safe but still tough
+Spare ribs (*revelsben*/*kamben* in Danish; *Spareribs* in German/Austrian; *costillas* in Spanish) are the lower belly ribs (sternum-adjacent), larger and flatter than baby back ribs, with considerably more intermuscular fat and connective tissue between and around the rib bones. The primary muscles are the *serratus ventralis* and intercostal layers; unlike baby backs (which are *longissimus dorsi* muscle adjacent), spare ribs derive their eating quality from fat and collagen conversion rather than lean muscle. The higher fat content makes them more forgiving than baby backs: they resist drying out even at the higher temperatures needed for collagen conversion.
 
 
 ## Research files by cooking method

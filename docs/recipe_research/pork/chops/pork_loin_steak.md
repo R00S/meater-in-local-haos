@@ -38,12 +38,7 @@ quality_assessed: 2026-04-26
 
 ## Cut profile
 
-Pork loin steak (koteletsteg, Lendensteak vom Schwein) is a boneless steak cut from the loin (between chop and tenderloin area). It is lean and uniform in thickness, making it ideal for pan frying with the same technique as pork chop: hot pan, butter baste, 3–4 min per side. It is slightly more forgiving than tenderloin but dries out faster than a shoulder steak. Target core: 63–65 °C.
-
-
-Target internal temperatures (pan fry):
-- Juicy/pink: **63–65 °C (145–149 °F)**
-
+Pork loin steak (*koteletsteg* in Danish, *Lendensteak vom Schwein* in German) is cut from the *longissimus dorsi* muscle of the pork loin — the same muscle as a boneless pork chop but without the rib bone. It is lean, uniform in cross-section (typically 2–3 cm thick), and composed primarily of fast-twitch white muscle fibres with minimal intramuscular fat. Because of its lean composition, it dries out faster than shoulder steak and must be pulled at a lower temperature.
 
 ## Research files by cooking method
 

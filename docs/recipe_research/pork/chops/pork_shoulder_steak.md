@@ -38,12 +38,7 @@ quality_assessed: 2026-04-26
 
 ## Cut profile
 
-Pork shoulder steak (nakkesteak, Schweinenackensteak / Schopfsteak) is from the neck/collar area — more marbled than loin steak, more forgiving, and ideal for pan frying. The fat renders during cooking, basting the meat from the inside. 3–4 minutes per side on medium-high heat is the standard, and it can withstand a slightly higher final temperature (68–70 °C) without drying out. The Austrian Schopfsteak is an iconic example of this cut.
-
-
-Target internal temperatures (pan fry):
-- Juicy: **65–68 °C (149–154 °F)**
-- Well done: **70–72 °C (158–162 °F)**
+Pork shoulder steak (*nakkesteak* in Danish, *Schweinenackensteak* / *Schopfsteak* in German/Austrian) is cut from the collar/neck section of the pork shoulder (*longissimus colli* and associated neck muscles), between the head and the loin chop. This section is more heavily marbled than loin cuts because the neck muscles work more than the back. The fat runs in well-distributed seams throughout the steak, making it the most forgiving pork steak to cook.
 
 
 ## Research files by cooking method

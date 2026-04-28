@@ -38,12 +38,7 @@ quality_assessed: 2026-04-26
 
 ## Cut profile
 
-The secreto (Spanish: "secret") is a hidden fat-marbled cut from the shoulder/neck area of the Iberian pig (or any pork). It is thin, uneven, and highly marbled, making it one of the most flavourful pork cuts for the griddle or grill. Because it is thin and irregular, it is cut into 3–4 uniform pieces before cooking. Key rules: de-chill 2 hours; dry sear without oil; no salt before; one flip only; rest 1–2 min then season. Target: 65–70 °C (pink to fully done) — internal temperature rises fast due to the thin cross-section.
-
-
-Target internal temperatures (pan sear):
-- Pink inside: **63–65 °C (145–149 °F)**
-- Well done (recommended for high-fat secreto): **68–72 °C (154–162 °F)**
+The *secreto* (Spanish: "secret") is cut from the junction between the shoulder blade and the belly of the Iberian pig — the *serratus ventralis* and *subscapularis* muscles in the deepest layer of the shoulder, running diagonally. It is called "secret" because it is hidden beneath the outer shoulder and was historically an undiscovered, unadvertised cut consumed by the butcher. Standard dimensions: roughly 30–40 cm long × 5–8 cm wide × 1–2 cm thick; irregular in shape, covered with coarse intramuscular fat seams. In Iberian-breed pigs specifically, the fat carries acorn-derived oleic acids and the characteristic *bellota* aroma. Non-Iberian secreto has similar structure but milder flavour.
 
 
 ## Research files by cooking method

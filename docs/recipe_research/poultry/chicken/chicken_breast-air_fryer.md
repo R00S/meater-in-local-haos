@@ -22,9 +22,9 @@ cut_type: Breast
 
 ## Cut profile
 
-Chicken breast is a lean, boneless cut that dries out quickly when overcooked. Pounding to even thickness and brining are the two most effective techniques for retaining moisture. Because there is minimal fat to buffer heat, precise temperature monitoring is critical.
+Air-frying chicken breast is among the most convenient methods for a quick weeknight cook. The air fryer circulates very hot air at 180–200 °C around the breast, producing a lightly crisped, golden exterior without any oil — or with a thin coating of oil for improved Maillard browning. Because the chamber is small and airflow is high, cooking is rapid: a standard 200 g breast at 190 °C takes 14–18 minutes flipped once halfway.
 
-Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
+The critical technique is achieving an even cross-section: pound the thick end or butterfly the breast before cooking so the whole piece reaches 74 °C simultaneously. Brining (30 min in salted water) before air-frying significantly improves juiciness. MEATER probe in the thickest part. Carryover from the air fryer: 2–3 °C. Pull at 72 °C to rest to 74 °C.
 
 ## Source recipes
 

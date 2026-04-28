@@ -29,7 +29,7 @@ quality_assessed: 2026-04-26
 
 ## Cut profile
 
-Lamb shoulder is fattier and more flavourful than leg, with more connective tissue that melts into gelatin during long, slow roasting. It is the cut for slow-roasted lamb dishes — 4–6 hours at 150–160 °C (or 7–8 hours at 130 °C). The result is pull-apart meat that falls off the bone with a fork. The MEATER probe target is **85–90 °C (185–194 °F)** for pull-apart.
+Lamb shoulder comprises the scapula, humerus, and associated muscles — primarily the *supraspinatus*, *infraspinatus*, *triceps brachii*, and *deltoideus*. These are heavily worked muscles, fattier and with more connective tissue than the leg, because the shoulder carries the weight of the front of the animal. The higher collagen density and better fat distribution make it the preferred shoulder cut for slow cooking: gelatin conversion transforms the tough fibres into silky, spoonable meat. The shoulder can be bone-in (whole shoulder, most flavourful) or bone-out (butterflied, faster cooking, easier carving). Typical weight: 1.5–3 kg bone-in.
 
 
 ## Research files by cooking method
