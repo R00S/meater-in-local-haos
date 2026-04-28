@@ -407,9 +407,11 @@ directly below the Doneness Level heading so you can read it without hovering ov
 doneness temperature is below the USDA safe minimum for that cut, a highlighted note appears
 automatically:
 
-> ⚠️ **Culinary preferred:** 54°C (130°F)  
-> 🛡️ **USDA safe minimum for this cut:** 63°C (145°F)  
+> ⚠️ **Culinary preferred:** 54 °C / 130 °F  
+> 🛡️ **USDA safe minimum for this cut:** 63 °C / 145 °F  
 > Consuming undercooked meat carries food safety risk.
+
+All temperatures displayed in the note (and everywhere in the experimental form) follow your **Measurement System** setting — the values shown above are examples for the SE/UK (°C) setting; US users will see °F. The underlying cook target is always stored in °C and converted for display.
 
 This note only appears when there is a genuine discrepancy between the culinary pull temp and
 the cut's official safe minimum — it is absent for vegetables and for any doneness that already
@@ -439,6 +441,8 @@ standard MEATER path (§ 5.4).
 | Cooking method selector | All methods shown | **Only methods declared in the cut file** |
 | Custom temperature | Available | Available |
 | Active cook screen | Standard | Identical |
+| **Language support** | All labels translate with UI language | **Fully respected**: all labels, category/cut/doneness names translate; Swedish names defined in cut files (`name_sv:`) |
+| **Measurement system** | All displayed temps and recipe units follow your measurement setting | **Fully respected**: all target temps, doneness temps, safety warning values, and recipe ingredient amounts/temps convert to your selected system (SE/UK/US) |
 
 ---
 
@@ -490,7 +494,29 @@ Tapping **Braise** shows the cut-method description and a list of four recipe na
 any name opens just that recipe, showing ingredients and method steps. The ← Back button
 returns to the recipe list; ✕ Close dismisses the viewer entirely.
 
-#### How the cut tree and recipe links are built
+> **Measurement system in recipes.** When a recipe file is opened in the viewer, all
+> temperatures and ingredient amounts are automatically converted to your selected measurement
+> system (SE/UK °C · g/dl, or US °F · oz/cup) — the same conversion that applies to
+> AI-generated recipes.
+
+#### Language support
+
+When the UI language is set to **🇸🇪 Svenska**, the experimental path translates all labels,
+category names, meat names, cut-type names, cut names, and doneness names to Swedish:
+
+| Element | How the Swedish name is provided |
+|---------|----------------------------------|
+| Category names | Built-in per-category Swedish names (e.g. Beef → Nötkött) |
+| Meat names | Built-in per-meat Swedish names (e.g. cow → Nöt) |
+| Cut-type headings | Built-in per-cut-type Swedish names (e.g. Steaks → Biffar) |
+| Cut names | `name_sv:` field in the cut's `<!-- KCE:CUT … -->` tag |
+| Doneness names | `name_sv:` field in each doneness entry in the `doneness:` list |
+| UI labels (headings, buttons, messages) | Loaded from `i18n/sv.json` |
+| Method descriptions | `description_sv:` field in the `<!-- KCE:CUT_METHOD … -->` tag (optional; falls back to English or nothing) |
+
+Any cut without a `name_sv:` field falls back to the English slug-derived name.
+
+
 
 The recipe library is split into two forks:
 
@@ -561,6 +587,7 @@ The file must start with a `<!-- KCE:CUT … -->` YAML block. Example for a new 
 type: cut
 slug: my_cut_slug
 name: My Cut Name
+name_sv: Mitt styckningsdetalj
 category: beef
 meat: beef
 cut_type: Steaks
@@ -572,6 +599,7 @@ methods:
 - grill
 doneness:
 - name: medium_rare
+  name_sv: Medium rare
   target_c: 57
   target_f: 135
   min_c: 54
@@ -580,13 +608,14 @@ doneness:
   max_f: 140
   usda_safe: false
   recommended: true
-- name: medium
-  target_c: 63
-  target_f: 145
-  min_c: 60
-  min_f: 140
-  max_c: 68
-  max_f: 155
+- name: well_done
+  name_sv: Genomstekt
+  target_c: 71
+  target_f: 160
+  min_c: 68
+  min_f: 155
+  max_c: 77
+  max_f: 170
   usda_safe: true
 -->
 # My Cut Name — Cut Overview
@@ -608,7 +637,8 @@ range. Mention the pull temperature and expected rise after resting.
 | Field | Description |
 |-------|-------------|
 | `slug` | Lowercase, underscores, unique within the category. |
-| `name` | Human-readable name shown in the GUI. |
+| `name` | Human-readable name shown in the GUI (English). |
+| `name_sv` | *(optional)* Swedish name shown when UI language is Swedish. Falls back to `name` if omitted. |
 | `category` | One of: `beef`, `pork`, `poultry`, `fish`, `lamb`, `game`, `vegetables`. |
 | `meat` | Animal name in lowercase (e.g. `beef`, `salmon`, `chicken`). |
 | `cut_type` | Sub-category label shown in the GUI (e.g. `Steaks`, `Roasts`). |
@@ -617,7 +647,20 @@ range. Mention the pull temperature and expected rise after resting.
 | `methods` | List of cooking method slugs supported by this cut. |
 | `doneness` | At least one doneness entry (see below). |
 
-Each `doneness` entry needs: `name`, `target_c`, `target_f`, `min_c`, `min_f`, `max_c`, `max_f`, `usda_safe` (true/false). Add `recommended: true` to exactly one entry.
+Each `doneness` entry needs: `name`, `target_c`, `target_f`, `min_c`, `min_f`, `max_c`, `max_f`, `usda_safe` (true/false). Add `recommended: true` to exactly one entry. Add `name_sv:` to provide the Swedish doneness label.
+
+Use these Swedish culinary terms for standard doneness names (per Stekguiden.se / Gårdssällskapet):
+
+| `name` (English slug) | `name_sv` |
+|----------------------|-----------|
+| `rare` | `Blodig` |
+| `medium_rare` | `Medium rare` |
+| `medium` | `Medium` |
+| `medium_well` | `Nästan genomstekt` |
+| `well_done` | `Genomstekt` |
+| `pulled` | `Långkokt` |
+
+For non-standard doneness slugs (e.g. fish or vegetables) choose a descriptive Swedish phrase that matches the culinary context.
 
 #### Writing a cooking method research file (`{slug}-{method}.md`)
 
@@ -637,6 +680,8 @@ name: My Cut Name × Pan Sear
 category: beef
 meat: beef
 cut_type: Steaks
+description: A brief English description of this method for this cut, shown in the method selector.
+description_sv: En kort svensk beskrivning av denna metod, visas i metodväljaren.
 -->
 # My Cut Name × Pan Sear — Recipe Temperature Research
 
@@ -1092,7 +1137,9 @@ temperature ranges are shown as default.
 | 🇸🇪 Swedish | krm, tsk, msk, cl, dl, L | g, hg, kg | °C |
 
 All ingredient amounts in AI-generated recipes and on-screen displays are automatically
-converted to the selected measurement system.
+converted to the selected measurement system. This includes temperatures and ingredient
+quantities in the **MEATER+ (experimental)** cut profile viewer, all target temperature
+displays throughout the experimental setup form, and doneness temperature hints.
 
 ---
 

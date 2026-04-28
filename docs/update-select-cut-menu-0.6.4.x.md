@@ -6,6 +6,59 @@ Fix the "Select Cut" step in the MEATER setup flow: it was rendered as a `<selec
 dropdown instead of the button grid used by all other selector steps (Select Cut Type,
 Doneness Level). The fix makes the UI consistent throughout.
 
+## v0.6.5.0 — 2026-04-28
+
+### CHORES
+
+- Bumped version 0.6.4.9 → 0.6.5.0 (agent handoff increment: 4 → 5).
+- Updated `USER_GUIDE.md`:
+  - §5.8 Differences table: added **Language support** and **Measurement system** rows.
+  - §5.8 Safety note: updated hardcoded `54°C (130°F)` example to unit-aware prose,
+    noted that all temps follow the Measurement System setting.
+  - §5.9: Added "Measurement system in recipes" callout box; added "Language support"
+    subsection with table showing how Swedish names are provided per element (category,
+    meat, cut_type, cut, doneness, UI labels, method descriptions).
+  - §5.10 KCE:CUT example: added `name_sv:` at cut level and `name_sv:` per doneness entry.
+  - §5.10 KCE:CUT fields table: documented `name_sv` as optional field.
+  - §5.10 doneness entry docs: noted `name_sv:` option.
+  - §5.10 KCE:CUT_METHOD example: added `description:` and `description_sv:` fields.
+  - §12 Measurement settings: expanded paragraph to mention experimental path conversion.
+- No help-button anchor changes needed (all existing anchors match current heading text).
+
+### Files changed
+- `manifest.json` — version 0.6.4.9 → 0.6.5.0
+- `__init__.py` — version bump + Last Change
+- `const.py` — Last Change
+- `docs/USER_GUIDE.md` — sections 5.8, 5.9, 5.10, 12 updated
+- `docs/update-select-cut-menu-0.6.4.x.md` — this file updated
+
+## v0.6.4.9 — 2026-04-28
+
+### Problem
+Code review after v0.6.4.8 identified two issues:
+
+1. The generator used the **first-seen cut's `name_sv`** as the Swedish name for the entire
+   meat grouping (e.g. "Entrecôte" would become the Swedish name for "Cow") and for the
+   cut_type grouping — incorrectly conflating cut names with group names.
+2. The **classic `_renderSetupForm()` cut selector** (line ~3348) still used
+   `cut.name_long || cut.name` without checking `name_sv`, making it inconsistent with the
+   experimental path.
+
+### Fixes
+- Replaced propagation logic with two dedicated dicts in `generate_frontend_data.py`:
+  - `_MEAT_NAME_SV` — 33 entries mapping meat IDs to correct Swedish names (e.g. `"cow" → "Nöt"`)
+  - `_CUT_TYPE_NAME_SV` — 14 entries mapping cut_type display names (e.g. `"Steaks" → "Biffar"`)
+- Classic cut selector now uses `(this._language === 'sv' && cut.name_sv) ? cut.name_sv : (cut.name_long || cut.name)`.
+- Re-ran generator → PANEL_VERSION 335 → 336.
+
+### Files changed
+- `custom_components/kitchen_cooking_engine/generate_frontend_data.py` — two new dicts, propagation removed
+- `www/panel-class-template.js` — classic cut selector fix
+- `www/kitchen-cooking-panel.js` — auto-generated
+- `manifest.json` — 0.6.4.8 → 0.6.4.9
+- `__init__.py` — version bump + Last Change
+- `const.py` — Last Change
+
 ## v0.6.4.8 — 2026-04-28
 
 ### Problem

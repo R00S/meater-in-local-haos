@@ -72,7 +72,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.6.4.9"
+__version__ = "0.6.5.0"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
