@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 28 Apr 2026, 19:00 UTC
-Last Change: v0.7.0.7 - fix: "görs av fläskbog" → "görs av bogfläsk" (ingredient context)
+Last Change: v0.7.0.8 - chore: CHORES — bump version, update README + timeline; single source of truth refactor complete
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -72,7 +72,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.7.0.7"
+__version__ = "0.7.0.8"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

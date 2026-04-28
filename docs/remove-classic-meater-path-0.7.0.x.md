@@ -77,7 +77,12 @@ Remove the classic MEATER path (`_currentPath = 'meater'`) and make the experime
 - Bumped version to `0.7.0.1`
 - Generator: PANEL_VERSION 347→348
 
-### 2026-04-28 (Session 4 — single source of truth)
+### 2026-04-28 (Session 5 — CHORES v0.7.0.8)
+- Git history audit: scanned all commits touching `www/recipes/` that did NOT touch `docs/recipe_research/`; confirmed all 8 such commits were generator copies (www and docs content identical at each commit) — no data loss
+- Bumped version to `0.7.0.8`
+- Updated README: added `v0.7.0.x Changes` section summarising all work done in this branch
+- Updated `docs/USER_GUIDE.md` version line `0.7.0.1` → `0.7.0.8`
+- Generator: PANEL_VERSION 355→356
 - Moved 4 meta-docs (README, TOR-filer, SOURCE_SURVEY) till `www/recipes/`
 - Uppdaterade `generate_frontend_data.py`: läser alltid från `www/recipes/` (inget `docs/`-fallback)
 - Tog bort `copy_recipe_files_to_www()` funktion och anrop, tog bort oanvänd `import shutil`

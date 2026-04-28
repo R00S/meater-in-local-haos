@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.7.0.1 · Home Assistant 2024.1.0+
+> **Version:** 0.7.0.8 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.

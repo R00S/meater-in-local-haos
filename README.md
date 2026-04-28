@@ -26,9 +26,17 @@ Full installation, configuration, and feature documentation:
 
 ## 📊 Current Status
 
-**v0.6.5.5** — Development release (April 2026)
+**v0.7.0.8** — Development release (April 2026)
 
 Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.7.0.x Changes — Classic MEATER path removed; single recipe source of truth (April 2026)
+- ✅ **Classic MEATER path retired** — The old `_currentPath = 'meater'` code path (~400 lines including `_renderMeaterPath`, `_renderSetupForm`, `_navigateToMeaterPath`) has been deleted. MEATER+ now routes directly to the experimental path
+- ✅ **Simplified data getters** — `_getDataCategories()`, `_getDonenessOptions()`, and all 5 recipe getters (`_getRecipeIndex`, `_getCutProfiles`, `_getCutProfilesSv`, `_getCutMethodProfiles`, `_getRecipeTitles`) always return the live EXP_TREE set; no more ternary on `_currentPath`
+- ✅ **UI cleanup** — Welcome screen reduced to a single MEATER+ card; "(experimental)" badge and label removed from the MEATER+ heading; `_renderRecentMeaterCooks` back button updated
+- ✅ **Generator cleaned up** — `CLASSIC_RECIPE_INDEX`, `CLASSIC_CUT_PROFILES`, `CLASSIC_CUT_PROFILES_SV`, `CLASSIC_CUT_METHOD_PROFILES`, `CLASSIC_RECIPE_TITLES` constants removed from generator output; `docs/recipe_research_classic/` and `www/recipes_classic/` deleted
+- ✅ **Single source of truth for recipe files** — `www/recipes/` is now the ONLY source. `generate_frontend_data.py` reads directly from `www/recipes/`; `copy_recipe_files_to_www()` removed. `docs/recipe_research/` is now a git symlink pointing to `www/recipes/` so both paths remain browsable
+- ✅ **Swedish pork terminology fixes** — `fläskaxel` → `fläskbog` everywhere; `Bogkotlett` (trade name) → `Bogskiva`; `görs av fläskbog` vs `görs av bogfläsk` (ingredient context) fixed in ground pork files
 
 ### v0.6.5.x Changes — Swedish cut profiles & translation quality (April 2026)
 - ✅ **Swedish cut-profile body text** — `## Styckesprofil` sections now cover all 163 experimental-path cuts; the **Styckesprofil** card and **Tillagningsmetod** method-description area render in Swedish when UI language is set to Svenska (falls back to English when no Swedish section exists)
