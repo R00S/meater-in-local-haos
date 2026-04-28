@@ -6,6 +6,9 @@ name: Beef Tongue × Slow Cooker
 category: beef
 meat: cow
 cut_type: Other / Offal
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
 -->
 # Beef Tongue × Slow Cooker — Recipe Temperature Research
 

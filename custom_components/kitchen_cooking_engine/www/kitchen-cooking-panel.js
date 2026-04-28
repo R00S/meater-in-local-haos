@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 28 Apr 2026, 21:52 CET
+ * AUTO-GENERATED: 28 Apr 2026, 22:15 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 28 Apr 2026, 21:52 CET
+// Last generated: 28 Apr 2026, 22:15 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -17698,6 +17698,7 @@ const CUT_PROFILES_SV = {
 const CUT_METHOD_PROFILES = {
   "ostrich_fillet": {
     "braise": "Ostrich fillet (loin fillet / fan fillet) braises well when cut into cubes or thick strips. Despite the loin origin, cubed ostrich can be braised briefly in liquid (20–40 minutes at a gentle simmer, not the multi-hour braise needed for beef chuck) because the muscle fibres are fine-grained and the cut has negligible connective tissue to dissolve. Braising in red wine or spiced stock adds complexity and moisture compensation for the lean, fat-free meat. Over-braising will yield dry, stringy cubes — the braising time for ostrich is much shorter than beef or lamb. No probe temperature target applies to braised ostrich cubes; instead, fork-tenderness at around 70–75°C / 158–167°F is the target — above beef medium rare but not the fall-off-bone temperatures required for collagen-rich cuts.",
+    "braise_sv": "Strutsfett (*Struthio camelus*, loin-filé/fan-filé) bräseras väl när det skärs i kuber eller tjocka remsor. Trots att det kommer från loin kan kubad struts bräseras kortfattat i vätska (20–40 minuter vid en mild simmer) eftersom muskelfibrerna är finkorniga och snittet har försumbar bindväv att lösa upp.\n\nBräsering ger ett fuktigt, välkryddat resultat och passar väl för servering med couscous, bulgur eller grönsaker. Innertemperatur: **68–72 °C (154–162 °F)** för fullt genomstekt med saftighet kvar. Eftertillagning: 2–3 °C. Sond insatt i den tjockaste kubbitens mitt.",
     "grill": "Ostrich fillet grills similarly to kangaroo fillet or a very lean beef tenderloin. High, direct heat (230–260°C / 450–500°F at grate level) is required. Brush the grill grates with oil and brush the fillet surface with oil before placing it on the grill — the complete absence of fat means the meat will stick to inadequately oiled grates. 2–3 minutes per side over direct heat produces medium-rare. In South Africa, ostrich is commonly grilled over wood charcoal (braai / barbecue), which adds a smoky complexity that complements the meat's naturally mild, slightly sweet flavour. An instant-read thermometer or probe inserted lengthwise into the fillet's centre is the most reliable guide.",
     "pan_sear": "The ostrich fillet (loin/fan fillet), when seared whole, behaves like a very lean beef tenderloin at high heat. A very hot pan is essential — insufficient heat produces greyish steamed meat rather than a browned crust. The fillet is typically 2–4 cm thick in the thickest section; at this thickness, 2–3 minutes per side in a screaming-hot pan produces medium-rare (54–57°C / 130–135°F) at the centre. Probe insertion lengthwise into the thickest point is the most accurate approach. South African and European traditions both treat ostrich exactly like beef for pan searing, with European sources often noting the culinary equivalence explicitly. The USDA classifies ostrich as poultry (safe temp 74°C / 165°F), but South African and European culinary standards consider farmed ostrich safe at medium-rare temperatures (54–57°C) due to modern processing standards."
   },
@@ -17709,6 +17710,7 @@ const CUT_METHOD_PROFILES = {
   },
   "venison_leg": {
     "braise": "Braising the venison leg (haunch) results in a deeply flavoured, fall-apart tender dish — the European equivalent of a pot roast or Sunday joint. Unlike oven roasting, braising uses a significant volume of liquid (wine, stock, or a combination) in a covered pot, which creates a steam environment that prevents the lean venison from drying out and converts the connective tissue (sinews, silver skin) between muscle groups into gelatin. This technique is central to German *Wildschmorbraten* cooking, French *civet de chevreuil*, and British game cookery for older stags or strong-flavoured venison. Braising liquid is strained and reduced after cooking to produce the sauce. The whole leg is typically browned in hot fat first to develop Maillard flavour, then braised at 150–180°C / 300–355°F for 1.5–3 hours (depending on size and animal age) until the meat is falling off the bone. No probe temperature target applies to fully braised venison — tenderness is the indicator; internal temperature is well above 85°C / 185°F throughout.",
+    "braise_sv": "Bräsering av viltstekslägg (haunche) resulterar i ett djupt smakratt, fall-från-benet-mört kött — det europeiska ekvivalenten till en köttgryta. Till skillnad från ugnsstekning använder bräsering en avsevärd mängd vätska (vin, fond eller en kombination) i ett täckt kärl, vilket skapar en ångmiljö.\n\nInnertemperaturen är nödvändig men inte tillräcklig: lagg behöver hålla vid 88–95 °C i 2–3 timmar för fall-från-benet-resultat. Eftertillagning: försumbar (omgivande vätska). Sond i tjockaste köttmassan, borta från ben. Klassiska beredningar: *Wildschäufer*, fransk *daube de chevreuil*, brittisk *braised venison haunch*.",
     "oven_roast": "See also: [`venison_roast-oven_roast.md`](./venison_roast-oven_roast.md) for oven roast research on venison roast cuts (saddle, haunch portions). That file documents the British stuffed saddle approach (BBC Good Food) and the German low-temperature method (*Niedergarmethode*).\n\nFor the venison leg specifically:\n- Whole bone-in leg is typically roasted at 180–200°C / 355–390°F for the initial sear then reduced to 150–160°C / 300–320°F; a meat thermometer is essential for a cut this large\n- A boneless leg, tied, follows similar timing to a beef joint but requires a lower target temperature (54–60°C / 130–140°F for a pink interior vs beef conventions)\n- Barding (wrapping in bacon or fatback) is recommended to compensate for the complete absence of marbling; without barding, the exterior dries before the interior reaches temperature"
   },
   "venison_loin": {
@@ -17723,8 +17725,10 @@ const CUT_METHOD_PROFILES = {
   },
   "venison_shoulder": {
     "braise": "Venison shoulder braised low and slow becomes fall-apart tender as the substantial collagen content (higher than in the leg or loin) converts to gelatin over 1.5–3 hours of gentle moist-heat cooking. The typical European method: sear all over in hot oil to develop colour and Maillard flavour, then braise covered in a roasting pan with vegetables, wine, berry juice or stock at 150–170°C / 300–340°F. British tradition often cubes the shoulder for a casserole/stew rather than braising it whole. German tradition (*Rehschulter geschmort*) typically keeps the shoulder bone-in and uses juniper berries, game herbs (thyme, rosemary), and elderberry or pear juice as the braising medium. No probe temperature target for pulled results — the meat is done when it is fork-tender and falling away from the bone; at this stage internal temperature is typically 85–95°C / 185–203°F.",
+    "braise_sv": "Viltbog bräserad lågt och långsamt blir fall-från-benet-mört då det betydande kollageninnehållet (högre än i benet eller loin) omvandlas till gelatin under 1,5–3 timmar av skonsam fuktig tillagning. Europeisk standardmetod: sear all om i het olja för att utveckla färg och Maillard-aromer, sedan braisera täckt i ugn vid 160–170 °C.\n\nInnertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertillagning: försumbar (braiseringsvätska). Sond i tjockaste köttmassan, borta från skulderbladsben.",
     "oven_roast": "Venison shoulder can be oven-roasted whole (bone-in or bone-out, tied), though it is less common than braising for this cut due to its higher connective tissue content. Without braising liquid, the shoulder should be barded with strips of fatback or bacon to prevent the lean exterior from drying. Low-temperature method (120–140°C / 250–280°F) with a probe inserted to the centre gives the best results for a pink interior (target: 54–60°C / 130–140°F for medium-rare to medium). Alternatively, the shoulder can be pot-roasted (oven covered with a little liquid) to achieve a result between a true oven roast and a braise.",
-    "slow_cooker": "The venison shoulder is well-suited to slow cooker (crockpot) cooking: its collagen-rich muscle structure breaks down beautifully over 6–10 hours at low heat (≈85–95°C / 185–203°F), producing fork-tender, pull-apart results similar to pulled pork. The advantage of the slow cooker over oven braising is that the temperature is constant and controlled, eliminating any risk of the liquid boiling and toughening the fibres. A typical slow cooker method: brown the shoulder in a separate pan, transfer to the slow cooker with vegetables and braising liquid, cook on LOW for 6–8 hours or HIGH for 4–5 hours. The venison shoulder is done when it pulls apart easily with a fork. Many British game cookery sources note the slow cooker as the ideal method for venison shoulder."
+    "slow_cooker": "The venison shoulder is well-suited to slow cooker (crockpot) cooking: its collagen-rich muscle structure breaks down beautifully over 6–10 hours at low heat (≈85–95°C / 185–203°F), producing fork-tender, pull-apart results similar to pulled pork. The advantage of the slow cooker over oven braising is that the temperature is constant and controlled, eliminating any risk of the liquid boiling and toughening the fibres. A typical slow cooker method: brown the shoulder in a separate pan, transfer to the slow cooker with vegetables and braising liquid, cook on LOW for 6–8 hours or HIGH for 4–5 hours. The venison shoulder is done when it pulls apart easily with a fork. Many British game cookery sources note the slow cooker as the ideal method for venison shoulder.",
+    "slow_cooker_sv": "Viltbogen lämpar sig idealiskt för slow cooker (*crockpot*): dess kollagenrika muskelstruktur bryter ned vackert under 6–10 timmar vid LÅG värme (≈85–95 °C / 185–203 °F), vilket ger pull-apart-mört resultat liknande pulled pork.\n\nSear alltid bogen i en het panna med olja och smör först — slow cooker brynner inte köttet. Lägg sedan i slow cooker med vin, fond, lök, morötter, rosmarin och timjan. Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagning: noll (slow cooker). Sond in i tjockaste muskeln, borta från skulderbladsben."
   },
   "venison_steak": {
     "grill": "Venison backstrap, loin or haunch steaks are excellent on the grill. The lean, dense muscle benefits from high-heat direct grilling — it sears quickly, developing a smoky, caramelised crust while the centre stays pink and juicy. Because there is little intramuscular fat, venison goes from perfect to overcooked in moments; the grill lid should remain open to avoid trapped steam speeding up cooking.\n\nThe backstrap (outer loin) is the preferred cut for grilling: it is uniform in thickness, tender, and holds together on the grate. Haunch steaks (from the hindleg) benefit from a simple marinade to tenderise muscle fibres. Medallions cut from the loin are harder to grill successfully as they curl; a whole piece grills better and is then sliced.\n\nTemperature precision is essential. Pull at **54–57°C (130–135°F)** for medium-rare; carry-over will bring it to 57–60°C after a 5-minute rest. Never take venison above 65°C (149°F) — it rapidly becomes grey, dry and livery. A MEATER probe inserted into the thickest part before grilling allows wireless monitoring without opening the grill.",
@@ -17838,6 +17842,7 @@ const CUT_METHOD_PROFILES = {
   },
   "buffalo_roast": {
     "braise": "American bison (Bison bison) roasts braise extremely well. The lean, dense muscle fibres that make bison susceptible to drying in high dry-heat methods become an advantage in braising: long cooking in moist heat with gentle, consistent temperatures (typically 250–325°F / 120–165°C) allows the fibres to soften without the fat-driven self-basting that compensates for dryness in beef. What braising provides instead is moisture from the cooking liquid — stock, wine, or Indigenous preparations like corn stock — and collagen breakdown from the connective tissue. Bison's higher collagen-to-fat ratio compared to the equivalent beef cut means bison braises can become deeply gelatinous and rich when cooked long enough. Braising also allows aromatic complexity that complements bison's naturally sweeter, more mineral flavour compared to beef. Probe placement should be in the thickest portion of the meat, away from the cooking liquid; internal temperature is less critical in braising (fork-tender is the primary indicator), but the cooking temperature keeps the internal temperature well above any safety threshold throughout.",
+    "braise_sv": "Amerikansk bison (*Bison bison*) bräseras utomordentligt väl. De magra, täta muskelfibrerna som gör bison sårbar för torrhet vid höga torrvärme-metoder blir en fördel vid bräsering: lång tillagning i fuktig värme med milda, konsistenta temperaturer (typiskt 120–165 °C) tillåter fibrerna att mjukna.\n\nVid 88–95 °C internt, hållet i 2–3 timmar, ger bison-bogbräsering otroligt rik, gelatinös konsistens. Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet-möra resultat. Eftertillagning: försumbar (braiseringsvätska dämpar temperatursvängningar). Sond i tjockaste köttmassan, borta från ben.",
     "oven_roast": "Bison's leanness (approx. 2.4 g fat per 100 g cooked weight, compared to 10+ g for beef) makes oven roasting more technically demanding than beef. The fat cap and intramuscular marbling that self-baste a beef roast are absent, so bison oven roasts rely on:\n- **Very low oven temperature** (275°F / 135°C maximum) to reduce moisture evaporation and allow enzymatic tenderisation\n- **A moisture source in the pan** (hot water, broth, or a splash of wine in a covered or semi-covered pan) to prevent the surface from desiccating before the interior reaches temperature\n- **Precise probe monitoring** — bison has virtually no margin between juicy medium-rare and dry, fibrous well-done; the lean mass heats unevenly, so probe placement in the geometric centre of the thickest part is essential\n- **Conservative pull temperatures** — most bison-specific sources recommend pulling at 54–57°C / 130–135°F (medium-rare), with carryover of 5–8°C / 9–14°F bringing the final serving temperature to 60–63°C / 140–145°F\n\nThe National Bison Association notes: \"Roasts should be cooked to an internal temperature of 145°F (medium rare)\" — note their labelling differs from beef convention (145°F is beef medium), reflecting bison's faster cooking and perceived doneness at higher heat due to the lean structure."
   },
   "buffalo_steak": {
@@ -18538,7 +18543,8 @@ const CUT_METHOD_PROFILES = {
     "grill_sv": "Grillning är den enda traditionella metoden för köfte — det är en strikt eldsbaserad beredning i alla traditioner som skapade den. Hög direkt värme (kol föredraget) förkolnar utsidan på 3–4 minuter per sida, smälter ned fettet och skapar den karakteristiska rökhaltiga kolskorpan.\n\nDet enda säkra sättet att verifiera genomkokning är med sond. Innertemperatur: **72–75 °C (162–167 °F)** för malet lamm. Eftertillagning: 2–3 °C. Sond insatt längsvis från änden in till mitten av köfte-spettet. Vila 3–5 minuter täckt."
   },
   "lamb_brisket": {
-    "braise": "Lamb brisket (also called lamb breast, especially in UK/European usage) comes from the belly of the lamb — the same anatomical position as pork belly. It consists of layered intercostal muscles, rib bones, and significant deposits of intramuscular fat held together by dense connective tissue. Because the breast muscles are used constantly for breathing, they are tough, chewy, and collagen-rich — the exact qualities that reward low-and-slow moist cooking. At 85–93°C the collagen converts to gelatin, the fat renders, and the meat becomes fork-tender or pull-apart. Carryover cooking is significant (4–6°C) owing to the high fat content, so the meat will continue to rise after being pulled from heat. Sold boneless/rolled or bone-in; both forms braise equally well."
+    "braise": "Lamb brisket (also called lamb breast, especially in UK/European usage) comes from the belly of the lamb — the same anatomical position as pork belly. It consists of layered intercostal muscles, rib bones, and significant deposits of intramuscular fat held together by dense connective tissue. Because the breast muscles are used constantly for breathing, they are tough, chewy, and collagen-rich — the exact qualities that reward low-and-slow moist cooking. At 85–93°C the collagen converts to gelatin, the fat renders, and the meat becomes fork-tender or pull-apart. Carryover cooking is significant (4–6°C) owing to the high fat content, so the meat will continue to rise after being pulled from heat. Sold boneless/rolled or bone-in; both forms braise equally well.",
+    "braise_sv": "Lammbrisket (UK: *lamb breast*) är lammets mage — anatomiskt ekvivalent med fläskbuk. Det består av skiktade interkostalsmuskler, revbensben och substansiella intramuskulära och yttre fettdepåer bundna av tät bindväv. Magemusklerna arbetar konstant vid andning.\n\nFör att nå ätbar konsistens kräver lammbrisket låg-och-långsam tillagning: bräsering (160–170 °C, 2–3 timmar täckt), ugnsrostning (150 °C, 3–4 timmar). Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet-möra resultat. Eftertillagning: försumbar (braiseringsvätska). Sond in i tjockaste köttmassan, borta från revbenslben."
   },
   "lamb_loin_roast": {
     "oven_roast": "Lamb loin roast is the boneless, cylindrical muscle removed from the saddle (the section between the last rib and the hip). It is the lamb equivalent of a beef tenderloin in terms of tenderness — lean, fine-grained, low in connective tissue, and quick-cooking. Because it lacks the fat deposits and collagen of tougher cuts, it cannot be slow-cooked or braised without becoming dry. It must be roasted quickly at high heat (or moderate heat with a prior sear) to medium-rare or medium, then rested before slicing. Carryover cooking is modest (3–5°C) due to the low fat content. Sold boneless and often rolled and tied; sometimes sold bone-in as part of a saddle.\n\n**Research note:** The whole boneless lamb loin roast is primarily a British, French, and Australasian preparation. It is not a standard whole-cut preparation in South/East/SE Asian or African/Middle Eastern culinary traditions — those traditions typically cut the loin into chops, use it in curries/stews, or prepare the whole saddle differently. Genuine recipe sources for Group A and Group C could not be found for this cut and method after targeted searches across South Asian, East Asian, SE Asian, Moroccan, Lebanese, and Turkish recipe sites.\n\n---",
@@ -18598,8 +18604,10 @@ const CUT_METHOD_PROFILES = {
   },
   "lamb_neck_filet": {
     "braise": "Lamb neck fillet braised in aromatic liquid becomes remarkably tender. The neck muscles, densely packed with connective tissue and worked continuously in life, require 2–3 hours of gentle moist-heat cooking to convert the collagen to gelatin and render the fibres soft. The resulting braise is intensely flavoured — the gelatin from the collagen enriches the braising liquid into a glossy, body-coating sauce. The fillet takes flavouring particularly well: wine, herbs, aromatics, and stock all penetrate the cylindrical muscle during the long braise. In South African and British traditions, the neck is braised in red wine with carrots, celery, and tomato paste. In Turkish and Middle Eastern traditions, the neck is braised with spices (cinnamon, allspice, cumin) and fresh tomatoes, often over couscous.",
+    "braise_sv": "Lammhalsfilé bräserad i aromatisk vätska blir anmärkningsvärt mör. Halsmusklerna, tätt packade med bindväv, kräver 2–3 timmars skonsam fuktig tillagning för att omvandla kollagen till gelatin.\n\nDen resulterande bräseringen är intensivt välsmakande och perfekt för tagines, grytor och nordiska vardagsrätter. Innertemperatur: **85–90 °C (185–194 °F)** för pull-apart. Eftertillagning: försumbar (braiseringsvätska). Sond in i den tjockaste delen av halsmuskeln. Täckt i ugn vid 160–170 °C, 2–3 timmar.",
     "pan_sear": "Pan-searing lamb neck fillet is a quick cooking method when the fillet is sliced thin (about 1–2 cm / 0.4–0.8 in thick) and marinated beforehand to tenderise the dense muscle fibres. The neck is not as naturally tender as a lamb loin or rack, so high heat and care not to overcook are key. In Scandinavian cooking (*lammhalsfilé*), the neck fillet is sometimes pan-fried as a bistro-style cut at medium doneness. In British and Middle Eastern traditions it may be grilled or pan-fried after marinating in yoghurt, herbs, or spices. Target internal temperature for a pan-seared neck fillet is **60–65°C / 140–149°F** (medium to medium-well) — lower temperatures produce chewy results given the denseness of the cut.",
-    "slow_cooker": "The lamb neck fillet is ideally suited to the slow cooker. The constant low heat (80–95°C / 176–203°F) over 6–8 hours allows the collagen-rich neck muscles to fully break down, producing silky, pull-apart results without any risk of the sauce boiling and toughening the meat. The typical approach is to sear the fillets in a separate pan first (optional but recommended for better flavour), then transfer to the slow cooker with vegetables and braising liquid. The result is similar to braised lamb but even more tender and convenient."
+    "slow_cooker": "The lamb neck fillet is ideally suited to the slow cooker. The constant low heat (80–95°C / 176–203°F) over 6–8 hours allows the collagen-rich neck muscles to fully break down, producing silky, pull-apart results without any risk of the sauce boiling and toughening the meat. The typical approach is to sear the fillets in a separate pan first (optional but recommended for better flavour), then transfer to the slow cooker with vegetables and braising liquid. The result is similar to braised lamb but even more tender and convenient.",
+    "slow_cooker_sv": "Lammhalsfilé (*lammhalsfilé*, svenska) lämpar sig idealiskt för slow cooker. Den konstanta låga värmen (80–95 °C / 176–203 °F) under 6–8 timmar låter de kollagenrika halshuskelerna bryta ned fullständigt, vilket ger silkig, pull-apart-mört resultat utan risk för att vätskan kokar och hårdnar köttet.\n\nTypisk tillvägagångssätt: bryn filén i panna, lägg sedan i slow cooker med fond, vin, lök, morot, timjan och rosmarin. Innertemperatur: **85–90 °C (185–194 °F)** för pull-apart. Eftertillagning: noll (slow cooker). Sond in i den tjockaste halsmuskeln."
   },
   "baby_back_ribs": {
     "air_fryer": "Baby back ribs (also called loin ribs or kamben in Danish; Rippchen in German) are the upper ribs from the pork loin area — leaner, more curved, and smaller than spare ribs. In an air fryer the high-velocity hot air circulates around each section, cooking them much faster than a conventional oven (60–90 min vs. 2.5–3 hrs) while still achieving tender, fall-off-the-bone results. Most air-fryer methods either pre-boil the ribs (to accelerate internal tenderness) or rely on a long low-temperature cook phase followed by a short high-temperature crisping phase. The silver skin on the bone side must always be removed. Target internal: 88–95 °C for tender, collagen-rendered ribs; at 63 °C they are technically safe but not yet fall-off-bone.\n\nTarget internal temperatures (air fryer):\n- Fall-off-bone tender: **88–95 °C (190–203 °F)**\n- ⚠️ Below 80 °C ribs are food-safe but still tough",
@@ -21339,7 +21347,17 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "ostrich_steak",
@@ -21357,7 +21375,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 3,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               }
             ]
           }
@@ -21388,7 +21409,17 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "venison_loin",
@@ -21407,7 +21438,10 @@ const EXP_TREE = {
                   "sous_vide"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 4
               },
               {
                 "id": "venison_roast",
@@ -21425,7 +21459,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               },
               {
                 "id": "venison_shoulder",
@@ -21442,7 +21479,22 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 5,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  },
+                  "slow_cooker": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "venison_steak",
@@ -21462,7 +21514,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               }
             ]
           }
@@ -21493,7 +21548,17 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "rabbit_saddle",
@@ -21510,7 +21575,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 3,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               }
             ]
           }
@@ -21539,7 +21607,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 3,
+                "rest_time_max": 5,
+                "carryover_temp_c": 3
               },
               {
                 "id": "wild_boar_shoulder",
@@ -21556,7 +21627,10 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 5
               }
             ]
           }
@@ -21589,7 +21663,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               },
               {
                 "id": "mutton_leg",
@@ -21607,7 +21684,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 8
               },
               {
                 "id": "mutton_shoulder",
@@ -21624,7 +21704,22 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 5,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  },
+                  "slow_cooker": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "mutton_shoulder_alt",
@@ -21641,7 +21736,10 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 5
               }
             ]
           }
@@ -21672,7 +21770,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               },
               {
                 "id": "kangaroo_steak",
@@ -21690,7 +21791,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 3,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               }
             ]
           }
@@ -21721,7 +21825,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               },
               {
                 "id": "reindeer_roast",
@@ -21738,7 +21845,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               },
               {
                 "id": "reindeer_steak",
@@ -21757,7 +21867,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               }
             ]
           }
@@ -21789,7 +21902,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               },
               {
                 "id": "goat_leg",
@@ -21809,7 +21925,10 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 8
               },
               {
                 "id": "goat_shank",
@@ -21825,7 +21944,17 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "goat_shoulder",
@@ -21842,7 +21971,22 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 5,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  },
+                  "slow_cooker": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               }
             ]
           }
@@ -21873,7 +22017,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 8
               },
               {
                 "id": "moose_steak",
@@ -21892,7 +22039,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               }
             ]
           }
@@ -21921,7 +22071,10 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 2,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               },
               {
                 "id": "buffalo_roast",
@@ -21939,7 +22092,17 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "buffalo_steak",
@@ -21959,7 +22122,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               }
             ]
           }
@@ -21988,7 +22154,10 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 2,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               },
               {
                 "id": "bison_roast",
@@ -22005,7 +22174,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               },
               {
                 "id": "bison_steak",
@@ -22025,7 +22197,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               }
             ]
           }
@@ -22065,7 +22240,10 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 2,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               },
               {
                 "id": "ground_beef",
@@ -22081,7 +22259,17 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 2,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "meatloaf",
@@ -22096,7 +22284,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 5
               }
             ],
             "name_sv": "Färs"
@@ -22128,7 +22319,17 @@ const EXP_TREE = {
                   "sous_vide"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 4,
+                "method_overrides": {
+                  "sous_vide": {
+                    "rest_time_min": 0,
+                    "rest_time_max": 3,
+                    "carryover_temp_c": 1
+                  }
+                }
               },
               {
                 "id": "flank_steak",
@@ -22151,7 +22352,17 @@ const EXP_TREE = {
                   "sous_vide"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 2,
+                "method_overrides": {
+                  "sous_vide": {
+                    "rest_time_min": 0,
+                    "rest_time_max": 3,
+                    "carryover_temp_c": 1
+                  }
+                }
               },
               {
                 "id": "flat_iron",
@@ -22176,7 +22387,17 @@ const EXP_TREE = {
                   "sous_vide"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 2,
+                "method_overrides": {
+                  "sous_vide": {
+                    "rest_time_min": 0,
+                    "rest_time_max": 3,
+                    "carryover_temp_c": 1
+                  }
+                }
               },
               {
                 "id": "hanger_steak",
@@ -22196,7 +22417,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               },
               {
                 "id": "ny_strip",
@@ -22221,7 +22445,17 @@ const EXP_TREE = {
                   "sous_vide"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3,
+                "method_overrides": {
+                  "sous_vide": {
+                    "rest_time_min": 0,
+                    "rest_time_max": 3,
+                    "carryover_temp_c": 1
+                  }
+                }
               },
               {
                 "id": "picanha",
@@ -22243,7 +22477,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 5
               },
               {
                 "id": "ribeye_steak",
@@ -22268,7 +22505,17 @@ const EXP_TREE = {
                   "sous_vide"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3,
+                "method_overrides": {
+                  "sous_vide": {
+                    "rest_time_min": 0,
+                    "rest_time_max": 3,
+                    "carryover_temp_c": 1
+                  }
+                }
               },
               {
                 "id": "sirloin_steak",
@@ -22293,7 +22540,17 @@ const EXP_TREE = {
                   "sous_vide"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3,
+                "method_overrides": {
+                  "sous_vide": {
+                    "rest_time_min": 0,
+                    "rest_time_max": 3,
+                    "carryover_temp_c": 1
+                  }
+                }
               },
               {
                 "id": "skirt_steak",
@@ -22313,7 +22570,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 3,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               },
               {
                 "id": "t_bone",
@@ -22336,7 +22596,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 4
               },
               {
                 "id": "tomahawk",
@@ -22359,7 +22622,17 @@ const EXP_TREE = {
                   "sous_vide"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 5,
+                "method_overrides": {
+                  "sous_vide": {
+                    "rest_time_min": 0,
+                    "rest_time_max": 3,
+                    "carryover_temp_c": 1
+                  }
+                }
               },
               {
                 "id": "tri_tip",
@@ -22383,7 +22656,17 @@ const EXP_TREE = {
                   "sous_vide"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 5,
+                "method_overrides": {
+                  "sous_vide": {
+                    "rest_time_min": 0,
+                    "rest_time_max": 3,
+                    "carryover_temp_c": 1
+                  }
+                }
               }
             ],
             "name_sv": "Biffar"
@@ -22407,7 +22690,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 2,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               },
               {
                 "id": "beef_tongue",
@@ -22423,7 +22709,22 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 5,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  },
+                  "slow_cooker": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               }
             ],
             "name_sv": "Övrigt / Innanmäte"
@@ -22446,7 +22747,22 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 3,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  },
+                  "slow_cooker": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "brisket",
@@ -22464,7 +22780,10 @@ const EXP_TREE = {
                   "smoker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 30,
+                "rest_time_max": 60,
+                "carryover_temp_c": 5
               },
               {
                 "id": "chuck_roast",
@@ -22481,7 +22800,17 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 3,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "short_ribs",
@@ -22499,7 +22828,17 @@ const EXP_TREE = {
                   "smoker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 3,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               }
             ],
             "name_sv": "Grytbitar"
@@ -22524,7 +22863,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 6
               },
               {
                 "id": "prime_rib",
@@ -22543,7 +22885,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 8
               },
               {
                 "id": "roasting_joint",
@@ -22562,7 +22907,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 8
               },
               {
                 "id": "round_roast",
@@ -22582,7 +22930,10 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               },
               {
                 "id": "rump",
@@ -22602,7 +22953,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               },
               {
                 "id": "rump_roast",
@@ -22622,7 +22976,10 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               },
               {
                 "id": "sirloin_roast",
@@ -22641,7 +22998,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               },
               {
                 "id": "sirloin_tip_roast",
@@ -22660,7 +23020,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               },
               {
                 "id": "top_round_roast",
@@ -22680,7 +23043,10 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               }
             ],
             "name_sv": "Stekar"
@@ -22721,7 +23087,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 5
               },
               {
                 "id": "goose_leg",
@@ -22738,7 +23107,17 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 4,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "goose_thigh",
@@ -22755,7 +23134,17 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 4,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "whole_goose",
@@ -22771,7 +23160,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 20,
+                "rest_time_max": 30,
+                "carryover_temp_c": 8
               }
             ]
           }
@@ -22803,7 +23195,10 @@ const EXP_TREE = {
                   "sous_vide"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 4
               },
               {
                 "id": "duck_leg_confit",
@@ -22818,7 +23213,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               },
               {
                 "id": "whole_duck",
@@ -22834,7 +23232,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               }
             ]
           }
@@ -22864,7 +23265,17 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 2,
+                "rest_time_max": 3,
+                "carryover_temp_c": 2,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "turkey_burger",
@@ -22881,7 +23292,10 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 2,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               },
               {
                 "id": "chicken_burger",
@@ -22898,7 +23312,10 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 2,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               },
               {
                 "id": "ground_chicken",
@@ -22915,7 +23332,17 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 2,
+                "rest_time_max": 3,
+                "carryover_temp_c": 2,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               }
             ],
             "name_sv": "Färs"
@@ -22944,7 +23371,10 @@ const EXP_TREE = {
                   "smoker"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               },
               {
                 "id": "turkey_leg",
@@ -22961,7 +23391,10 @@ const EXP_TREE = {
                   "smoker"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 4
               },
               {
                 "id": "turkey_thigh",
@@ -22977,7 +23410,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 4
               },
               {
                 "id": "whole_turkey",
@@ -22994,7 +23430,10 @@ const EXP_TREE = {
                   "smoker"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 20,
+                "rest_time_max": 45,
+                "carryover_temp_c": 8
               }
             ]
           }
@@ -23027,7 +23466,10 @@ const EXP_TREE = {
                   "sous_vide"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 3,
+                "rest_time_max": 5,
+                "carryover_temp_c": 3
               },
               {
                 "id": "chicken_breast_bone_in",
@@ -23044,7 +23486,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 4
               }
             ],
             "name_sv": "Bröst"
@@ -23069,7 +23514,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 3,
+                "rest_time_max": 5,
+                "carryover_temp_c": 3
               },
               {
                 "id": "chicken_thigh",
@@ -23089,7 +23537,10 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 3,
+                "rest_time_max": 5,
+                "carryover_temp_c": 3
               },
               {
                 "id": "chicken_wing",
@@ -23107,7 +23558,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 2,
+                "rest_time_max": 3,
+                "carryover_temp_c": 2
               }
             ],
             "name_sv": "Mörkt kött"
@@ -23132,7 +23586,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 74,
-                "usda_safe_f": 165
+                "usda_safe_f": 165,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               }
             ],
             "name_sv": "Hel"
@@ -23171,7 +23628,10 @@ const EXP_TREE = {
                   "oven_roast",
                   "saute",
                   "steam"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 1,
+                "carryover_temp_c": 1
               },
               {
                 "id": "broccoli",
@@ -23187,7 +23647,10 @@ const EXP_TREE = {
                   "oven_roast",
                   "saute",
                   "steam"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 1,
+                "carryover_temp_c": 1
               },
               {
                 "id": "brussels_sprouts",
@@ -23203,7 +23666,10 @@ const EXP_TREE = {
                   "oven_roast",
                   "pan_fry",
                   "saute"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 1
               },
               {
                 "id": "green_beans",
@@ -23219,7 +23685,10 @@ const EXP_TREE = {
                   "oven_roast",
                   "saute",
                   "steam"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 1,
+                "carryover_temp_c": 1
               },
               {
                 "id": "spinach",
@@ -23232,7 +23701,10 @@ const EXP_TREE = {
                 "supported_methods": [
                   "saute",
                   "steam"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 0,
+                "carryover_temp_c": 0
               }
             ]
           }
@@ -23260,7 +23732,10 @@ const EXP_TREE = {
                   "air_fryer",
                   "oven_broil",
                   "oven_roast"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 1
               }
             ]
           }
@@ -23289,7 +23764,17 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "saute"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 1,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "cauliflower",
@@ -23306,7 +23791,10 @@ const EXP_TREE = {
                   "saute",
                   "steam",
                   "whole_roast"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 1
               }
             ]
           }
@@ -23334,7 +23822,10 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "saute"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 1,
+                "carryover_temp_c": 1
               },
               {
                 "id": "portobello_mushrooms",
@@ -23350,7 +23841,10 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "saute"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 2
               }
             ]
           }
@@ -23380,7 +23874,10 @@ const EXP_TREE = {
                   "oven_roast",
                   "pan_fry",
                   "saute"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 2
               }
             ]
           }
@@ -23409,7 +23906,10 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "saute"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 1,
+                "carryover_temp_c": 1
               }
             ]
           }
@@ -23439,7 +23939,10 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "steam"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 1
               }
             ]
           }
@@ -23465,7 +23968,10 @@ const EXP_TREE = {
                 "supported_methods": [
                   "oven_bake",
                   "oven_roast"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               },
               {
                 "id": "butternut_squash",
@@ -23480,7 +23986,10 @@ const EXP_TREE = {
                   "oven_roast",
                   "pressure_cooker",
                   "steam"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               },
               {
                 "id": "spaghetti_squash",
@@ -23493,7 +24002,10 @@ const EXP_TREE = {
                 "supported_methods": [
                   "oven_bake",
                   "oven_roast"
-                ]
+                ],
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               },
               {
                 "id": "zucchini",
@@ -23509,7 +24021,10 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "saute"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 1,
+                "carryover_temp_c": 1
               }
             ]
           }
@@ -23535,7 +24050,10 @@ const EXP_TREE = {
                 "supported_methods": [
                   "pan_fry",
                   "saute"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 0,
+                "carryover_temp_c": 0
               },
               {
                 "id": "leeks",
@@ -23550,7 +24068,17 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "saute"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 1,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "roasted_garlic",
@@ -23563,7 +24091,10 @@ const EXP_TREE = {
                 "name_sv": "Rostad vitlök",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 2
               },
               {
                 "id": "roasted_onion",
@@ -23578,7 +24109,10 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "saute"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 2
               }
             ]
           }
@@ -23604,7 +24138,10 @@ const EXP_TREE = {
                 "supported_methods": [
                   "air_fryer",
                   "oven_bake"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               },
               {
                 "id": "roasted_beets",
@@ -23616,7 +24153,10 @@ const EXP_TREE = {
                 "name_sv": "Rostade rödbetor",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               },
               {
                 "id": "roasted_carrots",
@@ -23631,7 +24171,10 @@ const EXP_TREE = {
                   "air_fryer",
                   "oven_roast",
                   "saute"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 1
               },
               {
                 "id": "roasted_parsnips",
@@ -23645,7 +24188,10 @@ const EXP_TREE = {
                 "supported_methods": [
                   "air_fryer",
                   "oven_roast"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 1
               },
               {
                 "id": "roasted_potatoes",
@@ -23658,7 +24204,10 @@ const EXP_TREE = {
                 "supported_methods": [
                   "air_fryer",
                   "oven_roast"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 2
               },
               {
                 "id": "roasted_sweet_potato",
@@ -23673,7 +24222,10 @@ const EXP_TREE = {
                   "air_fryer",
                   "oven_bake",
                   "oven_roast"
-                ]
+                ],
+                "rest_time_min": 0,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               }
             ]
           }
@@ -23713,7 +24265,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 2
               }
             ]
           }
@@ -23747,7 +24302,17 @@ const EXP_TREE = {
                   "sous_vide"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 2,
+                "method_overrides": {
+                  "sous_vide": {
+                    "rest_time_min": 0,
+                    "rest_time_max": 3,
+                    "carryover_temp_c": 1
+                  }
+                }
               },
               {
                 "id": "salmon_steak",
@@ -23766,7 +24331,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 3
               }
             ]
           }
@@ -23796,7 +24364,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 2
               },
               {
                 "id": "scallops",
@@ -23812,7 +24383,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 0,
+                "rest_time_max": 0,
+                "carryover_temp_c": 2
               },
               {
                 "id": "shrimp",
@@ -23828,7 +24402,10 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 0,
+                "rest_time_max": 0,
+                "carryover_temp_c": 1
               }
             ]
           }
@@ -23860,7 +24437,10 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 2
               },
               {
                 "id": "haddock",
@@ -23878,7 +24458,10 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 2
               },
               {
                 "id": "hake",
@@ -23896,7 +24479,10 @@ const EXP_TREE = {
                   "steam"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 2
               },
               {
                 "id": "halibut_fillet",
@@ -23915,7 +24501,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 3
               },
               {
                 "id": "mahi_mahi",
@@ -23933,7 +24522,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 2
               },
               {
                 "id": "sea_bass",
@@ -23952,7 +24544,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 2
               },
               {
                 "id": "swordfish",
@@ -23970,7 +24565,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 2
               },
               {
                 "id": "trout",
@@ -23989,7 +24587,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 0,
+                "rest_time_max": 2,
+                "carryover_temp_c": 2
               }
             ]
           }
@@ -24027,7 +24628,10 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 2,
+                "rest_time_max": 3,
+                "carryover_temp_c": 2
               },
               {
                 "id": "lamb_burger",
@@ -24043,7 +24647,10 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 2,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               },
               {
                 "id": "lamb_kofta",
@@ -24059,7 +24666,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 2,
+                "rest_time_max": 3,
+                "carryover_temp_c": 2
               },
               {
                 "id": "lamb_shank",
@@ -24076,7 +24686,22 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  },
+                  "slow_cooker": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "lamb_shoulder",
@@ -24093,7 +24718,10 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 5
               }
             ],
             "name_sv": "Färs"
@@ -24116,7 +24744,17 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 5,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "lamb_loin_roast",
@@ -24134,7 +24772,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               },
               {
                 "id": "lamb_neck",
@@ -24151,7 +24792,22 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 5,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  },
+                  "slow_cooker": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "lamb_rib",
@@ -24170,7 +24826,10 @@ const EXP_TREE = {
                   "grill"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               },
               {
                 "id": "lamb_rump",
@@ -24191,7 +24850,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               },
               {
                 "id": "leg_of_lamb",
@@ -24211,7 +24873,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 8
               },
               {
                 "id": "rack_of_lamb",
@@ -24230,7 +24895,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 5
               }
             ],
             "name_sv": "Stekar"
@@ -24257,7 +24925,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 3,
+                "rest_time_max": 5,
+                "carryover_temp_c": 3
               },
               {
                 "id": "lamb_cutlet",
@@ -24276,7 +24947,10 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 3,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               },
               {
                 "id": "lamb_loin_chops",
@@ -24295,7 +24969,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 3,
+                "rest_time_max": 5,
+                "carryover_temp_c": 3
               },
               {
                 "id": "lamb_neck_filet",
@@ -24315,7 +24992,22 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  },
+                  "slow_cooker": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               }
             ],
             "name_sv": "Kotletter"
@@ -24356,7 +25048,10 @@ const EXP_TREE = {
                   "smoker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 3
               },
               {
                 "id": "spare_ribs",
@@ -24373,7 +25068,10 @@ const EXP_TREE = {
                   "smoker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 3
               },
               {
                 "id": "st_louis_ribs",
@@ -24390,7 +25088,10 @@ const EXP_TREE = {
                   "smoker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 3
               }
             ],
             "name_sv": "Revben"
@@ -24413,7 +25114,17 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 2,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "pork_sausage",
@@ -24429,7 +25140,10 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 2,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               }
             ],
             "name_sv": "Färs"
@@ -24452,7 +25166,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 5
               },
               {
                 "id": "cured_ham",
@@ -24467,7 +25184,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 60,
-                "usda_safe_f": 140
+                "usda_safe_f": 140,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               }
             ],
             "name_sv": "Skinka"
@@ -24490,7 +25210,17 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 3,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "liver_pork",
@@ -24506,7 +25236,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 2,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               },
               {
                 "id": "pork_cheek",
@@ -24524,7 +25257,17 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 3,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "pork_jowl",
@@ -24541,7 +25284,17 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "pork_liver",
@@ -24557,7 +25310,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 2,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
               },
               {
                 "id": "pork_tongue",
@@ -24573,7 +25329,22 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  },
+                  "slow_cooker": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               }
             ],
             "name_sv": "Övrigt / Innanmäte"
@@ -24596,7 +25367,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 8
               },
               {
                 "id": "pork_belly",
@@ -24619,7 +25393,27 @@ const EXP_TREE = {
                   "sous_vide"
                 ],
                 "usda_safe_c": 71,
-                "usda_safe_f": 160
+                "usda_safe_f": 160,
+                "rest_time_min": 10,
+                "rest_time_max": 15,
+                "carryover_temp_c": 3,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  },
+                  "slow_cooker": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  },
+                  "sous_vide": {
+                    "rest_time_min": 0,
+                    "rest_time_max": 3,
+                    "carryover_temp_c": 1
+                  }
+                }
               },
               {
                 "id": "pork_leg",
@@ -24637,7 +25431,22 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 8,
+                "method_overrides": {
+                  "braise": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  },
+                  "slow_cooker": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               },
               {
                 "id": "pork_loin_roast",
@@ -24654,7 +25463,10 @@ const EXP_TREE = {
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
               },
               {
                 "id": "pork_shoulder",
@@ -24671,7 +25483,17 @@ const EXP_TREE = {
                   "smoker"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 20,
+                "rest_time_max": 45,
+                "carryover_temp_c": 5,
+                "method_overrides": {
+                  "slow_cooker": {
+                    "rest_time_min": 5,
+                    "rest_time_max": 15,
+                    "carryover_temp_c": 2
+                  }
+                }
               }
             ],
             "name_sv": "Stekar"
@@ -24698,7 +25520,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 3,
+                "rest_time_max": 5,
+                "carryover_temp_c": 3
               },
               {
                 "id": "pork_loin_steak",
@@ -24716,7 +25541,10 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 3,
+                "rest_time_max": 5,
+                "carryover_temp_c": 3
               },
               {
                 "id": "pork_shoulder_steak",
@@ -24734,7 +25562,10 @@ const EXP_TREE = {
                   "pan_fry"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               },
               {
                 "id": "pork_tenderloin",
@@ -24754,7 +25585,17 @@ const EXP_TREE = {
                   "sous_vide"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 4,
+                "method_overrides": {
+                  "sous_vide": {
+                    "rest_time_min": 0,
+                    "rest_time_max": 3,
+                    "carryover_temp_c": 1
+                  }
+                }
               },
               {
                 "id": "secreto",
@@ -24772,7 +25613,10 @@ const EXP_TREE = {
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
-                "usda_safe_f": 145
+                "usda_safe_f": 145,
+                "rest_time_min": 5,
+                "rest_time_max": 10,
+                "carryover_temp_c": 3
               }
             ],
             "name_sv": "Kotletter & Filé"
@@ -35660,7 +36504,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "356";
+const PANEL_VERSION = "358";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

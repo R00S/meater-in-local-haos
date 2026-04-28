@@ -1,3 +1,15 @@
+<!-- KCE:CUT_METHOD
+type: cut_method
+slug: ostrich_fillet
+method: braise
+name: Ostrich Fillet × Braise
+category: game
+meat: ostrich
+cut_type: Ostrich
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
+-->
 # Ostrich Fillet × Braise — Recipe Temperature Research
 
 ## Cut profile

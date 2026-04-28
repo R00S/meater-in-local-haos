@@ -6,6 +6,9 @@ name: Lamb Neck × Braise
 category: lamb
 meat: lamb
 cut_type: Roasts
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
 -->
 # Lamb Neck × Braise — Recipe Temperature Research
 

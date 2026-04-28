@@ -6,6 +6,9 @@ name: Goose Leg × Braise
 category: poultry
 meat: goose
 cut_type: Goose
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
 -->
 # Goose Leg × Braise — Recipe Temperature Research
 

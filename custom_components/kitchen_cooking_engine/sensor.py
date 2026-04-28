@@ -213,7 +213,7 @@ class CookingSessionSensor(SensorEntity):
         self._protein: str | None = None
         self._cut: str | None = None
         self._cut_display: str | None = None
-        self._cut_id: int | None = None
+        self._cut_id: int | str | None = None
         self._doneness: str | None = None
         self._cooking_method: str | None = None
         self._target_temp_c: int | None = None
@@ -961,7 +961,7 @@ class CookingSessionSensor(SensorEntity):
         usda_safe: bool,
         carryover_temp_c: int,
         cut_display: str | None = None,
-        cut_id: int | None = None,
+        cut_id: int | str | None = None,
         custom_target_temp_c: int | None = None,
         data_source: str | None = None,
     ) -> None:

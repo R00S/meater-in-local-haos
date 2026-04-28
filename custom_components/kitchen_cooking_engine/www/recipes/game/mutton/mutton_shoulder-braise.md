@@ -6,6 +6,9 @@ name: Mutton Shoulder × Braise
 category: game
 meat: mutton
 cut_type: Mutton
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
 -->
 # Mutton Shoulder × Braise — Recipe Temperature Research
 

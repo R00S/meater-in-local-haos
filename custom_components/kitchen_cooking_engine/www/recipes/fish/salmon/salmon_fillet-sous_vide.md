@@ -6,6 +6,9 @@ name: Salmon Fillet × Sous Vide
 category: fish
 meat: salmon
 cut_type: Salmon
+rest_time_min: 0
+rest_time_max: 3
+carryover_temp_c: 1
 -->
 # Salmon Fillet × Sous Vide — Recipe Temperature Research
 

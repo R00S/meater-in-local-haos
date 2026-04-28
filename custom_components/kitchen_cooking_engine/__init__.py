@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 28 Apr 2026, 19:00 UTC
-Last Change: v0.7.0.8 - chore: CHORES — bump version, update README + timeline; single source of truth refactor complete
+Last Updated: 28 Apr 2026, 21:00 UTC
+Last Change: v0.7.0.9 - fix: start_cook accepts EXP_TREE slug cut_id; rest/carryover defaults in KCE:CUT; per-method overrides in KCE:CUT_METHOD (braise/sous_vide/slow_cooker)
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -26,9 +26,11 @@ This integration provides:
 from __future__ import annotations
 
 import logging
+import os
 from pathlib import Path
 
 import voluptuous as vol
+import yaml as _yaml
 
 from homeassistant.components.frontend import add_extra_js_url, async_register_built_in_panel
 from homeassistant.components.http import StaticPathConfig
@@ -64,7 +66,115 @@ from .api import async_register_api
 
 _LOGGER = logging.getLogger(__name__)
 
-PLATFORMS = [Platform.SENSOR]
+_KCE_RECIPE_DIR = os.path.join(os.path.dirname(__file__), "www", "recipes")
+
+
+def _parse_kce_tag_init(content: str, tag_name: str) -> dict | None:
+    """Extract and YAML-parse the body of a <!-- KCE:{tag_name} ... --> comment."""
+    opening = f"<!-- KCE:{tag_name}\n"
+    closing = "\n-->"
+    if not content.startswith(opening):
+        return None
+    end_idx = content.find(closing, len(opening))
+    if end_idx == -1:
+        return None
+    try:
+        return _yaml.safe_load(content[len(opening):end_idx])
+    except _yaml.YAMLError:
+        return None
+
+
+def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | None:
+    """Return cut data for an EXP_TREE slug from recipe markdown files.
+
+    Reads the cut overview file ({slug}.md) for defaults, then overlays
+    any per-method overrides from the method leaf file ({slug}-{method}.md).
+
+    Returns a dict with keys:
+        name, name_long, category, meat,
+        rest_time_min, rest_time_max, carryover_temp_c,
+        doneness_temps: {doneness_name: {target_c, target_f, min_c, min_f,
+                                         max_c, max_f, usda_safe}}
+    or None if the slug is not found.
+    """
+    # Walk recipe dir to find {slug}.md (no hyphen in stem)
+    cut_file = None
+    for root, _dirs, files in os.walk(_KCE_RECIPE_DIR):
+        for filename in files:
+            if filename == f"{slug}.md":
+                cut_file = os.path.join(root, filename)
+                break
+        if cut_file:
+            break
+
+    if not cut_file:
+        return None
+
+    try:
+        content = open(cut_file, encoding="utf-8").read()
+    except OSError:
+        return None
+
+    data = _parse_kce_tag_init(content, "CUT")
+    if not data:
+        return None
+
+    # Build doneness temperature map from cut overview
+    doneness_temps: dict = {}
+    for d in (data.get("doneness") or []):
+        if not isinstance(d, dict):
+            continue
+        d_name = d.get("name")
+        if not d_name:
+            continue
+        doneness_temps[d_name] = {
+            "target_c": d.get("target_c"),
+            "target_f": d.get("target_f"),
+            "min_c": d.get("min_c"),
+            "min_f": d.get("min_f"),
+            "max_c": d.get("max_c"),
+            "max_f": d.get("max_f"),
+            "usda_safe": bool(d.get("usda_safe", False)),
+        }
+
+    name = data.get("name") or slug.replace("_", " ").title()
+    result = {
+        "name": name,
+        "name_long": name,
+        "category": data.get("category") or "",
+        "meat": data.get("meat") or "",
+        "rest_time_min": data.get("rest_time_min") or 3,
+        "rest_time_max": data.get("rest_time_max") or 10,
+        "carryover_temp_c": data.get("carryover_temp_c") or 3,
+        "doneness_temps": doneness_temps,
+    }
+
+    # Overlay method-specific overrides when a leaf file exists
+    if cooking_method:
+        method_file = None
+        for root, _dirs, files in os.walk(_KCE_RECIPE_DIR):
+            for filename in files:
+                if filename == f"{slug}-{cooking_method}.md":
+                    method_file = os.path.join(root, filename)
+                    break
+            if method_file:
+                break
+
+        if method_file:
+            try:
+                mcontent = open(method_file, encoding="utf-8").read()
+                mdata = _parse_kce_tag_init(mcontent, "CUT_METHOD")
+                if mdata:
+                    if mdata.get("rest_time_min") is not None:
+                        result["rest_time_min"] = mdata["rest_time_min"]
+                    if mdata.get("rest_time_max") is not None:
+                        result["rest_time_max"] = mdata["rest_time_max"]
+                    if mdata.get("carryover_temp_c") is not None:
+                        result["carryover_temp_c"] = mdata["carryover_temp_c"]
+            except OSError:
+                pass
+
+    return result
 
 # ⚠️ VERSION — must match in ALL 3 locations on every release:
 #   1. manifest.json        → "version": "..."
@@ -72,7 +182,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.7.0.8"
+__version__ = "0.7.0.9"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
@@ -82,7 +192,10 @@ DATA_SOURCE_SWEDISH = "swedish"
 SERVICE_START_COOK_SCHEMA = vol.Schema(
     {
         vol.Required(ATTR_ENTITY_ID): cv.entity_ids,
-        vol.Required("cut_id"): vol.All(vol.Coerce(int), vol.Range(min=1, max=9999)),
+        vol.Required("cut_id"): vol.Any(
+            vol.All(vol.Coerce(int), vol.Range(min=1, max=9999)),  # legacy integer ID
+            str,  # EXP_TREE slug (e.g. "ribeye_steak")
+        ),
         vol.Required("doneness"): vol.In([
             "rare", "medium_rare", "medium", "medium_well", "well_done",
             "pulled", "safe", "tender", "crisp_tender", "caramelized",
@@ -461,6 +574,56 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         data_source = call.data.get("data_source", DATA_SOURCE_INTERNATIONAL)
         custom_target_temp_c = call.data.get("custom_target_temp_c")
 
+        # --- EXP_TREE path: cut_id is a string slug ---
+        if isinstance(cut_id, str):
+            exp_data = _get_exp_cut_data(cut_id, cooking_method)
+            if not exp_data:
+                _LOGGER.error("EXP_TREE cut slug '%s' not found in recipe files", cut_id)
+                return
+            doneness_info = exp_data["doneness_temps"].get(doneness)
+            if not doneness_info:
+                _LOGGER.error("Doneness '%s' not valid for cut '%s'", doneness, cut_id)
+                return
+
+            target_temp_c = custom_target_temp_c if custom_target_temp_c else doneness_info["target_c"]
+            target_temp_f = int(target_temp_c * 9 / 5 + 32) if custom_target_temp_c else doneness_info["target_f"]
+
+            _LOGGER.info(
+                "Starting cook (EXP): %s (%s) at %d°C (%d°F) using %s",
+                exp_data["name_long"], doneness, target_temp_c, target_temp_f, cooking_method,
+            )
+
+            entities = _get_cooking_session_entities(hass, entity_ids)
+            if not entities:
+                _LOGGER.error(
+                    "No cooking session entities found for %s.", entity_ids,
+                )
+                return
+
+            for entity in entities:
+                entity.start_cook(
+                    protein=exp_data["category"] or "unknown",
+                    cut=exp_data["name"],
+                    doneness=doneness,
+                    cooking_method=cooking_method,
+                    target_temp_c=target_temp_c,
+                    target_temp_f=target_temp_f,
+                    min_temp_c=doneness_info.get("min_c") or target_temp_c - 3,
+                    min_temp_f=doneness_info.get("min_f") or target_temp_f - 5,
+                    max_temp_c=doneness_info.get("max_c") or target_temp_c + 3,
+                    max_temp_f=doneness_info.get("max_f") or target_temp_f + 5,
+                    rest_time_min=exp_data["rest_time_min"],
+                    rest_time_max=exp_data["rest_time_max"],
+                    usda_safe=doneness_info.get("usda_safe", False),
+                    carryover_temp_c=exp_data["carryover_temp_c"],
+                    cut_display=exp_data["name_long"],
+                    cut_id=cut_id,
+                    custom_target_temp_c=custom_target_temp_c,
+                    data_source=data_source,
+                )
+            return
+
+        # --- Legacy path: cut_id is an integer from cooking_data.py ---
         # Get the cut data based on data source
         if data_source == DATA_SOURCE_SWEDISH:
             cut = get_swedish_cut_by_id(cut_id)

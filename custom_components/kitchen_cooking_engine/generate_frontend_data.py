@@ -580,6 +580,9 @@ def build_experimental_tree(base_dir):
             doneness_list = data.get("doneness") or []
             usda_safe_c = data.get("usda_safe_c")
             usda_safe_f = data.get("usda_safe_f")
+            rest_time_min = data.get("rest_time_min")
+            rest_time_max = data.get("rest_time_max")
+            carryover_temp_c = data.get("carryover_temp_c")
 
             if not (category and meat and cut_type_name):
                 continue
@@ -673,6 +676,12 @@ def build_experimental_tree(base_dir):
                 cut_obj["usda_safe_c"] = usda_safe_c
             if usda_safe_f is not None:
                 cut_obj["usda_safe_f"] = usda_safe_f
+            if rest_time_min is not None:
+                cut_obj["rest_time_min"] = rest_time_min
+            if rest_time_max is not None:
+                cut_obj["rest_time_max"] = rest_time_max
+            if carryover_temp_c is not None:
+                cut_obj["carryover_temp_c"] = carryover_temp_c
 
             meat_obj["_cut_types"][ct_id]["cuts"].append(cut_obj)
 
@@ -703,6 +712,46 @@ def build_experimental_tree(base_dir):
         if cat.get("name_sv"):
             cat_entry["name_sv"] = cat["name_sv"]
         exp_tree[cat_key] = cat_entry
+
+    # Second pass: collect rest/carryover overrides from KCE:CUT_METHOD leaf files
+    # and attach them as method_overrides to each cut in the tree.
+    method_override_map: dict = {}
+    for root, _dirs, files in os.walk(recipe_dir):
+        for filename in sorted(files):
+            if not filename.endswith(".md"):
+                continue
+            stem = filename[:-3]
+            if "-" not in stem:
+                continue
+            try:
+                content = open(os.path.join(root, filename), encoding="utf-8").read()
+            except Exception:
+                continue
+            mdata = _parse_kce_tag(content, "CUT_METHOD")
+            if mdata is None:
+                continue
+            m_slug = mdata.get("slug") or stem.rsplit("-", 1)[0]
+            m_method = mdata.get("method") or (stem.rsplit("-", 1)[1] if "-" in stem else "")
+            if not m_slug or not m_method:
+                continue
+            override = {}
+            if mdata.get("rest_time_min") is not None:
+                override["rest_time_min"] = mdata["rest_time_min"]
+            if mdata.get("rest_time_max") is not None:
+                override["rest_time_max"] = mdata["rest_time_max"]
+            if mdata.get("carryover_temp_c") is not None:
+                override["carryover_temp_c"] = mdata["carryover_temp_c"]
+            if override:
+                method_override_map.setdefault(m_slug, {})[m_method] = override
+
+    # Attach method_overrides to cuts inside exp_tree
+    for cat in exp_tree.values():
+        for meat in cat.get("meats", []):
+            for ct in meat.get("cutTypes", []):
+                for cut in ct.get("cuts", []):
+                    slug = cut.get("slug") or cut.get("id")
+                    if slug and slug in method_override_map:
+                        cut["method_overrides"] = method_override_map[slug]
 
     return exp_tree, exp_doneness
 

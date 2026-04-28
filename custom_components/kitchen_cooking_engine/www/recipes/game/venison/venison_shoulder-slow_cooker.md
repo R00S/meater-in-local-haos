@@ -1,3 +1,15 @@
+<!-- KCE:CUT_METHOD
+type: cut_method
+slug: venison_shoulder
+method: slow_cooker
+name: Shoulder × Slow Cooker
+category: game
+meat: venison
+cut_type: Venison
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
+-->
 # Venison Shoulder × Slow Cooker — Recipe Temperature Research
 
 ## Cut profile
