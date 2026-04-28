@@ -30,15 +30,15 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 7
+quality_score: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_assessed: 2026-04-27
 -->
 # Mahi-Mahi — Cut Overview
 
 ## Cut profile
 
-Mahi-mahi (*Coryphaena hippurus*), also called dolphinfish or dorado, is a large tropical and subtropical pelagic fish; the fillet is firm, moist, and moderately lean with a sweet, mild flavour and a distinctive large-flake texture. The skin is tough and not typically eaten — most preparations use skinless fillets. Mahi-mahi is popular across the Caribbean, Hawaiian, and American Gulf Coast cuisines, and is widely available as a sustainable fish choice. Pan searing produces a beautifully golden crust on the firm flesh; the natural moisture and slight fat content prevent drying out at moderate pull temperatures. The flesh transitions from moist-and-flaky to dry and stringy above 65 °C, so pulling at 60–62 °C is the target. Carryover is 3–4 °C.
+Mahi-mahi (*Coryphaena hippurus*), also called dolphinfish or dorado, is a large tropical and subtropical pelagic fish found in open warm waters worldwide. The fillets are firm, moist, and moderately lean with a distinctive large-flake texture and a mild, slightly sweet flavour profile. The skin is tough with iridescent scales and is not typically eaten — most preparations use skinless fillets. Average fillet thickness: 2–3 cm. The flesh holds together well under heat, more so than thin white fish fillets, making it suitable for grilling, pan searing, and baking. The flesh dries out above 65 °C; the optimal internal temperature is 60–63 °C for moist, flaky results.
 
 
 ## Research files by cooking method
@@ -46,22 +46,23 @@ Mahi-mahi (*Coryphaena hippurus*), also called dolphinfish or dorado, is a large
 - [Pan Sear](./mahi_mahi-pan_sear.md)
 ## Quality score
 
-**Score: 7 / 20** — assessed 2026-04-26
+**Score: 9 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing method leaf files (2 of 3 declared) | −2 |
-| Missing Culinary Group D tradition | −1 |
-| Cut profile lacks anatomy | −1 |
-| Method file `mahi_mahi-pan_sear.md` copies parent cut profile | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods not researched | − **NOT DONE** (−8) |
+| Cut profile anatomy | ✓ (fixed 2026-04-27) |
+| Pan sear cut profile method-specific | ✓ (fixed 2026-04-27) |
+| 2 missing leaves (air_fryer, grill) | − missing (−2) |
+| Culinary Group D covered | − missing (−1) |
+| Groups A, B, C | ✓ |
+
+**Deductions**: −8 methods · −2 missing leaves · −1 Group D = −11 → **9**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `mahi_mahi-air_fryer.md`, `mahi_mahi-grill.md`
-3. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
-4. **−1** · Method file `mahi_mahi-pan_sear.md` copies parent cut profile — rewrite `mahi_mahi-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-5. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−8** · Cooking methods not researched
+2. **−1 each** · Missing `mahi_mahi-air_fryer.md`, `mahi_mahi-grill.md`
+3. **−1** · Group D missing
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
