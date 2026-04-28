@@ -44,7 +44,7 @@ Pork shoulder steak (*nakkesteak* in Danish, *Schweinenackensteak* / *Schopfstea
 
 ## Styckesprofil
 
-Fläskaxel-stek (*nakkesteak* danska, *Schweinenackensteak* / *Schopfsteak* tyska/österrikiska) är skuren från halssektionen av fläskaxeln. Denna muskel är tätare marmorerad än loin-snitten — typiskt 8–15 % intramuskulärt fett — vilket gör axel-stek saftigare och mer förlåtande vid hög värme.
+Fläskbogskiva (*nakkesteak* danska, *Schweinenackensteak* / *Schopfsteak* tyska/österrikiska) är skuren från halssektionen av fläskbogen. Denna muskel är tätare marmorerad än loin-snitten — typiskt 8–15 % intramuskulärt fett — vilket gör bogskivan saftigare och mer förlåtande vid hög värme.
 
 Pannstekning: medel-hög värme, 3–4 minuter per sida. Innertemperatur: **70–74 °C (158–165 °F)** för genomstekt med saftighet kvar; **63 °C** USDA-minimum. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till mitten av steaken. Inte lika känslig för överkokning som magra snitten.
 

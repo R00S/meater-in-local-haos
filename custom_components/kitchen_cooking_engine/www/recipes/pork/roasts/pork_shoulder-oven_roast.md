@@ -19,9 +19,9 @@ Target internal temperatures (oven roast):
 
 ## Styckesprofil
 
-Fläskaxel / nacke (*nakkefilet* / *nakkekam* / *svinekølle* danska; *Schweinenacken* / *Schweineschulter* tyska) är ett av de mest förlåtande snitten för ugnen — fettmarmorering förhindrar uttorkning och det utvecklar komplex smak vid höga temperaturer.
+Fläskbog / nacke (*nakkefilet* / *nakkekam* / *svinekølle* danska; *Schweinenacken* / *Schweineschulter* tyska) är ett av de mest förlåtande snitten för ugnen — fettmarmorering förhindrar uttorkning och det utvecklar komplex smak vid höga temperaturer.
 
-Ugnsrostning: 160–200 °C i 2–4 timmar. Innertemperatur: **75–80 °C (167–176 °F)** för genomstekt, saftig axel; **88–95 °C** för pull-apart pulled pork. Eftertillagning: 3–5 °C. Sond in i tjockaste köttmassan, borta från skulderbladsben. Vila täckt 15–20 minuter.
+Ugnsrostning: 160–200 °C i 2–4 timmar. Innertemperatur: **75–80 °C (167–176 °F)** för genomstekt, saftig bog; **88–95 °C** för pull-apart pulled pork. Eftertillagning: 3–5 °C. Sond in i tjockaste köttmassan, borta från skulderbladsben. Vila täckt 15–20 minuter.
 
 ## Source recipes
 

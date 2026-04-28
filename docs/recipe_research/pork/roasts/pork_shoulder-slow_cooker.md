@@ -19,9 +19,9 @@ Target internal temperatures (slow cooker / very-low oven):
 
 ## Styckesprofil
 
-Fläskaxel (*Schweinenacken* / *Schweineschulter* tyska; *nakkefilet* / *svinenakke* danska/norska) slow-kokad vid mycket låga temperaturer ger den ultimata pulled pork — smält-i-munnen kött med rik, koncentrerad smak och gelatinös konsistens. Sous vide (74–85 °C, 24–48 timmar) eller slow cooker (LÅG, 8–10 timmar) uppnår pull-apart-mörhet med ett minimum av tillsyn.
+Fläskbog (*Schweinenacken* / *Schweineschulter* tyska; *nakkefilet* / *svinenakke* danska/norska) slow-kokad vid mycket låga temperaturer ger den ultimata pulled pork — smält-i-munnen kött med rik, koncentrerad smak och gelatinös konsistens. Sous vide (74–85 °C, 24–48 timmar) eller slow cooker (LÅG, 8–10 timmar) uppnår pull-apart-mörhet med ett minimum av tillsyn.
 
-Sond in i tjockaste köttmassan, borta från skulderbladsben. Innertemperatur: **85–95 °C (185–203 °F)** för pull-apart. Eftertillagning: noll (fuktig metod). Sear axeln hårt i het panna efter slow cooking för att skapa Maillard-arom och crispy yta.
+Sond in i tjockaste köttmassan, borta från skulderbladsben. Innertemperatur: **85–95 °C (185–203 °F)** för pull-apart. Eftertillagning: noll (fuktig metod). Sear bogen hårt i het panna efter slow cooking för att skapa Maillard-arom och crispy yta.
 
 ## Source recipes
 
