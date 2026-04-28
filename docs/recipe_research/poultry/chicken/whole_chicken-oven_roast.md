@@ -22,9 +22,11 @@ cut_type: Whole
 
 ## Cut profile
 
-A whole roasted chicken presents a fundamental challenge: the breast and thigh finish at different temperatures, so technique matters. Starting breast-side down lets the thigh meat begin rendering while protecting the breast. High initial heat (475 °F / 246 °C) produces crackling golden skin. The breast should reach 160–165 °F (71–74 °C) while the thigh reaches 165–170 °F (74–77 °C); a well-rested bird allows both to equalise. Average 3–4 lb bird takes 55–70 minutes total.
+Oven roasting is the most common method for whole chicken worldwide and the method best suited to producing the golden, crispy-skinned result that most recipes aim for. The oven surrounds the bird with hot air (175–230 °C depending on technique), rendering subcutaneous fat, desiccating the skin, and driving Maillard browning across the entire exposed surface. The key challenge is the temperature differential between breast and thigh: the breast, exposed at the top and with less fat, heats faster and dries out if allowed to go above 165 °F (74 °C), while the thigh benefits from reaching 170–175 °F (77–79 °C).
 
-Target internal temperatures: **Breast 160–165 °F (71–74 °C)** · **Thigh 165–170 °F (74–77 °C)**
+Two common approaches: (1) high heat throughout (220–230 °C) — produces very crispy skin in ~60–75 min but requires careful probe placement and pulling at thigh 165–170 °F; (2) moderate heat (180–190 °C) — more even cooking, longer time (~75–90 min), less risk of breast overcook.
+
+The MEATER probe is placed in the thigh, from the cavity side, directed towards the thigh bone without touching it. The thigh temperature is the limiting factor — the breast will be safe when the thigh reaches 165 °F. Carryover in the thigh is 3–5 °C; in the breast, 4–7 °C. Rest the bird uncovered on a rack for 10–15 minutes before carving.
 
 ## Source recipes
 

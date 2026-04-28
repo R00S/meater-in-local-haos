@@ -11,7 +11,11 @@ cut_type: Steaks
 
 ## Cut profile
 
-The New York strip steak (also called strip loin, sirloin strip, Kansas City strip, or *contre-filet* in French) is cut from the short loin of the beef carcass — the longissimus dorsi muscle on the posterior side of the backbone, behind the ribeye primal and ahead of the sirloin. It is a single-muscle steak with moderate marbling, firmer texture than a ribeye (the muscle does slightly more work), and a pronounced beefy flavour. The fat cap along one edge is a defining characteristic and flavour source. Pan searing is a primary preparation — the strip's firm, uniform cross-section sears evenly, and the fat cap can be rendered against the pan edge by standing the steak on its side. Carryover is 3–5 °C for a thick strip steak; the lean-to-moderate marbling means less self-basting than a ribeye.
+Oven roasting the New York strip works best as a reverse sear for thick-cut steaks (3 cm+): place the seasoned strip on a wire rack over a sheet pan in a 120–135 °C oven until the internal temperature is 45–47 °C (about 20–30 min), then transfer immediately to a smoking-hot cast-iron pan and sear 60–90 seconds per side plus the fat cap edge. This produces a steak with zero grey band, edge-to-edge doneness, and a deep Maillard crust.
+
+For thinner strips, a standard oven roast at 220–230 °C following a brief stovetop sear is faster. The NY strip's moderate marbling means it has less self-basting than a ribeye in the oven — a drizzle of butter or tallow in the final minutes compensates.
+
+MEATER probe enters from the thin end of the strip, aimed at the geometric centre, away from the fat cap edge. Carryover from a 120 °C oven: 4–6 °C; from 220 °C oven: 5–7 °C.
 
 ## Source recipes
 

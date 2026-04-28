@@ -11,11 +11,15 @@ cut_type: Steaks
 
 ## Cut profile
 
-The ribeye steak is cut from the longissimus dorsi muscle of the rib primal (ribs 6–12), a muscle that does minimal work and therefore develops exceptional intramuscular fat (marbling) throughout its grain. That marbling is the defining feature: the fat pockets liquefy under heat and baste the muscle from within, producing a richness and self-basting character that no other common steak cut matches. Pan searing is a natural partner for the ribeye because the very high conductive heat of a cast-iron or carbon-steel pan drives rapid Maillard browning of the fat-rich exterior, producing a deeply caramelised crust while the marbling keeps the interior moist even if the cook overshoots slightly. The bone-in version (côte de bœuf / cowboy ribeye) retains more flavour through the cook but requires more precise probe placement to read the eye of the steak rather than the area near the bone. Carryover in a pan-seared ribeye is moderate — typically 3–5 °C — because the metal pan delivers intense surface heat that dissipates once the steak is removed, but the fat content slows core temperature equalisation.
+Oven roasting is especially well-suited to the ribeye because the heavy marbling acts as a heat buffer — even in a high oven (220–230 °C), the liquefying fat slows the rate at which the interior heats, giving the cook a wider window before overcooking. The reverse-sear method (low oven at 120–135 °C to near-target temperature, followed by a very hot cast-iron sear for 60–90 seconds per side) produces the most even result for thick ribeyes (3 cm+): zero grey overcooked band, maximum edge-to-edge doneness, then a deep Maillard crust on the surface.
 
-Target internal temperatures (oven roast ribeye):
-- Medium-rare: **pull from oven at 52–54 °C (126–129 °F)**, rest to **57 °C (135 °F)**
-- Medium: **pull at 57–59 °C (135–138 °F)**
+For thinner ribeyes, a one-step high-heat oven roast (220–230 °C, 8–15 min depending on thickness) with an initial stovetop sear works well; the oven provides ambient heat that avoids the uneven surface contact of a stovetop-only method.
+
+The fat seam between the eye and rib cap in the oven does not cause problems — both sections reach near the same temperature given enough time. MEATER probe in the centre of the eye, away from the fat seam and bone. Carryover from a 120 °C oven: 4–6 °C. From a 220 °C oven: 5–7 °C.
+
+Target internal temperatures:
+- Medium-rare: pull at 52–54 °C (126–129 °F), rest to 57 °C (135 °F)
+- Medium: pull at 57–59 °C (135–138 °F)
 
 ## Source recipes
 
