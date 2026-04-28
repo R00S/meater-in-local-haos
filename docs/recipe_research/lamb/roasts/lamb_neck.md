@@ -22,14 +22,14 @@ doneness:
   max_f: 205
   usda_safe: true
 quality_score: 8
-cooking_methods_researched: 0
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 -->
 # Lamb Neck — Cut Overview
 
 ## Cut profile
 
-Lamb neck (Lammhals / collo di agnello / kuzu gerdan / lammehals) is one of the most underappreciated braising cuts. It is richly marbled, heavily worked, and packed with connective tissue and deep flavour. Cut into cross-sections or braised as a whole neck, it softens magnificently over 1.5–2.5 hours of moist heat, yielding deeply tender, self-basting meat in a rich, unctuous braising liquid. The neck is used in braises throughout Turkish, Italian, German, Greek, and Scandinavian traditions. A MEATER probe is inserted into the thickest cross-section of neck meat, away from the vertebrae, to track internal temperature.
+Lamb neck comprises the cervical vertebrae and associated muscles — primarily the *longissimus colli*, *semispinalis*, *multifidus*, and *trapezius* layers. These are heavily worked postural muscles, densely threaded with connective tissue seams and interspersed fat pockets. The neck is the most collagen-rich section of the lamb; it is structurally similar to osso buco but smaller, and can be purchased as a whole neck for pot-roasting or cross-cut (*lamb neck slices*) for braising. The high collagen load means it needs sustained time at 88–93 °C internal to fully convert connective tissue to gelatin, releasing the characteristic unctuous quality that defines well-braised lamb neck. MEATER probe into the thickest cross-section of neck meat, away from the vertebrae.
 
 
 Target internal temperature: **85–90 °C (185–194 °F)** for full braised tenderness.

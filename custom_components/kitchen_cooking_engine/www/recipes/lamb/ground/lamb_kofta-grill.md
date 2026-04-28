@@ -22,9 +22,9 @@ cut_type: Ground
 
 ## Cut profile
 
-Lamb kofta (köfte, kefta, kafta, kufta — many spelling variations) is one of the most widespread grilled preparations in the world, found from Morocco to Turkey, Iran, Pakistan, Afghanistan, India, and across the Levant. The ground lamb is mixed with onion, spices, and fresh herbs, shaped onto flat metal skewers, and grilled over high heat. It cooks very quickly (3–4 minutes per side) and must be cooked through. Inserting a MEATER probe into the thickest kofta is the recommended technique.
+Grilling is the only traditional method for kofta — it is a strictly fire-based preparation across all the traditions that created it. High, direct heat (charcoal preferred; gas acceptable) chars the exterior in 3–4 minutes per side, rendering the fat and creating the distinctive smoky-char crust that defines kofta's flavour. The fat renders so quickly on the grill that the kofta self-bastes continuously.
 
-Target internal temperature: **74 °C (165 °F)** for food-safe ground meat.
+The skewer placement means the MEATER probe must be inserted lengthwise through one end of the kofta, through the skewer channel, into the centre. Alternatively, probe the thickest kofta without the skewer in place before serving. Target: 71 °C (160 °F). Carryover: 3–4 °C. Pull at 66–67 °C to rest to 71 °C.
 
 ## Source recipes
 

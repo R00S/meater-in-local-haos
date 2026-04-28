@@ -22,9 +22,11 @@ cut_type: Dark Meat
 
 ## Cut profile
 
-Chicken wings (wingettes and drumettes) are small, high-surface-area dark-meat pieces that become irresistibly crispy in the air fryer without deep frying. The single most effective technique for extra-crispy skin is tossing wings with a small amount of baking powder before cooking — it raises the skin's pH, causing it to blister and brown faster. Patting wings dry is equally critical.
+The air fryer works by circulating very hot, dry air at high velocity around the food in a compact chamber. For chicken wings, this creates conditions similar to a convection oven but more intense: the rapid airflow desiccates the skin surface continuously while the small chamber allows the air temperature to recover quickly after the door is opened. The net result is a skin that crisps to near deep-fried texture without submerging in oil.
 
-Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
+The single most effective technique for extra-crispy air-fried skin is tossing wings in a small amount of baking powder before cooking. Baking powder is alkaline; it raises the skin's surface pH, which accelerates the Maillard browning reaction and causes the skin to blister and dehydrate more aggressively. Patting wings completely dry before seasoning is equally critical — residual water must evaporate before crisping can begin.
+
+Carryover is minimal for wings (1–2 °C) because the thin bones and high surface-to-mass ratio allow heat to escape quickly after removal from the fryer. Target internal temperature: **165 °F (74 °C)** minimum; most cooks prefer **170–175 °F (77–79 °C)** for optimal texture at dark-meat temperatures.
 
 ## Source recipes
 

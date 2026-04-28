@@ -30,14 +30,14 @@ doneness:
   max_f: 150
   usda_safe: true
 quality_score: 8
-cooking_methods_researched: 0
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 -->
 # Lobster Tail — Cut Overview
 
 ## Cut profile
 
-Lobster tail is the large tail segment of a lobster (*Homarus americanus*, the American/Maine lobster, or *Homarus gammarus*, the European/Breton lobster) separated from the body and claws; frozen and fresh spiny lobster tails (*Panulirus argus*) from the Caribbean and Pacific are also widely used. The edible flesh is the tail muscle — firm, white-to-pale-pink, sweet and rich in natural glutamates. Grilling is one of the most popular preparations for lobster tail because the direct radiant heat produces char and caramelisation on the cut flesh surface while the shell acts as a natural heat shield and flavour-retaining vessel. Butterflying the tail (cutting through the shell dorsally and splaying the flesh upward) is the dominant grill preparation because it exposes more flesh surface to direct heat and allows basting to penetrate the meat. Overcooking tightens the fibres sharply; the pull window is 58–62 °C before the meat becomes dry and rubbery. Carryover is 3–4 °C.
+Lobster tail is the tail segment of a lobster (*Homarus americanus* — American/Maine lobster; *Homarus gammarus* — European/Breton lobster; or *Panulirus argus* — Caribbean spiny lobster) separated from the body and claws. The edible flesh is the large tail muscle (*pleopod* and *telson* musculature), which is firm, white-to-pale-pink, sweet, and rich in natural glutamates. The segmented exoskeleton (shell) is a built-in heat shield that protects the flesh from overcooking and acts as a flavour-retaining vessel. Standard tail dimensions for cooking: 170–280 g (6–10 oz) spiny lobster tails, 3–5 cm thick at the broadest cross-section. Overcooking is the primary risk — muscle proteins tighten sharply above 62 °C; the pull window for moist, sweet meat is 58–62 °C. USDA minimum for lobster is 63 °C (145 °F).
 
 
 ## Research files by cooking method

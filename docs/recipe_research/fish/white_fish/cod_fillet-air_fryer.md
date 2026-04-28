@@ -11,12 +11,11 @@ cut_type: White Fish
 
 ## Cut profile
 
-Atlantic cod (*Gadus morhua*) fillet is cut from the sides of the fish; the flesh is firm, bright white when raw and milky white when cooked, with large moist flakes separated by thin layers of connective tissue. Cod is lean (less than 1% fat), which means it has no internal fat to provide self-basting protection during high-heat cooking; the natural moisture and gelatin in the connective tissue are the primary sources of perceived juiciness. Pan frying is a very common preparation — the high heat of the pan produces a golden-brown crust on the thin, flour- or breadcrumb-coated exterior while the interior cooks gently. Battered cod (fish and chips) uses the batter as insulation; simple pan-fried cod relies on a light coating of seasoned flour or the naked flesh. Carryover is minimal (2–3 °C) given the lean composition; the flesh transitions from moist-and-flaky to dry-and-crumbly rapidly above 65 °C.
+Air frying cod creates a hot-air convection environment that efficiently dries and browns the surface coating (breadcrumbs, panko, or seasoned flour) without submerging the fillet in fat. The result is a crust with lower fat content than deep frying but more surface crunch than oven baking. Cod's lean flesh (< 1% fat) responds well because the forced air circulation prevents steam-soaking of the crust, which is a common oven-baking problem. Fillets of 2–3 cm thickness cook in 10–14 minutes at 190–200 °C. Pull at 60–63 °C; carryover is minimal (2–3 °C) given the lean, thin geometry.
 
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air-Fryer Cod (American tradition)
-**Source**: America's Test Kitchen, *Air Fryer Perfection* (America's Test Kitchen, 2019)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 2 min
 
 **Ingredients**

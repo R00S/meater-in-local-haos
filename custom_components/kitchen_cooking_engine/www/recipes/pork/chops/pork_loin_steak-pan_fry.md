@@ -11,11 +11,9 @@ cut_type: Chops & Tenderloin
 
 ## Cut profile
 
-Pork loin steak (koteletsteg, Lendensteak vom Schwein) is a boneless steak cut from the loin (between chop and tenderloin area). It is lean and uniform in thickness, making it ideal for pan frying with the same technique as pork chop: hot pan, butter baste, 3–4 min per side. It is slightly more forgiving than tenderloin but dries out faster than a shoulder steak. Target core: 63–65 °C.
+Pan frying is the primary method for pork loin steak: hot pan, butter baste, same technique as a pork chop. The lean, uniform cross-section sears evenly without hotspots. Begin with a dry, hot pan (180–200 °C) and a small amount of oil to prevent sticking; once the first face is seared (1.5–2 min), flip, add butter and garlic, and baste continuously for 1.5–2 minutes. The butter baste compensates for the low intramuscular fat and adds richness.
 
-Target internal temperatures (pan fry):
-- Juicy/pink: **63–65 °C (145–149 °F)**
-
+Because the cut is lean, pull early: 61–63 °C for a very slightly pink, moist interior; carryover will bring it to 63–65 °C. At 70 °C the loin steak becomes noticeably dry. MEATER probe from the side of the steak, aimed at the geometric centre. Carryover: 2–4 °C.
 ## Source recipes
 
 ### 1. Madens Verden — Pandestegning af koteletter (adapted for loin steak) (Danish tradition)

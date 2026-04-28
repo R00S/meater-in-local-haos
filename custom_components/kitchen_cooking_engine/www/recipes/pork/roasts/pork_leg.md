@@ -31,14 +31,14 @@ doneness:
   max_f: 170
   usda_safe: true
 quality_score: 8
-cooking_methods_researched: 0
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 -->
 # Pork Leg Roast — Cut Overview
 
 ## Cut profile
 
-Pork leg and hock (Schweinshaxe / stinco di maiale / kuzu incik) is a collagen-rich cut with thick connective tissue, bone marrow, and heavily worked muscle. Braising unlocks the cut's full potential: 2–3 hours of moist heat at low temperature converts collagen to gelatin, creating sticky, unctuous, fall-off-the-bone meat surrounded by a richly reduced sauce. Popular braised in beer across Bavaria, Central Europe, and the British Isles; in soy and spices across East Asia; and in wine with herbs across Mediterranean Europe. The MEATER probe is placed deep into the thickest muscle mass of the leg or hock, away from the bone, to track internal temperature accurately.
+Pork leg (*Schweinshaxe*, German/Austrian — actually this is hock/shank; *stinco di maiale*, Italian; *pernil*, Caribbean/Filipino; *jamón fresco*, Spanish) refers to two distinct retail cuts in different markets: (1) the whole fresh leg (4–8 kg), used for *pernil* and Spanish-style roasting; (2) the hock/shank — the lower joint of the leg where the *tibia/fibula* meet the ankle, heavily worked, collagen-dense, and the quintessential braise cut. The hock muscle is primarily composed of *flexor digitorum profundus* and *extensor* layers bound in thick collagen sheets. Both cuts need prolonged cooking to develop tenderness: whole leg roasts at 65–75 °C over 3–5 hours (low-and-slow); hock braised to 88–95 °C over 2–3 hours. MEATER probe into the thickest muscle mass, away from the bone.
 
 
 Target internal temperature: **75–80 °C (167–176 °F)** for sliceable, tender; **85–90 °C (185–194 °F)** for pull-apart.

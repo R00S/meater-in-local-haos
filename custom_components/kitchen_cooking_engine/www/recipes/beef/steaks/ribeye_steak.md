@@ -58,20 +58,17 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 7
-cooking_methods_researched: 0
-quality_assessed: 2026-04-26
+quality_score: 11
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
+quality_assessed: 2026-04-27
 -->
 # Ribeye Steak — Cut Overview
 
 ## Cut profile
 
-The ribeye steak is cut from the longissimus dorsi muscle of the rib primal (ribs 6–12), a muscle that does minimal work and therefore develops exceptional intramuscular fat (marbling) throughout its grain. That marbling is the defining feature: the fat pockets liquefy under heat and baste the muscle from within, producing a richness and self-basting character that no other common steak cut matches. Pan searing is a natural partner for the ribeye because the very high conductive heat of a cast-iron or carbon-steel pan drives rapid Maillard browning of the fat-rich exterior, producing a deeply caramelised crust while the marbling keeps the interior moist even if the cook overshoots slightly. The bone-in version (côte de bœuf / cowboy ribeye) retains more flavour through the cook but requires more precise probe placement to read the eye of the steak rather than the area near the bone. Carryover in a pan-seared ribeye is moderate — typically 3–5 °C — because the metal pan delivers intense surface heat that dissipates once the steak is removed, but the fat content slows core temperature equalisation.
+The ribeye steak is cut from the *longissimus dorsi* muscle of the rib primal (ribs 6–12), a muscle that does minimal work and therefore develops exceptional intramuscular fat (marbling) throughout its grain. That marbling is the defining feature of the ribeye — the fat pockets liquefy under heat and baste the muscle from within, producing a richness and self-basting character that no other common steak cut matches. The bone-in version (*côte de bœuf* / cowboy ribeye) retains more flavour through the cook and requires more precise probe placement to read the eye of the steak rather than the area near the bone.
 
-
-Target internal temperatures (oven roast ribeye):
-- Medium-rare: **pull from oven at 52–54 °C (126–129 °F)**, rest to **57 °C (135 °F)**
-- Medium: **pull at 57–59 °C (135–138 °F)**
+The ribeye is composed of the eye muscle (*longissimus*), the rib cap (*spinalis dorsi*, the richest and most prized portion), and the rib intercostal (finger meat). The rib cap, separated by an internal fat seam, cooks slightly faster than the eye. The MEATER probe should enter from the side and travel to the centre of the eye muscle, avoiding the internal fat seam and any bone.
 
 
 ## Research files by cooking method
@@ -85,24 +82,20 @@ Target internal temperatures (oven roast ribeye):
 - [Sous Vide](./ribeye_steak-sous_vide.md)
 ## Quality score
 
-**Score: 7 / 20** — assessed 2026-04-26
+**Score: 11 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group C tradition | −1 |
-| Method file `ribeye_steak-oven_roast.md` copies parent cut profile | −1 |
-| Method file `ribeye_steak-pan_sear.md` copies parent cut profile | −1 |
-| Method file `ribeye_steak-oven_roast.md` copies `ribeye_steak-pan_sear.md` | −1 |
-| Method file `ribeye_steak-oven_roast.md` copies `ribeye_steak-sous_vide.md` | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods not researched | − **NOT DONE** (−8) |
+| All method cut profiles distinct (no copies) | ✓ (fixed 2026-04-27) |
+| Culinary Group C covered | − missing (−1) |
+| All other groups | ✓ |
+
+**Deductions**: −8 methods not researched · −1 Group C missing = −9 → 20−9 = **11**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Method file `ribeye_steak-oven_roast.md` copies `ribeye_steak-pan_sear.md` — rewrite `ribeye_steak-oven_roast.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
-3. **−1** · Method file `ribeye_steak-oven_roast.md` copies `ribeye_steak-sous_vide.md` — rewrite `ribeye_steak-oven_roast.md`'s cut profile — it must describe what the sous vide method does to this cut, not repeat another method's prose
-4. **−1** · Method file `ribeye_steak-oven_roast.md` copies parent cut profile — rewrite `ribeye_steak-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-5. **−1** · Method file `ribeye_steak-pan_sear.md` copies parent cut profile — rewrite `ribeye_steak-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-6. **−1** · Missing Culinary Group C tradition(s) — add Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−8** · Cooking methods not researched
+2. **−1** · Group C tradition missing — add a Moroccan, Turkish, Lebanese, or other Group C ribeye/beef steak recipe
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

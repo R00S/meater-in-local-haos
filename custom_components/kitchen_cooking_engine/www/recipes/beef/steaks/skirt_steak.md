@@ -40,14 +40,14 @@ doneness:
   max_f: 145
   usda_safe: false
 quality_score: 8
-cooking_methods_researched: 0
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 -->
 # Skirt Steak — Cut Overview
 
 ## Cut profile
 
-Skirt steak over live charcoal is arguably its highest form — in taquero tradition, *arrachera asada* (literally "grilled skirt steak") means skirt steak cooked over mesquite or hardwood charcoal, where the fat drippings ignite the coals into brief, flavour-depositing flare-ups. The smoky charcoal notes complement the intense beefy flavour of the diaphragm muscle. Mexican *taquero* tradition uses very hot mesquite charcoal; Argentine *parrilla* tradition uses quebracho wood embers. The probe challenge is the same as on a gas grill: thin steak, end insertion required. Carryover from very hot charcoal is 5–7 °C.
+Skirt steak is cut from the plate section of the beef carcass, comprising two distinct muscles: the *outside skirt* (*diaphragm* muscle, *diaphragmaticus*) and the *inside skirt* (*transverse abdominal oblique*, *transversus abdominis*). The outside skirt is the more prized cut — thicker, more heavily marbled, and more intensely flavoured than the inside skirt. Both muscles are characterised by coarse, heavily-grained long muscle fibres running along the length of the steak, with prominent fat seams between the fibre bundles. The grain structure means skirt steak must be sliced against the grain after resting or it will be unpleasantly chewy. Fat content is high (well-marbled); it is the defining cut for Mexican *arrachera* and *fajitas*, Argentine *asado* (as *entraña*), and Spanish *fraldinha*. Target: 52–57 °C (medium-rare) for maximum tenderness before muscle fibres tighten.
 
 
 ## Research files by cooking method

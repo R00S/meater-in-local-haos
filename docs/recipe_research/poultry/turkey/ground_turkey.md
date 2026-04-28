@@ -23,7 +23,7 @@ doneness:
   usda_safe: true
   recommended: true
 quality_score: 9
-cooking_methods_researched: 0
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 -->
 # Ground Turkey — Cut Overview
@@ -31,6 +31,8 @@ quality_assessed: 2026-04-26
 ## Cut profile
 
 Ground turkey (minced turkey) is made by grinding dark meat (thigh and leg), white meat (breast), or a blend. A dark-meat-inclusive blend (typically 93/7 lean/fat) has noticeably better flavour and moisture retention than pure breast-meat grinds. Because turkey is poultry, the USDA minimum safe internal temperature is 74°C (165°F) with no reduction for resting. Ground turkey cooks faster than beef or pork at the same mass due to its lower fat content and should be monitored closely to avoid dryness. Carryover is 1–2°C.
+
+Ground turkey is primarily used in North American cooking as a leaner substitute for ground beef in burgers, meatballs, patties, and mince-based sauces. It appears in Eastern European cuisine as kotlety (pan-fried patties, often mixed with pork or veal). Turkish and Middle Eastern cuisines use it in köfte/kofta, though lamb and beef are more traditional. Italian cuisine uses tacchino macinato for hamburger e polpette.
 
 
 ## Research files by cooking method

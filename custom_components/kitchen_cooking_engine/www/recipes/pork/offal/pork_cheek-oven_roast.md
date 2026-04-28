@@ -10,7 +10,7 @@ cut_type: Other / Offal
 # Pork Cheek × Oven Roast — Recipe Temperature Research
 
 ## Cut profile
-Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the small dense muscle of the jaw — roughly 80–120 g per cheek, marbled with thin sheets of intramuscular fat and rich in collagen from the constant chewing motion the muscle performs in life. For pan frying (rather than the more common braise), the cheeks are typically butterflied to expose the interior, dusted lightly, and seared at high heat — the goal is to crust the surface while keeping the centre at a tender medium-rare. This works because the cheek's collagen network, while extensive, is fine-grained enough that a brief flash sear (rather than a long braise) leaves the muscle bouncy rather than rubbery. The carryover is small (2–3 °C) given the thin butterflied cuts.
+Oven roasting pork cheeks is a hybrid method: the cheeks sit in a small amount of liquid (sherry, wine, or stock at roughly 1 cm depth) so the submerged underside gently braises while the exposed top caramelises in dry oven heat. This gives a dual texture — a roasted, slightly firm exterior crust and a gelatinous interior — that differs from a full braise's uniformly spoon-tender result. Target pull temperature is 91–93 °C (196–199 °F), as collagen must still fully dissolve. Regular basting (every 20 minutes) replenishes the surface glaze and prevents drying. Carryover is 3–4 °C after resting.
 
 ## Source recipes
 

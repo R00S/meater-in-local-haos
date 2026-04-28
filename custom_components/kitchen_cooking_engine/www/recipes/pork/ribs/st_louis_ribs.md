@@ -21,9 +21,9 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 0
-cooking_methods_researched: 0
-quality_assessed: 2026-04-26
+quality_score: 9
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
+quality_assessed: 2026-04-27
 -->
 # St. Louis Style Ribs — Cut Overview
 
@@ -65,33 +65,31 @@ parallel to the bone. The centre third of the rack gives the most representative
 
 | Method | Leaf file | Status |
 |--------|-----------|--------|
-| oven_roast | *not yet created* | ⬜ |
-| grill | *not yet created* | ⬜ |
-| smoker | *not yet created* | ⬜ |
+| Oven roast | `st_louis_ribs-oven_roast.md` | ⚠️ In progress — 2 sources (Groups A + B), needs C and D |
+| Grill | *not yet created* | ⬜ |
+| Smoker | *not yet created* | ⬜ |
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-27
+**Score: 9 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Cut profile is a placeholder | −1 |
-| No method leaf files | −3 |
-| No temperature research (safe temps) | −3 |
-| No temperature research (culinary preferred) | −4 |
-| No per-method temp research | −2 |
+| Criterion | Points | Status |
+|-----------|--------|--------|
+| Cut profile written (not a placeholder) | +1 | ✅ Done |
+| Culinary Group A tradition covered (oven_roast leaf) | +1 | ✅ Done |
+| Culinary Group B tradition covered (oven_roast leaf) | +1 | ✅ Done |
+| Oven_roast leaf has source recipes with safe temps | +3 | ✅ Done |
+| Culinary preferred temp research present | +4 | ✅ Done (low-and-slow 88–93 °C) |
+| Per-method temp research present | +2 | ✅ Done — oven_roast leaf |
+| Cooking methods not researched | −8 | pending |
+| Missing Culinary Group C tradition | −1 | pending |
+| Missing Culinary Group D tradition | −1 | pending |
+| No grill leaf | − | pending |
+| No smoker leaf | − | pending |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
-2. **−4** · No temperature research (culinary preferred)
-3. **−3** · No method leaf files
-4. **−3** · No temperature research (safe temps)
-5. **−4** · Missing all four traditions
+1. **−8** · Cooking methods not researched — research grill (direct vs indirect) and smoker methods for St. Louis ribs; create leaf files; then set `cooking_methods_researched: 1`
+2. **−2** · Missing Groups C and D — add Caribbean, West African, or North African oven rib source to `st_louis_ribs-oven_roast.md`; add German/Polish/Slavic oven rib source
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Score will increase toward ~14/20 once Groups C and D are covered.*

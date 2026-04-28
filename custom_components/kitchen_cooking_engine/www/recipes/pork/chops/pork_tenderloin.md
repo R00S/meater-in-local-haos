@@ -33,14 +33,14 @@ doneness:
   max_f: 170
   usda_safe: true
 quality_score: 8
-cooking_methods_researched: 0
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 -->
 # Pork Tenderloin — Cut Overview
 
 ## Cut profile
 
-Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo) is the leanest cut of pork and the most forgiving for pan searing — it cooks quickly (whole tenderloin: 12–15 min total; medallions: 2 min per side) and is best served slightly pink at 63–65 °C. Remove silverskin before cooking. Two main approaches: (1) slice into medallions and sear each side 2 minutes — fastest; (2) sear the whole tenderloin on all sides then finish in the oven at 200 °C × 15 min.
+Pork tenderloin (*svinemørbrad*, Danish/Norwegian; *Schweinefilet*, German; *solomillo de cerdo*, Spanish; *filet mignon de porc*, French) is the *psoas major* — the long, tapered, loin muscle that runs along the inside of the lumbar vertebrae. Because this muscle does essentially no physical work (it stabilises the spine), it is the leanest and most tender cut on the pig: virtually no fat, no connective tissue, and very fine muscle fibres. Average weight: 400–600 g per tenderloin. The lean composition means it dries out faster than any other pork cut above 70 °C; the optimal temperature range is 63–68 °C (slightly pink to just-cooked). It must be trimmed of the *silverskin* (*fascia lata* connective tissue) before cooking — leaving it on causes the tenderloin to curl and cook unevenly.
 
 
 Target internal temperatures (grill):

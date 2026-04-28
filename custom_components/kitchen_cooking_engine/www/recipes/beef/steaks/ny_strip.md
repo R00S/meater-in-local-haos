@@ -58,15 +58,17 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 7
-cooking_methods_researched: 0
-quality_assessed: 2026-04-26
+quality_score: 10
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
+quality_assessed: 2026-04-27
 -->
 # New York Strip — Cut Overview
 
 ## Cut profile
 
-The New York strip over live hardwood charcoal benefits from the distinctive smoke compounds — guaiacol, syringol, and related phenolics — that gas grilling cannot replicate. The intense radiant heat from a well-managed charcoal fire sears the strip's firm muscle rapidly, rendering the fat cap and producing a deeply flavoured crust. The charcoal method also permits the cook to modulate the fire by adjusting air vents and coal arrangement; a two-zone fire (direct coals on one side, indirect on the other) allows initial searing then gentle finishing by indirect heat for thick-cut strips. Carryover from a very hot charcoal fire is 5–6 °C for a thick steak; this must be factored into the pull temperature.
+The New York strip steak (also called strip loin, sirloin strip, Kansas City strip, or *contre-filet* in French) is cut from the short loin of the beef carcass — the *longissimus dorsi* muscle on the posterior side of the backbone, behind the ribeye primal and ahead of the sirloin. It is a single-muscle steak with moderate marbling, firmer texture than a ribeye (the muscle does slightly more work), and a pronounced beefy flavour. The fat cap along one edge is a defining characteristic and flavour source — it renders during high-heat cooking and should not be trimmed before cooking.
+
+The strip is leaner than the ribeye but more forgiving than the tenderloin; its moderate marbling provides enough self-basting to prevent drying in most cooking methods. Carryover is 3–5 °C for a thick-cut strip steak.
 
 
 ## Research files by cooking method
@@ -80,23 +82,24 @@ The New York strip over live hardwood charcoal benefits from the distinctive smo
 - [Sous Vide](./ny_strip-sous_vide.md)
 ## Quality score
 
-**Score: 7 / 20** — assessed 2026-04-26
+**Score: 10 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Method file `ny_strip-charcoal_grill.md` copies parent cut profile | −1 |
-| Method file `ny_strip-oven_roast.md` copies `ny_strip-pan_fry.md` | −1 |
-| Method file `ny_strip-oven_roast.md` copies `ny_strip-pan_sear.md` | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods not researched | − **NOT DONE** (−8) |
+| All method cut profiles distinct (no copies) | ✓ (fixed 2026-04-27) |
+| Culinary Group A covered | − missing (−1) |
+| Culinary Group D covered | − missing (−1) |
+| Culinary Groups B, C | ✓ |
+
+**Deductions**: −8 methods · −1 Group A · −1 Group D = −10 → 20−10 = **10**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing Culinary Group A and Culinary Group D tradition(s) — add Culinary Group A and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Method file `ny_strip-charcoal_grill.md` copies parent cut profile — rewrite `ny_strip-charcoal_grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Method file `ny_strip-oven_roast.md` copies `ny_strip-pan_fry.md` — rewrite `ny_strip-oven_roast.md`'s cut profile — it must describe what the pan fry method does to this cut, not repeat another method's prose
-5. **−1** · Method file `ny_strip-oven_roast.md` copies `ny_strip-pan_sear.md` — rewrite `ny_strip-oven_roast.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
+1. **−8** · Cooking methods not researched
+2. **−1** · Group A tradition missing — find a Japanese, Korean, or Chinese strip steak recipe
+3. **−1** · Group D tradition missing — find a Polish, Swedish, or Baltic strip steak recipe
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -11,7 +11,9 @@ cut_type: Steaks
 
 ## Cut profile
 
-The T-bone steak is defined by the T-shaped vertebral bone that separates two distinct muscles: the larger striploin (*longissimus dorsi*) on the long side of the bone, and the smaller tenderloin (*psoas major*) fillet on the shorter side. This presents a unique cooking challenge: the two muscles have different ideal internal temperatures (the tenderloin cooks faster and is best at 52–54 °C, the strip benefits from 55–57 °C), and the bone itself acts as an insulator — the meat nearest the bone always lags behind by 3–5 °C. Pan searing a T-bone requires a pan large enough to accommodate the steak flat, very high heat, and careful probe placement. The MEATER probe should be placed in the striploin side (the larger portion), away from the bone, for the most representative reading. Carryover is 4–5 °C.
+Oven roasting a T-bone is most effective as a reverse-sear: start at 120–135 °C to bring the whole steak to within 10 °C of the target temperature with zero gradient, then blast in a cast-iron pan or under the broiler at maximum heat for 60–90 seconds per side to form the crust. This eliminates the overcooked grey ring that conventional high-heat sear-then-oven methods leave.
+
+The two-muscle geometry (striploin + tenderloin) is actually *helped* by the reverse sear: the slow low oven equilibrates the temperature across both muscles, minimising the differential. The insulating bone still causes the meat nearest the bone to lag 3–5 °C behind — this is desirable for anyone who prefers the tenderloin slightly rarer than the strip. MEATER probe in the striploin side, away from the bone. Carryover after the oven phase is 4–6 °C; after the final high-heat sear, 2–3 °C.
 
 ## Source recipes
 

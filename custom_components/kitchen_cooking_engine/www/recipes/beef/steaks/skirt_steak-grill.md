@@ -11,7 +11,9 @@ cut_type: Steaks
 
 ## Cut profile
 
-Skirt steak is cut from the plate section (the diaphragm muscles) of the beef — there are two muscles: the outside skirt (*diaphragm proper*, thicker, more uniform, more flavourful) and the inside skirt (thinner, more variable in thickness). Both are intensely flavoured and very coarsely grained, making them ideal for marinades and quick, very high-heat cooking. Skirt steak is central to Mexican *fajitas*, Brazilian *fraldinha*, and American steakhouse menus. Pan searing skirt steak requires the very highest heat possible: the steak is thin (1–1.5 cm) and must develop a deep brown crust in the 2–3 minutes before the interior exceeds 57 °C. The MEATER probe is challenging in a thin cut — insert from the end, angling towards the thickest part, or monitor the time-based cues in the recipe. Carryover from a screaming-hot cast-iron pan is 3–5 °C.
+Gas-grill skirt steak requires maximum direct heat — all burners on high, lid closed to pre-heat the grate to 260–280 °C (500–540 °F) surface temperature. The steak goes on the hottest part of the grate; the goal is a dark, mahogany-brown sear on both faces in the fewest possible minutes so the interior stays rare-to-medium-rare. Because skirt steak is thin (1–1.5 cm), total cook time is 2–3 minutes per side — longer means overcooked interior.
+
+Marinating before grilling is highly recommended: 30 minutes to 2 hours in citrus/acid + oil + garlic/spices (fajita marinade) tenderises the coarse fibres and adds flavour. MEATER probe inserted from the end of the steak, angling toward the thickest section. Pull at 49–54 °C; carryover from a hot grate is 4–5 °C, reaching 52–57 °C (medium-rare). Always rest 5 minutes and slice against the grain.
 
 ## Source recipes
 

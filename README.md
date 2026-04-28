@@ -26,9 +26,14 @@ Full installation, configuration, and feature documentation:
 
 ## 📊 Current Status
 
-**v0.6.3.5** — Development release (April 2026)
+**v0.6.4.5** — Development release (April 2026)
 
 Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.6.4.x Changes — Recipe research quality pass & data fixes (April 2026)
+- ✅ **Fix: Duplicate ground turkey cut** — Removed redundant `turkey_ground` entry from the Turkey cut type; `ground_turkey` is now the single canonical entry under Ground Poultry
+- ✅ **50+ cut files improved** — Anatomy-based cut profiles, new method leaf files, and additional recipe sources across beef, pork, lamb, poultry, fish, and game
+- ✅ **Culinary group renames** — Direction names (Eastern/Western/etc.) replaced with Group A/B/C/D labels repo-wide to prevent name-based guessing in future research sessions
 
 ### v0.6.3.x Fixes — Blank screen & custom card registration (April 2026)
 - ✅ **Fix: Sidebar panel blank screen** — Reverted bare `"lit"` import to the working unpkg CDN URL; fixed broken ternary syntax error in `_renderNinjaBuiltInRecipesView`

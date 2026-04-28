@@ -10,7 +10,10 @@ cut_type: Root Vegetables
 # Roasted Potatoes × Air Fryer — Recipe Temperature Research
 
 ## Cut profile
-Roasting potatoes (*Solanum tuberosum*) converts the raw starch to a crisp, caramelised exterior and fluffy interior. High-starch varieties (Maris Piper, Russet, King Edward) are preferred because their floury texture creates better fluffiness inside and absorbs fat more effectively for crispness. Waxy varieties (Charlotte, Jersey Royal) hold their shape but produce less crisp results. Fat coating (duck fat, goose fat, olive oil, lard) is essential — it conducts heat, enables Maillard browning, and adds flavour. Pre-boiling until edges are rough (chuffed) dramatically increases crispness by maximising surface area. Target internal temperature is 95–100°C for full starch gelatinisation and a fluffy interior.
+
+Air-frying potatoes produces results close to oven roasting but in roughly half the time and with less fat, because the high-speed hot air circulation (equivalent to a convection oven running at full fan speed) transfers heat very efficiently to all surfaces simultaneously. Pre-boiling is still beneficial but can be skipped for thinner cuts (wedges, chips) — the air fryer is hot enough to chuff the surface during the first few minutes without parboiling. Tossing in oil (1–2 tablespoons is sufficient, much less than oven roasting) before loading into the basket is still necessary for Maillard browning.
+
+At 200 °C in an air fryer: potato cubes (2–3 cm) are done in 20–25 minutes with one toss halfway through. Target internal: 95–100 °C. The air-fryer method is less effective than oven roasting for very large Sunday-roast-style chunks (whole-surface crisping is harder in a loaded basket) but excels for individual portions.
 
 ## Source recipes
 

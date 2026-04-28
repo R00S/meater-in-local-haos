@@ -38,45 +38,44 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 7
-cooking_methods_researched: 0
-quality_assessed: 2026-04-26
+quality_score: 9
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
+quality_assessed: 2026-04-28
 -->
 # Venison Loin — Cut Overview
 
 ## Cut profile
 
-Venison loin (also: backstrap, saddle, or haunch steak — depending on country) from roe deer (*Capreolus capreolus*) or red deer (*Cervus elaphus*) is the premium pan-searing cut. The meat is very lean, deep red-brown, and has a rich, gamey flavour prized throughout European cooking. Pan-searing 2–3 minutes per side over high heat is the standard technique; the meat is universally pulled at medium-rare to medium to avoid dryness.
+Venison loin (also: backstrap, saddle, or haunch steak — depending on country) from roe deer (*Capreolus capreolus*) or red deer (*Cervus elaphus*) is the premium lean cut from the back muscle running alongside the spine. The meat is very lean, deep red-brown, and has a rich, gamey flavour prized throughout European and South Asian cooking. It has negligible fat or connective tissue, which means it cooks quickly and must be pulled early (medium-rare to medium) to avoid drying out. It is structurally comparable to beef tenderloin but with a more pronounced flavour.
 
-Köket.se temperature guide (Sweden):
-- Rådjur/hjort ytterfilé & filé: rare 52 °C, medium 57 °C, well done 65 °C
-- Stekdetaljer: 55/62/68 °C
+Pan-searing 2–3 minutes per side over high heat is the most common technique. Oven-roasting (sear + finish in oven) is used for whole loins and for larger restaurant presentations. Sous vide at 54–57 °C gives excellent control for the medium-rare target. The USDA safe temperature is 63 °C (145 °F); most culinary sources recommend serving below this for optimal texture.
 
-
-Venison loin (also: backstrap, saddle, or haunch steak — depending on country) from roe deer (*Capreolus capreolus*) or red deer (*Cervus elaphus*) is the premium pan-searing cut. The meat is very lean, deep red-brown, and has a rich, gamey flavour prized throughout European cooking. Pan-searing 2–3 minutes per side over high heat is the standard technique; the meat is universally pulled at medium-rare to medium to avoid dryness.
+Temperature guide (from Köket.se, Sweden — accessed 2026-04-27):
 - Rådjur/hjort ytterfilé & filé: rare 52 °C, medium 57 °C, well done 65 °C
 - Stekdetaljer: 55/62/68 °C
 
 
 ## Research files by cooking method
 
-- [Pan Sear](./venison_loin-pan_sear.md)
+- [Pan Sear](./venison_loin-pan_sear.md) — 4 sources: Group B (2× British, 1× German), in-progress (Groups A/C/D missing)
+- [Oven Roast](./venison_loin-oven_roast.md) — 🔄 in progress (2 sources: Group B British, Group A Indian)
+
 ## Quality score
 
-**Score: 7 / 20** — assessed 2026-04-26
+**Score: 9 / 20** — assessed 2026-04-28
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
-| Missing method leaf files (2 of 3 declared) | −2 |
-| Missing Culinary Group A tradition | −1 |
+| sous_vide leaf missing | −1 |
 | Missing Culinary Group C tradition | −1 |
 | Missing Culinary Group D tradition | −1 |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `venison_loin-oven_roast.md`, `venison_loin-sous_vide.md`
-3. **−3** · Missing Culinary Group A, Culinary Group C and Culinary Group D tradition(s) — add Culinary Group A, Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−8** · Cooking methods not researched — pan_sear and oven_roast are confirmed methods. sous_vide is declared but not yet verified via source research. Conduct a proper survey of all methods used for this cut and set `cooking_methods_researched: 1` only after that is done.
+2. **−1** · sous_vide leaf missing — `venison_loin-sous_vide.md` not yet created; requires 4–6 diverse source recipes with method-specific cut profile and temperature data
+3. **−1** · Missing Culinary Group C tradition — no Group C sources in any leaf; venison loin is uncommon in African/Middle Eastern/Caribbean cuisine; extensive search conducted
+4. **−1** · Missing Culinary Group D tradition — no Group D sources in any leaf; Swedish temperature data cited in cut profile but no full recipe from a Group D source found yet
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

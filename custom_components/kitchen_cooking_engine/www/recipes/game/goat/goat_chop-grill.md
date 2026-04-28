@@ -22,7 +22,9 @@ cut_type: Goat
 
 ## Cut profile
 
-Goat loin or rib chops are popular throughout West Africa, the Caribbean, South Asia, the Middle East, and the Mediterranean. The meat is leaner than lamb with a slightly stronger, more aromatic flavour. Pan searing is typically done at high heat with marinades containing aromatic spices (cumin, coriander, ginger, garlic). Like lamb, goat chops are served medium to well-done.
+Grilling goat chops over direct heat is the traditional preparation across West Africa, the Caribbean, and the Middle East. The lean meat and modest fat content mean grill time must be controlled carefully — goat chops dry out faster than lamb chops at the same temperature. Marinading (24 h in citrus, garlic, and spices) tenderises the lean muscle and adds moisture retention.
+
+Direct medium-high heat: 3–4 minutes per side for 2.5 cm chops. MEATER probe inserted from the bone end into the thickest part of the eye muscle (*longissimus dorsi*), avoiding the bone. Target: 68–72 °C (medium-well) — the conventional serving range for goat chops. Carryover: 3–4 °C from a hot grate. Let rest 3 min before serving.
 
 Target internal temperature: **70–74 °C (158–165 °F)**.
 

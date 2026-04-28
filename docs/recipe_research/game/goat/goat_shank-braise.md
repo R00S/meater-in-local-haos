@@ -10,7 +10,10 @@ cut_type: Goat
 # Goat Shank × Braise — Recipe Temperature Research
 
 ## Cut profile
-A goat shank (Swedish *getlägg*) is the lower portion of the animal's leg — heavily worked, dense with collagen, intramuscular fat (limited; goat is leaner than lamb) and bone marrow. Like the lamb shank, it is a quintessentially braising cut: tough beyond chewing if cooked to medium-rare, but transformed by long, slow cooking in liquid into fork-tender, gelatin-rich meat that falls off the bone. Internal temperature is the wrong metric: the cut needs time at 88–93 °C internal (the collagen-melting band) for 1.5–2 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, parallel to the bone (avoid touching bone).
+
+Braising is the definitive method for goat shank — the only method that reliably converts its dense collagen to gelatin. The shank goes into a braising vessel with aromatic vegetables, liquid (stock, wine, beer, or water), and spices covering the lower two-thirds of the shank. Covered, low oven (160–170 °C / 325 °F) for 2.5–3 hours; or stovetop simmer; or slow cooker on LOW for 6–8 hours.
+
+Target: 88–93 °C internal AND sustained time at that temperature — temperature alone is insufficient; the collagen needs 1–1.5 hours at 88 °C or above to fully hydrolyse. MEATER probe horizontally through the thickest muscle, parallel to the bone. The shank is done when the meat pulls away from the bone easily; the braising liquid will have concentrated into a rich, gelatin-thickened sauce.
 
 ## Source recipes
 

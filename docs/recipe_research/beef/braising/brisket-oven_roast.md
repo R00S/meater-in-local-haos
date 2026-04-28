@@ -10,7 +10,10 @@ cut_type: Braising Cuts
 # Beef Brisket × Oven Roast — Recipe Temperature Research
 
 ## Cut profile
-Beef brisket is taken from the breast and lower chest of the animal, comprising two muscles — the flat (*pectoralis profundus*) and the point (*pectoralis superficialis*) — that support much of the animal's weight. The cut is dense with collagen-rich connective tissue and interspersed fat, making it exceptionally tough when cooked quickly but extraordinarily silky and tender once held at the collagen-conversion threshold long enough for connective tissue to dissolve into gelatin. Oven roasting at low temperature replicates the gentle, prolonged dry heat that the cut demands — the enclosed oven environment retains moisture driven off from the meat, preventing the surface from desiccating during the long cook. Carryover is negligible for brisket because the high moisture content and dense mass absorb and retain heat slowly; the internal temperature barely moves after the brisket is removed from the oven.
+
+Oven roasting brisket is the most accessible slow-cook method, and can take two forms: (1) a sealed Dutch oven with liquid (red wine, stock, onions, tomatoes — effectively a braise in the oven) held at 150–160 °C for 3–5 hours; or (2) a true dry oven roast (Jewish-style, wrapped tightly in foil or a covered roasting pan) where the brisket steams in its own released moisture. Both approaches work because the enclosed oven environment retains the moisture driven off from the meat, preventing the surface from desiccating during the long cook.
+
+At 150–160 °C, brisket reaches the target internal temperature (90–96 °C for pull-apart) in 4–6 hours depending on size and whether sealed. The MEATER probe should be placed in the flat, at the thickest point, avoiding the internal fat seam. Carryover is negligible — the high moisture content and dense mass absorb and release heat slowly; the internal temperature barely moves after the brisket is removed.
 
 ## Source recipes
 

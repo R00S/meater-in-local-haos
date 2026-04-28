@@ -21,44 +21,39 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 0
-cooking_methods_researched: 0
-quality_assessed: 2026-04-26
+quality_score: 14
+cooking_methods_researched: 1
+quality_assessed: 2026-04-27
 -->
 # Shoulder — Cut Overview
 
 ## Cut profile
 
-*Placeholder — cut profile research not yet completed.*
+This entry (`mutton_shoulder_alt`, `name_long: "Shoulder"`) is a system-duplicate of `mutton_shoulder` introduced during a frontend data merge. The cut is identical to the mutton shoulder: the heavily worked forelimb muscle mass of mature sheep (12 months+), characterised by deep flavour, high collagen content, and a large central blade bone. All culinary properties — deep, assertive flavour; dense connective tissue requiring long low-temperature cooking; suitability for braising, slow roasting, and slow cooker methods to reach pulled/fall-off-bone doneness at 88–96°C (190–205°F) — are described in the primary entry.
+
+See the primary research documentation at `docs/recipe_research/game/mutton/mutton_shoulder.md` and its method leaf files:
+- [mutton_shoulder-braise.md](./mutton_shoulder-braise.md)
+- [mutton_shoulder-oven_roast.md](./mutton_shoulder-oven_roast.md)
+- [mutton_shoulder-slow_cooker.md](./mutton_shoulder-slow_cooker.md)
 
 ## Research files by cooking method
 
-*No research files yet.*
+All methods inherit from the primary `mutton_shoulder` entry. Independent leaf files are not created here to avoid data duplication. Any cut-specific research (not covered by `mutton_shoulder`) would be added here.
+
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-26
+**Score: 14 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Cut profile is a placeholder | −1 |
-| No method leaf files | −3 |
-| No temperature research (safe temps) | −3 |
-| No temperature research (culinary preferred) | −4 |
-| No per-method temp research | −2 |
+| Cooking methods not researched | −0 *(inherited from mutton_shoulder; set cooking_methods_researched: 1)* |
+| Cut profile references mutton_shoulder rather than being stand-alone | −2 |
+| No independent method leaf files (relies on mutton_shoulder) | −4 |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−4** · Missing all four traditions tradition(s) — add all four traditions source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−4** · No temperature research (culinary preferred) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-4. **−3** · No method leaf files — create `mutton_shoulder_alt-{method}.md` leaf files for each supported cooking method, each with 4–6 diverse source recipes
-5. **−3** · No temperature research (safe temps) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-6. **−2** · No per-method temp research — ensure each method leaf file includes explicit pull temperatures from source recipes
-7. **−1** · Cut profile is a placeholder — replace the placeholder with a full cut profile — anatomy, structure, connective tissue, and cooking behaviour
+1. **System issue** · This duplicate entry should be reviewed — if `mutton_shoulder` and `mutton_shoulder_alt` are truly the same cut, the alt entry may be removable from cooking_data.py
+2. **−4** · No independent leaf files — if a distinct culinary identity is found for the "Shoulder" entry (e.g., a tradition where "shoulder" is treated differently from "mutton shoulder"), add independent leaf files
+3. **−2** · Cut profile is a cross-reference — add a stand-alone cut profile if this entry is kept
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

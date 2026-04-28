@@ -22,9 +22,9 @@ cut_type: Reindeer
 
 ## Cut profile
 
-Reindeer (*Rangifer tarandus*) is the traditional game meat of Sápmi (Lapland), northern Finland, Norway, and Sweden. The fillet (renfilé) and backstrap (sadel) are the premium cuts for pan searing. Reindeer meat is very lean, deep red, and has a delicate sweet-earthy flavour milder than moose. Because of its leanness it must be treated like venison: high heat, short cooking time, pulled well below well-done. Medium-rare (57 °C) is the Nordic standard.
+Grilling reindeer steak — in the Sámi and Nordic tradition, over birch wood or hardwood charcoal — is a method that requires the same care as grilling ostrich or lean venison: the complete absence of insulating intramuscular fat means heat penetrates the muscle very quickly. At 2–3 cm thickness, 2–3 minutes per side over direct high heat (230–260 °C at grate) achieves medium-rare. The birch-smoke flavour is a defining characteristic of Sámi reindeer preparation.
 
-Target internal temperature: **55–57 °C (131–135 °F)** for medium (Nordic preference). Pull at 52 °C.
+Oil the grill grate and brush the steak surface with oil or butter to prevent sticking. Because the meat is lean, resting on a warm plate is important to allow juices to redistribute before carving. Pull at 52 °C; carryover from a hot grill is 4–5 °C to reach the target 55–57 °C. Do not leave on the grill unattended — this meat has a very narrow window.
 
 ## Source recipes
 

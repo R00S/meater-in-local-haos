@@ -11,7 +11,9 @@ cut_type: Shellfish
 
 ## Cut profile
 
-Lobster tail is the large tail segment of a lobster (*Homarus americanus*, the American/Maine lobster, or *Homarus gammarus*, the European/Breton lobster) separated from the body and claws; frozen and fresh spiny lobster tails (*Panulirus argus*) from the Caribbean and Pacific are also widely used. The edible flesh is the tail muscle — firm, white-to-pale-pink, sweet and rich in natural glutamates. Grilling is one of the most popular preparations for lobster tail because the direct radiant heat produces char and caramelisation on the cut flesh surface while the shell acts as a natural heat shield and flavour-retaining vessel. Butterflying the tail (cutting through the shell dorsally and splaying the flesh upward) is the dominant grill preparation because it exposes more flesh surface to direct heat and allows basting to penetrate the meat. Overcooking tightens the fibres sharply; the pull window is 58–62 °C before the meat becomes dry and rubbery. Carryover is 3–4 °C.
+Grilling lobster tail is the most dramatic preparation — the shell chars and smokes, the flesh caramelises in the heat, and butter baste applied repeatedly creates a lacquered, golden exterior. The key technique is butterflying: cut through the top shell lengthwise with kitchen shears, pry the shell open and lift the flesh slightly so it sits above the shell (the classic "piggyback" presentation). This exposes the flesh to direct heat, creates even cooking, and allows butter/herb baste to penetrate during grilling.
+
+Grate at 200–230 °C, flesh-side down first for 5–6 min to develop grill marks and initial caramelisation; flip to shell-side for 3–4 min to finish. MEATER probe inserted from the side of the tail into the thickest part of the flesh. Pull at 56–58 °C; carryover 3–4 °C brings it to 59–62 °C (moist, opaque, fully cooked). Above 63 °C the flesh tightens and becomes rubbery.
 
 ## Source recipes
 

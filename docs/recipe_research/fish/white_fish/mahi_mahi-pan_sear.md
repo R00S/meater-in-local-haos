@@ -11,7 +11,9 @@ cut_type: White Fish
 
 ## Cut profile
 
-Mahi-mahi (*Coryphaena hippurus*), also called dolphinfish or dorado, is a large tropical and subtropical pelagic fish; the fillet is firm, moist, and moderately lean with a sweet, mild flavour and a distinctive large-flake texture. The skin is tough and not typically eaten — most preparations use skinless fillets. Mahi-mahi is popular across the Caribbean, Hawaiian, and American Gulf Coast cuisines, and is widely available as a sustainable fish choice. Pan searing produces a beautifully golden crust on the firm flesh; the natural moisture and slight fat content prevent drying out at moderate pull temperatures. The flesh transitions from moist-and-flaky to dry and stringy above 65 °C, so pulling at 60–62 °C is the target. Carryover is 3–4 °C.
+Pan searing mahi-mahi produces a beautifully golden, Maillard-browned crust on the firm flesh. A hot cast-iron or stainless pan with a small amount of oil (200–210 °C surface) sears the flat face of a 2–3 cm fillet in 3–4 minutes; flip for 2–3 minutes on the second side. The firm flesh holds together and does not curl or flake apart during the sear, unlike more delicate white fish. The natural moisture and moderate fat content prevent drying out at a moderate pull temperature.
+
+MEATER probe inserted from the thin end of the fillet, parallel to the flesh, into the thickest point. Pull at 58–60 °C; carryover 3–4 °C brings it to 61–63 °C. Flesh transitions from moist-and-flaky to dry and stringy above 65 °C — pull early.
 
 ## Source recipes
 

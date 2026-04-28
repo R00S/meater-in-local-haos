@@ -31,14 +31,14 @@ doneness:
   usda_safe: true
   recommended: true
 quality_score: 8
-cooking_methods_researched: 0
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 -->
 # Goose Thigh — Cut Overview
 
 ## Cut profile
 
-Goose thigh is perhaps the most flavourful part of the goose — richer than the leg and with a higher ratio of intramuscular fat and connective tissue. Braising is ideal: the moist-heat environment keeps the thigh succulent while sustained heat above 160 °F converts collagen to gelatin. Target 175–185 °F (79–85 °C) for the most tender, silky texture. The braising liquid, enriched by rendered goose fat and gelatin, reduces to an intensely flavourful sauce. Goose thighs are widely used in European traditional cooking, similar to duck confit but with a braise instead of a fat immersion.
+Goose thigh (*gåslår*, Swedish; *Gänseschenkel*, German; *cuisse d'oie*, French) is the top portion of the leg — the *biceps femoris*, *semitendinosus*, *semimembranosus*, and *gracilis* muscles surrounding the femur. Goose thigh is much richer and fattier than chicken or turkey thigh: a goose's subcutaneous and intramuscular fat is higher in oleic acid, giving it a silkier texture when rendered. The combination of highly worked muscle fibres and extensive fat means the thigh is the darkest, most flavourful part of the goose — more so even than the leg. Because of the fat and collagen load, goose thigh needs sustained moist heat to reach tenderness: target 79–85 °C internal. The abundant rendered goose fat enriches any braising liquid or serves as the confit medium.
 
 
 Target internal temperature: **175–185 °F (79–85 °C)** — optimal for collagen breakdown; USDA minimum: 165 °F (74 °C).

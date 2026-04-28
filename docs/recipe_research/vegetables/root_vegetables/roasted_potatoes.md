@@ -17,18 +17,15 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
-quality_score: 6
-cooking_methods_researched: 0
-quality_assessed: 2026-04-26
+quality_score: 10
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
+quality_assessed: 2026-04-27
 -->
 # Roasted Potatoes — Cut Overview
 
 ## Cut profile
 
-Roasting potatoes (*Solanum tuberosum*) converts the raw starch to a crisp, caramelised exterior and fluffy interior. High-starch varieties (Maris Piper, Russet, King Edward) are preferred because their floury texture creates better fluffiness inside and absorbs fat more effectively for crispness. Waxy varieties (Charlotte, Jersey Royal) hold their shape but produce less crisp results. Fat coating (duck fat, goose fat, olive oil, lard) is essential — it conducts heat, enables Maillard browning, and adds flavour. Pre-boiling until edges are rough (chuffed) dramatically increases crispness by maximising surface area.
-
-
-Target internal temperature is 95–100°C for full starch gelatinisation and a fluffy interior.
+Roasting potatoes (*Solanum tuberosum*) converts raw starch to a crisp, caramelised exterior and fluffy interior. The potato's cell structure determines roasting success: high-starch varieties (Maris Piper, Russet, King Edward, Desirée) have more amylose-rich starch granules that swell dramatically and burst on parboiling, producing a rough, "chuffed" exterior surface that absorbs fat and crisps intensely. Waxy varieties (Charlotte, Jersey Royal, fingerling) have more amylopectin, retain their shape better, but produce less crisp results. The Maillard reaction at the potato surface (starting around 150 °C) creates the characteristic golden-brown crust; starch gelatinisation at the interior requires reaching 95–100 °C core temperature.
 
 
 ## Research files by cooking method
@@ -37,25 +34,23 @@ Target internal temperature is 95–100°C for full starch gelatinisation and a 
 - [Oven Roast](./roasted_potatoes-oven_roast.md)
 ## Quality score
 
-**Score: 6 / 20** — assessed 2026-04-26
+**Score: 10 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Cut profile lacks anatomy | −1 |
-| Method file `roasted_potatoes-air_fryer.md` copies parent cut profile | −1 |
-| Method file `roasted_potatoes-oven_roast.md` copies parent cut profile | −1 |
-| Method file `roasted_potatoes-air_fryer.md` copies `roasted_potatoes-oven_roast.md` | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods not researched | − **NOT DONE** (−8) |
+| Cut profile anatomy | ✓ (fixed 2026-04-27) |
+| Air fryer cut profile method-specific | ✓ (fixed 2026-04-27) |
+| Oven roast cut profile method-specific | ✓ (fixed 2026-04-27) |
+| Culinary Group C covered | − missing (−1) |
+| Culinary Group D covered | − missing (−1) |
+| Groups A, B | ✓ |
+
+**Deductions**: −8 methods · −1 Group C · −1 Group D = −10 → **10**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing Culinary Group C and Culinary Group D tradition(s) — add Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
-4. **−1** · Method file `roasted_potatoes-air_fryer.md` copies `roasted_potatoes-oven_roast.md` — rewrite `roasted_potatoes-air_fryer.md`'s cut profile — it must describe what the oven roast method does to this cut, not repeat another method's prose
-5. **−1** · Method file `roasted_potatoes-air_fryer.md` copies parent cut profile — rewrite `roasted_potatoes-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-6. **−1** · Method file `roasted_potatoes-oven_roast.md` copies parent cut profile — rewrite `roasted_potatoes-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−8** · Cooking methods not researched
+2. **−1 each** · Groups C, D missing
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

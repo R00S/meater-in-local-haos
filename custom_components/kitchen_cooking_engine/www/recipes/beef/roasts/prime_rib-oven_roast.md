@@ -10,7 +10,12 @@ cut_type: Roasts
 # Prime Rib × Oven Roast — Recipe Temperature Research
 
 ## Cut profile
-Prime rib (also called standing rib roast) is cut from the rib primal (ribs 6–12), comprising the longissimus dorsi and surrounding muscles, with a generous fat cap and the rib bones attached. It is one of the most marbled subprimal sections of the animal — the rib muscles do relatively little work, and the high intramuscular fat content self-bastes during roasting, keeping the interior moist across a wide temperature range. Oven roasting is the canonical method for prime rib because the sustained, even heat of an enclosed oven allows the large mass (typically 2.5–5 kg) to heat evenly from edge to centre while the exterior fat cap renders and browns. Carryover is substantial for a prime rib — the large, dense mass retains heat efficiently, and internal temperature continues to rise for 15–30 minutes after removal; this must be accounted for in the pull temperature.
+
+Oven roasting brings out prime rib's exceptional marbling in a way no other method matches: the slow, radiant heat of an enclosed oven gently renders the intramuscular fat throughout the eye — the *longissimus dorsi* — without desiccating its surface. At 90–150 °C, the fat cap melts over 2–5 hours, self-basting the lean eye continuously, while the collagen in the cap and the intercostal muscles converts to gelatin and enriches the surface flavour. The result is a crust that is dark golden-brown, the fat layer lacquered and crisp, and the interior a uniform ring of rosy medium-rare pink from edge to centre (at 54 °C target).
+
+Two temperature philosophies exist in oven roasting: the **reverse sear** (90–110 °C oven, then a 260 °C blast for the crust) delivers the most uniform doneness across the large mass; the **traditional high-heat** method (220 °C for 15–20 min, then 160 °C) builds the crust first and relies on carryover to finish the interior. Both land at the same internal target.
+
+Carryover is the dominant concern for the home cook: a 3–5 kg prime rib loses 2–8 °C after removal depending on size, oven type, and ambient temperature — pull 3–6 °C before the target. MEATER probe is placed at the geometric centre of the eye, inserted from the large cut face parallel to the rib bones, avoiding bone and the fat seam.
 
 ## Source recipes
 

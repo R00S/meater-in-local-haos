@@ -46,14 +46,14 @@ doneness:
   max_f: 170
   usda_safe: true
 quality_score: 8
-cooking_methods_researched: 0
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 -->
 # Goat Chop — Cut Overview
 
 ## Cut profile
 
-Goat loin or rib chops are popular throughout West Africa, the Caribbean, South Asia, the Middle East, and the Mediterranean. The meat is leaner than lamb with a slightly stronger, more aromatic flavour. Pan searing is typically done at high heat with marinades containing aromatic spices (cumin, coriander, ginger, garlic). Like lamb, goat chops are served medium to well-done.
+Goat loin chops (*côtelettes de chèvre*; Indian *bakri ki champ*; Arabic *karrī lahm al-maāz*) come from the loin section between the last rib and the hip — the same anatomical position as a lamb loin chop. They are T-bone-shaped (bone-in) or boneless, 2–3 cm thick, with the *longissimus dorsi* muscle on one side and the *psoas minor* on the other. Goat meat is leaner than lamb at comparable age — lower fat marbling, lighter pink-red colour, and a slightly stronger, more aromatic flavour from the higher proportion of capric and caprylic fatty acids. Fat content in the loin is typically 3–5%. Unlike lamb, goat loin is at its best at medium to well-done (68–74 °C) because the leaner muscle dries less noticeably at higher temperatures than the fattier lamb equivalent.
 
 
 Target internal temperature: **70–74 °C (158–165 °F)**.

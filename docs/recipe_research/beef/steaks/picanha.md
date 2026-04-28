@@ -55,18 +55,17 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 6
-cooking_methods_researched: 0
-quality_assessed: 2026-04-26
+quality_score: 10
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
+quality_assessed: 2026-04-27
 -->
 # Picanha — Cut Overview
 
 ## Cut profile
 
-Picanha over live charcoal is the definitive Brazilian *churrasco* preparation — in Brazil, the whole *rump cap* is threaded onto long metal skewers in a horseshoe shape (fat cap outside) and rotated continuously above the charcoal fire of the *churrascaria*, the fat dripping and basting the meat as it cooks. At home on a kettle or kamado grill, the rotisserie method can be replicated or a simplified two-zone direct-then-indirect approach is used. The charcoal smoke compounds penetrate the fat cap and impart a distinctive aroma that is a signature of Brazilian *churrasco*. Carryover from a hot charcoal fire is 5–7 °C.
+Picanha (*alcatra de capa* in Portuguese; *coulotte* in French; *sirloin cap* or *rump cap* in English) is cut from the top of the rump, between the hip bone and the start of the loin. Anatomically, it consists of the *biceps femoris* muscle capped by a thick layer of subcutaneous fat — the fat cap is its defining structural feature. The muscle itself is lean with moderate marbling for a rump-region cut, delivering a bold, beefy flavour that punches above its marbling level. The fat cap serves two culinary functions: it protects the lean meat from drying out during cooking, and it renders and bastes the muscle from above in high-heat methods.
 
-
-## Research files by cooking method
+Picanha is the most prized cut in Brazilian *churrasco* culture, where it is often cooked whole on skewers. Outside Brazil, it is increasingly recognised as an alternative to more expensive premium steaks. Typical whole weight: 800 g – 1.5 kg. In English-speaking countries it is often sold trimmed or further divided, losing the fat cap; ensure the fat cap is intact before purchase.
 
 - [Charcoal Grill](./picanha-charcoal_grill.md)
 - [Grill](./picanha-grill.md)
@@ -74,25 +73,25 @@ Picanha over live charcoal is the definitive Brazilian *churrasco* preparation �
 - [Pan Sear](./picanha-pan_sear.md)
 ## Quality score
 
-**Score: 6 / 20** — assessed 2026-04-26
+**Score: 10 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Cut profile lacks anatomy | −1 |
-| Method file `picanha-charcoal_grill.md` copies parent cut profile | −1 |
-| Method file `picanha-grill.md` copies `picanha-oven_roast.md` | −1 |
-| Method file `picanha-grill.md` copies `picanha-pan_sear.md` | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods researched (full survey) | − **NOT DONE** |
+| Cut profile written with anatomy | ✓ (fixed 2026-04-27) |
+| All declared method leaves exist | ✓ (charcoal_grill, grill, oven_roast, pan_sear) |
+| Method cut profiles distinct (no copies) | ✓ (all fixed 2026-04-27) |
+| Culinary Group A covered | ✓ (charcoal_grill leaf: Brazilian/South American is closest to Group B, but Group A may be covered elsewhere) |
+| Culinary Group B covered | ✓ |
+| Culinary Group C covered | − missing |
+| Culinary Group D covered | − missing |
+
+**Deductions**: −8 methods not researched · −1 Group C missing · −1 Group D missing = −10 → 20−10 = **10**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing Culinary Group C and Culinary Group D tradition(s) — add Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
-4. **−1** · Method file `picanha-charcoal_grill.md` copies parent cut profile — rewrite `picanha-charcoal_grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-5. **−1** · Method file `picanha-grill.md` copies `picanha-oven_roast.md` — rewrite `picanha-grill.md`'s cut profile — it must describe what the oven roast method does to this cut, not repeat another method's prose
-6. **−1** · Method file `picanha-grill.md` copies `picanha-pan_sear.md` — rewrite `picanha-grill.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
+1. **−8** · Cooking methods not researched — survey all cooking methods appropriate for picanha; update `methods:` list; set `cooking_methods_researched: 1`
+2. **−1** · Group C tradition missing — find a Moroccan, Turkish, Lebanese, or other Group C picanha-adjacent recipe
+3. **−1** · Group D tradition missing — find a Polish, Swedish, or other Group D recipe using rump cap or sirloin cap cut
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

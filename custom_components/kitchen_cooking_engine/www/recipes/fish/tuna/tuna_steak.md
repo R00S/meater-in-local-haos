@@ -39,14 +39,14 @@ doneness:
   usda_safe: false
   recommended: true
 quality_score: 8
-cooking_methods_researched: 0
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 -->
 # Tuna Steak — Cut Overview
 
 ## Cut profile
 
-Tuna steak — most commonly bluefin (*hon maguro*), yellowfin (*ahi*), or bigeye (*mebachi*) — is cut transversely from the loin muscles of a large pelagic fish. Tuna flesh is deep crimson (from high myoglobin content), very lean, and densely muscled compared to most fish; it has almost no connective tissue between muscle segments, which means it behaves more like a red meat steak than a typical white-flake fish. Pan searing suits tuna precisely because the high heat drives rapid Maillard browning on the lean surface, while the brief cook time leaves the interior at the desired rare state. Overcooking is the defining risk: above 60 °C the proteins tighten dramatically, and the lean flesh becomes dry and crumbly. The conventional sushi-bar preference for *tataki* (briefly seared, cold-raw centre) means the entire temperature spectrum from raw to fully cooked is culinarily acknowledged. Carryover in a seared tuna steak is 2–3 °C and dissipates quickly.
+Tuna steak — most commonly bluefin (*Thunnus thynnus*, Japanese *hon maguro*), yellowfin (*Thunnus albacares*, Hawaiian *ahi*), or bigeye (*Thunnus obesus*, *mebachi*) — is cut transversely from the cylindrical loin muscles of a large, pelagic, highly migratory fish. The flesh is deep crimson from high myoglobin content (endothermic muscle requiring sustained oxygen delivery). It is very lean and densely packed with fast-twitch white and red muscle fibres with almost no connective tissue between segments — this gives tuna its steak-like behaviour under direct heat rather than the flaking characteristic of most fish. Average steak dimensions: 2–4 cm thick, 10–15 cm diameter loin cross-section. Safe temperatures: USDA minimum for finfish is 63 °C (145 °F), but sushi-grade tuna is conventionally consumed raw; most chefs pull at 38–45 °C for rare (cold-raw centre) to 54–57 °C for medium-rare (lightly warmed centre).
 
 
 ## Research files by cooking method

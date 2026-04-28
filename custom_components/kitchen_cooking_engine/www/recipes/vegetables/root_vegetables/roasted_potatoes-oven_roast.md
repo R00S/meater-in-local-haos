@@ -10,7 +10,10 @@ cut_type: Root Vegetables
 # Roasted Potatoes × Oven Roast — Recipe Temperature Research
 
 ## Cut profile
-Roasting potatoes (*Solanum tuberosum*) converts the raw starch to a crisp, caramelised exterior and fluffy interior. High-starch varieties (Maris Piper, Russet, King Edward) are preferred because their floury texture creates better fluffiness inside and absorbs fat more effectively for crispness. Waxy varieties (Charlotte, Jersey Royal) hold their shape but produce less crisp results. Fat coating (duck fat, goose fat, olive oil, lard) is essential — it conducts heat, enables Maillard browning, and adds flavour. Pre-boiling until edges are rough (chuffed) dramatically increases crispness by maximising surface area. Target internal temperature is 95–100°C for full starch gelatinisation and a fluffy interior.
+
+Oven roasting is the classic and most widely used method for roast potatoes. The key variables are: (1) pre-boiling until the surface is rough and chuffed (5–8 min for cut chunks) — this dramatically increases the crisp surface area; (2) hot fat coating (duck fat, goose fat, lard, or olive oil) in the roasting tin before the potatoes go in, so they sizzle on contact; (3) high oven temperature (200–220 °C / 400–425 °F) for Maillard browning; (4) turning once or twice for even crisping on all sides.
+
+Target internal: 95–100 °C for full starch gelatinisation and a fluffy interior. Total oven time: 45–60 minutes depending on chunk size and oven temperature. The British Sunday roast tradition (goose fat, high oven) is the benchmark preparation for this method.
 
 ## Source recipes
 

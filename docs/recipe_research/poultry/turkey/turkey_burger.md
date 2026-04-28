@@ -23,7 +23,7 @@ doneness:
   usda_safe: true
   recommended: true
 quality_score: 10
-cooking_methods_researched: 0
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 -->
 # Turkey Burger — Cut Overview

@@ -9,6 +9,7 @@ usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: medium_rare
 methods:
+- braise
 - grill
 - pan_sear
 doneness:
@@ -37,44 +38,40 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 0
-cooking_methods_researched: 0
-quality_assessed: 2026-04-26
+quality_score: 8
+cooking_methods_researched: 1
+quality_assessed: 2026-04-27
 -->
 # Ostrich Fillet — Cut Overview
 
 ## Cut profile
 
-*Placeholder — cut profile research not yet completed.*
+Ostrich (*Struthio camelus*) fillet is the loin or fan fillet — the most tender cut from the ostrich, running along the spine of this large, flightless bird. Despite being avian, ostrich fillet is a deep red, iron-rich meat treated by virtually all culinary traditions as a red meat equivalent to beef tenderloin. South Africa and Namibia produce over 95% of the world's commercial ostrich meat; European farms (France, Belgium, Germany) account for most of the remainder. The fillet has virtually no fat (typically 1–2% intramuscular fat), no connective tissue, and no bones — a very clean cut. This extreme leanness means the same rule applies as to kangaroo fillet: cook hot and fast (pan sear or grill, 2–3 minutes per side) to medium-rare maximum, or braise in moist heat when cutting into smaller pieces. Cooking past 65–70°C causes irreversible toughening and liver-textured results. The USDA classifies ostrich as poultry (safe temp 74°C / 165°F), but culinarily both South African and European standards treat it like red game meat and consider medium-rare (54–57°C / 130–135°F) both safe (as a farmed product under modern processing) and optimal. Carryover is very low (2–4°C / 4–7°F) due to the lean, thin profile.
 
 ## Research files by cooking method
 
-*No research files yet.*
+- [Braise](./ostrich_fillet-braise.md) — 1 source collected (Group D; Groups A, B, C still needed)
+- [Grill](./ostrich_fillet-grill.md) — stub; proper sourced recipes not yet found
+- [Pan Sear](./ostrich_fillet-pan_sear.md) — stub; proper sourced recipes not yet found
+
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-26
+**Score: 8 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group B tradition | −1 |
 | Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Cut profile is a placeholder | −1 |
-| No method leaf files | −3 |
-| No temperature research (safe temps) | −3 |
-| No temperature research (culinary preferred) | −4 |
-| No per-method temp research | −2 |
+| Grill and pan_sear leaves have no complete sourced recipes | −4 |
+| Braise leaf incomplete (1 of 4–6 sources) | −2 |
+| No per-method temperature consensus (analysis gate not met) | −3 |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−4** · Missing all four traditions tradition(s) — add all four traditions source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−4** · No temperature research (culinary preferred) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-4. **−3** · No method leaf files — create `ostrich_fillet-{method}.md` leaf files for each supported cooking method, each with 4–6 diverse source recipes
-5. **−3** · No temperature research (safe temps) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-6. **−2** · No per-method temp research — ensure each method leaf file includes explicit pull temperatures from source recipes
-7. **−1** · Cut profile is a placeholder — replace the placeholder with a full cut profile — anatomy, structure, connective tissue, and cooking behaviour
+1. **−4** · Grill and pan_sear leaves empty — find properly sourced ostrich fillet recipes with full ingredient quantities for the quick-cook methods
+2. **−3** · No temperature consensus — add more sources; once 4+ sources collected, write analysis sections
+3. **−2** · Braise leaf incomplete — add 3–5 more braise sources from diverse traditions
+4. **−1 each** · Missing Groups A, B, C — find Asian, European, and South African/African recipes
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

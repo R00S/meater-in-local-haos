@@ -45,44 +45,38 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 0
-cooking_methods_researched: 0
-quality_assessed: 2026-04-26
+quality_score: 10
+cooking_methods_researched: 1
+quality_assessed: 2026-04-27
 -->
 # Sirloin Tip Roast — Cut Overview
 
 ## Cut profile
 
-*Placeholder — cut profile research not yet completed.*
+The sirloin tip roast (known as the "knuckle" in UK/Australian butchery, "pointe de culotte" in French, "Rinderknolle" in German, and "Patinho" in Brazilian Portuguese) is cut from the quadriceps femoris muscle group at the front of the hindquarter, immediately below the sirloin and above the shank. It is a boneless, lean roast with tight, dense muscle fibres and minimal intramuscular fat. The low fat content means it relies entirely on technique — slow oven roasting at low temperatures or braising in liquid — to remain tender and juicy. Sliced thinly against the grain it produces clean, pronounced beef flavour; sliced thick or overcooked it becomes tough and dry. The cut sits between the premium loin cuts and the cheaper round cuts in price and tenderness, making it a popular choice for economical Sunday roasts and deli-style sliced beef. Carryover after oven roasting is 3–8°C / 5–14°F depending on the oven temperature used (higher carryover at lower roasting temperatures).
 
 ## Research files by cooking method
 
-*No research files yet.*
+- [Oven Roast](./sirloin_tip_roast-oven_roast.md) — 2 sources collected (Groups B only; Groups A, C, D still needed)
+
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-26
+**Score: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | −1 |
 | Missing Culinary Group C tradition | −1 |
 | Missing Culinary Group D tradition | −1 |
-| Cut profile is a placeholder | −1 |
-| No method leaf files | −3 |
-| No temperature research (safe temps) | −3 |
-| No temperature research (culinary preferred) | −4 |
-| No per-method temp research | −2 |
+| Braise method leaf not yet started | −2 |
+| Oven roast leaf incomplete (only 2 of 4–6 sources) | −2 |
+| No per-method temperature consensus (analysis gate not met) | −3 |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−4** · Missing all four traditions tradition(s) — add all four traditions source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−4** · No temperature research (culinary preferred) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-4. **−3** · No method leaf files — create `sirloin_tip_roast-{method}.md` leaf files for each supported cooking method, each with 4–6 diverse source recipes
-5. **−3** · No temperature research (safe temps) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-6. **−2** · No per-method temp research — ensure each method leaf file includes explicit pull temperatures from source recipes
-7. **−1** · Cut profile is a placeholder — replace the placeholder with a full cut profile — anatomy, structure, connective tissue, and cooking behaviour
+1. **−3** · No per-method temperature consensus — add 2–4 more source recipes to `sirloin_tip_roast-oven_roast.md` (need Groups A, C, D) then write analysis sections
+2. **−2** · Braise method leaf not started — create `sirloin_tip_roast-braise.md` with 4–6 sourced braised beef recipes from diverse traditions (German schmorbraten confirmed as Group D source)
+3. **−2** · Oven roast leaf incomplete — find Group A (Asian), Group C (Middle Eastern/African), Group D (Scandinavian/Russian) oven-roasted beef recipes for this cut
+4. **−1 each** · Missing Culinary Groups A, C, D — at least one recipe per group across all method leaf files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

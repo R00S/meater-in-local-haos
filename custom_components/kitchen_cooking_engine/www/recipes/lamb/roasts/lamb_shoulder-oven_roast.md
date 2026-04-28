@@ -22,7 +22,9 @@ cut_type: Ground
 
 ## Cut profile
 
-Lamb shoulder is fattier and more flavourful than leg, with more connective tissue that melts into gelatin during long, slow roasting. It is the cut for slow-roasted lamb dishes — 4–6 hours at 150–160 °C (or 7–8 hours at 130 °C). The result is pull-apart meat that falls off the bone with a fork. The MEATER probe target is **85–90 °C (185–194 °F)** for pull-apart.
+Oven roasting is the classic method for lamb shoulder worldwide. Low-and-slow roasting at 130–160 °C for 4–8 hours converts the shoulder's dense collagen into gelatin, producing fall-apart meat with a deeply caramelised surface. A covered Dutch oven or sealed roasting tin with a small amount of liquid (wine, stock, water with aromatics) prevents the surface from desiccating during the long cook and generates steam that further accelerates collagen conversion.
+
+The bone-in shoulder is particularly suited to oven roasting because the bone conducts heat from the inside and adds gelatinous flavour compounds to the cooking juices. MEATER probe into the thickest muscle mass, away from the bone. Pull temperature: **85–90 °C (185–194 °F)** for pull-apart texture. Carryover is negligible — the dense mass and surrounding fat insulate against rapid temperature change.
 
 ## Source recipes
 

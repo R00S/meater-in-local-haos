@@ -11,7 +11,9 @@ cut_type: Steaks
 
 ## Cut profile
 
-The T-bone steak is defined by the T-shaped vertebral bone that separates two distinct muscles: the larger striploin (*longissimus dorsi*) on the long side of the bone, and the smaller tenderloin (*psoas major*) fillet on the shorter side. This presents a unique cooking challenge: the two muscles have different ideal internal temperatures (the tenderloin cooks faster and is best at 52–54 °C, the strip benefits from 55–57 °C), and the bone itself acts as an insulator — the meat nearest the bone always lags behind by 3–5 °C. Pan searing a T-bone requires a pan large enough to accommodate the steak flat, very high heat, and careful probe placement. The MEATER probe should be placed in the striploin side (the larger portion), away from the bone, for the most representative reading. Carryover is 4–5 °C.
+Grilling a T-bone on a gas grill requires managing the two-muscle geometry and the insulating bone. The standard technique is a hot two-zone setup: sear over direct high heat (250–280 °C) for 2–3 minutes per side to develop the crust on both surfaces, then move to the indirect zone (lid closed, 150–180 °C) to bring the striploin to target temperature without overcooking the tenderloin. Rotating the steak on its bone edge during the indirect phase is an Argentine *parrilla* trick that allows the bone to conduct heat into the innermost meat without direct flame contact.
+
+Grill marks are primarily decorative; the even Maillard crust achieved by full surface contact in a cast-iron pan is not replicable on grill grates, but the open-flame smoke flavour more than compensates. Monitor flare-ups from the fat trim. MEATER probe in the striploin side, away from the bone. Carryover from a hot gas grill is 4–5 °C.
 
 ## Source recipes
 

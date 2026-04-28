@@ -21,20 +21,15 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 7
-cooking_methods_researched: 0
-quality_assessed: 2026-04-26
+quality_score: 8
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
+quality_assessed: 2026-04-27
 -->
 # Spare Ribs — Cut Overview
 
 ## Cut profile
 
-Spare ribs (revelsben/kamben in Danish; Spareribs in German/Austrian) are the lower belly ribs, larger and flatter than baby back ribs with more fat and connective tissue. They benefit particularly from low-and-slow oven cooking: either pre-boiled then finished high, or foil-wrapped at low heat then glazed. The higher fat content makes them more forgiving than baby backs. Target internal: 88–95 °C, the same range as baby back ribs — collagen renders at these temperatures giving the characteristic tender, pull-off-bone texture and glossy glaze.
-
-
-Target internal temperatures (oven roast):
-- Fall-off-bone tender: **88–95 °C (190–203 °F)**
-- ⚠️ Below 80 °C spare ribs are food-safe but still tough
+Spare ribs (*revelsben*/*kamben* in Danish; *Spareribs* in German/Austrian; *costillas* in Spanish) are the lower belly ribs (sternum-adjacent), larger and flatter than baby back ribs, with considerably more intermuscular fat and connective tissue between and around the rib bones. The primary muscles are the *serratus ventralis* and intercostal layers; unlike baby backs (which are *longissimus dorsi* muscle adjacent), spare ribs derive their eating quality from fat and collagen conversion rather than lean muscle. The higher fat content makes them more forgiving than baby backs: they resist drying out even at the higher temperatures needed for collagen conversion.
 
 
 ## Research files by cooking method
@@ -42,21 +37,24 @@ Target internal temperatures (oven roast):
 - [Oven Roast](./spare_ribs-oven_roast.md)
 ## Quality score
 
-**Score: 7 / 20** — assessed 2026-04-26
+**Score: 8 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing method leaf files (2 of 3 declared) | −2 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Method file `spare_ribs-oven_roast.md` copies parent cut profile | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods not researched | − **NOT DONE** (−8) |
+| Oven roast cut profile method-specific | ✓ (fixed 2026-04-27) |
+| grill leaf missing | − missing (−1) |
+| smoker leaf missing | − missing (−1) |
+| Culinary Group A covered | − missing (−1) |
+| Culinary Group C covered | − missing (−1) |
+| Culinary Groups B, D | ✓ |
+
+**Deductions**: −8 methods · −2 missing leaves · −1 Group A · −1 Group C = −12 → **8**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `spare_ribs-grill.md`, `spare_ribs-smoker.md`
-3. **−2** · Missing Culinary Group A and Culinary Group C tradition(s) — add Culinary Group A and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
-4. **−1** · Method file `spare_ribs-oven_roast.md` copies parent cut profile — rewrite `spare_ribs-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−8** · Cooking methods not researched
+2. **−1 each** · Missing `spare_ribs-grill.md`, `spare_ribs-smoker.md`
+3. **−1 each** · Groups A, C missing
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

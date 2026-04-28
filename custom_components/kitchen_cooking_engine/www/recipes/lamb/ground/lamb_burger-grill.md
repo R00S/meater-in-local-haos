@@ -22,9 +22,9 @@ cut_type: Ground
 
 ## Cut profile
 
-Lamb burgers are popular throughout the UK, Australia, New Zealand, the Middle East, and South Asia. Ground lamb's higher fat content means the patties are juicy but can flare on a grill — medium-high indirect heat is recommended. Common additions: garlic, cumin, harissa, feta (stuffed or mixed in), fresh herbs.
+Grilling lamb burgers requires managing the high fat content: lamb fat drips onto the grill and causes flare-ups that can char the exterior before the interior is cooked through. Use a two-zone grill or medium-direct heat (not maximum), with the grill lid closed between flips to trap heat. Patties should be 1.5–2 cm thick for even cooking; thicker patties require indirect heat after the initial sear.
 
-Target internal temperature: **74 °C (165 °F)** for safe ground meat.
+Cook 4–5 minutes per side at medium-high heat (about 200 °C at grate), flipping once. MEATER probe inserted from the side of the patty into the geometric centre. Target: 71 °C (160 °F) for ground meat food safety. Carryover: 3–5 °C. Pull at 66–68 °C to rest to 71 °C.
 
 ## Source recipes
 

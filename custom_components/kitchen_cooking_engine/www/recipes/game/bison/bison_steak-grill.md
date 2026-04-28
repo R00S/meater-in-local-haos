@@ -22,14 +22,9 @@ cut_type: Bison
 
 ## Cut profile
 
-Bison (American buffalo, *Bison bison*) is a large North American bovine raised primarily on
-open pasture. Its steaks — most commonly cut from the loin (fillet/tenderloin), rib (entrecôte/
-ribeye), or striploin (sirloin) — are structurally similar to beef cuts from the same primal
-positions but differ decisively in fat content and flavour chemistry. Bison carries significantly
-less intramuscular fat than commercial beef: its marbling score is typically very low, and the
-external fat cap is thin. This leanness means there is very little insulating fat to slow heat
-penetration, so bison steaks cook faster than their beef equivalents and have a narrower
-window between perfectly cooked and overdone.
+Grilling bison steak is the quintessential North American preparation and one of the few methods where the lean profile of bison is an advantage: the minimal external fat cap means no large flare-ups from dripping fat. Use direct high heat (230–260 °C / 450–500 °F) with the grill preheated and grates oiled. At 2.5–3 cm thickness, 3–4 minutes per side produces medium-rare.
+
+The most important grill technique for bison: **do not leave the steak unattended**. The narrow window between medium-rare and overdone (roughly 57–63 °C) can be passed in under two minutes at grill temperatures. A meat thermometer or MEATER probe is strongly recommended. The MEATER probe is inserted from the thin edge of the steak, aimed at the geometric centre, away from any bone. Pull at 52 °C to rest to 55–57 °C medium-rare. Carryover from a very hot grill: 3–5 °C.
 
 The critical temperature rule for bison steak is the most frequently repeated piece of culinary
 consensus in all traditions: bison must always be served rare to medium-rare and must never be

@@ -22,12 +22,9 @@ cut_type: White Fish
 
 ## Cut profile
 
-Haddock (*Melanogrammus aeglefinus*, Norwegian: hyse/kolje, German: Schellfisch, Swedish:
-kolja) is a lean white-fleshed cold-water fish closely related to cod. It has a mild,
-slightly sweet flavour and firm but fine-grained flesh that flakes beautifully when cooked.
-Haddock is central to British cuisine (fish & chips), Norwegian everyday cooking, and the
-German North Sea fishing tradition. The fillets are typically 1–2 cm thick, making them
-fast-cooking pan fish: 2–4 minutes per side at medium to medium-high heat in butter or
+Pan frying is the definitive everyday method for haddock. The two dominant approaches are: (1) **lightly floured** — dust the fillet in seasoned flour, fry skin-side down first in butter or oil at medium-high heat for 2–3 minutes, flip and fry 1–2 minutes on the flesh side. The flour coating absorbs excess moisture, promotes even browning, and protects the delicate flesh from drying out; (2) **battered** (fish & chips tradition) — dip in a thick beer or tempura batter and deep-fry at 180 °C / 350 °F for 4–6 minutes until golden.
+
+For a floured fillet at 1.5 cm thickness: 2–3 min first side, 1–2 min second side. MEATER probe inserted from the tail end, parallel to the fillet, into the thickest point. Pull at 60–62 °C; carryover of 2–3 °C brings it to 63 °C (USDA minimum). The flesh should be opaque-white but still just moist at the thickest point.
 oil is sufficient for a fillet of normal thickness. The internal flesh reaches safe serving
 temperature (63 °C / 145 °F USDA minimum for finfish) quickly; overcooking past 65 °C
 produces dry, rubbery fish. The MEATER probe must be inserted laterally (from the thick

@@ -10,7 +10,10 @@ cut_type: Other / Offal
 # Pork Liver × Pan Sear — Recipe Temperature Research
 
 ## Cut profile
-Pork liver is milder, slightly sweeter and more delicate in texture than beef liver — a paler chestnut-brown rather than the deep mahogany of beef, with a finer-grained hepatocyte structure and a thinner capsule. The same mineral-iron flavour profile is present but at lower intensity. The standard preparation across European traditions is identical to the beef-liver pan-fry: brief soak in milk to mellow the iron, dust in flour, sear hard in fat, and pull while the centre is still faintly pink. The narrower flavour also means pork liver tolerates assertive aromatics — onions, sage, juniper, allspice, capers — better than the more bold-tasting calf's or beef liver. Carryover is small (1–2 °C); slices continue cooking on the plate, so serve immediately.
+
+Pan searing pork liver differs from pan frying in that the coating is minimal or absent — the goal is a clean, uncoated sear directly on the liver surface, producing a deeply caramelised crust by direct contact with the hot dry-or-nearly-dry pan. This approach (used in modern restaurant cooking) produces a more intense Maillard crust on the raw liver surface, and the thinner coating means the flavour of the liver itself comes through without the flour buffer. A very hot cast-iron or carbon-steel pan is essential; butter added at the last moment as beurre noisette provides flavour without burning.
+
+At 6–12 mm thickness, sear 60–90 seconds per side. The interior must remain pink to be tender; fully grey liver is overcooked regardless of temperature. Pull at 60–65 °C for European-style pink centre, or 71 °C for USDA compliance. Carryover: 1–2 °C for thin slices — pull early. Serve immediately; liver continues cooking on the plate.
 
 ## Source recipes
 

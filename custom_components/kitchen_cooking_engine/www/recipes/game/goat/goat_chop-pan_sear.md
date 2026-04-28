@@ -22,7 +22,9 @@ cut_type: Goat
 
 ## Cut profile
 
-Goat loin or rib chops are popular throughout West Africa, the Caribbean, South Asia, the Middle East, and the Mediterranean. The meat is leaner than lamb with a slightly stronger, more aromatic flavour. Pan searing is typically done at high heat with marinades containing aromatic spices (cumin, coriander, ginger, garlic). Like lamb, goat chops are served medium to well-done.
+Pan searing goat chops is primarily a South Asian (*tawa gosht*) and Middle Eastern (*dijaj mashwi bi-l-tawa*) method — the chops are marinated in yoghurt and spices, then seared hard on a flat iron griddle (*tawa*) or heavy cast-iron pan. The yoghurt marinade creates a light char-blackened crust that is deeply flavoured rather than simply browned.
+
+Hot cast-iron or heavy stainless pan, medium-high heat with a little oil. 3–4 minutes per side for 2.5 cm chops without moving. MEATER probe from the bone end into the eye muscle. Target: 68–72 °C; carryover 2–3 °C from a hot pan. Serve immediately.
 
 Target internal temperature: **70–74 °C (158–165 °F)**.
 
