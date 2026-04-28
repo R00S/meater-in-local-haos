@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 28 Apr 2026, 23:26 CET
+ * AUTO-GENERATED: 29 Apr 2026, 00:02 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 28 Apr 2026, 23:26 CET
+// Last generated: 29 Apr 2026, 00:02 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -26116,6 +26116,12 @@ class KitchenCookingPanel extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
+
+    // Track our ha-panel-custom parent for the module-level blank-screen recovery.
+    // Must be set here (not in the constructor) because parentElement is only
+    // available once the element is attached to the DOM.
+    _kceHaPanelParent = this.parentElement;
+
     // Data is embedded in this file - generated from backend at build time
     
     // Ensure _currentPath is always set to a valid value
@@ -26144,16 +26150,14 @@ class KitchenCookingPanel extends LitElement {
     // Load server-side recipe cook state for cross-device visibility
     this._loadServerActiveRecipeCooks();
     
-    // --- Blank-tab fix ---
-    // Root cause: HA reuses the SAME hass object reference (mutates in place), so
-    // hasChanged(hass, hass) always compared the same reference and returned false,
-    // meaning the panel never re-rendered when the tab came back from the background.
-    // hasChanged now always returns true (see properties getter), so every hass
-    // assignment from HA (including post-reconnect) triggers a render.
+    // --- In-element visibility handlers ---
+    // These handlers cover the case where the element is still in the DOM when
+    // the tab returns (tab was hidden for < 5 minutes).  They reload fresh data
+    // and force a re-render so the panel is always up-to-date when the user
+    // returns.  Navigation state is PRESERVED — we never reset to welcome.
     //
-    // This handler is a belt-and-suspenders fallback: it reloads fresh data and
-    // forces a re-render so the panel is always up-to-date when the user returns.
-    // Navigation state is PRESERVED — we never reset to welcome on tab return.
+    // Note: for the case where HA destroys and recreates this element (tab hidden
+    // > 5 min), see the module-level _kceRecoverPanel mechanism below the class.
     this._visibilityHandler = () => {
       if (document.visibilityState === 'visible') {
         // Preserve whatever screen the user was on — do NOT reset to welcome.
@@ -36504,8 +36508,71 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "362";
+const PANEL_VERSION = "363";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
 }
+
+// ─── Module-level blank-screen recovery ───────────────────────────────────────
+// Root cause (identified from HA's partial-panel-resolver.ts + ha-panel-custom.ts):
+//
+//   HA's "suspendWhenHidden" feature: after the browser tab is hidden for 5
+//   minutes, partial-panel-resolver REMOVES ha-panel-custom from the DOM.
+//   ha-panel-custom.disconnectedCallback() then calls _cleanupPanel() which
+//   destroys our kitchen-cooking-card child and clears its _setProperties ref.
+//
+//   When the user returns, partial-panel-resolver re-appends the same
+//   ha-panel-custom element (connectedCallback fires).
+//
+//   • Newer HA (2024.x+): connectedCallback has a guard that detects the missing
+//     child and calls _createPanel() → our element is asynchronously recreated.
+//   • Older HA: connectedCallback does NOT have this guard → ha-panel-custom is
+//     back in the DOM but permanently empty → persistent blank screen.
+//
+//   The in-element visibilitychange / focus handlers wired in connectedCallback()
+//   are REMOVED during disconnectedCallback(), so they cannot help here: our
+//   element has already been destroyed before the user returns to the tab.
+//
+// Fix:
+//   A module-level recovery function that is never garbage-collected as long as
+//   the module is loaded.  When the tab becomes visible we check whether
+//   ha-panel-custom is alive but empty, and if so call
+//   haPanel.requestUpdate('panel', null).  This makes ha-panel-custom.update()
+//   see changedProps.has('panel') with oldValue=null ≠ actual panel, causing it
+//   to call _createPanel() which recreates our element.
+//
+// Safe on all HA versions:
+//   • New HA: our element is already present within ~50 ms of connectedCallback;
+//     the 500 ms delay means the check finds it → no action taken.
+//   • Old HA: element absent after 500 ms → recovery fires once → blank resolved.
+// ─────────────────────────────────────────────────────────────────────────────
+
+// _kceHaPanelParent is updated by connectedCallback() each time an instance
+// attaches, so it always points to the most recent ha-panel-custom parent.
+let _kceHaPanelParent = null;
+
+function _kceRecoverPanel() {
+  const haPanel = _kceHaPanelParent;
+  if (!haPanel || !haPanel.isConnected) return;
+  if (haPanel.querySelector('kitchen-cooking-card')) return; // already present
+  // ha-panel-custom is connected but missing our element — trigger _createPanel().
+  if (typeof haPanel.requestUpdate === 'function') {
+    haPanel.requestUpdate('panel', null);
+  }
+}
+
+// visibilitychange: main trigger for "tab returns after 5-min suspension".
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    // 500 ms lets HA's own connectedCallback / _createPanel async chain run first;
+    // recovery only fires when that chain was absent (older HA).
+    setTimeout(_kceRecoverPanel, 500);
+  }
+});
+
+// window focus: belt-and-suspenders for mobile browsers / OS window switching
+// where visibilitychange may not fire reliably when the app comes to foreground.
+window.addEventListener('focus', () => setTimeout(_kceRecoverPanel, 500));
+
+// ─── End module-level blank-screen recovery ───────────────────────────────────

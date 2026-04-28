@@ -59,14 +59,14 @@ Safe on all HA versions:
 
 ## Checklist
 
-- [ ] Create this timeline file
-- [ ] Add module-level `_kceHaPanelParent` variable and `_kceRecoverPanel()` 
+- [x] Create this timeline file
+- [x] Add module-level `_kceHaPanelParent` variable and `_kceRecoverPanel()` 
       to `panel-class-template.js`
-- [ ] Add `visibilitychange` + `focus` recovery listeners at module level
-- [ ] Update `connectedCallback()` to set `_kceHaPanelParent = this.parentElement`
-- [ ] Update old (incorrect) comment in `connectedCallback()` to reflect true cause
-- [ ] Run `python3 generate_frontend_data.py` and verify ✅
-- [ ] Bump version to 0.7.0.14
+- [x] Add `visibilitychange` + `focus` recovery listeners at module level
+- [x] Update `connectedCallback()` to set `_kceHaPanelParent = this.parentElement`
+- [x] Update old (incorrect) comment in `connectedCallback()` to reflect true cause
+- [x] Run `python3 generate_frontend_data.py` and verify ✅ (PANEL_VERSION 362→363)
+- [x] Bump version to 0.7.0.14
 
 ## Session Log
 
@@ -75,3 +75,10 @@ Safe on all HA versions:
 - Identified root cause: 5-min suspension + missing connectedCallback fix in older HA
 - Designed module-level recovery mechanism
 - Created this timeline file
+
+### 2026-04-28 (Session 2 — implementation v0.7.0.14)
+- Added `_kceHaPanelParent = this.parentElement` to `connectedCallback()` (tracks ha-panel-custom)
+- Updated stale "Blank-tab fix" comment to accurately describe what those handlers cover
+- Added module-level `let _kceHaPanelParent` + `_kceRecoverPanel()` + listeners at end of template
+- Ran generator: PANEL_VERSION 362→363
+- Bumped version to 0.7.0.14
