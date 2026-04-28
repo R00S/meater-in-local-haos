@@ -591,3 +591,91 @@ Continued from session 9. Focused on fixing method leaf files where the cut prof
 - Fixed `hake-pan_fry.md` cut profile → now describes pan fry method
 - Expanded parent cut profile with anatomy detail (myotome/myosepta structure)
 - Remaining −8 (methods not researched), −2 (2 missing method leaves), −3 (Group A/C/D missing)
+
+---
+
+## Session start — Session 11 (2026-04-27)
+
+### Output 1 — Culinary group definitions (verbatim from `RECIPE_COLLECTION_TOR.md`)
+
+| Culinary Group | Includes |
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Bengali, Ceylon, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+---
+
+### Output 2 — Analysis gate rule (verbatim from `RECIPE_ANALYSIS_TOR.md`)
+
+> Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
+
+---
+
+### Output 3 — Source integrity rule (verbatim from `SOURCE_SURVEY.md`)
+
+> The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
+
+---
+
+### Output 4 — My understanding of this file (my own words)
+
+The task is to improve the lowest-scoring cut files by finding and documenting real verifiable recipe sources, fixing structural problems in existing files, and never fabricating data. Each improvement is committed separately. Sessions continue until all 8 target files (in the original list: turkey_thigh, turkey_ground, lamb_loin_roast, pork_cheek, sirloin_steak, cod_fillet, hake, lamb_brisket) are improved and CHORES.md is complete.
+
+### Session 11 work plan
+
+Continuing from session 10. Remaining low-score files:
+- `chicken_wing.md` (score 5) — structural fixes + create 2 missing leaf files
+- `lamb_brisket.md` (score 5) — slow_cooker leaf still missing
+
+URL probe results for this session:
+
+**chicken_wing grill:**
+| URL | Status | Group |
+|-----|--------|-------|
+| africanbites.com/grilled-chicken-wings/ | 200 ✅ | C (Cameroonian) |
+| tasteofhome.com/recipes/grilled-chicken-wings/ | 200 ✅ | B (American) |
+| hot-thai-kitchen.com/grilled-chicken-wings-2/ | 404 ✗ | — |
+| marocmama.com/moroccan-grilled-chicken-wings/ | 404 ✗ | — |
+| All Group D (cookinpolish, receptai.lt, koket.se, ica.se) | 404 ✗ | — |
+
+**chicken_wing oven_roast:**
+| URL | Status | Group |
+|-----|--------|-------|
+| tasteofhome.com/recipes/baked-chicken-wings/ | 200 ✅ | B (American) |
+| africanbites.com/oven-baked-chicken-wings/ | 403 ✗ | — |
+| All Group A (omnivorescookbook, maangchi, hot-thai-kitchen, beyondkimchee) | 404/403 ✗ | — |
+| All Group D (cookinpolish, skinnytaste baked, natashaskitchen baked) | 404 ✗ | — |
+
+**lamb_brisket slow_cooker:**
+| URL | Status |
+|-----|--------|
+| bbcgoodfood.com/recipes/slow-cooker-lamb-breast | 404 ✗ |
+| slowcookingperfected.com/slow-cooker-lamb-breast/ | 404 ✗ |
+| slowcookerclub.com/slow-cooker-lamb-breast/ | 404 ✗ |
+| jamieoliver.com/slow-cooked-lamb-breast/ | 404 ✗ |
+| bbc.co.uk/food/recipes/slow_cooked_lamb_breast_02946 | 404 ✗ |
+| thespruceeats.com/slow-cooker-lamb-breast-with-herbs | 402 ✗ |
+
+All slow_cooker lamb breast/brisket URLs returned 404/402/403. This is the third consecutive session where no slow_cooker lamb brisket source can be verified. Marking slow_cooker leaf as blocked for this session.
+
+
+### Session 11 completed work (2026-04-27)
+
+#### chicken_wing.md — score 5 → **11**
+
+Structural fixes + 2 new leaf files created.
+
+- Fixed parent cut profile: replaced method-specific baking powder text with anatomy-based description (drumette = humerus, flat = radius/ulna, dark meat rationale for high-heat methods, skin-to-meat ratio as defining structural feature)
+- Fixed `chicken_wing-air_fryer.md` cut profile: replaced verbatim copy of old parent text with method-specific analysis (how air circulation creates near-deep-fried crisping, baking powder pH mechanism, carryover)
+- Created `chicken_wing-grill.md`: 2 sources (Taste of Home — Group B American, Immaculate Bites — Group C Cameroonian). In-progress: Groups A and D not found. 50+ URL probes attempted.
+- Created `chicken_wing-oven_roast.md`: 1 source (Taste of Home — Group B American). In-progress: Groups A, C, D not found. 30+ URL probes attempted.
+- Updated quality score: 20 − 8 (methods not researched) − 1 (Group D missing) = **11**
+
+**Remaining deductions**: −8 methods not researched · −1 Group D tradition missing
+
+#### lamb_brisket.md — no change (score remains 5)
+
+Third consecutive session where lamb brisket slow_cooker leaf URLs cannot be found. Specific 404 results logged in URL probe table above. Slow_cooker leaf remains blocked.
+
