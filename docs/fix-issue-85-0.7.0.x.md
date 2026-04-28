@@ -1,0 +1,77 @@
+# Branch Timeline: fix-issue-85 — v0.7.0.x
+
+## Goal
+Fix the blank screen that appears when the user returns to the KCE panel after
+the browser tab has been hidden for some time.
+
+## Root Cause Analysis (from HA source code)
+
+After reading `partial-panel-resolver.ts` and `ha-panel-custom.ts` from
+HA's frontend repository, the root cause was identified:
+
+### HA's "suspendWhenHidden" mechanism
+
+`partial-panel-resolver` watches `visibilitychange`. After the tab is hidden
+for **5 minutes**, it removes `ha-panel-custom` from the DOM and stores it as
+`_disconnectedPanel`. When the tab returns, it re-appends the same element.
+
+On re-append, `ha-panel-custom.disconnectedCallback()` had already been called
+during removal, which called `_cleanupPanel()`:
+- Sets `_setProperties = undefined`
+- Removes our `kitchen-cooking-card` child from DOM
+
+On re-append, `ha-panel-custom.connectedCallback()` fires.
+- **Newer HA (2024.x+)**: connectedCallback has a fix that checks
+  `!_setProperties && !hasChildNodes() && panel` → calls `_createPanel()`
+  → our element is recreated asynchronously.
+- **Older HA**: connectedCallback does NOT call `_createPanel()`.
+  `ha-panel-custom` is back in DOM but forever empty → **persistent blank**.
+
+### Why existing in-element fixes don't help
+
+All visibilitychange/focus handlers wired in `connectedCallback()` are
+**removed** in `disconnectedCallback()`. Once our element is destroyed, those
+handlers no longer exist. They cannot trigger a re-render of something that
+doesn't exist anymore.
+
+The `hasChanged: () => true` fix is correct but irrelevant here — it helps
+when the element exists but HA passes the same hass reference; it cannot
+help when the element has been destroyed.
+
+## Fix
+
+A **module-level recovery mechanism** that survives element destruction:
+
+- `_kceHaPanelParent`: module-level variable, updated in `connectedCallback()`
+  to always point to the current `ha-panel-custom` parent.
+- `_kceRecoverPanel()`: checks if `ha-panel-custom` is connected but missing
+  our element; if so, calls `haPanel.requestUpdate('panel', null)` which
+  makes HA's `ha-panel-custom.update()` see `changedProps.has('panel')` with
+  `oldValue=null ≠ actual panel` → calls `_createPanel()` → recreates us.
+- `visibilitychange` listener at module level (not on the element) calls
+  `_kceRecoverPanel` with a 500 ms delay (lets newer HA's own async
+  connectedCallback chain finish first; recovery only fires if absent).
+- `window focus` listener as belt-and-suspenders for mobile browsers.
+
+Safe on all HA versions:
+- New HA: element already present at 500 ms → check does nothing.
+- Old HA: element absent → recovery fires once → blank resolved.
+
+## Checklist
+
+- [ ] Create this timeline file
+- [ ] Add module-level `_kceHaPanelParent` variable and `_kceRecoverPanel()` 
+      to `panel-class-template.js`
+- [ ] Add `visibilitychange` + `focus` recovery listeners at module level
+- [ ] Update `connectedCallback()` to set `_kceHaPanelParent = this.parentElement`
+- [ ] Update old (incorrect) comment in `connectedCallback()` to reflect true cause
+- [ ] Run `python3 generate_frontend_data.py` and verify ✅
+- [ ] Bump version to 0.7.0.14
+
+## Session Log
+
+### 2026-04-28 (Session 1)
+- Read HA source: `partial-panel-resolver.ts` and `ha-panel-custom.ts`
+- Identified root cause: 5-min suspension + missing connectedCallback fix in older HA
+- Designed module-level recovery mechanism
+- Created this timeline file
