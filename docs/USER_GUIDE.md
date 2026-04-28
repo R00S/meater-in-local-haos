@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.7.0.8 · Home Assistant 2024.1.0+
+> **Version:** 0.7.0.11 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -619,6 +619,9 @@ The `## Styckesprofil` section is optional but strongly recommended — without 
 | `recommended_doneness` | The `name` value of the preferred doneness level. |
 | `methods` | List of cooking method slugs supported by this cut. |
 | `doneness` | At least one doneness entry (see below). |
+| `rest_time_min` | *(optional)* Minimum resting time in minutes for this cut (integer). |
+| `rest_time_max` | *(optional)* Maximum resting time in minutes for this cut (integer). |
+| `carryover_temp_c` | *(optional)* Expected carryover rise in °C after pulling from heat (number). |
 
 Each `doneness` entry needs: `name`, `target_c`, `target_f`, `min_c`, `min_f`, `max_c`, `max_f`, `usda_safe` (true/false). Add `recommended: true` to exactly one entry. Add `name_sv:` to provide the Swedish doneness label.
 
@@ -654,6 +657,21 @@ category: beef
 meat: beef
 cut_type: Steaks
 -->
+```
+
+The required fields (`type`, `slug`, `method`, `name`, `category`, `meat`, `cut_type`) mirror the parent cut overview. Three optional fields let you override the cut-level resting values for this specific cooking method:
+
+| Field | Description |
+|-------|-------------|
+| `rest_time_min` | *(optional)* Minimum resting time in minutes for this method (overrides the cut default). |
+| `rest_time_max` | *(optional)* Maximum resting time in minutes for this method (overrides the cut default). |
+| `carryover_temp_c` | *(optional)* Expected carryover rise in °C for this method (e.g. braising has less carryover than high-heat pan sear). |
+
+For example, a braise file might set `rest_time_min: 0` and `carryover_temp_c: 1` because slow-cooked meat rests in the braising liquid and carries over very little. A hot pan-sear might set `carryover_temp_c: 4`.
+
+The remaining file structure:
+
+```markdown
 # My Cut Name × Pan Sear — Recipe Temperature Research
 
 ## Cut profile
@@ -1131,7 +1149,7 @@ Start a temperature-monitored cook session.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `entity_id` | string | ✅ | Target cooking session sensor entity |
-| `cut_id` | integer | ✅ | Cut ID from `cooking_data.py` |
+| `cut_id` | string or integer | ✅ | EXP_TREE slug (e.g. `ribeye_steak`) or legacy integer from `cooking_data.py` |
 | `doneness` | string | ✅ | e.g. `medium_rare`, `well_done`, `pulled` |
 | `cooking_method` | string | ✅ | e.g. `oven_roast`, `pan_sear`, `grill` |
 | `data_source` | string | | `international` (default) or `swedish` |

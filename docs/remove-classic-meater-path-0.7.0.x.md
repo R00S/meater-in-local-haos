@@ -98,3 +98,30 @@ Remove the classic MEATER path (`_currentPath = 'meater'`) and make the experime
 - Tog bort `copy_recipe_files_to_www()` funktion och anrop, tog bort oanvänd `import shutil`
 - Ersatte `docs/recipe_research/` (katalog) med git-symlänk → `custom_components/kitchen_cooking_engine/www/recipes`
 - Generator verifierad: 539 filer, 164 cuts, inga fel
+
+### 2026-04-28 (Session 7 — start_cook EXP_TREE slug support v0.7.0.9)
+- `start_cook` service now accepts a string `cut_id` (EXP_TREE slug, e.g. `"ribeye_steak"`) in addition to legacy integer IDs
+- `_get_exp_cut_data(cut_id, cooking_method)` helper added: reads `KCE:CUT` and `KCE:CUT_METHOD` frontmatter from recipe markdown files to extract target temperatures, rest times, and carryover values
+- `generate_frontend_data.py` updated: reads `rest_time_min`, `rest_time_max`, `carryover_temp_c` from `KCE:CUT` frontmatter (first pass) and per-method overrides from `KCE:CUT_METHOD` files (second pass); populates them into `EXP_TREE`
+- Bumped version to `0.7.0.9`
+- Generator: PANEL_VERSION 357→358
+
+### 2026-04-28 (Session 8 — PLATFORMS fix & blocking I/O fix v0.7.0.10)
+- **Root cause**: `PLATFORMS = [Platform.SENSOR]` was missing from `__init__.py` entirely; this caused a `NameError` at line 479 on every config entry setup → all sensor entities failed to register → every service call silently returned empty
+- **Fix 1**: Added `PLATFORMS = [Platform.SENSOR]` immediately after `_LOGGER`
+- **Fix 2**: `_get_exp_cut_data` called `os.walk()` + `open()` directly in the async event loop; moved to `await hass.async_add_executor_job(...)` to avoid HA blocking-call warnings
+- Bumped version to `0.7.0.10`
+- Generator: PANEL_VERSION 358→359
+
+### 2026-04-28 (Session 9 — CHORES v0.7.0.11)
+- Bumped version to `0.7.0.11`
+- Updated `docs/USER_GUIDE.md`:
+  - Version line `0.7.0.8` → `0.7.0.11`
+  - `start_cook` service table: `cut_id` type updated to `string or integer` with description of slug vs legacy int
+  - KCE:CUT required fields table: added `rest_time_min`, `rest_time_max`, `carryover_temp_c` as optional fields
+  - KCE:CUT_METHOD section: split YAML block from body template; added optional fields table and explanation
+- Updated `README.md`:
+  - Version `v0.7.0.8` → `v0.7.0.11`
+  - Added `v0.7.0.9–0.7.0.11 Changes` changelog section
+  - `start_cook` example updated to show slug usage (legacy int shown as secondary example)
+- Generator: PANEL_VERSION 359→360

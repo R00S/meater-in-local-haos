@@ -26,9 +26,16 @@ Full installation, configuration, and feature documentation:
 
 ## 📊 Current Status
 
-**v0.7.0.8** — Development release (April 2026)
+**v0.7.0.11** — Development release (April 2026)
 
 Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.7.0.9–0.7.0.11 Changes — start_cook service & bug fixes (April 2026)
+- ✅ **`start_cook` accepts EXP_TREE slugs** — `cut_id` now accepts a string slug (e.g. `"ribeye_steak"`) in addition to legacy integer IDs; the service looks up temperatures and rest times from the recipe markdown files
+- ✅ **Rest time and carryover data in KCE:CUT** — `rest_time_min`, `rest_time_max`, and `carryover_temp_c` optional fields added to the cut overview format; the generator populates these into `EXP_TREE` for use by the cooking engine
+- ✅ **Per-method rest/carryover overrides in KCE:CUT_METHOD** — braise, sous_vide, and slow_cooker files can now override the cut-level rest/carryover defaults for their specific method
+- ✅ **Fix: `PLATFORMS` undefined** — `PLATFORMS = [Platform.SENSOR]` was missing from `__init__.py`; this caused a `NameError` that silently prevented all config entries from setting up sensor entities, causing every service call to fail
+- ✅ **Fix: blocking I/O in event loop** — `_get_exp_cut_data` was calling `os.walk()` + `open()` directly in the async event loop; moved to `hass.async_add_executor_job()` to avoid HA blocking-call warnings
 
 ### v0.7.0.x Changes — Classic MEATER path removed; single recipe source of truth (April 2026)
 - ✅ **Classic MEATER path retired** — The old `_currentPath = 'meater'` code path (~400 lines including `_renderMeaterPath`, `_renderSetupForm`, `_navigateToMeaterPath`) has been deleted. MEATER+ now routes directly to the experimental path
@@ -491,12 +498,26 @@ The integration provides services to control cooking sessions. You can call thes
 
 ### Start a Cook
 
+Use the EXP_TREE slug (preferred) or a legacy integer cut ID:
+
 ```yaml
 service: kitchen_cooking_engine.start_cook
 target:
   entity_id: sensor.cooking_session
 data:
-  cut_id: 100  # Ribeye Steak
+  cut_id: ribeye_steak  # EXP_TREE slug (preferred)
+  doneness: medium_rare
+  cooking_method: pan_sear
+```
+
+Legacy integer IDs still work for backwards compatibility:
+
+```yaml
+service: kitchen_cooking_engine.start_cook
+target:
+  entity_id: sensor.cooking_session
+data:
+  cut_id: 100  # Legacy integer ID (Ribeye Steak)
   doneness: medium_rare
   cooking_method: pan_sear
 ```
