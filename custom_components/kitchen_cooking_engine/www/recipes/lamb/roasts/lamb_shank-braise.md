@@ -6,6 +6,9 @@ name: Shank × Braise
 category: lamb
 meat: lamb
 cut_type: Ground
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
 -->
 # Lamb Shank × Braise — Recipe Temperature Research
 

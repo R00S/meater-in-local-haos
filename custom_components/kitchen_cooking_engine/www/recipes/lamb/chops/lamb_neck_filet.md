@@ -50,6 +50,9 @@ doneness:
 quality_score: 9
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
+rest_time_min: 5
+rest_time_max: 10
+carryover_temp_c: 3
 -->
 # Lamb Neck Filet — Cut Overview
 

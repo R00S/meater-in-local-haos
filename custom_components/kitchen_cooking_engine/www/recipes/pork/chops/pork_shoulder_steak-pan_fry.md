@@ -17,9 +17,9 @@ The *Schopfsteak* (Austrian) and *nakkesteak* (Danish) are both cooked identical
 
 ## Styckesprofil
 
-Pannstekning av fläskaxel-stek: medel-hög värme (180–200 °C pannyta), tillräckligt med fett eller olja för att säkerställa kontakt över den ojämna steksytan, och 3–4 minuter per sida. Den kraftiga marmoreringen av halsen innebär att fettet smälter ned snabbt och ger naturlig bastning.
+Pannstekning av bogskiva: medel-hög värme (180–200 °C pannyta), tillräckligt med fett eller olja för att säkerställa kontakt över den ojämna steksytan, och 3–4 minuter per sida. Den kraftiga marmoreringen av halsen innebär att fettet smälter ned snabbt och ger naturlig bastning.
 
-Innertemperatur: **70–74 °C (158–165 °F)** för genomstekt med saftighet kvar. USDA-minimum: **63 °C** med 3 minuters vila för axelsnitt. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till steakens mitt. Vila 5 minuter täckt.
+Innertemperatur: **70–74 °C (158–165 °F)** för genomstekt med saftighet kvar. USDA-minimum: **63 °C** med 3 minuters vila för detta snitt. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till steakens mitt. Vila 5 minuter täckt.
 
 ## Source recipes
 

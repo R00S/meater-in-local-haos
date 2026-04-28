@@ -6,6 +6,9 @@ name: Pork Tenderloin × Sous Vide
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin
+rest_time_min: 0
+rest_time_max: 3
+carryover_temp_c: 1
 -->
 # Pork Tenderloin × Sous Vide — Recipe Temperature Research
 

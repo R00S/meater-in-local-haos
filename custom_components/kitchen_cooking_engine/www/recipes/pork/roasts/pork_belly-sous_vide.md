@@ -6,6 +6,9 @@ name: Pork Belly × Sous Vide
 category: pork
 meat: pig
 cut_type: Roasts
+rest_time_min: 0
+rest_time_max: 3
+carryover_temp_c: 1
 -->
 # Pork Belly × Sous Vide — Recipe Temperature Research
 

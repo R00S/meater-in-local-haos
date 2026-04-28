@@ -26,9 +26,28 @@ Full installation, configuration, and feature documentation:
 
 ## 📊 Current Status
 
-**v0.6.5.5** — Development release (April 2026)
+**v0.7.0.13** — Development release (April 2026)
 
 Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.7.0.12–0.7.0.13 Changes — integer cut_id removed; slug is the only path (April 2026)
+- ✅ **`start_cook` accepts only EXP_TREE slugs** — Legacy integer `cut_id` support removed. `cut_id` is now strictly a string slug (e.g. `"ribeye_steak"`). The system has exactly one path: give it a slug, it reads the cut file, that's it
+- ✅ **Simplified `start_cook` handler** — Integer branch, `_get_protein_name_for_cut` helpers, and all remaining imports from `cooking_data.py` / `swedish_cooking_data.py` removed from `__init__.py`
+
+### v0.7.0.9–0.7.0.11 Changes — start_cook service & bug fixes (April 2026)
+- ✅ **`start_cook` accepts EXP_TREE slugs** — `cut_id` is a string slug (e.g. `"ribeye_steak"`); the service looks up temperatures and rest times from the recipe markdown files
+- ✅ **Rest time and carryover data in KCE:CUT** — `rest_time_min`, `rest_time_max`, and `carryover_temp_c` optional fields added to the cut overview format; the generator populates these into `EXP_TREE` for use by the cooking engine
+- ✅ **Per-method rest/carryover overrides in KCE:CUT_METHOD** — braise, sous_vide, and slow_cooker files can now override the cut-level rest/carryover defaults for their specific method
+- ✅ **Fix: `PLATFORMS` undefined** — `PLATFORMS = [Platform.SENSOR]` was missing from `__init__.py`; this caused a `NameError` that silently prevented all config entries from setting up sensor entities, causing every service call to fail
+- ✅ **Fix: blocking I/O in event loop** — `_get_exp_cut_data` was calling `os.walk()` + `open()` directly in the async event loop; moved to `hass.async_add_executor_job()` to avoid HA blocking-call warnings
+
+### v0.7.0.x Changes — Classic MEATER path removed; single recipe source of truth (April 2026)
+- ✅ **Classic MEATER path retired** — The old `_currentPath = 'meater'` code path (~400 lines including `_renderMeaterPath`, `_renderSetupForm`, `_navigateToMeaterPath`) has been deleted. MEATER+ now routes directly to the experimental path
+- ✅ **Simplified data getters** — `_getDataCategories()`, `_getDonenessOptions()`, and all 5 recipe getters (`_getRecipeIndex`, `_getCutProfiles`, `_getCutProfilesSv`, `_getCutMethodProfiles`, `_getRecipeTitles`) always return the live EXP_TREE set; no more ternary on `_currentPath`
+- ✅ **UI cleanup** — Welcome screen reduced to a single MEATER+ card; "(experimental)" badge and label removed from the MEATER+ heading; `_renderRecentMeaterCooks` back button updated
+- ✅ **Generator cleaned up** — `CLASSIC_RECIPE_INDEX`, `CLASSIC_CUT_PROFILES`, `CLASSIC_CUT_PROFILES_SV`, `CLASSIC_CUT_METHOD_PROFILES`, `CLASSIC_RECIPE_TITLES` constants removed from generator output; `docs/recipe_research_classic/` and `www/recipes_classic/` deleted
+- ✅ **Single source of truth for recipe files** — `www/recipes/` is now the ONLY source. `generate_frontend_data.py` reads directly from `www/recipes/`; `copy_recipe_files_to_www()` removed. `docs/recipe_research/` is now a git symlink pointing to `www/recipes/` so both paths remain browsable
+- ✅ **Swedish pork terminology fixes** — `fläskaxel` → `fläskbog` everywhere; `Bogkotlett` (trade name) → `Bogskiva`; `görs av fläskbog` vs `görs av bogfläsk` (ingredient context) fixed in ground pork files
 
 ### v0.6.5.x Changes — Swedish cut profiles & translation quality (April 2026)
 - ✅ **Swedish cut-profile body text** — `## Styckesprofil` sections now cover all 163 experimental-path cuts; the **Styckesprofil** card and **Tillagningsmetod** method-description area render in Swedish when UI language is set to Svenska (falls back to English when no Swedish section exists)
@@ -488,7 +507,7 @@ service: kitchen_cooking_engine.start_cook
 target:
   entity_id: sensor.cooking_session
 data:
-  cut_id: 100  # Ribeye Steak
+  cut_id: ribeye_steak  # EXP_TREE slug
   doneness: medium_rare
   cooking_method: pan_sear
 ```

@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.6.4.5 · Home Assistant 2024.1.0+
+> **Version:** 0.7.0.13 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -30,8 +30,8 @@
    - 5.5 [Monitoring an Active Cook](#55-monitoring-an-active-cook)
    - 5.6 [Resting and Completing a Cook](#56-resting-and-completing-a-cook)
    - 5.7 [Recent MEATER Cooks](#57-recent-meater-cooks)
-   - 5.8 [MEATER+ (experimental) — Safety Indicators](#58-meater-experimental--safety-indicators)
-   - 5.9 [MEATER+ (experimental) — Cut Profile & Recipe Links](#59-meater-experimental--cut-profile--recipe-links)
+   - 5.8 [MEATER+ — Safety Indicators](#58-meater--safety-indicators)
+   - 5.9 [MEATER+ — Cut Profile & Recipe Links](#59-meater--cut-profile--recipe-links)
    - 5.10 [Contributing Recipe Files](#510-contributing-recipe-files)
 6. [Ninja Combi Cooking](#6-ninja-combi-cooking)
    - 6.1 [Built-in Recipes](#61-built-in-recipes)
@@ -220,7 +220,7 @@ At the bottom of the welcome screen are three persistent settings cards:
 
 ## 5. MEATER Probe Cooking
 
-Tap your **MEATER+ probe** appliance card to enter the MEATER Cooking path.
+Tap your **MEATER+ probe** appliance card to enter the MEATER+ cooking path.
 
 ### 5.1 Starting a Cook
 
@@ -287,19 +287,14 @@ After selecting all five, a **Review and Start** summary appears. Confirm to beg
 
 ### 5.3 Temperature Data Sources
 
-Switch the data source in the welcome screen settings card:
+The MEATER+ path always uses the international temperature dataset (USDA / culinary research).
+Temperature data for each cut and doneness level is sourced from the cut's research file
+(`<!-- KCE:CUT … -->` tag) — the same files used for the cut profiles and recipe links in § 5.9.
 
-- **🇺🇸 International (USDA)** — USDA and FDA guidelines, temperatures in °C and °F.
-- **🇸🇪 Svenska (Livsmedelsverket)** — Swedish food safety authority recommendations,
-  Stekguiden.se, and Gårdssällskapet. Doneness names appear in Swedish.
-
-Both trees are available simultaneously. You can hide the entire Temperature Data Source
-selection card during cooking by checking **"Dölj det andra språkets träd" / "Hide other
-language tree"** in the Language settings card on the welcome screen. When checked, the
-data-source card is hidden from the MEATER cook start screen and the active data source
-automatically follows your UI language (Swedish language → Swedish temperature tree;
-English language → International tree). Your language choice is remembered across page
-reloads and new browsers.
+> The Swedish temperature tree (Livsmedelsverket / Stekguiden.se) that was available in
+> earlier versions has been retired. Swedish **language** support (UI labels, cut names,
+> doneness names, cut-profile text) remains fully functional and is controlled by the
+> **Language** setting on the welcome screen.
 
 ### 5.4 Custom Temperature Cook
 
@@ -375,80 +370,60 @@ Tap **🔄 Restart This Cook** to pre-fill the setup form with the same settings
 new session. Tap **✏️ Edit Notes** to add or change notes. Tap **🗑️ Delete** to remove the
 record.
 
-### 5.8 MEATER+ (experimental) — Safety Indicators
+### 5.8 MEATER+ — Safety Indicators
 
-The **🧪🌡️ MEATER+ (experimental)** card appears on the welcome screen alongside your regular
-MEATER+ card. It uses the same hardware and the same cook flow as the standard MEATER path,
-but adds **colour-coded food-safety indicators** to every doneness option so you can see at a
-glance whether a temperature meets official guidelines.
+The MEATER+ path adds **colour-coded food-safety indicators** to every doneness option so you
+can see at a glance whether a temperature meets official guidelines.
 
 > **Safe to use.** It calls the same `start_cook` and `start_simple_probe_cook` services as
-> the standard MEATER path. The active cook display is identical.
+> all other cook paths. The active cook display is identical.
 
 #### How it works
 
-The cook flow is identical to the standard MEATER path (§ 5.1 – 5.4):
+The cook flow follows these steps:
 
 1. **Select category** — Beef / Pork / Poultry / Fish / Game / Vegetables / Custom
 2. **Select meat & cut type** — e.g. Beef → Steaks
 3. **Select cut** — e.g. Ribeye Steak
-4. **Select doneness** — each option now shows a safety-level dot:
+4. **Select doneness** — each option shows a safety-level dot:
 
 | Dot colour | Meaning |
 |------------|---------|
-| 🟢 Green (safe) | Meets USDA / Livsmedelsverket minimum safe temperatures |
+| 🟢 Green (safe) | Meets USDA minimum safe temperatures |
 | 🟠 Orange (caution) | Below the official minimum but widely practised for this cut with proper sourcing |
 | 🔴 Red (unsafe) | Not recommended; displayed for informational purposes only |
 
 A legend line — **🟢 safe · 🟠 caution (widely practised) · 🔴 below guidelines** — is shown
 directly below the Doneness Level heading so you can read it without hovering over any dot.
 
-5. **Fine-tune temperature** (optional) — same slider as the standard path. When your selected
-doneness temperature is below the USDA safe minimum for that cut, a highlighted note appears
-automatically:
+5. **Fine-tune temperature** (optional). When your selected doneness temperature is below the
+USDA safe minimum for that cut, a highlighted note appears automatically:
 
 > ⚠️ **Culinary preferred:** 54 °C / 130 °F  
 > 🛡️ **USDA safe minimum for this cut:** 63 °C / 145 °F  
 > Consuming undercooked meat carries food safety risk.
 
-All temperatures displayed in the note (and everywhere in the experimental form) follow your **Measurement System** setting — the values shown above are examples for the SE/UK (°C) setting; US users will see °F. The underlying cook target is always stored in °C and converted for display.
+All temperatures in the note follow your **Measurement System** setting — the values above
+are examples for SE/UK (°C); US users see °F. The underlying target is always stored in °C.
 
 This note only appears when there is a genuine discrepancy between the culinary pull temp and
 the cut's official safe minimum — it is absent for vegetables and for any doneness that already
 meets the safe minimum.
-6. **Choose cooking method** — only the methods supported by the selected cut are shown (derived from the cut's recipe file). On the standard MEATER path all methods are listed; here only the relevant subset appears.
-7. **Start** — same `start_cook` service call
+
+6. **Choose cooking method** — only the methods supported by the selected cut are shown
+(derived from the cut's research file).
+7. **Start** — same `start_cook` service call.
 
 #### Custom Temperature mode
 
 Select **🎯 Custom** in Step 1 to enter any temperature between 30 °C and 100 °C with an
-optional session name — identical to the **Custom Temperature Cook** option in the
-standard MEATER path (§ 5.4).
-
-#### Differences from the standard MEATER path
-
-| | Standard MEATER path | MEATER+ (experimental) |
-|-|----------------------|------------------------|
-| Cook flow | Category → meat → cut → doneness | Identical |
-| Doneness options | Full list for the cut | Full list for the cut |
-| Safety indicators | Not shown | **Shown per doneness option** (🟢 / 🟠 / 🔴) |
-| Safety legend | Not shown | **Shown below Doneness Level header** |
-| USDA minimum note | Not shown | **Shown in Target Temperature card when below safe temp** |
-| Cut profile text | Not shown | **Shown after cut selection** |
-| Recipe research links | Not shown | **Shown after cut selection** |
-| Temperature data source | International or Swedish | **International (USDA) only** (no data source selector shown) |
-| Temperature fine-tuning | Available | Available |
-| Cooking method selector | All methods shown | **Only methods declared in the cut file** |
-| Custom temperature | Available | Available |
-| Active cook screen | Standard | Identical |
-| **Language support** | All labels translate with UI language | **Fully respected**: all labels, category/cut/doneness names translate; Swedish names defined in cut files (`name_sv:`) |
-| **Measurement system** | All displayed temps and recipe units follow your measurement setting | **Fully respected**: all target temps, doneness temps, safety warning values, and recipe ingredient amounts/temps convert to your selected system (SE/UK/US) |
+optional session name — see [Section 5.4](#54-custom-temperature-cook).
 
 ---
 
-### 5.9 MEATER+ (experimental) — Cut Profile & Recipe Links
+### 5.9 MEATER+ — Cut Profile & Recipe Links
 
-When you select a cut in the **MEATER+ (experimental)** path, a **📖 Cut Profile** card
+When you select a cut in the **MEATER+** path, a **📖 Cut Profile** card
 appears immediately below the cut selector — before you choose a doneness level.
 
 #### What it shows
@@ -501,7 +476,7 @@ returns to the recipe list; ✕ Close dismisses the viewer entirely.
 
 #### Language support
 
-When the UI language is set to **🇸🇪 Svenska**, the experimental path translates all labels,
+When the UI language is set to **🇸🇪 Svenska**, the MEATER+ path translates all labels,
 category names, meat names, cut-type names, cut names, and doneness names to Swedish:
 
 | Element | How the Swedish name is provided |
@@ -515,37 +490,23 @@ category names, meat names, cut-type names, cut names, and doneness names to Swe
 | Cut-profile body text (Styckesprofil card) | `## Styckesprofil` section in the cut's `{slug}.md` overview file (falls back to English if absent) |
 | Method descriptions (Tillagningsmetod card) | `## Styckesprofil` section in the method's `{slug}-{method}.md` file (falls back to English if absent) |
 
-As of v0.6.5.x, **all 163 experimental-path cut overview files** carry a `## Styckesprofil` section, so Swedish users see a Swedish cut description for every cut in the experimental tree. Method files fall back to English where no `## Styckesprofil` has been added yet.
+As of v0.7.0.x, **all 163 MEATER+ cut overview files** carry a `## Styckesprofil` section, so Swedish users see a Swedish cut description for every cut. Method files fall back to English where no `## Styckesprofil` has been added yet.
 
 Any cut without a `name_sv:` field falls back to the English slug-derived name.
 
-
-
-The recipe library is split into two forks:
-
-| Fork | Directory | Used by |
-|------|-----------|---------|
-| **Classic** (frozen) | `docs/recipe_research_classic/` | Standard MEATER path |
-| **Experimental** (active) | `docs/recipe_research/` | MEATER+ (experimental) path |
-
-The classic fork is a one-time snapshot that never changes. The experimental fork is where
-all new cut files, method research, and stub upgrades happen. When the experimental path is
-declared stable the classic fork is deleted and experimental becomes the default.
-
-Each file carries a `<!-- KCE:CUT … -->` or `<!-- KCE:CUT_METHOD … -->` tag that describes
-its position in the meat hierarchy, cooking temperatures, and supported methods.
+The recipe library lives under `docs/recipe_research/`. Each file carries a
+`<!-- KCE:CUT … -->` or `<!-- KCE:CUT_METHOD … -->` tag that describes its position in the
+meat hierarchy, cooking temperatures, and supported methods.
 A `## Cut profile` body section provides the English cut description; a sibling
 `## Styckesprofil` section provides the Swedish translation shown when the UI is set to Svenska.
 
 At release time the **create-test-release** GitHub Actions workflow automatically runs
-`generate_frontend_data.py`, which scans both forks and bakes `RECIPE_INDEX` /
-`CLASSIC_RECIPE_INDEX`, `EXP_TREE`, `CUT_PROFILES` / `CLASSIC_CUT_PROFILES`,
-`CUT_PROFILES_SV` / `CLASSIC_CUT_PROFILES_SV`, and `CUT_METHOD_PROFILES` /
-`CLASSIC_CUT_METHOD_PROFILES` into `kitchen-cooking-panel.js`. This happens on the
-CI runner — the developer does not need to run the generator locally before creating
-a release.
+`generate_frontend_data.py`, which scans the recipe library and bakes `RECIPE_INDEX`,
+`EXP_TREE`, `CUT_PROFILES`, `CUT_PROFILES_SV`, `CUT_METHOD_PROFILES`, and
+`RECIPE_TITLES_INDEX` into `kitchen-cooking-panel.js`. This happens on the CI runner —
+the developer does not need to run the generator locally before creating a release.
 
-To add a new cut to the experimental path:
+To add a new cut:
 
 1. Create `docs/recipe_research/<category>/<cut>/{slug}.md` with a `<!-- KCE:CUT … -->` tag.
 2. Optionally add `{slug}-{method}.md` files for each cooking method.
@@ -557,9 +518,6 @@ known to the system):
 1. Add the method slug to the cut's `<!-- KCE:CUT … -->` `methods:` list.
 2. Optionally create `{slug}-{method}.md` research file for that method.
 3. No changes to `cooking_data.py` or any other file are required.
-
-> **Note:** Only edit files under `docs/recipe_research/` (the experimental fork).
-> Never edit `docs/recipe_research_classic/` — it is a frozen snapshot.
 
 ---
 
@@ -661,6 +619,9 @@ The `## Styckesprofil` section is optional but strongly recommended — without 
 | `recommended_doneness` | The `name` value of the preferred doneness level. |
 | `methods` | List of cooking method slugs supported by this cut. |
 | `doneness` | At least one doneness entry (see below). |
+| `rest_time_min` | *(optional)* Minimum resting time in minutes for this cut (integer). |
+| `rest_time_max` | *(optional)* Maximum resting time in minutes for this cut (integer). |
+| `carryover_temp_c` | *(optional)* Expected carryover rise in °C after pulling from heat (number). |
 
 Each `doneness` entry needs: `name`, `target_c`, `target_f`, `min_c`, `min_f`, `max_c`, `max_f`, `usda_safe` (true/false). Add `recommended: true` to exactly one entry. Add `name_sv:` to provide the Swedish doneness label.
 
@@ -696,6 +657,21 @@ category: beef
 meat: beef
 cut_type: Steaks
 -->
+```
+
+The required fields (`type`, `slug`, `method`, `name`, `category`, `meat`, `cut_type`) mirror the parent cut overview. Three optional fields let you override the cut-level resting values for this specific cooking method:
+
+| Field | Description |
+|-------|-------------|
+| `rest_time_min` | *(optional)* Minimum resting time in minutes for this method (overrides the cut default). |
+| `rest_time_max` | *(optional)* Maximum resting time in minutes for this method (overrides the cut default). |
+| `carryover_temp_c` | *(optional)* Expected carryover rise in °C for this method (e.g. braising has less carryover than high-heat pan sear). |
+
+For example, a braise file might set `rest_time_min: 0` and `carryover_temp_c: 1` because slow-cooked meat rests in the braising liquid and carries over very little. A hot pan-sear might set `carryover_temp_c: 4`.
+
+The remaining file structure:
+
+```markdown
 # My Cut Name × Pan Sear — Recipe Temperature Research
 
 ## Cut profile
@@ -1156,8 +1132,8 @@ temperature ranges are shown as default.
 
 All ingredient amounts in AI-generated recipes and on-screen displays are automatically
 converted to the selected measurement system. This includes temperatures and ingredient
-quantities in the **MEATER+ (experimental)** cut profile viewer, all target temperature
-displays throughout the experimental setup form, and doneness temperature hints.
+quantities in the **MEATER+** cut profile viewer, all target temperature
+displays throughout the MEATER+ setup form, and doneness temperature hints.
 
 ---
 
@@ -1173,7 +1149,7 @@ Start a temperature-monitored cook session.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `entity_id` | string | ✅ | Target cooking session sensor entity |
-| `cut_id` | integer | ✅ | Cut ID from `cooking_data.py` |
+| `cut_id` | string | ✅ | EXP_TREE slug (e.g. `ribeye_steak`) |
 | `doneness` | string | ✅ | e.g. `medium_rare`, `well_done`, `pulled` |
 | `cooking_method` | string | ✅ | e.g. `oven_roast`, `pan_sear`, `grill` |
 | `data_source` | string | | `international` (default) or `swedish` |
@@ -1238,7 +1214,7 @@ Start a cook session that spans multiple appliance entities simultaneously.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `entity_id` | list | ✅ | List of entity IDs |
-| `cut_id` | integer | ✅ | Cut ID |
+| `recipe_id` | string or integer | ✅ | Recipe ID |
 | `doneness` | string | ✅ | Doneness level |
 | `cooking_method` | string | ✅ | Cooking method |
 

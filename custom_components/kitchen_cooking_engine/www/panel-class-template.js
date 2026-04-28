@@ -89,7 +89,7 @@ class KitchenCookingPanel extends LitElement {
       _messageDialogContent: { type: String },
       _messageDialogIsError: { type: Boolean },
       // Phase 1: GUI Redesign - Navigation state
-      _currentPath: { type: String },  // 'welcome', 'meater', 'ninja_combi', 'ai_recipe_builder', 'previous_cooks', 'recent_meater'
+      _currentPath: { type: String },  // 'welcome', 'meater_experimental', 'ninja_combi', 'ai_recipe_builder', 'previous_cooks', 'recent_meater'
       _selectedAppliance: { type: Object },  // Selected appliance from welcome screen
       _showMeaterCooking: { type: Boolean },  // Show MEATER cooking form in MEATER path
       // Phase 5/6: Recipe and AI builder states
@@ -957,53 +957,39 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _getDataCategories() {
-    // The experimental MEATER path is driven by EXP_TREE — built at generation
-    // time from the KCE:CUT tagged cut files under docs/recipe_research/.
+    // The MEATER path is driven by EXP_TREE — built at generation time from
+    // the KCE:CUT tagged cut files under docs/recipe_research/.
     // Adding a new cut requires only a new {slug}.md with a KCE:CUT tag;
     // cooking_data.py does not need to be touched.
-    // Swedish support on this path is postponed (no verified slug mapping yet).
-    if (this._currentPath === 'meater_experimental') return EXP_TREE;
-    return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_MEAT_CATEGORIES : MEAT_CATEGORIES;
+    return EXP_TREE;
   }
 
   _getDonenessOptions() {
-    // See _getDataCategories: experimental MEATER path uses EXP_DONENESS_OPTIONS.
-    if (this._currentPath === 'meater_experimental') return EXP_DONENESS_OPTIONS;
-    return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
+    return EXP_DONENESS_OPTIONS;
   }
 
   // ---------------------------------------------------------------------------
-  // Recipe library helpers
-  //
-  // The experimental MEATER path reads the actively developed recipe library
-  // (RECIPE_INDEX / CUT_PROFILES / CUT_METHOD_PROFILES / RECIPE_TITLES_INDEX).
-  // Every other path (classic MEATER) reads the frozen snapshot
-  // (CLASSIC_RECIPE_INDEX / CLASSIC_CUT_PROFILES / …).
-  //
-  // Cutover instructions (when experimental is declared stable):
-  //   1. Remove the CLASSIC_* branches below so all paths return the live set.
-  //   2. Remove CLASSIC_* constant declarations from generate_frontend_data.py.
-  //   3. Delete docs/recipe_research_classic/ and www/recipes_classic/.
+  // Recipe library helpers — all paths read the live recipe library.
   // ---------------------------------------------------------------------------
 
   _getRecipeIndex() {
-    return this._currentPath === 'meater_experimental' ? RECIPE_INDEX : CLASSIC_RECIPE_INDEX;
+    return RECIPE_INDEX;
   }
 
   _getCutProfiles() {
-    return this._currentPath === 'meater_experimental' ? CUT_PROFILES : CLASSIC_CUT_PROFILES;
+    return CUT_PROFILES;
   }
 
   _getCutProfilesSv() {
-    return this._currentPath === 'meater_experimental' ? CUT_PROFILES_SV : CLASSIC_CUT_PROFILES_SV;
+    return CUT_PROFILES_SV;
   }
 
   _getCutMethodProfiles() {
-    return this._currentPath === 'meater_experimental' ? CUT_METHOD_PROFILES : CLASSIC_CUT_METHOD_PROFILES;
+    return CUT_METHOD_PROFILES;
   }
 
   _getRecipeTitles() {
-    return this._currentPath === 'meater_experimental' ? RECIPE_TITLES_INDEX : CLASSIC_RECIPE_TITLES_INDEX;
+    return RECIPE_TITLES_INDEX;
   }
 
   _findCookingEntities() {
@@ -1492,26 +1478,7 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Navigate to MEATER path
-   * @param {Object} appliance - Selected MEATER appliance
-   */
-  _navigateToMeaterPath(appliance) {
-    this._currentPath = 'meater';
-    this._selectedAppliance = appliance;
-    // Don't show cooking form immediately - show path buttons first
-    this._showMeaterCooking = false;
-    // Reset old navigation flags
-    this._showHistory = false;
-    this._showNinjaCombi = false;
-    this._showAppliances = false;
-    this._showRecipes = false;
-    this._showAIRecipeBuilder = false;
-    this.requestUpdate();
-  }
-
-  /**
-   * Navigate to MEATER+ (experimental) path — same flow as the standard MEATER path
-   * but with safety indicators on doneness options.
+   * Navigate to MEATER+ path
    * @param {Object} appliance - Selected MEATER appliance
    */
   _navigateToMeaterExperimentalPath(appliance) {
@@ -1581,7 +1548,7 @@ class KitchenCookingPanel extends LitElement {
     
     // Check for MEATER probe (cook type 6.1)
     if (brand.includes('meater') || model.includes('meater') || name.includes('meater')) {
-      this._navigateToMeaterPath(appliance);
+      this._navigateToMeaterExperimentalPath(appliance);
       return;
     }
     
@@ -3082,9 +3049,6 @@ class KitchenCookingPanel extends LitElement {
       case 'meater_experimental':
         return this._renderMeaterExperimental();
       
-      case 'meater':
-        return this._renderMeaterPath();
-      
       case 'recent_meater':
         return this._renderRecentMeaterCooks();
       
@@ -3143,321 +3107,6 @@ class KitchenCookingPanel extends LitElement {
           <p>${this._t('appliances.setup_integration')}</p>
         </div>
       </ha-card>
-    `;
-  }
-
-  _renderSetupForm(entities) {
-    const categories = this._getDataCategories();
-    const category = this._getCategory();
-    const meats = this._getMeats();
-    const cutTypes = this._getCutTypes();
-    const cuts = this._getCuts();
-    const showMeatSelector = meats.length > 1;
-    const showCutTypeSelector = cutTypes.length > 1 || (cutTypes.length === 1 && this._selectedMeat);
-    const recommendedDoneness = this._getRecommendedDoneness();
-    const donenessTemps = this._selectedDoneness ? this._getTargetTempForDoneness(this._selectedDoneness) : null;
-    const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
-    const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
-    
-    // v0.5.0.57: Check if selected entity is specifically a MEATER entity
-    // Diagnostic data revealed: entities.includes() returns TRUE for non-MEATER entities
-    // because all cooking_session entities are in the list. We need to check if the
-    // selected entity IS a MEATER entity, not just if it's in the list.
-    if (entities.length > 0) {
-      // Check if selected entity contains "meater" in its ID (same pattern as sorting)
-      const isMeaterEntity = this._selectedEntity && 
-                             this._selectedEntity.toLowerCase().includes('meater');
-      
-      if (!this._selectedEntity || !isMeaterEntity) {
-        this._selectedEntity = entities[0];  // First entity (MEATER after sorting in _renderMeaterPath)
-      }
-    }
-    
-    return html`
-      <div class="status-banner idle">
-        <h2>${this._t('meater.ready_to_cook')}</h2>
-        <p>${this._t('meater.select_protein')}</p>
-      </div>
-      
-      ${entities.length > 1 ? html`
-        <ha-card>
-          <div class="card-content">
-            <h3>${this._t('meater.select_session')}</h3>
-            <select 
-              .value=${this._selectedEntity}
-              @change=${(e) => this._selectedEntity = e.target.value}
-            >
-              ${entities.map(e => html`
-                <option value="${e}" ?selected=${this._selectedEntity === e}>
-                  ${this.hass.states[e]?.attributes?.friendly_name || e}
-                </option>
-              `)}
-            </select>
-          </div>
-        </ha-card>
-      ` : ''}
-      
-      <!-- Data Source Selector (hidden when user has opted to hide inactive source) -->
-      ${!this._hideOtherDataSource ? html`
-      <ha-card>
-        <div class="card-content">
-          <h3>${this._t('meater.data_source_title')}</h3>
-          <div class="button-group">
-            <button 
-              class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
-              @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
-              ${this._t('meater.international')}
-            </button>
-            <button 
-              class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
-              @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
-              ${this._t('meater.swedish')}
-            </button>
-          </div>
-          <p class="source-description">
-            ${this._dataSource === DATA_SOURCE_SWEDISH 
-              ? this._t('meater.swedish_description')
-              : this._t('meater.international_description')}
-          </p>
-        </div>
-      </ha-card>
-      ` : ''}
-      
-      <!-- Step 1: Select Category -->
-      <ha-card>
-        <div class="card-content">
-          <h3>${this._t('meater.select_category')}</h3>
-          <div class="button-group">
-            ${Object.entries(categories).map(([key, cat]) => html`
-              <button 
-                class="category-btn ${this._selectedCategory === key ? 'selected' : ''}" 
-                @click=${() => this._selectCategory(key)}>
-                ${cat.icon} ${cat.name}
-              </button>
-            `)}
-            <button 
-              class="category-btn ${this._selectedCategory === 'custom' ? 'selected' : ''}" 
-              @click=${() => this._selectCategory('custom')}>
-              ${this._t('meater.custom')}
-            </button>
-          </div>
-        </div>
-      </ha-card>
-      
-      <!-- Custom Temperature Cook (no meat/cut/doneness needed) -->
-      ${this._selectedCategory === 'custom' ? html`
-        <ha-card>
-          <div class="card-content">
-            <h3>${this._t('meater.custom_temp_cook')}</h3>
-            <p>${this._t('meater.custom_temp_description')}</p>
-            
-            <div style="margin: 16px 0;">
-              <label style="display: block; margin-bottom: 8px; font-weight: 500;">${this._t('meater.session_name')} (${this._t('common.optional')})</label>
-              <input 
-                type="text" 
-                placeholder="${this._t('meater.session_name_placeholder')}"
-                .value=${this._customProfileName || ''}
-                @input=${(e) => { this._customProfileName = e.target.value; }}
-                style="width: 100%; padding: 10px; border: 2px solid var(--divider-color); border-radius: 8px; font-size: 14px; background: var(--card-background-color); color: var(--primary-text-color); box-sizing: border-box;"
-              />
-            </div>
-            
-            <div style="margin: 16px 0;">
-              <label style="display: block; margin-bottom: 8px; font-weight: 500;">${this._t('meater.target_temperature')}</label>
-              <div class="temp-display-setup">
-                <div class="target-temp">
-                  <span class="temp-value">${this._customProfileTempC}°C</span>
-                  <span class="temp-fahrenheit">(${Math.round(this._customProfileTempC * 9 / 5 + 32)}°F)</span>
-                </div>
-              </div>
-              <input 
-                type="range" 
-                min="30" 
-                max="100" 
-                step="1"
-                .value="${this._customProfileTempC}"
-                @input=${(e) => { this._customProfileTempC = parseInt(e.target.value); }}
-                class="temp-slider"
-                style="width: 100%; margin: 12px 0;"
-              />
-              <div class="temp-adjust-controls">
-                <button class="temp-btn" @click=${() => { this._customProfileTempC = Math.max(30, this._customProfileTempC - 1); }}>-1°C</button>
-                <input 
-                  type="number" 
-                  min="30" 
-                  max="100" 
-                  .value="${this._customProfileTempC}"
-                  @change=${(e) => { const v = parseInt(e.target.value); if (v >= 30 && v <= 100) this._customProfileTempC = v; }}
-                  class="temp-input"
-                />
-                <button class="temp-btn" @click=${() => { this._customProfileTempC = Math.min(100, this._customProfileTempC + 1); }}>+1°C</button>
-              </div>
-            </div>
-          </div>
-        </ha-card>
-        
-        <div class="action-container">
-          <ha-button unelevated @click=${() => this._startCustomCook()}>
-            🔥 Start Cooking at ${this._customProfileTempC}°C
-          </ha-button>
-        </div>
-      ` : ''}
-      
-      <!-- Step 2: Select Animal/Meat (if multiple) -->
-      ${this._selectedCategory && showMeatSelector ? html`
-        <ha-card>
-          <div class="card-content">
-            <h3>2️⃣ Select Type</h3>
-            <div class="button-group">
-              ${meats.map(meat => html`
-                <button 
-                  class="category-btn ${this._selectedMeat === meat.id ? 'selected' : ''}" 
-                  @click=${() => this._selectMeat(meat.id)}>
-                  ${meat.name}
-                </button>
-              `)}
-            </div>
-          </div>
-        </ha-card>
-      ` : ''}
-      
-      <!-- Step 3: Select Cut Type (Steaks, Roasts, etc.) -->
-      ${this._selectedMeat && cutTypes.length > 0 ? html`
-        <ha-card>
-          <div class="card-content">
-            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} ${this._t('meater.select_cut_type')}</h3>
-            <div class="button-group">
-              ${cutTypes.map(ct => html`
-                <button 
-                  class="category-btn ${this._selectedCutType === ct.id ? 'selected' : ''}" 
-                  @click=${() => this._selectCutType(ct.id)}>
-                  ${ct.name}
-                </button>
-              `)}
-            </div>
-          </div>
-        </ha-card>
-      ` : ''}
-      
-      <!-- Step 4: Select Specific Cut -->
-      ${this._selectedCutType && cuts.length > 0 ? html`
-        <ha-card>
-          <div class="card-content">
-            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} ${this._t('meater.select_cut')}</h3>
-            <div class="button-group">
-              ${cuts.map(cut => html`
-                <button
-                  class="category-btn ${this._selectedCut === cut.id ? 'selected' : ''}"
-                  @click=${() => this._selectCut(cut.id)}>
-                  ${(this._language === 'sv' && cut.name_sv) ? cut.name_sv : (cut.name_long || cut.name)}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
-                </button>
-              `)}
-            </div>
-          </div>
-        </ha-card>
-      ` : ''}
-      
-      <!-- Step 5: Doneness Level -->
-      ${this._selectedCut ? html`
-        <ha-card>
-          <div class="card-content">
-            <h3>🌡️ ${this._t('meater.select_doneness')} ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = ${this._t('meater.recommended')})</span>` : ''}</h3>
-            <div class="doneness-grid">
-              ${this._getAvailableDoneness().map(opt => html`
-                <button 
-                  class="doneness-btn ${this._selectedDoneness === opt.value ? 'selected' : ''} ${opt.value === recommendedDoneness ? 'recommended' : ''}"
-                  @click=${() => this._selectDoneness(opt.value)}
-                  title="${opt.description || ''}">
-                  <span class="icon">${opt.icon}</span>
-                  ${opt.name}
-                  ${opt.value === recommendedDoneness ? html`<span class="star">⭐</span>` : ''}
-                  <span class="temp-hint">${opt.temp_c}°C</span>
-                </button>
-              `)}
-            </div>
-          </div>
-        </ha-card>
-        
-        <!-- Temperature Fine-Tuning -->
-        ${this._selectedDoneness ? html`
-          <ha-card>
-            <div class="card-content">
-              <h3>🎯 Target Temperature</h3>
-              <div class="temp-display-setup">
-                <div class="target-temp">
-                  <span class="temp-value">${displayTemp}°C</span>
-                  <span class="temp-fahrenheit">(${displayTempF}°F)</span>
-                </div>
-                ${this._customTargetTempC ? html`
-                  <span class="custom-indicator">Custom</span>
-                ` : ''}
-              </div>
-              
-              <button 
-                class="adjust-btn ${this._showTempAdjust ? 'active' : ''}"
-                @click=${() => this._toggleTempAdjust()}>
-                ${this._showTempAdjust ? '✓ Done Adjusting' : '⚙️ Fine-tune Temperature'}
-              </button>
-              
-              ${this._showTempAdjust ? html`
-                <div class="temp-adjust-section">
-                  <input 
-                    type="range" 
-                    min="35" 
-                    max="100" 
-                    step="1"
-                    .value="${displayTemp}"
-                    @input=${(e) => this._updateCustomTemp(e.target.value)}
-                    class="temp-slider"
-                  />
-                  <div class="temp-adjust-controls">
-                    <button class="temp-btn" @click=${() => this._updateCustomTemp(displayTemp - 1)}>-1°C</button>
-                    <input 
-                      type="number" 
-                      min="35" 
-                      max="100" 
-                      .value="${displayTemp}"
-                      @change=${(e) => this._updateCustomTemp(e.target.value)}
-                      class="temp-input"
-                    />
-                    <button class="temp-btn" @click=${() => this._updateCustomTemp(displayTemp + 1)}>+1°C</button>
-                  </div>
-                  <button 
-                    class="reset-btn"
-                    @click=${() => { this._customTargetTempC = null; }}>
-                    Reset to ${donenessTemps?.c}°C (${this._selectedDoneness ? this._selectedDoneness.replace('_', ' ') : ''})
-                  </button>
-                </div>
-              ` : ''}
-            </div>
-          </ha-card>
-        ` : ''}
-        
-        <!-- Step 6: Cooking Method -->
-        <ha-card>
-          <div class="card-content">
-            <h3>${this._t('meater.select_method')}</h3>
-            <div class="method-grid">
-              ${COOKING_METHODS.map(opt => {
-                const translated = this._t('cooking_methods.' + opt.value);
-                return html`
-                <button 
-                  class="method-btn ${this._selectedMethod === opt.value ? 'selected' : ''}"
-                  @click=${() => this._selectedMethod = opt.value}>
-                  ${translated !== ('cooking_methods.' + opt.value) ? translated : opt.name}
-                </button>
-              `; })}
-            </div>
-          </div>
-        </ha-card>
-        
-        <!-- Start Button -->
-        <div class="action-container">
-          <ha-button unelevated @click=${this._startCook} ?disabled=${!this._selectedDoneness}>
-            ${this._t('meater.start_cooking')}${this._customTargetTempC ? ` ${this._convertTemp(this._customTargetTempC)}` : ''}
-          </ha-button>
-        </div>
-      ` : ''}
     `;
   }
 
@@ -3971,17 +3620,6 @@ class KitchenCookingPanel extends LitElement {
                 </div>
               </ha-card>
             `];
-            if (isMeater) {
-              cards.push(html`
-                <ha-card class="appliance-card clickable meater-exp-card" @click=${() => this._navigateToMeaterExperimentalPath(appliance)}>
-                  <div class="card-content appliance-card-content">
-                    <div class="appliance-icon" style="font-size: 2em;">🧪🌡️</div>
-                    <div class="appliance-name">MEATER+ <span style="font-size:0.75em;color:var(--secondary-text-color);">(experimental)</span></div>
-                    <div class="appliance-model" style="color:var(--accent-color);">Safety indicators · per-cut temps</div>
-                  </div>
-                </ha-card>
-              `);
-            }
             return cards;
           })}
         </div>
@@ -4357,7 +3995,7 @@ class KitchenCookingPanel extends LitElement {
           <button class="back-btn" @click=${() => this._navigateToWelcome()}>
             ${this._t('nav.back_to_appliances')}
           </button>
-          <h2>🧪🌡️ MEATER+ <span style="font-size:0.75em;color:var(--secondary-text-color);">(experimental)</span></h2>
+          <h2>🌡️ MEATER+</h2>
           <button class="help-btn" @click=${() => this._openHelp('#51-starting-a-cook')} title="Open User Guide">?</button>
         </div>
         
@@ -4371,8 +4009,8 @@ class KitchenCookingPanel extends LitElement {
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
           ${this._t('nav.back_to_appliances')}
         </button>
-        <h2>🧪🌡️ MEATER+ <span style="font-size:0.75em;color:var(--secondary-text-color);">(experimental)</span></h2>
-        <button class="help-btn" @click=${() => this._openHelp('#59-meater-experimental--cut-profile--recipe-links')} title="Open User Guide">?</button>
+        <h2>🌡️ MEATER+</h2>
+        <button class="help-btn" @click=${() => this._openHelp('#59-meater--cut-profile--recipe-links')} title="Open User Guide">?</button>
       </div>
 
       <div class="path-buttons">
@@ -4396,7 +4034,7 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Setup form for the experimental MEATER path (matches source-reference v0.5.3.5 _renderSetupForm).
+   * Setup form for the MEATER+ path.
    */
   _renderExpSetupForm(entities) {
     const categories = this._getDataCategories();
@@ -4426,7 +4064,7 @@ class KitchenCookingPanel extends LitElement {
                              this._selectedEntity.toLowerCase().includes('meater');
       
       if (!this._selectedEntity || !isMeaterEntity) {
-        this._selectedEntity = entities[0];  // First entity (MEATER after sorting in _renderMeaterPath)
+        this._selectedEntity = entities[0];  // First entity (MEATER after sorting)
       }
     }
     
@@ -5052,72 +4690,8 @@ class KitchenCookingPanel extends LitElement {
     return parts.join('');
   }
 
-  // ─── End MEATER+ (experimental) path ─────────────────────────────────────────
+  // ─── End MEATER+ path ─────────────────────────────────────────────────────
 
-
-  _renderMeaterPath() {
-    // If in cooking mode, show the setup form
-    if (this._showMeaterCooking) {
-      let entities = this._findCookingEntities();
-      
-      // v0.5.0.51: Sort entities by entity ID pattern (more reliable than attributes)
-      // Entity IDs like "kitchen_cooking_engine_bt_proxy_meater_tip_temperature_cooking_session"
-      // contain "meater" - use this to identify and sort MEATER entities first
-      entities = entities.sort((a, b) => {
-        const aIsMeater = a.toLowerCase().includes('meater');
-        const bIsMeater = b.toLowerCase().includes('meater');
-        
-        // MEATER entities first, others after
-        if (aIsMeater && !bIsMeater) return -1;
-        if (!aIsMeater && bIsMeater) return 1;
-        return 0;  // Preserve original order for same type
-      });
-      
-      return html`
-        <div class="path-header">
-          <button class="back-btn" @click=${() => { 
-            this._showMeaterCooking = false;
-            this.requestUpdate();
-          }}>
-            ${this._t('nav.back_to_meater_path')}
-          </button>
-          <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
-          <button class="help-btn" @click=${() => this._openHelp('#51-starting-a-cook')} title="Open User Guide">?</button>
-        </div>
-        
-        ${this._renderSetupForm(entities)}
-      `;
-    }
-    
-    // Otherwise show the path buttons
-    return html`
-      <div class="path-header">
-        <button class="back-btn" @click=${() => this._navigateToWelcome()}>
-          ${this._t('nav.back_to_appliances')}
-        </button>
-        <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
-        <button class="help-btn" @click=${() => this._openHelp('#5-meater-probe-cooking')} title="Open User Guide">?</button>
-      </div>
-
-      <div class="path-buttons">
-        <ha-card class="path-card clickable" @click=${() => this._startMeaterCooking()}>
-          <div class="card-content path-card-content">
-            <div class="path-icon">🌡️</div>
-            <h3>${this._t('meater.start_meater_cooking')}</h3>
-            <p>${this._t('meater.start_meater_desc')}</p>
-          </div>
-        </ha-card>
-
-        <ha-card class="path-card clickable" @click=${() => this._showRecentMeaterCooks()}>
-          <div class="card-content path-card-content">
-            <div class="path-icon">📋</div>
-            <h3>${this._t('meater.recent_meater_cooks')}</h3>
-            <p>${this._t('meater.recent_meater_desc')}</p>
-          </div>
-        </ha-card>
-      </div>
-    `;
-  }
 
   /**
    * Render Recent MEATER Cooks (filtered history)
@@ -5144,7 +4718,7 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => {
-          this._currentPath = 'meater';
+          this._currentPath = 'meater_experimental';
           this.requestUpdate();
         }}>
           ${this._t('nav.back_to_meater_path')}
@@ -6744,7 +6318,7 @@ class KitchenCookingPanel extends LitElement {
 
     // Legacy fallback: if cook has target_temp but no cut_id, navigate to meater setup
     if (cook.target_temp_c && cook.protein) {
-      this._currentPath = 'meater';
+      this._currentPath = 'meater_experimental';
       this._showMeaterCooking = true;
       this.requestUpdate();
       return;

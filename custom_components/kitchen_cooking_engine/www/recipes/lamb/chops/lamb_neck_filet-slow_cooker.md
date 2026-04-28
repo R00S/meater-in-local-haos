@@ -1,3 +1,15 @@
+<!-- KCE:CUT_METHOD
+type: cut_method
+slug: lamb_neck_filet
+method: slow_cooker
+name: Lamb Neck Filet × Slow Cooker
+category: lamb
+meat: lamb
+cut_type: Chops
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
+-->
 # Lamb Neck Filet × Slow Cooker — Recipe Temperature Research
 
 ## Cut profile

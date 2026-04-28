@@ -10,14 +10,12 @@ start_cook:
   fields:
     cut_id:
       name: Cut ID
-      description: The ID of the cut to cook (from cooking_data.py). Required.
+      description: >
+        The EXP_TREE slug for the cut (e.g. "ribeye_steak"). Required.
       required: true
-      example: 100
+      example: ribeye_steak
       selector:
-        number:
-          min: 1
-          max: 9999
-          mode: box
+        text:
     doneness:
       name: Doneness
       description: The desired doneness level. Required.

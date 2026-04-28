@@ -56,6 +56,9 @@ doneness:
 quality_score: 9
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
+rest_time_min: 15
+rest_time_max: 30
+carryover_temp_c: 8
 -->
 # Roasting Joint — Cut Overview
 

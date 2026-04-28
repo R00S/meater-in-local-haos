@@ -6,6 +6,9 @@ name: Pork Jowl × Braise
 category: pork
 meat: pig
 cut_type: Other / Offal
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
 -->
 # Pork Jowl × Braise — Recipe Temperature Research
 

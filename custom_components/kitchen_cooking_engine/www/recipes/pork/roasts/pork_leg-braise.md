@@ -6,6 +6,9 @@ name: Pork Leg Roast × Braise
 category: pork
 meat: pig
 cut_type: Roasts
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
 -->
 # Pork Leg / Hock × Braise — Recipe Temperature Research
 

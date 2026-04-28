@@ -6,6 +6,9 @@ name: Goat Shoulder × Slow Cooker
 category: game
 meat: goat
 cut_type: Goat
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
 -->
 # Goat Shoulder × Slow Cooker — Recipe Temperature Research
 

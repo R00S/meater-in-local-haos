@@ -2,7 +2,7 @@
 type: cut
 slug: pork_shoulder_steak
 name: Pork Shoulder Steak
-name_sv: Bogkotlett
+name_sv: Bogskiva
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin
@@ -34,6 +34,9 @@ doneness:
 quality_score: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
+rest_time_min: 5
+rest_time_max: 10
+carryover_temp_c: 3
 -->
 # Pork Shoulder Steak — Cut Overview
 
@@ -44,7 +47,7 @@ Pork shoulder steak (*nakkesteak* in Danish, *Schweinenackensteak* / *Schopfstea
 
 ## Styckesprofil
 
-Fläskaxel-stek (*nakkesteak* danska, *Schweinenackensteak* / *Schopfsteak* tyska/österrikiska) är skuren från halssektionen av fläskaxeln. Denna muskel är tätare marmorerad än loin-snitten — typiskt 8–15 % intramuskulärt fett — vilket gör axel-stek saftigare och mer förlåtande vid hög värme.
+Bogskiva (*nakkesteak* danska, *Schweinenackensteak* / *Schopfsteak* tyska/österrikiska) är skuren från halssektionen av fläskbogen. Denna muskel är tätare marmorerad än loin-snitten — typiskt 8–15 % intramuskulärt fett — vilket gör bogskivan saftigare och mer förlåtande vid hög värme.
 
 Pannstekning: medel-hög värme, 3–4 minuter per sida. Innertemperatur: **70–74 °C (158–165 °F)** för genomstekt med saftighet kvar; **63 °C** USDA-minimum. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till mitten av steaken. Inte lika känslig för överkokning som magra snitten.
 

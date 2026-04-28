@@ -62,6 +62,9 @@ doneness:
 quality_score: 11
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
+rest_time_min: 5
+rest_time_max: 10
+carryover_temp_c: 3
 -->
 # Ribeye Steak — Cut Overview
 

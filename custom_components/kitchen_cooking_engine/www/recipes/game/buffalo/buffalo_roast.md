@@ -41,6 +41,9 @@ doneness:
 quality_score: 8
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
+rest_time_min: 10
+rest_time_max: 20
+carryover_temp_c: 5
 -->
 # Buffalo Roast — Cut Overview
 

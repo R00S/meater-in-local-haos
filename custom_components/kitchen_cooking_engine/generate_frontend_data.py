@@ -17,7 +17,6 @@ This will regenerate www/kitchen-cooking-panel.js with data from the backend.
 
 import json
 import re
-import shutil
 import sys
 import os
 import yaml
@@ -311,9 +310,8 @@ def _extract_recipe_titles(content):
 def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
     """Scan recipe files and build index, cut profiles, method profiles and recipe titles.
 
-    When ``recipe_dir`` is None the function uses the standard resolution order:
-    docs/recipe_research/ first (developer environment), then www/recipes/
-    (pre-populated in HACS releases on real HA installs).
+    When ``recipe_dir`` is None the function reads from www/recipes/ — the
+    single source of truth for recipe markdown files.
 
     Pass an explicit ``recipe_dir`` path and a matching ``url_prefix`` to build
     an index for a different tree (e.g. the frozen classic fork).
@@ -330,16 +328,8 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
         recipe_titles:       {cut_slug: {method_slug: ["title", ...]}}
     """
     if recipe_dir is None:
-        repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
-        docs_recipe_dir = os.path.join(repo_root, "docs", "recipe_research")
-        www_recipe_dir = os.path.join(base_dir, "www", "recipes")
-
-        if os.path.isdir(docs_recipe_dir):
-            recipe_dir = docs_recipe_dir
-        elif os.path.isdir(www_recipe_dir):
-            recipe_dir = www_recipe_dir
-            print("  (using www/recipes/ as recipe source — docs/recipe_research/ not found)")
-        else:
+        recipe_dir = os.path.join(base_dir, "www", "recipes")
+        if not os.path.isdir(recipe_dir):
             return {}, {}, {}, {}
     elif not os.path.isdir(recipe_dir):
         return {}, {}, {}, {}
@@ -547,15 +537,8 @@ def build_experimental_tree(base_dir):
         exp_tree: {category_id: {id, name, icon, color, meats: [...]}}
         exp_doneness: {doneness_name: {value, name, icon, temp_c, temp_f, ...}}
     """
-    repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
-    docs_recipe_dir = os.path.join(repo_root, "docs", "recipe_research")
-    www_recipe_dir = os.path.join(base_dir, "www", "recipes")
-
-    if os.path.isdir(docs_recipe_dir):
-        recipe_dir = docs_recipe_dir
-    elif os.path.isdir(www_recipe_dir):
-        recipe_dir = www_recipe_dir
-    else:
+    recipe_dir = os.path.join(base_dir, "www", "recipes")
+    if not os.path.isdir(recipe_dir):
         return {}, {}
 
     _excluded = {
@@ -597,6 +580,9 @@ def build_experimental_tree(base_dir):
             doneness_list = data.get("doneness") or []
             usda_safe_c = data.get("usda_safe_c")
             usda_safe_f = data.get("usda_safe_f")
+            rest_time_min = data.get("rest_time_min")
+            rest_time_max = data.get("rest_time_max")
+            carryover_temp_c = data.get("carryover_temp_c")
 
             if not (category and meat and cut_type_name):
                 continue
@@ -690,6 +676,12 @@ def build_experimental_tree(base_dir):
                 cut_obj["usda_safe_c"] = usda_safe_c
             if usda_safe_f is not None:
                 cut_obj["usda_safe_f"] = usda_safe_f
+            if rest_time_min is not None:
+                cut_obj["rest_time_min"] = rest_time_min
+            if rest_time_max is not None:
+                cut_obj["rest_time_max"] = rest_time_max
+            if carryover_temp_c is not None:
+                cut_obj["carryover_temp_c"] = carryover_temp_c
 
             meat_obj["_cut_types"][ct_id]["cuts"].append(cut_obj)
 
@@ -721,65 +713,47 @@ def build_experimental_tree(base_dir):
             cat_entry["name_sv"] = cat["name_sv"]
         exp_tree[cat_key] = cat_entry
 
+    # Second pass: collect rest/carryover overrides from KCE:CUT_METHOD leaf files
+    # and attach them as method_overrides to each cut in the tree.
+    method_override_map: dict = {}
+    for root, _dirs, files in os.walk(recipe_dir):
+        for filename in sorted(files):
+            if not filename.endswith(".md"):
+                continue
+            stem = filename[:-3]
+            if "-" not in stem:
+                continue
+            try:
+                content = open(os.path.join(root, filename), encoding="utf-8").read()
+            except Exception:
+                continue
+            mdata = _parse_kce_tag(content, "CUT_METHOD")
+            if mdata is None:
+                continue
+            m_slug = mdata.get("slug") or stem.rsplit("-", 1)[0]
+            m_method = mdata.get("method") or (stem.rsplit("-", 1)[1] if "-" in stem else "")
+            if not m_slug or not m_method:
+                continue
+            override = {}
+            if mdata.get("rest_time_min") is not None:
+                override["rest_time_min"] = mdata["rest_time_min"]
+            if mdata.get("rest_time_max") is not None:
+                override["rest_time_max"] = mdata["rest_time_max"]
+            if mdata.get("carryover_temp_c") is not None:
+                override["carryover_temp_c"] = mdata["carryover_temp_c"]
+            if override:
+                method_override_map.setdefault(m_slug, {})[m_method] = override
+
+    # Attach method_overrides to cuts inside exp_tree
+    for cat in exp_tree.values():
+        for meat in cat.get("meats", []):
+            for ct in meat.get("cutTypes", []):
+                for cut in ct.get("cuts", []):
+                    slug = cut.get("slug") or cut.get("id")
+                    if slug and slug in method_override_map:
+                        cut["method_overrides"] = method_override_map[slug]
+
     return exp_tree, exp_doneness
-
-
-def copy_recipe_files_to_www(base_dir):
-    """Copy recipe markdown files from docs/ to www/ for serving by HA.
-
-    Copies two trees:
-      docs/recipe_research/        → www/recipes/          (experimental / active)
-      docs/recipe_research_classic/ → www/recipes_classic/  (frozen classic fork)
-
-    Only runs in the developer environment (when docs/recipe_research/ exists).
-    On real HA installs, www/recipes/ and www/recipes_classic/ are pre-populated
-    by the HACS package and must NOT be wiped — so this function is a no-op
-    when the source is absent.
-    """
-    repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
-
-    _trees = [
-        (
-            os.path.join(repo_root, "docs", "recipe_research"),
-            os.path.join(base_dir, "www", "recipes"),
-        ),
-        (
-            os.path.join(repo_root, "docs", "recipe_research_classic"),
-            os.path.join(base_dir, "www", "recipes_classic"),
-        ),
-    ]
-
-    _excluded = {
-        "README.md", "RECIPE_COLLECTION_TOR.md",
-        "RECIPE_ANALYSIS_TOR.md", "SOURCE_SURVEY.md",
-    }
-
-    for recipe_dir, www_recipes_dir in _trees:
-        if not os.path.isdir(recipe_dir):
-            # On HA installs the www/ directory is already in place from the
-            # HACS package.  Do NOT delete it; just leave it as-is.
-            continue
-
-        # Remove and recreate target directory for a clean copy
-        if os.path.exists(www_recipes_dir):
-            shutil.rmtree(www_recipes_dir)
-
-        for root, _dirs, files in os.walk(recipe_dir):
-            for filename in files:
-                if not filename.endswith(".md") or filename in _excluded:
-                    continue
-                src = os.path.join(root, filename)
-                rel = os.path.relpath(src, recipe_dir)
-                dst = os.path.join(www_recipes_dir, rel)
-                os.makedirs(os.path.dirname(dst), exist_ok=True)
-                shutil.copy2(src, dst)
-
-        count = sum(
-            len([f for f in files if f.endswith(".md")])
-            for _, _, files in os.walk(www_recipes_dir)
-        )
-        label = os.path.basename(www_recipes_dir)
-        print(f"  Copied {count} recipe files → www/{label}/")
 
 
 def generate_js_data():
@@ -885,29 +859,12 @@ def generate_js_data():
                 except Exception as e:
                     print(f"Warning: Could not load translation {filename}: {e}")
 
-    # Build recipe index from docs/recipe_research/ (experimental / active fork)
+    # Build recipe index from docs/recipe_research/
     recipe_index, cut_profiles, cut_profiles_sv, cut_method_profiles, recipe_titles = build_recipe_index(base_dir)
-    print(f"  Recipe index (experimental): {sum(len(v) for v in recipe_index.values())} files across {len(recipe_index)} cuts")
+    print(f"  Recipe index: {sum(len(v) for v in recipe_index.values())} files across {len(recipe_index)} cuts")
 
-    # Build recipe index from docs/recipe_research_classic/ (frozen classic fork)
-    repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
-    classic_dir = os.path.join(repo_root, "docs", "recipe_research_classic")
-    classic_www_dir = os.path.join(base_dir, "www", "recipes_classic")
-    classic_recipe_dir = classic_dir if os.path.isdir(classic_dir) else (classic_www_dir if os.path.isdir(classic_www_dir) else None)
-    if classic_recipe_dir:
-        classic_recipe_index, classic_cut_profiles, classic_cut_profiles_sv, classic_cut_method_profiles, classic_recipe_titles = build_recipe_index(
-            base_dir,
-            recipe_dir=classic_recipe_dir,
-            url_prefix="recipes_classic",
-        )
-        print(f"  Recipe index (classic):      {sum(len(v) for v in classic_recipe_index.values())} files across {len(classic_recipe_index)} cuts")
-    else:
-        classic_recipe_index, classic_cut_profiles, classic_cut_profiles_sv, classic_cut_method_profiles, classic_recipe_titles = {}, {}, {}, {}, {}
-        print("  Recipe index (classic):      0 files (docs/recipe_research_classic/ not found)")
-
-    # Report international cut → recipe coverage. The experimental MEATER path
-    # is locked to international data (see panel-class-template.js
-    # _getDataCategories), and every international MeatCut.name is expected to
+    # Report international cut → recipe coverage. The MEATER path is locked to
+    # international data (see panel-class-template.js _getDataCategories), and every international MeatCut.name is expected to
     # match a recipe filename slug under docs/recipe_research/. Cuts with no
     # match simply show no recipe card — that is correct behaviour, not an
     # error. We surface the breakdown so coverage can be tracked over time.
@@ -1011,25 +968,10 @@ def generate_js_data():
     lines.append("// Recipe titles per cut × method: {cut_slug: {method_slug: [title, ...]}}")
     lines.append(f"const RECIPE_TITLES_INDEX = {json.dumps(recipe_titles, indent=2, ensure_ascii=False)};")
     lines.append("")
-    lines.append("// Classic (frozen) recipe index — snapshot of docs/recipe_research_classic/")
-    lines.append(f"const CLASSIC_RECIPE_INDEX = {json.dumps(classic_recipe_index, indent=2, ensure_ascii=False)};")
-    lines.append("")
-    lines.append("// Classic cut profile texts")
-    lines.append(f"const CLASSIC_CUT_PROFILES = {json.dumps(classic_cut_profiles, indent=2, ensure_ascii=False)};")
-    lines.append("")
-    lines.append("// Classic Swedish cut profile texts")
-    lines.append(f"const CLASSIC_CUT_PROFILES_SV = {json.dumps(classic_cut_profiles_sv, indent=2, ensure_ascii=False)};")
-    lines.append("")
-    lines.append("// Classic cut × method profile texts")
-    lines.append(f"const CLASSIC_CUT_METHOD_PROFILES = {json.dumps(classic_cut_method_profiles, indent=2, ensure_ascii=False)};")
-    lines.append("")
-    lines.append("// Classic recipe titles per cut × method")
-    lines.append(f"const CLASSIC_RECIPE_TITLES_INDEX = {json.dumps(classic_recipe_titles, indent=2, ensure_ascii=False)};")
-    lines.append("")
-    lines.append("// Experimental MEATER tree — built from KCE:CUT tagged cut files")
+    lines.append("// MEATER tree — built from KCE:CUT tagged cut files")
     lines.append(f"const EXP_TREE = {json.dumps(exp_tree, indent=2, ensure_ascii=False)};")
     lines.append("")
-    lines.append("// Experimental MEATER doneness options — collected from KCE:CUT doneness blocks")
+    lines.append("// MEATER doneness options — collected from KCE:CUT doneness blocks")
     lines.append(f"const EXP_DONENESS_OPTIONS = {json.dumps(exp_doneness, indent=2, ensure_ascii=False)};")
 
     return "\n".join(lines)
@@ -1128,9 +1070,6 @@ import {{
 """
     new_content += class_code
 
-    # Copy recipe files to www/recipes/ so they can be served by HA
-    copy_recipe_files_to_www(base_dir)
-    
     # Update panel version in JS - increment from const.py version
     # Read current version from const.py first
     const_file = os.path.join(base_dir, "const.py")

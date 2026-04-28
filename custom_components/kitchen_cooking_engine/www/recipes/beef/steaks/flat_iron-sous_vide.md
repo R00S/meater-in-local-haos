@@ -6,6 +6,9 @@ name: Flat Iron Steak × Sous Vide
 category: beef
 meat: cow
 cut_type: Steaks
+rest_time_min: 0
+rest_time_max: 3
+carryover_temp_c: 1
 -->
 # Flat Iron Steak × Sous Vide — Recipe Temperature Research
 

@@ -1,3 +1,15 @@
+<!-- KCE:CUT_METHOD
+type: cut_method
+slug: buffalo_roast
+method: braise
+name: Buffalo Roast × Braise
+category: game
+meat: buffalo
+cut_type: Buffalo
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
+-->
 # Buffalo Roast × Braise — Recipe Temperature Research
 
 ## Cut profile

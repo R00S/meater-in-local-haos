@@ -1,3 +1,15 @@
+<!-- KCE:CUT_METHOD
+type: cut_method
+slug: venison_shoulder
+method: braise
+name: Shoulder × Braise
+category: game
+meat: venison
+cut_type: Venison
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
+-->
 # Venison Shoulder × Braise — Recipe Temperature Research
 
 ## Cut profile

@@ -6,6 +6,9 @@ name: Mutton Shoulder × Slow Cooker
 category: game
 meat: mutton
 cut_type: Mutton
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
 -->
 # Mutton Shoulder × Slow Cooker — Recipe Temperature Research
 

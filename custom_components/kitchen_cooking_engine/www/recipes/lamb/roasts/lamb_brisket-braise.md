@@ -1,3 +1,15 @@
+<!-- KCE:CUT_METHOD
+type: cut_method
+slug: lamb_brisket
+method: braise
+name: Lamb Brisket × Braise
+category: lamb
+meat: lamb
+cut_type: Roasts
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
+-->
 # Lamb Brisket × Braise — Recipe Temperature Research
 
 ## Cut profile

@@ -6,6 +6,9 @@ name: Rabbit Legs × Braise
 category: game
 meat: rabbit
 cut_type: Rabbit
+rest_time_min: 5
+rest_time_max: 15
+carryover_temp_c: 2
 -->
 # Rabbit Legs × Braise — Recipe Temperature Research
 

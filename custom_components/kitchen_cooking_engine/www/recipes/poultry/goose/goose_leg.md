@@ -34,6 +34,9 @@ doneness:
 quality_score: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
+rest_time_min: 10
+rest_time_max: 15
+carryover_temp_c: 4
 -->
 # Goose Leg — Cut Overview
 
