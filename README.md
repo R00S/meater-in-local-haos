@@ -186,6 +186,11 @@ See [STATUS.md](STATUS.md) for detailed project status.
 
 ## 🌡️ Supported Wireless Probe Hardware
 
+> ⭐ **Best path — Local MEATER+ with our own ESP32 support**
+> Use a **MEATER+** probe (only the Plus model) with any ESP32 board running the ESPHome config included in this repo.
+> ✅ No cloud required &nbsp;·&nbsp; ✅ Any ESP32 works &nbsp;·&nbsp; ✅ All sensors available (tip, ambient, battery)
+> → See **[Quick Start with MEATER+](#-quick-start-with-meater)** below.
+
 KCE's temperature-probe cook path works with **any** Home Assistant sensor entity that exposes a numeric temperature value — no matter which probe brand or integration you use. You simply enter the entity IDs during setup and KCE reads their state.
 
 ### Built-in HA integrations (zero extra installs)
