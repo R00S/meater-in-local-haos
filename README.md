@@ -8,6 +8,7 @@
 ⚠️ **BETA RELEASE** — GUI Redesign Phases 1–8 complete.
 
 A local-first, AI-assisted kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes. 
+
 For users of wireless temperature probes, like MEATER, INKBIRD etc we provide an extensive tree of cuts and cooking methods raning from meat and game to fish and veg. To that we add knowledge and descriptions of how different meats and cuts behaves and classic recipes for you to try or just read out of pure interest.
 A
 ## 📖 User Guide
