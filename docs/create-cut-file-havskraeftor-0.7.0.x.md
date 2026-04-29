@@ -108,3 +108,26 @@ No heading changes were made in this branch — all anchors remain valid.
 | `#11-cook-history` | `## 11. Cook History` | ✅ |
 | `#8-recipe-cook-flow` | `## 8. Recipe Cook Flow` | ✅ |
 
+
+---
+
+## Salvage — 2026-04-29
+
+### Problem
+Branch was created from `v0.7.0.13-beta.main` (merge of PR #92 / remove-classic-meater-path).
+PR #93 (fix-issue-85) was merged to main afterward, adding 11 commits this branch was missing:
+- Fullscreen recipe viewer with live MEATER cook monitor
+- History fix (shows all cook types, `_renderHistoryCard` refactor)
+- Atomic history writes (`storage.py`)
+- Module-level recovery for blank screen after HA suspension
+- README + USER_GUIDE updates for v0.7.0.14–17
+
+### Resolution
+- Ran `git merge origin/main` — 5 conflicts (manifest.json, __init__.py, const.py, kitchen-cooking-panel.js, USER_GUIDE.md)
+- Resolved all conflicts:
+  - Version: 0.7.0.17 (main) + 0.7.0.16 (branch) → 0.7.0.18 (merged)
+  - `kitchen-cooking-panel.js`: took main's version as base, then re-ran generator
+  - `USER_GUIDE.md`: took main's version, re-applied cut count 163 → 164 and shellfish example
+  - `__init__.py` / `const.py` / `manifest.json`: took main's code, bumped version to 0.7.0.18
+- Generator output: 164 cuts, PANEL_VERSION 368 — clean
+- True merge commit with both parents preserved

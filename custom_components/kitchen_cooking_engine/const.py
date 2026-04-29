@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 29 Apr 2026, 07:45 UTC
-Last Change: v0.7.0.16 - docs: update USER_GUIDE version + cut count; update branch timeline
+Last Updated: 29 Apr 2026, 08:00 UTC
+Last Change: v0.7.0.18 - merge main (history fix + fullscreen viewer) + langoustine cut
 """
 
 DOMAIN = "kitchen_cooking_engine"

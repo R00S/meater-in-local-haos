@@ -26,9 +26,27 @@ Full installation, configuration, and feature documentation:
 
 ## 📊 Current Status
 
-**v0.7.0.13** — Development release (April 2026)
+**v0.7.0.17** — Development release (April 2026)
 
 Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.7.0.17 Changes — Fix: cook history shows all cook types + restart cut_id crash (April 2026)
+- ✅ **Fix: cook history shows all cook types** — `_renderHistory()` used a hardcoded MEATER-only template (`cook.cut`, `cook.protein`, `cook.target_temp_c`); recipe and Ninja cooks have none of those fields, so their cards rendered as invisible zero-height elements. Now delegates to `_renderHistoryCard(cook)`, which handles all cook types via `recipe_name || cut_display || cut`.
+- ✅ **Fix: restart crash with old MEATER cooks** — `_restartCook()` passed `cut_id` directly to the `start_cook` service; the service schema requires `str`, but cooks saved before the slug migration stored `cut_id` as an integer. Now always coerces with `String(cook.cut_id)`, safe for both old integer records and new string slugs.
+
+### v0.7.0.16 Changes — Fix: Tidigare tillagningar always empty + atomic history write (April 2026)
+- ✅ **Fix: Tidigare tillagningar (Previous Cooks) always empty** — `_renderPreviousCooksPath()` only rendered the path-header and stopped; never called `_renderHistory()`. Data was never corrupted — it just was never displayed.
+- ✅ **Fix: atomic history write** — `async_save_cook_history()` now writes to a `.tmp` file first, then `os.replace()` atomically renames it, preventing file truncation if HA crashes mid-write.
+
+### v0.7.0.15 Changes — Full-screen recipe viewer with live cook monitor (April 2026)
+- ✅ **Full-screen recipe viewer** — Clicking any recipe title button in the MEATER path (both in the Tillagningsmetod card and the Cut Profile research card) now opens the recipe full-screen using the same header style as the AI recipe cook flow, with a ← back button to return
+- ✅ **Start Cook from recipe view** — A "Start Cooking" button appears at the bottom of the full-screen recipe viewer (when a doneness is already selected), allowing the cook to be started without leaving the recipe
+- ✅ **Live MEATER cook monitor** — After starting a cook from the recipe view, the recipe stays on screen and a compact monitor card appears below it showing: current temperature, target temperature, progress bar, ETA/rest time, and Start Rest / Complete / Stop buttons. The user can read the recipe and watch the cook simultaneously
+- ✅ **🏠 Go to full active-cook view** — When monitoring is active, a home button in the header navigates to the full active-cook view (with temperature graph, notes, etc.) while keeping the cook running
+
+### v0.7.0.14 Changes — Fix: blank panel after 5-minute tab suspension (April 2026)
+- ✅ **Root cause identified from HA source** — HA's `partial-panel-resolver` removes `ha-panel-custom` from the DOM after the browser tab is hidden for 5 minutes (`suspendWhenHidden`). On older HA versions, re-appending the element does not recreate our panel, leaving it permanently blank
+- ✅ **Module-level recovery mechanism** — A `_kceRecoverPanel()` function and a `_kceHaPanelParent` reference are now registered at module scope (outside the class, never garbage-collected). On `visibilitychange` / `focus`, the recovery function checks if `ha-panel-custom` is alive but missing our element and, if so, calls `haPanel.requestUpdate('panel', null)` to force `ha-panel-custom` to recreate us. Safe on all HA versions — newer HA recreates the element before the 500 ms delay expires, so the check is a no-op
 
 ### v0.7.0.12–0.7.0.13 Changes — integer cut_id removed; slug is the only path (April 2026)
 - ✅ **`start_cook` accepts only EXP_TREE slugs** — Legacy integer `cut_id` support removed. `cut_id` is now strictly a string slug (e.g. `"ribeye_steak"`). The system has exactly one path: give it a slug, it reads the cut file, that's it
