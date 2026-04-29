@@ -940,6 +940,17 @@ overview page. Tap it to store the recipe in
 [Cooked and Saved Recipes](#11-cooked-and-saved-recipes) without cooking it now.
 No ratings are required — the recipe is saved immediately and you can restart it later.
 
+When the recipe uses a MEATER probe (this is always the case for recipes generated via
+the [MEATER AI shortcut](#getting-ai-recipe-suggestions-for-a-cut)), a
+**🌡️ Start MEATER Probe** card also appears on the overview page — before any step has
+started. Tapping it starts the probe session immediately so the probe is already tracking
+temperature when you begin cooking. The target temperature comes from your MEATER doneness
+selection (the AI's value is used if provided, otherwise the temperature from the cut's
+doneness data is used).
+
+The probe card also appears on every subsequent step that requires temperature monitoring.
+Once the probe is running, a live temperature badge is shown in the footer instead.
+
 ### 8.2 Adjusting Serving Size
 
 On AI recipe suggestion cards, a **Servings** number input appears. Change it before

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 29 Apr 2026, 13:17 CET
+ * AUTO-GENERATED: 29 Apr 2026, 13:39 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 29 Apr 2026, 13:17 CET
+// Last generated: 29 Apr 2026, 13:39 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -19485,6 +19485,9 @@ class KitchenCookingPanel extends LitElement {
       _meaterAiWeight: { type: String },
       // Flag: AI suggestions reached from MEATER cut shortcut (affects back navigation)
       _meaterAiFromShortcut: { type: Boolean },
+      // Target temps captured from MEATER doneness selection at shortcut launch time
+      _meaterAiTargetTempC: { type: Number },
+      _meaterAiTargetTempF: { type: Number },
 
     };
   }
@@ -19624,6 +19627,8 @@ class KitchenCookingPanel extends LitElement {
     // MEATER AI shortcut
     this._meaterAiWeight = '';
     this._meaterAiFromShortcut = false;
+    this._meaterAiTargetTempC = null;
+    this._meaterAiTargetTempF = null;
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
 
@@ -25892,6 +25897,17 @@ class KitchenCookingPanel extends LitElement {
    */
   _startRecipeCook(recipe, servingSize = null) {
     // Create cook state with unique ID
+    // If launched via MEATER AI shortcut, guarantee use_probe + target temp are set
+    // so "Start MEATER Probe" always appears. Use the AI's temp if present, fall back
+    // to the temp saved from the MEATER doneness selection.
+    if (this._meaterAiFromShortcut && this._meaterAiTargetTempC) {
+      recipe.use_probe = true;
+      if (!recipe.target_temp_c) {
+        recipe.target_temp_c = this._meaterAiTargetTempC;
+        recipe.target_temp_f = this._meaterAiTargetTempF;
+      }
+    }
+
     const cookState = {
       id: 'cook_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
       recipe: recipe,
@@ -26372,6 +26388,12 @@ class KitchenCookingPanel extends LitElement {
 
     const cookingStyle = MEATER_METHOD_TO_AI_STYLE[this._selectedMethod] || 'comfort_food';
 
+    // Capture target temperature from MEATER doneness selection so we can inject
+    // use_probe into the recipe if the AI omits it.
+    const donenessTemps = this._selectedDoneness ? this._getTargetTempForDoneness(this._selectedDoneness) : null;
+    this._meaterAiTargetTempC = donenessTemps ? donenessTemps.c : null;
+    this._meaterAiTargetTempF = donenessTemps ? donenessTemps.f : null;
+
     // Pre-seed AI state
     this._selectedIngredients = [
       { name: cutLabel, compulsory: true },
@@ -26767,6 +26789,22 @@ class KitchenCookingPanel extends LitElement {
             🔄 ${this._t('ai_recipe.retry_generation') || 'Retry Recipe Generation'}
           </button>
         `}
+
+        <!-- MEATER probe card on overview — start probe before cooking begins -->
+        ${recipe.use_probe && recipe.target_temp_c && !this._recipeCookState.meaterSubprocess ? html`
+          <div class="meater-probe-card" style="margin: 16px 0; padding: 12px; background: rgba(76,175,80,0.1); border: 1px solid #4caf50; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
+            <div style="flex: 1;">
+              <strong>🌡️ ${this._t('recipe_cook.start_meater_btn')}</strong>
+              <div style="font-size: 0.85em; color: var(--secondary-text-color); margin-top: 2px;">
+                ${this._t('common.target')}: ${recipe.target_temp_c}°C
+                ${recipe.target_temp_f ? ` (${recipe.target_temp_f}°F)` : ''}
+              </div>
+            </div>
+            <button class="primary-btn" style="white-space:nowrap;" @click=${() => this._startMeaterSubprocess()}>
+              ${this._t('recipe_cook.start_meater_btn')}
+            </button>
+          </div>
+        ` : ''}
 
         <!-- Save for Later button — saves without cooking, no ratings required -->
         <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--divider-color);">
@@ -30322,7 +30360,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "383";
+const PANEL_VERSION = "384";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

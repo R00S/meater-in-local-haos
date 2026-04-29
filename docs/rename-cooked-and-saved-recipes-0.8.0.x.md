@@ -57,6 +57,32 @@
   - Section 5.9: added "Getting AI recipe suggestions for a cut" subsection documenting the weight input + jump-to-AI-suggestions shortcut.
 - Regenerated `kitchen-cooking-panel.js` (PANEL_VERSION → 383).
 
+### 2026-04-29 — v0.8.0.1 → v0.8.0.2 — Fix: Start MEATER Probe visible in AI recipes from MEATER shortcut
+
+**Bug**: When using the MEATER AI shortcut (selecting cut/doneness/method → Get AI Recipe
+Suggestions), the AI-generated recipe cook flow never showed the "Start MEATER Probe" card.
+
+Two root causes:
+1. The probe card was only rendered inside step views (never on the overview page, step -1),
+   so even when `use_probe` was true it was invisible until the user tapped into Step 1.
+2. The `use_probe` and `target_temp_c` fields on the recipe depended entirely on what the
+   AI returned. If the AI omitted them, no probe card appeared at all.
+
+**Fix** (all in `panel-class-template.js`):
+- Added `_meaterAiTargetTempC` / `_meaterAiTargetTempF` state properties.
+- In `_goToAISuggestionsForCut()`: capture the doneness temperature from the MEATER
+  selection into those properties before navigating to the AI builder.
+- In `_startRecipeCook()`: when `_meaterAiFromShortcut` is true and a doneness temp was
+  captured, force `recipe.use_probe = true` and set `recipe.target_temp_c` if the AI did
+  not already provide one.
+- In `_renderRecipeCookOverview()`: added the MEATER probe card (same markup as the
+  per-step card) so it is visible immediately on the overview page.
+
+**User guide** (`docs/USER_GUIDE.md` § 8.1): added paragraph explaining the probe card
+on the overview page and how the target temperature is resolved.
+
+**CHORES**: version bumped 0.8.0.1 → 0.8.0.2; generator run (PANEL_VERSION → 384).
+
 ## Status
 
 - [x] Feature 1: Save recipe without cooking — button on fully generated recipe overview
@@ -65,4 +91,5 @@
 - [x] Documentation / user guide updates (USER_GUIDE.md sections 5.9, 7.5, 8.1, 11)
 - [x] api.py comment field, i18n en+sv, generator run
 - [x] Code quality constants (SAVED_NOT_YET_COOKED, MEATER_METHOD_TO_AI_STYLE)
-- [x] CHORES: version bump, stale anchor fix, user guide additions
+- [x] CHORES v0.8.0.1: version bump, stale anchor fix, user guide additions
+- [x] Fix: Start MEATER Probe card visible in AI recipes from MEATER shortcut (v0.8.0.2)
