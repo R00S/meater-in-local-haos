@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 29 Apr 2026, 08:00 UTC
-Last Change: v0.7.0.18 - merge main (history fix + fullscreen viewer) + langoustine cut
+Last Change: v0.7.0.19 - IMPROVE_CUT_FILES: methods surveys for 12 cuts, new method leaf files
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "377"
+PANEL_VERSION = "378"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

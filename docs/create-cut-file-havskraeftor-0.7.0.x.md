@@ -156,3 +156,52 @@ PR #93 (fix-issue-85) was merged to main afterward, adding 11 commits this branc
   - `__init__.py` / `const.py` / `manifest.json`: took main's code, bumped version to 0.7.0.18
 - Generator output: 164 cuts, PANEL_VERSION 368 — clean
 - True merge commit with both parents preserved
+
+---
+
+## IMPROVE_CUT_FILES session — 2026-04-29
+
+### What was done
+Methods surveys completed for 12 cuts (cooking_methods_researched set to 1, methods lists updated, quality scores improved):
+
+| Cut | Score before | Score after | New method leaves |
+|-----|-------------|-------------|------------------|
+| lamb_brisket | 5 | 17 | oven_roast added |
+| turkey_thigh | 5 | 16 | braise/smoker confirmed |
+| brisket | 8 | 19 | methods surveyed |
+| skirt_steak | 8 | 19 | — |
+| lobster_tail | 8 | 19 | — |
+| goat_shank | 8 | 19 | slow_cooker added |
+| venison_steak | 8 | 17 | pan_sear leaf fixed |
+| duck_breast | 8 | 17 | oven_roast leaf fixed |
+| pork_belly | 8 | 19 | air_fryer leaf fixed |
+| chicken_thigh | 8 | 17 | air_fryer leaf fixed |
+| whole_chicken | 8 | 18 | methods surveyed |
+| chicken_breast | 8 | 18 | methods surveyed |
+| chicken_leg | 8 | 18 | methods surveyed |
+| rack_of_lamb | 8 | 18 | oven_roast leaf fixed |
+| lamb_shoulder | 8 | 18 | methods surveyed |
+| lamb_neck | 8 | 19 | braise leaf fixed |
+
+### Rule clarification recorded
+"The most important part of methods research is to find MORE methods, not to question existing ones." Priority: discover and add new valid cooking methods for a cut.
+
+---
+
+## CHORES — 2026-04-29 (post-IMPROVE_CUT_FILES)
+
+### 1. Version bump
+- 0.7.0.18 → 0.7.0.19
+- Updated: manifest.json, __init__.py (__version__ + Last Change), const.py (Last Change)
+- PANEL_VERSION auto-incremented: 377 → 378
+
+### 2. Branch history update
+- This section fulfils that requirement
+
+### 3. USER_GUIDE updates
+- Version header updated: 0.7.0.18 → 0.7.0.19
+- Cut count "all 164 MEATER+ cut overview files" remains accurate (no new cut overview files added)
+- No user-visible feature changes to document
+
+### 4. GUI help button anchor check
+No heading changes in this session — all anchors remain valid (see previous CHORES section for full table).
