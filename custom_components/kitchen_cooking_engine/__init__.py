@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 29 Apr 2026, 07:30 UTC
-Last Change: v0.7.0.15 - feat: add langoustine (havskräfta) cut file and grill method leaf
+Last Updated: 29 Apr 2026, 07:45 UTC
+Last Change: v0.7.0.16 - docs: update USER_GUIDE version + cut count; update branch timeline
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -176,7 +176,7 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.7.0.15"
+__version__ = "0.7.0.16"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

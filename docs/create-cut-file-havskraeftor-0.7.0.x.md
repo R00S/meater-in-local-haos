@@ -63,7 +63,48 @@ Gap: Culinary Groups A and C not found for grill method. Honest note in quality 
 
 ### Plan
 - [x] Mandatory gate in timeline
-- [ ] Create `langoustine.md` (cut overview)
-- [ ] Create `langoustine-grill.md` (method file, 5 verified grill sources)
-- [ ] Run generator, verify clean
-- [ ] Bump version
+- [x] Create `langoustine.md` (cut overview, quality score 16/20)
+- [x] Create `langoustine-grill.md` (method file, 6 verified grill sources — Groups B + D)
+- [x] Run generator, verify clean (164 cuts, EXP_TREE +1)
+- [x] Bump version to 0.7.0.15, commit all files
+
+---
+
+## CHORES — 2026-04-29
+
+Items from `CHORES.md`:
+
+### 1. Version bump
+- 0.7.0.15 → 0.7.0.16 (docs/guide update for CHORES)
+- Updated in: `manifest.json`, `__init__.py` (`__version__` + Last Change), `const.py` (Last Change)
+- PANEL_VERSION auto-incremented by generator
+
+### 2. Branch history update
+- This section fulfils that requirement
+
+### 3. USER_GUIDE updates
+- Version header updated: 0.7.0.13 → 0.7.0.16
+- Cut count updated: "all 163 MEATER+ cut overview files" → "all 164 MEATER+ cut overview files"
+- Fish category example row extended to include shellfish examples (langoustine, scallops, shrimp)
+
+### 4. GUI help button anchor check
+All anchors in `panel-class-template.js` verified against `USER_GUIDE.md` headings.
+No heading changes were made in this branch — all anchors remain valid.
+
+| Anchor in JS | USER_GUIDE heading | Status |
+|---|---|---|
+| `#41-welcome-screen` | `### 4.1 Welcome Screen` | ✅ |
+| `#9-shelf-management` | `## 9. Shelf Management` | ✅ |
+| `#10-shopping-list` | `## 10. Shopping List` | ✅ |
+| `#51-starting-a-cook` | `### 5.1 Starting a Cook` | ✅ |
+| `#59-meater--cut-profile--recipe-links` | `### 5.9 MEATER+ — Cut Profile & Recipe Links` | ✅ |
+| `#57-recent-meater-cooks` | `### 5.7 Recent MEATER Cooks` | ✅ |
+| `#6-ninja-combi-cooking` | `## 6. Ninja Combi Cooking` | ✅ |
+| `#7-ai-recipe-builder` | `## 7. AI Recipe Builder` | ✅ |
+| `#61-built-in-recipes` | `### 6.1 Built-in Recipes` | ✅ |
+| `#64-recent-ninja-cooks` | `### 6.4 Recent Ninja Cooks` | ✅ |
+| `#72-selecting-ingredients` | `### 7.2 Selecting Ingredients` | ✅ |
+| `#73-choosing-a-cooking-style` | `### 7.3 Choosing a Cooking Style` | ✅ |
+| `#11-cook-history` | `## 11. Cook History` | ✅ |
+| `#8-recipe-cook-flow` | `## 8. Recipe Cook Flow` | ✅ |
+

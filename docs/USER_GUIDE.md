@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.7.0.13 · Home Assistant 2024.1.0+
+> **Version:** 0.7.0.16 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -241,7 +241,7 @@ The setup form has five steps:
 | Beef | Steak, roast, brisket |
 | Pork | Chop, tenderloin, shoulder |
 | Poultry | Chicken, turkey, duck |
-| Fish | Salmon, tuna, white fish |
+| Fish | Salmon, tuna, white fish, shellfish (langoustine, scallops, shrimp) |
 | Lamb | Rack, leg, shoulder |
 | Game | Venison, wild boar, bison |
 | Vegetables | Root veg, green veg, alliums |
@@ -490,7 +490,7 @@ category names, meat names, cut-type names, cut names, and doneness names to Swe
 | Cut-profile body text (Styckesprofil card) | `## Styckesprofil` section in the cut's `{slug}.md` overview file (falls back to English if absent) |
 | Method descriptions (Tillagningsmetod card) | `## Styckesprofil` section in the method's `{slug}-{method}.md` file (falls back to English if absent) |
 
-As of v0.7.0.x, **all 163 MEATER+ cut overview files** carry a `## Styckesprofil` section, so Swedish users see a Swedish cut description for every cut. Method files fall back to English where no `## Styckesprofil` has been added yet.
+As of v0.7.0.16, **all 164 MEATER+ cut overview files** carry a `## Styckesprofil` section, so Swedish users see a Swedish cut description for every cut. Method files fall back to English where no `## Styckesprofil` has been added yet.
 
 Any cut without a `name_sv:` field falls back to the English slug-derived name.
 
