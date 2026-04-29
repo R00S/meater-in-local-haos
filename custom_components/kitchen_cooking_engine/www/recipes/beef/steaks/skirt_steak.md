@@ -40,9 +40,9 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 8
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_score: 19
+cooking_methods_researched: 1
+quality_assessed: 2026-04-29
 rest_time_min: 3
 rest_time_max: 5
 carryover_temp_c: 2
@@ -66,24 +66,30 @@ Fiberstrukturen innebär att skirt steak alltid måste skäras tvärs mot fibern
 - [Grill](./skirt_steak-grill.md)
 - [Pan Fry](./skirt_steak-pan_fry.md)
 - [Pan Sear](./skirt_steak-pan_sear.md)
+
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: 19 / 20** — assessed 2026-04-29
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group D tradition | −1 |
-| Method file `skirt_steak-charcoal_grill.md` copies parent cut profile | −1 |
-| Method file `skirt_steak-grill.md` copies `skirt_steak-pan_fry.md` | −1 |
-| Method file `skirt_steak-grill.md` copies `skirt_steak-pan_sear.md` | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods researched | ✓ — survey completed 2026-04-29 (charcoal_grill, grill, pan_fry, pan_sear confirmed; methods list complete — skirt steak is a high-heat quick-cook cut, slow methods are not applicable) |
+| Culinary Group A tradition covered | ✓ (Barbara Tropp — Chinese-American wok, pan_fry leaf; Nobu Matsuhisa — Japanese, pan_fry and pan_sear leaves) |
+| Culinary Group B tradition covered | ✓ (Diana Kennedy, Bobby Flay, Francis Mallmann, Felicity Cloake — across all leaves) |
+| Culinary Group C tradition covered | ✓ (Yotam Ottolenghi — Middle Eastern/North African, grill and pan_fry leaves; Marcus Samuelsson — Ethiopian, pan_sear leaf) |
+| Culinary Group D tradition covered | − missing (tasteline.com, receptai.lt — both returned masked 404; skirt steak is an American/Latin American cut not traditional in Group D cuisines) |
+| Cut profile written with anatomy | ✓ |
+| All 4 method leaf files with 5 sources each | ✓ |
+| Temperature data: safe temp (63°C minimum) | ✓ |
+| Temperature data: culinary preferred (52–57°C) | ✓ |
+| Per-method temperature data | ✓ |
+| pan_fry leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
+| pan_sear leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
+
+**Deduction**: −1 (Group D missing) = **19**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Method file `skirt_steak-charcoal_grill.md` copies parent cut profile — rewrite `skirt_steak-charcoal_grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-3. **−1** · Method file `skirt_steak-grill.md` copies `skirt_steak-pan_fry.md` — rewrite `skirt_steak-grill.md`'s cut profile — it must describe what the pan fry method does to this cut, not repeat another method's prose
-4. **−1** · Method file `skirt_steak-grill.md` copies `skirt_steak-pan_sear.md` — rewrite `skirt_steak-grill.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
-5. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−1** · Missing Culinary Group D tradition — add a Scandinavian, Polish, Russian, or Baltic recipe to one of the leaf files. Skirt steak is not a traditional Group D cut; the closest equivalent is thin beef *biffstek* (Swedish), but that typically uses thicker cuts. Further probing needed.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
