@@ -26,9 +26,9 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 8
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-27
+quality_score: 18
+cooking_methods_researched: 1
+quality_assessed: 2026-04-29
 rest_time_min: 3
 rest_time_max: 5
 carryover_temp_c: 3
@@ -54,7 +54,7 @@ Pannstekning: het panna, 5–7 minuter per sida; ugnsrostning: 200–220 °C, 18
 - [Pan Sear](./chicken_breast-pan_sear.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-27
+**Score: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group B, −1 Group D remain)
 
 | Criterion | Status |
 |-----------|--------|
