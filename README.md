@@ -91,7 +91,9 @@ The AI Recipe Builder generates custom recipes using AI (OpenAI or any HA conver
 - **Portions Slider** — 1 to 8 servings
 - **4 Diverse Suggestions** — AI generates 4 quite different recipes from your selections
 - **Full Cook Flow** — Step-by-step instructions with elapsed timer, then star ratings on completion
-- **Save & Restart** — Completed AI recipe cooks saved to history with full recipe data; restartable from Previous Cooks
+- **Save & Restart** — Completed AI recipe cooks saved to history with full recipe data; restartable from Cooked and Saved Recipes
+- **Save for Later** — Save a fully generated recipe to history without cooking it (💾 button on the recipe overview page); pick it up from Cooked and Saved Recipes later
+- **Jump to AI from MEATER** — In the MEATER cut-selection path, once you pick a doneness/method, a weight input + "Get AI Recipe Suggestions" shortcut appears (requires AI agent configured); pre-seeds the AI builder with the selected cut and carries the target temperature through to the cook flow automatically
 - **Cancelable Generation** — Cancel button during AI generation with time estimate (10–30 seconds)
 - **Appliance-Aware** — AI considers your configured appliances when generating recipes
 - **User-Configurable Agent** — Choose which AI conversation agent to use via settings (⚙️ button)
@@ -135,7 +137,7 @@ The AI Recipe Builder generates custom recipes using AI (OpenAI or any HA conver
 10. Click **Start Cooking This Recipe** on your preferred recipe
 11. Follow the **step-by-step cook flow** with elapsed timer
 12. **Rate** the recipe (ease + result, 1–5 stars) and add optional notes
-13. Recipe saved to **Previous Cooks** for future restart
+13. Recipe saved to **Cooked and Saved Recipes** for future restart
 
 ### ✅ Tested With
 
@@ -692,9 +694,17 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 
 ## 📊 Current Status
 
-**v0.7.0.17** — Development release (April 2026)
+**v0.8.0.2** — Development release (April 2026)
 
 Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.8.0.x Changes — Cooked and Saved Recipes, Save for Later, AI shortcut from MEATER (April 2026)
+- ✅ **Rename: Previous Cooks → Cooked and Saved Recipes** — Badge, screen title, navigation, and all i18n strings (en + sv) updated everywhere
+- ✅ **Filter toggles** — Two toggle buttons on the Cooked and Saved Recipes screen let you hide saved-only entries or cooked-only entries independently
+- ✅ **💾 Saved badge** — Entries saved without cooking show a distinct "💾 Saved" badge in the list
+- ✅ **Save for Later** — New button on the AI recipe overview page saves a fully generated recipe to history with `comment = "Saved, not yet cooked"` so you can cook it another time without going through the AI builder again
+- ✅ **Jump to AI from MEATER cut selection** — When an end leaf (cut or cut-method) is selected and an AI agent is configured, a weight input box and "Get AI Recipe Suggestions" button appear; tapping it pre-seeds the AI builder with the selected cut + weight, sets the cooking style to match the MEATER method, and carries the correct target temperature through to the recipe cook flow (guaranteed even if the AI omits `use_probe` / `target_temp_c`)
+- ✅ **Fix: Start MEATER Probe button missing in AI recipes from shortcut** — Probe card now also appears on the overview page (step −1), not only inside per-step views
 
 ### v0.7.0.17 Changes — Fix: cook history shows all cook types + restart cut_id crash (April 2026)
 - ✅ **Fix: cook history shows all cook types** — `_renderHistory()` used a hardcoded MEATER-only template (`cook.cut`, `cook.protein`, `cook.target_temp_c`); recipe and Ninja cooks have none of those fields, so their cards rendered as invisible zero-height elements. Now delegates to `_renderHistoryCard(cook)`, which handles all cook types via `recipe_name || cut_display || cut`.
@@ -800,7 +810,7 @@ Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card
 - ✅ **Welcome screen auto-refresh** — Exited cooks disappear immediately without manual refresh
 - ✅ **MEATER restart improvements** — Session dropdown on waiting screen, unknown entity handling
 - ✅ **🏠 Home button** — Navigate back to welcome from any active cook view
-- ✅ **MEATER Swedish cook restart** — Cooks with Swedish data source restart correctly from Previous Cooks
+- ✅ **MEATER Swedish cook restart** — Cooks with Swedish data source restart correctly from Cooked and Saved Recipes
 - ✅ **Mobile responsive** — Welcome screen cards fit properly in portrait and landscape on companion app
 
 ### v0.5.2.x Features (February 2026)
@@ -818,7 +828,7 @@ Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card
 - ✅ **70+ world cuisines** — 11 collapsible regions (Nordic, East/SE/South Asian, Middle Eastern, European, N/S American, Caribbean, African, Oceanian) with multi-select for fusion
 - ✅ **Complexity & portions** — Adjustable complexity (1–5) and portions (1–8) per recipe
 - ✅ **Recipe cook flow** — Step-by-step navigation with elapsed timer and star ratings
-- ✅ **AI recipe save & restart** — Full recipe data saved to cook history, restartable from Previous Cooks
+- ✅ **AI recipe save & restart** — Full recipe data saved to cook history, restartable from Cooked and Saved Recipes
 - ✅ **Cancelable generation** — Loading dialog with Cancel button and time estimate
 - ✅ **Custom temperature cook** — Set any target temp (30–100°C) in MEATER path without protein selection
 - ✅ **Metric conversions** — All Ninja Combi recipes include metric equivalents (cups→dl, oz→g, lb→kg, °F→°C)
