@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 29 Apr 2026, 08:00 UTC
-Last Change: v0.7.0.21 - probe compatibility tables (ThermoPro + no-HA-integration section)
+Last Change: v0.8.0.2 - fix Start MEATER Probe visible in AI recipes from MEATER AI shortcut
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "380"
+PANEL_VERSION = "384"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

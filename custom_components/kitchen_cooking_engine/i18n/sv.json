@@ -49,7 +49,8 @@
     "back_to_ingredients": "← Tillbaka till ingredienser",
     "back_to_cooking_style": "← Tillbaka till matlagningsstil",
     "back_to_ai_builder": "← Tillbaka till AI-receptbyggare",
-    "back_to_list": "← Tillbaka till listan"
+    "back_to_list": "← Tillbaka till listan",
+    "back_to_cut_selection": "Tillbaka till styckdelsval"
   },
   "welcome": {
     "title": "🍳 Kitchen Cooking Engine",
@@ -59,7 +60,7 @@
     "language_label": "🌐 Språk / Language",
     "data_source_label": "🌍 Temperaturdata",
     "measurement_system_label": "📏 Måttsystem",
-    "previous_cooks_description": "Visa och starta om dina tidigare tillagningar",
+    "previous_cooks_description": "Visa och hantera dina tillagade och sparade recept",
     "configure_ai_agent": "Konfigurera din AI-agent för att aktivera receptbyggaren",
     "started_on_other_device": "Startad på en annan enhet",
     "recipe_cook": "Recepttillagning",
@@ -110,7 +111,7 @@
     "notes": "Anteckningar",
     "notes_placeholder": "Lägg till anteckningar om denna tillagning...",
     "save_notes": "Spara anteckningar",
-    "previous_cooks": "Tidigare tillagningar",
+    "previous_cooks": "Tillagade och sparade recept",
     "no_history": "Ingen tillagningshistorik ännu.",
     "delete_cook_confirm": "Ta bort denna tillagning från historiken?",
     "choose_cut": "Välj en styckdel...",
@@ -159,7 +160,11 @@
     "research_label": "Forskning",
     "fine_tune_temp": "⚙️ Finjustera temperatur",
     "reset_to": "Återställ till",
-    "select_type": "Välj typ"
+    "select_type": "Välj typ",
+    "ai_for_cut": "🤖 Hämta AI-receptförslag",
+    "ai_weight_label": "Vikt (valfritt):",
+    "ai_weight_placeholder": "T.ex. 500g eller 1 kg",
+    "ai_for_cut_hint": "Låt AI föreslå recept för denna styckdel och tillagningsmetod"
   },
   "ninja": {
     "title": "🥷 Ninja Combi",
@@ -295,7 +300,9 @@
     "incomplete_warning": "⚠️ Ofullständig",
     "incomplete_message": "Slutför val av ingredienser och stil",
     "compulsory_toggle_hint": "Klicka för att markera som obligatorisk (⭐ måste användas)",
-    "compulsory_badge_label": "Obligatorisk"
+    "compulsory_badge_label": "Obligatorisk",
+    "save_for_later": "💾 Spara för senare",
+    "save_for_later_hint": "Spara receptet utan att laga det nu"
   },
   "recipe_cook": {
     "overview_title": "📋 Receptöversikt",
@@ -336,7 +343,7 @@
     "result_rating": "Resultat",
     "cooked_on": "Tillagad",
     "duration": "Varaktighet",
-    "previous_cooks_title": "📋 Tidigare tillagningar",
+    "previous_cooks_title": "📋 Tillagade och sparade recept",
     "cook_history_title": "📜 Tillagningshistorik",
     "cook_history_subtitle": "Dina tidigare tillagningar",
     "no_cooks_message": "Inga tillagningar registrerade ännu. Slutför en tillagning för att se den här!",
@@ -361,7 +368,11 @@
     "edit_notes": "✏️ Redigera anteckningar",
     "delete_btn": "🗑️ Ta bort",
     "update_notes_prompt": "Uppdatera anteckningar:",
-    "serving_size_label": "Portioner"
+    "serving_size_label": "Portioner",
+    "filter_hide_saved": "Dölj sparade",
+    "filter_hide_cooked": "Dölj tillagade",
+    "saved_badge": "💾 Sparad",
+    "no_saved_visible": "Inga poster matchar nuvarande filter."
   },
   "measurements": {
     "ml": "ml",
@@ -485,7 +496,9 @@
     "add_probe_instructions": "Lägg till en MEATER+-apparat under:\nInställningar → Enheter & tjänster → Lägg till integration → Kitchen Cooking Engine",
     "configure_probe_hint": "Kontrollera att din MEATER+-sond är korrekt konfigurerad.",
     "recipe_loaded_instructions": "Konfigurera nu din tillagning på inställningsskärmen:\n- Välj protein och styckningsdetalj\n- Välj tillagningsgrad\n- Välj tillagningsmetod\n- Starta tillagningen",
-    "recipe_loaded_tip": "Tips: Receptet \"{name}\" fungerar bäst med {appliances}."
+    "recipe_loaded_tip": "Tips: Receptet \"{name}\" fungerar bäst med {appliances}.",
+    "recipe_saved_for_later_title": "Recept sparat",
+    "recipe_saved_for_later": "Receptet har sparats. Hitta det under Tillagade och sparade recept."
   },
   "cuisines": {
     "nordic": "Nordisk & Skandinavisk",

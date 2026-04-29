@@ -1047,6 +1047,7 @@ class AIRecipeSaveCookView(HomeAssistantView):
                 "ease_rating": data.get("ease_rating", 0),
                 "result_rating": data.get("result_rating", 0),
                 "notes": data.get("notes", ""),
+                "comment": data.get("comment", ""),
                 "ingredients": data.get("ingredients", []),
                 "appliance_id": data.get("appliance_id"),
                 "recipe_data": data.get("recipe_data"),

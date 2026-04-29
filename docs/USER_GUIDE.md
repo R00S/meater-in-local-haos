@@ -61,11 +61,13 @@
     - 10.1 [Adding Items](#101-adding-items)
     - 10.2 [Checking Off Items](#102-checking-off-items)
     - 10.3 [Exporting to HA Shopping List](#103-exporting-to-ha-shopping-list)
-11. [Cook History](#11-cook-history)
+11. [Cooked and Saved Recipes](#11-cooked-and-saved-recipes)
     - 11.1 [Viewing Past Cooks](#111-viewing-past-cooks)
-    - 11.2 [Restarting a Previous Cook](#112-restarting-a-previous-cook)
-    - 11.3 [Editing Notes](#113-editing-notes)
-    - 11.4 [Deleting a Cook](#114-deleting-a-cook)
+    - 11.2 [Saving a Recipe for Later](#112-saving-a-recipe-for-later)
+    - 11.3 [Filtering the List](#113-filtering-the-list)
+    - 11.4 [Restarting a Previous Cook](#114-restarting-a-previous-cook)
+    - 11.5 [Editing Notes](#115-editing-notes)
+    - 11.6 [Deleting a Cook](#116-deleting-a-cook)
 12. [Language and Measurement Settings](#12-language-and-measurement-settings)
 13. [Developer Services Reference](#13-developer-services-reference)
 14. [Troubleshooting](#14-troubleshooting)
@@ -223,8 +225,8 @@ The welcome screen is the home base. From here you can:
   cook's step-by-step guide.
 - **Open a cook started on another device** — if someone else started a cook on a different
   browser/tablet, it appears under "Started on another device" and can be adopted.
-- **Access Previous Cooks** — full cook history for all cook types: temperature-based MEATER
-  cooks, Ninja Combi recipe cooks, and AI recipe cooks.
+- **Access Cooked and Saved Recipes** — full cook history for all cook types: temperature-based MEATER
+  cooks, Ninja Combi recipe cooks, and AI recipe cooks, plus recipes saved for later.
 
 ### 4.2 Settings Cards
 
@@ -538,6 +540,28 @@ known to the system):
 1. Add the method slug to the cut's `<!-- KCE:CUT … -->` `methods:` list.
 2. Optionally create `{slug}-{method}.md` research file for that method.
 3. No changes to `cooking_data.py` or any other file are required.
+
+#### Getting AI recipe suggestions for a cut
+
+When an [AI agent is configured](#71-setting-up-an-ai-agent), a **🤖 Get AI Recipe
+Suggestions** section appears below the Cooking Method card after you have selected a cut
+and doneness level. This lets you jump directly from the MEATER cooking setup to the AI
+Recipe Builder's suggestions stage.
+
+**How to use it:**
+
+1. Select your protein, cut type, cut, doneness, and cooking method as usual.
+2. The **🤖 Get AI Recipe Suggestions** card appears below the method selector.
+3. Optionally enter a **weight** (e.g. `500g` or `1.2 lbs`) in the text box — this is passed
+   to the AI as part of the request so it can tailor cooking times and quantities.
+4. Tap **🤖 Get AI Recipe Suggestions**.
+5. KCE navigates to the AI Recipe Builder and immediately requests recipe suggestions with
+   the cut name, weight, and cooking method pre-filled as ingredients. The cooking style
+   is automatically selected based on the chosen method (e.g. Grill → BBQ, Braise → Slow Cook).
+6. Up to three recipe suggestions appear. Tap **Start Cooking This Recipe** to load the full
+   recipe, or **💾 Save for Later** on the overview page to store it for later.
+
+Tap the back button on the suggestions screen to return to the MEATER cut selection.
 
 ---
 
@@ -890,6 +914,10 @@ target if applicable). A progress dialog shows while this loads (usually 10–30
 
 Once loaded, the step-by-step recipe cook flow begins (see [Section 8](#8-recipe-cook-flow)).
 
+On the **overview page** you can tap **💾 Save for Later** to store the recipe without
+cooking it yet. The recipe is saved to [Cooked and Saved Recipes](#11-cooked-and-saved-recipes)
+with a "Saved, not yet cooked" note. You can restart it at any time.
+
 ---
 
 ## 8. Recipe Cook Flow
@@ -906,6 +934,22 @@ The first page is a read-before-cooking overview:
 - Numbered step summary with estimated time per step
 
 Navigate with the **→** button (top left) or tap **→** to advance to Step 1.
+
+For **AI-generated recipes**, a **💾 Save for Later** button appears at the bottom of the
+overview page. Tap it to store the recipe in
+[Cooked and Saved Recipes](#11-cooked-and-saved-recipes) without cooking it now.
+No ratings are required — the recipe is saved immediately and you can restart it later.
+
+When the recipe uses a MEATER probe (this is always the case for recipes generated via
+the [MEATER AI shortcut](#getting-ai-recipe-suggestions-for-a-cut)), a
+**🌡️ Start MEATER Probe** card also appears on the overview page — before any step has
+started. Tapping it starts the probe session immediately so the probe is already tracking
+temperature when you begin cooking. The target temperature comes from your MEATER doneness
+selection (the AI's value is used if provided, otherwise the temperature from the cut's
+doneness data is used).
+
+The probe card also appears on every subsequent step that requires temperature monitoring.
+Once the probe is running, a live temperature badge is shown in the footer instead.
 
 ### 8.2 Adjusting Serving Size
 
@@ -1086,11 +1130,11 @@ or use a HA automation to send it to a messaging platform.
 
 ---
 
-## 11. Cook History
+## 11. Cooked and Saved Recipes
 
 ### 11.1 Viewing Past Cooks
 
-Tap **Previous Cooks** on the welcome screen to open the cook history. Each card shows:
+Tap **Cooked and Saved Recipes** on the welcome screen to open the history. Each card shows:
 
 - Cook type (temperature-based, recipe, Ninja Combi, AI recipe)
 - Date and duration
@@ -1100,8 +1144,24 @@ Tap **Previous Cooks** on the welcome screen to open the cook history. Each card
 - Cooking method
 - Ease and result ratings (⭐ 1–5)
 - Notes
+- **💾 Saved** badge on recipes saved for later without cooking
 
-### 11.2 Restarting a Previous Cook
+### 11.2 Saving a Recipe for Later
+
+On the **fully generated recipe overview page** (step −1 of the recipe cook flow), tap
+**💾 Save for Later**. The recipe is stored in Cooked and Saved Recipes with the note
+*"Saved, not yet cooked"*. No ratings are required. You can restart it at any time.
+
+### 11.3 Filtering the List
+
+Use the two toggle buttons at the top of the Cooked and Saved Recipes screen:
+
+- **Hide saved** — hide recipes that were saved for later but never cooked.
+- **Hide cooked** — hide completed cooking sessions, showing only saved recipes.
+
+Tap the button again to reveal that group.
+
+### 11.4 Restarting a Previous Cook
 
 Tap **🔄 Restart This Cook** (or **Starta om tillagning**) on any history card to restart:
 
@@ -1109,11 +1169,11 @@ Tap **🔄 Restart This Cook** (or **Starta om tillagning**) on any history card
   sent directly to the `start_cook` service. You are taken straight to the active cook view.
 - For **recipe cooks** — restart the same recipe cook flow from the overview page.
 
-### 11.3 Editing Notes
+### 11.5 Editing Notes
 
 Tap **✏️ Edit Notes** on any history card to add or update notes. Changes save immediately.
 
-### 11.4 Deleting a Cook
+### 11.6 Deleting a Cook
 
 Tap **🗑️ Delete** and confirm to permanently remove the cook record.
 

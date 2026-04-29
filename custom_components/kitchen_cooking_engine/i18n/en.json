@@ -49,7 +49,8 @@
     "back_to_ingredients": "← Back to Ingredients",
     "back_to_cooking_style": "← Back to Cooking Style",
     "back_to_ai_builder": "← Back to AI Recipe Builder",
-    "back_to_list": "← Back to List"
+    "back_to_list": "← Back to List",
+    "back_to_cut_selection": "Back to Cut Selection"
   },
   "welcome": {
     "title": "🍳 Kitchen Cooking Engine",
@@ -59,7 +60,7 @@
     "language_label": "🌐 Language / Språk",
     "data_source_label": "🌍 Temperature Data Source",
     "measurement_system_label": "📏 Measurement System",
-    "previous_cooks_description": "View and restart your past cooking sessions",
+    "previous_cooks_description": "View and manage your cooked and saved recipes",
     "configure_ai_agent": "Configure your AI agent to enable the Recipe Builder",
     "started_on_other_device": "Started on another device",
     "recipe_cook": "Recipe Cook",
@@ -110,7 +111,7 @@
     "notes": "Notes",
     "notes_placeholder": "Add notes about this cook...",
     "save_notes": "Save Notes",
-    "previous_cooks": "Previous Cooks",
+    "previous_cooks": "Cooked and Saved Recipes",
     "no_history": "No cook history yet.",
     "delete_cook_confirm": "Delete this cook from history?",
     "choose_cut": "Choose a cut...",
@@ -159,7 +160,11 @@
     "research_label": "Research",
     "fine_tune_temp": "⚙️ Fine-tune Temperature",
     "reset_to": "Reset to",
-    "select_type": "Select Type"
+    "select_type": "Select Type",
+    "ai_for_cut": "🤖 Get AI Recipe Suggestions",
+    "ai_weight_label": "Weight (optional):",
+    "ai_weight_placeholder": "e.g. 500g or 2 lbs",
+    "ai_for_cut_hint": "Let AI suggest recipes for this cut and cooking method"
   },
   "ninja": {
     "title": "🥷 Ninja Combi",
@@ -295,7 +300,9 @@
     "incomplete_warning": "⚠️ Incomplete",
     "incomplete_message": "Please complete ingredient and style selection",
     "compulsory_toggle_hint": "Click to mark as compulsory (⭐ must use)",
-    "compulsory_badge_label": "Compulsory"
+    "compulsory_badge_label": "Compulsory",
+    "save_for_later": "💾 Save for Later",
+    "save_for_later_hint": "Save this recipe without cooking it now"
   },
   "recipe_cook": {
     "overview_title": "📋 Recipe Overview",
@@ -336,7 +343,7 @@
     "result_rating": "Result",
     "cooked_on": "Cooked on",
     "duration": "Duration",
-    "previous_cooks_title": "📋 Previous Cooks",
+    "previous_cooks_title": "📋 Cooked and Saved Recipes",
     "cook_history_title": "📜 Cook History",
     "cook_history_subtitle": "Your past cooking sessions",
     "no_cooks_message": "No cooks recorded yet. Complete a cooking session to see it here!",
@@ -361,7 +368,11 @@
     "edit_notes": "✏️ Edit Notes",
     "delete_btn": "🗑️ Delete",
     "update_notes_prompt": "Update notes:",
-    "serving_size_label": "Portions"
+    "serving_size_label": "Portions",
+    "filter_hide_saved": "Hide saved",
+    "filter_hide_cooked": "Hide cooked",
+    "saved_badge": "💾 Saved",
+    "no_saved_visible": "No entries match the current filters."
   },
   "measurements": {
     "tsp": "tsp",
@@ -487,7 +498,9 @@
     "add_probe_instructions": "Please add a MEATER+ appliance in:\nSettings → Devices & Services → Add Integration → Kitchen Cooking Engine",
     "configure_probe_hint": "Please ensure your MEATER+ probe is configured properly.",
     "recipe_loaded_instructions": "Now configure your cook on the setup screen:\n- Select protein and cut\n- Choose doneness level\n- Select cooking method\n- Start your cook",
-    "recipe_loaded_tip": "Tip: The recipe \"{name}\" works best with {appliances}."
+    "recipe_loaded_tip": "Tip: The recipe \"{name}\" works best with {appliances}.",
+    "recipe_saved_for_later_title": "Recipe Saved",
+    "recipe_saved_for_later": "Recipe saved for later. Find it in Cooked and Saved Recipes."
   },
   "cuisines": {
     "nordic": "Nordic & Scandinavian",
