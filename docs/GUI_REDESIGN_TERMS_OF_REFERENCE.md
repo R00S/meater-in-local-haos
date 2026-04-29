@@ -342,7 +342,7 @@ These features apply system-wide across all paths and cook types:
    - Show selected main appliance name with 📝 button to toggle inline feature notes editor
    - Display main appliance features (collapsed: comma list; expanded: grouped by Standard/Modified/Special with editable notes)
    - List all available secondary appliances (names only, no features)
-   - **Secondary appliances are deselectable** (checkboxes to include/exclude) — *Deferred to Phase 9*
+   - **Secondary appliances are deselectable** (checkboxes to include/exclude) — *Done (implemented in Phase 6)*
 
 2. **Start AI Recipe Builder** (Button 1)
    - Launch AI Recipe Builder
@@ -374,7 +374,7 @@ These features apply system-wide across all paths and cook types:
 │   • Stovetop                               │
 │   • Microwave                              │
 │   • MEATER+ Probe                          │
-│   (Deselectable checkboxes: Phase 9)       │
+│   (Deselectable checkboxes: ✅ Done)       │
 │                                            │
 │   ┌──────────────────────────────────┐   │
 │   │  🤖  Create AI Recipe            │   │
@@ -1199,9 +1199,9 @@ The GUI redesign is considered successful when:
 ### 11.3 Recipe Cook Flow Functions Completely
 - [x] Recipe overview displays correctly (first guide page)
 - [x] Guide step navigation works (next/back buttons)
-- [ ] Ingredients bold correctly based on current guide step — **Deferred to Phase 9**
+- [x] Ingredients bold correctly based on current guide step — ✅ Done (two-method: per-step ingredient list from AI JSON, fallback to text scan)
 - [x] Timer displays elapsed time accurately since pressing Start Cooking
-- [ ] MEATER probe can be started as subprocess (not a meater probe cook) — **Deferred to Phase 9**
+- [x] MEATER probe can be started as subprocess (not a meater probe cook) — ✅ Done (`_startMeaterSubprocess()` / `_stopMeaterSubprocess()` with live probe display in footer)
 - [x] Star ratings can be entered (ease and result, 1-5 stars)
 - [x] Pressing finish button saves cook to previous cooks with all data
 
@@ -1216,7 +1216,7 @@ The GUI redesign is considered successful when:
 - [x] Welcome screen is attractive and clear
 - [x] Path screens follow consistent design language (meater path, ninja combi path, ai recipe builder path, previous cook path)
 - [x] Recipe cook interface is clean and readable
-- [ ] Mobile responsive design works on small screens — **Phase 9 polish**
+- [x] Mobile responsive design works on small screens — Partial (`@media (max-width: 600px)` breakpoints implemented; edge cases may remain)
 - [x] Icons and visual elements are intuitive
 
 ### 11.6 Multilingual Support Works — ⬜ Phase 7
@@ -1275,10 +1275,10 @@ The GUI redesign is considered successful when:
 - [ ] Implement serving size selector with scaling — **Deferred to Phase 7**
 - [x] Implement guide step navigation
 - [x] Add timer functionality (time since pressing Start Cooking)
-- [x] Build ingredient list (without guide step highlighting — **deferred to Phase 9**)
+- [x] Build ingredient list (with guide step highlighting — ✅ implemented in Phase 6)
 - [ ] Apply measurement system conversion to ingredients — **Deferred to Phase 7**
 - [x] Create overview and detail guide pages
-- [ ] Implement MEATER probe subprocess integration — **Deferred to Phase 9**
+- [x] Implement MEATER probe subprocess integration — ✅ Done (`_startMeaterSubprocess()`, live probe display, detach button)
 - [x] Build star rating interface (ease and result)
 - [x] Wire up finish button to save to previous cooks
 
@@ -1293,7 +1293,7 @@ The GUI redesign is considered successful when:
 ### Phase 6: AI Recipe Builder Path (Week 8) — ✅ COMPLETE (v0.5.1.7)
 - [x] Build AI Recipe Builder path screen
 - [x] Display appliance features
-- [ ] Add deselectable secondary appliances (checkboxes) — **Deferred to Phase 9**
+- [x] Add deselectable secondary appliances (checkboxes) — ✅ Done (`_toggleSecondaryAppliance()`, `_selectedSecondaryAppliances` state)
 - [x] Integrate existing AI recipe generation
 - [x] Connect to recipe cook flow
 - [x] Implement filtered recent recipes for selected appliance
@@ -1369,19 +1369,54 @@ The GUI redesign is considered successful when:
 - [ ] **KitchenOwl (future):** Monitor adoption; same read bridge pattern as Grocy when user base justifies (AGPL-3.0 — API calls only, no code reuse)
 - [ ] Add i18n translations for bridge settings labels (en + sv)
 
-### Phase 9: Polish & Testing (Week 12) — ⬜ NOT STARTED
+### Phase 9: Polish & Testing (Week 12) — 🔄 IN PROGRESS
+- [x] MEATER probe subprocess integration — ✅ Done
+- [x] Ingredient bolding based on current guide step — ✅ Done
+- [x] Deselectable secondary appliances — ✅ Done
+- [x] Mobile responsive (`@media` breakpoints) — partially done
+- [ ] Full mobile responsive audit on small screens (remaining edge cases)
 - [ ] Visual design refinement
-- [ ] Mobile responsive testing
 - [ ] Edge case handling
-- [ ] Performance optimization
-- [ ] User acceptance testing in both languages
-- [ ] Test all measurement system conversions
-- [ ] Test serving size scaling edge cases
-- [ ] Test ingredient levels & cooking modes end-to-end
+- [ ] Performance optimisation
+- [ ] User acceptance testing (requires Phases 7 & 8 to be complete)
+- [ ] Test all measurement system conversions — blocked on Phase 7
+- [ ] Test serving size scaling edge cases — blocked on Phase 7
+- [ ] Test ingredient levels & cooking modes end-to-end — blocked on Phase 8
 - [ ] Documentation updates
-- [ ] **Remaining from Phase 4:** MEATER probe subprocess integration
-- [ ] **Remaining from Phase 4:** Ingredient bolding based on current guide step
-- [ ] **Remaining from Phase 6:** Deselectable secondary appliances
+
+### Phase 10: Shelf Intelligence & Integration (Future) — ⬜ NOT STARTED
+
+This phase extends the shelf and shopping capabilities introduced in Phase 8 with smarter input methods and deeper integration with external apps and services.
+
+#### 10a. Recipe Scanning & Import
+
+- [ ] **Scan recipe from photo/URL:** Allow the user to share a recipe URL or photo of a printed recipe; extract ingredients and steps via AI (LLM vision or text extraction)
+- [ ] Imported recipe is treated like an AI-generated recipe: editable, cookable, saved to history
+- [ ] Handle both URL-based (fetch page text → parse) and image-based (OCR/vision → parse) input paths
+- [ ] Validate extracted ingredient list and allow manual correction before cooking
+
+#### 10b. Shelf Population from Physical Sources
+
+- [ ] **Receipt photo import:** User photographs a shopping receipt; OCR + AI extracts product names and quantities → adds to shelf inventory
+- [ ] **Barcode scanning:** Use a HA companion app / external barcode scanner to scan product barcodes; look up product via Open Food Facts or similar open database → adds to shelf
+- [ ] **Fridge photo import:** User photographs fridge/pantry contents; AI vision identifies visible ingredients → suggests additions to shelf (with confirmation step)
+- [ ] All three methods funnel into the same "Review & Confirm additions" screen before writing to `shelf_inventory.json`
+
+#### 10c. External App Integration (Tier 2)
+
+These go beyond the read-only bridges specified in Phase 8e and enable richer two-way workflows.
+
+- [ ] **HA Shopping List (write-back):** Push generated shopping lists to HA `todo.shopping_list` — already partially covered in Phase 8e; promote to Phase 10 if two-way sync is needed
+- [ ] **Grocy two-way sync:** In addition to the Phase 8e read bridge, support writing back shelf deductions and shopping list additions to Grocy after a cook completes
+- [ ] **Bring! / OurGroceries / similar shopping apps:** Investigate popular Nordic/EU shopping list apps; add a thin push integration for Cook Later shopping lists if user demand justifies
+- [ ] **Mealie recipe import:** Already in Phase 8e; promote to full two-way if Mealie adoption warrants (push KCE-generated recipes back to Mealie library)
+- [ ] Add i18n translations for all new integration labels (en + sv)
+
+#### 10d. Cross-Feature Intelligence
+
+- [ ] **Auto-suggest shelf additions after grocery trip:** When user marks a shopping list item as purchased, offer to add it to the shelf immediately
+- [ ] **Low-stock alerts:** Optionally warn user when a staple (e.g. olive oil, salt) has been deducted from the shelf below a configurable threshold
+- [ ] **Recipe suggestions from shelf:** "What can I cook right now?" — Mode B shortcut on welcome screen that skips ingredient selection and generates recipes purely from shelf contents
 
 ---
 
@@ -1567,9 +1602,9 @@ This section documents deviations from the original ToR specification as of v0.5
 |-------------|---------------|-------------|--------|
 | Serving size selector with scaling | Phase 4 | Phase 7 | Requires measurement conversion engine first |
 | Measurement system conversion | Phase 4 | Phase 7 | Dedicated phase for this complex feature |
-| Ingredient bolding by step | Phase 4 | Phase 9 | Polish item, not blocking core flow |
-| MEATER probe as recipe subprocess | Phase 4 | Phase 9 | Complex integration, not blocking core recipe flow |
-| Deselectable secondary appliances | Phase 6 | Phase 9 | UI enhancement, AI works without it |
+| Ingredient bolding by step | Phase 4 | Phase 9 | ✅ Done — two-method detection (AI step_ingredients + text-scan fallback) |
+| MEATER probe as recipe subprocess | Phase 4 | Phase 9 | ✅ Done — `_startMeaterSubprocess()` / `_stopMeaterSubprocess()` with live probe footer |
+| Deselectable secondary appliances | Phase 6 | Phase 9 | ✅ Done — `_toggleSecondaryAppliance()` with checkbox UI |
 
 ### 15.3 Features Attempted and Removed
 
@@ -1668,6 +1703,7 @@ This section documents deviations from the original ToR specification as of v0.5
 | 3.5 | 2026-03-17 | Revised Open Question #6 per owner feedback: corrected Grocy install burden (low, not high — it's a one-click HA app), corrected terminology (app, not add-on), clarified that Option C does NOT require Option B (C = A + thin bridges, not A + B). | AI Agent |
 | 3.6 | 2026-03-17 | Resolved Open Question #6: Option C (Hybrid) selected by project owner. Updated Out of Scope to reflect thin bridges. Added Phase 8e (optional external bridges: HA todo export, Grocy read bridge, Mealie recipe import, KitchenOwl watch). Added reference to External Integrations Research document. Incorporated Mealie and KitchenOwl as future integration targets. | Project Owner + AI Agent |
 | 3.7 | 2026-04-23 | Rebuilt Open Question #6 A/B/C comparison using merged research data from EXTERNAL_INTEGRATIONS_RESEARCH.md: added real HA user counts (350k HA todo, 2-4k Grocy, ~2k Mealie), widened Option B to cover Mealie/KitchenOwl alternatives, added Tier 1/2/3 bridge table to Option C, updated Decision Factors matrix with research-backed data. | AI Agent |
+| 3.8 | 2026-04-29 | Updated Phase 9 status: marked MEATER probe subprocess, ingredient bolding, and deselectable secondary appliances as ✅ Done (all implemented in Phase 6). Updated acceptance criteria (§ 11.3) and deferred features table (§ 15.2) accordingly. Mobile responsive marked partial (two `@media` breakpoints). Added Phase 10: Shelf Intelligence & Integration — recipe scanning from photos/URLs, shelf population from receipts/barcodes/fridge photos, two-way external app integration (Grocy, Bring!, Mealie), and cross-feature shelf intelligence features. | AI Agent |
 
 ---
 

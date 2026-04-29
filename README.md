@@ -5,7 +5,7 @@
 [![Alpha](https://img.shields.io/badge/Status-ALPHA-orange.svg)](https://github.com/R00S/meater-in-local-haos)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/R00S)
 
-⚠️ **BETA RELEASE** — Dev Phases 1–8 complete 
+🟡 **Stable Mid-Dev Release** — Core cooking engine, AI recipe builder, MEATER probe integration, ingredient tracking and cook history are all working. Phase 9 is polishing multilingual support, measurement conversion and mobile layout. Phase 10 will add shelf intelligence: recipe scanning from photos/URLs, shelf population from receipts and barcodes, and optional sync with Grocy/Mealie/HA shopping lists.
 
 A local-first, AI-assisted kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes. 
 
@@ -657,9 +657,15 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 
 ## 🔮 Future Features
 
-### Phase 9 — External Bridges & Integrations (planned)
-- ⬜ **Grocy / Mealie bridge** — Sync shelf inventory with external systems
-- ⬜ **Grocery Recognition** — Receipt + photo → inventory
+### Phase 9 — Polish & Language (in progress)
+- 🌍 **Full Swedish / English i18n** — Language selector, all UI strings translated
+- 📐 **Measurement conversion** — Metric ↔ US with serving-size scaling
+- 📱 **Mobile layout** — Remaining responsive edge cases
+
+### Phase 10 — Shelf Intelligence & Integration (planned)
+- 🛒 **Shelf from photos** — Receipt photos, barcode scanning and fridge photos populate your pantry inventory automatically
+- 📋 **Recipe scanning** — Import any recipe from a URL or photo; cook it straight away
+- 🔗 **External sync** — Optional two-way bridges to Grocy, Mealie, and HA Shopping List
 
 ### Future Ideas
 - 🥖 **Baking** - Bread proofing, internal doneness, oven tracking
@@ -667,7 +673,6 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 - 🧫 **Fermentation** - Yogurt, sourdough, kombucha, kefir, kimchi
 - 🍲 **Slow Cooking** - Extended cook times, overnight safety monitoring
 - 🌡️ **Combustion Inc** - Alternative probe with open BLE protocol
-- 📷 **Grocery Recognition** - Receipt + photo → inventory
 
 ## 🛠️ Related Open Source Projects
 
