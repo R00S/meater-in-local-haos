@@ -4387,26 +4387,13 @@ class KitchenCookingPanel extends LitElement {
                   ${desc ? html`
                     <p style="font-size:0.87em;line-height:1.55;color:var(--secondary-text-color);margin:0 0 12px 0;">${desc}</p>
                   ` : ''}
-                  ${titles && titles.length > 0 && (!isOpen || this._selectedFileRecipe === null) ? html`
+                  ${titles && titles.length > 0 ? html`
                     <div style="display:flex;flex-direction:column;gap:6px;">
                       ${titles.map((title, i) => html`
                         <button @click=${() => this._openRecipeFullscreen(url, i, title)} style="${recipeBtnStyle}">
                           📄 ${title}
                         </button>
                       `)}
-                    </div>
-                  ` : ''}
-                  ${this._recipeFileLoading && isOpen ? html`
-                    <div style="text-align:center;padding:12px;color:var(--secondary-text-color);">⏳ ${this._t('common.loading')}</div>
-                  ` : ''}
-                  ${isOpen && this._selectedFileRecipe !== null && this._recipeFileContent && !this._recipeFileLoading ? html`
-                    <div style="display:flex;align-items:center;margin-bottom:10px;">
-                      <button @click=${() => { this._selectedFileRecipe = null; this.requestUpdate(); }} style="${closeBtnStyle}">
-                        ${this._t('meater.back_to_recipes')}
-                      </button>
-                    </div>
-                    <div class="recipe-md-content"
-                         .innerHTML=${this._mdToHtml(this._convertIngredientText(this._getRecipeContent(this._selectedFileRecipe)))}>
                     </div>
                   ` : ''}
                 </div>
@@ -4667,6 +4654,13 @@ class KitchenCookingPanel extends LitElement {
           `}
         </div>
       </ha-card>
+      ${this._selectedDoneness ? html`
+        <div class="action-container">
+          <ha-button unelevated @click=${this._startCook}>
+            ${this._t('meater.start_cooking')}${this._customTargetTempC ? ` ${this._convertTemp(this._customTargetTempC)}` : ''}
+          </ha-button>
+        </div>
+      ` : ''}
     `;
   }
 
