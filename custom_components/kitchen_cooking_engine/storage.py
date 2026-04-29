@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -60,16 +61,24 @@ async def async_load_cook_history(hass: HomeAssistant) -> list[dict]:
 
 
 async def async_save_cook_history(hass: HomeAssistant, history: list[dict]) -> bool:
-    """Save cook history to storage."""
+    """Save cook history to storage (atomic write to prevent corruption on crash)."""
     storage_path = _get_storage_path(hass, COOK_HISTORY_FILE)
     
     def save_history():
+        tmp_path = storage_path.with_suffix(".tmp")
         try:
-            with open(storage_path, "w", encoding="utf-8") as f:
+            with open(tmp_path, "w", encoding="utf-8") as f:
                 json.dump(history, f, indent=2, default=str)
+                f.flush()
+                os.fsync(f.fileno())
+            os.replace(tmp_path, storage_path)
             return True
         except IOError as e:
             _LOGGER.error("Failed to save cook history: %s", e)
+            try:
+                tmp_path.unlink(missing_ok=True)
+            except Exception:
+                pass
             return False
     
     return await hass.async_add_executor_job(save_history)

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 28 Apr 2026, 23:26 CET
+ * AUTO-GENERATED: 29 Apr 2026, 06:57 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 28 Apr 2026, 23:26 CET
+// Last generated: 29 Apr 2026, 06:57 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -25980,6 +25980,10 @@ class KitchenCookingPanel extends LitElement {
       _selectedResearchMethod: { type: String },
       // Which recipe index is open in the single-recipe view
       _selectedFileRecipe: { type: Number },
+      // Full-screen recipe viewer (MEATER path)
+      _fullscreenRecipeMode: { type: Boolean },
+      _fullscreenRecipeTitle: { type: String },
+      _fullscreenRecipeMonitoring: { type: Boolean },
 
     };
   }
@@ -26110,12 +26114,20 @@ class KitchenCookingPanel extends LitElement {
     this._recipeFileLoading = false;
     this._selectedResearchMethod = null;
     this._selectedFileRecipe = null;
-    // Data is generated from backend Python files at install/update time
+    this._fullscreenRecipeMode = false;
+    this._fullscreenRecipeTitle = null;
+    this._fullscreenRecipeMonitoring = false;
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
 
   connectedCallback() {
     super.connectedCallback();
+
+    // Track our ha-panel-custom parent for the module-level blank-screen recovery.
+    // Must be set here (not in the constructor) because parentElement is only
+    // available once the element is attached to the DOM.
+    _kceHaPanelParent = this.parentElement;
+
     // Data is embedded in this file - generated from backend at build time
     
     // Ensure _currentPath is always set to a valid value
@@ -26144,16 +26156,14 @@ class KitchenCookingPanel extends LitElement {
     // Load server-side recipe cook state for cross-device visibility
     this._loadServerActiveRecipeCooks();
     
-    // --- Blank-tab fix ---
-    // Root cause: HA reuses the SAME hass object reference (mutates in place), so
-    // hasChanged(hass, hass) always compared the same reference and returned false,
-    // meaning the panel never re-rendered when the tab came back from the background.
-    // hasChanged now always returns true (see properties getter), so every hass
-    // assignment from HA (including post-reconnect) triggers a render.
+    // --- In-element visibility handlers ---
+    // These handlers cover the case where the element is still in the DOM when
+    // the tab returns (tab was hidden for < 5 minutes).  They reload fresh data
+    // and force a re-render so the panel is always up-to-date when the user
+    // returns.  Navigation state is PRESERVED — we never reset to welcome.
     //
-    // This handler is a belt-and-suspenders fallback: it reloads fresh data and
-    // forces a re-render so the panel is always up-to-date when the user returns.
-    // Navigation state is PRESERVED — we never reset to welcome on tab return.
+    // Note: for the case where HA destroys and recreates this element (tab hidden
+    // > 5 min), see the module-level _kceRecoverPanel mechanism below the class.
     this._visibilityHandler = () => {
       if (document.visibilityState === 'visible') {
         // Preserve whatever screen the user was on — do NOT reset to welcome.
@@ -28783,6 +28793,11 @@ class KitchenCookingPanel extends LitElement {
       return this._renderRecipeCookFlow();
     }
 
+    // Full-screen recipe viewer (MEATER path)
+    if (this._fullscreenRecipeMode) {
+      return this._renderRecipeFullscreen();
+    }
+
     // If user explicitly navigated to view a specific active cook, show it
     if (this._currentPath === 'active_cook' && this._selectedEntity) {
       const activeState = this.hass.states[this._selectedEntity];
@@ -30194,34 +30209,19 @@ class KitchenCookingPanel extends LitElement {
               const titles = this._getRecipeTitles()[slug] && this._getRecipeTitles()[slug][this._selectedMethod];
               const url    = this._getRecipeIndex()[slug] && this._getRecipeIndex()[slug][this._selectedMethod];
               if (!desc && (!titles || titles.length === 0)) return '';
-              const isOpen = url && this._recipeFileUrl === url;
-              const closeBtnStyle  = 'font-size:0.78em;padding:3px 10px;background:transparent;border:1px solid var(--divider-color);border-radius:10px;cursor:pointer;color:var(--secondary-text-color);';
               const recipeBtnStyle = 'text-align:left;width:100%;cursor:pointer;border:1px solid var(--divider-color);border-radius:8px;padding:8px 12px;background:var(--secondary-background-color);font-size:0.87em;color:var(--primary-text-color);';
               return html`
                 <div style="margin-top:14px;border-top:1px solid var(--divider-color);padding-top:12px;">
                   ${desc ? html`
                     <p style="font-size:0.87em;line-height:1.55;color:var(--secondary-text-color);margin:0 0 12px 0;">${desc}</p>
                   ` : ''}
-                  ${titles && titles.length > 0 && (!isOpen || this._selectedFileRecipe === null) ? html`
+                  ${titles && titles.length > 0 ? html`
                     <div style="display:flex;flex-direction:column;gap:6px;">
                       ${titles.map((title, i) => html`
-                        <button @click=${() => this._openRecipeFile(url, i)} style="${recipeBtnStyle}">
+                        <button @click=${() => this._openRecipeFullscreen(url, i, title)} style="${recipeBtnStyle}">
                           📄 ${title}
                         </button>
                       `)}
-                    </div>
-                  ` : ''}
-                  ${this._recipeFileLoading && isOpen ? html`
-                    <div style="text-align:center;padding:12px;color:var(--secondary-text-color);">⏳ ${this._t('common.loading')}</div>
-                  ` : ''}
-                  ${isOpen && this._selectedFileRecipe !== null && this._recipeFileContent && !this._recipeFileLoading ? html`
-                    <div style="display:flex;align-items:center;margin-bottom:10px;">
-                      <button @click=${() => { this._selectedFileRecipe = null; this.requestUpdate(); }} style="${closeBtnStyle}">
-                        ${this._t('meater.back_to_recipes')}
-                      </button>
-                    </div>
-                    <div class="recipe-md-content"
-                         .innerHTML=${this._mdToHtml(this._convertIngredientText(this._getRecipeContent(this._selectedFileRecipe)))}>
                     </div>
                   ` : ''}
                 </div>
@@ -30347,32 +30347,15 @@ class KitchenCookingPanel extends LitElement {
               </p>
             ` : ''}
 
-            ${selTitles && selTitles.length > 0 && this._selectedFileRecipe === null ? html`
+            ${selTitles && selTitles.length > 0 ? html`
               <div style="display:flex;flex-direction:column;gap:6px;">
                 ${selTitles.map((title, i) => html`
                   <button
-                    @click=${() => this._openRecipeFile(selUrl, i)}
+                    @click=${() => this._openRecipeFullscreen(selUrl, i, title)}
                     style="${recipeBtnStyle}">
                     📄 ${title}
                   </button>
                 `)}
-              </div>
-            ` : ''}
-
-            ${this._recipeFileLoading ? html`
-              <div style="text-align:center;padding:12px;color:var(--secondary-text-color);">⏳ ${this._t('common.loading')}</div>
-            ` : ''}
-
-            ${this._selectedFileRecipe !== null && this._recipeFileContent && !this._recipeFileLoading ? html`
-              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
-                <button
-                  @click=${() => { this._selectedFileRecipe = null; this.requestUpdate(); }}
-                  style="${closeBtnStyle}">
-                  ${this._t('meater.back_to_recipes')}
-                </button>
-              </div>
-              <div class="recipe-md-content"
-                   .innerHTML=${this._mdToHtml(this._convertIngredientText(this._getRecipeContent(this._selectedFileRecipe)))}>
               </div>
             ` : ''}
           </div>
@@ -30416,9 +30399,186 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Extract recipe block at recipeIndex (0-based) from the cached file content.
-   * Files use '### N.' headings for individual recipes; a plain split on '\n### '
-   * isolates each block without any regex.
+   * Open a recipe in full-screen viewer mode (MEATER path).
+   * Fetches the file (reuses cache if already loaded), then switches to fullscreen.
+   */
+  async _openRecipeFullscreen(url, recipeIndex, title) {
+    this._fullscreenRecipeTitle = title || '';
+    this._selectedFileRecipe = recipeIndex;
+    if (this._recipeFileUrl !== url || !this._recipeFileContent) {
+      this._recipeFileUrl = url;
+      this._recipeFileLoading = true;
+      this._recipeFileContent = null;
+      this._fullscreenRecipeMode = true;
+      this.requestUpdate();
+      try {
+        const resp = await fetch(url);
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const text = await resp.text();
+        const headerEnd = text.indexOf('-->');
+        this._recipeFileContent = headerEnd >= 0 ? text.slice(headerEnd + 3).trimStart() : text;
+      } catch (e) {
+        this._recipeFileContent = `_Could not load file: ${e.message}_`;
+      }
+      this._recipeFileLoading = false;
+    } else {
+      this._fullscreenRecipeMode = true;
+    }
+    this.requestUpdate();
+  }
+
+  /**
+   * Close the full-screen recipe viewer and return to the previous view.
+   */
+  _closeRecipeFullscreen() {
+    this._fullscreenRecipeMode = false;
+    this._fullscreenRecipeTitle = null;
+    this._fullscreenRecipeMonitoring = false;
+    this._selectedFileRecipe = null;
+    this.requestUpdate();
+  }
+
+  /**
+   * Start a MEATER cook while staying in the full-screen recipe view,
+   * so the user can read the recipe and watch the cook progress simultaneously.
+   */
+  _startCookInRecipeFullscreen() {
+    const serviceData = {
+      cut_id: this._selectedCut,
+      doneness: this._selectedDoneness,
+      cooking_method: this._selectedMethod,
+      data_source: this._dataSource,
+    };
+    if (this._customTargetTempC) {
+      serviceData.custom_target_temp_c = this._customTargetTempC;
+    }
+    this._callService('start_cook', serviceData);
+    this._showMeaterCooking = false;
+    this._fullscreenRecipeMonitoring = true;
+    this.requestUpdate();
+  }
+
+  /**
+   * Render the full-screen recipe viewer (MEATER path).
+   * Uses the same header style as the AI recipe cook flow.
+   * When a cook is active (_fullscreenRecipeMonitoring), shows a compact
+   * monitor card below the recipe so the user can read and watch simultaneously.
+   */
+  _renderRecipeFullscreen() {
+    const monitorState = this._fullscreenRecipeMonitoring && this._selectedEntity
+      ? this.hass?.states?.[this._selectedEntity]
+      : null;
+    const isActiveCook = monitorState && monitorState.state !== 'idle'
+      && monitorState.state !== 'complete' && monitorState.state !== 'unavailable'
+      && monitorState.state !== 'unknown';
+
+    return html`
+      <div class="recipe-cook-header">
+        <div class="recipe-cook-title" style="display:flex;align-items:center;gap:12px;">
+          <div class="recipe-cook-nav-buttons">
+            <button class="recipe-nav-btn" @click=${() => this._closeRecipeFullscreen()}
+              title="${this._t('meater.back_to_recipes')}">←</button>
+            ${isActiveCook ? html`
+              <button class="recipe-nav-btn home-btn"
+                @click=${() => { this._closeRecipeFullscreen(); this._navigateToActiveCook(this._selectedEntity); }}
+                title="${this._t('welcome.active_cook')}">🏠</button>
+            ` : ''}
+          </div>
+          <div>
+            <h2>${this._fullscreenRecipeTitle || this._t('meater.recipe_label')}</h2>
+            ${isActiveCook ? html`
+              <p class="recipe-cook-serving">${this._getStateIcon(monitorState.state)} ${monitorState.state.replace('_', ' ')}</p>
+            ` : ''}
+          </div>
+        </div>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          ${this._recipeFileLoading ? html`
+            <div style="text-align:center;padding:24px;color:var(--secondary-text-color);">⏳ ${this._t('common.loading')}</div>
+          ` : html`
+            <div class="recipe-md-content"
+                 .innerHTML=${this._mdToHtml(this._convertIngredientText(this._getRecipeContent(this._selectedFileRecipe)))}>
+            </div>
+          `}
+        </div>
+      </ha-card>
+
+      ${isActiveCook ? this._renderRecipeFullscreenMonitor(monitorState) : html`
+        ${this._selectedDoneness ? html`
+          <div class="action-container">
+            <ha-button unelevated @click=${() => this._startCookInRecipeFullscreen()}>
+              ${this._t('meater.start_cooking')}${this._customTargetTempC ? ` ${this._convertTemp(this._customTargetTempC)}` : ''}
+            </ha-button>
+          </div>
+        ` : ''}
+      `}
+    `;
+  }
+
+  /**
+   * Compact MEATER cook monitor rendered below the recipe in full-screen mode.
+   * Shows live temperature, progress, ETA, and action buttons.
+   */
+  _renderRecipeFullscreenMonitor(state) {
+    const attrs = state.attributes;
+    const cookState = state.state;
+    const progress = attrs.progress || 0;
+    const currentTemp = attrs.current_temp;
+    const targetTemp = attrs.target_temp_c;
+    const eta = attrs.eta_minutes;
+    const restTimeRemaining = attrs.rest_time_remaining;
+
+    return html`
+      <ha-card style="margin-top:8px;">
+        <div class="card-content">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+            <span style="font-weight:600;font-size:0.95em;">🌡️ ${this._t('meater.active_cook_title') || 'Active Cook'}</span>
+            <span style="font-size:0.82em;color:var(--secondary-text-color);">
+              ${attrs.cut_display || attrs.cut || ''} ${attrs.doneness ? '· ' + attrs.doneness.replace('_', ' ') : ''}
+            </span>
+          </div>
+
+          <div class="temp-display" style="margin-bottom:12px;">
+            <div class="temp-current">
+              <div class="value">${currentTemp !== null && currentTemp !== undefined ? this._convertTemp(currentTemp) : '--'}</div>
+              <div class="label">${this._t('meater.tip_temp')}</div>
+            </div>
+            <div class="temp-target">
+              <div class="value">${targetTemp !== null && targetTemp !== undefined ? this._convertTemp(targetTemp) : '--'}</div>
+              <div class="label">${this._t('common.target')}</div>
+            </div>
+          </div>
+
+          <div class="progress-bar-container" style="margin-bottom:6px;">
+            <div class="progress-bar" style="width:${Math.min(100, progress)}%"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:0.82em;color:var(--secondary-text-color);margin-bottom:12px;">
+            <span>${progress.toFixed(0)}% ${this._t('meater.complete_pct')}</span>
+            ${eta !== null && eta !== undefined && cookState !== 'resting' ? html`
+              <span>${this._t('meater.eta_label')} ${eta} ${this._t('common.minutes_short')}</span>
+            ` : ''}
+            ${cookState === 'resting' && restTimeRemaining !== null && restTimeRemaining !== undefined ? html`
+              <span>${this._t('meater.rest_remaining_label')} ${restTimeRemaining.toFixed(1)} ${this._t('common.minutes_short')}</span>
+            ` : ''}
+          </div>
+
+          <div class="action-buttons">
+            ${cookState === 'goal_reached' ? html`
+              <ha-button unelevated @click=${this._startRest}>${this._t('meater.start_rest_btn')}</ha-button>
+            ` : ''}
+            ${cookState === 'resting' ? html`
+              <ha-button unelevated @click=${this._complete}>${this._t('meater.complete_btn')}</ha-button>
+            ` : ''}
+            <ha-button outlined @click=${this._stopCook}>${this._t('meater.stop_btn')}</ha-button>
+          </div>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  /**
    */
   _getRecipeContent(recipeIndex) {
     if (!this._recipeFileContent) return '';
@@ -31928,6 +32088,7 @@ class KitchenCookingPanel extends LitElement {
         <h2>${this._t('history.previous_cooks_title')}</h2>
         <button class="help-btn" @click=${() => this._openHelp('#11-cook-history')} title="Open User Guide">?</button>
       </div>
+      ${this._renderHistory()}
     `;
   }
 
@@ -32116,7 +32277,7 @@ class KitchenCookingPanel extends LitElement {
       // Set entity and call start_cook service directly with stored parameters
       this._selectedEntity = meaterEntity;
       const serviceData = {
-        cut_id: cook.cut_id,
+        cut_id: String(cook.cut_id),
         doneness: cook.doneness,
         cooking_method: cook.cooking_method,
         data_source: cook.data_source || this._dataSource,
@@ -33537,11 +33698,6 @@ class KitchenCookingPanel extends LitElement {
 
   _renderHistory() {
     return html`
-      <div class="status-banner idle">
-        <h2>${this._t('history.cook_history_title')}</h2>
-        <p>${this._t('history.cook_history_subtitle')}</p>
-      </div>
-      
       ${this._cookHistory.length === 0 ? html`
         <ha-card>
           <div class="card-content">
@@ -33549,40 +33705,7 @@ class KitchenCookingPanel extends LitElement {
           </div>
         </ha-card>
       ` : html`
-        ${this._cookHistory.map(cook => html`
-          <ha-card class="history-card clickable" @click=${() => {
-            this._selectedCookForDetail = cook;
-            this.requestUpdate();
-          }}>
-            <div class="card-content">
-              <div class="history-header">
-                <h3>${cook.cut_display || cook.cut}</h3>
-                <span class="history-date">${this._formatDateTime(cook.completed_at)}</span>
-              </div>
-              <div class="history-details">
-                <span class="history-detail">🥩 ${cook.protein}</span>
-                <span class="history-detail">🎯 ${(cook.doneness || '').replace('_', ' ')}</span>
-                <span class="history-detail">🍳 ${(cook.cooking_method || '').replace(/_/g, ' ')}</span>
-                <span class="history-detail">🌡️ ${cook.target_temp_c}°C ${this._t('meater.target_label')}</span>
-                ${cook.peak_temp_c ? html`<span class="history-detail">📈 ${Math.round(cook.peak_temp_c)}°C ${this._t('meater.peak_label')}</span>` : ''}
-                ${cook.final_temp_after_rest ? html`<span class="history-detail">✅ ${Math.round(cook.final_temp_after_rest)}°C ${this._t('meater.after_rest_label')}</span>` : 
-                  cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C ${this._t('meater.final_label')}</span>` : ''}
-              </div>
-              ${cook.notes ? html`
-                <div class="history-notes">
-                  <strong>📝 Notes:</strong> ${cook.notes}
-                </div>
-              ` : ''}
-              <div class="history-actions" @click=${(e) => e.stopPropagation()}>
-                <button class="small-btn" @click=${() => {
-                  const notes = prompt(this._t('history.update_notes_prompt'), cook.notes || '');
-                  if (notes !== null) this._updateCookNotes(cook.id, notes);
-                }}>${this._t('history.edit_notes')}</button>
-                <button class="small-btn danger" @click=${() => this._deleteCook(cook.id)}>${this._t('history.delete_btn')}</button>
-              </div>
-            </div>
-          </ha-card>
-        `)}
+        ${this._cookHistory.map(cook => this._renderHistoryCard(cook))}
       `}
     `;
   }
@@ -36504,8 +36627,71 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "362";
+const PANEL_VERSION = "367";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
 }
+
+// ─── Module-level blank-screen recovery ───────────────────────────────────────
+// Root cause (identified from HA's partial-panel-resolver.ts + ha-panel-custom.ts):
+//
+//   HA's "suspendWhenHidden" feature: after the browser tab is hidden for 5
+//   minutes, partial-panel-resolver REMOVES ha-panel-custom from the DOM.
+//   ha-panel-custom.disconnectedCallback() then calls _cleanupPanel() which
+//   destroys our kitchen-cooking-card child and clears its _setProperties ref.
+//
+//   When the user returns, partial-panel-resolver re-appends the same
+//   ha-panel-custom element (connectedCallback fires).
+//
+//   • Newer HA (2024.x+): connectedCallback has a guard that detects the missing
+//     child and calls _createPanel() → our element is asynchronously recreated.
+//   • Older HA: connectedCallback does NOT have this guard → ha-panel-custom is
+//     back in the DOM but permanently empty → persistent blank screen.
+//
+//   The in-element visibilitychange / focus handlers wired in connectedCallback()
+//   are REMOVED during disconnectedCallback(), so they cannot help here: our
+//   element has already been destroyed before the user returns to the tab.
+//
+// Fix:
+//   A module-level recovery function that is never garbage-collected as long as
+//   the module is loaded.  When the tab becomes visible we check whether
+//   ha-panel-custom is alive but empty, and if so call
+//   haPanel.requestUpdate('panel', null).  This makes ha-panel-custom.update()
+//   see changedProps.has('panel') with oldValue=null ≠ actual panel, causing it
+//   to call _createPanel() which recreates our element.
+//
+// Safe on all HA versions:
+//   • New HA: our element is already present within ~50 ms of connectedCallback;
+//     the 500 ms delay means the check finds it → no action taken.
+//   • Old HA: element absent after 500 ms → recovery fires once → blank resolved.
+// ─────────────────────────────────────────────────────────────────────────────
+
+// _kceHaPanelParent is updated by connectedCallback() each time an instance
+// attaches, so it always points to the most recent ha-panel-custom parent.
+let _kceHaPanelParent = null;
+
+function _kceRecoverPanel() {
+  const haPanel = _kceHaPanelParent;
+  if (!haPanel || !haPanel.isConnected) return;
+  if (haPanel.querySelector('kitchen-cooking-card')) return; // already present
+  // ha-panel-custom is connected but missing our element — trigger _createPanel().
+  if (typeof haPanel.requestUpdate === 'function') {
+    haPanel.requestUpdate('panel', null);
+  }
+}
+
+// visibilitychange: main trigger for "tab returns after 5-min suspension".
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    // 500 ms lets HA's own connectedCallback / _createPanel async chain run first;
+    // recovery only fires when that chain was absent (older HA).
+    setTimeout(_kceRecoverPanel, 500);
+  }
+});
+
+// window focus: belt-and-suspenders for mobile browsers / OS window switching
+// where visibilitychange may not fire reliably when the app comes to foreground.
+window.addEventListener('focus', () => setTimeout(_kceRecoverPanel, 500));
+
+// ─── End module-level blank-screen recovery ───────────────────────────────────
