@@ -26,9 +26,13 @@ Full installation, configuration, and feature documentation:
 
 ## 📊 Current Status
 
-**v0.7.0.16** — Development release (April 2026)
+**v0.7.0.17** — Development release (April 2026)
 
 Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.7.0.17 Changes — Fix: cook history shows all cook types + restart cut_id crash (April 2026)
+- ✅ **Fix: cook history shows all cook types** — `_renderHistory()` used a hardcoded MEATER-only template (`cook.cut`, `cook.protein`, `cook.target_temp_c`); recipe and Ninja cooks have none of those fields, so their cards rendered as invisible zero-height elements. Now delegates to `_renderHistoryCard(cook)`, which handles all cook types via `recipe_name || cut_display || cut`.
+- ✅ **Fix: restart crash with old MEATER cooks** — `_restartCook()` passed `cut_id` directly to the `start_cook` service; the service schema requires `str`, but cooks saved before the slug migration stored `cut_id` as an integer. Now always coerces with `String(cook.cut_id)`, safe for both old integer records and new string slugs.
 
 ### v0.7.0.16 Changes — Fix: Tidigare tillagningar always empty + atomic history write (April 2026)
 - ✅ **Fix: Tidigare tillagningar (Previous Cooks) always empty** — `_renderPreviousCooksPath()` only rendered the path-header and stopped; never called `_renderHistory()`. Data was never corrupted — it just was never displayed.
