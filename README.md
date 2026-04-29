@@ -14,8 +14,8 @@ A local-first, AI-assisted kitchen cooking system for Home Assistant that helps 
 Full installation, configuration, and feature documentation:
 **[→ docs/USER_GUIDE.md](docs/USER_GUIDE.md)**
 
-- **Get started with your wireless probe:** [docs/USER_GUIDE.md — Temperature Probe setup](docs/USER_GUIDE.md#31-temperature-probe)
-- **Get started with your other kitchen appliance:** [docs/USER_GUIDE.md — Adding Appliances](docs/USER_GUIDE.md#3-adding-appliances-first-time-setup)
+- **Get started with your wireless probe:** [docs/GETTING_STARTED_MEATER.md](docs/GETTING_STARTED_MEATER.md)
+- **Get started with your other kitchen appliance:** [docs/GETTING_STARTED_AI_RECIPE.md](docs/GETTING_STARTED_AI_RECIPE.md)
 
 ## 🎯 Project Vision
 
