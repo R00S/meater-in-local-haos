@@ -151,6 +151,9 @@ class KitchenCookingPanel extends LitElement {
       _selectedResearchMethod: { type: String },
       // Which recipe index is open in the single-recipe view
       _selectedFileRecipe: { type: Number },
+      // Full-screen recipe viewer (MEATER path)
+      _fullscreenRecipeMode: { type: Boolean },
+      _fullscreenRecipeTitle: { type: String },
 
     };
   }
@@ -281,6 +284,8 @@ class KitchenCookingPanel extends LitElement {
     this._recipeFileLoading = false;
     this._selectedResearchMethod = null;
     this._selectedFileRecipe = null;
+    this._fullscreenRecipeMode = false;
+    this._fullscreenRecipeTitle = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -2958,6 +2963,11 @@ class KitchenCookingPanel extends LitElement {
       return this._renderRecipeCookFlow();
     }
 
+    // Full-screen recipe viewer (MEATER path)
+    if (this._fullscreenRecipeMode) {
+      return this._renderRecipeFullscreen();
+    }
+
     // If user explicitly navigated to view a specific active cook, show it
     if (this._currentPath === 'active_cook' && this._selectedEntity) {
       const activeState = this.hass.states[this._selectedEntity];
@@ -4380,7 +4390,7 @@ class KitchenCookingPanel extends LitElement {
                   ${titles && titles.length > 0 && (!isOpen || this._selectedFileRecipe === null) ? html`
                     <div style="display:flex;flex-direction:column;gap:6px;">
                       ${titles.map((title, i) => html`
-                        <button @click=${() => this._openRecipeFile(url, i)} style="${recipeBtnStyle}">
+                        <button @click=${() => this._openRecipeFullscreen(url, i, title)} style="${recipeBtnStyle}">
                           📄 ${title}
                         </button>
                       `)}
@@ -4591,8 +4601,76 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Extract recipe block at recipeIndex (0-based) from the cached file content.
-   * Files use '### N.' headings for individual recipes; a plain split on '\n### '
+   * Open a recipe in full-screen viewer mode (MEATER path).
+   * Fetches the file (reuses cache if already loaded), then switches to fullscreen.
+   */
+  async _openRecipeFullscreen(url, recipeIndex, title) {
+    this._fullscreenRecipeTitle = title || '';
+    this._selectedFileRecipe = recipeIndex;
+    if (this._recipeFileUrl !== url || !this._recipeFileContent) {
+      this._recipeFileUrl = url;
+      this._recipeFileLoading = true;
+      this._recipeFileContent = null;
+      this._fullscreenRecipeMode = true;
+      this.requestUpdate();
+      try {
+        const resp = await fetch(url);
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const text = await resp.text();
+        const headerEnd = text.indexOf('-->');
+        this._recipeFileContent = headerEnd >= 0 ? text.slice(headerEnd + 3).trimStart() : text;
+      } catch (e) {
+        this._recipeFileContent = `_Could not load file: ${e.message}_`;
+      }
+      this._recipeFileLoading = false;
+    } else {
+      this._fullscreenRecipeMode = true;
+    }
+    this.requestUpdate();
+  }
+
+  /**
+   * Close the full-screen recipe viewer and return to the previous view.
+   */
+  _closeRecipeFullscreen() {
+    this._fullscreenRecipeMode = false;
+    this._fullscreenRecipeTitle = null;
+    this._selectedFileRecipe = null;
+    this.requestUpdate();
+  }
+
+  /**
+   * Render the full-screen recipe viewer (MEATER path).
+   * Uses the same header style as the AI recipe cook flow.
+   */
+  _renderRecipeFullscreen() {
+    return html`
+      <div class="recipe-cook-header">
+        <div class="recipe-cook-title" style="display:flex;align-items:center;gap:12px;">
+          <div class="recipe-cook-nav-buttons">
+            <button class="recipe-nav-btn" @click=${() => this._closeRecipeFullscreen()}
+              title="${this._t('meater.back_to_recipes')}">←</button>
+          </div>
+          <div>
+            <h2>${this._fullscreenRecipeTitle || this._t('meater.recipe_label')}</h2>
+          </div>
+        </div>
+      </div>
+      <ha-card>
+        <div class="card-content">
+          ${this._recipeFileLoading ? html`
+            <div style="text-align:center;padding:24px;color:var(--secondary-text-color);">⏳ ${this._t('common.loading')}</div>
+          ` : html`
+            <div class="recipe-md-content"
+                 .innerHTML=${this._mdToHtml(this._convertIngredientText(this._getRecipeContent(this._selectedFileRecipe)))}>
+            </div>
+          `}
+        </div>
+      </ha-card>
+    `;
+  }
+
+  /**
    * isolates each block without any regex.
    */
   _getRecipeContent(recipeIndex) {
