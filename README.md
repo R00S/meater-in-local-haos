@@ -184,6 +184,7 @@ KCE's temperature-probe cook path works with **any** Home Assistant sensor entit
 | **Rubicson / ToGrill-compatible OEM devices** | [ToGrill](https://www.home-assistant.io/integrations/togrill/) (Local BLE) | `sensor.*_temperature` | ❌ | ✅ `sensor.*_battery` | Covers many cheap rebrand BBQ probes |
 | **Govee H5191 / 5181–5198** | [Govee BLE](https://www.home-assistant.io/integrations/govee_ble/) (Local BLE) | `sensor.*_probe_N_temperature` | ❌ | ✅ | Multi-probe wired units |
 | **ThermoWorks Smoke** | [ThermoWorks Smoke](https://www.home-assistant.io/integrations/thermoworks_smoke/) (WiFi Gateway) | `sensor.*_probe_1/2` (**°F only**) | ❌ | ❌ | Set KCE measurement unit to US (°F) |
+| **ThermoPro TempSpike (TP960 / TP962 / TP970)** | [ThermoPro](https://www.home-assistant.io/integrations/thermopro/) (Local BLE) | `sensor.*_temperature` — check HA device page after discovery | ❌ | ✅ | Auto-discovered once Bluetooth integration is enabled; no extra installs |
 
 ### HACS integrations
 

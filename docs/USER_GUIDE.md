@@ -146,6 +146,7 @@ Select **Temperature Probe** when you have any wireless meat thermometer whose s
 | **Rubicson / ToGrill OEM rebrands** | [ToGrill](https://www.home-assistant.io/integrations/togrill/) integration (local BLE) | `sensor.*_temperature` | ❌ | ✅ `sensor.*_battery` |
 | **Govee H5191 / 5181–5198** | [Govee BLE](https://www.home-assistant.io/integrations/govee_ble/) integration (local BLE) | `sensor.*_probe_N_temperature` | ❌ | ✅ |
 | **ThermoWorks Smoke** | [ThermoWorks Smoke](https://www.home-assistant.io/integrations/thermoworks_smoke/) (WiFi, °F only) | `sensor.*_probe_1/2` | ❌ | ❌ |
+| **ThermoPro TempSpike (TP960 / TP962 / TP970)** | [ThermoPro](https://www.home-assistant.io/integrations/thermopro/) integration (local BLE) | `sensor.*_temperature` — check HA device page after discovery | ❌ | ✅ |
 | **Combustion Inc** | [homeassistant-combustion](https://github.com/legrego/homeassistant-combustion) HACS (local BLE) | `sensor.*_core_temperature` | `sensor.*_ambient_temperature` | ❌ binary |
 | **iGrill / Weber Pulse** | [esphome-igrill](https://github.com/bendikwa/esphome-igrill) via ESP32 | `sensor.*_temp_probe_1` … `_4` | ❌ | ✅ `sensor.*_battery` |
 | **Unbranded / generic BLE probes** | ESPHome `ble_client` via ESP32 | Custom sensor name | Custom sensor name | Optional |
