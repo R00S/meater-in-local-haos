@@ -14,7 +14,7 @@ carryover_temp_c: 2
 
 ## Cut profile
 
-Lamb brisket (also called lamb breast, especially in UK/European usage) comes from the belly of the lamb — the same anatomical position as pork belly. It consists of layered intercostal muscles, rib bones, and significant deposits of intramuscular fat held together by dense connective tissue. Because the breast muscles are used constantly for breathing, they are tough, chewy, and collagen-rich — the exact qualities that reward low-and-slow moist cooking. At 85–93°C the collagen converts to gelatin, the fat renders, and the meat becomes fork-tender or pull-apart. Carryover cooking is significant (4–6°C) owing to the high fat content, so the meat will continue to rise after being pulled from heat. Sold boneless/rolled or bone-in; both forms braise equally well.
+Braising is the defining cooking method for lamb brisket — it is the only technique that consistently converts the dense collagen of this cut into gelatin. The breast's layered intercostal muscles, rib bones, and high fat content respond well to moist heat: liquid keeps the surface temperature at 95–100°C, preventing the surface from drying while the interior climbs to 85–93°C over 2–3 hours. Bone-in breasts hold their shape through the braise and release marrow into the liquid. Boneless rolled breasts are more suited to oven-braise (covered casserole or foil-sealed dish with a shallow pool of wine or stock). The fat cap bastes the meat throughout cooking and should not be trimmed before braising. Carryover after removing from the braising liquid is minimal (1–2°C), unlike dry methods.
 
 ## Styckesprofil
 

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 29 Apr 2026, 08:40 CET
+ * AUTO-GENERATED: 29 Apr 2026, 09:16 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 29 Apr 2026, 08:40 CET
+// Last generated: 29 Apr 2026, 09:16 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -11963,7 +11963,7 @@ const CUT_METHOD_PROFILES = {
     "grill_sv": "Grillning är den enda traditionella metoden för köfte — det är en strikt eldsbaserad beredning i alla traditioner som skapade den. Hög direkt värme (kol föredraget) förkolnar utsidan på 3–4 minuter per sida, smälter ned fettet och skapar den karakteristiska rökhaltiga kolskorpan.\n\nDet enda säkra sättet att verifiera genomkokning är med sond. Innertemperatur: **72–75 °C (162–167 °F)** för malet lamm. Eftertillagning: 2–3 °C. Sond insatt längsvis från änden in till mitten av köfte-spettet. Vila 3–5 minuter täckt."
   },
   "lamb_brisket": {
-    "braise": "Lamb brisket (also called lamb breast, especially in UK/European usage) comes from the belly of the lamb — the same anatomical position as pork belly. It consists of layered intercostal muscles, rib bones, and significant deposits of intramuscular fat held together by dense connective tissue. Because the breast muscles are used constantly for breathing, they are tough, chewy, and collagen-rich — the exact qualities that reward low-and-slow moist cooking. At 85–93°C the collagen converts to gelatin, the fat renders, and the meat becomes fork-tender or pull-apart. Carryover cooking is significant (4–6°C) owing to the high fat content, so the meat will continue to rise after being pulled from heat. Sold boneless/rolled or bone-in; both forms braise equally well.",
+    "braise": "Braising is the defining cooking method for lamb brisket — it is the only technique that consistently converts the dense collagen of this cut into gelatin. The breast's layered intercostal muscles, rib bones, and high fat content respond well to moist heat: liquid keeps the surface temperature at 95–100°C, preventing the surface from drying while the interior climbs to 85–93°C over 2–3 hours. Bone-in breasts hold their shape through the braise and release marrow into the liquid. Boneless rolled breasts are more suited to oven-braise (covered casserole or foil-sealed dish with a shallow pool of wine or stock). The fat cap bastes the meat throughout cooking and should not be trimmed before braising. Carryover after removing from the braising liquid is minimal (1–2°C), unlike dry methods.",
     "braise_sv": "Lammbrisket (UK: *lamb breast*) är lammets mage — anatomiskt ekvivalent med fläskbuk. Det består av skiktade interkostalsmuskler, revbensben och substansiella intramuskulära och yttre fettdepåer bundna av tät bindväv. Magemusklerna arbetar konstant vid andning.\n\nFör att nå ätbar konsistens kräver lammbrisket låg-och-långsam tillagning: bräsering (160–170 °C, 2–3 timmar täckt), ugnsrostning (150 °C, 3–4 timmar). Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet-möra resultat. Eftertillagning: försumbar (braiseringsvätska). Sond in i tjockaste köttmassan, borta från revbenslben."
   },
   "lamb_loin_roast": {
@@ -18192,6 +18192,7 @@ const EXP_TREE = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
+                  "oven_roast",
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
@@ -30078,7 +30079,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "368";
+const PANEL_VERSION = "369";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
