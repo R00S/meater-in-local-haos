@@ -7,7 +7,7 @@
 
 A free, local-first, optionally AI-assisted, kitchen cooking system for Home Assistant that helps you plan, prepare, and cook meals using your ingredients, equipment, time constraints and recipes. 
 
-For users of wireless temperature probes, like MEATER, INKBIRD etc, we provide an extensive tree of cuts and cooking methods ranging from meat and game to fish and veg. To that, we add knowledge and descriptions of how different meats and cuts behave and classic recipes for you to try or just read out of pure interest.
+For users of wireless temperature probes, like MEATER, INKBIRD etc, KCE provide an extensive tree of cuts and cooking methods ranging from meat and game to fish and veg. To that, we add knowledge and descriptions of how different meats and cuts behave and classic recipes for you to try or just read out of pure interest.
 
 This is a stable mid dev release — Core cooking engine, AI recipe builder, MEATER probe integration, ingredient tracking and cook history are all working. Phase 9 is polishing multilingual support, measurement conversion and mobile layout. Phase 10 will add shelf intelligence: recipe scanning from photos/URLs, shelf population from receipts and barcodes, and optional sync with Grocy/Mealie/HA shopping lists.
 
