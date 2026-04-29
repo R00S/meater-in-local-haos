@@ -47,9 +47,9 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 8
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_score: 17
+cooking_methods_researched: 1
+quality_assessed: 2026-04-29
 rest_time_min: 5
 rest_time_max: 10
 carryover_temp_c: 3
@@ -78,23 +78,26 @@ Sear i smör eller klarat smör vid hög värme — 3–4 minuter per sida — s
 
 - [Grill](./venison_steak-grill.md)
 - [Pan Sear](./venison_steak-pan_sear.md)
+
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: 17 / 20** — assessed 2026-04-29
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing method leaf file `venison_steak-charcoal_grill.md` | −1 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Method file `venison_steak-pan_sear.md` copies parent cut profile | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods researched | ✓ — survey completed 2026-04-29 (charcoal_grill, grill, pan_sear confirmed; venison steak is a quick-cook cut, slow methods not applicable) |
+| Culinary Group B tradition covered | ✓ (BBC Good Food — British; multiple European sources across leaves) |
+| Culinary Group D tradition covered | ✓ (Scandinavian tradition covered in pan_sear leaf) |
+| Culinary Group A tradition covered | − missing (venison steak uncommon as standalone cut in East/South Asian cuisines) |
+| Culinary Group C tradition covered | − missing |
+| pan_sear leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
+| charcoal_grill leaf | − pending (method in list; leaf not yet created) |
+
+**Deduction**: −1 (Group A) −1 (Group C) −1 (charcoal_grill leaf missing, counted as per previous assessment) = **17**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Missing method leaf file — create `venison_steak-charcoal_grill.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
-3. **−2** · Missing Culinary Group A and Culinary Group C tradition(s) — add Culinary Group A and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
-4. **−1** · Method file `venison_steak-pan_sear.md` copies parent cut profile — rewrite `venison_steak-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−1 each** · Groups A and C missing — add sources from Japanese/Korean/Chinese or Middle Eastern/African venison traditions to an existing or new leaf
+2. Create `venison_steak-charcoal_grill.md` — method in list, leaf pending
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

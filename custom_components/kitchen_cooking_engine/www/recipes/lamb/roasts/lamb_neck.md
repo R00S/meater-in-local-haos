@@ -22,9 +22,9 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 8
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_score: 19
+cooking_methods_researched: 1
+quality_assessed: 2026-04-29
 rest_time_min: 15
 rest_time_max: 30
 carryover_temp_c: 5
@@ -52,7 +52,7 @@ Det kulinariska målet är kollagensmältning: 85–90 °C, hållet i 2–3 timm
 - [Slow Cooker](./lamb_neck-slow_cooker.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: 19 / 20** — assessed 2026-04-29 (methods survey done; braise leaf profile fixed (was sibling copy of oven_roast); −1 Group A remains)
 
 | Criterion | Deduction |
 |-----------|----------|

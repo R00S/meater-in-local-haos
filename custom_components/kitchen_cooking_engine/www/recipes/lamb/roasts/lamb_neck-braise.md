@@ -25,15 +25,13 @@ carryover_temp_c: 2
 
 ## Cut profile
 
-Lamb neck (Lammhals / collo di agnello / kuzu gerdan / lammehals) is one of the most underappreciated braising cuts. It is richly marbled, heavily worked, and packed with connective tissue and deep flavour. Cut into cross-sections or braised as a whole neck, it softens magnificently over 1.5–2.5 hours of moist heat, yielding deeply tender, self-basting meat in a rich, unctuous braising liquid. The neck is used in braises throughout Turkish, Italian, German, Greek, and Scandinavian traditions. A MEATER probe is inserted into the thickest cross-section of neck meat, away from the vertebrae, to track internal temperature.
+Braising lamb neck on the stovetop or in a low oven transforms one of the most collagen-rich cuts into deeply flavoured, gelatinous, falling-tender meat in an unctuous sauce. The process has three stages: first, hard-brown the neck sections in oil to build fond; deglaze with wine, stock, or tomatoes to pick up the fond into the braising liquid; then simmer covered at 160–170 °C (oven) or at a bare simmer (stovetop) for 1.5–2.5 hours until the internal temperature reaches and holds at 85–90 °C. At that temperature, collagen fully converts to gelatin — the neck slices will not pull from the bone by temperature alone; they need time at temperature. The braising liquid, which contains extracted gelatin and fat, concentrates into a naturally thickened sauce as it reduces. MEATER probe inserted into the thickest cross-section of neck meat, away from the vertebrae.
 
 Target internal temperature: **85–90 °C (185–194 °F)** for full braised tenderness.
 
 ## Styckesprofil
 
-Lammhals (*Lammhals* / *collo di agnello* / *kuzu gerdan* / *lammehals*) är ett av de mest underskattade braiseringsnittten. Det är rikt marmerat, hårt arbetat och packat med bindväv och djup smak. Skuret i tvärsnitt eller bräserat hel, mjuknar det magnifikt under 1,5–2,5 timmars skonsam bräsering.
-
-Täckt i ugn (160–170 °C) eller spissimmer i 1,5–2,5 timmar. Innertemperatur: **85–90 °C (185–194 °F)** för fall-från-benet-möra resultat. Eftertillagning: försumbar. Sond in i tjockaste köttmassan, borta från halskotor.
+Bräsering av lammhals på spis eller i låg ugn omvandlar ett av de mest kollagenrika snitten till djupt smakrika, gelatinösa, möra skivor i en unctuous sås. Processen: bryn halsbitarna hårt i olja, deglasera med vin/buljong/tomat, sjud sedan täckt i 160–170 °C ugn eller på spis i 1,5–2,5 timmar. Innertemperatur: **85–90 °C (185–194 °F)** för fall-från-benet-resultat — tid vid temperatur är lika viktigt som temperaturen i sig. Sond in i tjockaste köttmassan, borta från halskotor.
 
 ## Source recipes
 

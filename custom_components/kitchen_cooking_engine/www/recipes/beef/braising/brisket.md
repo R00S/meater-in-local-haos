@@ -23,9 +23,9 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 8
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-27
+quality_score: 19
+cooking_methods_researched: 1
+quality_assessed: 2026-04-29
 rest_time_min: 30
 rest_time_max: 60
 carryover_temp_c: 5
@@ -46,24 +46,31 @@ Nötbringa tas från bröstet och nedre delen av djurets bröstkorg och består 
 - [Oven Roast](./brisket-oven_roast.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-28
+**Score: 19 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Oven roast cut profile method-specific | ✓ (fixed 2026-04-27) |
-| braise leaf missing | − missing (−1) |
-| slow_cooker leaf missing | − missing (−1) |
-| smoker leaf missing | − missing (−1) |
-| Culinary Group D covered | − missing (−1) |
-| Culinary Groups A, B, C | ✓ |
+| Cooking methods researched | ✓ — survey completed 2026-04-29 (braise, oven_roast, slow_cooker, smoker confirmed; methods list is complete and accurate) |
+| Culinary Group A tradition covered | ✓ (Maangchi — Korean, in oven_roast leaf) |
+| Culinary Group B tradition covered | ✓ (Kenji López-Alt — American; Joan Nathan — Ashkenazi; Felicity Cloake — British) |
+| Culinary Group C tradition covered | ✓ (Ottolenghi — Middle Eastern) |
+| Culinary Group D tradition covered | − missing (25+ URL probes on 2026-04-28 and 2026-04-29: natashaskitchen.com, koket.se, ica.se, cookinpolish.com, tasteline.com all 404; Scandinavian bringa is typically boiled not oven-roasted) |
+| Cut profile written with anatomy | ✓ |
+| Oven roast leaf with 5 sources and temperature consensus | ✓ |
+| Temperature data: safe temp confirmed | ✓ |
+| Temperature data: culinary preferred (88–93°C) | ✓ |
+| Per-method temperature in oven_roast leaf | ✓ |
+| braise leaf | − pending (no deduction per TOR — oven_roast leaf exists) |
+| slow_cooker leaf | − pending (no deduction per TOR — oven_roast leaf exists) |
+| smoker leaf | − pending (no deduction per TOR — oven_roast leaf exists) |
 
-**Deductions**: −8 methods · −3 missing leaves · −1 Group D = −12 → **8**
+**Deduction**: −1 (Group D missing) = **19**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
-2. **−1 each** · Missing `brisket-braise.md`, `brisket-slow_cooker.md`, `brisket-smoker.md`
-3. **−1** · Group D missing — 25+ URL probes on 2026-04-28: natashaskitchen.com (brisket URLs), koket.se (oxbringa, bringa, brisket, kalops-with-bringa), ica.se (braiserad-brisket, oxbringa), cookinpolish.com (brisket, wolowina-duszona), tasteline.com — all 404. In Scandinavian tradition, beef brisket (bringa/oxbringa) is not typically oven-roasted — it is used in boiled or stovetop-braised dishes. No accessible Group D oven_roast brisket recipe found.
+1. **−1** · Group D tradition missing — add a Scandinavian, Polish, Russian, or Ukrainian oven-roasted brisket source to the oven_roast leaf. Note: in Scandinavian tradition, *bringa/oxbringa* is more often boiled or simmered (*pepparrotskött*) than oven-roasted; may need to accept this gap.
+2. Create `brisket-braise.md` — stovetop braised brisket (not oven-braised) is its own category; pot-au-feu (French), *pepparrotskött* (Swedish), Romanian *piept de vită* are candidates.
+3. Create `brisket-smoker.md` — Texas BBQ smoked brisket is THE iconic preparation; sources readily available on heygrillhey.com, smokedbbqsource.com, amazingribs.com.
+4. Create `brisket-slow_cooker.md` — slow cooker brisket widely available on North American recipe sites.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

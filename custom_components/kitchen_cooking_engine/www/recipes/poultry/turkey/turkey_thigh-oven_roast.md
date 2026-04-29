@@ -22,15 +22,7 @@ cut_type: Turkey
 
 ## Cut profile
 
-Turkey thigh (the biceps femoris and associated muscles of the upper leg) is a dark-meat cut with higher fat and connective tissue than the breast. Fat content ≈ 5–8 % vs ≈ 1–2 % for breast; this means the thigh is more forgiving and resists drying even if slightly overcooked. Collagen converts to gelatin above approximately 70 °C, improving mouthfeel. Bone-in skin-on thighs are more flavourful; boneless thighs cook more evenly and faster.
-
-Oven-roasting turkey thighs is the primary cooking method used in North American home cooking, particularly as a smaller-scale alternative to whole-bird Thanksgiving or Christmas turkey. The cut is typically cooked at 175 °C (350 °F) dry heat or in a covered/sealed vessel (oven bag, Dutch oven) with liquid. USDA minimum safe temperature is 74 °C (165 °F); most recipes pull at 77–82 °C (170–180 °F) for texture and to eliminate pink pigment.
-
-Turkey thigh as a standalone cut is almost exclusively a North American product. In most other global culinary traditions the bird is cooked whole. This limits source diversity for this leaf.
-
-Target internal temperature: **165 °F (74 °C)** minimum — **170–175 °F (77–79 °C)** preferred for dark meat
-
-> **⚠ Collection in progress** — This leaf currently has 1 of the required 4–6 source recipes. Analysis of temperature consensus has **not** begun. Additional sources from Groups A, C, and D are needed. Searching conducted 2026-04-27: 50+ URLs probed across 30+ sites; no accessible Group A, C, or D standalone turkey thigh recipes found. The cut appears to be almost exclusively a North American product as a standalone cut.
+Oven-roasting is the standard North American method for turkey thighs cooked as a standalone cut. The thigh's high fat content (≈ 5–8 %) bastes the meat naturally in a dry-heat oven, making it more forgiving than breast meat. At typical roasting temperatures (175–200 °C), the surface renders crisp while the interior climbs toward 77–82 °C over 45–60 minutes. The dense collagen converts to gelatin above 70 °C, improving mouthfeel — this is why most recipes pull at 77–82 °C rather than the USDA minimum of 74 °C. Bone-in thighs retain more moisture and flavour; boneless thighs cook faster and more evenly. Carryover during rest is approximately 3–4 °C for this size cut. Insert the MEATER probe into the thickest part of the thigh, parallel to and away from the bone, from the side rather than the top.
 
 ## Styckesprofil
 

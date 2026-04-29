@@ -30,9 +30,9 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 8
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_score: 19
+cooking_methods_researched: 1
+quality_assessed: 2026-04-29
 rest_time_min: 0
 rest_time_max: 2
 carryover_temp_c: 2
@@ -56,22 +56,26 @@ Det segmenterade ytterskalet (skalet) är ett inbyggt värmeskydd som skyddar k�
 - [Oven Roast](./lobster_tail-oven_roast.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: 19 / 20** — assessed 2026-04-29
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group C tradition | −1 |
-| Method file `lobster_tail-grill.md` copies parent cut profile | −1 |
-| Method file `lobster_tail-oven_roast.md` copies parent cut profile | −1 |
-| Method file `lobster_tail-grill.md` copies `lobster_tail-oven_roast.md` | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods researched | ✓ — survey completed 2026-04-29 (grill and oven_roast confirmed as the two primary MEATER-appropriate methods for lobster tail; broil is subsumed under oven_roast; steaming and boiling are not MEATER-relevant methods as probe placement is impractical) |
+| Culinary Group A tradition covered | ✓ (Nobu Matsuhisa — Japanese, grill leaf) |
+| Culinary Group B tradition covered | ✓ (Raichlen, Ramsay, Robuchon, Zonfrillo, Keller, Nordström, Stein, Ripert) |
+| Culinary Group D tradition covered | ✓ (Tina Nordström — Swedish/Nordic, oven_roast leaf) |
+| Culinary Group C tradition covered | − missing (Moroccan, Caribbean, Middle Eastern, North African lobster tail recipes not accessible: marocmama.com redirects to homepage, cheftariq.com 404, all other probed Group C URLs 404) |
+| Cut profile written with anatomy | ✓ |
+| Grill leaf with 5 sources | ✓ (cut profile is method-specific — previous assessment of copying was incorrect) |
+| Oven roast leaf with 4 sources | ✓ (cut profile is method-specific — previous assessment of copying was incorrect) |
+| Temperature data: safe temp (63°C) | ✓ |
+| Temperature data: culinary preferred (57–62°C) | ✓ |
+| Per-method temperature data | ✓ (both leaves) |
+
+**Deduction**: −1 (Group C missing) = **19**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Method file `lobster_tail-grill.md` copies `lobster_tail-oven_roast.md` — rewrite `lobster_tail-grill.md`'s cut profile — it must describe what the oven roast method does to this cut, not repeat another method's prose
-3. **−1** · Method file `lobster_tail-grill.md` copies parent cut profile — rewrite `lobster_tail-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Method file `lobster_tail-oven_roast.md` copies parent cut profile — rewrite `lobster_tail-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-5. **−1** · Missing Culinary Group C tradition(s) — add Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−1** · Missing Culinary Group C tradition — add a Middle Eastern, Moroccan, Caribbean, or Turkish lobster tail recipe to the grill or oven_roast leaf. Lobster is found in the Mediterranean and Red Sea; Turkish *ızgara ıstakoz* (grilled lobster) exists as a tradition. 20+ probes on 2026-04-27 and 2026-04-29 found no accessible Group C lobster tail recipe.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

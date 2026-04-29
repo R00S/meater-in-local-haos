@@ -22,17 +22,13 @@ cut_type: Roasts
 
 ## Cut profile
 
-Rack of lamb (the rib section with 7–8 French-trimmed rib bones) is one of the most prestigious and visually dramatic roasting cuts in European and North American cooking. A Frenched rack of lamb, coated in a herb crust (persillade or Dijon-breadcrumb), seared in a pan, then roasted in a hot oven 20–25 minutes, is a classic dinner-party centrepiece.
+Oven-roasting a Frenched rack of lamb is a two-stage technique: first sear the fat cap and meat surfaces in a screaming-hot oven-safe pan (2–3 minutes per side), then transfer the rack bone-side down to a 200–220 °C oven for 15–20 minutes to bring the loin muscle to medium-rare. The high oven temperature drives Maillard browning on the already-seared surface while the oven's ambient heat gently finishes the interior. A herb crust (*persillade* — mustard + breadcrumbs + herbs) applied before the oven stage provides an aromatic shell that insulates the top surface slightly, extending the window before it overcooks. Because the loin has minimal connective tissue, there is no benefit from longer, lower cooking — this cut must be treated exactly like a premium steak.
 
-Because the meat is from the loin and has very little connective tissue, rack of lamb must be treated like a premium steak and never overcooked.
-
-Target internal temperature: **52–57 °C (126–135 °F)** for medium-rare (the universal preference). Pull at 50–52 °C.
+MEATER probe inserted through the thick end of the loin muscle (*longissimus dorsi*), running along the length of the rack, away from the rib bones. Pull at 50–52 °C; carryover from a hot oven is 4–6 °C, bringing it to 54–57 °C (medium-rare) after a 5-minute rest.
 
 ## Styckesprofil
 
-Rack of lamb (rev-sektionen med 7–8 frenserade revbensben) är ett av de mest prestigefyllda och visuellt dramatiska rostningsnittten i europeisk och nordamerikansk matlagning. En Frenchad rack of lamb, belagd med en örtkorpa (*persillade* eller Dijon-ströbröd), är ett klassisk elegant middagsstycke.
-
-Standardteknik: sear i het panna, belägg med örtkorpa, rosta i 200–220 °C ugn 15–20 minuter. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare (standard). Eftertillagning: 4–5 °C. Dra vid 52–58 °C. Sond in i loin-muskeln (*longissimus dorsi*) borta från benet. Vila 5–8 minuter täckt.
+Ugnsstekning av frenchad rack of lamb är en tvåstegsmetod: sear fettkappan och köttytorna i het ugnsfast panna (2–3 min per sida), lägg sedan racket bensidan ned i 200–220 °C ugn i 15–20 minuter. En örtkorpa (*persillade* — senap + ströbröd + örter) appliceras innan ugnen för ett aromrikt ytskikt. Innertemperatur: **52–57 °C (126–135 °F)** för medium-rare. Eftertillagning: 4–6 °C. Dra vid 50–52 °C. Sond längs loin-muskeln (*longissimus dorsi*) borta från benet. Vila 5–8 minuter täckt.
 
 ## Source recipes
 

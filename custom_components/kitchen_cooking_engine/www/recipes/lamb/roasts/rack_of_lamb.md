@@ -46,9 +46,9 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 8
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_score: 18
+cooking_methods_researched: 1
+quality_assessed: 2026-04-29
 rest_time_min: 10
 rest_time_max: 15
 carryover_temp_c: 5
@@ -76,7 +76,7 @@ Sear all om i het panna (1–2 minuter per sida), belägg med senap och örtkorp
 - [Oven Roast](./rack_of_lamb-oven_roast.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: 18 / 20** — assessed 2026-04-29 (methods survey done; oven_roast leaf profile fixed; −1 Group A, −1 Group D remain)
 
 | Criterion | Deduction |
 |-----------|----------|

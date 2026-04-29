@@ -1,13 +1,85 @@
 # Alternative Temperature Probes and Open Source Projects Research
 
 **Created:** 2025-11-30  
-**Status:** Research document for exploring alternatives to MEATER BLE Block protocol
+**Updated:** 2026-04-29 — KCE compatibility table added; ThermoPro TempSpike added; no-integration section added (Typhur, MeatStick, Weber Connect Hub, GrillGo, Nod Smart)  
+**Status:** Active reference — hardware research + KCE probe compatibility
 
-Since the MEATER Block protocol analysis has reached an impasse, this document explores alternative approaches, including other temperature probes that may be easier to emulate and open-source projects with similar functionality.
+This document covers:
+1. **KCE Probe Compatibility** — which HA integrations expose sensors that work directly with Kitchen Cooking Engine's "Temperature Probe" appliance type (no code changes required).
+2. **Alternative hardware research** — probe hardware options and open-source projects explored during development.
 
 ---
 
-## Current Situation
+## KCE Probe Compatibility
+
+KCE's "Temperature Probe" appliance type subscribes to up to three plain `sensor.*` entities and reads only `state.state` as a numeric temperature (°C or °F) or battery percentage.  
+**Any HA integration that exposes a numeric temperature sensor is compatible — no device-class requirements, no attributes, no manufacturer-specific conventions.**
+
+### How to configure
+
+When adding a **Temperature Probe** appliance in **Settings → Devices & Services → Kitchen Cooking Engine**, fill in:
+
+| Field | Description |
+|-------|-------------|
+| **Tip Temperature Entity** | Required. Any `sensor.*` whose state is a numeric temperature. |
+| **Ambient Temperature Entity** | Optional. Used for ETA calculation and the temperature graph. |
+| **Battery Level Entity** | Optional. Any `sensor.*` whose state is a numeric percentage. |
+
+### Compatible Home Assistant integrations
+
+#### Built-in HA integrations (zero extra installs)
+
+| Integration | Connection | Tip entity pattern | Ambient entity | Battery entity | Notes |
+|-------------|-----------|-------------------|----------------|----------------|-------|
+| **[MEATER](https://www.home-assistant.io/integrations/meater/)** | Cloud | `sensor.*_internal` (°C) | `sensor.*_ambient` (°C) | ❌ | Requires MEATER Block/app + MEATER Cloud account |
+| **[INKBIRD](https://www.home-assistant.io/integrations/inkbird/)** | Local BLE | `sensor.*_probe_1` … `_probe_N` (°C or °F) | ❌ | ⚠️ model-dependent | IBT-2X, IBT-4XS, IBT-6XS (2/4/6 wired probes) |
+| **[ToGrill](https://www.home-assistant.io/integrations/togrill/)** | Local BLE | `sensor.*_temperature` per probe (°C) | ❌ | ✅ `sensor.*_battery` | Rubicson Pro-05 + many OEM/rebrand devices sharing the ToGrill BLE protocol |
+| **[Govee BLE](https://www.home-assistant.io/integrations/govee_ble/)** | Local BLE | `sensor.*_probe_N_temperature` (°C) | ❌ | ✅ | H5191, 5181–5185, 5198 (multi-probe wired units) |
+| **[ThermoWorks Smoke](https://www.home-assistant.io/integrations/thermoworks_smoke/)** | Cloud (WiFi Gateway) | `sensor.*_probe_1` / `_probe_2` (**°F only**) | ❌ | ❌ | Set KCE Measurement System to US (°F) |
+| **[ThermoPro TempSpike](https://www.home-assistant.io/integrations/thermopro/)** | Local BLE | `sensor.*_temperature` (°C) — check exact name in HA device page after discovery | ❌ | ✅ | TP960, TP962 Twin, TP970 TempSpike Plus; auto-discovered when Bluetooth integration is enabled |
+
+#### HACS integrations
+
+| Integration | Connection | Tip entity pattern | Ambient entity | Battery | Notes |
+|-------------|-----------|-------------------|----------------|---------|-------|
+| **[Combustion Inc](https://github.com/legrego/homeassistant-combustion)** | Local BLE | `sensor.*_core_temperature` (°C) | `sensor.*_ambient_temperature` (°C) | ❌ binary only | 8-sensor predictive probe; open official BLE protocol |
+| **[ha-thermopro-meat](https://github.com/vitalybibikov/ha-thermopro-meat)** | Local BLE | `sensor.*_temperature` — check exact name in HA device page | ❌ | ✅ | Extends ThermoPro built-in to cover TP902, TP920, TP25W, TP904, and other multi-probe wired models not included in the official integration |
+
+#### Via ESPHome (ESP32 required as BLE proxy)
+
+| Integration / Component | Devices | Tip entity pattern | Ambient | Battery | Notes |
+|------------------------|---------|-------------------|---------|---------|-------|
+| **[iGrill / Weber](https://github.com/bendikwa/esphome-igrill)** | iGrill mini, V2, V202, V3; Weber Pulse 1000/2000 | `sensor.*_temp_probe_1` … `_4` (°C or °F) | ❌ | ✅ `sensor.*_battery` | ESP32 bridges the exclusive BLE connection |
+| **Generic BLE probes via ESPHome `ble_client`** | Any BLE probe with a community-reversed protocol | Custom sensor name (°C or °F) | Custom sensor name | Optional | Covers no-name and rebrand units: AT-02, ThermoPro TP904, generic AliExpress BBQ probes, etc. |
+
+### Notes on ToGrill / OEM rebrand devices
+
+The HA `togrill` integration explicitly documents: *"Many ToGrill compatible devices exist from many different vendors."*  
+The ToGrill BLE protocol is used by a large number of cheap BBQ thermometers manufactured in China and sold under many brand names (Rubicson being the confirmed tested device).  
+If you have an unbranded BBQ thermometer that is not discovered by INKBIRD or Govee BLE, try the ToGrill integration — it covers the widest range of OEM rebrand hardware.
+
+### Notes on unbranded / no-name probes
+
+For any BLE probe whose manufacturer's HA integration does not yet exist, the ESPHome `ble_client` route is the fallback:
+1. Flash an ESP32 with an ESPHome firmware that reads your probe's BLE characteristics.
+2. The resulting `sensor.*` entity works identically with KCE.
+3. Community reverse-engineering projects exist for many popular cheap BBQ probes (AT-02, ThermoPro TP904, and various AliExpress-sold units).
+
+### Probes without a Home Assistant integration
+
+The following brands are commonly searched for but have **no HA integration** as of April 2026. They cannot be used with KCE.
+
+| Brand | Status | Notes |
+|-------|--------|-------|
+| **Typhur Sync** | ❌ No integration | Manufacturer actively blocked community reverse-engineering projects and has stated no plans to open their API. No HACS component exists. The only partial workaround (Android Tasker → MQTT) is unsupported and not suitable for normal use. |
+| **MeatStick (V)** | ❌ No integration | Manufacturer announced HA integration is in development but nothing has been released as of April 2026. |
+| **Weber Connect Smart Grilling Hub** | ❌ No integration | Cloud-only with encrypted traffic, no local API. *(Note: Weber iGrill and Weber Pulse are supported via ESPHome — see table above. The Connect Hub is a different product line.)* |
+| **GrillGo** | ❌ No integration found | No HA integration or community component found. If your GrillGo/GrillBot exposes a `sensor.*` entity via another route (MQTT, ESPHome), it would work with KCE — but no direct integration is known. |
+| **Nod Smart** | ❌ No integration found | No HA integration or community component found. |
+
+---
+
+## Current Situation (original research context)
 
 > **Important:** MEATER+ temperature data is already flowing into Home Assistant via BLE client. The hardware integration works. What's missing is the **MEATER app functionality** - guided cooking features, protein presets, doneness levels, cooking methods, and notifications.
 

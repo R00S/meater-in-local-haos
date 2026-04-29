@@ -34,9 +34,9 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 8
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_score: 17
+cooking_methods_researched: 1
+quality_assessed: 2026-04-29
 rest_time_min: 3
 rest_time_max: 5
 carryover_temp_c: 3
@@ -62,22 +62,28 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. 
 - [Air Fryer](./chicken_thigh-air_fryer.md)
 - [Grill](./chicken_thigh-grill.md)
 - [Oven Roast](./chicken_thigh-oven_roast.md)
+
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: 17 / 20** — assessed 2026-04-29
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing method leaf files (2 of 5 declared) | −2 |
-| Missing Culinary Group D tradition | −1 |
-| Method file `chicken_thigh-air_fryer.md` copies parent cut profile | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods researched | ✓ — survey completed 2026-04-29 (air_fryer, braise, grill, oven_roast, pan_fry all confirmed applicable; braise and pan_fry leaves not yet created) |
+| Culinary Group A tradition covered | ✓ (covered across existing leaves) |
+| Culinary Group B tradition covered | ✓ (Natasha's Kitchen — American/Ukrainian; other North American sources) |
+| Culinary Group C tradition covered | ✓ (covered across existing leaves) |
+| Culinary Group D tradition covered | − missing (Scandinavian/Eastern European chicken thigh recipes not accessible in existing leaves) |
+| air_fryer leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
+| braise leaf | − missing (`chicken_thigh-braise.md` not yet created) |
+| pan_fry leaf | − missing (`chicken_thigh-pan_fry.md` not yet created) |
+
+**Deduction**: −1 (Group D) −1 (braise leaf missing) −1 (pan_fry leaf missing) = **17**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `chicken_thigh-braise.md`, `chicken_thigh-pan_fry.md`
-3. **−1** · Method file `chicken_thigh-air_fryer.md` copies parent cut profile — rewrite `chicken_thigh-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Create `chicken_thigh-braise.md` — braised chicken thighs widely available on Natasha's Kitchen, BBC Good Food, multiple accessible sites
+2. Create `chicken_thigh-pan_fry.md` — pan-fried chicken thighs widely available
+3. **−1** · Group D missing — add a Scandinavian, Polish, or Eastern European chicken thigh recipe
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

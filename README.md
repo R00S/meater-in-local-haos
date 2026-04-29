@@ -15,7 +15,7 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 - Understands your available ingredients and kitchen gear
 - Generates custom recipes with AI (OpenAI via Home Assistant conversation agents)
 - Creates step-by-step cooking instructions with timer
-- Uses temperature probes when relevant (MEATER+, etc.)
+- Uses temperature probes when relevant — MEATER+, INKBIRD, Govee, Combustion Inc, iGrill/Weber, ToGrill-compatible devices, and most unbranded BLE meat thermometers
 - Supports multiple appliances (Ninja Combi, MultiFry, etc.)
 - Works entirely locally (Home Assistant + local apps)
 
@@ -168,6 +168,40 @@ Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card
 - ✅ **View Assist** — Blueprint for voice navigation to cooking panel
 
 See [STATUS.md](STATUS.md) for detailed project status.
+
+---
+
+## 🌡️ Supported Wireless Probe Hardware
+
+KCE's temperature-probe cook path works with **any** Home Assistant sensor entity that exposes a numeric temperature value — no matter which probe brand or integration you use. You simply enter the entity IDs during setup and KCE reads their state.
+
+### Built-in HA integrations (zero extra installs)
+
+| Probe / Brand | HA Integration | Tip sensor | Ambient sensor | Battery sensor | Notes |
+|--------------|---------------|-----------|----------------|----------------|-------|
+| **MEATER / MEATER+** | [MEATER](https://www.home-assistant.io/integrations/meater/) (Cloud) | `sensor.*_internal` | `sensor.*_ambient` | ❌ | Requires MEATER Cloud account |
+| **INKBIRD IBT-2X / 4XS / 6XS** | [INKBIRD](https://www.home-assistant.io/integrations/inkbird/) (Local BLE) | `sensor.*_probe_1` … `_N` | ❌ | ⚠️ model-dependent | 2, 4, or 6 wired probes |
+| **Rubicson / ToGrill-compatible OEM devices** | [ToGrill](https://www.home-assistant.io/integrations/togrill/) (Local BLE) | `sensor.*_temperature` | ❌ | ✅ `sensor.*_battery` | Covers many cheap rebrand BBQ probes |
+| **Govee H5191 / 5181–5198** | [Govee BLE](https://www.home-assistant.io/integrations/govee_ble/) (Local BLE) | `sensor.*_probe_N_temperature` | ❌ | ✅ | Multi-probe wired units |
+| **ThermoWorks Smoke** | [ThermoWorks Smoke](https://www.home-assistant.io/integrations/thermoworks_smoke/) (WiFi Gateway) | `sensor.*_probe_1/2` (**°F only**) | ❌ | ❌ | Set KCE measurement unit to US (°F) |
+| **ThermoPro TempSpike (TP960 / TP962 / TP970)** | [ThermoPro](https://www.home-assistant.io/integrations/thermopro/) (Local BLE) | `sensor.*_temperature` — check HA device page after discovery | ❌ | ✅ | Auto-discovered once Bluetooth integration is enabled; no extra installs |
+
+### HACS integrations
+
+| Probe / Brand | HA Integration | Tip sensor | Ambient sensor | Battery | Notes |
+|--------------|---------------|-----------|----------------|---------|-------|
+| **Combustion Inc Predictive Thermometer** | [homeassistant-combustion](https://github.com/legrego/homeassistant-combustion) (Local BLE) | `sensor.*_core_temperature` | `sensor.*_ambient_temperature` | ❌ binary | 8-sensor predictive probe; open BLE protocol |
+
+### Via ESPHome (ESP32 as BLE proxy)
+
+| Probe / Brand | Component | Tip sensor | Battery | Notes |
+|--------------|----------|-----------|---------|-------|
+| **iGrill mini / V2 / V202 / V3, Weber Pulse 1000/2000** | [esphome-igrill](https://github.com/bendikwa/esphome-igrill) | `sensor.*_temp_probe_1` … `_4` | ✅ | ESP32 bridges the exclusive BLE connection |
+| **AT-02, ThermoPro TP904, generic AliExpress BBQ probes, any unbranded BLE probe** | ESPHome `ble_client` custom component | Custom name | Optional | Protocol must be reverse-engineered; community configs exist for many models |
+
+> **No probe listed here?** If your probe exposes a `sensor.*` entity in Home Assistant — even via MQTT or a DIY ESPHome setup — it will work with KCE. Just enter the entity ID in the setup form.
+
+📖 **[Full compatibility reference with entity details](docs/ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md#kce-probe-compatibility)**
 
 ---
 

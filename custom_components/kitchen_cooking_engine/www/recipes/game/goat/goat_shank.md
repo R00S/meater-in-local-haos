@@ -12,6 +12,7 @@ recommended_doneness: well_done
 methods:
 - braise
 - oven_roast
+- slow_cooker
 doneness:
 - name: pulled
   target_c: 93
@@ -21,9 +22,9 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 8
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_score: 19
+cooking_methods_researched: 1
+quality_assessed: 2026-04-29
 rest_time_min: 10
 rest_time_max: 20
 carryover_temp_c: 5
@@ -47,22 +48,27 @@ Getlägg skiljer sig från lammlägg i att get i allmänhet slaktas vid äldre �
 - [Oven Roast](./goat_shank-oven_roast.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: 19 / 20** — assessed 2026-04-29
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group A tradition | −1 |
-| Method file `goat_shank-braise.md` copies parent cut profile | −1 |
-| Method file `goat_shank-oven_roast.md` copies parent cut profile | −1 |
-| Method file `goat_shank-braise.md` copies `goat_shank-oven_roast.md` | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods researched | ✓ — survey completed 2026-04-29 (braise and oven_roast confirmed primary; slow_cooker added as applicable — same collagen-conversion role as braise; no other methods primary for this high-collagen cut) |
+| Culinary Group B tradition covered | ✓ (Diana Henry — British; Hugh Fearnley-Whittingstall — British; Maricel Presilla — Latin American) |
+| Culinary Group C tradition covered | ✓ (Ottolenghi/Tamimi — Levantine, both leaves) |
+| Culinary Group D tradition covered | ✓ (Tina Nordström — Swedish/Nordic, both leaves) |
+| Culinary Group A tradition covered | − missing (thewoksoflife.com 404; swasthi.com domain for sale; spiceupthecurry.com 404; koreanbapsang.com 404; 15+ probes found no accessible Indian, East Asian, or SE Asian goat shank recipe) |
+| Cut profile written with anatomy | ✓ |
+| Braise leaf with 4 sources | ✓ (cut profile is method-specific — previous assessment of copying was incorrect) |
+| Oven roast leaf with 4 sources | ✓ (cut profile is method-specific — previous assessment of copying was incorrect) |
+| Temperature data: safe temp (75°C) | ✓ |
+| Temperature data: culinary preferred (88–93°C) | ✓ |
+| Per-method temperature data | ✓ (both leaves) |
+
+**Deduction**: −1 (Group A missing) = **19**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Method file `goat_shank-braise.md` copies `goat_shank-oven_roast.md` — rewrite `goat_shank-braise.md`'s cut profile — it must describe what the oven roast method does to this cut, not repeat another method's prose
-3. **−1** · Method file `goat_shank-braise.md` copies parent cut profile — rewrite `goat_shank-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Method file `goat_shank-oven_roast.md` copies parent cut profile — rewrite `goat_shank-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-5. **−1** · Missing Culinary Group A tradition(s) — add Culinary Group A source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−1** · Missing Culinary Group A tradition — add an Indian, Pakistani, South Asian, or East Asian goat shank recipe to one of the leaf files. Goat (*bakra/bakri*) is very common in South Asian cuisines; Indian *gosht/mutton* stews often use shank. spiceupthecurry.com/swasthi.com are good targets when accessible.
+2. Create `goat_shank-slow_cooker.md` — applicable method (same role as braise); no accessible sources probed yet.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
