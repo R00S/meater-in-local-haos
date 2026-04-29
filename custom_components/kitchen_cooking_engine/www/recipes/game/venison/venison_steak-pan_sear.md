@@ -22,9 +22,9 @@ cut_type: Venison
 
 ## Cut profile
 
-Venison steak most commonly refers to cuts from the haunch (hindleg), loin, or backstrap of deer — typically roe deer (*Capreolus capreolus*), red deer (*Cervus elaphus*), or fallow deer (*Dama dama*). The backstrap and loin medallions are prized for pan searing: they are fine-grained, lean, and quick-cooking. The meat is deep-red and intensely flavoured, with very little intramuscular fat.
+Pan-searing venison steak in a cast-iron or stainless pan exploits the cut's leanness: with no intramuscular fat to slow the temperature rise, a hot pan produces a deep crust in just 2–3 minutes per side before the centre overshoots medium-rare. Butter is essential — adding a knob of cold butter at the end of the sear (basting constantly) creates a foamy, nutty baste that compensates for the lack of marbling. The backstrap and loin medallions are the best pan-sear candidates: fine-grained, uniform in thickness, and tender.
 
-Because venison is so lean, it must be cooked hot and fast to prevent drying. Pan searing in butter or oil over high heat for 2–5 minutes per side achieves a caramelised crust while keeping the centre rare to medium-rare. Resting is critical — at least 5 minutes — to allow juice redistribution.
+Because venison is so lean, it must be cooked hot and fast to prevent drying. Resting is critical — at least 5 minutes — to allow juice redistribution.
 
 The European tradition across the UK, Germany, Scandinavia and Italy pairs venison with acidic or fruity sauces (blackberry, lingonberry, cloudberry, redcurrant, balsamic) that cut the richness of the meat. Nordic cooks often finish fillets in the oven at low heat (125°C) after searing, using a thermometer to hit exactly 60°C. UK and North American cooks tend to pan-fry direct.
 

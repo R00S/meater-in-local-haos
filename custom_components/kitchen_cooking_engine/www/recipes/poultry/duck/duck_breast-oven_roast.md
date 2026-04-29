@@ -22,7 +22,9 @@ cut_type: Duck
 
 ## Cut profile
 
-Duck breast is a dark, rich cut with a thick layer of subcutaneous fat beneath a scored skin. Unlike chicken breast, duck breast is best cooked to medium-rare (135–145 °F / 57–63 °C), where the meat remains pink, juicy, and tender. The oven-roast method typically follows a stovetop fat-rendering sear: the breast starts skin-side down in a cold or lightly warmed oven-safe pan to slowly render the fat cap, then transfers to a moderate oven to finish gently and evenly without overshooting the internal temperature.
+Oven-finishing duck breast after an initial stovetop fat-render is the most controlled way to hit medium-rare without overshooting. The pan-start renders the thick subcutaneous fat cap slowly over 10–12 minutes; the oven then provides gentle, even ambient heat to bring the muscle to temperature without any surface-temperature spikes. A moderate oven (175–180 °C / 350–355 °F) allows a 6–10 minute finish window — more forgiving than the frantic stovetop. The oven also keeps the rendered fat liquid and basting the skin from above, producing a lacquer-like finish.
+
+The critical difference from pure pan-sear: the oven method allows cooking multiple breasts simultaneously to the same temperature, making it the professional kitchen default when cooking for groups. Carryover is 3–5 °C from the oven environment; pull at 52–54 °C to land at 57–60 °C (medium-rare) after a 5-minute rest.
 
 Target internal temperature: **135–145 °F (57–63 °C)** — medium-rare, pull at 130 °F and rest; carryover brings it to target. For well-done (USDA), pull at 160 °F for a final resting temp of 165 °F.
 

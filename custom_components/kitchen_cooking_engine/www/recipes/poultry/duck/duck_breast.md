@@ -40,9 +40,9 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 8
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_score: 17
+cooking_methods_researched: 1
+quality_assessed: 2026-04-29
 rest_time_min: 5
 rest_time_max: 10
 carryover_temp_c: 4
@@ -65,23 +65,26 @@ Ankbröst är ett mörkt, rikt snitt med tjockt subcutant fett. Till skillnad fr
 
 - [Oven Roast](./duck_breast-oven_roast.md)
 - [Pan Sear](./duck_breast-pan_sear.md)
+
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: 17 / 20** — assessed 2026-04-29
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing method leaf file `duck_breast-sous_vide.md` | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Method file `duck_breast-oven_roast.md` copies parent cut profile | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods researched | ✓ — survey completed 2026-04-29 (pan_sear, oven_roast, sous_vide confirmed; pan_sear is the primary method; oven_roast follows stovetop fat-render; sous_vide is widely used in professional and modern home cooking) |
+| Culinary Group A tradition covered | ✓ (covered in pan_sear leaf) |
+| Culinary Group B tradition covered | ✓ (BBC Good Food, French tradition) |
+| Culinary Group C tradition covered | − missing (Moroccan duck pastilla and similar dishes use duck but not standalone breast; no accessible Group C duck breast recipe found) |
+| Culinary Group D tradition covered | − missing (Scandinavian/Eastern European duck breast recipes not found in accessible sources) |
+| oven_roast leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
+| sous_vide leaf | − pending (method in list; leaf not yet created) |
+
+**Deduction**: −1 (Group C) −1 (Group D) −1 (sous_vide leaf pending) = **17**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Missing method leaf file — create `duck_breast-sous_vide.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
-3. **−2** · Missing Culinary Group C and Culinary Group D tradition(s) — add Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
-4. **−1** · Method file `duck_breast-oven_roast.md` copies parent cut profile — rewrite `duck_breast-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−1 each** · Groups C and D missing — add sources from Moroccan/Middle Eastern or Scandinavian/Eastern European duck breast preparations
+2. Create `duck_breast-sous_vide.md` — method in list, leaf pending; sous vide duck breast is widely covered on seriouseats.com (when accessible)
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
