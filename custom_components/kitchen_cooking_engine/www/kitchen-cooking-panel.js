@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 29 Apr 2026, 06:34 CET
+ * AUTO-GENERATED: 29 Apr 2026, 06:57 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 29 Apr 2026, 06:34 CET
+// Last generated: 29 Apr 2026, 06:57 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -32277,7 +32277,7 @@ class KitchenCookingPanel extends LitElement {
       // Set entity and call start_cook service directly with stored parameters
       this._selectedEntity = meaterEntity;
       const serviceData = {
-        cut_id: cook.cut_id,
+        cut_id: String(cook.cut_id),
         doneness: cook.doneness,
         cooking_method: cook.cooking_method,
         data_source: cook.data_source || this._dataSource,
@@ -33705,40 +33705,7 @@ class KitchenCookingPanel extends LitElement {
           </div>
         </ha-card>
       ` : html`
-        ${this._cookHistory.map(cook => html`
-          <ha-card class="history-card clickable" @click=${() => {
-            this._selectedCookForDetail = cook;
-            this.requestUpdate();
-          }}>
-            <div class="card-content">
-              <div class="history-header">
-                <h3>${cook.cut_display || cook.cut}</h3>
-                <span class="history-date">${this._formatDateTime(cook.completed_at)}</span>
-              </div>
-              <div class="history-details">
-                <span class="history-detail">🥩 ${cook.protein}</span>
-                <span class="history-detail">🎯 ${(cook.doneness || '').replace('_', ' ')}</span>
-                <span class="history-detail">🍳 ${(cook.cooking_method || '').replace(/_/g, ' ')}</span>
-                <span class="history-detail">🌡️ ${cook.target_temp_c}°C ${this._t('meater.target_label')}</span>
-                ${cook.peak_temp_c ? html`<span class="history-detail">📈 ${Math.round(cook.peak_temp_c)}°C ${this._t('meater.peak_label')}</span>` : ''}
-                ${cook.final_temp_after_rest ? html`<span class="history-detail">✅ ${Math.round(cook.final_temp_after_rest)}°C ${this._t('meater.after_rest_label')}</span>` : 
-                  cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C ${this._t('meater.final_label')}</span>` : ''}
-              </div>
-              ${cook.notes ? html`
-                <div class="history-notes">
-                  <strong>📝 Notes:</strong> ${cook.notes}
-                </div>
-              ` : ''}
-              <div class="history-actions" @click=${(e) => e.stopPropagation()}>
-                <button class="small-btn" @click=${() => {
-                  const notes = prompt(this._t('history.update_notes_prompt'), cook.notes || '');
-                  if (notes !== null) this._updateCookNotes(cook.id, notes);
-                }}>${this._t('history.edit_notes')}</button>
-                <button class="small-btn danger" @click=${() => this._deleteCook(cook.id)}>${this._t('history.delete_btn')}</button>
-              </div>
-            </div>
-          </ha-card>
-        `)}
+        ${this._cookHistory.map(cook => this._renderHistoryCard(cook))}
       `}
     `;
   }
@@ -36660,7 +36627,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "365";
+const PANEL_VERSION = "367";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
