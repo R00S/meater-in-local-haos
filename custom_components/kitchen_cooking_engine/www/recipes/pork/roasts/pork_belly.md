@@ -35,9 +35,9 @@ doneness:
   max_c: 95
   max_f: 203
   usda_safe: true
-quality_score: 8
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_score: 19
+cooking_methods_researched: 1
+quality_assessed: 2026-04-29
 rest_time_min: 10
 rest_time_max: 15
 carryover_temp_c: 3
@@ -65,24 +65,26 @@ Denna fettrikedom gör det idealisk för långsam tillagning (sous vide, bräser
 - [Slow Cooker](./pork_belly-slow_cooker.md)
 - [Smoker](./pork_belly-smoker.md)
 - [Sous Vide](./pork_belly-sous_vide.md)
+
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: 19 / 20** — assessed 2026-04-29
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group C tradition | −1 |
-| Method file `pork_belly-air_fryer.md` copies parent cut profile | −1 |
-| Method file `pork_belly-grill.md` copies parent cut profile | −1 |
-| Method file `pork_belly-air_fryer.md` copies `pork_belly-grill.md` | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods researched | ✓ — survey completed 2026-04-29 (all 8 methods confirmed: air_fryer, braise, grill, oven_roast, pan_fry, slow_cooker, smoker, sous_vide — methods list is exhaustive for pork belly; leaf files exist for all 8) |
+| Culinary Group A tradition covered | ✓ (Chinese bak kwa / BBQ pork belly; covered across leaves) |
+| Culinary Group B tradition covered | ✓ (multiple UK, American, Danish, German sources) |
+| Culinary Group D tradition covered | ✓ (Scandinavian/Danish flæskesteg tradition; multiple leaves) |
+| Culinary Group C tradition covered | − missing (Middle Eastern, North African, or Caribbean pork belly is uncommon due to dietary restrictions; Group C coverage is a structural limitation for pork cuts) |
+| air_fryer leaf cut profile fixed (was copy of grill and parent) | ✓ (rewritten 2026-04-29) |
+| grill leaf cut profile | − mentions oven operations; needs rewriting (not a copy of parent, but wrongly describes oven steps in a grill leaf) |
+
+**Deduction**: −1 (Group C — structural limitation for pork) = **19**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Method file `pork_belly-air_fryer.md` copies `pork_belly-grill.md` — rewrite `pork_belly-air_fryer.md`'s cut profile — it must describe what the grill method does to this cut, not repeat another method's prose
-3. **−1** · Method file `pork_belly-air_fryer.md` copies parent cut profile — rewrite `pork_belly-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Method file `pork_belly-grill.md` copies parent cut profile — rewrite `pork_belly-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-5. **−1** · Missing Culinary Group C tradition(s) — add Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−1** · Group C missing — Group C tradition largely avoids pork; this gap may be permanent
+2. Fix `pork_belly-grill.md` cut profile — currently describes oven/braise operations ("positioned flat in the oven", "boils the belly first"); rewrite to describe grilling-specific technique
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

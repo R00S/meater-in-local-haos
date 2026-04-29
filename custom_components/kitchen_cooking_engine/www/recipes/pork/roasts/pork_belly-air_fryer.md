@@ -12,13 +12,14 @@ cut_type: Roasts
 > ✅ **STATUS: CONFORMS TO RECIPE_COLLECTION_TOR.md** — validated 2026-03-04
 
 ## Cut profile
-Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.
+
+Air frying pork belly achieves crackling in 25–35 minutes — faster than an oven and without the oil-splatter of deep frying. The basket's circulating superheated air (190–205 °C) attacks the scored skin from all angles simultaneously, driving moisture out of the dermis and puffing the fat cells into the characteristic crunchy blisters (svær / Kruste). The key difference from the oven: the confined air fryer basket concentrates airflow, so the skin blisters more aggressively and evenly than a flat oven tray allows. Less liquid is needed; pre-boiling is optional; total active time is lower. The main limitation is basket size — large whole belly sections must be cut into strips (5–8 cm wide) to fit.
+
+At 200 °C: strips reach 70–75 °C internal in approximately 25 min; increase to 205–210 °C for the last 5 min if crackling is not fully blistered. MEATER probe inserted horizontally through the thickest section of meat, away from the fat seam. Carryover in air fryer is minimal (1–2 °C) — the basket cools quickly once removed. Pull at 68–70 °C for sliceable-moist; 80–85 °C for soft, yielding belly that flakes.
 
 ## Styckesprofil
 
-Fläskbuk (*svinekam*/*flæskesteg* danska; *Schweinebauch* tyska) är den quintessentiella nordiska och tyska söndagssteken. Nyckeln är svål/svört (*svær* / *Kruste*): svålen måste ritsas djupt, saltas generöst och placeras plant för att uppnå jämn knäppande-kris.
-
-Standardteknik: förkoka svålen ned i salt vatten för att öppna porerna, börja med svålen nedåt i het panna, sedan tillsätt buljong och koka täckt vid 150–160 °C i 2–3 timmar; avsluta med svålen uppåt under grillelementet. Innertemperatur: **80–88 °C (176–190 °F)** för genomstekt, saftig buksteak. Eftertillagning: 3–4 °C.
+Air fryer-tillagning av fläskbuk ger svål på 25–35 minuter — snabbare än ugn och utan stänk från fritering. Den inringade varmluften (190–205 °C) driver bort fukt ur svålen och blåser upp fettcellerna till karaktäristisk krispig svål. Nyckeln är att skåra svålen djupt, salta generöst och torka i kylskåp 1 timme innan tillagning. Klipp fläskbuken i 5–8 cm breda remsor för att passa i korgen. Innertemperatur: **68–75 °C** för saftig, skivbar buk; **80–85 °C** för mjuk, smältande textur. Eftertillagning: 1–2 °C.
 
 ## Source recipes
 

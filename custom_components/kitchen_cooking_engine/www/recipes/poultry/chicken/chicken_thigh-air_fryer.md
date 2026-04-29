@@ -22,7 +22,9 @@ cut_type: Dark Meat
 
 ## Cut profile
 
-Chicken thighs are a forgiving, flavourful dark-meat cut. Their higher fat content makes them well-suited to the air fryer's rapid circulating heat, which renders the fat and crisps the skin beautifully without drying the meat out. Bone-in skin-on thighs take longer than boneless but deliver the crispiest skin. Dark meat benefits from cooking above the USDA minimum to 175 °F (79 °C), where collagen fully converts to gelatin.
+Air frying chicken thighs is the fastest path to crispy-skinned, juicy dark meat without using the oven. The basket's high-speed circulating air (190–200 °C) simultaneously renders the subcutaneous fat and produces skin crispiness that rivals deep frying but uses no added oil. Unlike oven roasting, the air fryer's compact chamber produces intense surface heat from all directions, completing bone-in skin-on thighs in 22–28 minutes — roughly half the time of an oven. Flipping halfway ensures even browning on both sides.
+
+The thigh's higher fat content (6–10 % vs 1–2 % for breast) makes it uniquely tolerant of the air fryer's aggressive heat — the fat self-bastes the meat from inside while the surface crisps. The MEATER probe is placed lengthwise along the thickest part of the thigh, angled away from the femur bone. Carryover is 2–3 °C; pull at 71–74 °C for USDA-safe result (74 °C final), or 76 °C for the preferred dark-meat finish at 79 °C.
 
 Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)** preferred for dark meat
 
