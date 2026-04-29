@@ -10,12 +10,13 @@
 
 - Home Assistant (2024.1.0 or newer)
 - HACS installed
-- A MEATER or MEATER+ probe **already paired** with Home Assistant via:
-  - The official [MEATER integration](https://www.home-assistant.io/integrations/meater/) (recommended), or
-  - A Bluetooth proxy exposing the probe as a `sensor.*` entity
+- **Any temperature probe already connected to Home Assistant** as a `sensor.*` entity — for example:
+  - A MEATER or MEATER+ probe via the official [MEATER integration](https://www.home-assistant.io/integrations/meater/)
+  - A Bluetooth temperature probe exposed via a Bluetooth proxy
+  - Any other probe or thermometer that creates a temperature sensor entity in HA
 
-If the probe is not yet in HA, set that up first — KCE reads the probe entity that
-the MEATER integration creates.
+If your probe is not yet in HA, set that up first — KCE reads whatever `sensor.*` entity
+your probe integration creates.
 
 ---
 
@@ -28,15 +29,16 @@ the MEATER integration creates.
 
 ---
 
-## Step 2 — Add your MEATER probe
+## Step 2 — Add your temperature probe
 
 1. Go to **Settings → Devices & Services → Add Integration**.
 2. Search for **Kitchen Cooking Engine** and select it.
 3. Choose **MEATER+ Temperature Probe**.
 4. Fill in:
-   - **Name** — anything you like, e.g. `Kitchen MEATER`
-   - **Entity ID** — the `sensor.*` entity your MEATER integration created
-     (find it in **Developer Tools → States**, search for your probe)
+   - **Name** — anything you like, e.g. `Kitchen Probe` or `Kitchen MEATER`
+   - **Entity ID** — the `sensor.*` entity your probe creates in HA
+     (find it in **Developer Tools → States** and search for your probe — it works with
+     MEATER, Bluetooth thermometers, or any other temperature sensor already in HA)
 5. Click **Submit**.
 
 That's all the configuration you need. The panel appears automatically in the HA sidebar
