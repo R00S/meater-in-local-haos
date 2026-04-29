@@ -12,7 +12,7 @@
 1. [What is Kitchen Cooking Engine?](#1-what-is-kitchen-cooking-engine)
 2. [Installation](#2-installation)
 3. [Adding Appliances (First-Time Setup)](#3-adding-appliances-first-time-setup)
-   - 3.1 [MEATER+ Temperature Probe](#31-meater-temperature-probe)
+   - 3.1 [Temperature Probe (MEATER, INKBIRD, Govee, Combustion Inc, iGrill, and more)](#31-temperature-probe)
    - 3.2 [Ninja Combi SFP700EU](#32-ninja-combi-sfp700eu)
    - 3.3 [De'Longhi MultiFry FH1394](#33-delonghi-multifry-fh1394)
    - 3.4 [Standard Oven](#34-standard-oven)
@@ -133,20 +133,38 @@ Each "appliance" in KCE is a configuration entry. You can add the same appliance
 multiple times (e.g., two ovens). Go to **Settings → Devices & Services → Add Integration →
 Kitchen Cooking Engine** to add an appliance.
 
-### 3.1 MEATER+ Temperature Probe
+### 3.1 Temperature Probe
 
-Select **MEATER+ Temperature Probe** when you have a MEATER probe paired via Bluetooth
-proxy or the MEATER HA integration.
+Select **Temperature Probe** when you have any wireless meat thermometer whose sensor entities are already available in Home Assistant. The appliance type is **not limited to MEATER+** — it works with any HA integration that exposes a numeric temperature sensor.
+
+#### Compatible probe integrations
+
+| Probe / Brand | How it connects to HA | Tip entity (enter this) | Ambient entity | Battery entity |
+|--------------|----------------------|------------------------|----------------|----------------|
+| **MEATER / MEATER+** | [MEATER](https://www.home-assistant.io/integrations/meater/) integration (cloud) | `sensor.*_internal` | `sensor.*_ambient` | ❌ |
+| **INKBIRD IBT-2X / 4XS / 6XS** | [INKBIRD](https://www.home-assistant.io/integrations/inkbird/) integration (local BLE) | `sensor.*_probe_1` … `_probe_N` | ❌ | ⚠️ model-dependent |
+| **Rubicson / ToGrill OEM rebrands** | [ToGrill](https://www.home-assistant.io/integrations/togrill/) integration (local BLE) | `sensor.*_temperature` | ❌ | ✅ `sensor.*_battery` |
+| **Govee H5191 / 5181–5198** | [Govee BLE](https://www.home-assistant.io/integrations/govee_ble/) integration (local BLE) | `sensor.*_probe_N_temperature` | ❌ | ✅ |
+| **ThermoWorks Smoke** | [ThermoWorks Smoke](https://www.home-assistant.io/integrations/thermoworks_smoke/) (WiFi, °F only) | `sensor.*_probe_1/2` | ❌ | ❌ |
+| **Combustion Inc** | [homeassistant-combustion](https://github.com/legrego/homeassistant-combustion) HACS (local BLE) | `sensor.*_core_temperature` | `sensor.*_ambient_temperature` | ❌ binary |
+| **iGrill / Weber Pulse** | [esphome-igrill](https://github.com/bendikwa/esphome-igrill) via ESP32 | `sensor.*_temp_probe_1` … `_4` | ❌ | ✅ `sensor.*_battery` |
+| **Unbranded / generic BLE probes** | ESPHome `ble_client` via ESP32 | Custom sensor name | Custom sensor name | Optional |
+
+> **ToGrill covers many no-name rebrands.** The ToGrill BLE protocol is used by a large number of cheap BBQ thermometers sold under different brand names. If your probe is not discovered by INKBIRD or Govee BLE, try the ToGrill integration.
+
+> **ThermoWorks Smoke note.** This integration only exposes °F values. Set the KCE **Measurement System** to **US (°F)** before configuring this probe type.
+
+#### Configuration fields
 
 Configuration fields:
 | Field | Description |
 |-------|-------------|
 | **Name** | Display name shown on the welcome screen (e.g. "Backyard MEATER") |
-| **Entity ID** | The `sensor.*` entity created by the MEATER integration or by another KCE probe setup |
+| **Tip Temperature Entity** | Required. The `sensor.*` entity for the internal/tip temperature |
+| **Ambient Temperature Entity** | Optional. Used for ETA calculation and the temperature graph |
+| **Battery Level Entity** | Optional. `sensor.*` whose state is a numeric battery percentage |
 
-The probe creates a `sensor.kitchen_cooking_engine_*_cooking_session` entity in HA. KCE
-reads `current_temp`, `ambient_temp`, `target_temp_c`, `eta_minutes`, `battery_level`, and
-`progress` attributes from this entity during an active cook.
+The probe appliance creates a `sensor.kitchen_cooking_engine_*_cooking_session` entity in HA. KCE reads `current_temp`, `ambient_temp`, `target_temp_c`, `eta_minutes`, `battery_level`, and `progress` attributes from this entity during an active cook.
 
 ### 3.2 Ninja Combi SFP700EU
 
