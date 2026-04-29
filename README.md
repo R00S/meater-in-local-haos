@@ -9,20 +9,33 @@
 
 A local-first, AI-assisted kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes, and temperature sensors.
 
-## 🎯 Project Vision
-
-Build a smart cooking engine that behaves like a highly capable kitchen assistant:
-- Understands your available ingredients and kitchen gear
-- Generates custom recipes with AI (OpenAI via Home Assistant conversation agents)
-- Creates step-by-step cooking instructions with timer
-- Uses temperature probes when relevant — MEATER+, INKBIRD, Govee, Combustion Inc, iGrill/Weber, ToGrill-compatible devices, and most unbranded BLE meat thermometers
-- Supports multiple appliances (Ninja Combi, MultiFry, etc.)
-- Works entirely locally (Home Assistant + local apps)
-
 ## 📖 User Guide
 
 Full installation, configuration, and feature documentation:
 **[→ docs/USER_GUIDE.md](docs/USER_GUIDE.md)**
+
+- **Get started with your wireless probe:** [docs/GETTING_STARTED_MEATER.md](docs/GETTING_STARTED_MEATER.md)
+- **Get started with your other kitchen appliance:** [docs/GETTING_STARTED_AI_RECIPE.md](docs/GETTING_STARTED_AI_RECIPE.md)
+
+## 🎯 Project Vision
+
+### 🌡️ Wireless Probe Cooking
+
+Build a cooking assistant that helps you master every cut and technique:
+- Guides you through protein and cut selection with descriptions and classic recipes
+- Shows you the right cooking method for each cut — pan-fry, roast, braise, grill, and more
+- Monitors internal temperature live with your wireless probe (MEATER+, INKBIRD, Govee, Combustion Inc, iGrill/Weber, ToGrill-compatible devices, and most unbranded BLE meat thermometers)
+- Tracks doneness levels and calculates ETA in real time
+- Works entirely locally (Home Assistant + local apps)
+
+### 🤖 Other Appliances & AI Recipes
+
+Build a smart cooking engine for your kitchen appliances:
+- Supports multiple appliances (Ninja Combi, MultiFry, standard oven, stovetop, and more)
+- Generates custom AI recipes using your available ingredients (OpenAI via Home Assistant conversation agents)
+- Creates step-by-step cooking instructions with timers
+- Understands your available ingredients and kitchen gear
+- Works entirely locally (Home Assistant + local apps)
 
 ## 📊 Current Status
 
