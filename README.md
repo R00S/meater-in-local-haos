@@ -5,7 +5,7 @@
 [![Alpha](https://img.shields.io/badge/Status-ALPHA-orange.svg)](https://github.com/R00S/meater-in-local-haos)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/R00S)
 
-A local-first, optionally AI-assisted, kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes. 
+A local-first, optionally AI-assisted, kitchen cooking system for Home Assistant that helps you plan, prepare, and cook meals using your ingredients, equipment, time constraints and recipes. 
 
 For users of wireless temperature probes, like MEATER, INKBIRD etc, we provide an extensive tree of cuts and cooking methods ranging from meat and game to fish and veg. To that we add knowledge and descriptions of how different meats and cuts behave and classic recipes for you to try or just read out of pure interest.
 
