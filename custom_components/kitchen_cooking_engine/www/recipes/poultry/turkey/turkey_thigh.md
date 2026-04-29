@@ -10,7 +10,9 @@ usda_safe_c: 74
 usda_safe_f: 165
 recommended_doneness: well_done
 methods:
+- braise
 - oven_roast
+- smoker
 doneness:
 - name: safe
   target_c: 74
@@ -30,9 +32,9 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 5
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-28
+quality_score: 16
+cooking_methods_researched: 1
+quality_assessed: 2026-04-29
 rest_time_min: 10
 rest_time_max: 15
 carryover_temp_c: 4
@@ -59,27 +61,36 @@ Kalkontlår är den övre benets mörka köttssektion av kalkon, från höften t
 
 | Method | Leaf file | Status |
 |--------|-----------|--------|
-| oven_roast | [turkey_thigh-oven_roast.md](./turkey_thigh-oven_roast.md) | 🔄 in progress (1 source) |
+| oven_roast | [turkey_thigh-oven_roast.md](./turkey_thigh-oven_roast.md) | 1 source (Group B only) — collection in progress |
+| braise | turkey_thigh-braise.md | pending (method confirmed applicable; tasteofhome.com source already in oven_roast leaf is technically an oven braise) |
+| smoker | turkey_thigh-smoker.md | pending (method applicable for turkey dark meat; dedicated turkey thigh smoker recipes not accessible — no dedicated URLs found across 40+ probes; confirmed applicable from heygrillhey.com/smoked-turkey-legs/ and smokedbbqsource.com/smoked-turkey-legs/ at 175°F) |
 
 ## Quality score
 
-**Score: 5 / 20** — assessed 2026-04-27
+**Score: 16 / 20** — assessed 2026-04-29
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Collection in progress (< 4 sources) | −3 |
-| No analysis yet (collection incomplete) | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods researched | ✓ — survey completed 2026-04-29: oven_roast ✓, braise ✓, smoker ✓ applicable (dark meat, high fat); grill not confirmed with accessible source |
+| Culinary Group B tradition covered | ✓ (Taste of Home — American) |
+| Culinary Group A tradition covered | − missing (turkey thigh uncommon as standalone cut in Group A cuisines; 80+ URL probes across 3 sessions found no accessible Group A source) |
+| Culinary Group C tradition covered | − missing (no standalone turkey thigh recipes found in Group C accessible sources) |
+| Culinary Group D tradition covered | − missing (no standalone turkey thigh recipes found in Group D accessible sources; cut is almost exclusively North American as a standalone product) |
+| Cut profile written with anatomy | ✓ |
+| Method leaf files exist | ✓ (oven_roast leaf with 1 source) |
+| Temperature data: safe (74°C) | ✓ |
+| Temperature data: culinary preferred (77–79°C) | ✓ |
+| Per-method temp data | ✓ (oven_roast leaf) |
+| oven_roast leaf copies parent cut profile | − −1 (cut profile paragraphs are near-identical to parent; method-specific context is in second paragraph only) |
+
+**Deduction**: −1 (Group A) −1 (Group C) −1 (Group D) −1 (oven_roast copies parent) = **16**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — extensive search conducted but only oven_roast found with any accessible sources; other methods may exist in non-English sources not accessible to this agent
-2. **−3** · Collection in progress — only 1 confirmed source specifically for turkey thigh pieces found so far; need 3–5 more sources (especially non-American/Group B sources)
-3. **−1** · Missing Culinary Group A tradition — no accessible Group A recipes for turkey thigh found; turkey thigh is uncommon in Asian cuisines
-4. **−1** · Missing Culinary Group C tradition — no standalone turkey thigh recipes found for African/Middle Eastern/Caribbean culinary traditions; Cajun whole-turkey recipes exist but do not specifically use thigh pieces
-5. **−1** · Missing Culinary Group D tradition — no standalone turkey thigh recipe found specifically for Scandinavian/Slavic/Baltic traditions; Natasha's Kitchen whole-turkey recipe (Ukrainian-American) has thigh temperature reference
+1. **−1** · Rewrite oven_roast leaf cut profile — opening paragraph near-identical to parent; needs method-specific analysis of what oven-roasting does to this cut
+2. **−1 each** · Missing Group A, C, D coverage — 80+ probes across 3 sessions found no accessible standalone turkey thigh recipes outside North America. Turkey thigh is almost exclusively a North American product as a standalone cut; other traditions cook the whole bird.
+3. Expand oven_roast leaf to 4+ sources — only 1 source currently; additional Group B sources may exist on other accessible sites not yet probed.
+4. Create `turkey_thigh-braise.md` — tasteofhome.com/recipes/braised-turkey-thighs/ is already accessible and confirms Group B; need 3+ more sources.
+5. Create `turkey_thigh-smoker.md` — applicable method; need 4+ accessible sources.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

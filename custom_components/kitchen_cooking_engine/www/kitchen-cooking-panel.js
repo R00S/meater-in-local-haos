@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 29 Apr 2026, 09:16 CET
+ * AUTO-GENERATED: 29 Apr 2026, 09:22 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 29 Apr 2026, 09:16 CET
+// Last generated: 29 Apr 2026, 09:22 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -11589,7 +11589,7 @@ const CUT_METHOD_PROFILES = {
     "oven_roast_sv": "Kalkonstjälken inkluderar trumpinnen (undre benet, nedanför knäleden) och ibland låret (fäst ovanför knäleden). Ugnsstekning: höga ugnstemperaturer (180–200 °C) i 1,5–2 timmar. Innertemperatur: 80 °C. Eftertillagning: 4–5 °C. Basteras regelbundet för saftig konsistens."
   },
   "turkey_thigh": {
-    "oven_roast": "Turkey thigh (the biceps femoris and associated muscles of the upper leg) is a dark-meat cut with higher fat and connective tissue than the breast. Fat content ≈ 5–8 % vs ≈ 1–2 % for breast; this means the thigh is more forgiving and resists drying even if slightly overcooked. Collagen converts to gelatin above approximately 70 °C, improving mouthfeel. Bone-in skin-on thighs are more flavourful; boneless thighs cook more evenly and faster.\n\nOven-roasting turkey thighs is the primary cooking method used in North American home cooking, particularly as a smaller-scale alternative to whole-bird Thanksgiving or Christmas turkey. The cut is typically cooked at 175 °C (350 °F) dry heat or in a covered/sealed vessel (oven bag, Dutch oven) with liquid. USDA minimum safe temperature is 74 °C (165 °F); most recipes pull at 77–82 °C (170–180 °F) for texture and to eliminate pink pigment.\n\nTurkey thigh as a standalone cut is almost exclusively a North American product. In most other global culinary traditions the bird is cooked whole. This limits source diversity for this leaf.\n\nTarget internal temperature: **165 °F (74 °C)** minimum — **170–175 °F (77–79 °C)** preferred for dark meat\n\n> **⚠ Collection in progress** — This leaf currently has 1 of the required 4–6 source recipes. Analysis of temperature consensus has **not** begun. Additional sources from Groups A, C, and D are needed. Searching conducted 2026-04-27: 50+ URLs probed across 30+ sites; no accessible Group A, C, or D standalone turkey thigh recipes found. The cut appears to be almost exclusively a North American product as a standalone cut.",
+    "oven_roast": "Oven-roasting is the standard North American method for turkey thighs cooked as a standalone cut. The thigh's high fat content (≈ 5–8 %) bastes the meat naturally in a dry-heat oven, making it more forgiving than breast meat. At typical roasting temperatures (175–200 °C), the surface renders crisp while the interior climbs toward 77–82 °C over 45–60 minutes. The dense collagen converts to gelatin above 70 °C, improving mouthfeel — this is why most recipes pull at 77–82 °C rather than the USDA minimum of 74 °C. Bone-in thighs retain more moisture and flavour; boneless thighs cook faster and more evenly. Carryover during rest is approximately 3–4 °C for this size cut. Insert the MEATER probe into the thickest part of the thigh, parallel to and away from the bone, from the side rather than the top.",
     "oven_roast_sv": "Kalkontlår (*biceps femoris* och tillhörande muskler i övre benet) är ett mörkt köttstycke med högre fett och bindväv än bröstet. Fettinnehåll ≈ 5–8 % vs ≈ 1–2 % för bröst; det innebär att det tål högre temperaturer och längre tillagning utan att torka ut. Innertemperatur: 80 °C. Eftertillagning: 4–5 °C. Tillagnings tid: 45–60 minuter vid 190–210 °C."
   },
   "whole_turkey": {
@@ -16837,7 +16837,9 @@ const EXP_TREE = {
                 "name_sv": "Kalkonlår",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
-                  "oven_roast"
+                  "braise",
+                  "oven_roast",
+                  "smoker"
                 ],
                 "usda_safe_c": 74,
                 "usda_safe_f": 165,
@@ -30079,7 +30081,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "369";
+const PANEL_VERSION = "370";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
