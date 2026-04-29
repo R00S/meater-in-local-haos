@@ -205,3 +205,18 @@ Methods surveys completed for 12 cuts (cooking_methods_researched set to 1, meth
 
 ### 4. GUI help button anchor check
 No heading changes in this session — all anchors remain valid (see previous CHORES section for full table).
+
+---
+
+## Getting Started Guides — 2026-04-29
+
+### Task
+Create two minimal getting-started guides for new users.
+
+### Files created
+- `docs/GETTING_STARTED_MEATER.md` — MEATER probe path (install KCE → add probe appliance → first cook)
+- `docs/GETTING_STARTED_AI_RECIPE.md` — AI recipe path (install KCE → add custom/pre-configured appliance → set AI agent → generate first recipe)
+
+### Version bump
+- 0.7.0.19 → 0.7.0.20 (manifest.json, __init__.py, const.py, USER_GUIDE.md)
+- PANEL_VERSION 378 → 379
