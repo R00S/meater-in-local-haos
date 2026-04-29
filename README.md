@@ -5,10 +5,11 @@
 [![Alpha](https://img.shields.io/badge/Status-ALPHA-orange.svg)](https://github.com/R00S/meater-in-local-haos)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/R00S)
 
-⚠️ **DEVELOPMENT RELEASE** — GUI Redesign Phases 1–8 complete. Functional but not yet production-ready.
+⚠️ **BETA RELEASE** — GUI Redesign Phases 1–8 complete.
 
-A local-first, AI-assisted kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes, and temperature sensors.
-
+A local-first, AI-assisted kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes. 
+For users of wireless temperature probes, like MEATER, INKBIRD etc we provide an extensive tree of cuts and cooking methods raning from meat and game to fish and veg. To that we add knowledge and descriptions of how different meats and cuts behaves and classic recipes for you to try or just read out of pure interest.
+A
 ## 📖 User Guide
 
 Full installation, configuration, and feature documentation:
@@ -39,9 +40,9 @@ Build a smart cooking engine for your kitchen appliances:
 
 ## 🌡️ Supported Wireless Probe Hardware
 
-> ⭐ **Best path — Local MEATER+ with our own ESP32 support**
+> ⭐ **Best path — Local MEATER+ with ESP32 support**
 > Use a **MEATER+** probe (only the Plus model) with any ESP32 board running the ESPHome config included in this repo.
-> ✅ No cloud required &nbsp;·&nbsp; ✅ Any ESP32 works &nbsp;·&nbsp; ✅ All sensors available (tip, ambient, battery)
+> ✅ No cloud required &nbsp;·&nbsp; ✅ Most ESP32 works &nbsp;·&nbsp; ✅ All sensors available (tip, ambient, battery)
 > → See **[Quick Start with MEATER+](#-quick-start-with-meater)** below.
 
 KCE's temperature-probe cook path works with **any** Home Assistant sensor entity that exposes a numeric temperature value — no matter which probe brand or integration you use. You simply enter the entity IDs during setup and KCE reads their state.
