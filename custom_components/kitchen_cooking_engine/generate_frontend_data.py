@@ -3,9 +3,11 @@
 Generate frontend cooking data from backend Python files.
 
 This script generates the JavaScript cooking data constants that are embedded
-in kitchen-cooking-panel.js from the canonical backend data sources:
-- cooking_data.py (International/USDA data)
-- swedish_cooking_data.py (Swedish data)
+in kitchen-cooking-panel.js from:
+- www/recipes/ KCE:CUT tagged files (EXP_TREE — single source of truth)
+- ninja_combi_data.py (Ninja Combi recipes)
+- measurements.py (measurement systems)
+- i18n/*.json (translation strings)
 
 Run this script at install/update time to ensure frontend matches backend.
 
@@ -21,199 +23,6 @@ import sys
 import os
 import yaml
 from datetime import datetime, timezone, timedelta
-
-# Lazy-loaded module references
-_INT_CATEGORIES = None
-_SWE_CATEGORIES = None
-
-# NOTE on Swedish→English recipe slug mapping
-#
-# A previous version of this file maintained a hand-written `_RECIPE_SLUG_MAP`
-# dict that translated Swedish cut slugs to the English recipe-filename slugs
-# under `docs/recipe_research/`. That map accumulated unverified, fabricated
-# cross-species translations (e.g. abborrfile→sea_bass, lammbringa→brisket)
-# and was producing wrong recipe cards in the experimental MEATER path.
-#
-# The map has been removed. The experimental MEATER path is now locked to
-# international (`MEAT_CATEGORIES`) data on the frontend, where every
-# `MeatCut.name` already matches the recipe-filename slug directly, so no
-# translation layer is needed. Swedish support on the experimental path is
-# postponed; when it returns, every entry MUST be backed by a real recipe
-# file for the same species and cut (see `.github/copilot-instructions.md`
-# Rule 2 — "Data Mappings: Only Map What You Can Verify").
-#
-# `MeatCut.recipe_slug` is still honoured below for explicit per-cut overrides
-# defined in cooking_data.py / swedish_cooking_data.py.
-
-
-def _load_cooking_data():
-    """Load cooking data modules on demand to avoid blocking at import time."""
-    global _INT_CATEGORIES, _SWE_CATEGORIES
-    
-    if _INT_CATEGORIES is not None:
-        return
-    
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    
-    # Load cooking_data module
-    import importlib.util
-    cooking_spec = importlib.util.spec_from_file_location(
-        "cooking_data",
-        os.path.join(base_dir, "cooking_data.py")
-    )
-    cooking_data = importlib.util.module_from_spec(cooking_spec)
-    sys.modules["cooking_data"] = cooking_data
-    cooking_spec.loader.exec_module(cooking_data)
-    
-    _INT_CATEGORIES = cooking_data.MEAT_CATEGORIES
-    
-    # Load Swedish data
-    swedish_file = os.path.join(base_dir, "swedish_cooking_data.py")
-    with open(swedish_file, "r", encoding="utf-8") as f:
-        swedish_code = f.read()
-    
-    swedish_code = swedish_code.replace("from .cooking_data import", "from cooking_data import")
-    
-    swedish_globals = {
-        "__name__": "swedish_cooking_data",
-        "__file__": swedish_file,
-    }
-    exec(swedish_code, swedish_globals)
-    
-    _SWE_CATEGORIES = swedish_globals.get("SWEDISH_MEAT_CATEGORIES", [])
-
-
-def get_category_icon(name):
-    """Get icon for category name."""
-    icons = {
-        "beef": "🥩", "nötkött": "🥩",
-        "pork": "🐷", "fläsk": "🐷",
-        "poultry": "🍗", "fågel": "🍗",
-        "lamb": "🐑", "lamm": "🐑",
-        "game": "🦌", "vilt": "🦌",
-        "fish": "🐟", "fisk": "🐟",
-        "shellfish": "🦐", "skaldjur": "🦐",
-        "vegetable": "🥬",
-        "kalv": "🐄",
-    }
-    return icons.get(name.lower(), "🍖")
-
-
-def cut_to_js(cut):
-    """Convert a MeatCut to JS object format."""
-    doneness_keys = [tr.name for tr in cut.temperature_ranges]
-
-    result = {
-        "id": cut.id,
-        "name": cut.name_long or cut.name,
-        "slug": cut.name,
-        "doneness": doneness_keys,
-    }
-    if cut.recommended_doneness:
-        result["recommended_doneness"] = cut.recommended_doneness
-    if cut.supported_methods:
-        result["supported_methods"] = [m.value for m in cut.supported_methods]
-    if cut.method_doneness:
-        result["method_doneness"] = cut.method_doneness
-    if cut.method_temperature_ranges:
-        result["method_doneness_options"] = {
-            method: [tr.name for tr in ranges]
-            for method, ranges in cut.method_temperature_ranges.items()
-        }
-    # recipe_slug: only emit when the cut explicitly defines one (see note at
-    # the top of this file about the removed Swedish slug map).
-    explicit = getattr(cut, "recipe_slug", None)
-    if explicit and explicit != cut.name:
-        result["recipe_slug"] = explicit
-    return result
-
-
-def category_to_js(category):
-    """Convert a MeatCategory to JS object format."""
-    meats_js = []
-    for meat in category.meats:
-        cut_types_js = []
-        for cut_type in meat.cut_types:
-            cuts_js = [cut_to_js(cut) for cut in cut_type.cuts]
-            cut_types_js.append({
-                "id": cut_type.id,
-                "name": cut_type.name,
-                "cuts": cuts_js,
-            })
-        
-        meats_js.append({
-            "id": meat.id,
-            "name": meat.name,
-            "cutTypes": cut_types_js,
-        })
-    
-    return {
-        "id": category.id,
-        "name": category.name.title(),
-        "icon": get_category_icon(category.name),
-        "color": category.color_hex,
-        "meats": meats_js,
-    }
-
-
-def get_doneness_levels(categories):
-    """Extract unique doneness levels from all cuts."""
-    doneness = {}
-    icons = {
-        "rare": "🔴", "blodig": "🔴",
-        "medium_rare": "🟠",
-        "medium": "🟡",
-        "medium_well": "🟤",
-        "well_done": "⚪", "genomstekt": "⚪",
-        "pulled": "🍖", "långkokt": "🍖",
-        "safe": "✅",
-        "dark_meat_optimal": "🍗",
-        "thigh_optimal": "🍗",
-        "thigh_rendered": "🦢",
-        "leg_rendered": "🦆",
-        "confit": "🦆",
-        "crispy": "🥓",
-        "heated_through": "♨️",
-        "done": "✓",
-        "tender": "🥔",
-        "crisp_tender": "🥦",
-        "caramelized": "🧅",
-        "charred": "🔥",
-        "just_cooked": "🦐",
-        "braised_tender": "🐙",
-        "quick_sear": "⚡",
-    }
-    for cat in categories:
-        for meat in cat.meats:
-            for cut_type in meat.cut_types:
-                for cut in cut_type.cuts:
-                    # Collect from default temperature_ranges
-                    for tr in cut.temperature_ranges:
-                        if tr.name not in doneness:
-                            doneness[tr.name] = {
-                                "value": tr.name,
-                                "name": tr.name.replace("_", " ").title(),
-                                "icon": icons.get(tr.name, "🔥"),
-                                "description": tr.description,
-                                "temp_c": tr.target_temp_c,
-                                "temp_f": tr.target_temp_f,
-                                "safety_level": getattr(tr, "safety_level", None),
-                            }
-                    # Also collect from per-method temperature range overrides
-                    for ranges in getattr(cut, "method_temperature_ranges", {}).values():
-                        for tr in ranges:
-                            if tr.name not in doneness:
-                                doneness[tr.name] = {
-                                    "value": tr.name,
-                                    "name": tr.name.replace("_", " ").title(),
-                                    "icon": icons.get(tr.name, "🔥"),
-                                    "description": tr.description,
-                                    "temp_c": tr.target_temp_c,
-                                    "temp_f": tr.target_temp_f,
-                                    "safety_level": getattr(tr, "safety_level", None),
-                                }
-    return doneness
-
 
 def get_cet_timestamp():
     """Get current time in CET/CEST as a human-readable string."""
@@ -758,22 +567,7 @@ def build_experimental_tree(base_dir):
 
 def generate_js_data():
     """Generate the JavaScript data section."""
-    _load_cooking_data()
-    
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    
-    # Convert categories
-    int_categories = {}
-    for category in _INT_CATEGORIES:
-        int_categories[category.name.lower()] = category_to_js(category)
-    
-    swe_categories = {}
-    for category in _SWE_CATEGORIES:
-        swe_categories[category.name.lower()] = category_to_js(category)
-    
-    # Extract doneness levels
-    int_doneness = get_doneness_levels(_INT_CATEGORIES)
-    swe_doneness = get_doneness_levels(_SWE_CATEGORIES)
     
     # Load Ninja Combi recipes
     ninja_combi_recipes = []
@@ -863,29 +657,6 @@ def generate_js_data():
     recipe_index, cut_profiles, cut_profiles_sv, cut_method_profiles, recipe_titles = build_recipe_index(base_dir)
     print(f"  Recipe index: {sum(len(v) for v in recipe_index.values())} files across {len(recipe_index)} cuts")
 
-    # Report international cut → recipe coverage. The MEATER path is locked to
-    # international data (see panel-class-template.js _getDataCategories), and every international MeatCut.name is expected to
-    # match a recipe filename slug under docs/recipe_research/. Cuts with no
-    # match simply show no recipe card — that is correct behaviour, not an
-    # error. We surface the breakdown so coverage can be tracked over time.
-    int_matched = []
-    int_unmatched = []
-    for cat in _INT_CATEGORIES:
-        for meat in cat.meats:
-            for cut_type in meat.cut_types:
-                for cut in cut_type.cuts:
-                    explicit = getattr(cut, "recipe_slug", None)
-                    key = explicit or cut.name
-                    if key in recipe_index:
-                        int_matched.append(cut.name)
-                    else:
-                        int_unmatched.append(cut.name)
-    print(
-        f"  International cut → recipe coverage: "
-        f"{len(int_matched)} matched, {len(int_unmatched)} unmatched "
-        f"(unmatched cuts simply show no recipe card)"
-    )
-
     # Build the experimental tree from KCE:CUT tagged cut files
     exp_tree, exp_doneness = build_experimental_tree(base_dir)
     exp_cut_count = sum(
@@ -904,21 +675,9 @@ def generate_js_data():
     
     lines = []
     lines.append(f"// AUTO-GENERATED DATA - DO NOT EDIT")
-    lines.append(f"// Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,")
+    lines.append(f"// Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,")
     lines.append(f"// measurements.py, and i18n/*.json")
     lines.append(f"// Last generated: {cet_time}")
-    lines.append("")
-    lines.append("// Doneness option definitions (International/USDA)")
-    lines.append(f"const DONENESS_OPTIONS = {json.dumps(int_doneness, indent=2, ensure_ascii=False)};")
-    lines.append("")
-    lines.append("// Swedish doneness option definitions")
-    lines.append(f"const SWEDISH_DONENESS_OPTIONS = {json.dumps(swe_doneness, indent=2, ensure_ascii=False)};")
-    lines.append("")
-    lines.append("// International meat categories")
-    lines.append(f"const MEAT_CATEGORIES = {json.dumps(int_categories, indent=2, ensure_ascii=False)};")
-    lines.append("")
-    lines.append("// Swedish meat categories")
-    lines.append(f"const SWEDISH_MEAT_CATEGORIES = {json.dumps(swe_categories, indent=2, ensure_ascii=False)};")
     lines.append("")
     lines.append("// Ninja Combi recipes")
     lines.append(f"const NINJA_COMBI_RECIPES = {json.dumps(ninja_combi_recipes, indent=2, ensure_ascii=False)};")
@@ -982,14 +741,12 @@ def regenerate_panel():
     
     This function:
     1. Reads the class code from panel-class-template.js (the source of truth for UI code)
-    2. Generates fresh data constants from the Python cooking data files
+    2. Generates fresh data constants from www/recipes/ KCE:CUT files
     3. Combines them into a new kitchen-cooking-panel.js
     
     The template file contains the UI class code and is updated by developers.
-    The data constants are generated from cooking_data.py and swedish_cooking_data.py.
+    The data constants are generated from www/recipes/ recipe markdown files.
     """
-    _load_cooking_data()
-    
     base_dir = os.path.dirname(os.path.abspath(__file__))
     panel_file = os.path.join(base_dir, "www", "kitchen-cooking-panel.js")
     template_file = os.path.join(base_dir, "www", "panel-class-template.js")
@@ -1024,7 +781,7 @@ def regenerate_panel():
  * ║    3. This regenerates kitchen-cooking-panel.js with your changes           ║
  * ║                                                                              ║
  * ║  TO CHANGE COOKING DATA:                                                     ║
- * ║    1. Edit cooking_data.py, swedish_cooking_data.py, or ninja_combi_data.py ║
+ * ║    1. Edit www/recipes/ KCE:CUT markdown files (single source of truth)     ║
  * ║    2. Run: python3 generate_frontend_data.py                                ║
  * ║                                                                              ║
  * ║  PANEL_VERSION is automatically kept in sync between const.py and this file ║
@@ -1032,7 +789,7 @@ def regenerate_panel():
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
  * AUTO-GENERATED: {cet_time}
- * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
+ * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
  * Temperature values are suggestions based on cooking style, not just safety.
@@ -1116,14 +873,6 @@ import {{
             print(f"Updated PANEL_VERSION in const.py: {old_const_version} -> {new_version}")
     
     print(f"Regenerated {panel_file}")
-    print(f"  International categories: {len(_INT_CATEGORIES)}")
-    print(f"  Swedish categories: {len(_SWE_CATEGORIES)}")
-    
-    # Count cuts
-    int_cuts = sum(len(ct.cuts) for cat in _INT_CATEGORIES for m in cat.meats for ct in m.cut_types)
-    swe_cuts = sum(len(ct.cuts) for cat in _SWE_CATEGORIES for m in cat.meats for ct in m.cut_types)
-    print(f"  International cuts: {int_cuts}")
-    print(f"  Swedish cuts: {swe_cuts}")
     
     # Count Ninja Combi recipes
     try:
