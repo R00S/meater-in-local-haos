@@ -82,3 +82,9 @@ Safe on all HA versions:
 - Added module-level `let _kceHaPanelParent` + `_kceRecoverPanel()` + listeners at end of template
 - Ran generator: PANEL_VERSION 362→363
 - Bumped version to 0.7.0.14
+
+### 2026-04-29 (Session 3 — CHORES)
+- Updated `docs/USER_GUIDE.md` version line `0.7.0.13` → `0.7.0.14`
+- Updated `README.md` version line `0.7.0.13` → `0.7.0.14`
+- Added `v0.7.0.14 Changes` changelog entry to `README.md`
+- No heading changes were made in this branch → no `_openHelp` anchor updates needed

@@ -26,9 +26,13 @@ Full installation, configuration, and feature documentation:
 
 ## 📊 Current Status
 
-**v0.7.0.13** — Development release (April 2026)
+**v0.7.0.14** — Development release (April 2026)
 
 Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.7.0.14 Changes — Fix: blank panel after 5-minute tab suspension (April 2026)
+- ✅ **Root cause identified from HA source** — HA's `partial-panel-resolver` removes `ha-panel-custom` from the DOM after the browser tab is hidden for 5 minutes (`suspendWhenHidden`). On older HA versions, re-appending the element does not recreate our panel, leaving it permanently blank
+- ✅ **Module-level recovery mechanism** — A `_kceRecoverPanel()` function and a `_kceHaPanelParent` reference are now registered at module scope (outside the class, never garbage-collected). On `visibilitychange` / `focus`, the recovery function checks if `ha-panel-custom` is alive but missing our element and, if so, calls `haPanel.requestUpdate('panel', null)` to force `ha-panel-custom` to recreate us. Safe on all HA versions — newer HA recreates the element before the 500 ms delay expires, so the check is a no-op
 
 ### v0.7.0.12–0.7.0.13 Changes — integer cut_id removed; slug is the only path (April 2026)
 - ✅ **`start_cook` accepts only EXP_TREE slugs** — Legacy integer `cut_id` support removed. `cut_id` is now strictly a string slug (e.g. `"ribeye_steak"`). The system has exactly one path: give it a slug, it reads the cut file, that's it
