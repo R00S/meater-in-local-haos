@@ -109,3 +109,15 @@ Safe on all HA versions:
 - Added `import os` to storage.py
 - Ran generator: PANEL_VERSION 364→365
 - Bumped version to 0.7.0.16
+
+### 2026-04-29 (Session 6 — cook history all-types + restart fix v0.7.0.17)
+- Root cause: `_renderHistory()` used hardcoded MEATER-only fields (`cook.cut`, `cook.protein`,
+  `cook.target_temp_c`); recipe/Ninja cooks have none of these → invisible blank cards on the
+  welcome-screen "Tidigare tillagningar" list
+- Replaced `_renderHistory()` inline card template with `this._renderHistoryCard(cook)`, which
+  already handles all cook types via `recipe_name || cut_display || cut`
+- Root cause 2: `_restartCook()` passed `cut_id` as-is; old MEATER cooks stored it as int,
+  but `SERVICE_START_COOK_SCHEMA` requires `str` → "expected str for dictionary value @ data['cut_id']"
+- Fixed: `cut_id: String(cook.cut_id)` — safe for both old int values and new string slugs
+- Ran generator: PANEL_VERSION 366→367
+- Bumped version to 0.7.0.17

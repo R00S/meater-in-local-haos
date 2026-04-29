@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 28 Apr 2026, 21:00 UTC
-Last Change: v0.7.0.16 - fix: previous cooks list not shown; atomic history write
+Last Updated: 29 Apr 2026, 06:00 UTC
+Last Change: v0.7.0.17 - fix: history shows all cook types; restart cut_id stringified
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.

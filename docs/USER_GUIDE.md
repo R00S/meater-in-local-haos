@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.7.0.16 · Home Assistant 2024.1.0+
+> **Version:** 0.7.0.17 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -204,7 +204,8 @@ The welcome screen is the home base. From here you can:
   cook's step-by-step guide.
 - **Open a cook started on another device** — if someone else started a cook on a different
   browser/tablet, it appears under "Started on another device" and can be adopted.
-- **Access Previous Cooks** — full cook history for temperature-based cooks.
+- **Access Previous Cooks** — full cook history for all cook types: temperature-based MEATER
+  cooks, Ninja Combi recipe cooks, and AI recipe cooks.
 
 ### 4.2 Settings Cards
 
@@ -1083,10 +1084,10 @@ Tap **Previous Cooks** on the welcome screen to open the cook history. Each card
 
 ### 11.2 Restarting a Previous Cook
 
-Tap **🔄 Restart This Cook** to:
+Tap **🔄 Restart This Cook** (or **Starta om tillagning**) on any history card to restart:
 
-- For **temperature cooks** — pre-fill the MEATER setup form with the same protein, cut,
-  doneness, and method, then start a new probe session.
+- For **temperature cooks** — the same protein, cut, doneness, method, and data source are
+  sent directly to the `start_cook` service. You are taken straight to the active cook view.
 - For **recipe cooks** — restart the same recipe cook flow from the overview page.
 
 ### 11.3 Editing Notes

@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 28 Apr 2026, 17:40 UTC
-Last Change: v0.7.0.16 - fix: previous cooks list not shown; atomic history write
+Last Updated: 29 Apr 2026, 06:00 UTC
+Last Change: v0.7.0.17 - fix: history shows all cook types; restart cut_id stringified
 """
 
 DOMAIN = "kitchen_cooking_engine"
