@@ -5,7 +5,7 @@
 [![Alpha](https://img.shields.io/badge/Status-ALPHA-orange.svg)](https://github.com/R00S/meater-in-local-haos)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/R00S)
 
-⚠️ **BETA RELEASE** — GUI Redesign Phases 1–8 complete.
+⚠️ **BETA RELEASE** — Dev Phases 1–8 complete 
 
 A local-first, AI-assisted kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes. 
 
