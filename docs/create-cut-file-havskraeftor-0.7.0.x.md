@@ -208,7 +208,31 @@ No heading changes in this session — all anchors remain valid (see previous CH
 
 ---
 
-## Getting Started Guides — 2026-04-29
+---
+
+## CHORES — 2026-04-29 (probe compatibility docs)
+
+### 1. Version bump
+- 0.7.0.20 → 0.7.0.21
+- Updated: manifest.json, __init__.py (__version__ + Last Change), const.py (Last Change)
+- PANEL_VERSION auto-incremented: 379 → 380
+
+### 2. Branch history update
+- This section fulfils that requirement
+
+### 3. USER_GUIDE updates
+- Version header updated: 0.7.0.20 → 0.7.0.21
+- Probe compatibility table already updated in the previous session (ThermoPro TempSpike row added)
+- No new section headings introduced
+
+### 4. GUI help button anchor check
+No heading changes in this session — all anchors remain valid (see previous CHORES section for full table).
+
+### What was done since last CHORES
+- Added ThermoPro TempSpike (TP960/TP962/TP970) row to built-in probe integrations table in `ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md`, `README.md`, and `docs/USER_GUIDE.md`
+- Added HACS `ha-thermopro-meat` row (TP902/TP920/TP25W/TP904) to HACS integrations table in `ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md`
+- Added "Probes without a Home Assistant integration" section (Typhur Sync, MeatStick, Weber Connect Hub, GrillGo, Nod Smart)
+
 
 ### Task
 Create two minimal getting-started guides for new users.
