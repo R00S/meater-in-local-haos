@@ -61,11 +61,13 @@
     - 10.1 [Adding Items](#101-adding-items)
     - 10.2 [Checking Off Items](#102-checking-off-items)
     - 10.3 [Exporting to HA Shopping List](#103-exporting-to-ha-shopping-list)
-11. [Cook History](#11-cook-history)
+11. [Cooked and Saved Recipes](#11-cooked-and-saved-recipes)
     - 11.1 [Viewing Past Cooks](#111-viewing-past-cooks)
-    - 11.2 [Restarting a Previous Cook](#112-restarting-a-previous-cook)
-    - 11.3 [Editing Notes](#113-editing-notes)
-    - 11.4 [Deleting a Cook](#114-deleting-a-cook)
+    - 11.2 [Saving a Recipe for Later](#112-saving-a-recipe-for-later)
+    - 11.3 [Filtering the List](#113-filtering-the-list)
+    - 11.4 [Restarting a Previous Cook](#114-restarting-a-previous-cook)
+    - 11.5 [Editing Notes](#115-editing-notes)
+    - 11.6 [Deleting a Cook](#116-deleting-a-cook)
 12. [Language and Measurement Settings](#12-language-and-measurement-settings)
 13. [Developer Services Reference](#13-developer-services-reference)
 14. [Troubleshooting](#14-troubleshooting)
@@ -223,8 +225,8 @@ The welcome screen is the home base. From here you can:
   cook's step-by-step guide.
 - **Open a cook started on another device** — if someone else started a cook on a different
   browser/tablet, it appears under "Started on another device" and can be adopted.
-- **Access Previous Cooks** — full cook history for all cook types: temperature-based MEATER
-  cooks, Ninja Combi recipe cooks, and AI recipe cooks.
+- **Access Cooked and Saved Recipes** — full cook history for all cook types: temperature-based MEATER
+  cooks, Ninja Combi recipe cooks, and AI recipe cooks, plus recipes saved for later.
 
 ### 4.2 Settings Cards
 
@@ -1086,11 +1088,11 @@ or use a HA automation to send it to a messaging platform.
 
 ---
 
-## 11. Cook History
+## 11. Cooked and Saved Recipes
 
 ### 11.1 Viewing Past Cooks
 
-Tap **Previous Cooks** on the welcome screen to open the cook history. Each card shows:
+Tap **Cooked and Saved Recipes** on the welcome screen to open the history. Each card shows:
 
 - Cook type (temperature-based, recipe, Ninja Combi, AI recipe)
 - Date and duration
@@ -1100,8 +1102,24 @@ Tap **Previous Cooks** on the welcome screen to open the cook history. Each card
 - Cooking method
 - Ease and result ratings (⭐ 1–5)
 - Notes
+- **💾 Saved** badge on recipes saved for later without cooking
 
-### 11.2 Restarting a Previous Cook
+### 11.2 Saving a Recipe for Later
+
+On the **fully generated recipe overview page** (step −1 of the recipe cook flow), tap
+**💾 Save for Later**. The recipe is stored in Cooked and Saved Recipes with the note
+*"Saved, not yet cooked"*. No ratings are required. You can restart it at any time.
+
+### 11.3 Filtering the List
+
+Use the two toggle buttons at the top of the Cooked and Saved Recipes screen:
+
+- **Hide saved** — hide recipes that were saved for later but never cooked.
+- **Hide cooked** — hide completed cooking sessions, showing only saved recipes.
+
+Tap the button again to reveal that group.
+
+### 11.4 Restarting a Previous Cook
 
 Tap **🔄 Restart This Cook** (or **Starta om tillagning**) on any history card to restart:
 
@@ -1109,11 +1127,11 @@ Tap **🔄 Restart This Cook** (or **Starta om tillagning**) on any history card
   sent directly to the `start_cook` service. You are taken straight to the active cook view.
 - For **recipe cooks** — restart the same recipe cook flow from the overview page.
 
-### 11.3 Editing Notes
+### 11.5 Editing Notes
 
 Tap **✏️ Edit Notes** on any history card to add or update notes. Changes save immediately.
 
-### 11.4 Deleting a Cook
+### 11.6 Deleting a Cook
 
 Tap **🗑️ Delete** and confirm to permanently remove the cook record.
 

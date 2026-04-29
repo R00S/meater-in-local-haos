@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 29 Apr 2026, 10:48 CET
+ * AUTO-GENERATED: 29 Apr 2026, 13:11 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 29 Apr 2026, 10:48 CET
+// Last generated: 29 Apr 2026, 13:11 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -8694,7 +8694,8 @@ const I18N_STRINGS = {
       "back_to_ingredients": "← Back to Ingredients",
       "back_to_cooking_style": "← Back to Cooking Style",
       "back_to_ai_builder": "← Back to AI Recipe Builder",
-      "back_to_list": "← Back to List"
+      "back_to_list": "← Back to List",
+      "back_to_cut_selection": "Back to Cut Selection"
     },
     "welcome": {
       "title": "🍳 Kitchen Cooking Engine",
@@ -8704,7 +8705,7 @@ const I18N_STRINGS = {
       "language_label": "🌐 Language / Språk",
       "data_source_label": "🌍 Temperature Data Source",
       "measurement_system_label": "📏 Measurement System",
-      "previous_cooks_description": "View and restart your past cooking sessions",
+      "previous_cooks_description": "View and manage your cooked and saved recipes",
       "configure_ai_agent": "Configure your AI agent to enable the Recipe Builder",
       "started_on_other_device": "Started on another device",
       "recipe_cook": "Recipe Cook",
@@ -8755,7 +8756,7 @@ const I18N_STRINGS = {
       "notes": "Notes",
       "notes_placeholder": "Add notes about this cook...",
       "save_notes": "Save Notes",
-      "previous_cooks": "Previous Cooks",
+      "previous_cooks": "Cooked and Saved Recipes",
       "no_history": "No cook history yet.",
       "delete_cook_confirm": "Delete this cook from history?",
       "choose_cut": "Choose a cut...",
@@ -8804,7 +8805,11 @@ const I18N_STRINGS = {
       "research_label": "Research",
       "fine_tune_temp": "⚙️ Fine-tune Temperature",
       "reset_to": "Reset to",
-      "select_type": "Select Type"
+      "select_type": "Select Type",
+      "ai_for_cut": "🤖 Get AI Recipe Suggestions",
+      "ai_weight_label": "Weight (optional):",
+      "ai_weight_placeholder": "e.g. 500g or 2 lbs",
+      "ai_for_cut_hint": "Let AI suggest recipes for this cut and cooking method"
     },
     "ninja": {
       "title": "🥷 Ninja Combi",
@@ -8940,7 +8945,9 @@ const I18N_STRINGS = {
       "incomplete_warning": "⚠️ Incomplete",
       "incomplete_message": "Please complete ingredient and style selection",
       "compulsory_toggle_hint": "Click to mark as compulsory (⭐ must use)",
-      "compulsory_badge_label": "Compulsory"
+      "compulsory_badge_label": "Compulsory",
+      "save_for_later": "💾 Save for Later",
+      "save_for_later_hint": "Save this recipe without cooking it now"
     },
     "recipe_cook": {
       "overview_title": "📋 Recipe Overview",
@@ -8981,7 +8988,7 @@ const I18N_STRINGS = {
       "result_rating": "Result",
       "cooked_on": "Cooked on",
       "duration": "Duration",
-      "previous_cooks_title": "📋 Previous Cooks",
+      "previous_cooks_title": "📋 Cooked and Saved Recipes",
       "cook_history_title": "📜 Cook History",
       "cook_history_subtitle": "Your past cooking sessions",
       "no_cooks_message": "No cooks recorded yet. Complete a cooking session to see it here!",
@@ -9006,7 +9013,11 @@ const I18N_STRINGS = {
       "edit_notes": "✏️ Edit Notes",
       "delete_btn": "🗑️ Delete",
       "update_notes_prompt": "Update notes:",
-      "serving_size_label": "Portions"
+      "serving_size_label": "Portions",
+      "filter_hide_saved": "Hide saved",
+      "filter_hide_cooked": "Hide cooked",
+      "saved_badge": "💾 Saved",
+      "no_saved_visible": "No entries match the current filters."
     },
     "measurements": {
       "tsp": "tsp",
@@ -9132,7 +9143,9 @@ const I18N_STRINGS = {
       "add_probe_instructions": "Please add a MEATER+ appliance in:\nSettings → Devices & Services → Add Integration → Kitchen Cooking Engine",
       "configure_probe_hint": "Please ensure your MEATER+ probe is configured properly.",
       "recipe_loaded_instructions": "Now configure your cook on the setup screen:\n- Select protein and cut\n- Choose doneness level\n- Select cooking method\n- Start your cook",
-      "recipe_loaded_tip": "Tip: The recipe \"{name}\" works best with {appliances}."
+      "recipe_loaded_tip": "Tip: The recipe \"{name}\" works best with {appliances}.",
+      "recipe_saved_for_later_title": "Recipe Saved",
+      "recipe_saved_for_later": "Recipe saved for later. Find it in Cooked and Saved Recipes."
     },
     "cuisines": {
       "nordic": "Nordic & Scandinavian",
@@ -9322,7 +9335,8 @@ const I18N_STRINGS = {
       "back_to_ingredients": "← Tillbaka till ingredienser",
       "back_to_cooking_style": "← Tillbaka till matlagningsstil",
       "back_to_ai_builder": "← Tillbaka till AI-receptbyggare",
-      "back_to_list": "← Tillbaka till listan"
+      "back_to_list": "← Tillbaka till listan",
+      "back_to_cut_selection": "Tillbaka till styckdelsval"
     },
     "welcome": {
       "title": "🍳 Kitchen Cooking Engine",
@@ -9332,7 +9346,7 @@ const I18N_STRINGS = {
       "language_label": "🌐 Språk / Language",
       "data_source_label": "🌍 Temperaturdata",
       "measurement_system_label": "📏 Måttsystem",
-      "previous_cooks_description": "Visa och starta om dina tidigare tillagningar",
+      "previous_cooks_description": "Visa och hantera dina tillagade och sparade recept",
       "configure_ai_agent": "Konfigurera din AI-agent för att aktivera receptbyggaren",
       "started_on_other_device": "Startad på en annan enhet",
       "recipe_cook": "Recepttillagning",
@@ -9383,7 +9397,7 @@ const I18N_STRINGS = {
       "notes": "Anteckningar",
       "notes_placeholder": "Lägg till anteckningar om denna tillagning...",
       "save_notes": "Spara anteckningar",
-      "previous_cooks": "Tidigare tillagningar",
+      "previous_cooks": "Tillagade och sparade recept",
       "no_history": "Ingen tillagningshistorik ännu.",
       "delete_cook_confirm": "Ta bort denna tillagning från historiken?",
       "choose_cut": "Välj en styckdel...",
@@ -9432,7 +9446,11 @@ const I18N_STRINGS = {
       "research_label": "Forskning",
       "fine_tune_temp": "⚙️ Finjustera temperatur",
       "reset_to": "Återställ till",
-      "select_type": "Välj typ"
+      "select_type": "Välj typ",
+      "ai_for_cut": "🤖 Hämta AI-receptförslag",
+      "ai_weight_label": "Vikt (valfritt):",
+      "ai_weight_placeholder": "T.ex. 500g eller 1 kg",
+      "ai_for_cut_hint": "Låt AI föreslå recept för denna styckdel och tillagningsmetod"
     },
     "ninja": {
       "title": "🥷 Ninja Combi",
@@ -9568,7 +9586,9 @@ const I18N_STRINGS = {
       "incomplete_warning": "⚠️ Ofullständig",
       "incomplete_message": "Slutför val av ingredienser och stil",
       "compulsory_toggle_hint": "Klicka för att markera som obligatorisk (⭐ måste användas)",
-      "compulsory_badge_label": "Obligatorisk"
+      "compulsory_badge_label": "Obligatorisk",
+      "save_for_later": "💾 Spara för senare",
+      "save_for_later_hint": "Spara receptet utan att laga det nu"
     },
     "recipe_cook": {
       "overview_title": "📋 Receptöversikt",
@@ -9609,7 +9629,7 @@ const I18N_STRINGS = {
       "result_rating": "Resultat",
       "cooked_on": "Tillagad",
       "duration": "Varaktighet",
-      "previous_cooks_title": "📋 Tidigare tillagningar",
+      "previous_cooks_title": "📋 Tillagade och sparade recept",
       "cook_history_title": "📜 Tillagningshistorik",
       "cook_history_subtitle": "Dina tidigare tillagningar",
       "no_cooks_message": "Inga tillagningar registrerade ännu. Slutför en tillagning för att se den här!",
@@ -9634,7 +9654,11 @@ const I18N_STRINGS = {
       "edit_notes": "✏️ Redigera anteckningar",
       "delete_btn": "🗑️ Ta bort",
       "update_notes_prompt": "Uppdatera anteckningar:",
-      "serving_size_label": "Portioner"
+      "serving_size_label": "Portioner",
+      "filter_hide_saved": "Dölj sparade",
+      "filter_hide_cooked": "Dölj tillagade",
+      "saved_badge": "💾 Sparad",
+      "no_saved_visible": "Inga poster matchar nuvarande filter."
     },
     "measurements": {
       "ml": "ml",
@@ -9758,7 +9782,9 @@ const I18N_STRINGS = {
       "add_probe_instructions": "Lägg till en MEATER+-apparat under:\nInställningar → Enheter & tjänster → Lägg till integration → Kitchen Cooking Engine",
       "configure_probe_hint": "Kontrollera att din MEATER+-sond är korrekt konfigurerad.",
       "recipe_loaded_instructions": "Konfigurera nu din tillagning på inställningsskärmen:\n- Välj protein och styckningsdetalj\n- Välj tillagningsgrad\n- Välj tillagningsmetod\n- Starta tillagningen",
-      "recipe_loaded_tip": "Tips: Receptet \"{name}\" fungerar bäst med {appliances}."
+      "recipe_loaded_tip": "Tips: Receptet \"{name}\" fungerar bäst med {appliances}.",
+      "recipe_saved_for_later_title": "Recept sparat",
+      "recipe_saved_for_later": "Receptet har sparats. Hitta det under Tillagade och sparade recept."
     },
     "cuisines": {
       "nordic": "Nordisk & Skandinavisk",
@@ -19306,6 +19332,19 @@ const COOKING_METHODS = [
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  */
 
+// Maps MEATER cooking method slugs to the nearest AI cooking style id.
+// Best-effort; any unrecognised slug falls back to 'comfort_food'.
+const MEATER_METHOD_TO_AI_STYLE = {
+  oven_roast: 'comfort_food', oven_bake: 'comfort_food', slow_roast: 'slow_cook',
+  grill: 'barbeque', bbq: 'barbeque', charcoal_grill: 'barbeque',
+  pan_fry: 'quick_and_easy', pan_sear: 'quick_and_easy',
+  smoke: 'barbeque', slow_cooker: 'slow_cook', braise: 'slow_cook',
+  deep_fry: 'quick_and_easy', air_fry: 'quick_and_easy',
+};
+
+// Sentinel string used to flag history entries saved for later without cooking.
+const SAVED_NOT_YET_COOKED = 'Saved, not yet cooked';
+
 class KitchenCookingPanel extends LitElement {
   static get properties() {
     return {
@@ -19439,6 +19478,13 @@ class KitchenCookingPanel extends LitElement {
       _fullscreenRecipeMode: { type: Boolean },
       _fullscreenRecipeTitle: { type: String },
       _fullscreenRecipeMonitoring: { type: Boolean },
+      // Feature: Cooked and Saved Recipes filters
+      _hideCooked: { type: Boolean },
+      _hideSaved: { type: Boolean },
+      // Feature: MEATER AI shortcut weight input
+      _meaterAiWeight: { type: String },
+      // Flag: AI suggestions reached from MEATER cut shortcut (affects back navigation)
+      _meaterAiFromShortcut: { type: Boolean },
 
     };
   }
@@ -19572,6 +19618,12 @@ class KitchenCookingPanel extends LitElement {
     this._fullscreenRecipeMode = false;
     this._fullscreenRecipeTitle = null;
     this._fullscreenRecipeMonitoring = false;
+    // Cooked and Saved Recipes filter toggles
+    this._hideCooked = false;
+    this._hideSaved = false;
+    // MEATER AI shortcut
+    this._meaterAiWeight = '';
+    this._meaterAiFromShortcut = false;
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
 
@@ -23684,6 +23736,35 @@ class KitchenCookingPanel extends LitElement {
             })() : ''}
           </div>
         </ha-card>
+
+        <!-- AI Recipe Suggestions shortcut — shown when AI is configured -->
+        ${this._aiAgentId ? html`
+          <ha-card>
+            <div class="card-content">
+              <h3>${this._t('meater.ai_for_cut')}</h3>
+              <p style="font-size:0.85em;color:var(--secondary-text-color);margin:0 0 12px 0;">
+                ${this._t('meater.ai_for_cut_hint')}
+              </p>
+              <label style="display:block;font-size:0.87em;font-weight:600;margin-bottom:4px;">
+                ${this._t('meater.ai_weight_label')}
+              </label>
+              <input
+                type="text"
+                .value=${this._meaterAiWeight}
+                @input=${(e) => { this._meaterAiWeight = e.target.value; }}
+                placeholder="${this._t('meater.ai_weight_placeholder')}"
+                style="width:100%;padding:8px;border:1px solid var(--divider-color);border-radius:6px;background:var(--primary-background-color);color:var(--primary-text-color);font-size:0.9em;box-sizing:border-box;margin-bottom:12px;"
+              >
+              <button
+                class="primary-btn"
+                style="width:100%;"
+                @click=${() => this._goToAISuggestionsForCut()}
+              >
+                ${this._t('meater.ai_for_cut')}
+              </button>
+            </div>
+          </ha-card>
+        ` : ''}
         
         <!-- Start Button -->
         <div class="action-container">
@@ -25360,11 +25441,17 @@ class KitchenCookingPanel extends LitElement {
       <div class="path-header">
         <button class="back-btn" @click=${() => {
           this._showAIRecipeSuggestions = false;
-          this._showAIStyleSelector = true;
           this._aiRecipeSuggestions = [];
+          if (this._meaterAiFromShortcut) {
+            // Came from MEATER cut shortcut — go back to MEATER path
+            this._meaterAiFromShortcut = false;
+            this._currentPath = 'meater_experimental';
+          } else {
+            this._showAIStyleSelector = true;
+          }
           this.requestUpdate();
         }}>
-          ← ${this._t('nav.back_to_cooking_style')}
+          ← ${this._meaterAiFromShortcut ? this._t('nav.back_to_cut_selection') : this._t('nav.back_to_cooking_style')}
         </button>
         <h2>${this._t('ai_recipe.suggestions_title')}</h2>
       </div>
@@ -25495,6 +25582,7 @@ class KitchenCookingPanel extends LitElement {
    */
   _renderHistoryCard(cook) {
     const displayName = cook.recipe_name || cook.cut_display || cook.cut || this._t('history.cook_details_title');
+    const isSaved = cook.comment === SAVED_NOT_YET_COOKED;
     return html`
       <ha-card class="history-card clickable" @click=${() => {
         this._selectedCookForDetail = cook;
@@ -25503,7 +25591,14 @@ class KitchenCookingPanel extends LitElement {
         <div class="card-content">
           <div class="history-header">
             <h3>${displayName}</h3>
-            <span class="history-date">${this._formatDateTime(cook.completed_at)}</span>
+            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+              ${isSaved ? html`
+                <span style="background:var(--primary-color);color:var(--text-primary-color);padding:2px 8px;border-radius:10px;font-size:0.75em;white-space:nowrap;">
+                  ${this._t('history.saved_badge')}
+                </span>
+              ` : ''}
+              <span class="history-date">${this._formatDateTime(cook.completed_at)}</span>
+            </div>
           </div>
           <div class="history-details">
             ${cook.appliance_name ? html`<span class="history-detail">🍳 ${cook.appliance_name}</span>` : ''}
@@ -25534,6 +25629,10 @@ class KitchenCookingPanel extends LitElement {
     if (this._selectedCookForDetail) {
       return this._renderCookDetailView(this._selectedCookForDetail);
     }
+
+    const toggleBtnBase = 'padding:6px 12px;border-radius:16px;border:1px solid var(--divider-color);cursor:pointer;font-size:0.82em;';
+    const activeToggle  = toggleBtnBase + 'background:var(--primary-color);color:var(--text-primary-color);font-weight:600;';
+    const inactiveToggle = toggleBtnBase + 'background:transparent;color:var(--secondary-text-color);';
     
     return html`
       <div class="path-header">
@@ -25543,6 +25642,21 @@ class KitchenCookingPanel extends LitElement {
         <h2>${this._t('history.previous_cooks_title')}</h2>
         <button class="help-btn" @click=${() => this._openHelp('#11-cook-history')} title="Open User Guide">?</button>
       </div>
+
+      <!-- Filter toggles -->
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;padding:0 4px;">
+        <button
+          style="${this._hideSaved ? activeToggle : inactiveToggle}"
+          @click=${() => { this._hideSaved = !this._hideSaved; this.requestUpdate(); }}>
+          ${this._t('history.filter_hide_saved')}
+        </button>
+        <button
+          style="${this._hideCooked ? activeToggle : inactiveToggle}"
+          @click=${() => { this._hideCooked = !this._hideCooked; this.requestUpdate(); }}>
+          ${this._t('history.filter_hide_cooked')}
+        </button>
+      </div>
+
       ${this._renderHistory()}
     `;
   }
@@ -26080,6 +26194,54 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
+   * Save the current recipe for future use without cooking it.
+   * Stores to history with comment "Saved, not yet cooked" and no ratings.
+   * Then exits the recipe cook flow.
+   */
+  async _saveRecipeForLater() {
+    if (!this._recipeCookState) return;
+
+    const state = this._recipeCookState;
+    const recipe = state.recipe;
+
+    // Decode HTML entities in name
+    const displayName = recipe.name ? (() => { const t = document.createElement('textarea'); t.innerHTML = recipe.name; return t.value; })() : '';
+
+    try {
+      await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/save_cook', {
+        recipe_id: recipe.id || recipe.name,
+        recipe_name: displayName || recipe.name,
+        serving_size: state.servingSize,
+        duration_seconds: 0,
+        ease_rating: 0,
+        result_rating: 0,
+        notes: '',
+        comment: SAVED_NOT_YET_COOKED,
+        ingredients: recipe.ingredients || recipe.main_ingredients || [],
+        appliance_id: this._selectedAppliance?.id || null,
+        recipe_data: {
+          id: recipe.id || recipe.name,
+          name: recipe.name,
+          description: recipe.description || '',
+          instructions: recipe.instructions || [],
+          ingredients: recipe.ingredients || recipe.main_ingredients || [],
+          cook_time_minutes: recipe.cook_time_minutes || 0,
+          servings: recipe.servings || state.servingSize || 4,
+          tips: recipe.tips || [],
+          difficulty: recipe.difficulty || 'Medium'
+        }
+      });
+
+      this._showMessage('✅ ' + this._t('messages.recipe_saved_for_later_title'), this._t('messages.recipe_saved_for_later'));
+      this._stopRecipeCook();
+
+    } catch (error) {
+      console.error('Error saving recipe for later:', error);
+      this._showMessage('❌ ' + this._t('messages.recipe_cook_save_error_title'), `${this._t('messages.recipe_cook_save_error')} ${error.message}`, true);
+    }
+  }
+
+  /**
    * Phase 6: Toggle ingredient selection
    */
   _toggleIngredient(ingredient, enabled) {
@@ -26182,6 +26344,53 @@ class KitchenCookingPanel extends LitElement {
   // Keep old name as alias so nothing else breaks if called elsewhere.
   _startAIStatusUpdater() { this._startAIStatusPolling(); }
   _stopAIStatusUpdater()  { this._stopAIStatusPolling();  }
+
+  /**
+   * Navigate from the MEATER cut/method selection directly to the AI suggestions
+   * stage, pre-seeded with the selected cut, cooking method, and optional weight.
+   *
+   * Two "ingredients" are submitted so the existing ≥2 validation passes:
+   *  1. The cut name (+ weight if given) — marked compulsory.
+   *  2. The cooking method name — gives the AI useful context, not compulsory.
+   */
+  async _goToAISuggestionsForCut() {
+    const cut = this._getCuts().find(c => c.id === this._selectedCut);
+    if (!cut) {
+      this._showMessage('⚠️ ' + this._t('messages.incomplete_title'), this._t('messages.incomplete_selection'), true);
+      return;
+    }
+
+    const cutName = (this._language === 'sv' && cut.name_sv) ? cut.name_sv : (cut.name_long || cut.name);
+    const weight  = (this._meaterAiWeight || '').trim();
+    const cutLabel = weight ? `${cutName} (${weight})` : cutName;
+
+    // Translate method or fall back to slug-as-words
+    const rawMethodTranslation = this._t('cooking_methods.' + (this._selectedMethod || ''));
+    const methodLabel = (rawMethodTranslation && !rawMethodTranslation.startsWith('cooking_methods.'))
+      ? rawMethodTranslation
+      : (this._selectedMethod || '').split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+
+    const cookingStyle = MEATER_METHOD_TO_AI_STYLE[this._selectedMethod] || 'comfort_food';
+
+    // Pre-seed AI state
+    this._selectedIngredients = [
+      { name: cutLabel, compulsory: true },
+      { name: methodLabel, compulsory: false },
+    ];
+    this._selectedCookingStyle = cookingStyle;
+    this._showAIIngredientSelector = false;
+    this._showAIStyleSelector = false;
+    this._showAIRecipeSuggestions = true;
+    this._aiRecipeSuggestions = [];
+    this._meaterAiFromShortcut = true;
+
+    // Navigate to AI builder path (keeps _selectedAppliance set from MEATER path)
+    this._currentPath = 'ai_recipe_builder';
+    this.requestUpdate();
+
+    // Trigger generation
+    await this._generateAIRecipes();
+  }
 
   /**
    * Phase 6: Generate AI recipes based on selections
@@ -26558,6 +26767,18 @@ class KitchenCookingPanel extends LitElement {
             🔄 ${this._t('ai_recipe.retry_generation') || 'Retry Recipe Generation'}
           </button>
         `}
+
+        <!-- Save for Later button — saves without cooking, no ratings required -->
+        <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--divider-color);">
+          <button
+            class="secondary-btn"
+            style="width: 100%;"
+            title="${this._t('ai_recipe.save_for_later_hint')}"
+            @click=${() => this._saveRecipeForLater()}
+          >
+            ${this._t('ai_recipe.save_for_later')}
+          </button>
+        </div>
       </div>
     `;
   }
@@ -27152,17 +27373,36 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _renderHistory() {
-    return html`
-      ${this._cookHistory.length === 0 ? html`
+    if (this._cookHistory.length === 0) {
+      return html`
         <ha-card>
           <div class="card-content">
             <p class="no-history">${this._t('history.no_cooks_message')}</p>
           </div>
         </ha-card>
-      ` : html`
-        ${this._cookHistory.map(cook => this._renderHistoryCard(cook))}
-      `}
-    `;
+      `;
+    }
+
+    // Filter based on toggle state
+    // A "saved" entry has comment === 'Saved, not yet cooked'
+    const filtered = this._cookHistory.filter(cook => {
+      const isSaved = cook.comment === SAVED_NOT_YET_COOKED;
+      if (this._hideSaved && isSaved) return false;
+      if (this._hideCooked && !isSaved) return false;
+      return true;
+    });
+
+    if (filtered.length === 0) {
+      return html`
+        <ha-card>
+          <div class="card-content">
+            <p class="no-history">${this._t('history.no_saved_visible')}</p>
+          </div>
+        </ha-card>
+      `;
+    }
+
+    return html`${filtered.map(cook => this._renderHistoryCard(cook))}`;
   }
 
   _startCook() {
@@ -30082,7 +30322,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "380";
+const PANEL_VERSION = "382";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
