@@ -88,3 +88,15 @@ Safe on all HA versions:
 - Updated `README.md` version line `0.7.0.13` → `0.7.0.14`
 - Added `v0.7.0.14 Changes` changelog entry to `README.md`
 - No heading changes were made in this branch → no `_openHelp` anchor updates needed
+
+### 2026-04-29 (Session 4 — fullscreen recipe viewer + cook monitor v0.7.0.15)
+- Added `_fullscreenRecipeMode`, `_fullscreenRecipeTitle`, `_fullscreenRecipeMonitoring` reactive properties
+- Added `_openRecipeFullscreen(url, index, title)` — fetches file, sets fullscreen state
+- Added `_closeRecipeFullscreen()` — resets all fullscreen state
+- Added `_startCookInRecipeFullscreen()` — calls start_cook service, stays in fullscreen, sets monitoring flag
+- Added `_renderRecipeFullscreen()` — full-screen recipe viewer with recipe-cook-header, Start Cook button, and 🏠 nav button when monitoring
+- Added `_renderRecipeFullscreenMonitor(state)` — compact monitor card (temp display, progress bar, ETA, action buttons)
+- Wired both recipe button locations to `_openRecipeFullscreen` (removed inline content rendering)
+- Added priority check in `_renderContent()` for `_fullscreenRecipeMode`
+- Ran generator: PANEL_VERSION 363→364
+- Bumped version to 0.7.0.15
