@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 29 Apr 2026, 08:00 UTC
-Last Change: v0.8.0.0 - save recipe without cooking, rename Previous Cooks to Cooked and Saved, AI path from MEATER cut selection
+Last Change: v0.8.0.1 - chores: fix help anchor, user guide updates, code quality constants
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -176,7 +176,7 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.8.0.0"
+__version__ = "0.8.0.1"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

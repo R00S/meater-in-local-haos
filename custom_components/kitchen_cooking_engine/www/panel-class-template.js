@@ -6330,7 +6330,7 @@ class KitchenCookingPanel extends LitElement {
           ${this._t('nav.back_to_appliances')}
         </button>
         <h2>${this._t('history.previous_cooks_title')}</h2>
-        <button class="help-btn" @click=${() => this._openHelp('#11-cook-history')} title="Open User Guide">?</button>
+        <button class="help-btn" @click=${() => this._openHelp('#11-cooked-and-saved-recipes')} title="Open User Guide">?</button>
       </div>
 
       <!-- Filter toggles -->

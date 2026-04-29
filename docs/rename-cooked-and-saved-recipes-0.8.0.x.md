@@ -40,10 +40,29 @@
 **Generator**
 - `python3 generate_frontend_data.py` ran successfully; PANEL_VERSION bumped 117 → 381.
 
+### 2026-04-29 — v0.8.0.0 → v0.8.0.1 — Code quality fixes + CHORES
+
+**Code quality fixes (addressing parallel_validation review feedback)**
+- Extracted `SAVED_NOT_YET_COOKED` as a module-level constant (was a repeated inline string literal in `_renderHistory`, `_renderHistoryCard`, `_saveRecipeForLater`).
+- Extracted `MEATER_METHOD_TO_AI_STYLE` as a module-level constant (was defined inline inside `_goToAISuggestionsForCut` on every call).
+- Added user-facing error message via `_showMessage()` when cut lookup fails in `_goToAISuggestionsForCut` (was a silent return).
+- Removed unnecessary `|| 'Back to Cut Selection'` fallback string from `_renderAIRecipeSuggestions` back button (key `nav.back_to_cut_selection` exists in both i18n files).
+
+**CHORES**
+- Bumped version 0.8.0.0 → 0.8.0.1 in manifest.json, `__init__.py`, and `const.py`.
+- Fixed stale `_openHelp('#11-cook-history')` anchor → `#11-cooked-and-saved-recipes` (section was renamed in this branch).
+- Updated `docs/USER_GUIDE.md`:
+  - Section 7.5: added note that Save for Later is available on the overview page.
+  - Section 8.1: added paragraph describing the 💾 Save for Later button (AI recipes only).
+  - Section 5.9: added "Getting AI recipe suggestions for a cut" subsection documenting the weight input + jump-to-AI-suggestions shortcut.
+- Regenerated `kitchen-cooking-panel.js` (PANEL_VERSION → 383).
+
 ## Status
 
 - [x] Feature 1: Save recipe without cooking — button on fully generated recipe overview
 - [x] Feature 2: Rename Previous Cooks → Cooked and Saved Recipes + toggle filters + saved badge
 - [x] Feature 3: AI shortcut from MEATER cut selection (weight input + jump to suggestions)
-- [x] Documentation / user guide updates (USER_GUIDE.md section 11)
+- [x] Documentation / user guide updates (USER_GUIDE.md sections 5.9, 7.5, 8.1, 11)
 - [x] api.py comment field, i18n en+sv, generator run
+- [x] Code quality constants (SAVED_NOT_YET_COOKED, MEATER_METHOD_TO_AI_STYLE)
+- [x] CHORES: version bump, stale anchor fix, user guide additions
