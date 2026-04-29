@@ -26,9 +26,13 @@ Full installation, configuration, and feature documentation:
 
 ## 📊 Current Status
 
-**v0.7.0.15** — Development release (April 2026)
+**v0.7.0.16** — Development release (April 2026)
 
 Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.7.0.16 Changes — Fix: Tidigare tillagningar always empty + atomic history write (April 2026)
+- ✅ **Fix: Tidigare tillagningar (Previous Cooks) always empty** — `_renderPreviousCooksPath()` only rendered the path-header and stopped; never called `_renderHistory()`. Data was never corrupted — it just was never displayed.
+- ✅ **Fix: atomic history write** — `async_save_cook_history()` now writes to a `.tmp` file first, then `os.replace()` atomically renames it, preventing file truncation if HA crashes mid-write.
 
 ### v0.7.0.15 Changes — Full-screen recipe viewer with live cook monitor (April 2026)
 - ✅ **Full-screen recipe viewer** — Clicking any recipe title button in the MEATER path (both in the Tillagningsmetod card and the Cut Profile research card) now opens the recipe full-screen using the same header style as the AI recipe cook flow, with a ← back button to return

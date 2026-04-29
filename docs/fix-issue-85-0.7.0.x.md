@@ -100,3 +100,12 @@ Safe on all HA versions:
 - Added priority check in `_renderContent()` for `_fullscreenRecipeMode`
 - Ran generator: PANEL_VERSION 363→364
 - Bumped version to 0.7.0.15
+
+### 2026-04-29 (Session 5 — history fix v0.7.0.16)
+- Root cause confirmed: `_renderPreviousCooksPath()` rendered path-header only, never called `_renderHistory()` — data was never corrupted
+- Added `${this._renderHistory()}` call inside `_renderPreviousCooksPath()`
+- Removed duplicate `status-banner` header from `_renderHistory()` (path-header already provides the title)
+- Hardened `async_save_cook_history()` in storage.py with atomic write (write to `.tmp` + `os.replace()`) to prevent future corruption from mid-write HA crash
+- Added `import os` to storage.py
+- Ran generator: PANEL_VERSION 364→365
+- Bumped version to 0.7.0.16

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 29 Apr 2026, 06:17 CET
+ * AUTO-GENERATED: 29 Apr 2026, 06:34 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 29 Apr 2026, 06:17 CET
+// Last generated: 29 Apr 2026, 06:34 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -32088,6 +32088,7 @@ class KitchenCookingPanel extends LitElement {
         <h2>${this._t('history.previous_cooks_title')}</h2>
         <button class="help-btn" @click=${() => this._openHelp('#11-cook-history')} title="Open User Guide">?</button>
       </div>
+      ${this._renderHistory()}
     `;
   }
 
@@ -33697,11 +33698,6 @@ class KitchenCookingPanel extends LitElement {
 
   _renderHistory() {
     return html`
-      <div class="status-banner idle">
-        <h2>${this._t('history.cook_history_title')}</h2>
-        <p>${this._t('history.cook_history_subtitle')}</p>
-      </div>
-      
       ${this._cookHistory.length === 0 ? html`
         <ha-card>
           <div class="card-content">
@@ -36664,7 +36660,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "364";
+const PANEL_VERSION = "365";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

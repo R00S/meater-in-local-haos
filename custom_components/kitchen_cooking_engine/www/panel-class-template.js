@@ -6259,6 +6259,7 @@ class KitchenCookingPanel extends LitElement {
         <h2>${this._t('history.previous_cooks_title')}</h2>
         <button class="help-btn" @click=${() => this._openHelp('#11-cook-history')} title="Open User Guide">?</button>
       </div>
+      ${this._renderHistory()}
     `;
   }
 
@@ -7868,11 +7869,6 @@ class KitchenCookingPanel extends LitElement {
 
   _renderHistory() {
     return html`
-      <div class="status-banner idle">
-        <h2>${this._t('history.cook_history_title')}</h2>
-        <p>${this._t('history.cook_history_subtitle')}</p>
-      </div>
-      
       ${this._cookHistory.length === 0 ? html`
         <ha-card>
           <div class="card-content">
