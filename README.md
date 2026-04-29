@@ -704,36 +704,6 @@ Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card
 - ✅ **💾 Saved badge** — Entries saved without cooking show a distinct "💾 Saved" badge in the list
 - ✅ **Save for Later** — New button on the AI recipe overview page saves a fully generated recipe to history with `comment = "Saved, not yet cooked"` so you can cook it another time without going through the AI builder again
 - ✅ **Jump to AI from MEATER cut selection** — When an end leaf (cut or cut-method) is selected and an AI agent is configured, a weight input box and "Get AI Recipe Suggestions" button appear; tapping it pre-seeds the AI builder with the selected cut + weight, sets the cooking style to match the MEATER method, and carries the correct target temperature through to the recipe cook flow (guaranteed even if the AI omits `use_probe` / `target_temp_c`)
-- ✅ **Fix: Start MEATER Probe button missing in AI recipes from shortcut** — Probe card now also appears on the overview page (step −1), not only inside per-step views
-
-### v0.7.0.17 Changes — Fix: cook history shows all cook types + restart cut_id crash (April 2026)
-- ✅ **Fix: cook history shows all cook types** — `_renderHistory()` used a hardcoded MEATER-only template (`cook.cut`, `cook.protein`, `cook.target_temp_c`); recipe and Ninja cooks have none of those fields, so their cards rendered as invisible zero-height elements. Now delegates to `_renderHistoryCard(cook)`, which handles all cook types via `recipe_name || cut_display || cut`.
-- ✅ **Fix: restart crash with old MEATER cooks** — `_restartCook()` passed `cut_id` directly to the `start_cook` service; the service schema requires `str`, but cooks saved before the slug migration stored `cut_id` as an integer. Now always coerces with `String(cook.cut_id)`, safe for both old integer records and new string slugs.
-
-### v0.7.0.16 Changes — Fix: Tidigare tillagningar always empty + atomic history write (April 2026)
-- ✅ **Fix: Tidigare tillagningar (Previous Cooks) always empty** — `_renderPreviousCooksPath()` only rendered the path-header and stopped; never called `_renderHistory()`. Data was never corrupted — it just was never displayed.
-- ✅ **Fix: atomic history write** — `async_save_cook_history()` now writes to a `.tmp` file first, then `os.replace()` atomically renames it, preventing file truncation if HA crashes mid-write.
-
-### v0.7.0.15 Changes — Full-screen recipe viewer with live cook monitor (April 2026)
-- ✅ **Full-screen recipe viewer** — Clicking any recipe title button in the MEATER path (both in the Tillagningsmetod card and the Cut Profile research card) now opens the recipe full-screen using the same header style as the AI recipe cook flow, with a ← back button to return
-- ✅ **Start Cook from recipe view** — A "Start Cooking" button appears at the bottom of the full-screen recipe viewer (when a doneness is already selected), allowing the cook to be started without leaving the recipe
-- ✅ **Live MEATER cook monitor** — After starting a cook from the recipe view, the recipe stays on screen and a compact monitor card appears below it showing: current temperature, target temperature, progress bar, ETA/rest time, and Start Rest / Complete / Stop buttons. The user can read the recipe and watch the cook simultaneously
-- ✅ **🏠 Go to full active-cook view** — When monitoring is active, a home button in the header navigates to the full active-cook view (with temperature graph, notes, etc.) while keeping the cook running
-
-### v0.7.0.14 Changes — Fix: blank panel after 5-minute tab suspension (April 2026)
-- ✅ **Root cause identified from HA source** — HA's `partial-panel-resolver` removes `ha-panel-custom` from the DOM after the browser tab is hidden for 5 minutes (`suspendWhenHidden`). On older HA versions, re-appending the element does not recreate our panel, leaving it permanently blank
-- ✅ **Module-level recovery mechanism** — A `_kceRecoverPanel()` function and a `_kceHaPanelParent` reference are now registered at module scope (outside the class, never garbage-collected). On `visibilitychange` / `focus`, the recovery function checks if `ha-panel-custom` is alive but missing our element and, if so, calls `haPanel.requestUpdate('panel', null)` to force `ha-panel-custom` to recreate us. Safe on all HA versions — newer HA recreates the element before the 500 ms delay expires, so the check is a no-op
-
-### v0.7.0.12–0.7.0.13 Changes — integer cut_id removed; slug is the only path (April 2026)
-- ✅ **`start_cook` accepts only EXP_TREE slugs** — Legacy integer `cut_id` support removed. `cut_id` is now strictly a string slug (e.g. `"ribeye_steak"`). The system has exactly one path: give it a slug, it reads the cut file, that's it
-- ✅ **Simplified `start_cook` handler** — Integer branch, `_get_protein_name_for_cut` helpers, and all remaining imports from `cooking_data.py` / `swedish_cooking_data.py` removed from `__init__.py`
-
-### v0.7.0.9–0.7.0.11 Changes — start_cook service & bug fixes (April 2026)
-- ✅ **`start_cook` accepts EXP_TREE slugs** — `cut_id` is a string slug (e.g. `"ribeye_steak"`); the service looks up temperatures and rest times from the recipe markdown files
-- ✅ **Rest time and carryover data in KCE:CUT** — `rest_time_min`, `rest_time_max`, and `carryover_temp_c` optional fields added to the cut overview format; the generator populates these into `EXP_TREE` for use by the cooking engine
-- ✅ **Per-method rest/carryover overrides in KCE:CUT_METHOD** — braise, sous_vide, and slow_cooker files can now override the cut-level rest/carryover defaults for their specific method
-- ✅ **Fix: `PLATFORMS` undefined** — `PLATFORMS = [Platform.SENSOR]` was missing from `__init__.py`; this caused a `NameError` that silently prevented all config entries from setting up sensor entities, causing every service call to fail
-- ✅ **Fix: blocking I/O in event loop** — `_get_exp_cut_data` was calling `os.walk()` + `open()` directly in the async event loop; moved to `hass.async_add_executor_job()` to avoid HA blocking-call warnings
 
 ### v0.7.0.x Changes — Classic MEATER path removed; single recipe source of truth (April 2026)
 - ✅ **Classic MEATER path retired** — The old `_currentPath = 'meater'` code path (~400 lines including `_renderMeaterPath`, `_renderSetupForm`, `_navigateToMeaterPath`) has been deleted. MEATER+ now routes directly to the experimental path
@@ -742,30 +712,30 @@ Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card
 - ✅ **Generator cleaned up** — `CLASSIC_RECIPE_INDEX`, `CLASSIC_CUT_PROFILES`, `CLASSIC_CUT_PROFILES_SV`, `CLASSIC_CUT_METHOD_PROFILES`, `CLASSIC_RECIPE_TITLES` constants removed from generator output; `docs/recipe_research_classic/` and `www/recipes_classic/` deleted
 - ✅ **Single source of truth for recipe files** — `www/recipes/` is now the ONLY source. `generate_frontend_data.py` reads directly from `www/recipes/`; `copy_recipe_files_to_www()` removed. `docs/recipe_research/` is now a git symlink pointing to `www/recipes/` so both paths remain browsable
 - ✅ **Swedish pork terminology fixes** — `fläskaxel` → `fläskbog` everywhere; `Bogkotlett` (trade name) → `Bogskiva`; `görs av fläskbog` vs `görs av bogfläsk` (ingredient context) fixed in ground pork files
+- ✅ **`start_cook` accepts EXP_TREE slugs** — `cut_id` is a string slug (e.g. `"ribeye_steak"`); the service looks up temperatures and rest times from the recipe markdown files
+- ✅ **Rest time and carryover data in KCE:CUT** — `rest_time_min`, `rest_time_max`, and `carryover_temp_c` optional fields added to the cut overview format; the generator populates these into `EXP_TREE` for use by the cooking engine
+- ✅ **Per-method rest/carryover overrides in KCE:CUT_METHOD** — braise, sous_vide, and slow_cooker files can now override the cut-level rest/carryover defaults for their specific method
+- ✅ **`start_cook` accepts only EXP_TREE slugs** — Legacy integer `cut_id` support removed. `cut_id` is now strictly a string slug (e.g. `"ribeye_steak"`). The system has exactly one path: give it a slug, it reads the cut file, that's it
+- ✅ **Simplified `start_cook` handler** — Integer branch, `_get_protein_name_for_cut` helpers, and all remaining imports from `cooking_data.py` / `swedish_cooking_data.py` removed from `__init__.py`
+- ✅ **Full-screen recipe viewer** — Clicking any recipe title button in the MEATER path (both in the Tillagningsmetod card and the Cut Profile research card) now opens the recipe full-screen using the same header style as the AI recipe cook flow, with a ← back button to return
+- ✅ **Start Cook from recipe view** — A "Start Cooking" button appears at the bottom of the full-screen recipe viewer (when a doneness is already selected), allowing the cook to be started without leaving the recipe
+- ✅ **Live MEATER cook monitor** — After starting a cook from the recipe view, the recipe stays on screen and a compact monitor card appears below it showing: current temperature, target temperature, progress bar, ETA/rest time, and Start Rest / Complete / Stop buttons. The user can read the recipe and watch the cook simultaneously
+- ✅ **🏠 Go to full active-cook view** — When monitoring is active, a home button in the header navigates to the full active-cook view (with temperature graph, notes, etc.) while keeping the cook running
 
 ### v0.6.5.x Changes — Swedish cut profiles & translation quality (April 2026)
 - ✅ **Swedish cut-profile body text** — `## Styckesprofil` sections now cover all 163 experimental-path cuts; the **Styckesprofil** card and **Tillagningsmetod** method-description area render in Swedish when UI language is set to Svenska (falls back to English when no Swedish section exists)
 - ✅ **Full translation pipeline** — `generate_frontend_data.py` extracts `## Styckesprofil` into `CUT_PROFILES_SV`, `CLASSIC_CUT_PROFILES_SV`, and per-method `_sv` keys in `CUT_METHOD_PROFILES`; all 163 cut overview files and their method leaves carry Swedish descriptions
 - ✅ **30 beef cut profiles enriched** — Detailed Swedish anatomy descriptions for ribeye, T-bone, NY strip, sirloin, hanger, flank, skirt, flat iron, picanha, tomahawk, prime rib, and several roasts; sourced from Grok's richer translation set where it outperformed the initial Copilot translations
-- ✅ **Terminology fix: sirloin** — `sirloin_steak.md` corrected from "Entrecôtebiff" (wrong: entrecôte = ribeye in Swedish) to "Sirloin-biffen"; other Swedish anatomical terms audited
-- ✅ **Fix: wrong Swedish cut names** — `Buffelbiff`/`Buffelburgare` (was Bufflabiff/Bufflaburgare) and `Spagettipumpa` (was German "Spagettikürbis") corrected in cooking data
 
 ### v0.6.4.x Changes — Recipe research quality pass & data fixes (April 2026)
-- ✅ **Fix: Duplicate ground turkey cut** — Removed redundant `turkey_ground` entry from the Turkey cut type; `ground_turkey` is now the single canonical entry under Ground Poultry
 - ✅ **50+ cut files improved** — Anatomy-based cut profiles, new method leaf files, and additional recipe sources across beef, pork, lamb, poultry, fish, and game
 - ✅ **Culinary group renames** — Direction names (Eastern/Western/etc.) replaced with Group A/B/C/D labels repo-wide to prevent name-based guessing in future research sessions
 
 ### v0.6.3.x Fixes — Blank screen & custom card registration (April 2026)
-- ✅ **Fix: Sidebar panel blank screen** — Reverted bare `"lit"` import to the working unpkg CDN URL; fixed broken ternary syntax error in `_renderNinjaBuiltInRecipesView`
-- ✅ **Fix: `custom:kitchen-cooking-card` "doesn't exist"** — Replaced flaky Lovelace resource API with `add_extra_js_url()` (HA first-party API); element is now reliably available in all dashboard views
-- ✅ **Fix: Double `customElements.define` crash** — Removed versioned element name; single stable `kitchen-cooking-card` registration prevents the `@webcomponents/scoped-custom-element-registry` polyfill from throwing
 
 ### v0.6.2.x Features — Bug fixes, Lovelace card, help buttons, recipe research (April 2026)
 - ✅ **Lovelace custom card** — Drop `type: custom:kitchen-cooking-card` into any dashboard view; auto-registered as a Lovelace resource on startup — no manual resource configuration needed
 - ✅ **Contextual help buttons** — Every navigable screen now has a `?` button that opens the relevant section of the User Guide in a new tab
-- ✅ **Fix: Portions not propagating** (#83) — AI recipe portions set on screen 1 now carry through to the suggestions screen correctly
-- ✅ **Fix: Ingredient chips not translated** (#84) — Selected ingredient chips now show the correct language name regardless of active language
-- ✅ **Fix: Blank screen on tab return** (#85) — `_renderHistoryCard` was undefined, causing a TypeError and blank-screen flash; method added
 - ✅ **USDA safety legend restored** — Doneness card shows 🟢 safe · 🟠 caution · 🔴 below guidelines with USDA minimum warning
 - ✅ **189 international cuts, 198 Swedish cuts** — ongoing recipe research expansion; `cooking_methods_researched` quality field added across all cut index files
 
@@ -794,7 +764,6 @@ Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card
 
 ### v0.5.5.x Features (March 2026)
 - ✅ **Tab navigation preserved** — Returning to the panel after switching browser tabs or OS windows no longer resets to the welcome screen; all navigation paths are preserved
-- ✅ **hasChanged fix** — Panel re-renders correctly after Home Assistant state changes (was silently skipping re-renders before)
 - ✅ **Real backend refresh on return** — Appliances, AI settings, and active recipe cooks are reloaded whenever the panel becomes visible again
 - ✅ **AI recipe appliance targeting** — Opening the AI Recipe Builder with an appliance selected auto-injects `"use <ApplianceName> programs"` as the first ingredient; the chip is removable for fully generic recipes
 
@@ -805,7 +774,6 @@ Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card
 - ✅ **MEATER cook rating screen** — Rate ease & result (1–5 stars) after MEATER cook completion
 - ✅ **AI ingredient ceilings** — Style-dependent ingredient limits prevent overly complex recipes
 - ✅ **Honest cooking time** — AI includes all prep time (soaking, brining, marinating) in estimates
-- ✅ **Blank tab fix** — Detects WebSocket reconnect + forces Shadow DOM repaint on return
 - ✅ **Recipe cook persistence** — sessionStorage survives HA sidebar navigation
 - ✅ **Welcome screen auto-refresh** — Exited cooks disappear immediately without manual refresh
 - ✅ **MEATER restart improvements** — Session dropdown on waiting screen, unknown entity handling
