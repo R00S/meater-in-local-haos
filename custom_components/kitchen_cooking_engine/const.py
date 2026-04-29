@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 29 Apr 2026, 08:00 UTC
-Last Change: v0.7.0.21 - probe compatibility tables (ThermoPro + no-HA-integration section)
+Last Change: v0.8.0.0 - save recipe without cooking, rename Previous Cooks to Cooked and Saved, AI path from MEATER cut selection
 """
 
 DOMAIN = "kitchen_cooking_engine"
