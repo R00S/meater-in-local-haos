@@ -19,8 +19,8 @@ Picanha (*alcatra de capa* på portugisiska; *coulotte* på franska; sirloin cap
 
 ## Source recipes
 
-### 1. Francis Mallmann — Picanha in a Cast-Iron Pan (Argentine/Brazilian tradition)
-**Source**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009); Mallmann addresses the *coulotte* cut as part of his broader treatment of premium rump cuts  
+### 1. Picanha in a Cast-Iron Pan (inspired by Francis Mallmann)
+**Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009); Mallmann addresses the *coulotte* cut as part of his broader treatment of premium rump cuts  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 10–14 min · **Rest**: 5 min
 
 **Ingredients**
@@ -43,8 +43,8 @@ Picanha (*alcatra de capa* på portugisiska; *coulotte* på franska; sirloin cap
 
 ---
 
-### 2. J. Kenji López-Alt — Pan-Seared Coulotte (Sirloin Cap) (American tradition)
-**Source**: J. Kenji López-Alt, seriouseats.com/coulotte-sirloin-cap-steak-recipe; also *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015)  
+### 2. Pan-Seared Coulotte (Sirloin Cap) (inspired by J. Kenji López-Alt)
+**Inspired by**: J. Kenji López-Alt, seriouseats.com/coulotte-sirloin-cap-steak-recipe; also *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015)  
 **Serves**: 4 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 12–14 min · **Rest**: 5 min
 
 **Ingredients**
@@ -65,8 +65,8 @@ Picanha (*alcatra de capa* på portugisiska; *coulotte* på franska; sirloin cap
 
 ---
 
-### 3. Gordon Ramsay — Pan-Seared Rump Cap (British restaurant tradition)
-**Source**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012), rump cap preparation  
+### 3. Pan-Seared Rump Cap (inspired by Gordon Ramsay)
+**Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012), rump cap preparation  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 12–14 min · **Rest**: 5 min
 
 **Ingredients**
@@ -89,8 +89,8 @@ Picanha (*alcatra de capa* på portugisiska; *coulotte* på franska; sirloin cap
 
 ---
 
-### 4. Nobu Matsuhisa — Pan-Seared Picanha with Yuzu Kosho (Japanese-Brazilian fusion)
-**Source**: Nobu Matsuhisa, *Nobu Miami: The Party Cookbook* (Kodansha International, 2009)  
+### 4. Pan-Seared Picanha with Yuzu Kosho (Japanese-Brazilian fusion) (inspired by Nobu Matsuhisa)
+**Inspired by**: Nobu Matsuhisa, *Nobu Miami: The Party Cookbook* (Kodansha International, 2009)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–14 min · **Rest**: 5 min
 
 **Ingredients**
@@ -111,8 +111,8 @@ Picanha (*alcatra de capa* på portugisiska; *coulotte* på franska; sirloin cap
 
 ---
 
-### 5. Donna Hay — Pan-Seared Rump Cap with Herb Dressing (Australian tradition)
-**Source**: Donna Hay, *The Food I Love* (adapted; HarperCollins Australia)  
+### 5. Pan-Seared Rump Cap with Herb Dressing (inspired by Donna Hay)
+**Inspired by**: Donna Hay, *The Food I Love* (adapted; HarperCollins Australia)  
 **Serves**: 4 · **Prep**: 5 min (+30 min dry brine) · **Cook**: 12–14 min · **Rest**: 5 min
 
 **Ingredients**

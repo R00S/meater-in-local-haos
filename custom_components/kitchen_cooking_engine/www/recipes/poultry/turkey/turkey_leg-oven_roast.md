@@ -35,8 +35,8 @@ Kalkonstjälken inkluderar trumpinnen (undre benet, nedanför knäleden) och ibl
 
 ## Source recipes
 
-### 1. Good Food (provided by Apetit Online) — Roast Turkey Leg with Garlic & Rosemary (Czech tradition)
-**Source**: bbcgoodfood.com/recipes/roast-turkey-leg-with-garlic-rosemary — recipe provided by Apetit Online (apetitonline.cz), Czech food site  
+### 1. Roast Turkey Leg with Garlic & Rosemary (inspired by Good Food)
+**Inspired by**: bbcgoodfood.com/recipes/roast-turkey-leg-with-garlic-rosemary — recipe provided by Apetit Online (apetitonline.cz), Czech food site  
 **Serves**: N/A · **Cut used**: Turkey legs (drumsticks)
 
 **Ingredients** (per 2 legs)
@@ -59,8 +59,8 @@ Kalkonstjälken inkluderar trumpinnen (undre benet, nedanför knäleden) och ibl
 
 ---
 
-### 2. Good Food magazine — Classic Roast Turkey — thigh doneness test (British tradition)
-**Source**: Good Food magazine, December 2006; bbcgoodfood.com/recipes/classic-roast-turkey  
+### 2. Classic Roast Turkey — thigh doneness test (inspired by Good Food magazine)
+**Inspired by**: Good Food magazine, December 2006; bbcgoodfood.com/recipes/classic-roast-turkey  
 **Serves**: 8 · **Bird**: 4.5–5.6 kg bronze turkey
 
 **Ingredients**
@@ -80,8 +80,8 @@ Kalkonstjälken inkluderar trumpinnen (undre benet, nedanför knäleden) och ibl
 
 ---
 
-### 3. Köket.se — Kalkon – Så Blir Den Saftig och God (Swedish tradition)
-**Source**: Köket.se; koket.se/kalkon-sa-blir-den-saftig-och-god  
+### 3. Kalkon – Så Blir Den Saftig och God (inspired by Köket.se)
+**Inspired by**: Köket.se; koket.se/kalkon-sa-blir-den-saftig-och-god  
 **Serves**: 8 · **Bird**: 5 kg turkey
 
 **Ingredients**
@@ -101,8 +101,8 @@ Kalkonstjälken inkluderar trumpinnen (undre benet, nedanför knäleden) och ibl
 
 ---
 
-### 4. Immaculate Bites — Roasted Turkey Thighs (West African / Southern Creole tradition)
-**Source**: Imma (Immaculate Bites); africanbites.com/perfectly-roasted-turkey-thighs/  
+### 4. Roasted Turkey Thighs (inspired by Immaculate Bites)
+**Inspired by**: Imma (Immaculate Bites); africanbites.com/perfectly-roasted-turkey-thighs/  
 **Serves**: 4 · **Cut used**: Turkey thighs (recipe note: "Turkey legs also work well in this recipe")
 
 **Ingredients**

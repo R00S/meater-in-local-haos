@@ -21,8 +21,8 @@ För biffar under 3 cm tjocklek är direktvärme-enbart grillning standard; för
 
 ## Source recipes
 
-### 1. Steven Raichlen — Grilled Top Sirloin (American BBQ tradition)
-**Source**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
+### 1. Grilled Top Sirloin (inspired by Steven Raichlen)
+**Inspired by**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
 **Serves**: 4 · **Prep**: 10 min (+1 h marinade) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -45,8 +45,8 @@ För biffar under 3 cm tjocklek är direktvärme-enbart grillning standard; för
 
 ---
 
-### 2. Francis Mallmann — Sirloin Asado (Argentine tradition)
-**Source**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
+### 2. Sirloin Asado (inspired by Francis Mallmann)
+**Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 12–16 min · **Rest**: 5 min
 
 **Ingredients**
@@ -66,8 +66,8 @@ För biffar under 3 cm tjocklek är direktvärme-enbart grillning standard; för
 
 ---
 
-### 3. Yotam Ottolenghi — Spiced Sirloin on the Grill (Middle Eastern tradition)
-**Source**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
+### 3. Spiced Sirloin on the Grill (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
 **Serves**: 4 · **Prep**: 15 min (+2 h marinade) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -93,8 +93,8 @@ För biffar under 3 cm tjocklek är direktvärme-enbart grillning standard; för
 
 ---
 
-### 4. Bobby Flay — Grilled Sirloin with Red Chimichurri (American-Argentine tradition)
-**Source**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
+### 4. Grilled Sirloin with Red Chimichurri (inspired by Bobby Flay)
+**Inspired by**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -114,8 +114,8 @@ För biffar under 3 cm tjocklek är direktvärme-enbart grillning standard; för
 
 ---
 
-### 5. Neil Perry — Grilled Sirloin with Herb Salad (Australian tradition)
-**Source**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
+### 5. Grilled Sirloin with Herb Salad (inspired by Neil Perry)
+**Inspired by**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
 **Serves**: 2 · **Prep**: 10 min (+30 min dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**

@@ -34,8 +34,8 @@ Eftersom köttet är magert torkar det ut lätt vid överkokning. Sond är avgö
 
 ## Source recipes
 
-### 1. Jessica Gavin — How to Cook Chicken on the Stove
-**Source**: Jessica Gavin, jessicagavin.com; https://www.jessicagavin.com/how-to-cook-chicken-on-the-stove/ (fetched 2025-07-15).
+### 1. How to Cook Chicken on the Stove (inspired by Jessica Gavin)
+**Inspired by**: Jessica Gavin, jessicagavin.com; https://www.jessicagavin.com/how-to-cook-chicken-on-the-stove/ (fetched 2025-07-15).
 **Serves**: 2–4 · **Prep**: 10 min · **Cook**: 12–16 min · **Rest**: 5 min
 
 **Temperature guidance**:
@@ -72,8 +72,8 @@ Eftersom köttet är magert torkar det ut lätt vid överkokning. Sond är avgö
 
 ---
 
-### 2. Skinnytaste — Pan-Seared Chicken Breast (adapted from grilled cutlets method)
-**Source**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/grilled-chicken-breast/ (fetched 2025-07-15).
+### 2. Pan-Seared Chicken Breast (adapted from grilled cutlets method) (inspired by Skinnytaste)
+**Inspired by**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/grilled-chicken-breast/ (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 5 min + 20 min marinate · **Cook**: 10–14 min · **Rest**: 5 min
 
 **Temperature guidance**:
@@ -103,8 +103,8 @@ Eftersom köttet är magert torkar det ut lätt vid överkokning. Sond är avgö
 
 ---
 
-### 3. Sevcan Kayabaş — Tavuk Göğüs Sote (Turkish Pan-Sautéed Chicken Breast with Vegetables)
-**Source**: Sevcan Kayabaş, Nefis Yemek Tarifleri (Turkey's largest user-recipe platform); https://www.nefisyemektarifleri.com/tavuk-gogus-sote/ (fetched 2026-04-24, language: Turkish — ingredients and method translated below).
+### 3. Tavuk Göğüs Sote (Turkish Pan-Sautéed Chicken Breast with Vegetables) (inspired by Sevcan Kayabaş)
+**Inspired by**: Sevcan Kayabaş, Nefis Yemek Tarifleri (Turkey's largest user-recipe platform); https://www.nefisyemektarifleri.com/tavuk-gogus-sote/ (fetched 2026-04-24, language: Turkish — ingredients and method translated below).
 **Serves**: 2–4 · **Prep**: 10 min · **Cook**: 20 min
 
 **Temperature guidance**:
@@ -134,8 +134,8 @@ Eftersom köttet är magert torkar det ut lätt vid överkokning. Sond är avgö
 
 ---
 
-### 4. Huy Vu — Gà Xào Sả Ớt (Vietnamese Spicy Lemongrass Chicken Sauté) (Vietnamese tradition)
-**Source**: Huy Vu, Hungry Huy; https://hungryhuy.com/vietnamese-lemongrass-chicken/ (fetched 2026-04-25). *Vietnamese home-cooking classic: boneless chicken pieces marinated in salt, sugar, and fish sauce, then pan-sautéed over medium-high heat in shallots, garlic, and minced lemongrass, with a chilli sauce of fish sauce, sambal, and coconut juice. Ready in 25 minutes. Gà Xào Sả Ớt is a staple weeknight dish across Vietnam.*
+### 4. Gà Xào Sả Ớt (Vietnamese Spicy Lemongrass Chicken Sauté) (inspired by Huy Vu)
+**Inspired by**: Huy Vu, Hungry Huy; https://hungryhuy.com/vietnamese-lemongrass-chicken/ (fetched 2026-04-25). *Vietnamese home-cooking classic: boneless chicken pieces marinated in salt, sugar, and fish sauce, then pan-sautéed over medium-high heat in shallots, garlic, and minced lemongrass, with a chilli sauce of fish sauce, sambal, and coconut juice. Ready in 25 minutes. Gà Xào Sả Ớt is a staple weeknight dish across Vietnam.*
 **Serves**: 2 · **Prep**: 10 min + 15 min marinate · **Cook**: 15 min
 
 **Temperature guidance (from recipe)**: Sauté over medium-high heat; cover and cook approximately 5 minutes per side, stirring and retasting. Pull when probe reads **165 °F (74 °C)** in the thickest piece, or until the centre of the chicken is no longer pink.

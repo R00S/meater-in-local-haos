@@ -21,8 +21,8 @@ Atlantisk och stillahavslax skiljer sig åt i fettfördelning — odlad atlantla
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Crispy-Skin Pan-Seared Salmon (American tradition)
-**Source**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/the-best-way-to-cook-salmon  
+### 1. Crispy-Skin Pan-Seared Salmon (inspired by J. Kenji López-Alt)
+**Inspired by**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/the-best-way-to-cook-salmon  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 7–9 min · **Rest**: 2 min
 
 **Ingredients**
@@ -46,8 +46,8 @@ Atlantisk och stillahavslax skiljer sig åt i fettfördelning — odlad atlantla
 
 ---
 
-### 2. Michel Roux Jr. — Saumon Poêlé au Beurre Blanc (French classical tradition)
-**Source**: Michel Roux Jr., *The French Kitchen* (Weidenfeld & Nicolson, 2009)  
+### 2. Saumon Poêlé au Beurre Blanc (inspired by Michel Roux Jr.)
+**Inspired by**: Michel Roux Jr., *The French Kitchen* (Weidenfeld & Nicolson, 2009)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -68,8 +68,8 @@ Atlantisk och stillahavslax skiljer sig åt i fettfördelning — odlad atlantla
 
 ---
 
-### 3. Nobu Matsuhisa — Pan-Seared Salmon with Miso Marinade (Japanese tradition)
-**Source**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001)  
+### 3. Pan-Seared Salmon with Miso Marinade (inspired by Nobu Matsuhisa)
+**Inspired by**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001)  
 **Serves**: 2 · **Prep**: 10 min (+overnight marinade) · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -90,8 +90,8 @@ Atlantisk och stillahavslax skiljer sig åt i fettfördelning — odlad atlantla
 
 ---
 
-### 4. Heston Blumenthal — Seared Salmon with Rendered Skin (Modernist British tradition)
-**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
+### 4. Seared Salmon with Rendered Skin (inspired by Heston Blumenthal)
+**Inspired by**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -115,8 +115,8 @@ Atlantisk och stillahavslax skiljer sig åt i fettfördelning — odlad atlantla
 
 ---
 
-### 5. Neil Perry — Pan-Fried Salmon with Herbs (Australian tradition)
-**Source**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
+### 5. Pan-Fried Salmon with Herbs (inspired by Neil Perry)
+**Inspired by**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**

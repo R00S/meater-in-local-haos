@@ -21,8 +21,8 @@ Pannsearing av mahi-mahi ger en vackert guldbryn, Maillard-brynnad krusta på de
 
 ## Source recipes
 
-### 1. Emeril Lagasse — Blackened Mahi-Mahi (American / Louisiana Creole tradition)
-**Source**: Emeril Lagasse, *Louisiana Real and Rustic* (William Morrow, 1996)  
+### 1. Blackened Mahi-Mahi (inspired by Emeril Lagasse)
+**Inspired by**: Emeril Lagasse, *Louisiana Real and Rustic* (William Morrow, 1996)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -45,8 +45,8 @@ Pannsearing av mahi-mahi ger en vackert guldbryn, Maillard-brynnad krusta på de
 
 ---
 
-### 2. Rick Stein — Pan-Fried Mahi-Mahi with Mango Salsa (Caribbean tradition)
-**Source**: Rick Stein, *Far Eastern Odyssey* (BBC Books, 2009)  
+### 2. Pan-Fried Mahi-Mahi with Mango Salsa (inspired by Rick Stein)
+**Inspired by**: Rick Stein, *Far Eastern Odyssey* (BBC Books, 2009)  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 7–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -67,8 +67,8 @@ Pannsearing av mahi-mahi ger en vackert guldbryn, Maillard-brynnad krusta på de
 
 ---
 
-### 3. Nobu Matsuhisa — Pan-Seared Mahi-Mahi with Dried Miso (Japanese-Hawaiian tradition)
-**Source**: Nobu Matsuhisa, *Nobu Miami: The Party Cookbook* (Kodansha International, 2009)  
+### 3. Pan-Seared Mahi-Mahi with Dried Miso (inspired by Nobu Matsuhisa)
+**Inspired by**: Nobu Matsuhisa, *Nobu Miami: The Party Cookbook* (Kodansha International, 2009)  
 **Serves**: 2 · **Prep**: 10 min (+2 h marinade) · **Cook**: 6–7 min · **Rest**: 2 min
 
 **Ingredients**
@@ -87,8 +87,8 @@ Pannsearing av mahi-mahi ger en vackert guldbryn, Maillard-brynnad krusta på de
 
 ---
 
-### 4. Yotam Ottolenghi — Pan-Fried Mahi-Mahi with Preserved Lemon (Middle Eastern tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)  
+### 4. Pan-Fried Mahi-Mahi with Preserved Lemon (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 7–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -111,8 +111,8 @@ Pannsearing av mahi-mahi ger en vackert guldbryn, Maillard-brynnad krusta på de
 
 ---
 
-### 5. Donna Hay — Seared Mahi-Mahi with Lime Butter (Australian tradition)
-**Source**: Donna Hay, *Simple Dinners* (HarperCollins Australia, 2011)  
+### 5. Seared Mahi-Mahi with Lime Butter (inspired by Donna Hay)
+**Inspired by**: Donna Hay, *Simple Dinners* (HarperCollins Australia, 2011)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 7–8 min · **Rest**: 2 min
 
 **Ingredients**

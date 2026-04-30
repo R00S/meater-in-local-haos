@@ -24,8 +24,8 @@ Air fryer-metod: 180–200 °C, 20–22 minuter med vändning halvvägs. Innerte
 
 ## Source recipes
 
-### 1. Directo al Paladar — Solomillo de cerdo en airfryer (Spanish tradition)
-**Source**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/receta-solomillo-cerdo-cocinado-airfryer-exito-garantizado-20-minutos-usar-apenas-aceite (fetched 2026-04-24). *Bacon-wrapped pork tenderloin in the air fryer: 200 °C × 10 min each side, rest 5 min. "Guaranteed success in just 20 minutes."*
+### 1. Solomillo de cerdo en airfryer (inspired by Directo al Paladar)
+**Inspired by**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/receta-solomillo-cerdo-cocinado-airfryer-exito-garantizado-20-minutos-usar-apenas-aceite (fetched 2026-04-24). *Bacon-wrapped pork tenderloin in the air fryer: 200 °C × 10 min each side, rest 5 min. "Guaranteed success in just 20 minutes."*
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 20 min + 5 min rest
 
 *Translation: Pork tenderloin in the air fryer — "a guaranteed success, in just 20 minutes and using barely any oil."*
@@ -52,8 +52,8 @@ Air fryer-metod: 180–200 °C, 20–22 minuter med vändning halvvägs. Innerte
 
 ---
 
-### 2. ichkoche.at — Schopfsteak aus dem Airfryer (adapted for tenderloin) (Austrian tradition)
-**Source**: ichkoche.at; https://www.ichkoche.at/schopfsteak-aus-dem-airfryer-rezept-240872 (referenced 2026-04-24). *Austrian air fryer pork technique: vinegar-paprika-oil marinade, 190 °C × 10 min with one flip at 5 min. 832 ratings. Adapted from Schopfsteak (neck) to tenderloin.*
+### 2. Schopfsteak aus dem Airfryer (adapted for tenderloin) (inspired by ichkoche.at)
+**Inspired by**: ichkoche.at; https://www.ichkoche.at/schopfsteak-aus-dem-airfryer-rezept-240872 (referenced 2026-04-24). *Austrian air fryer pork technique: vinegar-paprika-oil marinade, 190 °C × 10 min with one flip at 5 min. 832 ratings. Adapted from Schopfsteak (neck) to tenderloin.*
 **Serves**: 2 · **Prep**: 30 min marinade · **Cook**: 10 min
 
 **Temperature guidance**: 190 °C × 10 min, flip at 5 min. Core target for tenderloin: 63–65 °C.
@@ -75,8 +75,8 @@ Air fryer-metod: 180–200 °C, 20–22 minuter med vändning halvvägs. Innerte
 
 ---
 
-### 3. Madens Verden — Herregårdskotelet i airfryer method (adapted for tenderloin) (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/herregaardskotelet-i-airfryer/ (fetched 2026-04-24). *Same 200 °C × 10 min per side principle: brush with olive oil; 10 min per side; rest 10 min. Adapted from herregårdskotelet (bone-in chop) to pork tenderloin.*
+### 3. Herregårdskotelet i airfryer method (adapted for tenderloin) (inspired by Madens Verden)
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/herregaardskotelet-i-airfryer/ (fetched 2026-04-24). *Same 200 °C × 10 min per side principle: brush with olive oil; 10 min per side; rest 10 min. Adapted from herregårdskotelet (bone-in chop) to pork tenderloin.*
 **Serves**: 2 · **Cook**: 20 min + 10 min rest
 
 **Temperature guidance**: "10 min at 200 °C each side; total 20 minutes. Lad dem hvile i ca. 10 minutter." (Rest 10 minutes.) Core target: 62–65 °C.
@@ -98,8 +98,8 @@ Air fryer-metod: 180–200 °C, 20–22 minuter med vändning halvvägs. Innerte
 
 ---
 
-### 4. African Bites / Immaculate Bites — Creole Air Fryer Pork Tenderloin (Southern US / West African Creole tradition)
-**Source**: Imma Africanbites, Africanbites.com; https://africanbites.com/air-fryer-pork-chops/ (fetched 2026-04-26). *Recipe for air fryer pork with Creole seasoning — the author notes explicitly that the technique "is the same for chicken breast" (same internal temp, same times), and the Creole marinade (garlic, Dijon, brown sugar, paprika, thyme, Creole spice blend) transfers directly to pork tenderloin. In the air fryer, no breading is needed; the result is "extra juicy on the inside with just a hint of crispiness on the outside."*
+### 4. Creole Air Fryer Pork Tenderloin (inspired by African Bites / Immaculate Bites)
+**Inspired by**: Imma Africanbites, Africanbites.com; https://africanbites.com/air-fryer-pork-chops/ (fetched 2026-04-26). *Recipe for air fryer pork with Creole seasoning — the author notes explicitly that the technique "is the same for chicken breast" (same internal temp, same times), and the Creole marinade (garlic, Dijon, brown sugar, paprika, thyme, Creole spice blend) transfers directly to pork tenderloin. In the air fryer, no breading is needed; the result is "extra juicy on the inside with just a hint of crispiness on the outside."*
 **Serves**: 2–4 · **Prep**: 5 min · **Cook**: 15–20 min
 
 *Context: The African Bites / Immaculate Bites kitchen blends West African and Southern US Creole traditions. Creole seasoning (paprika, garlic, onion powder, thyme, oregano, cayenne) is rooted in Louisiana Creole and West African spice culture. The author notes that this is "one of the fastest and easiest main courses" — ready in 15 minutes.*

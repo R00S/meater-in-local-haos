@@ -18,8 +18,8 @@ Aubergine (*Solanum melongena*) sauterad i en het, väl-oljad panna ger intensiv
 
 ## Source recipes
 
-### 1. Fuchsia Dunlop — Yú Xiāng Qiézi (魚香茄子 — Chinese Fish-Fragrant Eggplant)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
+### 1. Yú Xiāng Qiézi (魚香茄子 — Chinese Fish-Fragrant Eggplant) (inspired by Fuchsia Dunlop)
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 10–12 min · **Rest**: 1 min
 
 **Ingredients**
@@ -46,8 +46,8 @@ Aubergine (*Solanum melongena*) sauterad i en het, väl-oljad panna ger intensiv
 
 ---
 
-### 2. Madhur Jaffrey — Masaledar Baingan (Indian / North Indian tradition)
-**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)
+### 2. Masaledar Baingan (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 2 min
 
 **Ingredients**
@@ -77,8 +77,8 @@ Aubergine (*Solanum melongena*) sauterad i en het, väl-oljad panna ger intensiv
 
 ---
 
-### 3. Diana Henry — Berenjenas con Miel (Spanish / Andalusian tradition)
-**Source**: Diana Henry, *A Change of Appetite* (Mitchell Beazley, 2014) and her Telegraph recipe column; https://www.telegraph.co.uk/food-and-drink (column archived)
+### 3. Berenjenas con Miel (inspired by Diana Henry)
+**Inspired by**: Diana Henry, *A Change of Appetite* (Mitchell Beazley, 2014) and her Telegraph recipe column; https://www.telegraph.co.uk/food-and-drink (column archived)
 **Serves**: 4 · **Prep**: 15 min (+ 30 min milk soak) · **Cook**: 8–10 min · **Rest**: 1 min
 
 **Ingredients**
@@ -104,8 +104,8 @@ Aubergine (*Solanum melongena*) sauterad i en het, väl-oljad panna ger intensiv
 
 ---
 
-### 4. Yotam Ottolenghi — Aubergine with Buttermilk Sauce (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
+### 4. Aubergine with Buttermilk Sauce (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 15 min (+ 20 min salting) · **Cook**: 15 min · **Rest**: 2 min
 
 **Ingredients**

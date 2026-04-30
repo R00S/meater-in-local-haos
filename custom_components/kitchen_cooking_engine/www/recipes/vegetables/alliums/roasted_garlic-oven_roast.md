@@ -18,8 +18,8 @@ Hela vitlökshuvuden (*Allium sativum*) ugnsrostade transformeras fullständigt:
 
 ## Source recipes
 
-### 1. José Andrés — Ajo Asado (Spanish tradition)
-**Source**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
+### 1. Ajo Asado (inspired by José Andrés)
+**Inspired by**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 40–45 min · **Rest**: 10 min (cooling)
 
 **Ingredients**
@@ -39,8 +39,8 @@ Hela vitlökshuvuden (*Allium sativum*) ugnsrostade transformeras fullständigt:
 
 ---
 
-### 2. Najmieh Batmanglij — Sir-e Biriyan (Persian oven-roasted garlic)
-**Source**: Najmieh Batmanglij, *Food of Life: Ancient Persian and Modern Iranian Cooking and Ceremonies* (Mage Publishers, 2011)
+### 2. Sir-e Biriyan (Persian oven-roasted garlic) (inspired by Najmieh Batmanglij)
+**Inspired by**: Najmieh Batmanglij, *Food of Life: Ancient Persian and Modern Iranian Cooking and Ceremonies* (Mage Publishers, 2011)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 50–60 min · **Rest**: 10 min
 
 **Ingredients**
@@ -60,8 +60,8 @@ Hela vitlökshuvuden (*Allium sativum*) ugnsrostade transformeras fullständigt:
 
 ---
 
-### 3. Deborah Madison — Roasted Garlic Heads with Herbs (American vegetarian tradition)
-**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
+### 3. Roasted Garlic Heads with Herbs (inspired by Deborah Madison)
+**Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 45–50 min · **Rest**: 10 min
 
 **Ingredients**
@@ -82,8 +82,8 @@ Hela vitlökshuvuden (*Allium sativum*) ugnsrostade transformeras fullständigt:
 
 ---
 
-### 4. Harumi Kurihara — Ninniku no Roast (Japanese tradition)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
+### 4. Ninniku no Roast (inspired by Harumi Kurihara)
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 35–40 min · **Rest**: 5 min
 
 **Ingredients**

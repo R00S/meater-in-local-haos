@@ -21,8 +21,8 @@ Omvänd searing-metoden lämpar sig särskilt väl för flat iron eftersom den u
 
 ## Source recipes
 
-### 1. America's Test Kitchen — Reverse-Sear Flat Iron (American tradition)
-**Source**: America's Test Kitchen, *The Cook's Illustrated Meat Book* (America's Test Kitchen, 2014); reverse-sear method applied to flat iron  
+### 1. Reverse-Sear Flat Iron (inspired by America's Test Kitchen)
+**Inspired by**: America's Test Kitchen, *The Cook's Illustrated Meat Book* (America's Test Kitchen, 2014); reverse-sear method applied to flat iron  
 **Serves**: 2–3 · **Prep**: 15 min · **Cook**: 25–35 min (oven) + 4 min (sear) · **Rest**: 5 min
 
 **Ingredients**
@@ -45,8 +45,8 @@ Omvänd searing-metoden lämpar sig särskilt väl för flat iron eftersom den u
 
 ---
 
-### 2. Heston Blumenthal — Low-and-Slow Oven Flat Iron (British modernist tradition)
-**Source**: Heston Blumenthal, *In Search of Perfection* (Bloomsbury Publishing, 2006); precise low-temperature oven method  
+### 2. Low-and-Slow Oven Flat Iron (inspired by Heston Blumenthal)
+**Inspired by**: Heston Blumenthal, *In Search of Perfection* (Bloomsbury Publishing, 2006); precise low-temperature oven method  
 **Serves**: 2 · **Prep**: 20 min (+ overnight salting) · **Cook**: 45–60 min · **Rest**: 5 min
 
 **Ingredients**
@@ -68,8 +68,8 @@ Omvänd searing-metoden lämpar sig särskilt väl för flat iron eftersom den u
 
 ---
 
-### 3. Julia Child — Bifteck Rôti au Four (French tradition)
-**Source**: Julia Child, Louisette Bertholle, and Simone Beck, *Mastering the Art of French Cooking* (Alfred A. Knopf, 1961); high-heat oven steak method adapted for flat iron  
+### 3. Bifteck Rôti au Four (inspired by Julia Child)
+**Inspired by**: Julia Child, Louisette Bertholle, and Simone Beck, *Mastering the Art of French Cooking* (Alfred A. Knopf, 1961); high-heat oven steak method adapted for flat iron  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 5 min
 
 **Ingredients**
@@ -92,8 +92,8 @@ Omvänd searing-metoden lämpar sig särskilt väl för flat iron eftersom den u
 
 ---
 
-### 4. Marcella Hazan — Bistecca al Forno con Erbe (Italian tradition)
-**Source**: Marcella Hazan, *The Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992); oven-roasted steak with herbs, method adapted for flat iron  
+### 4. Bistecca al Forno con Erbe (inspired by Marcella Hazan)
+**Inspired by**: Marcella Hazan, *The Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992); oven-roasted steak with herbs, method adapted for flat iron  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 15–18 min · **Rest**: 5 min
 
 **Ingredients**
@@ -117,8 +117,8 @@ Omvänd searing-metoden lämpar sig särskilt väl för flat iron eftersom den u
 
 ---
 
-### 5. Nigel Slater — Flat Iron with Anchovy and Mustard Crust, Roasted (British tradition)
-**Source**: Nigel Slater, *Tender: A Cook and His Vegetable Patch* (Fourth Estate, 2009); anchovy-mustard crust applied to oven-roasted steak  
+### 5. Flat Iron with Anchovy and Mustard Crust, Roasted (inspired by Nigel Slater)
+**Inspired by**: Nigel Slater, *Tender: A Cook and His Vegetable Patch* (Fourth Estate, 2009); anchovy-mustard crust applied to oven-roasted steak  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 15–20 min · **Rest**: 5 min
 
 **Ingredients**

@@ -20,8 +20,8 @@ Ugn 180–200 °C, 1,5–2 timmar. Innertemperatur: **82–88 °C (180–190 °F
 
 ## Source recipes
 
-### 1. José Pizarro — Carrillera al Horno con Pimentón (Spanish tradition)
-**Source**: José Pizarro, *Andalusia* (Hardie Grant, 2019); josepizarro.com  
+### 1. Carrillera al Horno con Pimentón (inspired by José Pizarro)
+**Inspired by**: José Pizarro, *Andalusia* (Hardie Grant, 2019); josepizarro.com  
 **Serves**: 6 · **Prep**: 20 min (+ overnight marinade) · **Cook**: 90 min · **Rest**: 10 min
 
 **Ingredients**
@@ -49,8 +49,8 @@ Ugn 180–200 °C, 1,5–2 timmar. Innertemperatur: **82–88 °C (180–190 °F
 
 ---
 
-### 2. Marcella Hazan — Guancia di Maiale Arrosto (Italian tradition)
-**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997) (the *al forno* variant of her braise)  
+### 2. Guancia di Maiale Arrosto (inspired by Marcella Hazan)
+**Inspired by**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997) (the *al forno* variant of her braise)  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 80 min · **Rest**: 10 min
 
 **Ingredients**
@@ -77,8 +77,8 @@ Ugn 180–200 °C, 1,5–2 timmar. Innertemperatur: **82–88 °C (180–190 °F
 
 ---
 
-### 3. Diana Henry — Roast Pork Cheeks with Apples & Sage (British tradition)
-**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015) and her *Telegraph* recipe column; telegraph.co.uk/food-and-drink  
+### 3. Roast Pork Cheeks with Apples & Sage (inspired by Diana Henry)
+**Inspired by**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015) and her *Telegraph* recipe column; telegraph.co.uk/food-and-drink  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 90 min · **Rest**: 10 min
 
 **Ingredients**
@@ -107,8 +107,8 @@ Ugn 180–200 °C, 1,5–2 timmar. Innertemperatur: **82–88 °C (180–190 °F
 
 ---
 
-### 4. Magnus Nilsson — Ugnsbakade Griskindar med Senap (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) — oven variant of the cheek braise  
+### 4. Ugnsbakade Griskindar med Senap (inspired by Magnus Nilsson)
+**Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) — oven variant of the cheek braise  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 75 min · **Rest**: 10 min
 
 **Ingredients**

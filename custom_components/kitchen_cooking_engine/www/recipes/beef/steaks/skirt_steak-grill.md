@@ -22,8 +22,8 @@ Gas-grill skirt steak kräver maximal direkt värme – alla brännare på hög,
 Marinering före grillning rekommenderas starkt: 30 minuter till 2 timmar i citrus/syra + olja + vitlök/kryddor (fajita-marinad) mörar de grova fibrerna och ger smak. Sonden sticks in från änden, vinklad mot tjockaste delen. Dra vid 49–54 °C; eftervärme från hett galler är 4–5 °C, vilket ger 52–57 °C (medium-rare). Vila alltid 5 minuter och skär mot ådringen.
 ## Source recipes
 
-### 1. Bobby Flay — Grilled Skirt Steak Fajitas (Tex-Mex tradition)
-**Source**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
+### 1. Grilled Skirt Steak Fajitas (inspired by Bobby Flay)
+**Inspired by**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
 **Serves**: 4 · **Prep**: 15 min (+2 h marinade) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -42,8 +42,8 @@ Marinering före grillning rekommenderas starkt: 30 minuter till 2 timmar i citr
 
 ---
 
-### 2. Diana Kennedy — Grilled *Arrachera* with Salsa de Tomatillo (Mexican tradition)
-**Source**: Diana Kennedy, *My Mexico: A Culinary Odyssey* (Clarkson Potter, 1998)  
+### 2. Grilled *Arrachera* with Salsa de Tomatillo (inspired by Diana Kennedy)
+**Inspired by**: Diana Kennedy, *My Mexico: A Culinary Odyssey* (Clarkson Potter, 1998)  
 **Serves**: 4 · **Prep**: 5 min (+1 h marinade) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -61,8 +61,8 @@ Marinering före grillning rekommenderas starkt: 30 minuter till 2 timmar i citr
 
 ---
 
-### 3. Francis Mallmann — Grilled *Fraldinha* (Brazilian / Argentine tradition)
-**Source**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
+### 3. Grilled *Fraldinha* (inspired by Francis Mallmann)
+**Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -82,8 +82,8 @@ Marinering före grillning rekommenderas starkt: 30 minuter till 2 timmar i citr
 
 ---
 
-### 4. Steven Raichlen — Grilled Skirt Steak (American BBQ tradition)
-**Source**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
+### 4. Grilled Skirt Steak (inspired by Steven Raichlen)
+**Inspired by**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
 **Serves**: 4 · **Prep**: 10 min (+1 h marinade) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -100,8 +100,8 @@ Marinering före grillning rekommenderas starkt: 30 minuter till 2 timmar i citr
 
 ---
 
-### 5. Yotam Ottolenghi — Grilled Skirt Steak with Sumac and Pomegranate (Middle Eastern tradition)
-**Source**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
+### 5. Grilled Skirt Steak with Sumac and Pomegranate (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
 **Serves**: 4 · **Prep**: 15 min (+2 h marinade) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**

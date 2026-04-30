@@ -18,8 +18,8 @@ Broccoli (*Brassica oleracea* var. *italica*) ugnsrostad vid 200–220 °C utvec
 
 ## Source recipes
 
-### 1. Marcella Hazan — Broccoli al Forno con Aglio (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+### 1. Broccoli al Forno con Aglio (inspired by Marcella Hazan)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 20–22 min · **Rest**: 3 min
 
 **Ingredients**
@@ -32,8 +32,8 @@ Broccoli (*Brassica oleracea* var. *italica*) ugnsrostad vid 200–220 °C utvec
 
 ---
 
-### 2. Yotam Ottolenghi — Roasted Broccoli with Almonds and Honey (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)
+### 2. Roasted Broccoli with Almonds and Honey (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 20–22 min · **Rest**: 3 min
 
 **Ingredients**
@@ -46,8 +46,8 @@ Broccoli (*Brassica oleracea* var. *italica*) ugnsrostad vid 200–220 °C utvec
 
 ---
 
-### 3. Fuchsia Dunlop — Roasted Broccoli with Doubanjiang Sauce (Chinese tradition)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice* (W. W. Norton, 2012); roasting adaptation.
+### 3. Roasted Broccoli with Doubanjiang Sauce (inspired by Fuchsia Dunlop)
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice* (W. W. Norton, 2012); roasting adaptation.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 20–22 min · **Rest**: 3 min
 
 **Ingredients**
@@ -61,8 +61,8 @@ Broccoli (*Brassica oleracea* var. *italica*) ugnsrostad vid 200–220 °C utvec
 
 ---
 
-### 4. Claudia Roden — Roasted Broccoli with Chermoula (Moroccan / North African tradition)
-**Source**: Claudia Roden, *Arabesque* (Alfred A. Knopf, 2005)
+### 4. Roasted Broccoli with Chermoula (inspired by Claudia Roden)
+**Inspired by**: Claudia Roden, *Arabesque* (Alfred A. Knopf, 2005)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 20–22 min · **Rest**: 3 min
 
 **Ingredients**

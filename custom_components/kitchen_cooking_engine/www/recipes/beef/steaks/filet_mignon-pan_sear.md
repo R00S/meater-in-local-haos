@@ -18,8 +18,8 @@ Filet mignon (*psoas major*, liten ände av filén) är den magraste och mörast
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Rapid-Flip Pan Sear (Serious Eats method)
-**Source**: J. Kenji López-Alt, seriouseats.com/filet-mignon; *The Food Lab* (W. W. Norton, 2015)  
+### 1. Rapid-Flip Pan Sear (Serious Eats method) (inspired by J. Kenji López-Alt)
+**Inspired by**: J. Kenji López-Alt, seriouseats.com/filet-mignon; *The Food Lab* (W. W. Norton, 2015)  
 **Serves**: 2 · **Prep**: 5 min (+overnight dry-brine) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -40,8 +40,8 @@ Filet mignon (*psoas major*, liten ände av filén) är den magraste och mörast
 
 ---
 
-### 2. Thomas Keller — Pan-Seared Filet with Brown Butter (French American tradition)
-**Source**: Thomas Keller, *Bouchon* (Artisan, 2004); thomaskeller.com  
+### 2. Pan-Seared Filet with Brown Butter (inspired by Thomas Keller)
+**Inspired by**: Thomas Keller, *Bouchon* (Artisan, 2004); thomaskeller.com  
 **Serves**: 2 · **Prep**: 10 min (+1 hr tempering) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -65,8 +65,8 @@ Filet mignon (*psoas major*, liten ände av filén) är den magraste och mörast
 
 ---
 
-### 3. Fergus Henderson — Seared Fillet Steak (British tradition)
-**Source**: Fergus Henderson, *The Whole Beast: Nose to Tail Eating* (Ecco, 2004)  
+### 3. Seared Fillet Steak (inspired by Fergus Henderson)
+**Inspired by**: Fergus Henderson, *The Whole Beast: Nose to Tail Eating* (Ecco, 2004)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 5–7 min · **Rest**: 3 min
 
 **Ingredients**
@@ -86,8 +86,8 @@ Filet mignon (*psoas major*, liten ände av filén) är den magraste och mörast
 
 ---
 
-### 4. Nobu Matsuhisa — Pan-Seared Wagyu Fillet with Ponzu (Japanese tradition)
-**Source**: Nobu Matsuhisa, *Nobu Now* (Clarkson Potter, 2004); noburestaurants.com  
+### 4. Pan-Seared Wagyu Fillet with Ponzu (inspired by Nobu Matsuhisa)
+**Inspired by**: Nobu Matsuhisa, *Nobu Now* (Clarkson Potter, 2004); noburestaurants.com  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 4–6 min · **Rest**: 2 min
 
 **Ingredients**
@@ -107,8 +107,8 @@ Filet mignon (*psoas major*, liten ände av filén) är den magraste och mörast
 
 ---
 
-### 5. Adam Liaw — Pan-Seared Beef Fillet with Shiitake Sauce (Japanese-Australian tradition)
-**Source**: Adam Liaw, *Adam's Big Pot* (Hachette Australia, 2018); adamliaw.com/recipe  
+### 5. Pan-Seared Beef Fillet with Shiitake Sauce (inspired by Adam Liaw)
+**Inspired by**: Adam Liaw, *Adam's Big Pot* (Hachette Australia, 2018); adamliaw.com/recipe  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 3 min
 
 **Ingredients**

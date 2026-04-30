@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 29 Apr 2026, 13:39 CET
+ * AUTO-GENERATED: 30 Apr 2026, 07:59 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 29 Apr 2026, 13:39 CET
+// Last generated: 30 Apr 2026, 07:59 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -12209,1126 +12209,1126 @@ const CUT_METHOD_PROFILES = {
 const RECIPE_TITLES_INDEX = {
   "ostrich_fillet": {
     "braise": [
-      "Chefkoch.de (user Kantinejenta) — Straußenfilet mit Koriander und Rotwein"
+      "Straußenfilet mit Koriander und Rotwein (inspired by Chefkoch.de)"
     ]
   },
   "ostrich_steak": {
     "grill": [
-      "South African Braai tradition — Classic braaied ostrich steak",
-      "Namibian Ostrich Festival tradition — Grilled ostrich with African chilli butter",
-      "Chefkoch.de — Straußensteak auf dem Grill (German tradition)"
+      "Classic braaied ostrich steak (inspired by South African Braai tradition)",
+      "Grilled ostrich with African chilli butter (inspired by Namibian Ostrich Festival tradition)",
+      "Straußensteak auf dem Grill (inspired by Chefkoch.de)"
     ],
     "pan_sear": [
-      "Chefkoch.de — Straußensteaks aus dem Ofen (German tradition)",
-      "EatOut.co.za — Ostrich steak South African style (South African tradition)",
-      "Food24.com — Pan-seared ostrich with mushroom sauce (South African/Continental tradition)"
+      "Straußensteaks aus dem Ofen (inspired by Chefkoch.de)",
+      "Ostrich steak South African style (inspired by EatOut.co.za)",
+      "Pan-seared ostrich with mushroom sauce (inspired by Food24.com)"
     ]
   },
   "venison_leg": {
     "braise": [
-      "Chefkoch.de (user Annelore) — Rehkeule geschmort (Braised Venison Leg)"
+      "Rehkeule geschmort (Braised Venison Leg) (inspired by Chefkoch.de)"
     ]
   },
   "venison_loin": {
     "oven_roast": [
-      "Adam Gray, Great British Chefs — Roast Loin of Venison, Wild Mushroom Pie and Parsnip Purée",
-      "Vivek Singh, Great British Chefs — Roast Saddle of Red Deer with Rajasthani Spice Paste (Loin Steaks)"
+      "Roast Loin of Venison, Wild Mushroom Pie and Parsnip Purée (inspired by Adam Gray, Great British Chefs)",
+      "Roast Saddle of Red Deer with Rajasthani Spice Paste (Loin Steaks) (inspired by Vivek Singh, Great British Chefs)"
     ],
     "pan_sear": [
-      "BBC Good Food — Pan-Fried Venison with Blackberry Sauce (British tradition)",
-      "BBC Good Food — Venison Steak with Port Sauce (British tradition)",
-      "Great British Chefs — Pan-Roasted Loin of Venison with Redcurrant Sauce (British tradition)",
-      "Chefkoch.de — Reh- oder Hirschsteaks mit verschiedenen Marinaden (German tradition)"
+      "Pan-Fried Venison with Blackberry Sauce (inspired by BBC Good Food)",
+      "Venison Steak with Port Sauce (inspired by BBC Good Food)",
+      "Pan-Roasted Loin of Venison with Redcurrant Sauce (inspired by Great British Chefs)",
+      "Reh- oder Hirschsteaks mit verschiedenen Marinaden (inspired by Chefkoch.de)"
     ]
   },
   "venison_roast": {
     "oven_roast": [
-      "BBC Good Food — Stuffed Saddle of Venison with Prunes and Brioche (British tradition)",
-      "Chefkoch.de — Rehsteak rosa gebraten (German tradition — pink venison)",
-      "Tasteline.com — Rådjursstek i ugn (Swedish roe deer roast)"
+      "Stuffed Saddle of Venison with Prunes and Brioche (inspired by BBC Good Food)",
+      "Rehsteak rosa gebraten (inspired by Chefkoch.de)",
+      "Rådjursstek i ugn (Swedish roe deer roast) (inspired by Tasteline.com)"
     ]
   },
   "venison_shoulder": {
     "braise": [
-      "BBC Good Food (Good Food Magazine, January 2006) — Succulent Braised Venison",
-      "Chefkoch.de (user wendorra) — Rehschulter mit Holundersauce"
+      "Succulent Braised Venison (inspired by BBC Good Food)",
+      "Rehschulter mit Holundersauce (inspired by Chefkoch.de)"
     ]
   },
   "venison_steak": {
     "grill": [
-      "BBC Good Food — Venison Steak with Port Sauce (UK tradition)",
-      "Honest Food (Hank Shaw) — Grilled Venison Backstrap (North American tradition)",
-      "Chefkoch — Reh- oder Hirschsteaks mit verschiedenen Marinaden (German tradition)",
-      "Bara en kaka till — Hjortfilé med grönpepparsås (Swedish tradition)",
-      "Matprat — Plankebiff av elg eller hjort (Norwegian tradition)"
+      "Venison Steak with Port Sauce (inspired by BBC Good Food)",
+      "Grilled Venison Backstrap (inspired by Honest Food)",
+      "Reh- oder Hirschsteaks mit verschiedenen Marinaden (inspired by Chefkoch)",
+      "Hjortfilé med grönpepparsås (inspired by Bara en kaka till)",
+      "Plankebiff av elg eller hjort (inspired by Matprat)"
     ],
     "pan_sear": [
-      "BBC Good Food — Pan-Fried Venison with Blackberry Sauce (UK tradition)",
-      "Matprat — Hjortefilet med snittebønnestuing (Norwegian tradition)",
-      "Tasteline — Hjortstek (Swedish tradition)",
-      "Chefkoch — Hirschmedaillons in Preiselbeer-Rahmsauce (German tradition)",
-      "GialloZafferano — Arrosto di Cervo (Italian tradition)",
-      "The Rustic Elk — Marinated Venison Steak (North American tradition)"
+      "Pan-Fried Venison with Blackberry Sauce (inspired by BBC Good Food)",
+      "Hjortefilet med snittebønnestuing (inspired by Matprat)",
+      "Hjortstek (inspired by Tasteline)",
+      "Hirschmedaillons in Preiselbeer-Rahmsauce (inspired by Chefkoch)",
+      "Arrosto di Cervo (inspired by GialloZafferano)",
+      "Marinated Venison Steak (inspired by The Rustic Elk)"
     ]
   },
   "rabbit_legs": {
     "braise": [
-      "Chefkoch.de — Geschmorte Kaninchenkeulen (German tradition)",
-      "BBC Good Food — Rabbit au Vin (British/French tradition)",
-      "Giallozafferano.it — Coniglio alla cacciatora (Italian hunter-style braised rabbit)"
+      "Geschmorte Kaninchenkeulen (inspired by Chefkoch.de)",
+      "Rabbit au Vin (inspired by BBC Good Food)",
+      "Coniglio alla cacciatora (Italian hunter-style braised rabbit) (inspired by Giallozafferano.it)"
     ],
     "oven_roast": [
-      "BBC Good Food — Roast Rabbit with Thyme (British tradition)",
-      "Chefkoch.de — Kaninchenkeulen aus dem Ofen mit Kräuterkruste (German tradition)",
-      "Madensverden.dk — Ovnstegt kanin (Danish oven-roasted rabbit)"
+      "Roast Rabbit with Thyme (inspired by BBC Good Food)",
+      "Kaninchenkeulen aus dem Ofen mit Kräuterkruste (inspired by Chefkoch.de)",
+      "Ovnstegt kanin (Danish oven-roasted rabbit) (inspired by Madensverden.dk)"
     ]
   },
   "rabbit_saddle": {
     "oven_roast": [
-      "Emeril Lagasse — Roasted Saddle of Rabbit",
-      "Pardon Your French (Audrey Le Goff) — Stuffed Rabbit Saddle with Chestnuts and Mushrooms",
-      "Dairy Farmers of Canada — Saddle of Rabbit with Celery Sauce and Ricotta",
-      "Good Food Middle East (BBC Good Food) — Roast Rabbit with Thyme"
+      "Roasted Saddle of Rabbit (inspired by Emeril Lagasse)",
+      "Stuffed Rabbit Saddle with Chestnuts and Mushrooms (inspired by Pardon Your French)",
+      "Saddle of Rabbit with Celery Sauce and Ricotta (inspired by Dairy Farmers of Canada)",
+      "Roast Rabbit with Thyme (inspired by Good Food Middle East)"
     ],
     "pan_sear": [
-      "Hank Shaw — Pan-Seared Rabbit Loin with Herb Butter",
-      "Fergus Henderson — Saddle of Rabbit, Pan-Fried",
-      "The French Cooking Academy (Stéphane Nguyen) — Lapin Rôti à la Poêle",
-      "Lidia Bastianich — Coniglio in Padella (Rabbit Loin in the Pan)"
+      "Pan-Seared Rabbit Loin with Herb Butter (inspired by Hank Shaw)",
+      "Saddle of Rabbit, Pan-Fried (inspired by Fergus Henderson)",
+      "Lapin Rôti à la Poêle (inspired by The French Cooking Academy)",
+      "Coniglio in Padella (Rabbit Loin in the Pan) (inspired by Lidia Bastianich)"
     ]
   },
   "wild_boar_chop": {
     "grill": [
-      "BBC Good Food — Grilled Wild Boar Chops (UK tradition)",
-      "Chefkoch.de — Wildschwein vom Grill (German tradition)",
-      "La Cucina Italiana — Costolette di cinghiale alla griglia (Italian tradition)"
+      "Grilled Wild Boar Chops (inspired by BBC Good Food)",
+      "Wildschwein vom Grill (inspired by Chefkoch.de)",
+      "Costolette di cinghiale alla griglia (inspired by La Cucina Italiana)"
     ],
     "pan_sear": [
-      "Chefkoch.de — Wildschweinkoteletts mit Wacholdercreme (German tradition)",
-      "Chefkoch.de — Wildschweinkoteletts auf sardische Art (Sardinian tradition, German recipe)",
-      "Giallozafferano.it — Costolette di cinghiale alla cacciatora (Italian hunting tradition)"
+      "Wildschweinkoteletts mit Wacholdercreme (inspired by Chefkoch.de)",
+      "Wildschweinkoteletts auf sardische Art (inspired by Chefkoch.de)",
+      "Costolette di cinghiale alla cacciatora (inspired by Giallozafferano.it)"
     ]
   },
   "wild_boar_shoulder": {
     "oven_roast": [
-      "Chefkoch.de — Wildschweinschulter ganz einfach (German tradition)",
-      "Giallozafferano.it — Cinghiale in umido (Italian slow-roast tradition)",
-      "Madensverden.dk — Langtidsstegt vildsvinsskulder (Danish tradition)"
+      "Wildschweinschulter ganz einfach (inspired by Chefkoch.de)",
+      "Cinghiale in umido (inspired by Giallozafferano.it)",
+      "Langtidsstegt vildsvinsskulder (inspired by Madensverden.dk)"
     ]
   },
   "mutton_chop": {
     "grill": [
-      "Pakistani tradition — Mutton Chops Seekh (grilled marinated)",
-      "Madensverden.dk — Grillede lammekotelet (adapted for mutton — Danish tradition)",
-      "African Bites — West African Grilled Mutton Chops (Nigerian tradition)"
+      "Mutton Chops Seekh (grilled marinated) (inspired by Pakistani tradition)",
+      "Grillede lammekotelet (inspired by Madensverden.dk)",
+      "West African Grilled Mutton Chops (inspired by African Bites)"
     ],
     "pan_sear": [
-      "Chefkoch.de — Hammelkoteletts (German tradition)",
-      "BBC Good Food — Mutton Chops with Spiced Onions (British/Indian tradition)",
-      "IndianHealthyRecipes.com — Mutton Chops Masala (Indian tradition)"
+      "Hammelkoteletts (inspired by Chefkoch.de)",
+      "Mutton Chops with Spiced Onions (inspired by BBC Good Food)",
+      "Mutton Chops Masala (inspired by IndianHealthyRecipes.com)"
     ]
   },
   "mutton_leg": {
     "oven_roast": [
-      "Chefkoch.de — Hammel aus dem Ofen (German tradition)",
-      "IndianHealthyRecipes.com — Raan Musallam (Whole Roasted Mutton Leg, Mughlai/Indian tradition)",
-      "Madensverden.dk — Lammelår i ovnen (adapted for mutton — Danish tradition)"
+      "Hammel aus dem Ofen (inspired by Chefkoch.de)",
+      "Raan Musallam (inspired by IndianHealthyRecipes.com)",
+      "Lammelår i ovnen (inspired by Madensverden.dk)"
     ]
   },
   "mutton_shoulder": {
     "braise": [
-      "Indian Healthy Recipes — Mutton Korma / Gosht Korma (Indian / Mughlai tradition)",
-      "Nefis Yemek Tarifleri — Fırında Kuzu Kol Tandır (Turkish tradition)",
-      "Giallo Zafferano — Spalla d'agnello farcita alla toscana (Italian tradition)",
-      "Chefkoch.de — Geschmorter Lammhals (shoulder adaptation) (German tradition)"
+      "Mutton Korma / Gosht Korma (inspired by Indian Healthy Recipes)",
+      "Fırında Kuzu Kol Tandır (inspired by Nefis Yemek Tarifleri)",
+      "Spalla d'agnello farcita alla toscana (inspired by Giallo Zafferano)",
+      "Geschmorter Lammhals (shoulder adaptation) (inspired by Chefkoch.de)"
     ],
     "oven_roast": [
-      "BBC Good Food — Slow-roasted Mutton Shoulder (British tradition)",
-      "Nefisyemektarifleri.com — Fırında Kuzu Kol (Turkish oven-roasted lamb/mutton shoulder)",
-      "Povarenok.ru — Шашлык из баранины (Russian / Central Asian slow-roasted mutton)"
+      "Slow-roasted Mutton Shoulder (inspired by BBC Good Food)",
+      "Fırında Kuzu Kol (Turkish oven-roasted lamb/mutton shoulder) (inspired by Nefisyemektarifleri.com)",
+      "Шашлык из баранины (Russian / Central Asian slow-roasted mutton) (inspired by Povarenok.ru)"
     ],
     "slow_cooker": [
-      "Indian Healthy Recipes — Mutton Korma (slow cooker adaptation) (Indian / Mughlai tradition)",
-      "Nefis Yemek Tarifleri — Kuzu Kol Tandır (slow cooker adaptation) (Turkish tradition)",
-      "Chefkoch.de — Lammhaxen aus dem Slowcooker (shoulder adaptation) (German tradition)",
-      "Argiro.gr — Αρνάκι στο ταψί (slow cooker adaptation) (Greek tradition)"
+      "Mutton Korma (slow cooker adaptation) (inspired by Indian Healthy Recipes)",
+      "Kuzu Kol Tandır (slow cooker adaptation) (inspired by Nefis Yemek Tarifleri)",
+      "Lammhaxen aus dem Slowcooker (shoulder adaptation) (inspired by Chefkoch.de)",
+      "Αρνάκι στο ταψί (slow cooker adaptation) (inspired by Argiro.gr)"
     ]
   },
   "kangaroo_fillet": {
     "pan_sear": [
-      "Chefkoch.de — Kängurufilet mit Pflaumensauce, geschmorten Kirschtomaten und Potatoes Wedges",
-      "Kangaroo Wings (Australia) — Cabernet Sauvignon Marinated Kangaroo Backstrap with Basil Pesto"
+      "Kängurufilet mit Pflaumensauce, geschmorten Kirschtomaten und Potatoes Wedges (inspired by Chefkoch.de)",
+      "Cabernet Sauvignon Marinated Kangaroo Backstrap with Basil Pesto (inspired by Kangaroo Wings)"
     ]
   },
   "kangaroo_steak": {
     "grill": [
-      "Chefkoch.de — Gegrilltes Kängurusteak auf australische Art (German/Australian tradition)",
-      "Australian Kangaroo Industry Association — Grilled kangaroo rump",
-      "The Essential Ingredient (Sydney) — Kangaroo with bush spices on the BBQ"
+      "Gegrilltes Kängurusteak auf australische Art (inspired by Chefkoch.de)",
+      "Grilled kangaroo rump (inspired by Australian Kangaroo Industry Association)",
+      "Kangaroo with bush spices on the BBQ (inspired by The Essential Ingredient)"
     ],
     "pan_sear": [
-      "Chefkoch.de — Kängurusteak in Pfeffermarinade und Pfeffersahnesauce (German tradition)",
-      "Game Meat Australia / national tradition — Simple pan-seared kangaroo fillet",
-      "Meatsmith (Melbourne) — Kangaroo fillet with native pepper berry"
+      "Kängurusteak in Pfeffermarinade und Pfeffersahnesauce (inspired by Chefkoch.de)",
+      "Simple pan-seared kangaroo fillet (inspired by Game Meat Australia / national tradition)",
+      "Kangaroo fillet with native pepper berry (inspired by Meatsmith)"
     ]
   },
   "reindeer_roast": {
     "oven_roast": [
-      "Köket.se — Reninnanlår à la Norrland (Swedish tradition, oven method)",
-      "Tasteline.com — Renstek (Swedish reindeer roast)",
-      "Matprat.no — Renstek i ovnen (Norwegian oven roast)"
+      "Reninnanlår à la Norrland (inspired by Köket.se)",
+      "Renstek (Swedish reindeer roast) (inspired by Tasteline.com)",
+      "Renstek i ovnen (Norwegian oven roast) (inspired by Matprat.no)"
     ]
   },
   "reindeer_steak": {
     "grill": [
-      "Köket.se temperature guide — Grillad renfilé (Swedish grilling tradition)",
-      "Madensverden.dk — Grillet rensdyr (Danish/Nordic grilling)",
-      "Kotikokki.net — Poropihvi grillissä (Finnish grilled reindeer steak)"
+      "Grillad renfilé (inspired by Köket.se temperature guide)",
+      "Grillet rensdyr (Danish/Nordic grilling) (inspired by Madensverden.dk)",
+      "Poropihvi grillissä (Finnish grilled reindeer steak) (inspired by Kotikokki.net)"
     ],
     "pan_sear": [
-      "Köket.se / TV4 Halv åtta hos mig — Renfilé med smörig blåbärssås (Swedish tradition)",
-      "Köket.se / TV4 — Reninnanlår à la Norrland (Swedish tradition)",
-      "Kotikokki.net — Paistettua poronlihaa (Finnish pan-fried reindeer, Finnish tradition)"
+      "Renfilé med smörig blåbärssås (inspired by Köket.se / TV4 Halv åtta hos mig)",
+      "Reninnanlår à la Norrland (inspired by Köket.se / TV4)",
+      "Paistettua poronlihaa (inspired by Kotikokki.net)"
     ]
   },
   "goat_chop": {
     "grill": [
-      "BBC Good Food — Pulled Goat Kebabs with Coriander Dressing (British/Middle Eastern tradition)",
-      "Caribbean Pot — Jamaican Jerk Goat Chops (Caribbean tradition)",
-      "African Bites — Grilled Goat (West African tradition, adapted from lamb chops recipe)"
+      "Pulled Goat Kebabs with Coriander Dressing (inspired by BBC Good Food)",
+      "Jamaican Jerk Goat Chops (inspired by Caribbean Pot)",
+      "Grilled Goat (inspired by African Bites)"
     ],
     "pan_sear": [
-      "African Bites — Asun (Nigerian spicy roast goat — pan method)",
-      "Indianhealthyrecipes.com — Goat Chops Masala (Indian tradition)",
-      "Laylita.com — Seco de Chivo (Ecuadorian goat stew — pan method)"
+      "Asun (Nigerian spicy roast goat — pan method) (inspired by African Bites)",
+      "Goat Chops Masala (inspired by Indianhealthyrecipes.com)",
+      "Seco de Chivo (Ecuadorian goat stew — pan method) (inspired by Laylita.com)"
     ]
   },
   "goat_leg": {
     "oven_roast": [
-      "Chefkoch.de — Ziegenkeule im Römertopf (German tradition)",
-      "African Bites — Asun Goat (Nigerian roasted leg tradition)",
-      "Laylita.com — Seco de Chivo (Ecuadorian goat leg braised whole)"
+      "Ziegenkeule im Römertopf (inspired by Chefkoch.de)",
+      "Asun Goat (inspired by African Bites)",
+      "Seco de Chivo (Ecuadorian goat leg braised whole) (inspired by Laylita.com)"
     ]
   },
   "goat_shank": {
     "braise": [
-      "Yotam Ottolenghi & Sami Tamimi — Slow-Braised Goat Shanks with Pomegranate & Cumin (Levantine tradition)",
-      "Tina Nordström — Långbräserade Getlägg med Rödvin & Rotfrukter (Swedish/Nordic tradition)",
-      "Diana Henry — Slow-Braised Goat Shanks with Red Wine & Rosemary (British/Mediterranean tradition)",
-      "Maricel Presilla — Cabrito Estofado / Slow-Braised Goat Shanks (Latin American tradition)"
+      "Slow-Braised Goat Shanks with Pomegranate & Cumin (inspired by Yotam Ottolenghi & Sami Tamimi)",
+      "Långbräserade Getlägg med Rödvin & Rotfrukter (inspired by Tina Nordström)",
+      "Slow-Braised Goat Shanks with Red Wine & Rosemary (inspired by Diana Henry)",
+      "Cabrito Estofado / Slow-Braised Goat Shanks (inspired by Maricel Presilla)"
     ],
     "oven_roast": [
-      "Yotam Ottolenghi & Sami Tamimi — Oven-Roasted Goat Shanks with Pomegranate (Levantine tradition)",
-      "Tina Nordström — Ugnsbakade Getlägg med Rödvin (Swedish/Nordic tradition)",
-      "Diana Henry — Slow-Roasted Goat Shanks with Anchovy & Rosemary (British/Mediterranean tradition)",
-      "Hugh Fearnley-Whittingstall — Slow-Roast Goat Shanks (British River Cottage tradition)"
+      "Oven-Roasted Goat Shanks with Pomegranate (inspired by Yotam Ottolenghi & Sami Tamimi)",
+      "Ugnsbakade Getlägg med Rödvin (inspired by Tina Nordström)",
+      "Slow-Roasted Goat Shanks with Anchovy & Rosemary (inspired by Diana Henry)",
+      "Slow-Roast Goat Shanks (inspired by Hugh Fearnley-Whittingstall)"
     ]
   },
   "goat_shoulder": {
     "braise": [
-      "Yotam Ottolenghi & Sami Tamimi — Slow-Braised Goat Shoulder with Pomegranate, Cumin & Walnuts (Levantine tradition)",
-      "Tina Nordström — Långbräserad Getskuldra med Rödvin (Swedish/Nordic tradition)",
-      "Hugh Fearnley-Whittingstall — Slow-Braised Goat Shoulder with Cider (British River Cottage tradition)",
-      "Maricel Presilla — Cabrito en Salsa Verde / Slow-Braised Goat Shoulder (Latin American tradition)"
+      "Slow-Braised Goat Shoulder with Pomegranate, Cumin & Walnuts (inspired by Yotam Ottolenghi & Sami Tamimi)",
+      "Långbräserad Getskuldra med Rödvin (inspired by Tina Nordström)",
+      "Slow-Braised Goat Shoulder with Cider (inspired by Hugh Fearnley-Whittingstall)",
+      "Cabrito en Salsa Verde / Slow-Braised Goat Shoulder (inspired by Maricel Presilla)"
     ],
     "oven_roast": [
-      "African Bites — Jamaican Curry Goat (Caribbean tradition)",
-      "IndianHealthyRecipes.com — Rogan Josh (Kashmir/Indian goat shoulder)",
-      "Nefisyemektarifleri.com — Fırında Kuzu Omuz (Turkish goat/lamb shoulder)"
+      "Jamaican Curry Goat (inspired by African Bites)",
+      "Rogan Josh (Kashmir/Indian goat shoulder) (inspired by IndianHealthyRecipes.com)",
+      "Fırında Kuzu Omuz (Turkish goat/lamb shoulder) (inspired by Nefisyemektarifleri.com)"
     ],
     "slow_cooker": [
-      "Yotam Ottolenghi & Sami Tamimi — Slow-Cooker Goat Shoulder with Pomegranate (Levantine tradition)",
-      "Tina Nordström — Långkokt Getskuldra i Crock-Pot (Swedish/Nordic tradition)",
-      "Hugh Fearnley-Whittingstall — Slow-Cooker Goat Shoulder with Cider (British River Cottage tradition)",
-      "Maricel Presilla — Slow-Cooker Cabrito en Salsa Verde (Latin American tradition)"
+      "Slow-Cooker Goat Shoulder with Pomegranate (inspired by Yotam Ottolenghi & Sami Tamimi)",
+      "Långkokt Getskuldra i Crock-Pot (inspired by Tina Nordström)",
+      "Slow-Cooker Goat Shoulder with Cider (inspired by Hugh Fearnley-Whittingstall)",
+      "Slow-Cooker Cabrito en Salsa Verde (inspired by Maricel Presilla)"
     ]
   },
   "moose_roast": {
     "oven_roast": [
-      "Chefkoch.de — Elchbraten (Älg i grytan) — Swedish oven-braise (German recipe citing Swedish tradition)",
-      "Tasteline.com — Älgstek i ugn (Swedish oven roast)",
-      "Matprat.no — Elgstek i ovnen (Norwegian oven roast)"
+      "Elchbraten (Älg i grytan) — Swedish oven-braise (inspired by Chefkoch.de)",
+      "Älgstek i ugn (Swedish oven roast) (inspired by Tasteline.com)",
+      "Elgstek i ovnen (Norwegian oven roast) (inspired by Matprat.no)"
     ]
   },
   "moose_steak": {
     "grill": [
-      "Tasteline.com — Grillad älgbiff (Swedish grilled moose steak)",
-      "Chefkoch.de — Elchsteak vom Grill (German tradition)",
-      "Matprat.no — Grillet elgbiff (Norwegian BBQ tradition)"
+      "Grillad älgbiff (Swedish grilled moose steak) (inspired by Tasteline.com)",
+      "Elchsteak vom Grill (inspired by Chefkoch.de)",
+      "Grillet elgbiff (inspired by Matprat.no)"
     ],
     "pan_sear": [
-      "Chefkoch.de — Elchsteaks (Canadian recipe, German source)",
-      "Chefkoch.de — Reh oder Hirschsteaks (adapted for moose — German venison/deer steak with marinades)",
-      "Tasteline.com — Älgbiff i smör (Swedish butter-seared moose steak)"
+      "Elchsteaks (Canadian recipe, German source) (inspired by Chefkoch.de)",
+      "Reh oder Hirschsteaks (adapted for moose — German venison/deer steak with marinades) (inspired by Chefkoch.de)",
+      "Älgbiff i smör (Swedish butter-seared moose steak) (inspired by Tasteline.com)"
     ]
   },
   "buffalo_burger": {
     "grill": [
-      "Food Network — Bison Burger with Garlic Mayo and Caramelized Onions (American tradition)",
-      "Chefkoch.de — Der Bisonburger (German tradition)",
-      "BBC Good Food — Barbecued Beef Burger (technique applicable to buffalo patties)"
+      "Bison Burger with Garlic Mayo and Caramelized Onions (inspired by Food Network)",
+      "Der Bisonburger (inspired by Chefkoch.de)",
+      "Barbecued Beef Burger (technique applicable to buffalo patties) (inspired by BBC Good Food)"
     ],
     "pan_fry": [
-      "Chefkoch.de — Der Bisonburger (German tradition, pan-fry adaptation)",
-      "Madensverden.dk — Bøffer (Danish burger patties — buffalo/bison adaptation)",
-      "RecipeTinEats.com — Hamburger Recipe (technique applicable to buffalo)"
+      "Der Bisonburger (inspired by Chefkoch.de)",
+      "Bøffer (Danish burger patties — buffalo/bison adaptation) (inspired by Madensverden.dk)",
+      "Hamburger Recipe (technique applicable to buffalo) (inspired by RecipeTinEats.com)"
     ]
   },
   "buffalo_roast": {
     "braise": [
-      "Sean Sherman (The Sioux Chef) — Cedar-Braised Bison"
+      "Cedar-Braised Bison (inspired by Sean Sherman)"
     ]
   },
   "buffalo_steak": {
     "grill": [
-      "Yummy.ph — Filipino Bistek Tagalog Carabeef, grilled version (Filipino tradition)",
-      "Daskochrezept.de — Gegrilltes Bison-Filet-Steak mit süß-scharfer Bier-Chili-Marinade (German tradition)",
-      "IndianHealthyRecipes.com — Indian spiced water buffalo steak (Indian tradition)"
+      "Filipino Bistek Tagalog Carabeef, grilled version (inspired by Yummy.ph)",
+      "Gegrilltes Bison-Filet-Steak mit süß-scharfer Bier-Chili-Marinade (inspired by Daskochrezept.de)",
+      "Indian spiced water buffalo steak (inspired by IndianHealthyRecipes.com)"
     ],
     "pan_sear": [
-      "Panlasang Pinoy — Bistek Tagalog (Filipino beef/carabeef steak)",
-      "Chefkoch.de — Bisonbraten (German oven-pot tradition — also applies to buffalo)",
-      "IndianHealthyRecipes.com — Pepper Beef/Buffalo Fry (Kali Mirch) — Indian tradition"
+      "Bistek Tagalog (Filipino beef/carabeef steak) (inspired by Panlasang Pinoy)",
+      "Bisonbraten (inspired by Chefkoch.de)",
+      "Pepper Beef/Buffalo Fry (Kali Mirch) — Indian tradition (inspired by IndianHealthyRecipes.com)"
     ]
   },
   "bison_burger": {
     "grill": [
-      "BBC Good Food — Barbecue Beef Burger (British tradition)",
-      "Madensverden.dk — Saftige Burgerbøffer (Danish tradition)",
-      "Chefkoch.de — Der Bisonburger (German tradition)",
-      "RecipeTin Eats — Hamburger Recipe (Australian tradition)"
+      "Barbecue Beef Burger (inspired by BBC Good Food)",
+      "Saftige Burgerbøffer (inspired by Madensverden.dk)",
+      "Der Bisonburger (inspired by Chefkoch.de)",
+      "Hamburger Recipe (inspired by RecipeTin Eats)"
     ],
     "pan_fry": [
-      "Hank Shaw — Pan-Seared Bison Burgers with Caramelised Onions (American hunter tradition)",
-      "Tina Nordström — Pannstekt Bisonburgare med Lingon-Aioli (Swedish tradition)",
-      "America's Test Kitchen — Pan-Seared Bison Burgers (American test-kitchen tradition)",
-      "Magnus Nilsson — Pannstekt Bisonburgare med Enbärsmajonnäs (Nordic tradition)"
+      "Pan-Seared Bison Burgers with Caramelised Onions (inspired by Hank Shaw)",
+      "Pannstekt Bisonburgare med Lingon-Aioli (inspired by Tina Nordström)",
+      "Pan-Seared Bison Burgers (inspired by America's Test Kitchen)",
+      "Pannstekt Bisonburgare med Enbärsmajonnäs (inspired by Magnus Nilsson)"
     ]
   },
   "bison_roast": {
     "oven_roast": [
-      "Chefkoch.de — Bisonbraten (German tradition, high-heat oven)",
-      "Chefkoch.de — Bisonbraten mit Mozzarella-Senfkruste (German tradition, low-heat oven with herb crust)"
+      "Bisonbraten (inspired by Chefkoch.de)",
+      "Bisonbraten mit Mozzarella-Senfkruste (inspired by Chefkoch.de)"
     ]
   },
   "bison_steak": {
     "grill": [
-      "Daskochrezept.de — Gegrilltes Bison-Filet-Steak in süß-scharfer Bier-Chili-Marinade (German tradition)",
-      "BBC Good Food — Steak with Chimichurri Sauce (British / Argentine tradition)",
-      "Chefkoch.de — Bisonsteak auf Paprika (German tradition, pan sear + 80 °C oven)",
-      "Chefkoch.de — Bisonsteak in Rosmarin (German tradition, pan sear + 80 °C oven)"
+      "Gegrilltes Bison-Filet-Steak in süß-scharfer Bier-Chili-Marinade (inspired by Daskochrezept.de)",
+      "Steak with Chimichurri Sauce (inspired by BBC Good Food)",
+      "Bisonsteak auf Paprika (inspired by Chefkoch.de)",
+      "Bisonsteak in Rosmarin (inspired by Chefkoch.de)"
     ],
     "pan_sear": [
-      "Chefkoch.de — Bisonsteak mit Büffelmozzarella auf Wildpilzgemüse (German tradition)",
-      "Chefkoch.de — Bisonsteak in Rosmarin (German tradition)",
-      "Chefkoch.de — Bisonsteak auf Paprika (German tradition)",
-      "Daskochrezept.de — Gegrilltes Bison Filet Steak mit süß-scharfer Bier-Chili-Marinade (German/Austrian tradition)"
+      "Bisonsteak mit Büffelmozzarella auf Wildpilzgemüse (inspired by Chefkoch.de)",
+      "Bisonsteak in Rosmarin (inspired by Chefkoch.de)",
+      "Bisonsteak auf Paprika (inspired by Chefkoch.de)",
+      "Gegrilltes Bison Filet Steak mit süß-scharfer Bier-Chili-Marinade (inspired by Daskochrezept.de)"
     ]
   },
   "beef_burger": {
     "air_fryer": [
-      "America's Test Kitchen — Air-Fryer Diner-Style Burgers (American tradition)",
-      "Hugh Fearnley-Whittingstall — River Cottage Burger in the Air Fryer (British tradition)",
-      "Adam Liaw — Air Fryer \"Smash\" Burger (Australian / Asian-fusion tradition)",
-      "Joshua Weissman — Air Fryer Diner Cheeseburger (American food-media tradition)"
+      "Air-Fryer Diner-Style Burgers (inspired by America's Test Kitchen)",
+      "River Cottage Burger in the Air Fryer (inspired by Hugh Fearnley-Whittingstall)",
+      "Air Fryer \"Smash\" Burger (inspired by Adam Liaw)",
+      "Air Fryer Diner Cheeseburger (inspired by Joshua Weissman)"
     ],
     "grill": [
-      "J. Kenji López-Alt — Smash Burger / Classic Grilled Burger",
-      "Fergus Henderson — Classic Grilled Beef Patty (British tradition)",
-      "Jan Braai (Jan Scannell) — Braai Burger (*hamburguer*) (South African tradition)",
-      "Nobu Matsuhisa — Wagyu Burger on Charcoal (Japanese-Californian tradition)",
-      "Francis Mallmann — Gaucho-Style Grilled Burger (*hambúrguer gaucho*)"
+      "Smash Burger / Classic Grilled Burger (inspired by J. Kenji López-Alt)",
+      "Classic Grilled Beef Patty (inspired by Fergus Henderson)",
+      "Braai Burger (*hamburguer*) (inspired by Jan Braai)",
+      "Wagyu Burger on Charcoal (inspired by Nobu Matsuhisa)",
+      "Gaucho-Style Grilled Burger (*hambúrguer gaucho*) (inspired by Francis Mallmann)"
     ],
     "pan_fry": [
-      "J. Kenji López-Alt — Pan-Fried Smash Burger",
-      "Nigel Slater — Beef Burger in Cast Iron (British tradition)",
-      "Fergus Henderson — Short Rib Burger in Pan (Nose-to-Tail tradition)",
-      "Momofuku / David Chang — Korean-Influenced Crispy Skillet Burger",
-      "Diana Yen / The Jewels of New York — Taiwanese Beef Burger in Wok/Pan"
+      "Pan-Fried Smash Burger (inspired by J. Kenji López-Alt)",
+      "Beef Burger in Cast Iron (inspired by Nigel Slater)",
+      "Short Rib Burger in Pan (inspired by Fergus Henderson)",
+      "Korean-Influenced Crispy Skillet Burger (inspired by Momofuku / David Chang)",
+      "Taiwanese Beef Burger in Wok/Pan (inspired by Diana Yen / The Jewels of New York)"
     ]
   },
   "ground_beef": {
     "braise": [
-      "Marcella Hazan — Ragù alla Bolognese (Italian tradition)",
-      "Tina Nordström — Köttfärsgryta med rotsaker (Swedish tradition)",
-      "Madhur Jaffrey — Aloo Keema (Pakistani / North Indian tradition)",
-      "Diana Henry — Picadillo (Cuban-Mexican tradition)"
+      "Ragù alla Bolognese (inspired by Marcella Hazan)",
+      "Köttfärsgryta med rotsaker (inspired by Tina Nordström)",
+      "Aloo Keema (inspired by Madhur Jaffrey)",
+      "Picadillo (inspired by Diana Henry)"
     ],
     "pan_fry": [
-      "J. Kenji López-Alt — Pan-Fried Browned Ground Beef (American food-science tradition)",
-      "Marcella Hazan — Soffritto-Browned Beef for Ragù alla Bolognese (Italian tradition)",
-      "Madhur Jaffrey — Kheema (Indian-style minced beef)",
-      "Tina Nordström — Köttfärs på Stekpannan (Swedish home tradition)"
+      "Pan-Fried Browned Ground Beef (inspired by J. Kenji López-Alt)",
+      "Soffritto-Browned Beef for Ragù alla Bolognese (inspired by Marcella Hazan)",
+      "Kheema (Indian-style minced beef) (inspired by Madhur Jaffrey)",
+      "Köttfärs på Stekpannan (inspired by Tina Nordström)"
     ]
   },
   "meatloaf": {
     "oven_roast": [
-      "America's Test Kitchen — Classic Meatloaf with Bacon Topping (American tradition)",
-      "Tina Nordström — Köttfärslimpa (Swedish home tradition)",
-      "Nigella Lawson — Italian-Inspired Meatloaf with Fennel & Sun-Dried Tomato (British / Anglo-Italian tradition)",
-      "Ina Garten — Roasted Vegetable Meatloaf (American food-media tradition)"
+      "Classic Meatloaf with Bacon Topping (inspired by America's Test Kitchen)",
+      "Köttfärslimpa (inspired by Tina Nordström)",
+      "Italian-Inspired Meatloaf with Fennel & Sun-Dried Tomato (inspired by Nigella Lawson)",
+      "Roasted Vegetable Meatloaf (inspired by Ina Garten)"
     ]
   },
   "filet_mignon": {
     "air_fryer": [
-      "Natasha's Kitchen — Air Fryer Filet Mignon (American home tradition)",
-      "Serious Eats / Kenji — Air-Fryer Steak Technique Applied to Filet Mignon",
-      "BBC Good Food — Air Fryer Fillet Steak (British tradition)",
-      "Nagi Maehashi (RecipeTin Eats) — Air Fryer Steak Applied to Filet Mignon (Australian tradition)",
-      "Maangchi — Korean-Inspired Air Fryer Beef Fillet (*Sogogi gui*)"
+      "Air Fryer Filet Mignon (inspired by Natasha's Kitchen)",
+      "Air-Fryer Steak Technique Applied to Filet Mignon (inspired by Serious Eats / Kenji)",
+      "Air Fryer Fillet Steak (inspired by BBC Good Food)",
+      "Air Fryer Steak Applied to Filet Mignon (inspired by Nagi Maehashi)",
+      "Korean-Inspired Air Fryer Beef Fillet (*Sogogi gui*) (inspired by Maangchi)"
     ],
     "charcoal_grill": [
-      "Aaron Franklin — Charcoal-Grilled Filet (Texas tradition)",
-      "Adam Perry Lang — Two-Stage Charcoal Filet",
-      "Francis Mallmann — Filet on Charcoal Embers (*gaucho* tradition, Argentine)",
-      "Nobu Matsuhisa — Charcoal-Grilled Beef Fillet with Soy (Japanese tradition)",
-      "Yotam Ottolenghi — Middle Eastern Charcoal-Grilled Fillet"
+      "Charcoal-Grilled Filet (inspired by Aaron Franklin)",
+      "Two-Stage Charcoal Filet (inspired by Adam Perry Lang)",
+      "Filet on Charcoal Embers (inspired by Francis Mallmann)",
+      "Charcoal-Grilled Beef Fillet with Soy (inspired by Nobu Matsuhisa)",
+      "Middle Eastern Charcoal-Grilled Fillet (inspired by Yotam Ottolenghi)"
     ],
     "grill": [
-      "Weber Grills / America's Test Kitchen — Classic Grilled Filet Mignon",
-      "Ina Garten — Grilled Filet Mignon with Herb Butter (American home tradition)",
-      "Nigel Slater — Grilled Beef Fillet (British tradition)",
-      "Ferran Adrià — Grilled Beef Fillet with Romesco (Catalan tradition)",
-      "Maangchi — Korean Grilled Beef Fillet (*Gui*)"
+      "Classic Grilled Filet Mignon (inspired by Weber Grills / America's Test Kitchen)",
+      "Grilled Filet Mignon with Herb Butter (inspired by Ina Garten)",
+      "Grilled Beef Fillet (inspired by Nigel Slater)",
+      "Grilled Beef Fillet with Romesco (inspired by Ferran Adrià)",
+      "Korean Grilled Beef Fillet (*Gui*) (inspired by Maangchi)"
     ],
     "oven_roast": [
-      "Ina Garten — Pan-Seared Oven-Finished Filet Mignon",
-      "Gordon Ramsay — Filet Mignon with Roasted Garlic Butter (British tradition)",
-      "Jacques Pépin — Filet Mignon au Four (French tradition)",
-      "Heston Blumenthal — Reverse-Sear Filet Mignon",
-      "Tetsuya Wakuda — Oven-Roasted Wagyu Fillet (Japanese-Australian tradition)"
+      "Pan-Seared Oven-Finished Filet Mignon (inspired by Ina Garten)",
+      "Filet Mignon with Roasted Garlic Butter (inspired by Gordon Ramsay)",
+      "Filet Mignon au Four (inspired by Jacques Pépin)",
+      "Reverse-Sear Filet Mignon (inspired by Heston Blumenthal)",
+      "Oven-Roasted Wagyu Fillet (inspired by Tetsuya Wakuda)"
     ],
     "pan_fry": [
-      "Julia Child — Pan-Fried Filet de Bœuf (French bistro tradition)",
-      "J. Kenji López-Alt — Pan-Fried Filet Mignon with Butter Baste",
-      "Marco Pierre White — Fillet Steak in the Pan (British tradition)",
-      "Masaharu Morimoto — Iron Chef–Style Pan-Fried Beef Fillet (Japanese-American tradition)",
-      "Nagi Maehashi (RecipeTin Eats) — Pan-Fried Eye Fillet Steak (Australian tradition)"
+      "Pan-Fried Filet de Bœuf (inspired by Julia Child)",
+      "Pan-Fried Filet Mignon with Butter Baste (inspired by J. Kenji López-Alt)",
+      "Fillet Steak in the Pan (inspired by Marco Pierre White)",
+      "Iron Chef–Style Pan-Fried Beef Fillet (inspired by Masaharu Morimoto)",
+      "Pan-Fried Eye Fillet Steak (inspired by Nagi Maehashi)"
     ],
     "pan_sear": [
-      "J. Kenji López-Alt — Rapid-Flip Pan Sear (Serious Eats method)",
-      "Thomas Keller — Pan-Seared Filet with Brown Butter (French American tradition)",
-      "Fergus Henderson — Seared Fillet Steak (British tradition)",
-      "Nobu Matsuhisa — Pan-Seared Wagyu Fillet with Ponzu (Japanese tradition)",
-      "Adam Liaw — Pan-Seared Beef Fillet with Shiitake Sauce (Japanese-Australian tradition)"
+      "Rapid-Flip Pan Sear (Serious Eats method) (inspired by J. Kenji López-Alt)",
+      "Pan-Seared Filet with Brown Butter (inspired by Thomas Keller)",
+      "Seared Fillet Steak (inspired by Fergus Henderson)",
+      "Pan-Seared Wagyu Fillet with Ponzu (inspired by Nobu Matsuhisa)",
+      "Pan-Seared Beef Fillet with Shiitake Sauce (inspired by Adam Liaw)"
     ],
     "sous_vide": [
-      "J. Kenji López-Alt — Sous Vide Filet Mignon",
-      "Thomas Keller — Sous Vide Beef Tenderloin Medallion (*Ad Hoc* tradition)",
-      "Heston Blumenthal — Sous Vide Beef Fillet (British modern tradition)",
-      "Maangchi — Korean-Style Sous Vide Beef Fillet (*Ansim*)",
-      "Tetsuya Wakuda — Sous Vide Wagyu Fillet (Japanese-Australian tradition)"
+      "Sous Vide Filet Mignon (inspired by J. Kenji López-Alt)",
+      "Sous Vide Beef Tenderloin Medallion (inspired by Thomas Keller)",
+      "Sous Vide Beef Fillet (inspired by Heston Blumenthal)",
+      "Korean-Style Sous Vide Beef Fillet (*Ansim*) (inspired by Maangchi)",
+      "Sous Vide Wagyu Fillet (inspired by Tetsuya Wakuda)"
     ]
   },
   "flank_steak": {
     "charcoal_grill": [
-      "Francis Mallmann — Argentine Flank on Charcoal (*Vacio a la parrilla*)",
-      "Aaron Franklin — Charcoal-Grilled Flank Steak (Texas tradition)",
-      "Ottolenghi — Middle Eastern Marinated Flank Steak on Charcoal",
-      "Nobu Matsuhisa — Charcoal-Grilled Flank with Soy Citrus Glaze (Japanese-Californian tradition)",
-      "Diana Barrios Treviño — Tex-Mex Carne Asada Flank Steak"
+      "Argentine Flank on Charcoal (*Vacio a la parrilla*) (inspired by Francis Mallmann)",
+      "Charcoal-Grilled Flank Steak (inspired by Aaron Franklin)",
+      "Middle Eastern Marinated Flank Steak on Charcoal (inspired by Ottolenghi)",
+      "Charcoal-Grilled Flank with Soy Citrus Glaze (inspired by Nobu Matsuhisa)",
+      "Tex-Mex Carne Asada Flank Steak (inspired by Diana Barrios Treviño)"
     ],
     "grill": [
-      "America's Test Kitchen — Gas-Grilled Flank Steak",
-      "Bobby Flay — Marinated Grilled Flank Steak (American SW tradition)",
-      "Rick Bayless — Mexican Carne Asada (Mexican tradition)",
-      "Heston Blumenthal — Reverse-Sear Grilled Flank Steak (British modern)",
-      "Maangchi — Korean Galbi-Style Flank (*Bulgogi* Variation)"
+      "Gas-Grilled Flank Steak (inspired by America's Test Kitchen)",
+      "Marinated Grilled Flank Steak (inspired by Bobby Flay)",
+      "Mexican Carne Asada (inspired by Rick Bayless)",
+      "Reverse-Sear Grilled Flank Steak (British modern) (inspired by Heston Blumenthal)",
+      "Korean Galbi-Style Flank (*Bulgogi* Variation) (inspired by Maangchi)"
     ],
     "oven_roast": [
-      "America's Test Kitchen — London Broil (Oven-Roasted Flank Steak)",
-      "Alton Brown — London Broil Method",
-      "Yotam Ottolenghi — Slow-Roasted Middle Eastern Flank Steak",
-      "Julia Child — Bœuf au Four / Flank Oven Method (French tradition)",
-      "Maangchi — Korean Oven-Roasted Marinated Flank (*Sogogi Bokkeum* Variation)"
+      "London Broil (Oven-Roasted Flank Steak) (inspired by America's Test Kitchen)",
+      "London Broil Method (inspired by Alton Brown)",
+      "Slow-Roasted Middle Eastern Flank Steak (inspired by Yotam Ottolenghi)",
+      "Bœuf au Four / Flank Oven Method (inspired by Julia Child)",
+      "Korean Oven-Roasted Marinated Flank (*Sogogi Bokkeum* Variation) (inspired by Maangchi)"
     ],
     "pan_fry": [
-      "J. Kenji López-Alt — Pan-Fried Flank Steak (Serious Eats)",
-      "Nigel Slater — Pan-Fried Bavette (British tradition)",
-      "Jacques Pépin — Bavette de Bœuf à la Lyonnaise (French tradition)",
-      "Nobu Matsuhisa — Pan-Fried Beef Flank with Miso Glaze (Japanese-American tradition)",
-      "Adam Perry Lang — Pan-Fried Flank with Herb Baste (American BBQ tradition applied to pan)"
+      "Pan-Fried Flank Steak (Serious Eats) (inspired by J. Kenji López-Alt)",
+      "Pan-Fried Bavette (inspired by Nigel Slater)",
+      "Bavette de Bœuf à la Lyonnaise (inspired by Jacques Pépin)",
+      "Pan-Fried Beef Flank with Miso Glaze (inspired by Nobu Matsuhisa)",
+      "Pan-Fried Flank with Herb Baste (inspired by Adam Perry Lang)"
     ],
     "pan_sear": [
-      "J. Kenji López-Alt — Pan-Seared Flank Steak (Serious Eats)",
-      "Stéphane Reynaud — Bavette à l'échalote (French bistro tradition)",
-      "Francis Mallmann — Plancha-Seared Matambre (Argentine tradition)",
-      "Fergus Henderson — Pan-Fried Bavette with Anchovy Butter (British nose-to-tail tradition)",
-      "Maangchi — Pan-Seared Bulgogi-Style Flank (Korean tradition)"
+      "Pan-Seared Flank Steak (Serious Eats) (inspired by J. Kenji López-Alt)",
+      "Bavette à l'échalote (inspired by Stéphane Reynaud)",
+      "Plancha-Seared Matambre (inspired by Francis Mallmann)",
+      "Pan-Fried Bavette with Anchovy Butter (inspired by Fergus Henderson)",
+      "Pan-Seared Bulgogi-Style Flank (inspired by Maangchi)"
     ],
     "sous_vide": [
-      "J. Kenji López-Alt — Sous Vide Flank Steak (Serious Eats / ChefSteps)",
-      "Thomas Keller — Sous Vide Flank Steak (French Laundry / Bouchon tradition)",
-      "Heston Blumenthal — Precision-Temperature Flank (British modernist tradition)",
-      "David Chang — Sous Vide Flank for Korean BBQ (Korean-American tradition)",
-      "Enrique Olvera — Matambre Sous Vide (Mexican tradition)"
+      "Sous Vide Flank Steak (Serious Eats / ChefSteps) (inspired by J. Kenji López-Alt)",
+      "Sous Vide Flank Steak (inspired by Thomas Keller)",
+      "Precision-Temperature Flank (inspired by Heston Blumenthal)",
+      "Sous Vide Flank for Korean BBQ (inspired by David Chang)",
+      "Matambre Sous Vide (inspired by Enrique Olvera)"
     ]
   },
   "flat_iron": {
     "air_fryer": [
-      "J. Kenji López-Alt / Serious Eats — Air-Fryer Flat Iron with Herb Butter",
-      "Nigella Lawson — Smoked-Paprika Air-Fryer Flat Iron (British home-cook tradition)",
-      "Donna Hay — Sesame-Ginger Air-Fryer Flat Iron (Australian modern)",
-      "Maangchi — Korean Yangnyeom-Marinated Air-Fryer Flat Iron (Korean tradition)",
-      "Rick Bayless — Achiote-Citrus Air-Fryer Flat Iron (Mexican tradition)"
+      "Air-Fryer Flat Iron with Herb Butter (inspired by J. Kenji López-Alt / Serious Eats)",
+      "Smoked-Paprika Air-Fryer Flat Iron (inspired by Nigella Lawson)",
+      "Sesame-Ginger Air-Fryer Flat Iron (Australian modern) (inspired by Donna Hay)",
+      "Korean Yangnyeom-Marinated Air-Fryer Flat Iron (inspired by Maangchi)",
+      "Achiote-Citrus Air-Fryer Flat Iron (inspired by Rick Bayless)"
     ],
     "charcoal_grill": [
-      "Francis Mallmann — Asado de Campo Flat Iron (Argentine tradition)",
-      "Jan Braai (Jan Scannell) — South African Braai Flat Iron with Monkey Gland Sauce",
-      "Aaron Franklin — Direct-Coal Flat Iron (American BBQ/steakhouse tradition)",
-      "Maangchi — Korean Charcoal-Grilled Bulgogi Flat Iron (Korean tradition)",
-      "Guga Foods — Brazilian Churrasco Flat Iron on Skewer (Brazilian tradition)"
+      "Asado de Campo Flat Iron (inspired by Francis Mallmann)",
+      "South African Braai Flat Iron with Monkey Gland Sauce (inspired by Jan Braai)",
+      "Direct-Coal Flat Iron (inspired by Aaron Franklin)",
+      "Korean Charcoal-Grilled Bulgogi Flat Iron (inspired by Maangchi)",
+      "Brazilian Churrasco Flat Iron on Skewer (inspired by Guga Foods)"
     ],
     "grill": [
-      "Bobby Flay — Grilled Flat Iron with Blue Cheese Butter (American tradition)",
-      "Jamie Oliver — Flat Iron Steak with Salsa Verde (British/Italian tradition)",
-      "Claudia Roden — Chermoula-Grilled Flat Iron (North African/Moroccan tradition)",
-      "José Pizarro — Spanish Plancha-Style Flat Iron with Romesco (Spanish tradition)",
-      "Yotam Ottolenghi — Za'atar and Lemon Grilled Flat Iron (Israeli/Levantine tradition)"
+      "Grilled Flat Iron with Blue Cheese Butter (inspired by Bobby Flay)",
+      "Flat Iron Steak with Salsa Verde (inspired by Jamie Oliver)",
+      "Chermoula-Grilled Flat Iron (inspired by Claudia Roden)",
+      "Spanish Plancha-Style Flat Iron with Romesco (inspired by José Pizarro)",
+      "Za'atar and Lemon Grilled Flat Iron (inspired by Yotam Ottolenghi)"
     ],
     "oven_roast": [
-      "America's Test Kitchen — Reverse-Sear Flat Iron (American tradition)",
-      "Heston Blumenthal — Low-and-Slow Oven Flat Iron (British modernist tradition)",
-      "Julia Child — Bifteck Rôti au Four (French tradition)",
-      "Marcella Hazan — Bistecca al Forno con Erbe (Italian tradition)",
-      "Nigel Slater — Flat Iron with Anchovy and Mustard Crust, Roasted (British tradition)"
+      "Reverse-Sear Flat Iron (inspired by America's Test Kitchen)",
+      "Low-and-Slow Oven Flat Iron (inspired by Heston Blumenthal)",
+      "Bifteck Rôti au Four (inspired by Julia Child)",
+      "Bistecca al Forno con Erbe (inspired by Marcella Hazan)",
+      "Flat Iron with Anchovy and Mustard Crust, Roasted (inspired by Nigel Slater)"
     ],
     "pan_fry": [
-      "Jacques Pépin — Steak à la Poêle, Sauce au Poivre (French bistro tradition)",
-      "Rowley Leigh — Flat Iron Steak with Watercress and Anchovy Dressing (British tradition)",
-      "Giorgio Locatelli — Tagliata di Ferro con Rucola e Parmigiano (Italian tradition)",
-      "Kurt Gutenbrunner — Wiener Steak aus der Pfanne (Austrian tradition)",
-      "Stephanie Alexander — Pan-Fried Flat Iron with Herb and Caper Butter (Australian tradition)"
+      "Steak à la Poêle, Sauce au Poivre (inspired by Jacques Pépin)",
+      "Flat Iron Steak with Watercress and Anchovy Dressing (inspired by Rowley Leigh)",
+      "Tagliata di Ferro con Rucola e Parmigiano (inspired by Giorgio Locatelli)",
+      "Wiener Steak aus der Pfanne (inspired by Kurt Gutenbrunner)",
+      "Pan-Fried Flat Iron with Herb and Caper Butter (inspired by Stephanie Alexander)"
     ],
     "pan_sear": [
-      "J. Kenji López-Alt — Dry-Brined Pan-Seared Flat Iron with Butter Basting (American tradition)",
-      "Gordon Ramsay — Restaurant-Style Butter-Basted Flat Iron (British/French restaurant tradition)",
-      "Nobu Matsuhisa — Wafu Flat Iron with Ponzu and Daikon (Japanese tradition)",
-      "José Andrés — Flat Iron a la Plancha with Piquillo Peppers (Spanish tradition)",
-      "René Redzepi — Nordic Seared Flat Iron with Smoked Butter (Nordic tradition)"
+      "Dry-Brined Pan-Seared Flat Iron with Butter Basting (inspired by J. Kenji López-Alt)",
+      "Restaurant-Style Butter-Basted Flat Iron (inspired by Gordon Ramsay)",
+      "Wafu Flat Iron with Ponzu and Daikon (inspired by Nobu Matsuhisa)",
+      "Flat Iron a la Plancha with Piquillo Peppers (inspired by José Andrés)",
+      "Nordic Seared Flat Iron with Smoked Butter (inspired by René Redzepi)"
     ],
     "sous_vide": [
-      "J. Kenji López-Alt / Serious Eats — Sous Vide Flat Iron at 55 °C (American modernist tradition)",
-      "Thomas Keller — Sous Vide Flat Iron (French-American modernist tradition)",
-      "Heston Blumenthal — Precise Sous Vide Flat Iron (British modernist tradition)",
-      "ChefSteps — Joule Sous Vide Flat Iron (American modernist/tech tradition)",
-      "Nathan Myhrvold et al. — Modernist Approach to Sous Vide Flat Iron (Modernist tradition)"
+      "Sous Vide Flat Iron at 55 °C (inspired by J. Kenji López-Alt / Serious Eats)",
+      "Sous Vide Flat Iron (inspired by Thomas Keller)",
+      "Precise Sous Vide Flat Iron (inspired by Heston Blumenthal)",
+      "Joule Sous Vide Flat Iron (inspired by ChefSteps)",
+      "Modernist Approach to Sous Vide Flat Iron (inspired by Nathan Myhrvold et al.)"
     ]
   },
   "hanger_steak": {
     "charcoal_grill": [
-      "Francis Mallmann — Onglet over Charcoal Embers (Argentine tradition)",
-      "Steven Raichlen — Charcoal-Grilled Hanger Steak (American tradition)",
-      "Lennox Hastie — Hanger Steak over Australian Ironbark (Australian live-fire tradition)",
-      "David Tanis — Onglet over Charcoal (French bistro tradition)",
-      "Bobby Flay — Charcoal Hanger Steak with Horseradish Compound Butter (American tradition)"
+      "Onglet over Charcoal Embers (inspired by Francis Mallmann)",
+      "Charcoal-Grilled Hanger Steak (inspired by Steven Raichlen)",
+      "Hanger Steak over Australian Ironbark (inspired by Lennox Hastie)",
+      "Onglet over Charcoal (inspired by David Tanis)",
+      "Charcoal Hanger Steak with Horseradish Compound Butter (inspired by Bobby Flay)"
     ],
     "grill": [
-      "J. Kenji López-Alt — Grilled Hanger Steak (American bistro tradition)",
-      "David Tanis — Grilled Onglet à l'Échalote (French bistro tradition)",
-      "Yotam Ottolenghi — Grilled Hanger Steak with Spiced Yoghurt (Middle Eastern tradition)",
-      "April Bloomfield — Grilled Hanger Steak, Balsamic-Onion (American-British tradition)",
-      "Neil Perry — Grilled Hanger Steak with Gremolata (Australian tradition)"
+      "Grilled Hanger Steak (inspired by J. Kenji López-Alt)",
+      "Grilled Onglet à l'Échalote (inspired by David Tanis)",
+      "Grilled Hanger Steak with Spiced Yoghurt (inspired by Yotam Ottolenghi)",
+      "Grilled Hanger Steak, Balsamic-Onion (inspired by April Bloomfield)",
+      "Grilled Hanger Steak with Gremolata (inspired by Neil Perry)"
     ],
     "pan_fry": [
-      "Julia Child — Onglet à l'Échalote (French bistro tradition)",
-      "Fergus Henderson — Pan-Fried Onglet, Chips (British nose-to-tail tradition)",
-      "J. Kenji López-Alt — Pan-Fried Hanger Steak (American tradition)",
-      "David Tanis — Onglet with Anchovy Butter (French bistro tradition)",
-      "April Bloomfield — Pan-Fried Hanger Steak, Red-Wine Sauce (American-British tradition)"
+      "Onglet à l'Échalote (inspired by Julia Child)",
+      "Pan-Fried Onglet, Chips (inspired by Fergus Henderson)",
+      "Pan-Fried Hanger Steak (inspired by J. Kenji López-Alt)",
+      "Onglet with Anchovy Butter (inspired by David Tanis)",
+      "Pan-Fried Hanger Steak, Red-Wine Sauce (inspired by April Bloomfield)"
     ],
     "pan_sear": [
-      "J. Kenji López-Alt — Butter-Basted Pan-Seared Hanger Steak (American tradition)",
-      "Stéphane Reynaud — Onglet à l'Échalote (French bistrot tradition)",
-      "Hugh Fearnley-Whittingstall — Bavette / Onglet Seared in Dripping (British tradition)",
-      "Deuki Hong and Matt Rodbard — 안창살구이 Anchang-Sal Pan-Sear (Korean tradition)"
+      "Butter-Basted Pan-Seared Hanger Steak (inspired by J. Kenji López-Alt)",
+      "Onglet à l'Échalote (inspired by Stéphane Reynaud)",
+      "Bavette / Onglet Seared in Dripping (inspired by Hugh Fearnley-Whittingstall)",
+      "안창살구이 Anchang-Sal Pan-Sear (inspired by Deuki Hong and Matt Rodbard)"
     ]
   },
   "ny_strip": {
     "air_fryer": [
-      "America's Test Kitchen — Air Fryer Strip Steak (American tradition)",
-      "Jamie Oliver — Air Fryer Steak with Herb Butter (British tradition)",
-      "Donna Hay — Air Fryer Strip Steak with Chimichurri (Australian tradition)",
-      "Nigella Lawson — Air Fryer Steak with Mustard Sauce (British home-cooking tradition)",
-      "Neil Perry — Air Fryer Steak with Herb Salsa (Australian tradition)"
+      "Air Fryer Strip Steak (inspired by America's Test Kitchen)",
+      "Air Fryer Steak with Herb Butter (inspired by Jamie Oliver)",
+      "Air Fryer Strip Steak with Chimichurri (inspired by Donna Hay)",
+      "Air Fryer Steak with Mustard Sauce (inspired by Nigella Lawson)",
+      "Air Fryer Steak with Herb Salsa (inspired by Neil Perry)"
     ],
     "charcoal_grill": [
-      "Francis Mallmann — Charcoal-Grilled Strip Steak (Argentine asado tradition)",
-      "Steven Raichlen — Strip Steak with Charcoal and Wood Smoke (American BBQ tradition)",
-      "Adam Perry Lang — Competition-Style Strip Steak over Charcoal (American competition BBQ tradition)",
-      "Lennox Hastie — Strip Steak over Live Fire (Australian wood-fire tradition)",
-      "Yotam Ottolenghi — Charcoal-Grilled Strip with Spiced Butter (Middle Eastern tradition)"
+      "Charcoal-Grilled Strip Steak (inspired by Francis Mallmann)",
+      "Strip Steak with Charcoal and Wood Smoke (inspired by Steven Raichlen)",
+      "Competition-Style Strip Steak over Charcoal (inspired by Adam Perry Lang)",
+      "Strip Steak over Live Fire (inspired by Lennox Hastie)",
+      "Charcoal-Grilled Strip with Spiced Butter (inspired by Yotam Ottolenghi)"
     ],
     "grill": [
-      "Steven Raichlen — Grilled Strip Steaks with Cowboy Butter (American tradition)",
-      "Bobby Flay — Grilled NY Strip with Red Chimichurri (Argentine-American fusion tradition)",
-      "Francis Mallmann — Strip Steak on the Grill (Argentine / South American tradition)",
-      "Yotam Ottolenghi — Grilled Strip Steak with Herb Salsa (Israeli / Middle Eastern tradition)",
-      "Neil Perry — Grilled Strip Steak with Anchovy Butter (Australian tradition)"
+      "Grilled Strip Steaks with Cowboy Butter (inspired by Steven Raichlen)",
+      "Grilled NY Strip with Red Chimichurri (inspired by Bobby Flay)",
+      "Strip Steak on the Grill (inspired by Francis Mallmann)",
+      "Grilled Strip Steak with Herb Salsa (inspired by Yotam Ottolenghi)",
+      "Grilled Strip Steak with Anchovy Butter (inspired by Neil Perry)"
     ],
     "oven_roast": [
-      "J. Kenji López-Alt — Reverse-Sear New York Strip (American tradition)",
-      "America's Test Kitchen — Oven-Seared Strip Steak (American tradition)",
-      "Gordon Ramsay — Oven-Finished Strip Steak (British restaurant tradition)",
-      "Heston Blumenthal — Triple-Cooked Steak (British Modernist tradition)",
-      "Fergus Henderson — Roasted Strip Steak (British nose-to-tail tradition)"
+      "Reverse-Sear New York Strip (inspired by J. Kenji López-Alt)",
+      "Oven-Seared Strip Steak (inspired by America's Test Kitchen)",
+      "Oven-Finished Strip Steak (inspired by Gordon Ramsay)",
+      "Triple-Cooked Steak (inspired by Heston Blumenthal)",
+      "Roasted Strip Steak (inspired by Fergus Henderson)"
     ],
     "pan_fry": [
-      "Nigella Lawson — Pan-Fried Steak with Garlic Butter (British home-cooking tradition)",
-      "Delia Smith — Pan-Fried Steak with Mushrooms (British traditional home cooking)",
-      "Julia Child — Steak Sauté with Red Wine Sauce (French classical tradition)",
-      "Nigel Slater — Pan-Fried Strip Steak with Herb Sauce (British contemporary tradition)",
-      "Stephanie Alexander — Pan-Fried Sirloin (Australian tradition)"
+      "Pan-Fried Steak with Garlic Butter (inspired by Nigella Lawson)",
+      "Pan-Fried Steak with Mushrooms (inspired by Delia Smith)",
+      "Steak Sauté with Red Wine Sauce (inspired by Julia Child)",
+      "Pan-Fried Strip Steak with Herb Sauce (inspired by Nigel Slater)",
+      "Pan-Fried Sirloin (inspired by Stephanie Alexander)"
     ],
     "pan_sear": [
-      "J. Kenji López-Alt — Pan-Seared New York Strip (American tradition)",
-      "Gordon Ramsay — Pan-Seared Strip Steak with Red Wine Jus (British restaurant tradition)",
-      "Jacques Pépin — Contre-Filet Sauté au Beurre (French classical tradition)",
-      "Heston Blumenthal — Perfect Steak (Strip Steak Method) (British Modernist tradition)",
-      "Neil Perry — Pan-Seared Strip Steak with Bone Marrow Butter (Australian tradition)"
+      "Pan-Seared New York Strip (inspired by J. Kenji López-Alt)",
+      "Pan-Seared Strip Steak with Red Wine Jus (inspired by Gordon Ramsay)",
+      "Contre-Filet Sauté au Beurre (inspired by Jacques Pépin)",
+      "Perfect Steak (Strip Steak Method) (inspired by Heston Blumenthal)",
+      "Pan-Seared Strip Steak with Bone Marrow Butter (inspired by Neil Perry)"
     ],
     "sous_vide": [
-      "J. Kenji López-Alt — Sous Vide New York Strip (American tradition)",
-      "Thomas Keller — Sous Vide Strip Steak (French haute cuisine tradition)",
-      "Heston Blumenthal — Sous Vide Perfect Steak (British Modernist tradition)",
-      "Grant Achatz — Sous Vide Strip Steak with Aromatics (American Modernist tradition)",
-      "Neil Perry — Sous Vide Strip Steak, Australian Style (Australian tradition)"
+      "Sous Vide New York Strip (inspired by J. Kenji López-Alt)",
+      "Sous Vide Strip Steak (inspired by Thomas Keller)",
+      "Sous Vide Perfect Steak (inspired by Heston Blumenthal)",
+      "Sous Vide Strip Steak with Aromatics (inspired by Grant Achatz)",
+      "Sous Vide Strip Steak, Australian Style (inspired by Neil Perry)"
     ]
   },
   "picanha": {
     "charcoal_grill": [
-      "Francis Mallmann — Churrasco Picanha over Charcoal (Brazilian / Argentine tradition)",
-      "Steven Raichlen — Picanha over Live Charcoal (American adaptation of Brazilian tradition)",
-      "Lennox Hastie — Rump Cap over Australian Charcoal (Australian wood-fire tradition)",
-      "Bobby Flay — Charcoal-Grilled Picanha with Chimichurri (American Southwest tradition)",
-      "Nobu Matsuhisa — Charcoal-Grilled Picanha with Ponzu (Japanese-Brazilian tradition)"
+      "Churrasco Picanha over Charcoal (inspired by Francis Mallmann)",
+      "Picanha over Live Charcoal (inspired by Steven Raichlen)",
+      "Rump Cap over Australian Charcoal (inspired by Lennox Hastie)",
+      "Charcoal-Grilled Picanha with Chimichurri (inspired by Bobby Flay)",
+      "Charcoal-Grilled Picanha with Ponzu (inspired by Nobu Matsuhisa)"
     ],
     "grill": [
-      "Francis Mallmann — Grilled Picanha on the Parilla (Argentine/Brazilian tradition)",
-      "Steven Raichlen — Coulotte Steak on the Grill (American tradition)",
-      "Jock Zonfrillo — Grilled Rump Cap with Native Spice Rub (Australian tradition)",
-      "Bobby Flay — Grilled Picanha with Spiced Butter (American tradition)",
-      "Neil Perry — Grilled Rump Cap with Salsa Verde (Australian tradition)"
+      "Grilled Picanha on the Parilla (inspired by Francis Mallmann)",
+      "Coulotte Steak on the Grill (inspired by Steven Raichlen)",
+      "Grilled Rump Cap with Native Spice Rub (inspired by Jock Zonfrillo)",
+      "Grilled Picanha with Spiced Butter (inspired by Bobby Flay)",
+      "Grilled Rump Cap with Salsa Verde (inspired by Neil Perry)"
     ],
     "oven_roast": [
-      "America's Test Kitchen — Oven-Roasted Picanha (American tradition)",
-      "Gordon Ramsay — Roast Rump Cap (British restaurant tradition)",
-      "Heston Blumenthal — Reverse-Sear Picanha (British Modernist tradition)",
-      "Neil Perry — Roast Rump Cap with Herb Crust (Australian tradition)",
-      "Donna Hay — Roasted Picanha with Chimichurri (Australian tradition)"
+      "Oven-Roasted Picanha (inspired by America's Test Kitchen)",
+      "Roast Rump Cap (inspired by Gordon Ramsay)",
+      "Reverse-Sear Picanha (inspired by Heston Blumenthal)",
+      "Roast Rump Cap with Herb Crust (inspired by Neil Perry)",
+      "Roasted Picanha with Chimichurri (inspired by Donna Hay)"
     ],
     "pan_sear": [
-      "Francis Mallmann — Picanha in a Cast-Iron Pan (Argentine/Brazilian tradition)",
-      "J. Kenji López-Alt — Pan-Seared Coulotte (Sirloin Cap) (American tradition)",
-      "Gordon Ramsay — Pan-Seared Rump Cap (British restaurant tradition)",
-      "Nobu Matsuhisa — Pan-Seared Picanha with Yuzu Kosho (Japanese-Brazilian fusion)",
-      "Donna Hay — Pan-Seared Rump Cap with Herb Dressing (Australian tradition)"
+      "Picanha in a Cast-Iron Pan (inspired by Francis Mallmann)",
+      "Pan-Seared Coulotte (Sirloin Cap) (inspired by J. Kenji López-Alt)",
+      "Pan-Seared Rump Cap (inspired by Gordon Ramsay)",
+      "Pan-Seared Picanha with Yuzu Kosho (Japanese-Brazilian fusion) (inspired by Nobu Matsuhisa)",
+      "Pan-Seared Rump Cap with Herb Dressing (inspired by Donna Hay)"
     ]
   },
   "ribeye_steak": {
     "air_fryer": [
-      "ichkoche.at — Schopfsteak aus dem Airfryer (Austrian tradition)",
-      "BBC Good Food — Air fryer steak (British tradition)",
-      "GialloZafferano — Roast beef in friggitrice ad aria (Italian tradition)"
+      "Schopfsteak aus dem Airfryer (inspired by ichkoche.at)",
+      "Air fryer steak (inspired by BBC Good Food)",
+      "Roast beef in friggitrice ad aria (inspired by GialloZafferano)"
     ],
     "charcoal_grill": [
-      "GialloZafferano — Bistecca alla fiorentina (Italian tradition)",
-      "Madens Verden — Ribeye på gasgrill: Sådan griller du bøffen perfekt (Danish tradition)",
-      "Directo al Paladar — Chuletón a la brasa (Spanish tradition)"
+      "Bistecca alla fiorentina (inspired by GialloZafferano)",
+      "Ribeye på gasgrill: Sådan griller du bøffen perfekt (inspired by Madens Verden)",
+      "Chuletón a la brasa (inspired by Directo al Paladar)"
     ],
     "grill": [
-      "Madens Verden — Ribeye på gasgrill (Danish tradition)",
-      "Directo al Paladar — Chuletón con salsa de vino y fresas (Spanish tradition)",
-      "The Woks of Life — Grilled Ribeye with Soy Butter Glaze (Chinese-American tradition)",
-      "GialloZafferano — Bistecca alla fiorentina (Italian tradition)"
+      "Ribeye på gasgrill (inspired by Madens Verden)",
+      "Chuletón con salsa de vino y fresas (inspired by Directo al Paladar)",
+      "Grilled Ribeye with Soy Butter Glaze (inspired by The Woks of Life)",
+      "Bistecca alla fiorentina (inspired by GialloZafferano)"
     ],
     "oven_roast": [
-      "ichkoche.at — Rib-eye-Steak mit Rosmarinpommes (Austrian tradition)",
-      "BBC Good Food — Rib-eye steak with basil hollandaise (British tradition)",
-      "Chefkoch.de — Rindersteaks sanft garen mit Niedrigtemperatur (German tradition)"
+      "Rib-eye-Steak mit Rosmarinpommes (inspired by ichkoche.at)",
+      "Rib-eye steak with basil hollandaise (inspired by BBC Good Food)",
+      "Rindersteaks sanft garen mit Niedrigtemperatur (inspired by Chefkoch.de)"
     ],
     "pan_fry": [
-      "ichkoche.at — Rib-eye-Steak mit Rosmarinpommes (Austrian tradition)",
-      "Argiro.gr — Rib Eye στο τηγάνι με σάλτσα βουτύρου (Greek tradition)",
-      "BBC Good Food — Pan-fried rib-eye steak (British tradition)"
+      "Rib-eye-Steak mit Rosmarinpommes (inspired by ichkoche.at)",
+      "Rib Eye στο τηγάνι με σάλτσα βουτύρου (inspired by Argiro.gr)",
+      "Pan-fried rib-eye steak (inspired by BBC Good Food)"
     ],
     "pan_sear": [
-      "J. Kenji López-Alt — Butter-Basted Pan-Seared Thick-Cut Ribeye (American tradition)",
-      "Gordon Ramsay — Restaurant-Style Pan-Seared Ribeye (British/French restaurant tradition)",
-      "Jacques Pépin — Entrecôte Sautée au Beurre (French classical tradition)",
-      "Nobu Matsuhisa — Pan-Seared A5 Wagyu Ribeye with Ponzu (Japanese tradition)",
-      "Stephanie Alexander — Pan-Fried Scotch Fillet (Australian tradition)"
+      "Butter-Basted Pan-Seared Thick-Cut Ribeye (inspired by J. Kenji López-Alt)",
+      "Restaurant-Style Pan-Seared Ribeye (inspired by Gordon Ramsay)",
+      "Entrecôte Sautée au Beurre (inspired by Jacques Pépin)",
+      "Pan-Seared A5 Wagyu Ribeye with Ponzu (inspired by Nobu Matsuhisa)",
+      "Pan-Fried Scotch Fillet (inspired by Stephanie Alexander)"
     ],
     "sous_vide": [
-      "Madens Verden — Ribeye sous vide (Danish tradition)",
-      "GialloZafferano Blog — La Bistecca Perfetta Sousvide (Italian tradition)",
-      "ichkoche.at — Hochrückensteak mit Sous Vide (Austrian tradition)"
+      "Ribeye sous vide (inspired by Madens Verden)",
+      "La Bistecca Perfetta Sousvide (inspired by GialloZafferano Blog)",
+      "Hochrückensteak mit Sous Vide (inspired by ichkoche.at)"
     ]
   },
   "sirloin_steak": {
     "air_fryer": [
-      "America's Test Kitchen — Air Fryer Sirloin Steak (American tradition)",
-      "Jamie Oliver — Air Fryer Sirloin with Herb Butter (British tradition)",
-      "Donna Hay — Air Fryer Sirloin with Chimichurri (Australian tradition)",
-      "Nigella Lawson — Air Fryer Sirloin with Mustard Cream (British home-cooking tradition)",
-      "Marcus Samuelsson — Air Fryer Berbere Sirloin (Ethiopian-American tradition)"
+      "Air Fryer Sirloin Steak (inspired by America's Test Kitchen)",
+      "Air Fryer Sirloin with Herb Butter (inspired by Jamie Oliver)",
+      "Air Fryer Sirloin with Chimichurri (inspired by Donna Hay)",
+      "Air Fryer Sirloin with Mustard Cream (inspired by Nigella Lawson)",
+      "Air Fryer Berbere Sirloin (inspired by Marcus Samuelsson)"
     ],
     "charcoal_grill": [
-      "Francis Mallmann — Sirloin over Charcoal Embers (Argentine asado tradition)",
-      "Steven Raichlen — Sirloin over Direct Charcoal (American tradition)",
-      "Maangchi — Charcoal-Grilled Galbi / Sirloin (Korean tradition)",
-      "Lennox Hastie — Sirloin over Australian Ironbark Coals (Australian wood-fire tradition)",
-      "Bobby Flay — Sirloin with Chipotle Butter over Charcoal (American Southwest tradition)"
+      "Sirloin over Charcoal Embers (inspired by Francis Mallmann)",
+      "Sirloin over Direct Charcoal (inspired by Steven Raichlen)",
+      "Charcoal-Grilled Galbi / Sirloin (inspired by Maangchi)",
+      "Sirloin over Australian Ironbark Coals (inspired by Lennox Hastie)",
+      "Sirloin with Chipotle Butter over Charcoal (inspired by Bobby Flay)"
     ],
     "grill": [
-      "Steven Raichlen — Grilled Top Sirloin (American BBQ tradition)",
-      "Francis Mallmann — Sirloin Asado (Argentine tradition)",
-      "Yotam Ottolenghi — Spiced Sirloin on the Grill (Middle Eastern tradition)",
-      "Bobby Flay — Grilled Sirloin with Red Chimichurri (American-Argentine tradition)",
-      "Neil Perry — Grilled Sirloin with Herb Salad (Australian tradition)"
+      "Grilled Top Sirloin (inspired by Steven Raichlen)",
+      "Sirloin Asado (inspired by Francis Mallmann)",
+      "Spiced Sirloin on the Grill (inspired by Yotam Ottolenghi)",
+      "Grilled Sirloin with Red Chimichurri (inspired by Bobby Flay)",
+      "Grilled Sirloin with Herb Salad (inspired by Neil Perry)"
     ],
     "oven_roast": [
-      "America's Test Kitchen — Reverse-Sear Top Sirloin (American tradition)",
-      "Heston Blumenthal — Ultra-Low Oven Sirloin (British Modernist tradition)",
-      "Gordon Ramsay — Sear-and-Oven Sirloin (British restaurant tradition)",
-      "Alice Waters — Oven-Roasted Sirloin (American / California tradition)",
-      "Fergus Henderson — Roasted Sirloin (British nose-to-tail tradition)"
+      "Reverse-Sear Top Sirloin (inspired by America's Test Kitchen)",
+      "Ultra-Low Oven Sirloin (inspired by Heston Blumenthal)",
+      "Sear-and-Oven Sirloin (inspired by Gordon Ramsay)",
+      "Oven-Roasted Sirloin (inspired by Alice Waters)",
+      "Roasted Sirloin (inspired by Fergus Henderson)"
     ],
     "pan_fry": [
-      "Delia Smith — Pan-Fried Sirloin with Blue Cheese Sauce (British tradition)",
-      "Julia Child — Steak Sauté Bercy (French classical tradition)",
-      "Nigella Lawson — Pan-Fried Sirloin with Rocket Salad (British contemporary tradition)",
-      "Nobu Matsuhisa — Pan-Fried Sirloin with Wasabi Salsa (Japanese tradition)",
-      "Neil Perry — Pan-Fried Sirloin with Bone Marrow (Australian tradition)"
+      "Pan-Fried Sirloin with Blue Cheese Sauce (inspired by Delia Smith)",
+      "Steak Sauté Bercy (inspired by Julia Child)",
+      "Pan-Fried Sirloin with Rocket Salad (inspired by Nigella Lawson)",
+      "Pan-Fried Sirloin with Wasabi Salsa (inspired by Nobu Matsuhisa)",
+      "Pan-Fried Sirloin with Bone Marrow (inspired by Neil Perry)"
     ],
     "pan_sear": [
-      "J. Kenji López-Alt — Pan-Seared Top Sirloin (American tradition)",
-      "Gordon Ramsay — Pan-Seared Sirloin with Pepper Sauce (British restaurant tradition)",
-      "Nobu Matsuhisa — Pan-Seared Sirloin with Teriyaki Glaze (Japanese tradition)",
-      "Francis Mallmann — Pan-Seared Sirloin in Cast Iron (Argentine tradition)",
-      "Stephanie Alexander — Pan-Fried Sirloin (Australian tradition)"
+      "Pan-Seared Top Sirloin (inspired by J. Kenji López-Alt)",
+      "Pan-Seared Sirloin with Pepper Sauce (inspired by Gordon Ramsay)",
+      "Pan-Seared Sirloin with Teriyaki Glaze (inspired by Nobu Matsuhisa)",
+      "Pan-Seared Sirloin in Cast Iron (inspired by Francis Mallmann)",
+      "Pan-Fried Sirloin (inspired by Stephanie Alexander)"
     ],
     "sous_vide": [
-      "J. Kenji López-Alt — Sous Vide Top Sirloin (American tradition)",
-      "Thomas Keller — Sous Vide Sirloin (French haute cuisine tradition)",
-      "Heston Blumenthal — Sous Vide Sirloin (British Modernist tradition)",
-      "Grant Achatz — Sous Vide Sirloin with Aromatic Bag (American Modernist tradition)",
-      "Neil Perry — Sous Vide Sirloin, Australian Style (Australian tradition)"
+      "Sous Vide Top Sirloin (inspired by J. Kenji López-Alt)",
+      "Sous Vide Sirloin (inspired by Thomas Keller)",
+      "Sous Vide Sirloin (inspired by Heston Blumenthal)",
+      "Sous Vide Sirloin with Aromatic Bag (inspired by Grant Achatz)",
+      "Sous Vide Sirloin, Australian Style (inspired by Neil Perry)"
     ]
   },
   "skirt_steak": {
     "charcoal_grill": [
-      "Diana Kennedy — *Arrachera Asada* over Mesquite (Mexican tradition)",
-      "Francis Mallmann — Skirt over Charcoal Embers (Argentine tradition)",
-      "Steven Raichlen — Charcoal-Grilled Skirt Steak (American BBQ tradition)",
-      "Bobby Flay — Charcoal-Grilled Skirt Steak with Chipotle (American Southwest tradition)",
-      "Lennox Hastie — Outside Skirt over Australian Live Coals (Australian live-fire tradition)"
+      "*Arrachera Asada* over Mesquite (inspired by Diana Kennedy)",
+      "Skirt over Charcoal Embers (inspired by Francis Mallmann)",
+      "Charcoal-Grilled Skirt Steak (inspired by Steven Raichlen)",
+      "Charcoal-Grilled Skirt Steak with Chipotle (inspired by Bobby Flay)",
+      "Outside Skirt over Australian Live Coals (inspired by Lennox Hastie)"
     ],
     "grill": [
-      "Bobby Flay — Grilled Skirt Steak Fajitas (Tex-Mex tradition)",
-      "Diana Kennedy — Grilled *Arrachera* with Salsa de Tomatillo (Mexican tradition)",
-      "Francis Mallmann — Grilled *Fraldinha* (Brazilian / Argentine tradition)",
-      "Steven Raichlen — Grilled Skirt Steak (American BBQ tradition)",
-      "Yotam Ottolenghi — Grilled Skirt Steak with Sumac and Pomegranate (Middle Eastern tradition)"
+      "Grilled Skirt Steak Fajitas (inspired by Bobby Flay)",
+      "Grilled *Arrachera* with Salsa de Tomatillo (inspired by Diana Kennedy)",
+      "Grilled *Fraldinha* (inspired by Francis Mallmann)",
+      "Grilled Skirt Steak (inspired by Steven Raichlen)",
+      "Grilled Skirt Steak with Sumac and Pomegranate (inspired by Yotam Ottolenghi)"
     ],
     "pan_fry": [
-      "Diana Kennedy — Comal-Fried *Arrachera* (Mexican home cooking tradition)",
-      "Barbara Tropp — Wok-Fried Flank/Skirt Steak with Ginger (Chinese-American tradition)",
-      "Nigella Lawson — Pan-Fried Skirt Steak with Salsa Verde (British contemporary tradition)",
-      "Nobu Matsuhisa — Pan-Fried Skirt Steak with Black Bean Sauce (Japanese-Chinese tradition)",
-      "Yotam Ottolenghi — Pan-Fried Skirt Steak with Chermoula (North African tradition)"
+      "Comal-Fried *Arrachera* (inspired by Diana Kennedy)",
+      "Wok-Fried Flank/Skirt Steak with Ginger (inspired by Barbara Tropp)",
+      "Pan-Fried Skirt Steak with Salsa Verde (inspired by Nigella Lawson)",
+      "Pan-Fried Skirt Steak with Black Bean Sauce (inspired by Nobu Matsuhisa)",
+      "Pan-Fried Skirt Steak with Chermoula (inspired by Yotam Ottolenghi)"
     ],
     "pan_sear": [
-      "Diana Kennedy — Pan-Seared Skirt Steak Tacos (*Tacos de Arrachera*) (Mexican tradition)",
-      "J. Kenji López-Alt — Pan-Seared Skirt Steak Fajitas (American-Mexican tradition)",
-      "Nobu Matsuhisa — Pan-Seared Skirt Steak with Spicy Ponzu (Japanese tradition)",
-      "Fergus Henderson — Pan-Seared Skirt Steak, Anchovy and Capers (British tradition)",
-      "Marcus Samuelsson — Pan-Seared Skirt Steak with Berbere (Ethiopian-American tradition)"
+      "Pan-Seared Skirt Steak Tacos (*Tacos de Arrachera*) (inspired by Diana Kennedy)",
+      "Pan-Seared Skirt Steak Fajitas (inspired by J. Kenji López-Alt)",
+      "Pan-Seared Skirt Steak with Spicy Ponzu (inspired by Nobu Matsuhisa)",
+      "Pan-Seared Skirt Steak, Anchovy and Capers (inspired by Fergus Henderson)",
+      "Pan-Seared Skirt Steak with Berbere (inspired by Marcus Samuelsson)"
     ]
   },
   "t_bone": {
     "air_fryer": [
-      "America's Test Kitchen — Air Fryer T-Bone Steak (American tradition)",
-      "Jamie Oliver — Air Fryer T-Bone with Garlic Butter (British tradition)",
-      "Gordon Ramsay — Air Fryer T-Bone, Peppercorn Sauce (British restaurant tradition)",
-      "Donna Hay — Air Fryer T-Bone with Béarnaise (Australian tradition)",
-      "Nigella Lawson — Air Fryer T-Bone with Tarragon Butter (British contemporary tradition)"
+      "Air Fryer T-Bone Steak (inspired by America's Test Kitchen)",
+      "Air Fryer T-Bone with Garlic Butter (inspired by Jamie Oliver)",
+      "Air Fryer T-Bone, Peppercorn Sauce (inspired by Gordon Ramsay)",
+      "Air Fryer T-Bone with Béarnaise (inspired by Donna Hay)",
+      "Air Fryer T-Bone with Tarragon Butter (inspired by Nigella Lawson)"
     ],
     "charcoal_grill": [
-      "Francis Mallmann — T-Bone over Charcoal Embers (Argentine *parrilla* tradition)",
-      "Steven Raichlen — T-Bone over Live Charcoal (American BBQ tradition)",
-      "Lennox Hastie — T-Bone over Australian Hardwood (Australian live-fire tradition)",
-      "Bobby Flay — Charcoal T-Bone with Garlic Herb Crust (American Southwest tradition)",
-      "Neil Perry — Charcoal T-Bone, Café de Paris Butter (Australian tradition)"
+      "T-Bone over Charcoal Embers (inspired by Francis Mallmann)",
+      "T-Bone over Live Charcoal (inspired by Steven Raichlen)",
+      "T-Bone over Australian Hardwood (inspired by Lennox Hastie)",
+      "Charcoal T-Bone with Garlic Herb Crust (inspired by Bobby Flay)",
+      "Charcoal T-Bone, Café de Paris Butter (inspired by Neil Perry)"
     ],
     "grill": [
-      "Steven Raichlen — Grilled T-Bone (American BBQ tradition)",
-      "Bobby Flay — Grilled T-Bone with Blue Cheese Sauce (American tradition)",
-      "Yotam Ottolenghi — Grilled T-Bone with Herb Oil (Mediterranean tradition)",
-      "Neil Perry — Grilled T-Bone, Australian Steakhouse Style (Australian tradition)",
-      "Francis Mallmann — T-Bone on the Parilla (Argentine tradition)"
+      "Grilled T-Bone (inspired by Steven Raichlen)",
+      "Grilled T-Bone with Blue Cheese Sauce (inspired by Bobby Flay)",
+      "Grilled T-Bone with Herb Oil (inspired by Yotam Ottolenghi)",
+      "Grilled T-Bone, Australian Steakhouse Style (inspired by Neil Perry)",
+      "T-Bone on the Parilla (inspired by Francis Mallmann)"
     ],
     "oven_roast": [
-      "America's Test Kitchen — Reverse-Sear T-Bone (American tradition)",
-      "Gordon Ramsay — Oven-Finished T-Bone (British restaurant tradition)",
-      "Heston Blumenthal — Ultra-Low Oven T-Bone (British Modernist tradition)",
-      "Alice Waters — Roasted T-Bone with Herb Butter (California tradition)",
-      "Fergus Henderson — Roasted T-Bone (British tradition)"
+      "Reverse-Sear T-Bone (inspired by America's Test Kitchen)",
+      "Oven-Finished T-Bone (inspired by Gordon Ramsay)",
+      "Ultra-Low Oven T-Bone (inspired by Heston Blumenthal)",
+      "Roasted T-Bone with Herb Butter (inspired by Alice Waters)",
+      "Roasted T-Bone (inspired by Fergus Henderson)"
     ],
     "pan_sear": [
-      "J. Kenji López-Alt — Pan-Seared T-Bone (American steakhouse tradition)",
-      "Gordon Ramsay — Pan-Seared T-Bone with Brown Butter (British restaurant tradition)",
-      "Julia Child — *Côte de Bœuf* au Beurre (French bistro tradition)",
-      "Fergus Henderson — Pan-Seared T-Bone with Watercress (British tradition)",
-      "Neil Perry — Pan-Seared T-Bone (Australian steakhouse tradition)"
+      "Pan-Seared T-Bone (inspired by J. Kenji López-Alt)",
+      "Pan-Seared T-Bone with Brown Butter (inspired by Gordon Ramsay)",
+      "*Côte de Bœuf* au Beurre (inspired by Julia Child)",
+      "Pan-Seared T-Bone with Watercress (inspired by Fergus Henderson)",
+      "Pan-Seared T-Bone (inspired by Neil Perry)"
     ]
   },
   "tomahawk": {
     "charcoal_grill": [
-      "GialloZafferano — Tomahawk alla griglia (Italian tradition)",
-      "Chefkoch.de — Tomahawk Steak Dry Aged vom Grill (German tradition)",
-      "Madens Verden — Ribeye på gasgrill (adapted for tomahawk on charcoal) (Danish tradition)"
+      "Tomahawk alla griglia (inspired by GialloZafferano)",
+      "Tomahawk Steak Dry Aged vom Grill (inspired by Chefkoch.de)",
+      "Ribeye på gasgrill (adapted for tomahawk on charcoal) (inspired by Madens Verden)"
     ],
     "grill": [
-      "GialloZafferano — Tomahawk alla griglia (Italian tradition)",
-      "Chefkoch.de — Tomahawk Steak Dry Aged vom Grill (German tradition)",
-      "RecipeTin Eats — Tomahawk Steak: reverse sear (oven then BBQ) (Australian tradition)"
+      "Tomahawk alla griglia (inspired by GialloZafferano)",
+      "Tomahawk Steak Dry Aged vom Grill (inspired by Chefkoch.de)",
+      "Tomahawk Steak: reverse sear (oven then BBQ) (inspired by RecipeTin Eats)"
     ],
     "oven_roast": [
-      "Chefkoch.de — Tomahawk-Steak im Backofen, rückwärts gegart (German tradition)",
-      "RecipeTin Eats — Tomahawk Steak (oven phase of reverse sear) (Australian tradition)",
-      "GialloZafferano — Tomahawk alla griglia (Italian oven-finish variant)"
+      "Tomahawk-Steak im Backofen, rückwärts gegart (inspired by Chefkoch.de)",
+      "Tomahawk Steak (oven phase of reverse sear) (inspired by RecipeTin Eats)",
+      "Tomahawk alla griglia (Italian oven-finish variant) (inspired by GialloZafferano)"
     ],
     "pan_sear": [
-      "ichkoche.at — Tomahawk Steak (Austrian tradition)",
-      "Chefkoch.de — Tomahawk-Steak im Backofen, rückwärts gegart (German tradition)",
-      "RecipeTin Eats — Tomahawk Steak (finishing method without BBQ) (Australian tradition)"
+      "Tomahawk Steak (inspired by ichkoche.at)",
+      "Tomahawk-Steak im Backofen, rückwärts gegart (inspired by Chefkoch.de)",
+      "Tomahawk Steak (finishing method without BBQ) (inspired by RecipeTin Eats)"
     ],
     "sous_vide": [
-      "Madens Verden — Ribeye sous vide (adapted for tomahawk) (Danish tradition)",
-      "GialloZafferano Blog — La Bistecca Perfetta Sousvide (Italian tradition, adapted for tomahawk)",
-      "ichkoche.at — Hochrückensteak sous vide (Austrian tradition, adapted for tomahawk)"
+      "Ribeye sous vide (adapted for tomahawk) (inspired by Madens Verden)",
+      "La Bistecca Perfetta Sousvide (inspired by GialloZafferano Blog)",
+      "Hochrückensteak sous vide (inspired by ichkoche.at)"
     ]
   },
   "tri_tip": {
     "charcoal_grill": [
-      "Madens Verden — Ball tip i grill (charcoal adaptation) (Danish tradition)",
-      "Immaculate Bites (africanbites.com) — charcoal grill adaptation (Californian / West African tradition)",
-      "Chefkoch.de — Das perfekte Steak mit Steakkruste (adapted for charcoal grill) (German tradition)"
+      "Ball tip i grill (charcoal adaptation) (inspired by Madens Verden)",
+      "charcoal grill adaptation (inspired by Immaculate Bites)",
+      "Das perfekte Steak mit Steakkruste (adapted for charcoal grill) (inspired by Chefkoch.de)"
     ],
     "grill": [
-      "Madens Verden — Ball tip i grill (Danish tradition)",
-      "Immaculate Bites (africanbites.com) — Oven Tri Tip Roast (marinade for grill) (Californian / West African tradition)",
-      "Chefkoch.de — Das perfekte Steak mit Steakkruste (German tradition — constant-turning method)"
+      "Ball tip i grill (inspired by Madens Verden)",
+      "Oven Tri Tip Roast (marinade for grill) (inspired by Immaculate Bites)",
+      "Das perfekte Steak mit Steakkruste (inspired by Chefkoch.de)"
     ],
     "oven_roast": [
-      "Immaculate Bites (africanbites.com) — Oven Tri Tip Roast (Californian / West African tradition)",
-      "Madens Verden — Ball tip oksesteg (Danish tradition)",
-      "RecipeTin Eats — Marinated Roast Beef (Australian tradition, adapted for tri-tip)"
+      "Oven Tri Tip Roast (inspired by Immaculate Bites)",
+      "Ball tip oksesteg (inspired by Madens Verden)",
+      "Marinated Roast Beef (inspired by RecipeTin Eats)"
     ],
     "pan_sear": [
-      "Chefkoch.de — Das perfekte Steak mit Steakkruste (German tradition)",
-      "Madens Verden — Ball tip bøffer (Danish pan steak method) (Danish tradition)",
-      "Immaculate Bites (africanbites.com) — stovetop sear (tri-tip oven roast pan-sear method) (Californian / West African tradition)"
+      "Das perfekte Steak mit Steakkruste (inspired by Chefkoch.de)",
+      "Ball tip bøffer (Danish pan steak method) (inspired by Madens Verden)",
+      "stovetop sear (tri-tip oven roast pan-sear method) (inspired by Immaculate Bites)"
     ],
     "smoker": [
-      "Immaculate Bites (africanbites.com) — Smoked Tri Tip (Californian / West African tradition)",
-      "Madens Verden — Langtidsstegt ball tip (Danish slow-roast, analogous to smoking) (Danish tradition)",
-      "BBC Good Food — Slow-cooked beef technique for smoking (British reference for wood-smoke temperatures)"
+      "Smoked Tri Tip (inspired by Immaculate Bites)",
+      "Langtidsstegt ball tip (Danish slow-roast, analogous to smoking) (inspired by Madens Verden)",
+      "Slow-cooked beef technique for smoking (British reference for wood-smoke temperatures) (inspired by BBC Good Food)"
     ],
     "sous_vide": [
-      "Madens Verden — Ball tip sous vide (Danish tradition)",
-      "ichkoche.at — Hochrückensteak mit Sous Vide (adapted for tri-tip) (Austrian tradition)",
-      "GialloZafferano Blog — La Bistecca Perfetta Sousvide (Italian reference, adapted for tri-tip) (Italian tradition)"
+      "Ball tip sous vide (inspired by Madens Verden)",
+      "Hochrückensteak mit Sous Vide (adapted for tri-tip) (inspired by ichkoche.at)",
+      "La Bistecca Perfetta Sousvide (Italian reference, adapted for tri-tip) (inspired by GialloZafferano Blog)"
     ]
   },
   "beef_liver": {
     "pan_fry": [
-      "Marcella Hazan — Fegato di Manzo alla Veneziana (Venetian Italian tradition)",
-      "Diana Henry — Devilled Calf's Liver (modern British tradition)",
-      "Madhur Jaffrey — Kaleji Masala (North Indian tradition)",
-      "Tina Nordström — Stekt Lever med Lök (Swedish tradition)",
-      "Imma Adamu — Beef Liver and Onions (West African / Afro-Caribbean tradition)"
+      "Fegato di Manzo alla Veneziana (inspired by Marcella Hazan)",
+      "Devilled Calf's Liver (inspired by Diana Henry)",
+      "Kaleji Masala (inspired by Madhur Jaffrey)",
+      "Stekt Lever med Lök (inspired by Tina Nordström)",
+      "Beef Liver and Onions (inspired by Imma Adamu)"
     ],
     "pan_sear": [
-      "Fergus Henderson — Calf's Liver, Bacon and Onions (British nose-to-tail tradition)",
-      "Anthony Bourdain — Calf's Liver Persillade (French bistro tradition)",
-      "José Pizarro — Hígado de Ternera con Cebolla y Pimentón (Spanish tradition)",
-      "Magnus Nilsson — Seared Calf's Liver with Browned Butter & Lingonberries (Nordic tradition)"
+      "Calf's Liver, Bacon and Onions (inspired by Fergus Henderson)",
+      "Calf's Liver Persillade (inspired by Anthony Bourdain)",
+      "Hígado de Ternera con Cebolla y Pimentón (inspired by José Pizarro)",
+      "Seared Calf's Liver with Browned Butter & Lingonberries (inspired by Magnus Nilsson)"
     ]
   },
   "beef_tongue": {
     "braise": [
-      "Fergus Henderson — Salt Ox Tongue with Green Sauce (British nose-to-tail tradition)",
-      "Anthony Bourdain — Langue de Bœuf Sauce Piquante (French bistro tradition)",
-      "Diana Kennedy — Lengua en Salsa Verde (Mexican tradition)",
-      "Yotam Ottolenghi & Sami Tamimi — Slow-Cooked Beef Tongue with Tehina (Israeli/Levantine tradition)"
+      "Salt Ox Tongue with Green Sauce (inspired by Fergus Henderson)",
+      "Langue de Bœuf Sauce Piquante (inspired by Anthony Bourdain)",
+      "Lengua en Salsa Verde (inspired by Diana Kennedy)",
+      "Slow-Cooked Beef Tongue with Tehina (inspired by Yotam Ottolenghi & Sami Tamimi)"
     ],
     "slow_cooker": [
-      "Hugh Acheson — Slow-Cooker Pot-au-Feu Tongue (American Culinary Group C tradition)",
-      "Diana Kennedy — Lengua de Res al Crock-Pot, estilo casero (Mexican home tradition adaptation)",
-      "Andrea Nguyen — Lưỡi Bò Hầm in the Slow Cooker (Vietnamese tradition)",
-      "Magnus Nilsson — Pickled-Beef-Tongue Method, Slow-Cooker Adaptation (Nordic tradition)"
+      "Slow-Cooker Pot-au-Feu Tongue (inspired by Hugh Acheson)",
+      "Lengua de Res al Crock-Pot, estilo casero (inspired by Diana Kennedy)",
+      "Lưỡi Bò Hầm in the Slow Cooker (inspired by Andrea Nguyen)",
+      "Pickled-Beef-Tongue Method, Slow-Cooker Adaptation (inspired by Magnus Nilsson)"
     ]
   },
   "beef_shank": {
     "braise": [
-      "Marcella Hazan — Osso Buco alla Milanese (Italian / Lombard tradition)",
-      "Tina Nordström — Långkokt Oxlägg (Swedish home tradition)",
-      "Yotam Ottolenghi & Sami Tamimi — Beef Shank Tagine with Saffron and Almonds (Levantine / North-African tradition)",
-      "Andrea Nguyen — Bò Kho with Beef Shank (Vietnamese tradition)"
+      "Osso Buco alla Milanese (inspired by Marcella Hazan)",
+      "Långkokt Oxlägg (inspired by Tina Nordström)",
+      "Beef Shank Tagine with Saffron and Almonds (inspired by Yotam Ottolenghi & Sami Tamimi)",
+      "Bò Kho with Beef Shank (inspired by Andrea Nguyen)"
     ],
     "slow_cooker": [
-      "Hugh Acheson — Slow-Cooker Osso Buco (American Southern adaptation of Italian classic)",
-      "Tina Nordström — Oxlägg i Slow Cooker (Swedish home tradition)",
-      "Mark Bittman — Slow-Cooker Beef Shank with North-African Spices (American tradition)",
-      "Andrea Nguyen — Slow-Cooker Bò Kho (Vietnamese tradition)"
+      "Slow-Cooker Osso Buco (American Southern adaptation of Italian classic) (inspired by Hugh Acheson)",
+      "Oxlägg i Slow Cooker (inspired by Tina Nordström)",
+      "Slow-Cooker Beef Shank with North-African Spices (inspired by Mark Bittman)",
+      "Slow-Cooker Bò Kho (inspired by Andrea Nguyen)"
     ]
   },
   "brisket": {
     "oven_roast": [
-      "J. Kenji López-Alt — Oven-Braised Brisket",
-      "Joan Nathan — Ashkenazi Passover Brisket",
-      "Felicity Cloake — Slow-Roast Brisket (British tradition)",
-      "Maangchi — *Kkori-gomtang* Inspired Oven-Braised Brisket (Korean tradition)",
-      "Yotam Ottolenghi — Middle Eastern Oven-Braised Brisket"
+      "Oven-Braised Brisket (inspired by J. Kenji López-Alt)",
+      "Ashkenazi Passover Brisket (inspired by Joan Nathan)",
+      "Slow-Roast Brisket (inspired by Felicity Cloake)",
+      "*Kkori-gomtang* Inspired Oven-Braised Brisket (inspired by Maangchi)",
+      "Middle Eastern Oven-Braised Brisket (inspired by Yotam Ottolenghi)"
     ]
   },
   "chuck_roast": {
     "braise": [
-      "J. Kenji López-Alt — Braised Chuck Roast (Pot Roast)",
-      "Julia Child — Bœuf Bourguignon (French tradition)",
-      "Nigella Lawson — Italian-Style Pot Roast (*Stracotto di manzo*)",
-      "Maangchi — Korean Braised Beef (*Jangjorim*)",
-      "Judith Jones / Craig Claiborne — Daube de Bœuf Provençale (Provençal tradition)",
-      "Köket.se — Kalops (Swedish tradition)"
+      "Braised Chuck Roast (Pot Roast) (inspired by J. Kenji López-Alt)",
+      "Bœuf Bourguignon (inspired by Julia Child)",
+      "Italian-Style Pot Roast (*Stracotto di manzo*) (inspired by Nigella Lawson)",
+      "Korean Braised Beef (*Jangjorim*) (inspired by Maangchi)",
+      "Daube de Bœuf Provençale (inspired by Judith Jones / Craig Claiborne)",
+      "Kalops (inspired by Köket.se)"
     ]
   },
   "short_ribs": {
     "braise": [
-      "Nagi Maehashi — Braised Beef Short Ribs in Red Wine Sauce (Australian modern tradition)",
-      "Suzy Karadsheh — Sage-Wine Braised Beef Short Ribs and Potatoes (Mediterranean / American tradition)",
-      "Judy and Kaitlin Leung — Asian Braised Short Ribs with Chili Lime Potatoes (Chinese-American tradition)",
-      "TV amateur cook \"Kicki Malmö\" — Short Ribs Bräserade i Äppelmust (Swedish home tradition)",
-      "Erik Videgård — Shortribs i japansk lag (Swedish professional × Japanese tradition)"
+      "Braised Beef Short Ribs in Red Wine Sauce (inspired by Nagi Maehashi)",
+      "Sage-Wine Braised Beef Short Ribs and Potatoes (inspired by Suzy Karadsheh)",
+      "Asian Braised Short Ribs with Chili Lime Potatoes (inspired by Judy and Kaitlin Leung)",
+      "Short Ribs Bräserade i Äppelmust (inspired by TV amateur cook \"Kicki Malmö\")",
+      "Shortribs i japansk lag (inspired by Erik Videgård)"
     ]
   },
   "beef_tenderloin_roast": {
     "oven_roast": [
-      "Ina Garten — Beef Tenderloin Roast with Mustard Crust",
-      "Jacques Pépin — Filet de Bœuf Rôti (French tradition)",
-      "Heston Blumenthal — Reverse-Sear Beef Tenderloin",
-      "Yotam Ottolenghi — Spice-Crusted Beef Fillet (Middle Eastern/Israeli tradition)",
-      "Tetsuya Wakuda — Japanese-Influenced Beef Fillet with Warishita Glaze (Japanese-Australian tradition)"
+      "Beef Tenderloin Roast with Mustard Crust (inspired by Ina Garten)",
+      "Filet de Bœuf Rôti (inspired by Jacques Pépin)",
+      "Reverse-Sear Beef Tenderloin (inspired by Heston Blumenthal)",
+      "Spice-Crusted Beef Fillet (inspired by Yotam Ottolenghi)",
+      "Japanese-Influenced Beef Fillet with Warishita Glaze (inspired by Tetsuya Wakuda)"
     ]
   },
   "prime_rib": {
     "oven_roast": [
-      "J. Kenji López-Alt — Reverse-Sear Prime Rib",
-      "Alton Brown — Traditional High-Heat Prime Rib",
-      "Gordon Ramsay — Standing Rib Roast (British tradition)",
-      "Michel Roux — Côte de Bœuf Rôtie (French tradition)",
-      "Aaron Franklin — Texas Prime Rib in the Oven (Pit-to-Oven adaptation)"
+      "Reverse-Sear Prime Rib (inspired by J. Kenji López-Alt)",
+      "Traditional High-Heat Prime Rib (inspired by Alton Brown)",
+      "Standing Rib Roast (inspired by Gordon Ramsay)",
+      "Côte de Bœuf Rôtie (inspired by Michel Roux)",
+      "Texas Prime Rib in the Oven (Pit-to-Oven adaptation) (inspired by Aaron Franklin)"
     ]
   },
   "roasting_joint": {
     "oven_roast": [
-      "Nagi Maehashi — Marinated Roast Beef (Australian tradition, designed for economical roasting joints)",
-      "Chef Simon — Rôti de Boeuf (French classical tradition)",
-      "Immaculate Bites — Creole-Spiced Oven Roast Beef (West African / Southern American Creole tradition)",
-      "Holger Rørby Madsen — Langtidsstegt Oksefilet (Danish tradition — the ultra-low method)"
+      "Marinated Roast Beef (inspired by Nagi Maehashi)",
+      "Rôti de Boeuf (inspired by Chef Simon)",
+      "Creole-Spiced Oven Roast Beef (inspired by Immaculate Bites)",
+      "Langtidsstegt Oksefilet (inspired by Holger Rørby Madsen)"
     ]
   },
   "round_roast": {
     "oven_roast": [
-      "Good Food — Easy Roast Beef (British tradition)",
-      "Good Food — Roast Beef with Red Wine & Banana Shallots (British tradition)",
-      "Immaculate Bites — Creole-Spiced Roast Beef (West African / Southern American Creole tradition)",
-      "Katja Nordlund — Paahtopaisti (Finnish tradition)"
+      "Easy Roast Beef (inspired by Good Food)",
+      "Roast Beef with Red Wine & Banana Shallots (inspired by Good Food)",
+      "Creole-Spiced Roast Beef (inspired by Immaculate Bites)",
+      "Paahtopaisti (inspired by Katja Nordlund)"
     ]
   },
   "rump": {
     "pan_sear": [
-      "Good Food — Rump Steak (British tradition)",
-      "Köket.se — Rumpstek à la Bercy (Swedish tradition)",
-      "Good Food — Thai Beef with Coconut Dressing (Thai-inspired, Group B source)",
-      "Good Food — Mexican Steak with Beans (Mexican-inspired, Group B source)"
+      "Rump Steak (inspired by Good Food)",
+      "Rumpstek à la Bercy (inspired by Köket.se)",
+      "Thai Beef with Coconut Dressing (Thai-inspired, Group B source) (inspired by Good Food)",
+      "Mexican Steak with Beans (Mexican-inspired, Group B source) (inspired by Good Food)"
     ]
   },
   "rump_roast": {
     "oven_roast": [
-      "Good Food — Easy Roast Beef (British tradition)",
-      "Good Food — Roast Beef with Red Wine & Banana Shallots (British tradition)",
-      "Immaculate Bites — Creole-Spiced Roast Beef (West African / Southern American Creole tradition)",
-      "Katja Nordlund — Paahtopaisti (Finnish tradition)"
+      "Easy Roast Beef (inspired by Good Food)",
+      "Roast Beef with Red Wine & Banana Shallots (inspired by Good Food)",
+      "Creole-Spiced Roast Beef (inspired by Immaculate Bites)",
+      "Paahtopaisti (inspired by Katja Nordlund)"
     ]
   },
   "sirloin_roast": {
     "oven_roast": [
-      "Chef Simon — Rôti de Boeuf (French classical tradition)",
-      "Nagi Maehashi — Marinated Roast Beef (Australian tradition)",
-      "Immaculate Bites — Creole-Spiced Roast Beef (West African / Southern American Creole tradition)"
+      "Rôti de Boeuf (inspired by Chef Simon)",
+      "Marinated Roast Beef (inspired by Nagi Maehashi)",
+      "Creole-Spiced Roast Beef (inspired by Immaculate Bites)"
     ]
   },
   "sirloin_tip_roast": {
     "oven_roast": [
-      "Nagi (RecipeTin Eats) — Marinated Roast Beef",
-      "Immaculate Bites (africanbites.com) — Slow-Roasted Roast Beef with Red Wine Sauce"
+      "Marinated Roast Beef (inspired by Nagi)",
+      "Slow-Roasted Roast Beef with Red Wine Sauce (inspired by Immaculate Bites)"
     ]
   },
   "top_round_roast": {
     "oven_roast": [
-      "Good Food — Easy Roast Beef (British tradition)",
-      "Good Food — Roast Beef with Red Wine & Banana Shallots (British tradition)",
-      "Immaculate Bites — Creole-Spiced Roast Beef (West African / Southern American Creole tradition)",
-      "Katja Nordlund — Paahtopaisti (Finnish tradition)"
+      "Easy Roast Beef (inspired by Good Food)",
+      "Roast Beef with Red Wine & Banana Shallots (inspired by Good Food)",
+      "Creole-Spiced Roast Beef (inspired by Immaculate Bites)",
+      "Paahtopaisti (inspired by Katja Nordlund)"
     ]
   },
   "goose_breast": {
     "oven_roast": [
-      "BBC Good Food — Slow-Roast Duck (fat-rendering principles adapted for goose breast)",
-      "Classic Culinary Technique — Goose Breast Oven Roast",
-      "Xiachufang (下厨房) — 烤鹅 Roast Goose (Chinese whole-bird roast technique)"
+      "Slow-Roast Duck (fat-rendering principles adapted for goose breast) (inspired by BBC Good Food)",
+      "Goose Breast Oven Roast (inspired by Classic Culinary Technique)",
+      "烤鹅 Roast Goose (Chinese whole-bird roast technique) (inspired by Xiachufang)"
     ],
     "pan_sear": [
-      "BBC Good Food — Slow-Roast Duck (fat-rendering technique adapted for goose breast pan sear)",
-      "Classic Culinary Technique — Professional Pan-Seared Goose Breast",
-      "Vasilevg — Грудка гуся на гриле (Russian Pan-Grilled Goose Breast)"
+      "Slow-Roast Duck (fat-rendering technique adapted for goose breast pan sear) (inspired by BBC Good Food)",
+      "Professional Pan-Seared Goose Breast (inspired by Classic Culinary Technique)",
+      "Грудка гуся на гриле (Russian Pan-Grilled Goose Breast) (inspired by Vasilevg)"
     ]
   },
   "goose_leg": {
     "braise": [
-      "BBC Good Food — Slow-Roast Duck (low-and-slow fat-rendering principle adapted for goose leg braise)",
-      "Classic Culinary Technique — Braised Goose Legs with Root Vegetables",
-      "EdimDoma.ru — Тушёные утиные ножки (Russian Braised Waterfowl Legs — technique directly applicable to goose)"
+      "Slow-Roast Duck (low-and-slow fat-rendering principle adapted for goose leg braise) (inspired by BBC Good Food)",
+      "Braised Goose Legs with Root Vegetables (inspired by Classic Culinary Technique)",
+      "Тушёные утиные ножки (Russian Braised Waterfowl Legs — technique directly applicable to goose) (inspired by EdimDoma.ru)"
     ],
     "oven_roast": [
-      "BBC Good Food — Slow-Roast Duck (low-and-slow fat rendering adapted for goose leg roast)",
-      "Classic Culinary Technique — Oven-Roasted Goose Legs",
-      "阿笑 (Axiao) — 烤鹅腿 (Chinese Crispy-Skin Roasted Goose Leg)"
+      "Slow-Roast Duck (low-and-slow fat rendering adapted for goose leg roast) (inspired by BBC Good Food)",
+      "Oven-Roasted Goose Legs (inspired by Classic Culinary Technique)",
+      "烤鹅腿 (Chinese Crispy-Skin Roasted Goose Leg) (inspired by 阿笑)"
     ]
   },
   "goose_thigh": {
     "braise": [
-      "BBC Good Food — Slow-Roast Duck (low-and-slow principle adapted for goose thigh braise)",
-      "Classic Culinary Technique — Braised Goose Thighs with Wine and Aromatics",
-      "Vorobyshek — Тушёнка из гуся в мультиварке (Russian Slow-Braised Goose in a Multicooker)"
+      "Slow-Roast Duck (low-and-slow principle adapted for goose thigh braise) (inspired by BBC Good Food)",
+      "Braised Goose Thighs with Wine and Aromatics (inspired by Classic Culinary Technique)",
+      "Тушёнка из гуся в мультиварке (Russian Slow-Braised Goose in a Multicooker) (inspired by Vorobyshek)"
     ],
     "oven_roast": [
-      "Hugh Fearnley-Whittingstall — Slow-Roast Goose Thighs with Garlic & Thyme (British River Cottage tradition)",
-      "Magnus Nilsson — Långstekta Gåslår (Swedish/Nordic tradition)",
-      "Diana Henry — Slow-Roast Goose Thighs with Honey, Lemon & Sumac (Persian-inspired British tradition)",
-      "Yotam Ottolenghi — Roast Goose Thighs with Pomegranate Molasses & Walnut Crust (Levantine fusion tradition)"
+      "Slow-Roast Goose Thighs with Garlic & Thyme (inspired by Hugh Fearnley-Whittingstall)",
+      "Långstekta Gåslår (inspired by Magnus Nilsson)",
+      "Slow-Roast Goose Thighs with Honey, Lemon & Sumac (inspired by Diana Henry)",
+      "Roast Goose Thighs with Pomegranate Molasses & Walnut Crust (inspired by Yotam Ottolenghi)"
     ]
   },
   "whole_goose": {
     "oven_roast": [
-      "Heston Blumenthal — Classic Roast Goose (British tradition)",
-      "Nigel Slater — Slow-Roast Goose with Lemon and Garlic (British tradition)",
-      "Signe Johansen — Norwegian Julegraut Goose (Nordic Christmas tradition)"
+      "Classic Roast Goose (inspired by Heston Blumenthal)",
+      "Slow-Roast Goose with Lemon and Garlic (inspired by Nigel Slater)",
+      "Norwegian Julegraut Goose (inspired by Signe Johansen)"
     ]
   },
   "duck_breast": {
     "oven_roast": [
-      "BBC Good Food — Slow-Roast Duck (adapted for breast)",
-      "Classic Culinary Technique — Cold-Pan Duck Breast (standard restaurant method)",
-      "Xiachufang (下厨房) — 低温慢烤法式鸭胸肉 (Chinese Low-Temperature Slow-Roasted French Duck Breast)"
+      "Slow-Roast Duck (adapted for breast) (inspired by BBC Good Food)",
+      "Cold-Pan Duck Breast (standard restaurant method) (inspired by Classic Culinary Technique)",
+      "低温慢烤法式鸭胸肉 (Chinese Low-Temperature Slow-Roasted French Duck Breast) (inspired by Xiachufang)"
     ],
     "pan_sear": [
-      "BBC Good Food — Slow-Roast Duck (fat-rendering philosophy adapted for pan sear)",
-      "Classic Culinary Technique — Professional Kitchen Duck Breast Pan Sear",
-      "BBC Good Food — One-Pan Duck with Savoy Cabbage"
+      "Slow-Roast Duck (fat-rendering philosophy adapted for pan sear) (inspired by BBC Good Food)",
+      "Professional Kitchen Duck Breast Pan Sear (inspired by Classic Culinary Technique)",
+      "One-Pan Duck with Savoy Cabbage (inspired by BBC Good Food)"
     ]
   },
   "duck_leg_confit": {
     "oven_roast": [
-      "Nagi Maehashi (RecipeTin Eats) — Duck Confit / Confit de Canard (French bistro tradition, Australian adaptation, Culinary Group B)",
-      "Bon Appétit Test Kitchen — Duck Confit (French-American bistro tradition, Culinary Group B)"
+      "Duck Confit / Confit de Canard (inspired by Nagi Maehashi)",
+      "Duck Confit (inspired by Bon Appétit Test Kitchen)"
     ]
   },
   "whole_duck": {
     "oven_roast": [
-      "BBC Good Food — Slow-Roast Duck (Czech-style, from Apetit Online)",
+      "Slow-Roast Duck (Czech-style, from Apetit Online) (inspired by BBC Good Food)",
       "Classic High-Heat Whole Roast Duck (standard Western method)",
-      "BBC Good Food — Crispy Roast Duck"
+      "Crispy Roast Duck (inspired by BBC Good Food)"
     ]
   },
   "ground_turkey": {
     "braise": [
-      "Marcella Hazan — Ragù di Tacchino (Italian tradition)",
-      "Hugh Acheson — Slow-Cooker Turkey Mince Bolognese (American Culinary Group C tradition)",
-      "Yotam Ottolenghi — Spiced Turkey Mince with Tomato & Yoghurt (Levantine tradition)",
-      "Tina Nordström — Kalkonfärssås (Swedish ragù tradition)"
+      "Ragù di Tacchino (inspired by Marcella Hazan)",
+      "Slow-Cooker Turkey Mince Bolognese (inspired by Hugh Acheson)",
+      "Spiced Turkey Mince with Tomato & Yoghurt (inspired by Yotam Ottolenghi)",
+      "Kalkonfärssås (inspired by Tina Nordström)"
     ],
     "grill": [
-      "Nefis Yemek Tarifleri — Hindi Köftesi (Turkish tradition)",
-      "Tori Avey — Mediterranean Grilled Turkey Burgers (Israeli / Levantine tradition)",
-      "Chefkoch.de — Puten-Hamburger mit Röstzwiebeln (German tradition)",
-      "TASTE — Chicken Patties adapted for Turkey (South African tradition)"
+      "Hindi Köftesi (inspired by Nefis Yemek Tarifleri)",
+      "Mediterranean Grilled Turkey Burgers (inspired by Tori Avey)",
+      "Puten-Hamburger mit Röstzwiebeln (inspired by Chefkoch.de)",
+      "Chicken Patties adapted for Turkey (inspired by TASTE)"
     ],
     "pan_fry": [
-      "Diana Henry — Pan-Fried Turkey Mince with Sage, Apple & Cider (British modern tradition)",
-      "Hugh Acheson — Pan-Fried Turkey Mince with Sweet-Onion Gravy (American Culinary Group C tradition)",
-      "Andrea Nguyen — Larb Gai Tay with Ground Turkey (Lao / Northern Thai tradition adaptation)",
-      "Tina Nordström — Stekt Kalkonfärs på Lök (Swedish home tradition)"
+      "Pan-Fried Turkey Mince with Sage, Apple & Cider (inspired by Diana Henry)",
+      "Pan-Fried Turkey Mince with Sweet-Onion Gravy (inspired by Hugh Acheson)",
+      "Larb Gai Tay with Ground Turkey (inspired by Andrea Nguyen)",
+      "Stekt Kalkonfärs på Lök (inspired by Tina Nordström)"
     ]
   },
   "turkey_breast": {
     "oven_roast": [
-      "Kenji López-Alt — Spatchcocked Turkey Breast (American tradition)",
-      "Ina Garten — Herb-Roasted Turkey Breast (American home-cooking tradition)",
-      "Diana Henry — Slow-Roasted Turkey Breast with Preserved Lemon and Olives (British/Moroccan fusion)"
+      "Spatchcocked Turkey Breast (inspired by Kenji López-Alt)",
+      "Herb-Roasted Turkey Breast (inspired by Ina Garten)",
+      "Slow-Roasted Turkey Breast with Preserved Lemon and Olives (British/Moroccan fusion) (inspired by Diana Henry)"
     ]
   },
   "turkey_burger": {
     "air_fryer": [
-      "America's Test Kitchen — Air-Fryer Turkey Burgers (American tradition)",
-      "Hugh Acheson — Air-Fryer Turkey Burgers with Sage & Lemon (American Culinary Group C tradition)",
-      "Tina Nordström — Kalkonburgare i Airfryer (Swedish tradition)",
-      "Diana Henry — Air-Fryer Turkey Burgers with Tarragon & Lemon (British modern tradition)"
+      "Air-Fryer Turkey Burgers (inspired by America's Test Kitchen)",
+      "Air-Fryer Turkey Burgers with Sage & Lemon (inspired by Hugh Acheson)",
+      "Kalkonburgare i Airfryer (inspired by Tina Nordström)",
+      "Air-Fryer Turkey Burgers with Tarragon & Lemon (inspired by Diana Henry)"
     ],
     "grill": [
-      "America's Test Kitchen — Grilled Turkey Burgers (American tradition)",
-      "Tina Nordström — Grillad Kalkonburgare (Swedish tradition)",
-      "Yotam Ottolenghi — Spiced Turkey Burgers with Tahini & Pomegranate (Levantine tradition)",
-      "Diana Henry — Grilled Turkey Burgers with Sage & Cranberry (British modern Thanksgiving tradition)"
+      "Grilled Turkey Burgers (inspired by America's Test Kitchen)",
+      "Grillad Kalkonburgare (inspired by Tina Nordström)",
+      "Spiced Turkey Burgers with Tahini & Pomegranate (inspired by Yotam Ottolenghi)",
+      "Grilled Turkey Burgers with Sage & Cranberry (inspired by Diana Henry)"
     ],
     "pan_fry": [
-      "America's Test Kitchen — Pan-Seared Turkey Burgers (American tradition)",
-      "Hugh Acheson — Pan-Fried Turkey Burgers with Sage & Lemon (American Culinary Group C tradition)",
-      "Tina Nordström — Pannstekt Kalkonburgare (Swedish tradition)",
-      "Yotam Ottolenghi — Spiced Turkey Burgers in the Pan with Tahini (Levantine tradition)"
+      "Pan-Seared Turkey Burgers (inspired by America's Test Kitchen)",
+      "Pan-Fried Turkey Burgers with Sage & Lemon (inspired by Hugh Acheson)",
+      "Pannstekt Kalkonburgare (inspired by Tina Nordström)",
+      "Spiced Turkey Burgers in the Pan with Tahini (inspired by Yotam Ottolenghi)"
     ]
   },
   "turkey_leg": {
     "oven_roast": [
-      "Good Food (provided by Apetit Online) — Roast Turkey Leg with Garlic & Rosemary (Czech tradition)",
-      "Good Food magazine — Classic Roast Turkey — thigh doneness test (British tradition)",
-      "Köket.se — Kalkon – Så Blir Den Saftig och God (Swedish tradition)",
-      "Immaculate Bites — Roasted Turkey Thighs (West African / Southern Creole tradition)"
+      "Roast Turkey Leg with Garlic & Rosemary (inspired by Good Food)",
+      "Classic Roast Turkey — thigh doneness test (inspired by Good Food magazine)",
+      "Kalkon – Så Blir Den Saftig och God (inspired by Köket.se)",
+      "Roasted Turkey Thighs (inspired by Immaculate Bites)"
     ],
     "smoker": [
-      "Immaculate Bites — Smoked Turkey Legs (West African / Southern US Creole tradition)"
+      "Smoked Turkey Legs (inspired by Immaculate Bites)"
     ]
   },
   "turkey_thigh": {
     "oven_roast": [
-      "Taste of Home Editorial Team — Braised Turkey Thighs"
+      "Braised Turkey Thighs (inspired by Taste of Home Editorial Team)"
     ]
   },
   "whole_turkey": {
     "oven_roast": [
-      "J. Kenji López-Alt — The Best Roast Turkey (American tradition, dry-brined and spatchcocked)",
-      "Ina Garten — Herb-Roasted Traditional Turkey (American home tradition)",
-      "Diana Henry — Classic Slow-Roast Turkey with Apple and Calvados Butter (British tradition)"
+      "The Best Roast Turkey (inspired by J. Kenji López-Alt)",
+      "Herb-Roasted Traditional Turkey (inspired by Ina Garten)",
+      "Classic Slow-Roast Turkey with Apple and Calvados Butter (inspired by Diana Henry)"
     ]
   },
   "chicken_breast": {
     "air_fryer": [
-      "Skinnytaste — Air Fryer Chicken Breast",
-      "Natasha's Kitchen — Air Fryer Chicken Thighs (temperature reference for dark-meat context)",
-      "BBC Good Food — Air Fryer Chicken Breasts",
-      "Swasthi Shreekanth — Chicken Tikka in Air Fryer (Indian tradition)",
+      "Air Fryer Chicken Breast (inspired by Skinnytaste)",
+      "Air Fryer Chicken Thighs (temperature reference for dark-meat context) (inspired by Natasha's Kitchen)",
+      "Air Fryer Chicken Breasts (inspired by BBC Good Food)",
+      "Chicken Tikka in Air Fryer (inspired by Swasthi Shreekanth)",
       "Brining guidance",
       "Air fryer model differences",
       "Carry-over cooking",
@@ -13338,10 +13338,10 @@ const RECIPE_TITLES_INDEX = {
       "MEATER probe placement"
     ],
     "grill": [
-      "Skinnytaste — Grilled Chicken Breast",
-      "Natasha's Kitchen — Juicy Grilled BBQ Chicken Breast",
-      "BBC Good Food — Cajun Chicken",
-      "Pailin Chongchitnant — Gai Yang ไก่ย่าง — Thai BBQ Chicken Breast (Thai tradition)",
+      "Grilled Chicken Breast (inspired by Skinnytaste)",
+      "Juicy Grilled BBQ Chicken Breast (inspired by Natasha's Kitchen)",
+      "Cajun Chicken (inspired by BBC Good Food)",
+      "Gai Yang ไก่ย่าง — Thai BBQ Chicken Breast (inspired by Pailin Chongchitnant)",
       "Preventing drying on the grill",
       "Grill temperature management",
       "Grill marks",
@@ -13352,16 +13352,16 @@ const RECIPE_TITLES_INDEX = {
       "Scaling and batch cooking"
     ],
     "oven_bake": [
-      "Skinnytaste / Gina Homolka — Baked Chicken Breast (mayo + panko crust)",
-      "Natasha's Kitchen / Natasha Kravchuk — Baked Chicken Breast",
-      "Jessica Gavin — Baked Chicken Breast (high-heat method)",
-      "Swasthi Shreekanth — Tandoori Chicken (Indian tradition)"
+      "Baked Chicken Breast (mayo + panko crust) (inspired by Skinnytaste / Gina Homolka)",
+      "Baked Chicken Breast (inspired by Natasha's Kitchen / Natasha Kravchuk)",
+      "Baked Chicken Breast (high-heat method) (inspired by Jessica Gavin)",
+      "Tandoori Chicken (inspired by Swasthi Shreekanth)"
     ],
     "pan_sear": [
-      "Jessica Gavin — How to Cook Chicken on the Stove",
-      "Skinnytaste — Pan-Seared Chicken Breast (adapted from grilled cutlets method)",
-      "Sevcan Kayabaş — Tavuk Göğüs Sote (Turkish Pan-Sautéed Chicken Breast with Vegetables)",
-      "Huy Vu — Gà Xào Sả Ớt (Vietnamese Spicy Lemongrass Chicken Sauté) (Vietnamese tradition)",
+      "How to Cook Chicken on the Stove (inspired by Jessica Gavin)",
+      "Pan-Seared Chicken Breast (adapted from grilled cutlets method) (inspired by Skinnytaste)",
+      "Tavuk Göğüs Sote (Turkish Pan-Sautéed Chicken Breast with Vegetables) (inspired by Sevcan Kayabaş)",
+      "Gà Xào Sả Ớt (Vietnamese Spicy Lemongrass Chicken Sauté) (inspired by Huy Vu)",
       "Pan selection matters",
       "Avoiding the rubbery breast problem",
       "Butter basting",
@@ -13373,15 +13373,15 @@ const RECIPE_TITLES_INDEX = {
   },
   "chicken_breast_bone_in": {
     "oven_roast": [
-      "Suzy Karadsheh — Baked Chicken Thighs / Bone-in Breast adaptation (Mediterranean tradition, Culinary Group B)",
-      "Imma Adamu — Oven Baked Chicken Breast (West African-American tradition, Culinary Group C)"
+      "Baked Chicken Thighs / Bone-in Breast adaptation (inspired by Suzy Karadsheh)",
+      "Oven Baked Chicken Breast (inspired by Imma Adamu)"
     ]
   },
   "chicken_burger": {
     "air_fryer": [
-      "Skinnytaste — Juicy Lucy Style Turkey / Chicken Burger",
-      "Natasha's Kitchen — Chicken Meatballs (ground chicken method reference)",
-      "Immaculate Bites — Jamaican Chicken Patties (Caribbean Spiced Ground Chicken Patties)",
+      "Juicy Lucy Style Turkey / Chicken Burger (inspired by Skinnytaste)",
+      "Chicken Meatballs (ground chicken method reference) (inspired by Natasha's Kitchen)",
+      "Jamaican Chicken Patties (Caribbean Spiced Ground Chicken Patties) (inspired by Immaculate Bites)",
       "Keeping ground chicken burgers intact in the air fryer",
       "Moisture management",
       "Internal temperature in air-fried burgers",
@@ -13393,9 +13393,9 @@ const RECIPE_TITLES_INDEX = {
       "Serving temperature and food safety"
     ],
     "grill": [
-      "Skinnytaste — Grilled Turkey / Chicken Cheeseburger (Juicy Lucy)",
-      "Natasha's Kitchen — BBQ Chicken Thighs Technique (adapted for burgers)",
-      "BBC Good Food — Cajun Chicken Burgers",
+      "Grilled Turkey / Chicken Cheeseburger (Juicy Lucy) (inspired by Skinnytaste)",
+      "BBQ Chicken Thighs Technique (adapted for burgers) (inspired by Natasha's Kitchen)",
+      "Cajun Chicken Burgers (inspired by BBC Good Food)",
       "Preventing ground chicken from sticking to grill grates",
       "Chilling patties before grilling",
       "Handling delicate ground chicken patties on the grill",
@@ -13407,9 +13407,9 @@ const RECIPE_TITLES_INDEX = {
       "Scaling and batch grilling"
     ],
     "pan_fry": [
-      "Jessica Gavin — Turkey Burgers (adapted for ground chicken pan-fry)",
-      "Natasha's Kitchen — Chicken Meatballs (ground chicken pan technique reference)",
-      "BBC Good Food — Fully Loaded Cajun Chicken Burgers",
+      "Turkey Burgers (adapted for ground chicken pan-fry) (inspired by Jessica Gavin)",
+      "Chicken Meatballs (ground chicken pan technique reference) (inspired by Natasha's Kitchen)",
+      "Fully Loaded Cajun Chicken Burgers (inspired by BBC Good Food)",
       "Covered-flip technique",
       "Managing ground chicken stickiness",
       "Flavour additions for ground chicken patties",
@@ -13422,10 +13422,10 @@ const RECIPE_TITLES_INDEX = {
   },
   "chicken_leg": {
     "oven_roast": [
-      "Jessica Gavin — Baked Chicken Legs",
-      "Natasha's Kitchen — Baked Chicken Drumsticks",
-      "BBC Good Food — Sticky Chicken Drumsticks",
-      "Swasthi Shreekanth — Tandoori Chicken Legs (Indian tradition)",
+      "Baked Chicken Legs (inspired by Jessica Gavin)",
+      "Baked Chicken Drumsticks (inspired by Natasha's Kitchen)",
+      "Sticky Chicken Drumsticks (inspired by BBC Good Food)",
+      "Tandoori Chicken Legs (inspired by Swasthi Shreekanth)",
       "High heat vs. lower-and-slower",
       "Crispy skin guidelines",
       "Temperature probe placement for drumsticks",
@@ -13437,10 +13437,10 @@ const RECIPE_TITLES_INDEX = {
   },
   "chicken_thigh": {
     "air_fryer": [
-      "Natasha's Kitchen — Air Fryer Chicken Thighs",
-      "Skinnytaste — Air Fryer Chicken Thighs",
-      "BBC Good Food — Air Fryer Chicken Thighs",
-      "Imma Adamu — Air Fryer Chicken (West African / Caribbean tradition)",
+      "Air Fryer Chicken Thighs (inspired by Natasha's Kitchen)",
+      "Air Fryer Chicken Thighs (inspired by Skinnytaste)",
+      "Air Fryer Chicken Thighs (inspired by BBC Good Food)",
+      "Air Fryer Chicken (inspired by Imma Adamu)",
       "Bone-in vs. boneless in the air fryer",
       "The 175 °F sweet spot for dark meat",
       "Air fryer basket management",
@@ -13449,10 +13449,10 @@ const RECIPE_TITLES_INDEX = {
       "Storage and reheating air-fried thighs"
     ],
     "grill": [
-      "Jessica Gavin — Grilled Chicken Thighs",
-      "Natasha's Kitchen — Juicy BBQ Chicken Thighs",
-      "Immaculate Bites — Hawaiian Grilled Chicken Thighs",
-      "Pailin Chongchitnant — Gai Yang ไก่ย่าง (Ultimate Thai BBQ Chicken) (Thai tradition)",
+      "Grilled Chicken Thighs (inspired by Jessica Gavin)",
+      "Juicy BBQ Chicken Thighs (inspired by Natasha's Kitchen)",
+      "Hawaiian Grilled Chicken Thighs (inspired by Immaculate Bites)",
+      "Gai Yang ไก่ย่าง (Ultimate Thai BBQ Chicken) (inspired by Pailin Chongchitnant)",
       "Bone-in vs. boneless on the grill",
       "Two-zone grilling for bone-in thighs",
       "BBQ sauce timing",
@@ -13461,10 +13461,10 @@ const RECIPE_TITLES_INDEX = {
       "Storage"
     ],
     "oven_roast": [
-      "Natasha's Kitchen — BBQ Oven-Baked Chicken Thighs",
-      "Skinnytaste — Baked Chicken Thighs with Vegetables",
-      "Argiro Barbarigou — Μπουτάκια Κοτόπουλο στο Φούρνο (Greek Yogurt-Crusted Oven Chicken Thighs)",
-      "Suzy Karadsheh — Baked Chicken Thighs with Mediterranean Spiced Tomato Rub (Egyptian / Middle Eastern tradition)",
+      "BBQ Oven-Baked Chicken Thighs (inspired by Natasha's Kitchen)",
+      "Baked Chicken Thighs with Vegetables (inspired by Skinnytaste)",
+      "Μπουτάκια Κοτόπουλο στο Φούρνο (Greek Yogurt-Crusted Oven Chicken Thighs) (inspired by Argiro Barbarigou)",
+      "Baked Chicken Thighs with Mediterranean Spiced Tomato Rub (inspired by Suzy Karadsheh)",
       "Skin crispiness in the oven",
       "Bone-in vs. boneless in the oven",
       "Temperature probe placement (oven roast)",
@@ -13476,10 +13476,10 @@ const RECIPE_TITLES_INDEX = {
   },
   "chicken_wing": {
     "air_fryer": [
-      "Natasha's Kitchen — Air Fryer Chicken Wings",
-      "Skinnytaste — Air Fryer Chicken Wings",
-      "Immaculate Bites — Crispy Grilled Chicken Wings",
-      "Pailin Chongchitnant — Crispy Thai Fish Sauce Wings (Thai tradition)",
+      "Air Fryer Chicken Wings (inspired by Natasha's Kitchen)",
+      "Air Fryer Chicken Wings (inspired by Skinnytaste)",
+      "Crispy Grilled Chicken Wings (inspired by Immaculate Bites)",
+      "Crispy Thai Fish Sauce Wings (inspired by Pailin Chongchitnant)",
       "The baking powder secret",
       "Drying wings before cooking",
       "Sauce application for air fryer wings",
@@ -13489,18 +13489,18 @@ const RECIPE_TITLES_INDEX = {
       "Storage"
     ],
     "grill": [
-      "Taste of Home — Grilled Chicken Wings with Buffalo Sauce",
-      "Immaculate Bites — Crispy Grilled Chicken Wings"
+      "Grilled Chicken Wings with Buffalo Sauce (inspired by Taste of Home)",
+      "Crispy Grilled Chicken Wings (inspired by Immaculate Bites)"
     ],
     "oven_roast": [
-      "Taste of Home — Baked Chicken Wings"
+      "Baked Chicken Wings (inspired by Taste of Home)"
     ]
   },
   "ground_chicken": {
     "braise": [
-      "Natasha's Kitchen — Chicken Meatballs in Cream Sauce (Tefteli)",
-      "Skinnytaste — Ground Poultry Braised Skillet (adapted)",
-      "Swasthi Shreekanth — Chicken Keema (Indian Spiced Ground Chicken Curry)",
+      "Chicken Meatballs in Cream Sauce (Tefteli) (inspired by Natasha's Kitchen)",
+      "Ground Poultry Braised Skillet (adapted) (inspired by Skinnytaste)",
+      "Chicken Keema (Indian Spiced Ground Chicken Curry) (inspired by Swasthi Shreekanth)",
       "Why braise for ground chicken?",
       "Temperature safety for ground poultry",
       "Liquid ratios",
@@ -13508,15 +13508,15 @@ const RECIPE_TITLES_INDEX = {
       "Variations on braised ground chicken"
     ],
     "grill": [
-      "Nefis Yemek Tarifleri — Izgara Tavuk Köftesi (Turkish tradition)",
-      "Tori Avey — Mediterranean Grilled Chicken Burgers (Israeli / Levantine tradition)",
-      "African Bites — Jamaican Chicken Patties (Jamaican / West African tradition)",
-      "TASTE — Chicken Patties with Preserved Lemon (South African tradition)"
+      "Izgara Tavuk Köftesi (inspired by Nefis Yemek Tarifleri)",
+      "Mediterranean Grilled Chicken Burgers (inspired by Tori Avey)",
+      "Jamaican Chicken Patties (inspired by African Bites)",
+      "Chicken Patties with Preserved Lemon (inspired by TASTE)"
     ],
     "pan_fry": [
-      "Jessica Gavin — Turkey Burgers (ground poultry patty technique adapted for chicken)",
-      "Natasha's Kitchen — Chicken Meatballs (ground chicken pan-fry reference)",
-      "Swasthi Shreekanth — Chicken Tikki (Indian Pan-Fried Ground Chicken Patties)",
+      "Turkey Burgers (ground poultry patty technique adapted for chicken) (inspired by Jessica Gavin)",
+      "Chicken Meatballs (ground chicken pan-fry reference) (inspired by Natasha's Kitchen)",
+      "Chicken Tikki (Indian Pan-Fried Ground Chicken Patties) (inspired by Swasthi Shreekanth)",
       "Ground chicken vs. ground turkey vs. ground beef",
       "The covered-flip technique for meatballs",
       "Crumbled ground chicken (for tacos, pasta, bowls)",
@@ -13527,10 +13527,10 @@ const RECIPE_TITLES_INDEX = {
   },
   "whole_chicken": {
     "oven_roast": [
-      "Jessica Gavin — Whole Roasted Chicken",
-      "Natasha's Kitchen — Juicy Whole Roast Chicken (adapted from roast turkey method)",
-      "BBC Good Food — Simple Roast Chicken",
-      "Suzy Karadsheh — Easy Oven Roasted Chicken (Egyptian / Mediterranean tradition)",
+      "Whole Roasted Chicken (inspired by Jessica Gavin)",
+      "Juicy Whole Roast Chicken (adapted from roast turkey method) (inspired by Natasha's Kitchen)",
+      "Simple Roast Chicken (inspired by BBC Good Food)",
+      "Easy Oven Roasted Chicken (inspired by Suzy Karadsheh)",
       "Breast-down vs. breast-up starting position",
       "Resting is non-negotiable",
       "Trussing benefits",
@@ -13539,1233 +13539,1233 @@ const RECIPE_TITLES_INDEX = {
   },
   "asparagus": {
     "grill": [
-      "Harumi Kurihara — Asparagus Yakimono (Japanese grilled asparagus)",
-      "José Andrés — Espárragos a la Parrilla con Romesco (Spanish tradition)",
-      "Yotam Ottolenghi — Grilled Asparagus with Poached Egg and Truffle Oil (Middle Eastern / Israeli tradition)",
-      "Deborah Madison — Grilled Asparagus with Meyer Lemon Gremolata (American vegetarian tradition)"
+      "Asparagus Yakimono (Japanese grilled asparagus) (inspired by Harumi Kurihara)",
+      "Espárragos a la Parrilla con Romesco (inspired by José Andrés)",
+      "Grilled Asparagus with Poached Egg and Truffle Oil (inspired by Yotam Ottolenghi)",
+      "Grilled Asparagus with Meyer Lemon Gremolata (inspired by Deborah Madison)"
     ],
     "oven_roast": [
-      "Marcella Hazan — Asparagi al Forno (Italian tradition)",
-      "Madhur Jaffrey — Oven-Roasted Asparagus with Cumin (Indian tradition)",
-      "Yotam Ottolenghi — Roasted Asparagus with Tahini and Lemon (Middle Eastern / Israeli tradition)",
-      "José Andrés — Espárragos Blancos al Horno (Spanish tradition)"
+      "Asparagi al Forno (inspired by Marcella Hazan)",
+      "Oven-Roasted Asparagus with Cumin (inspired by Madhur Jaffrey)",
+      "Roasted Asparagus with Tahini and Lemon (inspired by Yotam Ottolenghi)",
+      "Espárragos Blancos al Horno (inspired by José Andrés)"
     ],
     "saute": [
-      "Fuchsia Dunlop — Qīng Chǎo Lǜ Sǔn (清炒芦笋 — Chinese Stir-Fried Asparagus)",
-      "Julia Child — Asperges Sautées au Beurre (French tradition)",
-      "Madhur Jaffrey — Sabzi Til Asparagus (Indian tradition)",
-      "Harumi Kurihara — Asupara Bataa Itame (Japanese Butter-Sautéed Asparagus)"
+      "Qīng Chǎo Lǜ Sǔn (清炒芦笋 — Chinese Stir-Fried Asparagus) (inspired by Fuchsia Dunlop)",
+      "Asperges Sautées au Beurre (inspired by Julia Child)",
+      "Sabzi Til Asparagus (inspired by Madhur Jaffrey)",
+      "Asupara Bataa Itame (Japanese Butter-Sautéed Asparagus) (inspired by Harumi Kurihara)"
     ],
     "steam": [
-      "Julia Child — Asperges à la Vapeur, Sauce Hollandaise (French tradition)",
-      "Fuchsia Dunlop — Steamed Asparagus with Sichuan Spicy Sesame Dressing (Chinese tradition)",
-      "Shizuo Tsuji — Steamered Asparagus with Wafu Dressing (Japanese tradition)",
-      "Marcella Hazan — Asparagi Conditi con Parmigiano (Italian tradition)"
+      "Asperges à la Vapeur, Sauce Hollandaise (inspired by Julia Child)",
+      "Steamed Asparagus with Sichuan Spicy Sesame Dressing (inspired by Fuchsia Dunlop)",
+      "Steamered Asparagus with Wafu Dressing (inspired by Shizuo Tsuji)",
+      "Asparagi Conditi con Parmigiano (inspired by Marcella Hazan)"
     ]
   },
   "broccoli": {
     "air_fryer": [
-      "Madhur Jaffrey — Broccoli Tikka in the Air Fryer (Indian tradition)",
-      "Fuchsia Dunlop — Air-Fried Broccoli with Oyster Sauce (Chinese tradition)",
-      "Maangchi — Korean Spicy Air-Fried Broccoli (Korean tradition)",
-      "Yotam Ottolenghi — Air-Fried Broccoli with Za'atar and Yoghurt (Middle Eastern / Israeli tradition)"
+      "Broccoli Tikka in the Air Fryer (inspired by Madhur Jaffrey)",
+      "Air-Fried Broccoli with Oyster Sauce (inspired by Fuchsia Dunlop)",
+      "Korean Spicy Air-Fried Broccoli (inspired by Maangchi)",
+      "Air-Fried Broccoli with Za'atar and Yoghurt (inspired by Yotam Ottolenghi)"
     ],
     "oven_roast": [
-      "Marcella Hazan — Broccoli al Forno con Aglio (Italian tradition)",
-      "Yotam Ottolenghi — Roasted Broccoli with Almonds and Honey (Middle Eastern / Israeli tradition)",
-      "Fuchsia Dunlop — Roasted Broccoli with Doubanjiang Sauce (Chinese tradition)",
-      "Claudia Roden — Roasted Broccoli with Chermoula (Moroccan / North African tradition)"
+      "Broccoli al Forno con Aglio (inspired by Marcella Hazan)",
+      "Roasted Broccoli with Almonds and Honey (inspired by Yotam Ottolenghi)",
+      "Roasted Broccoli with Doubanjiang Sauce (inspired by Fuchsia Dunlop)",
+      "Roasted Broccoli with Chermoula (inspired by Claudia Roden)"
     ],
     "saute": [
-      "Fuchsia Dunlop — Qīng Chǎo Xīlánhuā (清炒西兰花 — Chinese Stir-Fried Broccoli)",
-      "Pailin Chongchitnant — Pad Broccoli with Oyster Sauce (Thai tradition)",
-      "Madhur Jaffrey — Broccoli Masala Sauté (Indian tradition)",
-      "Marcella Hazan — Broccoli Saltato con Burro e Limone (Italian tradition)"
+      "Qīng Chǎo Xīlánhuā (清炒西兰花 — Chinese Stir-Fried Broccoli) (inspired by Fuchsia Dunlop)",
+      "Pad Broccoli with Oyster Sauce (inspired by Pailin Chongchitnant)",
+      "Broccoli Masala Sauté (inspired by Madhur Jaffrey)",
+      "Broccoli Saltato con Burro e Limone (inspired by Marcella Hazan)"
     ],
     "steam": [
-      "Harumi Kurihara — Steamed Broccoli with Goma-ae Dressing (Japanese tradition)",
-      "Fuchsia Dunlop — Steamed Broccoli with Spicy Sesame Sauce (Chinese tradition)",
-      "Julia Child — Brocoli Vapeur au Beurre (French tradition)",
-      "Madhur Jaffrey — Steamed Broccoli with Tadka (Indian tradition)"
+      "Steamed Broccoli with Goma-ae Dressing (inspired by Harumi Kurihara)",
+      "Steamed Broccoli with Spicy Sesame Sauce (inspired by Fuchsia Dunlop)",
+      "Brocoli Vapeur au Beurre (inspired by Julia Child)",
+      "Steamed Broccoli with Tadka (inspired by Madhur Jaffrey)"
     ]
   },
   "brussels_sprouts": {
     "air_fryer": [
-      "Maangchi — Korean Air-Fried Brussels Sprouts (Korean tradition)",
-      "Madhur Jaffrey — Air-Fried Masala Brussels Sprouts (Indian tradition)",
-      "Yotam Ottolenghi — Air-Fried Brussels Sprouts with Za'atar (Middle Eastern / Israeli tradition)",
-      "Deborah Madison — Air-Fried Brussels Sprouts with Balsamic (American vegetarian tradition)"
+      "Korean Air-Fried Brussels Sprouts (inspired by Maangchi)",
+      "Air-Fried Masala Brussels Sprouts (inspired by Madhur Jaffrey)",
+      "Air-Fried Brussels Sprouts with Za'atar (inspired by Yotam Ottolenghi)",
+      "Air-Fried Brussels Sprouts with Balsamic (inspired by Deborah Madison)"
     ],
     "oven_roast": [
-      "Najmieh Batmanglij — Persian-Style Roasted Brussels Sprouts with Saffron and Dried Barberries",
-      "Magnus Nilsson — Ugnsrostad Brysselkål (Nordic / Swedish tradition)",
-      "Madhur Jaffrey — Roasted Masala Brussels Sprouts (Indian tradition)",
-      "José Andrés — Coles de Bruselas al Horno con Romesco (Spanish tradition)"
+      "Persian-Style Roasted Brussels Sprouts with Saffron and Dried Barberries (inspired by Najmieh Batmanglij)",
+      "Ugnsrostad Brysselkål (inspired by Magnus Nilsson)",
+      "Roasted Masala Brussels Sprouts (inspired by Madhur Jaffrey)",
+      "Coles de Bruselas al Horno con Romesco (inspired by José Andrés)"
     ],
     "pan_fry": [
-      "Marcella Hazan — Cavolini di Bruxelles in Padella (Italian tradition)",
-      "Fuchsia Dunlop — Pan-Fried Brussels Sprouts with Doubanjiang (Chinese tradition)",
-      "Maangchi — Korean Pan-Fried Brussels Sprouts (Korean tradition)",
-      "Deborah Madison — Pan-Fried Brussels Sprouts with Butter and Sage (American vegetarian tradition)"
+      "Cavolini di Bruxelles in Padella (inspired by Marcella Hazan)",
+      "Pan-Fried Brussels Sprouts with Doubanjiang (inspired by Fuchsia Dunlop)",
+      "Korean Pan-Fried Brussels Sprouts (inspired by Maangchi)",
+      "Pan-Fried Brussels Sprouts with Butter and Sage (inspired by Deborah Madison)"
     ],
     "saute": [
-      "Pailin Chongchitnant — Thai-Style Sautéed Brussels Sprouts with Fish Sauce (Thai tradition)",
-      "Harumi Kurihara — Sautéed Shredded Brussels Sprouts with Ponzu (Japanese tradition)",
-      "Madhur Jaffrey — Sautéed Brussels Sprouts with Cumin and Mustard Seeds (Indian tradition)",
-      "Yotam Ottolenghi — Sautéed Brussels Sprouts with Tahini and Pomegranate (Israeli / Middle Eastern tradition)"
+      "Thai-Style Sautéed Brussels Sprouts with Fish Sauce (inspired by Pailin Chongchitnant)",
+      "Sautéed Shredded Brussels Sprouts with Ponzu (inspired by Harumi Kurihara)",
+      "Sautéed Brussels Sprouts with Cumin and Mustard Seeds (inspired by Madhur Jaffrey)",
+      "Sautéed Brussels Sprouts with Tahini and Pomegranate (inspired by Yotam Ottolenghi)"
     ]
   },
   "green_beans": {
     "boil": [
-      "Julia Child — Haricots Verts Blanchis et Étuvés (French tradition)",
-      "Fuchsia Dunlop — Blanched Yard-Long Beans with Chilli Oil (Chinese tradition)",
-      "Claudia Roden — Green Beans Boiled with Tomato (Moroccan / North African tradition)",
-      "Madhur Jaffrey — Masala Boiled Beans (Indian tradition)"
+      "Haricots Verts Blanchis et Étuvés (inspired by Julia Child)",
+      "Blanched Yard-Long Beans with Chilli Oil (inspired by Fuchsia Dunlop)",
+      "Green Beans Boiled with Tomato (inspired by Claudia Roden)",
+      "Masala Boiled Beans (inspired by Madhur Jaffrey)"
     ],
     "oven_roast": [
-      "Yotam Ottolenghi — Roasted Green Beans with Crispy Capers (Middle Eastern / Israeli tradition)",
-      "Madhur Jaffrey — Roasted Masala Green Beans (Indian tradition)",
-      "Marcella Hazan — Fagiolini al Forno con Aglio (Italian tradition)",
-      "Deborah Madison — Roasted Green Beans with Almond Gremolata (American vegetarian tradition)"
+      "Roasted Green Beans with Crispy Capers (inspired by Yotam Ottolenghi)",
+      "Roasted Masala Green Beans (inspired by Madhur Jaffrey)",
+      "Fagiolini al Forno con Aglio (inspired by Marcella Hazan)",
+      "Roasted Green Beans with Almond Gremolata (inspired by Deborah Madison)"
     ],
     "saute": [
-      "Fuchsia Dunlop — Gān Biān Sìjìdòu (干煸四季豆 — Chinese Dry-Fried Green Beans)",
-      "Pailin Chongchitnant — Pad Tua Fak Yao (Thai Stir-Fried Yard-Long Beans)",
-      "Madhur Jaffrey — Sabzi Tamater Beans (Indian tradition)",
-      "Julia Child — Haricots Verts Sautés au Beurre (French tradition)"
+      "Gān Biān Sìjìdòu (干煸四季豆 — Chinese Dry-Fried Green Beans) (inspired by Fuchsia Dunlop)",
+      "Pad Tua Fak Yao (Thai Stir-Fried Yard-Long Beans) (inspired by Pailin Chongchitnant)",
+      "Sabzi Tamater Beans (inspired by Madhur Jaffrey)",
+      "Haricots Verts Sautés au Beurre (inspired by Julia Child)"
     ],
     "steam": [
-      "Harumi Kurihara — Steamed Beans with Sesame Dressing (Japanese tradition)",
-      "Madhur Jaffrey — Steamed Beans with Mustard Seed Tadka (Indian tradition)",
-      "Fuchsia Dunlop — Steamed Long Beans with Garlic and Soy (Chinese tradition)",
-      "Julia Child — Haricots Verts à la Vapeur au Beurre Fondu (French tradition)"
+      "Steamed Beans with Sesame Dressing (inspired by Harumi Kurihara)",
+      "Steamed Beans with Mustard Seed Tadka (inspired by Madhur Jaffrey)",
+      "Steamed Long Beans with Garlic and Soy (inspired by Fuchsia Dunlop)",
+      "Haricots Verts à la Vapeur au Beurre Fondu (inspired by Julia Child)"
     ]
   },
   "spinach": {
     "saute": [
-      "Fuchsia Dunlop — Qīng Chǎo Bōcài (清炒菠菜 — Chinese Stir-Fried Spinach with Garlic)",
-      "Madhur Jaffrey — Palak Saag (Indian Sautéed Spinach with Spices)",
-      "Marcella Hazan — Spinaci Saltati con Aglio e Olio (Italian tradition)",
-      "Julia Child — Épinards Sautés au Beurre (French tradition)"
+      "Qīng Chǎo Bōcài (清炒菠菜 — Chinese Stir-Fried Spinach with Garlic) (inspired by Fuchsia Dunlop)",
+      "Palak Saag (Indian Sautéed Spinach with Spices) (inspired by Madhur Jaffrey)",
+      "Spinaci Saltati con Aglio e Olio (inspired by Marcella Hazan)",
+      "Épinards Sautés au Beurre (inspired by Julia Child)"
     ],
     "steam": [
-      "Harumi Kurihara — Steamed Spinach Ohitashi (Japanese tradition)",
-      "Madhur Jaffrey — Steamed Palak with Coconut Tadka (Indian tradition)",
-      "Fuchsia Dunlop — Steamed Spinach with Sesame Oil and Soy (Chinese tradition)",
-      "Marcella Hazan — Steamed Spinach with Olive Oil and Lemon (Italian tradition)"
+      "Steamed Spinach Ohitashi (inspired by Harumi Kurihara)",
+      "Steamed Palak with Coconut Tadka (inspired by Madhur Jaffrey)",
+      "Steamed Spinach with Sesame Oil and Soy (inspired by Fuchsia Dunlop)",
+      "Steamed Spinach with Olive Oil and Lemon (inspired by Marcella Hazan)"
     ]
   },
   "roasted_tomatoes": {
     "air_fryer": [
-      "Pailin Chongchitnant — Air-Fried Roasted Cherry Tomatoes for Nam Prik (Thai tradition)",
-      "Swasthi Shreekanth — Air-Fried Tomatoes for Chutney (Indian tradition)",
-      "Nefis Yemek Tarifleri — Fırın / Hava Fritözü Közlenmiş Domates (Turkish tradition)",
-      "Ina Garten — Roasted Cherry Tomatoes in the Air Fryer (American tradition)"
+      "Air-Fried Roasted Cherry Tomatoes for Nam Prik (inspired by Pailin Chongchitnant)",
+      "Air-Fried Tomatoes for Chutney (inspired by Swasthi Shreekanth)",
+      "Fırın / Hava Fritözü Közlenmiş Domates (inspired by Nefis Yemek Tarifleri)",
+      "Roasted Cherry Tomatoes in the Air Fryer (inspired by Ina Garten)"
     ],
     "oven_roast": [
-      "Diana Kennedy — Jitomates Asados (Mexican tradition)",
-      "Marcella Hazan — Pomodori al Forno (Italian tradition)",
-      "Claudia Roden — Tomates Confits (Moroccan / North African tradition)",
-      "Yotam Ottolenghi — Burst Cherry Tomatoes with Za'atar (Middle Eastern / Israeli tradition)"
+      "Jitomates Asados (inspired by Diana Kennedy)",
+      "Pomodori al Forno (inspired by Marcella Hazan)",
+      "Tomates Confits (inspired by Claudia Roden)",
+      "Burst Cherry Tomatoes with Za'atar (inspired by Yotam Ottolenghi)"
     ]
   },
   "cabbage": {
     "braise": [
-      "Nigel Slater — German-Style Red Cabbage with Apple and Cloves (German tradition)",
-      "Julia Child — Chou Braisé (French tradition)",
-      "Madhur Jaffrey — Bandh Gobhi Dum (Indian Slow-Braised Cabbage)",
-      "Fuchsia Dunlop — Hóng Shāo Bǎitài (红烧白菜 — Chinese Red-Braised Cabbage)"
+      "German-Style Red Cabbage with Apple and Cloves (inspired by Nigel Slater)",
+      "Chou Braisé (inspired by Julia Child)",
+      "Bandh Gobhi Dum (Indian Slow-Braised Cabbage) (inspired by Madhur Jaffrey)",
+      "Hóng Shāo Bǎitài (红烧白菜 — Chinese Red-Braised Cabbage) (inspired by Fuchsia Dunlop)"
     ],
     "grill": [
-      "Maangchi — Yangbaechu Gui (Korean Grilled Cabbage — BBQ style)",
-      "Francis Mallmann — Repollo a las Brasas (Argentine tradition)",
-      "Madhur Jaffrey — Grilled Cabbage with Indian Spices (Indian tradition)",
-      "Deborah Madison — Grilled Cabbage Wedges with Blue Cheese Dressing (American vegetarian tradition)"
+      "Yangbaechu Gui (Korean Grilled Cabbage — BBQ style) (inspired by Maangchi)",
+      "Repollo a las Brasas (inspired by Francis Mallmann)",
+      "Grilled Cabbage with Indian Spices (inspired by Madhur Jaffrey)",
+      "Grilled Cabbage Wedges with Blue Cheese Dressing (inspired by Deborah Madison)"
     ],
     "oven_roast": [
-      "J. Kenji López-Alt — Roasted Cabbage Wedges (American tradition)",
-      "Magnus Nilsson — Pressed Roast Cabbage (Nordic tradition)",
-      "Yotam Ottolenghi — Whole Roasted Cabbage with Brown Butter & Caraway (Middle Eastern–European fusion)",
-      "Hugh Fearnley-Whittingstall — Wedge of Cabbage with Anchovy Butter (British / River Cottage tradition)"
+      "Roasted Cabbage Wedges (inspired by J. Kenji López-Alt)",
+      "Pressed Roast Cabbage (inspired by Magnus Nilsson)",
+      "Whole Roasted Cabbage with Brown Butter & Caraway (Middle Eastern–European fusion) (inspired by Yotam Ottolenghi)",
+      "Wedge of Cabbage with Anchovy Butter (inspired by Hugh Fearnley-Whittingstall)"
     ],
     "saute": [
-      "Pailin Chongchitnant — Pad Kalam Plee (Thai Stir-Fried Cabbage)",
-      "Fuchsia Dunlop — Gān Biān Bǎitái (干煸白菜 — Chinese Dry-Fried Cabbage with Chilli)",
-      "Madhur Jaffrey — Bandh Gobhi aur Zeera (Indian Cumin-Spiced Cabbage)",
-      "Nigel Slater — Schmorkohl / Sautéed Sweetheart Cabbage with Caraway and Cream (German / British tradition)"
+      "Pad Kalam Plee (Thai Stir-Fried Cabbage) (inspired by Pailin Chongchitnant)",
+      "Gān Biān Bǎitái (干煸白菜 — Chinese Dry-Fried Cabbage with Chilli) (inspired by Fuchsia Dunlop)",
+      "Bandh Gobhi aur Zeera (Indian Cumin-Spiced Cabbage) (inspired by Madhur Jaffrey)",
+      "Schmorkohl / Sautéed Sweetheart Cabbage with Caraway and Cream (inspired by Nigel Slater)"
     ]
   },
   "cauliflower": {
     "air_fryer": [
-      "Madhur Jaffrey — Gobi Tikka (Air Fryer — Indian tradition)",
-      "Maangchi — Korean Spicy Air-Fried Gobi (Korean tradition)",
-      "Yotam Ottolenghi — Air-Fried Cauliflower with Za'atar and Yoghurt (Middle Eastern / Israeli tradition)",
-      "Harumi Kurihara — Air-Fried Cauliflower Karaage (Japanese tradition)"
+      "Gobi Tikka (inspired by Madhur Jaffrey)",
+      "Korean Spicy Air-Fried Gobi (inspired by Maangchi)",
+      "Air-Fried Cauliflower with Za'atar and Yoghurt (inspired by Yotam Ottolenghi)",
+      "Air-Fried Cauliflower Karaage (inspired by Harumi Kurihara)"
     ],
     "oven_roast": [
-      "Claudia Roden — Chou-fleur Rôti à la Chermoula (Moroccan / North African tradition)",
-      "Madhur Jaffrey — Gobi Roast with Turmeric and Coriander (Indian tradition)",
-      "Yotam Ottolenghi — Roasted Cauliflower with Capers and Raisins (Middle Eastern / Israeli tradition)",
-      "Marcella Hazan — Cavolfiore al Forno (Italian tradition)"
+      "Chou-fleur Rôti à la Chermoula (inspired by Claudia Roden)",
+      "Gobi Roast with Turmeric and Coriander (inspired by Madhur Jaffrey)",
+      "Roasted Cauliflower with Capers and Raisins (inspired by Yotam Ottolenghi)",
+      "Cavolfiore al Forno (inspired by Marcella Hazan)"
     ],
     "saute": [
-      "Yotam Ottolenghi — Sautéed Cauliflower with Tahini (Middle Eastern / Israeli tradition)",
-      "Marcella Hazan — Cavolfiore Saltato all'Aglio (Italian tradition)",
-      "Madhur Jaffrey — Phulgobi ki Bhaji (North Indian sautéed cauliflower)",
-      "Julia Child — Chou-Fleur Étuvé au Beurre (French tradition)"
+      "Sautéed Cauliflower with Tahini (inspired by Yotam Ottolenghi)",
+      "Cavolfiore Saltato all'Aglio (inspired by Marcella Hazan)",
+      "Phulgobi ki Bhaji (North Indian sautéed cauliflower) (inspired by Madhur Jaffrey)",
+      "Chou-Fleur Étuvé au Beurre (inspired by Julia Child)"
     ],
     "steam": [
-      "Fuchsia Dunlop — Zhēng Huā Cài (蒸花椰菜 — Chinese Steamed Cauliflower with Sesame Sauce)",
-      "Madhur Jaffrey — Masala Steamed Gobi (Indian tradition)",
-      "Julia Child — Chou-fleur Vapeur au Beurre Noisette (French tradition)",
-      "Claudia Roden — Steamed Cauliflower with Smen and Preserved Lemon (Moroccan / North African tradition)"
+      "Zhēng Huā Cài (蒸花椰菜 — Chinese Steamed Cauliflower with Sesame Sauce) (inspired by Fuchsia Dunlop)",
+      "Masala Steamed Gobi (inspired by Madhur Jaffrey)",
+      "Chou-fleur Vapeur au Beurre Noisette (inspired by Julia Child)",
+      "Steamed Cauliflower with Smen and Preserved Lemon (inspired by Claudia Roden)"
     ],
     "whole_roast": [
-      "Yotam Ottolenghi — Whole Roasted Cauliflower with Harissa Butter (Middle Eastern / Israeli tradition)",
-      "Najmieh Batmanglij — Whole Roasted Kalam Polo (Persian tradition)",
-      "Madhur Jaffrey — Whole Dum Gobi (Indian Spiced Whole Cauliflower)",
-      "Magnus Nilsson — Ugnsrostad Hel Blomkål (Nordic / Swedish tradition)"
+      "Whole Roasted Cauliflower with Harissa Butter (inspired by Yotam Ottolenghi)",
+      "Whole Roasted Kalam Polo (inspired by Najmieh Batmanglij)",
+      "Whole Dum Gobi (Indian Spiced Whole Cauliflower) (inspired by Madhur Jaffrey)",
+      "Ugnsrostad Hel Blomkål (inspired by Magnus Nilsson)"
     ]
   },
   "button_mushrooms": {
     "air_fryer": [
-      "Fuchsia Dunlop — Air-Fried Shuāng Gū (双菇 — Chinese double-mushroom stir-fry, air fryer adaptation)",
-      "Madhur Jaffrey — Air-Fried Mushroom Tikka (Indian tradition)",
-      "Harumi Kurihara — Air-Fried Kinoko no Shio-Yaki (Japanese salted mushrooms)",
-      "Yotam Ottolenghi — Air-Fried Mushrooms with Herb Oil (Middle Eastern / Israeli tradition)"
+      "Air-Fried Shuāng Gū (双菇 — Chinese double-mushroom stir-fry, air fryer adaptation) (inspired by Fuchsia Dunlop)",
+      "Air-Fried Mushroom Tikka (inspired by Madhur Jaffrey)",
+      "Air-Fried Kinoko no Shio-Yaki (Japanese salted mushrooms) (inspired by Harumi Kurihara)",
+      "Air-Fried Mushrooms with Herb Oil (inspired by Yotam Ottolenghi)"
     ],
     "grill": [
-      "Mark Bittman — Grilled Button Mushrooms with Garlic & Lemon (American tradition)",
-      "Adam Liaw — Yakitori-style Mushroom Skewers (Japanese tradition)",
-      "Francis Mallmann — Champiñones a la Parrilla (Argentine/Patagonian tradition)",
-      "Anna Jones — Grilled Marinated Mushrooms (British vegetarian tradition)"
+      "Grilled Button Mushrooms with Garlic & Lemon (inspired by Mark Bittman)",
+      "Yakitori-style Mushroom Skewers (inspired by Adam Liaw)",
+      "Champiñones a la Parrilla (inspired by Francis Mallmann)",
+      "Grilled Marinated Mushrooms (inspired by Anna Jones)"
     ],
     "oven_roast": [
-      "Harumi Kurihara — Kinoko no Oven Yaki (Japanese oven-roasted mushrooms)",
-      "Madhur Jaffrey — Dhingri Masala (Mushroom Masala, oven adaptation — Indian tradition)",
-      "Claudia Roden — Champignons Rôtis à la Marocaine (Moroccan / North African tradition)",
-      "Marcella Hazan — Funghi Trifolati al Forno (Italian tradition)"
+      "Kinoko no Oven Yaki (Japanese oven-roasted mushrooms) (inspired by Harumi Kurihara)",
+      "Dhingri Masala (inspired by Madhur Jaffrey)",
+      "Champignons Rôtis à la Marocaine (inspired by Claudia Roden)",
+      "Funghi Trifolati al Forno (inspired by Marcella Hazan)"
     ],
     "saute": [
-      "Fuchsia Dunlop — Sù Chǎo Shuāng Gū (素炒双菇 — Chinese Stir-Fried Button Mushrooms)",
-      "Julia Child — Champignons Sautés (French tradition)",
-      "Madhur Jaffrey — Dhingri aur Hari Mirch (Indian mushrooms with green chilli)",
-      "Yotam Ottolenghi — Sautéed Mushrooms with Labneh (Middle Eastern / Israeli tradition)"
+      "Sù Chǎo Shuāng Gū (素炒双菇 — Chinese Stir-Fried Button Mushrooms) (inspired by Fuchsia Dunlop)",
+      "Champignons Sautés (inspired by Julia Child)",
+      "Dhingri aur Hari Mirch (Indian mushrooms with green chilli) (inspired by Madhur Jaffrey)",
+      "Sautéed Mushrooms with Labneh (inspired by Yotam Ottolenghi)"
     ]
   },
   "portobello_mushrooms": {
     "air_fryer": [
-      "Maangchi — Air-Fried Portobello Gui (Korean tradition)",
-      "Harumi Kurihara — Air-Fried Portobello with Ponzu (Japanese tradition)",
-      "Madhur Jaffrey — Air-Fried Portobello Tikka (Indian tradition)",
-      "Yotam Ottolenghi — Air-Fried Portobello with Herbed Ricotta (Middle Eastern / Israeli tradition)"
+      "Air-Fried Portobello Gui (inspired by Maangchi)",
+      "Air-Fried Portobello with Ponzu (inspired by Harumi Kurihara)",
+      "Air-Fried Portobello Tikka (inspired by Madhur Jaffrey)",
+      "Air-Fried Portobello with Herbed Ricotta (inspired by Yotam Ottolenghi)"
     ],
     "grill": [
-      "Maangchi — Portobello Gui (Korean tradition)",
-      "Shizuo Tsuji — Portobello Dengaku Yaki (Japanese tradition)",
-      "Yotam Ottolenghi — Grilled Portobello with Lemon Herb Dressing (Middle Eastern / Israeli tradition)",
-      "Deborah Madison — Grilled Portobello Burgers (American vegetarian tradition)"
+      "Portobello Gui (inspired by Maangchi)",
+      "Portobello Dengaku Yaki (inspired by Shizuo Tsuji)",
+      "Grilled Portobello with Lemon Herb Dressing (inspired by Yotam Ottolenghi)",
+      "Grilled Portobello Burgers (inspired by Deborah Madison)"
     ],
     "oven_roast": [
-      "Fuchsia Dunlop — Hóng Shāo Dà Mó Gū (烤大蘑菇 — Chinese Roasted Portobello with Doubanjiang)",
-      "Madhur Jaffrey — Oven-Roasted Portobello with Masala (Indian tradition)",
-      "Marcella Hazan — Grandi Funghi al Forno con Aglio e Prezzemolo (Italian tradition)",
-      "Deborah Madison — Oven-Roasted Portobello with Goat Cheese and Tapenade (American vegetarian tradition)"
+      "Hóng Shāo Dà Mó Gū (烤大蘑菇 — Chinese Roasted Portobello with Doubanjiang) (inspired by Fuchsia Dunlop)",
+      "Oven-Roasted Portobello with Masala (inspired by Madhur Jaffrey)",
+      "Grandi Funghi al Forno con Aglio e Prezzemolo (inspired by Marcella Hazan)",
+      "Oven-Roasted Portobello with Goat Cheese and Tapenade (inspired by Deborah Madison)"
     ],
     "saute": [
-      "Fuchsia Dunlop — Sautéed Portobello with Black Bean Sauce (Chinese tradition)",
-      "Madhur Jaffrey — Portobello Masala Sauté (Indian tradition)",
-      "Julia Child — Sautéed Portobello with Herbs (French tradition)",
-      "Deborah Madison — Sautéed Portobello with Balsamic and Spinach (American vegetarian tradition)"
+      "Sautéed Portobello with Black Bean Sauce (inspired by Fuchsia Dunlop)",
+      "Portobello Masala Sauté (inspired by Madhur Jaffrey)",
+      "Sautéed Portobello with Herbs (inspired by Julia Child)",
+      "Sautéed Portobello with Balsamic and Spinach (inspired by Deborah Madison)"
     ]
   },
   "eggplant": {
     "air_fryer": [
-      "Swasthi Shreekanth — Air Fryer Baingan Bharta (Indian / Punjabi tradition)",
-      "Harumi Kurihara — Nasu no Dengaku — Air Fryer Adaptation (Japanese tradition)",
-      "Maangchi — Gaji Bokkeum — Air Fryer Adaptation (Korean tradition)",
-      "Yotam Ottolenghi — Air Fryer Aubergine Steak with Yoghurt (Middle Eastern / Israeli tradition)"
+      "Air Fryer Baingan Bharta (inspired by Swasthi Shreekanth)",
+      "Nasu no Dengaku — Air Fryer Adaptation (inspired by Harumi Kurihara)",
+      "Gaji Bokkeum — Air Fryer Adaptation (inspired by Maangchi)",
+      "Air Fryer Aubergine Steak with Yoghurt (inspired by Yotam Ottolenghi)"
     ],
     "grill": [
-      "Swasthi Shreekanth — Baingan Bharta (Indian / Punjabi tradition)",
-      "Yotam Ottolenghi — Whole Chargrilled Aubergine (Middle Eastern / Israeli tradition)",
-      "Harumi Kurihara — Nasu no Dengaku (Japanese tradition)",
-      "Francis Mallmann — Berenjena a las Brasas (Argentine / Patagonian tradition)"
+      "Baingan Bharta (inspired by Swasthi Shreekanth)",
+      "Whole Chargrilled Aubergine (inspired by Yotam Ottolenghi)",
+      "Nasu no Dengaku (inspired by Harumi Kurihara)",
+      "Berenjena a las Brasas (inspired by Francis Mallmann)"
     ],
     "oven_roast": [
-      "小麦芽15 — 好吃到连皮都不剩的烤茄子 (Chinese Oven Roasted Eggplant with Garlic-Cumin Sauce)",
-      "Swasthi Shreekanth — Baingan Bharta — Oven Method (Indian / Punjabi tradition)",
-      "Claudia Roden — Patlıcan Kizartması (Turkish / Middle Eastern tradition)",
-      "Marcella Hazan — Melanzane al Forno con Aglio e Prezzemolo (Italian tradition)"
+      "好吃到连皮都不剩的烤茄子 (Chinese Oven Roasted Eggplant with Garlic-Cumin Sauce) (inspired by 小麦芽15)",
+      "Baingan Bharta — Oven Method (inspired by Swasthi Shreekanth)",
+      "Patlıcan Kizartması (inspired by Claudia Roden)",
+      "Melanzane al Forno con Aglio e Prezzemolo (inspired by Marcella Hazan)"
     ],
     "pan_fry": [
-      "Marcella Hazan — Melanzane Saltate (Italian tradition)",
-      "Yotam Ottolenghi — Pan-Fried Aubergine with Buttermilk (Middle Eastern tradition)",
-      "Madhur Jaffrey — Begun Bhaja (Bengali tradition)",
-      "Diana Henry — Pan-Fried Aubergine with Honey & Sesame (Andalusian tradition)"
+      "Melanzane Saltate (inspired by Marcella Hazan)",
+      "Pan-Fried Aubergine with Buttermilk (inspired by Yotam Ottolenghi)",
+      "Begun Bhaja (inspired by Madhur Jaffrey)",
+      "Pan-Fried Aubergine with Honey & Sesame (inspired by Diana Henry)"
     ],
     "saute": [
-      "Fuchsia Dunlop — Yú Xiāng Qiézi (魚香茄子 — Chinese Fish-Fragrant Eggplant)",
-      "Madhur Jaffrey — Masaledar Baingan (Indian / North Indian tradition)",
-      "Diana Henry — Berenjenas con Miel (Spanish / Andalusian tradition)",
-      "Yotam Ottolenghi — Aubergine with Buttermilk Sauce (Middle Eastern / Israeli tradition)"
+      "Yú Xiāng Qiézi (魚香茄子 — Chinese Fish-Fragrant Eggplant) (inspired by Fuchsia Dunlop)",
+      "Masaledar Baingan (inspired by Madhur Jaffrey)",
+      "Berenjenas con Miel (inspired by Diana Henry)",
+      "Aubergine with Buttermilk Sauce (inspired by Yotam Ottolenghi)"
     ]
   },
   "bell_peppers": {
     "air_fryer": [
-      "Maangchi — Gochu Jeon (Air-Fried Stuffed Peppers — Korean tradition)",
-      "Harumi Kurihara — Piiman no Kinpira (Air-Fried Pepper Kinpira — Japanese tradition)",
-      "Madhur Jaffrey — Air-Fried Stuffed Capsicum (Indian tradition)",
-      "Yotam Ottolenghi — Air-Fried Peppers with Tahini (Middle Eastern / Israeli tradition)"
+      "Gochu Jeon (inspired by Maangchi)",
+      "Piiman no Kinpira (inspired by Harumi Kurihara)",
+      "Air-Fried Stuffed Capsicum (inspired by Madhur Jaffrey)",
+      "Air-Fried Peppers with Tahini (inspired by Yotam Ottolenghi)"
     ],
     "grill": [
-      "Claudia Roden — Biber Közleme (Moroccan / Turkish tradition)",
-      "Francis Mallmann — Pimientos a la Parrilla (Argentine / South American tradition)",
-      "Yotam Ottolenghi — Charred Peppers with Walnut Sauce (Middle Eastern / Israeli tradition)",
-      "Marcella Hazan — Peperoni Arrostiti all'Aglio (Italian tradition)"
+      "Biber Közleme (inspired by Claudia Roden)",
+      "Pimientos a la Parrilla (inspired by Francis Mallmann)",
+      "Charred Peppers with Walnut Sauce (inspired by Yotam Ottolenghi)",
+      "Peperoni Arrostiti all'Aglio (inspired by Marcella Hazan)"
     ],
     "oven_roast": [
-      "José Andrés — Pimientos Asados (Spanish / Catalan tradition)",
-      "Yotam Ottolenghi — Roasted Peppers with Feta & Capers (Middle Eastern / Israeli tradition)",
-      "Madhur Jaffrey — Shimla Mirch Masala (Indian / North Indian tradition)",
-      "Diana Kennedy — Chiles / Pimientos Asados (Mexican tradition)"
+      "Pimientos Asados (inspired by José Andrés)",
+      "Roasted Peppers with Feta & Capers (inspired by Yotam Ottolenghi)",
+      "Shimla Mirch Masala (inspired by Madhur Jaffrey)",
+      "Chiles / Pimientos Asados (inspired by Diana Kennedy)"
     ],
     "saute": [
-      "Fuchsia Dunlop — Qīngjiāo Chǎo Ròusī (青椒炒肉丝 — Green Pepper and Pork Stir-Fry, vegetable adaptation)",
-      "Madhur Jaffrey — Shimla Mirch aur Aloo (Indian / North Indian sauté)",
-      "José Andrés — Pisto Manchego (Spanish tradition)",
-      "Julia Child — Ratatouille (French / Provençal tradition)"
+      "Qīngjiāo Chǎo Ròusī (青椒炒肉丝 — Green Pepper and Pork Stir-Fry, vegetable adaptation) (inspired by Fuchsia Dunlop)",
+      "Shimla Mirch aur Aloo (Indian / North Indian sauté) (inspired by Madhur Jaffrey)",
+      "Pisto Manchego (inspired by José Andrés)",
+      "Ratatouille (inspired by Julia Child)"
     ]
   },
   "corn_on_cob": {
     "air_fryer": [
-      "Maangchi — Korean Air-Fried Corn (구운 옥수수 에어프라이어)",
-      "Harumi Kurihara — Air-Fried Yakimorokoshi (Japanese Soy-Glazed Corn)",
-      "Madhur Jaffrey — Air-Fried Bhutta with Masala (Indian tradition)",
-      "José Andrés — Air-Fried Corn with Compound Butter (Spanish / American tradition)"
+      "Korean Air-Fried Corn (구운 옥수수 에어프라이어) (inspired by Maangchi)",
+      "Air-Fried Yakimorokoshi (Japanese Soy-Glazed Corn) (inspired by Harumi Kurihara)",
+      "Air-Fried Bhutta with Masala (inspired by Madhur Jaffrey)",
+      "Air-Fried Corn with Compound Butter (inspired by José Andrés)"
     ],
     "boil": [
-      "Diana Kennedy — Elotes de Mazorca (Mexican tradition)",
-      "Harumi Kurihara — Yudetomorokoshi (茹でとうもろこし — Japanese Boiled Corn with Salt Butter)",
-      "Pailin Chongchitnant — Khao Phot Tom (Thai boiled corn — street food)",
-      "Madhur Jaffrey — Simla Makkai (Indian Boiled Corn with Masala)"
+      "Elotes de Mazorca (inspired by Diana Kennedy)",
+      "Yudetomorokoshi (茹でとうもろこし — Japanese Boiled Corn with Salt Butter) (inspired by Harumi Kurihara)",
+      "Khao Phot Tom (Thai boiled corn — street food) (inspired by Pailin Chongchitnant)",
+      "Simla Makkai (Indian Boiled Corn with Masala) (inspired by Madhur Jaffrey)"
     ],
     "grill": [
-      "Diana Kennedy — Elote Asado con Chile y Crema (Mexican tradition)",
-      "Harumi Kurihara — Yakimorokoshi (焼きとうもろこし — Japanese Soy-Glazed Corn)",
-      "Madhur Jaffrey — Bhutta (Indian Spiced Grilled Corn)",
-      "Maangchi — Guun Oksusu (구운 옥수수 — Korean Grilled Corn)"
+      "Elote Asado con Chile y Crema (inspired by Diana Kennedy)",
+      "Yakimorokoshi (焼きとうもろこし — Japanese Soy-Glazed Corn) (inspired by Harumi Kurihara)",
+      "Bhutta (Indian Spiced Grilled Corn) (inspired by Madhur Jaffrey)",
+      "Guun Oksusu (구운 옥수수 — Korean Grilled Corn) (inspired by Maangchi)"
     ],
     "oven_roast": [
-      "Diana Kennedy — Elotes Asados al Horno (Mexican tradition)",
-      "José Andrés — Maíz Asado con Mantequilla Compuesta (Spanish / American tradition)",
-      "Madhur Jaffrey — Tandoori Style Bhutta al Oven (Indian tradition)",
-      "Magnus Nilsson — Ugnsstekt Majs (Nordic / Swedish tradition)"
+      "Elotes Asados al Horno (inspired by Diana Kennedy)",
+      "Maíz Asado con Mantequilla Compuesta (inspired by José Andrés)",
+      "Tandoori Style Bhutta al Oven (inspired by Madhur Jaffrey)",
+      "Ugnsstekt Majs (inspired by Magnus Nilsson)"
     ],
     "steam": [
-      "Deborah Madison — Steamed Sweet Corn (American vegetarian tradition)",
-      "Diana Kennedy — Elotes al Vapor (Mexican tradition)",
-      "Sarit Packer & Itamar Srulovich — Steamed Corn with Za'atar Butter (Israeli/Levantine tradition)",
-      "Tetsuya Wakuda — Steamed Corn with Yuzu Butter (Japanese-Australian tradition)"
+      "Steamed Sweet Corn (inspired by Deborah Madison)",
+      "Elotes al Vapor (inspired by Diana Kennedy)",
+      "Steamed Corn with Za'atar Butter (inspired by Sarit Packer & Itamar Srulovich)",
+      "Steamed Corn with Yuzu Butter (inspired by Tetsuya Wakuda)"
     ]
   },
   "acorn_squash": {
     "oven_bake": [
-      "Deborah Madison — Baked Acorn Squash with Brown Sugar and Butter (American vegetarian tradition)",
-      "Diana Kennedy — Calabaza Asada con Piloncillo (Mexican tradition)",
-      "Najmieh Batmanglij — Kadu Pokhté (Persian Baked Squash with Walnuts)",
-      "Claudia Roden — Baked Squash with Harissa (North African tradition)"
+      "Baked Acorn Squash with Brown Sugar and Butter (inspired by Deborah Madison)",
+      "Calabaza Asada con Piloncillo (inspired by Diana Kennedy)",
+      "Kadu Pokhté (Persian Baked Squash with Walnuts) (inspired by Najmieh Batmanglij)",
+      "Baked Squash with Harissa (inspired by Claudia Roden)"
     ],
     "oven_roast": [
-      "Yotam Ottolenghi — Roasted Acorn Squash with Za'atar and Pomegranate (Israeli / Middle Eastern tradition)",
-      "Magnus Nilsson — Roasted Squash with Rapeseed Oil (Nordic tradition)",
-      "Madhur Jaffrey — Masala Roasted Squash Wedges (Indian tradition)",
-      "Deborah Madison — Roasted Squash with Walnut-Herb Pesto (American vegetarian tradition)"
+      "Roasted Acorn Squash with Za'atar and Pomegranate (inspired by Yotam Ottolenghi)",
+      "Roasted Squash with Rapeseed Oil (inspired by Magnus Nilsson)",
+      "Masala Roasted Squash Wedges (inspired by Madhur Jaffrey)",
+      "Roasted Squash with Walnut-Herb Pesto (inspired by Deborah Madison)"
     ]
   },
   "butternut_squash": {
     "oven_roast": [
-      "Yotam Ottolenghi — Roasted Butternut with Tahini and Sage (Israeli / Middle Eastern tradition)",
-      "Claudia Roden — Roasted Butternut with Chermoula (Moroccan / North African tradition)",
-      "Madhur Jaffrey — Kaddu ki Sabzi Roast (Indian tradition)",
-      "Marcella Hazan — Zucca al Forno con Salvia (Italian tradition)"
+      "Roasted Butternut with Tahini and Sage (inspired by Yotam Ottolenghi)",
+      "Roasted Butternut with Chermoula (inspired by Claudia Roden)",
+      "Kaddu ki Sabzi Roast (inspired by Madhur Jaffrey)",
+      "Zucca al Forno con Salvia (inspired by Marcella Hazan)"
     ],
     "pressure_cooker": [
-      "Madhur Jaffrey — Pressure-Cooked Kaddu for Dal (Indian tradition)",
-      "Fuchsia Dunlop — Pressure-Cooked Squash Congee (Chinese tradition)",
-      "Claudia Roden — Pressure-Cooked Squash with Ras el Hanout (Moroccan / North African tradition)",
-      "Deborah Madison — Pressure-Cooked Squash Soup Base (American vegetarian tradition)"
+      "Pressure-Cooked Kaddu for Dal (inspired by Madhur Jaffrey)",
+      "Pressure-Cooked Squash Congee (inspired by Fuchsia Dunlop)",
+      "Pressure-Cooked Squash with Ras el Hanout (inspired by Claudia Roden)",
+      "Pressure-Cooked Squash Soup Base (inspired by Deborah Madison)"
     ],
     "steam": [
-      "Madhur Jaffrey — Steamed Butternut with Ginger and Cumin (Indian tradition)",
-      "Fuchsia Dunlop — Steamed Nangua with Doubanjiang Dressing (Chinese Sichuan tradition)",
-      "Harumi Kurihara — Kabocha no Nimono-style Steamed Squash (Japanese tradition)",
-      "Julia Child — Courge à la Vapeur (French tradition)"
+      "Steamed Butternut with Ginger and Cumin (inspired by Madhur Jaffrey)",
+      "Steamed Nangua with Doubanjiang Dressing (inspired by Fuchsia Dunlop)",
+      "Kabocha no Nimono-style Steamed Squash (inspired by Harumi Kurihara)",
+      "Courge à la Vapeur (inspired by Julia Child)"
     ]
   },
   "spaghetti_squash": {
     "oven_bake": [
-      "Deborah Madison — Baked Spaghetti Squash with Brown Butter and Parmesan (American vegetarian tradition)",
-      "Marcella Hazan — Zucca Spaghetti al Forno (Italian tradition)",
-      "Diana Kennedy — Calabaza Espagueti Horneada (Mexican tradition)",
-      "Yotam Ottolenghi — Baked Spaghetti Squash with Tahini and Chilli (Israeli / Middle Eastern tradition)"
+      "Baked Spaghetti Squash with Brown Butter and Parmesan (inspired by Deborah Madison)",
+      "Zucca Spaghetti al Forno (inspired by Marcella Hazan)",
+      "Calabaza Espagueti Horneada (inspired by Diana Kennedy)",
+      "Baked Spaghetti Squash with Tahini and Chilli (inspired by Yotam Ottolenghi)"
     ],
     "oven_roast": [
-      "José Andrés — Espagueti Vegetal Asado (Spanish / American tradition)",
-      "Marcella Hazan — Zucca Spaghetti Arrostita (Italian tradition)",
-      "Yotam Ottolenghi — Roasted Spaghetti Squash with Za'atar Dressing (Israeli tradition)",
-      "Deborah Madison — Roasted Spaghetti Squash with Walnut Sauce (American vegetarian tradition)"
+      "Espagueti Vegetal Asado (inspired by José Andrés)",
+      "Zucca Spaghetti Arrostita (inspired by Marcella Hazan)",
+      "Roasted Spaghetti Squash with Za'atar Dressing (inspired by Yotam Ottolenghi)",
+      "Roasted Spaghetti Squash with Walnut Sauce (inspired by Deborah Madison)"
     ]
   },
   "zucchini": {
     "air_fryer": [
-      "Maangchi (Emily Kim) — Air-Fried Hobak Jeon Style Zucchini (Korean tradition)",
-      "Harumi Kurihara — Zucchini Karaage (Japanese tradition)",
-      "Madhur Jaffrey — Spiced Air-Fried Zucchini Rounds (Indian tradition)",
-      "Yotam Ottolenghi — Air-Fried Zucchini with Lemon Yoghurt (Israeli / Middle Eastern tradition)"
+      "Air-Fried Hobak Jeon Style Zucchini (inspired by Maangchi)",
+      "Zucchini Karaage (inspired by Harumi Kurihara)",
+      "Spiced Air-Fried Zucchini Rounds (inspired by Madhur Jaffrey)",
+      "Air-Fried Zucchini with Lemon Yoghurt (inspired by Yotam Ottolenghi)"
     ],
     "grill": [
-      "Marcella Hazan — Zucchine alla Griglia con Aglio e Prezzemolo (Italian tradition)",
-      "Yotam Ottolenghi — Grilled Zucchini with Herb Yoghurt and Chilli (Israeli / Middle Eastern tradition)",
-      "Madhur Jaffrey — Masala Grilled Courgettes (Indian tradition)",
-      "José Andrés — Calabacín a la Parrilla con Romesco (Spanish tradition)"
+      "Zucchine alla Griglia con Aglio e Prezzemolo (inspired by Marcella Hazan)",
+      "Grilled Zucchini with Herb Yoghurt and Chilli (inspired by Yotam Ottolenghi)",
+      "Masala Grilled Courgettes (inspired by Madhur Jaffrey)",
+      "Calabacín a la Parrilla con Romesco (inspired by José Andrés)"
     ],
     "oven_roast": [
-      "Marcella Hazan — Zucchine al Forno (Italian tradition)",
-      "Yotam Ottolenghi — Roasted Zucchini with Feta and Mint (Israeli / Middle Eastern tradition)",
-      "Julia Child — Courgettes au Four (French tradition)",
-      "Madhur Jaffrey — Roasted Courgettes with Cumin and Coriander (Indian tradition)"
+      "Zucchine al Forno (inspired by Marcella Hazan)",
+      "Roasted Zucchini with Feta and Mint (inspired by Yotam Ottolenghi)",
+      "Courgettes au Four (inspired by Julia Child)",
+      "Roasted Courgettes with Cumin and Coriander (inspired by Madhur Jaffrey)"
     ],
     "saute": [
-      "Fuchsia Dunlop — Stir-Fried Courgette with Black Bean Sauce (Chinese Sichuan tradition)",
-      "Julia Child — Courgettes Sautées au Beurre (French tradition)",
-      "Marcella Hazan — Zucchine Trifolate (Italian tradition)",
-      "Madhur Jaffrey — Turai ki Sabzi (Indian tradition)"
+      "Stir-Fried Courgette with Black Bean Sauce (inspired by Fuchsia Dunlop)",
+      "Courgettes Sautées au Beurre (inspired by Julia Child)",
+      "Zucchine Trifolate (inspired by Marcella Hazan)",
+      "Turai ki Sabzi (inspired by Madhur Jaffrey)"
     ]
   },
   "caramelized_onions": {
     "pan_fry": [
-      "Madhur Jaffrey — Birista / Fried Onions (Indian / South Asian tradition)",
-      "Shizuo Tsuji — Negi no Itame-yaki (Japanese pan-fried spring onions with soy and mirin)",
-      "Francis Mallmann — Cebollas a la Plancha (Argentine / South American tradition)",
-      "Marcella Hazan — Cipolle all'Aceto (Italian pan-fried onions with vinegar)"
+      "Birista / Fried Onions (inspired by Madhur Jaffrey)",
+      "Negi no Itame-yaki (Japanese pan-fried spring onions with soy and mirin) (inspired by Shizuo Tsuji)",
+      "Cebollas a la Plancha (inspired by Francis Mallmann)",
+      "Cipolle all'Aceto (Italian pan-fried onions with vinegar) (inspired by Marcella Hazan)"
     ],
     "saute": [
-      "Julia Child — Oignons Glacés à Brun (French braised-caramelised onions)",
-      "Madhur Jaffrey — Kachumber Pyaz (North Indian slow-cooked onions for gravy base)",
-      "Yotam Ottolenghi — Slow-Cooked Onions with Thyme and Cream (Middle Eastern / Israeli tradition)",
-      "Najmieh Batmanglij — Piyaz Davag (Persian slow-caramelised onions for garnish)"
+      "Oignons Glacés à Brun (French braised-caramelised onions) (inspired by Julia Child)",
+      "Kachumber Pyaz (North Indian slow-cooked onions for gravy base) (inspired by Madhur Jaffrey)",
+      "Slow-Cooked Onions with Thyme and Cream (inspired by Yotam Ottolenghi)",
+      "Piyaz Davag (Persian slow-caramelised onions for garnish) (inspired by Najmieh Batmanglij)"
     ]
   },
   "leeks": {
     "braise": [
-      "Julia Child — Poireaux Braisés au Beurre (French tradition)",
-      "Claudia Roden — Braised Leeks with Tomato and Coriander (Moroccan / North African tradition)",
-      "Deborah Madison — Braised Leeks with Mustard and Cream (American vegetarian tradition)",
-      "Yotam Ottolenghi — Braised Leeks with Saffron and Preserved Lemon (Middle Eastern / Israeli tradition)"
+      "Poireaux Braisés au Beurre (inspired by Julia Child)",
+      "Braised Leeks with Tomato and Coriander (inspired by Claudia Roden)",
+      "Braised Leeks with Mustard and Cream (inspired by Deborah Madison)",
+      "Braised Leeks with Saffron and Preserved Lemon (inspired by Yotam Ottolenghi)"
     ],
     "oven_roast": [
-      "Yotam Ottolenghi — Charred Leeks with Salsa Verde (Middle Eastern / Israeli tradition)",
-      "Magnus Nilsson — Bakad Purjolök (Nordic / Swedish tradition)",
-      "Diana Kennedy — Poro al Horno (Mexican tradition)",
-      "Deborah Madison — Roasted Leeks with Breadcrumbs and Lemon (American vegetarian tradition)"
+      "Charred Leeks with Salsa Verde (inspired by Yotam Ottolenghi)",
+      "Bakad Purjolök (inspired by Magnus Nilsson)",
+      "Poro al Horno (inspired by Diana Kennedy)",
+      "Roasted Leeks with Breadcrumbs and Lemon (inspired by Deborah Madison)"
     ],
     "saute": [
-      "Harumi Kurihara — Negi no Itame (Japanese leek sauté)",
-      "Marcella Hazan — Porri Saltati al Burro (Italian sautéed leeks)",
-      "Madhur Jaffrey — Sautéed Leeks with Cumin and Mustard Seeds (Indian tradition)",
-      "Julia Child — Poireaux à la Crème (French leeks with cream)"
+      "Negi no Itame (Japanese leek sauté) (inspired by Harumi Kurihara)",
+      "Porri Saltati al Burro (Italian sautéed leeks) (inspired by Marcella Hazan)",
+      "Sautéed Leeks with Cumin and Mustard Seeds (inspired by Madhur Jaffrey)",
+      "Poireaux à la Crème (French leeks with cream) (inspired by Julia Child)"
     ]
   },
   "roasted_garlic": {
     "oven_roast": [
-      "José Andrés — Ajo Asado (Spanish tradition)",
-      "Najmieh Batmanglij — Sir-e Biriyan (Persian oven-roasted garlic)",
-      "Deborah Madison — Roasted Garlic Heads with Herbs (American vegetarian tradition)",
-      "Harumi Kurihara — Ninniku no Roast (Japanese tradition)"
+      "Ajo Asado (inspired by José Andrés)",
+      "Sir-e Biriyan (Persian oven-roasted garlic) (inspired by Najmieh Batmanglij)",
+      "Roasted Garlic Heads with Herbs (inspired by Deborah Madison)",
+      "Ninniku no Roast (inspired by Harumi Kurihara)"
     ]
   },
   "roasted_onion": {
     "grill": [
-      "Francis Mallmann — Cebollas Enteras a las Brasas (Argentine / South American tradition)",
-      "Diana Kennedy — Cebollas Cambray Asadas (Mexican tradition)",
-      "Yotam Ottolenghi — Charred Onions with Tahini (Middle Eastern / Israeli tradition)",
-      "Deborah Madison — Grilled Whole Onions with Herb Butter (American vegetarian tradition)"
+      "Cebollas Enteras a las Brasas (inspired by Francis Mallmann)",
+      "Cebollas Cambray Asadas (inspired by Diana Kennedy)",
+      "Charred Onions with Tahini (inspired by Yotam Ottolenghi)",
+      "Grilled Whole Onions with Herb Butter (inspired by Deborah Madison)"
     ],
     "oven_roast": [
-      "Najmieh Batmanglij — Piyaz Kebab (Persian oven-roasted onion)",
-      "José Andrés — Cebollas Enteras al Horno (Spanish tradition)",
-      "Diana Kennedy — Cebollas al Horno (Mexican tradition)",
-      "Hugh Fearnley-Whittingstall — Whole Roasted Onions with Blue Cheese and Walnuts (British tradition)"
+      "Piyaz Kebab (Persian oven-roasted onion) (inspired by Najmieh Batmanglij)",
+      "Cebollas Enteras al Horno (inspired by José Andrés)",
+      "Cebollas al Horno (inspired by Diana Kennedy)",
+      "Whole Roasted Onions with Blue Cheese and Walnuts (inspired by Hugh Fearnley-Whittingstall)"
     ],
     "saute": [
-      "Fuchsia Dunlop — Cōng Bào Ròu (葱爆肉 — Chinese sautéed scallion/onion, veg adaptation)",
-      "Madhur Jaffrey — Tarkari Pyaz (Indian sautéed whole small onions)",
-      "Francis Mallmann — Cebollas Soasadas a la Plancha (Argentine tradition)",
-      "Yotam Ottolenghi — Sautéed Onion Halves with Za'atar (Middle Eastern / Israeli tradition)"
+      "Cōng Bào Ròu (葱爆肉 — Chinese sautéed scallion/onion, veg adaptation) (inspired by Fuchsia Dunlop)",
+      "Tarkari Pyaz (Indian sautéed whole small onions) (inspired by Madhur Jaffrey)",
+      "Cebollas Soasadas a la Plancha (inspired by Francis Mallmann)",
+      "Sautéed Onion Halves with Za'atar (inspired by Yotam Ottolenghi)"
     ]
   },
   "baked_potato": {
     "air_fryer": [
-      "Madhur Jaffrey — Masala Air-Fried Baked Potato (Indian tradition)",
-      "Harumi Kurihara — Japanese Air-Fried Potato with Soy Butter (Japanese tradition)",
-      "Deborah Madison — Classic Air-Fried Baked Potato with Soured Cream (American vegetarian tradition)",
-      "Yotam Ottolenghi — Air-Fried Potato with Za'atar Labneh (Middle Eastern / Israeli tradition)"
+      "Masala Air-Fried Baked Potato (inspired by Madhur Jaffrey)",
+      "Japanese Air-Fried Potato with Soy Butter (inspired by Harumi Kurihara)",
+      "Classic Air-Fried Baked Potato with Soured Cream (inspired by Deborah Madison)",
+      "Air-Fried Potato with Za'atar Labneh (inspired by Yotam Ottolenghi)"
     ],
     "oven_bake": [
-      "Julia Child — Pommes de Terre Rôties au Four (French tradition)",
-      "Madhur Jaffrey — Masala Baked Potato (Indian tradition)",
-      "Nigel Slater — Perfect Baked Potato (British tradition)",
-      "Deborah Madison — Herb-Stuffed Baked Potato (American vegetarian tradition)"
+      "Pommes de Terre Rôties au Four (inspired by Julia Child)",
+      "Masala Baked Potato (inspired by Madhur Jaffrey)",
+      "Perfect Baked Potato (inspired by Nigel Slater)",
+      "Herb-Stuffed Baked Potato (inspired by Deborah Madison)"
     ]
   },
   "roasted_beets": {
     "oven_roast": [
-      "Najmieh Batmanglij — Labu Pokhté (Persian Oven-Roasted Beets with Orange and Walnuts)",
-      "Yotam Ottolenghi — Roasted Beets with Yoghurt and Walnut Dukka (Middle Eastern / Israeli tradition)",
-      "Magnus Nilsson — Ugnsrostade Rödbetor (Nordic / Swedish tradition)",
-      "Deborah Madison — Roasted Beets with Balsamic and Goat Cheese (American vegetarian tradition)"
+      "Labu Pokhté (Persian Oven-Roasted Beets with Orange and Walnuts) (inspired by Najmieh Batmanglij)",
+      "Roasted Beets with Yoghurt and Walnut Dukka (inspired by Yotam Ottolenghi)",
+      "Ugnsrostade Rödbetor (inspired by Magnus Nilsson)",
+      "Roasted Beets with Balsamic and Goat Cheese (inspired by Deborah Madison)"
     ]
   },
   "roasted_carrots": {
     "air_fryer": [
-      "Madhur Jaffrey — Air-Fried Masala Carrots (Indian tradition)",
-      "Claudia Roden — Air-Fried Moroccan Carrots with Chermoula (Moroccan / North African tradition)",
-      "Yotam Ottolenghi — Air-Fried Carrots with Coriander Yoghurt (Israeli / Middle Eastern tradition)",
-      "Harumi Kurihara — Air-Fried Carrots with Sesame Glaze (Japanese tradition)"
+      "Air-Fried Masala Carrots (inspired by Madhur Jaffrey)",
+      "Air-Fried Moroccan Carrots with Chermoula (inspired by Claudia Roden)",
+      "Air-Fried Carrots with Coriander Yoghurt (inspired by Yotam Ottolenghi)",
+      "Air-Fried Carrots with Sesame Glaze (inspired by Harumi Kurihara)"
     ],
     "oven_roast": [
-      "Claudia Roden — Carottes Rôties à la Marocaine (Moroccan tradition)",
-      "Madhur Jaffrey — Gajar Roast (Indian tradition)",
-      "Yotam Ottolenghi — Roasted Carrots with Harissa and Yoghurt (Israeli / Middle Eastern tradition)",
-      "Marcella Hazan — Carote Arrosto con Erbe e Aglio (Italian tradition)"
+      "Carottes Rôties à la Marocaine (inspired by Claudia Roden)",
+      "Gajar Roast (inspired by Madhur Jaffrey)",
+      "Roasted Carrots with Harissa and Yoghurt (inspired by Yotam Ottolenghi)",
+      "Carote Arrosto con Erbe e Aglio (inspired by Marcella Hazan)"
     ],
     "saute": [
-      "Harumi Kurihara — Kimpira Ninjin (きんぴらにんじん — Japanese Glazed Carrot Matchsticks)",
-      "Fuchsia Dunlop — Chǎo Húluóbo Sī (炒胡萝卜丝 — Chinese Stir-Fried Carrot Shreds)",
-      "Madhur Jaffrey — Gajar ki Sabzi (Indian Sautéed Carrots with Mustard Seeds)",
-      "Julia Child — Carottes Glacées (French tradition)"
+      "Kimpira Ninjin (きんぴらにんじん — Japanese Glazed Carrot Matchsticks) (inspired by Harumi Kurihara)",
+      "Chǎo Húluóbo Sī (炒胡萝卜丝 — Chinese Stir-Fried Carrot Shreds) (inspired by Fuchsia Dunlop)",
+      "Gajar ki Sabzi (Indian Sautéed Carrots with Mustard Seeds) (inspired by Madhur Jaffrey)",
+      "Carottes Glacées (inspired by Julia Child)"
     ]
   },
   "roasted_parsnips": {
     "air_fryer": [
-      "Nigel Slater — Air-Fried Honey-Glazed Parsnips (British tradition)",
-      "Magnus Nilsson — Air-Fried Parsnips with Brown Butter (Nordic / Swedish tradition)",
-      "Madhur Jaffrey — Air-Fried Spiced Parsnips (Indian tradition)",
-      "Yotam Ottolenghi — Air-Fried Parsnips with Za'atar and Labneh (Israeli / Middle Eastern tradition)"
+      "Air-Fried Honey-Glazed Parsnips (inspired by Nigel Slater)",
+      "Air-Fried Parsnips with Brown Butter (inspired by Magnus Nilsson)",
+      "Air-Fried Spiced Parsnips (inspired by Madhur Jaffrey)",
+      "Air-Fried Parsnips with Za'atar and Labneh (inspired by Yotam Ottolenghi)"
     ],
     "oven_roast": [
-      "Nigel Slater — Honey-Roasted Parsnips with Mustard (British tradition)",
-      "Magnus Nilsson — Ugnsrostade Palsternackor (Nordic / Swedish tradition)",
-      "Madhur Jaffrey — Masala Roasted Parsnips (Indian tradition)",
-      "Yotam Ottolenghi — Roasted Parsnips with Miso and Sesame (Israeli / East Asian fusion tradition)"
+      "Honey-Roasted Parsnips with Mustard (inspired by Nigel Slater)",
+      "Ugnsrostade Palsternackor (inspired by Magnus Nilsson)",
+      "Masala Roasted Parsnips (inspired by Madhur Jaffrey)",
+      "Roasted Parsnips with Miso and Sesame (inspired by Yotam Ottolenghi)"
     ]
   },
   "roasted_potatoes": {
     "air_fryer": [
-      "Madhur Jaffrey — Air-Fried Aloo Masala (Indian tradition)",
-      "José Andrés — Air-Fried Patatas Bravas (Spanish tradition)",
-      "Fuchsia Dunlop — Air-Fried Szechuan Spiced Potatoes (Chinese tradition)",
-      "Deborah Madison — Air-Fried Herb Potatoes (American vegetarian tradition)"
+      "Air-Fried Aloo Masala (inspired by Madhur Jaffrey)",
+      "Air-Fried Patatas Bravas (inspired by José Andrés)",
+      "Air-Fried Szechuan Spiced Potatoes (inspired by Fuchsia Dunlop)",
+      "Air-Fried Herb Potatoes (inspired by Deborah Madison)"
     ],
     "oven_roast": [
-      "Nigel Slater — Perfect Roast Potatoes (British tradition)",
-      "José Andrés — Patatas Asadas con Romero y Ajo (Spanish tradition)",
-      "Madhur Jaffrey — Batata Masala Roast (Indian tradition)",
-      "Fuchsia Dunlop — Dry-Fried Roast Potatoes with Cumin (Chinese tradition)"
+      "Perfect Roast Potatoes (inspired by Nigel Slater)",
+      "Patatas Asadas con Romero y Ajo (inspired by José Andrés)",
+      "Batata Masala Roast (inspired by Madhur Jaffrey)",
+      "Dry-Fried Roast Potatoes with Cumin (inspired by Fuchsia Dunlop)"
     ]
   },
   "roasted_sweet_potato": {
     "air_fryer": [
-      "Harumi Kurihara — Yakiimo (焼き芋 — Japanese Air-Fried Sweet Potato)",
-      "Maangchi — Goguma (고구마 — Korean Air-Fried Sweet Potato)",
-      "Madhur Jaffrey — Air-Fried Masala Sweet Potato (Indian tradition)",
-      "Yotam Ottolenghi — Air-Fried Sweet Potato with Tahini (Israeli / Middle Eastern tradition)"
+      "Yakiimo (焼き芋 — Japanese Air-Fried Sweet Potato) (inspired by Harumi Kurihara)",
+      "Goguma (고구마 — Korean Air-Fried Sweet Potato) (inspired by Maangchi)",
+      "Air-Fried Masala Sweet Potato (inspired by Madhur Jaffrey)",
+      "Air-Fried Sweet Potato with Tahini (inspired by Yotam Ottolenghi)"
     ],
     "oven_bake": [
-      "Harumi Kurihara — Whole Baked Yakiimo (Japanese tradition)",
-      "Maangchi — Korean Oven Baked Goguma (Korean tradition)",
-      "Diana Kennedy — Camotes al Horno (Mexican tradition)",
-      "Claudia Roden — Batata Mchiya (Moroccan / North African tradition)"
+      "Whole Baked Yakiimo (inspired by Harumi Kurihara)",
+      "Korean Oven Baked Goguma (inspired by Maangchi)",
+      "Camotes al Horno (inspired by Diana Kennedy)",
+      "Batata Mchiya (inspired by Claudia Roden)"
     ],
     "oven_roast": [
-      "Yotam Ottolenghi — Roasted Sweet Potato with Tahini and Za'atar (Israeli / Middle Eastern tradition)",
-      "Claudia Roden — Roasted Sweet Potato with Chermoula (Moroccan / North African tradition)",
-      "Madhur Jaffrey — Shakarkandi ki Sabzi (Indian tradition)",
-      "Magnus Nilsson — Roasted Sweet Potato with Rapeseed Oil and Dill (Nordic tradition)"
+      "Roasted Sweet Potato with Tahini and Za'atar (inspired by Yotam Ottolenghi)",
+      "Roasted Sweet Potato with Chermoula (inspired by Claudia Roden)",
+      "Shakarkandi ki Sabzi (inspired by Madhur Jaffrey)",
+      "Roasted Sweet Potato with Rapeseed Oil and Dill (inspired by Magnus Nilsson)"
     ]
   },
   "tuna_steak": {
     "grill": [
-      "Steven Raichlen — Grilled Yellowfin Tuna Steaks (American tradition)",
-      "Yotam Ottolenghi — Grilled Tuna with Avocado and Wasabi (Israeli-British tradition)",
-      "Marcella Hazan — Tonno alla Griglia (Italian tradition)",
-      "Paula Wolfert — Thon Grillé à la Tunisienne (Tunisian / North African tradition)",
-      "Rick Stein — Swordfish or Tuna Steaks with Gremolata (British Mediterranean tradition)"
+      "Grilled Yellowfin Tuna Steaks (inspired by Steven Raichlen)",
+      "Grilled Tuna with Avocado and Wasabi (inspired by Yotam Ottolenghi)",
+      "Tonno alla Griglia (inspired by Marcella Hazan)",
+      "Thon Grillé à la Tunisienne (inspired by Paula Wolfert)",
+      "Swordfish or Tuna Steaks with Gremolata (inspired by Rick Stein)"
     ],
     "pan_sear": [
-      "Nobu Matsuhisa — Tuna Tataki with Ponzu (Japanese tradition)",
-      "J. Kenji López-Alt — Pan-Seared Ahi Tuna Steaks (American tradition)",
-      "Rick Stein — Charred Tuna with Salsa Rossa (Mediterranean / Italian tradition)",
-      "Paula Wolfert — Thon à la Chermoula (Moroccan tradition)",
-      "Gordon Ramsay — Seared Sesame Tuna with Ginger Dressing (British restaurant tradition)"
+      "Tuna Tataki with Ponzu (inspired by Nobu Matsuhisa)",
+      "Pan-Seared Ahi Tuna Steaks (inspired by J. Kenji López-Alt)",
+      "Charred Tuna with Salsa Rossa (inspired by Rick Stein)",
+      "Thon à la Chermoula (inspired by Paula Wolfert)",
+      "Seared Sesame Tuna with Ginger Dressing (inspired by Gordon Ramsay)"
     ]
   },
   "salmon_fillet": {
     "air_fryer": [
-      "America's Test Kitchen — Air-Fryer Salmon (American tradition)",
-      "Hetty McKinnon — Air-Fryer Teriyaki Salmon (Japanese-Australian tradition)",
-      "Jamie Oliver — Air-Fryer Salmon with Spice Crust (British tradition)",
-      "Nigella Lawson — Sweet Miso-Glazed Air-Fryer Salmon (fusion, British-Japanese tradition)",
-      "Donna Hay — Lemon-Herb Air-Fryer Salmon (Australian tradition)"
+      "Air-Fryer Salmon (inspired by America's Test Kitchen)",
+      "Air-Fryer Teriyaki Salmon (inspired by Hetty McKinnon)",
+      "Air-Fryer Salmon with Spice Crust (inspired by Jamie Oliver)",
+      "Sweet Miso-Glazed Air-Fryer Salmon (inspired by Nigella Lawson)",
+      "Lemon-Herb Air-Fryer Salmon (inspired by Donna Hay)"
     ],
     "grill": [
-      "Steven Raichlen — Plank-Grilled Salmon (American tradition)",
-      "Yotam Ottolenghi — Chargrilled Salmon with Chermoula (North African / Middle Eastern tradition)",
-      "René Redzepi — Grilled Wild Salmon with Burned Leek Ash (Scandinavian / New Nordic tradition)",
-      "Tetsuya Wakuda — Grilled Ocean Trout with Konbu (Japanese-Australian fusion tradition)",
-      "Rick Stein — Grilled Salmon with Salsa Verde (British / Mediterranean tradition)"
+      "Plank-Grilled Salmon (inspired by Steven Raichlen)",
+      "Chargrilled Salmon with Chermoula (inspired by Yotam Ottolenghi)",
+      "Grilled Wild Salmon with Burned Leek Ash (inspired by René Redzepi)",
+      "Grilled Ocean Trout with Konbu (inspired by Tetsuya Wakuda)",
+      "Grilled Salmon with Salsa Verde (inspired by Rick Stein)"
     ],
     "oven_bake": [
-      "America's Test Kitchen — Slow-Roasted Salmon (American tradition)",
-      "Julia Child — Saumon au Four en Papillote (French classical tradition)",
-      "Ottolenghi — Baked Salmon with Preserved Lemon and Za'atar (Middle Eastern tradition)",
-      "Gordon Ramsay — Baked Salmon with Mustard Herb Crust (British restaurant tradition)",
-      "Paula Wolfert — Baked Salmon with Charmoula en Cocotte (Moroccan tradition)"
+      "Slow-Roasted Salmon (inspired by America's Test Kitchen)",
+      "Saumon au Four en Papillote (inspired by Julia Child)",
+      "Baked Salmon with Preserved Lemon and Za'atar (inspired by Ottolenghi)",
+      "Baked Salmon with Mustard Herb Crust (inspired by Gordon Ramsay)",
+      "Baked Salmon with Charmoula en Cocotte (inspired by Paula Wolfert)"
     ],
     "pan_sear": [
-      "J. Kenji López-Alt — Crispy-Skin Pan-Seared Salmon (American tradition)",
-      "Michel Roux Jr. — Saumon Poêlé au Beurre Blanc (French classical tradition)",
-      "Nobu Matsuhisa — Pan-Seared Salmon with Miso Marinade (Japanese tradition)",
-      "Heston Blumenthal — Seared Salmon with Rendered Skin (Modernist British tradition)",
-      "Neil Perry — Pan-Fried Salmon with Herbs (Australian tradition)"
+      "Crispy-Skin Pan-Seared Salmon (inspired by J. Kenji López-Alt)",
+      "Saumon Poêlé au Beurre Blanc (inspired by Michel Roux Jr.)",
+      "Pan-Seared Salmon with Miso Marinade (inspired by Nobu Matsuhisa)",
+      "Seared Salmon with Rendered Skin (inspired by Heston Blumenthal)",
+      "Pan-Fried Salmon with Herbs (inspired by Neil Perry)"
     ],
     "sous_vide": [
-      "J. Kenji López-Alt — Sous Vide Salmon (American tradition)",
-      "Thomas Keller — Sous Vide Wild King Salmon with Beurre Rouge (French haute cuisine tradition)",
-      "Heston Blumenthal — Low-Temperature Salmon (British Modernist tradition)",
-      "Joël Robuchon — Saumon mi-cuit sous vide (French gastronomic tradition)",
-      "Donna Hay — Sous Vide Salmon with Lemon and Capers (Australian tradition)"
+      "Sous Vide Salmon (inspired by J. Kenji López-Alt)",
+      "Sous Vide Wild King Salmon with Beurre Rouge (inspired by Thomas Keller)",
+      "Low-Temperature Salmon (inspired by Heston Blumenthal)",
+      "Saumon mi-cuit sous vide (inspired by Joël Robuchon)",
+      "Sous Vide Salmon with Lemon and Capers (inspired by Donna Hay)"
     ]
   },
   "salmon_steak": {
     "oven_bake": [
-      "CuisineAZ — Darne de saumon en papillote facile (French / Culinary Group B tradition)",
-      "CuisineAZ — Darne de saumon citronnée au four de grand-mère (French / Culinary Group B tradition)",
-      "Tasteline — Laxkotletter med grönsaker (Swedish / Culinary Group D tradition)",
-      "Matklubben — Ugnsbakad laxkotlett med gorgonzola (Swedish / Culinary Group D tradition)"
+      "Darne de saumon en papillote facile (inspired by CuisineAZ)",
+      "Darne de saumon citronnée au four de grand-mère (inspired by CuisineAZ)",
+      "Laxkotletter med grönsaker (inspired by Tasteline)",
+      "Ugnsbakad laxkotlett med gorgonzola (inspired by Matklubben)"
     ],
     "pan_sear": [
-      "ICA Provkök — Laxkotlett med dill- och kaprissås (Swedish / Culinary Group D tradition)",
-      "ICA Provkök — Laxkotlett med limesmör (Swedish / Culinary Group D tradition)",
-      "750g — Darne de saumon grillée (French / Culinary Group B tradition)",
-      "Jamie Oliver — Crispy Fried Salmon with Spring Vegetable Broth (British / Culinary Group B tradition)"
+      "Laxkotlett med dill- och kaprissås (inspired by ICA Provkök)",
+      "Laxkotlett med limesmör (inspired by ICA Provkök)",
+      "Darne de saumon grillée (inspired by 750g)",
+      "Crispy Fried Salmon with Spring Vegetable Broth (inspired by Jamie Oliver)"
     ]
   },
   "langoustine": {
     "grill": [
-      "Good Food Team — Griddled Langoustines with Hazelnut Butter (British/Scottish tradition)",
-      "Lisa Lemke — Grillade Havskräftor med Vitlöks- och Citronsmör (Swedish tradition)",
-      "Karen Seneca — Grillede Jomfruhummere (Danish tradition)",
-      "Chef Simon — Langoustines et Gambas Grillées (French tradition — grilling technique)",
-      "Kaderick — Brochettes de Langoustines à la Plancha et Beurre d'Herbes (French tradition — plancha)",
-      "Irish Food Hub — Dublin Bay Prawns with Garlic Butter (Irish tradition)"
+      "Griddled Langoustines with Hazelnut Butter (inspired by Good Food Team)",
+      "Grillade Havskräftor med Vitlöks- och Citronsmör (inspired by Lisa Lemke)",
+      "Grillede Jomfruhummere (inspired by Karen Seneca)",
+      "Langoustines et Gambas Grillées (inspired by Chef Simon)",
+      "Brochettes de Langoustines à la Plancha et Beurre d'Herbes (inspired by Kaderick)",
+      "Dublin Bay Prawns with Garlic Butter (inspired by Irish Food Hub)"
     ]
   },
   "lobster_tail": {
     "grill": [
-      "Steven Raichlen — Grilled Butterflied Lobster Tail with Herb Butter (American tradition)",
-      "Gordon Ramsay — Grilled Lobster Tail with Garlic Butter (British restaurant tradition)",
-      "Joël Robuchon — Homard Grillé au Beurre Blanc (French haute cuisine tradition)",
-      "Nobu Matsuhisa — Grilled Spiny Lobster Tail with Yuzu Miso (Japanese tradition)",
-      "Jock Zonfrillo — Grilled Rock Lobster with Warrigal Greens Butter (Australian tradition)"
+      "Grilled Butterflied Lobster Tail with Herb Butter (inspired by Steven Raichlen)",
+      "Grilled Lobster Tail with Garlic Butter (inspired by Gordon Ramsay)",
+      "Homard Grillé au Beurre Blanc (inspired by Joël Robuchon)",
+      "Grilled Spiny Lobster Tail with Yuzu Miso (inspired by Nobu Matsuhisa)",
+      "Grilled Rock Lobster with Warrigal Greens Butter (inspired by Jock Zonfrillo)"
     ],
     "oven_roast": [
-      "Thomas Keller — Oven-Roasted Lobster Tails with Beurre Monté (American haute cuisine)",
-      "Tina Nordström — Ugnsbakade Hummerstjärtar med Dillsmör (Swedish/Nordic tradition)",
-      "Rick Stein — Oven-Roasted Lobster Tails with Garlic & Parsley (British seafood tradition)",
-      "Eric Ripert — Roasted Lobster Tails with Vanilla Beurre Blanc (French haute cuisine)"
+      "Oven-Roasted Lobster Tails with Beurre Monté (American haute cuisine) (inspired by Thomas Keller)",
+      "Ugnsbakade Hummerstjärtar med Dillsmör (inspired by Tina Nordström)",
+      "Oven-Roasted Lobster Tails with Garlic & Parsley (inspired by Rick Stein)",
+      "Roasted Lobster Tails with Vanilla Beurre Blanc (French haute cuisine) (inspired by Eric Ripert)"
     ]
   },
   "scallops": {
     "pan_sear": [
-      "J. Kenji López-Alt — Pan-Seared Scallops with Brown Butter (American tradition)",
-      "Thomas Keller — Seared Diver Scallops with Cauliflower Purée (French haute cuisine tradition)",
-      "Heston Blumenthal — Seared Scallops with Caramelised Cauliflower (British Modernist tradition)",
-      "Nobu Matsuhisa — Seared Scallops with Wasabi Salsa (Japanese tradition)",
-      "Rick Stein — Hand-Dived Scallops with Bacon and Black Pudding (British seafood tradition)"
+      "Pan-Seared Scallops with Brown Butter (inspired by J. Kenji López-Alt)",
+      "Seared Diver Scallops with Cauliflower Purée (inspired by Thomas Keller)",
+      "Seared Scallops with Caramelised Cauliflower (inspired by Heston Blumenthal)",
+      "Seared Scallops with Wasabi Salsa (inspired by Nobu Matsuhisa)",
+      "Hand-Dived Scallops with Bacon and Black Pudding (inspired by Rick Stein)"
     ]
   },
   "shrimp": {
     "pan_fry": [
-      "Julia Child — Sautéed Shrimp in Garlic Butter (French classical tradition)",
-      "Nobu Matsuhisa — Spicy Garlic Sautéed Shrimp (Japanese tradition)",
-      "Yotam Ottolenghi — Prawns with Harissa and Preserved Lemon (Middle Eastern / North African tradition)",
-      "Rick Stein — Pan-Fried King Prawns with Ginger and Spring Onion (Cantonese / Chinese tradition)",
-      "Donna Hay — Chilli and Lime Sautéed Prawns (Australian tradition)"
+      "Sautéed Shrimp in Garlic Butter (inspired by Julia Child)",
+      "Spicy Garlic Sautéed Shrimp (inspired by Nobu Matsuhisa)",
+      "Prawns with Harissa and Preserved Lemon (inspired by Yotam Ottolenghi)",
+      "Pan-Fried King Prawns with Ginger and Spring Onion (inspired by Rick Stein)",
+      "Chilli and Lime Sautéed Prawns (inspired by Donna Hay)"
     ]
   },
   "cod_fillet": {
     "air_fryer": [
-      "America's Test Kitchen — Air-Fryer Cod (American tradition)",
-      "Jamie Oliver — Air-Fryer Fish Fingers (British tradition)",
-      "Donna Hay — Lemon-Herb Air-Fryer Cod (Australian tradition)",
-      "Ottolenghi — Spiced Air-Fryer Cod with Tahini (Middle Eastern tradition)",
-      "Marcus Samuelsson — Air-Fryer Berbere-Spiced Cod (Ethiopian-American tradition)"
+      "Air-Fryer Cod (inspired by America's Test Kitchen)",
+      "Air-Fryer Fish Fingers (inspired by Jamie Oliver)",
+      "Lemon-Herb Air-Fryer Cod (inspired by Donna Hay)",
+      "Spiced Air-Fryer Cod with Tahini (inspired by Ottolenghi)",
+      "Air-Fryer Berbere-Spiced Cod (inspired by Marcus Samuelsson)"
     ],
     "oven_bake": [
-      "America's Test Kitchen — Baked Cod with Crispy Panko Crust (American tradition)",
-      "Rick Stein — Bacalhau à Gomes de Sá (Portuguese tradition)",
-      "Yotam Ottolenghi — Baked Cod with Tahini and Sumac (Middle Eastern tradition)",
-      "Marcella Hazan — Merluzzo al Forno con Pomodoro (Italian tradition)",
-      "Donna Hay — Lemon-Herb Baked Cod (Australian tradition)"
+      "Baked Cod with Crispy Panko Crust (inspired by America's Test Kitchen)",
+      "Bacalhau à Gomes de Sá (inspired by Rick Stein)",
+      "Baked Cod with Tahini and Sumac (inspired by Yotam Ottolenghi)",
+      "Merluzzo al Forno con Pomodoro (inspired by Marcella Hazan)",
+      "Lemon-Herb Baked Cod (inspired by Donna Hay)"
     ],
     "pan_fry": [
-      "Heston Blumenthal — Fish and Chips at Home (British tradition)",
-      "Julia Child — Filets de Poisson Sautés au Beurre (French classical tradition)",
-      "Rick Stein — Pan-Fried Cod with Lemon and Capers (British seafood tradition)",
-      "Tetsuya Wakuda — Pan-Fried Blue Cod with Yuzu Butter (Japanese-Australian tradition)",
-      "Jacques Pépin — Sole Meunière (French classical tradition, applied to cod)"
+      "Fish and Chips at Home (inspired by Heston Blumenthal)",
+      "Filets de Poisson Sautés au Beurre (inspired by Julia Child)",
+      "Pan-Fried Cod with Lemon and Capers (inspired by Rick Stein)",
+      "Pan-Fried Blue Cod with Yuzu Butter (inspired by Tetsuya Wakuda)",
+      "Sole Meunière (inspired by Jacques Pépin)"
     ]
   },
   "haddock": {
     "pan_fry": [
-      "BBC Good Food — Zesty Haddock with Crushed Potatoes & Peas (British tradition)",
-      "Matprat.no — Hyse med Byggrisotto / Haddock with Barley Risotto (Norwegian tradition)",
-      "Chefkoch.de / Pelikan — Schellfisch in Senfsauce / Haddock in Mustard Sauce (German tradition)",
-      "Suzy Karadsheh (The Mediterranean Dish) — Mediterranean Lemon-Garlic Haddock with Artichoke Hearts (Egyptian-American / Mediterranean tradition)"
+      "Zesty Haddock with Crushed Potatoes & Peas (inspired by BBC Good Food)",
+      "Hyse med Byggrisotto / Haddock with Barley Risotto (inspired by Matprat.no)",
+      "Schellfisch in Senfsauce / Haddock in Mustard Sauce (inspired by Chefkoch.de / Pelikan)",
+      "Mediterranean Lemon-Garlic Haddock with Artichoke Hearts (inspired by Suzy Karadsheh)"
     ]
   },
   "hake": {
     "pan_fry": [
-      "José Andrés — Merluza a la Plancha (Spanish / Basque tradition)",
-      "Rick Stein — Pan-Fried Hake with Salsa Verde (British / Spanish tradition)",
-      "Paula Wolfert — Pescada Frita (Portuguese tradition)",
-      "Marcella Hazan — Merluzzo Fritto (Italian tradition)",
-      "Donna Hay — Pan-Fried Hake with Salsa Verde (Australian / European tradition)"
+      "Merluza a la Plancha (inspired by José Andrés)",
+      "Pan-Fried Hake with Salsa Verde (inspired by Rick Stein)",
+      "Pescada Frita (inspired by Paula Wolfert)",
+      "Merluzzo Fritto (inspired by Marcella Hazan)",
+      "Pan-Fried Hake with Salsa Verde (inspired by Donna Hay)"
     ]
   },
   "halibut_fillet": {
     "pan_sear": [
-      "Thomas Keller — Pan-Roasted Halibut with Chanterelles (American / French haute cuisine tradition)",
-      "Gordon Ramsay — Pan-Seared Halibut with Sauce Vierge (British-French restaurant tradition)",
-      "Nobu Matsuhisa — Pan-Seared Halibut with Pepper Sauce (Japanese-Peruvian fusion tradition)",
-      "Rick Stein — Pan-Fried Halibut with Brown Butter (Scandinavian / British tradition)",
-      "Feran Adrià — Pan-Seared Halibut with Olive Oil and Sea Salt (Spanish / Catalan tradition)"
+      "Pan-Roasted Halibut with Chanterelles (inspired by Thomas Keller)",
+      "Pan-Seared Halibut with Sauce Vierge (inspired by Gordon Ramsay)",
+      "Pan-Seared Halibut with Pepper Sauce (inspired by Nobu Matsuhisa)",
+      "Pan-Fried Halibut with Brown Butter (inspired by Rick Stein)",
+      "Pan-Seared Halibut with Olive Oil and Sea Salt (inspired by Feran Adrià)"
     ]
   },
   "mahi_mahi": {
     "pan_sear": [
-      "Emeril Lagasse — Blackened Mahi-Mahi (American / Louisiana Creole tradition)",
-      "Rick Stein — Pan-Fried Mahi-Mahi with Mango Salsa (Caribbean tradition)",
-      "Nobu Matsuhisa — Pan-Seared Mahi-Mahi with Dried Miso (Japanese-Hawaiian tradition)",
-      "Yotam Ottolenghi — Pan-Fried Mahi-Mahi with Preserved Lemon (Middle Eastern tradition)",
-      "Donna Hay — Seared Mahi-Mahi with Lime Butter (Australian tradition)"
+      "Blackened Mahi-Mahi (inspired by Emeril Lagasse)",
+      "Pan-Fried Mahi-Mahi with Mango Salsa (inspired by Rick Stein)",
+      "Pan-Seared Mahi-Mahi with Dried Miso (inspired by Nobu Matsuhisa)",
+      "Pan-Fried Mahi-Mahi with Preserved Lemon (inspired by Yotam Ottolenghi)",
+      "Seared Mahi-Mahi with Lime Butter (inspired by Donna Hay)"
     ]
   },
   "sea_bass": {
     "pan_sear": [
-      "BBC Good Food — Pan-Fried Sea Bass with Ratatouille & Basil (French / British tradition)",
-      "BBC Good Food — Sea Bass with Sizzled Ginger, Chilli & Spring Onions (Chinese tradition)",
-      "BBC Good Food — Pan-Fried Sea Bass with Citrus-Dressed Broccoli (Mediterranean tradition)",
-      "Giallozafferano — Branzino in Padella con Zucchine al Salto e Salmoriglio (Italian tradition)",
-      "Nefis Yemek Tarifleri — Tavada Fileto Levrek / Pan-Fried Sea Bass Fillet (Turkish tradition)",
-      "Nagi Maehashi (RecipeTin Eats) — Crispy Pan-Fried Fish (Australian tradition)"
+      "Pan-Fried Sea Bass with Ratatouille & Basil (inspired by BBC Good Food)",
+      "Sea Bass with Sizzled Ginger, Chilli & Spring Onions (inspired by BBC Good Food)",
+      "Pan-Fried Sea Bass with Citrus-Dressed Broccoli (inspired by BBC Good Food)",
+      "Branzino in Padella con Zucchine al Salto e Salmoriglio (inspired by Giallozafferano)",
+      "Tavada Fileto Levrek / Pan-Fried Sea Bass Fillet (inspired by Nefis Yemek Tarifleri)",
+      "Crispy Pan-Fried Fish (inspired by Nagi Maehashi)"
     ]
   },
   "swordfish": {
     "pan_sear": [
-      "BBC Good Food — Griddled Swordfish with Pineapple & Chilli Salsa (British/Tropical fusion tradition)",
-      "BBC Good Food — Seared Swordfish with Mango Salsa (British/Caribbean tradition)",
-      "Giallozafferano — Pesce Spada in Padella con Capperi e Olive / Pan-Seared Swordfish with Capers and Olives (Italian/Sicilian tradition)"
+      "Griddled Swordfish with Pineapple & Chilli Salsa (inspired by BBC Good Food)",
+      "Seared Swordfish with Mango Salsa (inspired by BBC Good Food)",
+      "Pesce Spada in Padella con Capperi e Olive / Pan-Seared Swordfish with Capers and Olives (inspired by Giallozafferano)"
     ]
   },
   "trout": {
     "pan_sear": [
-      "BBC Good Food — Pan-Fried Trout with Bacon, Almonds & Beetroot (British tradition)",
-      "Matprat.no — Pannestekt ørret med dillpoteter og squash / Pan-Fried Trout with Dill Potatoes (Norwegian tradition)",
-      "Chefkoch.de / acigrand — Forelle gebraten / Fried Whole Trout (German tradition)",
-      "Giallozafferano — Trota Salmonata in Padella con Pomodorini e Olive (Italian tradition)",
-      "Suzy Karadsheh (The Mediterranean Dish) — Mediterranean Pan-Seared Trout with Tzatziki (Mediterranean / Egyptian-American tradition)"
+      "Pan-Fried Trout with Bacon, Almonds & Beetroot (inspired by BBC Good Food)",
+      "Pannestekt ørret med dillpoteter og squash / Pan-Fried Trout with Dill Potatoes (inspired by Matprat.no)",
+      "Forelle gebraten / Fried Whole Trout (inspired by Chefkoch.de / acigrand)",
+      "Trota Salmonata in Padella con Pomodorini e Olive (inspired by Giallozafferano)",
+      "Mediterranean Pan-Seared Trout with Tzatziki (inspired by Suzy Karadsheh)"
     ]
   },
   "ground_lamb": {
     "pan_fry": [
-      "Nefisyemektarifleri.com — Kıymalı Patates (Turkish lamb mince with potato)",
-      "IndianHealthyRecipes.com — Keema (Indian spiced minced lamb)",
-      "BBC Good Food — Lamb Mince Moussaka (Greek/British tradition, ground lamb pan-fry phase)"
+      "Kıymalı Patates (Turkish lamb mince with potato) (inspired by Nefisyemektarifleri.com)",
+      "Keema (Indian spiced minced lamb) (inspired by IndianHealthyRecipes.com)",
+      "Lamb Mince Moussaka (inspired by BBC Good Food)"
     ]
   },
   "lamb_burger": {
     "grill": [
-      "BBC Good Food — Lamb Burgers with Harissa (British/North African tradition)",
-      "Africanbites.com — North African Lamb Burger (Moroccan tradition)",
-      "RecipeTinEats.com — Greek Lamb Burgers (Australian/Greek tradition)"
+      "Lamb Burgers with Harissa (inspired by BBC Good Food)",
+      "North African Lamb Burger (inspired by Africanbites.com)",
+      "Greek Lamb Burgers (inspired by RecipeTinEats.com)"
     ]
   },
   "lamb_kofta": {
     "grill": [
-      "TurkishFoodTravel.com — Authentic Turkish Köfte (Turkish tradition)",
-      "Nefisyemektarifleri.com — Adana Kebabı (Turkish kofta on skewer)",
-      "IndianHealthyRecipes.com — Seekh Kebab (Indian spiced lamb skewer, barbecue tradition)"
+      "Authentic Turkish Köfte (inspired by TurkishFoodTravel.com)",
+      "Adana Kebabı (Turkish kofta on skewer) (inspired by Nefisyemektarifleri.com)",
+      "Seekh Kebab (inspired by IndianHealthyRecipes.com)"
     ]
   },
   "lamb_brisket": {
     "braise": [
-      "The Woks of Life / Cantonese — Zhi Zhu Yangrou Bao (枝竹羊肉煲) — Chinese Braised Lamb Casserole Hong Kong Style",
-      "Alan Bergo / Forager Chef — Braised Goat or Lamb Breast (French-style press method)",
-      "Selin Kiazim / Great British Chefs — Crispy Pomegranate-Glazed Lamb Breast",
-      "ICA — Bräserad lammbringa med vitlök, rosmarin och citron (Swedish Braised Lamb Breast with Garlic, Rosemary and Lemon)"
+      "Zhi Zhu Yangrou Bao (枝竹羊肉煲) — Chinese Braised Lamb Casserole Hong Kong Style (inspired by The Woks of Life / Cantonese)",
+      "Braised Goat or Lamb Breast (French-style press method) (inspired by Alan Bergo / Forager Chef)",
+      "Crispy Pomegranate-Glazed Lamb Breast (inspired by Selin Kiazim / Great British Chefs)",
+      "Bräserad lammbringa med vitlök, rosmarin och citron (Swedish Braised Lamb Breast with Garlic, Rosemary and Lemon) (inspired by ICA)"
     ]
   },
   "lamb_loin_roast": {
     "oven_roast": [
-      "Paul Heathcote / Great British Chefs — Best-end of Lamb 'Provençale herbs'",
-      "Gourmet Traveller (Emma Knowles & Vanessa Austin) — Roast Rolled Lamb Loin with Anchovies and Rosemary",
-      "ICA — Lammstek med rosmarin (Rosemary Lamb Roast)"
+      "Best-end of Lamb 'Provençale herbs' (inspired by Paul Heathcote / Great British Chefs)",
+      "Roast Rolled Lamb Loin with Anchovies and Rosemary (inspired by Gourmet Traveller)",
+      "Lammstek med rosmarin (Rosemary Lamb Roast) (inspired by ICA)"
     ]
   },
   "lamb_neck": {
     "braise": [
-      "Nefis Yemek Tarifleri — Fırında Kuzu Gerdan (Turkish tradition)",
-      "Blog GialloZafferano — Collo di agnello stufato nel coccio (Italian tradition)",
-      "Chefkoch.de — Geschmorter Lammhals (German tradition)",
-      "Madensverden.dk — Lammeskank i rødvin (neck adaptation) (Danish tradition)"
+      "Fırında Kuzu Gerdan (inspired by Nefis Yemek Tarifleri)",
+      "Collo di agnello stufato nel coccio (inspired by Blog GialloZafferano)",
+      "Geschmorter Lammhals (inspired by Chefkoch.de)",
+      "Lammeskank i rødvin (neck adaptation) (inspired by Madensverden.dk)"
     ],
     "oven_roast": [
-      "Nefis Yemek Tarifleri — Fırında Kuzu Gerdan (Turkish tradition)",
-      "Argiro.gr — Αρνάκι στο ταψί με λαχανικά και βότανα (Greek tradition)",
-      "Blog GialloZafferano — Collo di agnello stufato nel coccio (Italian tradition)",
-      "Chefkoch.de — Geschmorter Lammhals (German tradition)"
+      "Fırında Kuzu Gerdan (inspired by Nefis Yemek Tarifleri)",
+      "Αρνάκι στο ταψί με λαχανικά και βότανα (inspired by Argiro.gr)",
+      "Collo di agnello stufato nel coccio (inspired by Blog GialloZafferano)",
+      "Geschmorter Lammhals (inspired by Chefkoch.de)"
     ],
     "slow_cooker": [
-      "Nefis Yemek Tarifleri — Fırında Kuzu Gerdan (slow cooker adaptation) (Turkish tradition)",
-      "Chefkoch.de — Lammhaxen aus dem Slowcooker (neck adaptation) (German tradition)",
-      "Blog GialloZafferano — Collo di agnello stufato nel coccio (slow cooker adaptation) (Italian tradition)",
-      "Argiro.gr — Αρνάκι στο ταψί (slow cooker adaptation) (Greek tradition)"
+      "Fırında Kuzu Gerdan (slow cooker adaptation) (inspired by Nefis Yemek Tarifleri)",
+      "Lammhaxen aus dem Slowcooker (neck adaptation) (inspired by Chefkoch.de)",
+      "Collo di agnello stufato nel coccio (slow cooker adaptation) (inspired by Blog GialloZafferano)",
+      "Αρνάκι στο ταψί (slow cooker adaptation) (inspired by Argiro.gr)"
     ]
   },
   "lamb_rib": {
     "oven_roast": [
-      "Dominic Chapman — Roast Rack of Lamb with Anchovy Butter (British tradition, Culinary Group B)",
-      "The Mediterranean Dish — Spiced Lamb Ribs with Pomegranate-Rosemary Glaze (Levant tradition, Culinary Group C)"
+      "Roast Rack of Lamb with Anchovy Butter (inspired by Dominic Chapman)",
+      "Spiced Lamb Ribs with Pomegranate-Rosemary Glaze (inspired by The Mediterranean Dish)"
     ]
   },
   "lamb_rump": {
     "oven_roast": [
-      "Richard Corrigan — Lamb Rump with Salsify and Wild Mushrooms (British/Irish tradition, Culinary Group B)",
-      "Tom Kitchin — Rump of Lamb with Baby Gem Lettuce (Scottish tradition, Culinary Group B)",
-      "Pierre Koffmann — Herb-Crusted Lamb Rump (French classic tradition, Culinary Group B)"
+      "Lamb Rump with Salsify and Wild Mushrooms (inspired by Richard Corrigan)",
+      "Rump of Lamb with Baby Gem Lettuce (inspired by Tom Kitchin)",
+      "Herb-Crusted Lamb Rump (inspired by Pierre Koffmann)"
     ]
   },
   "lamb_shank": {
     "braise": [
-      "The Mediterranean Dish — Red Wine Braised Lamb Shanks (Mediterranean tradition)",
-      "BBC Good Food — Braised Lamb Shanks (British tradition)",
-      "Madensverden.dk — Lammeskank i rødvin, langtidsstegt (Danish tradition)",
-      "The Mediterranean Dish — Persian Braised Lamb Shanks (Mahiche) (Iranian tradition)"
+      "Red Wine Braised Lamb Shanks (inspired by The Mediterranean Dish)",
+      "Braised Lamb Shanks (inspired by BBC Good Food)",
+      "Lammeskank i rødvin, langtidsstegt (inspired by Madensverden.dk)",
+      "Persian Braised Lamb Shanks (Mahiche) (inspired by The Mediterranean Dish)"
     ],
     "oven_roast": [
-      "Nefis Yemek Tarifleri — Fırında Kuzu İncik (Turkish tradition)",
-      "Argiro.gr — Αρνίσιο Κότσι στη Γάστρα (Greek tradition)",
-      "Giallo Zafferano — Agnello al forno con patate (Italian tradition)",
-      "Madensverden.dk — Lammeskank i rødvin (oven version) (Danish tradition)"
+      "Fırında Kuzu İncik (inspired by Nefis Yemek Tarifleri)",
+      "Αρνίσιο Κότσι στη Γάστρα (inspired by Argiro.gr)",
+      "Agnello al forno con patate (inspired by Giallo Zafferano)",
+      "Lammeskank i rødvin (oven version) (inspired by Madensverden.dk)"
     ],
     "slow_cooker": [
-      "Nefis Yemek Tarifleri — Düdüklü Tencerede Kuzu İncik (Turkish tradition)",
-      "Chefkoch.de — Lammhaxen aus dem Slowcooker (German tradition)",
-      "Argiro.gr — Αρνάκι στο ταψί με λαχανικά και βότανα (slow cooker adaptation) (Greek tradition)",
-      "Giallo Zafferano — Agnello al forno con patate (slow cooker adaptation) (Italian tradition)",
-      "Madensverden.dk — Lammeskank i rødvin, langtidsstegt (slow cooker adaptation) (Danish tradition)"
+      "Düdüklü Tencerede Kuzu İncik (inspired by Nefis Yemek Tarifleri)",
+      "Lammhaxen aus dem Slowcooker (inspired by Chefkoch.de)",
+      "Αρνάκι στο ταψί με λαχανικά και βότανα (slow cooker adaptation) (inspired by Argiro.gr)",
+      "Agnello al forno con patate (slow cooker adaptation) (inspired by Giallo Zafferano)",
+      "Lammeskank i rødvin, langtidsstegt (slow cooker adaptation) (inspired by Madensverden.dk)"
     ]
   },
   "lamb_shoulder": {
     "oven_roast": [
-      "BBC Good Food — Slow-Roasted Shoulder of Lamb (British tradition)",
-      "RecipeTinEats.com — Slow Roasted Lamb Shoulder (Australian tradition)",
-      "Nefisyemektarifleri.com — Fırında Kuzu Kol (Turkish slow-roasted lamb shoulder)"
+      "Slow-Roasted Shoulder of Lamb (inspired by BBC Good Food)",
+      "Slow Roasted Lamb Shoulder (inspired by RecipeTinEats.com)",
+      "Fırında Kuzu Kol (Turkish slow-roasted lamb shoulder) (inspired by Nefisyemektarifleri.com)"
     ]
   },
   "leg_of_lamb": {
     "grill": [
-      "RecipeTinEats.com — Butterflied Leg of Lamb on the BBQ (Australian tradition)",
-      "Africanbites.com — African-spiced Butterflied Leg of Lamb, Grilled (South African/West African tradition)",
-      "Nefisyemektarifleri.com — Fırında Kuzu But (Turkish grilled/oven leg of lamb)"
+      "Butterflied Leg of Lamb on the BBQ (inspired by RecipeTinEats.com)",
+      "African-spiced Butterflied Leg of Lamb, Grilled (inspired by Africanbites.com)",
+      "Fırında Kuzu But (Turkish grilled/oven leg of lamb) (inspired by Nefisyemektarifleri.com)"
     ],
     "oven_roast": [
-      "The Mediterranean Dish — Mediterranean Leg of Lamb with Potatoes (Mediterranean/American tradition)",
-      "Madensverden.dk — Lammekølle i ovnen (Danish oven-roasted leg of lamb)",
-      "Matprat.no — Lammestek i ovn (Norwegian Easter leg of lamb)",
-      "The Mediterranean Dish — Perfect Roasted Leg of Lamb with Potatoes (Mediterranean / Egyptian tradition)"
+      "Mediterranean Leg of Lamb with Potatoes (inspired by The Mediterranean Dish)",
+      "Lammekølle i ovnen (Danish oven-roasted leg of lamb) (inspired by Madensverden.dk)",
+      "Lammestek i ovn (Norwegian Easter leg of lamb) (inspired by Matprat.no)",
+      "Perfect Roasted Leg of Lamb with Potatoes (inspired by The Mediterranean Dish)"
     ]
   },
   "rack_of_lamb": {
     "oven_roast": [
-      "BBC Good Food — Herb-Crusted Rack of Lamb (British/French tradition)",
-      "Great British Chefs — Classic Rack of Lamb with Red Wine Sauce (British/French tradition)",
-      "RecipeTinEats.com — Rack of Lamb with Herb Crust (Australian/international tradition)",
-      "The Mediterranean Dish — Mediterranean Garlic and Herb Rack of Lamb (Mediterranean / Egyptian tradition)"
+      "Herb-Crusted Rack of Lamb (inspired by BBC Good Food)",
+      "Classic Rack of Lamb with Red Wine Sauce (inspired by Great British Chefs)",
+      "Rack of Lamb with Herb Crust (inspired by RecipeTinEats.com)",
+      "Mediterranean Garlic and Herb Rack of Lamb (inspired by The Mediterranean Dish)"
     ]
   },
   "lamb_chops": {
     "grill": [
-      "African Bites — Grilled Lamb Chops with Peppercorn Sauce (West African/International tradition)",
-      "Madensverden.dk — Grillede lammekoteletter med rosmarin og hvidløg (Danish tradition)",
-      "Nefisyemektarifleri.com — Izgara Kuzu Pirzola (Turkish grilled lamb chops)"
+      "Grilled Lamb Chops with Peppercorn Sauce (inspired by African Bites)",
+      "Grillede lammekoteletter med rosmarin og hvidløg (inspired by Madensverden.dk)",
+      "Izgara Kuzu Pirzola (Turkish grilled lamb chops) (inspired by Nefisyemektarifleri.com)"
     ],
     "pan_sear": [
-      "Vahrehvah.com — Spicy Lamb Chops (Indian/South Asian tradition)",
-      "BBC Good Food — Pan-fried Lamb Chops with Rosemary and Garlic (British/French tradition)",
-      "Africanbites.com — Pan-Grilled Lamb Chops (West African tradition)"
+      "Spicy Lamb Chops (inspired by Vahrehvah.com)",
+      "Pan-fried Lamb Chops with Rosemary and Garlic (inspired by BBC Good Food)",
+      "Pan-Grilled Lamb Chops (inspired by Africanbites.com)"
     ]
   },
   "lamb_cutlet": {
     "pan_fry": [
-      "Madensverden.dk — Lammekotelet (Danish pan-fried lamb cutlets)",
-      "BBC Good Food — Lamb Cutlets with Herbed Breadcrumbs (British tradition)",
-      "Giallozafferano.it — Costolette di agnello impanate (Italian breaded lamb cutlets)"
+      "Lammekotelet (Danish pan-fried lamb cutlets) (inspired by Madensverden.dk)",
+      "Lamb Cutlets with Herbed Breadcrumbs (inspired by BBC Good Food)",
+      "Costolette di agnello impanate (Italian breaded lamb cutlets) (inspired by Giallozafferano.it)"
     ]
   },
   "lamb_loin_chops": {
     "pan_sear": [
-      "Africanbites.com — Grilled Lamb Loin Chops (West African/international tradition)",
-      "Madensverden.dk — Lammekoteletter med rosmarin (Danish pan-seared loin chops)",
-      "RecipeTinEats.com — Pan Seared Lamb Chops (Australian tradition)"
+      "Grilled Lamb Loin Chops (inspired by Africanbites.com)",
+      "Lammekoteletter med rosmarin (Danish pan-seared loin chops) (inspired by Madensverden.dk)",
+      "Pan Seared Lamb Chops (inspired by RecipeTinEats.com)"
     ]
   },
   "lamb_neck_filet": {
     "braise": [
-      "Simply Delicious (Alida Ryder, Cape Town, South Africa) — Slow Braised Lamb Neck"
+      "Slow Braised Lamb Neck (inspired by Simply Delicious)"
     ]
   },
   "baby_back_ribs": {
     "air_fryer": [
-      "Madens Verden — Ribben i airfryer (Danish tradition)",
-      "Matprat — Ribbe i airfryer (Norwegian tradition)",
-      "ichkoche.at — Spareribs aus der Heißluftfritteuse – Saftig und Knusprig (Austrian tradition)",
-      "Cucino per Passione (blog.giallozafferano.it) — Costine in friggitrice ad aria (Italian tradition)",
-      "Directo al Paladar — Costillas de cerdo en freidora de aire (Spanish tradition)"
+      "Ribben i airfryer (inspired by Madens Verden)",
+      "Ribbe i airfryer (inspired by Matprat)",
+      "Spareribs aus der Heißluftfritteuse – Saftig und Knusprig (inspired by ichkoche.at)",
+      "Costine in friggitrice ad aria (inspired by Cucino per Passione)",
+      "Costillas de cerdo en freidora de aire (inspired by Directo al Paladar)"
     ],
     "grill": [
-      "Madens Verden — Verdens bedste spareribs (Danish tradition)",
-      "Madens Verden — Spareribs i grill (pre-boil method) (Danish tradition)",
-      "ichkoche.at — Spare Ribs (adapted for grill) (Austrian tradition)"
+      "Verdens bedste spareribs (inspired by Madens Verden)",
+      "Spareribs i grill (pre-boil method) (inspired by Madens Verden)",
+      "Spare Ribs (adapted for grill) (inspired by ichkoche.at)"
     ],
     "oven_roast": [
-      "Madens Verden — Verdens bedste spareribs i ovn (Danish tradition)",
-      "Madens Verden — Spareribs i grill eller ovn med hjemmelavet marinade (Danish tradition)",
-      "ichkoche.at — Spare Ribs (Austrian tradition)",
-      "Chefkoch — Spareribs zum Grillen oder für den Backofen (German tradition)"
+      "Verdens bedste spareribs i ovn (inspired by Madens Verden)",
+      "Spareribs i grill eller ovn med hjemmelavet marinade (inspired by Madens Verden)",
+      "Spare Ribs (inspired by ichkoche.at)",
+      "Spareribs zum Grillen oder für den Backofen (inspired by Chefkoch)"
     ],
     "smoker": [
-      "Chefkoch — Baby Back Ribs (German tradition)",
-      "Chefkoch — Spareribs 3-2-1 vom Grill oder aus dem Backofen (German tradition)",
-      "ichkoche.at — Perfekte Spareribs (Austrian tradition)"
+      "Baby Back Ribs (inspired by Chefkoch)",
+      "Spareribs 3-2-1 vom Grill oder aus dem Backofen (inspired by Chefkoch)",
+      "Perfekte Spareribs (inspired by ichkoche.at)"
     ]
   },
   "spare_ribs": {
     "oven_roast": [
-      "Madens Verden — Spareribs i grill eller ovn (Danish tradition)",
-      "Madens Verden — Verdens bedste spareribs (no-boil foil method, Danish tradition)",
-      "ichkoche.at — Spare Ribs (Austrian tradition)",
-      "Chefkoch — Spareribs zum Grillen oder für den Backofen (German tradition)"
+      "Spareribs i grill eller ovn (inspired by Madens Verden)",
+      "Verdens bedste spareribs (inspired by Madens Verden)",
+      "Spare Ribs (inspired by ichkoche.at)",
+      "Spareribs zum Grillen oder für den Backofen (inspired by Chefkoch)"
     ]
   },
   "st_louis_ribs": {
     "oven_roast": [
-      "Judy and Bill Leung, Kaitlin and Sarah Leung — Char Siu-Style Oven Baked Ribs (Cantonese-American tradition, Culinary Group A)",
-      "Good Food Test Kitchen — Easy Oven-Baked Pork Ribs (British tradition, Culinary Group B)"
+      "Char Siu-Style Oven Baked Ribs (inspired by Judy and Bill Leung, Kaitlin and Sarah Leung)",
+      "Easy Oven-Baked Pork Ribs (inspired by Good Food Test Kitchen)"
     ]
   },
   "ground_pork": {
     "braise": [
-      "Marcella Hazan — Ragù Bianco di Maiale (Italian tradition)",
-      "Andrea Nguyen — Thịt Băm Kho (Vietnamese caramelised braised pork)",
-      "Yotam Ottolenghi — Spiced Pork Mince with Yoghurt (Levantine tradition)",
-      "Tina Nordström — Köttfärssås på Fläsk (Swedish ragù tradition)"
+      "Ragù Bianco di Maiale (inspired by Marcella Hazan)",
+      "Thịt Băm Kho (Vietnamese caramelised braised pork) (inspired by Andrea Nguyen)",
+      "Spiced Pork Mince with Yoghurt (inspired by Yotam Ottolenghi)",
+      "Köttfärssås på Fläsk (inspired by Tina Nordström)"
     ],
     "pan_fry": [
-      "Madens Verden — Hakkebøffer (Danish tradition)",
-      "ichkoche.at — Faschiertes (Austrian style ground pork patty)",
-      "Directo al Paladar — Mici rumanos / albóndigas de cerdo a la plancha (Spanish tradition)"
+      "Hakkebøffer (inspired by Madens Verden)",
+      "Faschiertes (Austrian style ground pork patty) (inspired by ichkoche.at)",
+      "Mici rumanos / albóndigas de cerdo a la plancha (inspired by Directo al Paladar)"
     ]
   },
   "pork_sausage": {
     "grill": [
-      "Madens Verden — Grillpølse — sådan griller du pølser (Danish tradition)",
-      "ichkoche.at — Spare Ribs adapted to sausage — Bratwurst vom Grill (Austrian tradition)",
-      "Chefkoch.de — Bratwurst vom Grill Grundrezept (German tradition)"
+      "Grillpølse — sådan griller du pølser (inspired by Madens Verden)",
+      "Spare Ribs adapted to sausage — Bratwurst vom Grill (inspired by ichkoche.at)",
+      "Bratwurst vom Grill Grundrezept (inspired by Chefkoch.de)"
     ],
     "pan_fry": [
-      "Madens Verden — Sprøde pølser på pande (Danish tradition)",
-      "ichkoche.at — Bratwurst in der Pfanne (Austrian tradition, adapted from pork pan methods)",
-      "Chefkoch.de — Bratwurst in der Pfanne (German tradition)"
+      "Sprøde pølser på pande (inspired by Madens Verden)",
+      "Bratwurst in der Pfanne (inspired by ichkoche.at)",
+      "Bratwurst in der Pfanne (inspired by Chefkoch.de)"
     ]
   },
   "fresh_ham": {
     "oven_roast": [
-      "America's Test Kitchen — Slow-Roasted Fresh Ham with Cider Glaze (American tradition)",
-      "Yotam Ottolenghi — Slow-Roasted Fresh Ham with Pomegranate & Walnuts (Levantine fusion tradition)",
-      "Tina Nordström — Helstekt Färsk Skinka (Swedish home tradition)",
-      "Hugh Fearnley-Whittingstall — Slow-Roast Fresh Ham with Cider, Honey & Bay (British River Cottage tradition)"
+      "Slow-Roasted Fresh Ham with Cider Glaze (inspired by America's Test Kitchen)",
+      "Slow-Roasted Fresh Ham with Pomegranate & Walnuts (inspired by Yotam Ottolenghi)",
+      "Helstekt Färsk Skinka (inspired by Tina Nordström)",
+      "Slow-Roast Fresh Ham with Cider, Honey & Bay (inspired by Hugh Fearnley-Whittingstall)"
     ]
   },
   "cheek": {
     "braise": [
-      "Geoffrey Smeddle — Pork Cheek with Crispy Ham Hock Bon Bon (Scottish fine dining tradition, Culinary Group B)"
+      "Pork Cheek with Crispy Ham Hock Bon Bon (inspired by Geoffrey Smeddle)"
     ]
   },
   "liver_pork": {
     "pan_fry": [
-      "Marcella Hazan — Fegato di Maiale alla Salvia (Italian tradition, Culinary Group B)",
-      "Tina Nordström — Stekt Fläsklever med Lingon (Swedish tradition, Culinary Group D)"
+      "Fegato di Maiale alla Salvia (inspired by Marcella Hazan)",
+      "Stekt Fläsklever med Lingon (inspired by Tina Nordström)"
     ]
   },
   "pork_cheek": {
     "braise": [
-      "José Pizarro — Carrillera de Cerdo al Vino Tinto (Spanish tradition)",
-      "Marcella Hazan — Guancia di Maiale Brasata al Marsala (Italian tradition)",
-      "Diana Henry — Pork Cheeks Braised in Cider with Apples (British tradition)",
-      "Magnus Nilsson — Långbräserade Griskindar i Mörkt Öl (Nordic tradition)"
+      "Carrillera de Cerdo al Vino Tinto (inspired by José Pizarro)",
+      "Guancia di Maiale Brasata al Marsala (inspired by Marcella Hazan)",
+      "Pork Cheeks Braised in Cider with Apples (inspired by Diana Henry)",
+      "Långbräserade Griskindar i Mörkt Öl (inspired by Magnus Nilsson)"
     ],
     "oven_roast": [
-      "José Pizarro — Carrillera al Horno con Pimentón (Spanish tradition)",
-      "Marcella Hazan — Guancia di Maiale Arrosto (Italian tradition)",
-      "Diana Henry — Roast Pork Cheeks with Apples & Sage (British tradition)",
-      "Magnus Nilsson — Ugnsbakade Griskindar med Senap (Nordic tradition)"
+      "Carrillera al Horno con Pimentón (inspired by José Pizarro)",
+      "Guancia di Maiale Arrosto (inspired by Marcella Hazan)",
+      "Roast Pork Cheeks with Apples & Sage (inspired by Diana Henry)",
+      "Ugnsbakade Griskindar med Senap (inspired by Magnus Nilsson)"
     ],
     "pan_fry": [
-      "José Pizarro — Carrillera Salteada (Spanish pintxo tradition)",
-      "Marcella Hazan — Guancia di Maiale Saltata in Padella (Italian tradition)",
-      "Diana Henry — Pan-Fried Pork Cheek with Apple & Cider (British tradition)",
-      "Magnus Nilsson — Pan-Seared Griskind with Brown Butter & Capers (Nordic tradition)"
+      "Carrillera Salteada (inspired by José Pizarro)",
+      "Guancia di Maiale Saltata in Padella (inspired by Marcella Hazan)",
+      "Pan-Fried Pork Cheek with Apple & Cider (inspired by Diana Henry)",
+      "Pan-Seared Griskind with Brown Butter & Capers (inspired by Magnus Nilsson)"
     ]
   },
   "pork_jowl": {
     "braise": [
-      "Geoffrey Smeddle — Pork Cheek with Crispy Ham Hock Bon Bon (Scottish fine dining, Culinary Group B)",
-      "Martin Wishart — Braised Pork Cheeks with Five Spice and Pak Choi (Scottish fine dining, Culinary Group B)",
-      "Graham Campbell — Braised Pork Cheeks with Baby Leeks, Sultana Ragu and Caraway Jus (Scottish fine dining, Culinary Group B)"
+      "Pork Cheek with Crispy Ham Hock Bon Bon (Scottish fine dining, Culinary Group B) (inspired by Geoffrey Smeddle)",
+      "Braised Pork Cheeks with Five Spice and Pak Choi (Scottish fine dining, Culinary Group B) (inspired by Martin Wishart)",
+      "Braised Pork Cheeks with Baby Leeks, Sultana Ragu and Caraway Jus (Scottish fine dining, Culinary Group B) (inspired by Graham Campbell)"
     ]
   },
   "pork_liver": {
     "pan_fry": [
-      "Marcella Hazan — Fegato di Maiale alla Salvia (Italian tradition)",
-      "Anthony Bourdain — Foie de Porc à la Lyonnaise (French bistro tradition)",
-      "Madhur Jaffrey — Suar ka Kaleji (North Indian / Goan tradition)",
-      "Tina Nordström — Stekt Fläsklever med Lingon (Swedish tradition)"
+      "Fegato di Maiale alla Salvia (inspired by Marcella Hazan)",
+      "Foie de Porc à la Lyonnaise (inspired by Anthony Bourdain)",
+      "Suar ka Kaleji (inspired by Madhur Jaffrey)",
+      "Stekt Fläsklever med Lingon (inspired by Tina Nordström)"
     ],
     "pan_sear": [
-      "Fergus Henderson — Pig's Liver, Bacon and Onions (British nose-to-tail tradition)",
-      "José Pizarro — Hígado de Cerdo a la Plancha (Spanish tradition)",
-      "Magnus Nilsson — Seared Fläsklever with Brown Butter & Capers (Nordic tradition)",
-      "Diana Henry — Pan-Seared Pork Liver with Mustard & Apples (British modern tradition)"
+      "Pig's Liver, Bacon and Onions (inspired by Fergus Henderson)",
+      "Hígado de Cerdo a la Plancha (inspired by José Pizarro)",
+      "Seared Fläsklever with Brown Butter & Capers (inspired by Magnus Nilsson)",
+      "Pan-Seared Pork Liver with Mustard & Apples (inspired by Diana Henry)"
     ]
   },
   "pork_tongue": {
     "braise": [
-      "Fergus Henderson — Pig's Tongue Salad with Mustard & Capers (British nose-to-tail tradition)",
-      "Diana Kennedy — Lengua de Cerdo en Salsa de Chile Pasilla (Mexican tradition)",
-      "Anthony Bourdain — Langue de Porc Sauce Ravigote (French bistro tradition)",
-      "Magnus Nilsson — Inkokt Grisetunga med Pepparrotssås (Swedish/Nordic tradition)"
+      "Pig's Tongue Salad with Mustard & Capers (inspired by Fergus Henderson)",
+      "Lengua de Cerdo en Salsa de Chile Pasilla (inspired by Diana Kennedy)",
+      "Langue de Porc Sauce Ravigote (inspired by Anthony Bourdain)",
+      "Inkokt Grisetunga med Pepparrotssås (inspired by Magnus Nilsson)"
     ],
     "slow_cooker": [
-      "Hugh Acheson — Slow-Cooker Pork Tongue Confit (American Culinary Group C tradition)",
-      "Diana Kennedy — Lengua de Cerdo en el Crock-Pot (Mexican tradition adaptation)",
-      "Andrea Nguyen — Lưỡi Heo Hầm in the Slow Cooker (Vietnamese tradition)",
-      "Magnus Nilsson — Slow-Cooker Saltkokt Grisetunga (Nordic tradition)"
+      "Slow-Cooker Pork Tongue Confit (inspired by Hugh Acheson)",
+      "Lengua de Cerdo en el Crock-Pot (inspired by Diana Kennedy)",
+      "Lưỡi Heo Hầm in the Slow Cooker (inspired by Andrea Nguyen)",
+      "Slow-Cooker Saltkokt Grisetunga (inspired by Magnus Nilsson)"
     ]
   },
   "cured_ham": {
     "oven_roast": [
-      "Madens Verden — Glaseret Skinke (Danish glazed ham)",
-      "Chefkoch — Schinken aus dem Ofen mit Honig-Senf-Kruste (German tradition)",
-      "Chefkoch — Schinkenkrustenbraten bei Niedrigtemperatur (German low-and-slow tradition)"
+      "Glaseret Skinke (Danish glazed ham) (inspired by Madens Verden)",
+      "Schinken aus dem Ofen mit Honig-Senf-Kruste (inspired by Chefkoch)",
+      "Schinkenkrustenbraten bei Niedrigtemperatur (inspired by Chefkoch)"
     ]
   },
   "ham": {
     "oven_roast": [
-      "Anna och Fanny Bergenström — Ugnsbakad Julskinka med Senapsgriljering (Swedish / Culinary Group D tradition)",
-      "Angela Lawrence — Jamaican Glazed Baked Ham (Jamaican / Culinary Group C tradition)",
-      "John Torode — Baked Glazed Ham (British / Culinary Group B tradition)",
-      "Nagi Maehashi — Maple Glazed Ham (Australian / Culinary Group B tradition)"
+      "Ugnsbakad Julskinka med Senapsgriljering (inspired by Anna och Fanny Bergenström)",
+      "Jamaican Glazed Baked Ham (inspired by Angela Lawrence)",
+      "Baked Glazed Ham (inspired by John Torode)",
+      "Maple Glazed Ham (inspired by Nagi Maehashi)"
     ]
   },
   "pork_belly": {
     "air_fryer": [
-      "J. Kenji López-Alt / Serious Eats — Air Fryer Crispy Pork Belly",
-      "Nigella Lawson — Chinese-Spiced Air Fryer Crispy Pork Belly",
-      "Marion Grasby — Asian Salt-Crusted Air Fryer Crispy Pork Belly",
-      "ICA/Coop Sweden — Sidfläsk i luftfritösen (Air Fryer Pork Belly)",
-      "The Woks of Life (Leung family) — Air Fryer Cantonese Crispy Pork Belly (脆皮燒肉)"
+      "Air Fryer Crispy Pork Belly (inspired by J. Kenji López-Alt / Serious Eats)",
+      "Chinese-Spiced Air Fryer Crispy Pork Belly (inspired by Nigella Lawson)",
+      "Asian Salt-Crusted Air Fryer Crispy Pork Belly (inspired by Marion Grasby)",
+      "Sidfläsk i luftfritösen (Air Fryer Pork Belly) (inspired by ICA/Coop Sweden)",
+      "Air Fryer Cantonese Crispy Pork Belly (脆皮燒肉) (inspired by The Woks of Life)"
     ],
     "braise": [
-      "Chefkoch — Chashu (Japanese-style braised pork belly)",
-      "ichkoche.at — Gjuwetsch — Geschmorter Schweinebauch (Austrian tradition)",
-      "BBC Good Food — Slow-roast Five-spice Pork Belly & Gravy (British/Chinese fusion)"
+      "Chashu (Japanese-style braised pork belly) (inspired by Chefkoch)",
+      "Gjuwetsch — Geschmorter Schweinebauch (inspired by ichkoche.at)",
+      "Slow-roast Five-spice Pork Belly & Gravy (British/Chinese fusion) (inspired by BBC Good Food)"
     ],
     "grill": [
-      "Korean BBQ tradition — 삼겹살 구이 (Samgyeopsal Gui, Grilled Pork Belly)",
-      "Australian BBQ tradition — Grilled Pork Belly Slices",
-      "Filipino tradition — Inihaw na Liempo (Grilled Pork Belly)",
-      "Steven Raichlen — Grilled Pork Belly Slices (*Planet Barbecue*)",
-      "Vietnamese street-food tradition — Thịt Ba Chỉ Nướng (Grilled Pork Belly)"
+      "삼겹살 구이 (Samgyeopsal Gui, Grilled Pork Belly) (inspired by Korean BBQ tradition)",
+      "Grilled Pork Belly Slices (inspired by Australian BBQ tradition)",
+      "Inihaw na Liempo (Grilled Pork Belly) (inspired by Filipino tradition)",
+      "Grilled Pork Belly Slices (*Planet Barbecue*) (inspired by Steven Raichlen)",
+      "Thịt Ba Chỉ Nướng (Grilled Pork Belly) (inspired by Vietnamese street-food tradition)"
     ],
     "oven_roast": [
-      "Madens Verden — Perfekt Flæskesteg i Ovn (Danish tradition)",
-      "Chefkoch — Krustenbraten (German tradition)",
-      "Chefkoch — Schweinebauch aus dem Ofen, knusprig (German tradition, beer glaze)",
-      "Chefkoch — Schweinebauch mit Brezel-Brätfüllung (German stuffed belly)"
+      "Perfekt Flæskesteg i Ovn (inspired by Madens Verden)",
+      "Krustenbraten (inspired by Chefkoch)",
+      "Schweinebauch aus dem Ofen, knusprig (inspired by Chefkoch)",
+      "Schweinebauch mit Brezel-Brätfüllung (German stuffed belly) (inspired by Chefkoch)"
     ],
     "pan_fry": [
-      "Madens Verden — Stegt Flæsk med Persillesovs (Danish national dish)",
-      "ichkoche.at — Gebratene Bauchfleischstreifen (Austrian tradition — pan-fried strips)",
-      "ichkoche.at — Gebratenes Bauchfleisch (Austrian tradition — oven-to-pan)",
-      "The Woks of Life — Korean Crispy Pork Belly Kimchi Bowls (Korean tradition)"
+      "Stegt Flæsk med Persillesovs (Danish national dish) (inspired by Madens Verden)",
+      "Gebratene Bauchfleischstreifen (inspired by ichkoche.at)",
+      "Gebratenes Bauchfleisch (inspired by ichkoche.at)",
+      "Korean Crispy Pork Belly Kimchi Bowls (inspired by The Woks of Life)"
     ],
     "slow_cooker": [
-      "BBC Good Food — Slow Cooker Pork Belly (UK, crockpot method)",
-      "Chefkoch.de — Bayerischer Krauttopf mit Wammerl (German/Bavarian CrockPot)",
-      "Jamie Oliver — Slow-Cooked Pork Belly (UK, low-oven method)"
+      "Slow Cooker Pork Belly (UK, crockpot method) (inspired by BBC Good Food)",
+      "Bayerischer Krauttopf mit Wammerl (German/Bavarian CrockPot) (inspired by Chefkoch.de)",
+      "Slow-Cooked Pork Belly (UK, low-oven method) (inspired by Jamie Oliver)"
     ],
     "smoker": [
-      "Smoking-Meat.com — Smoked Pork Belly (whole slab)",
-      "Smoking-Meat.com — Smoked Pork Belly Burnt Ends",
-      "Smart Fritid / Agneta — Varmrökt sidfläsk (Hot-smoked pork belly, Swedish style)",
-      "Karlstein.nu / Thomas Karlstein — Burnt Ends av fläsksida (Swedish pork belly burnt ends)"
+      "Smoked Pork Belly (whole slab) (inspired by Smoking-Meat.com)",
+      "Smoked Pork Belly Burnt Ends (inspired by Smoking-Meat.com)",
+      "Varmrökt sidfläsk (Hot-smoked pork belly, Swedish style) (inspired by Smart Fritid / Agneta)",
+      "Burnt Ends av fläsksida (Swedish pork belly burnt ends) (inspired by Karlstein.nu / Thomas Karlstein)"
     ],
     "sous_vide": [
-      "INKBIRD Blog / tastybits.de — Asian-style Pork Belly Sous Vide (75 °C × 24 h)"
+      "Asian-style Pork Belly Sous Vide (75 °C × 24 h) (inspired by INKBIRD Blog / tastybits.de)"
     ]
   },
   "pork_leg": {
     "braise": [
-      "Chefkoch.de — Geschmorte Schweinshaxenscheiben (German tradition)",
-      "The Woks of Life — Chinese Red Braised Pork Hock / Ti Pang (Chinese tradition)",
-      "Giallo Zafferano — Stinco di maiale al forno con patate (Italian tradition)",
-      "Valdemarsro.dk — Braiseret nakkefilet (Danish tradition)"
+      "Geschmorte Schweinshaxenscheiben (inspired by Chefkoch.de)",
+      "Chinese Red Braised Pork Hock / Ti Pang (inspired by The Woks of Life)",
+      "Stinco di maiale al forno con patate (inspired by Giallo Zafferano)",
+      "Braiseret nakkefilet (inspired by Valdemarsro.dk)"
     ],
     "oven_roast": [
-      "Chefkoch.de — Knusprige Schweinshaxe aus dem Ofen (German tradition)",
-      "Giallo Zafferano — Stinco di maiale al forno con patate (Italian tradition)",
-      "Ichkoche.at — Knusprig gebratene Schweinsstelze (Austrian tradition)",
-      "Madensverden.dk — Ovnbagt svineskank med rodfrugter (Danish tradition)"
+      "Knusprige Schweinshaxe aus dem Ofen (inspired by Chefkoch.de)",
+      "Stinco di maiale al forno con patate (inspired by Giallo Zafferano)",
+      "Knusprig gebratene Schweinsstelze (inspired by Ichkoche.at)",
+      "Ovnbagt svineskank med rodfrugter (inspired by Madensverden.dk)"
     ],
     "slow_cooker": [
-      "Chefkoch.de — Zwiebelschweinshaxen im Crockpot (German tradition)",
-      "The Woks of Life — Chinese Red Braised Ti Pang (slow cooker adaptation) (Chinese tradition)",
-      "Madensverden.dk — Ovnbagt svineskank med rodfrugter (slow cooker adaptation) (Danish tradition)",
-      "Giallo Zafferano — Stinco di maiale al forno (slow cooker adaptation) (Italian tradition)"
+      "Zwiebelschweinshaxen im Crockpot (inspired by Chefkoch.de)",
+      "Chinese Red Braised Ti Pang (slow cooker adaptation) (inspired by The Woks of Life)",
+      "Ovnbagt svineskank med rodfrugter (slow cooker adaptation) (inspired by Madensverden.dk)",
+      "Stinco di maiale al forno (slow cooker adaptation) (inspired by Giallo Zafferano)"
     ]
   },
   "pork_loin_roast": {
     "oven_roast": [
-      "Valdemarsro — Flæskesteg med sprød svær (Danish tradition)",
-      "Madens Verden — Perfekt Flæskesteg i Ovn (Danish tradition)",
-      "Chefkoch — Schweinerücken im Bratschlauch (German tradition)"
+      "Flæskesteg med sprød svær (inspired by Valdemarsro)",
+      "Perfekt Flæskesteg i Ovn (inspired by Madens Verden)",
+      "Schweinerücken im Bratschlauch (inspired by Chefkoch)"
     ]
   },
   "pork_shoulder": {
     "oven_roast": [
-      "Madens Verden — Nakkekam i Ovn, Langtidsstegt i Bradepande (Danish tradition)",
-      "Madens Verden — Nakkesteg i Ovn med Hvidløg og Kartofler i Fad (Danish tradition)",
-      "Chefkoch — Krustenbraten (German tradition — shoulder variant)",
-      "African Bites / Immaculate Bites — Pernil (Puerto Rican Roast Pork Shoulder) (Caribbean tradition)"
+      "Nakkekam i Ovn, Langtidsstegt i Bradepande (inspired by Madens Verden)",
+      "Nakkesteg i Ovn med Hvidløg og Kartofler i Fad (inspired by Madens Verden)",
+      "Krustenbraten (inspired by Chefkoch)",
+      "Pernil (Puerto Rican Roast Pork Shoulder) (inspired by African Bites / Immaculate Bites)"
     ],
     "slow_cooker": [
-      "Madens Verden — Pulled Pork (Danish tradition)",
-      "TINE — Pulled Pork (Norwegian tradition)",
-      "Chefkoch — Pulled Pork aus dem Ofen (German tradition)"
+      "Pulled Pork (inspired by Madens Verden)",
+      "Pulled Pork (inspired by TINE)",
+      "Pulled Pork aus dem Ofen (inspired by Chefkoch)"
     ],
     "smoker": [
-      "Chefkoch — Pulled Pork aus dem Smoker (German BBQ tradition)",
-      "Chefkoch — Pulled Pork aus dem Smoker (Chefkoch Video recipe, 8 kg)",
-      "Madens Verden — Pulled Pork i Smoker (Danish tradition)"
+      "Pulled Pork aus dem Smoker (inspired by Chefkoch)",
+      "Pulled Pork aus dem Smoker (Chefkoch Video recipe, 8 kg) (inspired by Chefkoch)",
+      "Pulled Pork i Smoker (inspired by Madens Verden)"
     ]
   },
   "pork_chop": {
     "air_fryer": [
-      "Madens Verden — Herregårdskotelet i airfryer (Danish tradition)",
-      "ichkoche.at — Schopfsteak aus dem Airfryer (adapted for pork chop) (Austrian tradition)",
-      "GialloZafferano — Braciole di maiale in friggitrice ad aria (Italian tradition)",
-      "Imma Adamu — Air-Fryer Pork Chops with Creole Seasoning (West African / Caribbean tradition)"
+      "Herregårdskotelet i airfryer (inspired by Madens Verden)",
+      "Schopfsteak aus dem Airfryer (adapted for pork chop) (inspired by ichkoche.at)",
+      "Braciole di maiale in friggitrice ad aria (inspired by GialloZafferano)",
+      "Air-Fryer Pork Chops with Creole Seasoning (inspired by Imma Adamu)"
     ],
     "grill": [
-      "Madens Verden — Svinekoteletter på grill (Danish tradition)",
-      "ichkoche.at — Grillkotelett (Austrian tradition)",
-      "Directo al Paladar — Chuleta de cerdo a la plancha (adapted for grill) (Spanish tradition)",
-      "Huy Vu — Sườn Nướng (Vietnamese Grilled Pork Chops) (Vietnamese tradition)"
+      "Svinekoteletter på grill (inspired by Madens Verden)",
+      "Grillkotelett (inspired by ichkoche.at)",
+      "Chuleta de cerdo a la plancha (adapted for grill) (inspired by Directo al Paladar)",
+      "Sườn Nướng (Vietnamese Grilled Pork Chops) (inspired by Huy Vu)"
     ],
     "oven_roast": [
-      "ichkoche.at — Schweinskotelett mit Apfelgemüse vom Blech (Austrian tradition)",
-      "Madens Verden — Svinekotelet med skaft i ovn (adapted) (Danish tradition)",
-      "Directo al Paladar — Solomillo de cerdo al horno (adapted for chops) (Spanish tradition)",
-      "Imma Adamu — Oven Baked Pork Chops (West African / Caribbean tradition)"
+      "Schweinskotelett mit Apfelgemüse vom Blech (inspired by ichkoche.at)",
+      "Svinekotelet med skaft i ovn (adapted) (inspired by Madens Verden)",
+      "Solomillo de cerdo al horno (adapted for chops) (inspired by Directo al Paladar)",
+      "Oven Baked Pork Chops (inspired by Imma Adamu)"
     ],
     "pan_fry": [
-      "Madens Verden — Pandestegning af koteletter (Danish tradition)",
-      "ichkoche.at — Schweinskotelett (Austrian tradition)",
-      "Directo al Paladar — Chuleta de cerdo a la plancha (Spanish tradition)",
-      "Pailin Chongchitnant — Moo Tod Gratiem Prik Thai หมูทอดกระเทียมพริกไทย (Thai tradition)"
+      "Pandestegning af koteletter (inspired by Madens Verden)",
+      "Schweinskotelett (inspired by ichkoche.at)",
+      "Chuleta de cerdo a la plancha (inspired by Directo al Paladar)",
+      "Moo Tod Gratiem Prik Thai หมูทอดกระเทียมพริกไทย (inspired by Pailin Chongchitnant)"
     ],
     "pan_sear": [
-      "Directo al Paladar — Chuleta de cerdo a la plancha (Spanish tradition)",
-      "ichkoche.at — Schweinskotelett Grundrezept (Austrian tradition)",
-      "Madens Verden — Pandestegning af koteletter (Danish tradition)",
-      "African Bites / Immaculate Bites — Smothered Pork Chops (Southern US / Creole tradition)"
+      "Chuleta de cerdo a la plancha (inspired by Directo al Paladar)",
+      "Schweinskotelett Grundrezept (inspired by ichkoche.at)",
+      "Pandestegning af koteletter (inspired by Madens Verden)",
+      "Smothered Pork Chops (inspired by African Bites / Immaculate Bites)"
     ]
   },
   "pork_loin_steak": {
     "pan_fry": [
-      "Madens Verden — Pandestegning af koteletter (adapted for loin steak) (Danish tradition)",
-      "ichkoche.at — Schweinskotelett Grundrezept (adapted for boneless loin steak) (Austrian tradition)",
-      "Directo al Paladar — Chuleta de cerdo a la plancha (Spanish tradition, adapted for boneless loin steak)"
+      "Pandestegning af koteletter (adapted for loin steak) (inspired by Madens Verden)",
+      "Schweinskotelett Grundrezept (adapted for boneless loin steak) (inspired by ichkoche.at)",
+      "Chuleta de cerdo a la plancha (inspired by Directo al Paladar)"
     ]
   },
   "pork_shoulder_steak": {
     "pan_fry": [
-      "Madens Verden — Langtidsstegt nakkesteg som bøffer (adapted for pan-fried shoulder steak) (Danish tradition)",
-      "ichkoche.at — Schopfsteak (Austrian tradition)",
-      "Chefkoch.de — Nackensteak Schwein Pfanne (German tradition)"
+      "Langtidsstegt nakkesteg som bøffer (adapted for pan-fried shoulder steak) (inspired by Madens Verden)",
+      "Schopfsteak (inspired by ichkoche.at)",
+      "Nackensteak Schwein Pfanne (inspired by Chefkoch.de)"
     ]
   },
   "pork_tenderloin": {
     "air_fryer": [
-      "Directo al Paladar — Solomillo de cerdo en airfryer (Spanish tradition)",
-      "ichkoche.at — Schopfsteak aus dem Airfryer (adapted for tenderloin) (Austrian tradition)",
-      "Madens Verden — Herregårdskotelet i airfryer method (adapted for tenderloin) (Danish tradition)",
-      "African Bites / Immaculate Bites — Creole Air Fryer Pork Tenderloin (Southern US / West African Creole tradition)"
+      "Solomillo de cerdo en airfryer (inspired by Directo al Paladar)",
+      "Schopfsteak aus dem Airfryer (adapted for tenderloin) (inspired by ichkoche.at)",
+      "Herregårdskotelet i airfryer method (adapted for tenderloin) (inspired by Madens Verden)",
+      "Creole Air Fryer Pork Tenderloin (inspired by African Bites / Immaculate Bites)"
     ],
     "grill": [
-      "Madens Verden — Svinemørbrad på grill (Danish tradition)",
-      "Chefkoch.de — Mariniertes ganzes Schweinefilet vom Grill (German tradition)",
-      "Directo al Paladar — Solomillo de cerdo a la plancha (adapted for grill) (Spanish tradition)",
-      "Hot Thai Kitchen — Moo Ping หมูปิ้ง (Thai street food tradition)",
-      "The Woks of Life — BBQ Char Siu Grilled Pork (Chinese tradition)"
+      "Svinemørbrad på grill (inspired by Madens Verden)",
+      "Mariniertes ganzes Schweinefilet vom Grill (inspired by Chefkoch.de)",
+      "Solomillo de cerdo a la plancha (adapted for grill) (inspired by Directo al Paladar)",
+      "Moo Ping หมูปิ้ง (inspired by Hot Thai Kitchen)",
+      "BBQ Char Siu Grilled Pork (inspired by The Woks of Life)"
     ],
     "oven_roast": [
-      "Directo al Paladar — Solomillo de cerdo al horno con patatas (Spanish tradition)",
-      "ichkoche.at — Schweinefilet im Speckmantel (Austrian tradition)",
-      "Madens Verden — Helstegt svinemørbrad i ovn (Danish tradition)",
-      "Imma Adamu — Creole-Spiced Pork Tenderloin Roast (West African / Caribbean tradition)"
+      "Solomillo de cerdo al horno con patatas (inspired by Directo al Paladar)",
+      "Schweinefilet im Speckmantel (inspired by ichkoche.at)",
+      "Helstegt svinemørbrad i ovn (inspired by Madens Verden)",
+      "Creole-Spiced Pork Tenderloin Roast (inspired by Imma Adamu)"
     ],
     "pan_sear": [
-      "Directo al Paladar — Solomillo de cerdo a la plancha (Spanish tradition)",
-      "ichkoche.at — Schweinefilet im Speckmantel (Austrian tradition)",
-      "Madens Verden — Svinemørbrad i ovn / pande finish (Danish tradition)",
-      "The Woks of Life — 辣椒小炒肉 Pork and Pepper Stir-fry (Chinese tradition)"
+      "Solomillo de cerdo a la plancha (inspired by Directo al Paladar)",
+      "Schweinefilet im Speckmantel (inspired by ichkoche.at)",
+      "Svinemørbrad i ovn / pande finish (inspired by Madens Verden)",
+      "辣椒小炒肉 Pork and Pepper Stir-fry (inspired by The Woks of Life)"
     ],
     "sous_vide": [
-      "Madens Verden — Svinemørbrad sous vide (Danish tradition)",
-      "ichkoche.at — Schweinefilet sous vide (Austrian tradition, adapted)",
-      "GialloZafferano blog — Filetto di maiale sous vide (Italian tradition)"
+      "Svinemørbrad sous vide (inspired by Madens Verden)",
+      "Schweinefilet sous vide (inspired by ichkoche.at)",
+      "Filetto di maiale sous vide (inspired by GialloZafferano blog)"
     ]
   },
   "secreto": {
     "pan_sear": [
-      "Directo al Paladar — Secreto de cerdo a la plancha (Spanish tradition)",
-      "Chefkoch.de — Secreto vom Ibericoschwein (German tradition)",
-      "Madensverden.dk — Pandestegning reference (adapted from svinekotelet technique) (Danish tradition)"
+      "Secreto de cerdo a la plancha (inspired by Directo al Paladar)",
+      "Secreto vom Ibericoschwein (inspired by Chefkoch.de)",
+      "Pandestegning reference (adapted from svinekotelet technique) (inspired by Madensverden.dk)"
     ]
   }
 };
@@ -30360,7 +30360,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "384";
+const PANEL_VERSION = "386";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

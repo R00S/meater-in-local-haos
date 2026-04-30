@@ -18,8 +18,8 @@ Sparris (*Asparagus officinalis*) sauterad i het panna är den snabbaste beredni
 
 ## Source recipes
 
-### 1. Fuchsia Dunlop — Qīng Chǎo Lǜ Sǔn (清炒芦笋 — Chinese Stir-Fried Asparagus)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
+### 1. Qīng Chǎo Lǜ Sǔn (清炒芦笋 — Chinese Stir-Fried Asparagus) (inspired by Fuchsia Dunlop)
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 4–5 min · **Rest**: 1 min
 
 **Ingredients**
@@ -40,8 +40,8 @@ Sparris (*Asparagus officinalis*) sauterad i het panna är den snabbaste beredni
 
 ---
 
-### 2. Julia Child — Asperges Sautées au Beurre (French tradition)
-**Source**: Julia Child, *The French Chef Cookbook* (Alfred A. Knopf, 1968)
+### 2. Asperges Sautées au Beurre (inspired by Julia Child)
+**Inspired by**: Julia Child, *The French Chef Cookbook* (Alfred A. Knopf, 1968)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -61,8 +61,8 @@ Sparris (*Asparagus officinalis*) sauterad i het panna är den snabbaste beredni
 
 ---
 
-### 3. Madhur Jaffrey — Sabzi Til Asparagus (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+### 3. Sabzi Til Asparagus (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 5–6 min · **Rest**: 1 min
 
 **Ingredients**
@@ -83,8 +83,8 @@ Sparris (*Asparagus officinalis*) sauterad i het panna är den snabbaste beredni
 
 ---
 
-### 4. Harumi Kurihara — Asupara Bataa Itame (Japanese Butter-Sautéed Asparagus)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
+### 4. Asupara Bataa Itame (Japanese Butter-Sautéed Asparagus) (inspired by Harumi Kurihara)
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 5–6 min · **Rest**: 1 min
 
 **Ingredients**

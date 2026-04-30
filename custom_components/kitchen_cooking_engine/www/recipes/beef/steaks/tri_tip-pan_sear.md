@@ -22,8 +22,8 @@ Pannsearing av tri-tip kräver val av en av två tillvägagångssätt: (1) sear 
 
 ## Source recipes
 
-### 1. Chefkoch.de — Das perfekte Steak mit Steakkruste (German tradition)
-**Source**: Lumacone, Chefkoch.de; https://www.chefkoch.de/rezepte/3258661484569054/Das-perfekte-Steak-mit-Steakkruste.html (fetched 2026-04-24). *Constant-turning technique for sliced tri-tip steaks: turn every 5–10 seconds to build a Maillard crust without burning. 4.8/5, 90 ratings.*
+### 1. Das perfekte Steak mit Steakkruste (inspired by Chefkoch.de)
+**Inspired by**: Lumacone, Chefkoch.de; https://www.chefkoch.de/rezepte/3258661484569054/Das-perfekte-Steak-mit-Steakkruste.html (fetched 2026-04-24). *Constant-turning technique for sliced tri-tip steaks: turn every 5–10 seconds to build a Maillard crust without burning. 4.8/5, 90 ratings.*
 **Serves**: 2 · **Prep**: 2–2.5 hr de-chill · **Cook**: 6–8 min + 4 min rest
 
 *Translation: The perfect steak with steak crust. Key method: ständiges Wenden (constant turning) every few seconds.*
@@ -54,8 +54,8 @@ Pannsearing av tri-tip kräver val av en av två tillvägagångssätt: (1) sear 
 
 ---
 
-### 2. Madens Verden — Ball tip bøffer (Danish pan steak method) (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ball-tip/ (fetched 2026-04-24). *Sliced ball tip (tri-tip) steaks in a hot pan — the same principle as any premium steak. "Skær kødet i passende stykker, ikke for tynde, og steg eller grill dem ved en god varme." (Cut the meat into good-sized pieces, not too thin, and fry or grill at good heat.)*
+### 2. Ball tip bøffer (Danish pan steak method) (inspired by Madens Verden)
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ball-tip/ (fetched 2026-04-24). *Sliced ball tip (tri-tip) steaks in a hot pan — the same principle as any premium steak. "Skær kødet i passende stykker, ikke for tynde, og steg eller grill dem ved en god varme." (Cut the meat into good-sized pieces, not too thin, and fry or grill at good heat.)*
 **Serves**: 2–4 · **Prep**: 30 min de-chill · **Cook**: 6–8 min + rest
 
 **Temperature guidance (from recipe)**: "Steg eller grill dem ved en god varme. Krydres med salt og peber." High heat throughout. Core temperature 56 °C = tender, pink, juicy.
@@ -77,8 +77,8 @@ Pannsearing av tri-tip kräver val av en av två tillvägagångssätt: (1) sear 
 
 ---
 
-### 3. Immaculate Bites (africanbites.com) — stovetop sear (tri-tip oven roast pan-sear method) (Californian / West African tradition)
-**Source**: Imma Adamu, africanbites.com; https://www.africanbites.com/oven-tri-tip-roast/ (fetched 2026-04-24). *Stovetop pan-sear before oven: cast-iron skillet, fat-side down 4–5 min, flip 2 more min. Creates the crust for the oven roast — as a standalone pan-sear, extend time until desired core temperature.*
+### 3. stovetop sear (tri-tip oven roast pan-sear method) (inspired by Immaculate Bites)
+**Inspired by**: Imma Adamu, africanbites.com; https://www.africanbites.com/oven-tri-tip-roast/ (fetched 2026-04-24). *Stovetop pan-sear before oven: cast-iron skillet, fat-side down 4–5 min, flip 2 more min. Creates the crust for the oven roast — as a standalone pan-sear, extend time until desired core temperature.*
 **Serves**: 2–4 · **Prep**: 1 hr marinade · **Cook**: 8–12 min
 
 **Temperature guidance (from recipe)**: Sear fat-side down 4–5 minutes until thoroughly browned; flip 2 minutes. For a standalone pan sear without oven: continue 2–3 more minutes per side at medium heat to reach target internal temperature.

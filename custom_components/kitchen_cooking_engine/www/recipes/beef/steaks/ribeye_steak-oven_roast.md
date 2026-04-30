@@ -27,8 +27,8 @@ Ugnsstekning passar entrecôten utmärkt eftersom den kraftiga marmoreringen fun
 
 ## Source recipes
 
-### 1. ichkoche.at — Rib-eye-Steak mit Rosmarinpommes (Austrian tradition)
-**Source**: ichkoche.at; https://www.ichkoche.at/rib-eye-steak-mit-rosmarinpommes-rezept-230639 (fetched 2026-04-24). *Austrian pan-then-oven method: hot pan sear 3–4 min per side, then low oven at 120 °C for 10–15 min to rest and finish. 32 user ratings.*
+### 1. Rib-eye-Steak mit Rosmarinpommes (inspired by ichkoche.at)
+**Inspired by**: ichkoche.at; https://www.ichkoche.at/rib-eye-steak-mit-rosmarinpommes-rezept-230639 (fetched 2026-04-24). *Austrian pan-then-oven method: hot pan sear 3–4 min per side, then low oven at 120 °C for 10–15 min to rest and finish. 32 user ratings.*
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 25 min
 
 **Temperature guidance (from recipe)**: Pan sear at very high heat 3–4 min per side; rest in oven at 120 °C for 10–15 minutes. "Steaks ungewürzt in sehr heißem Öl anbraten." Season only after the oven rest.
@@ -50,8 +50,8 @@ Ugnsstekning passar entrecôten utmärkt eftersom den kraftiga marmoreringen fun
 
 ---
 
-### 2. BBC Good Food — Rib-eye steak with basil hollandaise (British tradition)
-**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/rib-eye-steak-basil-hollandaise (fetched 2026-04-24). *British method: olive oil and herb marinade, sear 3 min per side, then roast in a 200 °C oven for 15 minutes.*
+### 2. Rib-eye steak with basil hollandaise (inspired by BBC Good Food)
+**Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/rib-eye-steak-basil-hollandaise (fetched 2026-04-24). *British method: olive oil and herb marinade, sear 3 min per side, then roast in a 200 °C oven for 15 minutes.*
 **Serves**: 2 · **Prep**: 10 min + 10 min marinate · **Cook**: 20 min oven + 15 min rest
 
 **Temperature guidance (from recipe)**: Sear on high heat; slide into **200 °C fan oven for 15 minutes** turning halfway. Rest 15–20 minutes uncovered on a rack.
@@ -81,8 +81,8 @@ Ugnsstekning passar entrecôten utmärkt eftersom den kraftiga marmoreringen fun
 
 ---
 
-### 3. Chefkoch.de — Rindersteaks sanft garen mit Niedrigtemperatur (German tradition)
-**Source**: Hobbykochen, Chefkoch.de; https://www.chefkoch.de/rezepte/1870431303884255/Rindersteaks-sanft-garen-mit-Niedrigtemperatur.html (fetched 2026-04-24). *Low-temperature oven method: sear 2 min per side, then 85 °C oven for 45–50 minutes. 259 ratings, 4.8/5 stars.*
+### 3. Rindersteaks sanft garen mit Niedrigtemperatur (inspired by Chefkoch.de)
+**Inspired by**: Hobbykochen, Chefkoch.de; https://www.chefkoch.de/rezepte/1870431303884255/Rindersteaks-sanft-garen-mit-Niedrigtemperatur.html (fetched 2026-04-24). *Low-temperature oven method: sear 2 min per side, then 85 °C oven for 45–50 minutes. 259 ratings, 4.8/5 stars.*
 **Serves**: 4 · **Prep**: 1 hr (de-chill) · **Cook**: 56 min total
 
 *Translation: Beef steaks — gently cooked at low temperature. "The steaks come out butter-tender."*

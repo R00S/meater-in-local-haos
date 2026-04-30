@@ -34,8 +34,8 @@ Grilla vid medel-hög direkt värme, 3–4 minuter per sida för köfte/biffar. 
 
 ## Source recipes
 
-### 1. Nefis Yemek Tarifleri — Izgara Tavuk Köftesi (Turkish tradition)
-**Source**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/izgara-tavuk-koftesi/ (fetched 2026-04-25). *"Izgara Tavuk Köftesi — Turkish grilled chicken meatballs (köfte)."*
+### 1. Izgara Tavuk Köftesi (inspired by Nefis Yemek Tarifleri)
+**Inspired by**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/izgara-tavuk-koftesi/ (fetched 2026-04-25). *"Izgara Tavuk Köftesi — Turkish grilled chicken meatballs (köfte)."*
 **Serves**: 6–8 · **Prep**: 15 min + 1 hr rest · **Cook**: 12–15 min on grill
 
 **Ingredients**
@@ -65,8 +65,8 @@ Grilla vid medel-hög direkt värme, 3–4 minuter per sida för köfte/biffar. 
 
 ---
 
-### 2. Tori Avey — Mediterranean Grilled Chicken Burgers (Israeli / Levantine tradition)
-**Source**: Tori Avey; https://toriavey.com/mediterranean-turkey-burgers/ (fetched 2026-04-25). *"Mediterranean Turkey Burgers — can be made with ground turkey or ground chicken; Levantine-spiced grilled patties."*
+### 2. Mediterranean Grilled Chicken Burgers (inspired by Tori Avey)
+**Inspired by**: Tori Avey; https://toriavey.com/mediterranean-turkey-burgers/ (fetched 2026-04-25). *"Mediterranean Turkey Burgers — can be made with ground turkey or ground chicken; Levantine-spiced grilled patties."*
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–15 min on grill
 
 **Ingredients**
@@ -93,8 +93,8 @@ Grilla vid medel-hög direkt värme, 3–4 minuter per sida för köfte/biffar. 
 
 ---
 
-### 3. African Bites — Jamaican Chicken Patties (Jamaican / West African tradition)
-**Source**: Immaculate Bites (African Bites); https://www.africanbites.com/jamaican-chicken-patties/ (fetched 2026-04-25). *"Jamaican Chicken Patties — Scotch bonnet-spiced chicken filling, used here as a spiced grilled patty without the pastry shell."*
+### 3. Jamaican Chicken Patties (inspired by African Bites)
+**Inspired by**: Immaculate Bites (African Bites); https://www.africanbites.com/jamaican-chicken-patties/ (fetched 2026-04-25). *"Jamaican Chicken Patties — Scotch bonnet-spiced chicken filling, used here as a spiced grilled patty without the pastry shell."*
 **Serves**: 6–8 · **Prep**: 20 min · **Cook**: 12–15 min on grill
 
 *Note: The original recipe is a baked pastry (flaky turnover). The spiced chicken filling is used here as the basis for a grilled patty by adding binding agents.*
@@ -127,8 +127,8 @@ Grilla vid medel-hög direkt värme, 3–4 minuter per sida för köfte/biffar. 
 
 ---
 
-### 4. TASTE — Chicken Patties with Preserved Lemon (South African tradition)
-**Source**: TASTE magazine South Africa; https://taste.co.za/recipes/chicken-patties/ (fetched 2026-04-25). *"Chicken Patties with Preserved Lemon and Green Tahini — South African-Mediterranean fusion patties."*
+### 4. Chicken Patties with Preserved Lemon (inspired by TASTE)
+**Inspired by**: TASTE magazine South Africa; https://taste.co.za/recipes/chicken-patties/ (fetched 2026-04-25). *"Chicken Patties with Preserved Lemon and Green Tahini — South African-Mediterranean fusion patties."*
 **Serves**: 4–6 · **Prep**: 15 min · **Cook**: 10–12 min on grill
 
 **Ingredients**

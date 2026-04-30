@@ -26,8 +26,8 @@ Eftervärmen i en pan-searad ribeye är måttlig, vanligtvis 3–5 °C för ett 
 Sondplacering kräver omsorg på grund av ribeyens interna fettstruktur. För ett benfritt snitt bör sonden gå in från sidan, riktad mot det geometriska centrumet av ögat – den tätaste magra delen. Den måste undvika det interna fettvalket som ofta löper mellan ögat och spinalis (rib cap); att sätta sonden i fett ger falskt låga värden. På ben-in-versioner (côte de bœuf, cowboy ribeye) måste sonden gå in från den köttiga sidan och nå ögats centrum, aldrig nära benet – ben leder värme annorlunda än muskel och kan ge vilseledande avläsningar beroende på pannans orientering.
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Butter-Basted Pan-Seared Thick-Cut Ribeye (American tradition)
-**Source**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/butter-basted-pan-seared-thick-cut-steak-recipe  
+### 1. Butter-Basted Pan-Seared Thick-Cut Ribeye (inspired by J. Kenji López-Alt)
+**Inspired by**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/butter-basted-pan-seared-thick-cut-steak-recipe  
 **Serves**: 2 · **Prep**: 10 min (+overnight dry-brine) · **Cook**: 8–10 min · **Rest**: 5–10 min
 
 **Ingredients**
@@ -52,8 +52,8 @@ Sondplacering kräver omsorg på grund av ribeyens interna fettstruktur. För et
 
 ---
 
-### 2. Gordon Ramsay — Restaurant-Style Pan-Seared Ribeye (British/French restaurant tradition)
-**Source**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012); youtube.com/watch?v=AmC9SmCBUj4  
+### 2. Restaurant-Style Pan-Seared Ribeye (inspired by Gordon Ramsay)
+**Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012); youtube.com/watch?v=AmC9SmCBUj4  
 **Serves**: 2 · **Prep**: 5 min (+30 min tempering) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -77,8 +77,8 @@ Sondplacering kräver omsorg på grund av ribeyens interna fettstruktur. För et
 
 ---
 
-### 3. Jacques Pépin — Entrecôte Sautée au Beurre (French classical tradition)
-**Source**: Jacques Pépin, *New Complete Techniques* (Black Dog & Leventhal Publishers, 2012), combining techniques from *La Technique* (1976) and *La Méthode* (1979)  
+### 3. Entrecôte Sautée au Beurre (inspired by Jacques Pépin)
+**Inspired by**: Jacques Pépin, *New Complete Techniques* (Black Dog & Leventhal Publishers, 2012), combining techniques from *La Technique* (1976) and *La Méthode* (1979)  
 **Serves**: 2 · **Prep**: 5 min (+20 min tempering) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -103,8 +103,8 @@ Sondplacering kräver omsorg på grund av ribeyens interna fettstruktur. För et
 
 ---
 
-### 4. Nobu Matsuhisa — Pan-Seared A5 Wagyu Ribeye with Ponzu (Japanese tradition)
-**Source**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001); noburestaurants.com  
+### 4. Pan-Seared A5 Wagyu Ribeye with Ponzu (inspired by Nobu Matsuhisa)
+**Inspired by**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001); noburestaurants.com  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 3–4 min · **Rest**: 2 min
 
 **Ingredients**
@@ -126,8 +126,8 @@ Sondplacering kräver omsorg på grund av ribeyens interna fettstruktur. För et
 
 ---
 
-### 5. Stephanie Alexander — Pan-Fried Scotch Fillet (Australian tradition)
-**Source**: Stephanie Alexander, *The Cook's Companion* (Viking/Penguin, 1996; revised edition 2004), beef chapter  
+### 5. Pan-Fried Scotch Fillet (inspired by Stephanie Alexander)
+**Inspired by**: Stephanie Alexander, *The Cook's Companion* (Viking/Penguin, 1996; revised edition 2004), beef chapter  
 **Serves**: 2 · **Prep**: 5 min (+30 min tempering) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**

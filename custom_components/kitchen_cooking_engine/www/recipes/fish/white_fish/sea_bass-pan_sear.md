@@ -41,8 +41,8 @@ Europeisk havsabborre (*Dicentrarchus labrax*, italiensk: branzino/spigola, turk
 
 ## Source recipes
 
-### 1. BBC Good Food — Pan-Fried Sea Bass with Ratatouille & Basil (French / British tradition)
-**Source**: BBC Good Food magazine, July 2014;
+### 1. Pan-Fried Sea Bass with Ratatouille & Basil (inspired by BBC Good Food)
+**Inspired by**: BBC Good Food magazine, July 2014;
 bbcgoodfood.com/recipes/pan-fried-sea-bass-ratatouille-basil (fetched 2026-04-24)
 **Serves**: 2 · **Prep**: 20 min · **Cook**: 15 min
 
@@ -86,8 +86,8 @@ bbcgoodfood.com/recipes/pan-fried-sea-bass-ratatouille-basil (fetched 2026-04-24
 
 ---
 
-### 2. BBC Good Food — Sea Bass with Sizzled Ginger, Chilli & Spring Onions (Chinese tradition)
-**Source**: BBC Good Food magazine, February 2007;
+### 2. Sea Bass with Sizzled Ginger, Chilli & Spring Onions (inspired by BBC Good Food)
+**Inspired by**: BBC Good Food magazine, February 2007;
 bbcgoodfood.com/recipes/sea-bass-sizzled-ginger-chilli-spring-onions (fetched 2026-04-24)
 **Serves**: 6 · **Cook**: 10 min
 
@@ -119,8 +119,8 @@ bbcgoodfood.com/recipes/sea-bass-sizzled-ginger-chilli-spring-onions (fetched 20
 
 ---
 
-### 3. BBC Good Food — Pan-Fried Sea Bass with Citrus-Dressed Broccoli (Mediterranean tradition)
-**Source**: BBC Good Food;
+### 3. Pan-Fried Sea Bass with Citrus-Dressed Broccoli (inspired by BBC Good Food)
+**Inspired by**: BBC Good Food;
 bbcgoodfood.com/recipes/pan-fried-sea-bass-citrus-dressed-broccoli (fetched 2026-04-24)
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 10 min
 
@@ -154,8 +154,8 @@ bbcgoodfood.com/recipes/pan-fried-sea-bass-citrus-dressed-broccoli (fetched 2026
 
 ---
 
-### 4. Giallozafferano — Branzino in Padella con Zucchine al Salto e Salmoriglio (Italian tradition)
-**Source**: Giallozafferano (Italian culinary media);
+### 4. Branzino in Padella con Zucchine al Salto e Salmoriglio (inspired by Giallozafferano)
+**Inspired by**: Giallozafferano (Italian culinary media);
 ricette.giallozafferano.it/Branzino-in-padella-con-zucchine-al-salto.html (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 20 min
 
@@ -194,8 +194,8 @@ ricette.giallozafferano.it/Branzino-in-padella-con-zucchine-al-salto.html (fetch
 
 ---
 
-### 5. Nefis Yemek Tarifleri — Tavada Fileto Levrek / Pan-Fried Sea Bass Fillet (Turkish tradition)
-**Source**: Nefis Yemek Tarifleri (Turkish community recipe site);
+### 5. Tavada Fileto Levrek / Pan-Fried Sea Bass Fillet (inspired by Nefis Yemek Tarifleri)
+**Inspired by**: Nefis Yemek Tarifleri (Turkish community recipe site);
 nefisyemektarifleri.com/tavada-fileto-levrek/ (fetched 2026-04-24)
 **Serves**: 4–6 · **Prep**: 5 min · **Cook**: 10 min
 
@@ -221,8 +221,8 @@ nefisyemektarifleri.com/tavada-fileto-levrek/ (fetched 2026-04-24)
 
 ---
 
-### 6. Nagi Maehashi (RecipeTin Eats) — Crispy Pan-Fried Fish (Australian tradition)
-**Source**: Nagi Maehashi, RecipeTin Eats;
+### 6. Crispy Pan-Fried Fish (inspired by Nagi Maehashi)
+**Inspired by**: Nagi Maehashi, RecipeTin Eats;
 recipetineats.com/crispy-pan-fried-fish/ (fetched 2026-04-24)
 **Serves**: 2 · **Cook**: 5 min
 

@@ -34,8 +34,8 @@ Bryn kinden, lägg i braiseringskärl med fond, vin eller sojasås-mirin, täck 
 
 ## Source recipes
 
-### 1. Geoffrey Smeddle — Pork Cheek with Crispy Ham Hock Bon Bon (Scottish fine dining, Culinary Group B)
-**Source**: Geoffrey Smeddle (chef-patron, The Peat Inn, Fife, Scotland — 1 Michelin star), greatbritishchefs.com/recipes/pork-cheek-recipe  
+### 1. Pork Cheek with Crispy Ham Hock Bon Bon (Scottish fine dining, Culinary Group B) (inspired by Geoffrey Smeddle)
+**Inspired by**: Geoffrey Smeddle (chef-patron, The Peat Inn, Fife, Scotland — 1 Michelin star), greatbritishchefs.com/recipes/pork-cheek-recipe  
 **Serves**: 8 · **Prep**: 24 hr marinating + 30 min · **Cook**: approx. 1 hr · **Rest**: 10 min in jus
 
 **Ingredients** (pork cheeks component)
@@ -75,8 +75,8 @@ Bryn kinden, lägg i braiseringskärl med fond, vin eller sojasås-mirin, täck 
 
 ---
 
-### 2. Martin Wishart — Braised Pork Cheeks with Five Spice and Pak Choi (Scottish fine dining, Culinary Group B)
-**Source**: Martin Wishart (chef-patron, Restaurant Martin Wishart, Edinburgh — 1 Michelin star), greatbritishchefs.com/recipes/braised-pork-cheek-recipe  
+### 2. Braised Pork Cheeks with Five Spice and Pak Choi (Scottish fine dining, Culinary Group B) (inspired by Martin Wishart)
+**Inspired by**: Martin Wishart (chef-patron, Restaurant Martin Wishart, Edinburgh — 1 Michelin star), greatbritishchefs.com/recipes/braised-pork-cheek-recipe  
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 45 min (pressure cooker) + 15 min sauce · **Rest**: none
 
 **Note**: This recipe uses a pressure cooker for efficiency. 45 minutes at medium-high pressure in a domestic pressure cooker is equivalent to approximately 2–2.5 hours of conventional braising. The five spice profile (star anise, Sichuan peppercorns, cinnamon, coriander, cloves) combined with soy sauce reflects the Anglo-Asian influence characteristic of modern Scottish fine dining.
@@ -110,8 +110,8 @@ Bryn kinden, lägg i braiseringskärl med fond, vin eller sojasås-mirin, täck 
 
 ---
 
-### 3. Graham Campbell — Braised Pork Cheeks with Baby Leeks, Sultana Ragu and Caraway Jus (Scottish fine dining, Culinary Group B)
-**Source**: Graham Campbell (chef, Culpeper, London — formerly Edinburgh fine dining), greatbritishchefs.com/recipes/braised-pork-cheeks-recipe  
+### 3. Braised Pork Cheeks with Baby Leeks, Sultana Ragu and Caraway Jus (Scottish fine dining, Culinary Group B) (inspired by Graham Campbell)
+**Inspired by**: Graham Campbell (chef, Culpeper, London — formerly Edinburgh fine dining), greatbritishchefs.com/recipes/braised-pork-cheeks-recipe  
 **Serves**: 4 · **Prep**: 24 hr marinating + 30 min · **Cook**: 6 hr (sous vide at 80 °C) · **Rest**: none needed
 
 **Note**: This recipe uses a sous vide water bath at 80 °C for 6 hours. In sous vide, the internal temperature of the cheeks equilibrates to the bath temperature (80 °C / 176 °F) and is held there continuously, achieving full collagen hydrolysis over 6 hours at a lower temperature than a conventional braise. The result is slightly more structured / firmer than the conventional braise at 88–93 °C, while still being tender enough to "hold their shape when removed from the bag." This is a legitimate alternative doneness target: 80 °C / 176 °F sustained × 6 hours (MEATER will report 80 °C at hold point). The conventional braise equivalent is 88–93 °C.

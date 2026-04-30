@@ -26,8 +26,8 @@ För hel picanha utan skärning rostar ugnsrostning vid 180–200 °C hela styck
 Skåra fettkappan i ett rutmönster (snitt genom fett, inte in i muskel) före rostning för att hjälpa den att rendera jämnare och förhindra att den krullar sig. MEATER-sond går längs i den tjockaste delen av muskeln, undvikande fettkappan. Eftervärme från en 120–140 °C ugn är 4–6 °C; från en 200 °C ugn, 5–7 °C.
 ## Source recipes
 
-### 1. America's Test Kitchen — Oven-Roasted Picanha (American tradition)
-**Source**: America's Test Kitchen, *The Complete Cook's Country TV Show Cookbook* (America's Test Kitchen, 2015)  
+### 1. Oven-Roasted Picanha (inspired by America's Test Kitchen)
+**Inspired by**: America's Test Kitchen, *The Complete Cook's Country TV Show Cookbook* (America's Test Kitchen, 2015)  
 **Serves**: 6 · **Prep**: 5 min (+overnight dry brine) · **Cook**: 30–40 min + stovetop sear · **Rest**: 10 min
 
 **Ingredients**
@@ -48,8 +48,8 @@ Skåra fettkappan i ett rutmönster (snitt genom fett, inte in i muskel) före r
 
 ---
 
-### 2. Gordon Ramsay — Roast Rump Cap (British restaurant tradition)
-**Source**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
+### 2. Roast Rump Cap (inspired by Gordon Ramsay)
+**Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
 **Serves**: 6 · **Prep**: 5 min · **Cook**: 35–45 min · **Rest**: 10 min
 
 **Ingredients**
@@ -71,8 +71,8 @@ Skåra fettkappan i ett rutmönster (snitt genom fett, inte in i muskel) före r
 
 ---
 
-### 3. Heston Blumenthal — Reverse-Sear Picanha (British Modernist tradition)
-**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
+### 3. Reverse-Sear Picanha (inspired by Heston Blumenthal)
+**Inspired by**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
 **Serves**: 6 · **Prep**: 5 min · **Cook**: 1 h at 120 °C + 5 min sear · **Rest**: 5 min
 
 **Ingredients**
@@ -90,8 +90,8 @@ Skåra fettkappan i ett rutmönster (snitt genom fett, inte in i muskel) före r
 
 ---
 
-### 4. Neil Perry — Roast Rump Cap with Herb Crust (Australian tradition)
-**Source**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
+### 4. Roast Rump Cap with Herb Crust (inspired by Neil Perry)
+**Inspired by**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
 **Serves**: 4 · **Prep**: 10 min (+30 min dry brine) · **Cook**: 30–40 min · **Rest**: 8 min
 
 **Ingredients**
@@ -110,8 +110,8 @@ Skåra fettkappan i ett rutmönster (snitt genom fett, inte in i muskel) före r
 
 ---
 
-### 5. Donna Hay — Roasted Picanha with Chimichurri (Australian tradition)
-**Source**: Donna Hay, *The New Easy* (HarperCollins Australia, 2012)  
+### 5. Roasted Picanha with Chimichurri (inspired by Donna Hay)
+**Inspired by**: Donna Hay, *The New Easy* (HarperCollins Australia, 2012)  
 **Serves**: 4 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 30–40 min · **Rest**: 8 min
 
 **Ingredients**

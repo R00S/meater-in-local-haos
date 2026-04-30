@@ -34,8 +34,8 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ## Source recipes
 
-### 1. Nefis Yemek Tarifleri — Fırında Kuzu İncik (Turkish tradition)
-**Source**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/firinda-kuzu-incik-5375085/ (fetched 2026-04-25). *"Fırında Kuzu İncik — Turkish oven-baked lamb shanks, tandır style."*
+### 1. Fırında Kuzu İncik (inspired by Nefis Yemek Tarifleri)
+**Inspired by**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/firinda-kuzu-incik-5375085/ (fetched 2026-04-25). *"Fırında Kuzu İncik — Turkish oven-baked lamb shanks, tandır style."*
 **Serves**: 8–10 · **Prep**: 30 min · **Cook**: ~3 hr
 
 **Ingredients**
@@ -66,8 +66,8 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ---
 
-### 2. Argiro.gr — Αρνίσιο Κότσι στη Γάστρα (Greek tradition)
-**Source**: Argiro Barbarigou; https://www.argiro.gr/recipe/arnisio-kotsi-sti-gastra/ (fetched 2026-04-25). *"Αρνίσιο Κότσι στη Γάστρα — lamb shank in a sealed clay pot (gastra), a signature Greek method."*
+### 2. Αρνίσιο Κότσι στη Γάστρα (inspired by Argiro.gr)
+**Inspired by**: Argiro Barbarigou; https://www.argiro.gr/recipe/arnisio-kotsi-sti-gastra/ (fetched 2026-04-25). *"Αρνίσιο Κότσι στη Γάστρα — lamb shank in a sealed clay pot (gastra), a signature Greek method."*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 2 hr 30 min at 180 °C
 
 **Ingredients**
@@ -97,8 +97,8 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ---
 
-### 3. Giallo Zafferano — Agnello al forno con patate (Italian tradition)
-**Source**: Ricette GialloZafferano; https://ricette.giallozafferano.it/Agnello-al-forno-con-patate.html (fetched 2026-04-25). *"Agnello al forno con patate — classic Italian oven lamb with potatoes."*
+### 3. Agnello al forno con patate (inspired by Giallo Zafferano)
+**Inspired by**: Ricette GialloZafferano; https://ricette.giallozafferano.it/Agnello-al-forno-con-patate.html (fetched 2026-04-25). *"Agnello al forno con patate — classic Italian oven lamb with potatoes."*
 **Serves**: 4–6 · **Prep**: 20 min + 30 min soak · **Cook**: 1 hr 30 min at 200 °C
 
 **Ingredients**
@@ -123,8 +123,8 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ---
 
-### 4. Madensverden.dk — Lammeskank i rødvin (oven version) (Danish tradition)
-**Source**: Madensverden.dk (Holger Rørby Madsen); https://madensverden.dk/lammeskank-roedvin-langtidsstegt/ (fetched 2026-04-25). *"Lammeskank i rødvin — red wine lamb shank, cooked low in the oven as a covered braise."*
+### 4. Lammeskank i rødvin (oven version) (inspired by Madensverden.dk)
+**Inspired by**: Madensverden.dk (Holger Rørby Madsen); https://madensverden.dk/lammeskank-roedvin-langtidsstegt/ (fetched 2026-04-25). *"Lammeskank i rødvin — red wine lamb shank, cooked low in the oven as a covered braise."*
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 2 hr 30 min (oven at 160 °C covered)
 
 *Oven variation: the stovetop version simmers for 2.5 hours; equivalently, the pot can be placed in a 160 °C oven, covered, for the same duration.*

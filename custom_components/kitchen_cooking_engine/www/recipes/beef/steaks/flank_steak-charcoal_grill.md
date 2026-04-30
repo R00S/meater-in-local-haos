@@ -17,8 +17,8 @@ Flank steak is a flat, thin muscle cut from the abdominal wall of the animal (th
 Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med långa, grova fibrer som löper synligt längs hela längden. Snittet är magert, relativt tufft och har lite intramuskulårt fett – det saknar ribeyens marmorering men kompenserar med kraftig, nötig smak. Kolgrillning är den klassiska metoden för flank steak: den höga, direkta strålningsvärmen från glödande kol ger en snabb, intensiv Maillard-skorpa över den breda ytan innan insidan hinner överkokas. Flank steak måste tillagas snabbt över mycket hög värme och skivas tunt mot ådringen för att bli mör – långsam tillagning motverkar syftet. Eftervärmen är minimal i en tunn flank steak, men eftersom den oftast tillagas över extrem värme kan den korta temperaturökningen efter uttag föra biffen från medium-rare till medium om man inte är uppmärksam.
 ## Source recipes
 
-### 1. Francis Mallmann — Argentine Flank on Charcoal (*Vacio a la parrilla*)
-**Source**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009)  
+### 1. Argentine Flank on Charcoal (*Vacio a la parrilla*) (inspired by Francis Mallmann)
+**Inspired by**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009)  
 **Serves**: 4 · **Prep**: 10 min (+overnight salt) · **Cook**: 12–16 min over embers · **Rest**: 8 min
 
 **Ingredients**
@@ -37,8 +37,8 @@ Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med lån
 
 ---
 
-### 2. Aaron Franklin — Charcoal-Grilled Flank Steak (Texas tradition)
-**Source**: Aaron Franklin & Jordan Mackay, *Franklin Steak* (Ten Speed Press, 2019)  
+### 2. Charcoal-Grilled Flank Steak (inspired by Aaron Franklin)
+**Inspired by**: Aaron Franklin & Jordan Mackay, *Franklin Steak* (Ten Speed Press, 2019)  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 8–12 min · **Rest**: 5–8 min
 
 **Ingredients**
@@ -58,8 +58,8 @@ Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med lån
 
 ---
 
-### 3. Ottolenghi — Middle Eastern Marinated Flank Steak on Charcoal
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk/recipes  
+### 3. Middle Eastern Marinated Flank Steak on Charcoal (inspired by Ottolenghi)
+**Inspired by**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk/recipes  
 **Serves**: 4 · **Prep**: 20 min (+overnight marinate) · **Cook**: 10–14 min · **Rest**: 5 min
 
 **Ingredients**
@@ -87,8 +87,8 @@ Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med lån
 
 ---
 
-### 4. Nobu Matsuhisa — Charcoal-Grilled Flank with Soy Citrus Glaze (Japanese-Californian tradition)
-**Source**: Nobu Matsuhisa, *Nobu the Cookbook* (Kodansha, 2001)  
+### 4. Charcoal-Grilled Flank with Soy Citrus Glaze (inspired by Nobu Matsuhisa)
+**Inspired by**: Nobu Matsuhisa, *Nobu the Cookbook* (Kodansha, 2001)  
 **Serves**: 4 · **Prep**: 15 min (+2 hr marinate) · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -112,8 +112,8 @@ Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med lån
 
 ---
 
-### 5. Diana Barrios Treviño — Tex-Mex Carne Asada Flank Steak
-**Source**: Diana Barrios Treviño, *Los Barrios Family Cookbook* (Villard, 2002)  
+### 5. Tex-Mex Carne Asada Flank Steak (inspired by Diana Barrios Treviño)
+**Inspired by**: Diana Barrios Treviño, *Los Barrios Family Cookbook* (Villard, 2002)  
 **Serves**: 6 · **Prep**: 20 min (+4 hr marinate) · **Cook**: 12–16 min · **Rest**: 5 min
 
 **Ingredients**

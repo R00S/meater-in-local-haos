@@ -21,8 +21,8 @@ En lätt beläggning av kryddad mjöl eller det nakna köttet fungerar båda —
 
 ## Source recipes
 
-### 1. Heston Blumenthal — Fish and Chips at Home (British tradition)
-**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
+### 1. Fish and Chips at Home (inspired by Heston Blumenthal)
+**Inspired by**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
 **Serves**: 2 · **Prep**: 30 min (+30 min rest for batter) · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -44,8 +44,8 @@ En lätt beläggning av kryddad mjöl eller det nakna köttet fungerar båda —
 
 ---
 
-### 2. Julia Child — Filets de Poisson Sautés au Beurre (French classical tradition)
-**Source**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961)  
+### 2. Filets de Poisson Sautés au Beurre (inspired by Julia Child)
+**Inspired by**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -70,8 +70,8 @@ En lätt beläggning av kryddad mjöl eller det nakna köttet fungerar båda —
 
 ---
 
-### 3. Rick Stein — Pan-Fried Cod with Lemon and Capers (British seafood tradition)
-**Source**: Rick Stein, *Rick Stein's Seafood* (BBC Books, 2001)  
+### 3. Pan-Fried Cod with Lemon and Capers (inspired by Rick Stein)
+**Inspired by**: Rick Stein, *Rick Stein's Seafood* (BBC Books, 2001)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 7–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -96,8 +96,8 @@ En lätt beläggning av kryddad mjöl eller det nakna köttet fungerar båda —
 
 ---
 
-### 4. Tetsuya Wakuda — Pan-Fried Blue Cod with Yuzu Butter (Japanese-Australian tradition)
-**Source**: Tetsuya Wakuda, *Tetsuya* (Penguin Australia, 2000)  
+### 4. Pan-Fried Blue Cod with Yuzu Butter (inspired by Tetsuya Wakuda)
+**Inspired by**: Tetsuya Wakuda, *Tetsuya* (Penguin Australia, 2000)  
 **Serves**: 2 · **Prep**: 10 min (+1 h dry cure) · **Cook**: 7–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -120,8 +120,8 @@ En lätt beläggning av kryddad mjöl eller det nakna köttet fungerar båda —
 
 ---
 
-### 5. Jacques Pépin — Sole Meunière (French classical tradition, applied to cod)
-**Source**: Jacques Pépin, *New Complete Techniques* (Black Dog & Leventhal Publishers, 2012), based on *La Technique* (1976)  
+### 5. Sole Meunière (inspired by Jacques Pépin)
+**Inspired by**: Jacques Pépin, *New Complete Techniques* (Black Dog & Leventhal Publishers, 2012), based on *La Technique* (1976)  
 **Serves**: 2 · **Prep**: 8 min · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**

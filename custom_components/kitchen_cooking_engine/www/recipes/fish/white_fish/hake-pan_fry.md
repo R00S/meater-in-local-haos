@@ -21,8 +21,8 @@ Hakeköttet är något mjukare än torsk rått — det tål inte aggressiv hante
 
 ## Source recipes
 
-### 1. José Andrés — Merluza a la Plancha (Spanish / Basque tradition)
-**Source**: José Andrés, *Tapas: A Taste of Spain in America* (Clarkson Potter, 2005)  
+### 1. Merluza a la Plancha (inspired by José Andrés)
+**Inspired by**: José Andrés, *Tapas: A Taste of Spain in America* (Clarkson Potter, 2005)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -47,8 +47,8 @@ Hakeköttet är något mjukare än torsk rått — det tål inte aggressiv hante
 
 ---
 
-### 2. Rick Stein — Pan-Fried Hake with Salsa Verde (British / Spanish tradition)
-**Source**: Rick Stein, *Rick Stein's Spain* (BBC Books, 2011)  
+### 2. Pan-Fried Hake with Salsa Verde (inspired by Rick Stein)
+**Inspired by**: Rick Stein, *Rick Stein's Spain* (BBC Books, 2011)  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 7–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -69,8 +69,8 @@ Hakeköttet är något mjukare än torsk rått — det tål inte aggressiv hante
 
 ---
 
-### 3. Paula Wolfert — Pescada Frita (Portuguese tradition)
-**Source**: Paula Wolfert, *The Cooking of the Eastern Mediterranean* (HarperCollins, 1994)  
+### 3. Pescada Frita (inspired by Paula Wolfert)
+**Inspired by**: Paula Wolfert, *The Cooking of the Eastern Mediterranean* (HarperCollins, 1994)  
 **Serves**: 4 · **Prep**: 15 min (+30 min marinade) · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -95,8 +95,8 @@ Hakeköttet är något mjukare än torsk rått — det tål inte aggressiv hante
 
 ---
 
-### 4. Marcella Hazan — Merluzzo Fritto (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)  
+### 4. Merluzzo Fritto (inspired by Marcella Hazan)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -119,8 +119,8 @@ Hakeköttet är något mjukare än torsk rått — det tål inte aggressiv hante
 
 ---
 
-### 5. Donna Hay — Pan-Fried Hake with Salsa Verde (Australian / European tradition)
-**Source**: Donna Hay, *Fresh and Light* (HarperCollins Australia, 2012)  
+### 5. Pan-Fried Hake with Salsa Verde (inspired by Donna Hay)
+**Inspired by**: Donna Hay, *Fresh and Light* (HarperCollins Australia, 2012)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**

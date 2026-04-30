@@ -20,8 +20,8 @@ T-bone-biffen definieras av det T-formade kotbenet som separerar två anatomiskt
 T-bone skärs från short loin, framför sirloin. Tjocklek är vanligtvis 2,5–4 cm; en porterhouse är tjockare och med större filéportion från samma region. Sonden placeras alltid i striploin-delen, bort från benet, för den mest pålitliga avläsningen.
 ## Source recipes
 
-### 1. America's Test Kitchen — Air Fryer T-Bone Steak (American tradition)
-**Source**: America's Test Kitchen, *Air Fryer Perfection* (America's Test Kitchen, 2019)  
+### 1. Air Fryer T-Bone Steak (inspired by America's Test Kitchen)
+**Inspired by**: America's Test Kitchen, *Air Fryer Perfection* (America's Test Kitchen, 2019)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 12–14 min · **Rest**: 5 min
 
 **Ingredients**
@@ -39,8 +39,8 @@ T-bone skärs från short loin, framför sirloin. Tjocklek är vanligtvis 2,5–
 
 ---
 
-### 2. Jamie Oliver — Air Fryer T-Bone with Garlic Butter (British tradition)
-**Source**: Jamie Oliver, *7 Ways* (Michael Joseph / Penguin, 2020), adapted for air fryer  
+### 2. Air Fryer T-Bone with Garlic Butter (inspired by Jamie Oliver)
+**Inspired by**: Jamie Oliver, *7 Ways* (Michael Joseph / Penguin, 2020), adapted for air fryer  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 12–14 min · **Rest**: 5 min
 
 **Ingredients**
@@ -59,8 +59,8 @@ T-bone skärs från short loin, framför sirloin. Tjocklek är vanligtvis 2,5–
 
 ---
 
-### 3. Gordon Ramsay — Air Fryer T-Bone, Peppercorn Sauce (British restaurant tradition)
-**Source**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012); adapted for air fryer  
+### 3. Air Fryer T-Bone, Peppercorn Sauce (inspired by Gordon Ramsay)
+**Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012); adapted for air fryer  
 **Serves**: 2 · **Prep**: 5 min (+30 min dry brine) · **Cook**: 12–14 min · **Rest**: 5 min
 
 **Ingredients**
@@ -79,8 +79,8 @@ T-bone skärs från short loin, framför sirloin. Tjocklek är vanligtvis 2,5–
 
 ---
 
-### 4. Donna Hay — Air Fryer T-Bone with Béarnaise (Australian tradition)
-**Source**: Donna Hay, *The Fast 400 Cookbook* (HarperCollins Australia, 2020)  
+### 4. Air Fryer T-Bone with Béarnaise (inspired by Donna Hay)
+**Inspired by**: Donna Hay, *The Fast 400 Cookbook* (HarperCollins Australia, 2020)  
 **Serves**: 2 · **Prep**: 5 min (+30 min dry brine) · **Cook**: 12–14 min · **Rest**: 5 min
 
 **Ingredients**
@@ -98,8 +98,8 @@ T-bone skärs från short loin, framför sirloin. Tjocklek är vanligtvis 2,5–
 
 ---
 
-### 5. Nigella Lawson — Air Fryer T-Bone with Tarragon Butter (British contemporary tradition)
-**Source**: Nigella Lawson, *Cook, Eat, Repeat* (Chatto & Windus, 2020)  
+### 5. Air Fryer T-Bone with Tarragon Butter (inspired by Nigella Lawson)
+**Inspired by**: Nigella Lawson, *Cook, Eat, Repeat* (Chatto & Windus, 2020)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 12–14 min · **Rest**: 5 min
 
 **Ingredients**

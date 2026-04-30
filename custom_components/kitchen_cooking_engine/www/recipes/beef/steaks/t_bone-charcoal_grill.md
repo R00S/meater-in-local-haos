@@ -20,8 +20,8 @@ T-bone-biffen definieras av det T-formade ländkotbenet som separerar två anato
 T-bone skärs från short loin, framför sirloin. Tjocklek är vanligtvis 2,5–4 cm; en porterhouse är tjockare och med större filéportion från samma region. Sonden placeras alltid i striploin-delen, bort från benet, för den mest pålitliga avläsningen.
 ## Source recipes
 
-### 1. Francis Mallmann — T-Bone over Charcoal Embers (Argentine *parrilla* tradition)
-**Source**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
+### 1. T-Bone over Charcoal Embers (inspired by Francis Mallmann)
+**Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 14–18 min over embers · **Rest**: 5 min
 
 **Ingredients**
@@ -43,8 +43,8 @@ T-bone skärs från short loin, framför sirloin. Tjocklek är vanligtvis 2,5–
 
 ---
 
-### 2. Steven Raichlen — T-Bone over Live Charcoal (American BBQ tradition)
-**Source**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
+### 2. T-Bone over Live Charcoal (inspired by Steven Raichlen)
+**Inspired by**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 12–15 min · **Rest**: 5 min
 
 **Ingredients**
@@ -65,8 +65,8 @@ T-bone skärs från short loin, framför sirloin. Tjocklek är vanligtvis 2,5–
 
 ---
 
-### 3. Lennox Hastie — T-Bone over Australian Hardwood (Australian live-fire tradition)
-**Source**: Lennox Hastie, *Finding Fire* (Hardie Grant, 2017)  
+### 3. T-Bone over Australian Hardwood (inspired by Lennox Hastie)
+**Inspired by**: Lennox Hastie, *Finding Fire* (Hardie Grant, 2017)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 12–16 min · **Rest**: 5 min
 
 **Ingredients**
@@ -86,8 +86,8 @@ T-bone skärs från short loin, framför sirloin. Tjocklek är vanligtvis 2,5–
 
 ---
 
-### 4. Bobby Flay — Charcoal T-Bone with Garlic Herb Crust (American Southwest tradition)
-**Source**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
+### 4. Charcoal T-Bone with Garlic Herb Crust (inspired by Bobby Flay)
+**Inspired by**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 5 min
 
 **Ingredients**
@@ -106,8 +106,8 @@ T-bone skärs från short loin, framför sirloin. Tjocklek är vanligtvis 2,5–
 
 ---
 
-### 5. Neil Perry — Charcoal T-Bone, Café de Paris Butter (Australian tradition)
-**Source**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
+### 5. Charcoal T-Bone, Café de Paris Butter (inspired by Neil Perry)
+**Inspired by**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
 **Serves**: 2 · **Prep**: 10 min (+1 h dry brine) · **Cook**: 12–15 min · **Rest**: 5 min
 
 **Ingredients**

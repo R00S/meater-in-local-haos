@@ -22,8 +22,8 @@ Ugnsrostning av en T-bone är mest effektiv som en reverse-sear: börja vid 120�
 Den tvåmuskelgeometrin (striploin + filé) *hjälps* faktiskt av reverse sear: den långsamma låga ugnen equilibrerar temperaturen över båda musklerna, vilket minimerar differentialen. Det isolerande benet orsakar fortfarande att köttet närmast benet ligger 3–5 °C efter — detta är önskvärt för alla som föredrar filén något rareare än stripen. MEATER-sond i striploin-sidan, bort från benet. Eftervärme efter ugnsfasen är 4–6 °C; efter den slutliga högvärmebryningen, 2–3 °C.
 ## Source recipes
 
-### 1. America's Test Kitchen — Reverse-Sear T-Bone (American tradition)
-**Source**: America's Test Kitchen, *The Complete Cook's Country TV Show Cookbook* (America's Test Kitchen, 2015)  
+### 1. Reverse-Sear T-Bone (inspired by America's Test Kitchen)
+**Inspired by**: America's Test Kitchen, *The Complete Cook's Country TV Show Cookbook* (America's Test Kitchen, 2015)  
 **Serves**: 2 · **Prep**: 5 min (+overnight dry brine) · **Cook**: 30–45 min low oven + 3 min sear · **Rest**: 2 min
 
 **Ingredients**
@@ -43,8 +43,8 @@ Den tvåmuskelgeometrin (striploin + filé) *hjälps* faktiskt av reverse sear: 
 
 ---
 
-### 2. Gordon Ramsay — Oven-Finished T-Bone (British restaurant tradition)
-**Source**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
+### 2. Oven-Finished T-Bone (inspired by Gordon Ramsay)
+**Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 4 min sear + 10–14 min oven · **Rest**: 5 min
 
 **Ingredients**
@@ -67,8 +67,8 @@ Den tvåmuskelgeometrin (striploin + filé) *hjälps* faktiskt av reverse sear: 
 
 ---
 
-### 3. Heston Blumenthal — Ultra-Low Oven T-Bone (British Modernist tradition)
-**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
+### 3. Ultra-Low Oven T-Bone (inspired by Heston Blumenthal)
+**Inspired by**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 1 h at 52 °C oven + 2 min sear · **Rest**: 0 min
 
 **Ingredients**
@@ -85,8 +85,8 @@ Den tvåmuskelgeometrin (striploin + filé) *hjälps* faktiskt av reverse sear: 
 
 ---
 
-### 4. Alice Waters — Roasted T-Bone with Herb Butter (California tradition)
-**Source**: Alice Waters, *The Chez Panisse Menu Cookbook* (Random House, 1982)  
+### 4. Roasted T-Bone with Herb Butter (inspired by Alice Waters)
+**Inspired by**: Alice Waters, *The Chez Panisse Menu Cookbook* (Random House, 1982)  
 **Serves**: 2 · **Prep**: 10 min (+1 h dry brine) · **Cook**: 4 min sear + 10–14 min oven · **Rest**: 5 min
 
 **Ingredients**
@@ -105,8 +105,8 @@ Den tvåmuskelgeometrin (striploin + filé) *hjälps* faktiskt av reverse sear: 
 
 ---
 
-### 5. Fergus Henderson — Roasted T-Bone (British tradition)
-**Source**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
+### 5. Roasted T-Bone (inspired by Fergus Henderson)
+**Inspired by**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 4 min sear + 10–14 min oven · **Rest**: 5 min
 
 **Ingredients**

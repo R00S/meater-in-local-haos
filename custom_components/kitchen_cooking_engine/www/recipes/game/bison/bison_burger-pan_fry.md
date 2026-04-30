@@ -20,8 +20,8 @@ Bison är fullt säkert vid 71 °C / 160 °F (USDA-tröskel för malet viltkött
 
 ## Source recipes
 
-### 1. Hank Shaw — Pan-Seared Bison Burgers with Caramelised Onions (American hunter tradition)
-**Source**: Hank Shaw, *Buck, Buck, Moose: Recipes and Techniques for Cooking Deer, Elk, Moose, Antelope and Other Antlered Things* (Rader Books, 2014); honest-food.net — bison-burger section  
+### 1. Pan-Seared Bison Burgers with Caramelised Onions (inspired by Hank Shaw)
+**Inspired by**: Hank Shaw, *Buck, Buck, Moose: Recipes and Techniques for Cooking Deer, Elk, Moose, Antelope and Other Antlered Things* (Rader Books, 2014); honest-food.net — bison-burger section  
 **Serves**: 4 · **Prep**: 15 min (+ 30 min onion cook) · **Cook**: 9 min · **Rest**: 4 min
 
 **Ingredients**
@@ -42,8 +42,8 @@ Bison är fullt säkert vid 71 °C / 160 °F (USDA-tröskel för malet viltkött
 
 ---
 
-### 2. Tina Nordström — Pannstekt Bisonburgare med Lingon-Aioli (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se — viltsektionen  
+### 2. Pannstekt Bisonburgare med Lingon-Aioli (inspired by Tina Nordström)
+**Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se — viltsektionen  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 4 min
 
 **Ingredients**
@@ -64,8 +64,8 @@ Bison är fullt säkert vid 71 °C / 160 °F (USDA-tröskel för malet viltkött
 
 ---
 
-### 3. America's Test Kitchen — Pan-Seared Bison Burgers (American test-kitchen tradition)
-**Source**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011) — bison-specific adaptation; cooksillustrated.com  
+### 3. Pan-Seared Bison Burgers (inspired by America's Test Kitchen)
+**Inspired by**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011) — bison-specific adaptation; cooksillustrated.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 4 min
 
 **Ingredients**
@@ -87,8 +87,8 @@ Bison är fullt säkert vid 71 °C / 160 °F (USDA-tröskel för malet viltkött
 
 ---
 
-### 4. Magnus Nilsson — Pannstekt Bisonburgare med Enbärsmajonnäs (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) — pan-fried game burger technique  
+### 4. Pannstekt Bisonburgare med Enbärsmajonnäs (inspired by Magnus Nilsson)
+**Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) — pan-fried game burger technique  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 4 min
 
 **Ingredients**

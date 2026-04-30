@@ -18,8 +18,8 @@ Portabello-svampar (*Agaricus bisporus* mogna) sauterade hela eller i tjocka ski
 
 ## Source recipes
 
-### 1. Fuchsia Dunlop — Sautéed Portobello with Black Bean Sauce (Chinese tradition)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012); stir-fry technique with black bean sauce applied to portobello.
+### 1. Sautéed Portobello with Black Bean Sauce (inspired by Fuchsia Dunlop)
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012); stir-fry technique with black bean sauce applied to portobello.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 1 min
 
 **Ingredients**
@@ -43,8 +43,8 @@ Portabello-svampar (*Agaricus bisporus* mogna) sauterade hela eller i tjocka ski
 
 ---
 
-### 2. Madhur Jaffrey — Portobello Masala Sauté (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); mushroom masala technique applied to portobello.
+### 2. Portobello Masala Sauté (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); mushroom masala technique applied to portobello.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–14 min · **Rest**: 2 min
 
 **Ingredients**
@@ -71,8 +71,8 @@ Portabello-svampar (*Agaricus bisporus* mogna) sauterade hela eller i tjocka ski
 
 ---
 
-### 3. Julia Child — Sautéed Portobello with Herbs (French tradition)
-**Source**: Julia Child, *The French Chef Cookbook* (Alfred A. Knopf, 1968); champignons sautés method applied to large portobello caps.
+### 3. Sautéed Portobello with Herbs (inspired by Julia Child)
+**Inspired by**: Julia Child, *The French Chef Cookbook* (Alfred A. Knopf, 1968); champignons sautés method applied to large portobello caps.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -95,8 +95,8 @@ Portabello-svampar (*Agaricus bisporus* mogna) sauterade hela eller i tjocka ski
 
 ---
 
-### 4. Deborah Madison — Sautéed Portobello with Balsamic and Spinach (American vegetarian tradition)
-**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
+### 4. Sautéed Portobello with Balsamic and Spinach (inspired by Deborah Madison)
+**Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**

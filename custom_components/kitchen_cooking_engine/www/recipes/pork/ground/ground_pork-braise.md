@@ -23,8 +23,8 @@ USDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertempe
 
 ## Source recipes
 
-### 1. Marcella Hazan — Ragù Bianco di Maiale (Italian tradition)
-**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997)  
+### 1. Ragù Bianco di Maiale (inspired by Marcella Hazan)
+**Inspired by**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 90 min · **Rest**: 5 min
 
 **Ingredients**
@@ -56,8 +56,8 @@ USDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertempe
 
 ---
 
-### 2. Andrea Nguyen — Thịt Băm Kho (Vietnamese caramelised braised pork)
-**Source**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019); vietworldkitchen.com  
+### 2. Thịt Băm Kho (Vietnamese caramelised braised pork) (inspired by Andrea Nguyen)
+**Inspired by**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019); vietworldkitchen.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 45 min · **Rest**: 5 min
 
 **Ingredients**
@@ -85,8 +85,8 @@ USDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertempe
 
 ---
 
-### 3. Yotam Ottolenghi — Spiced Pork Mince with Yoghurt (Levantine tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014) technique extended; ottolenghi.co.uk recipes — pork mince adaptations  
+### 3. Spiced Pork Mince with Yoghurt (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014) technique extended; ottolenghi.co.uk recipes — pork mince adaptations  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 50 min · **Rest**: 5 min
 
 **Ingredients**
@@ -116,8 +116,8 @@ USDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertempe
 
 ---
 
-### 4. Tina Nordström — Köttfärssås på Fläsk (Swedish ragù tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
+### 4. Köttfärssås på Fläsk (inspired by Tina Nordström)
+**Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 75 min · **Rest**: 10 min
 
 **Ingredients**

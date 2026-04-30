@@ -18,8 +18,8 @@ Palsternacka (*Pastinaca sativa*) i airfryern blir gyllenbrun, karameliserad och
 
 ## Source recipes
 
-### 1. Nigel Slater — Air-Fried Honey-Glazed Parsnips (British tradition)
-**Source**: Nigel Slater, *Tender Vol. I* (4th Estate, 2009); honey-roasted parsnip technique adapted for air fryer.
+### 1. Air-Fried Honey-Glazed Parsnips (inspired by Nigel Slater)
+**Inspired by**: Nigel Slater, *Tender Vol. I* (4th Estate, 2009); honey-roasted parsnip technique adapted for air fryer.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 18–20 min · **Rest**: 3 min
 
 **Ingredients**
@@ -33,8 +33,8 @@ Palsternacka (*Pastinaca sativa*) i airfryern blir gyllenbrun, karameliserad och
 
 ---
 
-### 2. Magnus Nilsson — Air-Fried Parsnips with Brown Butter (Nordic / Swedish tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015); Swedish root vegetable technique.
+### 2. Air-Fried Parsnips with Brown Butter (inspired by Magnus Nilsson)
+**Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015); Swedish root vegetable technique.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 18–20 min · **Rest**: 3 min
 
 **Ingredients**
@@ -47,8 +47,8 @@ Palsternacka (*Pastinaca sativa*) i airfryern blir gyllenbrun, karameliserad och
 
 ---
 
-### 3. Madhur Jaffrey — Air-Fried Spiced Parsnips (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); spice roasting technique adapted for parsnips in air fryer.
+### 3. Air-Fried Spiced Parsnips (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); spice roasting technique adapted for parsnips in air fryer.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 18–20 min · **Rest**: 2 min
 
 **Ingredients**
@@ -60,8 +60,8 @@ Palsternacka (*Pastinaca sativa*) i airfryern blir gyllenbrun, karameliserad och
 
 ---
 
-### 4. Yotam Ottolenghi — Air-Fried Parsnips with Za'atar and Labneh (Israeli / Middle Eastern tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014); adapted for air fryer.
+### 4. Air-Fried Parsnips with Za'atar and Labneh (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014); adapted for air fryer.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 18–20 min · **Rest**: 3 min
 
 **Ingredients**

@@ -17,8 +17,8 @@ Filet mignon (psoas major, narrow end) is the most tender, leanest steak in any 
 Filet mignon (psoas major, smal ände) är det magraste och mjukaste biffsnittet i slaktkroppen – muskeln utför nästan inget arbete under djurets liv, vilket ger en finådrad, nästan fettfri textur. Pan-frying i lite olja eller fett över hög värme är en klassisk fransk bistro-metod för filébiff: den ger fullkontakt Maillard-skorpa på båda ytorna medan den magra insidan värms försiktigt genom ledning genom skorpan. Eftersom filet mignon inte har fett att rendera och basa själv måste man använda tillsatt fett (smör, olja eller benmärg) för att efterlikna basningsfunktionen. Eftervärmen är minimal för en liten, tät medaljong i panna – när biffen tas från den heta metallytan stoppas den ledande värmeöverföringen nästan omedelbart.
 ## Source recipes
 
-### 1. Julia Child — Pan-Fried Filet de Bœuf (French bistro tradition)
-**Source**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking* (Alfred A. Knopf, 1961)  
+### 1. Pan-Fried Filet de Bœuf (inspired by Julia Child)
+**Inspired by**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking* (Alfred A. Knopf, 1961)  
 **Serves**: 2 · **Prep**: 5 min (+1 hr tempering) · **Cook**: 6–8 min · **Rest**: 3 min
 
 **Ingredients**
@@ -42,8 +42,8 @@ Filet mignon (psoas major, smal ände) är det magraste och mjukaste biffsnittet
 
 ---
 
-### 2. J. Kenji López-Alt — Pan-Fried Filet Mignon with Butter Baste
-**Source**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015); seriouseats.com/filet-mignon  
+### 2. Pan-Fried Filet Mignon with Butter Baste (inspired by J. Kenji López-Alt)
+**Inspired by**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015); seriouseats.com/filet-mignon  
 **Serves**: 2 · **Prep**: 5 min (+overnight dry-brine optional) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -65,8 +65,8 @@ Filet mignon (psoas major, smal ände) är det magraste och mjukaste biffsnittet
 
 ---
 
-### 3. Marco Pierre White — Fillet Steak in the Pan (British tradition)
-**Source**: Marco Pierre White, *White Heat* (Mitchell Beazley, 1990); originally demonstrated at Harveys  
+### 3. Fillet Steak in the Pan (inspired by Marco Pierre White)
+**Inspired by**: Marco Pierre White, *White Heat* (Mitchell Beazley, 1990); originally demonstrated at Harveys  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 5–7 min · **Rest**: 5 min
 
 **Ingredients**
@@ -88,8 +88,8 @@ Filet mignon (psoas major, smal ände) är det magraste och mjukaste biffsnittet
 
 ---
 
-### 4. Masaharu Morimoto — Iron Chef–Style Pan-Fried Beef Fillet (Japanese-American tradition)
-**Source**: Masaharu Morimoto, *Mastering the Art of Japanese Home Cooking* (Ecco, 2016); morimotorestaurants.com  
+### 4. Iron Chef–Style Pan-Fried Beef Fillet (inspired by Masaharu Morimoto)
+**Inspired by**: Masaharu Morimoto, *Mastering the Art of Japanese Home Cooking* (Ecco, 2016); morimotorestaurants.com  
 **Serves**: 2 · **Prep**: 15 min (+30 min marinate) · **Cook**: 6–8 min · **Rest**: 3 min
 
 **Ingredients**
@@ -112,8 +112,8 @@ Filet mignon (psoas major, smal ände) är det magraste och mjukaste biffsnittet
 
 ---
 
-### 5. Nagi Maehashi (RecipeTin Eats) — Pan-Fried Eye Fillet Steak (Australian tradition)
-**Source**: Nagi Maehashi, *RecipeTin Eats: Dinner* (Macmillan Australia, 2022); recipetineats.com/eye-fillet-steak  
+### 5. Pan-Fried Eye Fillet Steak (inspired by Nagi Maehashi)
+**Inspired by**: Nagi Maehashi, *RecipeTin Eats: Dinner* (Macmillan Australia, 2022); recipetineats.com/eye-fillet-steak  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 6–8 min · **Rest**: 3–5 min
 
 **Ingredients**

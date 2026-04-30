@@ -34,8 +34,8 @@ Marinering i olja och sura komponenter (vin, vinäger, citron) före grillning �
 
 ## Source recipes
 
-### 1. Tasteline.com — Grillad älgbiff (Swedish grilled moose steak)
-**Source**: Tasteline.com; https://www.tasteline.com/ingrediens/alg/ (fetched 2026-04-24; moose steak temperature guidance 58–70 °C)
+### 1. Grillad älgbiff (Swedish grilled moose steak) (inspired by Tasteline.com)
+**Inspired by**: Tasteline.com; https://www.tasteline.com/ingrediens/alg/ (fetched 2026-04-24; moose steak temperature guidance 58–70 °C)
 **Serves**: 2 · **Prep**: 30 min marinade · **Cook**: 10 min
 
 **Ingredients**
@@ -56,8 +56,8 @@ Marinering i olja och sura komponenter (vin, vinäger, citron) före grillning �
 
 ---
 
-### 2. Chefkoch.de — Elchsteak vom Grill (German tradition)
-**Source**: Chefkoch.de recipe search results for Elchsteak; https://www.chefkoch.de/rs/s0/elch/Rezepte.html (fetched reference 2026-04-24)
+### 2. Elchsteak vom Grill (inspired by Chefkoch.de)
+**Inspired by**: Chefkoch.de recipe search results for Elchsteak; https://www.chefkoch.de/rs/s0/elch/Rezepte.html (fetched reference 2026-04-24)
 **Serves**: 2 · **Prep**: 2 hrs marinade · **Cook**: 15 min
 
 *Translation: Grilled moose steak, German-Scandinavian tradition.*
@@ -80,8 +80,8 @@ Marinering i olja och sura komponenter (vin, vinäger, citron) före grillning �
 
 ---
 
-### 3. Matprat.no — Grillet elgbiff (Norwegian BBQ tradition)
-**Source**: Matprat.no (Norwegian Meat and Poultry Research Centre); https://www.matprat.no/oppskrifter/gjester/grillet-elgbiff/ (web search 2026-04-24)
+### 3. Grillet elgbiff (inspired by Matprat.no)
+**Inspired by**: Matprat.no (Norwegian Meat and Poultry Research Centre); https://www.matprat.no/oppskrifter/gjester/grillet-elgbiff/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 1 hr marinade · **Cook**: 10 min
 
 **Ingredients**

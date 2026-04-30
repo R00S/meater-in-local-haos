@@ -18,8 +18,8 @@ Broccoli (*Brassica oleracea* var. *italica*) sauterad i het panna — eller wok
 
 ## Source recipes
 
-### 1. Fuchsia Dunlop — Qīng Chǎo Xīlánhuā (清炒西兰花 — Chinese Stir-Fried Broccoli)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice* (W. W. Norton, 2012)
+### 1. Qīng Chǎo Xīlánhuā (清炒西兰花 — Chinese Stir-Fried Broccoli) (inspired by Fuchsia Dunlop)
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice* (W. W. Norton, 2012)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 5–7 min · **Rest**: 1 min
 
 **Ingredients**
@@ -33,8 +33,8 @@ Broccoli (*Brassica oleracea* var. *italica*) sauterad i het panna — eller wok
 
 ---
 
-### 2. Pailin Chongchitnant — Pad Broccoli with Oyster Sauce (Thai tradition)
-**Source**: Pailin Chongchitnant, *Hot Thai Kitchen* (Appetite by Random House, 2016); stir-fried broccoli, a ubiquitous Thai home-cooking preparation.
+### 2. Pad Broccoli with Oyster Sauce (inspired by Pailin Chongchitnant)
+**Inspired by**: Pailin Chongchitnant, *Hot Thai Kitchen* (Appetite by Random House, 2016); stir-fried broccoli, a ubiquitous Thai home-cooking preparation.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 5–7 min · **Rest**: 1 min
 
 **Ingredients**
@@ -47,8 +47,8 @@ Broccoli (*Brassica oleracea* var. *italica*) sauterad i het panna — eller wok
 
 ---
 
-### 3. Madhur Jaffrey — Broccoli Masala Sauté (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+### 3. Broccoli Masala Sauté (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -61,8 +61,8 @@ Broccoli (*Brassica oleracea* var. *italica*) sauterad i het panna — eller wok
 
 ---
 
-### 4. Marcella Hazan — Broccoli Saltato con Burro e Limone (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+### 4. Broccoli Saltato con Burro e Limone (inspired by Marcella Hazan)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 5 min (+ 3 min blanching) · **Cook**: 4–5 min · **Rest**: 1 min
 
 **Ingredients**

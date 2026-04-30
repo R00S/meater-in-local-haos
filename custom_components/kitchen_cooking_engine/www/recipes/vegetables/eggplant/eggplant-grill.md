@@ -18,8 +18,8 @@ Aubergine (*Solanum melongena*) uppnår sin mest dramatiska transformation på l
 
 ## Source recipes
 
-### 1. Swasthi Shreekanth — Baingan Bharta (Indian / Punjabi tradition)
-**Source**: Swasthi Shreekanth, IndianHealthyRecipes.com; adapted from Chef Sanjeev Kapoor; https://www.indianhealthyrecipes.com/baingan-bharta/ (fetched 2026-04-24).
+### 1. Baingan Bharta (inspired by Swasthi Shreekanth)
+**Inspired by**: Swasthi Shreekanth, IndianHealthyRecipes.com; adapted from Chef Sanjeev Kapoor; https://www.indianhealthyrecipes.com/baingan-bharta/ (fetched 2026-04-24).
 **Serves**: 3–4 · **Prep**: 10 min · **Cook**: 20–25 min grill + 12 min masala · **Rest**: 5 min (cooling)
 
 **Ingredients**
@@ -48,8 +48,8 @@ Aubergine (*Solanum melongena*) uppnår sin mest dramatiska transformation på l
 
 ---
 
-### 2. Yotam Ottolenghi — Whole Chargrilled Aubergine (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
+### 2. Whole Chargrilled Aubergine (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 30–35 min · **Rest**: 10 min (peeling)
 
 **Ingredients**
@@ -74,8 +74,8 @@ Aubergine (*Solanum melongena*) uppnår sin mest dramatiska transformation på l
 
 ---
 
-### 3. Harumi Kurihara — Nasu no Dengaku (Japanese tradition)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK/Dorling Kindersley, 2007)
+### 3. Nasu no Dengaku (inspired by Harumi Kurihara)
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK/Dorling Kindersley, 2007)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -100,8 +100,8 @@ Aubergine (*Solanum melongena*) uppnår sin mest dramatiska transformation på l
 
 ---
 
-### 4. Francis Mallmann — Berenjena a las Brasas (Argentine / Patagonian tradition)
-**Source**: Francis Mallmann with Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)
+### 4. Berenjena a las Brasas (inspired by Francis Mallmann)
+**Inspired by**: Francis Mallmann with Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 40–50 min over embers · **Rest**: 10 min
 
 **Ingredients**

@@ -18,8 +18,8 @@ The hanger steak (onglet in French, lombatello in Italian, nierenzapfen in Germa
 Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på tyska) hänger från djurets diafragma mellan det sista revbenet och länden, fäst vid ryggraden med en enda tjock central sena som löper längs hela muskeln och brukar tas bort av slaktaren före försäljning. Eftersom det bara finns en hanger per djur och muskeln utför kontinuerligt andningsarbete är fibrerna grova och löst alignade, vilket ger en öppen, eftergivande textur som tar upp kryddning exceptionellt väl och frigör rikliga juicer vid skärning. Smaken är den mest mineraliska och intensivt nötiga av alla vanliga snabba tillagningssnitt. Pan-searing är idealiskt för hanger eftersom den direkta ledande värmen från gjutjärns- eller kolstålspanna driver den Maillard-reaktion som snittet behöver innan den magra insidan överkokas; den lösa ådringsstrukturen driver ut fukt snabbt över 60 °C, vilket gör temperaturprecision viktigare här än med en mer förlåtande ribeye. Eftervärmen är måttlig – vanligtvis 3–5 °C – och eftersom biffen ofta är tunnare och mindre regelbunden än ribeye är sondplacering i den tjockaste magra delen kritisk.
 ## Source recipes
 
-### 1. Julia Child — Onglet à l'Échalote (French bistro tradition)
-**Source**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961)  
+### 1. Onglet à l'Échalote (inspired by Julia Child)
+**Inspired by**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -40,8 +40,8 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 
 ---
 
-### 2. Fergus Henderson — Pan-Fried Onglet, Chips (British nose-to-tail tradition)
-**Source**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
+### 2. Pan-Fried Onglet, Chips (inspired by Fergus Henderson)
+**Inspired by**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -61,8 +61,8 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 
 ---
 
-### 3. J. Kenji López-Alt — Pan-Fried Hanger Steak (American tradition)
-**Source**: J. Kenji López-Alt, seriouseats.com/pan-seared-hanger-steak; *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015)  
+### 3. Pan-Fried Hanger Steak (inspired by J. Kenji López-Alt)
+**Inspired by**: J. Kenji López-Alt, seriouseats.com/pan-seared-hanger-steak; *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -85,8 +85,8 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 
 ---
 
-### 4. David Tanis — Onglet with Anchovy Butter (French bistro tradition)
-**Source**: David Tanis, *A Platter of Figs and Other Recipes* (Artisan Books, 2008)  
+### 4. Onglet with Anchovy Butter (inspired by David Tanis)
+**Inspired by**: David Tanis, *A Platter of Figs and Other Recipes* (Artisan Books, 2008)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -104,8 +104,8 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 
 ---
 
-### 5. April Bloomfield — Pan-Fried Hanger Steak, Red-Wine Sauce (American-British tradition)
-**Source**: April Bloomfield, *A Girl and Her Pig* (Ecco Press, 2012)  
+### 5. Pan-Fried Hanger Steak, Red-Wine Sauce (inspired by April Bloomfield)
+**Inspired by**: April Bloomfield, *A Girl and Her Pig* (Ecco Press, 2012)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**

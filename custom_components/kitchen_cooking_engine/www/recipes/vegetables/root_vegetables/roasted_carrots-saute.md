@@ -18,8 +18,8 @@ Morötter (*Daucus carota*) sauterade i het panna — kinesiska wokade matchstic
 
 ## Source recipes
 
-### 1. Harumi Kurihara — Kimpira Ninjin (きんぴらにんじん — Japanese Glazed Carrot Matchsticks)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
+### 1. Kimpira Ninjin (きんぴらにんじん — Japanese Glazed Carrot Matchsticks) (inspired by Harumi Kurihara)
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 1 min
 
 **Ingredients**
@@ -32,8 +32,8 @@ Morötter (*Daucus carota*) sauterade i het panna — kinesiska wokade matchstic
 
 ---
 
-### 2. Fuchsia Dunlop — Chǎo Húluóbo Sī (炒胡萝卜丝 — Chinese Stir-Fried Carrot Shreds)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice* (W. W. Norton, 2012)
+### 2. Chǎo Húluóbo Sī (炒胡萝卜丝 — Chinese Stir-Fried Carrot Shreds) (inspired by Fuchsia Dunlop)
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice* (W. W. Norton, 2012)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 4–5 min · **Rest**: 1 min
 
 **Ingredients**
@@ -46,8 +46,8 @@ Morötter (*Daucus carota*) sauterade i het panna — kinesiska wokade matchstic
 
 ---
 
-### 3. Madhur Jaffrey — Gajar ki Sabzi (Indian Sautéed Carrots with Mustard Seeds)
-**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)
+### 3. Gajar ki Sabzi (Indian Sautéed Carrots with Mustard Seeds) (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -60,8 +60,8 @@ Morötter (*Daucus carota*) sauterade i het panna — kinesiska wokade matchstic
 
 ---
 
-### 4. Julia Child — Carottes Glacées (French tradition)
-**Source**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
+### 4. Carottes Glacées (inspired by Julia Child)
+**Inspired by**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 18–22 min · **Rest**: 2 min
 
 **Ingredients**

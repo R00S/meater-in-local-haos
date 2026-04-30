@@ -36,8 +36,8 @@ Air fryer: 190–200 °C, 20–25 minuter med vändning halvvägs, ger krispiga 
 
 ## Source recipes
 
-### 1. Natasha's Kitchen — Air Fryer Chicken Wings
-**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/air-fryer-chicken-wings/ (fetched 2025-07-15).
+### 1. Air Fryer Chicken Wings (inspired by Natasha's Kitchen)
+**Inspired by**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/air-fryer-chicken-wings/ (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 16 min · **Rest**: 2 min
 
 **Temperature guidance**:
@@ -71,8 +71,8 @@ Air fryer: 190–200 °C, 20–25 minuter med vändning halvvägs, ger krispiga 
 
 ---
 
-### 2. Skinnytaste — Air Fryer Chicken Wings
-**Source**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/air-fryer-chicken-wings/ (fetched 2025-07-15).
+### 2. Air Fryer Chicken Wings (inspired by Skinnytaste)
+**Inspired by**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/air-fryer-chicken-wings/ (fetched 2025-07-15).
 **Serves**: 4–6 · **Prep**: 10 min · **Cook**: 16–22 min · **Rest**: 2 min
 
 **Temperature guidance**:
@@ -106,8 +106,8 @@ Air fryer: 190–200 °C, 20–25 minuter med vändning halvvägs, ger krispiga 
 
 ---
 
-### 3. Immaculate Bites — Crispy Grilled Chicken Wings
-**Source**: Imma Adamu, Africanbites.com (Cameroonian-born food blogger, based in USA); https://www.africanbites.com/grilled-chicken-wings/ (fetched 2026-04-24).
+### 3. Crispy Grilled Chicken Wings (inspired by Immaculate Bites)
+**Inspired by**: Imma Adamu, Africanbites.com (Cameroonian-born food blogger, based in USA); https://www.africanbites.com/grilled-chicken-wings/ (fetched 2026-04-24).
 **Serves**: 4–6 · **Prep**: 10 min (+ overnight dry-brine option) · **Cook**: 30 min
 
 **Temperature guidance**:
@@ -140,8 +140,8 @@ Air fryer: 190–200 °C, 20–25 minuter med vändning halvvägs, ger krispiga 
 
 ---
 
-### 4. Pailin Chongchitnant — Crispy Thai Fish Sauce Wings (Thai tradition)
-**Source**: Pailin Chongchitnant, Hot Thai Kitchen; https://hot-thai-kitchen.com/fish-sauce-wings/ (fetched 2026-04-25). *Classic Thai street-food chicken wings: marinated in fish sauce and ground white pepper, dusted with rice flour for a shatteringly crispy skin, then air fried at 400 °F (200 °C). Fish sauce (น้ำปลา) and rice flour give Thai-fried chicken its distinctive flavour and ultra-crispy texture. Serve with sweet chili dipping sauce. Air fryer instructions are explicitly included in the recipe.*
+### 4. Crispy Thai Fish Sauce Wings (inspired by Pailin Chongchitnant)
+**Inspired by**: Pailin Chongchitnant, Hot Thai Kitchen; https://hot-thai-kitchen.com/fish-sauce-wings/ (fetched 2026-04-25). *Classic Thai street-food chicken wings: marinated in fish sauce and ground white pepper, dusted with rice flour for a shatteringly crispy skin, then air fried at 400 °F (200 °C). Fish sauce (น้ำปลา) and rice flour give Thai-fried chicken its distinctive flavour and ultra-crispy texture. Serve with sweet chili dipping sauce. Air fryer instructions are explicitly included in the recipe.*
 **Serves**: 2 · **Prep**: 30 min marinade · **Cook**: 12–15 min air fryer
 
 **Temperature guidance (from recipe)**: Air fry at **400 °F (200 °C)** for **12–15 minutes** until cooked through. No flipping needed — keep the thicker skin side up to maximise crispness on that surface. Wings are done when golden and cooked through.

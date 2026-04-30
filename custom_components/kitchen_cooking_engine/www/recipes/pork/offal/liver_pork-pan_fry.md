@@ -29,8 +29,8 @@ Pannsteka i smör vid hög värme, 2–3 minuter per sida; lever är fardig vid 
 
 ## Source recipes
 
-### 1. Marcella Hazan — Fegato di Maiale alla Salvia (Italian tradition, Culinary Group B)
-**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997); see also `pork_liver-pan_fry.md` (same cut, same source, slug `pork_liver`)  
+### 1. Fegato di Maiale alla Salvia (inspired by Marcella Hazan)
+**Inspired by**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997); see also `pork_liver-pan_fry.md` (same cut, same source, slug `pork_liver`)  
 **Serves**: 4 · **Prep**: 10 min (+ 30 min milk soak) · **Cook**: 8 min · **Rest**: 1 min
 
 **Ingredients**
@@ -57,8 +57,8 @@ Pannsteka i smör vid hög värme, 2–3 minuter per sida; lever är fardig vid 
 
 ---
 
-### 2. Tina Nordström — Stekt Fläsklever med Lingon (Swedish tradition, Culinary Group D)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); see also `pork_liver-pan_fry.md` (same cut, same source, slug `pork_liver`)  
+### 2. Stekt Fläsklever med Lingon (inspired by Tina Nordström)
+**Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); see also `pork_liver-pan_fry.md` (same cut, same source, slug `pork_liver`)  
 **Serves**: 4 · **Prep**: 10 min (+ 30 min milk soak) · **Cook**: 7 min · **Rest**: 1 min
 
 **Ingredients**

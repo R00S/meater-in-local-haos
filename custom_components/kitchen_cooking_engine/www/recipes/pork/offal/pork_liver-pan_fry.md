@@ -23,8 +23,8 @@ Mjölhölje + smör + hög värme: 2–3 minuter per sida. Innertemperatur: **70
 
 ## Source recipes
 
-### 1. Marcella Hazan — Fegato di Maiale alla Salvia (Italian tradition)
-**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997)  
+### 1. Fegato di Maiale alla Salvia (inspired by Marcella Hazan)
+**Inspired by**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997)  
 **Serves**: 4 · **Prep**: 10 min (+ 30 min milk soak) · **Cook**: 8 min · **Rest**: 1 min
 
 **Ingredients**
@@ -51,8 +51,8 @@ Mjölhölje + smör + hög värme: 2–3 minuter per sida. Innertemperatur: **70
 
 ---
 
-### 2. Anthony Bourdain — Foie de Porc à la Lyonnaise (French bistro tradition)
-**Source**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004) (the *foie de porc* variant of his calf's liver Lyonnaise)  
+### 2. Foie de Porc à la Lyonnaise (inspired by Anthony Bourdain)
+**Inspired by**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004) (the *foie de porc* variant of his calf's liver Lyonnaise)  
 **Serves**: 4 · **Prep**: 15 min (+ 30 min milk soak) · **Cook**: 12 min · **Rest**: 1 min
 
 **Ingredients**
@@ -79,8 +79,8 @@ Mjölhölje + smör + hög värme: 2–3 minuter per sida. Innertemperatur: **70
 
 ---
 
-### 3. Madhur Jaffrey — Suar ka Kaleji (North Indian / Goan tradition)
-**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982) (pork variation noted in the Goan section)  
+### 3. Suar ka Kaleji (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982) (pork variation noted in the Goan section)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min · **Rest**: 1 min
 
 **Ingredients**
@@ -112,8 +112,8 @@ Mjölhölje + smör + hög värme: 2–3 minuter per sida. Innertemperatur: **70
 
 ---
 
-### 4. Tina Nordström — Stekt Fläsklever med Lingon (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
+### 4. Stekt Fläsklever med Lingon (inspired by Tina Nordström)
+**Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 4 · **Prep**: 10 min (+ 30 min milk soak) · **Cook**: 7 min · **Rest**: 1 min
 
 **Ingredients**

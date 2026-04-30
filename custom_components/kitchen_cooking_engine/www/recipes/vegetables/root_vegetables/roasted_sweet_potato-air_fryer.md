@@ -18,8 +18,8 @@ Sötpotatis (*Ipomoea batatas*) i airfryern uppnår knaprig, karameliserad yta o
 
 ## Source recipes
 
-### 1. Harumi Kurihara — Yakiimo (焼き芋 — Japanese Air-Fried Sweet Potato)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); the classic Japanese stone-roasted sweet potato (*yakiimo*) adapted for the air fryer.
+### 1. Yakiimo (焼き芋 — Japanese Air-Fried Sweet Potato) (inspired by Harumi Kurihara)
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); the classic Japanese stone-roasted sweet potato (*yakiimo*) adapted for the air fryer.
 **Serves**: 4 · **Prep**: 2 min · **Cook**: 40–45 min · **Rest**: 10 min
 
 **Ingredients**
@@ -33,8 +33,8 @@ Sötpotatis (*Ipomoea batatas*) i airfryern uppnår knaprig, karameliserad yta o
 
 ---
 
-### 2. Maangchi — Goguma (고구마 — Korean Air-Fried Sweet Potato)
-**Source**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); Korean style roasted sweet potato.
+### 2. Goguma (고구마 — Korean Air-Fried Sweet Potato) (inspired by Maangchi)
+**Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); Korean style roasted sweet potato.
 **Serves**: 4 · **Prep**: 2 min · **Cook**: 38–42 min · **Rest**: 10 min
 
 **Ingredients**
@@ -47,8 +47,8 @@ Sötpotatis (*Ipomoea batatas*) i airfryern uppnår knaprig, karameliserad yta o
 
 ---
 
-### 3. Madhur Jaffrey — Air-Fried Masala Sweet Potato (Indian tradition)
-**Source**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010); Indian sweet potato spice adaptation.
+### 3. Air-Fried Masala Sweet Potato (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010); Indian sweet potato spice adaptation.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 38–42 min · **Rest**: 5 min
 
 **Ingredients**
@@ -60,8 +60,8 @@ Sötpotatis (*Ipomoea batatas*) i airfryern uppnår knaprig, karameliserad yta o
 
 ---
 
-### 4. Yotam Ottolenghi — Air-Fried Sweet Potato with Tahini (Israeli / Middle Eastern tradition)
-**Source**: Yotam Ottolenghi, *Jerusalem* (Ebury Press, 2012); sweet potato with tahini sauce adaptation.
+### 4. Air-Fried Sweet Potato with Tahini (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Jerusalem* (Ebury Press, 2012); sweet potato with tahini sauce adaptation.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 38–42 min · **Rest**: 5 min
 
 **Ingredients**

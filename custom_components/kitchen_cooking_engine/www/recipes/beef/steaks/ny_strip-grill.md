@@ -21,8 +21,8 @@ Fettlisten, smält mot grillgallret, krispar och tillager smak på utsidan. Indi
 
 ## Source recipes
 
-### 1. Steven Raichlen — Grilled Strip Steaks with Cowboy Butter (American tradition)
-**Source**: Steven Raichlen, *Project Fire* (Workman Publishing, 2018)  
+### 1. Grilled Strip Steaks with Cowboy Butter (inspired by Steven Raichlen)
+**Inspired by**: Steven Raichlen, *Project Fire* (Workman Publishing, 2018)  
 **Serves**: 4 · **Prep**: 10 min (+1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -45,8 +45,8 @@ Fettlisten, smält mot grillgallret, krispar och tillager smak på utsidan. Indi
 
 ---
 
-### 2. Bobby Flay — Grilled NY Strip with Red Chimichurri (Argentine-American fusion tradition)
-**Source**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
+### 2. Grilled NY Strip with Red Chimichurri (inspired by Bobby Flay)
+**Inspired by**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
 **Serves**: 4 · **Prep**: 15 min (+overnight marinade optional) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -67,8 +67,8 @@ Fettlisten, smält mot grillgallret, krispar och tillager smak på utsidan. Indi
 
 ---
 
-### 3. Francis Mallmann — Strip Steak on the Grill (Argentine / South American tradition)
-**Source**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
+### 3. Strip Steak on the Grill (inspired by Francis Mallmann)
+**Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 12–16 min · **Rest**: 5 min
 
 **Ingredients**
@@ -88,8 +88,8 @@ Fettlisten, smält mot grillgallret, krispar och tillager smak på utsidan. Indi
 
 ---
 
-### 4. Yotam Ottolenghi — Grilled Strip Steak with Herb Salsa (Israeli / Middle Eastern tradition)
-**Source**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012); adapted to strip steak  
+### 4. Grilled Strip Steak with Herb Salsa (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012); adapted to strip steak  
 **Serves**: 2 · **Prep**: 15 min (+1 h marinade) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -112,8 +112,8 @@ Fettlisten, smält mot grillgallret, krispar och tillager smak på utsidan. Indi
 
 ---
 
-### 5. Neil Perry — Grilled Strip Steak with Anchovy Butter (Australian tradition)
-**Source**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
+### 5. Grilled Strip Steak with Anchovy Butter (inspired by Neil Perry)
+**Inspired by**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
 **Serves**: 2 · **Prep**: 10 min (+30 min tempering) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**

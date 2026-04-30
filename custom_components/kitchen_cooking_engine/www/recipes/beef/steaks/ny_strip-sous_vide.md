@@ -21,8 +21,8 @@ New York strip cooked sous vide is precision-cooked in a sealed bag at the targe
 New York strip sous vide är precisionstillagad i förseglad påse vid måltemperatur, sedan given en snabb högvärmebryning för skorpa. Stripens fasta, måttligt marmorerade muskel är en utmärkt kandidat för sous vide eftersom den långa, jämna tiden (1–4 timmar) fullt ut slappnar av fibrerna och ger ett mörare resultat än pan-searing ensam, medan den exakta temperaturkontrollen eliminerar den breda gradienten från yta till kärna som uppstår vid vanlig bryning. Post-bad-bryningen är kort – max 60–90 sekunder per sida – eftersom biffen redan är vid intern måltemperatur. Eftervärmen från post-bad-bryningen ger 2–3 °C på ytan men kärnan stannar på badtemperaturen. Badtemperaturen är den interna måltemperaturen.
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Sous Vide New York Strip (American tradition)
-**Source**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/the-food-lab-complete-guide-to-sous-vide-steak  
+### 1. Sous Vide New York Strip (inspired by J. Kenji López-Alt)
+**Inspired by**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/the-food-lab-complete-guide-to-sous-vide-steak  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 1–4 h at bath temp, then 90-second sear · **Rest**: 2 min
 
 **Ingredients**
@@ -45,8 +45,8 @@ New York strip sous vide är precisionstillagad i förseglad påse vid måltempe
 
 ---
 
-### 2. Thomas Keller — Sous Vide Strip Steak (French haute cuisine tradition)
-**Source**: Thomas Keller, Michael Ruhlman and Sebastián Rouxel, *Under Pressure: Cooking Sous Vide* (Artisan Books, 2008)  
+### 2. Sous Vide Strip Steak (inspired by Thomas Keller)
+**Inspired by**: Thomas Keller, Michael Ruhlman and Sebastián Rouxel, *Under Pressure: Cooking Sous Vide* (Artisan Books, 2008)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 1 h at 58 °C, then sear · **Rest**: 2 min
 
 **Ingredients**
@@ -69,8 +69,8 @@ New York strip sous vide är precisionstillagad i förseglad påse vid måltempe
 
 ---
 
-### 3. Heston Blumenthal — Sous Vide Perfect Steak (British Modernist tradition)
-**Source**: Heston Blumenthal, *The Fat Duck Cookbook* (Bloomsbury Publishing, 2008)  
+### 3. Sous Vide Perfect Steak (inspired by Heston Blumenthal)
+**Inspired by**: Heston Blumenthal, *The Fat Duck Cookbook* (Bloomsbury Publishing, 2008)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 45 min at 56 °C, then sear · **Rest**: 2 min
 
 **Ingredients**
@@ -92,8 +92,8 @@ New York strip sous vide är precisionstillagad i förseglad påse vid måltempe
 
 ---
 
-### 4. Grant Achatz — Sous Vide Strip Steak with Aromatics (American Modernist tradition)
-**Source**: Grant Achatz and Nick Kokonas, *Alinea* (Ten Speed Press, 2008); Achatz's sous vide steak technique is documented in the book  
+### 4. Sous Vide Strip Steak with Aromatics (inspired by Grant Achatz)
+**Inspired by**: Grant Achatz and Nick Kokonas, *Alinea* (Ten Speed Press, 2008); Achatz's sous vide steak technique is documented in the book  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 1.5 h at 54 °C, then sear · **Rest**: 2 min
 
 **Ingredients**
@@ -114,8 +114,8 @@ New York strip sous vide är precisionstillagad i förseglad påse vid måltempe
 
 ---
 
-### 5. Neil Perry — Sous Vide Strip Steak, Australian Style (Australian tradition)
-**Source**: Neil Perry, *The Food I Love* (Murdoch Books, 2005); sous vide technique added based on Perry's documented modernist cooking approach  
+### 5. Sous Vide Strip Steak, Australian Style (inspired by Neil Perry)
+**Inspired by**: Neil Perry, *The Food I Love* (Murdoch Books, 2005); sous vide technique added based on Perry's documented modernist cooking approach  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 2 h at 54 °C, then sear · **Rest**: 2 min
 
 **Ingredients**

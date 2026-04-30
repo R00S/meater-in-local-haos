@@ -23,8 +23,8 @@ Att rotera biffen på benets kant under den indirekta fasen är ett argentinskt 
 
 ## Source recipes
 
-### 1. Steven Raichlen — Grilled T-Bone (American BBQ tradition)
-**Source**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
+### 1. Grilled T-Bone (inspired by Steven Raichlen)
+**Inspired by**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -44,8 +44,8 @@ Att rotera biffen på benets kant under den indirekta fasen är ett argentinskt 
 
 ---
 
-### 2. Bobby Flay — Grilled T-Bone with Blue Cheese Sauce (American tradition)
-**Source**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
+### 2. Grilled T-Bone with Blue Cheese Sauce (inspired by Bobby Flay)
+**Inspired by**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -66,8 +66,8 @@ Att rotera biffen på benets kant under den indirekta fasen är ett argentinskt 
 
 ---
 
-### 3. Yotam Ottolenghi — Grilled T-Bone with Herb Oil (Mediterranean tradition)
-**Source**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
+### 3. Grilled T-Bone with Herb Oil (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
 **Serves**: 2 · **Prep**: 15 min (+30 min marinate) · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -87,8 +87,8 @@ Att rotera biffen på benets kant under den indirekta fasen är ett argentinskt 
 
 ---
 
-### 4. Neil Perry — Grilled T-Bone, Australian Steakhouse Style (Australian tradition)
-**Source**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
+### 4. Grilled T-Bone, Australian Steakhouse Style (inspired by Neil Perry)
+**Inspired by**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -107,8 +107,8 @@ Att rotera biffen på benets kant under den indirekta fasen är ett argentinskt 
 
 ---
 
-### 5. Francis Mallmann — T-Bone on the Parilla (Argentine tradition)
-**Source**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
+### 5. T-Bone on the Parilla (inspired by Francis Mallmann)
+**Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 12–16 min · **Rest**: 5 min
 
 **Ingredients**

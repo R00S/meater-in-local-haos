@@ -26,8 +26,8 @@ Avsluta under grillelementet för knäppande svål. Innertemperatur: **80–88 �
 
 ## Source recipes
 
-### 1. Madens Verden — Perfekt Flæskesteg i Ovn (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/perfekt-flaeskesteg-i-ovn/ (fetched 2026-04-24). *"Easy and reliable recipe for a perfect flæskesteg in the oven." 4.8/5, 548 ratings.*
+### 1. Perfekt Flæskesteg i Ovn (inspired by Madens Verden)
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/perfekt-flaeskesteg-i-ovn/ (fetched 2026-04-24). *"Easy and reliable recipe for a perfect flæskesteg in the oven." 4.8/5, 548 ratings.*
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 1 hr 15 min · **Total**: 1.5 hr
 
 **Temperature guidance (from recipe)**: Oven 225°C fan throughout; takes about 1 hr 15 min for 1.5 kg; insert thermometer after 45 min; done when internal = **65°C**. *"It is the core temperature that determines when your flæskesteg is done — not the time!"*
@@ -51,8 +51,8 @@ Avsluta under grillelementet för knäppande svål. Innertemperatur: **80–88 �
 
 ---
 
-### 2. Chefkoch — Krustenbraten (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/1583701265817692/Krustenbraten.html (fetched 2026-04-24). *"Pork shoulder or belly with exceptionally crispy crackling." Uses wheat beer and vegetables. 4.8/5, multiple ratings.*
+### 2. Krustenbraten (inspired by Chefkoch)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/1583701265817692/Krustenbraten.html (fetched 2026-04-24). *"Pork shoulder or belly with exceptionally crispy crackling." Uses wheat beer and vegetables. 4.8/5, multiple ratings.*
 **Serves**: 4 · **Prep**: 45 min · **Cook**: 2 hr
 
 **Temperature guidance (from recipe)**: 180°C fan × 2 hrs; baste with beer and water throughout. Final grill to pop crackling. Core target approximately 75°C.
@@ -80,8 +80,8 @@ Avsluta under grillelementet för knäppande svål. Innertemperatur: **80–88 �
 
 ---
 
-### 3. Chefkoch — Schweinebauch aus dem Ofen, knusprig (German tradition, beer glaze)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/605041160289876/Schweinebauch-aus-dem-Ofen-knusprig.html (fetched 2026-04-24). *Pre-boil method + honey-beer glaze. 4.8/5, 2 830 ratings.*
+### 3. Schweinebauch aus dem Ofen, knusprig (inspired by Chefkoch)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/605041160289876/Schweinebauch-aus-dem-Ofen-knusprig.html (fetched 2026-04-24). *Pre-boil method + honey-beer glaze. 4.8/5, 2 830 ratings.*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 40 min boil + 40 min oven
 
 **Temperature guidance (from recipe)**: Boil 40 min; oven at **220°C (non-fan, Gas Mark 3–4) × 40 min**, basting regularly with glaze.
@@ -109,8 +109,8 @@ Avsluta under grillelementet för knäppande svål. Innertemperatur: **80–88 �
 
 ---
 
-### 4. Chefkoch — Schweinebauch mit Brezel-Brätfüllung (German stuffed belly)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/3698481558437938/Schweinebauch-mit-Brezel-Braetfuellung.html (fetched 2026-04-24). *Stuffed with Bavarian pretzel-sausage filling; 150°C fan × 2 hrs; classic Sunday roast.*
+### 4. Schweinebauch mit Brezel-Brätfüllung (German stuffed belly) (inspired by Chefkoch)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/3698481558437938/Schweinebauch-mit-Brezel-Braetfuellung.html (fetched 2026-04-24). *Stuffed with Bavarian pretzel-sausage filling; 150°C fan × 2 hrs; classic Sunday roast.*
 **Serves**: 4 · **Prep**: 45 min · **Cook**: 2 hr
 
 **Temperature guidance (from recipe)**: 150°C fan × 2 hrs. Optional: honey-beer glaze in last 30 min; optional raise temperature for crispier exterior.

@@ -21,8 +21,8 @@ Pannsearing vid högsta möjliga spishetstemperatur (240–280 °C i en kolstål
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Dry-Brined Pan-Seared Flat Iron with Butter Basting (American tradition)
-**Source**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015)  
+### 1. Dry-Brined Pan-Seared Flat Iron with Butter Basting (inspired by J. Kenji López-Alt)
+**Inspired by**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015)  
 **Serves**: 2 · **Prep**: 5 min (+ 1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -46,8 +46,8 @@ Pannsearing vid högsta möjliga spishetstemperatur (240–280 °C i en kolstål
 
 ---
 
-### 2. Gordon Ramsay — Restaurant-Style Butter-Basted Flat Iron (British/French restaurant tradition)
-**Source**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
+### 2. Restaurant-Style Butter-Basted Flat Iron (inspired by Gordon Ramsay)
+**Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -72,8 +72,8 @@ Pannsearing vid högsta möjliga spishetstemperatur (240–280 °C i en kolstål
 
 ---
 
-### 3. Nobu Matsuhisa — Wafu Flat Iron with Ponzu and Daikon (Japanese tradition)
-**Source**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001); wafu (Japanese-style) seared beef with ponzu dipping sauce, adapted for flat iron  
+### 3. Wafu Flat Iron with Ponzu and Daikon (inspired by Nobu Matsuhisa)
+**Inspired by**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001); wafu (Japanese-style) seared beef with ponzu dipping sauce, adapted for flat iron  
 **Serves**: 2 · **Prep**: 20 min · **Cook**: 8–10 min · **Rest**: 4 min
 
 **Ingredients**
@@ -96,8 +96,8 @@ Pannsearing vid högsta möjliga spishetstemperatur (240–280 °C i en kolstål
 
 ---
 
-### 4. José Andrés — Flat Iron a la Plancha with Piquillo Peppers (Spanish tradition)
-**Source**: José Andrés and Richard Wolffe, *Tapas: A Taste of Spain in America* (Clarkson Potter, 2005); plancha-seared steak, adapted for flat iron  
+### 4. Flat Iron a la Plancha with Piquillo Peppers (inspired by José Andrés)
+**Inspired by**: José Andrés and Richard Wolffe, *Tapas: A Taste of Spain in America* (Clarkson Potter, 2005); plancha-seared steak, adapted for flat iron  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -122,8 +122,8 @@ Pannsearing vid högsta möjliga spishetstemperatur (240–280 °C i en kolstål
 
 ---
 
-### 5. René Redzepi — Nordic Seared Flat Iron with Smoked Butter (Nordic tradition)
-**Source**: René Redzepi, *Noma: Time and Place in Nordic Cuisine* (Phaidon Press, 2010); high-heat seared beef with smoked butter, technique adapted for flat iron  
+### 5. Nordic Seared Flat Iron with Smoked Butter (inspired by René Redzepi)
+**Inspired by**: René Redzepi, *Noma: Time and Place in Nordic Cuisine* (Phaidon Press, 2010); high-heat seared beef with smoked butter, technique adapted for flat iron  
 **Serves**: 2 · **Prep**: 20 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**

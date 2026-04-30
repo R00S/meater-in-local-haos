@@ -18,8 +18,8 @@ Nötfilé (*psoas major*) löper längs ryggradens insida och utför minimalt ar
 
 ## Source recipes
 
-### 1. Ina Garten — Beef Tenderloin Roast with Mustard Crust
-**Source**: Ina Garten, *Barefoot Contessa Parties!* (Clarkson Potter, 2001); foodnetwork.com/recipes/ina-garten  
+### 1. Beef Tenderloin Roast with Mustard Crust (inspired by Ina Garten)
+**Inspired by**: Ina Garten, *Barefoot Contessa Parties!* (Clarkson Potter, 2001); foodnetwork.com/recipes/ina-garten  
 **Serves**: 8–10 · **Prep**: 20 min (+1 hr tempering) · **Cook**: 25–35 min (high-heat roast) · **Rest**: 15 min
 
 **Ingredients**
@@ -43,8 +43,8 @@ Nötfilé (*psoas major*) löper längs ryggradens insida och utför minimalt ar
 
 ---
 
-### 2. Jacques Pépin — Filet de Bœuf Rôti (French tradition)
-**Source**: Jacques Pépin, *La Technique* (Times Books, 1976); pbs.org/food/recipes/  
+### 2. Filet de Bœuf Rôti (inspired by Jacques Pépin)
+**Inspired by**: Jacques Pépin, *La Technique* (Times Books, 1976); pbs.org/food/recipes/  
 **Serves**: 6–8 · **Prep**: 15 min (+2 hr tempering) · **Cook**: 30–45 min · **Rest**: 20 min
 
 **Ingredients**
@@ -66,8 +66,8 @@ Nötfilé (*psoas major*) löper längs ryggradens insida och utför minimalt ar
 
 ---
 
-### 3. Heston Blumenthal — Reverse-Sear Beef Tenderloin
-**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury, 2011); hestonblumenthal.net  
+### 3. Reverse-Sear Beef Tenderloin (inspired by Heston Blumenthal)
+**Inspired by**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury, 2011); hestonblumenthal.net  
 **Serves**: 6 · **Prep**: 10 min · **Cook**: 45–60 min low oven + 5 min sear · **Rest**: 10 min
 
 **Ingredients**
@@ -89,8 +89,8 @@ Nötfilé (*psoas major*) löper längs ryggradens insida och utför minimalt ar
 
 ---
 
-### 4. Yotam Ottolenghi — Spice-Crusted Beef Fillet (Middle Eastern/Israeli tradition)
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk/recipes  
+### 4. Spice-Crusted Beef Fillet (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk/recipes  
 **Serves**: 6–8 · **Prep**: 25 min (+1 hr marinating) · **Cook**: 30–40 min · **Rest**: 15 min
 
 **Ingredients**
@@ -117,8 +117,8 @@ Nötfilé (*psoas major*) löper längs ryggradens insida och utför minimalt ar
 
 ---
 
-### 5. Tetsuya Wakuda — Japanese-Influenced Beef Fillet with Warishita Glaze (Japanese-Australian tradition)
-**Source**: Tetsuya Wakuda, *Tetsuya* (Ten Speed Press, 2000); tetsuyas.com  
+### 5. Japanese-Influenced Beef Fillet with Warishita Glaze (inspired by Tetsuya Wakuda)
+**Inspired by**: Tetsuya Wakuda, *Tetsuya* (Ten Speed Press, 2000); tetsuyas.com  
 **Serves**: 6 · **Prep**: 20 min (+overnight marinating) · **Cook**: 25–35 min · **Rest**: 10 min
 
 **Ingredients**

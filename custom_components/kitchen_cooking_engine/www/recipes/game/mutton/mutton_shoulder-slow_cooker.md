@@ -37,8 +37,8 @@ MEATER-sonden stickas in i den tjockaste muskeln i axeln, borta från skulderbla
 
 ## Source recipes
 
-### 1. Indian Healthy Recipes — Mutton Korma (slow cooker adaptation) (Indian / Mughlai tradition)
-**Source**: Indian Healthy Recipes (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/mutton-korma-recipe/ (fetched 2026-04-25). *"Mutton Korma — Mughlai-style braised mutton in yoghurt and spices, adapted for the slow cooker."*
+### 1. Mutton Korma (slow cooker adaptation) (inspired by Indian Healthy Recipes)
+**Inspired by**: Indian Healthy Recipes (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/mutton-korma-recipe/ (fetched 2026-04-25). *"Mutton Korma — Mughlai-style braised mutton in yoghurt and spices, adapted for the slow cooker."*
 **Serves**: 4–5 · **Prep**: 20 min + overnight marinate · **Cook**: 7 hr (LOW)
 
 *Slow-cooker adaptation: the original recipe simmers on the stovetop for 1–1.5 hours at very low heat. Slow cooker LOW for 7 hours produces an equivalent or superior result.*
@@ -76,8 +76,8 @@ MEATER-sonden stickas in i den tjockaste muskeln i axeln, borta från skulderbla
 
 ---
 
-### 2. Nefis Yemek Tarifleri — Kuzu Kol Tandır (slow cooker adaptation) (Turkish tradition)
-**Source**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/firinda-kuzu-kol-tandir-11409971/ (fetched 2026-04-25). *"Fırında Kuzu Kol Tandır — Turkish tandır shoulder, adapted for the slow cooker."*
+### 2. Kuzu Kol Tandır (slow cooker adaptation) (inspired by Nefis Yemek Tarifleri)
+**Inspired by**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/firinda-kuzu-kol-tandir-11409971/ (fetched 2026-04-25). *"Fırında Kuzu Kol Tandır — Turkish tandır shoulder, adapted for the slow cooker."*
 **Serves**: 6–8 · **Prep**: 20 min · **Cook**: 8–9 hr (LOW)
 
 *Slow-cooker adaptation: the original recipe wraps the shoulder in foil and bakes at 220 °C for 2.5 hours. For the slow cooker, place the rubbed shoulder directly in the pot with added liquid, LOW 8–9 hours.*
@@ -106,8 +106,8 @@ MEATER-sonden stickas in i den tjockaste muskeln i axeln, borta från skulderbla
 
 ---
 
-### 3. Chefkoch.de — Lammhaxen aus dem Slowcooker (shoulder adaptation) (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/4089241641380759/ (fetched 2026-04-25). *"Lammhaxen aus dem Slowcooker — German slow-cooker lamb, technique adapted for mutton shoulder."*
+### 3. Lammhaxen aus dem Slowcooker (shoulder adaptation) (inspired by Chefkoch.de)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/4089241641380759/ (fetched 2026-04-25). *"Lammhaxen aus dem Slowcooker — German slow-cooker lamb, technique adapted for mutton shoulder."*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 7–8 hr (LOW)
 
 *Mutton adaptation: the same slow-cooker technique used for lamb shanks adapts directly to mutton shoulder pieces. Extend cooking time to 7–8 hours for mutton.*
@@ -136,8 +136,8 @@ MEATER-sonden stickas in i den tjockaste muskeln i axeln, borta från skulderbla
 
 ---
 
-### 4. Argiro.gr — Αρνάκι στο ταψί (slow cooker adaptation) (Greek tradition)
-**Source**: Argiro Barbarigou; https://www.argiro.gr/recipe/arnaki-sto-tapsi-me-laxanika-kai-votana/ (fetched 2026-04-25). *"Αρνάκι στο ταψί με λαχανικά και βότανα — Greek tray-bake technique adapted for mutton shoulder in the slow cooker."*
+### 4. Αρνάκι στο ταψί (slow cooker adaptation) (inspired by Argiro.gr)
+**Inspired by**: Argiro Barbarigou; https://www.argiro.gr/recipe/arnaki-sto-tapsi-me-laxanika-kai-votana/ (fetched 2026-04-25). *"Αρνάκι στο ταψί με λαχανικά και βότανα — Greek tray-bake technique adapted for mutton shoulder in the slow cooker."*
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 8 hr (LOW)
 
 *Mutton adaptation: the Greek lamb tray-bake at 170 °C for 2 hours becomes a slow-cooker LOW 8-hour braise for mutton shoulder.*

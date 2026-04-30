@@ -9,8 +9,8 @@ The sirloin tip roast (also called "knuckle" in UK/Australian butchery, "pointe 
 Sirloin tip roast (kallas "knuckle" i UK/australisk styckning, "pointe de culotte" på franska och "Rinderknolle" på tyska) är en mager, benfri rost från quadriceps femoris på framsidan av round, strax under sirloin. Eftersom quadriceps är kraftigt arbetade muskler har köttet låg marmorering och täta, tighta fibrer – den strukturella motsatsen till den marmorerade ribeye. Magert är både utmaning och fördel: tillagad rätt till medium-rare och skivad tunt mot ådringen ger den ren, nötig smak med lite spill; överkokt ens lite blir den torr och seg. Ugnsrostning passar sirloin tip på två sätt: mild låg-temperatursrostning (93–120 °C) låter enzymatisk mörning arbeta på de täta fibrerna utan att de drar ihop sig, medan en högvärme blast eller reverse-sear ger den Maillard-skorpa som en mager yta behöver. Eftervärmen är modest – cirka 3–5 °C i en standard ugnsrost – eftersom den magra massan saknar fettlager som behåller värme; eftervärmen är större (upp till 8 °C) efter en långsam låg-temp-rost där ugnen svalnar ytan långsamt.
 ## Source recipes
 
-### 1. Nagi (RecipeTin Eats) — Marinated Roast Beef
-**Source**: https://www.recipetineats.com/marinated-roast-beef/  
+### 1. Marinated Roast Beef (inspired by Nagi)
+**Inspired by**: https://www.recipetineats.com/marinated-roast-beef/  
 **Serves**: 6–8 · **Prep**: 10 min (+2–3 days marinating) · **Cook**: 55–60 min · **Rest**: 20–30 min
 
 **Ingredients**
@@ -47,8 +47,8 @@ Sirloin tip roast (kallas "knuckle" i UK/australisk styckning, "pointe de culott
 
 ---
 
-### 2. Immaculate Bites (africanbites.com) — Slow-Roasted Roast Beef with Red Wine Sauce
-**Source**: https://www.africanbites.com/roast-beef/  
+### 2. Slow-Roasted Roast Beef with Red Wine Sauce (inspired by Immaculate Bites)
+**Inspired by**: https://www.africanbites.com/roast-beef/  
 **Serves**: 6–8 · **Prep**: 15 min (+overnight marinating) · **Cook**: 1–2 hours · **Rest**: 15–20 min
 
 **Ingredients**

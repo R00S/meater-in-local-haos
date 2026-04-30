@@ -21,8 +21,8 @@ Nöttungue (*Bos taurus* lingvalmuskel) är en enda tät cylindrisk muskel som a
 
 ## Source recipes
 
-### 1. Fergus Henderson — Salt Ox Tongue with Green Sauce (British nose-to-tail tradition)
-**Source**: Fergus Henderson, *The Whole Beast: Nose to Tail Eating* (Macmillan, 1999/2004); stjohnrestaurant.com  
+### 1. Salt Ox Tongue with Green Sauce (inspired by Fergus Henderson)
+**Inspired by**: Fergus Henderson, *The Whole Beast: Nose to Tail Eating* (Macmillan, 1999/2004); stjohnrestaurant.com  
 **Serves**: 8 · **Prep**: 20 min (+ 5 d salt cure if curing) · **Cook**: 3–4 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -48,8 +48,8 @@ Nöttungue (*Bos taurus* lingvalmuskel) är en enda tät cylindrisk muskel som a
 
 ---
 
-### 2. Anthony Bourdain — Langue de Bœuf Sauce Piquante (French bistro tradition)
-**Source**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004)  
+### 2. Langue de Bœuf Sauce Piquante (inspired by Anthony Bourdain)
+**Inspired by**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004)  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 3.5 hr · **Rest**: 20 min
 
 **Ingredients**
@@ -75,8 +75,8 @@ Nöttungue (*Bos taurus* lingvalmuskel) är en enda tät cylindrisk muskel som a
 
 ---
 
-### 3. Diana Kennedy — Lengua en Salsa Verde (Mexican tradition)
-**Source**: Diana Kennedy, *The Cuisines of Mexico* (Harper & Row, 1972; expanded *The Essential Cuisines of Mexico*, Clarkson Potter, 2000)  
+### 3. Lengua en Salsa Verde (inspired by Diana Kennedy)
+**Inspired by**: Diana Kennedy, *The Cuisines of Mexico* (Harper & Row, 1972; expanded *The Essential Cuisines of Mexico*, Clarkson Potter, 2000)  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 3.5 hr (tongue) + 20 min (salsa) · **Rest**: 15 min
 
 **Ingredients**
@@ -99,8 +99,8 @@ Nöttungue (*Bos taurus* lingvalmuskel) är en enda tät cylindrisk muskel som a
 
 ---
 
-### 4. Yotam Ottolenghi & Sami Tamimi — Slow-Cooked Beef Tongue with Tehina (Israeli/Levantine tradition)
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk  
+### 4. Slow-Cooked Beef Tongue with Tehina (inspired by Yotam Ottolenghi & Sami Tamimi)
+**Inspired by**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 3.5 hr · **Rest**: 15 min
 
 **Ingredients**

@@ -21,8 +21,8 @@ Airfryer-tillagning av potatis ger resultat nära ugnsstekning men på ungefär 
 
 ## Source recipes
 
-### 1. Madhur Jaffrey — Air-Fried Aloo Masala (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); spiced roast potato adapted for air fryer.
+### 1. Air-Fried Aloo Masala (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); spiced roast potato adapted for air fryer.
 **Serves**: 4 · **Prep**: 10 min + parboiling · **Cook**: 22–26 min · **Rest**: 3 min
 
 **Ingredients**
@@ -36,8 +36,8 @@ Airfryer-tillagning av potatis ger resultat nära ugnsstekning men på ungefär 
 
 ---
 
-### 2. José Andrés — Air-Fried Patatas Bravas (Spanish tradition)
-**Source**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019); patatas bravas adapted for air fryer.
+### 2. Air-Fried Patatas Bravas (inspired by José Andrés)
+**Inspired by**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019); patatas bravas adapted for air fryer.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 22–25 min · **Rest**: 3 min
 
 **Ingredients**
@@ -50,8 +50,8 @@ Airfryer-tillagning av potatis ger resultat nära ugnsstekning men på ungefär 
 
 ---
 
-### 3. Fuchsia Dunlop — Air-Fried Szechuan Spiced Potatoes (Chinese tradition)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice* (W. W. Norton, 2012); dry-spiced potato technique adapted for air fryer.
+### 3. Air-Fried Szechuan Spiced Potatoes (inspired by Fuchsia Dunlop)
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice* (W. W. Norton, 2012); dry-spiced potato technique adapted for air fryer.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 22–25 min · **Rest**: 2 min
 
 **Ingredients**
@@ -63,8 +63,8 @@ Airfryer-tillagning av potatis ger resultat nära ugnsstekning men på ungefär 
 
 ---
 
-### 4. Deborah Madison — Air-Fried Herb Potatoes (American vegetarian tradition)
-**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013); herb-roasted potato adapted for air fryer.
+### 4. Air-Fried Herb Potatoes (inspired by Deborah Madison)
+**Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013); herb-roasted potato adapted for air fryer.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 22–25 min · **Rest**: 3 min
 
 **Ingredients**

@@ -32,8 +32,8 @@ Ankbröst är ett rikt, mörkt-kötts snitt kännetecknat av dess tjocka subcuta
 
 ## Source recipes
 
-### 1. BBC Good Food — Slow-Roast Duck (fat-rendering philosophy adapted for pan sear)
-**Source**: BBC Good Food editorial team, BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roast-duck (fetched 2025-07-15).
+### 1. Slow-Roast Duck (fat-rendering philosophy adapted for pan sear) (inspired by BBC Good Food)
+**Inspired by**: BBC Good Food editorial team, BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roast-duck (fetched 2025-07-15).
 **Serves**: 4 (whole duck) → adapted for 2 duck breasts · **Prep**: 15 min · **Cook**: 18–22 min · **Rest**: 5–8 min
 
 > **Note**: The BBC recipe is for a whole slow-roast duck seasoned with salt and cumin, cooked at very low
@@ -72,8 +72,8 @@ Ankbröst är ett rikt, mörkt-kötts snitt kännetecknat av dess tjocka subcuta
 
 ---
 
-### 2. Classic Culinary Technique — Professional Kitchen Duck Breast Pan Sear
-**Source**: Standard professional culinary technique, documented across culinary schools and restaurant kitchens; general knowledge synthesis.
+### 2. Professional Kitchen Duck Breast Pan Sear (inspired by Classic Culinary Technique)
+**Inspired by**: Standard professional culinary technique, documented across culinary schools and restaurant kitchens; general knowledge synthesis.
 **Serves**: 2 · **Prep**: 10 min (+ optional 1–24 hr dry brine) · **Cook**: 18–22 min · **Rest**: 5–7 min
 
 **Temperature guidance**:
@@ -108,9 +108,9 @@ Ankbröst är ett rikt, mörkt-kötts snitt kännetecknat av dess tjocka subcuta
 
 ---
 
-### 3. BBC Good Food — One-Pan Duck with Savoy Cabbage
+### 3. One-Pan Duck with Savoy Cabbage (inspired by BBC Good Food)
 
-**Source**: Barney Desmazery, BBC Good Food magazine (July 2008); https://www.bbcgoodfood.com/recipes/one-pan-duck-savoy-cabbage (archived: https://web.archive.org/web/20241110020656/https://www.bbcgoodfood.com/recipes/one-pan-duck-savoy-cabbage, fetched 2026-04-24).
+**Inspired by**: Barney Desmazery, BBC Good Food magazine (July 2008); https://www.bbcgoodfood.com/recipes/one-pan-duck-savoy-cabbage (archived: https://web.archive.org/web/20241110020656/https://www.bbcgoodfood.com/recipes/one-pan-duck-savoy-cabbage, fetched 2026-04-24).
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 30 min
 
 **Temperature guidance**:

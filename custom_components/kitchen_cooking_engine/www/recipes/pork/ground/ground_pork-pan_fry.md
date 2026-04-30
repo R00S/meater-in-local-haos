@@ -25,8 +25,8 @@ USDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertempe
 
 ## Source recipes
 
-### 1. Madens Verden — Hakkebøffer (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/hakkeboeffer/ (referenced 2026-04-24). *Classic Danish "hakkebøf" (ground pork/beef patty): high quality meat, seasoned, seared in butter 3–4 min per side, served with fried onions.*
+### 1. Hakkebøffer (inspired by Madens Verden)
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/hakkeboeffer/ (referenced 2026-04-24). *Classic Danish "hakkebøf" (ground pork/beef patty): high quality meat, seasoned, seared in butter 3–4 min per side, served with fried onions.*
 **Serves**: 4 · **Cook**: 8–10 min
 
 **Temperature guidance**: Pan fry in butter 3–4 min per side on medium-high. Core must reach 71 °C (74–75 °C for safety margin).
@@ -50,8 +50,8 @@ USDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertempe
 
 ---
 
-### 2. ichkoche.at — Faschiertes (Austrian style ground pork patty)
-**Source**: ichkoche.at; https://www.ichkoche.at/faschiertes-braten-rezept-13558 (referenced 2026-04-24). *Austrian ground pork pan method: shaped Laibchen (small loaves/patties), fried in hot oil 3–4 min per side. Common seasoning: marjoram, garlic, onion.*
+### 2. Faschiertes (Austrian style ground pork patty) (inspired by ichkoche.at)
+**Inspired by**: ichkoche.at; https://www.ichkoche.at/faschiertes-braten-rezept-13558 (referenced 2026-04-24). *Austrian ground pork pan method: shaped Laibchen (small loaves/patties), fried in hot oil 3–4 min per side. Common seasoning: marjoram, garlic, onion.*
 **Serves**: 4 · **Cook**: 8–10 min
 
 **Temperature guidance**: 3–4 min per side at medium-high. "Thoroughly cooked through — no pink interior." Core: 74–75 °C.
@@ -76,8 +76,8 @@ USDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertempe
 
 ---
 
-### 3. Directo al Paladar — Mici rumanos / albóndigas de cerdo a la plancha (Spanish tradition)
-**Source**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/receta-mici-rumanos-mititei-popular-salchicha-carne-picada-a-brasa (referenced 2026-04-24). *Romanian mici (sausage-shaped ground pork rolls) cooked on a plancha/griddle: 1.5 min per side × 4 sides. Seasoned with garlic, thyme, bicarbonate, olive oil.*
+### 3. Mici rumanos / albóndigas de cerdo a la plancha (inspired by Directo al Paladar)
+**Inspired by**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/receta-mici-rumanos-mititei-popular-salchicha-carne-picada-a-brasa (referenced 2026-04-24). *Romanian mici (sausage-shaped ground pork rolls) cooked on a plancha/griddle: 1.5 min per side × 4 sides. Seasoned with garlic, thyme, bicarbonate, olive oil.*
 **Serves**: 4 · **Prep**: 15 min rest · **Cook**: 6 min
 
 *Translation: "Romanian mici — popular ground meat sausages on the plancha, golden outside and juicy inside."*

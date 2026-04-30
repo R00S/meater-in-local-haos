@@ -21,8 +21,8 @@ Pannstekning, i europeisk kulinarisk tradition, innebär vanligtvis en måttligt
 
 ## Source recipes
 
-### 1. Jacques Pépin — Steak à la Poêle, Sauce au Poivre (French bistro tradition)
-**Source**: Jacques Pépin, *La Technique* (Pocket Books, 1976); pan-fried steak with classic pepper sauce  
+### 1. Steak à la Poêle, Sauce au Poivre (inspired by Jacques Pépin)
+**Inspired by**: Jacques Pépin, *La Technique* (Pocket Books, 1976); pan-fried steak with classic pepper sauce  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -47,8 +47,8 @@ Pannstekning, i europeisk kulinarisk tradition, innebär vanligtvis en måttligt
 
 ---
 
-### 2. Rowley Leigh — Flat Iron Steak with Watercress and Anchovy Dressing (British tradition)
-**Source**: Rowley Leigh, *No Place Like Home* (Fourth Estate, 2000); pan-fried steak for bistro service  
+### 2. Flat Iron Steak with Watercress and Anchovy Dressing (inspired by Rowley Leigh)
+**Inspired by**: Rowley Leigh, *No Place Like Home* (Fourth Estate, 2000); pan-fried steak for bistro service  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -71,8 +71,8 @@ Pannstekning, i europeisk kulinarisk tradition, innebär vanligtvis en måttligt
 
 ---
 
-### 3. Giorgio Locatelli — Tagliata di Ferro con Rucola e Parmigiano (Italian tradition)
-**Source**: Giorgio Locatelli, *Made in Italy: Food and Stories* (Fourth Estate, 2006); tagliata (sliced steak) preparation for flat iron  
+### 3. Tagliata di Ferro con Rucola e Parmigiano (inspired by Giorgio Locatelli)
+**Inspired by**: Giorgio Locatelli, *Made in Italy: Food and Stories* (Fourth Estate, 2006); tagliata (sliced steak) preparation for flat iron  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -98,8 +98,8 @@ Pannstekning, i europeisk kulinarisk tradition, innebär vanligtvis en måttligt
 
 ---
 
-### 4. Kurt Gutenbrunner — Wiener Steak aus der Pfanne (Austrian tradition)
-**Source**: Kurt Gutenbrunner, *Neue Cuisine: The Elegant Tastes of Vienna* (Rizzoli, 2011); Viennese pan-fried steak technique  
+### 4. Wiener Steak aus der Pfanne (inspired by Kurt Gutenbrunner)
+**Inspired by**: Kurt Gutenbrunner, *Neue Cuisine: The Elegant Tastes of Vienna* (Rizzoli, 2011); Viennese pan-fried steak technique  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -125,8 +125,8 @@ Pannstekning, i europeisk kulinarisk tradition, innebär vanligtvis en måttligt
 
 ---
 
-### 5. Stephanie Alexander — Pan-Fried Flat Iron with Herb and Caper Butter (Australian tradition)
-**Source**: Stephanie Alexander, *The Cook's Companion* (Lantern, revised edition 2004); pan-fried steak with compound butter, method applied to flat iron  
+### 5. Pan-Fried Flat Iron with Herb and Caper Butter (inspired by Stephanie Alexander)
+**Inspired by**: Stephanie Alexander, *The Cook's Companion* (Lantern, revised edition 2004); pan-fried steak with compound butter, method applied to flat iron  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 10 min · **Rest**: 5 min
 
 **Ingredients**

@@ -32,8 +32,8 @@ Gåsben är stora, kollagenrika snitt som gynnas av måttliga till låga ugnstem
 
 ## Source recipes
 
-### 1. BBC Good Food — Slow-Roast Duck (low-and-slow fat rendering adapted for goose leg roast)
-**Source**: BBC Good Food editorial team, BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roast-duck (fetched 2025-07-15).
+### 1. Slow-Roast Duck (low-and-slow fat rendering adapted for goose leg roast) (inspired by BBC Good Food)
+**Inspired by**: BBC Good Food editorial team, BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roast-duck (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 2–2.5 hr · **Rest**: 10 min
 
 > **Note**: BBC source is whole slow-roast duck at 90–120 °C (194–248 °F) for 13 hours. For individual
@@ -65,8 +65,8 @@ Gåsben är stora, kollagenrika snitt som gynnas av måttliga till låga ugnstem
 
 ---
 
-### 2. Classic Culinary Technique — Oven-Roasted Goose Legs
-**Source**: Standard technique for roasting game bird legs; general knowledge synthesis.
+### 2. Oven-Roasted Goose Legs (inspired by Classic Culinary Technique)
+**Inspired by**: Standard technique for roasting game bird legs; general knowledge synthesis.
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 2–2.5 hr · **Rest**: 10 min
 
 **Temperature guidance**:
@@ -90,8 +90,8 @@ Gåsben är stora, kollagenrika snitt som gynnas av måttliga till låga ugnstem
 
 ---
 
-### 3. 阿笑 (Axiao) — 烤鹅腿 (Chinese Crispy-Skin Roasted Goose Leg)
-**Source**: Home cook "阿笑" (Axiao), Xiachufang.com (China's largest recipe platform); https://m.xiachufang.com/recipe/118199/ (fetched 2026-04-24, language: Chinese — ingredients and method translated below).
+### 3. 烤鹅腿 (Chinese Crispy-Skin Roasted Goose Leg) (inspired by 阿笑)
+**Inspired by**: Home cook "阿笑" (Axiao), Xiachufang.com (China's largest recipe platform); https://m.xiachufang.com/recipe/118199/ (fetched 2026-04-24, language: Chinese — ingredients and method translated below).
 **Serves**: 2 · **Prep**: 30 min + drying time (ideally overnight) · **Cook**: 35 min
 
 **Temperature guidance**:

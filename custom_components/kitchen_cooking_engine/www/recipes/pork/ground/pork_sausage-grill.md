@@ -23,8 +23,8 @@ Metod: medel indirekt värme (ca 180 °C) eller tvåzonsupplägg med grillocket 
 
 ## Source recipes
 
-### 1. Madens Verden — Grillpølse — sådan griller du pølser (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/grillpoelse-saadan-griller-du-poelser/ (fetched 2026-04-24). *"How to grill a sausage so it doesn't burst." Four rules: quality sausage; prick with needle; moderate heat; direct heat without lid.*
+### 1. Grillpølse — sådan griller du pølser (inspired by Madens Verden)
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/grillpoelse-saadan-griller-du-poelser/ (fetched 2026-04-24). *"How to grill a sausage so it doesn't burst." Four rules: quality sausage; prick with needle; moderate heat; direct heat without lid.*
 **Serves**: 4 · **Cook**: 10–15 min
 
 **Temperature guidance (from recipe)**: "Sausages risk bursting when they exceed 80 °C internal temperature." Medium direct heat throughout. Turn often. For pork sausages: core must reach 71 °C.
@@ -46,8 +46,8 @@ Metod: medel indirekt värme (ca 180 °C) eller tvåzonsupplägg med grillocket 
 
 ---
 
-### 2. ichkoche.at — Spare Ribs adapted to sausage — Bratwurst vom Grill (Austrian tradition)
-**Source**: ichkoche.at; https://www.ichkoche.at/spare-ribs-rezept-16908 (referenced for grill method principles). *Austrian grill method: medium direct heat; turn often; baste with sauce in the final minutes for caramelisation.*
+### 2. Spare Ribs adapted to sausage — Bratwurst vom Grill (inspired by ichkoche.at)
+**Inspired by**: ichkoche.at; https://www.ichkoche.at/spare-ribs-rezept-16908 (referenced for grill method principles). *Austrian grill method: medium direct heat; turn often; baste with sauce in the final minutes for caramelisation.*
 **Serves**: 4 · **Cook**: 12–15 min
 
 **Temperature guidance**: Medium grill heat. Baste with sauce last 5 minutes. Core 71–75 °C.
@@ -66,8 +66,8 @@ Metod: medel indirekt värme (ca 180 °C) eller tvåzonsupplägg med grillocket 
 
 ---
 
-### 3. Chefkoch.de — Bratwurst vom Grill Grundrezept (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rs/s0/bratwurst+grill/Rezepte.html (referenced 2026-04-24). *German grill sausage basics: grill at moderate heat, turn frequently, never pierce after placement (only before), no foil.*
+### 3. Bratwurst vom Grill Grundrezept (inspired by Chefkoch.de)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rs/s0/bratwurst+grill/Rezepte.html (referenced 2026-04-24). *German grill sausage basics: grill at moderate heat, turn frequently, never pierce after placement (only before), no foil.*
 **Serves**: 4 · **Cook**: 12–15 min
 
 **Temperature guidance**: "Medium heat throughout; don't overcrowd the grill rack; turn every 2–3 minutes." Core: 71–75 °C.

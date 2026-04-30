@@ -18,8 +18,8 @@ Sötpotatis (*Ipomoea batatas*) skuren i bitar eller klyftor och ugnsrostad vid 
 
 ## Source recipes
 
-### 1. Yotam Ottolenghi — Roasted Sweet Potato with Tahini and Za'atar (Israeli / Middle Eastern tradition)
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012)
+### 1. Roasted Sweet Potato with Tahini and Za'atar (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 28–32 min · **Rest**: 5 min
 
 **Ingredients**
@@ -32,8 +32,8 @@ Sötpotatis (*Ipomoea batatas*) skuren i bitar eller klyftor och ugnsrostad vid 
 
 ---
 
-### 2. Claudia Roden — Roasted Sweet Potato with Chermoula (Moroccan / North African tradition)
-**Source**: Claudia Roden, *Arabesque* (Alfred A. Knopf, 2005)
+### 2. Roasted Sweet Potato with Chermoula (inspired by Claudia Roden)
+**Inspired by**: Claudia Roden, *Arabesque* (Alfred A. Knopf, 2005)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 28–32 min · **Rest**: 3 min
 
 **Ingredients**
@@ -45,8 +45,8 @@ Sötpotatis (*Ipomoea batatas*) skuren i bitar eller klyftor och ugnsrostad vid 
 
 ---
 
-### 3. Madhur Jaffrey — Shakarkandi ki Sabzi (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+### 3. Shakarkandi ki Sabzi (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 28–32 min · **Rest**: 3 min
 
 **Ingredients**
@@ -58,8 +58,8 @@ Sötpotatis (*Ipomoea batatas*) skuren i bitar eller klyftor och ugnsrostad vid 
 
 ---
 
-### 4. Magnus Nilsson — Roasted Sweet Potato with Rapeseed Oil and Dill (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015); Nordic treatment of the sweet potato.
+### 4. Roasted Sweet Potato with Rapeseed Oil and Dill (inspired by Magnus Nilsson)
+**Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015); Nordic treatment of the sweet potato.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 28–32 min · **Rest**: 3 min
 
 **Ingredients**

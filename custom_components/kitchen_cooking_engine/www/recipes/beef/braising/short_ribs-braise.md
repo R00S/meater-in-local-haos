@@ -30,8 +30,8 @@ Sondens placering för bräserade revbensspjäll är enkel men kräver att sonde
 
 ## Source recipes
 
-### 1. Nagi Maehashi — Braised Beef Short Ribs in Red Wine Sauce (Australian modern tradition)
-**Source**: Nagi Maehashi, recipetineats.com/braised-beef-short-ribs-in-red-wine-sauce/  
+### 1. Braised Beef Short Ribs in Red Wine Sauce (inspired by Nagi Maehashi)
+**Inspired by**: Nagi Maehashi, recipetineats.com/braised-beef-short-ribs-in-red-wine-sauce/  
 **Serves**: 5 · **Prep**: 20 min · **Cook**: 3 hr · **Rest**: 10 min
 
 **Ingredients**
@@ -63,8 +63,8 @@ Sondens placering för bräserade revbensspjäll är enkel men kräver att sonde
 
 ---
 
-### 2. Suzy Karadsheh — Sage-Wine Braised Beef Short Ribs and Potatoes (Mediterranean / American tradition)
-**Source**: Suzy Karadsheh, themediterraneandish.com/braised-beef-short-ribs-and-potatoes/  
+### 2. Sage-Wine Braised Beef Short Ribs and Potatoes (inspired by Suzy Karadsheh)
+**Inspired by**: Suzy Karadsheh, themediterraneandish.com/braised-beef-short-ribs-and-potatoes/  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 2 hr 45 min · **Rest**: 10 min
 
 **Ingredients**
@@ -99,8 +99,8 @@ Sondens placering för bräserade revbensspjäll är enkel men kräver att sonde
 
 ---
 
-### 3. Judy and Kaitlin Leung — Asian Braised Short Ribs with Chili Lime Potatoes (Chinese-American tradition)
-**Source**: Judy and Kaitlin Leung, thewoksoflife.com/asian-braised-short-ribs-with-chili-lime-potatoes/  
+### 3. Asian Braised Short Ribs with Chili Lime Potatoes (inspired by Judy and Kaitlin Leung)
+**Inspired by**: Judy and Kaitlin Leung, thewoksoflife.com/asian-braised-short-ribs-with-chili-lime-potatoes/  
 **Serves**: 4–6 · **Prep**: 6–24 hr (marinade) + 15 min · **Cook**: 3 hr 15 min · **Rest**: 10 min
 
 **Ingredients**
@@ -120,8 +120,8 @@ Sondens placering för bräserade revbensspjäll är enkel men kräver att sonde
 
 ---
 
-### 4. TV amateur cook "Kicki Malmö" — Short Ribs Bräserade i Äppelmust (Swedish home tradition)
-**Source**: Kicki Malmö, *Halv åtta hos mig* (TV4 / Köket.se); koket.se/shortribs-braserade-i-applemust  
+### 4. Short Ribs Bräserade i Äppelmust (inspired by TV amateur cook "Kicki Malmö")
+**Inspired by**: Kicki Malmö, *Halv åtta hos mig* (TV4 / Köket.se); koket.se/shortribs-braserade-i-applemust  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 3 hr · **Rest**: 10 min
 
 **Ingredients**
@@ -150,8 +150,8 @@ Sondens placering för bräserade revbensspjäll är enkel men kräver att sonde
 
 ---
 
-### 5. Erik Videgård — Shortribs i japansk lag (Swedish professional × Japanese tradition)
-**Source**: Erik Videgård (Swedish celebrity chef), koket.se/shortribs-erik-videgards-recept  
+### 5. Shortribs i japansk lag (inspired by Erik Videgård)
+**Inspired by**: Erik Videgård (Swedish celebrity chef), koket.se/shortribs-erik-videgards-recept  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 3 hr (or overnight at 90 °C) · **Rest**: 10 min
 
 **Ingredients**

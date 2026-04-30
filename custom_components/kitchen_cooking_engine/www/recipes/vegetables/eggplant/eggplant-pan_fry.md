@@ -18,8 +18,8 @@ Aubergine (*Solanum melongena*) är en svampstrukturerad frukt av nattskuggfamil
 
 ## Source recipes
 
-### 1. Marcella Hazan — Melanzane Saltate (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
+### 1. Melanzane Saltate (inspired by Marcella Hazan)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
 **Serves**: 4 · **Prep**: 15 min (+ 30 min salting) · **Cook**: 12–15 min · **Rest**: 2 min
 
 **Ingredients**
@@ -42,8 +42,8 @@ Aubergine (*Solanum melongena*) är en svampstrukturerad frukt av nattskuggfamil
 
 ---
 
-### 2. Yotam Ottolenghi — Pan-Fried Aubergine with Buttermilk (Middle Eastern tradition)
-**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)  
+### 2. Pan-Fried Aubergine with Buttermilk (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)  
 **Serves**: 4 · **Prep**: 15 min (+ 20 min salting) · **Cook**: 15 min · **Rest**: 2 min
 
 **Ingredients**
@@ -68,8 +68,8 @@ Aubergine (*Solanum melongena*) är en svampstrukturerad frukt av nattskuggfamil
 
 ---
 
-### 3. Madhur Jaffrey — Begun Bhaja (Bengali tradition)
-**Source**: Madhur Jaffrey, *A Taste of India* (Pavilion Books, 1985)  
+### 3. Begun Bhaja (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *A Taste of India* (Pavilion Books, 1985)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 1 min
 
 **Ingredients**
@@ -92,8 +92,8 @@ Aubergine (*Solanum melongena*) är en svampstrukturerad frukt av nattskuggfamil
 
 ---
 
-### 4. Diana Henry — Pan-Fried Aubergine with Honey & Sesame (Andalusian tradition)
-**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015) and her *Telegraph* recipe column at telegraph.co.uk/food-and-drink  
+### 4. Pan-Fried Aubergine with Honey & Sesame (inspired by Diana Henry)
+**Inspired by**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015) and her *Telegraph* recipe column at telegraph.co.uk/food-and-drink  
 **Serves**: 4 · **Prep**: 15 min (+ 30 min cold-milk soak) · **Cook**: 8–10 min · **Rest**: 1 min
 
 **Ingredients**

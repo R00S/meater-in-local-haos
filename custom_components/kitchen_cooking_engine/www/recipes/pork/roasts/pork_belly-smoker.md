@@ -27,8 +27,8 @@ Innertemperatur: **80–88 °C (176–190 °F)** för genomstekt, saftig fläskb
 
 ## Source recipes
 
-### 1. Smoking-Meat.com — Smoked Pork Belly (whole slab)
-**Source**: Jeff Phillips, Smoking-Meat.com; https://www.smoking-meat.com/smoked-pork-belly (fetched 2026-04-24). *"As you may know, smoked pork belly is the stuff that bacon is made of." Whole 4–6 kg slab, two-phase cook.*
+### 1. Smoked Pork Belly (whole slab) (inspired by Smoking-Meat.com)
+**Inspired by**: Jeff Phillips, Smoking-Meat.com; https://www.smoking-meat.com/smoked-pork-belly (fetched 2026-04-24). *"As you may know, smoked pork belly is the stuff that bacon is made of." Whole 4–6 kg slab, two-phase cook.*
 **Serves**: 8–12 · **Prep**: 30 min · **Cook**: ~6 hr · **Rest**: 15–60 min
 
 **Temperature guidance (from recipe)**:
@@ -60,8 +60,8 @@ Innertemperatur: **80–88 °C (176–190 °F)** för genomstekt, saftig fläskb
 
 ---
 
-### 2. Smoking-Meat.com — Smoked Pork Belly Burnt Ends
-**Source**: Jeff Phillips, Smoking-Meat.com; https://www.smoking-meat.com/smoked-pork-belly-burnt-ends (fetched 2026-04-24). *"Here's my own personal take on smoked pork belly burnt ends." 4.5/5 from 12 votes.*
+### 2. Smoked Pork Belly Burnt Ends (inspired by Smoking-Meat.com)
+**Inspired by**: Jeff Phillips, Smoking-Meat.com; https://www.smoking-meat.com/smoked-pork-belly-burnt-ends (fetched 2026-04-24). *"Here's my own personal take on smoked pork belly burnt ends." 4.5/5 from 12 votes.*
 **Serves**: 6–8 · **Prep**: 30 min · **Cook**: ~4 hr · **Total**: ~4.5 hr
 
 **Temperature guidance (from recipe)**:
@@ -87,8 +87,8 @@ Innertemperatur: **80–88 °C (176–190 °F)** för genomstekt, saftig fläskb
 
 ---
 
-### 3. Smart Fritid / Agneta — Varmrökt sidfläsk (Hot-smoked pork belly, Swedish style)
-**Source**: Agneta, Smart Fritid; https://www.smartfritid.se/varmrokt-sidflask (fetched 2026-04-24). Swedish-language recipe using a hot-smoking cabinet (e.g. Borniak or Bradley Smoker).
+### 3. Varmrökt sidfläsk (Hot-smoked pork belly, Swedish style) (inspired by Smart Fritid / Agneta)
+**Inspired by**: Agneta, Smart Fritid; https://www.smartfritid.se/varmrokt-sidflask (fetched 2026-04-24). Swedish-language recipe using a hot-smoking cabinet (e.g. Borniak or Bradley Smoker).
 **Serves**: variable · **Prep**: brine 2.5 days + overnight dry · **Cook**: up to 7 h · **Rest**: 2 days (maturing in fridge)
 
 **Temperature guidance (from recipe)**:
@@ -113,8 +113,8 @@ Innertemperatur: **80–88 °C (176–190 °F)** för genomstekt, saftig fläskb
 
 ---
 
-### 4. Karlstein.nu / Thomas Karlstein — Burnt Ends av fläsksida (Swedish pork belly burnt ends)
-**Source**: Thomas Karlstein, karlstein.nu; https://karlstein.nu/burnt-ends-av-flasksida/ (fetched 2026-04-24). Swedish-language recipe, written in collaboration with Bradley Smoker. Published 6 November 2020.
+### 4. Burnt Ends av fläsksida (Swedish pork belly burnt ends) (inspired by Karlstein.nu / Thomas Karlstein)
+**Inspired by**: Thomas Karlstein, karlstein.nu; https://karlstein.nu/burnt-ends-av-flasksida/ (fetched 2026-04-24). Swedish-language recipe, written in collaboration with Bradley Smoker. Published 6 November 2020.
 **Serves**: 4 · **Prep**: 20 min · **Cook**: ~6 h · **Total**: ~6 h 20 min
 
 **Temperature guidance (from recipe)**:

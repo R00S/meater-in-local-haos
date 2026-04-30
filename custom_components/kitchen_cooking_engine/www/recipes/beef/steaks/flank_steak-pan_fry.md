@@ -20,8 +20,8 @@ Eftersom snittet är tunt och brett kan en flank steak vara svår att hantera i 
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Pan-Fried Flank Steak (Serious Eats)
-**Source**: J. Kenji López-Alt, seriouseats.com/flank-steak-pan-fry; *The Food Lab* (W. W. Norton, 2015)  
+### 1. Pan-Fried Flank Steak (Serious Eats) (inspired by J. Kenji López-Alt)
+**Inspired by**: J. Kenji López-Alt, seriouseats.com/flank-steak-pan-fry; *The Food Lab* (W. W. Norton, 2015)  
 **Serves**: 4 · **Prep**: 5 min (+1 hr dry-brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -42,8 +42,8 @@ Eftersom snittet är tunt och brett kan en flank steak vara svår att hantera i 
 
 ---
 
-### 2. Nigel Slater — Pan-Fried Bavette (British tradition)
-**Source**: Nigel Slater, *Tender, Volume 1* (Fourth Estate, 2009); theguardian.com/food  
+### 2. Pan-Fried Bavette (inspired by Nigel Slater)
+**Inspired by**: Nigel Slater, *Tender, Volume 1* (Fourth Estate, 2009); theguardian.com/food  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 3 min
 
 **Ingredients**
@@ -64,8 +64,8 @@ Eftersom snittet är tunt och brett kan en flank steak vara svår att hantera i 
 
 ---
 
-### 3. Jacques Pépin — Bavette de Bœuf à la Lyonnaise (French tradition)
-**Source**: Jacques Pépin, *La Technique* (Times Books, 1976)  
+### 3. Bavette de Bœuf à la Lyonnaise (inspired by Jacques Pépin)
+**Inspired by**: Jacques Pépin, *La Technique* (Times Books, 1976)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -90,8 +90,8 @@ Eftersom snittet är tunt och brett kan en flank steak vara svår att hantera i 
 
 ---
 
-### 4. Nobu Matsuhisa — Pan-Fried Beef Flank with Miso Glaze (Japanese-American tradition)
-**Source**: Nobu Matsuhisa, *Nobu Now* (Clarkson Potter, 2004)  
+### 4. Pan-Fried Beef Flank with Miso Glaze (inspired by Nobu Matsuhisa)
+**Inspired by**: Nobu Matsuhisa, *Nobu Now* (Clarkson Potter, 2004)  
 **Serves**: 4 · **Prep**: 15 min (+1 hr marinate) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -114,8 +114,8 @@ Eftersom snittet är tunt och brett kan en flank steak vara svår att hantera i 
 
 ---
 
-### 5. Adam Perry Lang — Pan-Fried Flank with Herb Baste (American BBQ tradition applied to pan)
-**Source**: Adam Perry Lang, *Serious Barbecue* (Hyperion, 2009)  
+### 5. Pan-Fried Flank with Herb Baste (inspired by Adam Perry Lang)
+**Inspired by**: Adam Perry Lang, *Serious Barbecue* (Hyperion, 2009)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**

@@ -36,8 +36,8 @@ Pannstekning i 2–3 cm tjocklek: 3–4 minuter per sida i smör eller klarat sm
 
 ## Source recipes
 
-### 1. BBC Good Food — Pan-Fried Venison with Blackberry Sauce (British tradition)
-**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/pan-fried-venison-blackberry-sauce (fetched 2026-04-24). *Recipe from Good Food magazine, November 2007.*
+### 1. Pan-Fried Venison with Blackberry Sauce (inspired by BBC Good Food)
+**Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/pan-fried-venison-blackberry-sauce (fetched 2026-04-24). *Recipe from Good Food magazine, November 2007.*
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 15 min
 
 **Ingredients**
@@ -60,8 +60,8 @@ Pannstekning i 2–3 cm tjocklek: 3–4 minuter per sida i smör eller klarat sm
 
 ---
 
-### 2. BBC Good Food — Venison Steak with Port Sauce (British tradition)
-**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/venison-steak-port-sauce (fetched 2026-04-24). *Recipe from Good Food magazine, October 2010.*
+### 2. Venison Steak with Port Sauce (inspired by BBC Good Food)
+**Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/venison-steak-port-sauce (fetched 2026-04-24). *Recipe from Good Food magazine, October 2010.*
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 20 min
 
 **Ingredients**
@@ -88,8 +88,8 @@ Pannstekning i 2–3 cm tjocklek: 3–4 minuter per sida i smör eller klarat sm
 
 ---
 
-### 3. Great British Chefs — Pan-Roasted Loin of Venison with Redcurrant Sauce (British tradition)
-**Source**: Great British Chefs; https://www.greatbritishchefs.com/recipes/pan-roasted-loin-venison-recipe (web search 2026-04-24)
+### 3. Pan-Roasted Loin of Venison with Redcurrant Sauce (inspired by Great British Chefs)
+**Inspired by**: Great British Chefs; https://www.greatbritishchefs.com/recipes/pan-roasted-loin-venison-recipe (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 15 min
 
 **Ingredients**
@@ -111,8 +111,8 @@ Pannstekning i 2–3 cm tjocklek: 3–4 minuter per sida i smör eller klarat sm
 
 ---
 
-### 4. Chefkoch.de — Reh- oder Hirschsteaks mit verschiedenen Marinaden (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/1520541257290915/Reh-oder-Hirschsteaks-mit-verschiedenen-Marinaden.html (fetched 2026-04-24)
+### 4. Reh- oder Hirschsteaks mit verschiedenen Marinaden (inspired by Chefkoch.de)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/1520541257290915/Reh-oder-Hirschsteaks-mit-verschiedenen-Marinaden.html (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 12 hrs · **Cook**: 15 min
 
 *Translation: Roe deer or red deer steaks with various marinades — three marinade options for pan searing.*

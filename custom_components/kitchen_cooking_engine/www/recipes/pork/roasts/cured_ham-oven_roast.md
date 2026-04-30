@@ -25,8 +25,8 @@ Innertemperatur: **68–75 °C (154–167 °F)** för varm, saftig härdad skink
 
 ## Source recipes
 
-### 1. Madens Verden — Glaseret Skinke (Danish glazed ham)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/glaseret-skinke/ (fetched 2026-04-24). *"Simple glazing with brown sugar and mustard." 4.8/5, 56 ratings.*
+### 1. Glaseret Skinke (Danish glazed ham) (inspired by Madens Verden)
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/glaseret-skinke/ (fetched 2026-04-24). *"Simple glazing with brown sugar and mustard." 4.8/5, 56 ratings.*
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 35 min boil + 30 min rest + 12–15 min oven
 
 **Temperature guidance (from recipe)**: Boil 1 kg ham approximately 35 minutes; rest in water 30 min; oven 200°C fan × 12–15 min until glaze is golden. "Take care it doesn't get too dark."
@@ -49,8 +49,8 @@ Innertemperatur: **68–75 °C (154–167 °F)** för varm, saftig härdad skink
 
 ---
 
-### 2. Chefkoch — Schinken aus dem Ofen mit Honig-Senf-Kruste (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/1084701214303107/Schinken-aus-dem-Ofen-mit-Honig-Senf-Kruste.html (fetched 2026-04-24). *"A must for every festive table." Boil 2 hrs, then oven with red wine + honey-mustard glaze.*
+### 2. Schinken aus dem Ofen mit Honig-Senf-Kruste (inspired by Chefkoch)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/1084701214303107/Schinken-aus-dem-Ofen-mit-Honig-Senf-Kruste.html (fetched 2026-04-24). *"A must for every festive table." Boil 2 hrs, then oven with red wine + honey-mustard glaze.*
 **Serves**: 6 · **Prep**: 10 min · **Cook**: 2 hr boil + 1 hr oven
 
 **Temperature guidance (from recipe)**: 175°C × 45 min with red wine; brush honey-mustard glaze; increase to 200°C until crust is crispy; rest 10 min in turned-off oven.
@@ -75,8 +75,8 @@ Innertemperatur: **68–75 °C (154–167 °F)** för varm, saftig härdad skink
 
 ---
 
-### 3. Chefkoch — Schinkenkrustenbraten bei Niedrigtemperatur (German low-and-slow tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/3667681552238222/Schinkenkrustenbraten-bei-Niedrigtemperatur-gegart.html (fetched 2026-04-24). *Very low oven 80°C → 75°C core; vegetables braised in port wine and stock as sauce base.*
+### 3. Schinkenkrustenbraten bei Niedrigtemperatur (inspired by Chefkoch)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/3667681552238222/Schinkenkrustenbraten-bei-Niedrigtemperatur-gegart.html (fetched 2026-04-24). *Very low oven 80°C → 75°C core; vegetables braised in port wine and stock as sauce base.*
 **Serves**: 6 · **Prep**: 30 min · **Cook**: ~6.5–7 hr
 
 **Temperature guidance (from recipe)**: Oven 80°C top/bottom heat; cook in open roasting dish until internal temperature reaches **75°C** (approximately 6–7 hours). ⚠️ No pre-boiling — cook from raw throughout.

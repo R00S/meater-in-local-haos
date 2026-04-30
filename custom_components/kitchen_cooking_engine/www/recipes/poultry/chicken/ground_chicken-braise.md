@@ -37,8 +37,8 @@ Tillaga till 74 °C (165 °F) internt, rör om regelbundet för att säkerställ
 
 ## Source recipes
 
-### 1. Natasha's Kitchen — Chicken Meatballs in Cream Sauce (Tefteli)
-**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/chicken-meatballs/ (fetched 2025-07-15).
+### 1. Chicken Meatballs in Cream Sauce (Tefteli) (inspired by Natasha's Kitchen)
+**Inspired by**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/chicken-meatballs/ (fetched 2025-07-15).
 **Serves**: 4–6 · **Prep**: 25 min · **Cook**: 30 min total · **Rest**: 0 min (serve in sauce)
 
 **Temperature guidance**:
@@ -87,8 +87,8 @@ Tillaga till 74 °C (165 °F) internt, rör om regelbundet för att säkerställ
 
 ---
 
-### 2. Skinnytaste — Ground Poultry Braised Skillet (adapted)
-**Source**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/ground-turkey/ (fetched 2025-07-15).
+### 2. Ground Poultry Braised Skillet (adapted) (inspired by Skinnytaste)
+**Inspired by**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/ground-turkey/ (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 20–22 min · **Rest**: 0 min
 
 **Temperature guidance**:
@@ -121,8 +121,8 @@ Tillaga till 74 °C (165 °F) internt, rör om regelbundet för att säkerställ
 
 ---
 
-### 3. Swasthi Shreekanth — Chicken Keema (Indian Spiced Ground Chicken Curry)
-**Source**: Swasthi Shreekanth, IndianHealthyRecipes.com; https://www.indianhealthyrecipes.com/chicken-keema/ (fetched 2026-04-24).
+### 3. Chicken Keema (Indian Spiced Ground Chicken Curry) (inspired by Swasthi Shreekanth)
+**Inspired by**: Swasthi Shreekanth, IndianHealthyRecipes.com; https://www.indianhealthyrecipes.com/chicken-keema/ (fetched 2026-04-24).
 **Serves**: 3–4 · **Prep**: 10 min · **Cook**: 20 min
 
 **Temperature guidance**:

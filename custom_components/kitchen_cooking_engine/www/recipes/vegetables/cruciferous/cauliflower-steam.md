@@ -18,8 +18,8 @@ Blomkål (*Brassica oleracea* var. *botrytis*) ångad bevarar fler av glukosinol
 
 ## Source recipes
 
-### 1. Fuchsia Dunlop — Zhēng Huā Cài (蒸花椰菜 — Chinese Steamed Cauliflower with Sesame Sauce)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
+### 1. Zhēng Huā Cài (蒸花椰菜 — Chinese Steamed Cauliflower with Sesame Sauce) (inspired by Fuchsia Dunlop)
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -38,8 +38,8 @@ Blomkål (*Brassica oleracea* var. *botrytis*) ångad bevarar fler av glukosinol
 
 ---
 
-### 2. Madhur Jaffrey — Masala Steamed Gobi (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+### 2. Masala Steamed Gobi (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -54,8 +54,8 @@ Blomkål (*Brassica oleracea* var. *botrytis*) ångad bevarar fler av glukosinol
 
 ---
 
-### 3. Julia Child — Chou-fleur Vapeur au Beurre Noisette (French tradition)
-**Source**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
+### 3. Chou-fleur Vapeur au Beurre Noisette (inspired by Julia Child)
+**Inspired by**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -75,8 +75,8 @@ Blomkål (*Brassica oleracea* var. *botrytis*) ångad bevarar fler av glukosinol
 
 ---
 
-### 4. Claudia Roden — Steamed Cauliflower with Smen and Preserved Lemon (Moroccan / North African tradition)
-**Source**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey and Lebanon* (Alfred A. Knopf, 2005)
+### 4. Steamed Cauliflower with Smen and Preserved Lemon (inspired by Claudia Roden)
+**Inspired by**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey and Lebanon* (Alfred A. Knopf, 2005)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 3 min
 
 **Ingredients**

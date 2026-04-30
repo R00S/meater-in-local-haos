@@ -21,8 +21,8 @@ Ugnsstekning är den klassiska och mest använda metoden för rostade potatisar.
 
 ## Source recipes
 
-### 1. Nigel Slater — Perfect Roast Potatoes (British tradition)
-**Source**: Nigel Slater, *Tender Vol. I* (4th Estate, 2009); the archetypal British roast potato method.
+### 1. Perfect Roast Potatoes (inspired by Nigel Slater)
+**Inspired by**: Nigel Slater, *Tender Vol. I* (4th Estate, 2009); the archetypal British roast potato method.
 **Serves**: 4–6 · **Prep**: 15 min + parboiling · **Cook**: 40–50 min · **Rest**: 5 min
 
 **Ingredients**
@@ -36,8 +36,8 @@ Ugnsstekning är den klassiska och mest använda metoden för rostade potatisar.
 
 ---
 
-### 2. José Andrés — Patatas Asadas con Romero y Ajo (Spanish tradition)
-**Source**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
+### 2. Patatas Asadas con Romero y Ajo (inspired by José Andrés)
+**Inspired by**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
 **Serves**: 4 · **Prep**: 15 min + parboiling · **Cook**: 35–40 min · **Rest**: 5 min
 
 **Ingredients**
@@ -51,8 +51,8 @@ Ugnsstekning är den klassiska och mest använda metoden för rostade potatisar.
 
 ---
 
-### 3. Madhur Jaffrey — Batata Masala Roast (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+### 3. Batata Masala Roast (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min + parboiling · **Cook**: 35–40 min · **Rest**: 3 min
 
 **Ingredients**
@@ -65,8 +65,8 @@ Ugnsstekning är den klassiska och mest använda metoden för rostade potatisar.
 
 ---
 
-### 4. Fuchsia Dunlop — Dry-Fried Roast Potatoes with Cumin (Chinese tradition)
-**Source**: Fuchsia Dunlop, *Land of Fish and Rice* (W. W. Norton, 2016); Sichuan cumin-potato preparation adapted for oven roasting.
+### 4. Dry-Fried Roast Potatoes with Cumin (inspired by Fuchsia Dunlop)
+**Inspired by**: Fuchsia Dunlop, *Land of Fish and Rice* (W. W. Norton, 2016); Sichuan cumin-potato preparation adapted for oven roasting.
 **Serves**: 4 · **Prep**: 10 min + parboiling · **Cook**: 35–40 min · **Rest**: 3 min
 
 **Ingredients**

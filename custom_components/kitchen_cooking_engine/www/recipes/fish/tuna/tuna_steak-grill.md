@@ -23,8 +23,8 @@ Typisk ansats: galler vid 250–270 °C, 1–2 minuter per sida för rare (38–
 
 ## Source recipes
 
-### 1. Steven Raichlen — Grilled Yellowfin Tuna Steaks (American tradition)
-**Source**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
+### 1. Grilled Yellowfin Tuna Steaks (inspired by Steven Raichlen)
+**Inspired by**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
 **Serves**: 4 · **Prep**: 10 min (+30 min marinade) · **Cook**: 4–6 min · **Rest**: 1 min
 
 **Ingredients**
@@ -51,8 +51,8 @@ Typisk ansats: galler vid 250–270 °C, 1–2 minuter per sida för rare (38–
 
 ---
 
-### 2. Yotam Ottolenghi — Grilled Tuna with Avocado and Wasabi (Israeli-British tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)  
+### 2. Grilled Tuna with Avocado and Wasabi (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 4–5 min · **Rest**: 1 min
 
 **Ingredients**
@@ -76,8 +76,8 @@ Typisk ansats: galler vid 250–270 °C, 1–2 minuter per sida för rare (38–
 
 ---
 
-### 3. Marcella Hazan — Tonno alla Griglia (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)  
+### 3. Tonno alla Griglia (inspired by Marcella Hazan)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)  
 **Serves**: 4 · **Prep**: 10 min (+1 h marinade) · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -99,8 +99,8 @@ Typisk ansats: galler vid 250–270 °C, 1–2 minuter per sida för rare (38–
 
 ---
 
-### 4. Paula Wolfert — Thon Grillé à la Tunisienne (Tunisian / North African tradition)
-**Source**: Paula Wolfert, *The Cooking of the Eastern Mediterranean* (HarperCollins, 1994)  
+### 4. Thon Grillé à la Tunisienne (inspired by Paula Wolfert)
+**Inspired by**: Paula Wolfert, *The Cooking of the Eastern Mediterranean* (HarperCollins, 1994)  
 **Serves**: 4 · **Prep**: 20 min (+3 h marinade) · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -119,8 +119,8 @@ Typisk ansats: galler vid 250–270 °C, 1–2 minuter per sida för rare (38–
 
 ---
 
-### 5. Rick Stein — Swordfish or Tuna Steaks with Gremolata (British Mediterranean tradition)
-**Source**: Rick Stein, *Rick Stein's Mediterranean Escapes* (BBC Books, 2007)  
+### 5. Swordfish or Tuna Steaks with Gremolata (inspired by Rick Stein)
+**Inspired by**: Rick Stein, *Rick Stein's Mediterranean Escapes* (BBC Books, 2007)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 4–6 min · **Rest**: 1 min
 
 **Ingredients**

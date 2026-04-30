@@ -22,8 +22,8 @@ Börja med torr, het panna (180–200 °C) och lite olja för att förhindra fas
 
 ## Source recipes
 
-### 1. Madens Verden — Pandestegning af koteletter (adapted for loin steak) (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/pandestegning-af-koteletter/ (fetched 2026-04-24). *Classic Danish pan-fry technique applied to loin steak: salt 20 min ahead, butter baste 4 min per side in two phases.*
+### 1. Pandestegning af koteletter (adapted for loin steak) (inspired by Madens Verden)
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/pandestegning-af-koteletter/ (fetched 2026-04-24). *Classic Danish pan-fry technique applied to loin steak: salt 20 min ahead, butter baste 4 min per side in two phases.*
 **Serves**: 2 · **Prep**: 20 min salting · **Cook**: 8 min
 
 **Temperature guidance**: 2 min high heat + 2 min reduced heat per side = 4 min total per side. Core 62–65 °C.
@@ -45,8 +45,8 @@ Börja med torr, het panna (180–200 °C) och lite olja för att förhindra fas
 
 ---
 
-### 2. ichkoche.at — Schweinskotelett Grundrezept (adapted for boneless loin steak) (Austrian tradition)
-**Source**: ichkoche.at; https://www.ichkoche.at/schweinskotelett-rezept-236782 (fetched 2026-04-24). *Austrian fundamentals: very hot dry pan then oil, 2 min each side; butter + herbs + garlic baste between sides.*
+### 2. Schweinskotelett Grundrezept (adapted for boneless loin steak) (inspired by ichkoche.at)
+**Inspired by**: ichkoche.at; https://www.ichkoche.at/schweinskotelett-rezept-236782 (fetched 2026-04-24). *Austrian fundamentals: very hot dry pan then oil, 2 min each side; butter + herbs + garlic baste between sides.*
 **Serves**: 2 · **Cook**: 5 min
 
 **Temperature guidance**: 2 min per side undisturbed; butter-baste.
@@ -68,8 +68,8 @@ Börja med torr, het panna (180–200 °C) och lite olja för att förhindra fas
 
 ---
 
-### 3. Directo al Paladar — Chuleta de cerdo a la plancha (Spanish tradition, adapted for boneless loin steak)
-**Source**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/como-hacer-mejores-chuletas-cerdo-a-plancha-jugosas-churruscaditas (fetched 2026-04-24). *The Spanish griddle method for pork: atemperar 15 min, medium-high heat, 1.5 min per side, salt after with flakes, rest 1 min.*
+### 3. Chuleta de cerdo a la plancha (inspired by Directo al Paladar)
+**Inspired by**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/como-hacer-mejores-chuletas-cerdo-a-plancha-jugosas-churruscaditas (fetched 2026-04-24). *The Spanish griddle method for pork: atemperar 15 min, medium-high heat, 1.5 min per side, salt after with flakes, rest 1 min.*
 **Serves**: 1–2 · **Prep**: 15 min · **Cook**: 3 min
 
 **Temperature guidance**: 1.5 min per side on medium-high. "Respect the temperature of the meat and pan." Core: 63–65 °C.

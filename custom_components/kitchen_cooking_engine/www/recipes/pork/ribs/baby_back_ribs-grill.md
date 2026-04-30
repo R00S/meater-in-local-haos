@@ -25,8 +25,8 @@ Alternativt: förkoka 40–50 min sedan 20–25 min vid 220 °C indirekt. Innert
 
 ## Source recipes
 
-### 1. Madens Verden — Verdens bedste spareribs (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/verdens-bedste-spareribs/ (fetched 2026-04-24). *"World's best spareribs — no pre-boiling needed." Dry rub; foil-wrapped; 1 hr at 150 °C direct grill; then BBQ sauce finish 5–7 min per side.*
+### 1. Verdens bedste spareribs (inspired by Madens Verden)
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/verdens-bedste-spareribs/ (fetched 2026-04-24). *"World's best spareribs — no pre-boiling needed." Dry rub; foil-wrapped; 1 hr at 150 °C direct grill; then BBQ sauce finish 5–7 min per side.*
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 1 hr foil + 14 min open
 
 *Translation: "You don't need to pre-boil these. The trick is to wrap the ribs in foil, where they get to become tender. At the same time you retain all the flavour in the packets."*
@@ -55,8 +55,8 @@ Alternativt: förkoka 40–50 min sedan 20–25 min vid 220 °C indirekt. Innert
 
 ---
 
-### 2. Madens Verden — Spareribs i grill (pre-boil method) (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/spareribs/ (fetched 2026-04-24). *Pre-boil 45–50 min; then indirect grill 220 °C × 20–25 min; brush with marinade at 15 min.*
+### 2. Spareribs i grill (pre-boil method) (inspired by Madens Verden)
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/spareribs/ (fetched 2026-04-24). *Pre-boil 45–50 min; then indirect grill 220 °C × 20–25 min; brush with marinade at 15 min.*
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 45 min boil + 25 min grill
 
 **Temperature guidance**: Indirect grill at 220 °C. After boiling, ribs only need 20–25 min to finish with sauce glaze.
@@ -79,8 +79,8 @@ Alternativt: förkoka 40–50 min sedan 20–25 min vid 220 °C indirekt. Innert
 
 ---
 
-### 3. ichkoche.at — Spare Ribs (adapted for grill) (Austrian tradition)
-**Source**: ichkoche.at; https://www.ichkoche.at/spare-ribs-rezept-16908 (fetched 2026-04-24). *Overnight garlic-oil marinade; start at 200 °C then reduce to 150 °C × 45 min; adapted here for indirect grill use.*
+### 3. Spare Ribs (adapted for grill) (inspired by ichkoche.at)
+**Inspired by**: ichkoche.at; https://www.ichkoche.at/spare-ribs-rezept-16908 (fetched 2026-04-24). *Overnight garlic-oil marinade; start at 200 °C then reduce to 150 °C × 45 min; adapted here for indirect grill use.*
 **Serves**: 4 · **Prep**: overnight marinade · **Cook**: 60 min indirect grill
 
 **Temperature guidance**: Start at 200 °C × 15 min (indirect), then reduce to 150 °C × 45 min. Baste with sauce several times. Core: 88–93 °C.

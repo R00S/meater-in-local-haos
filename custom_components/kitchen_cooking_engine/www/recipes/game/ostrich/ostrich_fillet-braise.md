@@ -24,8 +24,8 @@ Bräsering ger ett fuktigt, välkryddat resultat och passar väl för servering 
 
 ## Source recipes
 
-### 1. Chefkoch.de (user Kantinejenta) — Straußenfilet mit Koriander und Rotwein
-**Source**: https://www.chefkoch.de/rezepte/1314531236162795/Straussenfilet-mit-Koriander-und-Rotwein.html  
+### 1. Straußenfilet mit Koriander und Rotwein (inspired by Chefkoch.de)
+**Inspired by**: https://www.chefkoch.de/rezepte/1314531236162795/Straussenfilet-mit-Koriander-und-Rotwein.html  
 **Tradition**: German home cooking — **Culinary Group D** (Scandinavian/Baltic/Slavic/European)  
 **Rating**: 4/5 stars (1 review)  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: ~40 min (20 min simmer + 20 min reduction)

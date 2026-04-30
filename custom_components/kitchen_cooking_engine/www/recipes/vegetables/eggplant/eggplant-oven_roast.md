@@ -18,8 +18,8 @@ Aubergine (*Solanum melongena*) ugnsrostad utvecklar rika, karameliserade ytor l
 
 ## Source recipes
 
-### 1. 小麦芽15 — 好吃到连皮都不剩的烤茄子 (Chinese Oven Roasted Eggplant with Garlic-Cumin Sauce)
-**Source**: Home cook "小麦芽15" (Xiaomaiya15), Xiachufang.com (China's largest recipe platform); https://m.xiachufang.com/recipe/104415647/ (fetched 2026-04-24, language: Chinese — ingredients and method translated below).
+### 1. 好吃到连皮都不剩的烤茄子 (Chinese Oven Roasted Eggplant with Garlic-Cumin Sauce) (inspired by 小麦芽15)
+**Inspired by**: Home cook "小麦芽15" (Xiaomaiya15), Xiachufang.com (China's largest recipe platform); https://m.xiachufang.com/recipe/104415647/ (fetched 2026-04-24, language: Chinese — ingredients and method translated below).
 **Serves**: 2–3 · **Prep**: 10 min · **Cook**: 25 min · **Rest**: 3 min
 
 **Ingredients** *(translated from Chinese)*
@@ -46,8 +46,8 @@ Aubergine (*Solanum melongena*) ugnsrostad utvecklar rika, karameliserade ytor l
 
 ---
 
-### 2. Swasthi Shreekanth — Baingan Bharta — Oven Method (Indian / Punjabi tradition)
-**Source**: Swasthi Shreekanth, IndianHealthyRecipes.com; https://www.indianhealthyrecipes.com/baingan-bharta/ (fetched 2026-04-24).
+### 2. Baingan Bharta — Oven Method (inspired by Swasthi Shreekanth)
+**Inspired by**: Swasthi Shreekanth, IndianHealthyRecipes.com; https://www.indianhealthyrecipes.com/baingan-bharta/ (fetched 2026-04-24).
 **Serves**: 3–4 · **Prep**: 10 min · **Cook**: 16–20 min broil + 12 min masala · **Rest**: 5 min (cooling)
 
 **Ingredients**
@@ -69,8 +69,8 @@ Aubergine (*Solanum melongena*) ugnsrostad utvecklar rika, karameliserade ytor l
 
 ---
 
-### 3. Claudia Roden — Patlıcan Kizartması (Turkish / Middle Eastern tradition)
-**Source**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey and Lebanon* (Alfred A. Knopf, 2005)
+### 3. Patlıcan Kizartması (inspired by Claudia Roden)
+**Inspired by**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey and Lebanon* (Alfred A. Knopf, 2005)
 **Serves**: 4 · **Prep**: 20 min (+ 30 min salting) · **Cook**: 25–30 min · **Rest**: 5 min
 
 **Ingredients**
@@ -97,8 +97,8 @@ Aubergine (*Solanum melongena*) ugnsrostad utvecklar rika, karameliserade ytor l
 
 ---
 
-### 4. Marcella Hazan — Melanzane al Forno con Aglio e Prezzemolo (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+### 4. Melanzane al Forno con Aglio e Prezzemolo (inspired by Marcella Hazan)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 15 min (+ 30 min salting) · **Cook**: 20–25 min · **Rest**: 5 min
 
 **Ingredients**

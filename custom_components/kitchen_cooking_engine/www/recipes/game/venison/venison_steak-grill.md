@@ -36,8 +36,8 @@ Grillen måste förvärmas till max (230–260 °C). Köttet bör oljeborsttas o
 
 ## Source recipes
 
-### 1. BBC Good Food — Venison Steak with Port Sauce (UK tradition)
-**Source**: Good Food Magazine, October 2010; https://www.bbcgoodfood.com/recipes/venison-steak-port-sauce (fetched 2025-07-13)
+### 1. Venison Steak with Port Sauce (inspired by BBC Good Food)
+**Inspired by**: Good Food Magazine, October 2010; https://www.bbcgoodfood.com/recipes/venison-steak-port-sauce (fetched 2025-07-13)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 20 min
 
 **Ingredients**
@@ -65,8 +65,8 @@ Grillen måste förvärmas till max (230–260 °C). Köttet bör oljeborsttas o
 
 ---
 
-### 2. Honest Food (Hank Shaw) — Grilled Venison Backstrap (North American tradition)
-**Source**: Hank Shaw, Honest Food; https://honest-food.net/grilled-venison-loin/ (fetched 2025-07-13)
+### 2. Grilled Venison Backstrap (inspired by Honest Food)
+**Inspired by**: Hank Shaw, Honest Food; https://honest-food.net/grilled-venison-loin/ (fetched 2025-07-13)
 **Serves**: 2–4 · **Prep**: 60 min (rest) · **Cook**: 15 min
 
 **Ingredients**
@@ -89,8 +89,8 @@ Grillen måste förvärmas till max (230–260 °C). Köttet bör oljeborsttas o
 
 ---
 
-### 3. Chefkoch — Reh- oder Hirschsteaks mit verschiedenen Marinaden (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/1520541257290915/Reh-oder-Hirschsteaks-mit-verschiedenen-Marinaden.html (fetched 2025-07-13)
+### 3. Reh- oder Hirschsteaks mit verschiedenen Marinaden (inspired by Chefkoch)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/1520541257290915/Reh-oder-Hirschsteaks-mit-verschiedenen-Marinaden.html (fetched 2025-07-13)
 **Serves**: 4 · **Prep**: 30 min (+ 24 hr marinate) · **Cook**: 15 min
 
 **Ingredients**
@@ -119,8 +119,8 @@ Grillen måste förvärmas till max (230–260 °C). Köttet bör oljeborsttas o
 
 ---
 
-### 4. Bara en kaka till — Hjortfilé med grönpepparsås (Swedish tradition)
-**Source**: Helena, Bara en kaka till; https://baraenkakatill.se/hjortfile-gronpepparsas-potatistorn/ (fetched 2025-07-13)
+### 4. Hjortfilé med grönpepparsås (inspired by Bara en kaka till)
+**Inspired by**: Helena, Bara en kaka till; https://baraenkakatill.se/hjortfile-gronpepparsas-potatistorn/ (fetched 2025-07-13)
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 75 min
 
 **Ingredients**
@@ -149,8 +149,8 @@ Grillen måste förvärmas till max (230–260 °C). Köttet bör oljeborsttas o
 
 ---
 
-### 5. Matprat — Plankebiff av elg eller hjort (Norwegian tradition)
-**Source**: Matprat.no; https://www.matprat.no/oppskrifter/kos/plankebiff-av-elg/ (fetched 2025-07-13)
+### 5. Plankebiff av elg eller hjort (inspired by Matprat)
+**Inspired by**: Matprat.no; https://www.matprat.no/oppskrifter/kos/plankebiff-av-elg/ (fetched 2025-07-13)
 **Serves**: 4 · **Prep**: 15 min (+ 2 hr soak for plank) · **Cook**: 30 min
 
 **Ingredients**

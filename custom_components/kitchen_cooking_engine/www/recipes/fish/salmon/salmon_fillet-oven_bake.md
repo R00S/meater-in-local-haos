@@ -21,8 +21,8 @@ Ugnsbakning är särskilt väl lämpad för hela sidan filéer och tjockare port
 
 ## Source recipes
 
-### 1. America's Test Kitchen — Slow-Roasted Salmon (American tradition)
-**Source**: America's Test Kitchen, *The Complete Cookbook for Two* (America's Test Kitchen, 2014); americastestkitchen.com/recipes/7952-slow-roasted-salmon  
+### 1. Slow-Roasted Salmon (inspired by America's Test Kitchen)
+**Inspired by**: America's Test Kitchen, *The Complete Cookbook for Two* (America's Test Kitchen, 2014); americastestkitchen.com/recipes/7952-slow-roasted-salmon  
 **Serves**: 2 · **Prep**: 10 min (+30 min rest) · **Cook**: 30–40 min · **Rest**: 5 min
 
 **Ingredients**
@@ -44,8 +44,8 @@ Ugnsbakning är särskilt väl lämpad för hela sidan filéer och tjockare port
 
 ---
 
-### 2. Julia Child — Saumon au Four en Papillote (French classical tradition)
-**Source**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961)  
+### 2. Saumon au Four en Papillote (inspired by Julia Child)
+**Inspired by**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961)  
 **Serves**: 2 · **Prep**: 20 min · **Cook**: 25–30 min · **Rest**: 3 min
 
 **Ingredients**
@@ -70,8 +70,8 @@ Ugnsbakning är särskilt väl lämpad för hela sidan filéer och tjockare port
 
 ---
 
-### 3. Ottolenghi — Baked Salmon with Preserved Lemon and Za'atar (Middle Eastern tradition)
-**Source**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
+### 3. Baked Salmon with Preserved Lemon and Za'atar (inspired by Ottolenghi)
+**Inspired by**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
 **Serves**: 4 · **Prep**: 15 min (+2 h marinade) · **Cook**: 15–18 min · **Rest**: 3 min
 
 **Ingredients**
@@ -94,8 +94,8 @@ Ugnsbakning är särskilt väl lämpad för hela sidan filéer och tjockare port
 
 ---
 
-### 4. Gordon Ramsay — Baked Salmon with Mustard Herb Crust (British restaurant tradition)
-**Source**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
+### 4. Baked Salmon with Mustard Herb Crust (inspired by Gordon Ramsay)
+**Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 3 min
 
 **Ingredients**
@@ -118,8 +118,8 @@ Ugnsbakning är särskilt väl lämpad för hela sidan filéer och tjockare port
 
 ---
 
-### 5. Paula Wolfert — Baked Salmon with Charmoula en Cocotte (Moroccan tradition)
-**Source**: Paula Wolfert, *The Food of Morocco* (Ecco/HarperCollins, 2011)  
+### 5. Baked Salmon with Charmoula en Cocotte (inspired by Paula Wolfert)
+**Inspired by**: Paula Wolfert, *The Food of Morocco* (Ecco/HarperCollins, 2011)  
 **Serves**: 4 · **Prep**: 20 min (+1 h marinade) · **Cook**: 20–25 min · **Rest**: 3 min
 
 **Ingredients**

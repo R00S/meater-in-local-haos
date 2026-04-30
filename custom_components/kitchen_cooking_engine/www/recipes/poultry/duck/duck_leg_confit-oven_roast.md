@@ -21,8 +21,8 @@ Anklägg confit tillagad i ugnen är den definitiva tillämpningen av confit-met
 
 ## Source recipes
 
-### 1. Nagi Maehashi (RecipeTin Eats) — Duck Confit / Confit de Canard (French bistro tradition, Australian adaptation, Culinary Group B)
-**Source**: Nagi Maehashi (with Chef Jean-Baptiste Alexandre), recipetineats.com/duck-confit/  
+### 1. Duck Confit / Confit de Canard (inspired by Nagi Maehashi)
+**Inspired by**: Nagi Maehashi (with Chef Jean-Baptiste Alexandre), recipetineats.com/duck-confit/  
 **Serves**: 4 · **Prep**: 12–24 hr cure + 20 min · **Cook**: 8 hr + 40 min crisping · **Rest**: none needed (meat already cooked)
 
 **Ingredients**
@@ -58,8 +58,8 @@ Anklägg confit tillagad i ugnen är den definitiva tillämpningen av confit-met
 
 ---
 
-### 2. Bon Appétit Test Kitchen — Duck Confit (French-American bistro tradition, Culinary Group B)
-**Source**: Bon Appétit Test Kitchen, bonappetit.com/recipe/duck-confit  
+### 2. Duck Confit (inspired by Bon Appétit Test Kitchen)
+**Inspired by**: Bon Appétit Test Kitchen, bonappetit.com/recipe/duck-confit  
 **Serves**: 4 · **Prep**: 24 hr cure + 15 min · **Cook**: 3 hr 30 min + 15 min crisping · **Rest**: none needed
 
 **Ingredients**

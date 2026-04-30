@@ -18,8 +18,8 @@ Spagetti-squash (*Cucurbita pepo*) ugnsrostad vid högre värme (200–220 °C) 
 
 ## Source recipes
 
-### 1. José Andrés — Espagueti Vegetal Asado (Spanish / American tradition)
-**Source**: José Andrés, *Vegetables Unleashed* (Clarkson Potter, 2019)
+### 1. Espagueti Vegetal Asado (inspired by José Andrés)
+**Inspired by**: José Andrés, *Vegetables Unleashed* (Clarkson Potter, 2019)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 35–45 min · **Rest**: 5 min
 
 **Ingredients**
@@ -32,8 +32,8 @@ Spagetti-squash (*Cucurbita pepo*) ugnsrostad vid högre värme (200–220 °C) 
 
 ---
 
-### 2. Marcella Hazan — Zucca Spaghetti Arrostita (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+### 2. Zucca Spaghetti Arrostita (inspired by Marcella Hazan)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 35–40 min · **Rest**: 5 min
 
 **Ingredients**
@@ -46,8 +46,8 @@ Spagetti-squash (*Cucurbita pepo*) ugnsrostad vid högre värme (200–220 °C) 
 
 ---
 
-### 3. Yotam Ottolenghi — Roasted Spaghetti Squash with Za'atar Dressing (Israeli tradition)
-**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
+### 3. Roasted Spaghetti Squash with Za'atar Dressing (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 35–45 min · **Rest**: 5 min
 
 **Ingredients**
@@ -60,8 +60,8 @@ Spagetti-squash (*Cucurbita pepo*) ugnsrostad vid högre värme (200–220 °C) 
 
 ---
 
-### 4. Deborah Madison — Roasted Spaghetti Squash with Walnut Sauce (American vegetarian tradition)
-**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
+### 4. Roasted Spaghetti Squash with Walnut Sauce (inspired by Deborah Madison)
+**Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 35–45 min · **Rest**: 5 min
 
 **Ingredients**

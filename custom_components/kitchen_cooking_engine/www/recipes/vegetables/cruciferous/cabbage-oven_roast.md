@@ -18,8 +18,8 @@ Kål (*Brassica oleracea* var. *capitata*) är ett tätt, laminerat huvud av öv
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Roasted Cabbage Wedges (American tradition)
-**Source**: J. Kenji López-Alt, *The Wok* (W. W. Norton, 2022) and seriouseats.com/easy-roasted-cabbage-wedges-recipe  
+### 1. Roasted Cabbage Wedges (inspired by J. Kenji López-Alt)
+**Inspired by**: J. Kenji López-Alt, *The Wok* (W. W. Norton, 2022) and seriouseats.com/easy-roasted-cabbage-wedges-recipe  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25–30 min · **Rest**: 3 min
 
 **Ingredients**
@@ -43,8 +43,8 @@ Kål (*Brassica oleracea* var. *capitata*) är ett tätt, laminerat huvud av öv
 
 ---
 
-### 2. Magnus Nilsson — Pressed Roast Cabbage (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)  
+### 2. Pressed Roast Cabbage (inspired by Magnus Nilsson)
+**Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 35–45 min · **Rest**: 5 min
 
 **Ingredients**
@@ -70,8 +70,8 @@ Kål (*Brassica oleracea* var. *capitata*) är ett tätt, laminerat huvud av öv
 
 ---
 
-### 3. Yotam Ottolenghi — Whole Roasted Cabbage with Brown Butter & Caraway (Middle Eastern–European fusion)
-**Source**: Yotam Ottolenghi & Helen Goh, *Sweet* concept extended in Ottolenghi's *Flavour* (Ebury Press, 2020); ottolenghi.co.uk  
+### 3. Whole Roasted Cabbage with Brown Butter & Caraway (Middle Eastern–European fusion) (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi & Helen Goh, *Sweet* concept extended in Ottolenghi's *Flavour* (Ebury Press, 2020); ottolenghi.co.uk  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 45–55 min · **Rest**: 5 min
 
 **Ingredients**
@@ -96,8 +96,8 @@ Kål (*Brassica oleracea* var. *capitata*) är ett tätt, laminerat huvud av öv
 
 ---
 
-### 4. Hugh Fearnley-Whittingstall — Wedge of Cabbage with Anchovy Butter (British / River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *River Cottage Veg Every Day!* (Bloomsbury, 2011)  
+### 4. Wedge of Cabbage with Anchovy Butter (inspired by Hugh Fearnley-Whittingstall)
+**Inspired by**: Hugh Fearnley-Whittingstall, *River Cottage Veg Every Day!* (Bloomsbury, 2011)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 30–35 min · **Rest**: 3 min
 
 **Ingredients**

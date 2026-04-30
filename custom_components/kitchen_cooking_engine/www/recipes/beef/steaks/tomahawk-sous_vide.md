@@ -26,8 +26,8 @@ Tomahawken är en benfri entrecôte skärd från ribprimalen (revben 6–12) med
 
 ## Source recipes
 
-### 1. Madens Verden — Ribeye sous vide (adapted for tomahawk) (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ribeye-sous-vide/ (fetched 2026-04-24). *The same bath temperatures apply for tomahawk — a larger ribeye — but cook time is extended to 3–4 hours due to the increased thickness.*
+### 1. Ribeye sous vide (adapted for tomahawk) (inspired by Madens Verden)
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ribeye-sous-vide/ (fetched 2026-04-24). *The same bath temperatures apply for tomahawk — a larger ribeye — but cook time is extended to 3–4 hours due to the increased thickness.*
 **Serves**: 2–3 · **Cook**: 3–4 hr bath + 6–8 min sear
 
 **Temperature guidance (from recipe / adapted)**: Bath at 57 °C for medium-rare (longer hold needed). Sear at maximum heat on grill or BBQ to develop crust. Final rest 3–5 minutes.
@@ -52,8 +52,8 @@ Tomahawken är en benfri entrecôte skärd från ribprimalen (revben 6–12) med
 
 ---
 
-### 2. GialloZafferano Blog — La Bistecca Perfetta Sousvide (Italian tradition, adapted for tomahawk)
-**Source**: Il Mattino Ha L'Uovo in Bocca, GialloZafferano Blog; https://blog.giallozafferano.it/ilmattinohaluovoinbocca/la-bistecca-perfetta-sousvide-cottura-sottovuoto/ (fetched 2026-04-24). *Same technique as for ribeye: 55 °C × 2+ hours, then screaming-hot cast-iron sear. For tomahawk extend bath to 3–4 hours.*
+### 2. La Bistecca Perfetta Sousvide (inspired by GialloZafferano Blog)
+**Inspired by**: Il Mattino Ha L'Uovo in Bocca, GialloZafferano Blog; https://blog.giallozafferano.it/ilmattinohaluovoinbocca/la-bistecca-perfetta-sousvide-cottura-sottovuoto/ (fetched 2026-04-24). *Same technique as for ribeye: 55 °C × 2+ hours, then screaming-hot cast-iron sear. For tomahawk extend bath to 3–4 hours.*
 **Serves**: 2–3 · **Cook**: 3–4 hr bath + 2 min sear
 
 **Temperature guidance (from recipe)**: "Imposta la temperatura a 55 gradi per una cottura medium-rare." For tomahawk thickness, hold at least 3 hours. Sear 60 seconds per side minimum.
@@ -75,8 +75,8 @@ Tomahawken är en benfri entrecôte skärd från ribprimalen (revben 6–12) med
 
 ---
 
-### 3. ichkoche.at — Hochrückensteak sous vide (Austrian tradition, adapted for tomahawk)
-**Source**: lsfabian, ichkoche.at; https://www.ichkoche.at/hochrueckensteak-mit-gemuese-rezept-220825 (fetched 2026-04-24). *Austrian method: overnight butter-rosemary marinade in vacuum bag, 60 °C × 10 min per cm. For a 6 cm tomahawk = 60 minutes bath minimum; in practice 2–3 hours is safer.*
+### 3. Hochrückensteak sous vide (inspired by ichkoche.at)
+**Inspired by**: lsfabian, ichkoche.at; https://www.ichkoche.at/hochrueckensteak-mit-gemuese-rezept-220825 (fetched 2026-04-24). *Austrian method: overnight butter-rosemary marinade in vacuum bag, 60 °C × 10 min per cm. For a 6 cm tomahawk = 60 minutes bath minimum; in practice 2–3 hours is safer.*
 **Serves**: 2 · **Cook**: 2–3 hr bath + sear
 
 **Temperature guidance (from recipe adapted)**: "Pro 1 cm 10 Minuten" at 60 °C. For tomahawk (5–6 cm): extend to 50–60 minutes minimum; 2–3 hours for safety and tenderness. Sear in very hot pan; optional Cognac flambé.

@@ -18,8 +18,8 @@ Gåslår är kanske den mest smakrika delen av gåsen. Ugnsstekning fungerar vid
 
 ## Source recipes
 
-### 1. Hugh Fearnley-Whittingstall — Slow-Roast Goose Thighs with Garlic & Thyme (British River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004) — the thigh-only variant of his goose-leg roast; rivercottage.net  
+### 1. Slow-Roast Goose Thighs with Garlic & Thyme (inspired by Hugh Fearnley-Whittingstall)
+**Inspired by**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004) — the thigh-only variant of his goose-leg roast; rivercottage.net  
 **Serves**: 4 · **Prep**: 15 min (+ overnight dry brine) · **Cook**: 2 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -42,8 +42,8 @@ Gåslår är kanske den mest smakrika delen av gåsen. Ugnsstekning fungerar vid
 
 ---
 
-### 2. Magnus Nilsson — Långstekta Gåslår (Swedish/Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)  
+### 2. Långstekta Gåslår (inspired by Magnus Nilsson)
+**Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)  
 **Serves**: 4 · **Prep**: 15 min (+ overnight dry brine) · **Cook**: 2–2.5 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -69,8 +69,8 @@ Gåslår är kanske den mest smakrika delen av gåsen. Ugnsstekning fungerar vid
 
 ---
 
-### 3. Diana Henry — Slow-Roast Goose Thighs with Honey, Lemon & Sumac (Persian-inspired British tradition)
-**Source**: Diana Henry, *Crazy Water, Pickled Lemons* (Mitchell Beazley, 2002) and her *Telegraph* column at telegraph.co.uk/food-and-drink — autumn-game section  
+### 3. Slow-Roast Goose Thighs with Honey, Lemon & Sumac (inspired by Diana Henry)
+**Inspired by**: Diana Henry, *Crazy Water, Pickled Lemons* (Mitchell Beazley, 2002) and her *Telegraph* column at telegraph.co.uk/food-and-drink — autumn-game section  
 **Serves**: 4 · **Prep**: 20 min (+ overnight dry brine) · **Cook**: 2 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -95,8 +95,8 @@ Gåslår är kanske den mest smakrika delen av gåsen. Ugnsstekning fungerar vid
 
 ---
 
-### 4. Yotam Ottolenghi — Roast Goose Thighs with Pomegranate Molasses & Walnut Crust (Levantine fusion tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014) technique extended; ottolenghi.co.uk recipes — winter-game section  
+### 4. Roast Goose Thighs with Pomegranate Molasses & Walnut Crust (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014) technique extended; ottolenghi.co.uk recipes — winter-game section  
 **Serves**: 4 · **Prep**: 20 min (+ overnight dry brine) · **Cook**: 2 hr · **Rest**: 15 min
 
 **Ingredients**

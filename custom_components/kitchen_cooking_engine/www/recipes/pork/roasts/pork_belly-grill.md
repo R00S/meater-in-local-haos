@@ -22,8 +22,8 @@ Standardteknik: förkoka svålen ned i salt vatten för att öppna porerna, bör
 
 ## Source recipes
 
-### 1. Korean BBQ tradition — 삼겹살 구이 (Samgyeopsal Gui, Grilled Pork Belly)
-**Source**: *My Korean Kitchen* (Sue Pressey, mykoreankitchen.com); consistent
+### 1. 삼겹살 구이 (Samgyeopsal Gui, Grilled Pork Belly) (inspired by Korean BBQ tradition)
+**Inspired by**: *My Korean Kitchen* (Sue Pressey, mykoreankitchen.com); consistent
 with traditional Korean BBQ table-grill technique documented by the Korea Tourism
 Organization and numerous Korean culinary authorities  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: none (eat at the table)
@@ -55,8 +55,8 @@ Organization and numerous Korean culinary authorities
 
 ---
 
-### 2. Australian BBQ tradition — Grilled Pork Belly Slices
-**Source**: taste.com.au (Australia's largest recipe platform); consistent with
+### 2. Grilled Pork Belly Slices (inspired by Australian BBQ tradition)
+**Inspired by**: taste.com.au (Australia's largest recipe platform); consistent with
 Australian backyard barbecue conventions for pork belly strips  
 **Serves**: 4 · **Prep**: 15 min (+1 h marinade) · **Cook**: 10–12 min · **Rest**: 5 min
 
@@ -87,8 +87,8 @@ Australian backyard barbecue conventions for pork belly strips
 
 ---
 
-### 3. Filipino tradition — Inihaw na Liempo (Grilled Pork Belly)
-**Source**: Panlasang Pinoy (panlasangpinoy.com, Vanjo Merano) — the leading
+### 3. Inihaw na Liempo (Grilled Pork Belly) (inspired by Filipino tradition)
+**Inspired by**: Panlasang Pinoy (panlasangpinoy.com, Vanjo Merano) — the leading
 Filipino recipe authority; technique consistent with traditional charcoal-grilled
 *liempo* preparation across the Philippines  
 **Serves**: 4–6 · **Prep**: 15 min (+3 h marinade or overnight) · **Cook**: 14–18 min · **Rest**: 5 min
@@ -126,8 +126,8 @@ Filipino recipe authority; technique consistent with traditional charcoal-grille
 
 ---
 
-### 4. Steven Raichlen — Grilled Pork Belly Slices (*Planet Barbecue*)
-**Source**: *Planet Barbecue!* (Workman Publishing, 2010); barbecuebible.com  
+### 4. Grilled Pork Belly Slices (*Planet Barbecue*) (inspired by Steven Raichlen)
+**Inspired by**: *Planet Barbecue!* (Workman Publishing, 2010); barbecuebible.com  
 **Serves**: 4 · **Prep**: 20 min (+4 h dry-rub rest) · **Cook**: 10–12 min · **Rest**: 3 min
 
 **Ingredients**
@@ -159,8 +159,8 @@ Filipino recipe authority; technique consistent with traditional charcoal-grille
 
 ---
 
-### 5. Vietnamese street-food tradition — Thịt Ba Chỉ Nướng (Grilled Pork Belly)
-**Source**: Vietnam Coracle (tomcoracle.com, Tom Coracle); documented in Vietnamese
+### 5. Thịt Ba Chỉ Nướng (Grilled Pork Belly) (inspired by Vietnamese street-food tradition)
+**Inspired by**: Vietnam Coracle (tomcoracle.com, Tom Coracle); documented in Vietnamese
 street-food literature; technique consistent with Hanoi and Ho Chi Minh City
 market-stall grilling tradition  
 **Serves**: 4 · **Prep**: 15 min (+2 h marinade) · **Cook**: 10–12 min · **Rest**: 3 min

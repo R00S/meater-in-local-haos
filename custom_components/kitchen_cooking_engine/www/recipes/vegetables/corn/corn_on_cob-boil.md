@@ -18,8 +18,8 @@ Majs på kolven (*Zea mays*) kokt är den enklaste och mest globalt vanliga till
 
 ## Source recipes
 
-### 1. Diana Kennedy — Elotes de Mazorca (Mexican tradition)
-**Source**: Diana Kennedy, *The Cuisines of Mexico* (Harper & Row, 1972; revised edn Univ. of Texas Press, 1986)
+### 1. Elotes de Mazorca (inspired by Diana Kennedy)
+**Inspired by**: Diana Kennedy, *The Cuisines of Mexico* (Harper & Row, 1972; revised edn Univ. of Texas Press, 1986)
 **Serves**: 4 · **Prep**: 3 min · **Cook**: 8–12 min · **Rest**: 1 min (draining)
 
 **Ingredients**
@@ -37,8 +37,8 @@ Majs på kolven (*Zea mays*) kokt är den enklaste och mest globalt vanliga till
 
 ---
 
-### 2. Harumi Kurihara — Yudetomorokoshi (茹でとうもろこし — Japanese Boiled Corn with Salt Butter)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
+### 2. Yudetomorokoshi (茹でとうもろこし — Japanese Boiled Corn with Salt Butter) (inspired by Harumi Kurihara)
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
 **Serves**: 4 · **Prep**: 3 min · **Cook**: 5–8 min · **Rest**: 1 min
 
 **Ingredients**
@@ -58,8 +58,8 @@ Majs på kolven (*Zea mays*) kokt är den enklaste och mest globalt vanliga till
 
 ---
 
-### 3. Pailin Chongchitnant — Khao Phot Tom (Thai boiled corn — street food)
-**Source**: Pailin Chongchitnant, *Hot Thai Kitchen* (Appetite by Random House, 2016); https://hot-thai-kitchen.com/thai-boiled-corn/ (corn preparation)
+### 3. Khao Phot Tom (Thai boiled corn — street food) (inspired by Pailin Chongchitnant)
+**Inspired by**: Pailin Chongchitnant, *Hot Thai Kitchen* (Appetite by Random House, 2016); https://hot-thai-kitchen.com/thai-boiled-corn/ (corn preparation)
 **Serves**: 4 · **Prep**: 3 min · **Cook**: 12–15 min · **Rest**: 2 min
 
 **Ingredients**
@@ -77,8 +77,8 @@ Majs på kolven (*Zea mays*) kokt är den enklaste och mest globalt vanliga till
 
 ---
 
-### 4. Madhur Jaffrey — Simla Makkai (Indian Boiled Corn with Masala)
-**Source**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
+### 4. Simla Makkai (Indian Boiled Corn with Masala) (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
 **Serves**: 4 · **Prep**: 3 min · **Cook**: 8–12 min · **Rest**: 2 min
 
 **Ingredients**

@@ -34,8 +34,8 @@ Bräsera på spis eller i ugn vid 160–170 °C i 1–2 timmar. Traditionella be
 
 ## Source recipes
 
-### 1. BBC Good Food — Roast Rabbit with Thyme (British tradition)
-**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/roast-rabbit-thyme (fetched 2026-04-24)
+### 1. Roast Rabbit with Thyme (inspired by BBC Good Food)
+**Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/roast-rabbit-thyme (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 50 min
 
 **Ingredients**
@@ -59,8 +59,8 @@ Bräsera på spis eller i ugn vid 160–170 °C i 1–2 timmar. Traditionella be
 
 ---
 
-### 2. Chefkoch.de — Kaninchenkeulen aus dem Ofen mit Kräuterkruste (German tradition)
-**Source**: Chefkoch.de oven rabbit recipes; https://www.chefkoch.de/rs/s0/kaninchen+ofen/Rezepte.html (fetched reference 2026-04-24)
+### 2. Kaninchenkeulen aus dem Ofen mit Kräuterkruste (inspired by Chefkoch.de)
+**Inspired by**: Chefkoch.de oven rabbit recipes; https://www.chefkoch.de/rs/s0/kaninchen+ofen/Rezepte.html (fetched reference 2026-04-24)
 **Serves**: 4 · **Prep**: 20 min + 2 hrs marinade · **Cook**: 50 min
 
 *Translation: Oven-roasted rabbit legs with herb crust.*
@@ -85,8 +85,8 @@ Bräsera på spis eller i ugn vid 160–170 °C i 1–2 timmar. Traditionella be
 
 ---
 
-### 3. Madensverden.dk — Ovnstegt kanin (Danish oven-roasted rabbit)
-**Source**: Madensverden.dk; https://madensverden.dk/ovnstegt-kanin/ (web search 2026-04-24)
+### 3. Ovnstegt kanin (Danish oven-roasted rabbit) (inspired by Madensverden.dk)
+**Inspired by**: Madensverden.dk; https://madensverden.dk/ovnstegt-kanin/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 45 min
 
 *The Danish approach: whole roasted or jointed rabbit with root vegetables.*

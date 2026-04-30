@@ -19,8 +19,8 @@ New York strip (även kallad strip loin, sirloin strip, Kansas City strip eller 
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Pan-Seared New York Strip (American tradition)
-**Source**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/perfect-pan-seared-steaks-recipe  
+### 1. Pan-Seared New York Strip (inspired by J. Kenji López-Alt)
+**Inspired by**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/perfect-pan-seared-steaks-recipe  
 **Serves**: 2 · **Prep**: 5 min (+overnight dry-brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -45,8 +45,8 @@ New York strip (även kallad strip loin, sirloin strip, Kansas City strip eller 
 
 ---
 
-### 2. Gordon Ramsay — Pan-Seared Strip Steak with Red Wine Jus (British restaurant tradition)
-**Source**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
+### 2. Pan-Seared Strip Steak with Red Wine Jus (inspired by Gordon Ramsay)
+**Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
 **Serves**: 2 · **Prep**: 5 min (+30 min tempering) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -72,8 +72,8 @@ New York strip (även kallad strip loin, sirloin strip, Kansas City strip eller 
 
 ---
 
-### 3. Jacques Pépin — Contre-Filet Sauté au Beurre (French classical tradition)
-**Source**: Jacques Pépin, *New Complete Techniques* (Black Dog & Leventhal Publishers, 2012)  
+### 3. Contre-Filet Sauté au Beurre (inspired by Jacques Pépin)
+**Inspired by**: Jacques Pépin, *New Complete Techniques* (Black Dog & Leventhal Publishers, 2012)  
 **Serves**: 2 · **Prep**: 5 min (+20 min tempering) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -99,8 +99,8 @@ New York strip (även kallad strip loin, sirloin strip, Kansas City strip eller 
 
 ---
 
-### 4. Heston Blumenthal — Perfect Steak (Strip Steak Method) (British Modernist tradition)
-**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
+### 4. Perfect Steak (Strip Steak Method) (inspired by Heston Blumenthal)
+**Inspired by**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
 **Serves**: 1–2 · **Prep**: 24 h (+1 h dry age) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -124,8 +124,8 @@ New York strip (även kallad strip loin, sirloin strip, Kansas City strip eller 
 
 ---
 
-### 5. Neil Perry — Pan-Seared Strip Steak with Bone Marrow Butter (Australian tradition)
-**Source**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
+### 5. Pan-Seared Strip Steak with Bone Marrow Butter (inspired by Neil Perry)
+**Inspired by**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
 **Serves**: 2 · **Prep**: 10 min (+30 min tempering) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**

@@ -25,8 +25,8 @@ Tri-tip är ett centralt snitt i den californiska Santa Maria BBQ-traditionen oc
 
 ## Source recipes
 
-### 1. Immaculate Bites (africanbites.com) — Oven Tri Tip Roast (Californian / West African tradition)
-**Source**: Imma Adamu, africanbites.com; https://www.africanbites.com/oven-tri-tip-roast/ (fetched 2026-04-24). *"California's pride: the Tri Tip. A unique beef cut that is part roast and part steak — 100% delicious whether grilled or roasted in the oven."*
+### 1. Oven Tri Tip Roast (inspired by Immaculate Bites)
+**Inspired by**: Imma Adamu, africanbites.com; https://www.africanbites.com/oven-tri-tip-roast/ (fetched 2026-04-24). *"California's pride: the Tri Tip. A unique beef cut that is part roast and part steak — 100% delicious whether grilled or roasted in the oven."*
 **Serves**: 4 · **Prep**: 1 hr marinate (overnight better) · **Cook**: 20 min
 
 **Temperature guidance (from recipe)**: "Remove when internal temperature reaches 135°F (57°C) for medium-rare and 145°F (63°C) for medium. Let rest 5–10 minutes."
@@ -57,8 +57,8 @@ Tri-tip är ett centralt snitt i den californiska Santa Maria BBQ-traditionen oc
 
 ---
 
-### 2. Madens Verden — Ball tip oksesteg (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ball-tip/ (fetched 2026-04-24). *Ball tip (Danish name for tri-tip / bottom sirloin) with olive oil, garlic, and rosemary marinade roasted at 160 °C fan — "mør, rosa og saftig" (tender, pink and juicy).*
+### 2. Ball tip oksesteg (inspired by Madens Verden)
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ball-tip/ (fetched 2026-04-24). *Ball tip (Danish name for tri-tip / bottom sirloin) with olive oil, garlic, and rosemary marinade roasted at 160 °C fan — "mør, rosa og saftig" (tender, pink and juicy).*
 **Serves**: 4 · **Prep**: 4 hr marinade · **Cook**: 40–45 min
 
 *Translation: Ball tip (tri-tip) — "Take it out when it has a core temperature of 56 °C — then it is tender, pink and juicy without being the least bit raw."*
@@ -86,8 +86,8 @@ Tri-tip är ett centralt snitt i den californiska Santa Maria BBQ-traditionen oc
 
 ---
 
-### 3. RecipeTin Eats — Marinated Roast Beef (Australian tradition, adapted for tri-tip)
-**Source**: Nagi Maehashi, RecipeTin Eats; https://www.recipetineats.com/marinated-roast-beef/ (fetched 2026-04-24). *Marinade with garlic, soy, balsamic, Dijon, and Worcestershire, marinated 2–3 days; starts high at 240 °C, finishes at 180 °C. Pull at 44 °C; rises to 52 °C after 20–30 min rest.*
+### 3. Marinated Roast Beef (inspired by RecipeTin Eats)
+**Inspired by**: Nagi Maehashi, RecipeTin Eats; https://www.recipetineats.com/marinated-roast-beef/ (fetched 2026-04-24). *Marinade with garlic, soy, balsamic, Dijon, and Worcestershire, marinated 2–3 days; starts high at 240 °C, finishes at 180 °C. Pull at 44 °C; rises to 52 °C after 20–30 min rest.*
 **Serves**: 6–8 · **Prep**: 2–3 days marinade + 1 hr de-chill · **Cook**: 55–60 min
 
 **Temperature guidance (from recipe)**: "Insert meat thermometer in the centre; registers 44 °C / 111 °F for medium-rare. Rest 20–30 min; internal temp rises to 52 °C / 125 °F — perfect medium-rare."

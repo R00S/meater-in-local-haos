@@ -18,8 +18,8 @@ Champinjoner (*Agaricus bisporus*, omogen vit form) på het grill: ytvattnet avd
 
 ## Source recipes
 
-### 1. Mark Bittman — Grilled Button Mushrooms with Garlic & Lemon (American tradition)
-**Source**: Mark Bittman, *How to Grill Everything* (Houghton Mifflin Harcourt, 2018)  
+### 1. Grilled Button Mushrooms with Garlic & Lemon (inspired by Mark Bittman)
+**Inspired by**: Mark Bittman, *How to Grill Everything* (Houghton Mifflin Harcourt, 2018)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -44,8 +44,8 @@ Champinjoner (*Agaricus bisporus*, omogen vit form) på het grill: ytvattnet avd
 
 ---
 
-### 2. Adam Liaw — Yakitori-style Mushroom Skewers (Japanese tradition)
-**Source**: Adam Liaw, *Asian Cookery School* (Hardie Grant, 2015) and adamliaw.com  
+### 2. Yakitori-style Mushroom Skewers (inspired by Adam Liaw)
+**Inspired by**: Adam Liaw, *Asian Cookery School* (Hardie Grant, 2015) and adamliaw.com  
 **Serves**: 4 · **Prep**: 15 min (+ 30 min skewer-soak) · **Cook**: 6–8 min · **Rest**: 1 min
 
 **Ingredients**
@@ -72,8 +72,8 @@ Champinjoner (*Agaricus bisporus*, omogen vit form) på het grill: ytvattnet avd
 
 ---
 
-### 3. Francis Mallmann — Champiñones a la Parrilla (Argentine/Patagonian tradition)
-**Source**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009)  
+### 3. Champiñones a la Parrilla (inspired by Francis Mallmann)
+**Inspired by**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -97,8 +97,8 @@ Champinjoner (*Agaricus bisporus*, omogen vit form) på het grill: ytvattnet avd
 
 ---
 
-### 4. Anna Jones — Grilled Marinated Mushrooms (British vegetarian tradition)
-**Source**: Anna Jones, *A Modern Way to Cook* (Fourth Estate, 2015)  
+### 4. Grilled Marinated Mushrooms (inspired by Anna Jones)
+**Inspired by**: Anna Jones, *A Modern Way to Cook* (Fourth Estate, 2015)  
 **Serves**: 4 · **Prep**: 15 min (+ 20 min marinade) · **Cook**: 8 min · **Rest**: 2 min
 
 **Ingredients**

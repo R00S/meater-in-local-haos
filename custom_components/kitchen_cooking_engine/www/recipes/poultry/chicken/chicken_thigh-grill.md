@@ -36,8 +36,8 @@ Grilla benbibehållna skinnklädda lår vid medel-hög värme, 6–8 minuter per
 
 ## Source recipes
 
-### 1. Jessica Gavin — Grilled Chicken Thighs
-**Source**: Jessica Gavin, jessicagavin.com; https://www.jessicagavin.com/grilled-chicken-thighs/ (fetched 2025-07-15).
+### 1. Grilled Chicken Thighs (inspired by Jessica Gavin)
+**Inspired by**: Jessica Gavin, jessicagavin.com; https://www.jessicagavin.com/grilled-chicken-thighs/ (fetched 2025-07-15).
 **Serves**: 4–6 · **Prep**: 15 min + 30 min marinate · **Cook**: 25–30 min (bone-in) · **Rest**: 5 min
 
 **Temperature guidance**:
@@ -78,8 +78,8 @@ Grilla benbibehållna skinnklädda lår vid medel-hög värme, 6–8 minuter per
 
 ---
 
-### 2. Natasha's Kitchen — Juicy BBQ Chicken Thighs
-**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/juicy-barbecued-chicken-thighs-recipe/ (fetched 2025-07-15).
+### 2. Juicy BBQ Chicken Thighs (inspired by Natasha's Kitchen)
+**Inspired by**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/juicy-barbecued-chicken-thighs-recipe/ (fetched 2025-07-15).
 **Serves**: 6–8 · **Prep**: 10 min + 6 hr marinate · **Cook**: 24–30 min · **Rest**: 5–10 min
 
 **Temperature guidance**:
@@ -114,8 +114,8 @@ Grilla benbibehållna skinnklädda lår vid medel-hög värme, 6–8 minuter per
 
 ---
 
-### 3. Immaculate Bites — Hawaiian Grilled Chicken Thighs
-**Source**: Imma Adamu, Africanbites.com (Cameroonian-born food blogger, based in USA); https://www.africanbites.com/hawaiian-grilled-chicken-thighs/ (fetched 2026-04-24).
+### 3. Hawaiian Grilled Chicken Thighs (inspired by Immaculate Bites)
+**Inspired by**: Imma Adamu, Africanbites.com (Cameroonian-born food blogger, based in USA); https://www.africanbites.com/hawaiian-grilled-chicken-thighs/ (fetched 2026-04-24).
 **Serves**: 4–6 · **Prep**: 15 min + 3 hr–overnight marinating · **Cook**: 25–30 min · **Rest**: 5 min
 
 **Temperature guidance**:
@@ -152,8 +152,8 @@ Grilla benbibehållna skinnklädda lår vid medel-hög värme, 6–8 minuter per
 
 ---
 
-### 4. Pailin Chongchitnant — Gai Yang ไก่ย่าง (Ultimate Thai BBQ Chicken) (Thai tradition)
-**Source**: Pailin Chongchitnant, Hot Thai Kitchen; https://hot-thai-kitchen.com/ultimate-bbq-chicken/ (fetched 2026-04-25). *Authentic Thai gai yang: bone-in skin-on thighs and hindquarters marinated overnight in pounded lemongrass, garlic, coriander seed, white pepper, soy sauce, fish sauce, and black soy sauce; grilled over medium-low heat with lid closed, flipping every 5 minutes. Served with Jaew dipping sauce (tamarind-palm sugar-fish sauce-lime). Taught at Hot Thai Kitchen cooking school, Vancouver.*
+### 4. Gai Yang ไก่ย่าง (Ultimate Thai BBQ Chicken) (inspired by Pailin Chongchitnant)
+**Inspired by**: Pailin Chongchitnant, Hot Thai Kitchen; https://hot-thai-kitchen.com/ultimate-bbq-chicken/ (fetched 2026-04-25). *Authentic Thai gai yang: bone-in skin-on thighs and hindquarters marinated overnight in pounded lemongrass, garlic, coriander seed, white pepper, soy sauce, fish sauce, and black soy sauce; grilled over medium-low heat with lid closed, flipping every 5 minutes. Served with Jaew dipping sauce (tamarind-palm sugar-fish sauce-lime). Taught at Hot Thai Kitchen cooking school, Vancouver.*
 **Serves**: 4 · **Prep**: 2 hr 20 min (includes 2 hr minimum marinate) · **Cook**: 18–30 min grill
 
 **Temperature guidance (from recipe)**: Grill at medium-low (275–300 °F / 135–150 °C) with lid closed; flip every 5 minutes. **Thighs and hindquarters: pull at 175 °F (80 °C)**; breasts at 160 °F (72 °C). Large pieces take 25–30 min; smaller pieces 18–20 min.

@@ -25,8 +25,8 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ## Source recipes
 
-### 1. Chefkoch — Baby Back Ribs (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/2528931396356052/Baby-Back-Ribs.html (fetched 2026-04-24). *"Wood-smoking chips and a smoker required." 4.6/5, 11 ratings.*
+### 1. Baby Back Ribs (inspired by Chefkoch)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/2528931396356052/Baby-Back-Ribs.html (fetched 2026-04-24). *"Wood-smoking chips and a smoker required." 4.6/5, 11 ratings.*
 **Serves**: 4 · **Prep**: 10 min (+ 3 hr rest) · **Cook**: 3 hr 30 min – 4 hr · **Total active**: ~10 min + tending smoker
 
 **Temperature guidance (from recipe)**: Smoker at 110–120 °C; water tray 3/4 full; smoked wood chips on coals; total 3.5–4 hours. Tip: replace water with apple juice in the water tray.
@@ -52,8 +52,8 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ---
 
-### 2. Chefkoch — Spareribs 3-2-1 vom Grill oder aus dem Backofen (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/3356071498993486/Spareribs-3-2-1-vom-Grill-oder-aus-dem-Backofen.html (fetched 2026-04-24). *Classic 3-2-1 method explained in full: 3 hr smoke, 2 hr steam, 1 hr glaze. "Magic Dust" BBQ rub. 4.8/5, 22 ratings.*
+### 2. Spareribs 3-2-1 vom Grill oder aus dem Backofen (inspired by Chefkoch)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/3356071498993486/Spareribs-3-2-1-vom-Grill-oder-aus-dem-Backofen.html (fetched 2026-04-24). *Classic 3-2-1 method explained in full: 3 hr smoke, 2 hr steam, 1 hr glaze. "Magic Dust" BBQ rub. 4.8/5, 22 ratings.*
 **Serves**: 4 · **Prep**: 1 hr (+ 12 hr overnight) · **Cook**: 6 hr · **Total**: 19 hr
 
 *Method: the 3-2-1 explanation — "3 hours indirect/oven at 110–120 °C; 2 hours steaming at 140–150 °C; 1 hour glazing at 110–120 °C."*
@@ -77,8 +77,8 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ---
 
-### 3. ichkoche.at — Perfekte Spareribs (Austrian tradition)
-**Source**: ichkoche.at; https://www.ichkoche.at/perfekte-spareribs-rezept-11835 (fetched 2026-04-24). *"Perfect spareribs so tender they fall off the bone. Our secret: a combination of slow cooking and an irresistible glaze." 895 ratings.*
+### 3. Perfekte Spareribs (inspired by ichkoche.at)
+**Inspired by**: ichkoche.at; https://www.ichkoche.at/perfekte-spareribs-rezept-11835 (fetched 2026-04-24). *"Perfect spareribs so tender they fall off the bone. Our secret: a combination of slow cooking and an irresistible glaze." 895 ratings.*
 **Serves**: 4 · **Cook**: 60–90 min indirect heat
 
 *Translation: "Perfect spareribs — tender inside and crispy outside — need some patience. Depending on the thickness, grill at consistent 140–160 °C for at least 1 hour, better 90 minutes with indirect heat."*

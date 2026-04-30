@@ -18,8 +18,8 @@ Purjolök (*Allium ampeloprasum* var. *porrum*) ugnsrostad uppnår en karamelise
 
 ## Source recipes
 
-### 1. Yotam Ottolenghi — Charred Leeks with Salsa Verde (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
+### 1. Charred Leeks with Salsa Verde (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 30–35 min · **Rest**: 5 min
 
 **Ingredients**
@@ -40,8 +40,8 @@ Purjolök (*Allium ampeloprasum* var. *porrum*) ugnsrostad uppnår en karamelise
 
 ---
 
-### 2. Magnus Nilsson — Bakad Purjolök (Nordic / Swedish tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)
+### 2. Bakad Purjolök (inspired by Magnus Nilsson)
+**Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 35–40 min · **Rest**: 5 min
 
 **Ingredients**
@@ -61,8 +61,8 @@ Purjolök (*Allium ampeloprasum* var. *porrum*) ugnsrostad uppnår en karamelise
 
 ---
 
-### 3. Diana Kennedy — Poro al Horno (Mexican tradition)
-**Source**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
+### 3. Poro al Horno (inspired by Diana Kennedy)
+**Inspired by**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25–30 min · **Rest**: 5 min
 
 **Ingredients**
@@ -85,8 +85,8 @@ Purjolök (*Allium ampeloprasum* var. *porrum*) ugnsrostad uppnår en karamelise
 
 ---
 
-### 4. Deborah Madison — Roasted Leeks with Breadcrumbs and Lemon (American vegetarian tradition)
-**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
+### 4. Roasted Leeks with Breadcrumbs and Lemon (inspired by Deborah Madison)
+**Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 30–35 min · **Rest**: 5 min
 
 **Ingredients**

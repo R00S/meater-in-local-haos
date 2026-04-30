@@ -260,7 +260,7 @@ Each source recipe follows this exact format:
 
 ```markdown
 ### {N}. {Author / Tradition} — {Dish name in original language if applicable}
-**Source**: {URL or bibliographic reference}  
+**Inspired by**: {URL or bibliographic reference}  
 **Serves**: {n} · **Prep**: {n} min (+{n} min tempering if applicable) · **Cook**: {n}–{n} min · **Rest**: {n} min
 
 **Ingredients**
@@ -348,7 +348,7 @@ new working or broken method.**
 1. Use `web_search` to find a valid URL slug for the recipe on a confirmed-working site.
 2. Use `web_fetch` on the exact URL to retrieve the actual recipe text.
 3. Verify the returned content contains ingredients + numbered method steps before citing.
-4. Cite the real URL in the `**Source**:` line.
+4. Cite the real URL in the `**Inspired by**:` line.
 
 See `SOURCE_SURVEY.md` for the list of confirmed-working recipe sites and their URL formats.
 

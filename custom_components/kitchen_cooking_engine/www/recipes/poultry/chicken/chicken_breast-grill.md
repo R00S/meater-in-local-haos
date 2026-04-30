@@ -36,8 +36,8 @@ Skivning eller kilning av brösten till jämn tjocklek säkerställer jämn till
 
 ## Source recipes
 
-### 1. Skinnytaste — Grilled Chicken Breast
-**Source**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/grilled-chicken-breast/ (fetched 2025-07-15).
+### 1. Grilled Chicken Breast (inspired by Skinnytaste)
+**Inspired by**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/grilled-chicken-breast/ (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 5 min + 20–30 min marinate · **Cook**: 6 min · **Rest**: 3–5 min
 
 **Temperature guidance**:
@@ -67,8 +67,8 @@ Skivning eller kilning av brösten till jämn tjocklek säkerställer jämn till
 
 ---
 
-### 2. Natasha's Kitchen — Juicy Grilled BBQ Chicken Breast
-**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/juicy-grilled-chicken-breast/ (fetched 2025-07-15).
+### 2. Juicy Grilled BBQ Chicken Breast (inspired by Natasha's Kitchen)
+**Inspired by**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/juicy-grilled-chicken-breast/ (fetched 2025-07-15).
 **Serves**: 8 · **Prep**: 10 min + overnight marinate · **Cook**: ~20 min · **Rest**: 15 min
 
 **Temperature guidance**:
@@ -100,9 +100,9 @@ Skivning eller kilning av brösten till jämn tjocklek säkerställer jämn till
 
 ---
 
-### 3. BBC Good Food — Cajun Chicken
+### 3. Cajun Chicken (inspired by BBC Good Food)
 
-**Source**: Good Food team, BBC Good Food magazine (September 2007); https://www.bbcgoodfood.com/recipes/cajun-chicken (archived: https://web.archive.org/web/20241010111210/https://www.bbcgoodfood.com/recipes/cajun-chicken, fetched 2026-04-24).
+**Inspired by**: Good Food team, BBC Good Food magazine (September 2007); https://www.bbcgoodfood.com/recipes/cajun-chicken (archived: https://web.archive.org/web/20241010111210/https://www.bbcgoodfood.com/recipes/cajun-chicken, fetched 2026-04-24).
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12 min
 
 **Temperature guidance**:
@@ -125,8 +125,8 @@ Skivning eller kilning av brösten till jämn tjocklek säkerställer jämn till
 
 ---
 
-### 4. Pailin Chongchitnant — Gai Yang ไก่ย่าง — Thai BBQ Chicken Breast (Thai tradition)
-**Source**: Pailin Chongchitnant, Hot Thai Kitchen; https://hot-thai-kitchen.com/ultimate-bbq-chicken/ (fetched 2026-04-25). *Authentic Thai street-food gai yang applied to the bone-in breast: pounded lemongrass, garlic, coriander seed and white pepper marinade with soy sauce, fish sauce, and black soy sauce; marinated overnight; grilled over medium-low heat with lid closed, flipping every 5 minutes. Served with Jaew tamarind dipping sauce and sticky rice.*
+### 4. Gai Yang ไก่ย่าง — Thai BBQ Chicken Breast (inspired by Pailin Chongchitnant)
+**Inspired by**: Pailin Chongchitnant, Hot Thai Kitchen; https://hot-thai-kitchen.com/ultimate-bbq-chicken/ (fetched 2026-04-25). *Authentic Thai street-food gai yang applied to the bone-in breast: pounded lemongrass, garlic, coriander seed and white pepper marinade with soy sauce, fish sauce, and black soy sauce; marinated overnight; grilled over medium-low heat with lid closed, flipping every 5 minutes. Served with Jaew tamarind dipping sauce and sticky rice.*
 **Serves**: 4 · **Prep**: 2 hr 20 min (includes 2 hr minimum marinate) · **Cook**: 18–25 min grill
 
 **Temperature guidance (from recipe)**: Grill at **medium-low (275–300 °F / 135–150 °C)** with lid closed; flip every 5 minutes. **Bone-in chicken breast: pull at 160 °F (72 °C)**. Large bone-in breast pieces may take 20–25 min; smaller boneless breasts 12–15 min.

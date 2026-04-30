@@ -144,6 +144,7 @@ Select **Temperature Probe** when you have any wireless meat thermometer whose s
 | Probe / Brand | How it connects to HA | Tip entity (enter this) | Ambient entity | Battery entity |
 |--------------|----------------------|------------------------|----------------|----------------|
 | **MEATER / MEATER+** | [MEATER](https://www.home-assistant.io/integrations/meater/) integration (cloud) | `sensor.*_internal` | `sensor.*_ambient` | ❌ |
+| **MEATER / MEATER+ (local BLE)** | [homeassistant-meater](https://github.com/Emkraan/homeassistant-meater) HACS (local BLE) | `sensor.*_tip_temp` | `sensor.*_ambient_temp` | ✅ `sensor.*_battery` |
 | **INKBIRD IBT-2X / 4XS / 6XS** | [INKBIRD](https://www.home-assistant.io/integrations/inkbird/) integration (local BLE) | `sensor.*_probe_1` … `_probe_N` | ❌ | ⚠️ model-dependent |
 | **Rubicson / ToGrill OEM rebrands** | [ToGrill](https://www.home-assistant.io/integrations/togrill/) integration (local BLE) | `sensor.*_temperature` | ❌ | ✅ `sensor.*_battery` |
 | **Govee H5191 / 5181–5198** | [Govee BLE](https://www.home-assistant.io/integrations/govee_ble/) integration (local BLE) | `sensor.*_probe_N_temperature` | ❌ | ✅ |

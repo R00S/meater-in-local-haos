@@ -18,8 +18,8 @@ Broccoli (*Brassica oleracea* var. *italica*) i airfryern blir gyllenkrispa vid 
 
 ## Source recipes
 
-### 1. Madhur Jaffrey — Broccoli Tikka in the Air Fryer (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); tikka technique applied to broccoli florets, adapted for air fryer.
+### 1. Broccoli Tikka in the Air Fryer (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); tikka technique applied to broccoli florets, adapted for air fryer.
 **Serves**: 4 · **Prep**: 10 min + 20 min marinating · **Cook**: 12–14 min · **Rest**: 2 min
 
 **Ingredients**
@@ -35,8 +35,8 @@ Broccoli (*Brassica oleracea* var. *italica*) i airfryern blir gyllenkrispa vid 
 
 ---
 
-### 2. Fuchsia Dunlop — Air-Fried Broccoli with Oyster Sauce (Chinese tradition)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012); Chinese broccoli stir-fry technique adapted for air fryer.
+### 2. Air-Fried Broccoli with Oyster Sauce (inspired by Fuchsia Dunlop)
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012); Chinese broccoli stir-fry technique adapted for air fryer.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 12–14 min · **Rest**: 2 min
 
 **Ingredients**
@@ -53,8 +53,8 @@ Broccoli (*Brassica oleracea* var. *italica*) i airfryern blir gyllenkrispa vid 
 
 ---
 
-### 3. Maangchi — Korean Spicy Air-Fried Broccoli (Korean tradition)
-**Source**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); Korean spicy vegetable technique.
+### 3. Korean Spicy Air-Fried Broccoli (inspired by Maangchi)
+**Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); Korean spicy vegetable technique.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–14 min · **Rest**: 2 min
 
 **Ingredients**
@@ -69,8 +69,8 @@ Broccoli (*Brassica oleracea* var. *italica*) i airfryern blir gyllenkrispa vid 
 
 ---
 
-### 4. Yotam Ottolenghi — Air-Fried Broccoli with Za'atar and Yoghurt (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010); adapted for air fryer.
+### 4. Air-Fried Broccoli with Za'atar and Yoghurt (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010); adapted for air fryer.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–14 min · **Rest**: 2 min
 
 **Ingredients**

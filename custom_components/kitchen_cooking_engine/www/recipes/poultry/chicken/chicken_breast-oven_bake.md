@@ -36,8 +36,8 @@ Tillagningstid: 18–22 min vid 200–220 °C. Innertemperatur: **74 °C (165 °
 
 ## Source recipes
 
-### 1. Skinnytaste / Gina Homolka — Baked Chicken Breast (mayo + panko crust)
-**Source**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/baked-chicken-breast/ (fetched 2026-04-24).
+### 1. Baked Chicken Breast (mayo + panko crust) (inspired by Skinnytaste / Gina Homolka)
+**Inspired by**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/baked-chicken-breast/ (fetched 2026-04-24).
 **Serves**: 4 · **Prep**: 10 min + 1–2 h brine · **Cook**: ~25 min · **Rest**: 5 min
 
 **Temperature guidance (from recipe)**:
@@ -62,8 +62,8 @@ Tillagningstid: 18–22 min vid 200–220 °C. Innertemperatur: **74 °C (165 °
 
 ---
 
-### 2. Natasha's Kitchen / Natasha Kravchuk — Baked Chicken Breast
-**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/baked-chicken-breast/ (fetched 2026-04-24).
+### 2. Baked Chicken Breast (inspired by Natasha's Kitchen / Natasha Kravchuk)
+**Inspired by**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/baked-chicken-breast/ (fetched 2026-04-24).
 **Serves**: 6 · **Prep**: 5 min · **Cook**: 18–26 min (by thickness) · **Rest**: 5–10 min
 
 **Temperature guidance (from recipe)**:
@@ -90,8 +90,8 @@ Tillagningstid: 18–22 min vid 200–220 °C. Innertemperatur: **74 °C (165 °
 
 ---
 
-### 3. Jessica Gavin — Baked Chicken Breast (high-heat method)
-**Source**: Jessica Gavin (culinary school graduate); https://www.jessicagavin.com/baked-chicken-breast/ (fetched 2026-04-24).
+### 3. Baked Chicken Breast (high-heat method) (inspired by Jessica Gavin)
+**Inspired by**: Jessica Gavin (culinary school graduate); https://www.jessicagavin.com/baked-chicken-breast/ (fetched 2026-04-24).
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 14–17 min · **Rest**: 5 min
 
 **Temperature guidance (from recipe)**:
@@ -114,8 +114,8 @@ Tillagningstid: 18–22 min vid 200–220 °C. Innertemperatur: **74 °C (165 °
 
 ---
 
-### 4. Swasthi Shreekanth — Tandoori Chicken (Indian tradition)
-**Source**: Swasthi Shreekanth, Indian Healthy Recipes; https://www.indianhealthyrecipes.com/tandoori-chicken-recipe/ (fetched 2026-04-25). *Smoky restaurant-style tandoori chicken: skinless thighs or breast marinated overnight in spiced Greek yogurt with ginger-garlic paste, Kashmiri red chili, garam masala, kasuri methi, and lemon juice; roasted on a wire rack at 240 °C (460 °F) for 25–30 minutes, basted midway, then briefly broiled for charred spots. A classic of North Indian tandoor cooking.*
+### 4. Tandoori Chicken (inspired by Swasthi Shreekanth)
+**Inspired by**: Swasthi Shreekanth, Indian Healthy Recipes; https://www.indianhealthyrecipes.com/tandoori-chicken-recipe/ (fetched 2026-04-25). *Smoky restaurant-style tandoori chicken: skinless thighs or breast marinated overnight in spiced Greek yogurt with ginger-garlic paste, Kashmiri red chili, garam masala, kasuri methi, and lemon juice; roasted on a wire rack at 240 °C (460 °F) for 25–30 minutes, basted midway, then briefly broiled for charred spots. A classic of North Indian tandoor cooking.*
 **Serves**: 4 · **Prep**: 15 min + overnight marinate · **Cook**: 40–45 min total (oven + broil)
 
 **Temperature guidance (from recipe)**: Oven at **240 °C / 460 °F** for **25–30 minutes** (baste at 12–15 min mark), then broil **3–4 minutes**. Pull when MEATER probe reads **165–170 °F (75 °C)**. Rest briefly; brush with melted butter.

@@ -26,8 +26,8 @@ Dragtemperatur för konsistens som faller isär: **90–96 °C (194–205 °F)**
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Braised Chuck Roast (Pot Roast)
-**Source**: https://www.seriouseats.com/the-best-pot-roast-recipe  
+### 1. Braised Chuck Roast (Pot Roast) (inspired by J. Kenji López-Alt)
+**Inspired by**: https://www.seriouseats.com/the-best-pot-roast-recipe  
 **Serves**: 6–8 · **Prep**: 25 min · **Cook**: 3.5–4.5 hr · **Rest**: 20 min
 
 **Ingredients**
@@ -60,8 +60,8 @@ Dragtemperatur för konsistens som faller isär: **90–96 °C (194–205 °F)**
 
 ---
 
-### 2. Julia Child — Bœuf Bourguignon (French tradition)
-**Source**: Julia Child, *Mastering the Art of French Cooking* (Alfred A. Knopf, 1961)  
+### 2. Bœuf Bourguignon (inspired by Julia Child)
+**Inspired by**: Julia Child, *Mastering the Art of French Cooking* (Alfred A. Knopf, 1961)  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 3–4 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -94,8 +94,8 @@ Dragtemperatur för konsistens som faller isär: **90–96 °C (194–205 °F)**
 
 ---
 
-### 3. Nigella Lawson — Italian-Style Pot Roast (*Stracotto di manzo*)
-**Source**: Nigella Lawson, *Nigella Christmas* (Chatto & Windus, 2008); nigella.com/recipes/  
+### 3. Italian-Style Pot Roast (*Stracotto di manzo*) (inspired by Nigella Lawson)
+**Inspired by**: Nigella Lawson, *Nigella Christmas* (Chatto & Windus, 2008); nigella.com/recipes/  
 **Serves**: 8 · **Prep**: 20 min · **Cook**: 4–5 hr · **Rest**: 30 min
 
 **Ingredients**
@@ -126,8 +126,8 @@ Dragtemperatur för konsistens som faller isär: **90–96 °C (194–205 °F)**
 
 ---
 
-### 4. Maangchi — Korean Braised Beef (*Jangjorim*)
-**Source**: Maangchi, *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); maangchi.com/recipe/jangjorim  
+### 4. Korean Braised Beef (*Jangjorim*) (inspired by Maangchi)
+**Inspired by**: Maangchi, *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); maangchi.com/recipe/jangjorim  
 **Serves**: 6 · **Prep**: 15 min (+30 min soaking) · **Cook**: 2–3 hr · **Rest**: 10 min
 
 **Ingredients**
@@ -154,8 +154,8 @@ Dragtemperatur för konsistens som faller isär: **90–96 °C (194–205 °F)**
 
 ---
 
-### 5. Judith Jones / Craig Claiborne — Daube de Bœuf Provençale (Provençal tradition)
-**Source**: Craig Claiborne, *The New York Times Cookbook* (Harper & Row, 1961); adapted in Judith Jones, *The Pleasures of Cooking for One* (Knopf, 2009)  
+### 5. Daube de Bœuf Provençale (inspired by Judith Jones / Craig Claiborne)
+**Inspired by**: Craig Claiborne, *The New York Times Cookbook* (Harper & Row, 1961); adapted in Judith Jones, *The Pleasures of Cooking for One* (Knopf, 2009)  
 **Serves**: 6–8 · **Prep**: 30 min (+overnight marinating) · **Cook**: 3–4 hr · **Rest**: 20 min
 
 **Ingredients**
@@ -213,8 +213,8 @@ Chuck roast is the quintessential braising cut — its extraordinary collagen co
 
 > ✅ **CONFORMS TO TOR** — Verified 2026-03-04T21:06:31Z. All mandatory sections present in correct order. Five source recipes from distinct culinary traditions (USA, French Burgundy, British/Italian, Korean, French Provençal). Each recipe has full ingredients with quantities, numbered method steps, explicit probe insert instruction, bolded pull temperature in °C, and bolded final serving temperature. Cut profile contains no temperatures. Temperature consensus table covers all sources. What makes this method special addresses physics and chemistry. Data applied bullet list is actionable. Summary ≤4 sentences explains cut-method fit.
 
-### 6. Köket.se — Kalops (Swedish tradition)
-**Source**: Köket.se editorial kitchen; https://www.koket.se/kalops (fetched 2026-04-28). Köket.se is the website of Sveriges Television (Swedish public broadcaster) culinary team.
+### 6. Kalops (inspired by Köket.se)
+**Inspired by**: Köket.se editorial kitchen; https://www.koket.se/kalops (fetched 2026-04-28). Köket.se is the website of Sveriges Television (Swedish public broadcaster) culinary team.
 **Serves**: 4 · **Prep**: 15 min · **Cook**: ~1 hr stovetop braising · **Rest**: 5 min
 **Culinary tradition**: Swedish / Scandinavian (Group D)
 **Technique note**: Classic Swedish stovetop braised chuck roast stew. The name "kalops" derives from the English "collop" (a small piece of meat). Swedish *kalops* is made by browning diced chuck roast (högrev) in butter, then braising in beef stock with allspice and bay leaf until tender — the characteristic Swedish allspice (kryddpeppar) profile distinguishes this from French or German braises. Served with boiled potatoes. No probe temperature stated; doneness is "tills köttet är mört" (until the meat is tender), equivalent to ~90–93°C for full collagen conversion in cubed chuck.

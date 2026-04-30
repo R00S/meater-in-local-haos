@@ -21,7 +21,7 @@ Torskens magra kött (< 1% fett) reagerar bra eftersom den forcerade luftcirkula
 
 ## Source recipes
 
-### 1. America's Test Kitchen — Air-Fryer Cod (American tradition)
+### 1. Air-Fryer Cod (inspired by America's Test Kitchen)
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 2 min
 
 **Ingredients**
@@ -48,8 +48,8 @@ Torskens magra kött (< 1% fett) reagerar bra eftersom den forcerade luftcirkula
 
 ---
 
-### 2. Jamie Oliver — Air-Fryer Fish Fingers (British tradition)
-**Source**: Jamie Oliver, *7 Ways* (Michael Joseph / Penguin, 2020); adapted for air fryer  
+### 2. Air-Fryer Fish Fingers (inspired by Jamie Oliver)
+**Inspired by**: Jamie Oliver, *7 Ways* (Michael Joseph / Penguin, 2020); adapted for air fryer  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -75,8 +75,8 @@ Torskens magra kött (< 1% fett) reagerar bra eftersom den forcerade luftcirkula
 
 ---
 
-### 3. Donna Hay — Lemon-Herb Air-Fryer Cod (Australian tradition)
-**Source**: Donna Hay, *The Fast 400 Cookbook* (HarperCollins Australia, 2020)  
+### 3. Lemon-Herb Air-Fryer Cod (inspired by Donna Hay)
+**Inspired by**: Donna Hay, *The Fast 400 Cookbook* (HarperCollins Australia, 2020)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 12–14 min · **Rest**: 2 min
 
 **Ingredients**
@@ -99,8 +99,8 @@ Torskens magra kött (< 1% fett) reagerar bra eftersom den forcerade luftcirkula
 
 ---
 
-### 4. Ottolenghi — Spiced Air-Fryer Cod with Tahini (Middle Eastern tradition)
-**Source**: Yotam Ottolenghi, *Simple* (Ebury Press, 2018), adapted for air fryer  
+### 4. Spiced Air-Fryer Cod with Tahini (inspired by Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Simple* (Ebury Press, 2018), adapted for air fryer  
 **Serves**: 2 · **Prep**: 10 min (+20 min marinade) · **Cook**: 12–14 min · **Rest**: 2 min
 
 **Ingredients**
@@ -124,8 +124,8 @@ Torskens magra kött (< 1% fett) reagerar bra eftersom den forcerade luftcirkula
 
 ---
 
-### 5. Marcus Samuelsson — Air-Fryer Berbere-Spiced Cod (Ethiopian-American tradition)
-**Source**: Marcus Samuelsson, *The Soul of a New Cuisine: A Discovery of the Foods and Flavors of Africa* (John Wiley & Sons, 2006); adapted technique for air fryer  
+### 5. Air-Fryer Berbere-Spiced Cod (inspired by Marcus Samuelsson)
+**Inspired by**: Marcus Samuelsson, *The Soul of a New Cuisine: A Discovery of the Foods and Flavors of Africa* (John Wiley & Sons, 2006); adapted technique for air fryer  
 **Serves**: 2 · **Prep**: 10 min (+1 h marination) · **Cook**: 12–14 min · **Rest**: 2 min
 
 **Ingredients**

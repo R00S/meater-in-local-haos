@@ -21,8 +21,8 @@ Att tillsätta smör, vitlök och timjan under de sista 2 minuterna och basta ko
 
 ## Source recipes
 
-### 1. Delia Smith — Pan-Fried Sirloin with Blue Cheese Sauce (British tradition)
-**Source**: Delia Smith, *Delia's Complete Cookery Course* (BBC Books, 1989)  
+### 1. Pan-Fried Sirloin with Blue Cheese Sauce (inspired by Delia Smith)
+**Inspired by**: Delia Smith, *Delia's Complete Cookery Course* (BBC Books, 1989)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -41,8 +41,8 @@ Att tillsätta smör, vitlök och timjan under de sista 2 minuterna och basta ko
 
 ---
 
-### 2. Julia Child — Steak Sauté Bercy (French classical tradition)
-**Source**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961)  
+### 2. Steak Sauté Bercy (inspired by Julia Child)
+**Inspired by**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -64,8 +64,8 @@ Att tillsätta smör, vitlök och timjan under de sista 2 minuterna och basta ko
 
 ---
 
-### 3. Nigella Lawson — Pan-Fried Sirloin with Rocket Salad (British contemporary tradition)
-**Source**: Nigella Lawson, *How to Eat* (Chatto & Windus, 1998)  
+### 3. Pan-Fried Sirloin with Rocket Salad (inspired by Nigella Lawson)
+**Inspired by**: Nigella Lawson, *How to Eat* (Chatto & Windus, 1998)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -86,8 +86,8 @@ Att tillsätta smör, vitlök och timjan under de sista 2 minuterna och basta ko
 
 ---
 
-### 4. Nobu Matsuhisa — Pan-Fried Sirloin with Wasabi Salsa (Japanese tradition)
-**Source**: Nobu Matsuhisa, *Nobu Miami: The Party Cookbook* (Kodansha International, 2009)  
+### 4. Pan-Fried Sirloin with Wasabi Salsa (inspired by Nobu Matsuhisa)
+**Inspired by**: Nobu Matsuhisa, *Nobu Miami: The Party Cookbook* (Kodansha International, 2009)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -106,8 +106,8 @@ Att tillsätta smör, vitlök och timjan under de sista 2 minuterna och basta ko
 
 ---
 
-### 5. Neil Perry — Pan-Fried Sirloin with Bone Marrow (Australian tradition)
-**Source**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
+### 5. Pan-Fried Sirloin with Bone Marrow (inspired by Neil Perry)
+**Inspired by**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**

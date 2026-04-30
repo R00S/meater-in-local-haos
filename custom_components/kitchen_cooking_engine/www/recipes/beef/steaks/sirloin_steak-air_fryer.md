@@ -20,7 +20,7 @@ Eftersom entrecôten är mager lämpar sig airfryer bäst för biffar med 2–3 
 
 ## Source recipes
 
-### 1. America's Test Kitchen — Air Fryer Sirloin Steak (American tradition)
+### 1. Air Fryer Sirloin Steak (inspired by America's Test Kitchen)
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -38,8 +38,8 @@ Eftersom entrecôten är mager lämpar sig airfryer bäst för biffar med 2–3 
 
 ---
 
-### 2. Jamie Oliver — Air Fryer Sirloin with Herb Butter (British tradition)
-**Source**: Jamie Oliver, *7 Ways* (Michael Joseph / Penguin, 2020), adapted for air fryer  
+### 2. Air Fryer Sirloin with Herb Butter (inspired by Jamie Oliver)
+**Inspired by**: Jamie Oliver, *7 Ways* (Michael Joseph / Penguin, 2020), adapted for air fryer  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -58,8 +58,8 @@ Eftersom entrecôten är mager lämpar sig airfryer bäst för biffar med 2–3 
 
 ---
 
-### 3. Donna Hay — Air Fryer Sirloin with Chimichurri (Australian tradition)
-**Source**: Donna Hay, *The Fast 400 Cookbook* (HarperCollins Australia, 2020)  
+### 3. Air Fryer Sirloin with Chimichurri (inspired by Donna Hay)
+**Inspired by**: Donna Hay, *The Fast 400 Cookbook* (HarperCollins Australia, 2020)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -78,8 +78,8 @@ Eftersom entrecôten är mager lämpar sig airfryer bäst för biffar med 2–3 
 
 ---
 
-### 4. Nigella Lawson — Air Fryer Sirloin with Mustard Cream (British home-cooking tradition)
-**Source**: Nigella Lawson, *Cook, Eat, Repeat* (Chatto & Windus, 2020)  
+### 4. Air Fryer Sirloin with Mustard Cream (inspired by Nigella Lawson)
+**Inspired by**: Nigella Lawson, *Cook, Eat, Repeat* (Chatto & Windus, 2020)  
 **Serves**: 1 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -96,8 +96,8 @@ Eftersom entrecôten är mager lämpar sig airfryer bäst för biffar med 2–3 
 
 ---
 
-### 5. Marcus Samuelsson — Air Fryer Berbere Sirloin (Ethiopian-American tradition)
-**Source**: Marcus Samuelsson, *The Soul of a New Cuisine* (John Wiley & Sons, 2006); adapted technique for air fryer  
+### 5. Air Fryer Berbere Sirloin (inspired by Marcus Samuelsson)
+**Inspired by**: Marcus Samuelsson, *The Soul of a New Cuisine* (John Wiley & Sons, 2006); adapted technique for air fryer  
 **Serves**: 2 · **Prep**: 10 min (+1 h marinade) · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**

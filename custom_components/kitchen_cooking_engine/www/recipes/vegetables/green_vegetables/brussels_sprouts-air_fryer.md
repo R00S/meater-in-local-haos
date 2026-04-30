@@ -18,8 +18,8 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) i airfryern blir intensivt ka
 
 ## Source recipes
 
-### 1. Maangchi — Korean Air-Fried Brussels Sprouts (Korean tradition)
-**Source**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); Korean spicy technique applied to Brussels sprouts.
+### 1. Korean Air-Fried Brussels Sprouts (inspired by Maangchi)
+**Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); Korean spicy technique applied to Brussels sprouts.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 14–16 min · **Rest**: 2 min
 
 **Ingredients**
@@ -36,8 +36,8 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) i airfryern blir intensivt ka
 
 ---
 
-### 2. Madhur Jaffrey — Air-Fried Masala Brussels Sprouts (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); spice marinade adapted for Brussels sprouts in the air fryer.
+### 2. Air-Fried Masala Brussels Sprouts (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); spice marinade adapted for Brussels sprouts in the air fryer.
 **Serves**: 4 · **Prep**: 10 min + 15 min marinating · **Cook**: 14–16 min · **Rest**: 2 min
 
 **Ingredients**
@@ -51,8 +51,8 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) i airfryern blir intensivt ka
 
 ---
 
-### 3. Yotam Ottolenghi — Air-Fried Brussels Sprouts with Za'atar (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014); adapted for air fryer.
+### 3. Air-Fried Brussels Sprouts with Za'atar (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014); adapted for air fryer.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 14–16 min · **Rest**: 2 min
 
 **Ingredients**
@@ -65,8 +65,8 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) i airfryern blir intensivt ka
 
 ---
 
-### 4. Deborah Madison — Air-Fried Brussels Sprouts with Balsamic (American vegetarian tradition)
-**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013); adapted for air fryer.
+### 4. Air-Fried Brussels Sprouts with Balsamic (inspired by Deborah Madison)
+**Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013); adapted for air fryer.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 14–16 min · **Rest**: 2 min
 
 **Ingredients**

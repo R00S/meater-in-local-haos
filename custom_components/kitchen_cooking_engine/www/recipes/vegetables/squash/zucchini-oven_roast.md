@@ -18,8 +18,8 @@ Zucchini (*Cucurbita pepo*) halverad längsmed eller skuren i tjocka rundlar/sta
 
 ## Source recipes
 
-### 1. Marcella Hazan — Zucchine al Forno (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+### 1. Zucchine al Forno (inspired by Marcella Hazan)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 20–25 min · **Rest**: 3 min
 
 **Ingredients**
@@ -32,8 +32,8 @@ Zucchini (*Cucurbita pepo*) halverad längsmed eller skuren i tjocka rundlar/sta
 
 ---
 
-### 2. Yotam Ottolenghi — Roasted Zucchini with Feta and Mint (Israeli / Middle Eastern tradition)
-**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
+### 2. Roasted Zucchini with Feta and Mint (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 20–25 min · **Rest**: 3 min
 
 **Ingredients**
@@ -45,8 +45,8 @@ Zucchini (*Cucurbita pepo*) halverad längsmed eller skuren i tjocka rundlar/sta
 
 ---
 
-### 3. Julia Child — Courgettes au Four (French tradition)
-**Source**: Julia Child, *Mastering the Art of French Cooking, Vol. 2* (Alfred A. Knopf, 1970)
+### 3. Courgettes au Four (inspired by Julia Child)
+**Inspired by**: Julia Child, *Mastering the Art of French Cooking, Vol. 2* (Alfred A. Knopf, 1970)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 20–25 min · **Rest**: 3 min
 
 **Ingredients**
@@ -58,8 +58,8 @@ Zucchini (*Cucurbita pepo*) halverad längsmed eller skuren i tjocka rundlar/sta
 
 ---
 
-### 4. Madhur Jaffrey — Roasted Courgettes with Cumin and Coriander (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+### 4. Roasted Courgettes with Cumin and Coriander (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 20–25 min · **Rest**: 3 min
 
 **Ingredients**

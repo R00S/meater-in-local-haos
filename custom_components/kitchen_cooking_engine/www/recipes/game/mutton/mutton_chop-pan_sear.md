@@ -34,8 +34,8 @@ Spiskummin, koriander, ingefära och chili fungerar särskilt bra med fårkötte
 
 ## Source recipes
 
-### 1. Chefkoch.de — Hammelkoteletts (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/2048661331467628/Hammelkoteletts.html (fetched 2026-04-24)
+### 1. Hammelkoteletts (inspired by Chefkoch.de)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/2048661331467628/Hammelkoteletts.html (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 15 min
 
 *Translation: Mutton chops with garlic, onion, parsley, and thyme — a simple German pan preparation.*
@@ -61,8 +61,8 @@ Spiskummin, koriander, ingefära och chili fungerar särskilt bra med fårkötte
 
 ---
 
-### 2. BBC Good Food — Mutton Chops with Spiced Onions (British/Indian tradition)
-**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/mutton-chops-with-spiced-onions (web search 2026-04-24)
+### 2. Mutton Chops with Spiced Onions (inspired by BBC Good Food)
+**Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/mutton-chops-with-spiced-onions (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min + 1 hr marinate · **Cook**: 20 min
 
 **Ingredients**
@@ -88,8 +88,8 @@ Spiskummin, koriander, ingefära och chili fungerar särskilt bra med fårkötte
 
 ---
 
-### 3. IndianHealthyRecipes.com — Mutton Chops Masala (Indian tradition)
-**Source**: IndianHealthyRecipes.com (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/mutton-chops/ (web search 2026-04-24)
+### 3. Mutton Chops Masala (inspired by IndianHealthyRecipes.com)
+**Inspired by**: IndianHealthyRecipes.com (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/mutton-chops/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min + 30 min marinate · **Cook**: 30 min
 
 **Ingredients**

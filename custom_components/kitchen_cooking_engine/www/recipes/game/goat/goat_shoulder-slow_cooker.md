@@ -23,8 +23,8 @@ Internmålet är kollagensmeltsband: 88–93 °C, hållet i 4–5 timmar. Sond h
 
 ## Source recipes
 
-### 1. Yotam Ottolenghi & Sami Tamimi — Slow-Cooker Goat Shoulder with Pomegranate (Levantine tradition)
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012) — slow-cooker adaptation; ottolenghi.co.uk  
+### 1. Slow-Cooker Goat Shoulder with Pomegranate (inspired by Yotam Ottolenghi & Sami Tamimi)
+**Inspired by**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012) — slow-cooker adaptation; ottolenghi.co.uk  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 8 hours on LOW · **Rest**: 20 min
 
 **Ingredients**
@@ -49,8 +49,8 @@ Internmålet är kollagensmeltsband: 88–93 °C, hållet i 4–5 timmar. Sond h
 
 ---
 
-### 2. Tina Nordström — Långkokt Getskuldra i Crock-Pot (Swedish/Nordic tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — slow-cooker adaptation; köket.se  
+### 2. Långkokt Getskuldra i Crock-Pot (inspired by Tina Nordström)
+**Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — slow-cooker adaptation; köket.se  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 8 hours on LOW · **Rest**: 20 min
 
 **Ingredients**
@@ -75,8 +75,8 @@ Internmålet är kollagensmeltsband: 88–93 °C, hållet i 4–5 timmar. Sond h
 
 ---
 
-### 3. Hugh Fearnley-Whittingstall — Slow-Cooker Goat Shoulder with Cider (British River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004) — slow-cooker adaptation; rivercottage.net  
+### 3. Slow-Cooker Goat Shoulder with Cider (inspired by Hugh Fearnley-Whittingstall)
+**Inspired by**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004) — slow-cooker adaptation; rivercottage.net  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 8 hours on LOW · **Rest**: 20 min
 
 **Ingredients**
@@ -100,8 +100,8 @@ Internmålet är kollagensmeltsband: 88–93 °C, hållet i 4–5 timmar. Sond h
 
 ---
 
-### 4. Maricel Presilla — Slow-Cooker Cabrito en Salsa Verde (Latin American tradition)
-**Source**: Maricel E. Presilla, *Gran Cocina Latina: The Food of Latin America* (W. W. Norton, 2012) — slow-cooker adaptation  
+### 4. Slow-Cooker Cabrito en Salsa Verde (inspired by Maricel Presilla)
+**Inspired by**: Maricel E. Presilla, *Gran Cocina Latina: The Food of Latin America* (W. W. Norton, 2012) — slow-cooker adaptation  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 8 hours on LOW · **Rest**: 20 min
 
 **Ingredients**

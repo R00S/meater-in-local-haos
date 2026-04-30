@@ -34,8 +34,8 @@ Ugnsstekning är den vanligaste metoden för hel kyckling världen över och bä
 
 ## Source recipes
 
-### 1. Jessica Gavin — Whole Roasted Chicken
-**Source**: Jessica Gavin, jessicagavin.com; https://www.jessicagavin.com/roasted-chicken/ (fetched 2025-07-15).
+### 1. Whole Roasted Chicken (inspired by Jessica Gavin)
+**Inspired by**: Jessica Gavin, jessicagavin.com; https://www.jessicagavin.com/roasted-chicken/ (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 20 min · **Cook**: ~60 min · **Rest**: 20 min
 
 **Temperature guidance**:
@@ -83,8 +83,8 @@ Ugnsstekning är den vanligaste metoden för hel kyckling världen över och bä
 
 ---
 
-### 2. Natasha's Kitchen — Juicy Whole Roast Chicken (adapted from roast turkey method)
-**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/juicy-roast-turkey/ (fetched 2025-07-15).
+### 2. Juicy Whole Roast Chicken (adapted from roast turkey method) (inspired by Natasha's Kitchen)
+**Inspired by**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/juicy-roast-turkey/ (fetched 2025-07-15).
 **Serves**: 4–6 · **Prep**: 20 min · **Cook**: 1 hr 20 min (for 4–5 lb bird at 325–350 °F) · **Rest**: 20 min
 
 **Temperature guidance**:
@@ -131,8 +131,8 @@ Ugnsstekning är den vanligaste metoden för hel kyckling världen över och bä
 
 ---
 
-### 3. BBC Good Food — Simple Roast Chicken
-**Source**: Good Food team, BBC Good Food; https://www.bbcgoodfood.com/recipes/simple-roast-chicken (fetched 2026-04-24). Published: Good Food magazine, October 2011.
+### 3. Simple Roast Chicken (inspired by BBC Good Food)
+**Inspired by**: Good Food team, BBC Good Food; https://www.bbcgoodfood.com/recipes/simple-roast-chicken (fetched 2026-04-24). Published: Good Food magazine, October 2011.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 70 min · **Rest**: 15 min
 
 **Temperature guidance**:
@@ -155,8 +155,8 @@ Ugnsstekning är den vanligaste metoden för hel kyckling världen över och bä
 
 ---
 
-### 4. Suzy Karadsheh — Easy Oven Roasted Chicken (Egyptian / Mediterranean tradition)
-**Source**: Suzy Karadsheh (Egyptian-American food writer), The Mediterranean Dish; https://www.themediterraneandish.com/easy-oven-roasted-whole-chicken/ (fetched 2026-04-25). *Egyptian-inspired whole roast chicken: a garlic-lemon-herb paste (fresh garlic, lemon zest, olive oil, dried herbs) is rubbed under the skin, on the skin, and inside the cavity; optionally air-dried 24 hours for extra-crispy skin; roasted at 375 °F (190 °C) for 80 minutes. The garlic-lemon-olive oil base reflects the flavour profile common across Egyptian, Lebanese, and Levantine roasted poultry.*
+### 4. Easy Oven Roasted Chicken (inspired by Suzy Karadsheh)
+**Inspired by**: Suzy Karadsheh (Egyptian-American food writer), The Mediterranean Dish; https://www.themediterraneandish.com/easy-oven-roasted-whole-chicken/ (fetched 2026-04-25). *Egyptian-inspired whole roast chicken: a garlic-lemon-herb paste (fresh garlic, lemon zest, olive oil, dried herbs) is rubbed under the skin, on the skin, and inside the cavity; optionally air-dried 24 hours for extra-crispy skin; roasted at 375 °F (190 °C) for 80 minutes. The garlic-lemon-olive oil base reflects the flavour profile common across Egyptian, Lebanese, and Levantine roasted poultry.*
 **Serves**: 6 · **Prep**: 15 min (+ optional 24 hr dry brine) · **Cook**: 80 min
 
 **Temperature guidance (from recipe)**: Oven at **375 °F (190 °C)**; roast for **1 hour and 20 minutes**, or until an instant-read thermometer in the thickest part of the breast reads **165 °F (74 °C)**. (Note: thigh should also read ≥165 °F — probe placement in the thigh gives a more conservative safety reading for whole birds.)

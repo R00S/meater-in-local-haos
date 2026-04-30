@@ -23,8 +23,8 @@ Airfryern tillagar en entrecôte med snabb varmluftscirkulation — effektivt en
 
 ## Source recipes
 
-### 1. ichkoche.at — Schopfsteak aus dem Airfryer (Austrian tradition)
-**Source**: ichkoche.at; https://www.ichkoche.at/schopfsteak-aus-dem-airfryer-rezept-240872 (fetched 2026-04-24). *Austrian marinated steak in the air fryer: 5-ingredient marinade (vinegar, olive oil, paprika, garlic), 190 °C × 10 minutes. 832 user ratings.*
+### 1. Schopfsteak aus dem Airfryer (inspired by ichkoche.at)
+**Inspired by**: ichkoche.at; https://www.ichkoche.at/schopfsteak-aus-dem-airfryer-rezept-240872 (fetched 2026-04-24). *Austrian marinated steak in the air fryer: 5-ingredient marinade (vinegar, olive oil, paprika, garlic), 190 °C × 10 minutes. 832 user ratings.*
 **Serves**: 2 · **Prep**: 30 min marinate · **Cook**: 10 min
 
 *Note: Schopfsteak (neck/collar steak) is the Austrian equivalent of ribeye/entrecôte — the same fatty, marbled cut used identically.*
@@ -49,8 +49,8 @@ Airfryern tillagar en entrecôte med snabb varmluftscirkulation — effektivt en
 
 ---
 
-### 2. BBC Good Food — Air fryer steak (British tradition)
-**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/air-fryer-steak (fetched 2026-04-24). *British guide: ribeye or sirloin, 200 °C × 6 min one side + 2–3 min second side, with seasoned butter.*
+### 2. Air fryer steak (inspired by BBC Good Food)
+**Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/air-fryer-steak (fetched 2026-04-24). *British guide: ribeye or sirloin, 200 °C × 6 min one side + 2–3 min second side, with seasoned butter.*
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–9 min
 
 **Temperature guidance (from recipe)**: "50°C for rare, 60°C for medium and 70°C for well done." Guide times: 6 min side 1, 2 min (rare) / 3 min (medium) / 4 min (well done) side 2 at 200 °C.
@@ -73,8 +73,8 @@ Airfryern tillagar en entrecôte med snabb varmluftscirkulation — effektivt en
 
 ---
 
-### 3. GialloZafferano — Roast beef in friggitrice ad aria (Italian tradition)
-**Source**: GialloZafferano; https://ricette.giallozafferano.it/Roast-beef-in-friggitrice-ad-aria.html (fetched 2026-04-24). *Italian air fryer beef: 200 °C × 10 min (turning halfway), then 180 °C × 20–30 min for a whole roast — scale down proportionally for a single ribeye steak.*
+### 3. Roast beef in friggitrice ad aria (inspired by GialloZafferano)
+**Inspired by**: GialloZafferano; https://ricette.giallozafferano.it/Roast-beef-in-friggitrice-ad-aria.html (fetched 2026-04-24). *Italian air fryer beef: 200 °C × 10 min (turning halfway), then 180 °C × 20–30 min for a whole roast — scale down proportionally for a single ribeye steak.*
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 30–40 min (whole roast; steak approx. 10–15 min)
 
 *Translation: Roast beef in the air fryer — tender and succulent with mustard-honey sauce, minimum effort for maximum result.*

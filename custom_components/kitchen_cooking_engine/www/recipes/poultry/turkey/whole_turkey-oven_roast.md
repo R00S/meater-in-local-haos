@@ -32,8 +32,8 @@ En hel kalkon presenterar samma grundläggande utmaning som en hel kyckling men 
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt — The Best Roast Turkey (American tradition, dry-brined and spatchcocked)
-**Source**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015); seriouseats.com/the-best-roast-turkey  
+### 1. The Best Roast Turkey (inspired by J. Kenji López-Alt)
+**Inspired by**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015); seriouseats.com/the-best-roast-turkey  
 **Serves**: 8–10 · **Prep**: 30 min + 1–3 days dry-brine · **Cook**: 80–90 min (spatchcocked) · **Rest**: 30 min
 
 **Temperature guidance**:
@@ -63,8 +63,8 @@ En hel kalkon presenterar samma grundläggande utmaning som en hel kyckling men 
 
 ---
 
-### 2. Ina Garten — Herb-Roasted Traditional Turkey (American home tradition)
-**Source**: Ina Garten, *Barefoot Contessa at Home* (Clarkson Potter, 2006); food52.com/recipes/ina-garten-turkey  
+### 2. Herb-Roasted Traditional Turkey (inspired by Ina Garten)
+**Inspired by**: Ina Garten, *Barefoot Contessa at Home* (Clarkson Potter, 2006); food52.com/recipes/ina-garten-turkey  
 **Serves**: 10–12 · **Prep**: 30 min + overnight brine · **Cook**: 3–3.5 hr · **Rest**: 30 min
 
 **Temperature guidance**:
@@ -98,8 +98,8 @@ En hel kalkon presenterar samma grundläggande utmaning som en hel kyckling men 
 
 ---
 
-### 3. Diana Henry — Classic Slow-Roast Turkey with Apple and Calvados Butter (British tradition)
-**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015); telegraph.co.uk  
+### 3. Classic Slow-Roast Turkey with Apple and Calvados Butter (inspired by Diana Henry)
+**Inspired by**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015); telegraph.co.uk  
 **Serves**: 8–10 · **Prep**: 30 min + overnight dry-brine · **Cook**: 3–4 hr · **Rest**: 30–40 min
 
 **Temperature guidance**:

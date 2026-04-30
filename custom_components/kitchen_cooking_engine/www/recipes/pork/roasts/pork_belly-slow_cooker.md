@@ -30,8 +30,8 @@ Slow cooker-metod: LÅG i 7–8 timmar med fond och aromater. Ugnsrostnig lågt:
 
 ## Source recipes
 
-### 1. BBC Good Food — Slow Cooker Pork Belly (UK, crockpot method)
-**Source**: BBC Good Food, bbcgoodfood.com; https://www.bbcgoodfood.com/recipes/slow-cooker-pork-belly (fetched 2026-04-24). *Garlic-ginger-soy slow cooker pork belly. Simple 2-step recipe, HIGH 4 hours, finish in a frying pan for colour.*
+### 1. Slow Cooker Pork Belly (UK, crockpot method) (inspired by BBC Good Food)
+**Inspired by**: BBC Good Food, bbcgoodfood.com; https://www.bbcgoodfood.com/recipes/slow-cooker-pork-belly (fetched 2026-04-24). *Garlic-ginger-soy slow cooker pork belly. Simple 2-step recipe, HIGH 4 hours, finish in a frying pan for colour.*
 **Serves**: 6 · **Prep**: 10 min · **Cook**: 4 hr 20 min · **Total**: ~4.5 hr
 
 **Temperature guidance (from recipe)**: Cook on **HIGH for 4 hours**. No explicit probe temperature stated; HIGH crockpot setting (~149 °C ambient) over 4 hours ensures the 1–1.2 kg strips reach at least **75–80 °C (167–176 °F)** internally. Finish in a frying pan on high heat until browned.
@@ -56,8 +56,8 @@ Slow cooker-metod: LÅG i 7–8 timmar med fond och aromater. Ugnsrostnig lågt:
 
 ---
 
-### 2. Chefkoch.de — Bayerischer Krauttopf mit Wammerl (German/Bavarian CrockPot)
-**Source**: downhillcat, Chefkoch.de; https://www.chefkoch.de/rezepte/2535721397215723/Downhillcats-bayerischer-Krauttopf-mit-Wammerl.html (fetched 2026-04-24). *"Bavarian Krauttopf (sauerkraut stew) with Wammerl (pork belly) — a recipe for the CrockPot / Slow Cooker." 4.4/5, multiple ratings.*
+### 2. Bayerischer Krauttopf mit Wammerl (German/Bavarian CrockPot) (inspired by Chefkoch.de)
+**Inspired by**: downhillcat, Chefkoch.de; https://www.chefkoch.de/rezepte/2535721397215723/Downhillcats-bayerischer-Krauttopf-mit-Wammerl.html (fetched 2026-04-24). *"Bavarian Krauttopf (sauerkraut stew) with Wammerl (pork belly) — a recipe for the CrockPot / Slow Cooker." 4.4/5, multiple ratings.*
 **Serves**: 4 · **Prep**: 35 min · **Cook**: 6–7 hr (LOW) · **Total**: ~6.5–7.5 hr
 
 **Temperature guidance (from recipe)**: Cook on **lowest setting (low) for 6–7 hours**. No probe temperature stated; LOW crockpot over 6–7 hours ensures pork belly slices (600 g, ~4–5 slices) reach well above 75 °C — likely **80–85 °C (176–185 °F)**.
@@ -89,8 +89,8 @@ Slow cooker-metod: LÅG i 7–8 timmar med fond och aromater. Ugnsrostnig lågt:
 
 ---
 
-### 3. Jamie Oliver — Slow-Cooked Pork Belly (UK, low-oven method)
-**Source**: Jamie Oliver, jamieoliver.com; https://www.jamieoliver.com/recipes/pork-recipes/slow-cooked-pork-belly/ (fetched 2026-04-24). *"Together" cookbook recipe. Get-ahead low-oven slow cook (180 °C × 2 hours), refrigerate overnight, crisp-up next day. Serves 12.*
+### 3. Slow-Cooked Pork Belly (UK, low-oven method) (inspired by Jamie Oliver)
+**Inspired by**: Jamie Oliver, jamieoliver.com; https://www.jamieoliver.com/recipes/pork-recipes/slow-cooked-pork-belly/ (fetched 2026-04-24). *"Together" cookbook recipe. Get-ahead low-oven slow cook (180 °C × 2 hours), refrigerate overnight, crisp-up next day. Serves 12.*
 **Serves**: 12 · **Prep**: 20 min (+ overnight rest) · **Cook**: 2 hr + 30 min crisp · **Total**: 2 days (mostly passive)
 
 **Temperature guidance (from recipe)**: Low oven **180 °C / 350 °F / gas 4**, covered tightly in foil, **2 hours** — the long covered roast is equivalent to a slow-cook braise, keeping the belly moist. After overnight rest and slicing, a second oven blast at **200 °C × 30 min** crisps the exterior. No explicit probe temperature; 180 °C × 2 hours on a 1.5 kg piece ensures internal of **80–85 °C (176–185 °F)**.

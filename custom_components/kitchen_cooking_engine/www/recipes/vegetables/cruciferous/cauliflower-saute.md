@@ -18,8 +18,8 @@ Blomkål (*Brassica oleracea* var. *botrytis*) är ett tätt klustring av omogna
 
 ## Source recipes
 
-### 1. Yotam Ottolenghi — Sautéed Cauliflower with Tahini (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk/recipes  
+### 1. Sautéed Cauliflower with Tahini (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk/recipes  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -46,8 +46,8 @@ Blomkål (*Brassica oleracea* var. *botrytis*) är ett tätt klustring av omogna
 
 ---
 
-### 2. Marcella Hazan — Cavolfiore Saltato all'Aglio (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
+### 2. Cavolfiore Saltato all'Aglio (inspired by Marcella Hazan)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
 **Serves**: 4 · **Prep**: 10 min (+ 5 min blanching) · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -71,8 +71,8 @@ Blomkål (*Brassica oleracea* var. *botrytis*) är ett tätt klustring av omogna
 
 ---
 
-### 3. Madhur Jaffrey — Phulgobi ki Bhaji (North Indian sautéed cauliflower)
-**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)  
+### 3. Phulgobi ki Bhaji (North Indian sautéed cauliflower) (inspired by Madhur Jaffrey)
+**Inspired by**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 2 min
 
 **Ingredients**
@@ -99,8 +99,8 @@ Blomkål (*Brassica oleracea* var. *botrytis*) är ett tätt klustring av omogna
 
 ---
 
-### 4. Julia Child — Chou-Fleur Étuvé au Beurre (French tradition)
-**Source**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Knopf, 1961)  
+### 4. Chou-Fleur Étuvé au Beurre (inspired by Julia Child)
+**Inspired by**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Knopf, 1961)  
 **Serves**: 4 · **Prep**: 10 min (+ 5 min blanching) · **Cook**: 7–9 min · **Rest**: 2 min
 
 **Ingredients**

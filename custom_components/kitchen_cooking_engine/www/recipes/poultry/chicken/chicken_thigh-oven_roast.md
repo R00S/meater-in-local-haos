@@ -36,8 +36,8 @@ Alla metoder (grill, ugn, panna, air fryer) ger utmärkta resultat. Innertempera
 
 ## Source recipes
 
-### 1. Natasha's Kitchen — BBQ Oven-Baked Chicken Thighs
-**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/juicy-barbecued-chicken-thighs-recipe/ (fetched 2025-07-15).
+### 1. BBQ Oven-Baked Chicken Thighs (inspired by Natasha's Kitchen)
+**Inspired by**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/juicy-barbecued-chicken-thighs-recipe/ (fetched 2025-07-15).
 **Serves**: 6–8 · **Prep**: 10 min + 6 hr marinate · **Cook**: 35 min · **Rest**: 5 min
 
 **Temperature guidance**:
@@ -71,8 +71,8 @@ Alla metoder (grill, ugn, panna, air fryer) ger utmärkta resultat. Innertempera
 
 ---
 
-### 2. Skinnytaste — Baked Chicken Thighs with Vegetables
-**Source**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/baked-chicken-thighs/ (fetched 2025-07-15).
+### 2. Baked Chicken Thighs with Vegetables (inspired by Skinnytaste)
+**Inspired by**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/baked-chicken-thighs/ (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 15 min · **Cook**: ~55–60 min · **Rest**: 5 min
 
 **Temperature guidance**:
@@ -104,8 +104,8 @@ Alla metoder (grill, ugn, panna, air fryer) ger utmärkta resultat. Innertempera
 
 ---
 
-### 3. Argiro Barbarigou — Μπουτάκια Κοτόπουλο στο Φούρνο (Greek Yogurt-Crusted Oven Chicken Thighs)
-**Source**: Argiro Barbarigou (one of Greece's most recognized television chefs), Argiro.gr; https://www.argiro.gr/recipe/mpoutakia-kotopoulo-sto-fourno/ (fetched 2026-04-24, language: Greek — ingredients and method translated below).
+### 3. Μπουτάκια Κοτόπουλο στο Φούρνο (Greek Yogurt-Crusted Oven Chicken Thighs) (inspired by Argiro Barbarigou)
+**Inspired by**: Argiro Barbarigou (one of Greece's most recognized television chefs), Argiro.gr; https://www.argiro.gr/recipe/mpoutakia-kotopoulo-sto-fourno/ (fetched 2026-04-24, language: Greek — ingredients and method translated below).
 **Serves**: 6 · **Prep**: 15 min + 4–24 hr marinating · **Cook**: 45 min
 
 **Temperature guidance**:
@@ -135,8 +135,8 @@ Alla metoder (grill, ugn, panna, air fryer) ger utmärkta resultat. Innertempera
 
 ---
 
-### 4. Suzy Karadsheh — Baked Chicken Thighs with Mediterranean Spiced Tomato Rub (Egyptian / Middle Eastern tradition)
-**Source**: Suzy Karadsheh (Egyptian-American food writer), The Mediterranean Dish; https://www.themediterraneandish.com/baked-chicken-thighs/ (fetched 2026-04-25). *Egyptian-inspired oven-roasted bone-in chicken thighs coated in a spiced tomato paste–olive oil–lemon–cumin–paprika wet rub; layered over sliced onions and tomato in a baking dish; roasted at 425 °F (218 °C) for 40 minutes then briefly broiled.*
+### 4. Baked Chicken Thighs with Mediterranean Spiced Tomato Rub (inspired by Suzy Karadsheh)
+**Inspired by**: Suzy Karadsheh (Egyptian-American food writer), The Mediterranean Dish; https://www.themediterraneandish.com/baked-chicken-thighs/ (fetched 2026-04-25). *Egyptian-inspired oven-roasted bone-in chicken thighs coated in a spiced tomato paste–olive oil–lemon–cumin–paprika wet rub; layered over sliced onions and tomato in a baking dish; roasted at 425 °F (218 °C) for 40 minutes then briefly broiled.*
 **Serves**: 8 · **Prep**: 20 min · **Cook**: 40 min oven + 1–3 min broil
 
 **Temperature guidance (from recipe)**: Bake at **425 °F (218 °C)** for approximately **40 minutes** until cooked through (165 °F / 74 °C). Broil 1–3 minutes to brown the skin. Rest 5–10 minutes.

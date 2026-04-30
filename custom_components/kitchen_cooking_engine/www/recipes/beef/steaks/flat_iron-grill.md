@@ -18,8 +18,8 @@ The flat iron steak originates from the infraspinatus muscle of the shoulder bla
 Flat iron steak kommer från infraspinatus i skulderbladet, en position som kräver lite rörelse, vilket låter betydande intramuskulärt fett utvecklas trots att det är ett framkroppssnitt. Gas- och elektriska grillar ger jämn, kontrollerbar strålnings- och ledande värme i 200–260 °C, vilket passar flat iron's 2–3 cm tjocklek perfekt: tillräckligt hög för en bra Maillard-skorpa, tillräckligt kontrollerbar för att inte bränna ytan innan insidan är klar. Till skillnad från kol tillåter gasgrillar exakta tvåzonssetups för tjockare bitar eller snabba justeringar. Eftervärmen är måttlig vid 2–4 °C – mindre än över levande kol eftersom strålningsenergin stängs av direkt när biffen lämnar gallret; dra vid 54 °C ger pålitligt 57 °C slutlig serveringstemperatur.
 ## Source recipes
 
-### 1. Bobby Flay — Grilled Flat Iron with Blue Cheese Butter (American tradition)
-**Source**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
+### 1. Grilled Flat Iron with Blue Cheese Butter (inspired by Bobby Flay)
+**Inspired by**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -42,8 +42,8 @@ Flat iron steak kommer från infraspinatus i skulderbladet, en position som krä
 
 ---
 
-### 2. Jamie Oliver — Flat Iron Steak with Salsa Verde (British/Italian tradition)
-**Source**: Jamie Oliver, *Jamie at Home* (Michael Joseph, 2007); gas grill application of Italian salsa verde treatment  
+### 2. Flat Iron Steak with Salsa Verde (inspired by Jamie Oliver)
+**Inspired by**: Jamie Oliver, *Jamie at Home* (Michael Joseph, 2007); gas grill application of Italian salsa verde treatment  
 **Serves**: 2 · **Prep**: 20 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -64,8 +64,8 @@ Flat iron steak kommer från infraspinatus i skulderbladet, en position som krä
 
 ---
 
-### 3. Claudia Roden — Chermoula-Grilled Flat Iron (North African/Moroccan tradition)
-**Source**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey, and Lebanon* (Alfred A. Knopf, 2005); chermoula marinade applied to flat iron on gas grill  
+### 3. Chermoula-Grilled Flat Iron (inspired by Claudia Roden)
+**Inspired by**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey, and Lebanon* (Alfred A. Knopf, 2005); chermoula marinade applied to flat iron on gas grill  
 **Serves**: 2–3 · **Prep**: 20 min (+ 2 h marinade) · **Cook**: 10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -82,8 +82,8 @@ Flat iron steak kommer från infraspinatus i skulderbladet, en position som krä
 
 ---
 
-### 4. José Pizarro — Spanish Plancha-Style Flat Iron with Romesco (Spanish tradition)
-**Source**: José Pizarro, *Basque: Spanish Recipes from San Sebastián and Beyond* (Hardie Grant, 2016); high-heat gas grill application of Basque grilled-beef technique  
+### 4. Spanish Plancha-Style Flat Iron with Romesco (inspired by José Pizarro)
+**Inspired by**: José Pizarro, *Basque: Spanish Recipes from San Sebastián and Beyond* (Hardie Grant, 2016); high-heat gas grill application of Basque grilled-beef technique  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -104,8 +104,8 @@ Flat iron steak kommer från infraspinatus i skulderbladet, en position som krä
 
 ---
 
-### 5. Yotam Ottolenghi — Za'atar and Lemon Grilled Flat Iron (Israeli/Levantine tradition)
-**Source**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012); za'atar-rubbed grilled beef adapted for flat iron  
+### 5. Za'atar and Lemon Grilled Flat Iron (inspired by Yotam Ottolenghi)
+**Inspired by**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012); za'atar-rubbed grilled beef adapted for flat iron  
 **Serves**: 2 · **Prep**: 15 min (+ 1 h marinade) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**

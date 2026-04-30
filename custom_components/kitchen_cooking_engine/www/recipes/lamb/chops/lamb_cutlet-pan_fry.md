@@ -34,8 +34,8 @@ Sear vid hög värme, 2–3 minuter per sida. Sond in i den tjockaste muskeldele
 
 ## Source recipes
 
-### 1. Madensverden.dk — Lammekotelet (Danish pan-fried lamb cutlets)
-**Source**: Madensverden.dk; https://madensverden.dk/lammekotelet/ (web search 2026-04-24)
+### 1. Lammekotelet (Danish pan-fried lamb cutlets) (inspired by Madensverden.dk)
+**Inspired by**: Madensverden.dk; https://madensverden.dk/lammekotelet/ (web search 2026-04-24)
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8 min
 
 **Ingredients**
@@ -55,8 +55,8 @@ Sear vid hög värme, 2–3 minuter per sida. Sond in i den tjockaste muskeldele
 
 ---
 
-### 2. BBC Good Food — Lamb Cutlets with Herbed Breadcrumbs (British tradition)
-**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/lamb-cutlets-herbed-breadcrumbs (web search 2026-04-24)
+### 2. Lamb Cutlets with Herbed Breadcrumbs (inspired by BBC Good Food)
+**Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/lamb-cutlets-herbed-breadcrumbs (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 8 min
 
 *Crusted lamb cutlets — breadcrumb-herb crust applied and pan-fried.*
@@ -81,8 +81,8 @@ Sear vid hög värme, 2–3 minuter per sida. Sond in i den tjockaste muskeldele
 
 ---
 
-### 3. Giallozafferano.it — Costolette di agnello impanate (Italian breaded lamb cutlets)
-**Source**: Giallozafferano; https://ricette.giallozafferano.it/Costolette-di-agnello-impanate.html (web search 2026-04-24)
+### 3. Costolette di agnello impanate (Italian breaded lamb cutlets) (inspired by Giallozafferano.it)
+**Inspired by**: Giallozafferano; https://ricette.giallozafferano.it/Costolette-di-agnello-impanate.html (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 10 min
 
 *Classic Italian Milanese-style lamb cutlets — egg, breadcrumbs, fried in oil.*

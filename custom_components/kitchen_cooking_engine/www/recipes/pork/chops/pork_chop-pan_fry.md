@@ -27,8 +27,8 @@ Innertemperatur: **63–65 °C (145–149 °F)** USDA-rekommendation (med 3 minu
 
 ## Source recipes
 
-### 1. Madens Verden — Pandestegning af koteletter (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/pandestegning-af-koteletter/ (fetched 2026-04-24). *Classic Danish pan-fried pork chop in butter with garlic, rosemary, and thyme. "Salt koteletterne 20 minutter før stegning."*
+### 1. Pandestegning af koteletter (inspired by Madens Verden)
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/pandestegning-af-koteletter/ (fetched 2026-04-24). *Classic Danish pan-fried pork chop in butter with garlic, rosemary, and thyme. "Salt koteletterne 20 minutter før stegning."*
 **Serves**: 2 · **Prep**: 20 min salting · **Cook**: 8 min + 5 min rest
 
 *Translation: Pan frying a pork chop — "a pork chop tastes best when perfectly fried and tender."*
@@ -55,8 +55,8 @@ Innertemperatur: **63–65 °C (145–149 °F)** USDA-rekommendation (med 3 minu
 
 ---
 
-### 2. ichkoche.at — Schweinskotelett (Austrian tradition)
-**Source**: ichkoche.at; https://www.ichkoche.at/schweinskotelett-rezept-236782 (fetched 2026-04-24). *Austrian pork chop basic recipe: hot pan without fat first, then oil, 2 minutes each side, then butter and herb baste. 269 ratings.*
+### 2. Schweinskotelett (inspired by ichkoche.at)
+**Inspired by**: ichkoche.at; https://www.ichkoche.at/schweinskotelett-rezept-236782 (fetched 2026-04-24). *Austrian pork chop basic recipe: hot pan without fat first, then oil, 2 minutes each side, then butter and herb baste. 269 ratings.*
 **Serves**: 2 · **Cook**: 4–5 min
 
 *Translation: Pork chop — "This recipe is a basic recipe that can of course be extended as you like."*
@@ -84,8 +84,8 @@ Innertemperatur: **63–65 °C (145–149 °F)** USDA-rekommendation (med 3 minu
 
 ---
 
-### 3. Directo al Paladar — Chuleta de cerdo a la plancha (Spanish tradition)
-**Source**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/como-hacer-mejores-chuletas-cerdo-a-plancha-jugosas-churruscaditas (fetched 2026-04-24). *Spanish method: atemperar 15 min, medium-high heat, 1.5 min per side, salt with flakes after. 51 votes. Recommends aguja (neck/collar) chops for more fat and flavour.*
+### 3. Chuleta de cerdo a la plancha (inspired by Directo al Paladar)
+**Inspired by**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/como-hacer-mejores-chuletas-cerdo-a-plancha-jugosas-churruscaditas (fetched 2026-04-24). *Spanish method: atemperar 15 min, medium-high heat, 1.5 min per side, salt with flakes after. 51 votes. Recommends aguja (neck/collar) chops for more fat and flavour.*
 **Serves**: 1–2 · **Prep**: 15 min atempering · **Cook**: 3–4 min
 
 *Translation: How to make the best pork chops on the griddle — juicy but golden-brown. Key: temperature of both the meat and the pan.*
@@ -111,8 +111,8 @@ Innertemperatur: **63–65 °C (145–149 °F)** USDA-rekommendation (med 3 minu
 
 ---
 
-### 4. Pailin Chongchitnant — Moo Tod Gratiem Prik Thai หมูทอดกระเทียมพริกไทย (Thai tradition)
-**Source**: Pailin Chongchitnant, Hot Thai Kitchen; https://hot-thai-kitchen.com/garlic-pepper-pork/ (fetched 2026-04-25). *Quintessential Thai street-food pan-fry: thin pork slices or butterfly-cut chops marinated in garlic-cilantro-peppercorn paste, oyster sauce, soy sauce and fish sauce, dusted in cornstarch, then shallow-fried in a wok at 190 °C until golden and crispy. Topped with fried garlic. A staple of Thai restaurants and home cooking.*
+### 4. Moo Tod Gratiem Prik Thai หมูทอดกระเทียมพริกไทย (inspired by Pailin Chongchitnant)
+**Inspired by**: Pailin Chongchitnant, Hot Thai Kitchen; https://hot-thai-kitchen.com/garlic-pepper-pork/ (fetched 2026-04-25). *Quintessential Thai street-food pan-fry: thin pork slices or butterfly-cut chops marinated in garlic-cilantro-peppercorn paste, oyster sauce, soy sauce and fish sauce, dusted in cornstarch, then shallow-fried in a wok at 190 °C until golden and crispy. Topped with fried garlic. A staple of Thai restaurants and home cooking.*
 **Serves**: 2 · **Prep**: 20 min marinade · **Cook**: 10 min
 
 **Temperature guidance (from recipe)**: Fry in oil at **375 °F (190 °C)** for approximately **45 seconds to 1 minute** per batch (pork is cut thin, ~5 mm). Internal temperature should reach at least **63 °C (145 °F)** at the thickest part. For standard bone-in chops, butterfly or pound thin before applying the method.
