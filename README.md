@@ -41,12 +41,12 @@ Build a smart cooking engine for your kitchen appliances:
 
 ## 🌡️ Supported Wireless Probe Hardware
 
-> ⭐ **Best path — Local MEATER+ without extra hardware**
+> ⭐ **Quickest path — Local MEATER+ without extra hardware**
 > Install **[Emkraan/homeassistant-meater](https://github.com/Emkraan/homeassistant-meater)** from HACS. It reads the MEATER+ probe directly via BLE — no ESP32 or cloud account required.
 > ✅ No cloud required &nbsp;·&nbsp; ✅ No extra hardware &nbsp;·&nbsp; ✅ All sensors available (tip, ambient, battery)
 > → See the **[HACS integrations](#hacs-integrations)** table below for entity names.
 >
-> ⭐ **Alternative — Local MEATER+ with ESP32**
+> ⭐ **Alternative with better range — Local MEATER+ with ESP32**
 > Use a **MEATER+** probe (only the Plus model) with any ESP32 board running the ESPHome config included in this repo.
 > → See **[Quick Start with MEATER+](#-quick-start-with-meater)** below.
 
