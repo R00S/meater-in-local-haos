@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 29 Apr 2026, 08:00 UTC
-Last Change: v0.8.0.2 - fix Start MEATER Probe visible in AI recipes from MEATER AI shortcut
+Last Change: v0.8.1.0 - bump agent version (C)
 """
 
 DOMAIN = "kitchen_cooking_engine"
