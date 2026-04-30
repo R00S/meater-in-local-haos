@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 30 Apr 2026, 08:36 UTC
-Last Change: v0.8.1.2 - CHORES: version bump, timeline + user guide updated
+Last Updated: 30 Apr 2026, 08:54 UTC
+Last Change: v0.8.1.3 - fix: restore missing _renderIngredientCheckbox method header
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "392"
+PANEL_VERSION = "394"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
