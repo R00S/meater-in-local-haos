@@ -5806,6 +5806,7 @@ class KitchenCookingPanel extends LitElement {
 
           <div class="selected-ingredients">
             <h4>${this._t('ai_recipe.selected_ingredients_label')} (${this._selectedIngredients.length}):</h4>
+            <p style="margin: 0 0 8px 0; font-size: 0.8em; color: var(--secondary-text-color);">${this._t('ai_recipe.selected_ingredients_hint')}</p>
             <div class="ingredient-tags">
               ${this._selectedIngredients.map(ing => html`
                 <span
@@ -6039,11 +6040,19 @@ class KitchenCookingPanel extends LitElement {
               ${subcatIcons[subcat] || '🥩'} ${subcatLabels[subcat] || subcat}
               <span style="margin-left: 6px; opacity: 0.7;">(${this._t('ai_recipe.from_recipe_files') || 'from recipe library'})</span>
             </div>
-            <div class="ingredient-grid">
+            <div style="display: flex; flex-wrap: wrap; gap: 5px;">
               ${proteinSubcats[subcat].map(cut => {
                 const displayName = (this._language === 'sv' && cut.name_sv) ? cut.name_sv : cut.name;
-                const displayCut = { id: cut.id, name: cut.name, name_sv: cut.name_sv, cat: 'p' };
-                return this._renderIngredientCheckbox(displayCut);
+                return html`
+                  <button
+                    style="padding: 4px 10px; border-radius: 14px; border: 1px solid var(--primary-color); background: transparent; cursor: pointer; font-size: 0.82em; color: var(--primary-text-color);"
+                    @click=${() => {
+                      this._addCustomIngredient(cut.name);
+                      this._ingredientProteinSubcat = null;
+                      this.requestUpdate();
+                    }}
+                  >${displayName}</button>
+                `;
               })}
             </div>
           </div>

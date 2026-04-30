@@ -261,6 +261,7 @@
     "staples_available": "Basvaror som antas finnas:",
     "add_custom_placeholder": "Lägg till egen ingrediens...",
     "selected_ingredients_label": "Valda ingredienser",
+    "selected_ingredients_hint": "Klicka på en ingrediens för att göra den obligatorisk (⭐) i varje receptförslag.",
     "next_cooking_style": "Nästa: Välj matlagningsstil",
     "choose_style_title": "🍳 Välj matlagningsstil",
     "select_style_hint": "Välj din föredragna matlagningsstil:",

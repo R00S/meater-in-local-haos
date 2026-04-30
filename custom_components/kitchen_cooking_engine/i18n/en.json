@@ -261,6 +261,7 @@
     "staples_available": "Staples assumed available:",
     "add_custom_placeholder": "Add custom ingredient...",
     "selected_ingredients_label": "Selected Ingredients",
+    "selected_ingredients_hint": "Click an ingredient to make it mandatory (⭐) in every recipe suggestion.",
     "next_cooking_style": "Next: Choose Cooking Style",
     "choose_style_title": "🍳 Choose Cooking Style",
     "select_style_hint": "Select your preferred cooking style:",

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 30 Apr 2026, 09:56 CET
+ * AUTO-GENERATED: 30 Apr 2026, 10:17 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 30 Apr 2026, 09:56 CET
+// Last generated: 30 Apr 2026, 10:17 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -10834,6 +10834,7 @@ const I18N_STRINGS = {
       "staples_available": "Staples assumed available:",
       "add_custom_placeholder": "Add custom ingredient...",
       "selected_ingredients_label": "Selected Ingredients",
+      "selected_ingredients_hint": "Click an ingredient to make it mandatory (⭐) in every recipe suggestion.",
       "next_cooking_style": "Next: Choose Cooking Style",
       "choose_style_title": "🍳 Choose Cooking Style",
       "select_style_hint": "Select your preferred cooking style:",
@@ -11479,6 +11480,7 @@ const I18N_STRINGS = {
       "staples_available": "Basvaror som antas finnas:",
       "add_custom_placeholder": "Lägg till egen ingrediens...",
       "selected_ingredients_label": "Valda ingredienser",
+      "selected_ingredients_hint": "Klicka på en ingrediens för att göra den obligatorisk (⭐) i varje receptförslag.",
       "next_cooking_style": "Nästa: Välj matlagningsstil",
       "choose_style_title": "🍳 Välj matlagningsstil",
       "select_style_hint": "Välj din föredragna matlagningsstil:",
@@ -27052,6 +27054,7 @@ class KitchenCookingPanel extends LitElement {
 
           <div class="selected-ingredients">
             <h4>${this._t('ai_recipe.selected_ingredients_label')} (${this._selectedIngredients.length}):</h4>
+            <p style="margin: 0 0 8px 0; font-size: 0.8em; color: var(--secondary-text-color);">${this._t('ai_recipe.selected_ingredients_hint')}</p>
             <div class="ingredient-tags">
               ${this._selectedIngredients.map(ing => html`
                 <span
@@ -27285,11 +27288,19 @@ class KitchenCookingPanel extends LitElement {
               ${subcatIcons[subcat] || '🥩'} ${subcatLabels[subcat] || subcat}
               <span style="margin-left: 6px; opacity: 0.7;">(${this._t('ai_recipe.from_recipe_files') || 'from recipe library'})</span>
             </div>
-            <div class="ingredient-grid">
+            <div style="display: flex; flex-wrap: wrap; gap: 5px;">
               ${proteinSubcats[subcat].map(cut => {
                 const displayName = (this._language === 'sv' && cut.name_sv) ? cut.name_sv : cut.name;
-                const displayCut = { id: cut.id, name: cut.name, name_sv: cut.name_sv, cat: 'p' };
-                return this._renderIngredientCheckbox(displayCut);
+                return html`
+                  <button
+                    style="padding: 4px 10px; border-radius: 14px; border: 1px solid var(--primary-color); background: transparent; cursor: pointer; font-size: 0.82em; color: var(--primary-text-color);"
+                    @click=${() => {
+                      this._addCustomIngredient(cut.name);
+                      this._ingredientProteinSubcat = null;
+                      this.requestUpdate();
+                    }}
+                  >${displayName}</button>
+                `;
               })}
             </div>
           </div>
@@ -32503,7 +32514,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "394";
+const PANEL_VERSION = "396";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
