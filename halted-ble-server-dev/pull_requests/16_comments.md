@@ -1,0 +1,1 @@
+Closing this PR - it was based on the wrong branch (main instead of PR #14) and uses wrong board (ESP32-C6 instead of ESP32-C3) and wrong framework includes (Arduino WiFi.h instead of ESP-IDF lwip). Will create a new PR based on the working UDP code from PR #14.
