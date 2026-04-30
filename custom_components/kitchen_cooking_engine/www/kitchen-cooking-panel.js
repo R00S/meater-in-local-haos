@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 30 Apr 2026, 12:42 CET
+ * AUTO-GENERATED: 30 Apr 2026, 12:49 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 30 Apr 2026, 12:43 CET
+// Last generated: 30 Apr 2026, 12:49 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -17791,6 +17791,72 @@ const AI_CUISINE_TO_REGION = {
   "polynesian": "oceanian"
 };
 
+// AI Recipe Builder - Protein ingredient → subcat key (beef/pork/poultry/fish/lamb/game)
+const AI_PROTEIN_TO_SUBCAT = {
+  "beef": "beef",
+  "ground_beef": "beef",
+  "steak": "beef",
+  "veal": "beef",
+  "brisket": "beef",
+  "chuck_roast": "beef",
+  "short_ribs": "beef",
+  "beef_tongue": "beef",
+  "beef_liver": "beef",
+  "pork": "pork",
+  "pork_chop": "pork",
+  "pork_belly": "pork",
+  "bacon": "pork",
+  "sausage": "pork",
+  "ham_hocks": "pork",
+  "lardons": "pork",
+  "chorizo": "pork",
+  "prosciutto": "pork",
+  "andouille": "pork",
+  "pancetta": "pork",
+  "jamon": "pork",
+  "meatball_mix": "pork",
+  "chourico": "pork",
+  "boerewors": "pork",
+  "chicken": "poultry",
+  "chicken_breast": "poultry",
+  "chicken_thigh": "poultry",
+  "turkey": "poultry",
+  "duck": "poultry",
+  "goose": "poultry",
+  "fish": "fish",
+  "salmon": "fish",
+  "cod": "fish",
+  "tuna": "fish",
+  "herring": "fish",
+  "trout": "fish",
+  "mackerel": "fish",
+  "sardines": "fish",
+  "catfish": "fish",
+  "anchovies": "fish",
+  "mussels": "fish",
+  "crab": "fish",
+  "shrimp": "fish",
+  "lobster": "fish",
+  "prawns": "fish",
+  "clams": "fish",
+  "octopus": "fish",
+  "canned_tuna": "fish",
+  "dried_shrimp": "fish",
+  "saltfish": "fish",
+  "stockfish": "fish",
+  "crawfish": "fish",
+  "crayfish": "fish",
+  "lamb": "lamb",
+  "lamb_shank": "lamb",
+  "goat": "lamb",
+  "venison": "game",
+  "rabbit": "game",
+  "kangaroo": "game",
+  "reindeer": "game"
+};
+// Generic protein IDs that duplicate subcat button labels — filtered from badge list
+const AI_GENERIC_PROTEIN_IDS = ["pork", "lamb", "duck", "beef", "chicken", "venison", "veal", "turkey", "rabbit", "goat", "fish"];
+
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
   "p": "🥩 Proteins",
@@ -35181,22 +35247,71 @@ class KitchenCookingPanel extends LitElement {
       beef: '🐄', pork: '🐷', poultry: '🍗', fish: '🐟', lamb: '🐑', game: '🦌',
     };
 
+    // --- Cuisine protein highlighting ---
+    // Derive which subcats have common proteins in the selected cuisine(s),
+    // and which specific ingredient IDs are common (to highlight cuts in the drill-down).
+    const proteinToSubcat = (typeof AI_PROTEIN_TO_SUBCAT !== 'undefined') ? AI_PROTEIN_TO_SUBCAT : {};
+    const genericProteinIds = new Set((typeof AI_GENERIC_PROTEIN_IDS !== 'undefined') ? AI_GENERIC_PROTEIN_IDS : []);
+    const cuisineIngMap = (typeof AI_CUISINE_INGREDIENTS !== 'undefined') ? AI_CUISINE_INGREDIENTS : {};
+    const cuisineRegionMap = (typeof AI_CUISINE_TO_REGION !== 'undefined') ? AI_CUISINE_TO_REGION : {};
+    const selectedCuisines = this._aiSelectedCuisines || [];
+
+    // Collect all common ingredient IDs from the selected cuisine(s)
+    const cuisineCommonProteinIds = new Set();
+    const cuisineHighlightedSubcats = new Set();
+    for (const cuisineId of selectedCuisines) {
+      let ings = cuisineIngMap[cuisineId];
+      if (!ings) {
+        const regionId = cuisineRegionMap[cuisineId];
+        if (regionId) ings = cuisineIngMap[regionId];
+      }
+      if (!ings) continue;
+      for (const ing of ings) {
+        if (ing.common === false) continue;
+        const sc = proteinToSubcat[ing.id];
+        if (!sc) continue;
+        cuisineCommonProteinIds.add(ing.id);
+        cuisineHighlightedSubcats.add(sc);
+      }
+    }
+
+    // Filter generic protein IDs (beef, chicken, fish…) from badge list —
+    // the subcat buttons already serve as their visual representation.
+    const filteredVisible = visibleItems.filter(i => !genericProteinIds.has(i.id));
+    const filteredExt = extItems.filter(i => !genericProteinIds.has(i.id));
+
     return html`
       <div class="ingredient-category">
         <h4 style="margin: 12px 0 6px 0; font-size: 0.95em; color: var(--secondary-text-color);">${categoryLabel || '🥩 Proteins'}</h4>
 
         ${Object.keys(proteinSubcats).length > 0 ? html`
-          <!-- Protein sub-category selector pills -->
+          <!-- Protein sub-category selector pills — highlighted blue when cuisine has common items -->
           <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px;">
-            ${Object.keys(proteinSubcats).map(sc => html`
-              <button
-                style="padding: 4px 10px; border-radius: 14px; border: 1px solid ${subcat === sc ? 'var(--primary-color)' : 'var(--divider-color)'}; background: ${subcat === sc ? 'var(--primary-color)' : 'transparent'}; color: ${subcat === sc ? 'white' : 'inherit'}; cursor: pointer; font-size: 0.82em;"
-                @click=${() => {
-                  this._ingredientProteinSubcat = (subcat === sc) ? null : sc;
-                  this.requestUpdate();
-                }}
-              >${subcatIcons[sc] || '🥩'} ${subcatLabels[sc] || sc}</button>
-            `)}
+            ${Object.keys(proteinSubcats).map(sc => {
+              const isActive = subcat === sc;
+              const isCuisineMatch = cuisineHighlightedSubcats.has(sc);
+              let borderColor = 'var(--divider-color)';
+              let bgColor = 'transparent';
+              let textColor = 'inherit';
+              if (isActive) {
+                borderColor = 'var(--primary-color)';
+                bgColor = 'var(--primary-color)';
+                textColor = 'white';
+              } else if (isCuisineMatch) {
+                borderColor = 'var(--primary-color)';
+                bgColor = 'rgba(var(--rgb-primary-color, 3,169,244), 0.12)';
+                textColor = 'var(--primary-color)';
+              }
+              return html`
+                <button
+                  style="padding: 4px 10px; border-radius: 14px; border: 1px solid ${borderColor}; background: ${bgColor}; color: ${textColor}; cursor: pointer; font-size: 0.82em; font-weight: ${isCuisineMatch ? '600' : 'normal'};"
+                  @click=${() => {
+                    this._ingredientProteinSubcat = (subcat === sc) ? null : sc;
+                    this.requestUpdate();
+                  }}
+                >${subcatIcons[sc] || '🥩'} ${subcatLabels[sc] || sc}</button>
+              `;
+            })}
           </div>
         ` : ''}
 
@@ -35210,25 +35325,30 @@ class KitchenCookingPanel extends LitElement {
             <div style="display: flex; flex-wrap: wrap; gap: 5px;">
               ${proteinSubcats[subcat].map(cut => {
                 const displayName = (this._language === 'sv' && cut.name_sv) ? cut.name_sv : cut.name;
+                // Highlight cut if any common cuisine protein ID is a prefix of this cut's ID
+                // e.g. cuisine has "salmon" → highlights "salmon_fillet", "salmon_steak"
+                const isCuisineCommon = [...cuisineCommonProteinIds].some(
+                  id => cut.id === id || cut.id.startsWith(id + '_') || id.startsWith(cut.id + '_')
+                );
                 return html`
                   <button
-                    style="padding: 4px 10px; border-radius: 14px; border: 1px solid var(--primary-color); background: transparent; cursor: pointer; font-size: 0.82em; color: var(--primary-text-color);"
+                    style="padding: 4px 10px; border-radius: 14px; border: 1px solid ${isCuisineCommon ? 'var(--primary-color)' : 'var(--primary-color)'}; background: ${isCuisineCommon ? 'rgba(var(--rgb-primary-color, 3,169,244), 0.15)' : 'transparent'}; cursor: pointer; font-size: 0.82em; color: ${isCuisineCommon ? 'var(--primary-color)' : 'var(--primary-text-color)'}; font-weight: ${isCuisineCommon ? '600' : 'normal'};"
                     @click=${() => {
                       this._addCustomIngredient(cut.name);
                       this._ingredientProteinSubcat = null;
                       this.requestUpdate();
                     }}
-                  >${displayName}</button>
+                  >${isCuisineCommon ? '★ ' : ''}${displayName}</button>
                 `;
               })}
             </div>
           </div>
         ` : html`
-          <!-- Default protein list (non-drill-down) -->
+          <!-- Default protein list (generic protein IDs filtered out — subcat buttons cover them) -->
           <div class="ingredient-grid">
-            ${visibleItems.map(ingredient => this._renderIngredientCheckbox(ingredient))}
+            ${filteredVisible.map(ingredient => this._renderIngredientCheckbox(ingredient))}
           </div>
-          ${extItems.length > 0 ? html`
+          ${filteredExt.length > 0 ? html`
             <button
               style="margin-top: 6px; padding: 4px 12px; border-radius: 14px; border: 1px solid var(--divider-color); background: transparent; cursor: pointer; font-size: 0.82em; color: var(--secondary-text-color);"
               @click=${() => {
@@ -35241,7 +35361,7 @@ class KitchenCookingPanel extends LitElement {
             >
               ${isExpanded
                 ? this._t('ai_recipe.show_less') || 'Show less'
-                : `${this._t('ai_recipe.more_ingredients') || 'More'} (+${extItems.length})`}
+                : `${this._t('ai_recipe.more_ingredients') || 'More'} (+${filteredExt.length})`}
             </button>
           ` : ''}
         `}
@@ -40433,7 +40553,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "398";
+const PANEL_VERSION = "399";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

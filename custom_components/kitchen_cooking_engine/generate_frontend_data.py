@@ -597,6 +597,8 @@ def generate_js_data():
     ai_assumed_staples = []
     ai_assumed_staples_sv = []
     ai_ingredient_names_sv = {}
+    ai_protein_to_subcat = {}
+    ai_generic_protein_ids = []
     try:
         import importlib.util
         ai_data_spec = importlib.util.spec_from_file_location(
@@ -617,6 +619,8 @@ def generate_js_data():
         ai_assumed_staples = getattr(ai_data_module, 'ASSUMED_STAPLES', [])
         ai_assumed_staples_sv = getattr(ai_data_module, 'ASSUMED_STAPLES_SV', [])
         ai_ingredient_names_sv = getattr(ai_data_module, 'INGREDIENT_NAMES_SV', {})
+        ai_protein_to_subcat = getattr(ai_data_module, 'PROTEIN_TO_SUBCAT', {})
+        ai_generic_protein_ids = list(getattr(ai_data_module, 'GENERIC_PROTEIN_IDS', set()))
     except Exception as e:
         print(f"Warning: Could not load AI Recipe Builder data: {e}")
     # Derived data; initialised before enrichment so they always exist
@@ -772,6 +776,11 @@ def generate_js_data():
     lines.append("")
     lines.append("// AI Recipe Builder - Cuisine to Region mapping")
     lines.append(f"const AI_CUISINE_TO_REGION = {json.dumps(ai_cuisine_to_region, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Protein ingredient → subcat key (beef/pork/poultry/fish/lamb/game)")
+    lines.append(f"const AI_PROTEIN_TO_SUBCAT = {json.dumps(ai_protein_to_subcat, indent=2, ensure_ascii=False)};")
+    lines.append("// Generic protein IDs that duplicate subcat button labels — filtered from badge list")
+    lines.append(f"const AI_GENERIC_PROTEIN_IDS = {json.dumps(ai_generic_protein_ids, ensure_ascii=False)};")
     lines.append("")
     lines.append("// AI Recipe Builder - Ingredient category labels and order")
     lines.append(f"const AI_CATEGORY_LABELS = {json.dumps(ai_category_labels, indent=2, ensure_ascii=False)};")

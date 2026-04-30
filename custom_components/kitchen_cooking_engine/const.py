@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 30 Apr 2026, 09:14 UTC
-Last Change: v0.8.1.5 - Per-cuisine common/extended ingredient split; More button fix; 45 new specific cuisine lists
+Last Change: v0.8.1.6 - feat: protein subcat highlighting per cuisine - Per-cuisine common/extended ingredient split; More button fix; 45 new specific cuisine lists
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "398"
+PANEL_VERSION = "399"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
