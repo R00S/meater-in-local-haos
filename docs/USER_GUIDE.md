@@ -859,7 +859,7 @@ Recipe Builder:
 The ingredient screen has several sections:
 
 - **Cuisine / Region filter** — optionally choose one or more cuisine regions to narrow
-  ingredient suggestions. Selecting multiple regions creates fusion combinations. Over 80
+  ingredient suggestions. Selecting multiple regions creates fusion combinations. Over 85
   cuisines are available.
 - **From Your Shelf** *(shown only when Shelf is enabled and has items)* — a highlighted
   section at the top of the ingredient grid shows items currently in your shelf (fridge,
@@ -868,10 +868,17 @@ The ingredient screen has several sections:
 - **Ingredient grid** — ingredients are grouped by category (Proteins, Vegetables, Grains,
   Dairy & Oils, Spices). Each category shows a compact base set by default. Tap
   **More (+N)** to expand a category to its full set; tap **Show less** to collapse it back.
+  When a cuisine is selected, the ingredient list is filtered to that cuisine's common
+  and extended items.
 - **Protein drill-down** — the Proteins category has a row of sub-group tabs (🐄 Beef,
   🐷 Pork, 🍗 Poultry, 🐟 Fish, 🐑 Lamb, 🦌 Game). Tap a tab to show specific cuts
   from the recipe library for that protein group instead of the general protein list.
   Tap the active tab again to close the drill-down.
+  - When a cuisine is selected, sub-group tabs that have common proteins in that cuisine
+    are **highlighted blue** (bold, outlined) — a quick visual guide to which protein groups
+    fit that cuisine.
+  - Inside the drill-down, specific cuts that match the cuisine's common proteins are
+    **★ starred** and tinted blue, so you can instantly spot the most cuisine-appropriate cuts.
 - **Custom ingredient** — type any ingredient in the text field and tap **＋ Add** to add
   it, even if it's not in the list.
 - **Compulsory ingredients** — after adding an ingredient, tap its badge to mark it as

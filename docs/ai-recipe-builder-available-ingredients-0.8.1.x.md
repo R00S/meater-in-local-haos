@@ -64,3 +64,35 @@ Improve the AI Recipe Builder ingredient selector:
 **Versions released:**
 - v0.8.1.1 — feature + review fixes (PANEL_VERSION 391)
 - v0.8.1.2 — CHORES (version bump + docs)
+
+### Session 2 (2026-04-30)
+
+**Discoveries:**
+- `CUISINE_INGREDIENTS` in `ai_recipe_data.py` only had ~5 items per cuisine (no common/extended split)
+- `AI_PROTEIN_TO_SUBCAT` and `AI_GENERIC_PROTEIN_IDS` already designed in `ai_recipe_data.py` but not exported by generator or used in JS
+- Drill-down cut IDs in `AI_PROTEIN_SUBCATS` use compound slugs (e.g. `salmon_fillet`) while CUISINE_INGREDIENTS uses base IDs (e.g. `salmon`) — need prefix matching
+
+**Work done:**
+
+1. **`ai_recipe_data.py`** — expanded `CUISINE_INGREDIENTS` from ~41 cuisines × 5 items to 86 cuisines × ~26 items (2 260 total):
+   - Every cuisine entry uses `_ing()` (common=True) / `_inge()` (common=False) helpers
+   - Base set (common=True) kept at ~12 items per cuisine; extended set behind "More"
+   - 45 new specific cuisines added (regional, national and tribal)
+   - `PROTEIN_TO_SUBCAT` dict added: maps ~50 protein ingredient IDs → subcat key (beef/pork/poultry/fish/lamb/game)
+   - `GENERIC_PROTEIN_IDS` set added: bare category names (beef, chicken, fish…) that duplicate subcat buttons
+
+2. **`generate_frontend_data.py`** — new exports:
+   - `AI_PROTEIN_TO_SUBCAT` — maps ingredient ID → protein subcat key
+   - `AI_GENERIC_PROTEIN_IDS` — list of generic IDs to filter from badge list
+
+3. **`panel-class-template.js`** — `_renderProteinCategory` updated:
+   - Reads selected cuisines + their `common=True` ingredients
+   - Maps those through `AI_PROTEIN_TO_SUBCAT` → builds `cuisineHighlightedSubcats` set
+   - Subcat buttons (Beef/Pork/Poultry/Fish/Lamb/Game) highlighted blue (outline + subtle fill + bold) when cuisine has common proteins in that group
+   - Drill-down cuts highlighted blue + prefixed with ★ when matching common cuisine protein via prefix match (`salmon` → `salmon_fillet`, `salmon_steak`)
+   - Generic protein IDs (beef, chicken, fish…) filtered from flat badge list — subcat button already represents them
+
+**Versions released:**
+- v0.8.1.5 — B/C: expanded CUISINE_INGREDIENTS (PANEL_VERSION 398)
+- v0.8.1.6 — A: cuisine-aware protein subcat highlighting (PANEL_VERSION 399)
+- v0.8.1.7 — CHORES (version bump + docs)
