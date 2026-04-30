@@ -590,6 +590,13 @@ def generate_js_data():
     ai_ingredients = {}
     ai_cuisine_ingredients = {}
     ai_cuisine_to_region = {}
+    ai_ingredient_categories = {}
+    ai_category_labels = {}
+    ai_category_labels_sv = {}
+    ai_category_order = []
+    ai_assumed_staples = []
+    ai_assumed_staples_sv = []
+    ai_ingredient_names_sv = {}
     try:
         import importlib.util
         ai_data_spec = importlib.util.spec_from_file_location(
@@ -612,6 +619,11 @@ def generate_js_data():
         ai_ingredient_names_sv = getattr(ai_data_module, 'INGREDIENT_NAMES_SV', {})
     except Exception as e:
         print(f"Warning: Could not load AI Recipe Builder data: {e}")
+    # Derived data; initialised before enrichment so they always exist
+    ai_common_ingredients_flat = []
+    ai_protein_subcats = {}
+    ai_protein_subcat_labels = {}
+    ai_protein_subcat_labels_sv = {}
     
     # Enrich cuisine ingredients with category from INGREDIENT_CATEGORIES map
     if ai_ingredient_categories:
@@ -623,7 +635,29 @@ def generate_js_data():
                 enriched.append({"id": ing["id"], "name": ing["name"], "cat": cat})
             enriched_cuisine[cuisine_id] = enriched
         ai_cuisine_ingredients = enriched_cuisine
-    
+
+    # Build AI_COMMON_INGREDIENTS — a flat array with {id, name, cat, common} per item.
+    # Maps the category-dict structure of COMMON_INGREDIENTS into category codes used by the UI.
+    _cat_key_to_code = {
+        "proteins": "p",
+        "vegetables": "v",
+        "grains": "g",
+        "dairy": "d",
+        "spices": "s",
+    }
+    ai_common_ingredients_flat = []
+    if isinstance(ai_ingredients, dict):
+        for cat_key, items in ai_ingredients.items():
+            cat_code = _cat_key_to_code.get(cat_key, "s")
+            for ing in items:
+                enriched_item = {
+                    "id": ing["id"],
+                    "name": ing["name"],
+                    "cat": ai_ingredient_categories.get(ing["id"], cat_code),
+                    "common": ing.get("common", True),
+                }
+                ai_common_ingredients_flat.append(enriched_item)
+
     # Load measurement systems from measurements.py
     measurement_systems = {}
     try:
@@ -670,6 +704,40 @@ def generate_js_data():
         f"{len(exp_tree)} categories from KCE:CUT tags"
     )
 
+    # Build AI_PROTEIN_SUBCATS from the experimental tree.
+    # Expose protein categories (beef, pork, poultry, fish, lamb, game) as drill-down groups.
+    _protein_categories = {"beef", "pork", "poultry", "fish", "lamb", "game"}
+    for cat_id, cat_data in exp_tree.items():
+        if cat_id not in _protein_categories:
+            continue
+        seen_slugs = set()
+        cuts_for_cat = []
+        for meat in cat_data.get("meats", []):
+            for cut_type in meat.get("cutTypes", []):
+                for cut in cut_type.get("cuts", []):
+                    slug = cut.get("id") or cut.get("slug")
+                    if not slug or slug in seen_slugs:
+                        continue
+                    seen_slugs.add(slug)
+                    entry = {
+                        "id": slug,
+                        "name": cut.get("name", slug.replace("_", " ").title()),
+                        "cat": "p",
+                    }
+                    if cut.get("name_sv"):
+                        entry["name_sv"] = cut["name_sv"]
+                    cuts_for_cat.append(entry)
+        if cuts_for_cat:
+            ai_protein_subcats[cat_id] = cuts_for_cat
+            ai_protein_subcat_labels[cat_id] = cat_data.get("name", cat_id.title())
+            ai_protein_subcat_labels_sv[cat_id] = (
+                cat_data.get("name_sv") or cat_data.get("name", cat_id.title())
+            )
+    print(
+        f"  AI_PROTEIN_SUBCATS: {sum(len(v) for v in ai_protein_subcats.values())} cuts "
+        f"across {len(ai_protein_subcats)} protein categories"
+    )
+
     
     cet_time = get_cet_timestamp()
     
@@ -687,6 +755,14 @@ def generate_js_data():
     lines.append("")
     lines.append("// AI Recipe Builder - Common Ingredients")
     lines.append(f"const AI_INGREDIENTS = {json.dumps(ai_ingredients, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Common Ingredients (flat array with cat + common flags)")
+    lines.append(f"const AI_COMMON_INGREDIENTS = {json.dumps(ai_common_ingredients_flat, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Protein subcategories derived from recipe files")
+    lines.append(f"const AI_PROTEIN_SUBCATS = {json.dumps(ai_protein_subcats, indent=2, ensure_ascii=False)};")
+    lines.append(f"const AI_PROTEIN_SUBCAT_LABELS = {json.dumps(ai_protein_subcat_labels, indent=2, ensure_ascii=False)};")
+    lines.append(f"const AI_PROTEIN_SUBCAT_LABELS_SV = {json.dumps(ai_protein_subcat_labels_sv, indent=2, ensure_ascii=False)};")
     lines.append("")
     lines.append("// AI Recipe Builder - Cuisine-specific Ingredients (28 per cuisine)")
     lines.append(f"const AI_CUISINE_INGREDIENTS = {json.dumps(ai_cuisine_ingredients, indent=2, ensure_ascii=False)};")

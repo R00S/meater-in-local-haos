@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 30 Apr 2026, 07:59 CET
+ * AUTO-GENERATED: 30 Apr 2026, 09:18 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 30 Apr 2026, 07:59 CET
+// Last generated: 30 Apr 2026, 09:18 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -1930,6 +1930,76 @@ const AI_INGREDIENTS = {
       "id": "eggs",
       "name": "Eggs",
       "common": true
+    },
+    {
+      "id": "cod",
+      "name": "Cod",
+      "common": false
+    },
+    {
+      "id": "tuna",
+      "name": "Tuna",
+      "common": false
+    },
+    {
+      "id": "lamb",
+      "name": "Lamb",
+      "common": false
+    },
+    {
+      "id": "duck",
+      "name": "Duck",
+      "common": false
+    },
+    {
+      "id": "turkey",
+      "name": "Turkey",
+      "common": false
+    },
+    {
+      "id": "pork_belly",
+      "name": "Pork Belly",
+      "common": false
+    },
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "common": false
+    },
+    {
+      "id": "sausage",
+      "name": "Sausage",
+      "common": false
+    },
+    {
+      "id": "mussels",
+      "name": "Mussels",
+      "common": false
+    },
+    {
+      "id": "crab",
+      "name": "Crab",
+      "common": false
+    },
+    {
+      "id": "herring",
+      "name": "Herring",
+      "common": false
+    },
+    {
+      "id": "paneer",
+      "name": "Paneer",
+      "common": false
+    },
+    {
+      "id": "tempeh",
+      "name": "Tempeh",
+      "common": false
+    },
+    {
+      "id": "anchovies",
+      "name": "Anchovies",
+      "common": false
     }
   ],
   "vegetables": [
@@ -1992,6 +2062,86 @@ const AI_INGREDIENTS = {
       "id": "green_beans",
       "name": "Green Beans",
       "common": true
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms",
+      "common": false
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant / Aubergine",
+      "common": false
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "common": false
+    },
+    {
+      "id": "leeks",
+      "name": "Leeks",
+      "common": false
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage",
+      "common": false
+    },
+    {
+      "id": "peas",
+      "name": "Peas",
+      "common": false
+    },
+    {
+      "id": "corn",
+      "name": "Corn",
+      "common": false
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "common": false
+    },
+    {
+      "id": "avocado",
+      "name": "Avocado",
+      "common": false
+    },
+    {
+      "id": "beets",
+      "name": "Beets",
+      "common": false
+    },
+    {
+      "id": "artichokes",
+      "name": "Artichokes",
+      "common": false
+    },
+    {
+      "id": "pumpkin",
+      "name": "Pumpkin / Squash",
+      "common": false
+    },
+    {
+      "id": "fennel",
+      "name": "Fennel",
+      "common": false
+    },
+    {
+      "id": "okra",
+      "name": "Okra",
+      "common": false
+    },
+    {
+      "id": "parsnips",
+      "name": "Parsnips",
+      "common": false
+    },
+    {
+      "id": "turnips",
+      "name": "Turnips",
+      "common": false
     }
   ],
   "grains": [
@@ -2019,6 +2169,61 @@ const AI_INGREDIENTS = {
       "id": "tortillas",
       "name": "Tortillas",
       "common": true
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "common": false
+    },
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas",
+      "common": false
+    },
+    {
+      "id": "black_beans",
+      "name": "Black Beans",
+      "common": false
+    },
+    {
+      "id": "kidney_beans",
+      "name": "Kidney Beans",
+      "common": false
+    },
+    {
+      "id": "oats",
+      "name": "Oats",
+      "common": false
+    },
+    {
+      "id": "barley",
+      "name": "Barley",
+      "common": false
+    },
+    {
+      "id": "couscous",
+      "name": "Couscous",
+      "common": false
+    },
+    {
+      "id": "polenta",
+      "name": "Polenta / Cornmeal",
+      "common": false
+    },
+    {
+      "id": "noodles",
+      "name": "Noodles",
+      "common": false
+    },
+    {
+      "id": "pita",
+      "name": "Pita Bread",
+      "common": false
+    },
+    {
+      "id": "flour",
+      "name": "Flour",
+      "common": false
     }
   ],
   "dairy": [
@@ -2046,8 +2251,1729 @@ const AI_INGREDIENTS = {
       "id": "yogurt",
       "name": "Yogurt",
       "common": true
+    },
+    {
+      "id": "sour_cream",
+      "name": "Sour Cream",
+      "common": false
+    },
+    {
+      "id": "cream_cheese",
+      "name": "Cream Cheese",
+      "common": false
+    },
+    {
+      "id": "parmesan",
+      "name": "Parmesan",
+      "common": false
+    },
+    {
+      "id": "feta",
+      "name": "Feta",
+      "common": false
+    },
+    {
+      "id": "mozzarella",
+      "name": "Mozzarella",
+      "common": false
+    },
+    {
+      "id": "cheddar",
+      "name": "Cheddar",
+      "common": false
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk",
+      "common": false
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil",
+      "common": false
+    },
+    {
+      "id": "soy_sauce",
+      "name": "Soy Sauce",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "common": false
+    },
+    {
+      "id": "mustard",
+      "name": "Mustard",
+      "common": false
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "common": false
+    }
+  ],
+  "spices": [
+    {
+      "id": "cumin",
+      "name": "Cumin",
+      "common": true
+    },
+    {
+      "id": "paprika",
+      "name": "Paprika",
+      "common": true
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon",
+      "common": true
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric",
+      "common": true
+    },
+    {
+      "id": "coriander",
+      "name": "Coriander",
+      "common": true
+    },
+    {
+      "id": "chili_powder",
+      "name": "Chili Powder",
+      "common": true
+    },
+    {
+      "id": "garam_masala",
+      "name": "Garam Masala",
+      "common": true
+    },
+    {
+      "id": "oregano",
+      "name": "Oregano",
+      "common": true
+    },
+    {
+      "id": "thyme",
+      "name": "Thyme",
+      "common": false
+    },
+    {
+      "id": "rosemary",
+      "name": "Rosemary",
+      "common": false
+    },
+    {
+      "id": "basil",
+      "name": "Basil",
+      "common": false
+    },
+    {
+      "id": "mint",
+      "name": "Mint",
+      "common": false
+    },
+    {
+      "id": "dill",
+      "name": "Dill",
+      "common": false
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley",
+      "common": false
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro",
+      "common": false
+    },
+    {
+      "id": "star_anise",
+      "name": "Star Anise",
+      "common": false
+    },
+    {
+      "id": "cardamom",
+      "name": "Cardamom",
+      "common": false
+    },
+    {
+      "id": "saffron",
+      "name": "Saffron",
+      "common": false
+    },
+    {
+      "id": "five_spice",
+      "name": "Five Spice",
+      "common": false
+    },
+    {
+      "id": "ras_el_hanout",
+      "name": "Ras el Hanout",
+      "common": false
+    },
+    {
+      "id": "sumac",
+      "name": "Sumac",
+      "common": false
+    },
+    {
+      "id": "berbere",
+      "name": "Berbere",
+      "common": false
+    },
+    {
+      "id": "sesame_seeds",
+      "name": "Sesame Seeds",
+      "common": false
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts",
+      "common": false
+    },
+    {
+      "id": "almonds",
+      "name": "Almonds",
+      "common": false
+    },
+    {
+      "id": "walnuts",
+      "name": "Walnuts",
+      "common": false
+    },
+    {
+      "id": "pine_nuts",
+      "name": "Pine Nuts",
+      "common": false
     }
   ]
+};
+
+// AI Recipe Builder - Common Ingredients (flat array with cat + common flags)
+const AI_COMMON_INGREDIENTS = [
+  {
+    "id": "chicken_breast",
+    "name": "Chicken Breast",
+    "cat": "p",
+    "common": true
+  },
+  {
+    "id": "chicken_thigh",
+    "name": "Chicken Thighs",
+    "cat": "p",
+    "common": true
+  },
+  {
+    "id": "ground_beef",
+    "name": "Ground Beef",
+    "cat": "p",
+    "common": true
+  },
+  {
+    "id": "steak",
+    "name": "Steak (Beef)",
+    "cat": "p",
+    "common": true
+  },
+  {
+    "id": "pork_chop",
+    "name": "Pork Chops",
+    "cat": "p",
+    "common": true
+  },
+  {
+    "id": "salmon",
+    "name": "Salmon",
+    "cat": "p",
+    "common": true
+  },
+  {
+    "id": "shrimp",
+    "name": "Shrimp",
+    "cat": "p",
+    "common": true
+  },
+  {
+    "id": "tofu",
+    "name": "Tofu",
+    "cat": "p",
+    "common": true
+  },
+  {
+    "id": "eggs",
+    "name": "Eggs",
+    "cat": "p",
+    "common": true
+  },
+  {
+    "id": "cod",
+    "name": "Cod",
+    "cat": "p",
+    "common": false
+  },
+  {
+    "id": "tuna",
+    "name": "Tuna",
+    "cat": "p",
+    "common": false
+  },
+  {
+    "id": "lamb",
+    "name": "Lamb",
+    "cat": "p",
+    "common": false
+  },
+  {
+    "id": "duck",
+    "name": "Duck",
+    "cat": "p",
+    "common": false
+  },
+  {
+    "id": "turkey",
+    "name": "Turkey",
+    "cat": "p",
+    "common": false
+  },
+  {
+    "id": "pork_belly",
+    "name": "Pork Belly",
+    "cat": "p",
+    "common": false
+  },
+  {
+    "id": "bacon",
+    "name": "Bacon",
+    "cat": "p",
+    "common": false
+  },
+  {
+    "id": "sausage",
+    "name": "Sausage",
+    "cat": "p",
+    "common": false
+  },
+  {
+    "id": "mussels",
+    "name": "Mussels",
+    "cat": "p",
+    "common": false
+  },
+  {
+    "id": "crab",
+    "name": "Crab",
+    "cat": "p",
+    "common": false
+  },
+  {
+    "id": "herring",
+    "name": "Herring",
+    "cat": "p",
+    "common": false
+  },
+  {
+    "id": "paneer",
+    "name": "Paneer",
+    "cat": "p",
+    "common": false
+  },
+  {
+    "id": "tempeh",
+    "name": "Tempeh",
+    "cat": "p",
+    "common": false
+  },
+  {
+    "id": "anchovies",
+    "name": "Anchovies",
+    "cat": "p",
+    "common": false
+  },
+  {
+    "id": "broccoli",
+    "name": "Broccoli",
+    "cat": "v",
+    "common": true
+  },
+  {
+    "id": "carrots",
+    "name": "Carrots",
+    "cat": "v",
+    "common": true
+  },
+  {
+    "id": "bell_peppers",
+    "name": "Bell Peppers",
+    "cat": "v",
+    "common": true
+  },
+  {
+    "id": "onions",
+    "name": "Onions",
+    "cat": "v",
+    "common": true
+  },
+  {
+    "id": "garlic",
+    "name": "Garlic",
+    "cat": "v",
+    "common": true
+  },
+  {
+    "id": "tomatoes",
+    "name": "Tomatoes",
+    "cat": "v",
+    "common": true
+  },
+  {
+    "id": "spinach",
+    "name": "Spinach",
+    "cat": "v",
+    "common": true
+  },
+  {
+    "id": "potatoes",
+    "name": "Potatoes",
+    "cat": "g",
+    "common": true
+  },
+  {
+    "id": "sweet_potatoes",
+    "name": "Sweet Potatoes",
+    "cat": "v",
+    "common": true
+  },
+  {
+    "id": "zucchini",
+    "name": "Zucchini",
+    "cat": "v",
+    "common": true
+  },
+  {
+    "id": "cauliflower",
+    "name": "Cauliflower",
+    "cat": "v",
+    "common": true
+  },
+  {
+    "id": "green_beans",
+    "name": "Green Beans",
+    "cat": "v",
+    "common": true
+  },
+  {
+    "id": "mushrooms",
+    "name": "Mushrooms",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "eggplant",
+    "name": "Eggplant / Aubergine",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "celery",
+    "name": "Celery",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "leeks",
+    "name": "Leeks",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "cabbage",
+    "name": "Cabbage",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "peas",
+    "name": "Peas",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "corn",
+    "name": "Corn",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "cucumber",
+    "name": "Cucumber",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "avocado",
+    "name": "Avocado",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "beets",
+    "name": "Beets",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "artichokes",
+    "name": "Artichokes",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "pumpkin",
+    "name": "Pumpkin / Squash",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "fennel",
+    "name": "Fennel",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "okra",
+    "name": "Okra",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "parsnips",
+    "name": "Parsnips",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "turnips",
+    "name": "Turnips",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "rice",
+    "name": "Rice",
+    "cat": "g",
+    "common": true
+  },
+  {
+    "id": "pasta",
+    "name": "Pasta",
+    "cat": "g",
+    "common": true
+  },
+  {
+    "id": "quinoa",
+    "name": "Quinoa",
+    "cat": "g",
+    "common": true
+  },
+  {
+    "id": "bread",
+    "name": "Bread",
+    "cat": "g",
+    "common": true
+  },
+  {
+    "id": "tortillas",
+    "name": "Tortillas",
+    "cat": "g",
+    "common": true
+  },
+  {
+    "id": "lentils",
+    "name": "Lentils",
+    "cat": "g",
+    "common": false
+  },
+  {
+    "id": "chickpeas",
+    "name": "Chickpeas",
+    "cat": "g",
+    "common": false
+  },
+  {
+    "id": "black_beans",
+    "name": "Black Beans",
+    "cat": "g",
+    "common": false
+  },
+  {
+    "id": "kidney_beans",
+    "name": "Kidney Beans",
+    "cat": "g",
+    "common": false
+  },
+  {
+    "id": "oats",
+    "name": "Oats",
+    "cat": "g",
+    "common": false
+  },
+  {
+    "id": "barley",
+    "name": "Barley",
+    "cat": "g",
+    "common": false
+  },
+  {
+    "id": "couscous",
+    "name": "Couscous",
+    "cat": "g",
+    "common": false
+  },
+  {
+    "id": "polenta",
+    "name": "Polenta / Cornmeal",
+    "cat": "g",
+    "common": false
+  },
+  {
+    "id": "noodles",
+    "name": "Noodles",
+    "cat": "g",
+    "common": false
+  },
+  {
+    "id": "pita",
+    "name": "Pita Bread",
+    "cat": "g",
+    "common": false
+  },
+  {
+    "id": "flour",
+    "name": "Flour",
+    "cat": "g",
+    "common": false
+  },
+  {
+    "id": "cheese",
+    "name": "Cheese",
+    "cat": "d",
+    "common": true
+  },
+  {
+    "id": "milk",
+    "name": "Milk",
+    "cat": "d",
+    "common": true
+  },
+  {
+    "id": "butter",
+    "name": "Butter",
+    "cat": "d",
+    "common": true
+  },
+  {
+    "id": "cream",
+    "name": "Cream",
+    "cat": "d",
+    "common": true
+  },
+  {
+    "id": "yogurt",
+    "name": "Yogurt",
+    "cat": "d",
+    "common": true
+  },
+  {
+    "id": "sour_cream",
+    "name": "Sour Cream",
+    "cat": "d",
+    "common": false
+  },
+  {
+    "id": "cream_cheese",
+    "name": "Cream Cheese",
+    "cat": "d",
+    "common": false
+  },
+  {
+    "id": "parmesan",
+    "name": "Parmesan",
+    "cat": "d",
+    "common": false
+  },
+  {
+    "id": "feta",
+    "name": "Feta",
+    "cat": "d",
+    "common": false
+  },
+  {
+    "id": "mozzarella",
+    "name": "Mozzarella",
+    "cat": "d",
+    "common": false
+  },
+  {
+    "id": "cheddar",
+    "name": "Cheddar",
+    "cat": "d",
+    "common": false
+  },
+  {
+    "id": "coconut_milk",
+    "name": "Coconut Milk",
+    "cat": "d",
+    "common": false
+  },
+  {
+    "id": "olive_oil",
+    "name": "Olive Oil",
+    "cat": "d",
+    "common": false
+  },
+  {
+    "id": "soy_sauce",
+    "name": "Soy Sauce",
+    "cat": "d",
+    "common": false
+  },
+  {
+    "id": "tomato_paste",
+    "name": "Tomato Paste",
+    "cat": "d",
+    "common": false
+  },
+  {
+    "id": "mustard",
+    "name": "Mustard",
+    "cat": "d",
+    "common": false
+  },
+  {
+    "id": "honey",
+    "name": "Honey",
+    "cat": "d",
+    "common": false
+  },
+  {
+    "id": "cumin",
+    "name": "Cumin",
+    "cat": "s",
+    "common": true
+  },
+  {
+    "id": "paprika",
+    "name": "Paprika",
+    "cat": "s",
+    "common": true
+  },
+  {
+    "id": "cinnamon",
+    "name": "Cinnamon",
+    "cat": "s",
+    "common": true
+  },
+  {
+    "id": "turmeric",
+    "name": "Turmeric",
+    "cat": "s",
+    "common": true
+  },
+  {
+    "id": "coriander",
+    "name": "Coriander",
+    "cat": "s",
+    "common": true
+  },
+  {
+    "id": "chili_powder",
+    "name": "Chili Powder",
+    "cat": "s",
+    "common": true
+  },
+  {
+    "id": "garam_masala",
+    "name": "Garam Masala",
+    "cat": "s",
+    "common": true
+  },
+  {
+    "id": "oregano",
+    "name": "Oregano",
+    "cat": "v",
+    "common": true
+  },
+  {
+    "id": "thyme",
+    "name": "Thyme",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "rosemary",
+    "name": "Rosemary",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "basil",
+    "name": "Basil",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "mint",
+    "name": "Mint",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "dill",
+    "name": "Dill",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "parsley",
+    "name": "Parsley",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "cilantro",
+    "name": "Cilantro",
+    "cat": "v",
+    "common": false
+  },
+  {
+    "id": "star_anise",
+    "name": "Star Anise",
+    "cat": "s",
+    "common": false
+  },
+  {
+    "id": "cardamom",
+    "name": "Cardamom",
+    "cat": "s",
+    "common": false
+  },
+  {
+    "id": "saffron",
+    "name": "Saffron",
+    "cat": "s",
+    "common": false
+  },
+  {
+    "id": "five_spice",
+    "name": "Five Spice",
+    "cat": "s",
+    "common": false
+  },
+  {
+    "id": "ras_el_hanout",
+    "name": "Ras el Hanout",
+    "cat": "s",
+    "common": false
+  },
+  {
+    "id": "sumac",
+    "name": "Sumac",
+    "cat": "s",
+    "common": false
+  },
+  {
+    "id": "berbere",
+    "name": "Berbere",
+    "cat": "s",
+    "common": false
+  },
+  {
+    "id": "sesame_seeds",
+    "name": "Sesame Seeds",
+    "cat": "s",
+    "common": false
+  },
+  {
+    "id": "peanuts",
+    "name": "Peanuts",
+    "cat": "s",
+    "common": false
+  },
+  {
+    "id": "almonds",
+    "name": "Almonds",
+    "cat": "s",
+    "common": false
+  },
+  {
+    "id": "walnuts",
+    "name": "Walnuts",
+    "cat": "s",
+    "common": false
+  },
+  {
+    "id": "pine_nuts",
+    "name": "Pine Nuts",
+    "cat": "s",
+    "common": false
+  }
+];
+
+// AI Recipe Builder - Protein subcategories derived from recipe files
+const AI_PROTEIN_SUBCATS = {
+  "game": [
+    {
+      "id": "ostrich_fillet",
+      "name": "Ostrich Fillet",
+      "cat": "p",
+      "name_sv": "Strutsfilé"
+    },
+    {
+      "id": "ostrich_steak",
+      "name": "Ostrich Steak",
+      "cat": "p",
+      "name_sv": "Strutsfilé"
+    },
+    {
+      "id": "venison_leg",
+      "name": "Leg",
+      "cat": "p",
+      "name_sv": "Hjortlår"
+    },
+    {
+      "id": "venison_loin",
+      "name": "Venison Loin",
+      "cat": "p",
+      "name_sv": "Hjortfilé"
+    },
+    {
+      "id": "venison_roast",
+      "name": "Venison Roast",
+      "cat": "p",
+      "name_sv": "Hjortstek"
+    },
+    {
+      "id": "venison_shoulder",
+      "name": "Shoulder",
+      "cat": "p",
+      "name_sv": "Hjortskuldra"
+    },
+    {
+      "id": "venison_steak",
+      "name": "Venison Steak",
+      "cat": "p",
+      "name_sv": "Hjortbiff"
+    },
+    {
+      "id": "rabbit_legs",
+      "name": "Rabbit Legs",
+      "cat": "p",
+      "name_sv": "Kaninlår"
+    },
+    {
+      "id": "rabbit_saddle",
+      "name": "Rabbit Saddle",
+      "cat": "p",
+      "name_sv": "Kaninsadel"
+    },
+    {
+      "id": "wild_boar_chop",
+      "name": "Wild Boar Chop",
+      "cat": "p",
+      "name_sv": "Vildsvinskotlett"
+    },
+    {
+      "id": "wild_boar_shoulder",
+      "name": "Wild Boar Shoulder",
+      "cat": "p",
+      "name_sv": "Vildsvinsskuldra"
+    },
+    {
+      "id": "mutton_chop",
+      "name": "Mutton Chop",
+      "cat": "p",
+      "name_sv": "Fårkotlett"
+    },
+    {
+      "id": "mutton_leg",
+      "name": "Mutton Leg Roast",
+      "cat": "p",
+      "name_sv": "Fårlår"
+    },
+    {
+      "id": "mutton_shoulder",
+      "name": "Mutton Shoulder",
+      "cat": "p",
+      "name_sv": "Fårskuldra"
+    },
+    {
+      "id": "mutton_shoulder_alt",
+      "name": "Shoulder",
+      "cat": "p",
+      "name_sv": "Fårskuldra"
+    },
+    {
+      "id": "kangaroo_fillet",
+      "name": "Kangaroo Fillet",
+      "cat": "p",
+      "name_sv": "Kängurufilé"
+    },
+    {
+      "id": "kangaroo_steak",
+      "name": "Kangaroo Steak",
+      "cat": "p",
+      "name_sv": "Kängurufilé"
+    },
+    {
+      "id": "reindeer_loin",
+      "name": "Loin",
+      "cat": "p",
+      "name_sv": "Renfilé"
+    },
+    {
+      "id": "reindeer_roast",
+      "name": "Reindeer Roast",
+      "cat": "p",
+      "name_sv": "Renstek"
+    },
+    {
+      "id": "reindeer_steak",
+      "name": "Reindeer Steak",
+      "cat": "p",
+      "name_sv": "Renfilé"
+    },
+    {
+      "id": "goat_chop",
+      "name": "Goat Chop",
+      "cat": "p",
+      "name_sv": "Getkotlett"
+    },
+    {
+      "id": "goat_leg",
+      "name": "Goat Leg Roast",
+      "cat": "p",
+      "name_sv": "Getlår"
+    },
+    {
+      "id": "goat_shank",
+      "name": "Goat Shank",
+      "cat": "p",
+      "name_sv": "Getlägg"
+    },
+    {
+      "id": "goat_shoulder",
+      "name": "Goat Shoulder",
+      "cat": "p",
+      "name_sv": "Getskuldra"
+    },
+    {
+      "id": "moose_roast",
+      "name": "Moose Roast",
+      "cat": "p",
+      "name_sv": "Älgstek"
+    },
+    {
+      "id": "moose_steak",
+      "name": "Moose Steak",
+      "cat": "p",
+      "name_sv": "Älgbiff"
+    },
+    {
+      "id": "buffalo_burger",
+      "name": "Burger",
+      "cat": "p",
+      "name_sv": "Buffelburgare"
+    },
+    {
+      "id": "buffalo_roast",
+      "name": "Buffalo Roast",
+      "cat": "p",
+      "name_sv": "Buffelstek"
+    },
+    {
+      "id": "buffalo_steak",
+      "name": "Buffalo Steak",
+      "cat": "p",
+      "name_sv": "Buffelbiff"
+    },
+    {
+      "id": "bison_burger",
+      "name": "Bison Burger",
+      "cat": "p",
+      "name_sv": "Bisonburgare"
+    },
+    {
+      "id": "bison_roast",
+      "name": "Bison Roast",
+      "cat": "p",
+      "name_sv": "Bisonstek"
+    },
+    {
+      "id": "bison_steak",
+      "name": "Bison Steak",
+      "cat": "p",
+      "name_sv": "Bisonbiff"
+    }
+  ],
+  "beef": [
+    {
+      "id": "beef_burger",
+      "name": "Beef Burger / Ground Beef Patty",
+      "cat": "p",
+      "name_sv": "Nötburgare"
+    },
+    {
+      "id": "ground_beef",
+      "name": "Ground Beef",
+      "cat": "p",
+      "name_sv": "Nötfärs"
+    },
+    {
+      "id": "meatloaf",
+      "name": "Meatloaf",
+      "cat": "p",
+      "name_sv": "Köttfärslimpa"
+    },
+    {
+      "id": "filet_mignon",
+      "name": "Filet Mignon / Tenderloin Steak",
+      "cat": "p",
+      "name_sv": "Oxfilé"
+    },
+    {
+      "id": "flank_steak",
+      "name": "Flank Steak",
+      "cat": "p",
+      "name_sv": "Flankstek"
+    },
+    {
+      "id": "flat_iron",
+      "name": "Flat Iron Steak",
+      "cat": "p",
+      "name_sv": "Flat Iron"
+    },
+    {
+      "id": "hanger_steak",
+      "name": "Hanger Steak",
+      "cat": "p",
+      "name_sv": "Hängare"
+    },
+    {
+      "id": "ny_strip",
+      "name": "New York Strip",
+      "cat": "p",
+      "name_sv": "New York Strip"
+    },
+    {
+      "id": "picanha",
+      "name": "Picanha",
+      "cat": "p",
+      "name_sv": "Picanha"
+    },
+    {
+      "id": "ribeye_steak",
+      "name": "Ribeye Steak",
+      "cat": "p",
+      "name_sv": "Entrecôte"
+    },
+    {
+      "id": "sirloin_steak",
+      "name": "Sirloin Steak",
+      "cat": "p",
+      "name_sv": "Ryggbiff"
+    },
+    {
+      "id": "skirt_steak",
+      "name": "Skirt Steak",
+      "cat": "p",
+      "name_sv": "Skirt"
+    },
+    {
+      "id": "t_bone",
+      "name": "T-Bone / Porterhouse",
+      "cat": "p",
+      "name_sv": "T-benstek"
+    },
+    {
+      "id": "tomahawk",
+      "name": "Tomahawk Steak",
+      "cat": "p",
+      "name_sv": "Tomahawk"
+    },
+    {
+      "id": "tri_tip",
+      "name": "Tri-Tip",
+      "cat": "p",
+      "name_sv": "Tri-tip"
+    },
+    {
+      "id": "beef_liver",
+      "name": "Beef Liver",
+      "cat": "p",
+      "name_sv": "Nötlever"
+    },
+    {
+      "id": "beef_tongue",
+      "name": "Beef Tongue",
+      "cat": "p",
+      "name_sv": "Oxtunga"
+    },
+    {
+      "id": "beef_shank",
+      "name": "Beef Shank / Osso Buco",
+      "cat": "p",
+      "name_sv": "Oxlägg"
+    },
+    {
+      "id": "brisket",
+      "name": "Brisket",
+      "cat": "p",
+      "name_sv": "Bringa"
+    },
+    {
+      "id": "chuck_roast",
+      "name": "Chuck Roast / Pot Roast",
+      "cat": "p",
+      "name_sv": "Grytbiff"
+    },
+    {
+      "id": "short_ribs",
+      "name": "Short Ribs",
+      "cat": "p",
+      "name_sv": "Korta revben"
+    },
+    {
+      "id": "beef_tenderloin_roast",
+      "name": "Beef Tenderloin Roast",
+      "cat": "p",
+      "name_sv": "Oxfiléstek"
+    },
+    {
+      "id": "prime_rib",
+      "name": "Prime Rib / Standing Rib Roast",
+      "cat": "p",
+      "name_sv": "Entrecôtestek"
+    },
+    {
+      "id": "roasting_joint",
+      "name": "Roasting Joint",
+      "cat": "p",
+      "name_sv": "Stekkött"
+    },
+    {
+      "id": "round_roast",
+      "name": "Round Roast",
+      "cat": "p",
+      "name_sv": "Rundstek"
+    },
+    {
+      "id": "rump",
+      "name": "Rump",
+      "cat": "p",
+      "name_sv": "Rumstek"
+    },
+    {
+      "id": "rump_roast",
+      "name": "Rump Roast",
+      "cat": "p",
+      "name_sv": "Rumpstek"
+    },
+    {
+      "id": "sirloin_roast",
+      "name": "Sirloin Roast",
+      "cat": "p",
+      "name_sv": "Ryggbiffsstek"
+    },
+    {
+      "id": "sirloin_tip_roast",
+      "name": "Sirloin Tip Roast",
+      "cat": "p",
+      "name_sv": "Spetsrumstek"
+    },
+    {
+      "id": "top_round_roast",
+      "name": "Top Round Roast",
+      "cat": "p",
+      "name_sv": "Innanlårstek"
+    }
+  ],
+  "poultry": [
+    {
+      "id": "goose_breast",
+      "name": "Goose Breast",
+      "cat": "p",
+      "name_sv": "Gåsbröst"
+    },
+    {
+      "id": "goose_leg",
+      "name": "Goose Leg",
+      "cat": "p",
+      "name_sv": "Gåslår"
+    },
+    {
+      "id": "goose_thigh",
+      "name": "Goose Thigh",
+      "cat": "p",
+      "name_sv": "Gåslår"
+    },
+    {
+      "id": "whole_goose",
+      "name": "Whole Goose",
+      "cat": "p",
+      "name_sv": "Hel gås"
+    },
+    {
+      "id": "duck_breast",
+      "name": "Duck Breast",
+      "cat": "p",
+      "name_sv": "Andbröst"
+    },
+    {
+      "id": "duck_leg_confit",
+      "name": "Duck Leg Confit",
+      "cat": "p",
+      "name_sv": "Andlår confit"
+    },
+    {
+      "id": "whole_duck",
+      "name": "Whole Duck",
+      "cat": "p",
+      "name_sv": "Hel and"
+    },
+    {
+      "id": "ground_turkey",
+      "name": "Ground Turkey",
+      "cat": "p",
+      "name_sv": "Kalkonfärs"
+    },
+    {
+      "id": "turkey_burger",
+      "name": "Turkey Burger",
+      "cat": "p",
+      "name_sv": "Kalkonburgare"
+    },
+    {
+      "id": "chicken_burger",
+      "name": "Chicken Burger",
+      "cat": "p",
+      "name_sv": "Kycklingburgare"
+    },
+    {
+      "id": "ground_chicken",
+      "name": "Ground Chicken",
+      "cat": "p",
+      "name_sv": "Kycklingfärs"
+    },
+    {
+      "id": "turkey_breast",
+      "name": "Turkey Breast",
+      "cat": "p",
+      "name_sv": "Kalkonfilé"
+    },
+    {
+      "id": "turkey_leg",
+      "name": "Turkey Leg",
+      "cat": "p",
+      "name_sv": "Kalkonklubba"
+    },
+    {
+      "id": "turkey_thigh",
+      "name": "Turkey Thigh",
+      "cat": "p",
+      "name_sv": "Kalkonlår"
+    },
+    {
+      "id": "whole_turkey",
+      "name": "Whole Turkey",
+      "cat": "p",
+      "name_sv": "Hel kalkon"
+    },
+    {
+      "id": "chicken_breast",
+      "name": "Chicken Breast",
+      "cat": "p",
+      "name_sv": "Kycklingfilé"
+    },
+    {
+      "id": "chicken_breast_bone_in",
+      "name": "Chicken Breast (Bone-in)",
+      "cat": "p",
+      "name_sv": "Kycklingfilé med ben"
+    },
+    {
+      "id": "chicken_leg",
+      "name": "Chicken Leg / Drumstick",
+      "cat": "p",
+      "name_sv": "Kycklingklubba"
+    },
+    {
+      "id": "chicken_thigh",
+      "name": "Chicken Thigh",
+      "cat": "p",
+      "name_sv": "Kycklinglår"
+    },
+    {
+      "id": "chicken_wing",
+      "name": "Chicken Wing",
+      "cat": "p",
+      "name_sv": "Kycklingvinge"
+    },
+    {
+      "id": "whole_chicken",
+      "name": "Whole Chicken",
+      "cat": "p",
+      "name_sv": "Hel kyckling"
+    }
+  ],
+  "fish": [
+    {
+      "id": "tuna_steak",
+      "name": "Tuna Steak",
+      "cat": "p",
+      "name_sv": "Tonfiskbiff"
+    },
+    {
+      "id": "salmon_fillet",
+      "name": "Salmon Fillet",
+      "cat": "p",
+      "name_sv": "Laxfilé"
+    },
+    {
+      "id": "salmon_steak",
+      "name": "Salmon Steak",
+      "cat": "p",
+      "name_sv": "Laxbiff"
+    },
+    {
+      "id": "langoustine",
+      "name": "Langoustine",
+      "cat": "p",
+      "name_sv": "Havskräfta"
+    },
+    {
+      "id": "lobster_tail",
+      "name": "Lobster Tail",
+      "cat": "p",
+      "name_sv": "Hummersvans"
+    },
+    {
+      "id": "scallops",
+      "name": "Scallops",
+      "cat": "p",
+      "name_sv": "Pilgrimsmusslor"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp",
+      "cat": "p",
+      "name_sv": "Räkor"
+    },
+    {
+      "id": "cod_fillet",
+      "name": "Cod Fillet",
+      "cat": "p",
+      "name_sv": "Torskfilé"
+    },
+    {
+      "id": "haddock",
+      "name": "Haddock Fillet",
+      "cat": "p",
+      "name_sv": "Kolja"
+    },
+    {
+      "id": "hake",
+      "name": "Hake Fillet",
+      "cat": "p",
+      "name_sv": "Kummel"
+    },
+    {
+      "id": "halibut_fillet",
+      "name": "Halibut Fillet",
+      "cat": "p",
+      "name_sv": "Hälleflundrafilé"
+    },
+    {
+      "id": "mahi_mahi",
+      "name": "Mahi-Mahi",
+      "cat": "p",
+      "name_sv": "Mahi-mahi"
+    },
+    {
+      "id": "sea_bass",
+      "name": "Sea Bass",
+      "cat": "p",
+      "name_sv": "Havsabborre"
+    },
+    {
+      "id": "swordfish",
+      "name": "Swordfish Steak",
+      "cat": "p",
+      "name_sv": "Svärdfisk"
+    },
+    {
+      "id": "trout",
+      "name": "Trout Fillet",
+      "cat": "p",
+      "name_sv": "Forell"
+    }
+  ],
+  "lamb": [
+    {
+      "id": "ground_lamb",
+      "name": "Ground Lamb",
+      "cat": "p",
+      "name_sv": "Lammfärs"
+    },
+    {
+      "id": "lamb_burger",
+      "name": "Lamb Burger",
+      "cat": "p",
+      "name_sv": "Lammburgare"
+    },
+    {
+      "id": "lamb_kofta",
+      "name": "Kofta / Kebab",
+      "cat": "p",
+      "name_sv": "Lammkofta"
+    },
+    {
+      "id": "lamb_shank",
+      "name": "Shank",
+      "cat": "p",
+      "name_sv": "Lammlägg"
+    },
+    {
+      "id": "lamb_shoulder",
+      "name": "Shoulder",
+      "cat": "p",
+      "name_sv": "Lammskuldra"
+    },
+    {
+      "id": "lamb_brisket",
+      "name": "Lamb Brisket",
+      "cat": "p",
+      "name_sv": "Lammbringa"
+    },
+    {
+      "id": "lamb_loin_roast",
+      "name": "Lamb Loin Roast",
+      "cat": "p",
+      "name_sv": "Lammlårstek"
+    },
+    {
+      "id": "lamb_neck",
+      "name": "Lamb Neck",
+      "cat": "p",
+      "name_sv": "Lammhals"
+    },
+    {
+      "id": "lamb_rib",
+      "name": "Lamb Rib",
+      "cat": "p",
+      "name_sv": "Lammrev"
+    },
+    {
+      "id": "lamb_rump",
+      "name": "Lamb Rump",
+      "cat": "p",
+      "name_sv": "Lammrumstek"
+    },
+    {
+      "id": "leg_of_lamb",
+      "name": "Leg of Lamb",
+      "cat": "p",
+      "name_sv": "Lammlår"
+    },
+    {
+      "id": "rack_of_lamb",
+      "name": "Rack of Lamb",
+      "cat": "p",
+      "name_sv": "Lammracks"
+    },
+    {
+      "id": "lamb_chops",
+      "name": "Lamb Chops",
+      "cat": "p",
+      "name_sv": "Lammkotlett"
+    },
+    {
+      "id": "lamb_cutlet",
+      "name": "Lamb Cutlet",
+      "cat": "p",
+      "name_sv": "Lammkotlett"
+    },
+    {
+      "id": "lamb_loin_chops",
+      "name": "Lamb Loin Chops",
+      "cat": "p",
+      "name_sv": "Lammlårkotlett"
+    },
+    {
+      "id": "lamb_neck_filet",
+      "name": "Lamb Neck Filet",
+      "cat": "p",
+      "name_sv": "Lammhalsfilé"
+    }
+  ],
+  "pork": [
+    {
+      "id": "baby_back_ribs",
+      "name": "Baby Back Ribs",
+      "cat": "p",
+      "name_sv": "Revbensspjäll"
+    },
+    {
+      "id": "spare_ribs",
+      "name": "Spare Ribs",
+      "cat": "p",
+      "name_sv": "Spareribs"
+    },
+    {
+      "id": "st_louis_ribs",
+      "name": "St. Louis Style Ribs",
+      "cat": "p",
+      "name_sv": "St. Louis-revben"
+    },
+    {
+      "id": "ground_pork",
+      "name": "Ground Pork",
+      "cat": "p",
+      "name_sv": "Fläskfärs"
+    },
+    {
+      "id": "pork_sausage",
+      "name": "Pork Sausage",
+      "cat": "p",
+      "name_sv": "Fläskkorv"
+    },
+    {
+      "id": "fresh_ham",
+      "name": "Fresh Ham",
+      "cat": "p",
+      "name_sv": "Färsk skinka"
+    },
+    {
+      "id": "cured_ham",
+      "name": "Cured Ham (Pre-cooked)",
+      "cat": "p",
+      "name_sv": "Rökt skinka"
+    },
+    {
+      "id": "cheek",
+      "name": "Cheek",
+      "cat": "p",
+      "name_sv": "Kindkött"
+    },
+    {
+      "id": "liver_pork",
+      "name": "Liver",
+      "cat": "p",
+      "name_sv": "Fläsklever"
+    },
+    {
+      "id": "pork_cheek",
+      "name": "Pork Cheek",
+      "cat": "p",
+      "name_sv": "Fläskkind"
+    },
+    {
+      "id": "pork_jowl",
+      "name": "Pork Jowl / Guanciale",
+      "cat": "p",
+      "name_sv": "Kindkött"
+    },
+    {
+      "id": "pork_liver",
+      "name": "Pork Liver",
+      "cat": "p",
+      "name_sv": "Fläsklever"
+    },
+    {
+      "id": "pork_tongue",
+      "name": "Pork Tongue",
+      "cat": "p",
+      "name_sv": "Fläsktunga"
+    },
+    {
+      "id": "ham",
+      "name": "Ham",
+      "cat": "p",
+      "name_sv": "Skinka"
+    },
+    {
+      "id": "pork_belly",
+      "name": "Pork Belly",
+      "cat": "p",
+      "name_sv": "Sidfläsk"
+    },
+    {
+      "id": "pork_leg",
+      "name": "Pork Leg Roast",
+      "cat": "p",
+      "name_sv": "Fläsklägg"
+    },
+    {
+      "id": "pork_loin_roast",
+      "name": "Pork Loin Roast",
+      "cat": "p",
+      "name_sv": "Karréstek"
+    },
+    {
+      "id": "pork_shoulder",
+      "name": "Pork Shoulder / Boston Butt",
+      "cat": "p",
+      "name_sv": "Fläskbog"
+    },
+    {
+      "id": "pork_chop",
+      "name": "Pork Chop",
+      "cat": "p",
+      "name_sv": "Fläskkotlett"
+    },
+    {
+      "id": "pork_loin_steak",
+      "name": "Pork Loin Steak",
+      "cat": "p",
+      "name_sv": "Karré"
+    },
+    {
+      "id": "pork_shoulder_steak",
+      "name": "Pork Shoulder Steak",
+      "cat": "p",
+      "name_sv": "Bogskiva"
+    },
+    {
+      "id": "pork_tenderloin",
+      "name": "Pork Tenderloin",
+      "cat": "p",
+      "name_sv": "Fläskfilé"
+    },
+    {
+      "id": "secreto",
+      "name": "Secreto (Ibérico Pork)",
+      "cat": "p",
+      "name_sv": "Secreto"
+    }
+  ]
+};
+const AI_PROTEIN_SUBCAT_LABELS = {
+  "game": "Game",
+  "beef": "Beef",
+  "poultry": "Poultry",
+  "fish": "Fish",
+  "lamb": "Lamb",
+  "pork": "Pork"
+};
+const AI_PROTEIN_SUBCAT_LABELS_SV = {
+  "game": "Vilt",
+  "beef": "Nötkött",
+  "poultry": "Fågel",
+  "fish": "Fisk",
+  "lamb": "Lamm",
+  "pork": "Fläskkött"
 };
 
 // AI Recipe Builder - Cuisine-specific Ingredients (28 per cuisine)
@@ -6047,7 +7973,7 @@ const AI_CUISINE_INGREDIENTS = {
     {
       "id": "turkey",
       "name": "Turkey",
-      "cat": "s"
+      "cat": "p"
     },
     {
       "id": "buttermilk",
@@ -8066,6 +9992,8 @@ const AI_INGREDIENT_NAMES_SV = {
   "squash": "Butternutpumpa",
   "okra": "Okra",
   "corn": "Majs",
+  "fennel": "Fänkål",
+  "peas": "Ärtor",
   "plantains": "Plantain",
   "yam": "Jams",
   "yams": "Jams",
@@ -8139,6 +10067,7 @@ const AI_INGREDIENT_NAMES_SV = {
   "oats": "Havregryn",
   "flour": "Mjöl",
   "cornmeal": "Majsmjöl",
+  "polenta": "Polenta",
   "cornbread": "Majsbröd",
   "noodles": "Nudlar",
   "egg_noodles": "Äggnooodles",
@@ -8245,7 +10174,6 @@ const AI_INGREDIENT_NAMES_SV = {
   "split_peas": "Delade ärtor",
   "black_eyed_peas": "Svartögade bönor",
   "refried_beans": "Stekta bönor",
-  "peas": "Ärtor",
   "olives": "Oliver",
   "dried_apricots": "Torkade aprikoser",
   "apricots": "Torkade aprikoser",
@@ -8947,7 +10875,11 @@ const I18N_STRINGS = {
       "compulsory_toggle_hint": "Click to mark as compulsory (⭐ must use)",
       "compulsory_badge_label": "Compulsory",
       "save_for_later": "💾 Save for Later",
-      "save_for_later_hint": "Save this recipe without cooking it now"
+      "save_for_later_hint": "Save this recipe without cooking it now",
+      "more_ingredients": "More",
+      "show_less": "Show less",
+      "from_shelf": "From Your Shelf",
+      "from_recipe_files": "from recipe library"
     },
     "recipe_cook": {
       "overview_title": "📋 Recipe Overview",
@@ -9588,7 +11520,11 @@ const I18N_STRINGS = {
       "compulsory_toggle_hint": "Klicka för att markera som obligatorisk (⭐ måste användas)",
       "compulsory_badge_label": "Obligatorisk",
       "save_for_later": "💾 Spara för senare",
-      "save_for_later_hint": "Spara receptet utan att laga det nu"
+      "save_for_later_hint": "Spara receptet utan att laga det nu",
+      "more_ingredients": "Fler",
+      "show_less": "Visa färre",
+      "from_shelf": "Från ditt skafferi",
+      "from_recipe_files": "från receptbiblioteket"
     },
     "recipe_cook": {
       "overview_title": "📋 Receptöversikt",
@@ -19462,6 +21398,9 @@ class KitchenCookingPanel extends LitElement {
       _shelfAddQuantity: { type: String },
       _shoppingList: { type: Array },
       _pendingShelfUpdate: { type: Object },
+      // AI ingredient picker — "More" expansion and protein drill-down
+      _ingredientExpandedCats: { type: Array },   // category codes with "More" expanded
+      _ingredientProteinSubcat: { type: String },  // active protein sub-category (e.g. "beef")
       // Experimental recipe viewer (cut profile card)
       _recipeViewerMethod: { type: String },
       _recipeViewerRecipes: { type: Array },
@@ -19610,6 +21549,8 @@ class KitchenCookingPanel extends LitElement {
     this._shelfAddQuantity = '';
     this._shoppingList = [];
     this._pendingShelfUpdate = null;
+    this._ingredientExpandedCats = [];
+    this._ingredientProteinSubcat = null;
     this._recipeViewerMethod = null;
     this._recipeViewerRecipes = [];
     this._recipeViewerLoading = false;
@@ -25015,6 +26956,8 @@ class KitchenCookingPanel extends LitElement {
           this._selectedIngredients = [];
           this._aiSelectedCuisines = [];
           this._aiExpandedRegions = [];
+          this._ingredientExpandedCats = [];
+          this._ingredientProteinSubcat = null;
           this._currentPath = this._selectedMainAppliance === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
           this.requestUpdate();
         }}>
@@ -25089,6 +27032,8 @@ class KitchenCookingPanel extends LitElement {
           <p class="info-text" style="font-size: 0.85em; color: var(--secondary-text-color);">
             ${this._t('ai_recipe.staples_available')} ${(this._language === 'sv' && typeof AI_ASSUMED_STAPLES_SV !== 'undefined' ? AI_ASSUMED_STAPLES_SV : (typeof AI_ASSUMED_STAPLES !== 'undefined' ? AI_ASSUMED_STAPLES : [])).join(', ')}
           </p>
+
+          ${this._renderShelfIngredientSuggestions()}
           
           ${this._renderCategorizedIngredients(displayIngredients)}
 
@@ -25208,7 +27153,15 @@ class KitchenCookingPanel extends LitElement {
 
   /**
    * Render ingredients grouped by category with alphabetic sorting within each group.
-   * If ingredients have a "cat" field, groups them; otherwise falls back to a flat grid.
+   *
+   * Features:
+   * - Groups by category using AI_CATEGORY_ORDER
+   * - Each category has a compact "base" set (common:true) shown by default
+   * - A "More (N)" button reveals the full extended set
+   * - The Proteins category (cat="p") shows a subcategory drill-down:
+   *   tapping a protein group (Beef / Pork / Fish / …) reveals cuts from
+   *   AI_PROTEIN_SUBCATS sourced from the recipe files
+   * - Falls back to a flat alphabetical grid when no cat info is present
    */
   _renderCategorizedIngredients(ingredients) {
     const categoryLabels = (this._language === 'sv' && typeof AI_CATEGORY_LABELS_SV !== 'undefined')
@@ -25241,45 +27194,221 @@ class KitchenCookingPanel extends LitElement {
       groups[cat].sort((a, b) => (this._ingDisplayName(a) || '').localeCompare(this._ingDisplayName(b) || ''));
     }
 
+    const expandedCats = this._ingredientExpandedCats || [];
+
     return html`
-      ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => html`
-        <div class="ingredient-category">
-          <h4 style="margin: 12px 0 6px 0; font-size: 0.95em; color: var(--secondary-text-color);">${categoryLabels[cat] || cat}</h4>
-          <div class="ingredient-grid">
-            ${groups[cat].map(ingredient => this._renderIngredientCheckbox(ingredient))}
+      ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => {
+        const allItems = groups[cat];
+        const baseItems = allItems.filter(i => i.common !== false);
+        const extItems  = allItems.filter(i => i.common === false);
+        const isExpanded = expandedCats.includes(cat);
+        const visibleItems = isExpanded ? allItems : baseItems;
+
+        // Proteins (cat="p") get a drill-down subcategory selector
+        if (cat === 'p') {
+          return this._renderProteinCategory(visibleItems, extItems, isExpanded, categoryLabels[cat]);
+        }
+
+        return html`
+          <div class="ingredient-category">
+            <h4 style="margin: 12px 0 6px 0; font-size: 0.95em; color: var(--secondary-text-color);">${categoryLabels[cat] || cat}</h4>
+            <div class="ingredient-grid">
+              ${visibleItems.map(ingredient => this._renderIngredientCheckbox(ingredient))}
+            </div>
+            ${extItems.length > 0 ? html`
+              <button
+                style="margin-top: 6px; padding: 4px 12px; border-radius: 14px; border: 1px solid var(--divider-color); background: transparent; cursor: pointer; font-size: 0.82em; color: var(--secondary-text-color);"
+                @click=${() => {
+                  const next = isExpanded
+                    ? expandedCats.filter(c => c !== cat)
+                    : [...expandedCats, cat];
+                  this._ingredientExpandedCats = next;
+                  this.requestUpdate();
+                }}
+              >
+                ${isExpanded
+                  ? this._t('ai_recipe.show_less') || 'Show less'
+                  : `${this._t('ai_recipe.more_ingredients') || 'More'} (+${extItems.length})`}
+              </button>
+            ` : ''}
           </div>
-        </div>
-      `)}
+        `;
+      })}
+    `;
+  }
+
+  /**
+   * Render the Proteins category with an optional subcategory drill-down.
+   * When a subcat (e.g. "beef") is selected, shows specific cuts from AI_PROTEIN_SUBCATS
+   * sourced from the recipe files.
+   */
+  _renderProteinCategory(visibleItems, extItems, isExpanded, categoryLabel) {
+    const proteinSubcats = (typeof AI_PROTEIN_SUBCATS !== 'undefined') ? AI_PROTEIN_SUBCATS : {};
+    const subcat = this._ingredientProteinSubcat;
+    const expandedCats = this._ingredientExpandedCats || [];
+    const cat = 'p';
+    const subcatLabels = (this._language === 'sv' && typeof AI_PROTEIN_SUBCAT_LABELS_SV !== 'undefined')
+      ? AI_PROTEIN_SUBCAT_LABELS_SV
+      : (typeof AI_PROTEIN_SUBCAT_LABELS !== 'undefined' ? AI_PROTEIN_SUBCAT_LABELS : {});
+
+    // Category icons for protein sub-groups
+    const subcatIcons = {
+      beef: '🐄', pork: '🐷', poultry: '🍗', fish: '🐟', lamb: '🐑', game: '🦌',
+    };
+
+    return html`
+      <div class="ingredient-category">
+        <h4 style="margin: 12px 0 6px 0; font-size: 0.95em; color: var(--secondary-text-color);">${categoryLabel || '🥩 Proteins'}</h4>
+
+        ${Object.keys(proteinSubcats).length > 0 ? html`
+          <!-- Protein sub-category selector pills -->
+          <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px;">
+            ${Object.keys(proteinSubcats).map(sc => html`
+              <button
+                style="padding: 4px 10px; border-radius: 14px; border: 1px solid ${subcat === sc ? 'var(--primary-color)' : 'var(--divider-color)'}; background: ${subcat === sc ? 'var(--primary-color)' : 'transparent'}; color: ${subcat === sc ? 'white' : 'inherit'}; cursor: pointer; font-size: 0.82em;"
+                @click=${() => {
+                  this._ingredientProteinSubcat = (subcat === sc) ? null : sc;
+                  this.requestUpdate();
+                }}
+              >${subcatIcons[sc] || '🥩'} ${subcatLabels[sc] || sc}</button>
+            `)}
+          </div>
+        ` : ''}
+
+        ${subcat && proteinSubcats[subcat] ? html`
+          <!-- Drill-down: cuts from recipe files for selected sub-category -->
+          <div style="padding: 8px; background: var(--secondary-background-color); border-radius: 8px; margin-bottom: 8px;">
+            <div style="font-size: 0.82em; color: var(--secondary-text-color); margin-bottom: 6px;">
+              ${subcatIcons[subcat] || '🥩'} ${subcatLabels[subcat] || subcat}
+              <span style="margin-left: 6px; opacity: 0.7;">(${this._t('ai_recipe.from_recipe_files') || 'from recipe library'})</span>
+            </div>
+            <div class="ingredient-grid">
+              ${proteinSubcats[subcat].map(cut => {
+                const displayName = (this._language === 'sv' && cut.name_sv) ? cut.name_sv : cut.name;
+                const displayCut = { id: cut.id, name: cut.name, name_sv: cut.name_sv, cat: 'p' };
+                return this._renderIngredientCheckbox(displayCut);
+              })}
+            </div>
+          </div>
+        ` : html`
+          <!-- Default protein list (non-drill-down) -->
+          <div class="ingredient-grid">
+            ${visibleItems.map(ingredient => this._renderIngredientCheckbox(ingredient))}
+          </div>
+          ${extItems.length > 0 ? html`
+            <button
+              style="margin-top: 6px; padding: 4px 12px; border-radius: 14px; border: 1px solid var(--divider-color); background: transparent; cursor: pointer; font-size: 0.82em; color: var(--secondary-text-color);"
+              @click=${() => {
+                const next = isExpanded
+                  ? expandedCats.filter(c => c !== cat)
+                  : [...expandedCats, cat];
+                this._ingredientExpandedCats = next;
+                this.requestUpdate();
+              }}
+            >
+              ${isExpanded
+                ? this._t('ai_recipe.show_less') || 'Show less'
+                : `${this._t('ai_recipe.more_ingredients') || 'More'} (+${extItems.length})`}
+            </button>
+          ` : ''}
+        `}
+      </div>
     `;
   }
 
   /** Return the display name for an ingredient respecting the active language. */
   _ingDisplayName(ingredient) {
     if (!ingredient || typeof ingredient === 'string') return ingredient || '';
-    if (this._language === 'sv' && ingredient.id && typeof AI_INGREDIENT_NAMES_SV !== 'undefined') {
-      const sv = AI_INGREDIENT_NAMES_SV[ingredient.id];
-      if (sv) return sv;
+    if (this._language === 'sv') {
+      // Check AI_INGREDIENT_NAMES_SV lookup table first
+      if (ingredient.id && typeof AI_INGREDIENT_NAMES_SV !== 'undefined') {
+        const sv = AI_INGREDIENT_NAMES_SV[ingredient.id];
+        if (sv) return sv;
+      }
+      // Fall back to inline name_sv (e.g. on recipe-file-derived cuts from AI_PROTEIN_SUBCATS)
+      if (ingredient.name_sv) return ingredient.name_sv;
     }
     return ingredient.name || '';
   }
 
   /**
    * Return the translated display name for a chip ingredient stored by English name.
-   * Searches all categories in _aiIngredients for the matching object, then calls
-   * _ingDisplayName.  Falls back to the raw name for custom (non-predefined) ingredients.
+   * Searches AI_INGREDIENTS (dict), AI_COMMON_INGREDIENTS (flat array), and
+   * AI_PROTEIN_SUBCATS (cuts from recipe files).  Falls back to the raw name
+   * for custom (non-predefined) ingredients.
    */
   _lookupIngDisplayName(name) {
     if (!name) return '';
+    const lc = name.toLowerCase();
+
+    // Search categorised dict (AI_INGREDIENTS)
     const ingredients = this._aiIngredients || (typeof AI_INGREDIENTS !== 'undefined' ? AI_INGREDIENTS : {});
     for (const category of Object.values(ingredients)) {
       if (!Array.isArray(category)) continue;
-      const found = category.find(i => i && i.name && i.name.toLowerCase() === name.toLowerCase());
+      const found = category.find(i => i && i.name && i.name.toLowerCase() === lc);
       if (found) return this._ingDisplayName(found);
     }
+
+    // Search flat common list (AI_COMMON_INGREDIENTS)
+    const commonFlat = typeof AI_COMMON_INGREDIENTS !== 'undefined' ? AI_COMMON_INGREDIENTS : [];
+    const foundCommon = commonFlat.find(i => i && i.name && i.name.toLowerCase() === lc);
+    if (foundCommon) return this._ingDisplayName(foundCommon);
+
+    // Search protein subcats (recipe-file-derived cuts)
+    const proteinSubcats = typeof AI_PROTEIN_SUBCATS !== 'undefined' ? AI_PROTEIN_SUBCATS : {};
+    for (const cuts of Object.values(proteinSubcats)) {
+      if (!Array.isArray(cuts)) continue;
+      const found = cuts.find(i => i && i.name && i.name.toLowerCase() === lc);
+      if (found) return this._ingDisplayName(found);
+    }
+
     return name;
   }
 
-  _renderIngredientCheckbox(ingredient) {
+  /**
+   * Render shelf items as ingredient suggestions when the shelf is enabled.
+   * Items are grouped by shelf location and shown as tappable chips above the
+   * main ingredient grid.  Tapping a shelf chip adds it as a selected ingredient.
+   *
+   * Relevant when at least one cuisine is selected AND shelf has items in it,
+   * OR when shelf has items and no cuisine is selected (always show).
+   */
+  _renderShelfIngredientSuggestions() {
+    if (!this._shelfEnabled) return '';
+    const inventory = this._shelfInventory || [];
+    if (inventory.length === 0) return '';
+
+    // Filter out items that are already selected
+    const selectedNames = new Set((this._selectedIngredients || []).map(i => i.name.toLowerCase()));
+    const unselected = inventory.filter(item => !selectedNames.has((item.name || '').toLowerCase()));
+    if (unselected.length === 0) return '';
+
+    // Location → icon mapping
+    const locationIcon = { fridge: '🧊', larder: '🏺', freezer: '❄️', spices: '🌿' };
+
+    return html`
+      <div style="margin-bottom: 12px; padding: 10px 12px; background: var(--secondary-background-color); border-radius: 8px; border-left: 3px solid var(--primary-color);">
+        <div style="font-size: 0.85em; font-weight: 600; margin-bottom: 6px; color: var(--primary-text-color);">
+          🗄️ ${this._t('ai_recipe.from_shelf') || 'From Your Shelf'}
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+          ${unselected.map(item => {
+            const icon = locationIcon[item.location] || '🗄️';
+            return html`
+              <button
+                style="padding: 4px 10px; border-radius: 14px; border: 1px solid var(--primary-color); background: transparent; cursor: pointer; font-size: 0.82em; color: var(--primary-text-color); display: inline-flex; align-items: center; gap: 3px;"
+                @click=${() => {
+                  this._addCustomIngredient(item.name);
+                }}
+              >${icon} ${item.name}${item.quantity ? html` <span style="opacity:0.65;font-size:0.85em;">(${item.quantity})</span>` : ''}</button>
+            `;
+          })}
+        </div>
+      </div>
+    `;
+  }
+
+
     const displayName = this._ingDisplayName(ingredient);
     const valueName = (typeof ingredient === 'string') ? ingredient : (ingredient.name || ingredient);
     return html`
@@ -27289,12 +29418,14 @@ class KitchenCookingPanel extends LitElement {
     try {
       // Load ingredients if not already loaded
       if (!this._commonIngredients || this._commonIngredients.length === 0) {
-        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
-        const rawIngredients = response.ingredients || {};
-        if (Array.isArray(rawIngredients)) {
-          this._commonIngredients = rawIngredients;
+        if (typeof AI_COMMON_INGREDIENTS !== 'undefined' && AI_COMMON_INGREDIENTS.length > 0) {
+          this._commonIngredients = AI_COMMON_INGREDIENTS;
         } else {
-          this._commonIngredients = Object.values(rawIngredients).flat();
+          const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
+          const rawIngredients = response.ingredients || {};
+          this._commonIngredients = Array.isArray(rawIngredients)
+            ? rawIngredients
+            : Object.values(rawIngredients).flat();
         }
       }
       
@@ -27352,19 +29483,23 @@ class KitchenCookingPanel extends LitElement {
 
     this._selectedCookingStyle = null;
     this._aiRecipeSuggestions = [];
+    // Reset ingredient picker state
+    this._ingredientExpandedCats = [];
+    this._ingredientProteinSubcat = null;
     
     // Load data before showing UI to avoid "[object Promise]" display
     try {
-      // Load ingredients if not already loaded
+      // Use the generated AI_COMMON_INGREDIENTS constant (has cat + common fields).
+      // Fall back to API only if the constant is not available (older generated file).
       if (!this._commonIngredients || this._commonIngredients.length === 0) {
-        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
-        // API returns {proteins: [...], vegetables: [...], ...} — flatten to single array
-        const rawIngredients = response.ingredients || {};
-        if (Array.isArray(rawIngredients)) {
-          this._commonIngredients = rawIngredients;
+        if (typeof AI_COMMON_INGREDIENTS !== 'undefined' && AI_COMMON_INGREDIENTS.length > 0) {
+          this._commonIngredients = AI_COMMON_INGREDIENTS;
         } else {
-          // Flatten categorized dict into flat array
-          this._commonIngredients = Object.values(rawIngredients).flat();
+          const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
+          const rawIngredients = response.ingredients || {};
+          this._commonIngredients = Array.isArray(rawIngredients)
+            ? rawIngredients
+            : Object.values(rawIngredients).flat();
         }
       }
       
@@ -30360,7 +32495,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "386";
+const PANEL_VERSION = "390";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

@@ -302,7 +302,11 @@
     "compulsory_toggle_hint": "Click to mark as compulsory (⭐ must use)",
     "compulsory_badge_label": "Compulsory",
     "save_for_later": "💾 Save for Later",
-    "save_for_later_hint": "Save this recipe without cooking it now"
+    "save_for_later_hint": "Save this recipe without cooking it now",
+    "more_ingredients": "More",
+    "show_less": "Show less",
+    "from_shelf": "From Your Shelf",
+    "from_recipe_files": "from recipe library"
   },
   "recipe_cook": {
     "overview_title": "📋 Recipe Overview",

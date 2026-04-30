@@ -152,6 +152,9 @@ class KitchenCookingPanel extends LitElement {
       _shelfAddQuantity: { type: String },
       _shoppingList: { type: Array },
       _pendingShelfUpdate: { type: Object },
+      // AI ingredient picker — "More" expansion and protein drill-down
+      _ingredientExpandedCats: { type: Array },   // category codes with "More" expanded
+      _ingredientProteinSubcat: { type: String },  // active protein sub-category (e.g. "beef")
       // Experimental recipe viewer (cut profile card)
       _recipeViewerMethod: { type: String },
       _recipeViewerRecipes: { type: Array },
@@ -300,6 +303,8 @@ class KitchenCookingPanel extends LitElement {
     this._shelfAddQuantity = '';
     this._shoppingList = [];
     this._pendingShelfUpdate = null;
+    this._ingredientExpandedCats = [];
+    this._ingredientProteinSubcat = null;
     this._recipeViewerMethod = null;
     this._recipeViewerRecipes = [];
     this._recipeViewerLoading = false;
@@ -5705,6 +5710,8 @@ class KitchenCookingPanel extends LitElement {
           this._selectedIngredients = [];
           this._aiSelectedCuisines = [];
           this._aiExpandedRegions = [];
+          this._ingredientExpandedCats = [];
+          this._ingredientProteinSubcat = null;
           this._currentPath = this._selectedMainAppliance === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
           this.requestUpdate();
         }}>
@@ -5779,6 +5786,8 @@ class KitchenCookingPanel extends LitElement {
           <p class="info-text" style="font-size: 0.85em; color: var(--secondary-text-color);">
             ${this._t('ai_recipe.staples_available')} ${(this._language === 'sv' && typeof AI_ASSUMED_STAPLES_SV !== 'undefined' ? AI_ASSUMED_STAPLES_SV : (typeof AI_ASSUMED_STAPLES !== 'undefined' ? AI_ASSUMED_STAPLES : [])).join(', ')}
           </p>
+
+          ${this._renderShelfIngredientSuggestions()}
           
           ${this._renderCategorizedIngredients(displayIngredients)}
 
@@ -5898,7 +5907,15 @@ class KitchenCookingPanel extends LitElement {
 
   /**
    * Render ingredients grouped by category with alphabetic sorting within each group.
-   * If ingredients have a "cat" field, groups them; otherwise falls back to a flat grid.
+   *
+   * Features:
+   * - Groups by category using AI_CATEGORY_ORDER
+   * - Each category has a compact "base" set (common:true) shown by default
+   * - A "More (N)" button reveals the full extended set
+   * - The Proteins category (cat="p") shows a subcategory drill-down:
+   *   tapping a protein group (Beef / Pork / Fish / …) reveals cuts from
+   *   AI_PROTEIN_SUBCATS sourced from the recipe files
+   * - Falls back to a flat alphabetical grid when no cat info is present
    */
   _renderCategorizedIngredients(ingredients) {
     const categoryLabels = (this._language === 'sv' && typeof AI_CATEGORY_LABELS_SV !== 'undefined')
@@ -5931,45 +5948,221 @@ class KitchenCookingPanel extends LitElement {
       groups[cat].sort((a, b) => (this._ingDisplayName(a) || '').localeCompare(this._ingDisplayName(b) || ''));
     }
 
+    const expandedCats = this._ingredientExpandedCats || [];
+
     return html`
-      ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => html`
-        <div class="ingredient-category">
-          <h4 style="margin: 12px 0 6px 0; font-size: 0.95em; color: var(--secondary-text-color);">${categoryLabels[cat] || cat}</h4>
-          <div class="ingredient-grid">
-            ${groups[cat].map(ingredient => this._renderIngredientCheckbox(ingredient))}
+      ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => {
+        const allItems = groups[cat];
+        const baseItems = allItems.filter(i => i.common !== false);
+        const extItems  = allItems.filter(i => i.common === false);
+        const isExpanded = expandedCats.includes(cat);
+        const visibleItems = isExpanded ? allItems : baseItems;
+
+        // Proteins (cat="p") get a drill-down subcategory selector
+        if (cat === 'p') {
+          return this._renderProteinCategory(visibleItems, extItems, isExpanded, categoryLabels[cat]);
+        }
+
+        return html`
+          <div class="ingredient-category">
+            <h4 style="margin: 12px 0 6px 0; font-size: 0.95em; color: var(--secondary-text-color);">${categoryLabels[cat] || cat}</h4>
+            <div class="ingredient-grid">
+              ${visibleItems.map(ingredient => this._renderIngredientCheckbox(ingredient))}
+            </div>
+            ${extItems.length > 0 ? html`
+              <button
+                style="margin-top: 6px; padding: 4px 12px; border-radius: 14px; border: 1px solid var(--divider-color); background: transparent; cursor: pointer; font-size: 0.82em; color: var(--secondary-text-color);"
+                @click=${() => {
+                  const next = isExpanded
+                    ? expandedCats.filter(c => c !== cat)
+                    : [...expandedCats, cat];
+                  this._ingredientExpandedCats = next;
+                  this.requestUpdate();
+                }}
+              >
+                ${isExpanded
+                  ? this._t('ai_recipe.show_less') || 'Show less'
+                  : `${this._t('ai_recipe.more_ingredients') || 'More'} (+${extItems.length})`}
+              </button>
+            ` : ''}
           </div>
-        </div>
-      `)}
+        `;
+      })}
+    `;
+  }
+
+  /**
+   * Render the Proteins category with an optional subcategory drill-down.
+   * When a subcat (e.g. "beef") is selected, shows specific cuts from AI_PROTEIN_SUBCATS
+   * sourced from the recipe files.
+   */
+  _renderProteinCategory(visibleItems, extItems, isExpanded, categoryLabel) {
+    const proteinSubcats = (typeof AI_PROTEIN_SUBCATS !== 'undefined') ? AI_PROTEIN_SUBCATS : {};
+    const subcat = this._ingredientProteinSubcat;
+    const expandedCats = this._ingredientExpandedCats || [];
+    const cat = 'p';
+    const subcatLabels = (this._language === 'sv' && typeof AI_PROTEIN_SUBCAT_LABELS_SV !== 'undefined')
+      ? AI_PROTEIN_SUBCAT_LABELS_SV
+      : (typeof AI_PROTEIN_SUBCAT_LABELS !== 'undefined' ? AI_PROTEIN_SUBCAT_LABELS : {});
+
+    // Category icons for protein sub-groups
+    const subcatIcons = {
+      beef: '🐄', pork: '🐷', poultry: '🍗', fish: '🐟', lamb: '🐑', game: '🦌',
+    };
+
+    return html`
+      <div class="ingredient-category">
+        <h4 style="margin: 12px 0 6px 0; font-size: 0.95em; color: var(--secondary-text-color);">${categoryLabel || '🥩 Proteins'}</h4>
+
+        ${Object.keys(proteinSubcats).length > 0 ? html`
+          <!-- Protein sub-category selector pills -->
+          <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px;">
+            ${Object.keys(proteinSubcats).map(sc => html`
+              <button
+                style="padding: 4px 10px; border-radius: 14px; border: 1px solid ${subcat === sc ? 'var(--primary-color)' : 'var(--divider-color)'}; background: ${subcat === sc ? 'var(--primary-color)' : 'transparent'}; color: ${subcat === sc ? 'white' : 'inherit'}; cursor: pointer; font-size: 0.82em;"
+                @click=${() => {
+                  this._ingredientProteinSubcat = (subcat === sc) ? null : sc;
+                  this.requestUpdate();
+                }}
+              >${subcatIcons[sc] || '🥩'} ${subcatLabels[sc] || sc}</button>
+            `)}
+          </div>
+        ` : ''}
+
+        ${subcat && proteinSubcats[subcat] ? html`
+          <!-- Drill-down: cuts from recipe files for selected sub-category -->
+          <div style="padding: 8px; background: var(--secondary-background-color); border-radius: 8px; margin-bottom: 8px;">
+            <div style="font-size: 0.82em; color: var(--secondary-text-color); margin-bottom: 6px;">
+              ${subcatIcons[subcat] || '🥩'} ${subcatLabels[subcat] || subcat}
+              <span style="margin-left: 6px; opacity: 0.7;">(${this._t('ai_recipe.from_recipe_files') || 'from recipe library'})</span>
+            </div>
+            <div class="ingredient-grid">
+              ${proteinSubcats[subcat].map(cut => {
+                const displayName = (this._language === 'sv' && cut.name_sv) ? cut.name_sv : cut.name;
+                const displayCut = { id: cut.id, name: cut.name, name_sv: cut.name_sv, cat: 'p' };
+                return this._renderIngredientCheckbox(displayCut);
+              })}
+            </div>
+          </div>
+        ` : html`
+          <!-- Default protein list (non-drill-down) -->
+          <div class="ingredient-grid">
+            ${visibleItems.map(ingredient => this._renderIngredientCheckbox(ingredient))}
+          </div>
+          ${extItems.length > 0 ? html`
+            <button
+              style="margin-top: 6px; padding: 4px 12px; border-radius: 14px; border: 1px solid var(--divider-color); background: transparent; cursor: pointer; font-size: 0.82em; color: var(--secondary-text-color);"
+              @click=${() => {
+                const next = isExpanded
+                  ? expandedCats.filter(c => c !== cat)
+                  : [...expandedCats, cat];
+                this._ingredientExpandedCats = next;
+                this.requestUpdate();
+              }}
+            >
+              ${isExpanded
+                ? this._t('ai_recipe.show_less') || 'Show less'
+                : `${this._t('ai_recipe.more_ingredients') || 'More'} (+${extItems.length})`}
+            </button>
+          ` : ''}
+        `}
+      </div>
     `;
   }
 
   /** Return the display name for an ingredient respecting the active language. */
   _ingDisplayName(ingredient) {
     if (!ingredient || typeof ingredient === 'string') return ingredient || '';
-    if (this._language === 'sv' && ingredient.id && typeof AI_INGREDIENT_NAMES_SV !== 'undefined') {
-      const sv = AI_INGREDIENT_NAMES_SV[ingredient.id];
-      if (sv) return sv;
+    if (this._language === 'sv') {
+      // Check AI_INGREDIENT_NAMES_SV lookup table first
+      if (ingredient.id && typeof AI_INGREDIENT_NAMES_SV !== 'undefined') {
+        const sv = AI_INGREDIENT_NAMES_SV[ingredient.id];
+        if (sv) return sv;
+      }
+      // Fall back to inline name_sv (e.g. on recipe-file-derived cuts from AI_PROTEIN_SUBCATS)
+      if (ingredient.name_sv) return ingredient.name_sv;
     }
     return ingredient.name || '';
   }
 
   /**
    * Return the translated display name for a chip ingredient stored by English name.
-   * Searches all categories in _aiIngredients for the matching object, then calls
-   * _ingDisplayName.  Falls back to the raw name for custom (non-predefined) ingredients.
+   * Searches AI_INGREDIENTS (dict), AI_COMMON_INGREDIENTS (flat array), and
+   * AI_PROTEIN_SUBCATS (cuts from recipe files).  Falls back to the raw name
+   * for custom (non-predefined) ingredients.
    */
   _lookupIngDisplayName(name) {
     if (!name) return '';
+    const lc = name.toLowerCase();
+
+    // Search categorised dict (AI_INGREDIENTS)
     const ingredients = this._aiIngredients || (typeof AI_INGREDIENTS !== 'undefined' ? AI_INGREDIENTS : {});
     for (const category of Object.values(ingredients)) {
       if (!Array.isArray(category)) continue;
-      const found = category.find(i => i && i.name && i.name.toLowerCase() === name.toLowerCase());
+      const found = category.find(i => i && i.name && i.name.toLowerCase() === lc);
       if (found) return this._ingDisplayName(found);
     }
+
+    // Search flat common list (AI_COMMON_INGREDIENTS)
+    const commonFlat = typeof AI_COMMON_INGREDIENTS !== 'undefined' ? AI_COMMON_INGREDIENTS : [];
+    const foundCommon = commonFlat.find(i => i && i.name && i.name.toLowerCase() === lc);
+    if (foundCommon) return this._ingDisplayName(foundCommon);
+
+    // Search protein subcats (recipe-file-derived cuts)
+    const proteinSubcats = typeof AI_PROTEIN_SUBCATS !== 'undefined' ? AI_PROTEIN_SUBCATS : {};
+    for (const cuts of Object.values(proteinSubcats)) {
+      if (!Array.isArray(cuts)) continue;
+      const found = cuts.find(i => i && i.name && i.name.toLowerCase() === lc);
+      if (found) return this._ingDisplayName(found);
+    }
+
     return name;
   }
 
-  _renderIngredientCheckbox(ingredient) {
+  /**
+   * Render shelf items as ingredient suggestions when the shelf is enabled.
+   * Items are grouped by shelf location and shown as tappable chips above the
+   * main ingredient grid.  Tapping a shelf chip adds it as a selected ingredient.
+   *
+   * Relevant when at least one cuisine is selected AND shelf has items in it,
+   * OR when shelf has items and no cuisine is selected (always show).
+   */
+  _renderShelfIngredientSuggestions() {
+    if (!this._shelfEnabled) return '';
+    const inventory = this._shelfInventory || [];
+    if (inventory.length === 0) return '';
+
+    // Filter out items that are already selected
+    const selectedNames = new Set((this._selectedIngredients || []).map(i => i.name.toLowerCase()));
+    const unselected = inventory.filter(item => !selectedNames.has((item.name || '').toLowerCase()));
+    if (unselected.length === 0) return '';
+
+    // Location → icon mapping
+    const locationIcon = { fridge: '🧊', larder: '🏺', freezer: '❄️', spices: '🌿' };
+
+    return html`
+      <div style="margin-bottom: 12px; padding: 10px 12px; background: var(--secondary-background-color); border-radius: 8px; border-left: 3px solid var(--primary-color);">
+        <div style="font-size: 0.85em; font-weight: 600; margin-bottom: 6px; color: var(--primary-text-color);">
+          🗄️ ${this._t('ai_recipe.from_shelf') || 'From Your Shelf'}
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+          ${unselected.map(item => {
+            const icon = locationIcon[item.location] || '🗄️';
+            return html`
+              <button
+                style="padding: 4px 10px; border-radius: 14px; border: 1px solid var(--primary-color); background: transparent; cursor: pointer; font-size: 0.82em; color: var(--primary-text-color); display: inline-flex; align-items: center; gap: 3px;"
+                @click=${() => {
+                  this._addCustomIngredient(item.name);
+                }}
+              >${icon} ${item.name}${item.quantity ? html` <span style="opacity:0.65;font-size:0.85em;">(${item.quantity})</span>` : ''}</button>
+            `;
+          })}
+        </div>
+      </div>
+    `;
+  }
+
+
     const displayName = this._ingDisplayName(ingredient);
     const valueName = (typeof ingredient === 'string') ? ingredient : (ingredient.name || ingredient);
     return html`
@@ -7979,12 +8172,14 @@ class KitchenCookingPanel extends LitElement {
     try {
       // Load ingredients if not already loaded
       if (!this._commonIngredients || this._commonIngredients.length === 0) {
-        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
-        const rawIngredients = response.ingredients || {};
-        if (Array.isArray(rawIngredients)) {
-          this._commonIngredients = rawIngredients;
+        if (typeof AI_COMMON_INGREDIENTS !== 'undefined' && AI_COMMON_INGREDIENTS.length > 0) {
+          this._commonIngredients = AI_COMMON_INGREDIENTS;
         } else {
-          this._commonIngredients = Object.values(rawIngredients).flat();
+          const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
+          const rawIngredients = response.ingredients || {};
+          this._commonIngredients = Array.isArray(rawIngredients)
+            ? rawIngredients
+            : Object.values(rawIngredients).flat();
         }
       }
       
@@ -8042,19 +8237,23 @@ class KitchenCookingPanel extends LitElement {
 
     this._selectedCookingStyle = null;
     this._aiRecipeSuggestions = [];
+    // Reset ingredient picker state
+    this._ingredientExpandedCats = [];
+    this._ingredientProteinSubcat = null;
     
     // Load data before showing UI to avoid "[object Promise]" display
     try {
-      // Load ingredients if not already loaded
+      // Use the generated AI_COMMON_INGREDIENTS constant (has cat + common fields).
+      // Fall back to API only if the constant is not available (older generated file).
       if (!this._commonIngredients || this._commonIngredients.length === 0) {
-        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
-        // API returns {proteins: [...], vegetables: [...], ...} — flatten to single array
-        const rawIngredients = response.ingredients || {};
-        if (Array.isArray(rawIngredients)) {
-          this._commonIngredients = rawIngredients;
+        if (typeof AI_COMMON_INGREDIENTS !== 'undefined' && AI_COMMON_INGREDIENTS.length > 0) {
+          this._commonIngredients = AI_COMMON_INGREDIENTS;
         } else {
-          // Flatten categorized dict into flat array
-          this._commonIngredients = Object.values(rawIngredients).flat();
+          const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
+          const rawIngredients = response.ingredients || {};
+          this._commonIngredients = Array.isArray(rawIngredients)
+            ? rawIngredients
+            : Object.values(rawIngredients).flat();
         }
       }
       
