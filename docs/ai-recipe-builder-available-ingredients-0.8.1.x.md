@@ -22,14 +22,45 @@ Improve the AI Recipe Builder ingredient selector:
 
 ### Session 1 (2026-04-30)
 
-Starting implementation.
-
-## Discoveries
-
-- COMMON_INGREDIENTS currently: 9 proteins + 12 vegetables + 5 grains + 5 dairy = 31 items (no spices)
+**Discoveries:**
+- COMMON_INGREDIENTS was: 9 proteins + 12 vegetables + 5 grains + 5 dairy = 31 items (no spices)
 - CUISINE_INGREDIENTS: 41 cuisines/regions × ~28 items each
 - INGREDIENT_CATEGORIES maps ~200+ IDs to categories (p/v/g/d/s)
 - `exp_tree` built from KCE:CUT recipe files: 164 cut files across beef/pork/poultry/fish/lamb/game/vegetables
 - Shelf items: `{ id, name, location (fridge|larder|freezer|spices), quantity }`
 - Recipe method files have ingredients in prose (not structured) — only KCE:CUT overview files have structured frontmatter
-- The `common: True` field exists on COMMON_INGREDIENTS items but is NOT currently used in UI rendering
+- The `common: True` field exists on COMMON_INGREDIENTS items but was NOT used in UI rendering
+
+**Work done:**
+
+1. **`ai_recipe_data.py`** — expanded COMMON_INGREDIENTS from 31 → 111 items:
+   - Added `common` flag to every item (True = base set, False = extended/More set)
+   - New **Spices & Seasonings** category (27 items): cumin, paprika, garam masala, turmeric, berbere, ras el hanout, saffron, etc.
+   - Proteins: added turkey; Vegetables: added fennel, peas; Grains: added polenta; Dairy: added butter
+   - Fixed INGREDIENT_CATEGORIES for new items (turkey→p, fennel→v, polenta→g, butter→d)
+   - Fixed INGREDIENT_NAMES_SV for fennel→"Fänkål", polenta→"Polenta", peas→"Ärtor"
+   - Added clarifying comment to `dairy` category: it maps to "Dairy, Oils & Sauces" UI label and intentionally includes non-dairy pantry staples
+
+2. **`generate_frontend_data.py`** — new JS constants emitted:
+   - `AI_COMMON_INGREDIENTS` — flat array of `{id, name, cat, common}` enriched from INGREDIENT_CATEGORIES (111 items)
+   - `AI_PROTEIN_SUBCATS` — 137 cuts across 6 protein categories (beef/pork/poultry/fish/lamb/game) extracted from EXP_TREE
+   - `AI_PROTEIN_SUBCAT_LABELS` / `AI_PROTEIN_SUBCAT_LABELS_SV` — display names for each category
+   - Moved protein subcats build to after `exp_tree` is built (ordering fix)
+
+3. **`panel-class-template.js`** — new/changed methods:
+   - `_startAIRecipeCreation` / `_startAIWithNinjaCombi` now use `AI_COMMON_INGREDIENTS` directly (no API round-trip); falls back to API if constant not present
+   - New state: `_ingredientExpandedCats` (array of category codes with "More" expanded), `_ingredientProteinSubcat` (active protein sub-group)
+   - `_renderCategorizedIngredients` rewritten: groups categories, separates base/extended items, renders "More (+N)" / "Show less" button per category; delegates protein category to new method
+   - `_renderProteinCategory` (new): renders protein sub-group tabs (🐄🐷🍗🐟🐑🦌), shows cuts from `AI_PROTEIN_SUBCATS` when a tab is active, falls back to standard ingredient list otherwise
+   - `_renderShelfIngredientSuggestions` (new): when shelf is enabled and populated, renders "🗄️ From Your Shelf" section above ingredient grid with location-coded chips (🧊🏺❄️🌿); tapping adds item via `_addCustomIngredient`
+   - `_ingDisplayName` updated: falls back to inline `name_sv` for recipe-file cuts not in `AI_INGREDIENT_NAMES_SV`
+   - `_lookupIngDisplayName` updated: also searches `AI_COMMON_INGREDIENTS` and `AI_PROTEIN_SUBCATS`
+   - Back button handler: resets `_ingredientExpandedCats` and `_ingredientProteinSubcat` on exit
+
+4. **`i18n/en.json` + `i18n/sv.json`**: added keys `more_ingredients`, `show_less`, `from_shelf`, `from_recipe_files`
+
+5. **`docs/USER_GUIDE.md`** §7.2: updated to describe new features (shelf section, "More" button, protein drill-down)
+
+**Versions released:**
+- v0.8.1.1 — feature + review fixes (PANEL_VERSION 391)
+- v0.8.1.2 — CHORES (version bump + docs)

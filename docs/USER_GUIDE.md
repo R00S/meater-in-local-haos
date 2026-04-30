@@ -856,13 +856,22 @@ Recipe Builder:
 
 **Step 1️⃣: Select Ingredients**
 
-The ingredient screen has two sections:
+The ingredient screen has several sections:
 
 - **Cuisine / Region filter** — optionally choose one or more cuisine regions to narrow
   ingredient suggestions. Selecting multiple regions creates fusion combinations. Over 80
   cuisines are available.
-- **Ingredient grid** — tap ingredients to select them (minimum 2 required). Selected
-  ingredients appear in the "Selected Ingredients" panel above.
+- **From Your Shelf** *(shown only when Shelf is enabled and has items)* — a highlighted
+  section at the top of the ingredient grid shows items currently in your shelf (fridge,
+  freezer, larder, spices). Tap any chip to instantly add that item as a selected
+  ingredient. Items already selected are hidden from this section.
+- **Ingredient grid** — ingredients are grouped by category (Proteins, Vegetables, Grains,
+  Dairy & Oils, Spices). Each category shows a compact base set by default. Tap
+  **More (+N)** to expand a category to its full set; tap **Show less** to collapse it back.
+- **Protein drill-down** — the Proteins category has a row of sub-group tabs (🐄 Beef,
+  🐷 Pork, 🍗 Poultry, 🐟 Fish, 🐑 Lamb, 🦌 Game). Tap a tab to show specific cuts
+  from the recipe library for that protein group instead of the general protein list.
+  Tap the active tab again to close the drill-down.
 - **Custom ingredient** — type any ingredient in the text field and tap **＋ Add** to add
   it, even if it's not in the list.
 - **Compulsory ingredients** — after adding an ingredient, tap its badge to mark it as
