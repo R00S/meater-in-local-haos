@@ -90,7 +90,7 @@ The AI Recipe Builder generates custom recipes using AI (OpenAI or any HA conver
 ### Features
 
 - **30+ Common Ingredients** — Proteins (9), Vegetables (12), Grains (5), Dairy (5), plus custom ingredient input
-- **11 Cooking Styles** — Quick & Easy, Gourmet, Healthy, Comfort Food, Family Friendly, Meal Prep, One Pot, Low Carb, High Protein, Vegetarian, Vegan
+- **14 Cooking Styles** — Quick & Easy, Gourmet, Healthy, Comfort Food, Family Friendly, Meal Prep, One Pot, Slow Cook, Barbeque, Baking, Low Carb, High Protein, Vegetarian, Vegan
 - **70+ World Cuisines** — 11 collapsible regions: Nordic & Scandinavian, East Asian, Southeast Asian, South Asian, Middle Eastern, European, North American, Latin American, Caribbean, African, Oceanian — select multiple for fusion
 - **Complexity Slider** — 1 (Very Simple) to 5 (Chef Level), with style-dependent defaults
 - **Portions Slider** — 1 to 8 servings
