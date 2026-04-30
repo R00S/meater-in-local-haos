@@ -5955,10 +5955,14 @@ class KitchenCookingPanel extends LitElement {
       ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => {
         const allItems = groups[cat];
         // Items with common===true are shown by default; items with common===false are in
-        // the extended set shown after "More".  Items with no common field (e.g. cuisine-
-        // specific items) are treated as base items (always visible).
-        const baseItems = allItems.filter(i => i.common !== false);
-        const extItems  = allItems.filter(i => i.common === false);
+        // the extended set shown after "More".  Items with no common field at all get a
+        // threshold fallback: first 12 visible, rest behind "More".
+        let baseItems = allItems.filter(i => i.common !== false);
+        let extItems  = allItems.filter(i => i.common === false);
+        if (extItems.length === 0 && baseItems.length > 12) {
+          extItems  = baseItems.slice(12);
+          baseItems = baseItems.slice(0, 12);
+        }
         const isExpanded = expandedCats.includes(cat);
         const visibleItems = isExpanded ? allItems : baseItems;
 

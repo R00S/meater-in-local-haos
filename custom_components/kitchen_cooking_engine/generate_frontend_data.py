@@ -632,7 +632,10 @@ def generate_js_data():
             enriched = []
             for ing in ings:
                 cat = ai_ingredient_categories.get(ing["id"], "s")  # default to spices
-                enriched.append({"id": ing["id"], "name": ing["name"], "cat": cat})
+                item = {"id": ing["id"], "name": ing["name"], "cat": cat}
+                if "common" in ing:
+                    item["common"] = ing["common"]
+                enriched.append(item)
             enriched_cuisine[cuisine_id] = enriched
         ai_cuisine_ingredients = enriched_cuisine
 
