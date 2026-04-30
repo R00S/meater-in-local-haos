@@ -113,6 +113,9 @@ COMMON_INGREDIENTS = {
         {"id": "flour",           "name": "Flour",                 "common": False},
     ],
     "dairy": [
+        # This category maps to the "Dairy, Oils & Sauces" label (see CATEGORY_LABELS["d"]).
+        # It intentionally includes non-dairy pantry staples (oils, sauces, condiments) because
+        # the UI renders it under the broader "🫙 Dairy, Oils & Sauces" heading.
         # Base set — shown by default
         {"id": "cheese",          "name": "Cheese",                "common": True},
         {"id": "milk",            "name": "Milk",                  "common": True},

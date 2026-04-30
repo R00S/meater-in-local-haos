@@ -5953,6 +5953,9 @@ class KitchenCookingPanel extends LitElement {
     return html`
       ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => {
         const allItems = groups[cat];
+        // Items with common===true are shown by default; items with common===false are in
+        // the extended set shown after "More".  Items with no common field (e.g. cuisine-
+        // specific items) are treated as base items (always visible).
         const baseItems = allItems.filter(i => i.common !== false);
         const extItems  = allItems.filter(i => i.common === false);
         const isExpanded = expandedCats.includes(cat);
@@ -6133,7 +6136,11 @@ class KitchenCookingPanel extends LitElement {
     if (inventory.length === 0) return '';
 
     // Filter out items that are already selected
-    const selectedNames = new Set((this._selectedIngredients || []).map(i => i.name.toLowerCase()));
+    const selectedNames = new Set(
+      (this._selectedIngredients || [])
+        .filter(i => i && i.name)
+        .map(i => i.name.toLowerCase())
+    );
     const unselected = inventory.filter(item => !selectedNames.has((item.name || '').toLowerCase()));
     if (unselected.length === 0) return '';
 
