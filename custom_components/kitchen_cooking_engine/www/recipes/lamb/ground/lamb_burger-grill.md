@@ -34,7 +34,7 @@ Biffar ska vara 150–180 g, 2,5–3 cm tjocka. Innertemperatur: **72–75 °C (
 
 ## Source recipes
 
-### 1. BBC Good Food — Lamb Burgers with Harissa (British/North African tradition)
+### 1. Lamb Burgers with Harissa (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/lamb-burgers-harissa (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 12 min
 
@@ -59,7 +59,7 @@ Biffar ska vara 150–180 g, 2,5–3 cm tjocka. Innertemperatur: **72–75 °C (
 
 ---
 
-### 2. Africanbites.com — North African Lamb Burger (Moroccan tradition)
+### 2. North African Lamb Burger (inspired by Africanbites.com)
 **Inspired by**: Africanbites.com; https://www.africanbites.com/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 12 min
 
@@ -83,7 +83,7 @@ Biffar ska vara 150–180 g, 2,5–3 cm tjocka. Innertemperatur: **72–75 °C (
 
 ---
 
-### 3. RecipeTinEats.com — Greek Lamb Burgers (Australian/Greek tradition)
+### 3. Greek Lamb Burgers (inspired by RecipeTinEats.com)
 **Inspired by**: RecipeTinEats.com (Nagi Maehashi); https://www.recipetineats.com/greek-lamb-burgers/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min
 

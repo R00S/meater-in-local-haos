@@ -34,7 +34,7 @@ En typisk biff är 150–180 g. Eftersom malning distribuerar ytbakterier genomg
 
 ## Source recipes
 
-### 1. Chefkoch.de — Der Bisonburger (German tradition, pan-fry adaptation)
+### 1. Der Bisonburger (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/3007371453624664/Der-Bisonburger.html (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 15 min
 
@@ -57,7 +57,7 @@ En typisk biff är 150–180 g. Eftersom malning distribuerar ytbakterier genomg
 
 ---
 
-### 2. Madensverden.dk — Bøffer (Danish burger patties — buffalo/bison adaptation)
+### 2. Bøffer (Danish burger patties — buffalo/bison adaptation) (inspired by Madensverden.dk)
 **Inspired by**: Madensverden.dk; https://madensverden.dk/saftige-burgerboeffer/ (fetched 2026-04-24). *Juicy Danish burger patties technique — direct applicable to bison/buffalo mince.*
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 12 min
 
@@ -79,7 +79,7 @@ En typisk biff är 150–180 g. Eftersom malning distribuerar ytbakterier genomg
 
 ---
 
-### 3. RecipeTinEats.com — Hamburger Recipe (technique applicable to buffalo)
+### 3. Hamburger Recipe (technique applicable to buffalo) (inspired by RecipeTinEats.com)
 **Inspired by**: RecipeTinEats.com (Nagi Maehashi); https://www.recipetineats.com/hamburger-recipe/ (fetched 2026-04-24). *Award-winning hamburger technique from an Australian food blogger — lean mince principles applicable to buffalo.*
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10 min
 

@@ -34,7 +34,7 @@ Het gjutjärns- eller tung panna, 4–5 minuter per sida, sedan vila. Sond in i 
 
 ## Source recipes
 
-### 1. Africanbites.com — Grilled Lamb Loin Chops (West African/international tradition)
+### 1. Grilled Lamb Loin Chops (inspired by Africanbites.com)
 **Inspired by**: Africanbites.com; https://www.africanbites.com/grilled-lamb-chops/ (fetched 2026-04-24). *Applies to loin chop pan sear — recipe note: "For loin chops, anywhere from 135–140°F (57–60°C) is ideal."*
 **Serves**: 4 · **Prep**: 1 hr · **Cook**: 12 min
 
@@ -55,7 +55,7 @@ Het gjutjärns- eller tung panna, 4–5 minuter per sida, sedan vila. Sond in i 
 
 ---
 
-### 2. Madensverden.dk — Lammekoteletter med rosmarin (Danish pan-seared loin chops)
+### 2. Lammekoteletter med rosmarin (Danish pan-seared loin chops) (inspired by Madensverden.dk)
 **Inspired by**: Madensverden.dk; https://madensverden.dk/grillede-lammekoteletter/ (fetched 2026-04-24). *Adapted for pan method — same marinade.*
 **Serves**: 2 · **Prep**: 6 hrs · **Cook**: 10 min
 
@@ -75,7 +75,7 @@ Het gjutjärns- eller tung panna, 4–5 minuter per sida, sedan vila. Sond in i 
 
 ---
 
-### 3. RecipeTinEats.com — Pan Seared Lamb Chops (Australian tradition)
+### 3. Pan Seared Lamb Chops (inspired by RecipeTinEats.com)
 **Inspired by**: RecipeTinEats.com (Nagi Maehashi); https://www.recipetineats.com/pan-seared-lamb-chops/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 8 min
 

@@ -17,7 +17,7 @@ Flank steak (bavette d'aloyau in French bistro tradition, matambre in South Amer
 Flank steak (bavette d'aloyau i fransk bistrotradition, matambre i Sydamerika) skärs från bukväggsmusklerna – magert, intensivt nötigt, med långa parallella fibrer längs hela längden. Till skillnad från marmorerade biffar har flank nästan inget intramuskulärt fett, så hög värme från en mycket het panna skapar skorpa genom Maillard-reaktionen enbart istället för fett-renderande. Pan-searing passar flank väl eftersom den flata, breda skivan täcker en stor kontaktyta på en gång och ger snabb, jämn bryning på båda ytorna. Den magra strukturen gör temperaturdisciplin avgörande: över 60 °C stramar de långa fibrerna ihop och biffen blir torr och strängig oavsett vila. Eftervärmen är minimal – högst 2–3 °C – eftersom det tunna tvärsnittet förlorar värme snabbt efter att ha lämnat pannan.
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Pan-Seared Flank Steak (Serious Eats)
+### 1. Pan-Seared Flank Steak (Serious Eats) (inspired by J. Kenji López-Alt)
 **Inspired by**: J. Kenji López-Alt, seriouseats.com/pan-seared-flank-steak; *The Food Lab* (W. W. Norton, 2015)  
 **Serves**: 4 · **Prep**: 5 min (+45 min dry-brine) · **Cook**: 6–8 min · **Rest**: 5 min
 
@@ -40,7 +40,7 @@ Flank steak (bavette d'aloyau i fransk bistrotradition, matambre i Sydamerika) s
 
 ---
 
-### 2. Stéphane Reynaud — Bavette à l'échalote (French bistro tradition)
+### 2. Bavette à l'échalote (inspired by Stéphane Reynaud)
 **Inspired by**: Stéphane Reynaud, *Bistrot* (Marabout, 2012); stephanereynaud.com  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 4–5 min · **Rest**: 3 min
 
@@ -66,7 +66,7 @@ Flank steak (bavette d'aloyau i fransk bistrotradition, matambre i Sydamerika) s
 
 ---
 
-### 3. Francis Mallmann — Plancha-Seared Matambre (Argentine tradition)
+### 3. Plancha-Seared Matambre (inspired by Francis Mallmann)
 **Inspired by**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009)  
 **Serves**: 6 · **Prep**: 15 min (+2 hr marinate) · **Cook**: 6–8 min · **Rest**: 5 min
 
@@ -92,7 +92,7 @@ Flank steak (bavette d'aloyau i fransk bistrotradition, matambre i Sydamerika) s
 
 ---
 
-### 4. Fergus Henderson — Pan-Fried Bavette with Anchovy Butter (British nose-to-tail tradition)
+### 4. Pan-Fried Bavette with Anchovy Butter (inspired by Fergus Henderson)
 **Inspired by**: Fergus Henderson & Justin Piers Gellatly, *Beyond Nose to Tail* (Bloomsbury, 2007)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 5–6 min · **Rest**: 5 min
 
@@ -119,7 +119,7 @@ Flank steak (bavette d'aloyau i fransk bistrotradition, matambre i Sydamerika) s
 
 ---
 
-### 5. Maangchi — Pan-Seared Bulgogi-Style Flank (Korean tradition)
+### 5. Pan-Seared Bulgogi-Style Flank (inspired by Maangchi)
 **Inspired by**: Maangchi, *Maangchi's Real Korean Cooking* (Houghton Mifflin Harcourt, 2015); maangchi.com/recipe/bulgogi-whole-flank  
 **Serves**: 4 · **Prep**: 20 min (+2 hr marinate) · **Cook**: 6–8 min · **Rest**: 3 min
 

@@ -36,7 +36,7 @@ Pannstekning vid hög värme till medium-rare och vilning är standardmetoden. D
 
 ## Source recipes
 
-### 1. Chefkoch.de — Bisonsteak mit Büffelmozzarella auf Wildpilzgemüse (German tradition)
+### 1. Bisonsteak mit Büffelmozzarella auf Wildpilzgemüse (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/2619231411385428/Bisonsteak-mit-Bueffelmozzarella-auf-Wildpilzgemuese.html (fetched 2026-04-24)
 **Serves**: 2 · **Prep**: 20 min · **Cook**: 30 min
 
@@ -63,7 +63,7 @@ Pannstekning vid hög värme till medium-rare och vilning är standardmetoden. D
 
 ---
 
-### 2. Chefkoch.de — Bisonsteak in Rosmarin (German tradition)
+### 2. Bisonsteak in Rosmarin (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/2841471436190764/Bisonsteak-in-Rosmarin.html (fetched 2026-04-24)
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 40 min
 
@@ -85,7 +85,7 @@ Pannstekning vid hög värme till medium-rare och vilning är standardmetoden. D
 
 ---
 
-### 3. Chefkoch.de — Bisonsteak auf Paprika (German tradition)
+### 3. Bisonsteak auf Paprika (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/2841491436191027/Bisonsteak-auf-Paprika.html (fetched 2026-04-24)
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 40 min
 
@@ -108,7 +108,7 @@ Pannstekning vid hög värme till medium-rare och vilning är standardmetoden. D
 
 ---
 
-### 4. Daskochrezept.de — Gegrilltes Bison Filet Steak mit süß-scharfer Bier-Chili-Marinade (German/Austrian tradition)
+### 4. Gegrilltes Bison Filet Steak mit süß-scharfer Bier-Chili-Marinade (inspired by Daskochrezept.de)
 **Inspired by**: Daskochrezept.de; https://www.daskochrezept.de/rezepte/gegrilltes-bison-filet-steak-suess-scharfer-bier-chili-marinade (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 2 hours marinade · **Cook**: 20 min
 

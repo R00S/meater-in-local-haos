@@ -34,7 +34,7 @@ Aromaterna — lök, vitlök, spiskummin, koriander, kanel och mynta — är lik
 
 ## Source recipes
 
-### 1. Nefisyemektarifleri.com — Kıymalı Patates (Turkish lamb mince with potato)
+### 1. Kıymalı Patates (Turkish lamb mince with potato) (inspired by Nefisyemektarifleri.com)
 **Inspired by**: Nefisyemektarifleri.com; https://www.nefisyemektarifleri.com/kiymali-patates/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 30 min
 
@@ -61,7 +61,7 @@ Aromaterna — lök, vitlök, spiskummin, koriander, kanel och mynta — är lik
 
 ---
 
-### 2. IndianHealthyRecipes.com — Keema (Indian spiced minced lamb)
+### 2. Keema (Indian spiced minced lamb) (inspired by IndianHealthyRecipes.com)
 **Inspired by**: IndianHealthyRecipes.com (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/keema/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 30 min
 
@@ -94,7 +94,7 @@ Aromaterna — lök, vitlök, spiskummin, koriander, kanel och mynta — är lik
 
 ---
 
-### 3. BBC Good Food — Lamb Mince Moussaka (Greek/British tradition, ground lamb pan-fry phase)
+### 3. Lamb Mince Moussaka (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/moussaka (web search 2026-04-24). *Moussaka requires browning the lamb mince in a pan as a key step.*
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 1 hr 30 min (pan-fry phase: 20 min)
 

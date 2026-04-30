@@ -18,7 +18,7 @@ Portabello-svampar (*Agaricus bisporus* mogna) på grillen utvecklar spektakulä
 
 ## Source recipes
 
-### 1. Maangchi — Portobello Gui (Korean tradition)
+### 1. Portobello Gui (inspired by Maangchi)
 **Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); https://www.maangchi.com/recipe/portobello-gui (Korean BBQ mushroom technique).
 **Serves**: 4 · **Prep**: 10 min + 15 min marinating · **Cook**: 10–12 min · **Rest**: 2 min
 
@@ -36,7 +36,7 @@ Portabello-svampar (*Agaricus bisporus* mogna) på grillen utvecklar spektakulä
 
 ---
 
-### 2. Shizuo Tsuji — Portobello Dengaku Yaki (Japanese tradition)
+### 2. Portobello Dengaku Yaki (inspired by Shizuo Tsuji)
 **Inspired by**: Shizuo Tsuji, *Japanese Cooking: A Simple Art* (Kodansha International, 1980); dengaku technique applied to large mushrooms.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 2 min
 
@@ -55,7 +55,7 @@ Portabello-svampar (*Agaricus bisporus* mogna) på grillen utvecklar spektakulä
 
 ---
 
-### 3. Yotam Ottolenghi — Grilled Portobello with Lemon Herb Dressing (Middle Eastern / Israeli tradition)
+### 3. Grilled Portobello with Lemon Herb Dressing (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: 3 min
 
@@ -76,7 +76,7 @@ Portabello-svampar (*Agaricus bisporus* mogna) på grillen utvecklar spektakulä
 
 ---
 
-### 4. Deborah Madison — Grilled Portobello Burgers (American vegetarian tradition)
+### 4. Grilled Portobello Burgers (inspired by Deborah Madison)
 **Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 10 min + 20 min marinating · **Cook**: 10–12 min · **Rest**: 3 min
 

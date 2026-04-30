@@ -37,7 +37,7 @@ Slow cooker-metod: LÅG i 8–10 timmar med aromatiska grönsaker, fond och öl 
 
 ## Source recipes
 
-### 1. Chefkoch.de — Zwiebelschweinshaxen im Crockpot (German tradition)
+### 1. Zwiebelschweinshaxen im Crockpot (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/3292381488829058/ (fetched 2026-04-25). *"Zwiebelschweinshaxen im Crockpot — onion pork hock in the slow cooker."*
 **Serves**: 2 · **Prep**: 20 min · **Cook**: 7 hr (slow cooker) + 15 min (oven grill)
 
@@ -65,7 +65,7 @@ Slow cooker-metod: LÅG i 8–10 timmar med aromatiska grönsaker, fond och öl 
 
 ---
 
-### 2. The Woks of Life — Chinese Red Braised Ti Pang (slow cooker adaptation) (Chinese tradition)
+### 2. Chinese Red Braised Ti Pang (slow cooker adaptation) (inspired by The Woks of Life)
 **Inspired by**: The Woks of Life (Bill, Judy, Sarah, and Kaitlin Leung); https://thewoksoflife.com/chinese-braised-ti-pang-pork/ (fetched 2026-04-25). *"Ti Pang (蹄膀) — slow-cooker adaptation of the classic Shanghainese red-braised pork hock."*
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 7–8 hr (LOW)
 
@@ -99,7 +99,7 @@ Slow cooker-metod: LÅG i 8–10 timmar med aromatiska grönsaker, fond och öl 
 
 ---
 
-### 3. Madensverden.dk — Ovnbagt svineskank med rodfrugter (slow cooker adaptation) (Danish tradition)
+### 3. Ovnbagt svineskank med rodfrugter (slow cooker adaptation) (inspired by Madensverden.dk)
 **Inspired by**: Madensverden.dk (Holger Rørby Madsen); https://madensverden.dk/ovnbagt-svineskank-med-rodfrugter/ (fetched 2026-04-25). *"Ovnbagt svineskank — oven-baked pork shank with root vegetables; adapted here for the slow cooker."*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 8 hr (LOW)
 
@@ -127,7 +127,7 @@ Slow cooker-metod: LÅG i 8–10 timmar med aromatiska grönsaker, fond och öl 
 
 ---
 
-### 4. Giallo Zafferano — Stinco di maiale al forno (slow cooker adaptation) (Italian tradition)
+### 4. Stinco di maiale al forno (slow cooker adaptation) (inspired by Giallo Zafferano)
 **Inspired by**: Ricette GialloZafferano; https://ricette.giallozafferano.it/Stinco-di-maiale-al-forno-con-patate.html (fetched 2026-04-25). *"Stinco di maiale al forno con patate — adapted for the slow cooker from the classic Italian oven recipe."*
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 7 hr (LOW)
 

@@ -35,7 +35,7 @@ Gåsben är stora, sega, intensivt smakrika snitt rika på bindväv och intramus
 
 ## Source recipes
 
-### 1. BBC Good Food — Slow-Roast Duck (low-and-slow fat-rendering principle adapted for goose leg braise)
+### 1. Slow-Roast Duck (low-and-slow fat-rendering principle adapted for goose leg braise) (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food editorial team, BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roast-duck (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 2.5–3 hr · **Rest**: 10 min
 
@@ -79,7 +79,7 @@ Gåsben är stora, sega, intensivt smakrika snitt rika på bindväv och intramus
 
 ---
 
-### 2. Classic Culinary Technique — Braised Goose Legs with Root Vegetables
+### 2. Braised Goose Legs with Root Vegetables (inspired by Classic Culinary Technique)
 **Inspired by**: Standard culinary technique for braised game and waterfowl; general knowledge synthesis.
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 2.5–3 hr · **Rest**: 10 min
 
@@ -110,7 +110,7 @@ Gåsben är stora, sega, intensivt smakrika snitt rika på bindväv och intramus
 
 ---
 
-### 3. EdimDoma.ru — Тушёные утиные ножки (Russian Braised Waterfowl Legs — technique directly applicable to goose)
+### 3. Тушёные утиные ножки (Russian Braised Waterfowl Legs — technique directly applicable to goose) (inspired by EdimDoma.ru)
 **Inspired by**: Home cook recipe, EdimDoma.ru (Russia's largest TV-linked recipe platform, founded by Julia Vysotskaya); https://www.edimdoma.ru/retsepty/10826-tushenye-utinye-nozhki (fetched 2026-04-24, language: Russian — ingredients and method translated below). *Note: original recipe uses duck legs; the technique and temperatures are identical for goose legs — simply extend braising time by 30–60 minutes.*
 **Serves**: 2–3 · **Prep**: 15 min · **Cook**: 1.5–2 hr duck / 2–2.5 hr goose
 

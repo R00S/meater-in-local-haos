@@ -34,7 +34,7 @@ Klassiska tillbehör: rensålt smör, lingon, pressgurka, rostad potatis, kokt k
 
 ## Source recipes
 
-### 1. Köket.se — Reninnanlår à la Norrland (Swedish tradition, oven method)
+### 1. Reninnanlår à la Norrland (inspired by Köket.se)
 **Inspired by**: Köket.se; https://www.koket.se/petter_tidestrom/huvudratter/vilt/reninnanlar_a_la_norrland (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 1.5–2 hrs
 
@@ -79,7 +79,7 @@ Klassiska tillbehör: rensålt smör, lingon, pressgurka, rostad potatis, kokt k
 
 ---
 
-### 2. Tasteline.com — Renstek (Swedish reindeer roast)
+### 2. Renstek (Swedish reindeer roast) (inspired by Tasteline.com)
 **Inspired by**: Tasteline.com; https://www.tasteline.com/recept/renstek/ (fetched 2026-04-24 — page present, note: some recipe slugs return 404, but category page confirms recipe exists)
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 2 hrs
 
@@ -103,7 +103,7 @@ Klassiska tillbehör: rensålt smör, lingon, pressgurka, rostad potatis, kokt k
 
 ---
 
-### 3. Matprat.no — Renstek i ovnen (Norwegian oven roast)
+### 3. Renstek i ovnen (Norwegian oven roast) (inspired by Matprat.no)
 **Inspired by**: Matprat.no; https://www.matprat.no/oppskrifter/gjester/renstek/ (web search 2026-04-24)
 **Serves**: 6 · **Prep**: 15 min + 2 hrs marinade · **Cook**: 2 hrs
 

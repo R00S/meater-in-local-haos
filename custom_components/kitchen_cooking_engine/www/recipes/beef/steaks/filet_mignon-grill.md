@@ -18,7 +18,7 @@ Filet mignon (från den smala änden av *psoas major*) är den möraste, magrast
 
 ## Source recipes
 
-### 1. Weber Grills / America's Test Kitchen — Classic Grilled Filet Mignon
+### 1. Classic Grilled Filet Mignon (inspired by Weber Grills / America's Test Kitchen)
 **Inspired by**: America's Test Kitchen, *The Complete Cooking for Two Cookbook* (America's Test Kitchen, 2014); weberkitchen.com  
 **Serves**: 2 · **Prep**: 5 min (+45 min tempering) · **Cook**: 10–14 min · **Rest**: 5 min
 
@@ -40,7 +40,7 @@ Filet mignon (från den smala änden av *psoas major*) är den möraste, magrast
 
 ---
 
-### 2. Ina Garten — Grilled Filet Mignon with Herb Butter (American home tradition)
+### 2. Grilled Filet Mignon with Herb Butter (inspired by Ina Garten)
 **Inspired by**: Ina Garten, *Barefoot Contessa Back to Basics* (Clarkson Potter, 2008); foodnetwork.com/recipes/ina-garten  
 **Serves**: 4 · **Prep**: 15 min (+1 hr tempering) · **Cook**: 10–12 min · **Rest**: 5–10 min
 
@@ -66,7 +66,7 @@ Filet mignon (från den smala änden av *psoas major*) är den möraste, magrast
 
 ---
 
-### 3. Nigel Slater — Grilled Beef Fillet (British tradition)
+### 3. Grilled Beef Fillet (inspired by Nigel Slater)
 **Inspired by**: Nigel Slater, *Eat* (Fourth Estate, 2013); theguardian.com/food/nigel-slater  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 3 min
 
@@ -87,7 +87,7 @@ Filet mignon (från den smala änden av *psoas major*) är den möraste, magrast
 
 ---
 
-### 4. Ferran Adrià — Grilled Beef Fillet with Romesco (Catalan tradition)
+### 4. Grilled Beef Fillet with Romesco (inspired by Ferran Adrià)
 **Inspired by**: Ferran Adrià, *El Bulli Family Meals* (Phaidon, 2011); elbulli.com (archived)  
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 10–12 min · **Rest**: 5 min
 
@@ -110,7 +110,7 @@ Filet mignon (från den smala änden av *psoas major*) är den möraste, magrast
 
 ---
 
-### 5. Maangchi — Korean Grilled Beef Fillet (*Gui*)
+### 5. Korean Grilled Beef Fillet (*Gui*) (inspired by Maangchi)
 **Inspired by**: Maangchi, *Maangchi's Real Korean Cooking* (Houghton Mifflin Harcourt, 2015); maangchi.com/recipe/  
 **Serves**: 2 · **Prep**: 15 min (+30 min marinating) · **Cook**: 8–10 min · **Rest**: 3 min
 

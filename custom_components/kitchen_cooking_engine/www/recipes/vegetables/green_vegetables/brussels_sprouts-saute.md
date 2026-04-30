@@ -18,7 +18,7 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) sauterade — frekvent vänds
 
 ## Source recipes
 
-### 1. Pailin Chongchitnant — Thai-Style Sautéed Brussels Sprouts with Fish Sauce (Thai tradition)
+### 1. Thai-Style Sautéed Brussels Sprouts with Fish Sauce (inspired by Pailin Chongchitnant)
 **Inspired by**: Pailin Chongchitnant, *Hot Thai Kitchen* (Appetite by Random House, 2016); stir-fry technique applied to Brussels sprouts.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 2 min
 
@@ -33,7 +33,7 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) sauterade — frekvent vänds
 
 ---
 
-### 2. Harumi Kurihara — Sautéed Shredded Brussels Sprouts with Ponzu (Japanese tradition)
+### 2. Sautéed Shredded Brussels Sprouts with Ponzu (inspired by Harumi Kurihara)
 **Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 5–6 min · **Rest**: 1 min
 
@@ -48,7 +48,7 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) sauterade — frekvent vänds
 
 ---
 
-### 3. Madhur Jaffrey — Sautéed Brussels Sprouts with Cumin and Mustard Seeds (Indian tradition)
+### 3. Sautéed Brussels Sprouts with Cumin and Mustard Seeds (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: 2 min
 
@@ -62,7 +62,7 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) sauterade — frekvent vänds
 
 ---
 
-### 4. Yotam Ottolenghi — Sautéed Brussels Sprouts with Tahini and Pomegranate (Israeli / Middle Eastern tradition)
+### 4. Sautéed Brussels Sprouts with Tahini and Pomegranate (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 

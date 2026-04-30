@@ -21,7 +21,7 @@ Malt kalkon (malt kykling) tillverkas av malning av mörkt kött (lår och ben),
 
 ## Source recipes
 
-### 1. Marcella Hazan — Ragù di Tacchino (Italian tradition)
+### 1. Ragù di Tacchino (inspired by Marcella Hazan)
 **Inspired by**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997) — turkey variant of her *ragù bianco* technique  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 75 min · **Rest**: 5 min
 
@@ -52,7 +52,7 @@ Malt kalkon (malt kykling) tillverkas av malning av mörkt kött (lår och ben),
 
 ---
 
-### 2. Hugh Acheson — Slow-Cooker Turkey Mince Bolognese (American Culinary Group C tradition)
+### 2. Slow-Cooker Turkey Mince Bolognese (inspired by Hugh Acheson)
 **Inspired by**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017); hughacheson.com  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 75 min · **Rest**: 10 min
 
@@ -84,7 +84,7 @@ Malt kalkon (malt kykling) tillverkas av malning av mörkt kött (lår och ben),
 
 ---
 
-### 3. Yotam Ottolenghi — Spiced Turkey Mince with Tomato & Yoghurt (Levantine tradition)
+### 3. Spiced Turkey Mince with Tomato & Yoghurt (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014) technique extended; ottolenghi.co.uk recipes — turkey-mince adaptations  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 50 min · **Rest**: 5 min
 
@@ -112,7 +112,7 @@ Malt kalkon (malt kykling) tillverkas av malning av mörkt kött (lår och ben),
 
 ---
 
-### 4. Tina Nordström — Kalkonfärssås (Swedish ragù tradition)
+### 4. Kalkonfärssås (inspired by Tina Nordström)
 **Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — turkey variant of her *köttfärssås*; köket.se  
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 70 min · **Rest**: 10 min
 

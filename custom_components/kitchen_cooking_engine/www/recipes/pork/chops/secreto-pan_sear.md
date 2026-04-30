@@ -23,7 +23,7 @@ Tillagningstid: 3–4 minuter per sida vid hög värme; vila 5 minuter täckt. I
 
 ## Source recipes
 
-### 1. Directo al Paladar — Secreto de cerdo a la plancha (Spanish tradition)
+### 1. Secreto de cerdo a la plancha (inspired by Directo al Paladar)
 **Inspired by**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/receta-secreto-cerdo-a-plancha-trucos-te-quede-muy-crujiente-jugoso-interior (fetched 2026-04-24). *The definitive Spanish plancha method for secreto: atemperar 2 hr; dry griddle, no oil; sear 3–4 min one side, 2–3 min other; no salt before; one flip with tongs; rest 1–2 min then season.*
 **Serves**: 2 · **Prep**: 2 hr de-chill · **Cook**: 6–8 min
 
@@ -53,7 +53,7 @@ Tillagningstid: 3–4 minuter per sida vid hög värme; vila 5 minuter täckt. I
 
 ---
 
-### 2. Chefkoch.de — Secreto vom Ibericoschwein (German tradition)
+### 2. Secreto vom Ibericoschwein (inspired by Chefkoch.de)
 **Inspired by**: Carco, Chefkoch.de; https://www.chefkoch.de/rezepte/3267791485695361/Secreto-vom-Ibericoschwein.html (fetched 2026-04-24). *"The 'secret fillet' without fuss — pure, unadulterated meat pleasure." Ghee (Butterschmalz) pan, 3–4 min per side, then 5 min rest at 80 °C in oven.*
 **Serves**: 4 · **Cook**: 8 min + 5 min oven rest
 
@@ -77,7 +77,7 @@ Tillagningstid: 3–4 minuter per sida vid hög värme; vila 5 minuter täckt. I
 
 ---
 
-### 3. Madensverden.dk — Pandestegning reference (adapted from svinekotelet technique) (Danish tradition)
+### 3. Pandestegning reference (adapted from svinekotelet technique) (inspired by Madensverden.dk)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/pandestegning-af-koteletter/ (fetched 2026-04-24). *The Danish pandestegning (pan frying) method applied to secreto — since secreto is equivalent to a marbled collar cut. High heat, butter, herbs; cook through to juicy well-done.*
 **Serves**: 2 · **Cook**: 6–8 min
 

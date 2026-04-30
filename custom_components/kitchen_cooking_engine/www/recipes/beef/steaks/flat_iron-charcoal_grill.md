@@ -21,7 +21,7 @@ Individuella flat iron-biffar med 2–3 cm tjocklek är idealiska för direkt tr
 
 ## Source recipes
 
-### 1. Francis Mallmann — Asado de Campo Flat Iron (Argentine tradition)
+### 1. Asado de Campo Flat Iron (inspired by Francis Mallmann)
 **Inspired by**: Francis Mallmann with Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009); direct-ember technique adapted for flat iron  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -43,7 +43,7 @@ Individuella flat iron-biffar med 2–3 cm tjocklek är idealiska för direkt tr
 
 ---
 
-### 2. Jan Braai (Jan Scannell) — South African Braai Flat Iron with Monkey Gland Sauce
+### 2. South African Braai Flat Iron with Monkey Gland Sauce (inspired by Jan Braai)
 **Inspired by**: Jan Braai (Jan Scannell), *Fireman: A Braai Book for Real Men* (Struik Lifestyle, 2014); direct-coal technique  
 **Serves**: 2–3 · **Prep**: 20 min · **Cook**: 10–12 min · **Rest**: 5 min
 
@@ -65,7 +65,7 @@ Individuella flat iron-biffar med 2–3 cm tjocklek är idealiska för direkt tr
 
 ---
 
-### 3. Aaron Franklin — Direct-Coal Flat Iron (American BBQ/steakhouse tradition)
+### 3. Direct-Coal Flat Iron (inspired by Aaron Franklin)
 **Inspired by**: Aaron Franklin and Jordan Mackay, *Franklin Steak* (Ten Speed Press, 2019); direct high-heat charcoal method for secondary cuts  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -87,7 +87,7 @@ Individuella flat iron-biffar med 2–3 cm tjocklek är idealiska för direkt tr
 
 ---
 
-### 4. Maangchi — Korean Charcoal-Grilled Bulgogi Flat Iron (Korean tradition)
+### 4. Korean Charcoal-Grilled Bulgogi Flat Iron (inspired by Maangchi)
 **Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); bulgogi marinade applied to whole flat iron on charcoal  
 **Serves**: 3–4 · **Prep**: 20 min (+ 4 h marinade) · **Cook**: 8–10 min · **Rest**: 4 min
 
@@ -113,7 +113,7 @@ Individuella flat iron-biffar med 2–3 cm tjocklek är idealiska för direkt tr
 
 ---
 
-### 5. Guga Foods — Brazilian Churrasco Flat Iron on Skewer (Brazilian tradition)
+### 5. Brazilian Churrasco Flat Iron on Skewer (inspired by Guga Foods)
 **Inspired by**: Gustavo Tosta (Guga Foods), "Flat Iron Steak Churrasco Style," *Guga Foods* YouTube channel (2021); traditional gaucho churrasco skewer method  
 **Serves**: 2–3 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 5 min
 

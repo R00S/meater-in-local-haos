@@ -28,7 +28,7 @@ Sond in i tjockaste köttmassan, borta från skulderbladsben. Innertemperatur: *
 
 ## Source recipes
 
-### 1. Madens Verden — Pulled Pork (Danish tradition)
+### 1. Pulled Pork (inspired by Madens Verden)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/pulled-pork/ (fetched 2026-04-24). *"The world's best pulled pork comes from the American Deep South — also used for the grill." 4.7/5, 40 ratings.*
 **Serves**: 4 · **Prep**: 12 hr (overnight) · **Cook**: 9 hr
 
@@ -52,7 +52,7 @@ Sond in i tjockaste köttmassan, borta från skulderbladsben. Innertemperatur: *
 
 ---
 
-### 2. TINE — Pulled Pork (Norwegian tradition)
+### 2. Pulled Pork (inspired by TINE)
 **Inspired by**: TINE.no; https://www.tine.no/oppskrifter/lunsj-og-smaretter/smorbrod-og-palegg/pulled-pork-toast-med-blamuggost (fetched 2026-04-24). *"Pulled pork toast with blue cheese — a whole dinner in itself." 4/5, 9 ratings.*
 **Serves**: 4 · **Cook**: 3–4 hr
 
@@ -80,7 +80,7 @@ Sond in i tjockaste köttmassan, borta från skulderbladsben. Innertemperatur: *
 
 ---
 
-### 3. Chefkoch — Pulled Pork aus dem Ofen (German tradition)
+### 3. Pulled Pork aus dem Ofen (inspired by Chefkoch)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/2210881354095272/Pulled-Pork-zarter-Schweinebraten-aus-dem-Ofen-fast-original-nur-ohne-Grill.html (fetched 2026-04-24). *"Tender pork roast from the oven — almost original, just without the grill." Core target 90–95°C explicitly stated. 112+ user photos, very popular recipe.*
 **Serves**: 6 · **Prep**: 30 min (+ overnight) · **Cook**: 6–12 hr
 

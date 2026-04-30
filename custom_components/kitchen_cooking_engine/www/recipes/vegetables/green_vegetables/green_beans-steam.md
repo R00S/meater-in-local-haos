@@ -18,7 +18,7 @@ Gröna bönor (*Phaseolus vulgaris*) ångade bevarar sin klargrön färg, vatten
 
 ## Source recipes
 
-### 1. Harumi Kurihara — Steamed Beans with Sesame Dressing (Japanese tradition)
+### 1. Steamed Beans with Sesame Dressing (inspired by Harumi Kurihara)
 **Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 5–7 min · **Rest**: 2 min
 
@@ -33,7 +33,7 @@ Gröna bönor (*Phaseolus vulgaris*) ångade bevarar sin klargrön färg, vatten
 
 ---
 
-### 2. Madhur Jaffrey — Steamed Beans with Mustard Seed Tadka (Indian tradition)
+### 2. Steamed Beans with Mustard Seed Tadka (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 5–7 min steam + 2 min tadka · **Rest**: 1 min
 
@@ -49,7 +49,7 @@ Gröna bönor (*Phaseolus vulgaris*) ångade bevarar sin klargrön färg, vatten
 
 ---
 
-### 3. Fuchsia Dunlop — Steamed Long Beans with Garlic and Soy (Chinese tradition)
+### 3. Steamed Long Beans with Garlic and Soy (inspired by Fuchsia Dunlop)
 **Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 7–9 min · **Rest**: 3 min (cooling)
 
@@ -64,7 +64,7 @@ Gröna bönor (*Phaseolus vulgaris*) ångade bevarar sin klargrön färg, vatten
 
 ---
 
-### 4. Julia Child — Haricots Verts à la Vapeur au Beurre Fondu (French tradition)
+### 4. Haricots Verts à la Vapeur au Beurre Fondu (inspired by Julia Child)
 **Inspired by**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 5–7 min steam + 2 min butter toss · **Rest**: 1 min
 

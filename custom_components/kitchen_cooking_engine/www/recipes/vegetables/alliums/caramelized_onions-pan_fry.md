@@ -18,7 +18,7 @@ Karameliserade lökar via pannstekning avser stilen där skivad eller halvad lö
 
 ## Source recipes
 
-### 1. Madhur Jaffrey — Birista / Fried Onions (Indian / South Asian tradition)
+### 1. Birista / Fried Onions (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)
 **Serves**: 4–6 (as a garnish) · **Prep**: 10 min · **Cook**: 15–20 min · **Rest**: drain on paper 5 min
 
@@ -38,7 +38,7 @@ Karameliserade lökar via pannstekning avser stilen där skivad eller halvad lö
 
 ---
 
-### 2. Shizuo Tsuji — Negi no Itame-yaki (Japanese pan-fried spring onions with soy and mirin)
+### 2. Negi no Itame-yaki (Japanese pan-fried spring onions with soy and mirin) (inspired by Shizuo Tsuji)
 **Inspired by**: Shizuo Tsuji, *Japanese Cooking: A Simple Art* (Kodansha International, 1980)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 2 min
 
@@ -61,7 +61,7 @@ Karameliserade lökar via pannstekning avser stilen där skivad eller halvad lö
 
 ---
 
-### 3. Francis Mallmann — Cebollas a la Plancha (Argentine / South American tradition)
+### 3. Cebollas a la Plancha (inspired by Francis Mallmann)
 **Inspired by**: Francis Mallmann with Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 15–20 min · **Rest**: 3 min
 
@@ -82,7 +82,7 @@ Karameliserade lökar via pannstekning avser stilen där skivad eller halvad lö
 
 ---
 
-### 4. Marcella Hazan — Cipolle all'Aceto (Italian pan-fried onions with vinegar)
+### 4. Cipolle all'Aceto (Italian pan-fried onions with vinegar) (inspired by Marcella Hazan)
 **Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 20–25 min · **Rest**: 2 min
 

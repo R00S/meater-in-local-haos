@@ -40,7 +40,7 @@ The defining characteristic shared by all roasting joint cuts is their size (typ
 Gemensamt för alla roasting joints är storleken (1–3 kg) och att de är gjorda för torr ugnsrostning utan vätska – en brynt yta och en rosa, vilad insida. Alla kommer från primal med relativt lågt kollageninnehåll jämfört med bräseringssnitt (brisket, chuck, bog).
 ## Source recipes
 
-### 1. Nagi Maehashi — Marinated Roast Beef (Australian tradition, designed for economical roasting joints)
+### 1. Marinated Roast Beef (inspired by Nagi Maehashi)
 **Inspired by**: Nagi Maehashi, RecipeTin Eats, recipetineats.com/marinated-roast-beef/  
 **Serves**: 6–8 · **Prep**: 15 min (+2–3 day marinade) · **Cook**: ~55–60 min · **Rest**: 20–30 min
 
@@ -65,7 +65,7 @@ Gemensamt för alla roasting joints är storleken (1–3 kg) och att de är gjor
 
 ---
 
-### 2. Chef Simon — Rôti de Boeuf (French classical tradition)
+### 2. Rôti de Boeuf (inspired by Chef Simon)
 **Inspired by**: Chef Simon, *Rôti de Boeuf*, chefsimon.com/gourmets/chef-simon/recettes/roti-de-boeuf--3  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: ~30 min (1 kg joint)
 
@@ -84,7 +84,7 @@ Gemensamt för alla roasting joints är storleken (1–3 kg) och att de är gjor
 
 ---
 
-### 3. Immaculate Bites — Creole-Spiced Oven Roast Beef (West African / Southern American Creole tradition)
+### 3. Creole-Spiced Oven Roast Beef (inspired by Immaculate Bites)
 **Inspired by**: Immaculate Bites (Imma), africanbites.com/roast-beef/  
 **Serves**: 6–8 · **Prep**: 15 min (+overnight marinade) · **Cook**: 1–2 hours · **Rest**: 15–20 min
 
@@ -106,7 +106,7 @@ Gemensamt för alla roasting joints är storleken (1–3 kg) och att de är gjor
 
 ---
 
-### 4. Holger Rørby Madsen — Langtidsstegt Oksefilet (Danish tradition — the ultra-low method)
+### 4. Langtidsstegt Oksefilet (inspired by Holger Rørby Madsen)
 **Inspired by**: Holger Rørby Madsen, Madens Verden, madensverden.dk/langtidsstegt-oksefilet-ovn/  
 **Serves**: 6 · **Prep**: 15 min (+12–24 h dry rub) · **Cook**: ~4 hours
 

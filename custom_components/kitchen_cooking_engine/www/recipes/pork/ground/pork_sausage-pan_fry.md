@@ -23,7 +23,7 @@ Standardteknik: lägg korvar i kall panna med lite vatten (3–4 msk), täck och
 
 ## Source recipes
 
-### 1. Madens Verden — Sprøde pølser på pande (Danish tradition)
+### 1. Sprøde pølser på pande (inspired by Madens Verden)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/saadan-laver-du-sproede-poelser-som-paa-tankstationen/ (referenced 2026-04-24). *"Crispy sausages on the pan like from the petrol station." Method: foil lining, very low heat × 1 hour, turn a few times. The low heat prevents splitting.*
 **Serves**: 2–4 · **Cook**: 45–60 min at low heat
 
@@ -42,7 +42,7 @@ Standardteknik: lägg korvar i kall panna med lite vatten (3–4 msk), täck och
 
 ---
 
-### 2. ichkoche.at — Bratwurst in der Pfanne (Austrian tradition, adapted from pork pan methods)
+### 2. Bratwurst in der Pfanne (inspired by ichkoche.at)
 **Inspired by**: ichkoche.at (general pork in Pfanne methodology, referenced 2026-04-24). *Medium heat, roll in pan with butter; add a splash of water and cover midway to steam-cook the interior; uncover for final 3–4 minutes to crisp the skin.*
 **Serves**: 2 · **Cook**: 15 min
 
@@ -64,7 +64,7 @@ Standardteknik: lägg korvar i kall panna med lite vatten (3–4 msk), täck och
 
 ---
 
-### 3. Chefkoch.de — Bratwurst in der Pfanne (German tradition)
+### 3. Bratwurst in der Pfanne (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rs/s0/bratwurst+pfanne/Rezepte.html (referenced 2026-04-24). *German standard: medium-high heat, small amount of oil, brown all sides, then reduce and cook through. Total 12–15 min.*
 **Serves**: 2 · **Cook**: 12–15 min
 

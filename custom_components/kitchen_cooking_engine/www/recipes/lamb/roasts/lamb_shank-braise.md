@@ -37,7 +37,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ## Source recipes
 
-### 1. The Mediterranean Dish — Red Wine Braised Lamb Shanks (Mediterranean tradition)
+### 1. Red Wine Braised Lamb Shanks (inspired by The Mediterranean Dish)
 **Inspired by**: The Mediterranean Dish (Suzy Karadsheh); https://www.themediterraneandish.com/braised-lamb-shanks/ (fetched 2026-04-24). *"One of the most popular and requested recipes on the site."*
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 2 h 30 min (oven at 350°F / 175°C)
 
@@ -73,7 +73,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ---
 
-### 2. BBC Good Food — Braised Lamb Shanks (British tradition)
+### 2. Braised Lamb Shanks (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/braised-lamb-shanks (fetched 2026-04-24). *Recipe from Good Food magazine.*
 **Serves**: 4 (2 shanks each) · **Prep**: 20 min · **Cook**: 2 hrs
 
@@ -101,7 +101,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ---
 
-### 3. Madensverden.dk — Lammeskank i rødvin, langtidsstegt (Danish tradition)
+### 3. Lammeskank i rødvin, langtidsstegt (inspired by Madensverden.dk)
 **Inspired by**: Madensverden.dk (Holger Rørby Madsen); https://madensverden.dk/lammeskank-roedvin-langtidsstegt/ (fetched 2026-04-24). *"A great simple recipe for lamb shank in red wine — incredibly tender meat."*
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 2 h 30 min
 
@@ -139,7 +139,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ---
 
-### 4. The Mediterranean Dish — Persian Braised Lamb Shanks (Mahiche) (Iranian tradition)
+### 4. Persian Braised Lamb Shanks (Mahiche) (inspired by The Mediterranean Dish)
 **Inspired by**: The Mediterranean Dish (Suzy Karadsheh); https://www.themediterraneandish.com/persian-braised-lamb-shanks-mahiche/ (fetched 2026-04-24). *"Mahiche means 'lamb shank' in Persian. This dish is slow-cooked with saffron, turmeric, and cinnamon."*
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 2 h 30 min
 

@@ -48,7 +48,7 @@ noted.
 
 ## Source recipes
 
-### 1. Good Food — Easy Roast Beef (British tradition)
+### 1. Easy Roast Beef (inspired by Good Food)
 **Inspired by**: Good Food magazine, September 2011; bbcgoodfood.com/recipes/roast-beef-carrots-easy-gravy  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 50 min–1h20 (plus 30 min rest)  
 **Cut used**: 950 g beef **top rump joint** (British equivalent of top round / upper round)
@@ -73,7 +73,7 @@ noted.
 
 ---
 
-### 2. Good Food — Roast Beef with Red Wine & Banana Shallots (British tradition)
+### 2. Roast Beef with Red Wine & Banana Shallots (inspired by Good Food)
 **Inspired by**: Good Food magazine, January 2016; bbcgoodfood.com/recipes/roast-beef-red-wine-banana-shallots  
 **Serves**: 8 · **Cut used**: 2 kg **topside of beef** (British equivalent of top round)
 
@@ -96,7 +96,7 @@ noted.
 
 ---
 
-### 3. Immaculate Bites — Creole-Spiced Roast Beef (West African / Southern American Creole tradition)
+### 3. Creole-Spiced Roast Beef (inspired by Immaculate Bites)
 **Inspired by**: Imma (Immaculate Bites), africanbites.com/roast-beef/  
 **Serves**: 6–8 · **Prep**: 15 min (+overnight) · **Cook**: 1–2 hours  
 **Cut used**: Eye of round roast; recipe explicitly notes **top round roast** as a direct substitute
@@ -118,7 +118,7 @@ noted.
 
 ---
 
-### 4. Katja Nordlund — Paahtopaisti (Finnish tradition)
+### 4. Paahtopaisti (inspired by Katja Nordlund)
 **Inspired by**: Katja Nordlund (author), Pia Inberg (photo), soppa365.fi/reseptit/liha/paahtopaisti (published 30 September 2012)  
 **Serves**: 10 · **Cook**: ~1.5 hours (+ 1 hr room-temperature rest + 30 min rest in foil)  
 **Cut used**: **Paahtopaisti** (Finnish hindquarter/round oven roast)

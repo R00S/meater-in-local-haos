@@ -28,7 +28,7 @@ Ugnsrostning med svål: 180–200 °C, 1,5–2 timmar, avsluta under grillelemen
 
 ## Source recipes
 
-### 1. Chefkoch — Chashu (Japanese-style braised pork belly)
+### 1. Chashu (Japanese-style braised pork belly) (inspired by Chefkoch)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/4088041641052756/Chashu.html (fetched 2026-04-24). *Japanese braised pork belly for ramen. "Soft and meltingly tender." 2022 recipe.*
 **Serves**: 8 · **Prep**: 30 min · **Cook**: 3 hr oven + 12 hr chill
 
@@ -62,7 +62,7 @@ Ugnsrostning med svål: 180–200 °C, 1,5–2 timmar, avsluta under grillelemen
 
 ---
 
-### 2. ichkoche.at — Gjuwetsch — Geschmorter Schweinebauch (Austrian tradition)
+### 2. Gjuwetsch — Geschmorter Schweinebauch (inspired by ichkoche.at)
 **Inspired by**: ichkoche.at; https://www.ichkoche.at/gjuwetsch-geschmorter-schweinebauch-rezept-214749 (fetched 2026-04-24). *Bulgarian-inspired Austrian braised pork belly stew in an earthenware pot. 11 ratings.*
 **Serves**: 6 · **Cook**: 1.5 hr at 180°C + 30 min at 200°C
 
@@ -89,7 +89,7 @@ Ugnsrostning med svål: 180–200 °C, 1,5–2 timmar, avsluta under grillelemen
 
 ---
 
-### 3. BBC Good Food — Slow-roast Five-spice Pork Belly & Gravy (British/Chinese fusion)
+### 3. Slow-roast Five-spice Pork Belly & Gravy (British/Chinese fusion) (inspired by BBC Good Food)
 **Inspired by**: Barney Desmazery, BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roast-five-spice-pork-belly-gravy (fetched 2026-04-24). *"Take a simple dinner shortcut for aromatic pork with Chinese five spice." 4.5/5, 7 ratings.*
 **Serves**: 5–6 · **Prep**: 20 min (+ optional overnight marinate) · **Cook**: 2.5–3 hr
 

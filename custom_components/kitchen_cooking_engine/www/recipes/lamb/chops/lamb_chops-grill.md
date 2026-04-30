@@ -36,7 +36,7 @@ Grilla vid direkt medel-hög värme (200–230 °C), 4–5 minuter per sida. Son
 
 ## Source recipes
 
-### 1. African Bites — Grilled Lamb Chops with Peppercorn Sauce (West African/International tradition)
+### 1. Grilled Lamb Chops with Peppercorn Sauce (inspired by African Bites)
 **Inspired by**: Africanbites.com (Imma Adamu); https://www.africanbites.com/grilled-lamb-chops/ (fetched 2026-04-24). *"These juicy and smoky grilled lamb chops are marinated in a 5-ingredient blend oozing with rosemary, garlic, and herby flavors with a little kick in between bites."*
 **Serves**: 4 · **Prep**: 1 hr marinate · **Cook**: 10 min
 
@@ -71,7 +71,7 @@ Grilla vid direkt medel-hög värme (200–230 °C), 4–5 minuter per sida. Son
 
 ---
 
-### 2. Madensverden.dk — Grillede lammekoteletter med rosmarin og hvidløg (Danish tradition)
+### 2. Grillede lammekoteletter med rosmarin og hvidløg (inspired by Madensverden.dk)
 **Inspired by**: Madensverden.dk; https://madensverden.dk/grillede-lammekoteletter/ (fetched 2026-04-24)
 **Serves**: 2 · **Prep**: 6–8 hrs marinade · **Cook**: 12 min
 
@@ -96,7 +96,7 @@ Grilla vid direkt medel-hög värme (200–230 °C), 4–5 minuter per sida. Son
 
 ---
 
-### 3. Nefisyemektarifleri.com — Izgara Kuzu Pirzola (Turkish grilled lamb chops)
+### 3. Izgara Kuzu Pirzola (Turkish grilled lamb chops) (inspired by Nefisyemektarifleri.com)
 **Inspired by**: Nefisyemektarifleri.com; https://www.nefisyemektarifleri.com/izgara-kuzu-pirzola/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 30 min marinade · **Cook**: 15 min
 

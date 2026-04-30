@@ -18,7 +18,7 @@ Majs på kolven (*Zea mays*) grillad utvecklar en djupt karameliserad, rökig ex
 
 ## Source recipes
 
-### 1. Diana Kennedy — Elote Asado con Chile y Crema (Mexican tradition)
+### 1. Elote Asado con Chile y Crema (inspired by Diana Kennedy)
 **Inspired by**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 15–20 min · **Rest**: 2 min
 
@@ -42,7 +42,7 @@ Majs på kolven (*Zea mays*) grillad utvecklar en djupt karameliserad, rökig ex
 
 ---
 
-### 2. Harumi Kurihara — Yakimorokoshi (焼きとうもろこし — Japanese Soy-Glazed Corn)
+### 2. Yakimorokoshi (焼きとうもろこし — Japanese Soy-Glazed Corn) (inspired by Harumi Kurihara)
 **Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 15–18 min · **Rest**: 2 min
 
@@ -63,7 +63,7 @@ Majs på kolven (*Zea mays*) grillad utvecklar en djupt karameliserad, rökig ex
 
 ---
 
-### 3. Madhur Jaffrey — Bhutta (Indian Spiced Grilled Corn)
+### 3. Bhutta (Indian Spiced Grilled Corn) (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010) and *Indian Cookery* (BBC Books, 1982)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 15–20 min · **Rest**: 2 min
 
@@ -82,7 +82,7 @@ Majs på kolven (*Zea mays*) grillad utvecklar en djupt karameliserad, rökig ex
 
 ---
 
-### 4. Maangchi — Guun Oksusu (구운 옥수수 — Korean Grilled Corn)
+### 4. Guun Oksusu (구운 옥수수 — Korean Grilled Corn) (inspired by Maangchi)
 **Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); grilled corn technique from the Korean BBQ chapter.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 15–18 min · **Rest**: 2 min
 

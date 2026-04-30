@@ -34,7 +34,7 @@ Tillagningstid: 18–22 minuter vid 180–200 °C för ett 150–200 g benfritt 
 
 ## Source recipes
 
-### 1. Skinnytaste — Air Fryer Chicken Breast
+### 1. Air Fryer Chicken Breast (inspired by Skinnytaste)
 **Inspired by**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/air-fryer-chicken-breast/ (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 5 min + 1–2 hr brine · **Cook**: ~10 min · **Rest**: 5 min
 
@@ -70,7 +70,7 @@ Tillagningstid: 18–22 minuter vid 180–200 °C för ett 150–200 g benfritt 
 
 ---
 
-### 2. Natasha's Kitchen — Air Fryer Chicken Thighs (temperature reference for dark-meat context)
+### 2. Air Fryer Chicken Thighs (temperature reference for dark-meat context) (inspired by Natasha's Kitchen)
 **Inspired by**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/air-fryer-chicken-thighs/ (fetched 2025-07-15).
 **Serves**: 4–6 · **Prep**: 5 min · **Cook**: 18–22 min (bone-in) · **Rest**: 5 min
 
@@ -102,7 +102,7 @@ Tillagningstid: 18–22 minuter vid 180–200 °C för ett 150–200 g benfritt 
 
 ---
 
-### 3. BBC Good Food — Air Fryer Chicken Breasts
+### 3. Air Fryer Chicken Breasts (inspired by BBC Good Food)
 **Inspired by**: Samuel Goldsmith, BBC Good Food; https://www.bbcgoodfood.com/recipes/air-fryer-chicken-breasts (archived: https://web.archive.org/web/20241007181927/https://www.bbcgoodfood.com/recipes/air-fryer-chicken-breasts, fetched 2026-04-24).
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 18–20 min
 
@@ -127,7 +127,7 @@ Tillagningstid: 18–22 minuter vid 180–200 °C för ett 150–200 g benfritt 
 
 ---
 
-### 4. Swasthi Shreekanth — Chicken Tikka in Air Fryer (Indian tradition)
+### 4. Chicken Tikka in Air Fryer (inspired by Swasthi Shreekanth)
 **Inspired by**: Swasthi Shreekanth, Indian Healthy Recipes; https://www.indianhealthyrecipes.com/chicken-tikka/ (fetched 2026-04-25). *Classic North Indian Chicken Tikka — boneless chicken breast (or thigh) cubes marinated in spiced yogurt with ginger-garlic paste, Kashmiri red chili, garam masala, chaat masala, and kasuri methi; air fried at 200 °C (400 °F) for 14 minutes. Brushed with butter and served with mint chutney. The air fryer method is one of three cooking options explicitly given in the recipe (alongside oven and grill pan).*
 **Serves**: 4 · **Prep**: 15 min + 8 hr marinate · **Cook**: 14 min air fryer
 

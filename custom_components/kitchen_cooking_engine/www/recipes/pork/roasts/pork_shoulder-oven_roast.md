@@ -25,7 +25,7 @@ Ugnsrostning: 160–200 °C i 2–4 timmar. Innertemperatur: **75–80 °C (167�
 
 ## Source recipes
 
-### 1. Madens Verden — Nakkekam i Ovn, Langtidsstegt i Bradepande (Danish tradition)
+### 1. Nakkekam i Ovn, Langtidsstegt i Bradepande (inspired by Madens Verden)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/nakkekam-ovn-langtidsstegt/ (fetched 2026-04-24). *"Long-slow roasted pork neck in a covered roasting pan — the most tender result." *
 **Serves**: 4 · **Cook**: 105 min covered at 200°C
 
@@ -54,7 +54,7 @@ Ugnsrostning: 160–200 °C i 2–4 timmar. Innertemperatur: **75–80 °C (167�
 
 ---
 
-### 2. Madens Verden — Nakkesteg i Ovn med Hvidløg og Kartofler i Fad (Danish tradition)
+### 2. Nakkesteg i Ovn med Hvidløg og Kartofler i Fad (inspired by Madens Verden)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/nakkesteg-ovn-hvidloeg-kartofler-fad/ (fetched 2026-04-24). *"Nakkesteg in oven with garlic and potatoes — simple and delicious all-in-one."*
 **Serves**: 4 · **Cook**: 90 min at 175°C
 
@@ -81,7 +81,7 @@ Ugnsrostning: 160–200 °C i 2–4 timmar. Innertemperatur: **75–80 °C (167�
 
 ---
 
-### 3. Chefkoch — Krustenbraten (German tradition — shoulder variant)
+### 3. Krustenbraten (inspired by Chefkoch)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/1583701265817692/Krustenbraten.html (fetched 2026-04-24). *"Pork shoulder or belly with exceptionally crispy crackling and wheat beer." 4.8/5, popular recipe.*
 **Serves**: 4 · **Cook**: 2 hr at 180°C
 
@@ -120,7 +120,7 @@ Ugnsrostning: 160–200 °C i 2–4 timmar. Innertemperatur: **75–80 °C (167�
 
 ---
 
-### 4. African Bites / Immaculate Bites — Pernil (Puerto Rican Roast Pork Shoulder) (Caribbean tradition)
+### 4. Pernil (Puerto Rican Roast Pork Shoulder) (inspired by African Bites / Immaculate Bites)
 **Inspired by**: Imma Africanbites, Africanbites.com; https://africanbites.com/pernil-puerto-rican-roast-pork/ (fetched 2026-04-26). *Pernil is a slow-roasted pork shoulder (or leg) marinated in savory herbs, spices, and citrus — the showpiece roast of Puerto Rico, traditionally served at Christmas with arroz con gandules and tostones. The marinade of garlic, cumin, oregano, sazón, and sour orange penetrates deep into the meat; the shoulder is roasted low-and-slow at 275 °F before a high blast to 500 °F to form the crispy, puffed skin (cuerito).*
 **Serves**: 8–10 · **Prep**: 4 hr–2 days marinade · **Cook**: 3–4 hr low + 20 min high
 

@@ -25,7 +25,7 @@ Innertemperatur: **80–88 °C (176–190 °F)** för genomstekt, saftig fläskb
 
 ## Source recipes
 
-### 1. Madens Verden — Stegt Flæsk med Persillesovs (Danish national dish)
+### 1. Stegt Flæsk med Persillesovs (Danish national dish) (inspired by Madens Verden)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/stegt-flaesk-persillesovs/ (fetched 2026-04-24). *"Stegt flæsk med persillesovs — Denmark's national dish." 4.7/5, 96 ratings.*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 40 min · **Total**: 1 hr
 
@@ -50,7 +50,7 @@ Innertemperatur: **80–88 °C (176–190 °F)** för genomstekt, saftig fläskb
 
 ---
 
-### 2. ichkoche.at — Gebratene Bauchfleischstreifen (Austrian tradition — pan-fried strips)
+### 2. Gebratene Bauchfleischstreifen (inspired by ichkoche.at)
 **Inspired by**: ichkoche.at; https://www.ichkoche.at/gebratene-bauchfleischstreifen-rezept-219500 (fetched 2026-04-24). *"Fried pork belly strips from the Heuriger tradition." 333 ratings, 15–30 min.*
 **Serves**: 4 · **Cook**: 15–30 min
 
@@ -73,7 +73,7 @@ Innertemperatur: **80–88 °C (176–190 °F)** för genomstekt, saftig fläskb
 
 ---
 
-### 3. ichkoche.at — Gebratenes Bauchfleisch (Austrian tradition — oven-to-pan)
+### 3. Gebratenes Bauchfleisch (inspired by ichkoche.at)
 **Inspired by**: ichkoche.at; https://www.ichkoche.at/gebratenes-bauchfleisch-rezept-216728 (fetched 2026-04-24). *"Roasted pork belly: first oven, then pan-finished." 215 ratings.*
 **Serves**: 4 · **Cook**: 1 hr oven + 2 min pan
 
@@ -106,7 +106,7 @@ Innertemperatur: **80–88 °C (176–190 °F)** för genomstekt, saftig fläskb
 
 ---
 
-### 4. The Woks of Life — Korean Crispy Pork Belly Kimchi Bowls (Korean tradition)
+### 4. Korean Crispy Pork Belly Kimchi Bowls (inspired by The Woks of Life)
 **Inspired by**: Bill Leung, The Woks of Life; https://thewoksoflife.com/pork-belly-kimchi-bowls/ (fetched 2026-04-26). *Inspired by *dubu kimchi* from New York Koreatown, this 10-minute pan-fried pork belly recipe uses thinly sliced belly, a screaming-hot wok, and gochujang (Korean red pepper paste) to produce caramelised, slightly crisp slices in under 10 minutes. The belly is pan-fried (not deep-fried) in a wok — the fat renders quickly and crisps the exterior while the interior stays tender.*
 **Serves**: 2 · **Prep**: 3 min · **Cook**: 7 min
 

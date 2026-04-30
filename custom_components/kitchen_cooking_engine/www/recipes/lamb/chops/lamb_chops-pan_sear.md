@@ -34,7 +34,7 @@ Rosmarin-vitlökssmör-basting är den franska och brittiska standardmetoden. So
 
 ## Source recipes
 
-### 1. Vahrehvah.com — Spicy Lamb Chops (Indian/South Asian tradition)
+### 1. Spicy Lamb Chops (inspired by Vahrehvah.com)
 **Inspired by**: Vahrehvah.com (Chef Sanjay Thumma, Hyderabad); https://www.vahrehvah.com/spicy-lamb-chops (fetched 2026-04-24). *Published 20 February 2019.*
 **Serves**: 2 · **Prep**: 20 min marinate · **Cook**: 30 min
 
@@ -66,7 +66,7 @@ Rosmarin-vitlökssmör-basting är den franska och brittiska standardmetoden. So
 
 ---
 
-### 2. BBC Good Food — Pan-fried Lamb Chops with Rosemary and Garlic (British/French tradition)
+### 2. Pan-fried Lamb Chops with Rosemary and Garlic (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/pan-fried-lamb-chops (web search 2026-04-24)
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 10 min
 
@@ -88,7 +88,7 @@ Rosmarin-vitlökssmör-basting är den franska och brittiska standardmetoden. So
 
 ---
 
-### 3. Africanbites.com — Pan-Grilled Lamb Chops (West African tradition)
+### 3. Pan-Grilled Lamb Chops (inspired by Africanbites.com)
 **Inspired by**: Africanbites.com; https://www.africanbites.com/grilled-lamb-chops/ (fetched 2026-04-24). *Grill pan variation of the recipe.*
 **Serves**: 4 · **Prep**: 1 hr · **Cook**: 10 min
 

@@ -60,7 +60,7 @@ Denna magerhet kräver låg ugnstemperatur (max 135 °C) med fuktbevaring. Omvä
 
 ## Source recipes
 
-### 1. Chefkoch.de — Bisonbraten (German tradition, high-heat oven)
+### 1. Bisonbraten (inspired by Chefkoch.de)
 **Inspired by**: acigrand, Chefkoch.de community recipe;
 chefkoch.de/rezepte/234021095857919/Bisonbraten.html (fetched 2026-06-08;
 4.5/5 stars from 2 ratings)
@@ -104,7 +104,7 @@ chefkoch.de/rezepte/234021095857919/Bisonbraten.html (fetched 2026-06-08;
 
 ---
 
-### 2. Chefkoch.de — Bisonbraten mit Mozzarella-Senfkruste (German tradition, low-heat oven with herb crust)
+### 2. Bisonbraten mit Mozzarella-Senfkruste (inspired by Chefkoch.de)
 **Inspired by**: backfee_65, Chefkoch.de community recipe;
 chefkoch.de/rezepte/2763771428258460/Bisonbraten-mit-Mozzarella-Senfkruste.html
 (fetched 2026-06-08; 5/5 stars from 2 ratings)

@@ -18,7 +18,7 @@ Köttburgarbiffar stekta i panna är hemmakökstandarden för doneness-kontroll 
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Pan-Fried Smash Burger
+### 1. Pan-Fried Smash Burger (inspired by J. Kenji López-Alt)
 **Inspired by**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015); https://www.seriouseats.com/smash-burger-recipe  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 4–6 min · **Rest**: 1 min
 
@@ -43,7 +43,7 @@ Köttburgarbiffar stekta i panna är hemmakökstandarden för doneness-kontroll 
 
 ---
 
-### 2. Nigel Slater — Beef Burger in Cast Iron (British tradition)
+### 2. Beef Burger in Cast Iron (inspired by Nigel Slater)
 **Inspired by**: Nigel Slater, *The Kitchen Diaries II* (Fourth Estate, 2012); theguardian.com/food  
 **Serves**: 2 · **Prep**: 15 min (+30 min chilling) · **Cook**: 8–10 min · **Rest**: 3 min
 
@@ -68,7 +68,7 @@ Köttburgarbiffar stekta i panna är hemmakökstandarden för doneness-kontroll 
 
 ---
 
-### 3. Fergus Henderson — Short Rib Burger in Pan (Nose-to-Tail tradition)
+### 3. Short Rib Burger in Pan (inspired by Fergus Henderson)
 **Inspired by**: Fergus Henderson & Justin Piers Gellatly, *Beyond Nose to Tail* (Bloomsbury, 2007); stjohnrestaurant.com  
 **Serves**: 4 · **Prep**: 20 min (+1 hr resting) · **Cook**: 8–10 min · **Rest**: 3 min
 
@@ -91,7 +91,7 @@ Köttburgarbiffar stekta i panna är hemmakökstandarden för doneness-kontroll 
 
 ---
 
-### 4. Momofuku / David Chang — Korean-Influenced Crispy Skillet Burger
+### 4. Korean-Influenced Crispy Skillet Burger (inspired by Momofuku / David Chang)
 **Inspired by**: David Chang & Peter Meehan, *Momofuku* (Clarkson Potter, 2009); momofuku.com  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 2 min
 
@@ -116,7 +116,7 @@ Köttburgarbiffar stekta i panna är hemmakökstandarden för doneness-kontroll 
 
 ---
 
-### 5. Diana Yen / The Jewels of New York — Taiwanese Beef Burger in Wok/Pan
+### 5. Taiwanese Beef Burger in Wok/Pan (inspired by Diana Yen / The Jewels of New York)
 **Inspired by**: Diana Yen, *The Jewels of New York Cookbook* (Rizzoli, 2015); thejewelsofnewyork.com  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 8–10 min · **Rest**: 2 min
 

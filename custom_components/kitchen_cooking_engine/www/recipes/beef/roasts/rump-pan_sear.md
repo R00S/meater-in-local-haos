@@ -42,7 +42,7 @@ Nötrumpa i biffform skärs från rumpprimalen — det område vid korsningen av
 
 ## Source recipes
 
-### 1. Good Food — Rump Steak (British tradition)
+### 1. Rump Steak (inspired by Good Food)
 **Inspired by**: Good Food magazine; bbcgoodfood.com/recipes/rump-steak  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 3–8 min
 
@@ -64,7 +64,7 @@ Nötrumpa i biffform skärs från rumpprimalen — det område vid korsningen av
 
 ---
 
-### 2. Köket.se — Rumpstek à la Bercy (Swedish tradition)
+### 2. Rumpstek à la Bercy (inspired by Köket.se)
 **Inspired by**: Köket.se, koket.se/rumpstek-a-la-bercy  
 **Serves**: 4 · **Cut used**: 4 rumpstekar (200 g each)
 
@@ -95,7 +95,7 @@ Nötrumpa i biffform skärs från rumpprimalen — det område vid korsningen av
 
 ---
 
-### 3. Good Food — Thai Beef with Coconut Dressing (Thai-inspired, Group B source)
+### 3. Thai Beef with Coconut Dressing (Thai-inspired, Group B source) (inspired by Good Food)
 **Inspired by**: Good Food magazine, September 2013; bbcgoodfood.com/recipes/thai-beef-coconut-dressing  
 **Serves**: 2 · **Cut used**: 250 g **beef steak (we used rump)**
 
@@ -119,7 +119,7 @@ Nötrumpa i biffform skärs från rumpprimalen — det område vid korsningen av
 
 ---
 
-### 4. Good Food — Mexican Steak with Beans (Mexican-inspired, Group B source)
+### 4. Mexican Steak with Beans (Mexican-inspired, Group B source) (inspired by Good Food)
 **Inspired by**: Good Food magazine, July 2012; bbcgoodfood.com/recipes/mexican-steak-homemade-refried-beans  
 **Serves**: 2 · **Cut used**: 2 small **sirloin or rump steaks**, or 1 large
 

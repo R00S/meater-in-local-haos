@@ -18,7 +18,7 @@ Paprika (*Capsicum annuum*) sauterade i strimlor eller ringar är en av de mest 
 
 ## Source recipes
 
-### 1. Fuchsia Dunlop — Qīngjiāo Chǎo Ròusī (青椒炒肉丝 — Green Pepper and Pork Stir-Fry, vegetable adaptation)
+### 1. Qīngjiāo Chǎo Ròusī (青椒炒肉丝 — Green Pepper and Pork Stir-Fry, vegetable adaptation) (inspired by Fuchsia Dunlop)
 **Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 5–6 min · **Rest**: 0 min (serve immediately)
 
@@ -44,7 +44,7 @@ Paprika (*Capsicum annuum*) sauterade i strimlor eller ringar är en av de mest 
 
 ---
 
-### 2. Madhur Jaffrey — Shimla Mirch aur Aloo (Indian / North Indian sauté)
+### 2. Shimla Mirch aur Aloo (Indian / North Indian sauté) (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 2 min
 
@@ -75,7 +75,7 @@ Paprika (*Capsicum annuum*) sauterade i strimlor eller ringar är en av de mest 
 
 ---
 
-### 3. José Andrés — Pisto Manchego (Spanish tradition)
+### 3. Pisto Manchego (inspired by José Andrés)
 **Inspired by**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
 **Serves**: 4–6 · **Prep**: 15 min · **Cook**: 30–35 min · **Rest**: 5 min
 
@@ -103,7 +103,7 @@ Paprika (*Capsicum annuum*) sauterade i strimlor eller ringar är en av de mest 
 
 ---
 
-### 4. Julia Child — Ratatouille (French / Provençal tradition)
+### 4. Ratatouille (inspired by Julia Child)
 **Inspired by**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
 **Serves**: 6–8 · **Prep**: 20 min (+ salting) · **Cook**: 60–80 min total · **Rest**: 5 min
 

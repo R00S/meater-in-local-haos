@@ -24,7 +24,7 @@ Badtemperaturen är måltemperaturen — sonden kan inte användas under det fö
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Sous Vide Top Sirloin (American tradition)
+### 1. Sous Vide Top Sirloin (inspired by J. Kenji López-Alt)
 **Inspired by**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/the-food-lab-complete-guide-to-sous-vide-steak  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 1–4 h at 54 °C + 90-second sear · **Rest**: 0 min
 
@@ -43,7 +43,7 @@ Badtemperaturen är måltemperaturen — sonden kan inte användas under det fö
 
 ---
 
-### 2. Thomas Keller — Sous Vide Sirloin (French haute cuisine tradition)
+### 2. Sous Vide Sirloin (inspired by Thomas Keller)
 **Inspired by**: Thomas Keller, *Under Pressure: Cooking Sous Vide* (Artisan Books, 2008)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 1 h at 57.5 °C + sear · **Rest**: 0 min
 
@@ -62,7 +62,7 @@ Badtemperaturen är måltemperaturen — sonden kan inte användas under det fö
 
 ---
 
-### 3. Heston Blumenthal — Sous Vide Sirloin (British Modernist tradition)
+### 3. Sous Vide Sirloin (inspired by Heston Blumenthal)
 **Inspired by**: Heston Blumenthal, *The Fat Duck Cookbook* (Bloomsbury Publishing, 2008)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 45 min at 55 °C + sear · **Rest**: 0 min
 
@@ -80,7 +80,7 @@ Badtemperaturen är måltemperaturen — sonden kan inte användas under det fö
 
 ---
 
-### 4. Grant Achatz — Sous Vide Sirloin with Aromatic Bag (American Modernist tradition)
+### 4. Sous Vide Sirloin with Aromatic Bag (inspired by Grant Achatz)
 **Inspired by**: Grant Achatz and Nick Kokonas, *Alinea* (Ten Speed Press, 2008)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 2 h at 54 °C + sear · **Rest**: 0 min
 
@@ -98,7 +98,7 @@ Badtemperaturen är måltemperaturen — sonden kan inte användas under det fö
 
 ---
 
-### 5. Neil Perry — Sous Vide Sirloin, Australian Style (Australian tradition)
+### 5. Sous Vide Sirloin, Australian Style (inspired by Neil Perry)
 **Inspired by**: Neil Perry, *The Food I Love* (Murdoch Books, 2005); extended with sous vide technique from Perry's documented approach  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 2 h at 54 °C + sear · **Rest**: 0 min
 

@@ -18,7 +18,7 @@ Ekollon-squash (*Cucurbita pepo*) ugnsrostad i klyftor eller halvskal vid 200–
 
 ## Source recipes
 
-### 1. Yotam Ottolenghi — Roasted Acorn Squash with Za'atar and Pomegranate (Israeli / Middle Eastern tradition)
+### 1. Roasted Acorn Squash with Za'atar and Pomegranate (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 35–40 min · **Rest**: 5 min
 
@@ -31,7 +31,7 @@ Ekollon-squash (*Cucurbita pepo*) ugnsrostad i klyftor eller halvskal vid 200–
 
 ---
 
-### 2. Magnus Nilsson — Roasted Squash with Rapeseed Oil (Nordic tradition)
+### 2. Roasted Squash with Rapeseed Oil (inspired by Magnus Nilsson)
 **Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 35–40 min · **Rest**: 5 min
 
@@ -44,7 +44,7 @@ Ekollon-squash (*Cucurbita pepo*) ugnsrostad i klyftor eller halvskal vid 200–
 
 ---
 
-### 3. Madhur Jaffrey — Masala Roasted Squash Wedges (Indian tradition)
+### 3. Masala Roasted Squash Wedges (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 35–40 min · **Rest**: 3 min
 
@@ -57,7 +57,7 @@ Ekollon-squash (*Cucurbita pepo*) ugnsrostad i klyftor eller halvskal vid 200–
 
 ---
 
-### 4. Deborah Madison — Roasted Squash with Walnut-Herb Pesto (American vegetarian tradition)
+### 4. Roasted Squash with Walnut-Herb Pesto (inspired by Deborah Madison)
 **Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 35–40 min · **Rest**: 3 min
 

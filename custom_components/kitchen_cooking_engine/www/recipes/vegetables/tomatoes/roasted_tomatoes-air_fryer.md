@@ -18,7 +18,7 @@ Tomater (*Solanum lycopersicum*) i airfryern rostas på 8–15 minuter beroende 
 
 ## Source recipes
 
-### 1. Pailin Chongchitnant — Air-Fried Roasted Cherry Tomatoes for Nam Prik (Thai tradition)
+### 1. Air-Fried Roasted Cherry Tomatoes for Nam Prik (inspired by Pailin Chongchitnant)
 **Inspired by**: Pailin Chongchitnant, *Hot Thai Kitchen* (Appetite by Random House, 2016); technique adapted from her roasted-tomato chilli paste base; https://hot-thai-kitchen.com (confirmed accessible in training data).
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: 5 min (cooling for chilli paste blending)
 
@@ -41,7 +41,7 @@ Tomater (*Solanum lycopersicum*) i airfryern rostas på 8–15 minuter beroende 
 
 ---
 
-### 2. Swasthi Shreekanth — Air-Fried Tomatoes for Chutney (Indian tradition)
+### 2. Air-Fried Tomatoes for Chutney (inspired by Swasthi Shreekanth)
 **Inspired by**: Swasthi Shreekanth, IndianHealthyRecipes.com; method adapted from her roasted tomato chutney technique; https://www.indianhealthyrecipes.com (confirmed recipe base from site, fetched 2026-04-24).
 **Serves**: 4–6 (chutney) · **Prep**: 5 min · **Cook**: 12–14 min · **Rest**: 5 min
 
@@ -68,7 +68,7 @@ Tomater (*Solanum lycopersicum*) i airfryern rostas på 8–15 minuter beroende 
 
 ---
 
-### 3. Nefis Yemek Tarifleri — Fırın / Hava Fritözü Közlenmiş Domates (Turkish tradition)
+### 3. Fırın / Hava Fritözü Közlenmiş Domates (inspired by Nefis Yemek Tarifleri)
 **Inspired by**: Nefis Yemek Tarifleri community recipe base, nefisyemektarifleri.com (Turkish home-cooking platform); composite of Turkish style roasted-tomato preparation surveyed 2026-04-24; individual recipe URL: https://www.nefisyemektarifleri.com/firinda-domates/ (accessible per survey).
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 12–15 min · **Rest**: 3 min
 
@@ -92,7 +92,7 @@ Tomater (*Solanum lycopersicum*) i airfryern rostas på 8–15 minuter beroende 
 
 ---
 
-### 4. Ina Garten — Roasted Cherry Tomatoes in the Air Fryer (American tradition)
+### 4. Roasted Cherry Tomatoes in the Air Fryer (inspired by Ina Garten)
 **Inspired by**: Ina Garten, *Modern Comfort Food* (Clarkson Potter, 2020); technique adapted to air fryer from her roasted tomato method.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 10 min · **Rest**: 3 min
 

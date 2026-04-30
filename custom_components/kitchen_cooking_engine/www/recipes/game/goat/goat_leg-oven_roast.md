@@ -34,7 +34,7 @@ Långsam ugnsstekning vid 160–200 °C i 2–3 timmar ger bäst resultat. Inner
 
 ## Source recipes
 
-### 1. Chefkoch.de — Ziegenkeule im Römertopf (German tradition)
+### 1. Ziegenkeule im Römertopf (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/45381015326785/Ziegenkeule-im-Roemertopf.html (fetched 2026-04-24). *Rated 4.3/5.*
 **Serves**: 4 · **Prep**: 72 hrs marinade · **Cook**: 2 h 30 min
 
@@ -65,7 +65,7 @@ Långsam ugnsstekning vid 160–200 °C i 2–3 timmar ger bäst resultat. Inner
 
 ---
 
-### 2. African Bites — Asun Goat (Nigerian roasted leg tradition)
+### 2. Asun Goat (inspired by African Bites)
 **Inspired by**: Africanbites.com; https://www.africanbites.com/asun-spicy-roast-goat/ (fetched 2026-04-24)
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 1 hr 30 min
 
@@ -91,7 +91,7 @@ Långsam ugnsstekning vid 160–200 °C i 2–3 timmar ger bäst resultat. Inner
 
 ---
 
-### 3. Laylita.com — Seco de Chivo (Ecuadorian goat leg braised whole)
+### 3. Seco de Chivo (Ecuadorian goat leg braised whole) (inspired by Laylita.com)
 **Inspired by**: Laylita.com; https://www.laylita.com/recipes/seco-de-chivo/ (fetched 2026-04-24)
 **Serves**: 8 · **Prep**: 30 min · **Cook**: 2 hrs
 

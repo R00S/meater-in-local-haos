@@ -18,7 +18,7 @@ Kål (*Brassica oleracea* var. *capitata*) sauterad är en av de snabbaste och m
 
 ## Source recipes
 
-### 1. Pailin Chongchitnant — Pad Kalam Plee (Thai Stir-Fried Cabbage)
+### 1. Pad Kalam Plee (Thai Stir-Fried Cabbage) (inspired by Pailin Chongchitnant)
 **Inspired by**: Pailin Chongchitnant, *Hot Thai Kitchen* (Appetite by Random House, 2016); https://hot-thai-kitchen.com (stir-fried cabbage technique).
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 5–7 min · **Rest**: 1 min
 
@@ -42,7 +42,7 @@ Kål (*Brassica oleracea* var. *capitata*) sauterad är en av de snabbaste och m
 
 ---
 
-### 2. Fuchsia Dunlop — Gān Biān Bǎitái (干煸白菜 — Chinese Dry-Fried Cabbage with Chilli)
+### 2. Gān Biān Bǎitái (干煸白菜 — Chinese Dry-Fried Cabbage with Chilli) (inspired by Fuchsia Dunlop)
 **Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 1 min
 
@@ -66,7 +66,7 @@ Kål (*Brassica oleracea* var. *capitata*) sauterad är en av de snabbaste och m
 
 ---
 
-### 3. Madhur Jaffrey — Bandh Gobhi aur Zeera (Indian Cumin-Spiced Cabbage)
+### 3. Bandh Gobhi aur Zeera (Indian Cumin-Spiced Cabbage) (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 2 min
 
@@ -90,7 +90,7 @@ Kål (*Brassica oleracea* var. *capitata*) sauterad är en av de snabbaste och m
 
 ---
 
-### 4. Nigel Slater — Schmorkohl / Sautéed Sweetheart Cabbage with Caraway and Cream (German / British tradition)
+### 4. Schmorkohl / Sautéed Sweetheart Cabbage with Caraway and Cream (inspired by Nigel Slater)
 **Inspired by**: Nigel Slater, *Tender Vol. I* (4th Estate, 2009); sweetheart cabbage with cream and caraway as a British-German interpretation.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 2 min
 

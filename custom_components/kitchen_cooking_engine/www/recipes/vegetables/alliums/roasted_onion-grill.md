@@ -18,7 +18,7 @@ Hela lökar (*Allium cepa*) på grillen är en traditionell teknik i kulturer s�
 
 ## Source recipes
 
-### 1. Francis Mallmann — Cebollas Enteras a las Brasas (Argentine / South American tradition)
+### 1. Cebollas Enteras a las Brasas (inspired by Francis Mallmann)
 **Inspired by**: Francis Mallmann with Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)
 **Serves**: 4 · **Prep**: 3 min · **Cook**: 40–50 min over embers · **Rest**: 10 min
 
@@ -39,7 +39,7 @@ Hela lökar (*Allium cepa*) på grillen är en traditionell teknik i kulturer s�
 
 ---
 
-### 2. Diana Kennedy — Cebollas Cambray Asadas (Mexican tradition)
+### 2. Cebollas Cambray Asadas (inspired by Diana Kennedy)
 **Inspired by**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 20–25 min · **Rest**: 5 min
 
@@ -61,7 +61,7 @@ Hela lökar (*Allium cepa*) på grillen är en traditionell teknik i kulturer s�
 
 ---
 
-### 3. Yotam Ottolenghi — Charred Onions with Tahini (Middle Eastern / Israeli tradition)
+### 3. Charred Onions with Tahini (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Jerusalem* (Ebury Press, 2012)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 30–35 min · **Rest**: 5 min
 
@@ -84,7 +84,7 @@ Hela lökar (*Allium cepa*) på grillen är en traditionell teknik i kulturer s�
 
 ---
 
-### 4. Deborah Madison — Grilled Whole Onions with Herb Butter (American vegetarian tradition)
+### 4. Grilled Whole Onions with Herb Butter (inspired by Deborah Madison)
 **Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25–35 min · **Rest**: 5 min
 

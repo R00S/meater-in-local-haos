@@ -24,7 +24,7 @@ Entrecôte på träkol är den ultimata grillupplevelsen — träkol ger både s
 
 ## Source recipes
 
-### 1. GialloZafferano — Bistecca alla fiorentina (Italian tradition)
+### 1. Bistecca alla fiorentina (inspired by GialloZafferano)
 **Inspired by**: GialloZafferano (with master butcher Dario Cecchini); https://ricette.giallozafferano.it/Bistecca-alla-fiorentina.html (fetched 2026-04-24). *The authoritative Italian charcoal-grilled ribeye/T-bone: Chianina beef, aged 20–30 days, grilled over brace (charcoal of quercia/leccio — oak and holm oak).*
 **Serves**: 4 · **Prep**: 2–3 hr tempering · **Cook**: 20 min · **Difficulty**: Difficile
 
@@ -51,7 +51,7 @@ Entrecôte på träkol är den ultimata grillupplevelsen — träkol ger både s
 
 ---
 
-### 2. Madens Verden — Ribeye på gasgrill: Sådan griller du bøffen perfekt (Danish tradition)
+### 2. Ribeye på gasgrill: Sådan griller du bøffen perfekt (inspired by Madens Verden)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ribeye-paa-gasgrill/ (fetched 2026-04-24). *Danish gas-grill method with frequent turning — same principle applies to charcoal: high direct heat, minimal seasoning, frequent turns.*
 **Serves**: 4 · **Prep**: 2 hr (gourmet salting) · **Cook**: 6–10 min
 
@@ -78,7 +78,7 @@ Entrecôte på träkol är den ultimata grillupplevelsen — träkol ger både s
 
 ---
 
-### 3. Directo al Paladar — Chuletón a la brasa (Spanish tradition)
+### 3. Chuletón a la brasa (inspired by Directo al Paladar)
 **Inspired by**: Directoalpaladar.com; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/receta-de-chuleton-con-salsa-de-vino-y-fresas (fetched 2026-04-24). *Spanish chuletón (beef ribeye/rib chop) on a hot plancha or charcoal grill — classic Spanish simplicity: high heat, minimal seasoning, fleur de sel added after.*
 **Serves**: 2 · **Prep**: 30 min (tempering) · **Cook**: 6–8 min
 

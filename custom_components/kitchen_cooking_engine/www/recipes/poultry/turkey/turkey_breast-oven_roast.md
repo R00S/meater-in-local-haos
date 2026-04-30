@@ -30,7 +30,7 @@ Kalkonbröst kan köpas med ben (halvbröst på revbensstål, 1,5–2,5 kg) elle
 
 ## Source recipes
 
-### 1. Kenji López-Alt — Spatchcocked Turkey Breast (American tradition)
+### 1. Spatchcocked Turkey Breast (inspired by Kenji López-Alt)
 **Inspired by**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015); seriouseats.com/the-best-roast-turkey-breast-recipe  
 **Serves**: 4–6 · **Prep**: 15 min + optional overnight brine · **Cook**: 60–80 min · **Rest**: 10–15 min
 
@@ -61,7 +61,7 @@ Kalkonbröst kan köpas med ben (halvbröst på revbensstål, 1,5–2,5 kg) elle
 
 ---
 
-### 2. Ina Garten — Herb-Roasted Turkey Breast (American home-cooking tradition)
+### 2. Herb-Roasted Turkey Breast (inspired by Ina Garten)
 **Inspired by**: Ina Garten, *Barefoot Contessa Foolproof* (Clarkson Potter, 2012); food52.com  
 **Serves**: 4–6 · **Prep**: 15 min · **Cook**: 1.5–2 hr · **Rest**: 15 min
 
@@ -93,7 +93,7 @@ Kalkonbröst kan köpas med ben (halvbröst på revbensstål, 1,5–2,5 kg) elle
 
 ---
 
-### 3. Diana Henry — Slow-Roasted Turkey Breast with Preserved Lemon and Olives (British/Moroccan fusion)
+### 3. Slow-Roasted Turkey Breast with Preserved Lemon and Olives (British/Moroccan fusion) (inspired by Diana Henry)
 **Inspired by**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015); telegraph.co.uk  
 **Serves**: 4 · **Prep**: 20 min + overnight marinating · **Cook**: 1.5 hr · **Rest**: 15 min
 

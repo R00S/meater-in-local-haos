@@ -23,7 +23,7 @@ Viktig teknik: tonfisk måste vara i rumstemperatur före seering; en kall biff 
 
 ## Source recipes
 
-### 1. Nobu Matsuhisa — Tuna Tataki with Ponzu (Japanese tradition)
+### 1. Tuna Tataki with Ponzu (inspired by Nobu Matsuhisa)
 **Inspired by**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 2–3 min · **Rest**: 1 min
 
@@ -46,7 +46,7 @@ Viktig teknik: tonfisk måste vara i rumstemperatur före seering; en kall biff 
 
 ---
 
-### 2. J. Kenji López-Alt — Pan-Seared Ahi Tuna Steaks (American tradition)
+### 2. Pan-Seared Ahi Tuna Steaks (inspired by J. Kenji López-Alt)
 **Inspired by**: J. Kenji López-Alt, seriouseats.com/pan-seared-tuna-steaks  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 3–4 min · **Rest**: 1 min
 
@@ -69,7 +69,7 @@ Viktig teknik: tonfisk måste vara i rumstemperatur före seering; en kall biff 
 
 ---
 
-### 3. Rick Stein — Charred Tuna with Salsa Rossa (Mediterranean / Italian tradition)
+### 3. Charred Tuna with Salsa Rossa (inspired by Rick Stein)
 **Inspired by**: Rick Stein, *Rick Stein's Seafood* (BBC Books, 2001)  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 4–5 min · **Rest**: 1 min
 
@@ -90,7 +90,7 @@ Viktig teknik: tonfisk måste vara i rumstemperatur före seering; en kall biff 
 
 ---
 
-### 4. Paula Wolfert — Thon à la Chermoula (Moroccan tradition)
+### 4. Thon à la Chermoula (inspired by Paula Wolfert)
 **Inspired by**: Paula Wolfert, *The Food of Morocco* (Ecco/HarperCollins, 2011)  
 **Serves**: 4 · **Prep**: 20 min (+2 h marinade) · **Cook**: 6–8 min · **Rest**: 2 min
 
@@ -109,7 +109,7 @@ Viktig teknik: tonfisk måste vara i rumstemperatur före seering; en kall biff 
 
 ---
 
-### 5. Gordon Ramsay — Seared Sesame Tuna with Ginger Dressing (British restaurant tradition)
+### 5. Seared Sesame Tuna with Ginger Dressing (inspired by Gordon Ramsay)
 **Inspired by**: Gordon Ramsay, *Gordon Ramsay's Secrets* (Quadrille Publishing, 2003)  
 **Serves**: 2 · **Prep**: 10 min (+30 min marinade) · **Cook**: 3–4 min · **Rest**: 1 min
 

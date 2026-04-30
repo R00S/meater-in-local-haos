@@ -18,7 +18,7 @@ Tomater (*Solanum lycopersicum*) ugnsrostade genomgår en djupgående transforma
 
 ## Source recipes
 
-### 1. Diana Kennedy — Jitomates Asados (Mexican tradition)
+### 1. Jitomates Asados (inspired by Diana Kennedy)
 **Inspired by**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
 **Serves**: 4–6 · **Prep**: 5 min · **Cook**: 30–35 min · **Rest**: 5 min (cooling for peeling)
 
@@ -39,7 +39,7 @@ Tomater (*Solanum lycopersicum*) ugnsrostade genomgår en djupgående transforma
 
 ---
 
-### 2. Marcella Hazan — Pomodori al Forno (Italian tradition)
+### 2. Pomodori al Forno (inspired by Marcella Hazan)
 **Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25–35 min · **Rest**: 5 min
 
@@ -62,7 +62,7 @@ Tomater (*Solanum lycopersicum*) ugnsrostade genomgår en djupgående transforma
 
 ---
 
-### 3. Claudia Roden — Tomates Confits (Moroccan / North African tradition)
+### 3. Tomates Confits (inspired by Claudia Roden)
 **Inspired by**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey and Lebanon* (Alfred A. Knopf, 2005)
 **Serves**: 4–6 · **Prep**: 5 min · **Cook**: 1 hour 30 min – 2 hours (slow-roast) · **Rest**: 10 min
 
@@ -88,7 +88,7 @@ Tomater (*Solanum lycopersicum*) ugnsrostade genomgår en djupgående transforma
 
 ---
 
-### 4. Yotam Ottolenghi — Burst Cherry Tomatoes with Za'atar (Middle Eastern / Israeli tradition)
+### 4. Burst Cherry Tomatoes with Za'atar (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 20–25 min · **Rest**: 5 min
 

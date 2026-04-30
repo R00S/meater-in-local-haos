@@ -34,7 +34,7 @@ Ankbröst är ett mörkt, rikt snitt med ett tjockt lager subcutant fett under e
 
 ## Source recipes
 
-### 1. BBC Good Food — Slow-Roast Duck (adapted for breast)
+### 1. Slow-Roast Duck (adapted for breast) (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food editorial team, BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roast-duck (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 13 hr (whole duck — breast adaptation below) · **Rest**: 15 min
 
@@ -71,7 +71,7 @@ Ankbröst är ett mörkt, rikt snitt med ett tjockt lager subcutant fett under e
 
 ---
 
-### 2. Classic Culinary Technique — Cold-Pan Duck Breast (standard restaurant method)
+### 2. Cold-Pan Duck Breast (standard restaurant method) (inspired by Classic Culinary Technique)
 **Inspired by**: Documented culinary technique, widely used in professional kitchens; general knowledge synthesis.
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 20–25 min · **Rest**: 5–8 min
 
@@ -106,7 +106,7 @@ Ankbröst är ett mörkt, rikt snitt med ett tjockt lager subcutant fett under e
 
 ---
 
-### 3. Xiachufang (下厨房) — 低温慢烤法式鸭胸肉 (Chinese Low-Temperature Slow-Roasted French Duck Breast)
+### 3. 低温慢烤法式鸭胸肉 (Chinese Low-Temperature Slow-Roasted French Duck Breast) (inspired by Xiachufang)
 **Inspired by**: User recipe on Xiachufang.com (China's largest recipe-sharing platform, comparable to Allrecipes); https://www.xiachufang.com/recipe/102126154/ (fetched 2026-04-24, language: Chinese — ingredients and method translated below).
 **Serves**: 2–3 · **Prep**: 30 min · **Cook**: 10 min oven after sear · **Rest**: 5 min
 

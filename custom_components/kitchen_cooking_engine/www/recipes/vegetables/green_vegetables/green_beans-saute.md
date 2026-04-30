@@ -18,7 +18,7 @@ Gröna bönor (*Phaseolus vulgaris*) sauterade i het panna — kinesisk *gan bia
 
 ## Source recipes
 
-### 1. Fuchsia Dunlop — Gān Biān Sìjìdòu (干煸四季豆 — Chinese Dry-Fried Green Beans)
+### 1. Gān Biān Sìjìdòu (干煸四季豆 — Chinese Dry-Fried Green Beans) (inspired by Fuchsia Dunlop)
 **Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 1 min
 
@@ -41,7 +41,7 @@ Gröna bönor (*Phaseolus vulgaris*) sauterade i het panna — kinesisk *gan bia
 
 ---
 
-### 2. Pailin Chongchitnant — Pad Tua Fak Yao (Thai Stir-Fried Yard-Long Beans)
+### 2. Pad Tua Fak Yao (Thai Stir-Fried Yard-Long Beans) (inspired by Pailin Chongchitnant)
 **Inspired by**: Pailin Chongchitnant, *Hot Thai Kitchen* (Appetite by Random House, 2016); https://hot-thai-kitchen.com (stir-fried yard-long bean technique).
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 5–7 min · **Rest**: 1 min
 
@@ -62,7 +62,7 @@ Gröna bönor (*Phaseolus vulgaris*) sauterade i het panna — kinesisk *gan bia
 
 ---
 
-### 3. Madhur Jaffrey — Sabzi Tamater Beans (Indian tradition)
+### 3. Sabzi Tamater Beans (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 2 min
 
@@ -84,7 +84,7 @@ Gröna bönor (*Phaseolus vulgaris*) sauterade i het panna — kinesisk *gan bia
 
 ---
 
-### 4. Julia Child — Haricots Verts Sautés au Beurre (French tradition)
+### 4. Haricots Verts Sautés au Beurre (inspired by Julia Child)
 **Inspired by**: Julia Child, *The French Chef Cookbook* (Alfred A. Knopf, 1968)
 **Serves**: 4 · **Prep**: 5 min (+ pre-blanching 3 min) · **Cook**: 3–4 min · **Rest**: 1 min
 

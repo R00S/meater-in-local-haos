@@ -39,7 +39,7 @@ Regnbågsforell (*Oncorhynchus mykiss*) och brun öring (*Salmo trutta*, svenska
 
 ## Source recipes
 
-### 1. BBC Good Food — Pan-Fried Trout with Bacon, Almonds & Beetroot (British tradition)
+### 1. Pan-Fried Trout with Bacon, Almonds & Beetroot (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food magazine, March 2014;
 bbcgoodfood.com/recipes/pan-fried-trout-bacon-almonds-beetroot (fetched 2026-04-24)
 **Serves**: 3 · **Cook**: 25 min
@@ -76,7 +76,7 @@ bbcgoodfood.com/recipes/pan-fried-trout-bacon-almonds-beetroot (fetched 2026-04-
 
 ---
 
-### 2. Matprat.no — Pannestekt ørret med dillpoteter og squash / Pan-Fried Trout with Dill Potatoes (Norwegian tradition)
+### 2. Pannestekt ørret med dillpoteter og squash / Pan-Fried Trout with Dill Potatoes (inspired by Matprat.no)
 **Inspired by**: Matprat.no (Norwegian Meat and Poultry Research Centre / Opplysningskontoret for egg og kjøtt);
 matprat.no/oppskrifter/familien/stekt-roye-med-dillpoteter-og-squash/ (fetched 2026-04-24)
 **Serves**: 4 · **Cook**: 30 min
@@ -117,7 +117,7 @@ matprat.no/oppskrifter/familien/stekt-roye-med-dillpoteter-og-squash/ (fetched 2
 
 ---
 
-### 3. Chefkoch.de / acigrand — Forelle gebraten / Fried Whole Trout (German tradition)
+### 3. Forelle gebraten / Fried Whole Trout (inspired by Chefkoch.de / acigrand)
 **Inspired by**: acigrand, Chefkoch.de community recipe;
 chefkoch.de/rezepte/291301108152695/Forelle-gebraten.html (fetched 2026-04-24;
 4.3/5 stars, 47 ratings)
@@ -154,7 +154,7 @@ chefkoch.de/rezepte/291301108152695/Forelle-gebraten.html (fetched 2026-04-24;
 
 ---
 
-### 4. Giallozafferano — Trota Salmonata in Padella con Pomodorini e Olive (Italian tradition)
+### 4. Trota Salmonata in Padella con Pomodorini e Olive (inspired by Giallozafferano)
 **Inspired by**: Giallozafferano (Italian culinary media);
 ricette.giallozafferano.it/Trota-salmonata-in-padella.html (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 15 min
@@ -192,7 +192,7 @@ ricette.giallozafferano.it/Trota-salmonata-in-padella.html (fetched 2026-04-24)
 
 ---
 
-### 5. Suzy Karadsheh (The Mediterranean Dish) — Mediterranean Pan-Seared Trout with Tzatziki (Mediterranean / Egyptian-American tradition)
+### 5. Mediterranean Pan-Seared Trout with Tzatziki (inspired by Suzy Karadsheh)
 **Inspired by**: Suzy Karadsheh, The Mediterranean Dish;
 themediterraneandish.com/mediterranean-seared-trout-recipe-tzatziki/ (fetched 2026-04-24)
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 10 min

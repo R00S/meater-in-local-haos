@@ -18,7 +18,7 @@ The hanger steak (onglet in French, lombatello in Italian, nierenzapfen in Germa
 Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på tyska) hänger från djurets diafragma mellan det sista revbenet och länden, fäst vid ryggraden med en enda tjock central sena som löper längs hela muskeln och brukar tas bort av slaktaren före försäljning. Eftersom det bara finns en hanger per djur och muskeln utför kontinuerligt andningsarbete är fibrerna grova och löst alignade, vilket ger en öppen, eftergivande textur som tar upp kryddning exceptionellt väl och frigör rikliga juicer vid skärning. Smaken är den mest mineraliska och intensivt nötiga av alla vanliga snabba tillagningssnitt. Pan-searing är idealiskt för hanger eftersom den direkta ledande värmen från gjutjärns- eller kolstålspanna driver den Maillard-reaktion som snittet behöver innan den magra insidan överkokas; den lösa ådringsstrukturen driver ut fukt snabbt över 60 °C, vilket gör temperaturprecision viktigare här än med en mer förlåtande ribeye. Eftervärmen är måttlig – vanligtvis 3–5 °C – och eftersom biffen ofta är tunnare och mindre regelbunden än ribeye är sondplacering i den tjockaste magra delen kritisk.
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Butter-Basted Pan-Seared Hanger Steak (American tradition)
+### 1. Butter-Basted Pan-Seared Hanger Steak (inspired by J. Kenji López-Alt)
 **Inspired by**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/hanger-steak-recipe  
 **Serves**: 2 · **Prep**: 10 min (+1 h dry-brine) · **Cook**: 8–10 min · **Rest**: 5–8 min
 
@@ -44,7 +44,7 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 
 ---
 
-### 2. Stéphane Reynaud — Onglet à l'Échalote (French bistrot tradition)
+### 2. Onglet à l'Échalote (inspired by Stéphane Reynaud)
 **Inspired by**: Stéphane Reynaud, *Ripailles: Traditional French Cuisine* (Flammarion, 2009)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 10 min · **Rest**: 3–5 min
 
@@ -74,7 +74,7 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 
 ---
 
-### 3. Hugh Fearnley-Whittingstall — Bavette / Onglet Seared in Dripping (British tradition)
+### 3. Bavette / Onglet Seared in Dripping (inspired by Hugh Fearnley-Whittingstall)
 **Inspired by**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004)  
 **Serves**: 2 · **Prep**: 10 min (+20–30 min tempering) · **Cook**: 6–8 min · **Rest**: 5 min
 
@@ -98,7 +98,7 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 
 ---
 
-### 4. Deuki Hong and Matt Rodbard — 안창살구이 Anchang-Sal Pan-Sear (Korean tradition)
+### 4. 안창살구이 Anchang-Sal Pan-Sear (inspired by Deuki Hong and Matt Rodbard)
 **Inspired by**: Deuki Hong and Matt Rodbard, *Koreatown: A Cookbook* (Clarkson Potter, 2016)  
 **Serves**: 2 · **Prep**: 15 min (+30 min marinating) · **Cook**: 6–8 min · **Rest**: 3 min
 

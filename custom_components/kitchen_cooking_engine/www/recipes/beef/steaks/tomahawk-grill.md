@@ -26,7 +26,7 @@ Målinterna temperaturer:
 - Kärntemperatur vid bord: **57–60 °C (135–140 °F)**
 ## Source recipes
 
-### 1. GialloZafferano — Tomahawk alla griglia (Italian tradition)
+### 1. Tomahawk alla griglia (inspired by GialloZafferano)
 **Inspired by**: GialloZafferano; https://ricette.giallozafferano.it/Tomahawk-alla-griglia.html (fetched 2026-04-24). *"Carnivori di tutto il web, accorrete: oggi prepariamo una bistecca degna della tavola dei Flintstones."*
 **Serves**: 2–4 · **Prep**: 1 hr tempering + aromatized salt · **Cook**: 30 min · **Cost**: Elevato
 
@@ -59,7 +59,7 @@ Målinterna temperaturer:
 
 ---
 
-### 2. Chefkoch.de — Tomahawk Steak Dry Aged vom Grill (German tradition)
+### 2. Tomahawk Steak Dry Aged vom Grill (inspired by Chefkoch.de)
 **Inspired by**: tipsyman, Chefkoch.de; https://www.chefkoch.de/rezepte/2617661411074274/Tomahawk-Steak-Dry-Aged-vom-Grill.html (fetched 2026-04-24). *"Eines der besten Steaks die ich jemals gegessen habe..."*
 **Serves**: 2 · **Prep**: 30 min (tempering) · **Cook**: 30 min · **Rating**: 4.8/5 (10 ratings)
 
@@ -85,7 +85,7 @@ Målinterna temperaturer:
 
 ---
 
-### 3. RecipeTin Eats — Tomahawk Steak: reverse sear (oven then BBQ) (Australian tradition)
+### 3. Tomahawk Steak: reverse sear (oven then BBQ) (inspired by RecipeTin Eats)
 **Inspired by**: Nagi Maehashi & JB (Jean-Baptiste Alexandre), RecipeTin Eats; https://www.recipetineats.com/tomahawk-steak/ (fetched 2026-04-24). *"The best way to cook a tomahawk steak is using the reverse-sear method. Safe, simple and highly effective that yields juicier meat and a better crust."*
 **Serves**: 2–3 · **Prep**: 10 min (de-chill 1 hr ahead) · **Cook**: 40–45 min oven + 6–8 min grill
 

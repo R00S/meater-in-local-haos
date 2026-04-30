@@ -18,7 +18,7 @@ Champinjoner (*Agaricus bisporus*) ugnsrostade vid 200–220 °C koncentrerar si
 
 ## Source recipes
 
-### 1. Harumi Kurihara — Kinoko no Oven Yaki (Japanese oven-roasted mushrooms)
+### 1. Kinoko no Oven Yaki (Japanese oven-roasted mushrooms) (inspired by Harumi Kurihara)
 **Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 20–22 min · **Rest**: 2 min
 
@@ -42,7 +42,7 @@ Champinjoner (*Agaricus bisporus*) ugnsrostade vid 200–220 °C koncentrerar si
 
 ---
 
-### 2. Madhur Jaffrey — Dhingri Masala (Mushroom Masala, oven adaptation — Indian tradition)
+### 2. Dhingri Masala (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25 min · **Rest**: 3 min
 
@@ -70,7 +70,7 @@ Champinjoner (*Agaricus bisporus*) ugnsrostade vid 200–220 °C koncentrerar si
 
 ---
 
-### 3. Claudia Roden — Champignons Rôtis à la Marocaine (Moroccan / North African tradition)
+### 3. Champignons Rôtis à la Marocaine (inspired by Claudia Roden)
 **Inspired by**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey and Lebanon* (Alfred A. Knopf, 2005)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 20–25 min · **Rest**: 3 min
 
@@ -95,7 +95,7 @@ Champinjoner (*Agaricus bisporus*) ugnsrostade vid 200–220 °C koncentrerar si
 
 ---
 
-### 4. Marcella Hazan — Funghi Trifolati al Forno (Italian tradition)
+### 4. Funghi Trifolati al Forno (inspired by Marcella Hazan)
 **Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 22–25 min · **Rest**: 3 min
 

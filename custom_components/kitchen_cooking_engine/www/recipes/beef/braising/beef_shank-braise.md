@@ -21,7 +21,7 @@ Oxlägg är den nedre delen av framlägget (foreshank) eller baklägget (hindsha
 
 ## Source recipes
 
-### 1. Marcella Hazan — Osso Buco alla Milanese (Italian / Lombard tradition)
+### 1. Osso Buco alla Milanese (inspired by Marcella Hazan)
 **Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 2 hr · **Rest**: 15 min
 
@@ -56,7 +56,7 @@ Oxlägg är den nedre delen av framlägget (foreshank) eller baklägget (hindsha
 
 ---
 
-### 2. Tina Nordström — Långkokt Oxlägg (Swedish home tradition)
+### 2. Långkokt Oxlägg (inspired by Tina Nordström)
 **Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 3.5 hr · **Rest**: 20 min
 
@@ -90,7 +90,7 @@ Oxlägg är den nedre delen av framlägget (foreshank) eller baklägget (hindsha
 
 ---
 
-### 3. Yotam Ottolenghi & Sami Tamimi — Beef Shank Tagine with Saffron and Almonds (Levantine / North-African tradition)
+### 3. Beef Shank Tagine with Saffron and Almonds (inspired by Yotam Ottolenghi & Sami Tamimi)
 **Inspired by**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 3 hr · **Rest**: 15 min
 
@@ -127,7 +127,7 @@ Oxlägg är den nedre delen av framlägget (foreshank) eller baklägget (hindsha
 
 ---
 
-### 4. Andrea Nguyen — Bò Kho with Beef Shank (Vietnamese tradition)
+### 4. Bò Kho with Beef Shank (inspired by Andrea Nguyen)
 **Inspired by**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019); vietworldkitchen.com  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 2.5 hr · **Rest**: 10 min
 

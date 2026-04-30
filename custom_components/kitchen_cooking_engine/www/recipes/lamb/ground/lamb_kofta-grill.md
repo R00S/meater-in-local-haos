@@ -34,7 +34,7 @@ Det enda säkra sättet att verifiera genomkokning är med sond. Innertemperatur
 
 ## Source recipes
 
-### 1. TurkishFoodTravel.com — Authentic Turkish Köfte (Turkish tradition)
+### 1. Authentic Turkish Köfte (inspired by TurkishFoodTravel.com)
 **Inspired by**: TurkishFoodTravel.com; https://www.turkishfoodtravel.com/2025/02/26/turkish-kofte-meatballs/ (web search 2026-04-24). *"Turkish Meatballs/Köfte: How to Make Authentic Turkish Köfte"*
 **Serves**: 4 · **Prep**: 2 hrs + overnight rest · **Cook**: 15 min
 
@@ -61,7 +61,7 @@ Det enda säkra sättet att verifiera genomkokning är med sond. Innertemperatur
 
 ---
 
-### 2. Nefisyemektarifleri.com — Adana Kebabı (Turkish kofta on skewer)
+### 2. Adana Kebabı (Turkish kofta on skewer) (inspired by Nefisyemektarifleri.com)
 **Inspired by**: Nefisyemektarifleri.com; https://www.nefisyemektarifleri.com/adana-kebabi/ (web search 2026-04-24). *Adana kebab — Turkey's most famous grilled kofta, from Adana province.*
 **Serves**: 4 · **Prep**: 1 hr · **Cook**: 20 min
 
@@ -88,7 +88,7 @@ Det enda säkra sättet att verifiera genomkokning är med sond. Innertemperatur
 
 ---
 
-### 3. IndianHealthyRecipes.com — Seekh Kebab (Indian spiced lamb skewer, barbecue tradition)
+### 3. Seekh Kebab (inspired by IndianHealthyRecipes.com)
 **Inspired by**: IndianHealthyRecipes.com (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/seekh-kebab-recipe/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 15 min
 

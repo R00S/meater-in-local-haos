@@ -18,7 +18,7 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) pannstekta (halverade, snitty
 
 ## Source recipes
 
-### 1. Marcella Hazan — Cavolini di Bruxelles in Padella (Italian tradition)
+### 1. Cavolini di Bruxelles in Padella (inspired by Marcella Hazan)
 **Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: 3 min
 
@@ -34,7 +34,7 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) pannstekta (halverade, snitty
 
 ---
 
-### 2. Fuchsia Dunlop — Pan-Fried Brussels Sprouts with Doubanjiang (Chinese tradition)
+### 2. Pan-Fried Brussels Sprouts with Doubanjiang (inspired by Fuchsia Dunlop)
 **Inspired by**: Fuchsia Dunlop, *Every Grain of Rice* (W. W. Norton, 2012); dry-fry technique adapted for Brussels sprouts.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: 2 min
 
@@ -49,7 +49,7 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) pannstekta (halverade, snitty
 
 ---
 
-### 3. Maangchi — Korean Pan-Fried Brussels Sprouts (Korean tradition)
+### 3. Korean Pan-Fried Brussels Sprouts (inspired by Maangchi)
 **Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: 2 min
 
@@ -63,7 +63,7 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) pannstekta (halverade, snitty
 
 ---
 
-### 4. Deborah Madison — Pan-Fried Brussels Sprouts with Butter and Sage (American vegetarian tradition)
+### 4. Pan-Fried Brussels Sprouts with Butter and Sage (inspired by Deborah Madison)
 **Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: 2 min
 

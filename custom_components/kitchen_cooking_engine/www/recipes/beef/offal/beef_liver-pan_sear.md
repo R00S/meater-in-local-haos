@@ -21,7 +21,7 @@ Pannstek av lever (utan lök) är den snabbare, mer minimalistiska metoden — o
 
 ## Source recipes
 
-### 1. Fergus Henderson — Calf's Liver, Bacon and Onions (British nose-to-tail tradition)
+### 1. Calf's Liver, Bacon and Onions (inspired by Fergus Henderson)
 **Inspired by**: Fergus Henderson, *The Whole Beast: Nose to Tail Eating* (Macmillan, 1999/2004); stjohnrestaurant.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 12–14 min · **Rest**: 2 min
 
@@ -48,7 +48,7 @@ Pannstek av lever (utan lök) är den snabbare, mer minimalistiska metoden — o
 
 ---
 
-### 2. Anthony Bourdain — Calf's Liver Persillade (French bistro tradition)
+### 2. Calf's Liver Persillade (inspired by Anthony Bourdain)
 **Inspired by**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 1 min
 
@@ -74,7 +74,7 @@ Pannstek av lever (utan lök) är den snabbare, mer minimalistiska metoden — o
 
 ---
 
-### 3. José Pizarro — Hígado de Ternera con Cebolla y Pimentón (Spanish tradition)
+### 3. Hígado de Ternera con Cebolla y Pimentón (inspired by José Pizarro)
 **Inspired by**: José Pizarro, *Spanish Flavours* (Kyle Books, 2012); josepizarro.com  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12 min · **Rest**: 1 min
 
@@ -100,7 +100,7 @@ Pannstek av lever (utan lök) är den snabbare, mer minimalistiska metoden — o
 
 ---
 
-### 4. Magnus Nilsson — Seared Calf's Liver with Browned Butter & Lingonberries (Nordic tradition)
+### 4. Seared Calf's Liver with Browned Butter & Lingonberries (inspired by Magnus Nilsson)
 **Inspired by**: Magnus Nilsson, *Faviken* (Phaidon, 2012) and *The Nordic Cookbook* (Phaidon, 2015)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8 min · **Rest**: 2 min
 

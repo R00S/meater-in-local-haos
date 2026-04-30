@@ -26,7 +26,7 @@ Bräsera: het panna för att brynna, sedan 160–170 °C ugn 2–3 timmar i täc
 
 ## Source recipes
 
-### 1. Geoffrey Smeddle — Pork Cheek with Crispy Ham Hock Bon Bon (Scottish fine dining tradition, Culinary Group B)
+### 1. Pork Cheek with Crispy Ham Hock Bon Bon (inspired by Geoffrey Smeddle)
 **Inspired by**: Geoffrey Smeddle (chef-patron, The Peat Inn, Fife, Scotland), greatbritishchefs.com/recipes/pork-cheek-recipe  
 **Serves**: 8 · **Prep**: 30 min + 24 hr marinating · **Cook**: approx. 1 hr 10 min · **Rest**: 10 min
 

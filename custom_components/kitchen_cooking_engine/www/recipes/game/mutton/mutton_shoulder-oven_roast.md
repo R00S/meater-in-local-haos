@@ -34,7 +34,7 @@ Innertemperatur: **82–90 °C (180–194 °F)** för pull-apart. Minimum livsme
 
 ## Source recipes
 
-### 1. BBC Good Food — Slow-roasted Mutton Shoulder (British tradition)
+### 1. Slow-roasted Mutton Shoulder (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roasted-shoulder-mutton (web search 2026-04-24)
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 4.5 hrs
 
@@ -60,7 +60,7 @@ Innertemperatur: **82–90 °C (180–194 °F)** för pull-apart. Minimum livsme
 
 ---
 
-### 2. Nefisyemektarifleri.com — Fırında Kuzu Kol (Turkish oven-roasted lamb/mutton shoulder)
+### 2. Fırında Kuzu Kol (Turkish oven-roasted lamb/mutton shoulder) (inspired by Nefisyemektarifleri.com)
 **Inspired by**: Nefisyemektarifleri.com; https://www.nefisyemektarifleri.com/firinda-sebzeli-kuzu-kol/ (fetched 2026-04-24 — log reference)
 **Serves**: 4–6 · **Prep**: 20 min · **Cook**: 2 h 30 min
 
@@ -90,7 +90,7 @@ Innertemperatur: **82–90 °C (180–194 °F)** för pull-apart. Minimum livsme
 
 ---
 
-### 3. Povarenok.ru — Шашлык из баранины (Russian / Central Asian slow-roasted mutton)
+### 3. Шашлык из баранины (Russian / Central Asian slow-roasted mutton) (inspired by Povarenok.ru)
 **Inspired by**: Povarenok.ru; https://www.povarenok.ru/recipes/show/98462/ (fetched 2026-04-24)
 **Serves**: 6 · **Prep**: 2 hrs · **Cook**: 3.5 hrs
 

@@ -34,7 +34,7 @@ Den svenska traditionen serverar älgstek rosa med grädde och lingon. Innertemp
 
 ## Source recipes
 
-### 1. Chefkoch.de — Elchbraten (Älg i grytan) — Swedish oven-braise (German recipe citing Swedish tradition)
+### 1. Elchbraten (Älg i grytan) — Swedish oven-braise (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/1097651215764212/Elchbraten-Aelg-i-grytan.html (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 1 h 30 min
 
@@ -59,7 +59,7 @@ Den svenska traditionen serverar älgstek rosa med grädde och lingon. Innertemp
 
 ---
 
-### 2. Tasteline.com — Älgstek i ugn (Swedish oven roast)
+### 2. Älgstek i ugn (Swedish oven roast) (inspired by Tasteline.com)
 **Inspired by**: Tasteline.com; https://www.tasteline.com/ingrediens/alg/ (fetched 2026-04-24); general Swedish game cooking guidance.
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 1 h 30 min
 
@@ -86,7 +86,7 @@ Den svenska traditionen serverar älgstek rosa med grädde och lingon. Innertemp
 
 ---
 
-### 3. Matprat.no — Elgstek i ovnen (Norwegian oven roast)
+### 3. Elgstek i ovnen (Norwegian oven roast) (inspired by Matprat.no)
 **Inspired by**: Matprat.no; https://www.matprat.no/oppskrifter/gjester/elgstek/ (web search 2026-04-24)
 **Serves**: 6 · **Prep**: 20 min + overnight marinade · **Cook**: 2 hrs
 

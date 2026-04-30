@@ -38,7 +38,7 @@ Pannsteksningstiden: 3–4 minuter per sida i smör vid hög värme. Sond insatt
 
 ## Source recipes
 
-### 1. BBC Good Food — Pan-Fried Venison with Blackberry Sauce (UK tradition)
+### 1. Pan-Fried Venison with Blackberry Sauce (inspired by BBC Good Food)
 **Inspired by**: Good Food Magazine, November 2007; https://www.bbcgoodfood.com/recipes/pan-fried-venison-blackberry-sauce (fetched 2025-07-13)
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 15 min
 
@@ -66,7 +66,7 @@ Pannsteksningstiden: 3–4 minuter per sida i smör vid hög värme. Sond insatt
 
 ---
 
-### 2. Matprat — Hjortefilet med snittebønnestuing (Norwegian tradition)
+### 2. Hjortefilet med snittebønnestuing (inspired by Matprat)
 **Inspired by**: Matprat.no; https://www.matprat.no/oppskrifter/gjester/hjortefilet-med-snittebonnestuing/ (fetched 2025-07-13)
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 35 min
 
@@ -104,7 +104,7 @@ Pannsteksningstiden: 3–4 minuter per sida i smör vid hög värme. Sond insatt
 
 ---
 
-### 3. Tasteline — Hjortstek (Swedish tradition)
+### 3. Hjortstek (inspired by Tasteline)
 **Inspired by**: Tasteline.com; https://www.tasteline.com/recept/hjortstek/ (fetched 2025-07-13)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 60 min
 
@@ -138,7 +138,7 @@ Pannsteksningstiden: 3–4 minuter per sida i smör vid hög värme. Sond insatt
 
 ---
 
-### 4. Chefkoch — Hirschmedaillons in Preiselbeer-Rahmsauce (German tradition)
+### 4. Hirschmedaillons in Preiselbeer-Rahmsauce (inspired by Chefkoch)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/1696211277979587/Hirschmedaillons-in-pfiffiger-Preiselbeer-Rahmsauce.html (fetched 2025-07-13)
 **Serves**: 2 · **Prep**: 30 min · **Cook**: 30 min (plus overnight thaw)
 
@@ -166,7 +166,7 @@ Pannsteksningstiden: 3–4 minuter per sida i smör vid hög värme. Sond insatt
 
 ---
 
-### 5. GialloZafferano — Arrosto di Cervo (Italian tradition)
+### 5. Arrosto di Cervo (inspired by GialloZafferano)
 **Inspired by**: Chef Stefano Croce, Agritur El Mas di Moena; https://ricette.giallozafferano.it/Arrosto-di-cervo.html (fetched 2025-07-13)
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 60 min
 
@@ -203,7 +203,7 @@ Pannsteksningstiden: 3–4 minuter per sida i smör vid hög värme. Sond insatt
 
 ---
 
-### 6. The Rustic Elk — Marinated Venison Steak (North American tradition)
+### 6. Marinated Venison Steak (inspired by The Rustic Elk)
 **Inspired by**: The Rustic Elk; https://www.therusticelk.com/marinated-venison-steak-recipe/ (fetched 2025-07-13)
 **Serves**: 4 · **Prep**: 10 min (+ 3 hr marinate) · **Cook**: 10 min
 

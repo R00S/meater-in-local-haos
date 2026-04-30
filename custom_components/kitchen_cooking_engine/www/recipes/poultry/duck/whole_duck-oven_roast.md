@@ -32,7 +32,7 @@ En hel anka presenterar en signifikant tillagningsutmaning: bröstkötten är b�
 
 ## Source recipes
 
-### 1. BBC Good Food — Slow-Roast Duck (Czech-style, from Apetit Online)
+### 1. Slow-Roast Duck (Czech-style, from Apetit Online) (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food editorial team, BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roast-duck (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 13 hr · **Rest**: 15–20 min
 
@@ -103,7 +103,7 @@ En hel anka presenterar en signifikant tillagningsutmaning: bröstkötten är b�
 
 ---
 
-### 3. BBC Good Food — Crispy Roast Duck
+### 3. Crispy Roast Duck (inspired by BBC Good Food)
 **Inspired by**: Ruth Watson, BBC Good Food; https://www.bbcgoodfood.com/recipes/crispy-roast-duck (fetched 2026-04-24).
 **Serves**: 6 · **Prep**: 60 min · **Cook**: 90 min · **Rest**: 10–15 min
 

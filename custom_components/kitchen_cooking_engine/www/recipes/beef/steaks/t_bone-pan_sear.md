@@ -19,7 +19,7 @@ T-bonebiffen definieras av det T-formade ryggkotsbenet som separerar två distin
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Pan-Seared T-Bone (American steakhouse tradition)
+### 1. Pan-Seared T-Bone (inspired by J. Kenji López-Alt)
 **Inspired by**: J. Kenji López-Alt, seriouseats.com/perfect-pan-seared-t-bone; *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -44,7 +44,7 @@ T-bonebiffen definieras av det T-formade ryggkotsbenet som separerar två distin
 
 ---
 
-### 2. Gordon Ramsay — Pan-Seared T-Bone with Brown Butter (British restaurant tradition)
+### 2. Pan-Seared T-Bone with Brown Butter (inspired by Gordon Ramsay)
 **Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -68,7 +68,7 @@ T-bonebiffen definieras av det T-formade ryggkotsbenet som separerar två distin
 
 ---
 
-### 3. Julia Child — *Côte de Bœuf* au Beurre (French bistro tradition)
+### 3. *Côte de Bœuf* au Beurre (inspired by Julia Child)
 **Inspired by**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961) — addressing bone-in loin steaks including the equivalent of the T-bone (*côte de bœuf*)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–12 min · **Rest**: 5 min
 
@@ -90,7 +90,7 @@ T-bonebiffen definieras av det T-formade ryggkotsbenet som separerar två distin
 
 ---
 
-### 4. Fergus Henderson — Pan-Seared T-Bone with Watercress (British tradition)
+### 4. Pan-Seared T-Bone with Watercress (inspired by Fergus Henderson)
 **Inspired by**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -110,7 +110,7 @@ T-bonebiffen definieras av det T-formade ryggkotsbenet som separerar två distin
 
 ---
 
-### 5. Neil Perry — Pan-Seared T-Bone (Australian steakhouse tradition)
+### 5. Pan-Seared T-Bone (inspired by Neil Perry)
 **Inspired by**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
 **Serves**: 2 · **Prep**: 5 min (+30 min dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 

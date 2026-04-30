@@ -23,7 +23,7 @@ Innertemperaturen är nödvändig men otillräcklig: snittet behöver tid vid 88
 
 ## Source recipes
 
-### 1. Yotam Ottolenghi & Sami Tamimi — Slow-Braised Goat Shoulder with Pomegranate, Cumin & Walnuts (Levantine tradition)
+### 1. Slow-Braised Goat Shoulder with Pomegranate, Cumin & Walnuts (inspired by Yotam Ottolenghi & Sami Tamimi)
 **Inspired by**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 5 hours · **Rest**: 20 min
 
@@ -53,7 +53,7 @@ Innertemperaturen är nödvändig men otillräcklig: snittet behöver tid vid 88
 
 ---
 
-### 2. Tina Nordström — Långbräserad Getskuldra med Rödvin (Swedish/Nordic tradition)
+### 2. Långbräserad Getskuldra med Rödvin (inspired by Tina Nordström)
 **Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se — viltsektionen  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 5 hours · **Rest**: 20 min
 
@@ -82,7 +82,7 @@ Innertemperaturen är nödvändig men otillräcklig: snittet behöver tid vid 88
 
 ---
 
-### 3. Hugh Fearnley-Whittingstall — Slow-Braised Goat Shoulder with Cider (British River Cottage tradition)
+### 3. Slow-Braised Goat Shoulder with Cider (inspired by Hugh Fearnley-Whittingstall)
 **Inspired by**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004); rivercottage.net  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 5 hours · **Rest**: 20 min
 
@@ -109,7 +109,7 @@ Innertemperaturen är nödvändig men otillräcklig: snittet behöver tid vid 88
 
 ---
 
-### 4. Maricel Presilla — Cabrito en Salsa Verde / Slow-Braised Goat Shoulder (Latin American tradition)
+### 4. Cabrito en Salsa Verde / Slow-Braised Goat Shoulder (inspired by Maricel Presilla)
 **Inspired by**: Maricel E. Presilla, *Gran Cocina Latina: The Food of Latin America* (W. W. Norton, 2012)  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 5 hours · **Rest**: 20 min
 

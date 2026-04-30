@@ -29,7 +29,7 @@ Sear fettlocket nedåt i het torr panna tills rendat och gyllene, sedan sear all
 
 ## Source recipes
 
-### 1. Richard Corrigan — Lamb Rump with Salsify and Wild Mushrooms (British/Irish tradition, Culinary Group B)
+### 1. Lamb Rump with Salsify and Wild Mushrooms (inspired by Richard Corrigan)
 **Inspired by**: Richard Corrigan, greatbritishchefs.com/recipes/lamb-rump-salsify-recipe  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 30 min (including sides) · **Rest**: 6–8 min
 
@@ -52,7 +52,7 @@ Sear fettlocket nedåt i het torr panna tills rendat och gyllene, sedan sear all
 
 ---
 
-### 2. Tom Kitchin — Rump of Lamb with Baby Gem Lettuce (Scottish tradition, Culinary Group B)
+### 2. Rump of Lamb with Baby Gem Lettuce (inspired by Tom Kitchin)
 **Inspired by**: Tom Kitchin (The Kitchin, Edinburgh), greatbritishchefs.com/recipes/lamb-rump-recipe  
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 15 min (lamb component) · **Rest**: 10 min
 
@@ -72,7 +72,7 @@ Sear fettlocket nedåt i het torr panna tills rendat och gyllene, sedan sear all
 
 ---
 
-### 3. Pierre Koffmann — Herb-Crusted Lamb Rump (French classic tradition, Culinary Group B)
+### 3. Herb-Crusted Lamb Rump (inspired by Pierre Koffmann)
 **Inspired by**: Pierre Koffmann, greatbritishchefs.com/recipes/lamb-butternut-squash-recipe  
 **Serves**: 6 · **Prep**: 40 min · **Cook**: 20 min (lamb component) · **Rest**: 5 min
 

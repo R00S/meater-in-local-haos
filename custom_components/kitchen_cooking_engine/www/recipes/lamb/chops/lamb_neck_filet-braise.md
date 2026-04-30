@@ -24,7 +24,7 @@ Den resulterande bräseringen är intensivt välsmakande och perfekt för tagine
 
 ## Source recipes
 
-### 1. Simply Delicious (Alida Ryder, Cape Town, South Africa) — Slow Braised Lamb Neck
+### 1. Slow Braised Lamb Neck (inspired by Simply Delicious)
 **Inspired by**: https://simply-delicious-food.com/slow-braised-lamb-neck/  
 **Tradition**: South African / French-inspired cooking — **Culinary Group B** *(recipe author: Alida Ryder, South African food blogger based in Cape Town; the recipe is labelled "Cuisine: French" in the recipe card but is a South African home cook's interpretation)*  
 **Serves**: 6–8 · **Prep**: 20 min · **Cook**: 3 hr · **Total**: 3 hr 20 min

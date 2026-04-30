@@ -18,7 +18,7 @@ Spenat (*Spinacia oleracea*) ångad — hålls ovanför kokande vatten i en ång
 
 ## Source recipes
 
-### 1. Harumi Kurihara — Steamed Spinach Ohitashi (Japanese tradition)
+### 1. Steamed Spinach Ohitashi (inspired by Harumi Kurihara)
 **Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 2–3 min + chilling · **Rest**: 5 min (cooling)
 
@@ -33,7 +33,7 @@ Spenat (*Spinacia oleracea*) ångad — hålls ovanför kokande vatten i en ång
 
 ---
 
-### 2. Madhur Jaffrey — Steamed Palak with Coconut Tadka (Indian tradition)
+### 2. Steamed Palak with Coconut Tadka (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010); South Indian coconut tadka method.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 3–4 min steam + 2 min tadka · **Rest**: 1 min
 
@@ -47,7 +47,7 @@ Spenat (*Spinacia oleracea*) ångad — hålls ovanför kokande vatten i en ång
 
 ---
 
-### 3. Fuchsia Dunlop — Steamed Spinach with Sesame Oil and Soy (Chinese tradition)
+### 3. Steamed Spinach with Sesame Oil and Soy (inspired by Fuchsia Dunlop)
 **Inspired by**: Fuchsia Dunlop, *Every Grain of Rice* (W. W. Norton, 2012); *liáng bàn* (cold-dressed) spinach.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 2–3 min · **Rest**: 3 min (cooling)
 
@@ -60,7 +60,7 @@ Spenat (*Spinacia oleracea*) ångad — hålls ovanför kokande vatten i en ång
 
 ---
 
-### 4. Marcella Hazan — Steamed Spinach with Olive Oil and Lemon (Italian tradition)
+### 4. Steamed Spinach with Olive Oil and Lemon (inspired by Marcella Hazan)
 **Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 3–4 min · **Rest**: 1 min
 

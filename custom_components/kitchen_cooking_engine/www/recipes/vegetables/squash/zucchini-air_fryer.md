@@ -18,7 +18,7 @@ Zucchini (*Cucurbita pepo* var. *cylindrica*) skuren i 1–2 cm rundlar, halvmå
 
 ## Source recipes
 
-### 1. Maangchi (Emily Kim) — Air-Fried Hobak Jeon Style Zucchini (Korean tradition)
+### 1. Air-Fried Hobak Jeon Style Zucchini (inspired by Maangchi)
 **Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 2 min
 
@@ -32,7 +32,7 @@ Zucchini (*Cucurbita pepo* var. *cylindrica*) skuren i 1–2 cm rundlar, halvmå
 
 ---
 
-### 2. Harumi Kurihara — Zucchini Karaage (Japanese tradition)
+### 2. Zucchini Karaage (inspired by Harumi Kurihara)
 **Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
@@ -46,7 +46,7 @@ Zucchini (*Cucurbita pepo* var. *cylindrica*) skuren i 1–2 cm rundlar, halvmå
 
 ---
 
-### 3. Madhur Jaffrey — Spiced Air-Fried Zucchini Rounds (Indian tradition)
+### 3. Spiced Air-Fried Zucchini Rounds (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 2 min
 
@@ -59,7 +59,7 @@ Zucchini (*Cucurbita pepo* var. *cylindrica*) skuren i 1–2 cm rundlar, halvmå
 
 ---
 
-### 4. Yotam Ottolenghi — Air-Fried Zucchini with Lemon Yoghurt (Israeli / Middle Eastern tradition)
+### 4. Air-Fried Zucchini with Lemon Yoghurt (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 2 min
 

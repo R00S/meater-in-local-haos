@@ -23,7 +23,7 @@ Air fryer-tillagning av fläskbuk ger svål på 25–35 minuter — snabbare än
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt / Serious Eats — Air Fryer Crispy Pork Belly
+### 1. Air Fryer Crispy Pork Belly (inspired by J. Kenji López-Alt / Serious Eats)
 **Inspired by**: seriouseats.com  
 **Serves**: 2–4 · **Prep**: 15 min (+1 h drying) · **Cook**: 25–30 min · **Rest**: 5 min
 
@@ -56,7 +56,7 @@ Air fryer-tillagning av fläskbuk ger svål på 25–35 minuter — snabbare än
 
 ---
 
-### 2. Nigella Lawson — Chinese-Spiced Air Fryer Crispy Pork Belly
+### 2. Chinese-Spiced Air Fryer Crispy Pork Belly (inspired by Nigella Lawson)
 **Inspired by**: nigella.com  
 **Serves**: 2–4 · **Prep**: 20 min (+overnight marinade and drying) · **Cook**: 30 min · **Rest**: none
 
@@ -91,7 +91,7 @@ Air fryer-tillagning av fläskbuk ger svål på 25–35 minuter — snabbare än
 
 ---
 
-### 3. Marion Grasby — Asian Salt-Crusted Air Fryer Crispy Pork Belly
+### 3. Asian Salt-Crusted Air Fryer Crispy Pork Belly (inspired by Marion Grasby)
 **Inspired by**: Marion's Kitchen (marions-kitchen.com)  
 **Serves**: 4 · **Prep**: 20 min (+1–2 h drying) · **Cook**: 30 min at 200°C + 5–10 min at 220°C · **Rest**: 5 min
 
@@ -125,7 +125,7 @@ Air fryer-tillagning av fläskbuk ger svål på 25–35 minuter — snabbare än
 
 ---
 
-### 4. ICA/Coop Sweden — Sidfläsk i luftfritösen (Air Fryer Pork Belly)
+### 4. Sidfläsk i luftfritösen (Air Fryer Pork Belly) (inspired by ICA/Coop Sweden)
 **Inspired by**: ica.se/recept; consistent with coop.se/recept and Swedish air-fryer
 guidance for *sidfläsk*  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25–30 min · **Rest**: 5 min
@@ -157,7 +157,7 @@ guidance for *sidfläsk*
 
 ---
 
-### 5. The Woks of Life (Leung family) — Air Fryer Cantonese Crispy Pork Belly (脆皮燒肉)
+### 5. Air Fryer Cantonese Crispy Pork Belly (脆皮燒肉) (inspired by The Woks of Life)
 **Inspired by**: thewoksoflife.com (Bill, Judy, Sarah, and Kaitlin Leung); consistent
 with Cantonese *siu yuk* (燒味 roast meat) tradition adapted for home air fryers  
 **Serves**: 4 · **Prep**: 30 min (+overnight dry-cure) · **Cook**: 20–22 min at 200°C + 5–8 min at 220°C · **Rest**: 5 min

@@ -34,7 +34,7 @@ Innertemperatur: **85–95 °C (185–203 °F)** för pull-apart. Eftertillagnin
 
 ## Source recipes
 
-### 1. Chefkoch.de — Wildschweinschulter ganz einfach (German tradition)
+### 1. Wildschweinschulter ganz einfach (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/3444381513162705/Wildschweinschulter-ganz-einfach.html (fetched 2026-04-24)
 **Serves**: 3 · **Prep**: 35 min · **Cook**: 3 h 20 min
 
@@ -62,7 +62,7 @@ Innertemperatur: **85–95 °C (185–203 °F)** för pull-apart. Eftertillagnin
 
 ---
 
-### 2. Giallozafferano.it — Cinghiale in umido (Italian slow-roast tradition)
+### 2. Cinghiale in umido (inspired by Giallozafferano.it)
 **Inspired by**: Giallozafferano / Sonia Peronaci; https://ricette.giallozafferano.it/Cinghiale-in-umido.html (fetched 2026-04-24)
 **Serves**: 6 · **Prep**: 24 hrs marinade · **Cook**: 3 hrs
 
@@ -97,7 +97,7 @@ Innertemperatur: **85–95 °C (185–203 °F)** för pull-apart. Eftertillagnin
 
 ---
 
-### 3. Madensverden.dk — Langtidsstegt vildsvinsskulder (Danish tradition)
+### 3. Langtidsstegt vildsvinsskulder (inspired by Madensverden.dk)
 **Inspired by**: Madensverden.dk; https://madensverden.dk/vildsvinsskulder-opskrift/ (web search 2026-04-24)
 **Serves**: 4–6 · **Prep**: 20 min · **Cook**: 4 hrs
 

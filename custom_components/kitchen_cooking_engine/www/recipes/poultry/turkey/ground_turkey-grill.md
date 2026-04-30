@@ -32,7 +32,7 @@ Malt kalkon (hindi kıyması/Putenhackfleisch/tacchino macinato) är ett magert 
 
 ## Source recipes
 
-### 1. Nefis Yemek Tarifleri — Hindi Köftesi (Turkish tradition)
+### 1. Hindi Köftesi (inspired by Nefis Yemek Tarifleri)
 **Inspired by**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/hindi-koftesi-tarifi/ (fetched 2026-04-25). *"Hindi Köftesi — Turkish grilled turkey meatballs (köfte)."*
 **Serves**: 4–6 · **Prep**: 15 min · **Cook**: 10–12 min on grill
 
@@ -61,7 +61,7 @@ Malt kalkon (hindi kıyması/Putenhackfleisch/tacchino macinato) är ett magert 
 
 ---
 
-### 2. Tori Avey — Mediterranean Grilled Turkey Burgers (Israeli / Levantine tradition)
+### 2. Mediterranean Grilled Turkey Burgers (inspired by Tori Avey)
 **Inspired by**: Tori Avey; https://toriavey.com/mediterranean-turkey-burgers/ (fetched 2026-04-25). *"Mediterranean Turkey Burgers — Levantine-spiced grilled turkey patties with basil and smoked paprika."*
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–15 min on grill
 
@@ -89,7 +89,7 @@ Malt kalkon (hindi kıyması/Putenhackfleisch/tacchino macinato) är ett magert 
 
 ---
 
-### 3. Chefkoch.de — Puten-Hamburger mit Röstzwiebeln (German tradition)
+### 3. Puten-Hamburger mit Röstzwiebeln (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/3064261458952311/ (fetched 2026-04-25). *"Puten-Hamburger mit Röstzwiebeln — German turkey burger with crispy onions."*
 **Serves**: 2 (4 patties) · **Prep**: 10 min · **Cook**: 7 min
 
@@ -116,7 +116,7 @@ Malt kalkon (hindi kıyması/Putenhackfleisch/tacchino macinato) är ett magert 
 
 ---
 
-### 4. TASTE — Chicken Patties adapted for Turkey (South African tradition)
+### 4. Chicken Patties adapted for Turkey (inspired by TASTE)
 **Inspired by**: TASTE magazine South Africa; https://taste.co.za/recipes/chicken-patties/ (fetched 2026-04-25). *"Chicken Patties with Preserved Lemon — TASTE recipe, adapted here using turkey mince in place of chicken."*
 **Serves**: 4–6 · **Prep**: 15 min · **Cook**: 10–12 min on grill
 

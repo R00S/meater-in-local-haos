@@ -17,7 +17,7 @@ Filet mignon is the small, round, lean medallion cut from the narrow end of the 
 Filet mignon är det lilla, runda, magra medaljongsnittet från den smala änden av psoas major (nötköttsfilén). Den har ingen marmorering att tala om och ingen bindväv, vilket gör den extraordinärt mör men samtidigt lätt att torka ut över medium. Ugnsrostning av filet mignon är oftast en tvåstegsprocess: en spisbryning ger den Maillard-skorpa som den magra ytan inte kan skapa i ugnen ensam, följt av överföring till ugnen för att försiktigt föra insidan till måltemperatur utan att bränna skorpan. Reverse-sear-varianten (låg ugn först, högvärmebryning sist) ger den jämnaste temperaturgradienten genom det lilla, runda tvärsnittet. Eftervärmen är tydlig – en 4–5 cm filet mignon stiger efter uttag, så pull-temperaturen måste ligga tydligt under serveringstemperaturen.
 ## Source recipes
 
-### 1. Ina Garten — Pan-Seared Oven-Finished Filet Mignon
+### 1. Pan-Seared Oven-Finished Filet Mignon (inspired by Ina Garten)
 **Inspired by**: Ina Garten, *Make It Ahead* (Clarkson Potter, 2014); foodnetwork.com/recipes/ina-garten  
 **Serves**: 4 · **Prep**: 10 min (+45 min tempering) · **Cook**: 5 min sear + 8–12 min oven · **Rest**: 10 min
 
@@ -42,7 +42,7 @@ Filet mignon är det lilla, runda, magra medaljongsnittet från den smala änden
 
 ---
 
-### 2. Gordon Ramsay — Filet Mignon with Roasted Garlic Butter (British tradition)
+### 2. Filet Mignon with Roasted Garlic Butter (inspired by Gordon Ramsay)
 **Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012); gordonramsay.com/recipes  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 4 min sear + 6–10 min oven · **Rest**: 5 min
 
@@ -66,7 +66,7 @@ Filet mignon är det lilla, runda, magra medaljongsnittet från den smala änden
 
 ---
 
-### 3. Jacques Pépin — Filet Mignon au Four (French tradition)
+### 3. Filet Mignon au Four (inspired by Jacques Pépin)
 **Inspired by**: Jacques Pépin, *Jacques Pépin: New Complete Techniques* (Black Dog & Leventhal, 2012)  
 **Serves**: 2 · **Prep**: 10 min (+1 hr tempering) · **Cook**: 3 min sear + 8–12 min oven · **Rest**: 5 min
 
@@ -89,7 +89,7 @@ Filet mignon är det lilla, runda, magra medaljongsnittet från den smala änden
 
 ---
 
-### 4. Heston Blumenthal — Reverse-Sear Filet Mignon
+### 4. Reverse-Sear Filet Mignon (inspired by Heston Blumenthal)
 **Inspired by**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury, 2011)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 20–35 min low oven + 2 min sear · **Rest**: 5 min
 
@@ -112,7 +112,7 @@ Filet mignon är det lilla, runda, magra medaljongsnittet från den smala änden
 
 ---
 
-### 5. Tetsuya Wakuda — Oven-Roasted Wagyu Fillet (Japanese-Australian tradition)
+### 5. Oven-Roasted Wagyu Fillet (inspired by Tetsuya Wakuda)
 **Inspired by**: Tetsuya Wakuda, *Tetsuya* (Ten Speed Press, 2000); tetsuyas.com  
 **Serves**: 2 · **Prep**: 10 min (+overnight marinating) · **Cook**: 3 min sear + 8–10 min oven · **Rest**: 5 min
 

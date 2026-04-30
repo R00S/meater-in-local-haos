@@ -34,7 +34,7 @@ Tillagningstid: 2–3 minuter per sida. Sond insatt parallellt med stekens yta i
 
 ## Source recipes
 
-### 1. Chefkoch.de — Straußensteaks aus dem Ofen (German tradition)
+### 1. Straußensteaks aus dem Ofen (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/2012321326036993/Straussen-Steaks-aus-dem-Ofen.html (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 30 min
 
@@ -60,7 +60,7 @@ Tillagningstid: 2–3 minuter per sida. Sond insatt parallellt med stekens yta i
 
 ---
 
-### 2. EatOut.co.za — Ostrich steak South African style (South African tradition)
+### 2. Ostrich steak South African style (inspired by EatOut.co.za)
 **Inspired by**: EatOut.co.za; https://www.eatout.co.za/recipe/ostrich-steak-south-african/ (web search 2026-04-24)
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8 min
 
@@ -84,7 +84,7 @@ Tillagningstid: 2–3 minuter per sida. Sond insatt parallellt med stekens yta i
 
 ---
 
-### 3. Food24.com — Pan-seared ostrich with mushroom sauce (South African/Continental tradition)
+### 3. Pan-seared ostrich with mushroom sauce (inspired by Food24.com)
 **Inspired by**: Food24.com; https://www.food24.com/recipes/pan-seared-ostrich-steak/ (web search 2026-04-24)
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 15 min
 

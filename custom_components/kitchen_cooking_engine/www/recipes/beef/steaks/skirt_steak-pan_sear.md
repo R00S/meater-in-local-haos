@@ -19,7 +19,7 @@ Pannsekning av skirt steak i gjutjärnspanna eller rostfri stekpanna ger den mes
 
 ## Source recipes
 
-### 1. Diana Kennedy — Pan-Seared Skirt Steak Tacos (*Tacos de Arrachera*) (Mexican tradition)
+### 1. Pan-Seared Skirt Steak Tacos (*Tacos de Arrachera*) (inspired by Diana Kennedy)
 **Inspired by**: Diana Kennedy, *The Cuisines of Mexico* (Harper & Row, 1972)  
 **Serves**: 4 · **Prep**: 5 min (+2 h marinade) · **Cook**: 4–6 min · **Rest**: 3 min
 
@@ -40,7 +40,7 @@ Pannsekning av skirt steak i gjutjärnspanna eller rostfri stekpanna ger den mes
 
 ---
 
-### 2. J. Kenji López-Alt — Pan-Seared Skirt Steak Fajitas (American-Mexican tradition)
+### 2. Pan-Seared Skirt Steak Fajitas (inspired by J. Kenji López-Alt)
 **Inspired by**: J. Kenji López-Alt, seriouseats.com/the-best-steak-fajitas; *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015)  
 **Serves**: 4 · **Prep**: 15 min (+1 h marinade) · **Cook**: 6–8 min · **Rest**: 3 min
 
@@ -60,7 +60,7 @@ Pannsekning av skirt steak i gjutjärnspanna eller rostfri stekpanna ger den mes
 
 ---
 
-### 3. Nobu Matsuhisa — Pan-Seared Skirt Steak with Spicy Ponzu (Japanese tradition)
+### 3. Pan-Seared Skirt Steak with Spicy Ponzu (inspired by Nobu Matsuhisa)
 **Inspired by**: Nobu Matsuhisa, *Nobu: The Cookbook* (Kodansha International, 2001)  
 **Serves**: 4 · **Prep**: 10 min (+1 h marinade) · **Cook**: 4–6 min · **Rest**: 3 min
 
@@ -79,7 +79,7 @@ Pannsekning av skirt steak i gjutjärnspanna eller rostfri stekpanna ger den mes
 
 ---
 
-### 4. Fergus Henderson — Pan-Seared Skirt Steak, Anchovy and Capers (British tradition)
+### 4. Pan-Seared Skirt Steak, Anchovy and Capers (inspired by Fergus Henderson)
 **Inspired by**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 4–6 min · **Rest**: 3 min
 
@@ -99,7 +99,7 @@ Pannsekning av skirt steak i gjutjärnspanna eller rostfri stekpanna ger den mes
 
 ---
 
-### 5. Marcus Samuelsson — Pan-Seared Skirt Steak with Berbere (Ethiopian-American tradition)
+### 5. Pan-Seared Skirt Steak with Berbere (inspired by Marcus Samuelsson)
 **Inspired by**: Marcus Samuelsson, *The Soul of a New Cuisine* (John Wiley & Sons, 2006)  
 **Serves**: 2 · **Prep**: 10 min (+1 h marinade) · **Cook**: 4–6 min · **Rest**: 3 min
 

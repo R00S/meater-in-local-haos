@@ -19,7 +19,7 @@ Stekning av skirt steak i panna är vanligt i mexikansk hemlagning (på flat *co
 
 ## Source recipes
 
-### 1. Diana Kennedy — Comal-Fried *Arrachera* (Mexican home cooking tradition)
+### 1. Comal-Fried *Arrachera* (inspired by Diana Kennedy)
 **Inspired by**: Diana Kennedy, *My Mexico: A Culinary Odyssey* (Clarkson Potter, 1998)  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 4–6 min · **Rest**: 3 min
 
@@ -39,7 +39,7 @@ Stekning av skirt steak i panna är vanligt i mexikansk hemlagning (på flat *co
 
 ---
 
-### 2. Barbara Tropp — Wok-Fried Flank/Skirt Steak with Ginger (Chinese-American tradition)
+### 2. Wok-Fried Flank/Skirt Steak with Ginger (inspired by Barbara Tropp)
 **Inspired by**: Barbara Tropp, *The Modern Art of Chinese Cooking* (William Morrow, 1982)  
 **Serves**: 4 · **Prep**: 15 min (+30 min marinade) · **Cook**: 4–5 min · **Rest**: 2 min
 
@@ -62,7 +62,7 @@ Stekning av skirt steak i panna är vanligt i mexikansk hemlagning (på flat *co
 
 ---
 
-### 3. Nigella Lawson — Pan-Fried Skirt Steak with Salsa Verde (British contemporary tradition)
+### 3. Pan-Fried Skirt Steak with Salsa Verde (inspired by Nigella Lawson)
 **Inspired by**: Nigella Lawson, *Nigella Express* (Chatto & Windus, 2007)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 4–6 min · **Rest**: 3 min
 
@@ -82,7 +82,7 @@ Stekning av skirt steak i panna är vanligt i mexikansk hemlagning (på flat *co
 
 ---
 
-### 4. Nobu Matsuhisa — Pan-Fried Skirt Steak with Black Bean Sauce (Japanese-Chinese tradition)
+### 4. Pan-Fried Skirt Steak with Black Bean Sauce (inspired by Nobu Matsuhisa)
 **Inspired by**: Nobu Matsuhisa, *Nobu: The Cookbook* (Kodansha International, 2001)  
 **Serves**: 2 · **Prep**: 10 min (+1 h marinade) · **Cook**: 4–6 min · **Rest**: 3 min
 
@@ -101,7 +101,7 @@ Stekning av skirt steak i panna är vanligt i mexikansk hemlagning (på flat *co
 
 ---
 
-### 5. Yotam Ottolenghi — Pan-Fried Skirt Steak with Chermoula (North African tradition)
+### 5. Pan-Fried Skirt Steak with Chermoula (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
 **Serves**: 2 · **Prep**: 15 min (+2 h marinade) · **Cook**: 4–6 min · **Rest**: 3 min
 

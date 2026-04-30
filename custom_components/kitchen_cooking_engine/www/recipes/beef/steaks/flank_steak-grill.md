@@ -18,7 +18,7 @@ Flank steak är ett platt, benfritt snitt från bukväggen med tydliga, långa f
 
 ## Source recipes
 
-### 1. America's Test Kitchen — Gas-Grilled Flank Steak
+### 1. Gas-Grilled Flank Steak (inspired by America's Test Kitchen)
 **Inspired by**: America's Test Kitchen, *The Complete Cookbook for Two* (America's Test Kitchen, 2014); americastestkitchen.com  
 **Serves**: 4 · **Prep**: 10 min (+1 hr dry-brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -39,7 +39,7 @@ Flank steak är ett platt, benfritt snitt från bukväggen med tydliga, långa f
 
 ---
 
-### 2. Bobby Flay — Marinated Grilled Flank Steak (American SW tradition)
+### 2. Marinated Grilled Flank Steak (inspired by Bobby Flay)
 **Inspired by**: Bobby Flay, *Bobby Flay's Bold American Food* (Warner Books, 1994); bobbyflay.com  
 **Serves**: 4–6 · **Prep**: 20 min (+4–8 hr marinate) · **Cook**: 10–12 min · **Rest**: 5 min
 
@@ -67,7 +67,7 @@ Flank steak är ett platt, benfritt snitt från bukväggen med tydliga, långa f
 
 ---
 
-### 3. Rick Bayless — Mexican Carne Asada (Mexican tradition)
+### 3. Mexican Carne Asada (inspired by Rick Bayless)
 **Inspired by**: Rick Bayless, *Mexico: One Plate at a Time* (Scribner, 2000); rickbayless.com/recipe  
 **Serves**: 6 · **Prep**: 20 min (+2 hr marinate) · **Cook**: 8–10 min · **Rest**: 3 min
 
@@ -93,7 +93,7 @@ Flank steak är ett platt, benfritt snitt från bukväggen med tydliga, långa f
 
 ---
 
-### 4. Heston Blumenthal — Reverse-Sear Grilled Flank Steak (British modern)
+### 4. Reverse-Sear Grilled Flank Steak (British modern) (inspired by Heston Blumenthal)
 **Inspired by**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury, 2011)  
 **Serves**: 2 · **Prep**: 10 min (+overnight dry-brine) · **Cook**: 6–8 min grill · **Rest**: 5 min
 
@@ -115,7 +115,7 @@ Flank steak är ett platt, benfritt snitt från bukväggen med tydliga, långa f
 
 ---
 
-### 5. Maangchi — Korean Galbi-Style Flank (*Bulgogi* Variation)
+### 5. Korean Galbi-Style Flank (*Bulgogi* Variation) (inspired by Maangchi)
 **Inspired by**: Maangchi, *Maangchi's Real Korean Cooking* (Houghton Mifflin Harcourt, 2015); maangchi.com/recipe/bulgogi  
 **Serves**: 4 · **Prep**: 20 min (+2 hr marinate) · **Cook**: 6–8 min · **Rest**: 3 min
 

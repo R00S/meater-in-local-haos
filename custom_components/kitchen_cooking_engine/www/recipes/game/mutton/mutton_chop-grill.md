@@ -34,7 +34,7 @@ Innertemperatur: **70–74 °C (158–165 °F)** för genomstekt med lite saftig
 
 ## Source recipes
 
-### 1. Pakistani tradition — Mutton Chops Seekh (grilled marinated)
+### 1. Mutton Chops Seekh (grilled marinated) (inspired by Pakistani tradition)
 **Inspired by**: Zaiqa.com (Pakistani recipe site); https://www.zaiqa.com/recipe/mutton-chops-grilled (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 2 hrs marinate · **Cook**: 20 min
 
@@ -60,7 +60,7 @@ Innertemperatur: **70–74 °C (158–165 °F)** för genomstekt med lite saftig
 
 ---
 
-### 2. Madensverden.dk — Grillede lammekotelet (adapted for mutton — Danish tradition)
+### 2. Grillede lammekotelet (inspired by Madensverden.dk)
 **Inspired by**: Madensverden.dk; https://madensverden.dk/grillede-lammekoteletter/ (fetched 2026-04-24)
 **Serves**: 2 · **Prep**: 6–8 hrs marinade · **Cook**: 12 min
 
@@ -84,7 +84,7 @@ Innertemperatur: **70–74 °C (158–165 °F)** för genomstekt med lite saftig
 
 ---
 
-### 3. African Bites — West African Grilled Mutton Chops (Nigerian tradition)
+### 3. West African Grilled Mutton Chops (inspired by African Bites)
 **Inspired by**: Africanbites.com; https://www.africanbites.com/grilled-lamb-chops/ (fetched 2026-04-24 — also applies to mutton in West African cooking)
 **Serves**: 4 · **Prep**: 1 hr marinate · **Cook**: 20 min
 

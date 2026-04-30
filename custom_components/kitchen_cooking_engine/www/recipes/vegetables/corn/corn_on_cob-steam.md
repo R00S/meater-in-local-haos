@@ -18,7 +18,7 @@ Söt majs på kolven (*Zea mays saccharata*, skalad eller med skal) ångkokas i 
 
 ## Source recipes
 
-### 1. Deborah Madison — Steamed Sweet Corn (American vegetarian tradition)
+### 1. Steamed Sweet Corn (inspired by Deborah Madison)
 **Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 6–8 min · **Rest**: 1 min
 
@@ -40,7 +40,7 @@ Söt majs på kolven (*Zea mays saccharata*, skalad eller med skal) ångkokas i 
 
 ---
 
-### 2. Diana Kennedy — Elotes al Vapor (Mexican tradition)
+### 2. Elotes al Vapor (inspired by Diana Kennedy)
 **Inspired by**: Diana Kennedy, *The Cuisines of Mexico* (Harper & Row, 1972; expanded edition *The Essential Cuisines of Mexico*, Clarkson Potter, 2000)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–14 min · **Rest**: 1 min
 
@@ -63,7 +63,7 @@ Söt majs på kolven (*Zea mays saccharata*, skalad eller med skal) ångkokas i 
 
 ---
 
-### 3. Sarit Packer & Itamar Srulovich — Steamed Corn with Za'atar Butter (Israeli/Levantine tradition)
+### 3. Steamed Corn with Za'atar Butter (inspired by Sarit Packer & Itamar Srulovich)
 **Inspired by**: Sarit Packer & Itamar Srulovich, *Honey & Co: The Baking Book* technique extended in their *Honey & Co at Home* (Saltyard, 2018), corn chapter; honeyandco.co.uk  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 7–9 min · **Rest**: 1 min
 
@@ -86,7 +86,7 @@ Söt majs på kolven (*Zea mays saccharata*, skalad eller med skal) ångkokas i 
 
 ---
 
-### 4. Tetsuya Wakuda — Steamed Corn with Yuzu Butter (Japanese-Australian tradition)
+### 4. Steamed Corn with Yuzu Butter (inspired by Tetsuya Wakuda)
 **Inspired by**: Tetsuya Wakuda, *Tetsuya: Recipes from Australia's Most Acclaimed Chef* (Ten Speed Press, 2007), corn chapter  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 1 min
 

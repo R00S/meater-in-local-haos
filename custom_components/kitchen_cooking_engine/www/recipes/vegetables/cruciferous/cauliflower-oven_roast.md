@@ -18,7 +18,7 @@ Blomkål (*Brassica oleracea* var. *botrytis*) ugnsrostad i buketter vid 200–2
 
 ## Source recipes
 
-### 1. Claudia Roden — Chou-fleur Rôti à la Chermoula (Moroccan / North African tradition)
+### 1. Chou-fleur Rôti à la Chermoula (inspired by Claudia Roden)
 **Inspired by**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey and Lebanon* (Alfred A. Knopf, 2005)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 25–30 min · **Rest**: 3 min
 
@@ -37,7 +37,7 @@ Blomkål (*Brassica oleracea* var. *botrytis*) ugnsrostad i buketter vid 200–2
 
 ---
 
-### 2. Madhur Jaffrey — Gobi Roast with Turmeric and Coriander (Indian tradition)
+### 2. Gobi Roast with Turmeric and Coriander (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25–30 min · **Rest**: 3 min
 
@@ -60,7 +60,7 @@ Blomkål (*Brassica oleracea* var. *botrytis*) ugnsrostad i buketter vid 200–2
 
 ---
 
-### 3. Yotam Ottolenghi — Roasted Cauliflower with Capers and Raisins (Middle Eastern / Israeli tradition)
+### 3. Roasted Cauliflower with Capers and Raisins (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25–30 min · **Rest**: 3 min
 
@@ -83,7 +83,7 @@ Blomkål (*Brassica oleracea* var. *botrytis*) ugnsrostad i buketter vid 200–2
 
 ---
 
-### 4. Marcella Hazan — Cavolfiore al Forno (Italian tradition)
+### 4. Cavolfiore al Forno (inspired by Marcella Hazan)
 **Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25–30 min · **Rest**: 3 min
 

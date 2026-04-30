@@ -37,7 +37,7 @@ MEATER-sonden stickas in i den tjockaste muskeln i axeln, borta från skulderbla
 
 ## Source recipes
 
-### 1. Indian Healthy Recipes — Mutton Korma (slow cooker adaptation) (Indian / Mughlai tradition)
+### 1. Mutton Korma (slow cooker adaptation) (inspired by Indian Healthy Recipes)
 **Inspired by**: Indian Healthy Recipes (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/mutton-korma-recipe/ (fetched 2026-04-25). *"Mutton Korma — Mughlai-style braised mutton in yoghurt and spices, adapted for the slow cooker."*
 **Serves**: 4–5 · **Prep**: 20 min + overnight marinate · **Cook**: 7 hr (LOW)
 
@@ -76,7 +76,7 @@ MEATER-sonden stickas in i den tjockaste muskeln i axeln, borta från skulderbla
 
 ---
 
-### 2. Nefis Yemek Tarifleri — Kuzu Kol Tandır (slow cooker adaptation) (Turkish tradition)
+### 2. Kuzu Kol Tandır (slow cooker adaptation) (inspired by Nefis Yemek Tarifleri)
 **Inspired by**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/firinda-kuzu-kol-tandir-11409971/ (fetched 2026-04-25). *"Fırında Kuzu Kol Tandır — Turkish tandır shoulder, adapted for the slow cooker."*
 **Serves**: 6–8 · **Prep**: 20 min · **Cook**: 8–9 hr (LOW)
 
@@ -106,7 +106,7 @@ MEATER-sonden stickas in i den tjockaste muskeln i axeln, borta från skulderbla
 
 ---
 
-### 3. Chefkoch.de — Lammhaxen aus dem Slowcooker (shoulder adaptation) (German tradition)
+### 3. Lammhaxen aus dem Slowcooker (shoulder adaptation) (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/4089241641380759/ (fetched 2026-04-25). *"Lammhaxen aus dem Slowcooker — German slow-cooker lamb, technique adapted for mutton shoulder."*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 7–8 hr (LOW)
 
@@ -136,7 +136,7 @@ MEATER-sonden stickas in i den tjockaste muskeln i axeln, borta från skulderbla
 
 ---
 
-### 4. Argiro.gr — Αρνάκι στο ταψί (slow cooker adaptation) (Greek tradition)
+### 4. Αρνάκι στο ταψί (slow cooker adaptation) (inspired by Argiro.gr)
 **Inspired by**: Argiro Barbarigou; https://www.argiro.gr/recipe/arnaki-sto-tapsi-me-laxanika-kai-votana/ (fetched 2026-04-25). *"Αρνάκι στο ταψί με λαχανικά και βότανα — Greek tray-bake technique adapted for mutton shoulder in the slow cooker."*
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 8 hr (LOW)
 

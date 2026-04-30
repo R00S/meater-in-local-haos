@@ -34,7 +34,7 @@ Innertemperatur: **82–88 °C (180–190 °F)** för pull-apart. Eftertillagnin
 
 ## Source recipes
 
-### 1. African Bites — Jamaican Curry Goat (Caribbean tradition)
+### 1. Jamaican Curry Goat (inspired by African Bites)
 **Inspired by**: Africanbites.com; https://www.africanbites.com/jamaican-curry-goat/ (fetched 2026-04-24)
 **Serves**: 6 · **Prep**: 30 min + overnight marinade · **Cook**: 2–2.5 hrs
 
@@ -64,7 +64,7 @@ Innertemperatur: **82–88 °C (180–190 °F)** för pull-apart. Eftertillagnin
 
 ---
 
-### 2. IndianHealthyRecipes.com — Rogan Josh (Kashmir/Indian goat shoulder)
+### 2. Rogan Josh (Kashmir/Indian goat shoulder) (inspired by IndianHealthyRecipes.com)
 **Inspired by**: Indianhealthyrecipes.com; https://www.indianhealthyrecipes.com/rogan-josh/ (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 1 hr 30 min
 
@@ -98,7 +98,7 @@ Innertemperatur: **82–88 °C (180–190 °F)** för pull-apart. Eftertillagnin
 
 ---
 
-### 3. Nefisyemektarifleri.com — Fırında Kuzu Omuz (Turkish goat/lamb shoulder)
+### 3. Fırında Kuzu Omuz (Turkish goat/lamb shoulder) (inspired by Nefisyemektarifleri.com)
 **Inspired by**: Nefisyemektarifleri.com; https://www.nefisyemektarifleri.com/firinda-kuzu-omuz/ (web search 2026-04-24)
 **Serves**: 4–6 · **Prep**: 20 min · **Cook**: 3 hrs
 

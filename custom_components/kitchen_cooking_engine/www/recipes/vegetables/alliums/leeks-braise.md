@@ -21,7 +21,7 @@ Purjolök (*Allium ampeloprasum* var. *porrum*) bräserad är en av de mest raff
 
 ## Source recipes
 
-### 1. Julia Child — Poireaux Braisés au Beurre (French tradition)
+### 1. Poireaux Braisés au Beurre (inspired by Julia Child)
 **Inspired by**: Julia Child, *The French Chef Cookbook* (Alfred A. Knopf, 1968); and the braised-vegetable methodology elaborated in *Mastering the Art of French Cooking, Vol. I* (Knopf, 1961)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25–35 min · **Rest**: 3 min
 
@@ -45,7 +45,7 @@ Purjolök (*Allium ampeloprasum* var. *porrum*) bräserad är en av de mest raff
 
 ---
 
-### 2. Claudia Roden — Braised Leeks with Tomato and Coriander (Moroccan / North African tradition)
+### 2. Braised Leeks with Tomato and Coriander (inspired by Claudia Roden)
 **Inspired by**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey and Lebanon* (Alfred A. Knopf, 2005)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 30–35 min · **Rest**: 3 min
 
@@ -71,7 +71,7 @@ Purjolök (*Allium ampeloprasum* var. *porrum*) bräserad är en av de mest raff
 
 ---
 
-### 3. Deborah Madison — Braised Leeks with Mustard and Cream (American vegetarian tradition)
+### 3. Braised Leeks with Mustard and Cream (inspired by Deborah Madison)
 **Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25–30 min · **Rest**: 3 min
 
@@ -97,7 +97,7 @@ Purjolök (*Allium ampeloprasum* var. *porrum*) bräserad är en av de mest raff
 
 ---
 
-### 4. Yotam Ottolenghi — Braised Leeks with Saffron and Preserved Lemon (Middle Eastern / Israeli tradition)
+### 4. Braised Leeks with Saffron and Preserved Lemon (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Jerusalem* (Ebury Press, 2012)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 30 min · **Rest**: 5 min
 

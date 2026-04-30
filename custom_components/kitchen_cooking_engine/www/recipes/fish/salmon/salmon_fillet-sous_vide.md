@@ -24,7 +24,7 @@ Den stora strukturella fördelen med sous vide är elimineringen av det svårkon
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Sous Vide Salmon (American tradition)
+### 1. Sous Vide Salmon (inspired by J. Kenji López-Alt)
 **Inspired by**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/sous-vide-salmon-recipe  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 40–60 min at bath temp · **Rest**: 0 min (serve immediately after optional sear)
 
@@ -47,7 +47,7 @@ Den stora strukturella fördelen med sous vide är elimineringen av det svårkon
 
 ---
 
-### 2. Thomas Keller — Sous Vide Wild King Salmon with Beurre Rouge (French haute cuisine tradition)
+### 2. Sous Vide Wild King Salmon with Beurre Rouge (inspired by Thomas Keller)
 **Inspired by**: Thomas Keller, Michael Ruhlman and Sebastián Rouxel, *Ad Hoc at Home* (Artisan Books, 2009); and the sous vide techniques documented in *Under Pressure* (Artisan Books, 2008)  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 17–20 min at 52 °C · **Rest**: 0 min (serve immediately)
 
@@ -68,7 +68,7 @@ Den stora strukturella fördelen med sous vide är elimineringen av det svårkon
 
 ---
 
-### 3. Heston Blumenthal — Low-Temperature Salmon (British Modernist tradition)
+### 3. Low-Temperature Salmon (inspired by Heston Blumenthal)
 **Inspired by**: Heston Blumenthal, *The Fat Duck Cookbook* (Bloomsbury Publishing, 2008)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 20–25 min at 56 °C · **Rest**: 0 min
 
@@ -88,7 +88,7 @@ Den stora strukturella fördelen med sous vide är elimineringen av det svårkon
 
 ---
 
-### 4. Joël Robuchon — Saumon mi-cuit sous vide (French gastronomic tradition)
+### 4. Saumon mi-cuit sous vide (inspired by Joël Robuchon)
 **Inspired by**: Joël Robuchon, *The Complete Robuchon* (Alfred A. Knopf, 2008); and his published protocols at L'Atelier de Joël Robuchon  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 30–35 min at 48 °C · **Rest**: 0 min
 
@@ -109,7 +109,7 @@ Den stora strukturella fördelen med sous vide är elimineringen av det svårkon
 
 ---
 
-### 5. Donna Hay — Sous Vide Salmon with Lemon and Capers (Australian tradition)
+### 5. Sous Vide Salmon with Lemon and Capers (inspired by Donna Hay)
 **Inspired by**: Donna Hay, *Modern Baking* adapted with sous vide technique from *The Fast 400 Cookbook* (HarperCollins Australia, 2020)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 45 min at 52 °C · **Rest**: 0 min
 

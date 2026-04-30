@@ -36,7 +36,7 @@ Kraftfull kryddning krävs — enbär, rosmarin, rödvin marinad, senap och svam
 
 ## Source recipes
 
-### 1. Chefkoch.de — Wildschweinkoteletts mit Wacholdercreme (German tradition)
+### 1. Wildschweinkoteletts mit Wacholdercreme (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/2049741331587566/Wildschweinkoteletts-mit-Wacholdercreme.html (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 25 min · **Rating**: Top rated
 
@@ -64,7 +64,7 @@ Kraftfull kryddning krävs — enbär, rosmarin, rödvin marinad, senap och svam
 
 ---
 
-### 2. Chefkoch.de — Wildschweinkoteletts auf sardische Art (Sardinian tradition, German recipe)
+### 2. Wildschweinkoteletts auf sardische Art (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/656531167378180/Wildschweinkoteletts-auf-sardische-Art.html (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 40 min · **Cook**: 40 min
 
@@ -95,7 +95,7 @@ Kraftfull kryddning krävs — enbär, rosmarin, rödvin marinad, senap och svam
 
 ---
 
-### 3. Giallozafferano.it — Costolette di cinghiale alla cacciatora (Italian hunting tradition)
+### 3. Costolette di cinghiale alla cacciatora (inspired by Giallozafferano.it)
 **Inspired by**: Giallozafferano / Sonia Peronaci; https://ricette.giallozafferano.it/Cinghiale-in-umido.html (fetched 2026-04-24); see also traditional Tuscan game recipe collections.
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 30 min
 

@@ -30,7 +30,7 @@ Kalkontlår (*biceps femoris* och tillhörande muskler i övre benet) är ett m�
 
 ## Source recipes
 
-### 1. Taste of Home Editorial Team — Braised Turkey Thighs
+### 1. Braised Turkey Thighs (inspired by Taste of Home Editorial Team)
 **Inspired by**: Taste of Home Editorial Team, Taste of Home; https://www.tasteofhome.com/recipes/braised-turkey-thighs/ (fetched 2026-04-27). Recipe credited to Loretta Paulus, Venice, Florida.
 **Serves**: 8 · **Prep**: 15 min · **Cook**: 1 hr 30 min · **Rest**: 5 min
 **Culinary tradition**: North American (Group B)

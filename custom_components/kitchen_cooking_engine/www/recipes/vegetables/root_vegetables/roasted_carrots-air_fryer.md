@@ -18,7 +18,7 @@ Morötter (*Daucus carota*) i airfryern blir karameliserade, gyllenbrun och söt
 
 ## Source recipes
 
-### 1. Madhur Jaffrey — Air-Fried Masala Carrots (Indian tradition)
+### 1. Air-Fried Masala Carrots (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); spice-roasted carrot adapted for air fryer.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 16–18 min · **Rest**: 2 min
 
@@ -32,7 +32,7 @@ Morötter (*Daucus carota*) i airfryern blir karameliserade, gyllenbrun och söt
 
 ---
 
-### 2. Claudia Roden — Air-Fried Moroccan Carrots with Chermoula (Moroccan / North African tradition)
+### 2. Air-Fried Moroccan Carrots with Chermoula (inspired by Claudia Roden)
 **Inspired by**: Claudia Roden, *Arabesque* (Alfred A. Knopf, 2005); chermoula technique adapted for air fryer.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 16–18 min · **Rest**: 3 min
 
@@ -46,7 +46,7 @@ Morötter (*Daucus carota*) i airfryern blir karameliserade, gyllenbrun och söt
 
 ---
 
-### 3. Yotam Ottolenghi — Air-Fried Carrots with Coriander Yoghurt (Israeli / Middle Eastern tradition)
+### 3. Air-Fried Carrots with Coriander Yoghurt (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014); air fryer adaptation.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 16–18 min · **Rest**: 3 min
 
@@ -59,7 +59,7 @@ Morötter (*Daucus carota*) i airfryern blir karameliserade, gyllenbrun och söt
 
 ---
 
-### 4. Harumi Kurihara — Air-Fried Carrots with Sesame Glaze (Japanese tradition)
+### 4. Air-Fried Carrots with Sesame Glaze (inspired by Harumi Kurihara)
 **Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); sesame-glazed vegetable technique adapted for air fryer.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 14–16 min · **Rest**: 2 min
 

@@ -34,7 +34,7 @@ Det mörkare köttet och starka smaken gynnas av kraftfull kryddning: enbär, ro
 
 ## Source recipes
 
-### 1. BBC Good Food — Grilled Wild Boar Chops (UK tradition)
+### 1. Grilled Wild Boar Chops (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food Magazine; https://www.bbcgoodfood.com/recipes/wild-boar-chops-with-apple (fetched reference 2026-04-24)
 **Serves**: 4 · **Prep**: 10 min + 2 hrs marinade · **Cook**: 20 min
 
@@ -59,7 +59,7 @@ Det mörkare köttet och starka smaken gynnas av kraftfull kryddning: enbär, ro
 
 ---
 
-### 2. Chefkoch.de — Wildschwein vom Grill (German tradition)
+### 2. Wildschwein vom Grill (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de recipe category; https://www.chefkoch.de/rs/s0/wildschwein+grill/Rezepte.html (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 1 hour marinade · **Cook**: 25 min
 
@@ -83,7 +83,7 @@ Det mörkare köttet och starka smaken gynnas av kraftfull kryddning: enbär, ro
 
 ---
 
-### 3. La Cucina Italiana — Costolette di cinghiale alla griglia (Italian tradition)
+### 3. Costolette di cinghiale alla griglia (inspired by La Cucina Italiana)
 **Inspired by**: La Cucina Italiana magazine; https://www.lacucinaitaliana.it/ricetta/secondi-di-carne/costolette-di-cinghiale/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 1 hr marinade · **Cook**: 20 min
 

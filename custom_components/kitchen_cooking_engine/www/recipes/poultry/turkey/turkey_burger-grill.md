@@ -18,7 +18,7 @@ En grillad kalkonburger är en 150–180 g formad biff gjord av grovmalt kalkont
 
 ## Source recipes
 
-### 1. America's Test Kitchen — Grilled Turkey Burgers (American tradition)
+### 1. Grilled Turkey Burgers (inspired by America's Test Kitchen)
 **Inspired by**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011); cooksillustrated.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
@@ -45,7 +45,7 @@ En grillad kalkonburger är en 150–180 g formad biff gjord av grovmalt kalkont
 
 ---
 
-### 2. Tina Nordström — Grillad Kalkonburgare (Swedish tradition)
+### 2. Grillad Kalkonburgare (inspired by Tina Nordström)
 **Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se — turkey-burger section  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
@@ -70,7 +70,7 @@ En grillad kalkonburger är en 150–180 g formad biff gjord av grovmalt kalkont
 
 ---
 
-### 3. Yotam Ottolenghi — Spiced Turkey Burgers with Tahini & Pomegranate (Levantine tradition)
+### 3. Spiced Turkey Burgers with Tahini & Pomegranate (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014); ottolenghi.co.uk — turkey adaptation of the chicken burger  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 9 min · **Rest**: 3 min
 
@@ -95,7 +95,7 @@ En grillad kalkonburger är en 150–180 g formad biff gjord av grovmalt kalkont
 
 ---
 
-### 4. Diana Henry — Grilled Turkey Burgers with Sage & Cranberry (British modern Thanksgiving tradition)
+### 4. Grilled Turkey Burgers with Sage & Cranberry (inspired by Diana Henry)
 **Inspired by**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015); telegraph.co.uk/food-and-drink — turkey-burger section  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 

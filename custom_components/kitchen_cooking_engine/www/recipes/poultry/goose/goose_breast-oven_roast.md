@@ -32,7 +32,7 @@ Gåsbröst är ett rikt, djupt smakrikt mörkt kött med ett kraftigt fettlager,
 
 ## Source recipes
 
-### 1. BBC Good Food — Slow-Roast Duck (fat-rendering principles adapted for goose breast)
+### 1. Slow-Roast Duck (fat-rendering principles adapted for goose breast) (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food editorial team, BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roast-duck (fetched 2025-07-15).
 **Serves**: 2–3 · **Prep**: 15 min · **Cook**: 20–25 min · **Rest**: 8–10 min
 
@@ -67,7 +67,7 @@ Gåsbröst är ett rikt, djupt smakrikt mörkt kött med ett kraftigt fettlager,
 
 ---
 
-### 2. Classic Culinary Technique — Goose Breast Oven Roast
+### 2. Goose Breast Oven Roast (inspired by Classic Culinary Technique)
 **Inspired by**: Documented culinary technique for goose breast; general knowledge synthesis.
 **Serves**: 2–3 · **Prep**: 10 min · **Cook**: 25–30 min · **Rest**: 8–10 min
 
@@ -95,7 +95,7 @@ Gåsbröst är ett rikt, djupt smakrikt mörkt kött med ett kraftigt fettlager,
 
 ---
 
-### 3. Xiachufang (下厨房) — 烤鹅 Roast Goose (Chinese whole-bird roast technique)
+### 3. 烤鹅 Roast Goose (Chinese whole-bird roast technique) (inspired by Xiachufang)
 **Inspired by**: User recipe adapted from Le Creuset UK, published on Xiachufang.com; https://m.xiachufang.com/recipe/107284834/ (fetched 2026-04-24, language: Chinese — ingredients and method translated below). *Whole-bird recipe; method and temperatures apply directly to breast portions — reduce time proportionally.*
 **Serves**: 4–6 (whole bird) · **Prep**: 20 min · **Cook**: 15 min + 20 min/kg · **Rest**: 15 min
 

@@ -29,7 +29,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ## Source recipes
 
-### 1. Judy and Bill Leung, Kaitlin and Sarah Leung — Char Siu-Style Oven Baked Ribs (Cantonese-American tradition, Culinary Group A)
+### 1. Char Siu-Style Oven Baked Ribs (inspired by Judy and Bill Leung, Kaitlin and Sarah Leung)
 **Inspired by**: Judy and Bill Leung (with Kaitlin and Sarah), thewoksoflife.com/oven-baked-ribs/  
 **Serves**: 4–6 · **Prep**: 2 hr (marinating) + 10 min active · **Cook**: 1 hr · **Rest**: 5 min
 
@@ -62,7 +62,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ---
 
-### 2. Good Food Test Kitchen — Easy Oven-Baked Pork Ribs (British tradition, Culinary Group B)
+### 2. Easy Oven-Baked Pork Ribs (inspired by Good Food Test Kitchen)
 **Inspired by**: BBC Good Food Test Kitchen, bbcgoodfood.com/recipes/easy-oven-baked-pork-ribs  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 3 hr 10 min · **Rest**: 5 min
 

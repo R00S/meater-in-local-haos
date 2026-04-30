@@ -19,7 +19,7 @@ Hängarbiff över levande träkol tillsätter en viktig dimension till detta red
 
 ## Source recipes
 
-### 1. Francis Mallmann — Onglet over Charcoal Embers (Argentine tradition)
+### 1. Onglet over Charcoal Embers (inspired by Francis Mallmann)
 **Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–12 min over embers · **Rest**: 5 min
 
@@ -40,7 +40,7 @@ Hängarbiff över levande träkol tillsätter en viktig dimension till detta red
 
 ---
 
-### 2. Steven Raichlen — Charcoal-Grilled Hanger Steak (American tradition)
+### 2. Charcoal-Grilled Hanger Steak (inspired by Steven Raichlen)
 **Inspired by**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -61,7 +61,7 @@ Hängarbiff över levande träkol tillsätter en viktig dimension till detta red
 
 ---
 
-### 3. Lennox Hastie — Hanger Steak over Australian Ironbark (Australian live-fire tradition)
+### 3. Hanger Steak over Australian Ironbark (inspired by Lennox Hastie)
 **Inspired by**: Lennox Hastie, *Finding Fire* (Hardie Grant, 2017)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 8–12 min · **Rest**: 5 min
 
@@ -81,7 +81,7 @@ Hängarbiff över levande träkol tillsätter en viktig dimension till detta red
 
 ---
 
-### 4. David Tanis — Onglet over Charcoal (French bistro tradition)
+### 4. Onglet over Charcoal (inspired by David Tanis)
 **Inspired by**: David Tanis, *Heart of the Artichoke and Other Kitchen Journeys* (Artisan Books, 2010)  
 **Serves**: 2 · **Prep**: 5 min (+1 h marinade) · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -99,7 +99,7 @@ Hängarbiff över levande träkol tillsätter en viktig dimension till detta red
 
 ---
 
-### 5. Bobby Flay — Charcoal Hanger Steak with Horseradish Compound Butter (American tradition)
+### 5. Charcoal Hanger Steak with Horseradish Compound Butter (inspired by Bobby Flay)
 **Inspired by**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
 **Serves**: 2 · **Prep**: 10 min (+1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 

@@ -18,7 +18,7 @@ Portabello-svampar (*Agaricus bisporus* — samma art som champinjoner, odlade t
 
 ## Source recipes
 
-### 1. Maangchi — Air-Fried Portobello Gui (Korean tradition)
+### 1. Air-Fried Portobello Gui (inspired by Maangchi)
 **Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); https://www.maangchi.com (portobello *gui* method; technique adapted for air fryer).
 **Serves**: 4 · **Prep**: 10 min + 10 min marinating · **Cook**: 14–16 min · **Rest**: 2 min
 
@@ -38,7 +38,7 @@ Portabello-svampar (*Agaricus bisporus* — samma art som champinjoner, odlade t
 
 ---
 
-### 2. Harumi Kurihara — Air-Fried Portobello with Ponzu (Japanese tradition)
+### 2. Air-Fried Portobello with Ponzu (inspired by Harumi Kurihara)
 **Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); adapted for air fryer.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 12–14 min · **Rest**: 2 min
 
@@ -59,7 +59,7 @@ Portabello-svampar (*Agaricus bisporus* — samma art som champinjoner, odlade t
 
 ---
 
-### 3. Madhur Jaffrey — Air-Fried Portobello Tikka (Indian tradition)
+### 3. Air-Fried Portobello Tikka (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); tikka method applied to portobello caps.
 **Serves**: 4 · **Prep**: 10 min + 20 min marinating · **Cook**: 14–16 min · **Rest**: 3 min
 
@@ -77,7 +77,7 @@ Portabello-svampar (*Agaricus bisporus* — samma art som champinjoner, odlade t
 
 ---
 
-### 4. Yotam Ottolenghi — Air-Fried Portobello with Herbed Ricotta (Middle Eastern / Israeli tradition)
+### 4. Air-Fried Portobello with Herbed Ricotta (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014); adapted for air fryer.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 14–16 min · **Rest**: 3 min
 

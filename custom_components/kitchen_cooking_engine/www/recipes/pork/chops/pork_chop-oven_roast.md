@@ -27,7 +27,7 @@ Innertemperatur: **63–65 °C (145–149 °F)** USDA-minimum (med 3 minuters vi
 
 ## Source recipes
 
-### 1. ichkoche.at — Schweinskotelett mit Apfelgemüse vom Blech (Austrian tradition)
+### 1. Schweinskotelett mit Apfelgemüse vom Blech (inspired by ichkoche.at)
 **Inspired by**: ichkoche.at; https://www.ichkoche.at/schweinskotelett-mit-apfelgemuese-vom-blech-rezept-189635 (fetched 2026-04-24). *Austrian one-tray bake: apple, parsnip, chilli, and potato bed at 160 °C × 20 min; chops pan-seared then placed on top for 10 more min. 276 ratings.*
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 30 min
 
@@ -62,7 +62,7 @@ Innertemperatur: **63–65 °C (145–149 °F)** USDA-minimum (med 3 minuters vi
 
 ---
 
-### 2. Madens Verden — Svinekotelet med skaft i ovn (adapted) (Danish tradition)
+### 2. Svinekotelet med skaft i ovn (adapted) (inspired by Madens Verden)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/svinekotelet-med-skaft-langtidsstegt-med-salvie/ (referenced 2026-04-24). *Danish shank pork chop with sage: long oven roast 200 °C fan × 1 hr, serves juicy bone-in chop with pan sauce.*
 **Serves**: 2 · **Cook**: 1 hr at 200 °C fan
 
@@ -86,7 +86,7 @@ Innertemperatur: **63–65 °C (145–149 °F)** USDA-minimum (med 3 minuters vi
 
 ---
 
-### 3. Directo al Paladar — Solomillo de cerdo al horno (adapted for chops) (Spanish tradition)
+### 3. Solomillo de cerdo al horno (adapted for chops) (inspired by Directo al Paladar)
 **Inspired by**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/receta-solomillo-cerdo-al-horno-patatas-asado-facil-resulton (fetched 2026-04-24). *Spanish oven method: potato and white wine bed at 170 °C × 40 min; chops pan-seared then placed on potato bed and roasted uncovered 15 min at 220 °C.*
 **Serves**: 2–4 · **Cook**: 55 min total
 
@@ -115,7 +115,7 @@ Innertemperatur: **63–65 °C (145–149 °F)** USDA-minimum (med 3 minuters vi
 
 ---
 
-### 4. Imma Adamu — Oven Baked Pork Chops (West African / Caribbean tradition)
+### 4. Oven Baked Pork Chops (inspired by Imma Adamu)
 **Inspired by**: Imma Adamu (Cameroon-born food writer, USA), Immaculate Bites; https://www.africanbites.com/oven-baked-pork-chops/ (fetched 2026-04-25). *West African–Caribbean seasoned bone-in pork chops roasted at 205 °C: Creole spice blend, garlic, brown sugar glaze, Dijon, Worcestershire; sheet-pan with potatoes; broil at the end for caramelisation. Pull at 145 °F (63 °C).*
 **Serves**: 4 · **Prep**: 10 min + 30 min marinate · **Cook**: 20–22 min oven
 

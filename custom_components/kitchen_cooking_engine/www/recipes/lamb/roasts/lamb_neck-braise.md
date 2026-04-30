@@ -35,7 +35,7 @@ Bräsering av lammhals på spis eller i låg ugn omvandlar ett av de mest kollag
 
 ## Source recipes
 
-### 1. Nefis Yemek Tarifleri — Fırında Kuzu Gerdan (Turkish tradition)
+### 1. Fırında Kuzu Gerdan (inspired by Nefis Yemek Tarifleri)
 **Inspired by**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/firinda-sahane-lezzeti-ile-kuzu-gerdan-tarifi/ (fetched 2026-04-25). *"Fırında Şahane Lezzeti ile Kuzu Gerdan — Turkish oven-braised lamb neck with herbs and vegetables."*
 **Serves**: 6–8 · **Prep**: 20 min · **Cook**: 1 hr 15 min covered + 20 min uncovered
 
@@ -66,7 +66,7 @@ Bräsering av lammhals på spis eller i låg ugn omvandlar ett av de mest kollag
 
 ---
 
-### 2. Blog GialloZafferano — Collo di agnello stufato nel coccio (Italian tradition)
+### 2. Collo di agnello stufato nel coccio (inspired by Blog GialloZafferano)
 **Inspired by**: Blog GialloZafferano (Tentazioni Dolci e Salate); https://blog.giallozafferano.it/tentazionidolciesalate/ricetta-collo-di-agnello-stufato-nel-coccio/ (fetched 2026-04-25). *"Collo di agnello stufato nel coccio — lamb neck braised in a clay pot, Italian country tradition."*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 1 hr in clay pot
 
@@ -99,7 +99,7 @@ Bräsering av lammhals på spis eller i låg ugn omvandlar ett av de mest kollag
 
 ---
 
-### 3. Chefkoch.de — Geschmorter Lammhals (German tradition)
+### 3. Geschmorter Lammhals (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/2358101374724165/ (fetched 2026-04-25). *"Geschmorter Lammhals — braised lamb neck, German home cooking."*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 2 hr (covered, oven 200 °C fan 180 °C)
 
@@ -127,7 +127,7 @@ Bräsering av lammhals på spis eller i låg ugn omvandlar ett av de mest kollag
 
 ---
 
-### 4. Madensverden.dk — Lammeskank i rødvin (neck adaptation) (Danish tradition)
+### 4. Lammeskank i rødvin (neck adaptation) (inspired by Madensverden.dk)
 **Inspired by**: Madensverden.dk (Holger Rørby Madsen); https://madensverden.dk/lammeskank-roedvin-langtidsstegt/ (fetched 2026-04-25). *"Lammeskank i rødvin — Danish red wine lamb braise, technique adapted here for lamb neck."*
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 2 hr 30 min
 

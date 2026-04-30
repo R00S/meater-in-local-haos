@@ -18,7 +18,7 @@ Portabello-svampar (*Agaricus bisporus* mogna) ugnsrostade vid 200–220 °C kon
 
 ## Source recipes
 
-### 1. Fuchsia Dunlop — Hóng Shāo Dà Mó Gū (烤大蘑菇 — Chinese Roasted Portobello with Doubanjiang)
+### 1. Hóng Shāo Dà Mó Gū (烤大蘑菇 — Chinese Roasted Portobello with Doubanjiang) (inspired by Fuchsia Dunlop)
 **Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012); oven-roasted preparation adapted from her stir-fried mushroom technique.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 22–25 min · **Rest**: 3 min
 
@@ -44,7 +44,7 @@ Portabello-svampar (*Agaricus bisporus* mogna) ugnsrostade vid 200–220 °C kon
 
 ---
 
-### 2. Madhur Jaffrey — Oven-Roasted Portobello with Masala (Indian tradition)
+### 2. Oven-Roasted Portobello with Masala (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25 min · **Rest**: 3 min
 
@@ -72,7 +72,7 @@ Portabello-svampar (*Agaricus bisporus* mogna) ugnsrostade vid 200–220 °C kon
 
 ---
 
-### 3. Marcella Hazan — Grandi Funghi al Forno con Aglio e Prezzemolo (Italian tradition)
+### 3. Grandi Funghi al Forno con Aglio e Prezzemolo (inspired by Marcella Hazan)
 **Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 20–25 min · **Rest**: 3 min
 
@@ -95,7 +95,7 @@ Portabello-svampar (*Agaricus bisporus* mogna) ugnsrostade vid 200–220 °C kon
 
 ---
 
-### 4. Deborah Madison — Oven-Roasted Portobello with Goat Cheese and Tapenade (American vegetarian tradition)
+### 4. Oven-Roasted Portobello with Goat Cheese and Tapenade (inspired by Deborah Madison)
 **Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 22–25 min · **Rest**: 5 min
 

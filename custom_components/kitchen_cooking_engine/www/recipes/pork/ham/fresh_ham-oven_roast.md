@@ -20,7 +20,7 @@ Tillaga i ugn vid 160–175 °C, ca 20–25 min per 500 g. Innertemperatur: **75
 
 ## Source recipes
 
-### 1. America's Test Kitchen — Slow-Roasted Fresh Ham with Cider Glaze (American tradition)
+### 1. Slow-Roasted Fresh Ham with Cider Glaze (inspired by America's Test Kitchen)
 **Inspired by**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011); cooksillustrated.com  
 **Serves**: 12–14 · **Prep**: 30 min (+ overnight dry-brine) · **Cook**: 4–5 hr · **Rest**: 30–45 min
 
@@ -46,7 +46,7 @@ Tillaga i ugn vid 160–175 °C, ca 20–25 min per 500 g. Innertemperatur: **75
 
 ---
 
-### 2. Yotam Ottolenghi — Slow-Roasted Fresh Ham with Pomegranate & Walnuts (Levantine fusion tradition)
+### 2. Slow-Roasted Fresh Ham with Pomegranate & Walnuts (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Sweet & Savoury* technique extended in *Ottolenghi Simple* (Ebury Press, 2018) and ottolenghi.co.uk; specifically the slow-roast pork chapter  
 **Serves**: 12 · **Prep**: 25 min · **Cook**: 5 hr · **Rest**: 30 min
 
@@ -71,7 +71,7 @@ Tillaga i ugn vid 160–175 °C, ca 20–25 min per 500 g. Innertemperatur: **75
 
 ---
 
-### 3. Tina Nordström — Helstekt Färsk Skinka (Swedish home tradition)
+### 3. Helstekt Färsk Skinka (inspired by Tina Nordström)
 **Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 12 · **Prep**: 25 min · **Cook**: 4–4.5 hr · **Rest**: 30 min
 
@@ -98,7 +98,7 @@ Tillaga i ugn vid 160–175 °C, ca 20–25 min per 500 g. Innertemperatur: **75
 
 ---
 
-### 4. Hugh Fearnley-Whittingstall — Slow-Roast Fresh Ham with Cider, Honey & Bay (British River Cottage tradition)
+### 4. Slow-Roast Fresh Ham with Cider, Honey & Bay (inspired by Hugh Fearnley-Whittingstall)
 **Inspired by**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004); rivercottage.net  
 **Serves**: 12 · **Prep**: 20 min · **Cook**: 5 hr · **Rest**: 40 min
 

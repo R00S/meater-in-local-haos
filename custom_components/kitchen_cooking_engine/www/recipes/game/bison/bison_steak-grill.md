@@ -57,7 +57,7 @@ Vid 2,5–3 cm tjocklek ger 3–4 minuter per sida medium-rare. Viktigaste grill
 
 ## Source recipes
 
-### 1. Daskochrezept.de — Gegrilltes Bison-Filet-Steak in süß-scharfer Bier-Chili-Marinade (German tradition)
+### 1. Gegrilltes Bison-Filet-Steak in süß-scharfer Bier-Chili-Marinade (inspired by Daskochrezept.de)
 **Inspired by**: Daskochrezept.de community recipe;
 daskochrezept.de/rezepte/gegrilltes-bison-filet-steak-suess-scharfer-bier-chili-marinade
 (fetched 2026-06-08)
@@ -108,7 +108,7 @@ daskochrezept.de/rezepte/gegrilltes-bison-filet-steak-suess-scharfer-bier-chili-
 
 ---
 
-### 2. BBC Good Food — Steak with Chimichurri Sauce (British / Argentine tradition)
+### 2. Steak with Chimichurri Sauce (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food, *bbcgoodfood.com/recipes/steak-chimichurri-sauce*
 (fetched 2026-06-08; from Good Food magazine, June 2012)
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 5–6 min · **Rest**: a few min
@@ -150,7 +150,7 @@ daskochrezept.de/rezepte/gegrilltes-bison-filet-steak-suess-scharfer-bier-chili-
 
 ---
 
-### 3. Chefkoch.de — Bisonsteak auf Paprika (German tradition, pan sear + 80 °C oven)
+### 3. Bisonsteak auf Paprika (inspired by Chefkoch.de)
 **Inspired by**: Community recipe, Chefkoch.de;
 chefkoch.de/rezepte/2841491436191027/Bisonsteak-auf-Paprika.html (fetched 2026-06-08)
 **Serves**: 2 · **Prep**: 30 min · **Cook**: 25 min · **Oven**: 80 °C
@@ -188,7 +188,7 @@ chefkoch.de/rezepte/2841491436191027/Bisonsteak-auf-Paprika.html (fetched 2026-0
 
 ---
 
-### 4. Chefkoch.de — Bisonsteak in Rosmarin (German tradition, pan sear + 80 °C oven)
+### 4. Bisonsteak in Rosmarin (inspired by Chefkoch.de)
 **Inspired by**: Community recipe, Chefkoch.de;
 chefkoch.de/rezepte/2841471436190764/Bisonsteak-in-Rosmarin.html (fetched 2026-06-08)
 **Serves**: 1 · **Prep**: 15 min · **Cook**: 30 min · **Oven**: 80 °C

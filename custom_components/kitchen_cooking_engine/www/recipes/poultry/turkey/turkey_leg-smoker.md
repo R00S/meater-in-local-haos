@@ -19,7 +19,7 @@ Sources still needed: Groups A, B (British/Australian), D (Scandinavian/Baltic).
 
 ## Source recipes
 
-### 1. Immaculate Bites — Smoked Turkey Legs (West African / Southern US Creole tradition)
+### 1. Smoked Turkey Legs (inspired by Immaculate Bites)
 **Inspired by**: Imma (Immaculate Bites); africanbites.com/smoked-turkey-legs/ — original 2021, updated 2025  
 **Serves**: varies · **Cut used**: Turkey legs (drumsticks), size varies
 

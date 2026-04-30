@@ -35,7 +35,7 @@ Gåslår är kanske den mest smakrika delen av gåsen — rikare än benet med h
 
 ## Source recipes
 
-### 1. BBC Good Food — Slow-Roast Duck (low-and-slow principle adapted for goose thigh braise)
+### 1. Slow-Roast Duck (low-and-slow principle adapted for goose thigh braise) (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food editorial team, BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roast-duck (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 2.5–3 hr · **Rest**: 10 min
 
@@ -72,7 +72,7 @@ Gåslår är kanske den mest smakrika delen av gåsen — rikare än benet med h
 
 ---
 
-### 2. Classic Culinary Technique — Braised Goose Thighs with Wine and Aromatics
+### 2. Braised Goose Thighs with Wine and Aromatics (inspired by Classic Culinary Technique)
 **Inspired by**: Standard culinary braising technique for dark poultry; general knowledge synthesis.
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 2.5–3 hr · **Rest**: 10 min
 
@@ -98,7 +98,7 @@ Gåslår är kanske den mest smakrika delen av gåsen — rikare än benet med h
 
 ---
 
-### 3. Vorobyshek — Тушёнка из гуся в мультиварке (Russian Slow-Braised Goose in a Multicooker)
+### 3. Тушёнка из гуся в мультиварке (Russian Slow-Braised Goose in a Multicooker) (inspired by Vorobyshek)
 **Inspired by**: Home cook "vorobyshek", Povarenok.ru (Russia's largest recipe-sharing community); https://www.povarenok.ru/recipes/show/97189/ (fetched 2026-04-24, language: Russian — ingredients and method translated below). *Original uses a multicooker slow-cook function; the same technique works in any covered heavy pot over very low heat.*
 **Serves**: 4–6 · **Prep**: 15 min · **Cook**: 3 hours (180 min)
 

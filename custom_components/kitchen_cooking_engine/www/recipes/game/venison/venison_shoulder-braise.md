@@ -24,7 +24,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ## Source recipes
 
-### 1. BBC Good Food (Good Food Magazine, January 2006) — Succulent Braised Venison
+### 1. Succulent Braised Venison (inspired by BBC Good Food)
 **Inspired by**: https://www.bbcgoodfood.com/recipes/succulent-braised-venison  
 **Tradition**: British home cooking — **Culinary Group B** (North American/Western European/Australasian)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 1 hr 45 min · **Total**: 2 hr
@@ -55,7 +55,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ---
 
-### 2. Chefkoch.de (user wendorra) — Rehschulter mit Holundersauce
+### 2. Rehschulter mit Holundersauce (inspired by Chefkoch.de)
 **Inspired by**: https://www.chefkoch.de/rezepte/1007011205844396/Rehschulter-mit-Holundersauce.html  
 **Tradition**: German home cooking — **Culinary Group D** (Scandinavian/Baltic/Slavic/Central European)  
 **Rating**: 4.6/5 stars (8 reviews)  

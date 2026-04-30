@@ -32,7 +32,7 @@ En hel gås (typiskt 4–6 kg) är den fetaste av de vanliga stekfåglarna — e
 
 ## Source recipes
 
-### 1. Heston Blumenthal — Classic Roast Goose (British tradition)
+### 1. Classic Roast Goose (inspired by Heston Blumenthal)
 **Inspired by**: Heston Blumenthal, *Heston at Home* (Bloomsbury, 2011); bbcgoodfood.com/recipes/heston-blumenthal-roast-goose  
 **Serves**: 6–8 · **Prep**: 30 min + overnight dry-brine · **Cook**: 2.5–3 hr · **Rest**: 30–40 min
 
@@ -69,7 +69,7 @@ En hel gås (typiskt 4–6 kg) är den fetaste av de vanliga stekfåglarna — e
 
 ---
 
-### 2. Nigel Slater — Slow-Roast Goose with Lemon and Garlic (British tradition)
+### 2. Slow-Roast Goose with Lemon and Garlic (inspired by Nigel Slater)
 **Inspired by**: Nigel Slater, *Tender Vol. II* (Fourth Estate, 2010); theguardian.com/food  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 3–3.5 hr · **Rest**: 30 min
 
@@ -102,7 +102,7 @@ En hel gås (typiskt 4–6 kg) är den fetaste av de vanliga stekfåglarna — e
 
 ---
 
-### 3. Signe Johansen — Norwegian Julegraut Goose (Nordic Christmas tradition)
+### 3. Norwegian Julegraut Goose (inspired by Signe Johansen)
 **Inspired by**: Signe Johansen, *Scandikitchen: The Essence of Scandinavian Cooking* (Ryland Peters & Small, 2016); scandicuisine.com  
 **Serves**: 6–8 · **Prep**: 40 min + overnight dry-brine · **Cook**: 3–4 hr · **Rest**: 30 min
 

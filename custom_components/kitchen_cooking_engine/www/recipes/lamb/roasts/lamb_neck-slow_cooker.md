@@ -37,7 +37,7 @@ Slow cooker-metod: bryn snitt i panna, lägg i med fond, lök, morot, rosmarin, 
 
 ## Source recipes
 
-### 1. Nefis Yemek Tarifleri — Fırında Kuzu Gerdan (slow cooker adaptation) (Turkish tradition)
+### 1. Fırında Kuzu Gerdan (slow cooker adaptation) (inspired by Nefis Yemek Tarifleri)
 **Inspired by**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/firinda-sahane-lezzeti-ile-kuzu-gerdan-tarifi/ (fetched 2026-04-25). *"Fırında Kuzu Gerdan — Turkish oven-braised lamb neck, adapted here for the slow cooker."*
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 7–8 hr (LOW)
 
@@ -67,7 +67,7 @@ Slow cooker-metod: bryn snitt i panna, lägg i med fond, lök, morot, rosmarin, 
 
 ---
 
-### 2. Chefkoch.de — Lammhaxen aus dem Slowcooker (neck adaptation) (German tradition)
+### 2. Lammhaxen aus dem Slowcooker (neck adaptation) (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/4089241641380759/ (fetched 2026-04-25). *"Lammhaxen aus dem Slowcooker — German slow-cooker lamb, adapted here for lamb neck pieces."*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 5–6 hr (LOW)
 
@@ -97,7 +97,7 @@ Slow cooker-metod: bryn snitt i panna, lägg i med fond, lök, morot, rosmarin, 
 
 ---
 
-### 3. Blog GialloZafferano — Collo di agnello stufato nel coccio (slow cooker adaptation) (Italian tradition)
+### 3. Collo di agnello stufato nel coccio (slow cooker adaptation) (inspired by Blog GialloZafferano)
 **Inspired by**: Blog GialloZafferano (Tentazioni Dolci e Salate); https://blog.giallozafferano.it/tentazionidolciesalate/ricetta-collo-di-agnello-stufato-nel-coccio/ (fetched 2026-04-25). *"Collo di agnello stufato nel coccio — Italian clay-pot lamb neck stew, adapted for slow cooker."*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 7 hr (LOW)
 
@@ -130,7 +130,7 @@ Slow cooker-metod: bryn snitt i panna, lägg i med fond, lök, morot, rosmarin, 
 
 ---
 
-### 4. Argiro.gr — Αρνάκι στο ταψί (slow cooker adaptation) (Greek tradition)
+### 4. Αρνάκι στο ταψί (slow cooker adaptation) (inspired by Argiro.gr)
 **Inspired by**: Argiro Barbarigou; https://www.argiro.gr/recipe/arnaki-sto-tapsi-me-laxanika-kai-votana/ (fetched 2026-04-25). *"Αρνάκι στο ταψί με λαχανικά και βότανα — Greek lamb tray-bake, adapted for slow cooker with neck pieces."*
 **Serves**: 4–6 · **Prep**: 20 min · **Cook**: 7–8 hr (LOW)
 

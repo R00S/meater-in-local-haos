@@ -36,7 +36,7 @@ Marinering (24 timmar i citrus, vitlök och kryddor) mörnar den magra muskeln o
 
 ## Source recipes
 
-### 1. BBC Good Food — Pulled Goat Kebabs with Coriander Dressing (British/Middle Eastern tradition)
+### 1. Pulled Goat Kebabs with Coriander Dressing (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/pulled-goat-kebabs-coriander-dressing (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 30 min + overnight · **Cook**: 3 hrs
 
@@ -68,7 +68,7 @@ Marinering (24 timmar i citrus, vitlök och kryddor) mörnar den magra muskeln o
 
 ---
 
-### 2. Caribbean Pot — Jamaican Jerk Goat Chops (Caribbean tradition)
+### 2. Jamaican Jerk Goat Chops (inspired by Caribbean Pot)
 **Inspired by**: Caribbeanpot.com (Trinidad & Tobago home cooking); https://www.caribbeanpot.com/ (fetched 2026-04-24; jerk goat is flagship recipe)
 **Serves**: 4 · **Prep**: 12 hrs marinate · **Cook**: 25 min
 
@@ -89,7 +89,7 @@ Marinering (24 timmar i citrus, vitlök och kryddor) mörnar den magra muskeln o
 
 ---
 
-### 3. African Bites — Grilled Goat (West African tradition, adapted from lamb chops recipe)
+### 3. Grilled Goat (inspired by African Bites)
 **Inspired by**: Africanbites.com; https://www.africanbites.com/grilled-lamb-chops/ (fetched 2026-04-24 — applies equally to goat)
 **Serves**: 4 · **Prep**: 1 hr marinate · **Cook**: 20 min
 

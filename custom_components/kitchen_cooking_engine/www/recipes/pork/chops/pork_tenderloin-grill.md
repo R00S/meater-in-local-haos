@@ -24,7 +24,7 @@ Pannstekning: sear hel filé i smör vid hög värme 2–3 minuter per sida för
 
 ## Source recipes
 
-### 1. Madens Verden — Svinemørbrad på grill (Danish tradition)
+### 1. Svinemørbrad på grill (inspired by Madens Verden)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/grill-svinemoerbrad-paa-gasgrill-weber-q3200/ (fetched 2026-04-24). *Gas or charcoal grill: brown all sides 1 min each at high, then medium direct heat 2 min per quarter-turn, basting with BBQ sauce. Total 12 min. Core 65 °C. Rest 10–15 min uncovered.*
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 12 min grill + 10 min rest
 
@@ -50,7 +50,7 @@ Pannstekning: sear hel filé i smör vid hög värme 2–3 minuter per sida för
 
 ---
 
-### 2. Chefkoch.de — Mariniertes ganzes Schweinefilet vom Grill (German tradition)
+### 2. Mariniertes ganzes Schweinefilet vom Grill (inspired by Chefkoch.de)
 **Inspired by**: Mick1967, Chefkoch.de; https://www.chefkoch.de/rezepte/2817351433710140/Mariniertes-ganzes-Schweinefilet-vom-Grill.html (fetched 2026-04-24). *Overnight ketchup, oil, and herb marinade; quick sear on all sides over direct heat, then 25–30 min indirect at 180 °C with lid. 4.6/5, 35 ratings.*
 **Serves**: 4 · **Prep**: overnight marinade · **Cook**: 30 min grill
 
@@ -80,7 +80,7 @@ Pannstekning: sear hel filé i smör vid hög värme 2–3 minuter per sida för
 
 ---
 
-### 3. Directo al Paladar — Solomillo de cerdo a la plancha (adapted for grill) (Spanish tradition)
+### 3. Solomillo de cerdo a la plancha (adapted for grill) (inspired by Directo al Paladar)
 **Inspired by**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/solomillo-cerdo-a-plancha-receta-ideal-para-cena-rapida-lista-15-minutos (fetched 2026-04-24). *The medallion method adapted for a grill: slice into 5 cm medallions, grill 2 min per side on medium-high direct heat. Fast and simple.*
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 4 min
 
@@ -103,7 +103,7 @@ Pannstekning: sear hel filé i smör vid hög värme 2–3 minuter per sida för
 
 ---
 
-### 4. Hot Thai Kitchen — Moo Ping หมูปิ้ง (Thai street food tradition)
+### 4. Moo Ping หมูปิ้ง (inspired by Hot Thai Kitchen)
 **Inspired by**: Pailin Chongchitnant, Hot Thai Kitchen; https://hot-thai-kitchen.com/bbq-pork-skewers/ (fetched 2026-04-26). *Moo Ping are the ultimate Thai street-food grilled pork skewers — found at every market and mall food stall, served with sticky rice. Pork is marinated in a sweet-savoury mix of oyster sauce, soy, palm sugar, and coconut milk; skewered thinly; grilled over medium heat with constant turning. The technique produces tender, caramelised pork.*
 **Serves**: About 24 skewers · **Prep**: Overnight marinate · **Cook**: 3–4 min (1.5–2 min per side)
 
@@ -141,7 +141,7 @@ Pannstekning: sear hel filé i smör vid hög värme 2–3 minuter per sida för
 
 ---
 
-### 5. The Woks of Life — BBQ Char Siu Grilled Pork (Chinese tradition)
+### 5. BBQ Char Siu Grilled Pork (inspired by The Woks of Life)
 **Inspired by**: Bill Leung, The Woks of Life; https://thewoksoflife.com/bbq-char-siu-grill/ (fetched 2026-04-26). *Char siu (叉燒) is Cantonese red-glazed BBQ pork, traditionally roasted or grilled over charcoal. This recipe adapts the classic five-spice hoisin marinade for the gas grill, with constant turning and basting to build the characteristic caramelised, slightly charred glaze. The recipe recommends pork shoulder for fat marbling; pork tenderloin works with shorter cooking times.*
 **Serves**: 4–6 · **Prep**: Overnight marinate · **Cook**: 20–30 min
 

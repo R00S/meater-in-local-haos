@@ -24,7 +24,7 @@ Pensla med olja och marinad innan grillning. Tillagningstid: 12–15 minuter tot
 
 ## Source recipes
 
-### 1. Directo al Paladar — Solomillo de cerdo a la plancha (Spanish tradition)
+### 1. Solomillo de cerdo a la plancha (inspired by Directo al Paladar)
 **Inspired by**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/solomillo-cerdo-a-plancha-receta-ideal-para-cena-rapida-lista-15-minutos (fetched 2026-04-24). *Fast weeknight recipe: slice into medallions, season, cook 2 min per side on a hot griddle pan. Serve with broccoli and mashed potatoes.*
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 6–8 min
 
@@ -45,7 +45,7 @@ Pensla med olja och marinad innan grillning. Tillagningstid: 12–15 minuter tot
 
 ---
 
-### 2. ichkoche.at — Schweinefilet im Speckmantel (Austrian tradition)
+### 2. Schweinefilet im Speckmantel (inspired by ichkoche.at)
 **Inspired by**: ichkoche.at; https://www.ichkoche.at/schweinefilet-im-speckmantel-rezept-13540 (fetched 2026-04-24). *Whole tenderloin browned in butter, then wrapped in bacon and herbs, then oven-finished 200 °C × 15 min. Pan sauce from shallots, beef stock, and cold butter. 109 ratings.*
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min pan + 15 min oven
 
@@ -79,7 +79,7 @@ Pensla med olja och marinad innan grillning. Tillagningstid: 12–15 minuter tot
 
 ---
 
-### 3. Madens Verden — Svinemørbrad i ovn / pande finish (Danish tradition)
+### 3. Svinemørbrad i ovn / pande finish (inspired by Madens Verden)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/svinemoerbrad-sous-vide/ and https://madensverden.dk/grill-svinemoerbrad-paa-gasgrill-weber-q3200/ (fetched 2026-04-24). *Pan-finish from the grill recipe: brown 1 min per side at high heat on all 4 sides, then reduced heat 2 min per rotation for 8 min total (12 min with browning). Core 65 °C.*
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 12–15 min
 
@@ -102,7 +102,7 @@ Pensla med olja och marinad innan grillning. Tillagningstid: 12–15 minuter tot
 
 ---
 
-### 4. The Woks of Life — 辣椒小炒肉 Pork and Pepper Stir-fry (Chinese tradition)
+### 4. 辣椒小炒肉 Pork and Pepper Stir-fry (inspired by The Woks of Life)
 **Inspired by**: Bill, Judy, Sarah, and Kaitlin Leung, The Woks of Life; https://thewoksoflife.com/pork-pepper-stir-fry/ (fetched 2026-04-26). *Làjiāo xiǎochǎo ròu — a fast, classic Chinese stir-fry using thin-sliced pork tenderloin or loin, marinated briefly, then seared in a smoking-hot wok. The pork is cooked in a single layer first so it sears (not steams), removed, then returned to the wok with peppers and a two-soy-sauce finish. Total cook time under 5 minutes.*
 **Serves**: 2–3 · **Prep**: 15 min · **Cook**: 5 min
 

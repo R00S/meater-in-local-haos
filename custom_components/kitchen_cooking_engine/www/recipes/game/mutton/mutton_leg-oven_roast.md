@@ -34,7 +34,7 @@ Innertemperatur: **75–80 °C (167–176 °F)** för fullt genomstekt, fortfara
 
 ## Source recipes
 
-### 1. Chefkoch.de — Hammel aus dem Ofen (German tradition)
+### 1. Hammel aus dem Ofen (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/1804451291813862/Hammel-aus-dem-Ofen.html (fetched 2026-04-24). *Rated 4.5/5 — "Super tender and incredibly tasty"*
 **Serves**: 4 · **Prep**: 1 hr · **Cook**: 3.5–4 hrs
 
@@ -61,7 +61,7 @@ Innertemperatur: **75–80 °C (167–176 °F)** för fullt genomstekt, fortfara
 
 ---
 
-### 2. IndianHealthyRecipes.com — Raan Musallam (Whole Roasted Mutton Leg, Mughlai/Indian tradition)
+### 2. Raan Musallam (inspired by IndianHealthyRecipes.com)
 **Inspired by**: IndianHealthyRecipes.com; https://www.indianhealthyrecipes.com/raan-musallam/ (web search 2026-04-24)
 **Serves**: 6 · **Prep**: 2 hrs marinate · **Cook**: 3 hrs
 
@@ -87,7 +87,7 @@ Innertemperatur: **75–80 °C (167–176 °F)** för fullt genomstekt, fortfara
 
 ---
 
-### 3. Madensverden.dk — Lammelår i ovnen (adapted for mutton — Danish tradition)
+### 3. Lammelår i ovnen (inspired by Madensverden.dk)
 **Inspired by**: Madensverden.dk; https://madensverden.dk/lammekølle/ (web search 2026-04-24)
 **Serves**: 4–6 · **Prep**: 15 min · **Cook**: 2 h 30 min
 

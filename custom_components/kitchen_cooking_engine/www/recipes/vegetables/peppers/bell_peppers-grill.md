@@ -18,7 +18,7 @@ Paprika (*Capsicum annuum*) på grillen transformeras dramatiskt: skinnet blåse
 
 ## Source recipes
 
-### 1. Claudia Roden — Biber Közleme (Moroccan / Turkish tradition)
+### 1. Biber Közleme (inspired by Claudia Roden)
 **Inspired by**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey and Lebanon* (Alfred A. Knopf, 2005)
 **Serves**: 4–6 · **Prep**: 5 min · **Cook**: 15–20 min · **Rest**: 15 min (steaming)
 
@@ -41,7 +41,7 @@ Paprika (*Capsicum annuum*) på grillen transformeras dramatiskt: skinnet blåse
 
 ---
 
-### 2. Francis Mallmann — Pimientos a la Parrilla (Argentine / South American tradition)
+### 2. Pimientos a la Parrilla (inspired by Francis Mallmann)
 **Inspired by**: Francis Mallmann with Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 20–25 min over embers · **Rest**: 15 min
 
@@ -63,7 +63,7 @@ Paprika (*Capsicum annuum*) på grillen transformeras dramatiskt: skinnet blåse
 
 ---
 
-### 3. Yotam Ottolenghi — Charred Peppers with Walnut Sauce (Middle Eastern / Israeli tradition)
+### 3. Charred Peppers with Walnut Sauce (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 15–18 min · **Rest**: 15 min
 
@@ -85,7 +85,7 @@ Paprika (*Capsicum annuum*) på grillen transformeras dramatiskt: skinnet blåse
 
 ---
 
-### 4. Marcella Hazan — Peperoni Arrostiti all'Aglio (Italian tradition)
+### 4. Peperoni Arrostiti all'Aglio (inspired by Marcella Hazan)
 **Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4–6 · **Prep**: 5 min · **Cook**: 15–20 min · **Rest**: 15 min (steaming)
 

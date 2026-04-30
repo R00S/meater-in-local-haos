@@ -26,7 +26,7 @@ För tunnare strips fungerar en vanlig ugnsrost vid 220–230 °C efter kort spi
 Sonden går in från den tunna änden, riktad mot det geometriska centrumet, bort från fettkappkanten. Eftervärme från 120 °C ugn: 4–6 °C; från 220 °C ugn: 5–7 °C.
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Reverse-Sear New York Strip (American tradition)
+### 1. Reverse-Sear New York Strip (inspired by J. Kenji López-Alt)
 **Inspired by**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/the-reverse-sear-is-the-best-method-for-thick-steaks  
 **Serves**: 2 · **Prep**: 5 min (+overnight dry-brine) · **Cook**: 45–60 min at 135 °C oven + 5 min sear · **Rest**: 2 min
 
@@ -50,7 +50,7 @@ Sonden går in från den tunna änden, riktad mot det geometriska centrumet, bor
 
 ---
 
-### 2. America's Test Kitchen — Oven-Seared Strip Steak (American tradition)
+### 2. Oven-Seared Strip Steak (inspired by America's Test Kitchen)
 **Inspired by**: America's Test Kitchen, *The Complete Cook's Country TV Show Cookbook* (America's Test Kitchen, 2015); americastestkitchen.com  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 12–15 min oven + 3 min sear · **Rest**: 5 min
 
@@ -72,7 +72,7 @@ Sonden går in från den tunna änden, riktad mot det geometriska centrumet, bor
 
 ---
 
-### 3. Gordon Ramsay — Oven-Finished Strip Steak (British restaurant tradition)
+### 3. Oven-Finished Strip Steak (inspired by Gordon Ramsay)
 **Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 4 min sear + 6–8 min oven · **Rest**: 5 min
 
@@ -97,7 +97,7 @@ Sonden går in från den tunna änden, riktad mot det geometriska centrumet, bor
 
 ---
 
-### 4. Heston Blumenthal — Triple-Cooked Steak (British Modernist tradition)
+### 4. Triple-Cooked Steak (inspired by Heston Blumenthal)
 **Inspired by**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 45 min low oven + 2 min sear · **Rest**: 2 min
 
@@ -116,7 +116,7 @@ Sonden går in från den tunna änden, riktad mot det geometriska centrumet, bor
 
 ---
 
-### 5. Fergus Henderson — Roasted Strip Steak (British nose-to-tail tradition)
+### 5. Roasted Strip Steak (inspired by Fergus Henderson)
 **Inspired by**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 5 min sear + 8–10 min oven · **Rest**: 5 min
 

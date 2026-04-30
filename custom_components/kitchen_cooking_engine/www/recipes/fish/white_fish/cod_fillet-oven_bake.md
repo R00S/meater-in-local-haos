@@ -21,7 +21,7 @@ Att tillsätta en panko- eller ströbrödstopping, ett citronsmörsdrix, eller e
 
 ## Source recipes
 
-### 1. America's Test Kitchen — Baked Cod with Crispy Panko Crust (American tradition)
+### 1. Baked Cod with Crispy Panko Crust (inspired by America's Test Kitchen)
 **Inspired by**: America's Test Kitchen, *The Complete Light Cookbook* (America's Test Kitchen, 2016); americastestkitchen.com/recipes/8527-baked-cod  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 15–18 min · **Rest**: 3 min
 
@@ -48,7 +48,7 @@ Att tillsätta en panko- eller ströbrödstopping, ett citronsmörsdrix, eller e
 
 ---
 
-### 2. Rick Stein — Bacalhau à Gomes de Sá (Portuguese tradition)
+### 2. Bacalhau à Gomes de Sá (inspired by Rick Stein)
 **Inspired by**: Rick Stein, *Rick Stein's Long Weekends* (BBC Books, 2016)  
 **Serves**: 4 · **Prep**: 24 h soaking (salt cod) + 20 min prep · **Cook**: 30–35 min · **Rest**: 5 min
 
@@ -76,7 +76,7 @@ Att tillsätta en panko- eller ströbrödstopping, ett citronsmörsdrix, eller e
 
 ---
 
-### 3. Yotam Ottolenghi — Baked Cod with Tahini and Sumac (Middle Eastern tradition)
+### 3. Baked Cod with Tahini and Sumac (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Simple* (Ebury Press, 2018)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 15–18 min · **Rest**: 3 min
 
@@ -100,7 +100,7 @@ Att tillsätta en panko- eller ströbrödstopping, ett citronsmörsdrix, eller e
 
 ---
 
-### 4. Marcella Hazan — Merluzzo al Forno con Pomodoro (Italian tradition)
+### 4. Merluzzo al Forno con Pomodoro (inspired by Marcella Hazan)
 **Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 20–25 min · **Rest**: 3 min
 
@@ -126,7 +126,7 @@ Att tillsätta en panko- eller ströbrödstopping, ett citronsmörsdrix, eller e
 
 ---
 
-### 5. Donna Hay — Lemon-Herb Baked Cod (Australian tradition)
+### 5. Lemon-Herb Baked Cod (inspired by Donna Hay)
 **Inspired by**: Donna Hay, *Fresh and Light* (HarperCollins Australia, 2012)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 15–18 min · **Rest**: 2 min
 

@@ -18,7 +18,7 @@ Champinjoner (*Agaricus bisporus*) sauterade i en riktigt het panna är den klas
 
 ## Source recipes
 
-### 1. Fuchsia Dunlop — Sù Chǎo Shuāng Gū (素炒双菇 — Chinese Stir-Fried Button Mushrooms)
+### 1. Sù Chǎo Shuāng Gū (素炒双菇 — Chinese Stir-Fried Button Mushrooms) (inspired by Fuchsia Dunlop)
 **Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 5–6 min · **Rest**: 1 min
 
@@ -44,7 +44,7 @@ Champinjoner (*Agaricus bisporus*) sauterade i en riktigt het panna är den klas
 
 ---
 
-### 2. Julia Child — Champignons Sautés (French tradition)
+### 2. Champignons Sautés (inspired by Julia Child)
 **Inspired by**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 2 min
 
@@ -68,7 +68,7 @@ Champinjoner (*Agaricus bisporus*) sauterade i en riktigt het panna är den klas
 
 ---
 
-### 3. Madhur Jaffrey — Dhingri aur Hari Mirch (Indian mushrooms with green chilli)
+### 3. Dhingri aur Hari Mirch (Indian mushrooms with green chilli) (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 2 min
 
@@ -95,7 +95,7 @@ Champinjoner (*Agaricus bisporus*) sauterade i en riktigt het panna är den klas
 
 ---
 
-### 4. Yotam Ottolenghi — Sautéed Mushrooms with Labneh (Middle Eastern / Israeli tradition)
+### 4. Sautéed Mushrooms with Labneh (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 2 min
 

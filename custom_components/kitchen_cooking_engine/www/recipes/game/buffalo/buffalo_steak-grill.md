@@ -40,7 +40,7 @@ Direkt hög värme, 2–3 minuter per sida, dra vid 60–63 °C (Filippinerna f�
 
 ## Source recipes
 
-### 1. Yummy.ph — Filipino Bistek Tagalog Carabeef, grilled version (Filipino tradition)
+### 1. Filipino Bistek Tagalog Carabeef, grilled version (inspired by Yummy.ph)
 **Inspired by**: Yummy.ph; https://www.yummy.ph/recipe/bistek-tagalog-recipe-a00249-20191025 (web search 2026-04-24). *Classic Filipino beefsteak (bistek) adapted with carabeef — soy sauce, calamansi, onion rings.*
 **Serves**: 4 · **Prep**: 1 hr marinate · **Cook**: 15 min
 
@@ -64,7 +64,7 @@ Direkt hög värme, 2–3 minuter per sida, dra vid 60–63 °C (Filippinerna f�
 
 ---
 
-### 2. Daskochrezept.de — Gegrilltes Bison-Filet-Steak mit süß-scharfer Bier-Chili-Marinade (German tradition)
+### 2. Gegrilltes Bison-Filet-Steak mit süß-scharfer Bier-Chili-Marinade (inspired by Daskochrezept.de)
 **Inspired by**: Daskochrezept.de; https://www.daskochrezept.de/rezepte/gegrilltes-bison-filet-steak-suess-scharfer-bier-chili-marinade (fetched 2026-04-24). *Note: German recipe using North American bison on charcoal grill — applicable equally to water buffalo steaks.*
 **Serves**: 4 · **Prep**: Overnight marinade + 3 hrs at room temp · **Cook**: 10 min
 
@@ -97,7 +97,7 @@ Direkt hög värme, 2–3 minuter per sida, dra vid 60–63 °C (Filippinerna f�
 
 ---
 
-### 3. IndianHealthyRecipes.com — Indian spiced water buffalo steak (Indian tradition)
+### 3. Indian spiced water buffalo steak (inspired by IndianHealthyRecipes.com)
 **Inspired by**: IndianHealthyRecipes.com (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/spicy-beef-fry/ (web search 2026-04-24; same confirmed site as Rogan Josh fetch, applicable to buffalo/carabeef)
 **Serves**: 4 · **Prep**: 2 hrs marinate · **Cook**: 15 min
 

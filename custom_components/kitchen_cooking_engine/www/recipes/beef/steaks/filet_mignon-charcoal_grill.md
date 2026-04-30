@@ -18,7 +18,7 @@ Filet mignon skärs från den smala änden av nötfilén (*psoas major*), den me
 
 ## Source recipes
 
-### 1. Aaron Franklin — Charcoal-Grilled Filet (Texas tradition)
+### 1. Charcoal-Grilled Filet (inspired by Aaron Franklin)
 **Inspired by**: Aaron Franklin & Jordan Mackay, *Franklin Steak* (Ten Speed Press, 2019)  
 **Serves**: 2 · **Prep**: 5 min (+45 min tempering) · **Cook**: 10–14 min · **Rest**: 5 min
 
@@ -41,7 +41,7 @@ Filet mignon skärs från den smala änden av nötfilén (*psoas major*), den me
 
 ---
 
-### 2. Adam Perry Lang — Two-Stage Charcoal Filet
+### 2. Two-Stage Charcoal Filet (inspired by Adam Perry Lang)
 **Inspired by**: Adam Perry Lang, *BBQ 25* (Hyperion, 2010); adamperry lang.com  
 **Serves**: 2 · **Prep**: 10 min (+1 hr dry rub) · **Cook**: 12–16 min · **Rest**: 8 min
 
@@ -67,7 +67,7 @@ Filet mignon skärs från den smala änden av nötfilén (*psoas major*), den me
 
 ---
 
-### 3. Francis Mallmann — Filet on Charcoal Embers (*gaucho* tradition, Argentine)
+### 3. Filet on Charcoal Embers (inspired by Francis Mallmann)
 **Inspired by**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–12 min · **Rest**: 5 min
 
@@ -88,7 +88,7 @@ Filet mignon skärs från den smala änden av nötfilén (*psoas major*), den me
 
 ---
 
-### 4. Nobu Matsuhisa — Charcoal-Grilled Beef Fillet with Soy (Japanese tradition)
+### 4. Charcoal-Grilled Beef Fillet with Soy (inspired by Nobu Matsuhisa)
 **Inspired by**: Nobu Matsuhisa, *Nobu the Cookbook* (Kodansha, 2001)  
 **Serves**: 2 · **Prep**: 10 min (+15 min marinade) · **Cook**: 8–10 min · **Rest**: 3 min
 
@@ -113,7 +113,7 @@ Filet mignon skärs från den smala änden av nötfilén (*psoas major*), den me
 
 ---
 
-### 5. Yotam Ottolenghi — Middle Eastern Charcoal-Grilled Fillet
+### 5. Middle Eastern Charcoal-Grilled Fillet (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi & Ramael Scully, *NOPI: The Cookbook* (Ebury Press, 2015)  
 **Serves**: 2 · **Prep**: 20 min (+2 hr marinating) · **Cook**: 10–12 min · **Rest**: 5 min
 

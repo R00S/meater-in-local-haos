@@ -19,7 +19,7 @@ Hängarbiff (*onglet* på franska, *bavette de flanchet* regionalt, *butcher's s
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Grilled Hanger Steak (American bistro tradition)
+### 1. Grilled Hanger Steak (inspired by J. Kenji López-Alt)
 **Inspired by**: J. Kenji López-Alt, seriouseats.com/grilled-hanger-steak; *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -39,7 +39,7 @@ Hängarbiff (*onglet* på franska, *bavette de flanchet* regionalt, *butcher's s
 
 ---
 
-### 2. David Tanis — Grilled Onglet à l'Échalote (French bistro tradition)
+### 2. Grilled Onglet à l'Échalote (inspired by David Tanis)
 **Inspired by**: David Tanis, *A Platter of Figs and Other Recipes* (Artisan Books, 2008)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -59,7 +59,7 @@ Hängarbiff (*onglet* på franska, *bavette de flanchet* regionalt, *butcher's s
 
 ---
 
-### 3. Yotam Ottolenghi — Grilled Hanger Steak with Spiced Yoghurt (Middle Eastern tradition)
+### 3. Grilled Hanger Steak with Spiced Yoghurt (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi and Ramael Scully, *NOPI: The Cookbook* (Ebury Press, 2015)  
 **Serves**: 4 · **Prep**: 15 min (+2 h marinade) · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -77,7 +77,7 @@ Hängarbiff (*onglet* på franska, *bavette de flanchet* regionalt, *butcher's s
 
 ---
 
-### 4. April Bloomfield — Grilled Hanger Steak, Balsamic-Onion (American-British tradition)
+### 4. Grilled Hanger Steak, Balsamic-Onion (inspired by April Bloomfield)
 **Inspired by**: April Bloomfield, *A Girl and Her Pig* (Ecco Press, 2012)  
 **Serves**: 2 · **Prep**: 10 min (+1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -96,7 +96,7 @@ Hängarbiff (*onglet* på franska, *bavette de flanchet* regionalt, *butcher's s
 
 ---
 
-### 5. Neil Perry — Grilled Hanger Steak with Gremolata (Australian tradition)
+### 5. Grilled Hanger Steak with Gremolata (inspired by Neil Perry)
 **Inspired by**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
 **Serves**: 2 · **Prep**: 5 min (+30 min dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 

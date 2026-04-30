@@ -38,7 +38,7 @@ Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. E
 
 ## Source recipes
 
-### 1. Adam Gray, Great British Chefs — Roast Loin of Venison, Wild Mushroom Pie and Parsnip Purée
+### 1. Roast Loin of Venison, Wild Mushroom Pie and Parsnip Purée (inspired by Adam Gray, Great British Chefs)
 **Inspired by**: Adam Gray, Great British Chefs; https://www.greatbritishchefs.com/recipes/roast-venison-recipe (fetched 2026-04-28). First published 2015.
 **Serves**: 4 · **Time**: 2 hours (including sauce and garnishes)
 **Culinary tradition**: British (Group B)
@@ -65,7 +65,7 @@ Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. E
 
 ---
 
-### 2. Vivek Singh, Great British Chefs — Roast Saddle of Red Deer with Rajasthani Spice Paste (Loin Steaks)
+### 2. Roast Saddle of Red Deer with Rajasthani Spice Paste (Loin Steaks) (inspired by Vivek Singh, Great British Chefs)
 **Inspired by**: Vivek Singh, Great British Chefs; https://www.greatbritishchefs.com/recipes/indian-venison-recipe (fetched 2026-04-28). Award-winning recipe; best British curry 2006.
 **Serves**: 4 · **Time**: 1 hour 30 minutes
 **Culinary tradition**: South Asian / Rajasthani (Group A)

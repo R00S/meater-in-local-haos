@@ -36,7 +36,7 @@ Grilla vid medel-direkt värme, 20–25 minuter med regelbunden vändning var 5:
 
 ## Source recipes
 
-### 1. Taste of Home — Grilled Chicken Wings with Buffalo Sauce
+### 1. Grilled Chicken Wings with Buffalo Sauce (inspired by Taste of Home)
 **Inspired by**: Nicole Doster, reviewed by Lindsay D. Mattison; Taste of Home; https://www.tasteofhome.com/recipes/grilled-chicken-wings/ (fetched 2026-04-27).
 **Serves**: 4–6 · **Prep**: 15 min · **Cook**: 20–25 min
 
@@ -73,7 +73,7 @@ Grilla vid medel-direkt värme, 20–25 minuter med regelbunden vändning var 5:
 
 ---
 
-### 2. Immaculate Bites — Crispy Grilled Chicken Wings
+### 2. Crispy Grilled Chicken Wings (inspired by Immaculate Bites)
 **Inspired by**: Imma Adamu, Africanbites.com (Cameroonian-born food blogger, based in USA); https://www.africanbites.com/grilled-chicken-wings/ (fetched 2026-04-27).
 **Serves**: 4–6 · **Prep**: 10 min (+overnight dry-brine option) · **Cook**: 30 min
 

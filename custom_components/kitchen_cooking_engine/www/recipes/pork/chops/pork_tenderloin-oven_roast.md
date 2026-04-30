@@ -26,7 +26,7 @@ Strukturen är lämpad för alla snabbkokningsmetoder: pannstekning, grillning, 
 
 ## Source recipes
 
-### 1. Directo al Paladar — Solomillo de cerdo al horno con patatas (Spanish tradition)
+### 1. Solomillo de cerdo al horno con patatas (inspired by Directo al Paladar)
 **Inspired by**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/receta-solomillo-cerdo-al-horno-patatas-asado-facil-resulton (fetched 2026-04-24). *One-dish: potato bed in white wine at 170 °C × 40 min (covered); sear tenderloin then place on potatoes and roast uncovered at 220 °C × 15 min. Rest 5 min.*
 **Serves**: 4 · **Cook**: 55 min total
 
@@ -55,7 +55,7 @@ Strukturen är lämpad för alla snabbkokningsmetoder: pannstekning, grillning, 
 
 ---
 
-### 2. ichkoche.at — Schweinefilet im Speckmantel (Austrian tradition)
+### 2. Schweinefilet im Speckmantel (inspired by ichkoche.at)
 **Inspired by**: ichkoche.at; https://www.ichkoche.at/schweinefilet-im-speckmantel-rezept-13540 (fetched 2026-04-24). *Sear tenderloin in butter, wrap in bacon + herb crumb, then roast in oven at 200 °C × 15 min. Shallot and butter sauce. 109 ratings.*
 **Serves**: 4 · **Cook**: 8 min pan + 15 min oven
 
@@ -82,7 +82,7 @@ Strukturen är lämpad för alla snabbkokningsmetoder: pannstekning, grillning, 
 
 ---
 
-### 3. Madens Verden — Helstegt svinemørbrad i ovn (Danish tradition)
+### 3. Helstegt svinemørbrad i ovn (inspired by Madens Verden)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/helstegt-svinemoerbrad-ovn/ (referenced 2026-04-24). *Whole pan-seared then oven-finished tenderloin — classic Danish home cooking. Core temperature 63–65 °C.*
 **Serves**: 2–4 · **Cook**: 5 min pan + 15–20 min oven
 
@@ -105,7 +105,7 @@ Strukturen är lämpad för alla snabbkokningsmetoder: pannstekning, grillning, 
 
 ---
 
-### 4. Imma Adamu — Creole-Spiced Pork Tenderloin Roast (West African / Caribbean tradition)
+### 4. Creole-Spiced Pork Tenderloin Roast (inspired by Imma Adamu)
 **Inspired by**: Imma Adamu (Cameroon-born food writer, USA), Immaculate Bites; https://www.africanbites.com/pork-loin-roast/ (fetched 2026-04-25). *West African–Caribbean Creole-spiced pork tenderloin: rubbed with Creole seasoning, thyme, oregano, and garlic; seared on all sides in a cast-iron skillet, then roasted at 400 °F (205 °C) for 13–15 minutes on a rack. The Creole spice blend reflects the West African–French Louisiana–Caribbean Diaspora fusion that is central to the Immaculate Bites culinary tradition.*
 **Serves**: 6 · **Prep**: 5 min · **Cook**: 25 min total (sear + roast)
 

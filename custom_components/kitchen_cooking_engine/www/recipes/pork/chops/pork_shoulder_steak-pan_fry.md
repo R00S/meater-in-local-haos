@@ -23,7 +23,7 @@ Innertemperatur: **70–74 °C (158–165 °F)** för genomstekt med saftighet k
 
 ## Source recipes
 
-### 1. Madens Verden — Langtidsstegt nakkesteg som bøffer (adapted for pan-fried shoulder steak) (Danish tradition)
+### 1. Langtidsstegt nakkesteg som bøffer (adapted for pan-fried shoulder steak) (inspired by Madens Verden)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/langtidsstegt-nakkesteg-boeffer/ (referenced 2026-04-24). *Danish slow-cooked collar steak method — brown first in butter, then slow finish. For a quick pan-only version: high heat 3–4 min per side with butter baste; add stock for pan sauce.*
 **Serves**: 2–4 · **Cook**: 8–12 min
 
@@ -48,7 +48,7 @@ Innertemperatur: **70–74 °C (158–165 °F)** för genomstekt med saftighet k
 
 ---
 
-### 2. ichkoche.at — Schopfsteak (Austrian tradition)
+### 2. Schopfsteak (inspired by ichkoche.at)
 **Inspired by**: ichkoche.at; https://www.ichkoche.at/schopfsteak-aus-dem-airfryer-rezept-240872 (referenced — Schopfsteak being the Austrian name for shoulder/neck steak). *Vienna's classic: neck steak with garlic, vinegar, paprika marinade. Sear in hot oil or fat 3–4 min per side.*
 **Serves**: 2 · **Cook**: 6–8 min
 
@@ -72,7 +72,7 @@ Innertemperatur: **70–74 °C (158–165 °F)** för genomstekt med saftighet k
 
 ---
 
-### 3. Chefkoch.de — Nackensteak Schwein Pfanne (German tradition)
+### 3. Nackensteak Schwein Pfanne (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rs/s0/nackensteak+schwein+pfanne/Rezepte.html (referenced 2026-04-24). *German classic pan necksteak: season, sear in cast iron 3–4 min per side, add onion, garlic, herbs for pan sauce.*
 **Serves**: 2 · **Cook**: 8–12 min
 

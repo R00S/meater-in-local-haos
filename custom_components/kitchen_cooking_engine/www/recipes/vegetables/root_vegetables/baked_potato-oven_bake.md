@@ -18,7 +18,7 @@ Hel bakad potatis (*Solanum tuberosum*) i konventionell ugn är arketypen av lå
 
 ## Source recipes
 
-### 1. Julia Child — Pommes de Terre Rôties au Four (French tradition)
+### 1. Pommes de Terre Rôties au Four (inspired by Julia Child)
 **Inspired by**: Julia Child, *The French Chef Cookbook* (Alfred A. Knopf, 1968); baked potato with French flavour treatments.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 60–75 min · **Rest**: 5 min
 
@@ -33,7 +33,7 @@ Hel bakad potatis (*Solanum tuberosum*) i konventionell ugn är arketypen av lå
 
 ---
 
-### 2. Madhur Jaffrey — Masala Baked Potato (Indian tradition)
+### 2. Masala Baked Potato (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 60–75 min · **Rest**: 5 min
 
@@ -48,7 +48,7 @@ Hel bakad potatis (*Solanum tuberosum*) i konventionell ugn är arketypen av lå
 
 ---
 
-### 3. Nigel Slater — Perfect Baked Potato (British tradition)
+### 3. Perfect Baked Potato (inspired by Nigel Slater)
 **Inspired by**: Nigel Slater, *Tender Vol. I* (4th Estate, 2009)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 70–80 min · **Rest**: 5 min
 
@@ -62,7 +62,7 @@ Hel bakad potatis (*Solanum tuberosum*) i konventionell ugn är arketypen av lå
 
 ---
 
-### 4. Deborah Madison — Herb-Stuffed Baked Potato (American vegetarian tradition)
+### 4. Herb-Stuffed Baked Potato (inspired by Deborah Madison)
 **Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 65–75 min · **Rest**: 5 min
 

@@ -36,7 +36,7 @@ Bisonburgerbiffar är gjorda av malet bisonkött, vanligtvis från skulder, fran
 
 ## Source recipes
 
-### 1. BBC Good Food — Barbecue Beef Burger (British tradition)
+### 1. Barbecue Beef Burger (inspired by BBC Good Food)
 
 **Inspired by**: Good Food magazine, [Barbecue beef burger](https://www.bbcgoodfood.com/recipes/barbecue-beef-burger) (fetched 2026-06-08)
 **Serves**: 4 · **Prep**: 10 min + 30 min chilling · **Cook**: 9–10 min · **Rest**: 2–3 min
@@ -65,7 +65,7 @@ Bisonburgerbiffar är gjorda av malet bisonkött, vanligtvis från skulder, fran
 
 ---
 
-### 2. Madensverden.dk — Saftige Burgerbøffer (Danish tradition)
+### 2. Saftige Burgerbøffer (inspired by Madensverden.dk)
 
 **Inspired by**: Holger Rørby Madsen, [Saftige burgerbøffer](https://madensverden.dk/saftige-burgerboeffer/) (fetched 2026-06-08)
 **Serves**: 4 (8 patties of 100 g each) · **Prep**: 10 min · **Cook**: 6 min total · **Rest**: 2 min
@@ -93,7 +93,7 @@ Bisonburgerbiffar är gjorda av malet bisonkött, vanligtvis från skulder, fran
 
 ---
 
-### 3. Chefkoch.de — Der Bisonburger (German tradition)
+### 3. Der Bisonburger (inspired by Chefkoch.de)
 
 **Inspired by**: kkellings, [Der Bisonburger](https://www.chefkoch.de/rezepte/3007371453624664/Der-Bisonburger.html) (fetched 2026-06-08)
 **Serves**: 1 · **Prep**: 30 min · **Cook**: 10 min · **Rest**: 4 min
@@ -124,7 +124,7 @@ Bisonburgerbiffar är gjorda av malet bisonkött, vanligtvis från skulder, fran
 
 ---
 
-### 4. RecipeTin Eats — Hamburger Recipe (Australian tradition)
+### 4. Hamburger Recipe (inspired by RecipeTin Eats)
 
 **Inspired by**: Nagi, [Hamburger recipe](https://www.recipetineats.com/hamburger-recipe/) (fetched 2026-06-08)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min · **Rest**: 2–3 min

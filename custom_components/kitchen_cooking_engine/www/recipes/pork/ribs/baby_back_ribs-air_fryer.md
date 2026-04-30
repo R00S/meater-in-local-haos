@@ -25,7 +25,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet (USDA-sta
 
 ## Source recipes
 
-### 1. Madens Verden — Ribben i airfryer (Danish tradition)
+### 1. Ribben i airfryer (inspired by Madens Verden)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ribben-i-airfryer/ (fetched 2026-04-24). *"My recipe for ribs in the airfryer — the good bones, either from scratch with fresh ribs that you boil yourself, or pre-bought." 4.8/5 stars.*
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 40 min boil + 20 min air fryer
 
@@ -55,7 +55,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet (USDA-sta
 
 ---
 
-### 2. Matprat — Ribbe i airfryer (Norwegian tradition)
+### 2. Ribbe i airfryer (inspired by Matprat)
 **Inspired by**: Matprat.no; https://www.matprat.no/oppskrifter/kos/ribbe-i-airfryer/ (fetched 2026-04-24). *Norwegian pork ribs in the airfryer — low-and-slow phase then crisp-svor finish. No pre-boiling.*
 **Serves**: 2 · **Prep**: 2 days salting (or skip with pre-seasoned) · **Cook**: 2 hr 10–15 min · **Rest**: few min
 
@@ -77,7 +77,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet (USDA-sta
 
 ---
 
-### 3. ichkoche.at — Spareribs aus der Heißluftfritteuse – Saftig und Knusprig (Austrian tradition)
+### 3. Spareribs aus der Heißluftfritteuse – Saftig und Knusprig (inspired by ichkoche.at)
 **Inspired by**: ichkoche.at; https://www.ichkoche.at/spareribs-aus-der-heissluftfritteuse-rezept-232223 (fetched 2026-04-24). *Juicy and crispy spareribs from the air fryer with overnight marinade. 1 250 ratings.*
 **Serves**: 4 · **Prep**: overnight marinade · **Cook**: 60–90 min
 
@@ -103,7 +103,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet (USDA-sta
 
 ---
 
-### 4. Cucino per Passione (blog.giallozafferano.it) — Costine in friggitrice ad aria (Italian tradition)
+### 4. Costine in friggitrice ad aria (inspired by Cucino per Passione)
 **Inspired by**: Barbara, Cucino per Passione; https://blog.giallozafferano.it/cucinoperpassione/ricetta-costine-in-friggitrice-ad-aria/ (fetched 2026-04-24). *Simple Italian pork ribs in the air fryer — herbs only, no marinade. Fat drips away so ribs stay non-greasy.*
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 30 min
 
@@ -127,7 +127,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet (USDA-sta
 
 ---
 
-### 5. Directo al Paladar — Costillas de cerdo en freidora de aire (Spanish tradition)
+### 5. Costillas de cerdo en freidora de aire (inspired by Directo al Paladar)
 **Inspired by**: Carmen Tía Alia, Directoalpaladar.com; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/como-hacer-costillas-cerdo-freidora-aire-tiernas-saboras-que-se-deshacen-boca (fetched 2026-04-24). *"So tender and tasty they melt in the mouth." BBQ sauce marinade, simple 20 min cook. 11 votes.*
 **Serves**: 2 · **Prep**: 5 min (+ overnight marinade) · **Cook**: 30 min
 

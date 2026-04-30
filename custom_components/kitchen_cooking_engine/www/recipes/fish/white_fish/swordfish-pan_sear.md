@@ -47,7 +47,7 @@ Svärdfisk (*Xiphias gladius*, italiensk: pesce spada, turkisk: kılıçbalığ�
 
 ## Source recipes
 
-### 1. BBC Good Food — Griddled Swordfish with Pineapple & Chilli Salsa (British/Tropical fusion tradition)
+### 1. Griddled Swordfish with Pineapple & Chilli Salsa (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food;
 bbcgoodfood.com/recipes/griddled-swordfish-pineapple-chilli-salsa (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 30 min + 1 h marinating · **Cook**: 2–3 min
@@ -91,7 +91,7 @@ bbcgoodfood.com/recipes/griddled-swordfish-pineapple-chilli-salsa (fetched 2026-
 
 ---
 
-### 2. BBC Good Food — Seared Swordfish with Mango Salsa (British/Caribbean tradition)
+### 2. Seared Swordfish with Mango Salsa (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food magazine, June 2007;
 bbcgoodfood.com/recipes/seared-swordfish-mango-salsa (fetched 2026-04-24)
 **Serves**: 2 · **Cook**: 6 min
@@ -122,7 +122,7 @@ bbcgoodfood.com/recipes/seared-swordfish-mango-salsa (fetched 2026-04-24)
 
 ---
 
-### 3. Giallozafferano — Pesce Spada in Padella con Capperi e Olive / Pan-Seared Swordfish with Capers and Olives (Italian/Sicilian tradition)
+### 3. Pesce Spada in Padella con Capperi e Olive / Pan-Seared Swordfish with Capers and Olives (inspired by Giallozafferano)
 **Inspired by**: Giallozafferano (Italian culinary media);
 ricette.giallozafferano.it/Pesce-spada-in-padella.html (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min

@@ -36,7 +36,7 @@ Tillagningstid: 35–45 minuter vid 200–220 °C med vändning halvvägs. Inner
 
 ## Source recipes
 
-### 1. Jessica Gavin — Baked Chicken Legs
+### 1. Baked Chicken Legs (inspired by Jessica Gavin)
 **Inspired by**: Jessica Gavin, jessicagavin.com; https://www.jessicagavin.com/baked-chicken-legs/ (fetched 2025-07-15).
 **Serves**: 4–8 · **Prep**: 10 min · **Cook**: 35 min · **Rest**: 5 min
 
@@ -71,7 +71,7 @@ Tillagningstid: 35–45 minuter vid 200–220 °C med vändning halvvägs. Inner
 
 ---
 
-### 2. Natasha's Kitchen — Baked Chicken Drumsticks
+### 2. Baked Chicken Drumsticks (inspired by Natasha's Kitchen)
 **Inspired by**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/baked-chicken-drumsticks/ (fetched 2025-07-15).
 **Serves**: 6–8 · **Prep**: 10 min + 6–8 hr marinate · **Cook**: 60 min · **Rest**: 5 min
 
@@ -102,7 +102,7 @@ Tillagningstid: 35–45 minuter vid 200–220 °C med vändning halvvägs. Inner
 
 ---
 
-### 3. BBC Good Food — Sticky Chicken Drumsticks
+### 3. Sticky Chicken Drumsticks (inspired by BBC Good Food)
 **Inspired by**: Good Food team, BBC Good Food (Good Food magazine, November 2007); https://www.bbcgoodfood.com/recipes/sticky-chicken-drumsticks (archived: https://web.archive.org/web/20241001021310/https://www.bbcgoodfood.com/recipes/sticky-chicken-drumsticks, fetched 2026-04-24).
 **Serves**: 4 · **Prep**: 10 min + marinating time · **Cook**: 25 min
 
@@ -124,7 +124,7 @@ Tillagningstid: 35–45 minuter vid 200–220 °C med vändning halvvägs. Inner
 
 ---
 
-### 4. Swasthi Shreekanth — Tandoori Chicken Legs (Indian tradition)
+### 4. Tandoori Chicken Legs (inspired by Swasthi Shreekanth)
 **Inspired by**: Swasthi Shreekanth, Indian Healthy Recipes; https://www.indianhealthyrecipes.com/tandoori-chicken-recipe/ (fetched 2026-04-25). *North Indian tandoori — bone-in chicken legs and drumsticks deeply slashed, marinated overnight in spiced Greek yogurt (Kashmiri chili, garam masala, ginger-garlic paste, kasuri methi, lemon juice), roasted on a wire rack at 240 °C (460 °F) for 25–30 minutes, basted midway, then briefly broiled for charred spots. The dark-meat version of the iconic Indian oven-roast.*
 **Serves**: 4 · **Prep**: 15 min + overnight marinate · **Cook**: 40–45 min total (oven + broil)
 

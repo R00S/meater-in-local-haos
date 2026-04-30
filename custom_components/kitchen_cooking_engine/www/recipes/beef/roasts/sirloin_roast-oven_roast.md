@@ -32,7 +32,7 @@ Eftervärme: en hel sirloin-joint (1–2 kg) får 4–8 °C eftervärme beroende
 Sondplacering: från änden, vinklad mot det geometriska centrumet av den magra muskeln. Undvik fettkappan (ger falskt låga värden eftersom fett leder värme dåligt). På ben-in sirloin håll spetsen minst 1,5 cm från benytan.
 ## Source recipes
 
-### 1. Chef Simon — Rôti de Boeuf (French classical tradition)
+### 1. Rôti de Boeuf (inspired by Chef Simon)
 **Inspired by**: Chef Simon, *Rôti de Boeuf*, chefsimon.com/gourmets/chef-simon/recettes/roti-de-boeuf--3  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: ~30 min (1 kg joint)
 
@@ -55,7 +55,7 @@ Sondplacering: från änden, vinklad mot det geometriska centrumet av den magra 
 
 ---
 
-### 2. Nagi Maehashi — Marinated Roast Beef (Australian tradition)
+### 2. Marinated Roast Beef (inspired by Nagi Maehashi)
 **Inspired by**: Nagi Maehashi, RecipeTin Eats, recipetineats.com/marinated-roast-beef/  
 **Serves**: 6–8 · **Prep**: 15 min (+2–3 day marinade) · **Cook**: ~55–60 min · **Rest**: 20–30 min
 
@@ -78,7 +78,7 @@ Sondplacering: från änden, vinklad mot det geometriska centrumet av den magra 
 
 ---
 
-### 3. Immaculate Bites — Creole-Spiced Roast Beef (West African / Southern American Creole tradition)
+### 3. Creole-Spiced Roast Beef (inspired by Immaculate Bites)
 **Inspired by**: Immaculate Bites (Imma), africanbites.com/roast-beef/  
 **Serves**: 6–8 · **Prep**: 15 min (+overnight marinade) · **Cook**: 1–2 hours · **Rest**: 15–20 min
 

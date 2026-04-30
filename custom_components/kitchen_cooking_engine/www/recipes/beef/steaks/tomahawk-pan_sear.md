@@ -25,7 +25,7 @@ Målinterna temperaturer:
 - Medium: **dra från ugn vid 55–57 °C (131–135 °F)**, vila till **62–63 °C (144–145 °F)**
 ## Source recipes
 
-### 1. ichkoche.at — Tomahawk Steak (Austrian tradition)
+### 1. Tomahawk Steak (inspired by ichkoche.at)
 **Inspired by**: ichkoche.at; https://www.ichkoche.at/tomahawk-steak-rezept-241334 (fetched 2026-04-24). *Austrian method: thin oil coat, sear 90–120 seconds per side in very hot pan, finish in 140 °C oven to core temperature. 74 user ratings.*
 **Serves**: 2 · **Prep**: 45 min (tempering) · **Cook**: 35–50 min total
 
@@ -49,7 +49,7 @@ Målinterna temperaturer:
 
 ---
 
-### 2. Chefkoch.de — Tomahawk-Steak im Backofen, rückwärts gegart (German tradition)
+### 2. Tomahawk-Steak im Backofen, rückwärts gegart (inspired by Chefkoch.de)
 **Inspired by**: 0602, Chefkoch.de; https://www.chefkoch.de/rezepte/3007701453644532/Tomahawk-Steak-im-Backofen.html (fetched 2026-04-24). *The true reverse: oven 90 minutes at 90 °C to medium, then sear 1.5–2 minutes per side in screaming hot pan. 4.9/5 stars.*
 **Serves**: 2 · **Cook**: 1 hr 50 min total
 
@@ -73,7 +73,7 @@ Målinterna temperaturer:
 
 ---
 
-### 3. RecipeTin Eats — Tomahawk Steak (finishing method without BBQ) (Australian tradition)
+### 3. Tomahawk Steak (finishing method without BBQ) (inspired by RecipeTin Eats)
 **Inspired by**: Nagi Maehashi & JB, RecipeTin Eats; https://www.recipetineats.com/tomahawk-steak/ (fetched 2026-04-24). *No-BBQ option: low oven first, then oven grill/broiler for sear. Same temperatures as the BBQ version.*
 **Serves**: 2–3 · **Cook**: 40–45 min oven + 8–10 min broiler
 

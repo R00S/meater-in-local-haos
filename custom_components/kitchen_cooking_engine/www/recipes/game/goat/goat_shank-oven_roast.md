@@ -23,7 +23,7 @@ Sond i den tjockaste köttmassan borta från benet. Innertemperatur: **82–88 �
 
 ## Source recipes
 
-### 1. Yotam Ottolenghi & Sami Tamimi — Oven-Roasted Goat Shanks with Pomegranate (Levantine tradition)
+### 1. Oven-Roasted Goat Shanks with Pomegranate (inspired by Yotam Ottolenghi & Sami Tamimi)
 **Inspired by**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012) — covered-roast variant; ottolenghi.co.uk  
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 3.5 hours · **Rest**: 15 min
 
@@ -52,7 +52,7 @@ Sond i den tjockaste köttmassan borta från benet. Innertemperatur: **82–88 �
 
 ---
 
-### 2. Tina Nordström — Ugnsbakade Getlägg med Rödvin (Swedish/Nordic tradition)
+### 2. Ugnsbakade Getlägg med Rödvin (inspired by Tina Nordström)
 **Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — covered-roast variant; köket.se  
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 3.5 hours · **Rest**: 15 min
 
@@ -79,7 +79,7 @@ Sond i den tjockaste köttmassan borta från benet. Innertemperatur: **82–88 �
 
 ---
 
-### 3. Diana Henry — Slow-Roasted Goat Shanks with Anchovy & Rosemary (British/Mediterranean tradition)
+### 3. Slow-Roasted Goat Shanks with Anchovy & Rosemary (inspired by Diana Henry)
 **Inspired by**: Diana Henry, *Roast Figs, Sugar Snow* (Mitchell Beazley, 2005) — slow-roast game-shank technique adapted to goat; telegraph.co.uk/food-and-drink  
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 3.5 hours · **Rest**: 15 min
 
@@ -106,7 +106,7 @@ Sond i den tjockaste köttmassan borta från benet. Innertemperatur: **82–88 �
 
 ---
 
-### 4. Hugh Fearnley-Whittingstall — Slow-Roast Goat Shanks (British River Cottage tradition)
+### 4. Slow-Roast Goat Shanks (inspired by Hugh Fearnley-Whittingstall)
 **Inspired by**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004) — goat-shank slow-roast technique; rivercottage.net  
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 3.5 hours · **Rest**: 15 min
 

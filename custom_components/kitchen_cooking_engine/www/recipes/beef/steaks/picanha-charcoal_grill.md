@@ -21,7 +21,7 @@ Träkolsrökföreningarna tränger in i fettlocket och ger ett karakteristiskt a
 
 ## Source recipes
 
-### 1. Francis Mallmann — Churrasco Picanha over Charcoal (Brazilian / Argentine tradition)
+### 1. Churrasco Picanha over Charcoal (inspired by Francis Mallmann)
 **Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
 **Serves**: 6 · **Prep**: 5 min · **Cook**: 25–35 min over embers · **Rest**: 10 min
 
@@ -43,7 +43,7 @@ Träkolsrökföreningarna tränger in i fettlocket och ger ett karakteristiskt a
 
 ---
 
-### 2. Steven Raichlen — Picanha over Live Charcoal (American adaptation of Brazilian tradition)
+### 2. Picanha over Live Charcoal (inspired by Steven Raichlen)
 **Inspired by**: Steven Raichlen, *Planet Barbecue!* (Workman Publishing, 2010)  
 **Serves**: 6 · **Prep**: 10 min (+1 h dry brine) · **Cook**: 20–25 min · **Rest**: 8 min
 
@@ -64,7 +64,7 @@ Träkolsrökföreningarna tränger in i fettlocket och ger ett karakteristiskt a
 
 ---
 
-### 3. Lennox Hastie — Rump Cap over Australian Charcoal (Australian wood-fire tradition)
+### 3. Rump Cap over Australian Charcoal (inspired by Lennox Hastie)
 **Inspired by**: Lennox Hastie, *Finding Fire* (Hardie Grant, 2017)  
 **Serves**: 4 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 20–25 min · **Rest**: 8 min
 
@@ -85,7 +85,7 @@ Träkolsrökföreningarna tränger in i fettlocket och ger ett karakteristiskt a
 
 ---
 
-### 4. Bobby Flay — Charcoal-Grilled Picanha with Chimichurri (American Southwest tradition)
+### 4. Charcoal-Grilled Picanha with Chimichurri (inspired by Bobby Flay)
 **Inspired by**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 18–22 min · **Rest**: 8 min
 
@@ -104,7 +104,7 @@ Träkolsrökföreningarna tränger in i fettlocket och ger ett karakteristiskt a
 
 ---
 
-### 5. Nobu Matsuhisa — Charcoal-Grilled Picanha with Ponzu (Japanese-Brazilian tradition)
+### 5. Charcoal-Grilled Picanha with Ponzu (inspired by Nobu Matsuhisa)
 **Inspired by**: Nobu Matsuhisa, *Nobu Miami: The Party Cookbook* (Kodansha International, 2009)  
 **Serves**: 4 · **Prep**: 10 min (+30 min dry brine) · **Cook**: 20–25 min · **Rest**: 8 min
 

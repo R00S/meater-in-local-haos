@@ -30,7 +30,7 @@ Slow cooker-metod: LÅG i 7–8 timmar med fond och aromater. Ugnsrostnig lågt:
 
 ## Source recipes
 
-### 1. BBC Good Food — Slow Cooker Pork Belly (UK, crockpot method)
+### 1. Slow Cooker Pork Belly (UK, crockpot method) (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food, bbcgoodfood.com; https://www.bbcgoodfood.com/recipes/slow-cooker-pork-belly (fetched 2026-04-24). *Garlic-ginger-soy slow cooker pork belly. Simple 2-step recipe, HIGH 4 hours, finish in a frying pan for colour.*
 **Serves**: 6 · **Prep**: 10 min · **Cook**: 4 hr 20 min · **Total**: ~4.5 hr
 
@@ -56,7 +56,7 @@ Slow cooker-metod: LÅG i 7–8 timmar med fond och aromater. Ugnsrostnig lågt:
 
 ---
 
-### 2. Chefkoch.de — Bayerischer Krauttopf mit Wammerl (German/Bavarian CrockPot)
+### 2. Bayerischer Krauttopf mit Wammerl (German/Bavarian CrockPot) (inspired by Chefkoch.de)
 **Inspired by**: downhillcat, Chefkoch.de; https://www.chefkoch.de/rezepte/2535721397215723/Downhillcats-bayerischer-Krauttopf-mit-Wammerl.html (fetched 2026-04-24). *"Bavarian Krauttopf (sauerkraut stew) with Wammerl (pork belly) — a recipe for the CrockPot / Slow Cooker." 4.4/5, multiple ratings.*
 **Serves**: 4 · **Prep**: 35 min · **Cook**: 6–7 hr (LOW) · **Total**: ~6.5–7.5 hr
 
@@ -89,7 +89,7 @@ Slow cooker-metod: LÅG i 7–8 timmar med fond och aromater. Ugnsrostnig lågt:
 
 ---
 
-### 3. Jamie Oliver — Slow-Cooked Pork Belly (UK, low-oven method)
+### 3. Slow-Cooked Pork Belly (UK, low-oven method) (inspired by Jamie Oliver)
 **Inspired by**: Jamie Oliver, jamieoliver.com; https://www.jamieoliver.com/recipes/pork-recipes/slow-cooked-pork-belly/ (fetched 2026-04-24). *"Together" cookbook recipe. Get-ahead low-oven slow cook (180 °C × 2 hours), refrigerate overnight, crisp-up next day. Serves 12.*
 **Serves**: 12 · **Prep**: 20 min (+ overnight rest) · **Cook**: 2 hr + 30 min crisp · **Total**: 2 days (mostly passive)
 

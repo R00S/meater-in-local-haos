@@ -24,7 +24,7 @@ Vid 88–95 °C internt, hållet i 2–3 timmar, ger bison-bogbräsering otrolig
 
 ## Source recipes
 
-### 1. Sean Sherman (The Sioux Chef) — Cedar-Braised Bison
+### 1. Cedar-Braised Bison (inspired by Sean Sherman)
 **Inspired by**: https://www.thekitchn.com/cedar-braised-bison-recipe-23094370  
 **From**: *The Sioux Chef's Indigenous Kitchen* (Univ. of Minnesota Press) — Sean Sherman (Oglala Lakota)  
 **Tradition**: Indigenous North American (Lakota / Ojibwe) — **Culinary Group B** (North American)  

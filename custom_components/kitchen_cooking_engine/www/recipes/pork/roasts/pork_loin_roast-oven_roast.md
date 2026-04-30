@@ -25,7 +25,7 @@ Standardteknik: djup ritsning av svålen, salt i ritsorna, ugn 180–200 °C i 1
 
 ## Source recipes
 
-### 1. Valdemarsro — Flæskesteg med sprød svær (Danish tradition)
+### 1. Flæskesteg med sprød svær (inspired by Valdemarsro)
 **Inspired by**: Valdemarsro.dk; https://www.valdemarsro.dk/flaeskesteg/ (fetched 2026-04-24). *Classic Danish pork loin roast with crispy crackling. "Cold oven, slow start — the key to success." Total 3 hrs.*
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 2 hr 45 min
 
@@ -54,7 +54,7 @@ Standardteknik: djup ritsning av svålen, salt i ritsorna, ugn 180–200 °C i 1
 
 ---
 
-### 2. Madens Verden — Perfekt Flæskesteg i Ovn (Danish tradition)
+### 2. Perfekt Flæskesteg i Ovn (inspired by Madens Verden)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/perfekt-flaeskesteg-i-ovn/ (fetched 2026-04-24). *"Easy and reliable recipe for a perfect flæskesteg in the oven." 4.8/5, 548 ratings.*
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 1 hr 15 min
 
@@ -76,7 +76,7 @@ Standardteknik: djup ritsning av svålen, salt i ritsorna, ugn 180–200 °C i 1
 
 ---
 
-### 3. Chefkoch — Schweinerücken im Bratschlauch (German tradition)
+### 3. Schweinerücken im Bratschlauch (inspired by Chefkoch)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/1201241227183862/Schweineruecken-im-Bratschlauch.html (fetched 2026-04-24). *Pork loin in a roasting bag — guarantees the meat stays juicy. "For those who want to be on the safe side."*
 **Serves**: 4 · **Cook**: ~2 hr (oven 160°C → 60°C core)
 

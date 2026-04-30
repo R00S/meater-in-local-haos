@@ -20,7 +20,7 @@ Eftersom ugnens konvektionsvärme angriper från alla sidor kokar en flank steak
 
 ## Source recipes
 
-### 1. America's Test Kitchen — London Broil (Oven-Roasted Flank Steak)
+### 1. London Broil (Oven-Roasted Flank Steak) (inspired by America's Test Kitchen)
 **Inspired by**: America's Test Kitchen, *The Complete Cooking for Two Cookbook* (America's Test Kitchen, 2014); americastestkitchen.com  
 **Serves**: 4 · **Prep**: 15 min (+1 hr marinate) · **Cook**: 20–25 min · **Rest**: 5–8 min
 
@@ -44,7 +44,7 @@ Eftersom ugnens konvektionsvärme angriper från alla sidor kokar en flank steak
 
 ---
 
-### 2. Alton Brown — London Broil Method
+### 2. London Broil Method (inspired by Alton Brown)
 **Inspired by**: Alton Brown, *I'm Just Here for the Food* (Stewart, Tabori & Chang, 2002); foodnetwork.com/recipes/alton-brown/  
 **Serves**: 4 · **Prep**: 20 min (+4 hr marinate) · **Cook**: 15–20 min broiler/oven · **Rest**: 5 min
 
@@ -69,7 +69,7 @@ Eftersom ugnens konvektionsvärme angriper från alla sidor kokar en flank steak
 
 ---
 
-### 3. Yotam Ottolenghi — Slow-Roasted Middle Eastern Flank Steak
+### 3. Slow-Roasted Middle Eastern Flank Steak (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *SIMPLE* (Ebury Press, 2018); ottolenghi.co.uk/recipes  
 **Serves**: 4 · **Prep**: 20 min (+overnight marinate) · **Cook**: 30–40 min · **Rest**: 10 min
 
@@ -97,7 +97,7 @@ Eftersom ugnens konvektionsvärme angriper från alla sidor kokar en flank steak
 
 ---
 
-### 4. Julia Child — Bœuf au Four / Flank Oven Method (French tradition)
+### 4. Bœuf au Four / Flank Oven Method (inspired by Julia Child)
 **Inspired by**: Julia Child, *The Way to Cook* (Alfred A. Knopf, 1989)  
 **Serves**: 4 · **Prep**: 15 min (+2 hr marinate) · **Cook**: 15–20 min · **Rest**: 5 min
 
@@ -121,7 +121,7 @@ Eftersom ugnens konvektionsvärme angriper från alla sidor kokar en flank steak
 
 ---
 
-### 5. Maangchi — Korean Oven-Roasted Marinated Flank (*Sogogi Bokkeum* Variation)
+### 5. Korean Oven-Roasted Marinated Flank (*Sogogi Bokkeum* Variation) (inspired by Maangchi)
 **Inspired by**: Maangchi, *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); maangchi.com  
 **Serves**: 4 · **Prep**: 15 min (+2 hr marinate) · **Cook**: 20–25 min · **Rest**: 5 min
 

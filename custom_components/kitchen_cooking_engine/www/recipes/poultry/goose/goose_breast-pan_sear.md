@@ -32,7 +32,7 @@ Gåsbröst delar samma kall-panna fettsmeltningsteknik som ankbröst. Skinnsidan
 
 ## Source recipes
 
-### 1. BBC Good Food — Slow-Roast Duck (fat-rendering technique adapted for goose breast pan sear)
+### 1. Slow-Roast Duck (fat-rendering technique adapted for goose breast pan sear) (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food editorial team, BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roast-duck (fetched 2025-07-15).
 **Serves**: 2–3 · **Prep**: 15 min · **Cook**: 18–25 min · **Rest**: 6–8 min
 
@@ -68,7 +68,7 @@ Gåsbröst delar samma kall-panna fettsmeltningsteknik som ankbröst. Skinnsidan
 
 ---
 
-### 2. Classic Culinary Technique — Professional Pan-Seared Goose Breast
+### 2. Professional Pan-Seared Goose Breast (inspired by Classic Culinary Technique)
 **Inspired by**: Standard culinary technique for goose breast, documented in European professional kitchens; general knowledge synthesis.
 **Serves**: 2–3 · **Prep**: 10 min (+ optional 2–24 hr dry brine) · **Cook**: 20–25 min · **Rest**: 6–8 min
 
@@ -100,7 +100,7 @@ Gåsbröst delar samma kall-panna fettsmeltningsteknik som ankbröst. Skinnsidan
 
 ---
 
-### 3. Vasilevg — Грудка гуся на гриле (Russian Pan-Grilled Goose Breast)
+### 3. Грудка гуся на гриле (Russian Pan-Grilled Goose Breast) (inspired by Vasilevg)
 **Inspired by**: Home cook "vasilevg", Povarenok.ru (Russia's largest recipe-sharing community); https://www.povarenok.ru/recipes/show/168647/ (fetched 2026-04-24, language: Russian — ingredients and method translated below).
 **Serves**: 2 · **Prep**: 35 min (incl. marinating) · **Cook**: 6 min
 

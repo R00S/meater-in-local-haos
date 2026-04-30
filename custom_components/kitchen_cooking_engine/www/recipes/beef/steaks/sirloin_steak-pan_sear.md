@@ -19,7 +19,7 @@ Pannsearing använder en torr, riktigt het panna — gjutjärn eller rostfritt s
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Pan-Seared Top Sirloin (American tradition)
+### 1. Pan-Seared Top Sirloin (inspired by J. Kenji López-Alt)
 **Inspired by**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/perfect-pan-seared-steaks-recipe  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -44,7 +44,7 @@ Pannsearing använder en torr, riktigt het panna — gjutjärn eller rostfritt s
 
 ---
 
-### 2. Gordon Ramsay — Pan-Seared Sirloin with Pepper Sauce (British restaurant tradition)
+### 2. Pan-Seared Sirloin with Pepper Sauce (inspired by Gordon Ramsay)
 **Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
 **Serves**: 2 · **Prep**: 5 min (+30 min tempering) · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -68,7 +68,7 @@ Pannsearing använder en torr, riktigt het panna — gjutjärn eller rostfritt s
 
 ---
 
-### 3. Nobu Matsuhisa — Pan-Seared Sirloin with Teriyaki Glaze (Japanese tradition)
+### 3. Pan-Seared Sirloin with Teriyaki Glaze (inspired by Nobu Matsuhisa)
 **Inspired by**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001)  
 **Serves**: 2 · **Prep**: 10 min (+30 min marinade) · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -89,7 +89,7 @@ Pannsearing använder en torr, riktigt het panna — gjutjärn eller rostfritt s
 
 ---
 
-### 4. Francis Mallmann — Pan-Seared Sirloin in Cast Iron (Argentine tradition)
+### 4. Pan-Seared Sirloin in Cast Iron (inspired by Francis Mallmann)
 **Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -111,7 +111,7 @@ Pannsearing använder en torr, riktigt het panna — gjutjärn eller rostfritt s
 
 ---
 
-### 5. Stephanie Alexander — Pan-Fried Sirloin (Australian tradition)
+### 5. Pan-Fried Sirloin (inspired by Stephanie Alexander)
 **Inspired by**: Stephanie Alexander, *The Cook's Companion* (Viking/Penguin, 1996; revised 2004), beef chapter  
 **Serves**: 2 · **Prep**: 5 min (+30 min tempering) · **Cook**: 8–10 min · **Rest**: 5 min
 

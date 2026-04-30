@@ -18,7 +18,7 @@ Lökar (*Allium cepa*) sauterade som en ugnsrostningsstil — tjocka klyftor, st
 
 ## Source recipes
 
-### 1. Fuchsia Dunlop — Cōng Bào Ròu (葱爆肉 — Chinese sautéed scallion/onion, veg adaptation)
+### 1. Cōng Bào Ròu (葱爆肉 — Chinese sautéed scallion/onion, veg adaptation) (inspired by Fuchsia Dunlop)
 **Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 1 min
 
@@ -43,7 +43,7 @@ Lökar (*Allium cepa*) sauterade som en ugnsrostningsstil — tjocka klyftor, st
 
 ---
 
-### 2. Madhur Jaffrey — Tarkari Pyaz (Indian sautéed whole small onions)
+### 2. Tarkari Pyaz (Indian sautéed whole small onions) (inspired by Madhur Jaffrey)
 **Inspired by**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 15–18 min · **Rest**: 2 min
 
@@ -70,7 +70,7 @@ Lökar (*Allium cepa*) sauterade som en ugnsrostningsstil — tjocka klyftor, st
 
 ---
 
-### 3. Francis Mallmann — Cebollas Soasadas a la Plancha (Argentine tradition)
+### 3. Cebollas Soasadas a la Plancha (inspired by Francis Mallmann)
 **Inspired by**: Francis Mallmann with Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 15–20 min · **Rest**: 3 min
 
@@ -92,7 +92,7 @@ Lökar (*Allium cepa*) sauterade som en ugnsrostningsstil — tjocka klyftor, st
 
 ---
 
-### 4. Yotam Ottolenghi — Sautéed Onion Halves with Za'atar (Middle Eastern / Israeli tradition)
+### 4. Sautéed Onion Halves with Za'atar (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 15–18 min · **Rest**: 3 min
 

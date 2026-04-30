@@ -34,7 +34,7 @@ Marinering i olja före grillning rekommenderas i stor utsträckning för att f�
 
 ## Source recipes
 
-### 1. Chefkoch.de — Gegrilltes Kängurusteak auf australische Art (German/Australian tradition)
+### 1. Gegrilltes Kängurusteak auf australische Art (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de search results; https://www.chefkoch.de/rs/s0/kaenguru/Rezepte.html (fetched 2026-04-24)
 *Translation: Grilled kangaroo steak Australian style — referenced on Chefkoch.de as a niche but well-established recipe category.*
 
@@ -56,7 +56,7 @@ Marinering i olja före grillning rekommenderas i stor utsträckning för att f�
 
 ---
 
-### 2. Australian Kangaroo Industry Association — Grilled kangaroo rump
+### 2. Grilled kangaroo rump (inspired by Australian Kangaroo Industry Association)
 **Inspired by**: Kangaroo Industry Association of Australia cooking guidelines; https://www.kangaroo.org.au/pages/cooking (Australian national standard)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min
 
@@ -77,7 +77,7 @@ Marinering i olja före grillning rekommenderas i stor utsträckning för att f�
 
 ---
 
-### 3. The Essential Ingredient (Sydney) — Kangaroo with bush spices on the BBQ
+### 3. Kangaroo with bush spices on the BBQ (inspired by The Essential Ingredient)
 **Inspired by**: The Essential Ingredient cooking classes Sydney; https://www.theessentialingredient.com.au/blogs/recipes/kangaroo (Australian cooking school)
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 6 min
 

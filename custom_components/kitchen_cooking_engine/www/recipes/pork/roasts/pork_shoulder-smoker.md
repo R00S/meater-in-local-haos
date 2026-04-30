@@ -25,7 +25,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagnin
 
 ## Source recipes
 
-### 1. Chefkoch — Pulled Pork aus dem Smoker (German BBQ tradition)
+### 1. Pulled Pork aus dem Smoker (inspired by Chefkoch)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/3247691483287698/Pulled-Pork-aus-dem-Smoker.html (fetched 2026-04-24). *Dry rub + apple juice mop; smoker 120–130°C × 7–10 hrs; rest 1 hr.*
 **Serves**: 5 · **Prep**: 1 hr (+ 25 hr marinate/rest) · **Cook**: 7–10 hr
 
@@ -51,7 +51,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagnin
 
 ---
 
-### 2. Chefkoch — Pulled Pork aus dem Smoker (Chefkoch Video recipe, 8 kg)
+### 2. Pulled Pork aus dem Smoker (Chefkoch Video recipe, 8 kg) (inspired by Chefkoch)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/2528741396351623/Pulled-Pork-aus-dem-Smoker.html (fetched 2026-04-24). *Full-size 8 kg Boston Butt (Schweinenacken); 100–110°C × 16–18 hrs → 90°C; smoker with smoked chips on demand.*
 **Serves**: 8 · **Prep**: 15 min (+ overnight) · **Cook**: 16–18 hr + 3.5 hr rest
 
@@ -77,7 +77,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagnin
 
 ---
 
-### 3. Madens Verden — Pulled Pork i Smoker (Danish tradition)
+### 3. Pulled Pork i Smoker (inspired by Madens Verden)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/pulled-pork/ (fetched 2026-04-24). *"Pulled pork in smoker" — smoker section from the same Madens Verden pulled pork article. 4.7/5, 40 ratings.*
 
 **Temperature guidance (from recipe TOC)**: The article includes "Pulled pork på grill" and "Pulled pork i smoker" sections alongside the main oven method, all targeting 90–95°C. The smoker section follows the same rub and pull-temperature approach as the oven method.

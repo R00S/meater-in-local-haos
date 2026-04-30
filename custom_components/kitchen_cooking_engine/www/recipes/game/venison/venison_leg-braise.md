@@ -24,7 +24,7 @@ Innertemperaturen är nödvändig men inte tillräcklig: lagg behöver hålla vi
 
 ## Source recipes
 
-### 1. Chefkoch.de (user Annelore) — Rehkeule geschmort (Braised Venison Leg)
+### 1. Rehkeule geschmort (Braised Venison Leg) (inspired by Chefkoch.de)
 **Inspired by**: https://www.chefkoch.de/rezepte/1281101233494814/Rehkeule-geschmort.html  
 **Tradition**: German home cooking — **Culinary Group D** (Scandinavian/Baltic/Slavic/Central European)  
 **Rating**: 4.9/5 stars (34 reviews) — one of the highest-rated venison recipes on Chefkoch  

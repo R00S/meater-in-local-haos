@@ -20,7 +20,7 @@ Het gjutjärnspanna, olja och smör, 3–4 minuter per sida. Innertemperatur: **
 
 ## Source recipes
 
-### 1. José Pizarro — Carrillera Salteada (Spanish pintxo tradition)
+### 1. Carrillera Salteada (inspired by José Pizarro)
 **Inspired by**: José Pizarro, *Spanish Flavours* (Kyle Books, 2012); josepizarro.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min · **Rest**: 2 min
 
@@ -46,7 +46,7 @@ Het gjutjärnspanna, olja och smör, 3–4 minuter per sida. Innertemperatur: **
 
 ---
 
-### 2. Marcella Hazan — Guancia di Maiale Saltata in Padella (Italian tradition)
+### 2. Guancia di Maiale Saltata in Padella (inspired by Marcella Hazan)
 **Inspired by**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997) (cheek preparation extended from the cured *guanciale* notes)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 2 min
 
@@ -73,7 +73,7 @@ Het gjutjärnspanna, olja och smör, 3–4 minuter per sida. Innertemperatur: **
 
 ---
 
-### 3. Diana Henry — Pan-Fried Pork Cheek with Apple & Cider (British tradition)
+### 3. Pan-Fried Pork Cheek with Apple & Cider (inspired by Diana Henry)
 **Inspired by**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015) and her *Telegraph* column at telegraph.co.uk/food-and-drink — cheek section  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min · **Rest**: 2 min
 
@@ -102,7 +102,7 @@ Het gjutjärnspanna, olja och smör, 3–4 minuter per sida. Innertemperatur: **
 
 ---
 
-### 4. Magnus Nilsson — Pan-Seared Griskind with Brown Butter & Capers (Nordic tradition)
+### 4. Pan-Seared Griskind with Brown Butter & Capers (inspired by Magnus Nilsson)
 **Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) — pork cheek section  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min · **Rest**: 2 min
 

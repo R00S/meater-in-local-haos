@@ -32,7 +32,7 @@ Grilla det fjärilade benet vid medel-hög direkt värme, 6–8 minuter per sida
 
 ## Source recipes
 
-### 1. RecipeTinEats.com — Butterflied Leg of Lamb on the BBQ (Australian tradition)
+### 1. Butterflied Leg of Lamb on the BBQ (inspired by RecipeTinEats.com)
 **Inspired by**: RecipeTinEats.com (Nagi Maehashi); https://www.recipetineats.com/butterflied-leg-of-lamb/ (web search 2026-04-24)
 **Serves**: 8 · **Prep**: 15 min + 2 hrs · **Cook**: 30 min
 
@@ -55,7 +55,7 @@ Grilla det fjärilade benet vid medel-hög direkt värme, 6–8 minuter per sida
 
 ---
 
-### 2. Africanbites.com — African-spiced Butterflied Leg of Lamb, Grilled (South African/West African tradition)
+### 2. African-spiced Butterflied Leg of Lamb, Grilled (inspired by Africanbites.com)
 **Inspired by**: Africanbites.com; https://www.africanbites.com/ (web search 2026-04-24 — flagship recipe applies to butterflied leg)
 **Serves**: 8 · **Prep**: 3 hrs marinate · **Cook**: 35 min
 
@@ -77,7 +77,7 @@ Grilla det fjärilade benet vid medel-hög direkt värme, 6–8 minuter per sida
 
 ---
 
-### 3. Nefisyemektarifleri.com — Fırında Kuzu But (Turkish grilled/oven leg of lamb)
+### 3. Fırında Kuzu But (Turkish grilled/oven leg of lamb) (inspired by Nefisyemektarifleri.com)
 **Inspired by**: Nefisyemektarifleri.com; https://www.nefisyemektarifleri.com/firinda-kuzu-but/ (web search 2026-04-24)
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 2–2.5 hrs
 

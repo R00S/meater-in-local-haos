@@ -19,7 +19,7 @@ Skirt steak över levande träkol är snittet i sin högsta form — i taquero-t
 
 ## Source recipes
 
-### 1. Diana Kennedy — *Arrachera Asada* over Mesquite (Mexican tradition)
+### 1. *Arrachera Asada* over Mesquite (inspired by Diana Kennedy)
 **Inspired by**: Diana Kennedy, *My Mexico: A Culinary Odyssey* (Clarkson Potter, 1998)  
 **Serves**: 4 · **Prep**: 5 min (+1 h marinade) · **Cook**: 5–6 min over mesquite · **Rest**: 5 min
 
@@ -45,7 +45,7 @@ Skirt steak över levande träkol är snittet i sin högsta form — i taquero-t
 
 ---
 
-### 2. Francis Mallmann — Skirt over Charcoal Embers (Argentine tradition)
+### 2. Skirt over Charcoal Embers (inspired by Francis Mallmann)
 **Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 5–6 min · **Rest**: 5 min
 
@@ -66,7 +66,7 @@ Skirt steak över levande träkol är snittet i sin högsta form — i taquero-t
 
 ---
 
-### 3. Steven Raichlen — Charcoal-Grilled Skirt Steak (American BBQ tradition)
+### 3. Charcoal-Grilled Skirt Steak (inspired by Steven Raichlen)
 **Inspired by**: Steven Raichlen, *Planet Barbecue!* (Workman Publishing, 2010)  
 **Serves**: 4 · **Prep**: 10 min (+2 h marinade) · **Cook**: 5–7 min · **Rest**: 5 min
 
@@ -87,7 +87,7 @@ Skirt steak över levande träkol är snittet i sin högsta form — i taquero-t
 
 ---
 
-### 4. Bobby Flay — Charcoal-Grilled Skirt Steak with Chipotle (American Southwest tradition)
+### 4. Charcoal-Grilled Skirt Steak with Chipotle (inspired by Bobby Flay)
 **Inspired by**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
 **Serves**: 4 · **Prep**: 10 min (+1 h marinade) · **Cook**: 5–7 min · **Rest**: 5 min
 
@@ -107,7 +107,7 @@ Skirt steak över levande träkol är snittet i sin högsta form — i taquero-t
 
 ---
 
-### 5. Lennox Hastie — Outside Skirt over Australian Live Coals (Australian live-fire tradition)
+### 5. Outside Skirt over Australian Live Coals (inspired by Lennox Hastie)
 **Inspired by**: Lennox Hastie, *Finding Fire* (Hardie Grant, 2017)  
 **Serves**: 2 · **Prep**: 5 min (+30 min dry brine) · **Cook**: 5–6 min · **Rest**: 3 min
 

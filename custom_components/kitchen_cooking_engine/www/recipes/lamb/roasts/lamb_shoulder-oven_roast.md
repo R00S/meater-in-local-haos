@@ -34,7 +34,7 @@ Täckt i ugn (med vin, fond eller vatten) under 3–4 timmar, sedan avtäckt fö
 
 ## Source recipes
 
-### 1. BBC Good Food — Slow-Roasted Shoulder of Lamb (British tradition)
+### 1. Slow-Roasted Shoulder of Lamb (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roasted-shoulder-lamb (web search 2026-04-24)
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 4.5 hrs
 
@@ -59,7 +59,7 @@ Täckt i ugn (med vin, fond eller vatten) under 3–4 timmar, sedan avtäckt fö
 
 ---
 
-### 2. RecipeTinEats.com — Slow Roasted Lamb Shoulder (Australian tradition)
+### 2. Slow Roasted Lamb Shoulder (inspired by RecipeTinEats.com)
 **Inspired by**: RecipeTinEats.com (Nagi Maehashi); https://www.recipetineats.com/slow-roasted-lamb-shoulder/ (web search 2026-04-24)
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 7 hrs
 
@@ -84,7 +84,7 @@ Täckt i ugn (med vin, fond eller vatten) under 3–4 timmar, sedan avtäckt fö
 
 ---
 
-### 3. Nefisyemektarifleri.com — Fırında Kuzu Kol (Turkish slow-roasted lamb shoulder)
+### 3. Fırında Kuzu Kol (Turkish slow-roasted lamb shoulder) (inspired by Nefisyemektarifleri.com)
 **Inspired by**: Nefisyemektarifleri.com; https://www.nefisyemektarifleri.com/firinda-sebzeli-kuzu-kol/ (web search 2026-04-24)
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 3 hrs
 

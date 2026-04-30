@@ -34,7 +34,7 @@ Vissa skandinaviska recept avslutar i en 125–140 °C ugn efter searing för me
 
 ## Source recipes
 
-### 1. Chefkoch.de — Elchsteaks (Canadian recipe, German source)
+### 1. Elchsteaks (Canadian recipe, German source) (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/46421015693274/Elchsteaks.html (fetched 2026-04-24). *Described as "Recipe from Canada."*
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 2 hours (slow oven)
 
@@ -60,7 +60,7 @@ Vissa skandinaviska recept avslutar i en 125–140 °C ugn efter searing för me
 
 ---
 
-### 2. Chefkoch.de — Reh oder Hirschsteaks (adapted for moose — German venison/deer steak with marinades)
+### 2. Reh oder Hirschsteaks (adapted for moose — German venison/deer steak with marinades) (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/1520541257290915/Reh-oder-Hirschsteaks-mit-verschiedenen-Marinaden.html (fetched 2026-04-24; applies equally to moose loin)
 **Serves**: 4 · **Prep**: 12 hrs · **Cook**: 15 min
 
@@ -84,7 +84,7 @@ Vissa skandinaviska recept avslutar i en 125–140 °C ugn efter searing för me
 
 ---
 
-### 3. Tasteline.com — Älgbiff i smör (Swedish butter-seared moose steak)
+### 3. Älgbiff i smör (Swedish butter-seared moose steak) (inspired by Tasteline.com)
 **Inspired by**: Tasteline.com; https://www.tasteline.com/ingrediens/alg/ (fetched 2026-04-24)
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 10 min
 

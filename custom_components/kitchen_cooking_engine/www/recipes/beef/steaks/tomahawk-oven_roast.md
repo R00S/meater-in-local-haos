@@ -25,7 +25,7 @@ Målinterna temperaturer:
 - Medium: **dra från ugn vid 55–57 °C (131–135 °F)**, vila till **62–63 °C (144–145 °F)**
 ## Source recipes
 
-### 1. Chefkoch.de — Tomahawk-Steak im Backofen, rückwärts gegart (German tradition)
+### 1. Tomahawk-Steak im Backofen, rückwärts gegart (inspired by Chefkoch.de)
 **Inspired by**: 0602, Chefkoch.de; https://www.chefkoch.de/rezepte/3007701453644532/Tomahawk-Steak-im-Backofen.html (fetched 2026-04-24). *"Das Steak ist butterzart und das Beste, welches ich jemals gegessen habe."*
 **Serves**: 2 (or 3–4 with more sides) · **Prep**: 10 min · **Cook**: 1 hr 40 min oven + 3–4 min sear · **Rating**: 4.9/5 (16 ratings)
 
@@ -51,7 +51,7 @@ Målinterna temperaturer:
 
 ---
 
-### 2. RecipeTin Eats — Tomahawk Steak (oven phase of reverse sear) (Australian tradition)
+### 2. Tomahawk Steak (oven phase of reverse sear) (inspired by RecipeTin Eats)
 **Inspired by**: Nagi Maehashi & JB, RecipeTin Eats; https://www.recipetineats.com/tomahawk-steak/ (fetched 2026-04-24). *Reverse-sear method: low oven first to cook interior evenly, then high-heat grill or broiler for the crust.*
 **Serves**: 2–3 · **Prep**: 10 min (de-chill 1 hr) · **Cook**: 40–45 min oven + 6–8 min sear
 
@@ -80,7 +80,7 @@ Målinterna temperaturer:
 
 ---
 
-### 3. GialloZafferano — Tomahawk alla griglia (Italian oven-finish variant)
+### 3. Tomahawk alla griglia (Italian oven-finish variant) (inspired by GialloZafferano)
 **Inspired by**: GialloZafferano; https://ricette.giallozafferano.it/Tomahawk-alla-griglia.html (fetched 2026-04-24). *Italian tomahawk technique: grilled then rested covered with foil in a warm spot — equivalent to a warm-oven rest finish.*
 **Serves**: 2–4 · **Prep**: 1 hr tempering · **Cook**: 30 min grill + 10 min warm rest
 

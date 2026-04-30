@@ -23,7 +23,7 @@ Slow cooker: LÅG i 6–7 timmar med kryddad fond och aromater. Innertemperatur:
 
 ## Source recipes
 
-### 1. Hugh Acheson — Slow-Cooker Pork Tongue Confit (American Culinary Group C tradition)
+### 1. Slow-Cooker Pork Tongue Confit (inspired by Hugh Acheson)
 **Inspired by**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017); hughacheson.com  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 6 hr (low) · **Rest**: 15 min
 
@@ -53,7 +53,7 @@ Slow cooker: LÅG i 6–7 timmar med kryddad fond och aromater. Innertemperatur:
 
 ---
 
-### 2. Diana Kennedy — Lengua de Cerdo en el Crock-Pot (Mexican tradition adaptation)
+### 2. Lengua de Cerdo en el Crock-Pot (inspired by Diana Kennedy)
 **Inspired by**: Diana Kennedy, *Mexican Regional Cooking* (Harper & Row, 1990) — slow-cooker note in *From My Mexican Kitchen* (Clarkson Potter, 2003)  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 6 hr (low) · **Rest**: 10 min
 
@@ -79,7 +79,7 @@ Slow cooker: LÅG i 6–7 timmar med kryddad fond och aromater. Innertemperatur:
 
 ---
 
-### 3. Andrea Nguyen — Lưỡi Heo Hầm in the Slow Cooker (Vietnamese tradition)
+### 3. Lưỡi Heo Hầm in the Slow Cooker (inspired by Andrea Nguyen)
 **Inspired by**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019) — pork tongue variation; vietworldkitchen.com  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 6 hr (low) · **Rest**: 10 min
 
@@ -106,7 +106,7 @@ Slow cooker: LÅG i 6–7 timmar med kryddad fond och aromater. Innertemperatur:
 
 ---
 
-### 4. Magnus Nilsson — Slow-Cooker Saltkokt Grisetunga (Nordic tradition)
+### 4. Slow-Cooker Saltkokt Grisetunga (inspired by Magnus Nilsson)
 **Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) — slow-cooker adaptation of his salt-cured tongue  
 **Serves**: 6 · **Prep**: 20 min (+ 24 hr cure if curing) · **Cook**: 6 hr (low) · **Rest**: 15 min
 

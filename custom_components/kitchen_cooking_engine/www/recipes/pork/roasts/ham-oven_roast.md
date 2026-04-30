@@ -33,7 +33,7 @@ Uppvärmning till servering: 160 °C ugn, 15 min per 500 g. Innertemperatur: **6
 
 ## Source recipes
 
-### 1. Anna och Fanny Bergenström — Ugnsbakad Julskinka med Senapsgriljering (Swedish / Culinary Group D tradition)
+### 1. Ugnsbakad Julskinka med Senapsgriljering (inspired by Anna och Fanny Bergenström)
 **Inspired by**: Anna och Fanny Bergenström, koket.se/anna-och-fanny-bergenstrom/varmratter/korv-chark/ugnsbakad-julskinka-med-senapsgriljering  
 **Serves**: 8–10 · **Prep**: 10 min + 2–4 hr soaking · **Cook**: 60–70 min/kg + 15 min · **Rest**: 15 min
 
@@ -56,7 +56,7 @@ Uppvärmning till servering: 160 °C ugn, 15 min per 500 g. Innertemperatur: **6
 
 ---
 
-### 2. Angela Lawrence — Jamaican Glazed Baked Ham (Jamaican / Culinary Group C tradition)
+### 2. Jamaican Glazed Baked Ham (inspired by Angela Lawrence)
 **Inspired by**: Angela Lawrence (Cook Like a Jamaican), 196flavors.com/jamaica-glazed-baked-ham/  
 **Serves**: 12 · **Prep**: 5 min · **Cook**: 2 hr
 
@@ -83,7 +83,7 @@ Uppvärmning till servering: 160 °C ugn, 15 min per 500 g. Innertemperatur: **6
 
 ---
 
-### 3. John Torode — Baked Glazed Ham (British / Culinary Group B tradition)
+### 3. Baked Glazed Ham (inspired by John Torode)
 **Inspired by**: John Torode, bbcgoodfood.com/recipes/baked-glazed-ham  
 **Published**: *Good Food* magazine, November 2016  
 **Serves**: 8 generously · **Prep**: 30 min · **Cook**: 5 hr 45 min
@@ -109,7 +109,7 @@ Uppvärmning till servering: 160 °C ugn, 15 min per 500 g. Innertemperatur: **6
 
 ---
 
-### 4. Nagi Maehashi — Maple Glazed Ham (Australian / Culinary Group B tradition)
+### 4. Maple Glazed Ham (inspired by Nagi Maehashi)
 **Inspired by**: Nagi Maehashi, recipetineats.com/easy-maple-sticky-glazed-ham/  
 **Serves**: 30–40 as part of a spread · **Prep**: 15 min · **Cook**: 1.5–2 hr · **Rest**: 20 min+
 

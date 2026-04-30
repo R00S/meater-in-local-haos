@@ -34,7 +34,7 @@ Innertemperatur: **60–65 °C (140–149 °F)** för medium (skandinavisk prefe
 
 ## Source recipes
 
-### 1. BBC Good Food — Stuffed Saddle of Venison with Prunes and Brioche (British tradition)
+### 1. Stuffed Saddle of Venison with Prunes and Brioche (inspired by BBC Good Food)
 **Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/stuffed-saddle-venison-prunes-brioche (fetched 2026-04-24)
 **Serves**: 6 · **Prep**: 40 min · **Cook**: 45 min
 
@@ -64,7 +64,7 @@ Innertemperatur: **60–65 °C (140–149 °F)** för medium (skandinavisk prefe
 
 ---
 
-### 2. Chefkoch.de — Rehsteak rosa gebraten (German tradition — pink venison)
+### 2. Rehsteak rosa gebraten (inspired by Chefkoch.de)
 **Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/3954921606145264/Rehsteak-rosa-gebraten.html (fetched 2026-04-24)
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 30 min
 
@@ -88,7 +88,7 @@ Innertemperatur: **60–65 °C (140–149 °F)** för medium (skandinavisk prefe
 
 ---
 
-### 3. Tasteline.com — Rådjursstek i ugn (Swedish roe deer roast)
+### 3. Rådjursstek i ugn (Swedish roe deer roast) (inspired by Tasteline.com)
 **Inspired by**: Tasteline.com; https://www.tasteline.com/ingrediens/alg/ (fetched 2026-04-24 — general Scandinavian game guidance; also see koket.se)
 **Serves**: 4 · **Prep**: 15 min + overnight marinade · **Cook**: 1.5 hrs
 

@@ -34,7 +34,7 @@ Bryn kinden, lägg i braiseringskärl med fond, vin eller sojasås-mirin, täck 
 
 ## Source recipes
 
-### 1. Geoffrey Smeddle — Pork Cheek with Crispy Ham Hock Bon Bon (Scottish fine dining, Culinary Group B)
+### 1. Pork Cheek with Crispy Ham Hock Bon Bon (Scottish fine dining, Culinary Group B) (inspired by Geoffrey Smeddle)
 **Inspired by**: Geoffrey Smeddle (chef-patron, The Peat Inn, Fife, Scotland — 1 Michelin star), greatbritishchefs.com/recipes/pork-cheek-recipe  
 **Serves**: 8 · **Prep**: 24 hr marinating + 30 min · **Cook**: approx. 1 hr · **Rest**: 10 min in jus
 
@@ -75,7 +75,7 @@ Bryn kinden, lägg i braiseringskärl med fond, vin eller sojasås-mirin, täck 
 
 ---
 
-### 2. Martin Wishart — Braised Pork Cheeks with Five Spice and Pak Choi (Scottish fine dining, Culinary Group B)
+### 2. Braised Pork Cheeks with Five Spice and Pak Choi (Scottish fine dining, Culinary Group B) (inspired by Martin Wishart)
 **Inspired by**: Martin Wishart (chef-patron, Restaurant Martin Wishart, Edinburgh — 1 Michelin star), greatbritishchefs.com/recipes/braised-pork-cheek-recipe  
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 45 min (pressure cooker) + 15 min sauce · **Rest**: none
 
@@ -110,7 +110,7 @@ Bryn kinden, lägg i braiseringskärl med fond, vin eller sojasås-mirin, täck 
 
 ---
 
-### 3. Graham Campbell — Braised Pork Cheeks with Baby Leeks, Sultana Ragu and Caraway Jus (Scottish fine dining, Culinary Group B)
+### 3. Braised Pork Cheeks with Baby Leeks, Sultana Ragu and Caraway Jus (Scottish fine dining, Culinary Group B) (inspired by Graham Campbell)
 **Inspired by**: Graham Campbell (chef, Culpeper, London — formerly Edinburgh fine dining), greatbritishchefs.com/recipes/braised-pork-cheeks-recipe  
 **Serves**: 4 · **Prep**: 24 hr marinating + 30 min · **Cook**: 6 hr (sous vide at 80 °C) · **Rest**: none needed
 

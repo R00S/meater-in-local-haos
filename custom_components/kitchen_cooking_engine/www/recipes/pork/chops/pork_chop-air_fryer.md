@@ -26,7 +26,7 @@ Grillning vid medel-hög direkt värme: 4–5 minuter per sida för 2–3 cm tjo
 
 ## Source recipes
 
-### 1. Madens Verden — Herregårdskotelet i airfryer (Danish tradition)
+### 1. Herregårdskotelet i airfryer (inspired by Madens Verden)
 **Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/herregaardskotelet-i-airfryer/ (fetched 2026-04-24). *Bone-in shank pork chop in air fryer: 200 °C × 10 min per side, olive oil brushed on both sides. Rest 10 min.*
 **Serves**: 2 · **Prep**: 3 min · **Cook**: 20 min + 10 min rest
 
@@ -52,7 +52,7 @@ Grillning vid medel-hög direkt värme: 4–5 minuter per sida för 2–3 cm tjo
 
 ---
 
-### 2. ichkoche.at — Schopfsteak aus dem Airfryer (adapted for pork chop) (Austrian tradition)
+### 2. Schopfsteak aus dem Airfryer (adapted for pork chop) (inspired by ichkoche.at)
 **Inspired by**: ichkoche.at; https://www.ichkoche.at/schopfsteak-aus-dem-airfryer-rezept-240872 (fetched 2026-04-24). *The Austrian Schopfsteak (neck/collar steak, equivalent to pork chop) air fryer method: marinated in vinegar, olive oil, paprika, garlic; 190 °C × 10 min, flip at 5 min. 832 ratings.*
 **Serves**: 2 · **Prep**: 30 min marinade · **Cook**: 10 min
 
@@ -75,7 +75,7 @@ Grillning vid medel-hög direkt värme: 4–5 minuter per sida för 2–3 cm tjo
 
 ---
 
-### 3. GialloZafferano — Braciole di maiale in friggitrice ad aria (Italian tradition)
+### 3. Braciole di maiale in friggitrice ad aria (inspired by GialloZafferano)
 **Inspired by**: GialloZafferano; search for "braciole di maiale friggitrice ad aria" on ricette.giallozafferano.it — referenced 2026-04-24. *Italian air fryer pork chops: olive oil and herbs, 200 °C × 8–10 min per side; minimum internal temperature 63 °C.*
 
 **Temperature guidance**: 200 °C × 8–10 min per side. Core target: 70 °C for Italian food safety guidelines. For pink/juicy: 63–65 °C (safe by EU standards).
@@ -97,7 +97,7 @@ Grillning vid medel-hög direkt värme: 4–5 minuter per sida för 2–3 cm tjo
 
 ---
 
-### 4. Imma Adamu — Air-Fryer Pork Chops with Creole Seasoning (West African / Caribbean tradition)
+### 4. Air-Fryer Pork Chops with Creole Seasoning (inspired by Imma Adamu)
 **Inspired by**: Imma Adamu (Cameroon-born food writer, USA), Immaculate Bites; https://www.africanbites.com/air-fryer-pork-chops/ (fetched 2026-04-25). *West African–Caribbean Creole spiced bone-in pork chops: rubbed with Creole seasoning, thyme, minced garlic, Dijon mustard, and brown sugar; air fried at 375 °F (190 °C) for 7–9 minutes total, flipped halfway. Pull at 145 °F (63 °C); rest 10 minutes. The Creole spice blend — paprika, cayenne, thyme, garlic, onion — reflects the West African diaspora fusion of Louisiana Creole and Caribbean cooking traditions.*
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 10 min
 

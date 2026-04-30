@@ -18,7 +18,7 @@ En pannstekt kalkonburger är samma 150–180 g formade biff som den grillvarian
 
 ## Source recipes
 
-### 1. America's Test Kitchen — Pan-Seared Turkey Burgers (American tradition)
+### 1. Pan-Seared Turkey Burgers (inspired by America's Test Kitchen)
 **Inspired by**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011) (the pan-sear variant of their grilled turkey-burger technique); cooksillustrated.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
@@ -44,7 +44,7 @@ En pannstekt kalkonburger är samma 150–180 g formade biff som den grillvarian
 
 ---
 
-### 2. Hugh Acheson — Pan-Fried Turkey Burgers with Sage & Lemon (American Culinary Group C tradition)
+### 2. Pan-Fried Turkey Burgers with Sage & Lemon (inspired by Hugh Acheson)
 **Inspired by**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011) — turkey-burger variant; hughacheson.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
@@ -70,7 +70,7 @@ En pannstekt kalkonburger är samma 150–180 g formade biff som den grillvarian
 
 ---
 
-### 3. Tina Nordström — Pannstekt Kalkonburgare (Swedish tradition)
+### 3. Pannstekt Kalkonburgare (inspired by Tina Nordström)
 **Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
@@ -95,7 +95,7 @@ En pannstekt kalkonburger är samma 150–180 g formade biff som den grillvarian
 
 ---
 
-### 4. Yotam Ottolenghi — Spiced Turkey Burgers in the Pan with Tahini (Levantine tradition)
+### 4. Spiced Turkey Burgers in the Pan with Tahini (inspired by Yotam Ottolenghi)
 **Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014); ottolenghi.co.uk  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 9 min · **Rest**: 3 min
 

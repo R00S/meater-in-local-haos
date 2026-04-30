@@ -36,7 +36,7 @@ De tunna magliskorna överkokkar om de inte viks inåt och säkras med kökssnö
 
 ## Source recipes
 
-### 1. ICA Provkök — Laxkotlett med dill- och kaprissås (Swedish / Culinary Group D tradition)
+### 1. Laxkotlett med dill- och kaprissås (inspired by ICA Provkök)
 **Inspired by**: ICA Provkök, ica.se/recept/laxkotlett-med-dill-och-kaprissas-5305/  
 **Serves**: 4 · **Cook**: 6–8 min total
 
@@ -64,7 +64,7 @@ De tunna magliskorna överkokkar om de inte viks inåt och säkras med kökssnö
 
 ---
 
-### 2. ICA Provkök — Laxkotlett med limesmör (Swedish / Culinary Group D tradition)
+### 2. Laxkotlett med limesmör (inspired by ICA Provkök)
 **Inspired by**: ICA Provkök, ica.se/recept/laxkotlett-med-limesmor-330/  
 **Serves**: 4 · **Cook**: 6–8 min total + chilled compound butter ahead
 
@@ -90,7 +90,7 @@ De tunna magliskorna överkokkar om de inte viks inåt och säkras med kökssnö
 
 ---
 
-### 3. 750g — Darne de saumon grillée (French / Culinary Group B tradition)
+### 3. Darne de saumon grillée (inspired by 750g)
 **Inspired by**: Ibrahim (Délices de tous les jours) for 750g.com, 750g.com/darne-de-saumon-grillee-r68700.htm  
 **Serves**: 2 · **Prep**: 10 min (+ 1 hr marinade) · **Cook**: 10 min
 
@@ -112,7 +112,7 @@ De tunna magliskorna överkokkar om de inte viks inåt och säkras med kökssnö
 
 ---
 
-### 4. Jamie Oliver — Crispy Fried Salmon with Spring Vegetable Broth (British / Culinary Group B tradition)
+### 4. Crispy Fried Salmon with Spring Vegetable Broth (inspired by Jamie Oliver)
 **Inspired by**: Jamie Oliver, jamieoliver.com/recipes/fish/crispy-fried-salmon-with-spring-vegetable-broth/  
 **Recipe from**: *Jamie's Kitchen*  
 **Serves**: 4 · **Cook**: ~8 min for the salmon (broth cooked in parallel)
