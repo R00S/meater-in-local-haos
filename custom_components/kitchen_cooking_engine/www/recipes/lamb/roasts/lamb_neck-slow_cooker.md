@@ -38,7 +38,7 @@ Slow cooker-metod: bryn snitt i panna, lägg i med fond, lök, morot, rosmarin, 
 ## Source recipes
 
 ### 1. Nefis Yemek Tarifleri — Fırında Kuzu Gerdan (slow cooker adaptation) (Turkish tradition)
-**Source**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/firinda-sahane-lezzeti-ile-kuzu-gerdan-tarifi/ (fetched 2026-04-25). *"Fırında Kuzu Gerdan — Turkish oven-braised lamb neck, adapted here for the slow cooker."*
+**Inspired by**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/firinda-sahane-lezzeti-ile-kuzu-gerdan-tarifi/ (fetched 2026-04-25). *"Fırında Kuzu Gerdan — Turkish oven-braised lamb neck, adapted here for the slow cooker."*
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 7–8 hr (LOW)
 
 *Slow-cooker adaptation: the original recipe is an oven-covered braise at 250 °C for 1 hr 15 min. The slow cooker produces an identical result at LOW for 7–8 hours.*
@@ -68,7 +68,7 @@ Slow cooker-metod: bryn snitt i panna, lägg i med fond, lök, morot, rosmarin, 
 ---
 
 ### 2. Chefkoch.de — Lammhaxen aus dem Slowcooker (neck adaptation) (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/4089241641380759/ (fetched 2026-04-25). *"Lammhaxen aus dem Slowcooker — German slow-cooker lamb, adapted here for lamb neck pieces."*
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/4089241641380759/ (fetched 2026-04-25). *"Lammhaxen aus dem Slowcooker — German slow-cooker lamb, adapted here for lamb neck pieces."*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 5–6 hr (LOW)
 
 *Note: The original recipe uses lamb shanks. Lamb neck pieces cook identically at the same times.*
@@ -98,7 +98,7 @@ Slow cooker-metod: bryn snitt i panna, lägg i med fond, lök, morot, rosmarin, 
 ---
 
 ### 3. Blog GialloZafferano — Collo di agnello stufato nel coccio (slow cooker adaptation) (Italian tradition)
-**Source**: Blog GialloZafferano (Tentazioni Dolci e Salate); https://blog.giallozafferano.it/tentazionidolciesalate/ricetta-collo-di-agnello-stufato-nel-coccio/ (fetched 2026-04-25). *"Collo di agnello stufato nel coccio — Italian clay-pot lamb neck stew, adapted for slow cooker."*
+**Inspired by**: Blog GialloZafferano (Tentazioni Dolci e Salate); https://blog.giallozafferano.it/tentazionidolciesalate/ricetta-collo-di-agnello-stufato-nel-coccio/ (fetched 2026-04-25). *"Collo di agnello stufato nel coccio — Italian clay-pot lamb neck stew, adapted for slow cooker."*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 7 hr (LOW)
 
 *Slow-cooker adaptation: the original braises in a sealed clay pot (coccio) in the oven at 200 °C for 1 hour. Slow cooker on LOW for 7 hours produces equivalent results.*
@@ -131,7 +131,7 @@ Slow cooker-metod: bryn snitt i panna, lägg i med fond, lök, morot, rosmarin, 
 ---
 
 ### 4. Argiro.gr — Αρνάκι στο ταψί (slow cooker adaptation) (Greek tradition)
-**Source**: Argiro Barbarigou; https://www.argiro.gr/recipe/arnaki-sto-tapsi-me-laxanika-kai-votana/ (fetched 2026-04-25). *"Αρνάκι στο ταψί με λαχανικά και βότανα — Greek lamb tray-bake, adapted for slow cooker with neck pieces."*
+**Inspired by**: Argiro Barbarigou; https://www.argiro.gr/recipe/arnaki-sto-tapsi-me-laxanika-kai-votana/ (fetched 2026-04-25). *"Αρνάκι στο ταψί με λαχανικά και βότανα — Greek lamb tray-bake, adapted for slow cooker with neck pieces."*
 **Serves**: 4–6 · **Prep**: 20 min · **Cook**: 7–8 hr (LOW)
 
 *Slow-cooker adaptation: original is a covered oven bake at 170 °C for 2 hours. Slow cooker LOW 7–8 hours replicates this easily.*

@@ -35,7 +35,7 @@ Aromaterna — lök, vitlök, spiskummin, koriander, kanel och mynta — är lik
 ## Source recipes
 
 ### 1. Nefisyemektarifleri.com — Kıymalı Patates (Turkish lamb mince with potato)
-**Source**: Nefisyemektarifleri.com; https://www.nefisyemektarifleri.com/kiymali-patates/ (web search 2026-04-24)
+**Inspired by**: Nefisyemektarifleri.com; https://www.nefisyemektarifleri.com/kiymali-patates/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 30 min
 
 *Translation: Ground meat (lamb or beef) with potato — an everyday Turkish comfort dish.*
@@ -62,7 +62,7 @@ Aromaterna — lök, vitlök, spiskummin, koriander, kanel och mynta — är lik
 ---
 
 ### 2. IndianHealthyRecipes.com — Keema (Indian spiced minced lamb)
-**Source**: IndianHealthyRecipes.com (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/keema/ (web search 2026-04-24)
+**Inspired by**: IndianHealthyRecipes.com (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/keema/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 30 min
 
 *Keema (kheema) is one of the most beloved everyday Indian dishes — spiced minced lamb with peas (keema matar).*
@@ -95,7 +95,7 @@ Aromaterna — lök, vitlök, spiskummin, koriander, kanel och mynta — är lik
 ---
 
 ### 3. BBC Good Food — Lamb Mince Moussaka (Greek/British tradition, ground lamb pan-fry phase)
-**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/moussaka (web search 2026-04-24). *Moussaka requires browning the lamb mince in a pan as a key step.*
+**Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/moussaka (web search 2026-04-24). *Moussaka requires browning the lamb mince in a pan as a key step.*
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 1 hr 30 min (pan-fry phase: 20 min)
 
 **Ingredients** *(meat sauce only):*

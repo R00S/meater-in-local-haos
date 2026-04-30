@@ -38,7 +38,7 @@ Bräserat lågt och långsamt ger axeln otroligt rikt kött centralt i indisk ko
 ## Source recipes
 
 ### 1. Indian Healthy Recipes — Mutton Korma / Gosht Korma (Indian / Mughlai tradition)
-**Source**: Indian Healthy Recipes (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/mutton-korma-recipe/ (fetched 2026-04-25). *"Mutton Korma — Mughlai braised mutton in rich yoghurt and spice gravy."*
+**Inspired by**: Indian Healthy Recipes (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/mutton-korma-recipe/ (fetched 2026-04-25). *"Mutton Korma — Mughlai braised mutton in rich yoghurt and spice gravy."*
 **Serves**: 4–5 · **Prep**: 20 min + 30 min marinate · **Cook**: 1 hr 30 min
 
 **Ingredients**
@@ -77,7 +77,7 @@ Bräserat lågt och långsamt ger axeln otroligt rikt kött centralt i indisk ko
 ---
 
 ### 2. Nefis Yemek Tarifleri — Fırında Kuzu Kol Tandır (Turkish tradition)
-**Source**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/firinda-kuzu-kol-tandir-11409971/ (fetched 2026-04-25). *"Fırında Kuzu Kol Tandır — Turkish oven tandır shoulder, adapted here as a covered braise for mutton."*
+**Inspired by**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/firinda-kuzu-kol-tandir-11409971/ (fetched 2026-04-25). *"Fırında Kuzu Kol Tandır — Turkish oven tandır shoulder, adapted here as a covered braise for mutton."*
 **Serves**: 6–8 · **Prep**: 20 min · **Cook**: 3 hr (stovetop braise)
 
 *Braise adaptation: the original recipe wraps the shoulder in foil and bakes at 220 °C for 2.5 hours. For a stovetop braise, the same ingredients work beautifully in a covered Dutch oven over low heat for 3 hours with added liquid.*
@@ -107,7 +107,7 @@ Bräserat lågt och långsamt ger axeln otroligt rikt kött centralt i indisk ko
 ---
 
 ### 3. Giallo Zafferano — Spalla d'agnello farcita alla toscana (Italian tradition)
-**Source**: Ricette GialloZafferano; https://ricette.giallozafferano.it/Spalla-d-agnello-farcita-alla-toscana.html (fetched 2026-04-25). *"Spalla d'agnello farcita alla toscana — Tuscan stuffed lamb/mutton shoulder, braised in wine and broth."*
+**Inspired by**: Ricette GialloZafferano; https://ricette.giallozafferano.it/Spalla-d-agnello-farcita-alla-toscana.html (fetched 2026-04-25). *"Spalla d'agnello farcita alla toscana — Tuscan stuffed lamb/mutton shoulder, braised in wine and broth."*
 **Serves**: 4 · **Prep**: 45 min · **Cook**: 1 hr 10 min
 
 **Ingredients**
@@ -138,7 +138,7 @@ Bräserat lågt och långsamt ger axeln otroligt rikt kött centralt i indisk ko
 ---
 
 ### 4. Chefkoch.de — Geschmorter Lammhals (shoulder adaptation) (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/2358101374724165/ (fetched 2026-04-25). *"Geschmorter Lammhals — German braised lamb neck; technique applied here to mutton shoulder."*
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/2358101374724165/ (fetched 2026-04-25). *"Geschmorter Lammhals — German braised lamb neck; technique applied here to mutton shoulder."*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 2 hr 30 min (oven 200 °C fan 180 °C)
 
 *Mutton adaptation: the same German red-wine braise technique used for lamb neck applies directly to mutton shoulder, with cooking time extended by 30 minutes to account for the older, tougher meat.*

@@ -22,7 +22,7 @@ En tvåzons eld (direkta kolar på ena sidan, indirekt på den andra) möjliggö
 ## Source recipes
 
 ### 1. Francis Mallmann — Charcoal-Grilled Strip Steak (Argentine asado tradition)
-**Source**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
+**Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 12–16 min · **Rest**: 5 min
 
 **Ingredients**
@@ -44,7 +44,7 @@ En tvåzons eld (direkta kolar på ena sidan, indirekt på den andra) möjliggö
 ---
 
 ### 2. Steven Raichlen — Strip Steak with Charcoal and Wood Smoke (American BBQ tradition)
-**Source**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
+**Inspired by**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
 **Serves**: 4 · **Prep**: 10 min (+1 h dry brine) · **Cook**: 8–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -67,7 +67,7 @@ En tvåzons eld (direkta kolar på ena sidan, indirekt på den andra) möjliggö
 ---
 
 ### 3. Adam Perry Lang — Competition-Style Strip Steak over Charcoal (American competition BBQ tradition)
-**Source**: Adam Perry Lang, *Serious Barbecue* (Hyperion, 2009)  
+**Inspired by**: Adam Perry Lang, *Serious Barbecue* (Hyperion, 2009)  
 **Serves**: 4 · **Prep**: 15 min (+overnight marinade) · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -89,7 +89,7 @@ En tvåzons eld (direkta kolar på ena sidan, indirekt på den andra) möjliggö
 ---
 
 ### 4. Lennox Hastie — Strip Steak over Live Fire (Australian wood-fire tradition)
-**Source**: Lennox Hastie, *Finding Fire* (Hardie Grant, 2017)  
+**Inspired by**: Lennox Hastie, *Finding Fire* (Hardie Grant, 2017)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 10–14 min · **Rest**: 5 min
 
 **Ingredients**
@@ -111,7 +111,7 @@ En tvåzons eld (direkta kolar på ena sidan, indirekt på den andra) möjliggö
 ---
 
 ### 5. Yotam Ottolenghi — Charcoal-Grilled Strip with Spiced Butter (Middle Eastern tradition)
-**Source**: Yotam Ottolenghi, *Jerusalem* (Ebury Press, 2012), adapted from Israeli mangal (*mangal* — Israeli/Middle Eastern charcoal grill tradition)  
+**Inspired by**: Yotam Ottolenghi, *Jerusalem* (Ebury Press, 2012), adapted from Israeli mangal (*mangal* — Israeli/Middle Eastern charcoal grill tradition)  
 **Serves**: 2 · **Prep**: 10 min (+1 h marinade) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**

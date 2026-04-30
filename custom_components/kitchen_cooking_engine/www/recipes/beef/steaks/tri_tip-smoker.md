@@ -27,7 +27,7 @@ Dragtemperaturen är 57–60 °C (135–140 °F) för medium, sedan en kort sear
 ## Source recipes
 
 ### 1. Immaculate Bites (africanbites.com) — Smoked Tri Tip (Californian / West African tradition)
-**Source**: Imma Adamu, africanbites.com; https://www.africanbites.com/juicy-smoked-tri-tip/ (fetched 2026-04-24). *"Reserve your weekend dinner for the meaty, juicy flavors of Smoked Tri Tip cooked low and slow. A tender beefy dish perfectly smoked to let the woody flavors seep in to the meat's core."*
+**Inspired by**: Imma Adamu, africanbites.com; https://www.africanbites.com/juicy-smoked-tri-tip/ (fetched 2026-04-24). *"Reserve your weekend dinner for the meaty, juicy flavors of Smoked Tri Tip cooked low and slow. A tender beefy dish perfectly smoked to let the woody flavors seep in to the meat's core."*
 **Serves**: 4–6 · **Prep**: 1 hr marinade · **Cook**: ~60–90 min at 225 °F
 
 **Temperature guidance (from recipe)**: "Generally, 30 minutes per pound fully cooks the meat at 225 °F. Once the thickest part reaches 135 °F – 140 °F, it's good to go." Pull 3–5 °F (2–3 °C) before target for carryover. Rest 30 minutes.
@@ -69,7 +69,7 @@ Dragtemperaturen är 57–60 °C (135–140 °F) för medium, sedan en kort sear
 ---
 
 ### 2. Madens Verden — Langtidsstegt ball tip (Danish slow-roast, analogous to smoking) (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ball-tip/ (fetched 2026-04-24). *Long low-temperature oven roast: brown on all sides, then 70 °C conventional oven 4–5 hours to 56 °C — produces the same deeply even, tender result as a low-and-slow smoker.*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ball-tip/ (fetched 2026-04-24). *Long low-temperature oven roast: brown on all sides, then 70 °C conventional oven 4–5 hours to 56 °C — produces the same deeply even, tender result as a low-and-slow smoker.*
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 4–5 hr at 70 °C
 
 *Translation: Long-slow-roasted ball tip (tri-tip) — browned first, then low oven 70 °C for 4–5 hours until core reaches 56 °C. Baste during cooking.*
@@ -95,7 +95,7 @@ Dragtemperaturen är 57–60 °C (135–140 °F) för medium, sedan en kort sear
 ---
 
 ### 3. BBC Good Food — Slow-cooked beef technique for smoking (British reference for wood-smoke temperatures)
-**Source**: BBC Good Food; https://www.bbcgoodfood.com/howto/guide/how-cook-perfect-beef-brisket (adapted as reference — smoking temp guidance for beef). *(Cited as a temperature reference only — the smoking temperature and pull temperature ranges for beef are consistent across sources.)*
+**Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/howto/guide/how-cook-perfect-beef-brisket (adapted as reference — smoking temp guidance for beef). *(Cited as a temperature reference only — the smoking temperature and pull temperature ranges for beef are consistent across sources.)*
 
 **Temperature guidance**: Smoking beef at 107–120 °C (225–250 °F). Target internal: 54–57 °C for medium-rare, 57–63 °C for medium. Rest minimum 30 minutes for thick cuts after the smoker.
 

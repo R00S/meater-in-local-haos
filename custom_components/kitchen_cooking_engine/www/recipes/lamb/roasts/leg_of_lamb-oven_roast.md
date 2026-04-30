@@ -40,7 +40,7 @@ Innertemperatur: **57–65 °C (135–149 °F)** för medium-rare till medium; *
 ## Source recipes
 
 ### 1. The Mediterranean Dish — Mediterranean Leg of Lamb with Potatoes (Mediterranean/American tradition)
-**Source**: The Mediterranean Dish (Suzy Karadsheh); https://www.themediterraneandish.com/mediterranean-style-leg-of-lamb-recipe-with-potatoes/ (fetched 2026-04-24). *"No-fail roasted leg of lamb with Mediterranean seasoning. The best lamb roast every single time."*
+**Inspired by**: The Mediterranean Dish (Suzy Karadsheh); https://www.themediterraneandish.com/mediterranean-style-leg-of-lamb-recipe-with-potatoes/ (fetched 2026-04-24). *"No-fail roasted leg of lamb with Mediterranean seasoning. The best lamb roast every single time."*
 **Serves**: 8–10 · **Prep**: 30 min + 1 hr rest · **Cook**: 1.5 hrs (medium) or 5–6 hrs (falling apart)
 
 **Ingredients**
@@ -75,7 +75,7 @@ Innertemperatur: **57–65 °C (135–149 °F)** för medium-rare till medium; *
 ---
 
 ### 2. Madensverden.dk — Lammekølle i ovnen (Danish oven-roasted leg of lamb)
-**Source**: Madensverden.dk; https://madensverden.dk/lammekølle/ (web search 2026-04-24)
+**Inspired by**: Madensverden.dk; https://madensverden.dk/lammekølle/ (web search 2026-04-24)
 **Serves**: 6 · **Prep**: 15 min + overnight marinade · **Cook**: 2 h 30 min
 
 *Translation: Leg of lamb in the oven — Danish Easter tradition.*
@@ -99,7 +99,7 @@ Innertemperatur: **57–65 °C (135–149 °F)** för medium-rare till medium; *
 ---
 
 ### 3. Matprat.no — Lammestek i ovn (Norwegian Easter leg of lamb)
-**Source**: Matprat.no; https://www.matprat.no/oppskrifter/gjester/lammelaret/ (web search 2026-04-24)
+**Inspired by**: Matprat.no; https://www.matprat.no/oppskrifter/gjester/lammelaret/ (web search 2026-04-24)
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 2 hrs
 
 **Ingredients**
@@ -132,7 +132,7 @@ Innertemperatur: **57–65 °C (135–149 °F)** för medium-rare till medium; *
 ---
 
 ### 4. The Mediterranean Dish — Perfect Roasted Leg of Lamb with Potatoes (Mediterranean / Egyptian tradition)
-**Source**: Suzy Karadsheh, The Mediterranean Dish; https://www.themediterraneandish.com/mediterranean-style-leg-of-lamb-recipe-with-potatoes/ (fetched 2026-04-26). *The author's Egyptian family's celebratory Easter roast: a bone-in leg seasoned with a bold Mediterranean garlic-herb rub (garlic, rosemary, oregano, lemon, EVOO), roasted over gold potatoes in one pan. "Where I come from, nothing beats a tender, oven-roasted leg of lamb for all occasions, but particularly for Easter." The lamb can be roasted to blush-pink medium-rare or cooked long and slow until falling apart.*
+**Inspired by**: Suzy Karadsheh, The Mediterranean Dish; https://www.themediterraneandish.com/mediterranean-style-leg-of-lamb-recipe-with-potatoes/ (fetched 2026-04-26). *The author's Egyptian family's celebratory Easter roast: a bone-in leg seasoned with a bold Mediterranean garlic-herb rub (garlic, rosemary, oregano, lemon, EVOO), roasted over gold potatoes in one pan. "Where I come from, nothing beats a tender, oven-roasted leg of lamb for all occasions, but particularly for Easter." The lamb can be roasted to blush-pink medium-rare or cooked long and slow until falling apart.*
 **Serves**: 6–8 · **Prep**: 30 min–overnight marinate · **Cook**: 1.5–2 hr (medium-rare) or 5–6 hr (falling apart)
 
 *Context: Suzy Karadsheh grew up in Egypt. Roast leg of lamb is the definitive festive roast across Egypt, the Levant, and the wider Mediterranean. The recipe notes: "Nothing beats a tender, oven-roasted leg of lamb for all occasions, but particularly for Easter."*

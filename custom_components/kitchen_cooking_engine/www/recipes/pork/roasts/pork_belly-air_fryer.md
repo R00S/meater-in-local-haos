@@ -24,7 +24,7 @@ Air fryer-tillagning av fläskbuk ger svål på 25–35 minuter — snabbare än
 ## Source recipes
 
 ### 1. J. Kenji López-Alt / Serious Eats — Air Fryer Crispy Pork Belly
-**Source**: seriouseats.com  
+**Inspired by**: seriouseats.com  
 **Serves**: 2–4 · **Prep**: 15 min (+1 h drying) · **Cook**: 25–30 min · **Rest**: 5 min
 
 **Ingredients**
@@ -57,7 +57,7 @@ Air fryer-tillagning av fläskbuk ger svål på 25–35 minuter — snabbare än
 ---
 
 ### 2. Nigella Lawson — Chinese-Spiced Air Fryer Crispy Pork Belly
-**Source**: nigella.com  
+**Inspired by**: nigella.com  
 **Serves**: 2–4 · **Prep**: 20 min (+overnight marinade and drying) · **Cook**: 30 min · **Rest**: none
 
 **Ingredients**
@@ -92,7 +92,7 @@ Air fryer-tillagning av fläskbuk ger svål på 25–35 minuter — snabbare än
 ---
 
 ### 3. Marion Grasby — Asian Salt-Crusted Air Fryer Crispy Pork Belly
-**Source**: Marion's Kitchen (marions-kitchen.com)  
+**Inspired by**: Marion's Kitchen (marions-kitchen.com)  
 **Serves**: 4 · **Prep**: 20 min (+1–2 h drying) · **Cook**: 30 min at 200°C + 5–10 min at 220°C · **Rest**: 5 min
 
 **Ingredients**
@@ -126,7 +126,7 @@ Air fryer-tillagning av fläskbuk ger svål på 25–35 minuter — snabbare än
 ---
 
 ### 4. ICA/Coop Sweden — Sidfläsk i luftfritösen (Air Fryer Pork Belly)
-**Source**: ica.se/recept; consistent with coop.se/recept and Swedish air-fryer
+**Inspired by**: ica.se/recept; consistent with coop.se/recept and Swedish air-fryer
 guidance for *sidfläsk*  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25–30 min · **Rest**: 5 min
 
@@ -158,7 +158,7 @@ guidance for *sidfläsk*
 ---
 
 ### 5. The Woks of Life (Leung family) — Air Fryer Cantonese Crispy Pork Belly (脆皮燒肉)
-**Source**: thewoksoflife.com (Bill, Judy, Sarah, and Kaitlin Leung); consistent
+**Inspired by**: thewoksoflife.com (Bill, Judy, Sarah, and Kaitlin Leung); consistent
 with Cantonese *siu yuk* (燒味 roast meat) tradition adapted for home air fryers  
 **Serves**: 4 · **Prep**: 30 min (+overnight dry-cure) · **Cook**: 20–22 min at 200°C + 5–8 min at 220°C · **Rest**: 5 min
 

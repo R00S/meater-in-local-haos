@@ -27,7 +27,7 @@ Sondplacering kräver omsorg på grund av ribeyens interna fettstruktur. För et
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Butter-Basted Pan-Seared Thick-Cut Ribeye (American tradition)
-**Source**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/butter-basted-pan-seared-thick-cut-steak-recipe  
+**Inspired by**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/butter-basted-pan-seared-thick-cut-steak-recipe  
 **Serves**: 2 · **Prep**: 10 min (+overnight dry-brine) · **Cook**: 8–10 min · **Rest**: 5–10 min
 
 **Ingredients**
@@ -53,7 +53,7 @@ Sondplacering kräver omsorg på grund av ribeyens interna fettstruktur. För et
 ---
 
 ### 2. Gordon Ramsay — Restaurant-Style Pan-Seared Ribeye (British/French restaurant tradition)
-**Source**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012); youtube.com/watch?v=AmC9SmCBUj4  
+**Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012); youtube.com/watch?v=AmC9SmCBUj4  
 **Serves**: 2 · **Prep**: 5 min (+30 min tempering) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -78,7 +78,7 @@ Sondplacering kräver omsorg på grund av ribeyens interna fettstruktur. För et
 ---
 
 ### 3. Jacques Pépin — Entrecôte Sautée au Beurre (French classical tradition)
-**Source**: Jacques Pépin, *New Complete Techniques* (Black Dog & Leventhal Publishers, 2012), combining techniques from *La Technique* (1976) and *La Méthode* (1979)  
+**Inspired by**: Jacques Pépin, *New Complete Techniques* (Black Dog & Leventhal Publishers, 2012), combining techniques from *La Technique* (1976) and *La Méthode* (1979)  
 **Serves**: 2 · **Prep**: 5 min (+20 min tempering) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -104,7 +104,7 @@ Sondplacering kräver omsorg på grund av ribeyens interna fettstruktur. För et
 ---
 
 ### 4. Nobu Matsuhisa — Pan-Seared A5 Wagyu Ribeye with Ponzu (Japanese tradition)
-**Source**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001); noburestaurants.com  
+**Inspired by**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001); noburestaurants.com  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 3–4 min · **Rest**: 2 min
 
 **Ingredients**
@@ -127,7 +127,7 @@ Sondplacering kräver omsorg på grund av ribeyens interna fettstruktur. För et
 ---
 
 ### 5. Stephanie Alexander — Pan-Fried Scotch Fillet (Australian tradition)
-**Source**: Stephanie Alexander, *The Cook's Companion* (Viking/Penguin, 1996; revised edition 2004), beef chapter  
+**Inspired by**: Stephanie Alexander, *The Cook's Companion* (Viking/Penguin, 1996; revised edition 2004), beef chapter  
 **Serves**: 2 · **Prep**: 5 min (+30 min tempering) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**

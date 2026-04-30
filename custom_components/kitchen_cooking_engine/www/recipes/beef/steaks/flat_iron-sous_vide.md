@@ -25,7 +25,7 @@ Sous vide producerar jämn tillagning från kant till kant som ingen annan metod
 ## Source recipes
 
 ### 1. J. Kenji López-Alt / Serious Eats — Sous Vide Flat Iron at 55 °C (American modernist tradition)
-**Source**: J. Kenji López-Alt, "Sous Vide Steak Guide," *Serious Eats*, seriouseats.com/the-food-lab-complete-guide-to-sous-vide-steak (2015; updated 2023)  
+**Inspired by**: J. Kenji López-Alt, "Sous Vide Steak Guide," *Serious Eats*, seriouseats.com/the-food-lab-complete-guide-to-sous-vide-steak (2015; updated 2023)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 1–4 h (circulator) + 2 min (sear) · **Rest**: 2 min
 
 **Ingredients**
@@ -49,7 +49,7 @@ Sous vide producerar jämn tillagning från kant till kant som ingen annan metod
 ---
 
 ### 2. Thomas Keller — Sous Vide Flat Iron (French-American modernist tradition)
-**Source**: Thomas Keller, *Under Pressure: Cooking Sous Vide* (Artisan, 2008)  
+**Inspired by**: Thomas Keller, *Under Pressure: Cooking Sous Vide* (Artisan, 2008)  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 45 min–1 h (circulator) + 1–2 min (sear) · **Rest**: 2 min
 
 **Ingredients**
@@ -74,7 +74,7 @@ Sous vide producerar jämn tillagning från kant till kant som ingen annan metod
 ---
 
 ### 3. Heston Blumenthal — Precise Sous Vide Flat Iron (British modernist tradition)
-**Source**: Heston Blumenthal, *The Fat Duck Cookbook* (Bloomsbury Publishing, 2008); precise temperature methodology for beef sous vide  
+**Inspired by**: Heston Blumenthal, *The Fat Duck Cookbook* (Bloomsbury Publishing, 2008); precise temperature methodology for beef sous vide  
 **Serves**: 2 · **Prep**: 20 min (+ overnight dry brine) · **Cook**: 2 h (circulator) + 1 min (sear) · **Rest**: 2 min
 
 **Ingredients**
@@ -98,7 +98,7 @@ Sous vide producerar jämn tillagning från kant till kant som ingen annan metod
 ---
 
 ### 4. ChefSteps — Joule Sous Vide Flat Iron (American modernist/tech tradition)
-**Source**: ChefSteps Team, "Cook Steak Like a Pro: Flat Iron," ChefSteps.com / Joule app sous vide guide (2017)  
+**Inspired by**: ChefSteps Team, "Cook Steak Like a Pro: Flat Iron," ChefSteps.com / Joule app sous vide guide (2017)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 1–3 h (circulator) + 2 min (sear) · **Rest**: 2 min
 
 **Ingredients**
@@ -121,7 +121,7 @@ Sous vide producerar jämn tillagning från kant till kant som ingen annan metod
 ---
 
 ### 5. Nathan Myhrvold et al. — Modernist Approach to Sous Vide Flat Iron (Modernist tradition)
-**Source**: Nathan Myhrvold, Chris Young, and Maxime Bilet, *Modernist Cuisine at Home* (The Cooking Lab, 2012), sous vide beef section  
+**Inspired by**: Nathan Myhrvold, Chris Young, and Maxime Bilet, *Modernist Cuisine at Home* (The Cooking Lab, 2012), sous vide beef section  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 45 min–2 h (circulator) + 1 min (sear) · **Rest**: 1 min
 
 **Ingredients**

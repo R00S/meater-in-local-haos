@@ -20,7 +20,7 @@ T-bonebiffen definieras av det T-formade ryggkotsbenet som separerar två distin
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Pan-Seared T-Bone (American steakhouse tradition)
-**Source**: J. Kenji López-Alt, seriouseats.com/perfect-pan-seared-t-bone; *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015)  
+**Inspired by**: J. Kenji López-Alt, seriouseats.com/perfect-pan-seared-t-bone; *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -45,7 +45,7 @@ T-bonebiffen definieras av det T-formade ryggkotsbenet som separerar två distin
 ---
 
 ### 2. Gordon Ramsay — Pan-Seared T-Bone with Brown Butter (British restaurant tradition)
-**Source**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
+**Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -69,7 +69,7 @@ T-bonebiffen definieras av det T-formade ryggkotsbenet som separerar två distin
 ---
 
 ### 3. Julia Child — *Côte de Bœuf* au Beurre (French bistro tradition)
-**Source**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961) — addressing bone-in loin steaks including the equivalent of the T-bone (*côte de bœuf*)  
+**Inspired by**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961) — addressing bone-in loin steaks including the equivalent of the T-bone (*côte de bœuf*)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -91,7 +91,7 @@ T-bonebiffen definieras av det T-formade ryggkotsbenet som separerar två distin
 ---
 
 ### 4. Fergus Henderson — Pan-Seared T-Bone with Watercress (British tradition)
-**Source**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
+**Inspired by**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -111,7 +111,7 @@ T-bonebiffen definieras av det T-formade ryggkotsbenet som separerar två distin
 ---
 
 ### 5. Neil Perry — Pan-Seared T-Bone (Australian steakhouse tradition)
-**Source**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
+**Inspired by**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
 **Serves**: 2 · **Prep**: 5 min (+30 min dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**

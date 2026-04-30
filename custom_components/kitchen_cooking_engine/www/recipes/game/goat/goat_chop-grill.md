@@ -37,7 +37,7 @@ Marinering (24 timmar i citrus, vitlök och kryddor) mörnar den magra muskeln o
 ## Source recipes
 
 ### 1. BBC Good Food — Pulled Goat Kebabs with Coriander Dressing (British/Middle Eastern tradition)
-**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/pulled-goat-kebabs-coriander-dressing (fetched 2026-04-24)
+**Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/pulled-goat-kebabs-coriander-dressing (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 30 min + overnight · **Cook**: 3 hrs
 
 *A slow-cooked and then grilled goat preparation — shoulder is slow-roasted, then shredded and grilled/charred on kebab sticks.*
@@ -69,7 +69,7 @@ Marinering (24 timmar i citrus, vitlök och kryddor) mörnar den magra muskeln o
 ---
 
 ### 2. Caribbean Pot — Jamaican Jerk Goat Chops (Caribbean tradition)
-**Source**: Caribbeanpot.com (Trinidad & Tobago home cooking); https://www.caribbeanpot.com/ (fetched 2026-04-24; jerk goat is flagship recipe)
+**Inspired by**: Caribbeanpot.com (Trinidad & Tobago home cooking); https://www.caribbeanpot.com/ (fetched 2026-04-24; jerk goat is flagship recipe)
 **Serves**: 4 · **Prep**: 12 hrs marinate · **Cook**: 25 min
 
 *Jamaican jerk marinade: scotch bonnet, allspice, thyme, garlic.*
@@ -90,7 +90,7 @@ Marinering (24 timmar i citrus, vitlök och kryddor) mörnar den magra muskeln o
 ---
 
 ### 3. African Bites — Grilled Goat (West African tradition, adapted from lamb chops recipe)
-**Source**: Africanbites.com; https://www.africanbites.com/grilled-lamb-chops/ (fetched 2026-04-24 — applies equally to goat)
+**Inspired by**: Africanbites.com; https://www.africanbites.com/grilled-lamb-chops/ (fetched 2026-04-24 — applies equally to goat)
 **Serves**: 4 · **Prep**: 1 hr marinate · **Cook**: 20 min
 
 **Ingredients**

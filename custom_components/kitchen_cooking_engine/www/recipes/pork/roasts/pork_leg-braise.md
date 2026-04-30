@@ -38,7 +38,7 @@ Bryn i panna, bräsera sedan täckt i ugn vid 160–170 °C med fond, vin, lök 
 ## Source recipes
 
 ### 1. Chefkoch.de — Geschmorte Schweinshaxenscheiben (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/113281047567960/ (fetched 2026-04-25). *"Geschmorte Schweinshaxenscheiben — braised pork hock slices in dark beer."*
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/113281047567960/ (fetched 2026-04-25). *"Geschmorte Schweinshaxenscheiben — braised pork hock slices in dark beer."*
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 45 min
 
 **Ingredients**
@@ -61,7 +61,7 @@ Bryn i panna, bräsera sedan täckt i ugn vid 160–170 °C med fond, vin, lök 
 ---
 
 ### 2. The Woks of Life — Chinese Red Braised Pork Hock / Ti Pang (Chinese tradition)
-**Source**: The Woks of Life (Bill, Judy, Sarah, and Kaitlin Leung); https://thewoksoflife.com/chinese-braised-ti-pang-pork/ (fetched 2026-04-25). *"Ti Pang (蹄膀) — red-braised pork hock, the definitive Shanghainese family dish."*
+**Inspired by**: The Woks of Life (Bill, Judy, Sarah, and Kaitlin Leung); https://thewoksoflife.com/chinese-braised-ti-pang-pork/ (fetched 2026-04-25). *"Ti Pang (蹄膀) — red-braised pork hock, the definitive Shanghainese family dish."*
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 3 hr
 
 **Ingredients**
@@ -100,7 +100,7 @@ Bryn i panna, bräsera sedan täckt i ugn vid 160–170 °C med fond, vin, lök 
 ---
 
 ### 3. Giallo Zafferano — Stinco di maiale al forno con patate (Italian tradition)
-**Source**: Ricette GialloZafferano; https://ricette.giallozafferano.it/Stinco-di-maiale-al-forno-con-patate.html (fetched 2026-04-25). *"Stinco di maiale al forno — classic Italian braised-then-roasted pork shank with potatoes."*
+**Inspired by**: Ricette GialloZafferano; https://ricette.giallozafferano.it/Stinco-di-maiale-al-forno-con-patate.html (fetched 2026-04-25). *"Stinco di maiale al forno — classic Italian braised-then-roasted pork shank with potatoes."*
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 1 h 45 min
 
 **Ingredients**
@@ -126,7 +126,7 @@ Bryn i panna, bräsera sedan täckt i ugn vid 160–170 °C med fond, vin, lök 
 ---
 
 ### 4. Valdemarsro.dk — Braiseret nakkefilet (Danish tradition)
-**Source**: Valdemarsro.dk (Marie Holm); https://www.valdemarsro.dk/braiseret-svinenakke/ (fetched 2026-04-25). *"Braiseret nakkefilet — Danish braised pork with apple and dark ale."*
+**Inspired by**: Valdemarsro.dk (Marie Holm); https://www.valdemarsro.dk/braiseret-svinenakke/ (fetched 2026-04-25). *"Braiseret nakkefilet — Danish braised pork with apple and dark ale."*
 **Serves**: 4–6 · **Prep**: 20 min · **Cook**: 2 hr
 
 *Note: This recipe uses pork neck (nakke) but the braising method is identical for leg and hock cuts.*

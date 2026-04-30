@@ -35,7 +35,7 @@ Vid 2–3 cm tjocklek ger 2–3 minuter per sida vid hög direkt värme (230–2
 ## Source recipes
 
 ### 1. Köket.se temperature guide — Grillad renfilé (Swedish grilling tradition)
-**Source**: Köket.se; https://www.koket.se/innertemperatur-viltkott (fetched 2026-04-24)
+**Inspired by**: Köket.se; https://www.koket.se/innertemperatur-viltkott (fetched 2026-04-24)
 *Temperature guidance for grilled reindeer: Renfilé medium-rare 52 °C, medium 57 °C.*
 
 **Ingredients** (standard Swedish preparation)
@@ -55,7 +55,7 @@ Vid 2–3 cm tjocklek ger 2–3 minuter per sida vid hög direkt värme (230–2
 ---
 
 ### 2. Madensverden.dk — Grillet rensdyr (Danish/Nordic grilling)
-**Source**: Madensverden.dk; https://madensverden.dk/rensdyr-opskrifter/ (web search 2026-04-24)
+**Inspired by**: Madensverden.dk; https://madensverden.dk/rensdyr-opskrifter/ (web search 2026-04-24)
 **Serves**: 2 · **Prep**: 1 hr marinade · **Cook**: 8 min
 
 **Ingredients**
@@ -76,7 +76,7 @@ Vid 2–3 cm tjocklek ger 2–3 minuter per sida vid hög direkt värme (230–2
 ---
 
 ### 3. Kotikokki.net — Poropihvi grillissä (Finnish grilled reindeer steak)
-**Source**: Kotikokki.net; https://www.kotikokki.net/reseptit/haku/?hakusana=poropihvi+grilli (web search 2026-04-24)
+**Inspired by**: Kotikokki.net; https://www.kotikokki.net/reseptit/haku/?hakusana=poropihvi+grilli (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 10 min
 
 *Simple Finnish preparation — butter-brushed and grilled with minimal seasoning.*

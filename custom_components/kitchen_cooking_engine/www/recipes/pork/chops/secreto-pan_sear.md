@@ -24,7 +24,7 @@ Tillagningstid: 3–4 minuter per sida vid hög värme; vila 5 minuter täckt. I
 ## Source recipes
 
 ### 1. Directo al Paladar — Secreto de cerdo a la plancha (Spanish tradition)
-**Source**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/receta-secreto-cerdo-a-plancha-trucos-te-quede-muy-crujiente-jugoso-interior (fetched 2026-04-24). *The definitive Spanish plancha method for secreto: atemperar 2 hr; dry griddle, no oil; sear 3–4 min one side, 2–3 min other; no salt before; one flip with tongs; rest 1–2 min then season.*
+**Inspired by**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/receta-secreto-cerdo-a-plancha-trucos-te-quede-muy-crujiente-jugoso-interior (fetched 2026-04-24). *The definitive Spanish plancha method for secreto: atemperar 2 hr; dry griddle, no oil; sear 3–4 min one side, 2–3 min other; no salt before; one flip with tongs; rest 1–2 min then season.*
 **Serves**: 2 · **Prep**: 2 hr de-chill · **Cook**: 6–8 min
 
 *Translation: "The secret is a cut from between the shoulder and the panceta — important marbling that makes it very flavourful and juicy, provided it is cooked correctly."*
@@ -54,7 +54,7 @@ Tillagningstid: 3–4 minuter per sida vid hög värme; vila 5 minuter täckt. I
 ---
 
 ### 2. Chefkoch.de — Secreto vom Ibericoschwein (German tradition)
-**Source**: Carco, Chefkoch.de; https://www.chefkoch.de/rezepte/3267791485695361/Secreto-vom-Ibericoschwein.html (fetched 2026-04-24). *"The 'secret fillet' without fuss — pure, unadulterated meat pleasure." Ghee (Butterschmalz) pan, 3–4 min per side, then 5 min rest at 80 °C in oven.*
+**Inspired by**: Carco, Chefkoch.de; https://www.chefkoch.de/rezepte/3267791485695361/Secreto-vom-Ibericoschwein.html (fetched 2026-04-24). *"The 'secret fillet' without fuss — pure, unadulterated meat pleasure." Ghee (Butterschmalz) pan, 3–4 min per side, then 5 min rest at 80 °C in oven.*
 **Serves**: 4 · **Cook**: 8 min + 5 min oven rest
 
 **Temperature guidance (from recipe)**: "In a hot pan with Butterschmalz, depending on thickness, 3 to 4 minutes per side. Then 5 minutes at approx. 80 °C in the preheated oven to rest."
@@ -78,7 +78,7 @@ Tillagningstid: 3–4 minuter per sida vid hög värme; vila 5 minuter täckt. I
 ---
 
 ### 3. Madensverden.dk — Pandestegning reference (adapted from svinekotelet technique) (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/pandestegning-af-koteletter/ (fetched 2026-04-24). *The Danish pandestegning (pan frying) method applied to secreto — since secreto is equivalent to a marbled collar cut. High heat, butter, herbs; cook through to juicy well-done.*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/pandestegning-af-koteletter/ (fetched 2026-04-24). *The Danish pandestegning (pan frying) method applied to secreto — since secreto is equivalent to a marbled collar cut. High heat, butter, herbs; cook through to juicy well-done.*
 **Serves**: 2 · **Cook**: 6–8 min
 
 **Temperature guidance**: 2 min per side on high, then 2 more min per side on reduced heat with butter baste. For secreto: cook to 68–70 °C for a properly rendered result.

@@ -19,7 +19,7 @@ Hela eller halverade lökar (*Allium cepa*) ugnsrostade koncentrerar de naturlig
 ## Source recipes
 
 ### 1. Najmieh Batmanglij — Piyaz Kebab (Persian oven-roasted onion)
-**Source**: Najmieh Batmanglij, *Food of Life: Ancient Persian and Modern Iranian Cooking and Ceremonies* (Mage Publishers, 2011)
+**Inspired by**: Najmieh Batmanglij, *Food of Life: Ancient Persian and Modern Iranian Cooking and Ceremonies* (Mage Publishers, 2011)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 45–55 min · **Rest**: 10 min
 
 **Ingredients**
@@ -40,7 +40,7 @@ Hela eller halverade lökar (*Allium cepa*) ugnsrostade koncentrerar de naturlig
 ---
 
 ### 2. José Andrés — Cebollas Enteras al Horno (Spanish tradition)
-**Source**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
+**Inspired by**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 50–60 min · **Rest**: 10 min
 
 **Ingredients**
@@ -62,7 +62,7 @@ Hela eller halverade lökar (*Allium cepa*) ugnsrostade koncentrerar de naturlig
 ---
 
 ### 3. Diana Kennedy — Cebollas al Horno (Mexican tradition)
-**Source**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
+**Inspired by**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 40–50 min · **Rest**: 5 min
 
 **Ingredients**
@@ -83,7 +83,7 @@ Hela eller halverade lökar (*Allium cepa*) ugnsrostade koncentrerar de naturlig
 ---
 
 ### 4. Hugh Fearnley-Whittingstall — Whole Roasted Onions with Blue Cheese and Walnuts (British tradition)
-**Source**: Hugh Fearnley-Whittingstall, *River Cottage Veg Every Day!* (Bloomsbury, 2011)
+**Inspired by**: Hugh Fearnley-Whittingstall, *River Cottage Veg Every Day!* (Bloomsbury, 2011)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 50–60 min · **Rest**: 10 min
 
 **Ingredients**

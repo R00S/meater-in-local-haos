@@ -19,7 +19,7 @@ Blomkål (*Brassica oleracea* var. *botrytis*) i airfryern ger knaprig, gyllenbr
 ## Source recipes
 
 ### 1. Madhur Jaffrey — Gobi Tikka (Air Fryer — Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); tikka marinade adapted for cauliflower in the air fryer.
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); tikka marinade adapted for cauliflower in the air fryer.
 **Serves**: 4 · **Prep**: 10 min + 20 min marinating · **Cook**: 14–16 min · **Rest**: 2 min
 
 **Ingredients**
@@ -37,7 +37,7 @@ Blomkål (*Brassica oleracea* var. *botrytis*) i airfryern ger knaprig, gyllenbr
 ---
 
 ### 2. Maangchi — Korean Spicy Air-Fried Gobi (Korean tradition)
-**Source**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); Korean spicy cauliflower adaptation.
+**Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); Korean spicy cauliflower adaptation.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 14–16 min · **Rest**: 2 min
 
 **Ingredients**
@@ -55,7 +55,7 @@ Blomkål (*Brassica oleracea* var. *botrytis*) i airfryern ger knaprig, gyllenbr
 ---
 
 ### 3. Yotam Ottolenghi — Air-Fried Cauliflower with Za'atar and Yoghurt (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010); air fryer adaptation.
+**Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010); air fryer adaptation.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 14–16 min · **Rest**: 3 min
 
 **Ingredients**
@@ -78,7 +78,7 @@ Blomkål (*Brassica oleracea* var. *botrytis*) i airfryern ger knaprig, gyllenbr
 ---
 
 ### 4. Harumi Kurihara — Air-Fried Cauliflower Karaage (Japanese tradition)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); karaage technique applied to cauliflower, adapted for air fryer.
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); karaage technique applied to cauliflower, adapted for air fryer.
 **Serves**: 4 · **Prep**: 10 min + 15 min marinating · **Cook**: 14–16 min · **Rest**: 2 min
 
 **Ingredients**

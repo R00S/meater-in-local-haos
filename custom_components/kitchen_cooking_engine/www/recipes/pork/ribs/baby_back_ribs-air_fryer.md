@@ -26,7 +26,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet (USDA-sta
 ## Source recipes
 
 ### 1. Madens Verden — Ribben i airfryer (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ribben-i-airfryer/ (fetched 2026-04-24). *"My recipe for ribs in the airfryer — the good bones, either from scratch with fresh ribs that you boil yourself, or pre-bought." 4.8/5 stars.*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ribben-i-airfryer/ (fetched 2026-04-24). *"My recipe for ribs in the airfryer — the good bones, either from scratch with fresh ribs that you boil yourself, or pre-bought." 4.8/5 stars.*
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 40 min boil + 20 min air fryer
 
 *Translation: Ribs in air fryer — "The pre-bought ribs only need 15 min at 180°C directly on the rack. The last 4–5 min brush with marinade."*
@@ -56,7 +56,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet (USDA-sta
 ---
 
 ### 2. Matprat — Ribbe i airfryer (Norwegian tradition)
-**Source**: Matprat.no; https://www.matprat.no/oppskrifter/kos/ribbe-i-airfryer/ (fetched 2026-04-24). *Norwegian pork ribs in the airfryer — low-and-slow phase then crisp-svor finish. No pre-boiling.*
+**Inspired by**: Matprat.no; https://www.matprat.no/oppskrifter/kos/ribbe-i-airfryer/ (fetched 2026-04-24). *Norwegian pork ribs in the airfryer — low-and-slow phase then crisp-svor finish. No pre-boiling.*
 **Serves**: 2 · **Prep**: 2 days salting (or skip with pre-seasoned) · **Cook**: 2 hr 10–15 min · **Rest**: few min
 
 **Temperature guidance (from recipe)**: 150 °C × 2 hours for tenderness, then 200 °C × 10–15 min for crackling. "Add about 2 dl water to the bottom of the air fryer." Monitor closely during the high-heat phase.
@@ -78,7 +78,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet (USDA-sta
 ---
 
 ### 3. ichkoche.at — Spareribs aus der Heißluftfritteuse – Saftig und Knusprig (Austrian tradition)
-**Source**: ichkoche.at; https://www.ichkoche.at/spareribs-aus-der-heissluftfritteuse-rezept-232223 (fetched 2026-04-24). *Juicy and crispy spareribs from the air fryer with overnight marinade. 1 250 ratings.*
+**Inspired by**: ichkoche.at; https://www.ichkoche.at/spareribs-aus-der-heissluftfritteuse-rezept-232223 (fetched 2026-04-24). *Juicy and crispy spareribs from the air fryer with overnight marinade. 1 250 ratings.*
 **Serves**: 4 · **Prep**: overnight marinade · **Cook**: 60–90 min
 
 *Translation: "Spareribs from the hot-air fryer — juicy and crispy."*
@@ -104,7 +104,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet (USDA-sta
 ---
 
 ### 4. Cucino per Passione (blog.giallozafferano.it) — Costine in friggitrice ad aria (Italian tradition)
-**Source**: Barbara, Cucino per Passione; https://blog.giallozafferano.it/cucinoperpassione/ricetta-costine-in-friggitrice-ad-aria/ (fetched 2026-04-24). *Simple Italian pork ribs in the air fryer — herbs only, no marinade. Fat drips away so ribs stay non-greasy.*
+**Inspired by**: Barbara, Cucino per Passione; https://blog.giallozafferano.it/cucinoperpassione/ricetta-costine-in-friggitrice-ad-aria/ (fetched 2026-04-24). *Simple Italian pork ribs in the air fryer — herbs only, no marinade. Fat drips away so ribs stay non-greasy.*
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 30 min
 
 *Translation: "Pork ribs in the air fryer — a simple and tasty second course. The ribs stay soft; the fat melts and drips to the bottom so they are not greasy."*
@@ -128,7 +128,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet (USDA-sta
 ---
 
 ### 5. Directo al Paladar — Costillas de cerdo en freidora de aire (Spanish tradition)
-**Source**: Carmen Tía Alia, Directoalpaladar.com; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/como-hacer-costillas-cerdo-freidora-aire-tiernas-saboras-que-se-deshacen-boca (fetched 2026-04-24). *"So tender and tasty they melt in the mouth." BBQ sauce marinade, simple 20 min cook. 11 votes.*
+**Inspired by**: Carmen Tía Alia, Directoalpaladar.com; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/como-hacer-costillas-cerdo-freidora-aire-tiernas-saboras-que-se-deshacen-boca (fetched 2026-04-24). *"So tender and tasty they melt in the mouth." BBQ sauce marinade, simple 20 min cook. 11 votes.*
 **Serves**: 2 · **Prep**: 5 min (+ overnight marinade) · **Cook**: 30 min
 
 *Translation: "How to make pork ribs in the airfryer — tender and tasty enough to melt in the mouth."*

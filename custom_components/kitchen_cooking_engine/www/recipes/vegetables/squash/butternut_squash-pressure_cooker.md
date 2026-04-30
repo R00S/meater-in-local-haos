@@ -19,7 +19,7 @@ Butternut-squash (*Cucurbita moschata*) i tryckkokare tillagas på 8–12 minute
 ## Source recipes
 
 ### 1. Madhur Jaffrey — Pressure-Cooked Kaddu for Dal (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); pressure-cooker squash for Indian dal or sabzi.
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); pressure-cooker squash for Indian dal or sabzi.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min at pressure · **Rest**: 10 min (natural release)
 
 **Ingredients**
@@ -33,7 +33,7 @@ Butternut-squash (*Cucurbita moschata*) i tryckkokare tillagas på 8–12 minute
 ---
 
 ### 2. Fuchsia Dunlop — Pressure-Cooked Squash Congee (Chinese tradition)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice* (W. W. Norton, 2012); Chinese pressure-cooked squash and rice.
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice* (W. W. Norton, 2012); Chinese pressure-cooked squash and rice.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12 min at pressure · **Rest**: 10 min
 
 **Ingredients**
@@ -47,7 +47,7 @@ Butternut-squash (*Cucurbita moschata*) i tryckkokare tillagas på 8–12 minute
 ---
 
 ### 3. Claudia Roden — Pressure-Cooked Squash with Ras el Hanout (Moroccan / North African tradition)
-**Source**: Claudia Roden, *Arabesque* (Alfred A. Knopf, 2005); North African spiced squash.
+**Inspired by**: Claudia Roden, *Arabesque* (Alfred A. Knopf, 2005); North African spiced squash.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8 min at pressure · **Rest**: 10 min
 
 **Ingredients**
@@ -61,7 +61,7 @@ Butternut-squash (*Cucurbita moschata*) i tryckkokare tillagas på 8–12 minute
 ---
 
 ### 4. Deborah Madison — Pressure-Cooked Squash Soup Base (American vegetarian tradition)
-**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013); pressure-cooked squash for soup.
+**Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013); pressure-cooked squash for soup.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10 min at pressure · **Rest**: 10 min
 
 **Ingredients**

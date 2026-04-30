@@ -35,7 +35,7 @@ Den svenska traditionen serverar älgstek rosa med grädde och lingon. Innertemp
 ## Source recipes
 
 ### 1. Chefkoch.de — Elchbraten (Älg i grytan) — Swedish oven-braise (German recipe citing Swedish tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/1097651215764212/Elchbraten-Aelg-i-grytan.html (fetched 2026-04-24)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/1097651215764212/Elchbraten-Aelg-i-grytan.html (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 1 h 30 min
 
 *Translation: Moose roast — Swedish style (Älg i grytan). This recipe comes from a Swedish home cook on Chefkoch.de and uses the traditional Swedish preparation. Recommended: use a cast-iron pot with a heavy lid.*
@@ -60,7 +60,7 @@ Den svenska traditionen serverar älgstek rosa med grädde och lingon. Innertemp
 ---
 
 ### 2. Tasteline.com — Älgstek i ugn (Swedish oven roast)
-**Source**: Tasteline.com; https://www.tasteline.com/ingrediens/alg/ (fetched 2026-04-24); general Swedish game cooking guidance.
+**Inspired by**: Tasteline.com; https://www.tasteline.com/ingrediens/alg/ (fetched 2026-04-24); general Swedish game cooking guidance.
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 1 h 30 min
 
 *Translation: Moose roast in the oven — the standard Swedish approach. Moose should be cooked at relatively low temperature because of its leanness. A meat thermometer is essential. Fillet temperature: 58–70 °C depending on desired doneness.*
@@ -87,7 +87,7 @@ Den svenska traditionen serverar älgstek rosa med grädde och lingon. Innertemp
 ---
 
 ### 3. Matprat.no — Elgstek i ovnen (Norwegian oven roast)
-**Source**: Matprat.no; https://www.matprat.no/oppskrifter/gjester/elgstek/ (web search 2026-04-24)
+**Inspired by**: Matprat.no; https://www.matprat.no/oppskrifter/gjester/elgstek/ (web search 2026-04-24)
 **Serves**: 6 · **Prep**: 20 min + overnight marinade · **Cook**: 2 hrs
 
 *The Norwegian tradition marinates moose in wine and root vegetables overnight.*

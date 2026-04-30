@@ -19,7 +19,7 @@ Palsternacka (*Pastinaca sativa*) ugnsrostad vid 190–210 °C blir djupt karame
 ## Source recipes
 
 ### 1. Nigel Slater — Honey-Roasted Parsnips with Mustard (British tradition)
-**Source**: Nigel Slater, *Tender Vol. I* (4th Estate, 2009)
+**Inspired by**: Nigel Slater, *Tender Vol. I* (4th Estate, 2009)
 **Serves**: 4–6 · **Prep**: 10 min · **Cook**: 30–35 min · **Rest**: 5 min
 
 **Ingredients**
@@ -33,7 +33,7 @@ Palsternacka (*Pastinaca sativa*) ugnsrostad vid 190–210 °C blir djupt karame
 ---
 
 ### 2. Magnus Nilsson — Ugnsrostade Palsternackor (Nordic / Swedish tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)
+**Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 28–32 min · **Rest**: 5 min
 
 **Ingredients**
@@ -47,7 +47,7 @@ Palsternacka (*Pastinaca sativa*) ugnsrostad vid 190–210 °C blir djupt karame
 ---
 
 ### 3. Madhur Jaffrey — Masala Roasted Parsnips (Indian tradition)
-**Source**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
+**Inspired by**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 28–30 min · **Rest**: 3 min
 
 **Ingredients**
@@ -61,7 +61,7 @@ Palsternacka (*Pastinaca sativa*) ugnsrostad vid 190–210 °C blir djupt karame
 ---
 
 ### 4. Yotam Ottolenghi — Roasted Parsnips with Miso and Sesame (Israeli / East Asian fusion tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 28–32 min · **Rest**: 5 min
 
 **Ingredients**

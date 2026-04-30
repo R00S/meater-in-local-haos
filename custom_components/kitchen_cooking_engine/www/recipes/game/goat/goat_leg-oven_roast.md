@@ -35,7 +35,7 @@ Långsam ugnsstekning vid 160–200 °C i 2–3 timmar ger bäst resultat. Inner
 ## Source recipes
 
 ### 1. Chefkoch.de — Ziegenkeule im Römertopf (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/45381015326785/Ziegenkeule-im-Roemertopf.html (fetched 2026-04-24). *Rated 4.3/5.*
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/45381015326785/Ziegenkeule-im-Roemertopf.html (fetched 2026-04-24). *Rated 4.3/5.*
 **Serves**: 4 · **Prep**: 72 hrs marinade · **Cook**: 2 h 30 min
 
 *Translation: Goat leg in a clay roaster (Römertopf) — 3-day buttermilk marinade to tenderise, then roasted in a sealed clay pot. The clay pot seams in all the moisture.*
@@ -66,7 +66,7 @@ Långsam ugnsstekning vid 160–200 °C i 2–3 timmar ger bäst resultat. Inner
 ---
 
 ### 2. African Bites — Asun Goat (Nigerian roasted leg tradition)
-**Source**: Africanbites.com; https://www.africanbites.com/asun-spicy-roast-goat/ (fetched 2026-04-24)
+**Inspired by**: Africanbites.com; https://www.africanbites.com/asun-spicy-roast-goat/ (fetched 2026-04-24)
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 1 hr 30 min
 
 *Asun: West African oven-roasted goat, traditionally made by the Yoruba people of Nigeria. The leg is scored, spiced, and roasted until charred outside and tender inside.*
@@ -92,7 +92,7 @@ Långsam ugnsstekning vid 160–200 °C i 2–3 timmar ger bäst resultat. Inner
 ---
 
 ### 3. Laylita.com — Seco de Chivo (Ecuadorian goat leg braised whole)
-**Source**: Laylita.com; https://www.laylita.com/recipes/seco-de-chivo/ (fetched 2026-04-24)
+**Inspired by**: Laylita.com; https://www.laylita.com/recipes/seco-de-chivo/ (fetched 2026-04-24)
 **Serves**: 8 · **Prep**: 30 min · **Cook**: 2 hrs
 
 *Translation: Slow-braised goat in chicha de jora (corn beer) and achiote — a festive Ecuadorian dish.*

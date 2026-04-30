@@ -22,7 +22,7 @@ Eftertillagning efter den låg-ugns-fasen är reducerad till 2–3 °C (jämför
 ## Source recipes
 
 ### 1. America's Test Kitchen — Reverse-Sear Top Sirloin (American tradition)
-**Source**: America's Test Kitchen, *The Complete Cook's Country TV Show Cookbook* (America's Test Kitchen, 2015)  
+**Inspired by**: America's Test Kitchen, *The Complete Cook's Country TV Show Cookbook* (America's Test Kitchen, 2015)  
 **Serves**: 4 · **Prep**: 5 min (+overnight dry-brine) · **Cook**: 45–60 min low oven + 3 min sear · **Rest**: 2 min
 
 **Ingredients**
@@ -45,7 +45,7 @@ Eftertillagning efter den låg-ugns-fasen är reducerad till 2–3 °C (jämför
 ---
 
 ### 2. Heston Blumenthal — Ultra-Low Oven Sirloin (British Modernist tradition)
-**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
+**Inspired by**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 45–60 min at 50 °C oven + 2 min sear · **Rest**: 2 min
 
 **Ingredients**
@@ -63,7 +63,7 @@ Eftertillagning efter den låg-ugns-fasen är reducerad till 2–3 °C (jämför
 ---
 
 ### 3. Gordon Ramsay — Sear-and-Oven Sirloin (British restaurant tradition)
-**Source**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
+**Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 4 min sear + 8–10 min oven · **Rest**: 5 min
 
 **Ingredients**
@@ -87,7 +87,7 @@ Eftertillagning efter den låg-ugns-fasen är reducerad till 2–3 °C (jämför
 ---
 
 ### 4. Alice Waters — Oven-Roasted Sirloin (American / California tradition)
-**Source**: Alice Waters, *The Chez Panisse Menu Cookbook* (Random House, 1982)  
+**Inspired by**: Alice Waters, *The Chez Panisse Menu Cookbook* (Random House, 1982)  
 **Serves**: 4 · **Prep**: 5 min (+overnight dry-brine) · **Cook**: 15–20 min · **Rest**: 10 min
 
 **Ingredients**
@@ -108,7 +108,7 @@ Eftertillagning efter den låg-ugns-fasen är reducerad till 2–3 °C (jämför
 ---
 
 ### 5. Fergus Henderson — Roasted Sirloin (British nose-to-tail tradition)
-**Source**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
+**Inspired by**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 20–25 min · **Rest**: 10 min
 
 **Ingredients**

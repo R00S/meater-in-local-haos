@@ -23,7 +23,7 @@ Tri-tip på grillen drar nytta av tvåzonsuppställning (direkt för krusta, ind
 ## Source recipes
 
 ### 1. Madens Verden — Ball tip i grill (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ball-tip/ (fetched 2026-04-24). *Danish gas grill indirect method: hold grill at 175 °C, 40 min for 1 kg, pull at 56 °C. Rest 15 minutes before carving.*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ball-tip/ (fetched 2026-04-24). *Danish gas grill indirect method: hold grill at 175 °C, 40 min for 1 kg, pull at 56 °C. Rest 15 minutes before carving.*
 **Serves**: 4 · **Prep**: 4 hr marinade · **Cook**: 40 min indirect grill
 
 *Translation: Ball tip (tri-tip) on the grill — indirect heat, 175 °C or lower, until core temperature reaches 56 °C. Rest 15 minutes.*
@@ -51,7 +51,7 @@ Tri-tip på grillen drar nytta av tvåzonsuppställning (direkt för krusta, ind
 ---
 
 ### 2. Immaculate Bites (africanbites.com) — Oven Tri Tip Roast (marinade for grill) (Californian / West African tradition)
-**Source**: Imma Adamu, africanbites.com; https://www.africanbites.com/oven-tri-tip-roast/ (fetched 2026-04-24). *The red wine and garlic marinade is equally excellent on the grill — sear first on direct heat to replicate the stovetop step, then finish on indirect heat.*
+**Inspired by**: Imma Adamu, africanbites.com; https://www.africanbites.com/oven-tri-tip-roast/ (fetched 2026-04-24). *The red wine and garlic marinade is equally excellent on the grill — sear first on direct heat to replicate the stovetop step, then finish on indirect heat.*
 **Serves**: 4 · **Prep**: 1 hr marinade · **Cook**: 25–30 min grill
 
 **Temperature guidance (from recipe adapted for grill)**: "The internal temperature is 135°F (57°C) for medium-rare and 145°F (63°C) for medium." Adapted: sear on direct heat first, finish on indirect to target temperature.
@@ -74,7 +74,7 @@ Tri-tip på grillen drar nytta av tvåzonsuppställning (direkt för krusta, ind
 ---
 
 ### 3. Chefkoch.de — Das perfekte Steak mit Steakkruste (German tradition — constant-turning method)
-**Source**: Lumacone, Chefkoch.de; https://www.chefkoch.de/rezepte/3258661484569054/Das-perfekte-Steak-mit-Steakkruste.html (fetched 2026-04-24). *For tri-tip steaks (sliced from the roast): constant-turning grill method for the best crust with maximum röstaromas. 90 ratings, 4.8/5 stars.*
+**Inspired by**: Lumacone, Chefkoch.de; https://www.chefkoch.de/rezepte/3258661484569054/Das-perfekte-Steak-mit-Steakkruste.html (fetched 2026-04-24). *For tri-tip steaks (sliced from the roast): constant-turning grill method for the best crust with maximum röstaromas. 90 ratings, 4.8/5 stars.*
 **Serves**: 2 · **Prep**: 2–2.5 hr de-chill · **Cook**: 6–8 min + 4 min rest
 
 *Translation: The perfect steak with steak crust. "I have long searched for the perfect method for a beautiful crispy crust with a lot of röstaromas." Key technique: constant turning.*

@@ -19,7 +19,7 @@ Filet mignon skärs från den smala änden (lilla änden) av nötfilén — den 
 ## Source recipes
 
 ### 1. Natasha's Kitchen — Air Fryer Filet Mignon (American home tradition)
-**Source**: Natasha Kravchuk, natashaskitchen.com/air-fryer-filet-mignon  
+**Inspired by**: Natasha Kravchuk, natashaskitchen.com/air-fryer-filet-mignon  
 **Serves**: 2 · **Prep**: 5 min (+45 min tempering) · **Cook**: 10–14 min · **Rest**: 5 min
 
 **Ingredients**
@@ -43,7 +43,7 @@ Filet mignon skärs från den smala änden (lilla änden) av nötfilén — den 
 ---
 
 ### 2. Serious Eats / Kenji — Air-Fryer Steak Technique Applied to Filet Mignon
-**Source**: J. Kenji López-Alt, seriouseats.com/air-fryer-steak; cross-referenced with *The Food Lab* (W. W. Norton, 2015)  
+**Inspired by**: J. Kenji López-Alt, seriouseats.com/air-fryer-steak; cross-referenced with *The Food Lab* (W. W. Norton, 2015)  
 **Serves**: 2 · **Prep**: 5 min (+overnight dry-brine) · **Cook**: 8–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -65,7 +65,7 @@ Filet mignon skärs från den smala änden (lilla änden) av nötfilén — den 
 ---
 
 ### 3. BBC Good Food — Air Fryer Fillet Steak (British tradition)
-**Source**: BBC Good Food, bbcgoodfood.com/recipes/air-fryer-fillet-steak  
+**Inspired by**: BBC Good Food, bbcgoodfood.com/recipes/air-fryer-fillet-steak  
 **Serves**: 2 · **Prep**: 5 min (+30 min tempering) · **Cook**: 9–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -87,7 +87,7 @@ Filet mignon skärs från den smala änden (lilla änden) av nötfilén — den 
 ---
 
 ### 4. Nagi Maehashi (RecipeTin Eats) — Air Fryer Steak Applied to Filet Mignon (Australian tradition)
-**Source**: Nagi Maehashi, recipetineats.com/air-fryer-steak  
+**Inspired by**: Nagi Maehashi, recipetineats.com/air-fryer-steak  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 10–14 min · **Rest**: 5 min
 
 **Ingredients**
@@ -110,7 +110,7 @@ Filet mignon skärs från den smala änden (lilla änden) av nötfilén — den 
 ---
 
 ### 5. Maangchi — Korean-Inspired Air Fryer Beef Fillet (*Sogogi gui*)
-**Source**: Maangchi, maangchi.com — Air Fryer Korean Beef variation; cross-referenced with *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019)  
+**Inspired by**: Maangchi, maangchi.com — Air Fryer Korean Beef variation; cross-referenced with *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019)  
 **Serves**: 2 · **Prep**: 10 min (+30 min marinating) · **Cook**: 10–12 min · **Rest**: 3 min
 
 **Ingredients**

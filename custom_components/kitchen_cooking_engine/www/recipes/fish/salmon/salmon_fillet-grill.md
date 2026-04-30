@@ -22,7 +22,7 @@ Den viktigaste strukturella utmaningen vid grillning av lax är övergången fr�
 ## Source recipes
 
 ### 1. Steven Raichlen — Plank-Grilled Salmon (American tradition)
-**Source**: Steven Raichlen, *BBQ USA* (Workman Publishing, 2003)  
+**Inspired by**: Steven Raichlen, *BBQ USA* (Workman Publishing, 2003)  
 **Serves**: 4 · **Prep**: 20 min (+1 h soaking) · **Cook**: 15–20 min · **Rest**: 3 min
 
 **Ingredients**
@@ -50,7 +50,7 @@ Den viktigaste strukturella utmaningen vid grillning av lax är övergången fr�
 ---
 
 ### 2. Yotam Ottolenghi — Chargrilled Salmon with Chermoula (North African / Middle Eastern tradition)
-**Source**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
+**Inspired by**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
 **Serves**: 4 · **Prep**: 20 min (+2 h marinade) · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -72,7 +72,7 @@ Den viktigaste strukturella utmaningen vid grillning av lax är övergången fr�
 ---
 
 ### 3. René Redzepi — Grilled Wild Salmon with Burned Leek Ash (Scandinavian / New Nordic tradition)
-**Source**: René Redzepi, *Noma: Time and Place in Nordic Cuisine* (Phaidon Press, 2010)  
+**Inspired by**: René Redzepi, *Noma: Time and Place in Nordic Cuisine* (Phaidon Press, 2010)  
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 10–12 min · **Rest**: 3 min
 
 **Ingredients**
@@ -96,7 +96,7 @@ Den viktigaste strukturella utmaningen vid grillning av lax är övergången fr�
 ---
 
 ### 4. Tetsuya Wakuda — Grilled Ocean Trout with Konbu (Japanese-Australian fusion tradition)
-**Source**: Tetsuya Wakuda, *Tetsuya* (Penguin Australia, 2000)  
+**Inspired by**: Tetsuya Wakuda, *Tetsuya* (Penguin Australia, 2000)  
 **Serves**: 2 · **Prep**: 15 min (+30 min konbu cure) · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -121,7 +121,7 @@ Den viktigaste strukturella utmaningen vid grillning av lax är övergången fr�
 ---
 
 ### 5. Rick Stein — Grilled Salmon with Salsa Verde (British / Mediterranean tradition)
-**Source**: Rick Stein, *Rick Stein's Seafood* (BBC Books, 2001)  
+**Inspired by**: Rick Stein, *Rick Stein's Seafood* (BBC Books, 2001)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**

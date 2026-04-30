@@ -19,7 +19,7 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 ## Source recipes
 
 ### 1. Julia Child — Onglet à l'Échalote (French bistro tradition)
-**Source**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961)  
+**Inspired by**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -41,7 +41,7 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 ---
 
 ### 2. Fergus Henderson — Pan-Fried Onglet, Chips (British nose-to-tail tradition)
-**Source**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
+**Inspired by**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -62,7 +62,7 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 ---
 
 ### 3. J. Kenji López-Alt — Pan-Fried Hanger Steak (American tradition)
-**Source**: J. Kenji López-Alt, seriouseats.com/pan-seared-hanger-steak; *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015)  
+**Inspired by**: J. Kenji López-Alt, seriouseats.com/pan-seared-hanger-steak; *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -86,7 +86,7 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 ---
 
 ### 4. David Tanis — Onglet with Anchovy Butter (French bistro tradition)
-**Source**: David Tanis, *A Platter of Figs and Other Recipes* (Artisan Books, 2008)  
+**Inspired by**: David Tanis, *A Platter of Figs and Other Recipes* (Artisan Books, 2008)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -105,7 +105,7 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 ---
 
 ### 5. April Bloomfield — Pan-Fried Hanger Steak, Red-Wine Sauce (American-British tradition)
-**Source**: April Bloomfield, *A Girl and Her Pig* (Ecco Press, 2012)  
+**Inspired by**: April Bloomfield, *A Girl and Her Pig* (Ecco Press, 2012)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**

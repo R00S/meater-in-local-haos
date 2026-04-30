@@ -20,7 +20,7 @@ Stekning av skirt steak i panna är vanligt i mexikansk hemlagning (på flat *co
 ## Source recipes
 
 ### 1. Diana Kennedy — Comal-Fried *Arrachera* (Mexican home cooking tradition)
-**Source**: Diana Kennedy, *My Mexico: A Culinary Odyssey* (Clarkson Potter, 1998)  
+**Inspired by**: Diana Kennedy, *My Mexico: A Culinary Odyssey* (Clarkson Potter, 1998)  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 4–6 min · **Rest**: 3 min
 
 **Ingredients**
@@ -40,7 +40,7 @@ Stekning av skirt steak i panna är vanligt i mexikansk hemlagning (på flat *co
 ---
 
 ### 2. Barbara Tropp — Wok-Fried Flank/Skirt Steak with Ginger (Chinese-American tradition)
-**Source**: Barbara Tropp, *The Modern Art of Chinese Cooking* (William Morrow, 1982)  
+**Inspired by**: Barbara Tropp, *The Modern Art of Chinese Cooking* (William Morrow, 1982)  
 **Serves**: 4 · **Prep**: 15 min (+30 min marinade) · **Cook**: 4–5 min · **Rest**: 2 min
 
 **Ingredients**
@@ -63,7 +63,7 @@ Stekning av skirt steak i panna är vanligt i mexikansk hemlagning (på flat *co
 ---
 
 ### 3. Nigella Lawson — Pan-Fried Skirt Steak with Salsa Verde (British contemporary tradition)
-**Source**: Nigella Lawson, *Nigella Express* (Chatto & Windus, 2007)  
+**Inspired by**: Nigella Lawson, *Nigella Express* (Chatto & Windus, 2007)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 4–6 min · **Rest**: 3 min
 
 **Ingredients**
@@ -83,7 +83,7 @@ Stekning av skirt steak i panna är vanligt i mexikansk hemlagning (på flat *co
 ---
 
 ### 4. Nobu Matsuhisa — Pan-Fried Skirt Steak with Black Bean Sauce (Japanese-Chinese tradition)
-**Source**: Nobu Matsuhisa, *Nobu: The Cookbook* (Kodansha International, 2001)  
+**Inspired by**: Nobu Matsuhisa, *Nobu: The Cookbook* (Kodansha International, 2001)  
 **Serves**: 2 · **Prep**: 10 min (+1 h marinade) · **Cook**: 4–6 min · **Rest**: 3 min
 
 **Ingredients**
@@ -102,7 +102,7 @@ Stekning av skirt steak i panna är vanligt i mexikansk hemlagning (på flat *co
 ---
 
 ### 5. Yotam Ottolenghi — Pan-Fried Skirt Steak with Chermoula (North African tradition)
-**Source**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
+**Inspired by**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
 **Serves**: 2 · **Prep**: 15 min (+2 h marinade) · **Cook**: 4–6 min · **Rest**: 3 min
 
 **Ingredients**

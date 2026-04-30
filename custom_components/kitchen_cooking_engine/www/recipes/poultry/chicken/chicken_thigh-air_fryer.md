@@ -37,7 +37,7 @@ Air fryer: 180–200 °C, 22–28 minuter med vändning halvvägs. Innertemperat
 ## Source recipes
 
 ### 1. Natasha's Kitchen — Air Fryer Chicken Thighs
-**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/air-fryer-chicken-thighs/ (fetched 2025-07-15).
+**Inspired by**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/air-fryer-chicken-thighs/ (fetched 2025-07-15).
 **Serves**: 4–6 · **Prep**: 5 min · **Cook**: 18–22 min · **Rest**: 5 min
 
 **Temperature guidance**:
@@ -76,7 +76,7 @@ Air fryer: 180–200 °C, 22–28 minuter med vändning halvvägs. Innertemperat
 ---
 
 ### 2. Skinnytaste — Air Fryer Chicken Thighs
-**Source**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/air-fryer-chicken-thighs/ (fetched 2025-07-15).
+**Inspired by**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/air-fryer-chicken-thighs/ (fetched 2025-07-15).
 **Serves**: 4–6 · **Prep**: 5 min · **Cook**: 24 min · **Rest**: 5 min
 
 **Temperature guidance**:
@@ -111,7 +111,7 @@ Air fryer: 180–200 °C, 22–28 minuter med vändning halvvägs. Innertemperat
 ---
 
 ### 3. BBC Good Food — Air Fryer Chicken Thighs
-**Source**: Samuel Goldsmith, BBC Good Food; https://www.bbcgoodfood.com/recipes/air-fryer-chicken-thighs (archived: https://web.archive.org/web/20241013144726/https://www.bbcgoodfood.com/recipes/air-fryer-chicken-thighs, fetched 2026-04-24).
+**Inspired by**: Samuel Goldsmith, BBC Good Food; https://www.bbcgoodfood.com/recipes/air-fryer-chicken-thighs (archived: https://web.archive.org/web/20241013144726/https://www.bbcgoodfood.com/recipes/air-fryer-chicken-thighs, fetched 2026-04-24).
 **Serves**: 4 · **Prep**: 2 min · **Cook**: 20–25 min
 
 **Temperature guidance**:
@@ -133,7 +133,7 @@ Air fryer: 180–200 °C, 22–28 minuter med vändning halvvägs. Innertemperat
 ---
 
 ### 4. Imma Adamu — Air Fryer Chicken (West African / Caribbean tradition)
-**Source**: Imma Adamu (Cameroon-born food writer, USA), Immaculate Bites; https://www.africanbites.com/air-fryer-chicken/ (fetched 2026-04-25). *West African–spiced bone-in chicken legs/thighs air-fried until crispy: garlic powder, onion powder, smoked paprika, white pepper, cayenne, and bouillon powder; dry-brined overnight for extra-crispy skin; air fried at 380 °F (195 °C) for 18–20 minutes. The same Creole-influenced seasoning blend used across the Nigerian–Cameroonian–Caribbean diaspora. Note: recipe uses drumsticks; bone-in thighs apply the same method — add 2–5 minutes for larger thighs.*
+**Inspired by**: Imma Adamu (Cameroon-born food writer, USA), Immaculate Bites; https://www.africanbites.com/air-fryer-chicken/ (fetched 2026-04-25). *West African–spiced bone-in chicken legs/thighs air-fried until crispy: garlic powder, onion powder, smoked paprika, white pepper, cayenne, and bouillon powder; dry-brined overnight for extra-crispy skin; air fried at 380 °F (195 °C) for 18–20 minutes. The same Creole-influenced seasoning blend used across the Nigerian–Cameroonian–Caribbean diaspora. Note: recipe uses drumsticks; bone-in thighs apply the same method — add 2–5 minutes for larger thighs.*
 **Serves**: 5 · **Prep**: 10 min + 1 hr air-dry optional · **Cook**: 20 min air fryer
 
 **Temperature guidance (from recipe)**: Air fry at **380 °F (195 °C)** for **18–20 minutes**, flipping halfway through. Chicken is done when browned and cooked through. Target internal temperature **165 °F (74 °C)** in thickest part; for thighs add 2–5 minutes over the drumstick time.

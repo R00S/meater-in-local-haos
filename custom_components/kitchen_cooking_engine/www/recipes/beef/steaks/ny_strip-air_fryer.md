@@ -20,7 +20,7 @@ New York strip tillagad i airfryer exponeras för intensivt cirkulerat het luft 
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air Fryer Strip Steak (American tradition)
-**Source**: America's Test Kitchen, *Air Fryer Perfection* (America's Test Kitchen, 2019)  
+**Inspired by**: America's Test Kitchen, *Air Fryer Perfection* (America's Test Kitchen, 2019)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -41,7 +41,7 @@ New York strip tillagad i airfryer exponeras för intensivt cirkulerat het luft 
 ---
 
 ### 2. Jamie Oliver — Air Fryer Steak with Herb Butter (British tradition)
-**Source**: Jamie Oliver, *7 Ways* (Michael Joseph / Penguin, 2020); adapted for air fryer in online content  
+**Inspired by**: Jamie Oliver, *7 Ways* (Michael Joseph / Penguin, 2020); adapted for air fryer in online content  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -62,7 +62,7 @@ New York strip tillagad i airfryer exponeras för intensivt cirkulerat het luft 
 ---
 
 ### 3. Donna Hay — Air Fryer Strip Steak with Chimichurri (Australian tradition)
-**Source**: Donna Hay, *The Fast 400 Cookbook* (HarperCollins Australia, 2020)  
+**Inspired by**: Donna Hay, *The Fast 400 Cookbook* (HarperCollins Australia, 2020)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -83,7 +83,7 @@ New York strip tillagad i airfryer exponeras för intensivt cirkulerat het luft 
 ---
 
 ### 4. Nigella Lawson — Air Fryer Steak with Mustard Sauce (British home-cooking tradition)
-**Source**: Nigella Lawson, *Cook, Eat, Repeat* (Chatto & Windus, 2020)  
+**Inspired by**: Nigella Lawson, *Cook, Eat, Repeat* (Chatto & Windus, 2020)  
 **Serves**: 1 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -103,7 +103,7 @@ New York strip tillagad i airfryer exponeras för intensivt cirkulerat het luft 
 ---
 
 ### 5. Neil Perry — Air Fryer Steak with Herb Salsa (Australian tradition)
-**Source**: Neil Perry, recipe adapted from *The Food I Love* (Murdoch Books, 2005) for air fryer technique  
+**Inspired by**: Neil Perry, recipe adapted from *The Food I Love* (Murdoch Books, 2005) for air fryer technique  
 **Serves**: 2 · **Prep**: 10 min (+30 min dry brine) · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**

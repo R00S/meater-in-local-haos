@@ -19,7 +19,7 @@ Långsamt karameliserade lökar via sauté är en av de mest grundläggande smak
 ## Source recipes
 
 ### 1. Julia Child — Oignons Glacés à Brun (French braised-caramelised onions)
-**Source**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
+**Inspired by**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
 **Serves**: 4–6 · **Prep**: 10 min · **Cook**: 35–40 min · **Rest**: 3 min
 
 **Ingredients**
@@ -42,7 +42,7 @@ Långsamt karameliserade lökar via sauté är en av de mest grundläggande smak
 ---
 
 ### 2. Madhur Jaffrey — Kachumber Pyaz (North Indian slow-cooked onions for gravy base)
-**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)
+**Inspired by**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)
 **Serves**: 4–6 (as a masala base) · **Prep**: 10 min · **Cook**: 25–30 min · **Rest**: 2 min
 
 **Ingredients**
@@ -66,7 +66,7 @@ Långsamt karameliserade lökar via sauté är en av de mest grundläggande smak
 ---
 
 ### 3. Yotam Ottolenghi — Slow-Cooked Onions with Thyme and Cream (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 45–55 min · **Rest**: 3 min
 
 **Ingredients**
@@ -92,7 +92,7 @@ Långsamt karameliserade lökar via sauté är en av de mest grundläggande smak
 ---
 
 ### 4. Najmieh Batmanglij — Piyaz Davag (Persian slow-caramelised onions for garnish)
-**Source**: Najmieh Batmanglij, *Food of Life: Ancient Persian and Modern Iranian Cooking and Ceremonies* (Mage Publishers, 2011)
+**Inspired by**: Najmieh Batmanglij, *Food of Life: Ancient Persian and Modern Iranian Cooking and Ceremonies* (Mage Publishers, 2011)
 **Serves**: 6–8 (as a garnish) · **Prep**: 5 min · **Cook**: 40–50 min · **Rest**: 5 min
 
 **Ingredients**

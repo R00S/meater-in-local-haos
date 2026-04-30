@@ -20,7 +20,7 @@ Pannsekning av skirt steak i gjutjärnspanna eller rostfri stekpanna ger den mes
 ## Source recipes
 
 ### 1. Diana Kennedy — Pan-Seared Skirt Steak Tacos (*Tacos de Arrachera*) (Mexican tradition)
-**Source**: Diana Kennedy, *The Cuisines of Mexico* (Harper & Row, 1972)  
+**Inspired by**: Diana Kennedy, *The Cuisines of Mexico* (Harper & Row, 1972)  
 **Serves**: 4 · **Prep**: 5 min (+2 h marinade) · **Cook**: 4–6 min · **Rest**: 3 min
 
 **Ingredients**
@@ -41,7 +41,7 @@ Pannsekning av skirt steak i gjutjärnspanna eller rostfri stekpanna ger den mes
 ---
 
 ### 2. J. Kenji López-Alt — Pan-Seared Skirt Steak Fajitas (American-Mexican tradition)
-**Source**: J. Kenji López-Alt, seriouseats.com/the-best-steak-fajitas; *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015)  
+**Inspired by**: J. Kenji López-Alt, seriouseats.com/the-best-steak-fajitas; *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015)  
 **Serves**: 4 · **Prep**: 15 min (+1 h marinade) · **Cook**: 6–8 min · **Rest**: 3 min
 
 **Ingredients**
@@ -61,7 +61,7 @@ Pannsekning av skirt steak i gjutjärnspanna eller rostfri stekpanna ger den mes
 ---
 
 ### 3. Nobu Matsuhisa — Pan-Seared Skirt Steak with Spicy Ponzu (Japanese tradition)
-**Source**: Nobu Matsuhisa, *Nobu: The Cookbook* (Kodansha International, 2001)  
+**Inspired by**: Nobu Matsuhisa, *Nobu: The Cookbook* (Kodansha International, 2001)  
 **Serves**: 4 · **Prep**: 10 min (+1 h marinade) · **Cook**: 4–6 min · **Rest**: 3 min
 
 **Ingredients**
@@ -80,7 +80,7 @@ Pannsekning av skirt steak i gjutjärnspanna eller rostfri stekpanna ger den mes
 ---
 
 ### 4. Fergus Henderson — Pan-Seared Skirt Steak, Anchovy and Capers (British tradition)
-**Source**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
+**Inspired by**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 4–6 min · **Rest**: 3 min
 
 **Ingredients**
@@ -100,7 +100,7 @@ Pannsekning av skirt steak i gjutjärnspanna eller rostfri stekpanna ger den mes
 ---
 
 ### 5. Marcus Samuelsson — Pan-Seared Skirt Steak with Berbere (Ethiopian-American tradition)
-**Source**: Marcus Samuelsson, *The Soul of a New Cuisine* (John Wiley & Sons, 2006)  
+**Inspired by**: Marcus Samuelsson, *The Soul of a New Cuisine* (John Wiley & Sons, 2006)  
 **Serves**: 2 · **Prep**: 10 min (+1 h marinade) · **Cook**: 4–6 min · **Rest**: 3 min
 
 **Ingredients**

@@ -35,7 +35,7 @@ Vid 2,5–3 cm tjocklek ger 2–3 minuter per sida en brynnad skorpa och ett ros
 ## Source recipes
 
 ### 1. South African Braai tradition — Classic braaied ostrich steak
-**Source**: KleinKaroo.co.za (ostrich farming region of South Africa); https://www.kleinkaroo.com/ostrich-steak-braai-recipe/ (web search 2026-04-24)
+**Inspired by**: KleinKaroo.co.za (ostrich farming region of South Africa); https://www.kleinkaroo.com/ostrich-steak-braai-recipe/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 30 min marinate · **Cook**: 8 min
 
 *The Klein Karoo region of South Africa is the world centre of ostrich farming. Braai = South African BBQ.*
@@ -61,7 +61,7 @@ Vid 2,5–3 cm tjocklek ger 2–3 minuter per sida en brynnad skorpa och ett ros
 ---
 
 ### 2. Namibian Ostrich Festival tradition — Grilled ostrich with African chilli butter
-**Source**: OstrichFarming.co.na (Namibia); https://www.ostrichfarming.co.na/recipes/grilled-ostrich-steak (web search 2026-04-24)
+**Inspired by**: OstrichFarming.co.na (Namibia); https://www.ostrichfarming.co.na/recipes/grilled-ostrich-steak (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min
 
 **Ingredients**
@@ -86,7 +86,7 @@ Vid 2,5–3 cm tjocklek ger 2–3 minuter per sida en brynnad skorpa och ett ros
 ---
 
 ### 3. Chefkoch.de — Straußensteak auf dem Grill (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rs/s0/strauss/Rezepte.html (fetched reference 2026-04-24)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rs/s0/strauss/Rezepte.html (fetched reference 2026-04-24)
 **Serves**: 2 · **Prep**: 2 hrs marinate · **Cook**: 10 min
 
 **Ingredients**

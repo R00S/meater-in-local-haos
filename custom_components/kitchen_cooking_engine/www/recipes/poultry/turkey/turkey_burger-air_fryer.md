@@ -19,7 +19,7 @@ En airfryer-tillagad kalkonburger är samma 150–180 g malt-lårbiff som grill-
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air-Fryer Turkey Burgers (American tradition)
-**Source**: America's Test Kitchen, *The Air Fryer Bible* (America's Test Kitchen, 2019); cooksillustrated.com  
+**Inspired by**: America's Test Kitchen, *The Air Fryer Bible* (America's Test Kitchen, 2019); cooksillustrated.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -45,7 +45,7 @@ En airfryer-tillagad kalkonburger är samma 150–180 g malt-lårbiff som grill-
 ---
 
 ### 2. Hugh Acheson — Air-Fryer Turkey Burgers with Sage & Lemon (American Culinary Group C tradition)
-**Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011) — air-fryer adaptation; hughacheson.com  
+**Inspired by**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011) — air-fryer adaptation; hughacheson.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -71,7 +71,7 @@ En airfryer-tillagad kalkonburger är samma 150–180 g malt-lårbiff som grill-
 ---
 
 ### 3. Tina Nordström — Kalkonburgare i Airfryer (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — air-fryer adaptation on köket.se  
+**Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — air-fryer adaptation on köket.se  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -96,7 +96,7 @@ En airfryer-tillagad kalkonburger är samma 150–180 g malt-lårbiff som grill-
 ---
 
 ### 4. Diana Henry — Air-Fryer Turkey Burgers with Tarragon & Lemon (British modern tradition)
-**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015); telegraph.co.uk/food-and-drink — air-fryer adaptation  
+**Inspired by**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015); telegraph.co.uk/food-and-drink — air-fryer adaptation  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min · **Rest**: 3 min
 
 **Ingredients**

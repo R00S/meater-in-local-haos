@@ -25,7 +25,7 @@ För att nå ätbar konsistens kräver lammbrisket låg-och-långsam tillagning:
 ## Source recipes
 
 ### 1. The Woks of Life / Cantonese — Zhi Zhu Yangrou Bao (枝竹羊肉煲) — Chinese Braised Lamb Casserole Hong Kong Style
-**Source**: https://thewoksoflife.com/chinese-braised-lamb-casserole/  
+**Inspired by**: https://thewoksoflife.com/chinese-braised-lamb-casserole/  
 **Serves**: 4–6 · **Prep**: 60 min · **Cook**: 1 hr 15 min · **Rest**: n/a (served in braise liquid)
 
 **Ingredients**
@@ -64,7 +64,7 @@ För att nå ätbar konsistens kräver lammbrisket låg-och-långsam tillagning:
 ---
 
 ### 2. Alan Bergo / Forager Chef — Braised Goat or Lamb Breast (French-style press method)
-**Source**: https://foragerchef.com/goat-or-lamb-breast-with-wild-herb-tomato-sauce/  
+**Inspired by**: https://foragerchef.com/goat-or-lamb-breast-with-wild-herb-tomato-sauce/  
 **Serves**: 4 · **Prep**: 15 min (+overnight marinate) · **Cook**: 3 hr · **Press**: 8 hr (overnight)
 
 **Ingredients**
@@ -94,7 +94,7 @@ För att nå ätbar konsistens kräver lammbrisket låg-och-långsam tillagning:
 ---
 
 ### 3. Selin Kiazim / Great British Chefs — Crispy Pomegranate-Glazed Lamb Breast
-**Source**: https://www.greatbritishchefs.com/recipes/crispy-lamb-breast-with-yogurt-recipe  
+**Inspired by**: https://www.greatbritishchefs.com/recipes/crispy-lamb-breast-with-yogurt-recipe  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 3 hr 30 min (+overnight press) · **Rest**: n/a (pan-seared to serve)
 
 **Ingredients**
@@ -138,7 +138,7 @@ För att nå ätbar konsistens kräver lammbrisket låg-och-långsam tillagning:
 ---
 
 ### 4. ICA — Bräserad lammbringa med vitlök, rosmarin och citron (Swedish Braised Lamb Breast with Garlic, Rosemary and Lemon)
-**Source**: https://www.ica.se/recept/braserad-lammbringa-med-vitlok-rosmarin-och-citron-714953/  
+**Inspired by**: https://www.ica.se/recept/braserad-lammbringa-med-vitlok-rosmarin-och-citron-714953/  
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 2 hr · **Rest**: 10 min
 
 **Ingredients**

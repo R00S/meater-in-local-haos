@@ -27,7 +27,7 @@ Eftervärmen är den stora utmaningen för hemmakocken: en 3–5 kg prime rib ta
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Reverse-Sear Prime Rib
-**Source**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015); https://www.seriouseats.com/perfect-prime-rib-beef-recipe  
+**Inspired by**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015); https://www.seriouseats.com/perfect-prime-rib-beef-recipe  
 **Serves**: 6–8 · **Prep**: 20 min (+overnight dry-brine) · **Cook**: 3–5 hr low oven + 15 min high sear · **Rest**: 20 min
 
 **Ingredients**
@@ -49,7 +49,7 @@ Eftervärmen är den stora utmaningen för hemmakocken: en 3–5 kg prime rib ta
 ---
 
 ### 2. Alton Brown — Traditional High-Heat Prime Rib
-**Source**: Alton Brown, *Good Eats: The Return* (Abrams, 2019); foodnetwork.com/recipes/alton-brown/  
+**Inspired by**: Alton Brown, *Good Eats: The Return* (Abrams, 2019); foodnetwork.com/recipes/alton-brown/  
 **Serves**: 6 · **Prep**: 20 min (+1 hr tempering) · **Cook**: 20 min + 1.5–2 hr · **Rest**: 30 min
 
 **Ingredients**
@@ -73,7 +73,7 @@ Eftervärmen är den stora utmaningen för hemmakocken: en 3–5 kg prime rib ta
 ---
 
 ### 3. Gordon Ramsay — Standing Rib Roast (British tradition)
-**Source**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012); gordonramsay.com/recipes/  
+**Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012); gordonramsay.com/recipes/  
 **Serves**: 6–8 · **Prep**: 25 min (+1 hr tempering) · **Cook**: 1.5–2 hr · **Rest**: 30 min
 
 **Ingredients**
@@ -99,7 +99,7 @@ Eftervärmen är den stora utmaningen för hemmakocken: en 3–5 kg prime rib ta
 ---
 
 ### 4. Michel Roux — Côte de Bœuf Rôtie (French tradition)
-**Source**: Michel Roux, *The French Kitchen* (Weidenfeld & Nicolson, 2013); michelroux.co.uk  
+**Inspired by**: Michel Roux, *The French Kitchen* (Weidenfeld & Nicolson, 2013); michelroux.co.uk  
 **Serves**: 6 · **Prep**: 15 min (+2 hr tempering) · **Cook**: 45–60 min · **Rest**: 20 min
 
 **Ingredients**
@@ -123,7 +123,7 @@ Eftervärmen är den stora utmaningen för hemmakocken: en 3–5 kg prime rib ta
 ---
 
 ### 5. Aaron Franklin — Texas Prime Rib in the Oven (Pit-to-Oven adaptation)
-**Source**: Aaron Franklin & Jordan Mackay, *Franklin Steak* (Ten Speed Press, 2019)  
+**Inspired by**: Aaron Franklin & Jordan Mackay, *Franklin Steak* (Ten Speed Press, 2019)  
 **Serves**: 8 · **Prep**: 30 min (+overnight salting) · **Cook**: 4–6 hr + 15 min high-heat finish · **Rest**: 30 min
 
 **Ingredients**

@@ -35,7 +35,7 @@ Tillagningstid: 18–22 minuter vid 180–200 °C för ett 150–200 g benfritt 
 ## Source recipes
 
 ### 1. Skinnytaste — Air Fryer Chicken Breast
-**Source**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/air-fryer-chicken-breast/ (fetched 2025-07-15).
+**Inspired by**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/air-fryer-chicken-breast/ (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 5 min + 1–2 hr brine · **Cook**: ~10 min · **Rest**: 5 min
 
 **Temperature guidance**:
@@ -71,7 +71,7 @@ Tillagningstid: 18–22 minuter vid 180–200 °C för ett 150–200 g benfritt 
 ---
 
 ### 2. Natasha's Kitchen — Air Fryer Chicken Thighs (temperature reference for dark-meat context)
-**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/air-fryer-chicken-thighs/ (fetched 2025-07-15).
+**Inspired by**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/air-fryer-chicken-thighs/ (fetched 2025-07-15).
 **Serves**: 4–6 · **Prep**: 5 min · **Cook**: 18–22 min (bone-in) · **Rest**: 5 min
 
 **Temperature guidance**:
@@ -103,7 +103,7 @@ Tillagningstid: 18–22 minuter vid 180–200 °C för ett 150–200 g benfritt 
 ---
 
 ### 3. BBC Good Food — Air Fryer Chicken Breasts
-**Source**: Samuel Goldsmith, BBC Good Food; https://www.bbcgoodfood.com/recipes/air-fryer-chicken-breasts (archived: https://web.archive.org/web/20241007181927/https://www.bbcgoodfood.com/recipes/air-fryer-chicken-breasts, fetched 2026-04-24).
+**Inspired by**: Samuel Goldsmith, BBC Good Food; https://www.bbcgoodfood.com/recipes/air-fryer-chicken-breasts (archived: https://web.archive.org/web/20241007181927/https://www.bbcgoodfood.com/recipes/air-fryer-chicken-breasts, fetched 2026-04-24).
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 18–20 min
 
 **Temperature guidance**:
@@ -128,7 +128,7 @@ Tillagningstid: 18–22 minuter vid 180–200 °C för ett 150–200 g benfritt 
 ---
 
 ### 4. Swasthi Shreekanth — Chicken Tikka in Air Fryer (Indian tradition)
-**Source**: Swasthi Shreekanth, Indian Healthy Recipes; https://www.indianhealthyrecipes.com/chicken-tikka/ (fetched 2026-04-25). *Classic North Indian Chicken Tikka — boneless chicken breast (or thigh) cubes marinated in spiced yogurt with ginger-garlic paste, Kashmiri red chili, garam masala, chaat masala, and kasuri methi; air fried at 200 °C (400 °F) for 14 minutes. Brushed with butter and served with mint chutney. The air fryer method is one of three cooking options explicitly given in the recipe (alongside oven and grill pan).*
+**Inspired by**: Swasthi Shreekanth, Indian Healthy Recipes; https://www.indianhealthyrecipes.com/chicken-tikka/ (fetched 2026-04-25). *Classic North Indian Chicken Tikka — boneless chicken breast (or thigh) cubes marinated in spiced yogurt with ginger-garlic paste, Kashmiri red chili, garam masala, chaat masala, and kasuri methi; air fried at 200 °C (400 °F) for 14 minutes. Brushed with butter and served with mint chutney. The air fryer method is one of three cooking options explicitly given in the recipe (alongside oven and grill pan).*
 **Serves**: 4 · **Prep**: 15 min + 8 hr marinate · **Cook**: 14 min air fryer
 
 **Temperature guidance (from recipe)**: Air fry at **200 °C / 400 °F** — 6 min first side, flip, 6 min second side, brush with butter/marinade, 2 more minutes. Internal temperature must reach **165 °F (74 °C)** at the thickest piece.

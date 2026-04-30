@@ -24,7 +24,7 @@ Bryn kinden i het panna, lägg i braiseringskärl med fond, sherry, vin och arom
 ## Source recipes
 
 ### 1. José Pizarro — Carrillera de Cerdo al Vino Tinto (Spanish tradition)
-**Source**: José Pizarro, *Spanish Flavours* (Kyle Books, 2012); josepizarro.com  
+**Inspired by**: José Pizarro, *Spanish Flavours* (Kyle Books, 2012); josepizarro.com  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 2.5 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -59,7 +59,7 @@ Bryn kinden i het panna, lägg i braiseringskärl med fond, sherry, vin och arom
 ---
 
 ### 2. Marcella Hazan — Guancia di Maiale Brasata al Marsala (Italian tradition)
-**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997)  
+**Inspired by**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997)  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 2.5 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -94,7 +94,7 @@ Bryn kinden i het panna, lägg i braiseringskärl med fond, sherry, vin och arom
 ---
 
 ### 3. Diana Henry — Pork Cheeks Braised in Cider with Apples (British tradition)
-**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015), cheek section; telegraph.co.uk/food-and-drink  
+**Inspired by**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015), cheek section; telegraph.co.uk/food-and-drink  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 2.5 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -128,7 +128,7 @@ Bryn kinden i het panna, lägg i braiseringskärl med fond, sherry, vin och arom
 ---
 
 ### 4. Magnus Nilsson — Långbräserade Griskindar i Mörkt Öl (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)  
+**Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 3 hr · **Rest**: 15 min
 
 **Ingredients**

@@ -37,7 +37,7 @@ Het gjutjärns- eller tung rostfri panna, medel-hög värme, 3–4 minuter per s
 ## Source recipes
 
 ### 1. African Bites — Asun (Nigerian spicy roast goat — pan method)
-**Source**: Africanbites.com; https://www.africanbites.com/asun-spicy-roast-goat/ (fetched 2026-04-24)
+**Inspired by**: Africanbites.com; https://www.africanbites.com/asun-spicy-roast-goat/ (fetched 2026-04-24)
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 30 min
 
 *Asun is a popular Nigerian smoked/roasted goat dish. This pan version uses high heat with scotch bonnet chillies.*
@@ -62,7 +62,7 @@ Het gjutjärns- eller tung rostfri panna, medel-hög värme, 3–4 minuter per s
 ---
 
 ### 2. Indianhealthyrecipes.com — Goat Chops Masala (Indian tradition)
-**Source**: Indianhealthyrecipes.com (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/goat-chops/ (web search 2026-04-24; same site as confirmed rogan josh fetch)
+**Inspired by**: Indianhealthyrecipes.com (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/goat-chops/ (web search 2026-04-24; same site as confirmed rogan josh fetch)
 **Serves**: 4 · **Prep**: 30 min marinate · **Cook**: 25 min
 
 **Ingredients**
@@ -87,7 +87,7 @@ Het gjutjärns- eller tung rostfri panna, medel-hög värme, 3–4 minuter per s
 ---
 
 ### 3. Laylita.com — Seco de Chivo (Ecuadorian goat stew — pan method)
-**Source**: Laylita.com; https://www.laylita.com/recipes/seco-de-chivo/ (fetched 2026-04-24)
+**Inspired by**: Laylita.com; https://www.laylita.com/recipes/seco-de-chivo/ (fetched 2026-04-24)
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 1 hr
 
 *Translation: Ecuadorian goat stew — pan-braised with chicha de jora (corn beer), tomato, and achiote.*

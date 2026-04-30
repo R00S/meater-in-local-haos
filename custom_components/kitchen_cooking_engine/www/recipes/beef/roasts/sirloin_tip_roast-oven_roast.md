@@ -10,7 +10,7 @@ Sirloin tip roast (kallas "knuckle" i UK/australisk styckning, "pointe de culott
 ## Source recipes
 
 ### 1. Nagi (RecipeTin Eats) — Marinated Roast Beef
-**Source**: https://www.recipetineats.com/marinated-roast-beef/  
+**Inspired by**: https://www.recipetineats.com/marinated-roast-beef/  
 **Serves**: 6–8 · **Prep**: 10 min (+2–3 days marinating) · **Cook**: 55–60 min · **Rest**: 20–30 min
 
 **Ingredients**
@@ -48,7 +48,7 @@ Sirloin tip roast (kallas "knuckle" i UK/australisk styckning, "pointe de culott
 ---
 
 ### 2. Immaculate Bites (africanbites.com) — Slow-Roasted Roast Beef with Red Wine Sauce
-**Source**: https://www.africanbites.com/roast-beef/  
+**Inspired by**: https://www.africanbites.com/roast-beef/  
 **Serves**: 6–8 · **Prep**: 15 min (+overnight marinating) · **Cook**: 1–2 hours · **Rest**: 15–20 min
 
 **Ingredients**

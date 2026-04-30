@@ -19,7 +19,7 @@ Hel rödbeta (*Beta vulgaris*) ugnsrostad fortfarande i skalet vid 190–200 °C
 ## Source recipes
 
 ### 1. Najmieh Batmanglij — Labu Pokhté (Persian Oven-Roasted Beets with Orange and Walnuts)
-**Source**: Najmieh Batmanglij, *Food of Life: Ancient Persian and Modern Iranian Cooking* (Mage Publishers, 2011)
+**Inspired by**: Najmieh Batmanglij, *Food of Life: Ancient Persian and Modern Iranian Cooking* (Mage Publishers, 2011)
 **Serves**: 4–6 · **Prep**: 5 min · **Cook**: 60–75 min · **Rest**: 10 min
 
 **Ingredients**
@@ -35,7 +35,7 @@ Hel rödbeta (*Beta vulgaris*) ugnsrostad fortfarande i skalet vid 190–200 °C
 ---
 
 ### 2. Yotam Ottolenghi — Roasted Beets with Yoghurt and Walnut Dukka (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012)
+**Inspired by**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012)
 **Serves**: 4–6 · **Prep**: 5 min · **Cook**: 60–75 min · **Rest**: 10 min
 
 **Ingredients**
@@ -50,7 +50,7 @@ Hel rödbeta (*Beta vulgaris*) ugnsrostad fortfarande i skalet vid 190–200 °C
 ---
 
 ### 3. Magnus Nilsson — Ugnsrostade Rödbetor (Nordic / Swedish tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)
+**Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 55–70 min · **Rest**: 10 min
 
 **Ingredients**
@@ -65,7 +65,7 @@ Hel rödbeta (*Beta vulgaris*) ugnsrostad fortfarande i skalet vid 190–200 °C
 ---
 
 ### 4. Deborah Madison — Roasted Beets with Balsamic and Goat Cheese (American vegetarian tradition)
-**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
+**Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 60–75 min · **Rest**: 10 min
 
 **Ingredients**

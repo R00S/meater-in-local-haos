@@ -26,7 +26,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 ## Source recipes
 
 ### 1. Madens Verden — Verdens bedste spareribs i ovn (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/verdens-bedste-spareribs/ (fetched 2026-04-24). *"World's best spareribs — no pre-boiling needed." Foil-wrapped at low heat; then oven-grill finish. The recipe explicitly notes it can be done entirely in the oven.*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/verdens-bedste-spareribs/ (fetched 2026-04-24). *"World's best spareribs — no pre-boiling needed." Foil-wrapped at low heat; then oven-grill finish. The recipe explicitly notes it can be done entirely in the oven.*
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 1 hr foil + 8–10 min grill element
 
 *Translation: "The trick is to wrap the ribs in foil, where they get to become tender while retaining all the flavour in the packets."*
@@ -55,7 +55,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 ---
 
 ### 2. Madens Verden — Spareribs i grill eller ovn med hjemmelavet marinade (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/spareribs/ (fetched 2026-04-24). *Pre-boil method: boil 45–50 min, then oven at 220 °C × 20–25 min. Brush with marinade at halfway. 4.8/5, 40 ratings.*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/spareribs/ (fetched 2026-04-24). *Pre-boil method: boil 45–50 min, then oven at 220 °C × 20–25 min. Brush with marinade at halfway. 4.8/5, 40 ratings.*
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 45 min boil + 25 min oven
 
 **Temperature guidance (from recipe)**: Oven at 220 °C fan (varmluft), 20–25 min; brush with grillmarinade (BBQ marinade) at 15-min mark. Rack in the centre of oven.
@@ -82,7 +82,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 ---
 
 ### 3. ichkoche.at — Spare Ribs (Austrian tradition)
-**Source**: ichkoche.at; https://www.ichkoche.at/spare-ribs-rezept-16908 (fetched 2026-04-24). *Overnight garlic-oil marinade, oven 200 °C × 15 min then 150 °C × 45 min with BBQ sauce basting. 40 ratings.*
+**Inspired by**: ichkoche.at; https://www.ichkoche.at/spare-ribs-rezept-16908 (fetched 2026-04-24). *Overnight garlic-oil marinade, oven 200 °C × 15 min then 150 °C × 45 min with BBQ sauce basting. 40 ratings.*
 **Serves**: 4 · **Prep**: overnight marinade · **Cook**: 1 hr
 
 *Translation: "Spare ribs — The Grill classic."*
@@ -110,7 +110,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 ---
 
 ### 4. Chefkoch — Spareribs zum Grillen oder für den Backofen (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/1474841252484744/Spareribs-zum-Grillen-oder-fuer-den-Backofen.html (fetched 2026-04-24). *Long low-and-slow foil method at 150 °C × 2.5–3 hrs. Marinade cooked first in a pot. 4.9/5, 420 ratings.*
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/1474841252484744/Spareribs-zum-Grillen-oder-fuer-den-Backofen.html (fetched 2026-04-24). *Long low-and-slow foil method at 150 °C × 2.5–3 hrs. Marinade cooked first in a pot. 4.9/5, 420 ratings.*
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 3 hr 30 min
 
 **Temperature guidance (from recipe)**: 150 °C Ober-/Unterhitze × 2.5–3 hrs foil-wrapped; rest 10 min in foil; then grill/broil for finishing.

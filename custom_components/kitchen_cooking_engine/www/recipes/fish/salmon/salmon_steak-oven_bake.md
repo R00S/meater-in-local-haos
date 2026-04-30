@@ -40,7 +40,7 @@ De centrala benen leder varsamt värme mot den geometriska mitten, vilket något
 ## Source recipes
 
 ### 1. CuisineAZ — Darne de saumon en papillote facile (French / Culinary Group B tradition)
-**Source**: CuisineAZ, cuisineaz.com/recettes/darne-de-saumon-en-papillote-facile-120710.aspx  
+**Inspired by**: CuisineAZ, cuisineaz.com/recettes/darne-de-saumon-en-papillote-facile-120710.aspx  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 25–30 min · **Total**: 35 min
 
 **Ingredients**
@@ -63,7 +63,7 @@ De centrala benen leder varsamt värme mot den geometriska mitten, vilket något
 ---
 
 ### 2. CuisineAZ — Darne de saumon citronnée au four de grand-mère (French / Culinary Group B tradition)
-**Source**: CuisineAZ, cuisineaz.com/recettes/darne-de-saumon-citronee-au-four-de-grand-mere-76799.aspx  
+**Inspired by**: CuisineAZ, cuisineaz.com/recettes/darne-de-saumon-citronee-au-four-de-grand-mere-76799.aspx  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 20 min
 
 **Ingredients**
@@ -89,7 +89,7 @@ De centrala benen leder varsamt värme mot den geometriska mitten, vilket något
 ---
 
 ### 3. Tasteline — Laxkotletter med grönsaker (Swedish / Culinary Group D tradition)
-**Source**: Tasteline, tasteline.com/recept/laxkotletter-med-gronsaker/  
+**Inspired by**: Tasteline, tasteline.com/recept/laxkotletter-med-gronsaker/  
 **Serves**: 4 · **Cook**: 10–15 min in foil
 
 **Ingredients**
@@ -113,7 +113,7 @@ De centrala benen leder varsamt värme mot den geometriska mitten, vilket något
 ---
 
 ### 4. Matklubben — Ugnsbakad laxkotlett med gorgonzola (Swedish / Culinary Group D tradition)
-**Source**: Matklubben, matklubben.se/recept/ugnsbakad-laxkotlett-med-gorgonzola/  
+**Inspired by**: Matklubben, matklubben.se/recept/ugnsbakad-laxkotlett-med-gorgonzola/  
 **Serves**: 4 · **Cook**: 20 min
 
 **Ingredients**

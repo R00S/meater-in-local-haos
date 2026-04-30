@@ -19,7 +19,7 @@ Gröna bönor (*Phaseolus vulgaris* och *Vigna unguiculata* — brytbönor, fran
 ## Source recipes
 
 ### 1. Julia Child — Haricots Verts Blanchis et Étuvés (French tradition)
-**Source**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
+**Inspired by**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 5–7 min boiling + 3–5 min final toss · **Rest**: 1 min
 
 **Ingredients**
@@ -39,7 +39,7 @@ Gröna bönor (*Phaseolus vulgaris* och *Vigna unguiculata* — brytbönor, fran
 ---
 
 ### 2. Fuchsia Dunlop — Blanched Yard-Long Beans with Chilli Oil (Chinese tradition)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 4–5 min · **Rest**: 2 min (cooling)
 
 **Ingredients**
@@ -57,7 +57,7 @@ Gröna bönor (*Phaseolus vulgaris* och *Vigna unguiculata* — brytbönor, fran
 ---
 
 ### 3. Claudia Roden — Green Beans Boiled with Tomato (Moroccan / North African tradition)
-**Source**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey and Lebanon* (Alfred A. Knopf, 2005)
+**Inspired by**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey and Lebanon* (Alfred A. Knopf, 2005)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 15–20 min · **Rest**: 3 min
 
 **Ingredients**
@@ -80,7 +80,7 @@ Gröna bönor (*Phaseolus vulgaris* och *Vigna unguiculata* — brytbönor, fran
 ---
 
 ### 4. Madhur Jaffrey — Masala Boiled Beans (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 5–7 min boiling + quick tempering · **Rest**: 2 min
 
 **Ingredients**

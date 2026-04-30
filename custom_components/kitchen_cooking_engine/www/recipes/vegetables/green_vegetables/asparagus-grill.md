@@ -19,7 +19,7 @@ Sparris (*Asparagus officinalis*) på grillen utvecklar en idealisk kontrast mel
 ## Source recipes
 
 ### 1. Harumi Kurihara — Asparagus Yakimono (Japanese grilled asparagus)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -41,7 +41,7 @@ Sparris (*Asparagus officinalis*) på grillen utvecklar en idealisk kontrast mel
 ---
 
 ### 2. José Andrés — Espárragos a la Parrilla con Romesco (Spanish tradition)
-**Source**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
+**Inspired by**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -59,7 +59,7 @@ Sparris (*Asparagus officinalis*) på grillen utvecklar en idealisk kontrast mel
 ---
 
 ### 3. Yotam Ottolenghi — Grilled Asparagus with Poached Egg and Truffle Oil (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
+**Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -80,7 +80,7 @@ Sparris (*Asparagus officinalis*) på grillen utvecklar en idealisk kontrast mel
 ---
 
 ### 4. Deborah Madison — Grilled Asparagus with Meyer Lemon Gremolata (American vegetarian tradition)
-**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
+**Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**

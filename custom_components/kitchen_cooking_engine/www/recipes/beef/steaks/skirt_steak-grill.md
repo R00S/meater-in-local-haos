@@ -23,7 +23,7 @@ Marinering före grillning rekommenderas starkt: 30 minuter till 2 timmar i citr
 ## Source recipes
 
 ### 1. Bobby Flay — Grilled Skirt Steak Fajitas (Tex-Mex tradition)
-**Source**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
+**Inspired by**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
 **Serves**: 4 · **Prep**: 15 min (+2 h marinade) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -43,7 +43,7 @@ Marinering före grillning rekommenderas starkt: 30 minuter till 2 timmar i citr
 ---
 
 ### 2. Diana Kennedy — Grilled *Arrachera* with Salsa de Tomatillo (Mexican tradition)
-**Source**: Diana Kennedy, *My Mexico: A Culinary Odyssey* (Clarkson Potter, 1998)  
+**Inspired by**: Diana Kennedy, *My Mexico: A Culinary Odyssey* (Clarkson Potter, 1998)  
 **Serves**: 4 · **Prep**: 5 min (+1 h marinade) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -62,7 +62,7 @@ Marinering före grillning rekommenderas starkt: 30 minuter till 2 timmar i citr
 ---
 
 ### 3. Francis Mallmann — Grilled *Fraldinha* (Brazilian / Argentine tradition)
-**Source**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
+**Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -83,7 +83,7 @@ Marinering före grillning rekommenderas starkt: 30 minuter till 2 timmar i citr
 ---
 
 ### 4. Steven Raichlen — Grilled Skirt Steak (American BBQ tradition)
-**Source**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
+**Inspired by**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
 **Serves**: 4 · **Prep**: 10 min (+1 h marinade) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -101,7 +101,7 @@ Marinering före grillning rekommenderas starkt: 30 minuter till 2 timmar i citr
 ---
 
 ### 5. Yotam Ottolenghi — Grilled Skirt Steak with Sumac and Pomegranate (Middle Eastern tradition)
-**Source**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
+**Inspired by**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
 **Serves**: 4 · **Prep**: 15 min (+2 h marinade) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**

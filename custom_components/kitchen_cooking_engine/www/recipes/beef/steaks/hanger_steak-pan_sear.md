@@ -19,7 +19,7 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Butter-Basted Pan-Seared Hanger Steak (American tradition)
-**Source**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/hanger-steak-recipe  
+**Inspired by**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/hanger-steak-recipe  
 **Serves**: 2 · **Prep**: 10 min (+1 h dry-brine) · **Cook**: 8–10 min · **Rest**: 5–8 min
 
 **Ingredients**
@@ -45,7 +45,7 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 ---
 
 ### 2. Stéphane Reynaud — Onglet à l'Échalote (French bistrot tradition)
-**Source**: Stéphane Reynaud, *Ripailles: Traditional French Cuisine* (Flammarion, 2009)  
+**Inspired by**: Stéphane Reynaud, *Ripailles: Traditional French Cuisine* (Flammarion, 2009)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 10 min · **Rest**: 3–5 min
 
 **Ingredients**
@@ -75,7 +75,7 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 ---
 
 ### 3. Hugh Fearnley-Whittingstall — Bavette / Onglet Seared in Dripping (British tradition)
-**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004)  
+**Inspired by**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004)  
 **Serves**: 2 · **Prep**: 10 min (+20–30 min tempering) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -99,7 +99,7 @@ Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på ty
 ---
 
 ### 4. Deuki Hong and Matt Rodbard — 안창살구이 Anchang-Sal Pan-Sear (Korean tradition)
-**Source**: Deuki Hong and Matt Rodbard, *Koreatown: A Cookbook* (Clarkson Potter, 2016)  
+**Inspired by**: Deuki Hong and Matt Rodbard, *Koreatown: A Cookbook* (Clarkson Potter, 2016)  
 **Serves**: 2 · **Prep**: 15 min (+30 min marinating) · **Cook**: 6–8 min · **Rest**: 3 min
 
 **Ingredients**

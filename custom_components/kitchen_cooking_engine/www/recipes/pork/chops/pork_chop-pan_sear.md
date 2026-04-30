@@ -25,7 +25,7 @@ Metoden: het torr panna (180–200 °C); lägger kotletten med lite smör; 4–5
 ## Source recipes
 
 ### 1. Directo al Paladar — Chuleta de cerdo a la plancha (Spanish tradition)
-**Source**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/como-hacer-mejores-chuletas-cerdo-a-plancha-jugosas-churruscaditas (fetched 2026-04-24). *Spanish high-heat sear: 1.5 min per side on medium-high, flaked salt applied after. Recommends aguja chops. Key message: correct temperature of meat and pan is everything.*
+**Inspired by**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/como-hacer-mejores-chuletas-cerdo-a-plancha-jugosas-churruscaditas (fetched 2026-04-24). *Spanish high-heat sear: 1.5 min per side on medium-high, flaked salt applied after. Recommends aguja chops. Key message: correct temperature of meat and pan is everything.*
 **Serves**: 1–2 · **Prep**: 15 min atempering · **Cook**: 3 min
 
 **Temperature guidance (from recipe)**: "Respect the temperature of both the chop and the pan. If the meat is cold or the pan not hot enough, the chop will steam, not sear." 1.5 min per side; rest 1 min.
@@ -50,7 +50,7 @@ Metoden: het torr panna (180–200 °C); lägger kotletten med lite smör; 4–5
 ---
 
 ### 2. ichkoche.at — Schweinskotelett Grundrezept (Austrian tradition)
-**Source**: ichkoche.at; https://www.ichkoche.at/schweinskotelett-rezept-236782 (fetched 2026-04-24). *Austrian fundamentals: very hot dry pan first, then oil, 2 minutes each side undisturbed; add butter + herbs between sides for baste; finished in aromatic butter.*
+**Inspired by**: ichkoche.at; https://www.ichkoche.at/schweinskotelett-rezept-236782 (fetched 2026-04-24). *Austrian fundamentals: very hot dry pan first, then oil, 2 minutes each side undisturbed; add butter + herbs between sides for baste; finished in aromatic butter.*
 **Serves**: 2 · **Cook**: 5 min
 
 **Temperature guidance (from recipe)**: 2 min per side undisturbed at high heat. Butter baste between sides.
@@ -76,7 +76,7 @@ Metoden: het torr panna (180–200 °C); lägger kotletten med lite smör; 4–5
 ---
 
 ### 3. Madens Verden — Pandestegning af koteletter (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/pandestegning-af-koteletter/ (fetched 2026-04-24). *Danish method: salt 20 min ahead; high heat 2 min each side, then reduced heat 2 more min each side; spoon butter over constantly during the lower-heat phase.*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/pandestegning-af-koteletter/ (fetched 2026-04-24). *Danish method: salt 20 min ahead; high heat 2 min each side, then reduced heat 2 more min each side; spoon butter over constantly during the lower-heat phase.*
 **Serves**: 2 · **Prep**: 20 min salting · **Cook**: 8 min + 5 min rest
 
 **Temperature guidance (from recipe)**: "Koteletter skal have en kernetemperatur på 62–65 grader." Total: 4 min per side (in two phases). Rest 5 minutes uncovered.
@@ -100,7 +100,7 @@ Metoden: het torr panna (180–200 °C); lägger kotletten med lite smör; 4–5
 ---
 
 ### 4. African Bites / Immaculate Bites — Smothered Pork Chops (Southern US / Creole tradition)
-**Source**: Imma Africanbites, Africanbites.com; https://africanbites.com/smothered-pork-chops/ (fetched 2026-04-26). *Classic Southern comfort food: pork chops seasoned with Creole spice, pan-seared until golden, then simmered in a rich onion-garlic gravy until fork-tender. Method relies on a proper sear to lock in flavour before building the gravy from the drippings.*
+**Inspired by**: Imma Africanbites, Africanbites.com; https://africanbites.com/smothered-pork-chops/ (fetched 2026-04-26). *Classic Southern comfort food: pork chops seasoned with Creole spice, pan-seared until golden, then simmered in a rich onion-garlic gravy until fork-tender. Method relies on a proper sear to lock in flavour before building the gravy from the drippings.*
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 45 min
 
 *Context: Smothered pork chops are a cornerstone of Southern US and Creole cooking — the "smother" technique dates to African-American and Cajun/Creole traditions where a flavour-rich pan gravy is built from the drippings of a well-seared protein.*

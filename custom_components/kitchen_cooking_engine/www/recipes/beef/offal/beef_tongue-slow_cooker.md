@@ -22,7 +22,7 @@ Nöttungue tillagad i elektrisk slow cooker genomgår samma långa kollagenomvan
 ## Source recipes
 
 ### 1. Hugh Acheson — Slow-Cooker Pot-au-Feu Tongue (American Culinary Group C tradition)
-**Source**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017); hughacheson.com  
+**Inspired by**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017); hughacheson.com  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 8 hr (low) · **Rest**: 15 min
 
 **Ingredients**
@@ -52,7 +52,7 @@ Nöttungue tillagad i elektrisk slow cooker genomgår samma långa kollagenomvan
 ---
 
 ### 2. Diana Kennedy — Lengua de Res al Crock-Pot, estilo casero (Mexican home tradition adaptation)
-**Source**: Diana Kennedy, *Mexican Regional Cooking* (Harper & Row, 1990), with the slow-cooker note in *From My Mexican Kitchen* (Clarkson Potter, 2003)  
+**Inspired by**: Diana Kennedy, *Mexican Regional Cooking* (Harper & Row, 1990), with the slow-cooker note in *From My Mexican Kitchen* (Clarkson Potter, 2003)  
 **Serves**: 8 · **Prep**: 20 min · **Cook**: 8 hr (low) · **Rest**: 15 min
 
 **Ingredients**
@@ -79,7 +79,7 @@ Nöttungue tillagad i elektrisk slow cooker genomgår samma långa kollagenomvan
 ---
 
 ### 3. Andrea Nguyen — Lưỡi Bò Hầm in the Slow Cooker (Vietnamese tradition)
-**Source**: Andrea Nguyen, *The Pho Cookbook* (Ten Speed Press, 2017) (technique transferred from her braise to slow cooker); vietworldkitchen.com  
+**Inspired by**: Andrea Nguyen, *The Pho Cookbook* (Ten Speed Press, 2017) (technique transferred from her braise to slow cooker); vietworldkitchen.com  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 8 hr (low) · **Rest**: 15 min
 
 **Ingredients**
@@ -108,7 +108,7 @@ Nöttungue tillagad i elektrisk slow cooker genomgår samma långa kollagenomvan
 ---
 
 ### 4. Magnus Nilsson — Pickled-Beef-Tongue Method, Slow-Cooker Adaptation (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) (cure-and-braise method, adapted to the slow cooker)  
+**Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) (cure-and-braise method, adapted to the slow cooker)  
 **Serves**: 8 · **Prep**: 20 min (+ 5 d cure if curing) · **Cook**: 8 hr (low) · **Rest**: 20 min
 
 **Ingredients**

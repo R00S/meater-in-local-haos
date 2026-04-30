@@ -24,7 +24,7 @@ Het gjutjärnspanna med minimal olja, max värme, 2–3 minuter per sida. Innert
 ## Source recipes
 
 ### 1. Fergus Henderson — Pig's Liver, Bacon and Onions (British nose-to-tail tradition)
-**Source**: Fergus Henderson, *Beyond Nose to Tail* (Bloomsbury, 2007); stjohnrestaurant.com  
+**Inspired by**: Fergus Henderson, *Beyond Nose to Tail* (Bloomsbury, 2007); stjohnrestaurant.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -51,7 +51,7 @@ Het gjutjärnspanna med minimal olja, max värme, 2–3 minuter per sida. Innert
 ---
 
 ### 2. José Pizarro — Hígado de Cerdo a la Plancha (Spanish tradition)
-**Source**: José Pizarro, *Spanish Flavours* (Kyle Books, 2012); josepizarro.com  
+**Inspired by**: José Pizarro, *Spanish Flavours* (Kyle Books, 2012); josepizarro.com  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 9 min · **Rest**: 1 min
 
 **Ingredients**
@@ -76,7 +76,7 @@ Het gjutjärnspanna med minimal olja, max värme, 2–3 minuter per sida. Innert
 ---
 
 ### 3. Magnus Nilsson — Seared Fläsklever with Brown Butter & Capers (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) (the pork-liver variant of his calf's liver method)  
+**Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) (the pork-liver variant of his calf's liver method)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -101,7 +101,7 @@ Het gjutjärnspanna med minimal olja, max värme, 2–3 minuter per sida. Innert
 ---
 
 ### 4. Diana Henry — Pan-Seared Pork Liver with Mustard & Apples (British modern tradition)
-**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015) and her *Telegraph* recipe column at telegraph.co.uk/food-and-drink  
+**Inspired by**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015) and her *Telegraph* recipe column at telegraph.co.uk/food-and-drink  
 **Serves**: 4 · **Prep**: 10 min (+ 30 min milk soak) · **Cook**: 10 min · **Rest**: 2 min
 
 **Ingredients**

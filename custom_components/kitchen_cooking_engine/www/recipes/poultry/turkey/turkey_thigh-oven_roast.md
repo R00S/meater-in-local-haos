@@ -31,7 +31,7 @@ Kalkontlår (*biceps femoris* och tillhörande muskler i övre benet) är ett m�
 ## Source recipes
 
 ### 1. Taste of Home Editorial Team — Braised Turkey Thighs
-**Source**: Taste of Home Editorial Team, Taste of Home; https://www.tasteofhome.com/recipes/braised-turkey-thighs/ (fetched 2026-04-27). Recipe credited to Loretta Paulus, Venice, Florida.
+**Inspired by**: Taste of Home Editorial Team, Taste of Home; https://www.tasteofhome.com/recipes/braised-turkey-thighs/ (fetched 2026-04-27). Recipe credited to Loretta Paulus, Venice, Florida.
 **Serves**: 8 · **Prep**: 15 min · **Cook**: 1 hr 30 min · **Rest**: 5 min
 **Culinary tradition**: North American (Group B)
 **Technique note**: Moist-heat oven method — turkey thighs are cooked in a sealed oven roasting bag with chicken broth and white wine at 350 °F. This is effectively oven braising, not dry-heat roasting. Included here as the only accessible dedicated turkey thigh recipe found.

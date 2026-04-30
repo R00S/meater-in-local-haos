@@ -19,7 +19,7 @@ Malt kalkon (malt kykling) tillverkas av malning av mörkt kött (lår och ben),
 ## Source recipes
 
 ### 1. Diana Henry — Pan-Fried Turkey Mince with Sage, Apple & Cider (British modern tradition)
-**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015); telegraph.co.uk/food-and-drink  
+**Inspired by**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015); telegraph.co.uk/food-and-drink  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 9 min · **Rest**: 2 min
 
 **Ingredients**
@@ -46,7 +46,7 @@ Malt kalkon (malt kykling) tillverkas av malning av mörkt kött (lår och ben),
 ---
 
 ### 2. Hugh Acheson — Pan-Fried Turkey Mince with Sweet-Onion Gravy (American Culinary Group C tradition)
-**Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011) — turkey variant of his chicken-mince technique; hughacheson.com  
+**Inspired by**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011) — turkey variant of his chicken-mince technique; hughacheson.com  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 9 min · **Rest**: 2 min
 
 **Ingredients**
@@ -71,7 +71,7 @@ Malt kalkon (malt kykling) tillverkas av malning av mörkt kött (lår och ben),
 ---
 
 ### 3. Andrea Nguyen — Larb Gai Tay with Ground Turkey (Lao / Northern Thai tradition adaptation)
-**Source**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019) — turkey adaptation of her Larb technique; vietworldkitchen.com  
+**Inspired by**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019) — turkey adaptation of her Larb technique; vietworldkitchen.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -98,7 +98,7 @@ Malt kalkon (malt kykling) tillverkas av malning av mörkt kött (lår och ben),
 ---
 
 ### 4. Tina Nordström — Stekt Kalkonfärs på Lök (Swedish home tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — turkey variant of her *kycklingfärs* technique; köket.se  
+**Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — turkey variant of her *kycklingfärs* technique; köket.se  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 9 min · **Rest**: 2 min
 
 **Ingredients**

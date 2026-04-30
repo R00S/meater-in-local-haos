@@ -19,7 +19,7 @@ Nötburgaren tillagad i airfryer är en relativt ny hushållsvariant av samma gr
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air-Fryer Diner-Style Burgers (American tradition)
-**Source**: America's Test Kitchen, *Air Fryer Perfection* (America's Test Kitchen, 2019); americastestkitchen.com  
+**Inspired by**: America's Test Kitchen, *Air Fryer Perfection* (America's Test Kitchen, 2019); americastestkitchen.com  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -42,7 +42,7 @@ Nötburgaren tillagad i airfryer är en relativt ny hushållsvariant av samma gr
 ---
 
 ### 2. Hugh Fearnley-Whittingstall — River Cottage Burger in the Air Fryer (British tradition)
-**Source**: Hugh Fearnley-Whittingstall & Naomi Devlin, *River Cottage A to Z* (Bloomsbury, 2021), burger entry; rivercottage.net  
+**Inspired by**: Hugh Fearnley-Whittingstall & Naomi Devlin, *River Cottage A to Z* (Bloomsbury, 2021), burger entry; rivercottage.net  
 **Serves**: 2 · **Prep**: 15 min (+ 30 min chill) · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -67,7 +67,7 @@ Nötburgaren tillagad i airfryer är en relativt ny hushållsvariant av samma gr
 ---
 
 ### 3. Adam Liaw — Air Fryer "Smash" Burger (Australian / Asian-fusion tradition)
-**Source**: Adam Liaw, *Tonight's Dinner* (Hardie Grant, 2022) and adamliaw.com  
+**Inspired by**: Adam Liaw, *Tonight's Dinner* (Hardie Grant, 2022) and adamliaw.com  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 7–9 min · **Rest**: 1 min
 
 **Ingredients**
@@ -93,7 +93,7 @@ Nötburgaren tillagad i airfryer är en relativt ny hushållsvariant av samma gr
 ---
 
 ### 4. Joshua Weissman — Air Fryer Diner Cheeseburger (American food-media tradition)
-**Source**: Joshua Weissman, *An Unapologetic Cookbook* (Alpha, 2021); joshuaweissman.com and his YouTube channel  
+**Inspired by**: Joshua Weissman, *An Unapologetic Cookbook* (Alpha, 2021); joshuaweissman.com and his YouTube channel  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**

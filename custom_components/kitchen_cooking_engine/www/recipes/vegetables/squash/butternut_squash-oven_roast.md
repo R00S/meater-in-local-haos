@@ -19,7 +19,7 @@ Butternut-squash (*Cucurbita moschata*) ugnsrostad i halvor eller bitar vid 190�
 ## Source recipes
 
 ### 1. Yotam Ottolenghi — Roasted Butternut with Tahini and Sage (Israeli / Middle Eastern tradition)
-**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
+**Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 35–40 min (chunks) · **Rest**: 5 min
 
 **Ingredients**
@@ -32,7 +32,7 @@ Butternut-squash (*Cucurbita moschata*) ugnsrostad i halvor eller bitar vid 190�
 ---
 
 ### 2. Claudia Roden — Roasted Butternut with Chermoula (Moroccan / North African tradition)
-**Source**: Claudia Roden, *Arabesque* (Alfred A. Knopf, 2005)
+**Inspired by**: Claudia Roden, *Arabesque* (Alfred A. Knopf, 2005)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 35–40 min · **Rest**: 5 min
 
 **Ingredients**
@@ -45,7 +45,7 @@ Butternut-squash (*Cucurbita moschata*) ugnsrostad i halvor eller bitar vid 190�
 ---
 
 ### 3. Madhur Jaffrey — Kaddu ki Sabzi Roast (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 35–40 min · **Rest**: 3 min
 
 **Ingredients**
@@ -58,7 +58,7 @@ Butternut-squash (*Cucurbita moschata*) ugnsrostad i halvor eller bitar vid 190�
 ---
 
 ### 4. Marcella Hazan — Zucca al Forno con Salvia (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 35–40 min · **Rest**: 3 min
 
 **Ingredients**

@@ -19,7 +19,7 @@ Paprika (*Capsicum annuum*) i airfryern rostas vackert på 12–18 minuter utan 
 ## Source recipes
 
 ### 1. Maangchi — Gochu Jeon (Air-Fried Stuffed Peppers — Korean tradition)
-**Source**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); https://www.maangchi.com/recipe/gochu-jeon (recipe page; technique adapted to air fryer per Maangchi's own website note).
+**Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); https://www.maangchi.com/recipe/gochu-jeon (recipe page; technique adapted to air fryer per Maangchi's own website note).
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 12–14 min · **Rest**: 2 min
 
 **Ingredients**
@@ -40,7 +40,7 @@ Paprika (*Capsicum annuum*) i airfryern rostas vackert på 12–18 minuter utan 
 ---
 
 ### 2. Harumi Kurihara — Piiman no Kinpira (Air-Fried Pepper Kinpira — Japanese tradition)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 1 min
 
 **Ingredients**
@@ -64,7 +64,7 @@ Paprika (*Capsicum annuum*) i airfryern rostas vackert på 12–18 minuter utan 
 ---
 
 ### 3. Madhur Jaffrey — Air-Fried Stuffed Capsicum (Indian tradition)
-**Source**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010); air fryer technique adapted from her oven-stuffed pepper method.
+**Inspired by**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010); air fryer technique adapted from her oven-stuffed pepper method.
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 16–18 min · **Rest**: 3 min
 
 **Ingredients**
@@ -84,7 +84,7 @@ Paprika (*Capsicum annuum*) i airfryern rostas vackert på 12–18 minuter utan 
 ---
 
 ### 4. Yotam Ottolenghi — Air-Fried Peppers with Tahini (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014); technique adapted for air fryer.
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014); technique adapted for air fryer.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 15–18 min · **Rest**: 3 min
 
 **Ingredients**

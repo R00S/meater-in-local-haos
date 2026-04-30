@@ -20,7 +20,7 @@ Kammusslor (*Pecten maximus* i Europa; *Placopecten magellanicus*, Atlantisk kam
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Pan-Seared Scallops with Brown Butter (American tradition)
-**Source**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/the-best-pan-seared-scallops-recipe  
+**Inspired by**: J. Kenji López-Alt, *The Food Lab: Better Home Cooking Through Science* (W. W. Norton & Company, 2015); seriouseats.com/the-best-pan-seared-scallops-recipe  
 **Serves**: 2 · **Prep**: 10 min (+30 min dry rest) · **Cook**: 3–4 min · **Rest**: 1 min
 
 **Ingredients**
@@ -47,7 +47,7 @@ Kammusslor (*Pecten maximus* i Europa; *Placopecten magellanicus*, Atlantisk kam
 ---
 
 ### 2. Thomas Keller — Seared Diver Scallops with Cauliflower Purée (French haute cuisine tradition)
-**Source**: Thomas Keller, *Bouchon* (Artisan Books, 2004)  
+**Inspired by**: Thomas Keller, *Bouchon* (Artisan Books, 2004)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 4–5 min · **Rest**: 1 min
 
 **Ingredients**
@@ -71,7 +71,7 @@ Kammusslor (*Pecten maximus* i Europa; *Placopecten magellanicus*, Atlantisk kam
 ---
 
 ### 3. Heston Blumenthal — Seared Scallops with Caramelised Cauliflower (British Modernist tradition)
-**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
+**Inspired by**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
 **Serves**: 2 · **Prep**: 10 min (+30 min air-dry) · **Cook**: 3–4 min · **Rest**: 1 min
 
 **Ingredients**
@@ -96,7 +96,7 @@ Kammusslor (*Pecten maximus* i Europa; *Placopecten magellanicus*, Atlantisk kam
 ---
 
 ### 4. Nobu Matsuhisa — Seared Scallops with Wasabi Salsa (Japanese tradition)
-**Source**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001)  
+**Inspired by**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 3 min · **Rest**: 1 min
 
 **Ingredients**
@@ -119,7 +119,7 @@ Kammusslor (*Pecten maximus* i Europa; *Placopecten magellanicus*, Atlantisk kam
 ---
 
 ### 5. Rick Stein — Hand-Dived Scallops with Bacon and Black Pudding (British seafood tradition)
-**Source**: Rick Stein, *Rick Stein's Seafood* (BBC Books, 2001)  
+**Inspired by**: Rick Stein, *Rick Stein's Seafood* (BBC Books, 2001)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 1 min
 
 **Ingredients**

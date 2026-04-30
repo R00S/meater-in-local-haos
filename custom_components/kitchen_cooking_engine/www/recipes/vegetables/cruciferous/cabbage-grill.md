@@ -19,7 +19,7 @@ Kål (*Brassica oleracea* var. *capitata*) på grillen är mest dramatisk som tj
 ## Source recipes
 
 ### 1. Maangchi — Yangbaechu Gui (Korean Grilled Cabbage — BBQ style)
-**Source**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); https://www.maangchi.com (Korean BBQ vegetable preparations).
+**Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); https://www.maangchi.com (Korean BBQ vegetable preparations).
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 3 min
 
 **Ingredients**
@@ -38,7 +38,7 @@ Kål (*Brassica oleracea* var. *capitata*) på grillen är mest dramatisk som tj
 ---
 
 ### 2. Francis Mallmann — Repollo a las Brasas (Argentine tradition)
-**Source**: Francis Mallmann with Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)
+**Inspired by**: Francis Mallmann with Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 15–20 min · **Rest**: 3 min
 
 **Ingredients**
@@ -60,7 +60,7 @@ Kål (*Brassica oleracea* var. *capitata*) på grillen är mest dramatisk som tj
 ---
 
 ### 3. Madhur Jaffrey — Grilled Cabbage with Indian Spices (Indian tradition)
-**Source**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
+**Inspired by**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 3 min
 
 **Ingredients**
@@ -83,7 +83,7 @@ Kål (*Brassica oleracea* var. *capitata*) på grillen är mest dramatisk som tj
 ---
 
 ### 4. Deborah Madison — Grilled Cabbage Wedges with Blue Cheese Dressing (American vegetarian tradition)
-**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
+**Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–14 min · **Rest**: 3 min
 
 **Ingredients**

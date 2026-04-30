@@ -19,7 +19,7 @@ Spenat (*Spinacia oleracea*) sauterad vissnar dramatiskt på 1–3 minuter i het
 ## Source recipes
 
 ### 1. Fuchsia Dunlop — Qīng Chǎo Bōcài (清炒菠菜 — Chinese Stir-Fried Spinach with Garlic)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 2–3 min · **Rest**: 1 min
 
 **Ingredients**
@@ -35,7 +35,7 @@ Spenat (*Spinacia oleracea*) sauterad vissnar dramatiskt på 1–3 minuter i het
 ---
 
 ### 2. Madhur Jaffrey — Palak Saag (Indian Sautéed Spinach with Spices)
-**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)
+**Inspired by**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 4–5 min · **Rest**: 1 min
 
 **Ingredients**
@@ -51,7 +51,7 @@ Spenat (*Spinacia oleracea*) sauterad vissnar dramatiskt på 1–3 minuter i het
 ---
 
 ### 3. Marcella Hazan — Spinaci Saltati con Aglio e Olio (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 3–4 min · **Rest**: 1 min
 
 **Ingredients**
@@ -66,7 +66,7 @@ Spenat (*Spinacia oleracea*) sauterad vissnar dramatiskt på 1–3 minuter i het
 ---
 
 ### 4. Julia Child — Épinards Sautés au Beurre (French tradition)
-**Source**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
+**Inspired by**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
 **Serves**: 4 · **Prep**: 5 min (+ 3 min blanching) · **Cook**: 2–3 min · **Rest**: 1 min
 
 **Ingredients**

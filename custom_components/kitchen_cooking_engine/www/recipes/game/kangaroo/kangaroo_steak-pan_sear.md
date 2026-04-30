@@ -35,7 +35,7 @@ På grund av den extrema magreten måste känguru tillagas hett och snabbt för 
 ## Source recipes
 
 ### 1. Chefkoch.de — Kängurusteak in Pfeffermarinade und Pfeffersahnesauce (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/3881521590591139/Kaengurusteak-in-Pfeffermarinade-und-Pfeffersahnesauce.html (fetched 2026-04-24)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/3881521590591139/Kaengurusteak-in-Pfeffermarinade-und-Pfeffersahnesauce.html (fetched 2026-04-24)
 **Serves**: 2 · **Prep**: 45 min marinade · **Cook**: 20 min
 
 *Translation from German: Kangaroo steak in pepper marinade with pepper cream sauce, served with rosemary potato wedges and garlic-butter beans.*
@@ -82,7 +82,7 @@ På grund av den extrema magreten måste känguru tillagas hett och snabbt för 
 ---
 
 ### 2. Game Meat Australia / national tradition — Simple pan-seared kangaroo fillet
-**Source**: Australian Government recommended guidelines and national kangaroo industry standards; referenced via Kangaroo Industry Association of Australia (KIAA) cooking guides. See also: https://www.kangameat.com.au/cooking-kangaroo/
+**Inspired by**: Australian Government recommended guidelines and national kangaroo industry standards; referenced via Kangaroo Industry Association of Australia (KIAA) cooking guides. See also: https://www.kangameat.com.au/cooking-kangaroo/
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8 min
 
 *Standard approach recommended across Australian restaurants and game meat suppliers.*
@@ -108,7 +108,7 @@ På grund av den extrema magreten måste känguru tillagas hett och snabbt för 
 ---
 
 ### 3. Meatsmith (Melbourne) — Kangaroo fillet with native pepper berry
-**Source**: Meatsmith butcher Melbourne cooking guide; https://www.meatsmith.com.au/blogs/recipes (referenced in national food press)
+**Inspired by**: Meatsmith butcher Melbourne cooking guide; https://www.meatsmith.com.au/blogs/recipes (referenced in national food press)
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 10 min
 
 **Ingredients**

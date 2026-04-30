@@ -18,7 +18,7 @@ Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med lån
 ## Source recipes
 
 ### 1. Francis Mallmann — Argentine Flank on Charcoal (*Vacio a la parrilla*)
-**Source**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009)  
+**Inspired by**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009)  
 **Serves**: 4 · **Prep**: 10 min (+overnight salt) · **Cook**: 12–16 min over embers · **Rest**: 8 min
 
 **Ingredients**
@@ -38,7 +38,7 @@ Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med lån
 ---
 
 ### 2. Aaron Franklin — Charcoal-Grilled Flank Steak (Texas tradition)
-**Source**: Aaron Franklin & Jordan Mackay, *Franklin Steak* (Ten Speed Press, 2019)  
+**Inspired by**: Aaron Franklin & Jordan Mackay, *Franklin Steak* (Ten Speed Press, 2019)  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 8–12 min · **Rest**: 5–8 min
 
 **Ingredients**
@@ -59,7 +59,7 @@ Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med lån
 ---
 
 ### 3. Ottolenghi — Middle Eastern Marinated Flank Steak on Charcoal
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk/recipes  
+**Inspired by**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk/recipes  
 **Serves**: 4 · **Prep**: 20 min (+overnight marinate) · **Cook**: 10–14 min · **Rest**: 5 min
 
 **Ingredients**
@@ -88,7 +88,7 @@ Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med lån
 ---
 
 ### 4. Nobu Matsuhisa — Charcoal-Grilled Flank with Soy Citrus Glaze (Japanese-Californian tradition)
-**Source**: Nobu Matsuhisa, *Nobu the Cookbook* (Kodansha, 2001)  
+**Inspired by**: Nobu Matsuhisa, *Nobu the Cookbook* (Kodansha, 2001)  
 **Serves**: 4 · **Prep**: 15 min (+2 hr marinate) · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -113,7 +113,7 @@ Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med lån
 ---
 
 ### 5. Diana Barrios Treviño — Tex-Mex Carne Asada Flank Steak
-**Source**: Diana Barrios Treviño, *Los Barrios Family Cookbook* (Villard, 2002)  
+**Inspired by**: Diana Barrios Treviño, *Los Barrios Family Cookbook* (Villard, 2002)  
 **Serves**: 6 · **Prep**: 20 min (+4 hr marinate) · **Cook**: 12–16 min · **Rest**: 5 min
 
 **Ingredients**

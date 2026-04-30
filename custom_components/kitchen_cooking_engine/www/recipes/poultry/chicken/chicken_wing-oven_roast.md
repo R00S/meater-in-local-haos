@@ -37,7 +37,7 @@ Tillagningstid: 40–45 minuter vid 200–220 °C med vändning halvvägs. Inner
 ## Source recipes
 
 ### 1. Taste of Home — Baked Chicken Wings
-**Source**: Nancy Mock, reviewed by Lindsay D. Mattison; Taste of Home; https://www.tasteofhome.com/recipes/baked-chicken-wings/ (fetched 2026-04-27).
+**Inspired by**: Nancy Mock, reviewed by Lindsay D. Mattison; Taste of Home; https://www.tasteofhome.com/recipes/baked-chicken-wings/ (fetched 2026-04-27).
 **Serves**: 4–6 · **Prep**: 15 min · **Cook**: 50–60 min
 
 **Temperature guidance**:

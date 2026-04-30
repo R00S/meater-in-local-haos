@@ -27,7 +27,7 @@ Innertemperatur: **63–65 °C (145–149 °F)** USDA-rekommendation (med 3 minu
 ## Source recipes
 
 ### 1. Madens Verden — Svinekoteletter på grill (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/svinekoteletter-paa-grill/ (fetched 2026-04-24). *Danish grill chops: 250 g bone-in chops, salted 30 min ahead, 5–6 min each side, baste with BBQ sauce every 1–2 min. Rest 5–10 min.*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/svinekoteletter-paa-grill/ (fetched 2026-04-24). *Danish grill chops: 250 g bone-in chops, salted 30 min ahead, 5–6 min each side, baste with BBQ sauce every 1–2 min. Rest 5–10 min.*
 **Serves**: 4 · **Prep**: 30 min salting · **Cook**: 10–12 min grill
 
 *Translation: "How do you best grill your pork chops on a kettle or gas grill? Actually not so difficult."*
@@ -55,7 +55,7 @@ Innertemperatur: **63–65 °C (145–149 °F)** USDA-rekommendation (med 3 minu
 ---
 
 ### 2. ichkoche.at — Grillkotelett (Austrian tradition)
-**Source**: ichkoche.at; https://www.ichkoche.at/grillkotelett-rezept-234382 (fetched 2026-04-24). *Austrian overnight herb-and-oil marinade (thyme, oregano, estragon, garlic), grill 3–4 min per side. Serve on pre-warmed plates.*
+**Inspired by**: ichkoche.at; https://www.ichkoche.at/grillkotelett-rezept-234382 (fetched 2026-04-24). *Austrian overnight herb-and-oil marinade (thyme, oregano, estragon, garlic), grill 3–4 min per side. Serve on pre-warmed plates.*
 **Serves**: 2 · **Prep**: overnight marinade · **Cook**: 6–8 min grill
 
 **Temperature guidance (from recipe)**: 3–4 minutes per side, turn midway; "until nicely coloured and cooked through."
@@ -83,7 +83,7 @@ Innertemperatur: **63–65 °C (145–149 °F)** USDA-rekommendation (med 3 minu
 ---
 
 ### 3. Directo al Paladar — Chuleta de cerdo a la plancha (adapted for grill) (Spanish tradition)
-**Source**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/como-hacer-mejores-chuletas-cerdo-a-plancha-jugosas-churruscaditas (fetched 2026-04-24). *The same atemperar + hot surface method applied to the grill: 15 min de-chill, medium-high grill, 1.5–2 min per side for thin chops; 5–6 min per side for thicker bone-in chops.*
+**Inspired by**: Directo al Paladar; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/como-hacer-mejores-chuletas-cerdo-a-plancha-jugosas-churruscaditas (fetched 2026-04-24). *The same atemperar + hot surface method applied to the grill: 15 min de-chill, medium-high grill, 1.5–2 min per side for thin chops; 5–6 min per side for thicker bone-in chops.*
 **Serves**: 1–2 · **Prep**: 15 min atempering · **Cook**: 3–12 min (depending on thickness)
 
 **Temperature guidance (from recipe adapted)**: "If the chop is cold, or the grill not hot enough, it will steam not sear." Respect temperature of meat and grill surface. Core: 63–65 °C. Salt with flakes after.
@@ -109,7 +109,7 @@ Innertemperatur: **63–65 °C (145–149 °F)** USDA-rekommendation (med 3 minu
 ---
 
 ### 4. Huy Vu — Sườn Nướng (Vietnamese Grilled Pork Chops) (Vietnamese tradition)
-**Source**: Huy Vu, Hungry Huy; https://hungryhuy.com/vietnamese-pork-chops/ (fetched 2026-04-25). *Classic Vietnamese street-food and rice-plate dish: bone-in pork chops marinated in lemongrass, garlic, shallots, fish sauce, and soy sauce; grilled over high heat for grill marks then medium heat to finish. Served with steamed rice, scallion oil, and nước chấm dipping sauce.*
+**Inspired by**: Huy Vu, Hungry Huy; https://hungryhuy.com/vietnamese-pork-chops/ (fetched 2026-04-25). *Classic Vietnamese street-food and rice-plate dish: bone-in pork chops marinated in lemongrass, garlic, shallots, fish sauce, and soy sauce; grilled over high heat for grill marks then medium heat to finish. Served with steamed rice, scallion oil, and nước chấm dipping sauce.*
 **Serves**: 6 · **Prep**: 3 hr marinade · **Cook**: 15 min grill
 
 **Temperature guidance (from recipe)**: Sear on high heat for grill marks (a few minutes), then lower to medium and cook both sides, flipping often, until cooked through. Internal temperature at least **145 °F (63 °C)**.

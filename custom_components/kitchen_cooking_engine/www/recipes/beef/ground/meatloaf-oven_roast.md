@@ -19,7 +19,7 @@ Köttfärslimpa är en fritt formad limpa av kryddad, bunden malet kött (vanlig
 ## Source recipes
 
 ### 1. America's Test Kitchen — Classic Meatloaf with Bacon Topping (American tradition)
-**Source**: America's Test Kitchen, *The Cook's Illustrated Cookbook* (America's Test Kitchen, 2011); cooksillustrated.com  
+**Inspired by**: America's Test Kitchen, *The Cook's Illustrated Cookbook* (America's Test Kitchen, 2011); cooksillustrated.com  
 **Serves**: 6–8 · **Prep**: 25 min · **Cook**: 60–75 min · **Rest**: 10 min
 
 **Ingredients**
@@ -53,7 +53,7 @@ Köttfärslimpa är en fritt formad limpa av kryddad, bunden malet kött (vanlig
 ---
 
 ### 2. Tina Nordström — Köttfärslimpa (Swedish home tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
+**Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 50–60 min · **Rest**: 10 min
 
 **Ingredients**
@@ -84,7 +84,7 @@ Köttfärslimpa är en fritt formad limpa av kryddad, bunden malet kött (vanlig
 ---
 
 ### 3. Nigella Lawson — Italian-Inspired Meatloaf with Fennel & Sun-Dried Tomato (British / Anglo-Italian tradition)
-**Source**: Nigella Lawson, *Feast: Food to Celebrate Life* (Chatto & Windus, 2004); nigella.com/recipes  
+**Inspired by**: Nigella Lawson, *Feast: Food to Celebrate Life* (Chatto & Windus, 2004); nigella.com/recipes  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 60 min · **Rest**: 10 min
 
 **Ingredients**
@@ -116,7 +116,7 @@ Köttfärslimpa är en fritt formad limpa av kryddad, bunden malet kött (vanlig
 ---
 
 ### 4. Ina Garten — Roasted Vegetable Meatloaf (American food-media tradition)
-**Source**: Ina Garten, *Barefoot Contessa Back to Basics* (Clarkson Potter, 2008); barefootcontessa.com  
+**Inspired by**: Ina Garten, *Barefoot Contessa Back to Basics* (Clarkson Potter, 2008); barefootcontessa.com  
 **Serves**: 8 · **Prep**: 35 min · **Cook**: 75 min · **Rest**: 15 min
 
 **Ingredients**

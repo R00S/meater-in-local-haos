@@ -32,7 +32,7 @@ Sear i smör 2–3 minuter per sida i en het panna, sedan vila 5 minuter. Innert
 ## Source recipes
 
 ### 1. Hank Shaw — Pan-Seared Rabbit Loin with Herb Butter
-**Source**: honest-food.net; consistent with technique in *Hunt, Gather, Cook:
+**Inspired by**: honest-food.net; consistent with technique in *Hunt, Gather, Cook:
 Finding the Forgotten Feast* (Rodale, 2011)  
 **Serves**: 2 · **Prep**: 10 min (+30 min tempering) · **Cook**: 6–8 min · **Rest**: 4 min
 
@@ -63,7 +63,7 @@ Finding the Forgotten Feast* (Rodale, 2011)
 ---
 
 ### 2. Fergus Henderson — Saddle of Rabbit, Pan-Fried
-**Source**: *The Complete Nose to Tail* (Bloomsbury, 2012); consistent with
+**Inspired by**: *The Complete Nose to Tail* (Bloomsbury, 2012); consistent with
 St. John restaurant saddle preparations  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -91,7 +91,7 @@ St. John restaurant saddle preparations
 ---
 
 ### 3. The French Cooking Academy (Stéphane Nguyen) — Lapin Rôti à la Poêle
-**Source**: thefrenchcookingacademy.com; consistent with classical French lapin
+**Inspired by**: thefrenchcookingacademy.com; consistent with classical French lapin
 à la poêle technique  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
@@ -126,7 +126,7 @@ St. John restaurant saddle preparations
 ---
 
 ### 4. Lidia Bastianich — Coniglio in Padella (Rabbit Loin in the Pan)
-**Source**: *Lidia's Italian-American Kitchen* (Knopf, 2001); consistent with
+**Inspired by**: *Lidia's Italian-American Kitchen* (Knopf, 2001); consistent with
 Italian home-cooking rabbit technique  
 **Serves**: 2–3 · **Prep**: 10 min · **Cook**: 10 min · **Rest**: 5 min
 

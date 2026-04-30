@@ -33,7 +33,7 @@ Malt kalkon (hindi kıyması/Putenhackfleisch/tacchino macinato) är ett magert 
 ## Source recipes
 
 ### 1. Nefis Yemek Tarifleri — Hindi Köftesi (Turkish tradition)
-**Source**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/hindi-koftesi-tarifi/ (fetched 2026-04-25). *"Hindi Köftesi — Turkish grilled turkey meatballs (köfte)."*
+**Inspired by**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/hindi-koftesi-tarifi/ (fetched 2026-04-25). *"Hindi Köftesi — Turkish grilled turkey meatballs (köfte)."*
 **Serves**: 4–6 · **Prep**: 15 min · **Cook**: 10–12 min on grill
 
 **Ingredients**
@@ -62,7 +62,7 @@ Malt kalkon (hindi kıyması/Putenhackfleisch/tacchino macinato) är ett magert 
 ---
 
 ### 2. Tori Avey — Mediterranean Grilled Turkey Burgers (Israeli / Levantine tradition)
-**Source**: Tori Avey; https://toriavey.com/mediterranean-turkey-burgers/ (fetched 2026-04-25). *"Mediterranean Turkey Burgers — Levantine-spiced grilled turkey patties with basil and smoked paprika."*
+**Inspired by**: Tori Avey; https://toriavey.com/mediterranean-turkey-burgers/ (fetched 2026-04-25). *"Mediterranean Turkey Burgers — Levantine-spiced grilled turkey patties with basil and smoked paprika."*
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–15 min on grill
 
 **Ingredients**
@@ -90,7 +90,7 @@ Malt kalkon (hindi kıyması/Putenhackfleisch/tacchino macinato) är ett magert 
 ---
 
 ### 3. Chefkoch.de — Puten-Hamburger mit Röstzwiebeln (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/3064261458952311/ (fetched 2026-04-25). *"Puten-Hamburger mit Röstzwiebeln — German turkey burger with crispy onions."*
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/3064261458952311/ (fetched 2026-04-25). *"Puten-Hamburger mit Röstzwiebeln — German turkey burger with crispy onions."*
 **Serves**: 2 (4 patties) · **Prep**: 10 min · **Cook**: 7 min
 
 **Ingredients**
@@ -117,7 +117,7 @@ Malt kalkon (hindi kıyması/Putenhackfleisch/tacchino macinato) är ett magert 
 ---
 
 ### 4. TASTE — Chicken Patties adapted for Turkey (South African tradition)
-**Source**: TASTE magazine South Africa; https://taste.co.za/recipes/chicken-patties/ (fetched 2026-04-25). *"Chicken Patties with Preserved Lemon — TASTE recipe, adapted here using turkey mince in place of chicken."*
+**Inspired by**: TASTE magazine South Africa; https://taste.co.za/recipes/chicken-patties/ (fetched 2026-04-25). *"Chicken Patties with Preserved Lemon — TASTE recipe, adapted here using turkey mince in place of chicken."*
 **Serves**: 4–6 · **Prep**: 15 min · **Cook**: 10–12 min on grill
 
 *Turkey adaptation: ground turkey can be substituted 1:1 for chicken mince. Turkey benefits from the preserved lemon and feta additions which add moisture and flavour to the leaner meat.*

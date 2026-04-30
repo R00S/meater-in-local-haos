@@ -19,7 +19,7 @@ Majs på kolven (*Zea mays*) i airfryern uppnår resultat liknande ugnsstekning 
 ## Source recipes
 
 ### 1. Maangchi — Korean Air-Fried Corn (구운 옥수수 에어프라이어)
-**Source**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); air fryer adaptation of grilled corn technique.
+**Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); air fryer adaptation of grilled corn technique.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 14–16 min · **Rest**: 2 min
 
 **Ingredients**
@@ -38,7 +38,7 @@ Majs på kolven (*Zea mays*) i airfryern uppnår resultat liknande ugnsstekning 
 ---
 
 ### 2. Harumi Kurihara — Air-Fried Yakimorokoshi (Japanese Soy-Glazed Corn)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); adapted for air fryer.
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); adapted for air fryer.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 12–14 min · **Rest**: 2 min
 
 **Ingredients**
@@ -54,7 +54,7 @@ Majs på kolven (*Zea mays*) i airfryern uppnår resultat liknande ugnsstekning 
 ---
 
 ### 3. Madhur Jaffrey — Air-Fried Bhutta with Masala (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); air fryer adaptation.
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); air fryer adaptation.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 14–16 min · **Rest**: 2 min
 
 **Ingredients**
@@ -72,7 +72,7 @@ Majs på kolven (*Zea mays*) i airfryern uppnår resultat liknande ugnsstekning 
 ---
 
 ### 4. José Andrés — Air-Fried Corn with Compound Butter (Spanish / American tradition)
-**Source**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019); technique adapted for air fryer.
+**Inspired by**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019); technique adapted for air fryer.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–14 min · **Rest**: 2 min
 
 **Ingredients**

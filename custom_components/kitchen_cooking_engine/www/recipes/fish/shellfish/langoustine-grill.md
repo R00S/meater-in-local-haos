@@ -24,7 +24,7 @@ Den lilla storleken innebär snabb värmegenomträngning: 3–5 minuter med skal
 ## Source recipes
 
 ### 1. Good Food Team — Griddled Langoustines with Hazelnut Butter (British/Scottish tradition)
-**Source**: Good Food team, BBC Good Food, https://www.bbcgoodfood.com/recipes/griddled-langoustines-hazelnut-butter  
+**Inspired by**: Good Food team, BBC Good Food, https://www.bbcgoodfood.com/recipes/griddled-langoustines-hazelnut-butter  
 **Archived**: https://web.archive.org/web/20210410113935/https://www.bbcgoodfood.com/recipes/griddled-langoustines-hazelnut-butter  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 1–2 min · **Rest**: 0 min
 
@@ -49,7 +49,7 @@ Den lilla storleken innebär snabb värmegenomträngning: 3–5 minuter med skal
 ---
 
 ### 2. Lisa Lemke — Grillade Havskräftor med Vitlöks- och Citronsmör (Swedish tradition)
-**Source**: Lisa Lemke, Köket.se, https://www.koket.se/lisa-lemke/forratt/fisk-och-skaldjur/grillade-havskraftor-med-vitloks--och-citronsmor  
+**Inspired by**: Lisa Lemke, Köket.se, https://www.koket.se/lisa-lemke/forratt/fisk-och-skaldjur/grillade-havskraftor-med-vitloks--och-citronsmor  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 3–5 min · **Rest**: 0 min
 
 **Ingredients**
@@ -73,7 +73,7 @@ Den lilla storleken innebär snabb värmegenomträngning: 3–5 minuter med skal
 ---
 
 ### 3. Karen Seneca — Grillede Jomfruhummere (Danish tradition)
-**Source**: Karen Seneca, Madens Verden, https://madensverden.dk/grillede-jomfruhummere/  
+**Inspired by**: Karen Seneca, Madens Verden, https://madensverden.dk/grillede-jomfruhummere/  
 **Serves**: 4 · **Prep**: 40 min (incl. 30 min marinade) · **Cook**: 4–5 min · **Rest**: 0 min
 
 **Ingredients**
@@ -99,7 +99,7 @@ Den lilla storleken innebär snabb värmegenomträngning: 3–5 minuter med skal
 ---
 
 ### 4. Chef Simon — Langoustines et Gambas Grillées (French tradition — grilling technique)
-**Source**: Chef Simon, ChefSimon.com, https://chefsimon.com/gourmets/chef-simon/recettes/langoustines-et-gambas-grillees  
+**Inspired by**: Chef Simon, ChefSimon.com, https://chefsimon.com/gourmets/chef-simon/recettes/langoustines-et-gambas-grillees  
 **Serves**: variable · **Prep**: 15 min · **Cook**: 4–6 min · **Rest**: 0 min
 
 **Ingredients**
@@ -122,7 +122,7 @@ Den lilla storleken innebär snabb värmegenomträngning: 3–5 minuter med skal
 ---
 
 ### 5. Kaderick — Brochettes de Langoustines à la Plancha et Beurre d'Herbes (French tradition — plancha)
-**Source**: Kaderick, Kaderickenkuizinn.com (referenced via ChefSimon.com), https://kaderickenkuizinn.com/2013/09/langoustines-plancha-beurre-herbes/  
+**Inspired by**: Kaderick, Kaderickenkuizinn.com (referenced via ChefSimon.com), https://kaderickenkuizinn.com/2013/09/langoustines-plancha-beurre-herbes/  
 **Serves**: 2 · **Prep**: 25 min · **Cook**: ~9 min (3+3+3) · **Rest**: 0 min
 
 **Ingredients**
@@ -150,7 +150,7 @@ Den lilla storleken innebär snabb värmegenomträngning: 3–5 minuter med skal
 ---
 
 ### 6. Irish Food Hub — Dublin Bay Prawns with Garlic Butter (Irish tradition)
-**Source**: Irish Food Hub, https://irishfoodhub.com/dublin-bay-prawns-with-garlic-butter/  
+**Inspired by**: Irish Food Hub, https://irishfoodhub.com/dublin-bay-prawns-with-garlic-butter/  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 5–7 min · **Rest**: 0 min
 
 **Ingredients**

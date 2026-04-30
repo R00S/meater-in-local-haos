@@ -19,7 +19,7 @@ Flat iron steak tas från infraspinatus i skulderbladet, separerad från det cen
 ## Source recipes
 
 ### 1. J. Kenji López-Alt / Serious Eats — Air-Fryer Flat Iron with Herb Butter
-**Source**: J. Kenji López-Alt, "The Best Air-Fryer Steaks," *Serious Eats*, seriouseats.com/air-fryer-steak (2022)  
+**Inspired by**: J. Kenji López-Alt, "The Best Air-Fryer Steaks," *Serious Eats*, seriouseats.com/air-fryer-steak (2022)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -44,7 +44,7 @@ Flat iron steak tas från infraspinatus i skulderbladet, separerad från det cen
 ---
 
 ### 2. Nigella Lawson — Smoked-Paprika Air-Fryer Flat Iron (British home-cook tradition)
-**Source**: Nigella Lawson, *Cook, Eat, Repeat* (Chatto & Windus, 2020); seasoning method applied and timing re-tested for air fryer  
+**Inspired by**: Nigella Lawson, *Cook, Eat, Repeat* (Chatto & Windus, 2020); seasoning method applied and timing re-tested for air fryer  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -67,7 +67,7 @@ Flat iron steak tas från infraspinatus i skulderbladet, separerad från det cen
 ---
 
 ### 3. Donna Hay — Sesame-Ginger Air-Fryer Flat Iron (Australian modern)
-**Source**: Donna Hay, donnahay.com, "Sesame Ginger Beef Steaks" (2022)  
+**Inspired by**: Donna Hay, donnahay.com, "Sesame Ginger Beef Steaks" (2022)  
 **Serves**: 2 · **Prep**: 15 min (+ 1 h marinade) · **Cook**: 10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -93,7 +93,7 @@ Flat iron steak tas från infraspinatus i skulderbladet, separerad från det cen
 ---
 
 ### 4. Maangchi — Korean Yangnyeom-Marinated Air-Fryer Flat Iron (Korean tradition)
-**Source**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); galbi marinade applied to flat iron and air-fried  
+**Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); galbi marinade applied to flat iron and air-fried  
 **Serves**: 2–3 · **Prep**: 20 min (+ 4 h marinade) · **Cook**: 10–12 min · **Rest**: 4 min
 
 **Ingredients**
@@ -121,7 +121,7 @@ Flat iron steak tas från infraspinatus i skulderbladet, separerad från det cen
 ---
 
 ### 5. Rick Bayless — Achiote-Citrus Air-Fryer Flat Iron (Mexican tradition)
-**Source**: Rick Bayless, *Mexican Everyday* (W. W. Norton & Company, 2005); achiote-rubbed steak method adapted for air fryer  
+**Inspired by**: Rick Bayless, *Mexican Everyday* (W. W. Norton & Company, 2005); achiote-rubbed steak method adapted for air fryer  
 **Serves**: 2 · **Prep**: 15 min (+ 2 h marinade) · **Cook**: 10 min · **Rest**: 5 min
 
 **Ingredients**

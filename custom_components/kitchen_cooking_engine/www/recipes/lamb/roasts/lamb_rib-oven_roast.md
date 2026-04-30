@@ -30,7 +30,7 @@ Rack: 200–220 °C, 15–25 minuter, innertemperatur **57–63 °C** för mediu
 ## Source recipes
 
 ### 1. Dominic Chapman — Roast Rack of Lamb with Anchovy Butter (British tradition, Culinary Group B)
-**Source**: Dominic Chapman, greatbritishchefs.com/recipes/rack-of-lamb-recipe  
+**Inspired by**: Dominic Chapman, greatbritishchefs.com/recipes/rack-of-lamb-recipe  
 **Serves**: 2–3 · **Prep**: 4 hr (incl. marinating) + 20 min · **Cook**: 15 min total · **Rest**: 5–7 min
 
 **Ingredients** (rack of lamb component)
@@ -55,7 +55,7 @@ Rack: 200–220 °C, 15–25 minuter, innertemperatur **57–63 °C** för mediu
 ---
 
 ### 2. The Mediterranean Dish — Spiced Lamb Ribs with Pomegranate-Rosemary Glaze (Levant tradition, Culinary Group C)
-**Source**: The Mediterranean Dish (Suzy Karadsheh), themediterraneandish.com/lamb-ribs/ (published 2026)  
+**Inspired by**: The Mediterranean Dish (Suzy Karadsheh), themediterraneandish.com/lamb-ribs/ (published 2026)  
 **Note**: This recipe uses lamb spare ribs / breast ribs (lower rib section) — the fatty cut that benefits from low-and-slow foil-covered cooking. Internal temperature is not stated explicitly; "quite tender, fall-off-the-bone" for lamb ribs corresponds to ≥ 77 °C / 170 °F. This source covers a different preparation from the steak-style rack above and should be considered separately when assessing temperature strategy.  
 **Serves**: 4 · **Prep**: 5 min (+ optional 24 hr dry brine) · **Cook**: 1 hr 45 min · **Rest**: 5 min
 

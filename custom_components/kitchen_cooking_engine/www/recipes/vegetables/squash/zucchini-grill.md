@@ -19,7 +19,7 @@ Zucchini (*Cucurbita pepo*) skuren längsmed i 1–1,5 cm plankor eller tjocka r
 ## Source recipes
 
 ### 1. Marcella Hazan — Zucchine alla Griglia con Aglio e Prezzemolo (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–12 min · **Rest**: 3 min
 
 **Ingredients**
@@ -33,7 +33,7 @@ Zucchini (*Cucurbita pepo*) skuren längsmed i 1–1,5 cm plankor eller tjocka r
 ---
 
 ### 2. Yotam Ottolenghi — Grilled Zucchini with Herb Yoghurt and Chilli (Israeli / Middle Eastern tradition)
-**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
+**Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–12 min · **Rest**: 3 min
 
 **Ingredients**
@@ -46,7 +46,7 @@ Zucchini (*Cucurbita pepo*) skuren längsmed i 1–1,5 cm plankor eller tjocka r
 ---
 
 ### 3. Madhur Jaffrey — Masala Grilled Courgettes (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–12 min · **Rest**: 3 min
 
 **Ingredients**
@@ -59,7 +59,7 @@ Zucchini (*Cucurbita pepo*) skuren längsmed i 1–1,5 cm plankor eller tjocka r
 ---
 
 ### 4. José Andrés — Calabacín a la Parrilla con Romesco (Spanish tradition)
-**Source**: José Andrés, *Vegetables Unleashed* (Clarkson Potter, 2019)
+**Inspired by**: José Andrés, *Vegetables Unleashed* (Clarkson Potter, 2019)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–12 min · **Rest**: 3 min
 
 **Ingredients**

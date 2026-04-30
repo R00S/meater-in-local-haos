@@ -35,7 +35,7 @@ USDA kräver att malet viltkött tillagas till 71 °C (160 °F) internt. Grilla 
 ## Source recipes
 
 ### 1. Food Network — Bison Burger with Garlic Mayo and Caramelized Onions (American tradition)
-**Source**: Food Network (Brad Sorenson); https://www.foodnetwork.com/recipes/brad-sorenson/bison-burger-with-garlic-mayo-and-caramelized-onions-recipe-2040548 (web search 2026-04-24)
+**Inspired by**: Food Network (Brad Sorenson); https://www.foodnetwork.com/recipes/brad-sorenson/bison-burger-with-garlic-mayo-and-caramelized-onions-recipe-2040548 (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 20 min
 
 *Classic American bison burger — garlic mayo and caramelized onions.*
@@ -83,7 +83,7 @@ USDA kräver att malet viltkött tillagas till 71 °C (160 °F) internt. Grilla 
 ---
 
 ### 2. Chefkoch.de — Der Bisonburger (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/3007371453624664/Der-Bisonburger.html (fetched 2026-04-24)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/3007371453624664/Der-Bisonburger.html (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 15 min
 
 *Translation: The Bison Burger — German-American style.*
@@ -107,7 +107,7 @@ USDA kräver att malet viltkött tillagas till 71 °C (160 °F) internt. Grilla 
 ---
 
 ### 3. BBC Good Food — Barbecued Beef Burger (technique applicable to buffalo patties)
-**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/barbecue-beef-burger (fetched 2026-04-24). *Standard BBC BBQ burger technique — applicable to buffalo/bison mince.*
+**Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/barbecue-beef-burger (fetched 2026-04-24). *Standard BBC BBQ burger technique — applicable to buffalo/bison mince.*
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 15 min
 
 **Ingredients**

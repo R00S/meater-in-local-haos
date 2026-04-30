@@ -20,7 +20,7 @@ Hellefisk (*Hippoglossus stenolepis*, Stillahavshellefisk; *Hippoglossus hippogl
 ## Source recipes
 
 ### 1. Thomas Keller — Pan-Roasted Halibut with Chanterelles (American / French haute cuisine tradition)
-**Source**: Thomas Keller, *Ad Hoc at Home* (Artisan Books, 2009); keller's pan-roasted halibut technique documented at bouchonbakery.com and in the book  
+**Inspired by**: Thomas Keller, *Ad Hoc at Home* (Artisan Books, 2009); keller's pan-roasted halibut technique documented at bouchonbakery.com and in the book  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -48,7 +48,7 @@ Hellefisk (*Hippoglossus stenolepis*, Stillahavshellefisk; *Hippoglossus hippogl
 ---
 
 ### 2. Gordon Ramsay — Pan-Seared Halibut with Sauce Vierge (British-French restaurant tradition)
-**Source**: Gordon Ramsay, *Gordon Ramsay Makes It Easy* (Quadrille Publishing, 2005)  
+**Inspired by**: Gordon Ramsay, *Gordon Ramsay Makes It Easy* (Quadrille Publishing, 2005)  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 8–10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -72,7 +72,7 @@ Hellefisk (*Hippoglossus stenolepis*, Stillahavshellefisk; *Hippoglossus hippogl
 ---
 
 ### 3. Nobu Matsuhisa — Pan-Seared Halibut with Pepper Sauce (Japanese-Peruvian fusion tradition)
-**Source**: Nobu Matsuhisa, *Nobu Miami: The Party Cookbook* (Kodansha International, 2009)  
+**Inspired by**: Nobu Matsuhisa, *Nobu Miami: The Party Cookbook* (Kodansha International, 2009)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -96,7 +96,7 @@ Hellefisk (*Hippoglossus stenolepis*, Stillahavshellefisk; *Hippoglossus hippogl
 ---
 
 ### 4. Rick Stein — Pan-Fried Halibut with Brown Butter (Scandinavian / British tradition)
-**Source**: Rick Stein, *Rick Stein's Long Weekends* (BBC Books, 2016)  
+**Inspired by**: Rick Stein, *Rick Stein's Long Weekends* (BBC Books, 2016)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -121,7 +121,7 @@ Hellefisk (*Hippoglossus stenolepis*, Stillahavshellefisk; *Hippoglossus hippogl
 ---
 
 ### 5. Feran Adrià — Pan-Seared Halibut with Olive Oil and Sea Salt (Spanish / Catalan tradition)
-**Source**: Ferran Adrià, Albert Adrià and Juli Soler, *El Bulli 2003–2004* (Ecco/HarperCollins, 2006); the minimalist halibut preparation is documented in restaurant notes  
+**Inspired by**: Ferran Adrià, Albert Adrià and Juli Soler, *El Bulli 2003–2004* (Ecco/HarperCollins, 2006); the minimalist halibut preparation is documented in restaurant notes  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 7–8 min · **Rest**: 3 min
 
 **Ingredients**

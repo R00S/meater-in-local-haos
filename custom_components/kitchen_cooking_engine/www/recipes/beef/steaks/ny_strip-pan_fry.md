@@ -20,7 +20,7 @@ New York strip (även kallad strip loin, sirloin strip, Kansas City strip eller 
 ## Source recipes
 
 ### 1. Nigella Lawson — Pan-Fried Steak with Garlic Butter (British home-cooking tradition)
-**Source**: Nigella Lawson, *How to Eat* (Chatto & Windus, 1998)  
+**Inspired by**: Nigella Lawson, *How to Eat* (Chatto & Windus, 1998)  
 **Serves**: 2 · **Prep**: 5 min (+30 min tempering) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -45,7 +45,7 @@ New York strip (även kallad strip loin, sirloin strip, Kansas City strip eller 
 ---
 
 ### 2. Delia Smith — Pan-Fried Steak with Mushrooms (British traditional home cooking)
-**Source**: Delia Smith, *Delia's Complete Cookery Course* (BBC Books, 1989)  
+**Inspired by**: Delia Smith, *Delia's Complete Cookery Course* (BBC Books, 1989)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -72,7 +72,7 @@ New York strip (även kallad strip loin, sirloin strip, Kansas City strip eller 
 ---
 
 ### 3. Julia Child — Steak Sauté with Red Wine Sauce (French classical tradition)
-**Source**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961)  
+**Inspired by**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961)  
 **Serves**: 2 · **Prep**: 5 min (+20 min tempering) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -98,7 +98,7 @@ New York strip (även kallad strip loin, sirloin strip, Kansas City strip eller 
 ---
 
 ### 4. Nigel Slater — Pan-Fried Strip Steak with Herb Sauce (British contemporary tradition)
-**Source**: Nigel Slater, *Real Food* (Fourth Estate, 1998)  
+**Inspired by**: Nigel Slater, *Real Food* (Fourth Estate, 1998)  
 **Serves**: 1 · **Prep**: 5 min · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -120,7 +120,7 @@ New York strip (även kallad strip loin, sirloin strip, Kansas City strip eller 
 ---
 
 ### 5. Stephanie Alexander — Pan-Fried Sirloin (Australian tradition)
-**Source**: Stephanie Alexander, *The Cook's Companion* (Viking/Penguin, 1996; revised 2004), beef chapter  
+**Inspired by**: Stephanie Alexander, *The Cook's Companion* (Viking/Penguin, 1996; revised 2004), beef chapter  
 **Serves**: 2 · **Prep**: 5 min (+30 min tempering) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**

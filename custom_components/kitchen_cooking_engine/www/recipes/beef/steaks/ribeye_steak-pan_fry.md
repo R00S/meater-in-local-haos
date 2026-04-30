@@ -26,7 +26,7 @@ Entrecôte (även kallad entrecôte, Scotch fillet, antrikot, costata, chuletón
 ## Source recipes
 
 ### 1. ichkoche.at — Rib-eye-Steak mit Rosmarinpommes (Austrian tradition)
-**Source**: ichkoche.at; https://www.ichkoche.at/rib-eye-steak-mit-rosmarinpommes-rezept-230639 (fetched 2026-04-24). Austrian home-cooking classic: ribeye pan-fried then rested briefly in a warm oven. Rated 4+ stars, 32 user ratings.
+**Inspired by**: ichkoche.at; https://www.ichkoche.at/rib-eye-steak-mit-rosmarinpommes-rezept-230639 (fetched 2026-04-24). Austrian home-cooking classic: ribeye pan-fried then rested briefly in a warm oven. Rated 4+ stars, 32 user ratings.
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 25 min
 
 **Temperature guidance (from recipe)**: Pan-fry 3–4 minutes per side (high heat), then rest in 120 °C oven 10–15 minutes until juices redistribute and centre reaches desired doneness. Medium-rare pull temperature approx. 54 °C.
@@ -56,7 +56,7 @@ Entrecôte (även kallad entrecôte, Scotch fillet, antrikot, costata, chuletón
 ---
 
 ### 2. Argiro.gr — Rib Eye στο τηγάνι με σάλτσα βουτύρου (Greek tradition)
-**Source**: Argiro Barbarigou, Argiro.gr; https://www.argiro.gr/recipe/rib-eye-sto-tigani-me-saltsa-voutyrou/ (fetched 2026-04-24). *Greek celebrity chef Argiro Barbarigou's classic cast-iron pan sear with butter basting sauce.*
+**Inspired by**: Argiro Barbarigou, Argiro.gr; https://www.argiro.gr/recipe/rib-eye-sto-tigani-me-saltsa-voutyrou/ (fetched 2026-04-24). *Greek celebrity chef Argiro Barbarigou's classic cast-iron pan sear with butter basting sauce.*
 **Serves**: 1–2 · **Prep**: 1 hr (salting + tempering) · **Cook**: 8 min
 
 *Translation: Rib Eye in the pan with butter sauce — a Greek steakhouse classic.*
@@ -88,7 +88,7 @@ Entrecôte (även kallad entrecôte, Scotch fillet, antrikot, costata, chuletón
 ---
 
 ### 3. BBC Good Food — Pan-fried rib-eye steak (British tradition)
-**Source**: BBC Good Food; https://www.bbcgoodfood.com/premium/pan-fried-ribeye-steak (fetched 2026-04-24). *Classic British pan-fry with butter, garlic, and thyme basting.*
+**Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/premium/pan-fried-ribeye-steak (fetched 2026-04-24). *Classic British pan-fry with butter, garlic, and thyme basting.*
 **Serves**: 2 · **Prep**: 5 min (+ up to 8 hrs dry-brining) · **Cook**: 4–10 min
 
 **Temperature guidance (from recipe)**: "50C for rare, 60C for medium and 70C for well done."

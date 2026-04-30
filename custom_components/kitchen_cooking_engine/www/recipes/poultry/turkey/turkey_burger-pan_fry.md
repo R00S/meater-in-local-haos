@@ -19,7 +19,7 @@ En pannstekt kalkonburger är samma 150–180 g formade biff som den grillvarian
 ## Source recipes
 
 ### 1. America's Test Kitchen — Pan-Seared Turkey Burgers (American tradition)
-**Source**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011) (the pan-sear variant of their grilled turkey-burger technique); cooksillustrated.com  
+**Inspired by**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011) (the pan-sear variant of their grilled turkey-burger technique); cooksillustrated.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**
@@ -45,7 +45,7 @@ En pannstekt kalkonburger är samma 150–180 g formade biff som den grillvarian
 ---
 
 ### 2. Hugh Acheson — Pan-Fried Turkey Burgers with Sage & Lemon (American Culinary Group C tradition)
-**Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011) — turkey-burger variant; hughacheson.com  
+**Inspired by**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011) — turkey-burger variant; hughacheson.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**
@@ -71,7 +71,7 @@ En pannstekt kalkonburger är samma 150–180 g formade biff som den grillvarian
 ---
 
 ### 3. Tina Nordström — Pannstekt Kalkonburgare (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
+**Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**
@@ -96,7 +96,7 @@ En pannstekt kalkonburger är samma 150–180 g formade biff som den grillvarian
 ---
 
 ### 4. Yotam Ottolenghi — Spiced Turkey Burgers in the Pan with Tahini (Levantine tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014); ottolenghi.co.uk  
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014); ottolenghi.co.uk  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**

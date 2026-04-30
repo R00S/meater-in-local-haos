@@ -35,7 +35,7 @@ Klassiska beredningar: bayrisk *Schweinshaxe* (krisp svål), italiensk *stinco d
 ## Source recipes
 
 ### 1. Chefkoch.de — Knusprige Schweinshaxe aus dem Ofen (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/3947241604678014/ (fetched 2026-04-25). *"Knusprige Schweinshaxe aus dem Ofen — crispy oven pork hock."*
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/3947241604678014/ (fetched 2026-04-25). *"Knusprige Schweinshaxe aus dem Ofen — crispy oven pork hock."*
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 3 hr (90 min simmering + oven)
 
 **Ingredients**
@@ -65,7 +65,7 @@ Klassiska beredningar: bayrisk *Schweinshaxe* (krisp svål), italiensk *stinco d
 ---
 
 ### 2. Giallo Zafferano — Stinco di maiale al forno con patate (Italian tradition)
-**Source**: Ricette GialloZafferano; https://ricette.giallozafferano.it/Stinco-di-maiale-al-forno-con-patate.html (fetched 2026-04-25). *"Stinco di maiale al forno con patate — classic Italian oven pork shank with potatoes."*
+**Inspired by**: Ricette GialloZafferano; https://ricette.giallozafferano.it/Stinco-di-maiale-al-forno-con-patate.html (fetched 2026-04-25). *"Stinco di maiale al forno con patate — classic Italian oven pork shank with potatoes."*
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 1 h 45 min at 200 °C
 
 **Ingredients**
@@ -90,7 +90,7 @@ Klassiska beredningar: bayrisk *Schweinshaxe* (krisp svål), italiensk *stinco d
 ---
 
 ### 3. Ichkoche.at — Knusprig gebratene Schweinsstelze (Austrian tradition)
-**Source**: Ichkoche.at; https://www.ichkoche.at/knusprig-gebratene-schweinsstelze-rezept-226650 (fetched 2026-04-25). *"Knusprig gebratene Schweinsstelze — Austrian crispy roasted pork hock."*
+**Inspired by**: Ichkoche.at; https://www.ichkoche.at/knusprig-gebratene-schweinsstelze-rezept-226650 (fetched 2026-04-25). *"Knusprig gebratene Schweinsstelze — Austrian crispy roasted pork hock."*
 **Serves**: 2–4 · **Prep**: 20 min · **Cook**: 2 hr 15 min + 15 min finish
 
 **Ingredients**
@@ -121,7 +121,7 @@ Klassiska beredningar: bayrisk *Schweinshaxe* (krisp svål), italiensk *stinco d
 ---
 
 ### 4. Madensverden.dk — Ovnbagt svineskank med rodfrugter (Danish tradition)
-**Source**: Madensverden.dk (Holger Rørby Madsen); https://madensverden.dk/ovnbagt-svineskank-med-rodfrugter/ (fetched 2026-04-25). *"Ovnbagt svineskank med rodfrugter — slow oven-baked pork shank with root vegetables."*
+**Inspired by**: Madensverden.dk (Holger Rørby Madsen); https://madensverden.dk/ovnbagt-svineskank-med-rodfrugter/ (fetched 2026-04-25). *"Ovnbagt svineskank med rodfrugter — slow oven-baked pork shank with root vegetables."*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 8 hr at 120 °C
 
 **Ingredients**

@@ -24,7 +24,7 @@ Ugn 200–220 °C, 35–45 minuter. Innertemperatur: **74 °C (165 °F)** USDA-m
 ## Source recipes
 
 ### 1. Suzy Karadsheh — Baked Chicken Thighs / Bone-in Breast adaptation (Mediterranean tradition, Culinary Group B)
-**Source**: Suzy Karadsheh, themediterraneandish.com/baked-chicken-thighs/  
+**Inspired by**: Suzy Karadsheh, themediterraneandish.com/baked-chicken-thighs/  
 **Serves**: 8 (thighs) / 4 (bone-in breasts) · **Prep**: 10 min · **Cook**: 30–35 min (bone-in breast) · **Rest**: 5–10 min
 
 **Note**: This recipe is primarily for bone-in, skin-on chicken thighs at 425 °F. The author explicitly provides a bone-in breast adaptation with adjusted temperature and time — cited verbatim below.
@@ -50,7 +50,7 @@ Ugn 200–220 °C, 35–45 minuter. Innertemperatur: **74 °C (165 °F)** USDA-m
 ---
 
 ### 2. Imma Adamu — Oven Baked Chicken Breast (West African-American tradition, Culinary Group C)
-**Source**: Imma Adamu, africanbites.com/oven-baked-chicken/  
+**Inspired by**: Imma Adamu, africanbites.com/oven-baked-chicken/  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 16–18 min (boneless) · **Rest**: 5–10 min
 
 **Note**: This recipe uses boneless, skinless chicken breast. It is included because it documents the target internal temperature (165–170 °F / 74–77 °C) explicitly, with an instant-read thermometer, which confirms the pull temperature for bone-in breast is identical — only the cook time differs (add 10–15 min for bone-in). Imma Adamu is a Nigerian-American food blogger who presents this recipe as a West African-American interpretation using accessible technique.

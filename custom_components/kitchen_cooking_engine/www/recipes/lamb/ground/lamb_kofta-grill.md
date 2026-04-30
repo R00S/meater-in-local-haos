@@ -35,7 +35,7 @@ Det enda säkra sättet att verifiera genomkokning är med sond. Innertemperatur
 ## Source recipes
 
 ### 1. TurkishFoodTravel.com — Authentic Turkish Köfte (Turkish tradition)
-**Source**: TurkishFoodTravel.com; https://www.turkishfoodtravel.com/2025/02/26/turkish-kofte-meatballs/ (web search 2026-04-24). *"Turkish Meatballs/Köfte: How to Make Authentic Turkish Köfte"*
+**Inspired by**: TurkishFoodTravel.com; https://www.turkishfoodtravel.com/2025/02/26/turkish-kofte-meatballs/ (web search 2026-04-24). *"Turkish Meatballs/Köfte: How to Make Authentic Turkish Köfte"*
 **Serves**: 4 · **Prep**: 2 hrs + overnight rest · **Cook**: 15 min
 
 **Ingredients**
@@ -62,7 +62,7 @@ Det enda säkra sättet att verifiera genomkokning är med sond. Innertemperatur
 ---
 
 ### 2. Nefisyemektarifleri.com — Adana Kebabı (Turkish kofta on skewer)
-**Source**: Nefisyemektarifleri.com; https://www.nefisyemektarifleri.com/adana-kebabi/ (web search 2026-04-24). *Adana kebab — Turkey's most famous grilled kofta, from Adana province.*
+**Inspired by**: Nefisyemektarifleri.com; https://www.nefisyemektarifleri.com/adana-kebabi/ (web search 2026-04-24). *Adana kebab — Turkey's most famous grilled kofta, from Adana province.*
 **Serves**: 4 · **Prep**: 1 hr · **Cook**: 20 min
 
 *Translation: Adana Kebab — ground lamb with tail fat (kuyruk yağı), red pepper, and paprika, shaped on wide flat metal skewers and grilled over charcoal.*
@@ -89,7 +89,7 @@ Det enda säkra sättet att verifiera genomkokning är med sond. Innertemperatur
 ---
 
 ### 3. IndianHealthyRecipes.com — Seekh Kebab (Indian spiced lamb skewer, barbecue tradition)
-**Source**: IndianHealthyRecipes.com (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/seekh-kebab-recipe/ (web search 2026-04-24)
+**Inspired by**: IndianHealthyRecipes.com (Swasthi Shreekanth); https://www.indianhealthyrecipes.com/seekh-kebab-recipe/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 15 min
 
 *Seekh kebab — similar to Turkish kofta but spiced with South Asian aromatics: garam masala, chaat masala, ginger.*

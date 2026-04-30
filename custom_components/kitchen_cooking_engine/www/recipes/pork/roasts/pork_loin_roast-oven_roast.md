@@ -26,7 +26,7 @@ Standardteknik: djup ritsning av svålen, salt i ritsorna, ugn 180–200 °C i 1
 ## Source recipes
 
 ### 1. Valdemarsro — Flæskesteg med sprød svær (Danish tradition)
-**Source**: Valdemarsro.dk; https://www.valdemarsro.dk/flaeskesteg/ (fetched 2026-04-24). *Classic Danish pork loin roast with crispy crackling. "Cold oven, slow start — the key to success." Total 3 hrs.*
+**Inspired by**: Valdemarsro.dk; https://www.valdemarsro.dk/flaeskesteg/ (fetched 2026-04-24). *Classic Danish pork loin roast with crispy crackling. "Cold oven, slow start — the key to success." Total 3 hrs.*
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 2 hr 45 min
 
 **Temperature guidance (from recipe + site)**: Cold oven start at 125°C fan × 2 hrs; then 200°C × 30 min; then 225°C × 15–20 min for crackling. Pull at **60–65°C** for juicy, slightly pink result.
@@ -55,7 +55,7 @@ Standardteknik: djup ritsning av svålen, salt i ritsorna, ugn 180–200 °C i 1
 ---
 
 ### 2. Madens Verden — Perfekt Flæskesteg i Ovn (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/perfekt-flaeskesteg-i-ovn/ (fetched 2026-04-24). *"Easy and reliable recipe for a perfect flæskesteg in the oven." 4.8/5, 548 ratings.*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/perfekt-flaeskesteg-i-ovn/ (fetched 2026-04-24). *"Easy and reliable recipe for a perfect flæskesteg in the oven." 4.8/5, 548 ratings.*
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 1 hr 15 min
 
 **Temperature guidance (from recipe)**: Oven 225°C fan throughout; done when internal = **65°C**. *"It is the core temperature that determines when your flæskesteg is done — not the time!"*
@@ -77,7 +77,7 @@ Standardteknik: djup ritsning av svålen, salt i ritsorna, ugn 180–200 °C i 1
 ---
 
 ### 3. Chefkoch — Schweinerücken im Bratschlauch (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/1201241227183862/Schweineruecken-im-Bratschlauch.html (fetched 2026-04-24). *Pork loin in a roasting bag — guarantees the meat stays juicy. "For those who want to be on the safe side."*
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/1201241227183862/Schweineruecken-im-Bratschlauch.html (fetched 2026-04-24). *Pork loin in a roasting bag — guarantees the meat stays juicy. "For those who want to be on the safe side."*
 **Serves**: 4 · **Cook**: ~2 hr (oven 160°C → 60°C core)
 
 **Temperature guidance (from recipe)**: Oven 160°C until internal = **60°C** (about 2 hrs for a 1.5 kg piece); rest in bag 10 min; then brown in hot pan.

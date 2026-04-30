@@ -26,7 +26,7 @@ Standardmässig hemmaapproach är en tvåzonsinställning: sear fettlockets sida
 ## Source recipes
 
 ### 1. Francis Mallmann — Grilled Picanha on the Parilla (Argentine/Brazilian tradition)
-**Source**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
+**Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
 **Serves**: 6 · **Prep**: 5 min · **Cook**: 20–30 min · **Rest**: 10 min
 
 **Ingredients**
@@ -50,7 +50,7 @@ Standardmässig hemmaapproach är en tvåzonsinställning: sear fettlockets sida
 ---
 
 ### 2. Steven Raichlen — Coulotte Steak on the Grill (American tradition)
-**Source**: Steven Raichlen, *Project Fire* (Workman Publishing, 2018)  
+**Inspired by**: Steven Raichlen, *Project Fire* (Workman Publishing, 2018)  
 **Serves**: 4 · **Prep**: 10 min (+1 h dry brine) · **Cook**: 12–15 min · **Rest**: 5 min
 
 **Ingredients**
@@ -72,7 +72,7 @@ Standardmässig hemmaapproach är en tvåzonsinställning: sear fettlockets sida
 ---
 
 ### 3. Jock Zonfrillo — Grilled Rump Cap with Native Spice Rub (Australian tradition)
-**Source**: Jock Zonfrillo, *Orana: Cooking with the Soul of Australia* (Hardie Grant, 2019)  
+**Inspired by**: Jock Zonfrillo, *Orana: Cooking with the Soul of Australia* (Hardie Grant, 2019)  
 **Serves**: 4 · **Prep**: 15 min (+2 h rub time) · **Cook**: 20–25 min · **Rest**: 10 min
 
 **Ingredients**
@@ -93,7 +93,7 @@ Standardmässig hemmaapproach är en tvåzonsinställning: sear fettlockets sida
 ---
 
 ### 4. Bobby Flay — Grilled Picanha with Spiced Butter (American tradition)
-**Source**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
+**Inspired by**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 15–18 min · **Rest**: 5 min
 
 **Ingredients**
@@ -114,7 +114,7 @@ Standardmässig hemmaapproach är en tvåzonsinställning: sear fettlockets sida
 ---
 
 ### 5. Neil Perry — Grilled Rump Cap with Salsa Verde (Australian tradition)
-**Source**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
+**Inspired by**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
 **Serves**: 4 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 18–22 min · **Rest**: 8 min
 
 **Ingredients**

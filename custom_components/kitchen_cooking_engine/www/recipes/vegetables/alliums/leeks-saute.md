@@ -19,7 +19,7 @@ Purjolök (*Allium ampeloprasum* var. *porrum*) sauterad i panna ger den mest m�
 ## Source recipes
 
 ### 1. Harumi Kurihara — Negi no Itame (Japanese leek sauté)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 1 min
 
 **Ingredients**
@@ -41,7 +41,7 @@ Purjolök (*Allium ampeloprasum* var. *porrum*) sauterad i panna ger den mest m�
 ---
 
 ### 2. Marcella Hazan — Porri Saltati al Burro (Italian sautéed leeks)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -63,7 +63,7 @@ Purjolök (*Allium ampeloprasum* var. *porrum*) sauterad i panna ger den mest m�
 ---
 
 ### 3. Madhur Jaffrey — Sautéed Leeks with Cumin and Mustard Seeds (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -89,7 +89,7 @@ Purjolök (*Allium ampeloprasum* var. *porrum*) sauterad i panna ger den mest m�
 ---
 
 ### 4. Julia Child — Poireaux à la Crème (French leeks with cream)
-**Source**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
+**Inspired by**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 2 min
 
 **Ingredients**

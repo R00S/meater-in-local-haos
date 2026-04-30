@@ -22,7 +22,7 @@ Det ätliga köttet är svansmuskeln, som drar ihop sig snabbt under värme och 
 ## Source recipes
 
 ### 1. Julia Child — Sautéed Shrimp in Garlic Butter (French classical tradition)
-**Source**: Julia Child, *The Way to Cook* (Alfred A. Knopf, 1989)  
+**Inspired by**: Julia Child, *The Way to Cook* (Alfred A. Knopf, 1989)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 4–5 min · **Rest**: 1 min
 
 **Ingredients**
@@ -50,7 +50,7 @@ Det ätliga köttet är svansmuskeln, som drar ihop sig snabbt under värme och 
 ---
 
 ### 2. Nobu Matsuhisa — Spicy Garlic Sautéed Shrimp (Japanese tradition)
-**Source**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001)  
+**Inspired by**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 3–4 min · **Rest**: 1 min
 
 **Ingredients**
@@ -79,7 +79,7 @@ Det ätliga köttet är svansmuskeln, som drar ihop sig snabbt under värme och 
 ---
 
 ### 3. Yotam Ottolenghi — Prawns with Harissa and Preserved Lemon (Middle Eastern / North African tradition)
-**Source**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
+**Inspired by**: Yotam Ottolenghi and Sami Tamimi, *Jerusalem* (Ebury Press, 2012)  
 **Serves**: 4 · **Prep**: 15 min (+1 h marinade) · **Cook**: 4–5 min · **Rest**: 1 min
 
 **Ingredients**
@@ -105,7 +105,7 @@ Det ätliga köttet är svansmuskeln, som drar ihop sig snabbt under värme och 
 ---
 
 ### 4. Rick Stein — Pan-Fried King Prawns with Ginger and Spring Onion (Cantonese / Chinese tradition)
-**Source**: Rick Stein, *Far Eastern Odyssey* (BBC Books, 2009)  
+**Inspired by**: Rick Stein, *Far Eastern Odyssey* (BBC Books, 2009)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 4–5 min · **Rest**: 1 min
 
 **Ingredients**
@@ -132,7 +132,7 @@ Det ätliga köttet är svansmuskeln, som drar ihop sig snabbt under värme och 
 ---
 
 ### 5. Donna Hay — Chilli and Lime Sautéed Prawns (Australian tradition)
-**Source**: Donna Hay, *Simple Dinners* (HarperCollins Australia, 2011)  
+**Inspired by**: Donna Hay, *Simple Dinners* (HarperCollins Australia, 2011)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 3–4 min · **Rest**: 1 min
 
 **Ingredients**

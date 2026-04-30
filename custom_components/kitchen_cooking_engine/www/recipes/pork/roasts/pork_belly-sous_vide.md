@@ -40,7 +40,7 @@ Sous vide-parametrar: **72–80 °C** i 24–48 timmar; sear sedan snabbt i skri
 ## Source recipes
 
 ### 1. INKBIRD Blog / tastybits.de — Asian-style Pork Belly Sous Vide (75 °C × 24 h)
-**Source**: Jannik Degner, tastybits.de; republished on INKBIRD blog — https://www.inkbird.com/blogs/recipes/schweinebauch-sous-vide-gegart-asian-style (fetched 2026-04-24). German-language recipe. Original at tastybits.de.
+**Inspired by**: Jannik Degner, tastybits.de; republished on INKBIRD blog — https://www.inkbird.com/blogs/recipes/schweinebauch-sous-vide-gegart-asian-style (fetched 2026-04-24). German-language recipe. Original at tastybits.de.
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 24 h sous vide + 15 min broiler · **Rest**: 5 min
 
 **Temperature guidance (from recipe)**:

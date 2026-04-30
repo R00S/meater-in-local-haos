@@ -19,7 +19,7 @@ Broccoli (*Brassica oleracea* var. *italica*) ångad bevarar sin livliga gröna 
 ## Source recipes
 
 ### 1. Harumi Kurihara — Steamed Broccoli with Goma-ae Dressing (Japanese tradition)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 7–8 min · **Rest**: 3 min (cooling)
 
 **Ingredients**
@@ -34,7 +34,7 @@ Broccoli (*Brassica oleracea* var. *italica*) ångad bevarar sin livliga gröna 
 ---
 
 ### 2. Fuchsia Dunlop — Steamed Broccoli with Spicy Sesame Sauce (Chinese tradition)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice* (W. W. Norton, 2012)
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice* (W. W. Norton, 2012)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 7–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -48,7 +48,7 @@ Broccoli (*Brassica oleracea* var. *italica*) ångad bevarar sin livliga gröna 
 ---
 
 ### 3. Julia Child — Brocoli Vapeur au Beurre (French tradition)
-**Source**: Julia Child, *The French Chef Cookbook* (Alfred A. Knopf, 1968)
+**Inspired by**: Julia Child, *The French Chef Cookbook* (Alfred A. Knopf, 1968)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -61,7 +61,7 @@ Broccoli (*Brassica oleracea* var. *italica*) ångad bevarar sin livliga gröna 
 ---
 
 ### 4. Madhur Jaffrey — Steamed Broccoli with Tadka (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 7–8 min · **Rest**: 1 min
 
 **Ingredients**

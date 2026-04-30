@@ -19,7 +19,7 @@ Majs på kolven (*Zea mays*) ugnsrostad i sina skal, eller skalad och ugnsrostad
 ## Source recipes
 
 ### 1. Diana Kennedy — Elotes Asados al Horno (Mexican tradition)
-**Source**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
+**Inspired by**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 30–35 min · **Rest**: 5 min (cooling for handling)
 
 **Ingredients**
@@ -37,7 +37,7 @@ Majs på kolven (*Zea mays*) ugnsrostad i sina skal, eller skalad och ugnsrostad
 ---
 
 ### 2. José Andrés — Maíz Asado con Mantequilla Compuesta (Spanish / American tradition)
-**Source**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
+**Inspired by**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25–30 min (husked) · **Rest**: 3 min
 
 **Ingredients**
@@ -56,7 +56,7 @@ Majs på kolven (*Zea mays*) ugnsrostad i sina skal, eller skalad och ugnsrostad
 ---
 
 ### 3. Madhur Jaffrey — Tandoori Style Bhutta al Oven (Indian tradition)
-**Source**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010); oven adaptation of street-food corn in a tandoor-style preparation.
+**Inspired by**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010); oven adaptation of street-food corn in a tandoor-style preparation.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 25–30 min · **Rest**: 2 min
 
 **Ingredients**
@@ -74,7 +74,7 @@ Majs på kolven (*Zea mays*) ugnsrostad i sina skal, eller skalad och ugnsrostad
 ---
 
 ### 4. Magnus Nilsson — Ugnsstekt Majs (Nordic / Swedish tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)
+**Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 25–30 min · **Rest**: 3 min
 
 **Ingredients**

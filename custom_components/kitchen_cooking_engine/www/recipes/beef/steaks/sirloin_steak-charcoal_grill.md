@@ -22,7 +22,7 @@ Koreanska BBQ-traditioner innehåller tunt skivad entrecôte grillad direkt öve
 ## Source recipes
 
 ### 1. Francis Mallmann — Sirloin over Charcoal Embers (Argentine asado tradition)
-**Source**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
+**Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 12–16 min over embers · **Rest**: 5 min
 
 **Ingredients**
@@ -44,7 +44,7 @@ Koreanska BBQ-traditioner innehåller tunt skivad entrecôte grillad direkt öve
 ---
 
 ### 2. Steven Raichlen — Sirloin over Direct Charcoal (American tradition)
-**Source**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
+**Inspired by**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
 **Serves**: 4 · **Prep**: 10 min (+1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -66,7 +66,7 @@ Koreanska BBQ-traditioner innehåller tunt skivad entrecôte grillad direkt öve
 ---
 
 ### 3. Maangchi — Charcoal-Grilled Galbi / Sirloin (Korean tradition)
-**Source**: Maangchi (Emily Kim), *Maangchi's Real Korean Cooking* (Houghton Mifflin Harcourt, 2015)  
+**Inspired by**: Maangchi (Emily Kim), *Maangchi's Real Korean Cooking* (Houghton Mifflin Harcourt, 2015)  
 **Serves**: 4 · **Prep**: 15 min (+4 h marinade) · **Cook**: 6–8 min · **Rest**: 3 min
 
 **Ingredients**
@@ -87,7 +87,7 @@ Koreanska BBQ-traditioner innehåller tunt skivad entrecôte grillad direkt öve
 ---
 
 ### 4. Lennox Hastie — Sirloin over Australian Ironbark Coals (Australian wood-fire tradition)
-**Source**: Lennox Hastie, *Finding Fire* (Hardie Grant, 2017)  
+**Inspired by**: Lennox Hastie, *Finding Fire* (Hardie Grant, 2017)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 10–14 min · **Rest**: 5 min
 
 **Ingredients**
@@ -107,7 +107,7 @@ Koreanska BBQ-traditioner innehåller tunt skivad entrecôte grillad direkt öve
 ---
 
 ### 5. Bobby Flay — Sirloin with Chipotle Butter over Charcoal (American Southwest tradition)
-**Source**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
+**Inspired by**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**

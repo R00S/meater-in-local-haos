@@ -22,7 +22,7 @@ Kål (*Brassica oleracea* var. *capitata*) bräserad är en av de mest globalt s
 ## Source recipes
 
 ### 1. Nigel Slater — German-Style Red Cabbage with Apple and Cloves (German tradition)
-**Source**: Nigel Slater, *The Kitchen Diaries, Vol. I* (4th Estate / HarperCollins, 2005); Slater explicitly acknowledges this as his interpretation of *Rotkohl*, the German braised red cabbage classic.
+**Inspired by**: Nigel Slater, *The Kitchen Diaries, Vol. I* (4th Estate / HarperCollins, 2005); Slater explicitly acknowledges this as his interpretation of *Rotkohl*, the German braised red cabbage classic.
 **Serves**: 6–8 · **Prep**: 15 min · **Cook**: 1 hr 15 min – 1 hr 30 min · **Rest**: 5 min
 
 **Ingredients**
@@ -49,7 +49,7 @@ Kål (*Brassica oleracea* var. *capitata*) bräserad är en av de mest globalt s
 ---
 
 ### 2. Julia Child — Chou Braisé (French tradition)
-**Source**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. II* (Alfred A. Knopf, 1970)
+**Inspired by**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. II* (Alfred A. Knopf, 1970)
 **Serves**: 6 · **Prep**: 15 min (+ blanching) · **Cook**: 1 hr 30 min – 2 hr · **Rest**: 5 min
 
 **Ingredients**
@@ -75,7 +75,7 @@ Kål (*Brassica oleracea* var. *capitata*) bräserad är en av de mest globalt s
 ---
 
 ### 3. Madhur Jaffrey — Bandh Gobhi Dum (Indian Slow-Braised Cabbage)
-**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)
+**Inspired by**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25–35 min · **Rest**: 3 min
 
 **Ingredients**
@@ -102,7 +102,7 @@ Kål (*Brassica oleracea* var. *capitata*) bräserad är en av de mest globalt s
 ---
 
 ### 4. Fuchsia Dunlop — Hóng Shāo Bǎitài (红烧白菜 — Chinese Red-Braised Cabbage)
-**Source**: Fuchsia Dunlop, *Land of Fish and Rice: Recipes from the Culinary Heart of China* (W. W. Norton, 2016)
+**Inspired by**: Fuchsia Dunlop, *Land of Fish and Rice: Recipes from the Culinary Heart of China* (W. W. Norton, 2016)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 20–25 min · **Rest**: 3 min
 
 **Ingredients**

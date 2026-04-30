@@ -19,7 +19,7 @@ Hel bakad potatis (*Solanum tuberosum*) i airfryern uppnår knaprig, salt yta oc
 ## Source recipes
 
 ### 1. Madhur Jaffrey — Masala Air-Fried Baked Potato (Indian tradition)
-**Source**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010); spiced baked potato adapted for air fryer.
+**Inspired by**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010); spiced baked potato adapted for air fryer.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 38–42 min · **Rest**: 5 min
 
 **Ingredients**
@@ -34,7 +34,7 @@ Hel bakad potatis (*Solanum tuberosum*) i airfryern uppnår knaprig, salt yta oc
 ---
 
 ### 2. Harumi Kurihara — Japanese Air-Fried Potato with Soy Butter (Japanese tradition)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); Japanese butter-soy potato adapted for air fryer.
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); Japanese butter-soy potato adapted for air fryer.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 38–42 min · **Rest**: 5 min
 
 **Ingredients**
@@ -48,7 +48,7 @@ Hel bakad potatis (*Solanum tuberosum*) i airfryern uppnår knaprig, salt yta oc
 ---
 
 ### 3. Deborah Madison — Classic Air-Fried Baked Potato with Soured Cream (American vegetarian tradition)
-**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013); baked potato method adapted for air fryer.
+**Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013); baked potato method adapted for air fryer.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 38–42 min · **Rest**: 5 min
 
 **Ingredients**
@@ -62,7 +62,7 @@ Hel bakad potatis (*Solanum tuberosum*) i airfryern uppnår knaprig, salt yta oc
 ---
 
 ### 4. Yotam Ottolenghi — Air-Fried Potato with Za'atar Labneh (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Jerusalem* (Ebury Press, 2012); spiced baked potato adaptation.
+**Inspired by**: Yotam Ottolenghi, *Jerusalem* (Ebury Press, 2012); spiced baked potato adaptation.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 38–42 min · **Rest**: 5 min
 
 **Ingredients**

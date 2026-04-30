@@ -19,7 +19,7 @@ Ekollon-squash (*Cucurbita pepo* var. *turbinata*) ugnsbakas hel eller halverad 
 ## Source recipes
 
 ### 1. Deborah Madison — Baked Acorn Squash with Brown Sugar and Butter (American vegetarian tradition)
-**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
+**Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 45–55 min · **Rest**: 5 min
 
 **Ingredients**
@@ -34,7 +34,7 @@ Ekollon-squash (*Cucurbita pepo* var. *turbinata*) ugnsbakas hel eller halverad 
 ---
 
 ### 2. Diana Kennedy — Calabaza Asada con Piloncillo (Mexican tradition)
-**Source**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
+**Inspired by**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 45–55 min · **Rest**: 5 min
 
 **Ingredients**
@@ -48,7 +48,7 @@ Ekollon-squash (*Cucurbita pepo* var. *turbinata*) ugnsbakas hel eller halverad 
 ---
 
 ### 3. Najmieh Batmanglij — Kadu Pokhté (Persian Baked Squash with Walnuts)
-**Source**: Najmieh Batmanglij, *Food of Life* (Mage Publishers, 2011)
+**Inspired by**: Najmieh Batmanglij, *Food of Life* (Mage Publishers, 2011)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 45–55 min · **Rest**: 5 min
 
 **Ingredients**
@@ -62,7 +62,7 @@ Ekollon-squash (*Cucurbita pepo* var. *turbinata*) ugnsbakas hel eller halverad 
 ---
 
 ### 4. Claudia Roden — Baked Squash with Harissa (North African tradition)
-**Source**: Claudia Roden, *Arabesque* (Alfred A. Knopf, 2005)
+**Inspired by**: Claudia Roden, *Arabesque* (Alfred A. Knopf, 2005)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 45–55 min · **Rest**: 5 min
 
 **Ingredients**

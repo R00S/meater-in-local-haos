@@ -38,7 +38,7 @@ Bisonburgerbiffar är gjorda av malet bisonkött, vanligtvis från skulder, fran
 
 ### 1. BBC Good Food — Barbecue Beef Burger (British tradition)
 
-**Source**: Good Food magazine, [Barbecue beef burger](https://www.bbcgoodfood.com/recipes/barbecue-beef-burger) (fetched 2026-06-08)
+**Inspired by**: Good Food magazine, [Barbecue beef burger](https://www.bbcgoodfood.com/recipes/barbecue-beef-burger) (fetched 2026-06-08)
 **Serves**: 4 · **Prep**: 10 min + 30 min chilling · **Cook**: 9–10 min · **Rest**: 2–3 min
 
 **Ingredients**
@@ -67,7 +67,7 @@ Bisonburgerbiffar är gjorda av malet bisonkött, vanligtvis från skulder, fran
 
 ### 2. Madensverden.dk — Saftige Burgerbøffer (Danish tradition)
 
-**Source**: Holger Rørby Madsen, [Saftige burgerbøffer](https://madensverden.dk/saftige-burgerboeffer/) (fetched 2026-06-08)
+**Inspired by**: Holger Rørby Madsen, [Saftige burgerbøffer](https://madensverden.dk/saftige-burgerboeffer/) (fetched 2026-06-08)
 **Serves**: 4 (8 patties of 100 g each) · **Prep**: 10 min · **Cook**: 6 min total · **Rest**: 2 min
 
 **Ingredients**
@@ -95,7 +95,7 @@ Bisonburgerbiffar är gjorda av malet bisonkött, vanligtvis från skulder, fran
 
 ### 3. Chefkoch.de — Der Bisonburger (German tradition)
 
-**Source**: kkellings, [Der Bisonburger](https://www.chefkoch.de/rezepte/3007371453624664/Der-Bisonburger.html) (fetched 2026-06-08)
+**Inspired by**: kkellings, [Der Bisonburger](https://www.chefkoch.de/rezepte/3007371453624664/Der-Bisonburger.html) (fetched 2026-06-08)
 **Serves**: 1 · **Prep**: 30 min · **Cook**: 10 min · **Rest**: 4 min
 
 **Ingredients**
@@ -126,7 +126,7 @@ Bisonburgerbiffar är gjorda av malet bisonkött, vanligtvis från skulder, fran
 
 ### 4. RecipeTin Eats — Hamburger Recipe (Australian tradition)
 
-**Source**: Nagi, [Hamburger recipe](https://www.recipetineats.com/hamburger-recipe/) (fetched 2026-06-08)
+**Inspired by**: Nagi, [Hamburger recipe](https://www.recipetineats.com/hamburger-recipe/) (fetched 2026-06-08)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min · **Rest**: 2–3 min
 
 **Ingredients**

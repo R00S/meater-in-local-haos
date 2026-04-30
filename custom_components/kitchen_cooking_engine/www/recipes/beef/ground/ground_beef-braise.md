@@ -22,7 +22,7 @@ Malet nötkött (köttfärs) framställs av nötmalning, vanligast från fransys
 ## Source recipes
 
 ### 1. Marcella Hazan — Ragù alla Bolognese (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 3.5–4 hr · **Rest**: 10 min
 
 **Ingredients**
@@ -52,7 +52,7 @@ Malet nötkött (köttfärs) framställs av nötmalning, vanligast från fransys
 ---
 
 ### 2. Tina Nordström — Köttfärsgryta med rotsaker (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
+**Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 1.5 hr · **Rest**: 10 min
 
 **Ingredients**
@@ -83,7 +83,7 @@ Malet nötkött (köttfärs) framställs av nötmalning, vanligast från fransys
 ---
 
 ### 3. Madhur Jaffrey — Aloo Keema (Pakistani / North Indian tradition)
-**Source**: Madhur Jaffrey, *A Taste of India* (Pavilion Books, 1985)  
+**Inspired by**: Madhur Jaffrey, *A Taste of India* (Pavilion Books, 1985)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 1 hr · **Rest**: 5 min
 
 **Ingredients**
@@ -115,7 +115,7 @@ Malet nötkött (köttfärs) framställs av nötmalning, vanligast från fransys
 ---
 
 ### 4. Diana Henry — Picadillo (Cuban-Mexican tradition)
-**Source**: Diana Henry, *Crazy Water, Pickled Lemons* (Mitchell Beazley, 2002) and her *Telegraph* recipe column at telegraph.co.uk/food-and-drink  
+**Inspired by**: Diana Henry, *Crazy Water, Pickled Lemons* (Mitchell Beazley, 2002) and her *Telegraph* recipe column at telegraph.co.uk/food-and-drink  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 45 min · **Rest**: 5 min
 
 **Ingredients**

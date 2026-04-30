@@ -28,7 +28,7 @@ Ribeye-biffen skärs från longissimus dorsi i revbensprimalen (revben 6–12), 
 ## Source recipes
 
 ### 1. Madens Verden — Ribeye sous vide (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ribeye-sous-vide/ (fetched 2026-04-24). *Danish sous vide guide: bath at 62 °C × 2 hours for a perfect medium steak, finished with a butter sear.*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ribeye-sous-vide/ (fetched 2026-04-24). *Danish sous vide guide: bath at 62 °C × 2 hours for a perfect medium steak, finished with a butter sear.*
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 2 hr bath + 2 min sear
 
 **Temperature guidance (from recipe)**: "Sæt temperaturen til 62 grader. Det giver en ribeye, der er medium." 57 °C for more rare. 65 °C for well done. All × 2 hours.
@@ -55,7 +55,7 @@ Ribeye-biffen skärs från longissimus dorsi i revbensprimalen (revben 6–12), 
 ---
 
 ### 2. GialloZafferano Blog — La Bistecca Perfetta Sousvide (Italian tradition)
-**Source**: Il Mattino Ha L'Uovo in Bocca, GialloZafferano Blog; https://blog.giallozafferano.it/ilmattinohaluovoinbocca/la-bistecca-perfetta-sousvide-cottura-sottovuoto/ (fetched 2026-04-24). *Italian sous vide guide: 55 °C × 2 hours for medium-rare, then Maillard sear in cast iron. "A steak at least ten levels above any you have ever eaten."*
+**Inspired by**: Il Mattino Ha L'Uovo in Bocca, GialloZafferano Blog; https://blog.giallozafferano.it/ilmattinohaluovoinbocca/la-bistecca-perfetta-sousvide-cottura-sottovuoto/ (fetched 2026-04-24). *Italian sous vide guide: 55 °C × 2 hours for medium-rare, then Maillard sear in cast iron. "A steak at least ten levels above any you have ever eaten."*
 **Serves**: 1–2 · **Prep**: 10 min · **Cook**: 2 hr bath + 2 min sear
 
 **Temperature guidance (from recipe)**: "Imposta la temperatura a 55 gradi per una cottura medium-rare." (Set the temperature to 55 °C for medium-rare.) 2 hours minimum. Sear 60 seconds per side in very hot cast iron.
@@ -83,7 +83,7 @@ Ribeye-biffen skärs från longissimus dorsi i revbensprimalen (revben 6–12), 
 ---
 
 ### 3. ichkoche.at — Hochrückensteak mit Sous Vide (Austrian tradition)
-**Source**: lsfabian, ichkoche.at; https://www.ichkoche.at/hochrueckensteak-mit-gemuese-rezept-220825 (fetched 2026-04-24). *Austrian ribeye (Hochrückensteak) — overnight butter-rosemary marinade in the vacuum bag, 60 °C water bath, then sear and Cognac flambé. 53 user ratings.*
+**Inspired by**: lsfabian, ichkoche.at; https://www.ichkoche.at/hochrueckensteak-mit-gemuese-rezept-220825 (fetched 2026-04-24). *Austrian ribeye (Hochrückensteak) — overnight butter-rosemary marinade in the vacuum bag, 60 °C water bath, then sear and Cognac flambé. 53 user ratings.*
 **Serves**: 2 · **Prep**: overnight marinade · **Cook**: approx. 1 hr bath (10 min per cm thickness) + sear
 
 **Temperature guidance (from recipe)**: "Wasser auf 60 Grad erhitzen. Garprozess dauert je nach Dicke des Fleisches — pro 1 cm 10 Minuten." (Heat water to 60 °C. Cooking time: 10 minutes per 1 cm of meat thickness.)

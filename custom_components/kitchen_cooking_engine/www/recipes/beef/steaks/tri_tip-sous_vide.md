@@ -27,7 +27,7 @@ Tri-tip (även känd som triangelbiff, Santa Maria-biff eller *culotte de bœuf*
 ## Source recipes
 
 ### 1. Madens Verden — Ball tip sous vide (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ball-tip/ (fetched 2026-04-24). *"Cirka tre timer ved 56 grader, og du kan selvfølgelig med fordel krydre balltip'en, inden den pakkes ind."*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ball-tip/ (fetched 2026-04-24). *"Cirka tre timer ved 56 grader, og du kan selvfølgelig med fordel krydre balltip'en, inden den pakkes ind."*
 **Serves**: 4 · **Cook**: 3 hr bath + 2–4 min sear
 
 *Translation: "About three hours at 56 °C; you can season the ball tip [tri-tip] before packing it in. After the three hours, brown it at high heat on all sides for a short time — either in a hot pan or over direct heat on a hot grill."*
@@ -54,7 +54,7 @@ Tri-tip (även känd som triangelbiff, Santa Maria-biff eller *culotte de bœuf*
 ---
 
 ### 2. ichkoche.at — Hochrückensteak mit Sous Vide (adapted for tri-tip) (Austrian tradition)
-**Source**: lsfabian, ichkoche.at; https://www.ichkoche.at/hochrueckensteak-mit-gemuese-rezept-220825 (fetched 2026-04-24). *Overnight butter-rosemary-garlic marinade in vacuum bag; 60 °C water bath × 10 min per cm. For a 5 cm thick tri-tip: 50 minutes minimum; 3 hours for full tenderness.*
+**Inspired by**: lsfabian, ichkoche.at; https://www.ichkoche.at/hochrueckensteak-mit-gemuese-rezept-220825 (fetched 2026-04-24). *Overnight butter-rosemary-garlic marinade in vacuum bag; 60 °C water bath × 10 min per cm. For a 5 cm thick tri-tip: 50 minutes minimum; 3 hours for full tenderness.*
 **Serves**: 2–3 · **Cook**: 3 hr bath + sear
 
 **Temperature guidance (from recipe adapted)**: 60 °C × 10 min/cm thickness. For a 5 cm tri-tip: 50 min minimum; in practice 3 hours gives best tenderness. Sear in hot pan then optional Cognac flambé.
@@ -82,7 +82,7 @@ Tri-tip (även känd som triangelbiff, Santa Maria-biff eller *culotte de bœuf*
 ---
 
 ### 3. GialloZafferano Blog — La Bistecca Perfetta Sousvide (Italian reference, adapted for tri-tip) (Italian tradition)
-**Source**: Il Mattino Ha L'Uovo in Bocca, GialloZafferano Blog; https://blog.giallozafferano.it/ilmattinohaluovoinbocca/la-bistecca-perfetta-sousvide-cottura-sottovuoto/ (fetched 2026-04-24). *55 °C × 2+ hours, then 60-second cast-iron sear per side. For tri-tip, extend bath to 3 hours. Maillard sear after is essential — "without the golden crust you're just boiling it."*
+**Inspired by**: Il Mattino Ha L'Uovo in Bocca, GialloZafferano Blog; https://blog.giallozafferano.it/ilmattinohaluovoinbocca/la-bistecca-perfetta-sousvide-cottura-sottovuoto/ (fetched 2026-04-24). *55 °C × 2+ hours, then 60-second cast-iron sear per side. For tri-tip, extend bath to 3 hours. Maillard sear after is essential — "without the golden crust you're just boiling it."*
 **Serves**: 2 · **Cook**: 3 hr bath + 2 min sear
 
 **Temperature guidance (from recipe)**: "Imposta la temperatura a 55 gradi per una cottura medium-rare." (Set the temperature to 55 °C for medium-rare.) Sear 60 seconds per side at screaming hot in cast iron.

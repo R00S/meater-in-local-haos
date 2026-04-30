@@ -19,7 +19,7 @@ Sparris (*Asparagus officinalis*) ångad är den mest smakbevarande metoden: spa
 ## Source recipes
 
 ### 1. Julia Child — Asperges à la Vapeur, Sauce Hollandaise (French tradition)
-**Source**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
+**Inspired by**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Alfred A. Knopf, 1961)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 6–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -38,7 +38,7 @@ Sparris (*Asparagus officinalis*) ångad är den mest smakbevarande metoden: spa
 ---
 
 ### 2. Fuchsia Dunlop — Steamed Asparagus with Sichuan Spicy Sesame Dressing (Chinese tradition)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 5–7 min · **Rest**: 2 min
 
 **Ingredients**
@@ -55,7 +55,7 @@ Sparris (*Asparagus officinalis*) ångad är den mest smakbevarande metoden: spa
 ---
 
 ### 3. Shizuo Tsuji — Steamered Asparagus with Wafu Dressing (Japanese tradition)
-**Source**: Shizuo Tsuji, *Japanese Cooking: A Simple Art* (Kodansha International, 1980)
+**Inspired by**: Shizuo Tsuji, *Japanese Cooking: A Simple Art* (Kodansha International, 1980)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 5–7 min · **Rest**: 2 min
 
 **Ingredients**
@@ -71,7 +71,7 @@ Sparris (*Asparagus officinalis*) ångad är den mest smakbevarande metoden: spa
 ---
 
 ### 4. Marcella Hazan — Asparagi Conditi con Parmigiano (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**

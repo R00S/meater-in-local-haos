@@ -24,7 +24,7 @@ Vid 150–160 °C når bringan måltemperaturen (90–96 °C för mörhet som fa
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Oven-Braised Brisket
-**Source**: https://www.seriouseats.com/braised-brisket-recipe  
+**Inspired by**: https://www.seriouseats.com/braised-brisket-recipe  
 **Serves**: 8–10 · **Prep**: 20 min (+overnight dry-brine if time allows) · **Cook**: 6–8 hr · **Rest**: 30 min
 
 **Ingredients**
@@ -54,7 +54,7 @@ Vid 150–160 °C når bringan måltemperaturen (90–96 °C för mörhet som fa
 ---
 
 ### 2. Joan Nathan — Ashkenazi Passover Brisket
-**Source**: Joan Nathan, *Jewish Cooking in America* (Knopf, 1994); also published at nytimes.com/recipes  
+**Inspired by**: Joan Nathan, *Jewish Cooking in America* (Knopf, 1994); also published at nytimes.com/recipes  
 **Serves**: 8 · **Prep**: 30 min · **Cook**: 3–4 hr · **Rest**: 20 min
 
 **Ingredients**
@@ -84,7 +84,7 @@ Vid 150–160 °C når bringan måltemperaturen (90–96 °C för mörhet som fa
 ---
 
 ### 3. Felicity Cloake — Slow-Roast Brisket (British tradition)
-**Source**: Felicity Cloake, "How to cook the perfect brisket", *The Guardian*, theguardian.com/food  
+**Inspired by**: Felicity Cloake, "How to cook the perfect brisket", *The Guardian*, theguardian.com/food  
 **Serves**: 6–8 · **Prep**: 15 min · **Cook**: 4–5 hr · **Rest**: 30 min
 
 **Ingredients**
@@ -115,7 +115,7 @@ Vid 150–160 °C når bringan måltemperaturen (90–96 °C för mörhet som fa
 ---
 
 ### 4. Maangchi — *Kkori-gomtang* Inspired Oven-Braised Brisket (Korean tradition)
-**Source**: Maangchi, *Maangchi's Real Korean Cooking* (Houghton Mifflin Harcourt, 2015); maangchi.com/recipe/  
+**Inspired by**: Maangchi, *Maangchi's Real Korean Cooking* (Houghton Mifflin Harcourt, 2015); maangchi.com/recipe/  
 **Serves**: 6 · **Prep**: 20 min (+1 hr soaking) · **Cook**: 3.5–4 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -144,7 +144,7 @@ Vid 150–160 °C når bringan måltemperaturen (90–96 °C för mörhet som fa
 ---
 
 ### 5. Yotam Ottolenghi — Middle Eastern Oven-Braised Brisket
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk  
+**Inspired by**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk  
 **Serves**: 6–8 · **Prep**: 25 min (+2 hr marinating) · **Cook**: 4–5 hr · **Rest**: 20 min
 
 **Ingredients**

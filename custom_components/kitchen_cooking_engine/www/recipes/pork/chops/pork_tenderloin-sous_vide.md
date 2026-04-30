@@ -29,7 +29,7 @@ Sous vide-parametrar: **58–60 °C** i 1–2 timmar (hel filé); sear sedan sna
 ## Source recipes
 
 ### 1. Madens Verden — Svinemørbrad sous vide (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/svinemoerbrad-sous-vide/ (fetched 2026-04-24). *Classic Danish sous vide method: 58 °C × 1.5 hours, then grill or pan finish with BBQ sauce. "A fantastic way to make tenderloin."*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/svinemoerbrad-sous-vide/ (fetched 2026-04-24). *Classic Danish sous vide method: 58 °C × 1.5 hours, then grill or pan finish with BBQ sauce. "A fantastic way to make tenderloin."*
 **Serves**: 4 · **Cook**: 1.5 hr bath + 5 min sear
 
 *Translation: "Set your sous vide to 58 °C. Set the time to 1 hour 30 minutes. This is the perfect way to cook pork tenderloin sous vide."*
@@ -57,7 +57,7 @@ Sous vide-parametrar: **58–60 °C** i 1–2 timmar (hel filé); sear sedan sna
 ---
 
 ### 2. ichkoche.at — Schweinefilet sous vide (Austrian tradition, adapted)
-**Source**: ichkoche.at / based on Schweinefilet im Speckmantel recipe; https://www.ichkoche.at/schweinefilet-im-speckmantel-rezept-13540 (fetched 2026-04-24). *The Austrian method adapted to sous vide: vacuum the tenderloin with shallots, butter, thyme; 58–60 °C × 1.5 hours; then brown in pan 1 min per side; deglaze with beef stock for sauce.*
+**Inspired by**: ichkoche.at / based on Schweinefilet im Speckmantel recipe; https://www.ichkoche.at/schweinefilet-im-speckmantel-rezept-13540 (fetched 2026-04-24). *The Austrian method adapted to sous vide: vacuum the tenderloin with shallots, butter, thyme; 58–60 °C × 1.5 hours; then brown in pan 1 min per side; deglaze with beef stock for sauce.*
 **Serves**: 2–3 · **Cook**: 1.5 hr bath + 5 min finish
 
 **Temperature guidance**: 58–60 °C × 1.5 hours, pan-seared finish. Core after sear: 60–63 °C.
@@ -85,7 +85,7 @@ Sous vide-parametrar: **58–60 °C** i 1–2 timmar (hel filé); sear sedan sna
 ---
 
 ### 3. GialloZafferano blog — Filetto di maiale sous vide (Italian tradition)
-**Source**: GialloZafferano Blog; https://blog.giallozafferano.it/ilmattinohaluovoinbocca/la-bistecca-perfetta-sousvide-cottura-sottovuoto/ (referenced 2026-04-24). *Italian sous vide adaptation for pork fillet: 60 °C × 1.5–2 hr, then cast-iron sear 60 seconds per side. No resting needed.*
+**Inspired by**: GialloZafferano Blog; https://blog.giallozafferano.it/ilmattinohaluovoinbocca/la-bistecca-perfetta-sousvide-cottura-sottovuoto/ (referenced 2026-04-24). *Italian sous vide adaptation for pork fillet: 60 °C × 1.5–2 hr, then cast-iron sear 60 seconds per side. No resting needed.*
 **Serves**: 2 · **Cook**: 1.5–2 hr bath + 2 min sear
 
 **Temperature guidance**: "Set temperature to 60 °C" for a rosy, juicy pork tenderloin. 1.5–2 hours. Sear 60 seconds per side in screaming hot cast iron with seed oil.

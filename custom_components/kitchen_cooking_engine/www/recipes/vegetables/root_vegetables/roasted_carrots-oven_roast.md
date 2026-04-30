@@ -19,7 +19,7 @@ Morötter (*Daucus carota*) ugnsrostade vid 200–220 °C utvecklar intensivt ka
 ## Source recipes
 
 ### 1. Claudia Roden — Carottes Rôties à la Marocaine (Moroccan tradition)
-**Source**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey and Lebanon* (Alfred A. Knopf, 2005)
+**Inspired by**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey and Lebanon* (Alfred A. Knopf, 2005)
 **Serves**: 4–6 · **Prep**: 15 min · **Cook**: 30–35 min · **Rest**: 5 min
 
 **Ingredients**
@@ -34,7 +34,7 @@ Morötter (*Daucus carota*) ugnsrostade vid 200–220 °C utvecklar intensivt ka
 ---
 
 ### 2. Madhur Jaffrey — Gajar Roast (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 28–32 min · **Rest**: 3 min
 
 **Ingredients**
@@ -48,7 +48,7 @@ Morötter (*Daucus carota*) ugnsrostade vid 200–220 °C utvecklar intensivt ka
 ---
 
 ### 3. Yotam Ottolenghi — Roasted Carrots with Harissa and Yoghurt (Israeli / Middle Eastern tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 30–35 min · **Rest**: 5 min
 
 **Ingredients**
@@ -63,7 +63,7 @@ Morötter (*Daucus carota*) ugnsrostade vid 200–220 °C utvecklar intensivt ka
 ---
 
 ### 4. Marcella Hazan — Carote Arrosto con Erbe e Aglio (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 28–32 min · **Rest**: 3 min
 
 **Ingredients**

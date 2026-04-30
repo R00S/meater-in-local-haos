@@ -19,7 +19,7 @@ Spagetti-squash (*Cucurbita pepo*) bakas hel eller halverad vid 180–200 °C ti
 ## Source recipes
 
 ### 1. Deborah Madison — Baked Spaghetti Squash with Brown Butter and Parmesan (American vegetarian tradition)
-**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
+**Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 40–50 min · **Rest**: 5 min
 
 **Ingredients**
@@ -33,7 +33,7 @@ Spagetti-squash (*Cucurbita pepo*) bakas hel eller halverad vid 180–200 °C ti
 ---
 
 ### 2. Marcella Hazan — Zucca Spaghetti al Forno (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 40–50 min · **Rest**: 5 min
 
 **Ingredients**
@@ -47,7 +47,7 @@ Spagetti-squash (*Cucurbita pepo*) bakas hel eller halverad vid 180–200 °C ti
 ---
 
 ### 3. Diana Kennedy — Calabaza Espagueti Horneada (Mexican tradition)
-**Source**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
+**Inspired by**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 40–50 min · **Rest**: 5 min
 
 **Ingredients**
@@ -61,7 +61,7 @@ Spagetti-squash (*Cucurbita pepo*) bakas hel eller halverad vid 180–200 °C ti
 ---
 
 ### 4. Yotam Ottolenghi — Baked Spaghetti Squash with Tahini and Chilli (Israeli / Middle Eastern tradition)
-**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
+**Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 40–50 min · **Rest**: 5 min
 
 **Ingredients**

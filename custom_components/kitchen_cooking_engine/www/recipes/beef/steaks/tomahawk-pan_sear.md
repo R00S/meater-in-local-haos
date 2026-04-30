@@ -26,7 +26,7 @@ Målinterna temperaturer:
 ## Source recipes
 
 ### 1. ichkoche.at — Tomahawk Steak (Austrian tradition)
-**Source**: ichkoche.at; https://www.ichkoche.at/tomahawk-steak-rezept-241334 (fetched 2026-04-24). *Austrian method: thin oil coat, sear 90–120 seconds per side in very hot pan, finish in 140 °C oven to core temperature. 74 user ratings.*
+**Inspired by**: ichkoche.at; https://www.ichkoche.at/tomahawk-steak-rezept-241334 (fetched 2026-04-24). *Austrian method: thin oil coat, sear 90–120 seconds per side in very hot pan, finish in 140 °C oven to core temperature. 74 user ratings.*
 **Serves**: 2 · **Prep**: 45 min (tempering) · **Cook**: 35–50 min total
 
 **Temperature guidance (from recipe)**: "Medium 55–57 °C, Done 65 °C. Bei dicken Steaks 30–45 Minuten." (Medium 55–57 °C; well done 65 °C. For thick steaks 30–45 minutes in oven.)
@@ -50,7 +50,7 @@ Målinterna temperaturer:
 ---
 
 ### 2. Chefkoch.de — Tomahawk-Steak im Backofen, rückwärts gegart (German tradition)
-**Source**: 0602, Chefkoch.de; https://www.chefkoch.de/rezepte/3007701453644532/Tomahawk-Steak-im-Backofen.html (fetched 2026-04-24). *The true reverse: oven 90 minutes at 90 °C to medium, then sear 1.5–2 minutes per side in screaming hot pan. 4.9/5 stars.*
+**Inspired by**: 0602, Chefkoch.de; https://www.chefkoch.de/rezepte/3007701453644532/Tomahawk-Steak-im-Backofen.html (fetched 2026-04-24). *The true reverse: oven 90 minutes at 90 °C to medium, then sear 1.5–2 minutes per side in screaming hot pan. 4.9/5 stars.*
 **Serves**: 2 · **Cook**: 1 hr 50 min total
 
 **Temperature guidance (from recipe)**: 90 minutes at 90 °C oven = medium doneness (palm test: thumb to middle finger). Sear 1.5–2 min per side in very hot pan after.
@@ -74,7 +74,7 @@ Målinterna temperaturer:
 ---
 
 ### 3. RecipeTin Eats — Tomahawk Steak (finishing method without BBQ) (Australian tradition)
-**Source**: Nagi Maehashi & JB, RecipeTin Eats; https://www.recipetineats.com/tomahawk-steak/ (fetched 2026-04-24). *No-BBQ option: low oven first, then oven grill/broiler for sear. Same temperatures as the BBQ version.*
+**Inspired by**: Nagi Maehashi & JB, RecipeTin Eats; https://www.recipetineats.com/tomahawk-steak/ (fetched 2026-04-24). *No-BBQ option: low oven first, then oven grill/broiler for sear. Same temperatures as the BBQ version.*
 **Serves**: 2–3 · **Cook**: 40–45 min oven + 8–10 min broiler
 
 **Temperature guidance (from recipe)**: Oven 140 °C (fan 120 °C) to 50 °C internal. Broil 10 cm from grill element 4–5 minutes per side. Final rest: 57 °C (135 °F).

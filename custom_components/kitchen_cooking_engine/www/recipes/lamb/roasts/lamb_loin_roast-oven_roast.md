@@ -35,7 +35,7 @@ Lammryggstek är den benfria, cylindriska muskeln borttagen från sadeln (avsnit
 ## Source recipes
 
 ### 1. Paul Heathcote / Great British Chefs — Best-end of Lamb 'Provençale herbs'
-**Source**: https://www.greatbritishchefs.com/recipes/lamb-loin-recipe-provencale-herbs  
+**Inspired by**: https://www.greatbritishchefs.com/recipes/lamb-loin-recipe-provencale-herbs  
 **Author**: Paul Heathcote (two Michelin stars) · **Published**: 2015  
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 10–12 min · **Rest**: 10 min
 
@@ -62,7 +62,7 @@ Lammryggstek är den benfria, cylindriska muskeln borttagen från sadeln (avsnit
 ---
 
 ### 2. Gourmet Traveller (Emma Knowles & Vanessa Austin) — Roast Rolled Lamb Loin with Anchovies and Rosemary
-**Source**: https://www.gourmettraveller.com.au/recipe/mains/roast-rolled-lamb-loin-with-anchovies-and-rosemary-12579/  
+**Inspired by**: https://www.gourmettraveller.com.au/recipe/mains/roast-rolled-lamb-loin-with-anchovies-and-rosemary-12579/  
 **Cuisine**: Modern Australian · **Serves**: 6 · **Prep**: 30 min + 30 min marinate · **Cook**: 50 min – 1 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -95,7 +95,7 @@ Lammryggstek är den benfria, cylindriska muskeln borttagen från sadeln (avsnit
 ---
 
 ### 3. ICA — Lammstek med rosmarin (Rosemary Lamb Roast)
-**Source**: https://www.ica.se/recept/lammstek-med-rosmarin-727828/  
+**Inspired by**: https://www.ica.se/recept/lammstek-med-rosmarin-727828/  
 **Cuisine**: Swedish · **Serves**: 4–6 · **Prep**: 20 min · **Cook**: 1 hr · **Rest**: 10 min
 
 **Note**: ICA labels this *lammstek* (lamb roast) — the recipe uses a 1 kg *urbenad lammstek* (boneless lamb roast), consistent with a boneless loin roast or part of the saddle, tied with kitchen string.

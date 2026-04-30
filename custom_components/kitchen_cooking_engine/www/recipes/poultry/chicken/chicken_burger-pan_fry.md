@@ -35,7 +35,7 @@ Pannsteka vid medel-hög värme, 4–5 minuter per sida, med lock för att fång
 ## Source recipes
 
 ### 1. Jessica Gavin — Turkey Burgers (adapted for ground chicken pan-fry)
-**Source**: Jessica Gavin, jessicagavin.com; https://www.jessicagavin.com/turkey-burgers/ (fetched 2025-07-15).
+**Inspired by**: Jessica Gavin, jessicagavin.com; https://www.jessicagavin.com/turkey-burgers/ (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 15 min + 30 min chill · **Cook**: 10–12 min · **Rest**: 3 min
 
 **Temperature guidance**:
@@ -72,7 +72,7 @@ Pannsteka vid medel-hög värme, 4–5 minuter per sida, med lock för att fång
 ---
 
 ### 2. Natasha's Kitchen — Chicken Meatballs (ground chicken pan technique reference)
-**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/chicken-meatballs/ (fetched 2025-07-15).
+**Inspired by**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/chicken-meatballs/ (fetched 2025-07-15).
 **Serves**: 4–6 · **Prep**: 20 min · **Cook**: 7 min · **Rest**: 2 min
 
 **Temperature guidance**:
@@ -105,7 +105,7 @@ Pannsteka vid medel-hög värme, 4–5 minuter per sida, med lock för att fång
 ---
 
 ### 3. BBC Good Food — Fully Loaded Cajun Chicken Burgers
-**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/fully-loaded-cajun-chicken-burgers (archived: https://web.archive.org/web/20240916023446/https://www.bbcgoodfood.com/recipes/fully-loaded-cajun-chicken-burgers, fetched 2026-04-24).
+**Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/fully-loaded-cajun-chicken-burgers (archived: https://web.archive.org/web/20240916023446/https://www.bbcgoodfood.com/recipes/fully-loaded-cajun-chicken-burgers, fetched 2026-04-24).
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 15 min
 
 **Temperature guidance**:

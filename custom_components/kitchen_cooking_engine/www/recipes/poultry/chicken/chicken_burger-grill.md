@@ -35,7 +35,7 @@ Tillaga alltid malet kyckling till 74 °C (165 °F) internt. Innertemperatur: **
 ## Source recipes
 
 ### 1. Skinnytaste — Grilled Turkey / Chicken Cheeseburger (Juicy Lucy)
-**Source**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/turkey-burgers/ (fetched 2025-07-15).
+**Inspired by**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/turkey-burgers/ (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 10 min + 30 min chill · **Cook**: 12 min · **Rest**: 3 min
 
 **Temperature guidance**:
@@ -66,7 +66,7 @@ Tillaga alltid malet kyckling till 74 °C (165 °F) internt. Innertemperatur: **
 ---
 
 ### 2. Natasha's Kitchen — BBQ Chicken Thighs Technique (adapted for burgers)
-**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/juicy-barbecued-chicken-thighs-recipe/ (fetched 2025-07-15).
+**Inspired by**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/juicy-barbecued-chicken-thighs-recipe/ (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 10 min · **Cook**: ~24–30 min · **Rest**: 5–10 min
 
 **Temperature guidance**:
@@ -96,7 +96,7 @@ Tillaga alltid malet kyckling till 74 °C (165 °F) internt. Innertemperatur: **
 
 ### 3. BBC Good Food — Cajun Chicken Burgers
 
-**Source**: Barney Desmazery, BBC Good Food magazine (February 2009); https://www.bbcgoodfood.com/recipes/fully-loaded-cajun-chicken-burgers (archived: https://web.archive.org/web/20240916023446/https://www.bbcgoodfood.com/recipes/fully-loaded-cajun-chicken-burgers, fetched 2026-04-24).
+**Inspired by**: Barney Desmazery, BBC Good Food magazine (February 2009); https://www.bbcgoodfood.com/recipes/fully-loaded-cajun-chicken-burgers (archived: https://web.archive.org/web/20240916023446/https://www.bbcgoodfood.com/recipes/fully-loaded-cajun-chicken-burgers, fetched 2026-04-24).
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 15 min
 
 **Temperature guidance**:

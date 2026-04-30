@@ -22,7 +22,7 @@ Stekning av lever i panna är den klassiska europeiska beredningen — och den k
 ## Source recipes
 
 ### 1. Marcella Hazan — Fegato di Manzo alla Veneziana (Venetian Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
 **Serves**: 4 · **Prep**: 10 min (+ 1 hr milk soak) · **Cook**: 8–10 min · **Rest**: 1 min
 
 **Ingredients**
@@ -48,7 +48,7 @@ Stekning av lever i panna är den klassiska europeiska beredningen — och den k
 ---
 
 ### 2. Diana Henry — Devilled Calf's Liver (modern British tradition)
-**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015) and her *Telegraph* column at telegraph.co.uk/food-and-drink  
+**Inspired by**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015) and her *Telegraph* column at telegraph.co.uk/food-and-drink  
 **Serves**: 4 · **Prep**: 10 min (+ 30 min milk soak) · **Cook**: 6 min · **Rest**: 1 min
 
 **Ingredients**
@@ -77,7 +77,7 @@ Stekning av lever i panna är den klassiska europeiska beredningen — och den k
 ---
 
 ### 3. Madhur Jaffrey — Kaleji Masala (North Indian tradition)
-**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)  
+**Inspired by**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min · **Rest**: 1 min
 
 **Ingredients**
@@ -109,7 +109,7 @@ Stekning av lever i panna är den klassiska europeiska beredningen — och den k
 ---
 
 ### 4. Tina Nordström — Stekt Lever med Lök (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
+**Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 4 · **Prep**: 10 min (+ 30 min milk soak) · **Cook**: 7 min · **Rest**: 1 min
 
 **Ingredients**
@@ -137,7 +137,7 @@ Stekning av lever i panna är den klassiska europeiska beredningen — och den k
 ---
 
 ### 5. Imma Adamu — Beef Liver and Onions (West African / Afro-Caribbean tradition)
-**Source**: Imma Adamu, AfricanBites; https://www.africanbites.com/beef-liver-onions/ (fetched 2026-04-28). Originally published April 2017, updated 2025. Author is West African (Nigerian).
+**Inspired by**: Imma Adamu, AfricanBites; https://www.africanbites.com/beef-liver-onions/ (fetched 2026-04-28). Originally published April 2017, updated 2025. Author is West African (Nigerian).
 **Serves**: 4 · **Prep**: 2 hr (buttermilk soak) + 15 min active · **Cook**: 25–30 min · **Rest**: 2 min
 **Culinary tradition**: West African / Afro-Caribbean (Group C)
 **Technique note**: Breaded and pan-fried in a cast-iron skillet with Creole seasoning — reflecting the African diaspora fusion where West African technique meets Creole/Caribbean seasoning. Served with caramelised onions and optional tomatoes, over rice. Soaking in buttermilk (rather than milk) is a West African/Southern American variation of the European milk-soak technique. No probe temperature stated; visual doneness: "a hint of pink left on the inside", equivalent to ~62–65°C.

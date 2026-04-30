@@ -19,7 +19,7 @@ Zucchini (*Cucurbita pepo*) skivad i 1 cm rundlar, halvmånar eller stavar är e
 ## Source recipes
 
 ### 1. Fuchsia Dunlop — Stir-Fried Courgette with Black Bean Sauce (Chinese Sichuan tradition)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice* (Bloomsbury, 2012)
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice* (Bloomsbury, 2012)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 5–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -33,7 +33,7 @@ Zucchini (*Cucurbita pepo*) skivad i 1 cm rundlar, halvmånar eller stavar är e
 ---
 
 ### 2. Julia Child — Courgettes Sautées au Beurre (French tradition)
-**Source**: Julia Child, *Mastering the Art of French Cooking, Vol. 2* (Alfred A. Knopf, 1970)
+**Inspired by**: Julia Child, *Mastering the Art of French Cooking, Vol. 2* (Alfred A. Knopf, 1970)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -47,7 +47,7 @@ Zucchini (*Cucurbita pepo*) skivad i 1 cm rundlar, halvmånar eller stavar är e
 ---
 
 ### 3. Marcella Hazan — Zucchine Trifolate (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -60,7 +60,7 @@ Zucchini (*Cucurbita pepo*) skivad i 1 cm rundlar, halvmånar eller stavar är e
 ---
 
 ### 4. Madhur Jaffrey — Turai ki Sabzi (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**

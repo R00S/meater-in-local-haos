@@ -24,7 +24,7 @@ Tomahawk-biffen på träkol är den ultimata utomhustillagningsupplevelsen — d
 ## Source recipes
 
 ### 1. GialloZafferano — Tomahawk alla griglia (Italian tradition)
-**Source**: GialloZafferano; https://ricette.giallozafferano.it/Tomahawk-alla-griglia.html (fetched 2026-04-24). *Italian method over brace (charcoal): aromatic salt paste, 10 min per side + 5 min perpendicular for cross-hatch marks. Core temp 55–60 °C. Rest 10 min foil-covered.*
+**Inspired by**: GialloZafferano; https://ricette.giallozafferano.it/Tomahawk-alla-griglia.html (fetched 2026-04-24). *Italian method over brace (charcoal): aromatic salt paste, 10 min per side + 5 min perpendicular for cross-hatch marks. Core temp 55–60 °C. Rest 10 min foil-covered.*
 **Serves**: 2–4 · **Prep**: 1 hr tempering + salt paste · **Cook**: 30 min charcoal
 
 *Translation: Tomahawk on the charcoal grill — prehistoric-sized steak, Flintstones-worthy.*
@@ -48,7 +48,7 @@ Tomahawk-biffen på träkol är den ultimata utomhustillagningsupplevelsen — d
 ---
 
 ### 2. Chefkoch.de — Tomahawk Steak Dry Aged vom Grill (German tradition)
-**Source**: tipsyman, Chefkoch.de; https://www.chefkoch.de/rezepte/2617661411074274/Tomahawk-Steak-Dry-Aged-vom-Grill.html (fetched 2026-04-24). *German method: oil rub, 250–300 °C direct sear for crust, then indirect zone for interior. Core target 52–55 °C. Dry-aged preferred.*
+**Inspired by**: tipsyman, Chefkoch.de; https://www.chefkoch.de/rezepte/2617661411074274/Tomahawk-Steak-Dry-Aged-vom-Grill.html (fetched 2026-04-24). *German method: oil rub, 250–300 °C direct sear for crust, then indirect zone for interior. Core target 52–55 °C. Dry-aged preferred.*
 **Serves**: 2 · **Cook**: 30 min total
 
 **Temperature guidance (from recipe)**: "Das Steak auf eine Kerntemperatur von 52–55° bringen." (Bring the steak to a core temperature of 52–55 °C using indirect heat.)
@@ -72,7 +72,7 @@ Tomahawk-biffen på träkol är den ultimata utomhustillagningsupplevelsen — d
 ---
 
 ### 3. Madens Verden — Ribeye på gasgrill (adapted for tomahawk on charcoal) (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ribeye-paa-gasgrill/ (fetched 2026-04-24). *The same frequent-turning technique from the Danish ribeye grill guide applied to tomahawk on charcoal: high heat, turn every 30 seconds for even crust. Extended to tomahawk dimensions.*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ribeye-paa-gasgrill/ (fetched 2026-04-24). *The same frequent-turning technique from the Danish ribeye grill guide applied to tomahawk on charcoal: high heat, turn every 30 seconds for even crust. Extended to tomahawk dimensions.*
 **Serves**: 2 · **Prep**: 2 hr salting · **Cook**: 20–30 min charcoal (indirect + direct)
 
 **Temperature guidance (from recipe adapted)**: Salt 2 hours ahead. Grill tomahawk on indirect heat first (charcoal ring method or two-zone), turning frequently. Pull at 52–54 °C. Rest 5 minutes with butter.

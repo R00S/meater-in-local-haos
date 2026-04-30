@@ -22,7 +22,7 @@ Malt kalkon (malt kykling) tillverkas av malning av mörkt kött (lår och ben),
 ## Source recipes
 
 ### 1. Marcella Hazan — Ragù di Tacchino (Italian tradition)
-**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997) — turkey variant of her *ragù bianco* technique  
+**Inspired by**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997) — turkey variant of her *ragù bianco* technique  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 75 min · **Rest**: 5 min
 
 **Ingredients**
@@ -53,7 +53,7 @@ Malt kalkon (malt kykling) tillverkas av malning av mörkt kött (lår och ben),
 ---
 
 ### 2. Hugh Acheson — Slow-Cooker Turkey Mince Bolognese (American Culinary Group C tradition)
-**Source**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017); hughacheson.com  
+**Inspired by**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017); hughacheson.com  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 75 min · **Rest**: 10 min
 
 **Ingredients**
@@ -85,7 +85,7 @@ Malt kalkon (malt kykling) tillverkas av malning av mörkt kött (lår och ben),
 ---
 
 ### 3. Yotam Ottolenghi — Spiced Turkey Mince with Tomato & Yoghurt (Levantine tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014) technique extended; ottolenghi.co.uk recipes — turkey-mince adaptations  
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014) technique extended; ottolenghi.co.uk recipes — turkey-mince adaptations  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 50 min · **Rest**: 5 min
 
 **Ingredients**
@@ -113,7 +113,7 @@ Malt kalkon (malt kykling) tillverkas av malning av mörkt kött (lår och ben),
 ---
 
 ### 4. Tina Nordström — Kalkonfärssås (Swedish ragù tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — turkey variant of her *köttfärssås*; köket.se  
+**Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — turkey variant of her *köttfärssås*; köket.se  
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 70 min · **Rest**: 10 min
 
 **Ingredients**

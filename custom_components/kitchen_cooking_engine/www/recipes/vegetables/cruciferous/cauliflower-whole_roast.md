@@ -19,7 +19,7 @@ Helrostad blomkål (*Brassica oleracea* var. *botrytis*) har blivit ett av de mo
 ## Source recipes
 
 ### 1. Yotam Ottolenghi — Whole Roasted Cauliflower with Harissa Butter (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012)
+**Inspired by**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012)
 **Serves**: 4–6 · **Prep**: 15 min + pre-boiling · **Cook**: 40–45 min · **Rest**: 10 min
 
 **Ingredients**
@@ -39,7 +39,7 @@ Helrostad blomkål (*Brassica oleracea* var. *botrytis*) har blivit ett av de mo
 ---
 
 ### 2. Najmieh Batmanglij — Whole Roasted Kalam Polo (Persian tradition)
-**Source**: Najmieh Batmanglij, *Food of Life: Ancient Persian and Modern Iranian Cooking and Ceremonies* (Mage Publishers, 2011)
+**Inspired by**: Najmieh Batmanglij, *Food of Life: Ancient Persian and Modern Iranian Cooking and Ceremonies* (Mage Publishers, 2011)
 **Serves**: 4–6 · **Prep**: 15 min + pre-steaming · **Cook**: 35–40 min · **Rest**: 10 min
 
 **Ingredients**
@@ -63,7 +63,7 @@ Helrostad blomkål (*Brassica oleracea* var. *botrytis*) har blivit ett av de mo
 ---
 
 ### 3. Madhur Jaffrey — Whole Dum Gobi (Indian Spiced Whole Cauliflower)
-**Source**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
+**Inspired by**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
 **Serves**: 4–6 · **Prep**: 15 min + marinating · **Cook**: 35–45 min · **Rest**: 8 min
 
 **Ingredients**
@@ -80,7 +80,7 @@ Helrostad blomkål (*Brassica oleracea* var. *botrytis*) har blivit ett av de mo
 ---
 
 ### 4. Magnus Nilsson — Ugnsrostad Hel Blomkål (Nordic / Swedish tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)
+**Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)
 **Serves**: 4–6 · **Prep**: 5 min · **Cook**: 50–60 min (no pre-blanching) · **Rest**: 10 min
 
 **Ingredients**

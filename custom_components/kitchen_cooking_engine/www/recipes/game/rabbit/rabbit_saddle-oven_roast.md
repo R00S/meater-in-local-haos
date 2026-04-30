@@ -34,7 +34,7 @@ Ryggen är ett delikat, magert snitt som tillagas snabbt — för- och ugnsstekn
 ## Source recipes
 
 ### 1. Emeril Lagasse — Roasted Saddle of Rabbit
-**Source**: emerils.com (Emeril's New Orleans Kitchen); consistent with technique
+**Inspired by**: emerils.com (Emeril's New Orleans Kitchen); consistent with technique
 in *Emeril's Creole Christmas* (Morrow, 1997)  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 15–18 min · **Rest**: 5 min
 
@@ -69,7 +69,7 @@ in *Emeril's Creole Christmas* (Morrow, 1997)
 ---
 
 ### 2. Pardon Your French (Audrey Le Goff) — Stuffed Rabbit Saddle with Chestnuts and Mushrooms
-**Source**: pardonyourfrench.com; consistent with traditional French *selle de
+**Inspired by**: pardonyourfrench.com; consistent with traditional French *selle de
 lapin farcie* preparation from Normandy  
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 20–25 min · **Rest**: 5 min
 
@@ -107,7 +107,7 @@ lapin farcie* preparation from Normandy
 ---
 
 ### 3. Dairy Farmers of Canada — Saddle of Rabbit with Celery Sauce and Ricotta
-**Source**: dairyfarmersofcanada.ca; representative of the Canadian-French
+**Inspired by**: dairyfarmersofcanada.ca; representative of the Canadian-French
 culinary tradition integrating dairy into classical French preparations  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 12–15 min · **Rest**: 5 min
 
@@ -140,7 +140,7 @@ culinary tradition integrating dairy into classical French preparations
 ---
 
 ### 4. Good Food Middle East (BBC Good Food) — Roast Rabbit with Thyme
-**Source**: bbcgoodfoodme.com; consistent with BBC Good Food's classic British
+**Inspired by**: bbcgoodfoodme.com; consistent with BBC Good Food's classic British
 roasting style adapted for Middle Eastern home cooks  
 **Serves**: 4 · **Prep**: 10 min (+overnight marinade) · **Cook**: 15 min · **Rest**: 5 min
 

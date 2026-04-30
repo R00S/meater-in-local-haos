@@ -19,7 +19,7 @@ Champinjoner (*Agaricus bisporus*) i airfryern rostas på 8–12 minuter vid 200
 ## Source recipes
 
 ### 1. Fuchsia Dunlop — Air-Fried Shuāng Gū (双菇 — Chinese double-mushroom stir-fry, air fryer adaptation)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012); technique adapted for air fryer preparation from her double-mushroom sauté.
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice: Simple Chinese Home Cooking* (W. W. Norton, 2012); technique adapted for air fryer preparation from her double-mushroom sauté.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 1 min
 
 **Ingredients**
@@ -44,7 +44,7 @@ Champinjoner (*Agaricus bisporus*) i airfryern rostas på 8–12 minuter vid 200
 ---
 
 ### 2. Madhur Jaffrey — Air-Fried Mushroom Tikka (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); tikka marinade method adapted for air fryer.
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010); tikka marinade method adapted for air fryer.
 **Serves**: 4 · **Prep**: 10 min + 20 min marinating · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -63,7 +63,7 @@ Champinjoner (*Agaricus bisporus*) i airfryern rostas på 8–12 minuter vid 200
 ---
 
 ### 3. Harumi Kurihara — Air-Fried Kinoko no Shio-Yaki (Japanese salted mushrooms)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); adapted for air fryer.
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); adapted for air fryer.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -85,7 +85,7 @@ Champinjoner (*Agaricus bisporus*) i airfryern rostas på 8–12 minuter vid 200
 ---
 
 ### 4. Yotam Ottolenghi — Air-Fried Mushrooms with Herb Oil (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010); technique adapted for air fryer from his roasted-mushroom preparations.
+**Inspired by**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010); technique adapted for air fryer from his roasted-mushroom preparations.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**

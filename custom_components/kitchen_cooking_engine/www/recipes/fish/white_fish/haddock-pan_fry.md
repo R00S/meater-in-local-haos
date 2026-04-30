@@ -38,7 +38,7 @@ Pannstekning är den definitiva vardagsmetoden för kolja. De två dominerande t
 ## Source recipes
 
 ### 1. BBC Good Food — Zesty Haddock with Crushed Potatoes & Peas (British tradition)
-**Source**: BBC Good Food magazine, February 2011;
+**Inspired by**: BBC Good Food magazine, February 2011;
 bbcgoodfood.com/recipes/zesty-haddock-crushed-potatoes-peas (fetched 2026-04-24)
 **Serves**: 4 · **Cook**: 15 min
 
@@ -74,7 +74,7 @@ bbcgoodfood.com/recipes/zesty-haddock-crushed-potatoes-peas (fetched 2026-04-24)
 ---
 
 ### 2. Matprat.no — Hyse med Byggrisotto / Haddock with Barley Risotto (Norwegian tradition)
-**Source**: Matprat.no (Norwegian Meat and Poultry Research Centre);
+**Inspired by**: Matprat.no (Norwegian Meat and Poultry Research Centre);
 matprat.no/oppskrifter/familien/hyse-med-byggrisotto/ (fetched 2026-04-24)
 **Serves**: 4 · **Cook**: 30 min
 
@@ -118,7 +118,7 @@ matprat.no/oppskrifter/familien/hyse-med-byggrisotto/ (fetched 2026-04-24)
 ---
 
 ### 3. Chefkoch.de / Pelikan — Schellfisch in Senfsauce / Haddock in Mustard Sauce (German tradition)
-**Source**: Pelikan, Chefkoch.de community recipe (4/5 stars, 9 ratings);
+**Inspired by**: Pelikan, Chefkoch.de community recipe (4/5 stars, 9 ratings);
 chefkoch.de/rezepte/338981117674439/Schellfisch-in-Senfsauce.html (fetched 2026-04-24)
 **Serves**: 4 · **Total**: 20 min
 
@@ -151,7 +151,7 @@ chefkoch.de/rezepte/338981117674439/Schellfisch-in-Senfsauce.html (fetched 2026-
 ---
 
 ### 4. Suzy Karadsheh (The Mediterranean Dish) — Mediterranean Lemon-Garlic Haddock with Artichoke Hearts (Egyptian-American / Mediterranean tradition)
-**Source**: Suzy Karadsheh, The Mediterranean Dish;
+**Inspired by**: Suzy Karadsheh, The Mediterranean Dish;
 themediterraneandish.com/haddock-recipe/ (fetched 2026-04-24)
 **Serves**: 4 · **Cook**: 20 min
 

@@ -19,7 +19,7 @@ Sparris (*Asparagus officinalis*) ugnsrostad vid 200–220 °C uppnår gyllenkna
 ## Source recipes
 
 ### 1. Marcella Hazan — Asparagi al Forno (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 15–18 min · **Rest**: 2 min
 
 **Ingredients**
@@ -38,7 +38,7 @@ Sparris (*Asparagus officinalis*) ugnsrostad vid 200–220 °C uppnår gyllenkna
 ---
 
 ### 2. Madhur Jaffrey — Oven-Roasted Asparagus with Cumin (Indian tradition)
-**Source**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
+**Inspired by**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 15–18 min · **Rest**: 2 min
 
 **Ingredients**
@@ -59,7 +59,7 @@ Sparris (*Asparagus officinalis*) ugnsrostad vid 200–220 °C uppnår gyllenkna
 ---
 
 ### 3. Yotam Ottolenghi — Roasted Asparagus with Tahini and Lemon (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 15–18 min · **Rest**: 2 min
 
 **Ingredients**
@@ -77,7 +77,7 @@ Sparris (*Asparagus officinalis*) ugnsrostad vid 200–220 °C uppnår gyllenkna
 ---
 
 ### 4. José Andrés — Espárragos Blancos al Horno (Spanish tradition)
-**Source**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
+**Inspired by**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 15–18 min · **Rest**: 2 min
 
 **Ingredients**

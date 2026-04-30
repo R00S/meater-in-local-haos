@@ -35,7 +35,7 @@ Innertemperatur: **85–95 °C (185–203 °F)** för pull-apart. Eftertillagnin
 ## Source recipes
 
 ### 1. Chefkoch.de — Wildschweinschulter ganz einfach (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/3444381513162705/Wildschweinschulter-ganz-einfach.html (fetched 2026-04-24)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/3444381513162705/Wildschweinschulter-ganz-einfach.html (fetched 2026-04-24)
 **Serves**: 3 · **Prep**: 35 min · **Cook**: 3 h 20 min
 
 *Translation: Wild boar shoulder — very simple. A classic German roasting method.*
@@ -63,7 +63,7 @@ Innertemperatur: **85–95 °C (185–203 °F)** för pull-apart. Eftertillagnin
 ---
 
 ### 2. Giallozafferano.it — Cinghiale in umido (Italian slow-roast tradition)
-**Source**: Giallozafferano / Sonia Peronaci; https://ricette.giallozafferano.it/Cinghiale-in-umido.html (fetched 2026-04-24)
+**Inspired by**: Giallozafferano / Sonia Peronaci; https://ricette.giallozafferano.it/Cinghiale-in-umido.html (fetched 2026-04-24)
 **Serves**: 6 · **Prep**: 24 hrs marinade · **Cook**: 3 hrs
 
 *Translation: Braised wild boar in the traditional Tuscan style — overnight marinade in wine and herbs, then long-braised in tomato and olives.*
@@ -98,7 +98,7 @@ Innertemperatur: **85–95 °C (185–203 °F)** för pull-apart. Eftertillagnin
 ---
 
 ### 3. Madensverden.dk — Langtidsstegt vildsvinsskulder (Danish tradition)
-**Source**: Madensverden.dk; https://madensverden.dk/vildsvinsskulder-opskrift/ (web search 2026-04-24)
+**Inspired by**: Madensverden.dk; https://madensverden.dk/vildsvinsskulder-opskrift/ (web search 2026-04-24)
 **Serves**: 4–6 · **Prep**: 20 min · **Cook**: 4 hrs
 
 *Translation: Long-roasted wild boar shoulder, Danish style.*

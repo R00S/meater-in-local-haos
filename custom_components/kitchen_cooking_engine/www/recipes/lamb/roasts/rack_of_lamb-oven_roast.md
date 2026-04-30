@@ -33,7 +33,7 @@ Ugnsstekning av frenchad rack of lamb är en tvåstegsmetod: sear fettkappan och
 ## Source recipes
 
 ### 1. BBC Good Food — Herb-Crusted Rack of Lamb (British/French tradition)
-**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/herb-crusted-rack-lamb (web search 2026-04-24). *"One of the great showstopper roasts."*
+**Inspired by**: BBC Good Food; https://www.bbcgoodfood.com/recipes/herb-crusted-rack-lamb (web search 2026-04-24). *"One of the great showstopper roasts."*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 25 min
 
 **Ingredients**
@@ -63,7 +63,7 @@ Ugnsstekning av frenchad rack of lamb är en tvåstegsmetod: sear fettkappan och
 ---
 
 ### 2. Great British Chefs — Classic Rack of Lamb with Red Wine Sauce (British/French tradition)
-**Source**: Great British Chefs; https://www.greatbritishchefs.com/recipes/rack-of-lamb-recipe (web search 2026-04-24)
+**Inspired by**: Great British Chefs; https://www.greatbritishchefs.com/recipes/rack-of-lamb-recipe (web search 2026-04-24)
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 20 min
 
 **Ingredients**
@@ -90,7 +90,7 @@ Ugnsstekning av frenchad rack of lamb är en tvåstegsmetod: sear fettkappan och
 ---
 
 ### 3. RecipeTinEats.com — Rack of Lamb with Herb Crust (Australian/international tradition)
-**Source**: RecipeTinEats.com (Nagi Maehashi); https://www.recipetineats.com/rack-of-lamb/ (web search 2026-04-24)
+**Inspired by**: RecipeTinEats.com (Nagi Maehashi); https://www.recipetineats.com/rack-of-lamb/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 25 min
 
 **Ingredients**
@@ -126,7 +126,7 @@ Ugnsstekning av frenchad rack of lamb är en tvåstegsmetod: sear fettkappan och
 ---
 
 ### 4. The Mediterranean Dish — Mediterranean Garlic and Herb Rack of Lamb (Mediterranean / Egyptian tradition)
-**Source**: Suzy Karadsheh, The Mediterranean Dish; https://www.themediterraneandish.com/roast-lamb-rack-recipe/ (fetched 2026-04-26). *The author's Egyptian-Mediterranean family tradition: two frenched racks of lamb covered in a quickly blended garlic, rosemary, parsley, and EVOO marinade, then roasted in a very high oven (450 °F) for just 15–20 minutes for a perfectly pink result. "Rack is the finest part of the lamb. It is to lamb what prime rib or tenderloin is to beef." The marinade forms a beautiful herb crust as the lamb roasts.*
+**Inspired by**: Suzy Karadsheh, The Mediterranean Dish; https://www.themediterraneandish.com/roast-lamb-rack-recipe/ (fetched 2026-04-26). *The author's Egyptian-Mediterranean family tradition: two frenched racks of lamb covered in a quickly blended garlic, rosemary, parsley, and EVOO marinade, then roasted in a very high oven (450 °F) for just 15–20 minutes for a perfectly pink result. "Rack is the finest part of the lamb. It is to lamb what prime rib or tenderloin is to beef." The marinade forms a beautiful herb crust as the lamb roasts.*
 **Serves**: 6 · **Prep**: 30 min marinate · **Cook**: 15–20 min
 
 *Context: Suzy Karadsheh grew up in Egypt and the Mediterranean Dish is rooted in North African and Levantine food traditions. Her family's lamb roast celebrates the Eastern Mediterranean love of garlic-herb seasoned slow-grown lamb.*

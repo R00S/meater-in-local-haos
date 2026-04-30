@@ -18,7 +18,7 @@ Flank steak (bavette d'aloyau i fransk bistrotradition, matambre i Sydamerika) s
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Pan-Seared Flank Steak (Serious Eats)
-**Source**: J. Kenji López-Alt, seriouseats.com/pan-seared-flank-steak; *The Food Lab* (W. W. Norton, 2015)  
+**Inspired by**: J. Kenji López-Alt, seriouseats.com/pan-seared-flank-steak; *The Food Lab* (W. W. Norton, 2015)  
 **Serves**: 4 · **Prep**: 5 min (+45 min dry-brine) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -41,7 +41,7 @@ Flank steak (bavette d'aloyau i fransk bistrotradition, matambre i Sydamerika) s
 ---
 
 ### 2. Stéphane Reynaud — Bavette à l'échalote (French bistro tradition)
-**Source**: Stéphane Reynaud, *Bistrot* (Marabout, 2012); stephanereynaud.com  
+**Inspired by**: Stéphane Reynaud, *Bistrot* (Marabout, 2012); stephanereynaud.com  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 4–5 min · **Rest**: 3 min
 
 **Ingredients**
@@ -67,7 +67,7 @@ Flank steak (bavette d'aloyau i fransk bistrotradition, matambre i Sydamerika) s
 ---
 
 ### 3. Francis Mallmann — Plancha-Seared Matambre (Argentine tradition)
-**Source**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009)  
+**Inspired by**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009)  
 **Serves**: 6 · **Prep**: 15 min (+2 hr marinate) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -93,7 +93,7 @@ Flank steak (bavette d'aloyau i fransk bistrotradition, matambre i Sydamerika) s
 ---
 
 ### 4. Fergus Henderson — Pan-Fried Bavette with Anchovy Butter (British nose-to-tail tradition)
-**Source**: Fergus Henderson & Justin Piers Gellatly, *Beyond Nose to Tail* (Bloomsbury, 2007)  
+**Inspired by**: Fergus Henderson & Justin Piers Gellatly, *Beyond Nose to Tail* (Bloomsbury, 2007)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 5–6 min · **Rest**: 5 min
 
 **Ingredients**
@@ -120,7 +120,7 @@ Flank steak (bavette d'aloyau i fransk bistrotradition, matambre i Sydamerika) s
 ---
 
 ### 5. Maangchi — Pan-Seared Bulgogi-Style Flank (Korean tradition)
-**Source**: Maangchi, *Maangchi's Real Korean Cooking* (Houghton Mifflin Harcourt, 2015); maangchi.com/recipe/bulgogi-whole-flank  
+**Inspired by**: Maangchi, *Maangchi's Real Korean Cooking* (Houghton Mifflin Harcourt, 2015); maangchi.com/recipe/bulgogi-whole-flank  
 **Serves**: 4 · **Prep**: 20 min (+2 hr marinate) · **Cook**: 6–8 min · **Rest**: 3 min
 
 **Ingredients**

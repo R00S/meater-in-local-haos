@@ -24,7 +24,7 @@ Standardteknik: lägg korvar i kall panna med lite vatten (3–4 msk), täck och
 ## Source recipes
 
 ### 1. Madens Verden — Sprøde pølser på pande (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/saadan-laver-du-sproede-poelser-som-paa-tankstationen/ (referenced 2026-04-24). *"Crispy sausages on the pan like from the petrol station." Method: foil lining, very low heat × 1 hour, turn a few times. The low heat prevents splitting.*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/saadan-laver-du-sproede-poelser-som-paa-tankstationen/ (referenced 2026-04-24). *"Crispy sausages on the pan like from the petrol station." Method: foil lining, very low heat × 1 hour, turn a few times. The low heat prevents splitting.*
 **Serves**: 2–4 · **Cook**: 45–60 min at low heat
 
 *Translation: "Place a piece of foil on a pan, heat to low, place sausages on top, cook approximately 1 hour at very low heat, turning a few times. This way the sausages become very crispy — just like at the petrol station."*
@@ -43,7 +43,7 @@ Standardteknik: lägg korvar i kall panna med lite vatten (3–4 msk), täck och
 ---
 
 ### 2. ichkoche.at — Bratwurst in der Pfanne (Austrian tradition, adapted from pork pan methods)
-**Source**: ichkoche.at (general pork in Pfanne methodology, referenced 2026-04-24). *Medium heat, roll in pan with butter; add a splash of water and cover midway to steam-cook the interior; uncover for final 3–4 minutes to crisp the skin.*
+**Inspired by**: ichkoche.at (general pork in Pfanne methodology, referenced 2026-04-24). *Medium heat, roll in pan with butter; add a splash of water and cover midway to steam-cook the interior; uncover for final 3–4 minutes to crisp the skin.*
 **Serves**: 2 · **Cook**: 15 min
 
 **Temperature guidance**: Medium heat; cover with lid for 8 minutes, then uncover for 5 more minutes. Core: 71–75 °C.
@@ -65,7 +65,7 @@ Standardteknik: lägg korvar i kall panna med lite vatten (3–4 msk), täck och
 ---
 
 ### 3. Chefkoch.de — Bratwurst in der Pfanne (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rs/s0/bratwurst+pfanne/Rezepte.html (referenced 2026-04-24). *German standard: medium-high heat, small amount of oil, brown all sides, then reduce and cook through. Total 12–15 min.*
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rs/s0/bratwurst+pfanne/Rezepte.html (referenced 2026-04-24). *German standard: medium-high heat, small amount of oil, brown all sides, then reduce and cook through. Total 12–15 min.*
 **Serves**: 2 · **Cook**: 12–15 min
 
 **Temperature guidance**: Medium-high initially; reduce after browning. Core 71–75 °C.

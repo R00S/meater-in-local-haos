@@ -19,7 +19,7 @@ Hel bakad sötpotatis (*Ipomoea batatas*) i konventionell ugn vid 190–200 °C 
 ## Source recipes
 
 ### 1. Harumi Kurihara — Whole Baked Yakiimo (Japanese tradition)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); the traditional whole baked Japanese sweet potato.
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); the traditional whole baked Japanese sweet potato.
 **Serves**: 4 · **Prep**: 2 min · **Cook**: 55–70 min · **Rest**: 10 min
 
 **Ingredients**
@@ -34,7 +34,7 @@ Hel bakad sötpotatis (*Ipomoea batatas*) i konventionell ugn vid 190–200 °C 
 ---
 
 ### 2. Maangchi — Korean Oven Baked Goguma (Korean tradition)
-**Source**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); the classic Korean baked sweet potato — a staple street food sold from wheeled vending carts in winter.
+**Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); the classic Korean baked sweet potato — a staple street food sold from wheeled vending carts in winter.
 **Serves**: 4 · **Prep**: 2 min · **Cook**: 55–65 min · **Rest**: 10 min
 
 **Ingredients**
@@ -49,7 +49,7 @@ Hel bakad sötpotatis (*Ipomoea batatas*) i konventionell ugn vid 190–200 °C 
 ---
 
 ### 3. Diana Kennedy — Camotes al Horno (Mexican tradition)
-**Source**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
+**Inspired by**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 55–65 min · **Rest**: 5 min
 
 **Ingredients**
@@ -63,7 +63,7 @@ Hel bakad sötpotatis (*Ipomoea batatas*) i konventionell ugn vid 190–200 °C 
 ---
 
 ### 4. Claudia Roden — Batata Mchiya (Moroccan / North African tradition)
-**Source**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey and Lebanon* (Alfred A. Knopf, 2005); North African baked sweet potato with argan oil and cumin.
+**Inspired by**: Claudia Roden, *Arabesque: A Taste of Morocco, Turkey and Lebanon* (Alfred A. Knopf, 2005); North African baked sweet potato with argan oil and cumin.
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 55–65 min · **Rest**: 5 min
 
 **Ingredients**

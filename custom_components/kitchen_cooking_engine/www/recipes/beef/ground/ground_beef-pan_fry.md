@@ -19,7 +19,7 @@ Malet nötkött (köttfärs) framställs av nötmalning, vanligast från fransys
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Pan-Fried Browned Ground Beef (American food-science tradition)
-**Source**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015); seriouseats.com/the-best-way-to-brown-ground-beef  
+**Inspired by**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015); seriouseats.com/the-best-way-to-brown-ground-beef  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: n/a
 
 **Ingredients**
@@ -41,7 +41,7 @@ Malet nötkött (köttfärs) framställs av nötmalning, vanligast från fransys
 ---
 
 ### 2. Marcella Hazan — Soffritto-Browned Beef for Ragù alla Bolognese (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 25 min (browning portion) · **Rest**: n/a
 
 **Ingredients**
@@ -66,7 +66,7 @@ Malet nötkött (köttfärs) framställs av nötmalning, vanligast från fransys
 ---
 
 ### 3. Madhur Jaffrey — Kheema (Indian-style minced beef)
-**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)  
+**Inspired by**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 25 min · **Rest**: 5 min
 
 **Ingredients**
@@ -98,7 +98,7 @@ Malet nötkött (köttfärs) framställs av nötmalning, vanligast från fransys
 ---
 
 ### 4. Tina Nordström — Köttfärs på Stekpannan (Swedish home tradition)
-**Source**: Tina Nordström, *Tina i köket* (Bonniers Förlag, 2007); köket.se  
+**Inspired by**: Tina Nordström, *Tina i köket* (Bonniers Förlag, 2007); köket.se  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**

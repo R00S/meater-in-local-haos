@@ -19,7 +19,7 @@ Paprika (*Capsicum annuum*) ugnsrostad vid 220–230 °C följer samma skin-blå
 ## Source recipes
 
 ### 1. José Andrés — Pimientos Asados (Spanish / Catalan tradition)
-**Source**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
+**Inspired by**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
 **Serves**: 4–6 · **Prep**: 5 min · **Cook**: 40–45 min · **Rest**: 20 min (steaming)
 
 **Ingredients**
@@ -41,7 +41,7 @@ Paprika (*Capsicum annuum*) ugnsrostad vid 220–230 °C följer samma skin-blå
 ---
 
 ### 2. Yotam Ottolenghi — Roasted Peppers with Feta & Capers (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Ottolenghi: The Cookbook* (Ebury Press, 2008)
+**Inspired by**: Yotam Ottolenghi, *Ottolenghi: The Cookbook* (Ebury Press, 2008)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 35–40 min · **Rest**: 5 min
 
 **Ingredients**
@@ -66,7 +66,7 @@ Paprika (*Capsicum annuum*) ugnsrostad vid 220–230 °C följer samma skin-blå
 ---
 
 ### 3. Madhur Jaffrey — Shimla Mirch Masala (Indian / North Indian tradition)
-**Source**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
+**Inspired by**: Madhur Jaffrey, *At Home with Madhur Jaffrey* (Alfred A. Knopf, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25–30 min · **Rest**: 3 min
 
 **Ingredients**
@@ -95,7 +95,7 @@ Paprika (*Capsicum annuum*) ugnsrostad vid 220–230 °C följer samma skin-blå
 ---
 
 ### 4. Diana Kennedy — Chiles / Pimientos Asados (Mexican tradition)
-**Source**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
+**Inspired by**: Diana Kennedy, *The Art of Mexican Cooking* (Bantam Books, 1989)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 30–35 min · **Rest**: 15 min (sweating)
 
 **Ingredients**

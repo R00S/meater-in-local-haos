@@ -35,7 +35,7 @@ Täckt bräsering: spissimmer eller 160–170 °C ugn i 1,5–2,5 timmar. Innert
 ## Source recipes
 
 ### 1. Nefis Yemek Tarifleri — Fırında Kuzu Gerdan (Turkish tradition)
-**Source**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/firinda-sahane-lezzeti-ile-kuzu-gerdan-tarifi/ (fetched 2026-04-25). *"Fırında Şahane Lezzeti ile Kuzu Gerdan — Turkish oven-roasted lamb neck with garlic and herb vegetables."*
+**Inspired by**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/firinda-sahane-lezzeti-ile-kuzu-gerdan-tarifi/ (fetched 2026-04-25). *"Fırında Şahane Lezzeti ile Kuzu Gerdan — Turkish oven-roasted lamb neck with garlic and herb vegetables."*
 **Serves**: 6–8 · **Prep**: 20 min · **Cook**: 1 hr 15 min covered + 20 min uncovered at 250 °C
 
 **Ingredients**
@@ -64,7 +64,7 @@ Täckt bräsering: spissimmer eller 160–170 °C ugn i 1,5–2,5 timmar. Innert
 ---
 
 ### 2. Argiro.gr — Αρνάκι στο ταψί με λαχανικά και βότανα (Greek tradition)
-**Source**: Argiro Barbarigou; https://www.argiro.gr/recipe/arnaki-sto-tapsi-me-laxanika-kai-votana/ (fetched 2026-04-25). *"Αρνάκι στο ταψί με λαχανικά και βότανα — Greek lamb tray-bake with vegetables and herbs."*
+**Inspired by**: Argiro Barbarigou; https://www.argiro.gr/recipe/arnaki-sto-tapsi-me-laxanika-kai-votana/ (fetched 2026-04-25). *"Αρνάκι στο ταψί με λαχανικά και βότανα — Greek lamb tray-bake with vegetables and herbs."*
 **Serves**: 6–8 · **Prep**: 25 min · **Cook**: 2 hr covered + 25 min uncovered at 170–200 °C
 
 **Ingredients**
@@ -94,7 +94,7 @@ Täckt bräsering: spissimmer eller 160–170 °C ugn i 1,5–2,5 timmar. Innert
 ---
 
 ### 3. Blog GialloZafferano — Collo di agnello stufato nel coccio (Italian tradition)
-**Source**: Blog GialloZafferano (Tentazioni Dolci e Salate); https://blog.giallozafferano.it/tentazionidolciesalate/ricetta-collo-di-agnello-stufato-nel-coccio/ (fetched 2026-04-25). *"Collo di agnello stufato nel coccio — Italian lamb neck braised in a clay pot in the oven."*
+**Inspired by**: Blog GialloZafferano (Tentazioni Dolci e Salate); https://blog.giallozafferano.it/tentazionidolciesalate/ricetta-collo-di-agnello-stufato-nel-coccio/ (fetched 2026-04-25). *"Collo di agnello stufato nel coccio — Italian lamb neck braised in a clay pot in the oven."*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 1 hr at 200 °C
 
 **Ingredients**
@@ -125,7 +125,7 @@ Täckt bräsering: spissimmer eller 160–170 °C ugn i 1,5–2,5 timmar. Innert
 ---
 
 ### 4. Chefkoch.de — Geschmorter Lammhals (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/2358101374724165/ (fetched 2026-04-25). *"Geschmorter Lammhals — German oven-braised lamb neck in red wine."*
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/2358101374724165/ (fetched 2026-04-25). *"Geschmorter Lammhals — German oven-braised lamb neck in red wine."*
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 2 hr at 200 °C (fan 180 °C)
 
 **Ingredients**

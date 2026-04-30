@@ -22,7 +22,7 @@ Grillning av hummersvans är den mest dramatiska beredningen — skalet förkoln
 ## Source recipes
 
 ### 1. Steven Raichlen — Grilled Butterflied Lobster Tail with Herb Butter (American tradition)
-**Source**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
+**Inspired by**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -51,7 +51,7 @@ Grillning av hummersvans är den mest dramatiska beredningen — skalet förkoln
 ---
 
 ### 2. Gordon Ramsay — Grilled Lobster Tail with Garlic Butter (British restaurant tradition)
-**Source**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
+**Inspired by**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -78,7 +78,7 @@ Grillning av hummersvans är den mest dramatiska beredningen — skalet förkoln
 ---
 
 ### 3. Joël Robuchon — Homard Grillé au Beurre Blanc (French haute cuisine tradition)
-**Source**: Joël Robuchon, *The Complete Robuchon* (Alfred A. Knopf, 2008)  
+**Inspired by**: Joël Robuchon, *The Complete Robuchon* (Alfred A. Knopf, 2008)  
 **Serves**: 2 · **Prep**: 20 min · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -100,7 +100,7 @@ Grillning av hummersvans är den mest dramatiska beredningen — skalet förkoln
 ---
 
 ### 4. Nobu Matsuhisa — Grilled Spiny Lobster Tail with Yuzu Miso (Japanese tradition)
-**Source**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001)  
+**Inspired by**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001)  
 **Serves**: 2 · **Prep**: 15 min (+2 h marinade) · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -123,7 +123,7 @@ Grillning av hummersvans är den mest dramatiska beredningen — skalet förkoln
 ---
 
 ### 5. Jock Zonfrillo — Grilled Rock Lobster with Warrigal Greens Butter (Australian tradition)
-**Source**: Jock Zonfrillo, *Orana: Cooking with the Soul of Australia* (Hardie Grant, 2019)  
+**Inspired by**: Jock Zonfrillo, *Orana: Cooking with the Soul of Australia* (Hardie Grant, 2019)  
 **Serves**: 2 · **Prep**: 20 min · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**

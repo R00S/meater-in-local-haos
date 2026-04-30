@@ -37,7 +37,7 @@ Pannstekas i smör vid hög värme — 3–4 minuter per sida — sedan kort vil
 ## Source recipes
 
 ### 1. Köket.se / TV4 Halv åtta hos mig — Renfilé med smörig blåbärssås (Swedish tradition)
-**Source**: Köket.se; https://www.koket.se/renfile-med-smorig-blabarssas (fetched 2026-04-24). *Recipe by Nazuk Turdieva on TV4's Halv åtta hos mig (Half Past Seven at Mine). "A luxury dish with exciting northern flavours."*
+**Inspired by**: Köket.se; https://www.koket.se/renfile-med-smorig-blabarssas (fetched 2026-04-24). *Recipe by Nazuk Turdieva on TV4's Halv åtta hos mig (Half Past Seven at Mine). "A luxury dish with exciting northern flavours."*
 **Serves**: 4 · **Prep**: 30 min · **Cook**: 45 min
 
 *Translation: Reindeer fillet with buttery blueberry sauce, potato-artichoke purée, pickled funnel chanterelles, and charred pearl onions.*
@@ -81,7 +81,7 @@ Pannstekas i smör vid hög värme — 3–4 minuter per sida — sedan kort vil
 ---
 
 ### 2. Köket.se / TV4 — Reninnanlår à la Norrland (Swedish tradition)
-**Source**: Köket.se; https://www.koket.se/petter_tidestrom/huvudratter/vilt/reninnanlar_a_la_norrland (fetched 2026-04-24)
+**Inspired by**: Köket.se; https://www.koket.se/petter_tidestrom/huvudratter/vilt/reninnanlar_a_la_norrland (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 1.5–2 hrs
 
 *Translation: Reindeer inside-round (innanlår) Norrland style — seared in pan then finished in 100 °C oven.*
@@ -116,7 +116,7 @@ Pannstekas i smör vid hög värme — 3–4 minuter per sida — sedan kort vil
 ---
 
 ### 3. Kotikokki.net — Paistettua poronlihaa (Finnish pan-fried reindeer, Finnish tradition)
-**Source**: Kotikokki.net Finnish home cooking site; https://www.kotikokki.net/reseptit/haku/?hakusana=poronlihapihvi (web search 2026-04-24)
+**Inspired by**: Kotikokki.net Finnish home cooking site; https://www.kotikokki.net/reseptit/haku/?hakusana=poronlihapihvi (web search 2026-04-24)
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 6 min
 
 *Finnish tradition: brief frying in butter with juniper berries.*

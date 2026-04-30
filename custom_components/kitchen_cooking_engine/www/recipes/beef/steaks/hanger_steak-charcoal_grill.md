@@ -20,7 +20,7 @@ Hängarbiff över levande träkol tillsätter en viktig dimension till detta red
 ## Source recipes
 
 ### 1. Francis Mallmann — Onglet over Charcoal Embers (Argentine tradition)
-**Source**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
+**Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–12 min over embers · **Rest**: 5 min
 
 **Ingredients**
@@ -41,7 +41,7 @@ Hängarbiff över levande träkol tillsätter en viktig dimension till detta red
 ---
 
 ### 2. Steven Raichlen — Charcoal-Grilled Hanger Steak (American tradition)
-**Source**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
+**Inspired by**: Steven Raichlen, *The Barbecue! Bible* (Workman Publishing, 1998)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -62,7 +62,7 @@ Hängarbiff över levande träkol tillsätter en viktig dimension till detta red
 ---
 
 ### 3. Lennox Hastie — Hanger Steak over Australian Ironbark (Australian live-fire tradition)
-**Source**: Lennox Hastie, *Finding Fire* (Hardie Grant, 2017)  
+**Inspired by**: Lennox Hastie, *Finding Fire* (Hardie Grant, 2017)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 8–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -82,7 +82,7 @@ Hängarbiff över levande träkol tillsätter en viktig dimension till detta red
 ---
 
 ### 4. David Tanis — Onglet over Charcoal (French bistro tradition)
-**Source**: David Tanis, *Heart of the Artichoke and Other Kitchen Journeys* (Artisan Books, 2010)  
+**Inspired by**: David Tanis, *Heart of the Artichoke and Other Kitchen Journeys* (Artisan Books, 2010)  
 **Serves**: 2 · **Prep**: 5 min (+1 h marinade) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -100,7 +100,7 @@ Hängarbiff över levande träkol tillsätter en viktig dimension till detta red
 ---
 
 ### 5. Bobby Flay — Charcoal Hanger Steak with Horseradish Compound Butter (American tradition)
-**Source**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
+**Inspired by**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
 **Serves**: 2 · **Prep**: 10 min (+1 h dry brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**

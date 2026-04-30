@@ -22,7 +22,7 @@ Filet mignon (*psoas major*, smal ände) är den möraste, magraste och mest del
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Sous Vide Filet Mignon
-**Source**: J. Kenji López-Alt, seriouseats.com/sous-vide-filet-mignon; *The Food Lab* (W. W. Norton, 2015)  
+**Inspired by**: J. Kenji López-Alt, seriouseats.com/sous-vide-filet-mignon; *The Food Lab* (W. W. Norton, 2015)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 45 min–4 hr (sous vide) + 1–2 min (sear) · **Rest**: 2 min
 
 **Ingredients**
@@ -47,7 +47,7 @@ Filet mignon (*psoas major*, smal ände) är den möraste, magraste och mest del
 ---
 
 ### 2. Thomas Keller — Sous Vide Beef Tenderloin Medallion (*Ad Hoc* tradition)
-**Source**: Thomas Keller, *Under Pressure: Cooking Sous Vide* (Artisan, 2008); thomaskeller.com  
+**Inspired by**: Thomas Keller, *Under Pressure: Cooking Sous Vide* (Artisan, 2008); thomaskeller.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 1 hr sous vide + 90 sec sear · **Rest**: none required
 
 **Ingredients**
@@ -68,7 +68,7 @@ Filet mignon (*psoas major*, smal ände) är den möraste, magraste och mest del
 ---
 
 ### 3. Heston Blumenthal — Sous Vide Beef Fillet (British modern tradition)
-**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury, 2011)  
+**Inspired by**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury, 2011)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 45 min sous vide + 60 sec sear · **Rest**: 2 min
 
 **Ingredients**
@@ -90,7 +90,7 @@ Filet mignon (*psoas major*, smal ände) är den möraste, magraste och mest del
 ---
 
 ### 4. Maangchi — Korean-Style Sous Vide Beef Fillet (*Ansim*)
-**Source**: Maangchi, maangchi.com/recipe/sous-vide; cross-referenced with *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019)  
+**Inspired by**: Maangchi, maangchi.com/recipe/sous-vide; cross-referenced with *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019)  
 **Serves**: 2 · **Prep**: 15 min (+30 min marinating) · **Cook**: 1 hr sous vide + 90 sec sear · **Rest**: 2 min
 
 **Ingredients**
@@ -114,7 +114,7 @@ Filet mignon (*psoas major*, smal ände) är den möraste, magraste och mest del
 ---
 
 ### 5. Tetsuya Wakuda — Sous Vide Wagyu Fillet (Japanese-Australian tradition)
-**Source**: Tetsuya Wakuda, *Tetsuya* (Ten Speed Press, 2000); tetsuyas.com  
+**Inspired by**: Tetsuya Wakuda, *Tetsuya* (Ten Speed Press, 2000); tetsuyas.com  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 30–45 min sous vide + 60 sec sear · **Rest**: 2 min
 
 **Ingredients**

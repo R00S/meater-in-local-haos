@@ -22,7 +22,7 @@ Hakeköttet är något mjukare än torsk rått — det tål inte aggressiv hante
 ## Source recipes
 
 ### 1. José Andrés — Merluza a la Plancha (Spanish / Basque tradition)
-**Source**: José Andrés, *Tapas: A Taste of Spain in America* (Clarkson Potter, 2005)  
+**Inspired by**: José Andrés, *Tapas: A Taste of Spain in America* (Clarkson Potter, 2005)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -48,7 +48,7 @@ Hakeköttet är något mjukare än torsk rått — det tål inte aggressiv hante
 ---
 
 ### 2. Rick Stein — Pan-Fried Hake with Salsa Verde (British / Spanish tradition)
-**Source**: Rick Stein, *Rick Stein's Spain* (BBC Books, 2011)  
+**Inspired by**: Rick Stein, *Rick Stein's Spain* (BBC Books, 2011)  
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 7–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -70,7 +70,7 @@ Hakeköttet är något mjukare än torsk rått — det tål inte aggressiv hante
 ---
 
 ### 3. Paula Wolfert — Pescada Frita (Portuguese tradition)
-**Source**: Paula Wolfert, *The Cooking of the Eastern Mediterranean* (HarperCollins, 1994)  
+**Inspired by**: Paula Wolfert, *The Cooking of the Eastern Mediterranean* (HarperCollins, 1994)  
 **Serves**: 4 · **Prep**: 15 min (+30 min marinade) · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -96,7 +96,7 @@ Hakeköttet är något mjukare än torsk rått — det tål inte aggressiv hante
 ---
 
 ### 4. Marcella Hazan — Merluzzo Fritto (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)  
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -120,7 +120,7 @@ Hakeköttet är något mjukare än torsk rått — det tål inte aggressiv hante
 ---
 
 ### 5. Donna Hay — Pan-Fried Hake with Salsa Verde (Australian / European tradition)
-**Source**: Donna Hay, *Fresh and Light* (HarperCollins Australia, 2012)  
+**Inspired by**: Donna Hay, *Fresh and Light* (HarperCollins Australia, 2012)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**

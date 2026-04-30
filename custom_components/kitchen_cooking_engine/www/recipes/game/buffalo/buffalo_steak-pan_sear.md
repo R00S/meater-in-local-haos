@@ -35,7 +35,7 @@ Det magra, lätt sötare, mörkrödare köttet behandlas i allmänhet som nötk�
 ## Source recipes
 
 ### 1. Panlasang Pinoy — Bistek Tagalog (Filipino beef/carabeef steak)
-**Source**: Panlasang Pinoy (Vanjo Merano); https://panlasangpinoy.com/bistek-tagalog-filipino-beefsteak-recipe/ (web search 2026-04-24). *Classic Filipino beef steak — directly applicable to carabeef/water buffalo.*
+**Inspired by**: Panlasang Pinoy (Vanjo Merano); https://panlasangpinoy.com/bistek-tagalog-filipino-beefsteak-recipe/ (web search 2026-04-24). *Classic Filipino beef steak — directly applicable to carabeef/water buffalo.*
 **Serves**: 4 · **Prep**: 1 hr marinate · **Cook**: 20 min
 
 **Ingredients**
@@ -60,7 +60,7 @@ Det magra, lätt sötare, mörkrödare köttet behandlas i allmänhet som nötk�
 ---
 
 ### 2. Chefkoch.de — Bisonbraten (German oven-pot tradition — also applies to buffalo)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/234021095857919/Bisonbraten.html (fetched 2026-04-24)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/234021095857919/Bisonbraten.html (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 45–60 min
 
 *Translation: Bison/Buffalo roast with juniper, cardamom, cloves, thyme — braised in red wine and stock. Also applicable as a pan braise for steak portions.*
@@ -90,7 +90,7 @@ Det magra, lätt sötare, mörkrödare köttet behandlas i allmänhet som nötk�
 ---
 
 ### 3. IndianHealthyRecipes.com — Pepper Beef/Buffalo Fry (Kali Mirch) — Indian tradition
-**Source**: IndianHealthyRecipes.com; https://www.indianhealthyrecipes.com/pepper-beef-fry/ (web search 2026-04-24)
+**Inspired by**: IndianHealthyRecipes.com; https://www.indianhealthyrecipes.com/pepper-beef-fry/ (web search 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 30 min
 
 *Kerala-style pepper buffalo/beef pan fry.*

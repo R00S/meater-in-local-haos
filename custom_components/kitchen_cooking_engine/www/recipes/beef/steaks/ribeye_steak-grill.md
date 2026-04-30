@@ -30,7 +30,7 @@ Måltemperaturer (grill, dragtemperaturer):
 ## Source recipes
 
 ### 1. Madens Verden — Ribeye på gasgrill (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ribeye-paa-gasgrill/ (fetched 2026-04-24). *"Ribeye på gasgrill er et sikkert hit hver gang. Udskæringen er nemlig så perfekt fedtmarmoreret, at bøffen aldrig bliver tør."*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ribeye-paa-gasgrill/ (fetched 2026-04-24). *"Ribeye på gasgrill er et sikkert hit hver gang. Udskæringen er nemlig så perfekt fedtmarmoreret, at bøffen aldrig bliver tør."*
 **Serves**: 4 · **Prep**: 2 hr salting · **Cook**: 6–8 min
 
 *Translation: Ribeye on the gas grill — a guaranteed hit. The cut is so perfectly marbled that the steak never dries out.*
@@ -56,7 +56,7 @@ Måltemperaturer (grill, dragtemperaturer):
 ---
 
 ### 2. Directo al Paladar — Chuletón con salsa de vino y fresas (Spanish tradition)
-**Source**: Directoalpaladar.com; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/receta-de-chuleton-con-salsa-de-vino-y-fresas (fetched 2026-04-24). *Spanish beef rib-eye (chuletón) on a hot griddle/plancha with strawberry-wine reduction sauce.*
+**Inspired by**: Directoalpaladar.com; https://www.directoalpaladar.com/recetas-de-carnes-y-aves/receta-de-chuleton-con-salsa-de-vino-y-fresas (fetched 2026-04-24). *Spanish beef rib-eye (chuletón) on a hot griddle/plancha with strawberry-wine reduction sauce.*
 **Serves**: 2 · **Prep**: 15 min · **Cook**: 15 min (including sauce)
 
 *Translation: Rib-eye steak with wine and strawberry sauce — a Spanish bistro classic.*
@@ -84,7 +84,7 @@ Måltemperaturer (grill, dragtemperaturer):
 ---
 
 ### 4. The Woks of Life — Grilled Ribeye with Soy Butter Glaze (Chinese-American tradition)
-**Source**: Bill, Judy, Sarah, and Kaitlin Leung, The Woks of Life; https://thewoksoflife.com/grilled-ribeye-soy-butter-glaze/ (fetched 2026-04-26). *A Chinese-American family staple: thick bone-in ribeye grilled over maximum gas heat, brushed continuously with a soy-butter basting glaze that delivers an umami-rich caramelised crust. The glaze is applied only once the exterior is seared, so the raw-meat contact is eliminated before basting.*
+**Inspired by**: Bill, Judy, Sarah, and Kaitlin Leung, The Woks of Life; https://thewoksoflife.com/grilled-ribeye-soy-butter-glaze/ (fetched 2026-04-26). *A Chinese-American family staple: thick bone-in ribeye grilled over maximum gas heat, brushed continuously with a soy-butter basting glaze that delivers an umami-rich caramelised crust. The glaze is applied only once the exterior is seared, so the raw-meat contact is eliminated before basting.*
 **Serves**: 1–2 · **Prep**: 10 min · **Cook**: 10 min
 
 *Context: Growing up, the Leung family ate steak with soy sauce over white rice — "steak and soy sauce, in spite of its stereotypical connotations, is still one of the best flavour combinations out there." This recipe formalises that tradition in a grill-ready soy-butter glaze.*
@@ -111,7 +111,7 @@ Måltemperaturer (grill, dragtemperaturer):
 ---
 
 ### 3. GialloZafferano — Bistecca alla fiorentina (Italian tradition)
-**Source**: GialloZafferano (Dario Cecchini, master butcher); https://ricette.giallozafferano.it/Bistecca-alla-fiorentina.html (fetched 2026-04-24). *The definitive Italian grilled ribeye/T-bone: thick-cut Chianina beef, charcoal/brace, served rare as tradition demands.*
+**Inspired by**: GialloZafferano (Dario Cecchini, master butcher); https://ricette.giallozafferano.it/Bistecca-alla-fiorentina.html (fetched 2026-04-24). *The definitive Italian grilled ribeye/T-bone: thick-cut Chianina beef, charcoal/brace, served rare as tradition demands.*
 **Serves**: 4 · **Prep**: 2 hr tempering · **Cook**: 20 min
 
 *Translation: Florentine steak — the Tuscan classic grilled over oak and holm-oak charcoal, exterior well-coloured, interior al sangue (rare).*

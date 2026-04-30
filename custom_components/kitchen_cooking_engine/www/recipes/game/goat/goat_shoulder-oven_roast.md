@@ -35,7 +35,7 @@ Innertemperatur: **82–88 °C (180–190 °F)** för pull-apart. Eftertillagnin
 ## Source recipes
 
 ### 1. African Bites — Jamaican Curry Goat (Caribbean tradition)
-**Source**: Africanbites.com; https://www.africanbites.com/jamaican-curry-goat/ (fetched 2026-04-24)
+**Inspired by**: Africanbites.com; https://www.africanbites.com/jamaican-curry-goat/ (fetched 2026-04-24)
 **Serves**: 6 · **Prep**: 30 min + overnight marinade · **Cook**: 2–2.5 hrs
 
 *Jamaican curry goat is one of the most beloved dishes of the Caribbean diaspora.*
@@ -65,7 +65,7 @@ Innertemperatur: **82–88 °C (180–190 °F)** för pull-apart. Eftertillagnin
 ---
 
 ### 2. IndianHealthyRecipes.com — Rogan Josh (Kashmir/Indian goat shoulder)
-**Source**: Indianhealthyrecipes.com; https://www.indianhealthyrecipes.com/rogan-josh/ (fetched 2026-04-24)
+**Inspired by**: Indianhealthyrecipes.com; https://www.indianhealthyrecipes.com/rogan-josh/ (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 1 hr 30 min
 
 *Rogan Josh is a flagship Kashmiri dish, traditionally made with goat shoulder on the bone.*
@@ -99,7 +99,7 @@ Innertemperatur: **82–88 °C (180–190 °F)** för pull-apart. Eftertillagnin
 ---
 
 ### 3. Nefisyemektarifleri.com — Fırında Kuzu Omuz (Turkish goat/lamb shoulder)
-**Source**: Nefisyemektarifleri.com; https://www.nefisyemektarifleri.com/firinda-kuzu-omuz/ (web search 2026-04-24)
+**Inspired by**: Nefisyemektarifleri.com; https://www.nefisyemektarifleri.com/firinda-kuzu-omuz/ (web search 2026-04-24)
 **Serves**: 4–6 · **Prep**: 20 min · **Cook**: 3 hrs
 
 *Translation: Oven-roasted goat (or lamb) shoulder, Turkish style.*

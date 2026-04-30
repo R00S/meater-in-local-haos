@@ -36,7 +36,7 @@ confirmed-reachable South Asian, East Asian, or South-East Asian recipe sources.
 ## Source recipes
 
 ### 1. Good Food — Easy Roast Beef (British tradition)
-**Source**: Good Food magazine, September 2011; bbcgoodfood.com/recipes/roast-beef-carrots-easy-gravy  
+**Inspired by**: Good Food magazine, September 2011; bbcgoodfood.com/recipes/roast-beef-carrots-easy-gravy  
 **Serves**: 4 · **Cut used**: 950 g beef **top rump joint** (British upper-round equivalent)
 
 **Ingredients**
@@ -55,7 +55,7 @@ confirmed-reachable South Asian, East Asian, or South-East Asian recipe sources.
 ---
 
 ### 2. Good Food — Roast Beef with Red Wine & Banana Shallots (British tradition)
-**Source**: Good Food magazine, January 2016; bbcgoodfood.com/recipes/roast-beef-red-wine-banana-shallots  
+**Inspired by**: Good Food magazine, January 2016; bbcgoodfood.com/recipes/roast-beef-red-wine-banana-shallots  
 **Serves**: 8 · **Cut used**: 2 kg **topside of beef** (British top-round equivalent)
 
 **Ingredients**
@@ -75,7 +75,7 @@ confirmed-reachable South Asian, East Asian, or South-East Asian recipe sources.
 ---
 
 ### 3. Immaculate Bites — Creole-Spiced Roast Beef (West African / Southern American Creole tradition)
-**Source**: Imma (Immaculate Bites), africanbites.com/roast-beef/  
+**Inspired by**: Imma (Immaculate Bites), africanbites.com/roast-beef/  
 **Serves**: 6–8 · **Cook**: 1–2 hours  
 **Cut used**: Eye of round roast; **top round roast, bottom round roast** listed as direct substitutes
 
@@ -94,7 +94,7 @@ confirmed-reachable South Asian, East Asian, or South-East Asian recipe sources.
 ---
 
 ### 4. Katja Nordlund — Paahtopaisti (Finnish tradition)
-**Source**: Katja Nordlund, soppa365.fi/reseptit/liha/paahtopaisti (30 September 2012)  
+**Inspired by**: Katja Nordlund, soppa365.fi/reseptit/liha/paahtopaisti (30 September 2012)  
 **Serves**: 10 · **Cook**: ~1.5 hours + 30 min rest  
 **Cut used**: **Paahtopaisti** (Finnish hindquarter/round oven-roast cut)
 

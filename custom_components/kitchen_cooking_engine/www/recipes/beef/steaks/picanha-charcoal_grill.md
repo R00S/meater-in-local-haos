@@ -22,7 +22,7 @@ Träkolsrökföreningarna tränger in i fettlocket och ger ett karakteristiskt a
 ## Source recipes
 
 ### 1. Francis Mallmann — Churrasco Picanha over Charcoal (Brazilian / Argentine tradition)
-**Source**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
+**Inspired by**: Francis Mallmann and Peter Kaminsky, *Seven Fires: Grilling the Argentine Way* (Artisan Books, 2009)  
 **Serves**: 6 · **Prep**: 5 min · **Cook**: 25–35 min over embers · **Rest**: 10 min
 
 **Ingredients**
@@ -44,7 +44,7 @@ Träkolsrökföreningarna tränger in i fettlocket och ger ett karakteristiskt a
 ---
 
 ### 2. Steven Raichlen — Picanha over Live Charcoal (American adaptation of Brazilian tradition)
-**Source**: Steven Raichlen, *Planet Barbecue!* (Workman Publishing, 2010)  
+**Inspired by**: Steven Raichlen, *Planet Barbecue!* (Workman Publishing, 2010)  
 **Serves**: 6 · **Prep**: 10 min (+1 h dry brine) · **Cook**: 20–25 min · **Rest**: 8 min
 
 **Ingredients**
@@ -65,7 +65,7 @@ Träkolsrökföreningarna tränger in i fettlocket och ger ett karakteristiskt a
 ---
 
 ### 3. Lennox Hastie — Rump Cap over Australian Charcoal (Australian wood-fire tradition)
-**Source**: Lennox Hastie, *Finding Fire* (Hardie Grant, 2017)  
+**Inspired by**: Lennox Hastie, *Finding Fire* (Hardie Grant, 2017)  
 **Serves**: 4 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 20–25 min · **Rest**: 8 min
 
 **Ingredients**
@@ -86,7 +86,7 @@ Träkolsrökföreningarna tränger in i fettlocket och ger ett karakteristiskt a
 ---
 
 ### 4. Bobby Flay — Charcoal-Grilled Picanha with Chimichurri (American Southwest tradition)
-**Source**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
+**Inspired by**: Bobby Flay, *Bobby Flay's Grill It!* (Clarkson Potter, 2008)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 18–22 min · **Rest**: 8 min
 
 **Ingredients**
@@ -105,7 +105,7 @@ Träkolsrökföreningarna tränger in i fettlocket och ger ett karakteristiskt a
 ---
 
 ### 5. Nobu Matsuhisa — Charcoal-Grilled Picanha with Ponzu (Japanese-Brazilian tradition)
-**Source**: Nobu Matsuhisa, *Nobu Miami: The Party Cookbook* (Kodansha International, 2009)  
+**Inspired by**: Nobu Matsuhisa, *Nobu Miami: The Party Cookbook* (Kodansha International, 2009)  
 **Serves**: 4 · **Prep**: 10 min (+30 min dry brine) · **Cook**: 20–25 min · **Rest**: 8 min
 
 **Ingredients**

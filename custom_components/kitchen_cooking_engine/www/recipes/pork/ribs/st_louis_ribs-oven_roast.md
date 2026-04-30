@@ -30,7 +30,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 ## Source recipes
 
 ### 1. Judy and Bill Leung, Kaitlin and Sarah Leung — Char Siu-Style Oven Baked Ribs (Cantonese-American tradition, Culinary Group A)
-**Source**: Judy and Bill Leung (with Kaitlin and Sarah), thewoksoflife.com/oven-baked-ribs/  
+**Inspired by**: Judy and Bill Leung (with Kaitlin and Sarah), thewoksoflife.com/oven-baked-ribs/  
 **Serves**: 4–6 · **Prep**: 2 hr (marinating) + 10 min active · **Cook**: 1 hr · **Rest**: 5 min
 
 **Note**: This recipe uses baby back ribs (thinner than St. Louis). The char siu method at high heat targets a caramelised lacquered exterior — a different textural goal than low-and-slow fall-off-the-bone ribs. For St. Louis ribs at the same temperature, add 30–45 minutes to cook time. The temperature target remains the same: safe and pulling at the edges but still with some chew, not fully tender.
@@ -63,7 +63,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 ---
 
 ### 2. Good Food Test Kitchen — Easy Oven-Baked Pork Ribs (British tradition, Culinary Group B)
-**Source**: BBC Good Food Test Kitchen, bbcgoodfood.com/recipes/easy-oven-baked-pork-ribs  
+**Inspired by**: BBC Good Food Test Kitchen, bbcgoodfood.com/recipes/easy-oven-baked-pork-ribs  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 3 hr 10 min · **Rest**: 5 min
 
 **Note**: This recipe specifies baby back ribs. For St. Louis ribs, increase covered cook time to 3.5–4 hours at the same temperature. The low-and-slow method produces fall-off-the-bone tenderness at 88–93 °C internal.

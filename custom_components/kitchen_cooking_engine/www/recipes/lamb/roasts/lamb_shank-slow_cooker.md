@@ -38,7 +38,7 @@ Bryn alltid lägget i en het panna med olja och smör innan det läggs i slow co
 ## Source recipes
 
 ### 1. Nefis Yemek Tarifleri — Düdüklü Tencerede Kuzu İncik (Turkish tradition)
-**Source**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/duduklu-tencerede-kuzu-incik/ (fetched 2026-04-25). *"Düdüklü Tencerede Kuzu İncik — lamb shank in the pressure cooker (adapted for slow cooker)."*
+**Inspired by**: Nefis Yemek Tarifleri; https://www.nefisyemektarifleri.com/duduklu-tencerede-kuzu-incik/ (fetched 2026-04-25). *"Düdüklü Tencerede Kuzu İncik — lamb shank in the pressure cooker (adapted for slow cooker)."*
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 7–8 hr (LOW)
 
 *Slow-cooker adaptation: the original recipe uses a pressure cooker for 50 minutes. Adapted to slow cooker LOW for 7–8 hours.*
@@ -69,7 +69,7 @@ Bryn alltid lägget i en het panna med olja och smör innan det läggs i slow co
 ---
 
 ### 2. Chefkoch.de — Lammhaxen aus dem Slowcooker (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/4089241641380759/ (fetched 2026-04-25). *"Lammhaxen aus dem Slowcooker — lamb shanks from the slow cooker."*
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/4089241641380759/ (fetched 2026-04-25). *"Lammhaxen aus dem Slowcooker — lamb shanks from the slow cooker."*
 **Serves**: 2 · **Prep**: 20 min · **Cook**: 5–6 hr (LOW), 3.5 L pot minimum
 
 **Ingredients**
@@ -99,7 +99,7 @@ Bryn alltid lägget i en het panna med olja och smör innan det läggs i slow co
 ---
 
 ### 3. Argiro.gr — Αρνάκι στο ταψί με λαχανικά και βότανα (slow cooker adaptation) (Greek tradition)
-**Source**: Argiro Barbarigou; https://www.argiro.gr/recipe/arnaki-sto-tapsi-me-laxanika-kai-votana/ (fetched 2026-04-25). *"Αρνάκι στο ταψί — Greek lamb tray-bake with vegetables and herbs, adapted for the slow cooker."*
+**Inspired by**: Argiro Barbarigou; https://www.argiro.gr/recipe/arnaki-sto-tapsi-me-laxanika-kai-votana/ (fetched 2026-04-25). *"Αρνάκι στο ταψί — Greek lamb tray-bake with vegetables and herbs, adapted for the slow cooker."*
 **Serves**: 6–8 · **Prep**: 25 min · **Cook**: 6–8 hr (LOW)
 
 *Slow-cooker adaptation: the original recipe bakes at 170 °C for 2 hours covered, then 200 °C for 25 minutes uncovered. Adapted here to the slow cooker.*
@@ -130,7 +130,7 @@ Bryn alltid lägget i en het panna med olja och smör innan det läggs i slow co
 ---
 
 ### 4. Giallo Zafferano — Agnello al forno con patate (slow cooker adaptation) (Italian tradition)
-**Source**: Ricette GialloZafferano; https://ricette.giallozafferano.it/Agnello-al-forno-con-patate.html (fetched 2026-04-25). *"Agnello al forno con patate — Italian oven lamb with potatoes, adapted here for the slow cooker."*
+**Inspired by**: Ricette GialloZafferano; https://ricette.giallozafferano.it/Agnello-al-forno-con-patate.html (fetched 2026-04-25). *"Agnello al forno con patate — Italian oven lamb with potatoes, adapted here for the slow cooker."*
 **Serves**: 4–6 · **Prep**: 20 min + 30 min soak · **Cook**: 7–8 hr (LOW)
 
 *Slow-cooker adaptation: the original bakes at 200 °C for 90 minutes. For the slow cooker, the herb-marinated lamb goes in on LOW for 7–8 hours.*
@@ -158,7 +158,7 @@ Bryn alltid lägget i en het panna med olja och smör innan det läggs i slow co
 ---
 
 ### 5. Madensverden.dk — Lammeskank i rødvin, langtidsstegt (slow cooker adaptation) (Danish tradition)
-**Source**: Madensverden.dk (Holger Rørby Madsen); https://madensverden.dk/lammeskank-roedvin-langtidsstegt/ (fetched 2026-04-25). *"Lammeskank i rødvin — lamb shank in red wine, long-simmered. Adapted for the slow cooker."*
+**Inspired by**: Madensverden.dk (Holger Rørby Madsen); https://madensverden.dk/lammeskank-roedvin-langtidsstegt/ (fetched 2026-04-25). *"Lammeskank i rødvin — lamb shank in red wine, long-simmered. Adapted for the slow cooker."*
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 7 hr (LOW)
 
 *Slow-cooker adaptation: the original simmers on the stovetop for 2.5 hours. For slow cooker, cook on LOW 6–7 hours.*

@@ -19,7 +19,7 @@ Aubergine (*Solanum melongena*) i airfryern följer samma princip som ugnsstekni
 ## Source recipes
 
 ### 1. Swasthi Shreekanth — Air Fryer Baingan Bharta (Indian / Punjabi tradition)
-**Source**: Swasthi Shreekanth, IndianHealthyRecipes.com; https://www.indianhealthyrecipes.com/baingan-bharta/ (fetched 2026-04-24); air fryer section of the same baingan bharta recipe page.
+**Inspired by**: Swasthi Shreekanth, IndianHealthyRecipes.com; https://www.indianhealthyrecipes.com/baingan-bharta/ (fetched 2026-04-24); air fryer section of the same baingan bharta recipe page.
 **Serves**: 3–4 · **Prep**: 10 min · **Cook**: 22 min air fryer + 12 min masala · **Rest**: 5 min (cooling)
 
 **Ingredients**
@@ -41,7 +41,7 @@ Aubergine (*Solanum melongena*) i airfryern följer samma princip som ugnsstekni
 ---
 
 ### 2. Harumi Kurihara — Nasu no Dengaku — Air Fryer Adaptation (Japanese tradition)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); air fryer adaptation note from harumi.jp; https://www.harumi.jp (fetched 2026-04-24 — site accessible; recipe technique note confirmed).
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007); air fryer adaptation note from harumi.jp; https://www.harumi.jp (fetched 2026-04-24 — site accessible; recipe technique note confirmed).
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -65,7 +65,7 @@ Aubergine (*Solanum melongena*) i airfryern följer samma princip som ugnsstekni
 ---
 
 ### 3. Maangchi — Gaji Bokkeum — Air Fryer Adaptation (Korean tradition)
-**Source**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); https://www.maangchi.com/recipe/gaji-namul (recipe page confirmed in training data).
+**Inspired by**: Maangchi (Emily Kim), *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); https://www.maangchi.com/recipe/gaji-namul (recipe page confirmed in training data).
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 2 min
 
 **Ingredients**
@@ -90,7 +90,7 @@ Aubergine (*Solanum melongena*) i airfryern följer samma princip som ugnsstekni
 ---
 
 ### 4. Yotam Ottolenghi — Air Fryer Aubergine Steak with Yoghurt (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014); technique adapted for air fryer in Ottolenghi's online content at ottolenghi.co.uk.
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014); technique adapted for air fryer in Ottolenghi's online content at ottolenghi.co.uk.
 **Serves**: 4 · **Prep**: 10 min + 20 min marinating · **Cook**: 18–20 min · **Rest**: 3 min
 
 **Ingredients**

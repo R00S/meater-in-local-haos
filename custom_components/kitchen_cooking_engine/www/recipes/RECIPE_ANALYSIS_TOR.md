@@ -132,7 +132,7 @@ draw conclusions from it. Work through each step **in order**. If a step fails,
 This is the most important gate. Check every source recipe against **all** of
 the following:
 
-- [ ] Attribution line: `**Source**: {URL or bibliographic reference}`
+- [ ] Attribution line: `**Inspired by**: {URL or bibliographic reference}`
 - [ ] Header line: `**Serves**: N · **Prep**: N min · **Cook**: N–N min · **Rest**: N min`
 - [ ] `**Ingredients**` section with quantities for every non-trivial item
 - [ ] Numbered `**Method**` steps

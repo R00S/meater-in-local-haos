@@ -13,7 +13,7 @@ Ryggsträngen är ännu tunnare än känguru-rumps, varför timingprecision är 
 ## Source recipes
 
 ### 1. Chefkoch.de — Kängurufilet mit Pflaumensauce, geschmorten Kirschtomaten und Potatoes Wedges
-**Source**: https://www.chefkoch.de/rezepte/307911111108186/Kaengurufilet-mit-Pflaumensauce-geschmorten-Kirschtomaten-und-Potatoes-Wedges.html  
+**Inspired by**: https://www.chefkoch.de/rezepte/307911111108186/Kaengurufilet-mit-Pflaumensauce-geschmorten-Kirschtomaten-und-Potatoes-Wedges.html  
 **Tradition**: German home cooking — **Culinary Group D** (Slavic/Baltic/European)  
 **Rating**: 4.3/5 stars (12 reviews)  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 40 min (incl. 8–10 min oven finish) · **Rest**: 5 min
@@ -62,7 +62,7 @@ Ryggsträngen är ännu tunnare än känguru-rumps, varför timingprecision är 
 ---
 
 ### 2. Kangaroo Wings (Australia) — Cabernet Sauvignon Marinated Kangaroo Backstrap with Basil Pesto
-**Source**: https://kangaroowings.au/recipes/cabernet-sauvignon-marinated-kangaroo-backstrap-with-basil-pesto/  
+**Inspired by**: https://kangaroowings.au/recipes/cabernet-sauvignon-marinated-kangaroo-backstrap-with-basil-pesto/  
 **Tradition**: Australian contemporary home cooking — **Culinary Group B** (North American/Western European/Australasian)  
 **Serves**: 2 · **Prep**: 12 hr (overnight marinade) + 10 min · **Cook**: 8 min · **Rest**: 5 min
 

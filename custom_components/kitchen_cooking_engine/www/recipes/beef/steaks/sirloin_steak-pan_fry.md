@@ -22,7 +22,7 @@ Att tillsätta smör, vitlök och timjan under de sista 2 minuterna och basta ko
 ## Source recipes
 
 ### 1. Delia Smith — Pan-Fried Sirloin with Blue Cheese Sauce (British tradition)
-**Source**: Delia Smith, *Delia's Complete Cookery Course* (BBC Books, 1989)  
+**Inspired by**: Delia Smith, *Delia's Complete Cookery Course* (BBC Books, 1989)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -42,7 +42,7 @@ Att tillsätta smör, vitlök och timjan under de sista 2 minuterna och basta ko
 ---
 
 ### 2. Julia Child — Steak Sauté Bercy (French classical tradition)
-**Source**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961)  
+**Inspired by**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -65,7 +65,7 @@ Att tillsätta smör, vitlök och timjan under de sista 2 minuterna och basta ko
 ---
 
 ### 3. Nigella Lawson — Pan-Fried Sirloin with Rocket Salad (British contemporary tradition)
-**Source**: Nigella Lawson, *How to Eat* (Chatto & Windus, 1998)  
+**Inspired by**: Nigella Lawson, *How to Eat* (Chatto & Windus, 1998)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -87,7 +87,7 @@ Att tillsätta smör, vitlök och timjan under de sista 2 minuterna och basta ko
 ---
 
 ### 4. Nobu Matsuhisa — Pan-Fried Sirloin with Wasabi Salsa (Japanese tradition)
-**Source**: Nobu Matsuhisa, *Nobu Miami: The Party Cookbook* (Kodansha International, 2009)  
+**Inspired by**: Nobu Matsuhisa, *Nobu Miami: The Party Cookbook* (Kodansha International, 2009)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -107,7 +107,7 @@ Att tillsätta smör, vitlök och timjan under de sista 2 minuterna och basta ko
 ---
 
 ### 5. Neil Perry — Pan-Fried Sirloin with Bone Marrow (Australian tradition)
-**Source**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
+**Inspired by**: Neil Perry, *The Food I Love* (Murdoch Books, 2005)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**

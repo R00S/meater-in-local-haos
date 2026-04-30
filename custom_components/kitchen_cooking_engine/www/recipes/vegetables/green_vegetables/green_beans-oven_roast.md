@@ -19,7 +19,7 @@ Gröna bönor (*Phaseolus vulgaris*) ugnsrostade vid 200–220 °C karameliseras
 ## Source recipes
 
 ### 1. Yotam Ottolenghi — Roasted Green Beans with Crispy Capers (Middle Eastern / Israeli tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)
+**Inspired by**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 20–22 min · **Rest**: 3 min
 
 **Ingredients**
@@ -40,7 +40,7 @@ Gröna bönor (*Phaseolus vulgaris*) ugnsrostade vid 200–220 °C karameliseras
 ---
 
 ### 2. Madhur Jaffrey — Roasted Masala Green Beans (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 20–22 min · **Rest**: 3 min
 
 **Ingredients**
@@ -61,7 +61,7 @@ Gröna bönor (*Phaseolus vulgaris*) ugnsrostade vid 200–220 °C karameliseras
 ---
 
 ### 3. Marcella Hazan — Fagiolini al Forno con Aglio (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 20–22 min · **Rest**: 3 min
 
 **Ingredients**
@@ -81,7 +81,7 @@ Gröna bönor (*Phaseolus vulgaris*) ugnsrostade vid 200–220 °C karameliseras
 ---
 
 ### 4. Deborah Madison — Roasted Green Beans with Almond Gremolata (American vegetarian tradition)
-**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
+**Inspired by**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 20–22 min · **Rest**: 3 min
 
 **Ingredients**

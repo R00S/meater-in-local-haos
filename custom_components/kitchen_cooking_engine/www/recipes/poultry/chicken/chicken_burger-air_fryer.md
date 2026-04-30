@@ -35,7 +35,7 @@ Binda med ägg och panko, forma biffar 150–180 g, tillaga vid 180–200 °C (a
 ## Source recipes
 
 ### 1. Skinnytaste — Juicy Lucy Style Turkey / Chicken Burger
-**Source**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/turkey-burgers/ (fetched 2025-07-15).
+**Inspired by**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/turkey-burgers/ (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12 min · **Rest**: 3 min
 
 **Temperature guidance**:
@@ -64,7 +64,7 @@ Binda med ägg och panko, forma biffar 150–180 g, tillaga vid 180–200 °C (a
 ---
 
 ### 2. Natasha's Kitchen — Chicken Meatballs (ground chicken method reference)
-**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/chicken-meatballs/ (fetched 2025-07-15).
+**Inspired by**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/chicken-meatballs/ (fetched 2025-07-15).
 **Serves**: 4–6 · **Prep**: 20 min · **Cook**: 7 min · **Rest**: 2 min
 
 **Temperature guidance**:
@@ -94,7 +94,7 @@ Binda med ägg och panko, forma biffar 150–180 g, tillaga vid 180–200 °C (a
 ---
 
 ### 3. Immaculate Bites — Jamaican Chicken Patties (Caribbean Spiced Ground Chicken Patties)
-**Source**: Imma Adamu, Africanbites.com (Cameroonian-born food blogger, based in USA); https://www.africanbites.com/jamaican-chicken-patties/ (fetched 2026-04-24).
+**Inspired by**: Imma Adamu, Africanbites.com (Cameroonian-born food blogger, based in USA); https://www.africanbites.com/jamaican-chicken-patties/ (fetched 2026-04-24).
 **Serves**: 8–10 patties · **Prep**: 30 min · **Cook**: 30 min (oven) / 12 min (air fryer)
 
 **Temperature guidance**:

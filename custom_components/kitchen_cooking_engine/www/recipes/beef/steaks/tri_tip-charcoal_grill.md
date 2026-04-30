@@ -23,7 +23,7 @@ Tri-tip på träkol drar nytta av den klassiska Santa Maria-grilltraditionen —
 ## Source recipes
 
 ### 1. Madens Verden — Ball tip i grill (charcoal adaptation) (Danish tradition)
-**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ball-tip/ (fetched 2026-04-24). *Two-zone charcoal: indirect heat 175 °C (or lower), 40 minutes per kg, core 56 °C. Rest 15 minutes.*
+**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ball-tip/ (fetched 2026-04-24). *Two-zone charcoal: indirect heat 175 °C (or lower), 40 minutes per kg, core 56 °C. Rest 15 minutes.*
 **Serves**: 4 · **Cook**: 40–50 min charcoal indirect + 5 min direct sear
 
 **Temperature guidance (from recipe)**: "Hold grillen nede på 175 grader." (Hold the grill at 175 °C.) Core target: 56 °C.
@@ -47,7 +47,7 @@ Tri-tip på träkol drar nytta av den klassiska Santa Maria-grilltraditionen —
 ---
 
 ### 2. Immaculate Bites (africanbites.com) — charcoal grill adaptation (Californian / West African tradition)
-**Source**: Imma Adamu, africanbites.com; https://www.africanbites.com/juicy-smoked-tri-tip/ and https://www.africanbites.com/oven-tri-tip-roast/ (fetched 2026-04-24). *The africanbites smoked tri-tip method applied to a charcoal grill: hot coals on one side, meat on the other; add flavoured wood chips for smoke.*
+**Inspired by**: Imma Adamu, africanbites.com; https://www.africanbites.com/juicy-smoked-tri-tip/ and https://www.africanbites.com/oven-tri-tip-roast/ (fetched 2026-04-24). *The africanbites smoked tri-tip method applied to a charcoal grill: hot coals on one side, meat on the other; add flavoured wood chips for smoke.*
 **Serves**: 4 · **Cook**: 30–40 min charcoal indirect + 5 min sear
 
 **Temperature guidance (from recipe)**: "Place tri-tip on the other side of the grill farthest from the coals." Core target 135–140 °F (57–60 °C) for medium.
@@ -70,7 +70,7 @@ Tri-tip på träkol drar nytta av den klassiska Santa Maria-grilltraditionen —
 ---
 
 ### 3. Chefkoch.de — Das perfekte Steak mit Steakkruste (adapted for charcoal grill) (German tradition)
-**Source**: Lumacone, Chefkoch.de; https://www.chefkoch.de/rezepte/3258661484569054/Das-perfekte-Steak-mit-Steakkruste.html (fetched 2026-04-24). *The constant-turning pan method translated to charcoal: direct zone as the "pan", frequent turning for even Maillard crust.*
+**Inspired by**: Lumacone, Chefkoch.de; https://www.chefkoch.de/rezepte/3258661484569054/Das-perfekte-Steak-mit-Steakkruste.html (fetched 2026-04-24). *The constant-turning pan method translated to charcoal: direct zone as the "pan", frequent turning for even Maillard crust.*
 **Serves**: 2 · **Cook**: 6–10 min over direct charcoal
 
 **Temperature guidance (from recipe adapted)**: "Crust transitions from light to dark brown = your stop point." De-chill 2+ hours before grilling. Butter rest 2–4 minutes in foil.

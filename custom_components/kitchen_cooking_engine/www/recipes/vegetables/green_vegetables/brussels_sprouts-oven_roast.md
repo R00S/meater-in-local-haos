@@ -19,7 +19,7 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) ugnsrostad vid 200–220 °C 
 ## Source recipes
 
 ### 1. Najmieh Batmanglij — Persian-Style Roasted Brussels Sprouts with Saffron and Dried Barberries
-**Source**: Najmieh Batmanglij, *Food of Life* (Mage Publishers, 2011); Persian spice technique applied to Brussels sprouts roasting.
+**Inspired by**: Najmieh Batmanglij, *Food of Life* (Mage Publishers, 2011); Persian spice technique applied to Brussels sprouts roasting.
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 25–28 min · **Rest**: 3 min
 
 **Ingredients**
@@ -34,7 +34,7 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) ugnsrostad vid 200–220 °C 
 ---
 
 ### 2. Magnus Nilsson — Ugnsrostad Brysselkål (Nordic / Swedish tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)
+**Inspired by**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 25–28 min · **Rest**: 3 min
 
 **Ingredients**
@@ -48,7 +48,7 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) ugnsrostad vid 200–220 °C 
 ---
 
 ### 3. Madhur Jaffrey — Roasted Masala Brussels Sprouts (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 22–25 min · **Rest**: 3 min
 
 **Ingredients**
@@ -62,7 +62,7 @@ Brysselkål (*Brassica oleracea* var. *gemmifera*) ugnsrostad vid 200–220 °C 
 ---
 
 ### 4. José Andrés — Coles de Bruselas al Horno con Romesco (Spanish tradition)
-**Source**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
+**Inspired by**: José Andrés & Richard Wolffe, *Vegetables Unleashed* (Clarkson Potter, 2019)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 22–25 min · **Rest**: 3 min
 
 **Ingredients**

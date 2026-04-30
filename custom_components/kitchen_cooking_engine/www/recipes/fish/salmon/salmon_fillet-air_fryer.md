@@ -22,7 +22,7 @@ Den kompakta geometrin hos de flesta airfryer-korgar innebär att portioner mås
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air-Fryer Salmon (American tradition)
-**Source**: America's Test Kitchen, *Air Fryer Perfection* (America's Test Kitchen, 2019)  
+**Inspired by**: America's Test Kitchen, *Air Fryer Perfection* (America's Test Kitchen, 2019)  
 **Serves**: 2 · **Prep**: 5 min (+15 min brine) · **Cook**: 9–12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -45,7 +45,7 @@ Den kompakta geometrin hos de flesta airfryer-korgar innebär att portioner mås
 ---
 
 ### 2. Hetty McKinnon — Air-Fryer Teriyaki Salmon (Japanese-Australian tradition)
-**Source**: Hetty McKinnon, *To Asia, With Love* (Prestel Publishing, 2021)  
+**Inspired by**: Hetty McKinnon, *To Asia, With Love* (Prestel Publishing, 2021)  
 **Serves**: 2 · **Prep**: 10 min (+30 min marinade) · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -67,7 +67,7 @@ Den kompakta geometrin hos de flesta airfryer-korgar innebär att portioner mås
 ---
 
 ### 3. Jamie Oliver — Air-Fryer Salmon with Spice Crust (British tradition)
-**Source**: Jamie Oliver, *5 Ingredients — Quick & Easy Food* (Michael Joseph / Penguin, 2017); adapted for air fryer in his online recipes at jamieoliver.com  
+**Inspired by**: Jamie Oliver, *5 Ingredients — Quick & Easy Food* (Michael Joseph / Penguin, 2017); adapted for air fryer in his online recipes at jamieoliver.com  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -92,7 +92,7 @@ Den kompakta geometrin hos de flesta airfryer-korgar innebär att portioner mås
 ---
 
 ### 4. Nigella Lawson — Sweet Miso-Glazed Air-Fryer Salmon (fusion, British-Japanese tradition)
-**Source**: Nigella Lawson, *Cook, Eat, Repeat* (Chatto & Windus, 2020)  
+**Inspired by**: Nigella Lawson, *Cook, Eat, Repeat* (Chatto & Windus, 2020)  
 **Serves**: 2 · **Prep**: 5 min (+1 h marinade) · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -117,7 +117,7 @@ Den kompakta geometrin hos de flesta airfryer-korgar innebär att portioner mås
 ---
 
 ### 5. Donna Hay — Lemon-Herb Air-Fryer Salmon (Australian tradition)
-**Source**: Donna Hay, *The Fast 400 Cookbook* (HarperCollins Australia, 2020)  
+**Inspired by**: Donna Hay, *The Fast 400 Cookbook* (HarperCollins Australia, 2020)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 10 min · **Rest**: 2 min
 
 **Ingredients**

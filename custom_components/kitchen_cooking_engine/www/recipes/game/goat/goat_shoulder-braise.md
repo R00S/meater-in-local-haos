@@ -24,7 +24,7 @@ Innertemperaturen är nödvändig men otillräcklig: snittet behöver tid vid 88
 ## Source recipes
 
 ### 1. Yotam Ottolenghi & Sami Tamimi — Slow-Braised Goat Shoulder with Pomegranate, Cumin & Walnuts (Levantine tradition)
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk  
+**Inspired by**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 5 hours · **Rest**: 20 min
 
 **Ingredients**
@@ -54,7 +54,7 @@ Innertemperaturen är nödvändig men otillräcklig: snittet behöver tid vid 88
 ---
 
 ### 2. Tina Nordström — Långbräserad Getskuldra med Rödvin (Swedish/Nordic tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se — viltsektionen  
+**Inspired by**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se — viltsektionen  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 5 hours · **Rest**: 20 min
 
 **Ingredients**
@@ -83,7 +83,7 @@ Innertemperaturen är nödvändig men otillräcklig: snittet behöver tid vid 88
 ---
 
 ### 3. Hugh Fearnley-Whittingstall — Slow-Braised Goat Shoulder with Cider (British River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004); rivercottage.net  
+**Inspired by**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004); rivercottage.net  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 5 hours · **Rest**: 20 min
 
 **Ingredients**
@@ -110,7 +110,7 @@ Innertemperaturen är nödvändig men otillräcklig: snittet behöver tid vid 88
 ---
 
 ### 4. Maricel Presilla — Cabrito en Salsa Verde / Slow-Braised Goat Shoulder (Latin American tradition)
-**Source**: Maricel E. Presilla, *Gran Cocina Latina: The Food of Latin America* (W. W. Norton, 2012)  
+**Inspired by**: Maricel E. Presilla, *Gran Cocina Latina: The Food of Latin America* (W. W. Norton, 2012)  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 5 hours · **Rest**: 20 min
 
 **Ingredients**

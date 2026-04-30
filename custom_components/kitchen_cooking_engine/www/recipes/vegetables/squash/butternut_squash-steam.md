@@ -19,7 +19,7 @@ Butternut-squash (*Cucurbita moschata*) skuren i 3–4 cm tärningar och ångad 
 ## Source recipes
 
 ### 1. Madhur Jaffrey — Steamed Butternut with Ginger and Cumin (Indian tradition)
-**Source**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
+**Inspired by**: Madhur Jaffrey, *Curry Easy* (Ebury Press, 2010)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 3 min
 
 **Ingredients**
@@ -34,7 +34,7 @@ Butternut-squash (*Cucurbita moschata*) skuren i 3–4 cm tärningar och ångad 
 ---
 
 ### 2. Fuchsia Dunlop — Steamed Nangua with Doubanjiang Dressing (Chinese Sichuan tradition)
-**Source**: Fuchsia Dunlop, *Every Grain of Rice* (Bloomsbury, 2012)
+**Inspired by**: Fuchsia Dunlop, *Every Grain of Rice* (Bloomsbury, 2012)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 15–18 min · **Rest**: 3 min
 
 **Ingredients**
@@ -48,7 +48,7 @@ Butternut-squash (*Cucurbita moschata*) skuren i 3–4 cm tärningar och ångad 
 ---
 
 ### 3. Harumi Kurihara — Kabocha no Nimono-style Steamed Squash (Japanese tradition)
-**Source**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
+**Inspired by**: Harumi Kurihara, *Harumi's Japanese Home Cooking* (DK, 2007)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 3 min
 
 **Ingredients**
@@ -62,7 +62,7 @@ Butternut-squash (*Cucurbita moschata*) skuren i 3–4 cm tärningar och ångad 
 ---
 
 ### 4. Julia Child — Courge à la Vapeur (French tradition)
-**Source**: Julia Child, *Mastering the Art of French Cooking, Vol. 2* (Alfred A. Knopf, 1970)
+**Inspired by**: Julia Child, *Mastering the Art of French Cooking, Vol. 2* (Alfred A. Knopf, 1970)
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 3 min
 
 **Ingredients**

@@ -35,7 +35,7 @@ Tillagningstid: 2–3 minuter per sida. Sond insatt parallellt med stekens yta i
 ## Source recipes
 
 ### 1. Chefkoch.de — Straußensteaks aus dem Ofen (German tradition)
-**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/2012321326036993/Straussen-Steaks-aus-dem-Ofen.html (fetched 2026-04-24)
+**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/2012321326036993/Straussen-Steaks-aus-dem-Ofen.html (fetched 2026-04-24)
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 30 min
 
 *Translation: Ostrich steaks from the oven — seared in oil, finished with port wine and cream sauce.*
@@ -61,7 +61,7 @@ Tillagningstid: 2–3 minuter per sida. Sond insatt parallellt med stekens yta i
 ---
 
 ### 2. EatOut.co.za — Ostrich steak South African style (South African tradition)
-**Source**: EatOut.co.za; https://www.eatout.co.za/recipe/ostrich-steak-south-african/ (web search 2026-04-24)
+**Inspired by**: EatOut.co.za; https://www.eatout.co.za/recipe/ostrich-steak-south-african/ (web search 2026-04-24)
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8 min
 
 *South Africa is the world's leading producer of ostrich meat. The braai (BBQ) and pan traditions.*
@@ -85,7 +85,7 @@ Tillagningstid: 2–3 minuter per sida. Sond insatt parallellt med stekens yta i
 ---
 
 ### 3. Food24.com — Pan-seared ostrich with mushroom sauce (South African/Continental tradition)
-**Source**: Food24.com; https://www.food24.com/recipes/pan-seared-ostrich-steak/ (web search 2026-04-24)
+**Inspired by**: Food24.com; https://www.food24.com/recipes/pan-seared-ostrich-steak/ (web search 2026-04-24)
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 15 min
 
 **Ingredients**

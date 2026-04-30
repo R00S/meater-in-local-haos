@@ -35,7 +35,7 @@ Binda formade biffar med ägg och panko. Pannsteka vid medel-hög värme tills g
 ## Source recipes
 
 ### 1. Jessica Gavin — Turkey Burgers (ground poultry patty technique adapted for chicken)
-**Source**: Jessica Gavin, jessicagavin.com; https://www.jessicagavin.com/turkey-burgers/ (fetched 2025-07-15).
+**Inspired by**: Jessica Gavin, jessicagavin.com; https://www.jessicagavin.com/turkey-burgers/ (fetched 2025-07-15).
 **Serves**: 4 · **Prep**: 15 min + 30 min chill · **Cook**: 10–12 min · **Rest**: 3 min
 
 **Temperature guidance**:
@@ -79,7 +79,7 @@ Binda formade biffar med ägg och panko. Pannsteka vid medel-hög värme tills g
 ---
 
 ### 2. Natasha's Kitchen — Chicken Meatballs (ground chicken pan-fry reference)
-**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/chicken-meatballs/ (fetched 2025-07-15).
+**Inspired by**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/chicken-meatballs/ (fetched 2025-07-15).
 **Serves**: 4–6 · **Prep**: 20 min · **Cook**: 7 min · **Rest**: 2 min
 
 **Temperature guidance**:
@@ -112,7 +112,7 @@ Binda formade biffar med ägg och panko. Pannsteka vid medel-hög värme tills g
 ---
 
 ### 3. Swasthi Shreekanth — Chicken Tikki (Indian Pan-Fried Ground Chicken Patties)
-**Source**: Swasthi Shreekanth, IndianHealthyRecipes.com; https://www.indianhealthyrecipes.com/chicken-patties/ (fetched 2026-04-24).
+**Inspired by**: Swasthi Shreekanth, IndianHealthyRecipes.com; https://www.indianhealthyrecipes.com/chicken-patties/ (fetched 2026-04-24).
 **Serves**: 8 patties · **Prep**: 20 min + 2 hr optional brine · **Cook**: 10–15 min
 
 **Temperature guidance**:
