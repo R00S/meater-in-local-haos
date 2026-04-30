@@ -41,9 +41,13 @@ Build a smart cooking engine for your kitchen appliances:
 
 ## 🌡️ Supported Wireless Probe Hardware
 
-> ⭐ **Best path — Local MEATER+ with ESP32 support**
+> ⭐ **Best path — Local MEATER+ without extra hardware**
+> Install **[Emkraan/homeassistant-meater](https://github.com/Emkraan/homeassistant-meater)** from HACS. It reads the MEATER+ probe directly via BLE — no ESP32 or cloud account required.
+> ✅ No cloud required &nbsp;·&nbsp; ✅ No extra hardware &nbsp;·&nbsp; ✅ All sensors available (tip, ambient, battery)
+> → See the **[HACS integrations](#hacs-integrations)** table below for entity names.
+>
+> ⭐ **Alternative — Local MEATER+ with ESP32**
 > Use a **MEATER+** probe (only the Plus model) with any ESP32 board running the ESPHome config included in this repo.
-> ✅ No cloud required &nbsp;·&nbsp; ✅ Most ESP32 works &nbsp;·&nbsp; ✅ All sensors available (tip, ambient, battery)
 > → See **[Quick Start with MEATER+](#-quick-start-with-meater)** below.
 
 KCE's temperature-probe cook path works with **any** Home Assistant sensor entity that exposes a numeric temperature value — no matter which probe brand or integration you use. You simply enter the entity IDs during setup and KCE reads their state.
@@ -63,6 +67,7 @@ KCE's temperature-probe cook path works with **any** Home Assistant sensor entit
 
 | Probe / Brand | HA Integration | Tip sensor | Ambient sensor | Battery | Notes |
 |--------------|---------------|-----------|----------------|---------|-------|
+| **MEATER / MEATER+** | [homeassistant-meater](https://github.com/Emkraan/homeassistant-meater) (Local BLE) | `sensor.*_tip_temp` | `sensor.*_ambient_temp` | ✅ `sensor.*_battery` | No cloud, no ESP32 — pure BLE. MEATER+ only. |
 | **Combustion Inc Predictive Thermometer** | [homeassistant-combustion](https://github.com/legrego/homeassistant-combustion) (Local BLE) | `sensor.*_core_temperature` | `sensor.*_ambient_temperature` | ❌ binary | 8-sensor predictive probe; open BLE protocol |
 
 ### Via ESPHome (ESP32 as BLE proxy)
