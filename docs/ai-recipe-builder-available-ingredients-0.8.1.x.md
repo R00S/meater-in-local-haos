@@ -96,3 +96,30 @@ Improve the AI Recipe Builder ingredient selector:
 - v0.8.1.5 — B/C: expanded CUISINE_INGREDIENTS (PANEL_VERSION 398)
 - v0.8.1.6 — A: cuisine-aware protein subcat highlighting (PANEL_VERSION 399)
 - v0.8.1.7 — CHORES (version bump + docs)
+
+### Session 3 (2026-05-xx)
+
+**Task:** Expand CUISINE_INGREDIENTS for 15 European/Nordic cuisines to hit minimums: v≥16, g≥6, d≥7, s≥7.
+
+**Method:**
+1. Web-searched real recipes for each cuisine to confirm ingredients appear in ≥3 recipes
+2. Added `_inge()` entries only for verified ingredients from the global ingredient ID list
+
+**Results (all hit targets exactly):**
+- swedish: v=16 g=6 d=7 s=7
+- danish: v=16 g=6 d=7 s=7
+- norwegian: v=16 g=6 d=7 s=7
+- finnish: v=16 g=6 d=7 s=7
+- icelandic: v=16 g=6 d=7 s=7
+- british: v=16 g=6 d=7 s=7
+- german: v=16 g=6 d=7 s=7
+- french: v=16 g=6 d=7 s=7
+- polish: v=16 g=6 d=7 s=7
+- hungarian: v=16 g=6 d=7 s=7
+- balkan: v=16 g=6 d=7 s=7
+- portuguese: v=16 g=6 d=7 s=7
+- spanish: v=16 g=6 d=7 s=7
+- italian: v=16 g=6 d=8 s=7 (dairy already ≥7)
+- greek: v=16 g=6 d=7 s=7
+
+**No duplicates in any cuisine list. File parses cleanly.**
