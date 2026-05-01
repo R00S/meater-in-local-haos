@@ -151,3 +151,27 @@ Improve the AI Recipe Builder ingredient selector:
 
 **No duplicates. AST parses cleanly. 117 lines added.**
 
+
+### Session 5 (2026-05-xx)
+
+**Task:** Expand CUISINE_INGREDIENTS for 10 African cuisines to hit minimums: v≥16, g≥6, d≥7, s≥7.
+
+**Method:**
+1. Read current entries for each cuisine to identify deficits
+2. Web-searched authentic recipes (jollof, egusi, yassa, doro wat, nyama choma, pilau, etc.)
+3. Added `_inge()` entries only for verified ingredients from global palette
+4. Fixed dropped `_ing()` base entries for Ethiopian (lentils, chickpeas) and Tanzanian (fish, rice, corn, onions, tomatoes, coconut_milk, garlic) caused by earlier edit-tool bug
+
+**Results (all targets met):**
+- nigerian: v=16 g=6 d=7 s=7
+- ghanaian: v=16 g=6 d=7 s=7
+- senegalese: v=16 g=6 d=7 s=7
+- west_african: v=16 g=6 d=7 s=7
+- african: v=16 g=6 d=7 s=7
+- ethiopian: v=16 g=6 d=7 s=7 (restored dropped lentils + chickpeas)
+- east_african: v=16 g=6 d=7 s=7
+- kenyan: v=16 g=6 d=7 s=7
+- tanzanian: v=16 g=6 d=7 s=7 (restored 7 dropped base _ing() entries)
+- south_african: v=16 g=6 d=7 s=7
+
+**No duplicates. AST parses cleanly. Version bumped to 0.8.1.8, PANEL_VERSION=401.**

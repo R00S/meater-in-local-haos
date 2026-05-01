@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 30 Apr 2026, 13:00 CET
+ * AUTO-GENERATED: 01 May 2026, 07:42 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 30 Apr 2026, 13:00 CET
+// Last generated: 01 May 2026, 07:42 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -4382,6 +4382,78 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Juniper Berries",
       "cat": "s",
       "common": false
+    },
+    {
+      "id": "leeks",
+      "name": "Leeks",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "fennel",
+      "name": "Fennel",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "barley",
+      "name": "Barley",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "flour",
+      "name": "Flour",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "white_wine",
+      "name": "White Wine",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "cat": "s",
+      "common": false
     }
   ],
   "danish": [
@@ -4558,6 +4630,96 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Oats",
       "cat": "g",
       "common": false
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "fennel",
+      "name": "Fennel",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "barley",
+      "name": "Barley",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "flour",
+      "name": "Flour",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "white_wine",
+      "name": "White Wine",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "caraway_seeds",
+      "name": "Caraway Seeds",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "marjoram",
+      "name": "Marjoram",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon",
+      "cat": "s",
+      "common": false
     }
   ],
   "norwegian": [
@@ -4727,6 +4889,102 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "barley",
       "name": "Barley",
       "cat": "g",
+      "common": false
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "peas",
+      "name": "Peas",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "turnips",
+      "name": "Turnips",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "fennel",
+      "name": "Fennel",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "thyme",
+      "name": "Thyme",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "flour",
+      "name": "Flour",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "oats",
+      "name": "Oats",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "white_wine",
+      "name": "White Wine",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cardamom",
+      "name": "Cardamom",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "caraway_seeds",
+      "name": "Caraway Seeds",
+      "cat": "s",
       "common": false
     }
   ],
@@ -4898,6 +5156,96 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Parsnips",
       "cat": "v",
       "common": false
+    },
+    {
+      "id": "leeks",
+      "name": "Leeks",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "peas",
+      "name": "Peas",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "fennel",
+      "name": "Fennel",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "oats",
+      "name": "Oats",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "flour",
+      "name": "Flour",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "white_wine",
+      "name": "White Wine",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "mustard",
+      "name": "Mustard",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "white_pepper",
+      "name": "White Pepper",
+      "cat": "s",
+      "common": false
     }
   ],
   "icelandic": [
@@ -5031,6 +5379,132 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "shrimp",
       "name": "Shrimp",
       "cat": "p",
+      "common": false
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "leeks",
+      "name": "Leeks",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "thyme",
+      "name": "Thyme",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "beets",
+      "name": "Beets",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "turnips",
+      "name": "Turnips",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "rosemary",
+      "name": "Rosemary",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "oats",
+      "name": "Oats",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "flour",
+      "name": "Flour",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "white_wine",
+      "name": "White Wine",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "sour_cream",
+      "name": "Sour Cream",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cardamom",
+      "name": "Cardamom",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "caraway_seeds",
+      "name": "Caraway Seeds",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon",
+      "cat": "s",
       "common": false
     }
   ],
@@ -8444,6 +8918,96 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Saffron",
       "cat": "s",
       "common": false
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "dill",
+      "name": "Dill",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "pita",
+      "name": "Pita Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "fava_beans",
+      "name": "Fava Beans",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "rose_water",
+      "name": "Rose Water",
+      "cat": "d",
+      "common": false
     }
   ],
   "turkish": [
@@ -8613,6 +9177,90 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "pistachios",
       "name": "Pistachios",
       "cat": "s",
+      "common": false
+    },
+    {
+      "id": "mint",
+      "name": "Mint",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "dill",
+      "name": "Dill",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "peas",
+      "name": "Peas",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "phyllo",
+      "name": "Phyllo Dough",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "feta",
+      "name": "White Cheese (Beyaz Peynir)",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "cat": "d",
       "common": false
     }
   ],
@@ -8790,6 +9438,96 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Raisins",
       "cat": "s",
       "common": false
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "tarragon",
+      "name": "Tarragon (Tarkhun)",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "leeks",
+      "name": "Leeks",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "peas",
+      "name": "Peas",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "lavash",
+      "name": "Lavash Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "barley",
+      "name": "Barley",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "split_peas",
+      "name": "Split Peas",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
     }
   ],
   "lebanese": [
@@ -8960,6 +9698,90 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Pistachios",
       "cat": "s",
       "common": false
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cauliflower",
+      "name": "Cauliflower",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "flat_bread",
+      "name": "Flatbread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "feta",
+      "name": "Cheese",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
     }
   ],
   "israeli": [
@@ -9118,6 +9940,96 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Cilantro",
       "cat": "v",
       "common": false
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "dill",
+      "name": "Dill",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cauliflower",
+      "name": "Cauliflower",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "leeks",
+      "name": "Leeks",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "feta",
+      "name": "Feta",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "cat": "d",
+      "common": false
     }
   ],
   "syrian": [
@@ -9270,6 +10182,96 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Dried Apricots",
       "cat": "s",
       "common": false
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cauliflower",
+      "name": "Cauliflower",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "flat_bread",
+      "name": "Flatbread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tahini",
+      "name": "Tahini",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "cat": "d",
+      "common": false
     }
   ],
   "iraqi": [
@@ -9416,6 +10418,120 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Lemon",
       "cat": "v",
       "common": false
+    },
+    {
+      "id": "mint",
+      "name": "Mint",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "dill",
+      "name": "Dill",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cauliflower",
+      "name": "Cauliflower",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "pita",
+      "name": "Pita Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "fava_beans",
+      "name": "Fava Beans",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tahini",
+      "name": "Tahini",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "pomegranate_molasses",
+      "name": "Pomegranate Molasses",
+      "cat": "d",
+      "common": false
     }
   ],
   "yemeni": [
@@ -9543,6 +10659,132 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "parsley",
       "name": "Parsley",
       "cat": "v",
+      "common": false
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "mint",
+      "name": "Mint",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "shallots",
+      "name": "Shallots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "pita",
+      "name": "Pita Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "bulgur",
+      "name": "Bulgur",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "fava_beans",
+      "name": "Fava Beans",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tahini",
+      "name": "Tahini",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
       "common": false
     }
   ],
@@ -9683,6 +10925,138 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "pomegranate",
       "name": "Pomegranate",
       "cat": "s",
+      "common": false
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "mint",
+      "name": "Mint",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "okra",
+      "name": "Okra",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "pumpkin",
+      "name": "Pumpkin",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "bulgur",
+      "name": "Bulgur",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "flat_bread",
+      "name": "Flatbread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "fava_beans",
+      "name": "Fava Beans",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tahini",
+      "name": "Tahini",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
       "common": false
     }
   ],
@@ -9841,6 +11215,96 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "dried_apricots",
       "name": "Dried Apricots",
       "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cauliflower",
+      "name": "Cauliflower",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "flat_bread",
+      "name": "Flatbread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "feta",
+      "name": "Cheese",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "pomegranate_molasses",
+      "name": "Pomegranate Molasses",
+      "cat": "d",
       "common": false
     }
   ],
@@ -10188,6 +11652,96 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Pecorino",
       "cat": "d",
       "common": false
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "fennel",
+      "name": "Fennel",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "shallots",
+      "name": "Shallots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "cannellini",
+      "name": "Cannellini Beans",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "polenta",
+      "name": "Polenta",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "peppercorns",
+      "name": "Peppercorns",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "pine_nuts",
+      "name": "Pine Nuts",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "red_pepper_flakes",
+      "name": "Red Pepper Flakes",
+      "cat": "s",
+      "common": false
     }
   ],
   "french": [
@@ -10364,6 +11918,84 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Flour",
       "cat": "g",
       "common": false
+    },
+    {
+      "id": "fennel",
+      "name": "Fennel",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "cannellini",
+      "name": "Cannellini Beans",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "pasta",
+      "name": "Pasta",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "allspice",
+      "name": "Allspice",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cloves",
+      "name": "Cloves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "peppercorns",
+      "name": "Peppercorns",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "capers",
+      "name": "Capers",
+      "cat": "s",
+      "common": false
     }
   ],
   "spanish": [
@@ -10527,6 +12159,120 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "oregano",
       "name": "Oregano",
       "cat": "v",
+      "common": false
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "leeks",
+      "name": "Leeks",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "fennel",
+      "name": "Fennel",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "shallots",
+      "name": "Shallots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "thyme",
+      "name": "Thyme",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "flour",
+      "name": "Flour",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "cannellini",
+      "name": "Cannellini Beans",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "red_wine",
+      "name": "Red Wine",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "peppercorns",
+      "name": "Peppercorns",
+      "cat": "s",
       "common": false
     }
   ],
@@ -10698,6 +12444,84 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Walnuts",
       "cat": "s",
       "common": false
+    },
+    {
+      "id": "fennel",
+      "name": "Fennel",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "leeks",
+      "name": "Leeks",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "cannellini",
+      "name": "Cannellini Beans",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "red_wine",
+      "name": "Red Wine",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "white_wine",
+      "name": "White Wine",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "allspice",
+      "name": "Allspice",
+      "cat": "s",
+      "common": false
     }
   ],
   "portuguese": [
@@ -10842,6 +12666,138 @@ const AI_CUISINE_INGREDIENTS = {
     {
       "id": "cumin",
       "name": "Cumin",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "kale",
+      "name": "Kale",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "leeks",
+      "name": "Leeks",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "thyme",
+      "name": "Thyme",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "oregano",
+      "name": "Oregano",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_beans",
+      "name": "Green Beans",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "fennel",
+      "name": "Fennel",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "flour",
+      "name": "Flour",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "cannellini",
+      "name": "Cannellini Beans",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "almonds",
+      "name": "Almonds",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "saffron",
+      "name": "Saffron",
       "cat": "s",
       "common": false
     }
@@ -10996,6 +12952,114 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Marjoram",
       "cat": "s",
       "common": false
+    },
+    {
+      "id": "leeks",
+      "name": "Leeks",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "celeriac",
+      "name": "Celeriac",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "turnips",
+      "name": "Turnips",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "thyme",
+      "name": "Thyme",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "barley",
+      "name": "Barley",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "flour",
+      "name": "Flour",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "oats",
+      "name": "Oats",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "white_wine",
+      "name": "White Wine",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "allspice",
+      "name": "Allspice",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cloves",
+      "name": "Cloves",
+      "cat": "s",
+      "common": false
     }
   ],
   "british": [
@@ -11142,6 +13206,126 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Cheddar",
       "cat": "d",
       "common": false
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "turnips",
+      "name": "Turnips",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "chives",
+      "name": "Chives",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "celeriac",
+      "name": "Celeriac",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "shallots",
+      "name": "Shallots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "barley",
+      "name": "Barley",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "oats",
+      "name": "Oats",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "white_wine",
+      "name": "White Wine",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "allspice",
+      "name": "Allspice",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cloves",
+      "name": "Cloves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "peppercorns",
+      "name": "Peppercorns",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "walnuts",
+      "name": "Walnuts",
+      "cat": "s",
+      "common": false
     }
   ],
   "polish": [
@@ -11282,6 +13466,120 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Barley",
       "cat": "g",
       "common": false
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "peas",
+      "name": "Peas",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "turnips",
+      "name": "Turnips",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "chives",
+      "name": "Chives",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "flour",
+      "name": "Flour",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "buckwheat",
+      "name": "Buckwheat",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "mustard",
+      "name": "Mustard",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "white_wine",
+      "name": "White Wine",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "peppercorns",
+      "name": "Peppercorns",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "paprika",
+      "name": "Paprika",
+      "cat": "s",
+      "common": false
     }
   ],
   "hungarian": [
@@ -11409,6 +13707,132 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "parsley",
       "name": "Parsley",
       "cat": "v",
+      "common": false
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "celeriac",
+      "name": "Celeriac",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "leeks",
+      "name": "Leeks",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_beans",
+      "name": "Green Beans",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "red_cabbage",
+      "name": "Red Cabbage",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "turnips",
+      "name": "Turnips",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "barley",
+      "name": "Barley",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "egg_noodles",
+      "name": "Egg Noodles",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "white_wine",
+      "name": "White Wine",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "allspice",
+      "name": "Allspice",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon",
+      "cat": "s",
       "common": false
     }
   ],
@@ -11700,6 +14124,114 @@ const AI_CUISINE_INGREDIENTS = {
     {
       "id": "walnuts",
       "name": "Walnuts",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "leeks",
+      "name": "Leeks",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "peas",
+      "name": "Peas",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "flour",
+      "name": "Flour",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "white_wine",
+      "name": "White Wine",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
       "cat": "s",
       "common": false
     }
@@ -15452,6 +17984,96 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Berbere Spice",
       "cat": "s",
       "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "corn",
+      "name": "Corn",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "couscous",
+      "name": "Couscous",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "millet",
+      "name": "Millet",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "cardamom",
+      "name": "Cardamom",
+      "cat": "s",
+      "common": false
     }
   ],
   "ethiopian": [
@@ -15609,6 +18231,108 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "eggs",
       "name": "Eggs",
       "cat": "p",
+      "common": false
+    },
+    {
+      "id": "collard_greens",
+      "name": "Collard Greens (Gomen)",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_beans",
+      "name": "Green Beans",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "pumpkin",
+      "name": "Pumpkin",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "shallots",
+      "name": "Shallots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "chili",
+      "name": "Chili Pepper",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "corn",
+      "name": "Corn",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "barley",
+      "name": "Barley (Tihlo)",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt (Ayib)",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee (Qibe)",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "honey",
+      "name": "Honey (Tej)",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "cat": "d",
       "common": false
     }
   ],
@@ -15792,6 +18516,108 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Argan Oil",
       "cat": "s",
       "common": false
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "mint",
+      "name": "Mint",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "turnips",
+      "name": "Turnips",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "artichokes",
+      "name": "Artichokes",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "fava_beans",
+      "name": "Fava Beans",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "flat_bread",
+      "name": "Flatbread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
     }
   ],
   "nigerian": [
@@ -15950,6 +18776,120 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Bell Peppers",
       "cat": "v",
       "common": false
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant / Garden Egg",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_onions",
+      "name": "Spring Onions",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "pumpkin",
+      "name": "Pumpkin",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "beans",
+      "name": "Beans",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "cornmeal",
+      "name": "Cornmeal (Ogi/Akara)",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "taro",
+      "name": "Cocoyam / Taro",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "pigeon_peas",
+      "name": "Pigeon Peas",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "hot_sauce",
+      "name": "Pepper Sauce",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "beer",
+      "name": "Palm Wine / Beer",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "allspice",
+      "name": "Allspice",
+      "cat": "s",
+      "common": false
     }
   ],
   "ghanaian": [
@@ -16102,6 +19042,114 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Coriander",
       "cat": "s",
       "common": false
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant / Garden Egg",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "chili",
+      "name": "Chili Pepper",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_beans",
+      "name": "Green Beans",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "millet",
+      "name": "Millet (Tuo Zaafi)",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "taro",
+      "name": "Cocoyam / Taro",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "beans",
+      "name": "Beans (Cowpeas)",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "hot_sauce",
+      "name": "Shito / Pepper Sauce",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "allspice",
+      "name": "Allspice",
+      "cat": "s",
+      "common": false
     }
   ],
   "senegalese": [
@@ -16242,6 +19290,120 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Coriander",
       "cat": "s",
       "common": false
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "turnips",
+      "name": "Turnips",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "pigeon_peas",
+      "name": "Pigeon Peas",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "dijon",
+      "name": "Dijon Mustard",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "paprika",
+      "name": "Paprika",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cloves",
+      "name": "Cloves",
+      "cat": "s",
+      "common": false
     }
   ],
   "south_african": [
@@ -16260,18 +19422,6 @@ const AI_CUISINE_INGREDIENTS = {
     {
       "id": "chicken",
       "name": "Chicken",
-      "cat": "p",
-      "common": true
-    },
-    {
-      "id": "pork",
-      "name": "Pork",
-      "cat": "p",
-      "common": true
-    },
-    {
-      "id": "boerewors",
-      "name": "Boerewors Sausage",
       "cat": "p",
       "common": true
     },
@@ -16381,6 +19531,144 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "sweet_potato",
       "name": "Sweet Potato",
       "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_beans",
+      "name": "Green Beans",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "squash",
+      "name": "Butternut Squash",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "rosemary",
+      "name": "Rosemary",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cornmeal",
+      "name": "Cornmeal (Pap)",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "beans",
+      "name": "Beans (Boontjie)",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "bread",
+      "name": "Bread (Braaibroodjie)",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "worcestershire",
+      "name": "Worcestershire Sauce",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "red_wine",
+      "name": "Red Wine",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "coriander",
+      "name": "Coriander Seeds",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cloves",
+      "name": "Cloves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "cat": "s",
       "common": false
     }
   ],
@@ -16521,6 +19809,114 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "cassava",
       "name": "Cassava",
       "cat": "v",
+      "common": false
+    },
+    {
+      "id": "collard_greens",
+      "name": "Collard Greens (Sukuma Wiki)",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "kale",
+      "name": "Kale",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lime",
+      "name": "Lime",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cornmeal",
+      "name": "Cornmeal (Ugali)",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "basmati_rice",
+      "name": "Basmati Rice",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tamarind",
+      "name": "Tamarind",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "palm_oil",
+      "name": "Palm Oil",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "cardamom",
+      "name": "Cardamom",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cloves",
+      "name": "Cloves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
+      "cat": "s",
       "common": false
     }
   ],
@@ -16668,6 +20064,120 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Cilantro",
       "cat": "v",
       "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lime",
+      "name": "Lime",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_beans",
+      "name": "Green Beans",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "kale",
+      "name": "Kale",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "basmati_rice",
+      "name": "Basmati Rice (Pilau)",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "beans",
+      "name": "Beans",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "palm_oil",
+      "name": "Palm Oil",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tamarind",
+      "name": "Tamarind",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "cardamom",
+      "name": "Cardamom",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cloves",
+      "name": "Cloves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
+      "cat": "s",
+      "common": false
     }
   ],
   "tunisian": [
@@ -16687,24 +20197,6 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "fish",
       "name": "Fish",
       "cat": "p",
-      "common": true
-    },
-    {
-      "id": "couscous",
-      "name": "Couscous",
-      "cat": "g",
-      "common": true
-    },
-    {
-      "id": "onions",
-      "name": "Onions",
-      "cat": "v",
-      "common": true
-    },
-    {
-      "id": "garlic",
-      "name": "Garlic",
-      "cat": "v",
       "common": true
     },
     {
@@ -16807,6 +20299,120 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "parsley",
       "name": "Parsley",
       "cat": "v",
+      "common": false
+    },
+    {
+      "id": "mint",
+      "name": "Mint",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "dill",
+      "name": "Dill",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "turnips",
+      "name": "Turnips",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "flat_bread",
+      "name": "Flatbread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "fava_beans",
+      "name": "Fava Beans",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "feta",
+      "name": "Cheese",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "paprika",
+      "name": "Paprika",
+      "cat": "s",
       "common": false
     }
   ],
@@ -16954,6 +20560,108 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Lemon",
       "cat": "v",
       "common": false
+    },
+    {
+      "id": "mint",
+      "name": "Mint",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "pita",
+      "name": "Pita Bread",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "paprika",
+      "name": "Paprika",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cardamom",
+      "name": "Cardamom",
+      "cat": "s",
+      "common": false
     }
   ],
   "east_african": [
@@ -17099,6 +20807,120 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "cilantro",
       "name": "Cilantro",
       "cat": "v",
+      "common": false
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "collard_greens",
+      "name": "Collard Greens",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "lime",
+      "name": "Lime",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "kale",
+      "name": "Kale",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "basmati_rice",
+      "name": "Basmati Rice (Pilau)",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "beans",
+      "name": "Beans",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "palm_oil",
+      "name": "Palm Oil",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tamarind",
+      "name": "Tamarind",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "cardamom",
+      "name": "Cardamom",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cloves",
+      "name": "Cloves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon",
+      "cat": "s",
       "common": false
     }
   ],
@@ -17246,6 +21068,120 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Coriander",
       "cat": "s",
       "common": false
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant / Garden Egg",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "shallots",
+      "name": "Shallots",
+      "cat": "v",
+      "common": false
+    },
+    {
+      "id": "millet",
+      "name": "Millet",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "taro",
+      "name": "Cocoyam / Taro",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "beans",
+      "name": "Beans",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "pigeon_peas",
+      "name": "Pigeon Peas",
+      "cat": "g",
+      "common": false
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "hot_sauce",
+      "name": "Pepper Sauce",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "tamarind",
+      "name": "Tamarind",
+      "cat": "d",
+      "common": false
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin",
+      "cat": "s",
+      "common": false
+    },
+    {
+      "id": "curry_powder",
+      "name": "Curry Powder",
+      "cat": "s",
+      "common": false
     }
   ],
   "oceanian": [
@@ -17266,72 +21202,6 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Chicken",
       "cat": "p",
       "common": true
-    },
-    {
-      "id": "pork",
-      "name": "Pork",
-      "cat": "p",
-      "common": true
-    },
-    {
-      "id": "fish",
-      "name": "Fish",
-      "cat": "p",
-      "common": true
-    },
-    {
-      "id": "shrimp",
-      "name": "Shrimp",
-      "cat": "p",
-      "common": true
-    },
-    {
-      "id": "potatoes",
-      "name": "Potatoes",
-      "cat": "g",
-      "common": true
-    },
-    {
-      "id": "onions",
-      "name": "Onions",
-      "cat": "v",
-      "common": true
-    },
-    {
-      "id": "garlic",
-      "name": "Garlic",
-      "cat": "v",
-      "common": true
-    },
-    {
-      "id": "carrots",
-      "name": "Carrots",
-      "cat": "v",
-      "common": true
-    },
-    {
-      "id": "tomatoes",
-      "name": "Tomatoes",
-      "cat": "v",
-      "common": true
-    },
-    {
-      "id": "eggs",
-      "name": "Eggs",
-      "cat": "p",
-      "common": true
-    },
-    {
-      "id": "venison",
-      "name": "Venison",
-      "cat": "p",
-      "common": false
-    },
-    {
-      "id": "kangaroo",
-      "name": "Kangaroo",
-      "cat": "p",
-      "common": false
     },
     {
       "id": "mushrooms",
@@ -17855,7 +21725,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["turkey", "goat", "beef", "duck", "chicken", "fish", "lamb", "rabbit", "veal", "venison", "pork"];
+const AI_GENERIC_PROTEIN_IDS = ["lamb", "venison", "turkey", "beef", "duck", "pork", "rabbit", "goat", "veal", "chicken", "fish"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -40553,7 +44423,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "400";
+const PANEL_VERSION = "401";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
