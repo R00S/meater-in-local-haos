@@ -123,3 +123,31 @@ Improve the AI Recipe Builder ingredient selector:
 - greek: v=16 g=6 d=7 s=7
 
 **No duplicates in any cuisine list. File parses cleanly.**
+
+### Session 4 (2026-05-xx)
+
+**Task:** Expand CUISINE_INGREDIENTS for 13 Middle East / North African cuisines to hit minimums: v≥16, g≥6, d≥7, s≥7.
+
+**Method:**
+1. Read current entries for each cuisine to identify deficits
+2. Web-searched authentic recipes (Turkish, Persian, Emirati, Moroccan, etc.) to confirm ≥3 appearances
+3. Added `_inge()` entries only for verified ingredients from the global palette ID list
+4. Verified with Python script that all counts hit targets, no ceiling exceeded, no duplicates
+
+**Results (all targets met):**
+- middle_east: v=16 g=6 d=7 s=12
+- turkish: v=16 g=6 d=7 s=10
+- persian: v=16 g=6 d=7 s=12 (tarragon/tarkhun verified in kuku, ash, khoresh)
+- lebanese: v=16 g=6 d=7 s=10
+- israeli: v=16 g=6 d=7 s=8
+- syrian: v=16 g=6 d=7 s=8
+- iraqi: v=16 g=6 d=7 s=11
+- yemeni: v=16 g=6 d=7 s=9
+- emirati: v=16 g=6 d=7 s=11 (okra verified in machboos)
+- palestinian: v=16 g=6 d=7 s=9
+- moroccan: v=16 g=6 d=7 s=13 (artichokes verified in tagine bil qar3oub)
+- tunisian: v=16 g=6 d=7 s=7
+- egyptian: v=16 g=6 d=7 s=7
+
+**No duplicates. AST parses cleanly. 117 lines added.**
+
