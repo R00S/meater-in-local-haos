@@ -175,3 +175,12 @@ Improve the AI Recipe Builder ingredient selector:
 - south_african: v=16 g=6 d=7 s=7
 
 **No duplicates. AST parses cleanly. Version bumped to 0.8.1.8, PANEL_VERSION=401.**
+
+### Session 6 (2026-05-02)
+
+**Task:** CHORES — version bump, branch timeline update.
+
+**Work done:**
+- Bumped version 0.8.1.8 → 0.8.1.9, PANEL_VERSION 401 → 402
+- USER_GUIDE §7.2 confirmed current (sessions 3–5 were data-only, no new UI features)
+- Updated branch timeline with sessions 3–6
