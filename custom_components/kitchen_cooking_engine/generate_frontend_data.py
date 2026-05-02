@@ -116,6 +116,130 @@ def _extract_recipe_titles(content):
     return titles
 
 
+def build_cuisine_data(base_dir):
+    """Read www/cuisines/*.md KCE:CUISINE files and build the AI_CUISINE_INGREDIENTS dict.
+
+    File format uses standard YAML frontmatter followed by markdown sections:
+
+        ---
+        KCE: CUISINE
+        id: swedish
+        name: Swedish
+        culinary_group: D
+        research_done: 1
+        ---
+
+        ## Proteins
+        - {id: salmon, grade: signature, name: Salmon, name_sv: "Lax", notes: "..."}
+        ...
+
+    Grades:
+        signature   → common=True  (shown in compact view; lights up protein tree)
+        very_common → common=True  (shown in compact view; lights up protein tree)
+        common      → common=False (shown in "More"; does not light up protein tree)
+
+    Returns (cuisine_ingredients, cuisine_to_group) where:
+        cuisine_ingredients: {cuisine_id: [{id, name, name_sv?, cat, grade, common}, ...]}
+        cuisine_to_group:    {cuisine_id: culinary_group_str}
+    """
+    _section_to_cat = {
+        "proteins":             "p",
+        "vegetables":           "v",
+        "grains":               "g",
+        "dairy":                "d",
+        "spices":               "s",
+        "spices & seasonings":  "s",
+        "condiments":           "s",
+        "other":                "s",
+    }
+    _grade_common = {
+        "signature":    True,
+        "very_common":  True,
+        "common":       False,
+    }
+
+    cuisines_dir = os.path.join(base_dir, "www", "cuisines")
+    cuisine_ingredients = {}
+    cuisine_to_group = {}
+
+    if not os.path.isdir(cuisines_dir):
+        return cuisine_ingredients, cuisine_to_group
+
+    for filename in sorted(os.listdir(cuisines_dir)):
+        if not filename.endswith(".md"):
+            continue
+        filepath = os.path.join(cuisines_dir, filename)
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                content = f.read()
+        except Exception as e:
+            print(f"Warning: Could not read cuisine file {filename}: {e}")
+            continue
+
+        # Parse YAML frontmatter between the first and second "---" lines
+        if not content.startswith("---"):
+            continue
+        end_fm = content.find("\n---", 3)
+        if end_fm == -1:
+            continue
+        fm_text = content[4:end_fm]
+        try:
+            fm = yaml.safe_load(fm_text)
+        except yaml.YAMLError as e:
+            print(f"Warning: Could not parse frontmatter in {filename}: {e}")
+            continue
+
+        if not isinstance(fm, dict) or fm.get("KCE") != "CUISINE":
+            continue
+
+        cuisine_id = fm.get("id")
+        if not cuisine_id:
+            continue
+
+        culinary_group = str(fm.get("culinary_group", ""))
+        cuisine_to_group[cuisine_id] = culinary_group
+
+        # Parse ingredient sections from markdown body
+        body = content[end_fm + 4:]
+        ingredients = []
+        current_cat = "s"
+
+        for line in body.splitlines():
+            stripped = line.strip()
+            # Section header: ## Proteins, ## Vegetables, etc.
+            if stripped.startswith("## "):
+                section_name = stripped[3:].strip().lower()
+                current_cat = _section_to_cat.get(section_name, "s")
+                continue
+            # Ingredient line: - {id: ..., grade: ..., name: ..., ...}
+            if stripped.startswith("- {") and stripped.endswith("}"):
+                try:
+                    item = yaml.safe_load(stripped[2:])
+                except yaml.YAMLError:
+                    continue
+                if not isinstance(item, dict):
+                    continue
+                ing_id = item.get("id")
+                grade = str(item.get("grade", "common"))
+                if not ing_id or grade not in _grade_common:
+                    continue
+                entry = {
+                    "id": ing_id,
+                    "name": item.get("name", ing_id.replace("_", " ").title()),
+                    "cat": current_cat,
+                    "grade": grade,
+                    "common": _grade_common[grade],
+                }
+                if item.get("name_sv"):
+                    entry["name_sv"] = item["name_sv"]
+                ingredients.append(entry)
+
+        if ingredients:
+            cuisine_ingredients[cuisine_id] = ingredients
+
+    return cuisine_ingredients, cuisine_to_group
+
+
 def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
     """Scan recipe files and build index, cut profiles, method profiles and recipe titles.
 
@@ -610,7 +734,9 @@ def generate_js_data():
         
         ai_cooking_styles = ai_data_module.COOKING_STYLES
         ai_ingredients = ai_data_module.COMMON_INGREDIENTS
-        ai_cuisine_ingredients = ai_data_module.CUISINE_INGREDIENTS
+        # CUISINE_INGREDIENTS from ai_recipe_data.py is kept as a fallback only;
+        # the primary source is now www/cuisines/*.md (KCE:CUISINE files).
+        _legacy_cuisine = ai_data_module.CUISINE_INGREDIENTS  # noqa: F841 (fallback, unused when files present)
         ai_cuisine_to_region = ai_data_module.CUISINE_TO_REGION
         ai_ingredient_categories = getattr(ai_data_module, 'INGREDIENT_CATEGORIES', {})
         ai_category_labels = getattr(ai_data_module, 'CATEGORY_LABELS', {})
@@ -628,13 +754,30 @@ def generate_js_data():
     ai_protein_subcats = {}
     ai_protein_subcat_labels = {}
     ai_protein_subcat_labels_sv = {}
-    
+
+    # Load cuisine ingredients from www/cuisines/*.md (KCE:CUISINE files).
+    # These override any legacy CUISINE_INGREDIENTS from ai_recipe_data.py.
+    _file_cuisine_ingredients, _file_cuisine_to_group = build_cuisine_data(base_dir)
+    if _file_cuisine_ingredients:
+        ai_cuisine_ingredients = _file_cuisine_ingredients
+        print(
+            f"  Cuisines: {len(ai_cuisine_ingredients)} cuisine file(s) loaded "
+            f"({sum(len(v) for v in ai_cuisine_ingredients.values())} ingredients total)"
+        )
+    else:
+        print("  Cuisines: no www/cuisines/*.md files found — AI_CUISINE_INGREDIENTS will be empty")
+
     # Enrich cuisine ingredients with category from INGREDIENT_CATEGORIES map
+    # (only for legacy entries without a cat field already set by build_cuisine_data)
     if ai_ingredient_categories:
         enriched_cuisine = {}
         for cuisine_id, ings in ai_cuisine_ingredients.items():
             enriched = []
             for ing in ings:
+                # Skip enrichment if cat is already set (e.g. from KCE:CUISINE file)
+                if "cat" in ing:
+                    enriched.append(ing)
+                    continue
                 cat = ai_ingredient_categories.get(ing["id"], "s")  # default to spices
                 item = {"id": ing["id"], "name": ing["name"], "cat": cat}
                 if "common" in ing:

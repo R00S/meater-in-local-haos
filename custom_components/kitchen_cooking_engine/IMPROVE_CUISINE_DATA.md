@@ -1,11 +1,136 @@
 # IMPROVE_CUISINE_DATA.md
 
-**Purpose:** Improve the ingredients list and protein tree data for a small number of cuisines
-per session. The data lives in
-`custom_components/kitchen_cooking_engine/ai_recipe_data.py`.
-This is an ongoing incremental effort — the file will be visited many times.
+**Purpose:** Add or improve cuisine data files in `www/cuisines/`.
+Each cuisine is its own `.md` file with a `KCE:CUISINE` frontmatter block.
+This is an ongoing incremental effort — only add files you have verified data for.
 
 **When to run:** When the user says "do IMPROVE_CUISINE_DATA.md", carry out the task below.
+
+---
+
+## Architecture
+
+Cuisine data lives in `custom_components/kitchen_cooking_engine/www/cuisines/*.md`.
+The generator reads these files and builds `AI_CUISINE_INGREDIENTS` in the panel JS.
+`ai_recipe_data.py` keeps an empty `CUISINE_INGREDIENTS = {}` for backward compat only.
+
+Do NOT put cuisine ingredients into `ai_recipe_data.py`. That system is obsolete.
+
+---
+
+## File format
+
+```markdown
+---
+KCE: CUISINE
+id: japanese
+name: Japanese
+name_sv: Japanskt
+culinary_group: A
+research_done: 1
+---
+
+## Research notes
+
+One paragraph of sources and key consumption statistics used.
+
+## Proteins
+
+- {id: salmon, grade: signature, name: Salmon, name_sv: "Lax", notes: "..."}
+- {id: chicken, grade: very_common, name: Chicken, notes: "..."}
+
+## Vegetables
+
+- {id: daikon, grade: signature, name: Daikon, notes: "..."}
+
+## Grains
+
+- {id: rice, grade: very_common, name: Rice, notes: "..."}
+
+## Dairy
+
+(omit section if not applicable)
+
+## Spices & Seasonings
+
+- {id: miso, grade: signature, name: Miso, notes: "..."}
+```
+
+---
+
+## The three grades
+
+| Grade | Key | Compact view | Lights protein tree | When to use |
+|-------|-----|-------------|--------------------|----|
+| `signature` | `s` | ✅ shown | ✅ yes | Defines this cuisine in iconic dishes. May be rare or seasonal. |
+| `very_common` | `vc` | ✅ shown | ✅ yes | Everyday staple of this cuisine — would be missed if absent. |
+| `common` | `c` | ❌ behind "More" | ❌ no | Regularly used but not defining. |
+
+**Do not pad with universal ingredients.** If you cannot confirm an ingredient is
+characteristic of this specific cuisine from a specific source, do not add it.
+Maximum 30 items per cuisine. If a category is not relevant, omit it entirely.
+
+### Signature vs Very Common — concrete examples
+
+| Ingredient | Cuisine | Grade | Reason |
+|---|---|---|---|
+| Reindeer | Swedish | signature | Sami heritage; culturally iconic; not everyday |
+| Herring | Swedish | signature | Inlagd sill, surströmming; defines Swedish food culture |
+| Pork | Swedish | very_common | 35 kg/capita/year; most consumed Swedish meat |
+| Allspice | Swedish | signature | The spice in Swedish meatballs; not used this way elsewhere |
+| Soy sauce | Japanese | signature | Foundation of Japanese savoury cooking |
+| Chicken | Japanese | very_common | Most common meat; karaage, yakitori, everyday |
+| Dill | Swedish | signature | THE defining herb; everything from sill to new potatoes |
+| Potatoes | Swedish | very_common | Near-universal staple in Swedish meals |
+
+---
+
+## Grade → protein tree lighting
+
+A cuisine's protein tree buttons (🐄 Beef / 🐷 Pork / 🍗 Poultry / 🐟 Fish / 🐑 Lamb / 🦌 Game)
+light up only if the cuisine has a `signature` or `very_common` ingredient that maps to that
+protein category in `PROTEIN_TO_SUBCAT` (in `ai_recipe_data.py`).
+
+`common` grade items do NOT light up tree buttons — they appear only in the "More" list.
+
+This means: if a protein genuinely defines a cuisine (e.g. salmon for Swedish), it MUST be
+`signature` or `very_common`. Making it `common` hides it from the tree.
+
+---
+
+## Research required before writing a file
+
+1. Find consumption data (kg/capita or dietary share) — primary signal for `very_common`
+2. Identify 3–5 signature dishes that define the cuisine — signals `signature` proteins and spices
+3. Identify seasonal or culturally iconic items not in everyday cooking — `signature` grade
+4. Set `research_done: 0` until sources are verified; `1` when thoroughly reviewed
+5. Cite your sources in the `## Research notes` section
+
+Do NOT write a cuisine file without completing steps 1–3 with verifiable sources.
+
+---
+
+## Culinary groups
+
+| Group | Traditions |
+|-------|-----------|
+| A | South Asian, East Asian, SE Asian |
+| B | North American, European, Australasian |
+| C | African, Caribbean, Arabic, Levant, Persian |
+| D | Scandinavian, Baltic, Slavic, Caucasus, Stans, Sami, Inuit |
+
+---
+
+## Task — what to do when triggered
+
+1. Pick one cuisine that has no file in `www/cuisines/` yet
+2. Do the research (consumption stats, signature dishes, seasonal/iconic items)
+3. Write the file following the format above — 15–30 items, no padding
+4. Set `research_done: 1` only if research is thorough
+5. Run: `cd custom_components/kitchen_cooking_engine && python3 generate_frontend_data.py`
+6. Confirm generator prints the new cuisine and item count with no errors
+7. Commit ALL changed files: the new `www/cuisines/<id>.md` and the regenerated `www/kitchen-cooking-panel.js`
+
 
 ---
 

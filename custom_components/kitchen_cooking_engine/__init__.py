@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 02 May 2026, 14:00 UTC
-Last Change: v0.8.1.11 - CHORES: version bump + branch timeline update
+Last Change: v0.8.1.13 - cuisine system rewrite: KCE:CUISINE files in www/cuisines/, 3-grade ingredients, swedish.md
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -172,11 +172,11 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 
 # ⚠️ VERSION — must match in ALL 3 locations on every release:
 #   1. manifest.json        → "version": "..."
-#   2. HERE (__init__.py)    → __version__ = "0.8.1.12"
+#   2. HERE (__init__.py)    → __version__ = "0.8.1.13"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.8.1.12"
+__version__ = "0.8.1.13"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
