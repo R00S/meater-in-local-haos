@@ -211,3 +211,12 @@ Improve the AI Recipe Builder ingredient selector:
 
 **Versions released:**
 - v0.8.1.10 — All 86 cuisines at 1.5× targets (PANEL_VERSION 403)
+
+### Session 8 (2026-05-02)
+
+**Task:** CHORES — version bump, branch timeline update.
+
+**Work done:**
+- Bumped version 0.8.1.10 → 0.8.1.11
+- USER_GUIDE confirmed current: §7.2 "Over 85 cuisines" still accurate (86 cuisines); session 7 was data-only, no new UI features or help anchor changes required
+- Updated branch timeline with Session 8
