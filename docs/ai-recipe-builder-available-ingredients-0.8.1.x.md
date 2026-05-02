@@ -184,3 +184,30 @@ Improve the AI Recipe Builder ingredient selector:
 - Bumped version 0.8.1.8 → 0.8.1.9, PANEL_VERSION 401 → 402
 - USER_GUIDE §7.2 confirmed current (sessions 3–5 were data-only, no new UI features)
 - Updated branch timeline with sessions 3–6
+
+### Session 7 (2026-05-02)
+
+**Task:** Expand ALL 86 CUISINE_INGREDIENTS to meet the 1.5× COMMON_INGREDIENTS average minimum per category.
+
+**Targets (1.5× of average COMMON_INGREDIENTS per category):**
+- p (proteins) ≥ 35
+- v (vegetables) ≥ 53
+- g (grains/legumes) ≥ 26
+- d (dairy/oils/sauces) ≥ 26
+- s (spices/nuts/condiments) ≥ 29
+
+**Method:**
+- For each cuisine group, computed current deficits, then used `fill_to_target()` approach with large culturally-appropriate candidate pools
+- Used `ast.parse()` + count verification after each group before writing to file
+- Committed after each group to prevent data loss
+- Did NOT add pork products to Islamic-majority cuisines
+- Groups processed in order: Nordic (7) → European (11) → Middle East/N.Africa (13) → Sub-Saharan Africa (10) → South/SE/East Asian (18) → Remaining Americas/Pacific/Mediterranean/Russian (27)
+
+**Results:** All 86 cuisines pass ALL targets.
+- Every cuisine now has: p≥35, v≥53, g≥26, d≥26, s≥29
+- Total additions: ~9,000+ `_inge()` entries across all cuisines
+- File AST-parses cleanly; `generate_frontend_data.py` runs without errors
+- PANEL_VERSION bumped 402 → 403
+
+**Versions released:**
+- v0.8.1.10 — All 86 cuisines at 1.5× targets (PANEL_VERSION 403)
