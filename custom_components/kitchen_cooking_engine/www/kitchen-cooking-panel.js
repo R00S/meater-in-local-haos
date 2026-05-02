@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 02 May 2026, 16:45 CET
+ * AUTO-GENERATED: 02 May 2026, 17:18 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 02 May 2026, 16:45 CET
+// Last generated: 02 May 2026, 17:18 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -91637,7 +91637,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["lamb", "veal", "rabbit", "fish", "pork", "duck", "goat", "chicken", "turkey", "venison", "beef"];
+const AI_GENERIC_PROTEIN_IDS = ["duck", "chicken", "pork", "fish", "turkey", "lamb", "venison", "veal", "goat", "rabbit", "beef"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -92021,7 +92021,79 @@ const AI_INGREDIENT_NAMES_SV = {
   "fermented_black_beans": "Fermenterade svarta bönor",
   "wasabi": "Wasabi",
   "kokum": "Kokum",
-  "file_powder": "Filépulver"
+  "file_powder": "Filépulver",
+  "goose": "Gås",
+  "lobster": "Hummer",
+  "mackerel": "Makrill",
+  "prawns": "Havskräftor",
+  "reindeer": "Renkött",
+  "trout": "Forell",
+  "rabbit": "Kanin",
+  "veal": "Kalvkött",
+  "venison": "Viltkött",
+  "octopus": "Bläckfisk",
+  "sardines": "Sardiner",
+  "clams": "Havsmusslor",
+  "ham": "Skinka",
+  "chourico": "Chouriço",
+  "presunto": "Presunto",
+  "shellfish": "Skaldjur",
+  "smoked_fish": "Rökt fisk",
+  "boerewors": "Boerewors",
+  "biltong": "Biltong",
+  "apples": "Äpplen",
+  "apricot": "Aprikos",
+  "blueberries": "Blåbär",
+  "cloudberries": "Hjortron",
+  "raisins": "Russin",
+  "kale": "Grönkål",
+  "red_cabbage": "Rödkål",
+  "sauerkraut": "Surkål",
+  "kohlrabi": "Kålrabbi",
+  "watercress": "Källkrasse",
+  "bitter_melon": "Bittermelon",
+  "jackfruit": "Jackfrukt",
+  "fava_beans": "Bondbönor",
+  "pigeon_peas": "Duvärtor",
+  "taro": "Taro",
+  "green_chili": "Grön chili",
+  "sour_orange": "Bitterapelsin",
+  "molokhia": "Molokhia",
+  "ugu_leaves": "Ugu-blad",
+  "kenkey": "Kenkey",
+  "buckwheat": "Bovete",
+  "millet": "Hirs",
+  "roti": "Roti",
+  "teff": "Teff",
+  "wild_rice": "Vildris",
+  "lard": "Ister",
+  "mustard_oil": "Senapsolja",
+  "argan_oil": "Arganolja",
+  "skyr": "Skyr",
+  "crema": "Crema",
+  "sofrito": "Sofrito",
+  "harissa": "Harissa",
+  "adobo_sauce": "Adobo-sås",
+  "teriyaki_sauce": "Teriyakisås",
+  "laksa_paste": "Laksapasta",
+  "beer": "Öl",
+  "pisco": "Pisco",
+  "mojo": "Mojosås",
+  "pepper_sauce": "Pebbersås",
+  "epis": "Epis",
+  "queso_blanco": "Vit ost",
+  "black_pepper": "Svartpeppar",
+  "caraway_seeds": "Kumminfrön",
+  "marjoram": "Mejram",
+  "sea_buckthorn": "Havtorn",
+  "cape_malay_spice": "Kap Malaykryddor",
+  "hawaij_spice": "Hawaij-kryddor",
+  "merken": "Merkén",
+  "timur": "Timurpeppar",
+  "goraka": "Goraka",
+  "malagueta": "Malaguetapeppar",
+  "piri_piri": "Piri-piri",
+  "shadow_beni": "Shadow beni"
 };
 
 // Phase 7: Measurement systems (SE, UK, US)
@@ -114335,7 +114407,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "404";
+const PANEL_VERSION = "405";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
