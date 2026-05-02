@@ -220,3 +220,32 @@ Improve the AI Recipe Builder ingredient selector:
 - Bumped version 0.8.1.10 → 0.8.1.11
 - USER_GUIDE confirmed current: §7.2 "Over 85 cuisines" still accurate (86 cuisines); session 7 was data-only, no new UI features or help anchor changes required
 - Updated branch timeline with Session 8
+
+### Session 9 (2026-05-02)
+
+**Task:** Cuisine system rewrite — new data model, 3-grade ingredients.
+
+**Work done:**
+
+1. **`www/cuisines/swedish.md`** — new KCE:CUISINE file format: YAML frontmatter (id/name/name_sv/culinary_group/research_done) + `## Proteins`, `## Vegetables`, etc. sections with inline `{id, grade, notes}` items. Swedish file has 26 verified items.
+
+2. **`ai_recipe_data.py`** — `CUISINE_INGREDIENTS` replaced with empty dict `{}` (kept for backward compat). Old bulk data (~13,000 lines) deleted. New `AI_CUISINE_INGREDIENTS` constant built by generator from `www/cuisines/*.md`.
+
+3. **`generate_frontend_data.py`** — added `build_cuisine_data()` function that reads all `www/cuisines/*.md`, parses KCE:CUISINE frontmatter, emits `AI_CUISINE_INGREDIENTS` JS constant with 3-grade schema (signature/very_common/common). Removed old `build_cuisine_ingredients_constant()`.
+
+4. **`IMPROVE_CUISINE_DATA.md`** — fully rewritten to document new file format, 3-grade system, research methodology, and explicit prohibition against unverified entries.
+
+5. **`ai_recipe_data.py.tmp`** — deleted (leftover from previous session).
+
+**Versions released:**
+- v0.8.1.13 — cuisine system rewrite (PANEL_VERSION 407)
+
+### Session 10 (2026-05-02)
+
+**Task:** CHORES — version bump, branch timeline update.
+
+**Work done:**
+- Bumped version 0.8.1.13 → 0.8.1.14, PANEL_VERSION 407 → 408
+- USER_GUIDE confirmed current: §7.2 cuisine description still accurate (rewrite was internal/data-model; no user-facing UI changes)
+- Updated branch timeline with sessions 9–10
+
