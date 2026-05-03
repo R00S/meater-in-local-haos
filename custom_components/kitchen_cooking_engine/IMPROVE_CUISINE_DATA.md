@@ -156,7 +156,7 @@ next agent what was already looked for and prevents duplicate work.
 |-------|----------|-------------|
 | `id` | ✅ | Stable identifier used by the UI (e.g. `salmon`, `white_pepper`) |
 | `grade` | ✅ | `signature`, `bulk`, or `local` (see above) |
-| `rating` | ✅ | Integer 1–9. Significance within the grade — not a rank. Multiple ingredients may share the same value. Top 3 per grade by highest rating are shown by default; rest hidden under "More". |
+| `rating` | ✅ | Integer 1–9. Significance within the grade — not a rank. Multiple ingredients may share the same value. Top 3 per grade by highest rating are shown by default (before "More" is clicked); clicking "More" reveals the remaining items — at least 6 more per grade should be present so the "More" section is meaningful. |
 | `name` | ✅ | English display name |
 | `name_sv` | ✅ | Swedish display name (include where known) |
 | `notes` | — | Evidence for the grade and rating; brief source reference |
@@ -172,8 +172,10 @@ next agent what was already looked for and prevents duplicate work.
 | `local` | Top 3 by rating | ✅ dark green | Produced/widely used locally, but not a bulk-consumption item. |
 
 **Default visibility rule:** within each category, the top 3 ingredients per grade (sorted by
-`rating` descending) are always shown. Everything below rank 3 within its grade is hidden
-behind "More". Up to 9 items are visible by default (3 per grade).
+`rating` descending) are shown before the user clicks "More". Everything below rank 3 within its
+grade is hidden behind "More" — clicking it reveals all remaining items. Up to 9 items are visible
+by default (3 per grade × 3 grades). The data target per grade is **9 or more** items, so that
+clicking "More" always reveals at least 6 additional items per grade.
 
 **Protein tree button colour rule:**
 - A subcat button turns **dark green** when the cuisine has a `signature` or `local` protein in that subcat.
@@ -318,9 +320,11 @@ This is a **display rule**, not a data target. There is **no upper limit** on ho
 items a pair can have.
 
 A spice-heavy cuisine like Indian or Persian may warrant 15+ verified bulk seasonings.
-Three items is the absolute floor — 3 real items is the minimum credible result for a
-pair that has been researched. Add every verified item you find; they all improve the
-AI's picture of the cuisine and appear when the user clicks "More".
+**Nine items is the absolute floor** — 9 real items is the minimum credible result for a
+pair that has been researched. This ensures that when the user clicks "More", they see
+at least 6 additional items beyond the top-3 default view. Add every verified item you
+find beyond 9; they all improve the AI's picture of the cuisine and appear when the user
+clicks "More".
 
 **Stub entries:** cuisine files ship with 9 placeholder stubs per grade pair. When you
 research a pair, replace the stubs one-by-one with real verified items. **Do not delete
@@ -455,7 +459,7 @@ marked complete but is actually incomplete.
 results are sparse, the agent interprets "I did not find much" as "there is not much to find",
 and stops. This is wrong. It means the search angle was poor, not that the data does not exist.
 
-**The rule:** If a pair has fewer than 3 verified items after the first search, **do not move
+**The rule:** If a pair has fewer than 9 verified items after the first search, **do not move
 on**. Instead, try a different research angle. You must exhaust at least 3 distinct approaches
 before concluding that a pair genuinely cannot be filled.
 
@@ -480,7 +484,7 @@ For **local** pairs that come up short:
 - Try regional focus: name each major region of the country and search "[region] local food production" — local production is often invisible at the national level but well-documented regionally
 - Try export statistics: "[country] food exports what products" — what a country exports is almost always what it produces locally in significant volume
 
-**Stop condition:** you may conclude a pair genuinely has fewer than 3 items only after having
+**Stop condition:** you may conclude a pair genuinely has fewer than 9 items only after having
 tried at least 3 distinct search angles, none of which yielded additional candidates. Document
 this with a `<!-- Searched: ... — insufficient results after N angles -->` comment so the next
 agent knows the pair was genuinely attempted and not just skipped.
