@@ -445,6 +445,48 @@ If a pair feels "obvious", search anyway. The obvious answer is often wrong.
 
 ---
 
+### ❌ Trap 9: Giving up on a pair when the first search comes up short
+
+The most common failure mode is not bad data — it is *too little data*. An agent searches
+once for a pair, finds only 1–2 items, declares the pair done, and moves on. The pair is
+marked complete but is actually incomplete.
+
+**Why this happens:** the first obvious search query hits the most visible results. If those
+results are sparse, the agent interprets "I did not find much" as "there is not much to find",
+and stops. This is wrong. It means the search angle was poor, not that the data does not exist.
+
+**The rule:** If a pair has fewer than 3 verified items after the first search, **do not move
+on**. Instead, try a different research angle. You must exhaust at least 3 distinct approaches
+before concluding that a pair genuinely cannot be filled.
+
+**How to invent new research angles when the obvious search yields little:**
+
+For **signature** pairs that come up short:
+- Try dish-first: "most iconic [cuisine] dishes" → extract what ingredient class each iconic dish uses.
+- Try cultural/regional lens: "what do people from [country] consider comfort food" or "what did families eat in [country] 50 years ago"
+- Try seasonal/festive: "[cuisine] holiday food", "[cuisine] wedding food", "[cuisine] traditional celebration dish"
+- Try diaspora/export: "[cuisine] restaurant abroad what is always on the menu" — this often reveals what is truly considered the cuisine's identity outside marketing
+- Try food historians or culinary institutions from the country
+
+For **bulk** pairs that come up short:
+- Try alternate statistics keywords: "food balance sheet [country]", "[country] household food expenditure survey", "[country] national dietary survey", "[country] FAO food supply", "per capita food consumption [country] [year]"
+- Try the FAO FAOSTAT database directly: "FAOSTAT [country] food supply cereals/vegetables/etc"
+- Try the country's own national statistics agency name + food: "INE España alimentación" / "Statistics Finland food" / "Destatis Nahrungsmittel" etc.
+- Try the retail angle: "[country] most sold [category] supermarket", "[country] top grocery items by sales volume"
+
+For **local** pairs that come up short:
+- Try the production/agriculture angle: "[country] agricultural output report", "[country] livestock statistics", "[country] fishing catch report", "[country] harvest data"
+- Try GI/PDO registries: "European PDO [country] food", "[country] protected designation of origin food products", "[country] geographical indication list"
+- Try regional focus: name each major region of the country and search "[region] local food production" — local production is often invisible at the national level but well-documented regionally
+- Try export statistics: "[country] food exports what products" — what a country exports is almost always what it produces locally in significant volume
+
+**Stop condition:** you may conclude a pair genuinely has fewer than 3 items only after having
+tried at least 3 distinct search angles, none of which yielded additional candidates. Document
+this with a `<!-- Searched: ... — insufficient results after N angles -->` comment so the next
+agent knows the pair was genuinely attempted and not just skipped.
+
+---
+
 ## A note on trust
 
 The people using this app are cooking real food for real people. When the app shows
