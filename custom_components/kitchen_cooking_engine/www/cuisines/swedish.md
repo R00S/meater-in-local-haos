@@ -3,7 +3,7 @@ KCE: CUISINE
 id: swedish
 name: Swedish
 name_sv: Svensk
-culinary_group: D
+region: nordic
 research_done: 1
 ---
 

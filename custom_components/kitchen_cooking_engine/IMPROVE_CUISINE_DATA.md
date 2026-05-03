@@ -26,7 +26,7 @@ KCE: CUISINE
 id: japanese
 name: Japanese
 name_sv: Japanskt
-culinary_group: A
+region: east_asian
 research_done: 1
 ---
 
@@ -56,7 +56,17 @@ One paragraph of sources and key consumption statistics used.
 - {id: miso, grade: signature, rating: 9, name: Miso, notes: "..."}
 ```
 
-### Fields
+### Frontmatter fields
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `id` | ✅ | Cuisine identifier, matches the key used in `CUISINE_TO_REGION` in `ai_recipe_data.py` (e.g. `swedish`, `japanese`) |
+| `name` | ✅ | English display name |
+| `name_sv` | — | Swedish display name |
+| `region` | ✅ | Geographic region this cuisine belongs to. Must be one of: `nordic`, `east_asian`, `southeast_asian`, `south_asian`, `middle_east`, `european`, `north_american`, `latin_american`, `caribbean_region`, `african`, `oceanian`. Used for fallback ingredient lookup when a specific cuisine is selected but has no data file yet. Do NOT use letter codes (A/B/C) — those are from the MEATER cooking path and have no meaning here. |
+| `research_done` | ✅ | `0` = draft / incomplete, `1` = verified coverage |
+
+### Ingredient item fields
 
 | Field | Required | Description |
 |-------|----------|-------------|

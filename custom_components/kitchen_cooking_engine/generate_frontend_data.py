@@ -125,7 +125,7 @@ def build_cuisine_data(base_dir):
         KCE: CUISINE
         id: swedish
         name: Swedish
-        culinary_group: D
+        region: nordic
         research_done: 1
         ---
 
@@ -143,9 +143,10 @@ def build_cuisine_data(base_dir):
         The top 3 per grade per category are shown by default; the rest are hidden under "More".
         Default: 5 if not specified.
 
-    Returns (cuisine_ingredients, cuisine_to_group) where:
+    Returns (cuisine_ingredients, cuisine_to_region) where:
         cuisine_ingredients: {cuisine_id: [{id, name, name_sv?, cat, grade, rating}, ...]}
-        cuisine_to_group:    {cuisine_id: culinary_group_str}
+        cuisine_to_region:   {cuisine_id: region_str}  — region IDs match the UI geography
+                             (nordic, east_asian, european, etc.)
     """
     _section_to_cat = {
         "proteins":             "p",
@@ -161,10 +162,10 @@ def build_cuisine_data(base_dir):
 
     cuisines_dir = os.path.join(base_dir, "www", "cuisines")
     cuisine_ingredients = {}
-    cuisine_to_group = {}
+    cuisine_to_region = {}
 
     if not os.path.isdir(cuisines_dir):
-        return cuisine_ingredients, cuisine_to_group
+        return cuisine_ingredients, cuisine_to_region
 
     for filename in sorted(os.listdir(cuisines_dir)):
         if not filename.endswith(".md"):
@@ -197,8 +198,8 @@ def build_cuisine_data(base_dir):
         if not cuisine_id:
             continue
 
-        culinary_group = str(fm.get("culinary_group", ""))
-        cuisine_to_group[cuisine_id] = culinary_group
+        region = str(fm.get("region", fm.get("culinary_group", "")))
+        cuisine_to_region[cuisine_id] = region
 
         # Parse ingredient sections from markdown body
         body = content[end_fm + 4:]
@@ -238,7 +239,7 @@ def build_cuisine_data(base_dir):
         if ingredients:
             cuisine_ingredients[cuisine_id] = ingredients
 
-    return cuisine_ingredients, cuisine_to_group
+    return cuisine_ingredients, cuisine_to_region
 
 
 def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
@@ -758,9 +759,15 @@ def generate_js_data():
 
     # Load cuisine ingredients from www/cuisines/*.md (KCE:CUISINE files).
     # These override any legacy CUISINE_INGREDIENTS from ai_recipe_data.py.
-    _file_cuisine_ingredients, _file_cuisine_to_group = build_cuisine_data(base_dir)
+    _file_cuisine_ingredients, _file_cuisine_to_region = build_cuisine_data(base_dir)
     if _file_cuisine_ingredients:
         ai_cuisine_ingredients = _file_cuisine_ingredients
+        # Merge region declarations from KCE:CUISINE files into the region map.
+        # Only entries with a non-empty region value are merged; they complement (and
+        # can override) the CUISINE_TO_REGION dict loaded from ai_recipe_data.py.
+        for cid, region in _file_cuisine_to_region.items():
+            if region:
+                ai_cuisine_to_region[cid] = region
         print(
             f"  Cuisines: {len(ai_cuisine_ingredients)} cuisine file(s) loaded "
             f"({sum(len(v) for v in ai_cuisine_ingredients.values())} ingredients total)"
