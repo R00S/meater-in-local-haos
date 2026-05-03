@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 May 2026, 17:12 CET
+ * AUTO-GENERATED: 03 May 2026, 17:24 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 03 May 2026, 17:12 CET
+// Last generated: 03 May 2026, 17:24 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -12692,6 +12692,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_prot_sig_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_prot_bul_1",
       "name": "[STUB]",
       "cat": "p",
@@ -12713,6 +12761,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "p",
       "grade": "bulk",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -12740,6 +12836,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_prot_loc_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_veg_sig_1",
       "name": "[STUB]",
       "cat": "v",
@@ -12761,6 +12905,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "v",
       "grade": "signature",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -12788,6 +12980,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_veg_bul_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_veg_loc_1",
       "name": "[STUB]",
       "cat": "v",
@@ -12809,6 +13049,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "v",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -12836,6 +13124,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_grain_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_grain_bul_1",
       "name": "[STUB]",
       "cat": "s",
@@ -12857,6 +13193,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "bulk",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -12884,6 +13268,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_grain_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_dairy_sig_1",
       "name": "[STUB]",
       "cat": "s",
@@ -12905,6 +13337,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "signature",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -12932,6 +13412,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_dairy_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_dairy_loc_1",
       "name": "[STUB]",
       "cat": "s",
@@ -12953,6 +13481,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -12980,6 +13556,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_spice_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_spice_bul_1",
       "name": "[STUB]",
       "cat": "s",
@@ -13004,6 +13628,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_spice_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_spice_loc_1",
       "name": "[STUB]",
       "cat": "s",
@@ -13025,6 +13697,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     }
   ],
@@ -15588,6 +16308,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_prot_sig_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_prot_bul_1",
       "name": "[STUB]",
       "cat": "p",
@@ -15609,6 +16377,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "p",
       "grade": "bulk",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -15636,6 +16452,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_prot_loc_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_veg_sig_1",
       "name": "[STUB]",
       "cat": "v",
@@ -15657,6 +16521,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "v",
       "grade": "signature",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -15684,6 +16596,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_veg_bul_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_veg_loc_1",
       "name": "[STUB]",
       "cat": "v",
@@ -15705,6 +16665,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "v",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -15732,6 +16740,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_grain_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_grain_bul_1",
       "name": "[STUB]",
       "cat": "s",
@@ -15753,6 +16809,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "bulk",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -15780,6 +16884,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_grain_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_dairy_sig_1",
       "name": "[STUB]",
       "cat": "s",
@@ -15801,6 +16953,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "signature",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -15828,6 +17028,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_dairy_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_dairy_loc_1",
       "name": "[STUB]",
       "cat": "s",
@@ -15849,6 +17097,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -15876,6 +17172,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_spice_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_spice_bul_1",
       "name": "[STUB]",
       "cat": "s",
@@ -15900,6 +17244,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_spice_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_spice_loc_1",
       "name": "[STUB]",
       "cat": "s",
@@ -15921,6 +17313,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     }
   ],
@@ -18846,6 +20286,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_prot_sig_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_prot_bul_1",
       "name": "[STUB]",
       "cat": "p",
@@ -18867,6 +20355,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "p",
       "grade": "bulk",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -18894,6 +20430,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_prot_loc_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_veg_sig_1",
       "name": "[STUB]",
       "cat": "v",
@@ -18915,6 +20499,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "v",
       "grade": "signature",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -18942,6 +20574,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_veg_bul_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_veg_loc_1",
       "name": "[STUB]",
       "cat": "v",
@@ -18963,6 +20643,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "v",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -18990,6 +20718,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_grain_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_grain_bul_1",
       "name": "[STUB]",
       "cat": "s",
@@ -19011,6 +20787,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "bulk",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -19038,6 +20862,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_grain_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_dairy_sig_1",
       "name": "[STUB]",
       "cat": "s",
@@ -19059,6 +20931,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "signature",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -19086,6 +21006,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_dairy_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_dairy_loc_1",
       "name": "[STUB]",
       "cat": "s",
@@ -19107,6 +21075,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -19134,6 +21150,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_spice_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_spice_bul_1",
       "name": "[STUB]",
       "cat": "s",
@@ -19158,6 +21222,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_spice_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_spice_loc_1",
       "name": "[STUB]",
       "cat": "s",
@@ -19179,6 +21291,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     }
   ],
@@ -26086,6 +28246,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_prot_sig_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_prot_bul_1",
       "name": "[STUB]",
       "cat": "p",
@@ -26107,6 +28315,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "p",
       "grade": "bulk",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -26134,6 +28390,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_prot_loc_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_veg_sig_1",
       "name": "[STUB]",
       "cat": "v",
@@ -26155,6 +28459,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "v",
       "grade": "signature",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -26182,6 +28534,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_veg_bul_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_veg_loc_1",
       "name": "[STUB]",
       "cat": "v",
@@ -26203,6 +28603,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "v",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -26230,6 +28678,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_grain_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_grain_bul_1",
       "name": "[STUB]",
       "cat": "s",
@@ -26251,6 +28747,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "bulk",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -26278,6 +28822,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_grain_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_dairy_sig_1",
       "name": "[STUB]",
       "cat": "s",
@@ -26299,6 +28891,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "signature",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -26326,6 +28966,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_dairy_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_dairy_loc_1",
       "name": "[STUB]",
       "cat": "s",
@@ -26347,6 +29035,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -26374,6 +29110,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_spice_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_spice_bul_1",
       "name": "[STUB]",
       "cat": "s",
@@ -26398,6 +29182,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_spice_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_spice_loc_1",
       "name": "[STUB]",
       "cat": "s",
@@ -26419,6 +29251,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     }
   ],
@@ -26810,6 +29690,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_prot_sig_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_prot_bul_1",
       "name": "[STUB]",
       "cat": "p",
@@ -26831,6 +29759,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "p",
       "grade": "bulk",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -26858,6 +29834,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_prot_loc_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_veg_sig_1",
       "name": "[STUB]",
       "cat": "v",
@@ -26879,6 +29903,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "v",
       "grade": "signature",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -26906,6 +29978,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_veg_bul_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_veg_loc_1",
       "name": "[STUB]",
       "cat": "v",
@@ -26927,6 +30047,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "v",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -26954,6 +30122,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_grain_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_grain_bul_1",
       "name": "[STUB]",
       "cat": "s",
@@ -26975,6 +30191,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "bulk",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -27002,6 +30266,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_grain_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_dairy_sig_1",
       "name": "[STUB]",
       "cat": "s",
@@ -27023,6 +30335,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "signature",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -27050,6 +30410,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_dairy_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_dairy_loc_1",
       "name": "[STUB]",
       "cat": "s",
@@ -27071,6 +30479,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -27098,6 +30554,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_spice_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_spice_bul_1",
       "name": "[STUB]",
       "cat": "s",
@@ -27122,6 +30626,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_spice_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_spice_loc_1",
       "name": "[STUB]",
       "cat": "s",
@@ -27143,6 +30695,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     }
   ],
@@ -33688,6 +37288,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_prot_sig_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_sig_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_prot_bul_1",
       "name": "[STUB]",
       "cat": "p",
@@ -33709,6 +37357,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "p",
       "grade": "bulk",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -33736,6 +37432,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_prot_loc_4",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_5",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_6",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_7",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_8",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_9",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_veg_sig_1",
       "name": "[STUB]",
       "cat": "v",
@@ -33757,6 +37501,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "v",
       "grade": "signature",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -33784,6 +37576,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_veg_bul_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_veg_loc_1",
       "name": "[STUB]",
       "cat": "v",
@@ -33805,6 +37645,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "v",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_4",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_5",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_6",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_7",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_8",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_9",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -33832,6 +37720,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_grain_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_grain_bul_1",
       "name": "[STUB]",
       "cat": "s",
@@ -33853,6 +37789,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "bulk",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -33880,6 +37864,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_grain_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_dairy_sig_1",
       "name": "[STUB]",
       "cat": "s",
@@ -33901,6 +37933,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "signature",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -33928,6 +38008,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_dairy_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_dairy_loc_1",
       "name": "[STUB]",
       "cat": "s",
@@ -33949,6 +38077,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     },
     {
@@ -33976,6 +38152,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_spice_sig_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_spice_bul_1",
       "name": "[STUB]",
       "cat": "s",
@@ -34000,6 +38224,54 @@ const AI_CUISINE_INGREDIENTS = {
       "name_sv": "[UTKAST]"
     },
     {
+      "id": "stub_spice_bul_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 2,
+      "name_sv": "[UTKAST]"
+    },
+    {
       "id": "stub_spice_loc_1",
       "name": "[STUB]",
       "cat": "s",
@@ -34021,6 +38293,54 @@ const AI_CUISINE_INGREDIENTS = {
       "cat": "s",
       "grade": "local",
       "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_4",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_5",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_6",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_7",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_8",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 3,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_9",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 2,
       "name_sv": "[UTKAST]"
     }
   ],
@@ -39962,7 +44282,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["fish", "goat", "rabbit", "pork", "turkey", "venison", "chicken", "beef", "veal", "duck", "lamb"];
+const AI_GENERIC_PROTEIN_IDS = ["rabbit", "chicken", "goat", "venison", "beef", "veal", "fish", "duck", "pork", "turkey", "lamb"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -62749,7 +67069,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "433";
+const PANEL_VERSION = "435";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

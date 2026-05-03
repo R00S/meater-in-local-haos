@@ -66,3 +66,18 @@ v0.8.1.10 was unaffected because it had the region list hardcoded in the templat
    - All 6 Nordic stubs now have `description: "[STUB]"` and `description_sv: "[UTKAST]"` frontmatter fields.
 
 4. **Bumped version 0.8.2.7 → 0.8.2.8; PANEL_VERSION 432 → 433.**
+
+### 2026-05-03 — Agent session E
+
+**Tasks completed (v0.8.2.9):**
+
+1. **Expanded all 6 Nordic stub files from 3 → 9 stub entries per grade pair:**
+   - Each grade pair (e.g. Proteins — Signature) now has stubs rated 10 down to 2.
+   - Stub entries are intentionally visible in the GUI — they signal that the cuisine data is incomplete. Do not filter them.
+
+2. **Updated IMPROVE_CUISINE_DATA.md — Trap 4 rewritten:**
+   - Removed the misleading "5–8+" cap.
+   - Replaced with: no upper limit on items per pair.
+   - Added rule: when researching a pair, replace stubs one-by-one with verified items. Do NOT delete unreplaced stubs — remaining stubs signal the slot is still empty.
+
+3. **Bumped version 0.8.2.8 → 0.8.2.9; PANEL_VERSION 434 → 435.**

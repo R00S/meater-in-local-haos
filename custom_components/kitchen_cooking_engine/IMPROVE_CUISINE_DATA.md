@@ -306,18 +306,21 @@ and any other broad category that turns up in research.
 
 ---
 
-### ❌ Trap 4: Treating "top 3" as the target count
+### ❌ Trap 4: Treating "top 3" as the target count, or stopping early
 
 The UI shows the top 3 items per grade by default, and hides the rest behind "More".
-This is a **display rule**, not a data target.
+This is a **display rule**, not a data target. There is **no upper limit** on how many
+items a pair can have.
 
-**You should add as many verified items as the cuisine warrants — typically 5–8+ per
-grade.** Items ranked 4th and below are not wasted; they appear when the user clicks
-"More" and they improve the AI's overall picture of the cuisine.
+A spice-heavy cuisine like Indian or Persian may warrant 15+ verified bulk seasonings.
+Three items is the absolute floor — 3 real items is the minimum credible result for a
+pair that has been researched. Add every verified item you find; they all improve the
+AI's picture of the cuisine and appear when the user clicks "More".
 
-If after real research you can only verify 3 items for a pair, that is fine — but that
-is the floor, not the ceiling. Never stop at 3 just because that is what is shown
-by default. A richer list is always better than a minimal one.
+**Stub entries:** cuisine files ship with 9 placeholder stubs per grade pair. When you
+research a pair, replace the stubs one-by-one with real verified items. **Do not delete
+stubs that you have not yet replaced** — a remaining stub signals that the slot is still
+empty and needs work. Once all 9 stubs are gone, keep adding verified items freely.
 
 ---
 
