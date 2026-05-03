@@ -7,146 +7,62 @@ icon: 🇮🇸
 region: nordic
 region_name: "Nordic"
 region_icon: ❄️
-research_done: 0
+research_done: 1
 ---
 
 ## Research notes
 
-⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
-Replace every [STUB] item with verified, sourced data before setting research_done: 1.
-See IMPROVE_CUISINE_DATA.md for research methodology and grade definitions.
+Sources: Hagstofa Íslands (Statistics Iceland) food consumption data, Matís (Icelandic Food
+and Biotech R&D Institute), traditional Icelandic foodways and Þjóðmenningarhúsið archives,
+Nanna Rögnvaldardóttir culinary heritage research.
+
+Iceland's food identity is built on two pillars: free-range highland lamb and deep-sea fishing.
+The country is one of the world's leading fishing nations (~1.7 million tonnes/year). Lamb
+(sauðfé) roamed the highlands all summer and were driven down each autumn — this cycle defines
+Icelandic culture as much as cuisine. Skyr, a high-protein fermented dairy product with over
+1000 years of documented use, is the defining Icelandic dairy.
+
+Traditional dishes surveyed: hangikjöt (birch-smoked lamb leg, Christmas and everyday),
+kjötsúpa (lamb and root vegetable soup), harðfiskur (wind-dried fish, usually haddock or cod),
+skyr (eaten with cream and sugar or berries), plokkfiskur (salt cod and potato mash),
+þorramatur (traditional midwinter foods including svið and skata), laufabrauð (leaf bread).
 
 ## Proteins
 
-- {id: stub_prot_sig_1, grade: signature, rating: 10, name: "[STUB] Signature Proteins 1", name_sv: "[UTKAST] Signatur-ingrediens 1", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_sig_2, grade: signature, rating: 9, name: "[STUB] Signature Proteins 2", name_sv: "[UTKAST] Signatur-ingrediens 2", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_sig_3, grade: signature, rating: 8, name: "[STUB] Signature Proteins 3", name_sv: "[UTKAST] Signatur-ingrediens 3", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_sig_4, grade: signature, rating: 7, name: "[STUB] Signature Proteins 4", name_sv: "[UTKAST] Signatur-ingrediens 4", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_sig_5, grade: signature, rating: 6, name: "[STUB] Signature Proteins 5", name_sv: "[UTKAST] Signatur-ingrediens 5", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_sig_6, grade: signature, rating: 5, name: "[STUB] Signature Proteins 6", name_sv: "[UTKAST] Signatur-ingrediens 6", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_sig_7, grade: signature, rating: 4, name: "[STUB] Signature Proteins 7", name_sv: "[UTKAST] Signatur-ingrediens 7", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_sig_8, grade: signature, rating: 3, name: "[STUB] Signature Proteins 8", name_sv: "[UTKAST] Signatur-ingrediens 8", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_bul_1, grade: bulk, rating: 10, name: "[STUB] Bulk Proteins 1", name_sv: "[UTKAST] Bulk-ingrediens 1", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_bul_2, grade: bulk, rating: 9, name: "[STUB] Bulk Proteins 2", name_sv: "[UTKAST] Bulk-ingrediens 2", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_bul_3, grade: bulk, rating: 8, name: "[STUB] Bulk Proteins 3", name_sv: "[UTKAST] Bulk-ingrediens 3", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_bul_4, grade: bulk, rating: 7, name: "[STUB] Bulk Proteins 4", name_sv: "[UTKAST] Bulk-ingrediens 4", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_bul_5, grade: bulk, rating: 6, name: "[STUB] Bulk Proteins 5", name_sv: "[UTKAST] Bulk-ingrediens 5", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_bul_6, grade: bulk, rating: 5, name: "[STUB] Bulk Proteins 6", name_sv: "[UTKAST] Bulk-ingrediens 6", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_bul_7, grade: bulk, rating: 4, name: "[STUB] Bulk Proteins 7", name_sv: "[UTKAST] Bulk-ingrediens 7", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_bul_8, grade: bulk, rating: 3, name: "[STUB] Bulk Proteins 8", name_sv: "[UTKAST] Bulk-ingrediens 8", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_loc_1, grade: local, rating: 10, name: "[STUB] Local Proteins 1", name_sv: "[UTKAST] Lokal-ingrediens 1", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_loc_2, grade: local, rating: 9, name: "[STUB] Local Proteins 2", name_sv: "[UTKAST] Lokal-ingrediens 2", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_loc_3, grade: local, rating: 8, name: "[STUB] Local Proteins 3", name_sv: "[UTKAST] Lokal-ingrediens 3", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_loc_4, grade: local, rating: 7, name: "[STUB] Local Proteins 4", name_sv: "[UTKAST] Lokal-ingrediens 4", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_loc_5, grade: local, rating: 6, name: "[STUB] Local Proteins 5", name_sv: "[UTKAST] Lokal-ingrediens 5", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_loc_6, grade: local, rating: 5, name: "[STUB] Local Proteins 6", name_sv: "[UTKAST] Lokal-ingrediens 6", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_loc_7, grade: local, rating: 4, name: "[STUB] Local Proteins 7", name_sv: "[UTKAST] Lokal-ingrediens 7", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_prot_loc_8, grade: local, rating: 3, name: "[STUB] Local Proteins 8", name_sv: "[UTKAST] Lokal-ingrediens 8", notes: "STUB — replace with verified Icelandic cuisine research"}
+- {id: lamb,         grade: signature, rating: 10, name: Lamb,          name_sv: "Lamm",           notes: "Sauðkjöt; THE defining Icelandic protein; free-range highland sheep; hangikjöt (birch-smoked leg), kjötsúpa (lamb soup), grilled lamb chops; no intensive farming"}
+- {id: cod,          grade: signature, rating: 9,  name: Cod,           name_sv: "Torsk",           notes: "Þorskur; harðfiskur (wind-dried cod); plokkfiskur (salt cod potato mash); centuries of deep-sea fishing heritage; saltfiskur exported to Portugal/Spain"}
+- {id: arctic_char,  grade: signature, rating: 8,  name: "Arctic Char", name_sv: "Röding",          notes: "Bleikja; native Icelandic freshwater fish; found in glacial rivers and lakes; culturally prized; pan-fried with butter, served at restaurants and in homes"}
+- {id: haddock,      grade: bulk,      rating: 9,  name: Haddock,       name_sv: "Kolja",           notes: "Ýsa; one of the most commercially caught and consumed fish in Iceland; harðfiskur is often made from haddock; everyday fish"}
+- {id: salmon,       grade: bulk,      rating: 7,  name: Salmon,        name_sv: "Lax",             notes: "Lax; Icelandic river salmon (wild) and farmed; prepared simply — pan-fried or baked"}
+- {id: pork,         grade: bulk,      rating: 5,  name: Pork,          name_sv: "Fläsk",           notes: "Svínakjöt; not traditional; entirely imported; consumed in modern Icelandic diet; no domestic production"}
+- {id: beef,         grade: bulk,      rating: 4,  name: Beef,          name_sv: "Nötkött",         notes: "Nautakjöt; small domestic Icelandic cattle (Íslenska kýrin); supplemented by imports; less central than lamb or fish"}
+
 
 ## Vegetables
 
-- {id: stub_veg_sig_1, grade: signature, rating: 10, name: "[STUB] Signature Vegetables 1", name_sv: "[UTKAST] Signatur-ingrediens 1", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_sig_2, grade: signature, rating: 9, name: "[STUB] Signature Vegetables 2", name_sv: "[UTKAST] Signatur-ingrediens 2", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_sig_3, grade: signature, rating: 8, name: "[STUB] Signature Vegetables 3", name_sv: "[UTKAST] Signatur-ingrediens 3", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_sig_4, grade: signature, rating: 7, name: "[STUB] Signature Vegetables 4", name_sv: "[UTKAST] Signatur-ingrediens 4", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_sig_5, grade: signature, rating: 6, name: "[STUB] Signature Vegetables 5", name_sv: "[UTKAST] Signatur-ingrediens 5", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_sig_6, grade: signature, rating: 5, name: "[STUB] Signature Vegetables 6", name_sv: "[UTKAST] Signatur-ingrediens 6", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_sig_7, grade: signature, rating: 4, name: "[STUB] Signature Vegetables 7", name_sv: "[UTKAST] Signatur-ingrediens 7", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_sig_8, grade: signature, rating: 3, name: "[STUB] Signature Vegetables 8", name_sv: "[UTKAST] Signatur-ingrediens 8", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_bul_1, grade: bulk, rating: 10, name: "[STUB] Bulk Vegetables 1", name_sv: "[UTKAST] Bulk-ingrediens 1", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_bul_2, grade: bulk, rating: 9, name: "[STUB] Bulk Vegetables 2", name_sv: "[UTKAST] Bulk-ingrediens 2", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_bul_3, grade: bulk, rating: 8, name: "[STUB] Bulk Vegetables 3", name_sv: "[UTKAST] Bulk-ingrediens 3", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_bul_4, grade: bulk, rating: 7, name: "[STUB] Bulk Vegetables 4", name_sv: "[UTKAST] Bulk-ingrediens 4", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_bul_5, grade: bulk, rating: 6, name: "[STUB] Bulk Vegetables 5", name_sv: "[UTKAST] Bulk-ingrediens 5", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_bul_6, grade: bulk, rating: 5, name: "[STUB] Bulk Vegetables 6", name_sv: "[UTKAST] Bulk-ingrediens 6", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_bul_7, grade: bulk, rating: 4, name: "[STUB] Bulk Vegetables 7", name_sv: "[UTKAST] Bulk-ingrediens 7", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_bul_8, grade: bulk, rating: 3, name: "[STUB] Bulk Vegetables 8", name_sv: "[UTKAST] Bulk-ingrediens 8", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_loc_1, grade: local, rating: 10, name: "[STUB] Local Vegetables 1", name_sv: "[UTKAST] Lokal-ingrediens 1", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_loc_2, grade: local, rating: 9, name: "[STUB] Local Vegetables 2", name_sv: "[UTKAST] Lokal-ingrediens 2", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_loc_3, grade: local, rating: 8, name: "[STUB] Local Vegetables 3", name_sv: "[UTKAST] Lokal-ingrediens 3", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_loc_4, grade: local, rating: 7, name: "[STUB] Local Vegetables 4", name_sv: "[UTKAST] Lokal-ingrediens 4", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_loc_5, grade: local, rating: 6, name: "[STUB] Local Vegetables 5", name_sv: "[UTKAST] Lokal-ingrediens 5", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_loc_6, grade: local, rating: 5, name: "[STUB] Local Vegetables 6", name_sv: "[UTKAST] Lokal-ingrediens 6", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_loc_7, grade: local, rating: 4, name: "[STUB] Local Vegetables 7", name_sv: "[UTKAST] Lokal-ingrediens 7", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_veg_loc_8, grade: local, rating: 3, name: "[STUB] Local Vegetables 8", name_sv: "[UTKAST] Lokal-ingrediens 8", notes: "STUB — replace with verified Icelandic cuisine research"}
+- {id: potatoes,     grade: bulk,      rating: 10, name: Potatoes,      name_sv: "Potatis",         notes: "Kartöflur; grown domestically since early 20th century using geothermal energy; essential starchy base for kjötsúpa, plokkfiskur, and everyday meals"}
+- {id: carrots,      grade: bulk,      rating: 8,  name: Carrots,       name_sv: "Morötter",        notes: "Gulrætur; grown locally; the primary root vegetable alongside turnip; in kjötsúpa"}
+- {id: onions,       grade: bulk,      rating: 7,  name: Onions,        name_sv: "Lök",             notes: "Laukur; imported; used as a base in stews and soups; ubiquitous in modern Icelandic cooking"}
+- {id: turnip,       grade: local,     rating: 8,  name: Turnip,        name_sv: "Rova",            notes: "Næpa; traditional Icelandic root vegetable; predates the potato; in kjötsúpa and winter stews; grown domestically"}
+- {id: kale,         grade: local,     rating: 6,  name: Kale,          name_sv: "Grönkål",         notes: "Grænkál; hardy brassica grown in Iceland using geothermal greenhouses; used in soups and as a side"}
+
 
 ## Grains
 
-- {id: stub_grain_sig_1, grade: signature, rating: 10, name: "[STUB] Signature Grains 1", name_sv: "[UTKAST] Signatur-ingrediens 1", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_sig_2, grade: signature, rating: 9, name: "[STUB] Signature Grains 2", name_sv: "[UTKAST] Signatur-ingrediens 2", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_sig_3, grade: signature, rating: 8, name: "[STUB] Signature Grains 3", name_sv: "[UTKAST] Signatur-ingrediens 3", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_sig_4, grade: signature, rating: 7, name: "[STUB] Signature Grains 4", name_sv: "[UTKAST] Signatur-ingrediens 4", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_sig_5, grade: signature, rating: 6, name: "[STUB] Signature Grains 5", name_sv: "[UTKAST] Signatur-ingrediens 5", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_sig_6, grade: signature, rating: 5, name: "[STUB] Signature Grains 6", name_sv: "[UTKAST] Signatur-ingrediens 6", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_sig_7, grade: signature, rating: 4, name: "[STUB] Signature Grains 7", name_sv: "[UTKAST] Signatur-ingrediens 7", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_sig_8, grade: signature, rating: 3, name: "[STUB] Signature Grains 8", name_sv: "[UTKAST] Signatur-ingrediens 8", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_bul_1, grade: bulk, rating: 10, name: "[STUB] Bulk Grains 1", name_sv: "[UTKAST] Bulk-ingrediens 1", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_bul_2, grade: bulk, rating: 9, name: "[STUB] Bulk Grains 2", name_sv: "[UTKAST] Bulk-ingrediens 2", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_bul_3, grade: bulk, rating: 8, name: "[STUB] Bulk Grains 3", name_sv: "[UTKAST] Bulk-ingrediens 3", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_bul_4, grade: bulk, rating: 7, name: "[STUB] Bulk Grains 4", name_sv: "[UTKAST] Bulk-ingrediens 4", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_bul_5, grade: bulk, rating: 6, name: "[STUB] Bulk Grains 5", name_sv: "[UTKAST] Bulk-ingrediens 5", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_bul_6, grade: bulk, rating: 5, name: "[STUB] Bulk Grains 6", name_sv: "[UTKAST] Bulk-ingrediens 6", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_bul_7, grade: bulk, rating: 4, name: "[STUB] Bulk Grains 7", name_sv: "[UTKAST] Bulk-ingrediens 7", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_bul_8, grade: bulk, rating: 3, name: "[STUB] Bulk Grains 8", name_sv: "[UTKAST] Bulk-ingrediens 8", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_loc_1, grade: local, rating: 10, name: "[STUB] Local Grains 1", name_sv: "[UTKAST] Lokal-ingrediens 1", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_loc_2, grade: local, rating: 9, name: "[STUB] Local Grains 2", name_sv: "[UTKAST] Lokal-ingrediens 2", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_loc_3, grade: local, rating: 8, name: "[STUB] Local Grains 3", name_sv: "[UTKAST] Lokal-ingrediens 3", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_loc_4, grade: local, rating: 7, name: "[STUB] Local Grains 4", name_sv: "[UTKAST] Lokal-ingrediens 4", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_loc_5, grade: local, rating: 6, name: "[STUB] Local Grains 5", name_sv: "[UTKAST] Lokal-ingrediens 5", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_loc_6, grade: local, rating: 5, name: "[STUB] Local Grains 6", name_sv: "[UTKAST] Lokal-ingrediens 6", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_loc_7, grade: local, rating: 4, name: "[STUB] Local Grains 7", name_sv: "[UTKAST] Lokal-ingrediens 7", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_grain_loc_8, grade: local, rating: 3, name: "[STUB] Local Grains 8", name_sv: "[UTKAST] Lokal-ingrediens 8", notes: "STUB — replace with verified Icelandic cuisine research"}
+- {id: rye,          grade: local,     rating: 8,  name: Rye,           name_sv: "Råg",             notes: "Rúgbrauð; Icelandic geothermally-baked dark rye bread (hverabrauð) — buried in hot spring ground and slow-baked over 24h; defining Icelandic bread tradition"}
+- {id: wheat,        grade: bulk,      rating: 6,  name: Wheat,         name_sv: "Vete",            notes: "Hveiti; imported; used for laufabrauð (Christmas leaf bread) and general baking"}
+
 
 ## Dairy
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 10, name: "[STUB] Signature Dairy 1", name_sv: "[UTKAST] Signatur-ingrediens 1", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 9, name: "[STUB] Signature Dairy 2", name_sv: "[UTKAST] Signatur-ingrediens 2", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 8, name: "[STUB] Signature Dairy 3", name_sv: "[UTKAST] Signatur-ingrediens 3", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 7, name: "[STUB] Signature Dairy 4", name_sv: "[UTKAST] Signatur-ingrediens 4", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 6, name: "[STUB] Signature Dairy 5", name_sv: "[UTKAST] Signatur-ingrediens 5", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 5, name: "[STUB] Signature Dairy 6", name_sv: "[UTKAST] Signatur-ingrediens 6", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 4, name: "[STUB] Signature Dairy 7", name_sv: "[UTKAST] Signatur-ingrediens 7", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 3, name: "[STUB] Signature Dairy 8", name_sv: "[UTKAST] Signatur-ingrediens 8", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_bul_1, grade: bulk, rating: 10, name: "[STUB] Bulk Dairy 1", name_sv: "[UTKAST] Bulk-ingrediens 1", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 9, name: "[STUB] Bulk Dairy 2", name_sv: "[UTKAST] Bulk-ingrediens 2", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 8, name: "[STUB] Bulk Dairy 3", name_sv: "[UTKAST] Bulk-ingrediens 3", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 7, name: "[STUB] Bulk Dairy 4", name_sv: "[UTKAST] Bulk-ingrediens 4", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 6, name: "[STUB] Bulk Dairy 5", name_sv: "[UTKAST] Bulk-ingrediens 5", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 5, name: "[STUB] Bulk Dairy 6", name_sv: "[UTKAST] Bulk-ingrediens 6", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 4, name: "[STUB] Bulk Dairy 7", name_sv: "[UTKAST] Bulk-ingrediens 7", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 3, name: "[STUB] Bulk Dairy 8", name_sv: "[UTKAST] Bulk-ingrediens 8", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_loc_1, grade: local, rating: 10, name: "[STUB] Local Dairy 1", name_sv: "[UTKAST] Lokal-ingrediens 1", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 9, name: "[STUB] Local Dairy 2", name_sv: "[UTKAST] Lokal-ingrediens 2", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 8, name: "[STUB] Local Dairy 3", name_sv: "[UTKAST] Lokal-ingrediens 3", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 7, name: "[STUB] Local Dairy 4", name_sv: "[UTKAST] Lokal-ingrediens 4", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 6, name: "[STUB] Local Dairy 5", name_sv: "[UTKAST] Lokal-ingrediens 5", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 5, name: "[STUB] Local Dairy 6", name_sv: "[UTKAST] Lokal-ingrediens 6", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 4, name: "[STUB] Local Dairy 7", name_sv: "[UTKAST] Lokal-ingrediens 7", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 3, name: "[STUB] Local Dairy 8", name_sv: "[UTKAST] Lokal-ingrediens 8", notes: "STUB — replace with verified Icelandic cuisine research"}
+- {id: skyr,         grade: signature, rating: 10, name: Skyr,          name_sv: "Skyr",            notes: "THE defining Icelandic dairy; high-protein fermented product with 1000+ years of continuous use; eaten daily with cream, sugar, and berries; now exported worldwide"}
+- {id: butter,       grade: bulk,      rating: 9,  name: Butter,        name_sv: "Smör",            notes: "Smjör; Icelandic dairy farming tradition; used in cooking, on rúgbrauð, and pan-frying fish"}
+- {id: cream,        grade: bulk,      rating: 7,  name: Cream,         name_sv: "Grädde",          notes: "Rjómi; served with skyr; used in soups and sauces; traditional Icelandic dairy"}
+
 
 ## Spices & Seasonings
 
-- {id: stub_spice_sig_1, grade: signature, rating: 10, name: "[STUB] Signature Spices 1", name_sv: "[UTKAST] Signatur-ingrediens 1", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 9, name: "[STUB] Signature Spices 2", name_sv: "[UTKAST] Signatur-ingrediens 2", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 8, name: "[STUB] Signature Spices 3", name_sv: "[UTKAST] Signatur-ingrediens 3", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 7, name: "[STUB] Signature Spices 4", name_sv: "[UTKAST] Signatur-ingrediens 4", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 6, name: "[STUB] Signature Spices 5", name_sv: "[UTKAST] Signatur-ingrediens 5", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 5, name: "[STUB] Signature Spices 6", name_sv: "[UTKAST] Signatur-ingrediens 6", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 4, name: "[STUB] Signature Spices 7", name_sv: "[UTKAST] Signatur-ingrediens 7", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 3, name: "[STUB] Signature Spices 8", name_sv: "[UTKAST] Signatur-ingrediens 8", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_bul_1, grade: bulk, rating: 10, name: "[STUB] Bulk Spices 1", name_sv: "[UTKAST] Bulk-ingrediens 1", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 9, name: "[STUB] Bulk Spices 2", name_sv: "[UTKAST] Bulk-ingrediens 2", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 8, name: "[STUB] Bulk Spices 3", name_sv: "[UTKAST] Bulk-ingrediens 3", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 7, name: "[STUB] Bulk Spices 4", name_sv: "[UTKAST] Bulk-ingrediens 4", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 6, name: "[STUB] Bulk Spices 5", name_sv: "[UTKAST] Bulk-ingrediens 5", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 5, name: "[STUB] Bulk Spices 6", name_sv: "[UTKAST] Bulk-ingrediens 6", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 4, name: "[STUB] Bulk Spices 7", name_sv: "[UTKAST] Bulk-ingrediens 7", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 3, name: "[STUB] Bulk Spices 8", name_sv: "[UTKAST] Bulk-ingrediens 8", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_loc_1, grade: local, rating: 10, name: "[STUB] Local Spices 1", name_sv: "[UTKAST] Lokal-ingrediens 1", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_loc_2, grade: local, rating: 9, name: "[STUB] Local Spices 2", name_sv: "[UTKAST] Lokal-ingrediens 2", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_loc_3, grade: local, rating: 8, name: "[STUB] Local Spices 3", name_sv: "[UTKAST] Lokal-ingrediens 3", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_loc_4, grade: local, rating: 7, name: "[STUB] Local Spices 4", name_sv: "[UTKAST] Lokal-ingrediens 4", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_loc_5, grade: local, rating: 6, name: "[STUB] Local Spices 5", name_sv: "[UTKAST] Lokal-ingrediens 5", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_loc_6, grade: local, rating: 5, name: "[STUB] Local Spices 6", name_sv: "[UTKAST] Lokal-ingrediens 6", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_loc_7, grade: local, rating: 4, name: "[STUB] Local Spices 7", name_sv: "[UTKAST] Lokal-ingrediens 7", notes: "STUB — replace with verified Icelandic cuisine research"}
-- {id: stub_spice_loc_8, grade: local, rating: 3, name: "[STUB] Local Spices 8", name_sv: "[UTKAST] Lokal-ingrediens 8", notes: "STUB — replace with verified Icelandic cuisine research"}
+- {id: angelica,     grade: signature, rating: 9,  name: Angelica,      name_sv: "Angelika",        notes: "Hvönn (Angelica archangelica); Iceland's most iconic wild herb; native Arctic plant foraged from roadsides and riverbanks; used in New Nordic cooking and traditional preparations"}
+- {id: caraway,      grade: local,     rating: 8,  name: Caraway,       name_sv: "Kummin",          notes: "Kúmen; used in laufabrauð (leaf bread) and some traditional baked goods; common Icelandic flavour in baking"}
+- {id: wild_thyme,   grade: local,     rating: 7,  name: "Wild Thyme",  name_sv: "Timjan",          notes: "Blóðberg (Thymus praecox); foraged from Icelandic hillsides; native to Iceland; used fresh in New Nordic cooking; distinct mild flavour"}
+- {id: white_pepper, grade: bulk,      rating: 6,  name: "White Pepper",name_sv: "Vitpeppar",       notes: "Standard imported seasoning; used in fish soups, stews, and everyday cooking"}

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 May 2026, 10:24 CET
+ * AUTO-GENERATED: 03 May 2026, 10:40 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 03 May 2026, 10:24 CET
+// Last generated: 03 May 2026, 10:40 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -27068,964 +27068,228 @@ const AI_CUISINE_INGREDIENTS = {
   ],
   "danish": [
     {
-      "id": "stub_prot_sig_1",
-      "name": "[STUB] Signature Protein 1",
+      "id": "herring",
+      "name": "Herring",
       "cat": "p",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "[UTKAST] Signatur-ingrediens 1"
+      "name_sv": "Sill"
     },
     {
-      "id": "stub_prot_sig_2",
-      "name": "[STUB] Signature Protein 2",
+      "id": "plaice",
+      "name": "Plaice",
       "cat": "p",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "[UTKAST] Signatur-ingrediens 2"
+      "name_sv": "Rödspätta"
     },
     {
-      "id": "stub_prot_sig_3",
-      "name": "[STUB] Signature Protein 3",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST] Signatur-ingrediens 3"
-    },
-    {
-      "id": "stub_prot_sig_4",
-      "name": "[STUB] Signature Protein 4",
+      "id": "eel",
+      "name": "Eel",
       "cat": "p",
       "grade": "signature",
       "rating": 7,
-      "name_sv": "[UTKAST] Signatur-ingrediens 4"
+      "name_sv": "Ål"
     },
     {
-      "id": "stub_prot_sig_5",
-      "name": "[STUB] Signature Protein 5",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST] Signatur-ingrediens 5"
-    },
-    {
-      "id": "stub_prot_sig_6",
-      "name": "[STUB] Signature Protein 6",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST] Signatur-ingrediens 6"
-    },
-    {
-      "id": "stub_prot_sig_7",
-      "name": "[STUB] Signature Protein 7",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST] Signatur-ingrediens 7"
-    },
-    {
-      "id": "stub_prot_sig_8",
-      "name": "[STUB] Signature Protein 8",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST] Signatur-ingrediens 8"
-    },
-    {
-      "id": "stub_prot_bul_1",
-      "name": "[STUB] Bulk Protein 1",
+      "id": "pork",
+      "name": "Pork",
       "cat": "p",
       "grade": "bulk",
       "rating": 10,
-      "name_sv": "[UTKAST] Bulk-ingrediens 1"
+      "name_sv": "Fläsk"
     },
     {
-      "id": "stub_prot_bul_2",
-      "name": "[STUB] Bulk Protein 2",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST] Bulk-ingrediens 2"
-    },
-    {
-      "id": "stub_prot_bul_3",
-      "name": "[STUB] Bulk Protein 3",
+      "id": "chicken",
+      "name": "Chicken",
       "cat": "p",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "[UTKAST] Bulk-ingrediens 3"
+      "name_sv": "Kyckling"
     },
     {
-      "id": "stub_prot_bul_4",
-      "name": "[STUB] Bulk Protein 4",
+      "id": "beef",
+      "name": "Beef",
       "cat": "p",
       "grade": "bulk",
       "rating": 7,
-      "name_sv": "[UTKAST] Bulk-ingrediens 4"
+      "name_sv": "Nötkött"
     },
     {
-      "id": "stub_prot_bul_5",
-      "name": "[STUB] Bulk Protein 5",
+      "id": "cod",
+      "name": "Cod",
       "cat": "p",
       "grade": "bulk",
       "rating": 6,
-      "name_sv": "[UTKAST] Bulk-ingrediens 5"
+      "name_sv": "Torsk"
     },
     {
-      "id": "stub_prot_bul_6",
-      "name": "[STUB] Bulk Protein 6",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST] Bulk-ingrediens 6"
-    },
-    {
-      "id": "stub_prot_bul_7",
-      "name": "[STUB] Bulk Protein 7",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST] Bulk-ingrediens 7"
-    },
-    {
-      "id": "stub_prot_bul_8",
-      "name": "[STUB] Bulk Protein 8",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST] Bulk-ingrediens 8"
-    },
-    {
-      "id": "stub_prot_loc_1",
-      "name": "[STUB] Local Protein 1",
-      "cat": "p",
-      "grade": "local",
-      "rating": 10,
-      "name_sv": "[UTKAST] Lokal-ingrediens 1"
-    },
-    {
-      "id": "stub_prot_loc_2",
-      "name": "[STUB] Local Protein 2",
-      "cat": "p",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST] Lokal-ingrediens 2"
-    },
-    {
-      "id": "stub_prot_loc_3",
-      "name": "[STUB] Local Protein 3",
-      "cat": "p",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "[UTKAST] Lokal-ingrediens 3"
-    },
-    {
-      "id": "stub_prot_loc_4",
-      "name": "[STUB] Local Protein 4",
-      "cat": "p",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST] Lokal-ingrediens 4"
-    },
-    {
-      "id": "stub_prot_loc_5",
-      "name": "[STUB] Local Protein 5",
-      "cat": "p",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST] Lokal-ingrediens 5"
-    },
-    {
-      "id": "stub_prot_loc_6",
-      "name": "[STUB] Local Protein 6",
-      "cat": "p",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST] Lokal-ingrediens 6"
-    },
-    {
-      "id": "stub_prot_loc_7",
-      "name": "[STUB] Local Protein 7",
-      "cat": "p",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST] Lokal-ingrediens 7"
-    },
-    {
-      "id": "stub_prot_loc_8",
-      "name": "[STUB] Local Protein 8",
-      "cat": "p",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST] Lokal-ingrediens 8"
-    },
-    {
-      "id": "stub_veg_sig_1",
-      "name": "[STUB] Signature Vegetable 1",
+      "id": "red_cabbage",
+      "name": "Red Cabbage",
       "cat": "v",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "[UTKAST] Signatur-ingrediens 1"
+      "name_sv": "Rödkål"
     },
     {
-      "id": "stub_veg_sig_2",
-      "name": "[STUB] Signature Vegetable 2",
+      "id": "dill",
+      "name": "Dill",
       "cat": "v",
-      "grade": "signature",
-      "rating": 9,
-      "name_sv": "[UTKAST] Signatur-ingrediens 2"
-    },
-    {
-      "id": "stub_veg_sig_3",
-      "name": "[STUB] Signature Vegetable 3",
-      "cat": "v",
-      "grade": "signature",
+      "grade": "bulk",
       "rating": 8,
-      "name_sv": "[UTKAST] Signatur-ingrediens 3"
+      "name_sv": "Dill"
     },
     {
-      "id": "stub_veg_sig_4",
-      "name": "[STUB] Signature Vegetable 4",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST] Signatur-ingrediens 4"
-    },
-    {
-      "id": "stub_veg_sig_5",
-      "name": "[STUB] Signature Vegetable 5",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST] Signatur-ingrediens 5"
-    },
-    {
-      "id": "stub_veg_sig_6",
-      "name": "[STUB] Signature Vegetable 6",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST] Signatur-ingrediens 6"
-    },
-    {
-      "id": "stub_veg_sig_7",
-      "name": "[STUB] Signature Vegetable 7",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST] Signatur-ingrediens 7"
-    },
-    {
-      "id": "stub_veg_sig_8",
-      "name": "[STUB] Signature Vegetable 8",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST] Signatur-ingrediens 8"
-    },
-    {
-      "id": "stub_veg_bul_1",
-      "name": "[STUB] Bulk Vegetable 1",
+      "id": "potatoes",
+      "name": "Potatoes",
       "cat": "v",
       "grade": "bulk",
       "rating": 10,
-      "name_sv": "[UTKAST] Bulk-ingrediens 1"
+      "name_sv": "Potatis"
     },
     {
-      "id": "stub_veg_bul_2",
-      "name": "[STUB] Bulk Vegetable 2",
+      "id": "onions",
+      "name": "Onions",
       "cat": "v",
       "grade": "bulk",
       "rating": 9,
-      "name_sv": "[UTKAST] Bulk-ingrediens 2"
+      "name_sv": "Lök"
     },
     {
-      "id": "stub_veg_bul_3",
-      "name": "[STUB] Bulk Vegetable 3",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST] Bulk-ingrediens 3"
-    },
-    {
-      "id": "stub_veg_bul_4",
-      "name": "[STUB] Bulk Vegetable 4",
+      "id": "carrots",
+      "name": "Carrots",
       "cat": "v",
       "grade": "bulk",
       "rating": 7,
-      "name_sv": "[UTKAST] Bulk-ingrediens 4"
+      "name_sv": "Morötter"
     },
     {
-      "id": "stub_veg_bul_5",
-      "name": "[STUB] Bulk Vegetable 5",
+      "id": "cucumber",
+      "name": "Cucumber",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Gurka"
+    },
+    {
+      "id": "beets",
+      "name": "Beetroot",
       "cat": "v",
       "grade": "bulk",
       "rating": 6,
-      "name_sv": "[UTKAST] Bulk-ingrediens 5"
+      "name_sv": "Rödbeta"
     },
     {
-      "id": "stub_veg_bul_6",
-      "name": "[STUB] Bulk Vegetable 6",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST] Bulk-ingrediens 6"
-    },
-    {
-      "id": "stub_veg_bul_7",
-      "name": "[STUB] Bulk Vegetable 7",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST] Bulk-ingrediens 7"
-    },
-    {
-      "id": "stub_veg_bul_8",
-      "name": "[STUB] Bulk Vegetable 8",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST] Bulk-ingrediens 8"
-    },
-    {
-      "id": "stub_veg_loc_1",
-      "name": "[STUB] Local Vegetable 1",
-      "cat": "v",
-      "grade": "local",
-      "rating": 10,
-      "name_sv": "[UTKAST] Lokal-ingrediens 1"
-    },
-    {
-      "id": "stub_veg_loc_2",
-      "name": "[STUB] Local Vegetable 2",
-      "cat": "v",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST] Lokal-ingrediens 2"
-    },
-    {
-      "id": "stub_veg_loc_3",
-      "name": "[STUB] Local Vegetable 3",
+      "id": "leeks",
+      "name": "Leeks",
       "cat": "v",
       "grade": "local",
       "rating": 8,
-      "name_sv": "[UTKAST] Lokal-ingrediens 3"
+      "name_sv": "Purjolök"
     },
     {
-      "id": "stub_veg_loc_4",
-      "name": "[STUB] Local Vegetable 4",
+      "id": "kale",
+      "name": "Kale",
       "cat": "v",
       "grade": "local",
       "rating": 7,
-      "name_sv": "[UTKAST] Lokal-ingrediens 4"
+      "name_sv": "Grönkål"
     },
     {
-      "id": "stub_veg_loc_5",
-      "name": "[STUB] Local Vegetable 5",
-      "cat": "v",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST] Lokal-ingrediens 5"
-    },
-    {
-      "id": "stub_veg_loc_6",
-      "name": "[STUB] Local Vegetable 6",
-      "cat": "v",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST] Lokal-ingrediens 6"
-    },
-    {
-      "id": "stub_veg_loc_7",
-      "name": "[STUB] Local Vegetable 7",
-      "cat": "v",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST] Lokal-ingrediens 7"
-    },
-    {
-      "id": "stub_veg_loc_8",
-      "name": "[STUB] Local Vegetable 8",
-      "cat": "v",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST] Lokal-ingrediens 8"
-    },
-    {
-      "id": "stub_grain_sig_1",
-      "name": "[STUB] Signature Grain 1",
+      "id": "rye_bread",
+      "name": "Rye Bread",
       "cat": "g",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "[UTKAST] Signatur-ingrediens 1"
+      "name_sv": "Rågbröd"
     },
     {
-      "id": "stub_grain_sig_2",
-      "name": "[STUB] Signature Grain 2",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 9,
-      "name_sv": "[UTKAST] Signatur-ingrediens 2"
-    },
-    {
-      "id": "stub_grain_sig_3",
-      "name": "[STUB] Signature Grain 3",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST] Signatur-ingrediens 3"
-    },
-    {
-      "id": "stub_grain_sig_4",
-      "name": "[STUB] Signature Grain 4",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST] Signatur-ingrediens 4"
-    },
-    {
-      "id": "stub_grain_sig_5",
-      "name": "[STUB] Signature Grain 5",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST] Signatur-ingrediens 5"
-    },
-    {
-      "id": "stub_grain_sig_6",
-      "name": "[STUB] Signature Grain 6",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST] Signatur-ingrediens 6"
-    },
-    {
-      "id": "stub_grain_sig_7",
-      "name": "[STUB] Signature Grain 7",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST] Signatur-ingrediens 7"
-    },
-    {
-      "id": "stub_grain_sig_8",
-      "name": "[STUB] Signature Grain 8",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST] Signatur-ingrediens 8"
-    },
-    {
-      "id": "stub_grain_bul_1",
-      "name": "[STUB] Bulk Grain 1",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 10,
-      "name_sv": "[UTKAST] Bulk-ingrediens 1"
-    },
-    {
-      "id": "stub_grain_bul_2",
-      "name": "[STUB] Bulk Grain 2",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST] Bulk-ingrediens 2"
-    },
-    {
-      "id": "stub_grain_bul_3",
-      "name": "[STUB] Bulk Grain 3",
+      "id": "wheat",
+      "name": "Wheat",
       "cat": "g",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "[UTKAST] Bulk-ingrediens 3"
+      "name_sv": "Vete"
     },
     {
-      "id": "stub_grain_bul_4",
-      "name": "[STUB] Bulk Grain 4",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST] Bulk-ingrediens 4"
-    },
-    {
-      "id": "stub_grain_bul_5",
-      "name": "[STUB] Bulk Grain 5",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST] Bulk-ingrediens 5"
-    },
-    {
-      "id": "stub_grain_bul_6",
-      "name": "[STUB] Bulk Grain 6",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST] Bulk-ingrediens 6"
-    },
-    {
-      "id": "stub_grain_bul_7",
-      "name": "[STUB] Bulk Grain 7",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST] Bulk-ingrediens 7"
-    },
-    {
-      "id": "stub_grain_bul_8",
-      "name": "[STUB] Bulk Grain 8",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST] Bulk-ingrediens 8"
-    },
-    {
-      "id": "stub_grain_loc_1",
-      "name": "[STUB] Local Grain 1",
-      "cat": "g",
-      "grade": "local",
-      "rating": 10,
-      "name_sv": "[UTKAST] Lokal-ingrediens 1"
-    },
-    {
-      "id": "stub_grain_loc_2",
-      "name": "[STUB] Local Grain 2",
-      "cat": "g",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST] Lokal-ingrediens 2"
-    },
-    {
-      "id": "stub_grain_loc_3",
-      "name": "[STUB] Local Grain 3",
-      "cat": "g",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "[UTKAST] Lokal-ingrediens 3"
-    },
-    {
-      "id": "stub_grain_loc_4",
-      "name": "[STUB] Local Grain 4",
-      "cat": "g",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST] Lokal-ingrediens 4"
-    },
-    {
-      "id": "stub_grain_loc_5",
-      "name": "[STUB] Local Grain 5",
+      "id": "oats",
+      "name": "Oats",
       "cat": "g",
       "grade": "local",
       "rating": 6,
-      "name_sv": "[UTKAST] Lokal-ingrediens 5"
+      "name_sv": "Havre"
     },
     {
-      "id": "stub_grain_loc_6",
-      "name": "[STUB] Local Grain 6",
-      "cat": "g",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST] Lokal-ingrediens 6"
-    },
-    {
-      "id": "stub_grain_loc_7",
-      "name": "[STUB] Local Grain 7",
-      "cat": "g",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST] Lokal-ingrediens 7"
-    },
-    {
-      "id": "stub_grain_loc_8",
-      "name": "[STUB] Local Grain 8",
-      "cat": "g",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST] Lokal-ingrediens 8"
-    },
-    {
-      "id": "stub_dairy_sig_1",
-      "name": "[STUB] Signature Dairy 1",
+      "id": "butter",
+      "name": "Butter",
       "cat": "d",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "[UTKAST] Signatur-ingrediens 1"
+      "name_sv": "Smör"
     },
     {
-      "id": "stub_dairy_sig_2",
-      "name": "[STUB] Signature Dairy 2",
-      "cat": "d",
-      "grade": "signature",
-      "rating": 9,
-      "name_sv": "[UTKAST] Signatur-ingrediens 2"
-    },
-    {
-      "id": "stub_dairy_sig_3",
-      "name": "[STUB] Signature Dairy 3",
-      "cat": "d",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST] Signatur-ingrediens 3"
-    },
-    {
-      "id": "stub_dairy_sig_4",
-      "name": "[STUB] Signature Dairy 4",
-      "cat": "d",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST] Signatur-ingrediens 4"
-    },
-    {
-      "id": "stub_dairy_sig_5",
-      "name": "[STUB] Signature Dairy 5",
-      "cat": "d",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST] Signatur-ingrediens 5"
-    },
-    {
-      "id": "stub_dairy_sig_6",
-      "name": "[STUB] Signature Dairy 6",
-      "cat": "d",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST] Signatur-ingrediens 6"
-    },
-    {
-      "id": "stub_dairy_sig_7",
-      "name": "[STUB] Signature Dairy 7",
-      "cat": "d",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST] Signatur-ingrediens 7"
-    },
-    {
-      "id": "stub_dairy_sig_8",
-      "name": "[STUB] Signature Dairy 8",
-      "cat": "d",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST] Signatur-ingrediens 8"
-    },
-    {
-      "id": "stub_dairy_bul_1",
-      "name": "[STUB] Bulk Dairy 1",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 10,
-      "name_sv": "[UTKAST] Bulk-ingrediens 1"
-    },
-    {
-      "id": "stub_dairy_bul_2",
-      "name": "[STUB] Bulk Dairy 2",
+      "id": "cream",
+      "name": "Cream",
       "cat": "d",
       "grade": "bulk",
       "rating": 9,
-      "name_sv": "[UTKAST] Bulk-ingrediens 2"
+      "name_sv": "Grädde"
     },
     {
-      "id": "stub_dairy_bul_3",
-      "name": "[STUB] Bulk Dairy 3",
+      "id": "creme_fraiche",
+      "name": "Crème fraîche",
       "cat": "d",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "[UTKAST] Bulk-ingrediens 3"
+      "name_sv": "Crème fraîche"
     },
     {
-      "id": "stub_dairy_bul_4",
-      "name": "[STUB] Bulk Dairy 4",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST] Bulk-ingrediens 4"
-    },
-    {
-      "id": "stub_dairy_bul_5",
-      "name": "[STUB] Bulk Dairy 5",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST] Bulk-ingrediens 5"
-    },
-    {
-      "id": "stub_dairy_bul_6",
-      "name": "[STUB] Bulk Dairy 6",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST] Bulk-ingrediens 6"
-    },
-    {
-      "id": "stub_dairy_bul_7",
-      "name": "[STUB] Bulk Dairy 7",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST] Bulk-ingrediens 7"
-    },
-    {
-      "id": "stub_dairy_bul_8",
-      "name": "[STUB] Bulk Dairy 8",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST] Bulk-ingrediens 8"
-    },
-    {
-      "id": "stub_dairy_loc_1",
-      "name": "[STUB] Local Dairy 1",
-      "cat": "d",
-      "grade": "local",
-      "rating": 10,
-      "name_sv": "[UTKAST] Lokal-ingrediens 1"
-    },
-    {
-      "id": "stub_dairy_loc_2",
-      "name": "[STUB] Local Dairy 2",
-      "cat": "d",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST] Lokal-ingrediens 2"
-    },
-    {
-      "id": "stub_dairy_loc_3",
-      "name": "[STUB] Local Dairy 3",
-      "cat": "d",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "[UTKAST] Lokal-ingrediens 3"
-    },
-    {
-      "id": "stub_dairy_loc_4",
-      "name": "[STUB] Local Dairy 4",
-      "cat": "d",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST] Lokal-ingrediens 4"
-    },
-    {
-      "id": "stub_dairy_loc_5",
-      "name": "[STUB] Local Dairy 5",
-      "cat": "d",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST] Lokal-ingrediens 5"
-    },
-    {
-      "id": "stub_dairy_loc_6",
-      "name": "[STUB] Local Dairy 6",
-      "cat": "d",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST] Lokal-ingrediens 6"
-    },
-    {
-      "id": "stub_dairy_loc_7",
-      "name": "[STUB] Local Dairy 7",
-      "cat": "d",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST] Lokal-ingrediens 7"
-    },
-    {
-      "id": "stub_dairy_loc_8",
-      "name": "[STUB] Local Dairy 8",
-      "cat": "d",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST] Lokal-ingrediens 8"
-    },
-    {
-      "id": "stub_spice_sig_1",
-      "name": "[STUB] Signature Spices 1",
+      "id": "mustard",
+      "name": "Mustard",
       "cat": "s",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "[UTKAST] Signatur-ingrediens 1"
+      "name_sv": "Senap"
     },
     {
-      "id": "stub_spice_sig_2",
-      "name": "[STUB] Signature Spices 2",
+      "id": "caraway",
+      "name": "Caraway",
       "cat": "s",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "[UTKAST] Signatur-ingrediens 2"
+      "name_sv": "Kummin"
     },
     {
-      "id": "stub_spice_sig_3",
-      "name": "[STUB] Signature Spices 3",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST] Signatur-ingrediens 3"
-    },
-    {
-      "id": "stub_spice_sig_4",
-      "name": "[STUB] Signature Spices 4",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST] Signatur-ingrediens 4"
-    },
-    {
-      "id": "stub_spice_sig_5",
-      "name": "[STUB] Signature Spices 5",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST] Signatur-ingrediens 5"
-    },
-    {
-      "id": "stub_spice_sig_6",
-      "name": "[STUB] Signature Spices 6",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST] Signatur-ingrediens 6"
-    },
-    {
-      "id": "stub_spice_sig_7",
-      "name": "[STUB] Signature Spices 7",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST] Signatur-ingrediens 7"
-    },
-    {
-      "id": "stub_spice_sig_8",
-      "name": "[STUB] Signature Spices 8",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST] Signatur-ingrediens 8"
-    },
-    {
-      "id": "stub_spice_bul_1",
-      "name": "[STUB] Bulk Spices 1",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 10,
-      "name_sv": "[UTKAST] Bulk-ingrediens 1"
-    },
-    {
-      "id": "stub_spice_bul_2",
-      "name": "[STUB] Bulk Spices 2",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST] Bulk-ingrediens 2"
-    },
-    {
-      "id": "stub_spice_bul_3",
-      "name": "[STUB] Bulk Spices 3",
+      "id": "white_pepper",
+      "name": "White Pepper",
       "cat": "s",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "[UTKAST] Bulk-ingrediens 3"
+      "name_sv": "Vitpeppar"
     },
     {
-      "id": "stub_spice_bul_4",
-      "name": "[STUB] Bulk Spices 4",
+      "id": "nutmeg",
+      "name": "Nutmeg",
       "cat": "s",
       "grade": "bulk",
       "rating": 7,
-      "name_sv": "[UTKAST] Bulk-ingrediens 4"
+      "name_sv": "Muskotnöt"
     },
     {
-      "id": "stub_spice_bul_5",
-      "name": "[STUB] Bulk Spices 5",
+      "id": "bay_leaves",
+      "name": "Bay Leaves",
       "cat": "s",
       "grade": "bulk",
       "rating": 6,
-      "name_sv": "[UTKAST] Bulk-ingrediens 5"
+      "name_sv": "Lagerblad"
     },
     {
-      "id": "stub_spice_bul_6",
-      "name": "[STUB] Bulk Spices 6",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST] Bulk-ingrediens 6"
-    },
-    {
-      "id": "stub_spice_bul_7",
-      "name": "[STUB] Bulk Spices 7",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST] Bulk-ingrediens 7"
-    },
-    {
-      "id": "stub_spice_bul_8",
-      "name": "[STUB] Bulk Spices 8",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST] Bulk-ingrediens 8"
-    },
-    {
-      "id": "stub_spice_loc_1",
-      "name": "[STUB] Local Spices 1",
-      "cat": "s",
-      "grade": "local",
-      "rating": 10,
-      "name_sv": "[UTKAST] Lokal-ingrediens 1"
-    },
-    {
-      "id": "stub_spice_loc_2",
-      "name": "[STUB] Local Spices 2",
-      "cat": "s",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST] Lokal-ingrediens 2"
-    },
-    {
-      "id": "stub_spice_loc_3",
-      "name": "[STUB] Local Spices 3",
-      "cat": "s",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "[UTKAST] Lokal-ingrediens 3"
-    },
-    {
-      "id": "stub_spice_loc_4",
-      "name": "[STUB] Local Spices 4",
+      "id": "allspice",
+      "name": "Allspice",
       "cat": "s",
       "grade": "local",
       "rating": 7,
-      "name_sv": "[UTKAST] Lokal-ingrediens 4"
-    },
-    {
-      "id": "stub_spice_loc_5",
-      "name": "[STUB] Local Spices 5",
-      "cat": "s",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST] Lokal-ingrediens 5"
-    },
-    {
-      "id": "stub_spice_loc_6",
-      "name": "[STUB] Local Spices 6",
-      "cat": "s",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST] Lokal-ingrediens 6"
-    },
-    {
-      "id": "stub_spice_loc_7",
-      "name": "[STUB] Local Spices 7",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST] Lokal-ingrediens 7"
-    },
-    {
-      "id": "stub_spice_loc_8",
-      "name": "[STUB] Local Spices 8",
-      "cat": "s",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST] Lokal-ingrediens 8"
+      "name_sv": "Kryddpeppar"
     }
   ],
   "dominican": [
@@ -43422,964 +42686,172 @@ const AI_CUISINE_INGREDIENTS = {
   ],
   "icelandic": [
     {
-      "id": "stub_prot_sig_1",
-      "name": "[STUB] Signature Proteins 1",
+      "id": "lamb",
+      "name": "Lamb",
       "cat": "p",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "[UTKAST] Signatur-ingrediens 1"
+      "name_sv": "Lamm"
     },
     {
-      "id": "stub_prot_sig_2",
-      "name": "[STUB] Signature Proteins 2",
+      "id": "cod",
+      "name": "Cod",
       "cat": "p",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "[UTKAST] Signatur-ingrediens 2"
+      "name_sv": "Torsk"
     },
     {
-      "id": "stub_prot_sig_3",
-      "name": "[STUB] Signature Proteins 3",
+      "id": "arctic_char",
+      "name": "Arctic Char",
       "cat": "p",
       "grade": "signature",
       "rating": 8,
-      "name_sv": "[UTKAST] Signatur-ingrediens 3"
+      "name_sv": "Röding"
     },
     {
-      "id": "stub_prot_sig_4",
-      "name": "[STUB] Signature Proteins 4",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST] Signatur-ingrediens 4"
-    },
-    {
-      "id": "stub_prot_sig_5",
-      "name": "[STUB] Signature Proteins 5",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST] Signatur-ingrediens 5"
-    },
-    {
-      "id": "stub_prot_sig_6",
-      "name": "[STUB] Signature Proteins 6",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST] Signatur-ingrediens 6"
-    },
-    {
-      "id": "stub_prot_sig_7",
-      "name": "[STUB] Signature Proteins 7",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST] Signatur-ingrediens 7"
-    },
-    {
-      "id": "stub_prot_sig_8",
-      "name": "[STUB] Signature Proteins 8",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST] Signatur-ingrediens 8"
-    },
-    {
-      "id": "stub_prot_bul_1",
-      "name": "[STUB] Bulk Proteins 1",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 10,
-      "name_sv": "[UTKAST] Bulk-ingrediens 1"
-    },
-    {
-      "id": "stub_prot_bul_2",
-      "name": "[STUB] Bulk Proteins 2",
+      "id": "haddock",
+      "name": "Haddock",
       "cat": "p",
       "grade": "bulk",
       "rating": 9,
-      "name_sv": "[UTKAST] Bulk-ingrediens 2"
+      "name_sv": "Kolja"
     },
     {
-      "id": "stub_prot_bul_3",
-      "name": "[STUB] Bulk Proteins 3",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST] Bulk-ingrediens 3"
-    },
-    {
-      "id": "stub_prot_bul_4",
-      "name": "[STUB] Bulk Proteins 4",
+      "id": "salmon",
+      "name": "Salmon",
       "cat": "p",
       "grade": "bulk",
       "rating": 7,
-      "name_sv": "[UTKAST] Bulk-ingrediens 4"
+      "name_sv": "Lax"
     },
     {
-      "id": "stub_prot_bul_5",
-      "name": "[STUB] Bulk Proteins 5",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST] Bulk-ingrediens 5"
-    },
-    {
-      "id": "stub_prot_bul_6",
-      "name": "[STUB] Bulk Proteins 6",
+      "id": "pork",
+      "name": "Pork",
       "cat": "p",
       "grade": "bulk",
       "rating": 5,
-      "name_sv": "[UTKAST] Bulk-ingrediens 6"
+      "name_sv": "Fläsk"
     },
     {
-      "id": "stub_prot_bul_7",
-      "name": "[STUB] Bulk Proteins 7",
+      "id": "beef",
+      "name": "Beef",
       "cat": "p",
       "grade": "bulk",
       "rating": 4,
-      "name_sv": "[UTKAST] Bulk-ingrediens 7"
+      "name_sv": "Nötkött"
     },
     {
-      "id": "stub_prot_bul_8",
-      "name": "[STUB] Bulk Proteins 8",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST] Bulk-ingrediens 8"
-    },
-    {
-      "id": "stub_prot_loc_1",
-      "name": "[STUB] Local Proteins 1",
-      "cat": "p",
-      "grade": "local",
-      "rating": 10,
-      "name_sv": "[UTKAST] Lokal-ingrediens 1"
-    },
-    {
-      "id": "stub_prot_loc_2",
-      "name": "[STUB] Local Proteins 2",
-      "cat": "p",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST] Lokal-ingrediens 2"
-    },
-    {
-      "id": "stub_prot_loc_3",
-      "name": "[STUB] Local Proteins 3",
-      "cat": "p",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "[UTKAST] Lokal-ingrediens 3"
-    },
-    {
-      "id": "stub_prot_loc_4",
-      "name": "[STUB] Local Proteins 4",
-      "cat": "p",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST] Lokal-ingrediens 4"
-    },
-    {
-      "id": "stub_prot_loc_5",
-      "name": "[STUB] Local Proteins 5",
-      "cat": "p",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST] Lokal-ingrediens 5"
-    },
-    {
-      "id": "stub_prot_loc_6",
-      "name": "[STUB] Local Proteins 6",
-      "cat": "p",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST] Lokal-ingrediens 6"
-    },
-    {
-      "id": "stub_prot_loc_7",
-      "name": "[STUB] Local Proteins 7",
-      "cat": "p",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST] Lokal-ingrediens 7"
-    },
-    {
-      "id": "stub_prot_loc_8",
-      "name": "[STUB] Local Proteins 8",
-      "cat": "p",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST] Lokal-ingrediens 8"
-    },
-    {
-      "id": "stub_veg_sig_1",
-      "name": "[STUB] Signature Vegetables 1",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 10,
-      "name_sv": "[UTKAST] Signatur-ingrediens 1"
-    },
-    {
-      "id": "stub_veg_sig_2",
-      "name": "[STUB] Signature Vegetables 2",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 9,
-      "name_sv": "[UTKAST] Signatur-ingrediens 2"
-    },
-    {
-      "id": "stub_veg_sig_3",
-      "name": "[STUB] Signature Vegetables 3",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST] Signatur-ingrediens 3"
-    },
-    {
-      "id": "stub_veg_sig_4",
-      "name": "[STUB] Signature Vegetables 4",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST] Signatur-ingrediens 4"
-    },
-    {
-      "id": "stub_veg_sig_5",
-      "name": "[STUB] Signature Vegetables 5",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST] Signatur-ingrediens 5"
-    },
-    {
-      "id": "stub_veg_sig_6",
-      "name": "[STUB] Signature Vegetables 6",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST] Signatur-ingrediens 6"
-    },
-    {
-      "id": "stub_veg_sig_7",
-      "name": "[STUB] Signature Vegetables 7",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST] Signatur-ingrediens 7"
-    },
-    {
-      "id": "stub_veg_sig_8",
-      "name": "[STUB] Signature Vegetables 8",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST] Signatur-ingrediens 8"
-    },
-    {
-      "id": "stub_veg_bul_1",
-      "name": "[STUB] Bulk Vegetables 1",
+      "id": "potatoes",
+      "name": "Potatoes",
       "cat": "v",
       "grade": "bulk",
       "rating": 10,
-      "name_sv": "[UTKAST] Bulk-ingrediens 1"
+      "name_sv": "Potatis"
     },
     {
-      "id": "stub_veg_bul_2",
-      "name": "[STUB] Bulk Vegetables 2",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST] Bulk-ingrediens 2"
-    },
-    {
-      "id": "stub_veg_bul_3",
-      "name": "[STUB] Bulk Vegetables 3",
+      "id": "carrots",
+      "name": "Carrots",
       "cat": "v",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "[UTKAST] Bulk-ingrediens 3"
+      "name_sv": "Morötter"
     },
     {
-      "id": "stub_veg_bul_4",
-      "name": "[STUB] Bulk Vegetables 4",
+      "id": "onions",
+      "name": "Onions",
       "cat": "v",
       "grade": "bulk",
       "rating": 7,
-      "name_sv": "[UTKAST] Bulk-ingrediens 4"
+      "name_sv": "Lök"
     },
     {
-      "id": "stub_veg_bul_5",
-      "name": "[STUB] Bulk Vegetables 5",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST] Bulk-ingrediens 5"
-    },
-    {
-      "id": "stub_veg_bul_6",
-      "name": "[STUB] Bulk Vegetables 6",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST] Bulk-ingrediens 6"
-    },
-    {
-      "id": "stub_veg_bul_7",
-      "name": "[STUB] Bulk Vegetables 7",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST] Bulk-ingrediens 7"
-    },
-    {
-      "id": "stub_veg_bul_8",
-      "name": "[STUB] Bulk Vegetables 8",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST] Bulk-ingrediens 8"
-    },
-    {
-      "id": "stub_veg_loc_1",
-      "name": "[STUB] Local Vegetables 1",
-      "cat": "v",
-      "grade": "local",
-      "rating": 10,
-      "name_sv": "[UTKAST] Lokal-ingrediens 1"
-    },
-    {
-      "id": "stub_veg_loc_2",
-      "name": "[STUB] Local Vegetables 2",
-      "cat": "v",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST] Lokal-ingrediens 2"
-    },
-    {
-      "id": "stub_veg_loc_3",
-      "name": "[STUB] Local Vegetables 3",
+      "id": "turnip",
+      "name": "Turnip",
       "cat": "v",
       "grade": "local",
       "rating": 8,
-      "name_sv": "[UTKAST] Lokal-ingrediens 3"
+      "name_sv": "Rova"
     },
     {
-      "id": "stub_veg_loc_4",
-      "name": "[STUB] Local Vegetables 4",
-      "cat": "v",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST] Lokal-ingrediens 4"
-    },
-    {
-      "id": "stub_veg_loc_5",
-      "name": "[STUB] Local Vegetables 5",
+      "id": "kale",
+      "name": "Kale",
       "cat": "v",
       "grade": "local",
       "rating": 6,
-      "name_sv": "[UTKAST] Lokal-ingrediens 5"
+      "name_sv": "Grönkål"
     },
     {
-      "id": "stub_veg_loc_6",
-      "name": "[STUB] Local Vegetables 6",
-      "cat": "v",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST] Lokal-ingrediens 6"
-    },
-    {
-      "id": "stub_veg_loc_7",
-      "name": "[STUB] Local Vegetables 7",
-      "cat": "v",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST] Lokal-ingrediens 7"
-    },
-    {
-      "id": "stub_veg_loc_8",
-      "name": "[STUB] Local Vegetables 8",
-      "cat": "v",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST] Lokal-ingrediens 8"
-    },
-    {
-      "id": "stub_grain_sig_1",
-      "name": "[STUB] Signature Grains 1",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 10,
-      "name_sv": "[UTKAST] Signatur-ingrediens 1"
-    },
-    {
-      "id": "stub_grain_sig_2",
-      "name": "[STUB] Signature Grains 2",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 9,
-      "name_sv": "[UTKAST] Signatur-ingrediens 2"
-    },
-    {
-      "id": "stub_grain_sig_3",
-      "name": "[STUB] Signature Grains 3",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST] Signatur-ingrediens 3"
-    },
-    {
-      "id": "stub_grain_sig_4",
-      "name": "[STUB] Signature Grains 4",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST] Signatur-ingrediens 4"
-    },
-    {
-      "id": "stub_grain_sig_5",
-      "name": "[STUB] Signature Grains 5",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST] Signatur-ingrediens 5"
-    },
-    {
-      "id": "stub_grain_sig_6",
-      "name": "[STUB] Signature Grains 6",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST] Signatur-ingrediens 6"
-    },
-    {
-      "id": "stub_grain_sig_7",
-      "name": "[STUB] Signature Grains 7",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST] Signatur-ingrediens 7"
-    },
-    {
-      "id": "stub_grain_sig_8",
-      "name": "[STUB] Signature Grains 8",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST] Signatur-ingrediens 8"
-    },
-    {
-      "id": "stub_grain_bul_1",
-      "name": "[STUB] Bulk Grains 1",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 10,
-      "name_sv": "[UTKAST] Bulk-ingrediens 1"
-    },
-    {
-      "id": "stub_grain_bul_2",
-      "name": "[STUB] Bulk Grains 2",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST] Bulk-ingrediens 2"
-    },
-    {
-      "id": "stub_grain_bul_3",
-      "name": "[STUB] Bulk Grains 3",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST] Bulk-ingrediens 3"
-    },
-    {
-      "id": "stub_grain_bul_4",
-      "name": "[STUB] Bulk Grains 4",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST] Bulk-ingrediens 4"
-    },
-    {
-      "id": "stub_grain_bul_5",
-      "name": "[STUB] Bulk Grains 5",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST] Bulk-ingrediens 5"
-    },
-    {
-      "id": "stub_grain_bul_6",
-      "name": "[STUB] Bulk Grains 6",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST] Bulk-ingrediens 6"
-    },
-    {
-      "id": "stub_grain_bul_7",
-      "name": "[STUB] Bulk Grains 7",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST] Bulk-ingrediens 7"
-    },
-    {
-      "id": "stub_grain_bul_8",
-      "name": "[STUB] Bulk Grains 8",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST] Bulk-ingrediens 8"
-    },
-    {
-      "id": "stub_grain_loc_1",
-      "name": "[STUB] Local Grains 1",
-      "cat": "g",
-      "grade": "local",
-      "rating": 10,
-      "name_sv": "[UTKAST] Lokal-ingrediens 1"
-    },
-    {
-      "id": "stub_grain_loc_2",
-      "name": "[STUB] Local Grains 2",
-      "cat": "g",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST] Lokal-ingrediens 2"
-    },
-    {
-      "id": "stub_grain_loc_3",
-      "name": "[STUB] Local Grains 3",
+      "id": "rye",
+      "name": "Rye",
       "cat": "g",
       "grade": "local",
       "rating": 8,
-      "name_sv": "[UTKAST] Lokal-ingrediens 3"
+      "name_sv": "Råg"
     },
     {
-      "id": "stub_grain_loc_4",
-      "name": "[STUB] Local Grains 4",
+      "id": "wheat",
+      "name": "Wheat",
       "cat": "g",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST] Lokal-ingrediens 4"
-    },
-    {
-      "id": "stub_grain_loc_5",
-      "name": "[STUB] Local Grains 5",
-      "cat": "g",
-      "grade": "local",
+      "grade": "bulk",
       "rating": 6,
-      "name_sv": "[UTKAST] Lokal-ingrediens 5"
+      "name_sv": "Vete"
     },
     {
-      "id": "stub_grain_loc_6",
-      "name": "[STUB] Local Grains 6",
-      "cat": "g",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST] Lokal-ingrediens 6"
-    },
-    {
-      "id": "stub_grain_loc_7",
-      "name": "[STUB] Local Grains 7",
-      "cat": "g",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST] Lokal-ingrediens 7"
-    },
-    {
-      "id": "stub_grain_loc_8",
-      "name": "[STUB] Local Grains 8",
-      "cat": "g",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST] Lokal-ingrediens 8"
-    },
-    {
-      "id": "stub_dairy_sig_1",
-      "name": "[STUB] Signature Dairy 1",
+      "id": "skyr",
+      "name": "Skyr",
       "cat": "d",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "[UTKAST] Signatur-ingrediens 1"
+      "name_sv": "Skyr"
     },
     {
-      "id": "stub_dairy_sig_2",
-      "name": "[STUB] Signature Dairy 2",
-      "cat": "d",
-      "grade": "signature",
-      "rating": 9,
-      "name_sv": "[UTKAST] Signatur-ingrediens 2"
-    },
-    {
-      "id": "stub_dairy_sig_3",
-      "name": "[STUB] Signature Dairy 3",
-      "cat": "d",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST] Signatur-ingrediens 3"
-    },
-    {
-      "id": "stub_dairy_sig_4",
-      "name": "[STUB] Signature Dairy 4",
-      "cat": "d",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST] Signatur-ingrediens 4"
-    },
-    {
-      "id": "stub_dairy_sig_5",
-      "name": "[STUB] Signature Dairy 5",
-      "cat": "d",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST] Signatur-ingrediens 5"
-    },
-    {
-      "id": "stub_dairy_sig_6",
-      "name": "[STUB] Signature Dairy 6",
-      "cat": "d",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST] Signatur-ingrediens 6"
-    },
-    {
-      "id": "stub_dairy_sig_7",
-      "name": "[STUB] Signature Dairy 7",
-      "cat": "d",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST] Signatur-ingrediens 7"
-    },
-    {
-      "id": "stub_dairy_sig_8",
-      "name": "[STUB] Signature Dairy 8",
-      "cat": "d",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST] Signatur-ingrediens 8"
-    },
-    {
-      "id": "stub_dairy_bul_1",
-      "name": "[STUB] Bulk Dairy 1",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 10,
-      "name_sv": "[UTKAST] Bulk-ingrediens 1"
-    },
-    {
-      "id": "stub_dairy_bul_2",
-      "name": "[STUB] Bulk Dairy 2",
+      "id": "butter",
+      "name": "Butter",
       "cat": "d",
       "grade": "bulk",
       "rating": 9,
-      "name_sv": "[UTKAST] Bulk-ingrediens 2"
+      "name_sv": "Smör"
     },
     {
-      "id": "stub_dairy_bul_3",
-      "name": "[STUB] Bulk Dairy 3",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST] Bulk-ingrediens 3"
-    },
-    {
-      "id": "stub_dairy_bul_4",
-      "name": "[STUB] Bulk Dairy 4",
+      "id": "cream",
+      "name": "Cream",
       "cat": "d",
       "grade": "bulk",
       "rating": 7,
-      "name_sv": "[UTKAST] Bulk-ingrediens 4"
+      "name_sv": "Grädde"
     },
     {
-      "id": "stub_dairy_bul_5",
-      "name": "[STUB] Bulk Dairy 5",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST] Bulk-ingrediens 5"
-    },
-    {
-      "id": "stub_dairy_bul_6",
-      "name": "[STUB] Bulk Dairy 6",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST] Bulk-ingrediens 6"
-    },
-    {
-      "id": "stub_dairy_bul_7",
-      "name": "[STUB] Bulk Dairy 7",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST] Bulk-ingrediens 7"
-    },
-    {
-      "id": "stub_dairy_bul_8",
-      "name": "[STUB] Bulk Dairy 8",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST] Bulk-ingrediens 8"
-    },
-    {
-      "id": "stub_dairy_loc_1",
-      "name": "[STUB] Local Dairy 1",
-      "cat": "d",
-      "grade": "local",
-      "rating": 10,
-      "name_sv": "[UTKAST] Lokal-ingrediens 1"
-    },
-    {
-      "id": "stub_dairy_loc_2",
-      "name": "[STUB] Local Dairy 2",
-      "cat": "d",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST] Lokal-ingrediens 2"
-    },
-    {
-      "id": "stub_dairy_loc_3",
-      "name": "[STUB] Local Dairy 3",
-      "cat": "d",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "[UTKAST] Lokal-ingrediens 3"
-    },
-    {
-      "id": "stub_dairy_loc_4",
-      "name": "[STUB] Local Dairy 4",
-      "cat": "d",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST] Lokal-ingrediens 4"
-    },
-    {
-      "id": "stub_dairy_loc_5",
-      "name": "[STUB] Local Dairy 5",
-      "cat": "d",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST] Lokal-ingrediens 5"
-    },
-    {
-      "id": "stub_dairy_loc_6",
-      "name": "[STUB] Local Dairy 6",
-      "cat": "d",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST] Lokal-ingrediens 6"
-    },
-    {
-      "id": "stub_dairy_loc_7",
-      "name": "[STUB] Local Dairy 7",
-      "cat": "d",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST] Lokal-ingrediens 7"
-    },
-    {
-      "id": "stub_dairy_loc_8",
-      "name": "[STUB] Local Dairy 8",
-      "cat": "d",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST] Lokal-ingrediens 8"
-    },
-    {
-      "id": "stub_spice_sig_1",
-      "name": "[STUB] Signature Spices 1",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 10,
-      "name_sv": "[UTKAST] Signatur-ingrediens 1"
-    },
-    {
-      "id": "stub_spice_sig_2",
-      "name": "[STUB] Signature Spices 2",
+      "id": "angelica",
+      "name": "Angelica",
       "cat": "s",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "[UTKAST] Signatur-ingrediens 2"
+      "name_sv": "Angelika"
     },
     {
-      "id": "stub_spice_sig_3",
-      "name": "[STUB] Signature Spices 3",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST] Signatur-ingrediens 3"
-    },
-    {
-      "id": "stub_spice_sig_4",
-      "name": "[STUB] Signature Spices 4",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST] Signatur-ingrediens 4"
-    },
-    {
-      "id": "stub_spice_sig_5",
-      "name": "[STUB] Signature Spices 5",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST] Signatur-ingrediens 5"
-    },
-    {
-      "id": "stub_spice_sig_6",
-      "name": "[STUB] Signature Spices 6",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST] Signatur-ingrediens 6"
-    },
-    {
-      "id": "stub_spice_sig_7",
-      "name": "[STUB] Signature Spices 7",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST] Signatur-ingrediens 7"
-    },
-    {
-      "id": "stub_spice_sig_8",
-      "name": "[STUB] Signature Spices 8",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST] Signatur-ingrediens 8"
-    },
-    {
-      "id": "stub_spice_bul_1",
-      "name": "[STUB] Bulk Spices 1",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 10,
-      "name_sv": "[UTKAST] Bulk-ingrediens 1"
-    },
-    {
-      "id": "stub_spice_bul_2",
-      "name": "[STUB] Bulk Spices 2",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST] Bulk-ingrediens 2"
-    },
-    {
-      "id": "stub_spice_bul_3",
-      "name": "[STUB] Bulk Spices 3",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST] Bulk-ingrediens 3"
-    },
-    {
-      "id": "stub_spice_bul_4",
-      "name": "[STUB] Bulk Spices 4",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST] Bulk-ingrediens 4"
-    },
-    {
-      "id": "stub_spice_bul_5",
-      "name": "[STUB] Bulk Spices 5",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST] Bulk-ingrediens 5"
-    },
-    {
-      "id": "stub_spice_bul_6",
-      "name": "[STUB] Bulk Spices 6",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST] Bulk-ingrediens 6"
-    },
-    {
-      "id": "stub_spice_bul_7",
-      "name": "[STUB] Bulk Spices 7",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST] Bulk-ingrediens 7"
-    },
-    {
-      "id": "stub_spice_bul_8",
-      "name": "[STUB] Bulk Spices 8",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST] Bulk-ingrediens 8"
-    },
-    {
-      "id": "stub_spice_loc_1",
-      "name": "[STUB] Local Spices 1",
-      "cat": "s",
-      "grade": "local",
-      "rating": 10,
-      "name_sv": "[UTKAST] Lokal-ingrediens 1"
-    },
-    {
-      "id": "stub_spice_loc_2",
-      "name": "[STUB] Local Spices 2",
-      "cat": "s",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST] Lokal-ingrediens 2"
-    },
-    {
-      "id": "stub_spice_loc_3",
-      "name": "[STUB] Local Spices 3",
+      "id": "caraway",
+      "name": "Caraway",
       "cat": "s",
       "grade": "local",
       "rating": 8,
-      "name_sv": "[UTKAST] Lokal-ingrediens 3"
+      "name_sv": "Kummin"
     },
     {
-      "id": "stub_spice_loc_4",
-      "name": "[STUB] Local Spices 4",
+      "id": "wild_thyme",
+      "name": "Wild Thyme",
       "cat": "s",
       "grade": "local",
       "rating": 7,
-      "name_sv": "[UTKAST] Lokal-ingrediens 4"
+      "name_sv": "Timjan"
     },
     {
-      "id": "stub_spice_loc_5",
-      "name": "[STUB] Local Spices 5",
+      "id": "white_pepper",
+      "name": "White Pepper",
       "cat": "s",
-      "grade": "local",
+      "grade": "bulk",
       "rating": 6,
-      "name_sv": "[UTKAST] Lokal-ingrediens 5"
-    },
-    {
-      "id": "stub_spice_loc_6",
-      "name": "[STUB] Local Spices 6",
-      "cat": "s",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST] Lokal-ingrediens 6"
-    },
-    {
-      "id": "stub_spice_loc_7",
-      "name": "[STUB] Local Spices 7",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST] Lokal-ingrediens 7"
-    },
-    {
-      "id": "stub_spice_loc_8",
-      "name": "[STUB] Local Spices 8",
-      "cat": "s",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST] Lokal-ingrediens 8"
+      "name_sv": "Vitpeppar"
     }
   ],
   "indian": [
@@ -97394,7 +95866,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["veal", "venison", "chicken", "rabbit", "goat", "turkey", "beef", "lamb", "fish", "duck", "pork"];
+const AI_GENERIC_PROTEIN_IDS = ["lamb", "turkey", "beef", "rabbit", "venison", "duck", "pork", "veal", "goat", "fish", "chicken"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -120165,7 +118637,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "423";
+const PANEL_VERSION = "424";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
