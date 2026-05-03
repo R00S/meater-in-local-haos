@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 May 2026, 19:18 CET
+ * AUTO-GENERATED: 03 May 2026, 19:41 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 03 May 2026, 19:18 CET
+// Last generated: 03 May 2026, 19:41 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -38604,1084 +38604,452 @@ const AI_CUISINE_INGREDIENTS = {
   ],
   "finnish": [
     {
-      "id": "stub_prot_sig_1",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_sig_2",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_sig_3",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_sig_4",
-      "name": "[STUB]",
+      "id": "lohi_fin",
+      "name": "Salmon (lohi)",
       "cat": "p",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Lax (lohi)"
     },
     {
-      "id": "stub_prot_sig_5",
-      "name": "[STUB]",
+      "id": "poro_fin",
+      "name": "Reindeer (poro)",
       "cat": "p",
       "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
+      "rating": 9,
+      "name_sv": "Ren (poro)"
     },
     {
-      "id": "stub_prot_sig_6",
-      "name": "[STUB]",
+      "id": "silakka_fin",
+      "name": "Baltic herring (silakka)",
       "cat": "p",
       "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
+      "rating": 8,
+      "name_sv": "Strömming (silakka)"
     },
     {
-      "id": "stub_prot_sig_7",
-      "name": "[STUB]",
+      "id": "muikku_fin",
+      "name": "Vendace (muikku)",
       "cat": "p",
       "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
+      "rating": 8,
+      "name_sv": "Siklöja (muikku)"
     },
     {
-      "id": "stub_prot_sig_8",
-      "name": "[STUB]",
+      "id": "hirvi_fin",
+      "name": "Elk (hirvi)",
       "cat": "p",
       "grade": "signature",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Älg (hirvi)"
     },
     {
-      "id": "stub_prot_sig_9",
-      "name": "[STUB]",
+      "id": "kana_bulk",
+      "name": "Chicken (kana)",
       "cat": "p",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Kyckling (kana)"
+    },
+    {
+      "id": "sianliha_bulk",
+      "name": "Pork (sianliha)",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Fläsk (sianliha)"
+    },
+    {
+      "id": "nauta_bulk",
+      "name": "Beef (naudanliha)",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "Nötkött (naudanliha)"
+    },
+    {
+      "id": "poro_local",
+      "name": "Reindeer (poro)",
+      "cat": "p",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "Ren (poro)"
+    },
+    {
+      "id": "hirvi_local",
+      "name": "Elk (hirvi)",
+      "cat": "p",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "Älg (hirvi)"
+    },
+    {
+      "id": "silakka_local",
+      "name": "Baltic herring (silakka)",
+      "cat": "p",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "Strömming (silakka)"
+    },
+    {
+      "id": "kirjolohi_local",
+      "name": "Rainbow trout (kirjolohi)",
+      "cat": "p",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Regnbågslax (kirjolohi)"
+    },
+    {
+      "id": "muikku_local",
+      "name": "Vendace (muikku)",
+      "cat": "p",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Siklöja (muikku)"
+    },
+    {
+      "id": "peruna_sig",
+      "name": "Potato (peruna)",
+      "cat": "v",
       "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_1",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_2",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_3",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_4",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_5",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_6",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_7",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_8",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_9",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_1",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_2",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_3",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Potatis (peruna)"
     },
     {
-      "id": "stub_prot_loc_4",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
+      "id": "lanttu_sig",
+      "name": "Swede / rutabaga (lanttu)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Kålrot (lanttu)"
+    },
+    {
+      "id": "porkkana_sig",
+      "name": "Carrot (porkkana)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Morot (porkkana)"
+    },
+    {
+      "id": "punajuuri_sig",
+      "name": "Beetroot (punajuuri)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Rödbeta (punajuuri)"
+    },
+    {
+      "id": "peruna_bulk",
+      "name": "Potato (peruna)",
+      "cat": "v",
+      "grade": "bulk",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Potatis (peruna)"
     },
     {
-      "id": "stub_prot_loc_5",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
+      "id": "tomaatti_bulk",
+      "name": "Tomato (tomaatti)",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Tomat (tomaatti)"
     },
     {
-      "id": "stub_prot_loc_6",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
+      "id": "porkkana_bulk",
+      "name": "Carrot (porkkana)",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Morot (porkkana)"
     },
     {
-      "id": "stub_prot_loc_7",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_8",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
+      "id": "sipuli_bulk",
+      "name": "Onion (sipuli)",
+      "cat": "v",
+      "grade": "bulk",
       "rating": 6,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Lök (sipuli)"
     },
     {
-      "id": "stub_prot_loc_9",
-      "name": "[STUB]",
-      "cat": "p",
+      "id": "kantarelli_local",
+      "name": "Chanterelle (kantarelli)",
+      "cat": "v",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "Kantarell (kantarelli)"
+    },
+    {
+      "id": "peruna_local",
+      "name": "Potato (peruna)",
+      "cat": "v",
       "grade": "local",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Potatis (peruna)"
     },
     {
-      "id": "stub_veg_sig_1",
-      "name": "[STUB]",
+      "id": "lanttu_local",
+      "name": "Swede / rutabaga (lanttu)",
       "cat": "v",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Kålrot (lanttu)"
+    },
+    {
+      "id": "herkkutatti_local",
+      "name": "Porcini / cep (herkkutatti)",
+      "cat": "v",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Stensopp (herkkutatti)"
+    },
+    {
+      "id": "ruis_sig",
+      "name": "Rye (ruis)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Råg (ruis)"
+    },
+    {
+      "id": "kaura_sig",
+      "name": "Oats (kaura)",
+      "cat": "s",
       "grade": "signature",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Havre (kaura)"
     },
     {
-      "id": "stub_veg_sig_2",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_3",
-      "name": "[STUB]",
-      "cat": "v",
+      "id": "ohra_sig",
+      "name": "Barley (ohra)",
+      "cat": "s",
       "grade": "signature",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Korn (ohra)"
     },
     {
-      "id": "stub_veg_sig_4",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_5",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_6",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_7",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_8",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_9",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_1",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_2",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_3",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_4",
-      "name": "[STUB]",
-      "cat": "v",
+      "id": "vehna_bulk",
+      "name": "Wheat (vehnä)",
+      "cat": "s",
       "grade": "bulk",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Vete (vehnä)"
     },
     {
-      "id": "stub_veg_bul_5",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_6",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_7",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_8",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_9",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_1",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_2",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_3",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_4",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_5",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_6",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_7",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_8",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_9",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_3",
-      "name": "[STUB]",
+      "id": "ruis_bulk",
+      "name": "Rye (ruis)",
       "cat": "s",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Råg (ruis)"
     },
     {
-      "id": "stub_grain_bul_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_5",
-      "name": "[STUB]",
+      "id": "kaura_bulk",
+      "name": "Oats (kaura)",
       "cat": "s",
       "grade": "bulk",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Havre (kaura)"
     },
     {
-      "id": "stub_grain_bul_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_7",
-      "name": "[STUB]",
+      "id": "riisi_bulk",
+      "name": "Rice (riisi)",
       "cat": "s",
       "grade": "bulk",
       "rating": 6,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Ris (riisi)"
     },
     {
-      "id": "stub_grain_bul_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_1",
-      "name": "[STUB]",
+      "id": "kaura_local",
+      "name": "Oats (kaura)",
       "cat": "s",
       "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
+      "rating": 9,
+      "name_sv": "Havre (kaura)"
     },
     {
-      "id": "stub_grain_loc_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_3",
-      "name": "[STUB]",
+      "id": "ohra_local",
+      "name": "Barley (ohra)",
       "cat": "s",
       "grade": "local",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Korn (ohra)"
     },
     {
-      "id": "stub_grain_loc_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_8",
-      "name": "[STUB]",
+      "id": "ruis_local",
+      "name": "Rye (ruis)",
       "cat": "s",
       "grade": "local",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Råg (ruis)"
     },
     {
-      "id": "stub_grain_loc_9",
-      "name": "[STUB]",
+      "id": "juustoleipa_sig",
+      "name": "Bread cheese (juustoleipä)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Juustoleipä (grillost)"
+    },
+    {
+      "id": "viili_sig",
+      "name": "Viili (ropy fermented milk)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Viili (finsk filmjölk)"
+    },
+    {
+      "id": "piima_sig",
+      "name": "Buttermilk (piimä)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Kärnmjölk (piimä)"
+    },
+    {
+      "id": "maito_bulk",
+      "name": "Milk (maito)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Mjölk (maito)"
+    },
+    {
+      "id": "juusto_bulk",
+      "name": "Cheese (juusto)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "Ost (juusto)"
+    },
+    {
+      "id": "voi_bulk",
+      "name": "Butter (voi)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Smör (voi)"
+    },
+    {
+      "id": "juustoleipa_local",
+      "name": "Bread cheese (juustoleipä)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "Juustoleipä (grillost)"
+    },
+    {
+      "id": "viili_local",
+      "name": "Viili (ropy fermented milk)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "Viili (finsk filmjölk)"
+    },
+    {
+      "id": "ayrshire_maito",
+      "name": "Finnish Ayrshire milk",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Finsk ayrshiremjölk"
+    },
+    {
+      "id": "tilli_sig",
+      "name": "Dill (tilli)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Dill (tilli)"
+    },
+    {
+      "id": "kumina_sig",
+      "name": "Caraway (kumina)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Kummin (kumina)"
+    },
+    {
+      "id": "maustepippuri_sig",
+      "name": "Allspice (maustepippuri)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Kryddpeppar (maustepippuri)"
+    },
+    {
+      "id": "valkopippuri_sig",
+      "name": "White pepper (valkopippuri)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Vitpeppar (valkopippuri)"
+    },
+    {
+      "id": "kataja_sig",
+      "name": "Juniper berry (katajanmarja)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Enbär (katajanmarja)"
+    },
+    {
+      "id": "suola_bulk",
+      "name": "Salt (suola)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Salt (suola)"
+    },
+    {
+      "id": "tilli_bulk",
+      "name": "Dill (tilli)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "Dill (tilli)"
+    },
+    {
+      "id": "valkopippuri_bulk",
+      "name": "White pepper (valkopippuri)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Vitpeppar (valkopippuri)"
+    },
+    {
+      "id": "kardemumma_bulk",
+      "name": "Cardamom (kardemumma)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Kardemumma (kardemumma)"
+    },
+    {
+      "id": "katajanmarja_local",
+      "name": "Juniper berry (katajanmarja)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "Enbär (katajanmarja)"
+    },
+    {
+      "id": "puolukka_local",
+      "name": "Lingonberry (puolukka)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "Lingon (puolukka)"
+    },
+    {
+      "id": "tyrni_local",
+      "name": "Sea buckthorn (tyrni)",
       "cat": "s",
       "grade": "local",
       "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Havtorn (tyrni)"
     }
   ],
   "french": [
@@ -109173,8 +108541,8 @@ const AI_CUISINE_REGIONS = [
         "name": "Finnish",
         "name_sv": "Finskt",
         "icon": "🇫🇮",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+        "description": "Finnish cuisine is shaped by forests, lakes, and the Baltic Sea. Rye bread (ruisleipä), salmon soup (lohikeitto), and sautéed reindeer (poronkäristys) define its identity — anchored by the world's highest rye consumption per capita, wild chanterelles, and a dairy culture among Europe's most intensive.",
+        "description_sv": "Finskt kök formas av skogar, sjöar och Östersjön. Rågbröd (ruisleipä), laxsoppa (lohikeitto) och renskav (poronkäristys) definierar dess identitet — förankrad i världens högsta konsumtion av råg per capita, vilda kantareller och en mejerikultur bland Europas mest intensiva."
       },
       {
         "id": "icelandic",
@@ -109343,8 +108711,8 @@ const AI_CUISINE_DESCRIPTIONS = {
     "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "finnish": {
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+    "description": "Finnish cuisine is shaped by forests, lakes, and the Baltic Sea. Rye bread (ruisleipä), salmon soup (lohikeitto), and sautéed reindeer (poronkäristys) define its identity — anchored by the world's highest rye consumption per capita, wild chanterelles, and a dairy culture among Europe's most intensive.",
+    "description_sv": "Finskt kök formas av skogar, sjöar och Östersjön. Rågbröd (ruisleipä), laxsoppa (lohikeitto) och renskav (poronkäristys) definierar dess identitet — förankrad i världens högsta konsumtion av råg per capita, vilda kantareller och en mejerikultur bland Europas mest intensiva."
   },
   "french": {
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
@@ -109668,7 +109036,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["rabbit", "venison", "lamb", "turkey", "pork", "veal", "chicken", "beef", "goat", "duck", "fish"];
+const AI_GENERIC_PROTEIN_IDS = ["goat", "lamb", "chicken", "fish", "veal", "venison", "pork", "rabbit", "duck", "turkey", "beef"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -132455,7 +131823,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "443";
+const PANEL_VERSION = "445";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

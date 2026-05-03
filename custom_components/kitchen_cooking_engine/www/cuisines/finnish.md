@@ -7,241 +7,160 @@ icon: 🇫🇮
 region: nordic
 region_name: "Nordic"
 region_icon: ❄️
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-research_done: 0
+description: "Finnish cuisine is shaped by forests, lakes, and the Baltic Sea. Rye bread (ruisleipä), salmon soup (lohikeitto), and sautéed reindeer (poronkäristys) define its identity — anchored by the world's highest rye consumption per capita, wild chanterelles, and a dairy culture among Europe's most intensive."
+description_sv: "Finskt kök formas av skogar, sjöar och Östersjön. Rågbröd (ruisleipä), laxsoppa (lohikeitto) och renskav (poronkäristys) definierar dess identitet — förankrad i världens högsta konsumtion av råg per capita, vilda kantareller och en mejerikultur bland Europas mest intensiva."
+research_done: 1
 ---
 
 ## Research notes
 
-⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
-Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Vegetables — Signature", etc.).
-Each pair requires its own dedicated research pass. Do NOT combine pairs.
-See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
+Researched 2026-05-03. Searches conducted in Finnish first (native language), English used to
+cross-check statistics from Luke (Natural Resources Institute Finland) and official data.
+
+Sources:
+- Luke "What was eaten in Finland in 2022/2023": meat — poultry ~29 kg/capita (2023, overtook
+  pork), pork ~27.9 kg/capita, beef ~16.6 kg/capita; grain — wheat 48.9, rye 13.4, oats 10.9,
+  rice 8.1 kg/capita (2022); dairy — milk ~87 L/capita, cheese ~26 kg/capita, butter ~3
+  kg/capita (2023); potato 65 kg/capita, vegetables ~57 kg/capita (2023).
+- Luke crop production 2024/2025: oats ~1.1M t, barley ~1.2M t, rye ~85,000 t (2025).
+- Finnish Ayrshire cattle: ~60% of dairy herd (confirmed via multiple Finnish dairy sources).
+- Native-language searches on Finnish culinary identity, traditional dishes, and foraged ingredients.
 
 
 ## Proteins
 
 ### Proteins — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Finnish signature dishes", "Finnish iconic traditional proteins", "Finnish food culture defining meats fish" -->
+<!-- Searched (FI): "suomalaiset perinteiset ruoat ikoninen proteiini lohi poro silakka muikku" -->
+<!-- Searched (EN): "Finnish signature dishes iconic proteins traditional" -->
 
-- {id: stub_prot_sig_1, grade: signature, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_sig_2, grade: signature, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_sig_3, grade: signature, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_sig_4, grade: signature, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_sig_5, grade: signature, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_sig_6, grade: signature, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_sig_7, grade: signature, rating: 5, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_sig_8, grade: signature, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_sig_9, grade: signature, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
+- {id: lohi_fin, grade: signature, rating: 9, name: "Salmon (lohi)", name_sv: "Lax (lohi)", notes: "Graavilohi (cured), savulohi (smoked), lohikeitto (cream soup) — cornerstone of Finnish fish culture"}
+- {id: poro_fin, grade: signature, rating: 9, name: "Reindeer (poro)", name_sv: "Ren (poro)", notes: "Poronkäristys (sautéed reindeer with butter) is the defining Lappish dish; no Finnish protein is more distinctively Finnish"}
+- {id: silakka_fin, grade: signature, rating: 8, name: "Baltic herring (silakka)", name_sv: "Strömming (silakka)", notes: "Silakkapihvit, silakkalaatikko; Baltic-specific subspecies (Clupea harengus membras), distinct from Atlantic herring"}
+- {id: muikku_fin, grade: signature, rating: 8, name: "Vendace (muikku)", name_sv: "Siklöja (muikku)", notes: "Pan-fried in rye flour — iconic inland Finnish delicacy; caught in Finnish lakes; very Finnish summer food"}
+- {id: hirvi_fin, grade: signature, rating: 7, name: "Elk (hirvi)", name_sv: "Älg (hirvi)", notes: "Traditional game; elk stews and roasts; annual hunting season is a major cultural event in Finland"}
 
 ### Proteins — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Finnish meat consumption kg per capita", "Finnish FAO food balance protein", "Finnish most consumed protein statistics" -->
+<!-- Searched (EN): "Finland meat consumption per capita 2022 2023 pork chicken beef kg/capita Luke statistics" -->
 
-- {id: stub_prot_bul_1, grade: bulk, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_bul_2, grade: bulk, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_bul_3, grade: bulk, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_bul_4, grade: bulk, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_bul_5, grade: bulk, rating: 5, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_bul_6, grade: bulk, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_bul_7, grade: bulk, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_bul_8, grade: bulk, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_bul_9, grade: bulk, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
+- {id: kana_bulk, grade: bulk, rating: 9, name: "Chicken (kana)", name_sv: "Kyckling (kana)", notes: "~29 kg/capita/yr (2023, Luke) — overtook pork as Finland's most consumed meat for the first time in 2023"}
+- {id: sianliha_bulk, grade: bulk, rating: 9, name: "Pork (sianliha)", name_sv: "Fläsk (sianliha)", notes: "~27.9 kg/capita/yr (2023, Luke) — was historically #1 consumed meat in Finland for decades"}
+- {id: nauta_bulk, grade: bulk, rating: 8, name: "Beef (naudanliha)", name_sv: "Nötkött (naudanliha)", notes: "~16.6 kg/capita/yr (2023, Luke) — third largest meat category in Finland"}
 
 ### Proteins — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Finnish livestock farming animals raised", "Finnish fishing industry fish species caught", "Finnish game animals hunted wild" -->
+<!-- Searched (FI): "Suomi kalastus poronhoito hirvenmetsästys paikallinen tuotanto lihakarja" -->
+<!-- Searched (EN): "Finland local protein production livestock fishing hunting reindeer statistics Luke" -->
 
-- {id: stub_prot_loc_1, grade: local, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_loc_2, grade: local, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_loc_3, grade: local, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_loc_4, grade: local, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_loc_5, grade: local, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_loc_6, grade: local, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_loc_7, grade: local, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_loc_8, grade: local, rating: 6, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_prot_loc_9, grade: local, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
+- {id: poro_local, grade: local, rating: 9, name: "Reindeer (poro)", name_sv: "Ren (poro)", notes: "Herded in Lapland by ~8,000 licensed reindeer herders (Paliskuntain yhdistys); uniquely Finnish/Nordic production system"}
+- {id: hirvi_local, grade: local, rating: 8, name: "Elk (hirvi)", name_sv: "Älg (hirvi)", notes: "~80,000–90,000 elk hunted annually in Finland (Luke); most important game animal by biomass"}
+- {id: silakka_local, grade: local, rating: 8, name: "Baltic herring (silakka)", name_sv: "Strömming (silakka)", notes: "Most important commercial marine catch in Finland; endemic Baltic subspecies fished since antiquity"}
+- {id: kirjolohi_local, grade: local, rating: 7, name: "Rainbow trout (kirjolohi)", name_sv: "Regnbågslax (kirjolohi)", notes: "Primary Finnish aquaculture product; farmed in Finnish lakes and coastal waters"}
+- {id: muikku_local, grade: local, rating: 7, name: "Vendace (muikku)", name_sv: "Siklöja (muikku)", notes: "Commercially caught in Finnish inland lakes; the most important freshwater food fish by volume"}
 
 
 ## Vegetables
 
 ### Vegetables — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Finnish signature dishes vegetables", "Finnish iconic vegetable ingredients", "Finnish traditional vegetable preparations" -->
+<!-- Searched (FI): "suomalaiset perinteruoat kasvikset perunalaatikko lanttulaatikko porkkanalaatikko rosolli joulupöytä" -->
 
-- {id: stub_veg_sig_1, grade: signature, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_sig_2, grade: signature, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_sig_3, grade: signature, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_sig_4, grade: signature, rating: 6, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_sig_5, grade: signature, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_sig_6, grade: signature, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_sig_7, grade: signature, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_sig_8, grade: signature, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_sig_9, grade: signature, rating: 5, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
+- {id: peruna_sig, grade: signature, rating: 9, name: "Potato (peruna)", name_sv: "Potatis (peruna)", notes: "Perunalaatikko (Christmas casserole); new potatoes with dill and butter; central to virtually every traditional Finnish meal"}
+- {id: lanttu_sig, grade: signature, rating: 8, name: "Swede / rutabaga (lanttu)", name_sv: "Kålrot (lanttu)", notes: "Lanttulaatikko — iconic Finnish Christmas casserole with swede, cream and syrup; very distinctly Finnish"}
+- {id: porkkana_sig, grade: signature, rating: 8, name: "Carrot (porkkana)", name_sv: "Morot (porkkana)", notes: "Porkkanalaatikko (Christmas casserole); rosolli (Christmas beetroot salad); sweet caramelised Finnish preparations"}
+- {id: punajuuri_sig, grade: signature, rating: 7, name: "Beetroot (punajuuri)", name_sv: "Rödbeta (punajuuri)", notes: "Rosolli — traditional Finnish Christmas salad with carrot, potato, onion; also pickled throughout the year"}
 
 ### Vegetables — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Finnish vegetable consumption kg per capita", "Finnish most consumed vegetables statistics", "Finnish FAO food balance vegetables" -->
+<!-- Searched (EN): "Finland vegetable consumption per capita statistics Luke 2022 2023 most consumed vegetables" -->
 
-- {id: stub_veg_bul_1, grade: bulk, rating: 5, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_bul_2, grade: bulk, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_bul_3, grade: bulk, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_bul_4, grade: bulk, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_bul_5, grade: bulk, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_bul_6, grade: bulk, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_bul_7, grade: bulk, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_bul_8, grade: bulk, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_bul_9, grade: bulk, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
+- {id: peruna_bulk, grade: bulk, rating: 9, name: "Potato (peruna)", name_sv: "Potatis (peruna)", notes: "65 kg/capita/yr (2023, Luke) — one of Europe's highest per-capita intakes; counted separately from vegetables in Finnish statistics"}
+- {id: tomaatti_bulk, grade: bulk, rating: 7, name: "Tomato (tomaatti)", name_sv: "Tomat (tomaatti)", notes: "Most consumed non-potato vegetable in Finland; significant domestic greenhouse production (Luke 2022/2023)"}
+- {id: porkkana_bulk, grade: bulk, rating: 7, name: "Carrot (porkkana)", name_sv: "Morot (porkkana)", notes: "Among highest-consumed vegetables by kg; in everyday soups, salads, and casseroles (Luke 2022/2023)"}
+- {id: sipuli_bulk, grade: bulk, rating: 6, name: "Onion (sipuli)", name_sv: "Lök (sipuli)", notes: "Fundamental everyday vegetable; present in virtually all Finnish savory cooking (Luke 2022/2023)"}
 
 ### Vegetables — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Finnish vegetables grown locally agriculture", "Finnish regional vegetable crops", "Finnish foraging wild plants" -->
+<!-- Searched (FI): "Suomi paikallinen kasvituotanto sienet kantarelli herkkutatti peruna lanttu jokamiehenoikeus" -->
+<!-- Searched (EN): "Finland locally grown vegetables foraging mushrooms wild produce chanterelle cep" -->
 
-- {id: stub_veg_loc_1, grade: local, rating: 5, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_loc_2, grade: local, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_loc_3, grade: local, rating: 6, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_loc_4, grade: local, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_loc_5, grade: local, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_loc_6, grade: local, rating: 5, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_loc_7, grade: local, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_loc_8, grade: local, rating: 5, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_veg_loc_9, grade: local, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
+- {id: kantarelli_local, grade: local, rating: 9, name: "Chanterelle (kantarelli)", name_sv: "Kantarell (kantarelli)", notes: "Foraged across Finland from June–October under everyman's right (jokamiehenoikeudet); the quintessential Finnish forest ingredient"}
+- {id: peruna_local, grade: local, rating: 8, name: "Potato (peruna)", name_sv: "Potatis (peruna)", notes: "Grown throughout Finland; Lapin Puikula from Lapland is a Finnish GI-protected variety"}
+- {id: lanttu_local, grade: local, rating: 7, name: "Swede / rutabaga (lanttu)", name_sv: "Kålrot (lanttu)", notes: "Cold-hardy root vegetable grown widely across Finland; integral to traditional Finnish horticulture"}
+- {id: herkkutatti_local, grade: local, rating: 7, name: "Porcini / cep (herkkutatti)", name_sv: "Stensopp (herkkutatti)", notes: "Foraged in Finnish forests alongside chanterelles; boletus edulis; widely gathered late summer into autumn"}
 
 
 ## Grains & Starches
 
 ### Grains & Starches — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Finnish signature grain dishes bread pasta rice", "Finnish iconic starch preparations", "Finnish traditional staple foods" -->
+<!-- Searched (FI): "ruisleipä karjalanpiirakka kaurapuuro suomalainen ruokaidentiteetti ikoninen vilja" -->
+<!-- Searched (EN): "Finnish rye bread oats iconic grain dishes identity karjalanpiirakka" -->
 
-- {id: stub_grain_sig_1, grade: signature, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_sig_2, grade: signature, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_sig_3, grade: signature, rating: 6, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_sig_4, grade: signature, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_sig_5, grade: signature, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_sig_6, grade: signature, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_sig_7, grade: signature, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_sig_8, grade: signature, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_sig_9, grade: signature, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
+- {id: ruis_sig, grade: signature, rating: 9, name: "Rye (ruis)", name_sv: "Råg (ruis)", notes: "Ruisleipä (dense sourdough rye bread) is arguably the most iconic Finnish food; rye crust of karjalanpiirakka; ruis cultivated in Finland for 1,000+ years"}
+- {id: kaura_sig, grade: signature, rating: 8, name: "Oats (kaura)", name_sv: "Havre (kaura)", notes: "Kaurapuuro (oatmeal porridge) is the quintessential Finnish breakfast; comfort food for all ages; Finland a world leader in oat culture"}
+- {id: ohra_sig, grade: signature, rating: 7, name: "Barley (ohra)", name_sv: "Korn (ohra)", notes: "Ohraryynipuuro (barley porridge) traditional; historically a key subsistence grain in Finland for centuries"}
 
 ### Grains & Starches — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Finnish grain consumption kg per capita", "Finnish rice wheat bread statistics", "Finnish FAO food balance cereals" -->
+<!-- Searched (EN): "Finland grain consumption per capita 2022 wheat rye oats statistics Luke food balance cereals" -->
 
-- {id: stub_grain_bul_1, grade: bulk, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_bul_2, grade: bulk, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_bul_3, grade: bulk, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_bul_4, grade: bulk, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_bul_5, grade: bulk, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_bul_6, grade: bulk, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_bul_7, grade: bulk, rating: 6, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_bul_8, grade: bulk, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_bul_9, grade: bulk, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
+- {id: vehna_bulk, grade: bulk, rating: 9, name: "Wheat (vehnä)", name_sv: "Vete (vehnä)", notes: "48.9 kg/capita/yr (2022, Luke) — largest consumed cereal in Finland by volume (pasta, white bread, pastries)"}
+- {id: ruis_bulk, grade: bulk, rating: 8, name: "Rye (ruis)", name_sv: "Råg (ruis)", notes: "13.4 kg/capita/yr (2022, Luke) — Finland has the world's highest rye consumption per capita; ruisleipä in every household"}
+- {id: kaura_bulk, grade: bulk, rating: 7, name: "Oats (kaura)", name_sv: "Havre (kaura)", notes: "10.9 kg/capita/yr (2022, Luke) — among the world's highest per-capita oat intakes"}
+- {id: riisi_bulk, grade: bulk, rating: 6, name: "Rice (riisi)", name_sv: "Ris (riisi)", notes: "8.1 kg/capita/yr (2022, Luke) — used in karjalanpiirakka filling, riisipuuro (Christmas rice porridge)"}
 
 ### Grains & Starches — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Finnish grain crops grown", "Finnish cereal farming production", "Finnish locally milled flour regional varieties" -->
+<!-- Searched (EN): "Finland grain crop production statistics oats barley rye wheat hectares Luke 2024 2025" -->
 
-- {id: stub_grain_loc_1, grade: local, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_loc_2, grade: local, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_loc_3, grade: local, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_loc_4, grade: local, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_loc_5, grade: local, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_loc_6, grade: local, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_loc_7, grade: local, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_loc_8, grade: local, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_grain_loc_9, grade: local, rating: 6, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
+- {id: kaura_local, grade: local, rating: 9, name: "Oats (kaura)", name_sv: "Havre (kaura)", notes: "~1.1M tons/yr (2025, Luke); one of world's top oat-producing countries; Finnish oats world-renowned for quality and purity"}
+- {id: ohra_local, grade: local, rating: 8, name: "Barley (ohra)", name_sv: "Korn (ohra)", notes: "~1.2M tons/yr (2025, Luke) — most cultivated cereal crop in Finland by area (~360,000 ha)"}
+- {id: ruis_local, grade: local, rating: 8, name: "Rye (ruis)", name_sv: "Råg (ruis)", notes: "~85,000 tons/yr (2025, Luke); Finnish cold-hardy varieties; domestic harvest covers Finnish rye bread consumption needs"}
 
 
 ## Dairy & Eggs
 
 ### Dairy & Eggs — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Finnish signature dairy dishes", "Finnish iconic cheese butter cream", "Finnish traditional dairy products" -->
+<!-- Searched (FI): "suomalainen juustoleipä viili piimä ikoninen maitotuote perinteinen" -->
+<!-- Searched (EN): "Finnish dairy signature bread cheese viili buttermilk traditional iconic products" -->
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 5, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_sig_9, grade: signature, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
+- {id: juustoleipa_sig, grade: signature, rating: 9, name: "Bread cheese (juustoleipä)", name_sv: "Juustoleipä (grillost)", notes: "Uniquely Finnish squeaky cheese baked/grilled until caramelised; eaten warm with cloudberry jam or dipped in coffee; originates in Ostrobothnia and Lapland"}
+- {id: viili_sig, grade: signature, rating: 8, name: "Viili (ropy fermented milk)", name_sv: "Viili (finsk filmjölk)", notes: "Finnish fermented milk with a distinctive elastic, ropy texture from unique lactic cultures; everyday breakfast staple; not found in same form outside Finland"}
+- {id: piima_sig, grade: signature, rating: 7, name: "Buttermilk (piimä)", name_sv: "Kärnmjölk (piimä)", notes: "Traditional Finnish fermented dairy drink; tangy and refreshing; long history as a staple in Finnish peasant food culture"}
 
 ### Dairy & Eggs — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Finnish dairy consumption kg per capita", "Finnish milk cheese butter statistics", "Finnish FAO food balance dairy" -->
+<!-- Searched (EN): "Finland dairy consumption per capita milk butter cheese 2022 2023 statistics Luke" -->
 
-- {id: stub_dairy_bul_1, grade: bulk, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 6, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_bul_9, grade: bulk, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
+- {id: maito_bulk, grade: bulk, rating: 9, name: "Milk (maito)", name_sv: "Mjölk (maito)", notes: "~87 L/capita fluid milk (2023, Luke); total liquid dairy ~133 kg/capita — one of the world's highest per-capita milk intakes"}
+- {id: juusto_bulk, grade: bulk, rating: 8, name: "Cheese (juusto)", name_sv: "Ost (juusto)", notes: "~26 kg/capita/yr (2023, Luke) — high cheese consumption across all types; Oltermanni (Edam-style) is Finland's bestselling variety"}
+- {id: voi_bulk, grade: bulk, rating: 7, name: "Butter (voi)", name_sv: "Smör (voi)", notes: "~3 kg/capita/yr (2023, Luke); used extensively in Finnish baking and cooking; high-quality output from Finnish Ayrshire dairy farms"}
 
 ### Dairy & Eggs — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Finnish dairy farming local production", "Finnish regional cheese varieties", "Finnish local dairy breeds" -->
+<!-- Searched (EN): "Finland local dairy production Finnish Ayrshire cattle juustoleipä regional cheese Ostrobothnia Lapland" -->
 
-- {id: stub_dairy_loc_1, grade: local, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 5, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 5, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_dairy_loc_9, grade: local, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
+- {id: juustoleipa_local, grade: local, rating: 9, name: "Bread cheese (juustoleipä)", name_sv: "Juustoleipä (grillost)", notes: "Produced in Finland, especially Ostrobothnia and Lapland; made from Finnish Ayrshire cow, goat, or reindeer milk; a uniquely Finnish product"}
+- {id: viili_local, grade: local, rating: 8, name: "Viili (ropy fermented milk)", name_sv: "Viili (finsk filmjölk)", notes: "Produced in Finland using unique lactic bacteria cultures; traditional home production still practised; distinctly Finnish product not found elsewhere"}
+- {id: ayrshire_maito, grade: local, rating: 7, name: "Finnish Ayrshire milk", name_sv: "Finsk ayrshiremjölk", notes: "Finnish Ayrshire cattle account for ~60% of dairy cows in Finland; adapted to Finnish climate; high protein content ideal for cheesemaking"}
 
 
 ## Spices & Seasonings
 
 ### Spices & Seasonings — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Finnish signature spice blends", "Finnish defining herbs and spices", "Finnish iconic seasoning flavour profile" -->
+<!-- Searched (FI): "suomalaisen ruuan mausteet tilli kumina maustepippuri valkopippuri katajan marjat ikoninen maku" -->
+<!-- Searched (EN): "Finnish cuisine defining spices dill caraway allspice white pepper juniper signature flavour" -->
 
-- {id: stub_spice_sig_1, grade: signature, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_sig_9, grade: signature, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
+- {id: tilli_sig, grade: signature, rating: 9, name: "Dill (tilli)", name_sv: "Dill (tilli)", notes: "THE defining herb of Finnish cuisine; new potatoes with dill and butter, graavilohi, lohikeitto, fish dishes — used fresh and dried year-round"}
+- {id: kumina_sig, grade: signature, rating: 8, name: "Caraway (kumina)", name_sv: "Kummin (kumina)", notes: "Essential in ruisleipä (rye bread), pork stews, kaalikääryleet (cabbage rolls); the warm earthy note of Finnish bread and meat cooking"}
+- {id: maustepippuri_sig, grade: signature, rating: 7, name: "Allspice (maustepippuri)", name_sv: "Kryddpeppar (maustepippuri)", notes: "In lihapullat (Finnish meatballs), sausages, Christmas meats and marinades; a classic Finnish spice-cabinet staple"}
+- {id: valkopippuri_sig, grade: signature, rating: 7, name: "White pepper (valkopippuri)", name_sv: "Vitpeppar (valkopippuri)", notes: "Preferred over black pepper in traditional Finnish fish soups (kalakeitto), creamy sauces, and fish preparations; mild earthy heat"}
+- {id: kataja_sig, grade: signature, rating: 7, name: "Juniper berry (katajanmarja)", name_sv: "Enbär (katajanmarja)", notes: "Piney, resinous forest flavour; used with game and reindeer; juniper branches used for smoking; archetypal Finnish taiga taste"}
 
 ### Spices & Seasonings — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Finnish most used condiments seasonings statistics", "Finnish salt sugar spice consumption", "Finnish everyday seasoning ingredients" -->
+<!-- Searched (EN): "Finland most used seasonings condiments statistics salt pepper dill everyday cooking consumption" -->
 
-- {id: stub_spice_bul_1, grade: bulk, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 6, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 5, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_bul_9, grade: bulk, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
+- {id: suola_bulk, grade: bulk, rating: 9, name: "Salt (suola)", name_sv: "Salt (suola)", notes: "Universal; central to Finnish preservation traditions (salted fish, cured meats); highest everyday volume of all seasonings"}
+- {id: tilli_bulk, grade: bulk, rating: 8, name: "Dill (tilli)", name_sv: "Dill (tilli)", notes: "Most used fresh herb in Finland by volume; across fish, potato, soup, and salad preparations year-round"}
+- {id: valkopippuri_bulk, grade: bulk, rating: 7, name: "White pepper (valkopippuri)", name_sv: "Vitpeppar (valkopippuri)", notes: "Traditional Finnish pepper for savory cooking; more widely used than black pepper in classic Finnish recipes"}
+- {id: kardemumma_bulk, grade: bulk, rating: 7, name: "Cardamom (kardemumma)", name_sv: "Kardemumma (kardemumma)", notes: "Essential in pulla (Finnish cardamom-scented sweet bread) and baked goods; pulla is Finland's everyday bread, cardamom gives it its identity"}
 
 ### Spices & Seasonings — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Finnish herbs grown locally", "Finnish spice production native plants", "Finnish foraged herbs regional flavourings" -->
+<!-- Searched (FI): "Suomi paikallinen maustekasvit kataja puolukka tyrni villiyrtit jokamiehenoikeus" -->
+<!-- Searched (EN): "Finland locally foraged seasonings juniper berries lingonberry sea buckthorn wild herbs" -->
 
-- {id: stub_spice_loc_1, grade: local, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_loc_2, grade: local, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_loc_3, grade: local, rating: 6, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_loc_4, grade: local, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_loc_5, grade: local, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_loc_6, grade: local, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_loc_7, grade: local, rating: 5, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_loc_8, grade: local, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
-- {id: stub_spice_loc_9, grade: local, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Finnish research"}
+- {id: katajanmarja_local, grade: local, rating: 9, name: "Juniper berry (katajanmarja)", name_sv: "Enbär (katajanmarja)", notes: "Foraged from Finnish forests and heathlands; used in marinades for reindeer and elk; branches used for smoking; archetypal Finnish forest spice"}
+- {id: puolukka_local, grade: local, rating: 8, name: "Lingonberry (puolukka)", name_sv: "Lingon (puolukka)", notes: "Foraged under everyman's right across Finland; ubiquitous table sauce with meatballs (lihapullat) and reindeer; used in jams and baking"}
+- {id: tyrni_local, grade: local, rating: 6, name: "Sea buckthorn (tyrni)", name_sv: "Havtorn (tyrni)", notes: "Foraged and cultivated on Finnish coasts; intensely sour orange berry rich in vitamin C; used in sauces, desserts, and modern Finnish cuisine"}
 
