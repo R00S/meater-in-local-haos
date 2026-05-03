@@ -5911,7 +5911,7 @@ class KitchenCookingPanel extends LitElement {
    *
    * Features:
    * - Groups by category using AI_CATEGORY_ORDER
-   * - Each category has a compact "base" set (common:true) shown by default
+   * - Each category shows the top 3 per grade (signature/bulk/local) by rating descending
    * - A "More (N)" button reveals the full extended set
    * - The Proteins category (cat="p") shows a subcategory drill-down:
    *   tapping a protein group (Beef / Pork / Fish / …) reveals cuts from
@@ -5954,14 +5954,33 @@ class KitchenCookingPanel extends LitElement {
     return html`
       ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => {
         const allItems = groups[cat];
-        // Items with featured===true are shown by default; items with featured===false are in
-        // the extended set shown after "More".  Items with no featured field at all get a
-        // threshold fallback: first 12 visible, rest behind "More".
-        let baseItems = allItems.filter(i => i.featured !== false);
-        let extItems  = allItems.filter(i => i.featured === false);
-        if (extItems.length === 0 && baseItems.length > 12) {
-          extItems  = baseItems.slice(12);
-          baseItems = baseItems.slice(0, 12);
+        // Split into base (always shown) and ext (behind "More"):
+        //   - If items have grade+rating: top 3 per grade by rating descending → base, rest → ext
+        //   - Fallback (no grade info): first 12 → base, rest → ext
+        const TOP_PER_GRADE = 3;
+        const GRADE_ORDER = ['signature', 'bulk', 'local'];
+        const hasGrade = allItems.some(i => i.grade);
+        let baseItems, extItems;
+        if (hasGrade) {
+          const byGrade = {};
+          for (const item of allItems) {
+            const g = item.grade || 'local';
+            if (!byGrade[g]) byGrade[g] = [];
+            byGrade[g].push(item);
+          }
+          for (const g of Object.keys(byGrade)) {
+            byGrade[g].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+          }
+          const baseSet = new Set();
+          for (const g of GRADE_ORDER) {
+            if (!byGrade[g]) continue;
+            byGrade[g].slice(0, TOP_PER_GRADE).forEach(i => baseSet.add(i.id));
+          }
+          baseItems = allItems.filter(i => baseSet.has(i.id));
+          extItems  = allItems.filter(i => !baseSet.has(i.id));
+        } else {
+          baseItems = allItems.length > 12 ? allItems.slice(0, 12) : allItems;
+          extItems  = allItems.length > 12 ? allItems.slice(12) : [];
         }
         const isExpanded = expandedCats.includes(cat);
         const visibleItems = isExpanded ? allItems : baseItems;
@@ -6038,7 +6057,7 @@ class KitchenCookingPanel extends LitElement {
       }
       if (!ings) continue;
       for (const ing of ings) {
-        if (ing.featured === false) continue;
+        if (ing.grade === 'local') continue;
         const sc = proteinToSubcat[ing.id];
         if (!sc) continue;
         cuisineCommonProteinIds.add(ing.id);

@@ -130,16 +130,21 @@ def build_cuisine_data(base_dir):
         ---
 
         ## Proteins
-        - {id: salmon, grade: signature, name: Salmon, name_sv: "Lax", notes: "..."}
+        - {id: salmon, grade: signature, rating: 10, name: Salmon, name_sv: "Lax", notes: "..."}
         ...
 
     Grades:
-        signature → featured=True  (shown in compact view; lights up protein tree — identity of the cuisine)
-        bulk      → featured=True  (shown in compact view; lights up protein tree — high consumption by statistics)
-        local     → featured=False (shown in "More"; does not light up protein tree — produced/widely used locally)
+        signature — identity of the cuisine (lights up protein tree)
+        bulk      — high consumption by statistics (lights up protein tree)
+        local     — produced/widely used locally (does NOT light up protein tree; hidden under "More")
+
+    Rating (1–10):
+        How important the ingredient is within its grade for this cuisine.
+        The top 3 per grade per category are shown by default; the rest are hidden under "More".
+        Default: 5 if not specified.
 
     Returns (cuisine_ingredients, cuisine_to_group) where:
-        cuisine_ingredients: {cuisine_id: [{id, name, name_sv?, cat, grade, featured}, ...]}
+        cuisine_ingredients: {cuisine_id: [{id, name, name_sv?, cat, grade, rating}, ...]}
         cuisine_to_group:    {cuisine_id: culinary_group_str}
     """
     _section_to_cat = {
@@ -152,11 +157,7 @@ def build_cuisine_data(base_dir):
         "condiments":           "s",
         "other":                "s",
     }
-    _grade_featured = {
-        "signature":    True,
-        "bulk":         True,
-        "local":        False,
-    }
+    _valid_grades = {"signature", "bulk", "local"}
 
     cuisines_dir = os.path.join(base_dir, "www", "cuisines")
     cuisine_ingredients = {}
@@ -221,14 +222,14 @@ def build_cuisine_data(base_dir):
                     continue
                 ing_id = item.get("id")
                 grade = str(item.get("grade", "local"))
-                if not ing_id or grade not in _grade_featured:
+                if not ing_id or grade not in _valid_grades:
                     continue
                 entry = {
                     "id": ing_id,
                     "name": item.get("name", ing_id.replace("_", " ").title()),
                     "cat": current_cat,
                     "grade": grade,
-                    "featured": _grade_featured[grade],
+                    "rating": int(item.get("rating", 5)),
                 }
                 if item.get("name_sv"):
                     entry["name_sv"] = item["name_sv"]
@@ -780,14 +781,17 @@ def generate_js_data():
                     continue
                 cat = ai_ingredient_categories.get(ing["id"], "s")  # default to spices
                 item = {"id": ing["id"], "name": ing["name"], "cat": cat}
-                if "featured" in ing:
-                    item["featured"] = ing["featured"]
+                if "grade" in ing:
+                    item["grade"] = ing["grade"]
+                if "rating" in ing:
+                    item["rating"] = ing["rating"]
                 enriched.append(item)
             enriched_cuisine[cuisine_id] = enriched
         ai_cuisine_ingredients = enriched_cuisine
 
     # Build AI_COMMON_INGREDIENTS — a flat array with {id, name, cat, featured} per item.
     # Maps the category-dict structure of COMMON_INGREDIENTS into category codes used by the UI.
+    # Note: these items have no grade/rating (they are not cuisine-specific).
     _cat_key_to_code = {
         "proteins": "p",
         "vegetables": "v",

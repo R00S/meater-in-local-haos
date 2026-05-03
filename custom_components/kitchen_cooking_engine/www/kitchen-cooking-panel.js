@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 May 2026, 08:43 CET
+ * AUTO-GENERATED: 03 May 2026, 08:51 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 03 May 2026, 08:43 CET
+// Last generated: 03 May 2026, 08:51 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -3984,7 +3984,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Pork",
       "cat": "p",
       "grade": "bulk",
-      "featured": true,
+      "rating": 10,
       "name_sv": "Fläsk"
     },
     {
@@ -3992,7 +3992,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Chicken",
       "cat": "p",
       "grade": "bulk",
-      "featured": true,
+      "rating": 9,
       "name_sv": "Kyckling"
     },
     {
@@ -4000,7 +4000,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Beef",
       "cat": "p",
       "grade": "bulk",
-      "featured": true,
+      "rating": 8,
       "name_sv": "Nötkött"
     },
     {
@@ -4008,7 +4008,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Salmon",
       "cat": "p",
       "grade": "signature",
-      "featured": true,
+      "rating": 10,
       "name_sv": "Lax"
     },
     {
@@ -4016,7 +4016,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Herring",
       "cat": "p",
       "grade": "signature",
-      "featured": true,
+      "rating": 9,
       "name_sv": "Sill"
     },
     {
@@ -4024,7 +4024,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Elk",
       "cat": "p",
       "grade": "signature",
-      "featured": true,
+      "rating": 8,
       "name_sv": "Älg"
     },
     {
@@ -4032,7 +4032,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Reindeer",
       "cat": "p",
       "grade": "signature",
-      "featured": true,
+      "rating": 7,
       "name_sv": "Renkött"
     },
     {
@@ -4040,7 +4040,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Cod",
       "cat": "p",
       "grade": "bulk",
-      "featured": true,
+      "rating": 6,
       "name_sv": "Torsk"
     },
     {
@@ -4048,7 +4048,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Eggs",
       "cat": "p",
       "grade": "bulk",
-      "featured": true,
+      "rating": 7,
       "name_sv": "Ägg"
     },
     {
@@ -4056,7 +4056,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Potatoes",
       "cat": "v",
       "grade": "bulk",
-      "featured": true,
+      "rating": 10,
       "name_sv": "Potatis"
     },
     {
@@ -4064,7 +4064,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Onions",
       "cat": "v",
       "grade": "bulk",
-      "featured": true,
+      "rating": 9,
       "name_sv": "Lök"
     },
     {
@@ -4072,7 +4072,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Carrots",
       "cat": "v",
       "grade": "bulk",
-      "featured": true,
+      "rating": 8,
       "name_sv": "Morötter"
     },
     {
@@ -4080,7 +4080,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Cabbage",
       "cat": "v",
       "grade": "bulk",
-      "featured": true,
+      "rating": 7,
       "name_sv": "Kål"
     },
     {
@@ -4088,7 +4088,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Beetroot",
       "cat": "v",
       "grade": "bulk",
-      "featured": true,
+      "rating": 6,
       "name_sv": "Rödbeta"
     },
     {
@@ -4096,7 +4096,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Dill",
       "cat": "v",
       "grade": "signature",
-      "featured": true,
+      "rating": 10,
       "name_sv": "Dill"
     },
     {
@@ -4104,7 +4104,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Nettles",
       "cat": "v",
       "grade": "signature",
-      "featured": true,
+      "rating": 7,
       "name_sv": "Nässlor"
     },
     {
@@ -4112,7 +4112,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Lingonberries",
       "cat": "v",
       "grade": "signature",
-      "featured": true,
+      "rating": 9,
       "name_sv": "Lingon"
     },
     {
@@ -4120,7 +4120,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Leeks",
       "cat": "v",
       "grade": "local",
-      "featured": false,
+      "rating": 8,
       "name_sv": "Purjolök"
     },
     {
@@ -4128,7 +4128,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Celeriac",
       "cat": "v",
       "grade": "local",
-      "featured": false,
+      "rating": 6,
       "name_sv": "Rotselleri"
     },
     {
@@ -4136,7 +4136,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Parsnips",
       "cat": "v",
       "grade": "local",
-      "featured": false,
+      "rating": 5,
       "name_sv": "Palsternacka"
     },
     {
@@ -4144,7 +4144,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Cream",
       "cat": "d",
       "grade": "bulk",
-      "featured": true,
+      "rating": 10,
       "name_sv": "Grädde"
     },
     {
@@ -4152,7 +4152,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Sour Cream",
       "cat": "d",
       "grade": "bulk",
-      "featured": true,
+      "rating": 8,
       "name_sv": "Gräddfil"
     },
     {
@@ -4160,7 +4160,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Butter",
       "cat": "d",
       "grade": "bulk",
-      "featured": true,
+      "rating": 9,
       "name_sv": "Smör"
     },
     {
@@ -4168,7 +4168,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Allspice",
       "cat": "s",
       "grade": "signature",
-      "featured": true,
+      "rating": 10,
       "name_sv": "Kryddpeppar"
     },
     {
@@ -4176,7 +4176,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "White Pepper",
       "cat": "s",
       "grade": "bulk",
-      "featured": true,
+      "rating": 8,
       "name_sv": "Vitpeppar"
     },
     {
@@ -4184,7 +4184,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Cardamom",
       "cat": "s",
       "grade": "signature",
-      "featured": true,
+      "rating": 9,
       "name_sv": "Kardemumma"
     },
     {
@@ -4192,7 +4192,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Juniper Berries",
       "cat": "s",
       "grade": "signature",
-      "featured": true,
+      "rating": 8,
       "name_sv": "Enbär"
     },
     {
@@ -4200,7 +4200,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Bay Leaves",
       "cat": "s",
       "grade": "bulk",
-      "featured": true,
+      "rating": 6,
       "name_sv": "Lagerblad"
     },
     {
@@ -4208,7 +4208,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Mustard",
       "cat": "s",
       "grade": "bulk",
-      "featured": true,
+      "rating": 7,
       "name_sv": "Senap"
     }
   ]
@@ -4357,7 +4357,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["pork", "duck", "rabbit", "fish", "goat", "chicken", "beef", "veal", "venison", "turkey", "lamb"];
+const AI_GENERIC_PROTEIN_IDS = ["veal", "beef", "goat", "lamb", "pork", "chicken", "rabbit", "venison", "fish", "duck", "turkey"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -21714,7 +21714,7 @@ class KitchenCookingPanel extends LitElement {
    *
    * Features:
    * - Groups by category using AI_CATEGORY_ORDER
-   * - Each category has a compact "base" set (common:true) shown by default
+   * - Each category shows the top 3 per grade (signature/bulk/local) by rating descending
    * - A "More (N)" button reveals the full extended set
    * - The Proteins category (cat="p") shows a subcategory drill-down:
    *   tapping a protein group (Beef / Pork / Fish / …) reveals cuts from
@@ -21757,14 +21757,33 @@ class KitchenCookingPanel extends LitElement {
     return html`
       ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => {
         const allItems = groups[cat];
-        // Items with featured===true are shown by default; items with featured===false are in
-        // the extended set shown after "More".  Items with no featured field at all get a
-        // threshold fallback: first 12 visible, rest behind "More".
-        let baseItems = allItems.filter(i => i.featured !== false);
-        let extItems  = allItems.filter(i => i.featured === false);
-        if (extItems.length === 0 && baseItems.length > 12) {
-          extItems  = baseItems.slice(12);
-          baseItems = baseItems.slice(0, 12);
+        // Split into base (always shown) and ext (behind "More"):
+        //   - If items have grade+rating: top 3 per grade by rating descending → base, rest → ext
+        //   - Fallback (no grade info): first 12 → base, rest → ext
+        const TOP_PER_GRADE = 3;
+        const GRADE_ORDER = ['signature', 'bulk', 'local'];
+        const hasGrade = allItems.some(i => i.grade);
+        let baseItems, extItems;
+        if (hasGrade) {
+          const byGrade = {};
+          for (const item of allItems) {
+            const g = item.grade || 'local';
+            if (!byGrade[g]) byGrade[g] = [];
+            byGrade[g].push(item);
+          }
+          for (const g of Object.keys(byGrade)) {
+            byGrade[g].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+          }
+          const baseSet = new Set();
+          for (const g of GRADE_ORDER) {
+            if (!byGrade[g]) continue;
+            byGrade[g].slice(0, TOP_PER_GRADE).forEach(i => baseSet.add(i.id));
+          }
+          baseItems = allItems.filter(i => baseSet.has(i.id));
+          extItems  = allItems.filter(i => !baseSet.has(i.id));
+        } else {
+          baseItems = allItems.length > 12 ? allItems.slice(0, 12) : allItems;
+          extItems  = allItems.length > 12 ? allItems.slice(12) : [];
         }
         const isExpanded = expandedCats.includes(cat);
         const visibleItems = isExpanded ? allItems : baseItems;
@@ -21841,7 +21860,7 @@ class KitchenCookingPanel extends LitElement {
       }
       if (!ings) continue;
       for (const ing of ings) {
-        if (ing.featured === false) continue;
+        if (ing.grade === 'local') continue;
         const sc = proteinToSubcat[ing.id];
         if (!sc) continue;
         cuisineCommonProteinIds.add(ing.id);
@@ -27127,7 +27146,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "411";
+const PANEL_VERSION = "412";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

@@ -36,16 +36,16 @@ One paragraph of sources and key consumption statistics used.
 
 ## Proteins
 
-- {id: salmon, grade: signature, name: Salmon, name_sv: "Lax", notes: "..."}
-- {id: chicken, grade: bulk, name: Chicken, notes: "..."}
+- {id: salmon, grade: signature, rating: 10, name: Salmon, name_sv: "Lax", notes: "..."}
+- {id: chicken, grade: bulk, rating: 9, name: Chicken, notes: "..."}
 
 ## Vegetables
 
-- {id: daikon, grade: signature, name: Daikon, notes: "..."}
+- {id: daikon, grade: signature, rating: 8, name: Daikon, notes: "..."}
 
 ## Grains
 
-- {id: rice, grade: bulk, name: Rice, notes: "..."}
+- {id: rice, grade: bulk, rating: 10, name: Rice, notes: "..."}
 
 ## Dairy
 
@@ -53,21 +53,34 @@ One paragraph of sources and key consumption statistics used.
 
 ## Spices & Seasonings
 
-- {id: miso, grade: signature, name: Miso, notes: "..."}
+- {id: miso, grade: signature, rating: 9, name: Miso, notes: "..."}
 ```
+
+### Fields
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `id` | ✅ | Stable identifier used by the UI (e.g. `salmon`, `white_pepper`) |
+| `grade` | ✅ | `signature`, `bulk`, or `local` (see below) |
+| `rating` | ✅ | Integer 1–10. How important within the grade. Top 3 per grade are shown by default; rest hidden under "More". |
+| `name` | ✅ | English display name |
+| `name_sv` | — | Swedish display name (include where known) |
+| `notes` | — | Research justification; evidence for the grade and rating |
 
 ---
 
 ## The three grades
 
-| Grade | Compact view | Lights protein tree | When to use |
-|-------|-------------|--------------------|----|
-| `signature` | ✅ shown | ✅ yes | Important for the identity of the cuisine. Does not have to be high-volume — may be rare or seasonal. |
-| `bulk` | ✅ shown | ✅ yes | Consumed a lot in the country according to statistics (high kg/capita or market share). |
-| `local` | ❌ behind "More" | ❌ no | Produced and/or widely used in the country, but not a bulk-consumption item. |
+| Grade | Default shown | Lights protein tree | When to use |
+|-------|:---:|:---:|----|
+| `signature` | Top 3 by rating | ✅ yes | Identity of the cuisine — not necessarily high-volume; may be rare or seasonal. |
+| `bulk` | Top 3 by rating | ✅ yes | Consumed a lot by statistics (high kg/capita or market share). |
+| `local` | Top 3 by rating | ❌ no | Produced/widely used locally, but not a bulk-consumption item. |
 
-Both `signature` and `bulk` are **featured** in the compact view and light up protein tree buttons.
-`local` items are not featured — they appear only in the "More" expanded list.
+**Default visibility rule:** within each category, the top 3 ingredients per grade (sorted by `rating` descending)
+are always shown. Everything below rank 3 within its grade is hidden behind "More".
+
+`signature` and `bulk` light up protein tree buttons. `local` items do not.
 
 **Do not pad with universal ingredients.** If you cannot confirm an ingredient is
 characteristic of this specific cuisine from a specific source, do not add it.
@@ -95,7 +108,7 @@ A cuisine's protein tree buttons (🐄 Beef / 🐷 Pork / 🍗 Poultry / 🐟 Fi
 light up only if the cuisine has a `signature` or `bulk` ingredient that maps to that
 protein category in `PROTEIN_TO_SUBCAT` (in `ai_recipe_data.py`).
 
-`local` grade items are NOT featured — they appear only in the "More" list and do NOT light up tree buttons.
+`local` grade items do NOT light up tree buttons — they appear only behind "More".
 
 This means: if a protein genuinely defines a cuisine (e.g. salmon for Swedish), it MUST be
 `signature` or `bulk`. Marking it `local` hides it from the tree.
