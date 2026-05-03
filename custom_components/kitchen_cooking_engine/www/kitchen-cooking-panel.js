@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 May 2026, 08:51 CET
+ * AUTO-GENERATED: 03 May 2026, 09:14 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 03 May 2026, 08:51 CET
+// Last generated: 03 May 2026, 09:14 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -4357,7 +4357,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["veal", "beef", "goat", "lamb", "pork", "chicken", "rabbit", "venison", "fish", "duck", "turkey"];
+const AI_GENERIC_PROTEIN_IDS = ["turkey", "goat", "pork", "chicken", "fish", "duck", "beef", "rabbit", "venison", "lamb", "veal"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -21788,9 +21788,11 @@ class KitchenCookingPanel extends LitElement {
         const isExpanded = expandedCats.includes(cat);
         const visibleItems = isExpanded ? allItems : baseItems;
 
-        // Proteins (cat="p") get a drill-down subcategory selector
+        // Proteins (cat="p") get a drill-down subcategory selector.
+        // Pass the full allItems list — _renderProteinCategory computes its own base/ext
+        // after excluding tree-mapped proteins from the badge area.
         if (cat === 'p') {
-          return this._renderProteinCategory(visibleItems, extItems, isExpanded, categoryLabels[cat]);
+          return this._renderProteinCategory(allItems, isExpanded, categoryLabels[cat]);
         }
 
         return html`
@@ -21823,10 +21825,22 @@ class KitchenCookingPanel extends LitElement {
 
   /**
    * Render the Proteins category with an optional subcategory drill-down.
-   * When a subcat (e.g. "beef") is selected, shows specific cuts from AI_PROTEIN_SUBCATS
-   * sourced from the recipe files.
+   *
+   * Badge area rules (general mechanism, works for every cuisine):
+   *   1. Any cuisine protein that maps to a tree node (via AI_PROTEIN_TO_SUBCAT, i.e. has a
+   *      matching top-level subcat) OR is a specific cut inside AI_PROTEIN_SUBCATS is excluded
+   *      from the badge area — the tree represents it.  The tree button lights up instead.
+   *   2. From the remaining non-tree proteins, the top 3 per grade (signature / bulk / local)
+   *      by rating are shown by default; the rest appear under "More".
+   *   3. When a protein maps to the tree it "lights up" its subcat button:
+   *        - signature or local grade → dark green button
+   *        - bulk grade only → light green button
+   *      Dark green takes precedence when both are present in the same subcat.
+   *
+   * Fallback (no cuisine selected): generic protein IDs from AI_GENERIC_PROTEIN_IDS are
+   * filtered from the badge area, and tree buttons are highlighted with the legacy blue style.
    */
-  _renderProteinCategory(visibleItems, extItems, isExpanded, categoryLabel) {
+  _renderProteinCategory(allItems, isExpanded, categoryLabel) {
     const proteinSubcats = (typeof AI_PROTEIN_SUBCATS !== 'undefined') ? AI_PROTEIN_SUBCATS : {};
     const subcat = this._ingredientProteinSubcat;
     const expandedCats = this._ingredientExpandedCats || [];
@@ -21840,18 +21854,72 @@ class KitchenCookingPanel extends LitElement {
       beef: '🐄', pork: '🐷', poultry: '🍗', fish: '🐟', lamb: '🐑', game: '🦌',
     };
 
-    // --- Cuisine protein highlighting ---
-    // Derive which subcats have common proteins in the selected cuisine(s),
-    // and which specific ingredient IDs are common (to highlight cuts in the drill-down).
     const proteinToSubcat = (typeof AI_PROTEIN_TO_SUBCAT !== 'undefined') ? AI_PROTEIN_TO_SUBCAT : {};
     const genericProteinIds = new Set((typeof AI_GENERIC_PROTEIN_IDS !== 'undefined') ? AI_GENERIC_PROTEIN_IDS : []);
     const cuisineIngMap = (typeof AI_CUISINE_INGREDIENTS !== 'undefined') ? AI_CUISINE_INGREDIENTS : {};
     const cuisineRegionMap = (typeof AI_CUISINE_TO_REGION !== 'undefined') ? AI_CUISINE_TO_REGION : {};
     const selectedCuisines = this._aiSelectedCuisines || [];
 
-    // Collect all common ingredient IDs from the selected cuisine(s)
+    // --- Determine which proteins are represented in the tree (excluded from badge area) ---
+    // A protein is "in the tree" if it maps to a top-level subcat OR is a specific drill-down cut.
+    let proteinTreeIds;
+    if (selectedCuisines.length > 0) {
+      const allSubcatCutIds = new Set(
+        Object.values(proteinSubcats).flatMap(cuts => cuts.map(c => c.id))
+      );
+      proteinTreeIds = new Set(
+        allItems
+          .filter(i => proteinToSubcat[i.id] || allSubcatCutIds.has(i.id))
+          .map(i => i.id)
+      );
+    } else {
+      // No cuisine selected: use the static generic-protein filter (legacy behaviour)
+      proteinTreeIds = genericProteinIds;
+    }
+
+    // Badge items = cuisine proteins NOT represented in the tree
+    const notInTree = allItems.filter(i => !proteinTreeIds.has(i.id));
+
+    // Compute base (always shown) and ext (behind "More") from badge items.
+    // Top 3 per grade by rating; fallback to threshold-12 when no grade info.
+    const TOP_PER_GRADE = 3;
+    const GRADE_ORDER = ['signature', 'bulk', 'local'];
+    let baseItems, extItems;
+    const hasGrade = notInTree.some(i => i.grade);
+    if (hasGrade) {
+      const byGrade = {};
+      for (const item of notInTree) {
+        const g = item.grade || 'local';
+        if (!byGrade[g]) byGrade[g] = [];
+        byGrade[g].push(item);
+      }
+      for (const g of Object.keys(byGrade)) {
+        byGrade[g].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+      }
+      const baseSet = new Set();
+      for (const g of GRADE_ORDER) {
+        if (!byGrade[g]) continue;
+        byGrade[g].slice(0, TOP_PER_GRADE).forEach(i => baseSet.add(i.id));
+      }
+      baseItems = notInTree.filter(i => baseSet.has(i.id));
+      extItems  = notInTree.filter(i => !baseSet.has(i.id));
+    } else {
+      baseItems = notInTree.length > 12 ? notInTree.slice(0, 12) : notInTree;
+      extItems  = notInTree.length > 12 ? notInTree.slice(12) : [];
+    }
+    const visibleBadgeItems = isExpanded ? notInTree : baseItems;
+
+    // --- Cuisine protein highlighting for tree buttons ---
+    // ALL grades (signature, bulk, local) light up subcat buttons.
+    // Collect the highest-priority grade present per subcat:
+    //   signature or local → dark green (strong cultural/local identity)
+    //   bulk only          → light green (high consumption volume)
+    // When both are present in the same subcat, dark green takes precedence.
     const cuisineCommonProteinIds = new Set();
-    const cuisineHighlightedSubcats = new Set();
+    const cuisineDarkGreenSubcats = new Set();   // signature or local present
+    const cuisineLightGreenSubcats = new Set();  // bulk only
+    const subcatGrades = {};                     // sc → Set of grades
+
     for (const cuisineId of selectedCuisines) {
       let ings = cuisineIngMap[cuisineId];
       if (!ings) {
@@ -21860,44 +21928,55 @@ class KitchenCookingPanel extends LitElement {
       }
       if (!ings) continue;
       for (const ing of ings) {
-        if (ing.grade === 'local') continue;
         const sc = proteinToSubcat[ing.id];
         if (!sc) continue;
         cuisineCommonProteinIds.add(ing.id);
-        cuisineHighlightedSubcats.add(sc);
+        if (!subcatGrades[sc]) subcatGrades[sc] = new Set();
+        subcatGrades[sc].add(ing.grade || 'bulk');
       }
     }
-
-    // Filter generic protein IDs (beef, chicken, fish…) from badge list —
-    // the subcat buttons already serve as their visual representation.
-    const filteredVisible = visibleItems.filter(i => !genericProteinIds.has(i.id));
-    const filteredExt = extItems.filter(i => !genericProteinIds.has(i.id));
+    for (const [sc, grades] of Object.entries(subcatGrades)) {
+      if (grades.has('signature') || grades.has('local')) {
+        cuisineDarkGreenSubcats.add(sc);
+      } else {
+        cuisineLightGreenSubcats.add(sc);
+      }
+    }
 
     return html`
       <div class="ingredient-category">
         <h4 style="margin: 12px 0 6px 0; font-size: 0.95em; color: var(--secondary-text-color);">${categoryLabel || '🥩 Proteins'}</h4>
 
         ${Object.keys(proteinSubcats).length > 0 ? html`
-          <!-- Protein sub-category selector pills — highlighted blue when cuisine has common items -->
+          <!-- Protein sub-category selector pills -->
           <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px;">
             ${Object.keys(proteinSubcats).map(sc => {
               const isActive = subcat === sc;
-              const isCuisineMatch = cuisineHighlightedSubcats.has(sc);
+              const isDarkGreen = cuisineDarkGreenSubcats.has(sc);
+              const isLightGreen = cuisineLightGreenSubcats.has(sc);
               let borderColor = 'var(--divider-color)';
               let bgColor = 'transparent';
               let textColor = 'inherit';
+              let fontWeight = 'normal';
               if (isActive) {
                 borderColor = 'var(--primary-color)';
                 bgColor = 'var(--primary-color)';
                 textColor = 'white';
-              } else if (isCuisineMatch) {
-                borderColor = 'var(--primary-color)';
-                bgColor = 'rgba(var(--rgb-primary-color, 3,169,244), 0.12)';
-                textColor = 'var(--primary-color)';
+                fontWeight = '600';
+              } else if (isDarkGreen) {
+                borderColor = '#388e3c';
+                bgColor = 'rgba(56,142,60, 0.15)';
+                textColor = '#388e3c';
+                fontWeight = '700';
+              } else if (isLightGreen) {
+                borderColor = '#66bb6a';
+                bgColor = 'rgba(102,187,106, 0.08)';
+                textColor = '#5a9e5d';
+                fontWeight = '600';
               }
               return html`
                 <button
-                  style="padding: 4px 10px; border-radius: 14px; border: 1px solid ${borderColor}; background: ${bgColor}; color: ${textColor}; cursor: pointer; font-size: 0.82em; font-weight: ${isCuisineMatch ? '600' : 'normal'};"
+                  style="padding: 4px 10px; border-radius: 14px; border: 1px solid ${borderColor}; background: ${bgColor}; color: ${textColor}; cursor: pointer; font-size: 0.82em; font-weight: ${fontWeight};"
                   @click=${() => {
                     this._ingredientProteinSubcat = (subcat === sc) ? null : sc;
                     this.requestUpdate();
@@ -21918,7 +21997,7 @@ class KitchenCookingPanel extends LitElement {
             <div style="display: flex; flex-wrap: wrap; gap: 5px;">
               ${proteinSubcats[subcat].map(cut => {
                 const displayName = (this._language === 'sv' && cut.name_sv) ? cut.name_sv : cut.name;
-                // Highlight cut if any common cuisine protein ID is a prefix of this cut's ID
+                // Highlight cut if any cuisine protein ID is a prefix/match of this cut's ID
                 // e.g. cuisine has "salmon" → highlights "salmon_fillet", "salmon_steak"
                 const isCuisineCommon = [...cuisineCommonProteinIds].some(
                   id => cut.id === id || cut.id.startsWith(id + '_') || id.startsWith(cut.id + '_')
@@ -21937,11 +22016,11 @@ class KitchenCookingPanel extends LitElement {
             </div>
           </div>
         ` : html`
-          <!-- Default protein list (generic protein IDs filtered out — subcat buttons cover them) -->
+          <!-- Badge area: non-tree proteins only -->
           <div class="ingredient-grid">
-            ${filteredVisible.map(ingredient => this._renderIngredientCheckbox(ingredient))}
+            ${visibleBadgeItems.map(ingredient => this._renderIngredientCheckbox(ingredient))}
           </div>
-          ${filteredExt.length > 0 ? html`
+          ${extItems.length > 0 ? html`
             <button
               style="margin-top: 6px; padding: 4px 12px; border-radius: 14px; border: 1px solid var(--divider-color); background: transparent; cursor: pointer; font-size: 0.82em; color: var(--secondary-text-color);"
               @click=${() => {
@@ -21954,7 +22033,7 @@ class KitchenCookingPanel extends LitElement {
             >
               ${isExpanded
                 ? this._t('ai_recipe.show_less') || 'Show less'
-                : `${this._t('ai_recipe.more_ingredients') || 'More'} (+${filteredExt.length})`}
+                : `${this._t('ai_recipe.more_ingredients') || 'More'} (+${extItems.length})`}
             </button>
           ` : ''}
         `}
@@ -27146,7 +27225,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "412";
+const PANEL_VERSION = "413";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

@@ -73,14 +73,18 @@ One paragraph of sources and key consumption statistics used.
 
 | Grade | Default shown | Lights protein tree | When to use |
 |-------|:---:|:---:|----|
-| `signature` | Top 3 by rating | ✅ yes | Identity of the cuisine — not necessarily high-volume; may be rare or seasonal. |
-| `bulk` | Top 3 by rating | ✅ yes | Consumed a lot by statistics (high kg/capita or market share). |
-| `local` | Top 3 by rating | ❌ no | Produced/widely used locally, but not a bulk-consumption item. |
+| `signature` | Top 3 by rating | ✅ dark green | Identity of the cuisine — not necessarily high-volume; may be rare or seasonal. |
+| `bulk` | Top 3 by rating | ✅ light green | Consumed a lot by statistics (high kg/capita or market share). |
+| `local` | Top 3 by rating | ✅ dark green | Produced/widely used locally, but not a bulk-consumption item. |
 
 **Default visibility rule:** within each category, the top 3 ingredients per grade (sorted by `rating` descending)
 are always shown. Everything below rank 3 within its grade is hidden behind "More".
+Up to 9 items are visible by default (3 per grade), from all three grades.
 
-`signature` and `bulk` light up protein tree buttons. `local` items do not.
+**Protein tree button colour rule:**
+- A subcat button turns **dark green** when the cuisine has a `signature` or `local` protein in that subcat.
+- A subcat button turns **light green** when the cuisine has only `bulk` proteins in that subcat.
+- Dark green takes precedence when both are present in the same subcat.
 
 **Do not pad with universal ingredients.** If you cannot confirm an ingredient is
 characteristic of this specific cuisine from a specific source, do not add it.
@@ -105,13 +109,18 @@ Maximum 30 items per cuisine. If a category is not relevant, omit it entirely.
 ## Grade → protein tree lighting
 
 A cuisine's protein tree buttons (🐄 Beef / 🐷 Pork / 🍗 Poultry / 🐟 Fish / 🐑 Lamb / 🦌 Game)
-light up only if the cuisine has a `signature` or `bulk` ingredient that maps to that
-protein category in `PROTEIN_TO_SUBCAT` (in `ai_recipe_data.py`).
+light up for **all three grades** (signature, bulk, local) when the cuisine has an ingredient
+that maps to that protein category in `PROTEIN_TO_SUBCAT` (in `ai_recipe_data.py`).
 
-`local` grade items do NOT light up tree buttons — they appear only behind "More".
+Color semantics:
+- **Dark green** — the subcat has at least one `signature` or `local` protein (cultural/local identity)
+- **Light green** — the subcat has only `bulk` proteins (high-volume staple)
+- Dark green takes precedence when both are present in the same subcat.
 
-This means: if a protein genuinely defines a cuisine (e.g. salmon for Swedish), it MUST be
-`signature` or `bulk`. Marking it `local` hides it from the tree.
+Badge area rule for proteins: any cuisine protein that maps to a tree node (via `PROTEIN_TO_SUBCAT`
+or is a specific cut in `AI_PROTEIN_SUBCATS`) is excluded from the badge area — the tree represents
+it. Non-tree proteins (e.g. elk in Swedish cuisine) appear in the badge area instead, pulling in
+"next in line" items by rating within their grade.
 
 ---
 
