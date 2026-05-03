@@ -62,9 +62,12 @@ One paragraph of sources and key consumption statistics used.
 
 | Grade | Compact view | Lights protein tree | When to use |
 |-------|-------------|--------------------|----|
-| `signature` | ✅ shown | ✅ yes | Important for the identity of the cuisine. Does not have to be common — may be rare or seasonal. |
+| `signature` | ✅ shown | ✅ yes | Important for the identity of the cuisine. Does not have to be high-volume — may be rare or seasonal. |
 | `bulk` | ✅ shown | ✅ yes | Consumed a lot in the country according to statistics (high kg/capita or market share). |
 | `local` | ❌ behind "More" | ❌ no | Produced and/or widely used in the country, but not a bulk-consumption item. |
+
+Both `signature` and `bulk` are **featured** in the compact view and light up protein tree buttons.
+`local` items are not featured — they appear only in the "More" expanded list.
 
 **Do not pad with universal ingredients.** If you cannot confirm an ingredient is
 characteristic of this specific cuisine from a specific source, do not add it.
@@ -92,16 +95,16 @@ A cuisine's protein tree buttons (🐄 Beef / 🐷 Pork / 🍗 Poultry / 🐟 Fi
 light up only if the cuisine has a `signature` or `bulk` ingredient that maps to that
 protein category in `PROTEIN_TO_SUBCAT` (in `ai_recipe_data.py`).
 
-`local` grade items do NOT light up tree buttons — they appear only in the "More" list.
+`local` grade items are NOT featured — they appear only in the "More" list and do NOT light up tree buttons.
 
 This means: if a protein genuinely defines a cuisine (e.g. salmon for Swedish), it MUST be
-`signature` or `bulk`. Making it `local` hides it from the tree.
+`signature` or `bulk`. Marking it `local` hides it from the tree.
 
 ---
 
 ## Research required before writing a file
 
-1. Find consumption data (kg/capita or dietary share) — primary signal for `very_common`
+1. Find consumption data (kg/capita or dietary share) — primary signal for `bulk`
 2. Identify 3–5 signature dishes that define the cuisine — signals `signature` proteins and spices
 3. Identify seasonal or culturally iconic items not in everyday cooking — `signature` grade
 4. Set `research_done: 0` until sources are verified; `1` when thoroughly reviewed

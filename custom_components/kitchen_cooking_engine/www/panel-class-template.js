@@ -5954,11 +5954,11 @@ class KitchenCookingPanel extends LitElement {
     return html`
       ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => {
         const allItems = groups[cat];
-        // Items with common===true are shown by default; items with common===false are in
-        // the extended set shown after "More".  Items with no common field at all get a
+        // Items with featured===true are shown by default; items with featured===false are in
+        // the extended set shown after "More".  Items with no featured field at all get a
         // threshold fallback: first 12 visible, rest behind "More".
-        let baseItems = allItems.filter(i => i.common !== false);
-        let extItems  = allItems.filter(i => i.common === false);
+        let baseItems = allItems.filter(i => i.featured !== false);
+        let extItems  = allItems.filter(i => i.featured === false);
         if (extItems.length === 0 && baseItems.length > 12) {
           extItems  = baseItems.slice(12);
           baseItems = baseItems.slice(0, 12);
@@ -6038,7 +6038,7 @@ class KitchenCookingPanel extends LitElement {
       }
       if (!ings) continue;
       for (const ing of ings) {
-        if (ing.common === false) continue;
+        if (ing.featured === false) continue;
         const sc = proteinToSubcat[ing.id];
         if (!sc) continue;
         cuisineCommonProteinIds.add(ing.id);

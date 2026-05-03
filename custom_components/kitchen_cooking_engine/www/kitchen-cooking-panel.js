@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 May 2026, 08:39 CET
+ * AUTO-GENERATED: 03 May 2026, 08:43 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 03 May 2026, 08:39 CET
+// Last generated: 03 May 2026, 08:43 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -1889,565 +1889,565 @@ const AI_INGREDIENTS = {
     {
       "id": "chicken_breast",
       "name": "Chicken Breast",
-      "common": true
+      "featured": true
     },
     {
       "id": "chicken_thigh",
       "name": "Chicken Thighs",
-      "common": true
+      "featured": true
     },
     {
       "id": "ground_beef",
       "name": "Ground Beef",
-      "common": true
+      "featured": true
     },
     {
       "id": "steak",
       "name": "Steak (Beef)",
-      "common": true
+      "featured": true
     },
     {
       "id": "pork_chop",
       "name": "Pork Chops",
-      "common": true
+      "featured": true
     },
     {
       "id": "salmon",
       "name": "Salmon",
-      "common": true
+      "featured": true
     },
     {
       "id": "shrimp",
       "name": "Shrimp",
-      "common": true
+      "featured": true
     },
     {
       "id": "tofu",
       "name": "Tofu",
-      "common": true
+      "featured": true
     },
     {
       "id": "eggs",
       "name": "Eggs",
-      "common": true
+      "featured": true
     },
     {
       "id": "cod",
       "name": "Cod",
-      "common": false
+      "featured": false
     },
     {
       "id": "tuna",
       "name": "Tuna",
-      "common": false
+      "featured": false
     },
     {
       "id": "lamb",
       "name": "Lamb",
-      "common": false
+      "featured": false
     },
     {
       "id": "duck",
       "name": "Duck",
-      "common": false
+      "featured": false
     },
     {
       "id": "turkey",
       "name": "Turkey",
-      "common": false
+      "featured": false
     },
     {
       "id": "pork_belly",
       "name": "Pork Belly",
-      "common": false
+      "featured": false
     },
     {
       "id": "bacon",
       "name": "Bacon",
-      "common": false
+      "featured": false
     },
     {
       "id": "sausage",
       "name": "Sausage",
-      "common": false
+      "featured": false
     },
     {
       "id": "mussels",
       "name": "Mussels",
-      "common": false
+      "featured": false
     },
     {
       "id": "crab",
       "name": "Crab",
-      "common": false
+      "featured": false
     },
     {
       "id": "herring",
       "name": "Herring",
-      "common": false
+      "featured": false
     },
     {
       "id": "paneer",
       "name": "Paneer",
-      "common": false
+      "featured": false
     },
     {
       "id": "tempeh",
       "name": "Tempeh",
-      "common": false
+      "featured": false
     },
     {
       "id": "anchovies",
       "name": "Anchovies",
-      "common": false
+      "featured": false
     }
   ],
   "vegetables": [
     {
       "id": "broccoli",
       "name": "Broccoli",
-      "common": true
+      "featured": true
     },
     {
       "id": "carrots",
       "name": "Carrots",
-      "common": true
+      "featured": true
     },
     {
       "id": "bell_peppers",
       "name": "Bell Peppers",
-      "common": true
+      "featured": true
     },
     {
       "id": "onions",
       "name": "Onions",
-      "common": true
+      "featured": true
     },
     {
       "id": "garlic",
       "name": "Garlic",
-      "common": true
+      "featured": true
     },
     {
       "id": "tomatoes",
       "name": "Tomatoes",
-      "common": true
+      "featured": true
     },
     {
       "id": "spinach",
       "name": "Spinach",
-      "common": true
+      "featured": true
     },
     {
       "id": "potatoes",
       "name": "Potatoes",
-      "common": true
+      "featured": true
     },
     {
       "id": "sweet_potatoes",
       "name": "Sweet Potatoes",
-      "common": true
+      "featured": true
     },
     {
       "id": "zucchini",
       "name": "Zucchini",
-      "common": true
+      "featured": true
     },
     {
       "id": "cauliflower",
       "name": "Cauliflower",
-      "common": true
+      "featured": true
     },
     {
       "id": "green_beans",
       "name": "Green Beans",
-      "common": true
+      "featured": true
     },
     {
       "id": "mushrooms",
       "name": "Mushrooms",
-      "common": false
+      "featured": false
     },
     {
       "id": "eggplant",
       "name": "Eggplant / Aubergine",
-      "common": false
+      "featured": false
     },
     {
       "id": "celery",
       "name": "Celery",
-      "common": false
+      "featured": false
     },
     {
       "id": "leeks",
       "name": "Leeks",
-      "common": false
+      "featured": false
     },
     {
       "id": "cabbage",
       "name": "Cabbage",
-      "common": false
+      "featured": false
     },
     {
       "id": "peas",
       "name": "Peas",
-      "common": false
+      "featured": false
     },
     {
       "id": "corn",
       "name": "Corn",
-      "common": false
+      "featured": false
     },
     {
       "id": "cucumber",
       "name": "Cucumber",
-      "common": false
+      "featured": false
     },
     {
       "id": "avocado",
       "name": "Avocado",
-      "common": false
+      "featured": false
     },
     {
       "id": "beets",
       "name": "Beets",
-      "common": false
+      "featured": false
     },
     {
       "id": "artichokes",
       "name": "Artichokes",
-      "common": false
+      "featured": false
     },
     {
       "id": "pumpkin",
       "name": "Pumpkin / Squash",
-      "common": false
+      "featured": false
     },
     {
       "id": "fennel",
       "name": "Fennel",
-      "common": false
+      "featured": false
     },
     {
       "id": "okra",
       "name": "Okra",
-      "common": false
+      "featured": false
     },
     {
       "id": "parsnips",
       "name": "Parsnips",
-      "common": false
+      "featured": false
     },
     {
       "id": "turnips",
       "name": "Turnips",
-      "common": false
+      "featured": false
     }
   ],
   "grains": [
     {
       "id": "rice",
       "name": "Rice",
-      "common": true
+      "featured": true
     },
     {
       "id": "pasta",
       "name": "Pasta",
-      "common": true
+      "featured": true
     },
     {
       "id": "quinoa",
       "name": "Quinoa",
-      "common": true
+      "featured": true
     },
     {
       "id": "bread",
       "name": "Bread",
-      "common": true
+      "featured": true
     },
     {
       "id": "tortillas",
       "name": "Tortillas",
-      "common": true
+      "featured": true
     },
     {
       "id": "lentils",
       "name": "Lentils",
-      "common": false
+      "featured": false
     },
     {
       "id": "chickpeas",
       "name": "Chickpeas",
-      "common": false
+      "featured": false
     },
     {
       "id": "black_beans",
       "name": "Black Beans",
-      "common": false
+      "featured": false
     },
     {
       "id": "kidney_beans",
       "name": "Kidney Beans",
-      "common": false
+      "featured": false
     },
     {
       "id": "oats",
       "name": "Oats",
-      "common": false
+      "featured": false
     },
     {
       "id": "barley",
       "name": "Barley",
-      "common": false
+      "featured": false
     },
     {
       "id": "couscous",
       "name": "Couscous",
-      "common": false
+      "featured": false
     },
     {
       "id": "polenta",
       "name": "Polenta / Cornmeal",
-      "common": false
+      "featured": false
     },
     {
       "id": "noodles",
       "name": "Noodles",
-      "common": false
+      "featured": false
     },
     {
       "id": "pita",
       "name": "Pita Bread",
-      "common": false
+      "featured": false
     },
     {
       "id": "flour",
       "name": "Flour",
-      "common": false
+      "featured": false
     }
   ],
   "dairy": [
     {
       "id": "cheese",
       "name": "Cheese",
-      "common": true
+      "featured": true
     },
     {
       "id": "milk",
       "name": "Milk",
-      "common": true
+      "featured": true
     },
     {
       "id": "butter",
       "name": "Butter",
-      "common": true
+      "featured": true
     },
     {
       "id": "cream",
       "name": "Cream",
-      "common": true
+      "featured": true
     },
     {
       "id": "yogurt",
       "name": "Yogurt",
-      "common": true
+      "featured": true
     },
     {
       "id": "sour_cream",
       "name": "Sour Cream",
-      "common": false
+      "featured": false
     },
     {
       "id": "cream_cheese",
       "name": "Cream Cheese",
-      "common": false
+      "featured": false
     },
     {
       "id": "parmesan",
       "name": "Parmesan",
-      "common": false
+      "featured": false
     },
     {
       "id": "feta",
       "name": "Feta",
-      "common": false
+      "featured": false
     },
     {
       "id": "mozzarella",
       "name": "Mozzarella",
-      "common": false
+      "featured": false
     },
     {
       "id": "cheddar",
       "name": "Cheddar",
-      "common": false
+      "featured": false
     },
     {
       "id": "coconut_milk",
       "name": "Coconut Milk",
-      "common": false
+      "featured": false
     },
     {
       "id": "olive_oil",
       "name": "Olive Oil",
-      "common": false
+      "featured": false
     },
     {
       "id": "soy_sauce",
       "name": "Soy Sauce",
-      "common": false
+      "featured": false
     },
     {
       "id": "tomato_paste",
       "name": "Tomato Paste",
-      "common": false
+      "featured": false
     },
     {
       "id": "mustard",
       "name": "Mustard",
-      "common": false
+      "featured": false
     },
     {
       "id": "honey",
       "name": "Honey",
-      "common": false
+      "featured": false
     }
   ],
   "spices": [
     {
       "id": "cumin",
       "name": "Cumin",
-      "common": true
+      "featured": true
     },
     {
       "id": "paprika",
       "name": "Paprika",
-      "common": true
+      "featured": true
     },
     {
       "id": "cinnamon",
       "name": "Cinnamon",
-      "common": true
+      "featured": true
     },
     {
       "id": "turmeric",
       "name": "Turmeric",
-      "common": true
+      "featured": true
     },
     {
       "id": "coriander",
       "name": "Coriander",
-      "common": true
+      "featured": true
     },
     {
       "id": "chili_powder",
       "name": "Chili Powder",
-      "common": true
+      "featured": true
     },
     {
       "id": "garam_masala",
       "name": "Garam Masala",
-      "common": true
+      "featured": true
     },
     {
       "id": "oregano",
       "name": "Oregano",
-      "common": true
+      "featured": true
     },
     {
       "id": "thyme",
       "name": "Thyme",
-      "common": false
+      "featured": false
     },
     {
       "id": "rosemary",
       "name": "Rosemary",
-      "common": false
+      "featured": false
     },
     {
       "id": "basil",
       "name": "Basil",
-      "common": false
+      "featured": false
     },
     {
       "id": "mint",
       "name": "Mint",
-      "common": false
+      "featured": false
     },
     {
       "id": "dill",
       "name": "Dill",
-      "common": false
+      "featured": false
     },
     {
       "id": "parsley",
       "name": "Parsley",
-      "common": false
+      "featured": false
     },
     {
       "id": "cilantro",
       "name": "Cilantro",
-      "common": false
+      "featured": false
     },
     {
       "id": "star_anise",
       "name": "Star Anise",
-      "common": false
+      "featured": false
     },
     {
       "id": "cardamom",
       "name": "Cardamom",
-      "common": false
+      "featured": false
     },
     {
       "id": "saffron",
       "name": "Saffron",
-      "common": false
+      "featured": false
     },
     {
       "id": "five_spice",
       "name": "Five Spice",
-      "common": false
+      "featured": false
     },
     {
       "id": "ras_el_hanout",
       "name": "Ras el Hanout",
-      "common": false
+      "featured": false
     },
     {
       "id": "sumac",
       "name": "Sumac",
-      "common": false
+      "featured": false
     },
     {
       "id": "berbere",
       "name": "Berbere",
-      "common": false
+      "featured": false
     },
     {
       "id": "sesame_seeds",
       "name": "Sesame Seeds",
-      "common": false
+      "featured": false
     },
     {
       "id": "peanuts",
       "name": "Peanuts",
-      "common": false
+      "featured": false
     },
     {
       "id": "almonds",
       "name": "Almonds",
-      "common": false
+      "featured": false
     },
     {
       "id": "walnuts",
       "name": "Walnuts",
-      "common": false
+      "featured": false
     },
     {
       "id": "pine_nuts",
       "name": "Pine Nuts",
-      "common": false
+      "featured": false
     }
   ]
 };
@@ -2458,667 +2458,667 @@ const AI_COMMON_INGREDIENTS = [
     "id": "chicken_breast",
     "name": "Chicken Breast",
     "cat": "p",
-    "common": true
+    "featured": true
   },
   {
     "id": "chicken_thigh",
     "name": "Chicken Thighs",
     "cat": "p",
-    "common": true
+    "featured": true
   },
   {
     "id": "ground_beef",
     "name": "Ground Beef",
     "cat": "p",
-    "common": true
+    "featured": true
   },
   {
     "id": "steak",
     "name": "Steak (Beef)",
     "cat": "p",
-    "common": true
+    "featured": true
   },
   {
     "id": "pork_chop",
     "name": "Pork Chops",
     "cat": "p",
-    "common": true
+    "featured": true
   },
   {
     "id": "salmon",
     "name": "Salmon",
     "cat": "p",
-    "common": true
+    "featured": true
   },
   {
     "id": "shrimp",
     "name": "Shrimp",
     "cat": "p",
-    "common": true
+    "featured": true
   },
   {
     "id": "tofu",
     "name": "Tofu",
     "cat": "p",
-    "common": true
+    "featured": true
   },
   {
     "id": "eggs",
     "name": "Eggs",
     "cat": "p",
-    "common": true
+    "featured": true
   },
   {
     "id": "cod",
     "name": "Cod",
     "cat": "p",
-    "common": false
+    "featured": false
   },
   {
     "id": "tuna",
     "name": "Tuna",
     "cat": "p",
-    "common": false
+    "featured": false
   },
   {
     "id": "lamb",
     "name": "Lamb",
     "cat": "p",
-    "common": false
+    "featured": false
   },
   {
     "id": "duck",
     "name": "Duck",
     "cat": "p",
-    "common": false
+    "featured": false
   },
   {
     "id": "turkey",
     "name": "Turkey",
     "cat": "p",
-    "common": false
+    "featured": false
   },
   {
     "id": "pork_belly",
     "name": "Pork Belly",
     "cat": "p",
-    "common": false
+    "featured": false
   },
   {
     "id": "bacon",
     "name": "Bacon",
     "cat": "p",
-    "common": false
+    "featured": false
   },
   {
     "id": "sausage",
     "name": "Sausage",
     "cat": "p",
-    "common": false
+    "featured": false
   },
   {
     "id": "mussels",
     "name": "Mussels",
     "cat": "p",
-    "common": false
+    "featured": false
   },
   {
     "id": "crab",
     "name": "Crab",
     "cat": "p",
-    "common": false
+    "featured": false
   },
   {
     "id": "herring",
     "name": "Herring",
     "cat": "p",
-    "common": false
+    "featured": false
   },
   {
     "id": "paneer",
     "name": "Paneer",
     "cat": "p",
-    "common": false
+    "featured": false
   },
   {
     "id": "tempeh",
     "name": "Tempeh",
     "cat": "p",
-    "common": false
+    "featured": false
   },
   {
     "id": "anchovies",
     "name": "Anchovies",
     "cat": "p",
-    "common": false
+    "featured": false
   },
   {
     "id": "broccoli",
     "name": "Broccoli",
     "cat": "v",
-    "common": true
+    "featured": true
   },
   {
     "id": "carrots",
     "name": "Carrots",
     "cat": "v",
-    "common": true
+    "featured": true
   },
   {
     "id": "bell_peppers",
     "name": "Bell Peppers",
     "cat": "v",
-    "common": true
+    "featured": true
   },
   {
     "id": "onions",
     "name": "Onions",
     "cat": "v",
-    "common": true
+    "featured": true
   },
   {
     "id": "garlic",
     "name": "Garlic",
     "cat": "v",
-    "common": true
+    "featured": true
   },
   {
     "id": "tomatoes",
     "name": "Tomatoes",
     "cat": "v",
-    "common": true
+    "featured": true
   },
   {
     "id": "spinach",
     "name": "Spinach",
     "cat": "v",
-    "common": true
+    "featured": true
   },
   {
     "id": "potatoes",
     "name": "Potatoes",
     "cat": "g",
-    "common": true
+    "featured": true
   },
   {
     "id": "sweet_potatoes",
     "name": "Sweet Potatoes",
     "cat": "v",
-    "common": true
+    "featured": true
   },
   {
     "id": "zucchini",
     "name": "Zucchini",
     "cat": "v",
-    "common": true
+    "featured": true
   },
   {
     "id": "cauliflower",
     "name": "Cauliflower",
     "cat": "v",
-    "common": true
+    "featured": true
   },
   {
     "id": "green_beans",
     "name": "Green Beans",
     "cat": "v",
-    "common": true
+    "featured": true
   },
   {
     "id": "mushrooms",
     "name": "Mushrooms",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "eggplant",
     "name": "Eggplant / Aubergine",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "celery",
     "name": "Celery",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "leeks",
     "name": "Leeks",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "cabbage",
     "name": "Cabbage",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "peas",
     "name": "Peas",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "corn",
     "name": "Corn",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "cucumber",
     "name": "Cucumber",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "avocado",
     "name": "Avocado",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "beets",
     "name": "Beets",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "artichokes",
     "name": "Artichokes",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "pumpkin",
     "name": "Pumpkin / Squash",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "fennel",
     "name": "Fennel",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "okra",
     "name": "Okra",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "parsnips",
     "name": "Parsnips",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "turnips",
     "name": "Turnips",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "rice",
     "name": "Rice",
     "cat": "g",
-    "common": true
+    "featured": true
   },
   {
     "id": "pasta",
     "name": "Pasta",
     "cat": "g",
-    "common": true
+    "featured": true
   },
   {
     "id": "quinoa",
     "name": "Quinoa",
     "cat": "g",
-    "common": true
+    "featured": true
   },
   {
     "id": "bread",
     "name": "Bread",
     "cat": "g",
-    "common": true
+    "featured": true
   },
   {
     "id": "tortillas",
     "name": "Tortillas",
     "cat": "g",
-    "common": true
+    "featured": true
   },
   {
     "id": "lentils",
     "name": "Lentils",
     "cat": "g",
-    "common": false
+    "featured": false
   },
   {
     "id": "chickpeas",
     "name": "Chickpeas",
     "cat": "g",
-    "common": false
+    "featured": false
   },
   {
     "id": "black_beans",
     "name": "Black Beans",
     "cat": "g",
-    "common": false
+    "featured": false
   },
   {
     "id": "kidney_beans",
     "name": "Kidney Beans",
     "cat": "g",
-    "common": false
+    "featured": false
   },
   {
     "id": "oats",
     "name": "Oats",
     "cat": "g",
-    "common": false
+    "featured": false
   },
   {
     "id": "barley",
     "name": "Barley",
     "cat": "g",
-    "common": false
+    "featured": false
   },
   {
     "id": "couscous",
     "name": "Couscous",
     "cat": "g",
-    "common": false
+    "featured": false
   },
   {
     "id": "polenta",
     "name": "Polenta / Cornmeal",
     "cat": "g",
-    "common": false
+    "featured": false
   },
   {
     "id": "noodles",
     "name": "Noodles",
     "cat": "g",
-    "common": false
+    "featured": false
   },
   {
     "id": "pita",
     "name": "Pita Bread",
     "cat": "g",
-    "common": false
+    "featured": false
   },
   {
     "id": "flour",
     "name": "Flour",
     "cat": "g",
-    "common": false
+    "featured": false
   },
   {
     "id": "cheese",
     "name": "Cheese",
     "cat": "d",
-    "common": true
+    "featured": true
   },
   {
     "id": "milk",
     "name": "Milk",
     "cat": "d",
-    "common": true
+    "featured": true
   },
   {
     "id": "butter",
     "name": "Butter",
     "cat": "d",
-    "common": true
+    "featured": true
   },
   {
     "id": "cream",
     "name": "Cream",
     "cat": "d",
-    "common": true
+    "featured": true
   },
   {
     "id": "yogurt",
     "name": "Yogurt",
     "cat": "d",
-    "common": true
+    "featured": true
   },
   {
     "id": "sour_cream",
     "name": "Sour Cream",
     "cat": "d",
-    "common": false
+    "featured": false
   },
   {
     "id": "cream_cheese",
     "name": "Cream Cheese",
     "cat": "d",
-    "common": false
+    "featured": false
   },
   {
     "id": "parmesan",
     "name": "Parmesan",
     "cat": "d",
-    "common": false
+    "featured": false
   },
   {
     "id": "feta",
     "name": "Feta",
     "cat": "d",
-    "common": false
+    "featured": false
   },
   {
     "id": "mozzarella",
     "name": "Mozzarella",
     "cat": "d",
-    "common": false
+    "featured": false
   },
   {
     "id": "cheddar",
     "name": "Cheddar",
     "cat": "d",
-    "common": false
+    "featured": false
   },
   {
     "id": "coconut_milk",
     "name": "Coconut Milk",
     "cat": "d",
-    "common": false
+    "featured": false
   },
   {
     "id": "olive_oil",
     "name": "Olive Oil",
     "cat": "d",
-    "common": false
+    "featured": false
   },
   {
     "id": "soy_sauce",
     "name": "Soy Sauce",
     "cat": "d",
-    "common": false
+    "featured": false
   },
   {
     "id": "tomato_paste",
     "name": "Tomato Paste",
     "cat": "d",
-    "common": false
+    "featured": false
   },
   {
     "id": "mustard",
     "name": "Mustard",
     "cat": "d",
-    "common": false
+    "featured": false
   },
   {
     "id": "honey",
     "name": "Honey",
     "cat": "d",
-    "common": false
+    "featured": false
   },
   {
     "id": "cumin",
     "name": "Cumin",
     "cat": "s",
-    "common": true
+    "featured": true
   },
   {
     "id": "paprika",
     "name": "Paprika",
     "cat": "s",
-    "common": true
+    "featured": true
   },
   {
     "id": "cinnamon",
     "name": "Cinnamon",
     "cat": "s",
-    "common": true
+    "featured": true
   },
   {
     "id": "turmeric",
     "name": "Turmeric",
     "cat": "s",
-    "common": true
+    "featured": true
   },
   {
     "id": "coriander",
     "name": "Coriander",
     "cat": "s",
-    "common": true
+    "featured": true
   },
   {
     "id": "chili_powder",
     "name": "Chili Powder",
     "cat": "s",
-    "common": true
+    "featured": true
   },
   {
     "id": "garam_masala",
     "name": "Garam Masala",
     "cat": "s",
-    "common": true
+    "featured": true
   },
   {
     "id": "oregano",
     "name": "Oregano",
     "cat": "v",
-    "common": true
+    "featured": true
   },
   {
     "id": "thyme",
     "name": "Thyme",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "rosemary",
     "name": "Rosemary",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "basil",
     "name": "Basil",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "mint",
     "name": "Mint",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "dill",
     "name": "Dill",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "parsley",
     "name": "Parsley",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "cilantro",
     "name": "Cilantro",
     "cat": "v",
-    "common": false
+    "featured": false
   },
   {
     "id": "star_anise",
     "name": "Star Anise",
     "cat": "s",
-    "common": false
+    "featured": false
   },
   {
     "id": "cardamom",
     "name": "Cardamom",
     "cat": "s",
-    "common": false
+    "featured": false
   },
   {
     "id": "saffron",
     "name": "Saffron",
     "cat": "s",
-    "common": false
+    "featured": false
   },
   {
     "id": "five_spice",
     "name": "Five Spice",
     "cat": "s",
-    "common": false
+    "featured": false
   },
   {
     "id": "ras_el_hanout",
     "name": "Ras el Hanout",
     "cat": "s",
-    "common": false
+    "featured": false
   },
   {
     "id": "sumac",
     "name": "Sumac",
     "cat": "s",
-    "common": false
+    "featured": false
   },
   {
     "id": "berbere",
     "name": "Berbere",
     "cat": "s",
-    "common": false
+    "featured": false
   },
   {
     "id": "sesame_seeds",
     "name": "Sesame Seeds",
     "cat": "s",
-    "common": false
+    "featured": false
   },
   {
     "id": "peanuts",
     "name": "Peanuts",
     "cat": "s",
-    "common": false
+    "featured": false
   },
   {
     "id": "almonds",
     "name": "Almonds",
     "cat": "s",
-    "common": false
+    "featured": false
   },
   {
     "id": "walnuts",
     "name": "Walnuts",
     "cat": "s",
-    "common": false
+    "featured": false
   },
   {
     "id": "pine_nuts",
     "name": "Pine Nuts",
     "cat": "s",
-    "common": false
+    "featured": false
   }
 ];
 
@@ -3984,7 +3984,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Pork",
       "cat": "p",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Fläsk"
     },
     {
@@ -3992,7 +3992,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Chicken",
       "cat": "p",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Kyckling"
     },
     {
@@ -4000,7 +4000,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Beef",
       "cat": "p",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Nötkött"
     },
     {
@@ -4008,7 +4008,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Salmon",
       "cat": "p",
       "grade": "signature",
-      "common": true,
+      "featured": true,
       "name_sv": "Lax"
     },
     {
@@ -4016,7 +4016,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Herring",
       "cat": "p",
       "grade": "signature",
-      "common": true,
+      "featured": true,
       "name_sv": "Sill"
     },
     {
@@ -4024,7 +4024,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Elk",
       "cat": "p",
       "grade": "signature",
-      "common": true,
+      "featured": true,
       "name_sv": "Älg"
     },
     {
@@ -4032,7 +4032,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Reindeer",
       "cat": "p",
       "grade": "signature",
-      "common": true,
+      "featured": true,
       "name_sv": "Renkött"
     },
     {
@@ -4040,7 +4040,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Cod",
       "cat": "p",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Torsk"
     },
     {
@@ -4048,7 +4048,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Eggs",
       "cat": "p",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Ägg"
     },
     {
@@ -4056,7 +4056,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Potatoes",
       "cat": "v",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Potatis"
     },
     {
@@ -4064,7 +4064,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Onions",
       "cat": "v",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Lök"
     },
     {
@@ -4072,7 +4072,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Carrots",
       "cat": "v",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Morötter"
     },
     {
@@ -4080,7 +4080,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Cabbage",
       "cat": "v",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Kål"
     },
     {
@@ -4088,7 +4088,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Beetroot",
       "cat": "v",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Rödbeta"
     },
     {
@@ -4096,7 +4096,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Dill",
       "cat": "v",
       "grade": "signature",
-      "common": true,
+      "featured": true,
       "name_sv": "Dill"
     },
     {
@@ -4104,7 +4104,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Nettles",
       "cat": "v",
       "grade": "signature",
-      "common": true,
+      "featured": true,
       "name_sv": "Nässlor"
     },
     {
@@ -4112,7 +4112,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Lingonberries",
       "cat": "v",
       "grade": "signature",
-      "common": true,
+      "featured": true,
       "name_sv": "Lingon"
     },
     {
@@ -4120,7 +4120,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Leeks",
       "cat": "v",
       "grade": "local",
-      "common": false,
+      "featured": false,
       "name_sv": "Purjolök"
     },
     {
@@ -4128,7 +4128,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Celeriac",
       "cat": "v",
       "grade": "local",
-      "common": false,
+      "featured": false,
       "name_sv": "Rotselleri"
     },
     {
@@ -4136,7 +4136,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Parsnips",
       "cat": "v",
       "grade": "local",
-      "common": false,
+      "featured": false,
       "name_sv": "Palsternacka"
     },
     {
@@ -4144,7 +4144,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Cream",
       "cat": "d",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Grädde"
     },
     {
@@ -4152,7 +4152,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Sour Cream",
       "cat": "d",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Gräddfil"
     },
     {
@@ -4160,7 +4160,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Butter",
       "cat": "d",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Smör"
     },
     {
@@ -4168,7 +4168,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Allspice",
       "cat": "s",
       "grade": "signature",
-      "common": true,
+      "featured": true,
       "name_sv": "Kryddpeppar"
     },
     {
@@ -4176,7 +4176,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "White Pepper",
       "cat": "s",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Vitpeppar"
     },
     {
@@ -4184,7 +4184,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Cardamom",
       "cat": "s",
       "grade": "signature",
-      "common": true,
+      "featured": true,
       "name_sv": "Kardemumma"
     },
     {
@@ -4192,7 +4192,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Juniper Berries",
       "cat": "s",
       "grade": "signature",
-      "common": true,
+      "featured": true,
       "name_sv": "Enbär"
     },
     {
@@ -4200,7 +4200,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Bay Leaves",
       "cat": "s",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Lagerblad"
     },
     {
@@ -4208,7 +4208,7 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Mustard",
       "cat": "s",
       "grade": "bulk",
-      "common": true,
+      "featured": true,
       "name_sv": "Senap"
     }
   ]
@@ -4357,7 +4357,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["turkey", "beef", "goat", "duck", "lamb", "veal", "fish", "venison", "chicken", "rabbit", "pork"];
+const AI_GENERIC_PROTEIN_IDS = ["pork", "duck", "rabbit", "fish", "goat", "chicken", "beef", "veal", "venison", "turkey", "lamb"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -21757,11 +21757,11 @@ class KitchenCookingPanel extends LitElement {
     return html`
       ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => {
         const allItems = groups[cat];
-        // Items with common===true are shown by default; items with common===false are in
-        // the extended set shown after "More".  Items with no common field at all get a
+        // Items with featured===true are shown by default; items with featured===false are in
+        // the extended set shown after "More".  Items with no featured field at all get a
         // threshold fallback: first 12 visible, rest behind "More".
-        let baseItems = allItems.filter(i => i.common !== false);
-        let extItems  = allItems.filter(i => i.common === false);
+        let baseItems = allItems.filter(i => i.featured !== false);
+        let extItems  = allItems.filter(i => i.featured === false);
         if (extItems.length === 0 && baseItems.length > 12) {
           extItems  = baseItems.slice(12);
           baseItems = baseItems.slice(0, 12);
@@ -21841,7 +21841,7 @@ class KitchenCookingPanel extends LitElement {
       }
       if (!ings) continue;
       for (const ing of ings) {
-        if (ing.common === false) continue;
+        if (ing.featured === false) continue;
         const sc = proteinToSubcat[ing.id];
         if (!sc) continue;
         cuisineCommonProteinIds.add(ing.id);
@@ -27127,7 +27127,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "409";
+const PANEL_VERSION = "411";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

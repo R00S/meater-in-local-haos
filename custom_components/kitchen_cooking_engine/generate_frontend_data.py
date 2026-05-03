@@ -134,12 +134,12 @@ def build_cuisine_data(base_dir):
         ...
 
     Grades:
-        signature → common=True  (shown in compact view; lights up protein tree — identity of the cuisine)
-        bulk      → common=True  (shown in compact view; lights up protein tree — high consumption by statistics)
-        local     → common=False (shown in "More"; does not light up protein tree — produced/widely used locally)
+        signature → featured=True  (shown in compact view; lights up protein tree — identity of the cuisine)
+        bulk      → featured=True  (shown in compact view; lights up protein tree — high consumption by statistics)
+        local     → featured=False (shown in "More"; does not light up protein tree — produced/widely used locally)
 
     Returns (cuisine_ingredients, cuisine_to_group) where:
-        cuisine_ingredients: {cuisine_id: [{id, name, name_sv?, cat, grade, common}, ...]}
+        cuisine_ingredients: {cuisine_id: [{id, name, name_sv?, cat, grade, featured}, ...]}
         cuisine_to_group:    {cuisine_id: culinary_group_str}
     """
     _section_to_cat = {
@@ -152,7 +152,7 @@ def build_cuisine_data(base_dir):
         "condiments":           "s",
         "other":                "s",
     }
-    _grade_common = {
+    _grade_featured = {
         "signature":    True,
         "bulk":         True,
         "local":        False,
@@ -221,14 +221,14 @@ def build_cuisine_data(base_dir):
                     continue
                 ing_id = item.get("id")
                 grade = str(item.get("grade", "local"))
-                if not ing_id or grade not in _grade_common:
+                if not ing_id or grade not in _grade_featured:
                     continue
                 entry = {
                     "id": ing_id,
                     "name": item.get("name", ing_id.replace("_", " ").title()),
                     "cat": current_cat,
                     "grade": grade,
-                    "common": _grade_common[grade],
+                    "featured": _grade_featured[grade],
                 }
                 if item.get("name_sv"):
                     entry["name_sv"] = item["name_sv"]
@@ -780,13 +780,13 @@ def generate_js_data():
                     continue
                 cat = ai_ingredient_categories.get(ing["id"], "s")  # default to spices
                 item = {"id": ing["id"], "name": ing["name"], "cat": cat}
-                if "common" in ing:
-                    item["common"] = ing["common"]
+                if "featured" in ing:
+                    item["featured"] = ing["featured"]
                 enriched.append(item)
             enriched_cuisine[cuisine_id] = enriched
         ai_cuisine_ingredients = enriched_cuisine
 
-    # Build AI_COMMON_INGREDIENTS — a flat array with {id, name, cat, common} per item.
+    # Build AI_COMMON_INGREDIENTS — a flat array with {id, name, cat, featured} per item.
     # Maps the category-dict structure of COMMON_INGREDIENTS into category codes used by the UI.
     _cat_key_to_code = {
         "proteins": "p",
@@ -804,7 +804,7 @@ def generate_js_data():
                     "id": ing["id"],
                     "name": ing["name"],
                     "cat": ai_ingredient_categories.get(ing["id"], cat_code),
-                    "common": ing.get("common", True),
+                    "featured": ing.get("featured", True),
                 }
                 ai_common_ingredients_flat.append(enriched_item)
 
