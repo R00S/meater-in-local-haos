@@ -156,7 +156,7 @@ next agent what was already looked for and prevents duplicate work.
 |-------|----------|-------------|
 | `id` | ✅ | Stable identifier used by the UI (e.g. `salmon`, `white_pepper`) |
 | `grade` | ✅ | `signature`, `bulk`, or `local` (see above) |
-| `rating` | ✅ | Integer 1–9. Significance within the grade — not a rank. Multiple ingredients may share the same value. Top 3 per grade by highest rating are shown by default (before "More" is clicked); clicking "More" reveals the remaining items — at least 6 more per grade should be present so the "More" section is meaningful. |
+| `rating` | ✅ | Integer 1–9. Significance within the grade — not a rank. Multiple ingredients may share the same value. Top 3 shown per grade (by highest rating, before "More" is clicked); clicking "More" reveals at least 6 more per grade — 9 or more items per pair ensures the "More" section is always meaningful. |
 | `name` | ✅ | English display name |
 | `name_sv` | ✅ | Swedish display name (include where known) |
 | `notes` | — | Evidence for the grade and rating; brief source reference |
@@ -165,16 +165,16 @@ next agent what was already looked for and prevents duplicate work.
 
 ## The three grades — UI consequences
 
-| Grade | Default shown | Lights protein tree | When to use |
+| Grade | Shown before "More" | Lights protein tree | When to use |
 |-------|:---:|:---:|----|
-| `signature` | Top 3 by rating | ✅ dark green | Identity of the cuisine — not necessarily high-volume; may be rare or seasonal. |
-| `bulk` | Top 3 by rating | ✅ light green | Consumed a lot by statistics (high kg/capita or market share). |
-| `local` | Top 3 by rating | ✅ dark green | Produced/widely used locally, but not a bulk-consumption item. |
+| `signature` | Top 3 shown | ✅ dark green | Identity of the cuisine — not necessarily high-volume; may be rare or seasonal. |
+| `bulk` | Top 3 shown | ✅ light green | Consumed a lot by statistics (high kg/capita or market share). |
+| `local` | Top 3 shown | ✅ dark green | Produced/widely used locally, but not a bulk-consumption item. |
 
-**Default visibility rule:** within each category, the top 3 ingredients per grade (sorted by
-`rating` descending) are shown before the user clicks "More". Everything below rank 3 within its
+**Default visibility rule:** within each category, the top 3 shown per grade (sorted by
+`rating` descending) are visible before the user clicks "More". Everything beyond the top 3 shown within its
 grade is hidden behind "More" — clicking it reveals all remaining items. Up to 9 items are visible
-by default (3 per grade × 3 grades). The data target per grade is **9 or more** items, so that
+by default (top 3 shown × 3 grades). The data target per grade is **9 or more** items, so that
 clicking "More" always reveals at least 6 additional items per grade.
 
 **Protein tree button colour rule:**
@@ -313,16 +313,16 @@ and any other broad category that turns up in research.
 
 ---
 
-### ❌ Trap 4: Treating "top 3" as the target count, or stopping early
+### ❌ Trap 4: Treating "top 3 shown" as the target count, or stopping early
 
-The UI shows the top 3 items per grade by default, and hides the rest behind "More".
+The UI shows the top 3 items per grade when "More" has not been clicked, and hides the rest behind "More".
 This is a **display rule**, not a data target. There is **no upper limit** on how many
 items a pair can have.
 
 A spice-heavy cuisine like Indian or Persian may warrant 15+ verified bulk seasonings.
-**Nine items is the absolute floor** — 9 real items is the minimum credible result for a
+**Nine or more items is the absolute floor** — 9 or more real items is the minimum credible result for a
 pair that has been researched. This ensures that when the user clicks "More", they see
-at least 6 additional items beyond the top-3 default view. Add every verified item you
+at least 6 additional items beyond the top 3 shown (before "More" is clicked). Add every verified item you
 find beyond 9; they all improve the AI's picture of the cuisine and appear when the user
 clicks "More".
 
