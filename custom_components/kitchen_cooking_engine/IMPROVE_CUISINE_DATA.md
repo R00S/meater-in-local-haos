@@ -114,7 +114,7 @@ Sources used and key findings. Be brief but specific — list the sources and ke
 ### Proteins — Signature
 <!-- Searched: "famous Japanese dishes proteins", "Japanese food culture iconic ingredients" -->
 
-- {id: salmon, grade: signature, rating: 10, name: Salmon, name_sv: "Lax", notes: "Sashimi, sushi; cornerstone of Japanese fish culture"}
+- {id: salmon, grade: signature, rating: 9, name: Salmon, name_sv: "Lax", notes: "Sashimi, sushi; cornerstone of Japanese fish culture"}
 
 ### Proteins — Bulk
 <!-- Searched: "Japan meat consumption kg per capita 2022", "Japan FAO food balance" -->
@@ -151,7 +151,7 @@ next agent what was already looked for and prevents duplicate work.
 |-------|----------|-------------|
 | `id` | ✅ | Stable identifier used by the UI (e.g. `salmon`, `white_pepper`) |
 | `grade` | ✅ | `signature`, `bulk`, or `local` (see above) |
-| `rating` | ✅ | Integer 1–10. How important within the grade. Top 3 per grade are shown by default; rest hidden under "More". |
+| `rating` | ✅ | Integer 1–9. Significance within the grade — not a rank. Multiple ingredients may share the same value. Top 3 per grade by highest rating are shown by default; rest hidden under "More". |
 | `name` | ✅ | English display name |
 | `name_sv` | ✅ | Swedish display name (include where known) |
 | `notes` | — | Evidence for the grade and rating; brief source reference |
@@ -296,7 +296,7 @@ not the end. A category word in a search result is a signal to go one level deep
 
 **Right:** search "most consumed cheese varieties in Norway" and add separate entries:
 ```
-- {id: brunost, grade: signature, rating: 10, name: Brunost, name_sv: Brunost, notes: "Brown whey cheese; iconic Norwegian; worldwide export"}
+- {id: brunost, grade: signature, rating: 9, name: Brunost, name_sv: Brunost, notes: "Brown whey cheese; iconic Norwegian; worldwide export"}
 - {id: jarlsberg, grade: bulk, rating: 9, name: Jarlsberg, name_sv: Jarlsberg, notes: "Mild semi-hard; Norway's most exported cheese"}
 - {id: norvegia, grade: bulk, rating: 8, name: Norvegia, name_sv: Norvegia, notes: "Most consumed everyday cheese in Norway"}
 ```

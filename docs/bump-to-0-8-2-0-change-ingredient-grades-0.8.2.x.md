@@ -100,3 +100,26 @@ v0.8.1.10 was unaffected because it had the region list hardcoded in the templat
    - Bumped version 0.8.2.9 → 0.8.2.10.
    - Updated USER_GUIDE.md §7.2 to mention the cuisine description shown on selection.
 
+### 2026-05-03 — Agent session G
+
+**Tasks completed (v0.8.2.11):**
+
+1. **Randomized stub ratings across all 97 cuisine files (range 1–9):**
+   - Previous ratings used shuffled sequences of 9 distinct values (2–10) — still looked like orderings.
+   - Replaced with `random.randint(1, 9)` per entry; duplicates occur naturally by chance.
+   - Rating semantics: significance score, not a rank. Multiple ingredients may share the same value.
+   - No rating: 10 remains in any cuisine file.
+
+2. **Updated IMPROVE_CUISINE_DATA.md:**
+   - Rating range changed from 1–10 to 1–9 in the fields table.
+   - Description updated to clarify "significance within grade — not a rank; duplicates allowed".
+   - Example entries updated (rating: 10 → rating: 9).
+
+3. **GUI verified correct (no change needed):**
+   - Both ingredient category view and protein badge area already sort by `rating` descending and `slice(0, 3)` per grade.
+   - Top 3 shown are always the 3 highest-rated, regardless of file order.
+
+4. **CHORES.md performed:**
+   - Regenerated panel: PANEL_VERSION 438 → 439.
+   - Bumped version 0.8.2.10 → 0.8.2.11.
+
