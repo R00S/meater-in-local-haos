@@ -868,8 +868,8 @@ The ingredient screen has several sections:
   ingredient. Items already selected are hidden from this section.
 - **Ingredient grid** — ingredients are grouped by category (Proteins, Vegetables, Grains,
   Dairy & Oils, Spices). Each category shows a curated base set by default — up to the
-  top 3 items per ingredient grade (signature, bulk, local), ranked by rating. Tap
-  **More (+N)** to expand to the full set; tap **Show less** to collapse.
+  top items per ingredient grade ranked by rating (signature: 3, bulk: 2, local: 3 — 8 total
+  before **More**). Tap **More (+N)** to expand to the full set; tap **Show less** to collapse.
   When a cuisine is selected, only that cuisine's ingredients are shown.
 - **Protein drill-down** — the Proteins category has a row of sub-group tabs (🐄 Beef,
   🐷 Pork, 🍗 Poultry, 🐟 Fish, 🐑 Lamb, 🦌 Game). Tap a tab to show specific cuts

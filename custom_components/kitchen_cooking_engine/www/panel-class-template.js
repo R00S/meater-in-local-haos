@@ -5822,7 +5822,23 @@ class KitchenCookingPanel extends LitElement {
       }
     }
 
-    return merged.length > 0 ? merged : (this._commonIngredients || []);
+    // Deduplicate by base ID: if e.g. 'beans', 'beans_bulk', 'beans_local' all appear,
+    // keep only the entry with the highest-priority grade (signature > bulk > local).
+    if (merged.length > 0) {
+      const GRADE_PRIORITY = {signature: 3, bulk: 2, local: 1};
+      const baseIdOf = id => id.replace(/_(bulk|local|signature)$/, '');
+      const byBaseId = {};
+      for (const ing of merged) {
+        const key = baseIdOf(ing.id);
+        const existing = byBaseId[key];
+        if (!existing || (GRADE_PRIORITY[ing.grade] || 0) > (GRADE_PRIORITY[existing.grade] || 0)) {
+          byBaseId[key] = ing;
+        }
+      }
+      const deduped = Object.values(byBaseId);
+      return deduped.length > 0 ? deduped : (this._commonIngredients || []);
+    }
+    return this._commonIngredients || [];
   }
 
   /**
@@ -5874,9 +5890,10 @@ class KitchenCookingPanel extends LitElement {
       ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => {
         const allItems = groups[cat];
         // Split into base (always shown) and ext (behind "More"):
-        //   - If items have grade+rating: top 3 per grade by rating descending → base, rest → ext
+        //   - If items have grade+rating: top N per grade by rating descending → base, rest → ext
+        //     signature: 3, bulk: 2, local: 3  (8 total max before "More")
         //   - Fallback (no grade info): first 12 → base, rest → ext
-        const TOP_PER_GRADE = 3;
+        const GRADE_LIMITS = {signature: 3, bulk: 2, local: 3};
         const GRADE_ORDER = ['signature', 'bulk', 'local'];
         const hasGrade = allItems.some(i => i.grade);
         let baseItems, extItems;
@@ -5893,7 +5910,7 @@ class KitchenCookingPanel extends LitElement {
           const baseSet = new Set();
           for (const g of GRADE_ORDER) {
             if (!byGrade[g]) continue;
-            byGrade[g].slice(0, TOP_PER_GRADE).forEach(i => baseSet.add(i.id));
+            byGrade[g].slice(0, GRADE_LIMITS[g] || 3).forEach(i => baseSet.add(i.id));
           }
           baseItems = allItems.filter(i => baseSet.has(i.id));
           extItems  = allItems.filter(i => !baseSet.has(i.id));
@@ -5997,8 +6014,9 @@ class KitchenCookingPanel extends LitElement {
     const notInTree = allItems.filter(i => !proteinTreeIds.has(i.id));
 
     // Compute base (always shown) and ext (behind "More") from badge items.
-    // Top 3 per grade by rating; fallback to threshold-12 when no grade info.
-    const TOP_PER_GRADE = 3;
+    // Top N per grade by rating; fallback to threshold-12 when no grade info.
+    // signature: 3, bulk: 2, local: 3  (8 total max before "More")
+    const GRADE_LIMITS = {signature: 3, bulk: 2, local: 3};
     const GRADE_ORDER = ['signature', 'bulk', 'local'];
     let baseItems, extItems;
     const hasGrade = notInTree.some(i => i.grade);
@@ -6015,7 +6033,7 @@ class KitchenCookingPanel extends LitElement {
       const baseSet = new Set();
       for (const g of GRADE_ORDER) {
         if (!byGrade[g]) continue;
-        byGrade[g].slice(0, TOP_PER_GRADE).forEach(i => baseSet.add(i.id));
+        byGrade[g].slice(0, GRADE_LIMITS[g] || 3).forEach(i => baseSet.add(i.id));
       }
       baseItems = notInTree.filter(i => baseSet.has(i.id));
       extItems  = notInTree.filter(i => !baseSet.has(i.id));

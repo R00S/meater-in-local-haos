@@ -150,3 +150,21 @@ v0.8.1.10 was unaffected because it had the region list hardcoded in the templat
    - Bumped version 0.8.2.13 → 0.8.2.14.
    - USER_GUIDE.md: no content changes required — Romanian cuisine addition is a data-only change with no new features or heading changes.
 
+### 2026-05-03 — Agent session K
+
+**Tasks completed (v0.8.2.15):**
+
+1. **Fixed duplicate ingredients when same ingredient appears in multiple grades:**
+   - Root cause: cuisine files (e.g. Romanian) list the same ingredient under multiple grades using ID suffixes (`beans`, `beans_bulk`, `beans_local`). The UI rendered all three as separate checkboxes.
+   - Fix: deduplication by base ID added in `_getCuisineIngredients` in `panel-class-template.js`. After merging, strips `_bulk`/`_local`/`_signature` suffixes and keeps only the highest-priority grade entry (signature > bulk > local) per base ID.
+   - Fix applies to all cuisine files — no data files modified.
+
+2. **Reduced bulk visible count from 3 to 2 (before "More"):**
+   - Changed `TOP_PER_GRADE = 3` to per-grade limits `{signature: 3, bulk: 2, local: 3}` in both `_renderCategorizedIngredients` and `_renderProteinCategory`.
+   - Total visible before "More": 3 + 2 + 3 = 8 (was 9).
+
+3. **CHORES.md performed:**
+   - Regenerated panel: PANEL_VERSION 449 → 450.
+   - Bumped version 0.8.2.14 → 0.8.2.15.
+   - USER_GUIDE.md §7.2: updated ingredient grade counts to reflect new limits.
+
