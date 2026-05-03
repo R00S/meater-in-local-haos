@@ -66,8 +66,9 @@ consumed in large amounts by the population. Official statistics are the right s
 A guess or a general impression is not good enough — find a number.
 
 **Search strategies for bulk:**
-- "[country] meat consumption kg per capita [year]"
-- "[country] food consumption survey protein/vegetable/grain"
+- "[country] most consumed [category] per capita [year]"
+- "[country] [category] consumption statistics per capita"
+- "[country] food consumption survey [category]"
 - "[country] FAO food balance sheet"
 - "[country] most consumed food items statistics"
 - "[country] [category] import/production/consumption data"
@@ -83,7 +84,7 @@ caught, raised, grown, or foraged in the region.
 - "[country/region] fishing industry what fish are caught"
 - "[country/region] agriculture what crops grown"
 - "[country/region] game animals hunted"
-- "[country/region] foraging wild plants mushrooms berries"
+- "[country/region] foraging wild ingredients traditions"
 - "[country/region] local produce regional specialty food"
 
 ---
@@ -112,12 +113,12 @@ Sources used and key findings. Be brief but specific — list the sources and ke
 ## Proteins
 
 ### Proteins — Signature
-<!-- Searched: "famous Japanese dishes proteins", "Japanese food culture iconic ingredients" -->
+<!-- Searched: "famous Japanese dishes", "Japanese food culture iconic preparations" -->
 
 - {id: salmon, grade: signature, rating: 9, name: Salmon, name_sv: "Lax", notes: "Sashimi, sushi; cornerstone of Japanese fish culture"}
 
 ### Proteins — Bulk
-<!-- Searched: "Japan meat consumption kg per capita 2022", "Japan FAO food balance" -->
+<!-- Searched: "Japan most consumed protein foods per capita 2022", "Japan FAO food balance" -->
 
 - {id: chicken, grade: bulk, rating: 9, name: Chicken, name_sv: "Kyckling", notes: "Most consumed meat in Japan; karaage, yakitori"}
 

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 May 2026, 17:54 CET
+ * AUTO-GENERATED: 03 May 2026, 18:08 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 03 May 2026, 17:55 CET
+// Last generated: 03 May 2026, 18:08 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -90540,1084 +90540,764 @@ const AI_CUISINE_INGREDIENTS = {
   ],
   "spanish": [
     {
-      "id": "stub_prot_sig_1",
-      "name": "[STUB]",
+      "id": "jamon_iberico",
+      "name": "Jamón ibérico",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Iberiskt lufttorkat skinka"
+    },
+    {
+      "id": "chorizo_es",
+      "name": "Chorizo",
       "cat": "p",
       "grade": "signature",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Chorizo"
     },
     {
-      "id": "stub_prot_sig_2",
-      "name": "[STUB]",
+      "id": "bacalao",
+      "name": "Bacalao (salt cod)",
       "cat": "p",
       "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
+      "rating": 8,
+      "name_sv": "Saltad torsk"
     },
     {
-      "id": "stub_prot_sig_3",
-      "name": "[STUB]",
+      "id": "gambas",
+      "name": "Gambas (prawns)",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Räkor"
+    },
+    {
+      "id": "pulpo",
+      "name": "Pulpo (octopus)",
       "cat": "p",
       "grade": "signature",
       "rating": 6,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Bläckfisk (åttaarmad)"
     },
     {
-      "id": "stub_prot_sig_4",
-      "name": "[STUB]",
+      "id": "cochinillo",
+      "name": "Cochinillo (suckling pig)",
       "cat": "p",
       "grade": "signature",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Spädgris"
     },
     {
-      "id": "stub_prot_sig_5",
-      "name": "[STUB]",
+      "id": "calamares_es",
+      "name": "Calamares (squid)",
       "cat": "p",
       "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
+      "rating": 6,
+      "name_sv": "Kalamares / bläckfisk"
     },
     {
-      "id": "stub_prot_sig_6",
-      "name": "[STUB]",
+      "id": "morcilla",
+      "name": "Morcilla (blood sausage)",
       "cat": "p",
       "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
+      "rating": 5,
+      "name_sv": "Blodkorv"
     },
     {
-      "id": "stub_prot_sig_7",
-      "name": "[STUB]",
+      "id": "anchovies_es",
+      "name": "Anchovies (boquerones)",
       "cat": "p",
       "grade": "signature",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
+      "rating": 6,
+      "name_sv": "Ansjovis (boquerones)"
     },
     {
-      "id": "stub_prot_sig_8",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_sig_9",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_1",
-      "name": "[STUB]",
+      "id": "pork_es",
+      "name": "Pork",
       "cat": "p",
       "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
+      "rating": 9,
+      "name_sv": "Fläsk"
     },
     {
-      "id": "stub_prot_bul_2",
-      "name": "[STUB]",
+      "id": "chicken_es",
+      "name": "Chicken",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Kyckling"
+    },
+    {
+      "id": "eggs_es",
+      "name": "Eggs",
       "cat": "p",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Ägg"
     },
     {
-      "id": "stub_prot_bul_3",
-      "name": "[STUB]",
+      "id": "hake_es",
+      "name": "Hake (merluza)",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "Kummel"
+    },
+    {
+      "id": "tuna_es",
+      "name": "Tuna (atún)",
       "cat": "p",
       "grade": "bulk",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Tonfisk"
     },
     {
-      "id": "stub_prot_bul_4",
-      "name": "[STUB]",
+      "id": "beef_es",
+      "name": "Beef",
       "cat": "p",
       "grade": "bulk",
       "rating": 6,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Nötkött"
     },
     {
-      "id": "stub_prot_bul_5",
-      "name": "[STUB]",
+      "id": "sardines_es",
+      "name": "Sardines",
       "cat": "p",
       "grade": "bulk",
       "rating": 5,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Sardiner"
     },
     {
-      "id": "stub_prot_bul_6",
-      "name": "[STUB]",
+      "id": "rabbit_es",
+      "name": "Rabbit (conejo)",
       "cat": "p",
       "grade": "bulk",
       "rating": 4,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Kanin"
     },
     {
-      "id": "stub_prot_bul_7",
-      "name": "[STUB]",
+      "id": "lamb_es",
+      "name": "Lamb (cordero)",
       "cat": "p",
       "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_8",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_9",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_1",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_2",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_3",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_4",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_5",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_6",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
       "rating": 4,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Lamm"
     },
     {
-      "id": "stub_prot_loc_7",
-      "name": "[STUB]",
+      "id": "cerdo_iberico",
+      "name": "Iberian pig (cerdo ibérico)",
       "cat": "p",
       "grade": "local",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Iberisk gris"
     },
     {
-      "id": "stub_prot_loc_8",
-      "name": "[STUB]",
+      "id": "mejillones_galicia",
+      "name": "Galician mussels (mejillones)",
       "cat": "p",
       "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
+      "rating": 8,
+      "name_sv": "Galiciska musslor"
     },
     {
-      "id": "stub_prot_loc_9",
-      "name": "[STUB]",
+      "id": "almejas_galicia",
+      "name": "Clams (almejas)",
       "cat": "p",
       "grade": "local",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Musslor (venerki)"
     },
     {
-      "id": "stub_veg_sig_1",
-      "name": "[STUB]",
+      "id": "bluefin_tuna_almadraba",
+      "name": "Atlantic bluefin tuna (almadraba)",
+      "cat": "p",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Atlantisk blåfenad tonfisk"
+    },
+    {
+      "id": "dorada_lubina",
+      "name": "Sea bream & sea bass (dorada/lubina)",
+      "cat": "p",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Guldbraxen och havsabborre"
+    },
+    {
+      "id": "merluza_atlantica",
+      "name": "European hake (merluza)",
+      "cat": "p",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Kummel (europeisk)"
+    },
+    {
+      "id": "manchega_sheep",
+      "name": "Manchega sheep",
+      "cat": "p",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "Manchegafår"
+    },
+    {
+      "id": "tomato_es",
+      "name": "Tomato (tomate)",
       "cat": "v",
       "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
+      "rating": 9,
+      "name_sv": "Tomat"
     },
     {
-      "id": "stub_veg_sig_2",
-      "name": "[STUB]",
+      "id": "garlic_es",
+      "name": "Garlic (ajo)",
       "cat": "v",
       "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
+      "rating": 9,
+      "name_sv": "Vitlök"
     },
     {
-      "id": "stub_veg_sig_3",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_4",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_5",
-      "name": "[STUB]",
+      "id": "pepper_es",
+      "name": "Red & green pepper (pimiento)",
       "cat": "v",
       "grade": "signature",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Röd och grön paprika"
     },
     {
-      "id": "stub_veg_sig_6",
-      "name": "[STUB]",
+      "id": "onion_es",
+      "name": "Onion (cebolla)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Lök"
+    },
+    {
+      "id": "potato_es",
+      "name": "Potato (patata)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Potatis"
+    },
+    {
+      "id": "artichoke_es",
+      "name": "Artichoke (alcachofa)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "Kronärtskocka"
+    },
+    {
+      "id": "green_bean_es",
+      "name": "Green bean (judía verde)",
       "cat": "v",
       "grade": "signature",
       "rating": 5,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Haricots verts"
     },
     {
-      "id": "stub_veg_sig_7",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_8",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_9",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_1",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_2",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_3",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_4",
-      "name": "[STUB]",
+      "id": "tomato_bulk_es",
+      "name": "Tomato",
       "cat": "v",
       "grade": "bulk",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Tomat"
     },
     {
-      "id": "stub_veg_bul_5",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_6",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_7",
-      "name": "[STUB]",
+      "id": "onion_bulk_es",
+      "name": "Onion",
       "cat": "v",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Lök"
     },
     {
-      "id": "stub_veg_bul_8",
-      "name": "[STUB]",
+      "id": "potato_bulk_es",
+      "name": "Potato",
       "cat": "v",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_9",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_1",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_2",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_3",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_4",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_5",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_6",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_7",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_8",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_9",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_1",
-      "name": "[STUB]",
-      "cat": "s",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Potatis"
     },
     {
-      "id": "stub_grain_bul_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_3",
-      "name": "[STUB]",
-      "cat": "s",
+      "id": "pepper_bulk_es",
+      "name": "Pepper",
+      "cat": "v",
       "grade": "bulk",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Paprika"
     },
     {
-      "id": "stub_grain_bul_4",
-      "name": "[STUB]",
+      "id": "garlic_bulk_es",
+      "name": "Garlic",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Vitlök"
+    },
+    {
+      "id": "lettuce_es",
+      "name": "Lettuce (lechuga)",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "Sallat"
+    },
+    {
+      "id": "carrot_es",
+      "name": "Carrot (zanahoria)",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "Morot"
+    },
+    {
+      "id": "cucumber_es",
+      "name": "Cucumber (pepino)",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "Gurka"
+    },
+    {
+      "id": "aubergine_es",
+      "name": "Aubergine (berenjena)",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "Aubergine"
+    },
+    {
+      "id": "piquillo_pepper",
+      "name": "Piquillo pepper",
+      "cat": "v",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "Piquillopaprika"
+    },
+    {
+      "id": "calcot",
+      "name": "Calçot (spring onion)",
+      "cat": "v",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Calçot (vårschalottenlök)"
+    },
+    {
+      "id": "padron_pepper",
+      "name": "Padrón pepper",
+      "cat": "v",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Padrónpaprika"
+    },
+    {
+      "id": "white_asparagus_navarra",
+      "name": "White asparagus (espárrago blanco)",
+      "cat": "v",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Vit sparris"
+    },
+    {
+      "id": "artichoke_tudela",
+      "name": "Tudela artichoke (alcachofa de Tudela)",
+      "cat": "v",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "Tudelakronärtskocka"
+    },
+    {
+      "id": "almeria_tomato",
+      "name": "Almería greenhouse tomato",
+      "cat": "v",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Almeríatomat"
+    },
+    {
+      "id": "paella_rice",
+      "name": "Rice (for paella)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Ris (till paella)"
+    },
+    {
+      "id": "bread_es",
+      "name": "Bread (pan)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Bröd"
+    },
+    {
+      "id": "fideos_es",
+      "name": "Fideos (thin noodles)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "Fideos (tunna nudlar)"
+    },
+    {
+      "id": "wheat_es",
+      "name": "Wheat (flour/bread)",
       "cat": "s",
       "grade": "bulk",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Vete (mjöl/bröd)"
     },
     {
-      "id": "stub_grain_bul_5",
-      "name": "[STUB]",
+      "id": "rice_bulk_es",
+      "name": "Rice",
       "cat": "s",
       "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
+      "rating": 7,
+      "name_sv": "Ris"
     },
     {
-      "id": "stub_grain_bul_6",
-      "name": "[STUB]",
+      "id": "pasta_es",
+      "name": "Pasta",
       "cat": "s",
       "grade": "bulk",
       "rating": 5,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Pasta"
     },
     {
-      "id": "stub_grain_bul_7",
-      "name": "[STUB]",
+      "id": "maize_es",
+      "name": "Maize/corn",
       "cat": "s",
       "grade": "bulk",
       "rating": 3,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Majs"
     },
     {
-      "id": "stub_grain_bul_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_2",
-      "name": "[STUB]",
+      "id": "bomba_rice",
+      "name": "Bomba rice (Valencia/Calasparra)",
       "cat": "s",
       "grade": "local",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Bombaris"
     },
     {
-      "id": "stub_grain_loc_3",
-      "name": "[STUB]",
+      "id": "castile_wheat",
+      "name": "Castilian wheat",
       "cat": "s",
       "grade": "local",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Kastilianskt vete"
     },
     {
-      "id": "stub_grain_loc_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_6",
-      "name": "[STUB]",
+      "id": "galician_corn",
+      "name": "Galician maize",
       "cat": "s",
       "grade": "local",
       "rating": 4,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Galicisk majs"
     },
     {
-      "id": "stub_grain_loc_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_3",
-      "name": "[STUB]",
+      "id": "manchego",
+      "name": "Manchego cheese",
       "cat": "s",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Manchegaost"
     },
     {
-      "id": "stub_dairy_sig_4",
-      "name": "[STUB]",
+      "id": "eggs_sig_es",
+      "name": "Eggs (huevos)",
       "cat": "s",
       "grade": "signature",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Ägg"
     },
     {
-      "id": "stub_dairy_sig_5",
-      "name": "[STUB]",
+      "id": "cabrales",
+      "name": "Cabrales (blue cheese)",
       "cat": "s",
       "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Cabrales (blåmögelost)"
     },
     {
-      "id": "stub_dairy_loc_2",
-      "name": "[STUB]",
+      "id": "idiazabal",
+      "name": "Idiazábal (smoked sheep cheese)",
       "cat": "s",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
+      "grade": "signature",
       "rating": 6,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Idiazábal (rökt fårost)"
     },
     {
-      "id": "stub_dairy_loc_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_1",
-      "name": "[STUB]",
+      "id": "tetilla",
+      "name": "Tetilla cheese",
       "cat": "s",
       "grade": "signature",
       "rating": 5,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Tetillaost"
     },
     {
-      "id": "stub_spice_sig_2",
-      "name": "[STUB]",
+      "id": "yogurt_es",
+      "name": "Yogurt / fermented milk",
       "cat": "s",
-      "grade": "signature",
+      "grade": "bulk",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Yoghurt / fermenterad mjölk"
     },
     {
-      "id": "stub_spice_sig_3",
-      "name": "[STUB]",
+      "id": "milk_es",
+      "name": "Milk",
       "cat": "s",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "Mjölk"
     },
     {
-      "id": "stub_spice_sig_4",
-      "name": "[STUB]",
+      "id": "fresh_cheese_es",
+      "name": "Fresh cheese (queso fresco)",
       "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "Färskost"
     },
     {
-      "id": "stub_spice_sig_5",
-      "name": "[STUB]",
+      "id": "semi_cured_cheese_es",
+      "name": "Semi-cured cheese (semicurado)",
       "cat": "s",
-      "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
+      "grade": "bulk",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Halvlagrad ost"
     },
     {
-      "id": "stub_spice_bul_1",
-      "name": "[STUB]",
+      "id": "eggs_bulk_es",
+      "name": "Eggs",
       "cat": "s",
       "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
+      "rating": 8,
+      "name_sv": "Ägg"
     },
     {
-      "id": "stub_spice_bul_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_3",
-      "name": "[STUB]",
+      "id": "processed_cheese_es",
+      "name": "Processed cheese",
       "cat": "s",
       "grade": "bulk",
       "rating": 5,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Processost"
     },
     {
-      "id": "stub_spice_bul_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_9",
-      "name": "[STUB]",
+      "id": "manchego_local",
+      "name": "Manchego PDO",
       "cat": "s",
       "grade": "local",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Manchego PDO"
+    },
+    {
+      "id": "cabrales_local",
+      "name": "Cabrales PDO",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "Cabrales PDO"
+    },
+    {
+      "id": "tetilla_local",
+      "name": "Tetilla PDO",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Tetilla PDO"
+    },
+    {
+      "id": "idiazabal_local",
+      "name": "Idiazábal PDO",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Idiazábal PDO"
+    },
+    {
+      "id": "mahon_local",
+      "name": "Mahón PDO (Menorca)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Mahón PDO"
+    },
+    {
+      "id": "torta_casar",
+      "name": "Torta del Casar PDO",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "Torta del Casar PDO"
+    },
+    {
+      "id": "saffron_es",
+      "name": "Saffron (azafrán)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Saffran"
+    },
+    {
+      "id": "pimenton",
+      "name": "Pimentón (smoked paprika)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Pimentón (rökt paprika)"
+    },
+    {
+      "id": "olive_oil_es",
+      "name": "Olive oil (aceite de oliva)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Olivolja"
+    },
+    {
+      "id": "garlic_spice_es",
+      "name": "Garlic (ajo)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Vitlök"
+    },
+    {
+      "id": "sherry_vinegar",
+      "name": "Sherry vinegar (vinagre de Jerez)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Sherryvattnet"
+    },
+    {
+      "id": "parsley_es",
+      "name": "Parsley (perejil)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "Persilja"
+    },
+    {
+      "id": "bay_laurel_es",
+      "name": "Bay leaf (laurel)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "Lagerblad"
+    },
+    {
+      "id": "olive_oil_bulk_es",
+      "name": "Olive oil",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Olivolja"
+    },
+    {
+      "id": "salt_es",
+      "name": "Salt (sal)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Salt"
+    },
+    {
+      "id": "garlic_bulk_es",
+      "name": "Garlic",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "Vitlök"
+    },
+    {
+      "id": "paprika_bulk_es",
+      "name": "Paprika / pimentón",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Paprika / pimentón"
+    },
+    {
+      "id": "parsley_bulk_es",
+      "name": "Parsley",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Persilja"
+    },
+    {
+      "id": "black_pepper_es",
+      "name": "Black pepper",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "Svartpeppar"
+    },
+    {
+      "id": "vinegar_es",
+      "name": "Vinegar (vinagre)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "Vinäger"
+    },
+    {
+      "id": "cumin_es",
+      "name": "Cumin (comino)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 4,
+      "name_sv": "Spiskummin"
+    },
+    {
+      "id": "pimenton_de_la_vera",
+      "name": "Pimentón de la Vera PDO",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "Pimentón de la Vera PDO"
+    },
+    {
+      "id": "saffron_la_mancha",
+      "name": "Saffron from La Mancha PDO",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "Saffran från La Mancha PDO"
+    },
+    {
+      "id": "virgin_olive_oil_es",
+      "name": "Spanish extra virgin olive oil",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "Spansk extra jungfruolivolja"
+    },
+    {
+      "id": "sherry_vinegar_local",
+      "name": "Sherry vinegar PDO (Jerez)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "Sherryvattnet PDO (Jerez)"
+    },
+    {
+      "id": "piparras",
+      "name": "Piparras (Basque pickled peppers)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "Piparras (baskiska inlagda peppar)"
+    },
+    {
+      "id": "flor_de_sal_ibiza",
+      "name": "Flor de sal (Ibiza/Cádiz)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "Flor de sal (Ibiza/Cádiz)"
     }
   ],
   "sri_lankan": [
@@ -109633,8 +109313,8 @@ const AI_CUISINE_REGIONS = [
         "name": "Spanish",
         "name_sv": "Spanskt",
         "icon": "🇪🇸",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+        "description": "Spanish cuisine balances bold charcuterie — led by jamón ibérico and chorizo — with Atlantic and Mediterranean seafood, all unified by a sofrito of tomato, garlic, and olive oil. Regional traditions range from Basque pintxos to Valencian paella, making Spain one of Europe's most diverse culinary nations.",
+        "description_sv": "Spanskt kök förenas av sofritton — tomat, vitlök och olivolja — och en stolthet i charkuteri som jamón ibérico och chorizo, bredvid rik seafood från Atlanten och Medelhavet. Regionala traditioner sträcker sig från baskiska pintxos till valenciansk paella."
       },
       {
         "id": "ukrainian",
@@ -110215,8 +109895,8 @@ const AI_CUISINE_DESCRIPTIONS = {
     "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "spanish": {
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+    "description": "Spanish cuisine balances bold charcuterie — led by jamón ibérico and chorizo — with Atlantic and Mediterranean seafood, all unified by a sofrito of tomato, garlic, and olive oil. Regional traditions range from Basque pintxos to Valencian paella, making Spain one of Europe's most diverse culinary nations.",
+    "description_sv": "Spanskt kök förenas av sofritton — tomat, vitlök och olivolja — och en stolthet i charkuteri som jamón ibérico och chorizo, bredvid rik seafood från Atlanten och Medelhavet. Regionala traditioner sträcker sig från baskiska pintxos till valenciansk paella."
   },
   "sri_lankan": {
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
@@ -110348,7 +110028,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["goat", "venison", "veal", "beef", "rabbit", "duck", "lamb", "pork", "chicken", "turkey", "fish"];
+const AI_GENERIC_PROTEIN_IDS = ["fish", "goat", "chicken", "veal", "pork", "venison", "beef", "rabbit", "turkey", "duck", "lamb"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -133135,7 +132815,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "439";
+const PANEL_VERSION = "441";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
