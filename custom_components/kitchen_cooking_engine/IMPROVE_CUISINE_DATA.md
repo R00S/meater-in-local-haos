@@ -325,6 +325,40 @@ empty and needs work. Once all 9 stubs are gone, keep adding verified items free
 
 ---
 
+### ❌ Trap 5: Writing from an international outsider perspective instead of authentic cultural sources
+
+When you research a cuisine using general web search, a large share of results will be
+written by people who are not from that culture — travel bloggers, food magazines, recipe
+aggregators, and international cooking sites. These sources tend to reflect how the cuisine
+has been *adapted* and simplified for foreign audiences, not how it is actually practised
+at home.
+
+**The symptom:** ingredients that locals consider central are downplayed or absent, while
+ingredients that foreigners associate with the cuisine are foregrounded.
+
+**A documented example:** Spanish sofrito.
+- International sources describe sofrito as "tomato-based" or lead with tomato.
+- Authentic Spanish sofrito is built on **onion, garlic, and pimiento (bell pepper)**.
+  Tomato is a secondary or optional element in many regions.
+- An AI trained mostly on English-language food content will produce the international
+  adaptation, not the authentic version.
+
+**How to detect this trap:**
+- Ask yourself: "Am I seeing this cuisine through the eyes of a tourist or a local?"
+- If most search results are in English and from non-native cooking sites, treat them with
+  suspicion for signature ingredients.
+- Search specifically for *[cuisine] home cooking*, *[cuisine] traditional everyday food*,
+  or *[cuisine] what families actually eat* — not just *[cuisine] famous dishes*.
+- For signature vegetables and spices especially, cross-check with a source in the native
+  language if possible, or from a cultural institution, culinary school, or food historian
+  from that country.
+
+**Rule:** If the ingredients you are about to write would surprise someone who grew up
+cooking that cuisine, stop and research deeper before writing them. The goal is the
+insider's view, not the tourist's menu.
+
+---
+
 ## A note on trust
 
 The people using this app are cooking real food for real people. When the app shows
