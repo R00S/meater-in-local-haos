@@ -5598,106 +5598,9 @@ class KitchenCookingPanel extends LitElement {
       return html`<div class="loading">${this._t('ai_recipe.loading_ingredients')}</div>`;
     }
 
-    // Cuisine/region options for fusion cooking (moved from cooking style page)
-    const cuisineRegions = [
-      { id: 'nordic', name: this._t('cuisines.nordic'), icon: '❄️', cuisines: [
-        { id: 'swedish', name: this._t('cuisines.swedish'), icon: '🇸🇪' },
-        { id: 'danish', name: this._t('cuisines.danish'), icon: '🇩🇰' },
-        { id: 'norwegian', name: this._t('cuisines.norwegian'), icon: '🇳🇴' },
-        { id: 'finnish', name: this._t('cuisines.finnish'), icon: '🇫🇮' },
-        { id: 'icelandic', name: this._t('cuisines.icelandic'), icon: '🇮🇸' },
-        { id: 'new_nordic', name: this._t('cuisines.new_nordic'), icon: '🌿' },
-      ]},
-      { id: 'east_asian', name: this._t('cuisines.east_asian'), icon: '🥢', cuisines: [
-        { id: 'japanese', name: this._t('cuisines.japanese'), icon: '🇯🇵' },
-        { id: 'chinese', name: this._t('cuisines.chinese'), icon: '🇨🇳' },
-        { id: 'korean', name: this._t('cuisines.korean'), icon: '🇰🇷' },
-        { id: 'taiwanese', name: this._t('cuisines.taiwanese'), icon: '🇹🇼' },
-      ]},
-      { id: 'southeast_asian', name: this._t('cuisines.southeast_asian'), icon: '🌴', cuisines: [
-        { id: 'thai', name: this._t('cuisines.thai'), icon: '🇹🇭' },
-        { id: 'vietnamese', name: this._t('cuisines.vietnamese'), icon: '🇻🇳' },
-        { id: 'indonesian', name: this._t('cuisines.indonesian'), icon: '🇮🇩' },
-        { id: 'malaysian', name: this._t('cuisines.malaysian'), icon: '🇲🇾' },
-        { id: 'filipino', name: this._t('cuisines.filipino'), icon: '🇵🇭' },
-        { id: 'singaporean', name: this._t('cuisines.singaporean'), icon: '🇸🇬' },
-      ]},
-      { id: 'south_asian', name: this._t('cuisines.south_asian'), icon: '🍛', cuisines: [
-        { id: 'indian', name: this._t('cuisines.indian'), icon: '🇮🇳' },
-        { id: 'sri_lankan', name: this._t('cuisines.sri_lankan'), icon: '🇱🇰' },
-        { id: 'pakistani', name: this._t('cuisines.pakistani'), icon: '🇵🇰' },
-        { id: 'bangladeshi', name: this._t('cuisines.bangladeshi'), icon: '🇧🇩' },
-        { id: 'nepali', name: this._t('cuisines.nepali'), icon: '🇳🇵' },
-      ]},
-      { id: 'middle_east', name: this._t('cuisines.middle_east'), icon: '🧆', cuisines: [
-        { id: 'lebanese', name: this._t('cuisines.lebanese'), icon: '🇱🇧' },
-        { id: 'turkish', name: this._t('cuisines.turkish'), icon: '🇹🇷' },
-        { id: 'persian', name: this._t('cuisines.persian'), icon: '🇮🇷' },
-        { id: 'israeli', name: this._t('cuisines.israeli'), icon: '🇮🇱' },
-        { id: 'syrian', name: this._t('cuisines.syrian'), icon: '🇸🇾' },
-        { id: 'iraqi', name: this._t('cuisines.iraqi'), icon: '🇮🇶' },
-        { id: 'yemeni', name: this._t('cuisines.yemeni'), icon: '🇾🇪' },
-        { id: 'emirati', name: this._t('cuisines.emirati'), icon: '🇦🇪' },
-        { id: 'palestinian', name: this._t('cuisines.palestinian'), icon: '🇵🇸' },
-      ]},
-      { id: 'european', name: this._t('cuisines.european'), icon: '🏰', cuisines: [
-        { id: 'italian', name: this._t('cuisines.italian'), icon: '🇮🇹' },
-        { id: 'french', name: this._t('cuisines.french'), icon: '🇫🇷' },
-        { id: 'spanish', name: this._t('cuisines.spanish'), icon: '🇪🇸' },
-        { id: 'greek', name: this._t('cuisines.greek'), icon: '🇬🇷' },
-        { id: 'portuguese', name: this._t('cuisines.portuguese'), icon: '🇵🇹' },
-        { id: 'german', name: this._t('cuisines.german'), icon: '🇩🇪' },
-        { id: 'british', name: this._t('cuisines.british'), icon: '🇬🇧' },
-        { id: 'polish', name: this._t('cuisines.polish'), icon: '🇵🇱' },
-        { id: 'hungarian', name: this._t('cuisines.hungarian'), icon: '🇭🇺' },
-        { id: 'mediterranean', name: this._t('cuisines.mediterranean'), icon: '🫒' },
-        { id: 'balkan', name: this._t('cuisines.balkan'), icon: '🏔️' },
-        { id: 'russian', name: this._t('cuisines.russian'), icon: '🇷🇺' },
-      ]},
-      { id: 'north_american', name: this._t('cuisines.north_american'), icon: '🦅', cuisines: [
-        { id: 'american', name: this._t('cuisines.american'), icon: '🇺🇸' },
-        { id: 'cajun_creole', name: this._t('cuisines.cajun_creole'), icon: '🦞' },
-        { id: 'tex_mex', name: this._t('cuisines.tex_mex'), icon: '🌮' },
-        { id: 'canadian', name: this._t('cuisines.canadian'), icon: '🇨🇦' },
-        { id: 'southern_us', name: this._t('cuisines.southern_us'), icon: '🍗' },
-        { id: 'hawaiian', name: this._t('cuisines.hawaiian'), icon: '🌺' },
-      ]},
-      { id: 'latin_american', name: this._t('cuisines.latin_american'), icon: '💃', cuisines: [
-        { id: 'mexican', name: this._t('cuisines.mexican'), icon: '🇲🇽' },
-        { id: 'brazilian', name: this._t('cuisines.brazilian'), icon: '🇧🇷' },
-        { id: 'peruvian', name: this._t('cuisines.peruvian'), icon: '🇵🇪' },
-        { id: 'argentinian', name: this._t('cuisines.argentinian'), icon: '🇦🇷' },
-        { id: 'colombian', name: this._t('cuisines.colombian'), icon: '🇨🇴' },
-        { id: 'cuban', name: this._t('cuisines.cuban'), icon: '🇨🇺' },
-        { id: 'venezuelan', name: this._t('cuisines.venezuelan'), icon: '🇻🇪' },
-        { id: 'chilean', name: this._t('cuisines.chilean'), icon: '🇨🇱' },
-      ]},
-      { id: 'caribbean_region', name: this._t('cuisines.caribbean_region'), icon: '🏝️', cuisines: [
-        { id: 'jamaican', name: this._t('cuisines.jamaican'), icon: '🇯🇲' },
-        { id: 'trinidadian', name: this._t('cuisines.trinidadian'), icon: '🇹🇹' },
-        { id: 'haitian', name: this._t('cuisines.haitian'), icon: '🇭🇹' },
-        { id: 'puerto_rican', name: this._t('cuisines.puerto_rican'), icon: '🇵🇷' },
-        { id: 'caribbean', name: this._t('cuisines.caribbean'), icon: '🏝️' },
-      ]},
-      { id: 'african', name: this._t('cuisines.african'), icon: '🌍', cuisines: [
-        { id: 'ethiopian', name: this._t('cuisines.ethiopian'), icon: '🇪🇹' },
-        { id: 'moroccan', name: this._t('cuisines.moroccan'), icon: '🇲🇦' },
-        { id: 'nigerian', name: this._t('cuisines.nigerian'), icon: '🇳🇬' },
-        { id: 'ghanaian', name: this._t('cuisines.ghanaian'), icon: '🇬🇭' },
-        { id: 'senegalese', name: this._t('cuisines.senegalese'), icon: '🇸🇳' },
-        { id: 'south_african', name: this._t('cuisines.south_african'), icon: '🇿🇦' },
-        { id: 'kenyan', name: this._t('cuisines.kenyan'), icon: '🇰🇪' },
-        { id: 'tanzanian', name: this._t('cuisines.tanzanian'), icon: '🇹🇿' },
-        { id: 'tunisian', name: this._t('cuisines.tunisian'), icon: '🇹🇳' },
-        { id: 'egyptian', name: this._t('cuisines.egyptian'), icon: '🇪🇬' },
-        { id: 'east_african', name: this._t('cuisines.east_african'), icon: '🌄' },
-        { id: 'west_african', name: this._t('cuisines.west_african'), icon: '🥘' },
-      ]},
-      { id: 'oceanian', name: this._t('cuisines.oceanian'), icon: '🦘', cuisines: [
-        { id: 'australian', name: this._t('cuisines.australian'), icon: '🇦🇺' },
-        { id: 'polynesian', name: this._t('cuisines.polynesian'), icon: '🌺' },
-      ]},
-    ];
+    // Cuisine/region options — built from docs/cuisines/*.md (KCE:CUISINE files).
+    // Add a new cuisine file there and it will appear here on the next release.
+    const cuisineRegions = (typeof AI_CUISINE_REGIONS !== 'undefined') ? AI_CUISINE_REGIONS : [];
 
     // Get cuisine-specific ingredients based on selection
     const displayIngredients = this._getCuisineIngredients(cuisineRegions);
@@ -5720,65 +5623,81 @@ class KitchenCookingPanel extends LitElement {
         <h2>${this._t('ai_recipe.select_ingredients_title')}</h2>
         <button class="help-btn" @click=${() => this._openHelp('#72-selecting-ingredients')} title="Open User Guide">?</button>
       </div>
-          <p class="info-text" style="margin-bottom: 12px;">${this._t('ai_recipe.cuisine_region_hint')}</p>
-          ${(this._aiSelectedCuisines || []).length > 0 ? html`
-            <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
-              ${(this._aiSelectedCuisines || []).map(c => {
-                const name = c.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-                return html`<span style="background: var(--primary-color); color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.85em; display: inline-flex; align-items: center; gap: 4px;">
-                  ${name}
-                  <span style="cursor: pointer; margin-left: 2px;" @click=${() => {
-                    this._aiSelectedCuisines = (this._aiSelectedCuisines || []).filter(x => x !== c);
-                    this.requestUpdate();
-                  }}>✕</span>
-                </span>`;
-              })}
-            </div>
-          ` : ''}
-          ${cuisineRegions.map(region => {
-            const isExpanded = (this._aiExpandedRegions || []).includes(region.id);
-            const selectedInRegion = region.cuisines.filter(c => (this._aiSelectedCuisines || []).includes(c.id));
-            return html`
-              <div style="margin-bottom: 4px; border: 1px solid var(--divider-color); border-radius: 8px; overflow: hidden;">
-                <div 
-                  style="padding: 10px 14px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; background: ${selectedInRegion.length > 0 ? 'var(--primary-color)' : 'var(--card-background-color)'}; color: ${selectedInRegion.length > 0 ? 'white' : 'inherit'};"
-                  @click=${() => {
-                    const expanded = [...(this._aiExpandedRegions || [])];
-                    const idx = expanded.indexOf(region.id);
-                    if (idx >= 0) { expanded.splice(idx, 1); } else { expanded.push(region.id); }
-                    this._aiExpandedRegions = expanded;
-                    this.requestUpdate();
-                  }}
-                >
-                  <span style="font-weight: bold;">${region.icon} ${region.name} ${selectedInRegion.length > 0 ? `(${selectedInRegion.length})` : ''}</span>
-                  <span>${isExpanded ? '▼' : '▶'}</span>
-                </div>
-                ${isExpanded ? html`
-                  <div style="padding: 8px; display: flex; flex-wrap: wrap; gap: 6px;">
-                    ${region.cuisines.map(cuisine => {
-                      const isSelected = (this._aiSelectedCuisines || []).includes(cuisine.id);
-                      return html`
-                        <button
-                          style="padding: 6px 12px; border-radius: 16px; border: 1px solid ${isSelected ? 'var(--primary-color)' : 'var(--divider-color)'}; background: ${isSelected ? 'var(--primary-color)' : 'var(--card-background-color)'}; color: ${isSelected ? 'white' : 'inherit'}; cursor: pointer; font-size: 0.9em; display: inline-flex; align-items: center; gap: 4px;"
-                          @click=${() => {
-                            const cuisines = [...(this._aiSelectedCuisines || [])];
-                            const idx = cuisines.indexOf(cuisine.id);
-                            if (idx >= 0) { cuisines.splice(idx, 1); } else { cuisines.push(cuisine.id); }
-                            this._aiSelectedCuisines = cuisines;
-                            this.requestUpdate();
-                          }}
-                        >
-                          ${cuisine.icon} ${cuisine.name}
-                        </button>
-                      `;
-                    })}
-                  </div>
-                ` : ''}
-              </div>
-            `;
+      <p class="info-text" style="margin-bottom: 12px;">${this._t('ai_recipe.cuisine_region_hint')}</p>
+      ${(this._aiSelectedCuisines || []).length > 0 ? html`
+        <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
+          ${(this._aiSelectedCuisines || []).map(c => {
+            const name = c.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            return html`<span style="background: var(--primary-color); color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.85em; display: inline-flex; align-items: center; gap: 4px;">
+              ${name}
+              <span style="cursor: pointer; margin-left: 2px;" @click=${() => {
+                this._aiSelectedCuisines = (this._aiSelectedCuisines || []).filter(x => x !== c);
+                this.requestUpdate();
+              }}>✕</span>
+            </span>`;
           })}
         </div>
-      </ha-card>
+      ` : ''}
+      ${cuisineRegions.map(region => {
+        const isExpanded = (this._aiExpandedRegions || []).includes(region.id);
+        const selectedInRegion = region.cuisines.filter(c => (this._aiSelectedCuisines || []).includes(c.id));
+        return html`
+          <div style="margin-bottom: 4px; border: 1px solid var(--divider-color); border-radius: 8px; overflow: hidden;">
+            <div
+              style="padding: 10px 14px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; background: ${selectedInRegion.length > 0 ? 'var(--primary-color)' : 'var(--card-background-color)'}; color: ${selectedInRegion.length > 0 ? 'white' : 'inherit'};"
+              @click=${() => {
+                const expanded = [...(this._aiExpandedRegions || [])];
+                const idx = expanded.indexOf(region.id);
+                if (idx >= 0) { expanded.splice(idx, 1); } else { expanded.push(region.id); }
+                this._aiExpandedRegions = expanded;
+                this.requestUpdate();
+              }}
+            >
+              <span style="font-weight: bold;">${region.icon} ${region.name} ${selectedInRegion.length > 0 ? `(${selectedInRegion.length})` : ''}</span>
+              <span>${isExpanded ? '▼' : '▶'}</span>
+            </div>
+            ${isExpanded ? html`
+              <div style="padding: 8px; display: flex; flex-wrap: wrap; gap: 6px;">
+                ${region.cuisines.map(cuisine => {
+                  const isSelected = (this._aiSelectedCuisines || []).includes(cuisine.id);
+                  return html`
+                    <button
+                      style="padding: 6px 12px; border-radius: 16px; border: 1px solid ${isSelected ? 'var(--primary-color)' : 'var(--divider-color)'}; background: ${isSelected ? 'var(--primary-color)' : 'var(--card-background-color)'}; color: ${isSelected ? 'white' : 'inherit'}; cursor: pointer; font-size: 0.9em; display: inline-flex; align-items: center; gap: 4px;"
+                      @click=${() => {
+                        const cuisines = [...(this._aiSelectedCuisines || [])];
+                        const idx = cuisines.indexOf(cuisine.id);
+                        if (idx >= 0) { cuisines.splice(idx, 1); } else { cuisines.push(cuisine.id); }
+                        this._aiSelectedCuisines = cuisines;
+                        this.requestUpdate();
+                      }}
+                    >
+                      ${cuisine.icon} ${cuisine.name}
+                    </button>
+                  `;
+                })}
+              </div>
+            ` : ''}
+          </div>
+        `;
+      })}
+
+      ${(() => {
+        const descMap = (typeof AI_CUISINE_DESCRIPTIONS !== 'undefined') ? AI_CUISINE_DESCRIPTIONS : {};
+        const selectedCuisines = this._aiSelectedCuisines || [];
+        const descs = selectedCuisines
+          .map(cid => descMap[cid])
+          .filter(d => d && d.description);
+        if (descs.length === 0) return '';
+        return html`
+          <div style="margin: 8px 0 12px 0; padding: 10px 14px; background: var(--secondary-background-color); border-radius: 8px; border-left: 3px solid var(--primary-color);">
+            ${descs.map(d => html`
+              <p style="margin: 0 0 4px 0; font-size: 0.9em; color: var(--primary-text-color); line-height: 1.5;">
+                ${(this._language === 'sv' && d.description_sv) ? d.description_sv : d.description}
+              </p>
+            `)}
+          </div>
+        `;
+      })()}
 
       <ha-card>
         <div class="card-content">
@@ -5903,7 +5822,23 @@ class KitchenCookingPanel extends LitElement {
       }
     }
 
-    return merged.length > 0 ? merged : (this._commonIngredients || []);
+    // Deduplicate by base ID: if e.g. 'beans', 'beans_bulk', 'beans_local' all appear,
+    // keep only the entry with the highest-priority grade (signature > bulk > local).
+    if (merged.length > 0) {
+      const GRADE_PRIORITY = {signature: 3, bulk: 2, local: 1};
+      const baseIdOf = id => id.replace(/_(bulk|local|signature)$/, '');
+      const byBaseId = {};
+      for (const ing of merged) {
+        const key = baseIdOf(ing.id);
+        const existing = byBaseId[key];
+        if (!existing || (GRADE_PRIORITY[ing.grade] || 0) > (GRADE_PRIORITY[existing.grade] || 0)) {
+          byBaseId[key] = ing;
+        }
+      }
+      const deduped = Object.values(byBaseId);
+      return deduped.length > 0 ? deduped : (this._commonIngredients || []);
+    }
+    return this._commonIngredients || [];
   }
 
   /**
@@ -5911,7 +5846,7 @@ class KitchenCookingPanel extends LitElement {
    *
    * Features:
    * - Groups by category using AI_CATEGORY_ORDER
-   * - Each category has a compact "base" set (common:true) shown by default
+   * - Each category shows the top 3 per grade (signature/bulk/local) by rating descending
    * - A "More (N)" button reveals the full extended set
    * - The Proteins category (cat="p") shows a subcategory drill-down:
    *   tapping a protein group (Beef / Pork / Fish / …) reveals cuts from
@@ -5954,21 +5889,43 @@ class KitchenCookingPanel extends LitElement {
     return html`
       ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => {
         const allItems = groups[cat];
-        // Items with common===true are shown by default; items with common===false are in
-        // the extended set shown after "More".  Items with no common field at all get a
-        // threshold fallback: first 12 visible, rest behind "More".
-        let baseItems = allItems.filter(i => i.common !== false);
-        let extItems  = allItems.filter(i => i.common === false);
-        if (extItems.length === 0 && baseItems.length > 12) {
-          extItems  = baseItems.slice(12);
-          baseItems = baseItems.slice(0, 12);
+        // Split into base (always shown) and ext (behind "More"):
+        //   - If items have grade+rating: top N per grade by rating descending → base, rest → ext
+        //     signature: 3, bulk: 2, local: 3  (8 total max before "More")
+        //   - Fallback (no grade info): first 12 → base, rest → ext
+        const GRADE_LIMITS = {signature: 3, bulk: 2, local: 3};
+        const GRADE_ORDER = ['signature', 'bulk', 'local'];
+        const hasGrade = allItems.some(i => i.grade);
+        let baseItems, extItems;
+        if (hasGrade) {
+          const byGrade = {};
+          for (const item of allItems) {
+            const g = item.grade || 'local';
+            if (!byGrade[g]) byGrade[g] = [];
+            byGrade[g].push(item);
+          }
+          for (const g of Object.keys(byGrade)) {
+            byGrade[g].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+          }
+          const baseSet = new Set();
+          for (const g of GRADE_ORDER) {
+            if (!byGrade[g]) continue;
+            byGrade[g].slice(0, GRADE_LIMITS[g] || 3).forEach(i => baseSet.add(i.id));
+          }
+          baseItems = allItems.filter(i => baseSet.has(i.id));
+          extItems  = allItems.filter(i => !baseSet.has(i.id));
+        } else {
+          baseItems = allItems.length > 12 ? allItems.slice(0, 12) : allItems;
+          extItems  = allItems.length > 12 ? allItems.slice(12) : [];
         }
         const isExpanded = expandedCats.includes(cat);
         const visibleItems = isExpanded ? allItems : baseItems;
 
-        // Proteins (cat="p") get a drill-down subcategory selector
+        // Proteins (cat="p") get a drill-down subcategory selector.
+        // Pass the full allItems list — _renderProteinCategory computes its own base/ext
+        // after excluding tree-mapped proteins from the badge area.
         if (cat === 'p') {
-          return this._renderProteinCategory(visibleItems, extItems, isExpanded, categoryLabels[cat]);
+          return this._renderProteinCategory(allItems, isExpanded, categoryLabels[cat]);
         }
 
         return html`
@@ -6001,10 +5958,22 @@ class KitchenCookingPanel extends LitElement {
 
   /**
    * Render the Proteins category with an optional subcategory drill-down.
-   * When a subcat (e.g. "beef") is selected, shows specific cuts from AI_PROTEIN_SUBCATS
-   * sourced from the recipe files.
+   *
+   * Badge area rules (general mechanism, works for every cuisine):
+   *   1. Any cuisine protein that maps to a tree node (via AI_PROTEIN_TO_SUBCAT, i.e. has a
+   *      matching top-level subcat) OR is a specific cut inside AI_PROTEIN_SUBCATS is excluded
+   *      from the badge area — the tree represents it.  The tree button lights up instead.
+   *   2. From the remaining non-tree proteins, the top 3 per grade (signature / bulk / local)
+   *      by rating are shown by default; the rest appear under "More".
+   *   3. When a protein maps to the tree it "lights up" its subcat button:
+   *        - signature or local grade → dark green button
+   *        - bulk grade only → light green button
+   *      Dark green takes precedence when both are present in the same subcat.
+   *
+   * Fallback (no cuisine selected): generic protein IDs from AI_GENERIC_PROTEIN_IDS are
+   * filtered from the badge area, and tree buttons are highlighted with the legacy blue style.
    */
-  _renderProteinCategory(visibleItems, extItems, isExpanded, categoryLabel) {
+  _renderProteinCategory(allItems, isExpanded, categoryLabel) {
     const proteinSubcats = (typeof AI_PROTEIN_SUBCATS !== 'undefined') ? AI_PROTEIN_SUBCATS : {};
     const subcat = this._ingredientProteinSubcat;
     const expandedCats = this._ingredientExpandedCats || [];
@@ -6018,18 +5987,73 @@ class KitchenCookingPanel extends LitElement {
       beef: '🐄', pork: '🐷', poultry: '🍗', fish: '🐟', lamb: '🐑', game: '🦌',
     };
 
-    // --- Cuisine protein highlighting ---
-    // Derive which subcats have common proteins in the selected cuisine(s),
-    // and which specific ingredient IDs are common (to highlight cuts in the drill-down).
     const proteinToSubcat = (typeof AI_PROTEIN_TO_SUBCAT !== 'undefined') ? AI_PROTEIN_TO_SUBCAT : {};
     const genericProteinIds = new Set((typeof AI_GENERIC_PROTEIN_IDS !== 'undefined') ? AI_GENERIC_PROTEIN_IDS : []);
     const cuisineIngMap = (typeof AI_CUISINE_INGREDIENTS !== 'undefined') ? AI_CUISINE_INGREDIENTS : {};
     const cuisineRegionMap = (typeof AI_CUISINE_TO_REGION !== 'undefined') ? AI_CUISINE_TO_REGION : {};
     const selectedCuisines = this._aiSelectedCuisines || [];
 
-    // Collect all common ingredient IDs from the selected cuisine(s)
+    // --- Determine which proteins are represented in the tree (excluded from badge area) ---
+    // A protein is "in the tree" if it maps to a top-level subcat OR is a specific drill-down cut.
+    let proteinTreeIds;
+    if (selectedCuisines.length > 0) {
+      const allSubcatCutIds = new Set(
+        Object.values(proteinSubcats).flatMap(cuts => cuts.map(c => c.id))
+      );
+      proteinTreeIds = new Set(
+        allItems
+          .filter(i => proteinToSubcat[i.id] || allSubcatCutIds.has(i.id))
+          .map(i => i.id)
+      );
+    } else {
+      // No cuisine selected: use the static generic-protein filter (legacy behaviour)
+      proteinTreeIds = genericProteinIds;
+    }
+
+    // Badge items = cuisine proteins NOT represented in the tree
+    const notInTree = allItems.filter(i => !proteinTreeIds.has(i.id));
+
+    // Compute base (always shown) and ext (behind "More") from badge items.
+    // Top N per grade by rating; fallback to threshold-12 when no grade info.
+    // signature: 3, bulk: 2, local: 3  (8 total max before "More")
+    const GRADE_LIMITS = {signature: 3, bulk: 2, local: 3};
+    const GRADE_ORDER = ['signature', 'bulk', 'local'];
+    let baseItems, extItems;
+    const hasGrade = notInTree.some(i => i.grade);
+    if (hasGrade) {
+      const byGrade = {};
+      for (const item of notInTree) {
+        const g = item.grade || 'local';
+        if (!byGrade[g]) byGrade[g] = [];
+        byGrade[g].push(item);
+      }
+      for (const g of Object.keys(byGrade)) {
+        byGrade[g].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+      }
+      const baseSet = new Set();
+      for (const g of GRADE_ORDER) {
+        if (!byGrade[g]) continue;
+        byGrade[g].slice(0, GRADE_LIMITS[g] || 3).forEach(i => baseSet.add(i.id));
+      }
+      baseItems = notInTree.filter(i => baseSet.has(i.id));
+      extItems  = notInTree.filter(i => !baseSet.has(i.id));
+    } else {
+      baseItems = notInTree.length > 12 ? notInTree.slice(0, 12) : notInTree;
+      extItems  = notInTree.length > 12 ? notInTree.slice(12) : [];
+    }
+    const visibleBadgeItems = isExpanded ? notInTree : baseItems;
+
+    // --- Cuisine protein highlighting for tree buttons ---
+    // ALL grades (signature, bulk, local) light up subcat buttons.
+    // Collect the highest-priority grade present per subcat:
+    //   signature or local → dark green (strong cultural/local identity)
+    //   bulk only          → light green (high consumption volume)
+    // When both are present in the same subcat, dark green takes precedence.
     const cuisineCommonProteinIds = new Set();
-    const cuisineHighlightedSubcats = new Set();
+    const cuisineDarkGreenSubcats = new Set();   // signature or local present
+    const cuisineLightGreenSubcats = new Set();  // bulk only
+    const subcatGrades = {};                     // sc → Set of grades
+
     for (const cuisineId of selectedCuisines) {
       let ings = cuisineIngMap[cuisineId];
       if (!ings) {
@@ -6038,44 +6062,55 @@ class KitchenCookingPanel extends LitElement {
       }
       if (!ings) continue;
       for (const ing of ings) {
-        if (ing.common === false) continue;
         const sc = proteinToSubcat[ing.id];
         if (!sc) continue;
         cuisineCommonProteinIds.add(ing.id);
-        cuisineHighlightedSubcats.add(sc);
+        if (!subcatGrades[sc]) subcatGrades[sc] = new Set();
+        subcatGrades[sc].add(ing.grade || 'bulk');
       }
     }
-
-    // Filter generic protein IDs (beef, chicken, fish…) from badge list —
-    // the subcat buttons already serve as their visual representation.
-    const filteredVisible = visibleItems.filter(i => !genericProteinIds.has(i.id));
-    const filteredExt = extItems.filter(i => !genericProteinIds.has(i.id));
+    for (const [sc, grades] of Object.entries(subcatGrades)) {
+      if (grades.has('signature') || grades.has('local')) {
+        cuisineDarkGreenSubcats.add(sc);
+      } else {
+        cuisineLightGreenSubcats.add(sc);
+      }
+    }
 
     return html`
       <div class="ingredient-category">
         <h4 style="margin: 12px 0 6px 0; font-size: 0.95em; color: var(--secondary-text-color);">${categoryLabel || '🥩 Proteins'}</h4>
 
         ${Object.keys(proteinSubcats).length > 0 ? html`
-          <!-- Protein sub-category selector pills — highlighted blue when cuisine has common items -->
+          <!-- Protein sub-category selector pills -->
           <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px;">
             ${Object.keys(proteinSubcats).map(sc => {
               const isActive = subcat === sc;
-              const isCuisineMatch = cuisineHighlightedSubcats.has(sc);
+              const isDarkGreen = cuisineDarkGreenSubcats.has(sc);
+              const isLightGreen = cuisineLightGreenSubcats.has(sc);
               let borderColor = 'var(--divider-color)';
               let bgColor = 'transparent';
               let textColor = 'inherit';
+              let fontWeight = 'normal';
               if (isActive) {
                 borderColor = 'var(--primary-color)';
                 bgColor = 'var(--primary-color)';
                 textColor = 'white';
-              } else if (isCuisineMatch) {
-                borderColor = 'var(--primary-color)';
-                bgColor = 'rgba(var(--rgb-primary-color, 3,169,244), 0.12)';
-                textColor = 'var(--primary-color)';
+                fontWeight = '600';
+              } else if (isDarkGreen) {
+                borderColor = '#388e3c';
+                bgColor = 'rgba(56,142,60, 0.15)';
+                textColor = '#388e3c';
+                fontWeight = '700';
+              } else if (isLightGreen) {
+                borderColor = '#66bb6a';
+                bgColor = 'rgba(102,187,106, 0.08)';
+                textColor = '#5a9e5d';
+                fontWeight = '600';
               }
               return html`
                 <button
-                  style="padding: 4px 10px; border-radius: 14px; border: 1px solid ${borderColor}; background: ${bgColor}; color: ${textColor}; cursor: pointer; font-size: 0.82em; font-weight: ${isCuisineMatch ? '600' : 'normal'};"
+                  style="padding: 4px 10px; border-radius: 14px; border: 1px solid ${borderColor}; background: ${bgColor}; color: ${textColor}; cursor: pointer; font-size: 0.82em; font-weight: ${fontWeight};"
                   @click=${() => {
                     this._ingredientProteinSubcat = (subcat === sc) ? null : sc;
                     this.requestUpdate();
@@ -6096,7 +6131,7 @@ class KitchenCookingPanel extends LitElement {
             <div style="display: flex; flex-wrap: wrap; gap: 5px;">
               ${proteinSubcats[subcat].map(cut => {
                 const displayName = (this._language === 'sv' && cut.name_sv) ? cut.name_sv : cut.name;
-                // Highlight cut if any common cuisine protein ID is a prefix of this cut's ID
+                // Highlight cut if any cuisine protein ID is a prefix/match of this cut's ID
                 // e.g. cuisine has "salmon" → highlights "salmon_fillet", "salmon_steak"
                 const isCuisineCommon = [...cuisineCommonProteinIds].some(
                   id => cut.id === id || cut.id.startsWith(id + '_') || id.startsWith(cut.id + '_')
@@ -6115,11 +6150,11 @@ class KitchenCookingPanel extends LitElement {
             </div>
           </div>
         ` : html`
-          <!-- Default protein list (generic protein IDs filtered out — subcat buttons cover them) -->
+          <!-- Badge area: non-tree proteins only -->
           <div class="ingredient-grid">
-            ${filteredVisible.map(ingredient => this._renderIngredientCheckbox(ingredient))}
+            ${visibleBadgeItems.map(ingredient => this._renderIngredientCheckbox(ingredient))}
           </div>
-          ${filteredExt.length > 0 ? html`
+          ${extItems.length > 0 ? html`
             <button
               style="margin-top: 6px; padding: 4px 12px; border-radius: 14px; border: 1px solid var(--divider-color); background: transparent; cursor: pointer; font-size: 0.82em; color: var(--secondary-text-color);"
               @click=${() => {
@@ -6132,7 +6167,7 @@ class KitchenCookingPanel extends LitElement {
             >
               ${isExpanded
                 ? this._t('ai_recipe.show_less') || 'Show less'
-                : `${this._t('ai_recipe.more_ingredients') || 'More'} (+${filteredExt.length})`}
+                : `${this._t('ai_recipe.more_ingredients') || 'More'} (+${extItems.length})`}
             </button>
           ` : ''}
         `}

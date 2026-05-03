@@ -117,7 +117,10 @@ def _extract_recipe_titles(content):
 
 
 def build_cuisine_data(base_dir):
-    """Read www/cuisines/*.md KCE:CUISINE files and build the AI_CUISINE_INGREDIENTS dict.
+    """Read www/cuisines/*.md KCE:CUISINE files (ground truth for the AI recipe builder).
+
+    Files live in docs/cuisines/ (www/cuisines is a symlink to that directory).
+    Adding a new file is enough — no other file needs to be edited.
 
     File format uses standard YAML frontmatter followed by markdown sections:
 
@@ -125,45 +128,66 @@ def build_cuisine_data(base_dir):
         KCE: CUISINE
         id: swedish
         name: Swedish
-        culinary_group: D
+        name_sv: Svensk
+        icon: 🇸🇪
+        region: nordic
+        region_name: Nordic
+        region_icon: ❄️
         research_done: 1
         ---
 
         ## Proteins
-        - {id: salmon, grade: signature, name: Salmon, name_sv: "Lax", notes: "..."}
+        - {id: salmon, grade: signature, rating: 10, name: Salmon, name_sv: "Lax", notes: "..."}
         ...
 
     Grades:
-        signature   → common=True  (shown in compact view; lights up protein tree)
-        very_common → common=True  (shown in compact view; lights up protein tree)
-        common      → common=False (shown in "More"; does not light up protein tree)
+        signature — identity of the cuisine (lights up protein tree)
+        bulk      — high consumption by statistics (lights up protein tree)
+        local     — produced/widely used locally (does NOT light up protein tree; hidden under "More")
 
-    Returns (cuisine_ingredients, cuisine_to_group) where:
-        cuisine_ingredients: {cuisine_id: [{id, name, name_sv?, cat, grade, common}, ...]}
-        cuisine_to_group:    {cuisine_id: culinary_group_str}
+    Rating (1–10):
+        How important the ingredient is within its grade for this cuisine.
+        The top 3 per grade per category are shown by default; the rest are hidden under "More".
+        Default: 5 if not specified.
+
+    Returns (cuisine_ingredients, cuisine_to_region, cuisine_regions, cuisine_descriptions) where:
+        cuisine_ingredients:  {cuisine_id: [{id, name, name_sv?, cat, grade, rating}, ...]}
+        cuisine_to_region:    {cuisine_id: region_str}
+        cuisine_regions:      [{id, name, icon, cuisines: [{id, name, name_sv?, icon, description?, description_sv?}]}]
+                              — ordered by first appearance; drives AI_CUISINE_REGIONS in the JS.
+        cuisine_descriptions: {cuisine_id: {description: str, description_sv?: str}}
+                              — flat lookup used by AI_CUISINE_DESCRIPTIONS in the JS.
     """
     _section_to_cat = {
-        "proteins":             "p",
-        "vegetables":           "v",
-        "grains":               "g",
-        "dairy":                "d",
-        "spices":               "s",
-        "spices & seasonings":  "s",
-        "condiments":           "s",
-        "other":                "s",
+        "proteins":                  "p",
+        # Produce / Vegetables
+        "produce":                   "v",
+        "vegetables":                "v",
+        # Grains & Starches
+        "grains & starches":         "g",
+        "grains":                    "g",
+        # Dairy, Oils & Sauces
+        "dairy, oils & sauces":      "d",
+        "dairy & eggs":              "d",
+        "dairy":                     "d",
+        # Spices, Nuts & Seasonings
+        "spices, nuts & seasonings": "s",
+        "spices & seasonings":       "s",
+        "spices":                    "s",
+        "condiments":                "s",
+        "other":                     "s",
     }
-    _grade_common = {
-        "signature":    True,
-        "very_common":  True,
-        "common":       False,
-    }
+    _valid_grades = {"signature", "bulk", "local"}
 
     cuisines_dir = os.path.join(base_dir, "www", "cuisines")
     cuisine_ingredients = {}
-    cuisine_to_group = {}
+    cuisine_to_region = {}
+    cuisine_descriptions = {}
+    # region_id → {id, name, icon, cuisines: [...]}; ordered dict preserves insertion order
+    regions_map = {}
 
     if not os.path.isdir(cuisines_dir):
-        return cuisine_ingredients, cuisine_to_group
+        return cuisine_ingredients, cuisine_to_region, [], cuisine_descriptions
 
     for filename in sorted(os.listdir(cuisines_dir)):
         if not filename.endswith(".md"):
@@ -196,8 +220,36 @@ def build_cuisine_data(base_dir):
         if not cuisine_id:
             continue
 
-        culinary_group = str(fm.get("culinary_group", ""))
-        cuisine_to_group[cuisine_id] = culinary_group
+        region = str(fm.get("region", fm.get("culinary_group", "")))
+        cuisine_to_region[cuisine_id] = region
+
+        # Build the region/cuisine tree entry
+        cuisine_entry = {"id": cuisine_id, "name": fm.get("name", cuisine_id.replace("_", " ").title())}
+        if fm.get("name_sv"):
+            cuisine_entry["name_sv"] = fm["name_sv"]
+        if fm.get("icon"):
+            cuisine_entry["icon"] = fm["icon"]
+        if fm.get("description"):
+            cuisine_entry["description"] = fm["description"]
+        if fm.get("description_sv"):
+            cuisine_entry["description_sv"] = fm["description_sv"]
+
+        if region:
+            if region not in regions_map:
+                regions_map[region] = {
+                    "id": region,
+                    "name": fm.get("region_name", region.replace("_", " ").title()),
+                    "icon": fm.get("region_icon", "🌍"),
+                    "cuisines": [],
+                }
+            regions_map[region]["cuisines"].append(cuisine_entry)
+
+        # Collect description into flat lookup dict
+        if fm.get("description"):
+            desc_entry = {"description": fm["description"]}
+            if fm.get("description_sv"):
+                desc_entry["description_sv"] = fm["description_sv"]
+            cuisine_descriptions[cuisine_id] = desc_entry
 
         # Parse ingredient sections from markdown body
         body = content[end_fm + 4:]
@@ -220,15 +272,15 @@ def build_cuisine_data(base_dir):
                 if not isinstance(item, dict):
                     continue
                 ing_id = item.get("id")
-                grade = str(item.get("grade", "common"))
-                if not ing_id or grade not in _grade_common:
+                grade = str(item.get("grade", "local"))
+                if not ing_id or grade not in _valid_grades:
                     continue
                 entry = {
                     "id": ing_id,
                     "name": item.get("name", ing_id.replace("_", " ").title()),
                     "cat": current_cat,
                     "grade": grade,
-                    "common": _grade_common[grade],
+                    "rating": int(item.get("rating", 5)),
                 }
                 if item.get("name_sv"):
                     entry["name_sv"] = item["name_sv"]
@@ -237,7 +289,8 @@ def build_cuisine_data(base_dir):
         if ingredients:
             cuisine_ingredients[cuisine_id] = ingredients
 
-    return cuisine_ingredients, cuisine_to_group
+    cuisine_regions = list(regions_map.values())
+    return cuisine_ingredients, cuisine_to_region, cuisine_regions, cuisine_descriptions
 
 
 def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
@@ -714,6 +767,8 @@ def generate_js_data():
     ai_ingredients = {}
     ai_cuisine_ingredients = {}
     ai_cuisine_to_region = {}
+    ai_cuisine_regions = []
+    ai_cuisine_descriptions = {}
     ai_ingredient_categories = {}
     ai_category_labels = {}
     ai_category_labels_sv = {}
@@ -734,10 +789,6 @@ def generate_js_data():
         
         ai_cooking_styles = ai_data_module.COOKING_STYLES
         ai_ingredients = ai_data_module.COMMON_INGREDIENTS
-        # CUISINE_INGREDIENTS from ai_recipe_data.py is kept as a fallback only;
-        # the primary source is now www/cuisines/*.md (KCE:CUISINE files).
-        _legacy_cuisine = ai_data_module.CUISINE_INGREDIENTS  # noqa: F841 (fallback, unused when files present)
-        ai_cuisine_to_region = ai_data_module.CUISINE_TO_REGION
         ai_ingredient_categories = getattr(ai_data_module, 'INGREDIENT_CATEGORIES', {})
         ai_category_labels = getattr(ai_data_module, 'CATEGORY_LABELS', {})
         ai_category_labels_sv = getattr(ai_data_module, 'CATEGORY_LABELS_SV', {})
@@ -755,17 +806,21 @@ def generate_js_data():
     ai_protein_subcat_labels = {}
     ai_protein_subcat_labels_sv = {}
 
-    # Load cuisine ingredients from www/cuisines/*.md (KCE:CUISINE files).
-    # These override any legacy CUISINE_INGREDIENTS from ai_recipe_data.py.
-    _file_cuisine_ingredients, _file_cuisine_to_group = build_cuisine_data(base_dir)
+    # Load cuisine ingredients from docs/cuisines/*.md (KCE:CUISINE files) via www/cuisines symlink.
+    # These files are the single source of truth for AI_CUISINE_REGIONS and AI_CUISINE_TO_REGION.
+    # Adding a new file is all that is needed — no other file must be edited.
+    _file_cuisine_ingredients, _file_cuisine_to_region, _file_cuisine_regions, _file_cuisine_descriptions = build_cuisine_data(base_dir)
     if _file_cuisine_ingredients:
         ai_cuisine_ingredients = _file_cuisine_ingredients
+        ai_cuisine_to_region = {cid: r for cid, r in _file_cuisine_to_region.items() if r}
+        ai_cuisine_regions = _file_cuisine_regions
+        ai_cuisine_descriptions = _file_cuisine_descriptions
         print(
             f"  Cuisines: {len(ai_cuisine_ingredients)} cuisine file(s) loaded "
             f"({sum(len(v) for v in ai_cuisine_ingredients.values())} ingredients total)"
         )
     else:
-        print("  Cuisines: no www/cuisines/*.md files found — AI_CUISINE_INGREDIENTS will be empty")
+        print("  Cuisines: no docs/cuisines/*.md files found — AI_CUISINE_INGREDIENTS will be empty")
 
     # Enrich cuisine ingredients with category from INGREDIENT_CATEGORIES map
     # (only for legacy entries without a cat field already set by build_cuisine_data)
@@ -780,14 +835,17 @@ def generate_js_data():
                     continue
                 cat = ai_ingredient_categories.get(ing["id"], "s")  # default to spices
                 item = {"id": ing["id"], "name": ing["name"], "cat": cat}
-                if "common" in ing:
-                    item["common"] = ing["common"]
+                if "grade" in ing:
+                    item["grade"] = ing["grade"]
+                if "rating" in ing:
+                    item["rating"] = ing["rating"]
                 enriched.append(item)
             enriched_cuisine[cuisine_id] = enriched
         ai_cuisine_ingredients = enriched_cuisine
 
-    # Build AI_COMMON_INGREDIENTS — a flat array with {id, name, cat, common} per item.
+    # Build AI_COMMON_INGREDIENTS — a flat array with {id, name, cat, featured} per item.
     # Maps the category-dict structure of COMMON_INGREDIENTS into category codes used by the UI.
+    # Note: these items have no grade/rating (they are not cuisine-specific).
     _cat_key_to_code = {
         "proteins": "p",
         "vegetables": "v",
@@ -804,7 +862,7 @@ def generate_js_data():
                     "id": ing["id"],
                     "name": ing["name"],
                     "cat": ai_ingredient_categories.get(ing["id"], cat_code),
-                    "common": ing.get("common", True),
+                    "featured": ing.get("featured", True),
                 }
                 ai_common_ingredients_flat.append(enriched_item)
 
@@ -919,6 +977,12 @@ def generate_js_data():
     lines.append("")
     lines.append("// AI Recipe Builder - Cuisine to Region mapping")
     lines.append(f"const AI_CUISINE_TO_REGION = {json.dumps(ai_cuisine_to_region, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Region/cuisine tree (ground truth: docs/cuisines/*.md)")
+    lines.append(f"const AI_CUISINE_REGIONS = {json.dumps(ai_cuisine_regions, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Cuisine descriptions {cuisine_id: {description, description_sv?}}")
+    lines.append(f"const AI_CUISINE_DESCRIPTIONS = {json.dumps(ai_cuisine_descriptions, indent=2, ensure_ascii=False)};")
     lines.append("")
     lines.append("// AI Recipe Builder - Protein ingredient → subcat key (beef/pork/poultry/fish/lamb/game)")
     lines.append(f"const AI_PROTEIN_TO_SUBCAT = {json.dumps(ai_protein_to_subcat, indent=2, ensure_ascii=False)};")

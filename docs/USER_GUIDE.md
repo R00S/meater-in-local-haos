@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.7.0.21 · Home Assistant 2024.1.0+
+> **Version:** 0.8.2.7 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -859,25 +859,30 @@ Recipe Builder:
 The ingredient screen has several sections:
 
 - **Cuisine / Region filter** — optionally choose one or more cuisine regions to narrow
-  ingredient suggestions. Selecting multiple regions creates fusion combinations. Over 85
-  cuisines are available.
+  ingredient suggestions. Selecting multiple regions creates fusion combinations. Over 95
+  cuisines are available. When a cuisine is selected, a short description of that cuisine
+  is shown above the ingredient grid.
 - **From Your Shelf** *(shown only when Shelf is enabled and has items)* — a highlighted
   section at the top of the ingredient grid shows items currently in your shelf (fridge,
   freezer, larder, spices). Tap any chip to instantly add that item as a selected
   ingredient. Items already selected are hidden from this section.
 - **Ingredient grid** — ingredients are grouped by category (Proteins, Vegetables, Grains,
-  Dairy & Oils, Spices). Each category shows a compact base set by default. Tap
-  **More (+N)** to expand a category to its full set; tap **Show less** to collapse it back.
-  When a cuisine is selected, the ingredient list is filtered to that cuisine's common
-  and extended items.
+  Dairy & Oils, Spices). Each category shows a curated base set by default — up to the
+  top items per ingredient grade ranked by rating (signature: 3, bulk: 2, local: 3 — 8 total
+  before **More**). Tap **More (+N)** to expand to the full set; tap **Show less** to collapse.
+  When a cuisine is selected, only that cuisine's ingredients are shown.
 - **Protein drill-down** — the Proteins category has a row of sub-group tabs (🐄 Beef,
   🐷 Pork, 🍗 Poultry, 🐟 Fish, 🐑 Lamb, 🦌 Game). Tap a tab to show specific cuts
   from the recipe library for that protein group instead of the general protein list.
   Tap the active tab again to close the drill-down.
-  - When a cuisine is selected, sub-group tabs that have common proteins in that cuisine
-    are **highlighted blue** (bold, outlined) — a quick visual guide to which protein groups
-    fit that cuisine.
-  - Inside the drill-down, specific cuts that match the cuisine's common proteins are
+  - When a cuisine is selected, sub-group tabs whose proteins appear in that cuisine are
+    **highlighted green** — dark green for signature or locally-produced proteins,
+    light green for high-consumption (bulk) proteins.
+  - Cuisine proteins that map to a protein group are shown as highlighted buttons on the
+    protein row (not as individual ingredient chips) — the group button represents them.
+    The remaining cuisine proteins that don't map to a group appear as chips below the
+    protein tabs.
+  - Inside the drill-down, specific cuts that match the cuisine's proteins are
     **★ starred** and tinted blue, so you can instantly spot the most cuisine-appropriate cuts.
 - **Custom ingredient** — type any ingredient in the text field and tap **＋ Add** to add
   it, even if it's not in the list.
