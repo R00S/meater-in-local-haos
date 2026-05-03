@@ -243,6 +243,106 @@ the stub lines that remain, and will pick up from there.
 
 ---
 
+## Worked example — how the 15 pairs are executed in practice
+
+Below is the actual sequence of web searches used when researching Finnish cuisine.
+Each pair gets exactly one focused search (sometimes one native-language + one English),
+then the results are written and the next pair begins. No batching. No extrapolation.
+
+```
+Pair 1: Proteins — Signature
+  Search (native): "Web Search: Finnish perinteiset ruoat ikoninen proteiini lohi poro
+                   silakka - perinteiset suomalaiset ruoat tyypilliset lihat kalat"
+  → Wrote Proteins — Signature items. Pair 1 done.
+
+Pair 2: Proteins — Bulk
+  Search (English): "Web Search: Finland meat consumption per capita statistics 2022 2023
+                    pork chicken beef kg/capita FAO food balance"
+  → Wrote Proteins — Bulk items. Pair 2 done.
+
+Pair 3: Proteins — Local
+  Search (mixed): "Web Search: Suomi kalastus poronhoito hirvenmetsästys paikallinen
+                  tuotanto lihakarja - Finland local protein production livestock
+                  fishing hunting statistics"
+  → Wrote Proteins — Local items. Pair 3 done.
+
+Pair 4: Vegetables — Signature
+  Search (native): "Web Search: suomalaiset perinteruoat kasvikset perunalaatikko
+                   lanttulaatikko porkkanalaatikko rosolli joulupöytä perinteinen"
+  → Wrote Vegetables — Signature items. Pair 4 done.
+
+Pair 5: Vegetables — Bulk
+  Search (English): "Web Search: Finland vegetable consumption per capita statistics
+                    most consumed vegetables 2022 2023 Luke natural resources"
+  → Wrote Vegetables — Bulk items. Pair 5 done.
+
+Pair 6: Vegetables — Local
+  Search (mixed): "Web Search: Suomi paikallinen kasvituotanto sienet marjat kantarelli
+                  puolukka peruna lanttu - Finland locally grown vegetables foraging
+                  mushrooms berries"
+  → Wrote Vegetables — Local items. Pair 6 done.
+
+Pair 7: Grains — Signature
+  Search (mixed): "Web Search: ruisleipä karjalanpiirakka kaurapuuro suomalainen
+                  ruokaidentiteetti ikoninen vilja - Finnish rye bread oats iconic
+                  grain dishes identity"
+  → Wrote Grains — Signature items. Pair 7 done.
+
+Pair 8: Grains — Bulk
+  Search (English): "Web Search: Finland grain consumption per capita 2022 2023 wheat
+                    rye oats statistics Luke food balance cereals"
+  → Wrote Grains — Bulk items. Pair 8 done.
+
+Pair 9: Grains — Local
+  Search (English): "Web Search: Finland grain crop production locally grown oats barley
+                    rye wheat farming statistics hectares production Luke"
+  → Wrote Grains — Local items. Pair 9 done.
+
+Pair 10: Dairy — Signature
+  Search (native): "Web Search: suomalainen juustoleipä viili piimä ikoninen maitotuote
+                   perinteinen - Finnish dairy signature bread cheese viili traditional
+                   iconic"
+  → Wrote Dairy — Signature items. Pair 10 done.
+
+Pair 11: Dairy — Bulk
+  Search (English): "Web Search: Finland dairy consumption per capita milk butter cheese
+                    2022 2023 statistics Luke kg per capita"
+  → Wrote Dairy — Bulk items. Pair 11 done.
+
+Pair 12: Dairy — Local
+  Search (English): "Web Search: Finland local dairy production Finnish Ayrshire cattle
+                    breeds regional cheese varieties juustoleipä production area
+                    Ostrobothnia Lapland"
+  → Wrote Dairy — Local items. Pair 12 done.
+
+Pair 13: Spices & Seasonings — Signature
+  Search (mixed): "Web Search: suomalaisen ruuan mausteet tilli kumina maustepippuri
+                  valkopippuri katajan marjat ikoninen maku - Finnish cuisine defining
+                  spices dill caraway allspice signature flavour"
+  → Wrote Spices & Seasonings — Signature items. Pair 13 done.
+
+Pair 14: Spices & Seasonings — Bulk
+  Search (English): "Web Search: Finland most used seasonings condiments statistics
+                    salt pepper dill everyday cooking consumption 2022 2023"
+  → Wrote Spices & Seasonings — Bulk items. Pair 14 done.
+
+Pair 15: Spices & Seasonings — Local
+  Search (mixed): "Web Search: Finland locally foraged seasonings juniper berries
+                  lingonberry sea buckthorn tyrni wild herbs birch kataja paikallinen
+                  maustekasvit"
+  → Wrote Spices & Seasonings — Local items. All 15 pairs done.
+  → Set research_done: 1. Ran generator. Committed.
+```
+
+**What this demonstrates:**
+- Every pair gets its own search — never combined or skipped.
+- Native-language searches are used where the cuisine has its own language (Finnish here).
+- English is used for statistics when official data is easier to find in English.
+- The transition between pairs is explicit: "Pair N done. Now Pair N+1."
+- The sequence is always the same order (Proteins → Vegetables → Grains → Dairy → Spices).
+
+---
+
 ## Search quality — traps to avoid
 
 ### ❌ Trap 1: Ingredient names in the search query

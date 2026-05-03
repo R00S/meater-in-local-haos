@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 May 2026, 19:41 CET
+ * AUTO-GENERATED: 03 May 2026, 20:27 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 03 May 2026, 19:41 CET
+// Last generated: 03 May 2026, 20:27 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -46628,1084 +46628,1084 @@ const AI_CUISINE_INGREDIENTS = {
   ],
   "hungarian": [
     {
-      "id": "stub_prot_sig_1",
-      "name": "[STUB]",
+      "id": "beef",
+      "name": "Beef",
       "cat": "p",
       "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
+      "rating": 9,
+      "name_sv": "Nötkött"
     },
     {
-      "id": "stub_prot_sig_2",
-      "name": "[STUB]",
+      "id": "pork",
+      "name": "Pork",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Fläskkött"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Kyckling"
+    },
+    {
+      "id": "goose_liver",
+      "name": "Fattened goose liver (libamáj)",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Gåslever (libamáj)"
+    },
+    {
+      "id": "carp",
+      "name": "Carp (ponty)",
       "cat": "p",
       "grade": "signature",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Karp (ponty)"
     },
     {
-      "id": "stub_prot_sig_3",
-      "name": "[STUB]",
+      "id": "kolbasz",
+      "name": "Hungarian sausage (kolbász)",
       "cat": "p",
       "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
+      "rating": 7,
+      "name_sv": "Ungersk korv (kolbász)"
     },
     {
-      "id": "stub_prot_sig_4",
-      "name": "[STUB]",
+      "id": "goose",
+      "name": "Goose (lúd)",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Gås (lúd)"
+    },
+    {
+      "id": "catfish",
+      "name": "Catfish (harcsa)",
+      "cat": "p",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "Mal (harcsa)"
+    },
+    {
+      "id": "lamb",
+      "name": "Lamb (bárány)",
       "cat": "p",
       "grade": "signature",
       "rating": 5,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Lamm (bárány)"
     },
     {
-      "id": "stub_prot_sig_5",
-      "name": "[STUB]",
+      "id": "chicken",
+      "name": "Chicken",
       "cat": "p",
-      "grade": "signature",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Kyckling"
+    },
+    {
+      "id": "pork",
+      "name": "Pork",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Fläskkött"
+    },
+    {
+      "id": "processed_pork",
+      "name": "Pork sausage & cold cuts (felvágott/kolbász)",
+      "cat": "p",
+      "grade": "bulk",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Charkuteri (felvágott/kolbász)"
     },
     {
-      "id": "stub_prot_sig_6",
-      "name": "[STUB]",
+      "id": "turkey",
+      "name": "Turkey (pulyka)",
       "cat": "p",
-      "grade": "signature",
+      "grade": "bulk",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Kalkon (pulyka)"
     },
     {
-      "id": "stub_prot_sig_7",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_sig_8",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_sig_9",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_1",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_2",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_3",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_4",
-      "name": "[STUB]",
+      "id": "duck",
+      "name": "Duck (kacsa)",
       "cat": "p",
       "grade": "bulk",
       "rating": 6,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Anka (kacsa)"
     },
     {
-      "id": "stub_prot_bul_5",
-      "name": "[STUB]",
+      "id": "goose",
+      "name": "Goose (lúd)",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "Gås (lúd)"
+    },
+    {
+      "id": "beef",
+      "name": "Beef",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "Nötkött"
+    },
+    {
+      "id": "carp",
+      "name": "Carp (ponty)",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "Karp (ponty)"
+    },
+    {
+      "id": "rabbit",
+      "name": "Rabbit (nyúl)",
       "cat": "p",
       "grade": "bulk",
       "rating": 4,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Kanin (nyúl)"
     },
     {
-      "id": "stub_prot_bul_6",
-      "name": "[STUB]",
+      "id": "mangalica",
+      "name": "Mangalica pig (mangalica sertés)",
       "cat": "p",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_7",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_8",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
+      "grade": "local",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Mangalica-gris (mangalica sertés)"
     },
     {
-      "id": "stub_prot_bul_9",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_1",
-      "name": "[STUB]",
+      "id": "goose_hu",
+      "name": "Hungarian goose (Magyar lúd)",
       "cat": "p",
       "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
+      "rating": 9,
+      "name_sv": "Ungersk gås (Magyar lúd)"
     },
     {
-      "id": "stub_prot_loc_2",
-      "name": "[STUB]",
+      "id": "carp",
+      "name": "Carp (ponty)",
       "cat": "p",
       "grade": "local",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Karp (ponty)"
     },
     {
-      "id": "stub_prot_loc_3",
-      "name": "[STUB]",
+      "id": "hungarian_grey_cattle",
+      "name": "Hungarian Grey Cattle (Magyar szürke marha)",
+      "cat": "p",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "Ungersk grå boskap (Magyar szürke marha)"
+    },
+    {
+      "id": "catfish",
+      "name": "Catfish (harcsa)",
       "cat": "p",
       "grade": "local",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Mal (harcsa)"
     },
     {
-      "id": "stub_prot_loc_4",
-      "name": "[STUB]",
+      "id": "zander",
+      "name": "Zander / pike-perch (süllő)",
       "cat": "p",
       "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
+      "rating": 7,
+      "name_sv": "Gös (süllő)"
     },
     {
-      "id": "stub_prot_loc_5",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_6",
-      "name": "[STUB]",
+      "id": "pheasant",
+      "name": "Pheasant (fácán)",
       "cat": "p",
       "grade": "local",
       "rating": 6,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Fasan (fácán)"
     },
     {
-      "id": "stub_prot_loc_7",
-      "name": "[STUB]",
+      "id": "wild_boar",
+      "name": "Wild boar (vaddisznó)",
       "cat": "p",
       "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
+      "rating": 6,
+      "name_sv": "Vildsvin (vaddisznó)"
     },
     {
-      "id": "stub_prot_loc_8",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_9",
-      "name": "[STUB]",
+      "id": "deer",
+      "name": "Deer / venison (szarvas)",
       "cat": "p",
       "grade": "local",
       "rating": 5,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Hjort (szarvas)"
     },
     {
-      "id": "stub_veg_sig_1",
-      "name": "[STUB]",
+      "id": "bell_pepper",
+      "name": "Bell pepper / Hungarian pepper (zöldpaprika)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Paprika (zöldpaprika)"
+    },
+    {
+      "id": "onion",
+      "name": "Onion (hagyma)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Lök (hagyma)"
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato (paradicsom)",
       "cat": "v",
       "grade": "signature",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Tomat (paradicsom)"
     },
     {
-      "id": "stub_veg_sig_2",
-      "name": "[STUB]",
+      "id": "cabbage",
+      "name": "Cabbage (káposzta)",
       "cat": "v",
       "grade": "signature",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Kål (káposzta)"
     },
     {
-      "id": "stub_veg_sig_3",
-      "name": "[STUB]",
+      "id": "hot_pepper",
+      "name": "Hot pepper (cseresznyepaprika / erős paprika)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Het paprika (cseresznyepaprika)"
+    },
+    {
+      "id": "potato",
+      "name": "Potato (burgonya / krumpli)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Potatis (burgonya)"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic (fokhagyma)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Vitlök (fokhagyma)"
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot (sárgarépa)",
       "cat": "v",
       "grade": "signature",
       "rating": 6,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Morot (sárgarépa)"
     },
     {
-      "id": "stub_veg_sig_4",
-      "name": "[STUB]",
+      "id": "mushroom",
+      "name": "Mushroom (gomba)",
       "cat": "v",
       "grade": "signature",
       "rating": 5,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Svamp (gomba)"
     },
     {
-      "id": "stub_veg_sig_5",
-      "name": "[STUB]",
+      "id": "potato",
+      "name": "Potato (burgonya)",
       "cat": "v",
-      "grade": "signature",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Potatis (burgonya)"
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato (paradicsom)",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "Tomat (paradicsom)"
+    },
+    {
+      "id": "onion",
+      "name": "Onion (hagyma)",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "Lök (hagyma)"
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage (káposzta)",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Kål (káposzta)"
+    },
+    {
+      "id": "bell_pepper",
+      "name": "Bell pepper (zöldpaprika)",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Paprika (zöldpaprika)"
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot (sárgarépa)",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "Morot (sárgarépa)"
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber (uborka)",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "Gurka (uborka)"
+    },
+    {
+      "id": "sweet_corn",
+      "name": "Sweet corn (csemegekukorica)",
+      "cat": "v",
+      "grade": "bulk",
       "rating": 5,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Majs (csemegekukorica)"
     },
     {
-      "id": "stub_veg_sig_6",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_7",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_8",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_9",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_1",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_2",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_3",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_4",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_5",
-      "name": "[STUB]",
+      "id": "beetroot",
+      "name": "Beetroot (cékla)",
       "cat": "v",
       "grade": "bulk",
       "rating": 4,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Rödbeta (cékla)"
     },
     {
-      "id": "stub_veg_bul_6",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_7",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_8",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_9",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_1",
-      "name": "[STUB]",
+      "id": "kalocsa_pepper",
+      "name": "Kalocsai paprika pepper",
       "cat": "v",
       "grade": "local",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Kalocsai paprika-paprika"
     },
     {
-      "id": "stub_veg_loc_2",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_3",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_4",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_5",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_6",
-      "name": "[STUB]",
+      "id": "szegedi_pepper",
+      "name": "Szegedi paprika pepper",
       "cat": "v",
       "grade": "local",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Szegedi paprika-paprika"
     },
     {
-      "id": "stub_veg_loc_7",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_8",
-      "name": "[STUB]",
+      "id": "mako_onion",
+      "name": "Makó onion (Makói hagyma)",
       "cat": "v",
       "grade": "local",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Makó-lök (Makói hagyma)"
     },
     {
-      "id": "stub_veg_loc_9",
-      "name": "[STUB]",
+      "id": "sour_cherry",
+      "name": "Sour cherry (meggy)",
       "cat": "v",
       "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
+      "rating": 7,
+      "name_sv": "Surkörsbär (meggy)"
     },
     {
-      "id": "stub_grain_sig_1",
-      "name": "[STUB]",
+      "id": "plum",
+      "name": "Plum (szilva)",
+      "cat": "v",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Plommon (szilva)"
+    },
+    {
+      "id": "horseradish",
+      "name": "Horseradish (torma)",
+      "cat": "v",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Pepparrot (torma)"
+    },
+    {
+      "id": "cherry_pepper",
+      "name": "Cherry pepper (cseresznyepaprika)",
+      "cat": "v",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Körsbärspeppar (cseresznyepaprika)"
+    },
+    {
+      "id": "cabbage_hu",
+      "name": "Cabbage (káposzta)",
+      "cat": "v",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Kål (káposzta)"
+    },
+    {
+      "id": "apple",
+      "name": "Apple (alma)",
+      "cat": "v",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "Äpple (alma)"
+    },
+    {
+      "id": "nokedli",
+      "name": "Egg dumplings (nokedli / galuska)",
       "cat": "s",
       "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
+      "rating": 9,
+      "name_sv": "Äggknyten (nokedli / galuska)"
     },
     {
-      "id": "stub_grain_sig_2",
-      "name": "[STUB]",
+      "id": "retes",
+      "name": "Strudel (rétes)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Strudel (rétes)"
+    },
+    {
+      "id": "tarhonya",
+      "name": "Dried egg noodle pearls (tarhonya)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Torkade äggpastapärlor (tarhonya)"
+    },
+    {
+      "id": "langos",
+      "name": "Lángos",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Lángos"
+    },
+    {
+      "id": "csipetke",
+      "name": "Pinched pasta (csipetke)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Knipen pasta (csipetke)"
+    },
+    {
+      "id": "feher_kenyer",
+      "name": "White bread (fehérkenyér / kenyér)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Vitt bröd (fehérkenyér)"
+    },
+    {
+      "id": "rice",
+      "name": "Rice (rizs)",
       "cat": "s",
       "grade": "signature",
       "rating": 6,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Ris (rizs)"
     },
     {
-      "id": "stub_grain_sig_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_9",
-      "name": "[STUB]",
+      "id": "semolina",
+      "name": "Semolina (búzadara)",
       "cat": "s",
       "grade": "signature",
       "rating": 5,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Mannagryn (búzadara)"
     },
     {
-      "id": "stub_grain_bul_1",
-      "name": "[STUB]",
+      "id": "kifli",
+      "name": "Crescent roll (kifli)",
       "cat": "s",
-      "grade": "bulk",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
+      "grade": "signature",
       "rating": 6,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Giffel (kifli)"
     },
     {
-      "id": "stub_grain_bul_4",
-      "name": "[STUB]",
+      "id": "wheat_flour",
+      "name": "Wheat / wheat flour (búza / búzaliszt)",
       "cat": "s",
       "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
+      "rating": 9,
+      "name_sv": "Vete / vetemjöl (búza / búzaliszt)"
     },
     {
-      "id": "stub_grain_bul_5",
-      "name": "[STUB]",
+      "id": "bread",
+      "name": "Bread (kenyér)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Bröd (kenyér)"
+    },
+    {
+      "id": "pasta_noddles",
+      "name": "Pasta / egg noodles (tészta / nokedli)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "Pasta / äggpasta (tészta / nokedli)"
+    },
+    {
+      "id": "bread_rolls",
+      "name": "Bread rolls (zsemle / kifli)",
       "cat": "s",
       "grade": "bulk",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Frukostbröd (zsemle / kifli)"
     },
     {
-      "id": "stub_grain_bul_6",
-      "name": "[STUB]",
+      "id": "rice",
+      "name": "Rice (rizs)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Ris (rizs)"
+    },
+    {
+      "id": "corn",
+      "name": "Corn / maize products (kukorica)",
       "cat": "s",
       "grade": "bulk",
       "rating": 5,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Majs (kukorica)"
     },
     {
-      "id": "stub_grain_bul_7",
-      "name": "[STUB]",
+      "id": "semolina_b",
+      "name": "Semolina (búzadara)",
       "cat": "s",
       "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
       "rating": 5,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Mannagryn (búzadara)"
     },
     {
-      "id": "stub_grain_loc_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_1",
-      "name": "[STUB]",
+      "id": "rye_bread",
+      "name": "Rye bread (rozskenyér)",
       "cat": "s",
       "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
+      "rating": 5,
+      "name_sv": "Rågbröd (rozskenyér)"
     },
     {
-      "id": "stub_dairy_bul_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_9",
-      "name": "[STUB]",
+      "id": "barley",
+      "name": "Barley (árpa)",
       "cat": "s",
       "grade": "bulk",
       "rating": 4,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Korn (árpa)"
     },
     {
-      "id": "stub_dairy_loc_1",
-      "name": "[STUB]",
+      "id": "wheat_local",
+      "name": "Hungarian winter wheat (búza)",
       "cat": "s",
       "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Ungerskt vintervete (búza)"
     },
     {
-      "id": "stub_spice_sig_5",
-      "name": "[STUB]",
+      "id": "sunflower",
+      "name": "Sunflower (napraforgó)",
       "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "Solros (napraforgó)"
     },
     {
-      "id": "stub_spice_sig_6",
-      "name": "[STUB]",
+      "id": "corn_local",
+      "name": "Corn / maize (kukorica)",
       "cat": "s",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
+      "grade": "local",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Majs (kukorica)"
     },
     {
-      "id": "stub_spice_bul_1",
-      "name": "[STUB]",
+      "id": "poppy_seeds",
+      "name": "Poppy seeds (mák)",
       "cat": "s",
-      "grade": "bulk",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "Vallmofrön (mák)"
+    },
+    {
+      "id": "walnut",
+      "name": "Walnut (dió)",
+      "cat": "s",
+      "grade": "local",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Valnöt (dió)"
     },
     {
-      "id": "stub_spice_bul_2",
-      "name": "[STUB]",
+      "id": "barley_local",
+      "name": "Barley (árpa)",
       "cat": "s",
-      "grade": "bulk",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Korn (árpa)"
+    },
+    {
+      "id": "rye",
+      "name": "Rye (rozs)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Råg (rozs)"
+    },
+    {
+      "id": "millet",
+      "name": "Millet (köles)",
+      "cat": "s",
+      "grade": "local",
       "rating": 4,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Hirs (köles)"
     },
     {
-      "id": "stub_spice_bul_3",
-      "name": "[STUB]",
+      "id": "hemp_seeds",
+      "name": "Hemp seeds (kendermag)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 4,
+      "name_sv": "Hampafrön (kendermag)"
+    },
+    {
+      "id": "tejfol",
+      "name": "Sour cream (tejföl)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Gräddfil (tejföl)"
+    },
+    {
+      "id": "turo",
+      "name": "Curd cheese (túró)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Färskost / kvarg (túró)"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs (tojás)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Ägg (tojás)"
+    },
+    {
+      "id": "trappista",
+      "name": "Trappista cheese (trappista sajt)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Trappisostost (trappista sajt)"
+    },
+    {
+      "id": "vaj",
+      "name": "Butter (vaj)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "Smör (vaj)"
+    },
+    {
+      "id": "tejszin",
+      "name": "Cream (tejszín)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "Grädde (tejszín)"
+    },
+    {
+      "id": "korozott",
+      "name": "Körözött (spiced túró spread)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "Körözött (kryddad kvargröra)"
+    },
+    {
+      "id": "palp_sajt",
+      "name": "Pálpusztai cheese (pálpusztai sajt)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "Pálpusztai-ost (pálpusztai sajt)"
+    },
+    {
+      "id": "zsir",
+      "name": "Lard (zsír / disznózsír)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Ister (zsír / disznózsír)"
+    },
+    {
+      "id": "milk",
+      "name": "Milk (tej)",
       "cat": "s",
       "grade": "bulk",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Mjölk (tej)"
     },
     {
-      "id": "stub_spice_bul_4",
-      "name": "[STUB]",
+      "id": "tejfol_bulk",
+      "name": "Sour cream (tejföl)",
       "cat": "s",
       "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
+      "rating": 9,
+      "name_sv": "Gräddfil (tejföl)"
     },
     {
-      "id": "stub_spice_bul_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_6",
-      "name": "[STUB]",
+      "id": "eggs_bulk",
+      "name": "Eggs (tojás)",
       "cat": "s",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Ägg (tojás)"
     },
     {
-      "id": "stub_spice_bul_7",
-      "name": "[STUB]",
+      "id": "cheese_bulk",
+      "name": "Cheese (sajt)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Ost (sajt)"
+    },
+    {
+      "id": "turo_bulk",
+      "name": "Curd cheese / quark (túró)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Kvarg (túró)"
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt (joghurt)",
       "cat": "s",
       "grade": "bulk",
       "rating": 6,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Yoghurt (joghurt)"
     },
     {
-      "id": "stub_spice_bul_8",
-      "name": "[STUB]",
+      "id": "kefir",
+      "name": "Kefir",
       "cat": "s",
       "grade": "bulk",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
+      "rating": 5,
+      "name_sv": "Kefir"
     },
     {
-      "id": "stub_spice_bul_9",
-      "name": "[STUB]",
+      "id": "tejszin_bulk",
+      "name": "Cream (tejszín)",
       "cat": "s",
       "grade": "bulk",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
+      "rating": 5,
+      "name_sv": "Grädde (tejszín)"
     },
     {
-      "id": "stub_spice_loc_1",
-      "name": "[STUB]",
+      "id": "butter_bulk",
+      "name": "Butter (vaj)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 5,
+      "name_sv": "Smör (vaj)"
+    },
+    {
+      "id": "tejfol_local",
+      "name": "Hungarian sour cream (tejföl)",
       "cat": "s",
       "grade": "local",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Ungersk gräddfil (tejföl)"
     },
     {
-      "id": "stub_spice_loc_2",
-      "name": "[STUB]",
+      "id": "trappista_local",
+      "name": "Trappista cheese (trappista sajt)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "Trappistost (trappista sajt)"
+    },
+    {
+      "id": "chicken_eggs_local",
+      "name": "Chicken eggs (tyúktojás)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "Hönsägg (tyúktojás)"
+    },
+    {
+      "id": "palp_local",
+      "name": "Pálpusztai cheese (pálpusztai sajt)",
       "cat": "s",
       "grade": "local",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Pálpusztai-ost (pálpusztai sajt)"
     },
     {
-      "id": "stub_spice_loc_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_4",
-      "name": "[STUB]",
+      "id": "goose_eggs",
+      "name": "Goose eggs (lúdtojás)",
       "cat": "s",
       "grade": "local",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Gåsägg (lúdtojás)"
     },
     {
-      "id": "stub_spice_loc_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_7",
-      "name": "[STUB]",
+      "id": "mag_tarka",
+      "name": "Hungarian Simmental cattle milk (Magyar tarka tej)",
       "cat": "s",
       "grade": "local",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Ungersk Simmental-mjölk (Magyar tarka tej)"
     },
     {
-      "id": "stub_spice_loc_8",
-      "name": "[STUB]",
+      "id": "sheep_milk",
+      "name": "Sheep milk (birka tej)",
       "cat": "s",
       "grade": "local",
       "rating": 5,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Fårmjölk (birka tej)"
     },
     {
-      "id": "stub_spice_loc_9",
-      "name": "[STUB]",
+      "id": "duck_eggs",
+      "name": "Duck eggs (kacsatojás)",
       "cat": "s",
       "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
+      "rating": 5,
+      "name_sv": "Andägg (kacsatojás)"
+    },
+    {
+      "id": "liptoi_turo",
+      "name": "Liptói túró (fresh curd cheese)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Liptói färskost"
+    },
+    {
+      "id": "sweet_paprika",
+      "name": "Hungarian sweet paprika (édes nemes fűszerpaprika)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Ungersk söt paprika (édes nemes)"
+    },
+    {
+      "id": "hot_paprika_sp",
+      "name": "Hot paprika (erős paprika / csípős paprika)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Het paprika (erős paprika)"
+    },
+    {
+      "id": "caraway",
+      "name": "Caraway seed (köménymag)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Kummin (köménymag)"
+    },
+    {
+      "id": "dill",
+      "name": "Dill (kapor)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Dill (kapor)"
+    },
+    {
+      "id": "marjoram",
+      "name": "Marjoram (majoranna)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Mejram (majoranna)"
+    },
+    {
+      "id": "bay_leaf",
+      "name": "Bay leaf (babérlevél)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Lagerblad (babérlevél)"
+    },
+    {
+      "id": "garlic_sp",
+      "name": "Garlic (fokhagyma)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Vitlök (fokhagyma)"
+    },
+    {
+      "id": "black_pepper",
+      "name": "Black pepper (fekete bors)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 6,
+      "name_sv": "Svartpeppar (fekete bors)"
+    },
+    {
+      "id": "savory",
+      "name": "Savory (borsfű / csombor)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 5,
+      "name_sv": "Kyndel (borsfű)"
+    },
+    {
+      "id": "salt",
+      "name": "Salt (só)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Salt (só)"
+    },
+    {
+      "id": "sunflower_oil",
+      "name": "Sunflower oil (napraforgóolaj)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Solrosolja (napraforgóolaj)"
+    },
+    {
+      "id": "paprika_bulk",
+      "name": "Ground paprika (fűszerpaprika)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Malen paprika (fűszerpaprika)"
+    },
+    {
+      "id": "black_pepper_bulk",
+      "name": "Black pepper (fekete bors)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "Svartpeppar (fekete bors)"
+    },
+    {
+      "id": "garlic_bulk",
+      "name": "Garlic (fokhagyma)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "Vitlök (fokhagyma)"
+    },
+    {
+      "id": "lard",
+      "name": "Lard (zsír / disznózsír)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Ister (zsír)"
+    },
+    {
+      "id": "vinegar",
+      "name": "Vinegar (ecet)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Vinäger (ecet)"
+    },
+    {
+      "id": "bay_leaf_bulk",
+      "name": "Bay leaf (babérlevél)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Lagerblad (babérlevél)"
+    },
+    {
+      "id": "sugar",
+      "name": "Sugar (cukor)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "Socker (cukor)"
+    },
+    {
+      "id": "kalocsa_paprika",
+      "name": "Kalocsai paprika (PDO)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "Kalocsai paprika (PDO)"
+    },
+    {
+      "id": "szegedi_paprika",
+      "name": "Szegedi paprika (PDO)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "Szegedi paprika (PDO)"
+    },
+    {
+      "id": "horseradish_local",
+      "name": "Horseradish (torma)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "Pepparrot (torma)"
+    },
+    {
+      "id": "dill_local",
+      "name": "Dill (kapor)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Dill (kapor)"
+    },
+    {
+      "id": "caraway_local",
+      "name": "Caraway (köménymag)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Kummin (köménymag)"
+    },
+    {
+      "id": "marjoram_local",
+      "name": "Marjoram (majoranna)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Mejram (majoranna)"
+    },
+    {
+      "id": "mustard_local",
+      "name": "Hungarian mustard (magyar mustár)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Ungersk senap (magyar mustár)"
+    },
+    {
+      "id": "savory_local",
+      "name": "Savory (borsfű / csombor)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "Kyndel (borsfű)"
+    },
+    {
+      "id": "tarragon",
+      "name": "Tarragon (tárkony)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "Dragon (tárkony)"
     }
   ],
   "icelandic": [
@@ -108273,8 +108273,8 @@ const AI_CUISINE_REGIONS = [
         "name": "Hungarian",
         "name_sv": "Ungerskt",
         "icon": "🇭🇺",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+        "description": "Hungarian cuisine is built around paprika, slow-cooked meats, and sour cream — rich, hearty stews like gulyás and pörkölt define its character, shaped by the traditions of the Great Plain and Central European farming culture.",
+        "description_sv": "Ungerskt kök bygger på paprika, långkokt kött och gräddfil — rika, mustiga grytor som gulyás och pörkölt definierar köket, format av Stora Slättens traditioner och centraleuropeisk jordbrukskultur."
       },
       {
         "id": "italian",
@@ -108743,8 +108743,8 @@ const AI_CUISINE_DESCRIPTIONS = {
     "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "hungarian": {
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+    "description": "Hungarian cuisine is built around paprika, slow-cooked meats, and sour cream — rich, hearty stews like gulyás and pörkölt define its character, shaped by the traditions of the Great Plain and Central European farming culture.",
+    "description_sv": "Ungerskt kök bygger på paprika, långkokt kött och gräddfil — rika, mustiga grytor som gulyás och pörkölt definierar köket, format av Stora Slättens traditioner och centraleuropeisk jordbrukskultur."
   },
   "icelandic": {
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
@@ -109036,7 +109036,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["goat", "lamb", "chicken", "fish", "veal", "venison", "pork", "rabbit", "duck", "turkey", "beef"];
+const AI_GENERIC_PROTEIN_IDS = ["chicken", "goat", "turkey", "fish", "lamb", "pork", "beef", "duck", "venison", "rabbit", "veal"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -131823,7 +131823,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "445";
+const PANEL_VERSION = "446";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
