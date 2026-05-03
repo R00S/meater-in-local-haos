@@ -141,4 +141,12 @@ v0.8.1.10 was unaffected because it had the region list hardcoded in the templat
    - `research_done: 1` set after completing all 15 pairs
    - 11 items per pair minimum (most pairs have 9–11 verified entries)
 
-3. **Bumped version 0.8.2.12 → 0.8.2.13; PANEL_VERSION 447 → 448.**
+### 2026-05-03 — Agent session J
+
+**Tasks completed (v0.8.2.14):**
+
+1. **CHORES.md performed:**
+   - Regenerated panel: PANEL_VERSION 448 → 449.
+   - Bumped version 0.8.2.13 → 0.8.2.14.
+   - USER_GUIDE.md: no content changes required — Romanian cuisine addition is a data-only change with no new features or heading changes.
+

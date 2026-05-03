@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 02 May 2026, 14:00 UTC
-Last Change: v0.8.2.13 - add Romanian cuisine research; fix stub names to descriptive format
+Last Change: v0.8.2.14 - CHORES: bump version, update timeline
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "448"
+PANEL_VERSION = "449"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
