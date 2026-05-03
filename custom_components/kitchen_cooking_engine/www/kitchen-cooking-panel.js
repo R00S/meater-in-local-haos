@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 May 2026, 17:24 CET
+ * AUTO-GENERATED: 03 May 2026, 17:30 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 03 May 2026, 17:24 CET
+// Last generated: 03 May 2026, 17:30 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -43526,61 +43526,81 @@ const AI_CUISINE_REGIONS = [
         "id": "afghan",
         "name": "Afghan",
         "name_sv": "Afghanskt",
-        "icon": "🇦🇫"
+        "icon": "🇦🇫",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "bangladeshi",
         "name": "Bangladeshi",
         "name_sv": "Bangladesiskt",
-        "icon": "🇧🇩"
+        "icon": "🇧🇩",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "bengali",
         "name": "Bengali",
         "name_sv": "Bengaliskt",
-        "icon": "🐟"
+        "icon": "🐟",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "indian",
         "name": "Indian",
         "name_sv": "Indiskt",
-        "icon": "🇮🇳"
+        "icon": "🇮🇳",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "mughlai",
         "name": "Mughlai",
         "name_sv": "Mughal-indiskt",
-        "icon": "👑"
+        "icon": "👑",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "nepali",
         "name": "Nepali",
         "name_sv": "Nepalesiskt",
-        "icon": "🇳🇵"
+        "icon": "🇳🇵",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "pakistani",
         "name": "Pakistani",
         "name_sv": "Pakistanskt",
-        "icon": "🇵🇰"
+        "icon": "🇵🇰",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "punjabi",
         "name": "Punjabi",
         "name_sv": "Punjabiskt",
-        "icon": "🧆"
+        "icon": "🧆",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "south_indian",
         "name": "South Indian",
         "name_sv": "Sydindiskt",
-        "icon": "🥘"
+        "icon": "🥘",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "sri_lankan",
         "name": "Sri Lankan",
         "name_sv": "Srilankesiskt",
-        "icon": "🇱🇰"
+        "icon": "🇱🇰",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       }
     ]
   },
@@ -43593,85 +43613,113 @@ const AI_CUISINE_REGIONS = [
         "id": "algerian",
         "name": "Algerian",
         "name_sv": "Algeriskt",
-        "icon": "🇩🇿"
+        "icon": "🇩🇿",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "cameroonian",
         "name": "Cameroonian",
         "name_sv": "Kamerunskt",
-        "icon": "🇨🇲"
+        "icon": "🇨🇲",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "east_african",
         "name": "East African",
         "name_sv": "Östafrikansk",
-        "icon": "🌄"
+        "icon": "🌄",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "egyptian",
         "name": "Egyptian",
         "name_sv": "Egyptiskt",
-        "icon": "🇪🇬"
+        "icon": "🇪🇬",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "ethiopian",
         "name": "Ethiopian",
         "name_sv": "Etiopiskt",
-        "icon": "🇪🇹"
+        "icon": "🇪🇹",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "ghanaian",
         "name": "Ghanaian",
         "name_sv": "Ghanaiskt",
-        "icon": "🇬🇭"
+        "icon": "🇬🇭",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "kenyan",
         "name": "Kenyan",
         "name_sv": "Kenyaniskt",
-        "icon": "🇰🇪"
+        "icon": "🇰🇪",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "moroccan",
         "name": "Moroccan",
         "name_sv": "Marockanskt",
-        "icon": "🇲🇦"
+        "icon": "🇲🇦",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "nigerian",
         "name": "Nigerian",
         "name_sv": "Nigerianskt",
-        "icon": "🇳🇬"
+        "icon": "🇳🇬",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "senegalese",
         "name": "Senegalese",
         "name_sv": "Senegalensiskt",
-        "icon": "🇸🇳"
+        "icon": "🇸🇳",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "south_african",
         "name": "South African",
         "name_sv": "Sydafrikanskt",
-        "icon": "🇿🇦"
+        "icon": "🇿🇦",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "tanzanian",
         "name": "Tanzanian",
         "name_sv": "Tanzaniskt",
-        "icon": "🇹🇿"
+        "icon": "🇹🇿",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "tunisian",
         "name": "Tunisian",
         "name_sv": "Tunisiskt",
-        "icon": "🇹🇳"
+        "icon": "🇹🇳",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "west_african",
         "name": "West African",
         "name_sv": "Västafrikansk",
-        "icon": "🥘"
+        "icon": "🥘",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       }
     ]
   },
@@ -43684,37 +43732,49 @@ const AI_CUISINE_REGIONS = [
         "id": "american",
         "name": "American",
         "name_sv": "Amerikansk",
-        "icon": "🇺🇸"
+        "icon": "🇺🇸",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "cajun_creole",
         "name": "Cajun/Creole",
         "name_sv": "Cajun/Kreolskt",
-        "icon": "🦞"
+        "icon": "🦞",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "canadian",
         "name": "Canadian",
         "name_sv": "Kanadensiskt",
-        "icon": "🇨🇦"
+        "icon": "🇨🇦",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "hawaiian",
         "name": "Hawaiian",
         "name_sv": "Hawaiianskt",
-        "icon": "🌺"
+        "icon": "🌺",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "southern_us",
         "name": "Southern US",
         "name_sv": "Södra USA",
-        "icon": "🍗"
+        "icon": "🍗",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "tex_mex",
         "name": "Tex-Mex",
         "name_sv": "Tex-Mex",
-        "icon": "🌮"
+        "icon": "🌮",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       }
     ]
   },
@@ -43727,55 +43787,73 @@ const AI_CUISINE_REGIONS = [
         "id": "argentinian",
         "name": "Argentinian",
         "name_sv": "Argentinskt",
-        "icon": "🇦🇷"
+        "icon": "🇦🇷",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "brazilian",
         "name": "Brazilian",
         "name_sv": "Brasilianskt",
-        "icon": "🇧🇷"
+        "icon": "🇧🇷",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "chilean",
         "name": "Chilean",
         "name_sv": "Chilenskt",
-        "icon": "🇨🇱"
+        "icon": "🇨🇱",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "colombian",
         "name": "Colombian",
         "name_sv": "Colombianskt",
-        "icon": "🇨🇴"
+        "icon": "🇨🇴",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "cuban",
         "name": "Cuban",
         "name_sv": "Kubanskt",
-        "icon": "🇨🇺"
+        "icon": "🇨🇺",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "ecuadorian",
         "name": "Ecuadorian",
         "name_sv": "Ecuadorianskt",
-        "icon": "🇪🇨"
+        "icon": "🇪🇨",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "mexican",
         "name": "Mexican",
         "name_sv": "Mexikanskt",
-        "icon": "🇲🇽"
+        "icon": "🇲🇽",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "peruvian",
         "name": "Peruvian",
         "name_sv": "Peruanskt",
-        "icon": "🇵🇪"
+        "icon": "🇵🇪",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "venezuelan",
         "name": "Venezuelan",
         "name_sv": "Venezuelanskt",
-        "icon": "🇻🇪"
+        "icon": "🇻🇪",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       }
     ]
   },
@@ -43788,79 +43866,105 @@ const AI_CUISINE_REGIONS = [
         "id": "armenian",
         "name": "Armenian",
         "name_sv": "Armeniskt",
-        "icon": "🇦🇲"
+        "icon": "🇦🇲",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "azerbaijani",
         "name": "Azerbaijani",
         "name_sv": "Azerbajdzjanskt",
-        "icon": "🇦🇿"
+        "icon": "🇦🇿",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "emirati",
         "name": "Emirati",
         "name_sv": "Emiratiskt",
-        "icon": "🇦🇪"
+        "icon": "🇦🇪",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "iraqi",
         "name": "Iraqi",
         "name_sv": "Irakiskt",
-        "icon": "🇮🇶"
+        "icon": "🇮🇶",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "israeli",
         "name": "Israeli",
         "name_sv": "Israeliskt",
-        "icon": "🇮🇱"
+        "icon": "🇮🇱",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "kurdish",
         "name": "Kurdish",
         "name_sv": "Kurdiskt",
-        "icon": "🌿"
+        "icon": "🌿",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "lebanese",
         "name": "Lebanese",
         "name_sv": "Libanesiskt",
-        "icon": "🇱🇧"
+        "icon": "🇱🇧",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "palestinian",
         "name": "Palestinian",
         "name_sv": "Palestinskt",
-        "icon": "🇵🇸"
+        "icon": "🇵🇸",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "persian",
         "name": "Persian",
         "name_sv": "Persiskt",
-        "icon": "🇮��"
+        "icon": "🇮��",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "syrian",
         "name": "Syrian",
         "name_sv": "Syriskt",
-        "icon": "🇸🇾"
+        "icon": "🇸🇾",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "turkish",
         "name": "Turkish",
         "name_sv": "Turkiskt",
-        "icon": "🇹🇷"
+        "icon": "🇹🇷",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "uzbek",
         "name": "Uzbek",
         "name_sv": "Uzbekiskt",
-        "icon": "🇺🇿"
+        "icon": "🇺🇿",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "yemeni",
         "name": "Yemeni",
         "name_sv": "Jemenitiskt",
-        "icon": "🇾🇪"
+        "icon": "🇾🇪",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       }
     ]
   },
@@ -43873,13 +43977,17 @@ const AI_CUISINE_REGIONS = [
         "id": "australian",
         "name": "Australian",
         "name_sv": "Australiensisk",
-        "icon": "🇦🇺"
+        "icon": "🇦🇺",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "polynesian",
         "name": "Polynesian",
         "name_sv": "Polynesiskt",
-        "icon": "🌺"
+        "icon": "🌺",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       }
     ]
   },
@@ -43892,97 +44000,129 @@ const AI_CUISINE_REGIONS = [
         "id": "austrian",
         "name": "Austrian",
         "name_sv": "Österrikiskt",
-        "icon": "🇦🇹"
+        "icon": "🇦🇹",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "balkan",
         "name": "Balkan",
         "name_sv": "Balkanskt",
-        "icon": "🏔️"
+        "icon": "🏔️",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "basque",
         "name": "Basque",
         "name_sv": "Baskiskt",
-        "icon": "🏔️"
+        "icon": "🏔️",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "british",
         "name": "British",
         "name_sv": "Brittiskt",
-        "icon": "🇬🇧"
+        "icon": "🇬🇧",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "french",
         "name": "French",
         "name_sv": "Franskt",
-        "icon": "🇫🇷"
+        "icon": "🇫🇷",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "georgian",
         "name": "Georgian",
         "name_sv": "Georgiskt",
-        "icon": "🇬🇪"
+        "icon": "🇬🇪",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "german",
         "name": "German",
         "name_sv": "Tyskt",
-        "icon": "🇩🇪"
+        "icon": "🇩🇪",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "greek",
         "name": "Greek",
         "name_sv": "Grekiskt",
-        "icon": "🇬🇷"
+        "icon": "🇬🇷",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "hungarian",
         "name": "Hungarian",
         "name_sv": "Ungerskt",
-        "icon": "🇭🇺"
+        "icon": "🇭🇺",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "italian",
         "name": "Italian",
         "name_sv": "Italienskt",
-        "icon": "🇮🇹"
+        "icon": "🇮🇹",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "mediterranean",
         "name": "Mediterranean",
         "name_sv": "Medelhavsmat",
-        "icon": "🫒"
+        "icon": "🫒",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "polish",
         "name": "Polish",
         "name_sv": "Polskt",
-        "icon": "🇵🇱"
+        "icon": "🇵🇱",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "portuguese",
         "name": "Portuguese",
         "name_sv": "Portugisiskt",
-        "icon": "🇵🇹"
+        "icon": "🇵🇹",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "russian",
         "name": "Russian",
         "name_sv": "Ryskt",
-        "icon": "🇷🇺"
+        "icon": "🇷🇺",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "spanish",
         "name": "Spanish",
         "name_sv": "Spanskt",
-        "icon": "🇪🇸"
+        "icon": "🇪🇸",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "ukrainian",
         "name": "Ukrainian",
         "name_sv": "Ukrainskt",
-        "icon": "🇺🇦"
+        "icon": "🇺🇦",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       }
     ]
   },
@@ -43995,55 +44135,73 @@ const AI_CUISINE_REGIONS = [
         "id": "burmese",
         "name": "Burmese",
         "name_sv": "Burmesiskt",
-        "icon": "🇲🇲"
+        "icon": "🇲🇲",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "filipino",
         "name": "Filipino",
         "name_sv": "Filippinskt",
-        "icon": "🇵🇭"
+        "icon": "🇵🇭",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "indonesian",
         "name": "Indonesian",
         "name_sv": "Indonesiskt",
-        "icon": "🇮🇩"
+        "icon": "🇮🇩",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "khmer",
         "name": "Khmer (Cambodian)",
         "name_sv": "Khmer (Kambodjiansk)",
-        "icon": "🇰🇭"
+        "icon": "🇰🇭",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "laotian",
         "name": "Laotian",
         "name_sv": "Laotiskt",
-        "icon": "🇱🇦"
+        "icon": "🇱🇦",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "malaysian",
         "name": "Malaysian",
         "name_sv": "Malaysiskt",
-        "icon": "🇲🇾"
+        "icon": "🇲🇾",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "singaporean",
         "name": "Singaporean",
         "name_sv": "Singaporianskt",
-        "icon": "🇸🇬"
+        "icon": "🇸🇬",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "thai",
         "name": "Thai",
         "name_sv": "Thaimat",
-        "icon": "🇹🇭"
+        "icon": "🇹🇭",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "vietnamese",
         "name": "Vietnamese",
         "name_sv": "Vietnamesiskt",
-        "icon": "🇻🇳"
+        "icon": "🇻🇳",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       }
     ]
   },
@@ -44056,37 +44214,49 @@ const AI_CUISINE_REGIONS = [
         "id": "cantonese",
         "name": "Cantonese",
         "name_sv": "Kantonesiskt",
-        "icon": "🥟"
+        "icon": "🥟",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "chinese",
         "name": "Chinese",
         "name_sv": "Kinesiskt",
-        "icon": "🇨🇳"
+        "icon": "🇨🇳",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "japanese",
         "name": "Japanese",
         "name_sv": "Japanskt",
-        "icon": "🇯🇵"
+        "icon": "🇯🇵",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "korean",
         "name": "Korean",
         "name_sv": "Koreanskt",
-        "icon": "🇰🇷"
+        "icon": "🇰🇷",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "sichuan",
         "name": "Sichuan",
         "name_sv": "Sichuansk",
-        "icon": "🌶️"
+        "icon": "🌶️",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "taiwanese",
         "name": "Taiwanese",
         "name_sv": "Taiwanesiskt",
-        "icon": "🇹🇼"
+        "icon": "🇹🇼",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       }
     ]
   },
@@ -44099,37 +44269,49 @@ const AI_CUISINE_REGIONS = [
         "id": "caribbean",
         "name": "Caribbean",
         "name_sv": "Karibisk",
-        "icon": "🏝️"
+        "icon": "🏝️",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "dominican",
         "name": "Dominican",
         "name_sv": "Dominikanskt",
-        "icon": "��🇴"
+        "icon": "��🇴",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "haitian",
         "name": "Haitian",
         "name_sv": "Haitiskt",
-        "icon": "🇭🇹"
+        "icon": "🇭🇹",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "jamaican",
         "name": "Jamaican",
         "name_sv": "Jamaicansk",
-        "icon": "🇯🇲"
+        "icon": "🇯🇲",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "puerto_rican",
         "name": "Puerto Rican",
         "name_sv": "Puerto Ricanskt",
-        "icon": "🇵🇷"
+        "icon": "🇵🇷",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "trinidadian",
         "name": "Trinidadian",
         "name_sv": "Trinidadiskt",
-        "icon": "🇹🇹"
+        "icon": "🇹🇹",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       }
     ]
   },
@@ -44192,7 +44374,131 @@ const AI_CUISINE_REGIONS = [
 
 // AI Recipe Builder - Cuisine descriptions {cuisine_id: {description, description_sv?}}
 const AI_CUISINE_DESCRIPTIONS = {
+  "afghan": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "algerian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "american": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "argentinian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "armenian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "australian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "austrian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "azerbaijani": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "balkan": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "bangladeshi": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "basque": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "bengali": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "brazilian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "british": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "burmese": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "cajun_creole": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "cameroonian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "canadian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "cantonese": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "caribbean": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "chilean": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "chinese": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "colombian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "cuban": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
   "danish": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "dominican": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "east_african": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "ecuadorian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "egyptian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "emirati": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "ethiopian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "filipino": {
     "description": "[STUB]",
     "description_sv": "[UTKAST]"
   },
@@ -44200,7 +44506,115 @@ const AI_CUISINE_DESCRIPTIONS = {
     "description": "[STUB]",
     "description_sv": "[UTKAST]"
   },
+  "french": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "georgian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "german": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "ghanaian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "greek": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "haitian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "hawaiian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "hungarian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
   "icelandic": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "indian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "indonesian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "iraqi": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "israeli": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "italian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "jamaican": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "japanese": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "kenyan": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "khmer": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "korean": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "kurdish": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "laotian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "lebanese": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "malaysian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "mediterranean": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "mexican": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "moroccan": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "mughlai": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "nepali": {
     "description": "[STUB]",
     "description_sv": "[UTKAST]"
   },
@@ -44208,11 +44622,143 @@ const AI_CUISINE_DESCRIPTIONS = {
     "description": "[STUB]",
     "description_sv": "[UTKAST]"
   },
+  "nigerian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
   "norwegian": {
     "description": "[STUB]",
     "description_sv": "[UTKAST]"
   },
+  "pakistani": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "palestinian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "persian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "peruvian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "polish": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "polynesian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "portuguese": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "puerto_rican": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "punjabi": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "russian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "senegalese": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "sichuan": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "singaporean": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "south_african": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "south_indian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "southern_us": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "spanish": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "sri_lankan": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
   "swedish": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "syrian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "taiwanese": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "tanzanian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "tex_mex": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "thai": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "trinidadian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "tunisian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "turkish": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "ukrainian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "uzbek": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "venezuelan": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "vietnamese": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "west_african": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "yemeni": {
     "description": "[STUB]",
     "description_sv": "[UTKAST]"
   }
@@ -44282,7 +44828,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["rabbit", "chicken", "goat", "venison", "beef", "veal", "fish", "duck", "pork", "turkey", "lamb"];
+const AI_GENERIC_PROTEIN_IDS = ["chicken", "goat", "lamb", "turkey", "pork", "fish", "veal", "rabbit", "beef", "duck", "venison"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -67069,7 +67615,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "435";
+const PANEL_VERSION = "436";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

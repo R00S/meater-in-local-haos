@@ -7,6 +7,8 @@ icon: 🇺🇦
 region: european
 region_name: "European"
 region_icon: 🏰
+description: "[STUB]"
+description_sv: "[UTKAST]"
 research_done: 0
 ---
 

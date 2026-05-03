@@ -7,6 +7,8 @@ icon: 🇨🇦
 region: north_american
 region_name: "North American"
 region_icon: 🦅
+description: "[STUB]"
+description_sv: "[UTKAST]"
 research_done: 0
 ---
 

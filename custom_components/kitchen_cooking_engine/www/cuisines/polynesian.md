@@ -7,6 +7,8 @@ icon: 🌺
 region: oceanian
 region_name: "Oceanian"
 region_icon: 🦘
+description: "[STUB]"
+description_sv: "[UTKAST]"
 research_done: 0
 ---
 

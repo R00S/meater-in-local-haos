@@ -7,6 +7,8 @@ icon: 🇦🇲
 region: middle_east
 region_name: "Middle Eastern"
 region_icon: 🧆
+description: "[STUB]"
+description_sv: "[UTKAST]"
 research_done: 0
 ---
 

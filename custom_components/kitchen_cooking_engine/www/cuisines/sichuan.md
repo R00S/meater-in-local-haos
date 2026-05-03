@@ -7,6 +7,8 @@ icon: 🌶️
 region: east_asian
 region_name: "East Asian"
 region_icon: 🥢
+description: "[STUB]"
+description_sv: "[UTKAST]"
 research_done: 0
 ---
 

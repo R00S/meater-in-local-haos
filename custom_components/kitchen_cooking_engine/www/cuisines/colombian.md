@@ -7,6 +7,8 @@ icon: 🇨🇴
 region: latin_american
 region_name: "Latin American"
 region_icon: 💃
+description: "[STUB]"
+description_sv: "[UTKAST]"
 research_done: 0
 ---
 

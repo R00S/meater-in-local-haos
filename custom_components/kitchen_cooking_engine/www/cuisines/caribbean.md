@@ -7,6 +7,8 @@ icon: 🏝️
 region: caribbean_region
 region_name: "Caribbean"
 region_icon: 🏝️
+description: "[STUB]"
+description_sv: "[UTKAST]"
 research_done: 0
 ---
 

@@ -7,6 +7,8 @@ icon: 🇰🇭
 region: southeast_asian
 region_name: "Southeast Asian"
 region_icon: 🌴
+description: "[STUB]"
+description_sv: "[UTKAST]"
 research_done: 0
 ---
 
