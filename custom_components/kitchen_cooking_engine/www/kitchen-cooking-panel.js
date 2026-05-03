@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 02 May 2026, 22:09 CET
+ * AUTO-GENERATED: 03 May 2026, 08:39 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 02 May 2026, 22:09 CET
+// Last generated: 03 May 2026, 08:39 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -3983,7 +3983,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "pork",
       "name": "Pork",
       "cat": "p",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Fläsk"
     },
@@ -3991,7 +3991,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "chicken",
       "name": "Chicken",
       "cat": "p",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Kyckling"
     },
@@ -3999,7 +3999,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "beef",
       "name": "Beef",
       "cat": "p",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Nötkött"
     },
@@ -4039,7 +4039,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "cod",
       "name": "Cod",
       "cat": "p",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Torsk"
     },
@@ -4047,7 +4047,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "eggs",
       "name": "Eggs",
       "cat": "p",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Ägg"
     },
@@ -4055,7 +4055,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "potatoes",
       "name": "Potatoes",
       "cat": "v",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Potatis"
     },
@@ -4063,7 +4063,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "onions",
       "name": "Onions",
       "cat": "v",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Lök"
     },
@@ -4071,7 +4071,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "carrots",
       "name": "Carrots",
       "cat": "v",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Morötter"
     },
@@ -4079,7 +4079,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "cabbage",
       "name": "Cabbage",
       "cat": "v",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Kål"
     },
@@ -4087,7 +4087,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "beets",
       "name": "Beetroot",
       "cat": "v",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Rödbeta"
     },
@@ -4119,7 +4119,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "leeks",
       "name": "Leeks",
       "cat": "v",
-      "grade": "common",
+      "grade": "local",
       "common": false,
       "name_sv": "Purjolök"
     },
@@ -4127,7 +4127,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "celeriac",
       "name": "Celeriac",
       "cat": "v",
-      "grade": "common",
+      "grade": "local",
       "common": false,
       "name_sv": "Rotselleri"
     },
@@ -4135,7 +4135,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "parsnips",
       "name": "Parsnips",
       "cat": "v",
-      "grade": "common",
+      "grade": "local",
       "common": false,
       "name_sv": "Palsternacka"
     },
@@ -4143,7 +4143,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "cream",
       "name": "Cream",
       "cat": "d",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Grädde"
     },
@@ -4151,7 +4151,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "sour_cream",
       "name": "Sour Cream",
       "cat": "d",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Gräddfil"
     },
@@ -4159,7 +4159,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "butter",
       "name": "Butter",
       "cat": "d",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Smör"
     },
@@ -4175,7 +4175,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "white_pepper",
       "name": "White Pepper",
       "cat": "s",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Vitpeppar"
     },
@@ -4199,7 +4199,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "bay_leaves",
       "name": "Bay Leaves",
       "cat": "s",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Lagerblad"
     },
@@ -4207,7 +4207,7 @@ const AI_CUISINE_INGREDIENTS = {
       "id": "mustard",
       "name": "Mustard",
       "cat": "s",
-      "grade": "very_common",
+      "grade": "bulk",
       "common": true,
       "name_sv": "Senap"
     }
@@ -4357,7 +4357,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["pork", "turkey", "rabbit", "venison", "fish", "chicken", "goat", "duck", "veal", "beef", "lamb"];
+const AI_GENERIC_PROTEIN_IDS = ["turkey", "beef", "goat", "duck", "lamb", "veal", "fish", "venison", "chicken", "rabbit", "pork"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -27127,7 +27127,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "408";
+const PANEL_VERSION = "409";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

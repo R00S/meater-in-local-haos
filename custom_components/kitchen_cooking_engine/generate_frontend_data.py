@@ -134,9 +134,9 @@ def build_cuisine_data(base_dir):
         ...
 
     Grades:
-        signature   → common=True  (shown in compact view; lights up protein tree)
-        very_common → common=True  (shown in compact view; lights up protein tree)
-        common      → common=False (shown in "More"; does not light up protein tree)
+        signature → common=True  (shown in compact view; lights up protein tree — identity of the cuisine)
+        bulk      → common=True  (shown in compact view; lights up protein tree — high consumption by statistics)
+        local     → common=False (shown in "More"; does not light up protein tree — produced/widely used locally)
 
     Returns (cuisine_ingredients, cuisine_to_group) where:
         cuisine_ingredients: {cuisine_id: [{id, name, name_sv?, cat, grade, common}, ...]}
@@ -154,8 +154,8 @@ def build_cuisine_data(base_dir):
     }
     _grade_common = {
         "signature":    True,
-        "very_common":  True,
-        "common":       False,
+        "bulk":         True,
+        "local":        False,
     }
 
     cuisines_dir = os.path.join(base_dir, "www", "cuisines")
@@ -220,7 +220,7 @@ def build_cuisine_data(base_dir):
                 if not isinstance(item, dict):
                     continue
                 ing_id = item.get("id")
-                grade = str(item.get("grade", "common"))
+                grade = str(item.get("grade", "local"))
                 if not ing_id or grade not in _grade_common:
                     continue
                 entry = {

@@ -37,7 +37,7 @@ One paragraph of sources and key consumption statistics used.
 ## Proteins
 
 - {id: salmon, grade: signature, name: Salmon, name_sv: "Lax", notes: "..."}
-- {id: chicken, grade: very_common, name: Chicken, notes: "..."}
+- {id: chicken, grade: bulk, name: Chicken, notes: "..."}
 
 ## Vegetables
 
@@ -45,7 +45,7 @@ One paragraph of sources and key consumption statistics used.
 
 ## Grains
 
-- {id: rice, grade: very_common, name: Rice, notes: "..."}
+- {id: rice, grade: bulk, name: Rice, notes: "..."}
 
 ## Dairy
 
@@ -60,41 +60,42 @@ One paragraph of sources and key consumption statistics used.
 
 ## The three grades
 
-| Grade | Key | Compact view | Lights protein tree | When to use |
-|-------|-----|-------------|--------------------|----|
-| `signature` | `s` | ✅ shown | ✅ yes | Defines this cuisine in iconic dishes. May be rare or seasonal. |
-| `very_common` | `vc` | ✅ shown | ✅ yes | Everyday staple of this cuisine — would be missed if absent. |
-| `common` | `c` | ❌ behind "More" | ❌ no | Regularly used but not defining. |
+| Grade | Compact view | Lights protein tree | When to use |
+|-------|-------------|--------------------|----|
+| `signature` | ✅ shown | ✅ yes | Important for the identity of the cuisine. Does not have to be common — may be rare or seasonal. |
+| `bulk` | ✅ shown | ✅ yes | Consumed a lot in the country according to statistics (high kg/capita or market share). |
+| `local` | ❌ behind "More" | ❌ no | Produced and/or widely used in the country, but not a bulk-consumption item. |
 
 **Do not pad with universal ingredients.** If you cannot confirm an ingredient is
 characteristic of this specific cuisine from a specific source, do not add it.
 Maximum 30 items per cuisine. If a category is not relevant, omit it entirely.
 
-### Signature vs Very Common — concrete examples
+### Concrete examples
 
 | Ingredient | Cuisine | Grade | Reason |
 |---|---|---|---|
 | Reindeer | Swedish | signature | Sami heritage; culturally iconic; not everyday |
 | Herring | Swedish | signature | Inlagd sill, surströmming; defines Swedish food culture |
-| Pork | Swedish | very_common | 35 kg/capita/year; most consumed Swedish meat |
+| Pork | Swedish | bulk | 35 kg/capita/year; most consumed Swedish meat |
 | Allspice | Swedish | signature | The spice in Swedish meatballs; not used this way elsewhere |
 | Soy sauce | Japanese | signature | Foundation of Japanese savoury cooking |
-| Chicken | Japanese | very_common | Most common meat; karaage, yakitori, everyday |
+| Chicken | Japanese | bulk | Most common meat; karaage, yakitori, everyday |
 | Dill | Swedish | signature | THE defining herb; everything from sill to new potatoes |
-| Potatoes | Swedish | very_common | Near-universal staple in Swedish meals |
+| Potatoes | Swedish | bulk | Near-universal staple; high consumption volume |
+| Leeks | Swedish | local | Grown in Sweden, used in soups/stews, but not a bulk-consumption item |
 
 ---
 
 ## Grade → protein tree lighting
 
 A cuisine's protein tree buttons (🐄 Beef / 🐷 Pork / 🍗 Poultry / 🐟 Fish / 🐑 Lamb / 🦌 Game)
-light up only if the cuisine has a `signature` or `very_common` ingredient that maps to that
+light up only if the cuisine has a `signature` or `bulk` ingredient that maps to that
 protein category in `PROTEIN_TO_SUBCAT` (in `ai_recipe_data.py`).
 
-`common` grade items do NOT light up tree buttons — they appear only in the "More" list.
+`local` grade items do NOT light up tree buttons — they appear only in the "More" list.
 
 This means: if a protein genuinely defines a cuisine (e.g. salmon for Swedish), it MUST be
-`signature` or `very_common`. Making it `common` hides it from the tree.
+`signature` or `bulk`. Making it `local` hides it from the tree.
 
 ---
 
