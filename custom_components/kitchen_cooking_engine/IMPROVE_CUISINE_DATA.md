@@ -86,9 +86,10 @@ Up to 9 items are visible by default (3 per grade), from all three grades.
 - A subcat button turns **light green** when the cuisine has only `bulk` proteins in that subcat.
 - Dark green takes precedence when both are present in the same subcat.
 
-**Do not pad with universal ingredients.** If you cannot confirm an ingredient is
-characteristic of this specific cuisine from a specific source, do not add it.
-Maximum 30 items per cuisine. If a category is not relevant, omit it entirely.
+Every ingredient should earn its place. If you cannot confirm an ingredient is
+characteristic of this specific cuisine from a verifiable source, leave it out for now —
+a shorter, accurate list is more useful than a long, approximate one. If a category is
+not relevant to the cuisine, omit it entirely.
 
 ### Concrete examples
 
@@ -143,15 +144,24 @@ protein is characteristic of the cuisine. That assertion requires knowing *which
 
 ---
 
-## Research required before writing a file
+## Research before writing
 
-1. Find consumption data (kg/capita or dietary share) — primary signal for `bulk`
-2. Identify 3–5 signature dishes that define the cuisine — signals `signature` proteins and spices
-3. Identify seasonal or culturally iconic items not in everyday cooking — `signature` grade
-4. Set `research_done: 0` until sources are verified; `1` when thoroughly reviewed
-5. Cite your sources in the `## Research notes` section
+Good cuisine data starts with real sources. Before writing or editing a file, spend a few
+minutes confirming the basics:
 
-Do NOT write a cuisine file without completing steps 1–3 with verifiable sources.
+1. **Consumption data** — what are the most eaten proteins and staples in this food culture?
+   (kg/capita, dietary share, food industry reports)
+2. **Signature dishes** — which 3–5 dishes best define the cuisine? What proteins and
+   seasonings do they use?
+3. **Cultural/seasonal icons** — what do people in this culture reach for on special
+   occasions, or what are they proud of? These are often `signature` grade even if
+   consumed in smaller volumes.
+4. **Write down your sources** in the `## Research notes` section, even briefly.
+   Future contributors (and agents) will trust the data more when they can see where it
+   came from.
+
+It is perfectly fine to set `research_done: 0` and leave a cuisine incomplete. A partial
+file with honest data is better than a complete-looking file with guessed data.
 
 ---
 
@@ -166,126 +176,27 @@ Do NOT write a cuisine file without completing steps 1–3 with verifiable sourc
 
 ---
 
-## Task — what to do when triggered
+## What to do when triggered
 
-1. Pick one cuisine that has no file in `www/cuisines/` yet
-2. Do the research (consumption stats, signature dishes, seasonal/iconic items)
-3. Write the file following the format above — 15–30 items, no padding
-4. Set `research_done: 1` only if research is thorough
-5. Run: `cd custom_components/kitchen_cooking_engine && python3 generate_frontend_data.py`
-6. Confirm generator prints the new cuisine and item count with no errors
-7. Commit ALL changed files: the new `www/cuisines/<id>.md` and the regenerated `www/kitchen-cooking-panel.js`
+Pick one cuisine that has no file yet, or one that has `research_done: 0` and looks
+like it can now be improved. Do the research, write or update the file, then:
 
+1. Run: `cd custom_components/kitchen_cooking_engine && python3 generate_frontend_data.py`
+2. Confirm the generator prints the cuisine name and item count with no errors.
+3. Commit both the cuisine file and the regenerated `www/kitchen-cooking-panel.js`.
 
----
-
-## Background — what the data controls
-
-Each cuisine entry in `CUISINE_INGREDIENTS` is a flat list of ingredient dicts.
-There are two kinds:
-
-- `_ing(id, name)` — **common** ingredient: shown immediately, and if it maps to a
-  protein subcategory in `PROTEIN_TO_SUBCAT`, it **lights up that button** in the
-  protein tree (Beef / Pork / Poultry / Fish / Lamb / Game).
-- `_inge(id, name)` — **extended** ingredient: hidden behind "More", and it does
-  **not** light up any protein tree button, even if the protein is in
-  `PROTEIN_TO_SUBCAT`.
-
-This means: a protein that genuinely belongs to a cuisine **must be `_ing`** for it
-to appear in the protein tree. If it is only `_inge`, it becomes invisible in the
-tree but still clutters the "More" list — which is both structurally and visually
-wrong.
+Quality over volume. One well-researched cuisine is worth more than three rushed ones.
+If you finish a single cuisine properly in a session, that is a good session.
 
 ---
 
-## The two problems to fix
+## A note on trust
 
-### 1. Structural problem — protein tree buttons not lit
+The people using this app are cooking real food for real people. When the app shows
+"Swedish cuisine uses salmon and dill", that should be true — not a guess, not a
+placeholder, not a statistically average approximation.
 
-If a protein category (e.g. Game, Beef, Lamb) is genuinely used in a cuisine but all
-its proteins are `_inge`, the tree button stays unlit while the proteins float
-orphaned in the "More" list. The fix is to promote at least one representative
-protein from that category to `_ing` — the one most characteristic of the cuisine.
+The goal is data that someone who grew up with a cuisine would recognise and nod at.
+If you are not sure whether something belongs, it is always fine to say so and leave
+it out. The data can grow over time. What it should never do is mislead.
 
-### 2. Content problem — wrong priorities and bloat
-
-Many cuisine lists have been seeded with a near-universal ingredient dump. The "More"
-list for some cuisines contains 80–100 items, many of which have no connection to the
-cuisine at all. `_ing` items should reflect what a cook in that tradition would reach
-for first. `_inge` should cover plausible alternatives and supporting ingredients —
-not every ingredient that exists.
-
-A common failure pattern is **protein dominance**: one protein (e.g. pork) is over-
-represented in `_ing` while other equally or more important proteins (e.g. beef, game,
-fish) are buried in `_inge` or missing entirely. This produces a protein tree where
-the wrong buttons light up and the right ones stay dark.
-
-> **Cautionary example — Swedish cuisine:**
-> The Swedish entry had `pork` and `meatball_mix` (both mapped to pork) as `_ing`,
-> making the Pork button light up. But `beef` and `reindeer` were `_inge` — so the
-> Beef and Game buttons stayed dark. In reality, beef is Sweden's second most consumed
-> meat (~23 kg/capita), with century-old classics like *kalops* (beef stew) and
-> *kålrot*, while reindeer is the culturally iconic game meat of northern Sweden and
-> Sami tradition. The protein tree showed Pork only — the opposite of the actual
-> culinary picture.
-
----
-
-## How to approach a cuisine — research first
-
-**Do not rely on assumed knowledge.** For every cuisine you work on, look up real data
-before making any changes. Consumption statistics, cookbook traditions, and cultural
-context are publicly available and easy to find — a single web search is usually
-enough to confirm what the primary proteins are.
-
-For each cuisine:
-
-1. **Research the protein priorities.** What are the most consumed or most
-   traditionally important proteins in this cuisine? Look for:
-   - Consumption data (kg per capita, or proportional share of diet)
-   - Traditional dishes in cookbooks and food media that define the cuisine
-   - Proteins that are culturally iconic, even if not the highest in volume
-     (e.g. reindeer in Swedish/Sami tradition)
-
-2. **Check `PROTEIN_TO_SUBCAT`** to know which `_ing` entries light up which tree
-   button. Only proteins listed there affect the tree.
-
-3. **Decide `_ing` vs `_inge`.** For each protein category:
-   - If the cuisine genuinely uses proteins from that category as a staple → at
-     least one should be `_ing`
-   - If proteins from that category appear occasionally or in specific regional
-     traditions → `_inge` is fine
-   - If a protein has no real place in this cuisine → remove it
-
-4. **Check for protein dominance.** If one protein subcategory has 2–3 `_ing` entries
-   and another genuinely important category has zero, rebalance. The common set
-   should light up every button that a cook from that tradition would expect to see
-   highlighted.
-
-5. **Trim the `_inge` list.** Remove ingredients that are not plausibly used in this
-   cuisine. A list of 20–30 well-chosen items is better than 80–100 loosely relevant
-   ones.
-
-6. **Verify the result.** After editing, mentally run through the protein tree:
-   which buttons will light up? Does that match the actual culinary picture?
-   If not, adjust.
-
----
-
-## Task
-
-Pick 2–3 cuisines from `CUISINE_INGREDIENTS` that look like they need attention.
-Work through each one using the steps above. When done, do `CHORES.md`.
-
----
-
-## Note to agent
-
-There is no good existing example to copy from — all cuisines currently have problems
-to varying degrees. Work from researched facts for each cuisine. A cuisine with
-12 well-chosen, correctly-prioritised ingredients is better than one with 90 loosely
-relevant ones. **Smaller and more accurate is always the right direction.**
-
-If you are genuinely uncertain about a cuisine after researching it, say so explicitly
-and leave it for a future session rather than guessing. A wrong protein tree is worse
-than an incomplete one.
