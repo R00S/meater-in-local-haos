@@ -86,10 +86,9 @@ Up to 9 items are visible by default (3 per grade), from all three grades.
 - A subcat button turns **light green** when the cuisine has only `bulk` proteins in that subcat.
 - Dark green takes precedence when both are present in the same subcat.
 
-Every ingredient should earn its place. If you cannot confirm an ingredient is
-characteristic of this specific cuisine from a verifiable source, leave it out for now
-and come back when the research is done. If a category is not relevant to the cuisine,
-omit it entirely.
+Every ingredient should earn its place. If something is hard to confirm, that is a
+signal to go deeper — try more sources, not fewer. It is fine to spend a whole session
+on a single cuisine if that is what thorough coverage takes. Quality over batch size.
 
 ### Concrete examples
 
