@@ -7,8 +7,8 @@ icon: 🇳🇬
 region: african
 region_name: "African"
 region_icon: 🌍
-description: "[STUB]"
-description_sv: "[UTKAST]"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
 research_done: 0
 ---
 

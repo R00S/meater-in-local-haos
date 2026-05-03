@@ -7,8 +7,8 @@ icon: 🦞
 region: north_american
 region_name: "North American"
 region_icon: 🦅
-description: "[STUB]"
-description_sv: "[UTKAST]"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
 research_done: 0
 ---
 

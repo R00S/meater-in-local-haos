@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 May 2026, 17:30 CET
+ * AUTO-GENERATED: 03 May 2026, 17:33 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 03 May 2026, 17:30 CET
+// Last generated: 03 May 2026, 17:33 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -43527,80 +43527,80 @@ const AI_CUISINE_REGIONS = [
         "name": "Afghan",
         "name_sv": "Afghanskt",
         "icon": "🇦🇫",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "bangladeshi",
         "name": "Bangladeshi",
         "name_sv": "Bangladesiskt",
         "icon": "🇧🇩",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "bengali",
         "name": "Bengali",
         "name_sv": "Bengaliskt",
         "icon": "🐟",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "indian",
         "name": "Indian",
         "name_sv": "Indiskt",
         "icon": "🇮🇳",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "mughlai",
         "name": "Mughlai",
         "name_sv": "Mughal-indiskt",
         "icon": "👑",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "nepali",
         "name": "Nepali",
         "name_sv": "Nepalesiskt",
         "icon": "🇳🇵",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "pakistani",
         "name": "Pakistani",
         "name_sv": "Pakistanskt",
         "icon": "🇵🇰",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "punjabi",
         "name": "Punjabi",
         "name_sv": "Punjabiskt",
         "icon": "🧆",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "south_indian",
         "name": "South Indian",
         "name_sv": "Sydindiskt",
         "icon": "🥘",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "sri_lankan",
         "name": "Sri Lankan",
         "name_sv": "Srilankesiskt",
         "icon": "🇱🇰",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       }
     ]
   },
@@ -43614,112 +43614,112 @@ const AI_CUISINE_REGIONS = [
         "name": "Algerian",
         "name_sv": "Algeriskt",
         "icon": "🇩🇿",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "cameroonian",
         "name": "Cameroonian",
         "name_sv": "Kamerunskt",
         "icon": "🇨🇲",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "east_african",
         "name": "East African",
         "name_sv": "Östafrikansk",
         "icon": "🌄",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "egyptian",
         "name": "Egyptian",
         "name_sv": "Egyptiskt",
         "icon": "🇪🇬",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "ethiopian",
         "name": "Ethiopian",
         "name_sv": "Etiopiskt",
         "icon": "🇪🇹",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "ghanaian",
         "name": "Ghanaian",
         "name_sv": "Ghanaiskt",
         "icon": "🇬🇭",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "kenyan",
         "name": "Kenyan",
         "name_sv": "Kenyaniskt",
         "icon": "🇰🇪",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "moroccan",
         "name": "Moroccan",
         "name_sv": "Marockanskt",
         "icon": "🇲🇦",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "nigerian",
         "name": "Nigerian",
         "name_sv": "Nigerianskt",
         "icon": "🇳🇬",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "senegalese",
         "name": "Senegalese",
         "name_sv": "Senegalensiskt",
         "icon": "🇸🇳",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "south_african",
         "name": "South African",
         "name_sv": "Sydafrikanskt",
         "icon": "🇿🇦",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "tanzanian",
         "name": "Tanzanian",
         "name_sv": "Tanzaniskt",
         "icon": "🇹🇿",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "tunisian",
         "name": "Tunisian",
         "name_sv": "Tunisiskt",
         "icon": "🇹🇳",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "west_african",
         "name": "West African",
         "name_sv": "Västafrikansk",
         "icon": "🥘",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       }
     ]
   },
@@ -43733,48 +43733,48 @@ const AI_CUISINE_REGIONS = [
         "name": "American",
         "name_sv": "Amerikansk",
         "icon": "🇺🇸",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "cajun_creole",
         "name": "Cajun/Creole",
         "name_sv": "Cajun/Kreolskt",
         "icon": "🦞",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "canadian",
         "name": "Canadian",
         "name_sv": "Kanadensiskt",
         "icon": "🇨🇦",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "hawaiian",
         "name": "Hawaiian",
         "name_sv": "Hawaiianskt",
         "icon": "🌺",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "southern_us",
         "name": "Southern US",
         "name_sv": "Södra USA",
         "icon": "🍗",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "tex_mex",
         "name": "Tex-Mex",
         "name_sv": "Tex-Mex",
         "icon": "🌮",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       }
     ]
   },
@@ -43788,72 +43788,72 @@ const AI_CUISINE_REGIONS = [
         "name": "Argentinian",
         "name_sv": "Argentinskt",
         "icon": "🇦🇷",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "brazilian",
         "name": "Brazilian",
         "name_sv": "Brasilianskt",
         "icon": "🇧🇷",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "chilean",
         "name": "Chilean",
         "name_sv": "Chilenskt",
         "icon": "🇨🇱",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "colombian",
         "name": "Colombian",
         "name_sv": "Colombianskt",
         "icon": "🇨🇴",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "cuban",
         "name": "Cuban",
         "name_sv": "Kubanskt",
         "icon": "🇨🇺",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "ecuadorian",
         "name": "Ecuadorian",
         "name_sv": "Ecuadorianskt",
         "icon": "🇪🇨",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "mexican",
         "name": "Mexican",
         "name_sv": "Mexikanskt",
         "icon": "🇲🇽",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "peruvian",
         "name": "Peruvian",
         "name_sv": "Peruanskt",
         "icon": "🇵🇪",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "venezuelan",
         "name": "Venezuelan",
         "name_sv": "Venezuelanskt",
         "icon": "🇻🇪",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       }
     ]
   },
@@ -43867,104 +43867,104 @@ const AI_CUISINE_REGIONS = [
         "name": "Armenian",
         "name_sv": "Armeniskt",
         "icon": "🇦🇲",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "azerbaijani",
         "name": "Azerbaijani",
         "name_sv": "Azerbajdzjanskt",
         "icon": "🇦🇿",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "emirati",
         "name": "Emirati",
         "name_sv": "Emiratiskt",
         "icon": "🇦🇪",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "iraqi",
         "name": "Iraqi",
         "name_sv": "Irakiskt",
         "icon": "🇮🇶",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "israeli",
         "name": "Israeli",
         "name_sv": "Israeliskt",
         "icon": "🇮🇱",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "kurdish",
         "name": "Kurdish",
         "name_sv": "Kurdiskt",
         "icon": "🌿",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "lebanese",
         "name": "Lebanese",
         "name_sv": "Libanesiskt",
         "icon": "🇱🇧",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "palestinian",
         "name": "Palestinian",
         "name_sv": "Palestinskt",
         "icon": "🇵🇸",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "persian",
         "name": "Persian",
         "name_sv": "Persiskt",
         "icon": "🇮��",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "syrian",
         "name": "Syrian",
         "name_sv": "Syriskt",
         "icon": "🇸🇾",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "turkish",
         "name": "Turkish",
         "name_sv": "Turkiskt",
         "icon": "🇹🇷",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "uzbek",
         "name": "Uzbek",
         "name_sv": "Uzbekiskt",
         "icon": "🇺🇿",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "yemeni",
         "name": "Yemeni",
         "name_sv": "Jemenitiskt",
         "icon": "🇾🇪",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       }
     ]
   },
@@ -43978,16 +43978,16 @@ const AI_CUISINE_REGIONS = [
         "name": "Australian",
         "name_sv": "Australiensisk",
         "icon": "🇦🇺",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "polynesian",
         "name": "Polynesian",
         "name_sv": "Polynesiskt",
         "icon": "🌺",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       }
     ]
   },
@@ -44001,128 +44001,128 @@ const AI_CUISINE_REGIONS = [
         "name": "Austrian",
         "name_sv": "Österrikiskt",
         "icon": "🇦🇹",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "balkan",
         "name": "Balkan",
         "name_sv": "Balkanskt",
         "icon": "🏔️",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "basque",
         "name": "Basque",
         "name_sv": "Baskiskt",
         "icon": "🏔️",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "british",
         "name": "British",
         "name_sv": "Brittiskt",
         "icon": "🇬🇧",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "french",
         "name": "French",
         "name_sv": "Franskt",
         "icon": "🇫🇷",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "georgian",
         "name": "Georgian",
         "name_sv": "Georgiskt",
         "icon": "🇬🇪",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "german",
         "name": "German",
         "name_sv": "Tyskt",
         "icon": "🇩🇪",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "greek",
         "name": "Greek",
         "name_sv": "Grekiskt",
         "icon": "🇬🇷",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "hungarian",
         "name": "Hungarian",
         "name_sv": "Ungerskt",
         "icon": "🇭🇺",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "italian",
         "name": "Italian",
         "name_sv": "Italienskt",
         "icon": "🇮🇹",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "mediterranean",
         "name": "Mediterranean",
         "name_sv": "Medelhavsmat",
         "icon": "🫒",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "polish",
         "name": "Polish",
         "name_sv": "Polskt",
         "icon": "🇵🇱",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "portuguese",
         "name": "Portuguese",
         "name_sv": "Portugisiskt",
         "icon": "🇵🇹",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "russian",
         "name": "Russian",
         "name_sv": "Ryskt",
         "icon": "🇷🇺",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "spanish",
         "name": "Spanish",
         "name_sv": "Spanskt",
         "icon": "🇪🇸",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "ukrainian",
         "name": "Ukrainian",
         "name_sv": "Ukrainskt",
         "icon": "🇺🇦",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       }
     ]
   },
@@ -44136,72 +44136,72 @@ const AI_CUISINE_REGIONS = [
         "name": "Burmese",
         "name_sv": "Burmesiskt",
         "icon": "🇲🇲",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "filipino",
         "name": "Filipino",
         "name_sv": "Filippinskt",
         "icon": "🇵🇭",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "indonesian",
         "name": "Indonesian",
         "name_sv": "Indonesiskt",
         "icon": "🇮🇩",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "khmer",
         "name": "Khmer (Cambodian)",
         "name_sv": "Khmer (Kambodjiansk)",
         "icon": "🇰🇭",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "laotian",
         "name": "Laotian",
         "name_sv": "Laotiskt",
         "icon": "🇱🇦",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "malaysian",
         "name": "Malaysian",
         "name_sv": "Malaysiskt",
         "icon": "🇲🇾",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "singaporean",
         "name": "Singaporean",
         "name_sv": "Singaporianskt",
         "icon": "🇸🇬",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "thai",
         "name": "Thai",
         "name_sv": "Thaimat",
         "icon": "🇹🇭",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "vietnamese",
         "name": "Vietnamese",
         "name_sv": "Vietnamesiskt",
         "icon": "🇻🇳",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       }
     ]
   },
@@ -44215,48 +44215,48 @@ const AI_CUISINE_REGIONS = [
         "name": "Cantonese",
         "name_sv": "Kantonesiskt",
         "icon": "🥟",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "chinese",
         "name": "Chinese",
         "name_sv": "Kinesiskt",
         "icon": "🇨🇳",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "japanese",
         "name": "Japanese",
         "name_sv": "Japanskt",
         "icon": "🇯🇵",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "korean",
         "name": "Korean",
         "name_sv": "Koreanskt",
         "icon": "🇰🇷",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "sichuan",
         "name": "Sichuan",
         "name_sv": "Sichuansk",
         "icon": "🌶️",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "taiwanese",
         "name": "Taiwanese",
         "name_sv": "Taiwanesiskt",
         "icon": "🇹🇼",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       }
     ]
   },
@@ -44270,48 +44270,48 @@ const AI_CUISINE_REGIONS = [
         "name": "Caribbean",
         "name_sv": "Karibisk",
         "icon": "🏝️",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "dominican",
         "name": "Dominican",
         "name_sv": "Dominikanskt",
         "icon": "��🇴",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "haitian",
         "name": "Haitian",
         "name_sv": "Haitiskt",
         "icon": "🇭🇹",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "jamaican",
         "name": "Jamaican",
         "name_sv": "Jamaicansk",
         "icon": "🇯🇲",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "puerto_rican",
         "name": "Puerto Rican",
         "name_sv": "Puerto Ricanskt",
         "icon": "🇵🇷",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "trinidadian",
         "name": "Trinidadian",
         "name_sv": "Trinidadiskt",
         "icon": "🇹🇹",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       }
     ]
   },
@@ -44325,48 +44325,48 @@ const AI_CUISINE_REGIONS = [
         "name": "Danish",
         "name_sv": "Danskt",
         "icon": "🇩🇰",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "finnish",
         "name": "Finnish",
         "name_sv": "Finskt",
         "icon": "🇫🇮",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "icelandic",
         "name": "Icelandic",
         "name_sv": "Isländskt",
         "icon": "🇮🇸",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "new_nordic",
         "name": "New Nordic",
         "name_sv": "Ny Nordisk",
         "icon": "🌿",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "norwegian",
         "name": "Norwegian",
         "name_sv": "Norskt",
         "icon": "🇳🇴",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       },
       {
         "id": "swedish",
         "name": "Swedish",
         "name_sv": "Svensk",
         "icon": "🇸🇪",
-        "description": "[STUB]",
-        "description_sv": "[UTKAST]"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
       }
     ]
   }
@@ -44375,392 +44375,392 @@ const AI_CUISINE_REGIONS = [
 // AI Recipe Builder - Cuisine descriptions {cuisine_id: {description, description_sv?}}
 const AI_CUISINE_DESCRIPTIONS = {
   "afghan": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "algerian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "american": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "argentinian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "armenian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "australian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "austrian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "azerbaijani": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "balkan": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "bangladeshi": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "basque": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "bengali": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "brazilian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "british": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "burmese": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "cajun_creole": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "cameroonian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "canadian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "cantonese": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "caribbean": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "chilean": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "chinese": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "colombian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "cuban": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "danish": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "dominican": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "east_african": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "ecuadorian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "egyptian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "emirati": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "ethiopian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "filipino": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "finnish": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "french": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "georgian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "german": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "ghanaian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "greek": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "haitian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "hawaiian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "hungarian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "icelandic": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "indian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "indonesian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "iraqi": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "israeli": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "italian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "jamaican": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "japanese": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "kenyan": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "khmer": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "korean": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "kurdish": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "laotian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "lebanese": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "malaysian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "mediterranean": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "mexican": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "moroccan": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "mughlai": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "nepali": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "new_nordic": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "nigerian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "norwegian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "pakistani": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "palestinian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "persian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "peruvian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "polish": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "polynesian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "portuguese": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "puerto_rican": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "punjabi": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "russian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "senegalese": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "sichuan": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "singaporean": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "south_african": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "south_indian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "southern_us": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "spanish": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "sri_lankan": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "swedish": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "syrian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "taiwanese": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "tanzanian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "tex_mex": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "thai": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "trinidadian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "tunisian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "turkish": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "ukrainian": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "uzbek": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "venezuelan": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "vietnamese": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "west_african": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "yemeni": {
-    "description": "[STUB]",
-    "description_sv": "[UTKAST]"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   }
 };
 
@@ -44828,7 +44828,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["chicken", "goat", "lamb", "turkey", "pork", "fish", "veal", "rabbit", "beef", "duck", "venison"];
+const AI_GENERIC_PROTEIN_IDS = ["goat", "turkey", "beef", "lamb", "rabbit", "chicken", "veal", "duck", "fish", "pork", "venison"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -67615,7 +67615,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "436";
+const PANEL_VERSION = "437";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
