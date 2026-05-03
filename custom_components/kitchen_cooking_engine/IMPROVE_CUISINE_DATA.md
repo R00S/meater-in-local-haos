@@ -64,7 +64,7 @@ One paragraph of sources and key consumption statistics used.
 | `grade` | ✅ | `signature`, `bulk`, or `local` (see below) |
 | `rating` | ✅ | Integer 1–10. How important within the grade. Top 3 per grade are shown by default; rest hidden under "More". |
 | `name` | ✅ | English display name |
-| `name_sv` | — | Swedish display name (include where known) |
+| `name_sv` | ✅ | Swedish display name (include where known) |
 | `notes` | — | Research justification; evidence for the grade and rating |
 
 ---
