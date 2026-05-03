@@ -31,3 +31,19 @@
 
 **Still open:**
 - Root cause of missing cuisine region accordion buttons is unknown. Confirmed working in v0.8.1.10 (hardcoded `cuisineRegions` inline) and v0.8.0.2-beta.main. Broken in all releases on this branch where `cuisineRegions` is sourced from the generated `AI_CUISINE_REGIONS` constant.
+
+### 2026-05-03 — Agent session C
+
+**Root cause identified and fixed (v0.8.2.7):**
+
+`www/cuisines` was a symlink → `../../../docs/cuisines`. This worked in the git repo (where `docs/cuisines/` is a real directory with 97 files) but broke silently on HAOS after HACS installation — zip archives do not follow symlinks, so `www/cuisines` was installed as a dead symlink.
+
+When HA started, `_async_regenerate_frontend_data()` ran `regenerate_panel()`, which called `build_cuisine_data()`. `build_cuisine_data()` opens `www/cuisines/`, found the directory empty (dead symlink), and returned `([], {}, [])`. The generated JS then had `AI_CUISINE_REGIONS = []`, causing `cuisineRegions` to be an empty array and the accordion to render nothing.
+
+v0.8.1.10 was unaffected because it had the region list hardcoded in the template itself — no dependency on the generated constant.
+
+**Fix applied:**
+- Replaced the `www/cuisines` dead-end symlink with the real directory (moved 97 `.md` files there).
+- Created `docs/cuisines` → symlink to `../custom_components/kitchen_cooking_engine/www/cuisines` (matches the `docs/recipe_research` → `www/recipes` pattern).
+- Regenerated panel; PANEL_VERSION 429 → 430.
+- Bumped version 0.8.2.6 → 0.8.2.7.
