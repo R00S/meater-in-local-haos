@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 02 May 2026, 14:00 UTC
-Last Change: v0.8.2.9 - expand nordic stubs to 9 per grade pair; remove 5-8 cap from IMPROVE_CUISINE_DATA.md; keep unreplaced stubs as quality markers
+Last Change: v0.8.2.10 - expand all 91 cuisine stubs to 9 entries per grade pair with arbitrary ratings
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "437"
+PANEL_VERSION = "438"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

@@ -860,7 +860,8 @@ The ingredient screen has several sections:
 
 - **Cuisine / Region filter** — optionally choose one or more cuisine regions to narrow
   ingredient suggestions. Selecting multiple regions creates fusion combinations. Over 95
-  cuisines are available.
+  cuisines are available. When a cuisine is selected, a short description of that cuisine
+  is shown above the ingredient grid.
 - **From Your Shelf** *(shown only when Shelf is enabled and has items)* — a highlighted
   section at the top of the ingredient grid shows items currently in your shelf (fridge,
   freezer, larder, spices). Tap any chip to instantly add that item as a selected

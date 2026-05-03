@@ -81,3 +81,22 @@ v0.8.1.10 was unaffected because it had the region list hardcoded in the templat
    - Added rule: when researching a pair, replace stubs one-by-one with verified items. Do NOT delete unreplaced stubs — remaining stubs signal the slot is still empty.
 
 3. **Bumped version 0.8.2.8 → 0.8.2.9; PANEL_VERSION 434 → 435.**
+
+### 2026-05-03 — Agent session F
+
+**Tasks completed (v0.8.2.10):**
+
+1. **Expanded all 91 non-Nordic cuisine stub files from 3 → 9 entries per grade pair:**
+   - Previously only the 6 Nordic stubs had 9 entries; all other 91 files had 3.
+   - All 97 files now have 9 stub entries per grade pair (15 grade pairs × 9 = 135 stub entries per file).
+
+2. **Stub ratings changed from ordered (10→2) to arbitrary per grade pair:**
+   - Each grade pair now uses a fixed but non-sequential set of 9 distinct ratings (2–10).
+   - Different grade pairs use different rating orders so the data looks varied.
+   - This applies to all 97 cuisine files including the 6 Nordic ones that had ordered ratings.
+
+3. **CHORES.md performed:**
+   - Regenerated panel: PANEL_VERSION 437 → 438.
+   - Bumped version 0.8.2.9 → 0.8.2.10.
+   - Updated USER_GUIDE.md §7.2 to mention the cuisine description shown on selection.
+
