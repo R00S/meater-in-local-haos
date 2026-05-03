@@ -5623,6 +5623,8 @@ class KitchenCookingPanel extends LitElement {
         <h2>${this._t('ai_recipe.select_ingredients_title')}</h2>
         <button class="help-btn" @click=${() => this._openHelp('#72-selecting-ingredients')} title="Open User Guide">?</button>
       </div>
+      <ha-card>
+        <div class="card-content">
           <p class="info-text" style="margin-bottom: 12px;">${this._t('ai_recipe.cuisine_region_hint')}</p>
           ${(this._aiSelectedCuisines || []).length > 0 ? html`
             <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
