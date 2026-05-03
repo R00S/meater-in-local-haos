@@ -6,7 +6,7 @@ name_sv: "Mexikanskt"
 icon: 🇲🇽
 region: latin_american
 region_name: "Latin American"
-region_icon: 🌶️
+region_icon: 💃
 research_done: 0
 ---
 

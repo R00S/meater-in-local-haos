@@ -6,7 +6,7 @@ name_sv: "Turkiskt"
 icon: 🇹🇷
 region: middle_east
 region_name: "Middle Eastern"
-region_icon: 🌙
+region_icon: 🧆
 research_done: 0
 ---
 

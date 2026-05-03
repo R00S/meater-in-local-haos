@@ -6,7 +6,7 @@ name_sv: "Srilankesiskt"
 icon: 🇱🇰
 region: south_asian
 region_name: "South Asian"
-region_icon: 🫚
+region_icon: 🍛
 research_done: 0
 ---
 

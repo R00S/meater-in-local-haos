@@ -6,7 +6,7 @@ name_sv: "Spanskt"
 icon: 🇪🇸
 region: european
 region_name: "European"
-region_icon: 🍷
+region_icon: 🏰
 research_done: 0
 ---
 

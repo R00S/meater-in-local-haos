@@ -6,7 +6,7 @@ name_sv: "Amerikansk"
 icon: 🇺🇸
 region: north_american
 region_name: "North American"
-region_icon: 🏈
+region_icon: 🦅
 research_done: 0
 ---
 
