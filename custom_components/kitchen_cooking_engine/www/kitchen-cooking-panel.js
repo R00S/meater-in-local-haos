@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 May 2026, 11:51 CET
+ * AUTO-GENERATED: 03 May 2026, 12:11 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 03 May 2026, 11:51 CET
+// Last generated: 03 May 2026, 12:11 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -95866,7 +95866,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["fish", "rabbit", "lamb", "pork", "duck", "venison", "beef", "chicken", "turkey", "goat", "veal"];
+const AI_GENERIC_PROTEIN_IDS = ["venison", "goat", "pork", "chicken", "turkey", "rabbit", "veal", "fish", "lamb", "duck", "beef"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -118635,7 +118635,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "428";
+const PANEL_VERSION = "429";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
