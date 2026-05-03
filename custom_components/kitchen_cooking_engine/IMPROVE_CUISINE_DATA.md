@@ -122,6 +122,25 @@ or is a specific cut in `AI_PROTEIN_SUBCATS`) is excluded from the badge area �
 it. Non-tree proteins (e.g. elk in Swedish cuisine) appear in the badge area instead, pulling in
 "next in line" items by rating within their grade.
 
+### ⚠️ Node research required when a top-level button lights up
+
+When a top-level protein button (e.g. 🐷 Pork) lights up for a cuisine, **the specific nodes
+(cuts) that should also light up must be researched and added**. An empty top-level button with
+no lit nodes is not acceptable — it misleads the user into thinking all cuts are equally
+characteristic, when in reality only specific preparations define the cuisine.
+
+Rules:
+- **Most cuisines**: several nodes light up alongside the top level. Research which specific cuts
+  or preparations the cuisine is actually known for and ensure those nodes are lit.
+- **Special case — a single iconic preparation**: if a cuisine genuinely only uses one specific
+  cut of a protein (e.g. a culture that exclusively uses one preparation of fish), then 1–2 lit
+  nodes is acceptable. This must be explicitly justified.
+- **Do not light up a top level without lit nodes.** If you cannot identify which nodes to light,
+  do not add that protein ingredient until the research is done.
+
+This applies equally to all three grades: lighting up a top level means you are asserting this
+protein is characteristic of the cuisine. That assertion requires knowing *which cuts* are used.
+
 ---
 
 ## Research required before writing a file
