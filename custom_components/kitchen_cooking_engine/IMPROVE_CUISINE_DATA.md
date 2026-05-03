@@ -87,9 +87,9 @@ Up to 9 items are visible by default (3 per grade), from all three grades.
 - Dark green takes precedence when both are present in the same subcat.
 
 Every ingredient should earn its place. If you cannot confirm an ingredient is
-characteristic of this specific cuisine from a verifiable source, leave it out for now —
-a shorter, accurate list is more useful than a long, approximate one. If a category is
-not relevant to the cuisine, omit it entirely.
+characteristic of this specific cuisine from a verifiable source, leave it out for now
+and come back when the research is done. If a category is not relevant to the cuisine,
+omit it entirely.
 
 ### Concrete examples
 
