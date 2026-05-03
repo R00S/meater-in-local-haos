@@ -127,21 +127,12 @@ on a single cuisine if that is what thorough coverage takes. Quality over batch 
 
 ---
 
-## Grade → protein tree lighting
+## Protein tree — authoring consequences
 
-A cuisine's protein tree buttons (🐄 Beef / 🐷 Pork / 🍗 Poultry / 🐟 Fish / 🐑 Lamb / 🦌 Game)
-light up for **all three grades** (signature, bulk, local) when the cuisine has an ingredient
-that maps to that protein category in `PROTEIN_TO_SUBCAT` (in `ai_recipe_data.py`).
-
-Color semantics:
-- **Dark green** — the subcat has at least one `signature` or `local` protein (cultural/local identity)
-- **Light green** — the subcat has only `bulk` proteins (high-volume staple)
-- Dark green takes precedence when both are present in the same subcat.
-
-Badge area rule for proteins: any cuisine protein that maps to a tree node (via `PROTEIN_TO_SUBCAT`
-or is a specific cut in `AI_PROTEIN_SUBCATS`) is excluded from the badge area — the tree represents
-it. Non-tree proteins (e.g. elk in Swedish cuisine) appear in the badge area instead, pulling in
-"next in line" items by rating within their grade.
+**Badge area rule:** any protein ingredient that maps to a tree node (via `PROTEIN_TO_SUBCAT`
+or is a specific cut in `AI_PROTEIN_SUBCATS`) is excluded from the badge area — the tree
+represents it. Non-tree proteins (e.g. elk in Swedish cuisine) appear in the badge area
+instead, pulling in "next in line" items by rating within their grade.
 
 ### ⚠️ Node research required when a top-level button lights up
 
