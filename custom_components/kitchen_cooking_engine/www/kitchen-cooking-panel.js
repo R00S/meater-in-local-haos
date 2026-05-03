@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 May 2026, 10:56 CET
+ * AUTO-GENERATED: 03 May 2026, 11:51 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 03 May 2026, 10:56 CET
+// Last generated: 03 May 2026, 11:51 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -95866,7 +95866,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["lamb", "goat", "beef", "venison", "chicken", "turkey", "veal", "fish", "rabbit", "pork", "duck"];
+const AI_GENERIC_PROTEIN_IDS = ["fish", "rabbit", "lamb", "pork", "duck", "venison", "beef", "chicken", "turkey", "goat", "veal"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -112935,67 +112935,63 @@ class KitchenCookingPanel extends LitElement {
         <h2>${this._t('ai_recipe.select_ingredients_title')}</h2>
         <button class="help-btn" @click=${() => this._openHelp('#72-selecting-ingredients')} title="Open User Guide">?</button>
       </div>
-      <ha-card>
-        <div class="card-content">
-          <p class="info-text" style="margin-bottom: 12px;">${this._t('ai_recipe.cuisine_region_hint')}</p>
-          ${(this._aiSelectedCuisines || []).length > 0 ? html`
-            <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
-              ${(this._aiSelectedCuisines || []).map(c => {
-                const name = c.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-                return html`<span style="background: var(--primary-color); color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.85em; display: inline-flex; align-items: center; gap: 4px;">
-                  ${name}
-                  <span style="cursor: pointer; margin-left: 2px;" @click=${() => {
-                    this._aiSelectedCuisines = (this._aiSelectedCuisines || []).filter(x => x !== c);
-                    this.requestUpdate();
-                  }}>✕</span>
-                </span>`;
-              })}
-            </div>
-          ` : ''}
-          ${cuisineRegions.map(region => {
-            const isExpanded = (this._aiExpandedRegions || []).includes(region.id);
-            const selectedInRegion = region.cuisines.filter(c => (this._aiSelectedCuisines || []).includes(c.id));
-            return html`
-              <div style="margin-bottom: 4px; border: 1px solid var(--divider-color); border-radius: 8px; overflow: hidden;">
-                <div 
-                  style="padding: 10px 14px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; background: ${selectedInRegion.length > 0 ? 'var(--primary-color)' : 'var(--card-background-color)'}; color: ${selectedInRegion.length > 0 ? 'white' : 'inherit'};"
-                  @click=${() => {
-                    const expanded = [...(this._aiExpandedRegions || [])];
-                    const idx = expanded.indexOf(region.id);
-                    if (idx >= 0) { expanded.splice(idx, 1); } else { expanded.push(region.id); }
-                    this._aiExpandedRegions = expanded;
-                    this.requestUpdate();
-                  }}
-                >
-                  <span style="font-weight: bold;">${region.icon} ${region.name} ${selectedInRegion.length > 0 ? `(${selectedInRegion.length})` : ''}</span>
-                  <span>${isExpanded ? '▼' : '▶'}</span>
-                </div>
-                ${isExpanded ? html`
-                  <div style="padding: 8px; display: flex; flex-wrap: wrap; gap: 6px;">
-                    ${region.cuisines.map(cuisine => {
-                      const isSelected = (this._aiSelectedCuisines || []).includes(cuisine.id);
-                      return html`
-                        <button
-                          style="padding: 6px 12px; border-radius: 16px; border: 1px solid ${isSelected ? 'var(--primary-color)' : 'var(--divider-color)'}; background: ${isSelected ? 'var(--primary-color)' : 'var(--card-background-color)'}; color: ${isSelected ? 'white' : 'inherit'}; cursor: pointer; font-size: 0.9em; display: inline-flex; align-items: center; gap: 4px;"
-                          @click=${() => {
-                            const cuisines = [...(this._aiSelectedCuisines || [])];
-                            const idx = cuisines.indexOf(cuisine.id);
-                            if (idx >= 0) { cuisines.splice(idx, 1); } else { cuisines.push(cuisine.id); }
-                            this._aiSelectedCuisines = cuisines;
-                            this.requestUpdate();
-                          }}
-                        >
-                          ${cuisine.icon} ${cuisine.name}
-                        </button>
-                      `;
-                    })}
-                  </div>
-                ` : ''}
-              </div>
-            `;
+      <p class="info-text" style="margin-bottom: 12px;">${this._t('ai_recipe.cuisine_region_hint')}</p>
+      ${(this._aiSelectedCuisines || []).length > 0 ? html`
+        <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
+          ${(this._aiSelectedCuisines || []).map(c => {
+            const name = c.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            return html`<span style="background: var(--primary-color); color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.85em; display: inline-flex; align-items: center; gap: 4px;">
+              ${name}
+              <span style="cursor: pointer; margin-left: 2px;" @click=${() => {
+                this._aiSelectedCuisines = (this._aiSelectedCuisines || []).filter(x => x !== c);
+                this.requestUpdate();
+              }}>✕</span>
+            </span>`;
           })}
         </div>
-      </ha-card>
+      ` : ''}
+      ${cuisineRegions.map(region => {
+        const isExpanded = (this._aiExpandedRegions || []).includes(region.id);
+        const selectedInRegion = region.cuisines.filter(c => (this._aiSelectedCuisines || []).includes(c.id));
+        return html`
+          <div style="margin-bottom: 4px; border: 1px solid var(--divider-color); border-radius: 8px; overflow: hidden;">
+            <div
+              style="padding: 10px 14px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; background: ${selectedInRegion.length > 0 ? 'var(--primary-color)' : 'var(--card-background-color)'}; color: ${selectedInRegion.length > 0 ? 'white' : 'inherit'};"
+              @click=${() => {
+                const expanded = [...(this._aiExpandedRegions || [])];
+                const idx = expanded.indexOf(region.id);
+                if (idx >= 0) { expanded.splice(idx, 1); } else { expanded.push(region.id); }
+                this._aiExpandedRegions = expanded;
+                this.requestUpdate();
+              }}
+            >
+              <span style="font-weight: bold;">${region.icon} ${region.name} ${selectedInRegion.length > 0 ? `(${selectedInRegion.length})` : ''}</span>
+              <span>${isExpanded ? '▼' : '▶'}</span>
+            </div>
+            ${isExpanded ? html`
+              <div style="padding: 8px; display: flex; flex-wrap: wrap; gap: 6px;">
+                ${region.cuisines.map(cuisine => {
+                  const isSelected = (this._aiSelectedCuisines || []).includes(cuisine.id);
+                  return html`
+                    <button
+                      style="padding: 6px 12px; border-radius: 16px; border: 1px solid ${isSelected ? 'var(--primary-color)' : 'var(--divider-color)'}; background: ${isSelected ? 'var(--primary-color)' : 'var(--card-background-color)'}; color: ${isSelected ? 'white' : 'inherit'}; cursor: pointer; font-size: 0.9em; display: inline-flex; align-items: center; gap: 4px;"
+                      @click=${() => {
+                        const cuisines = [...(this._aiSelectedCuisines || [])];
+                        const idx = cuisines.indexOf(cuisine.id);
+                        if (idx >= 0) { cuisines.splice(idx, 1); } else { cuisines.push(cuisine.id); }
+                        this._aiSelectedCuisines = cuisines;
+                        this.requestUpdate();
+                      }}
+                    >
+                      ${cuisine.icon} ${cuisine.name}
+                    </button>
+                  `;
+                })}
+              </div>
+            ` : ''}
+          </div>
+        `;
+      })}
 
       <ha-card>
         <div class="card-content">
@@ -118639,7 +118635,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "427";
+const PANEL_VERSION = "428";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
