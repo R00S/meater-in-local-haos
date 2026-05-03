@@ -398,6 +398,53 @@ partial, give you the insider's view that the data needs.
 
 ---
 
+### ❌ Trap 7: Batching pairs to save effort
+
+Research for multiple pairs at once feels efficient. It is not — it is how quality gets
+sacrificed without noticing.
+
+When you say "I'll search for all Protein pairs at once" or "let me gather all signature
+ingredients across all categories in one go", you stop treating each pair as a distinct
+research task and start fitting results into pre-existing buckets. The search query
+becomes vague, the evidence becomes mixed, and ingredients land in the wrong pair
+because you weren't focused on just that pair.
+
+**The symptom:** after batching, you have results spread across multiple pairs but none
+of them is fully verified — because you never stopped and asked "is this actually the
+best evidence I can find specifically for *this* pair?"
+
+**Rule:** Close the previous pair before opening the next one. One focused search.
+One reviewed result. One written pair. Then and only then move on.
+The 15-pair methodology exists precisely because batching fails at quality.
+If you feel the urge to batch, that is the signal to slow down, not speed up.
+
+---
+
+### ❌ Trap 8: Extrapolating the remaining pairs from already collected data
+
+After researching 3–5 pairs, you have a picture of the cuisine. The temptation is to
+think: "I now understand this cuisine well enough to fill in the rest without searching."
+This is the most dangerous trap, because it feels like expertise but is actually
+pattern-matching dressed up as research.
+
+**What goes wrong:** the pairs you researched were shaped by what you happened to search.
+The remaining pairs have their own specific evidence — statistics you have not seen,
+local practices you do not know about, ingredients that a native would expect to see but
+that never came up in the pairs you already did.
+
+**A concrete example of failure:** after researching Venezuelan Proteins and Vegetables,
+an agent "knew" the cuisine used corn heavily, so it filled in Grains from that prior
+knowledge without searching — and missed that Venezuela's bulk grain by consumption
+statistics is rice, not corn, with maize flour (arepa) being signature but not bulk.
+A search would have shown this. Pattern-matching from prior pairs did not.
+
+**Rule:** Every pair gets its own search. The fact that you have already researched N pairs
+does not reduce the research requirement for pair N+1 to zero. Prior knowledge of the
+cuisine informs the *interpretation* of search results — it does not replace finding them.
+If a pair feels "obvious", search anyway. The obvious answer is often wrong.
+
+---
+
 ## A note on trust
 
 The people using this app are cooking real food for real people. When the app shows
