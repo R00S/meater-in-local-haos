@@ -16,7 +16,7 @@ research_done: 0
 
 ⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
 Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Vegetables — Signature", etc.).
+then "Proteins — Local", then "Produce — Signature", etc.).
 Each pair requires its own dedicated research pass. Do NOT combine pairs.
 See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
 
@@ -66,9 +66,9 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_prot_loc_9, grade: local, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Taiwanese research"}
 
 
-## Vegetables
+## Produce
 
-### Vegetables — Signature
+### Produce — Signature
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
 <!-- Searched: "Taiwanese signature dishes vegetables", "Taiwanese iconic vegetable ingredients", "Taiwanese traditional vegetable preparations" -->
 
@@ -82,7 +82,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_veg_sig_8, grade: signature, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Taiwanese research"}
 - {id: stub_veg_sig_9, grade: signature, rating: 5, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Taiwanese research"}
 
-### Vegetables — Bulk
+### Produce — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
 <!-- Searched: "Taiwanese vegetable consumption kg per capita", "Taiwanese most consumed vegetables statistics", "Taiwanese FAO food balance vegetables" -->
 
@@ -96,7 +96,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_veg_bul_8, grade: bulk, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Taiwanese research"}
 - {id: stub_veg_bul_9, grade: bulk, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Taiwanese research"}
 
-### Vegetables — Local
+### Produce — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
 <!-- Searched: "Taiwanese vegetables grown locally agriculture", "Taiwanese regional vegetable crops", "Taiwanese foraging wild plants" -->
 
@@ -156,9 +156,9 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_grain_loc_9, grade: local, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Taiwanese research"}
 
 
-## Dairy & Eggs
+## Dairy, Oils & Sauces
 
-### Dairy & Eggs — Signature
+### Dairy, Oils & Sauces — Signature
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
 <!-- Searched: "Taiwanese signature dairy dishes", "Taiwanese iconic cheese butter cream", "Taiwanese traditional dairy products" -->
 
@@ -172,7 +172,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_dairy_sig_8, grade: signature, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Taiwanese research"}
 - {id: stub_dairy_sig_9, grade: signature, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Taiwanese research"}
 
-### Dairy & Eggs — Bulk
+### Dairy, Oils & Sauces — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
 <!-- Searched: "Taiwanese dairy consumption kg per capita", "Taiwanese milk cheese butter statistics", "Taiwanese FAO food balance dairy" -->
 
@@ -186,7 +186,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_dairy_bul_8, grade: bulk, rating: 6, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Taiwanese research"}
 - {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Taiwanese research"}
 
-### Dairy & Eggs — Local
+### Dairy, Oils & Sauces — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
 <!-- Searched: "Taiwanese dairy farming local production", "Taiwanese regional cheese varieties", "Taiwanese local dairy breeds" -->
 
@@ -201,9 +201,9 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_dairy_loc_9, grade: local, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Taiwanese research"}
 
 
-## Spices & Seasonings
+## Spices, Nuts & Seasonings
 
-### Spices & Seasonings — Signature
+### Spices, Nuts & Seasonings — Signature
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
 <!-- Searched: "Taiwanese signature spice blends", "Taiwanese defining herbs and spices", "Taiwanese iconic seasoning flavour profile" -->
 
@@ -217,7 +217,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_spice_sig_8, grade: signature, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Taiwanese research"}
 - {id: stub_spice_sig_9, grade: signature, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Taiwanese research"}
 
-### Spices & Seasonings — Bulk
+### Spices, Nuts & Seasonings — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
 <!-- Searched: "Taiwanese most used condiments seasonings statistics", "Taiwanese salt sugar spice consumption", "Taiwanese everyday seasoning ingredients" -->
 
@@ -231,7 +231,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Taiwanese research"}
 - {id: stub_spice_bul_9, grade: bulk, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Taiwanese research"}
 
-### Spices & Seasonings — Local
+### Spices, Nuts & Seasonings — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
 <!-- Searched: "Taiwanese herbs grown locally", "Taiwanese spice production native plants", "Taiwanese foraged herbs regional flavourings" -->
 

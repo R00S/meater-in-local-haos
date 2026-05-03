@@ -16,7 +16,7 @@ research_done: 0
 
 ⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
 Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Vegetables — Signature", etc.).
+then "Proteins — Local", then "Produce — Signature", etc.).
 Each pair requires its own dedicated research pass. Do NOT combine pairs.
 See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
 
@@ -66,9 +66,9 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_prot_loc_9, grade: local, rating: 5, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Uzbek research"}
 
 
-## Vegetables
+## Produce
 
-### Vegetables — Signature
+### Produce — Signature
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
 <!-- Searched: "Uzbek signature dishes vegetables", "Uzbek iconic vegetable ingredients", "Uzbek traditional vegetable preparations" -->
 
@@ -82,7 +82,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_veg_sig_8, grade: signature, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Uzbek research"}
 - {id: stub_veg_sig_9, grade: signature, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Uzbek research"}
 
-### Vegetables — Bulk
+### Produce — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
 <!-- Searched: "Uzbek vegetable consumption kg per capita", "Uzbek most consumed vegetables statistics", "Uzbek FAO food balance vegetables" -->
 
@@ -96,7 +96,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_veg_bul_8, grade: bulk, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Uzbek research"}
 - {id: stub_veg_bul_9, grade: bulk, rating: 5, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Uzbek research"}
 
-### Vegetables — Local
+### Produce — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
 <!-- Searched: "Uzbek vegetables grown locally agriculture", "Uzbek regional vegetable crops", "Uzbek foraging wild plants" -->
 
@@ -156,9 +156,9 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_grain_loc_9, grade: local, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Uzbek research"}
 
 
-## Dairy & Eggs
+## Dairy, Oils & Sauces
 
-### Dairy & Eggs — Signature
+### Dairy, Oils & Sauces — Signature
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
 <!-- Searched: "Uzbek signature dairy dishes", "Uzbek iconic cheese butter cream", "Uzbek traditional dairy products" -->
 
@@ -172,7 +172,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_dairy_sig_8, grade: signature, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Uzbek research"}
 - {id: stub_dairy_sig_9, grade: signature, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Uzbek research"}
 
-### Dairy & Eggs — Bulk
+### Dairy, Oils & Sauces — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
 <!-- Searched: "Uzbek dairy consumption kg per capita", "Uzbek milk cheese butter statistics", "Uzbek FAO food balance dairy" -->
 
@@ -186,7 +186,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_dairy_bul_8, grade: bulk, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Uzbek research"}
 - {id: stub_dairy_bul_9, grade: bulk, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Uzbek research"}
 
-### Dairy & Eggs — Local
+### Dairy, Oils & Sauces — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
 <!-- Searched: "Uzbek dairy farming local production", "Uzbek regional cheese varieties", "Uzbek local dairy breeds" -->
 
@@ -201,9 +201,9 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_dairy_loc_9, grade: local, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Uzbek research"}
 
 
-## Spices & Seasonings
+## Spices, Nuts & Seasonings
 
-### Spices & Seasonings — Signature
+### Spices, Nuts & Seasonings — Signature
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
 <!-- Searched: "Uzbek signature spice blends", "Uzbek defining herbs and spices", "Uzbek iconic seasoning flavour profile" -->
 
@@ -217,7 +217,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_spice_sig_8, grade: signature, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Uzbek research"}
 - {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Uzbek research"}
 
-### Spices & Seasonings — Bulk
+### Spices, Nuts & Seasonings — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
 <!-- Searched: "Uzbek most used condiments seasonings statistics", "Uzbek salt sugar spice consumption", "Uzbek everyday seasoning ingredients" -->
 
@@ -231,7 +231,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_spice_bul_8, grade: bulk, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Uzbek research"}
 - {id: stub_spice_bul_9, grade: bulk, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Uzbek research"}
 
-### Spices & Seasonings — Local
+### Spices, Nuts & Seasonings — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
 <!-- Searched: "Uzbek herbs grown locally", "Uzbek spice production native plants", "Uzbek foraged herbs regional flavourings" -->
 

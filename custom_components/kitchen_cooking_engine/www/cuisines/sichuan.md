@@ -16,7 +16,7 @@ research_done: 0
 
 ⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
 Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Vegetables — Signature", etc.).
+then "Proteins — Local", then "Produce — Signature", etc.).
 Each pair requires its own dedicated research pass. Do NOT combine pairs.
 See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
 
@@ -66,9 +66,9 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_prot_loc_9, grade: local, rating: 6, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Sichuan research"}
 
 
-## Vegetables
+## Produce
 
-### Vegetables — Signature
+### Produce — Signature
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
 <!-- Searched: "Sichuan signature dishes vegetables", "Sichuan iconic vegetable ingredients", "Sichuan traditional vegetable preparations" -->
 
@@ -82,7 +82,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_veg_sig_8, grade: signature, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Sichuan research"}
 - {id: stub_veg_sig_9, grade: signature, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Sichuan research"}
 
-### Vegetables — Bulk
+### Produce — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
 <!-- Searched: "Sichuan vegetable consumption kg per capita", "Sichuan most consumed vegetables statistics", "Sichuan FAO food balance vegetables" -->
 
@@ -96,7 +96,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_veg_bul_8, grade: bulk, rating: 7, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Sichuan research"}
 - {id: stub_veg_bul_9, grade: bulk, rating: 6, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Sichuan research"}
 
-### Vegetables — Local
+### Produce — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
 <!-- Searched: "Sichuan vegetables grown locally agriculture", "Sichuan regional vegetable crops", "Sichuan foraging wild plants" -->
 
@@ -156,9 +156,9 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_grain_loc_9, grade: local, rating: 6, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Sichuan research"}
 
 
-## Dairy & Eggs
+## Dairy, Oils & Sauces
 
-### Dairy & Eggs — Signature
+### Dairy, Oils & Sauces — Signature
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
 <!-- Searched: "Sichuan signature dairy dishes", "Sichuan iconic cheese butter cream", "Sichuan traditional dairy products" -->
 
@@ -172,7 +172,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_dairy_sig_8, grade: signature, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Sichuan research"}
 - {id: stub_dairy_sig_9, grade: signature, rating: 4, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Sichuan research"}
 
-### Dairy & Eggs — Bulk
+### Dairy, Oils & Sauces — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
 <!-- Searched: "Sichuan dairy consumption kg per capita", "Sichuan milk cheese butter statistics", "Sichuan FAO food balance dairy" -->
 
@@ -186,7 +186,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_dairy_bul_8, grade: bulk, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Sichuan research"}
 - {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Sichuan research"}
 
-### Dairy & Eggs — Local
+### Dairy, Oils & Sauces — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
 <!-- Searched: "Sichuan dairy farming local production", "Sichuan regional cheese varieties", "Sichuan local dairy breeds" -->
 
@@ -201,9 +201,9 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_dairy_loc_9, grade: local, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Sichuan research"}
 
 
-## Spices & Seasonings
+## Spices, Nuts & Seasonings
 
-### Spices & Seasonings — Signature
+### Spices, Nuts & Seasonings — Signature
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
 <!-- Searched: "Sichuan signature spice blends", "Sichuan defining herbs and spices", "Sichuan iconic seasoning flavour profile" -->
 
@@ -217,7 +217,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Sichuan research"}
 - {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Sichuan research"}
 
-### Spices & Seasonings — Bulk
+### Spices, Nuts & Seasonings — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
 <!-- Searched: "Sichuan most used condiments seasonings statistics", "Sichuan salt sugar spice consumption", "Sichuan everyday seasoning ingredients" -->
 
@@ -231,7 +231,7 @@ See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair li
 - {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Sichuan research"}
 - {id: stub_spice_bul_9, grade: bulk, rating: 3, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Sichuan research"}
 
-### Spices & Seasonings — Local
+### Spices, Nuts & Seasonings — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
 <!-- Searched: "Sichuan herbs grown locally", "Sichuan spice production native plants", "Sichuan foraged herbs regional flavourings" -->
 

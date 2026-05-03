@@ -159,14 +159,23 @@ def build_cuisine_data(base_dir):
                               — flat lookup used by AI_CUISINE_DESCRIPTIONS in the JS.
     """
     _section_to_cat = {
-        "proteins":             "p",
-        "vegetables":           "v",
-        "grains":               "g",
-        "dairy":                "d",
-        "spices":               "s",
-        "spices & seasonings":  "s",
-        "condiments":           "s",
-        "other":                "s",
+        "proteins":                  "p",
+        # Produce / Vegetables
+        "produce":                   "v",
+        "vegetables":                "v",
+        # Grains & Starches
+        "grains & starches":         "g",
+        "grains":                    "g",
+        # Dairy, Oils & Sauces
+        "dairy, oils & sauces":      "d",
+        "dairy & eggs":              "d",
+        "dairy":                     "d",
+        # Spices, Nuts & Seasonings
+        "spices, nuts & seasonings": "s",
+        "spices & seasonings":       "s",
+        "spices":                    "s",
+        "condiments":                "s",
+        "other":                     "s",
     }
     _valid_grades = {"signature", "bulk", "local"}
 
