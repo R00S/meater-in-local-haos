@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 May 2026, 18:08 CET
+ * AUTO-GENERATED: 03 May 2026, 19:18 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 03 May 2026, 18:08 CET
+// Last generated: 03 May 2026, 19:18 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -104286,1084 +104286,724 @@ const AI_CUISINE_INGREDIENTS = {
   ],
   "venezuelan": [
     {
-      "id": "stub_prot_sig_1",
-      "name": "[STUB]",
+      "id": "carne_mechada",
+      "name": "Shredded beef (carne mechada)",
       "cat": "p",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Riven nötkött (carne mechada)"
     },
     {
-      "id": "stub_prot_sig_2",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_sig_3",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_sig_4",
-      "name": "[STUB]",
+      "id": "pollo_venezolano",
+      "name": "Chicken (pollo)",
       "cat": "p",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Kyckling (pollo)"
     },
     {
-      "id": "stub_prot_sig_5",
-      "name": "[STUB]",
+      "id": "cazon_venezolano",
+      "name": "Shark (cazón)",
       "cat": "p",
       "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
+      "rating": 8,
+      "name_sv": "Haj (cazón)"
     },
     {
-      "id": "stub_prot_sig_6",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_sig_7",
-      "name": "[STUB]",
+      "id": "cerdo_venezolano",
+      "name": "Pork (cerdo)",
       "cat": "p",
       "grade": "signature",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Fläsk (cerdo)"
     },
     {
-      "id": "stub_prot_sig_8",
-      "name": "[STUB]",
+      "id": "huevos_venezolanos",
+      "name": "Eggs (huevos — perico)",
       "cat": "p",
       "grade": "signature",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Ägg (huevos — perico)"
     },
     {
-      "id": "stub_prot_sig_9",
-      "name": "[STUB]",
+      "id": "sardina_venezolana",
+      "name": "Sardine (sardina)",
       "cat": "p",
       "grade": "signature",
       "rating": 6,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Sardin (sardina)"
     },
     {
-      "id": "stub_prot_bul_1",
-      "name": "[STUB]",
+      "id": "pollo_bulk",
+      "name": "Chicken",
       "cat": "p",
       "grade": "bulk",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
+      "rating": 9,
+      "name_sv": "Kyckling"
     },
     {
-      "id": "stub_prot_bul_2",
-      "name": "[STUB]",
+      "id": "carne_res_bulk",
+      "name": "Beef",
       "cat": "p",
       "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
+      "rating": 8,
+      "name_sv": "Nötkött"
     },
     {
-      "id": "stub_prot_bul_3",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_4",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_5",
-      "name": "[STUB]",
+      "id": "huevos_bulk",
+      "name": "Eggs",
       "cat": "p",
       "grade": "bulk",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Ägg"
     },
     {
-      "id": "stub_prot_bul_6",
-      "name": "[STUB]",
+      "id": "cerdo_bulk",
+      "name": "Pork",
       "cat": "p",
       "grade": "bulk",
       "rating": 6,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Fläsk"
     },
     {
-      "id": "stub_prot_bul_7",
-      "name": "[STUB]",
+      "id": "sardina_bulk",
+      "name": "Sardine",
       "cat": "p",
       "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
+      "rating": 5,
+      "name_sv": "Sardin"
     },
     {
-      "id": "stub_prot_bul_8",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_bul_9",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_1",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_2",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_3",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_4",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_5",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_6",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_7",
-      "name": "[STUB]",
+      "id": "ganado_criollo",
+      "name": "Criollo cattle",
       "cat": "p",
       "grade": "local",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Criolloboskap"
     },
     {
-      "id": "stub_prot_loc_8",
-      "name": "[STUB]",
+      "id": "bufalo_agua",
+      "name": "Water buffalo",
       "cat": "p",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_prot_loc_9",
-      "name": "[STUB]",
-      "cat": "p",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_1",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_2",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_3",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_4",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_5",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_6",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_7",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_8",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_sig_9",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_1",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_2",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_3",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_4",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_5",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_6",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_7",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_8",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_bul_9",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_1",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_2",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_3",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_4",
-      "name": "[STUB]",
-      "cat": "v",
       "grade": "local",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Vattenbuffel"
     },
     {
-      "id": "stub_veg_loc_5",
-      "name": "[STUB]",
-      "cat": "v",
+      "id": "pavon_venezolano",
+      "name": "Peacock bass (pavón)",
+      "cat": "p",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Påfågelbas (pavón)"
+    },
+    {
+      "id": "coporo",
+      "name": "Coporo",
+      "cat": "p",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Coporo"
+    },
+    {
+      "id": "morocoto",
+      "name": "Morocoto",
+      "cat": "p",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Morocoto"
+    },
+    {
+      "id": "camarones_caribenos",
+      "name": "Caribbean shrimp",
+      "cat": "p",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Karibiska räkor"
+    },
+    {
+      "id": "bagre_venezolano",
+      "name": "Catfish (bagre)",
+      "cat": "p",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Mal (bagre)"
+    },
+    {
+      "id": "chigüire",
+      "name": "Capybara (chigüire)",
+      "cat": "p",
       "grade": "local",
       "rating": 5,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Kapybara (chigüire)"
     },
     {
-      "id": "stub_veg_loc_6",
-      "name": "[STUB]",
+      "id": "aji_dulce",
+      "name": "Venezuelan sweet pepper (ají dulce)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Venezuelansk söt paprika (ají dulce)"
+    },
+    {
+      "id": "cebolla_venezolana",
+      "name": "Onion (cebolla)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Lök (cebolla)"
+    },
+    {
+      "id": "tomate_venezolano",
+      "name": "Tomato (tomate)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Tomat (tomate)"
+    },
+    {
+      "id": "platano_maduro",
+      "name": "Ripe plantain (plátano maduro — tajadas)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Mogen plantain (plátano maduro)"
+    },
+    {
+      "id": "pimenton_rojo",
+      "name": "Red bell pepper (pimentón)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Röd paprika (pimentón)"
+    },
+    {
+      "id": "ajo_venezolano",
+      "name": "Garlic (ajo)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Vitlök (ajo)"
+    },
+    {
+      "id": "yuca_venezolana",
+      "name": "Cassava (yuca)",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Kassava (yuca)"
+    },
+    {
+      "id": "auyama",
+      "name": "Auyama squash",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Auyamagurka"
+    },
+    {
+      "id": "tomate_bulk",
+      "name": "Tomato",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Tomat"
+    },
+    {
+      "id": "cebolla_bulk",
+      "name": "Onion",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Lök"
+    },
+    {
+      "id": "zanahoria_bulk",
+      "name": "Carrot (zanahoria)",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Morot (zanahoria)"
+    },
+    {
+      "id": "lechuga_bulk",
+      "name": "Lettuce (lechuga)",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "Sallad (lechuga)"
+    },
+    {
+      "id": "auyama_bulk",
+      "name": "Auyama squash",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "Auyamagurka"
+    },
+    {
+      "id": "yuca_local",
+      "name": "Cassava (yuca)",
       "cat": "v",
       "grade": "local",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Kassava (yuca)"
     },
     {
-      "id": "stub_veg_loc_7",
-      "name": "[STUB]",
+      "id": "platano_local",
+      "name": "Plantain (plátano)",
       "cat": "v",
       "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
+      "rating": 9,
+      "name_sv": "Plantain (plátano)"
     },
     {
-      "id": "stub_veg_loc_8",
-      "name": "[STUB]",
-      "cat": "v",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_veg_loc_9",
-      "name": "[STUB]",
+      "id": "auyama_local",
+      "name": "Auyama squash",
       "cat": "v",
       "grade": "local",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Auyamagurka"
     },
     {
-      "id": "stub_grain_sig_1",
-      "name": "[STUB]",
+      "id": "ocumo",
+      "name": "Ocumo (taro)",
+      "cat": "v",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Ocumo (taro)"
+    },
+    {
+      "id": "caraota_negra",
+      "name": "Black bean (caraota negra)",
+      "cat": "v",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "Svart böna (caraota negra)"
+    },
+    {
+      "id": "aji_dulce_local",
+      "name": "Venezuelan sweet pepper (ají dulce)",
+      "cat": "v",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "Venezuelansk söt paprika (ají dulce)"
+    },
+    {
+      "id": "cambur",
+      "name": "Cambur (local banana)",
+      "cat": "v",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Cambur (lokal banan)"
+    },
+    {
+      "id": "harina_pan",
+      "name": "Precooked cornmeal (harina precocida / Harina P.A.N.)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Förkokt majsmjöl (harina precocida)"
+    },
+    {
+      "id": "arroz_blanco",
+      "name": "White rice (arroz blanco)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Vitt ris (arroz blanco)"
+    },
+    {
+      "id": "caraota_negra_grain",
+      "name": "Black bean (caraota negra)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Svart böna (caraota negra)"
+    },
+    {
+      "id": "maiz_cachapa",
+      "name": "Fresh corn (maíz tierno — cachapas)",
       "cat": "s",
       "grade": "signature",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Färsk majs (maíz tierno — cachapas)"
     },
     {
-      "id": "stub_grain_sig_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_sig_7",
-      "name": "[STUB]",
+      "id": "masa_hallaca",
+      "name": "Corn dough (masa para hallacas)",
       "cat": "s",
       "grade": "signature",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Majsdeg (masa para hallacas)"
     },
     {
-      "id": "stub_grain_sig_8",
-      "name": "[STUB]",
+      "id": "casabe",
+      "name": "Cassava flatbread (casabe)",
       "cat": "s",
       "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
+      "rating": 6,
+      "name_sv": "Kassavaflatbröd (casabe)"
     },
     {
-      "id": "stub_grain_sig_9",
-      "name": "[STUB]",
+      "id": "maiz_bulk",
+      "name": "Corn (maíz)",
       "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Majs (maíz)"
     },
     {
-      "id": "stub_grain_bul_1",
-      "name": "[STUB]",
+      "id": "arroz_bulk",
+      "name": "Rice (arroz)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "Ris (arroz)"
+    },
+    {
+      "id": "pasta_bulk",
+      "name": "Pasta",
       "cat": "s",
       "grade": "bulk",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Pasta"
     },
     {
-      "id": "stub_grain_bul_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_7",
-      "name": "[STUB]",
+      "id": "pan_trigo",
+      "name": "Wheat bread (pan de trigo)",
       "cat": "s",
       "grade": "bulk",
       "rating": 6,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Vetebröd (pan de trigo)"
     },
     {
-      "id": "stub_grain_bul_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_bul_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_grain_loc_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_sig_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_4",
-      "name": "[STUB]",
+      "id": "caraotas_negras_bulk",
+      "name": "Black beans (caraotas negras)",
       "cat": "s",
       "grade": "bulk",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Svarta bönor (caraotas negras)"
     },
     {
-      "id": "stub_dairy_bul_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_bul_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_2",
-      "name": "[STUB]",
+      "id": "maiz_local",
+      "name": "Corn (maíz)",
       "cat": "s",
       "grade": "local",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Majs (maíz)"
     },
     {
-      "id": "stub_dairy_loc_3",
-      "name": "[STUB]",
+      "id": "arroz_local",
+      "name": "Rice (arroz)",
       "cat": "s",
       "grade": "local",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Ris (arroz)"
     },
     {
-      "id": "stub_dairy_loc_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_dairy_loc_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_sig_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_3",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_4",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_5",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_6",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_7",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_8",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_bul_9",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 3,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_1",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_2",
-      "name": "[STUB]",
-      "cat": "s",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
-    },
-    {
-      "id": "stub_spice_loc_3",
-      "name": "[STUB]",
+      "id": "yuca_grain_local",
+      "name": "Cassava (yuca)",
       "cat": "s",
       "grade": "local",
       "rating": 7,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Kassava (yuca)"
     },
     {
-      "id": "stub_spice_loc_4",
-      "name": "[STUB]",
+      "id": "caraotas_local",
+      "name": "Black beans (caraotas negras)",
       "cat": "s",
       "grade": "local",
-      "rating": 5,
-      "name_sv": "[UTKAST]"
+      "rating": 7,
+      "name_sv": "Svarta bönor (caraotas negras)"
     },
     {
-      "id": "stub_spice_loc_5",
-      "name": "[STUB]",
+      "id": "platano_verde_local",
+      "name": "Green plantain (plátano verde — tostones)",
       "cat": "s",
       "grade": "local",
-      "rating": 2,
-      "name_sv": "[UTKAST]"
+      "rating": 7,
+      "name_sv": "Grön plantain (plátano verde)"
     },
     {
-      "id": "stub_spice_loc_6",
-      "name": "[STUB]",
+      "id": "queso_blanco_venezolano",
+      "name": "Venezuelan white cheese (queso blanco)",
       "cat": "s",
-      "grade": "local",
-      "rating": 1,
-      "name_sv": "[UTKAST]"
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Venezuelansk vit ost (queso blanco)"
     },
     {
-      "id": "stub_spice_loc_7",
-      "name": "[STUB]",
+      "id": "queso_telita",
+      "name": "Telita cheese",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Telitaost"
+    },
+    {
+      "id": "queso_guayanes",
+      "name": "Queso guayanés",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Queso guayanés"
+    },
+    {
+      "id": "queso_de_mano",
+      "name": "Queso de mano",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Queso de mano"
+    },
+    {
+      "id": "nata_venezolana",
+      "name": "Nata (Venezuelan crème fraîche)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Nata (venezolansk gräddfil)"
+    },
+    {
+      "id": "huevos_dairy",
+      "name": "Eggs",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Ägg"
+    },
+    {
+      "id": "queso_blanco_bulk",
+      "name": "White cheese (queso blanco)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Vit ost (queso blanco)"
+    },
+    {
+      "id": "leche_bulk",
+      "name": "Milk (leche)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "Mjölk (leche)"
+    },
+    {
+      "id": "huevos_bulk_dairy",
+      "name": "Eggs",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Ägg"
+    },
+    {
+      "id": "mantequilla_venezolana",
+      "name": "Butter (mantequilla)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "Smör (mantequilla)"
+    },
+    {
+      "id": "queso_de_mano_local",
+      "name": "Queso de mano (handmade local)",
       "cat": "s",
       "grade": "local",
       "rating": 9,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Handgjord queso de mano"
     },
     {
-      "id": "stub_spice_loc_8",
-      "name": "[STUB]",
+      "id": "queso_guayanes_local",
+      "name": "Queso guayanés (local artisan)",
       "cat": "s",
       "grade": "local",
       "rating": 8,
-      "name_sv": "[UTKAST]"
+      "name_sv": "Lokal queso guayanés"
     },
     {
-      "id": "stub_spice_loc_9",
-      "name": "[STUB]",
+      "id": "queso_andino_local",
+      "name": "Andean cheese (queso andino)",
       "cat": "s",
       "grade": "local",
-      "rating": 4,
-      "name_sv": "[UTKAST]"
+      "rating": 7,
+      "name_sv": "Andinos ost (queso andino)"
+    },
+    {
+      "id": "leche_bufala_local",
+      "name": "Buffalo milk (leche de búfala)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Buffelsmjölk (leche de búfala)"
+    },
+    {
+      "id": "suero_lactico",
+      "name": "Suero láctico (cultured whey)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Suero láctico (syrad vassle)"
+    },
+    {
+      "id": "mantequilla_andina",
+      "name": "Andean butter (mantequilla andina)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Andinsk smör"
+    },
+    {
+      "id": "onoto",
+      "name": "Onoto (achiote / annatto)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Onoto (achiote / annatto)"
+    },
+    {
+      "id": "aji_dulce_spice",
+      "name": "Venezuelan sweet pepper (ají dulce)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Venezuelansk söt paprika (ají dulce)"
+    },
+    {
+      "id": "comino_venezolano",
+      "name": "Cumin (comino)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "Spiskummin (comino)"
+    },
+    {
+      "id": "papelon",
+      "name": "Papelón (raw cane sugar / piloncillo)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "Papelón (råsocker / piloncillo)"
+    },
+    {
+      "id": "laurel_venezolano",
+      "name": "Bay leaf (laurel)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Lagerblad (laurel)"
+    },
+    {
+      "id": "cilantro_venezolano",
+      "name": "Cilantro (culantro / coriander leaf)",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 7,
+      "name_sv": "Koriander (cilantro)"
+    },
+    {
+      "id": "ajo_spice",
+      "name": "Garlic (ajo)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Vitlök (ajo)"
+    },
+    {
+      "id": "cebolla_spice",
+      "name": "Onion (cebolla)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Lök (cebolla)"
+    },
+    {
+      "id": "comino_bulk",
+      "name": "Cumin (comino)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "Spiskummin (comino)"
+    },
+    {
+      "id": "oregano_venezolano",
+      "name": "Oregano (orégano)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Oregano (orégano)"
+    },
+    {
+      "id": "pimienta_negra",
+      "name": "Black pepper (pimienta negra)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 6,
+      "name_sv": "Svartpeppar (pimienta negra)"
+    },
+    {
+      "id": "sal",
+      "name": "Salt (sal)",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "Salt (sal)"
+    },
+    {
+      "id": "adobo_venezolano",
+      "name": "Adobo seasoning blend",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 7,
+      "name_sv": "Adobo (kryddblandning)"
+    },
+    {
+      "id": "onoto_local",
+      "name": "Onoto (annatto)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "Onoto (annatto)"
+    },
+    {
+      "id": "papelon_local",
+      "name": "Papelón (raw cane sugar)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "Papelón (råsocker)"
+    },
+    {
+      "id": "aji_dulce_local_spice",
+      "name": "Venezuelan sweet pepper (ají dulce)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "Venezuelansk söt paprika (ají dulce)"
+    },
+    {
+      "id": "culantro_recao",
+      "name": "Culantro / recao (broad-leaf coriander)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 7,
+      "name_sv": "Culantro / recao (bredbladskorander)"
+    },
+    {
+      "id": "ajoporro_local",
+      "name": "Ajoporro (leek / Venezuelan leek)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 6,
+      "name_sv": "Ajoporro (purjolök, venezolansk sort)"
+    },
+    {
+      "id": "canela_venezolana",
+      "name": "Cinnamon (canela)",
+      "cat": "s",
+      "grade": "local",
+      "rating": 5,
+      "name_sv": "Kanel (canela)"
     }
   ],
   "vietnamese": [
@@ -109052,8 +108692,8 @@ const AI_CUISINE_REGIONS = [
         "name": "Venezuelan",
         "name_sv": "Venezuelanskt",
         "icon": "🇻🇪",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+        "description": "Venezuelan cuisine is built on arepas, pabellón criollo, and a sofrito of ají dulce, onion and onoto — a vivid, flavourful cooking culture shaped by the llanos, the Caribbean coast, and the Orinoco basin.",
+        "description_sv": "Venezuelanskt kök bygger på arepas, pabellón criollo och en sofrito av ají dulce, lök och onoto — en livfull matkultur formad av llanorna, Karibiens kust och Orinocofloden."
       }
     ]
   },
@@ -109947,8 +109587,8 @@ const AI_CUISINE_DESCRIPTIONS = {
     "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
   },
   "venezuelan": {
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+    "description": "Venezuelan cuisine is built on arepas, pabellón criollo, and a sofrito of ají dulce, onion and onoto — a vivid, flavourful cooking culture shaped by the llanos, the Caribbean coast, and the Orinoco basin.",
+    "description_sv": "Venezuelanskt kök bygger på arepas, pabellón criollo och en sofrito av ají dulce, lök och onoto — en livfull matkultur formad av llanorna, Karibiens kust och Orinocofloden."
   },
   "vietnamese": {
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
@@ -110028,7 +109668,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["fish", "goat", "chicken", "veal", "pork", "venison", "beef", "rabbit", "turkey", "duck", "lamb"];
+const AI_GENERIC_PROTEIN_IDS = ["rabbit", "venison", "lamb", "turkey", "pork", "veal", "chicken", "beef", "goat", "duck", "fish"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -132815,7 +132455,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "441";
+const PANEL_VERSION = "443";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
