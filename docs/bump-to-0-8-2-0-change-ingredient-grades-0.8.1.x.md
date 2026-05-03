@@ -24,6 +24,9 @@
 - [x] Bump version to 0.8.2.2
 - [x] Cuisine files as single ground truth: add icon/region_name/region_icon to frontmatter; move to docs/cuisines/ (symlink www/cuisines→docs/cuisines); generator builds AI_CUISINE_REGIONS; replace 100-line hardcoded JS array with AI_CUISINE_REGIONS reference; AI_CUISINE_TO_REGION no longer seeded from ai_recipe_data.py; update IMPROVE_CUISINE_DATA.md
 - [x] Bump version to 0.8.2.3
+- [x] Research missing cuisines globally (Chinese/Indian regional, Kurdish, Caucasian, Central Asian, Basque, etc.)
+- [x] Add 22 stub cuisine files (sichuan, cantonese, burmese, khmer, laotian, punjabi, south_indian, bengali, mughlai, afghan, kurdish, armenian, azerbaijani, uzbek, georgian, ukrainian, austrian, basque, algerian, cameroonian, ecuadorian, dominican) — 97 cuisines total
+- [x] Bump version to 0.8.2.4
 
 ## Session log
 - 2026-05-03: Started. Current version 0.8.1.14. Only cuisine file: swedish.md.
@@ -31,4 +34,4 @@
 - 2026-05-03 (session 2): Added `rating` (1-10) field per ingredient. Implemented top-3-per-grade display logic (top 3 by rating per grade shown by default; rest behind More button). Added ratings to all 29 swedish.md ingredients.
 - 2026-05-03 (session 3): Protein tree/badge split. Tree-mapped cuisine proteins no longer show as badges — they light up the subcat button instead (dark green = signature/local, light green = bulk-only). Rewrote IMPROVE_CUISINE_DATA.md with quality-first tone, removed obsolete _ing/_inge sections.
 - 2026-05-03 (session 4): Updated IMPROVE_CUISINE_DATA.md to replace "skip/omit" guidance with dig-deeper directive. Bumped 0.8.2.0 → 0.8.2.1. Updated USER_GUIDE.md section 7.2.
-- 2026-05-03 (session 6): Cuisine files as single ground truth. Added icon/region_name/region_icon to swedish.md. Moved www/cuisines/ to docs/cuisines/ with symlink back. Generator now builds AI_CUISINE_REGIONS from files. Replaced 100-line hardcoded cuisineRegions JS array with AI_CUISINE_REGIONS reference. AI_CUISINE_TO_REGION no longer seeded from ai_recipe_data.py. Updated IMPROVE_CUISINE_DATA.md: new path, new fields, removed culinary-groups letter-codes section and fixed-region-list constraint. Bumped 0.8.2.2 → 0.8.2.3.
+- 2026-05-03 (session 7): Added 22 stub cuisine files (sichuan, cantonese, burmese, khmer, laotian, punjabi, south_indian, bengali, mughlai, afghan, kurdish, armenian, azerbaijani, uzbek, georgian, ukrainian, austrian, basque, algerian, cameroonian, ecuadorian, dominican). Total: 97 cuisines. Updated USER_GUIDE.md cuisine count. Bumped 0.8.2.3 → 0.8.2.4.

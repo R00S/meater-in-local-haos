@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.8.2.1 · Home Assistant 2024.1.0+
+> **Version:** 0.8.2.4 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -859,7 +859,7 @@ Recipe Builder:
 The ingredient screen has several sections:
 
 - **Cuisine / Region filter** — optionally choose one or more cuisine regions to narrow
-  ingredient suggestions. Selecting multiple regions creates fusion combinations. Over 85
+  ingredient suggestions. Selecting multiple regions creates fusion combinations. Over 95
   cuisines are available.
 - **From Your Shelf** *(shown only when Shelf is enabled and has items)* — a highlighted
   section at the top of the ingredient grid shows items currently in your shelf (fridge,
