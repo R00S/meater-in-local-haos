@@ -230,6 +230,91 @@ the stub lines that remain, and will pick up from there.
 
 ---
 
+## Search quality — traps to avoid
+
+### ❌ Trap 1: Ingredient names in the search query
+
+The moment you put a specific ingredient name in your search query, you have already
+answered your own question. The search will return results confirming what you put in,
+even if those ingredients are not actually the most important.
+
+**Wrong:**
+> "Norwegian dairy products brunost geitost signature cheese iconic Norwegian food"
+
+**Right:**
+> "Norwegian cuisine most important dairy products"
+> "Norway dairy consumption statistics most consumed products per capita"
+
+The wrong search will return results about brunost and geitost regardless of their
+actual importance. The right searches let the evidence tell you what the ingredients are.
+
+**Rule:** Search queries must contain the cuisine name, the category, and the research
+angle (statistics, cultural importance, production data) — but **never** the specific
+ingredient names you are trying to discover.
+
+---
+
+### ❌ Trap 2: Bundling distinct items into one entry
+
+If research shows that both milk and yogurt are consumed heavily, do not write one entry
+called "dairy basics" or "milk/yogurt". Each distinct ingredient gets its own entry with
+its own `id`, `rating`, and `notes`.
+
+**Wrong:**
+```
+- {id: dairy_basics, grade: bulk, rating: 9, name: "Milk & Yogurt", ...}
+```
+
+**Right:**
+```
+- {id: milk, grade: bulk, rating: 9, name: Milk, name_sv: Mjölk, notes: "..."}
+- {id: yogurt, grade: bulk, rating: 7, name: Yogurt, name_sv: Yoghurt, notes: "..."}
+```
+
+This also applies to fish ("white fish"), meat ("red meat"), bread ("baked goods"), etc.
+If they are distinct ingredients, they get distinct entries.
+
+---
+
+### ❌ Trap 3: Stopping at the category level — always drill into varieties
+
+When research shows "cheese is important" for a cuisine, do not add a single
+`{id: cheese, name: Cheese}` entry and move on. That is the *start* of research,
+not the end. A category word in a search result is a signal to go one level deeper:
+**which specific varieties?**
+
+**Wrong:**
+```
+- {id: cheese, grade: bulk, rating: 9, name: Cheese, name_sv: Ost, notes: "Norway consumes lots of cheese"}
+```
+
+**Right:** search "most consumed cheese varieties in Norway" and add separate entries:
+```
+- {id: brunost, grade: signature, rating: 10, name: Brunost, name_sv: Brunost, notes: "Brown whey cheese; iconic Norwegian; worldwide export"}
+- {id: jarlsberg, grade: bulk, rating: 9, name: Jarlsberg, name_sv: Jarlsberg, notes: "Mild semi-hard; Norway's most exported cheese"}
+- {id: norvegia, grade: bulk, rating: 8, name: Norvegia, name_sv: Norvegia, notes: "Most consumed everyday cheese in Norway"}
+```
+
+The same rule applies to fish (which species?), bread (which types?), oil (which kind?),
+and any other broad category that turns up in research.
+
+---
+
+### ❌ Trap 4: Treating "top 3" as the target count
+
+The UI shows the top 3 items per grade by default, and hides the rest behind "More".
+This is a **display rule**, not a data target.
+
+**You should add as many verified items as the cuisine warrants — typically 5–8+ per
+grade.** Items ranked 4th and below are not wasted; they appear when the user clicks
+"More" and they improve the AI's overall picture of the cuisine.
+
+If after real research you can only verify 3 items for a pair, that is fine — but that
+is the floor, not the ceiling. Never stop at 3 just because that is what is shown
+by default. A richer list is always better than a minimal one.
+
+---
+
 ## A note on trust
 
 The people using this app are cooking real food for real people. When the app shows
