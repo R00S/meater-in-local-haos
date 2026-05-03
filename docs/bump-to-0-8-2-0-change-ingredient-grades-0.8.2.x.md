@@ -123,3 +123,22 @@ v0.8.1.10 was unaffected because it had the region list hardcoded in the templat
    - Regenerated panel: PANEL_VERSION 438 → 439.
    - Bumped version 0.8.2.10 → 0.8.2.11.
 
+
+### 2026-05-03 — Agent session I
+
+**Tasks completed (v0.8.2.13):**
+
+1. **Fixed stub names in all 97 cuisine stub files to descriptive format:**
+   - All `name: "[STUB]"` entries updated to `name: "[STUB] {Grade} {Category} {N}"` (e.g. `"[STUB] Bulk Protein 1"`)
+   - All `name_sv: "[UTKAST]"` entries updated to `name_sv: "[UTKAST] {Grade_sv} {Category_sv} {N}"`
+   - Ratings set to sequential 9, 8, 7, ..., 1 within each grade pair so numbered display order matches slot numbering in GUI
+   - Category Swedish labels: Protein, Grönsak, Spannmål, Mejeri, Krydda
+   - Grade Swedish labels: Signatur, Bulk, Lokalt
+
+2. **Created `romanian.md` stub (initially) and executed IMPROVE_CUISINE_DATA.md for it:**
+   - All 15 grade pairs researched with dedicated web searches in Romanian and English
+   - Sources: Romanian INS food balance; FAO; rador.ro; agroberichtenbuitenland.nl; eurofish.dk; maluku.ro; vatra.ro; davesgarden.com
+   - `research_done: 1` set after completing all 15 pairs
+   - 11 items per pair minimum (most pairs have 9–11 verified entries)
+
+3. **Bumped version 0.8.2.12 → 0.8.2.13; PANEL_VERSION 447 → 448.**
