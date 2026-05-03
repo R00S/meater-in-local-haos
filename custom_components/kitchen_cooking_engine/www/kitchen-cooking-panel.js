@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 May 2026, 09:45 CET
+ * AUTO-GENERATED: 03 May 2026, 09:58 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 03 May 2026, 09:45 CET
+// Last generated: 03 May 2026, 09:58 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -4216,82 +4216,25 @@ const AI_CUISINE_INGREDIENTS = {
 
 // AI Recipe Builder - Cuisine to Region mapping
 const AI_CUISINE_TO_REGION = {
-  "swedish": "nordic",
-  "danish": "nordic",
-  "norwegian": "nordic",
-  "finnish": "nordic",
-  "icelandic": "nordic",
-  "new_nordic": "nordic",
-  "japanese": "east_asian",
-  "chinese": "east_asian",
-  "korean": "east_asian",
-  "taiwanese": "east_asian",
-  "thai": "southeast_asian",
-  "vietnamese": "southeast_asian",
-  "indonesian": "southeast_asian",
-  "malaysian": "southeast_asian",
-  "filipino": "southeast_asian",
-  "singaporean": "southeast_asian",
-  "indian": "south_asian",
-  "sri_lankan": "south_asian",
-  "pakistani": "south_asian",
-  "bangladeshi": "south_asian",
-  "nepali": "south_asian",
-  "lebanese": "middle_east",
-  "turkish": "middle_east",
-  "persian": "middle_east",
-  "israeli": "middle_east",
-  "syrian": "middle_east",
-  "iraqi": "middle_east",
-  "yemeni": "middle_east",
-  "emirati": "middle_east",
-  "palestinian": "middle_east",
-  "italian": "european",
-  "french": "european",
-  "spanish": "european",
-  "greek": "european",
-  "portuguese": "european",
-  "german": "european",
-  "british": "european",
-  "polish": "european",
-  "hungarian": "european",
-  "mediterranean": "european",
-  "balkan": "european",
-  "russian": "european",
-  "american": "north_american",
-  "cajun_creole": "north_american",
-  "tex_mex": "north_american",
-  "canadian": "north_american",
-  "southern_us": "north_american",
-  "hawaiian": "north_american",
-  "mexican": "latin_american",
-  "brazilian": "latin_american",
-  "peruvian": "latin_american",
-  "argentinian": "latin_american",
-  "colombian": "latin_american",
-  "cuban": "latin_american",
-  "venezuelan": "latin_american",
-  "chilean": "latin_american",
-  "jamaican": "caribbean_region",
-  "trinidadian": "caribbean_region",
-  "haitian": "caribbean_region",
-  "puerto_rican": "caribbean_region",
-  "caribbean": "caribbean_region",
-  "ethiopian": "african",
-  "moroccan": "african",
-  "nigerian": "african",
-  "ghanaian": "african",
-  "senegalese": "african",
-  "south_african": "african",
-  "kenyan": "african",
-  "tanzanian": "african",
-  "tunisian": "african",
-  "egyptian": "african",
-  "east_african": "african",
-  "west_african": "african",
-  "australian": "oceanian",
-  "polynesian": "oceanian"
+  "swedish": "nordic"
 };
+
+// AI Recipe Builder - Region/cuisine tree (ground truth: docs/cuisines/*.md)
+const AI_CUISINE_REGIONS = [
+  {
+    "id": "nordic",
+    "name": "Nordic",
+    "icon": "❄️",
+    "cuisines": [
+      {
+        "id": "swedish",
+        "name": "Swedish",
+        "name_sv": "Svensk",
+        "icon": "🇸🇪"
+      }
+    ]
+  }
+];
 
 // AI Recipe Builder - Protein ingredient → subcat key (beef/pork/poultry/fish/lamb/game)
 const AI_PROTEIN_TO_SUBCAT = {
@@ -4357,7 +4300,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["lamb", "pork", "veal", "rabbit", "turkey", "venison", "fish", "beef", "duck", "goat", "chicken"];
+const AI_GENERIC_PROTEIN_IDS = ["beef", "lamb", "chicken", "turkey", "goat", "rabbit", "veal", "fish", "duck", "pork", "venison"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -21401,106 +21344,9 @@ class KitchenCookingPanel extends LitElement {
       return html`<div class="loading">${this._t('ai_recipe.loading_ingredients')}</div>`;
     }
 
-    // Cuisine/region options for fusion cooking (moved from cooking style page)
-    const cuisineRegions = [
-      { id: 'nordic', name: this._t('cuisines.nordic'), icon: '❄️', cuisines: [
-        { id: 'swedish', name: this._t('cuisines.swedish'), icon: '🇸🇪' },
-        { id: 'danish', name: this._t('cuisines.danish'), icon: '🇩🇰' },
-        { id: 'norwegian', name: this._t('cuisines.norwegian'), icon: '🇳🇴' },
-        { id: 'finnish', name: this._t('cuisines.finnish'), icon: '🇫🇮' },
-        { id: 'icelandic', name: this._t('cuisines.icelandic'), icon: '🇮🇸' },
-        { id: 'new_nordic', name: this._t('cuisines.new_nordic'), icon: '🌿' },
-      ]},
-      { id: 'east_asian', name: this._t('cuisines.east_asian'), icon: '🥢', cuisines: [
-        { id: 'japanese', name: this._t('cuisines.japanese'), icon: '🇯🇵' },
-        { id: 'chinese', name: this._t('cuisines.chinese'), icon: '🇨🇳' },
-        { id: 'korean', name: this._t('cuisines.korean'), icon: '🇰🇷' },
-        { id: 'taiwanese', name: this._t('cuisines.taiwanese'), icon: '🇹🇼' },
-      ]},
-      { id: 'southeast_asian', name: this._t('cuisines.southeast_asian'), icon: '🌴', cuisines: [
-        { id: 'thai', name: this._t('cuisines.thai'), icon: '🇹🇭' },
-        { id: 'vietnamese', name: this._t('cuisines.vietnamese'), icon: '🇻🇳' },
-        { id: 'indonesian', name: this._t('cuisines.indonesian'), icon: '🇮🇩' },
-        { id: 'malaysian', name: this._t('cuisines.malaysian'), icon: '🇲🇾' },
-        { id: 'filipino', name: this._t('cuisines.filipino'), icon: '🇵🇭' },
-        { id: 'singaporean', name: this._t('cuisines.singaporean'), icon: '🇸🇬' },
-      ]},
-      { id: 'south_asian', name: this._t('cuisines.south_asian'), icon: '🍛', cuisines: [
-        { id: 'indian', name: this._t('cuisines.indian'), icon: '🇮🇳' },
-        { id: 'sri_lankan', name: this._t('cuisines.sri_lankan'), icon: '🇱🇰' },
-        { id: 'pakistani', name: this._t('cuisines.pakistani'), icon: '🇵🇰' },
-        { id: 'bangladeshi', name: this._t('cuisines.bangladeshi'), icon: '🇧🇩' },
-        { id: 'nepali', name: this._t('cuisines.nepali'), icon: '🇳🇵' },
-      ]},
-      { id: 'middle_east', name: this._t('cuisines.middle_east'), icon: '🧆', cuisines: [
-        { id: 'lebanese', name: this._t('cuisines.lebanese'), icon: '🇱🇧' },
-        { id: 'turkish', name: this._t('cuisines.turkish'), icon: '🇹🇷' },
-        { id: 'persian', name: this._t('cuisines.persian'), icon: '🇮🇷' },
-        { id: 'israeli', name: this._t('cuisines.israeli'), icon: '🇮🇱' },
-        { id: 'syrian', name: this._t('cuisines.syrian'), icon: '🇸🇾' },
-        { id: 'iraqi', name: this._t('cuisines.iraqi'), icon: '🇮🇶' },
-        { id: 'yemeni', name: this._t('cuisines.yemeni'), icon: '🇾🇪' },
-        { id: 'emirati', name: this._t('cuisines.emirati'), icon: '🇦🇪' },
-        { id: 'palestinian', name: this._t('cuisines.palestinian'), icon: '🇵🇸' },
-      ]},
-      { id: 'european', name: this._t('cuisines.european'), icon: '🏰', cuisines: [
-        { id: 'italian', name: this._t('cuisines.italian'), icon: '🇮🇹' },
-        { id: 'french', name: this._t('cuisines.french'), icon: '🇫🇷' },
-        { id: 'spanish', name: this._t('cuisines.spanish'), icon: '🇪🇸' },
-        { id: 'greek', name: this._t('cuisines.greek'), icon: '🇬🇷' },
-        { id: 'portuguese', name: this._t('cuisines.portuguese'), icon: '🇵🇹' },
-        { id: 'german', name: this._t('cuisines.german'), icon: '🇩🇪' },
-        { id: 'british', name: this._t('cuisines.british'), icon: '🇬🇧' },
-        { id: 'polish', name: this._t('cuisines.polish'), icon: '🇵🇱' },
-        { id: 'hungarian', name: this._t('cuisines.hungarian'), icon: '🇭🇺' },
-        { id: 'mediterranean', name: this._t('cuisines.mediterranean'), icon: '🫒' },
-        { id: 'balkan', name: this._t('cuisines.balkan'), icon: '🏔️' },
-        { id: 'russian', name: this._t('cuisines.russian'), icon: '🇷🇺' },
-      ]},
-      { id: 'north_american', name: this._t('cuisines.north_american'), icon: '🦅', cuisines: [
-        { id: 'american', name: this._t('cuisines.american'), icon: '🇺🇸' },
-        { id: 'cajun_creole', name: this._t('cuisines.cajun_creole'), icon: '🦞' },
-        { id: 'tex_mex', name: this._t('cuisines.tex_mex'), icon: '🌮' },
-        { id: 'canadian', name: this._t('cuisines.canadian'), icon: '🇨🇦' },
-        { id: 'southern_us', name: this._t('cuisines.southern_us'), icon: '🍗' },
-        { id: 'hawaiian', name: this._t('cuisines.hawaiian'), icon: '🌺' },
-      ]},
-      { id: 'latin_american', name: this._t('cuisines.latin_american'), icon: '💃', cuisines: [
-        { id: 'mexican', name: this._t('cuisines.mexican'), icon: '🇲🇽' },
-        { id: 'brazilian', name: this._t('cuisines.brazilian'), icon: '🇧🇷' },
-        { id: 'peruvian', name: this._t('cuisines.peruvian'), icon: '🇵🇪' },
-        { id: 'argentinian', name: this._t('cuisines.argentinian'), icon: '🇦🇷' },
-        { id: 'colombian', name: this._t('cuisines.colombian'), icon: '🇨🇴' },
-        { id: 'cuban', name: this._t('cuisines.cuban'), icon: '🇨🇺' },
-        { id: 'venezuelan', name: this._t('cuisines.venezuelan'), icon: '🇻🇪' },
-        { id: 'chilean', name: this._t('cuisines.chilean'), icon: '🇨🇱' },
-      ]},
-      { id: 'caribbean_region', name: this._t('cuisines.caribbean_region'), icon: '🏝️', cuisines: [
-        { id: 'jamaican', name: this._t('cuisines.jamaican'), icon: '🇯🇲' },
-        { id: 'trinidadian', name: this._t('cuisines.trinidadian'), icon: '🇹🇹' },
-        { id: 'haitian', name: this._t('cuisines.haitian'), icon: '🇭🇹' },
-        { id: 'puerto_rican', name: this._t('cuisines.puerto_rican'), icon: '🇵🇷' },
-        { id: 'caribbean', name: this._t('cuisines.caribbean'), icon: '🏝️' },
-      ]},
-      { id: 'african', name: this._t('cuisines.african'), icon: '🌍', cuisines: [
-        { id: 'ethiopian', name: this._t('cuisines.ethiopian'), icon: '🇪🇹' },
-        { id: 'moroccan', name: this._t('cuisines.moroccan'), icon: '🇲🇦' },
-        { id: 'nigerian', name: this._t('cuisines.nigerian'), icon: '🇳🇬' },
-        { id: 'ghanaian', name: this._t('cuisines.ghanaian'), icon: '🇬🇭' },
-        { id: 'senegalese', name: this._t('cuisines.senegalese'), icon: '🇸🇳' },
-        { id: 'south_african', name: this._t('cuisines.south_african'), icon: '🇿🇦' },
-        { id: 'kenyan', name: this._t('cuisines.kenyan'), icon: '🇰🇪' },
-        { id: 'tanzanian', name: this._t('cuisines.tanzanian'), icon: '🇹🇿' },
-        { id: 'tunisian', name: this._t('cuisines.tunisian'), icon: '🇹🇳' },
-        { id: 'egyptian', name: this._t('cuisines.egyptian'), icon: '🇪🇬' },
-        { id: 'east_african', name: this._t('cuisines.east_african'), icon: '🌄' },
-        { id: 'west_african', name: this._t('cuisines.west_african'), icon: '🥘' },
-      ]},
-      { id: 'oceanian', name: this._t('cuisines.oceanian'), icon: '🦘', cuisines: [
-        { id: 'australian', name: this._t('cuisines.australian'), icon: '🇦🇺' },
-        { id: 'polynesian', name: this._t('cuisines.polynesian'), icon: '🌺' },
-      ]},
-    ];
+    // Cuisine/region options — built from docs/cuisines/*.md (KCE:CUISINE files).
+    // Add a new cuisine file there and it will appear here on the next release.
+    const cuisineRegions = (typeof AI_CUISINE_REGIONS !== 'undefined') ? AI_CUISINE_REGIONS : [];
 
     // Get cuisine-specific ingredients based on selection
     const displayIngredients = this._getCuisineIngredients(cuisineRegions);
@@ -27225,7 +27071,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "416";
+const PANEL_VERSION = "417";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

@@ -1,6 +1,6 @@
 # IMPROVE_CUISINE_DATA.md
 
-**Purpose:** Add or improve cuisine data files in `www/cuisines/`.
+**Purpose:** Add or improve cuisine data files in `docs/cuisines/`.
 Each cuisine is its own `.md` file with a `KCE:CUISINE` frontmatter block.
 This is an ongoing incremental effort — only add files you have verified data for.
 
@@ -10,11 +10,16 @@ This is an ongoing incremental effort — only add files you have verified data 
 
 ## Architecture
 
-Cuisine data lives in `custom_components/kitchen_cooking_engine/www/cuisines/*.md`.
-The generator reads these files and builds `AI_CUISINE_INGREDIENTS` in the panel JS.
-`ai_recipe_data.py` keeps an empty `CUISINE_INGREDIENTS = {}` for backward compat only.
+Cuisine data lives in `docs/cuisines/*.md` (the single source of truth for the AI recipe builder).
+`custom_components/kitchen_cooking_engine/www/cuisines` is a symlink to `docs/cuisines/`.
+The generator reads the files through that symlink and builds `AI_CUISINE_REGIONS`,
+`AI_CUISINE_TO_REGION`, and `AI_CUISINE_INGREDIENTS` in the panel JS.
 
-Do NOT put cuisine ingredients into `ai_recipe_data.py`. That system is obsolete.
+**Adding a new cuisine file is all that is needed.** No other file must be edited.
+If the file declares a new region (via `region_name` / `region_icon`), that region
+appears in the GUI automatically on the next release.
+
+Do NOT put cuisine data into `ai_recipe_data.py`. That system is obsolete for region/cuisine data.
 
 ---
 
@@ -26,7 +31,10 @@ KCE: CUISINE
 id: japanese
 name: Japanese
 name_sv: Japanskt
+icon: 🇯🇵
 region: east_asian
+region_name: East Asian
+region_icon: 🥢
 research_done: 1
 ---
 
@@ -60,10 +68,13 @@ One paragraph of sources and key consumption statistics used.
 
 | Field | Required | Description |
 |-------|----------|-------------|
-| `id` | ✅ | Cuisine identifier, matches the key used in `CUISINE_TO_REGION` in `ai_recipe_data.py` (e.g. `swedish`, `japanese`) |
+| `id` | ✅ | Cuisine identifier, e.g. `swedish`, `japanese` |
 | `name` | ✅ | English display name |
 | `name_sv` | — | Swedish display name |
-| `region` | ✅ | Geographic region this cuisine belongs to. Must be one of: `nordic`, `east_asian`, `southeast_asian`, `south_asian`, `middle_east`, `european`, `north_american`, `latin_american`, `caribbean_region`, `african`, `oceanian`. Used for fallback ingredient lookup when a specific cuisine is selected but has no data file yet. Do NOT use letter codes (A/B/C) — those are from the MEATER cooking path and have no meaning here. |
+| `icon` | ✅ | Emoji flag or symbol for this cuisine (e.g. `🇸🇪`) |
+| `region` | ✅ | Region ID this cuisine belongs to (must match `region` of sibling files in the same region, e.g. `nordic`). Used for fallback ingredient lookup. |
+| `region_name` | ✅ | Human-readable region name (e.g. `Nordic`). Only the first file that declares a region sets its name. |
+| `region_icon` | ✅ | Emoji for the region header (e.g. `❄️`). Only the first file that declares a region sets its icon. |
 | `research_done` | ✅ | `0` = draft / incomplete, `1` = verified coverage |
 
 ### Ingredient item fields
@@ -171,17 +182,6 @@ minutes confirming the basics:
 
 It is perfectly fine to set `research_done: 0` and leave a cuisine incomplete. A partial
 file with honest data is better than a complete-looking file with guessed data.
-
----
-
-## Culinary groups
-
-| Group | Traditions |
-|-------|-----------|
-| A | South Asian, East Asian, SE Asian |
-| B | North American, European, Australasian |
-| C | African, Caribbean, Arabic, Levant, Persian |
-| D | Scandinavian, Baltic, Slavic, Caucasus, Stans, Sami, Inuit |
 
 ---
 

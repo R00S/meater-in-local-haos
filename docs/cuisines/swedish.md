@@ -3,7 +3,10 @@ KCE: CUISINE
 id: swedish
 name: Swedish
 name_sv: Svensk
+icon: 🇸🇪
 region: nordic
+region_name: Nordic
+region_icon: ❄️
 research_done: 1
 ---
 
