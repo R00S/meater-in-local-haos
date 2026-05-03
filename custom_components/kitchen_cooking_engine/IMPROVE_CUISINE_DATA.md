@@ -45,6 +45,10 @@ session ends. What happens with the rest is not this session's concern.
 
 ## The three grades — what they mean and how to research them
 
+> **Search language rule:** Always run searches in the cuisine's native language first.
+> English searches may be used to complement when native-language results are insufficient.
+> See Trap 6 for details and examples.
+
 ### Signature — *identity of the cuisine*
 
 Signature ingredients are the ones that make a cuisine recognisable. They appear in
@@ -356,6 +360,41 @@ ingredients that foreigners associate with the cuisine are foregrounded.
 **Rule:** If the ingredients you are about to write would surprise someone who grew up
 cooking that cuisine, stop and research deeper before writing them. The goal is the
 insider's view, not the tourist's menu.
+
+---
+
+### ❌ Trap 6: Researching in English when the cuisine has its own language
+
+English-language search results are biased towards how the cuisine is *perceived internationally*,
+not how it is actually practised at home. This is the root cause of the sofrito error in Trap 5
+and of many similar quality failures: the AI's training data, and most English search results,
+reflect how other cultures write about a cuisine rather than what practitioners from that culture
+actually do.
+
+**Rule: Always search in the cuisine's own language first.**
+
+Use English searches only to complement — when local-language results are insufficient, hard to
+evaluate, or when the cuisine's language is one you cannot translate reliably.
+
+**How to apply this:**
+
+1. Identify the native language(s) of the cuisine.
+2. Translate your search queries into that language (or use a tool to help). Examples:
+   - Swedish cuisine → search in Swedish: *"de mest äta grönsakerna i Sverige"* instead of
+     *"most consumed vegetables in Sweden"*
+   - Spanish cuisine → search in Spanish: *"ingredientes básicos de la cocina española"* instead of
+     *"essential Spanish cooking ingredients"*
+   - Japanese cuisine → search in Japanese: *"日本料理の代表的な食材"*
+3. Prefer results from local food institutions, cooking schools, culinary journalism, and
+   government food statistics from the country — not international food media.
+4. If you find a conflict between English-language results and native-language results,
+   **the native-language source takes precedence** for signature ingredients.
+5. If you genuinely cannot get enough data in the native language, note this in a
+   `<!-- Searched: ... -->` comment and fall back to English, but flag the uncertainty.
+
+**Why this matters:** The most important class of error — confidently wrong signature ingredients —
+almost always comes from English-language outsider sources. Native-language sources, even when
+partial, give you the insider's view that the data needs.
 
 ---
 
