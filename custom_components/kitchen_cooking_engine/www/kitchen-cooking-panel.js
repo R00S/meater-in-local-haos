@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 May 2026, 16:45 CET
+ * AUTO-GENERATED: 03 May 2026, 17:12 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 03 May 2026, 16:45 CET
+// Last generated: 03 May 2026, 17:12 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -12668,228 +12668,364 @@ const AI_CUISINE_INGREDIENTS = {
   ],
   "danish": [
     {
-      "id": "herring",
-      "name": "Herring",
+      "id": "stub_prot_sig_1",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "Sill"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "plaice",
-      "name": "Plaice",
+      "id": "stub_prot_sig_2",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "Rödspätta"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "eel",
-      "name": "Eel",
+      "id": "stub_prot_sig_3",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "signature",
-      "rating": 7,
-      "name_sv": "Ål"
+      "rating": 8,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "pork",
-      "name": "Pork",
+      "id": "stub_prot_bul_1",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "bulk",
       "rating": 10,
-      "name_sv": "Fläsk"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "chicken",
-      "name": "Chicken",
+      "id": "stub_prot_bul_2",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_3",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "Kyckling"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "beef",
-      "name": "Beef",
+      "id": "stub_prot_loc_1",
+      "name": "[STUB]",
       "cat": "p",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "Nötkött"
+      "grade": "local",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "cod",
-      "name": "Cod",
+      "id": "stub_prot_loc_2",
+      "name": "[STUB]",
       "cat": "p",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "Torsk"
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "red_cabbage",
-      "name": "Red Cabbage",
+      "id": "stub_prot_loc_3",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_1",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "Rödkål"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "dill",
-      "name": "Dill",
+      "id": "stub_veg_sig_2",
+      "name": "[STUB]",
       "cat": "v",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "Dill"
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "potatoes",
-      "name": "Potatoes",
+      "id": "stub_veg_sig_3",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_1",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "bulk",
       "rating": 10,
-      "name_sv": "Potatis"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "onions",
-      "name": "Onions",
+      "id": "stub_veg_bul_2",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "bulk",
       "rating": 9,
-      "name_sv": "Lök"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "carrots",
-      "name": "Carrots",
+      "id": "stub_veg_bul_3",
+      "name": "[STUB]",
       "cat": "v",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "Morötter"
-    },
-    {
-      "id": "cucumber",
-      "name": "Cucumber",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "Gurka"
-    },
-    {
-      "id": "beets",
-      "name": "Beetroot",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "Rödbeta"
-    },
-    {
-      "id": "leeks",
-      "name": "Leeks",
-      "cat": "v",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "Purjolök"
-    },
-    {
-      "id": "kale",
-      "name": "Kale",
-      "cat": "v",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "Grönkål"
-    },
-    {
-      "id": "rye_bread",
-      "name": "Rye Bread",
-      "cat": "g",
-      "grade": "signature",
-      "rating": 10,
-      "name_sv": "Rågbröd"
-    },
-    {
-      "id": "wheat",
-      "name": "Wheat",
-      "cat": "g",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "Vete"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "oats",
-      "name": "Oats",
-      "cat": "g",
+      "id": "stub_veg_loc_1",
+      "name": "[STUB]",
+      "cat": "v",
       "grade": "local",
-      "rating": 6,
-      "name_sv": "Havre"
-    },
-    {
-      "id": "butter",
-      "name": "Butter",
-      "cat": "d",
-      "grade": "signature",
       "rating": 10,
-      "name_sv": "Smör"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "cream",
-      "name": "Cream",
-      "cat": "d",
-      "grade": "bulk",
+      "id": "stub_veg_loc_2",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
       "rating": 9,
-      "name_sv": "Grädde"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "creme_fraiche",
-      "name": "Crème fraîche",
-      "cat": "d",
-      "grade": "bulk",
+      "id": "stub_veg_loc_3",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
       "rating": 8,
-      "name_sv": "Crème fraîche"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "mustard",
-      "name": "Mustard",
+      "id": "stub_grain_sig_1",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "Senap"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "caraway",
-      "name": "Caraway",
+      "id": "stub_grain_sig_2",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "Kummin"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "white_pepper",
-      "name": "White Pepper",
+      "id": "stub_grain_sig_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_3",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "Vitpeppar"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "nutmeg",
-      "name": "Nutmeg",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "Muskotnöt"
-    },
-    {
-      "id": "bay_leaves",
-      "name": "Bay Leaves",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "Lagerblad"
-    },
-    {
-      "id": "allspice",
-      "name": "Allspice",
+      "id": "stub_grain_loc_1",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "local",
-      "rating": 7,
-      "name_sv": "Kryddpeppar"
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
     }
   ],
   "dominican": [
@@ -18686,172 +18822,364 @@ const AI_CUISINE_INGREDIENTS = {
   ],
   "icelandic": [
     {
-      "id": "lamb",
-      "name": "Lamb",
+      "id": "stub_prot_sig_1",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "Lamm"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "cod",
-      "name": "Cod",
+      "id": "stub_prot_sig_2",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "Torsk"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "arctic_char",
-      "name": "Arctic Char",
+      "id": "stub_prot_sig_3",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "signature",
       "rating": 8,
-      "name_sv": "Röding"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "haddock",
-      "name": "Haddock",
+      "id": "stub_prot_bul_1",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_2",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "bulk",
       "rating": 9,
-      "name_sv": "Kolja"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "salmon",
-      "name": "Salmon",
+      "id": "stub_prot_bul_3",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "bulk",
-      "rating": 7,
-      "name_sv": "Lax"
+      "rating": 8,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "pork",
-      "name": "Pork",
+      "id": "stub_prot_loc_1",
+      "name": "[STUB]",
       "cat": "p",
-      "grade": "bulk",
-      "rating": 5,
-      "name_sv": "Fläsk"
+      "grade": "local",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "beef",
-      "name": "Beef",
+      "id": "stub_prot_loc_2",
+      "name": "[STUB]",
       "cat": "p",
-      "grade": "bulk",
-      "rating": 4,
-      "name_sv": "Nötkött"
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "potatoes",
-      "name": "Potatoes",
+      "id": "stub_prot_loc_3",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_1",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_2",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_3",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_1",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "bulk",
       "rating": 10,
-      "name_sv": "Potatis"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "carrots",
-      "name": "Carrots",
+      "id": "stub_veg_bul_2",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_3",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "Morötter"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "onions",
-      "name": "Onions",
+      "id": "stub_veg_loc_1",
+      "name": "[STUB]",
       "cat": "v",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "Lök"
+      "grade": "local",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "turnip",
-      "name": "Turnip",
+      "id": "stub_veg_loc_2",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_3",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "local",
       "rating": 8,
-      "name_sv": "Rova"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "kale",
-      "name": "Kale",
-      "cat": "v",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "Grönkål"
-    },
-    {
-      "id": "rye",
-      "name": "Rye",
-      "cat": "g",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "Råg"
-    },
-    {
-      "id": "wheat",
-      "name": "Wheat",
-      "cat": "g",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "Vete"
-    },
-    {
-      "id": "skyr",
-      "name": "Skyr",
-      "cat": "d",
+      "id": "stub_grain_sig_1",
+      "name": "[STUB]",
+      "cat": "s",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "Skyr"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "butter",
-      "name": "Butter",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "Smör"
-    },
-    {
-      "id": "cream",
-      "name": "Cream",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "Grädde"
-    },
-    {
-      "id": "angelica",
-      "name": "Angelica",
+      "id": "stub_grain_sig_2",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "Angelika"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "caraway",
-      "name": "Caraway",
+      "id": "stub_grain_sig_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_3",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "local",
       "rating": 8,
-      "name_sv": "Kummin"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "wild_thyme",
-      "name": "Wild Thyme",
+      "id": "stub_dairy_sig_1",
+      "name": "[STUB]",
       "cat": "s",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "Timjan"
+      "grade": "signature",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "white_pepper",
-      "name": "White Pepper",
+      "id": "stub_dairy_sig_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_1",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "bulk",
-      "rating": 6,
-      "name_sv": "Vitpeppar"
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
     }
   ],
   "indian": [
@@ -26458,404 +26786,364 @@ const AI_CUISINE_INGREDIENTS = {
   ],
   "norwegian": [
     {
-      "id": "atlantic_salmon",
-      "name": "Atlantic Salmon",
+      "id": "stub_prot_sig_1",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "Atlantlax"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "lamb_mutton",
-      "name": "Lamb / Mutton",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 10,
-      "name_sv": "Lam / Får"
-    },
-    {
-      "id": "cod",
-      "name": "Cod",
+      "id": "stub_prot_sig_2",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "Torsk"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "herring",
-      "name": "Herring",
+      "id": "stub_prot_sig_3",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "signature",
       "rating": 8,
-      "name_sv": "Sill"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "pork_belly",
-      "name": "Pork belly (ribbe)",
-      "cat": "p",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "Sidfläsk (ribbe)"
-    },
-    {
-      "id": "pork",
-      "name": "Pork",
+      "id": "stub_prot_bul_1",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "bulk",
       "rating": 10,
-      "name_sv": "Fläsk"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "chicken",
-      "name": "Chicken",
+      "id": "stub_prot_bul_2",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "bulk",
       "rating": 9,
-      "name_sv": "Kyckling"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "beef",
-      "name": "Beef",
+      "id": "stub_prot_bul_3",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "Nötkött"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "farmed_atlantic_salmon",
-      "name": "Farmed Atlantic salmon",
+      "id": "stub_prot_loc_1",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "local",
       "rating": 10,
-      "name_sv": "Odlad atlantlax"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "rainbow_trout",
-      "name": "Rainbow Trout",
+      "id": "stub_prot_loc_2",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_3",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "local",
       "rating": 8,
-      "name_sv": "Regnbåge"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "reindeer",
-      "name": "Reindeer",
-      "cat": "p",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "Ren"
-    },
-    {
-      "id": "moose",
-      "name": "Moose",
-      "cat": "p",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "Älg"
-    },
-    {
-      "id": "potato",
-      "name": "Potato",
+      "id": "stub_veg_sig_1",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "Potatis"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "rutabaga",
-      "name": "Rutabaga (swede)",
+      "id": "stub_veg_sig_2",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "Kålrot"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "cabbage",
-      "name": "Cabbage",
+      "id": "stub_veg_sig_3",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "signature",
-      "rating": 9,
-      "name_sv": "Kål"
+      "rating": 8,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "carrot",
-      "name": "Carrot",
-      "cat": "v",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "Morot"
-    },
-    {
-      "id": "potato_bulk",
-      "name": "Potato",
+      "id": "stub_veg_bul_1",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "bulk",
       "rating": 10,
-      "name_sv": "Potatis"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "carrot_bulk",
-      "name": "Carrot",
+      "id": "stub_veg_bul_2",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_bul_3",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "Morot"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "onion_bulk",
-      "name": "Onion",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "Lök"
-    },
-    {
-      "id": "carrot_local",
-      "name": "Carrot",
+      "id": "stub_veg_loc_1",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "local",
       "rating": 10,
-      "name_sv": "Morot"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "cabbage_local",
-      "name": "White / winter cabbage",
+      "id": "stub_veg_loc_2",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_loc_3",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "local",
       "rating": 8,
-      "name_sv": "Vitkål"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "rutabaga_local",
-      "name": "Rutabaga (swede)",
-      "cat": "v",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "Kålrot"
-    },
-    {
-      "id": "onion_local",
-      "name": "Onion",
-      "cat": "v",
-      "grade": "local",
-      "rating": 7,
-      "name_sv": "Lök"
-    },
-    {
-      "id": "flatbread",
-      "name": "Flatbread (flatbrød)",
+      "id": "stub_grain_sig_1",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "Knäckebröd / flatbröd"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "lefse",
-      "name": "Lefse (potato flatbread)",
+      "id": "stub_grain_sig_2",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "Lefse (potatisbröd)"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "oat_porridge",
-      "name": "Oat porridge (grøt)",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 8,
-      "name_sv": "Havregrynsgröt"
-    },
-    {
-      "id": "wheat",
-      "name": "Wheat (bread & flour)",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 10,
-      "name_sv": "Vete (bröd & mjöl)"
-    },
-    {
-      "id": "potato_grain",
-      "name": "Potato",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "Potatis"
-    },
-    {
-      "id": "oats_grain",
-      "name": "Oats",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "Havre"
-    },
-    {
-      "id": "barley",
-      "name": "Barley",
-      "cat": "s",
-      "grade": "local",
-      "rating": 9,
-      "name_sv": "Korn"
-    },
-    {
-      "id": "oats",
-      "name": "Oats",
-      "cat": "s",
-      "grade": "local",
-      "rating": 8,
-      "name_sv": "Havre"
-    },
-    {
-      "id": "rye",
-      "name": "Rye",
-      "cat": "s",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "Råg"
-    },
-    {
-      "id": "brunost",
-      "name": "Brown cheese (brunost)",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 10,
-      "name_sv": "Brunost / mesost"
-    },
-    {
-      "id": "romme",
-      "name": "Sour cream (rømme)",
-      "cat": "s",
-      "grade": "signature",
-      "rating": 9,
-      "name_sv": "Gräddfil (rømme)"
-    },
-    {
-      "id": "jarlsberg",
-      "name": "Jarlsberg cheese",
+      "id": "stub_grain_sig_3",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "signature",
       "rating": 8,
-      "name_sv": "Jarlsberg"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "milk",
-      "name": "Milk & yoghurt",
+      "id": "stub_grain_bul_1",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "bulk",
       "rating": 10,
-      "name_sv": "Mjölk & yoghurt"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "cheese",
-      "name": "Cheese",
+      "id": "stub_grain_bul_2",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "bulk",
       "rating": 9,
-      "name_sv": "Ost"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "butter",
-      "name": "Butter",
+      "id": "stub_grain_bul_3",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "bulk",
-      "rating": 7,
-      "name_sv": "Smör"
+      "rating": 8,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "norwegian_red_milk",
-      "name": "Norwegian Red cow milk (NRF)",
+      "id": "stub_grain_loc_1",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "local",
       "rating": 10,
-      "name_sv": "Norsk röd ko (NRF)"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "geitost",
-      "name": "Goat brown cheese (geitost / ekte geitost)",
+      "id": "stub_grain_loc_2",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "local",
       "rating": 9,
-      "name_sv": "Getost (geitost)"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "gudbrandsdalsost",
-      "name": "Gudbrandsdal brown cheese",
+      "id": "stub_grain_loc_3",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "local",
       "rating": 8,
-      "name_sv": "Gudbrandsdalsost"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "dill",
-      "name": "Dill",
+      "id": "stub_dairy_sig_1",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "Dill"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "allspice",
-      "name": "Allspice",
+      "id": "stub_dairy_sig_2",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "Kryddpeppar"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "juniper_berries",
-      "name": "Juniper berries",
+      "id": "stub_dairy_sig_3",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "signature",
       "rating": 8,
-      "name_sv": "Enbär"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "salt",
-      "name": "Salt",
+      "id": "stub_dairy_bul_1",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "bulk",
       "rating": 10,
-      "name_sv": "Salt"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "black_pepper",
-      "name": "Black pepper",
+      "id": "stub_dairy_bul_2",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "bulk",
       "rating": 9,
-      "name_sv": "Svartpeppar"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "sugar",
-      "name": "Sugar",
+      "id": "stub_dairy_bul_3",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "bulk",
-      "rating": 7,
-      "name_sv": "Socker"
+      "rating": 8,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "caraway",
-      "name": "Caraway (karve)",
+      "id": "stub_dairy_loc_1",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "local",
       "rating": 10,
-      "name_sv": "Kummin (karve)"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "angelica",
-      "name": "Angelica (kvann)",
+      "id": "stub_dairy_loc_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_3",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "local",
       "rating": 8,
-      "name_sv": "Angelika (kvann)"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "juniper_local",
-      "name": "Juniper (einer)",
+      "id": "stub_spice_sig_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_3",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "local",
       "rating": 8,
-      "name_sv": "En (einer)"
+      "name_sv": "[UTKAST]"
     }
   ],
   "pakistani": [
@@ -33376,236 +33664,364 @@ const AI_CUISINE_INGREDIENTS = {
   ],
   "swedish": [
     {
-      "id": "pork",
-      "name": "Pork",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 10,
-      "name_sv": "Fläsk"
-    },
-    {
-      "id": "chicken",
-      "name": "Chicken",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "Kyckling"
-    },
-    {
-      "id": "beef",
-      "name": "Beef",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "Nötkött"
-    },
-    {
-      "id": "salmon",
-      "name": "Salmon",
+      "id": "stub_prot_sig_1",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "Lax"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "herring",
-      "name": "Herring",
+      "id": "stub_prot_sig_2",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "Sill"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "elk",
-      "name": "Elk",
+      "id": "stub_prot_sig_3",
+      "name": "[STUB]",
       "cat": "p",
       "grade": "signature",
       "rating": 8,
-      "name_sv": "Älg"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "reindeer",
-      "name": "Reindeer",
+      "id": "stub_prot_bul_1",
+      "name": "[STUB]",
       "cat": "p",
+      "grade": "bulk",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_2",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_bul_3",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_1",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_2",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_prot_loc_3",
+      "name": "[STUB]",
+      "cat": "p",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_veg_sig_1",
+      "name": "[STUB]",
+      "cat": "v",
       "grade": "signature",
-      "rating": 7,
-      "name_sv": "Renkött"
+      "rating": 10,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "cod",
-      "name": "Cod",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "Torsk"
+      "id": "stub_veg_sig_2",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "eggs",
-      "name": "Eggs",
-      "cat": "p",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "Ägg"
+      "id": "stub_veg_sig_3",
+      "name": "[STUB]",
+      "cat": "v",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "potatoes",
-      "name": "Potatoes",
+      "id": "stub_veg_bul_1",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "bulk",
       "rating": 10,
-      "name_sv": "Potatis"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "onions",
-      "name": "Onions",
+      "id": "stub_veg_bul_2",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "bulk",
       "rating": 9,
-      "name_sv": "Lök"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "carrots",
-      "name": "Carrots",
+      "id": "stub_veg_bul_3",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "bulk",
       "rating": 8,
-      "name_sv": "Morötter"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "cabbage",
-      "name": "Cabbage",
+      "id": "stub_veg_loc_1",
+      "name": "[STUB]",
       "cat": "v",
-      "grade": "bulk",
-      "rating": 7,
-      "name_sv": "Kål"
-    },
-    {
-      "id": "beets",
-      "name": "Beetroot",
-      "cat": "v",
-      "grade": "bulk",
-      "rating": 6,
-      "name_sv": "Rödbeta"
-    },
-    {
-      "id": "dill",
-      "name": "Dill",
-      "cat": "v",
-      "grade": "signature",
+      "grade": "local",
       "rating": 10,
-      "name_sv": "Dill"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "nettles",
-      "name": "Nettles",
+      "id": "stub_veg_loc_2",
+      "name": "[STUB]",
       "cat": "v",
-      "grade": "signature",
-      "rating": 7,
-      "name_sv": "Nässlor"
-    },
-    {
-      "id": "lingonberries",
-      "name": "Lingonberries",
-      "cat": "v",
-      "grade": "signature",
+      "grade": "local",
       "rating": 9,
-      "name_sv": "Lingon"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "leeks",
-      "name": "Leeks",
+      "id": "stub_veg_loc_3",
+      "name": "[STUB]",
       "cat": "v",
       "grade": "local",
       "rating": 8,
-      "name_sv": "Purjolök"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "celeriac",
-      "name": "Celeriac",
-      "cat": "v",
-      "grade": "local",
-      "rating": 6,
-      "name_sv": "Rotselleri"
-    },
-    {
-      "id": "parsnips",
-      "name": "Parsnips",
-      "cat": "v",
-      "grade": "local",
-      "rating": 5,
-      "name_sv": "Palsternacka"
-    },
-    {
-      "id": "cream",
-      "name": "Cream",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 10,
-      "name_sv": "Grädde"
-    },
-    {
-      "id": "sour_cream",
-      "name": "Sour Cream",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "Gräddfil"
-    },
-    {
-      "id": "butter",
-      "name": "Butter",
-      "cat": "d",
-      "grade": "bulk",
-      "rating": 9,
-      "name_sv": "Smör"
-    },
-    {
-      "id": "allspice",
-      "name": "Allspice",
+      "id": "stub_grain_sig_1",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "signature",
       "rating": 10,
-      "name_sv": "Kryddpeppar"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "white_pepper",
-      "name": "White Pepper",
-      "cat": "s",
-      "grade": "bulk",
-      "rating": 8,
-      "name_sv": "Vitpeppar"
-    },
-    {
-      "id": "cardamom",
-      "name": "Cardamom",
+      "id": "stub_grain_sig_2",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "signature",
       "rating": 9,
-      "name_sv": "Kardemumma"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "juniper_berries",
-      "name": "Juniper Berries",
+      "id": "stub_grain_sig_3",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "signature",
       "rating": 8,
-      "name_sv": "Enbär"
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "bay_leaves",
-      "name": "Bay Leaves",
+      "id": "stub_grain_bul_1",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "bulk",
-      "rating": 6,
-      "name_sv": "Lagerblad"
+      "rating": 10,
+      "name_sv": "[UTKAST]"
     },
     {
-      "id": "mustard",
-      "name": "Mustard",
+      "id": "stub_grain_bul_2",
+      "name": "[STUB]",
       "cat": "s",
       "grade": "bulk",
-      "rating": 7,
-      "name_sv": "Senap"
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_bul_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_grain_loc_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_sig_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_bul_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_dairy_loc_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_sig_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "signature",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_bul_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "bulk",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_1",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 10,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_2",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 9,
+      "name_sv": "[UTKAST]"
+    },
+    {
+      "id": "stub_spice_loc_3",
+      "name": "[STUB]",
+      "cat": "s",
+      "grade": "local",
+      "rating": 8,
+      "name_sv": "[UTKAST]"
     }
   ],
   "syrian": [
@@ -39406,41 +39822,81 @@ const AI_CUISINE_REGIONS = [
         "id": "danish",
         "name": "Danish",
         "name_sv": "Danskt",
-        "icon": "🇩🇰"
+        "icon": "🇩🇰",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "finnish",
         "name": "Finnish",
         "name_sv": "Finskt",
-        "icon": "🇫🇮"
+        "icon": "🇫🇮",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "icelandic",
         "name": "Icelandic",
         "name_sv": "Isländskt",
-        "icon": "🇮🇸"
+        "icon": "🇮🇸",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "new_nordic",
         "name": "New Nordic",
         "name_sv": "Ny Nordisk",
-        "icon": "🌿"
+        "icon": "🌿",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "norwegian",
         "name": "Norwegian",
         "name_sv": "Norskt",
-        "icon": "🇳🇴"
+        "icon": "🇳🇴",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       },
       {
         "id": "swedish",
         "name": "Swedish",
         "name_sv": "Svensk",
-        "icon": "🇸🇪"
+        "icon": "🇸🇪",
+        "description": "[STUB]",
+        "description_sv": "[UTKAST]"
       }
     ]
   }
 ];
+
+// AI Recipe Builder - Cuisine descriptions {cuisine_id: {description, description_sv?}}
+const AI_CUISINE_DESCRIPTIONS = {
+  "danish": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "finnish": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "icelandic": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "new_nordic": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "norwegian": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  },
+  "swedish": {
+    "description": "[STUB]",
+    "description_sv": "[UTKAST]"
+  }
+};
 
 // AI Recipe Builder - Protein ingredient → subcat key (beef/pork/poultry/fish/lamb/game)
 const AI_PROTEIN_TO_SUBCAT = {
@@ -39506,7 +39962,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["goat", "venison", "lamb", "chicken", "pork", "turkey", "rabbit", "beef", "duck", "fish", "veal"];
+const AI_GENERIC_PROTEIN_IDS = ["fish", "goat", "rabbit", "pork", "turkey", "venison", "chicken", "beef", "veal", "duck", "lamb"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -56633,6 +57089,24 @@ class KitchenCookingPanel extends LitElement {
         `;
       })}
 
+      ${(() => {
+        const descMap = (typeof AI_CUISINE_DESCRIPTIONS !== 'undefined') ? AI_CUISINE_DESCRIPTIONS : {};
+        const selectedCuisines = this._aiSelectedCuisines || [];
+        const descs = selectedCuisines
+          .map(cid => descMap[cid])
+          .filter(d => d && d.description);
+        if (descs.length === 0) return '';
+        return html`
+          <div style="margin: 8px 0 12px 0; padding: 10px 14px; background: var(--secondary-background-color); border-radius: 8px; border-left: 3px solid var(--primary-color);">
+            ${descs.map(d => html`
+              <p style="margin: 0 0 4px 0; font-size: 0.9em; color: var(--primary-text-color); line-height: 1.5;">
+                ${(this._language === 'sv' && d.description_sv) ? d.description_sv : d.description}
+              </p>
+            `)}
+          </div>
+        `;
+      })()}
+
       <ha-card>
         <div class="card-content">
           <p class="info-text">${this._t('ai_recipe.choose_ingredients_label')}</p>
@@ -62275,7 +62749,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "432";
+const PANEL_VERSION = "433";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

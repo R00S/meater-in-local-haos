@@ -100,6 +100,8 @@ icon: 🇯🇵
 region: east_asian
 region_name: East Asian
 region_icon: 🥢
+description: "Japanese cuisine is built on dashi, fermentation, and seasonal precision — from delicate sashimi to robust ramen."
+description_sv: "Japanskt kök bygger på dashi, fermentering och säsongsprecision — från delikat sashimi till kraftfull ramen."
 research_done: 1
 ---
 
@@ -140,6 +142,8 @@ next agent what was already looked for and prevents duplicate work.
 | `region_name` | ✅ | Human-readable region name (e.g. `Nordic`). Only the first file that declares a region sets its name. |
 | `region_icon` | ✅ | Emoji for the region header (e.g. `❄️`). Only the first file that declares a region sets its icon. |
 | `research_done` | ✅ | `0` = draft / incomplete, `1` = all 15 pairs fully researched |
+| `description` | ✅ | 1–2 sentence English summary of the cuisine's identity and character. Shown above the ingredient tree in the GUI. |
+| `description_sv` | — | Swedish translation of `description`. Shown instead of `description` when the UI language is Swedish. |
 
 ### Ingredient item fields
 
@@ -201,7 +205,9 @@ Rules:
 ## What to do when triggered
 
 1. Pick one cuisine with `research_done: 0` (or one that clearly needs improvement).
-2. Work through its pairs **one at a time**, in order:
+2. If the file has `description: "[STUB]"`, write the description first — 1–2 sentences capturing
+   the identity and character of the cuisine. Add `description_sv` if you can.
+3. Work through its pairs **one at a time**, in order:
    - Proteins — Signature
    - Proteins — Bulk
    - Proteins — Local
@@ -217,12 +223,12 @@ Rules:
    - Spices & Seasonings — Signature
    - Spices & Seasonings — Bulk
    - Spices & Seasonings — Local
-3. For each pair: do a focused search (see strategies above), write the items, add the
+4. For each pair: do a focused search (see strategies above), write the items, add the
    `<!-- Searched: ... -->` comment, then stop and move to the next pair.
-4. When all 15 pairs are done and verified, set `research_done: 1`.
-5. Run: `cd custom_components/kitchen_cooking_engine && python3 generate_frontend_data.py`
-6. Confirm the generator prints the cuisine name and item count with no errors.
-7. Commit both the cuisine file and the regenerated `www/kitchen-cooking-panel.js`.
+5. When all 15 pairs are done and verified, set `research_done: 1`.
+6. Run: `cd custom_components/kitchen_cooking_engine && python3 generate_frontend_data.py`
+7. Confirm the generator prints the cuisine name and item count with no errors.
+8. Commit both the cuisine file and the regenerated `www/kitchen-cooking-panel.js`.
 
 If a session ends before a cuisine is complete, leave `research_done: 0`. A partial file
 with real data is fine. The next agent will see the `<!-- Searched: ... -->` comments and

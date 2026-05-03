@@ -47,3 +47,22 @@ v0.8.1.10 was unaffected because it had the region list hardcoded in the templat
 - Created `docs/cuisines` → symlink to `../custom_components/kitchen_cooking_engine/www/cuisines` (matches the `docs/recipe_research` → `www/recipes` pattern).
 - Regenerated panel; PANEL_VERSION 429 → 430.
 - Bumped version 0.8.2.6 → 0.8.2.7.
+
+### 2026-05-03 — Agent session D
+
+**Tasks completed (v0.8.2.8):**
+
+1. **Improved IMPROVE_CUISINE_DATA.md guidance (already had Traps 1–4):**
+   - Added `description`/`description_sv` fields to the frontmatter example and fields table.
+   - Added step 2 in "What to do when triggered": write the description before starting research pairs.
+   - Fixed step numbering (was 1,2,3,3,4,5,6,7 → 1–8).
+
+2. **Added `description` field to KCE:CUISINE format:**
+   - `generate_frontend_data.py`: reads `description`/`description_sv` from frontmatter; adds them to `cuisine_entry` (inside `AI_CUISINE_REGIONS`); emits new `AI_CUISINE_DESCRIPTIONS` constant.
+   - `panel-class-template.js`: shows description text above ingredient selection card when at least one cuisine is selected (styled block with left border).
+
+3. **Reverted all Nordic cuisines to stub status (research_done: 0):**
+   - swedish, norwegian, danish, icelandic — all replaced with stub files identical in structure to the existing finnish/new_nordic stubs.
+   - All 6 Nordic stubs now have `description: "[STUB]"` and `description_sv: "[UTKAST]"` frontmatter fields.
+
+4. **Bumped version 0.8.2.7 → 0.8.2.8; PANEL_VERSION 432 → 433.**

@@ -5681,6 +5681,24 @@ class KitchenCookingPanel extends LitElement {
         `;
       })}
 
+      ${(() => {
+        const descMap = (typeof AI_CUISINE_DESCRIPTIONS !== 'undefined') ? AI_CUISINE_DESCRIPTIONS : {};
+        const selectedCuisines = this._aiSelectedCuisines || [];
+        const descs = selectedCuisines
+          .map(cid => descMap[cid])
+          .filter(d => d && d.description);
+        if (descs.length === 0) return '';
+        return html`
+          <div style="margin: 8px 0 12px 0; padding: 10px 14px; background: var(--secondary-background-color); border-radius: 8px; border-left: 3px solid var(--primary-color);">
+            ${descs.map(d => html`
+              <p style="margin: 0 0 4px 0; font-size: 0.9em; color: var(--primary-text-color); line-height: 1.5;">
+                ${(this._language === 'sv' && d.description_sv) ? d.description_sv : d.description}
+              </p>
+            `)}
+          </div>
+        `;
+      })()}
+
       <ha-card>
         <div class="card-content">
           <p class="info-text">${this._t('ai_recipe.choose_ingredients_label')}</p>

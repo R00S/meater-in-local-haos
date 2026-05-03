@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 02 May 2026, 14:00 UTC
-Last Change: v0.8.2.7 - fix cuisine selector: www/cuisines was symlink to docs/cuisines, broken on HAOS install; flip to real dir + docs symlink
+Last Change: v0.8.2.8 - add cuisine description field; revert nordics to stub status; improve IMPROVE_CUISINE_DATA.md guidance
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "432"
+PANEL_VERSION = "433"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

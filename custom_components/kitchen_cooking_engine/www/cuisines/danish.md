@@ -7,64 +7,150 @@ icon: 🇩🇰
 region: nordic
 region_name: "Nordic"
 region_icon: ❄️
-research_done: 1
+description: "[STUB]"
+description_sv: "[UTKAST]"
+research_done: 0
 ---
 
 ## Research notes
 
-Sources: Danmarks Statistik (Statistics Denmark) meat and fish consumption data 2022,
-Fødevarestyrelsen (Danish Veterinary and Food Administration) dietary surveys,
-DTU Fødevareinstituttet national dietary survey (Danskernes Kostvaner),
-Danish culinary heritage literature (Claus Meyer, Trine Hahnemann, classic husmandsret).
+⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
+Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
+then "Proteins — Local", then "Vegetables — Signature", etc.).
+Each pair requires its own dedicated research pass. Do NOT combine pairs.
+See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
 
-Denmark is the world's largest pork exporter per capita and one of the highest pork consumers
-(~47 kg/capita/year). Smørrebrød (open-faced rye-bread sandwiches) is the daily lunch format
-and the vehicle for defining Danish flavours: leverpostej, marinerede sild, roast beef,
-and remoulade. The fish tradition is centred on plaice (rødspætte) and herring.
-
-Signature dishes surveyed: flæskesteg med rødkål og brunede kartofler, frikadeller med
-persillesovs, stegt rødspætte med remoulade og agurkesalat, smørrebrød (leverpostej/sild/
-roastbeef), æbleflæsk, stegt ål med stuvede kartofler, medisterpølse, karbonader.
 
 ## Proteins
 
-- {id: herring,  grade: signature, rating: 10, name: Herring,  name_sv: "Sill",          notes: "Marinerede sild, kryddersild, matjessild; cornerstone of smørrebrød and the Danish table; inescapable in Danish food culture"}
-- {id: plaice,   grade: signature, rating: 9,  name: Plaice,  name_sv: "Rödspätta",      notes: "Stegt rødspætte med remoulade og agurkesalat; the most beloved everyday fish dish in Denmark"}
-- {id: eel,      grade: signature, rating: 7,  name: Eel,     name_sv: "Ål",             notes: "Stegt ål med stuvede kartofler; traditional summer dish on Funen and the islands; culturally embedded"}
-- {id: pork,     grade: bulk,      rating: 10, name: Pork,    name_sv: "Fläsk",          notes: "~47 kg/capita/year; world-leading pork consumption; flæskesteg, frikadeller, svinekotelet, leverpostej, medisterpølse, æbleflæsk"}
-- {id: chicken,  grade: bulk,      rating: 8,  name: Chicken, name_sv: "Kyckling",       notes: "Everyday poultry; høns i asparges (classic Danish dish); roast chicken"}
-- {id: beef,     grade: bulk,      rating: 7,  name: Beef,    name_sv: "Nötkött",        notes: "Hakkebøf (Danish hamburger steak); oksesteg; beef on smørrebrød (roastbeef med remoulade)"}
-- {id: cod,      grade: bulk,      rating: 6,  name: Cod,     name_sv: "Torsk",          notes: "Fiskefrikadeller, fiskefilet; workhorse white fish; torsk med sennepssovs"}
+### Proteins — Signature
+<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
+<!-- Searched: "Danish signature dishes", "Danish iconic traditional proteins", "Danish food culture defining meats fish" -->
+
+- {id: stub_prot_sig_1, grade: signature, rating: 10, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_prot_sig_2, grade: signature, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_prot_sig_3, grade: signature, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+
+### Proteins — Bulk
+<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
+<!-- Searched: "Danish meat consumption kg per capita", "Danish FAO food balance protein", "Danish most consumed protein statistics" -->
+
+- {id: stub_prot_bul_1, grade: bulk, rating: 10, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_prot_bul_2, grade: bulk, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_prot_bul_3, grade: bulk, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+
+### Proteins — Local
+<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
+<!-- Searched: "Danish livestock farming animals raised", "Danish fishing industry fish species caught", "Danish game animals hunted wild" -->
+
+- {id: stub_prot_loc_1, grade: local, rating: 10, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_prot_loc_2, grade: local, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_prot_loc_3, grade: local, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+
 
 ## Vegetables
 
-- {id: red_cabbage,  grade: signature, rating: 10, name: "Red Cabbage",  name_sv: "Rödkål",      notes: "Rødkål; obligatory with flæskesteg and roast duck; the most iconic Danish vegetable preparation; cooked with apple, vinegar and redcurrant jelly"}
-- {id: dill,         grade: bulk,      rating: 8,  name: Dill,           name_sv: "Dill",         notes: "New potatoes with dill and butter; fish dishes; common but less dominant than in Swedish cooking"}
-- {id: potatoes,     grade: bulk,      rating: 10, name: Potatoes,       name_sv: "Potatis",      notes: "Kartofler; brunede kartofler (caramelised potatoes) are mandatory at Christmas; boiled new potatoes with butter are a national obsession"}
-- {id: onions,       grade: bulk,      rating: 9,  name: Onions,         name_sv: "Lök",          notes: "Base of most Danish savoury cooking; in frikadeller, hakkebøf and stews"}
-- {id: carrots,      grade: bulk,      rating: 7,  name: Carrots,        name_sv: "Morötter",     notes: "Root vegetable staple; stews, soups, rotmos-style preparations"}
-- {id: cucumber,     grade: bulk,      rating: 7,  name: Cucumber,       name_sv: "Gurka",        notes: "Agurkesalat (pickled cucumber salad); classic Danish side dish; always with fried plaice"}
-- {id: beets,        grade: bulk,      rating: 6,  name: Beetroot,       name_sv: "Rödbeta",      notes: "Rødbeder; smørrebrød topping; pickled beet; classic Danish table accompaniment"}
-- {id: leeks,        grade: local,     rating: 8,  name: Leeks,          name_sv: "Purjolök",     notes: "Porre; soups and stews; grown in Denmark; Danish hygge cooking"}
-- {id: kale,         grade: local,     rating: 7,  name: Kale,           name_sv: "Grönkål",      notes: "Grønkål; traditional Danish winter vegetable; grønlangkål (kale with cream) is a Christmas staple in Jutland"}
+### Vegetables — Signature
+<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
+<!-- Searched: "Danish signature dishes vegetables", "Danish iconic vegetable ingredients", "Danish traditional vegetable preparations" -->
 
-## Grains
+- {id: stub_veg_sig_1, grade: signature, rating: 10, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_veg_sig_2, grade: signature, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_veg_sig_3, grade: signature, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
 
-- {id: rye_bread, grade: signature, rating: 10, name: "Rye Bread",   name_sv: "Rågbröd",      notes: "Rugbrød; THE foundation of Danish smørrebrød; dark, dense, sourdough rye — unlike any other Nordic bread tradition; eaten daily"}
-- {id: wheat,     grade: bulk,      rating: 8,  name: Wheat,          name_sv: "Vete",         notes: "Hvedemel; wienerbrød (Danish pastry), franskbrød; imported grain but heavily consumed"}
-- {id: oats,      grade: local,     rating: 6,  name: Oats,           name_sv: "Havre",        notes: "Havregrød (oat porridge); traditional Danish breakfast; grown in Denmark"}
+### Vegetables — Bulk
+<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
+<!-- Searched: "Danish vegetable consumption kg per capita", "Danish most consumed vegetables statistics", "Danish FAO food balance vegetables" -->
 
-## Dairy
+- {id: stub_veg_bul_1, grade: bulk, rating: 10, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_veg_bul_2, grade: bulk, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_veg_bul_3, grade: bulk, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
 
-- {id: butter,       grade: signature, rating: 10, name: Butter,        name_sv: "Smör",          notes: "Smør; Danish butter is world-famous (Lurpak); used generously on rugbrød and in cooking; defines Danish bread culture"}
-- {id: cream,        grade: bulk,      rating: 9,  name: Cream,         name_sv: "Grädde",         notes: "Fløde; Danish cream sauces (persillesovs, frikadellesovs); whipped cream on desserts"}
-- {id: creme_fraiche,grade: bulk,      rating: 8,  name: "Crème fraîche",name_sv: "Crème fraîche", notes: "Ubiquitous in Danish cooking as both sauce base and cold condiment; replaces sour cream in modern Danish recipes"}
+### Vegetables — Local
+<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
+<!-- Searched: "Danish vegetables grown locally agriculture", "Danish regional vegetable crops", "Danish foraging wild plants" -->
+
+- {id: stub_veg_loc_1, grade: local, rating: 10, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_veg_loc_2, grade: local, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_veg_loc_3, grade: local, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+
+
+## Grains & Starches
+
+### Grains & Starches — Signature
+<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
+<!-- Searched: "Danish signature grain dishes bread pasta rice", "Danish iconic starch preparations", "Danish traditional staple foods" -->
+
+- {id: stub_grain_sig_1, grade: signature, rating: 10, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_grain_sig_2, grade: signature, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_grain_sig_3, grade: signature, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+
+### Grains & Starches — Bulk
+<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
+<!-- Searched: "Danish grain consumption kg per capita", "Danish rice wheat bread statistics", "Danish FAO food balance cereals" -->
+
+- {id: stub_grain_bul_1, grade: bulk, rating: 10, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_grain_bul_2, grade: bulk, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_grain_bul_3, grade: bulk, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+
+### Grains & Starches — Local
+<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
+<!-- Searched: "Danish grain crops grown", "Danish cereal farming production", "Danish locally milled flour regional varieties" -->
+
+- {id: stub_grain_loc_1, grade: local, rating: 10, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_grain_loc_2, grade: local, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_grain_loc_3, grade: local, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+
+
+## Dairy & Eggs
+
+### Dairy & Eggs — Signature
+<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
+<!-- Searched: "Danish signature dairy dishes", "Danish iconic cheese butter cream", "Danish traditional dairy products" -->
+
+- {id: stub_dairy_sig_1, grade: signature, rating: 10, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_dairy_sig_2, grade: signature, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_dairy_sig_3, grade: signature, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+
+### Dairy & Eggs — Bulk
+<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
+<!-- Searched: "Danish dairy consumption kg per capita", "Danish milk cheese butter statistics", "Danish FAO food balance dairy" -->
+
+- {id: stub_dairy_bul_1, grade: bulk, rating: 10, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_dairy_bul_2, grade: bulk, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_dairy_bul_3, grade: bulk, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+
+### Dairy & Eggs — Local
+<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
+<!-- Searched: "Danish dairy farming local production", "Danish regional cheese varieties", "Danish local dairy breeds" -->
+
+- {id: stub_dairy_loc_1, grade: local, rating: 10, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_dairy_loc_2, grade: local, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_dairy_loc_3, grade: local, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+
 
 ## Spices & Seasonings
 
-- {id: mustard,       grade: signature, rating: 10, name: Mustard,      name_sv: "Senap",          notes: "Sennep; base of remoulade (the Danish national condiment); on smørrebrød; with flæskesteg; table mustard at every meal; defines Danish flavour"}
-- {id: caraway,       grade: signature, rating: 9,  name: Caraway,      name_sv: "Kummin",          notes: "Kommen; essential in rugbrød (rye bread); in some meat dishes and sauces; distinctly Danish Nordic flavour"}
-- {id: white_pepper,  grade: bulk,      rating: 8,  name: "White Pepper",name_sv: "Vitpeppar",      notes: "Standard Danish savoury seasoning; used in frikadeller, white sauces, fish dishes"}
-- {id: nutmeg,        grade: bulk,      rating: 7,  name: Nutmeg,       name_sv: "Muskotnöt",       notes: "Muskatnød; in frikadeller, persillesovs (parsley sauce), and white sauces; Danish kitchen standard"}
-- {id: bay_leaves,    grade: bulk,      rating: 6,  name: "Bay Leaves", name_sv: "Lagerblad",       notes: "Laurbærblade; marinerede sild cure, stews, leverpostej brine"}
-- {id: allspice,      grade: local,     rating: 7,  name: Allspice,     name_sv: "Kryddpeppar",     notes: "Allehånde; used in leverpostej, some pickled preparations, and traditional spiced dishes"}
+### Spices & Seasonings — Signature
+<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
+<!-- Searched: "Danish signature spice blends", "Danish defining herbs and spices", "Danish iconic seasoning flavour profile" -->
+
+- {id: stub_spice_sig_1, grade: signature, rating: 10, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_spice_sig_2, grade: signature, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_spice_sig_3, grade: signature, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+
+### Spices & Seasonings — Bulk
+<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
+<!-- Searched: "Danish most used condiments seasonings statistics", "Danish salt sugar spice consumption", "Danish everyday seasoning ingredients" -->
+
+- {id: stub_spice_bul_1, grade: bulk, rating: 10, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_spice_bul_2, grade: bulk, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_spice_bul_3, grade: bulk, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+
+### Spices & Seasonings — Local
+<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
+<!-- Searched: "Danish herbs grown locally", "Danish spice production native plants", "Danish foraged herbs regional flavourings" -->
+
+- {id: stub_spice_loc_1, grade: local, rating: 10, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_spice_loc_2, grade: local, rating: 9, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
+- {id: stub_spice_loc_3, grade: local, rating: 8, name: "[STUB]", name_sv: "[UTKAST]", notes: "STUB — replace with verified Danish research"}
