@@ -158,9 +158,9 @@ next agent what was already looked for and prevents duplicate work.
 | `id` | ✅ | Stable identifier used by the UI (e.g. `salmon`, `white_pepper`) |
 | `grade` | ✅ | `signature`, `bulk`, or `local` (see above) |
 | `rating` | ✅ | Integer 1–9. Significance within the grade — not a rank. Multiple ingredients may share the same value. Top 3 shown per grade (by highest rating, before "More" is clicked); clicking "More" reveals at least 6 more per grade — 9 or more items per pair ensures the "More" section is always meaningful. |
-| `name` | ✅ | English display name |
-| `name_sv` | ✅ | Swedish display name (include where known) |
-| `notes` | — | Evidence for the grade and rating; brief source reference |
+| `name` | ✅ | English display name — **the raw, uncooked ingredient** (råvara). This is the label shown in the GUI badge. It must be a clean ingredient name with **no parentheses, no dish names, no local-language annotations**. Examples of correct names: `Lamb`, `Haddock`, `Pork belly`, `Garam masala`, `Suckling pig`. Put dish names, local names, and cultural context in `notes` only. |
+| `name_sv` | ✅ | Swedish display name — same rules as `name`: the raw ingredient in Swedish, clean, no parentheses. E.g. `Lammkött`, `Kolja`, `Fläskbuken`. |
+| `notes` | — | Evidence for the grade and rating; brief source reference. This is also the place for dish names, local-language names, and any other context useful to the AI recipe builder — it is never shown directly in the GUI badge. |
 
 ---
 
@@ -589,6 +589,76 @@ For **local** pairs that come up short:
 tried at least 3 distinct search angles, none of which yielded additional candidates. Document
 this with a `<!-- Searched: ... — insufficient results after N angles -->` comment so the next
 agent knows the pair was genuinely attempted and not just skipped.
+
+---
+
+### ❌ Trap 10: Entering dishes as ingredients
+
+**Dishes do not belong in cuisine files at all.** An ingredient is a raw material (råvara) —
+something you buy at a market or farm. A dish is a preparation — something a cook makes
+from ingredients. The two are not interchangeable and must never be confused.
+
+**Wrong — these are dishes, not ingredients:**
+```
+- {id: cochinillo, name: "Roast Suckling Pig", ...}
+- {id: chicharron, name: "Fried Pork Chunks", ...}
+- {id: moqueca, name: "Fish Stew", ...}
+- {id: jerk_chicken, name: "Jerk Chicken", ...}
+- {id: boeuf_bourguignon, name: "Beef Bourguignon", ...}
+```
+
+These entries must be **deleted**. Do not rename them, do not move the dish name to `notes`,
+do not replace them with a vague category like "firm white fish" as a stand-in for a stew.
+
+**If a dish appears in your research, use it as a signal — not as an entry.**
+Ask: what is the raw protein (or vegetable, grain, spice) that this dish is built on?
+Research and add *that ingredient* instead.
+
+| Dish that appeared in research | What to add instead |
+|-------------------------------|---------------------|
+| Roast Suckling Pig (cochinillo) | `Suckling pig` — the animal as purchased |
+| Fried Pork Chunks (chicharrón) | `Pork belly` or `Pork rind` — the cut used |
+| Fish Stew (moqueca) | Research which fish species moqueca actually uses, then add those fish |
+| Jerk Chicken | `Chicken` — already a raw ingredient |
+| Beef Bourguignon | `Beef chuck` or `Beef stew cuts` — the raw cut used |
+
+**The test:** Can you walk into a shop and buy this item uncooked? If yes, it is an ingredient.
+If it must be cooked first, it is a dish — **delete the entry and research the underlying ingredient.**
+
+The only narrow exception: ingredients that are defined by a curing or drying process and
+sold as-is at a market (e.g. `Smoked paprika`, `Dried chilli`, `Cured ham`, `Pickled lime`).
+These are preserved ingredients, not dishes.
+
+---
+
+### ❌ Trap 11: Parentheses in name or name_sv clutter the GUI
+
+Parenthetical text in `name` or `name_sv` is shown directly in the GUI badge. It makes
+badges harder to read and harder to understand for users who are not from that culture.
+The badge must be immediately comprehensible — a single clean name.
+
+**Wrong:**
+```
+name: "Pork Belly (sidfläsk)"
+name: "Haddock (Melanogrammus aeglefinus)"
+name: "Garam masala (spice blend)"
+name: "Char siu (BBQ pork)"
+name_sv: "Havskräfta (Norska hummer)"
+```
+
+**Right:**
+```
+name: "Pork belly"          notes: "sidfläsk; used in hong shao rou red-braised belly"
+name: "Haddock"             notes: "Melanogrammus aeglefinus; most common white fish in British fish and chips"
+name: "Garam masala"        notes: "aromatic spice blend — the defining warm-spice seasoning of South Asian cooking"
+name: "Char siu pork"       notes: "叉烧 — lacquered BBQ pork; used in char siu bao and fried rice"
+name_sv: "Havskräfta"       notes: "Norska hummer; Nephrops norvegicus; central to Norwegian and Swedish west-coast cuisine"
+```
+
+**Rule:** `name` and `name_sv` must each be a single clean phrase — no parentheses,
+no local-script annotations, no genre labels in brackets. If a user who speaks English
+(or Swedish) sees the badge, they should immediately know what ingredient it refers to.
+All extra context belongs in `notes`, where the AI recipe builder can use it freely.
 
 ---
 
