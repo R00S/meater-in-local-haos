@@ -113,3 +113,22 @@ Execute IMPROVE_CUISINE_DATA.md for stub cuisine files, one at a time, no batchi
 - Key sources: chicken 23.4 kg/capita (AHDB 2022); UK potato 68.5 kg/capita (FAOSTAT 2022); milk 92.13 kg/capita, cheese 12.14 kg/capita (CLAL 2022); wheat 15.5 MT, barley 7.4 MT, oats 1.0 MT (DEFRA harvest 2022); Welsh Lamb PGI, Scotch Beef PGI, Cornish Clotted Cream PDO, Stilton PDO, West Country Cheddar PDO, Jersey Royal PDO, Arbroath Smokie PDO, Cornish Pasty PDO, Kentish Cobnut PGI; salt 3.07 kg/capita (NDNS 2018-19)
 - Completed burmese.md: 15 sections × 9 items, all stub_ entries replaced, real EN+SV descriptions, research_done: 1
 - Key sources: fish 45 kg/capita (WorldFish/FAO); rice 272 kg/capita (FAOSTAT 2022); 7th rice producer ~25 MT (FAO 2022); aquaculture 323k MT, prawn ponds 245k acres (MOALI 2022-23); peanut oil 25% / palm 27% of oil consumption (2022 nationwide survey); sesame 142k MT (IndexBox 2022); garlic ~209k MT (CEIC); turmeric 54-100k MT, 4% world supply (Heinrich Böll/ANGRAU 2023); chili $22M market (IndexBox 2024)
+
+## Session 7 — Stubs + Pikelet Fix (2026-05-04)
+
+### Task
+Fix ingredient stubs (task 3) and replace australian.md sausage_roll with pikelet (user-specified).
+
+### Status
+- [x] australian.md: replaced grain_sig_sausage_roll with grain_sig_pikelet (user requested)
+- [x] cajun_creole.md: 2 stubs fixed — muffuletta bread (rating 6), black-eyed peas (rating 2)
+- [x] bengali.md: 4 stubs fixed — atta flour (8), cholar dal (5), rice flour/pitha (1), mishti doi (5 dairy)
+- [x] bangladeshi.md: 9 stubs fixed — boal catfish (6), shoal maach (4), tengra (1), banana blossom produce (8), semai vermicelli grain (8), atta roti (3), maida flour (2), rice flour pitha (1), mishti doi bogra dairy (7)
+- [x] Generator ran clean (98 cuisines, 13245 ingredients, PANEL_VERSION 467)
+- [ ] Doublets — many identified across A-Chilean files; need research-backed replacements (task 2)
+
+### Doublet counts per file (task 2 — not yet done)
+- afghan.md: 31, algerian.md: 1, argentinian.md: 2, australian.md: 3, austrian.md: 25
+- azerbaijani.md: 29, balkan.md: 3, bangladeshi.md: 21, basque.md: 8, bengali.md: 31
+- burmese.md: 6, cajun_creole.md: 26, cameroonian.md: 32, canadian.md: 3, cantonese.md: 5
+- caribbean.md: 28, chilean.md: 6
