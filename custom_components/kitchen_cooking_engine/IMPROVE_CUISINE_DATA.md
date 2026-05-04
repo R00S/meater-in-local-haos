@@ -595,7 +595,7 @@ agent knows the pair was genuinely attempted and not just skipped.
 ### ❌ Trap 10: Entering dishes as ingredients
 
 **Dishes do not belong in cuisine files at all.** An ingredient is a raw material (råvara) —
-something you buy at a market or farm. A dish is a preparation — something a cook makes
+something you buy at a market or farm, forage, fish for or hunt. A dish is a preparation — something a cook makes
 from ingredients. The two are not interchangeable and must never be confused.
 
 **Wrong — these are dishes, not ingredients:**
