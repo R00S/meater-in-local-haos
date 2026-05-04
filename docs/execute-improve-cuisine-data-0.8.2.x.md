@@ -48,3 +48,18 @@ Execute IMPROVE_CUISINE_DATA.md for stub cuisine files, one at a time, no batchi
 
 ### Session 3 (2026-05-04)
 - Verified balkan/bangladeshi from previous session (both complete); completed basque and bengali; generator ran clean (PANEL_VERSION 453)
+
+## Session 4 — Files (2026-05-04)
+13. brazilian.md (region: latin_american)
+14. british.md (region: european)
+15. burmese.md (region: southeast_asian)
+16. cajun_creole.md (region: north_american)
+
+## Session 4 Status
+
+- [ ] brazilian.md — all 15 pairs
+- [ ] british.md — all 15 pairs
+- [ ] burmese.md — all 15 pairs
+- [ ] cajun_creole.md — all 15 pairs
+- [ ] Run generator and verify
+- [ ] Commit all changes
