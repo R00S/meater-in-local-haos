@@ -63,3 +63,16 @@ Execute IMPROVE_CUISINE_DATA.md for stub cuisine files, one at a time, no batchi
 - [ ] cajun_creole.md — all 15 pairs
 - [ ] Run generator and verify
 - [ ] Commit all changes
+
+## Session 4 — Files (2026-05-04)
+13. brazilian.md (region: latin_american)
+
+## Session 4 Status
+
+- [x] brazilian.md — research_done: 1 (135 items; IBGE POF 2017-18, ABIEC Beef 2025, FAO/IBGE crop stats, USDA Dairy/Oilseeds, MAPA aquaculture)
+- [x] Generator ran clean (PANEL_VERSION 453 → 454)
+- [x] Commit all changes
+
+### Session 4 Log (2026-05-04)
+- Completed brazilian.md: 15 sections × 9 items, all stub_ entries replaced, real EN+SV descriptions, research_done: 1
+- Key sources: chicken 51.2 kg/capita, beef 24.5 kg/capita (IBGE 2022); soy 154.6 MT, corn 131.9 MT, cassava 22.4 MT (FAO/IBGE 2022); tambaqui >130k MT/yr, pirarucu 10-12k MT/yr (MAPA); urucum ~60% world supply; Brazil nut wild-harvested Amazon
