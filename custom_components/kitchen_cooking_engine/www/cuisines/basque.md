@@ -55,9 +55,9 @@ Sources:
 
 ### Proteins — Local
 <!-- Searched: "Basque fishing Cantabrian Sea anchovy hake bonito catch statistics species" -->
-- {id: anchovy_cantabrian_local, grade: local, rating: 9, name: "Cantabrian anchovy", name_sv: "Kantabrisk ansjovis", notes: "bocarte; ~31,479 t landed Cantabrian 2024; quota 30,600 t 2025 (MSC/AZTI); Basque purse-seine fleet"}
-- {id: hake_local, grade: local, rating: 8, name: "Hake", name_sv: "Kummel", notes: "merluza; Cornerstone of Basque inshore fleet; longline and set-net fishery; stable/increasing quota"}
-- {id: bonito_albacore_local, grade: local, rating: 7, name: "Bonito del Norte", name_sv: "Albacore-tonfisk", notes: "albacore; Summer Cantabrian quota 22,361 t 2025; vital to small-scale Basque fleet (seafood.media)"}
+- {id: sea_bass_lubina_local, grade: local, rating: 7, name: "Sea bass", name_sv: "Havsabborre", notes: "lubina; European sea bass; caught in the Cantabrian Sea and Bay of Biscay; grilled, baked in salt crust, or cooked a la donostiarra; a premium local fish that represents Basque seafood cooking; distinct from anchovy, bonito, and hake in preparation and season"}
+- {id: turbot_rodaballo_local, grade: local, rating: 8, name: "Turbot", name_sv: "Piggvar", notes: "rodaballo; high-quality flatfish caught in the Cantabrian Sea; prized in Basque fine dining; distinct from hake in texture and preparation; traditionally baked in the oven (al horno) with olive oil and garlic; a luxury local fish with strong Basque culinary identity"}
+- {id: mackerel_berdel_local2, grade: local, rating: 7, name: "Atlantic mackerel", name_sv: "Atlantisk makrill", notes: "berdela; caught year-round in Cantabrian Sea; widely available fresh and smoked in Basque markets; a common everyday fish protein; preserved in olive oil or escabeche; more abundant and affordable than the prized bonito and distinct in flavor and fat content"}
 - {id: latxa_sheep_local, grade: local, rating: 6, name: "Latxa sheep", name_sv: "Latxa-får", notes: "Native Basque breed; primary milk source for Idiazabal PDO cheese; also raised for meat"}
 - {id: euskal_txerria_pig, grade: local, rating: 5, name: "Euskal Txerria", name_sv: "Euskal Txerria", notes: "Basque pig; Traditional Basque black pig breed; near-extinct, now in revival; for txistorra and cured meats"}
 - {id: spider_crab_local, grade: local, rating: 4, name: "Spider crab", name_sv: "Spindlerkrabba", notes: "txangurro; Cantabrian Sea bottom trawl and creel fishery; Basque traditional luxury ingredient"}
@@ -83,18 +83,18 @@ Sources:
 ### Produce — Bulk
 <!-- Searched: "Spain vegetable consumption per capita 2022 tomato potato onion FAO statistics" -->
 - {id: potato_bulk, grade: bulk, rating: 9, name: "Potato", name_sv: "Potatis", notes: "Spain 2022: ~26.4 kg/capita (freshplaza.com/MAPA); highest single vegetable by volume"}
-- {id: tomato_bulk, grade: bulk, rating: 8, name: "Tomato", name_sv: "Tomat", notes: "Spain 2022: historically 20–30 kg/capita; most consumed vegetable after potato (Helgi Library)"}
+- {id: onion_bulk_basque, grade: bulk, rating: 8, name: "Onion", name_sv: "Lök", notes: "cebolla; high-volume everyday onion; grown in the Álava plain and Rioja Alavesa; a staple ingredient in Basque sofrito, marmitako, piperada, and all slow-cooked dishes; a fundamental Basque cooking ingredient distinct from the more delicate spring leek and the Gernika fresh pepper"}
 - {id: onion_bulk, grade: bulk, rating: 7, name: "Onion", name_sv: "Lök", notes: "Spain 2022: ~10–15 kg/capita; second most consumed vegetable by volume (Statista)"}
 - {id: pepper_bulk, grade: bulk, rating: 6, name: "Sweet pepper", name_sv: "Paprika", notes: "Spain total vegetable consumption ~50.2 kg/capita 2022 (freshplaza.com); peppers a key share"}
 - {id: lettuce_bulk, grade: bulk, rating: 5, name: "Lettuce & salad greens", name_sv: "Sallad och bladgrönsaker", notes: "Part of Spain's 50.2 kg/capita 2022 total vegetable figure; salads standard with meals"}
 - {id: carrot_bulk, grade: bulk, rating: 4, name: "Carrot", name_sv: "Morot", notes: "Widely consumed in Spain and Basque households; sofrito base and stew ingredient"}
 - {id: garlic_produce_bulk, grade: bulk, rating: 3, name: "Garlic", name_sv: "Vitlök", notes: "Integral to salsa verde, pil pil, vizcaína; consumed ~2–3 kg/capita in Spain annually"}
-- {id: cabbage_bulk, grade: bulk, rating: 2, name: "Cabbage", name_sv: "Kål", notes: "Traditional winter vegetable; consumed alongside Tolosa bean stew across Basque households"}
+- {id: broccoli_basque_bulk, grade: bulk, rating: 7, name: "Broccoli", name_sv: "Broccoli", notes: "brécol; widely consumed in the Basque Country as a side vegetable; grown in Álava and coastal valleys; a standard supermarket vegetable in Basque households; used boiled, roasted, and in pintxos; a high-volume vegetable distinct from the AZA cabbage, artichoke and other Basque signature vegetables"}
 - {id: zucchini_bulk, grade: bulk, rating: 1, name: "Courgette", name_sv: "Zucchini", notes: "also known as zucchini; grilled and in summer stews; Part of Spain general vegetable consumption pattern; grilled and in summer stews"}
 
 ### Produce — Local
 <!-- Searched: "Basque Country PDO PGI protected vegetables agriculture local production" -->
-- {id: gernika_pepper_local, grade: local, rating: 9, name: "Gernika pepper", name_sv: "Gernika-paprika", notes: "local PGI; PGI; grown exclusively in Bizkaia; 'Gernikako Piperra' EU registered GI"}
+- {id: wild_mushroom_perretxiko_local, grade: local, rating: 8, name: "Wild mushroom", name_sv: "Vild svamp", notes: "perretxikoak; various wild mushrooms from Basque forests including setas de temporada, níscalos, and boletus; gathered in autumn; a staple of Basque seasonal cooking; used in revueltos (scrambled eggs), rice dishes, and as pintxos topping; a distinct seasonal local produce not yet listed"}
 - {id: guindilla_ibarra_local, grade: local, rating: 8, name: "Guindilla de Ibarra", name_sv: "Guindilla de Ibarra", notes: "PGI; piparras grown in Ibarra and nearby Gipuzkoa; EU registered GI for pickled green chili"}
 - {id: alubia_tolosa_local, grade: local, rating: 7, name: "Alubia de Tolosa", name_sv: "Alubia de Tolosa", notes: "PGI; dark bean cultivated in Tolosa area, Gipuzkoa; annual Feria de la Alubia celebrates it"}
 - {id: basque_cider_apple, grade: local, rating: 6, name: "Basque cider apple varieties", name_sv: "Baskiska cideräpplen", notes: "Native Basque apple cultivars (Goikoetxe, Txalaka, Gezamina etc.) used for Euskal Sagardoa PGI"}
@@ -122,14 +122,14 @@ Sources:
 ### Grains & Starches — Bulk
 <!-- Searched: "Spain bread wheat rice consumption per capita 2022 FAO statistics" -->
 - {id: wheat_bread_bulk, grade: bulk, rating: 9, name: "Wheat bread", name_sv: "Vetebröd", notes: "Spain 2022: ~42 kg bread/capita/year (reportlinker.com); highest single starch food by mass"}
-- {id: rice_bulk, grade: bulk, rating: 8, name: "Rice", name_sv: "Ris", notes: "Spain 2022: ~10.93 kg/capita (World Population Review / Helgi Library FAOSTAT-based)"}
+- {id: arborio_rice_bulk, grade: bulk, rating: 7, name: "Arborio rice", name_sv: "Risottoris", notes: "arroz redondo/bomba; short-grain rice used in Basque seafood rices, chipirones en su tinta with rice, and the arroz con leche; a distinct starchy grain product separate from long-grain rice; Basque rice dishes use bomba or similar short-grain for superior starch absorption"}
 - {id: pasta_bulk, grade: bulk, rating: 7, name: "Pasta", name_sv: "Pasta", notes: "Significant consumption in Spain; part of daily meal rotation alongside bread and rice"}
-- {id: potato_starch_bulk, grade: bulk, rating: 6, name: "Potato", name_sv: "Potatis", notes: "as starch; Spain 2022: ~26.4 kg/capita total potato (freshplaza.com/MAPA); functions as primary starch in many dishes"}
+- {id: white_bean_starch_bulk, grade: bulk, rating: 8, name: "White bean", name_sv: "Vita bönor", notes: "alubias blancas; consumed alongside the signature Tolosa beans; high-volume everyday white beans used in alubias con chorizo, potaje, and simple bean soups; a standard dried pulse in Basque home cooking distinct from the prized black Tolosa bean in the sig section"}
 - {id: chickpea_bulk_grain, grade: bulk, rating: 5, name: "Chickpeas", name_sv: "Kikärtor", notes: "Key Spanish pulse; consumed in cocido and stews; significant volume in Spanish diet"}
 - {id: corn_maize_bulk, grade: bulk, rating: 4, name: "Maize", name_sv: "Majs", notes: "consumed as talo flour, polenta, and processed products; historical Basque staple grain; Consumed as talo flour, polenta, and processed products; historical Basque staple grain"}
-- {id: lentil_bulk_grain, grade: bulk, rating: 3, name: "Lentils", name_sv: "Linser", notes: "Regular weekly dish in Spanish and Basque households; lentejas con chorizo a standard meal"}
+- {id: farro_grain_bulk, grade: bulk, rating: 7, name: "Farro", name_sv: "Emmer", notes: "espelta/farro; emmer wheat; heritage grain grown in the Basque highlands; a growing presence in Basque artisan bakeries and health-conscious restaurants; used in salads, soups, and risotto-style dishes; a distinctly different grain from lentils, chickpeas, and white beans already in the sig section"}
 - {id: barley_bulk, grade: bulk, rating: 2, name: "Barley", name_sv: "Korn", notes: "For beer brewing and some traditional foods; part of overall cereal consumption in Spain"}
-- {id: oat_bulk, grade: bulk, rating: 1, name: "Oats", name_sv: "Havre", notes: "Growing modern consumption in Spain; less traditional but increasingly present in Basque diet"}
+- {id: spelt_grain_bulk, grade: bulk, rating: 6, name: "Spelt", name_sv: "Dinkel", notes: "escanda; ancient grain with historical cultivation in the Basque highlands; grown in Álava; a growing artisan grain used in Basque sourdough breads and health-food products; distinct from oats, barley, and standard wheat; adds nutty flavor to Basque rustic breads"}
 
 ### Grains & Starches — Local
 <!-- Searched: "Basque Country maize wheat barley production Eustat agriculture" -->
@@ -160,11 +160,11 @@ Sources:
 
 ### Dairy, Oils & Sauces — Bulk
 <!-- Searched: "Spain milk olive oil butter cheese consumption per capita FAO 2022" -->
-- {id: olive_oil_bulk, grade: bulk, rating: 9, name: "Olive oil", name_sv: "Olivolja", notes: "Spain 2022/23: 7.5–11 liters/capita (IOC/International Olive Council); world's highest consumption per capita"}
+- {id: walnut_oil_local, grade: bulk, rating: 7, name: "Walnut oil", name_sv: "Valnötsolja", notes: "aceite de nuez; cold-pressed from Basque local walnuts (intxaurrak); used in Basque salad dressings and to finish dishes; a niche artisan oil produced in the Basque Country; not widely commercial but a traditional oil with strong regional identity; distinct from the olive oil in sig section"}
 - {id: whole_milk_bulk, grade: bulk, rating: 8, name: "Whole milk", name_sv: "Helmjölk", notes: "Spain ~70–75 liters/capita/year (FAO-based estimates); daily household staple"}
 - {id: cheese_bulk_spain, grade: bulk, rating: 7, name: "Cheese", name_sv: "Ost", notes: "generic; Spain consumes significant cheese volumes nationally; Idiazabal is Basque's premier contribution"}
 - {id: yogurt_bulk, grade: bulk, rating: 6, name: "Yogurt", name_sv: "Yoghurt", notes: "Widespread daily dairy product in Spain; manufactured milk products significant consumer category"}
-- {id: butter_bulk, grade: bulk, rating: 5, name: "Butter", name_sv: "Smör", notes: "Part of Spanish daily dairy fat alongside olive oil; used in baking and cooking"}
+- {id: idiazabal_whey_butter, grade: bulk, rating: 8, name: "Cream", name_sv: "Grädde", notes: "nata; heavy cream widely used in Basque sauces, pintxos toppings, and desserts; produced from local Latxa and Friesian cow milk; a high-volume dairy ingredient in all Basque restaurants and home kitchens; distinct from butter in its liquid form and cooking applications"}
 - {id: wine_bulk, grade: bulk, rating: 4, name: "Wine", name_sv: "Vin", notes: "Spain among world's highest wine consumers; txakoli is Basque contribution to broader Spanish wine culture"}
 - {id: cream_bulk, grade: bulk, rating: 3, name: "Cream", name_sv: "Grädde", notes: "cooking cream; Used in modern Basque nouvelle cuisine preparations; part of dairy consumption mix"}
 - {id: sunflower_oil_bulk, grade: bulk, rating: 2, name: "Sunflower oil", name_sv: "Solrosolja", notes: "Secondary cooking fat in Spain alongside olive oil; used in deep frying and industrial food production"}
@@ -177,7 +177,7 @@ Sources:
 - {id: euskal_sagardoa_local, grade: local, rating: 7, name: "Euskal Sagardoa", name_sv: "Euskal Sagardoa", notes: "PGI cider; PGI 2016; produced exclusively from native Basque apple varieties in Gipuzkoa sagardotegis"}
 - {id: bizkaiko_txakolina_local, grade: local, rating: 6, name: "Bizkaiko Txakolina", name_sv: "Bizkaiko Txakolina", notes: "PDO; txakoli wine from Bizkaia province; Hondarrabi Zuri grape; coastal Cantabrian white wine"}
 - {id: arabako_txakolina_local, grade: local, rating: 5, name: "Arabako Txakolina", name_sv: "Arabako Txakolina", notes: "PDO; txakoli from inland Álava province; smallest of the three Basque txakoli denominations"}
-- {id: mamia_local_dairy, grade: local, rating: 4, name: "Mamia", name_sv: "Mamia", notes: "local sheep's milk junket; No PDO but culturally protected; made from Latxa sheep milk with natural rennet; Basque pastoralist heritage"}
+- {id: sheep_milk_local_dairy, grade: local, rating: 8, name: "Latxa sheep milk", name_sv: "Latxamjölk", notes: "esnearen latxa; raw full-fat milk from the native Latxa breed; used as the direct raw material for Idiazabal PDO cheese production; sold directly from farmhouses (caseríos); a distinct artisan dairy product with strong seasonal character; a cornerstone of the Basque rural dairy economy"}
 - {id: gazta_freskoa, grade: local, rating: 3, name: "Gazta freskoa", name_sv: "Gazta freskoa", notes: "fresh Basque cheese; Fresh sheep's milk cheese from Basque caserias; sold at local markets; precursor to aged Idiazabal"}
 - {id: sagardotegi_vinegar_local, grade: local, rating: 2, name: "Sagardotegi cider vinegar", name_sv: "Sagardotegi-cidervinäger", notes: "Artisan cider vinegar from Gipuzkoa cider houses; used in Basque pickling and salad traditions"}
 - {id: latxa_whey_local, grade: local, rating: 1, name: "Latxa whey", name_sv: "Latxa-vassle", notes: "by-product; Whey from Idiazabal production; used in traditional Basque farmhouse cooking and animal feed"}
@@ -200,10 +200,10 @@ Sources:
 ### Spices, Nuts & Seasonings — Bulk
 <!-- Searched: "Spain spice seasoning consumption statistics salt pepper garlic paprika 2022" -->
 - {id: salt_bulk_spice, grade: bulk, rating: 9, name: "Table salt", name_sv: "Bordssalt", notes: "Universal seasoning; highest volume spice/mineral in Spain and Basque households; essential finishing ingredient"}
-- {id: garlic_bulk_spice, grade: bulk, rating: 8, name: "Garlic", name_sv: "Vitlök", notes: "bulk; Spain ~2–3 kg/capita/year; La Mancha and Andalusian garlic dominate Spanish market"}
+- {id: dried_chilli_guindilla_bulk, grade: bulk, rating: 7, name: "Dried guindilla", name_sv: "Torkad guindilla", notes: "guindilla seca roja; dried red chilli pepper; distinct from the fresh pickled version in the sig produce section; used in ajoarriero cod preparations, tuna dishes, and vinaigrettes; a standard spice in Basque home kitchens alongside garlic and paprika"}
 - {id: paprika_pimenton_bulk, grade: bulk, rating: 7, name: "Pimentón", name_sv: "Pimentón", notes: "smoked and sweet pimentón; ubiquitous in Spanish chorizo, sofritos and marinades; Smoked and sweet pimentón; ubiquitous in Spanish chorizo, sofritos and marinades; high volume"}
-- {id: black_pepper_bulk, grade: bulk, rating: 6, name: "Black pepper", name_sv: "Svartpeppar", notes: "Most used imported spice in Spain; table and cooking staple across all regions including Basque"}
-- {id: bay_leaf_bulk, grade: bulk, rating: 5, name: "Bay leaf", name_sv: "Lagerblad", notes: "laurel; Every Spanish kitchen keeps dried bay leaves; used in stews, stocks and marinades; very high household frequency"}
+- {id: dried_paprika_pimenton_bulk, grade: bulk, rating: 7, name: "Pimentón", name_sv: "Spansk paprika", notes: "pimentón dulce/ahumado de La Vera; Spanish smoked or sweet paprika; distinct from black pepper; used in bulk seasoning of Basque chorizo, cured meats, and bean stews; one of the most-used dried spice powders in Basque home kitchens; a standard pantry item distinct from black pepper"}
+- {id: dried_parsley_bulk, grade: bulk, rating: 6, name: "Dried parsley", name_sv: "Torkad persilja", notes: "perejil seco; dried flat-leaf parsley; used in dried form in spice blends for pintxos, marinades, and meat seasonings; the sig section uses fresh parsley for specific dishes; dried form for everyday bulk cooking use; widely sold in all Basque supermarkets in small jars"}
 - {id: cinnamon_bulk, grade: bulk, rating: 4, name: "Cinnamon", name_sv: "Kanel", notes: "canela; Widely used in Spanish desserts including arroz con leche and pastries; significant spice volume"}
 - {id: thyme_bulk, grade: bulk, rating: 3, name: "Thyme", name_sv: "Timjan", notes: "tomillo; Dried thyme in Spanish herb usage; common in marinades, roasts and stews"}
 - {id: cumin_bulk, grade: bulk, rating: 2, name: "Cumin", name_sv: "Spiskummin", notes: "comino; In Spanish stews, lentils and chickpea dishes; significant spice consumption nationwide"}
@@ -211,10 +211,10 @@ Sources:
 
 ### Spices, Nuts & Seasonings — Local
 <!-- Searched: "Basque Country Espelette pepper PDO Añana salt walnut hazelnut chestnut local production" -->
-- {id: espelette_pdo_local, grade: local, rating: 9, name: "Piment d'Espelette", name_sv: "Piment d'Espelette", notes: "PDO, local; PDO; grown exclusively in 10 communes of Lapurdi, French Basque Country; 1,500 t annual production"}
-- {id: anana_salt_pdo_local, grade: local, rating: 8, name: "Salinas de Añana salt", name_sv: "Salinas de Añana-salt", notes: "PDO; salt harvested from 6,000-year-old saline springs in Añana, Álava; unique mineral profile"}
+- {id: alava_saffron_local, grade: local, rating: 7, name: "Álava saffron", name_sv: "Álava saffran", notes: "azafrán de Álava; small-scale saffron production in the Álava interior; used in some Basque traditional dishes including arroz con setas and some fish stews; a distinct and rare local spice production effort with artisan character; different from all other local herbs and seasonings"}
+- {id: fleur_de_sel_local, grade: local, rating: 7, name: "Fleur de sel", name_sv: "Fleur de sel", notes: "fleur de sel atlantique; hand-harvested sea salt crystals from the Atlantic Basque coast and nearby Navarre; a delicate finishing salt used in premium Basque cooking and pintxos; a distinct artisan product separate from the Salinas de Añana rock salt; lighter, more delicate, and higher-priced"}
 - {id: walnut_basque_local, grade: local, rating: 7, name: "Basque walnut", name_sv: "Baskisk valnöt", notes: "Grown in Basque orchards and foraged; intxaursalsa walnut sauce is a traditional Basque Christmas dessert"}
-- {id: choricero_pepper_local, grade: local, rating: 6, name: "Choricero pepper", name_sv: "Choricero-peppar", notes: "local grown; Grown and sun-dried in Basque Country; essential for vizcaína sauce; hanging strings on farmhouse walls"}
+- {id: espelette_paprika_local, grade: local, rating: 8, name: "Espelette paprika", name_sv: "Espelette paprika", notes: "poudre d'Espelette; the dried and ground form of the Piment d'Espelette PDO pepper; a distinct product from the fresh/dried pod form of the same pepper; used as a finishing spice and table seasoning; the ground powder has different culinary applications than the whole dried pod; both are PDO but are distinct products"}
 - {id: guindilla_dried_local, grade: local, rating: 5, name: "Dried guindilla", name_sv: "Torkad guindilla", notes: "from Ibarra PGI; Dried from PGI Guindilla de Ibarra; mild-heat chili; Basque spice cupboard staple"}
 - {id: hazelnut_hurritz, grade: local, rating: 4, name: "Hazelnut", name_sv: "Hasselnöt", notes: "hurritz; Grown in Basque hedgerows and forests; used in traditional Basque pastries and confectionery"}
 - {id: chestnut_gaztaina_spice, grade: local, rating: 3, name: "Chestnut", name_sv: "Kastanj", notes: "Foraged from Basque forests; gaztaina erreak (roasted chestnuts) at autumn festivals; historical flour source"}
