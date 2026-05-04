@@ -84,12 +84,12 @@ Execute IMPROVE_CUISINE_DATA.md for stub cuisine files, one at a time, no batchi
 
 ## Session 6 Status
 
-- [ ] chilean.md — all 15 pairs
-- [ ] chinese.md — all 15 pairs
-- [ ] colombian.md — all 15 pairs
-- [ ] cuban.md — all 15 pairs
-- [ ] Run generator and verify
-- [ ] Commit all changes
+- [x] chilean.md — research_done: 1 (135 items; SERNAPESCA salmon 751k t, IFOP centolla 3.2k t, INE marraqueta 90kg/cap, IOC olive oil 22.5k t)
+- [x] chinese.md — research_done: 1 (135 items; NBS pork 57.7kg/cap, FAOSTAT garlic 26MT 80% world, rice 148MT, grass carp 6.5MT #1 aquaculture)
+- [x] colombian.md — research_done: 1 (135 items; Fenavi chicken 36.3kg/cap, FAO panela #2 world, Fedepalma palm oil #4, AUNAP tilapia 200k t)
+- [x] cuban.md — research_done: 1 (135 items; FAO FBS rice 157kg/cap, CIP yuca 500k t, lobster 11.5k t Puga/ResearchGate, ONEI 2024)
+- [x] Generator ran clean (98 cuisines, 13248 ingredients, PANEL_VERSION 461)
+- [x] Commit all changes
 
 ## Session 5 — Files (2026-05-04)
 17. cameroonian.md (region: african)
