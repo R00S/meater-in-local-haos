@@ -38,11 +38,11 @@ Key figures used:
 - {id: can_prot_sig_atlantic_lobster, grade: signature, rating: 9, name: "Atlantic Lobster", name_sv: "Atlanthummar", notes: "Nova Scotia/NB/PEI lobster suppers — highest-value Canadian fishery, CAD $2.8B shellfish landings (DFO 2023)"}
 - {id: can_prot_sig_alberta_beef, grade: signature, rating: 9, name: "Alberta Beef", name_sv: "Albertanötkött", notes: "Alberta holds 43% of Canada's 10.9M cattle (Jan 2025); world-class steakhouse culture and BBQ heritage"}
 - {id: can_prot_sig_peameal_bacon, grade: signature, rating: 8, name: "Peameal Bacon", name_sv: "Peameal-bacon", notes: "True Canadian back bacon rolled in cornmeal; originated at Toronto's St. Lawrence Market; uniquely Canadian"}
-- {id: can_prot_sig_pacific_sockeye_salmon, grade: signature, rating: 8, name: "Pacific Sockeye Salmon", name_sv: "Stillahavslax (sockeye)", notes: "BC wild-caught and farmed Atlantic salmon; 51,364t farmed finfish in BC 2023 (DFO Aquaculture)"}
+- {id: can_prot_sig_pacific_sockeye_salmon, grade: signature, rating: 8, name: "Pacific Sockeye Salmon", name_sv: "Stillahavslax", notes: "BC wild-caught and farmed Atlantic salmon; 51,364t farmed finfish in BC 2023 (DFO Aquaculture)"}
 - {id: can_prot_sig_tourtiere_pork, grade: signature, rating: 7, name: "Tourtière Pork", name_sv: "Tourtière-fläsk", notes: "Quebec Christmas/Réveillon spiced minced pork meat pie; icon of French-Canadian heritage"}
 - {id: can_prot_sig_bison, grade: signature, rating: 7, name: "Bison", name_sv: "Bison", notes: "Prairie Indigenous staple for millennia; Canadian bison ranching revival; symbol of First Nations food sovereignty"}
 - {id: can_prot_sig_snow_crab, grade: signature, rating: 6, name: "Snow Crab", name_sv: "Snökrabba", notes: "Atlantic Canada's top shellfish export by volume; cold-water Maritime icon (DFO 2023 shellfish landings)"}
-- {id: can_prot_sig_arctic_char, grade: signature, rating: 5, name: "Arctic Char", name_sv: "Röding (arktisk röding)", notes: "Indigenous Northern Canadian fish; wild and farmed; staple for Inuit and sub-Arctic communities"}
+- {id: can_prot_sig_arctic_char, grade: signature, rating: 5, name: "Arctic Char", name_sv: "Röding", notes: "Indigenous Northern Canadian fish; wild and farmed; staple for Inuit and sub-Arctic communities"}
 - {id: can_prot_sig_dungeness_crab, grade: signature, rating: 4, name: "Dungeness Crab", name_sv: "Dungeness-krabba", notes: "BC Pacific Coast icon; wild-caught; cornerstone of West Coast seafood culture and restaurants"}
 
 ### Proteins — Bulk
@@ -55,19 +55,19 @@ Key figures used:
 - {id: can_prot_bul_turkey, grade: bulk, rating: 5, name: "Turkey", name_sv: "Kalkon", notes: "Significant seasonal and year-round consumption; Canadian Thanksgiving (October) and Christmas drive peak demand"}
 - {id: can_prot_bul_canned_tuna, grade: bulk, rating: 4, name: "Canned Tuna", name_sv: "Konserverad tonfisk", notes: "Dominant canned protein in Canadian pantries; mostly imported; staple in sandwiches and casseroles nationwide"}
 - {id: can_prot_bul_ground_beef, grade: bulk, rating: 3, name: "Ground Beef", name_sv: "Nötfärs", notes: "Burgers, meat loaf, chili; driven by BBQ culture and fast-food sector; major share of 17.5 kg/capita beef total"}
-- {id: can_prot_bul_salmon, grade: bulk, rating: 2, name: "Atlantic Salmon (farmed)", name_sv: "Atlantlax (odlad)", notes: "Most consumed fish by volume; BC farms 64,469t exported 2023; available year-round in all grocery chains"}
+- {id: can_prot_bul_salmon, grade: bulk, rating: 2, name: "Atlantic Salmon", name_sv: "Atlantlax", notes: "farmed; Most consumed fish by volume; BC farms 64,469t exported 2023; available year-round in all grocery chains"}
 - {id: can_prot_bul_ham, grade: bulk, rating: 1, name: "Ham", name_sv: "Skinka", notes: "Processed pork; included in pork's 19.99 kg/capita; canned and sliced ham ubiquitous in Canadian delis and households"}
 
 ### Proteins — Local
 <!-- Produced, raised, or caught specifically in Canada. -->
 
 - {id: can_prot_loc_alberta_beef_cattle, grade: local, rating: 9, name: "Alberta Beef Cattle", name_sv: "Albertanötköttsdjur", notes: "Alberta holds 43% of Canada's 10.9M head; exports 494K tonnes beef/veal worth $4.93B in 2024 (Ag Canada)"}
-- {id: can_prot_loc_atlantic_lobster_wild, grade: local, rating: 9, name: "Atlantic Lobster (wild-caught)", name_sv: "Atlanthummar (vildfångad)", notes: "Atlantic shellfish landings CAD $2.8B 2023; Nova Scotia, NB, PEI; world's largest cold-water lobster fishery (DFO 2023)"}
+- {id: can_prot_loc_atlantic_lobster_wild, grade: local, rating: 9, name: "Atlantic Lobster", name_sv: "Atlanthummar", notes: "wild-caught; Atlantic shellfish landings CAD $2.8B 2023; Nova Scotia, NB, PEI; world's largest cold-water lobster fishery (DFO 2023)"}
 - {id: can_prot_loc_bc_farmed_salmon, grade: local, rating: 8, name: "BC Farmed Atlantic Salmon", name_sv: "BC-odlad atlantlax", notes: "BC produced 51,364t farmed finfish 2023; $810.6M export value; 64,469t exported mostly to US (DFO Aquaculture 2023)"}
 - {id: can_prot_loc_snow_crab_atlantic, grade: local, rating: 7, name: "Atlantic Snow Crab", name_sv: "Atlantisk snökrabba", notes: "Top shellfish export by volume from Atlantic Canada; part of 387,169t shellfish landed value $2.8B (DFO 2023)"}
 - {id: can_prot_loc_prairie_bison, grade: local, rating: 6, name: "Prairie Bison", name_sv: "Präriebison", notes: "Canadian bison ranching centred in Manitoba, Saskatchewan, Alberta; Canada has world's largest commercial bison herd"}
 - {id: can_prot_loc_quebec_pork, grade: local, rating: 6, name: "Quebec Pork", name_sv: "Quebecskt fläsk", notes: "Quebec is Canada's largest pork-producing province; major export to Asia and US; contributes to 19.99 kg/capita total"}
-- {id: can_prot_loc_lake_whitefish, grade: local, rating: 5, name: "Lake Whitefish", name_sv: "Siklöja (Great Lakes)", notes: "Great Lakes and Prairie lake fishery; traditional Indigenous food; commercial freshwater fishery in Manitoba and Ontario"}
+- {id: can_prot_loc_lake_whitefish, grade: local, rating: 5, name: "Lake Whitefish", name_sv: "Siklöja", notes: "Great Lakes and Prairie lake fishery; traditional Indigenous food; commercial freshwater fishery in Manitoba and Ontario"}
 - {id: can_prot_loc_arctic_char_farmed, grade: local, rating: 4, name: "Farmed Arctic Char", name_sv: "Odlad arktisk röding", notes: "Canada's premium cold-water farmed fish; operations in PEI, Nunavut, Ontario; sold to fine-dining restaurants coast to coast"}
 - {id: can_prot_loc_dungeness_crab_bc, grade: local, rating: 3, name: "BC Dungeness Crab", name_sv: "BC Dungeness-krabba", notes: "Wild-caught Pacific Coast; part of BC's 100,387t total fisheries landings worth $452.5M (DFO 2023)"}
 
@@ -80,11 +80,11 @@ Key figures used:
 - {id: can_prod_sig_maple_syrup, grade: signature, rating: 9, name: "Maple Syrup", name_sv: "Lönnsirap", notes: "Quebec produces ~72% of world supply; 2024 record harvest ~239M lbs; $840.5M CAD gross value (PPAQ 2025)"}
 - {id: can_prod_sig_pei_potato, grade: signature, rating: 8, name: "PEI Potato", name_sv: "PEI-potatis", notes: "Prince Edward Island iron-rich red soil potatoes; national agricultural icon; 20.4% of Canada's record 127M cwt crop (2024)"}
 - {id: can_prod_sig_wild_blueberry, grade: signature, rating: 8, name: "Wild Blueberry", name_sv: "Vildblåbär", notes: "Nova Scotia and New Brunswick — Atlantic Canada is world's largest wild blueberry region; smaller, more flavorful than cultivated"}
-- {id: can_prod_sig_fiddleheads, grade: signature, rating: 7, name: "Fiddleheads", name_sv: "Ormbunksskott (fiddleheads)", notes: "Ostrich fern shoots foraged in NB, NS, Quebec each spring; uniquely Canadian seasonal delicacy; steamed or sautéed"}
+- {id: can_prod_sig_fiddleheads, grade: signature, rating: 7, name: "Fiddleheads", name_sv: "Ormbunksskott", notes: "Ostrich fern shoots foraged in NB, NS, Quebec each spring; uniquely Canadian seasonal delicacy; steamed or sautéed"}
 - {id: can_prod_sig_saskatoon_berry, grade: signature, rating: 6, name: "Saskatoon Berry", name_sv: "Saskatoonbär", notes: "Prairie Indigenous berry (Amelanchier alnifolia); traditional First Nations food; used in pies, jams, wines in Alberta/Saskatchewan"}
 - {id: can_prod_sig_cranberry, grade: signature, rating: 6, name: "Cranberry", name_sv: "Tranbär", notes: "BC is Canada's #2 cranberry province; Maritime bogs also produce; used in sauces, juices; Thanksgiving table staple"}
 - {id: can_prod_sig_ontario_corn, grade: signature, rating: 5, name: "Ontario Sweet Corn", name_sv: "Ontariomajskolv", notes: "Part of Indigenous Three Sisters (corn, beans, squash); Ontario #1 corn province; summer market staple across Canada"}
-- {id: can_prod_sig_wild_ramps, grade: signature, rating: 4, name: "Wild Ramps", name_sv: "Vildlök (ramps)", notes: "Quebec and Eastern Canada spring forage (Allium tricoccum); celebrated in Quebec as 'ail des bois'; forager and chef favourite"}
+- {id: can_prod_sig_wild_ramps, grade: signature, rating: 4, name: "Wild Ramps", name_sv: "Vildlök", notes: "Quebec and Eastern Canada spring forage (Allium tricoccum); celebrated in Quebec as 'ail des bois'; forager and chef favourite"}
 - {id: can_prod_sig_three_sisters_squash, grade: signature, rating: 4, name: "Three Sisters Squash", name_sv: "Tre systrars squash", notes: "Indigenous intercropped squash/corn/beans tradition; pumpkin and squash from Ontario/Quebec; cornerstone of First Nations agriculture"}
 
 ### Produce — Bulk
@@ -105,13 +105,13 @@ Key figures used:
 
 - {id: can_prod_loc_maple_syrup_quebec, grade: local, rating: 9, name: "Quebec Maple Syrup", name_sv: "Quebecks lönnsirap", notes: "Quebec = ~90% of Canada's output and ~72% of global supply; 12,600 full-time jobs; 85% exported to 70+ countries (PPAQ 2025)"}
 - {id: can_prod_loc_wild_blueberry_ns, grade: local, rating: 8, name: "Nova Scotia Wild Blueberry", name_sv: "Vildblåbär från Nova Scotia", notes: "Atlantic Canada is the world's largest wild blueberry producing region; low-bush variety; NS and NB dominate"}
-- {id: can_prod_loc_pei_potato, grade: local, rating: 8, name: "PEI Potato", name_sv: "PEI-potatis (lokal)", notes: "PEI 20.4% of Canada's record 127M cwt potato harvest 2024; island identity built on iron-rich red soil (Stats Can Dec 2024)"}
+- {id: can_prod_loc_pei_potato, grade: local, rating: 8, name: "PEI Potato", name_sv: "PEI-potatis", notes: "PEI 20.4% of Canada's record 127M cwt potato harvest 2024; island identity built on iron-rich red soil (Stats Can Dec 2024)"}
 - {id: can_prod_loc_cranberry_bc, grade: local, rating: 7, name: "BC Cranberry", name_sv: "BC-tranbär", notes: "Fraser Valley, BC: major Canadian cranberry bog production; alongside Maritime bogs; major export to juice and sauce processors"}
 - {id: can_prod_loc_fiddlehead_nb, grade: local, rating: 6, name: "New Brunswick Fiddlehead", name_sv: "Fiddleheads från New Brunswick", notes: "Wild-foraged ostrich fern shoots along NB/Quebec river banks; uniquely North American; spring seasonal harvest only"}
-- {id: can_prod_loc_saskatoon_berry, grade: local, rating: 6, name: "Saskatoon Berry (Prairie)", name_sv: "Saskatoonbär (Prärien)", notes: "Native to Canadian Prairies; grown commercially in SK and AB; also wild-harvested by First Nations peoples for centuries"}
-- {id: can_prod_loc_ontario_apple, grade: local, rating: 5, name: "Ontario Apple (Niagara)", name_sv: "Ontarioäpple (Niagara)", notes: "Niagara Peninsula and BC Okanagan Valley are Canada's two major apple-growing regions; McIntosh is a Canadian-bred variety"}
+- {id: can_prod_loc_saskatoon_berry, grade: local, rating: 6, name: "Saskatoon Berry", name_sv: "Saskatoonbär", notes: "Native to Canadian Prairies; grown commercially in SK and AB; also wild-harvested by First Nations peoples for centuries"}
+- {id: can_prod_loc_ontario_apple, grade: local, rating: 5, name: "Ontario Apple", name_sv: "Ontarioäpple", notes: "Niagara Peninsula and BC Okanagan Valley are Canada's two major apple-growing regions; McIntosh is a Canadian-bred variety"}
 - {id: can_prod_loc_quebec_greenhouse_tomato, grade: local, rating: 4, name: "Quebec Greenhouse Tomato", name_sv: "Québecsk växthustomat", notes: "Quebec and Ontario lead Canadian greenhouse tomato output; tomatoes account for a large share of greenhouse veg production"}
-- {id: can_prod_loc_wild_ramps_quebec, grade: local, rating: 3, name: "Quebec Wild Ramps (Ail des Bois)", name_sv: "Quebecks vildlök", notes: "Protected foraged species in Quebec; harvested under strict quotas; celebrated spring delicacy in Quebec restaurants and markets"}
+- {id: can_prod_loc_wild_ramps_quebec, grade: local, rating: 3, name: "Quebec Wild Ramps", name_sv: "Quebecks vildlök", notes: "Ail des Bois; Protected foraged species in Quebec; harvested under strict quotas; celebrated spring delicacy in Quebec restaurants and markets"}
 
 
 ## Grains & Starches
@@ -120,13 +120,13 @@ Key figures used:
 <!-- Iconic grains and starches defining Canadian foodways and identity. -->
 
 - {id: can_grain_sig_prairie_wheat, grade: signature, rating: 9, name: "Prairie Hard Spring Wheat", name_sv: "Prärie-höstvete", notes: "Canadian Prairies — high-protein hard red spring wheat is the backbone of Canadian and global bread production"}
-- {id: can_grain_sig_canola, grade: signature, rating: 9, name: "Canola (Rapeseed)", name_sv: "Raps (canola)", notes: "Bred in Canada 1970s from rapeseed; Canada = world #1 producer 21.8M tonnes 2025; name from 'Canadian oil, low acid'"}
+- {id: can_grain_sig_canola, grade: signature, rating: 9, name: "Canola", name_sv: "Raps", notes: "Bred in Canada 1970s from rapeseed; Canada = world #1 producer 21.8M tonnes 2025; name from 'Canadian oil, low acid'"}
 - {id: can_grain_sig_wild_rice, grade: signature, rating: 8, name: "Wild Rice", name_sv: "Vildris", notes: "Aquatic grass native to Manitoba/Ontario lakes; traditional Indigenous staple; harvested by canoe by First Nations peoples"}
-- {id: can_grain_sig_bannock, grade: signature, rating: 7, name: "Bannock", name_sv: "Bannock (ursprungsfolksbröd)", notes: "Indigenous flatbread made with flour, water, fat; staple of Métis and First Nations; adapted to wheat flour after European contact"}
+- {id: can_grain_sig_bannock, grade: signature, rating: 7, name: "Bannock", name_sv: "Bannock", notes: "Indigenous flatbread made with flour, water, fat; staple of Métis and First Nations; adapted to wheat flour after European contact"}
 - {id: can_grain_sig_oats, grade: signature, rating: 6, name: "Oats", name_sv: "Havre", notes: "Prairie staple grain; Canada among top world oat producers; porridge and oatmeal are common Canadian breakfast staples"}
 - {id: can_grain_sig_barley, grade: signature, rating: 6, name: "Barley", name_sv: "Korn", notes: "Prairie grain; Canada is top global barley producer/exporter; backbone of Canadian craft beer industry and livestock feed"}
 - {id: can_grain_sig_rye, grade: signature, rating: 5, name: "Rye", name_sv: "Råg", notes: "Prairie grain; Canadian rye whisky (Canadian Club, Crown Royal) is globally famous; rye bread popular in Ukrainian-Canadian communities"}
-- {id: can_grain_sig_cornmeal_indigenous, grade: signature, rating: 5, name: "Cornmeal (Indigenous)", name_sv: "Majsmjöl (ursprungsfolk)", notes: "Three Sisters crop (corn, beans, squash) — Iroquois/Haudenosaunee tradition; cornmeal used in bannock and puddings"}
+- {id: can_grain_sig_cornmeal_indigenous, grade: signature, rating: 5, name: "Cornmeal", name_sv: "Majsmjöl", notes: "Indigenous; Three Sisters crop (corn, beans, squash) — Iroquois/Haudenosaunee tradition; cornmeal used in bannock and puddings"}
 - {id: can_grain_sig_buckwheat, grade: signature, rating: 4, name: "Buckwheat", name_sv: "Bovete", notes: "Grown in Quebec and Ontario; used in French-Canadian crêpes (galettes) and pancakes; gluten-free grain option in Canadian kitchens"}
 
 ### Grains & Starches — Bulk
@@ -134,24 +134,24 @@ Key figures used:
 
 - {id: can_grain_bul_wheat_flour_bread, grade: bulk, rating: 9, name: "Wheat Flour / White Bread", name_sv: "Vetemjöl / vitt bröd", notes: "Dominant grain product; Canadian bread consumption underpinned by 35M tonne 2024 domestic wheat harvest (Cereals Canada)"}
 - {id: can_grain_bul_white_rice, grade: bulk, rating: 8, name: "White Rice", name_sv: "Vitt ris", notes: "Most consumed grain after wheat; largely imported; ubiquitous across multicultural Canadian households coast to coast"}
-- {id: can_grain_bul_pasta, grade: bulk, rating: 7, name: "Pasta (Durum Wheat)", name_sv: "Pasta (durumvete)", notes: "Canadian Prairie durum wheat is world-class; pasta is a top-consumed grain product in Canadian homes (Stats Can food data)"}
-- {id: can_grain_bul_potato_starch, grade: bulk, rating: 6, name: "Potato (as starch/side)", name_sv: "Potatis (som stärkelse)", notes: "26% of all vegetable receipts in Canada; boiled, mashed, fried — the most eaten starchy side dish in Canadian cuisine"}
+- {id: can_grain_bul_pasta, grade: bulk, rating: 7, name: "Pasta", name_sv: "Pasta", notes: "Canadian Prairie durum wheat is world-class; pasta is a top-consumed grain product in Canadian homes (Stats Can food data)"}
+- {id: can_grain_bul_potato_starch, grade: bulk, rating: 6, name: "Potato", name_sv: "Potatis", notes: "as starch/side; 26% of all vegetable receipts in Canada; boiled, mashed, fried — the most eaten starchy side dish in Canadian cuisine"}
 - {id: can_grain_bul_oatmeal, grade: bulk, rating: 6, name: "Oatmeal / Rolled Oats", name_sv: "Havregröt / havregryn", notes: "Dominant Canadian breakfast grain; Quaker Oats (Canadian brand heritage); Prairie oats in 97% of Canadian household pantries"}
-- {id: can_grain_bul_corn_products, grade: bulk, rating: 5, name: "Corn Products (cornflakes, tortilla)", name_sv: "Majsprodukter (cornflakes, tortilla)", notes: "Breakfast cereal and snack industry; Ontario corn production supplies Canadian food processors; high-volume consumption"}
-- {id: can_grain_bul_barley_beer, grade: bulk, rating: 4, name: "Barley (Beer/Malt)", name_sv: "Korn (öl/malt)", notes: "Prairie barley drives Canadian beer industry (Labatt, Molson); per capita beer consumption ~75L/year nationally"}
+- {id: can_grain_bul_corn_products, grade: bulk, rating: 5, name: "Corn Products", name_sv: "Majsprodukter", notes: "cornflakes, tortilla; Breakfast cereal and snack industry; Ontario corn production supplies Canadian food processors; high-volume consumption"}
+- {id: can_grain_bul_barley_beer, grade: bulk, rating: 4, name: "Barley", name_sv: "Korn", notes: "Beer/Malt; Prairie barley drives Canadian beer industry (Labatt, Molson); per capita beer consumption ~75L/year nationally"}
 - {id: can_grain_bul_rye_bread, grade: bulk, rating: 3, name: "Rye Bread", name_sv: "Rågbröd", notes: "Popular in Ukrainian, Polish, and German-Canadian communities; Prairie heritage grain; significant artisan bread consumption"}
-- {id: can_grain_bul_wild_rice_bulk, grade: bulk, rating: 2, name: "Wild Rice", name_sv: "Vildris (konsumtion)", notes: "Growing mainstream consumption; Manitoba and Ontario production; sold in all major Canadian grocery chains as a gourmet staple"}
+- {id: can_grain_bul_wild_rice_bulk, grade: bulk, rating: 2, name: "Wild Rice", name_sv: "Vildris", notes: "Growing mainstream consumption; Manitoba and Ontario production; sold in all major Canadian grocery chains as a gourmet staple"}
 
 ### Grains & Starches — Local
 <!-- Produced or grown in Canada specifically. -->
 
 - {id: can_grain_loc_hard_spring_wheat, grade: local, rating: 9, name: "Prairie Hard Red Spring Wheat", name_sv: "Prärie-hårt rödvete", notes: "Canada = world #3 wheat exporter; 35M tonnes 2024 (+6% YoY); exports to 80+ countries (Cereals Canada 2024 crop report)"}
-- {id: can_grain_loc_canola_seed, grade: local, rating: 9, name: "Canola Seed", name_sv: "Rapsfrö (canola)", notes: "Canada = world #1 canola producer; 21.8M tonnes record 2025; $15.8B CAD total exports 2023 (Canola Council of Canada)"}
+- {id: can_grain_loc_canola_seed, grade: local, rating: 9, name: "Canola Seed", name_sv: "Rapsfrö", notes: "Canada = world #1 canola producer; 21.8M tonnes record 2025; $15.8B CAD total exports 2023 (Canola Council of Canada)"}
 - {id: can_grain_loc_wild_rice_mb, grade: local, rating: 8, name: "Manitoba Wild Rice", name_sv: "Manitobavildris", notes: "Native aquatic grass harvested from boreal lakes; Manitoba and NW Ontario; traditional Indigenous harvest and commercial production"}
 - {id: can_grain_loc_prairie_oats, grade: local, rating: 7, name: "Prairie Oats", name_sv: "Präriehavre", notes: "Canada is world's #3 oat producer; Saskatchewan and Manitoba lead; exported to US and EU for food and feed (Ag Canada)"}
 - {id: can_grain_loc_prairie_barley, grade: local, rating: 6, name: "Prairie Barley", name_sv: "Präriekorn", notes: "Canada is top global barley exporter; two-row and six-row varieties from Alberta/Saskatchewan used in beer and animal feed"}
 - {id: can_grain_loc_prairie_rye, grade: local, rating: 5, name: "Prairie Rye", name_sv: "Prärieråg", notes: "Grown across Canadian Prairies; backbone of Canadian rye whisky industry (Crown Royal, Canadian Club, Forty Creek)"}
-- {id: can_grain_loc_flaxseed, grade: local, rating: 5, name: "Flaxseed (Linseed)", name_sv: "Linfrö", notes: "Canada is world's largest flaxseed producer and exporter; Saskatchewan produces ~80% of Canadian flax; major omega-3 source"}
+- {id: can_grain_loc_flaxseed, grade: local, rating: 5, name: "Flaxseed", name_sv: "Linfrö", notes: "Linseed; Canada is world's largest flaxseed producer and exporter; Saskatchewan produces ~80% of Canadian flax; major omega-3 source"}
 - {id: can_grain_loc_saskatchewan_lentils, grade: local, rating: 4, name: "Saskatchewan Lentils", name_sv: "Saskatchewanlinser", notes: "Canada is world's #1 lentil exporter; Saskatchewan produces >95% of Canadian lentils; major protein export crop (Pulse Canada)"}
 - {id: can_grain_loc_durum_wheat, grade: local, rating: 4, name: "Prairie Durum Wheat", name_sv: "Prärie-durumvete", notes: "Saskatchewan is world's top quality durum producer; used in premium pasta worldwide; Canada exports durum to Italy and beyond"}
 
@@ -161,13 +161,13 @@ Key figures used:
 ### Dairy, Oils & Sauces — Signature
 <!-- Iconic dairy products, oils, and sauces that define Canadian cuisine. -->
 
-- {id: can_dairy_sig_cheese_curds, grade: signature, rating: 9, name: "Cheese Curds (Poutine)", name_sv: "Ostkryddor (poutine)", notes: "Fresh squeaky Quebec cheddar curds — essential poutine ingredient; must be same-day fresh; defining Canadian comfort food"}
+- {id: can_dairy_sig_cheese_curds, grade: signature, rating: 9, name: "Cheese Curds", name_sv: "Ostkryddor", notes: "Fresh squeaky Quebec cheddar curds — essential poutine ingredient; must be same-day fresh; defining Canadian comfort food"}
 - {id: can_dairy_sig_maple_cream, grade: signature, rating: 9, name: "Maple Cream / Maple Butter", name_sv: "Lönncreme / lönnsmör", notes: "Whipped pure Quebec maple syrup; spreadable; iconic Canadian souvenir and artisan product; sold at every sugar shack (cabane à sucre)"}
-- {id: can_dairy_sig_canola_oil, grade: signature, rating: 8, name: "Canola Oil", name_sv: "Rapsolja (canola)", notes: "Canadian invention (1970s); world's #1-produced cooking oil from Canada; light, neutral flavour; dominant in Canadian home cooking"}
+- {id: can_dairy_sig_canola_oil, grade: signature, rating: 8, name: "Canola Oil", name_sv: "Rapsolja", notes: "Canadian invention (1970s); world's #1-produced cooking oil from Canada; light, neutral flavour; dominant in Canadian home cooking"}
 - {id: can_dairy_sig_poutine_gravy, grade: signature, rating: 7, name: "Brown Poutine Gravy", name_sv: "Brun poutine-sås", notes: "Quebec-style brown beef or chicken gravy poured hot over fries and cheese curds; inseparable from Canadian poutine identity"}
-- {id: can_dairy_sig_ontario_cheddar, grade: signature, rating: 7, name: "Ontario Aged Cheddar", name_sv: "Ontariocheddar (lagrad)", notes: "Ontario cheddar heritage dating to 1860s factory at Perth, ON; Black Diamond and Armstrong brands are Canadian household names"}
+- {id: can_dairy_sig_ontario_cheddar, grade: signature, rating: 7, name: "Ontario Aged Cheddar", name_sv: "Ontariocheddar", notes: "Ontario cheddar heritage dating to 1860s factory at Perth, ON; Black Diamond and Armstrong brands are Canadian household names"}
 - {id: can_dairy_sig_butter, grade: signature, rating: 6, name: "Butter", name_sv: "Smör", notes: "Canadian supply-managed dairy ensures high-quality butter; 3.8 kg/capita 2023 (Stats Can); essential in butter tarts and baking"}
-- {id: can_dairy_sig_maritime_cream, grade: signature, rating: 6, name: "Maritime Cream (Chowder)", name_sv: "Maritime-grädde (chowder)", notes: "Heavy cream from Maritime dairy for lobster bisque, seafood chowder, and clam chowder — cornerstone of East Coast cuisine"}
+- {id: can_dairy_sig_maritime_cream, grade: signature, rating: 6, name: "Maritime Cream", name_sv: "Maritime-grädde", notes: "Heavy cream from Maritime dairy for lobster bisque, seafood chowder, and clam chowder — cornerstone of East Coast cuisine"}
 - {id: can_dairy_sig_quebec_brie, grade: signature, rating: 5, name: "Quebec Artisan Brie", name_sv: "Quebecks artisanbrie", notes: "Quebec has 137+ dairy processing plants producing artisan cheeses; soft-ripened brie-style cheeses are celebrated nationally"}
 - {id: can_dairy_sig_ice_cream, grade: signature, rating: 4, name: "Canadian Ice Cream", name_sv: "Kanadensisk glass", notes: "Canada among highest ice cream consumers globally; Kawartha Dairy (ON), Chapman's (ON) are iconic Canadian ice cream brands"}
 
@@ -176,8 +176,8 @@ Key figures used:
 
 - {id: can_dairy_bul_fluid_milk, grade: bulk, rating: 9, name: "Fluid Milk", name_sv: "Flytande mjölk", notes: "58.7 litres/capita 2023 (Stats Can dairy stats); supply-managed; available in 1%, 2%, skim, and whole varieties nationwide"}
 - {id: can_dairy_bul_cheddar_cheese, grade: bulk, rating: 8, name: "Cheddar Cheese", name_sv: "Cheddarost", notes: "15.3 kg cheese/capita 2023 (Stats Can); cheddar is Canada's most consumed cheese type; sliced, shredded, and aged forms"}
-- {id: can_dairy_bul_canola_oil_bulk, grade: bulk, rating: 8, name: "Canola Oil (household)", name_sv: "Rapsolja (hushåll)", notes: "~24–28 kg/capita vegetable oil 2022 (Stats Can Table 32-10-0054-01); canola is dominant cooking oil replacing lard and shortening"}
-- {id: can_dairy_bul_butter_bulk, grade: bulk, rating: 7, name: "Butter", name_sv: "Smör (konsumtion)", notes: "3.8 kg/capita 2023; 3.5–3.7 kg/capita range 2022–24 (Stats Can); used heavily in baking, cooking, and spreading"}
+- {id: can_dairy_bul_canola_oil_bulk, grade: bulk, rating: 8, name: "Canola Oil", name_sv: "Rapsolja", notes: "household; ~24–28 kg/capita vegetable oil 2022 (Stats Can Table 32-10-0054-01); canola is dominant cooking oil replacing lard and shortening"}
+- {id: can_dairy_bul_butter_bulk, grade: bulk, rating: 7, name: "Butter", name_sv: "Smör", notes: "3.8 kg/capita 2023; 3.5–3.7 kg/capita range 2022–24 (Stats Can); used heavily in baking, cooking, and spreading"}
 - {id: can_dairy_bul_mozzarella, grade: bulk, rating: 6, name: "Mozzarella Cheese", name_sv: "Mozzarellaost", notes: "Pizza culture drives mozzarella consumption; part of Canada's 15.3 kg/capita cheese total; processed and fresh forms dominant"}
 - {id: can_dairy_bul_yogurt, grade: bulk, rating: 5, name: "Yogurt", name_sv: "Yoghurt", notes: "Growing per capita consumption; Greek yogurt trend drove 40%+ sales growth 2010–2020; major breakfast and snack staple in Canada"}
 - {id: can_dairy_bul_sour_cream, grade: bulk, rating: 4, name: "Sour Cream", name_sv: "Gräddfil", notes: "Used on baked potatoes, tacos, pierogies; high consumption in Eastern European-Canadian communities (Ukrainian, Polish heritage)"}
@@ -187,15 +187,15 @@ Key figures used:
 ### Dairy, Oils & Sauces — Local
 <!-- Produced specifically in Canada. -->
 
-- {id: can_dairy_loc_canola_oil_produced, grade: local, rating: 9, name: "Canadian Canola Oil (pressed)", name_sv: "Kanadensisk rapsolja (pressad)", notes: "World #1 canola producer; 3.2M tonnes canola oil exported ($6.9B CAD) in 2023; Prairie crushing plants in AB/SK/MB"}
+- {id: can_dairy_loc_canola_oil_produced, grade: local, rating: 9, name: "Canadian Canola Oil", name_sv: "Kanadensisk rapsolja", notes: "pressed; World #1 canola producer; 3.2M tonnes canola oil exported ($6.9B CAD) in 2023; Prairie crushing plants in AB/SK/MB"}
 - {id: can_dairy_loc_quebec_dairy_milk, grade: local, rating: 9, name: "Quebec Dairy Milk", name_sv: "Quebecks mjölk", notes: "Quebec: 354,000 dairy cows (largest provincial herd); 4,333 dairy farms; 95.8M hectolitres nationally 2023 (dairy industry report)"}
-- {id: can_dairy_loc_ontario_cheddar_local, grade: local, rating: 8, name: "Ontario Cheddar", name_sv: "Ontariocheddar (lokal)", notes: "Ontario heritage cheddar since 1860s; Black Diamond brand started in Belleville ON; supply-managed quality guaranteed"}
+- {id: can_dairy_loc_ontario_cheddar_local, grade: local, rating: 8, name: "Ontario Cheddar", name_sv: "Ontariocheddar", notes: "Ontario heritage cheddar since 1860s; Black Diamond brand started in Belleville ON; supply-managed quality guaranteed"}
 - {id: can_dairy_loc_quebec_artisan_cheese, grade: local, rating: 7, name: "Quebec Artisan Cheese", name_sv: "Quebecks artisanost", notes: "Quebec leads: 137+ dairy processing plants; produces majority of Canadian artisan cheeses; cheese = 38% of all dairy exports"}
-- {id: can_dairy_loc_canadian_butter, grade: local, rating: 7, name: "Canadian Supply-Managed Butter", name_sv: "Kanadensiskt smör (kvotstyrt)", notes: "Supply management system ensures premium quality; 3.8 kg/capita consumed 2023; churned from Canadian dairy herds only"}
+- {id: can_dairy_loc_canadian_butter, grade: local, rating: 7, name: "Canadian Supply-Managed Butter", name_sv: "Kanadensiskt smör", notes: "Supply management system ensures premium quality; 3.8 kg/capita consumed 2023; churned from Canadian dairy herds only"}
 - {id: can_dairy_loc_maple_cream_local, grade: local, rating: 6, name: "Quebec Maple Cream", name_sv: "Quebecks lönncreme", notes: "Made from pure Quebec maple syrup; production centred in Laurentides, Estrie, Beauce regions; $840.5M CAD maple industry 2025"}
-- {id: can_dairy_loc_pei_dairy, grade: local, rating: 5, name: "PEI Dairy (Cows Creamery)", name_sv: "PEI-mejeri", notes: "Cows Creamery in PEI produces award-winning butter and cheddar; PEI dairy tied to potato and agricultural identity of the island"}
-- {id: can_dairy_loc_bc_butter, grade: local, rating: 4, name: "BC Dairy (Okanagan/Fraser Valley)", name_sv: "BC-mejeri (Okanagan/Fraser Valley)", notes: "Fraser Valley and Okanagan support BC's dairy sector; BC Dairy Association supplies the province with fluid milk and cream"}
-- {id: can_dairy_loc_prairie_canola_meal, grade: local, rating: 3, name: "Prairie Canola Meal (Feed/Oil)", name_sv: "Prärie-rapsexpeller", notes: "5.4M tonnes canola meal exported ($2.9B CAD) in 2023; by-product of oil pressing; used in animal feed and food processing"}
+- {id: can_dairy_loc_pei_dairy, grade: local, rating: 5, name: "PEI Dairy", name_sv: "PEI-mejeri", notes: "Cows Creamery in PEI produces award-winning butter and cheddar; PEI dairy tied to potato and agricultural identity of the island"}
+- {id: can_dairy_loc_bc_butter, grade: local, rating: 4, name: "BC Dairy", name_sv: "BC-mejeri", notes: "Okanagan/Fraser Valley; Fraser Valley and Okanagan support BC's dairy sector; BC Dairy Association supplies the province with fluid milk and cream"}
+- {id: can_dairy_loc_prairie_canola_meal, grade: local, rating: 3, name: "Prairie Canola Meal", name_sv: "Prärie-rapsexpeller", notes: "Feed/Oil; 5.4M tonnes canola meal exported ($2.9B CAD) in 2023; by-product of oil pressing; used in animal feed and food processing"}
 
 
 ## Spices, Nuts & Seasonings
@@ -203,25 +203,25 @@ Key figures used:
 ### Spices, Nuts & Seasonings — Signature
 <!-- Iconic seasonings that define the flavour of Canadian cuisine. -->
 
-- {id: can_spice_sig_maple_syrup_seasoning, grade: signature, rating: 9, name: "Maple Syrup (as seasoning)", name_sv: "Lönnsirap (krydda)", notes: "'Liquid gold' — used as glaze, marinade, sweetener; Quebec 72% world supply; defines Canadian flavour profile globally"}
+- {id: can_spice_sig_maple_syrup_seasoning, grade: signature, rating: 9, name: "Maple Syrup", name_sv: "Lönnsirap", notes: "as seasoning; 'Liquid gold' — used as glaze, marinade, sweetener; Quebec 72% world supply; defines Canadian flavour profile globally"}
 - {id: can_spice_sig_prairie_mustard_seed, grade: signature, rating: 8, name: "Prairie Mustard Seed", name_sv: "Präriesenapsfrö", notes: "Canada = world #1 mustard seed exporter; 192K tonnes harvested 2024; Saskatchewan 75% of production (Stats Can)"}
 - {id: can_spice_sig_dill, grade: signature, rating: 7, name: "Dill", name_sv: "Dill", notes: "Maritime and Quebec cooking staple; dill pickles are a Canadian pantry icon; grown in Prairies; essential in seafood and chowder"}
-- {id: can_spice_sig_sea_salt, grade: signature, rating: 7, name: "Sea Salt (Atlantic/Pacific)", name_sv: "Havssalt (Atlanten/Stilla havet)", notes: "Artisan sea salt from PEI, Nova Scotia, and BC; used in smoked salmon, lobster boils, and premium Canadian food products"}
+- {id: can_spice_sig_sea_salt, grade: signature, rating: 7, name: "Sea Salt", name_sv: "Havssalt", notes: "Atlantic/Pacific; Artisan sea salt from PEI, Nova Scotia, and BC; used in smoked salmon, lobster boils, and premium Canadian food products"}
 - {id: can_spice_sig_bay_leaf, grade: signature, rating: 6, name: "Bay Leaf", name_sv: "Lagerblad", notes: "Quebec tourtière and French-Canadian stew tradition (ragoût de boulettes); imported but inseparable from habitant cooking"}
 - {id: can_spice_sig_celery_seed, grade: signature, rating: 6, name: "Celery Seed", name_sv: "Sellerifrö", notes: "Maritime seafood boils, chowder seasoning, and coleslaw; essential in Atlantic lobster and crab cookery traditions"}
 - {id: can_spice_sig_wild_sage, grade: signature, rating: 5, name: "Wild Prairie Sage", name_sv: "Vild präriesalvia", notes: "Artemisia/sage species used by Plains Indigenous peoples; used in traditional smoking, teas, and seasonal meat seasonings"}
 - {id: can_spice_sig_smoked_paprika, grade: signature, rating: 5, name: "Smoked Paprika", name_sv: "Rökt paprikapulver", notes: "Canadian BBQ culture — Alberta brisket, Calgary Stampede BBQ; smoked paprika in dry rubs for beef and pork across the Prairies"}
-- {id: can_spice_sig_sumac, grade: signature, rating: 4, name: "Sumac (Staghorn)", name_sv: "Sumak (hjorthornsumak)", notes: "Rhus typhina native to Eastern Canada; traditional Indigenous seasoning; tart lemon flavour; used in marinades and spice blends"}
+- {id: can_spice_sig_sumac, grade: signature, rating: 4, name: "Sumac", name_sv: "Sumak", notes: "Staghorn; Rhus typhina native to Eastern Canada; traditional Indigenous seasoning; tart lemon flavour; used in marinades and spice blends"}
 
 ### Spices, Nuts & Seasonings — Bulk
 <!-- Highest volume consumed by Canadians statistically. -->
 
 - {id: can_spice_bul_salt, grade: bulk, rating: 9, name: "Salt", name_sv: "Salt", notes: "#1 consumed seasoning in Canada; table, kosher, and sea salt forms; ~9 kg/capita total salt consumption (food + industrial)"}
 - {id: can_spice_bul_black_pepper, grade: bulk, rating: 8, name: "Black Pepper", name_sv: "Svartpeppar", notes: "#2 seasoning by volume; imported; used in virtually all Canadian savoury cooking; pre-ground pepper ubiquitous on every table"}
-- {id: can_spice_bul_garlic_powder, grade: bulk, rating: 7, name: "Garlic (dried/powder)", name_sv: "Vitlök (torkat/pulver)", notes: "High-volume use in processed foods, marinades, BBQ rubs; garlic consumption driven by multicultural Canadian cuisine"}
-- {id: can_spice_bul_dill_pickles, grade: bulk, rating: 6, name: "Dill (Pickles & Seasoning)", name_sv: "Dill (pickles & krydda)", notes: "Dill pickles are the most consumed pickle in Canada; dill seasoning on chips (Old Dutch Dill Pickle chips — iconic Canadian snack)"}
+- {id: can_spice_bul_garlic_powder, grade: bulk, rating: 7, name: "Garlic", name_sv: "Vitlök", notes: "High-volume use in processed foods, marinades, BBQ rubs; garlic consumption driven by multicultural Canadian cuisine"}
+- {id: can_spice_bul_dill_pickles, grade: bulk, rating: 6, name: "Dill", name_sv: "Dill", notes: "Pickles & Seasoning; Dill pickles are the most consumed pickle in Canada; dill seasoning on chips (Old Dutch Dill Pickle chips — iconic Canadian snack)"}
 - {id: can_spice_bul_cinnamon, grade: bulk, rating: 6, name: "Cinnamon", name_sv: "Kanel", notes: "High baking consumption; butter tarts, apple pie, cinnamon rolls, French-Canadian sugar pie (tarte au sucre) all use cinnamon"}
-- {id: can_spice_bul_mustard_prepared, grade: bulk, rating: 5, name: "Prepared Mustard (Condiment)", name_sv: "Beredd senap (kondiment)", notes: "French's yellow mustard dominant; hot dogs, poutine toppings, sandwich spreads; high per capita consumption nationwide"}
+- {id: can_spice_bul_mustard_prepared, grade: bulk, rating: 5, name: "Prepared Mustard", name_sv: "Beredd senap", notes: "Condiment; French's yellow mustard dominant; hot dogs, poutine toppings, sandwich spreads; high per capita consumption nationwide"}
 - {id: can_spice_bul_onion_powder, grade: bulk, rating: 4, name: "Onion Powder", name_sv: "Lökpulver", notes: "Widely used in processed foods, dry rubs, soups; ranks among top 5 spice purchases in Canadian grocery stores"}
 - {id: can_spice_bul_paprika, grade: bulk, rating: 3, name: "Paprika", name_sv: "Paprikapulver", notes: "Used in Hungarian-Canadian and Ukrainian-Canadian cooking (goulash, cabbage rolls); imported; high grocery store velocity"}
 - {id: can_spice_bul_thyme, grade: bulk, rating: 2, name: "Thyme", name_sv: "Timjan", notes: "Quebec and Maritime cooking staple; used in tourtière, pea soup (soupe aux pois), and French-Canadian bouquet garni traditions"}
@@ -230,11 +230,11 @@ Key figures used:
 <!-- Grown, produced, or foraged in Canada specifically. -->
 
 - {id: can_spice_loc_mustard_seed_sk, grade: local, rating: 9, name: "Saskatchewan Mustard Seed", name_sv: "Saskatchewansenapsfrö", notes: "Canada = world #1 mustard seed exporter; 192K tonnes 2024 harvest; SK produces 75%, AB 25% (Statistics Canada)"}
-- {id: can_spice_loc_wild_mint, grade: local, rating: 7, name: "Wild Mint (Prairie)", name_sv: "Vild mynta (Prärien)", notes: "Mentha arvensis native to Canadian Prairies and boreal regions; used in Indigenous teas, wild game marinades, and foraged cooking"}
-- {id: can_spice_loc_prairie_sage_local, grade: local, rating: 7, name: "Prairie Sage (Artemisia)", name_sv: "Präriesalvia (Artemisia)", notes: "Artemisia ludoviciana widely harvested by Plains Cree, Blackfoot, Métis; ceremonial and culinary uses; smudging and meat seasoning"}
-- {id: can_spice_loc_wild_bergamot, grade: local, rating: 6, name: "Wild Bergamot (Monarda)", name_sv: "Vild bergamott (Monarda)", notes: "Monarda fistulosa native across Canadian Prairies and Eastern Canada; traditional Ojibwe/Cree flavouring and medicinal herb"}
+- {id: can_spice_loc_wild_mint, grade: local, rating: 7, name: "Wild Mint", name_sv: "Vild mynta", notes: "Mentha arvensis native to Canadian Prairies and boreal regions; used in Indigenous teas, wild game marinades, and foraged cooking"}
+- {id: can_spice_loc_prairie_sage_local, grade: local, rating: 7, name: "Prairie Sage", name_sv: "Präriesalvia", notes: "Artemisia ludoviciana widely harvested by Plains Cree, Blackfoot, Métis; ceremonial and culinary uses; smudging and meat seasoning"}
+- {id: can_spice_loc_wild_bergamot, grade: local, rating: 6, name: "Wild Bergamot", name_sv: "Vild bergamott", notes: "Monarda fistulosa native across Canadian Prairies and Eastern Canada; traditional Ojibwe/Cree flavouring and medicinal herb"}
 - {id: can_spice_loc_labrador_tea, grade: local, rating: 6, name: "Labrador Tea", name_sv: "Labradorthé", notes: "Rhododendron groenlandicum; Indigenous boreal herb; used as tea by Inuit, Cree, Algonquin; subtle herbal earthy flavour"}
-- {id: can_spice_loc_juniper_berry, grade: local, rating: 5, name: "Juniper Berry (Canadian)", name_sv: "Enbär (kanadensiskt)", notes: "Juniperus communis widespread across boreal Canada; Indigenous use in wild game seasoning; foragers use it in gin botanicals and rubs"}
+- {id: can_spice_loc_juniper_berry, grade: local, rating: 5, name: "Juniper Berry", name_sv: "Enbär", notes: "Canadian; Juniperus communis widespread across boreal Canada; Indigenous use in wild game seasoning; foragers use it in gin botanicals and rubs"}
 - {id: can_spice_loc_wild_garlic_ramps, grade: local, rating: 5, name: "Wild Garlic / Ramps", name_sv: "Vildvitlök / ramps", notes: "Allium tricoccum foraged in Eastern Canada (Quebec, Ontario, NB); spring seasonal; protected in Quebec under harvest quotas"}
-- {id: can_spice_loc_staghorn_sumac, grade: local, rating: 4, name: "Staghorn Sumac (Indigenous)", name_sv: "Hjorthornsumak (ursprungsfolk)", notes: "Rhus typhina native to Eastern Canada; traditional Haudenosaunee/Anishinaabe tart seasoning; used in tea, spice blends, marinades"}
-- {id: can_spice_loc_prairie_canola_spice, grade: local, rating: 3, name: "Canola Seed (toasted, spice use)", name_sv: "Rapsfrö (rostat, kryddbruk)", notes: "Toasted and cracked canola seeds used as nutty garnish in Prairie artisan cooking; niche culinary use of Canada's iconic #1 crop"}
+- {id: can_spice_loc_staghorn_sumac, grade: local, rating: 4, name: "Staghorn Sumac", name_sv: "Hjorthornsumak", notes: "Indigenous; Rhus typhina native to Eastern Canada; traditional Haudenosaunee/Anishinaabe tart seasoning; used in tea, spice blends, marinades"}
+- {id: can_spice_loc_prairie_canola_spice, grade: local, rating: 3, name: "Canola Seed", name_sv: "Rapsfrö", notes: "toasted, spice use; Toasted and cracked canola seeds used as nutty garnish in Prairie artisan cooking; niche culinary use of Canada's iconic #1 crop"}
