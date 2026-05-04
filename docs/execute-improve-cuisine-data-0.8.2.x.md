@@ -87,7 +87,7 @@ Execute IMPROVE_CUISINE_DATA.md for stub cuisine files, one at a time, no batchi
 - [ ] cameroonian.md — all 15 pairs
 - [ ] canadian.md — all 15 pairs
 - [ ] cantonese.md — all 15 pairs
-- [ ] caribbean.md — all 15 pairs
+- [x] caribbean.md — research_done: 1 (135 items; FAO FBS 2022 chicken/fish/pork stats, Grenada nutmeg 668.5t world #2, Jamaica rum 40M L, Barbados rum 18M L, Guyana rice CARICOM, Jamaica sauce $112.5M)
 - [ ] Run generator and verify
 - [ ] Commit all changes
 
