@@ -84,12 +84,12 @@ Execute IMPROVE_CUISINE_DATA.md for stub cuisine files, one at a time, no batchi
 
 ## Session 5 Status
 
-- [ ] cameroonian.md — all 15 pairs
-- [ ] canadian.md — all 15 pairs
-- [ ] cantonese.md — all 15 pairs
-- [x] caribbean.md — research_done: 1 (135 items; FAO FBS 2022 chicken/fish/pork stats, Grenada nutmeg 668.5t world #2, Jamaica rum 40M L, Barbados rum 18M L, Guyana rice CARICOM, Jamaica sauce $112.5M)
-- [ ] Run generator and verify
-- [ ] Commit all changes
+- [x] cameroonian.md — research_done: 1 (135 items; FAOSTAT 418k t meat, palm oil 320k t, njangsa/ehuru/Cameroon pepper)
+- [x] canadian.md — research_done: 1 (135 items; AAFC, DFO, PPAQ maple syrup, Statistics Canada, Canola Council)
+- [x] cantonese.md — research_done: 1 (135 items; Guangdong rice/oyster stats, Xinhui chen pi GI, Lee Kum Kee, Yangjiang douchi)
+- [x] caribbean.md — research_done: 1 (135 items; FAO FBS 2022, Grenada nutmeg 668.5t world #2, Jamaica rum 40M L, CARICOM rice)
+- [x] Generator ran clean (98 cuisines, 13248 ingredients, PANEL_VERSION 460)
+- [x] Commit all changes
 
 ### Session 4 Log (2026-05-04)
 - Completed brazilian.md: 15 sections × 9 items, all stub_ entries replaced, real EN+SV descriptions, research_done: 1
