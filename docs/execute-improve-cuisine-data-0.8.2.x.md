@@ -17,12 +17,26 @@ Execute IMPROVE_CUISINE_DATA.md for stub cuisine files, one at a time, no batchi
 
 ## Session 2 Status
 
-- [ ] armenian.md — all 15 pairs
-- [ ] australian.md — all 15 pairs
-- [ ] austrian.md — all 15 pairs
-- [ ] azerbaijani.md — all 15 pairs
-- [ ] Run generator and verify
-- [ ] Commit all changes
+- [x] armenian.md — research_done: 1
+- [x] australian.md — research_done: 1
+- [x] austrian.md — research_done: 1
+- [x] azerbaijani.md — research_done: 1
+- [x] Generator ran clean
+
+## Session 3 — Files (2026-05-04)
+9. balkan.md (region: european)
+10. bangladeshi.md (region: south_asian)
+11. basque.md (region: european)
+12. bengali.md (region: south_asian)
+
+## Session 3 Status
+
+- [x] balkan.md — research_done: 1 (135 items; FAO meat stats, Serbian plum/raspberry export data)
+- [x] bangladeshi.md — research_done: 1 (135 items; BBS HIES 2022, FAO, hilsa 571k MT)
+- [x] basque.md — research_done: 1 (135 items; AZTI fisheries, Spain meat/produce stats, EU PDO/PGI register)
+- [x] bengali.md — research_done: 1 (135 items; WB fisheries handbook, WB rice production, GI-tagged roshogolla/gobindobhog)
+- [x] Generator ran clean (98 cuisines, 13248 ingredients, PANEL_VERSION 453)
+- [x] Commit all changes
 
 ## Session Log
 
@@ -30,4 +44,7 @@ Execute IMPROVE_CUISINE_DATA.md for stub cuisine files, one at a time, no batchi
 - Created timeline file; completed afghan, algerian, american, argentinian; generator ran clean (98 cuisines, 13248 ingredients)
 
 ### Session 2 (2026-05-03)
-- Continuing with armenian, australian, austrian, azerbaijani
+- Completed armenian, australian, austrian, azerbaijani; generator ran clean
+
+### Session 3 (2026-05-04)
+- Verified balkan/bangladeshi from previous session (both complete); completed basque and bengali; generator ran clean (PANEL_VERSION 453)
