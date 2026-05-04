@@ -57,12 +57,12 @@ Execute IMPROVE_CUISINE_DATA.md for stub cuisine files, one at a time, no batchi
 
 ## Session 4 Status
 
-- [ ] brazilian.md — all 15 pairs
-- [ ] british.md — all 15 pairs
-- [ ] burmese.md — all 15 pairs
-- [ ] cajun_creole.md — all 15 pairs
-- [ ] Run generator and verify
-- [ ] Commit all changes
+- [x] brazilian.md — research_done: 1 (135 items; IBGE POF 2017–18, ABIEC 2025, urucum/açaí GI data)
+- [x] british.md — research_done: 1 (135 items; AHDB 2022, DEFRA 2022, PDO/PGI register)
+- [x] burmese.md — research_done: 1 (135 items; FAO fish 45 kg/capita, FAOSTAT rice, Myanmar MOALI)
+- [x] cajun_creole.md — research_done: 1 (135 items; LSU AgCenter crawfish, USDA/NASS, Tabasco/McIlhenny)
+- [x] Generator ran clean (98 cuisines, 13248 ingredients, PANEL_VERSION 458)
+- [x] Commit all changes
 
 ## Session 4 — Files (2026-05-04)
 13. brazilian.md (region: latin_american)
