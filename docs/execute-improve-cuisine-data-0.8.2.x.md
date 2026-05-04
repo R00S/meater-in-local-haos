@@ -70,9 +70,14 @@ Execute IMPROVE_CUISINE_DATA.md for stub cuisine files, one at a time, no batchi
 ## Session 4 Status
 
 - [x] brazilian.md — research_done: 1 (135 items; IBGE POF 2017-18, ABIEC Beef 2025, FAO/IBGE crop stats, USDA Dairy/Oilseeds, MAPA aquaculture)
-- [x] Generator ran clean (PANEL_VERSION 453 → 454)
+- [x] british.md — research_done: 1 (135 items; AHDB 2022, DEFRA 2022, CLAL/FAO/FAOSTAT, NDNS 2018-19, UK PDO/PGI register)
+- [ ] burmese.md — all 15 pairs
+- [ ] cajun_creole.md — all 15 pairs
+- [x] Generator ran clean (PANEL_VERSION 454 → 455)
 - [x] Commit all changes
 
 ### Session 4 Log (2026-05-04)
 - Completed brazilian.md: 15 sections × 9 items, all stub_ entries replaced, real EN+SV descriptions, research_done: 1
 - Key sources: chicken 51.2 kg/capita, beef 24.5 kg/capita (IBGE 2022); soy 154.6 MT, corn 131.9 MT, cassava 22.4 MT (FAO/IBGE 2022); tambaqui >130k MT/yr, pirarucu 10-12k MT/yr (MAPA); urucum ~60% world supply; Brazil nut wild-harvested Amazon
+- Completed british.md: 15 sections × 9 items, all stub_ entries replaced, real EN+SV descriptions, research_done: 1
+- Key sources: chicken 23.4 kg/capita (AHDB 2022); UK potato 68.5 kg/capita (FAOSTAT 2022); milk 92.13 kg/capita, cheese 12.14 kg/capita (CLAL 2022); wheat 15.5 MT, barley 7.4 MT, oats 1.0 MT (DEFRA harvest 2022); Welsh Lamb PGI, Scotch Beef PGI, Cornish Clotted Cream PDO, Stilton PDO, West Country Cheddar PDO, Jersey Royal PDO, Arbroath Smokie PDO, Cornish Pasty PDO, Kentish Cobnut PGI; salt 3.07 kg/capita (NDNS 2018-19)
