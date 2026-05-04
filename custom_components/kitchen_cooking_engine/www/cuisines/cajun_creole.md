@@ -36,7 +36,7 @@ Sources:
 - {id: prot_sig_chicken, grade: signature, rating: 7, name: "Chicken", name_sv: "Kyckling", notes: "Gumbo base protein; chicken and andouille gumbo is the most common home-cooked version. Used in jambalaya and fricassee"}
 - {id: prot_sig_oyster, grade: signature, rating: 7, name: "Gulf Oyster", name_sv: "Gulfostroner", notes: "Oyster po'boy, Oysters Rockefeller (Antoine's, New Orleans 1899). Louisiana produces ~50% of US oysters, ~11M lbs/yr (louisianaseafood.com)"}
 - {id: prot_sig_blue_crab, grade: signature, rating: 6, name: "Blue Crab", name_sv: "Blåkrabba", notes: "Crab gumbo, soft-shell crab po'boy, she-crab soup. LA is #1 US blue crab state: 47.4M lbs in 2021 (PAR Louisiana 2023)"}
-- {id: prot_sig_catfish, grade: signature, rating: 6, name: "Catfish", name_sv: "Havskatt / Malle", notes: "Blackened catfish (Paul Prudhomme invented technique), pan-fried catfish; staple of bayou country and po'boy shops"}
+- {id: prot_sig_catfish, grade: signature, rating: 6, name: "Catfish", name_sv: "Havskatt", notes: "Blackened catfish (Paul Prudhomme invented technique), pan-fried catfish; staple of bayou country and po'boy shops"}
 - {id: prot_sig_alligator, grade: signature, rating: 5, name: "Alligator", name_sv: "Alligator", notes: "Iconic Cajun specialty; fried alligator, alligator sauce piquante. Louisiana harvests ~313,000 alligators/yr, $104M economic impact (louisianaseafood.com)"}
 - {id: prot_sig_tasso, grade: signature, rating: 4, name: "Tasso Ham", name_sv: "Tasso-skinka", notes: "Heavily spiced, cured and smoked pork shoulder; distinctively Cajun. Used as flavoring in étouffée, red beans, greens. Not eaten alone"}
 
@@ -47,7 +47,7 @@ Sources:
 - {id: prot_bul_pork, grade: bulk, rating: 7, name: "Pork", name_sv: "Fläsk", notes: "Third US meat by volume: ~50.5 lbs/capita 2022 (USDA ERS). Backbone of Cajun charcuterie: andouille, boudin, tasso, cracklins"}
 - {id: prot_bul_shrimp, grade: bulk, rating: 6, name: "Shrimp", name_sv: "Räkor", notes: "Top consumed seafood in US; Louisiana also largest wild-shrimp state (97M lbs landed 2018). Appears in homes and restaurants weekly"}
 - {id: prot_bul_crawfish, grade: bulk, rating: 6, name: "Crawfish", name_sv: "Kräftor", notes: "Highest-volume locally distinctive protein in Louisiana; 130–199M lbs/yr produced, seasonal boils feed millions March–June (LSU AgCenter)"}
-- {id: prot_bul_catfish, grade: bulk, rating: 5, name: "Catfish", name_sv: "Havskatt / Malle", notes: "Top consumed freshwater fish in US South; Mississippi and Louisiana lead aquaculture production (USDA Catfish Production annual reports)"}
+- {id: prot_bul_catfish, grade: bulk, rating: 5, name: "Catfish", name_sv: "Havskatt", notes: "Top consumed freshwater fish in US South; Mississippi and Louisiana lead aquaculture production (USDA Catfish Production annual reports)"}
 - {id: prot_bul_turkey, grade: bulk, rating: 4, name: "Turkey", name_sv: "Kalkon", notes: "Significant US holiday and deli consumption; turducken (turkey-duck-chicken) is a Louisiana innovation for Thanksgiving"}
 - {id: prot_bul_eggs, grade: bulk, rating: 3, name: "Eggs", name_sv: "Ägg", notes: "Among highest per-capita protein sources; US consumption ~282 eggs/person/yr (American Egg Board 2022). Used in bread pudding and Creole sauces"}
 - {id: prot_bul_blue_crab, grade: bulk, rating: 2, name: "Blue Crab", name_sv: "Blåkrabba", notes: "Louisiana is #1 US blue crab producer; 47.4M lbs 2021. Widely available locally, significant consumption in season (PAR Louisiana 2023)"}

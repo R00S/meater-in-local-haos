@@ -35,7 +35,7 @@ Sources:
 - {id: bhekti_fish, grade: signature, rating: 5, name: "Bhekti", name_sv: "Bhekti", notes: "also barramundi; Lates calcarifer; Asian sea bass; bhekti paturi steamed in banana leaf with mustard paste; Bhekti paturi — fish steamed in banana leaf with mustard-poppy paste — an elegant WB preparation; bhekti is prized estuary fish"}
 - {id: pomfret_bengali, grade: signature, rating: 4, name: "Pomfret", name_sv: "Havstullepanna", notes: "Bhapa pomfret (steamed in mustard-coconut paste) is a Kolkata classic; pomfret from Bay of Bengal highly valued in Bengali cuisine"}
 - {id: dimer_devil, grade: signature, rating: 3, name: "Egg", name_sv: "Ägg", notes: "Dimer Devil / Egg Chop; Dimer devil — hard-boiled eggs coated in spiced mince and crumbed, deep-fried — iconic Kolkata street food and tiffin item"}
-- {id: kosha_mangsho, grade: signature, rating: 2, name: "Goat Mutton", name_sv: "Getmjöl / Lammkött", notes: "Kosha mangsho — slow-cooked dry-style goat curry with caramelised onion and spices — the definitive festive meat dish of West Bengal"}
+- {id: kosha_mangsho, grade: signature, rating: 2, name: "Goat", name_sv: "Getkött", notes: "Kosha mangsho — slow-cooked dry-style goat curry with caramelised onion and spices — the definitive festive meat dish of West Bengal; in Indian English 'mutton' = goat meat"}
 - {id: chicken_rezala, grade: signature, rating: 1, name: "Chicken", name_sv: "Kyckling", notes: "Chicken Rezala; Rezala — white Mughal-influenced chicken curry with yogurt, kewra, and whole spices — a Kolkata restaurant signature with roots in Nawabi cuisine"}
 
 ### Proteins — Bulk

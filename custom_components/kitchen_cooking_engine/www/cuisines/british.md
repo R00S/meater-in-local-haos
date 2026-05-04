@@ -81,7 +81,7 @@ Sources:
 
 ### Bulk
 
-- {id: potato_fresh, grade: bulk, rating: 9, name: "Potato", name_sv: "Potatis", notes: "fresh and processed; 68.5 kg/capita/yr UK 2022 (FAOSTAT); undisputed #1 most consumed vegetable by a large margin"}
+- {id: cauliflower_bulk, grade: bulk, rating: 9, name: "Cauliflower", name_sv: "Blomkål", notes: "Cauliflower cheese; roasted; in curry; UK major grower — ~190k tonnes/yr 2022 (DEFRA); Lancashire and Yorkshire lead production; a consistent top-10 UK fresh vegetable by volume sold"}
 - {id: tomato, grade: bulk, rating: 7, name: "Tomato", name_sv: "Tomat", notes: "Widely consumed fresh, canned and as tinned plum tomatoes; full English breakfast grilled tomato staple"}
 - {id: onion, grade: bulk, rating: 7, name: "Onion", name_sv: "Lök", notes: "~380k tonnes UK production 2022 (DEFRA); foundational British cooking ingredient for all savoury dishes"}
 - {id: carrot_fresh, grade: bulk, rating: 7, name: "Carrot", name_sv: "Morot", notes: "~700k tonnes UK production 2022 (DEFRA); eaten raw as snack, boiled, in soups, stews and salads"}
@@ -107,9 +107,9 @@ Sources:
 
 ### Signature
 
-- {id: stub_yorkshire_pudding, grade: signature, rating: 9, name: "[STUB] Grain", name_sv: "[UTKAST] Grain", notes: "British signature; STUB — Yorkshire pudding (batter baked in hot fat) — made from wheat flour already listed; research another British grain or baked product not yet listed"}
+- {id: malt_loaf, grade: signature, rating: 9, name: "Malt loaf", name_sv: "Maltbröd", notes: "Soreen's malt loaf; dense, sticky sweet bread made with black treacle and malted wheat flour; distinctly British product since Soreen (1936); not found outside UK food culture; eaten sliced and buttered"}
 - {id: white_sliced_bread, grade: signature, rating: 8, name: "White sliced bread", name_sv: "Vitt formbröd", notes: "'Best thing since sliced bread' — phrase coined in Britain 1930s; Warburtons, Hovis, Kingsmill dominate market"}
-- {id: stub_oat_porridge, grade: signature, rating: 8, name: "[STUB] Grain", name_sv: "[UTKAST] Grain", notes: "British signature; STUB — oat porridge — made from oats already listed as rolled_oats; research another British grain, bread or baked product not yet listed"}
+- {id: hot_cross_bun, grade: signature, rating: 8, name: "Hot cross bun", name_sv: "Långfredagsbullar", notes: "Spiced sweet enriched wheat dough with currants/raisins, marked with a white cross; ~800M sold annually in UK (AHDB); traditionally eaten on Good Friday; now year-round; distinctly British Easter baking tradition"}
 - {id: crumpet, grade: signature, rating: 8, name: "Crumpet", name_sv: "Krumpet", notes: "Wheat-and-yeast griddle bread; spongy with characteristic holes; toasted with butter; quintessentially British"}
 - {id: scone, grade: signature, rating: 8, name: "Scone", name_sv: "Scone", notes: "Cream tea with clotted cream and strawberry jam; afternoon tea icon; Devon vs Cornwall debate on order of toppings"}
 - {id: digestive_biscuit, grade: signature, rating: 8, name: "Digestive biscuit", name_sv: "Digestive-kex", notes: "McVitie's; most popular British biscuit since 1892; wheat-and-semolina base; chocolate digestive a favourite"}

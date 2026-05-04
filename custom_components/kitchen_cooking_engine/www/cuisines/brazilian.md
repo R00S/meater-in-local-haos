@@ -42,7 +42,7 @@ Sources:
 
 ### Proteins — Bulk
 <!-- Searched: "Brazil per capita meat consumption beef chicken pork 2022 IBGE statistics kg" -->
-- {id: frango_bulk, grade: bulk, rating: 9, name: "Chicken", name_sv: "Kyckling", notes: "frango; 51.2 kg/capita/yr — Brazil's most consumed meat (IBGE/WorldMetrics 2022)"}
+- {id: mortadela_bulk, grade: bulk, rating: 7, name: "Mortadela", name_sv: "Mortadella", notes: "Brazilian-style mortadela cold cut; a top-selling industrialised meat product in Brazil; consumed daily in sandwiches and as pizza topping; the mortadela sandwich at Mercadão de São Paulo is an iconic street food"}
 - {id: carne_bovina_bulk, grade: bulk, rating: 8, name: "Beef", name_sv: "Nötkött", notes: "carne bovina; 24.5 kg/capita/yr consumed domestically (IBGE 2022); Brazil holds world's largest commercial herd"}
 - {id: carne_suina_bulk, grade: bulk, rating: 7, name: "Pork", name_sv: "Griskött", notes: "carne suína; 19.5 kg/capita/yr; 4th largest pork producer globally (Rotecna/IBGE 2022)"}
 - {id: ovos, grade: bulk, rating: 7, name: "Eggs", name_sv: "Ägg", notes: "ovos; Widely consumed at breakfast and in snacks; Brazil is 2nd largest egg producer in the Americas"}
@@ -114,7 +114,7 @@ Sources:
 - {id: polvilho_azedo, grade: signature, rating: 8, name: "Sour cassava starch", name_sv: "Surt kassavastärkelse", notes: "polvilho azedo; Fermented cassava starch; essential for pão de queijo (cheese bread) from Minas Gerais; no wheat equivalent"}
 - {id: pamonha, grade: signature, rating: 7, name: "Corn pamonha", name_sv: "Majspamonha", notes: "Fresh corn paste steamed in corn husks; Festa Junina icon; sold at roadside stalls in GO/MG/SP"}
 - {id: canjica_milho, grade: signature, rating: 7, name: "Hominy corn", name_sv: "Hominy-majs", notes: "canjica / mungunzá; Softened whole maize kernels in sweet coconut-milk dessert; essential at Festa Junina throughout Brazil"}
-- {id: stub_angu_milho, grade: signature, rating: 7, name: "[STUB] Grain (Brazilian signature)", name_sv: "[UTKAST] Grain (Brazilian signature)", notes: "STUB — angú (soft cornmeal porridge from Minas Gerais) — cornmeal already listed as milho_fuba; research another Brazilian signature grain or starch not yet listed"}
+- {id: sagu, grade: signature, rating: 7, name: "Tapioca pearls", name_sv: "Tapiokakuglor", notes: "sagu; small starch pearls distinct from tapioca flour; used in 'sagu de vinho' — traditional Rio Grande do Sul dessert of tapioca pearls cooked in red wine; also in coconut-milk sagu; a beloved gaucho institution distinct from NE tapioca crepes"}
 
 ### Grains & Starches — Bulk
 <!-- Searched: "Brazil rice wheat corn consumption per capita statistics IBGE 2022" -->
@@ -132,7 +132,7 @@ Sources:
 <!-- Searched: "Brazil rice cassava soy corn production agriculture statistics FAO IBGE 2022" -->
 - {id: soja_grao, grade: local, rating: 9, name: "Soybean grain", name_sv: "Sojaböna", notes: "soja; 154.6 MT produced in 2022 (IBGE/FAO); Brazil world's #1 soy producer; mostly exported or used for feed/oil"}
 - {id: milho_nacional, grade: local, rating: 9, name: "Maize", name_sv: "Majs", notes: "milho; 131.9 MT in 2022 (IBGE/FAO); Brazil world 2nd largest corn producer; milho; 131.9 MT in 2022 (IBGE/FAO); Brazil world's 2nd largest corn producer; Mato Grosso leads production"}
-- {id: mandioca_local, grade: local, rating: 8, name: "Cassava", name_sv: "Kassava", notes: "22.4 MT in 2022 (IBGE/FAO); used fresh and processed into farinha, tapioca, polvilho, and biofuel; 22.4 MT in 2022 (IBGE/FAO); used fresh and processed into farinha, tapioca, polvilho, and biofuel"}
+- {id: cevada_malte, grade: local, rating: 8, name: "Malting barley", name_sv: "Mältkorn", notes: "cevada cervejeira; grown in Rio Grande do Sul, Santa Catarina, Paraná (~280k MT/yr); Brazil is the world's 3rd largest beer market; Ambev, Grupo Petrópolis and Heineken source barley locally; major rabi crop in southern Brazil"}
 - {id: arroz_nacional, grade: local, rating: 8, name: "Brazilian milled rice", name_sv: "Brasilianskt ris", notes: "arroz nacional; 10.6 MT in 2022 (IBGE/FAO); Rio Grande do Sul produces ~50% of national crop; agulhinha (long-grain) dominant"}
 - {id: feijao_caupi, grade: local, rating: 7, name: "Cowpea", name_sv: "Svartögda bönor", notes: "feijão-caupi; black-eyed pea is the most common variety; native NE Brazilian legume; drought tolerant; feijão-caupi; Native NE Brazilian legume; main protein source in semi-arid Caatinga; drought tolerant; Embrapa improved varieties"}
 - {id: amendoim_local, grade: local, rating: 7, name: "Peanut", name_sv: "Jordnöt", notes: "amendoim; Brazil top 10 world producer; São Paulo state leads; used in paçoca, pé-de-moleque (Festa Junina sweets)"}
@@ -195,7 +195,7 @@ Sources:
 ### Spices, Nuts & Seasonings — Bulk
 <!-- Searched: "Brazil spice condiment consumption salt garlic cumin coriander statistics IBGE per capita" -->
 - {id: sal_refinado, grade: bulk, rating: 9, name: "Refined salt", name_sv: "Raffinerat salt", notes: "sal refinado; Median sodium intake 2,432 mg/day (IBGE National Dietary Survey 2017–18); salt added to beans, rice, and meat daily"}
-- {id: alho_consumo, grade: bulk, rating: 9, name: "Garlic", name_sv: "Vitlök", notes: "1.5 kg/capita/yr (World Population Review 2016); base of all Brazilian sofrito-style cooking; 1.5 kg/capita/yr (World Population Review 2016); Brazil ranks globally in garlic use relative to population"}
+- {id: alho_consumo, grade: bulk, rating: 9, name: "Spring onion", name_sv: "Vårslök", notes: "cebolinha in Portuguese; used as fresh garnish in virtually every Brazilian dish alongside salsinha (parsley); sold in bunches daily at all markets; part of the essential cheiro-verde (aromatic herb mix) used in Brazilian cooking"}
 - {id: tempero_completo, grade: bulk, rating: 8, name: "All-purpose seasoning mix", name_sv: "Allkrydda", notes: "tempero completo; Industrialised mix (Sazon, Knorr Tempero) dominates seasoning use; staple in most Brazilian kitchens"}
 - {id: caldo_tablete, grade: bulk, rating: 8, name: "Bouillon cube", name_sv: "Buljongtärning", notes: "caldo de galinha / carne; Knorr and Maggi chicken/beef cubes used in rice, beans, and soups daily; enormous market volume nationwide"}
 - {id: oregano_bulk, grade: bulk, rating: 7, name: "Oregano", name_sv: "Oregano", notes: "orégano; Used extensively on pizza (Brazil 2nd largest pizza market globally), pasta sauces, and churrasco seasonings"}
@@ -206,12 +206,12 @@ Sources:
 
 ### Spices, Nuts & Seasonings — Local
 <!-- Searched: "Brazil pepper malagueta urucum annatto production statistics agriculture export" -->
-- {id: urucum_producao, grade: local, rating: 9, name: "Urucum", name_sv: "Urucum", notes: "Brazil ~60% of global annatto output (Pará, Maranhão, Mato Grosso); major export to USA, Japan, EU for natural colorants"}
+- {id: cacau_bahia, grade: local, rating: 9, name: "Cacao", name_sv: "Kakao", notes: "cacau; Bahia state produces ~80% of Brazil's cacao (Theobroma cacao); Sul da Bahia is Brazil's cacao heartland; used for artisanal chocolate, cocoa powder, and as the base of brigadeiro (Brazil's most beloved sweet); cacao farming is central to the Bahian economy and cuisine"}
 - {id: castanha_para, grade: local, rating: 9, name: "Brazil nut", name_sv: "Paranöt", notes: "castanha-do-Pará; Wild-harvested from Amazon; Brazil and Bolivia share ~80% world supply; high selenium; sold roasted and in confectionery"}
 - {id: erva_mate, grade: local, rating: 8, name: "Yerba maté", name_sv: "Yerba maté", notes: "erva-mate; Ilex paraguariensis; national drink of RS/SC/PR; chilled chimarrão or tereré; Brazil 2nd global producer after Argentina"}
 - {id: pimenta_biquinho, grade: local, rating: 7, name: "Biquinho sweet pepper", name_sv: "Biquinho-paprika", notes: "Mild, fruity mini pepper endemic to Minas Gerais; widely pickled and sold as gourmet product; growing export niche"}
 - {id: malagueta_producao, grade: local, rating: 8, name: "Malagueta pepper", name_sv: "Malagueta-peppar", notes: "~120,640 MT total pepper harvest 2024 (ReportLinker); malagueta major domestic component; exported to Portugal and Africa"}
 - {id: castanha_caju, grade: local, rating: 8, name: "Cashew nut", name_sv: "Cashewnöt", notes: "castanha de caju; Brazil top 3 global cashew producers; NE Brazil (CE, PI, RN) main growing region; nut and fruit both commercialised"}
 - {id: cumaru_tonka, grade: local, rating: 6, name: "Tonka bean", name_sv: "Tonkaböna", notes: "cumaru in Portuguese; Dipteryx odorata; Amazon tree seed with vanilla-almond aroma; artisan use; Dipteryx odorata; Amazon tree seed with vanilla-almond aroma; used in regional cuisine and artisan cachaça flavouring; Amazonian native"}
-- {id: camarao_seco_local, grade: local, rating: 7, name: "Dried shrimp", name_sv: "Torkade räkor", notes: "camarão seco; sun-dried on Recôncavo Baiano beaches; integral to acarajé and moqueca; African heritage; Sun-dried on beaches of Recôncavo Baiano; integral to acarajé and moqueca; African culinary heritage preserved since 1700s"}
+- {id: dourado_local, grade: local, rating: 7, name: "Golden dorado", name_sv: "Gyllene dorado", notes: "dourado; Salminus brasiliensis; prized freshwater sport and table fish from the Paraná river system and Pantanal; distinctly South American fish; farmed in RS aquaculture and caught commercially in the interior rivers; a regional delicacy prized in southern Brazil and Pantanal"}
 - {id: pimenta_cambuci, grade: local, rating: 6, name: "Cambuci pepper", name_sv: "Cambuci-peppar", notes: "Capsicum chinense; Bell-shaped sweet/mild pepper endemic to São Paulo highlands; artisanal production in Capivari/Tietê river valley"}
