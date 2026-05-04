@@ -76,6 +76,21 @@ Execute IMPROVE_CUISINE_DATA.md for stub cuisine files, one at a time, no batchi
 - [x] Generator ran clean (PANEL_VERSION 455 → 457)
 - [x] Commit all changes
 
+## Session 6 — Files (2026-05-04)
+21. chilean.md (region: latin_american)
+22. chinese.md (region: east_asian)
+23. colombian.md (region: latin_american)
+24. cuban.md (region: latin_american)
+
+## Session 6 Status
+
+- [ ] chilean.md — all 15 pairs
+- [ ] chinese.md — all 15 pairs
+- [ ] colombian.md — all 15 pairs
+- [ ] cuban.md — all 15 pairs
+- [ ] Run generator and verify
+- [ ] Commit all changes
+
 ## Session 5 — Files (2026-05-04)
 17. cameroonian.md (region: african)
 18. canadian.md (region: north_american)
