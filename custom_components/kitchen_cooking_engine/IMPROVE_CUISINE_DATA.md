@@ -158,9 +158,9 @@ next agent what was already looked for and prevents duplicate work.
 | `id` | ✅ | Stable identifier used by the UI (e.g. `salmon`, `white_pepper`) |
 | `grade` | ✅ | `signature`, `bulk`, or `local` (see above) |
 | `rating` | ✅ | Integer 1–9. Significance within the grade — not a rank. Multiple ingredients may share the same value. Top 3 shown per grade (by highest rating, before "More" is clicked); clicking "More" reveals at least 6 more per grade — 9 or more items per pair ensures the "More" section is always meaningful. |
-| `name` | ✅ | English display name — **the raw, uncooked ingredient** (råvara). This is the label shown in the GUI badge. It must be a clean ingredient name with **no parentheses, no dish names, no local-language annotations**. Examples of correct names: `Lamb`, `Haddock`, `Pork belly`, `Garam masala`, `Suckling pig`. Put dish names, local names, and cultural context in `notes` only. |
-| `name_sv` | ✅ | Swedish display name — same rules as `name`: the raw ingredient in Swedish, clean, no parentheses. E.g. `Lammkött`, `Kolja`, `Fläskbuken`. |
-| `notes` | — | Evidence for the grade and rating; brief source reference. This is also the place for dish names, local-language names, and any other context useful to the AI recipe builder — it is never shown directly in the GUI badge. |
+| `name` | ✅ | English display name — **the raw, uncooked ingredient** (råvara). This is the label shown in the GUI badge. It must be a clean ingredient name with **no parentheses, no dashes with annotations, no dish names, no local-language annotations**. Examples of correct names: `Lamb`, `Haddock`, `Pork belly`, `Garam masala`, `Suckling pig`. Put dish names, local names, cultural context, and origin details in `notes` only. |
+| `name_sv` | ✅ | Swedish display name — same rules as `name`: the raw ingredient in Swedish, clean, no parentheses, no dash annotations. E.g. `Lammkött`, `Kolja`, `Fläskbuken`. |
+| `notes` | — | Evidence for the grade and rating; brief source reference. This is also the place for dish names, local-language names, origin labels, and any other context useful to the AI recipe builder — it is never shown directly in the GUI badge. |
 
 ---
 
@@ -215,22 +215,30 @@ Rules:
 1. Pick one cuisine with `research_done: 0` (or one that clearly needs improvement).
 2. If the file has `description: "[STUB]"`, write the description first — 1–2 sentences capturing
    the identity and character of the cuisine. Add `description_sv` if you can.
-3. Work through its pairs **one at a time**, in order:
+3. Work through its pairs **one at a time**, in this exact order:
    - Proteins — Signature
-   - Proteins — Bulk
    - Proteins — Local
+   - Proteins — Bulk
    - Produce — Signature
-   - Produce — Bulk
    - Produce — Local
+   - Produce — Bulk
    - Grains & Starches — Signature
-   - Grains & Starches — Bulk
    - Grains & Starches — Local
+   - Grains & Starches — Bulk
    - Dairy, Oils & Sauces — Signature
-   - Dairy, Oils & Sauces — Bulk
    - Dairy, Oils & Sauces — Local
+   - Dairy, Oils & Sauces — Bulk
    - Spices, Nuts & Seasonings — Signature
-   - Spices, Nuts & Seasonings — Bulk
    - Spices, Nuts & Seasonings — Local
+   - Spices, Nuts & Seasonings — Bulk
+
+   **Deduplication rule (critical):** Research signature first, then local, then bulk.
+   - If an ingredient already appears in **signature**, do **not** repeat it in local or bulk.
+     Find a different ingredient to fill that slot.
+   - If an ingredient already appears in **local**, do **not** repeat it in bulk.
+     Find a different ingredient to fill that slot.
+   - Each grade must introduce ingredients that are not already listed in a higher-priority grade.
+     Duplicates waste slots and dilute the value of the "More" section.
 4. For each pair: do a focused search (see strategies above), write the items, add the
    `<!-- Searched: ... -->` comment, then stop and move to the next pair.
 5. When all 15 pairs are done and verified, set `research_done: 1`.
@@ -256,32 +264,36 @@ Pair 1: Proteins — Signature
                    silakka - perinteiset suomalaiset ruoat tyypilliset lihat kalat"
   → Wrote Proteins — Signature items. Pair 1 done.
 
-Pair 2: Proteins — Bulk
-  Search (English): "Web Search: Finland meat consumption per capita statistics 2022 2023
-                    pork chicken beef kg/capita FAO food balance"
-  → Wrote Proteins — Bulk items. Pair 2 done.
-
-Pair 3: Proteins — Local
+Pair 2: Proteins — Local
   Search (mixed): "Web Search: Suomi kalastus poronhoito hirvenmetsästys paikallinen
                   tuotanto lihakarja - Finland local protein production livestock
                   fishing hunting statistics"
-  → Wrote Proteins — Local items. Pair 3 done.
+  → Checked for duplicates with Pair 1 (signature). Wrote Proteins — Local items
+    that are not already in signature. Pair 2 done.
+
+Pair 3: Proteins — Bulk
+  Search (English): "Web Search: Finland meat consumption per capita statistics 2022 2023
+                    pork chicken beef kg/capita FAO food balance"
+  → Checked for duplicates with signature and local. Wrote Proteins — Bulk items
+    that are not already listed in either. Pair 3 done.
 
 Pair 4: Produce — Signature
   Search (native): "Web Search: suomalaiset perinteruoat kasvikset perunalaatikko
                    lanttulaatikko porkkanalaatikko rosolli joulupöytä perinteinen"
   → Wrote Produce — Signature items. Pair 4 done.
 
-Pair 5: Produce — Bulk
-  Search (English): "Web Search: Finland vegetable consumption per capita statistics
-                    most consumed vegetables 2022 2023 Luke natural resources"
-  → Wrote Produce — Bulk items. Pair 5 done.
-
-Pair 6: Produce — Local
+Pair 5: Produce — Local
   Search (mixed): "Web Search: Suomi paikallinen kasvituotanto sienet marjat kantarelli
                   puolukka peruna lanttu - Finland locally grown vegetables foraging
                   mushrooms berries"
-  → Wrote Produce — Local items. Pair 6 done.
+  → Checked for duplicates with signature. Wrote Produce — Local items
+    not already in signature. Pair 5 done.
+
+Pair 6: Produce — Bulk
+  Search (English): "Web Search: Finland vegetable consumption per capita statistics
+                    most consumed vegetables 2022 2023 Luke natural resources"
+  → Checked for duplicates with signature and local. Wrote Produce — Bulk items
+    not already listed in either. Pair 6 done.
 
 Pair 7: Grains & Starches — Signature
   Search (mixed): "Web Search: ruisleipä karjalanpiirakka kaurapuuro suomalainen
@@ -289,15 +301,17 @@ Pair 7: Grains & Starches — Signature
                   grain dishes identity"
   → Wrote Grains & Starches — Signature items. Pair 7 done.
 
-Pair 8: Grains & Starches — Bulk
-  Search (English): "Web Search: Finland grain consumption per capita 2022 2023 wheat
-                    rye oats statistics Luke food balance cereals"
-  → Wrote Grains & Starches — Bulk items. Pair 8 done.
-
-Pair 9: Grains & Starches — Local
+Pair 8: Grains & Starches — Local
   Search (English): "Web Search: Finland grain crop production locally grown oats barley
                     rye wheat farming statistics hectares production Luke"
-  → Wrote Grains & Starches — Local items. Pair 9 done.
+  → Checked for duplicates with signature. Wrote Grains & Starches — Local items
+    not already in signature. Pair 8 done.
+
+Pair 9: Grains & Starches — Bulk
+  Search (English): "Web Search: Finland grain consumption per capita 2022 2023 wheat
+                    rye oats statistics Luke food balance cereals"
+  → Checked for duplicates with signature and local. Wrote Grains & Starches — Bulk items
+    not already listed in either. Pair 9 done.
 
 Pair 10: Dairy, Oils & Sauces — Signature
   Search (native): "Web Search: suomalainen juustoleipä viili piimä ikoninen maitotuote
@@ -305,16 +319,18 @@ Pair 10: Dairy, Oils & Sauces — Signature
                    iconic"
   → Wrote Dairy, Oils & Sauces — Signature items. Pair 10 done.
 
-Pair 11: Dairy, Oils & Sauces — Bulk
-  Search (English): "Web Search: Finland dairy consumption per capita milk butter cheese
-                    2022 2023 statistics Luke kg per capita"
-  → Wrote Dairy, Oils & Sauces — Bulk items. Pair 11 done.
-
-Pair 12: Dairy, Oils & Sauces — Local
+Pair 11: Dairy, Oils & Sauces — Local
   Search (English): "Web Search: Finland local dairy production Finnish Ayrshire cattle
                     breeds regional cheese varieties juustoleipä production area
                     Ostrobothnia Lapland"
-  → Wrote Dairy, Oils & Sauces — Local items. Pair 12 done.
+  → Checked for duplicates with signature. Wrote Dairy, Oils & Sauces — Local items
+    not already in signature. Pair 11 done.
+
+Pair 12: Dairy, Oils & Sauces — Bulk
+  Search (English): "Web Search: Finland dairy consumption per capita milk butter cheese
+                    2022 2023 statistics Luke kg per capita"
+  → Checked for duplicates with signature and local. Wrote Dairy, Oils & Sauces — Bulk items
+    not already listed in either. Pair 12 done.
 
 Pair 13: Spices, Nuts & Seasonings — Signature
   Search (mixed): "Web Search: suomalaisen ruuan mausteet tilli kumina maustepippuri
@@ -322,16 +338,18 @@ Pair 13: Spices, Nuts & Seasonings — Signature
                   spices dill caraway allspice signature flavour"
   → Wrote Spices, Nuts & Seasonings — Signature items. Pair 13 done.
 
-Pair 14: Spices, Nuts & Seasonings — Bulk
-  Search (English): "Web Search: Finland most used seasonings condiments statistics
-                    salt pepper dill everyday cooking consumption 2022 2023"
-  → Wrote Spices, Nuts & Seasonings — Bulk items. Pair 14 done.
-
-Pair 15: Spices, Nuts & Seasonings — Local
+Pair 14: Spices, Nuts & Seasonings — Local
   Search (mixed): "Web Search: Finland locally foraged seasonings juniper berries
                   lingonberry sea buckthorn tyrni wild herbs birch kataja paikallinen
                   maustekasvit"
-  → Wrote Spices, Nuts & Seasonings — Local items. All 15 pairs done.
+  → Checked for duplicates with signature. Wrote Spices, Nuts & Seasonings — Local items
+    not already in signature. Pair 14 done.
+
+Pair 15: Spices, Nuts & Seasonings — Bulk
+  Search (English): "Web Search: Finland most used seasonings condiments statistics
+                    salt pepper dill everyday cooking consumption 2022 2023"
+  → Checked for duplicates with signature and local. Wrote Spices, Nuts & Seasonings — Bulk items
+    not already listed in either. All 15 pairs done.
   → Set research_done: 1. Ran generator. Committed.
 ```
 
@@ -340,7 +358,9 @@ Pair 15: Spices, Nuts & Seasonings — Local
 - Native-language searches are used where the cuisine has its own language (Finnish here).
 - English is used for statistics when official data is easier to find in English.
 - The transition between pairs is explicit: "Pair N done. Now Pair N+1."
-- The sequence is always the same order (Proteins → Produce → Grains & Starches → Dairy, Oils & Sauces → Spices, Nuts & Seasonings).
+- The sequence is always the same order (Proteins → Produce → Grains & Starches → Dairy, Oils & Sauces → Spices, Nuts & Seasonings), and within each category the order is **signature → local → bulk**.
+- Before writing local items, check the signature list and skip any ingredient already there.
+- Before writing bulk items, check both signature and local and skip any ingredient already there.
 
 ---
 
@@ -631,11 +651,13 @@ These are preserved ingredients, not dishes.
 
 ---
 
-### ❌ Trap 11: Parentheses in name or name_sv clutter the GUI
+### ❌ Trap 11: Parentheses or dashes with annotations in name or name_sv clutter the GUI
 
-Parenthetical text in `name` or `name_sv` is shown directly in the GUI badge. It makes
-badges harder to read and harder to understand for users who are not from that culture.
-The badge must be immediately comprehensible — a single clean name.
+Parenthetical text or dash-separated annotations in `name` or `name_sv` are shown directly
+in the GUI badge. They make badges harder to read and harder to understand for users who are
+not from that culture. The badge must be immediately comprehensible — a single clean ingredient name.
+
+This applies to **both** parentheses **and** dashes used as annotation separators:
 
 **Wrong:**
 ```
@@ -644,6 +666,10 @@ name: "Haddock (Melanogrammus aeglefinus)"
 name: "Garam masala (spice blend)"
 name: "Char siu (BBQ pork)"
 name_sv: "Havskräfta (Norska hummer)"
+name: "Catla Carp — Pond Aquaculture"
+name: "Hilsa — National Fish"
+name: "Chilli — Locally Cultivated"
+name_sv: "Buffelmjölk — Sydkusten"
 ```
 
 **Right:**
@@ -653,12 +679,21 @@ name: "Haddock"             notes: "Melanogrammus aeglefinus; most common white 
 name: "Garam masala"        notes: "aromatic spice blend — the defining warm-spice seasoning of South Asian cooking"
 name: "Char siu pork"       notes: "叉烧 — lacquered BBQ pork; used in char siu bao and fried rice"
 name_sv: "Havskräfta"       notes: "Norska hummer; Nephrops norvegicus; central to Norwegian and Swedish west-coast cuisine"
+name: "Catla carp"          notes: "pond-farmed freshwater carp; major aquaculture species in Bangladesh"
+name: "Hilsa"               notes: "Tenualosa ilisha; national fish of Bangladesh; essential to Bengali cooking"
+name: "Chilli"              notes: "locally cultivated; small red varieties dominant in Bengali home cooking"
+name_sv: "Buffelmjölk"      notes: "produceras längs södra kusten och kustzonen; bas i lokal ostproduktion"
 ```
 
-**Rule:** `name` and `name_sv` must each be a single clean phrase — no parentheses,
-no local-script annotations, no genre labels in brackets. If a user who speaks English
-(or Swedish) sees the badge, they should immediately know what ingredient it refers to.
-All extra context belongs in `notes`, where the AI recipe builder can use it freely.
+**Rule:** `name` and `name_sv` must each be a **single clean ingredient name** — no parentheses,
+no dash-separated labels, no local-script annotations, no origin suffixes, no grade labels.
+The user who sees the badge should instantly know what ingredient it is. Anything beyond the
+bare ingredient name belongs in `notes`, where the AI recipe builder can use it freely and
+it never clutters the GUI.
+
+The only narrow exception: ingredients that are defined by a curing or drying process and
+sold as-is at a market (e.g. `Smoked paprika`, `Dried chilli`, `Cured ham`, `Pickled lime`).
+These are preserved ingredients, not dishes, and the preparation method is part of the name.
 
 ---
 
