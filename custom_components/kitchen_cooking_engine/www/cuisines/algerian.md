@@ -29,7 +29,7 @@ Our World in Data meat/dairy supply per capita, International Olive Council stat
 - {id: chicken, grade: signature, rating: 8, name: "Chicken", name_sv: "Kyckling", notes: "Used in rechta (festive noodle dish), tajine zitoune (with olives), chorba soup, and couscous; one of the most prominent proteins across all regions"}
 - {id: chickpeas, grade: signature, rating: 8, name: "Chickpeas", name_sv: "Kikärtor", notes: "Inseparable from couscous and rechta; also in chorba soup; a core protein-legume in Algerian cuisine identity"}
 - {id: merguez, grade: signature, rating: 7, name: "Merguez Sausage", name_sv: "Merguezkorv", notes: "Iconic spiced lamb/beef sausage of North Africa; grilled and served with couscous or as street food; emblematic of Algerian street food culture"}
-- {id: minced_lamb_beef, grade: signature, rating: 6, name: "Minced Lamb/Beef", name_sv: "Malet lamm/nötkött", notes: "Used in bourek (fried pastry rolls), dolma (stuffed vegetables), and mhadjeb; essential filling ingredient across many traditional preparations"}
+- {id: minced_lamb_beef, grade: signature, rating: 6, name: "Minced lamb", name_sv: "Malet lamm", notes: "also minced beef used in modern preparations; Used in bourek (fried pastry rolls), dolma (stuffed vegetables), and mhadjeb; essential filling ingredient across many traditional preparations"}
 - {id: beef, grade: signature, rating: 5, name: "Beef", name_sv: "Nötkött", notes: "Used in chakhchoukha (eastern regional dish with torn flatbread) and dolma; less prominent than lamb but present across many regional dishes"}
 - {id: eggs, grade: signature, rating: 4, name: "Eggs", name_sv: "Ägg", notes: "Used in bourek filling and various Algerian pastries and starters; a common protein element in everyday cooking"}
 - {id: broad_beans, grade: signature, rating: 3, name: "Broad Beans", name_sv: "Bondbönor", notes: "Fava; Traditional Berber ingredient; used in soups and stews especially in Kabylie and Constantine regions; one of the oldest cultivated legumes in North Africa"}
@@ -41,7 +41,7 @@ Our World in Data meat/dairy supply per capita, International Olive Council stat
 <!-- Searched: "Algeria meat consumption per capita FAO food balance sheet statistics" -->
 
 - {id: broiler_chicken_bulk, grade: bulk, rating: 9, name: "Broiler Chicken", name_sv: "Broilerkyckling", notes: "FAOSTAT/Our World in Data: poultry is the #1 most consumed meat in Algeria; total meat supply ~30–35 kg/capita/year with poultry the predominant share"}
-- {id: lamb_mutton_bulk, grade: bulk, rating: 8, name: "Lamb/Mutton", name_sv: "Lamm/Fårkött", notes: "Second most consumed meat by volume per FAO food balance data; Algeria is among Africa's leading sheep producers, sheep farming is widespread"}
+- {id: lamb_mutton_bulk, grade: bulk, rating: 8, name: "Lamb", name_sv: "Lamm", notes: "also mutton; Algeria among Africa's leading sheep producers; Second most consumed meat by volume per FAO food balance data; Algeria is among Africa's leading sheep producers, sheep farming is widespread"}
 - {id: eggs_bulk, grade: bulk, rating: 7, name: "Chicken Eggs", name_sv: "Kycklingägg", notes: "Consumed in high volumes daily; poultry and egg production is a major agricultural sector in Algeria; widely used in cooking and eaten at breakfast"}
 - {id: beef_bulk, grade: bulk, rating: 6, name: "Beef", name_sv: "Nötkött", notes: "Third most consumed meat by volume per FAO food balance; cattle are raised for both beef and dairy across the Tell Atlas and northern regions"}
 - {id: chickpeas_bulk, grade: bulk, rating: 5, name: "Chickpeas", name_sv: "Kikärtor", notes: "Highest-volume legume consumed; essential in couscous, rechta, chorba — consumed multiple times per week across nearly all households"}
@@ -79,7 +79,7 @@ Our World in Data meat/dairy supply per capita, International Olive Council stat
 - {id: carrot_sig, grade: signature, rating: 5, name: "Carrot", name_sv: "Morot", notes: "Standard vegetable in couscous alongside zucchini and turnips; also in chorba; one of the most consumed vegetables per FAO Algeria data"}
 - {id: eggplant, grade: signature, rating: 4, name: "Eggplant", name_sv: "Aubergine", notes: "Aubergine; Used in mechouia roasted salad and various tagines; common in Algerian vegetable preparations; part of the broader North African produce palette"}
 - {id: prunes, grade: signature, rating: 3, name: "Prunes", name_sv: "Katrinplommon", notes: "Key fruit in lham lahlou (festive sweet-and-savory lamb dish) alongside apricots and almonds; used in festive tagines for Ramadan and Eid"}
-- {id: pumpkin, grade: signature, rating: 2, name: "Pumpkin/Winter Squash", name_sv: "Pumpa", notes: "Traditional vegetable in couscous particularly in western and southern Algerian regions; adds sweetness and body to the broth"}
+- {id: pumpkin, grade: signature, rating: 2, name: "Pumpkin", name_sv: "Pumpa", notes: "also winter squash; traditional in western and southern Algerian couscous; Traditional vegetable in couscous particularly in western and southern Algerian regions; adds sweetness and body to the broth"}
 - {id: turnip_sig, grade: signature, rating: 1, name: "Turnip", name_sv: "Rova", notes: "Used in rechta (noodle dish with chicken) and some regional couscous variations; an older traditional vegetable in northern Algerian cooking"}
 
 ### Produce — Bulk

@@ -133,7 +133,7 @@ Sources:
 
 - {id: uk_wheat, grade: local, rating: 8, name: "English wheat", name_sv: "Engelskt vete", notes: "15.5 MT UK harvest 2022 (DEFRA), largest since 2019; East Anglia and East Midlands primary growing zones"}
 - {id: uk_barley, grade: local, rating: 8, name: "British barley", name_sv: "Brittiskt korn", notes: "7.4 MT UK harvest 2022 (DEFRA); world-class malting barley for Scotch whisky and British real ales"}
-- {id: uk_oats, grade: local, rating: 7, name: "Scottish/British oats", name_sv: "Skotska/brittiska havre", notes: "1.0 MT UK harvest 2022 (DEFRA); Scotland dominant oat region; stone-milled oatmeal tradition"}
+- {id: uk_oats, grade: local, rating: 7, name: "Oats", name_sv: "Havre", notes: "Scottish and British oats; 1.0 MT UK harvest 2022 (DEFRA); Scotland dominant oat region; stone-milled oatmeal tradition; 1.0 MT UK harvest 2022 (DEFRA); Scotland dominant oat region; stone-milled oatmeal tradition"}
 - {id: cornish_pasty_pdo, grade: local, rating: 7, name: "Cornish pasty crust", name_sv: "Cornisk pastejskal", notes: "Wheat shortcrust PDO 2011; unique side crimp; historically miners' lunch in Cornwall tin mines"}
 - {id: staffordshire_oatcake, grade: local, rating: 6, name: "Staffordshire oatcake", name_sv: "Staffordshire-havrekaka", notes: "Local flatbread/pancake unique to Staffordshire; oat and wheat batter griddle-cooked; distinct from Scottish oatcake"}
 - {id: scottish_malting_barley, grade: local, rating: 7, name: "Scottish malting barley", name_sv: "Skotsk maltkornet", notes: "Two-row spring barley from Highlands and Borders; critical to Scotch whisky industry worth billions annually"}

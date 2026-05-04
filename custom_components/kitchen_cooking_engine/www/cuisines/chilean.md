@@ -45,7 +45,7 @@ Sources: SERNAPESCA 2022, ODEPA 2022, USDA FAS Chile reports, FAO Food Balance S
 - {id: chilean_eggs, grade: bulk, rating: 6, name: "Eggs", name_sv: "Ägg", notes: "High per capita consumption; integral to empanadas, pastel de choclo, and everyday Chilean cooking"}
 - {id: chilean_mussel_bulk, grade: bulk, rating: 5, name: "Mussel", name_sv: "Mussla", notes: "Major aquaculture product; Mytilus chilensis farmed in Los Lagos; widely consumed in soups and paila marina"}
 - {id: chilean_coho_bulk, grade: bulk, rating: 4, name: "Coho Salmon", name_sv: "Coholomax", notes: "Oncorhynchus kisutch; farmed in Chilean aquaculture alongside Atlantic salmon; significant domestic consumption"}
-- {id: chilean_sardine, grade: bulk, rating: 3, name: "Sardine / Anchoveta", name_sv: "Sardiner / Ansjovis", notes: "Engraulis ringens; massive wild fishery (mainly for fishmeal); also consumed fresh and tinned domestically"}
+- {id: chilean_sardine, grade: bulk, rating: 3, name: "Anchoveta", name_sv: "Ansjovis", notes: "Engraulis ringens; massive wild fishery mainly for fishmeal; also consumed fresh and tinned domestically; Engraulis ringens; massive wild fishery (mainly for fishmeal); also consumed fresh and tinned domestically"}
 
 ### Proteins — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->

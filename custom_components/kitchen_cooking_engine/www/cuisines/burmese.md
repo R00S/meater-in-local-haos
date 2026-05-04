@@ -88,7 +88,7 @@ Sources:
 - {id: onion_bulk, grade: bulk, rating: 9, name: "Onion", name_sv: "Lök", notes: "dry; 18.6 kg/capita/yr (FAOSTAT 2021); among Southeast Asia's highest; base of every curry and relish"}
 - {id: tomato_bulk, grade: bulk, rating: 8, name: "Tomato", name_sv: "Tomat", notes: "Major ingredient in thoke salads, curries and relishes; widely consumed across all regions and seasons"}
 - {id: garlic_bulk, grade: bulk, rating: 7, name: "Garlic", name_sv: "Vitlök", notes: "Estimated 1.5–2.5 kg/capita/yr; in every savory dish; fried crispy garnish standard on noodles and rice"}
-- {id: eggplant_bulk, grade: bulk, rating: 7, name: "Eggplant/aubergine", name_sv: "Aubergine", notes: "kha-yan-thee; Estimate 3–8 kg/capita; popular in curries and stir-fries; multiple varieties grown throughout Myanmar"}
+- {id: eggplant_bulk, grade: bulk, rating: 7, name: "Eggplant", name_sv: "Aubergine", notes: "kha-yan-thee; popular in curries and stir-fries; multiple varieties grown throughout Myanmar; kha-yan-thee; Estimate 3–8 kg/capita; popular in curries and stir-fries; multiple varieties grown throughout Myanmar"}
 - {id: long_beans_bulk, grade: bulk, rating: 6, name: "Yard-long beans", name_sv: "Långa bönor", notes: "pe-ywet-thee; Common in stir-fries and salads; grown year-round in warm climate; paired with garlic and fish sauce"}
 - {id: cabbage_bulk, grade: bulk, rating: 6, name: "Cabbage", name_sv: "Kål", notes: "ga-nan-thee; Shredded raw in lahpet thoke salad; widely consumed boiled and stir-fried; affordable everyday vegetable"}
 - {id: chili_bulk, grade: bulk, rating: 7, name: "Chili pepper", name_sv: "Chilifrukt", notes: "nga-yut-thee; Dietary staple in all regional cuisines; Myanmar chili market $22M (IndexBox 2024); dried and fresh use"}
@@ -104,8 +104,8 @@ Sources:
 - {id: water_spinach_local, grade: local, rating: 7, name: "Water spinach", name_sv: "Vattenspenat", notes: "ga-zun-ywet; Ipomoea aquatica; grown in waterways throughout the Ayeyarwady delta; stir-fried with garlic and fish sauce"}
 - {id: banana_flower_local, grade: local, rating: 7, name: "Banana flower", name_sv: "Bananblomma", notes: "ngapyaw-pan; Inflorescence used in mohinga; shredded and tossed in salads; Myanmar is a major banana-growing country"}
 - {id: bamboo_shoots_local, grade: local, rating: 6, name: "Bamboo shoots", name_sv: "Bambusskott", notes: "wah-ywet; Highland regions of Shan, Kayah and Kachin; pickled or fresh in curries; seasonal monsoon harvest"}
-- {id: calabash_gourd_local, grade: local, rating: 6, name: "Calabash/bottle gourd", name_sv: "Flaskgurka", notes: "Bu-thee; grown in home gardens throughout Myanmar; boiled in soup and stir-fried; drought-tolerant crop"}
-- {id: drumstick_moringa_local, grade: local, rating: 7, name: "Drumstick/moringa", name_sv: "Drumstick/moringa", notes: "dant-hmu; Moringa oleifera; grown throughout tropical Myanmar; pods and leaves in soups; drought-tolerant local crop"}
+- {id: calabash_gourd_local, grade: local, rating: 6, name: "Calabash gourd", name_sv: "Flaskgurka", notes: "bu-thee; Lagenaria siceraria; grown in home gardens; boiled in soup and stir-fried; Bu-thee; grown in home gardens throughout Myanmar; boiled in soup and stir-fried; drought-tolerant crop"}
+- {id: drumstick_moringa_local, grade: local, rating: 7, name: "Drumstick", name_sv: "Trumsticksbönor", notes: "dant-hmu; Moringa oleifera; grown throughout tropical Myanmar; pods and leaves in soups; dant-hmu; Moringa oleifera; grown throughout tropical Myanmar; pods and leaves in soups; drought-tolerant local crop"}
 
 ## Grains & Starches
 
@@ -113,7 +113,7 @@ Sources:
 
 - {id: jasmine_rice_sig, grade: signature, rating: 9, name: "Jasmine rice", name_sv: "Jasminris", notes: "Fragrant long-grain rice; eaten at every meal; Myanmar's paw hsan hmwe is prized as one of Asia's finest"}
 - {id: rice_noodle_mohinga, grade: signature, rating: 9, name: "Rice noodles", name_sv: "Risnudlar", notes: "mohinga base; Thin round rice noodles; base of mohinga national dish; also in ohn no khao swe; daily breakfast staple"}
-- {id: glutinous_rice_sig, grade: signature, rating: 8, name: "Glutinous/sticky rice", name_sv: "Klibbigt ris", notes: "Festival foods and mont dessert cakes; kauk hnyin baung steamed sticky rice is a classic street food"}
+- {id: glutinous_rice_sig, grade: signature, rating: 8, name: "Glutinous rice", name_sv: "Klibbigt ris", notes: "kauk hnyin; also sticky rice; used in festival foods and mont dessert cakes; Festival foods and mont dessert cakes; kauk hnyin baung steamed sticky rice is a classic street food"}
 - {id: chickpea_flour_sig, grade: signature, rating: 8, name: "Chickpea flour", name_sv: "Kikärtsmjöl", notes: "Base of shan tofu; also used as batter for fritters (pe hmont kyaw); crispy split pea topping on salads"}
 - {id: flat_rice_noodle_sig, grade: signature, rating: 7, name: "Flat rice noodles", name_sv: "Breda risnudlar", notes: "kway teow; Used in kyay oh noodle soup; Burmese-Chinese influence; stir-fried or in light broth; sold at tea shops"}
 - {id: rice_flour_sig, grade: signature, rating: 7, name: "Rice flour", name_sv: "Rismjöl", notes: "sanwin makin base; Used in mont (traditional cakes), crepes and desserts; sanwin makin semolina cake also uses rice flour"}
@@ -155,13 +155,13 @@ Sources:
 - {id: coconut_cream_sig, grade: signature, rating: 7, name: "Coconut cream", name_sv: "Kokosgräde", notes: "ohn-si; Thick cream for curries and traditional desserts; sanwin makin cake; mon lone yay paw sweet rice balls"}
 - {id: ngapi_yay_sauce, grade: signature, rating: 9, name: "Ngapi yay", name_sv: "Ngapi yay", notes: "Ubiquitous Burmese condiment; ngapi dissolved in water with lime, garlic, chili; served with raw vegetables"}
 - {id: tamarind_paste_sig, grade: signature, rating: 7, name: "Tamarind paste", name_sv: "Tamarindpasta", notes: "magyi-thee; Souring agent in curries, salads and relishes; grown throughout tropical Myanmar lowlands"}
-- {id: palm_sugar_sig, grade: signature, rating: 7, name: "Palm sugar/jaggery", name_sv: "Palmsocker/jaggery", notes: "Htanyet; sweetener balancing heat and salt in curries, relishes and desserts; Mandalay dry zone production"}
+- {id: palm_sugar_sig, grade: signature, rating: 7, name: "Palm sugar", name_sv: "Palmsocker", notes: "htanyet; also jaggery; sweetener in curries, relishes and desserts; Mandalay dry zone production; Htanyet; sweetener balancing heat and salt in curries, relishes and desserts; Mandalay dry zone production"}
 - {id: fish_sauce_sig, grade: signature, rating: 8, name: "Fish sauce", name_sv: "Fisksås", notes: "ngan pya yay; Table condiment in every household; omnipresent seasoning replacing salt; locally produced in Mon/Ayeyarwady"}
 - {id: coconut_oil_sig, grade: signature, rating: 6, name: "Coconut oil", name_sv: "Kokosolja", notes: "ohn-hsee; Traditional cooking and dessert fat in coastal and delta regions; Ayeyarwady delta coconut plantations"}
 
 ### Bulk
 
-- {id: palm_blend_oil_bulk, grade: bulk, rating: 9, name: "Vegetable/palm blend oil", name_sv: "Vegetabilisk/palmblandolja", notes: "27% of total oil consumption (2022 nationwide survey, ResearchGate); most consumed single oil type in Myanmar"}
+- {id: palm_blend_oil_bulk, grade: bulk, rating: 9, name: "Palm oil blend", name_sv: "Palmblandolja", notes: "27% of total oil consumption (2022 nationwide survey); most consumed single oil type in Myanmar; 27% of total oil consumption (2022 nationwide survey, ResearchGate); most consumed single oil type in Myanmar"}
 - {id: peanut_oil_bulk, grade: bulk, rating: 8, name: "Peanut oil", name_sv: "Jordnötsolja", notes: "household cooking; 25% of total oil consumption; 14.39 kg/capita/yr total edible oil (2022 survey); Kayah region leads peanut use"}
 - {id: fish_sauce_bulk, grade: bulk, rating: 8, name: "Fish sauce", name_sv: "Fisksås", notes: "ngan pya yay; Ubiquitous seasoning in every household; replaces or supplements salt at the table and in cooking"}
 - {id: tamarind_paste_bulk, grade: bulk, rating: 7, name: "Tamarind paste", name_sv: "Tamarindpasta", notes: "Standard souring agent across all regions; used in curries, salads and marinades nationwide"}
@@ -219,4 +219,4 @@ Sources:
 - {id: shallot_mandalay, grade: local, rating: 7, name: "Shallot", name_sv: "Schalottenlök", notes: "Mandalay dry zone; Major commercial crop in Mandalay and Sagaing dry zone; significant export to Thailand and China; 18.6 kg/cap"}
 - {id: galangal_local, grade: local, rating: 7, name: "Galangal", name_sv: "Galangal", notes: "locally grown; Alpinia galanga grown in tropical regions throughout Myanmar; cultivated in home gardens and small farms"}
 - {id: black_pepper_local, grade: local, rating: 6, name: "Black pepper", name_sv: "Svartpeppar", notes: "Tanintharyi Region (southern Myanmar) production; tropical coastal climate ideal; exported to regional markets"}
-- {id: cinnamon_cassia_local, grade: local, rating: 6, name: "Cinnamon/cassia", name_sv: "Kanel/kassia", notes: "Shan highlands; Cinnamomum cassia bark; Shan State highland production; aromatic bark used in curries and tea preparations"}
+- {id: cinnamon_cassia_local, grade: local, rating: 6, name: "Cassia bark", name_sv: "Kassiabark", notes: "Cinnamomum cassia; also sold as cinnamon; Shan highlands production; used in curries and tea; Shan highlands; Cinnamomum cassia bark; Shan State highland production; aromatic bark used in curries and tea preparations"}

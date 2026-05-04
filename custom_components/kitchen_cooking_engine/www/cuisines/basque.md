@@ -50,7 +50,7 @@ Sources:
 - {id: cured_meats_bulk, grade: bulk, rating: 5, name: "Cured Meats", name_sv: "Charkuterier", notes: "jamón, chorizo; Included in Spain's ~84 kg total meat/capita 2022; jamón and chorizo ubiquitous"}
 - {id: lamb_bulk, grade: bulk, rating: 4, name: "Lamb", name_sv: "Lamm", notes: "Lower volume but traditional; Basque and Navarran lamb roasts for celebrations"}
 - {id: eggs_bulk, grade: bulk, rating: 3, name: "Eggs", name_sv: "Ägg", notes: "Key protein source; tortilla de bacalao and tortilla española staples"}
-- {id: legume_protein_bulk, grade: bulk, rating: 2, name: "Pulses / Legumes", name_sv: "Baljväxter", notes: "Tolosa beans, chickpeas, lentils as bulk protein; significant in Basque diet"}
+- {id: legume_protein_bulk, grade: bulk, rating: 2, name: "Pulses", name_sv: "Baljväxter", notes: "Tolosa beans, chickpeas, lentils; significant in Basque diet; Tolosa beans, chickpeas, lentils as bulk protein; significant in Basque diet"}
 - {id: rabbit_bulk, grade: bulk, rating: 1, name: "Rabbit", name_sv: "Kanin", notes: "Lower but present; rural Basque households; part of broader Spanish meat mix"}
 
 ### Proteins — Local
@@ -90,7 +90,7 @@ Sources:
 - {id: carrot_bulk, grade: bulk, rating: 4, name: "Carrot", name_sv: "Morot", notes: "Widely consumed in Spain and Basque households; sofrito base and stew ingredient"}
 - {id: garlic_produce_bulk, grade: bulk, rating: 3, name: "Garlic", name_sv: "Vitlök", notes: "Integral to salsa verde, pil pil, vizcaína; consumed ~2–3 kg/capita in Spain annually"}
 - {id: cabbage_bulk, grade: bulk, rating: 2, name: "Cabbage", name_sv: "Kål", notes: "Traditional winter vegetable; consumed alongside Tolosa bean stew across Basque households"}
-- {id: zucchini_bulk, grade: bulk, rating: 1, name: "Zucchini / courgette", name_sv: "Zucchini", notes: "Part of Spain general vegetable consumption pattern; grilled and in summer stews"}
+- {id: zucchini_bulk, grade: bulk, rating: 1, name: "Courgette", name_sv: "Zucchini", notes: "also known as zucchini; grilled and in summer stews; Part of Spain general vegetable consumption pattern; grilled and in summer stews"}
 
 ### Produce — Local
 <!-- Searched: "Basque Country PDO PGI protected vegetables agriculture local production" -->
@@ -116,7 +116,7 @@ Sources:
 - {id: arroz_con_leche, grade: signature, rating: 5, name: "Rice", name_sv: "Ris", notes: "Short-grain rice for arroz con leche dessert; classic Basque and Cantabrian pudding"}
 - {id: lentil_lentejas, grade: signature, rating: 4, name: "Lentils", name_sv: "Linser", notes: "lentejas; Hearty lentil stew with chorizo; everyday Basque home cooking staple through winter"}
 - {id: white_bean_alubias, grade: signature, rating: 3, name: "White beans", name_sv: "Vita bönor", notes: "Beyond Tolosa variety; alubias blancas in potajes and stews; common Basque pantry staple"}
-- {id: corn_flour_talo, grade: signature, rating: 2, name: "Corn flour / maize meal", name_sv: "Majsmjöl", notes: "Base ingredient for talo; historically replaced wheat in Basque rural households from 16th century"}
+- {id: corn_flour_talo, grade: signature, rating: 2, name: "Corn flour", name_sv: "Majsmjöl", notes: "base ingredient for talo; historically replaced wheat in Basque rural households from 16th century; Base ingredient for talo; historically replaced wheat in Basque rural households from 16th century"}
 - {id: sourdough_bread_basque, grade: signature, rating: 1, name: "Rustic sourdough bread", name_sv: "Rustikt surdegsbröd", notes: "Dense artisan loaves from Basque bakeries (okindegia); daily table bread beyond pintxo format"}
 
 ### Grains & Starches — Bulk
@@ -126,7 +126,7 @@ Sources:
 - {id: pasta_bulk, grade: bulk, rating: 7, name: "Pasta", name_sv: "Pasta", notes: "Significant consumption in Spain; part of daily meal rotation alongside bread and rice"}
 - {id: potato_starch_bulk, grade: bulk, rating: 6, name: "Potato", name_sv: "Potatis", notes: "as starch; Spain 2022: ~26.4 kg/capita total potato (freshplaza.com/MAPA); functions as primary starch in many dishes"}
 - {id: chickpea_bulk_grain, grade: bulk, rating: 5, name: "Chickpeas", name_sv: "Kikärtor", notes: "Key Spanish pulse; consumed in cocido and stews; significant volume in Spanish diet"}
-- {id: corn_maize_bulk, grade: bulk, rating: 4, name: "Corn / maize products", name_sv: "Majs/majsprodukter", notes: "Consumed as talo flour, polenta, and processed products; historical Basque staple grain"}
+- {id: corn_maize_bulk, grade: bulk, rating: 4, name: "Maize", name_sv: "Majs", notes: "consumed as talo flour, polenta, and processed products; historical Basque staple grain; Consumed as talo flour, polenta, and processed products; historical Basque staple grain"}
 - {id: lentil_bulk_grain, grade: bulk, rating: 3, name: "Lentils", name_sv: "Linser", notes: "Regular weekly dish in Spanish and Basque households; lentejas con chorizo a standard meal"}
 - {id: barley_bulk, grade: bulk, rating: 2, name: "Barley", name_sv: "Korn", notes: "For beer brewing and some traditional foods; part of overall cereal consumption in Spain"}
 - {id: oat_bulk, grade: bulk, rating: 1, name: "Oats", name_sv: "Havre", notes: "Growing modern consumption in Spain; less traditional but increasingly present in Basque diet"}
@@ -168,7 +168,7 @@ Sources:
 - {id: wine_bulk, grade: bulk, rating: 4, name: "Wine", name_sv: "Vin", notes: "Spain among world's highest wine consumers; txakoli is Basque contribution to broader Spanish wine culture"}
 - {id: cream_bulk, grade: bulk, rating: 3, name: "Cream", name_sv: "Grädde", notes: "cooking cream; Used in modern Basque nouvelle cuisine preparations; part of dairy consumption mix"}
 - {id: sunflower_oil_bulk, grade: bulk, rating: 2, name: "Sunflower oil", name_sv: "Solrosolja", notes: "Secondary cooking fat in Spain alongside olive oil; used in deep frying and industrial food production"}
-- {id: cider_vinegar_bulk, grade: bulk, rating: 1, name: "Cider/wine vinegar", name_sv: "Cider-/vinvinäger", notes: "Sagardoa cider vinegar and wine vinegar; used in pickling piparras and Basque salad dressings"}
+- {id: cider_vinegar_bulk, grade: bulk, rating: 1, name: "Cider vinegar", name_sv: "Cidervinäger", notes: "sagardoa cider vinegar; also wine vinegar; used in pickling piparras and Basque salad dressings; Sagardoa cider vinegar and wine vinegar; used in pickling piparras and Basque salad dressings"}
 
 ### Dairy, Oils & Sauces — Local
 <!-- Searched: "Basque Country Idiazabal PDO txakoli PDO sagardoa production local dairy" -->
@@ -201,7 +201,7 @@ Sources:
 <!-- Searched: "Spain spice seasoning consumption statistics salt pepper garlic paprika 2022" -->
 - {id: salt_bulk_spice, grade: bulk, rating: 9, name: "Table salt", name_sv: "Bordssalt", notes: "Universal seasoning; highest volume spice/mineral in Spain and Basque households; essential finishing ingredient"}
 - {id: garlic_bulk_spice, grade: bulk, rating: 8, name: "Garlic", name_sv: "Vitlök", notes: "bulk; Spain ~2–3 kg/capita/year; La Mancha and Andalusian garlic dominate Spanish market"}
-- {id: paprika_pimenton_bulk, grade: bulk, rating: 7, name: "Paprika / Pimentón", name_sv: "Paprikapulver / Pimentón", notes: "Smoked and sweet pimentón; ubiquitous in Spanish chorizo, sofritos and marinades; high volume"}
+- {id: paprika_pimenton_bulk, grade: bulk, rating: 7, name: "Pimentón", name_sv: "Pimentón", notes: "smoked and sweet pimentón; ubiquitous in Spanish chorizo, sofritos and marinades; Smoked and sweet pimentón; ubiquitous in Spanish chorizo, sofritos and marinades; high volume"}
 - {id: black_pepper_bulk, grade: bulk, rating: 6, name: "Black pepper", name_sv: "Svartpeppar", notes: "Most used imported spice in Spain; table and cooking staple across all regions including Basque"}
 - {id: bay_leaf_bulk, grade: bulk, rating: 5, name: "Bay leaf", name_sv: "Lagerblad", notes: "laurel; Every Spanish kitchen keeps dried bay leaves; used in stews, stocks and marinades; very high household frequency"}
 - {id: cinnamon_bulk, grade: bulk, rating: 4, name: "Cinnamon", name_sv: "Kanel", notes: "canela; Widely used in Spanish desserts including arroz con leche and pastries; significant spice volume"}

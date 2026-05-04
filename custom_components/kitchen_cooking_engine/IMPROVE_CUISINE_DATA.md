@@ -235,7 +235,7 @@ Rules:
    **Deduplication rule (critical):** Research signature first, then local, then bulk.
    - If an ingredient already appears in **signature**, do **not** repeat it in local or bulk.
      Find a different ingredient to fill that slot.
-   - If an ingredient already appears in **local**, do **not** repeat it in bulk.
+   - If an ingredient already appears in **signature or local**, do **not** repeat it in bulk.
      Find a different ingredient to fill that slot.
    - Each grade must introduce ingredients that are not already listed in a higher-priority grade.
      Duplicates waste slots and dilute the value of the "More" section.
