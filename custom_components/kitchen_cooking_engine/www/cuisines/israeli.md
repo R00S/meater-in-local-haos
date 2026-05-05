@@ -5,243 +5,200 @@ name: Israeli
 name_sv: "Israeliskt"
 icon: 🇮🇱
 region: middle_east
-region_name: "Middle Eastern"
-region_icon: 🧆
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-research_done: 0
+region_name: "Middle East"
+region_icon: 🌙
+description: "Israeli cuisine fuses the food traditions of Jewish diaspora from over 70 countries with the flavors of the Levant — hummus, falafel, shakshuka, and shawarma are internationally recognized. Israel leads the world in poultry consumption (~60 kg/capita), olive oil production quality, and dairy technology, and its street food culture has redefined casual Mediterranean eating."
+description_sv: "Israeliskt kök blandar mattraditioner från judiska diasporan i över 70 länder med smaker från Levanten — hummus, falafel, shakshuka och shawarma är internationellt kända. Israel leder världen i fjäderfäkonsumtion (~60 kg/capita), olivoljakvalitet och mejeritechnology, och dess gatumatkultur har omdefinerat avslappnat medelhavskök."
+research_done: 1
 ---
 
 ## Research notes
 
-⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
-Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Produce — Signature", etc.).
-Each pair requires its own dedicated research pass. Do NOT combine pairs.
-See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
+Sources: Israel meat consumption 2022/2023 — poultry 57-65 kg/capita (world top), beef 19-21 kg/capita, turkey 10-11 kg/capita, lamb 3-5 kg/capita, pork 1.1 kg/capita (Helgi/Israeli MoA/OECD); Israel produce 150+ kg fruits & vegetables per capita/year; Israel vegetable output: potato (#1), tomato (#2, +11% growth), cucumber, pepper, eggplant (Statista/MoA 2022-23); Israeli dairy 320 L/capita/year (#1 or #2 globally); olive oil 3 kg/capita/year (>96% extra virgin); tahini #1 condiment; za'atar, sumac, cumin, baharat as signature seasonings.
+
+Key findings: Israel has the world's highest poultry consumption per capita at 57-65 kg — extraordinary. Turkey consumption 10-11 kg also among world's highest. Hummus and falafel are the national dishes (chickpeas). Shakshuka (eggs poached in spiced tomato) is a defining breakfast/lunch. Israeli couscous (ptitim) invented 1950s. Za'atar is the most iconic spice blend. Kosher dietary laws mean no pork/shellfish for large segments; dairy and meat cannot be mixed. Fusion of Moroccan, Yemeni, Iraqi, Russian, Ethiopian communities gives Israeli cuisine exceptional breadth.
 
 
 ## Proteins
 
 ### Proteins — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Israeli signature dishes", "Israeli iconic traditional proteins", "Israeli food culture defining meats fish" -->
+<!-- Searched: "Israeli cuisine signature proteins chicken turkey lamb beef fish iconic dishes shakshuka falafel hummus shawarma defining proteins Israel" -->
 
-- {id: stub_prot_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Protein 1", name_sv: "[UTKAST] Signatur Protein 1", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Protein 2", name_sv: "[UTKAST] Signatur Protein 2", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Protein 3", name_sv: "[UTKAST] Signatur Protein 3", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Protein 4", name_sv: "[UTKAST] Signatur Protein 4", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Protein 5", name_sv: "[UTKAST] Signatur Protein 5", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Protein 6", name_sv: "[UTKAST] Signatur Protein 6", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Protein 7", name_sv: "[UTKAST] Signatur Protein 7", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Protein 8", name_sv: "[UTKAST] Signatur Protein 8", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Protein 9", name_sv: "[UTKAST] Signatur Protein 9", notes: "STUB — replace with verified Israeli research"}
+- {id: chicken, grade: signature, rating: 9, name: Chicken, name_sv: "Kyckling", notes: "of; 57-65 kg/capita (world's highest); schnitzel (breaded cutlet — Israel's most popular dish), shishlik (marinated skewers), roasted chicken (off-bone), pargiot (marinated chicken thighs); chicken is the undisputed #1 protein of Israeli cooking"}
+- {id: turkey, grade: signature, rating: 9, name: Turkey, name_sv: "Kalkon", notes: "hodu; 10-11 kg/capita — among world's highest; Israeli shawarma is made primarily from turkey; turkey schnitzel, turkey breast steaks; became the 'kosher pork substitute' in Israeli food culture; shawarma stands across every Israeli city"}
+- {id: eggs, grade: signature, rating: 9, name: Eggs, name_sv: "Ägg", notes: "beitzim; shakshuka (eggs poached in spiced tomato-pepper sauce — Israel's most iconic breakfast dish), hard-boiled egg in sabich pita, egg salad; Israel among world's highest egg consumers; eggs eaten for breakfast, lunch and dinner"}
+- {id: chickpeas, grade: signature, rating: 9, name: Chickpeas (garbanzo), name_sv: "Kikärtor (garbanzo)", notes: "hummus/arbes; hummus is THE Israeli national food — pureed chickpeas with tahini, lemon, garlic; falafel (deep-fried chickpea balls in pita); masabacha (whole cooked chickpeas in warm hummus sauce); chickpeas are central to every aspect of Israeli food culture"}
+- {id: lamb, grade: signature, rating: 7, name: Lamb, name_sv: "Lammkött", notes: "keves; kebab (spiced ground lamb on skewer), lamb chops (kotlet keves), slow-braised lamb shoulder; traditional Mizrahi (Middle Eastern Jewish) festive meat; lower consumption (3-5 kg/capita) but high cultural prestige"}
+- {id: beef, grade: signature, rating: 8, name: Beef, name_sv: "Nötkött", notes: "bakar; 19-21 kg/capita; kebab (beef and lamb mix), steak, beef burger, braised short ribs (Jewish Shabbat cholent); grilled meats at mangal (outdoor barbecue); beef is the dominant red meat by consumption"}
+- {id: sea_bream, grade: signature, rating: 7, name: Sea bream (denise), name_sv: "Havsbraxen (denise)", notes: "denise; Mediterranean fish; chraime (Libyan Jewish spicy fish stew in tomato-chili sauce), fried fish; sea bream and grey mullet central to Sephardic/Mizrahi fish cooking; Israeli Mediterranean coast supports significant fish culture"}
+- {id: lentils, grade: signature, rating: 7, name: Lentils, name_sv: "Linser", notes: "adashim; mujaddara (lentils with rice and fried onion — the 'poor man's dish' loved by all), lentil soup; very high legume consumption; important kosher protein source across vegetarian and omnivore households alike"}
 
 ### Proteins — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Israeli meat consumption kg per capita", "Israeli FAO food balance protein", "Israeli most consumed protein statistics" -->
+<!-- Searched: "Israel meat fish protein consumption per capita 2022 2023 statistics chicken beef turkey lamb most consumed poultry FAO Helgi Library" -->
 
-- {id: stub_prot_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Protein 1", name_sv: "[UTKAST] Bulk Protein 1", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Protein 2", name_sv: "[UTKAST] Bulk Protein 2", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Protein 3", name_sv: "[UTKAST] Bulk Protein 3", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Protein 4", name_sv: "[UTKAST] Bulk Protein 4", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Protein 5", name_sv: "[UTKAST] Bulk Protein 5", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Protein 6", name_sv: "[UTKAST] Bulk Protein 6", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Protein 7", name_sv: "[UTKAST] Bulk Protein 7", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Protein 8", name_sv: "[UTKAST] Bulk Protein 8", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Protein 9", name_sv: "[UTKAST] Bulk Protein 9", notes: "STUB — replace with verified Israeli research"}
+- {id: chicken_bulk, grade: bulk, rating: 9, name: Chicken (broiler), name_sv: "Kyckling (slaktkyckling)", notes: "of; 57-65 kg/capita — world #1 poultry consumption; available at every level of kosher observance; grilled, fried, stewed, roasted; Israeli chicken industry one of most advanced in the world; half-chicken (chatzi of) a classic grill portion"}
+- {id: turkey_bulk, grade: bulk, rating: 9, name: Turkey, name_sv: "Kalkon", notes: "hodu; 10-11 kg/capita; Israeli innovation — large-scale turkey production post-1948 to meet demand for schnitzel and shawarma without pork; turkey schnitzel is an everyday school/work lunch staple"}
+- {id: beef_bulk, grade: bulk, rating: 8, name: Beef, name_sv: "Nötkött", notes: "bakar; 19-21 kg/capita; most consumed red meat; kosher beef requires special slaughter (shechita) and salting; mangal beef (outdoor BBQ culture every Friday), steak house culture growing; hamburgers (hamburguer) very popular"}
+- {id: tilapia, grade: bulk, rating: 7, name: Tilapia (amnon / St. Peter's fish), name_sv: "Tilapia (amnon / Sankt Petrusfisk)", notes: "amnon (Sarotherodon galilaeus); the Sea of Galilee fish; fried and grilled St. Peter's fish is an iconic Israeli dining experience near Tiberias; also farmed nationally; significant Israeli aquaculture product; accessible everyday fish"}
+- {id: tuna_fish, grade: bulk, rating: 7, name: Tuna (canned / fresh), name_sv: "Tonfisk (konserverad / färsk)", notes: "tuna; canned tuna (tuna a la yam) widely used in salads and pita; among the most consumed pantry proteins; Israeli tuna salad in pita bread is a standard lunch; fresh tuna steaks growing in popularity in restaurants"}
+- {id: sardines, grade: bulk, rating: 6, name: Sardines, name_sv: "Sardiner", notes: "sardinot; canned and grilled; important affordable fish protein; North African Jewish (Moroccan, Tunisian) traditions of spiced sardine dishes (chraime sardines); significant kosher fish option; widely available in every Israeli supermarket"}
+- {id: fava_beans, grade: bulk, rating: 6, name: Fava beans (ful), name_sv: "Bondbönor (ful)", notes: "ful; ful medames (stewed fava beans with lemon, cumin, garlic) important for Arab-Israeli and North African Jewish breakfast; widely eaten; hummus spots also serve ful; common across the Middle Eastern food culture of Israel's population"}
+- {id: salmon, grade: bulk, rating: 6, name: Salmon, name_sv: "Lax", notes: "dag salmon; imported; growing significantly in Israeli fish consumption; popular in restaurants, sushi bars, and at-home cooking; gravlax, smoked salmon on challah; Israeli sushi culture growing; premium everyday fish in middle-class households"}
 
 ### Proteins — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Israeli livestock farming animals raised", "Israeli fishing industry fish species caught", "Israeli game animals hunted wild" -->
+<!-- Searched: "Israel locally produced proteins heritage breeds endemic fish Negev desert farmed fish Israeli aquaculture local breeds Bedouin goat Galilee fish Dead Sea production" -->
 
-- {id: stub_prot_loc_1, grade: local, rating: 9, name: "[STUB] Local Protein 1", name_sv: "[UTKAST] Lokalt Protein 1", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_loc_2, grade: local, rating: 8, name: "[STUB] Local Protein 2", name_sv: "[UTKAST] Lokalt Protein 2", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_loc_3, grade: local, rating: 7, name: "[STUB] Local Protein 3", name_sv: "[UTKAST] Lokalt Protein 3", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_loc_4, grade: local, rating: 6, name: "[STUB] Local Protein 4", name_sv: "[UTKAST] Lokalt Protein 4", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_loc_5, grade: local, rating: 5, name: "[STUB] Local Protein 5", name_sv: "[UTKAST] Lokalt Protein 5", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_loc_6, grade: local, rating: 4, name: "[STUB] Local Protein 6", name_sv: "[UTKAST] Lokalt Protein 6", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_loc_7, grade: local, rating: 3, name: "[STUB] Local Protein 7", name_sv: "[UTKAST] Lokalt Protein 7", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_loc_8, grade: local, rating: 2, name: "[STUB] Local Protein 8", name_sv: "[UTKAST] Lokalt Protein 8", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_prot_loc_9, grade: local, rating: 1, name: "[STUB] Local Protein 9", name_sv: "[UTKAST] Lokalt Protein 9", notes: "STUB — replace with verified Israeli research"}
+- {id: gilt_head_bream, grade: local, rating: 8, name: Gilt-head bream (denise), name_sv: "Havsbraxen (denise)", notes: "denise (Sparus aurata); farmed in Israeli Mediterranean aquaculture ponds; locally grown premium fish; Israeli sea bream production serves national and export market; grilled whole with za'atar and lemon at Israeli fish restaurants"}
+- {id: catfish_siluris, grade: local, rating: 7, name: Catfish (shlochim), name_sv: "Havskatt (shlochim)", notes: "shlochim; farmed catfish (Clarias gariepinus) in Israeli intensive aquaculture; kosher-problematic for observant Jews (no scales) but eaten in secular households; significant production in Negev desert fish farms using geothermal water"}
+- {id: lamb_local, grade: local, rating: 7, name: Bedouin goat / lamb, name_sv: "Beduinget / lamm", notes: "seh/gedi; Bedouin-raised sheep and goat from the Negev desert and Galilee highlands; outdoor free-range slow-growing animals; traditionally served at mansaf (Bedouin hospitality feast with lamb on rice); premium quality meat with distinct pasture flavor"}
+- {id: sea_bass_local, grade: local, rating: 7, name: Sea bass (bass yami), name_sv: "Havsaborre (bass yami)", notes: "bass yami (European sea bass, Dicentrarchus labrax); farmed in Israeli Mediterranean coastal ponds; grilled or oven-baked; alongside sea bream as the primary locally farmed Mediterranean fish; growing aquaculture sector"}
+- {id: quail_local, grade: local, rating: 6, name: Quail (slaw), name_sv: "Vaktel (slaw)", notes: "slaw; quail farmed in Israel; grilled quail and quail eggs in gourmet cooking; Biblical bird — quails mentioned in the Exodus story; Israeli foodies appreciate quail's delicacy; eggs used in creative cooking"}
+- {id: goat_gouda, grade: local, rating: 6, name: Goat (ez), name_sv: "Getmjölk / get (ez)", notes: "ez; goats farmed in Israeli kibbutzim and moshavim; Israeli goat cheeses (gevina ez) well developed; goat meat in Arab-Israeli and Druze cooking; goat milk cheeses nationally distributed; artisan goat cheese production growing"}
+- {id: ethiopian_injera_protein, grade: local, rating: 5, name: Ethiopian spiced beef (tibs), name_sv: "Etiopisk kryddad nötkött (tibs)", notes: "tibs; Ethiopian-Israeli community (Beta Israel) maintains traditional spiced beef stews; significant community cuisine after mass aliyah 1984-1991; injera (Ethiopian sour flatbread) produced in Israel; distinct Ethiopian-Israeli food culture"}
+- {id: mullet_local, grade: local, rating: 6, name: Grey mullet (buri), name_sv: "Grå mullet (buri)", notes: "buri (Mugil cephalus); Israeli farmed and wild; smoked grey mullet roe (bouri kavush) a delicacy; eaten fried and grilled; traditional in Arab-Israeli coastal communities (Akko, Jaffa); farmed in Israeli coastal fish ponds"}
 
 
 ## Produce
 
 ### Produce — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Israeli signature dishes vegetables", "Israeli iconic vegetable ingredients", "Israeli traditional vegetable preparations" -->
+<!-- Searched: "Israeli cuisine signature vegetables tomato cucumber eggplant avocado artichoke Israeli salad defining vegetables production statistics" -->
 
-- {id: stub_veg_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Vegetable 1", name_sv: "[UTKAST] Signatur Grönsak 1", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Vegetable 2", name_sv: "[UTKAST] Signatur Grönsak 2", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Vegetable 3", name_sv: "[UTKAST] Signatur Grönsak 3", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Vegetable 4", name_sv: "[UTKAST] Signatur Grönsak 4", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Vegetable 5", name_sv: "[UTKAST] Signatur Grönsak 5", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Vegetable 6", name_sv: "[UTKAST] Signatur Grönsak 6", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Vegetable 7", name_sv: "[UTKAST] Signatur Grönsak 7", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Vegetable 8", name_sv: "[UTKAST] Signatur Grönsak 8", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Vegetable 9", name_sv: "[UTKAST] Signatur Grönsak 9", notes: "STUB — replace with verified Israeli research"}
+- {id: tomato, grade: signature, rating: 9, name: Tomato, name_sv: "Tomat", notes: "agvaniya; Israeli salad (salat katzutz) — finely diced tomato and cucumber — eaten at EVERY Israeli meal including breakfast; shakshuka tomato base; in chraime fish stew; Israel a world leader in tomato breeding technology (including cherry tomatoes invented by Zeraim Gedera)"}
+- {id: cucumber, grade: signature, rating: 9, name: Cucumber, name_sv: "Gurka", notes: "melafefon; Israeli salad — equal partner to tomato; pickled cucumber (melafefon kasher) alongside shawarma and kebab; Israeli-style cucumber very thin-skinned; eaten for breakfast with white cheese; the quintessential fresh vegetable of Israeli daily eating"}
+- {id: eggplant, grade: signature, rating: 8, name: Eggplant (hatsilim), name_sv: "Aubergine (hatsilim)", notes: "hatsilim; baba ganoush (smoky roasted eggplant dip), sabich (fried eggplant in pita), salat hatsilim (grilled eggplant salad); THE signature vegetable in Israeli-Levantine cooking; roasted over gas flame gives the characteristic smoky flavor"}
+- {id: pepper, grade: signature, rating: 8, name: Sweet pepper / chili (pilpel), name_sv: "Paprika / chili (pilpel)", notes: "pilpel; matbucha (cooked tomato-pepper salad, Moroccan Jewish origin), shakshuka peppers, roasted peppers in mezze, stuffed peppers; Israel is a major pepper exporter; both sweet capsicum and hot chili widely used"}
+- {id: avocado, grade: signature, rating: 8, name: Avocado (avocado), name_sv: "Avokado (avocado)", notes: "avocado; Israel grows premium avocado (Ettinger, Hass) in the coastal plain and Jordan Valley; avocado toast, avocado in salads; Israel is major European avocado exporter; grown since the 1950s; significant national produce identity"}
+- {id: parsley_herb, grade: signature, rating: 7, name: Parsley / cilantro, name_sv: "Persilja / koriander", notes: "petrozilia/gad; flat-leaf parsley in tabbouleh, falafel mix, garnish; cilantro in Yemeni Israeli cooking (zhug — cilantro chili paste); fresh herbs consumed in extraordinary volume — >150 kg produce per capita includes heavy herb use"}
+- {id: onion_garlic, grade: signature, rating: 8, name: Onion & garlic, name_sv: "Lök & vitlök", notes: "batzal/shoom; aromatic base of every Israeli dish; caramelized onion on hummus, raw in Israeli salad, in shakshuka; garlic in hummus, schnitzel marinade; fried shallots as garnish; fundamental aromatics across all Israeli culinary traditions"}
+- {id: lemon, grade: signature, rating: 8, name: Lemon, name_sv: "Citron", notes: "limon; squeezed over hummus, falafel, grilled fish, shawarma, salads; limonana (frozen mint lemonade — Israel's summer drink); lemon in marinades; Israel a citrus powerhouse (Jaffa oranges historically); lemon juice the universal acid of Israeli cooking"}
 
 ### Produce — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Israeli vegetable consumption kg per capita", "Israeli most consumed vegetables statistics", "Israeli FAO food balance vegetables" -->
+<!-- Searched: "Israel vegetable production 2022 2023 statistics potato carrot cabbage zucchini beet Jerusalem artichoke most produced vegetables" -->
 
-- {id: stub_veg_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Vegetable 1", name_sv: "[UTKAST] Bulk Grönsak 1", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Vegetable 2", name_sv: "[UTKAST] Bulk Grönsak 2", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Vegetable 3", name_sv: "[UTKAST] Bulk Grönsak 3", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Vegetable 4", name_sv: "[UTKAST] Bulk Grönsak 4", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Vegetable 5", name_sv: "[UTKAST] Bulk Grönsak 5", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Vegetable 6", name_sv: "[UTKAST] Bulk Grönsak 6", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Vegetable 7", name_sv: "[UTKAST] Bulk Grönsak 7", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Vegetable 8", name_sv: "[UTKAST] Bulk Grönsak 8", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Vegetable 9", name_sv: "[UTKAST] Bulk Grönsak 9", notes: "STUB — replace with verified Israeli research"}
+- {id: potato, grade: bulk, rating: 9, name: Potato, name_sv: "Potatis", notes: "tapuach adama; Israel's highest production vegetable at 450,000+ metric tonnes (2023); fried potato wedges/chips alongside schnitzel, potato salad, latkes (Hanukkah potato pancakes); fundamental bulk starch; very high household consumption"}
+- {id: carrot, grade: bulk, rating: 7, name: Carrot, name_sv: "Morot", notes: "gezer; Moroccan Jewish carrot salad (gezer salat — cooked spiced carrot salad with cumin and paprika) is an iconic Israeli side dish; in soups, cholent, roasted; major bulk vegetable crop; very high consumption as both raw snack and cooked side"}
+- {id: cabbage, grade: bulk, rating: 7, name: Cabbage, name_sv: "Kål", notes: "kruvit; pickled cabbage (krovit kafrisin/kishinev), coleslaw, stuffed cabbage leaves (golabki/holishkes in Ashkenazi tradition); bulk crop; Eastern European Jewish traditions brought cabbage preservation to Israeli table"}
+- {id: zucchini, grade: bulk, rating: 7, name: Zucchini (kishuim), name_sv: "Zucchini (kishuim)", notes: "kishuim; stuffed zucchini (kishuim memula'im), in shakshuka variations, roasted vegetable platters; widely grown; common in home cooking especially for Shabbat stews; Sephardic tradition uses zucchini extensively"}
+- {id: beet, grade: bulk, rating: 6, name: Beet (selek), name_sv: "Rödbeta (selek)", notes: "selek; roasted beet salad (salat selek) with lemon and za'atar; Ashkenazi tradition — borscht (beet soup); pickled beets; very common in Israeli salad bar culture; symbolic Rosh Hashana vegetable (sweetness for new year)"}
+- {id: orange, grade: bulk, rating: 8, name: Orange (tapuz), name_sv: "Apelsin (tapuz)", notes: "tapuz (portmanteau of tapooz — orange fruit); Jaffa orange was Israel's export brand for decades; freshly squeezed orange juice consumed daily; Israel major Mediterranean citrus producer; oranges both eaten fresh and juiced widely"}
+- {id: pomegranate_local, grade: bulk, rating: 7, name: Pomegranate (rimon), name_sv: "Granatäpple (rimon)", notes: "rimon; symbolic Rosh Hashana fruit (seeds represent 613 mitzvot); Israeli producers of premium pomegranate; pomegranate juice consumed fresh; growing health food market; Israel a major Mediterranean pomegranate producer; widely eaten in season"}
+- {id: banana, grade: bulk, rating: 7, name: Banana (banana), name_sv: "Banan (banana)", notes: "banana; grown in the Jordan Valley and coastal plain; Israel significant banana producer; eaten fresh daily; in smoothies; very high consumption especially with children; Israeli bananas a domestic staple"}
+- {id: mango, grade: bulk, rating: 6, name: Mango (mango), name_sv: "Mango (mango)", notes: "mango; grown in Israel (Jordan Valley); Israeli mangoes exported; eaten fresh; mango lassi-style drinks; growing consumption; amba (pickled mango condiment) reflects the cultural importance of mango in the Israeli palate"}
 
 ### Produce — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Israeli vegetables grown locally agriculture", "Israeli regional vegetable crops", "Israeli foraging wild plants" -->
+<!-- Searched: "Israel local produce GI specialty agriculture avocado cherimoya Medjool dates passion fruit Dead Sea artichoke Jerusalem artichoke local heritage Israel grown endemic" -->
 
-- {id: stub_veg_loc_1, grade: local, rating: 9, name: "[STUB] Local Vegetable 1", name_sv: "[UTKAST] Lokalt Grönsak 1", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_loc_2, grade: local, rating: 8, name: "[STUB] Local Vegetable 2", name_sv: "[UTKAST] Lokalt Grönsak 2", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_loc_3, grade: local, rating: 7, name: "[STUB] Local Vegetable 3", name_sv: "[UTKAST] Lokalt Grönsak 3", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_loc_4, grade: local, rating: 6, name: "[STUB] Local Vegetable 4", name_sv: "[UTKAST] Lokalt Grönsak 4", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_loc_5, grade: local, rating: 5, name: "[STUB] Local Vegetable 5", name_sv: "[UTKAST] Lokalt Grönsak 5", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_loc_6, grade: local, rating: 4, name: "[STUB] Local Vegetable 6", name_sv: "[UTKAST] Lokalt Grönsak 6", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_loc_7, grade: local, rating: 3, name: "[STUB] Local Vegetable 7", name_sv: "[UTKAST] Lokalt Grönsak 7", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_loc_8, grade: local, rating: 2, name: "[STUB] Local Vegetable 8", name_sv: "[UTKAST] Lokalt Grönsak 8", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_veg_loc_9, grade: local, rating: 1, name: "[STUB] Local Vegetable 9", name_sv: "[UTKAST] Lokalt Grönsak 9", notes: "STUB — replace with verified Israeli research"}
+- {id: medjool_dates, grade: local, rating: 9, name: Medjool dates, name_sv: "Medjool-dadlar", notes: "tmarim medjool; Israel one of world's top Medjool date producers (Jordan Valley, Arava desert); the king of dates — large, soft, caramel sweet; stuffed dates with tahini or nuts; premium Israeli export product; eaten on Rosh Hashana and daily as natural energy food"}
+- {id: jaffa_citrus, grade: local, rating: 8, name: Jaffa oranges / citrus, name_sv: "Jaffaapelsiner / citrus", notes: "tapuz jaffa; the Shamouti orange variety globally branded as Jaffa; Israel dominant citrus exporter for decades; also Jaffa grapefruit; eaten fresh and juiced; cultural icon of Israeli agriculture; still significant production despite competition"}
+- {id: jerusalem_artichoke, grade: local, rating: 8, name: Jerusalem artichoke (artishok yerushalmi), name_sv: "Jordärtskocka (artishok yerushalmi)", notes: "artishok yerushalmi; grown in Israel; distinctly named for Jerusalem; used roasted, in soups, pickled; Israeli chefs use Jerusalem artichoke prominently; the name itself links produce identity to Israel; genuinely distinct tuber ingredient"}
+- {id: sabra_cactus_fruit, grade: local, rating: 7, name: Cactus pear (tzabar / sabra), name_sv: "Kaktusfikon (tzabar / sabra)", notes: "tzabar (prickly pear cactus fruit); sabra is both a slang for native-born Israeli AND the fruit; sold by vendors in summer; sweet, refreshing, peeled by vendor; deeply Israeli cultural symbol — prickly outside, sweet inside; grows wild across Israeli landscape"}
+- {id: carob_local, grade: local, rating: 7, name: Carob (charuv), name_sv: "Johannesbröd (charuv)", notes: "charuv; carob pods historically eaten by the poor; traditional Tu BiShvat fruit; carob syrup (silan charuv); Israeli ecological restoration efforts include extensive carob tree planting; traditional 'chocolate substitute'; carob powder in modern Israeli health food"}
+- {id: cherimoya, grade: local, rating: 6, name: Cherimoya (sheremoiya), name_sv: "Cherimoya (sheremoiya)", notes: "sheremoiya; grown in Israeli subtropical zones; premium tropical fruit sold fresh in local markets; Israeli farmers pioneered its commercial cultivation in the Middle East; eaten fresh; growing niche but distinctly Israeli agricultural product"}
+- {id: guava_local, grade: local, rating: 6, name: Guava (guava), name_sv: "Guava (guava)", notes: "guava; grown in coastal plain of Israel; eaten fresh, as juice, in jams; guava with salt is a local snack tradition (especially among Arab-Israeli and Yemeni communities); tropical fruit naturalized in the Israeli fruit culture"}
+- {id: loquat, grade: local, rating: 5, name: Loquat (shesek), name_sv: "Japansk mispel (shesek)", notes: "shesek; Israeli loquat trees grow across the country, ripening in spring; eaten fresh off the tree; sold in markets; significant seasonal fruit especially in Arab-Israeli and Sephardic traditions; loquat jam; a deeply nostalgic Israeli fruit"}
 
 
 ## Grains & Starches
 
 ### Grains & Starches — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Israeli signature grain dishes bread pasta rice", "Israeli iconic starch preparations", "Israeli traditional staple foods" -->
+<!-- Searched: "Israeli cuisine most important grains bread pita challah bulgur Israeli couscous ptitim falafel chickpea hummus staple foods statistics Israel" -->
 
-- {id: stub_grain_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Grain 1", name_sv: "[UTKAST] Signatur Spannmål 1", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Grain 2", name_sv: "[UTKAST] Signatur Spannmål 2", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Grain 3", name_sv: "[UTKAST] Signatur Spannmål 3", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Grain 4", name_sv: "[UTKAST] Signatur Spannmål 4", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Grain 5", name_sv: "[UTKAST] Signatur Spannmål 5", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Grain 6", name_sv: "[UTKAST] Signatur Spannmål 6", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Grain 7", name_sv: "[UTKAST] Signatur Spannmål 7", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Grain 8", name_sv: "[UTKAST] Signatur Spannmål 8", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Grain 9", name_sv: "[UTKAST] Signatur Spannmål 9", notes: "STUB — replace with verified Israeli research"}
+- {id: pita_bread, grade: signature, rating: 9, name: Pita bread, name_sv: "Pitabröd", notes: "pita; THE carrier of Israeli food culture; stuffed with falafel, shawarma, sabich; used to scoop hummus; pita with za'atar and olive oil; baked in stone deck ovens; every street corner has a pita stand; the single most universally consumed bread in Israel"}
+- {id: hummus_chickpea, grade: signature, rating: 9, name: Hummus (chickpea dip), name_sv: "Hummus (kikärtsdipp)", notes: "hummus; ground chickpeas with tahini, lemon, garlic, cumin; eaten as a main dish (hummus soba — a bowl with meat, eggs, or mushrooms), as dip, or for breakfast; israelis among world's highest hummus consumers; hummusiyot (hummus restaurants) ubiquitous"}
+- {id: falafel, grade: signature, rating: 9, name: Falafel, name_sv: "Falafel", notes: "falafel; deep-fried chickpea (and sometimes fava) balls; THE Israeli street food — served in pita with Israeli salad, tahini, harissa, pickles; every Israeli has their favorite falafel stand; falafel together with hummus defines Israeli food internationally"}
+- {id: challah, grade: signature, rating: 8, name: Challah (braided bread), name_sv: "Challah (flätat bröd)", notes: "challah; braided enriched egg bread for Shabbat and holidays; two loaves (lechem mishneh) on the Shabbat table; with honey on Rosh Hashana; round challah for New Year; the most sacred bread of Jewish tradition; commercially baked and home-made weekly"}
+- {id: rice, grade: signature, rating: 8, name: Rice (orez), name_sv: "Ris (orez)", notes: "orez; the standard side dish for Israeli stews and grilled meats; orez with vermicelli (orez im ishpagueti — toasted pasta in the rice); Sephardic long-grain rice with saffron and almonds; the companion to every Israeli second course"}
+- {id: bulgur, grade: signature, rating: 7, name: Bulgur (burgul), name_sv: "Bulgur (burgul)", notes: "burgul; tabbouleh (bulgur, parsley, tomato, lemon — Israeli version very parsley-heavy), kibbeh (Lebanese-Jewish); in vegetarian dishes; popular high-fiber grain; tabbouleh served as mezze in every Israeli restaurant"}
+- {id: ptitim, grade: signature, rating: 7, name: Israeli couscous (ptitim), name_sv: "Israelisk couscous (ptitim)", notes: "ptitim (also called Israeli couscous or 'Ben Gurion rice'); toasted wheat pearl pasta invented 1953 as rice substitute; now a globally known Israeli grain product sold worldwide as 'Israeli couscous'; toasted in butter with spices; distinctly Israeli starch innovation"}
 
 ### Grains & Starches — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Israeli grain consumption kg per capita", "Israeli rice wheat bread statistics", "Israeli FAO food balance cereals" -->
+<!-- Searched: "Israel grain consumption statistics 2022 2023 wheat flour bread rice pasta most consumed grains cereals Israeli diet" -->
 
-- {id: stub_grain_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Grain 1", name_sv: "[UTKAST] Bulk Spannmål 1", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Grain 2", name_sv: "[UTKAST] Bulk Spannmål 2", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Grain 3", name_sv: "[UTKAST] Bulk Spannmål 3", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Grain 4", name_sv: "[UTKAST] Bulk Spannmål 4", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Grain 5", name_sv: "[UTKAST] Bulk Spannmål 5", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Grain 6", name_sv: "[UTKAST] Bulk Spannmål 6", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Grain 7", name_sv: "[UTKAST] Bulk Spannmål 7", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Grain 8", name_sv: "[UTKAST] Bulk Spannmål 8", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Grain 9", name_sv: "[UTKAST] Bulk Spannmål 9", notes: "STUB — replace with verified Israeli research"}
+- {id: wheat_flour, grade: bulk, rating: 9, name: Wheat flour, name_sv: "Vetemjöl", notes: "kemach; foundation of pita, challah, laffa, bourekas pastry; Israel large wheat consumer; subsidized flour in the past; commercial baking massive in Israel; croissants, bagels, bourekas, knafeh pastry — all wheat-based; the primary calorie grain"}
+- {id: laffa_bread, grade: bulk, rating: 8, name: Laffa (Iraqi flatbread), name_sv: "Laffa (irakisk flatbröd)", notes: "laffa; large thin Iraqi-Jewish flatbread baked in tabun oven; used for wrapping shawarma (larger than pita) and kebabs; the bigger, softer, chewier alternative to pita; widely available in Israeli street food stalls alongside pita"}
+- {id: matza, grade: bulk, rating: 7, name: Matza (unleavened bread), name_sv: "Matza (osyrat bröd)", notes: "matza; unleavened cracker-bread for Passover; every Israeli household uses matza annually; matza brei (matza scrambled with eggs and onion); matza replaced by baked goods outside Passover week but enormous annual consumption spike; uniquely Jewish staple"}
+- {id: semolina_grain, grade: bulk, rating: 7, name: Semolina (semolina), name_sv: "Semolina (semolina)", notes: "semolina; couscous (North African Jews), knafeh (cheese pastry with semolina), basbousa (semolina cake); large North African Jewish community brought semolina cooking to Israel; widely consumed in both Mizrahi sweet and savory cooking"}
+- {id: lentils_grain, grade: bulk, rating: 7, name: Lentils (adashim), name_sv: "Linser (adashim)", notes: "adashim; mujaddara (lentils with rice), lentil soup, lentil salad; extremely high daily consumption; affordable, filling, and kosher pareve (no dairy or meat); one of the most consumed legumes in the Israeli diet"}
+- {id: chickpea_grain, grade: bulk, rating: 8, name: Chickpeas (garbanzo), name_sv: "Kikärtor (garbanzo)", notes: "arbes/hummus-seeds; massive consumption for hummus and falafel production; packaged dried chickpeas essential pantry staple; Israel imports large quantities; canned chickpeas widely used in home cooking; #1 legume by consumption volume in Israel"}
 
 ### Grains & Starches — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Israeli grain crops grown", "Israeli cereal farming production", "Israeli locally milled flour regional varieties" -->
+<!-- Searched: "Israel heritage grains ancient emmer wheat spelt einkorn Israeli bread culture GI products traditional grains Biblical grains local specialty Israel" -->
 
-- {id: stub_grain_loc_1, grade: local, rating: 9, name: "[STUB] Local Grain 1", name_sv: "[UTKAST] Lokalt Spannmål 1", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_loc_2, grade: local, rating: 8, name: "[STUB] Local Grain 2", name_sv: "[UTKAST] Lokalt Spannmål 2", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_loc_3, grade: local, rating: 7, name: "[STUB] Local Grain 3", name_sv: "[UTKAST] Lokalt Spannmål 3", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_loc_4, grade: local, rating: 6, name: "[STUB] Local Grain 4", name_sv: "[UTKAST] Lokalt Spannmål 4", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_loc_5, grade: local, rating: 5, name: "[STUB] Local Grain 5", name_sv: "[UTKAST] Lokalt Spannmål 5", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_loc_6, grade: local, rating: 4, name: "[STUB] Local Grain 6", name_sv: "[UTKAST] Lokalt Spannmål 6", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_loc_7, grade: local, rating: 3, name: "[STUB] Local Grain 7", name_sv: "[UTKAST] Lokalt Spannmål 7", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_loc_8, grade: local, rating: 2, name: "[STUB] Local Grain 8", name_sv: "[UTKAST] Lokalt Spannmål 8", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_grain_loc_9, grade: local, rating: 1, name: "[STUB] Local Grain 9", name_sv: "[UTKAST] Lokalt Spannmål 9", notes: "STUB — replace with verified Israeli research"}
+- {id: emmer_wheat, grade: local, rating: 8, name: Emmer wheat (kusmin), name_sv: "Emmer-vete (kusmin)", notes: "kusmin; one of the Seven Species of Israel (shivat haminim) from the Bible — emmer wheat; grown in organic and heritage farming; used in artisan breads; modern Israeli boutique bakeries reviving ancient grain tradition; deeply connected to Israeli food heritage and identity"}
+- {id: barley_local, grade: local, rating: 7, name: Barley (se'ora), name_sv: "Korn (se'ora)", notes: "se'ora; one of the Seven Species; barley beer (bira from se'ora), barley porridge, in soups; ancient Israeli grain; modern craft beer breweries using Israeli barley; Omer grain offering in the Temple — deeply biblical significance; grown in Galilee and Negev"}
+- {id: freekeh, grade: local, rating: 7, name: Freekeh (fire-roasted green wheat), name_sv: "Freekeh (eldrostat grönt vete)", notes: "freekeh/farik; green durum wheat roasted over fire giving smoky flavor; Arab-Israeli culinary tradition; chicken and freekeh (djaj bil farik) is a Palestinian-Israeli signature dish; sold in Israeli markets; nutty, smoky ancient grain very on-trend"}
+- {id: knafeh_pastry, grade: local, rating: 8, name: Knafeh (cheese pastry), name_sv: "Knafeh (ostbakelse)", notes: "knafeh; semolina and shredded wheat layered with white stretchy cheese (akkawi/nablusi), soaked in rose water sugar syrup, topped with orange food color; Arab-Israeli sweet most associated with the city of Akko; internationally known; sold at every Arab-Israeli sweet shop"}
+- {id: bourekas, grade: local, rating: 8, name: Bourekas (stuffed pastry), name_sv: "Bourekas (fylld bakverk)", notes: "bourekas; flaky pastry filled with cheese (jibn), spinach (espinaca), potato, or mushroom; Sephardic Jewish (Balkan) tradition adapted into Israeli street food staple; sold at every Israeli bakery and convenience store; bourekas with hard-boiled egg = quintessential Israeli breakfast"}
+- {id: malawach, grade: local, rating: 7, name: Malawach (Yemeni flatbread), name_sv: "Malawach (jemenitisk flatbröd)", notes: "malawach; flaky layered Yemeni Jewish fried flatbread; served with crushed tomatoes (salat ahim), zhug (hot sauce), and honey; jachnun (rolled Shabbat pastry) related; both define the Yemeni Israeli culinary contribution; beloved across all Israeli communities"}
 
 
 ## Dairy, Oils & Sauces
 
 ### Dairy, Oils & Sauces — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Israeli signature dairy dishes", "Israeli iconic cheese butter cream", "Israeli traditional dairy products" -->
+<!-- Searched: "Israeli cuisine signature dairy oils sauces tahini hummus olive oil labneh Greek yogurt most consumed condiments sauces Israel" -->
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Dairy 1", name_sv: "[UTKAST] Signatur Mejeri 1", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Dairy 2", name_sv: "[UTKAST] Signatur Mejeri 2", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Dairy 3", name_sv: "[UTKAST] Signatur Mejeri 3", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Dairy 4", name_sv: "[UTKAST] Signatur Mejeri 4", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Dairy 5", name_sv: "[UTKAST] Signatur Mejeri 5", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Dairy 6", name_sv: "[UTKAST] Signatur Mejeri 6", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Dairy 7", name_sv: "[UTKAST] Signatur Mejeri 7", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Dairy 8", name_sv: "[UTKAST] Signatur Mejeri 8", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Dairy 9", name_sv: "[UTKAST] Signatur Mejeri 9", notes: "STUB — replace with verified Israeli research"}
+- {id: tahini, grade: signature, rating: 9, name: Tahini (sesame paste), name_sv: "Tahini (sesampasta)", notes: "tehina; #1 Israeli condiment (market research); poured over hummus, falafel, sabich, grilled fish; mixed with lemon and water to make tahini sauce; eaten with fruit or on bread; Nablus and Nazareth tahini made from Ethiopian sesame seeds known as best quality; a daily food for most Israelis"}
+- {id: olive_oil, grade: signature, rating: 9, name: Olive oil (shemen zayit), name_sv: "Olivolja (shemen zayit)", notes: "shemen zayit; 3+ kg/capita/year — >96% extra virgin; drizzled on hummus, in salads (za'atar and olive oil on bread), in marinades; Israel produces premium single-estate olive oil (esp. from Galilee, Golan, Judean Hills); one of the Seven Species; daily foundational fat"}
+- {id: labneh, grade: signature, rating: 8, name: Labneh (strained yogurt), name_sv: "Labneh (silade yoghurt)", notes: "labneh (gvina levana/gevina levanah = white cheese); strained yogurt spread on bread with za'atar and olive oil — the quintessential Israeli breakfast; sold in balls rolled in za'atar; 320L dairy/capita confirms massive dairy culture; daily household staple"}
+- {id: amba, grade: signature, rating: 8, name: Amba (pickled mango), name_sv: "Amba (inlagd mango)", notes: "amba; spiced pickled mango sauce (with turmeric, fenugreek, mustard); in every Israeli shawarma, falafel, sabich; originally Iraqi-Jewish, now a national condiment; the indispensable flavor of Tel Aviv street food; alongside tahini defines the Israeli pita sandwich"}
+- {id: zhug, grade: signature, rating: 8, name: Zhug (Yemeni chili paste), name_sv: "Zhug (jemenitisk chilipasta)", notes: "zhug (s'chug); Yemeni-Jewish chili-herb hot sauce (fresh chilies, coriander, garlic, cardamom); green or red versions; on every Israeli hummus plate and shawarma; the Israeli hot sauce; brought by Yemeni Jewish immigrants (aliyah 1949-50); pungent, aromatic"}
+- {id: matbucha, grade: signature, rating: 7, name: Matbucha (cooked tomato salad), name_sv: "Matbucha (kokt tomatsallad)", notes: "matbucha; slow-cooked tomato-pepper-chili salad (Moroccan Jewish); served as mezze alongside hummus and bread; one of the standard Israeli mezze salads at every restaurant; the Moroccan Jewish contribution to the Israeli table"}
+- {id: yogurt, grade: signature, rating: 8, name: Yogurt (yaourt), name_sv: "Yoghurt (yaourt)", notes: "yaourt; 320L dairy/capita reflects enormous dairy consumption; Israeli yogurt (Tnuva, Strauss brands); eaten for breakfast with granola, as a side for grilled meats; drinking yogurt (laban yoghurt); distinctly high-fat thick styles popular; Israeli dairy world-class"}
 
 ### Dairy, Oils & Sauces — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Israeli dairy consumption kg per capita", "Israeli milk cheese butter statistics", "Israeli FAO food balance dairy" -->
+<!-- Searched: "Israel dairy consumption statistics 2022 2023 milk cheese butter cream most consumed dairy products Israel per capita" -->
 
-- {id: stub_dairy_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Dairy 1", name_sv: "[UTKAST] Bulk Mejeri 1", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Dairy 2", name_sv: "[UTKAST] Bulk Mejeri 2", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Dairy 3", name_sv: "[UTKAST] Bulk Mejeri 3", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Dairy 4", name_sv: "[UTKAST] Bulk Mejeri 4", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Dairy 5", name_sv: "[UTKAST] Bulk Mejeri 5", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Dairy 6", name_sv: "[UTKAST] Bulk Mejeri 6", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Dairy 7", name_sv: "[UTKAST] Bulk Mejeri 7", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Dairy 8", name_sv: "[UTKAST] Bulk Mejeri 8", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Dairy 9", name_sv: "[UTKAST] Bulk Mejeri 9", notes: "STUB — replace with verified Israeli research"}
+- {id: white_cheese, grade: bulk, rating: 9, name: White cheese (gvina levana), name_sv: "Vit ost (gvina levana)", notes: "gvina levana (5%/9% fat); Israeli breakfast staple — white cheese on bread; the Israeli equivalent of cottage cheese or quark; eaten with vegetables, in sandwiches, with honey; produced by Tnuva and Strauss; extremely high consumption; a defining Israeli morning food"}
+- {id: milk, grade: bulk, rating: 8, name: Cow's milk (halav), name_sv: "Komjölk (halav)", notes: "halav parah; 320L/capita dairy consumption (world #1 or #2); Israeli cows produce >12,000 kg milk/cow/year; UHT and fresh milk consumed daily; chocolate milk (chalav shocolad) beloved by children; milk in coffee (cafe hafuch = flat white); massive daily dairy intake"}
+- {id: sour_cream_shamenet, grade: bulk, rating: 8, name: Sour cream (shamenet), name_sv: "Gräddfil (shamenet)", notes: "shamenet; Israeli sour cream eaten on latkes (Hanukkah potato pancakes), with blini, in soups; heavy sour cream 27% fat as sauce; distinctly Ashkenazi tradition brought from Eastern Europe; sold at every Israeli supermarket; major daily dairy product"}
+- {id: cottage_cheese, grade: bulk, rating: 7, name: Cottage cheese (gvina kotij), name_sv: "Cottage cheese (gvina kotij)", notes: "gvina kotij; very popular in Israel; eaten on bread, as a diet food, in salads; Israel has notably elevated cottage cheese to a national conversation (2011 cottage cheese boycott protest became famous); very high per capita consumption"}
+- {id: butter, grade: bulk, rating: 7, name: Butter (chem'a), name_sv: "Smör (chem'a)", notes: "chem'a; Ashkenazi baking tradition — challah uses butter (pareve/margarine in meat households due to kosher); used in pastries, cookies, cakes; separate pareve (margarine) version exists for kosher meat meals; significant baking culture consumption"}
+- {id: sunflower_oil, grade: bulk, rating: 7, name: Sunflower oil (shemen chimanit), name_sv: "Solrosolja (shemen chimanit)", notes: "shemen chimanit; the standard high-heat cooking oil for frying (falafel deep-frying, schnitzel frying); alongside olive oil as dual-fat system in Israeli cooking; high volume; cheap and widely available; the everyday frying fat in Israeli kitchens"}
+- {id: harissa_sauce, grade: bulk, rating: 7, name: Harissa (chili paste), name_sv: "Harissa (chilipasta)", notes: "harissa; North African Jewish (Tunisian, Moroccan) chili paste; served alongside couscous, grilled fish, in shakshuka; available in every Israeli supermarket; national acceptance across all communities; the mass-market hot sauce of Israel"}
 
 ### Dairy, Oils & Sauces — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Israeli dairy farming local production", "Israeli regional cheese varieties", "Israeli local dairy breeds" -->
+<!-- Searched: "Israel locally produced specialty dairy cheeses local olive oil GI products artisan cheeses boutique wines specialty products Israel local" -->
 
-- {id: stub_dairy_loc_1, grade: local, rating: 9, name: "[STUB] Local Dairy 1", name_sv: "[UTKAST] Lokalt Mejeri 1", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 8, name: "[STUB] Local Dairy 2", name_sv: "[UTKAST] Lokalt Mejeri 2", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 7, name: "[STUB] Local Dairy 3", name_sv: "[UTKAST] Lokalt Mejeri 3", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 6, name: "[STUB] Local Dairy 4", name_sv: "[UTKAST] Lokalt Mejeri 4", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 5, name: "[STUB] Local Dairy 5", name_sv: "[UTKAST] Lokalt Mejeri 5", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 4, name: "[STUB] Local Dairy 6", name_sv: "[UTKAST] Lokalt Mejeri 6", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 3, name: "[STUB] Local Dairy 7", name_sv: "[UTKAST] Lokalt Mejeri 7", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 2, name: "[STUB] Local Dairy 8", name_sv: "[UTKAST] Lokalt Mejeri 8", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_dairy_loc_9, grade: local, rating: 1, name: "[STUB] Local Dairy 9", name_sv: "[UTKAST] Lokalt Mejeri 9", notes: "STUB — replace with verified Israeli research"}
+- {id: galilee_olive_oil, grade: local, rating: 9, name: Galilee olive oil, name_sv: "Galileeisk olivolja", notes: "shemen zayit galil; premium extra-virgin olive oil from the Galilee region; ancient olive groves; internationally award-winning Israeli olive oils; distinct flavor profiles from different varietals (Souri, Rumi, Barnea); Israel's flagship agricultural luxury export product"}
+- {id: goat_cheese_israeli, grade: local, rating: 8, name: Israeli goat cheese (gvina ez), name_sv: "Israelisk getost (gvina ez)", notes: "gvina ez; artisan goat cheeses from Israeli moshav farms; Galilee goat cheese, Gouda-style ez, fresh chèvre; Israeli artisan cheese production internationally recognized; boutique dairies produce award-winning aged goat cheeses; growing gourmet market"}
+- {id: kashkaval, grade: local, rating: 7, name: Kashkaval (hard yellow cheese), name_sv: "Kashkaval (hård gul ost)", notes: "kashkaval; Balkan-Jewish semi-hard sheep milk cheese brought by Bulgarian and Macedonian Jewish immigrants; melted on bourekas, in sandwiches; distinctly Israeli-Sephardic cheese identity; produced domestically; still widely consumed as table and cooking cheese"}
+- {id: halva, grade: local, rating: 8, name: Halva (sesame sweet), name_sv: "Halva (sesamsötsak)", notes: "halva; sesame paste sweet made by whipping tahini with sugar; Israeli halva (from Tel Aviv's Carmel Market) world-famous; eaten on bread, with chocolate, plain; many flavors (chocolate, pistachio, coffee); distinctly Israeli-Middle Eastern confection beloved at every Shabbat table"}
+- {id: silan, grade: local, rating: 7, name: Date syrup (silan), name_sv: "Daddelsirap (silan)", notes: "silan; date honey/syrup from Israeli dates; biblical 'honey' referenced in 'land of milk and honey'; drizzled on tahini for breakfast; in marinades; Israeli artisan silan production from Medjool dates; natural sweetener revival in Israeli health food market"}
+- {id: zaatar_blend, grade: local, rating: 9, name: Za'atar herb blend, name_sv: "Za'atar-örter (örtkryddblandning)", notes: "za'atar; wild thyme/oregano, ground sumac, sesame seeds, salt; THE iconic Israeli condiment; on every Israeli breakfast table — dip bread in olive oil then za'atar; in labneh, on grilled chicken; Israeli wild za'atar (Origanum syriacum) wild-harvested in Galilee"}
 
 
 ## Spices, Nuts & Seasonings
 
 ### Spices, Nuts & Seasonings — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Israeli signature spice blends", "Israeli defining herbs and spices", "Israeli iconic seasoning flavour profile" -->
+<!-- Searched: "Israeli cuisine signature spices za'atar sumac baharat cumin coriander paprika turmeric harissa cardamom defining seasonings Israel" -->
 
-- {id: stub_spice_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Spices 1", name_sv: "[UTKAST] Signatur Krydda 1", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Spices 2", name_sv: "[UTKAST] Signatur Krydda 2", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Spices 3", name_sv: "[UTKAST] Signatur Krydda 3", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Spices 4", name_sv: "[UTKAST] Signatur Krydda 4", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Spices 5", name_sv: "[UTKAST] Signatur Krydda 5", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Spices 6", name_sv: "[UTKAST] Signatur Krydda 6", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Spices 7", name_sv: "[UTKAST] Signatur Krydda 7", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Spices 8", name_sv: "[UTKAST] Signatur Krydda 8", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Spices 9", name_sv: "[UTKAST] Signatur Krydda 9", notes: "STUB — replace with verified Israeli research"}
+- {id: zaatar_spice, grade: signature, rating: 9, name: Za'atar (wild thyme blend), name_sv: "Za'atar (vildtymian-blandning)", notes: "za'atar; Israel's most iconic spice blend — wild thyme (Origanum syriacum), sesame, sumac, salt; on flatbread with olive oil at every Israeli breakfast; on labneh, grilled chicken, roasted vegetables; grown wild in the Galilee; THE flavor of Israeli morning food culture"}
+- {id: sumac_spice, grade: signature, rating: 9, name: Sumac (sumak), name_sv: "Sumak (sumak)", notes: "sumak; tangy, lemony red-purple dried berries; on Israeli salad, fattoush, grilled meat; blended into za'atar; the tart finish to kebab and shawarma; grown on hillsides of Galilee and Golan; the most characteristic souring spice of Israeli-Levantine cooking"}
+- {id: cumin_spice, grade: signature, rating: 9, name: Cumin (kimmel), name_sv: "Spiskummin (kimmel)", notes: "kimmel; in hummus, falafel mix, shakshuka, grilled meat spice rubs; essential in every mezze dip and legume dish; one of the most consumed individual spices in Israel; the earthy warm backbone of Israeli savory flavor"}
+- {id: paprika, grade: signature, rating: 8, name: Paprika (paprika), name_sv: "Paprika (paprika)", notes: "paprika; sweet and hot; on pargiot (marinated chicken thighs), shakshuka, roasted vegetables, in amba; Moroccan-Jewish and Sephardic cooking is paprika-heavy; ubiquitous reddening spice in Israeli cooking; both smoky (kashkashim meushan) and sweet varieties"}
+- {id: coriander_spice, grade: signature, rating: 8, name: Coriander (gad), name_sv: "Koriander (gad)", notes: "gad; fresh coriander/cilantro in zhug (Yemeni hot sauce), in Arab-Israeli cooking, in falafel; coriander seeds in baharat and spice mixes; one of the fundamental flavors of Israeli food; very high consumption of fresh cilantro across Mizrahi cooking traditions"}
+- {id: turmeric_spice, grade: signature, rating: 7, name: Turmeric (kurkum), name_sv: "Gurkmeja (kurkum)", notes: "kurkum; in rice coloring (orez kurkum — yellow turmeric rice), in Iraqi-Jewish and Yemeni cooking, in amba (pickled mango); anti-inflammatory use in traditional medicine; widely used across all Middle Eastern Jewish cooking traditions in Israel"}
+- {id: cardamom_spice, grade: signature, rating: 7, name: Cardamom (hal), name_sv: "Kardemumma (hal)", notes: "hal; in Arabic coffee (qahwa with cardamom — standard in Bedouin and Arab-Israeli hospitality), in Yemeni coffee (bnn), in zhug, in quzi-style rice; the sweet aromatic spice of the Israeli festive and hospitality context"}
+- {id: black_pepper_spice, grade: signature, rating: 8, name: Black pepper (pilpel shahor), name_sv: "Svartpeppar (pilpel shahor)", notes: "pilpel shahor; universal Israeli seasoning; in baharat, in shishlik marinade, in stews; the most consumed single spice by weight alongside salt; table condiment; in shakshuka and all Israeli savory cooking"}
 
 ### Spices, Nuts & Seasonings — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Israeli most used condiments seasonings statistics", "Israeli salt sugar spice consumption", "Israeli everyday seasoning ingredients" -->
+<!-- Searched: "Israel spice nut consumption statistics 2022 2023 salt sugar sesame almonds walnuts pine nuts most consumed seasonings nuts Israel" -->
 
-- {id: stub_spice_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Spices 1", name_sv: "[UTKAST] Bulk Krydda 1", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Spices 2", name_sv: "[UTKAST] Bulk Krydda 2", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Spices 3", name_sv: "[UTKAST] Bulk Krydda 3", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Spices 4", name_sv: "[UTKAST] Bulk Krydda 4", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Spices 5", name_sv: "[UTKAST] Bulk Krydda 5", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Spices 6", name_sv: "[UTKAST] Bulk Krydda 6", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Spices 7", name_sv: "[UTKAST] Bulk Krydda 7", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Spices 8", name_sv: "[UTKAST] Bulk Krydda 8", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Spices 9", name_sv: "[UTKAST] Bulk Krydda 9", notes: "STUB — replace with verified Israeli research"}
+- {id: salt, grade: bulk, rating: 9, name: Salt (melach), name_sv: "Salt (melach)", notes: "melach; universal seasoning; Dead Sea salt produced in Israel; kosher salt (melach kosher) widely used for meat preparation; salt is significant in kosher food processing (salting meat to remove blood); enormous consumption"}
+- {id: sesame, grade: bulk, rating: 9, name: Sesame seeds (simsim), name_sv: "Sesamfrön (simsim)", notes: "simsim; in za'atar blend, as coating on bread (sesame challah, sesame bagels), raw in tahini production; tahini is #1 condiment meaning sesame consumption extraordinary; sprinkled on salads, on hummus; the most consumed seed in Israeli cooking by far"}
+- {id: sugar, grade: bulk, rating: 8, name: Sugar (sukar), name_sv: "Socker (sukar)", notes: "sukar; in halva, baklava, pastries, sweetened drinks; bourekas sweet versions; Israeli dessert culture from multiple traditions; sugar in challah and holiday breads; significant consumption in the Israeli bakery and confectionery sector"}
+- {id: pine_nuts, grade: bulk, rating: 7, name: Pine nuts (tznobar), name_sv: "Pinjenötter (tznobar)", notes: "tznobar; toasted on hummus (hummus garnish), in rice stuffings, on kibbeh and kofta; in green salads; the elegant nut garnish of Levantine cooking; significant bulk consumption in Israeli restaurants and home cooking; imported from Italy and Israel's own pine forests"}
+- {id: almonds, grade: bulk, rating: 7, name: Almonds (shekedim), name_sv: "Mandel (shekedim)", notes: "shekedim; blanched almonds on rice, in Moroccan-Jewish lamb tagines, in ma'amoul cookies; the almond blossom (blossoming almond tree = first sign of spring in biblical Israel); Tu BiShvat nut tradition; widely consumed as snack and cooking ingredient"}
+- {id: walnuts, grade: bulk, rating: 6, name: Walnuts (egozim), name_sv: "Valnötter (egozim)", notes: "egozim; in Eastern European Jewish baking (rugelach, honey cake), baklava, Georgian-Israeli cooking (satsivi walnut sauce); growing production in Galilee; widely eaten; significant consumption across the diverse Israeli culinary spectrum"}
+- {id: garlic_spice, grade: bulk, rating: 8, name: Garlic (shoom), name_sv: "Vitlök (shoom)", notes: "shoom; in hummus, falafel, shakshuka, marinades, tehina sauce; one of the most consumed aromatics in Israel; garlic paste sold commercially; Israeli cuisine uses extraordinary amounts of fresh garlic; in every savory base preparation"}
 
 ### Spices, Nuts & Seasonings — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Israeli herbs grown locally", "Israeli spice production native plants", "Israeli foraged herbs regional flavourings" -->
+<!-- Searched: "Israel locally produced spices herbs GI wild za'atar hyssop Israeli sumac Negev herbs local production artisan spice growing endemic Israel" -->
 
-- {id: stub_spice_loc_1, grade: local, rating: 9, name: "[STUB] Local Spices 1", name_sv: "[UTKAST] Lokalt Krydda 1", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_loc_2, grade: local, rating: 8, name: "[STUB] Local Spices 2", name_sv: "[UTKAST] Lokalt Krydda 2", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_loc_3, grade: local, rating: 7, name: "[STUB] Local Spices 3", name_sv: "[UTKAST] Lokalt Krydda 3", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_loc_4, grade: local, rating: 6, name: "[STUB] Local Spices 4", name_sv: "[UTKAST] Lokalt Krydda 4", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_loc_5, grade: local, rating: 5, name: "[STUB] Local Spices 5", name_sv: "[UTKAST] Lokalt Krydda 5", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_loc_6, grade: local, rating: 4, name: "[STUB] Local Spices 6", name_sv: "[UTKAST] Lokalt Krydda 6", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_loc_7, grade: local, rating: 3, name: "[STUB] Local Spices 7", name_sv: "[UTKAST] Lokalt Krydda 7", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_loc_8, grade: local, rating: 2, name: "[STUB] Local Spices 8", name_sv: "[UTKAST] Lokalt Krydda 8", notes: "STUB — replace with verified Israeli research"}
-- {id: stub_spice_loc_9, grade: local, rating: 1, name: "[STUB] Local Spices 9", name_sv: "[UTKAST] Lokalt Krydda 9", notes: "STUB — replace with verified Israeli research"}
-
+- {id: wild_zaatar_hyssop, grade: local, rating: 9, name: Wild za'atar / hyssop (ezov), name_sv: "Vild za'atar / isop (ezov)", notes: "ezov / za'atar har (Origanum syriacum); Israeli wild hyssop — the Biblical herb; grows across Galilee, Carmel, and Judean mountains; protected species (picking regulated); used dried; commercially farmed Israeli za'atar sold worldwide; THE defining flavor of Israeli Mediterranean herbs"}
+- {id: sumac_local, grade: local, rating: 8, name: Galilee sumac, name_sv: "Galileeisk sumak", notes: "summaq galil; sumac berries harvested from Israeli Galilee and Golan hillsides; used in za'atar blend production; ground and sold as Israeli sumac; Israeli-grown sumac has a distinctive tart flavor; important domestic spice production alongside wild herb harvesting"}
+- {id: fenugreek_hilbeh, grade: local, rating: 7, name: Fenugreek (hilbeh), name_sv: "Bockhornsklöver (hilbeh)", notes: "hilbeh; fenugreek paste/spread of Yemeni Jewish tradition — whipped fenugreek seeds into foam; eaten with jachnun and malawach; also in amba spicing; the Yemeni-Israeli community's essential spice; distinctive bitter-sweet flavor; grown and sold in Israeli spice markets"}
+- {id: baharat_local, grade: local, rating: 7, name: Baharat (mixed spice), name_sv: "Baharat (kryddblandning)", notes: "baharat (Israeli variety); each ethnic community has their own — Moroccan ras el hanout, Iraqi baharat, Persian advieh; sold freshly ground in the Mahane Yehuda market; multi-spice blends are a marketplace institution; Israeli spice markets among most aromatic in the world"}
+- {id: pistachios_local, grade: local, rating: 7, name: Pistachios, name_sv: "Pistaschnötter", notes: "pistachim; on baklava, in halva (pistachio halva most popular variant), on knafeh; Turkey and Iran supply most; local Israeli pistachio growing in the Negev; significant consumption; the most visible luxury nut in Israeli confectionery and pastry culture"}
+- {id: caraway, grade: local, rating: 6, name: Caraway / anise (shevet/anise), name_sv: "Kummin / anis (shevet/anis)", notes: "shevet/anise; in Israeli rye bread (anise-caraway bread from Ashkenazi tradition), in araq (anise liqueur), in some mezze; Middle Eastern anise tradition (araq drinking); caraway in Eastern European Jewish bread baking; important across different Jewish culinary communities in Israel"}
+- {id: nigella_seeds, grade: local, rating: 6, name: Nigella seeds (ketzach), name_sv: "Nigellafröer (ketzach)", notes: "ketzach (Nigella sativa); black seeds sprinkled on challah, on pita, in za'atar blends; also used medicinally (habba sawda); Arab-Israeli and Druze cooking; one of the Seven Species-adjacent traditional seeds of ancient Israel; distinctive peppery flavor"}
