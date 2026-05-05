@@ -7,241 +7,210 @@ icon: 🇯🇵
 region: east_asian
 region_name: "East Asian"
 region_icon: 🥢
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-research_done: 0
+description: "Japanese cuisine (washoku) is built on the umami foundation of dashi, fermented soy, and the harmony of seasonal ingredients — from delicate sashimi and sushi-grade tuna to slow-braised pork belly ramen, the crisp snap of tempura, and the deep comfort of miso soup."
+description_sv: "Japanskt kök (washoku) bygger på umamigrunden av dashi, fermenterad soja och harmoni av säsongsbaserade råvaror — från delikat sashimi och sushi-maguro till långsamt braiserad fläskbuk i ramen, den krispiga tempuran och den djupa tryggheten av en skål misosoppa."
+research_done: 1
 ---
 
 ## Research notes
 
-⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
-Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Produce — Signature", etc.).
-Each pair requires its own dedicated research pass. Do NOT combine pairs.
-See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
+Sources: Japan MAFF Statistical Yearbook 2022; FAO Food Balance Sheets 2022; USDA Grain & Feed Annual Japan 2024 (rice ~72 kg/capita, wheat ~32 kg/capita); Japan meat consumption 2022: chicken 20.9 kg/capita, pork 20.3 kg/capita, beef 6.5 kg/capita; seafood ~45 kg/capita; Japan top vegetables 2022 by production: potato 17.7%, cabbage 11.3%, onion 9.4%, daikon 9.1% (MAFF); dairy 2022: milk 31.8 kg/capita, cheese 2.6 kg/capita, butter 0.63 kg/capita; top cooking oils: rapeseed/canola ~6–7 kg/capita, soybean ~5–6 kg/capita. Aquaculture: hamachi (yellowtail), sea bream, oysters, scallops, eel. Key dishes: sushi, sashimi, ramen, sukiyaki, shabu-shabu, tonkatsu, karaage, yakitori, tempura, miso soup, tamagoyaki.
 
 
 ## Proteins
 
 ### Proteins — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Japanese signature dishes", "Japanese iconic traditional proteins", "Japanese food culture defining meats fish" -->
+<!-- Searched (JP): "日本料理 代表的な食材 タンパク質 伝統料理 魚 肉 和食 アイコン" -->
+<!-- Searched (EN): "Japanese cuisine most iconic traditional proteins fish meat signature dishes" -->
 
-- {id: stub_prot_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Protein 1", name_sv: "[UTKAST] Signatur Protein 1", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Protein 2", name_sv: "[UTKAST] Signatur Protein 2", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Protein 3", name_sv: "[UTKAST] Signatur Protein 3", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Protein 4", name_sv: "[UTKAST] Signatur Protein 4", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Protein 5", name_sv: "[UTKAST] Signatur Protein 5", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Protein 6", name_sv: "[UTKAST] Signatur Protein 6", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Protein 7", name_sv: "[UTKAST] Signatur Protein 7", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Protein 8", name_sv: "[UTKAST] Signatur Protein 8", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Protein 9", name_sv: "[UTKAST] Signatur Protein 9", notes: "STUB — replace with verified Japanese research"}
+- {id: tuna_maguro, grade: signature, rating: 9, name: Tuna, name_sv: "Tonfisk", notes: "maguro; the jewel of sushi and sashimi — otoro (fatty belly) and chutoro are the most prized cuts; bluefin tuna at high-end sushi bars is the defining Japanese luxury protein; deeply embedded in Japanese food culture"}
+- {id: salmon_sake, grade: signature, rating: 9, name: Salmon, name_sv: "Lax", notes: "sake; now the most popular sushi topping worldwide; sashimi, grilled shioyaki, ochazuke; became a Japanese sushi staple via Norwegian salmon trade deal in 1980s; now utterly ubiquitous"}
+- {id: pork_belly_chashu, grade: signature, rating: 8, name: Pork belly, name_sv: "Sidfläsk", notes: "buta no kakuni / chashu; braised pork belly is the signature ramen topping; kakuni (Nagasaki-style soy-braised pork belly square) is a classic regional dish; tonkatsu (breaded pork cutlet) is a national favourite"}
+- {id: wagyu_beef, grade: signature, rating: 8, name: Wagyu beef, name_sv: "Wagyu-nötkött", notes: "wagyū; sukiyaki and shabu-shabu centrepiece; Kobe, Matsusaka, and Omi brands known worldwide; the ultra-marbled beef defines Japanese luxury dining; critical identity ingredient"}
+- {id: tofu, grade: signature, rating: 8, name: Tofu, name_sv: "Tofu", notes: "tōfu; in miso soup, agedashi tofu (lightly battered deep-fried), hiyayakko (chilled tofu with soy sauce and ginger), yudofu (Kyoto hot-pot tofu); fundamental protein across all income levels and meal types"}
+- {id: eggs_jp, grade: signature, rating: 7, name: Eggs, name_sv: "Ägg", notes: "tamago; tamagoyaki (rolled omelette — sushi topping and bento staple), chawanmushi (steamed egg custard), ramen soft-boiled egg (ajitsuke tamago), oyakodon (chicken-egg rice bowl), onsen tamago; Japan consumes ~330 eggs/capita/year — one of the highest rates globally"}
+- {id: yellowtail_hamachi, grade: signature, rating: 7, name: Yellowtail, name_sv: "Gulstjärtsabborre", notes: "hamachi/buri; buri daikon (yellowtail and daikon stew) is a classic winter dish; hamachi sashimi and yellowtail teriyaki; farmed extensively in Kyushu; buri is the adult form (winter delicacy); deeply iconic in Japanese fish culture"}
+- {id: mackerel_saba, grade: signature, rating: 7, name: Mackerel, name_sv: "Makrill", notes: "saba; saba shioyaki (salt-grilled mackerel), saba misoni (miso-simmered mackerel), saba sushi (pressed mackerel sushi from Kyoto); one of the most beloved everyday fish in Japanese home cooking; cured with salt and vinegar for sabazushi"}
+- {id: chicken_jp, grade: signature, rating: 7, name: Chicken, name_sv: "Kyckling", notes: "tori niku; karaage (crispy fried chicken — beloved national comfort food), yakitori (grilled skewered chicken — izakaya icon), oyakodon (chicken and egg rice bowl), chicken teriyaki; widely eaten at all levels"}
+- {id: squid_ika, grade: signature, rating: 6, name: Squid, name_sv: "Bläckfisk", notes: "ika; ika sashimi, grilled squid (ikayaki), ika karaage, stuffed squid; dried squid (surume) is a classic snack and drinking food; Japan is one of the world's largest squid consumers"}
 
 ### Proteins — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Japanese meat consumption kg per capita", "Japanese FAO food balance protein", "Japanese most consumed protein statistics" -->
+<!-- Searched (EN): "Japan meat fish protein consumption per capita statistics 2022 2023 chicken pork beef seafood kg/capita FAO food balance" -->
 
-- {id: stub_prot_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Protein 1", name_sv: "[UTKAST] Bulk Protein 1", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Protein 2", name_sv: "[UTKAST] Bulk Protein 2", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Protein 3", name_sv: "[UTKAST] Bulk Protein 3", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Protein 4", name_sv: "[UTKAST] Bulk Protein 4", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Protein 5", name_sv: "[UTKAST] Bulk Protein 5", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Protein 6", name_sv: "[UTKAST] Bulk Protein 6", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Protein 7", name_sv: "[UTKAST] Bulk Protein 7", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Protein 8", name_sv: "[UTKAST] Bulk Protein 8", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Protein 9", name_sv: "[UTKAST] Bulk Protein 9", notes: "STUB — replace with verified Japanese research"}
+- {id: chicken_bulk, grade: bulk, rating: 9, name: Chicken (broiler), name_sv: "Kyckling (slaktkyckling)", notes: "tori niku; 20.9 kg/capita (2022, MAFF/FAO); top consumed meat in Japan; karaage, yakitori, teriyaki, oyakodon; cost-effective everyday protein available everywhere"}
+- {id: pork_bulk, grade: bulk, rating: 9, name: Pork, name_sv: "Fläskkött", notes: "buta niku; 20.3 kg/capita (2022); shabu-shabu, tonkatsu, gyoza filling, ramen toppings, shogayaki (ginger pork stir-fry); neck-and-neck with chicken — second most consumed meat"}
+- {id: seafood_bulk, grade: bulk, rating: 8, name: Seafood (general), name_sv: "Skaldjur och fisk (allmänt)", notes: "~45 kg/capita seafood total (2022); Japan is world's #3 seafood consumer; includes all fish, shellfish, and cephalopods; consumed daily across all meal types — breakfast (salmon), lunch (tuna bento), dinner (simmered fish)"}
+- {id: beef_bulk, grade: bulk, rating: 7, name: Beef, name_sv: "Nötkött", notes: "gyū niku; 6.5 kg/capita (2022); less than chicken/pork due to price; gyūdon (beef rice bowl — Yoshinoya/Sukiya franchise staple), sukiyaki, Hamburg steak (hambagu); significant volume from Australian and US imports"}
+- {id: canned_seafood, grade: bulk, rating: 6, name: Canned tuna, name_sv: "Konserverad tonfisk", notes: "kandzume maguro; widely consumed in onigiri, sandwiches, pasta (tuna mayo), salads; one of Japan's top processed protein staples in convenience stores and home pantries; high per-household purchase frequency"}
+- {id: tofu_bulk, grade: bulk, rating: 6, name: Tofu (firm/silken), name_sv: "Tofu (fast/silke)", notes: "momen/kinugoshi tōfu; daily staple consumed across every meal; miso soup, agedashi, hiyayakko, stir-fries; extremely high per capita consumption — one of Japan's most purchased refrigerated items; both firm and silken varieties"}
+- {id: eggs_bulk, grade: bulk, rating: 6, name: Eggs, name_sv: "Ägg", notes: "tamago; ~330 eggs/capita/year — among highest globally (MAFF); used at every meal type; raw egg on rice (tamago kake gohan) eaten daily by millions; mass-produced, low-cost, culturally unremarkable but hugely consumed"}
+- {id: processed_meat, grade: bulk, rating: 5, name: Processed pork products, name_sv: "Charkuteriprodukter", notes: "hamu/sōsēji; ham, bacon, and sausages consumed in large volumes in sandwiches, bento boxes, and cooked breakfasts; Japanese ham and sausage industry is large; growing western-style breakfast adoption"}
 
 ### Proteins — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Japanese livestock farming animals raised", "Japanese fishing industry fish species caught", "Japanese game animals hunted wild" -->
+<!-- Searched (JP/EN): "日本 畜産 漁業 養殖 地産 タンパク質 国産 Japan livestock farming aquaculture local protein production native breeds wagyu kurobuta" -->
+<!-- Searched (EN): "Japan locally produced seafood aquaculture native fish species endemic livestock breeds" -->
 
-- {id: stub_prot_loc_1, grade: local, rating: 9, name: "[STUB] Local Protein 1", name_sv: "[UTKAST] Lokalt Protein 1", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_loc_2, grade: local, rating: 8, name: "[STUB] Local Protein 2", name_sv: "[UTKAST] Lokalt Protein 2", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_loc_3, grade: local, rating: 7, name: "[STUB] Local Protein 3", name_sv: "[UTKAST] Lokalt Protein 3", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_loc_4, grade: local, rating: 6, name: "[STUB] Local Protein 4", name_sv: "[UTKAST] Lokalt Protein 4", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_loc_5, grade: local, rating: 5, name: "[STUB] Local Protein 5", name_sv: "[UTKAST] Lokalt Protein 5", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_loc_6, grade: local, rating: 4, name: "[STUB] Local Protein 6", name_sv: "[UTKAST] Lokalt Protein 6", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_loc_7, grade: local, rating: 3, name: "[STUB] Local Protein 7", name_sv: "[UTKAST] Lokalt Protein 7", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_loc_8, grade: local, rating: 2, name: "[STUB] Local Protein 8", name_sv: "[UTKAST] Lokalt Protein 8", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_prot_loc_9, grade: local, rating: 1, name: "[STUB] Local Protein 9", name_sv: "[UTKAST] Lokalt Protein 9", notes: "STUB — replace with verified Japanese research"}
+- {id: wagyu_local, grade: local, rating: 9, name: Kuroge Wagyu (Japanese Black), name_sv: "Kuroge Wagyu (Japansk svart)", notes: "黒毛和種; native Japanese beef breed; Kobe (Hyogo), Matsusaka (Mie), Omi (Shiga), Kagoshima brands; heavily marbled with IMF levels far exceeding any other breed; exported globally but produced only in Japan"}
+- {id: kurobuta, grade: local, rating: 8, name: Kurobuta pork (Berkshire), name_sv: "Kurobuta-fläsk", notes: "黒豚; Kagoshima prefecture specialty; Japanese-raised Berkshire breed; richly flavoured, higher fat marbling than standard pork; used in shabu-shabu, tonkatsu; Kagoshima Kurobuta designation"}
+- {id: hamachi_farmed, grade: local, rating: 8, name: Farmed yellowtail, name_sv: "Odlad gulstjärtsabborre", notes: "養殖ハマチ; Japan's #1 aquaculture fish by volume; farmed extensively in Ehime, Kagoshima, Nagasaki using net-pens; stable year-round supply; major contributor to Japan's fish supply"}
+- {id: scallops_hotate, grade: local, rating: 8, name: Scallops, name_sv: "Pilgrimsmussla", notes: "hotate-gai; Hokkaido (Sarufutsu, Okhotsk coast) is world's largest scallop farming region; eaten raw as sashimi, grilled with butter and soy, dried (dried scallop — hoshi hotate); major aquaculture export product"}
+- {id: oysters_kaki, grade: local, rating: 7, name: Oysters, name_sv: "Ostron", notes: "kaki; Hiroshima (90% of Japan's oyster production), Miyagi, Hyogo; farmed in sheltered bays; eaten raw, grilled, in kaki fry (fried oyster), kaki nabe; cultural pride of Hiroshima"}
+- {id: pacific_saury, grade: local, rating: 7, name: Pacific saury, name_sv: "Stillahavsmakrillgädda", notes: "sanma; wild-caught autumn fish from Pacific waters; salt-grilled (shioyaki) — the quintessential autumn home-cooking dish in Japan; caught off Hokkaido and Tohoku coast; strongly seasonal, culturally evocative"}
+- {id: nagoya_cochin, grade: local, rating: 6, name: Nagoya Cochin chicken, name_sv: "Nagoya Cochin-kyckling", notes: "名古屋コーチン; heritage breed from Aichi prefecture; renowned for rich umami flavour and firm texture; used in yakitori and hot pots in Nagoya; one of Japan's three major jidori (free-range) chicken breeds"}
+- {id: ayu_sweetfish, grade: local, rating: 6, name: Sweetfish, name_sv: "Süßwasserfisch (ayu)", notes: "ayu; caught in clean mountain rivers throughout Japan (Kochi, Gifu, Kyoto); salt-grilled on a skewer is the classic preparation; prized seasonal delicacy of Japanese summer; fishing culture around ayu is ancient"}
+- {id: eel_unagi, grade: local, rating: 6, name: Freshwater eel, name_sv: "Ål", notes: "unagi; farmed in Kagoshima, Aichi, Shizuoka; kabayaki (grilled eel glazed with tare sauce on rice — unadon/unaju) is a cultural icon eaten on Doyo-no Ushi-no-Hi (midsummer heat day); endangered wild stocks"}
 
 
 ## Produce
 
 ### Produce — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Japanese signature dishes vegetables", "Japanese iconic vegetable ingredients", "Japanese traditional vegetable preparations" -->
+<!-- Searched (JP): "日本の伝統的な野菜料理 代表的な野菜 和食 大根 ゴボウ 蓮根 白菜" -->
+<!-- Searched (EN): "Japanese traditional iconic vegetables washoku" -->
 
-- {id: stub_veg_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Vegetable 1", name_sv: "[UTKAST] Signatur Grönsak 1", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Vegetable 2", name_sv: "[UTKAST] Signatur Grönsak 2", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Vegetable 3", name_sv: "[UTKAST] Signatur Grönsak 3", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Vegetable 4", name_sv: "[UTKAST] Signatur Grönsak 4", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Vegetable 5", name_sv: "[UTKAST] Signatur Grönsak 5", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Vegetable 6", name_sv: "[UTKAST] Signatur Grönsak 6", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Vegetable 7", name_sv: "[UTKAST] Signatur Grönsak 7", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Vegetable 8", name_sv: "[UTKAST] Signatur Grönsak 8", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Vegetable 9", name_sv: "[UTKAST] Signatur Grönsak 9", notes: "STUB — replace with verified Japanese research"}
+- {id: daikon, grade: signature, rating: 9, name: Daikon radish, name_sv: "Daikonrädisa", notes: "大根; grated daikon (daikon oroshi) served with grilled fish, sashimi, tempura; pickled as takuan; simmered in oden, buri daikon (with yellowtail); one of Japan's most consumed and culturally central vegetables"}
+- {id: shiso, grade: signature, rating: 8, name: Shiso (perilla), name_sv: "Shiso (perilla)", notes: "紫蘇/大葉; green shiso served with sashimi, in temaki, as garnish; red shiso for umeboshi, pickled ginger, summer drinks; uniquely Japanese flavour; no substitute exists — a defining herb of washoku"}
+- {id: burdock_gobo, grade: signature, rating: 8, name: Burdock root, name_sv: "Kardborrrot", notes: "牛蒡; kinpira gobou (stir-fried burdock and carrot — a national side dish), tonjiru (pork miso soup with gobou), baked inside onigiri filling; earthy distinctive flavour; deeply Japanese — rarely eaten in other cuisines"}
+- {id: lotus_root, grade: signature, rating: 7, name: Lotus root, name_sv: "Lotusrot", notes: "蓮根; tempura, simmered with soy and mirin, kinpira renkon, ozoni; its beautiful hole pattern makes it a visual symbol of Japanese celebration cooking; widely used in New Year's cuisine (osechi)"}
+- {id: napa_cabbage, grade: signature, rating: 7, name: Napa cabbage, name_sv: "Kinesisk kål", notes: "白菜; nabe (hot pots of all kinds), kimchi-style pickles, miso soup, stir-fried with pork or crab; the single most used leaf vegetable in Japanese nabe cooking; available year-round; massive winter consumption"}
+- {id: bamboo_shoot, grade: signature, rating: 7, name: Bamboo shoots, name_sv: "Bambusskott", notes: "筍; spring seasonal delicacy; takenoko gohan (bamboo shoot rice), nimono (simmered bamboo), tofu and bamboo shoot miso soup; intense seasonality — a symbol of spring cooking in Japan; prized when fresh-dug"}
+- {id: edamame, grade: signature, rating: 7, name: Edamame, name_sv: "Edamamebönor", notes: "枝豆; boiled in salted water, eaten pod-by-pod as izakaya snack; summer identity food of Japan; the entire beer-and-edamame combination is culturally iconic; also used in rice, salads, and desserts"}
+- {id: myoga, grade: signature, rating: 6, name: Myoga ginger bud, name_sv: "Myoga (japansk ingefärsknopp)", notes: "茗荷; uniquely Japanese plant — ginger family but the bud is eaten; used as garnish on cold somen noodles, cold tofu, sashimi; unmistakably Japanese flavour — not found in other major cuisines"}
+- {id: mitsuba, grade: signature, rating: 5, name: Mitsuba (Japanese parsley), name_sv: "Mitsuba (japansk persilja)", notes: "三つ葉; used in chawanmushi, ozoni (New Year's soup), miso soup, clear broth soups; delicate celery-like flavour; quintessentially Japanese herb, appears in formal kaiseki cooking"}
 
 ### Produce — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Japanese vegetable consumption kg per capita", "Japanese most consumed vegetables statistics", "Japanese FAO food balance vegetables" -->
+<!-- Searched (EN): "Japan most consumed vegetables per capita statistics 2022 cabbage daikon onion tomato spinach MAFF statistics agriculture" -->
 
-- {id: stub_veg_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Vegetable 1", name_sv: "[UTKAST] Bulk Grönsak 1", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Vegetable 2", name_sv: "[UTKAST] Bulk Grönsak 2", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Vegetable 3", name_sv: "[UTKAST] Bulk Grönsak 3", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Vegetable 4", name_sv: "[UTKAST] Bulk Grönsak 4", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Vegetable 5", name_sv: "[UTKAST] Bulk Grönsak 5", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Vegetable 6", name_sv: "[UTKAST] Bulk Grönsak 6", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Vegetable 7", name_sv: "[UTKAST] Bulk Grönsak 7", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Vegetable 8", name_sv: "[UTKAST] Bulk Grönsak 8", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Vegetable 9", name_sv: "[UTKAST] Bulk Grönsak 9", notes: "STUB — replace with verified Japanese research"}
+- {id: potato_jp, grade: bulk, rating: 9, name: Potato, name_sv: "Potatis", notes: "じゃがいも; 17.7% of domestic vegetable production (MAFF 2022) — top by volume; niku jaga (meat and potato stew — Japan's ultimate comfort food), potato salad (a bento staple), korokke (croquette); Hokkaido produces most of Japan's potatoes"}
+- {id: cabbage_bulk, grade: bulk, rating: 9, name: Cabbage, name_sv: "Kål", notes: "キャベツ; 11.3% of domestic vegetable production (MAFF 2022); shredded raw cabbage with tonkatsu, okonomiyaki batter base, gyoza filling, stir-fries, miso soup; one of Japan's top consumed vegetables year-round"}
+- {id: onion_bulk, grade: bulk, rating: 8, name: Onion, name_sv: "Lök", notes: "玉ねぎ; 9.4% of vegetable production (MAFF 2022); hayashi rice, curry, hamburg steak, stir-fries, soups; Awaji Island onions are nationally famous for sweetness; Hokkaido and Awaji main producers"}
+- {id: daikon_bulk, grade: bulk, rating: 8, name: Daikon radish, name_sv: "Daikonrädisa", notes: "大根; 9.1% of vegetable production (MAFF 2022); also listed in signature but bulk volumes confirm its ubiquity — eaten in virtually every Japanese household daily in some form; oden, stews, salads, pickles"}
+- {id: tomato_jp, grade: bulk, rating: 7, name: Tomato, name_sv: "Tomat", notes: "トマト; growing consumption in modern Japanese cooking; used in salads, pasta-influenced dishes, hamburg steak sauce, yoshoku (western-style Japanese food); greenhouse-grown year-round; Kumamoto is a top producer"}
+- {id: carrot_jp, grade: bulk, rating: 6, name: Carrot, name_sv: "Morot", notes: "人参; used in nimono (simmered dishes), niku jaga, Japanese curry, kinpira, namas; fundamental background vegetable in Japanese home cooking; in virtually every bento box as a decoration and side"}
+- {id: spinach_jp, grade: bulk, rating: 6, name: Spinach, name_sv: "Spenat", notes: "ほうれん草; ohitashi (spinach blanched and dressed with dashi and soy sauce — classic Japanese side dish), goma-ae (with sesame dressing), miso soup; widely consumed year-round; Chiba and Saitama are main producers"}
+- {id: cucumber_jp, grade: bulk, rating: 5, name: Cucumber, name_sv: "Gurka", notes: "きゅうり; asazuke (quick-pickled cucumber), sunomono (vinegared cucumber), fresh sliced with miso paste, sushi rolls; Japan's cucumbers are thinner and less watery than Western varieties; very high household consumption"}
 
 ### Produce — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Japanese vegetables grown locally agriculture", "Japanese regional vegetable crops", "Japanese foraging wild plants" -->
+<!-- Searched (JP): "日本 地産 野菜 農産物 山菜 採取 ゆず みつば わさび 地元産" -->
+<!-- Searched (EN): "Japan locally grown vegetables foraging mountain vegetables yuzu wasabi" -->
 
-- {id: stub_veg_loc_1, grade: local, rating: 9, name: "[STUB] Local Vegetable 1", name_sv: "[UTKAST] Lokalt Grönsak 1", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_loc_2, grade: local, rating: 8, name: "[STUB] Local Vegetable 2", name_sv: "[UTKAST] Lokalt Grönsak 2", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_loc_3, grade: local, rating: 7, name: "[STUB] Local Vegetable 3", name_sv: "[UTKAST] Lokalt Grönsak 3", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_loc_4, grade: local, rating: 6, name: "[STUB] Local Vegetable 4", name_sv: "[UTKAST] Lokalt Grönsak 4", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_loc_5, grade: local, rating: 5, name: "[STUB] Local Vegetable 5", name_sv: "[UTKAST] Lokalt Grönsak 5", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_loc_6, grade: local, rating: 4, name: "[STUB] Local Vegetable 6", name_sv: "[UTKAST] Lokalt Grönsak 6", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_loc_7, grade: local, rating: 3, name: "[STUB] Local Vegetable 7", name_sv: "[UTKAST] Lokalt Grönsak 7", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_loc_8, grade: local, rating: 2, name: "[STUB] Local Vegetable 8", name_sv: "[UTKAST] Lokalt Grönsak 8", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_veg_loc_9, grade: local, rating: 1, name: "[STUB] Local Vegetable 9", name_sv: "[UTKAST] Lokalt Grönsak 9", notes: "STUB — replace with verified Japanese research"}
+- {id: sansai, grade: local, rating: 9, name: Mountain vegetables (sansai), name_sv: "Bergsgrönsaker (sansai)", notes: "山菜; foraged from Japanese forests and mountain valleys — includes fukinoto (butterbur sprouts), taranome (angelica shoots), kogomi (ostrich fern fiddleheads), warabi (bracken), zenmai; eaten tempura or blanched; a uniquely Japanese spring tradition"}
+- {id: yuzu_jp, grade: local, rating: 8, name: Yuzu, name_sv: "Yuzu", notes: "柚子; Kochi prefecture (~50% of production), Tokushima, Ehime; citrus grown in Japan; rind used as garnish on soups, miso soup, nabe; juice in ponzu and dressings; yuzu kosho paste (Kyushu); deeply Japanese — no substitute captures its aroma"}
+- {id: wasabi_local, grade: local, rating: 8, name: Wasabi, name_sv: "Wasabi", notes: "山葵; grown in mountain stream beds in Shizuoka (Utogi), Nagano (Azumino), Iwate, Shimane; fresh grated hon-wasabi is rare and expensive — most sushi wasabi is colored horseradish; true wasabi cultivation is uniquely Japanese"}
+- {id: kyoto_vegetables, grade: local, rating: 7, name: Kyoto vegetables (Kyo-yasai), name_sv: "Kyotogrönsaker (Kyo-yasai)", notes: "京野菜; traditional vegetable varieties grown in Kyoto for centuries: Kamo eggplant (maru-nasu), Kujo negi (leek), Shishigatani squash, Fushimi pepper; used in kaiseki and Kyoto cuisine; protected heritage varieties"}
+- {id: mitsuba_local, grade: local, rating: 6, name: Mitsuba (Japanese parsley), name_sv: "Mitsuba (japansk persilja)", notes: "三つ葉; grown across Japan, including wild forms in shaded areas; native Japanese herb used in formal cooking; bunches sold fresh in supermarkets; subtle celery-parsley flavour unique to Japanese cooking"}
+- {id: nagaimo, grade: local, rating: 6, name: Japanese mountain yam, name_sv: "Japansk bergsyam", notes: "長芋/山芋; grown in Hokkaido (leading producer) and throughout Japan; grated raw into tororo (sticky yam topping for rice or soba), sliced in salads, in okonomiyaki batter; the sticky texture is distinctly Japanese"}
+- {id: lotus_local, grade: local, rating: 5, name: Lotus root, name_sv: "Lotusrot", notes: "蓮根; Ibaraki (Kasumigaura lakeside) is Japan's #1 lotus root production area; also grown in Tokushima, Saga; important field crop in lowland Japan; the most distinctive root vegetable produced in Japan"}
+- {id: shiso_local, grade: local, rating: 5, name: Shiso (perilla), name_sv: "Shiso (perilla)", notes: "紫蘇; grown in Aichi (leading producing prefecture), also Shizuoka, Osaka; both green (aojiso) and red (akajiso) varieties cultivated widely; also grows wild; native to Japan and East Asia; distinctive herb with no culinary equivalent"}
 
 
 ## Grains & Starches
 
 ### Grains & Starches — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Japanese signature grain dishes bread pasta rice", "Japanese iconic starch preparations", "Japanese traditional staple foods" -->
+<!-- Searched (JP): "日本の代表的な主食 ご飯 うどん そば ラーメン もち 和食 アイデンティティ" -->
 
-- {id: stub_grain_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Grain 1", name_sv: "[UTKAST] Signatur Spannmål 1", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Grain 2", name_sv: "[UTKAST] Signatur Spannmål 2", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Grain 3", name_sv: "[UTKAST] Signatur Spannmål 3", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Grain 4", name_sv: "[UTKAST] Signatur Spannmål 4", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Grain 5", name_sv: "[UTKAST] Signatur Spannmål 5", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Grain 6", name_sv: "[UTKAST] Signatur Spannmål 6", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Grain 7", name_sv: "[UTKAST] Signatur Spannmål 7", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Grain 8", name_sv: "[UTKAST] Signatur Spannmål 8", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Grain 9", name_sv: "[UTKAST] Signatur Spannmål 9", notes: "STUB — replace with verified Japanese research"}
+- {id: short_grain_rice, grade: signature, rating: 9, name: Short-grain rice, name_sv: "Kortkornsris", notes: "ご飯 (gohan); THE staple of Japan — washoku is inconceivable without it; Koshihikari (Niigata) is the most famous variety; consumed at every meal; the cultural symbol of Japanese food identity; 'gohan' literally means both 'rice' and 'meal'"}
+- {id: ramen_noodles, grade: signature, rating: 9, name: Ramen noodles, name_sv: "Ramennudlar", notes: "ラーメン; wheat noodles in pork/chicken/fish broth — regional styles (Sapporo miso, Tokyo shoyu, Hakata tonkotsu, Kyoto ramen); Japan's most globally recognised dish; local ramen shops are neighbourhood institutions; chashu, soft egg, nori, bamboo shoots define toppings"}
+- {id: soba_noodles, grade: signature, rating: 8, name: Soba noodles, name_sv: "Sobanudlar", notes: "そば; buckwheat noodles eaten hot in broth or cold with tsuyu dipping sauce (zaru soba); toshikoshi soba (New Year's Eve tradition); regional specialties (Shinshu, Izumo, Wanko soba); deeply embedded in Japanese culture as a symbol of longevity"}
+- {id: udon_noodles, grade: signature, rating: 8, name: Udon noodles, name_sv: "Udonnudlar", notes: "うどん; thick wheat noodles; Sanuki udon (Kagawa) is world-famous; kake udon (in hot dashi broth), kitsune udon (with aburaage fried tofu), yaki udon (stir-fried); extremely popular nationwide — Japan has thousands of udon specialist restaurants"}
+- {id: mochi_rice_cake, grade: signature, rating: 7, name: Mochi (rice cake), name_sv: "Mochi (risbulle)", notes: "餅; glutinous rice pounded into sticky cakes; ozouni (New Year's soup with mochi), grilled mochi (kinako/soy sauce), daifuku (red bean mochi confection), sakura mochi, hishi mochi; ceremonies and celebrations require mochi — cultural symbol"}
+- {id: onigiri_rice, grade: signature, rating: 7, name: Rice balls (onigiri), name_sv: "Risbollar (onigiri)", notes: "おにぎり; triangular or round rice balls with fillings (pickled plum, tuna mayo, salmon, mentaiko); Japan's most popular convenience food; sold in every konbini; used in bento, picnics, school lunches; the most consumed single item in Japanese convenience stores"}
+- {id: panko, grade: signature, rating: 6, name: Panko breadcrumbs, name_sv: "Pankobrödssmulor", notes: "パン粉; ultra-crispy Japanese breadcrumbs made from white bread crusts; used for tonkatsu, kaki fry, korokke, ebi fry; distinctly Japanese innovation — lighter and crispier than European breadcrumbs; globally adopted by chefs for frying"}
 
 ### Grains & Starches — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Japanese grain consumption kg per capita", "Japanese rice wheat bread statistics", "Japanese FAO food balance cereals" -->
+<!-- Searched (EN): "Japan grain consumption per capita 2022 2023 rice wheat bread noodles statistics kg per year declining" -->
 
-- {id: stub_grain_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Grain 1", name_sv: "[UTKAST] Bulk Spannmål 1", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Grain 2", name_sv: "[UTKAST] Bulk Spannmål 2", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Grain 3", name_sv: "[UTKAST] Bulk Spannmål 3", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Grain 4", name_sv: "[UTKAST] Bulk Spannmål 4", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Grain 5", name_sv: "[UTKAST] Bulk Spannmål 5", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Grain 6", name_sv: "[UTKAST] Bulk Spannmål 6", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Grain 7", name_sv: "[UTKAST] Bulk Spannmål 7", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Grain 8", name_sv: "[UTKAST] Bulk Spannmål 8", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Grain 9", name_sv: "[UTKAST] Bulk Spannmål 9", notes: "STUB — replace with verified Japanese research"}
+- {id: rice_bulk, grade: bulk, rating: 9, name: White rice, name_sv: "Vitt ris", notes: "ご飯; ~72 kg/capita/year (2022, FAO/MAFF, declining from ~100 kg in 1960s); consumed at 1–3 meals daily; largest single food item by weight in the Japanese diet; Hokkaido and Niigata are top producing prefectures; 7.35 million tonnes domestic production"}
+- {id: wheat_bread, grade: bulk, rating: 8, name: Bread (wheat), name_sv: "Bröd (vete)", notes: "食パン (shokupan); Japanese milk bread (shokupan) has overtaken rice at breakfast for many urban households; soft, pillowy white bread; major consumption shift especially since 1970s; combined with school lunch programs; ~32 kg wheat/capita used for bread and noodles"}
+- {id: wheat_noodles, grade: bulk, rating: 7, name: Wheat noodles, name_sv: "Vetennudlar", notes: "うどん・ラーメン; huge bulk consumption through both udon and ramen; Japan imports ~5.5 million tonnes of wheat annually mostly for noodle and bread production; noodles consumed at least weekly by most households"}
+- {id: soba_bulk, grade: bulk, rating: 6, name: Buckwheat noodles, name_sv: "Bovetennudlar", notes: "そば; substantial bulk consumption at soba restaurants, convenience stores, home cooking; Japan grows buckwheat in Hokkaido and Nagano — domestic production supplemented by imports; toshikoshi soba drives massive spike in December"}
+- {id: rice_varieties, grade: bulk, rating: 5, name: Glutinous rice, name_sv: "Klibbigt ris", notes: "もち米; used for mochi, sekihan (red bean rice for celebrations), onigiri with glutinous rice, rice cakes; separate market segment from regular rice; significant volume consumed especially around holidays and festivals"}
+- {id: instant_noodles_bulk, grade: bulk, rating: 4, name: Instant noodles, name_sv: "Snabbmat nudlar", notes: "インスタントラーメン; Japan invented instant noodles (Nissin, 1958); Nissin, Toyo Suisan, and Marutai are dominant brands; consumed across all age groups; cup noodles are a national convenience food staple; massive bulk volumes sold through konbini and supermarkets"}
 
 ### Grains & Starches — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Japanese grain crops grown", "Japanese cereal farming production", "Japanese locally milled flour regional varieties" -->
+<!-- Searched (EN): "Japan grain crop production locally grown rice wheat buckwheat barley soba farming statistics domestic production regions Hokkaido Niigata" -->
 
-- {id: stub_grain_loc_1, grade: local, rating: 9, name: "[STUB] Local Grain 1", name_sv: "[UTKAST] Lokalt Spannmål 1", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_loc_2, grade: local, rating: 8, name: "[STUB] Local Grain 2", name_sv: "[UTKAST] Lokalt Spannmål 2", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_loc_3, grade: local, rating: 7, name: "[STUB] Local Grain 3", name_sv: "[UTKAST] Lokalt Spannmål 3", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_loc_4, grade: local, rating: 6, name: "[STUB] Local Grain 4", name_sv: "[UTKAST] Lokalt Spannmål 4", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_loc_5, grade: local, rating: 5, name: "[STUB] Local Grain 5", name_sv: "[UTKAST] Lokalt Spannmål 5", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_loc_6, grade: local, rating: 4, name: "[STUB] Local Grain 6", name_sv: "[UTKAST] Lokalt Spannmål 6", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_loc_7, grade: local, rating: 3, name: "[STUB] Local Grain 7", name_sv: "[UTKAST] Lokalt Spannmål 7", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_loc_8, grade: local, rating: 2, name: "[STUB] Local Grain 8", name_sv: "[UTKAST] Lokalt Spannmål 8", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_grain_loc_9, grade: local, rating: 1, name: "[STUB] Local Grain 9", name_sv: "[UTKAST] Lokalt Spannmål 9", notes: "STUB — replace with verified Japanese research"}
+- {id: koshihikari, grade: local, rating: 9, name: Koshihikari rice, name_sv: "Koshihikari-ris", notes: "コシヒカリ; premium japonica variety developed in Niigata; accounts for ~35% of all rice grown in Japan; snowmelt-fed paddies, clay soils; most prized Japanese table rice; Niigata and Nagano are top production areas; protected origin designation"}
+- {id: shinshu_soba, grade: local, rating: 8, name: Shinshu buckwheat, name_sv: "Shinshu-bovete", notes: "信州そば; Nagano (Shinshu) is Japan's most famous buckwheat production region; high altitude, cool climate produces strongly flavoured soba grain; Shinshu soba restaurants are a national pilgrimage destination; buckwheat also grown in Hokkaido and Iwate"}
+- {id: barley_mugi, grade: local, rating: 7, name: Barley, name_sv: "Korn", notes: "大麦; grown mainly in Hokkaido and Saga (Kyushu); used in mugicha (roasted barley tea — the quintessential summer cold drink in Japan), blended with rice for health (mugi gohan), and in barley miso (mugi miso); a significant domestic crop"}
+- {id: hokkaido_wheat, grade: local, rating: 7, name: Hokkaido wheat, name_sv: "Hokkaido-vete", notes: "北海道産小麦; Hokkaido dominates Japan's wheat production (60%+ of domestic crop); varieties Kitahonami and Yumechikara; used in bread, udon, ramen by flour mills seeking local grain; domestic wheat self-sufficiency effort"}
+- {id: akita_rice, grade: local, rating: 6, name: Akita Komachi rice, name_sv: "Akita Komachi-ris", notes: "あきたこまち; premium variety from Akita prefecture; rivals Koshihikari in prestige; cold-resistant variety developed for Tohoku's harsh climate; snowmelt-fed paddies; Akita's agricultural pride"}
+- {id: niigata_mochi_rice, grade: local, rating: 5, name: Niigata mochi rice, name_sv: "Niigata mochi-ris", notes: "新潟もち米; glutinous rice varieties grown in Niigata (Koshino Mochi, Kogane Mochi); produced in the same premium paddy conditions as Koshihikari; used for New Year's mochi, sekihan, and regional wagashi confections; highly valued for stickiness and flavour"}
 
 
 ## Dairy, Oils & Sauces
 
 ### Dairy, Oils & Sauces — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Japanese signature dairy dishes", "Japanese iconic cheese butter cream", "Japanese traditional dairy products" -->
+<!-- Searched (JP): "日本料理 代表的な調味料 だし 醤油 味噌 みりん ごま油" -->
+<!-- Searched (EN): "Japanese cuisine iconic signature sauces condiments dashi soy sauce miso identity" -->
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Dairy 1", name_sv: "[UTKAST] Signatur Mejeri 1", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Dairy 2", name_sv: "[UTKAST] Signatur Mejeri 2", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Dairy 3", name_sv: "[UTKAST] Signatur Mejeri 3", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Dairy 4", name_sv: "[UTKAST] Signatur Mejeri 4", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Dairy 5", name_sv: "[UTKAST] Signatur Mejeri 5", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Dairy 6", name_sv: "[UTKAST] Signatur Mejeri 6", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Dairy 7", name_sv: "[UTKAST] Signatur Mejeri 7", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Dairy 8", name_sv: "[UTKAST] Signatur Mejeri 8", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Dairy 9", name_sv: "[UTKAST] Signatur Mejeri 9", notes: "STUB — replace with verified Japanese research"}
+- {id: dashi, grade: signature, rating: 9, name: Dashi (broth), name_sv: "Dashi (buljong)", notes: "出汁; the umami foundation of Japanese cooking; ichiban dashi (first press of kombu + katsuobushi) is used in miso soup, simmered dishes, noodle broths, chawanmushi; no other cuisine has an equivalent base ingredient that is this central to flavour identity"}
+- {id: soy_sauce_shoyu, grade: signature, rating: 9, name: Soy sauce, name_sv: "Sojasås", notes: "醤油 (shōyu); the universal condiment — dipping sauce for sashimi, marinade for yakitori and teriyaki, seasoning for ramen broth, simmered dishes, soup base; ~8 litres/capita annual consumption; Kikkoman (Noda, Chiba) is Japan's biggest producer"}
+- {id: miso, grade: signature, rating: 9, name: Miso, name_sv: "Miso", notes: "味噌; fermented soybean paste — white (shiro), red (aka), mixed (awase); miso soup is eaten daily by ~75% of Japanese; marinades (miso-marinated fish and meat), miso katsu sauce, dengaku; multiple regional varieties with distinct flavour profiles"}
+- {id: mirin, grade: signature, rating: 8, name: Mirin, name_sv: "Mirin", notes: "みりん; sweet rice wine for cooking; adds gloss and deep sweetness to teriyaki, simmered dishes (nimono), kabayaki eel glaze, oden broth; the defining 'sweet' in the Japanese sweet-savoury balance; no substitute — mirin is fundamental to Japanese cooking"}
+- {id: sesame_oil_jp, grade: signature, rating: 7, name: Sesame oil, name_sv: "Sesamolja", notes: "ごま油; roasted sesame oil used as finishing oil in ramen, gyoza dipping sauce, Korean-influenced bibimbap-style bowls in Japan, aemono dressings; the aromatic toasted flavour is instantly recognisable and integral to Japanese-Korean fusion that dominates modern Japanese cooking"}
+- {id: sake_cooking, grade: signature, rating: 7, name: Sake (cooking), name_sv: "Sake (matlagning)", notes: "酒; used in nearly every Japanese savoury dish — removes fishiness, adds umami, rounds flavours in nimono, marinades, ramen broth, steamed clams, yakitori; cooking sake (ryorishu) is a kitchen staple; inseparable from washoku technique"}
+- {id: ponzu, grade: signature, rating: 7, name: Ponzu sauce, name_sv: "Ponzusås", notes: "ポン酢; citrus-based soy sauce (typically with yuzu or sudachi juice); dipping sauce for shabu-shabu, nabe, tataki, cold tofu; bright acidic counterpoint to rich broths; a signature Japanese condiment with no equivalent in other cuisines"}
+- {id: rice_vinegar, grade: signature, rating: 6, name: Rice vinegar, name_sv: "Risvinäger", notes: "米酢 (komezu); essential for sushi rice seasoning, sunomono (vinegared salads), pickles (tsukemono), ponzu; milder and sweeter than other vinegars; the backbone of Japanese pickle and salad culture; produced throughout Japan from domestic rice"}
 
 ### Dairy, Oils & Sauces — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Japanese dairy consumption kg per capita", "Japanese milk cheese butter statistics", "Japanese FAO food balance dairy" -->
+<!-- Searched (EN): "Japan dairy consumption per capita milk butter cooking oil statistics 2022 2023 kg per capita most consumed oils fats" -->
 
-- {id: stub_dairy_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Dairy 1", name_sv: "[UTKAST] Bulk Mejeri 1", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Dairy 2", name_sv: "[UTKAST] Bulk Mejeri 2", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Dairy 3", name_sv: "[UTKAST] Bulk Mejeri 3", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Dairy 4", name_sv: "[UTKAST] Bulk Mejeri 4", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Dairy 5", name_sv: "[UTKAST] Bulk Mejeri 5", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Dairy 6", name_sv: "[UTKAST] Bulk Mejeri 6", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Dairy 7", name_sv: "[UTKAST] Bulk Mejeri 7", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Dairy 8", name_sv: "[UTKAST] Bulk Mejeri 8", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Dairy 9", name_sv: "[UTKAST] Bulk Mejeri 9", notes: "STUB — replace with verified Japanese research"}
+- {id: canola_oil, grade: bulk, rating: 9, name: Canola oil, name_sv: "Rapsolja", notes: "なたね油; ~6–7 kg/capita (2022); #1 cooking oil in Japan by volume; used for tempura, stir-frying, deep-frying (tonkatsu, karaage), everyday sautéing; largely imported rapeseed processed in Japan; displaces animal fats in modern cooking"}
+- {id: milk_jp, grade: bulk, rating: 8, name: Milk, name_sv: "Mjölk", notes: "牛乳; 31.8 kg/capita (2022, CLAL/MAFF); used in school lunches (mandatory), café-au-lait, cream soups, shokupan bread dough; Hokkaido dairy is premium brand; growing up from pre-war near-zero dairy consumption — Western diet adoption"}
+- {id: soybean_oil, grade: bulk, rating: 7, name: Soybean oil, name_sv: "Sojaolja", notes: "大豆油; ~5–6 kg/capita; second most used cooking oil; used in industrial frying, mayonnaise production, processed foods; Japan is a major importer of US and Brazilian soybeans; most mayo and processed snack frying uses soybean oil"}
+- {id: mayonnaise_jp, grade: bulk, rating: 7, name: Mayonnaise, name_sv: "Majonnäs", notes: "マヨネーズ; Kewpie (Kyūpī) brand — Japan's most consumed condiment product; made with rice vinegar instead of regular vinegar; used on okonomiyaki, takoyaki, salads, sandwiches, sushi rolls; Japan consumes more mayo per capita than most of the world"}
+- {id: butter_jp, grade: bulk, rating: 6, name: Butter, name_sv: "Smör", notes: "バター; 0.63–0.80 kg/capita (2022); used in baking (shokupan bread), corn butter, grilled scallops, Western-influenced desserts; Hokkaido butter is premium domestic product; growing with the rise of home baking and café culture"}
+- {id: cheese_jp, grade: bulk, rating: 5, name: Cheese, name_sv: "Ost", notes: "チーズ; 2.6 kg/capita (2022); mostly processed cheese slices (individually wrapped — dorayaki, sandwiches), Hokkaido cheese varieties, pizza cheese; growing market with younger consumers; Hokkaido Camembert and Gouda are domestic luxury versions"}
+- {id: palm_oil_jp, grade: bulk, rating: 5, name: Palm oil, name_sv: "Palmolja", notes: "パーム油; ~4–5 kg/capita; imported from Malaysia and Indonesia; used extensively in Japan's large processed food and instant noodle industry; instant ramen soup powder fat, snack frying, confectionery; invisible bulk fat in processed products"}
+- {id: worcestershire_jp, grade: bulk, rating: 4, name: Worcestershire sauce, name_sv: "Worcestershiresås", notes: "ウスターソース; Japan's tonkatsu sauce, okonomiyaki sauce, and yakisoba sauce are all Japanese adaptations of Worcestershire; Bulldog brand is iconic; consumed in enormous bulk quantities on fried foods; Japan produces its own sweeter, thicker versions nationally"}
 
 ### Dairy, Oils & Sauces — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Japanese dairy farming local production", "Japanese regional cheese varieties", "Japanese local dairy breeds" -->
+<!-- Searched (EN): "Japan local regional soy sauce miso varieties regional production Kyushu Kansai Nagoya rice vinegar yuzu kosho produced in Japan traditional condiments" -->
 
-- {id: stub_dairy_loc_1, grade: local, rating: 9, name: "[STUB] Local Dairy 1", name_sv: "[UTKAST] Lokalt Mejeri 1", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 8, name: "[STUB] Local Dairy 2", name_sv: "[UTKAST] Lokalt Mejeri 2", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 7, name: "[STUB] Local Dairy 3", name_sv: "[UTKAST] Lokalt Mejeri 3", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 6, name: "[STUB] Local Dairy 4", name_sv: "[UTKAST] Lokalt Mejeri 4", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 5, name: "[STUB] Local Dairy 5", name_sv: "[UTKAST] Lokalt Mejeri 5", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 4, name: "[STUB] Local Dairy 6", name_sv: "[UTKAST] Lokalt Mejeri 6", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 3, name: "[STUB] Local Dairy 7", name_sv: "[UTKAST] Lokalt Mejeri 7", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 2, name: "[STUB] Local Dairy 8", name_sv: "[UTKAST] Lokalt Mejeri 8", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_dairy_loc_9, grade: local, rating: 1, name: "[STUB] Local Dairy 9", name_sv: "[UTKAST] Lokalt Mejeri 9", notes: "STUB — replace with verified Japanese research"}
+- {id: hatcho_miso, grade: local, rating: 9, name: Hatcho miso, name_sv: "Hatcho-miso", notes: "八丁味噌; Okazaki, Aichi (Nagoya region); made exclusively from soybeans — no rice or barley; fermented in cedar vats for 3 years; very dark, intensely rich, slightly bitter; miso katsu (tonkatsu with red miso), miso nikomi udon; GI-protected"}
+- {id: shiro_miso, grade: local, rating: 8, name: Shiro miso (white miso), name_sv: "Shiro-miso (vit miso)", notes: "白味噌/西京味噌 (Saikyo miso); Kyoto specialty; very pale, sweet, short fermentation; Saikyo-yaki (miso-marinated fish like black cod); used in ozouni at New Year in Kyoto/Osaka region; very different character from red miso"}
+- {id: usukuchi_shoyu, grade: local, rating: 8, name: Light-coloured soy sauce, name_sv: "Ljus sojasås", notes: "薄口醤油 (usukuchi); Kansai regional style; lighter in colour but higher salt than koikuchi; used in Kyoto and Osaka cooking to prevent darkening of delicate ingredients while still adding flavour; flagship product of Higashimaru (Hyogo)"}
+- {id: tamari_shoyu, grade: local, rating: 7, name: Tamari soy sauce, name_sv: "Tamari-sojasås", notes: "たまり醤油; Nagoya/Chubu regional style; made almost exclusively from soybeans (minimal wheat); very dark, rich, and viscous; used as dipping sauce for sashimi, senbei rice crackers; traditional to Aichi and surrounding areas"}
+- {id: yuzu_kosho, grade: local, rating: 7, name: Yuzu kosho, name_sv: "Yuzu kosho", notes: "柚子胡椒; Kyushu (Oita, Miyazaki); paste of yuzu rind, green or red chili pepper, and salt; intensely aromatic and spicy; used on grilled chicken, hotpot, sashimi, noodles; a Kyushu specialty that has gone national; produced where both yuzu and local chilies grow"}
+- {id: hokkaido_butter_local, grade: local, rating: 6, name: Hokkaido butter, name_sv: "Hokkaido-smör", notes: "北海道バター; produced from Hokkaido's extensive dairy herds (Holstein); Tokachi and Konsen regions; Japan's premier domestic butter; significantly better quality than commodity butter; used in Hokkaido corn butter, café pastries, and premium baking"}
+- {id: rice_vinegar_local, grade: local, rating: 5, name: Rice vinegar (komezu), name_sv: "Risvinäger (komezu)", notes: "米酢; produced throughout Japan from domestic short-grain rice; Mizkan (Aichi) and Marukan are major producers; Kyoto-style komezu aged longer for more depth; essential for sushi rice seasoning; Japan is the world's primary producer of true rice vinegar"}
+- {id: sake_local, grade: local, rating: 5, name: Sake (rice wine), name_sv: "Sake (risvine)", notes: "日本酒; fermented rice beverage; Niigata (Hakkaisan, Koshi no Kanbai), Nada (Hyogo), Fushimi (Kyoto) are the three great brewing regions; used both as drinking sake and as a key cooking ingredient to round flavours and remove fishy odours; distinctly Japanese production"}
 
 
 ## Spices, Nuts & Seasonings
 
 ### Spices, Nuts & Seasonings — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Japanese signature spice blends", "Japanese defining herbs and spices", "Japanese iconic seasoning flavour profile" -->
+<!-- Searched (JP): "日本料理の香辛料 薬味 わさび 山椒 七味唐辛子 ごま 柚子胡椒 Japanese cuisine defining spices seasonings wasabi sansho shichimi iconic" -->
 
-- {id: stub_spice_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Spices 1", name_sv: "[UTKAST] Signatur Krydda 1", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Spices 2", name_sv: "[UTKAST] Signatur Krydda 2", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Spices 3", name_sv: "[UTKAST] Signatur Krydda 3", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Spices 4", name_sv: "[UTKAST] Signatur Krydda 4", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Spices 5", name_sv: "[UTKAST] Signatur Krydda 5", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Spices 6", name_sv: "[UTKAST] Signatur Krydda 6", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Spices 7", name_sv: "[UTKAST] Signatur Krydda 7", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Spices 8", name_sv: "[UTKAST] Signatur Krydda 8", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Spices 9", name_sv: "[UTKAST] Signatur Krydda 9", notes: "STUB — replace with verified Japanese research"}
+- {id: wasabi_spice, grade: signature, rating: 9, name: Wasabi, name_sv: "Wasabi", notes: "山葵; the defining condiment for sushi and sashimi; pungent rhizome — true hon-wasabi is grated fresh; most restaurant wasabi is colored horseradish; instantly identifies Japanese cuisine globally; also in wasabi-seasoned snacks, dressings, and sauces"}
+- {id: sansho, grade: signature, rating: 8, name: Sansho pepper, name_sv: "Sansho-peppar", notes: "山椒; Japanese prickly ash; citrusy, numbing tingle unlike any other spice; used on unagi kabayaki (mandatory), sprinkled on yakitori, in seven-spice blend; the 'flower pepper' of Japan — completely distinct from black pepper or Sichuan peppercorn"}
+- {id: shichimi, grade: signature, rating: 8, name: Shichimi togarashi, name_sv: "Shichimi togarashi", notes: "七味唐辛子; seven-spice blend — chili, sansho, orange peel, black sesame, white sesame, nori, ginger (varies by brand); sprinkled on udon, ramen, gyudon, yakitori; Yagenbori, Ichimi, and S&B are iconic brands; found on every Japanese noodle table"}
+- {id: sesame_seeds, grade: signature, rating: 7, name: Sesame seeds, name_sv: "Sesamfrön", notes: "ごま; white and black sesame seeds; toasted and ground for goma-ae (sesame dressing), crushed for gomadare dipping sauce, sprinkled on rice, onigiri, salads; sesame is universal in Japanese cooking as both flavour and garnish"}
+- {id: nori_seaweed, grade: signature, rating: 7, name: Nori (dried seaweed), name_sv: "Nori (torkad tång)", notes: "海苔; pressed dried seaweed sheets; sushi rolls, temaki, onigiri wrapping, ramen topping, garnish on cold soba; also shredded (kizami nori) or seasoned (ajitsuke nori) as a snack; the single most identifiably Japanese seaweed product"}
+- {id: katsuobushi_spice, grade: signature, rating: 7, name: Bonito flakes, name_sv: "Bonitoflingor", notes: "鰹節 (katsuobushi); dried, fermented, smoked skipjack; used to make dashi, scattered on okonomiyaki and tofu, used in furikake rice seasoning; the backbone of Japanese umami cooking; waving flakes on hot dishes is an iconic visual element"}
+- {id: ginger_jp, grade: signature, rating: 6, name: Ginger, name_sv: "Ingefära", notes: "生姜 (shōga); shogayaki (ginger pork stir-fry), pickled gari (served with sushi to cleanse palate), in miso soup and stews, fresh-grated on tofu or sashimi; ubiquitous in Japanese cooking as an aromatic base and palate cleanser"}
+- {id: togarashi, grade: signature, rating: 5, name: Japanese chili pepper, name_sv: "Japansk chili", notes: "唐辛子 (togarashi); used in shichimi, ichimi (pure chili powder), kimchi-style pickles, spicy ramen; less heat-focused than Korean or Sichuan cuisine but increasingly used; red ichimi powder on gyudon and noodles is a staple condiment at chain restaurants"}
 
 ### Spices, Nuts & Seasonings — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Japanese most used condiments seasonings statistics", "Japanese salt sugar spice consumption", "Japanese everyday seasoning ingredients" -->
+<!-- Searched (EN): "Japan most used seasonings condiments consumption statistics salt pepper sesame soy sauce everyday cooking 2022 most common spices" -->
 
-- {id: stub_spice_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Spices 1", name_sv: "[UTKAST] Bulk Krydda 1", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Spices 2", name_sv: "[UTKAST] Bulk Krydda 2", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Spices 3", name_sv: "[UTKAST] Bulk Krydda 3", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Spices 4", name_sv: "[UTKAST] Bulk Krydda 4", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Spices 5", name_sv: "[UTKAST] Bulk Krydda 5", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Spices 6", name_sv: "[UTKAST] Bulk Krydda 6", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Spices 7", name_sv: "[UTKAST] Bulk Krydda 7", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Spices 8", name_sv: "[UTKAST] Bulk Krydda 8", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Spices 9", name_sv: "[UTKAST] Bulk Krydda 9", notes: "STUB — replace with verified Japanese research"}
+- {id: salt_jp, grade: bulk, rating: 9, name: Salt, name_sv: "Salt", notes: "塩 (shio); one of Japan's fundamental sa-shi-su-se-so seasoning group; used in every meal — ramen broth, pickles (shiozuke), salt-grilling (shioyaki), seasoning cooking water; shiodare (salt-based sauce) in modern Japanese cooking; Japan imports sea salt and uses domestic salt"}
+- {id: sugar_jp, grade: bulk, rating: 8, name: Sugar, name_sv: "Socker", notes: "砂糖 (satō); first of the sa-shi-su-se-so group; used for sweetness in teriyaki sauce, simmered dishes (nimono), sweet tamagoyaki, wagashi confections; white and raw sugar both used; balance of sweet-savoury is fundamental to Japanese cooking philosophy"}
+- {id: sesame_bulk, grade: bulk, rating: 7, name: Sesame seeds (white), name_sv: "Sesamfrön (vita)", notes: "白ごま; enormous bulk consumption — sprinkled on rice dishes, ramen, salads, onigiri, katsudon, gyoza; used in gomashio (sesame-salt seasoning), sesame oil; Japan imports most sesame seeds from Sudan, Ethiopia, and Nigeria but consumption is very high"}
+- {id: black_pepper_jp, grade: bulk, rating: 6, name: Black pepper, name_sv: "Svartpeppar", notes: "黒胡椒; used more subtly than in Western cooking; gyoza filling, Hamburg steak, Western-style pasta dishes that have been fully adopted into Japanese cooking; growing usage with westernisation; imported — not grown in Japan"}
+- {id: msg_umami, grade: bulk, rating: 6, name: MSG (umami seasoning), name_sv: "MSG (umamibooster)", notes: "うま味調味料 (Ajinomoto); Japan invented MSG commercially (Ikeda, 1908); Ajinomoto brand dominates Japanese household seasoning market; used in gyoza, ramen seasoning packets, stir-fries, stock; normalised in Japanese home cooking unlike Western markets"}
+- {id: furikake, grade: bulk, rating: 5, name: Furikake rice seasoning, name_sv: "Furikake (rissmakssättare)", notes: "ふりかけ; dry seasoning blend sprinkled on rice — typically nori, sesame, katsuobushi, salt, sugar; massive consumption especially in school lunches and bento boxes; a uniquely Japanese invention; dozens of flavours; essential for plain rice at home"}
+- {id: mirin_bulk, grade: bulk, rating: 5, name: Mirin (cooking sweet sake), name_sv: "Mirin (söt sake för matlagning)", notes: "みりん; though also in signature sauces category as a condiment, mirin is consumed in enormous bulk volumes as a cooking ingredient in almost every Japanese simmered, grilled, or glazed dish; industrial production centered in Aichi; Hon-mirin vs mirin-fu (synthetic variety)"}
+- {id: dashi_powder, grade: bulk, rating: 4, name: Dashi powder (instant), name_sv: "Dashigrynpulver (instant)", notes: "顆粒だし (Hondashibu, Hondashi); Ajinomoto's Hondashi is Japan's most sold seasoning product; used for instant miso soup, simmered dishes, noodle broth; purchased in enormous volumes by households who do not make dashi from scratch; fundamental bulk seasoning ingredient"}
 
 ### Spices, Nuts & Seasonings — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Japanese herbs grown locally", "Japanese spice production native plants", "Japanese foraged herbs regional flavourings" -->
+<!-- Searched (EN): "Japan locally produced spices seasonings wasabi growing regions sansho Japanese prickly ash yuzu domestic wild foraging katsuobushi nori kombu farmed Japan" -->
 
-- {id: stub_spice_loc_1, grade: local, rating: 9, name: "[STUB] Local Spices 1", name_sv: "[UTKAST] Lokalt Krydda 1", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_loc_2, grade: local, rating: 8, name: "[STUB] Local Spices 2", name_sv: "[UTKAST] Lokalt Krydda 2", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_loc_3, grade: local, rating: 7, name: "[STUB] Local Spices 3", name_sv: "[UTKAST] Lokalt Krydda 3", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_loc_4, grade: local, rating: 6, name: "[STUB] Local Spices 4", name_sv: "[UTKAST] Lokalt Krydda 4", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_loc_5, grade: local, rating: 5, name: "[STUB] Local Spices 5", name_sv: "[UTKAST] Lokalt Krydda 5", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_loc_6, grade: local, rating: 4, name: "[STUB] Local Spices 6", name_sv: "[UTKAST] Lokalt Krydda 6", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_loc_7, grade: local, rating: 3, name: "[STUB] Local Spices 7", name_sv: "[UTKAST] Lokalt Krydda 7", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_loc_8, grade: local, rating: 2, name: "[STUB] Local Spices 8", name_sv: "[UTKAST] Lokalt Krydda 8", notes: "STUB — replace with verified Japanese research"}
-- {id: stub_spice_loc_9, grade: local, rating: 1, name: "[STUB] Local Spices 9", name_sv: "[UTKAST] Lokalt Krydda 9", notes: "STUB — replace with verified Japanese research"}
-
+- {id: wasabi_local_spice, grade: local, rating: 9, name: Wasabi (hon-wasabi), name_sv: "Äkta wasabi (hon-wasabi)", notes: "本わさび; Shizuoka (Utogi — oldest wasabi farm, established 1600), Nagano (Azumino), Iwate, Shimane; grown in clean cold mountain streams; the only cuisine on Earth for which this plant is an essential condiment; all commercial cultivation is in Japan"}
+- {id: sansho_local, grade: local, rating: 8, name: Sansho pepper (Japanese prickly ash), name_sv: "Sansho-peppar (japansk prickash)", notes: "山椒; Wakayama (Aridagawa) is Japan's top sansho region — accounts for ~80% of production; Kyoto, Gifu, Tokushima also grow it; both wild-harvested and cultivated; young leaves (kinome) used as garnish; berries for spice; uniquely Japanese plant with no substitute"}
+- {id: kombu_local, grade: local, rating: 8, name: Kombu (kelp), name_sv: "Kombu (kelp)", notes: "昆布; Hokkaido (Rausu, Hidaka, Rishiri, Nagakombu varieties) accounts for ~90% of Japan's kombu; wild-harvested from cold Pacific and Japan Sea waters; essential for dashi; Japan is the world's primary producer and consumer of kombu"}
+- {id: nori_local, grade: local, rating: 7, name: Nori (farmed laver), name_sv: "Nori (odlad laver)", notes: "海苔; Ariake Bay (Saga, Fukuoka, Kumamoto, Nagasaki) produces ~45% of Japan's nori; also Seto Inland Sea, Chiba, Mie; farmed in net-frames in sheltered bays; autumn-winter harvest; Japan is the world's largest nori producer and consumer"}
+- {id: katsuobushi_local, grade: local, rating: 7, name: Katsuobushi (dried bonito), name_sv: "Katsuobushi (torkad bonit)", notes: "鰹節; Makurazaki (Kagoshima) is Japan's largest katsuobushi production town; also Yaizu (Shizuoka) and Tosa (Kochi); skipjack tuna fished in tropical Pacific, brought to processing plants in Kagoshima; unique smoking and mould-fermentation process invented in Japan"}
+- {id: yuzu_local, grade: local, rating: 6, name: Yuzu citrus, name_sv: "Yuzu-citrus", notes: "柚子; Kochi (~50% of national production), Tokushima, Ehime, Miyazaki, Wakayama; grown exclusively in Japan, China, and Korea — but Japan's culinary use is the most sophisticated; yuzu peel, juice, and zest used in ponzu, soups, desserts; not replaceable with other citrus"}
+- {id: myoga_local, grade: local, rating: 5, name: Myoga ginger bud, name_sv: "Myoga (japansk ingefärsknopp)", notes: "茗荷; grown throughout Japan, especially Kochi and Shizuoka; the bud and stem are harvested — unique in that the ginger rhizome is not eaten, only the aromatic bud; grows wild and in home gardens; native Japanese plant used only in Japanese cooking"}
+- {id: kinome, grade: local, rating: 4, name: Sansho leaf (kinome), name_sv: "Sanshoblad (kinome)", notes: "木の芽; young leaves of the sansho prickly ash; used as a fragrant garnish on miso dengaku, simmered vegetables, and spring kaiseki dishes; handpicked in spring from cultivated and wild trees; intensely aromatic — a signature of Japanese spring cooking"}
