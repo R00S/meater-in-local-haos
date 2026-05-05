@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 02 May 2026, 14:00 UTC
-Last Change: v0.8.2.20 - Trap 13: translate names in cuisine files (Livno cheese, Paipa cheese, Heavy cream, etc.) - CHORES: cuisine conformance fixes (8 files, 25 total ✅)
+Last Change: v0.8.2.21 - Ingredient tooltip on hover/long-press in AI recipe builder
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -172,11 +172,11 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 
 # ⚠️ VERSION — must match in ALL 3 locations on every release:
 #   1. manifest.json        → "version": "..."
-#   2. HERE (__init__.py)    → __version__ = "0.8.2.20"
+#   2. HERE (__init__.py)    → __version__ = "0.8.2.21"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.8.2.20"
+__version__ = "0.8.2.21"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

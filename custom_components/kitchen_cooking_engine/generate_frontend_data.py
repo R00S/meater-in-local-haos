@@ -284,6 +284,8 @@ def build_cuisine_data(base_dir):
                 }
                 if item.get("name_sv"):
                     entry["name_sv"] = item["name_sv"]
+                if item.get("notes"):
+                    entry["notes"] = item["notes"]
                 ingredients.append(entry)
 
         if ingredients:
