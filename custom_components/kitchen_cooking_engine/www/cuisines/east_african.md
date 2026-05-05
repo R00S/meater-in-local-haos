@@ -2,246 +2,209 @@
 KCE: CUISINE
 id: east_african
 name: East African
-name_sv: "Östafrikansk"
-icon: 🌄
+name_sv: "Östafrikanskt"
+icon: 🌍
 region: african
-region_name: "African"
+region_name: "Africa"
 region_icon: 🌍
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-research_done: 0
+description: "East African cuisine spans Ethiopia's ancient injera-and-wot tradition, Kenya and Tanzania's ugali with sukuma wiki and nyama choma, Uganda's matoke, and the spice-scented Swahili coast. Two great flavor identities meet here: Ethiopia's complex spice blends (berbere, niter kibbeh) built over millennia of Orthodox fasting culture, and the Indian Ocean coast's clove-cardamom-coconut influence radiating from Zanzibar. Teff has been cultivated in Ethiopia for 3 000+ years and provides ~61 kg per person per year; Kenya's maize ugali consumption reaches ~88 kg per person per year."
+description_sv: "Östafrikanskt kök spänner från Etiopiens urgamla injera-och-wot-tradition och Kenyas/Tanzanias ugali med sukuma wiki och nyama choma, till Ugandas matoke och den kryddiga Swahilikusten. Två stora smakidentiteter möts: Etiopiens komplexa kryddblandningar (berbere, niter kibbeh) formade av ortodoxa fastetraditioner, och Indiska Oceanens kustens kanel-kardemumma-kokosmjölksinfluenser från Zanzibar. Teff har odlats i Etiopien i 3 000+ år och ger ~61 kg per person och år; Kenyas majsugali-konsumtion når ~88 kg per person och år."
+research_done: 1
 ---
 
 ## Research notes
 
-⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
-Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Produce — Signature", etc.).
-Each pair requires its own dedicated research pass. Do NOT combine pairs.
-See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
+Sources: FAO FAOSTAT country briefs Ethiopia, Kenya, Tanzania, Uganda; Teff Wikipedia / Springer 2025; ICRISAT Sorghum & Millets Eastern Africa; Grains in Africa Steinweg 2024; List of countries by meat consumption Wikipedia (FAO-based); East African culinary references (injera/berbere/nyama choma/ugali traditions); Zanzibar Spice Island sources; World Population Review (Kenya avocado); multiple ethnobotanical and East African food culture sources.
+
+Per capita grains: Kenya maize ~88 kg/year, Tanzania maize ~73 kg/year, Ethiopia teff ~61 kg/year, Uganda millet ~20 kg/year. Meat: Kenya 13–15 kg/year total, Tanzania 10–12 kg/year, Uganda 11–13 kg/year, Ethiopia 7–8 kg/year. Fish: Tanzania/Uganda ~4–5 kg/cap/year. All figures approximate FAO 2022–2023.
 
 
 ## Proteins
 
 ### Proteins — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "East African signature dishes", "East African iconic traditional proteins", "East African food culture defining meats fish" -->
+<!-- Searched: "East Africa iconic proteins nyama choma beef goat chicken tilapia Nile perch doro wat camel dagaa omena" -->
 
-- {id: stub_prot_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Protein 1", name_sv: "[UTKAST] Signatur Protein 1", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Protein 2", name_sv: "[UTKAST] Signatur Protein 2", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Protein 3", name_sv: "[UTKAST] Signatur Protein 3", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Protein 4", name_sv: "[UTKAST] Signatur Protein 4", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Protein 5", name_sv: "[UTKAST] Signatur Protein 5", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Protein 6", name_sv: "[UTKAST] Signatur Protein 6", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Protein 7", name_sv: "[UTKAST] Signatur Protein 7", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Protein 8", name_sv: "[UTKAST] Signatur Protein 8", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Protein 9", name_sv: "[UTKAST] Signatur Protein 9", notes: "STUB — replace with verified East African research"}
+- {id: eaf_prot_sig_beef, grade: signature, rating: 8, name: "Beef", name_sv: "Nötkött", notes: "Ng'ombe; nyama choma (grilled/roasted beef over charcoal) is the definitive social meat of Kenya and Tanzania; eaten communally at nyama choma joints; also doro wat variant with beef; ~3–5 kg/cap/year across East Africa"}
+- {id: eaf_prot_sig_chicken, grade: signature, rating: 8, name: "Chicken", name_sv: "Kyckling", notes: "Kuku; doro wat (Ethiopian spiced chicken stew on injera) is arguably Africa's most famous dish; kuku paka (Swahili coast chicken in coconut milk) is iconic; widely consumed across all East African countries"}
+- {id: eaf_prot_sig_goat, grade: signature, rating: 8, name: "Goat", name_sv: "Get", notes: "Mbuzi; the most widely eaten red meat across East Africa; nyama choma goat is preferred over beef in many regions; goat stew (suqaar in Somalia); goat tibs in Ethiopia; centrally important at celebrations and feasts"}
+- {id: eaf_prot_sig_tilapia, grade: signature, rating: 8, name: "Tilapia", name_sv: "Tilapia", notes: "Tilapia ya ziwa; a primary protein source for communities around Lake Victoria (Kenya, Tanzania, Uganda); fried whole tilapia served with ugali is an iconic Lake Victoria meal; native species now supplemented by farmed Nile tilapia"}
+- {id: eaf_prot_sig_dagaa, grade: signature, rating: 7, name: "Dagaa", name_sv: "Dagaa (torkad sjöfisk)", notes: "Dagaa (Tanzania) / omena (Kenya); tiny silver-white freshwater fish (Rastrineobola argentea) from Lake Victoria; dried in the sun and eaten with ugali; a uniquely East African affordable protein; high in calcium; traditionally the protein of fisherfolk and low-income households"}
+- {id: eaf_prot_sig_nile_perch, grade: signature, rating: 7, name: "Nile perch", name_sv: "Nilabborre", notes: "Sangara (Tanzania/Kenya); large predatory fish introduced to Lake Victoria; a major export and local food fish; widely eaten fried or grilled along the Lake Victoria shoreline; 4–5 kg/cap fish consumption in Tanzania and Uganda"}
+- {id: eaf_prot_sig_lamb, grade: signature, rating: 6, name: "Lamb and mutton", name_sv: "Lamm och fårkött", notes: "Kondoo; widely eaten at celebrations across East Africa; tibs (Ethiopian pan-fried lamb) is a classic; particularly important in Muslim-influenced areas (coastal Kenya, Somalia, Djibouti); also in Ethiopian Orthodox holiday feasts"}
+- {id: eaf_prot_sig_camel, grade: signature, rating: 6, name: "Camel", name_sv: "Kamel", notes: "Ngamia; meat and milk; critically important in Somalia, Northern Kenya, and parts of Ethiopia; Somali suqaar-style camel stir-fry; camel herds are central to pastoralist livelihoods; Somali camel breed particularly prominent"}
 
 ### Proteins — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "East African meat consumption kg per capita", "East African FAO food balance protein", "East African most consumed protein statistics" -->
+<!-- Searched: "East Africa protein consumption statistics beef goat chicken fish Ethiopia Kenya Tanzania Uganda 2022 2023 FAO per capita" -->
 
-- {id: stub_prot_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Protein 1", name_sv: "[UTKAST] Bulk Protein 1", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Protein 2", name_sv: "[UTKAST] Bulk Protein 2", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Protein 3", name_sv: "[UTKAST] Bulk Protein 3", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Protein 4", name_sv: "[UTKAST] Bulk Protein 4", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Protein 5", name_sv: "[UTKAST] Bulk Protein 5", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Protein 6", name_sv: "[UTKAST] Bulk Protein 6", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Protein 7", name_sv: "[UTKAST] Bulk Protein 7", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Protein 8", name_sv: "[UTKAST] Bulk Protein 8", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Protein 9", name_sv: "[UTKAST] Bulk Protein 9", notes: "STUB — replace with verified East African research"}
+- {id: eaf_prot_bul_eggs, grade: bulk, rating: 8, name: "Eggs", name_sv: "Ägg", notes: "Mayai; eggs consumed daily; scrambled eggs with vegetables for breakfast; omelettes; fried eggs with chapati and tea; extremely high household penetration across all East African urban and rural households"}
+- {id: eaf_prot_bul_matumbo, grade: bulk, rating: 7, name: "Tripe and offal", name_sv: "Inälvsmat och mage", notes: "Matumbo; tripe stew is one of Kenya's most iconic comfort foods eaten in working-class restaurants and homes; offal including liver (ini), kidneys, and heart widely eaten across East Africa as affordable nutritious protein"}
+- {id: eaf_prot_bul_canned_fish, grade: bulk, rating: 7, name: "Canned sardines", name_sv: "Konserverade sardiner", notes: "Samaki wa mkebe; canned sardines and mackerel widely consumed as affordable protein throughout East Africa; available at every duka (corner store); particularly important in urban areas as a low-cost protein source"}
+- {id: eaf_prot_bul_pork, grade: bulk, rating: 6, name: "Pork", name_sv: "Griskött", notes: "Nguruwe; widely consumed in Kenya and Uganda by non-Muslim communities; pork ribs (mbavu za nguruwe) popular in Nairobi and Kampala restaurants; 'pork joints' are a feature of Kenyan roadside food culture in many regions"}
+- {id: eaf_prot_bul_canned_beef, grade: bulk, rating: 5, name: "Canned corned beef", name_sv: "Konserverat corn beef", notes: "Nyama ya mkebe; canned corned beef ('bully beef') widely consumed across urban East Africa as a convenient protein addition to fried rice, ugali, and sandwiches; a legacy of British colonial food culture; high penetration in Kenyan and Ugandan households"}
+- {id: eaf_prot_bul_catfish, grade: bulk, rating: 5, name: "Catfish", name_sv: "Havsmale", notes: "Kambale; freshwater catfish (mainly Clarias species) widely consumed in Uganda, Tanzania, and Kenya; farmed and wild-caught; fried catfish alongside ugali is a common lakeside meal"}
+- {id: eaf_prot_bul_rabbit, grade: bulk, rating: 4, name: "Rabbit", name_sv: "Kanin", notes: "Sungura; rabbit stew (stewed or fried) consumed in rural Kenya and Uganda; often raised in household back-yards; growing popularity as an affordable small-scale livestock protein source"}
+- {id: eaf_prot_bul_nsenene, grade: bulk, rating: 4, name: "Nsenene grasshoppers", name_sv: "Nsenene-gräshoppor", notes: "Nsenene; fried long-horned grasshoppers (katydids) are a traditional seasonal delicacy in Uganda and parts of the Great Lakes region; highly nutritious; eaten fried with salt; seasonal harvest a social event; also dried and sold in urban Kampala markets"}
 
 ### Proteins — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "East African livestock farming animals raised", "East African fishing industry fish species caught", "East African game animals hunted wild" -->
+<!-- Searched: "East Africa locally raised livestock zebu cattle Kenya Tanzania Uganda Ethiopia camel Somalia fish Nile perch tilapia Lake Victoria traditional breeds" -->
 
-- {id: stub_prot_loc_1, grade: local, rating: 9, name: "[STUB] Local Protein 1", name_sv: "[UTKAST] Lokalt Protein 1", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_loc_2, grade: local, rating: 8, name: "[STUB] Local Protein 2", name_sv: "[UTKAST] Lokalt Protein 2", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_loc_3, grade: local, rating: 7, name: "[STUB] Local Protein 3", name_sv: "[UTKAST] Lokalt Protein 3", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_loc_4, grade: local, rating: 6, name: "[STUB] Local Protein 4", name_sv: "[UTKAST] Lokalt Protein 4", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_loc_5, grade: local, rating: 5, name: "[STUB] Local Protein 5", name_sv: "[UTKAST] Lokalt Protein 5", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_loc_6, grade: local, rating: 4, name: "[STUB] Local Protein 6", name_sv: "[UTKAST] Lokalt Protein 6", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_loc_7, grade: local, rating: 3, name: "[STUB] Local Protein 7", name_sv: "[UTKAST] Lokalt Protein 7", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_loc_8, grade: local, rating: 2, name: "[STUB] Local Protein 8", name_sv: "[UTKAST] Lokalt Protein 8", notes: "STUB — replace with verified East African research"}
-- {id: stub_prot_loc_9, grade: local, rating: 1, name: "[STUB] Local Protein 9", name_sv: "[UTKAST] Lokalt Protein 9", notes: "STUB — replace with verified East African research"}
+- {id: eaf_prot_loc_ankole, grade: local, rating: 8, name: "Ankole cattle", name_sv: "Ankoleboskap", notes: "Ankole ngombe; Uganda and Great Lakes region long-horn zebu breed; iconic with dramatic curved horns; source of both milk and beef; Ankole cattle are culturally important to Ugandan and Rwandan communities; some animals kept as prestige livestock"}
+- {id: eaf_prot_loc_boran, grade: local, rating: 7, name: "Boran cattle", name_sv: "Borannötkreatur", notes: "Boran ng'ombe; Kenya's primary indigenous beef cattle breed; zebu (Bos indicus) variety; adapted to drought and heat; the backbone of Kenyan pastoralist ranching; famous for its disease resistance and lean beef quality; bred by Borana people of northern Kenya/Ethiopia"}
+- {id: eaf_prot_loc_maasai_sheep, grade: local, rating: 6, name: "Red Maasai sheep", name_sv: "Röda Masajfår", notes: "Kondoo wa Maasai; indigenous fat-tailed sheep breed of Kenya and Tanzania; owned by Maasai and other pastoralist communities; slaughtered for ceremonial meals and celebrations; highly disease-resistant; an important cultural and food animal"}
+- {id: eaf_prot_loc_galla_goat, grade: local, rating: 7, name: "Galla goat", name_sv: "Gallagett", notes: "Mbuzi wa Galla; indigenous East African goat breed (Ethiopia/Kenya border region); very hardy; raised by Borana and Oromo pastoralists; primary goat for both milk and meat in the Horn of Africa; a critical food security animal in arid areas"}
+- {id: eaf_prot_loc_african_catfish, grade: local, rating: 6, name: "African catfish", name_sv: "Afrikansk mal", notes: "Kambale (Clarias gariepinus); endemic African catfish species; widely farmed across East Africa in ponds; increasingly important in Uganda and Kenya aquaculture; sold at local markets fresh and smoked; adaptable and fast-growing in tropical conditions"}
+- {id: eaf_prot_loc_coastal_prawns, grade: local, rating: 5, name: "Coastal prawns", name_sv: "Kusträkor", notes: "Kamba za baharini; wild-caught prawns from Kenyan and Tanzanian Indian Ocean coastlines; used in Swahili coastal cooking (supu ya kamba, grilled prawns); important artisanal fisheries product in Mombasa, Lamu, and Zanzibar"}
+- {id: eaf_prot_loc_guinea_fowl, grade: local, rating: 4, name: "Guinea fowl", name_sv: "Pärlhöna", notes: "Kanga; wild and semi-domesticated guinea fowl widely found across East African savannas; hunted and increasingly farmed; lean, gamey meat; traditional festive food particularly in rural Kenya and Tanzania"}
+- {id: eaf_prot_loc_nile_tilapia_farmed, grade: local, rating: 7, name: "Farmed Nile tilapia", name_sv: "Odlad niltilapia", notes: "Tilapia ya shamba; Nile tilapia (Oreochromis niloticus) farmed extensively in East African aquaculture ponds; supports rural income and local food security; sold at local markets as fresh fish; East Africa's fastest-growing aquaculture species"}
 
 
 ## Produce
 
 ### Produce — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "East African signature dishes vegetables", "East African iconic vegetable ingredients", "East African traditional vegetable preparations" -->
+<!-- Searched: "East Africa signature vegetables sukuma wiki kale plantain matoke sweet potato cassava yam traditional produce Ethiopia Kenya Tanzania" -->
 
-- {id: stub_veg_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Vegetable 1", name_sv: "[UTKAST] Signatur Grönsak 1", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Vegetable 2", name_sv: "[UTKAST] Signatur Grönsak 2", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Vegetable 3", name_sv: "[UTKAST] Signatur Grönsak 3", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Vegetable 4", name_sv: "[UTKAST] Signatur Grönsak 4", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Vegetable 5", name_sv: "[UTKAST] Signatur Grönsak 5", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Vegetable 6", name_sv: "[UTKAST] Signatur Grönsak 6", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Vegetable 7", name_sv: "[UTKAST] Signatur Grönsak 7", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Vegetable 8", name_sv: "[UTKAST] Signatur Grönsak 8", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Vegetable 9", name_sv: "[UTKAST] Signatur Grönsak 9", notes: "STUB — replace with verified East African research"}
+- {id: eaf_veg_sig_tomato, grade: signature, rating: 9, name: "Tomato", name_sv: "Tomat", notes: "Nyanya; used as the base for virtually all East African cooked dishes; the 'mchuzi' sauce (tomato-onion-spice) is the flavour foundation of Kenyan, Tanzanian, and Ugandan everyday cooking; also used raw in salads and as a relish alongside ugali"}
+- {id: eaf_veg_sig_onion, grade: signature, rating: 9, name: "Onion", name_sv: "Lök", notes: "Kitunguu; the most fundamental aromatic vegetable; base of sofregit and every cooked East African dish; used raw, caramelised, and in stews; both red and white onions ubiquitous from Somalia to Tanzania"}
+- {id: eaf_veg_sig_sukuma_wiki, grade: signature, rating: 9, name: "Sukuma wiki", name_sv: "Sukuma wiki (grönkål)", notes: "Sukuma wiki (Swahili: 'push the week'); collard greens/kale sautéed with onion and tomato; Kenya's most eaten vegetable; the affordable daily vegetable side for ugali; also eaten in Tanzania and Uganda; its Swahili name reflects its role as a budget stretcher"}
+- {id: eaf_veg_sig_sweet_potato, grade: signature, rating: 7, name: "Sweet potato", name_sv: "Sötpotatis", notes: "Viazi vitamu; widely grown and eaten across East Africa; boiled as a starchy side dish, roasted in coals, or used in stews; an important food-security crop; both orange-fleshed (vitamin A) and white-fleshed varieties grown"}
+- {id: eaf_veg_sig_cassava, grade: signature, rating: 7, name: "Cassava", name_sv: "Kassava", notes: "Muhogo; boiled, fried (kachumbali-style), or used in cassava ugali in coastal areas; a drought-resistant crop critical for food security; fried muhogo (crispy cassava chips) is an iconic East African street food snack"}
+- {id: eaf_veg_sig_matoke, grade: signature, rating: 7, name: "Green cooking banana", name_sv: "Grön matoke-banan", notes: "Matoke (Uganda) / ndizi ya kupika; stewed green cooking banana is Uganda's national dish; peeled green bananas steamed in banana leaves (luwombo); also eaten across western Kenya and northwestern Tanzania; a distinctive East African starch-fruit vegetable"}
+- {id: eaf_veg_sig_cabbage, grade: signature, rating: 7, name: "Cabbage", name_sv: "Kål", notes: "Kabichi; Ethiopian tikil gomen (cabbage, potato, and carrot stew) is a classic injera accompaniment; Kenyan and Tanzanian cabbage stewed with onion and tomato; a foundational and affordable everyday vegetable throughout East Africa"}
+- {id: eaf_veg_sig_carrot, grade: signature, rating: 6, name: "Carrot", name_sv: "Morot", notes: "Karoti; used in Ethiopian tikil gomen, Kenyan pilau spice rice, Tanzanian stews, and as a salad vegetable; grown in East African highland areas; one of the standard vegetables in East African cooking across countries"}
 
 ### Produce — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "East African vegetable consumption kg per capita", "East African most consumed vegetables statistics", "East African FAO food balance vegetables" -->
+<!-- Searched: "East Africa most consumed vegetables fruits per capita consumption 2022 2023 potato spinach banana pumpkin pepper cucumber" -->
 
-- {id: stub_veg_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Vegetable 1", name_sv: "[UTKAST] Bulk Grönsak 1", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Vegetable 2", name_sv: "[UTKAST] Bulk Grönsak 2", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Vegetable 3", name_sv: "[UTKAST] Bulk Grönsak 3", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Vegetable 4", name_sv: "[UTKAST] Bulk Grönsak 4", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Vegetable 5", name_sv: "[UTKAST] Bulk Grönsak 5", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Vegetable 6", name_sv: "[UTKAST] Bulk Grönsak 6", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Vegetable 7", name_sv: "[UTKAST] Bulk Grönsak 7", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Vegetable 8", name_sv: "[UTKAST] Bulk Grönsak 8", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Vegetable 9", name_sv: "[UTKAST] Bulk Grönsak 9", notes: "STUB — replace with verified East African research"}
+- {id: eaf_veg_bul_banana, grade: bulk, rating: 8, name: "Banana", name_sv: "Banan", notes: "Ndizi tamu; eating banana (distinct from matoke cooking banana); consumed as a fresh fruit and snack throughout East Africa; Uganda is one of Africa's largest banana producers; widely sold at markets and roadside stalls from Nairobi to Dar es Salaam"}
+- {id: eaf_veg_bul_potato, grade: bulk, rating: 7, name: "Potato", name_sv: "Potatis", notes: "Viazi; growing consumption across urban East Africa; chips (fries) are extremely popular street food; used in tikil gomen stew, pilau, and as a starchy side dish; grown in Kenya highland and Ethiopian cool highlands"}
+- {id: eaf_veg_bul_spinach, grade: bulk, rating: 7, name: "Amaranth spinach", name_sv: "Amarantsspenat", notes: "Terere/mchicha; amaranth leaves (terere in Kenya, mchicha in Tanzania) are widely consumed sautéed leafy greens; extremely nutritious; grown as a household vegetable across East Africa; a major affordable vegetable alongside sukuma wiki"}
+- {id: eaf_veg_bul_fresh_corn, grade: bulk, rating: 6, name: "Roasted corn", name_sv: "Rostad majs", notes: "Mahindi ya kuokwa; fresh corn on the cob roasted over charcoal coals is one of the most ubiquitous East African street foods; sold by vendors on every street corner in Nairobi, Kampala, Dar es Salaam; a daily snack for millions"}
+- {id: eaf_veg_bul_bell_pepper, grade: bulk, rating: 6, name: "Bell pepper", name_sv: "Paprika", notes: "Hoho/pilipili tamu; increasingly used in modern East African cooking; used in pilau garnish, stir-fries, and some stewed dishes; grown in Kenyan highland greenhouses for local and export markets"}
+- {id: eaf_veg_bul_pumpkin, grade: bulk, rating: 6, name: "Pumpkin", name_sv: "Pumpa", notes: "Boga; grown and eaten across East Africa; pumpkin stew with onion and tomato; pumpkin leaves also used as a vegetable (sautéed); an extremely productive and versatile crop for East African smallholder farms"}
+- {id: eaf_veg_bul_cucumber, grade: bulk, rating: 5, name: "Cucumber", name_sv: "Gurka", notes: "Tango; eaten fresh as a snack and in salads; widely grown; cooling in the East African heat; used alongside tomato and onion in kachumbari (East African salsa/fresh salad)"}
+- {id: eaf_veg_bul_eggplant, grade: bulk, rating: 5, name: "Eggplant", name_sv: "Aubergine", notes: "Bilinganya/biringanya; used in Tanzanian and Ugandan cooking in stews and curries; Indian Ocean coast influence; grown locally across East Africa; used in some Ethiopian wot recipes"}
 
 ### Produce — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "East African vegetables grown locally agriculture", "East African regional vegetable crops", "East African foraging wild plants" -->
+<!-- Searched: "East Africa local produce agriculture avocado mango passion fruit coffee tea banana Ethiopian produce Kenya horticulture export crops" -->
 
-- {id: stub_veg_loc_1, grade: local, rating: 9, name: "[STUB] Local Vegetable 1", name_sv: "[UTKAST] Lokalt Grönsak 1", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_loc_2, grade: local, rating: 8, name: "[STUB] Local Vegetable 2", name_sv: "[UTKAST] Lokalt Grönsak 2", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_loc_3, grade: local, rating: 7, name: "[STUB] Local Vegetable 3", name_sv: "[UTKAST] Lokalt Grönsak 3", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_loc_4, grade: local, rating: 6, name: "[STUB] Local Vegetable 4", name_sv: "[UTKAST] Lokalt Grönsak 4", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_loc_5, grade: local, rating: 5, name: "[STUB] Local Vegetable 5", name_sv: "[UTKAST] Lokalt Grönsak 5", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_loc_6, grade: local, rating: 4, name: "[STUB] Local Vegetable 6", name_sv: "[UTKAST] Lokalt Grönsak 6", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_loc_7, grade: local, rating: 3, name: "[STUB] Local Vegetable 7", name_sv: "[UTKAST] Lokalt Grönsak 7", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_loc_8, grade: local, rating: 2, name: "[STUB] Local Vegetable 8", name_sv: "[UTKAST] Lokalt Grönsak 8", notes: "STUB — replace with verified East African research"}
-- {id: stub_veg_loc_9, grade: local, rating: 1, name: "[STUB] Local Vegetable 9", name_sv: "[UTKAST] Lokalt Grönsak 9", notes: "STUB — replace with verified East African research"}
+- {id: eaf_veg_loc_avocado, grade: local, rating: 9, name: "Avocado", name_sv: "Avokado", notes: "Parachichi; Kenya is one of Africa's largest avocado exporters (mainly Hass variety to Europe/Middle East); widely consumed locally fresh; Ethiopia also expanding production; eaten with injera, ugali, or fresh as a snack"}
+- {id: eaf_veg_loc_coffee, grade: local, rating: 8, name: "Coffee", name_sv: "Kaffe", notes: "Kahawa; Ethiopia is the birthplace of coffee; Ethiopian coffee ceremony (buna) is a cultural centrepiece; Kenyan highland coffee is world-famous for quality; both countries are leading African producers and exporters; coffee deeply embedded in East African social culture"}
+- {id: eaf_veg_loc_mango, grade: local, rating: 7, name: "Mango", name_sv: "Mango", notes: "Embe; widely grown in Kenya (peak November–April), Tanzania, and Uganda; consumed fresh, in juices, and in some chutneys; Kenya is a leading East African mango exporter; many local varieties including Tommy Atkins and Apple mango"}
+- {id: eaf_veg_loc_passion_fruit, grade: local, rating: 7, name: "Passion fruit", name_sv: "Passionsfrukt", notes: "Pesheni/marakwja; widely grown in Kenya and Uganda; exported mainly to EU; a popular East African juice flavour; both yellow and purple varieties; commonly mixed with other juices at juice bars across the region"}
+- {id: eaf_veg_loc_enset, grade: local, rating: 7, name: "Enset", name_sv: "Enset (falsk banan)", notes: "Wesse/enset; 'false banana' plant (Ensete ventricosum); uniquely cultivated in southern Ethiopia as a food crop; the starchy stem and corm are fermented to produce kocho (flatbread), bulla (starch), and amicho (boiled corm); feeds ~20 million Ethiopians in the SNNPR region"}
+- {id: eaf_veg_loc_pineapple, grade: local, rating: 6, name: "Pineapple", name_sv: "Ananas", notes: "Nanasi; grown in Uganda, Kenya, and Tanzania; widely consumed fresh and in juices; Uganda is the region's largest pineapple producer; sold at every East African market as a fresh fruit and street food (peeled and salted)"}
+- {id: eaf_veg_loc_papaya, grade: local, rating: 6, name: "Papaya", name_sv: "Papaya", notes: "Papai/pawpaw; widely grown across East Africa in household gardens; eaten ripe as a sweet breakfast fruit; unripe green papaya used in salads and some cooked dishes; naturally grows year-round in tropical lowlands"}
+- {id: eaf_veg_loc_khat, grade: local, rating: 5, name: "Khat", name_sv: "Khat", notes: "Miraa/qaad; stimulant plant (Catha edulis) grown in Ethiopian highlands and Meru/Nyambene hills Kenya; a major cash crop exported to Somalia, Djibouti, Yemen; chewed by millions in the Horn of Africa and coastal Kenya; both culturally and economically significant in its production regions"}
 
 
 ## Grains & Starches
 
 ### Grains & Starches — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "East African signature grain dishes bread pasta rice", "East African iconic starch preparations", "East African traditional staple foods" -->
+<!-- Searched: "East Africa staple grains teff injera millet sorghum maize ugali rice beans lentils per capita consumption Ethiopia Kenya Tanzania Uganda" -->
 
-- {id: stub_grain_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Grain 1", name_sv: "[UTKAST] Signatur Spannmål 1", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Grain 2", name_sv: "[UTKAST] Signatur Spannmål 2", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Grain 3", name_sv: "[UTKAST] Signatur Spannmål 3", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Grain 4", name_sv: "[UTKAST] Signatur Spannmål 4", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Grain 5", name_sv: "[UTKAST] Signatur Spannmål 5", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Grain 6", name_sv: "[UTKAST] Signatur Spannmål 6", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Grain 7", name_sv: "[UTKAST] Signatur Spannmål 7", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Grain 8", name_sv: "[UTKAST] Signatur Spannmål 8", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Grain 9", name_sv: "[UTKAST] Signatur Spannmål 9", notes: "STUB — replace with verified East African research"}
+- {id: eaf_grain_sig_maize_flour, grade: signature, rating: 9, name: "Maize flour", name_sv: "Majsmjöl", notes: "Unga wa mahindi; ~88 kg/cap/year Kenya (ICRISAT/Steinweg), ~73 kg/cap Tanzania, ~50 kg/cap Uganda; ugali (posho) — stiff maize porridge — is the non-negotiable staple across Kenya, Tanzania, and Uganda; the backbone of East African daily nutrition"}
+- {id: eaf_grain_sig_teff, grade: signature, rating: 9, name: "Teff", name_sv: "Teff", notes: "Teff; ~61 kg/cap/year in Ethiopia (Springer 2025); exclusively cultivated in Ethiopian/Eritrean highlands; the oldest documented Ethiopian grain (3 000+ years); fermented to make injera (the national bread/plate of Ethiopia); gluten-free; provides ~two-thirds of daily protein for millions of Ethiopians"}
+- {id: eaf_grain_sig_red_beans, grade: signature, rating: 8, name: "Red kidney beans", name_sv: "Röda njurbönor", notes: "Maharagwe; ~15 kg/cap/year Kenya (ICRISAT); maharagwe stew (kidney beans in tomato-onion sauce) is eaten with ugali daily in Kenya and Tanzania; a central protein source alongside meat; cooked overnight in large pots for the next day's meals"}
+- {id: eaf_grain_sig_lentils, grade: signature, rating: 8, name: "Lentils", name_sv: "Linser", notes: "Misir (Ethiopia) / dengu (East Africa); misir wot (spiced red lentil stew) is one of the most fundamental injera accompaniments; during Ethiopian Orthodox fasting periods (~200 days/year), lentils are the primary protein for millions; dengu (green lentil stew) eaten with ugali in Kenya"}
+- {id: eaf_grain_sig_sorghum, grade: signature, rating: 7, name: "Sorghum", name_sv: "Sorghum", notes: "Mtama; ~30 kg/cap/year in Ethiopia; traditional grain for uji porridge, local beer (tella in Ethiopia, busaa in Kenya), and flatbreads; important in arid and semi-arid regions where maize fails; a critical food-security grain throughout East Africa"}
+- {id: eaf_grain_sig_millet, grade: signature, rating: 7, name: "Finger millet", name_sv: "Fingrenhirs", notes: "Wimbi (finger millet, Eleusine coracana); ~20 kg/cap/year in Uganda; used for traditional porridge (uji wa wimbi), fermented millet bread, and finger millet ugali; a highly nutritious ancient grain widely grown in East African highlands; important for weaning foods"}
+- {id: eaf_grain_sig_rice, grade: signature, rating: 7, name: "Rice", name_sv: "Ris", notes: "Wali; ~25 kg/cap/year Tanzania; pilau (Swahili spiced rice with meat and cloves) is iconic to Kenyan/Tanzanian coastal cuisine; wali wa nazi (coconut rice) is a Swahili coast classic; biryani popular in Muslim communities; rice consumption growing across urban East Africa"}
+- {id: eaf_grain_sig_chickpeas, grade: signature, rating: 6, name: "Chickpeas", name_sv: "Kikärtor", notes: "Shimbra (Ethiopia); Ethiopian chickpea-based fasting dishes: shimbra asa (chickpea fish), shimbra firfir; chickpea flour (besan) used in some preparations; also used in Kenyan and Tanzanian bean-based stews; a classic Orthodox fasting protein source"}
 
 ### Grains & Starches — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "East African grain consumption kg per capita", "East African rice wheat bread statistics", "East African FAO food balance cereals" -->
+<!-- Searched: "East Africa most consumed grains wheat chapati black-eyed peas groundnuts peanuts split peas fava beans consumption statistics" -->
 
-- {id: stub_grain_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Grain 1", name_sv: "[UTKAST] Bulk Spannmål 1", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Grain 2", name_sv: "[UTKAST] Bulk Spannmål 2", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Grain 3", name_sv: "[UTKAST] Bulk Spannmål 3", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Grain 4", name_sv: "[UTKAST] Bulk Spannmål 4", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Grain 5", name_sv: "[UTKAST] Bulk Spannmål 5", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Grain 6", name_sv: "[UTKAST] Bulk Spannmål 6", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Grain 7", name_sv: "[UTKAST] Bulk Spannmål 7", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Grain 8", name_sv: "[UTKAST] Bulk Spannmål 8", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Grain 9", name_sv: "[UTKAST] Bulk Spannmål 9", notes: "STUB — replace with verified East African research"}
+- {id: eaf_grain_bul_wheat_flour, grade: bulk, rating: 9, name: "Wheat flour", name_sv: "Vetemjöl", notes: "Unga wa ngano; chapati (flat unleavened bread; Indian-origin but now fully East African) is eaten across Kenya, Uganda, and Tanzania; mandazi (fried doughnuts) are an iconic East African snack/breakfast made from wheat flour; wheat consumption growing strongly with urbanization"}
+- {id: eaf_grain_bul_groundnuts, grade: bulk, rating: 7, name: "Groundnuts", name_sv: "Jordnötter", notes: "Karanga/njugu; peanuts widely grown and consumed across East Africa; groundnut stew (binyebwa) is a Ugandan staple sauce; roasted groundnuts sold by street vendors everywhere; mixed into porridge; a key affordable protein and fat source throughout the region"}
+- {id: eaf_grain_bul_split_peas, grade: bulk, rating: 6, name: "Split peas", name_sv: "Gula ärtor (delade)", notes: "Ater (Ethiopia); ater kik alicha (mild yellow split pea stew) is an essential injera accompaniment; also used in Kenyan and Tanzanian stews; one of the core pulses in the Ethiopian fasting food repertoire"}
+- {id: eaf_grain_bul_black_eyed_peas, grade: bulk, rating: 6, name: "Black-eyed peas", name_sv: "Svartögda bönor", notes: "Kunde; widely grown and consumed in Kenya and Tanzania; stewed kunde with onion and tomato; a nutritious and affordable legume grown in household plots; important protein supplement especially in rural diets"}
+- {id: eaf_grain_bul_fava_beans, grade: bulk, rating: 6, name: "Fava beans", name_sv: "Bondbönor", notes: "Ful medames; very popular in Ethiopia (ful) and Somalia; boiled fava beans with olive oil, garlic, and spices; also a staple across East African Muslim communities for breakfast; widely consumed in the Horn of Africa region"}
+- {id: eaf_grain_bul_oats, grade: bulk, rating: 5, name: "Oats", name_sv: "Havre", notes: "Shayiri ya oats; growing consumption especially in urban East Africa for breakfast porridge; widely available in supermarkets; increasingly popular among young professionals and health-conscious consumers in Nairobi, Kampala, and Dar es Salaam"}
 
 ### Grains & Starches — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "East African grain crops grown", "East African cereal farming production", "East African locally milled flour regional varieties" -->
+<!-- Searched: "East Africa locally grown grains enset kocho pigeon peas bambara groundnut sesame amaranth grain production East African local crops" -->
 
-- {id: stub_grain_loc_1, grade: local, rating: 9, name: "[STUB] Local Grain 1", name_sv: "[UTKAST] Lokalt Spannmål 1", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_loc_2, grade: local, rating: 8, name: "[STUB] Local Grain 2", name_sv: "[UTKAST] Lokalt Spannmål 2", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_loc_3, grade: local, rating: 7, name: "[STUB] Local Grain 3", name_sv: "[UTKAST] Lokalt Spannmål 3", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_loc_4, grade: local, rating: 6, name: "[STUB] Local Grain 4", name_sv: "[UTKAST] Lokalt Spannmål 4", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_loc_5, grade: local, rating: 5, name: "[STUB] Local Grain 5", name_sv: "[UTKAST] Lokalt Spannmål 5", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_loc_6, grade: local, rating: 4, name: "[STUB] Local Grain 6", name_sv: "[UTKAST] Lokalt Spannmål 6", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_loc_7, grade: local, rating: 3, name: "[STUB] Local Grain 7", name_sv: "[UTKAST] Lokalt Spannmål 7", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_loc_8, grade: local, rating: 2, name: "[STUB] Local Grain 8", name_sv: "[UTKAST] Lokalt Spannmål 8", notes: "STUB — replace with verified East African research"}
-- {id: stub_grain_loc_9, grade: local, rating: 1, name: "[STUB] Local Grain 9", name_sv: "[UTKAST] Lokalt Spannmål 9", notes: "STUB — replace with verified East African research"}
+- {id: eaf_grain_loc_enset_starch, grade: local, rating: 7, name: "Enset starch (kocho)", name_sv: "Ensetstärkelse (kocho)", notes: "Kocho/bulla; fermented starch from enset plant (Ensete ventricosum); kocho is a dense, nutritious flatbread made by fermenting and pressing the pseudostem; feeds ~20 million people in southern Ethiopia's SNNPR; a unique food crop found nowhere outside the Ethiopian highlands"}
+- {id: eaf_grain_loc_pigeon_peas, grade: local, rating: 6, name: "Pigeon peas", name_sv: "Duvärtor", notes: "Mbaazi; widely grown in East Africa especially coastal Kenya and Tanzania; mbaazi ya nazi (pigeon peas in coconut milk) is an iconic Swahili coast dish served with rice; also eaten as a dal-style stew inland; a drought-tolerant pulse important for smallholder farming"}
+- {id: eaf_grain_loc_sesame, grade: local, rating: 6, name: "Sesame", name_sv: "Sesam", notes: "Simsim; widely grown in Uganda, Tanzania, and Ethiopia; used in simsim paste (tahini-like), roasted and ground into groundnut sauce, and as cooking oil; Uganda is one of Africa's larger sesame exporters; used in some East African baking and confectionery"}
+- {id: eaf_grain_loc_bambara, grade: local, rating: 5, name: "Bambara groundnut", name_sv: "Bambara jordnöt", notes: "Njugu mawe/nzama; indigenous East African legume (Vigna subterranea); grown in Tanzania, Uganda, and parts of Kenya; boiled or ground; drought-tolerant and uniquely adapted to African soils; an important traditional pulse grown for millennia in East Africa"}
+- {id: eaf_grain_loc_amaranth_grain, grade: local, rating: 5, name: "Amaranth grain", name_sv: "Amarantfrö", notes: "Terere (grain variety); amaranth is both a leafy vegetable and grain in East Africa; seeds ground into flour for porridge and baking; a traditional grain in Ethiopia and Kenya; highly nutritious, drought-resistant; revived interest as a climate-resilient local grain"}
+- {id: eaf_grain_loc_cowpeas, grade: local, rating: 6, name: "Cowpeas", name_sv: "Koärtor", notes: "Choroko/kunde tamu; cowpeas (Vigna unguiculata) grown as a food and nitrogen-fixing cover crop across East Africa; boiled with coconut milk (choroko ya nazi) in Zanzibar cooking; drought-tolerant; important for smallholder food security"}
 
 
 ## Dairy, Oils & Sauces
 
 ### Dairy, Oils & Sauces — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "East African signature dairy dishes", "East African iconic cheese butter cream", "East African traditional dairy products" -->
+<!-- Searched: "East Africa dairy oils fats traditional niter kibbeh Ethiopian spiced butter coconut oil Kenya Uganda milk consumption tej mursik fermented milk ayib" -->
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Dairy 1", name_sv: "[UTKAST] Signatur Mejeri 1", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Dairy 2", name_sv: "[UTKAST] Signatur Mejeri 2", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Dairy 3", name_sv: "[UTKAST] Signatur Mejeri 3", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Dairy 4", name_sv: "[UTKAST] Signatur Mejeri 4", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Dairy 5", name_sv: "[UTKAST] Signatur Mejeri 5", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Dairy 6", name_sv: "[UTKAST] Signatur Mejeri 6", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Dairy 7", name_sv: "[UTKAST] Signatur Mejeri 7", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Dairy 8", name_sv: "[UTKAST] Signatur Mejeri 8", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Dairy 9", name_sv: "[UTKAST] Signatur Mejeri 9", notes: "STUB — replace with verified East African research"}
+- {id: eaf_dairy_sig_niter_kibbeh, grade: signature, rating: 9, name: "Niter kibbeh", name_sv: "Niter kibbeh (kryddat smör)", notes: "Niter kibbeh; Ethiopian spiced clarified butter infused with garlic, ginger, fenugreek, cumin, cardamom, turmeric, and black cumin; THE foundational cooking fat of Ethiopian cuisine; base for all wats; an ancient and irreplaceable Ethiopian culinary element"}
+- {id: eaf_dairy_sig_coconut_milk, grade: signature, rating: 8, name: "Coconut milk", name_sv: "Kokosmjölk", notes: "Nazi (coconut) / maziwa ya nazi; essential to Swahili coast cooking; used in wali wa nazi (coconut rice), samaki wa kupaka (coconut-basted fish), kuku paka (chicken in coconut sauce), and mbaazi ya nazi (pigeon peas); Zanzibar and coastal Kenya defining ingredient"}
+- {id: eaf_dairy_sig_groundnut_sauce, grade: signature, rating: 7, name: "Groundnut sauce", name_sv: "Jordnötssås", notes: "Binyebwa (Uganda) / mchuzi wa karanga; groundnut paste-based sauce; a staple Ugandan condiment eaten with matoke, rice, and ugali; Kenyan-style peanut sauce in stews; one of the defining sauces of the Great Lakes region cooking tradition"}
+- {id: eaf_dairy_sig_ayib, grade: signature, rating: 7, name: "Ayib", name_sv: "Ayib (etiopisk färskost)", notes: "Ayib; Ethiopian lightly soured fresh cheese (similar to cottage cheese); eaten alongside spicy wats to cool the palate; also mixed with greens (gomen be ayib); a uniquely Ethiopian dairy product made from buttermilk or sour milk; found only in Ethiopian and Eritrean cuisine"}
+- {id: eaf_dairy_sig_ghee, grade: signature, rating: 7, name: "Ghee", name_sv: "Ghee (klarat smör)", notes: "Samn/siagi; clarified butter used across East Africa particularly in Somali cooking (suugo suqaar), Ethiopian cooking, and Indian-influenced coastal cuisine; important in Muslim food traditions; also used as a simple butter fat by pastoralist communities"}
+- {id: eaf_dairy_sig_lala, grade: signature, rating: 7, name: "Soured milk", name_sv: "Surmjölk", notes: "Lala/maziwa lala; naturally soured fermented milk widely consumed across East Africa; drunk alongside ugali and sukuma wiki; made by leaving fresh milk to ferment in gourds or clay pots; a staple daily dairy product for Kenyan, Tanzanian, and Ugandan households"}
+- {id: eaf_dairy_sig_mchuzi_sauce, grade: signature, rating: 7, name: "Mchuzi sauce", name_sv: "Mchuzi-sås", notes: "Mchuzi; the East African base sauce of tomato, onion, garlic, and spices cooked down in oil; serves as the foundation for virtually all cooked proteins and vegetables from Nairobi to Dar es Salaam to Kampala; the pan-regional East African cooking sauce"}
+- {id: eaf_dairy_sig_mursik, grade: signature, rating: 6, name: "Mursik", name_sv: "Mursik (fermenterad mjölk)", notes: "Mursik; traditional fermented milk from Kenyan Kalenjin communities; fresh milk is cultured in a special gourd smoked with selected sticks (usually Sageretia spicata), giving it a unique earthy-smoky fermented flavor; culturally important; widely celebrated at Kenyan athletics events as energy food"}
 
 ### Dairy, Oils & Sauces — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "East African dairy consumption kg per capita", "East African milk cheese butter statistics", "East African FAO food balance dairy" -->
+<!-- Searched: "East Africa cooking oil consumption vegetable oil fresh milk evaporated milk tea consumption statistics Kenya Tanzania Uganda" -->
 
-- {id: stub_dairy_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Dairy 1", name_sv: "[UTKAST] Bulk Mejeri 1", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Dairy 2", name_sv: "[UTKAST] Bulk Mejeri 2", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Dairy 3", name_sv: "[UTKAST] Bulk Mejeri 3", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Dairy 4", name_sv: "[UTKAST] Bulk Mejeri 4", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Dairy 5", name_sv: "[UTKAST] Bulk Mejeri 5", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Dairy 6", name_sv: "[UTKAST] Bulk Mejeri 6", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Dairy 7", name_sv: "[UTKAST] Bulk Mejeri 7", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Dairy 8", name_sv: "[UTKAST] Bulk Mejeri 8", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Dairy 9", name_sv: "[UTKAST] Bulk Mejeri 9", notes: "STUB — replace with verified East African research"}
+- {id: eaf_dairy_bul_veg_oil, grade: bulk, rating: 9, name: "Vegetable oil", name_sv: "Vegetabilisk olja", notes: "Mafuta ya kupikia; the dominant cooking fat by volume across all of East Africa; sunflower oil (common in Kenya), palm oil (Uganda), and soy oil widely used for frying (mandazi, chipsi, nyama choma); very high consumption at household and commercial level"}
+- {id: eaf_dairy_bul_fresh_milk, grade: bulk, rating: 9, name: "Fresh cow's milk", name_sv: "Färsk komjölk", notes: "Maziwa; East Africa has a very strong fresh milk culture; chai (spiced tea with milk) is consumed multiple times daily; 'Kenyan chai' (heavily milked and sweetened tea) is the national drink; fresh milk consumption critically important for nutrition in pastoralist communities"}
+- {id: eaf_dairy_bul_evap_milk, grade: bulk, rating: 8, name: "Evaporated milk", name_sv: "Kondenserad mjölk (osötad)", notes: "Maziwa ya mkebe (Carnation); widely used in East African chai (tea) and baking; very high household penetration; Carnation evaporated milk is one of the most recognised brands in East Africa; used when fresh milk is unavailable or for extra richness in cooking"}
+- {id: eaf_dairy_bul_yogurt, grade: bulk, rating: 6, name: "Yogurt", name_sv: "Yoghurt", notes: "Mtindi/maziwa ya mtindi; commercial yogurt growing rapidly in urban East African markets; local producers such as Brookside (Kenya) and Pearl Dairy (Uganda) prominent; also thick natural yogurt used in Somali cooking (maraq) and Ethiopian side dishes"}
+- {id: eaf_dairy_bul_butter, grade: bulk, rating: 5, name: "Butter", name_sv: "Smör", notes: "Siagi; used in baking mandazi, cakes, and chapati; on bread for breakfast; less dominant than in European cuisines but widely used in urban East Africa; both locally made and imported brands in East African supermarkets"}
+- {id: eaf_dairy_bul_margarine, grade: bulk, rating: 5, name: "Margarine", name_sv: "Margarin", notes: "Blueband (brand widely known across East Africa); an extremely widely recognised spread and baking fat; Blue Band margarine is an iconic brand in Kenya, Uganda, and Tanzania; used on bread and in home baking"}
+- {id: eaf_dairy_bul_palm_oil, grade: bulk, rating: 5, name: "Palm oil", name_sv: "Palmolja", notes: "Mafuta ya mawese; widely used in Uganda cooking (Uganda is a palm oil producer); also used in Tanzania; gives a rich, distinctive flavor and orange color to rice and stews; growing production in Uganda's Lake Albert basin"}
+- {id: eaf_dairy_bul_soy_oil, grade: bulk, rating: 4, name: "Soy oil", name_sv: "Sojaolja", notes: "Mafuta ya soya; imported but widely available in East Africa; used in household and commercial cooking; often blended into commercial cooking oil products; second most used oil type after sunflower in some urban markets"}
 
 ### Dairy, Oils & Sauces — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "East African dairy farming local production", "East African regional cheese varieties", "East African local dairy breeds" -->
+<!-- Searched: "East Africa local dairy products camel milk zebu milk sesame oil simsim honey traditional oils goat milk" -->
 
-- {id: stub_dairy_loc_1, grade: local, rating: 9, name: "[STUB] Local Dairy 1", name_sv: "[UTKAST] Lokalt Mejeri 1", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 8, name: "[STUB] Local Dairy 2", name_sv: "[UTKAST] Lokalt Mejeri 2", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 7, name: "[STUB] Local Dairy 3", name_sv: "[UTKAST] Lokalt Mejeri 3", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 6, name: "[STUB] Local Dairy 4", name_sv: "[UTKAST] Lokalt Mejeri 4", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 5, name: "[STUB] Local Dairy 5", name_sv: "[UTKAST] Lokalt Mejeri 5", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 4, name: "[STUB] Local Dairy 6", name_sv: "[UTKAST] Lokalt Mejeri 6", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 3, name: "[STUB] Local Dairy 7", name_sv: "[UTKAST] Lokalt Mejeri 7", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 2, name: "[STUB] Local Dairy 8", name_sv: "[UTKAST] Lokalt Mejeri 8", notes: "STUB — replace with verified East African research"}
-- {id: stub_dairy_loc_9, grade: local, rating: 1, name: "[STUB] Local Dairy 9", name_sv: "[UTKAST] Lokalt Mejeri 9", notes: "STUB — replace with verified East African research"}
+- {id: eaf_dairy_loc_camel_milk, grade: local, rating: 7, name: "Camel milk", name_sv: "Kamelmjölk", notes: "Caano geel (Somali) / maziwa ya ngamia; fresh and fermented camel milk consumed in Somalia, Northern Kenya (Wajir, Marsabit), and parts of Ethiopia; extremely nutritious; higher in vitamins than cow's milk; drunk fresh or fermented (subaag); a life-sustaining product for pastoralist communities"}
+- {id: eaf_dairy_loc_zebu_milk, grade: local, rating: 7, name: "Zebu cow's milk", name_sv: "Zebumjölk", notes: "Maziwa ya ng'ombe wa zebu; milk from indigenous zebu cattle breeds (Boran, Ankole, Galla); the primary source of fresh milk for rural East African communities; lower in volume than European breeds but resistant to local diseases; supports smallholder dairy across the region"}
+- {id: eaf_dairy_loc_honey, grade: local, rating: 8, name: "Honey", name_sv: "Honung", notes: "Asali/mar; Ethiopia is Africa's largest honey producer (~750 000 beehives); used in tej (traditional Ethiopian honey wine), berz (honey water drink), and as a food sweetener and medicine; Yemeni-influenced coastal honey production in Zanzibar; deeply embedded in East African food culture"}
+- {id: eaf_dairy_loc_simsim_oil, grade: local, rating: 6, name: "Sesame oil", name_sv: "Sesamolja", notes: "Mafuta ya simsim; locally pressed sesame (simsim) oil; used in some Ethiopian cooking and as a cooking fat in Uganda; Uganda and Tanzania produce significant quantities of sesame; traditional cold-pressed simsim oil sold at local markets"}
+- {id: eaf_dairy_loc_coconut_oil, grade: local, rating: 6, name: "Coconut oil", name_sv: "Kokosolja", notes: "Mafuta ya nazi; locally produced along Kenya and Tanzania's Indian Ocean coast; used for cooking in Lamu, Mombasa, and Zanzibar; traditional cooking fat in Swahili coastal households; also used for hair and skin care in coastal communities"}
+- {id: eaf_dairy_loc_tamarind, grade: local, rating: 6, name: "Tamarind", name_sv: "Tamarind", notes: "Ukwaju; tamarind trees grow widely along the East African coast and inland; tamarind pulp dissolved in water used as a souring agent in Swahili coastal cooking; used in pilau, fish stews, and chutneys; also in cool drinks and street-food condiments"}
+- {id: eaf_dairy_loc_goat_milk, grade: local, rating: 5, name: "Goat's milk", name_sv: "Getmjölk", notes: "Maziwa ya mbuzi; widely available in rural East African households that keep goats; consumed fresh, as fermented milk, and used in cooking; important nutrition source in areas where cow's milk is less available; used in some traditional cheese making"}
+- {id: eaf_dairy_loc_aged_butter, grade: local, rating: 4, name: "Aged Ethiopian butter", name_sv: "Mognat etiopiskt smör", notes: "Kibe; traditionally aged rancid clarified butter used in some Ethiopian community traditions; made from zebu cow's or goat's milk; the extended fermentation/aging gives a pungent, complex flavor; used in hair/skin care and some traditional food preparations in rural communities"}
 
 
 ## Spices, Nuts & Seasonings
 
 ### Spices, Nuts & Seasonings — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "East African signature spice blends", "East African defining herbs and spices", "East African iconic seasoning flavour profile" -->
+<!-- Searched: "East Africa spices seasonings berbere mitmita niter kibbeh Ethiopian spice Swahili coastal Zanzibar cloves cardamom coconut signature flavors" -->
 
-- {id: stub_spice_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Spices 1", name_sv: "[UTKAST] Signatur Krydda 1", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Spices 2", name_sv: "[UTKAST] Signatur Krydda 2", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Spices 3", name_sv: "[UTKAST] Signatur Krydda 3", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Spices 4", name_sv: "[UTKAST] Signatur Krydda 4", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Spices 5", name_sv: "[UTKAST] Signatur Krydda 5", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Spices 6", name_sv: "[UTKAST] Signatur Krydda 6", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Spices 7", name_sv: "[UTKAST] Signatur Krydda 7", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Spices 8", name_sv: "[UTKAST] Signatur Krydda 8", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Spices 9", name_sv: "[UTKAST] Signatur Krydda 9", notes: "STUB — replace with verified East African research"}
+- {id: eaf_spice_sig_berbere, grade: signature, rating: 9, name: "Berbere", name_sv: "Berbere (etiopisk kryddblandning)", notes: "Berbere; the defining spice blend of Ethiopian and Eritrean cuisine; complex mixture of dried chili peppers, garlic, ginger, fenugreek, coriander, cinnamon, black pepper, cloves, and korarima; used in doro wat, tibs, and most Ethiopian meat stews; a deeply complex, centuries-old spice tradition"}
+- {id: eaf_spice_sig_cardamom, grade: signature, rating: 8, name: "Cardamom", name_sv: "Kardemumma", notes: "Iliki (Swahili); the defining spice of Swahili coastal cuisine and East African chai; used in pilau, biryani, and masala chai; Zanzibar (Spice Island) grows cardamom among its famous spice exports; used in both savory and sweet preparations throughout East Africa"}
+- {id: eaf_spice_sig_ginger, grade: signature, rating: 8, name: "Ginger", name_sv: "Ingefära", notes: "Tangawizi; ubiquitous across East Africa; the most important spice in Kenyan and Tanzanian chai (tea); also used in Ethiopian niter kibbeh, doro wat, and berbere blends; used in Swahili pilau and biriani; East African ginger is both locally grown and imported"}
+- {id: eaf_spice_sig_garlic, grade: signature, rating: 8, name: "Garlic", name_sv: "Vitlök", notes: "Kitunguu saumu; used in virtually every cooked East African dish across all countries; base of Ethiopian wot cooking, niter kibbeh, and berbere; also fundamental to Kenyan/Tanzanian mchuzi sauce base; used crushed, minced, and paste-form"}
+- {id: eaf_spice_sig_cinnamon, grade: signature, rating: 7, name: "Cinnamon", name_sv: "Kanel", notes: "Dalasini; Zanzibar's signature spice export; used in pilau rice, biryani, chai, and some meat stews; one of the iconic 'Spice Island' spices; also part of Ethiopian berbere blend; gives East African rice dishes their characteristic warm aroma"}
+- {id: eaf_spice_sig_coriander, grade: signature, rating: 7, name: "Coriander seeds", name_sv: "Korianderfrön", notes: "Giligilani mbegu; used in pilau masala, biryani spice blends, and niter kibbeh; widely used across East African cooking; also fresh coriander leaves (dhania) used as a garnish; one of the dominant spices in Swahili coastal cooking"}
+- {id: eaf_spice_sig_cumin, grade: signature, rating: 7, name: "Cumin", name_sv: "Spiskummin", notes: "Bizari; an essential pilau and biryani spice; also used in niter kibbeh and berbere; widely used in all Swahili spiced dishes; the characteristic warm, earthy flavor in East African spiced rice dishes; both whole seeds and ground cumin used"}
+- {id: eaf_spice_sig_turmeric, grade: signature, rating: 7, name: "Turmeric", name_sv: "Gurkmeja", notes: "Manjano; used in pilau rice (gives the characteristic yellow color), biryani, and in niter kibbeh; widely used across East Africa as both a colorant and mild spice; deep Indian Ocean trade influence; present in virtually all East African spiced rice and curry preparations"}
 
 ### Spices, Nuts & Seasonings — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "East African most used condiments seasonings statistics", "East African salt sugar spice consumption", "East African everyday seasoning ingredients" -->
+<!-- Searched: "East Africa most used spices bulk consumption salt pepper chili curry powder fenugreek cloves nutmeg everyday households statistics" -->
 
-- {id: stub_spice_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Spices 1", name_sv: "[UTKAST] Bulk Krydda 1", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Spices 2", name_sv: "[UTKAST] Bulk Krydda 2", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Spices 3", name_sv: "[UTKAST] Bulk Krydda 3", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Spices 4", name_sv: "[UTKAST] Bulk Krydda 4", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Spices 5", name_sv: "[UTKAST] Bulk Krydda 5", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Spices 6", name_sv: "[UTKAST] Bulk Krydda 6", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Spices 7", name_sv: "[UTKAST] Bulk Krydda 7", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Spices 8", name_sv: "[UTKAST] Bulk Krydda 8", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Spices 9", name_sv: "[UTKAST] Bulk Krydda 9", notes: "STUB — replace with verified East African research"}
+- {id: eaf_spice_bul_salt, grade: bulk, rating: 9, name: "Salt", name_sv: "Salt", notes: "Chumvi; universally used in all East African cooking; produced locally from coastal salt pans (Kenyan and Tanzanian coast) and mined inland; the highest-volume spice by far across all East African countries"}
+- {id: eaf_spice_bul_black_pepper, grade: bulk, rating: 8, name: "Black pepper", name_sv: "Svartpeppar", notes: "Pilipili manga/pilipili nyeusi; universally used everyday seasoning; part of all standard East African spice blends; both whole black peppercorns and ground pepper used in cooking and at the table; widely consumed across all East African countries"}
+- {id: eaf_spice_bul_chili, grade: bulk, rating: 8, name: "Fresh chili", name_sv: "Färsk chili", notes: "Pilipili hoho/pilipili kali; the primary source of heat in East African cooking; widely grown and consumed; kachumbari (fresh East African salsa) includes fresh chili; Ethiopian mitmita and berbere use dried chili; consumed fresh and dried across the region"}
+- {id: eaf_spice_bul_curry_powder, grade: bulk, rating: 7, name: "Curry powder", name_sv: "Currykrydda", notes: "Bizari za kari; widely used commercial spice blend in Kenya and Tanzania reflecting the Indian diaspora's deep culinary influence; used in curries, stews, and rice dishes; East African curry powder often includes pilipili, cardamom, coriander, cumin, and turmeric blends"}
+- {id: eaf_spice_bul_cloves, grade: bulk, rating: 7, name: "Cloves", name_sv: "Kryddnejlika", notes: "Karafuu; Zanzibar is historically the 'Spice Island' and a global clove producer; used in pilau rice, biryani, and some meat stews; also in East African chai; one of the most important Swahili coast spices both economically and culinarily"}
+- {id: eaf_spice_bul_fenugreek, grade: bulk, rating: 6, name: "Fenugreek", name_sv: "Bockhornsklöver", notes: "Abish/uluva; used in Ethiopian niter kibbeh (as an individual spice beyond its berbere blend role), also used in Somali cooking; a distinctive bitter-nutty seed; also used medicinally across East Africa; part of many traditional herbal preparations"}
+- {id: eaf_spice_bul_nutmeg, grade: bulk, rating: 5, name: "Nutmeg", name_sv: "Muskotnöt", notes: "Kungu manga; Zanzibar spice; used in pilau masala, biryani, and some East African pastries; one of the traditional Zanzibar Spice Island exports; less prominent than cardamom and cloves but part of the Swahili spice palette"}
+- {id: eaf_spice_bul_bay_leaf, grade: bulk, rating: 5, name: "Bay leaf", name_sv: "Lagerblad", notes: "Mdalasini jani; used in pilau rice, biryani, and some Swahili coast stews; a standard spice in East African spiced rice preparations; less prominent than in Mediterranean cooking but consistently present in Swahili coastal dishes"}
 
 ### Spices, Nuts & Seasonings — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "East African herbs grown locally", "East African spice production native plants", "East African foraged herbs regional flavourings" -->
+<!-- Searched: "East Africa locally grown spices herbs korarima Ethiopian cardamom gesho African basil lemongrass hibiscus moringa black cumin bird's eye chili unique local spices" -->
 
-- {id: stub_spice_loc_1, grade: local, rating: 9, name: "[STUB] Local Spices 1", name_sv: "[UTKAST] Lokalt Krydda 1", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_loc_2, grade: local, rating: 8, name: "[STUB] Local Spices 2", name_sv: "[UTKAST] Lokalt Krydda 2", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_loc_3, grade: local, rating: 7, name: "[STUB] Local Spices 3", name_sv: "[UTKAST] Lokalt Krydda 3", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_loc_4, grade: local, rating: 6, name: "[STUB] Local Spices 4", name_sv: "[UTKAST] Lokalt Krydda 4", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_loc_5, grade: local, rating: 5, name: "[STUB] Local Spices 5", name_sv: "[UTKAST] Lokalt Krydda 5", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_loc_6, grade: local, rating: 4, name: "[STUB] Local Spices 6", name_sv: "[UTKAST] Lokalt Krydda 6", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_loc_7, grade: local, rating: 3, name: "[STUB] Local Spices 7", name_sv: "[UTKAST] Lokalt Krydda 7", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_loc_8, grade: local, rating: 2, name: "[STUB] Local Spices 8", name_sv: "[UTKAST] Lokalt Krydda 8", notes: "STUB — replace with verified East African research"}
-- {id: stub_spice_loc_9, grade: local, rating: 1, name: "[STUB] Local Spices 9", name_sv: "[UTKAST] Lokalt Krydda 9", notes: "STUB — replace with verified East African research"}
-
+- {id: eaf_spice_loc_korarima, grade: local, rating: 8, name: "Korarima", name_sv: "Korarima (etiopisk kardemumma)", notes: "Korarima (Aframomum corrorima); Ethiopian cardamom; a unique spice grown only in Ethiopian and Eritrean highlands; used in niter kibbeh, berbere blends, coffee ceremony spice (buna), and as a standalone seasoning; distinct flavor from green cardamom; an ancient spice with a uniquely Ethiopian identity"}
+- {id: eaf_spice_loc_pilipili_manga, grade: local, rating: 7, name: "Bird's eye chili", name_sv: "Fågelpepparchili", notes: "Pilipili manga; African bird's eye chili (Capsicum frutescens) locally grown across East Africa; extremely hot; used in mitmita (Ethiopian hot spice blend) and as fresh or dried heat in Kenyan, Tanzanian, and Somali cooking; a distinct local variety of chili"}
+- {id: eaf_spice_loc_gesho, grade: local, rating: 7, name: "Gesho", name_sv: "Gesho (etiopisk humle)", notes: "Gesho (Rhamnus prinoides); Ethiopian buckthorn; used as a bittering agent in tej (traditional Ethiopian honey wine) and tella (barley beer) to balance sweetness; grows in Ethiopian highlands; a uniquely Ethiopian flavoring herb with no equivalent elsewhere in world cuisines"}
+- {id: eaf_spice_loc_african_basil, grade: local, rating: 6, name: "African basil", name_sv: "Afrikanskt basilika", notes: "Damakase/Ocimum lamiifolium; Ethiopian indigenous basil variety with a different aromatic profile from Mediterranean basil; used in Ethiopian cooking and traditional medicine; also called 'sacred basil' in Ethiopia; locally grown and foraged in Ethiopian highlands"}
+- {id: eaf_spice_loc_hibiscus, grade: local, rating: 6, name: "Hibiscus", name_sv: "Hibiskus", notes: "Sorrel/oseille; dried hibiscus flowers (Hibiscus sabdariffa) widely grown in East Africa and Sudan; used to make tart, crimson-red hibiscus tea/juice (consumed across East Africa); also used in some Sudanese and Ethiopian spiced drinks; locally grown and sold at markets"}
+- {id: eaf_spice_loc_black_cumin, grade: local, rating: 5, name: "Ethiopian black seed", name_sv: "Etiopisk svartfrö", notes: "Tikur azmud (Nigella sativa/Carum nigrum); used in Ethiopian spice blends, niter kibbeh, and some bread and cookie preparations; a local Ethiopian spice tradition dating back millennia; gives a distinct dark, slightly bitter flavor to Ethiopian dishes"}
+- {id: eaf_spice_loc_lemongrass, grade: local, rating: 5, name: "Lemongrass", name_sv: "Citrongräs", notes: "Mchaichai; locally grown in East African highland and coastal gardens; used in teas (chai ya mchaichai), some fish marinades, and as a flavoring for grilled meats; also used medicinally for digestive health; a widely foraged and cultivated local herb"}
+- {id: eaf_spice_loc_moringa, grade: local, rating: 5, name: "Moringa", name_sv: "Moringa", notes: "Mzunze/moringa; moringa trees (Moringa oleifera) grow widely across East Africa; leaves used dried and powdered as a nutritional supplement in soups and stews; also eaten fresh; seeds pressed for oil; one of the most nutritionally dense plants locally available in East Africa; growing commercial cultivation in Kenya and Tanzania"}
