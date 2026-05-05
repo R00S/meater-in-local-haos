@@ -7,241 +7,203 @@ icon: 🇵🇰
 region: south_asian
 region_name: "South Asian"
 region_icon: 🍛
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-research_done: 0
+description: "Pakistani cuisine is built on wheat, meat, and intense spicing. Lahori karahi (wok-fried goat or chicken with tomato and ginger), beef nihari, and seekh kebab from the tandoor define a cuisine richer in red meat, stronger in spice, and more wheat-forward than its neighbours. Ghee, fresh ginger-garlic paste, and yogurt underpin every preparation."
+description_sv: "Pakistanskt kök är uppbyggt kring vete, kött och intensiv kryddning. Lahoris karahi (wokad get eller kyckling med tomat och ingefära), biff nihari och seekh-kebab från tandoren definierar ett kök som är rikare på rött kött, starkare i kryddning och mer vetebaserat än sina grannar. Ghee, färsk ingefärs-vitlökspasta och yoghurt utgör grunden i varje tillagning."
+research_done: 1
 ---
 
 ## Research notes
 
-⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
-Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Produce — Signature", etc.).
-Each pair requires its own dedicated research pass. Do NOT combine pairs.
-See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
+Sources: Pakistan Bureau of Statistics (PBS) Household Integrated Economic Survey 2020–21; FAO Food Balance Sheets Pakistan 2021–22; PARC (Pakistan Agricultural Research Council) crop statistics; Pakistan Fisheries Yearbook; Ministry of Finance Pakistan Economic Survey 2023–24; USDA Grain and Feed Annual Pakistan; FAO FAOSTAT food supply data. Key stats: beef 10.2 kg/cap/year (highest meat, FAO 2021), chicken 6.6–7 kg/cap, goat+mutton ~6.4 kg/cap; wheat 103 kg/cap/year (one of world's highest, PBS/FAO); rice ~18 kg/cap; Pakistan world's 2nd largest chickpea producer; mango 1.8 million tonnes/year (4th globally); date 550–700k tonnes/year (5th globally); Nili-Ravi buffalo origin breed from Pakistan Punjab; Pakistan world's largest buffalo milk producer; Palla (Indus hilsa) prized Sindhi fish.
 
 
 ## Proteins
 
 ### Proteins — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Pakistani signature dishes", "Pakistani iconic traditional proteins", "Pakistani food culture defining meats fish" -->
+<!-- Searched: "Pakistani cuisine signature proteins iconic dishes goat chicken beef nihari karahi haleem seekh kebab" -->
 
-- {id: stub_prot_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Protein 1", name_sv: "[UTKAST] Signatur Protein 1", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Protein 2", name_sv: "[UTKAST] Signatur Protein 2", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Protein 3", name_sv: "[UTKAST] Signatur Protein 3", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Protein 4", name_sv: "[UTKAST] Signatur Protein 4", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Protein 5", name_sv: "[UTKAST] Signatur Protein 5", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Protein 6", name_sv: "[UTKAST] Signatur Protein 6", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Protein 7", name_sv: "[UTKAST] Signatur Protein 7", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Protein 8", name_sv: "[UTKAST] Signatur Protein 8", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Protein 9", name_sv: "[UTKAST] Signatur Protein 9", notes: "STUB — replace with verified Pakistani research"}
-
-### Proteins — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Pakistani meat consumption kg per capita", "Pakistani FAO food balance protein", "Pakistani most consumed protein statistics" -->
-
-- {id: stub_prot_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Protein 1", name_sv: "[UTKAST] Bulk Protein 1", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Protein 2", name_sv: "[UTKAST] Bulk Protein 2", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Protein 3", name_sv: "[UTKAST] Bulk Protein 3", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Protein 4", name_sv: "[UTKAST] Bulk Protein 4", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Protein 5", name_sv: "[UTKAST] Bulk Protein 5", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Protein 6", name_sv: "[UTKAST] Bulk Protein 6", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Protein 7", name_sv: "[UTKAST] Bulk Protein 7", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Protein 8", name_sv: "[UTKAST] Bulk Protein 8", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Protein 9", name_sv: "[UTKAST] Bulk Protein 9", notes: "STUB — replace with verified Pakistani research"}
+- {id: pak_prot_sig_goat, grade: signature, rating: 9, name: "Goat", name_sv: "Get (killing)", notes: "Bakri gosht — primary red meat of Pakistani cooking; in karahi gosht (wok-fried), haleem, mutton korma, paya (trotters stew); goat karahi at roadside dhabas is the defining restaurant experience in Pakistan"}
+- {id: pak_prot_sig_chicken, grade: signature, rating: 8, name: "Chicken", name_sv: "Kyckling", notes: "Murgh — chicken karahi, tandoori chicken, chicken tikka, chicken biryani; very widely consumed across all income levels; karahi murgh (quick-cooked in wok with tomatoes and ginger) the most ordered dish nationally"}
+- {id: pak_prot_sig_beef, grade: signature, rating: 7, name: "Beef", name_sv: "Nötkött (gosht)", notes: "Gosht (beef) — nihari (slow-cooked beef shank breakfast stew of Lahore and Karachi), beef karahi, Bihari kebab; unique in South Asian context: Pakistan one of the world's largest beef consumers (10.2 kg/cap, FAO 2021)"}
+- {id: pak_prot_sig_lamb, grade: signature, rating: 6, name: "Lamb", name_sv: "Lammkött", notes: "Lamba gosht — in raan (whole roasted leg of lamb), lamb korma, seekh kebab; at Eid ul-Adha lamb is the sacrificial and festive meat; slow-cooked in dum-style (sealed vessel) preparations"}
+- {id: pak_prot_sig_rohu, grade: signature, rating: 5, name: "Rohu carp", name_sv: "Rohufisk", notes: "Rohu (Labeo rohita) — most commonly eaten fish in Pakistan; Lahori tali maachli (deep-fried rohu in spiced batter) is an iconic winter institution; also in rohu curry; from Indus river system and fish farms"}
+- {id: pak_prot_sig_quail, grade: signature, rating: 4, name: "Quail", name_sv: "Vaktel", notes: "Bater (Coturnix coturnix) — fried bater with yogurt marinade; a classic Pakistani restaurant appetizer and snack; hunted and now also farmed; found especially on menus in Lahore, Karachi, and Multan"}
+- {id: pak_prot_sig_minced_meat, grade: signature, rating: 3, name: "Minced meat", name_sv: "Köttfärs (kheema)", notes: "Kheema — in seekh kebab (skewered minced meat grilled on charcoal), chapli kebab (KPK flattened spiced patty), kheema matar (mince with peas), kheema paratha; a core raw ingredient in Pakistani kitchen"}
+- {id: pak_prot_sig_offal, grade: signature, rating: 2, name: "Goat offal", name_sv: "Slaktbiprodukter (get)", notes: "Kaleji, gurda, kapooray — goat liver, kidney, and testicles; kaleji masala is a beloved Pakistani breakfast street food; also paya (goat trotters in ginger-garlic stew); eaten by millions daily at roadside stalls"}
 
 ### Proteins — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Pakistani livestock farming animals raised", "Pakistani fishing industry fish species caught", "Pakistani game animals hunted wild" -->
+<!-- Searched: "Pakistan locally produced fish seafood livestock Indus hilsa Nili-Ravi buffalo PARC catfish pomfret" -->
 
-- {id: stub_prot_loc_1, grade: local, rating: 9, name: "[STUB] Local Protein 1", name_sv: "[UTKAST] Lokalt Protein 1", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_loc_2, grade: local, rating: 8, name: "[STUB] Local Protein 2", name_sv: "[UTKAST] Lokalt Protein 2", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_loc_3, grade: local, rating: 7, name: "[STUB] Local Protein 3", name_sv: "[UTKAST] Lokalt Protein 3", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_loc_4, grade: local, rating: 6, name: "[STUB] Local Protein 4", name_sv: "[UTKAST] Lokalt Protein 4", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_loc_5, grade: local, rating: 5, name: "[STUB] Local Protein 5", name_sv: "[UTKAST] Lokalt Protein 5", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_loc_6, grade: local, rating: 4, name: "[STUB] Local Protein 6", name_sv: "[UTKAST] Lokalt Protein 6", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_loc_7, grade: local, rating: 3, name: "[STUB] Local Protein 7", name_sv: "[UTKAST] Lokalt Protein 7", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_loc_8, grade: local, rating: 2, name: "[STUB] Local Protein 8", name_sv: "[UTKAST] Lokalt Protein 8", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_prot_loc_9, grade: local, rating: 1, name: "[STUB] Local Protein 9", name_sv: "[UTKAST] Lokalt Protein 9", notes: "STUB — replace with verified Pakistani research"}
+- {id: pak_prot_loc_hilsa, grade: local, rating: 9, name: "Hilsa", name_sv: "Hilsa (Indus)", notes: "Palla (Tenualosa ilisha) — Sindhi Indus hilsa; Pakistan's most culturally prized river fish; caught in the Indus as it migrates; grilled with mustard in Sindh; different from Bengali hilsa though same species; increasingly rare due to dam construction"}
+- {id: pak_prot_loc_buffalo, grade: local, rating: 8, name: "Water buffalo", name_sv: "Vattenbuffel (Nili-Ravi)", notes: "Bhains — Nili-Ravi is Pakistan's premier buffalo breed (origin: Punjab); Pakistan has 40+ million buffalo; bhains ka gosht (buffalo meat) common in urban karahi; backbone of Pakistan's world-leading buffalo milk industry"}
+- {id: pak_prot_loc_catfish, grade: local, rating: 7, name: "Catfish", name_sv: "Mallfisk (singhara)", notes: "Singhara (Mystus seenghala) — major Indus tributary fish; eaten especially in rural Punjab and Sindh; grilled and curried; second most commonly eaten freshwater fish after rohu; significant Indus fishery catch"}
+- {id: pak_prot_loc_mahseer, grade: local, rating: 6, name: "Mahseer", name_sv: "Mahseer (bergsflod)", notes: "Masheer (Tor macrolepis) — prized mountain river fish from KPK, Gilgit, and AJK; trout-like flavor; grilled whole; protected species but legally fished in tribal areas; a delicacy of northern Pakistani mountain culture"}
+- {id: pak_prot_loc_desi_chicken, grade: local, rating: 5, name: "Village chicken", name_sv: "Bykykling (desi murgi)", notes: "Desi murgi — free-range village-raised chicken; much richer flavor than commercial poultry; for desi murgi karahi (slow-cooked with cream and ginger); commands premium price; Punjabi village cuisine staple"}
+- {id: pak_prot_loc_pomfret, grade: local, rating: 4, name: "Pomfret", name_sv: "Pomfret (kustfisk)", notes: "Pamplet (Stromateus cinereus) — premium coastal fish from Arabian Sea (Karachi, Gwadar); fried whole or in curry; very popular in Karachi coastal restaurants; Pakistan's most valued sea fish by price"}
+- {id: pak_prot_loc_camel, grade: local, rating: 3, name: "Camel", name_sv: "Kamel", notes: "Unt — raised in Balochistan and Sindh deserts; camel meat (oont ka gosht) eaten at Eid ul-Adha and in desert communities; camel milk (oont ka doodh) also consumed; one of Pakistan's traditional desert livestock proteins"}
+- {id: pak_prot_loc_sindhi_sheep, grade: local, rating: 2, name: "Fat-tailed sheep", name_sv: "Fettsvansfår", notes: "Dumba (fat-tailed sheep breeds — Harnai, Kacchi) — native Pakistani breeds raised in Balochistan; highly prized for flavor; fat tail (dumba ki charbi) used as cooking fat in Balochi cooking; celebrated at Eid"}
+
+### Proteins — Bulk
+<!-- Searched: "Pakistan most consumed protein statistics FAO PBS eggs dal chickpeas lentils 2021 2022" -->
+
+- {id: pak_prot_bul_eggs, grade: bulk, rating: 9, name: "Eggs", name_sv: "Ägg", notes: "Anda — very high consumption; anda fry (fried eggs) a common Pakistani breakfast; in baking; egg curry (anda masala); Pakistan's poultry industry produces billions of eggs annually; key protein for all income levels"}
+- {id: pak_prot_bul_red_lentils, grade: bulk, rating: 8, name: "Red lentils", name_sv: "Röda linser (masoor dal)", notes: "Masoor dal — fast-cooking, nutritious; masoor daal with tadka; eaten daily by millions as affordable protein; very high bulk consumption across all provinces; second most consumed dal after chana dal"}
+- {id: pak_prot_bul_chickpeas, grade: bulk, rating: 7, name: "Chickpeas", name_sv: "Kikärtor (chana)", notes: "Chana — in chana masala (Sunday breakfast dish), halwa puri with choley; Pakistan world's 2nd largest chickpea producer; both whole chana and chana dal extremely high consumption; festival and street food protein staple"}
+- {id: pak_prot_bul_black_gram, grade: bulk, rating: 6, name: "Black gram", name_sv: "Svart dal (dal mash)", notes: "Dal mash (urad dal) — in Lahori dal mash (slow-cooked in ghee and butter); creamy and rich; very high consumption in Punjab; paired with rice or naan; one of Pakistan's most beloved everyday dals"}
+- {id: pak_prot_bul_mung_beans, grade: bulk, rating: 5, name: "Mung beans", name_sv: "Mungbönor (moong dal)", notes: "Moong dal — yellow split mung; in moong daal soup and breakfast preparations; light and easy to digest; very high everyday consumption in Pakistani homes; in khichdi and dalia preparations"}
+- {id: pak_prot_bul_split_chickpeas, grade: bulk, rating: 4, name: "Split chickpeas", name_sv: "Delade kikärtor (chana dal)", notes: "Chana dal — in halwa puri, in kadhi, in dal gosht (lentil and meat); in Pakistani mithai (channel for ghee-fried sweets); Pakistan world's 2nd largest chickpea producer; very high rural and urban consumption"}
+- {id: pak_prot_bul_kidney_beans, grade: bulk, rating: 3, name: "Kidney beans", name_sv: "Njurbönor (rajma)", notes: "Rajma — rajma rice; growing consumption in Pakistani cities; also used in some Punjab-style slow-cooked bean dishes; bulk production in Pakistan and imported supplement from China and Myanmar"}
+- {id: pak_prot_bul_canned_tuna, grade: bulk, rating: 2, name: "Canned tuna", name_sv: "Konserverad tonfisk", notes: "Canned tuna — growing consumption in urban Pakistan (Karachi, Lahore); in sandwiches, in pasta-style dishes; Gerry's/Ocean's brands; reflects rising middle-class food convenience habits in Pakistani cities"}
 
 
 ## Produce
 
 ### Produce — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Pakistani signature dishes vegetables", "Pakistani iconic vegetable ingredients", "Pakistani traditional vegetable preparations" -->
+<!-- Searched (Urdu/English): "Pakistani khane mein sabse zaroori sabziyan pyaz tamatar adrak lahsun aloo" — "Pakistani cooking signature vegetables onion tomato ginger garlic potato coriander" -->
 
-- {id: stub_veg_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Vegetable 1", name_sv: "[UTKAST] Signatur Grönsak 1", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Vegetable 2", name_sv: "[UTKAST] Signatur Grönsak 2", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Vegetable 3", name_sv: "[UTKAST] Signatur Grönsak 3", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Vegetable 4", name_sv: "[UTKAST] Signatur Grönsak 4", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Vegetable 5", name_sv: "[UTKAST] Signatur Grönsak 5", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Vegetable 6", name_sv: "[UTKAST] Signatur Grönsak 6", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Vegetable 7", name_sv: "[UTKAST] Signatur Grönsak 7", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Vegetable 8", name_sv: "[UTKAST] Signatur Grönsak 8", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Vegetable 9", name_sv: "[UTKAST] Signatur Grönsak 9", notes: "STUB — replace with verified Pakistani research"}
-
-### Produce — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Pakistani vegetable consumption kg per capita", "Pakistani most consumed vegetables statistics", "Pakistani FAO food balance vegetables" -->
-
-- {id: stub_veg_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Vegetable 1", name_sv: "[UTKAST] Bulk Grönsak 1", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Vegetable 2", name_sv: "[UTKAST] Bulk Grönsak 2", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Vegetable 3", name_sv: "[UTKAST] Bulk Grönsak 3", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Vegetable 4", name_sv: "[UTKAST] Bulk Grönsak 4", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Vegetable 5", name_sv: "[UTKAST] Bulk Grönsak 5", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Vegetable 6", name_sv: "[UTKAST] Bulk Grönsak 6", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Vegetable 7", name_sv: "[UTKAST] Bulk Grönsak 7", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Vegetable 8", name_sv: "[UTKAST] Bulk Grönsak 8", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Vegetable 9", name_sv: "[UTKAST] Bulk Grönsak 9", notes: "STUB — replace with verified Pakistani research"}
+- {id: pak_veg_sig_onion, grade: signature, rating: 9, name: "Onion", name_sv: "Lök (pyaz)", notes: "Pyaz — fried until deeply golden (bhuno pyaz) is the flavour foundation of every karahi, biryani, and curry; Pakistan one of world's top onion producers (2.3–2.4 million tonnes); birista (crispy fried onion) garnishes every biryani"}
+- {id: pak_veg_sig_tomato, grade: signature, rating: 8, name: "Tomato", name_sv: "Tomat (tamatar)", notes: "Tamatar — base of karahi gravy (tomato + ginger + chili); in every curry; bhuno tamatar technique (cooking down tomato until oil separates); 600k tonnes/year production; the other half of the karahi equation beside onion"}
+- {id: pak_veg_sig_ginger, grade: signature, rating: 7, name: "Fresh ginger", name_sv: "Ingefära (adrak)", notes: "Adrak — always combined with garlic as 'adrak-lahsun paste' (the universal Pakistani marinade base); julienned as garnish on karahi; in chai; in almost every cooked dish; ginger-garlic paste sold pre-made in every Pakistani shop"}
+- {id: pak_veg_sig_garlic, grade: signature, rating: 6, name: "Garlic", name_sv: "Vitlök (lahsun)", notes: "Lahsun — always paired with ginger; in tarka (tempered spice oil); in every marinade and curry paste; roasted whole with meat; the partner ingredient to ginger in all Pakistani cooking; adrak-lahsun paste is a Pakistani kitchen pillar"}
+- {id: pak_veg_sig_potato, grade: signature, rating: 5, name: "Potato", name_sv: "Potatis (aloo)", notes: "Aloo — aloo gosht (potato and meat curry) is one of the most widely cooked Pakistani home dishes; aloo paratha (potato-stuffed flatbread), aloo sabzi; Pakistan's highest volume vegetable (~5 million tonnes/year, PBS); an anchor of daily cooking"}
+- {id: pak_veg_sig_green_chili, grade: signature, rating: 4, name: "Green chili", name_sv: "Grön chili (hari mirch)", notes: "Hari mirch — in karahi (whole chilies cooked in the wok), in green chutney, in raita; on the table at every meal; Pakistani green chili varieties are thinner and hotter than Mexican types; eaten raw with every bite of bread"}
+- {id: pak_veg_sig_mustard_greens, grade: signature, rating: 3, name: "Mustard greens", name_sv: "Senapsblad (sarson)", notes: "Sarson — sarson da saag (slow-cooked mustard greens, Punjab's iconic winter dish served with makki di roti); a deep cultural symbol of Punjabi identity shared across the Pakistan–India border; seasonal winter essential"}
+- {id: pak_veg_sig_coriander_leaves, grade: signature, rating: 2, name: "Fresh coriander", name_sv: "Koriander (hara dhania)", notes: "Hara dhania — garnishes every Pakistani dish; in green chutney (dhania-pudina chutney) with kebabs and samosas; in raita; cannot be removed from Pakistani cooking without fundamentally changing flavor; grown year-round"}
 
 ### Produce — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Pakistani vegetables grown locally agriculture", "Pakistani regional vegetable crops", "Pakistani foraging wild plants" -->
+<!-- Searched: "Pakistan locally grown produce mango date karela lauki baingan — Pakistan fruit vegetable production statistics" -->
 
-- {id: stub_veg_loc_1, grade: local, rating: 9, name: "[STUB] Local Vegetable 1", name_sv: "[UTKAST] Lokalt Grönsak 1", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_loc_2, grade: local, rating: 8, name: "[STUB] Local Vegetable 2", name_sv: "[UTKAST] Lokalt Grönsak 2", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_loc_3, grade: local, rating: 7, name: "[STUB] Local Vegetable 3", name_sv: "[UTKAST] Lokalt Grönsak 3", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_loc_4, grade: local, rating: 6, name: "[STUB] Local Vegetable 4", name_sv: "[UTKAST] Lokalt Grönsak 4", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_loc_5, grade: local, rating: 5, name: "[STUB] Local Vegetable 5", name_sv: "[UTKAST] Lokalt Grönsak 5", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_loc_6, grade: local, rating: 4, name: "[STUB] Local Vegetable 6", name_sv: "[UTKAST] Lokalt Grönsak 6", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_loc_7, grade: local, rating: 3, name: "[STUB] Local Vegetable 7", name_sv: "[UTKAST] Lokalt Grönsak 7", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_loc_8, grade: local, rating: 2, name: "[STUB] Local Vegetable 8", name_sv: "[UTKAST] Lokalt Grönsak 8", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_veg_loc_9, grade: local, rating: 1, name: "[STUB] Local Vegetable 9", name_sv: "[UTKAST] Lokalt Grönsak 9", notes: "STUB — replace with verified Pakistani research"}
+- {id: pak_veg_loc_mango, grade: local, rating: 9, name: "Mango", name_sv: "Mango (aam)", notes: "Aam — Sindhri, Chaunsa, Langra, Anwar Ratol varieties; Pakistan 4th largest mango producer (~1.8 million tonnes/year); Sindh and Punjab orchards; mango season (May–August) a national food event; eaten fresh, as aam panna (drink), and in chutneys"}
+- {id: pak_veg_loc_date, grade: local, rating: 8, name: "Date", name_sv: "Dadel (khajur)", notes: "Khajur — Pakistan 5th largest date producer (550–700k tonnes/year); from Balochistan (Panjgur, Turbat) and Khairpur Sindh; Aseel and Hillawi varieties; eaten at Iftar to break Ramadan fast; in Ajwa-style recipes; also as dry fruit in sweet dishes"}
+- {id: pak_veg_loc_bitter_gourd, grade: local, rating: 7, name: "Bitter gourd", name_sv: "Bittergurka (karela)", notes: "Karela — karela gosht (bitter gourd with meat), bharwan karela (stuffed bitter gourd); major Pakistani vegetable crop grown in Sindh and Punjab; valued for medicinal properties; very traditional; one of the most distinctly Pakistani vegetables"}
+- {id: pak_veg_loc_bottle_gourd, grade: local, rating: 6, name: "Bottle gourd", name_sv: "Flaskkürbis (lauki/doodhi)", notes: "Lauki/Doodhi — lauki gosht (bottle gourd and meat curry), lauki ki kheer (bottle gourd milk pudding); widely grown in Pakistan; summer staple vegetable; mild flavor and very high water content; eaten for health in Pakistani homes"}
+- {id: pak_veg_loc_eggplant, grade: local, rating: 5, name: "Eggplant", name_sv: "Aubergine (baingan)", notes: "Baingan — baingan ka bharta (fire-roasted eggplant), baingan gosht; grown widely in Sindh and Punjab; in some Pakistani tahri (rice and vegetable dishes); smoky char flavor from direct flame roasting is a key Pakistani technique"}
+- {id: pak_veg_loc_taro, grade: local, rating: 4, name: "Taro", name_sv: "Kolokas (arbi)", notes: "Arbi — arbi ki sabzi (taro root with onion and spices); traditionally cooked in Pakistani homes; grown in Punjab and KPK; dried taro leaves (patra) also used; a traditional vegetable in Pakistani and Indian cooking"}
+- {id: pak_veg_loc_pomegranate, grade: local, rating: 3, name: "Pomegranate", name_sv: "Granatäpple (anar)", notes: "Anar — Pakistan grows pomegranates in Balochistan; anardana (dried pomegranate seeds) used as souring agent in spice mixes and chutneys; fresh pomegranate seeds in raita and salads; pomegranate juice in summer drinks"}
+- {id: pak_veg_loc_guava, grade: local, rating: 2, name: "Guava", name_sv: "Guava (amrood)", notes: "Amrood — Pakistan one of world's top guava producers (Punjab orchards); eaten fresh with salt and red chili powder; in chaat; very cheap and widely available Pakistani fruit; strong tropical aroma; also made into jam and juice"}
+
+
+### Produce — Bulk
+<!-- Searched: "Pakistan most consumed vegetables statistics FAO food balance cauliflower spinach peas cucumber 2021 2022" -->
+
+- {id: pak_veg_bul_cauliflower, grade: bulk, rating: 9, name: "Cauliflower", name_sv: "Blomkål (gobi)", notes: "Phool gobi — aloo gobi (potato and cauliflower), gobi gosht, gobi paratha; very high volume vegetable in Pakistan; affordable and abundant in winter; among the top 5 vegetable crops by production in Pakistan"}
+- {id: pak_veg_bul_spinach, grade: bulk, rating: 8, name: "Spinach", name_sv: "Spenat (palak)", notes: "Palak — palak gosht (spinach and meat), palak paneer; high bulk consumption in Punjab; affordable iron-rich vegetable; eaten fresh and cooked; significant volume in urban markets; standard Pakistani winter vegetable"}
+- {id: pak_veg_bul_peas, grade: bulk, rating: 7, name: "Green peas", name_sv: "Ärtor (matar)", notes: "Matar — matar gosht (peas and meat), matar pulao, keema matar (minced meat and peas); high consumption fresh in winter and frozen year-round; matar is one of Pakistan's most commonly added vegetables in meat dishes"}
+- {id: pak_veg_bul_cucumber, grade: bulk, rating: 6, name: "Cucumber", name_sv: "Gurka (kheera)", notes: "Kheera — sliced in raita (yogurt and cucumber salad), eaten raw with salt and chili as snack; very high consumption in summer; in Pakistani vegetable salads; bought daily at street vendors throughout the country"}
+- {id: pak_veg_bul_radish, grade: bulk, rating: 5, name: "Radish", name_sv: "Rädisa (mooli)", notes: "Mooli — mooli paratha (radish-stuffed flatbread), mooli ki sabzi; eaten raw as snack with chat masala; very high bulk consumption in winter Punjab; a traditional Pakistani vegetable with strong flavor"}
+- {id: pak_veg_bul_carrot, grade: bulk, rating: 4, name: "Carrot", name_sv: "Morot (gajar)", notes: "Gajar — gajar halwa (carrot pudding cooked in milk and ghee, most popular Pakistani winter dessert); in salads, in pickles (gajar ka achar); very high consumption in winter season; Pakistan grows significant volumes in Punjab"}
+- {id: pak_veg_bul_fenugreek_leaves, grade: bulk, rating: 3, name: "Fenugreek leaves", name_sv: "Bockhornsklöverblad (methi)", notes: "Methi saag — methi gosht (fenugreek and meat), methi aloo; fresh methi leaves used widely in Pakistani winter cooking; also dried (kasuri methi); grown in Punjab; bitter herbal flavor used to balance rich meat dishes"}
+- {id: pak_veg_bul_cabbage, grade: bulk, rating: 2, name: "Cabbage", name_sv: "Kål (band gobi)", notes: "Band gobi — in stir-fry (bhaja gobi), with meat in some preparations, in coleslaw and salads; growing bulk consumption in Pakistani cities; affordable year-round vegetable; commonly eaten in Karachi Chinese-Pakistani restaurants"}
 
 
 ## Grains & Starches
 
 ### Grains & Starches — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Pakistani signature grain dishes bread pasta rice", "Pakistani iconic starch preparations", "Pakistani traditional staple foods" -->
+<!-- Searched (Urdu/English): "Pakistani khane mein roti naan atta chawal besan — Pakistani signature grains chapati basmati biryani gram flour" -->
 
-- {id: stub_grain_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Grain 1", name_sv: "[UTKAST] Signatur Spannmål 1", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Grain 2", name_sv: "[UTKAST] Signatur Spannmål 2", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Grain 3", name_sv: "[UTKAST] Signatur Spannmål 3", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Grain 4", name_sv: "[UTKAST] Signatur Spannmål 4", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Grain 5", name_sv: "[UTKAST] Signatur Spannmål 5", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Grain 6", name_sv: "[UTKAST] Signatur Spannmål 6", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Grain 7", name_sv: "[UTKAST] Signatur Spannmål 7", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Grain 8", name_sv: "[UTKAST] Signatur Spannmål 8", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Grain 9", name_sv: "[UTKAST] Signatur Spannmål 9", notes: "STUB — replace with verified Pakistani research"}
-
-### Grains & Starches — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Pakistani grain consumption kg per capita", "Pakistani rice wheat bread statistics", "Pakistani FAO food balance cereals" -->
-
-- {id: stub_grain_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Grain 1", name_sv: "[UTKAST] Bulk Spannmål 1", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Grain 2", name_sv: "[UTKAST] Bulk Spannmål 2", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Grain 3", name_sv: "[UTKAST] Bulk Spannmål 3", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Grain 4", name_sv: "[UTKAST] Bulk Spannmål 4", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Grain 5", name_sv: "[UTKAST] Bulk Spannmål 5", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Grain 6", name_sv: "[UTKAST] Bulk Spannmål 6", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Grain 7", name_sv: "[UTKAST] Bulk Spannmål 7", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Grain 8", name_sv: "[UTKAST] Bulk Spannmål 8", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Grain 9", name_sv: "[UTKAST] Bulk Spannmål 9", notes: "STUB — replace with verified Pakistani research"}
+- {id: pak_grain_sig_atta, grade: signature, rating: 9, name: "Whole wheat flour", name_sv: "Fullkornsvetemjöl (atta)", notes: "Atta — Pakistan consumes 103 kg wheat/capita/year (one of world's highest); chapati (thin wholewheat bread) is made fresh at every meal; the daily bread of Pakistan; fresh-ground atta from chakki mills used by traditional households"}
+- {id: pak_grain_sig_basmati, grade: signature, rating: 8, name: "Basmati rice", name_sv: "Basmatiriris", notes: "Basmati chawal — Pakistan major basmati exporter (Super Basmati, 1121 varieties from Punjab); biryani (the pinnacle Pakistani rice dish), pulao, zeera rice; Pakistani biryani (Karachi, Lahore, Sindhi styles) is the national celebration food"}
+- {id: pak_grain_sig_besan, grade: signature, rating: 7, name: "Gram flour", name_sv: "Kikärtsmjöl (besan)", notes: "Besan — pakora (gram flour fritters, national snack of Pakistan); kadhi (gram flour yogurt curry); barfi and besan halwa (sweets); very high consumption; in every Pakistani home for both savory and sweet preparations"}
+- {id: pak_grain_sig_maida, grade: signature, rating: 6, name: "Fine white flour", name_sv: "Vetemjöl (maida)", notes: "Maida — naan (leavened tandoor bread, the restaurant staple), paratha (layered flatbread), samosa pastry; very high consumption in urban Pakistan where naan replaces chapati in restaurants and bakeries"}
+- {id: pak_grain_sig_sooji, grade: signature, rating: 5, name: "Semolina", name_sv: "Mannagryn (sooji/suji)", notes: "Sooji — sooji halwa (semolina pudding with ghee, sugar, and saffron) served at Pakistani religious gatherings (fateha, milad); suji ka halwa is a Pakistani cultural institution; also in some biscuits and cakes"}
+- {id: pak_grain_sig_sewaiyan, grade: signature, rating: 4, name: "Vermicelli", name_sv: "Vermicelli (sewaiyan)", notes: "Sewaiyan — sewiyan kheer (vermicelli milk pudding) and sheer khurma (vermicelli in milk with nuts and dates); the quintessential Eid celebration dessert in Pakistan; roasted and simmered in sweetened milk for Eid morning breakfast"}
+- {id: pak_grain_sig_cornmeal, grade: signature, rating: 3, name: "Corn flour", name_sv: "Majsmjöl (makka atta)", notes: "Makki di roti — corn flatbread, traditional in Punjab and KPK; the traditional partner to sarson da saag; made on a tawa (griddle); a Punjabi cultural symbol eaten in winter; grown in KPK, Punjab, and Balochistan"}
+- {id: pak_grain_sig_rice_flour, grade: signature, rating: 2, name: "Rice flour", name_sv: "Rismjöl", notes: "Chawal ka atta — in kheer (rice pudding), in some sweet pancake preparations; used in rice flour halwa; basis of some traditional Pakistani and Sindhi sweet dishes; ground from locally grown non-basmati rice"}
 
 ### Grains & Starches — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Pakistani grain crops grown", "Pakistani cereal farming production", "Pakistani locally milled flour regional varieties" -->
+<!-- Searched: "Pakistan grain crop production wheat maize bajra sugarcane barley sorghum sesame PBS PARC statistics" -->
 
-- {id: stub_grain_loc_1, grade: local, rating: 9, name: "[STUB] Local Grain 1", name_sv: "[UTKAST] Lokalt Spannmål 1", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_loc_2, grade: local, rating: 8, name: "[STUB] Local Grain 2", name_sv: "[UTKAST] Lokalt Spannmål 2", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_loc_3, grade: local, rating: 7, name: "[STUB] Local Grain 3", name_sv: "[UTKAST] Lokalt Spannmål 3", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_loc_4, grade: local, rating: 6, name: "[STUB] Local Grain 4", name_sv: "[UTKAST] Lokalt Spannmål 4", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_loc_5, grade: local, rating: 5, name: "[STUB] Local Grain 5", name_sv: "[UTKAST] Lokalt Spannmål 5", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_loc_6, grade: local, rating: 4, name: "[STUB] Local Grain 6", name_sv: "[UTKAST] Lokalt Spannmål 6", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_loc_7, grade: local, rating: 3, name: "[STUB] Local Grain 7", name_sv: "[UTKAST] Lokalt Spannmål 7", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_loc_8, grade: local, rating: 2, name: "[STUB] Local Grain 8", name_sv: "[UTKAST] Lokalt Spannmål 8", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_grain_loc_9, grade: local, rating: 1, name: "[STUB] Local Grain 9", name_sv: "[UTKAST] Lokalt Spannmål 9", notes: "STUB — replace with verified Pakistani research"}
+- {id: pak_grain_loc_wheat, grade: local, rating: 9, name: "Wheat", name_sv: "Vete", notes: "Gandum — Pakistan one of world's top wheat producers (27–29 million tonnes/year, PBS); Punjab and Sindh primary wheat belts; Inquilab-91 and other Pakistani varieties; fundamental to national food security"}
+- {id: pak_grain_loc_sugarcane, grade: local, rating: 8, name: "Sugarcane", name_sv: "Sockerrör", notes: "Ganna — Pakistan 5th largest sugarcane producer; from Punjab and Sindh; pressed for fresh juice (roh) sold at roadside stalls; basis of Pakistan's sugar industry; jaggery (gur) produced at local crushers; deeply embedded in agriculture"}
+- {id: pak_grain_loc_maize, grade: local, rating: 7, name: "Maize", name_sv: "Majs (makka)", notes: "Makka — grown in KPK (Khyber Pakhtunkhwa) and Punjab; makka atta for traditional corn rotis; corn on the cob (bhutte) a beloved street food; Pakistan produces 7–8 million tonnes/year; second most important cereal after wheat"}
+- {id: pak_grain_loc_pearl_millet, grade: local, rating: 6, name: "Pearl millet", name_sv: "Hirs (bajra)", notes: "Bajra — grown in dryland Punjab and Sindh; bajra ki roti (thick flatbread) eaten in rural Pakistan; nutritious and drought-resistant; important subsistence grain for poor rural communities; less fashionable but widely cultivated"}
+- {id: pak_grain_loc_sorghum, grade: local, rating: 5, name: "Sorghum", name_sv: "Sorghum (jowar)", notes: "Jowar — grown in dry areas of Sindh and southern Punjab; jowar roti traditional in some regions; used as animal feed and in some rural food preparations; drought-tolerant crop important in Balochistan and Sindh"}
+- {id: pak_grain_loc_barley, grade: local, rating: 4, name: "Barley", name_sv: "Korn (jau)", notes: "Jau — traditionally grown in Pakistan for haleem (barley contributes body to the stew alongside wheat and lentils); jau dalia (cracked barley porridge) eaten for health; grown in KPK highland areas; used in traditional medicine"}
+
+### Grains & Starches — Bulk
+<!-- Searched: "Pakistan bulk grain consumption white rice bread noodles biscuits per capita statistics USDA PBS 2021 2022" -->
+
+- {id: pak_grain_bul_white_rice, grade: bulk, rating: 9, name: "White rice", name_sv: "Vitt ris (irri chawal)", notes: "Irri chawal (non-basmati white rice) — highest volume rice consumed daily; dal chawal (lentils and rice) is Pakistan's most common everyday meal; much cheaper than basmati; grown in Sindh and Punjab (IRRI varieties)"}
+- {id: pak_grain_bul_commercial_bread, grade: bulk, rating: 8, name: "White sandwich bread", name_sv: "Vitt formabröd (double roti)", notes: "Double roti — sliced white bread; very high bulk consumption in Pakistani cities (Karachi, Lahore); in sandwiches, as toast; sold by roadside bakeries; rising consumption replacing roti for breakfast in urban middle-class homes"}
+- {id: pak_grain_bul_instant_noodles, grade: bulk, rating: 7, name: "Instant noodles", name_sv: "Snabbnudlar", notes: "Noodles (Indomie, Kolson) — high and growing consumption in urban Pakistan; schoolchildren's snack; chow mein-style noodles at roadside stalls; Pakistan's Chinese-Pakistani restaurant culture drives noodle consumption"}
+- {id: pak_grain_bul_biscuits, grade: bulk, rating: 6, name: "Biscuits", name_sv: "Kex/kakor (biskut)", notes: "Biskut — Peek Freans LU, National Foods biscuits; very high Pakistani biscuit consumption; chai and biscuit (biscuit dunked in tea) is a national daily ritual; digestives, cream crackers, Cocomo; massive per capita consumption"}
+- {id: pak_grain_bul_puffed_rice, grade: bulk, rating: 5, name: "Puffed rice", name_sv: "Puffat ris (murmura)", notes: "Murmura — in chaat (chaat murmure), in puffed rice snack mixes sold everywhere; used in street food at every Pakistani bazaar; common affordable snack especially in Sindh; also in traditional Pakistani religious charitable food (natija)"}
+- {id: pak_grain_bul_oats, grade: bulk, rating: 4, name: "Oats", name_sv: "Havre", notes: "Oats (daliya) — rising consumption in urban Pakistani middle class; seen as a healthy breakfast option; imported; daliya (broken wheat porridge) also called oats in common usage; growing shelf presence in Pakistani supermarkets"}
 
 
 ## Dairy, Oils & Sauces
 
 ### Dairy, Oils & Sauces — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Pakistani signature dairy dishes", "Pakistani iconic cheese butter cream", "Pakistani traditional dairy products" -->
+<!-- Searched: "Pakistani cooking signature dairy ghee dahi yogurt lassi makkhan — Pakistani condiments tamarind chutney" -->
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Dairy 1", name_sv: "[UTKAST] Signatur Mejeri 1", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Dairy 2", name_sv: "[UTKAST] Signatur Mejeri 2", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Dairy 3", name_sv: "[UTKAST] Signatur Mejeri 3", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Dairy 4", name_sv: "[UTKAST] Signatur Mejeri 4", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Dairy 5", name_sv: "[UTKAST] Signatur Mejeri 5", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Dairy 6", name_sv: "[UTKAST] Signatur Mejeri 6", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Dairy 7", name_sv: "[UTKAST] Signatur Mejeri 7", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Dairy 8", name_sv: "[UTKAST] Signatur Mejeri 8", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Dairy 9", name_sv: "[UTKAST] Signatur Mejeri 9", notes: "STUB — replace with verified Pakistani research"}
-
-### Dairy, Oils & Sauces — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Pakistani dairy consumption kg per capita", "Pakistani milk cheese butter statistics", "Pakistani FAO food balance dairy" -->
-
-- {id: stub_dairy_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Dairy 1", name_sv: "[UTKAST] Bulk Mejeri 1", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Dairy 2", name_sv: "[UTKAST] Bulk Mejeri 2", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Dairy 3", name_sv: "[UTKAST] Bulk Mejeri 3", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Dairy 4", name_sv: "[UTKAST] Bulk Mejeri 4", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Dairy 5", name_sv: "[UTKAST] Bulk Mejeri 5", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Dairy 6", name_sv: "[UTKAST] Bulk Mejeri 6", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Dairy 7", name_sv: "[UTKAST] Bulk Mejeri 7", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Dairy 8", name_sv: "[UTKAST] Bulk Mejeri 8", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Dairy 9", name_sv: "[UTKAST] Bulk Mejeri 9", notes: "STUB — replace with verified Pakistani research"}
+- {id: pak_dairy_sig_ghee, grade: signature, rating: 9, name: "Ghee", name_sv: "Ghee", notes: "Ghee — the definitive cooking fat of Pakistani cuisine; karahi gosht cooked in pure desi ghee; biryani rice layered with saffron ghee; in halwa and mithai; desi ghee (from buffalo or cow) vs packaged ghee; central to flavor and richness"}
+- {id: pak_dairy_sig_yogurt, grade: signature, rating: 8, name: "Yogurt", name_sv: "Yoghurt (dahi)", notes: "Dahi — in every marinade (dahi murgh tikka), in raita (yogurt-cucumber condiment), in lahori karahi (yogurt added at the end), in biryani dum cooking; Pakistan one of world's highest yogurt-consuming nations; homemade dahi daily"}
+- {id: pak_dairy_sig_lassi, grade: signature, rating: 7, name: "Lassi", name_sv: "Lassi", notes: "Lassi — Lahori lassi (thick sweet lassi with malai cream on top) is world-famous; salted lassi with zeera; mango lassi in summer; served in large clay pots at lassi shops; deeply embedded in Pakistani summer food culture"}
+- {id: pak_dairy_sig_butter, grade: signature, rating: 6, name: "White butter", name_sv: "Vitt smör (makkhan)", notes: "Makkhan — fresh white unaged butter spread on hot tandoori roti and paratha at breakfast; in halwa, in some karahi finishing; Lahori dhabas famous for makkhan wala paratha (paratha drowned in white butter); intensely rich dairy tradition"}
+- {id: pak_dairy_sig_malai, grade: signature, rating: 5, name: "Cream", name_sv: "Grädde (malai)", notes: "Malai — thick buffalo cream skimmed from boiled milk; in malai tikka (cream-marinated chicken), in doodh pati chai (tea boiled in milk with thick cream), in rabri (thickened cream), and in various Pakistani mithai (sweets)"}
+- {id: pak_dairy_sig_paneer, grade: signature, rating: 4, name: "Paneer", name_sv: "Paneer (färskost)", notes: "Paneer — shahi paneer (rich tomato-cream curry with cheese), paneer karahi; made fresh from buffalo milk; widely used in Pakistani restaurants though more common in Punjab-border cuisine; pressed fresh curd cheese"}
+- {id: pak_dairy_sig_khoa, grade: signature, rating: 3, name: "Milk solids", name_sv: "Mjölksolider (khoya/mawa)", notes: "Khoya/mawa — dried reduced milk solids; base of gulab jamun, barfi, halwa, and most Pakistani mithai; halwai shops make it fresh daily from buffalo milk; essential ingredient in Pakistani festival sweets culture (Eid, weddings)"}
+- {id: pak_dairy_sig_tamarind_chutney, grade: signature, rating: 2, name: "Tamarind chutney", name_sv: "Tamarindchutney (imli chutney)", notes: "Imli ki chutney — sweet and sour tamarind sauce; on samosa, chaat, dahi puri; served at every Pakistani street food stall; made from imli concentrate with jaggery and spices; the defining dipping sauce of Pakistani street food"}
 
 ### Dairy, Oils & Sauces — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Pakistani dairy farming local production", "Pakistani regional cheese varieties", "Pakistani local dairy breeds" -->
+<!-- Searched: "Pakistan local dairy production Nili-Ravi buffalo milk mustard oil gur jaggery tamarind mango pickle" -->
 
-- {id: stub_dairy_loc_1, grade: local, rating: 9, name: "[STUB] Local Dairy 1", name_sv: "[UTKAST] Lokalt Mejeri 1", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 8, name: "[STUB] Local Dairy 2", name_sv: "[UTKAST] Lokalt Mejeri 2", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 7, name: "[STUB] Local Dairy 3", name_sv: "[UTKAST] Lokalt Mejeri 3", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 6, name: "[STUB] Local Dairy 4", name_sv: "[UTKAST] Lokalt Mejeri 4", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 5, name: "[STUB] Local Dairy 5", name_sv: "[UTKAST] Lokalt Mejeri 5", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 4, name: "[STUB] Local Dairy 6", name_sv: "[UTKAST] Lokalt Mejeri 6", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 3, name: "[STUB] Local Dairy 7", name_sv: "[UTKAST] Lokalt Mejeri 7", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 2, name: "[STUB] Local Dairy 8", name_sv: "[UTKAST] Lokalt Mejeri 8", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_dairy_loc_9, grade: local, rating: 1, name: "[STUB] Local Dairy 9", name_sv: "[UTKAST] Lokalt Mejeri 9", notes: "STUB — replace with verified Pakistani research"}
+- {id: pak_dairy_loc_buffalo_milk, grade: local, rating: 9, name: "Buffalo milk", name_sv: "Buffelmjölk", notes: "Bhains ka doodh — from Nili-Ravi buffalo breed (Pakistan origin); Pakistan world's largest buffalo milk producer; doodh pati chai (tea brewed in pure buffalo milk); basis of all dahi, lassi, paneer, khoya made in Pakistan"}
+- {id: pak_dairy_loc_khoya, grade: local, rating: 8, name: "Khoya", name_sv: "Khoya (mjölksolider)", notes: "Khoya/mawa — reduced buffalo milk solids; manufactured in local halwai shops and commercial dairies; foundation of Pakistan's entire mithai (confectionery) industry; distinct from sig entry which lists it as an ingredient; this is the locally produced commodity"}
+- {id: pak_dairy_loc_mustard_oil, grade: local, rating: 7, name: "Mustard oil", name_sv: "Senapsolja (sarson ka tel)", notes: "Sarson ka tel — from locally grown Pakistani mustard (sarson); traditional cooking oil of Pakistani Punjab; in achar (pickle-making), in sarson da saag cooking; pungent sharp flavor; PARC reports significant mustard cultivation in Punjab"}
+- {id: pak_dairy_loc_gur, grade: local, rating: 6, name: "Jaggery", name_sv: "Rårörsocker (gur)", notes: "Gur — unrefined cane sugar produced at local crushers (kolu) from Pakistan's sugarcane crop; in chanay ka gur halwa (Eid sweet), in some traditional dals; in Pakistani chai (gur wali chai); health-valued alternative to white sugar; rural kitchen staple"}
+- {id: pak_dairy_loc_tamarind, grade: local, rating: 5, name: "Tamarind", name_sv: "Tamarind (imli)", notes: "Imli — tamarind trees grown in Sindh and Punjab; raw tamarind pods processed into pulp and concentrate for chutneys; sour flavor agent in some dals (imli wali dal) and Sindhi curries; very traditional souring ingredient"}
+- {id: pak_dairy_loc_sesame_oil, grade: local, rating: 4, name: "Sesame oil", name_sv: "Sesamolja (til ka tel)", notes: "Til ka tel — from locally grown sesame (til) in Punjab and Sindh; used in some pickle preparations and traditional Sindhi cooking; cold-pressed sesame oil from local till mills; significant agricultural production in Pakistan"}
+- {id: pak_dairy_loc_mango_pickle, grade: local, rating: 3, name: "Mango pickle", name_sv: "Mangochutney (aam ka achar)", notes: "Aam ka achar — made from local green Sindhri/Langra mangoes; in mustard oil with chili and spices; the most popular Pakistani pickle; at every table alongside paratha; made domestically and by National Foods and Shan Foods commercially"}
+- {id: pak_dairy_loc_coconut_oil, grade: local, rating: 2, name: "Coconut oil", name_sv: "Kokosolja", notes: "Nariyal ka tel — from coconut palms on Sindh and Balochistan coasts; used in some coastal Sindhi fish preparations and in some traditional sweet dishes; Pakistan has limited but real coastal coconut production"}
+
+### Dairy, Oils & Sauces — Bulk
+<!-- Searched: "Pakistan most consumed cooking oil margarine ketchup condiments bulk statistics dalda refined oil" -->
+
+- {id: pak_dairy_bul_veg_oil, grade: bulk, rating: 9, name: "Refined vegetable oil", name_sv: "Raffinerad matolja", notes: "Cooking oil (soybean/canola/palm blend) — highest volume cooking fat; Sufi, Dalda, and Fortune brands; used for frying, in everyday karahi; cheaper than ghee; most consumed fat in Pakistani households by volume; dominant since 1970s"}
+- {id: pak_dairy_bul_whole_milk, grade: bulk, rating: 8, name: "Packaged whole milk", name_sv: "Helmjölk (pakket doodh)", notes: "Olpers, Nestle Milkpak — pasteurized packaged whole milk; very high bulk consumption in Pakistani cities; for doodh pati chai (milk tea), cereal, and cooking; market grew dramatically with UHT carton milk replacing loose milk delivery"}
+- {id: pak_dairy_bul_margarine, grade: bulk, rating: 7, name: "Margarine", name_sv: "Margarin (vanaspati)", notes: "Dalda/vanaspati — partially hydrogenated vegetable shortening; traditionally used for roti making and frying; still very widely used in lower-income Pakistani households; in some industrial biscuit and bread production"}
+- {id: pak_dairy_bul_ketchup, grade: bulk, rating: 6, name: "Ketchup", name_sv: "Ketchup", notes: "National Foods / Heinz ketchup — very popular in Pakistani homes, schools, and fast food; on burgers, with chips, on paratha rolls; National Foods brand dominant domestically; high per capita consumption especially in cities"}
+- {id: pak_dairy_bul_chili_sauce, grade: bulk, rating: 5, name: "Chili garlic sauce", name_sv: "Chilisås (tez chatni)", notes: "Shan / National chili garlic sauce — in Chinese-Pakistani restaurants (one of Pakistan's most popular cuisine formats), on bihari kebab rolls, in fast food; bottled chili sauce high volume in urban Pakistan"}
+- {id: pak_dairy_bul_mayonnaise, grade: bulk, rating: 4, name: "Mayonnaise", name_sv: "Majonnäs", notes: "Knorr / National mayonnaise — growing consumption in Pakistani cities; in chicken rolls, club sandwiches, coleslaw; rising fast-food culture in Lahore and Karachi drives mayo consumption; considered a modern condiment vs traditional chutneys"}
+- {id: pak_dairy_bul_soy_sauce, grade: bulk, rating: 3, name: "Soy sauce", name_sv: "Sojasås", notes: "Soy sauce — in Bihari kebab marinade (soy + kachri papaya + mustard oil); in Pakistani Chinese restaurant noodles and rice; Knorr brand dominant; growing use in urban cooking; reflects Pakistan's very popular Chinese-Pakistani fusion food culture"}
+- {id: pak_dairy_bul_vinegar, grade: bulk, rating: 2, name: "White vinegar", name_sv: "Ättika (sirka)", notes: "Sirka — in Pakistani raita variations, in some achar (pickle) preparations, in Bihari kebab marinades; in Karachi street food; relatively lower consumption than in European cuisines but significant bulk household presence"}
 
 
 ## Spices, Nuts & Seasonings
 
 ### Spices, Nuts & Seasonings — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Pakistani signature spice blends", "Pakistani defining herbs and spices", "Pakistani iconic seasoning flavour profile" -->
+<!-- Searched (Urdu/English): "Pakistani masale zeera dhania lal mirch haldi garam masala kali mirch elaichi dalchini — most important Pakistani spices" -->
 
-- {id: stub_spice_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Spices 1", name_sv: "[UTKAST] Signatur Krydda 1", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Spices 2", name_sv: "[UTKAST] Signatur Krydda 2", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Spices 3", name_sv: "[UTKAST] Signatur Krydda 3", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Spices 4", name_sv: "[UTKAST] Signatur Krydda 4", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Spices 5", name_sv: "[UTKAST] Signatur Krydda 5", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Spices 6", name_sv: "[UTKAST] Signatur Krydda 6", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Spices 7", name_sv: "[UTKAST] Signatur Krydda 7", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Spices 8", name_sv: "[UTKAST] Signatur Krydda 8", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Spices 9", name_sv: "[UTKAST] Signatur Krydda 9", notes: "STUB — replace with verified Pakistani research"}
-
-### Spices, Nuts & Seasonings — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Pakistani most used condiments seasonings statistics", "Pakistani salt sugar spice consumption", "Pakistani everyday seasoning ingredients" -->
-
-- {id: stub_spice_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Spices 1", name_sv: "[UTKAST] Bulk Krydda 1", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Spices 2", name_sv: "[UTKAST] Bulk Krydda 2", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Spices 3", name_sv: "[UTKAST] Bulk Krydda 3", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Spices 4", name_sv: "[UTKAST] Bulk Krydda 4", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Spices 5", name_sv: "[UTKAST] Bulk Krydda 5", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Spices 6", name_sv: "[UTKAST] Bulk Krydda 6", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Spices 7", name_sv: "[UTKAST] Bulk Krydda 7", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Spices 8", name_sv: "[UTKAST] Bulk Krydda 8", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Spices 9", name_sv: "[UTKAST] Bulk Krydda 9", notes: "STUB — replace with verified Pakistani research"}
+- {id: pak_spice_sig_red_chili, grade: signature, rating: 9, name: "Red chili powder", name_sv: "Röd chilipulver (lal mirch)", notes: "Lal mirch — in every Pakistani dish; Pakistan one of world's largest chili consumers; Kashmiri (mild, deep red color), Deghi, and Teja varieties; bhuno (sautéed) deeply in oil to build flavor base; fundamental to color, heat, and identity"}
+- {id: pak_spice_sig_cumin, grade: signature, rating: 8, name: "Cumin", name_sv: "Kummin (zeera)", notes: "Zeera — whole seeds for tarka (tempering in hot oil), ground for dry masala mixes; in biryani, dal, karahi, raita; the earthy-warm backbone of Pakistani flavor; pan-roasted cumin powder (bhuna zeera) on raita and chaat"}
+- {id: pak_spice_sig_coriander, grade: signature, rating: 7, name: "Coriander seeds", name_sv: "Korianderfrön (dhania dana)", notes: "Dhania dana — ground coriander in every karahi and curry masala; whole seeds in biryani and pickle; Pakistan world's major coriander producer; citrusy earthiness balances the heat in Pakistani spice blends; essential everyday spice"}
+- {id: pak_spice_sig_turmeric, grade: signature, rating: 6, name: "Turmeric", name_sv: "Gurkmeja (haldi)", notes: "Haldi — in every curry and marinade; golden color and earthy bitterness; anti-inflammatory properties valued in Pakistani home cooking; ground from locally grown rhizomes; used medicinally (haldi doodh, turmeric milk) and culinarily"}
+- {id: pak_spice_sig_garam_masala, grade: signature, rating: 5, name: "Garam masala", name_sv: "Garam masala", notes: "Garam masala — Pakistani blend of black cardamom, green cardamom, cinnamon, cloves, cumin, coriander, black pepper, and nutmeg; added at end of cooking for aroma; Pakistani garam masala is darker and more intense than Mughlai versions; Shan brand dominant"}
+- {id: pak_spice_sig_black_pepper, grade: signature, rating: 4, name: "Black pepper", name_sv: "Svartpeppar (kali mirch)", notes: "Kali mirch — in haleem (slow-cooked porridge), nihari (shank stew), biryani; whole peppercorns in pilau; ground in garam masala; a key warmth note in slow-cooked Pakistani dishes alongside allspice-like spices"}
+- {id: pak_spice_sig_cardamom, grade: signature, rating: 3, name: "Green cardamom", name_sv: "Grön kardemumma (elaichi)", notes: "Elaichi — in doodh pati chai (the national drink of Pakistan, boiled milk tea with cardamom), in biryani masala, in kheer and sewaiyan; black cardamom in garam masala; Pakistan among world's highest cardamom consumers"}
+- {id: pak_spice_sig_cinnamon, grade: signature, rating: 2, name: "Cinnamon", name_sv: "Kanel (dalchini)", notes: "Dalchini — in biryani masala (whole cinnamon stick in the rice), in garam masala blends; in haleem; in Pakistani nihari; sweet woody warming note essential in layered rice and slow-cooked meat dishes"}
 
 ### Spices, Nuts & Seasonings — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Pakistani herbs grown locally", "Pakistani spice production native plants", "Pakistani foraged herbs regional flavourings" -->
+<!-- Searched: "Pakistan locally grown spices nuts kasuri methi ajwain walnut almond mint anardana sesame" -->
 
-- {id: stub_spice_loc_1, grade: local, rating: 9, name: "[STUB] Local Spices 1", name_sv: "[UTKAST] Lokalt Krydda 1", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_loc_2, grade: local, rating: 8, name: "[STUB] Local Spices 2", name_sv: "[UTKAST] Lokalt Krydda 2", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_loc_3, grade: local, rating: 7, name: "[STUB] Local Spices 3", name_sv: "[UTKAST] Lokalt Krydda 3", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_loc_4, grade: local, rating: 6, name: "[STUB] Local Spices 4", name_sv: "[UTKAST] Lokalt Krydda 4", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_loc_5, grade: local, rating: 5, name: "[STUB] Local Spices 5", name_sv: "[UTKAST] Lokalt Krydda 5", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_loc_6, grade: local, rating: 4, name: "[STUB] Local Spices 6", name_sv: "[UTKAST] Lokalt Krydda 6", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_loc_7, grade: local, rating: 3, name: "[STUB] Local Spices 7", name_sv: "[UTKAST] Lokalt Krydda 7", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_loc_8, grade: local, rating: 2, name: "[STUB] Local Spices 8", name_sv: "[UTKAST] Lokalt Krydda 8", notes: "STUB — replace with verified Pakistani research"}
-- {id: stub_spice_loc_9, grade: local, rating: 1, name: "[STUB] Local Spices 9", name_sv: "[UTKAST] Lokalt Krydda 9", notes: "STUB — replace with verified Pakistani research"}
+- {id: pak_spice_loc_kasuri_methi, grade: local, rating: 9, name: "Dried fenugreek leaves", name_sv: "Torkade bockhornsklöverblad (kasuri methi)", notes: "Kasuri methi — from Kasur, Punjab; the essential finishing herb of Pakistani karahi (crumbled over the dish just before serving); in butter chicken and tikka masala; intensely aromatic; uniquely Pakistani finishing spice; grown primarily in Punjab"}
+- {id: pak_spice_loc_ajwain, grade: local, rating: 8, name: "Carom seeds", name_sv: "Ajowan (ajwain)", notes: "Ajwain — in paratha dough (ajwain paratha); in samosa pastry; in Pakistani biscuits; thyme-like sharp flavor; grown in Sindh and Punjab; aids digestion (traditional belief); very common Pakistani everyday bread and snack spice"}
+- {id: pak_spice_loc_anardana, grade: local, rating: 7, name: "Dried pomegranate seeds", name_sv: "Torkade granatäpplefrön (anardana)", notes: "Anardana — from local Pakistani pomegranates; sour condiment used in chaat masala, in some achar (pickle), in chutneys; Balochistan and KPK production; sour-fruity note used to acidify spice blends; traditional Pakistani souring agent"}
+- {id: pak_spice_loc_walnut, grade: local, rating: 6, name: "Walnut", name_sv: "Valnöt (akhrot)", notes: "Akhrot — grown in KPK mountains (Swat, Dir, Chitral); in Pakistani kheer (milk pudding with crushed walnuts), in salads; eaten at Eid as dried fruit; Pakistan a significant walnut producer; used in shahi (royal) preparations"}
+- {id: pak_spice_loc_almond, grade: local, rating: 5, name: "Almond", name_sv: "Mandel (badam)", notes: "Badam — grown in Balochistan (Chaman area); in sewaiyan (Eid vermicelli dessert), in shahi dishes, in phirni; blanched almonds in biryani garnish; Pakistan grows almonds and imports significantly; nut of Pakistani celebration food"}
+- {id: pak_spice_loc_dried_red_chili, grade: local, rating: 4, name: "Dried whole red chili", name_sv: "Hel torkad chili (sabut lal mirch)", notes: "Sabut lal mirch — whole dried pods (Kashmiri, Deghi varieties) grown in Sindh, Punjab, and KPK; tempered whole in hot ghee for tarka in dal; ground fresh for authentic karahi; different from the pre-ground red chili powder used daily"}
+- {id: pak_spice_loc_mint, grade: local, rating: 3, name: "Fresh mint", name_sv: "Mynta (pudina)", notes: "Pudina — in dhania-pudina green chutney (the essential chutney with kebabs and samosas), in raita, as garnish on biryani; grows easily in Pakistan; dried mint in some spice blends; very high usage in Pakistani condiment preparation"}
+- {id: pak_spice_loc_bay_leaf, grade: local, rating: 2, name: "Bay leaf", name_sv: "Lagerblad (tez patta)", notes: "Tez patta (Cinnamomum tamala) — used whole in biryani rice, in nihari, in some dal preparations; grown in Pakistan and imported; a standard aromatics spice in Pakistani slow-cooked dishes; removed before eating like a bay leaf"}
 
+### Spices, Nuts & Seasonings — Bulk
+<!-- Searched: "Pakistan most consumed spices condiments bulk salt sugar cloves nutmeg chaat masala statistics" -->
+
+- {id: pak_spice_bul_salt, grade: bulk, rating: 9, name: "Salt", name_sv: "Salt", notes: "Namak — highest bulk spice; in every preparation; Pakistan home to the Khewra Salt Mine (world's second largest salt mine, Punjab); Pakistan rock salt (pink Himalayan salt) now globally exported; domestic consumption enormous"}
+- {id: pak_spice_bul_sugar, grade: bulk, rating: 8, name: "Sugar", name_sv: "Socker (cheeni)", notes: "Cheeni — very high Pakistani consumption; in chai (3 teaspoons per cup is standard), in mithai (sweets), in halwa; Pakistan among world's highest sugar consuming nations; domestic sugarcane industry meets most demand; chai culture drives consumption"}
+- {id: pak_spice_bul_cloves, grade: bulk, rating: 7, name: "Cloves", name_sv: "Kryddnejlika (laung)", notes: "Laung — in biryani masala (whole cloves in rice), in garam masala, in chai (elaichi-laung chai); individual spice used at high volume beyond garam masala blends; aromatic and antiseptic; very high total Pakistani consumption"}
+- {id: pak_spice_bul_chaat_masala, grade: bulk, rating: 6, name: "Chaat masala", name_sv: "Chaat masala", notes: "Chaat masala — Shan brand; sprinkled on fruit chaat, on raita, on samosa; a pre-blended Pakistani spice mix of dried mango, cumin, coriander, dried ginger, asafoetida, and black salt; enormously popular condiment in Pakistani street food"}
+- {id: pak_spice_bul_amchur, grade: bulk, rating: 5, name: "Dried mango powder", name_sv: "Torkat mangopulver (amchur)", notes: "Amchur — dried unripe mango powder; souring agent in Pakistani chaat, in some marinades, in certain dal preparations; in chaat masala blends; imported and locally produced; widely used across Pakistani home cooking for tartness"}
+- {id: pak_spice_bul_nutmeg, grade: bulk, rating: 4, name: "Nutmeg", name_sv: "Muskot (jaiphal)", notes: "Jaiphal — in garam masala (used separately and in blend), in haleem, in some Pakistani mithai; in shahi preparations; nutmeg and mace (javitri) together in some Pakistani biryani masala; imported but very high consumption via spice blends"}
+- {id: pak_spice_bul_star_anise, grade: bulk, rating: 3, name: "Star anise", name_sv: "Stjärnanis (badiyan)", notes: "Badiyan — in nihari masala (defining spice blend of the national breakfast stew), in biryani; whole star anise in slow-cooked biryanis and stews; significant bulk consumption in Pakistan through nihari spice blends and restaurant cooking"}
+- {id: pak_spice_bul_ginger_powder, grade: bulk, rating: 2, name: "Dried ginger powder", name_sv: "Ingefärapulver (sonth)", notes: "Sonth — dried ground ginger; in nihari spice blend, in some chai blends (ginger chai), in certain halwa preparations; different from fresh adrak; used when fresh ginger not available; in Pakistan's nationally popular Shan nihari masala spice packet"}
