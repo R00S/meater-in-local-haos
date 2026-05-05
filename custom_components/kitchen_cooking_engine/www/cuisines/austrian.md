@@ -114,7 +114,7 @@ Sources: Statistik Austria (meat consumption 2024, vegetable harvest 2024, grain
 - {id: buchteln, grade: signature, rating: 6, name: "Buchteln", name_sv: "Buchteln", notes: "sweet rolls; Baked yeast rolls with jam filling; served with vanilla sauce; Viennese sweet tradition"}
 - {id: roggenbrot_sig, grade: signature, rating: 6, name: "Rye bread", name_sv: "Rågbröd", notes: "Roggenbrot; Dark sourdough; Austrian countryside staple; with Liptauer and cold cuts"}
 - {id: sterz_sig, grade: signature, rating: 5, name: "Sterz", name_sv: "Sterz", notes: "Styrian polenta; Heidensterz (buckwheat) or Kukuruzsterz (corn); peasant dish; Steiermark identity"}
-- {id: stub_erdapfelsalat_sig, grade: signature, rating: 6, name: "[STUB] Produce", name_sv: "[UTKAST] Produce", notes: "STUB — erdäpfelsalat (vinegar-dressed potato salad) uses potatoes; research another Austrian produce ingredient not yet listed"}
+- {id: griess_sig, grade: signature, rating: 6, name: "Semolina", name_sv: "Mannagryn", notes: "Grieß; used in Grießknödel (light semolina dumplings served in soup), Grießflammeri (semolina pudding dessert), and Grießauflauf; Austrian household staple grain alongside wheat flour; widely used in sweet and savoury cooking"}
 
 ### Grains & Starches — Bulk
 <!-- Searched: "Österreich Getreideverbrauch AMA Getreidebilanz 2025 Weizen Mais Gerste Roggen Kartoffeln" -->

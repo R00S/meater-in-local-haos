@@ -125,6 +125,7 @@ Fix ingredient stubs (task 3) and replace australian.md sausage_roll with pikele
 - [x] bengali.md: 4 stubs fixed — atta flour (8), cholar dal (5), rice flour/pitha (1), mishti doi (5 dairy)
 - [x] bangladeshi.md: 9 stubs fixed — boal catfish (6), shoal maach (4), tengra (1), banana blossom produce (8), semai vermicelli grain (8), atta roti (3), maida flour (2), rice flour pitha (1), mishti doi bogra dairy (7)
 - [x] Generator ran clean (98 cuisines, 13245 ingredients, PANEL_VERSION 467)
+- [x] All A-Chilean stubs resolved (austrian: griess_sig, azerbaijani: suzme_sig, caribbean: 5 stubs → shrimp/casabe/channa/pone/arrowroot)
 - [ ] Doublets — many identified across A-Chilean files; need research-backed replacements (task 2)
 
 ### Doublet counts per file (task 2 — not yet done)
