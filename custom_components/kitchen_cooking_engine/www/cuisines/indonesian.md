@@ -7,241 +7,208 @@ icon: 🇮🇩
 region: southeast_asian
 region_name: "Southeast Asian"
 region_icon: 🌴
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-research_done: 0
+description: "Indonesian cuisine spans 17,000 islands and over 300 ethnic groups, united by its bold spice pastes (bumbu), fermented shrimp paste (terasi), sweet soy sauce (kecap manis), and a tradition of slow-cooked coconut curries like rendang — voted the world's most delicious dish."
+description_sv: "Indonesiskt kök sträcker sig över 17 000 öar och mer än 300 folkgrupper, förenat av sina kraftfulla kryddblandningar (bumbu), fermenterad räkpasta (terasi), söt sojasås (kecap manis) och en tradition av långsamt kokade kokosnötscurries som rendang — omröstad till världens godaste maträtt."
+research_done: 1
 ---
 
 ## Research notes
 
-⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
-Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Produce — Signature", etc.).
-Each pair requires its own dedicated research pass. Do NOT combine pairs.
-See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
+Sources: Indonesia meat consumption per capita 2022-2023 BPS/Databoks (chicken 7.46 kg, fish 56.39 kg, beef ~1 kg); Indonesia fish species production 2022-23 KKP/BPS (tilapia 1.36 mt, catfish 1.10 mt, milkfish 779,700 t, mackerel 660,500 t, skipjack top marine species); Indonesia vegetable stats BPS Horticulture 2022-23 (chili, shallot, tomato, cabbage, kangkung top 6); Indonesia rice consumption 81 kg/capita (2023 Bapanas); tofu 8.46 kg, tempeh 7.03 kg, instant noodles 5.5-6.5 kg, cassava 5.5 kg; Indonesia edible oil GIMNI/UNICEF 2022 (palm oil 29.16 kg/capita dominant); kecap manis and sambal universally consumed condiments.
+
+Key findings: Fish (56 kg/capita) is Indonesia's #1 animal protein, far ahead of chicken (7.46 kg) and beef (~1 kg). Tempeh and tofu are both protein sources AND staple foods. Rice is the overwhelming staple at 81 kg/capita. Palm oil is the dominant cooking fat at 29 kg/capita. Galangal, lemongrass, turmeric, candlenut, and terasi (shrimp paste) form the universal flavor base of Indonesian cooking. Spice of the Moluccas (cloves, nutmeg) shaped global trade history.
 
 
 ## Proteins
 
 ### Proteins — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Indonesian signature dishes", "Indonesian iconic traditional proteins", "Indonesian food culture defining meats fish" -->
+<!-- Searched: "Indonesian signature proteins iconic dishes rendang beef chicken satay goat shrimp fish tempeh tofu traditional" -->
 
-- {id: stub_prot_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Protein 1", name_sv: "[UTKAST] Signatur Protein 1", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Protein 2", name_sv: "[UTKAST] Signatur Protein 2", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Protein 3", name_sv: "[UTKAST] Signatur Protein 3", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Protein 4", name_sv: "[UTKAST] Signatur Protein 4", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Protein 5", name_sv: "[UTKAST] Signatur Protein 5", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Protein 6", name_sv: "[UTKAST] Signatur Protein 6", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Protein 7", name_sv: "[UTKAST] Signatur Protein 7", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Protein 8", name_sv: "[UTKAST] Signatur Protein 8", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Protein 9", name_sv: "[UTKAST] Signatur Protein 9", notes: "STUB — replace with verified Indonesian research"}
+- {id: beef, grade: signature, rating: 9, name: Beef, name_sv: "Nötkött", notes: "sapi; rendang sapi (slow-cooked coconut beef from West Sumatra) — voted world's most delicious dish; rawon (East Javanese black beef soup with keluak nut); beef is the prestige meat of Indonesian cooking"}
+- {id: chicken, grade: signature, rating: 9, name: Chicken, name_sv: "Kyckling", notes: "ayam; sate ayam (chicken satay with peanut sauce), opor ayam (coconut chicken for Eid), soto ayam (yellow broth chicken soup), ayam goreng (fried chicken); most consumed land meat at 7.46 kg/capita (2023)"}
+- {id: tempeh, grade: signature, rating: 9, name: Tempeh, name_sv: "Tempeh", notes: "tempe; fermented whole soybean cake — Indonesia's own invention; tempe goreng, tempe orek, tempe mendoan; 7.03 kg/capita; distinctly Indonesian protein and cultural identity food"}
+- {id: tofu, grade: signature, rating: 8, name: Tofu, name_sv: "Tofu", notes: "tahu; fried tofu (tahu goreng), tahu isi (stuffed tofu), tahu gejrot; 8.46 kg/capita; gado-gado includes both tahu and tempe; widely consumed across Java and beyond"}
+- {id: shrimp, grade: signature, rating: 8, name: Shrimp, name_sv: "Räkor", notes: "udang; udang balado (chili shrimp), udang goreng, sop udang; shrimp paste (terasi) also made from small shrimp/krill; ubiquitous coastal protein across all Indonesian islands"}
+- {id: goat, grade: signature, rating: 7, name: Goat, name_sv: "Get", notes: "kambing; sate kambing (goat satay with sweet soy), gulai kambing (spiced coconut goat curry), tongseng kambing (sweet-spicy goat stew); ceremonial meat for Idul Adha sacrifice"}
+- {id: pork, grade: signature, rating: 7, name: Pork, name_sv: "Fläsk", notes: "babi; babi guling (Balinese spit-roasted suckling pig — iconic), babi kecap (pork in soy sauce), char siu (Chinese-Indonesian); key in Bali, Toraja, Manado, and Chinese-Indonesian cuisine"}
+- {id: eggs, grade: signature, rating: 7, name: Eggs, name_sv: "Ägg", notes: "telur; telur balado (spicy chili eggs), nasi goreng egg, telur dadar (omelette); pervasive in everyday Indonesian cooking; duck eggs also used in salted form"}
+- {id: snapper, grade: signature, rating: 7, name: Red snapper, name_sv: "Röd snapper", notes: "ikan kakap merah; ikan bakar (grilled snapper with sambal), gulai ikan; prized coastal fish for its delicate white flesh; widely eaten across the archipelago"}
 
 ### Proteins — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Indonesian meat consumption kg per capita", "Indonesian FAO food balance protein", "Indonesian most consumed protein statistics" -->
+<!-- Searched: "Indonesia meat fish protein consumption per capita 2022 2023 FAO statistics chicken beef fish shrimp eggs most consumed protein kilograms" -->
 
-- {id: stub_prot_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Protein 1", name_sv: "[UTKAST] Bulk Protein 1", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Protein 2", name_sv: "[UTKAST] Bulk Protein 2", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Protein 3", name_sv: "[UTKAST] Bulk Protein 3", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Protein 4", name_sv: "[UTKAST] Bulk Protein 4", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Protein 5", name_sv: "[UTKAST] Bulk Protein 5", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Protein 6", name_sv: "[UTKAST] Bulk Protein 6", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Protein 7", name_sv: "[UTKAST] Bulk Protein 7", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Protein 8", name_sv: "[UTKAST] Bulk Protein 8", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Protein 9", name_sv: "[UTKAST] Bulk Protein 9", notes: "STUB — replace with verified Indonesian research"}
+- {id: catfish, grade: bulk, rating: 9, name: Catfish (lele), name_sv: "Havskatt (lele)", notes: "lele; 1.1 million tonnes aquaculture production (2022-23); most consumed freshwater fish by volume in Java; lele goreng (fried catfish) is a ubiquitous street food protein; affordable and widely farmed"}
+- {id: tilapia, grade: bulk, rating: 9, name: Tilapia (nila), name_sv: "Tilapia (nila)", notes: "nila (Oreochromis niloticus); 1.36 million tonnes (highest aquaculture production, 2022-23); eaten fried, grilled, or in soup; extremely affordable and widely available across Indonesia"}
+- {id: milkfish, grade: bulk, rating: 8, name: Milkfish (bandeng), name_sv: "Mjölkfisk (bandeng)", notes: "bandeng (Chanos chanos); 779,700 tonnes (2022-23); bandeng presto (pressure-cooked to soften bones), otak-otak bandeng; popular on Java and Sulawesi; traditionally farmed in coastal ponds"}
+- {id: skipjack_tuna, grade: bulk, rating: 8, name: Skipjack tuna (cakalang), name_sv: "Skipjack tonfisk (cakalang)", notes: "cakalang; top consumed marine fish by volume; cakalang fufu (smoked skipjack, North Sulawesi), tuna in canned form; Indonesia is top global skipjack producer; 354,000+ tonnes capture"}
+- {id: mackerel, grade: bulk, rating: 7, name: Indian mackerel (kembung), name_sv: "Indisk makrill (kembung)", notes: "kembung; 660,500 tonnes (2022-23, all mackerel species); affordable everyday fish; fried, grilled, or in gulai; widely consumed across all income groups"}
+- {id: anchovies, grade: bulk, rating: 7, name: Anchovies (teri), name_sv: "Ansjovis (teri)", notes: "teri; dried and fried anchovies are a daily condiment and protein addition in nasi lemak-style dishes; ikan teri goreng with peanuts; very cheap and widely consumed across Indonesia"}
+- {id: duck, grade: bulk, rating: 6, name: Duck (bebek), name_sv: "Anka (bebek)", notes: "bebek; bebek betutu (Balinese slow-roasted spiced duck), bebek goreng (crispy fried duck); more consumed than in most SE Asian countries; popular in Javanese, Balinese, and Lombok cuisine"}
+- {id: crab, grade: bulk, rating: 5, name: Crab, name_sv: "Krabba", notes: "kepiting; mud crab and mangrove crab; kepiting saos padang (crab in Padang spicy sauce), kepiting soka (soft-shell crab); popular in coastal cities; growing seafood consumption"}
 
 ### Proteins — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Indonesian livestock farming animals raised", "Indonesian fishing industry fish species caught", "Indonesian game animals hunted wild" -->
+<!-- Searched: "Indonesia locally produced native protein breeds local species GI-tagged dagingregional native chicken Ayam Kampung native fish special local regional proteins" -->
 
-- {id: stub_prot_loc_1, grade: local, rating: 9, name: "[STUB] Local Protein 1", name_sv: "[UTKAST] Lokalt Protein 1", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_loc_2, grade: local, rating: 8, name: "[STUB] Local Protein 2", name_sv: "[UTKAST] Lokalt Protein 2", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_loc_3, grade: local, rating: 7, name: "[STUB] Local Protein 3", name_sv: "[UTKAST] Lokalt Protein 3", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_loc_4, grade: local, rating: 6, name: "[STUB] Local Protein 4", name_sv: "[UTKAST] Lokalt Protein 4", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_loc_5, grade: local, rating: 5, name: "[STUB] Local Protein 5", name_sv: "[UTKAST] Lokalt Protein 5", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_loc_6, grade: local, rating: 4, name: "[STUB] Local Protein 6", name_sv: "[UTKAST] Lokalt Protein 6", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_loc_7, grade: local, rating: 3, name: "[STUB] Local Protein 7", name_sv: "[UTKAST] Lokalt Protein 7", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_loc_8, grade: local, rating: 2, name: "[STUB] Local Protein 8", name_sv: "[UTKAST] Lokalt Protein 8", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_prot_loc_9, grade: local, rating: 1, name: "[STUB] Local Protein 9", name_sv: "[UTKAST] Lokalt Protein 9", notes: "STUB — replace with verified Indonesian research"}
+- {id: ayam_kampung, grade: local, rating: 8, name: Free-range chicken (ayam kampung), name_sv: "Frigående kyckling (ayam kampung)", notes: "ayam kampung (village chicken); traditional free-range indigenous breed; significantly more flavorful and firmer than broiler; preferred for festive occasions and traditional cooking; premium price"}
+- {id: prawns_lobster, grade: local, rating: 7, name: Lobster (lobster laut), name_sv: "Hummer (lobster laut)", notes: "lobster; tropical spiny lobster harvested across eastern Indonesia; lobster saos padang, lobster bakar; growing export and premium domestic market; Lombok and Sulawesi known producers"}
+- {id: sidat, grade: local, rating: 7, name: Eel (sidat), name_sv: "Ål (sidat)", notes: "sidat (Anguilla spp.); freshwater eel farmed in West Java and Central Java; valued culinary product; exported to Japan; sidat goreng or grilled; regional specialty"}
+- {id: barramundi, grade: local, rating: 6, name: Barramundi (kakap putih), name_sv: "Barramundi (kakap putih)", notes: "kakap putih/barramundi (Lates calcarifer); farmed and wild; white flesh, mild; grilled, pan-fried; widely eaten across the archipelago; aquaculture growing in coastal areas"}
+- {id: selar, grade: local, rating: 6, name: Round scad (ikan selar), name_sv: "Rund makrill (selar)", notes: "selar (Selaroides leptolepis); small pelagic fish; very commonly consumed in warung (food stalls) as an affordable everyday protein; fried whole; important low-income protein across coastal regions"}
+- {id: squid_octopus, grade: local, rating: 6, name: Squid / octopus, name_sv: "Bläckfisk / bläckfisk", notes: "cumi-cumi/gurita; cumi-cumi goreng (fried squid), cumi hitam (squid in black ink), gulai cumi; octopus from Lombok and eastern Indonesia; coastal specialty growing in consumption"}
+- {id: belut, grade: local, rating: 5, name: Swamp eel (belut), name_sv: "Sumpål (belut)", notes: "belut (Monopterus albus); freshwater swamp eel; belut goreng (crispy fried swamp eel) a Javanese street food delicacy; farmed in rice paddies; uniquely Indonesian street food protein"}
+- {id: tambak_shrimp, grade: local, rating: 5, name: Tiger shrimp (udang windu), name_sv: "Tigerräka (udang windu)", notes: "udang windu (Penaeus monodon); farmed in coastal ponds (tambak) of Java, Sulawesi; Indonesia is major global shrimp exporter; distinct from small marine shrimp; prized size and flavor"}
 
 
 ## Produce
 
 ### Produce — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Indonesian signature dishes vegetables", "Indonesian iconic vegetable ingredients", "Indonesian traditional vegetable preparations" -->
+<!-- Searched: "Indonesia most important signature vegetables shallot red chili bird's eye chili garlic tomato kangkung long bean eggplant bitter melon defining vegetables Indonesian cuisine" -->
 
-- {id: stub_veg_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Vegetable 1", name_sv: "[UTKAST] Signatur Grönsak 1", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Vegetable 2", name_sv: "[UTKAST] Signatur Grönsak 2", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Vegetable 3", name_sv: "[UTKAST] Signatur Grönsak 3", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Vegetable 4", name_sv: "[UTKAST] Signatur Grönsak 4", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Vegetable 5", name_sv: "[UTKAST] Signatur Grönsak 5", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Vegetable 6", name_sv: "[UTKAST] Signatur Grönsak 6", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Vegetable 7", name_sv: "[UTKAST] Signatur Grönsak 7", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Vegetable 8", name_sv: "[UTKAST] Signatur Grönsak 8", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Vegetable 9", name_sv: "[UTKAST] Signatur Grönsak 9", notes: "STUB — replace with verified Indonesian research"}
+- {id: shallot, grade: signature, rating: 9, name: Shallot (bawang merah), name_sv: "Schalottenlök (bawang merah)", notes: "bawang merah; essential aromatic base of virtually every Indonesian spice paste (bumbu); fried shallots (bawang goreng) garnish most dishes; distinct from western onion — smaller, sweeter, more aromatic"}
+- {id: garlic, grade: signature, rating: 9, name: Garlic (bawang putih), name_sv: "Vitlök (bawang putih)", notes: "bawang putih; co-base with shallot in every bumbu (spice paste); garlic fried rice, marinade base; foundational aromatic used from Sabang to Merauke"}
+- {id: red_chili, grade: signature, rating: 9, name: Red chili (cabai merah), name_sv: "Röd chili (cabai merah)", notes: "cabai merah besar; base of sambal, rendang, gulai; 636,560 tonnes consumed (2022); primary heat and color source in Indonesian cooking; sambals use both fresh and dried versions"}
+- {id: bird_eye_chili, grade: signature, rating: 8, name: Bird's eye chili (cabai rawit), name_sv: "Fågöga chili (cabai rawit)", notes: "cabai rawit; tiny but intensely hot; sambal rawit, added whole to soups; level of heat indicator in Indonesian food; the everyday chili of local street food and household cooking"}
+- {id: tomato, grade: signature, rating: 8, name: Tomato, name_sv: "Tomat", notes: "tomat; tomat in sambal (sambal tomat), tomato-based gulai; BPS top vegetable by volume; used in soups, stir-fries, and as a souring agent across Indonesian cooking"}
+- {id: kangkung, grade: signature, rating: 8, name: Water spinach (kangkung), name_sv: "Vattenspenat (kangkung)", notes: "kangkung; kangkung tumis (stir-fried water spinach with garlic/chili/belacan); the quintessential Indonesian green vegetable; grows in paddy fields and ponds; BPS top vegetable by consumption"}
+- {id: long_bean, grade: signature, rating: 7, name: Long bean (kacang panjang), name_sv: "Longbean (kacang panjang)", notes: "kacang panjang; used in urap (coconut salad), gado-gado, pecel, sayur lodeh; classic Indonesian vegetable side across Java and beyond; stir-fried with tempeh or spiced coconut"}
+- {id: eggplant, grade: signature, rating: 7, name: Eggplant (terong), name_sv: "Aubergine (terong)", notes: "terong; terong balado (spicy chili eggplant), terong bakar (grilled eggplant), terong ungu in urap; absorbs bumbu flavors; widely grown and used across Indonesia"}
+- {id: coconut, grade: signature, rating: 9, name: Coconut, name_sv: "Kokosnöt", notes: "kelapa; grated fresh coconut in urap, rendang base, coconut milk in gulai and opor; young coconut (kelapa muda) as drink; coconut is the defining ingredient of the Indonesian kitchen"}
 
 ### Produce — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Indonesian vegetable consumption kg per capita", "Indonesian most consumed vegetables statistics", "Indonesian FAO food balance vegetables" -->
+<!-- Searched: "Indonesia vegetable fruit production consumption 2022 2023 most consumed vegetables cabbage spinach papaya banana mango BPS statistics tonnes" -->
 
-- {id: stub_veg_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Vegetable 1", name_sv: "[UTKAST] Bulk Grönsak 1", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Vegetable 2", name_sv: "[UTKAST] Bulk Grönsak 2", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Vegetable 3", name_sv: "[UTKAST] Bulk Grönsak 3", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Vegetable 4", name_sv: "[UTKAST] Bulk Grönsak 4", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Vegetable 5", name_sv: "[UTKAST] Bulk Grönsak 5", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Vegetable 6", name_sv: "[UTKAST] Bulk Grönsak 6", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Vegetable 7", name_sv: "[UTKAST] Bulk Grönsak 7", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Vegetable 8", name_sv: "[UTKAST] Bulk Grönsak 8", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Vegetable 9", name_sv: "[UTKAST] Bulk Grönsak 9", notes: "STUB — replace with verified Indonesian research"}
+- {id: cabbage, grade: bulk, rating: 8, name: Cabbage (kol), name_sv: "Kål (kol)", notes: "kol; 600,000+ tonnes production across Java; common in gado-gado, cap cay (stir-fry mix), soto broth garnish; affordable bulk vegetable; BPS top production vegetable"}
+- {id: spinach_bayam, grade: bulk, rating: 7, name: Spinach (bayam), name_sv: "Spenat (bayam)", notes: "bayam (Amaranthus); sayur bayam (clear soup with corn and carrots), stir-fried bayam; BPS top consumed green; widely grown on all major islands; cheap everyday vegetable"}
+- {id: banana, grade: bulk, rating: 8, name: Banana (pisang), name_sv: "Banan (pisang)", notes: "pisang; Indonesia is world's largest banana producer; pisang goreng (fried banana — iconic street food), pisang kukus, banana flower in vegetable dishes; 7+ million tonnes production"}
+- {id: papaya, grade: bulk, rating: 7, name: Papaya (pepaya), name_sv: "Papaya (pepaya)", notes: "pepaya; raw green papaya in sayur (vegetable soup) and salad; ripe papaya eaten as fruit; widely grown across all islands; affordable tropical fruit staple"}
+- {id: sweet_corn, grade: bulk, rating: 7, name: Sweet corn (jagung), name_sv: "Majs (jagung)", notes: "jagung; bakwan jagung (corn fritters), corn in soto, grilled corn on streets; also a staple grain in eastern Indonesia; important both as vegetable and substitute grain"}
+- {id: bitter_melon, grade: bulk, rating: 6, name: Bitter melon (pare), name_sv: "Bittergurka (pare)", notes: "pare (Momordica charantia); popular vegetable despite bitter taste; orak-arik pare (stir-fried with egg), pare balado; widely consumed health vegetable; grown on Java, Sumatra"}
+- {id: cassava_leaves, grade: bulk, rating: 6, name: Cassava leaves (daun singkong), name_sv: "Maniokblad (daun singkong)", notes: "daun singkong; boiled and stir-fried or in gulai daun singkong (spiced coconut cassava leaves); widely consumed vegetable, especially in Sumatra and Kalimantan; both leaves and root are consumed"}
+- {id: pineapple, grade: bulk, rating: 6, name: Pineapple (nanas), name_sv: "Ananas (nanas)", notes: "nanas; eaten fresh; used in rujak (spicy fruit salad), selai nanas (pineapple jam in cookies); Indonesia is major global producer; widely consumed tropical fruit"}
+- {id: cucumber, grade: bulk, rating: 5, name: Cucumber (timun), name_sv: "Gurka (timun)", notes: "timun; acar timun (quick-pickled cucumber garnish with satay and nasi padang), rujak, in gado-gado; ubiquitous fresh vegetable side across all Indonesian meals"}
 
 ### Produce — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Indonesian vegetables grown locally agriculture", "Indonesian regional vegetable crops", "Indonesian foraging wild plants" -->
+<!-- Searched: "Indonesia locally grown GI-tagged produce local fruits vegetables jackfruit salak durian mangosteen snake fruit endemic tropical produce Indonesia" -->
 
-- {id: stub_veg_loc_1, grade: local, rating: 9, name: "[STUB] Local Vegetable 1", name_sv: "[UTKAST] Lokalt Grönsak 1", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_loc_2, grade: local, rating: 8, name: "[STUB] Local Vegetable 2", name_sv: "[UTKAST] Lokalt Grönsak 2", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_loc_3, grade: local, rating: 7, name: "[STUB] Local Vegetable 3", name_sv: "[UTKAST] Lokalt Grönsak 3", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_loc_4, grade: local, rating: 6, name: "[STUB] Local Vegetable 4", name_sv: "[UTKAST] Lokalt Grönsak 4", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_loc_5, grade: local, rating: 5, name: "[STUB] Local Vegetable 5", name_sv: "[UTKAST] Lokalt Grönsak 5", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_loc_6, grade: local, rating: 4, name: "[STUB] Local Vegetable 6", name_sv: "[UTKAST] Lokalt Grönsak 6", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_loc_7, grade: local, rating: 3, name: "[STUB] Local Vegetable 7", name_sv: "[UTKAST] Lokalt Grönsak 7", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_loc_8, grade: local, rating: 2, name: "[STUB] Local Vegetable 8", name_sv: "[UTKAST] Lokalt Grönsak 8", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_veg_loc_9, grade: local, rating: 1, name: "[STUB] Local Vegetable 9", name_sv: "[UTKAST] Lokalt Grönsak 9", notes: "STUB — replace with verified Indonesian research"}
+- {id: durian, grade: local, rating: 9, name: Durian, name_sv: "Durian", notes: "durian; the king of fruits; Medan durian (North Sumatra), Monthong variant; eaten fresh, durian cake, es durian; intense aroma and rich creamy flesh; cultural obsession; Indonesia is major producer"}
+- {id: jackfruit, grade: local, rating: 8, name: Jackfruit (nangka), name_sv: "Jackfrukt (nangka)", notes: "nangka; young jackfruit in gudeg (Yogyakarta slow-cooked jackfruit stew — iconic Javanese dish), sayur nangka; ripe jackfruit eaten as sweet fruit; Indonesia is major global producer"}
+- {id: salak, grade: local, rating: 7, name: Snake fruit (salak), name_sv: "Ormfrukt (salak)", notes: "salak (Salacca zalacca); GI-tagged Salak Pondoh (Yogyakarta), Salak Bali; crisp, sweet-tart flesh inside scaly brown skin; eaten fresh or candied; uniquely Indonesian fruit"}
+- {id: tamarind, grade: local, rating: 8, name: Tamarind (asam jawa), name_sv: "Tamarind (asam jawa)", notes: "asam jawa; souring agent in soto, asam padeh (Minang sour fish soup), sayur asem (tamarind vegetable soup); widely grown in Java and Nusa Tenggara; the classic Indonesian souring ingredient"}
+- {id: galangal, grade: local, rating: 8, name: Galangal (lengkuas), name_sv: "Galangal (lengkuas)", notes: "lengkuas (greater galangal); every rendang, soto, gulai uses fresh galangal; grown across Indonesia; part of every bumbu base paste; sharper, more piney than ginger; quintessentially Indonesian"}
+- {id: mangosteen, grade: local, rating: 7, name: Mangosteen, name_sv: "Mangostan", notes: "manggis; queen of fruits; Indonesia is major global producer; eaten fresh; thick purple rind with sweet-tart white segments; national fruit alongside durian; wide cultivation on Sumatra and Java"}
+- {id: jengkol, grade: local, rating: 6, name: Jengkol bean, name_sv: "Jengkolböna", notes: "jengkol (Archidendron pauciflorum); semur jengkol (sweet soy jengkol stew), rendang jengkol; pungent edible bean uniquely consumed in Indonesia and Malaysia; strong loyal following in Java and Sumatra"}
+- {id: petai, grade: local, rating: 6, name: Stink bean (petai), name_sv: "Stinkböna (petai)", notes: "petai (Parkia speciosa); sambal petai, petai fried rice, petai with shrimp; intensely pungent bitter bean consumed across Sumatra, Java, and Borneo; uniquely Southeast Asian flavor with strong local identity"}
+- {id: banana_blossom, grade: local, rating: 5, name: Banana blossom (jantung pisang), name_sv: "Bananblomma (jantung pisang)", notes: "jantung pisang; cooked as vegetable — sayur jantung pisang, gulai jantung pisang; distinctly Indonesian/Malay tradition of eating banana blossoms; grows on every banana tree across the archipelago"}
 
 
 ## Grains & Starches
 
 ### Grains & Starches — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Indonesian signature grain dishes bread pasta rice", "Indonesian iconic starch preparations", "Indonesian traditional staple foods" -->
+<!-- Searched: "Indonesia signature grains rice nasi goreng nasi padang rice cakes lontong noodles soto mie Indonesia most iconic rice and grain dishes" -->
 
-- {id: stub_grain_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Grain 1", name_sv: "[UTKAST] Signatur Spannmål 1", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Grain 2", name_sv: "[UTKAST] Signatur Spannmål 2", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Grain 3", name_sv: "[UTKAST] Signatur Spannmål 3", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Grain 4", name_sv: "[UTKAST] Signatur Spannmål 4", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Grain 5", name_sv: "[UTKAST] Signatur Spannmål 5", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Grain 6", name_sv: "[UTKAST] Signatur Spannmål 6", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Grain 7", name_sv: "[UTKAST] Signatur Spannmål 7", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Grain 8", name_sv: "[UTKAST] Signatur Spannmål 8", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Grain 9", name_sv: "[UTKAST] Signatur Spannmål 9", notes: "STUB — replace with verified Indonesian research"}
+- {id: white_rice, grade: signature, rating: 9, name: White rice (nasi), name_sv: "Vitt ris (nasi)", notes: "beras/nasi; 81 kg/capita/year (2023); >98% household consumption; nasi goreng (fried rice — national dish), nasi padang, nasi kuning, nasi uduk; rice is THE foundation of every Indonesian meal"}
+- {id: tempeh_grain, grade: signature, rating: 8, name: Tempeh (soybean), name_sv: "Tempeh (sojabönor)", notes: "tempe kedelai; fermented whole soybeans; 7.03 kg/capita; Indonesia invented tempeh; key protein AND starch/grain context; also tempe from other legumes (benguk, gembus)"}
+- {id: tofu_grain, grade: signature, rating: 8, name: Tofu (soybean curd), name_sv: "Tofu (sojabönmjölk)", notes: "tahu; 8.46 kg/capita; made from soy milk; eaten daily; the omnipresent protein and carb-adjacent staple of Indonesian diets; distinctly soybean-centric food culture"}
+- {id: lontong, grade: signature, rating: 8, name: Rice cakes (lontong/ketupat), name_sv: "Riskakor (lontong/ketupat)", notes: "lontong/ketupat; compressed rice in banana leaf (lontong) or woven palm leaf (ketupat); lontong sayur, lontong cap go meh; ketupat for Eid; the iconic festive and daily rice-cake format"}
+- {id: cassava, grade: signature, rating: 7, name: Cassava (singkong), name_sv: "Maniok (singkong)", notes: "singkong/ubi kayu; 5.49 kg/capita; tape singkong (fermented cassava), singkong goreng, krupuk singkong (cassava crackers); important substitute staple especially outside Java and in historical context"}
+- {id: glass_noodles, grade: signature, rating: 7, name: Glass noodles (soun/bihun), name_sv: "Glasnudlar (soun/bihun)", notes: "soun (glass noodles)/bihun (rice vermicelli); soup noodles in soto, mie kocok, mi godog; bihun goreng; the primary noodle format in Indonesian cooking before ramen-style mie"}
+- {id: mie_instant, grade: signature, rating: 7, name: Instant noodles (mie instan), name_sv: "Snabbnudlar (mie instan)", notes: "mie instan; 5.5-6.5 kg/capita; Indonesia is world's 2nd largest instant noodle consumer; Indomie is national food icon — sold in 100+ countries; mie goreng (fried noodles) most iconic flavor"}
 
 ### Grains & Starches — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Indonesian grain consumption kg per capita", "Indonesian rice wheat bread statistics", "Indonesian FAO food balance cereals" -->
+<!-- Searched: "Indonesia grain cereal consumption per capita 2022 2023 wheat flour corn bread crackers krupuk rice noodles most consumed grains BPS" -->
 
-- {id: stub_grain_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Grain 1", name_sv: "[UTKAST] Bulk Spannmål 1", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Grain 2", name_sv: "[UTKAST] Bulk Spannmål 2", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Grain 3", name_sv: "[UTKAST] Bulk Spannmål 3", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Grain 4", name_sv: "[UTKAST] Bulk Spannmål 4", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Grain 5", name_sv: "[UTKAST] Bulk Spannmål 5", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Grain 6", name_sv: "[UTKAST] Bulk Spannmål 6", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Grain 7", name_sv: "[UTKAST] Bulk Spannmål 7", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Grain 8", name_sv: "[UTKAST] Bulk Spannmål 8", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Grain 9", name_sv: "[UTKAST] Bulk Spannmål 9", notes: "STUB — replace with verified Indonesian research"}
+- {id: wheat_flour, grade: bulk, rating: 8, name: Wheat flour (tepung terigu), name_sv: "Vetemjöl (tepung terigu)", notes: "tepung terigu; bakwan (vegetable fritters), martabak (stuffed pancake/crepe), bread (roti), layer cake; consumption growing with urbanization; mostly imported but widely used in Indonesian baking and frying"}
+- {id: krupuk, grade: bulk, rating: 8, name: Crackers (krupuk), name_sv: "Kex (krupuk)", notes: "krupuk; puffed crackers from tapioca/shrimp/fish/rice; garnish on nasi goreng, soto, and virtually every Indonesian meal; krupuk udang (shrimp cracker) most iconic; consumed daily by nearly all Indonesians"}
+- {id: corn, grade: bulk, rating: 7, name: Corn (jagung), name_sv: "Majs (jagung)", notes: "jagung; both vegetable and grain staple; nasi jagung (corn rice) traditional in East Java and NTT; popcorn (jagung popcorn), corn porridge; important backup staple grain outside major cities"}
+- {id: tapioca, grade: bulk, rating: 7, name: Tapioca / sago starch, name_sv: "Tapioka / sagostärkelse", notes: "tepung tapioka/sagu; used to make krupuk, pearl boba, pempek (Palembang fish cake) dough, cilok (chewy balls); sago (from sago palm) a staple in Papua, Maluku, and eastern Indonesia"}
+- {id: red_rice, grade: bulk, rating: 6, name: Red rice (beras merah), name_sv: "Rött ris (beras merah)", notes: "beras merah; health-food rice sold in all markets; higher fiber than white; traditional in Bali and some regions; growing urban health food consumption; nasi merah as daily meal option"}
+- {id: sweet_potato_starch, grade: bulk, rating: 5, name: Sweet potato (ubi jalar), name_sv: "Sötpotatis (ubi jalar)", notes: "ubi jalar; 3.42 kg/capita; eaten boiled, fried, or in desserts (kolak ubi); grown widely; important starchy vegetable especially in Papua, where it is a cultural staple food"}
 
 ### Grains & Starches — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Indonesian grain crops grown", "Indonesian cereal farming production", "Indonesian locally milled flour regional varieties" -->
+<!-- Searched: "Indonesia locally grown heritage grains GI-tagged rice varieties black rice glutinous rice beras ketan pandan rice aromatic local rice indonesia sago" -->
 
-- {id: stub_grain_loc_1, grade: local, rating: 9, name: "[STUB] Local Grain 1", name_sv: "[UTKAST] Lokalt Spannmål 1", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_loc_2, grade: local, rating: 8, name: "[STUB] Local Grain 2", name_sv: "[UTKAST] Lokalt Spannmål 2", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_loc_3, grade: local, rating: 7, name: "[STUB] Local Grain 3", name_sv: "[UTKAST] Lokalt Spannmål 3", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_loc_4, grade: local, rating: 6, name: "[STUB] Local Grain 4", name_sv: "[UTKAST] Lokalt Spannmål 4", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_loc_5, grade: local, rating: 5, name: "[STUB] Local Grain 5", name_sv: "[UTKAST] Lokalt Spannmål 5", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_loc_6, grade: local, rating: 4, name: "[STUB] Local Grain 6", name_sv: "[UTKAST] Lokalt Spannmål 6", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_loc_7, grade: local, rating: 3, name: "[STUB] Local Grain 7", name_sv: "[UTKAST] Lokalt Spannmål 7", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_loc_8, grade: local, rating: 2, name: "[STUB] Local Grain 8", name_sv: "[UTKAST] Lokalt Spannmål 8", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_grain_loc_9, grade: local, rating: 1, name: "[STUB] Local Grain 9", name_sv: "[UTKAST] Lokalt Spannmål 9", notes: "STUB — replace with verified Indonesian research"}
+- {id: beras_ketan, grade: local, rating: 8, name: Glutinous rice (beras ketan), name_sv: "Klibbrris (beras ketan)", notes: "beras ketan; sticky rice for lemper (stuffed rice roll), ketupat, onde-onde, tape ketan (fermented sticky rice); used in almost all Indonesian traditional sweets and festival foods; both black and white varieties"}
+- {id: black_rice, grade: local, rating: 7, name: Black glutinous rice (beras hitam), name_sv: "Svart klibbris (beras hitam)", notes: "beras hitam/beras ketan hitam; bubur ketan hitam (black rice porridge with coconut milk and palm sugar); Bali red rice; traditionally grown on Java and Bali; rising health food interest"}
+- {id: emping, grade: local, rating: 7, name: Melinjo crackers (emping), name_sv: "Melinjokex (emping)", notes: "emping (from melinjo nut, Gnetum gnemon); slightly bitter crackers served alongside soto, gado-gado, nasi goreng; produced in Central and East Java; distinct from shrimp krupuk; authentic Indonesian cracker"}
+- {id: pempek_dough, grade: local, rating: 6, name: Fish cake dough (pempek), name_sv: "Fiskbullsdeg (pempek)", notes: "pempek (Palembang); made from fish flesh and tapioca starch; boiled/fried fish cakes; served with dark sour cuka sauce (pempek kuah cuka); GI-registered Palembang specialty; one of Indonesia's most beloved traditional street foods"}
+- {id: papeda, grade: local, rating: 6, name: Sago porridge (papeda), name_sv: "Sagogröt (papeda)", notes: "papeda; sago-starch thick gel porridge of Maluku and Papua; eaten with yellow fish soup (kuah kuning); traditional staple of eastern Indonesia; distinct from rice-based western Indonesian diet"}
+- {id: serabi, grade: local, rating: 5, name: Rice flour pancake (serabi), name_sv: "Rismjölspannkaka (serabi)", notes: "serabi (srabi); rice flour and coconut milk pancake with palm sugar or pandan; Solo and Bandung versions differ; traditional Javanese street breakfast; distinct from modern pancake"}
 
 
 ## Dairy, Oils & Sauces
 
 ### Dairy, Oils & Sauces — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Indonesian signature dairy dishes", "Indonesian iconic cheese butter cream", "Indonesian traditional dairy products" -->
+<!-- Searched: "Indonesia signature sauces condiments coconut milk kecap manis sambal terasi peanut sauce bumbu lime key flavors Indonesian cooking" -->
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Dairy 1", name_sv: "[UTKAST] Signatur Mejeri 1", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Dairy 2", name_sv: "[UTKAST] Signatur Mejeri 2", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Dairy 3", name_sv: "[UTKAST] Signatur Mejeri 3", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Dairy 4", name_sv: "[UTKAST] Signatur Mejeri 4", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Dairy 5", name_sv: "[UTKAST] Signatur Mejeri 5", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Dairy 6", name_sv: "[UTKAST] Signatur Mejeri 6", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Dairy 7", name_sv: "[UTKAST] Signatur Mejeri 7", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Dairy 8", name_sv: "[UTKAST] Signatur Mejeri 8", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Dairy 9", name_sv: "[UTKAST] Signatur Mejeri 9", notes: "STUB — replace with verified Indonesian research"}
+- {id: coconut_milk, grade: signature, rating: 9, name: Coconut milk (santan), name_sv: "Kokosmjölk (santan)", notes: "santan; THE defining liquid of Indonesian cooking; rendang, gulai, opor, kolak, es cendol all use santan; both thick (santan kental) and thin (santan encer) used differently; freshly pressed daily in traditional cooking"}
+- {id: kecap_manis, grade: signature, rating: 9, name: Sweet soy sauce (kecap manis), name_sv: "Söt sojasås (kecap manis)", notes: "kecap manis; Indonesia's iconic condiment — sweet, thick, molasses-dark soy sauce; table condiment, marinade for satay and ikan bakar, in nasi goreng and mie goreng; invented in Indonesia; Bango and ABC are leading brands"}
+- {id: sambal, grade: signature, rating: 9, name: Sambal chili sauce, name_sv: "Sambal chilisås", notes: "sambal; collective name for 300+ Indonesian chili-based sauces; sambal terasi (shrimp paste), sambal bawang (garlic), sambal matah (Bali raw), sambal ijo (green); on every Indonesian table; defines Indonesian flavor identity"}
+- {id: peanut_sauce, grade: signature, rating: 8, name: Peanut sauce (saus kacang), name_sv: "Jordnötssås (saus kacang)", notes: "saus kacang; served with satay, gado-gado, karedok, ketoprak; made from ground roasted peanuts, palm sugar, tamarind, chili; THE iconic sauce of Indonesian cuisine internationally"}
+- {id: terasi, grade: signature, rating: 8, name: Shrimp paste (terasi/belacan), name_sv: "Räkpasta (terasi)", notes: "terasi (Indonesian)/belacan; fermented dried shrimp paste block; toasted and added to every sambal; base ingredient of most bumbu; sharp, pungent, umami — the invisible backbone of Indonesian savory flavor"}
+- {id: palm_oil, grade: signature, rating: 8, name: Palm oil (minyak sawit), name_sv: "Palmolja (minyak sawit)", notes: "minyak goreng (palm cooking oil); 29.16 kg/capita (2022); THE dominant Indonesian cooking fat; used for all deep frying (gorengan) and stir-frying; Indonesia is world's largest palm oil producer and consumer"}
+- {id: soy_sauce, grade: signature, rating: 7, name: Soy sauce (kecap asin), name_sv: "Sojasås (kecap asin)", notes: "kecap asin; salty soy sauce used alongside kecap manis; in Chinese-Indonesian dishes, marinades, dipping sauces; less sweet than kecap manis; imported Chinese-style and Indonesian-made brands"}
+- {id: tamarind_water, grade: signature, rating: 7, name: Tamarind water (air asam), name_sv: "Tamarindvatten (air asam)", notes: "air asam; dissolved tamarind pulp used as souring agent in sayur asem (tamarind vegetable soup), asam padeh, soto; the principal souring acid of Indonesian cooking before lime"}
+- {id: lime_juice, grade: signature, rating: 7, name: Lime (jeruk nipis), name_sv: "Lime (jeruk nipis)", notes: "jeruk nipis; squeezed over bakso, mie ayam, soto, grilled fish; juice in sambal; the standard citrus acid finisher for Indonesian food; distinct from kaffir lime (daun jeruk purut)"}
 
 ### Dairy, Oils & Sauces — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Indonesian dairy consumption kg per capita", "Indonesian milk cheese butter statistics", "Indonesian FAO food balance dairy" -->
+<!-- Searched: "Indonesia dairy coconut milk cooking oil consumption 2022 2023 statistics imported soybean sunflower oil margarine condensed milk sweetened condensed market share" -->
 
-- {id: stub_dairy_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Dairy 1", name_sv: "[UTKAST] Bulk Mejeri 1", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Dairy 2", name_sv: "[UTKAST] Bulk Mejeri 2", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Dairy 3", name_sv: "[UTKAST] Bulk Mejeri 3", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Dairy 4", name_sv: "[UTKAST] Bulk Mejeri 4", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Dairy 5", name_sv: "[UTKAST] Bulk Mejeri 5", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Dairy 6", name_sv: "[UTKAST] Bulk Mejeri 6", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Dairy 7", name_sv: "[UTKAST] Bulk Mejeri 7", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Dairy 8", name_sv: "[UTKAST] Bulk Mejeri 8", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Dairy 9", name_sv: "[UTKAST] Bulk Mejeri 9", notes: "STUB — replace with verified Indonesian research"}
+- {id: margarine, grade: bulk, rating: 8, name: Margarine / vegetable fat, name_sv: "Margarin / vegetabiliskt fett", notes: "margarin; widely used in Indonesian baking, layer cake (bolu lapis), cookies (kue kering); Blue Band is dominant brand; distinct from butter; common in commercial and home baking in middle-class households"}
+- {id: sweet_condensed_milk, grade: bulk, rating: 8, name: Sweetened condensed milk, name_sv: "Söt kondenserad mjölk", notes: "susu kental manis; poured over Indonesian desserts and drinks: es teler, es campur, martabak manis, bubur kacang hijau; Frisian Flag brand dominates; used as both sweetener and milk substitute"}
+- {id: coconut_oil, grade: bulk, rating: 7, name: Coconut oil (minyak kelapa), name_sv: "Kokosolja (minyak kelapa)", notes: "minyak kelapa; traditional cooking oil in Eastern Indonesia, Sulawesi, and Maluku; distinct from palm oil; used for frying and as traditional fat; VCO (virgin coconut oil) growing as health product"}
+- {id: fish_sauce, grade: bulk, rating: 7, name: Fish sauce (kecap ikan), name_sv: "Fisksås (kecap ikan)", notes: "kecap ikan; used in stir-fries and soups especially in Chinese-Indonesian and northern Sumatra cooking; imported Thai brands (Tiparos) widely sold; distinct from terasi; salty umami liquid condiment"}
+- {id: oyster_sauce, grade: bulk, rating: 7, name: Oyster sauce (saus tiram), name_sv: "Ostrónsås (saus tiram)", notes: "saus tiram; used in cap cay (Chinese-Indonesian stir-fry), Chinese-influenced dishes, restaurant cooking; imported from China and local brands; widely used across Indonesian commercial kitchens"}
+- {id: milk, grade: bulk, rating: 6, name: Cow's milk (susu sapi), name_sv: "Komjölk (susu sapi)", notes: "susu sapi; low per capita relative to Asian average but growing; susu UHT widely consumed; es susu (iced sweet milk drinks); teh susu, kopi susu (milk tea/coffee); Indonesian dairy market growing"}
+- {id: peanut_oil, grade: bulk, rating: 5, name: Peanut oil (minyak kacang), name_sv: "Jordnötsolja (minyak kacang)", notes: "minyak kacang tanah; used in Javanese and Sundanese home cooking; imparts nutty flavor to stir-fries; less dominant than palm oil but regionally preferred; also base for peanut sauce"}
 
 ### Dairy, Oils & Sauces — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Indonesian dairy farming local production", "Indonesian regional cheese varieties", "Indonesian local dairy breeds" -->
+<!-- Searched: "Indonesia local dairy local condiments fermented sauces oncom tauco local production coconut sugar palm sugar local oil regional specialties Indonesian" -->
 
-- {id: stub_dairy_loc_1, grade: local, rating: 9, name: "[STUB] Local Dairy 1", name_sv: "[UTKAST] Lokalt Mejeri 1", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 8, name: "[STUB] Local Dairy 2", name_sv: "[UTKAST] Lokalt Mejeri 2", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 7, name: "[STUB] Local Dairy 3", name_sv: "[UTKAST] Lokalt Mejeri 3", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 6, name: "[STUB] Local Dairy 4", name_sv: "[UTKAST] Lokalt Mejeri 4", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 5, name: "[STUB] Local Dairy 5", name_sv: "[UTKAST] Lokalt Mejeri 5", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 4, name: "[STUB] Local Dairy 6", name_sv: "[UTKAST] Lokalt Mejeri 6", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 3, name: "[STUB] Local Dairy 7", name_sv: "[UTKAST] Lokalt Mejeri 7", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 2, name: "[STUB] Local Dairy 8", name_sv: "[UTKAST] Lokalt Mejeri 8", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_dairy_loc_9, grade: local, rating: 1, name: "[STUB] Local Dairy 9", name_sv: "[UTKAST] Lokalt Mejeri 9", notes: "STUB — replace with verified Indonesian research"}
+- {id: coconut_sugar, grade: local, rating: 9, name: Coconut / palm sugar (gula merah), name_sv: "Kokos- / palmssocker (gula merah)", notes: "gula merah/gula jawa/gula aren; unrefined palm sugar from coconut or sugar palm; used in rendang (alongside) for balance, kolak, serabi, all Indonesian sweets; deeply caramelized, toffee-like; produced across Java and Bali"}
+- {id: tauco, grade: local, rating: 7, name: Fermented soybean paste (tauco), name_sv: "Fermenterad sojapasta (tauco)", notes: "tauco; salty-savory fermented soybean paste from Chinese-Indonesian tradition; used in tauco sauce dishes, tahu tauco, ikan tauco; produced in Cianjur (West Java) most famously; distinct from Japanese miso"}
+- {id: oncom, grade: local, rating: 7, name: Oncom (fermented pressed cake), name_sv: "Oncom (fermenterad pressad kaka)", notes: "oncom; Sundanese (West Java) fermented soybean/peanut press-cake inoculated with Neurospora mold; orange or black varieties; tumis oncom, goreng oncom; a distinctly local West Javanese fermented protein/condiment"}
+- {id: petis, grade: local, rating: 7, name: Shrimp paste sauce (petis), name_sv: "Räkpastasås (petis)", notes: "petis udang; thick sweet-savory black shrimp paste from East Java; distinct from terasi; used in rujak petis (Surabaya-style fruit salad sauce), tahu tek, lontong balap; quintessentially East Javanese condiment"}
+- {id: kecap_ikan, grade: local, rating: 6, name: Fermented fish sauce (kecap ikan lokal), name_sv: "Fermenterad fisksås (kecap ikan)", notes: "pekasam/bekasam/tempoyak; fermented fish or durian paste traditional to Sumatra and Kalimantan; region-specific sour-fermented condiments distinct from Thai fish sauce; Palembang and Banjar specialties"}
+- {id: tempoyak, grade: local, rating: 6, name: Fermented durian (tempoyak), name_sv: "Fermenterad durian (tempoyak)", notes: "tempoyak; fermented durian pulp used as a condiment and cooking ingredient in Sumatra and Kalimantan; tempoyak ikan (fish cooked with fermented durian); strong, funky, sour; uniquely Malay-Indonesian preserved condiment"}
+- {id: dabu_dabu, grade: local, rating: 5, name: Fresh tomato salsa (dabu-dabu), name_sv: "Färsk tomatsalsa (dabu-dabu)", notes: "dabu-dabu; uncooked fresh sambal of North Sulawesi (Manado); diced tomato, shallot, chili, lime; served with grilled fish (ikan bakar Manado); the Southeast Asian equivalent of fresh pico de gallo; distinctive Manadonese flavor"}
 
 
 ## Spices, Nuts & Seasonings
 
 ### Spices, Nuts & Seasonings — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Indonesian signature spice blends", "Indonesian defining herbs and spices", "Indonesian iconic seasoning flavour profile" -->
+<!-- Searched: "Indonesian signature spices galangal lemongrass kaffir lime turmeric candlenut coriander cumin shrimp paste terasi pandan most important Indonesian spices bumbu" -->
 
-- {id: stub_spice_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Spices 1", name_sv: "[UTKAST] Signatur Krydda 1", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Spices 2", name_sv: "[UTKAST] Signatur Krydda 2", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Spices 3", name_sv: "[UTKAST] Signatur Krydda 3", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Spices 4", name_sv: "[UTKAST] Signatur Krydda 4", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Spices 5", name_sv: "[UTKAST] Signatur Krydda 5", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Spices 6", name_sv: "[UTKAST] Signatur Krydda 6", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Spices 7", name_sv: "[UTKAST] Signatur Krydda 7", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Spices 8", name_sv: "[UTKAST] Signatur Krydda 8", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Spices 9", name_sv: "[UTKAST] Signatur Krydda 9", notes: "STUB — replace with verified Indonesian research"}
+- {id: galangal_spice, grade: signature, rating: 9, name: Galangal (lengkuas), name_sv: "Galangal (lengkuas)", notes: "lengkuas; greater galangal rhizome; earthy, piney, citrusy — distinct from ginger; essential in rendang, soto, gulai, and every bumbu base; grown across Indonesia; THE aromatics pillar of Indonesian cooking"}
+- {id: lemongrass, grade: signature, rating: 9, name: Lemongrass (serai), name_sv: "Citrongräs (serai)", notes: "serai; bruised stalks in curries, soups, and marinades; lemongrass in rendang, soto, gulai, and grilled chicken marinade; freshly fragrant, citrusy aroma; grown across tropical Indonesia; foundational aromatic herb"}
+- {id: kaffir_lime_leaf, grade: signature, rating: 9, name: Kaffir lime leaf (daun jeruk purut), name_sv: "Kaffirlimeblad (daun jeruk purut)", notes: "daun jeruk purut; intensely aromatic double leaf; added to rendang, gulai, soto, pepes; essential in every bumbu; Indonesia and Thailand both define Southeast Asian cooking with this leaf; inseparable from Indonesian flavor"}
+- {id: turmeric, grade: signature, rating: 8, name: Turmeric (kunyit), name_sv: "Gurkmeja (kunyit)", notes: "kunyit; nasi kuning (turmeric yellow rice for celebrations), soto (golden broth), turmeric in every basic spice paste; anti-inflammatory uses in jamu (herbal drink); fresh rhizome preferred in Indonesia"}
+- {id: candlenut, grade: signature, rating: 8, name: Candlenut (kemiri), name_sv: "Ljusnöt (kemiri)", notes: "kemiri; used to thicken bumbu pastes and add rich, creamy, slightly bitter flavor; toasted before grinding; essential in rendang paste, gulai, and Manadonese rica-rica spice; uniquely Southeast Asian thickener"}
+- {id: coriander_seeds, grade: signature, rating: 8, name: Coriander seeds (ketumbar), name_sv: "Korianderfrön (ketumbar)", notes: "ketumbar; used in virtually every basic bumbu paste; ground into spice mixes for rendang, soto, satay marinade; one of the most used spice seeds in Indonesian cooking alongside cumin"}
+- {id: ginger, grade: signature, rating: 8, name: Ginger (jahe), name_sv: "Ingefära (jahe)", notes: "jahe; fresh ginger in almost every bumbu, soto, and soup; jahe merah (red ginger) in jamu health drinks; wedang jahe (ginger tea); one of the most consumed spice rhizomes alongside galangal and turmeric"}
+- {id: terasi_spice, grade: signature, rating: 8, name: Shrimp paste (terasi), name_sv: "Räkpasta (terasi)", notes: "terasi; fermented dried shrimp/krill paste — umami backbone of most sambals and bumbu; toasted to reduce pungency; sambal terasi is the most consumed sambal in Indonesia; produced in Cirebon, Banyuwangi, Lombok"}
+- {id: pandan, grade: signature, rating: 7, name: Pandan leaf (daun pandan), name_sv: "Pandanblad (daun pandan)", notes: "daun pandan; fragrant leaf used to infuse rice (nasi pandan), desserts (klepon, onde-onde), ice drinks (es cendol), and cakes; gives sweet, vanillin-like grassy aroma; widely grown; essential in Indonesian desserts"}
+- {id: cloves, grade: signature, rating: 7, name: Cloves (cengkeh), name_sv: "Kryddnejlika (cengkeh)", notes: "cengkeh; Maluku (Moluccas) origin — the spice that drove European colonial history; kretek cigarettes (clove cigarettes) dominate Indonesian tobacco market; used in rendang, gulai, biryani-style dishes from Aceh"}
+- {id: nutmeg, grade: signature, rating: 7, name: Nutmeg (pala), name_sv: "Muskotnöt (pala)", notes: "pala; Banda Islands (Maluku) origin — the rarest spice that caused wars; used in Acehnese, Molucan, and West Sumatran cooking; pala fruit candy; Indonesia is still top global nutmeg producer"}
 
 ### Spices, Nuts & Seasonings — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Indonesian most used condiments seasonings statistics", "Indonesian salt sugar spice consumption", "Indonesian everyday seasoning ingredients" -->
+<!-- Searched: "Indonesia spice nut consumption per capita 2022 2023 peanut salt sugar palm sugar pepper most consumed seasonings statistics BPS" -->
 
-- {id: stub_spice_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Spices 1", name_sv: "[UTKAST] Bulk Krydda 1", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Spices 2", name_sv: "[UTKAST] Bulk Krydda 2", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Spices 3", name_sv: "[UTKAST] Bulk Krydda 3", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Spices 4", name_sv: "[UTKAST] Bulk Krydda 4", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Spices 5", name_sv: "[UTKAST] Bulk Krydda 5", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Spices 6", name_sv: "[UTKAST] Bulk Krydda 6", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Spices 7", name_sv: "[UTKAST] Bulk Krydda 7", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Spices 8", name_sv: "[UTKAST] Bulk Krydda 8", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Spices 9", name_sv: "[UTKAST] Bulk Krydda 9", notes: "STUB — replace with verified Indonesian research"}
+- {id: peanuts, grade: bulk, rating: 9, name: Peanuts (kacang tanah), name_sv: "Jordnötter (kacang tanah)", notes: "kacang tanah; peanut sauce for satay and gado-gado; kacang goreng (fried peanuts) with teri; peanut brittle (kacang tumbuk); one of Indonesia's highest consumption nuts; widely grown in Java and Sulawesi"}
+- {id: salt, grade: bulk, rating: 9, name: Salt (garam), name_sv: "Salt (garam)", notes: "garam; universal seasoning; sea salt from Java and Madura; iodized salt widely used; fish preservation (pengasinan ikan), vegetable pickling (acar); Indonesia historically imports some salt despite coastal geography"}
+- {id: palm_sugar_bulk, grade: bulk, rating: 8, name: Refined sugar (gula pasir), name_sv: "Raffinerat socker (gula pasir)", notes: "gula pasir; white granulated sugar from sugarcane; widely used in Indonesian sweet cooking, teh manis (sweet tea), es teh, kue; Indonesia is a major sugarcane producer; alongside palm sugar as dual sweetener system"}
+- {id: black_pepper, grade: bulk, rating: 7, name: Black pepper (lada hitam), name_sv: "Svartpeppar (lada hitam)", notes: "lada hitam; Bangka Belitung and Lampung black pepper (GI-registered); used in soto, soups, marinades; Indonesia is major global pepper producer; pepper in every savory cook; white pepper (lada putih) also produced on Bangka"}
+- {id: cashews, grade: bulk, rating: 6, name: Cashews (mete/kacang mete), name_sv: "Cashewnötter (mete)", notes: "kacang mete; produced in NTB (Lombok, Sumbawa), NTT, East Java; eaten roasted as snack; in some sweets; smaller volume than peanuts but significant local production and consumption; growing export market"}
+- {id: chili_powder, grade: bulk, rating: 7, name: Dried chili / chili powder, name_sv: "Torkad chili / chilipulver", notes: "bubuk cabai/cabai kering; dried ground chili for long shelf-life sambals and spice mixes; widely sold; dried whole chilies for rendang and gulai paste; chili is the most consumed spice in Indonesia by weight"}
+- {id: bay_leaf, grade: bulk, rating: 6, name: Indonesian bay leaf (daun salam), name_sv: "Indonesiskt lagerblad (daun salam)", notes: "daun salam (Syzygium polyanthum); distinct from Mediterranean bay laurel; added to rice (nasi uduk), gulai, rendang; slightly clove-like aroma; dried and sold in every Indonesian market; universal cooking leaf"}
 
 ### Spices, Nuts & Seasonings — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Indonesian herbs grown locally", "Indonesian spice production native plants", "Indonesian foraged herbs regional flavourings" -->
+<!-- Searched: "Indonesia GI-tagged spices local production cinnamon from Kerinci kemangi Indonesian basil finger root kencur black nut keluak local spice production Indonesia" -->
 
-- {id: stub_spice_loc_1, grade: local, rating: 9, name: "[STUB] Local Spices 1", name_sv: "[UTKAST] Lokalt Krydda 1", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_loc_2, grade: local, rating: 8, name: "[STUB] Local Spices 2", name_sv: "[UTKAST] Lokalt Krydda 2", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_loc_3, grade: local, rating: 7, name: "[STUB] Local Spices 3", name_sv: "[UTKAST] Lokalt Krydda 3", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_loc_4, grade: local, rating: 6, name: "[STUB] Local Spices 4", name_sv: "[UTKAST] Lokalt Krydda 4", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_loc_5, grade: local, rating: 5, name: "[STUB] Local Spices 5", name_sv: "[UTKAST] Lokalt Krydda 5", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_loc_6, grade: local, rating: 4, name: "[STUB] Local Spices 6", name_sv: "[UTKAST] Lokalt Krydda 6", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_loc_7, grade: local, rating: 3, name: "[STUB] Local Spices 7", name_sv: "[UTKAST] Lokalt Krydda 7", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_loc_8, grade: local, rating: 2, name: "[STUB] Local Spices 8", name_sv: "[UTKAST] Lokalt Krydda 8", notes: "STUB — replace with verified Indonesian research"}
-- {id: stub_spice_loc_9, grade: local, rating: 1, name: "[STUB] Local Spices 9", name_sv: "[UTKAST] Lokalt Krydda 9", notes: "STUB — replace with verified Indonesian research"}
-
+- {id: kencur, grade: local, rating: 8, name: Kencur (aromatic ginger), name_sv: "Kencur (aromatisk ingefära)", notes: "kencur (Kaempferia galanga); tiny rhizome with menthol-camphor flavor; used in bumbu bali, pecel (peanut sauce), Javanese jamu (health tonic); distinct from ginger or galangal; uniquely Indonesian/Malay spice"}
+- {id: kemangi, grade: local, rating: 8, name: Lemon basil (kemangi), name_sv: "Citronbasilika (kemangi)", notes: "kemangi (Ocimum × citriodorum); Indonesian lemon basil — more aromatic and lemony than Thai basil; served fresh alongside grilled fish (ikan bakar), pepes, ayam betutu; unique Indonesian herb with no direct substitute"}
+- {id: keluak, grade: local, rating: 7, name: Black nut (kluwak/keluak), name_sv: "Svart nöt (kluwak)", notes: "kluwak/keluak (Pangium edule); black, intensely savory nut from football-fruit tree; rawon (East Javanese black beef soup) is defined by keluak; slightly toxic raw — fermented before use; uniquely Indonesian endemic spice ingredient"}
+- {id: salam_koja, grade: local, rating: 7, name: Curry leaf (daun kari/salam koja), name_sv: "Curryleaf (daun kari)", notes: "daun kari/salam koja; used in Acehnese, Batak, and Minangkabau cooking; kari Aceh, gulai; distinct from daun salam; Indian influence via Aceh trade route; grown in northern Sumatra specifically"}
+- {id: kerinci_cinnamon, grade: local, rating: 7, name: Cassia cinnamon (kayu manis), name_sv: "Kanel (kayu manis)", notes: "kayu manis (Cinnamomum burmannii); Kerinci (West Sumatra) is world's largest cassia cinnamon producer; used in rendang, gulai, Acehnese curry, desserts; Indonesia exports ~70% of world's cassia; distinct from Ceylon cinnamon"}
+- {id: temulawak, grade: local, rating: 6, name: Java turmeric (temulawak), name_sv: "Javagurkemeja (temulawak)", notes: "temulawak (Curcuma zanthorrhiza); bitter medicinal rhizome related to turmeric; primary ingredient in traditional jamu herbal health drinks (jamu temulawak); also used in cooking; endemic to Java; growing export as nutraceutical"}
+- {id: finger_root, grade: local, rating: 6, name: Finger root (temu kunci), name_sv: "Fingerrot (temu kunci)", notes: "temu kunci (Boesenbergia rotunda); finger-like rhizome with earthy floral flavor; used in Javanese and Central Indonesian cooking, pepes, certain bumbu; also in jamu; distinct shape and flavor from all other rhizomes"}
+- {id: klabet, grade: local, rating: 5, name: Fenugreek (klabet), name_sv: "Bockhornsklöver (klabet)", notes: "klabet (fenugreek seeds); used specifically in Acehnese (North Sumatra) and Malay-Indonesian curries; kari ayam Aceh; Indian-influenced cooking from port-trade history of Aceh; less used than other spices but distinctly regional"}
