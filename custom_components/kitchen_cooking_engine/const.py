@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 02 May 2026, 14:00 UTC
-Last Change: v0.8.2.23 - Research Hungarian cuisine (124 items, 15 pairs)
+Last Change: v0.8.2.24 - Research Icelandic cuisine (118 items, 15 pairs)
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "515"
+PANEL_VERSION = "516"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
