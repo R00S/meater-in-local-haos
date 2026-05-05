@@ -157,7 +157,7 @@ next agent what was already looked for and prevents duplicate work.
 |-------|----------|-------------|
 | `id` | ✅ | Stable identifier used by the UI (e.g. `salmon`, `white_pepper`) |
 | `grade` | ✅ | `signature`, `bulk`, or `local` (see above) |
-| `rating` | ✅ | Integer 1–9. Significance within the grade — not a rank. Multiple ingredients may share the same value. Top 3 shown per grade (by highest rating, before "More" is clicked); clicking "More" reveals at least 6 more per grade — 9 or more items per pair ensures the "More" section is always meaningful. |
+| `rating` | ✅ | Integer 1–9. Significance within the grade — not a rank. Multiple ingredients may share the same value. Top 3 shown per grade (by highest rating, before "More" is clicked); clicking "More" reveals additional items — **8 or more items per pair** (or **6 or more for Grains & Starches**) ensures the "More" section is always meaningful. |
 | `name` | ✅ | English display name — **the raw, uncooked ingredient** (råvara). This is the label shown in the GUI badge. It must be a clean ingredient name with **no parentheses, no dashes with annotations, no dish names, no local-language annotations**. Examples of correct names: `Lamb`, `Haddock`, `Pork belly`, `Garam masala`, `Suckling pig`. Put dish names, local names, cultural context, and origin details in `notes` only. |
 | `name_sv` | ✅ | Swedish display name — same rules as `name`: the raw ingredient in Swedish, clean, no parentheses, no dash annotations. E.g. `Lammkött`, `Kolja`, `Fläskbuken`. |
 | `notes` | — | Evidence for the grade and rating; brief source reference. This is also the place for dish names, local-language names, origin labels, and any other context useful to the AI recipe builder — it is never shown directly in the GUI badge. |
@@ -175,8 +175,9 @@ next agent what was already looked for and prevents duplicate work.
 **Default visibility rule:** within each category, the top 3 shown per grade (sorted by
 `rating` descending) are visible before the user clicks "More". Everything beyond the top 3 shown within its
 grade is hidden behind "More" — clicking it reveals all remaining items. Up to 9 items are visible
-by default (top 3 shown × 3 grades). The data target per grade is **9 or more** items, so that
-clicking "More" always reveals at least 6 additional items per grade.
+by default (top 3 shown × 3 grades). The data target per grade is **8 or more** items (for
+Grains & Starches: **6 or more**), so that clicking "More" always reveals at least a few
+additional items per grade.
 
 **Protein tree button colour rule:**
 - A subcat button turns **dark green** when the cuisine has a `signature` or `local` protein in that subcat.
@@ -441,16 +442,16 @@ This is a **display rule**, not a data target. There is **no upper limit** on ho
 items a pair can have.
 
 A spice-heavy cuisine like Indian or Persian may warrant 15+ verified bulk seasonings.
-**Nine or more items is the absolute floor** — 9 or more real items is the minimum credible result for a
-pair that has been researched. This ensures that when the user clicks "More", they see
-at least 6 additional items beyond the top 3 shown (before "More" is clicked). Add every verified item you
-find beyond 9; they all improve the AI's picture of the cuisine and appear when the user
+**Eight or more items is the absolute floor** — 8 or more real items is the minimum credible result for a
+pair that has been researched. **For Grains & Starches the floor is 6 or more.** This ensures that when the user clicks "More", they see
+at least a few additional items beyond the top 3 shown (before "More" is clicked). Add every verified item you
+find beyond the floor; they all improve the AI's picture of the cuisine and appear when the user
 clicks "More".
 
-**Stub entries:** cuisine files ship with 9 placeholder stubs per grade pair. When you
+**Stub entries:** cuisine files ship with placeholder stubs per grade pair. When you
 research a pair, replace the stubs one-by-one with real verified items. **Do not delete
 stubs that you have not yet replaced** — a remaining stub signals that the slot is still
-empty and needs work. Once all 9 stubs are gone, keep adding verified items freely.
+empty and needs work. Once all stubs are gone, keep adding verified items freely.
 
 ---
 
@@ -580,7 +581,7 @@ marked complete but is actually incomplete.
 results are sparse, the agent interprets "I did not find much" as "there is not much to find",
 and stops. This is wrong. It means the search angle was poor, not that the data does not exist.
 
-**The rule:** If a pair has fewer than 9 verified items after the first search, **do not move
+**The rule:** If a pair has fewer than 8 verified items after the first search (fewer than 6 for Grains & Starches), **do not move
 on**. Instead, try a different research angle. You must exhaust at least 3 distinct approaches
 before concluding that a pair genuinely cannot be filled.
 
@@ -605,7 +606,7 @@ For **local** pairs that come up short:
 - Try regional focus: name each major region of the country and search "[region] local food production" — local production is often invisible at the national level but well-documented regionally
 - Try export statistics: "[country] food exports what products" — what a country exports is almost always what it produces locally in significant volume
 
-**Stop condition:** you may conclude a pair genuinely has fewer than 9 items only after having
+**Stop condition:** you may conclude a pair genuinely has fewer than 8 items (fewer than 6 for Grains & Starches) only after having
 tried at least 3 distinct search angles, none of which yielded additional candidates. Document
 this with a `<!-- Searched: ... — insufficient results after N angles -->` comment so the next
 agent knows the pair was genuinely attempted and not just skipped.
@@ -694,6 +695,72 @@ it never clutters the GUI.
 The only narrow exception: ingredients that are defined by a curing or drying process and
 sold as-is at a market (e.g. `Smoked paprika`, `Dried chilli`, `Cured ham`, `Pickled lime`).
 These are preserved ingredients, not dishes, and the preparation method is part of the name.
+
+---
+
+### ❌ Trap 12: Region-prefix in names, and "local"/"lokalt odlad" in names
+
+**Two related mistakes that clutter the name field:**
+
+#### 12a — Region-prefix names that are just the regular ingredient
+
+Adding a cuisine or region prefix to an ingredient's name is acceptable **only** when the
+prefix genuinely makes it a *different ingredient* — one that a shopper, cook, or botanist
+would recognise as distinct from the base ingredient without the prefix.
+
+**Acceptable (different ingredient):**
+```
+name: "Jerusalem artichoke"   # not an artichoke at all; a separate tuber species
+name: "Scotch bonnet"         # a specific chilli cultivar, not just any chilli
+name: "Kalamata olive"        # a specific Greek variety with distinct taste and texture
+name: "Hokkaido pumpkin"      # a specific Japanese cultivar sold by that name globally
+```
+
+**Not acceptable (same ingredient, different origin):**
+```
+name: "Cuban black beans"       → name: "Black beans"
+name: "Belgian strawberries"    → name: "Strawberries"
+name: "Romanian sunflower oil"  → name: "Sunflower oil"
+name: "Cuban tomatoes"          → name: "Tomatoes"
+name_sv: "Kubanska bönor"       → name_sv: "Svarta bönor"
+```
+
+If the only thing the prefix tells you is where the ingredient is grown or made, **drop the
+prefix**. The cuisine file already tells the AI this ingredient is used in Cuban / Belgian /
+Romanian cooking. A redundant origin label in the name adds nothing and misleads the user
+into thinking it is a special variety.
+
+**The test:** Could you substitute a specimen from another country and the dish would be the
+same? If yes, drop the prefix and put any origin notes in the `notes` field.
+
+---
+
+#### 12b — "Local", "locally grown", "lokalt odlad", "lokal" in name or name_sv
+
+The `grade: local` field already communicates that an ingredient is locally produced.
+Writing "Lokalt odlad tomat" or "Locally grown tomato" in `name` or `name_sv` is redundant
+noise that clutters the GUI badge — the user sees "Lokalt odlad tomat" where they should
+just see "Tomat".
+
+**Wrong:**
+```
+name: "Locally grown tomato"
+name_sv: "Lokalt odlad tomat"
+name: "Local black beans"
+name_sv: "Lokal majs"
+```
+
+**Right:**
+```
+name: "Tomato"            notes: "locally grown; key in Cuban cooking year-round"
+name_sv: "Tomat"
+name: "Black beans"       notes: "locally cultivated staple"
+name_sv: "Svarta bönor"
+```
+
+**Rule:** `name` and `name_sv` must never contain the words "local", "locally", "lokalt",
+"lokal", "locally grown", "locally produced", or any equivalent. The grade field handles
+that signal. The name field must be the clean ingredient name only.
 
 ---
 
