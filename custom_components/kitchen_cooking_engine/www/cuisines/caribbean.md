@@ -53,15 +53,15 @@ Guyana Dept. of Public Information rice exports Q1 2022 (49,304t); Caribbean Agr
 ### Proteins — Local
 <!-- Produced, raised or caught in the Caribbean islands -->
 
-- {id: carib_prot_loc_flying_fish, grade: local, rating: 9, name: "Flying Fish", name_sv: "Lokalt fångad flygfisk", notes: "local catch; Caught in Barbados and eastern Caribbean waters; central to Barbados food identity and economy; highly seasonal fishery"}
+- {id: carib_prot_loc_flying_fish, grade: local, rating: 9, name: "Flying Fish", name_sv: "Flygfisk", notes: "local catch; Caught in Barbados and eastern Caribbean waters; central to Barbados food identity and economy; highly seasonal fishery"}
 - {id: carib_prot_loc_spiny_lobster, grade: local, rating: 8, name: "Caribbean Spiny Lobster", name_sv: "Karibisk tagghummar", notes: "Panulirus argus harvested throughout Caribbean reefs; important export and restaurant species; Bahamas and Jamaica major fishing areas"}
 - {id: carib_prot_loc_red_snapper, grade: local, rating: 7, name: "Red Snapper", name_sv: "Röd snapper", notes: "Lutjanus campechanus caught across Caribbean; popular grilled, steamed or escovitched (vinegar-pickled); key inshore fishery species"}
-- {id: carib_prot_loc_conch, grade: local, rating: 7, name: "Queen Conch", name_sv: "Lokalt skördad konk", notes: "local harvest; Strombus gigas harvested from seagrass beds; Bahamas largest producer; major regional protein source and export product"}
+- {id: carib_prot_loc_conch, grade: local, rating: 7, name: "Queen Conch", name_sv: "Konk", notes: "local harvest; Strombus gigas harvested from seagrass beds; Bahamas largest producer; major regional protein source and export product"}
 - {id: carib_prot_loc_tilapia, grade: local, rating: 6, name: "Tilapia", name_sv: "Tilapia", notes: "farmed; FAO: aquaculture target species for Caribbean expansion; freshwater ponds in Jamaica, Trinidad; CARICOM aims 30% aquaculture growth"}
 - {id: carib_prot_loc_yellowfin_tuna, grade: local, rating: 6, name: "Yellowfin Tuna", name_sv: "Gulfenad tonfisk", notes: "Thunnus albacares caught in Caribbean pelagic waters; important for artisanal and commercial fisheries in Trinidad, Barbados, Jamaica"}
-- {id: carib_prot_loc_local_chicken, grade: local, rating: 5, name: "Local Broiler Chicken", name_sv: "Lokal broilerkyckling", notes: "Poultry production on most islands including Jamaica, Trinidad and Dominican Republic; local farms supply domestic market partially"}
+- {id: carib_prot_loc_local_chicken, grade: local, rating: 5, name: "Broiler Chicken", name_sv: "Broilerkyckling", notes: "Poultry production on most islands including Jamaica, Trinidad and Dominican Republic; local farms supply domestic market partially"}
 - {id: carib_prot_loc_crab, grade: local, rating: 4, name: "Land crab", name_sv: "Landkrabba", notes: "Cardisoma guanhumi; mud crab is a different species; harvested in Trinidad, Barbados, Guyana; eaten curried; Cardisoma guanhumi (land crab) harvested in Trinidad, Barbados, Guyana; eaten curried or stewed; seasonal delicacy"}
-- {id: carib_prot_loc_local_goat, grade: local, rating: 3, name: "Local Goat", name_sv: "Lokalt uppfött get", notes: "farmed; Small-scale goat farming across Caribbean islands; Jamaica and Trinidad main producers; mostly free-range on hillside farms"}
+- {id: carib_prot_loc_local_goat, grade: local, rating: 3, name: "Goat", name_sv: "Get", notes: "farmed; Small-scale goat farming across Caribbean islands; Jamaica and Trinidad main producers; mostly free-range on hillside farms"}
 
 ## Produce
 
@@ -117,7 +117,7 @@ Guyana Dept. of Public Information rice exports Q1 2022 (49,304t); Caribbean Agr
 - {id: carib_grain_sig_cornmeal, grade: signature, rating: 6, name: "Cornmeal", name_sv: "Majsmjöl", notes: "Base of cou-cou, turn cornmeal (St Lucia), polenta-like dishes; also used for corn porridge in Jamaica and cornmeal pudding desserts"}
 - {id: carib_grain_sig_channa, grade: signature, rating: 5, name: "Chickpea", name_sv: "Kikärta", notes: "Channa; heart of Trinidad doubles (most popular street food in Trinidad & Tobago); curry channa widespread in Indo-Caribbean cooking across Guyana, Suriname, and Jamaica; besan (chickpea flour) used for bara flatbread and fried snacks"}
 - {id: carib_grain_sig_pelau_rice, grade: signature, rating: 5, name: "Pelau", name_sv: "Pelau", notes: "One-Pot Rice; Trinidadian one-pot dish: caramel-browned meat, pigeon peas, rice and coconut milk; also made with chicken or beef; national comfort food"}
-- {id: carib_grain_sig_pone, grade: signature, rating: 4, name: "Pone", name_sv: "Pone (karibiskt stärkelsebröd)", notes: "Traditional Caribbean baked sweet cake made from grated cassava or sweet potato mixed with coconut milk, brown sugar, and mixed spice; popular across Barbados, Trinidad, Jamaica, and Guyana; dense and moist; sold at markets and homes; Barbadian coconut pone especially well-known"}
+- {id: carib_grain_sig_pone, grade: signature, rating: 4, name: "Pone", name_sv: "Pone", notes: "Traditional Caribbean baked sweet cake made from grated cassava or sweet potato mixed with coconut milk, brown sugar, and mixed spice; popular across Barbados, Trinidad, Jamaica, and Guyana; dense and moist; sold at markets and homes; Barbadian coconut pone especially well-known"}
 
 ### Grains & Starches — Bulk
 <!-- Highest statistical grain consumption across Caribbean (FAO/Helgi Library 2022-23) -->
@@ -141,7 +141,7 @@ Guyana Dept. of Public Information rice exports Q1 2022 (49,304t); Caribbean Agr
 - {id: carib_grain_loc_green_banana, grade: local, rating: 6, name: "Green Banana", name_sv: "Grön banan", notes: "Grown on all islands; consumed boiled as starchy provision in St Lucia, Martinique, Dominica; called 'green figs' in eastern Caribbean"}
 - {id: carib_grain_loc_arrowroot, grade: local, rating: 6, name: "Arrowroot", name_sv: "Arrowrot", notes: "Maranta arundinacea; St. Vincent & the Grenadines is one of the world's largest arrowroot producers; light starch used in biscuits, porridge, and as a thickener; historically a major Caribbean export crop; grown across windward islands; used in traditional Caribbean baking"}
 - {id: carib_grain_loc_sweet_potato_flour, grade: local, rating: 4, name: "Sweet Potato", name_sv: "Sötpotatisstärkelse", notes: "starch use; Grown locally across Caribbean; used as starch in puddings and pone (sweet baked pudding); also eaten boiled or roasted"}
-- {id: carib_grain_loc_corn_local, grade: local, rating: 4, name: "Local Corn", name_sv: "Lokalt majs", notes: "field corn; Grown in Cuba, Dominican Republic and Haiti; local production of cornmeal for cou-cou and porridge; supplemented by US imports"}
+- {id: carib_grain_loc_corn_local, grade: local, rating: 4, name: "Corn", name_sv: "Majs", notes: "field corn; Grown in Cuba, Dominican Republic and Haiti; local production of cornmeal for cou-cou and porridge; supplemented by US imports"}
 - {id: carib_grain_loc_breadfruit_starch, grade: local, rating: 3, name: "Breadfruit", name_sv: "Brödfrukten", notes: "starch use; Used as starchy side across Caribbean; CARDI research into breadfruit flour as wheat-flour substitute; baked, roasted or boiled as carb replacement"}
 - {id: carib_grain_loc_plantain_dry, grade: local, rating: 3, name: "Dried plantain", name_sv: "Torkad matbanan", notes: "tostones are a fried dish made from plantain; green plantain also sliced, twice-fried, or dried into chips; Green plantain sliced, twice-fried as tostones (Cuba, Puerto Rico) or dried into chips; processed locally and sold across Caribbean markets"}
 

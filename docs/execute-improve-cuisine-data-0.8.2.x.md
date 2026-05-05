@@ -144,3 +144,22 @@ Fix naming violations in cuban.md (lokalt odlad in names), update IMPROVE_CUISIN
 - [x] IMPROVE_CUISINE_DATA.md: lowered min items floor (8 for most, 6 for Grains), added Trap 12 (naming rules: no local/lokalt odlad in names, no region-prefix unless genuinely distinct ingredient)
 - [x] CHORES: version bumped 0.8.2.17 → 0.8.2.18; generator ran clean (PANEL_VERSION 485)
 - [ ] Doublets task (task 2) — still pending; see Session 7 for counts per file
+
+## Session 9 — Cuisine Conformance Verification (2026-05-05)
+
+### Task
+Verify all 25 non-stub cuisine files (afghan through romanian) conform to IMPROVE_CUISINE_DATA.md at ≥90%.
+
+### Status
+- [x] Wrote automated validator (checks frontmatter, section counts, item floor, name violations, doublets)
+- [x] algerian.md: fixed "Algerian Local Goat" → "Goat", "Local Broiler Chicken" → "Broiler Chicken"
+- [x] azerbaijani.md: fixed parentheses in name_sv for suzme_sig
+- [x] balkan.md: fixed "Local Kajmak" → "Kajmak"
+- [x] bangladeshi.md: fixed parentheses in Atta and Maida names
+- [x] bengali.md: fixed parentheses in Atta name
+- [x] cantonese.md: fixed "Guangdong Local Pigs" → "Pigs", "Guangdong Locally Grown Rice" → "Rice", "Local Taro" → "Taro"
+- [x] caribbean.md: fixed 6 "local/lokalt" violations + 1 parentheses (pone name_sv)
+- [x] colombian.md: fixed "Onion — Bulb" → "Bulb onion", "African Palm Oil — Colombian" → "African palm oil"
+- [x] All 25 files pass validator ✅ (0 issues remaining)
+- [x] Generator ran clean (98 cuisines, 13247 ingredients, PANEL_VERSION 487)
+- [x] CHORES: version bumped 0.8.2.18 → 0.8.2.19; USER_GUIDE version updated

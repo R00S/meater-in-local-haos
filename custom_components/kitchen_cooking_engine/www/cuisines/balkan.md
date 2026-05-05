@@ -177,7 +177,7 @@ Sources:
 
 ### Dairy, Oils & Sauces — Local
 <!-- Searched: "Balkans local dairy production regional cheese varieties Serbia Bosnia Croatia traditional dairy farming" -->
-- {id: local_kajmak, grade: local, rating: 9, name: "Local Kajmak", name_sv: "Lokalt kajmak", notes: "Mountain Dairy; Made from raw, unpasteurised milk of mountain-grazed cattle in Serbia, Bosnia and Montenegro; artisan production primarily in highland areas; Zlatibor and Pešter plateau are renowned kajmak regions"}
+- {id: local_kajmak, grade: local, rating: 9, name: "Kajmak", name_sv: "Kajmak", notes: "Mountain dairy; made from raw, unpasteurised milk of mountain-grazed cattle in Serbia, Bosnia and Montenegro; artisan production primarily in highland areas; Zlatibor and Pešter plateau are renowned kajmak regions"}
 - {id: sjenicki_sir, grade: local, rating: 8, name: "Sjenički Sir", name_sv: "Sjenički Sir", notes: "Sjenica Cheese; White brined sheep's milk cheese from the Pešter plateau around Sjenica, Serbia; strong flavour, crumbly texture; Protected Geographical Indication product; one of Serbia's most celebrated regional cheeses"}
 - {id: livanjski_sir, grade: local, rating: 7, name: "Livanjski Sir", name_sv: "Livanjski Sir", notes: "Livno Cheese; Hard cow-and-sheep mixed milk cheese from Livno, Bosnia; aged minimum 3 months; inspired by Swiss Gruyère techniques; GI-protected; the most internationally known Bosnian cheese"}
 - {id: pag_cheese, grade: local, rating: 6, name: "Paški Sir", name_sv: "Paški Sir", notes: "Pag Cheese; Award-winning hard sheep's milk cheese from the island of Pag, Croatia; distinctive flavour from aromatic herbs grazed by local sheep; PDO-protected; one of Croatia's most celebrated products"}
