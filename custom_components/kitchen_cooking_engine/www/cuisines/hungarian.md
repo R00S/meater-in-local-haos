@@ -9,238 +9,210 @@ region_name: "European"
 region_icon: 🏰
 description: "Hungarian cuisine is built around paprika, slow-cooked meats, and sour cream — rich, hearty stews like gulyás and pörkölt define its character, shaped by the traditions of the Great Plain and Central European farming culture."
 description_sv: "Ungerskt kök bygger på paprika, långkokt kött och gräddfil — rika, mustiga grytor som gulyás och pörkölt definierar köket, format av Stora Slättens traditioner och centraleuropeisk jordbrukskultur."
-research_done: 0
+research_done: 1
 ---
 
 ## Research notes
 
-⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
-Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Produce — Signature", etc.).
-Each pair requires its own dedicated research pass. Do NOT combine pairs.
-See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
+Sources: Magyar konyha jellegzetes húsételek (native search), Hungary meat consumption statistics 2022/2023 (trademagazin.hu / Hungarian Central Statistical Office KSH), Magyarország helyi állattenyésztés halászat vadhús (native), Hungary fish/eggs/turkey stats, Hungarian vegetable research (native + FAOSTAT), Hungary fruit/veg consumption Freshfel Europe 2022-2023, Hungary grain/cereal KSH FAOSTAT, Hungary dairy KSH+Eurostat 2022, Magyar konyha tejtermék és zsírok (native), Hungarian spice/seasoning market (ReportLinker / Helgi Library).
+
+Key findings: Poultry 36.3 kg/capita, pork 29.3 kg, beef 3.1 kg (KSH 2023). Eggs 13.39 kg/capita. Milk ~172 kg/capita. Butter only 1.5 kg/capita (below EU avg). Flour 82 kg/capita. Bread 45 kg/capita. Mangalica, goose liver (libamáj) and sweet paprika are Hungary's most celebrated hungarikum food products. Hungary is a major exporter of paprika, goose liver, game meat and sunflower.
 
 
 ## Proteins
 
 ### Proteins — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Hungarian signature dishes", "Hungarian iconic traditional proteins", "Hungarian food culture defining meats fish" -->
+<!-- Searched: "Magyar konyha jellegzetes húsételek ikonikus fehérjék gulyás pörkölt paprikás csirke halászlé hagyományos magyar ételek legfontosabb húsok halak" -->
 
-- {id: stub_prot_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Protein 1", name_sv: "[UTKAST] Signatur Protein 1", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Protein 2", name_sv: "[UTKAST] Signatur Protein 2", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Protein 3", name_sv: "[UTKAST] Signatur Protein 3", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Protein 4", name_sv: "[UTKAST] Signatur Protein 4", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Protein 5", name_sv: "[UTKAST] Signatur Protein 5", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Protein 6", name_sv: "[UTKAST] Signatur Protein 6", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Protein 7", name_sv: "[UTKAST] Signatur Protein 7", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Protein 8", name_sv: "[UTKAST] Signatur Protein 8", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Protein 9", name_sv: "[UTKAST] Signatur Protein 9", notes: "STUB — replace with verified Hungarian research"}
+- {id: beef, grade: signature, rating: 9, name: Beef, name_sv: "Nötkött", notes: "marha; gulyásleves, marhapörkölt, tokány; the defining protein of Hungarian stew culture"}
+- {id: pork, grade: signature, rating: 8, name: Pork, name_sv: "Fläsk", notes: "sertés; sertéspörkölt, disznótoros, kolbász; most-used meat in Hungarian home cooking"}
+- {id: chicken, grade: signature, rating: 7, name: Chicken, name_sv: "Kyckling", notes: "csirke; paprikás csirke (iconic signature dish with sour cream); rántott csirke; central to Hungarian table"}
+- {id: goose_liver, grade: signature, rating: 8, name: Goose liver, name_sv: "Gåslever", notes: "libamáj; hízott libamáj (foie gras) is a Hungarian world-export and a celebrated national delicacy; hungarikum"}
+- {id: goose, grade: signature, rating: 7, name: Goose, name_sv: "Gås", notes: "liba; sült liba on Saint Martin's Day (November 11) — a national culinary tradition; töltött liba"}
+- {id: carp, grade: signature, rating: 7, name: Carp, name_sv: "Karp", notes: "ponty; halászlé (fisherman's paprika soup), rántott ponty at Christmas; the freshwater fish icon"}
+- {id: duck, grade: signature, rating: 5, name: Duck, name_sv: "Anka", notes: "kacsa; sült kacsa is a festive preparation; kacsacomb roasted with vegetables"}
+- {id: catfish, grade: signature, rating: 5, name: Catfish, name_sv: "Mal", notes: "harcsa; harcsapaprikás, halászlé; a key freshwater catch of the Danube and Tisza rivers"}
+- {id: zander, grade: signature, rating: 4, name: Zander, name_sv: "Gös", notes: "süllő; halászlé, pan-fried; Balaton lake specialty and common Tisza and Danube catch"}
 
 ### Proteins — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Hungarian meat consumption kg per capita", "Hungarian FAO food balance protein", "Hungarian most consumed protein statistics" -->
+<!-- Searched: "Hungary meat consumption per capita statistics 2022 2023 pork chicken beef most consumed protein FAO food balance Hungary"; "Hungary fish consumption per capita eggs turkey rabbit freshwater fish statistics most eaten Hungary" -->
 
-- {id: stub_prot_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Protein 1", name_sv: "[UTKAST] Bulk Protein 1", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Protein 2", name_sv: "[UTKAST] Bulk Protein 2", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Protein 3", name_sv: "[UTKAST] Bulk Protein 3", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Protein 4", name_sv: "[UTKAST] Bulk Protein 4", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Protein 5", name_sv: "[UTKAST] Bulk Protein 5", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Protein 6", name_sv: "[UTKAST] Bulk Protein 6", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Protein 7", name_sv: "[UTKAST] Bulk Protein 7", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Protein 8", name_sv: "[UTKAST] Bulk Protein 8", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Protein 9", name_sv: "[UTKAST] Bulk Protein 9", notes: "STUB — replace with verified Hungarian research"}
+- {id: eggs, grade: bulk, rating: 9, name: Eggs, name_sv: "Ägg", notes: "tojás; 13.39 kg/capita (2022); used in baking, fresh pasta, rántotta (scrambled eggs), breakfast dishes"}
+- {id: turkey, grade: bulk, rating: 7, name: Turkey, name_sv: "Kalkon", notes: "pulyka; ~5–6 kg/capita/year; significant in Hungarian poultry consumption after chicken"}
+- {id: tuna, grade: bulk, rating: 6, name: Tuna, name_sv: "Tonfisk", notes: "tonhal; primarily canned; widely consumed; available in all supermarkets; imported"}
+- {id: salmon, grade: bulk, rating: 6, name: Salmon, name_sv: "Lax", notes: "lazac; imported; consumed as fillet and smoked; among top non-freshwater fish in Hungary"}
+- {id: herring, grade: bulk, rating: 5, name: Herring, name_sv: "Sill", notes: "hering; marinated and pickled herring consumed; Central European preservation tradition"}
+- {id: mackerel, grade: bulk, rating: 5, name: Mackerel, name_sv: "Makrill", notes: "makréla; canned mackerel widely sold; affordable protein source in Hungarian households"}
+- {id: pangasius, grade: bulk, rating: 5, name: Pangasius, name_sv: "Pangasius", notes: "pangasius; imported farmed fish from Vietnam; cheap and widely sold in Hungarian supermarkets"}
+- {id: sardines, grade: bulk, rating: 4, name: Sardines, name_sv: "Sardiner", notes: "szardínia; canned sardines sold in supermarkets; budget bulk protein option"}
 
 ### Proteins — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Hungarian livestock farming animals raised", "Hungarian fishing industry fish species caught", "Hungarian game animals hunted wild" -->
+<!-- Searched: "Magyarország helyi állattenyésztés halászat vadhús termelés hazai állatfajták szarvasmarha sertés halak vadállatok pászta" -->
 
-- {id: stub_prot_loc_1, grade: local, rating: 9, name: "[STUB] Local Protein 1", name_sv: "[UTKAST] Lokalt Protein 1", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_loc_2, grade: local, rating: 8, name: "[STUB] Local Protein 2", name_sv: "[UTKAST] Lokalt Protein 2", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_loc_3, grade: local, rating: 7, name: "[STUB] Local Protein 3", name_sv: "[UTKAST] Lokalt Protein 3", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_loc_4, grade: local, rating: 6, name: "[STUB] Local Protein 4", name_sv: "[UTKAST] Lokalt Protein 4", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_loc_5, grade: local, rating: 5, name: "[STUB] Local Protein 5", name_sv: "[UTKAST] Lokalt Protein 5", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_loc_6, grade: local, rating: 4, name: "[STUB] Local Protein 6", name_sv: "[UTKAST] Lokalt Protein 6", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_loc_7, grade: local, rating: 3, name: "[STUB] Local Protein 7", name_sv: "[UTKAST] Lokalt Protein 7", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_loc_8, grade: local, rating: 2, name: "[STUB] Local Protein 8", name_sv: "[UTKAST] Lokalt Protein 8", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_prot_loc_9, grade: local, rating: 1, name: "[STUB] Local Protein 9", name_sv: "[UTKAST] Lokalt Protein 9", notes: "STUB — replace with verified Hungarian research"}
+- {id: mangalica, grade: local, rating: 9, name: Mangalica, name_sv: "Mangalica", notes: "Hungarian heritage curly-haired pig breed; distinctive heavily marbled fat pork; hungarikum; unique flavor profile; major export"}
+- {id: wild_boar, grade: local, rating: 8, name: Wild boar, name_sv: "Vildsvin", notes: "vaddisznó; hunted in Hungarian forests; vaddisznópörkölt, game sausage; significant venison export"}
+- {id: red_deer, grade: local, rating: 7, name: Red deer, name_sv: "Kronhjort", notes: "gímszarvas; major game animal in Hungary; szarvasgulyas, venison pörkölt; significant wild venison export"}
+- {id: hungarian_grey_cattle, grade: local, rating: 6, name: Hungarian Grey cattle, name_sv: "Ungersk grå boskap", notes: "Magyar Szürke Szarvasmarha; ancient native steppe breed; lean, grass-fed beef; hungarikum heritage animal"}
+- {id: roe_deer, grade: local, rating: 6, name: Roe deer, name_sv: "Rådjur", notes: "őz; hunted game; lean venison; Alföld and forest regions; exported"}
+- {id: pike, grade: local, rating: 6, name: Pike, name_sv: "Gädda", notes: "csuka; caught in Lake Balaton, Tisza and Danube; roasted and in paprikás preparations"}
+- {id: silver_carp, grade: local, rating: 5, name: Silver carp, name_sv: "Silverkarp", notes: "busa (silver/bighead carp); farmed in Hungarian fish ponds; also used in halászlé"}
+- {id: racka_lamb, grade: local, rating: 5, name: Racka lamb, name_sv: "Rackalamm", notes: "bárány; from the native Hungarian Racka curly-horned sheep; regional specialty in the Great Plain"}
+- {id: grass_carp, grade: local, rating: 4, name: Grass carp, name_sv: "Graskarp", notes: "amur; farmed in freshwater ponds across Hungary; consumed fried or in soups"}
 
 
 ## Produce
 
 ### Produce — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Hungarian signature dishes vegetables", "Hungarian iconic vegetable ingredients", "Hungarian traditional vegetable preparations" -->
+<!-- Searched: "Magyar konyha jellegzetes zöldségek paprika paradicsom hagyma fokhagyma káposzta magyar ételek alapja ikonikus konyha zöldségek"; "Magyarország ikonikus zöldségek burgonya répa petrezselyem lecsó zöldpaprika paradicsom hagyma gulyáshoz klasszikus magyar konyha" -->
 
-- {id: stub_veg_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Vegetable 1", name_sv: "[UTKAST] Signatur Grönsak 1", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Vegetable 2", name_sv: "[UTKAST] Signatur Grönsak 2", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Vegetable 3", name_sv: "[UTKAST] Signatur Grönsak 3", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Vegetable 4", name_sv: "[UTKAST] Signatur Grönsak 4", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Vegetable 5", name_sv: "[UTKAST] Signatur Grönsak 5", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Vegetable 6", name_sv: "[UTKAST] Signatur Grönsak 6", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Vegetable 7", name_sv: "[UTKAST] Signatur Grönsak 7", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Vegetable 8", name_sv: "[UTKAST] Signatur Grönsak 8", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Vegetable 9", name_sv: "[UTKAST] Signatur Grönsak 9", notes: "STUB — replace with verified Hungarian research"}
+- {id: bell_pepper, grade: signature, rating: 9, name: Bell pepper, name_sv: "Paprika", notes: "zöldpaprika, TV paprika, pritamin; lecsó base, töltött paprika (stuffed pepper), pörkölt alap; also dried and ground for spice"}
+- {id: onion, grade: signature, rating: 9, name: Onion, name_sv: "Lök", notes: "vöröshagyma; the base of every gulyás, pörkölt, lecsó; the most fundamental vegetable in Hungarian cooking"}
+- {id: tomato, grade: signature, rating: 8, name: Tomato, name_sv: "Tomat", notes: "paradicsom; lecsó, pörkölt alap, töltött paprika sauce; Szentes region a major production centre"}
+- {id: cabbage, grade: signature, rating: 8, name: Cabbage, name_sv: "Kål", notes: "káposzta; töltött káposzta (iconic stuffed cabbage), savanyú káposzta (sauerkraut), székelykáposzta, káposztás tészta"}
+- {id: potato, grade: signature, rating: 8, name: Potato, name_sv: "Potatis", notes: "burgonya/krumpli; paprikás krumpli, gulyás; ~54 kg/capita/year; the starchy backbone of many everyday meals"}
+- {id: carrot, grade: signature, rating: 7, name: Carrot, name_sv: "Morot", notes: "sárgarépa; húsleves (clear beef soup), gulyás; indispensable in the Hungarian soup vegetable bundle"}
+- {id: parsley_root, grade: signature, rating: 7, name: Parsley root, name_sv: "Persiljerot", notes: "petrezselyemgyökér; húsleves, zöldségleves; Central European root vegetable cooked for the root, not just the herb"}
+- {id: garlic, grade: signature, rating: 6, name: Garlic, name_sv: "Vitlök", notes: "fokhagyma; kolbász, pörkölt, lángos topping; present in nearly every Hungarian savory preparation"}
+- {id: celeriac, grade: signature, rating: 6, name: Celeriac, name_sv: "Rotselleri", notes: "zellergumó; húsleves, levesek; part of the classic Hungarian soup-base vegetable trio (répa, petrezselyem, zeller)"}
 
 ### Produce — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Hungarian vegetable consumption kg per capita", "Hungarian most consumed vegetables statistics", "Hungarian FAO food balance vegetables" -->
+<!-- Searched: "Hungary vegetable fruit consumption per capita statistics 2022 2023 most consumed vegetables KSH FAOSTAT food balance Hungary" -->
 
-- {id: stub_veg_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Vegetable 1", name_sv: "[UTKAST] Bulk Grönsak 1", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Vegetable 2", name_sv: "[UTKAST] Bulk Grönsak 2", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Vegetable 3", name_sv: "[UTKAST] Bulk Grönsak 3", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Vegetable 4", name_sv: "[UTKAST] Bulk Grönsak 4", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Vegetable 5", name_sv: "[UTKAST] Bulk Grönsak 5", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Vegetable 6", name_sv: "[UTKAST] Bulk Grönsak 6", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Vegetable 7", name_sv: "[UTKAST] Bulk Grönsak 7", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Vegetable 8", name_sv: "[UTKAST] Bulk Grönsak 8", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Vegetable 9", name_sv: "[UTKAST] Bulk Grönsak 9", notes: "STUB — replace with verified Hungarian research"}
+- {id: mushroom, grade: bulk, rating: 7, name: Mushroom, name_sv: "Svamp", notes: "gomba; champignon dominant; gombapörkölt, gombaleves; sold fresh and canned year-round in Hungary"}
+- {id: banana, grade: bulk, rating: 7, name: Banana, name_sv: "Banan", notes: "banán; most consumed tropical/imported fruit in Hungary; high volume in retail"}
+- {id: peach, grade: bulk, rating: 7, name: Peach, name_sv: "Persika", notes: "őszibarack; among top 5 fruits consumed in Hungary; grown locally and imported"}
+- {id: orange, grade: bulk, rating: 6, name: Orange, name_sv: "Apelsin", notes: "narancs; widely consumed imported citrus; winter fruit staple in Hungary"}
+- {id: green_peas, grade: bulk, rating: 6, name: Green peas, name_sv: "Ärtor", notes: "zöldborsó; zöldborsóleves, főzelék; commonly used frozen and canned; everyday Hungarian vegetable"}
+- {id: sweet_corn, grade: bulk, rating: 6, name: Sweet corn, name_sv: "Majs", notes: "csemegekukorica; canned corn in salads, grilled corn at summer fairs; widely consumed"}
+- {id: green_beans, grade: bulk, rating: 6, name: Green beans, name_sv: "Gröna bönor", notes: "zöldbab; zöldbabos főzelék, salads; common household vegetable in Hungary"}
+- {id: beetroot, grade: bulk, rating: 5, name: Beetroot, name_sv: "Rödbeta", notes: "cékla; céklasaláta, pickled beet; commonly eaten as a salad or side dish"}
+- {id: kohlrabi, grade: bulk, rating: 5, name: Kohlrabi, name_sv: "Kålrabbi", notes: "karalábé; karalábéfőzelék; eaten raw with salt or cooked; Central European vegetable staple in Hungary"}
 
 ### Produce — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Hungarian vegetables grown locally agriculture", "Hungarian regional vegetable crops", "Hungarian foraging wild plants" -->
+<!-- Searched: "Magyarország helyi zöldségtermelés gyümölcsök alma szilva meggy szőlő dinnye paprika termesztés hungarikum hazai gyümölcsök zöldségek" -->
 
-- {id: stub_veg_loc_1, grade: local, rating: 9, name: "[STUB] Local Vegetable 1", name_sv: "[UTKAST] Lokalt Grönsak 1", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_loc_2, grade: local, rating: 8, name: "[STUB] Local Vegetable 2", name_sv: "[UTKAST] Lokalt Grönsak 2", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_loc_3, grade: local, rating: 7, name: "[STUB] Local Vegetable 3", name_sv: "[UTKAST] Lokalt Grönsak 3", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_loc_4, grade: local, rating: 6, name: "[STUB] Local Vegetable 4", name_sv: "[UTKAST] Lokalt Grönsak 4", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_loc_5, grade: local, rating: 5, name: "[STUB] Local Vegetable 5", name_sv: "[UTKAST] Lokalt Grönsak 5", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_loc_6, grade: local, rating: 4, name: "[STUB] Local Vegetable 6", name_sv: "[UTKAST] Lokalt Grönsak 6", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_loc_7, grade: local, rating: 3, name: "[STUB] Local Vegetable 7", name_sv: "[UTKAST] Lokalt Grönsak 7", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_loc_8, grade: local, rating: 2, name: "[STUB] Local Vegetable 8", name_sv: "[UTKAST] Lokalt Grönsak 8", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_veg_loc_9, grade: local, rating: 1, name: "[STUB] Local Vegetable 9", name_sv: "[UTKAST] Lokalt Grönsak 9", notes: "STUB — replace with verified Hungarian research"}
+- {id: apple, grade: local, rating: 9, name: Apple, name_sv: "Äpple", notes: "alma; Szabolcs-Szatmár-Bereg county is Hungary's main apple region; Szabolcsi alma hungarikum; major export"}
+- {id: sour_cherry, grade: local, rating: 8, name: Sour cherry, name_sv: "Surkörsbär", notes: "meggy; major Hungarian production; meggyleves (cold sour cherry soup), pies, meggypálinka (cherry brandy)"}
+- {id: grape, grade: local, rating: 7, name: Grape, name_sv: "Druva", notes: "szőlő; Tokaj, Eger, Villány wine regions world-renowned; consumed fresh and for wine production"}
+- {id: plum, grade: local, rating: 7, name: Plum, name_sv: "Plommon", notes: "szilva; Szabolcs area; base for szilva pálinka (plum brandy) and lekvár (jam); significant export"}
+- {id: watermelon, grade: local, rating: 6, name: Watermelon, name_sv: "Vattenmelon", notes: "görögdinnye; grown in Békés, Heves and Csongrád counties; major summer fruit with regional tradition"}
+- {id: apricot, grade: local, rating: 6, name: Apricot, name_sv: "Aprikos", notes: "kajszibarack; Gönci kajszibarack is a hungarikum PDO variety; base for kajszibarack pálinka"}
+- {id: cucumber, grade: local, rating: 6, name: Cucumber, name_sv: "Gurka", notes: "uborka; widely grown; uborkasaláta (cucumber salad), kovászos uborka (fermented dill pickle)"}
+- {id: horseradish, grade: local, rating: 5, name: Horseradish, name_sv: "Pepparrot", notes: "torma; Miskolc area production; served with boiled meats, fried fish, Easter cold cuts"}
+- {id: pear, grade: local, rating: 4, name: Pear, name_sv: "Päron", notes: "körte; grown locally in Dunántúl; consumed fresh and as körte pálinka base"}
 
 
 ## Grains & Starches
 
 ### Grains & Starches — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Hungarian signature grain dishes bread pasta rice", "Hungarian iconic starch preparations", "Hungarian traditional staple foods" -->
+<!-- Searched: "Magyar konyha ikonikus gabonaételek liszt nokedli galuska tészta kenyér kürtőskalács lángos hagyományos magyar gabona alapú ételek" -->
 
-- {id: stub_grain_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Grain 1", name_sv: "[UTKAST] Signatur Spannmål 1", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Grain 2", name_sv: "[UTKAST] Signatur Spannmål 2", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Grain 3", name_sv: "[UTKAST] Signatur Spannmål 3", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Grain 4", name_sv: "[UTKAST] Signatur Spannmål 4", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Grain 5", name_sv: "[UTKAST] Signatur Spannmål 5", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Grain 6", name_sv: "[UTKAST] Signatur Spannmål 6", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Grain 7", name_sv: "[UTKAST] Signatur Spannmål 7", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Grain 8", name_sv: "[UTKAST] Signatur Spannmål 8", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Grain 9", name_sv: "[UTKAST] Signatur Spannmål 9", notes: "STUB — replace with verified Hungarian research"}
+- {id: wheat_flour, grade: signature, rating: 9, name: Wheat flour, name_sv: "Vetemjöl", notes: "búzaliszt; base of nokedli (egg dumplings), palacsinta, lángos, pogácsa, kenyér; 82 kg/capita flour total"}
+- {id: egg_pasta, grade: signature, rating: 8, name: Egg pasta, name_sv: "Äggpasta", notes: "tojásos tészta; túrós csusza, káposztás tészta, mákos/diós tészta; sold fresh at markets; distinctly Hungarian"}
+- {id: rice, grade: signature, rating: 8, name: Rice, name_sv: "Ris", notes: "rizs; töltött káposzta filling, rizottó variants, köretek (side dishes); 5–7 kg/capita/year"}
+- {id: white_bread, grade: signature, rating: 7, name: White bread, name_sv: "Vitt bröd", notes: "fehér kenyér; daily staple at 45 kg/capita/year; crusty round loaves standard in Hungarian bakeries"}
+- {id: cornmeal, grade: signature, rating: 6, name: Cornmeal, name_sv: "Majsmjöl", notes: "kukoricaliszt/puliszka; polenta-like puliszka from Transylvanian-Hungarian tradition; corn-based porridge"}
+- {id: semolina, grade: signature, rating: 6, name: Semolina, name_sv: "Mannagryn", notes: "búzadara; grízpuding (semolina pudding), grízkása (porridge); traditional Hungarian dessert ingredient"}
+- {id: rye_bread, grade: signature, rating: 5, name: Rye bread, name_sv: "Rågbröd", notes: "rozskenyér; traditional farmhouse bread; kovászos rozskenyér (sourdough rye); deeper flavored heritage bread"}
+- {id: buckwheat, grade: signature, rating: 4, name: Buckwheat, name_sv: "Bovete", notes: "hajdina; traditional kása (porridge) variant; rural Hungary heritage grain; now revived in organic farming"}
 
 ### Grains & Starches — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Hungarian grain consumption kg per capita", "Hungarian rice wheat bread statistics", "Hungarian FAO food balance cereals" -->
+<!-- Searched: "Hungary grain cereal consumption per capita 2022 2023 wheat rice pasta bread consumption statistics KSH FAOSTAT"; "Hungary most consumed starchy foods lentils legumes beans bread rolls potato flour consumption statistics everyday staple" -->
 
-- {id: stub_grain_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Grain 1", name_sv: "[UTKAST] Bulk Spannmål 1", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Grain 2", name_sv: "[UTKAST] Bulk Spannmål 2", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Grain 3", name_sv: "[UTKAST] Bulk Spannmål 3", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Grain 4", name_sv: "[UTKAST] Bulk Spannmål 4", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Grain 5", name_sv: "[UTKAST] Bulk Spannmål 5", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Grain 6", name_sv: "[UTKAST] Bulk Spannmål 6", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Grain 7", name_sv: "[UTKAST] Bulk Spannmål 7", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Grain 8", name_sv: "[UTKAST] Bulk Spannmål 8", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Grain 9", name_sv: "[UTKAST] Bulk Spannmål 9", notes: "STUB — replace with verified Hungarian research"}
+- {id: bread_rolls, grade: bulk, rating: 8, name: Bread rolls, name_sv: "Frallor", notes: "zsemle, kifli; daily breakfast staple; sold at every Hungarian bakery; distinct product from loaf bread"}
+- {id: dry_beans, grade: bulk, rating: 8, name: Dry beans, name_sv: "Torkade bönor", notes: "száraz bab; babgulyás, babfőzelék; traditional Hungarian pulse staple; part of the ~12–15 kg/capita legume total"}
+- {id: dry_pasta, grade: bulk, rating: 7, name: Dry pasta, name_sv: "Torr pasta", notes: "száraz durum tészta; imported; widely consumed; distinct from fresh Hungarian egg pasta"}
+- {id: lentils, grade: bulk, rating: 7, name: Lentils, name_sv: "Linser", notes: "lencse; lencseleves eaten on New Year's Day for luck; everyday soup base; high consumption"}
+- {id: yellow_split_peas, grade: bulk, rating: 6, name: Yellow split peas, name_sv: "Gula ärter", notes: "sárga borsó; sárgaborsó-főzelék; traditional Hungarian pulse dish; widely eaten"}
+- {id: chickpeas, grade: bulk, rating: 5, name: Chickpeas, name_sv: "Kikärtor", notes: "csicseriborsó; increasing consumption; used in soups and adopted international dishes"}
 
 ### Grains & Starches — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Hungarian grain crops grown", "Hungarian cereal farming production", "Hungarian locally milled flour regional varieties" -->
+<!-- Searched: "Magyarország gabonaféle termelés búza árpa rozs zab hajdina kukorica helyi termesztés mezőgazdasági hungarikum hazai gabonafélék" -->
 
-- {id: stub_grain_loc_1, grade: local, rating: 9, name: "[STUB] Local Grain 1", name_sv: "[UTKAST] Lokalt Spannmål 1", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_loc_2, grade: local, rating: 8, name: "[STUB] Local Grain 2", name_sv: "[UTKAST] Lokalt Spannmål 2", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_loc_3, grade: local, rating: 7, name: "[STUB] Local Grain 3", name_sv: "[UTKAST] Lokalt Spannmål 3", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_loc_4, grade: local, rating: 6, name: "[STUB] Local Grain 4", name_sv: "[UTKAST] Lokalt Spannmål 4", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_loc_5, grade: local, rating: 5, name: "[STUB] Local Grain 5", name_sv: "[UTKAST] Lokalt Spannmål 5", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_loc_6, grade: local, rating: 4, name: "[STUB] Local Grain 6", name_sv: "[UTKAST] Lokalt Spannmål 6", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_loc_7, grade: local, rating: 3, name: "[STUB] Local Grain 7", name_sv: "[UTKAST] Lokalt Spannmål 7", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_loc_8, grade: local, rating: 2, name: "[STUB] Local Grain 8", name_sv: "[UTKAST] Lokalt Spannmål 8", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_grain_loc_9, grade: local, rating: 1, name: "[STUB] Local Grain 9", name_sv: "[UTKAST] Lokalt Spannmål 9", notes: "STUB — replace with verified Hungarian research"}
+- {id: barley, grade: local, rating: 7, name: Barley, name_sv: "Korn", notes: "árpa; grown across the Great Plain; sörárpa (brewing barley) and food grain; significant agricultural crop"}
+- {id: rye, grade: local, rating: 6, name: Rye, name_sv: "Råg", notes: "rozs; locally grown grain crop; rozsliszt for farmhouse breads; cooler northern soils; living tradition"}
+- {id: oats, grade: local, rating: 6, name: Oats, name_sv: "Havre", notes: "zab; grown in Northern and Western Hungary; zabkása (oatmeal), zabkorpa; increasing health-food consumption"}
+- {id: spelt, grade: local, rating: 5, name: Spelt, name_sv: "Spelt", notes: "tönkölybúza; grown on organic Hungarian farms; ancient grain revival; used in specialty artisan breads"}
+- {id: millet, grade: local, rating: 5, name: Millet, name_sv: "Hirs", notes: "köles; traditional Hungarian grain; köleskása porridge; heritage ingredient of the Great Plain region"}
+- {id: einkorn, grade: local, rating: 4, name: Einkorn wheat, name_sv: "Enkornsvete", notes: "alakor búza; ancient heritage wheat variety cultivated on Hungarian specialty farms; distinct grain profile"}
 
 
 ## Dairy, Oils & Sauces
 
 ### Dairy, Oils & Sauces — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Hungarian signature dairy dishes", "Hungarian iconic cheese butter cream", "Hungarian traditional dairy products" -->
+<!-- Searched: "Magyar konyha jellegzetes tejtermékek tejföl túró liptói zsír libazsír ikonikus magyar tejféle vaj olaj pörkölt"; "Hungarian cuisine signature dairy fats oils sour cream lard Pálpusztai goose fat iconic dairy products" -->
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Dairy 1", name_sv: "[UTKAST] Signatur Mejeri 1", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Dairy 2", name_sv: "[UTKAST] Signatur Mejeri 2", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Dairy 3", name_sv: "[UTKAST] Signatur Mejeri 3", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Dairy 4", name_sv: "[UTKAST] Signatur Mejeri 4", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Dairy 5", name_sv: "[UTKAST] Signatur Mejeri 5", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Dairy 6", name_sv: "[UTKAST] Signatur Mejeri 6", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Dairy 7", name_sv: "[UTKAST] Signatur Mejeri 7", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Dairy 8", name_sv: "[UTKAST] Signatur Mejeri 8", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Dairy 9", name_sv: "[UTKAST] Signatur Mejeri 9", notes: "STUB — replace with verified Hungarian research"}
+- {id: sour_cream, grade: signature, rating: 9, name: Sour cream, name_sv: "Gräddfil", notes: "tejföl; THE defining dairy of Hungarian cooking; paprikás csirke sauce, soup topping, stuffed pancakes; richer than Western sour cream"}
+- {id: quark, grade: signature, rating: 8, name: Quark, name_sv: "Kvarg", notes: "túró; túrós csusza (cottage pasta), túrógombóc (curd dumplings), túrós rétes; fresh curd central to sweet and savory dishes"}
+- {id: pork_lard, grade: signature, rating: 8, name: Pork lard, name_sv: "Ister", notes: "zsír (sertészsír); traditional cooking fat; zsíroskenyér (lard on bread with paprika and onion); deeply rural Hungarian tradition"}
+- {id: goose_fat, grade: signature, rating: 7, name: Goose fat, name_sv: "Gåsfett", notes: "libazsír; used for frying and bread spread; central to Jewish Hungarian cuisine and St Martin's Day goose cooking"}
+- {id: butter, grade: signature, rating: 7, name: Butter, name_sv: "Smör", notes: "vaj; baking, kenyérkenés, pogácsa; ~1.5 kg/capita/year (well below EU average)"}
+- {id: palpusztai, grade: signature, rating: 7, name: Pálpusztai cheese, name_sv: "Pálpusztaost", notes: "Pálpusztai sajt; intensely aromatic soft spreadable cheese; most famous Hungarian cheese; hungarikum"}
+- {id: liptoi, grade: signature, rating: 6, name: Liptói cheese, name_sv: "Liptóiost", notes: "Liptói sajt; spreadable sheep's curd cheese traditionally from Liptó; often seasoned with caraway seeds"}
+- {id: sunflower_oil, grade: signature, rating: 6, name: Sunflower oil, name_sv: "Solrosolja", notes: "napraforgóolaj; most used plant-based cooking oil in Hungary; frying, salads; Hungary a major sunflower producer"}
+- {id: pumpkin_seed_oil, grade: signature, rating: 5, name: Pumpkin seed oil, name_sv: "Pumpafrökärnolja", notes: "tökmagolaj; Western Hungary and Styrian border specialty; dark green finishing oil; used in salads"}
 
 ### Dairy, Oils & Sauces — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Hungarian dairy consumption kg per capita", "Hungarian milk cheese butter statistics", "Hungarian FAO food balance dairy" -->
+<!-- Searched: "Hungary dairy consumption per capita 2022 2023 milk butter cheese yogurt cream kg KSH FAOSTAT Hungarian dairy statistics" -->
 
-- {id: stub_dairy_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Dairy 1", name_sv: "[UTKAST] Bulk Mejeri 1", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Dairy 2", name_sv: "[UTKAST] Bulk Mejeri 2", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Dairy 3", name_sv: "[UTKAST] Bulk Mejeri 3", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Dairy 4", name_sv: "[UTKAST] Bulk Mejeri 4", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Dairy 5", name_sv: "[UTKAST] Bulk Mejeri 5", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Dairy 6", name_sv: "[UTKAST] Bulk Mejeri 6", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Dairy 7", name_sv: "[UTKAST] Bulk Mejeri 7", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Dairy 8", name_sv: "[UTKAST] Bulk Mejeri 8", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Dairy 9", name_sv: "[UTKAST] Bulk Mejeri 9", notes: "STUB — replace with verified Hungarian research"}
+- {id: milk, grade: bulk, rating: 9, name: Milk, name_sv: "Mjölk", notes: "tej; ~172 kg/capita (2022) including all dairy equivalents; dominant dairy in Hungary by volume"}
+- {id: yogurt, grade: bulk, rating: 8, name: Yogurt, name_sv: "Yoghurt", notes: "joghurt; ~7–10 kg/capita; sold throughout Hungary; widespread as breakfast and snack staple"}
+- {id: cream, grade: bulk, rating: 7, name: Cream, name_sv: "Grädde", notes: "tejszín (heavy cream); distinct from tejföl; used in baking, sauces, Gundel-style preparations and confectionery"}
+- {id: emmental, grade: bulk, rating: 7, name: Emmental cheese, name_sv: "Emmentalerost", notes: "Ementáli; popular hard cheese for melting and cheese plates; widely consumed in Hungary; ~8–10 kg/capita cheese total"}
+- {id: processed_cheese, grade: bulk, rating: 6, name: Processed cheese, name_sv: "Smältost", notes: "ömlesztett sajt; spreadable cheese triangles and rolls; widely sold in Hungarian supermarkets and lunchboxes"}
+- {id: kefir, grade: bulk, rating: 6, name: Kefir, name_sv: "Kefir", notes: "kefir; fermented milk drink; widely consumed for digestive health; sold in all Hungarian supermarkets"}
+- {id: edam_cheese, grade: bulk, rating: 5, name: Edam cheese, name_sv: "Edamostost", notes: "edámi sajt; mild semi-hard cheese; commonly purchased in Hungarian supermarkets"}
+- {id: mayonnaise, grade: bulk, rating: 5, name: Mayonnaise, name_sv: "Majonnäs", notes: "majonéz; widely consumed condiment; used in majonézes saláta (potato-based salads), sandwiches"}
 
 ### Dairy, Oils & Sauces — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Hungarian dairy farming local production", "Hungarian regional cheese varieties", "Hungarian local dairy breeds" -->
+<!-- Searched: "Magyarország helyi tejtermék termelés tejfajták sajt mangalica zsír libamáj zsír helyi különlegességek hungarikum tejtermék PDO" -->
 
-- {id: stub_dairy_loc_1, grade: local, rating: 9, name: "[STUB] Local Dairy 1", name_sv: "[UTKAST] Lokalt Mejeri 1", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 8, name: "[STUB] Local Dairy 2", name_sv: "[UTKAST] Lokalt Mejeri 2", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 7, name: "[STUB] Local Dairy 3", name_sv: "[UTKAST] Lokalt Mejeri 3", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 6, name: "[STUB] Local Dairy 4", name_sv: "[UTKAST] Lokalt Mejeri 4", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 5, name: "[STUB] Local Dairy 5", name_sv: "[UTKAST] Lokalt Mejeri 5", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 4, name: "[STUB] Local Dairy 6", name_sv: "[UTKAST] Lokalt Mejeri 6", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 3, name: "[STUB] Local Dairy 7", name_sv: "[UTKAST] Lokalt Mejeri 7", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 2, name: "[STUB] Local Dairy 8", name_sv: "[UTKAST] Lokalt Mejeri 8", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_dairy_loc_9, grade: local, rating: 1, name: "[STUB] Local Dairy 9", name_sv: "[UTKAST] Lokalt Mejeri 9", notes: "STUB — replace with verified Hungarian research"}
+- {id: trappista, grade: local, rating: 8, name: Trappista cheese, name_sv: "Trappistost", notes: "Trappista sajt; mild semi-hard cheese; produced by Hungarian dairies since 19th century; most widely sold cheese type"}
+- {id: mangalica_lard, grade: local, rating: 7, name: Mangalica lard, name_sv: "Mangalicaister", notes: "mangalica zsír; rendered from Mangalica heritage pigs; distinctive flavor; high oleic acid; hungarikum; export product"}
+- {id: parenyica, grade: local, rating: 7, name: Parenyica cheese, name_sv: "Parenyicaost", notes: "Parenyica; smoked stretched cheese rolled in rope shape; local specialty of Northern Hungary; sheep or mixed milk"}
+- {id: duck_fat, grade: local, rating: 6, name: Duck fat, name_sv: "Andfett", notes: "kacsazsír; rendered duck fat; used for frying and as bread spread; traditional rural cooking fat; distinct from goose fat"}
+- {id: rapeseed_oil, grade: local, rating: 6, name: Rapeseed oil, name_sv: "Rapsolja", notes: "repceolaj; locally produced from Hungarian canola crops; used for cooking and food industry processing"}
+- {id: orda, grade: local, rating: 6, name: Orda, name_sv: "Orda", notes: "orda; sweet ricotta-like whey cheese; Hungarian and Transylvanian tradition; made from cow or sheep whey; dairy byproduct"}
+- {id: sheep_milk_cheese, grade: local, rating: 5, name: Sheep milk cheese, name_sv: "Fårost", notes: "juhtúró; from locally farmed Racka and other Hungarian sheep; regional highland specialty"}
+- {id: buffalo_milk, grade: local, rating: 5, name: Buffalo milk, name_sv: "Buffelmjölk", notes: "bivalytej; produced along Danube-Tisza region; rich, fatty; used for specialty cheese and fresh consumption"}
+- {id: soured_milk, grade: local, rating: 4, name: Soured milk, name_sv: "Surmjölk", notes: "aludttej; traditional naturally fermented milk; consumed with bread or as a cooling summer drink"}
 
 
 ## Spices, Nuts & Seasonings
 
 ### Spices, Nuts & Seasonings — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Hungarian signature spice blends", "Hungarian defining herbs and spices", "Hungarian iconic seasoning flavour profile" -->
+<!-- Searched: "Magyar konyha jellegzetes fűszerek paprika kömény kapor majoranna pirospaprika ikonikus magyar fűszerek magyar íz" -->
 
-- {id: stub_spice_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Spices 1", name_sv: "[UTKAST] Signatur Krydda 1", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Spices 2", name_sv: "[UTKAST] Signatur Krydda 2", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Spices 3", name_sv: "[UTKAST] Signatur Krydda 3", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Spices 4", name_sv: "[UTKAST] Signatur Krydda 4", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Spices 5", name_sv: "[UTKAST] Signatur Krydda 5", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Spices 6", name_sv: "[UTKAST] Signatur Krydda 6", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Spices 7", name_sv: "[UTKAST] Signatur Krydda 7", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Spices 8", name_sv: "[UTKAST] Signatur Krydda 8", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Spices 9", name_sv: "[UTKAST] Signatur Krydda 9", notes: "STUB — replace with verified Hungarian research"}
+- {id: sweet_paprika, grade: signature, rating: 9, name: Sweet paprika, name_sv: "Söt paprikapulver", notes: "édes fűszerpaprika; Kalocsa and Szeged production; THE defining spice of Hungary; gulyás, pörkölt, halászlé; hungarikum"}
+- {id: hot_paprika, grade: signature, rating: 8, name: Hot paprika, name_sv: "Stark paprikapulver", notes: "csípős pirospaprika; the hot variety; adds heat to pörkölt and szegedi halászlé; distinct product from sweet paprika"}
+- {id: caraway_seeds, grade: signature, rating: 8, name: Caraway seeds, name_sv: "Kumminfrön", notes: "kömény; bread, savanyúságok (pickles), gulyás, köménymagleves (caraway soup); earthy aromatic note"}
+- {id: dill, grade: signature, rating: 7, name: Dill, name_sv: "Dill", notes: "kapor; tökfőzelék, uborkasaláta, tejfölös mártás; fresh herb central to Hungarian summer cooking"}
+- {id: marjoram, grade: signature, rating: 7, name: Marjoram, name_sv: "Mejram", notes: "majoranna; kolbász, hurka, lencsefőzelék; dried herb fundamental in Hungarian sausage-making tradition"}
+- {id: bay_leaf, grade: signature, rating: 6, name: Bay leaf, name_sv: "Lagerblad", notes: "babérlevél; pörkölt, gulyás, savanyúság; classic aromatic in Hungarian braises and pickling"}
+- {id: black_pepper, grade: signature, rating: 6, name: Black pepper, name_sv: "Svartpeppar", notes: "fekete bors; universal spice in Hungarian cooking; levesek, húsételek, savanyúságok"}
+- {id: tarragon, grade: signature, rating: 5, name: Tarragon, name_sv: "Dragon", notes: "tárkony; tárkonyos csirke (tarragon chicken), fehér mártások; distinctive anise note in Hungarian poultry sauces"}
+- {id: savory, grade: signature, rating: 5, name: Savory, name_sv: "Kyndel", notes: "borsikafű/csombor; bab ételek, lencseleves; traditional herb in Hungarian bean and pulse dishes"}
 
 ### Spices, Nuts & Seasonings — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Hungarian most used condiments seasonings statistics", "Hungarian salt sugar spice consumption", "Hungarian everyday seasoning ingredients" -->
+<!-- Searched: "Hungary most used seasonings condiments statistics salt black pepper everyday cooking bulk consumption spices Hungary supermarket sales" -->
 
-- {id: stub_spice_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Spices 1", name_sv: "[UTKAST] Bulk Krydda 1", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Spices 2", name_sv: "[UTKAST] Bulk Krydda 2", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Spices 3", name_sv: "[UTKAST] Bulk Krydda 3", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Spices 4", name_sv: "[UTKAST] Bulk Krydda 4", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Spices 5", name_sv: "[UTKAST] Bulk Krydda 5", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Spices 6", name_sv: "[UTKAST] Bulk Krydda 6", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Spices 7", name_sv: "[UTKAST] Bulk Krydda 7", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Spices 8", name_sv: "[UTKAST] Bulk Krydda 8", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Spices 9", name_sv: "[UTKAST] Bulk Krydda 9", notes: "STUB — replace with verified Hungarian research"}
+- {id: salt, grade: bulk, rating: 9, name: Salt, name_sv: "Salt", notes: "só; universal seasoning; essential for curing, pickling and everyday cooking; 13.56 kg/capita condiments total (2023)"}
+- {id: cinnamon, grade: bulk, rating: 7, name: Cinnamon, name_sv: "Kanel", notes: "fahéj; sütemények (pastries), kürtőskalács, szilvás pite; widely used in Hungarian baking and Christmas sweets"}
+- {id: white_pepper, grade: bulk, rating: 7, name: White pepper, name_sv: "Vitpeppar", notes: "fehér bors; distinct from black pepper; used in cream sauces, light soups and stuffed cabbage filling"}
+- {id: allspice, grade: bulk, rating: 6, name: Allspice, name_sv: "Kryddpeppar", notes: "szegfűbors; savanyúságok (pickling), vadételek (game); commonly used in Hungarian preservation traditions"}
+- {id: nutmeg, grade: bulk, rating: 6, name: Nutmeg, name_sv: "Muskot", notes: "szerecsendió; besamelmártás (bechamel), tésztafélék, sütemények; common spice-cabinet staple in Hungary"}
+- {id: cloves, grade: bulk, rating: 5, name: Cloves, name_sv: "Kryddnejlika", notes: "szegfűszeg; forralt bor (mulled wine), szilvásgombóc, pickling; Christmas and festive cooking"}
+- {id: vanilla, grade: bulk, rating: 5, name: Vanilla, name_sv: "Vanilj", notes: "vanília; sütemények, pudingok, krémek; Hungarian pastry tradition uses vanilla widely in sweet preparations"}
+- {id: ginger, grade: bulk, rating: 5, name: Ginger, name_sv: "Ingefära", notes: "gyömbér; mézeskalács (Hungarian gingerbread — Christmas tradition); also used fresh in modern Hungarian cooking"}
 
 ### Spices, Nuts & Seasonings — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Hungarian herbs grown locally", "Hungarian spice production native plants", "Hungarian foraged herbs regional flavourings" -->
+<!-- Searched: "Magyarország helyi fűszernövény termesztés koriander kapor fehér mák dió mogyoró napraforgómag hazai fűszerek olajos magvak termelés" -->
 
-- {id: stub_spice_loc_1, grade: local, rating: 9, name: "[STUB] Local Spices 1", name_sv: "[UTKAST] Lokalt Krydda 1", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_loc_2, grade: local, rating: 8, name: "[STUB] Local Spices 2", name_sv: "[UTKAST] Lokalt Krydda 2", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_loc_3, grade: local, rating: 7, name: "[STUB] Local Spices 3", name_sv: "[UTKAST] Lokalt Krydda 3", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_loc_4, grade: local, rating: 6, name: "[STUB] Local Spices 4", name_sv: "[UTKAST] Lokalt Krydda 4", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_loc_5, grade: local, rating: 5, name: "[STUB] Local Spices 5", name_sv: "[UTKAST] Lokalt Krydda 5", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_loc_6, grade: local, rating: 4, name: "[STUB] Local Spices 6", name_sv: "[UTKAST] Lokalt Krydda 6", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_loc_7, grade: local, rating: 3, name: "[STUB] Local Spices 7", name_sv: "[UTKAST] Lokalt Krydda 7", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_loc_8, grade: local, rating: 2, name: "[STUB] Local Spices 8", name_sv: "[UTKAST] Lokalt Krydda 8", notes: "STUB — replace with verified Hungarian research"}
-- {id: stub_spice_loc_9, grade: local, rating: 1, name: "[STUB] Local Spices 9", name_sv: "[UTKAST] Lokalt Krydda 9", notes: "STUB — replace with verified Hungarian research"}
+- {id: poppy_seeds, grade: local, rating: 9, name: Poppy seeds, name_sv: "Vallmofrön", notes: "mák; Hajdúság region major production; mákos bejgli (Christmas roll), mákos tészta; Hungary is a top global poppy seed producer"}
+- {id: walnuts, grade: local, rating: 8, name: Walnuts, name_sv: "Valnötter", notes: "dió; Northern and Southern Transdanubia, Mátra hills; diós bejgli, diós tészta; significant export nut crop"}
+- {id: sunflower_seeds, grade: local, rating: 7, name: Sunflower seeds, name_sv: "Solrosfrön", notes: "napraforgómag; Hungary is a major world sunflower producer; roasted as snack and pressed for oil"}
+- {id: coriander_seeds, grade: local, rating: 6, name: Coriander seeds, name_sv: "Korianderfrön", notes: "koriandermag; grown on the Alföld and Dunántúl; used in spice blends, curing and sausage making"}
+- {id: hazelnuts, grade: local, rating: 5, name: Hazelnuts, name_sv: "Hasselnötter", notes: "mogyoró; grown in Northern Hungary and Dunántúl; used in cakes, confectionery and chocolate spreads"}
+- {id: mustard_seeds, grade: local, rating: 5, name: Mustard seeds, name_sv: "Senapsfrön", notes: "mustármag; locally grown; basis for mustár (mustard condiment) and used in pickling"}
+- {id: elderflower, grade: local, rating: 5, name: Elderflower, name_sv: "Fläderblomma", notes: "bodzavirág; foraged or garden-grown in spring; bodza szörp (elderflower syrup) is an iconic Hungarian summer drink"}
+- {id: lemon_balm, grade: local, rating: 4, name: Lemon balm, name_sv: "Citronmeliss", notes: "citromfű; widely cultivated in Hungarian gardens; herbal tea, flavoring in sweet dishes and liqueurs"}
