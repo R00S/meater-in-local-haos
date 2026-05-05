@@ -133,3 +133,14 @@ Fix ingredient stubs (task 3) and replace australian.md sausage_roll with pikele
 - azerbaijani.md: 29, balkan.md: 3, bangladeshi.md: 21, basque.md: 8, bengali.md: 31
 - burmese.md: 6, cajun_creole.md: 26, cameroonian.md: 32, canadian.md: 3, cantonese.md: 5
 - caribbean.md: 28, chilean.md: 6
+
+## Session 8 — Naming Fix + Docs Update + CHORES (2026-05-05)
+
+### Task
+Fix naming violations in cuban.md (lokalt odlad in names), update IMPROVE_CUISINE_DATA.md docs, run CHORES.
+
+### Status
+- [x] cuban.md: removed "lokalt odlad" / "lokalt" from 4 ingredient names (Spices section) → v0.8.2.17
+- [x] IMPROVE_CUISINE_DATA.md: lowered min items floor (8 for most, 6 for Grains), added Trap 12 (naming rules: no local/lokalt odlad in names, no region-prefix unless genuinely distinct ingredient)
+- [x] CHORES: version bumped 0.8.2.17 → 0.8.2.18; generator ran clean (PANEL_VERSION 485)
+- [ ] Doublets task (task 2) — still pending; see Session 7 for counts per file
