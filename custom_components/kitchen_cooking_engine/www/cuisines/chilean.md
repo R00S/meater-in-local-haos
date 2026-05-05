@@ -120,7 +120,7 @@ Sources: SERNAPESCA 2022, ODEPA 2022, USDA FAS Chile reports, FAO Food Balance S
 - {id: chilean_humitas, grade: signature, rating: 7, name: "Humitas", name_sv: "Humitas", notes: "Corn Dough; Pre-Columbian Andean corn preparation; grated choclo wrapped in corn husks; boiled or steamed; summer tradition"}
 - {id: chilean_mote, grade: signature, rating: 7, name: "Mote", name_sv: "Mote", notes: "Hominy-style hulled wheat; in mote con huesillo (iconic Chilean summer drink/dessert); Mapuche tradition"}
 - {id: chilean_hallulla, grade: signature, rating: 6, name: "Hallulla", name_sv: "Hallulla", notes: "Flat Roll; Second most popular Chilean bread after marraqueta; flatter, denser; sold at all Chilean panaderías"}
-- {id: chilean_porotos, grade: signature, rating: 6, name: "Porotos", name_sv: "Porotos", notes: "Chilean Beans; Used in porotos con rienda and porotos granados; traditional staple since pre-Columbian times in Chile"}
+- {id: chilean_porotos, grade: signature, rating: 6, name: "Beans", name_sv: "Bönor", notes: "Porotos; cranberry/pinto bean types; used in porotos con rienda and porotos granados; traditional staple since pre-Columbian times in Chile"}
 - {id: chilean_pan_amasado, grade: signature, rating: 5, name: "Pan Amasado", name_sv: "Pan Amasado", notes: "Traditional hand-kneaded Chilean country bread; baked in wood-fired ovens in rural Chile; rich with lard"}
 - {id: chilean_mote_trigo, grade: signature, rating: 4, name: "Mote con Huesillo Mix", name_sv: "Mote con Huesillo-mix", notes: "Combination of hulled wheat + dried peach (huesillo); Chile's most popular traditional summer street drink"}
 

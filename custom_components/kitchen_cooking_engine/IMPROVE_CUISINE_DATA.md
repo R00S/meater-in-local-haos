@@ -764,6 +764,72 @@ that signal. The name field must be the clean ingredient name only.
 
 ---
 
+### ❌ Trap 13: Using the local-language name instead of the English name in `name`
+
+The `name` field is the **English display name** shown in the GUI. Every user sees it — including
+users who have never heard of the cuisine and do not speak the cuisine's language. When you write
+`name: "Crema de leche"` instead of `name: "Heavy cream"`, the user sees a Spanish phrase where
+they should see a plain English ingredient name. When you write `name: "Queso Paipa"` instead of
+`name: "Paipa cheese"`, the user is left guessing what "Queso" means.
+
+**The rule:** `name` must be the ingredient's **English culinary name** — the name an
+English-speaking shopper or cook would recognise and search for. `name_sv` must be the
+**Swedish culinary name**.
+
+**Wrong:**
+```
+name: "Crema de leche"         # Spanish for heavy cream
+name: "Ají molido"             # Spanish for ground red pepper
+name: "Queso cremoso"          # Spanish for creamy fresh cheese
+name: "Queso Paipa"            # Spanish; should be Paipa cheese
+name: "Lori-Panir"             # Armenian; should be Lori cheese
+name: "Livanjski Sir"          # Bosnian; should be Livno cheese
+name: "Aframomum"              # Botanical genus; should be Grains of Selim
+```
+
+**Right:**
+```
+name: "Heavy cream"            notes: "crema de leche; used in pasta sauces, tarts, and chocotorta"
+name: "Ground red pepper"      notes: "ají molido; dried chili flakes; defining heat in chimichurri"
+name: "Cremoso cheese"         notes: "queso cremoso; mild spreadable fresh cheese; Argentine pizza cheese"
+name: "Paipa cheese"           notes: "queso Paipa; Colombia's only PDO cheese; semi-mature; Paipa, Boyacá"
+name: "Lori cheese"            notes: "Lori-Panir; firm cylindrical cheese from Lori province"
+name: "Livno cheese"           notes: "Livanjski Sir; GI-protected hard cheese from Livno, Bosnia"
+name: "Grains of Selim"        notes: "Aframomum daniellii/melegueta; West African false cardamom"
+```
+
+**The exception — accepted culinary loanwords:**
+
+Many ingredient names are borrowed from other languages and ARE the standard English name.
+These do NOT need to be translated, because the borrowed term *is* the English name:
+
+```
+name: "Ghee"          # English uses the Hindi word — this IS the English name
+name: "Bulgur"        # English uses the Turkish word
+name: "Harissa"       # English uses the Arabic word
+name: "Chimichurri"   # English uses the Spanish word
+name: "Roti"          # English uses the Hindi word
+name: "Dulce de leche"  # English uses the Spanish phrase for this specific product
+name: "Arequipe"      # English uses the Colombian term for this specific caramel product
+name: "Ají color"     # English uses this term for the specific Chilean pepper variety
+```
+
+**How to tell the difference:**
+
+Ask: *"Would an English-speaking cook searching for this ingredient type this exact term
+into a recipe website?"*
+
+- If yes → the loanword IS the English name. Keep it.
+- If no, and a plain English description exists → use the English description. Put the
+  local-language name in `notes`.
+
+**Same rule applies to `name_sv`:** it must be the Swedish culinary name, not a copy of
+the Spanish, Armenian, or Bosnian name. If there is no established Swedish word for a
+foreign ingredient, use the descriptive Swedish equivalent or keep the loanword if that
+IS how Swedish-speaking cooks know the ingredient.
+
+---
+
 ## A note on trust
 
 The people using this app are cooking real food for real people. When the app shows

@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 02 May 2026, 14:00 UTC
-Last Change: v0.8.2.19 - CHORES: cuisine conformance fixes (8 files, 25 total ✅)
+Last Change: v0.8.2.20 - Trap 13: translate names in cuisine files - CHORES: cuisine conformance fixes (8 files, 25 total ✅)
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "487"
+PANEL_VERSION = "488"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

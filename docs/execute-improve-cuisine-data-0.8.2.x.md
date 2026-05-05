@@ -134,7 +134,25 @@ Fix ingredient stubs (task 3) and replace australian.md sausage_roll with pikele
 - burmese.md: 6, cajun_creole.md: 26, cameroonian.md: 32, canadian.md: 3, cantonese.md: 5
 - caribbean.md: 28, chilean.md: 6
 
-## Session 8 — Naming Fix + Docs Update + CHORES (2026-05-05)
+## Session 10 — Translation Fix (Trap 13) (2026-05-05)
+
+### Task
+User noticed "Livanjski Sir" left in non-English (Bosnian) in name field.
+IMPROVE_CUISINE_DATA.md had no explicit rule about using English names.
+Task: add Trap 13 + fix all clear non-English names across 25 files.
+
+### Status
+- [x] IMPROVE_CUISINE_DATA.md: Added Trap 13 — name must be English culinary name; name_sv must be Swedish; foreign-language names go in notes unless they ARE the established English loanword
+- [x] balkan.md: "Livanjski Sir" → "Livno cheese" / "Livno-ost"
+- [x] armenian.md: "Lori-Panir" → "Lori cheese" / "Lori-ost" (note: also a doublet with lori_cheese in sig — pending doublet task 2)
+- [x] argentinian.md: "Queso sardo" → "Sardo cheese", "Queso cremoso" → "Cremoso cheese", "Crema de leche" → "Heavy cream", "Ají molido" → "Ground red pepper"
+- [x] colombian.md: "Queso Costeño" → "Costeño cheese", "Queso Campesino" → "Campesino cheese", "Ají Colombiano" → "Colombian chili sauce", "Queso Paipa" → "Paipa cheese", "Ají Criollo" → "Creole chili sauce", "Ají Pajarito" → "Pajarito pepper"
+- [x] chilean.md: "Porotos" → "Beans" / "Bönor"
+- [x] cameroonian.md: "Aframomum" → "Grains of Selim" / "Selimfrön"
+- [x] Generator ran clean (PANEL_VERSION 488)
+- [x] Version bumped 0.8.2.19 → 0.8.2.20
+
+
 
 ### Task
 Fix naming violations in cuban.md (lokalt odlad in names), update IMPROVE_CUISINE_DATA.md docs, run CHORES.
