@@ -122,15 +122,15 @@ maluku.ro / vatra.ro / davesgarden.com (herbs); infoferma.ro (dairy).
 ### Grains & Starches — Signature
 <!-- Searched: "Romanian cuisine signature grain starch mămăligă cornmeal iconic bread cozonac dishes traditional staples" -->
 
-- {id: cornmeal_mamaliga, grade: signature, rating: 9, name: "Mămăligă", name_sv: "Mămăligă", notes: "THE defining Romanian grain staple; thick polenta-like porridge served with smântână, telemea, stews; national icon"}
-- {id: cozonac, grade: signature, rating: 8, name: "Cozonac", name_sv: "Cozonac", notes: "Festive sweet bread with walnut/poppy/cocoa filling; Christmas and Easter; iconic Romanian celebration bread"}
+- {id: cornmeal_mamaliga, grade: signature, rating: 9, name: "Romanian Cornmeal Porridge", name_sv: "Rumänsk majsgröt", notes: "THE defining Romanian grain staple; thick polenta-like porridge served with smântână, telemea, stews; national icon"}
+- {id: cozonac, grade: signature, rating: 8, name: "Romanian Sweet Easter Bread", name_sv: "Rumänskt påskbröd", notes: "Festive sweet bread with walnut/poppy/cocoa filling; Christmas and Easter; iconic Romanian celebration bread"}
 - {id: wheat_bread, grade: signature, rating: 7, name: "Wheat bread", name_sv: "Vete bröd", notes: "85 kg/capita/year bread consumption; one of highest in EU; served with every meal"}
 - {id: rice_sarmale, grade: signature, rating: 7, name: "Rice", name_sv: "Ris", notes: "Used inside sarmale with pork; ciorbă; pilaf; essential in Romanian festive cooking"}
-- {id: placinta, grade: signature, rating: 6, name: "Plăcintă", name_sv: "Plăcintă", notes: "Flat pastry dough with cheese, potato, spinach, or cabbage fillings; traditional bakery staple"}
-- {id: coliva, grade: signature, rating: 5, name: "Colivă", name_sv: "Colivă", notes: "Boiled wheat with walnuts, honey and sugar; made for memorial services (parastas); deeply cultural/religious"}
+- {id: placinta, grade: signature, rating: 6, name: "Romanian Filled Flatbread", name_sv: "Rumänskt fyllt flatbröd", notes: "Flat pastry dough with cheese, potato, spinach, or cabbage fillings; traditional bakery staple"}
+- {id: coliva, grade: signature, rating: 5, name: "Romanian Memorial Wheat Dish", name_sv: "Rumänsk minnesveterätt", notes: "Boiled wheat with walnuts, honey and sugar; made for memorial services (parastas); deeply cultural/religious"}
 - {id: polenta_bread, grade: signature, rating: 5, name: "Cornbread", name_sv: "Majsbröd", notes: "Traditional cornmeal flatbread/porridge bread from rural Romania; Oltenia and Muntenia regions"}
-- {id: covrigi, grade: signature, rating: 4, name: "Covrigi", name_sv: "Covrigi", notes: "Romanian street food; boiled-then-baked sesame/poppy-seeded rings; ubiquitous in Romanian cities"}
-- {id: mucenici, grade: signature, rating: 4, name: "Mucenici", name_sv: "Mucenici", notes: "Figure-8 shaped boiled/baked wheat dough with walnut and honey; saint's day tradition (March 9)"}
+- {id: covrigi, grade: signature, rating: 4, name: "Romanian Seeded Ring Bread", name_sv: "Rumänska sesamringar", notes: "Romanian street food; boiled-then-baked sesame/poppy-seeded rings; ubiquitous in Romanian cities"}
+- {id: mucenici, grade: signature, rating: 4, name: "Romanian Honey Walnut Pastry Rings", name_sv: "Rumänska honungskringlor", notes: "Figure-8 shaped boiled/baked wheat dough with walnut and honey; saint's day tradition (March 9)"}
 
 ### Grains & Starches — Bulk
 <!-- Searched: "Romania grain cereal consumption per capita 2022 wheat corn flour bread statistics FAO INS" -->
@@ -166,15 +166,15 @@ maluku.ro / vatra.ro / davesgarden.com (herbs); infoferma.ro (dairy).
 ### Dairy, Oils & Sauces — Signature
 <!-- Searched: "Romanian cuisine signature dairy smântână telemea brânză de burduf unt traditional iconic dairy preparations" -->
 
-- {id: smantana, grade: signature, rating: 9, name: "Smântână", name_sv: "Gräddfil", notes: "THE defining Romanian dairy; used in every ciorbă, on sarmale, mămăligă, tocănițe; richer than Western sour cream"}
-- {id: telemea, grade: signature, rating: 9, name: "Telemea", name_sv: "Telemea", notes: "Brined sheep/cow/goat milk cheese; eaten with tomatoes, bread, salads, and stuffed in plăcinte; national icon"}
-- {id: branza_de_burduf, grade: signature, rating: 8, name: "Brânza de burduf", name_sv: "Brânza de burduf", notes: "IGP-protected; aged in fir bark from Carpathians (Bucegi, Bran area); sharp, piney; Carpathian shepherd heritage"}
-- {id: cas, grade: signature, rating: 7, name: "Caș", name_sv: "Caș", notes: "Unripened fresh sheep cheese; mild; eaten alone or in plăcinte cu brânză; transition stage to burduf"}
-- {id: urda, grade: signature, rating: 6, name: "Urda", name_sv: "Urda", notes: "Ricotta-like whey cheese from sheep or cow milk; used in sweet and savoury pastries; cottage cheese tradition"}
+- {id: smantana, grade: signature, rating: 9, name: "Romanian Sour Cream", name_sv: "Gräddfil", notes: "THE defining Romanian dairy; used in every ciorbă, on sarmale, mămăligă, tocănițe; richer than Western sour cream"}
+- {id: telemea, grade: signature, rating: 9, name: "Romanian Brined White Cheese", name_sv: "Rumänsk saltlagd vit ost", notes: "Brined sheep/cow/goat milk cheese; eaten with tomatoes, bread, salads, and stuffed in plăcinte; national icon"}
+- {id: branza_de_burduf, grade: signature, rating: 8, name: "Romanian Bark-Aged Sheep Cheese", name_sv: "Rumänsk fårost lagrad i furubark", notes: "IGP-protected; aged in fir bark from Carpathians (Bucegi, Bran area); sharp, piney; Carpathian shepherd heritage"}
+- {id: cas, grade: signature, rating: 7, name: "Romanian Fresh Curd Cheese", name_sv: "Rumänsk färsk ostmassa", notes: "Unripened fresh sheep cheese; mild; eaten alone or in plăcinte cu brânză; transition stage to burduf"}
+- {id: urda, grade: signature, rating: 6, name: "Romanian Whey Cheese", name_sv: "Rumänsk vassleost", notes: "Ricotta-like whey cheese from sheep or cow milk; used in sweet and savoury pastries; cottage cheese tradition"}
 - {id: sunflower_oil, grade: signature, rating: 7, name: "Sunflower oil", name_sv: "Solrosolja", notes: "Dominant cooking oil in Romania; replaced lard in 20th century; Romania is #2 EU sunflower producer"}
 - {id: lard, grade: signature, rating: 6, name: "Lard", name_sv: "Ister", notes: "Traditional cooking fat; untură cu jumări; spread on bread with onion; pig-slaughter tradition"}
 - {id: unt, grade: signature, rating: 5, name: "Butter", name_sv: "Smör", notes: "Used in cozonac, cornulețe (crescent pastries), and spreading; natural cultured cream butter tradition"}
-- {id: zacusca, grade: signature, rating: 6, name: "Zacuscă", name_sv: "Zacuscă", notes: "Preserve/sauce of roasted eggplant, peppers, and tomatoes; iconic Romanian condiment, jarred every autumn"}
+- {id: zacusca, grade: signature, rating: 6, name: "Romanian Roasted Vegetable Spread", name_sv: "Rumänsk rostad grönsaksröra", notes: "Preserve/sauce of roasted eggplant, peppers, and tomatoes; iconic Romanian condiment, jarred every autumn"}
 
 ### Dairy, Oils & Sauces — Bulk
 <!-- Searched: "Romania dairy consumption per capita 2022 milk butter cheese sour cream statistics INS FAO" -->
@@ -186,22 +186,22 @@ maluku.ro / vatra.ro / davesgarden.com (herbs); infoferma.ro (dairy).
 - {id: cheese_bulk, grade: bulk, rating: 7, name: "Cheese", name_sv: "Ost", notes: "~5–7 kg/capita/year; below EU average but growing; telemea and caș dominant locally; cașcaval widely used"}
 - {id: butter_bulk, grade: bulk, rating: 5, name: "Butter", name_sv: "Smör", notes: "~1.5–2.5 kg/capita/year; below EU avg of 4.28 kg; used in pastry and spreading; lower than dairy-heavy cultures"}
 - {id: yogurt_bulk, grade: bulk, rating: 7, name: "Yogurt", name_sv: "Yoghurt", notes: "High daily consumption; often homemade or locally produced; eaten with fruit, honey, or as a soup base"}
-- {id: fermented_milk, grade: bulk, rating: 6, name: "Lapte bătut", name_sv: "Filmjölk", notes: "Lapte bătut (cultured milk/buttermilk); drunk cold; especially in rural areas and summer; traditional probiotic"}
+- {id: fermented_milk, grade: bulk, rating: 6, name: "Romanian Fermented Milk", name_sv: "Filmjölk", notes: "Lapte bătut (cultured milk/buttermilk); drunk cold; especially in rural areas and summer; traditional probiotic"}
 - {id: cream, grade: bulk, rating: 4, name: "Cream", name_sv: "Grädde", notes: "Used in pastry, cakes, torturi; growing urban consumption; whipping cream for tarte și prăjituri"}
-- {id: cured_pork_fat, grade: bulk, rating: 5, name: "Slănină", name_sv: "Slänina", notes: "Slănina — salted/smoked pork back fat; spread on bread with onion; pig-slaughter staple; high rural consumption"}
+- {id: cured_pork_fat, grade: bulk, rating: 5, name: "Romanian Cured Pork Fat", name_sv: "Rumänskt rimmat ister", notes: "Slănina — salted/smoked pork back fat; spread on bread with onion; pig-slaughter staple; high rural consumption"}
 
 ### Dairy, Oils & Sauces — Local
 <!-- Searched: "România produse lactate locale telemea brânză de burduf producție regionale PDO GI zone Sibiu Bucovina" -->
 
-- {id: telemea_sibiu, grade: local, rating: 9, name: "Telemea de Sibiu", name_sv: "Telemea de Sibiu", notes: "Protected Geographical Indication; brined sheep cheese from Sibiu; traditional mountain pasture production"}
-- {id: branza_de_burduf_igp, grade: local, rating: 9, name: "Brânza de burduf de munte", name_sv: "Bergsfårost i furubark", notes: "IGP-protected; mountain shepherd cheese in fir bark; Bucegi, Bran, Vrancei, Câmpulung; artisan production"}
-- {id: cascaval_saveni, grade: local, rating: 7, name: "Cașcaval de Săveni", name_sv: "Cașcaval de Săveni", notes: "IGP-protected yellow semi-hard cheese from Săveni, Botoșani; stretched-curd technique; northern Romania"}
+- {id: telemea_sibiu, grade: local, rating: 9, name: "Sibiu Brined Sheep Cheese", name_sv: "Saltlagd fårost från Sibiu", notes: "Protected Geographical Indication; brined sheep cheese from Sibiu; traditional mountain pasture production"}
+- {id: branza_de_burduf_igp, grade: local, rating: 9, name: "Mountain Bark-Aged Sheep Cheese", name_sv: "Bergsfårost i furubark", notes: "IGP-protected; mountain shepherd cheese in fir bark; Bucegi, Bran, Vrancei, Câmpulung; artisan production"}
+- {id: cascaval_saveni, grade: local, rating: 7, name: "Săveni Stretched-Curd Cheese", name_sv: "Rumänsk halvhård ost från Săveni", notes: "IGP-protected yellow semi-hard cheese from Săveni, Botoșani; stretched-curd technique; northern Romania"}
 - {id: sheep_milk_local, grade: local, rating: 8, name: "Sheep milk", name_sv: "Fårmjölk", notes: "Romania has 2nd largest EU sheep/goat flock (11.7M); extensive Carpathian and lowland sheep dairy farming"}
 - {id: sunflower_oil_local, grade: local, rating: 8, name: "Sunflower oil", name_sv: "Solrosolja", notes: "Romania is #2 EU sunflower seed producer; Câmpia Română; major export and domestic use; extremely local"}
 - {id: buffalo_milk, grade: local, rating: 5, name: "Buffalo milk", name_sv: "Buffelmjölk", notes: "Water buffalo in Danube floodplains; rich cream and butter; traditional Transylvanian and Wallachian dairy"}
 - {id: goat_milk_local, grade: local, rating: 5, name: "Goat milk cheese", name_sv: "Getmjölksost", notes: "Widely produced in smallholder farms across the Carpathians; artisan soft and semi-hard varieties"}
 - {id: lard_local, grade: local, rating: 6, name: "Pork lard", name_sv: "Svinister", notes: "Rendered from locally raised pigs; slaughter tradition (Ignat, Dec 20); untură cu jumări (crackling spread)"}
-- {id: cas_local, grade: local, rating: 6, name: "Caș", name_sv: "Färsk fårost", notes: "Produced on summer mountain pastures (stâna); transhumance tradition; sold at rural fairs and markets"}
+- {id: cas_local, grade: local, rating: 6, name: "Fresh Sheep Curd Cheese", name_sv: "Färsk fårost", notes: "Produced on summer mountain pastures (stâna); transhumance tradition; sold at rural fairs and markets"}
 
 
 ## Spices, Nuts & Seasonings
@@ -210,7 +210,7 @@ maluku.ro / vatra.ro / davesgarden.com (herbs); infoferma.ro (dairy).
 <!-- Searched: "bucătărie românească condimente iconice usturoi mujdei leuștean mărar cimbru boia afumată paprika semnătură tradițională" -->
 
 - {id: lovage, grade: signature, rating: 9, name: "Lovage", name_sv: "Libbsticka", notes: "THE defining Romanian herb; used in virtually every ciorbă/sour soup; gives its characteristic aroma; nothing like it in other European cuisines"}
-- {id: garlic_spice, grade: signature, rating: 9, name: "Mujdei", name_sv: "Mujdei", notes: "Mujdei (garlic sauce: crushed garlic, water, salt, oil) served with fish, meats, mămăligă; used in sarmale and most savory dishes"}
+- {id: garlic_spice, grade: signature, rating: 9, name: "Romanian Garlic Sauce", name_sv: "Rumänsk vitlökssås", notes: "Mujdei (garlic sauce: crushed garlic, water, salt, oil) served with fish, meats, mămăligă; used in sarmale and most savory dishes"}
 - {id: dill, grade: signature, rating: 8, name: "Dill", name_sv: "Dill", notes: "Used in pickles (murături), potato dishes, soups, fresh salads, cheese; most used fresh herb in Romanian cooking"}
 - {id: paprika_boia, grade: signature, rating: 7, name: "Paprika", name_sv: "Paprika", notes: "Sweet and smoked paprika; color and flavor in ciorbe, papricaș, goulash-style stews; Hungarian-influenced Transylvania"}
 - {id: summer_savory, grade: signature, rating: 7, name: "Summer savory", name_sv: "Kyndel", notes: "Essential in sarmale, fasole (beans), bean soups; strong peppery thyme-like flavor; grown in home gardens"}
