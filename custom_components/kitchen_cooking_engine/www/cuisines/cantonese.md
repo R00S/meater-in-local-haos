@@ -3,245 +3,238 @@ KCE: CUISINE
 id: cantonese
 name: Cantonese
 name_sv: "Kantonesiskt"
-icon: 🥟
+icon: 🥢
 region: east_asian
 region_name: "East Asian"
-region_icon: 🥢
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-research_done: 0
+region_icon: 🏯
+description: "Cantonese cuisine, originating from Guangdong Province and Hong Kong, is defined by freshness, lightness, and the philosophy that high-quality ingredients need minimal intervention. Techniques like steaming, stir-frying with wok hei, and slow-simmering soups showcase natural flavours. Dim sum culture, roast meats, and silky rice noodles are its icons."
+description_sv: "Kantonesiskt kök, med ursprung i Guangdong-provinsen och Hongkong, präglas av fräschhet, lätthet och filosofin att högkvalitativa råvaror behöver minimalt med tillagning. Tekniker som ångning, wok-stekning och långsam soppkokning lyfter fram naturliga smaker. Dim sum-kulturen, rostat kött och silkeslena risnudlar är dess ikoner."
+research_done: 1
 ---
 
 ## Research notes
 
-⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
-Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Produce — Signature", etc.).
-Each pair requires its own dedicated research pass. Do NOT combine pairs.
-See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
+Research based on: Cantonese culinary traditions (Guangdong Province + Hong Kong), NBS China statistics,
+USDA 2024 China Fishery Products Report, Guangdong Statistical Yearbook 2022, Pearl River Fisheries
+Research Institute data, Xinhui chen pi industry statistics, Foshan Haitian condiment production data,
+and academic literature on Pearl River Delta aquaculture and agriculture.
+
+Key data points:
+- Guangdong 2022 rice output: ~5.2 million tonnes (NBS/People's Daily); planting area 2.3M ha
+- Guangdong oyster yield: >600,000 tons/year (Zhuhai, Jiangmen, Zhongshan)
+- Guangdong freshwater aquaculture: >13% of China's total (2017 benchmark, PRFRI)
+- Xinhui chen pi: >15,000 tons dried peel/year; ~70-80% of national production; industry >10B RMB/yr
+- HK per capita pork: ~52.6 kg/year (World Population Review 2022); seafood ~60-70 kg/year
+- China per capita rice consumption 2022: ~133 kg/year; Guangdong above national average
+- Foshan Haitian Flavouring & Food Co.: world's largest soy sauce producer, headquartered in Guangdong
+- Lee Kum Kee oyster sauce: founded 1888 in Xinhui, Guangdong; uses Pearl River Delta oysters
 
 
 ## Proteins
 
 ### Proteins — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Cantonese signature dishes", "Cantonese iconic traditional proteins", "Cantonese food culture defining meats fish" -->
+<!-- Culturally iconic proteins that define Cantonese / Guangdong / HK identity -->
 
-- {id: stub_prot_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Protein 1", name_sv: "[UTKAST] Signatur Protein 1", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Protein 2", name_sv: "[UTKAST] Signatur Protein 2", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Protein 3", name_sv: "[UTKAST] Signatur Protein 3", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Protein 4", name_sv: "[UTKAST] Signatur Protein 4", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Protein 5", name_sv: "[UTKAST] Signatur Protein 5", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Protein 6", name_sv: "[UTKAST] Signatur Protein 6", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Protein 7", name_sv: "[UTKAST] Signatur Protein 7", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Protein 8", name_sv: "[UTKAST] Signatur Protein 8", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Protein 9", name_sv: "[UTKAST] Signatur Protein 9", notes: "STUB — replace with verified Cantonese research"}
+- {id: char_siu, grade: signature, rating: 9, name: "Char siu pork", name_sv: "Char siu-fläsk", notes: "BBQ Pork; Honey-glazed roast pork shoulder/loin; cornerstone of Cantonese siu mei roast meat tradition and dim sum; found hanging in every Guangzhou/HK BBQ window"}
+- {id: steamed_whole_fish, grade: signature, rating: 9, name: "Whole fish", name_sv: "Hel fisk", notes: "typically garoupa (石斑魚) or sea bass; bought live at market and steamed with ginger and scallion; Typically garoupa or sea bass, steamed with ginger and scallion, finished with hot soy and oil; embodies Cantonese freshness philosophy — live fish cooked minutes after tank"}
+- {id: dried_scallops, grade: signature, rating: 9, name: "Dried scallops", name_sv: "Torkade pilgrimsmusslor", notes: "瑤柱 yiu chu; Premium Cantonese luxury ingredient; freeze-dried or sun-dried scallops impart deep marine umami to congee and soups; essential in XO sauce; served reconstituted with egg white; status ingredient at Cantonese banquet tables since Tang Dynasty"}
+- {id: siu_ngoh_roast_goose, grade: signature, rating: 9, name: "Roast goose", name_sv: "Rostad gås", notes: "燒鵝 siu ngoh; Uniquely Cantonese siu mei preparation; roasted whole with five-spice, rose wine, and dark soy glaze; distinct from Peking duck; Yung Kee (HK) synonymous with this dish; not found in other regional Chinese cuisines to the same degree"}
+- {id: siu_yuk_crispy_pork, grade: signature, rating: 7, name: "Pork belly", name_sv: "Fläskbuk", notes: "siu yuk — pork belly with crackling skin; roasted at Cantonese BBQ shops (燒臘鋪); Pork belly roasted until skin blisters and crackles; prized crackling contrasts with juicy meat; staple at Cantonese BBQ shops and ceremonial meals"}
+- {id: century_egg, grade: signature, rating: 7, name: "Century Egg", name_sv: "Hundraårsägg", notes: "Preserved duck egg with translucent dark jelly and creamy yolk; served in congee (pidan lean pork jook) — a beloved Cantonese breakfast classic"}
+- {id: lobster_cantonese, grade: signature, rating: 6, name: "Lobster", name_sv: "Hummer", notes: "Cantonese style; Typically wok-fried with ginger and scallion, or with black bean sauce; prized in Hong Kong dim sum restaurants and banquets; signals luxury and freshness"}
+- {id: abalone, grade: signature, rating: 5, name: "Abalone", name_sv: "Havöra", notes: "Bao Yu; Braised dried or live abalone; luxury Cantonese banquet ingredient; canned abalone from HK brands (e.g. Emperor) is a cultural gift item for Chinese New Year"}
+- {id: silken_tofu, grade: signature, rating: 4, name: "Silken tofu", name_sv: "Silkestofu", notes: "Cantonese-style steamed silken tofu with soy, sesame and spring onion; also used in claypot and braised dishes; tofu skin (yuba) integral to dim sum rolls"}
 
 ### Proteins — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Cantonese meat consumption kg per capita", "Cantonese FAO food balance protein", "Cantonese most consumed protein statistics" -->
+<!-- Highest statistical volume consumed in Guangdong / Hong Kong by kg/capita -->
 
-- {id: stub_prot_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Protein 1", name_sv: "[UTKAST] Bulk Protein 1", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Protein 2", name_sv: "[UTKAST] Bulk Protein 2", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Protein 3", name_sv: "[UTKAST] Bulk Protein 3", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Protein 4", name_sv: "[UTKAST] Bulk Protein 4", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Protein 5", name_sv: "[UTKAST] Bulk Protein 5", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Protein 6", name_sv: "[UTKAST] Bulk Protein 6", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Protein 7", name_sv: "[UTKAST] Bulk Protein 7", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Protein 8", name_sv: "[UTKAST] Bulk Protein 8", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Protein 9", name_sv: "[UTKAST] Bulk Protein 9", notes: "STUB — replace with verified Cantonese research"}
+- {id: pork_guangdong, grade: bulk, rating: 9, name: "Pork", name_sv: "Fläskkött", notes: "HK per capita ~52.6 kg/yr (World Population Review 2022); dominant protein in Guangdong; used in dumplings, char siu, roasts, stir-fries, and wonton filling"}
+- {id: chicken_guangdong, grade: bulk, rating: 8, name: "Chicken", name_sv: "Kyckling", notes: "Second most consumed meat protein in Guangdong; white cut chicken, salt-baked chicken (Hakka), and Cantonese roast chicken all major preparations; sold live in wet markets"}
+- {id: fish_freshwater, grade: bulk, rating: 7, name: "Freshwater Fish", name_sv: "Sötvattensfisk", notes: "Carp, Tilapia; Guangdong leads China's freshwater aquaculture (>13% national output); four major Chinese carps and tilapia are the highest-volume fish consumed daily across the province"}
+- {id: shrimp_prawn, grade: bulk, rating: 7, name: "Shrimp", name_sv: "Räkor", notes: "also prawn; 虾 (hā); South China Sea and Pearl River Delta shrimp farming; consumed fresh, dried (har mai); South China Sea and Pearl River Delta shrimp farming major industry; shrimp consumed fresh, dried (har mai), and in dumplings (har gow); high daily volume at Cantonese tables"}
+- {id: pork_offal, grade: bulk, rating: 5, name: "Pork Offal", name_sv: "Fläskinnälvor", notes: "Intestines, Liver, Kidney; Cantonese wet market culture drives very high pork organ consumption; featured in congee toppings, hot pot, and clay pot rice; culturally accepted across all income levels"}
+- {id: duck_guangdong, grade: bulk, rating: 5, name: "Duck", name_sv: "Anka", notes: "Cantonese roast duck (siu ap) is a major siu mei category alongside char siu; also braised in soy, plum or five-spice; significant consumer market in Guangdong and HK"}
+- {id: eggs_chicken, grade: bulk, rating: 4, name: "Eggs", name_sv: "Ägg", notes: "Chicken; China is world's top egg consumer; eggs integral to Cantonese breakfasts, congee, noodles, dan tat (egg tarts), and steamed egg custard (zheng shui dan); consumed daily"}
+- {id: saltwater_fish, grade: bulk, rating: 4, name: "Marine Saltwater Fish", name_sv: "Saltvattenfisk", notes: "South China Sea fishing supports large marine fish trade in Guangdong; yellowfin tuna, pomfret, and hairtail consumed in bulk in coastal cities; also dried/salted"}
+- {id: beef_cantonese, grade: bulk, rating: 3, name: "Beef", name_sv: "Nötkött", notes: "Lower consumption than pork but important; beef ho fun (dry-fried rice noodle with beef) is a Cantonese icon; also used in congee toppings; HK beef hotpot culture significant"}
 
 ### Proteins — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Cantonese livestock farming animals raised", "Cantonese fishing industry fish species caught", "Cantonese game animals hunted wild" -->
+<!-- Produced, farmed, fished, or raised specifically in Guangdong Province / Pearl River Delta -->
 
-- {id: stub_prot_loc_1, grade: local, rating: 9, name: "[STUB] Local Protein 1", name_sv: "[UTKAST] Lokalt Protein 1", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_loc_2, grade: local, rating: 8, name: "[STUB] Local Protein 2", name_sv: "[UTKAST] Lokalt Protein 2", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_loc_3, grade: local, rating: 7, name: "[STUB] Local Protein 3", name_sv: "[UTKAST] Lokalt Protein 3", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_loc_4, grade: local, rating: 6, name: "[STUB] Local Protein 4", name_sv: "[UTKAST] Lokalt Protein 4", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_loc_5, grade: local, rating: 5, name: "[STUB] Local Protein 5", name_sv: "[UTKAST] Lokalt Protein 5", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_loc_6, grade: local, rating: 4, name: "[STUB] Local Protein 6", name_sv: "[UTKAST] Lokalt Protein 6", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_loc_7, grade: local, rating: 3, name: "[STUB] Local Protein 7", name_sv: "[UTKAST] Lokalt Protein 7", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_loc_8, grade: local, rating: 2, name: "[STUB] Local Protein 8", name_sv: "[UTKAST] Lokalt Protein 8", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_prot_loc_9, grade: local, rating: 1, name: "[STUB] Local Protein 9", name_sv: "[UTKAST] Lokalt Protein 9", notes: "STUB — replace with verified Cantonese research"}
+- {id: oyster_pearl_river, grade: local, rating: 9, name: "Pearl River Delta Oyster", name_sv: "Pärlflodsdelta-ostron", notes: "Guangdong leads China in oyster production with >600,000 tons/year; farmed in Zhuhai, Jiangmen, Zhongshan; Lee Kum Kee founded in Xinhui 1888 using local oysters for sauce"}
+- {id: grass_carp_prd, grade: local, rating: 8, name: "Grass Carp", name_sv: "Grässkarv", notes: "Cǎo Yú; One of China's 'four major carps'; extensively pond-farmed in Pearl River Delta; integral to Cantonese minced fish dishes, steamed fish, and congee toppings"}
+- {id: tilapia_guangdong, grade: local, rating: 7, name: "Tilapia", name_sv: "Tilapia", notes: "Luo Fei Yu; Major PRD aquaculture species; Guangdong is China's #1 tilapia producer; raised in pond systems across Zhongshan, Foshan, Guangzhou hinterland; sold live in wet markets"}
+- {id: mud_crab, grade: local, rating: 7, name: "Mud Crab", name_sv: "Grumpkrabba", notes: "Qīng Xiè; Farmed and wild-caught in Pearl River estuary and coastal mangroves of Guangdong; steamed with ginger or in ginger-scallion sauce — Cantonese seafood staple"}
+- {id: cantonese_wenchang_chicken, grade: local, rating: 6, name: "Qingyuan chicken", name_sv: "Qingyuan kyckling", notes: "清远鸡; also Huiyang bearded chicken; GI-protected Guangdong breeds prized for white cut chicken; Qingyuan chicken (清远鸡) and Huiyang bearded chicken are GI-protected Guangdong breeds; prized for flavour in white cut chicken; raised free-range in hill towns north of Pearl River"}
+- {id: bighead_carp, grade: local, rating: 5, name: "Bighead Carp", name_sv: "Storskallad karp", notes: "Lián Yú; Pearl River Delta aquaculture staple; used in Cantonese fish head soup and braised fish head clay pot; rich flavour from high fat content in the head section"}
+- {id: freshwater_shrimp_prd, grade: local, rating: 5, name: "Pearl River Freshwater Shrimp", name_sv: "Pärlfloden sötvattenräkor", notes: "Wild-caught and farmed in the Pearl River and Delta ponds; sold live in Guangzhou wet markets; smaller than marine shrimp but prized for sweet, delicate flavour in wok dishes"}
+- {id: snakehead_fish, grade: local, rating: 4, name: "Snakehead Fish", name_sv: "Ormpannarefisk", notes: "Shēng Yú; Carnivorous freshwater fish farmed in Guangdong ponds; very popular in Shunde (Guangdong culinary capital) — sliced raw in Shunde raw fish salad (yusheng) and in soups"}
+- {id: pigs_guangdong, grade: local, rating: 4, name: "Pigs", name_sv: "Grisar", notes: "e.g. Qingping; Native Guangdong pig breeds (Qingping, Wuhua black pig) historically raised in Pearl River Delta villages; leaner than commercial breeds; prized for suckling pig roasts and char siu"}
 
 
 ## Produce
 
 ### Produce — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Cantonese signature dishes vegetables", "Cantonese iconic vegetable ingredients", "Cantonese traditional vegetable preparations" -->
+<!-- Vegetables iconic to Cantonese cooking identity -->
 
-- {id: stub_veg_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Vegetable 1", name_sv: "[UTKAST] Signatur Grönsak 1", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Vegetable 2", name_sv: "[UTKAST] Signatur Grönsak 2", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Vegetable 3", name_sv: "[UTKAST] Signatur Grönsak 3", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Vegetable 4", name_sv: "[UTKAST] Signatur Grönsak 4", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Vegetable 5", name_sv: "[UTKAST] Signatur Grönsak 5", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Vegetable 6", name_sv: "[UTKAST] Signatur Grönsak 6", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Vegetable 7", name_sv: "[UTKAST] Signatur Grönsak 7", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Vegetable 8", name_sv: "[UTKAST] Signatur Grönsak 8", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Vegetable 9", name_sv: "[UTKAST] Signatur Grönsak 9", notes: "STUB — replace with verified Cantonese research"}
+- {id: bok_choy, grade: signature, rating: 9, name: "Bok Choy", name_sv: "Pak choi", notes: "Pak Choi; Most emblematic Cantonese green; stir-fried with garlic or oyster sauce; mild, crisp, fast-cooking; serves as the default leafy vegetable in every Cantonese household and restaurant"}
+- {id: gai_lan, grade: signature, rating: 9, name: "Gai Lan", name_sv: "Kinesisk broccoli", notes: "Chinese Broccoli; Blanched and dressed with oyster sauce — a quintessential Cantonese side dish; also stir-fried with garlic; robust bitter-earthy flavour complements roast meats"}
+- {id: ginger_fresh, grade: signature, rating: 8, name: "Fresh Ginger", name_sv: "Färsk ingefära", notes: "Jiāng; Fundamental to virtually every Cantonese seafood and meat dish; used in steaming, stir-frying, white cut chicken dipping sauce, and congee — the primary aromatic of Cantonese cuisine"}
+- {id: water_spinach, grade: signature, rating: 7, name: "Water Spinach", name_sv: "Vattenspinach", notes: "Ong Choy / Morning Glory; Fast wok-fried with fermented bean curd or garlic; hollow stems absorb sauce; a staple summer vegetable in Guangdong; found in every Cantonese stir-fry menu"}
+- {id: bitter_melon, grade: signature, rating: 7, name: "Bitter Melon", name_sv: "Bittermelon", notes: "Kǔ Guā; Stir-fried with beef and black bean sauce or stuffed with pork — a Cantonese classic; bitter, cooling properties valued in Guangdong summer cooking; extensively grown in the province"}
+- {id: winter_melon, grade: signature, rating: 6, name: "Winter Melon", name_sv: "Vintermelon", notes: "Dōng Guā; Key ingredient in Cantonese winter melon soup (often with pork ribs or duck); also used as a dramatic serving vessel for banquet soups; mild flavour absorbs broth beautifully"}
+- {id: lotus_root, grade: signature, rating: 6, name: "Lotus Root", name_sv: "Lotusrot", notes: "Lián'ǒu; Slow-simmered in pork rib lotus root soup — one of the most beloved Cantonese home soups; also sliced and stir-fried; symbol of abundance; harvested from Guangdong wetlands"}
+- {id: daikon_white_radish, grade: signature, rating: 5, name: "Daikon", name_sv: "Daikon", notes: "luóbo; white radish; used in lo bak gou (Cantonese turnip cake), braised with pork ribs, pickled; Luóbo; Used in Cantonese turnip cake (lo bak gou) for dim sum; braised with pork ribs in soups; pickled as condiment; extremely high-volume ingredient in Guangdong households"}
+- {id: taro, grade: signature, rating: 5, name: "Taro", name_sv: "Taro", notes: "Yù Tou; Steamed, mashed into wu gok (taro dumplings) for dim sum, and used in taro cake; Lipu taro from Guangxi/Guangdong border is especially prized; important festive food item"}
 
 ### Produce — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Cantonese vegetable consumption kg per capita", "Cantonese most consumed vegetables statistics", "Cantonese FAO food balance vegetables" -->
+<!-- Highest statistical vegetable consumption volume in Guangdong -->
 
-- {id: stub_veg_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Vegetable 1", name_sv: "[UTKAST] Bulk Grönsak 1", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Vegetable 2", name_sv: "[UTKAST] Bulk Grönsak 2", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Vegetable 3", name_sv: "[UTKAST] Bulk Grönsak 3", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Vegetable 4", name_sv: "[UTKAST] Bulk Grönsak 4", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Vegetable 5", name_sv: "[UTKAST] Bulk Grönsak 5", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Vegetable 6", name_sv: "[UTKAST] Bulk Grönsak 6", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Vegetable 7", name_sv: "[UTKAST] Bulk Grönsak 7", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Vegetable 8", name_sv: "[UTKAST] Bulk Grönsak 8", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Vegetable 9", name_sv: "[UTKAST] Bulk Grönsak 9", notes: "STUB — replace with verified Cantonese research"}
+- {id: cabbage_guangdong, grade: bulk, rating: 9, name: "Cabbage", name_sv: "Kål", notes: "Chinese / Napa; National NBS data: China's highest-volume vegetable; widely consumed in Guangdong in soups, stir-fries, and as pickled side dishes; year-round availability drives highest overall volume"}
+- {id: watercress_guangdong, grade: bulk, rating: 8, name: "Watercress", name_sv: "Vattenkrasse", notes: "西洋菜 xi yang cai; Cantonese watercress pork-bone soup (西洋菜豬骨湯) is a classic home-cook staple; consumed in enormous quantities in Guangdong; watercress soup is one of the most frequently cooked dishes in Cantonese households"}
+- {id: tomato_guangdong, grade: bulk, rating: 7, name: "Tomato", name_sv: "Tomat", notes: "High volume consumption in Guangdong; used in tomato egg stir-fry (a daily household dish), soups, and sauces; tomato egg is arguably the most cooked dish in southern Chinese homes"}
+- {id: potato_guangdong, grade: bulk, rating: 6, name: "Potato", name_sv: "Potatis", notes: "Growing high-volume crop in Guangdong; stir-fried shredded potato is a popular budget staple; also used in curries (HK-style curry) and as market vegetable across the province"}
+- {id: chinese_broccoli_gai_lan_bulk, grade: bulk, rating: 6, name: "Chinese broccoli", name_sv: "Kinesisk broccoli", notes: "Gāilán (芥蓝 / 芥兰); Brassica oleracea var. alboglabra; a staple Cantonese vegetable used in gāilán chǎo niúhé (stir-fried with beef ho fun), stir-fried with oyster sauce, and steamed dim sum preparations; grown year-round in Guangdong; one of the most consumed green vegetables in the Pearl River delta region; widely available at all Guangdong wet markets"}
+- {id: preserved_mustard_mei_cai_bulk, grade: bulk, rating: 5, name: "Preserved mustard greens", name_sv: "Inlagd senapsgrön", notes: "Méicài (梅菜); salted sun-dried preserved mustard greens; a major condiment and ingredient in Cantonese cooking; used in meicai kourou (pork belly with preserved mustard), claypot dishes, and congee; Huizhou (Guangdong) is the main production area; a high-volume Cantonese pantry item distinct from fresh mustard greens; deeply embedded in Hakka-Cantonese food tradition"}
+- {id: bean_sprouts, grade: bulk, rating: 5, name: "Bean Sprouts", name_sv: "Böngroddar", notes: "Mung Bean; High-volume cheap vegetable consumed daily in Guangdong; essential in chow mein and ho fun stir-fries; grown/sprouted locally year-round; significant market volume at wet markets"}
+- {id: eggplant_guangdong, grade: bulk, rating: 4, name: "Eggplant", name_sv: "Aubergine", notes: "qié zǐ; braised in clay pot with minced pork and black bean; also steamed with garlic and oyster sauce; Qié Zi; Braised in clay pot with minced pork and black bean — a popular Guangdong dish; also steamed with garlic and oyster sauce; grown extensively in the province; moderate-high consumption"}
+- {id: snow_peas, grade: bulk, rating: 4, name: "Snow Peas", name_sv: "Sockerärtor", notes: "Hé Lán Dòu; Popular stir-fry vegetable in Cantonese restaurants; crisp texture key to wok-hei dishes; sold year-round in Guangdong markets; often paired with beef, shrimp, or pork in wok dishes"}
 
 ### Produce — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Cantonese vegetables grown locally agriculture", "Cantonese regional vegetable crops", "Cantonese foraging wild plants" -->
+<!-- Grown or farmed specifically in Guangdong Province -->
 
-- {id: stub_veg_loc_1, grade: local, rating: 9, name: "[STUB] Local Vegetable 1", name_sv: "[UTKAST] Lokalt Grönsak 1", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_loc_2, grade: local, rating: 8, name: "[STUB] Local Vegetable 2", name_sv: "[UTKAST] Lokalt Grönsak 2", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_loc_3, grade: local, rating: 7, name: "[STUB] Local Vegetable 3", name_sv: "[UTKAST] Lokalt Grönsak 3", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_loc_4, grade: local, rating: 6, name: "[STUB] Local Vegetable 4", name_sv: "[UTKAST] Lokalt Grönsak 4", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_loc_5, grade: local, rating: 5, name: "[STUB] Local Vegetable 5", name_sv: "[UTKAST] Lokalt Grönsak 5", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_loc_6, grade: local, rating: 4, name: "[STUB] Local Vegetable 6", name_sv: "[UTKAST] Lokalt Grönsak 6", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_loc_7, grade: local, rating: 3, name: "[STUB] Local Vegetable 7", name_sv: "[UTKAST] Lokalt Grönsak 7", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_loc_8, grade: local, rating: 2, name: "[STUB] Local Vegetable 8", name_sv: "[UTKAST] Lokalt Grönsak 8", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_veg_loc_9, grade: local, rating: 1, name: "[STUB] Local Vegetable 9", name_sv: "[UTKAST] Lokalt Grönsak 9", notes: "STUB — replace with verified Cantonese research"}
+- {id: bitter_melon_local, grade: local, rating: 9, name: "Guangdong Bitter Melon", name_sv: "Guangdong bittermelon", notes: "Local Cultivars; Extensively cultivated in Guangdong; province is one of China's main bitter melon production areas; local white-skin and dark-green cultivars differ in bitterness; grown in Guangzhou, Zhongshan, Foshan districts"}
+- {id: taro_guangdong, grade: local, rating: 8, name: "Guangdong Taro", name_sv: "Guangdong taro", notes: "Local Varieties; Several GI-protected taro varieties from Guangdong (e.g. Conghua taro); historically significant starchy crop with stable production; challenge: varietal degradation and rising labour costs (per academic review 2021)"}
+- {id: kumquat_guangdong, grade: local, rating: 8, name: "Kumquat", name_sv: "Kumquat", notes: "金橘 jin ju; extensively grown in Guangdong, especially Chaozhou and Guangzhou suburbs; consumed fresh, preserved in salt, and candied; central to Chinese New Year decoration and cooking; a distinct Guangdong local fruit crop and cultural symbol"}
+- {id: bamboo_shoots_guangdong, grade: local, rating: 7, name: "Bamboo shoots", name_sv: "Bambusskott", notes: "竹笋 zhu sun; grown in hilly inland Guangdong (Yunfu, Shaoguan, Qingyuan); fresh spring bamboo shoots used in stir-fries, soups and braised pork belly; preserved in jars for year-round use; both fresh and preserved forms widely consumed in Guangdong"}
+- {id: lychee_guangdong, grade: local, rating: 6, name: "Lychee", name_sv: "Litchi", notes: "Lì Zhī; Guangdong is China's premier lychee-producing province; Zengcheng and Conghua (Guangzhou) famous for premium lychees; eaten fresh, in desserts, and used in sweet-and-sour pork sauce"}
+- {id: longan_guangdong, grade: local, rating: 6, name: "Longan", name_sv: "Longan", notes: "Lóng Yǎn; Major longan production in Guangdong (alongside Fujian); Maoming and Maonan are key longan-growing counties; eaten fresh, dried, and used in tong sui (sweet soups) and herbal drinks"}
+- {id: ginger_guangdong, grade: local, rating: 5, name: "Guangdong Ginger", name_sv: "Guangdong ingefära", notes: "Local Grown; Ginger grown extensively across Guangdong's inland counties; older rhizomes (lao jiang) prized for strength; Guangdong soil and climate ideal for pungent, aromatic root ginger"}
+- {id: pomelo_guangdong, grade: local, rating: 6, name: "Pomelo", name_sv: "Pomelo", notes: "柚子 yòuzi; Huazhou city, Guangdong leads China's pomelo production; large sweet-tart citrus consumed fresh especially at Mid-Autumn Festival; candied pomelo peel used in some Cantonese desserts; Huazhou pomelo has GI protection in China"}
+- {id: mustard_greens_local, grade: local, rating: 4, name: "Mustard greens", name_sv: "Senapsblad", notes: "gai choy; Chinese mustard greens; grown year-round in Guangdong; used fresh and pickled as suancai; Grown year-round in Guangdong; used fresh in soups and stir-fries; also pickled as 'suancai' (sour preserved mustard greens) — a traditional Hakka/Teochew/Cantonese condiment"}
 
 
 ## Grains & Starches
 
 ### Grains & Starches — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Cantonese signature grain dishes bread pasta rice", "Cantonese iconic starch preparations", "Cantonese traditional staple foods" -->
+<!-- Iconic starches that define Cantonese cooking identity -->
 
-- {id: stub_grain_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Grain 1", name_sv: "[UTKAST] Signatur Spannmål 1", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Grain 2", name_sv: "[UTKAST] Signatur Spannmål 2", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Grain 3", name_sv: "[UTKAST] Signatur Spannmål 3", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Grain 4", name_sv: "[UTKAST] Signatur Spannmål 4", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Grain 5", name_sv: "[UTKAST] Signatur Spannmål 5", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Grain 6", name_sv: "[UTKAST] Signatur Spannmål 6", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Grain 7", name_sv: "[UTKAST] Signatur Spannmål 7", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Grain 8", name_sv: "[UTKAST] Signatur Spannmål 8", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Grain 9", name_sv: "[UTKAST] Signatur Spannmål 9", notes: "STUB — replace with verified Cantonese research"}
+- {id: jasmine_rice, grade: signature, rating: 9, name: "Jasmine Rice", name_sv: "Jasminris", notes: "White Rice; Daily staple eaten multiple times per day across Guangdong; the foundation of all Cantonese meals; steamed to a specific glossy, slightly sticky texture; quality rice is a point of pride"}
+- {id: glutinous_rice_flour, grade: signature, rating: 7, name: "Glutinous rice flour", name_sv: "Glutinöst rismjöl", notes: "糯米粉 nuo mi fen; fine white powder from ground glutinous rice; distinct from cooked glutinous rice; used for tang yuan (sweet rice dumplings), lai wong bao (custard bun), coconut mochi-style Cantonese New Year cakes (nian gao pastry); a core Cantonese bakery and dim sum ingredient"}
+- {id: ho_fun_rice_noodle, grade: signature, rating: 8, name: "Ho Fun", name_sv: "Ho fun", notes: "Flat Rice Noodles; Wide, slippery rice-flour noodles; dry-fried with beef in wok hei style (dry-fried beef ho fun / gon chow ngau ho) is a Cantonese culinary benchmark; also used in soups"}
+- {id: har_gow_skin_wheat_starch, grade: signature, rating: 7, name: "Wheat Starch", name_sv: "Vetestärkelse", notes: "Har Gow Skin; Translucent dumpling skin made from wheat starch (cheng fen) + tapioca starch; used for har gow, crystal shrimp rolls, and cheung fun fillings; unique to Cantonese dim sum"}
+- {id: cheung_fun, grade: signature, rating: 7, name: "Cheung Fun", name_sv: "Cheung fun", notes: "Rice Noodle Roll; Steamed silky rice noodle sheets wrapped around shrimp, char siu, or beef; a dim sum staple served with sweet soy and sesame paste; made from rice flour slurry on cloth trays"}
+- {id: shrimp_roe_noodles, grade: signature, rating: 7, name: "Shrimp roe noodles", name_sv: "Räknuddlar", notes: "蝦子麵 ha zi meen; thin alkaline wheat noodles coated with dried shrimp roe after boiling; a Guangdong delicacy noodle distinct from wonton noodles and rice noodles; shrimp roe season is autumn-winter; prized for deep marine umami coating; a true Cantonese specialty noodle"}
+- {id: lo_bak_gou, grade: signature, rating: 6, name: "Turnip cake", name_sv: "Rädisekaka", notes: "lo bak gou in Cantonese; rice flour and grated daikon pressed into cakes and pan-fried; classic dim sum item; Rice flour and grated daikon pressed into cakes and pan-fried; a classic Cantonese dim sum item and Chinese New Year food; dense, savoury, slightly crispy exterior"}
+- {id: wonton_noodle, grade: signature, rating: 5, name: "Wonton Egg Noodles", name_sv: "Wonton-äggsnudlar", notes: "Thin alkaline wheat-egg noodles served in clear shrimp roe broth with pork-shrimp wontons (wonton mee); an iconic Cantonese noodle soup; Guangzhou and HK wonton noodle shops are cultural institutions"}
+- {id: ginkgo_nuts, grade: signature, rating: 6, name: "Ginkgo nuts", name_sv: "Ginkgonötter", notes: "白果 bái guǒ; seeds of Ginkgo biloba tree; used in eight-treasure congee (八寶粥), red bean dessert soup, Cantonese sweet soups (糖水), and ginkgo porridge; distinctive bitter-creamy flavour; a traditional Cantonese ingredient not found in most other cuisines"}
 
 ### Grains & Starches — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Cantonese grain consumption kg per capita", "Cantonese rice wheat bread statistics", "Cantonese FAO food balance cereals" -->
+<!-- Highest statistical volume consumed in Guangdong by weight -->
 
-- {id: stub_grain_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Grain 1", name_sv: "[UTKAST] Bulk Spannmål 1", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Grain 2", name_sv: "[UTKAST] Bulk Spannmål 2", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Grain 3", name_sv: "[UTKAST] Bulk Spannmål 3", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Grain 4", name_sv: "[UTKAST] Bulk Spannmål 4", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Grain 5", name_sv: "[UTKAST] Bulk Spannmål 5", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Grain 6", name_sv: "[UTKAST] Bulk Spannmål 6", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Grain 7", name_sv: "[UTKAST] Bulk Spannmål 7", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Grain 8", name_sv: "[UTKAST] Bulk Spannmål 8", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Grain 9", name_sv: "[UTKAST] Bulk Spannmål 9", notes: "STUB — replace with verified Cantonese research"}
+- {id: white_rice_bulk, grade: bulk, rating: 9, name: "White Rice", name_sv: "Vitt ris", notes: "Daily Consumption; China per capita rice consumption 2022: ~133 kg/year (Helgi Library / World Population Review); Guangdong above national average as a core rice-consuming southern province; eaten at 2-3 meals/day"}
+- {id: wheat_flour_bulk, grade: bulk, rating: 7, name: "Wheat flour", name_sv: "Vetemjöl", notes: "High-volume use for steamed buns (bao), wonton wrappers, noodles, and pastry in Cantonese dim sum culture; China is world's largest wheat flour consumer; Guangdong's large restaurant sector drives bulk use"}
+- {id: rice_noodles_bulk, grade: bulk, rating: 7, name: "Rice Noodles", name_sv: "Risnudlar", notes: "Various Forms; Ho fun, rice vermicelli (mi fen), and rice noodle rolls (cheung fun) consumed in large daily volumes across Guangdong; sold fresh in wet markets and dried in supermarkets; key street food base"}
+- {id: water_chestnut_flour_bulk, grade: bulk, rating: 7, name: "Water chestnut cake", name_sv: "Kastanjekaka", notes: "馬蹄糕 ma ti gou; Classic Cantonese dim sum dessert made from water chestnut starch and rock sugar; translucent, jelly-like texture; distinct from other grain-based dim sum; consumed regularly in Guangdong tea houses and at home; high-volume Cantonese dessert"}
+- {id: corn_maize, grade: bulk, rating: 4, name: "Corn", name_sv: "Majs", notes: "increasing staple in Guangdong; eaten as corn-on-the-cob snack, in pork and corn sweet soup, as cornstarch; Increasing bulk staple in Guangdong; eaten as snack corn-on-the-cob, in soups (pork and corn sweet soup), and as cornstarch in stir-fry sauces; China's corn production and consumption growing rapidly"}
+- {id: tapioca_starch, grade: bulk, rating: 4, name: "Tapioca Starch", name_sv: "Tapiokastärkelse", notes: "Used to coat fried dishes for crispiness, thicken stir-fry sauces, and blend into dim sum dumpling skins; imported and processed in Guangdong; high-volume use in the region's vast food service industry"}
+- {id: egg_noodles_bulk, grade: bulk, rating: 4, name: "Egg Noodles", name_sv: "Äggsnudlar", notes: "Thin Alkaline; Thin, springy alkaline wheat-and-egg noodles for wonton noodle soup (mee); high consumption in Guangdong and HK noodle shops; also used in Cantonese chow mein (fried noodles)"}
+- {id: rice_vermicelli, grade: bulk, rating: 3, name: "Rice Vermicelli", name_sv: "Rismjölsvermicellinudlar", notes: "Mǐ Fěn; Thin dried rice noodles used in Singapore-style noodles (a HK/Cantonese take), fried with curry and char siu; also used in soups; very high-volume market in Guangdong supermarkets"}
+- {id: water_chestnut_starch, grade: bulk, rating: 3, name: "Water chestnut starch", name_sv: "Vattenkastanjestärkelse", notes: "Used to make water chestnut cake (a dim sum dessert) and as thickener; water chestnuts grown in Guangdong wetlands; high-volume starch ingredient in Cantonese pastry sector"}
 
 ### Grains & Starches — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Cantonese grain crops grown", "Cantonese cereal farming production", "Cantonese locally milled flour regional varieties" -->
+<!-- Produced specifically in Guangdong Province / Pearl River Delta -->
 
-- {id: stub_grain_loc_1, grade: local, rating: 9, name: "[STUB] Local Grain 1", name_sv: "[UTKAST] Lokalt Spannmål 1", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_loc_2, grade: local, rating: 8, name: "[STUB] Local Grain 2", name_sv: "[UTKAST] Lokalt Spannmål 2", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_loc_3, grade: local, rating: 7, name: "[STUB] Local Grain 3", name_sv: "[UTKAST] Lokalt Spannmål 3", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_loc_4, grade: local, rating: 6, name: "[STUB] Local Grain 4", name_sv: "[UTKAST] Lokalt Spannmål 4", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_loc_5, grade: local, rating: 5, name: "[STUB] Local Grain 5", name_sv: "[UTKAST] Lokalt Spannmål 5", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_loc_6, grade: local, rating: 4, name: "[STUB] Local Grain 6", name_sv: "[UTKAST] Lokalt Spannmål 6", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_loc_7, grade: local, rating: 3, name: "[STUB] Local Grain 7", name_sv: "[UTKAST] Lokalt Spannmål 7", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_loc_8, grade: local, rating: 2, name: "[STUB] Local Grain 8", name_sv: "[UTKAST] Lokalt Spannmål 8", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_grain_loc_9, grade: local, rating: 1, name: "[STUB] Local Grain 9", name_sv: "[UTKAST] Lokalt Spannmål 9", notes: "STUB — replace with verified Cantonese research"}
+- {id: rice_guangdong_local, grade: local, rating: 9, name: "Rice", name_sv: "Ris", notes: "Guangdong 2022 rice output: ~5.2 million tonnes (NBS); planting area 2.3 million ha; Pearl River Delta double-cropped paddy (early + late rice); mechanically harvested on 34.5M mu; record output in 2022"}
+- {id: jasmine_fragrant_rice_local, grade: local, rating: 8, name: "Guangdong Fragrant Rice", name_sv: "Guangdong doftris", notes: "Xiāng Mǐ; Several premium aromatic rice varieties grown in Guangdong, e.g. Zengcheng xiang mi and Meixian jasmine varieties; sold at premium in Guangzhou markets; prized for aroma and texture"}
+- {id: water_chestnut_local, grade: local, rating: 6, name: "Water Chestnut", name_sv: "Vattenkastanj", notes: "Local PRD; Grown in Pearl River Delta wetland ponds; Foshan and Guangzhou suburbs produce significant quantities; eaten fresh, used in stir-fries, dim sum fillings, and made into starch for cakes"}
+- {id: red_rice_guangdong, grade: local, rating: 6, name: "Red rice", name_sv: "Rött ris", notes: "红米 hong mi; heritage rice variety traditionally grown in hilly inland Guangdong; consumed in red rice congee and cooked as alternative grain; has distinct nutty flavour and higher nutritional profile than polished white rice; a traditional agricultural product of hilly Guangdong areas"}
+- {id: taro_cake_starch, grade: local, rating: 5, name: "Taro", name_sv: "Taro", notes: "Taro grown in Guangdong's inland areas (Conghua, Shunde) specifically for dim sum applications; mixed with starch for honeycomb wu gok pastry; distinct starch profile from local cultivars"}
+- {id: sugarcane, grade: local, rating: 5, name: "Sugarcane", name_sv: "Sockerrör", notes: "Gān Zhè; Guangdong is a major sugarcane province; cane juice drunk as street beverage, cane used in slow-cooked soups (pork rib and sugarcane broth) and to make rock sugar used in braised dishes and desserts"}
+- {id: sweet_potato_local, grade: local, rating: 4, name: "Sweet Potato", name_sv: "Sötpotatis", notes: "Fān Shǔ; Grown widely in hilly areas of Guangdong; historically important famine and staple food; now eaten as dessert in tong sui (sweet soup), as street snack, and as base for glutinous balls in desserts"}
+- {id: lotus_seed_local, grade: local, rating: 4, name: "Lotus Seed", name_sv: "Lotusfrön", notes: "Lián Zǐ; Harvested from Pearl River Delta lotus fields alongside lotus root; used in Cantonese sweet tong sui desserts, mooncake filling (lotus paste), and herbal soups; Guangdong is a major producer"}
+- {id: peanut_local, grade: local, rating: 3, name: "Peanut", name_sv: "Jordnöt", notes: "huā shēng; some cultivation in Guangdong province; used in peanut oil (花生油) and peanut sauce; Huā Shēng; Some peanut cultivation in Guangdong province though not a top national producer; peanuts used in peanut oil (primary Cantonese cooking fat), peanut butter, peanut congee, and as garnish on noodles"}
 
 
 ## Dairy, Oils & Sauces
 
 ### Dairy, Oils & Sauces — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Cantonese signature dairy dishes", "Cantonese iconic cheese butter cream", "Cantonese traditional dairy products" -->
+<!-- Iconic fats, sauces and condiments that define Cantonese cooking -->
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Dairy 1", name_sv: "[UTKAST] Signatur Mejeri 1", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Dairy 2", name_sv: "[UTKAST] Signatur Mejeri 2", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Dairy 3", name_sv: "[UTKAST] Signatur Mejeri 3", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Dairy 4", name_sv: "[UTKAST] Signatur Mejeri 4", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Dairy 5", name_sv: "[UTKAST] Signatur Mejeri 5", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Dairy 6", name_sv: "[UTKAST] Signatur Mejeri 6", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Dairy 7", name_sv: "[UTKAST] Signatur Mejeri 7", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Dairy 8", name_sv: "[UTKAST] Signatur Mejeri 8", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Dairy 9", name_sv: "[UTKAST] Signatur Mejeri 9", notes: "STUB — replace with verified Cantonese research"}
+- {id: oyster_sauce, grade: signature, rating: 9, name: "Oyster Sauce", name_sv: "Ostronsås", notes: "Háo Yóu; Invented in 1888 in Xinhui, Guangdong by Lee Kum Sheung (founder of Lee Kum Kee); made from oyster extracts, soy, sugar; defines Cantonese vegetable and beef dishes; the signature Cantonese condiment"}
+- {id: peanut_oil, grade: signature, rating: 9, name: "Peanut Oil", name_sv: "Jordnötsolja", notes: "Huā Shēng Yóu; Traditional primary cooking fat for Cantonese wok frying; high smoke point ~230°C; imparts subtle nutty flavour essential to authentic wok hei; used in every BBQ and roast meat preparation"}
+- {id: light_soy_sauce, grade: signature, rating: 8, name: "Light Soy Sauce", name_sv: "Ljus sojasås", notes: "Shēng Chōu; The Cantonese everyday seasoning sauce (vs dark soy for colour); drizzled on steamed fish, mixed into marinades, used in virtually every Cantonese dish; Guangdong is China's major light soy producer"}
+- {id: sesame_oil, grade: signature, rating: 7, name: "Sesame Oil", name_sv: "Sesamolja", notes: "Má Yóu; Pure toasted sesame finishing oil; drizzled on wontons, spring rolls, noodles, and congee; never used as cooking fat (low smoke point) but as an aromatic finishing touch in Cantonese cooking"}
+- {id: xo_sauce, grade: signature, rating: 7, name: "XO Sauce", name_sv: "XO-sås", notes: "Luxury condiment invented in Hong Kong in the 1980s by Peninsula Hotel chefs; made from dried scallops, dried shrimp, Jinhua ham, chili, garlic, oil; used on fried rice, noodles, seafood; uniquely Cantonese-HK"}
+- {id: dark_soy_sauce, grade: signature, rating: 6, name: "Dark Soy Sauce", name_sv: "Mörk sojasås", notes: "Lǎo Chōu; Thicker, sweeter soy used in Cantonese clay pot rice, char siu marinade, and braised dishes for colour and mild sweetness; produced alongside light soy at Guangdong factories (Haitian, Pearl River Bridge)"}
+- {id: hoisin_sauce, grade: signature, rating: 6, name: "Hoisin Sauce", name_sv: "Hoisinsås", notes: "Hǎixiān Jiàng; Sweet, thick sauce of fermented soy, garlic, vinegar, and spices; used as dipping sauce for Peking duck and char siu; integral Cantonese BBQ condiment; also used in chow fun and stir-fry marinades"}
+- {id: lard, grade: signature, rating: 5, name: "Lard", name_sv: "Ister", notes: "Zhū Yóu; Historically the primary Cantonese cooking fat before vegetable oils dominated; still used in traditional Cantonese pastry (egg tarts, pineapple buns), char siu bao dough, and by old-school cooks for superior wok hei"}
+- {id: plum_sauce, grade: signature, rating: 4, name: "Plum Sauce", name_sv: "Plommonsås", notes: "Méizi Jiàng; Sweet-tart sauce made from salted plums, apricots, ginger, chili, sugar, vinegar; Cantonese dipping sauce for spring rolls, roast duck, and fried wontons; also used as glaze for roast meats"}
 
 ### Dairy, Oils & Sauces — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Cantonese dairy consumption kg per capita", "Cantonese milk cheese butter statistics", "Cantonese FAO food balance dairy" -->
+<!-- Highest statistical consumption volume in Guangdong / China for condiments and fats -->
 
-- {id: stub_dairy_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Dairy 1", name_sv: "[UTKAST] Bulk Mejeri 1", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Dairy 2", name_sv: "[UTKAST] Bulk Mejeri 2", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Dairy 3", name_sv: "[UTKAST] Bulk Mejeri 3", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Dairy 4", name_sv: "[UTKAST] Bulk Mejeri 4", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Dairy 5", name_sv: "[UTKAST] Bulk Mejeri 5", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Dairy 6", name_sv: "[UTKAST] Bulk Mejeri 6", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Dairy 7", name_sv: "[UTKAST] Bulk Mejeri 7", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Dairy 8", name_sv: "[UTKAST] Bulk Mejeri 8", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Dairy 9", name_sv: "[UTKAST] Bulk Mejeri 9", notes: "STUB — replace with verified Cantonese research"}
+- {id: soy_sauce_bulk, grade: bulk, rating: 9, name: "Soy Sauce", name_sv: "Sojasås", notes: "Total Market; China produces ~4.2 million tonnes/year of soy sauce (58% of global output); Guangdong's Foshan Haitian is the world's largest soy sauce producer; per capita ~1.2 kg/yr; dominant seasoning in all Cantonese cooking"}
+- {id: vegetable_oil_rapeseed, grade: bulk, rating: 8, name: "Vegetable Oil", name_sv: "Matolja", notes: "Rapeseed / Blended; Rapeseed and blended vegetable oils dominate modern Guangdong household cooking oil market by volume; replaced lard and peanut oil in mass-market homes since 1990s; China is world's top cooking oil producer"}
+- {id: five_spice_wu_xiang_bulk, grade: bulk, rating: 7, name: "Five spice powder", name_sv: "Femkryddspulver", notes: "Wǔxiāng fěn (五香粉); blend of star anise, cloves, cinnamon, Sichuan pepper, and fennel seeds; widely used in Cantonese roast meats (char siu, siu yuk), marinades, and stewed preparations; a high-volume spice purchase in Guangdong households and restaurants; distinct from individual component spices; the backbone flavoring of Cantonese BBQ roasted meats"}
+- {id: vinegar_zhenjiang, grade: bulk, rating: 6, name: "Black Vinegar", name_sv: "Svart vinäger", notes: "Zhejiang / Zhenjiang; High-volume condiment in Chinese and Cantonese cooking; used in dipping sauces for dumplings, sweet-and-sour dishes, and braised pork; Zhenjiang brand widely available and heavily consumed in Guangdong"}
+- {id: huangjiu_yellow_wine_bulk, grade: bulk, rating: 6, name: "Yellow rice wine", name_sv: "Gult risvin", notes: "Huáng jiǔ; Guangdong's mild fermented yellow rice wine (distinct from Shaoxing wine in lighter body); used for marinating chicken, steaming fish, and as a table wine; Guangdong's Pearl River Brewery and regional distillers produce local versions; lower alcohol than distilled spirits; widely consumed and used in Cantonese cooking alongside Shaoxing wine"}
+- {id: oyster_sauce_lee_kum_kee, grade: bulk, rating: 5, name: "Lee Kum Kee Premium Oyster Sauce", name_sv: "Lee Kum Kee premium-ostronsås", notes: "HK-Guangdong brand founded 1888 in Xinhui; #1 oyster sauce brand in Asia by market volume; flagship Premium Oyster Sauce is the world's best-selling variety; produced using Guangdong Pearl River oysters"}
+- {id: sesame_paste, grade: bulk, rating: 4, name: "Sesame paste", name_sv: "Sesampasta", notes: "zhī má jiàng; Chinese sesame paste is darker and more intense than Middle Eastern tahini; used in cold noodles; Zhī Ma Jiàng; High-volume condiment used in Cantonese cold noodles, cheung fun dipping sauce, and sesame balls (jian dui); produced in bulk across China with significant consumption in Guangdong's dim sum sector"}
+- {id: chili_oil_sauce, grade: bulk, rating: 4, name: "Chili oil", name_sv: "Chiliolja", notes: "also chili sauce; moderate use in traditional Cantonese (less spicy than Sichuan); increasing consumption; Moderate use in Cantonese context (cuisine is less spicy than Sichuan/Hunan); but increasing consumption in Guangdong especially among younger consumers; high-volume Lao Gan Ma brand widely used"}
+- {id: msg_glutamate, grade: bulk, rating: 3, name: "MSG", name_sv: "MSG", notes: "Monosodium Glutamate; Very high-volume seasoning in Chinese food service including Guangdong; widely used in restaurant cooking for umami enhancement in soups, stir-fries, and marinades despite declining home use"}
 
 ### Dairy, Oils & Sauces — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Cantonese dairy farming local production", "Cantonese regional cheese varieties", "Cantonese local dairy breeds" -->
+<!-- Produced specifically in Guangdong / Pearl River Delta -->
 
-- {id: stub_dairy_loc_1, grade: local, rating: 9, name: "[STUB] Local Dairy 1", name_sv: "[UTKAST] Lokalt Mejeri 1", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 8, name: "[STUB] Local Dairy 2", name_sv: "[UTKAST] Lokalt Mejeri 2", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 7, name: "[STUB] Local Dairy 3", name_sv: "[UTKAST] Lokalt Mejeri 3", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 6, name: "[STUB] Local Dairy 4", name_sv: "[UTKAST] Lokalt Mejeri 4", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 5, name: "[STUB] Local Dairy 5", name_sv: "[UTKAST] Lokalt Mejeri 5", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 4, name: "[STUB] Local Dairy 6", name_sv: "[UTKAST] Lokalt Mejeri 6", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 3, name: "[STUB] Local Dairy 7", name_sv: "[UTKAST] Lokalt Mejeri 7", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 2, name: "[STUB] Local Dairy 8", name_sv: "[UTKAST] Lokalt Mejeri 8", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_dairy_loc_9, grade: local, rating: 1, name: "[STUB] Local Dairy 9", name_sv: "[UTKAST] Lokalt Mejeri 9", notes: "STUB — replace with verified Cantonese research"}
+- {id: oyster_sauce_local, grade: local, rating: 9, name: "Pearl River Oyster Sauce", name_sv: "Pärlfloden ostronsås", notes: "Xinhui Origin; Oyster sauce invented and still produced in Xinhui, Jiangmen (Guangdong); Lee Kum Kee's original factory is in Xinhui; local Pearl River Delta oysters (>600,000 tons/yr yield) provide raw material"}
+- {id: haitian_soy_sauce_local, grade: local, rating: 8, name: "Haitian Soy Sauce", name_sv: "Haitian sojasås", notes: "Foshan Haitian Flavouring & Food Co. is the world's largest soy sauce producer; headquartered in Foshan, Guangdong; its 'golden label' soy sauce dominates China's market; a true Guangdong-origin product"}
+- {id: pearl_river_bridge_soy, grade: local, rating: 7, name: "Pearl River Bridge Soy Sauce", name_sv: "Pearl River Bridge sojasås", notes: "Another major Guangdong soy sauce brand produced in Guangzhou since 1912; exports globally; notable for light, medium and dark varieties; local Guangdong water and soybean tradition defines its profile"}
+- {id: doubanjiang_cantonese, grade: local, rating: 6, name: "Fermented bean paste", name_sv: "Fermenterad bönpasta", notes: "Cantonese-style milder fermented soybean paste; used in braised dishes and dipping sauces; Cantonese-style milder fermented soybean paste (vs Sichuan doubanjiang) produced locally in Guangdong; used in braised dishes and as dipping sauces; produced by local workshops using traditional ceramic jar fermentation"}
+- {id: sugarcane_rock_sugar, grade: local, rating: 5, name: "Rock Sugar from Guangdong Sugarcane", name_sv: "Klippsocker från Guangdong-sockerrör", notes: "Rock sugar (bing tang) made from Guangdong sugarcane production; used in braised red pork, mooncake syrup, tong sui sweet soups, and Cantonese herbal drinks; sweet-savoury balance key to Cantonese cooking"}
+- {id: coconut_milk_local, grade: local, rating: 4, name: "Coconut Milk", name_sv: "Kokosmjölk", notes: "Pearl River Delta Area; Coconuts grown in southern Guangdong (Zhanjiang, Maoming) and Hainan supply the local coconut milk market; used in HK coconut milk pudding, Cantonese tong sui (sweet soups), and sago desserts"}
+- {id: ginger_wine_local, grade: local, rating: 4, name: "Ginger wine", name_sv: "Ingefärsvin", notes: "also ginger vinegar; traditional Guangdong postpartum food: pig trotters in black vinegar and ginger; Traditional Guangdong postpartum food: pig trotters in black vinegar and ginger (zhu jiao jiang cu); ginger wine made locally for this famous Cantonese confinement dish; produced in household and small-batch traditions"}
+- {id: preserved_tofu_nanru, grade: local, rating: 3, name: "Red Fermented Tofu", name_sv: "Röd fermenterad tofu", notes: "Nán Rǔ; Made in Guangdong with red yeast rice; used as condiment for water spinach stir-fry and as marinade for Cantonese roast pork; distinct from white fermented tofu (bai fu ru); produced by local artisanal workshops"}
+- {id: dried_oyster_local, grade: local, rating: 3, name: "Dried Oyster", name_sv: "Torkad ostron", notes: "Háo Gān; Sun-dried oysters from Pearl River Delta oyster farms; used in ho see fat choy (oyster with moss — Chinese New Year dish), braised dishes, and Cantonese claypot rice; luxury dried seafood product from local oysters"}
 
 
 ## Spices, Nuts & Seasonings
 
 ### Spices, Nuts & Seasonings — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Cantonese signature spice blends", "Cantonese defining herbs and spices", "Cantonese iconic seasoning flavour profile" -->
+<!-- Iconic seasonings that define Cantonese flavour identity -->
 
-- {id: stub_spice_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Spices 1", name_sv: "[UTKAST] Signatur Krydda 1", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Spices 2", name_sv: "[UTKAST] Signatur Krydda 2", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Spices 3", name_sv: "[UTKAST] Signatur Krydda 3", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Spices 4", name_sv: "[UTKAST] Signatur Krydda 4", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Spices 5", name_sv: "[UTKAST] Signatur Krydda 5", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Spices 6", name_sv: "[UTKAST] Signatur Krydda 6", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Spices 7", name_sv: "[UTKAST] Signatur Krydda 7", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Spices 8", name_sv: "[UTKAST] Signatur Krydda 8", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Spices 9", name_sv: "[UTKAST] Signatur Krydda 9", notes: "STUB — replace with verified Cantonese research"}
+- {id: ginger_spice, grade: signature, rating: 9, name: "Ginger", name_sv: "Ingefära", notes: "Fundamental Aromatic; The single most important aromatic in Cantonese cooking; julienned for steamed fish, used in ginger-scallion sauce for white cut chicken, infused into oil for wok dishes; never optional in any seafood preparation"}
+- {id: spring_onion_spice, grade: signature, rating: 9, name: "Spring onion", name_sv: "Vårlök", notes: "scallion; extremely high daily-use volume; used raw as garnish, in ginger-scallion sauces, stir-fries; Cōng; Paired with ginger as the foundational Cantonese aromatic duo; used raw as garnish, fried into ginger-scallion oil, added to wonton filling and congee; grown throughout Guangdong year-round"}
+- {id: douchi_black_bean, grade: signature, rating: 8, name: "Fermented Black Beans", name_sv: "Fermenterade svarta bönor", notes: "Dòuchǐ; Salted, fermented black soybeans; core Cantonese flavouring for black bean sauce dishes (steamed fish with black bean, black bean beef, black bean clams); produced in Guangdong; umami-salty depth"}
+- {id: chen_pi_tangerine, grade: signature, rating: 8, name: "Dried Tangerine Peel", name_sv: "Torkad mandarinskal", notes: "Chén Pí; Sun-dried Da Hong Pao mandarin peel from Xinhui, Jiangmen; used in braised duck, beef tendon soup, steamed pork ribs, and herbal teas; uniquely Cantonese spice; Xinhui is GI-protected origin, ~70-80% national output"}
+- {id: five_spice_powder, grade: signature, rating: 7, name: "Five-Spice Powder", name_sv: "Fem-kryddspulver", notes: "Wǔ Xiāng Fěn; Blend of star anise, fennel, cloves, cinnamon, Sichuan peppercorn; used in char siu marinade, roast duck, siu yuk (crispy pork) seasoning, and soy sauce braises; essential Cantonese roast meat spice"}
+- {id: white_pepper, grade: signature, rating: 7, name: "White Pepper", name_sv: "Vit peppar", notes: "Bái Jiāo; Preferred over black pepper in Cantonese cooking; used in wonton filling, congee, white-cut chicken seasoning, and steamed fish; more floral and aromatic than black pepper; key in Cantonese peppery soup broths"}
+- {id: star_anise, grade: signature, rating: 5, name: "Star Anise", name_sv: "Stjärnanis", notes: "Bā Jiǎo; Essential in Cantonese soy sauce braises, red-braised pork, master stock (lu shui), and char siu marinade; Guangxi and Guangdong border produces significant Chinese star anise; warm liquorice-anise profile"}
+- {id: sha_jiang_sand_ginger, grade: signature, rating: 4, name: "Sand ginger", name_sv: "Sandingefära", notes: "sha jiang in Cantonese; Kaempferia; dried powder used in salt-baked chicken (yan ju gai); Kaempferia; Distinctive Cantonese and Southeast Asian spice; dried powder used in salt-baked chicken (yan ju gai) — a celebrated Guangdong dish; smoky, camphor-like fragrance unlike regular ginger; grown in southern China"}
+- {id: sesame_seeds, grade: signature, rating: 4, name: "Sesame Seeds", name_sv: "Sesamfrön", notes: "Zhī Ma; White and black sesame seeds used in dim sum pastry (sesame balls / jian dui), as garnish on char siu bao, in sesame paste, and in desserts; toasted sesame aroma is a signature Cantonese baked/fried note"}
 
 ### Spices, Nuts & Seasonings — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Cantonese most used condiments seasonings statistics", "Cantonese salt sugar spice consumption", "Cantonese everyday seasoning ingredients" -->
+<!-- Highest statistical volume of spice/seasoning consumption in Guangdong -->
 
-- {id: stub_spice_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Spices 1", name_sv: "[UTKAST] Bulk Krydda 1", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Spices 2", name_sv: "[UTKAST] Bulk Krydda 2", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Spices 3", name_sv: "[UTKAST] Bulk Krydda 3", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Spices 4", name_sv: "[UTKAST] Bulk Krydda 4", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Spices 5", name_sv: "[UTKAST] Bulk Krydda 5", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Spices 6", name_sv: "[UTKAST] Bulk Krydda 6", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Spices 7", name_sv: "[UTKAST] Bulk Krydda 7", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Spices 8", name_sv: "[UTKAST] Bulk Krydda 8", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Spices 9", name_sv: "[UTKAST] Bulk Krydda 9", notes: "STUB — replace with verified Cantonese research"}
+- {id: garlic_bulk, grade: bulk, rating: 9, name: "Garlic", name_sv: "Vitlök", notes: "Suàn; Single highest-volume aromatic seasoning in Guangdong; used in virtually every wok-fried dish; China's total sauces/seasonings market hit 8.3M tonnes in 2024; garlic is consumed in massive bulk as cooking base"}
+- {id: galangal_spice_bulk, grade: bulk, rating: 7, name: "Galangal", name_sv: "Galangal", notes: "南薑 nán jiāng; Greater galangal used in some Cantonese and Chaozhou braised preparations; distinct from ginger and sand ginger; pungent rhizome used in braised goose and some seafood dishes; widely available in Guangdong markets as a common aromatic"}
+- {id: rice_vinegar_bulk, grade: bulk, rating: 8, name: "Rice vinegar", name_sv: "Risvinäger", notes: "Mǐ cù; mild white rice vinegar; widely used in Cantonese sweet-and-sour preparations (gū lǎo ròu), dim sum dipping sauces, and marinated vegetables; China is the world's largest rice vinegar producer; Guangdong-produced rice vinegar is milder than Zhejiang varieties; a high-volume pantry item across all Cantonese kitchens"}
+- {id: char_siu_sauce_bulk, grade: bulk, rating: 7, name: "Char siu sauce", name_sv: "Char siu sås", notes: "叉燒醬 cha siu jeung; BBQ pork marinade sauce; standard commercial product in every Cantonese kitchen; made from hoisin, sugar, rice wine, and spices; distinct from oyster sauce, plum sauce, and hoisin; Lee Kum Kee and Pearl River Bridge dominant brands in Guangdong"}
+- {id: chinese_chives_bulk, grade: bulk, rating: 7, name: "Chinese chives", name_sv: "Kinagräslök", notes: "韭菜 jiǔ cài; flat-leaf chive with stronger garlic-onion flavour than spring onion; used in wonton and dumpling fillings, scrambled eggs, and stir-fries; distinct from spring onion/scallion; major commercial crop in Guangdong with very high consumption volume"}
+- {id: salt_seasoning, grade: bulk, rating: 6, name: "Salt", name_sv: "Salt", notes: "Yán; Fundamental bulk seasoning; Guangdong uses both sea salt (from PRD coastal salt farms) and mined salt; used in brines, blanching water, pickling, and as base seasoning before sauce layering in Cantonese cooking"}
+- {id: sugar_seasoning, grade: bulk, rating: 5, name: "Sugar", name_sv: "Socker", notes: "White / Rock; High-volume use in Cantonese sweet-savoury cooking; char siu glaze, sweet-and-sour pork, tong sui desserts, and preserved vegetables all require significant sugar; China is a major sugar consumer and Guangdong grows sugarcane"}
+- {id: shaoxing_wine_bulk, grade: bulk, rating: 5, name: "Shaoxing Rice Wine", name_sv: "Shaoxing-risvin", notes: "Standard cooking wine in virtually all Cantonese meat marinades and stir-fry sauces; used at high volume in restaurant and home cooking across Guangdong; produced in Shaoxing (Zhejiang) and distributed nationally"}
+- {id: chili_bean_paste, grade: bulk, rating: 4, name: "Chili sauce", name_sv: "Chilisås", notes: "growing market; Cantonese cuisine traditionally mild but chili sauce consumption rising rapidly in Guangdong; Growing Market; Though Cantonese cuisine is traditionally mild, chili sauce and hot sauce consumption growing rapidly in Guangdong especially among younger consumers; Lao Gan Ma and local brands drive volume; market growing ~15%/yr"}
 
 ### Spices, Nuts & Seasonings — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Cantonese herbs grown locally", "Cantonese spice production native plants", "Cantonese foraged herbs regional flavourings" -->
+<!-- Produced specifically in Guangdong Province or Pearl River Delta -->
 
-- {id: stub_spice_loc_1, grade: local, rating: 9, name: "[STUB] Local Spices 1", name_sv: "[UTKAST] Lokalt Krydda 1", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_loc_2, grade: local, rating: 8, name: "[STUB] Local Spices 2", name_sv: "[UTKAST] Lokalt Krydda 2", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_loc_3, grade: local, rating: 7, name: "[STUB] Local Spices 3", name_sv: "[UTKAST] Lokalt Krydda 3", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_loc_4, grade: local, rating: 6, name: "[STUB] Local Spices 4", name_sv: "[UTKAST] Lokalt Krydda 4", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_loc_5, grade: local, rating: 5, name: "[STUB] Local Spices 5", name_sv: "[UTKAST] Lokalt Krydda 5", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_loc_6, grade: local, rating: 4, name: "[STUB] Local Spices 6", name_sv: "[UTKAST] Lokalt Krydda 6", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_loc_7, grade: local, rating: 3, name: "[STUB] Local Spices 7", name_sv: "[UTKAST] Lokalt Krydda 7", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_loc_8, grade: local, rating: 2, name: "[STUB] Local Spices 8", name_sv: "[UTKAST] Lokalt Krydda 8", notes: "STUB — replace with verified Cantonese research"}
-- {id: stub_spice_loc_9, grade: local, rating: 1, name: "[STUB] Local Spices 9", name_sv: "[UTKAST] Lokalt Krydda 9", notes: "STUB — replace with verified Cantonese research"}
-
+- {id: chen_pi_xinhui_local, grade: local, rating: 9, name: "Xinhui Chen Pi", name_sv: "Xinhui chen pi", notes: "Exclusively from Xinhui, Jiangmen, Guangdong; Da Hong Pao mandarin peel sun-dried and aged; >15,000 tonnes/yr dried output; ~70-80% China national production; industry >10B RMB/yr; 150+ enterprises; GI-protected"}
+- {id: douchi_local, grade: local, rating: 7, name: "Guangdong Fermented Black Beans", name_sv: "Guangdong fermenterade svarta bönor", notes: "Guangdong (especially Yang Jiang city) is famous for producing Yangjiang douchi — the most prized Cantonese black bean product; used in steamed fish, black bean sauce, and stir-fries; 400+ year production tradition in Yangjiang"}
+- {id: black_cardamom_local, grade: local, rating: 8, name: "Black cardamom", name_sv: "Svart kardemumma", notes: "草果 cǎo guǒ; Amomum tsao-ko; large smoky cardamom pods grown in Guangxi-Guangdong border mountains; used in Cantonese braised meats and red braises; adds distinctive camphor-smoke aroma; an authentic Guangdong regional spice rarely found outside Chinese cooking"}
+- {id: red_yeast_rice_local, grade: local, rating: 7, name: "Red yeast rice", name_sv: "Röd jästris", notes: "红曲米 hong qu mi; fermented rice inoculated with Monascus purpureus; produced in Fujian/Guangdong; gives red colour to nanru (fermented tofu), char siu pork, and some braises; used as natural food colouring; also in traditional rice wine; a centuries-old Cantonese fermentation ingredient"}
+- {id: cassia_guangdong, grade: local, rating: 5, name: "Cassia bark", name_sv: "Kassiabark", notes: "Chinese cassia (Cinnamomum cassia); grown in Guangdong and Guangxi; used in five-spice powder and master stocks; Chinese cassia (Cinnamomum cassia) grown in Guangdong and Guangxi; used in five-spice powder, master stock braises, and herbal soups; Guangdong's warm climate supports cassia cultivation; sold in dry goods markets"}
+- {id: dried_chrysanthemum, grade: local, rating: 7, name: "Dried chrysanthemum", name_sv: "Torkad krysantemum", notes: "菊花 jú huā; grown in Guangdong; dried flower for chrysanthemum tea (菊花茶) — the most popular herbal tea in Guangdong alongside pu-erh; also used in chrysanthemum sweet dessert soup (菊花糕) and added to hot pot; a major local agricultural and cultural product"}
+- {id: lychee_wood_smoke, grade: local, rating: 4, name: "Lychee Wood Smoke", name_sv: "Litchiträrök", notes: "BBQ Flavour; Unique to Guangdong: lychee tree wood used as fuel for traditional Cantonese roasting ovens (char siu, roast pig); imparts a subtle floral, fruity smoke; Guangdong's large lychee orchards provide the wood as a by-product"}
+- {id: peanuts_snack_local, grade: local, rating: 4, name: "Peanuts", name_sv: "Jordnötter", notes: "hua sheng; grown in parts of Guangdong; garnish for congee and cold noodles; peanut candy (huasheng tang); Hua Sheng; Grown in parts of Guangdong; used as garnish for congee and cold noodles, crushed as topping, in peanut candy (fall festival snack), and pressed for peanut oil in small local mills; multi-purpose culinary nut"}
+- {id: monk_fruit_local, grade: local, rating: 6, name: "Monk fruit", name_sv: "Munkfrukt", notes: "罗汉果 luó hàn guǒ; Momordica grosvenorii; grown in Guilin/Guangxi-Guangdong border mountains; used in Cantonese herbal soups, sweet drinks, and as natural sweetener; a major medicinal-culinary ingredient in Guangdong health cooking; now also exported as low-glycaemic sugar substitute"}
