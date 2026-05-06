@@ -152,6 +152,10 @@ class KitchenCookingPanel extends LitElement {
       _shelfAddQuantity: { type: String },
       _shoppingList: { type: Array },
       _pendingShelfUpdate: { type: Object },
+      // AI ingredient picker — "More" expansion and protein drill-down
+      _ingredientExpandedCats: { type: Array },   // category codes with "More" expanded
+      _ingredientProteinSubcat: { type: String },  // active protein sub-category (e.g. "beef")
+      _ingredientTooltipId: { type: String },      // ingredient id with active touch tooltip
       // Experimental recipe viewer (cut profile card)
       _recipeViewerMethod: { type: String },
       _recipeViewerRecipes: { type: Array },
@@ -300,6 +304,9 @@ class KitchenCookingPanel extends LitElement {
     this._shelfAddQuantity = '';
     this._shoppingList = [];
     this._pendingShelfUpdate = null;
+    this._ingredientExpandedCats = [];
+    this._ingredientProteinSubcat = null;
+    this._ingredientTooltipId = null;
     this._recipeViewerMethod = null;
     this._recipeViewerRecipes = [];
     this._recipeViewerLoading = false;
@@ -5593,106 +5600,9 @@ class KitchenCookingPanel extends LitElement {
       return html`<div class="loading">${this._t('ai_recipe.loading_ingredients')}</div>`;
     }
 
-    // Cuisine/region options for fusion cooking (moved from cooking style page)
-    const cuisineRegions = [
-      { id: 'nordic', name: this._t('cuisines.nordic'), icon: '❄️', cuisines: [
-        { id: 'swedish', name: this._t('cuisines.swedish'), icon: '🇸🇪' },
-        { id: 'danish', name: this._t('cuisines.danish'), icon: '🇩🇰' },
-        { id: 'norwegian', name: this._t('cuisines.norwegian'), icon: '🇳🇴' },
-        { id: 'finnish', name: this._t('cuisines.finnish'), icon: '🇫🇮' },
-        { id: 'icelandic', name: this._t('cuisines.icelandic'), icon: '🇮🇸' },
-        { id: 'new_nordic', name: this._t('cuisines.new_nordic'), icon: '🌿' },
-      ]},
-      { id: 'east_asian', name: this._t('cuisines.east_asian'), icon: '🥢', cuisines: [
-        { id: 'japanese', name: this._t('cuisines.japanese'), icon: '🇯🇵' },
-        { id: 'chinese', name: this._t('cuisines.chinese'), icon: '🇨🇳' },
-        { id: 'korean', name: this._t('cuisines.korean'), icon: '🇰🇷' },
-        { id: 'taiwanese', name: this._t('cuisines.taiwanese'), icon: '🇹🇼' },
-      ]},
-      { id: 'southeast_asian', name: this._t('cuisines.southeast_asian'), icon: '🌴', cuisines: [
-        { id: 'thai', name: this._t('cuisines.thai'), icon: '🇹🇭' },
-        { id: 'vietnamese', name: this._t('cuisines.vietnamese'), icon: '🇻🇳' },
-        { id: 'indonesian', name: this._t('cuisines.indonesian'), icon: '🇮🇩' },
-        { id: 'malaysian', name: this._t('cuisines.malaysian'), icon: '🇲🇾' },
-        { id: 'filipino', name: this._t('cuisines.filipino'), icon: '🇵🇭' },
-        { id: 'singaporean', name: this._t('cuisines.singaporean'), icon: '🇸🇬' },
-      ]},
-      { id: 'south_asian', name: this._t('cuisines.south_asian'), icon: '🍛', cuisines: [
-        { id: 'indian', name: this._t('cuisines.indian'), icon: '🇮🇳' },
-        { id: 'sri_lankan', name: this._t('cuisines.sri_lankan'), icon: '🇱🇰' },
-        { id: 'pakistani', name: this._t('cuisines.pakistani'), icon: '🇵🇰' },
-        { id: 'bangladeshi', name: this._t('cuisines.bangladeshi'), icon: '🇧🇩' },
-        { id: 'nepali', name: this._t('cuisines.nepali'), icon: '🇳🇵' },
-      ]},
-      { id: 'middle_east', name: this._t('cuisines.middle_east'), icon: '🧆', cuisines: [
-        { id: 'lebanese', name: this._t('cuisines.lebanese'), icon: '🇱🇧' },
-        { id: 'turkish', name: this._t('cuisines.turkish'), icon: '🇹🇷' },
-        { id: 'persian', name: this._t('cuisines.persian'), icon: '🇮🇷' },
-        { id: 'israeli', name: this._t('cuisines.israeli'), icon: '🇮🇱' },
-        { id: 'syrian', name: this._t('cuisines.syrian'), icon: '🇸🇾' },
-        { id: 'iraqi', name: this._t('cuisines.iraqi'), icon: '🇮🇶' },
-        { id: 'yemeni', name: this._t('cuisines.yemeni'), icon: '🇾🇪' },
-        { id: 'emirati', name: this._t('cuisines.emirati'), icon: '🇦🇪' },
-        { id: 'palestinian', name: this._t('cuisines.palestinian'), icon: '🇵🇸' },
-      ]},
-      { id: 'european', name: this._t('cuisines.european'), icon: '🏰', cuisines: [
-        { id: 'italian', name: this._t('cuisines.italian'), icon: '🇮🇹' },
-        { id: 'french', name: this._t('cuisines.french'), icon: '🇫🇷' },
-        { id: 'spanish', name: this._t('cuisines.spanish'), icon: '🇪🇸' },
-        { id: 'greek', name: this._t('cuisines.greek'), icon: '🇬🇷' },
-        { id: 'portuguese', name: this._t('cuisines.portuguese'), icon: '🇵🇹' },
-        { id: 'german', name: this._t('cuisines.german'), icon: '🇩🇪' },
-        { id: 'british', name: this._t('cuisines.british'), icon: '🇬🇧' },
-        { id: 'polish', name: this._t('cuisines.polish'), icon: '🇵🇱' },
-        { id: 'hungarian', name: this._t('cuisines.hungarian'), icon: '🇭🇺' },
-        { id: 'mediterranean', name: this._t('cuisines.mediterranean'), icon: '🫒' },
-        { id: 'balkan', name: this._t('cuisines.balkan'), icon: '🏔️' },
-        { id: 'russian', name: this._t('cuisines.russian'), icon: '🇷🇺' },
-      ]},
-      { id: 'north_american', name: this._t('cuisines.north_american'), icon: '🦅', cuisines: [
-        { id: 'american', name: this._t('cuisines.american'), icon: '🇺🇸' },
-        { id: 'cajun_creole', name: this._t('cuisines.cajun_creole'), icon: '🦞' },
-        { id: 'tex_mex', name: this._t('cuisines.tex_mex'), icon: '🌮' },
-        { id: 'canadian', name: this._t('cuisines.canadian'), icon: '🇨🇦' },
-        { id: 'southern_us', name: this._t('cuisines.southern_us'), icon: '🍗' },
-        { id: 'hawaiian', name: this._t('cuisines.hawaiian'), icon: '🌺' },
-      ]},
-      { id: 'latin_american', name: this._t('cuisines.latin_american'), icon: '💃', cuisines: [
-        { id: 'mexican', name: this._t('cuisines.mexican'), icon: '🇲🇽' },
-        { id: 'brazilian', name: this._t('cuisines.brazilian'), icon: '🇧🇷' },
-        { id: 'peruvian', name: this._t('cuisines.peruvian'), icon: '🇵🇪' },
-        { id: 'argentinian', name: this._t('cuisines.argentinian'), icon: '🇦🇷' },
-        { id: 'colombian', name: this._t('cuisines.colombian'), icon: '🇨🇴' },
-        { id: 'cuban', name: this._t('cuisines.cuban'), icon: '🇨🇺' },
-        { id: 'venezuelan', name: this._t('cuisines.venezuelan'), icon: '🇻🇪' },
-        { id: 'chilean', name: this._t('cuisines.chilean'), icon: '🇨🇱' },
-      ]},
-      { id: 'caribbean_region', name: this._t('cuisines.caribbean_region'), icon: '🏝️', cuisines: [
-        { id: 'jamaican', name: this._t('cuisines.jamaican'), icon: '🇯🇲' },
-        { id: 'trinidadian', name: this._t('cuisines.trinidadian'), icon: '🇹🇹' },
-        { id: 'haitian', name: this._t('cuisines.haitian'), icon: '🇭🇹' },
-        { id: 'puerto_rican', name: this._t('cuisines.puerto_rican'), icon: '🇵🇷' },
-        { id: 'caribbean', name: this._t('cuisines.caribbean'), icon: '🏝️' },
-      ]},
-      { id: 'african', name: this._t('cuisines.african'), icon: '🌍', cuisines: [
-        { id: 'ethiopian', name: this._t('cuisines.ethiopian'), icon: '🇪🇹' },
-        { id: 'moroccan', name: this._t('cuisines.moroccan'), icon: '🇲🇦' },
-        { id: 'nigerian', name: this._t('cuisines.nigerian'), icon: '🇳🇬' },
-        { id: 'ghanaian', name: this._t('cuisines.ghanaian'), icon: '🇬🇭' },
-        { id: 'senegalese', name: this._t('cuisines.senegalese'), icon: '🇸🇳' },
-        { id: 'south_african', name: this._t('cuisines.south_african'), icon: '🇿🇦' },
-        { id: 'kenyan', name: this._t('cuisines.kenyan'), icon: '🇰🇪' },
-        { id: 'tanzanian', name: this._t('cuisines.tanzanian'), icon: '🇹🇿' },
-        { id: 'tunisian', name: this._t('cuisines.tunisian'), icon: '🇹🇳' },
-        { id: 'egyptian', name: this._t('cuisines.egyptian'), icon: '🇪🇬' },
-        { id: 'east_african', name: this._t('cuisines.east_african'), icon: '🌄' },
-        { id: 'west_african', name: this._t('cuisines.west_african'), icon: '🥘' },
-      ]},
-      { id: 'oceanian', name: this._t('cuisines.oceanian'), icon: '🦘', cuisines: [
-        { id: 'australian', name: this._t('cuisines.australian'), icon: '🇦🇺' },
-        { id: 'polynesian', name: this._t('cuisines.polynesian'), icon: '🌺' },
-      ]},
-    ];
+    // Cuisine/region options — built from docs/cuisines/*.md (KCE:CUISINE files).
+    // Add a new cuisine file there and it will appear here on the next release.
+    const cuisineRegions = (typeof AI_CUISINE_REGIONS !== 'undefined') ? AI_CUISINE_REGIONS : [];
 
     // Get cuisine-specific ingredients based on selection
     const displayIngredients = this._getCuisineIngredients(cuisineRegions);
@@ -5705,6 +5615,9 @@ class KitchenCookingPanel extends LitElement {
           this._selectedIngredients = [];
           this._aiSelectedCuisines = [];
           this._aiExpandedRegions = [];
+          this._ingredientExpandedCats = [];
+          this._ingredientProteinSubcat = null;
+          this._ingredientTooltipId = null;
           this._currentPath = this._selectedMainAppliance === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
           this.requestUpdate();
         }}>
@@ -5713,65 +5626,81 @@ class KitchenCookingPanel extends LitElement {
         <h2>${this._t('ai_recipe.select_ingredients_title')}</h2>
         <button class="help-btn" @click=${() => this._openHelp('#72-selecting-ingredients')} title="Open User Guide">?</button>
       </div>
-          <p class="info-text" style="margin-bottom: 12px;">${this._t('ai_recipe.cuisine_region_hint')}</p>
-          ${(this._aiSelectedCuisines || []).length > 0 ? html`
-            <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
-              ${(this._aiSelectedCuisines || []).map(c => {
-                const name = c.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-                return html`<span style="background: var(--primary-color); color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.85em; display: inline-flex; align-items: center; gap: 4px;">
-                  ${name}
-                  <span style="cursor: pointer; margin-left: 2px;" @click=${() => {
-                    this._aiSelectedCuisines = (this._aiSelectedCuisines || []).filter(x => x !== c);
-                    this.requestUpdate();
-                  }}>✕</span>
-                </span>`;
-              })}
-            </div>
-          ` : ''}
-          ${cuisineRegions.map(region => {
-            const isExpanded = (this._aiExpandedRegions || []).includes(region.id);
-            const selectedInRegion = region.cuisines.filter(c => (this._aiSelectedCuisines || []).includes(c.id));
-            return html`
-              <div style="margin-bottom: 4px; border: 1px solid var(--divider-color); border-radius: 8px; overflow: hidden;">
-                <div 
-                  style="padding: 10px 14px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; background: ${selectedInRegion.length > 0 ? 'var(--primary-color)' : 'var(--card-background-color)'}; color: ${selectedInRegion.length > 0 ? 'white' : 'inherit'};"
-                  @click=${() => {
-                    const expanded = [...(this._aiExpandedRegions || [])];
-                    const idx = expanded.indexOf(region.id);
-                    if (idx >= 0) { expanded.splice(idx, 1); } else { expanded.push(region.id); }
-                    this._aiExpandedRegions = expanded;
-                    this.requestUpdate();
-                  }}
-                >
-                  <span style="font-weight: bold;">${region.icon} ${region.name} ${selectedInRegion.length > 0 ? `(${selectedInRegion.length})` : ''}</span>
-                  <span>${isExpanded ? '▼' : '▶'}</span>
-                </div>
-                ${isExpanded ? html`
-                  <div style="padding: 8px; display: flex; flex-wrap: wrap; gap: 6px;">
-                    ${region.cuisines.map(cuisine => {
-                      const isSelected = (this._aiSelectedCuisines || []).includes(cuisine.id);
-                      return html`
-                        <button
-                          style="padding: 6px 12px; border-radius: 16px; border: 1px solid ${isSelected ? 'var(--primary-color)' : 'var(--divider-color)'}; background: ${isSelected ? 'var(--primary-color)' : 'var(--card-background-color)'}; color: ${isSelected ? 'white' : 'inherit'}; cursor: pointer; font-size: 0.9em; display: inline-flex; align-items: center; gap: 4px;"
-                          @click=${() => {
-                            const cuisines = [...(this._aiSelectedCuisines || [])];
-                            const idx = cuisines.indexOf(cuisine.id);
-                            if (idx >= 0) { cuisines.splice(idx, 1); } else { cuisines.push(cuisine.id); }
-                            this._aiSelectedCuisines = cuisines;
-                            this.requestUpdate();
-                          }}
-                        >
-                          ${cuisine.icon} ${cuisine.name}
-                        </button>
-                      `;
-                    })}
-                  </div>
-                ` : ''}
-              </div>
-            `;
+      <p class="info-text" style="margin-bottom: 12px;">${this._t('ai_recipe.cuisine_region_hint')}</p>
+      ${(this._aiSelectedCuisines || []).length > 0 ? html`
+        <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
+          ${(this._aiSelectedCuisines || []).map(c => {
+            const name = c.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            return html`<span style="background: var(--primary-color); color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.85em; display: inline-flex; align-items: center; gap: 4px;">
+              ${name}
+              <span style="cursor: pointer; margin-left: 2px;" @click=${() => {
+                this._aiSelectedCuisines = (this._aiSelectedCuisines || []).filter(x => x !== c);
+                this.requestUpdate();
+              }}>✕</span>
+            </span>`;
           })}
         </div>
-      </ha-card>
+      ` : ''}
+      ${cuisineRegions.map(region => {
+        const isExpanded = (this._aiExpandedRegions || []).includes(region.id);
+        const selectedInRegion = region.cuisines.filter(c => (this._aiSelectedCuisines || []).includes(c.id));
+        return html`
+          <div style="margin-bottom: 4px; border: 1px solid var(--divider-color); border-radius: 8px; overflow: hidden;">
+            <div
+              style="padding: 10px 14px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; background: ${selectedInRegion.length > 0 ? 'var(--primary-color)' : 'var(--card-background-color)'}; color: ${selectedInRegion.length > 0 ? 'white' : 'inherit'};"
+              @click=${() => {
+                const expanded = [...(this._aiExpandedRegions || [])];
+                const idx = expanded.indexOf(region.id);
+                if (idx >= 0) { expanded.splice(idx, 1); } else { expanded.push(region.id); }
+                this._aiExpandedRegions = expanded;
+                this.requestUpdate();
+              }}
+            >
+              <span style="font-weight: bold;">${region.icon} ${region.name} ${selectedInRegion.length > 0 ? `(${selectedInRegion.length})` : ''}</span>
+              <span>${isExpanded ? '▼' : '▶'}</span>
+            </div>
+            ${isExpanded ? html`
+              <div style="padding: 8px; display: flex; flex-wrap: wrap; gap: 6px;">
+                ${region.cuisines.map(cuisine => {
+                  const isSelected = (this._aiSelectedCuisines || []).includes(cuisine.id);
+                  return html`
+                    <button
+                      style="padding: 6px 12px; border-radius: 16px; border: 1px solid ${isSelected ? 'var(--primary-color)' : 'var(--divider-color)'}; background: ${isSelected ? 'var(--primary-color)' : 'var(--card-background-color)'}; color: ${isSelected ? 'white' : 'inherit'}; cursor: pointer; font-size: 0.9em; display: inline-flex; align-items: center; gap: 4px;"
+                      @click=${() => {
+                        const cuisines = [...(this._aiSelectedCuisines || [])];
+                        const idx = cuisines.indexOf(cuisine.id);
+                        if (idx >= 0) { cuisines.splice(idx, 1); } else { cuisines.push(cuisine.id); }
+                        this._aiSelectedCuisines = cuisines;
+                        this.requestUpdate();
+                      }}
+                    >
+                      ${cuisine.icon} ${cuisine.name}
+                    </button>
+                  `;
+                })}
+              </div>
+            ` : ''}
+          </div>
+        `;
+      })}
+
+      ${(() => {
+        const descMap = (typeof AI_CUISINE_DESCRIPTIONS !== 'undefined') ? AI_CUISINE_DESCRIPTIONS : {};
+        const selectedCuisines = this._aiSelectedCuisines || [];
+        const descs = selectedCuisines
+          .map(cid => descMap[cid])
+          .filter(d => d && d.description);
+        if (descs.length === 0) return '';
+        return html`
+          <div style="margin: 8px 0 12px 0; padding: 10px 14px; background: var(--secondary-background-color); border-radius: 8px; border-left: 3px solid var(--primary-color);">
+            ${descs.map(d => html`
+              <p style="margin: 0 0 4px 0; font-size: 0.9em; color: var(--primary-text-color); line-height: 1.5;">
+                ${(this._language === 'sv' && d.description_sv) ? d.description_sv : d.description}
+              </p>
+            `)}
+          </div>
+        `;
+      })()}
 
       <ha-card>
         <div class="card-content">
@@ -5779,6 +5708,8 @@ class KitchenCookingPanel extends LitElement {
           <p class="info-text" style="font-size: 0.85em; color: var(--secondary-text-color);">
             ${this._t('ai_recipe.staples_available')} ${(this._language === 'sv' && typeof AI_ASSUMED_STAPLES_SV !== 'undefined' ? AI_ASSUMED_STAPLES_SV : (typeof AI_ASSUMED_STAPLES !== 'undefined' ? AI_ASSUMED_STAPLES : [])).join(', ')}
           </p>
+
+          ${this._renderShelfIngredientSuggestions()}
           
           ${this._renderCategorizedIngredients(displayIngredients)}
 
@@ -5797,6 +5728,7 @@ class KitchenCookingPanel extends LitElement {
 
           <div class="selected-ingredients">
             <h4>${this._t('ai_recipe.selected_ingredients_label')} (${this._selectedIngredients.length}):</h4>
+            <p style="margin: 0 0 8px 0; font-size: 0.8em; color: var(--secondary-text-color);">${this._t('ai_recipe.selected_ingredients_hint')}</p>
             <div class="ingredient-tags">
               ${this._selectedIngredients.map(ing => html`
                 <span
@@ -5893,12 +5825,36 @@ class KitchenCookingPanel extends LitElement {
       }
     }
 
-    return merged.length > 0 ? merged : (this._commonIngredients || []);
+    // Deduplicate by base ID: if e.g. 'beans', 'beans_bulk', 'beans_local' all appear,
+    // keep only the entry with the highest-priority grade (signature > bulk > local).
+    if (merged.length > 0) {
+      const GRADE_PRIORITY = {signature: 3, bulk: 2, local: 1};
+      const baseIdOf = id => id.replace(/_(bulk|local|signature)$/, '');
+      const byBaseId = {};
+      for (const ing of merged) {
+        const key = baseIdOf(ing.id);
+        const existing = byBaseId[key];
+        if (!existing || (GRADE_PRIORITY[ing.grade] || 0) > (GRADE_PRIORITY[existing.grade] || 0)) {
+          byBaseId[key] = ing;
+        }
+      }
+      const deduped = Object.values(byBaseId);
+      return deduped.length > 0 ? deduped : (this._commonIngredients || []);
+    }
+    return this._commonIngredients || [];
   }
 
   /**
    * Render ingredients grouped by category with alphabetic sorting within each group.
-   * If ingredients have a "cat" field, groups them; otherwise falls back to a flat grid.
+   *
+   * Features:
+   * - Groups by category using AI_CATEGORY_ORDER
+   * - Each category shows the top 3 per grade (signature/bulk/local) by rating descending
+   * - A "More (N)" button reveals the full extended set
+   * - The Proteins category (cat="p") shows a subcategory drill-down:
+   *   tapping a protein group (Beef / Pork / Fish / …) reveals cuts from
+   *   AI_PROTEIN_SUBCATS sourced from the recipe files
+   * - Falls back to a flat alphabetical grid when no cat info is present
    */
   _renderCategorizedIngredients(ingredients) {
     const categoryLabels = (this._language === 'sv' && typeof AI_CATEGORY_LABELS_SV !== 'undefined')
@@ -5931,56 +5887,445 @@ class KitchenCookingPanel extends LitElement {
       groups[cat].sort((a, b) => (this._ingDisplayName(a) || '').localeCompare(this._ingDisplayName(b) || ''));
     }
 
+    const expandedCats = this._ingredientExpandedCats || [];
+
     return html`
-      ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => html`
-        <div class="ingredient-category">
-          <h4 style="margin: 12px 0 6px 0; font-size: 0.95em; color: var(--secondary-text-color);">${categoryLabels[cat] || cat}</h4>
-          <div class="ingredient-grid">
-            ${groups[cat].map(ingredient => this._renderIngredientCheckbox(ingredient))}
+      ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => {
+        const allItems = groups[cat];
+        // Split into base (always shown) and ext (behind "More"):
+        //   - If items have grade+rating: top N per grade by rating descending → base, rest → ext
+        //     signature: 3, bulk: 2, local: 3  (8 total max before "More")
+        //   - Fallback (no grade info): first 12 → base, rest → ext
+        const GRADE_LIMITS = {signature: 3, bulk: 2, local: 3};
+        const GRADE_ORDER = ['signature', 'bulk', 'local'];
+        const hasGrade = allItems.some(i => i.grade);
+        let baseItems, extItems;
+        if (hasGrade) {
+          const byGrade = {};
+          for (const item of allItems) {
+            const g = item.grade || 'local';
+            if (!byGrade[g]) byGrade[g] = [];
+            byGrade[g].push(item);
+          }
+          for (const g of Object.keys(byGrade)) {
+            byGrade[g].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+          }
+          const baseSet = new Set();
+          for (const g of GRADE_ORDER) {
+            if (!byGrade[g]) continue;
+            byGrade[g].slice(0, GRADE_LIMITS[g] || 3).forEach(i => baseSet.add(i.id));
+          }
+          baseItems = allItems.filter(i => baseSet.has(i.id));
+          extItems  = allItems.filter(i => !baseSet.has(i.id));
+        } else {
+          baseItems = allItems.length > 12 ? allItems.slice(0, 12) : allItems;
+          extItems  = allItems.length > 12 ? allItems.slice(12) : [];
+        }
+        const isExpanded = expandedCats.includes(cat);
+        const visibleItems = isExpanded ? allItems : baseItems;
+
+        // Proteins (cat="p") get a drill-down subcategory selector.
+        // Pass the full allItems list — _renderProteinCategory computes its own base/ext
+        // after excluding tree-mapped proteins from the badge area.
+        if (cat === 'p') {
+          return this._renderProteinCategory(allItems, isExpanded, categoryLabels[cat]);
+        }
+
+        return html`
+          <div class="ingredient-category">
+            <h4 style="margin: 12px 0 6px 0; font-size: 0.95em; color: var(--secondary-text-color);">${categoryLabels[cat] || cat}</h4>
+            <div class="ingredient-grid">
+              ${visibleItems.map(ingredient => this._renderIngredientCheckbox(ingredient))}
+            </div>
+            ${extItems.length > 0 ? html`
+              <button
+                style="margin-top: 6px; padding: 4px 12px; border-radius: 14px; border: 1px solid var(--divider-color); background: transparent; cursor: pointer; font-size: 0.82em; color: var(--secondary-text-color);"
+                @click=${() => {
+                  const next = isExpanded
+                    ? expandedCats.filter(c => c !== cat)
+                    : [...expandedCats, cat];
+                  this._ingredientExpandedCats = next;
+                  this.requestUpdate();
+                }}
+              >
+                ${isExpanded
+                  ? this._t('ai_recipe.show_less') || 'Show less'
+                  : `${this._t('ai_recipe.more_ingredients') || 'More'} (+${extItems.length})`}
+              </button>
+            ` : ''}
           </div>
-        </div>
-      `)}
+        `;
+      })}
+    `;
+  }
+
+  /**
+   * Render the Proteins category with an optional subcategory drill-down.
+   *
+   * Badge area rules (general mechanism, works for every cuisine):
+   *   1. Any cuisine protein that maps to a tree node (via AI_PROTEIN_TO_SUBCAT, i.e. has a
+   *      matching top-level subcat) OR is a specific cut inside AI_PROTEIN_SUBCATS is excluded
+   *      from the badge area — the tree represents it.  The tree button lights up instead.
+   *   2. From the remaining non-tree proteins, the top 3 per grade (signature / bulk / local)
+   *      by rating are shown by default; the rest appear under "More".
+   *   3. When a protein maps to the tree it "lights up" its subcat button:
+   *        - signature or local grade → dark green button
+   *        - bulk grade only → light green button
+   *      Dark green takes precedence when both are present in the same subcat.
+   *
+   * Fallback (no cuisine selected): generic protein IDs from AI_GENERIC_PROTEIN_IDS are
+   * filtered from the badge area, and tree buttons are highlighted with the legacy blue style.
+   */
+  _renderProteinCategory(allItems, isExpanded, categoryLabel) {
+    const proteinSubcats = (typeof AI_PROTEIN_SUBCATS !== 'undefined') ? AI_PROTEIN_SUBCATS : {};
+    const subcat = this._ingredientProteinSubcat;
+    const expandedCats = this._ingredientExpandedCats || [];
+    const cat = 'p';
+    const subcatLabels = (this._language === 'sv' && typeof AI_PROTEIN_SUBCAT_LABELS_SV !== 'undefined')
+      ? AI_PROTEIN_SUBCAT_LABELS_SV
+      : (typeof AI_PROTEIN_SUBCAT_LABELS !== 'undefined' ? AI_PROTEIN_SUBCAT_LABELS : {});
+
+    // Category icons for protein sub-groups
+    const subcatIcons = {
+      beef: '🐄', pork: '🐷', poultry: '🍗', fish: '🐟', lamb: '🐑', game: '🦌',
+    };
+
+    const proteinToSubcat = (typeof AI_PROTEIN_TO_SUBCAT !== 'undefined') ? AI_PROTEIN_TO_SUBCAT : {};
+    const genericProteinIds = new Set((typeof AI_GENERIC_PROTEIN_IDS !== 'undefined') ? AI_GENERIC_PROTEIN_IDS : []);
+    const cuisineIngMap = (typeof AI_CUISINE_INGREDIENTS !== 'undefined') ? AI_CUISINE_INGREDIENTS : {};
+    const cuisineRegionMap = (typeof AI_CUISINE_TO_REGION !== 'undefined') ? AI_CUISINE_TO_REGION : {};
+    const selectedCuisines = this._aiSelectedCuisines || [];
+
+    // --- Determine which proteins are represented in the tree (excluded from badge area) ---
+    // A protein is "in the tree" if it maps to a top-level subcat OR is a specific drill-down cut.
+    let proteinTreeIds;
+    if (selectedCuisines.length > 0) {
+      const allSubcatCutIds = new Set(
+        Object.values(proteinSubcats).flatMap(cuts => cuts.map(c => c.id))
+      );
+      proteinTreeIds = new Set(
+        allItems
+          .filter(i => proteinToSubcat[i.id] || allSubcatCutIds.has(i.id))
+          .map(i => i.id)
+      );
+    } else {
+      // No cuisine selected: use the static generic-protein filter (legacy behaviour)
+      proteinTreeIds = genericProteinIds;
+    }
+
+    // Badge items = cuisine proteins NOT represented in the tree
+    const notInTree = allItems.filter(i => !proteinTreeIds.has(i.id));
+
+    // Compute base (always shown) and ext (behind "More") from badge items.
+    // Top N per grade by rating; fallback to threshold-12 when no grade info.
+    // signature: 3, bulk: 2, local: 3  (8 total max before "More")
+    const GRADE_LIMITS = {signature: 3, bulk: 2, local: 3};
+    const GRADE_ORDER = ['signature', 'bulk', 'local'];
+    let baseItems, extItems;
+    const hasGrade = notInTree.some(i => i.grade);
+    if (hasGrade) {
+      const byGrade = {};
+      for (const item of notInTree) {
+        const g = item.grade || 'local';
+        if (!byGrade[g]) byGrade[g] = [];
+        byGrade[g].push(item);
+      }
+      for (const g of Object.keys(byGrade)) {
+        byGrade[g].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+      }
+      const baseSet = new Set();
+      for (const g of GRADE_ORDER) {
+        if (!byGrade[g]) continue;
+        byGrade[g].slice(0, GRADE_LIMITS[g] || 3).forEach(i => baseSet.add(i.id));
+      }
+      baseItems = notInTree.filter(i => baseSet.has(i.id));
+      extItems  = notInTree.filter(i => !baseSet.has(i.id));
+    } else {
+      baseItems = notInTree.length > 12 ? notInTree.slice(0, 12) : notInTree;
+      extItems  = notInTree.length > 12 ? notInTree.slice(12) : [];
+    }
+    const visibleBadgeItems = isExpanded ? notInTree : baseItems;
+
+    // --- Cuisine protein highlighting for tree buttons ---
+    // ALL grades (signature, bulk, local) light up subcat buttons.
+    // Collect the highest-priority grade present per subcat:
+    //   signature or local → dark green (strong cultural/local identity)
+    //   bulk only          → light green (high consumption volume)
+    // When both are present in the same subcat, dark green takes precedence.
+    const cuisineCommonProteinIds = new Set();
+    const cuisineDarkGreenSubcats = new Set();   // signature or local present
+    const cuisineLightGreenSubcats = new Set();  // bulk only
+    const subcatGrades = {};                     // sc → Set of grades
+
+    for (const cuisineId of selectedCuisines) {
+      let ings = cuisineIngMap[cuisineId];
+      if (!ings) {
+        const regionId = cuisineRegionMap[cuisineId];
+        if (regionId) ings = cuisineIngMap[regionId];
+      }
+      if (!ings) continue;
+      for (const ing of ings) {
+        const sc = proteinToSubcat[ing.id];
+        if (!sc) continue;
+        cuisineCommonProteinIds.add(ing.id);
+        if (!subcatGrades[sc]) subcatGrades[sc] = new Set();
+        subcatGrades[sc].add(ing.grade || 'bulk');
+      }
+    }
+    for (const [sc, grades] of Object.entries(subcatGrades)) {
+      if (grades.has('signature') || grades.has('local')) {
+        cuisineDarkGreenSubcats.add(sc);
+      } else {
+        cuisineLightGreenSubcats.add(sc);
+      }
+    }
+
+    return html`
+      <div class="ingredient-category">
+        <h4 style="margin: 12px 0 6px 0; font-size: 0.95em; color: var(--secondary-text-color);">${categoryLabel || '🥩 Proteins'}</h4>
+
+        ${Object.keys(proteinSubcats).length > 0 ? html`
+          <!-- Protein sub-category selector pills -->
+          <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px;">
+            ${Object.keys(proteinSubcats).map(sc => {
+              const isActive = subcat === sc;
+              const isDarkGreen = cuisineDarkGreenSubcats.has(sc);
+              const isLightGreen = cuisineLightGreenSubcats.has(sc);
+              let borderColor = 'var(--divider-color)';
+              let bgColor = 'transparent';
+              let textColor = 'inherit';
+              let fontWeight = 'normal';
+              if (isActive) {
+                borderColor = 'var(--primary-color)';
+                bgColor = 'var(--primary-color)';
+                textColor = 'white';
+                fontWeight = '600';
+              } else if (isDarkGreen) {
+                borderColor = '#388e3c';
+                bgColor = 'rgba(56,142,60, 0.15)';
+                textColor = '#388e3c';
+                fontWeight = '700';
+              } else if (isLightGreen) {
+                borderColor = '#66bb6a';
+                bgColor = 'rgba(102,187,106, 0.08)';
+                textColor = '#5a9e5d';
+                fontWeight = '600';
+              }
+              return html`
+                <button
+                  style="padding: 4px 10px; border-radius: 14px; border: 1px solid ${borderColor}; background: ${bgColor}; color: ${textColor}; cursor: pointer; font-size: 0.82em; font-weight: ${fontWeight};"
+                  @click=${() => {
+                    this._ingredientProteinSubcat = (subcat === sc) ? null : sc;
+                    this.requestUpdate();
+                  }}
+                >${subcatIcons[sc] || '🥩'} ${subcatLabels[sc] || sc}</button>
+              `;
+            })}
+          </div>
+        ` : ''}
+
+        ${subcat && proteinSubcats[subcat] ? html`
+          <!-- Drill-down: cuts from recipe files for selected sub-category -->
+          <div style="padding: 8px; background: var(--secondary-background-color); border-radius: 8px; margin-bottom: 8px;">
+            <div style="font-size: 0.82em; color: var(--secondary-text-color); margin-bottom: 6px;">
+              ${subcatIcons[subcat] || '🥩'} ${subcatLabels[subcat] || subcat}
+              <span style="margin-left: 6px; opacity: 0.7;">(${this._t('ai_recipe.from_recipe_files') || 'from recipe library'})</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+              ${proteinSubcats[subcat].map(cut => {
+                const displayName = (this._language === 'sv' && cut.name_sv) ? cut.name_sv : cut.name;
+                // Highlight cut if any cuisine protein ID is a prefix/match of this cut's ID
+                // e.g. cuisine has "salmon" → highlights "salmon_fillet", "salmon_steak"
+                const isCuisineCommon = [...cuisineCommonProteinIds].some(
+                  id => cut.id === id || cut.id.startsWith(id + '_') || id.startsWith(cut.id + '_')
+                );
+                return html`
+                  <button
+                    style="padding: 4px 10px; border-radius: 14px; border: 1px solid ${isCuisineCommon ? 'var(--primary-color)' : 'var(--primary-color)'}; background: ${isCuisineCommon ? 'rgba(var(--rgb-primary-color, 3,169,244), 0.15)' : 'transparent'}; cursor: pointer; font-size: 0.82em; color: ${isCuisineCommon ? 'var(--primary-color)' : 'var(--primary-text-color)'}; font-weight: ${isCuisineCommon ? '600' : 'normal'};"
+                    @click=${() => {
+                      this._addCustomIngredient(cut.name);
+                      this._ingredientProteinSubcat = null;
+                      this.requestUpdate();
+                    }}
+                  >${isCuisineCommon ? '★ ' : ''}${displayName}</button>
+                `;
+              })}
+            </div>
+          </div>
+        ` : html`
+          <!-- Badge area: non-tree proteins only -->
+          <div class="ingredient-grid">
+            ${visibleBadgeItems.map(ingredient => this._renderIngredientCheckbox(ingredient))}
+          </div>
+          ${extItems.length > 0 ? html`
+            <button
+              style="margin-top: 6px; padding: 4px 12px; border-radius: 14px; border: 1px solid var(--divider-color); background: transparent; cursor: pointer; font-size: 0.82em; color: var(--secondary-text-color);"
+              @click=${() => {
+                const next = isExpanded
+                  ? expandedCats.filter(c => c !== cat)
+                  : [...expandedCats, cat];
+                this._ingredientExpandedCats = next;
+                this.requestUpdate();
+              }}
+            >
+              ${isExpanded
+                ? this._t('ai_recipe.show_less') || 'Show less'
+                : `${this._t('ai_recipe.more_ingredients') || 'More'} (+${extItems.length})`}
+            </button>
+          ` : ''}
+        `}
+      </div>
     `;
   }
 
   /** Return the display name for an ingredient respecting the active language. */
   _ingDisplayName(ingredient) {
     if (!ingredient || typeof ingredient === 'string') return ingredient || '';
-    if (this._language === 'sv' && ingredient.id && typeof AI_INGREDIENT_NAMES_SV !== 'undefined') {
-      const sv = AI_INGREDIENT_NAMES_SV[ingredient.id];
-      if (sv) return sv;
+    if (this._language === 'sv') {
+      // Check AI_INGREDIENT_NAMES_SV lookup table first
+      if (ingredient.id && typeof AI_INGREDIENT_NAMES_SV !== 'undefined') {
+        const sv = AI_INGREDIENT_NAMES_SV[ingredient.id];
+        if (sv) return sv;
+      }
+      // Fall back to inline name_sv (e.g. on recipe-file-derived cuts from AI_PROTEIN_SUBCATS)
+      if (ingredient.name_sv) return ingredient.name_sv;
     }
     return ingredient.name || '';
   }
 
   /**
    * Return the translated display name for a chip ingredient stored by English name.
-   * Searches all categories in _aiIngredients for the matching object, then calls
-   * _ingDisplayName.  Falls back to the raw name for custom (non-predefined) ingredients.
+   * Searches AI_INGREDIENTS (dict), AI_COMMON_INGREDIENTS (flat array), and
+   * AI_PROTEIN_SUBCATS (cuts from recipe files).  Falls back to the raw name
+   * for custom (non-predefined) ingredients.
    */
   _lookupIngDisplayName(name) {
     if (!name) return '';
+    const lc = name.toLowerCase();
+
+    // Search categorised dict (AI_INGREDIENTS)
     const ingredients = this._aiIngredients || (typeof AI_INGREDIENTS !== 'undefined' ? AI_INGREDIENTS : {});
     for (const category of Object.values(ingredients)) {
       if (!Array.isArray(category)) continue;
-      const found = category.find(i => i && i.name && i.name.toLowerCase() === name.toLowerCase());
+      const found = category.find(i => i && i.name && i.name.toLowerCase() === lc);
       if (found) return this._ingDisplayName(found);
     }
+
+    // Search flat common list (AI_COMMON_INGREDIENTS)
+    const commonFlat = typeof AI_COMMON_INGREDIENTS !== 'undefined' ? AI_COMMON_INGREDIENTS : [];
+    const foundCommon = commonFlat.find(i => i && i.name && i.name.toLowerCase() === lc);
+    if (foundCommon) return this._ingDisplayName(foundCommon);
+
+    // Search protein subcats (recipe-file-derived cuts)
+    const proteinSubcats = typeof AI_PROTEIN_SUBCATS !== 'undefined' ? AI_PROTEIN_SUBCATS : {};
+    for (const cuts of Object.values(proteinSubcats)) {
+      if (!Array.isArray(cuts)) continue;
+      const found = cuts.find(i => i && i.name && i.name.toLowerCase() === lc);
+      if (found) return this._ingDisplayName(found);
+    }
+
     return name;
+  }
+
+  /**
+   * Render shelf items as ingredient suggestions when the shelf is enabled.
+   * Items are grouped by shelf location and shown as tappable chips above the
+   * main ingredient grid.  Tapping a shelf chip adds it as a selected ingredient.
+   *
+   * Relevant when at least one cuisine is selected AND shelf has items in it,
+   * OR when shelf has items and no cuisine is selected (always show).
+   */
+  _renderShelfIngredientSuggestions() {
+    if (!this._shelfEnabled) return '';
+    const inventory = this._shelfInventory || [];
+    if (inventory.length === 0) return '';
+
+    // Filter out items that are already selected
+    const selectedNames = new Set(
+      (this._selectedIngredients || [])
+        .filter(i => i && i.name)
+        .map(i => i.name.toLowerCase())
+    );
+    const unselected = inventory.filter(item => !selectedNames.has((item.name || '').toLowerCase()));
+    if (unselected.length === 0) return '';
+
+    // Location → icon mapping
+    const locationIcon = { fridge: '🧊', larder: '🏺', freezer: '❄️', spices: '🌿' };
+
+    return html`
+      <div style="margin-bottom: 12px; padding: 10px 12px; background: var(--secondary-background-color); border-radius: 8px; border-left: 3px solid var(--primary-color);">
+        <div style="font-size: 0.85em; font-weight: 600; margin-bottom: 6px; color: var(--primary-text-color);">
+          🗄️ ${this._t('ai_recipe.from_shelf') || 'From Your Shelf'}
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+          ${unselected.map(item => {
+            const icon = locationIcon[item.location] || '🗄️';
+            return html`
+              <button
+                style="padding: 4px 10px; border-radius: 14px; border: 1px solid var(--primary-color); background: transparent; cursor: pointer; font-size: 0.82em; color: var(--primary-text-color); display: inline-flex; align-items: center; gap: 3px;"
+                @click=${() => {
+                  this._addCustomIngredient(item.name);
+                }}
+              >${icon} ${item.name}${item.quantity ? html` <span style="opacity:0.65;font-size:0.85em;">(${item.quantity})</span>` : ''}</button>
+            `;
+          })}
+        </div>
+      </div>
+    `;
+  }
+
+
+  _ingTouchStart(e, ingId) {
+    clearTimeout(this._ingTouchTimer);
+    this._ingTouchTimer = setTimeout(() => {
+      e.preventDefault();
+      this._ingredientTooltipId = (this._ingredientTooltipId === ingId) ? null : ingId;
+      this._ingTouchTimer = null;
+    }, 600);
+  }
+
+  _ingTouchEnd() {
+    clearTimeout(this._ingTouchTimer);
+    this._ingTouchTimer = null;
   }
 
   _renderIngredientCheckbox(ingredient) {
     const displayName = this._ingDisplayName(ingredient);
     const valueName = (typeof ingredient === 'string') ? ingredient : (ingredient.name || ingredient);
+    const notes = (ingredient && typeof ingredient === 'object') ? ingredient.notes : null;
+    const ingId = (ingredient && typeof ingredient === 'object') ? ingredient.id : valueName;
+
+    const checkbox = html`
+      <input 
+        type="checkbox" 
+        ?checked=${!!this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === valueName.toLowerCase())}
+        @change=${(e) => this._toggleIngredient(valueName, e.target.checked)}
+      />
+    `;
+
+    if (!notes) {
+      return html`
+        <label class="ingredient-checkbox">
+          ${checkbox}
+          ${displayName}
+        </label>
+      `;
+    }
+
+    const tipActive = this._ingredientTooltipId === ingId;
     return html`
-      <label class="ingredient-checkbox">
-        <input 
-          type="checkbox" 
-          ?checked=${!!this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === valueName.toLowerCase())}
-          @change=${(e) => this._toggleIngredient(valueName, e.target.checked)}
-        />
-        ${displayName}
-      </label>
+      <div class="ing-tip-wrap${tipActive ? ' tip-active' : ''}">
+        <label
+          class="ingredient-checkbox"
+          @touchstart=${(e) => this._ingTouchStart(e, ingId)}
+          @touchend=${() => this._ingTouchEnd()}
+          @touchcancel=${() => this._ingTouchEnd()}
+        >
+          ${checkbox}
+          ${displayName}
+        </label>
+        <div class="ing-tip-text" role="tooltip">${notes}</div>
+      </div>
     `;
   }
 
@@ -7979,12 +8324,14 @@ class KitchenCookingPanel extends LitElement {
     try {
       // Load ingredients if not already loaded
       if (!this._commonIngredients || this._commonIngredients.length === 0) {
-        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
-        const rawIngredients = response.ingredients || {};
-        if (Array.isArray(rawIngredients)) {
-          this._commonIngredients = rawIngredients;
+        if (typeof AI_COMMON_INGREDIENTS !== 'undefined' && AI_COMMON_INGREDIENTS.length > 0) {
+          this._commonIngredients = AI_COMMON_INGREDIENTS;
         } else {
-          this._commonIngredients = Object.values(rawIngredients).flat();
+          const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
+          const rawIngredients = response.ingredients || {};
+          this._commonIngredients = Array.isArray(rawIngredients)
+            ? rawIngredients
+            : Object.values(rawIngredients).flat();
         }
       }
       
@@ -8042,19 +8389,24 @@ class KitchenCookingPanel extends LitElement {
 
     this._selectedCookingStyle = null;
     this._aiRecipeSuggestions = [];
+    // Reset ingredient picker state
+    this._ingredientExpandedCats = [];
+    this._ingredientProteinSubcat = null;
+    this._ingredientTooltipId = null;
     
     // Load data before showing UI to avoid "[object Promise]" display
     try {
-      // Load ingredients if not already loaded
+      // Use the generated AI_COMMON_INGREDIENTS constant (has cat + common fields).
+      // Fall back to API only if the constant is not available (older generated file).
       if (!this._commonIngredients || this._commonIngredients.length === 0) {
-        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
-        // API returns {proteins: [...], vegetables: [...], ...} — flatten to single array
-        const rawIngredients = response.ingredients || {};
-        if (Array.isArray(rawIngredients)) {
-          this._commonIngredients = rawIngredients;
+        if (typeof AI_COMMON_INGREDIENTS !== 'undefined' && AI_COMMON_INGREDIENTS.length > 0) {
+          this._commonIngredients = AI_COMMON_INGREDIENTS;
         } else {
-          // Flatten categorized dict into flat array
-          this._commonIngredients = Object.values(rawIngredients).flat();
+          const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
+          const rawIngredients = response.ingredients || {};
+          this._commonIngredients = Array.isArray(rawIngredients)
+            ? rawIngredients
+            : Object.values(rawIngredients).flat();
         }
       }
       
@@ -10840,6 +11192,41 @@ class KitchenCookingPanel extends LitElement {
         width: 16px;
         height: 16px;
         cursor: pointer;
+      }
+
+      .ing-tip-wrap {
+        position: relative;
+      }
+
+      .ing-tip-wrap .ingredient-checkbox {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .ing-tip-text {
+        display: none;
+        position: absolute;
+        bottom: calc(100% + 6px);
+        left: 0;
+        right: 0;
+        width: auto;
+        background: var(--card-background-color, #1c1c2e);
+        color: var(--primary-text-color);
+        border: 1px solid var(--divider-color);
+        border-radius: 8px;
+        padding: 8px 12px;
+        font-size: 12px;
+        line-height: 1.5;
+        z-index: 200;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+        pointer-events: none;
+        white-space: normal;
+        text-align: left;
+      }
+
+      .ing-tip-wrap:hover .ing-tip-text,
+      .ing-tip-wrap.tip-active .ing-tip-text {
+        display: block;
       }
 
       .ingredient-custom {

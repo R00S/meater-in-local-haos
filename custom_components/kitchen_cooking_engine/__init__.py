@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 29 Apr 2026, 08:00 UTC
-Last Change: v0.8.0.2 - fix Start MEATER Probe visible in AI recipes from MEATER AI shortcut
+Last Updated: 02 May 2026, 14:00 UTC
+Last Change: v0.8.2.32 - Fix turkish.md and colombian.md per IMPROVE_CUISINE_DATA.md
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -172,11 +172,11 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 
 # ⚠️ VERSION — must match in ALL 3 locations on every release:
 #   1. manifest.json        → "version": "..."
-#   2. HERE (__init__.py)    → __version__ = "0.8.0.3"
+#   2. HERE (__init__.py)    → __version__ = "0.8.2.32"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.8.0.3"
+__version__ = "0.8.2.32"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

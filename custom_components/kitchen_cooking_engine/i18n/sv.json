@@ -261,6 +261,7 @@
     "staples_available": "Basvaror som antas finnas:",
     "add_custom_placeholder": "Lägg till egen ingrediens...",
     "selected_ingredients_label": "Valda ingredienser",
+    "selected_ingredients_hint": "Klicka på en ingrediens för att göra den obligatorisk (⭐) i varje receptförslag.",
     "next_cooking_style": "Nästa: Välj matlagningsstil",
     "choose_style_title": "🍳 Välj matlagningsstil",
     "select_style_hint": "Välj din föredragna matlagningsstil:",
@@ -302,7 +303,11 @@
     "compulsory_toggle_hint": "Klicka för att markera som obligatorisk (⭐ måste användas)",
     "compulsory_badge_label": "Obligatorisk",
     "save_for_later": "💾 Spara för senare",
-    "save_for_later_hint": "Spara receptet utan att laga det nu"
+    "save_for_later_hint": "Spara receptet utan att laga det nu",
+    "more_ingredients": "Fler",
+    "show_less": "Visa färre",
+    "from_shelf": "Från ditt skafferi",
+    "from_recipe_files": "från receptbiblioteket"
   },
   "recipe_cook": {
     "overview_title": "📋 Receptöversikt",

@@ -116,6 +116,185 @@ def _extract_recipe_titles(content):
     return titles
 
 
+def build_cuisine_data(base_dir):
+    """Read www/cuisines/*.md KCE:CUISINE files (ground truth for the AI recipe builder).
+
+    Files live in docs/cuisines/ (www/cuisines is a symlink to that directory).
+    Adding a new file is enough — no other file needs to be edited.
+
+    File format uses standard YAML frontmatter followed by markdown sections:
+
+        ---
+        KCE: CUISINE
+        id: swedish
+        name: Swedish
+        name_sv: Svensk
+        icon: 🇸🇪
+        region: nordic
+        region_name: Nordic
+        region_icon: ❄️
+        research_done: 1
+        ---
+
+        ## Proteins
+        - {id: salmon, grade: signature, rating: 10, name: Salmon, name_sv: "Lax", notes: "..."}
+        ...
+
+    Grades:
+        signature — identity of the cuisine (lights up protein tree)
+        bulk      — high consumption by statistics (lights up protein tree)
+        local     — produced/widely used locally (does NOT light up protein tree; hidden under "More")
+
+    Rating (1–10):
+        How important the ingredient is within its grade for this cuisine.
+        The top 3 per grade per category are shown by default; the rest are hidden under "More".
+        Default: 5 if not specified.
+
+    Returns (cuisine_ingredients, cuisine_to_region, cuisine_regions, cuisine_descriptions) where:
+        cuisine_ingredients:  {cuisine_id: [{id, name, name_sv?, cat, grade, rating}, ...]}
+        cuisine_to_region:    {cuisine_id: region_str}
+        cuisine_regions:      [{id, name, icon, cuisines: [{id, name, name_sv?, icon, description?, description_sv?}]}]
+                              — ordered by first appearance; drives AI_CUISINE_REGIONS in the JS.
+        cuisine_descriptions: {cuisine_id: {description: str, description_sv?: str}}
+                              — flat lookup used by AI_CUISINE_DESCRIPTIONS in the JS.
+    """
+    _section_to_cat = {
+        "proteins":                  "p",
+        # Produce / Vegetables
+        "produce":                   "v",
+        "vegetables":                "v",
+        # Grains & Starches
+        "grains & starches":         "g",
+        "grains":                    "g",
+        # Dairy, Oils & Sauces
+        "dairy, oils & sauces":      "d",
+        "dairy & eggs":              "d",
+        "dairy":                     "d",
+        # Spices, Nuts & Seasonings
+        "spices, nuts & seasonings": "s",
+        "spices & seasonings":       "s",
+        "spices":                    "s",
+        "condiments":                "s",
+        "other":                     "s",
+    }
+    _valid_grades = {"signature", "bulk", "local"}
+
+    cuisines_dir = os.path.join(base_dir, "www", "cuisines")
+    cuisine_ingredients = {}
+    cuisine_to_region = {}
+    cuisine_descriptions = {}
+    # region_id → {id, name, icon, cuisines: [...]}; ordered dict preserves insertion order
+    regions_map = {}
+
+    if not os.path.isdir(cuisines_dir):
+        return cuisine_ingredients, cuisine_to_region, [], cuisine_descriptions
+
+    for filename in sorted(os.listdir(cuisines_dir)):
+        if not filename.endswith(".md"):
+            continue
+        filepath = os.path.join(cuisines_dir, filename)
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                content = f.read()
+        except Exception as e:
+            print(f"Warning: Could not read cuisine file {filename}: {e}")
+            continue
+
+        # Parse YAML frontmatter between the first and second "---" lines
+        if not content.startswith("---"):
+            continue
+        end_fm = content.find("\n---", 3)
+        if end_fm == -1:
+            continue
+        fm_text = content[4:end_fm]
+        try:
+            fm = yaml.safe_load(fm_text)
+        except yaml.YAMLError as e:
+            print(f"Warning: Could not parse frontmatter in {filename}: {e}")
+            continue
+
+        if not isinstance(fm, dict) or fm.get("KCE") != "CUISINE":
+            continue
+
+        cuisine_id = fm.get("id")
+        if not cuisine_id:
+            continue
+
+        region = str(fm.get("region", fm.get("culinary_group", "")))
+        cuisine_to_region[cuisine_id] = region
+
+        # Build the region/cuisine tree entry
+        cuisine_entry = {"id": cuisine_id, "name": fm.get("name", cuisine_id.replace("_", " ").title())}
+        if fm.get("name_sv"):
+            cuisine_entry["name_sv"] = fm["name_sv"]
+        if fm.get("icon"):
+            cuisine_entry["icon"] = fm["icon"]
+        if fm.get("description"):
+            cuisine_entry["description"] = fm["description"]
+        if fm.get("description_sv"):
+            cuisine_entry["description_sv"] = fm["description_sv"]
+
+        if region:
+            if region not in regions_map:
+                regions_map[region] = {
+                    "id": region,
+                    "name": fm.get("region_name", region.replace("_", " ").title()),
+                    "icon": fm.get("region_icon", "🌍"),
+                    "cuisines": [],
+                }
+            regions_map[region]["cuisines"].append(cuisine_entry)
+
+        # Collect description into flat lookup dict
+        if fm.get("description"):
+            desc_entry = {"description": fm["description"]}
+            if fm.get("description_sv"):
+                desc_entry["description_sv"] = fm["description_sv"]
+            cuisine_descriptions[cuisine_id] = desc_entry
+
+        # Parse ingredient sections from markdown body
+        body = content[end_fm + 4:]
+        ingredients = []
+        current_cat = "s"
+
+        for line in body.splitlines():
+            stripped = line.strip()
+            # Section header: ## Proteins, ## Vegetables, etc.
+            if stripped.startswith("## "):
+                section_name = stripped[3:].strip().lower()
+                current_cat = _section_to_cat.get(section_name, "s")
+                continue
+            # Ingredient line: - {id: ..., grade: ..., name: ..., ...}
+            if stripped.startswith("- {") and stripped.endswith("}"):
+                try:
+                    item = yaml.safe_load(stripped[2:])
+                except yaml.YAMLError:
+                    continue
+                if not isinstance(item, dict):
+                    continue
+                ing_id = item.get("id")
+                grade = str(item.get("grade", "local"))
+                if not ing_id or grade not in _valid_grades:
+                    continue
+                entry = {
+                    "id": ing_id,
+                    "name": item.get("name", ing_id.replace("_", " ").title()),
+                    "cat": current_cat,
+                    "grade": grade,
+                    "rating": int(item.get("rating", 5)),
+                }
+                if item.get("name_sv"):
+                    entry["name_sv"] = item["name_sv"]
+                if item.get("notes"):
+                    entry["notes"] = item["notes"]
+                ingredients.append(entry)
+
+        if ingredients:
+            cuisine_ingredients[cuisine_id] = ingredients
+
+    cuisine_regions = list(regions_map.values())
+    return cuisine_ingredients, cuisine_to_region, cuisine_regions, cuisine_descriptions
+
+
 def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
     """Scan recipe files and build index, cut profiles, method profiles and recipe titles.
 
@@ -590,6 +769,17 @@ def generate_js_data():
     ai_ingredients = {}
     ai_cuisine_ingredients = {}
     ai_cuisine_to_region = {}
+    ai_cuisine_regions = []
+    ai_cuisine_descriptions = {}
+    ai_ingredient_categories = {}
+    ai_category_labels = {}
+    ai_category_labels_sv = {}
+    ai_category_order = []
+    ai_assumed_staples = []
+    ai_assumed_staples_sv = []
+    ai_ingredient_names_sv = {}
+    ai_protein_to_subcat = {}
+    ai_generic_protein_ids = []
     try:
         import importlib.util
         ai_data_spec = importlib.util.spec_from_file_location(
@@ -601,8 +791,6 @@ def generate_js_data():
         
         ai_cooking_styles = ai_data_module.COOKING_STYLES
         ai_ingredients = ai_data_module.COMMON_INGREDIENTS
-        ai_cuisine_ingredients = ai_data_module.CUISINE_INGREDIENTS
-        ai_cuisine_to_region = ai_data_module.CUISINE_TO_REGION
         ai_ingredient_categories = getattr(ai_data_module, 'INGREDIENT_CATEGORIES', {})
         ai_category_labels = getattr(ai_data_module, 'CATEGORY_LABELS', {})
         ai_category_labels_sv = getattr(ai_data_module, 'CATEGORY_LABELS_SV', {})
@@ -610,20 +798,76 @@ def generate_js_data():
         ai_assumed_staples = getattr(ai_data_module, 'ASSUMED_STAPLES', [])
         ai_assumed_staples_sv = getattr(ai_data_module, 'ASSUMED_STAPLES_SV', [])
         ai_ingredient_names_sv = getattr(ai_data_module, 'INGREDIENT_NAMES_SV', {})
+        ai_protein_to_subcat = getattr(ai_data_module, 'PROTEIN_TO_SUBCAT', {})
+        ai_generic_protein_ids = list(getattr(ai_data_module, 'GENERIC_PROTEIN_IDS', set()))
     except Exception as e:
         print(f"Warning: Could not load AI Recipe Builder data: {e}")
-    
+    # Derived data; initialised before enrichment so they always exist
+    ai_common_ingredients_flat = []
+    ai_protein_subcats = {}
+    ai_protein_subcat_labels = {}
+    ai_protein_subcat_labels_sv = {}
+
+    # Load cuisine ingredients from docs/cuisines/*.md (KCE:CUISINE files) via www/cuisines symlink.
+    # These files are the single source of truth for AI_CUISINE_REGIONS and AI_CUISINE_TO_REGION.
+    # Adding a new file is all that is needed — no other file must be edited.
+    _file_cuisine_ingredients, _file_cuisine_to_region, _file_cuisine_regions, _file_cuisine_descriptions = build_cuisine_data(base_dir)
+    if _file_cuisine_ingredients:
+        ai_cuisine_ingredients = _file_cuisine_ingredients
+        ai_cuisine_to_region = {cid: r for cid, r in _file_cuisine_to_region.items() if r}
+        ai_cuisine_regions = _file_cuisine_regions
+        ai_cuisine_descriptions = _file_cuisine_descriptions
+        print(
+            f"  Cuisines: {len(ai_cuisine_ingredients)} cuisine file(s) loaded "
+            f"({sum(len(v) for v in ai_cuisine_ingredients.values())} ingredients total)"
+        )
+    else:
+        print("  Cuisines: no docs/cuisines/*.md files found — AI_CUISINE_INGREDIENTS will be empty")
+
     # Enrich cuisine ingredients with category from INGREDIENT_CATEGORIES map
+    # (only for legacy entries without a cat field already set by build_cuisine_data)
     if ai_ingredient_categories:
         enriched_cuisine = {}
         for cuisine_id, ings in ai_cuisine_ingredients.items():
             enriched = []
             for ing in ings:
+                # Skip enrichment if cat is already set (e.g. from KCE:CUISINE file)
+                if "cat" in ing:
+                    enriched.append(ing)
+                    continue
                 cat = ai_ingredient_categories.get(ing["id"], "s")  # default to spices
-                enriched.append({"id": ing["id"], "name": ing["name"], "cat": cat})
+                item = {"id": ing["id"], "name": ing["name"], "cat": cat}
+                if "grade" in ing:
+                    item["grade"] = ing["grade"]
+                if "rating" in ing:
+                    item["rating"] = ing["rating"]
+                enriched.append(item)
             enriched_cuisine[cuisine_id] = enriched
         ai_cuisine_ingredients = enriched_cuisine
-    
+
+    # Build AI_COMMON_INGREDIENTS — a flat array with {id, name, cat, featured} per item.
+    # Maps the category-dict structure of COMMON_INGREDIENTS into category codes used by the UI.
+    # Note: these items have no grade/rating (they are not cuisine-specific).
+    _cat_key_to_code = {
+        "proteins": "p",
+        "vegetables": "v",
+        "grains": "g",
+        "dairy": "d",
+        "spices": "s",
+    }
+    ai_common_ingredients_flat = []
+    if isinstance(ai_ingredients, dict):
+        for cat_key, items in ai_ingredients.items():
+            cat_code = _cat_key_to_code.get(cat_key, "s")
+            for ing in items:
+                enriched_item = {
+                    "id": ing["id"],
+                    "name": ing["name"],
+                    "cat": ai_ingredient_categories.get(ing["id"], cat_code),
+                    "featured": ing.get("featured", True),
+                }
+                ai_common_ingredients_flat.append(enriched_item)
+
     # Load measurement systems from measurements.py
     measurement_systems = {}
     try:
@@ -670,6 +914,40 @@ def generate_js_data():
         f"{len(exp_tree)} categories from KCE:CUT tags"
     )
 
+    # Build AI_PROTEIN_SUBCATS from the experimental tree.
+    # Expose protein categories (beef, pork, poultry, fish, lamb, game) as drill-down groups.
+    _protein_categories = {"beef", "pork", "poultry", "fish", "lamb", "game"}
+    for cat_id, cat_data in exp_tree.items():
+        if cat_id not in _protein_categories:
+            continue
+        seen_slugs = set()
+        cuts_for_cat = []
+        for meat in cat_data.get("meats", []):
+            for cut_type in meat.get("cutTypes", []):
+                for cut in cut_type.get("cuts", []):
+                    slug = cut.get("id") or cut.get("slug")
+                    if not slug or slug in seen_slugs:
+                        continue
+                    seen_slugs.add(slug)
+                    entry = {
+                        "id": slug,
+                        "name": cut.get("name", slug.replace("_", " ").title()),
+                        "cat": "p",
+                    }
+                    if cut.get("name_sv"):
+                        entry["name_sv"] = cut["name_sv"]
+                    cuts_for_cat.append(entry)
+        if cuts_for_cat:
+            ai_protein_subcats[cat_id] = cuts_for_cat
+            ai_protein_subcat_labels[cat_id] = cat_data.get("name", cat_id.title())
+            ai_protein_subcat_labels_sv[cat_id] = (
+                cat_data.get("name_sv") or cat_data.get("name", cat_id.title())
+            )
+    print(
+        f"  AI_PROTEIN_SUBCATS: {sum(len(v) for v in ai_protein_subcats.values())} cuts "
+        f"across {len(ai_protein_subcats)} protein categories"
+    )
+
     
     cet_time = get_cet_timestamp()
     
@@ -688,11 +966,30 @@ def generate_js_data():
     lines.append("// AI Recipe Builder - Common Ingredients")
     lines.append(f"const AI_INGREDIENTS = {json.dumps(ai_ingredients, indent=2, ensure_ascii=False)};")
     lines.append("")
+    lines.append("// AI Recipe Builder - Common Ingredients (flat array with cat + common flags)")
+    lines.append(f"const AI_COMMON_INGREDIENTS = {json.dumps(ai_common_ingredients_flat, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Protein subcategories derived from recipe files")
+    lines.append(f"const AI_PROTEIN_SUBCATS = {json.dumps(ai_protein_subcats, indent=2, ensure_ascii=False)};")
+    lines.append(f"const AI_PROTEIN_SUBCAT_LABELS = {json.dumps(ai_protein_subcat_labels, indent=2, ensure_ascii=False)};")
+    lines.append(f"const AI_PROTEIN_SUBCAT_LABELS_SV = {json.dumps(ai_protein_subcat_labels_sv, indent=2, ensure_ascii=False)};")
+    lines.append("")
     lines.append("// AI Recipe Builder - Cuisine-specific Ingredients (28 per cuisine)")
     lines.append(f"const AI_CUISINE_INGREDIENTS = {json.dumps(ai_cuisine_ingredients, indent=2, ensure_ascii=False)};")
     lines.append("")
     lines.append("// AI Recipe Builder - Cuisine to Region mapping")
     lines.append(f"const AI_CUISINE_TO_REGION = {json.dumps(ai_cuisine_to_region, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Region/cuisine tree (ground truth: docs/cuisines/*.md)")
+    lines.append(f"const AI_CUISINE_REGIONS = {json.dumps(ai_cuisine_regions, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Cuisine descriptions {cuisine_id: {description, description_sv?}}")
+    lines.append(f"const AI_CUISINE_DESCRIPTIONS = {json.dumps(ai_cuisine_descriptions, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Protein ingredient → subcat key (beef/pork/poultry/fish/lamb/game)")
+    lines.append(f"const AI_PROTEIN_TO_SUBCAT = {json.dumps(ai_protein_to_subcat, indent=2, ensure_ascii=False)};")
+    lines.append("// Generic protein IDs that duplicate subcat button labels — filtered from badge list")
+    lines.append(f"const AI_GENERIC_PROTEIN_IDS = {json.dumps(ai_generic_protein_ids, ensure_ascii=False)};")
     lines.append("")
     lines.append("// AI Recipe Builder - Ingredient category labels and order")
     lines.append(f"const AI_CATEGORY_LABELS = {json.dumps(ai_category_labels, indent=2, ensure_ascii=False)};")
