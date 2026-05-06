@@ -26,7 +26,28 @@ Some MEATER cooks fail to start:
 - Discovered both bugs via scan of all 164 cut files
 - Applied all fixes
 
-### Session 2 (2026-05-06) — create chicken_thigh_bone_in.md
+### Session 3 (2026-05-06) — Protein tree badge fix + Tooltip language fix
+
+**Bug 1 — Protein tree badges not lighting up (v0.8.2.36)**
+
+Root cause: 102 cuisine files use file-specific protein IDs (e.g. `ua_pork_sig`, `vn_beef_sig`) that don't appear in `AI_PROTEIN_TO_SUBCAT`. The JS couldn't determine which tree sub-group they belonged to, so they fell through to the badge area instead of lighting up the protein tree buttons.
+
+Fix:
+- Added `_PROTEIN_NAME_PATTERNS` list (regex) to `generate_frontend_data.py`
+- `build_cuisine_data()` now emits a `"subcat"` field on each protein entry whose name matches a known protein keyword (beef/pork/poultry/fish/lamb/game)
+- JS `_renderCategorizedIngredients()` filter and `_renderProteinCategory()` subcat loop now use `i.subcat` as fallback alongside `proteinToSubcat[i.id]`
+- 1752 proteins across 102 files now correctly mapped; 727 non-MEATER proteins (eggs, dairy, legumes, etc.) correctly stay in badge area
+
+**Bug 2 — Ingredient tooltips always shown in Swedish when English GUI language selected (v0.8.2.37)**
+
+Root cause: `_renderIngredientCheckbox()` always rendered `ingredient.notes` as tooltip text. The Swedish cuisine file stores research notes in Swedish (in the `notes:` field), so English-mode users saw Swedish tooltip text.
+
+Fix:
+- `generate_frontend_data.py`: `build_cuisine_data()` now also passes `notes_sv` field through when present
+- `panel-class-template.js`: tooltip now language-aware — Swedish mode shows `notes_sv || notes`; English mode shows `notes` only
+- `www/cuisines/swedish.md`: all 123 `notes:` fields renamed to `notes_sv:` — English users see no tooltip for Swedish cuisine items (correct) instead of Swedish text (wrong)
+
+Result: English users see English tooltips for all cuisine ingredients; Swedish users see Swedish tooltips for Swedish cuisine ingredients.
 
 ## Session start
 

@@ -892,7 +892,8 @@ The ingredient screen has several sections:
 - **Ingredient tooltips** — hover over any ingredient chip (desktop) or long-press it
   (touch/mobile) to see a brief note about that ingredient — for example its flavour
   profile, typical use in the cuisine, or a usage tip. The tooltip appears after a
-  short delay and disappears when you move away or release.
+  short delay and disappears when you move away or release. Tooltips are shown in
+  the GUI language you have selected on the Welcome screen.
 
 Staple ingredients (salt, pepper, oil, etc.) are assumed available and listed below the grid
 for reference.
