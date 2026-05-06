@@ -97,3 +97,16 @@ research_done: 0 on all stubs; full 15-pair research is done in a separate branc
 southern_us, spanish, sri_lankan, swedish, syrian, taiwanese, tanzanian, tex_mex,
 thai, trinidadian, tunisian, turkish, ukrainian, uzbek, venezuelan, vietnamese,
 west_african, yemeni
+
+---
+
+## Session 4 — (2026-05-06)
+
+### Task: complete research for vietnamese.md (dairy+spices) + full research for west_african.md + yemeni.md
+
+### Status
+- [x] vietnamese.md — dairy (sig/bulk/local) + spices (sig/bulk/local) completed; research_done: 1 (was already set)
+- [x] west_african.md — all 15 grade pairs completed (proteins/produce/grains/dairy/spices sig+bulk+local); research_done: 1
+- [x] yemeni.md — all 15 grade pairs completed (proteins/produce/grains/dairy/spices sig+bulk+local); research_done: 1
+- [x] Generator ran clean (0 stubs in all three files; 134-135 ingredients each)
+- [x] Commit all changes

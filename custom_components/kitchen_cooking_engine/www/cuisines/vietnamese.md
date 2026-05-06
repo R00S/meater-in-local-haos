@@ -158,43 +158,43 @@ Vietnamese cuisine researched — all 15 grade pairs complete.
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
 <!-- Searched: "Vietnamese signature dairy dishes", "Vietnamese iconic cheese butter cream", "Vietnamese traditional dairy products" -->
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Dairy 1", name_sv: "[UTKAST] Signatur Mejeri 1", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Dairy 2", name_sv: "[UTKAST] Signatur Mejeri 2", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Dairy 3", name_sv: "[UTKAST] Signatur Mejeri 3", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Dairy 4", name_sv: "[UTKAST] Signatur Mejeri 4", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Dairy 5", name_sv: "[UTKAST] Signatur Mejeri 5", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Dairy 6", name_sv: "[UTKAST] Signatur Mejeri 6", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Dairy 7", name_sv: "[UTKAST] Signatur Mejeri 7", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Dairy 8", name_sv: "[UTKAST] Signatur Mejeri 8", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Dairy 9", name_sv: "[UTKAST] Signatur Mejeri 9", notes: "STUB — replace with verified Vietnamese research"}
+- {id: viet_dairy_sig_fish_sauce, grade: signature, rating: 10, name: "Fish sauce", name_sv: "Fisksås", notes: "Nước mắm — defining condiment of Vietnamese cuisine, used in virtually every dish"}
+- {id: viet_dairy_sig_coconut_milk, grade: signature, rating: 9, name: "Coconut milk", name_sv: "Kokosmjölk", notes: "Essential in central and southern Vietnamese curries and desserts"}
+- {id: viet_dairy_sig_sesame_oil, grade: signature, rating: 8, name: "Sesame oil", name_sv: "Sesamolja", notes: "Finishing oil in noodle dishes, salads and stir-fries"}
+- {id: viet_dairy_sig_condensed_milk, grade: signature, rating: 7, name: "Condensed milk", name_sv: "Kondenserad mjölk", notes: "Cà phê sữa đá (iced coffee) and bánh mì topping; French colonial legacy"}
+- {id: viet_dairy_sig_lard, grade: signature, rating: 6, name: "Lard", name_sv: "Ister/lårdfett", notes: "Mỡ hành — traditional cooking fat, especially in central Vietnamese cooking"}
+- {id: viet_dairy_sig_oyster_sauce, grade: signature, rating: 5, name: "Oyster sauce", name_sv: "Ostronskiktsås", notes: "Key stir-fry and noodle sauce throughout Vietnamese cuisine"}
+- {id: viet_dairy_sig_hoisin_sauce, grade: signature, rating: 4, name: "Hoisin sauce", name_sv: "Hoisinsås", notes: "Tương hoisin — essential dipping sauce for phở and spring rolls"}
+- {id: viet_dairy_sig_peanut_oil, grade: signature, rating: 3, name: "Peanut oil", name_sv: "Jordnötsolja", notes: "Traditional frying oil, particularly in southern Vietnam"}
+- {id: viet_dairy_sig_soy_sauce, grade: signature, rating: 2, name: "Soy sauce", name_sv: "Sojasås", notes: "Nước tương — widely used seasoning sauce alongside fish sauce"}
 
 ### Dairy, Oils & Sauces — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
 <!-- Searched: "Vietnamese dairy consumption kg per capita", "Vietnamese milk cheese butter statistics", "Vietnamese FAO food balance dairy" -->
 
-- {id: stub_dairy_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Dairy 1", name_sv: "[UTKAST] Bulk Mejeri 1", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Dairy 2", name_sv: "[UTKAST] Bulk Mejeri 2", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Dairy 3", name_sv: "[UTKAST] Bulk Mejeri 3", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Dairy 4", name_sv: "[UTKAST] Bulk Mejeri 4", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Dairy 5", name_sv: "[UTKAST] Bulk Mejeri 5", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Dairy 6", name_sv: "[UTKAST] Bulk Mejeri 6", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Dairy 7", name_sv: "[UTKAST] Bulk Mejeri 7", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Dairy 8", name_sv: "[UTKAST] Bulk Mejeri 8", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Dairy 9", name_sv: "[UTKAST] Bulk Mejeri 9", notes: "STUB — replace with verified Vietnamese research"}
+- {id: viet_dairy_bul_vegetable_oil, grade: bulk, rating: 10, name: "Vegetable oil", name_sv: "Vegetabilisk olja", notes: "Most consumed cooking fat by volume in Vietnam; rice bran and soybean dominant"}
+- {id: viet_dairy_bul_fish_sauce, grade: bulk, rating: 9, name: "Fish sauce", name_sv: "Fisksås", notes: "Ubiquitous — used in marinades, dipping sauces, soups and seasoning daily"}
+- {id: viet_dairy_bul_soy_sauce, grade: bulk, rating: 8, name: "Soy sauce", name_sv: "Sojasås", notes: "Widely consumed condiment and cooking sauce by volume"}
+- {id: viet_dairy_bul_coconut_milk, grade: bulk, rating: 7, name: "Coconut milk", name_sv: "Kokosmjölk", notes: "High consumption in central and southern Vietnam for curries and desserts"}
+- {id: viet_dairy_bul_salt, grade: bulk, rating: 6, name: "Salt", name_sv: "Salt", notes: "Essential everyday seasoning; Vietnam is a major salt producer (Nha Trang coast)"}
+- {id: viet_dairy_bul_sugar, grade: bulk, rating: 5, name: "Sugar", name_sv: "Socker", notes: "High consumption — Vietnamese cooking balances salty, sour and sweet consistently"}
+- {id: viet_dairy_bul_msg, grade: bulk, rating: 4, name: "MSG", name_sv: "MSG (monosodiumglutamat)", notes: "Mì chính — widely used flavour enhancer in everyday Vietnamese home cooking"}
+- {id: viet_dairy_bul_peanut_oil, grade: bulk, rating: 3, name: "Peanut oil", name_sv: "Jordnötsolja", notes: "Traditional frying oil with significant consumption, especially in the south"}
+- {id: viet_dairy_bul_oyster_sauce, grade: bulk, rating: 2, name: "Oyster sauce", name_sv: "Ostronskiktsås", notes: "High-volume condiment used in stir-fries and noodle dishes across Vietnam"}
 
 ### Dairy, Oils & Sauces — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
 <!-- Searched: "Vietnamese dairy farming local production", "Vietnamese regional cheese varieties", "Vietnamese local dairy breeds" -->
 
-- {id: stub_dairy_loc_1, grade: local, rating: 9, name: "[STUB] Local Dairy 1", name_sv: "[UTKAST] Lokalt Mejeri 1", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 8, name: "[STUB] Local Dairy 2", name_sv: "[UTKAST] Lokalt Mejeri 2", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 7, name: "[STUB] Local Dairy 3", name_sv: "[UTKAST] Lokalt Mejeri 3", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 6, name: "[STUB] Local Dairy 4", name_sv: "[UTKAST] Lokalt Mejeri 4", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 5, name: "[STUB] Local Dairy 5", name_sv: "[UTKAST] Lokalt Mejeri 5", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 4, name: "[STUB] Local Dairy 6", name_sv: "[UTKAST] Lokalt Mejeri 6", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 3, name: "[STUB] Local Dairy 7", name_sv: "[UTKAST] Lokalt Mejeri 7", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 2, name: "[STUB] Local Dairy 8", name_sv: "[UTKAST] Lokalt Mejeri 8", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_dairy_loc_9, grade: local, rating: 1, name: "[STUB] Local Dairy 9", name_sv: "[UTKAST] Lokalt Mejeri 9", notes: "STUB — replace with verified Vietnamese research"}
+- {id: viet_dairy_loc_coconut_oil, grade: local, rating: 9, name: "Coconut oil", name_sv: "Kokosolja", notes: "Produced from coconut palms across the Mekong Delta; traditional cooking fat"}
+- {id: viet_dairy_loc_phu_quoc_fish_sauce, grade: local, rating: 8, name: "Fish sauce (Phú Quốc)", name_sv: "Fisksås (Phú Quốc)", notes: "Phú Quốc island produces world-renowned anchovy fish sauce; PDO-protected"}
+- {id: viet_dairy_loc_shrimp_paste, grade: local, rating: 7, name: "Shrimp paste", name_sv: "Räkpasta", notes: "Mắm tôm — fermented shrimp paste produced in coastal regions; essential condiment"}
+- {id: viet_dairy_loc_fermented_shrimp, grade: local, rating: 6, name: "Fermented shrimp paste (ruốc)", name_sv: "Fermenterad räkpasta (ruốc)", notes: "Mắm ruốc — fine-textured coastal shrimp paste, central Vietnam specialty"}
+- {id: viet_dairy_loc_rice_wine, grade: local, rating: 5, name: "Rice wine", name_sv: "Risvin", notes: "Rượu nếp — locally distilled glutinous rice wine; used in cooking and drinks"}
+- {id: viet_dairy_loc_fermented_fish, grade: local, rating: 4, name: "Fermented fish sauce (mắm cá)", name_sv: "Fermenterad fisksås (mắm cá)", notes: "Regional styles: mắm cá from Châu Đốc/An Giang — deeply local condiment"}
+- {id: viet_dairy_loc_coconut_vinegar, grade: local, rating: 3, name: "Coconut vinegar", name_sv: "Kokosnötsvinäger", notes: "Giấm dừa — fermented from coconut water in the Mekong Delta region"}
+- {id: viet_dairy_loc_phan_thiet_sauce, grade: local, rating: 2, name: "Fish sauce (Phan Thiết)", name_sv: "Fisksås (Phan Thiết)", notes: "Phan Thiết in Bình Thuận province — second major fish sauce producing centre"}
+- {id: viet_dairy_loc_sugarcane_juice, grade: local, rating: 1, name: "Sugarcane juice", name_sv: "Sockerrörsaft", notes: "Nước mía — widely consumed fresh-pressed; sugarcane grown extensively in the south"}
 
 
 ## Spices, Nuts & Seasonings
@@ -203,41 +203,41 @@ Vietnamese cuisine researched — all 15 grade pairs complete.
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
 <!-- Searched: "Vietnamese signature spice blends", "Vietnamese defining herbs and spices", "Vietnamese iconic seasoning flavour profile" -->
 
-- {id: stub_spice_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Spices 1", name_sv: "[UTKAST] Signatur Krydda 1", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Spices 2", name_sv: "[UTKAST] Signatur Krydda 2", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Spices 3", name_sv: "[UTKAST] Signatur Krydda 3", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Spices 4", name_sv: "[UTKAST] Signatur Krydda 4", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Spices 5", name_sv: "[UTKAST] Signatur Krydda 5", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Spices 6", name_sv: "[UTKAST] Signatur Krydda 6", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Spices 7", name_sv: "[UTKAST] Signatur Krydda 7", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Spices 8", name_sv: "[UTKAST] Signatur Krydda 8", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Spices 9", name_sv: "[UTKAST] Signatur Krydda 9", notes: "STUB — replace with verified Vietnamese research"}
+- {id: viet_spice_sig_star_anise, grade: signature, rating: 10, name: "Star anise", name_sv: "Stjärnanis", notes: "Hồi — the defining spice of phở broth; unmistakable identity of Vietnamese cuisine"}
+- {id: viet_spice_sig_lemongrass, grade: signature, rating: 9, name: "Lemongrass", name_sv: "Citrongräs", notes: "Sả — essential in bún bò Huế, grilled meats and central Vietnamese dishes"}
+- {id: viet_spice_sig_cinnamon_bark, grade: signature, rating: 8, name: "Cinnamon bark", name_sv: "Kanelbark", notes: "Quế — Vietnamese cinnamon (Cinnamomum loureiroi) is world's most aromatic; defines phở"}
+- {id: viet_spice_sig_fresh_chili, grade: signature, rating: 7, name: "Fresh chili", name_sv: "Färsk chili", notes: "Ớt — ubiquitous; bird's eye chilies in dipping sauces and condiments"}
+- {id: viet_spice_sig_mint, grade: signature, rating: 6, name: "Fresh mint", name_sv: "Färsk mynta", notes: "Húng cây (spearmint) — served fresh with phở, fresh rolls and bún dishes"}
+- {id: viet_spice_sig_vietnamese_basil, grade: signature, rating: 5, name: "Vietnamese basil", name_sv: "Vietnamesiskt basilika", notes: "Húng quế — distinctive anise-flavoured basil; essential with phở and grilled meats"}
+- {id: viet_spice_sig_galangal, grade: signature, rating: 4, name: "Galangal", name_sv: "Galangal", notes: "Riềng — used in northern Vietnamese chicken dishes (gà om riềng mẻ) and soups"}
+- {id: viet_spice_sig_lime, grade: signature, rating: 3, name: "Lime", name_sv: "Lime", notes: "Chanh — essential souring agent; squeezed over phở, bún, seafood and salads"}
+- {id: viet_spice_sig_coriander, grade: signature, rating: 2, name: "Coriander/cilantro", name_sv: "Koriander", notes: "Rau mùi — fresh leaves garnish phở, bún and grilled dishes across Vietnam"}
 
 ### Spices, Nuts & Seasonings — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
 <!-- Searched: "Vietnamese most used condiments seasonings statistics", "Vietnamese salt sugar spice consumption", "Vietnamese everyday seasoning ingredients" -->
 
-- {id: stub_spice_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Spices 1", name_sv: "[UTKAST] Bulk Krydda 1", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Spices 2", name_sv: "[UTKAST] Bulk Krydda 2", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Spices 3", name_sv: "[UTKAST] Bulk Krydda 3", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Spices 4", name_sv: "[UTKAST] Bulk Krydda 4", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Spices 5", name_sv: "[UTKAST] Bulk Krydda 5", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Spices 6", name_sv: "[UTKAST] Bulk Krydda 6", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Spices 7", name_sv: "[UTKAST] Bulk Krydda 7", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Spices 8", name_sv: "[UTKAST] Bulk Krydda 8", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Spices 9", name_sv: "[UTKAST] Bulk Krydda 9", notes: "STUB — replace with verified Vietnamese research"}
+- {id: viet_spice_bul_salt, grade: bulk, rating: 10, name: "Salt", name_sv: "Salt", notes: "Muối — highest consumption by volume; Vietnam is a major salt-producing nation"}
+- {id: viet_spice_bul_sugar, grade: bulk, rating: 9, name: "Sugar", name_sv: "Socker", notes: "Đường — very high consumption; Vietnamese dishes consistently balance sweet notes"}
+- {id: viet_spice_bul_garlic, grade: bulk, rating: 8, name: "Garlic", name_sv: "Vitlök", notes: "Tỏi — used in virtually every savoury dish; highest daily use of any aromatic"}
+- {id: viet_spice_bul_shallots, grade: bulk, rating: 7, name: "Shallots", name_sv: "Schalottenlök", notes: "Hành tím — essential aromatics fried crispy as toppings and used fresh in sauces"}
+- {id: viet_spice_bul_ginger, grade: bulk, rating: 6, name: "Ginger", name_sv: "Ingefära", notes: "Gừng — very high volume use in soups, stir-fries and marinades nationwide"}
+- {id: viet_spice_bul_black_pepper, grade: bulk, rating: 5, name: "Black pepper", name_sv: "Svartpeppar", notes: "Tiêu — Phú Quốc and Central Highlands produce world-class peppercorns; heavy use"}
+- {id: viet_spice_bul_chili_paste, grade: bulk, rating: 4, name: "Chili paste/sauce", name_sv: "Chilipasta/sås", notes: "Tương ớt — bottled chili sauces consumed in large volumes at table and in cooking"}
+- {id: viet_spice_bul_msg, grade: bulk, rating: 3, name: "MSG", name_sv: "MSG", notes: "Bột ngọt — widely used flavour enhancer in everyday cooking and street food"}
+- {id: viet_spice_bul_green_onion, grade: bulk, rating: 2, name: "Green onion / spring onion", name_sv: "Salladslök/vårök", notes: "Hành lá — garnish on virtually every soup, noodle dish and rice bowl in Vietnam"}
 
 ### Spices, Nuts & Seasonings — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
 <!-- Searched: "Vietnamese herbs grown locally", "Vietnamese spice production native plants", "Vietnamese foraged herbs regional flavourings" -->
 
-- {id: stub_spice_loc_1, grade: local, rating: 9, name: "[STUB] Local Spices 1", name_sv: "[UTKAST] Lokalt Krydda 1", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_loc_2, grade: local, rating: 8, name: "[STUB] Local Spices 2", name_sv: "[UTKAST] Lokalt Krydda 2", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_loc_3, grade: local, rating: 7, name: "[STUB] Local Spices 3", name_sv: "[UTKAST] Lokalt Krydda 3", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_loc_4, grade: local, rating: 6, name: "[STUB] Local Spices 4", name_sv: "[UTKAST] Lokalt Krydda 4", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_loc_5, grade: local, rating: 5, name: "[STUB] Local Spices 5", name_sv: "[UTKAST] Lokalt Krydda 5", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_loc_6, grade: local, rating: 4, name: "[STUB] Local Spices 6", name_sv: "[UTKAST] Lokalt Krydda 6", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_loc_7, grade: local, rating: 3, name: "[STUB] Local Spices 7", name_sv: "[UTKAST] Lokalt Krydda 7", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_loc_8, grade: local, rating: 2, name: "[STUB] Local Spices 8", name_sv: "[UTKAST] Lokalt Krydda 8", notes: "STUB — replace with verified Vietnamese research"}
-- {id: stub_spice_loc_9, grade: local, rating: 1, name: "[STUB] Local Spices 9", name_sv: "[UTKAST] Lokalt Krydda 9", notes: "STUB — replace with verified Vietnamese research"}
+- {id: viet_spice_loc_rau_ram, grade: local, rating: 9, name: "Vietnamese coriander (rau răm)", name_sv: "Vietnamesisk koriander (rau răm)", notes: "Hot mint/laksa leaf — intensely aromatic; unique to Vietnamese cuisine, grown throughout"}
+- {id: viet_spice_loc_tia_to, grade: local, rating: 8, name: "Perilla (tía tô)", name_sv: "Perilla (tía tô)", notes: "Vietnamese red/green perilla — essential fresh herb; distinct from Japanese shiso"}
+- {id: viet_spice_loc_kinh_gioi, grade: local, rating: 7, name: "Vietnamese balm (kinh giới)", name_sv: "Vietnamesisk citronört (kinh giới)", notes: "Elsholtzia ciliata — native Vietnamese herb used in northern soups and salads"}
+- {id: viet_spice_loc_vietnamese_pepper, grade: local, rating: 6, name: "Vietnamese black pepper (Phú Quốc)", name_sv: "Vietnamesisk svartpeppar (Phú Quốc)", notes: "Phu Quoc and Dak Lak peppercorns — among the world's most prized; native production"}
+- {id: viet_spice_loc_mac_khen, grade: local, rating: 5, name: "Shan pepper (mắc khén)", name_sv: "Shan pepper (mắc khén)", notes: "Native pepper from northwestern highland forests; key spice of Thai/Mường/Black Thai ethnic cuisine"}
+- {id: viet_spice_loc_dried_shrimp, grade: local, rating: 4, name: "Dried shrimp", name_sv: "Torkade räkor", notes: "Tôm khô — sun-dried along Vietnam's coast; umami base in salads and stir-fries"}
+- {id: viet_spice_loc_sesame, grade: local, rating: 3, name: "Sesame seeds", name_sv: "Sesamfrön", notes: "Mè — grown domestically; toasted on bánh mì, rice cakes, and used in sauces"}
+- {id: viet_spice_loc_black_cardamom, grade: local, rating: 2, name: "Black cardamom", name_sv: "Svart kardemumma", notes: "Thảo quả — grown in northern mountain forests (Lào Cai); essential in phở broth"}
+- {id: viet_spice_loc_tamarind, grade: local, rating: 1, name: "Tamarind", name_sv: "Tamarind", notes: "Me — grown in south and central Vietnam; sour agent in soups, sauces and candy"}
 
