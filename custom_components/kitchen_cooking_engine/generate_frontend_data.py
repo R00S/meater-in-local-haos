@@ -404,6 +404,8 @@ def build_cuisine_data(base_dir):
                     entry["name_sv"] = item["name_sv"]
                 if item.get("notes"):
                     entry["notes"] = item["notes"]
+                if item.get("notes_sv"):
+                    entry["notes_sv"] = item["notes_sv"]
                 # For protein entries, infer the protein-tree subcat from the
                 # ingredient name so the JS can exclude these items from the
                 # badge area and light up the correct tree button — even when

@@ -6292,7 +6292,9 @@ class KitchenCookingPanel extends LitElement {
   _renderIngredientCheckbox(ingredient) {
     const displayName = this._ingDisplayName(ingredient);
     const valueName = (typeof ingredient === 'string') ? ingredient : (ingredient.name || ingredient);
-    const notes = (ingredient && typeof ingredient === 'object') ? ingredient.notes : null;
+    const notes = (ingredient && typeof ingredient === 'object')
+      ? (this._language === 'sv' ? (ingredient.notes_sv || ingredient.notes) : ingredient.notes)
+      : null;
     const ingId = (ingredient && typeof ingredient === 'object') ? ingredient.id : valueName;
 
     const checkbox = html`
