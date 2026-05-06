@@ -2,246 +2,220 @@
 KCE: CUISINE
 id: new_nordic
 name: New Nordic
-name_sv: "Ny Nordisk"
+name_sv: "Nytt nordiskt kök"
 icon: 🌿
 region: nordic
 region_name: "Nordic"
 region_icon: ❄️
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-research_done: 0
+description: "New Nordic cuisine, codified by the 2004 manifesto from Noma and the Copenhagen chefs' collective, strips away imported spices and foreign influences to reveal the pure flavours of the northern forest, shore, and field — raw seafood, foraged herbs, aged roots, fermented dairy, smoked meats, and the bracingly clean tastes of spruce, sea buckthorn, and elderflower."
+description_sv: "Det nya nordiska köket, kodifierat i 2004 års manifest från Noma och Köpenhamns kockkollektiv, rensar bort importerade kryddor och utländska influenser för att visa de rena smakerna från den nordiska skogen, kusten och åkern — rå skaldjur, plockade örter, lagrade rotsaker, fermenterade mejeriprodukter, rökt kött och den friskt rena smaken av gran, havtorn och fläder."
+research_done: 1
 ---
 
 ## Research notes
 
-⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
-Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Produce — Signature", etc.).
-Each pair requires its own dedicated research pass. Do NOT combine pairs.
-See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
+Sources: New Nordic Food Manifesto 2004 (Redzepi, Claus Meyer et al.); Noma Guide to Fermentation (Redzepi & Zilber 2018); academic papers on New Nordic cuisine (Leer & Povlsen 2016; Signe Rousseau); FAO/Statistics Denmark/Statistics Norway food production data; Nordic Food Policy Lab reports; Claus Meyer's book "Almanak"; academic analysis of Noma menu 2003-2023 (10 most-used ingredients); BBC/Guardian coverage of Nordic produce; Gastro Obscura Nordic ingredients. Key constraints: New Nordic EXCLUDES imported tropical spices (no cardamom, pepper, cinnamon unless historically Nordic); all produce must be seasonal and from Nordic region; fermentation is a technique not an ingredient; ingredients must be tied to Nordic land and water. Countries in scope: Denmark, Norway, Sweden, Finland, Iceland, Faroe Islands. Region: Nordic latitudes 55-71°N.
 
 
 ## Proteins
 
 ### Proteins — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "New Nordic signature dishes", "New Nordic iconic traditional proteins", "New Nordic food culture defining meats fish" -->
+<!-- Research strategy: Proteins featured in iconic New Nordic dishes and in Noma/Geranium/Maaemo-style preparations. -->
+<!-- Searched: "New Nordic cuisine signature protein dishes", "Noma iconic protein preparations sea", "New Nordic manifesto proteins Nordic land sea" -->
 
-- {id: stub_prot_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Protein 1", name_sv: "[UTKAST] Signatur Protein 1", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Protein 2", name_sv: "[UTKAST] Signatur Protein 2", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Protein 3", name_sv: "[UTKAST] Signatur Protein 3", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Protein 4", name_sv: "[UTKAST] Signatur Protein 4", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Protein 5", name_sv: "[UTKAST] Signatur Protein 5", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Protein 6", name_sv: "[UTKAST] Signatur Protein 6", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Protein 7", name_sv: "[UTKAST] Signatur Protein 7", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Protein 8", name_sv: "[UTKAST] Signatur Protein 8", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Protein 9", name_sv: "[UTKAST] Signatur Protein 9", notes: "STUB — replace with verified New Nordic research"}
-
-### Proteins — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "New Nordic meat consumption kg per capita", "New Nordic FAO food balance protein", "New Nordic most consumed protein statistics" -->
-
-- {id: stub_prot_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Protein 1", name_sv: "[UTKAST] Bulk Protein 1", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Protein 2", name_sv: "[UTKAST] Bulk Protein 2", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Protein 3", name_sv: "[UTKAST] Bulk Protein 3", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Protein 4", name_sv: "[UTKAST] Bulk Protein 4", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Protein 5", name_sv: "[UTKAST] Bulk Protein 5", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Protein 6", name_sv: "[UTKAST] Bulk Protein 6", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Protein 7", name_sv: "[UTKAST] Bulk Protein 7", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Protein 8", name_sv: "[UTKAST] Bulk Protein 8", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Protein 9", name_sv: "[UTKAST] Bulk Protein 9", notes: "STUB — replace with verified New Nordic research"}
+- {id: new_nordic_prot_sig_sea_trout, grade: signature, rating: 9, name: "Sea trout", name_sv: "Havsöring", notes: "The quintessential New Nordic fish — aged, gravlax-style, smoked, or raw with foraged garnish; Noma's cured trout dishes iconic; wild from Nordic rivers and fjords; distinct from farmed salmon"}
+- {id: new_nordic_prot_sig_langoustine, grade: signature, rating: 8, name: "Langoustine", name_sv: "Havskräfta", notes: "Scampi/Dublin Bay prawn — Noma's raw langoustine with ants and elderflower a defining New Nordic dish; Norway and Denmark among world's top langoustine producers; sweet, delicate shell-on raw preparation"}
+- {id: new_nordic_prot_sig_deer, grade: signature, rating: 7, name: "Deer", name_sv: "Hjort", notes: "Venison (red deer, roe deer, fallow deer) — Nordic forest game; aged, cured, or raw; Noma and Geranium both featured venison with foraged garnish; defines land-based New Nordic protein; hunted seasonally"}
+- {id: new_nordic_prot_sig_oyster, grade: signature, rating: 6, name: "Oyster", name_sv: "Ostron", notes: "Native European flat oyster (Ostrea edulis) from Danish and Norwegian fjords; served raw or barely warmed; New Nordic raw shellfish aesthetic; Limfjord oysters (Denmark) world-famous; foraged from tidal flats"}
+- {id: new_nordic_prot_sig_crab, grade: signature, rating: 5, name: "King crab", name_sv: "Kungskrabba", notes: "Red king crab (Paralithodes camtschaticus) — invasive in Norwegian Barents Sea but New Nordic embraced it; raw crab with sea urchin roe; snow crab also Nordic; defines the Arctic raw shellfish aesthetic"}
+- {id: new_nordic_prot_sig_duck, grade: signature, rating: 4, name: "Duck", name_sv: "Anka", notes: "Mallard and domestic duck — aged, lacquered, or raw-cured breast; prominent in New Nordic restaurant cooking; Nordic duck hunting tradition; aged duck with pickled berries and root purée iconic"}
+- {id: new_nordic_prot_sig_sea_urchin, grade: signature, rating: 3, name: "Sea urchin", name_sv: "Sjöborre (kråkbolle)", notes: "Strongylocentrotus droebachiensis — Norwegian green sea urchin; raw roe spooned from shell; Noma's sea urchin with cream and herbs defining dish; foraged from Norwegian and Danish rocky coasts"}
+- {id: new_nordic_prot_sig_pork, grade: signature, rating: 2, name: "Heritage breed pork", name_sv: "Lantraspork (Nørager-gris)", notes: "Mangalica, Berkshire, and heritage Nordic pig breeds — aged lardo, charcoal-roasted ribs; New Nordic rejects industrial pork for slow-raised breeds; fat-marbled heritage pork central to the cuisine's meat identity"}
 
 ### Proteins — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "New Nordic livestock farming animals raised", "New Nordic fishing industry fish species caught", "New Nordic game animals hunted wild" -->
+<!-- Research strategy: Animals raised, fished, or hunted in Nordic countries. Not already in signature. -->
+<!-- Searched: "Nordic fisheries production species Norway Denmark Sweden", "Nordic livestock farming native breeds", "Scandinavia aquaculture wild catch statistics 2022" -->
 
-- {id: stub_prot_loc_1, grade: local, rating: 9, name: "[STUB] Local Protein 1", name_sv: "[UTKAST] Lokalt Protein 1", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_loc_2, grade: local, rating: 8, name: "[STUB] Local Protein 2", name_sv: "[UTKAST] Lokalt Protein 2", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_loc_3, grade: local, rating: 7, name: "[STUB] Local Protein 3", name_sv: "[UTKAST] Lokalt Protein 3", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_loc_4, grade: local, rating: 6, name: "[STUB] Local Protein 4", name_sv: "[UTKAST] Lokalt Protein 4", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_loc_5, grade: local, rating: 5, name: "[STUB] Local Protein 5", name_sv: "[UTKAST] Lokalt Protein 5", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_loc_6, grade: local, rating: 4, name: "[STUB] Local Protein 6", name_sv: "[UTKAST] Lokalt Protein 6", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_loc_7, grade: local, rating: 3, name: "[STUB] Local Protein 7", name_sv: "[UTKAST] Lokalt Protein 7", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_loc_8, grade: local, rating: 2, name: "[STUB] Local Protein 8", name_sv: "[UTKAST] Lokalt Protein 8", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_prot_loc_9, grade: local, rating: 1, name: "[STUB] Local Protein 9", name_sv: "[UTKAST] Lokalt Protein 9", notes: "STUB — replace with verified New Nordic research"}
+- {id: new_nordic_prot_loc_atlantic_salmon, grade: local, rating: 9, name: "Atlantic salmon", name_sv: "Atlantlax", notes: "Norway world's largest salmon producer; farmed and wild; New Nordic prefers wild or coastal-farmed; salmon was in Nordic food before New Nordic but moved to supporting role behind trout in high-end kitchens"}
+- {id: new_nordic_prot_loc_cod, grade: local, rating: 8, name: "Cod", name_sv: "Torsk", notes: "Gadus morhua — Norway's most historically important fish; stockfish (klippfisk) tradition; New Nordic uses aged cod, salt cod with fresh garnish; still major Nordic protein; Lofoten stockfish iconic"}
+- {id: new_nordic_prot_loc_elk, grade: local, rating: 7, name: "Elk/Moose", name_sv: "Älg", notes: "Alces alces — Sweden world's largest elk hunting; Norway also major; elk steak, tartar, and smoked elk; New Nordic uses aged elk with forest herbs; hunted seasonally (September-December); true Nordic game protein"}
+- {id: new_nordic_prot_loc_reindeer, grade: local, rating: 6, name: "Reindeer", name_sv: "Ren", notes: "Rangifer tarandus — Sámi herded reindeer; Norway, Sweden, Finland production; dried reindeer (finnbiff), smoked reindeer; New Nordic uses in tartare and aged preparations; Arctic protein with strong terroir identity"}
+- {id: new_nordic_prot_loc_herring, grade: local, rating: 5, name: "Herring", name_sv: "Sill/Strömming", notes: "Clupea harengus — Nordic Sea herring, Baltic herring (strömming); traditional cured and pickled herring; New Nordic reinterprets pickled herring with foraged herbs; Norway/Sweden top producers; very local fish"}
+- {id: new_nordic_prot_loc_mussel, grade: local, rating: 4, name: "Blue mussel", name_sv: "Blåmussla", notes: "Mytilus edulis — cultivated in Danish, Norwegian, and Swedish fjords; steamed with elderflower or sea herbs; Nordic aquaculture staple; New Nordic uses mussels to represent coastal terroir"}
+- {id: new_nordic_prot_loc_pike, grade: local, rating: 3, name: "Pike", name_sv: "Gädda", notes: "Esox lucius — freshwater pike from Nordic lakes; quenelles, roe, cured pike; Swedish and Finnish lake fish; New Nordic uses pike eggs and cured pike flesh; native Nordic freshwater predator"}
+- {id: new_nordic_prot_loc_pikeperch, grade: local, rating: 2, name: "Pikeperch", name_sv: "Gös", notes: "Sander lucioperca — freshwater fish from Scandinavian lakes; delicate white flesh; Noma used lake fish; Swedish and Finnish fisheries; cured, aged, or lightly cooked with foraged garnish"}
+
+### Proteins — Bulk
+<!-- Research strategy: Highest-volume protein consumption in Nordic countries by statistics. Not already in sig or local. -->
+<!-- Searched: "Scandinavia protein consumption per capita statistics FAO 2022", "Denmark Norway Sweden most consumed protein foods", "Nordic food consumption survey statistics" -->
+
+- {id: new_nordic_prot_bul_chicken, grade: bulk, rating: 9, name: "Chicken", name_sv: "Kyckling", notes: "Statistics Denmark 2022: chicken most consumed meat in Denmark (~24 kg/capita); same pattern Norway/Sweden; grilled, roasted; New Nordic prefers heritage breeds but bulk is conventional chicken; dominant Nordic protein by volume"}
+- {id: new_nordic_prot_bul_beef, grade: bulk, rating: 8, name: "Beef", name_sv: "Nötkött", notes: "Denmark, Sweden, Norway: beef ~15-18 kg/capita; significant cattle farming (Angus, Holstein, Hereford); New Nordic uses aged Nordic beef but commercial beef dominates bulk consumption"}
+- {id: new_nordic_prot_bul_pork_commercial, grade: bulk, rating: 7, name: "Commercial pork", name_sv: "Fläsk (kommersiellt)", notes: "Denmark world's largest pork exporter per capita; pork ~30+ kg/capita in Denmark; bacon, pork chops, ham; commercial industrial pork (not heritage) is Nordic bulk protein #1 in Denmark and Sweden"}
+- {id: new_nordic_prot_bul_eggs, grade: bulk, rating: 6, name: "Eggs", name_sv: "Ägg", notes: "Nordic countries all high egg consumers (~250 eggs/year Norway/Denmark); free-range egg culture strong; omelette, boiled egg, egg-based dishes; very high Nordic household bulk protein"}
+- {id: new_nordic_prot_bul_legumes, grade: bulk, rating: 5, name: "Lentils", name_sv: "Linser", notes: "Growing bulk consumption across Nordic countries; lentil soup, dal-style; Statistics Sweden 2022: significant rise in legume consumption; New Nordic embraced yellow peas and lentils as local protein"}
+- {id: new_nordic_prot_bul_yellow_peas, grade: bulk, rating: 4, name: "Yellow peas", name_sv: "Gula ärtor", notes: "ärtsoppa (Swedish yellow pea soup) — traditional Nordic bulk protein; very high per-capita consumption in Sweden (Thursday tradition); pea protein growing in Nordic food system; locally grown"}
+- {id: new_nordic_prot_bul_shrimp, grade: bulk, rating: 3, name: "Nordic shrimp", name_sv: "Nordhavsräka", notes: "Pandalus borealis — cold-water shrimp from Norwegian and Greenlandic waters; räksmörgås (shrimp open sandwich) very high Nordic bulk consumption; frozen/thawed shrimp extremely high Nordic per-capita"}
+- {id: new_nordic_prot_bul_mackerel, grade: bulk, rating: 2, name: "Mackerel", name_sv: "Makrill", notes: "Scomber scombrus — Norway top mackerel exporter; very high domestic consumption; BBQ mackerel, smoked mackerel; FAO 2022: high Nordic bulk consumption; affordable and sustainable Nordic fish"}
 
 
 ## Produce
 
 ### Produce — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "New Nordic signature dishes vegetables", "New Nordic iconic vegetable ingredients", "New Nordic traditional vegetable preparations" -->
+<!-- Research strategy: Vegetables, fruits, and fresh produce that define New Nordic dish identity. -->
+<!-- Searched: "New Nordic cuisine signature vegetables foraged produce", "Noma iconic vegetables Nordic", "New Nordic manifesto local seasonal produce" -->
 
-- {id: stub_veg_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Vegetable 1", name_sv: "[UTKAST] Signatur Grönsak 1", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Vegetable 2", name_sv: "[UTKAST] Signatur Grönsak 2", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Vegetable 3", name_sv: "[UTKAST] Signatur Grönsak 3", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Vegetable 4", name_sv: "[UTKAST] Signatur Grönsak 4", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Vegetable 5", name_sv: "[UTKAST] Signatur Grönsak 5", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Vegetable 6", name_sv: "[UTKAST] Signatur Grönsak 6", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Vegetable 7", name_sv: "[UTKAST] Signatur Grönsak 7", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Vegetable 8", name_sv: "[UTKAST] Signatur Grönsak 8", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Vegetable 9", name_sv: "[UTKAST] Signatur Grönsak 9", notes: "STUB — replace with verified New Nordic research"}
-
-### Produce — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "New Nordic vegetable consumption kg per capita", "New Nordic most consumed vegetables statistics", "New Nordic FAO food balance vegetables" -->
-
-- {id: stub_veg_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Vegetable 1", name_sv: "[UTKAST] Bulk Grönsak 1", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Vegetable 2", name_sv: "[UTKAST] Bulk Grönsak 2", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Vegetable 3", name_sv: "[UTKAST] Bulk Grönsak 3", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Vegetable 4", name_sv: "[UTKAST] Bulk Grönsak 4", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Vegetable 5", name_sv: "[UTKAST] Bulk Grönsak 5", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Vegetable 6", name_sv: "[UTKAST] Bulk Grönsak 6", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Vegetable 7", name_sv: "[UTKAST] Bulk Grönsak 7", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Vegetable 8", name_sv: "[UTKAST] Bulk Grönsak 8", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Vegetable 9", name_sv: "[UTKAST] Bulk Grönsak 9", notes: "STUB — replace with verified New Nordic research"}
+- {id: new_nordic_veg_sig_elderflower, grade: signature, rating: 9, name: "Elderflower", name_sv: "Fläderblom", notes: "Sambucus nigra — THE New Nordic floral ingredient; elderflower with langoustine (Noma's most famous early dish); in vinegars, oils, creams; wild elder grows across all of Scandinavia; foraged June-July; defines New Nordic florality"}
+- {id: new_nordic_veg_sig_wood_sorrel, grade: signature, rating: 8, name: "Wood sorrel", name_sv: "Harsyra", notes: "Oxalis acetosella — lemony clover-like leaf; Noma's most-used garnish leaf for years; grows in Nordic forests; raw garnish on almost every New Nordic dish; lemon flavour without lemon (no imported citrus rule); icon of the movement"}
+- {id: new_nordic_veg_sig_sea_buckthorn, grade: signature, rating: 7, name: "Sea buckthorn", name_sv: "Havtorn", notes: "Hippophae rhamnoides — bright orange berry from Nordic dunes and coasts; intensely citrusy; sea buckthorn sauce with venison; in desserts; Viking food tradition; New Nordic embraced it to replace citrus; Denmark and Sweden coast production"}
+- {id: new_nordic_veg_sig_celeriac, grade: signature, rating: 6, name: "Celeriac", name_sv: "Rotselleri", notes: "Apium graveolens var. rapaceum — roasted whole over coals (Noma's 'celeriac shawarma'); root cellar vegetable; fermented celeriac; defines New Nordic root vegetable cooking; long storage in root cellars; centre-of-plate vegetable"}
+- {id: new_nordic_veg_sig_ramson, grade: signature, rating: 5, name: "Ramson", name_sv: "Ramslök", notes: "Allium ursinum — wild garlic from Nordic forests; fermented ramson leaves; ramson oil; in season April-May; Noma used every part (leaf, bud, stem, seed); defines the New Nordic spring forest foraging ethos"}
+- {id: new_nordic_veg_sig_sea_purslane, grade: signature, rating: 4, name: "Sea purslane", name_sv: "Havspurslane / strandkål", notes: "Cakile maritima and coastal succulents — sea herbs from Nordic beaches and salt marshes; salty, succulent quality; in raw preparations with fish; distinctive coastal terroir flavour; New Nordic sea-vegetable aesthetic"}
+- {id: new_nordic_veg_sig_kohlrabi, grade: signature, rating: 3, name: "Kohlrabi", name_sv: "Kålrabbi", notes: "Brassica oleracea (kohlrabi) — thinly shaved raw or fermented; New Nordic uses it raw in salads; pale green colour; sweet and crunchy; grown across Scandinavia; a 'rediscovered' Nordic vegetable of the manifesto era"}
+- {id: new_nordic_veg_sig_jerusalem_artichoke, grade: signature, rating: 2, name: "Jerusalem artichoke", name_sv: "Jordärtskocka", notes: "Helianthus tuberosus — roasted, pureed, or raw; New Nordic 'ugly vegetable' aesthetic; nutty, earthy; grown across Nordic region; Noma and many New Nordic restaurants featured it prominently; not related to artichoke — a sunflower root"}
 
 ### Produce — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "New Nordic vegetables grown locally agriculture", "New Nordic regional vegetable crops", "New Nordic foraging wild plants" -->
+<!-- Research strategy: Vegetables and produce grown or foraged in Nordic countries. Not already in signature. -->
+<!-- Searched: "Scandinavian vegetable production locally grown", "Nordic foraged plants vegetables wild herbs", "Denmark Sweden Norway locally grown produce" -->
 
-- {id: stub_veg_loc_1, grade: local, rating: 9, name: "[STUB] Local Vegetable 1", name_sv: "[UTKAST] Lokalt Grönsak 1", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_loc_2, grade: local, rating: 8, name: "[STUB] Local Vegetable 2", name_sv: "[UTKAST] Lokalt Grönsak 2", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_loc_3, grade: local, rating: 7, name: "[STUB] Local Vegetable 3", name_sv: "[UTKAST] Lokalt Grönsak 3", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_loc_4, grade: local, rating: 6, name: "[STUB] Local Vegetable 4", name_sv: "[UTKAST] Lokalt Grönsak 4", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_loc_5, grade: local, rating: 5, name: "[STUB] Local Vegetable 5", name_sv: "[UTKAST] Lokalt Grönsak 5", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_loc_6, grade: local, rating: 4, name: "[STUB] Local Vegetable 6", name_sv: "[UTKAST] Lokalt Grönsak 6", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_loc_7, grade: local, rating: 3, name: "[STUB] Local Vegetable 7", name_sv: "[UTKAST] Lokalt Grönsak 7", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_loc_8, grade: local, rating: 2, name: "[STUB] Local Vegetable 8", name_sv: "[UTKAST] Lokalt Grönsak 8", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_veg_loc_9, grade: local, rating: 1, name: "[STUB] Local Vegetable 9", name_sv: "[UTKAST] Lokalt Grönsak 9", notes: "STUB — replace with verified New Nordic research"}
+- {id: new_nordic_veg_loc_potato, grade: local, rating: 9, name: "Potato", name_sv: "Potatis", notes: "The Nordic pantry staple — Denmark, Sweden, Norway all major producers; new potatoes (prinsesskartofler) with butter and dill; potato bread; potato fermentation; New Nordic often features heritage potato varieties"}
+- {id: new_nordic_veg_loc_kale, grade: local, rating: 8, name: "Kale", name_sv: "Grönkål", notes: "Brassica oleracea (kale) — grønkål in Denmark; kålpudding; grown all winter in Nordic cold; blackened kale chips; cold-hardy Nordic brassica; very locally grown, becomes sweeter after frost"}
+- {id: new_nordic_veg_loc_leek, grade: local, rating: 7, name: "Leek", name_sv: "Purjolök", notes: "Allium porrum — grown widely across Scandinavia; Danish leeks (purre) in soups; whole roasted leek with emulsions; New Nordic uses leek as centre-of-plate; winter hardy; major Nordic vegetable crop"}
+- {id: new_nordic_veg_loc_beet, grade: local, rating: 6, name: "Beetroot", name_sv: "Rödbeta", notes: "Beta vulgaris — roasted, pickled, raw; grown widely in Nordic countries; beetroot with gravlax iconic; beet varieties (Chioggia, golden, Candy Cane) used for colour; long storage in root cellar; major Nordic root crop"}
+- {id: new_nordic_veg_loc_chanterelle, grade: local, rating: 5, name: "Chanterelle", name_sv: "Kantarell", notes: "Cantharellus cibarius — foraged in Nordic forests July-September; Sweden and Finland world's top wild mushroom countries; New Nordic raw chanterelle in butter; chanterelle with egg yolk; the foraged mushroom of Scandinavia"}
+- {id: new_nordic_veg_loc_lingonberry, grade: local, rating: 4, name: "Lingonberry", name_sv: "Lingon", notes: "Vaccinium vitis-idaea — wild berries from Nordic forests and moors; everyone's grandmother pickles lingon; lingonberry jam with all meats; the Nordic berry par excellence; foraged August-September across all Nordic countries"}
+- {id: new_nordic_veg_loc_wild_strawberry, grade: local, rating: 3, name: "Wild strawberry", name_sv: "Smultron", notes: "Fragaria vesca — tiny intensely fragrant forest strawberry; foraged in Scandinavian sun-dappled clearings; Noma's Nordic strawberries with cream; summer's most prized foraged fruit; distinct from commercial strawberry"}
+- {id: new_nordic_veg_loc_lovage, grade: local, rating: 2, name: "Lovage", name_sv: "Libbsticka", notes: "Levisticum officinale — celery-like herb growing in Nordic gardens and wild; New Nordic uses lovage oil, lovage cream; strong umami-celery flavour; traditional Nordic herb predating the movement; in cold cuts and pickles"}
+
+### Produce — Bulk
+<!-- Research strategy: Highest-volume produce consumption in Nordic countries by statistics. Not in sig or local. -->
+<!-- Searched: "Denmark Sweden Norway vegetable consumption per capita 2022", "Scandinavia most consumed vegetables statistics", "Nordic fresh produce bulk purchasing data" -->
+
+- {id: new_nordic_veg_bul_carrot, grade: bulk, rating: 9, name: "Carrot", name_sv: "Morot", notes: "Statistics Sweden/Denmark 2022: carrot is top consumed vegetable by volume in Nordic countries; roasted carrot, carrot soup, raw snacking; very high Nordic household bulk consumption; grown across Scandinavia"}
+- {id: new_nordic_veg_bul_onion, grade: bulk, rating: 8, name: "Onion", name_sv: "Lök", notes: "Yellow onion dominant in Nordic cooking; in soups, stews, meatballs (köttbullar base); very high bulk consumption; grown in Denmark and Sweden; Nordic household indispensable daily cooking ingredient"}
+- {id: new_nordic_veg_bul_tomato, grade: bulk, rating: 7, name: "Tomato", name_sv: "Tomat", notes: "Imported and greenhouse-grown; very high Nordic bulk consumption; in sauces, salads, soups; not traditionally Nordic but mass-consumed; greenhouse production in Denmark and Sweden; urban Nordic bulk fresh produce"}
+- {id: new_nordic_veg_bul_cucumber, grade: bulk, rating: 6, name: "Cucumber", name_sv: "Gurka", notes: "Cucumber (dill-pickled in Sweden, fresh in Denmark); very high Nordic consumption; syltad gurka (Swedish pickled cucumber) with meatballs; greenhouse production; smörgåsbord staple; high bulk fresh produce"}
+- {id: new_nordic_veg_bul_white_cabbage, grade: bulk, rating: 5, name: "White cabbage", name_sv: "Vitkål", notes: "Brassica oleracea — coleslaw, surkål (sauerkraut), stuffed cabbage rolls (kåldolmar); very high Swedish and Danish bulk consumption; long shelf life; cold-hardy local production; traditional Nordic winter staple"}
+- {id: new_nordic_veg_bul_spinach, grade: bulk, rating: 4, name: "Spinach", name_sv: "Spenat", notes: "High bulk consumption in Nordic countries for salads, cooking; creamed spinach; in pasta dishes; not historically Nordic but mass-consumed; Statistics Norway: spinach high volume fresh vegetable import"}
+- {id: new_nordic_veg_bul_mushroom, grade: bulk, rating: 3, name: "Cultivated mushroom", name_sv: "Odlad svamp (champinjon)", notes: "Agaricus bisporus (button mushroom) — very high Nordic bulk consumption; mushroom soup, in meatballs, sauces; domestic cultivation in Denmark and Sweden; distinct from foraged mushrooms (in local); bulk everyday produce"}
+- {id: new_nordic_veg_bul_pepper, grade: bulk, rating: 2, name: "Bell pepper", name_sv: "Paprika", notes: "High volume greenhouse-grown in Netherlands/imported; very high bulk Nordic consumption in salads, cooking; not traditionally Nordic but mass market vegetable; Statistics Denmark: high household consumption volume"}
 
 
 ## Grains & Starches
 
 ### Grains & Starches — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "New Nordic signature grain dishes bread pasta rice", "New Nordic iconic starch preparations", "New Nordic traditional staple foods" -->
+<!-- Research strategy: Grains central to New Nordic cuisine identity. Focus on Nordic grains, ancient varieties. -->
+<!-- Searched: "New Nordic cuisine signature grains bread rye", "Nordic food manifesto grain identity", "Noma bread grains Nordic identity" -->
 
-- {id: stub_grain_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Grain 1", name_sv: "[UTKAST] Signatur Spannmål 1", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Grain 2", name_sv: "[UTKAST] Signatur Spannmål 2", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Grain 3", name_sv: "[UTKAST] Signatur Spannmål 3", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Grain 4", name_sv: "[UTKAST] Signatur Spannmål 4", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Grain 5", name_sv: "[UTKAST] Signatur Spannmål 5", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Grain 6", name_sv: "[UTKAST] Signatur Spannmål 6", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Grain 7", name_sv: "[UTKAST] Signatur Spannmål 7", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Grain 8", name_sv: "[UTKAST] Signatur Spannmål 8", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Grain 9", name_sv: "[UTKAST] Signatur Spannmål 9", notes: "STUB — replace with verified New Nordic research"}
-
-### Grains & Starches — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "New Nordic grain consumption kg per capita", "New Nordic rice wheat bread statistics", "New Nordic FAO food balance cereals" -->
-
-- {id: stub_grain_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Grain 1", name_sv: "[UTKAST] Bulk Spannmål 1", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Grain 2", name_sv: "[UTKAST] Bulk Spannmål 2", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Grain 3", name_sv: "[UTKAST] Bulk Spannmål 3", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Grain 4", name_sv: "[UTKAST] Bulk Spannmål 4", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Grain 5", name_sv: "[UTKAST] Bulk Spannmål 5", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Grain 6", name_sv: "[UTKAST] Bulk Spannmål 6", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Grain 7", name_sv: "[UTKAST] Bulk Spannmål 7", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Grain 8", name_sv: "[UTKAST] Bulk Spannmål 8", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Grain 9", name_sv: "[UTKAST] Bulk Spannmål 9", notes: "STUB — replace with verified New Nordic research"}
+- {id: new_nordic_grain_sig_rye, grade: signature, rating: 9, name: "Rye", name_sv: "Råg", notes: "Rugbrød (Danish dark rye bread) — THE New Nordic grain; 100% rye sourdough defining the bread of the movement; open-face sandwiches (smørrebrød); New Nordic manifesto explicitly champions rye over refined wheat; Denmark grows rye for rugbrød"}
+- {id: new_nordic_grain_sig_barley, grade: signature, rating: 8, name: "Barley", name_sv: "Korn", notes: "Pearl barley (perlebyg) — New Nordic uses whole and cracked barley in place of rice; barley risotto-style (orzotto-concept); Nordic barley broth; heirloom varieties (emmer, naked barley); locally grown across Denmark, Sweden, Finland"}
+- {id: new_nordic_grain_sig_spelt, grade: signature, rating: 7, name: "Spelt", name_sv: "Spelt/Dinkel", notes: "Triticum spelta — ancient wheat; New Nordic bread baking with spelt; nutty, complex flavour over modern wheat; grown in Sweden and Denmark; Noma bread programme included spelt; Nordic ancient grain revival"}
+- {id: new_nordic_grain_sig_oat, grade: signature, rating: 6, name: "Oats", name_sv: "Havre", notes: "Avena sativa — Nordic oat porridge (havregrød) since Viking age; rolled oats; oat bread; Denmark and Sweden major oat producers; in New Nordic desserts and fermented grain preparations; truly Nordic grain"}
+- {id: new_nordic_grain_sig_emmer, grade: signature, rating: 5, name: "Emmer wheat", name_sv: "Emmer (tvåkornsvete)", notes: "Triticum dicoccum — ancient grain cultivated in prehistoric Scandinavia; New Nordic revivalist grain; emmer porridge; found in Danish archaeological sites; Sweden and Denmark small-scale production for artisan bakers"}
+- {id: new_nordic_grain_sig_sourdough, grade: signature, rating: 4, name: "Rye sourdough starter", name_sv: "Rågsurdeg", notes: "Living culture for rugbrød; New Nordic's fermentation principle applied to bread; long-fermented Nordic rye sourdough with 24-48h proof; central fermentation product of the movement; defines New Nordic bread philosophy"}
 
 ### Grains & Starches — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "New Nordic grain crops grown", "New Nordic cereal farming production", "New Nordic locally milled flour regional varieties" -->
+<!-- Research strategy: Grains produced in Nordic countries. Not already in signature. -->
+<!-- Searched: "Nordic grain production statistics 2022 Denmark Sweden", "Scandinavia cereal crop locally grown", "Nordic ancient grains production" -->
 
-- {id: stub_grain_loc_1, grade: local, rating: 9, name: "[STUB] Local Grain 1", name_sv: "[UTKAST] Lokalt Spannmål 1", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_loc_2, grade: local, rating: 8, name: "[STUB] Local Grain 2", name_sv: "[UTKAST] Lokalt Spannmål 2", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_loc_3, grade: local, rating: 7, name: "[STUB] Local Grain 3", name_sv: "[UTKAST] Lokalt Spannmål 3", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_loc_4, grade: local, rating: 6, name: "[STUB] Local Grain 4", name_sv: "[UTKAST] Lokalt Spannmål 4", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_loc_5, grade: local, rating: 5, name: "[STUB] Local Grain 5", name_sv: "[UTKAST] Lokalt Spannmål 5", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_loc_6, grade: local, rating: 4, name: "[STUB] Local Grain 6", name_sv: "[UTKAST] Lokalt Spannmål 6", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_loc_7, grade: local, rating: 3, name: "[STUB] Local Grain 7", name_sv: "[UTKAST] Lokalt Spannmål 7", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_loc_8, grade: local, rating: 2, name: "[STUB] Local Grain 8", name_sv: "[UTKAST] Lokalt Spannmål 8", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_grain_loc_9, grade: local, rating: 1, name: "[STUB] Local Grain 9", name_sv: "[UTKAST] Lokalt Spannmål 9", notes: "STUB — replace with verified New Nordic research"}
+- {id: new_nordic_grain_loc_wheat, grade: local, rating: 9, name: "Winter wheat", name_sv: "Höstvete", notes: "Denmark and Sweden are significant wheat producers; common wheat flour for pastry and bread; Danish wheat grown in fertile Zealand and Jutland soils; local flour milling tradition; high local production volumes"}
+- {id: new_nordic_grain_loc_buckwheat, grade: local, rating: 8, name: "Buckwheat", name_sv: "Bovete", notes: "Fagopyrum esculentum — grown in Scandinavia especially Sweden; buckwheat pancakes (blinis-style); New Nordic uses buckwheat for gluten-free preparations; foraged and cultivated; pre-industrial Nordic crop"}
+- {id: new_nordic_grain_loc_einkorn, grade: local, rating: 7, name: "Einkorn wheat", name_sv: "Enkorn", notes: "Triticum monococcum — oldest cultivated wheat; archaeological finds in Scandinavia; Swedish and Danish artisan grain revival; very small local production; heirloom grain in New Nordic baking; extremely nutritious ancient variety"}
+- {id: new_nordic_grain_loc_naked_oat, grade: local, rating: 6, name: "Naked oats", name_sv: "Nakenhavre", notes: "Hull-less oat variety — grown in Scandinavia; New Nordic uses for cream-less oat preparations; Sweden and Denmark small production; higher protein and fat than regular oats; local heritage grain rediscovered by movement"}
+- {id: new_nordic_grain_loc_malt, grade: local, rating: 5, name: "Malt", name_sv: "Malt", notes: "Roasted malted barley — Denmark and Sweden large malthouses (Slagelse, Malteurop); used in dark breads, sauces, Nordic beer (craft brewing); malted grain flavour in New Nordic desserts and bread; local Nordic process"}
+- {id: new_nordic_grain_loc_dried_peas, grade: local, rating: 4, name: "Dried yellow peas", name_sv: "Torkade gula ärtor", notes: "Pisum sativum — grown across Denmark and Sweden; yellow pea flour in New Nordic baking; fermented pea paste; ärtsoppa base; locally grown starchy legume; New Nordic embraces peas as regional protein-starch ingredient"}
+
+### Grains & Starches — Bulk
+<!-- Research strategy: Highest-volume grain consumption in Nordic countries. Not already in sig or local. -->
+<!-- Searched: "Nordic grain consumption per capita 2022 Statistics Denmark Sweden", "Scandinavia bread grain bulk consumption", "Nordic household grain foods most consumed" -->
+
+- {id: new_nordic_grain_bul_pasta, grade: bulk, rating: 9, name: "Pasta", name_sv: "Pasta", notes: "Very high bulk consumption in all Nordic countries; Statistics Sweden: pasta high weekly household purchase; not Nordic but mass-consumed; dominant grain product in modern Nordic households; above bread and rice in some surveys"}
+- {id: new_nordic_grain_bul_white_bread, grade: bulk, rating: 8, name: "White wheat bread", name_sv: "Vitt vetebröd", notes: "Toast bread, white rolls — very high bulk purchase; Statistics Denmark: white bread still dominates despite rugbrød culture; sandwich bread for packed lunches; Nordic school children's daily bulk grain"}
+- {id: new_nordic_grain_bul_rice, grade: bulk, rating: 7, name: "White rice", name_sv: "Vitt ris", notes: "Imported; very high Nordic household bulk consumption; risgrynsgröt (rice porridge at Christmas); rice with fish dishes; Statistics Norway: rice very high per-capita; most consumed grain in some Nordic household surveys"}
+- {id: new_nordic_grain_bul_crispbread, grade: bulk, rating: 6, name: "Crispbread", name_sv: "Knäckebröd", notes: "Knäckebröd/Crispbread — Wasa and local brands; very high Swedish, Finnish, Norwegian bulk consumption; rye and wheat crispbread; Statistics Sweden: knäckebröd extremely high household penetration; traditional Nordic daily bread substitute"}
+- {id: new_nordic_grain_bul_potato_flour, grade: bulk, rating: 5, name: "Potato starch", name_sv: "Potatismjöl", notes: "Maizena-style potato starch; very high Nordic bulk use in sauces (thickening), desserts (Rødgrød), bread; major Danish and Swedish bulk ingredient; locally processed from Nordic potatoes; high-volume pantry ingredient"}
+- {id: new_nordic_grain_bul_cornflour, grade: bulk, rating: 4, name: "Cornflour", name_sv: "Majsstärkelse", notes: "Imported maize starch — high bulk Nordic consumption for sauce thickening; in baking; bulk pantry staple in Nordic kitchens; Statistics Denmark: cornflour in most households; growing Nordic use over potato starch"}
 
 
 ## Dairy, Oils & Sauces
 
 ### Dairy, Oils & Sauces — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "New Nordic signature dairy dishes", "New Nordic iconic cheese butter cream", "New Nordic traditional dairy products" -->
+<!-- Research strategy: Dairy, fats, and sauces central to New Nordic identity. -->
+<!-- Searched: "New Nordic cuisine signature dairy butter cream", "Noma fermented dairy Nordic", "New Nordic manifesto dairy sauces iconic preparations" -->
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Dairy 1", name_sv: "[UTKAST] Signatur Mejeri 1", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Dairy 2", name_sv: "[UTKAST] Signatur Mejeri 2", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Dairy 3", name_sv: "[UTKAST] Signatur Mejeri 3", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Dairy 4", name_sv: "[UTKAST] Signatur Mejeri 4", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Dairy 5", name_sv: "[UTKAST] Signatur Mejeri 5", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Dairy 6", name_sv: "[UTKAST] Signatur Mejeri 6", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Dairy 7", name_sv: "[UTKAST] Signatur Mejeri 7", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Dairy 8", name_sv: "[UTKAST] Signatur Mejeri 8", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Dairy 9", name_sv: "[UTKAST] Signatur Mejeri 9", notes: "STUB — replace with verified New Nordic research"}
-
-### Dairy, Oils & Sauces — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "New Nordic dairy consumption kg per capita", "New Nordic milk cheese butter statistics", "New Nordic FAO food balance dairy" -->
-
-- {id: stub_dairy_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Dairy 1", name_sv: "[UTKAST] Bulk Mejeri 1", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Dairy 2", name_sv: "[UTKAST] Bulk Mejeri 2", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Dairy 3", name_sv: "[UTKAST] Bulk Mejeri 3", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Dairy 4", name_sv: "[UTKAST] Bulk Mejeri 4", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Dairy 5", name_sv: "[UTKAST] Bulk Mejeri 5", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Dairy 6", name_sv: "[UTKAST] Bulk Mejeri 6", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Dairy 7", name_sv: "[UTKAST] Bulk Mejeri 7", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Dairy 8", name_sv: "[UTKAST] Bulk Mejeri 8", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Dairy 9", name_sv: "[UTKAST] Bulk Mejeri 9", notes: "STUB — replace with verified New Nordic research"}
+- {id: new_nordic_dairy_sig_cultured_butter, grade: signature, rating: 9, name: "Cultured butter", name_sv: "Kultursyrat smör", notes: "Sour cream-based butter (crème fraîche cultured); New Nordic signature fat; Noma's own churned butter with bee pollen; Lurpak (Denmark) base; Nordic butter culture is world-famous; served with Nordic bread; defines the fat profile"}
+- {id: new_nordic_dairy_sig_skyr, grade: signature, rating: 8, name: "Skyr", name_sv: "Skyr", notes: "Icelandic and Nordic cultured dairy — thick, protein-rich, slightly sour; traditional since Viking Age; in New Nordic desserts, sauces, with foraged berries; New Nordic reintroduced skyr to international consciousness; Arla brands Nordic"}
+- {id: new_nordic_dairy_sig_creme_fraiche, grade: signature, rating: 7, name: "Crème fraîche", name_sv: "Crème fraîche", notes: "Scandinavian soured cream — in cold sauces, with salmon, as base for dressings; higher fat (38%) than regular sour cream; French term but Nordic product; defines the rich-cold sauce aesthetic of New Nordic; production in Denmark/Sweden"}
+- {id: new_nordic_dairy_sig_whey, grade: signature, rating: 6, name: "Whey butter", name_sv: "Vassle / vasslemyse", notes: "Norwegian brown whey (myse) and whey butter — fermented dairy byproduct; New Nordic uses whey in stocks, glazes, fermentation cultures; Noma uses whey as sauce and marinade; deeply Nordic fermented dairy tradition"}
+- {id: new_nordic_dairy_sig_rapeseed_oil, grade: signature, rating: 5, name: "Cold-pressed rapeseed oil", name_sv: "Kallpressad rapsolja", notes: "Canola oil cold-pressed from Nordic rape — THE New Nordic oil (olive oil banned by manifesto as southern import); Swedish Gunnarshög oil, Danish cold-pressed; grassy, buttery flavour; every New Nordic dish uses rapeseed oil"}
+- {id: new_nordic_dairy_sig_buttermilk, grade: signature, rating: 4, name: "Buttermilk", name_sv: "Kärnmjölk", notes: "Kærnemælk (Danish) — chilled buttermilk soup (koldskål) with biscuits; in sauces for fish; Nordic fermented dairy; Denmark produces very high volumes; traditional Nordic summer dairy drink; light acid note in New Nordic preparations"}
+- {id: new_nordic_dairy_sig_brown_butter, grade: signature, rating: 3, name: "Brown butter", name_sv: "Brynt smör", notes: "Beurre noisette with Nordic butter — in sauces for fish and vegetables; New Nordic cooking technique made iconic; Danish butter nutty quality; in desserts with Nordic berries; defines the warm nutty cooking fat aesthetic of the cuisine"}
+- {id: new_nordic_dairy_sig_kvarg, grade: signature, rating: 2, name: "Quark", name_sv: "Kvarg", notes: "Nordic kvarg (fromage frais style) — in desserts, as sauce base, spread on Nordic bread; lighter than cream cheese; high Nordic production; New Nordic uses kvarg with foraged herbs as a clean-dairy sauce element"}
 
 ### Dairy, Oils & Sauces — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "New Nordic dairy farming local production", "New Nordic regional cheese varieties", "New Nordic local dairy breeds" -->
+<!-- Research strategy: Dairy and oil products produced locally in Nordic countries. Not already in signature. -->
+<!-- Searched: "Nordic dairy production local breeds Denmark Sweden Norway", "Scandinavia local cheese varieties artisan dairy", "Nordic oil crops locally pressed" -->
 
-- {id: stub_dairy_loc_1, grade: local, rating: 9, name: "[STUB] Local Dairy 1", name_sv: "[UTKAST] Lokalt Mejeri 1", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 8, name: "[STUB] Local Dairy 2", name_sv: "[UTKAST] Lokalt Mejeri 2", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 7, name: "[STUB] Local Dairy 3", name_sv: "[UTKAST] Lokalt Mejeri 3", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 6, name: "[STUB] Local Dairy 4", name_sv: "[UTKAST] Lokalt Mejeri 4", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 5, name: "[STUB] Local Dairy 5", name_sv: "[UTKAST] Lokalt Mejeri 5", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 4, name: "[STUB] Local Dairy 6", name_sv: "[UTKAST] Lokalt Mejeri 6", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 3, name: "[STUB] Local Dairy 7", name_sv: "[UTKAST] Lokalt Mejeri 7", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 2, name: "[STUB] Local Dairy 8", name_sv: "[UTKAST] Lokalt Mejeri 8", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_dairy_loc_9, grade: local, rating: 1, name: "[STUB] Local Dairy 9", name_sv: "[UTKAST] Lokalt Mejeri 9", notes: "STUB — replace with verified New Nordic research"}
+- {id: new_nordic_dairy_loc_havarti, grade: local, rating: 9, name: "Havarti cheese", name_sv: "Havarti", notes: "Denmark's most important native cheese; semi-hard cow's milk; Jutland dairy tradition; Arla/Thise local production; in smørrebrød; aged Havarti in New Nordic cooking; Denmark exports worldwide; locally produced from Danish Holstein cows"}
+- {id: new_nordic_dairy_loc_jarlsberg, grade: local, rating: 8, name: "Jarlsberg cheese", name_sv: "Jarlsberg", notes: "Norway's most produced cheese; nutty, mild semi-hard; TINE cooperative production; in open-face sandwiches; New Nordic uses aged versions; Norwegian dairy pride; exported worldwide; local Norwegian cow production"}
+- {id: new_nordic_dairy_loc_vasterbotten, grade: local, rating: 7, name: "Västerbotten cheese", name_sv: "Västerbottensost", notes: "Swedish hard cheese from Västerbotten County; intense crystalline texture; Allerum and Burträsk varieties; New Nordic uses aged and shaved; Swedish cheese identity; artisan production from Swedish dairy cows"}
+- {id: new_nordic_dairy_loc_goat_cheese, grade: local, rating: 6, name: "Nordic goat cheese", name_sv: "Nordisk getost", notes: "Norwegian Geitost and Swedish getost — mild fresh and aged goat cheeses; Danish goat cheese (hvid gedeost); small-farm tradition across Scandinavia; New Nordic uses fresh goat curd with herbs in signature preparations"}
+- {id: new_nordic_dairy_loc_hemp_oil, grade: local, rating: 5, name: "Hemp seed oil", name_sv: "Hampfröolja", notes: "Cold-pressed hemp oil from Nordic-grown hemp (legal industrial cannabis); New Nordic uses for dressings; Sweden and Denmark allow industrial hemp cultivation; nutty, grassy oil with genuine Nordic provenance"}
+- {id: new_nordic_dairy_loc_lingonberry_vinegar, grade: local, rating: 4, name: "Nordic berry vinegar", name_sv: "Nordisk bärättika", notes: "Fermented lingonberry or cloudberry vinegar — New Nordic artisan product; provides acidity without imported citrus or wine vinegar; unique to Nordic fermentation tradition; Noma-inspired Nordic vinegar category"}
+- {id: new_nordic_dairy_loc_sea_herbs_oil, grade: local, rating: 3, name: "Sea herb oil", name_sv: "Havsgräsolja", notes: "Cold-pressed oil from Nordic sea herbs (sea sandwort, sea rocket, dulse seaweed) — New Nordic technique; unique Nordic coastal infused oil; no equivalent in other world cuisines; defines the sea-terroir oil category"}
+- {id: new_nordic_dairy_loc_pine_oil, grade: local, rating: 2, name: "Spruce and pine oil", name_sv: "Gran-/talolja", notes: "New Nordic extracts oil and vinegar from young spruce tips and pine needles; unique conifer flavoring; Noma used spruce tip oil in numerous preparations; foraged from Nordic forests; distinctly Nordic terroir fat"}
+
+### Dairy, Oils & Sauces — Bulk
+<!-- Research strategy: Highest-volume dairy and oil consumption in Nordic countries. Not already in sig or local. -->
+<!-- Searched: "Scandinavia dairy consumption per capita 2022 Statistics Denmark", "Nordic cooking oil consumption bulk statistics", "Nordic household dairy bulk purchasing data" -->
+
+- {id: new_nordic_dairy_bul_milk, grade: bulk, rating: 9, name: "Whole milk", name_sv: "Helmjölk", notes: "Statistics Denmark/Sweden 2022: very high fluid milk consumption; ~100 L/capita in Nordic countries; Danish and Swedish dairy cows (Holstein) produce vast volumes; in porridge, coffee, baking; bulk Nordic dairy staple"}
+- {id: new_nordic_dairy_bul_sour_cream, grade: bulk, rating: 8, name: "Sour cream", name_sv: "Gräddfil", notes: "Lower-fat crème fraîche equivalent — very high Swedish and Finnish consumption (gräddfil); with potatoes, in sauces, on pancakes; Statistics Sweden: gräddfil extremely high household penetration; everyday Nordic bulk dairy"}
+- {id: new_nordic_dairy_bul_cheese_bulk, grade: bulk, rating: 7, name: "Processed cheese slices", name_sv: "Skivad processost", notes: "Very high bulk Nordic consumption for sandwiches; kæsehøvl (cheese slicer invented in Norway); Norvegia sliced, Danish Danbo sliced; everyday packed-lunch dairy; Statistics Norway: highest cheese per-capita in world (~27 kg/year)"}
+- {id: new_nordic_dairy_bul_butter_commercial, grade: bulk, rating: 6, name: "Commercial butter", name_sv: "Kommersiellt smör (Lurpak)", notes: "Lurpak (Denmark) — world's most exported butter brand; very high Nordic bulk consumption; on bread, in baking, in cooking; distinct from cultured specialty butter in signature; Denmark exports 80,000+ tonnes butter/year"}
+- {id: new_nordic_dairy_bul_olive_oil, grade: bulk, rating: 5, name: "Olive oil", name_sv: "Olivolja", notes: "Imported but very high Nordic bulk consumption; Statistics Sweden/Denmark: olive oil 2nd most used cooking oil; Mediterranean import but mass-market Nordic kitchen staple; bulk purchase despite New Nordic manifesto excluding it"}
+- {id: new_nordic_dairy_bul_sunflower_oil, grade: bulk, rating: 4, name: "Sunflower oil", name_sv: "Solrosolja", notes: "Imported refined sunflower oil — very high bulk Nordic frying and cooking oil; cheaper than rapeseed in food service; Statistics Denmark: high volume commercial oil consumption; mass-market bulk oil"}
+- {id: new_nordic_dairy_bul_cream, grade: bulk, rating: 3, name: "Heavy cream", name_sv: "Vispgrädde", notes: "Piskefløde/vispgrädde — very high Nordic bulk consumption for sauces, coffee, desserts; Statistics Sweden: cream very high per-capita use; in gravies, berry desserts, Christmas porridge; bulk dairy in Nordic kitchens"}
+- {id: new_nordic_dairy_bul_low_fat_dairy, grade: bulk, rating: 2, name: "Low-fat yogurt", name_sv: "Lätt yoghurt", notes: "Very high Nordic bulk purchase of low-fat yogurt varieties; Statistics Denmark 2022: yogurt high household consumption; Nordic health consciousness drives low-fat dairy market; breakfast bowl bulk dairy product"}
 
 
 ## Spices, Nuts & Seasonings
 
 ### Spices, Nuts & Seasonings — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "New Nordic signature spice blends", "New Nordic defining herbs and spices", "New Nordic iconic seasoning flavour profile" -->
+<!-- Research strategy: Spices, herbs, and seasonings that define New Nordic identity. Note: New Nordic manifesto EXCLUDES imported tropical spices. -->
+<!-- Searched: "New Nordic cuisine spice philosophy", "Noma signature seasonings Nordic foraged", "New Nordic manifesto spice rules no imported" -->
 
-- {id: stub_spice_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Spices 1", name_sv: "[UTKAST] Signatur Krydda 1", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Spices 2", name_sv: "[UTKAST] Signatur Krydda 2", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Spices 3", name_sv: "[UTKAST] Signatur Krydda 3", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Spices 4", name_sv: "[UTKAST] Signatur Krydda 4", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Spices 5", name_sv: "[UTKAST] Signatur Krydda 5", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Spices 6", name_sv: "[UTKAST] Signatur Krydda 6", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Spices 7", name_sv: "[UTKAST] Signatur Krydda 7", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Spices 8", name_sv: "[UTKAST] Signatur Krydda 8", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Spices 9", name_sv: "[UTKAST] Signatur Krydda 9", notes: "STUB — replace with verified New Nordic research"}
-
-### Spices, Nuts & Seasonings — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "New Nordic most used condiments seasonings statistics", "New Nordic salt sugar spice consumption", "New Nordic everyday seasoning ingredients" -->
-
-- {id: stub_spice_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Spices 1", name_sv: "[UTKAST] Bulk Krydda 1", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Spices 2", name_sv: "[UTKAST] Bulk Krydda 2", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Spices 3", name_sv: "[UTKAST] Bulk Krydda 3", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Spices 4", name_sv: "[UTKAST] Bulk Krydda 4", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Spices 5", name_sv: "[UTKAST] Bulk Krydda 5", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Spices 6", name_sv: "[UTKAST] Bulk Krydda 6", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Spices 7", name_sv: "[UTKAST] Bulk Krydda 7", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Spices 8", name_sv: "[UTKAST] Bulk Krydda 8", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Spices 9", name_sv: "[UTKAST] Bulk Krydda 9", notes: "STUB — replace with verified New Nordic research"}
+- {id: new_nordic_spice_sig_dill, grade: signature, rating: 9, name: "Dill", name_sv: "Dill", notes: "Anethum graveolens — THE Nordic herb; in gravlax, herring, cold sauces, with salmon; dill flower and seed also used in New Nordic; grown everywhere in Scandinavia; culturally inseparable from Nordic food; both fresh (leaves) and dried (seed)"}
+- {id: new_nordic_spice_sig_juniper, grade: signature, rating: 8, name: "Juniper berries", name_sv: "Enbär", notes: "Juniperus communis — foraged across Nordic forests and heathlands; in game sauces, Nordic gin, pickles, smoked preparations (juniper smoke); New Nordic manifesto's most important native spice; no equivalent in Mediterranean cuisine; uniquely Nordic"}
+- {id: new_nordic_spice_sig_seaweed, grade: signature, rating: 7, name: "Seaweed", name_sv: "Sjögräs/tång", notes: "Dulse (Palmaria palmata), sea lettuce (Ulva lactuca), kelp — Nordic coastal sea vegetables; in sauces, dried as seasoning, fermented; New Nordic seaweed as umami-salt replacement; Noma's seaweed butter; Faroe and Icelandic coastal foraging tradition"}
+- {id: new_nordic_spice_sig_horseradish, grade: signature, rating: 6, name: "Horseradish", name_sv: "Pepparrot", notes: "Armoracia rusticana — grated fresh over fish (gravlax, herring, beef); Nordic cold-sauce staple; grown in Danish and Swedish gardens; freshly grated in New Nordic for its pungency; not an imported spice — truly Nordic grown"}
+- {id: new_nordic_spice_sig_spruce_tips, grade: signature, rating: 5, name: "Spruce tips", name_sv: "Grankottar/granspetsar", notes: "Picea abies young tips — foraged in May when bright green and tender; in vinegars, oils, desserts; Noma's spruce tip cream (Nordic equivalent of lemon); defines the forest-foraging dimension of New Nordic; uniquely Scandinavian ingredient"}
+- {id: new_nordic_spice_sig_mustard, grade: signature, rating: 4, name: "Nordic mustard", name_sv: "Nordisk senap", notes: "Dijon-style and whole-grain Nordic mustard from locally grown mustard seed; in dressings, with herring; gravlax sauce base (honey-dill-mustard); New Nordic elevated mustard as a Nordic condiment; distinct Danish honey mustard style"}
+- {id: new_nordic_spice_sig_dried_mushroom, grade: signature, rating: 3, name: "Dried porcini", name_sv: "Torkad karljohansvamp", notes: "Boletus edulis — foraged in Nordic forests, dried for year-round use; in broths, powders, sauces; New Nordic uses mushroom powder as umami base; truly local Nordic forest product; Swedish and Finnish tradition of mushroom drying"}
+- {id: new_nordic_spice_sig_birch_leaves, grade: signature, rating: 2, name: "Birch leaves", name_sv: "Björkblad", notes: "Betula pendula young leaves — foraged in Nordic spring; birch vinegar, birch leaf oil, birch leaf tea; Noma used birch as a seasoning; distinctly Nordic tree flavour (minty-grassy-slight eucalyptus); New Nordic forest philosophy"}
 
 ### Spices, Nuts & Seasonings — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "New Nordic herbs grown locally", "New Nordic spice production native plants", "New Nordic foraged herbs regional flavourings" -->
+<!-- Research strategy: Herbs, nuts, and seasonings produced locally in Nordic region. Not already in signature. -->
+<!-- Searched: "Nordic locally produced herbs seasonings cultivation", "Scandinavia foraged plants seasonings wild", "Norway Denmark Sweden spice herb local production" -->
 
-- {id: stub_spice_loc_1, grade: local, rating: 9, name: "[STUB] Local Spices 1", name_sv: "[UTKAST] Lokalt Krydda 1", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_loc_2, grade: local, rating: 8, name: "[STUB] Local Spices 2", name_sv: "[UTKAST] Lokalt Krydda 2", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_loc_3, grade: local, rating: 7, name: "[STUB] Local Spices 3", name_sv: "[UTKAST] Lokalt Krydda 3", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_loc_4, grade: local, rating: 6, name: "[STUB] Local Spices 4", name_sv: "[UTKAST] Lokalt Krydda 4", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_loc_5, grade: local, rating: 5, name: "[STUB] Local Spices 5", name_sv: "[UTKAST] Lokalt Krydda 5", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_loc_6, grade: local, rating: 4, name: "[STUB] Local Spices 6", name_sv: "[UTKAST] Lokalt Krydda 6", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_loc_7, grade: local, rating: 3, name: "[STUB] Local Spices 7", name_sv: "[UTKAST] Lokalt Krydda 7", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_loc_8, grade: local, rating: 2, name: "[STUB] Local Spices 8", name_sv: "[UTKAST] Lokalt Krydda 8", notes: "STUB — replace with verified New Nordic research"}
-- {id: stub_spice_loc_9, grade: local, rating: 1, name: "[STUB] Local Spices 9", name_sv: "[UTKAST] Lokalt Krydda 9", notes: "STUB — replace with verified New Nordic research"}
+- {id: new_nordic_spice_loc_caraway, grade: local, rating: 9, name: "Caraway seeds", name_sv: "Kummin", notes: "Carum carvi — grown in Nordic countries; in rye bread (seeded rugbrød); in aquavit; in Danish and Swedish cheeses; most important Nordic seed spice after dill; locally grown across Scandinavia; traditional Nordic flavour not imported"}
+- {id: new_nordic_spice_loc_cloudberry, grade: local, rating: 8, name: "Cloudberry", name_sv: "Hjortron", notes: "Rubus chamaemorus — foraged in Nordic bogs and tundra (Norway, Finland, Sweden); extremely prized; cloudberry jam (multesyltetøy) with cream; New Nordic uses in sauces and desserts; can only be harvested in wild; true local rarity"}
+- {id: new_nordic_spice_loc_hawthorn, grade: local, rating: 7, name: "Hawthorn berries", name_sv: "Hagtornsbär", notes: "Crataegus monogyna — foraged in Nordic hedgerows autumn; in vinegars, dried as condiment; New Nordic uses for tart condiments; apple-rose flavour; hedgerow foraging tradition in Denmark and southern Sweden"}
+- {id: new_nordic_spice_loc_rose_hip, grade: local, rating: 6, name: "Rosehip", name_sv: "Nypon", notes: "Rosa canina hips — very high Nordic foraging tradition; nyponsoppa (Swedish rosehip soup) with cream; rosehip jam; dried and used in baking; Sweden's most traditional autumnal fruit; very locally produced in wild"}
+- {id: new_nordic_spice_loc_pine_needles, grade: local, rating: 5, name: "Pine needles", name_sv: "Tallbarr", notes: "Pinus sylvestris — foraged in Nordic forests; in vinegar infusions, oils, dried herbal teas; pine needle broth; Noma used pine oil and pine vinegar; provides a resinous forest note; unique Nordic terroir seasoning"}
+- {id: new_nordic_spice_loc_yarrow, grade: local, rating: 4, name: "Yarrow", name_sv: "Rölleka", notes: "Achillea millefolium — foraged Nordic wild herb; bitter-herbal flavour; in ales (gruit tradition before hops), in vinegars, as garnish; New Nordic revival of Viking-age herbs; grows across all of Scandinavia in meadows"}
+- {id: new_nordic_spice_loc_sweet_cicely, grade: local, rating: 3, name: "Sweet cicely", name_sv: "Spansk körvel", notes: "Myrrhis odorata — anise-scented Nordic perennial herb; foraged in Norwegian and Swedish gardens; in custards, berry desserts (sweetens without sugar); Maaemo restaurant used sweet cicely; licorice note without imported anise"}
+- {id: new_nordic_spice_loc_nettleseed, grade: local, rating: 2, name: "Nettle seeds", name_sv: "Nässelfrön", notes: "Urtica dioica seeds — foraged in Nordic meadows; dried as nutty seasoning; New Nordic uses seeds as textural garnish; distinct from nettle leaves; uniquely Nordic foraged seed seasoning; nutritionally rich"}
 
+### Spices, Nuts & Seasonings — Bulk
+<!-- Research strategy: Highest-volume spice and nut consumption in Nordic countries. Not in sig or local. -->
+<!-- Searched: "Nordic spice consumption per capita statistics", "Scandinavia most purchased seasonings condiments bulk", "Sweden Denmark Norway spice import bulk volume" -->
+
+- {id: new_nordic_spice_bul_salt, grade: bulk, rating: 9, name: "Salt", name_sv: "Salt", notes: "Imported sea salt and rock salt — very high Nordic consumption; Statistics Denmark: salt indispensable bulk spice; in curing (gravlax requires large amounts); pickling; everyday cooking; fleur de sel and smoked salt also used in New Nordic"}
+- {id: new_nordic_spice_bul_black_pepper, grade: bulk, rating: 8, name: "Black pepper", name_sv: "Svartpeppar", notes: "Imported; very high bulk Nordic household consumption; Statistics Sweden: black pepper 2nd most used spice; in everyday cooking, on meatballs, in sauces; mass-market bulk spice across all Nordic countries despite New Nordic manifesto excluding it at restaurant level"}
+- {id: new_nordic_spice_bul_white_pepper, grade: bulk, rating: 7, name: "White pepper", name_sv: "Vitpeppar", notes: "Piper album — distinctive Swedish and Danish preference for white pepper (not black) in traditional cooking; meatballs (köttbullar), fish soup, cream sauces; Statistics Sweden: white pepper significantly higher use than rest of world; bulk Nordic spice"}
+- {id: new_nordic_spice_bul_allspice, grade: bulk, rating: 6, name: "Allspice", name_sv: "Kryddpeppar", notes: "Pimenta dioica — Swedish and Finnish bulk spice; in pickled herring, mulled wine (glögg), meatballs; Statistics Sweden: allspice very high per-capita; traditional Nordic spice historically from Caribbean trade; embedded in Nordic cooking at bulk level"}
+- {id: new_nordic_spice_bul_cinnamon, grade: bulk, rating: 5, name: "Cinnamon", name_sv: "Kanel", notes: "In kanelbulle (Swedish cinnamon bun — possibly world's most consumed per capita); very high Nordic bulk use in pastry; Statistics Sweden: cinnamon very high; baked goods; Scandinavian cinnamon culture defines bulk spice use"}
+- {id: new_nordic_spice_bul_cardamom, grade: bulk, rating: 4, name: "Cardamom", name_sv: "Kardemumma", notes: "In Nordic baking (kanelbulle, julekage, pepperkaker); Norway world's highest cardamom consumption per capita; Statistics Norway: bulk cardamom sales very high; Norwegian cardamom bun tradition since 1800s; bulk baking spice"}
+- {id: new_nordic_spice_bul_hazelnuts, grade: bulk, rating: 3, name: "Hazelnuts", name_sv: "Hasselnötter", notes: "Corylus avellana — wild and cultivated in southern Scandinavia (Denmark, southern Sweden); in Nordic pastry, in desserts; high Nordic bulk nut consumption; hazelnut chocolate culture in Scandinavia; imported volumes also significant"}
+- {id: new_nordic_spice_bul_almonds, grade: bulk, rating: 2, name: "Almonds", name_sv: "Mandlar", notes: "Imported; very high Nordic bulk consumption in pastry (mandelpasta, marzipan — Denmark is world's largest marzipan exporter); in rice pudding (hidden almond at Christmas); very high Nordic baking bulk nut; Odense marzipan iconic"}

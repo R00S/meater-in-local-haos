@@ -764,7 +764,94 @@ that signal. The name field must be the clean ingredient name only.
 
 ---
 
-### ❌ Trap 13: Using the local-language name instead of the English name in `name`
+### ❌ Trap 14: Cross-grade duplication within a category section
+
+If an ingredient already appears in **signature**, do **not** repeat it in **local** or **bulk**.
+If an ingredient already appears in **local**, do **not** repeat it in **bulk**.
+This is stated in the methodology example, but it is the single most widespread structural error
+in practice — so it gets its own trap.
+
+**Why it keeps happening:**
+
+The most common failure mode is the agent writing Local-grade entries and thinking:
+"This ingredient IS locally produced — that's *exactly* why it should be in Local."
+The agent is right about the fact but wrong about the conclusion. If the ingredient is
+*already in Signature*, it is already in the data. Repeating it in Local adds zero
+information and corrupts the deduplication logic.
+
+A second failure mode: the Bulk pair is researched independently from the Signature pair
+(as it should be, per the 15-pair methodology) and the agent picks the statistically
+most-consumed items — which are often the same iconic items already in Signature.
+
+**Documented failure (2026-05, Hawaiian cuisine):**
+- `ginger`: in Spices-Sig AND Spices-Local
+- `garlic`: in Spices-Sig AND Spices-Local
+- `chicken`: in Proteins-Sig AND Proteins-Bulk
+- `spam`: in Proteins-Sig AND Proteins-Bulk
+- `beef`: in Proteins-Sig AND Proteins-Bulk
+- `white rice`: in Grains-Sig AND Grains-Bulk
+- `shoyu`: in Dairy-Sig AND Dairy-Bulk
+- `coconut milk`: in Produce-Sig AND Dairy-Bulk
+
+**Documented failure (2026-05, Georgian cuisine):**
+- `walnut oil`: in Dairy-Sig AND Dairy-Local
+- `guda cheese`: in Dairy-Sig AND Dairy-Local
+- `Zanduri`: in Grains-Sig AND Grains-Local (under different name variants)
+- `Imeretian saffron`: in Spices-Sig AND Spices-Local
+- `blue fenugreek`: in Spices-Sig AND Spices-Local
+
+**The rule:** Before writing **any** item into any grade of a section, scan the section above
+(all items already written in Signature and Local for that section) and skip if the same
+ingredient is already present, regardless of which grade it is in.
+
+This dedup check must be done item-by-item. A bulk scan at the end is not sufficient — you
+need to check *before you write each item* so you do not invest effort in a duplicate.
+
+**How to do it in practice:**
+
+1. After writing Signature, paste the ingredient names in a visible list.
+2. When writing Local, run down that list before writing each entry.
+3. When writing Bulk, run down BOTH the Signature and Local lists.
+4. If an item is on either prior list → skip it. Write the next-best item instead.
+
+**The one exception — Local sub-varieties of a Signature ingredient:**
+
+If Signature has `name: "Taro"` and Local has `name: "Wetland taro"` (a specific cultivated
+variety with a distinct name and growing method), this is acceptable because it is a genuinely
+different product — not just the same ingredient with a locality label. Apply this exception
+sparingly. When in doubt, do NOT add the local sub-variety.
+
+---
+
+### ❌ Trap 15: Disguised duplication — same ingredient under different names
+
+The dedup logic described in Trap 14 only catches exact or near-exact string matches.
+**Do not exploit this** by giving the same ingredient a different name in each grade.
+
+**Documented failure (2026-05, Georgian cuisine):**
+- Spices-Sig: `name: "Imeretian Saffron (Dried Marigold)"` (= dried Tagetes petals)
+- Spices-Local: `name: "Marigold Petals (Imeretian Saffron)"` (= the same dried Tagetes petals)
+
+These are exactly the same ingredient — just named from different angles (one leads with
+the Georgian culinary name, one leads with the botanical description). The automated scan
+would not catch this. The agent almost certainly did not notice.
+
+A second example from the same file:
+- Spices-Sig: `name: "Blue Fenugreek (Utskho Suneli)"` (= Trigonella caerulea)
+- Spices-Local: `name: "Blue Fenugreek Plants (local)"` (= the same plant grown locally)
+
+**The rule:** When writing Local or Bulk items, ask yourself: *"Is this the same food, even
+if I am describing it differently?"* If a Spices-Sig item describes a spice by its culinary
+name and you are about to add the same spice described by its botanical name or production
+context, **that is a duplicate**. Use the same name consistently, and add only one instance.
+
+**How to catch it:** When you think an item belongs in Local because it is "locally grown",
+trace it back to its English ingredient name (without the "locally grown" qualifier) and ask
+if that bare ingredient name is already in Signature.
+
+---
+
+
 
 The `name` field is the **English display name** shown in the GUI. Every user sees it — including
 users who have never heard of the cuisine and do not speak the cuisine's language. When you write
@@ -842,3 +929,170 @@ it out. The data can grow over time. What it should never do is mislead.
 
 Every ingredient should earn its place. If something is hard to confirm, that is a
 signal to go deeper — try more sources, not fewer.
+
+---
+
+## Root-cause analysis: 2026-05 conformance audit (8 cuisine files)
+
+This section documents WHY the violations found in the May 2026 audit happened,
+to help future agents recognise and avoid the same patterns.
+
+**Files audited:** hawaiian, haitian, greek, german, georgian, french, finnish, ghanaian.
+**Files that needed fixes:** 7 of 8 (ghanaian was clean).
+
+---
+
+### Pattern A — Trap 11: Parenthetical annotations in names (most widespread)
+
+**Observed in:** hawaiian, german, georgian, french, finnish, greek (6/8 files).
+
+**What agents wrote:**
+```
+name: "Cherry Plum (Tkemali)"
+name: "Blue Fenugreek (Utskho Suneli)"
+name: "Fresh Coriander (Cilantro)"
+name: "Wild Garlic (Ramsons)"
+name: "Imeretian Saffron (Dried Marigold)"
+name: "Green Lentils (Puy)"
+name: "White Beans (cassoulet)"
+name: "Isigny Cream (AOP)"
+name: "Cornmeal (Gaudes)"
+name: "Cep (Porcini)"
+name: "Cheese (sliced/processed)"
+```
+
+**Why it keeps happening:**
+
+The agent sees an ingredient with a famous native-language name or a well-known synonym
+and wants to help the user understand what it is. Adding "(Tkemali)" after "Cherry Plum"
+feels useful — it connects the English name to the Georgian name the recipe will mention.
+
+This is a well-meaning instinct that violates the rule. The parenthetical information
+belongs in `notes`, where the AI uses it freely. In `name` it clutters the badge.
+
+**The specific mental trigger to watch for:**
+
+If you catch yourself about to write `name: "X (Y)"` because:
+- Y is the native-language name for X (Tkemali, Utskho Suneli, Gaudes)
+- Y is a synonym or alias in another language (Cilantro, Ramsons, Porcini)
+- Y is a product category label (AOP, AOC, cassoulet, for cooking)
+- Y is a botanical description (Dried Marigold, Fresh Whey Cheese)
+
+→ Stop. Move Y to `notes`. Keep only X in `name`.
+
+**The only exception:** preparation methods that ARE the ingredient's English culinary name
+(`Smoked paprika`, `Dried chilli`, `Cured ham`) — these are not annotations, they are names.
+
+---
+
+### Pattern B — Trap 12a: Cuisine/country prefix on Local-grade entries (very common)
+
+**Observed in:** georgian, french (2/8 files explicitly; likely latent elsewhere).
+
+**What agents wrote:**
+```
+Georgian Maize, Georgian Wheat, Georgian Barley, Georgian Sunflower, Georgian Kidney Bean
+French Maize, French Rye, French Oats, French Cider Vinegar, French Basil (Grand Vert)
+```
+
+**Why it keeps happening:**
+
+When writing the Local grade, the agent wants to distinguish locally-grown items from
+their generic counterparts in Signature or Bulk. Prefixing with "Georgian" or "French"
+feels like it adds precision and signals "this specific variety".
+
+But the cuisine file IS the Georgian / French file. The `grade: local` already communicates
+"locally produced in Georgia / France". The prefix adds zero information and misleads the
+user into thinking it is a special variety.
+
+**The specific mental trigger to watch for:**
+
+If your ONLY reason for adding the country/region prefix is "this is grown in [country]",
+drop the prefix. The grade handles it.
+
+Keep the prefix ONLY if removing it would create a genuinely different ingredient:
+- "Camargue Rice" → not just "rice"; specific variety with IGP, distinct character. KEEP.
+- "Georgian Maize" → just maize grown in Georgia. DROP.
+
+---
+
+### Pattern C — Trap 14/15: Cross-grade duplication (most damaging structurally)
+
+**Observed in:** hawaiian (8 dupes), georgian (5 dupes), french (1 dupe).
+
+**Root cause — Local-grade research:**
+
+The agent correctly identifies that ingredient X is locally produced in the cuisine's region.
+The agent writes X into Local. But X is *already in Signature* because it is also an iconic
+ingredient. The agent did not scan backwards through the section before writing.
+
+**Root cause — Bulk-grade research:**
+
+The agent researches what is consumed in highest volume statistically. The top results
+are the same iconic proteins/spices/grains that are ALREADY in Signature — because a
+cuisine's most iconic ingredients are typically also its most consumed. The agent writes
+them again without checking.
+
+**The concrete failure pattern (Hawaiian):**
+
+The agent wrote Proteins-Signature with chicken, pork, spam, beef, shrimp.
+The agent then researched Proteins-Bulk and found: chicken, pork, spam, beef, shrimp
+are consumed in largest volumes. Correct research, wrong action: added them again to Bulk
+instead of finding the next-tier proteins not already in Signature.
+
+**The concrete failure pattern (Georgian):**
+
+The agent wrote Spices-Signature with "Blue Fenugreek (Utskho Suneli)" and "Imeretian Saffron".
+The agent then wrote Spices-Local with "Blue Fenugreek Plants (local)" and "Marigold Petals
+(Imeretian Saffron)". The slightly different names masked the duplication. The dedup scan
+did not flag them because the strings did not match exactly. Only a human reading both lists
+side-by-side would see they are the same ingredients.
+
+**The prevention rule:**
+
+Before writing any item into Local or Bulk, mentally strip any prefix, suffix, qualifier,
+or parenthetical from the name, and ask: "Is this bare ingredient already in Signature?"
+If yes, skip it. Write the next-best item that is genuinely not already present.
+
+---
+
+### Pattern D — Trap 2: Bundled entries with slash separators
+
+**Observed in:** hawaiian, german, greek, french, finnish (slash or ampersand in name).
+
+**What agents wrote:**
+```
+name: "Brie/Camembert"
+name: "Cheese (sliced/processed)"
+name: "Lime & Lemon"
+```
+
+These are distinct ingredients that each deserve their own entry with their own `id`
+and `rating`. The slash/ampersand is a shortcut that loses information and violates
+the data model.
+
+**Why it happens:** The agent correctly identifies two items from the same category
+(both "sliced cheese" and "processed cheese" are valid bulk items) but avoids adding
+two entries to stay "under some imagined limit". There is no such limit. Add both.
+
+---
+
+### Conformance checklist for future agents
+
+Before considering any cuisine file complete, run this mental checklist:
+
+**Name field rules:**
+- [ ] No `(parentheses)` or `)brackets(` in any `name` or `name_sv`
+- [ ] No `/` slash in `name` or `name_sv`
+- [ ] No ` & ` ampersand in `name` (unless it IS the ingredient's name, like "Salt & pepper")
+- [ ] No "local", "locally", "lokalt", "lokal" in `name` or `name_sv`
+- [ ] No cuisine/country prefix unless it makes a genuinely distinct ingredient
+
+**Structure rules:**
+- [ ] For each section, Signature items are NOT repeated in Local or Bulk
+- [ ] For each section, Local items are NOT repeated in Bulk
+- [ ] "Same ingredient under different names" check: could two items in different grades refer to the same food?
+- [ ] Minimum 8 items per grade in non-Grains sections (6 for Grains & Starches)
+- [ ] No dish entries (things that require cooking to exist)
+
+**Generator:** Always run `python3 generate_frontend_data.py` after editing. A YAML parse error silently drops the affected item — the generator succeeding is NOT a proof of correctness, only of syntax validity.

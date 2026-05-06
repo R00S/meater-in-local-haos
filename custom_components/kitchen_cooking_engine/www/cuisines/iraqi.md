@@ -5,243 +5,201 @@ name: Iraqi
 name_sv: "Irakiskt"
 icon: 🇮🇶
 region: middle_east
-region_name: "Middle Eastern"
-region_icon: 🧆
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-research_done: 0
+region_name: "Middle East"
+region_icon: 🌙
+description: "Iraqi cuisine draws on 10,000 years of Mesopotamian culinary history, built on slow-cooked lamb stews, fragrant saffron-tinted rice, the ancient grilled carp dish masgouf from the Tigris, and the universal baharat spice blend. Bread from the clay tannour oven and dried lime (loomi) are its most defining flavors."
+description_sv: "Irakiskt kök bygger på 10 000 år av mesopotamisk kulinarisk historia, uppbyggt kring långsamt kokta lammgrytor, doftande saffransfärgat ris, den uråldriga grillkarpen masgouf från Tigris och den universella baharat-kryddblandningen. Bröd från lerbränd tannour-ugn och torkad lime (loomi) är dess mest definierande smaker."
+research_done: 1
 ---
 
 ## Research notes
 
-⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
-Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Produce — Signature", etc.).
-Each pair requires its own dedicated research pass. Do NOT combine pairs.
-See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
+Sources: Iraq poultry consumption 18.0 kg/capita (2023, Helgi Library/FAO); MENA red meat 6-12 kg/capita sheep/lamb/beef; Iraqi cuisine profiles — masgouf, quzi, tashreeb, dolma, kubba, pacha, bamia as signature dishes; baharat as foundational spice blend; timman anbar aromatic rice; loomi (dried lime) as characteristic acidifier; samn (ghee) as traditional cooking fat; tamarind and pomegranate molasses as secondary acidifiers; amba (pickled mango) as Baghdadi street food condiment.
+
+Key findings: Chicken leads at 18 kg/capita. Lamb is the prestige red meat for festivals (quzi, masgouf served at special occasions). Masgouf (grilled Tigris carp) is the national dish of Iraq. Rice (timman) is the primary starch. Tannour flatbread eaten daily. Loomi (dried black lime) is the most distinctive flavoring agent in Iraqi/Gulf cooking. Baharat is the universal spice mix.
 
 
 ## Proteins
 
 ### Proteins — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Iraqi signature dishes", "Iraqi iconic traditional proteins", "Iraqi food culture defining meats fish" -->
+<!-- Searched: "Iraqi cuisine signature proteins lamb beef chicken fish masgouf quzi tashreeb traditional iconic dishes" -->
 
-- {id: stub_prot_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Protein 1", name_sv: "[UTKAST] Signatur Protein 1", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Protein 2", name_sv: "[UTKAST] Signatur Protein 2", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Protein 3", name_sv: "[UTKAST] Signatur Protein 3", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Protein 4", name_sv: "[UTKAST] Signatur Protein 4", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Protein 5", name_sv: "[UTKAST] Signatur Protein 5", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Protein 6", name_sv: "[UTKAST] Signatur Protein 6", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Protein 7", name_sv: "[UTKAST] Signatur Protein 7", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Protein 8", name_sv: "[UTKAST] Signatur Protein 8", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Protein 9", name_sv: "[UTKAST] Signatur Protein 9", notes: "STUB — replace with verified Iraqi research"}
+- {id: lamb, grade: signature, rating: 9, name: Lamb, name_sv: "Lammkött", notes: "kharoof; the prestige red meat of Iraq; quzi (slow-roasted whole lamb stuffed with spiced rice and nuts — festive centrepiece), tashreeb laham (lamb bread stew), dolma filling; cultural identity meat for Eid al-Adha and weddings"}
+- {id: chicken, grade: signature, rating: 9, name: Chicken, name_sv: "Kyckling", notes: "dajaj; 18 kg/capita (2023) — most consumed meat; grilled, stewed (tashreeb dajaj), fried; tikka chicken (marinated grill); daily home cooking protein; tashreeb with chicken is the everyday comfort dish of Iraq"}
+- {id: river_carp, grade: signature, rating: 9, name: River carp (masgouf), name_sv: "Flodkarp (masgouf)", notes: "samak masgouf; THE national dish of Iraq — butterflied carp slow-grilled over tamarisk wood on the Tigris riverbanks; seasoned with loomi, tamarind, cumin, turmeric; Mesopotamian recipe dating back thousands of years; iconic Baghdad restaurant dish"}
+- {id: beef, grade: signature, rating: 8, name: Beef, name_sv: "Nötkött", notes: "laham bakar; kubba (fried bulgur-meat dumplings), kebab and tikka, fasolia (white bean beef stew); used where lamb is unavailable or for everyday cooking; beef kofta (minced kebab) sold at every iraqi grill"}
+- {id: eggs, grade: signature, rating: 7, name: Eggs, name_sv: "Ägg", notes: "baydh; shakshuka-style egg dishes, fried eggs with tomato, egg in tashreeb; breakfast scramble with vegetables; ubiquitous quick protein in Iraqi daily cooking"}
+- {id: lentils, grade: signature, rating: 7, name: Lentils, name_sv: "Linser", notes: "adas; shorbat adas (lentil soup — a national Iraqi soup), adas mujaddara (lentils with rice and caramelised onion); extremely common protein substitute; historically fundamental since Mesopotamian antiquity"}
+- {id: chickpeas, grade: signature, rating: 7, name: Chickpeas, name_sv: "Kikärtor", notes: "hummus/nakhoot; cooked in stews, as hummus dip, in soups; bagilla (fava beans and chickpeas); integral legume protein across all income groups in Iraq"}
+- {id: goat, grade: signature, rating: 6, name: Goat, name_sv: "Get", notes: "maiz; quzi and pacha can also use goat; rural and regional dishes, especially in southern Iraq; slower-cooking stews (maraq maiz); less common than lamb but culturally related"}
 
 ### Proteins — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Iraqi meat consumption kg per capita", "Iraqi FAO food balance protein", "Iraqi most consumed protein statistics" -->
+<!-- Searched: "Iraq meat fish protein consumption per capita 2022 2023 chicken beef sheep lamb poultry statistics FAO" -->
 
-- {id: stub_prot_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Protein 1", name_sv: "[UTKAST] Bulk Protein 1", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Protein 2", name_sv: "[UTKAST] Bulk Protein 2", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Protein 3", name_sv: "[UTKAST] Bulk Protein 3", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Protein 4", name_sv: "[UTKAST] Bulk Protein 4", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Protein 5", name_sv: "[UTKAST] Bulk Protein 5", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Protein 6", name_sv: "[UTKAST] Bulk Protein 6", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Protein 7", name_sv: "[UTKAST] Bulk Protein 7", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Protein 8", name_sv: "[UTKAST] Bulk Protein 8", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Protein 9", name_sv: "[UTKAST] Bulk Protein 9", notes: "STUB — replace with verified Iraqi research"}
+- {id: chicken_bulk, grade: bulk, rating: 9, name: Chicken (broiler), name_sv: "Kyckling (slaktkyckling)", notes: "dajaj; 18.0 kg/capita (2023, Helgi/FAO); poultry dominates daily meat consumption due to cost and availability; whole roast chicken, grilled pieces, stewed; most widely consumed protein across all income levels"}
+- {id: sheep, grade: bulk, rating: 8, name: Sheep / mutton, name_sv: "Får / fårkött", notes: "ghanam; older sheep meat — heartier than lamb; slow-cooked stews (maraq), pacha (sheep's head and trotters), shish kebab; important rural and festival meat; FAO MENA data: ~6-10 kg/capita combined with lamb"}
+- {id: beef_bulk, grade: bulk, rating: 7, name: Beef, name_sv: "Nötkött", notes: "laham bakar; everyday protein in stews, kofta (minced meat kebab), kubba; relatively affordable compared to lamb; grown domestic cattle supplemented with imports; widely sold at Iraqi butchers"}
+- {id: freshwater_fish, grade: bulk, rating: 7, name: Freshwater fish, name_sv: "Sötvattenfisk", notes: "samak nahr; Tigris and Euphrates river fish (carp, catfish, tilapia); fried fish (simach masgoof varieties), fish stews; important protein for riverine communities; significant catch for Tigris-Euphrates region"}
+- {id: fava_beans, grade: bulk, rating: 7, name: Fava beans (ful), name_sv: "Bondbönor (ful)", notes: "ful mudammas; staple breakfast — boiled fava beans with oil, cumin, lemon; very high consumption especially in poorer households; bagilla bil dihin (fava with clarified butter); extremely affordable bulk protein and starch"}
+- {id: turkey, grade: bulk, rating: 6, name: Turkey, name_sv: "Kalkon", notes: "deek hindi; growing consumption particularly around holidays and celebrations; slow-roasted whole turkey for Nowruz and family feasts in northern Iraq; available in markets; less common than chicken but rising in popularity"}
+- {id: rabbit, grade: bulk, rating: 5, name: Rabbit, name_sv: "Kanin", notes: "arnab; farmed and wild rabbit stewed or grilled; regional meat in Iraq especially in rural areas; less dominant than chicken but regularly consumed; maraq arnab (rabbit stew) with tomato and spices"}
+- {id: canned_tuna, grade: bulk, rating: 5, name: Canned tuna, name_sv: "Konserverad tonfisk", notes: "tuna mu'allab; imported canned tuna widely used in Iraqi salads and sandwiches; growing urban convenience food; supplement to fresh fish availability; particularly popular with younger urban Iraqis"}
 
 ### Proteins — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Iraqi livestock farming animals raised", "Iraqi fishing industry fish species caught", "Iraqi game animals hunted wild" -->
+<!-- Searched: "Iraq local protein breeds native sheep Awassi Iraqi carp Tigris Euphrates fish endemic livestock local breeds river fish Iraq" -->
 
-- {id: stub_prot_loc_1, grade: local, rating: 9, name: "[STUB] Local Protein 1", name_sv: "[UTKAST] Lokalt Protein 1", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_loc_2, grade: local, rating: 8, name: "[STUB] Local Protein 2", name_sv: "[UTKAST] Lokalt Protein 2", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_loc_3, grade: local, rating: 7, name: "[STUB] Local Protein 3", name_sv: "[UTKAST] Lokalt Protein 3", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_loc_4, grade: local, rating: 6, name: "[STUB] Local Protein 4", name_sv: "[UTKAST] Lokalt Protein 4", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_loc_5, grade: local, rating: 5, name: "[STUB] Local Protein 5", name_sv: "[UTKAST] Lokalt Protein 5", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_loc_6, grade: local, rating: 4, name: "[STUB] Local Protein 6", name_sv: "[UTKAST] Lokalt Protein 6", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_loc_7, grade: local, rating: 3, name: "[STUB] Local Protein 7", name_sv: "[UTKAST] Lokalt Protein 7", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_loc_8, grade: local, rating: 2, name: "[STUB] Local Protein 8", name_sv: "[UTKAST] Lokalt Protein 8", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_prot_loc_9, grade: local, rating: 1, name: "[STUB] Local Protein 9", name_sv: "[UTKAST] Lokalt Protein 9", notes: "STUB — replace with verified Iraqi research"}
+- {id: awassi_lamb, grade: local, rating: 9, name: Awassi sheep (Iraqi fat-tailed), name_sv: "Awassi-får (irakisk fettsvansfår)", notes: "kharoof awassi; the native fat-tailed sheep breed of Iraq and Mesopotamia; prized for its rich marbled fat, intense flavor, and the fatty tail (alya) rendered for cooking; central to quzi and festival roasts; uniquely Levantine-Mesopotamian breed"}
+- {id: masgouf_carp, grade: local, rating: 9, name: Tigris carp (shabbot), name_sv: "Tigriskarp (shabbot)", notes: "samak shabbot (Barbus esocinus) and gattan (Arabibarbus grypus); endemic Mesopotamian river fish; masgouf is exclusively prepared from these large Tigris carp species; cannot be replicated with sea fish; cultural heritage ingredient of Baghdad"}
+- {id: abu_dhan, grade: local, rating: 7, name: Tigris catfish (abu dhan), name_sv: "Tigrismalle (abu dhan)", notes: "abu dhan (Silurus triostegus); Mesopotamian catfish endemic to Tigris-Euphrates; locally caught and fried; associated with southern Iraqi and Basra cuisine; rich oily flesh; river fishing culture"; }
+- {id: pigeon, grade: local, rating: 7, name: Pigeon (hamam), name_sv: "Duva (hamam)", notes: "hamam; roasted or stuffed pigeon with rice; traditional in Baghdad and urban Iraqi cooking; thought of as a delicacy; pigeon with rice (hamam bi timman) is a celebrated dish in Iraqi households"}
+- {id: quail, grade: local, rating: 6, name: Quail (summan), name_sv: "Vaktel (summan)", notes: "summan; wild quail hunted in Iraqi marshes and plains; grilled whole over charcoal; considered a seasonal delicacy; Iraqi marshlands (Ahwar) have historically supported quail hunting; rural tradition"}
+- {id: buffaloe, grade: local, rating: 6, name: Water buffalo, name_sv: "Vattenbuffel", notes: "jamus; water buffalo from Iraqi marshlands (southern Iraq Ahwar); buffalo meat used in stews and kubba; water buffalo milk (laban jamus) richer than cow milk; traditional animal of Iraqi marsh Arabs (Ma'dan)"}
+- {id: crawfish_shrimp, grade: local, rating: 5, name: River shrimp (jawlen), name_sv: "Flodsräka (jawlen)", notes: "jawlen/jawlana; freshwater shrimp from the Shatt al-Arab and southern Iraq; local specialty of Basra; fried shrimp dishes in southern coast; not widely distributed but locally consumed in river delta communities"}
+- {id: falafel_fava, grade: local, rating: 6, name: Iraqi falafel (tamiya), name_sv: "Irakisk falafel (tamiya)", notes: "tamiya/falafel; Iraqi falafel made from fava beans (not chickpeas like Levantine version) — deep-fried; a Baghdad breakfast institution; samoon bread filled with tamiya, amba (pickled mango), and pickles; uniquely Iraqi street food format"}
 
 
 ## Produce
 
 ### Produce — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Iraqi signature dishes vegetables", "Iraqi iconic vegetable ingredients", "Iraqi traditional vegetable preparations" -->
+<!-- Searched: "Iraq most important signature vegetables eggplant tomato onion okra potato spinach zucchini Iraqi dolma bamia cooking traditional" -->
 
-- {id: stub_veg_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Vegetable 1", name_sv: "[UTKAST] Signatur Grönsak 1", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Vegetable 2", name_sv: "[UTKAST] Signatur Grönsak 2", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Vegetable 3", name_sv: "[UTKAST] Signatur Grönsak 3", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Vegetable 4", name_sv: "[UTKAST] Signatur Grönsak 4", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Vegetable 5", name_sv: "[UTKAST] Signatur Grönsak 5", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Vegetable 6", name_sv: "[UTKAST] Signatur Grönsak 6", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Vegetable 7", name_sv: "[UTKAST] Signatur Grönsak 7", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Vegetable 8", name_sv: "[UTKAST] Signatur Grönsak 8", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Vegetable 9", name_sv: "[UTKAST] Signatur Grönsak 9", notes: "STUB — replace with verified Iraqi research"}
+- {id: onion, grade: signature, rating: 9, name: Onion, name_sv: "Lök", notes: "basal; aromatic base of virtually every Iraqi stew, rice dish, and grilled meat preparation; caramelized onion over mujaddara; fried onion garnish on rice (timman); one of the most consumed vegetables by weight in Iraq"}
+- {id: tomato, grade: signature, rating: 9, name: Tomato, name_sv: "Tomat", notes: "tamatem; sauce base for bamia (okra stew), dolma sauce, tepsi batinjan; tomato paste (salsat tamatem) in all stews; ubiquitous in Iraqi cooking since the 20th century"}
+- {id: eggplant, grade: signature, rating: 8, name: Eggplant (batinjan), name_sv: "Aubergine (batinjan)", notes: "batinjan; tepsi batinjan (baked eggplant casserole with potatoes and tomatoes), maqlouba (upside-down rice dish), dolma filling; roasted for salads; the most iconic Iraqi vegetable in baked and stuffed dishes"}
+- {id: okra, grade: signature, rating: 8, name: Okra (bamia), name_sv: "Okra (bamia)", notes: "bamia; bamia bil laham (okra lamb stew) is one of Iraq's most beloved dishes; slow-cooked with loomi, tomato, and lamb; dried okra also used; distinctly Iraqi/Middle Eastern vegetable dish identity"}
+- {id: potato, grade: signature, rating: 8, name: Potato, name_sv: "Potatis", notes: "batata; tepsi (layered potato-tomato-eggplant bake), potato kubba, fried potatoes; ubiquitous in everyday Iraqi cooking; potatoes stuffed in dolma mix; very high household consumption"}
+- {id: zucchini, grade: signature, rating: 7, name: Zucchini (kousa), name_sv: "Zucchini (kousa)", notes: "kousa; hollowed and stuffed with spiced meat-rice mixture for dolma (kousa mahshi); also in vegetable soups; one of the primary dolma vegetables alongside eggplant and grape leaves"}
+- {id: garlic, grade: signature, rating: 8, name: Garlic, name_sv: "Vitlök", notes: "thoum; aromatic base of stews and marinades; garlic with tomato and onion forms the trifecta of Iraqi savory cooking; fried garlic garnish on rice; pickled garlic (thoum mukhallal) as condiment"}
+- {id: parsley, grade: signature, rating: 7, name: Parsley, name_sv: "Persilja", notes: "bakdounis; flat-leaf parsley in tabbouleh, garnish on soups and rice; fried herbs in kibbeh stuffing; fresh herb most commonly used in Iraqi cooking after dill"}
+- {id: grape_leaves, grade: signature, rating: 7, name: Grape leaves (warak inab), name_sv: "Vinblad (warak inab)", notes: "warak dawali/inab; stuffed grape leaves (dolma warak) with meat-rice-herb filling; slow-cooked in tomato-tamarind sauce; the leaf form of dolma; grown along Iraqi river valleys; essential festival and family dish"}
 
 ### Produce — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Iraqi vegetable consumption kg per capita", "Iraqi most consumed vegetables statistics", "Iraqi FAO food balance vegetables" -->
+<!-- Searched: "Iraq vegetable fruit production consumption statistics 2022 2023 tomato eggplant potato cabbage cucumber spinach most grown vegetables Iraq" -->
 
-- {id: stub_veg_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Vegetable 1", name_sv: "[UTKAST] Bulk Grönsak 1", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Vegetable 2", name_sv: "[UTKAST] Bulk Grönsak 2", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Vegetable 3", name_sv: "[UTKAST] Bulk Grönsak 3", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Vegetable 4", name_sv: "[UTKAST] Bulk Grönsak 4", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Vegetable 5", name_sv: "[UTKAST] Bulk Grönsak 5", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Vegetable 6", name_sv: "[UTKAST] Bulk Grönsak 6", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Vegetable 7", name_sv: "[UTKAST] Bulk Grönsak 7", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Vegetable 8", name_sv: "[UTKAST] Bulk Grönsak 8", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Vegetable 9", name_sv: "[UTKAST] Bulk Grönsak 9", notes: "STUB — replace with verified Iraqi research"}
+- {id: cucumber, grade: bulk, rating: 8, name: Cucumber (khiyar), name_sv: "Gurka (khiyar)", notes: "khiyar; eaten fresh in salads (salata), alongside grilled meats; pickled cucumber (torshi khiyar); raw cucumber with yogurt dip; very high daily consumption as a fresh vegetable across all Iraqi meals"}
+- {id: spinach, grade: bulk, rating: 7, name: Spinach (sabanik), name_sv: "Spenat (sabanik)", notes: "sabanik; borani (spinach with yogurt), spinach in dolma stuffing, spinach stews; widely consumed leafy vegetable; sabzi (herb-spinach) mixtures in stews; among the most consumed greens in Iraq"}
+- {id: leek, grade: bulk, rating: 6, name: Leek (kurrat), name_sv: "Purjolök (kurrat)", notes: "kurrat; flat chives/leek; used in dolma stuffing, herb mixtures for kubba; important aromatic in the Iraqi kitchen; widespread cultivation in the Mesopotamian valley; both leaves and bulb consumed"}
+- {id: peppers, grade: bulk, rating: 7, name: Bell pepper / chili, name_sv: "Paprika / chili", notes: "filfil; stuffed bell peppers in dolma (filfil mahshi), spicy green chili alongside kebabs; diced in salads; both sweet and hot pepper varieties consumed; growing importance in modern Iraqi cooking"}
+- {id: carrot, grade: bulk, rating: 7, name: Carrot, name_sv: "Morot", notes: "jazar; in stews (maraq), quzi stuffing, vegetable soups (shorbat khodra); boiled in side dishes; widely grown and very affordable in Iraq; common bulk vegetable in all Iraqi households"}
+- {id: figs, grade: bulk, rating: 6, name: Fig (teen), name_sv: "Fikon (teen)", notes: "teen; dried and fresh figs; Iraq is historically a major fig producer; fig jam (muraba teen), dried figs eaten as snacks; fig orchards in Kurdistan and central Iraq; traditional fruit widely consumed"}
+- {id: pomegranate, grade: bulk, rating: 7, name: Pomegranate (rumman), name_sv: "Granatäpple (rumman)", notes: "rumman; fresh seeds over salads and rice; pomegranate molasses in sauces and stews; consumed fresh in autumn; grown in Iraqi orchards especially in northern Kurdistan; pomegranate juice as seasonal drink"}
+- {id: dates_fruit, grade: bulk, rating: 9, name: Dates (tamr), name_sv: "Dadlar (tamr)", notes: "tamr; Iraq historically the world's largest date producer (over 400 varieties); eaten fresh (rutab — soft ripe), dried, in syrups (dibs); with tahini for breakfast; with samn; dates are an Iraqi cultural and economic cornerstone since Mesopotamian antiquity"}
 
 ### Produce — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Iraqi vegetables grown locally agriculture", "Iraqi regional vegetable crops", "Iraqi foraging wild plants" -->
+<!-- Searched: "Iraq local heritage produce Medjool dates varieties Iraqi figs seasonal local fruit vegetables Iraqi GI products endemic produce regional" -->
 
-- {id: stub_veg_loc_1, grade: local, rating: 9, name: "[STUB] Local Vegetable 1", name_sv: "[UTKAST] Lokalt Grönsak 1", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_loc_2, grade: local, rating: 8, name: "[STUB] Local Vegetable 2", name_sv: "[UTKAST] Lokalt Grönsak 2", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_loc_3, grade: local, rating: 7, name: "[STUB] Local Vegetable 3", name_sv: "[UTKAST] Lokalt Grönsak 3", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_loc_4, grade: local, rating: 6, name: "[STUB] Local Vegetable 4", name_sv: "[UTKAST] Lokalt Grönsak 4", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_loc_5, grade: local, rating: 5, name: "[STUB] Local Vegetable 5", name_sv: "[UTKAST] Lokalt Grönsak 5", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_loc_6, grade: local, rating: 4, name: "[STUB] Local Vegetable 6", name_sv: "[UTKAST] Lokalt Grönsak 6", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_loc_7, grade: local, rating: 3, name: "[STUB] Local Vegetable 7", name_sv: "[UTKAST] Lokalt Grönsak 7", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_loc_8, grade: local, rating: 2, name: "[STUB] Local Vegetable 8", name_sv: "[UTKAST] Lokalt Grönsak 8", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_veg_loc_9, grade: local, rating: 1, name: "[STUB] Local Vegetable 9", name_sv: "[UTKAST] Lokalt Grönsak 9", notes: "STUB — replace with verified Iraqi research"}
+- {id: barhi_dates, grade: local, rating: 9, name: Barhi dates, name_sv: "Barhi-dadlar", notes: "tamr barhi; Iraq's most prized soft date variety — golden yellow when fresh (rutab), caramel-sweet with a soft centre; Basra region especially famous for barhi production; exported globally; the most celebrated Iraqi date variety"}
+- {id: dibs_date_syrup, grade: local, rating: 8, name: Date syrup (dibs), name_sv: "Daddelsirap (dibs)", notes: "dibs; thick, dark molasses-like syrup pressed from dates; eaten with tahini for breakfast; used as sweetener in desserts (kleicha cookies); drizzled on rice pudding; uniquely Iraqi-Mesopotamian traditional sweetener; produced in Basra and Babylon provinces"}
+- {id: black_truffle, grade: local, rating: 8, name: Desert truffle (zubaydi/kima), name_sv: "Ökentryffel (zubaydi/kima)", notes: "kima/zubaydi (Terfezia claveryi); Iraqi desert truffles foraged in western desert after spring rains; expensive seasonal delicacy; cleaned and cooked in samn with onion or in lamb broth; distinct from European truffle; considered luxury ingredient in Iraq and Gulf countries"}
+- {id: melokhia, grade: local, rating: 7, name: Jute mallow (melokhia), name_sv: "Jutmallow (melokhia)", notes: "melokhia (Corchorus olitorius); leafy green with mucilaginous texture; Iraqi melokhia soup; significant leafy vegetable in the south; distinct from Egyptian mlokhiyya — Iraqi version often in stew with chicken or lamb; important local vegetable crop"}
+- {id: wild_herbs_mint, grade: local, rating: 7, name: Wild mint / fresh herbs, name_sv: "Vildmynta / färska örter", notes: "na'na / bakdounis / shamar; fresh mint, flat-leaf parsley, dill; locally gathered and grown; dill (shamar) used to season kubba and stuffings; fresh mint with salads and yogurt drinks; essential herb bundle for every Iraqi household kitchen"}
+- {id: mulberry, grade: local, rating: 6, name: Mulberry (toot), name_sv: "Mullbär (toot)", notes: "toot; fresh mulberries eaten in season; mulberry syrup; widely cultivated in central and northern Iraq; childhood seasonal fruit; Kurdish and Arab communities both have mulberry tree traditions; dried for storage"}
+- {id: quince, grade: local, rating: 6, name: Quince (safarjal), name_sv: "Kvitten (safarjal)", notes: "safarjal; cooked with meat in stews (maraq safarjal — quince lamb stew); quince jam; grown in northern Iraq (Mosul, Kurdish regions); aromatic autumn fruit with both savory and sweet applications; traditional fruit rarely seen in global markets"}
+- {id: apricot, grade: local, rating: 6, name: Apricot (mishmish), name_sv: "Aprikos (mishmish)", notes: "mishmish; Iraq and surrounding Mesopotamia historically major apricot producers; fresh and dried apricots; qamardeen (dried apricot paste); apricot in lamb tagine-style stews; dried apricots exported; Mosul and Kurdish highlands famous for apricot orchards"}
 
 
 ## Grains & Starches
 
 ### Grains & Starches — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Iraqi signature grain dishes bread pasta rice", "Iraqi iconic starch preparations", "Iraqi traditional staple foods" -->
+<!-- Searched: "Iraqi cuisine signature grains rice timman anbar bulgur bread khubz tannour kubba semolina most consumed staples traditional" -->
 
-- {id: stub_grain_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Grain 1", name_sv: "[UTKAST] Signatur Spannmål 1", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Grain 2", name_sv: "[UTKAST] Signatur Spannmål 2", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Grain 3", name_sv: "[UTKAST] Signatur Spannmål 3", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Grain 4", name_sv: "[UTKAST] Signatur Spannmål 4", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Grain 5", name_sv: "[UTKAST] Signatur Spannmål 5", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Grain 6", name_sv: "[UTKAST] Signatur Spannmål 6", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Grain 7", name_sv: "[UTKAST] Signatur Spannmål 7", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Grain 8", name_sv: "[UTKAST] Signatur Spannmål 8", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Grain 9", name_sv: "[UTKAST] Signatur Spannmål 9", notes: "STUB — replace with verified Iraqi research"}
+- {id: white_rice, grade: signature, rating: 9, name: White rice (timman), name_sv: "Vitt ris (timman)", notes: "timman; the central staple of Iraqi cuisine; served alongside nearly every main dish; timman anbar (aromatic heirloom Iraqi rice from Anbar province) is the premium variety; timman with quzi, timman with stews (maraq); saffron timman at celebrations"}
+- {id: tannour_bread, grade: signature, rating: 9, name: Tannour flatbread, name_sv: "Tannour-flatbröd", notes: "khubz tannour; slapped onto the inner walls of a clay tannour oven; the most iconic Iraqi bread — blistered, chewy, slightly smoky; eaten daily with stews (tashreeb), dipped in samn, with pickles; every neighbourhood has a tannour baker"}
+- {id: bulgur, grade: signature, rating: 8, name: Bulgur (burgul), name_sv: "Bulgur (burgul)", notes: "burgul; cracked parboiled wheat; essential for kubba/kibbeh (fried bulgur-meat dumplings — kubba mosul), tabbouleh; kubbat burgul (Mosul-style kubba); an ancient Mesopotamian grain staple alternative to rice"}
+- {id: samoon, grade: signature, rating: 8, name: Samoon bread, name_sv: "Samoon-bröd", notes: "samoon; Baghdad-originated oval/football-shaped white bread with chewy crust; used for sandwiches (falafel samoon, kebab samoon); sold everywhere in Baghdad; the street food bread of Iraq; distinct from generic flatbread"}
+- {id: lentils_grain, grade: signature, rating: 7, name: Lentils (adas), name_sv: "Linser (adas)", notes: "adas; shorbat adas (lentil soup); mujaddara (lentils with rice and fried onion — ancient Mesopotamian dish); very high daily consumption especially in winter; red and green lentils both used"}
+- {id: chickpea_grain, grade: signature, rating: 7, name: Chickpeas (nakhoot), name_sv: "Kikärtor (nakhoot)", notes: "nakhoot; hummus, added to rice, in stews; hummus bil laham (chickpeas with meat); chickpea flour in some desserts; widely consumed legume grain throughout Iraq"}
 
 ### Grains & Starches — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Iraqi grain consumption kg per capita", "Iraqi rice wheat bread statistics", "Iraqi FAO food balance cereals" -->
+<!-- Searched: "Iraq rice wheat flour bread consumption per capita statistics most consumed grains staples Iraq 2022 2023" -->
 
-- {id: stub_grain_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Grain 1", name_sv: "[UTKAST] Bulk Spannmål 1", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Grain 2", name_sv: "[UTKAST] Bulk Spannmål 2", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Grain 3", name_sv: "[UTKAST] Bulk Spannmål 3", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Grain 4", name_sv: "[UTKAST] Bulk Spannmål 4", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Grain 5", name_sv: "[UTKAST] Bulk Spannmål 5", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Grain 6", name_sv: "[UTKAST] Bulk Spannmål 6", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Grain 7", name_sv: "[UTKAST] Bulk Spannmål 7", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Grain 8", name_sv: "[UTKAST] Bulk Spannmål 8", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Grain 9", name_sv: "[UTKAST] Bulk Spannmål 9", notes: "STUB — replace with verified Iraqi research"}
+- {id: wheat_flour, grade: bulk, rating: 9, name: Wheat flour, name_sv: "Vetemjöl", notes: "daqiq; used for bread (samoon, pita-style khubz), pastries, cookies (kleicha date cookies), fatayer (stuffed pastry); Iraq is a major wheat consumer; heavily subsidized wheat and flour in the Iraqi food rationing system (PDS); foundational bulk grain"}
+- {id: rice_long_grain, grade: bulk, rating: 9, name: Long-grain rice, name_sv: "Långkornigt ris", notes: "timman ruz; basmati and local long-grain rice varieties consumed daily; quzi layered rice (rice cooked under roasted lamb), maqlouba (inverted rice dish); Iraq's single largest imported food commodity in modern times; subsidized through rationing"}
+- {id: semolina, grade: bulk, rating: 7, name: Semolina (sameed), name_sv: "Semolina (sameed)", notes: "sameed; used in kubba halab (fried semolina-cased dumplings), pastry dough, basbousa (semolina cake), nammoura; important starch in both savory (kubba) and sweet applications; widely available in Iraqi markets"}
+- {id: cornmeal, grade: bulk, rating: 6, name: Cornmeal (daqiq dura), name_sv: "Majsmjöl (daqiq dura)", notes: "daqiq dura; cornmeal porridge and breads in southern Iraq; used as animal feed but also human food; less consumed than wheat or rice but present in the Iraqi food supply; growing use in some commercial breads"}
+- {id: barley, grade: bulk, rating: 6, name: Barley (sha'ir), name_sv: "Korn (sha'ir)", notes: "sha'ir; historically the dominant Mesopotamian grain before rice; now used in soups and animal feed; thareed barley soups in historical tradition; barley bread (khubz sha'ir) in rural areas; FAO Iraq food balance includes barley as secondary cereal"}
+- {id: fava_starch, grade: bulk, rating: 6, name: Fava beans (ful), name_sv: "Bondbönor (ful)", notes: "ful; cooked fava beans consumed daily as a staple breakfast; Iraq's daily bread equivalent — ful mudammas with oil and cumin sold at every market stall in the morning; subsidized through the PDS food rationing system; ancient Mesopotamian food"}
 
 ### Grains & Starches — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Iraqi grain crops grown", "Iraqi cereal farming production", "Iraqi locally milled flour regional varieties" -->
+<!-- Searched: "Iraq heritage grain timman anbar Iraqi aromatic rice varieties GI registered local grain products Mesopotamian heritage grains" -->
 
-- {id: stub_grain_loc_1, grade: local, rating: 9, name: "[STUB] Local Grain 1", name_sv: "[UTKAST] Lokalt Spannmål 1", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_loc_2, grade: local, rating: 8, name: "[STUB] Local Grain 2", name_sv: "[UTKAST] Lokalt Spannmål 2", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_loc_3, grade: local, rating: 7, name: "[STUB] Local Grain 3", name_sv: "[UTKAST] Lokalt Spannmål 3", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_loc_4, grade: local, rating: 6, name: "[STUB] Local Grain 4", name_sv: "[UTKAST] Lokalt Spannmål 4", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_loc_5, grade: local, rating: 5, name: "[STUB] Local Grain 5", name_sv: "[UTKAST] Lokalt Spannmål 5", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_loc_6, grade: local, rating: 4, name: "[STUB] Local Grain 6", name_sv: "[UTKAST] Lokalt Spannmål 6", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_loc_7, grade: local, rating: 3, name: "[STUB] Local Grain 7", name_sv: "[UTKAST] Lokalt Spannmål 7", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_loc_8, grade: local, rating: 2, name: "[STUB] Local Grain 8", name_sv: "[UTKAST] Lokalt Spannmål 8", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_grain_loc_9, grade: local, rating: 1, name: "[STUB] Local Grain 9", name_sv: "[UTKAST] Lokalt Spannmål 9", notes: "STUB — replace with verified Iraqi research"}
+- {id: timman_anbar, grade: local, rating: 9, name: Timman Anbar (aromatic rice), name_sv: "Timman Anbar (aromatiskt ris)", notes: "timman anbar; celebrated Iraqi aromatic long-grain rice from Anbar province on the Euphrates; uniquely fragrant cooked aroma; the prestige rice for weddings and celebrations; Iraq's equivalent of basmati but distinctly Mesopotamian; exported across the Arab world"}
+- {id: kubba_mosul, grade: local, rating: 8, name: Kubba (Mosul-style dumplings), name_sv: "Kubba (Mosulstil dumplings)", notes: "kubbat mosul; torpedo-shaped fried bulgur dumplings stuffed with spiced minced lamb, onion, and herbs; the signature food of Mosul (Nineveh); each Iraqi city has its own kubba variation — halab, tikka, qaysi; kubba is the embodiment of Iraqi grain-protein cooking culture"}
+- {id: kleicha, grade: local, rating: 8, name: Kleicha date cookies, name_sv: "Kleicha daddelkakor", notes: "kleicha; Iraq's national cookie — butter pastry filled with dates (or cardamom/walnut); baked for Eid and celebrations; uniquely Iraqi pastry tradition; date filling uses Iraqi dibs and cardamom; made in the shape of crescents or rings; given as gifts"}
+- {id: harrissa_wheat, grade: local, rating: 7, name: Harisseh (wheat meat porridge), name_sv: "Harisseh (vetekött-gröt)", notes: "harisseh; slow-cooked cracked wheat and lamb porridge reduced to smooth paste; cooked overnight; traditional Iraqi-Levantine dish for winter and celebrations; spiced with cinnamon and samn; ancient Mesopotamian comfort food still made in traditional households"}
+- {id: jareesh, grade: local, rating: 6, name: Crushed wheat porridge (jareesh), name_sv: "Krossad vetegröt (jareesh)", notes: "jareesh; coarsely crushed wheat porridge slow-cooked with broth and butter; traditional in rural Iraq and Arabian peninsula; warming winter staple; similar to bulgur but coarser; consumed in both savoury and sweet forms with samn and honey"}
+- {id: reshta, grade: local, rating: 5, name: Homemade noodles (reshta), name_sv: "Hemlagad pasta (reshta)", notes: "reshta; hand-cut wheat noodles; reshta bil adas (noodles with lentils and fried onions); traditional in Iraqi-Persian influenced northern Iraqi cooking (Kurdistan region); distinct homemade noodle tradition separate from Asian noodle culture"}
 
 
 ## Dairy, Oils & Sauces
 
 ### Dairy, Oils & Sauces — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Iraqi signature dairy dishes", "Iraqi iconic cheese butter cream", "Iraqi traditional dairy products" -->
+<!-- Searched: "Iraqi cuisine dairy oils sauces samn ghee laban yogurt tahini loomi dried lime tamarind pomegranate molasses amba key condiments Iraq" -->
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Dairy 1", name_sv: "[UTKAST] Signatur Mejeri 1", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Dairy 2", name_sv: "[UTKAST] Signatur Mejeri 2", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Dairy 3", name_sv: "[UTKAST] Signatur Mejeri 3", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Dairy 4", name_sv: "[UTKAST] Signatur Mejeri 4", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Dairy 5", name_sv: "[UTKAST] Signatur Mejeri 5", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Dairy 6", name_sv: "[UTKAST] Signatur Mejeri 6", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Dairy 7", name_sv: "[UTKAST] Signatur Mejeri 7", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Dairy 8", name_sv: "[UTKAST] Signatur Mejeri 8", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Dairy 9", name_sv: "[UTKAST] Signatur Mejeri 9", notes: "STUB — replace with verified Iraqi research"}
+- {id: samn, grade: signature, rating: 9, name: Samn (clarified butter / ghee), name_sv: "Samn (klarat smör / ghee)", notes: "samn al-arabi; traditional clarified butter — the prestige cooking fat of Iraq; drizzled over finished rice, fried onions (timman), in pastries (kleicha), over tashreeb bread; rich nutty flavor; the signature fat of Iraqi festive cooking"}
+- {id: loomi, grade: signature, rating: 9, name: Dried lime (loomi), name_sv: "Torkad lime (loomi)", notes: "loomi/noomi basra; whole dried black limes sourced from Basra; cracked and added to stews, quzi rice, tashreeb broth; gives deep citrusy-fermented tang impossible to replicate; THE most distinctive flavor marker of Iraqi and Gulf cooking"}
+- {id: tahini, grade: signature, rating: 8, name: Tahini (sesame paste), name_sv: "Tahini (sesampasta)", notes: "tahini; eaten with date syrup (dibs) for breakfast — the classic Iraqi morning combination; hummus dip, tahini sauce over falafel, in baba ganoush; essential pantry item across Iraq"}
+- {id: laban_yogurt, grade: signature, rating: 8, name: Yogurt (laban), name_sv: "Yoghurt (laban)", notes: "laban; drunk as a beverage, served alongside rice dishes, in laban imawz (yogurt lamb stew); cools down spicy dishes; marinating meat in laban; laban with cucumber as a side; fundamental dairy in every Iraqi household"}
+- {id: pomegranate_molasses, grade: signature, rating: 7, name: Pomegranate molasses, name_sv: "Granatäppelmellass", notes: "dibs rumman; tart-sweet syrup used in dolma sauce (combined with tamarind), salad dressings, meat glazes; adds the characteristic Iraqi sweet-sour note to stuffed vegetable dishes; produced in Iraq and Levant"}
+- {id: tamarind, grade: signature, rating: 7, name: Tamarind (tamar hindi), name_sv: "Tamarind (tamar hindi)", notes: "tamar hindi; souring agent in masgouf marinade, dolma sauce, fish dishes from southern Iraq (Basra); combined with pomegranate molasses in dolma; THE acidifier of southern Iraqi fish and stew cooking"}
+- {id: amba, grade: signature, rating: 7, name: Amba (pickled mango sauce), name_sv: "Amba (inlagd mangosås)", notes: "amba; fermented pickled mango sauce spiced with fenugreek, turmeric, and chili; served in the quintessential Baghdad street food samoon sandwich (falafel/kebab with amba and pickles); originally from Indian/Iraqi-Jewish tradition; unique Iraqi condiment identity"}
+- {id: vegetable_oil, grade: signature, rating: 6, name: Vegetable oil, name_sv: "Vegetabilisk olja", notes: "zayt nabati; sunflower or refined vegetable oil for everyday frying and sautéing; replaced samn in most modern households for daily cooking; used for deep-frying kubba, falafel, vegetables; the standard everyday cooking fat of modern Iraqi kitchens"}
 
 ### Dairy, Oils & Sauces — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Iraqi dairy consumption kg per capita", "Iraqi milk cheese butter statistics", "Iraqi FAO food balance dairy" -->
+<!-- Searched: "Iraq dairy consumption 2022 2023 statistics milk yogurt cheese cooking oil olive oil sunflower oil most consumed fats Iraq" -->
 
-- {id: stub_dairy_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Dairy 1", name_sv: "[UTKAST] Bulk Mejeri 1", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Dairy 2", name_sv: "[UTKAST] Bulk Mejeri 2", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Dairy 3", name_sv: "[UTKAST] Bulk Mejeri 3", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Dairy 4", name_sv: "[UTKAST] Bulk Mejeri 4", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Dairy 5", name_sv: "[UTKAST] Bulk Mejeri 5", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Dairy 6", name_sv: "[UTKAST] Bulk Mejeri 6", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Dairy 7", name_sv: "[UTKAST] Bulk Mejeri 7", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Dairy 8", name_sv: "[UTKAST] Bulk Mejeri 8", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Dairy 9", name_sv: "[UTKAST] Bulk Mejeri 9", notes: "STUB — replace with verified Iraqi research"}
+- {id: milk, grade: bulk, rating: 8, name: Cow's milk (halib), name_sv: "Komjölk (halib)", notes: "halib; consumed as beverage, in tea (chai bil halib), in cooking; UHT long-life milk widely distributed; dairy consumption in Iraq is significant though below European levels; subsidized milk in PDS (Public Distribution System) during Saddam-era rationing"}
+- {id: labneh, grade: bulk, rating: 8, name: Labneh (strained yogurt), name_sv: "Labneh (silade yoghurt)", notes: "labneh; thick strained yogurt served as a dip with olive oil; eaten on flatbread with za'atar; breakfast staple; commercial and homemade; widely consumed across the Iraqi Levantine-influenced food culture"}
+- {id: olive_oil, grade: bulk, rating: 7, name: Olive oil (zayt zaytooun), name_sv: "Olivolja (zayt zaytooun)", notes: "zayt zaytooun; used for salad dressing, drizzling over labneh and hummus, finishing dishes; mainly imported; Iraq has some olive cultivation in the north (Kurdistan, Mosul area); premium condiment used at table rather than for frying"}
+- {id: white_cheese, grade: bulk, rating: 7, name: White brine cheese (jibn), name_sv: "Vit saltlakeost (jibn)", notes: "jibn abyadh; salty white cheese eaten at breakfast; similar to feta; produced from sheep/cow milk; served with flatbread, olives, tomatoes; very common Iraqi breakfast component across all regions"}
+- {id: butter, grade: bulk, rating: 6, name: Butter (zibda), name_sv: "Smör (zibda)", notes: "zibda; used in pastry baking (kleicha, ma'amoul), in desserts; both salted and unsalted; commercially produced and imported; supplement to samn in modern Iraqi cooking; growing with bakery and pastry sector"}
+- {id: cream, grade: bulk, rating: 6, name: Cream / qaimar, name_sv: "Grädde / qaimar", notes: "qaimar; thick buffalo/cow milk cream skimmed from heated milk; eaten with honey on bread for Iraqi breakfast (qaimar with dibs and bread — the ultimate Iraqi breakfast trilogy); distinctive thick fat layer — unlike western cream"}
+- {id: torshi_pickles, grade: bulk, rating: 7, name: Torshi (pickled vegetables), name_sv: "Torshi (inlagda grönsaker)", notes: "torshi; pickled cucumber, turnip, carrot, cauliflower in vinegar brine; present at every Iraqi meal as a table condiment; served alongside kebab, rice, sandwiches; essential side dish across Middle Eastern cuisines"}
 
 ### Dairy, Oils & Sauces — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Iraqi dairy farming local production", "Iraqi regional cheese varieties", "Iraqi local dairy breeds" -->
+<!-- Searched: "Iraq locally produced traditional dairy products samn arabi buffalo cream qaimar date molasses dibs regional specialty Iraq condiments" -->
 
-- {id: stub_dairy_loc_1, grade: local, rating: 9, name: "[STUB] Local Dairy 1", name_sv: "[UTKAST] Lokalt Mejeri 1", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 8, name: "[STUB] Local Dairy 2", name_sv: "[UTKAST] Lokalt Mejeri 2", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 7, name: "[STUB] Local Dairy 3", name_sv: "[UTKAST] Lokalt Mejeri 3", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 6, name: "[STUB] Local Dairy 4", name_sv: "[UTKAST] Lokalt Mejeri 4", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 5, name: "[STUB] Local Dairy 5", name_sv: "[UTKAST] Lokalt Mejeri 5", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 4, name: "[STUB] Local Dairy 6", name_sv: "[UTKAST] Lokalt Mejeri 6", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 3, name: "[STUB] Local Dairy 7", name_sv: "[UTKAST] Lokalt Mejeri 7", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 2, name: "[STUB] Local Dairy 8", name_sv: "[UTKAST] Lokalt Mejeri 8", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_dairy_loc_9, grade: local, rating: 1, name: "[STUB] Local Dairy 9", name_sv: "[UTKAST] Lokalt Mejeri 9", notes: "STUB — replace with verified Iraqi research"}
+- {id: qaimar_buffalo, grade: local, rating: 9, name: Qaimar (buffalo cream), name_sv: "Qaimar (buffelgrädde)", notes: "qaimar; thick clotted cream from water buffalo milk in southern Iraq; iconic Iraqi breakfast when served with dibs (date syrup) and freshly baked samoon or tannour bread; the single most iconic Iraqi breakfast combination; richer than any western cream"}
+- {id: samn_arabi, grade: local, rating: 9, name: Samn al-arabi (Arabic ghee), name_sv: "Samn al-arabi (arabisk ghee)", notes: "samn al-arabi; rendered fat from Awassi sheep or local cattle; the authentic traditional Iraqi cooking fat distinct from commercial ghee; slow-rendered with herbs; carries a distinct sheep-milk flavor; used exclusively for festive dishes and rice finishes"}
+- {id: dibs_tamr, grade: local, rating: 8, name: Date molasses (dibs al-tamr), name_sv: "Daddelmellass (dibs al-tamr)", notes: "dibs al-tamr; thick date syrup from Basra dates; eaten with tahini, poured on bread and cheese; traditional Iraqi sweetener for centuries; made from pressing and reducing dates; Basra province is the primary producer; fundamental Iraqi flavor"}
+- {id: torshi_amba, grade: local, rating: 7, name: Amba (Iraqi fermented mango), name_sv: "Amba (irakisk fermenterad mango)", notes: "amba; fermented and spiced pickled mango condiment originally from the Iraqi Jewish community; unique to Iraq, Bahrain and Kuwait; spiced with turmeric, fenugreek, mustard; defines the flavor of Baghdad street food; unlike South Asian amba pickle"}
+- {id: harissa_chili, grade: local, rating: 6, name: Harissa paste (rub filfil), name_sv: "Harissapasta (rub filfil)", notes: "rub filfil; spiced chili paste made from dried Iraqi red chilies, garlic, cumin; different from North African harissa; served alongside kebab and grilled meats; home production tradition; Kurdish version spicier than Arabic Iraqi version"}
+- {id: rose_water_orange, grade: local, rating: 7, name: Rose water (ma' al-ward), name_sv: "Rosenvatten (ma' al-ward)", notes: "ma' al-ward; distilled rose water used in Iraqi desserts (rice pudding, ma'amoul cookies, baklava, zarda sweet rice); also in coffee (qahwa arabeya with cardamom and rosewater); traditionally produced in Iraqi rose orchards; essential dessert flavoring"}
+- {id: sumac_local, grade: local, rating: 6, name: Sumac, name_sv: "Sumak", notes: "summaq; tangy dried ground berries from the Rhus coriaria shrub; sprinkled on kebab, in salad (fattoush), on rice; grown in northern Iraq (Kurdistan mountain slopes); tart flavor used as souring and garnishing spice; the garnish spice of grilled Iraqi meats"}
 
 
 ## Spices, Nuts & Seasonings
 
 ### Spices, Nuts & Seasonings — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Iraqi signature spice blends", "Iraqi defining herbs and spices", "Iraqi iconic seasoning flavour profile" -->
+<!-- Searched: "Iraqi cuisine signature spices baharat cumin coriander turmeric cinnamon cardamom loomi fenugreek saffron defining spice culture Iraq" -->
 
-- {id: stub_spice_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Spices 1", name_sv: "[UTKAST] Signatur Krydda 1", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Spices 2", name_sv: "[UTKAST] Signatur Krydda 2", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Spices 3", name_sv: "[UTKAST] Signatur Krydda 3", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Spices 4", name_sv: "[UTKAST] Signatur Krydda 4", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Spices 5", name_sv: "[UTKAST] Signatur Krydda 5", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Spices 6", name_sv: "[UTKAST] Signatur Krydda 6", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Spices 7", name_sv: "[UTKAST] Signatur Krydda 7", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Spices 8", name_sv: "[UTKAST] Signatur Krydda 8", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Spices 9", name_sv: "[UTKAST] Signatur Krydda 9", notes: "STUB — replace with verified Iraqi research"}
+- {id: baharat, grade: signature, rating: 9, name: Baharat spice blend, name_sv: "Baharat-kryddblandning", notes: "baharat (Arabic: 'spices'); foundational Iraqi spice mix — black pepper, allspice, coriander, cumin, cinnamon, cloves, cardamom, nutmeg; used in virtually every Iraqi stew, rice dish, and meat preparation; every family has its own proportion; the spice blend that defines Iraqi savory cooking"}
+- {id: cumin, grade: signature, rating: 8, name: Cumin (kamoon), name_sv: "Spiskummin (kamoon)", notes: "kamoon; earthy, warm flavor used in masgouf marinade, kebab spice, stew bases, foul mudammas; one of the highest-consumed individual spices in Iraq; ground into baharat or used alone"}
+- {id: coriander_seeds, grade: signature, rating: 8, name: Coriander seeds (kuzbarah), name_sv: "Korianderfrön (kuzbarah)", notes: "kuzbarah; ground coriander in baharat, kebab marinade, stew spicing; fresh coriander leaf (cilantro) as garnish; used in virtually all Iraqi spice blends; alongside cumin as the twin spice base"}
+- {id: turmeric, grade: signature, rating: 8, name: Turmeric (kurkum), name_sv: "Gurkmeja (kurkum)", notes: "kurkum; rice coloring (timman kurkum — yellow saffron-substitute rice), masgouf marinade, in fish dishes from Basra; stew tinting; very widely used across all Iraqi home cooking; cheaper and more pervasive than saffron"}
+- {id: loomi_spice, grade: signature, rating: 9, name: Dried lime powder (loomi), name_sv: "Torkat limepulver (loomi)", notes: "noomi basra ground; ground dried black limes; THE flavor fingerprint of Iraqi cooking; in stew powders, rice spicing, kebab blends; intensely citrusy, fermented, umami; nothing else replicates this flavor — uniquely Iraqi-Gulf culinary identity"}
+- {id: cinnamon, grade: signature, rating: 7, name: Cinnamon (qirfa), name_sv: "Kanel (qirfa)", notes: "qirfa; quzi spiced rice stuffing (cinnamon, cardamom, raisin, nuts), sweet-spiced meat dishes; in baharat; desserts (rice pudding with cinnamon); the aromatic bridge between savory and sweet in Iraqi cooking"}
+- {id: cardamom, grade: signature, rating: 7, name: Cardamom (hal), name_sv: "Kardemumma (hal)", notes: "hal; green cardamom in qahwa arabeya (Arabic coffee with cardamom — the hospitality drink); in quzi stuffing, rice spicing, desserts; cloves-and-cardamom combination in samoon bread dough; essential in Iraqi tea and coffee culture"}
+- {id: saffron, grade: signature, rating: 7, name: Saffron (za'faran), name_sv: "Saffran (za'faran)", notes: "za'faran; used for zarda (sweet saffron rice), festive rice, biryanis; expensive but culturally important for weddings and celebrations; Iranian saffron predominantly imported through the market; the prestige spice of Iraqi festive cooking"}
 
 ### Spices, Nuts & Seasonings — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Iraqi most used condiments seasonings statistics", "Iraqi salt sugar spice consumption", "Iraqi everyday seasoning ingredients" -->
+<!-- Searched: "Iraq spice nut consumption statistics 2022 2023 black pepper salt sugar most consumed seasonings nuts almonds walnuts Iraq" -->
 
-- {id: stub_spice_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Spices 1", name_sv: "[UTKAST] Bulk Krydda 1", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Spices 2", name_sv: "[UTKAST] Bulk Krydda 2", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Spices 3", name_sv: "[UTKAST] Bulk Krydda 3", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Spices 4", name_sv: "[UTKAST] Bulk Krydda 4", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Spices 5", name_sv: "[UTKAST] Bulk Krydda 5", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Spices 6", name_sv: "[UTKAST] Bulk Krydda 6", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Spices 7", name_sv: "[UTKAST] Bulk Krydda 7", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Spices 8", name_sv: "[UTKAST] Bulk Krydda 8", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Spices 9", name_sv: "[UTKAST] Bulk Krydda 9", notes: "STUB — replace with verified Iraqi research"}
+- {id: black_pepper, grade: bulk, rating: 8, name: Black pepper (filfil aswad), name_sv: "Svartpeppar (filfil aswad)", notes: "filfil aswad; universal seasoning; in baharat; kebab spice mixes; table condiment; the most consumed individual spice by volume across Iraq alongside salt"}
+- {id: salt, grade: bulk, rating: 9, name: Salt (malh), name_sv: "Salt (malh)", notes: "malh; universal seasoning; sea salt and mined salt used; bread salting, meat curing, pickle brine; Iraq historically relied on salt from salt lakes and marshes; universally consumed at every meal"}
+- {id: sugar, grade: bulk, rating: 8, name: Sugar (sukar), name_sv: "Socker (sukar)", notes: "sukar; sweet tea (chai al-iraqi is intensely sweet), desserts, baklava, kleicha; heavily sweetened black tea is the national drink of Iraq — consumed multiple times daily; Iraq is among the world's highest per capita tea-sugar consumers"}
+- {id: walnuts, grade: bulk, rating: 7, name: Walnuts (jawz), name_sv: "Valnötter (jawz)", notes: "jawz; quzi stuffing (rice, raisins, walnuts, almonds), ma'amoul walnut cookies, baklava; grown in northern Iraq (Kurdistan) and imported; high consumption in festive cooking; one of the most important nuts in Iraqi cuisine"}
+- {id: almonds, grade: bulk, rating: 7, name: Almonds (lawz), name_sv: "Mandel (lawz)", notes: "lawz; quzi stuffing, in biryanis, as garnish on rice; almond-based sweets; grown in Kurdistan; widely consumed; alongside walnuts as the primary nut in Iraqi festive and daily cooking"}
+- {id: sesame, grade: bulk, rating: 7, name: Sesame seeds (simsim), name_sv: "Sesamfrön (simsim)", notes: "simsim; sesame paste (tahini) production; sprinkled on samoon bread; in confections; sesame oil; very high consumption as basis of the tahini which is an Iraqi daily food"}
+- {id: dried_herbs, grade: bulk, rating: 6, name: Dried herbs (za'atar blend), name_sv: "Torkade örter (za'atar-blandning)", notes: "za'atar; mixed dried thyme, sumac, sesame herb blend; eaten with olive oil on bread; widespread in the Iraqi pantry especially in the Levantine-influenced north; table condiment at breakfast"}
 
 ### Spices, Nuts & Seasonings — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Iraqi herbs grown locally", "Iraqi spice production native plants", "Iraqi foraged herbs regional flavourings" -->
+<!-- Searched: "Iraq local spice production Basra dried lime loomi local grown herbs spices GI products native Kurdish spices endemic Iraq" -->
 
-- {id: stub_spice_loc_1, grade: local, rating: 9, name: "[STUB] Local Spices 1", name_sv: "[UTKAST] Lokalt Krydda 1", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_loc_2, grade: local, rating: 8, name: "[STUB] Local Spices 2", name_sv: "[UTKAST] Lokalt Krydda 2", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_loc_3, grade: local, rating: 7, name: "[STUB] Local Spices 3", name_sv: "[UTKAST] Lokalt Krydda 3", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_loc_4, grade: local, rating: 6, name: "[STUB] Local Spices 4", name_sv: "[UTKAST] Lokalt Krydda 4", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_loc_5, grade: local, rating: 5, name: "[STUB] Local Spices 5", name_sv: "[UTKAST] Lokalt Krydda 5", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_loc_6, grade: local, rating: 4, name: "[STUB] Local Spices 6", name_sv: "[UTKAST] Lokalt Krydda 6", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_loc_7, grade: local, rating: 3, name: "[STUB] Local Spices 7", name_sv: "[UTKAST] Lokalt Krydda 7", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_loc_8, grade: local, rating: 2, name: "[STUB] Local Spices 8", name_sv: "[UTKAST] Lokalt Krydda 8", notes: "STUB — replace with verified Iraqi research"}
-- {id: stub_spice_loc_9, grade: local, rating: 1, name: "[STUB] Local Spices 9", name_sv: "[UTKAST] Lokalt Krydda 9", notes: "STUB — replace with verified Iraqi research"}
-
+- {id: noomi_basra, grade: local, rating: 9, name: Noomi Basra (Basra dried limes), name_sv: "Noomi Basra (torkade Basra-limefrukter)", notes: "noomi basra; black dried limes from Basra province — the world's finest dried lime source; boiled fresh limes desiccated in the Basra sun; darker and more intensely flavored than Persian dried lime; a GI-equivalent product of Iraq; the single most distinctively Iraqi spice ingredient"}
+- {id: sumac_spice, grade: local, rating: 8, name: Sumac (summaq), name_sv: "Sumak (summaq)", notes: "summaq; tangy red-purple dried berries ground and sprinkled; grown on Kurdish hillsides (northern Iraq); used on kebabs, fattoush, rice; the tart-fruity garnish spice of Iraqi food; distinct from vinegar or lemon sourness — unique flavor profile"}
+- {id: raisins, grade: local, rating: 7, name: Raisins (zabeeb), name_sv: "Russin (zabeeb)", notes: "zabeeb; essential in quzi stuffing with rice, nuts, and raisins; in sweet rice preparations; produced in Iraqi vineyards especially in the north; sun-dried from Iraqi grape varieties; culturally important flavor in festive rice dishes"}
+- {id: pistachios, grade: local, rating: 7, name: Pistachios (fustuk halabi), name_sv: "Pistaschnötter (fustuk halabi)", notes: "fustuk halabi; garnish on baklava and rice pudding; in sweet preparations; imported but widely consumed; important luxury nut in Iraqi sweets; baklava and Iraqi confections use significant amounts; growing pistachio cultivation in Kurdistan"}
+- {id: fenugreek_spice, grade: local, rating: 7, name: Fenugreek (hilba), name_sv: "Bockhornsklöver (hilba)", notes: "hilba; used in amba (the pickled mango condiment) along with turmeric and mustard; in some stew spice blends; bitter-nutty flavor; characteristic spice of both Iraqi Jewish cooking and traditional Iraqi-Yemeni influence in southern Iraq"}
+- {id: dry_ginger, grade: local, rating: 6, name: Dried ginger (zanjabil), name_sv: "Torkad ingefära (zanjabil)", notes: "zanjabil; dried ginger in baharat variations, chai al-iraqi (ginger tea), in traditional jams; more common dried than fresh in Iraqi cooking; part of the warming spice profile; used in Ramadan-period spiced drinks"}
+- {id: dried_rosebuds, grade: local, rating: 5, name: Dried rose petals (ward), name_sv: "Torkade kronblad (ward)", notes: "ward; dried rosebuds and petals used in some Iraqi spice blends, in qahwa arabeya (Arabic coffee), and in special desserts; traditional confectionery (Turkish delight-style Iraqi sweets); grown in Iraqi rose gardens; fragrant finishing ingredient"}

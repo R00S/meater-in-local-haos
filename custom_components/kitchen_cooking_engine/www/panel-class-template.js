@@ -155,6 +155,7 @@ class KitchenCookingPanel extends LitElement {
       // AI ingredient picker — "More" expansion and protein drill-down
       _ingredientExpandedCats: { type: Array },   // category codes with "More" expanded
       _ingredientProteinSubcat: { type: String },  // active protein sub-category (e.g. "beef")
+      _ingredientTooltipId: { type: String },      // ingredient id with active touch tooltip
       // Experimental recipe viewer (cut profile card)
       _recipeViewerMethod: { type: String },
       _recipeViewerRecipes: { type: Array },
@@ -305,6 +306,7 @@ class KitchenCookingPanel extends LitElement {
     this._pendingShelfUpdate = null;
     this._ingredientExpandedCats = [];
     this._ingredientProteinSubcat = null;
+    this._ingredientTooltipId = null;
     this._recipeViewerMethod = null;
     this._recipeViewerRecipes = [];
     this._recipeViewerLoading = false;
@@ -5615,6 +5617,7 @@ class KitchenCookingPanel extends LitElement {
           this._aiExpandedRegions = [];
           this._ingredientExpandedCats = [];
           this._ingredientProteinSubcat = null;
+          this._ingredientTooltipId = null;
           this._currentPath = this._selectedMainAppliance === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
           this.requestUpdate();
         }}>
@@ -6272,18 +6275,57 @@ class KitchenCookingPanel extends LitElement {
   }
 
 
+  _ingTouchStart(e, ingId) {
+    clearTimeout(this._ingTouchTimer);
+    this._ingTouchTimer = setTimeout(() => {
+      e.preventDefault();
+      this._ingredientTooltipId = (this._ingredientTooltipId === ingId) ? null : ingId;
+      this._ingTouchTimer = null;
+    }, 600);
+  }
+
+  _ingTouchEnd() {
+    clearTimeout(this._ingTouchTimer);
+    this._ingTouchTimer = null;
+  }
+
   _renderIngredientCheckbox(ingredient) {
     const displayName = this._ingDisplayName(ingredient);
     const valueName = (typeof ingredient === 'string') ? ingredient : (ingredient.name || ingredient);
+    const notes = (ingredient && typeof ingredient === 'object') ? ingredient.notes : null;
+    const ingId = (ingredient && typeof ingredient === 'object') ? ingredient.id : valueName;
+
+    const checkbox = html`
+      <input 
+        type="checkbox" 
+        ?checked=${!!this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === valueName.toLowerCase())}
+        @change=${(e) => this._toggleIngredient(valueName, e.target.checked)}
+      />
+    `;
+
+    if (!notes) {
+      return html`
+        <label class="ingredient-checkbox">
+          ${checkbox}
+          ${displayName}
+        </label>
+      `;
+    }
+
+    const tipActive = this._ingredientTooltipId === ingId;
     return html`
-      <label class="ingredient-checkbox">
-        <input 
-          type="checkbox" 
-          ?checked=${!!this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === valueName.toLowerCase())}
-          @change=${(e) => this._toggleIngredient(valueName, e.target.checked)}
-        />
-        ${displayName}
-      </label>
+      <div class="ing-tip-wrap${tipActive ? ' tip-active' : ''}">
+        <label
+          class="ingredient-checkbox"
+          @touchstart=${(e) => this._ingTouchStart(e, ingId)}
+          @touchend=${() => this._ingTouchEnd()}
+          @touchcancel=${() => this._ingTouchEnd()}
+        >
+          ${checkbox}
+          ${displayName}
+        </label>
+        <div class="ing-tip-text" role="tooltip">${notes}</div>
+      </div>
     `;
   }
 
@@ -8350,6 +8392,7 @@ class KitchenCookingPanel extends LitElement {
     // Reset ingredient picker state
     this._ingredientExpandedCats = [];
     this._ingredientProteinSubcat = null;
+    this._ingredientTooltipId = null;
     
     // Load data before showing UI to avoid "[object Promise]" display
     try {
@@ -11149,6 +11192,42 @@ class KitchenCookingPanel extends LitElement {
         width: 16px;
         height: 16px;
         cursor: pointer;
+      }
+
+      .ing-tip-wrap {
+        position: relative;
+      }
+
+      .ing-tip-wrap .ingredient-checkbox {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .ing-tip-text {
+        display: none;
+        position: absolute;
+        bottom: calc(100% + 6px);
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--card-background-color, #1c1c2e);
+        color: var(--primary-text-color);
+        border: 1px solid var(--divider-color);
+        border-radius: 8px;
+        padding: 8px 12px;
+        font-size: 12px;
+        line-height: 1.5;
+        width: 220px;
+        max-width: 90vw;
+        z-index: 200;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+        pointer-events: none;
+        white-space: normal;
+        text-align: left;
+      }
+
+      .ing-tip-wrap:hover .ing-tip-text,
+      .ing-tip-wrap.tip-active .ing-tip-text {
+        display: block;
       }
 
       .ingredient-custom {

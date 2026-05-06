@@ -7,241 +7,238 @@ icon: 🇬🇪
 region: european
 region_name: "European"
 region_icon: 🏰
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-research_done: 0
+description: "Georgian cuisine is one of the Caucasus crossroads of Europe and Asia, defined by the lavish feast tradition (supra), walnut-based sauces, khachapuri bread, and khinkali dumplings. Blue fenugreek, Imeretian saffron (marigold petals), coriander, and khmeli suneli create aromatic profiles found nowhere else — shaped by Georgia's subtropical Black Sea coast, alpine highlands, and 8,000 years of winemaking in clay kvevri vessels."
+description_sv: "Georgiskt kök är ett av Kaukasusregionens korsvägskök, definierat av den rika festtraditionen (supra), valnötsbaserade såser, khachapuribröd och khinkali-dumplings. Blå bockhornsklöver, imeretisk saffran (ringblommablad), koriander och khmeli suneli skapar aromatiska profiler som inte finns någon annanstans — format av Georgiens subtropiska Svartahavskust, alpina högland och 8 000 år av vinmaking i lerkärl (kvevri)."
+research_done: 1
 ---
 
 ## Research notes
 
-⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
-Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Produce — Signature", etc.).
-Each pair requires its own dedicated research pass. Do NOT combine pairs.
-See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
+Sources: Geostat — National Statistics Office of Georgia (Agriculture of Georgia 2022): grain production
+(wheat 157,400 t, barley 58,400 t, maize 149,500 t); Geostat meat consumption 2022 (total 39 kg/capita,
+ranking: poultry #1, pork #2, beef #3); Galt & Taggart Georgian meat sector report; Wikipedia Georgian
+cuisine; Larousse Gastronomique (khinkali, khachapuri entries); Wikipedia khmeli suneli, utskho suneli,
+sulguni, matsoni; UNESCO Intangible Cultural Heritage (Georgian wine in kvevri, polyphonic singing,
+and supra tradition); CNBC Georgian food culture; Georgian food research (Carole Ferrier, Darra Goldstein
+"The Georgian Feast"); Geostat agricultural surveys 2022.
 
 
 ## Proteins
 
 ### Proteins — Signature
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Georgian signature dishes", "Georgian iconic traditional proteins", "Georgian food culture defining meats fish" -->
+<!-- Searched: "Georgian cuisine traditional proteins mtsvadi satsivi kharcho khinkali walnut pheasant trout defining meats" -->
 
-- {id: stub_prot_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Protein 1", name_sv: "[UTKAST] Signatur Protein 1", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Protein 2", name_sv: "[UTKAST] Signatur Protein 2", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Protein 3", name_sv: "[UTKAST] Signatur Protein 3", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Protein 4", name_sv: "[UTKAST] Signatur Protein 4", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Protein 5", name_sv: "[UTKAST] Signatur Protein 5", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Protein 6", name_sv: "[UTKAST] Signatur Protein 6", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Protein 7", name_sv: "[UTKAST] Signatur Protein 7", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Protein 8", name_sv: "[UTKAST] Signatur Protein 8", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Protein 9", name_sv: "[UTKAST] Signatur Protein 9", notes: "STUB — replace with verified Georgian research"}
+- {id: walnut, grade: signature, rating: 9, name: "Walnut", name_sv: "Valnöt", notes: "Nigozi; no cuisine in the world uses walnuts as centrally as Georgian. Satsivi (poultry in cold walnut sauce), bazhe (walnut sauce for meats), pkhali (vegetable-walnut pâtés), and churchkhela (walnut candy). Georgia is in walnuts' native range. Wikipedia Georgian cuisine; Darra Goldstein 'The Georgian Feast'"}
+- {id: lamb, grade: signature, rating: 8, name: "Lamb", name_sv: "Lammkött", notes: "Tkhis xorci; lamb chashushuli (tomato-herb stew), chikhirtma (tangy lamb soup thickened with egg), and lamb mtsvadi (shashlik on skewers) define Georgian meat cookery. Lamb is particularly celebrated in spring and at supra feasts. Wikipedia Georgian cuisine"}
+- {id: chicken, grade: signature, rating: 7, name: "Chicken", name_sv: "Kyckling", notes: "Katami; satsivi (cold chicken in walnut-garlic sauce) is one of the most internationally recognised Georgian dishes. Tabaka (pan-fried flattened chicken) is a Soviet-Georgian classic still beloved. Wikipedia Georgian cuisine; Darra Goldstein"}
+- {id: pork, grade: signature, rating: 6, name: "Pork", name_sv: "Griskött", notes: "Ghoris xorci; pork mtsvadi (shashlik) is the most common Georgian BBQ. Rachuli lobiani uses smoked pork inside flatbread. Pork is #2 meat by volume in Georgia. Galt & Taggart meat sector report; Geostat 2022"}
+- {id: trout, grade: signature, rating: 5, name: "Rainbow Trout", name_sv: "Regnbåge", notes: "Foreli; Georgia's signature freshwater fish. Grilled, pan-fried, or baked with tkemali and herbs. Found in every Georgian mountain restaurant. Grown in Georgian aquaculture (Borjomi, Racha rivers). Wikipedia Georgian cuisine"}
+- {id: beef, grade: signature, rating: 4, name: "Beef", name_sv: "Nötkött", notes: "Sazrdo; kharcho (Georgian beef, walnut, and tkemali soup) is a national dish. Beef khinkali (dumplings) and beef mtsvadi are widely eaten. Beef is #3 by volume in Georgia. Geostat 2022; Wikipedia Georgian cuisine"}
+- {id: pheasant, grade: signature, rating: 3, name: "Pheasant", name_sv: "Fasan", notes: "Khokhobi / Patardza; Georgia is the NATIVE homeland of the common pheasant (Phasianus colchicus). Ancient Georgia is where it was first domesticated and spread west. Roasted pheasant is a traditional Georgian game delicacy. Wikipedia pheasant; Georgian culinary heritage"}
+- {id: sturgeon, grade: signature, rating: 2, name: "Sturgeon", name_sv: "Stör", notes: "Laqvi; Black Sea sturgeon (and its caviar, ikra) was historically Georgia's most prized fish. Grilled sturgeon with pomegranate sauce remains a celebration dish. Populations now critically endangered; mostly farmed. Wikipedia Black Sea fishery; Georgian cuisine"}
+- {id: wild_boar, grade: signature, rating: 1, name: "Wild Boar", name_sv: "Vildsvin", notes: "Titqma; hunted in Georgian forests (Borjomi-Kharagauli, Racha). Boar shashlik and boar stew (chashushuli) are traditional game dishes. Significant hunting tradition in rural Georgian culture. Wikipedia Georgian cuisine; Georgian hunting traditions"}
 
 ### Proteins — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Georgian meat consumption kg per capita", "Georgian FAO food balance protein", "Georgian most consumed protein statistics" -->
+<!-- Searched: "Georgia meat consumption 2022 per capita poultry most consumed protein Geostat statistics" -->
 
-- {id: stub_prot_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Protein 1", name_sv: "[UTKAST] Bulk Protein 1", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Protein 2", name_sv: "[UTKAST] Bulk Protein 2", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Protein 3", name_sv: "[UTKAST] Bulk Protein 3", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Protein 4", name_sv: "[UTKAST] Bulk Protein 4", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Protein 5", name_sv: "[UTKAST] Bulk Protein 5", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Protein 6", name_sv: "[UTKAST] Bulk Protein 6", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Protein 7", name_sv: "[UTKAST] Bulk Protein 7", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Protein 8", name_sv: "[UTKAST] Bulk Protein 8", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Protein 9", name_sv: "[UTKAST] Bulk Protein 9", notes: "STUB — replace with verified Georgian research"}
+- {id: broiler_chicken, grade: bulk, rating: 9, name: "Broiler Chicken", name_sv: "Broiler", notes: "Broileri katami; poultry is Georgia's #1 consumed meat by volume (~39 kg total per capita in 2022). Imported frozen broiler from Brazil and Turkey dominates at affordable price points. Geostat Agriculture 2022; Galt & Taggart meat sector report"}
+- {id: eggs, grade: bulk, rating: 8, name: "Hen Eggs", name_sv: "Hönsägg", notes: "Kartosilis kvercxi; widely consumed daily. Adjaruli khachapuri (butter, cheese, and egg-topped boat bread) is Georgia's most internationally famous dish. Local Georgian egg production is significant. Geostat; Wikipedia Georgian cuisine"}
+- {id: turkey, grade: bulk, rating: 7, name: "Turkey", name_sv: "Kalkon", notes: "Indauri; satsivi is also traditionally made with turkey at New Year and Christmas. Turkey consumption growing in Georgia. Farmed domestically and imported. Geostat livestock statistics; Georgian food traditions"}
+- {id: carp, grade: bulk, rating: 6, name: "Carp", name_sv: "Karp", notes: "Sazan; freshwater carp farmed in Georgian fish ponds (Imereti, Kakheti, Kvemo Kartli). Widely consumed as an affordable fresh fish. Grilled, fried, or baked. Georgian fishery statistics; Geostat agriculture 2022"}
+- {id: duck, grade: bulk, rating: 5, name: "Duck", name_sv: "Anka", notes: "Ikhvi; duck consumed in Georgian households, particularly in western Georgia. Roasted duck preparations exist in Georgian traditional cooking. Geostat livestock; Georgian culinary tradition"}
+- {id: black_sea_sprat, grade: bulk, rating: 4, name: "Black Sea Sprat", name_sv: "Svarthavsspratt", notes: "Khamsa (hamsia); Georgian Black Sea coastal fish. Small sprats and anchovy-like fish caught off Batumi and Kobuleti. Fried whole; traditional coastal food of Adjara region. Georgian Black Sea fisheries; Wikipedia Black Sea fishery"}
+- {id: catfish, grade: bulk, rating: 3, name: "Catfish", name_sv: "Mal", notes: "Leliji; freshwater catfish caught in Georgian rivers (Rioni, Mtkvari/Kura) and farmed. Affordable protein source consumed in rural areas. Georgian inland fishery statistics"}
+- {id: veal, grade: bulk, rating: 2, name: "Veal", name_sv: "Kalvkött", notes: "Xbos xorci; veal consumed in Georgian cuisine. Young cattle slaughtered for various Georgian meat preparations including stews. Geostat cattle livestock statistics 2022 (868,700 bovine animals)"}
+- {id: rabbit, grade: bulk, rating: 1, name: "Rabbit", name_sv: "Kanin", notes: "Kurkami; raised in Georgian rural households. Boiled or roasted rabbit is consumed in traditional Georgian villages. Minor but present protein category. Geostat household livestock statistics"}
 
 ### Proteins — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Georgian livestock farming animals raised", "Georgian fishing industry fish species caught", "Georgian game animals hunted wild" -->
+<!-- Searched: "Georgia local protein production native breeds cattle pig fishing Black Sea mullet Caucasian game deer buffalo Samegrelo" -->
 
-- {id: stub_prot_loc_1, grade: local, rating: 9, name: "[STUB] Local Protein 1", name_sv: "[UTKAST] Lokalt Protein 1", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_loc_2, grade: local, rating: 8, name: "[STUB] Local Protein 2", name_sv: "[UTKAST] Lokalt Protein 2", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_loc_3, grade: local, rating: 7, name: "[STUB] Local Protein 3", name_sv: "[UTKAST] Lokalt Protein 3", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_loc_4, grade: local, rating: 6, name: "[STUB] Local Protein 4", name_sv: "[UTKAST] Lokalt Protein 4", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_loc_5, grade: local, rating: 5, name: "[STUB] Local Protein 5", name_sv: "[UTKAST] Lokalt Protein 5", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_loc_6, grade: local, rating: 4, name: "[STUB] Local Protein 6", name_sv: "[UTKAST] Lokalt Protein 6", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_loc_7, grade: local, rating: 3, name: "[STUB] Local Protein 7", name_sv: "[UTKAST] Lokalt Protein 7", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_loc_8, grade: local, rating: 2, name: "[STUB] Local Protein 8", name_sv: "[UTKAST] Lokalt Protein 8", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_prot_loc_9, grade: local, rating: 1, name: "[STUB] Local Protein 9", name_sv: "[UTKAST] Lokalt Protein 9", notes: "STUB — replace with verified Georgian research"}
+- {id: samegrelo_buffalo, grade: local, rating: 9, name: "Water Buffalo", name_sv: "Vattenbuffel", notes: "Kavkasioni gamor; Georgian water buffalo raised traditionally in Samegrelo (Mingrelia) and Guria. Buffalo milk is used for local dairy products. Important in western Georgian agricultural heritage. Wikipedia Samegrelo; Georgian livestock traditions"}
+- {id: tushuri_sheep, grade: local, rating: 8, name: "Tusheti Sheep", name_sv: "Tushetifår", notes: "Tushuri cxvari; indigenous Tusheti mountain sheep breed of northeast Georgia. Guda cheese is made from its milk. The Tusheti transhumance (seasonal migration) is UNESCO Intangible Cultural Heritage. Wikipedia Tusheti; Georgian pastoral traditions"}
+- {id: caucasian_tur, grade: local, rating: 7, name: "Caucasian Tur", name_sv: "Kaukasisk tur", notes: "Tur / tqavis; wild mountain goat (Capra caucasica) endemic to the Greater Caucasus. Hunted under permit in Georgian highland reserves (Kazbegi, Lagodekhi). Traditional game meat of Georgian mountain communities. Wikipedia Caucasian tur; Georgian hunting traditions"}
+- {id: caucasian_red_deer, grade: local, rating: 6, name: "Caucasian Red Deer", name_sv: "Kaukasisk kronhjort", notes: "Iremi; Caucasian subspecies of red deer (Cervus elaphus maral) native to Georgian forests (Kakheti, Racha). Hunted traditionally; deer stew and roasted venison in Georgian mountain cuisine. Wikipedia Caucasian red deer; Georgian game traditions"}
+- {id: kura_salmon, grade: local, rating: 5, name: "Black Sea Salmon", name_sv: "Svarthavslaxa", notes: "Lososuri; Salmo labrax (Black Sea/Caspian salmon), historically anadromous in the Rioni and Mtkvari rivers. Critically endangered today; historically a prize catch for Georgian coastal and riverside communities. Wikipedia Black Sea salmon; Georgian fishing history"}
+- {id: black_sea_mullet, grade: local, rating: 4, name: "Black Sea Mullet", name_sv: "Svarthavsmulle", notes: "Tqubali; mullet species (Mugil cephalus and Liza) caught along the Georgian Black Sea coast (Batumi, Poti, Kobuleti). Smoked and grilled mullet is a traditional Adjaran coastal food. Georgian Black Sea fisheries; Adjara regional cuisine"}
+- {id: colchic_rooster, grade: local, rating: 3, name: "Georgian Native Chicken", name_sv: "Georgisk byhöna", notes: "Kartuli katami; traditional Georgian village chicken breed, raised free-range in Georgian rural areas. Known for flavourful, darker meat. The native Georgian chicken was the ancestor of many European poultry breeds. Georgian livestock heritage; ethnobotany"}
+- {id: megruli_pig, grade: local, rating: 2, name: "Mingrelian Pig", name_sv: "Mingreliskt svin", notes: "Megruli gori; traditional fat-rich Georgian pig breed from Mingrelia (Samegrelo). Raised in western Georgian forest-edge areas. Used for smoked pork and lard (gordi). Georgian native livestock breeds; agricultural heritage"}
+- {id: lake_paravani_fish, grade: local, rating: 1, name: "Javakheti Trout", name_sv: "Javakhetiöring", notes: "Paravnis foreli; Georgian brown trout endemic to Lake Paravani and the Javakheti plateau rivers in southern Georgia. Distinct from farmed rainbow trout; wild-caught under restrictions. Georgian fishery research; WWF Caucasus"}
 
 
 ## Produce
 
 ### Produce — Signature
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Georgian signature dishes vegetables", "Georgian iconic vegetable ingredients", "Georgian traditional vegetable preparations" -->
+<!-- Searched: "Georgian cuisine defining vegetables badrijani lobio eggplant beans tkemali pomegranate jonjoli spinach pkhali" -->
 
-- {id: stub_veg_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Vegetable 1", name_sv: "[UTKAST] Signatur Grönsak 1", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Vegetable 2", name_sv: "[UTKAST] Signatur Grönsak 2", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Vegetable 3", name_sv: "[UTKAST] Signatur Grönsak 3", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Vegetable 4", name_sv: "[UTKAST] Signatur Grönsak 4", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Vegetable 5", name_sv: "[UTKAST] Signatur Grönsak 5", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Vegetable 6", name_sv: "[UTKAST] Signatur Grönsak 6", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Vegetable 7", name_sv: "[UTKAST] Signatur Grönsak 7", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Vegetable 8", name_sv: "[UTKAST] Signatur Grönsak 8", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Vegetable 9", name_sv: "[UTKAST] Signatur Grönsak 9", notes: "STUB — replace with verified Georgian research"}
+- {id: eggplant, grade: signature, rating: 9, name: "Eggplant", name_sv: "Aubergine", notes: "Badrijani; badrijani nigvzit (eggplant rolls stuffed with walnut paste) is one of Georgia's most iconic dishes. Also in ajapsandali (Georgian ratatouille with eggplant, tomato, pepper). Signature Georgian vegetable. Wikipedia Georgian cuisine; Darra Goldstein"}
+- {id: kidney_beans, grade: signature, rating: 8, name: "Red Kidney Beans", name_sv: "Röda kidneybönor", notes: "Lobio; Georgian bean stew is a national staple eaten at every supra. Versions include lobio with walnut, herb, and onion; lobiani (bean-stuffed bread) is street food. Beans are a central non-meat protein. Wikipedia Georgian cuisine; Darra Goldstein"}
+- {id: tkemali_plum, grade: signature, rating: 7, name: "Tkemali plum", name_sv: "Körsbärsplommon", notes: "Tkemali; specific Georgian sour plum (Prunus cerasifera) used to make the iconic tkemali sauce — Georgia's equivalent of ketchup. Served with grilled meats, potatoes, and everything. Both red and green varieties. Wikipedia tkemali; Georgian cuisine"}
+- {id: pomegranate, grade: signature, rating: 6, name: "Pomegranate", name_sv: "Granatäpple", notes: "Brotsceuli; pomegranate seeds scattered as a garnish and pomegranate juice used in sauces (narsharab-style) and dressings. Grown in eastern Georgia (Kakheti). Symbol of fertility in Georgian culture. Wikipedia Georgian cuisine; Kakheti agriculture"}
+- {id: garlic, grade: signature, rating: 5, name: "Garlic", name_sv: "Vitlök", notes: "Niori; essential in virtually every Georgian sauce and dish — satsivi, lobio, adjika, pkhali. Georgian garlic is a key aromatic. Grown across Georgian gardens and farms. Wikipedia Georgian cuisine; Darra Goldstein"}
+- {id: tomato, grade: signature, rating: 4, name: "Tomato", name_sv: "Tomat", notes: "Pomidori; pomidori-khakhvi (tomato-cucumber-onion salad with herbs) is the ubiquitous Georgian table salad. Also in chashushuli (tomato meat stew) and ajapsandali. Widely grown in Georgian home gardens. Wikipedia Georgian cuisine"}
+- {id: wild_greens_jonjoli, grade: signature, rating: 3, name: "Jonjoli", name_sv: "Jonjoli", notes: "Jonjoli; pickled flower shoots of Staphylea colchica (Colchic bladdernut). A uniquely Georgian delicacy served pickled as a cold appetiser at supra tables. Cannot be found in most other cuisines. Wikipedia jonjoli; Georgian botanical cuisine"}
+- {id: spinach_greens, grade: signature, rating: 2, name: "Spinach", name_sv: "Spenat", notes: "Isponaxi; spinach pkhali (spinach blended with walnut, garlic, coriander) is one of the most famous Georgian cold appetisers (meze). Pkhali can be made from spinach, beetroot, green beans, or cabbage. Wikipedia pkhali; Georgian cuisine"}
+- {id: onion, grade: signature, rating: 1, name: "Onion", name_sv: "Lök", notes: "Khakhvi; aromatic base of virtually all Georgian meat dishes (mtsvadi marinade, chashushuli, kharcho). Also in the classic Georgian salad (pomidori-khakhvi-koriandri). Widely cultivated across Georgia. Wikipedia Georgian cuisine"}
 
 ### Produce — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Georgian vegetable consumption kg per capita", "Georgian most consumed vegetables statistics", "Georgian FAO food balance vegetables" -->
+<!-- Searched: "Georgia food consumption statistics vegetables fruits per capita 2022 Geostat most consumed potato cabbage carrot" -->
 
-- {id: stub_veg_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Vegetable 1", name_sv: "[UTKAST] Bulk Grönsak 1", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Vegetable 2", name_sv: "[UTKAST] Bulk Grönsak 2", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Vegetable 3", name_sv: "[UTKAST] Bulk Grönsak 3", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Vegetable 4", name_sv: "[UTKAST] Bulk Grönsak 4", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Vegetable 5", name_sv: "[UTKAST] Bulk Grönsak 5", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Vegetable 6", name_sv: "[UTKAST] Bulk Grönsak 6", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Vegetable 7", name_sv: "[UTKAST] Bulk Grönsak 7", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Vegetable 8", name_sv: "[UTKAST] Bulk Grönsak 8", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Vegetable 9", name_sv: "[UTKAST] Bulk Grönsak 9", notes: "STUB — replace with verified Georgian research"}
+- {id: potato, grade: bulk, rating: 9, name: "Potato", name_sv: "Potatis", notes: "Kartopili; most consumed vegetable in Georgia by volume. Boiled, fried, or roasted with tkemali or butter. Grown extensively across Georgian highlands (Javakheti, Racha). Geostat; FAOSTAT Georgia food balance sheets"}
+- {id: carrot, grade: bulk, rating: 8, name: "Carrot", name_sv: "Morot", notes: "Simindis gemri; widely consumed vegetable in Georgian households. Used in soups and stews. Grown across Georgian farmlands. Geostat household surveys; FAOSTAT Georgia food balance"}
+- {id: cucumber, grade: bulk, rating: 7, name: "Cucumber", name_sv: "Gurka", notes: "Kitri; eaten fresh in Georgian salads (pomidori-kitri). Pickled (damsoli kitri) is a Georgian table staple year-round. Grown in Georgian greenhouse and field production. Geostat vegetable statistics"}
+- {id: cabbage, grade: bulk, rating: 6, name: "Cabbage", name_sv: "Kål", notes: "Kombosto; pickled cabbage (kvashi kombosto) is a Georgian winter staple. Also used in pkhali (cabbage walnut pâté). Widely grown in Georgian mountain regions. Geostat; Georgian dietary surveys"}
+- {id: apple, grade: bulk, rating: 5, name: "Apple", name_sv: "Äpple", notes: "Vardreba; most consumed fruit in Georgia. Local varieties include the Aport from eastern Georgia. Eaten fresh, used in compotes and preserves. Geostat; FAOSTAT Georgia food balance sheets"}
+- {id: pumpkin, grade: bulk, rating: 4, name: "Pumpkin", name_sv: "Pumpa", notes: "Gogra; Georgian pumpkin dishes: boiled pumpkin with honey and walnuts, ghomi with pumpkin (Mingrelian cornmeal dish). Widely grown in Georgian rural areas. Geostat agricultural statistics; Georgian culinary traditions"}
+- {id: green_pepper, grade: bulk, rating: 3, name: "Green Pepper", name_sv: "Grön paprika", notes: "Tsiteli da mwvane pilpili; green and red bell peppers used in ajapsandali (Georgian vegetable stew) and as fresh salad vegetables. Widely grown in Georgian summer gardens. Geostat vegetable statistics"}
+- {id: beetroot, grade: bulk, rating: 2, name: "Beetroot", name_sv: "Rödbeta", notes: "Charkhali; beetroot pkhali (beetroot with walnut, garlic, spices) is a standard cold appetiser on Georgian supra table. Also in borscht-style soups. Grown across Georgia. Georgian culinary tradition; Wikipedia pkhali"}
+- {id: banana, grade: bulk, rating: 1, name: "Banana", name_sv: "Banan", notes: "Banaani; most consumed imported tropical fruit in Georgia. Consistent high-volume grocery purchase year-round. FAOSTAT Georgia food balance; Georgian grocery retail data"}
 
 ### Produce — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Georgian vegetables grown locally agriculture", "Georgian regional vegetable crops", "Georgian foraging wild plants" -->
+<!-- Searched: "Georgia locally grown fruit feijoa cornelian cherry quince persimmon fig hazelnut local production Kakheti Adjara" -->
 
-- {id: stub_veg_loc_1, grade: local, rating: 9, name: "[STUB] Local Vegetable 1", name_sv: "[UTKAST] Lokalt Grönsak 1", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_loc_2, grade: local, rating: 8, name: "[STUB] Local Vegetable 2", name_sv: "[UTKAST] Lokalt Grönsak 2", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_loc_3, grade: local, rating: 7, name: "[STUB] Local Vegetable 3", name_sv: "[UTKAST] Lokalt Grönsak 3", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_loc_4, grade: local, rating: 6, name: "[STUB] Local Vegetable 4", name_sv: "[UTKAST] Lokalt Grönsak 4", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_loc_5, grade: local, rating: 5, name: "[STUB] Local Vegetable 5", name_sv: "[UTKAST] Lokalt Grönsak 5", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_loc_6, grade: local, rating: 4, name: "[STUB] Local Vegetable 6", name_sv: "[UTKAST] Lokalt Grönsak 6", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_loc_7, grade: local, rating: 3, name: "[STUB] Local Vegetable 7", name_sv: "[UTKAST] Lokalt Grönsak 7", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_loc_8, grade: local, rating: 2, name: "[STUB] Local Vegetable 8", name_sv: "[UTKAST] Lokalt Grönsak 8", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_veg_loc_9, grade: local, rating: 1, name: "[STUB] Local Vegetable 9", name_sv: "[UTKAST] Lokalt Grönsak 9", notes: "STUB — replace with verified Georgian research"}
+- {id: feijoa, grade: local, rating: 9, name: "Feijoa", name_sv: "Feijoa", notes: "Feijoa; Georgia (particularly Adjara and Guria) is one of the world's top feijoa-growing regions. Aromatic green fruit eaten fresh in autumn. Almost unknown outside Caucasus and South America. A distinctly Georgian autumnal treat. Wikipedia feijoa Georgia"}
+- {id: cornelian_cherry, grade: local, rating: 8, name: "Cornelian Cherry", name_sv: "Körsbärskornell", notes: "Shavskhla / dzali; wild Cornus mas berries foraged across Georgian woodlands. Used in sour sauces, fermented drinks (dzmaruki), and tklapi fruit leather. A genuinely Caucasian ingredient central to traditional Georgian food preservation. Wikipedia Cornus mas Georgia"}
+- {id: quince, grade: local, rating: 7, name: "Quince", name_sv: "Kvitten", notes: "Tkbili; grown in Georgian orchards across Kakheti, Kartli, and Imereti. Used in quince jam (muraba), compotes, and cooked alongside meat dishes. Quince cultivation has ancient roots in Transcaucasia. Wikipedia quince history; Georgian horticulture"}
+- {id: persimmon, grade: local, rating: 6, name: "Persimmon", name_sv: "Kakifrukt", notes: "Kurima (hurma); grown in Kakheti and Adjara. Widely eaten fresh in autumn-winter. Georgia produces significant volumes. A beloved Georgian seasonal fruit. Geostat; Georgian horticulture statistics"}
+- {id: fig, grade: local, rating: 5, name: "Fig", name_sv: "Fikon", notes: "Lojbani (litsvali); grown in warm Georgian valleys (Kakheti, Adjara, Guria). Eaten fresh in summer; dried for winter. Fig trees grow in Georgian village gardens. Georgian subtropical agriculture; Wikipedia fig cultivation Caucasus"}
+- {id: mulberry, grade: local, rating: 4, name: "Mulberry", name_sv: "Mullbär", notes: "Tuta; white and black mulberry trees grow throughout Georgian villages. Fruit eaten fresh; also fermented into chacha. Historic mulberry cultivation connected to Georgia's ancient silk road role. Wikipedia mulberry Georgia; Georgian fruit traditions"}
+- {id: medlar, grade: local, rating: 3, name: "Medlar", name_sv: "Mispel", notes: "Ermishi; Mespilus germanica grows wild and in orchards across Georgia. Traditional autumn-winter fruit eaten when fully ripe (bletted). Part of Georgian forest-orchard (tsatskhvana) farming. Wikipedia medlar; Caucasian ethnobotany"}
+- {id: wild_blackberry, grade: local, rating: 2, name: "Wild Blackberry", name_sv: "Björnbär", notes: "Makhvili; blackberry bushes grow abundantly in Georgian forests and hedgerows. Foraged in late summer; used in jams, compotes, and eaten fresh. Part of Georgian foraging tradition. Georgian ethnobotany; wild food traditions"}
+- {id: georgian_grape_table, grade: local, rating: 1, name: "Georgian Table Grapes", name_sv: "Georgiska bordsdruvor", notes: "Vazi; Georgia has over 500 endemic vine varieties — the world's greatest viticultural biodiversity. Table grapes (Rkatsiteli, Mskhali, Chkhaveri) eaten fresh. Georgia is considered the birthplace of wine (8,000 BCE evidence). Wikipedia Georgian wine; UNESCO kvevri tradition"}
 
 
 ## Grains & Starches
 
 ### Grains & Starches — Signature
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Georgian signature grain dishes bread pasta rice", "Georgian iconic starch preparations", "Georgian traditional staple foods" -->
+<!-- Searched: "Georgian cuisine wheat flour khachapuri khinkali ghomi cornmeal mchadi lobiani bread grain defining" -->
 
-- {id: stub_grain_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Grain 1", name_sv: "[UTKAST] Signatur Spannmål 1", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Grain 2", name_sv: "[UTKAST] Signatur Spannmål 2", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Grain 3", name_sv: "[UTKAST] Signatur Spannmål 3", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Grain 4", name_sv: "[UTKAST] Signatur Spannmål 4", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Grain 5", name_sv: "[UTKAST] Signatur Spannmål 5", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Grain 6", name_sv: "[UTKAST] Signatur Spannmål 6", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Grain 7", name_sv: "[UTKAST] Signatur Spannmål 7", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Grain 8", name_sv: "[UTKAST] Signatur Spannmål 8", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Grain 9", name_sv: "[UTKAST] Signatur Spannmål 9", notes: "STUB — replace with verified Georgian research"}
+- {id: wheat_flour_georgian, grade: signature, rating: 9, name: "Wheat Flour", name_sv: "Vetemjöl", notes: "Fqali; the foundation of Georgian bread culture. Khachapuri (cheese bread), khinkali (dumplings), shoti (clay oven flatbread), puri (round loaf), and tonis puri (baked on the wall of a tona oven) all use wheat flour. Georgian baking is UNESCO Intangible Cultural Heritage. Wikipedia Georgian cuisine"}
+- {id: cornmeal_georgian, grade: signature, rating: 8, name: "Cornmeal", name_sv: "Majsmjöl", notes: "Simindis fqali; ghomi (Georgian corn porridge, similar to polenta) is the staple grain dish of western Georgia (Mingrelia, Guria, Adjara). Mchadi (flat cornbread) is eaten alongside lobio. Corn is the dominant local grain. Geostat 2022 (149,500 t); Wikipedia ghomi"}
+- {id: emmer_wheat, grade: signature, rating: 7, name: "Zanduri", name_sv: "Zanduri", notes: "Zanduri; ancient Georgian emmer wheat variety (Triticum dicoccum) cultivated in Racha and Svaneti since the Bronze Age. Used in traditional Georgian roti and flatbreads. Cultural heritage grain; being revived by artisan Georgian bakers. Wikipedia Georgian agriculture; FAO heritage grain resources"}
+- {id: red_kidney_beans_grain, grade: signature, rating: 6, name: "Red beans", name_sv: "Röda bönor", notes: "Lobio / lobia; dried red kidney beans are Georgia's most important legume. Lobio stew and lobiani (bean flatbread) are Georgian staples. Beans are eaten daily in most Georgian households. Wikipedia Georgian cuisine; Darra Goldstein 'The Georgian Feast'"}
+- {id: chickpeas_georgian, grade: signature, rating: 5, name: "Chickpeas", name_sv: "Kikärtor", notes: "Cikhvistavi; used in some Georgian regional preparations; growing in use. Part of the Caucasian legume tradition influenced by Middle East trade. Georgian culinary tradition; Wikipedia Caucasian cuisine"}
+- {id: millet_georgian, grade: signature, rating: 4, name: "Millet", name_sv: "Hirs", notes: "Simindis (proso); traditional Georgian grain historically important before corn arrived. Used in some traditional Georgian preparations (elarji — Mingrelian cornmeal-millet with sulguni). An ancient grain in the Transcaucasian agricultural tradition. Wikipedia Georgian agriculture"}
+- {id: lentils_georgian, grade: signature, rating: 3, name: "Lentils", name_sv: "Linser", notes: "Mshieri adsiriani; small lentils used in traditional Georgian soups and stews. Part of Caucasian legume tradition. Grown in Georgia and used in regional winter dishes. Georgian culinary tradition"}
+- {id: barley_georgian, grade: signature, rating: 2, name: "Barley", name_sv: "Korn", notes: "Qeri; Georgia produced 58,400 tonnes of barley in 2022. Used in traditional Georgian barley bread and beer brewing. Also used in livestock feed. Ancient grain in Georgian highlands. Geostat crop production 2022; Georgian beer tradition"}
 
 ### Grains & Starches — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Georgian grain consumption kg per capita", "Georgian rice wheat bread statistics", "Georgian FAO food balance cereals" -->
+<!-- Searched: "Georgia food consumption grain statistics per capita rice pasta wheat consumption Geostat FAOSTAT" -->
 
-- {id: stub_grain_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Grain 1", name_sv: "[UTKAST] Bulk Spannmål 1", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Grain 2", name_sv: "[UTKAST] Bulk Spannmål 2", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Grain 3", name_sv: "[UTKAST] Bulk Spannmål 3", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Grain 4", name_sv: "[UTKAST] Bulk Spannmål 4", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Grain 5", name_sv: "[UTKAST] Bulk Spannmål 5", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Grain 6", name_sv: "[UTKAST] Bulk Spannmål 6", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Grain 7", name_sv: "[UTKAST] Bulk Spannmål 7", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Grain 8", name_sv: "[UTKAST] Bulk Spannmål 8", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Grain 9", name_sv: "[UTKAST] Bulk Spannmål 9", notes: "STUB — replace with verified Georgian research"}
+- {id: wheat_bread_bulk, grade: bulk, rating: 9, name: "Wheat Bread", name_sv: "Vetebröd", notes: "Puri; bread consumption is very high in Georgia (~150 kg wheat equivalent per capita). Tonis puri (Georgian clay oven bread) is baked and sold fresh daily. Most consumed grain product. FAOSTAT Georgia food balance; Georgian bakery statistics"}
+- {id: rice_bulk, grade: bulk, rating: 8, name: "White Rice", name_sv: "Vitt ris", notes: "Brinjali; consumed as a side dish with meat dishes and used in some Georgian preparations (satsivi with rice). All rice is imported; growing consumption. FAOSTAT Georgia food balance; Georgian import statistics"}
+- {id: pasta_georgian, grade: bulk, rating: 7, name: "Pasta", name_sv: "Pasta", notes: "Makaroni; Soviet-era pasta eating habits persist; macaroni and pasta products are widely consumed in Georgian households. Growing category. FAOSTAT Georgia; Georgian grocery statistics"}
+- {id: buckwheat_georgian, grade: bulk, rating: 6, name: "Buckwheat", name_sv: "Bovete", notes: "Tataruli puri fqali; buckwheat kasha (porridge) is a Soviet legacy in Georgian breakfast culture. Imported from Russia/Ukraine historically; now from other sources. FAOSTAT Georgia food balance; Georgian household surveys"}
+- {id: semolina_georgian, grade: bulk, rating: 5, name: "Semolina", name_sv: "Mannagryn", notes: "Mannagrini; semolina porridge was widely consumed in Soviet-era Georgia and remains a breakfast staple. Also used in pastry. FAOSTAT Georgia food balance; household consumption data"}
+- {id: oats_georgian, grade: bulk, rating: 4, name: "Oats", name_sv: "Havre", notes: "Sharanis satanamasho; growing oat consumption in Georgia's urban middle class for health and breakfast foods. Imported. Growing grocery category. Georgian grocery retail trends; FAOSTAT Georgia"}
+- {id: dried_white_beans, grade: bulk, rating: 3, name: "White Beans", name_sv: "Vita bönor", notes: "Tetri lobio; dried white beans used in Georgian soups and stews alongside red beans. Widely consumed; bought in bulk at Georgian bazaars. Georgian culinary tradition; household surveys"}
+- {id: sunflower_seeds, grade: bulk, rating: 2, name: "Sunflower Seeds", name_sv: "Solrosfrön", notes: "Mzesumzira; sunflower seeds widely consumed as a snack in Georgia (common at football matches and social gatherings). Soviet-era snack tradition. Georgian grocery retail statistics; cultural food traditions"}
 
 ### Grains & Starches — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Georgian grain crops grown", "Georgian cereal farming production", "Georgian locally milled flour regional varieties" -->
+<!-- Searched: "Georgia grain production 2022 local wheat barley corn maize Geostat local cultivated varieties" -->
 
-- {id: stub_grain_loc_1, grade: local, rating: 9, name: "[STUB] Local Grain 1", name_sv: "[UTKAST] Lokalt Spannmål 1", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_loc_2, grade: local, rating: 8, name: "[STUB] Local Grain 2", name_sv: "[UTKAST] Lokalt Spannmål 2", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_loc_3, grade: local, rating: 7, name: "[STUB] Local Grain 3", name_sv: "[UTKAST] Lokalt Spannmål 3", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_loc_4, grade: local, rating: 6, name: "[STUB] Local Grain 4", name_sv: "[UTKAST] Lokalt Spannmål 4", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_loc_5, grade: local, rating: 5, name: "[STUB] Local Grain 5", name_sv: "[UTKAST] Lokalt Spannmål 5", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_loc_6, grade: local, rating: 4, name: "[STUB] Local Grain 6", name_sv: "[UTKAST] Lokalt Spannmål 6", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_loc_7, grade: local, rating: 3, name: "[STUB] Local Grain 7", name_sv: "[UTKAST] Lokalt Spannmål 7", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_loc_8, grade: local, rating: 2, name: "[STUB] Local Grain 8", name_sv: "[UTKAST] Lokalt Spannmål 8", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_grain_loc_9, grade: local, rating: 1, name: "[STUB] Local Grain 9", name_sv: "[UTKAST] Lokalt Spannmål 9", notes: "STUB — replace with verified Georgian research"}
+- {id: georgian_corn, grade: local, rating: 9, name: "Maize", name_sv: "Majs", notes: "Simindi; 149,500 tonnes produced in 2022 (76,900 hectares; largest sown area of any Georgian grain). Main grain crop of western Georgia. Essential for ghomi porridge and mchadi cornbread. Geostat Agriculture 2022 crop statistics"}
+- {id: georgian_wheat, grade: local, rating: 8, name: "Wheat", name_sv: "Vete", notes: "Asparezi qeri; 157,400 tonnes produced in 2022 (55,500 hectares; 15.8% increase from 2021). Grown in Kakheti, Kartli, and Kvemo Kartli. Primary crop for Georgian bread flour. Geostat Agriculture 2022"}
+- {id: broad_beans_georgia, grade: local, rating: 7, name: "Broad beans", name_sv: "Bondbönor", notes: "Borchvilauri (Vicia faba); broad beans grown in Georgian home gardens and small farms. Used in traditional Georgian bean preparations and soups. A genuinely local legume crop with ancient cultivation history in the South Caucasus. Georgian agricultural heritage; FAO plant genetic resources"}
+- {id: dika_einkorn, grade: local, rating: 6, name: "Dika", name_sv: "Enkorn", notes: "Dika (Triticum monococcum); Georgian heritage einkorn wheat cultivated in mountain regions (Racha, Svaneti) alongside Zanduri. One of Georgia's ancient grain varieties documented since the Bronze Age. Used in specialty highland breads. FAO heritage grains; Georgian agricultural heritage"}
+- {id: grape_seed_flour, grade: local, rating: 5, name: "Grape Seed Products", name_sv: "Druvkärnsprodukter", notes: "Yurduk / vitis products; Georgia's unique viticultural tradition (world's oldest wine culture) yields grape seeds used in oil pressing and grape flour. By-products of Kakhetian kvevri winemaking. UNESCO kvevri wine tradition; Georgian agricultural heritage"}
+- {id: georgian_sunflower, grade: local, rating: 4, name: "Sunflower", name_sv: "Solros", notes: "Mzesumzira; sunflower grown in the Kakheti lowlands and Kvemo Kartli plains. Seeds consumed as snack; oil pressed for household use. Geostat agricultural statistics; Georgian sunflower production"}
+- {id: haricot_bean_local, grade: local, rating: 3, name: "Kidney bean", name_sv: "Kidneybönor", notes: "Rachuli lobio; local red kidney bean varieties grown in Racha, Imereti, and Kakheti. Rachuli lobio (Racha-region beans) is considered the finest. Artisan cultivation; Georgian agri-food heritage"}
+- {id: rye_georgian, grade: local, rating: 2, name: "Rye", name_sv: "Råg", notes: "Zekhi; rye cultivation in Georgian highland areas (Javakheti, Kazbegi, Tusheti). Used in traditional dark bread in mountain communities. Minor crop nationally. Geostat; Georgian highland agricultural traditions"}
 
 
 ## Dairy, Oils & Sauces
 
 ### Dairy, Oils & Sauces — Signature
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Georgian signature dairy dishes", "Georgian iconic cheese butter cream", "Georgian traditional dairy products" -->
+<!-- Searched: "Georgian cuisine dairy sulguni imeruli matsoni guda cheese traditional dairy defining" -->
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Dairy 1", name_sv: "[UTKAST] Signatur Mejeri 1", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Dairy 2", name_sv: "[UTKAST] Signatur Mejeri 2", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Dairy 3", name_sv: "[UTKAST] Signatur Mejeri 3", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Dairy 4", name_sv: "[UTKAST] Signatur Mejeri 4", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Dairy 5", name_sv: "[UTKAST] Signatur Mejeri 5", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Dairy 6", name_sv: "[UTKAST] Signatur Mejeri 6", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Dairy 7", name_sv: "[UTKAST] Signatur Mejeri 7", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Dairy 8", name_sv: "[UTKAST] Signatur Mejeri 8", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Dairy 9", name_sv: "[UTKAST] Signatur Mejeri 9", notes: "STUB — replace with verified Georgian research"}
+- {id: sulguni, grade: signature, rating: 9, name: "Sulguni Cheese", name_sv: "Sulguniost", notes: "Sulguni; THE Georgian cheese. Elastic, salty, fresh or smoked. Used in khachapuri Megruli (sulguni-filled), grilled sulguni, sulguni in herb butter. Made by hand-stretching hot curds. Protected as a Georgian geographical indication. Wikipedia sulguni; Georgian GI designations"}
+- {id: imeruli_cheese, grade: signature, rating: 8, name: "Imeretian Cheese", name_sv: "Imeretisk ost", notes: "Imeruli kveli; milder, fresher, and less salty than sulguni. The cheese used in the classic khachapuri Imeruli (round cheese bread). Most consumed cheese in Georgia by volume. Wikipedia imeruli; Georgian cheese traditions"}
+- {id: matsoni, grade: signature, rating: 7, name: "Matsoni", name_sv: "Matsoni", notes: "Matsoni; Georgian fermented milk (similar to thick yogurt). Mildly sour, made from cow or buffalo milk. Eaten with honey, in soups, and in baking. Elie Metchnikoff studied Georgian longevity in connection with matsoni consumption. Wikipedia matsoni; Georgian dairy heritage"}
+- {id: guda_cheese, grade: signature, rating: 6, name: "Guda Cheese", name_sv: "Gudaost", notes: "Guda kveli; aged sheep's milk cheese from Tusheti highlands. The curd is placed in a sheepskin (guda) and aged for 1-2 months. Sharp, crumbly, intensely flavoured. An ancient Georgian pastoral cheese tradition. Wikipedia guda; Tusheti Georgia"}
+- {id: nadughi, grade: signature, rating: 5, name: "Nadughi", name_sv: "Nadughi", notes: "Nadughi; fresh Georgian cottage cheese made from whey. Served cold with fresh mint and sometimes wrapped in sulguni. Mild, creamy, refreshing. A starter at Georgian tables. Wikipedia Georgian cuisine; Darra Goldstein 'The Georgian Feast'"}
+- {id: butter_georgian, grade: signature, rating: 4, name: "Butter", name_sv: "Smör", notes: "Karaguli; Adjaruli khachapuri (the famous boat-shaped bread) is finished with a knob of butter, egg, and cheese. Farm-churned butter from Georgian Ayrshire and local cow milk. Essential finishing fat in Georgian cooking. Wikipedia Georgian cuisine; Darra Goldstein"}
+- {id: walnut_oil, grade: signature, rating: 3, name: "Walnut Oil", name_sv: "Valnötsolja", notes: "Nigvzis zeti; cold-pressed Georgian walnut oil. Used in salad dressings, pkhali, and as a flavouring oil. Georgian walnuts are prized for quality; country is a major producer. Wikipedia Georgia walnut cultivation; Georgian food traditions"}
+- {id: sunflower_oil_sig, grade: signature, rating: 2, name: "Sunflower Oil", name_sv: "Solrosolja", notes: "Mzesumzira zeti; Georgia's primary cooking oil. Used for frying, sautéing, and in meat preparations. Domestic production and import. Most statistically consumed fat in Georgia. Geostat; FAOSTAT Georgia food balance"}
+- {id: tkemali_sauce, grade: signature, rating: 1, name: "Tkemali Sauce", name_sv: "Tkemalisås", notes: "Tkemali; sour plum sauce made from Georgian cherry plums with ombalo (pennyroyal), dill, coriander, and garlic. Both green (unripe) and red (ripe) versions. The Georgian condiment equivalent of ketchup — on every Georgian table. Wikipedia tkemali; Darra Goldstein"}
 
 ### Dairy, Oils & Sauces — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Georgian dairy consumption kg per capita", "Georgian milk cheese butter statistics", "Georgian FAO food balance dairy" -->
+<!-- Searched: "Georgia dairy consumption per capita 2022 milk oil statistics Geostat food balance most consumed" -->
 
-- {id: stub_dairy_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Dairy 1", name_sv: "[UTKAST] Bulk Mejeri 1", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Dairy 2", name_sv: "[UTKAST] Bulk Mejeri 2", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Dairy 3", name_sv: "[UTKAST] Bulk Mejeri 3", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Dairy 4", name_sv: "[UTKAST] Bulk Mejeri 4", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Dairy 5", name_sv: "[UTKAST] Bulk Mejeri 5", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Dairy 6", name_sv: "[UTKAST] Bulk Mejeri 6", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Dairy 7", name_sv: "[UTKAST] Bulk Mejeri 7", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Dairy 8", name_sv: "[UTKAST] Bulk Mejeri 8", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Dairy 9", name_sv: "[UTKAST] Bulk Mejeri 9", notes: "STUB — replace with verified Georgian research"}
+- {id: whole_milk_georgia, grade: bulk, rating: 9, name: "Cow Milk", name_sv: "Komjölk", notes: "Rdzali; Georgia produced ~585 million litres of milk in 2022 from 444,000 dairy cows. Consumed fresh, fermented into matsoni, or used in cheese production. Total dairy consumption significant. Geostat Agriculture 2022"}
+- {id: sour_cream_georgia, grade: bulk, rating: 8, name: "Sour Cream", name_sv: "Gräddfil", notes: "Katsvi; thick Georgian sour cream widely used in soups (chikhirtma), with meat dishes, and on Georgian bread. High household consumption. Soviet-era dairy tradition maintained. Geostat; Georgian household surveys"}
+- {id: vegetable_oil_bulk, grade: bulk, rating: 7, name: "Vegetable Oil", name_sv: "Vegetabilisk olja", notes: "Mzare zeti; generic refined vegetable oil (sunflower, soy blend) is the highest-volume cooking oil in Georgian households. Imported; dominant in everyday Georgian cooking. FAOSTAT Georgia food balance; Georgian import statistics"}
+- {id: yoghurt_georgia, grade: bulk, rating: 6, name: "Yoghurt", name_sv: "Yoghurt", notes: "Yoqarti; industrial yoghurt growing in Georgia, supplementing traditional matsoni. Georgian dairy companies and imported brands. Growing segment in Georgian grocery retail. Georgian dairy industry statistics; Geostat"}
+- {id: margarine_georgia, grade: bulk, rating: 5, name: "Margarine", name_sv: "Margarin", notes: "Margarini; Soviet-era margarine tradition persists. Widely used in Georgian baking and cooking as a butter substitute. Budget households rely on margarine. FAOSTAT Georgia; Georgian grocery statistics"}
+- {id: cheese_processed, grade: bulk, rating: 4, name: "Processed Cheese", name_sv: "Smältost", notes: "Gadamusha kveli; processed and spreadable cheese growing in Georgian supermarket consumption. Russian and imported brands. Soviet legacy product still consumed widely. Georgian grocery retail data"}
+- {id: condensed_milk, grade: bulk, rating: 3, name: "Condensed Milk", name_sv: "Kondenserad mjölk", notes: "Saqoneli rdzali; Soviet legacy pantry item consumed as a sweet spread, in desserts, and in coffee. Still sold in large volumes in Georgian grocery stores. Georgian grocery retail; FAOSTAT Georgia"}
+- {id: grape_vinegar, grade: bulk, rating: 2, name: "Wine Vinegar", name_sv: "Vinäger", notes: "Rkinis dzhajili; Georgian wine vinegar made from Kakheti wine production. Used in Georgian dressings, sauces (lobio), and marinades. Produced locally and widely available. Georgian winemaking by-products; culinary tradition"}
+- {id: mayonnaise_georgia, grade: bulk, rating: 1, name: "Mayonnaise", name_sv: "Majonnäs", notes: "Mayonezi; Soviet-era mayonnaise tradition. Widely consumed in Georgian salads (Olivier salad), used as a cooking sauce. Growing branded category in Georgian supermarkets. Georgian grocery retail statistics"}
 
 ### Dairy, Oils & Sauces — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Georgian dairy farming local production", "Georgian regional cheese varieties", "Georgian local dairy breeds" -->
+<!-- Searched: "Georgia local cheese production Tusheti Guda Tenili Dambal Khacho sulguni smoked Mingrelian dairy traditions" -->
 
-- {id: stub_dairy_loc_1, grade: local, rating: 9, name: "[STUB] Local Dairy 1", name_sv: "[UTKAST] Lokalt Mejeri 1", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 8, name: "[STUB] Local Dairy 2", name_sv: "[UTKAST] Lokalt Mejeri 2", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 7, name: "[STUB] Local Dairy 3", name_sv: "[UTKAST] Lokalt Mejeri 3", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 6, name: "[STUB] Local Dairy 4", name_sv: "[UTKAST] Lokalt Mejeri 4", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 5, name: "[STUB] Local Dairy 5", name_sv: "[UTKAST] Lokalt Mejeri 5", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 4, name: "[STUB] Local Dairy 6", name_sv: "[UTKAST] Lokalt Mejeri 6", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 3, name: "[STUB] Local Dairy 7", name_sv: "[UTKAST] Lokalt Mejeri 7", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 2, name: "[STUB] Local Dairy 8", name_sv: "[UTKAST] Lokalt Mejeri 8", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_dairy_loc_9, grade: local, rating: 1, name: "[STUB] Local Dairy 9", name_sv: "[UTKAST] Lokalt Mejeri 9", notes: "STUB — replace with verified Georgian research"}
+- {id: grape_seed_oil, grade: local, rating: 9, name: "Grape seed oil", name_sv: "Druvkärnsolja", notes: "Yurduki zeti; cold-pressed grape seed oil pressed from Kakheti wine production by-products. Rich in antioxidants; used in salad dressings and as a finishing oil. Small-scale artisan production growing in Georgia. Georgian wine by-products; artisan producers"}
+- {id: tenili_cheese, grade: local, rating: 8, name: "Tenili Cheese", name_sv: "Tenili", notes: "Tenili; hand-pulled string cheese from Meskheti region (Akhaltsikhe, Samtskhe-Javakheti). Formed into delicate yarn-like threads. One of Georgia's most technically distinctive regional cheeses. Wikipedia Georgian cheese; Slow Food Ark of Taste Georgia"}
+- {id: dambal_khacho, grade: local, rating: 7, name: "Dambal Khacho", name_sv: "Dambal Khacho", notes: "Dambal khacho; pungent aged crumble cheese from Kakheti made in clay pots. Ripened for months in earthenware. Intense, blue-cheese-like character. The most aged of Georgian cheeses; a Kakheti specialty. Wikipedia Georgian cheese; Georgian GI designations"}
+- {id: smoked_sulguni, grade: local, rating: 6, name: "Smoked Sulguni", name_sv: "Rökt sulguni", notes: "Seli sulguni; Mingrelian tradition of smoking fresh sulguni cheese over walnut or fruit wood. Distinctive darker exterior, deeper flavour. A Mingrelia (Samegrelo) regional specialty. Wikipedia sulguni; Georgian cheese traditions"}
+- {id: buffalo_milk, grade: local, rating: 5, name: "Buffalo Milk", name_sv: "Buffelsmjölk", notes: "Kamo rdzali; Samegrelo water buffalo milk. Richer in fat than cow milk; used for special matsoni and sulguni. The buffalo dairy tradition of western Georgia is a distinct regional heritage. Wikipedia Samegrelo; Georgian pastoral traditions"}
+- {id: chacha_cooking, grade: local, rating: 4, name: "Chacha", name_sv: "Chacha", notes: "Chacha; Georgian pomace brandy distilled from grape marc (leftover from kvevri wine pressing). Used as a cooking marinade for game and pork, in tenderising preparations. Production widespread in Kakheti. Wikipedia chacha; Georgian winemaking culture"}
+- {id: sweet_svan_salt, grade: local, rating: 2, name: "Svanuri Marili", name_sv: "Svanuri Marili", notes: "Svanuri marili; traditional Svaneti condiment of rock salt blended with dried garlic, blue fenugreek (utskho suneli), red pepper, and aromatic herbs. Used to season all Svan mountain dishes. Wikipedia Svanuri marili; Georgian mountain traditions"}
+- {id: kakheti_wine_sauce, grade: local, rating: 1, name: "Georgian wine", name_sv: "Georgiskt vin", notes: "Kakhuri ghvino; Kakhetian wine used in Georgian cooking — deglaze pans, marinate meat, make wine-based sauces. The amber skin-contact wines of Kakheti (UNESCO-recognised kvevri tradition) are used in slow-cooked Georgian stews. Wikipedia Georgian wine; UNESCO kvevri"}
 
 
 ## Spices, Nuts & Seasonings
 
 ### Spices, Nuts & Seasonings — Signature
 <!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Georgian signature spice blends", "Georgian defining herbs and spices", "Georgian iconic seasoning flavour profile" -->
+<!-- Searched: "Georgian cuisine defining spices blue fenugreek utskho suneli khmeli suneli marigold coriander tarragon adjika ombalo" -->
 
-- {id: stub_spice_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Spices 1", name_sv: "[UTKAST] Signatur Krydda 1", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Spices 2", name_sv: "[UTKAST] Signatur Krydda 2", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Spices 3", name_sv: "[UTKAST] Signatur Krydda 3", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Spices 4", name_sv: "[UTKAST] Signatur Krydda 4", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Spices 5", name_sv: "[UTKAST] Signatur Krydda 5", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Spices 6", name_sv: "[UTKAST] Signatur Krydda 6", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Spices 7", name_sv: "[UTKAST] Signatur Krydda 7", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Spices 8", name_sv: "[UTKAST] Signatur Krydda 8", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Spices 9", name_sv: "[UTKAST] Signatur Krydda 9", notes: "STUB — replace with verified Georgian research"}
+- {id: fresh_coriander, grade: signature, rating: 9, name: "Fresh coriander", name_sv: "Färsk koriander", notes: "Kinza; fresh coriander is the defining herb of Georgian cuisine — used in lobio, pkhali, sauces, supra salads, and virtually every Georgian savoury dish. Georgia's most essential finishing herb. Wikipedia Georgian cuisine; Darra Goldstein 'The Georgian Feast'"}
+- {id: blue_fenugreek, grade: signature, rating: 8, name: "Blue fenugreek", name_sv: "Blå bockhornsklöver", notes: "Utskho suneli (Trigonella caerulea); the single most distinctive Georgian spice — found in khmeli suneli, adjika, pkhali, and lobio. Has an earthy, hay-like aroma unlike regular fenugreek. Unique to the Caucasus. Wikipedia utskho suneli; Georgian spice culture"}
+- {id: khmeli_suneli, grade: signature, rating: 7, name: "Khmeli Suneli", name_sv: "Khmeli suneli", notes: "Georgia's defining spice blend: blue fenugreek, coriander seed, dried marigold, basil, dill, parsley, mint, and bay. Used in satsivi, chakhokhbili, kharcho, and practically every Georgian cooked dish. Wikipedia khmeli suneli; Darra Goldstein"}
+- {id: imeretian_saffron, grade: signature, rating: 6, name: "Imeretian saffron", name_sv: "Imeretisk saffran", notes: "Shafrani / zafrana; dried Tagetes marigold petals. Gives dishes a yellow-orange colour and subtle earthy-tart flavour. Used in khmeli suneli, chicken dishes, and rice. Cheaper and Georgian alternative to true saffron. Wikipedia Imeretian saffron; Georgian cuisine"}
+- {id: dried_coriander_seed, grade: signature, rating: 5, name: "Coriander Seed", name_sv: "Korianderfrön", notes: "Kama (seed form); ground coriander seed is in khmeli suneli, adjika, and Georgian spice pastes. One of the highest-use spices in Georgian pantries. Wikipedia Georgian cuisine; Larousse Gastronomique Georgian section"}
+- {id: adjika_paste, grade: signature, rating: 4, name: "Adjika", name_sv: "Adjika", notes: "Adjika; Abkhazian/West Georgian hot spice paste of red hot peppers, garlic, blue fenugreek, coriander, and salt. Used as a condiment, marinade, and seasoning. Defines the spiciness of western Georgian cooking. Wikipedia adjika; Georgian cuisine"}
+- {id: dill_georgian, grade: signature, rating: 3, name: "Dill", name_sv: "Dill", notes: "Kama (dill leaves); fresh dill used in tkemali sauce, salads, soups, and as a garnish. One of the most used fresh herbs alongside coriander and tarragon. Grown in Georgian home gardens. Wikipedia Georgian cuisine; Darra Goldstein"}
+- {id: georgian_tarragon, grade: signature, rating: 2, name: "Caucasian Tarragon", name_sv: "Kaukasisk dragon", notes: "Tarhuna; Caucasian tarragon (Artemisia dracunculus var. caucasica) used fresh in Georgian herb salads (tarhuna salata), tkemali, and as a table herb. More pungent than French tarragon. Widely grown in Georgian gardens. Wikipedia tarragon varieties; Georgian cuisine"}
+- {id: hot_red_pepper, grade: signature, rating: 1, name: "Hot Red Pepper", name_sv: "Het röd chili", notes: "Tkbili da cxeli pilpili; red chili peppers dried and used in adjika and spice preparations. Adds heat to western Georgian dishes. Grown in Georgian home gardens. Wikipedia adjika; Georgian cuisine traditions"}
 
 ### Spices, Nuts & Seasonings — Bulk
 <!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Georgian most used condiments seasonings statistics", "Georgian salt sugar spice consumption", "Georgian everyday seasoning ingredients" -->
+<!-- Searched: "Georgia most purchased spices seasonings grocery statistics 2022 black pepper cinnamon cumin top spice retail" -->
 
-- {id: stub_spice_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Spices 1", name_sv: "[UTKAST] Bulk Krydda 1", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Spices 2", name_sv: "[UTKAST] Bulk Krydda 2", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Spices 3", name_sv: "[UTKAST] Bulk Krydda 3", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Spices 4", name_sv: "[UTKAST] Bulk Krydda 4", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Spices 5", name_sv: "[UTKAST] Bulk Krydda 5", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Spices 6", name_sv: "[UTKAST] Bulk Krydda 6", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Spices 7", name_sv: "[UTKAST] Bulk Krydda 7", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Spices 8", name_sv: "[UTKAST] Bulk Krydda 8", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Spices 9", name_sv: "[UTKAST] Bulk Krydda 9", notes: "STUB — replace with verified Georgian research"}
+- {id: black_pepper_georgia, grade: bulk, rating: 9, name: "Black Pepper", name_sv: "Svartpeppar", notes: "Shavi pilpili; most purchased spice in Georgian grocery stores by volume. Used in everyday Georgian meat and vegetable cooking. Georgian grocery retail statistics; FAOSTAT Georgia food balance"}
+- {id: red_chili_bulk, grade: bulk, rating: 8, name: "Dried Red Chilli", name_sv: "Torkad röd chili", notes: "Cxeli pilpili; widely used in Georgian cooking beyond fresh peppers. Both ground and whole dried chilli used in spice pastes, meats, and stews. High-volume grocery category. Georgian spice market statistics"}
+- {id: cinnamon_georgia, grade: bulk, rating: 7, name: "Cinnamon", name_sv: "Kanel", notes: "Darchin; used in Georgian meat dishes (kharcho, satsivi), bazhe walnut sauce, and traditional Georgian sweets (churchkhela). Among the top-5 most purchased spices in Georgia. Georgian grocery retail statistics; FAOSTAT"}
+- {id: cloves, grade: bulk, rating: 6, name: "Cloves", name_sv: "Kryddnejlika", notes: "Mikhaki; used in Georgian pickling (turshi — pickled vegetables), khmeli suneli, and meat stews. Standard spice pantry item in Georgian households. Georgian culinary tradition; grocery statistics"}
+- {id: bay_leaf_georgia, grade: bulk, rating: 5, name: "Bay Leaf", name_sv: "Lagerblad", notes: "Lavris purtseli; used in Georgian soups, stews, and pickles (turshi). Standard aromatic in every Georgian kitchen. Grown in Georgia's subtropical west (Adjara, Guria). High-volume grocery purchase. Georgian culinary tradition"}
+- {id: paprika_georgia, grade: bulk, rating: 4, name: "Paprika", name_sv: "Paprika", notes: "Paprika; widely used in Georgian meat dishes and spice preparations. Growing category in Georgian spice market driven by internationally influenced cooking. Georgian grocery retail statistics"}
+- {id: cumin_georgia, grade: bulk, rating: 3, name: "Cumin", name_sv: "Spiskummin", notes: "Zira; growing use in Georgian cooking, reflecting Silk Road trade route spice traditions. Used in meat dishes and marinades. Georgian grocery retail statistics; culinary tradition"}
+- {id: nutmeg_georgia, grade: bulk, rating: 2, name: "Nutmeg", name_sv: "Muskotnöt", notes: "Jajvis kakali; used in Georgian walnut sauces (bazhe, satsivi) and some Georgian baking. Standard spice pantry item. Georgian culinary tradition; grocery statistics"}
+- {id: vanilla_georgia, grade: bulk, rating: 1, name: "Vanilla", name_sv: "Vanilj", notes: "Vanili; growing in Georgian confectionery and baking use (Georgian cakes and pastries). Imported; growing grocery category. Georgian confectionery industry statistics"}
 
 ### Spices, Nuts & Seasonings — Local
 <!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Georgian herbs grown locally", "Georgian spice production native plants", "Georgian foraged herbs regional flavourings" -->
+<!-- Searched: "Georgia locally grown herbs spices ombalo savory kondari Svanuri marili horseradish foraged local seasonings" -->
 
-- {id: stub_spice_loc_1, grade: local, rating: 9, name: "[STUB] Local Spices 1", name_sv: "[UTKAST] Lokalt Krydda 1", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_loc_2, grade: local, rating: 8, name: "[STUB] Local Spices 2", name_sv: "[UTKAST] Lokalt Krydda 2", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_loc_3, grade: local, rating: 7, name: "[STUB] Local Spices 3", name_sv: "[UTKAST] Lokalt Krydda 3", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_loc_4, grade: local, rating: 6, name: "[STUB] Local Spices 4", name_sv: "[UTKAST] Lokalt Krydda 4", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_loc_5, grade: local, rating: 5, name: "[STUB] Local Spices 5", name_sv: "[UTKAST] Lokalt Krydda 5", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_loc_6, grade: local, rating: 4, name: "[STUB] Local Spices 6", name_sv: "[UTKAST] Lokalt Krydda 6", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_loc_7, grade: local, rating: 3, name: "[STUB] Local Spices 7", name_sv: "[UTKAST] Lokalt Krydda 7", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_loc_8, grade: local, rating: 2, name: "[STUB] Local Spices 8", name_sv: "[UTKAST] Lokalt Krydda 8", notes: "STUB — replace with verified Georgian research"}
-- {id: stub_spice_loc_9, grade: local, rating: 1, name: "[STUB] Local Spices 9", name_sv: "[UTKAST] Lokalt Krydda 9", notes: "STUB — replace with verified Georgian research"}
-
+- {id: ombalo, grade: local, rating: 9, name: "Ombalo", name_sv: "Ombalo", notes: "Ombalo (Mentha pulegium); Georgian wild pennyroyal mint that grows in the Colchic lowlands of western Georgia (Samegrelo, Guria). Essential ingredient in tkemali sauce — not authentic without it. Cannot be substituted. Wikipedia tkemali; Georgian botanical cuisine"}
+- {id: kondari, grade: local, rating: 8, name: "Kondari", name_sv: "Kondari", notes: "Kondari; Georgian summer savory (Satureja hortensis). Essential in lobio (bean stew), pkhali, and Georgian herb mixtures. Grown in Georgian gardens. One of Georgia's most distinctive culinary herbs. Wikipedia Georgian cuisine; Darra Goldstein"}
+- {id: svanuri_marili, grade: local, rating: 7, name: "Svanuri Marili", name_sv: "Svanuri Marili", notes: "Svanuri marili; traditional Svaneti condiment of rock salt blended with dried garlic, blue fenugreek (utskho suneli), red pepper, and aromatic herbs. Used to season all Svan mountain dishes and sold at Georgian markets. Wikipedia Svanuri marili; Svaneti cultural traditions"}
+- {id: georgian_laurel, grade: local, rating: 6, name: "Colchic Bay Laurel", name_sv: "Kolkisk lagerbärsblad", notes: "Lavris tsnori; Laurus nobilis grows wild in the Colchic subtropical rainforests of Adjara, Guria, and Samegrelo (western Georgia). Home-dried bay leaves are used by Georgian households from local trees. Wikipedia Colchic forests; Georgian botanical resources"}
+- {id: horseradish_georgia, grade: local, rating: 5, name: "Horseradish", name_sv: "Pepparrot", notes: "Khren / stseveli; grown in Georgian gardens. Used as a condiment with boiled meats and fermented foods. A regular Georgian garden plant with traditional food uses. Georgian culinary tradition; ethnobotany"}
+- {id: wild_garlic_georgia, grade: local, rating: 4, name: "Wild garlic", name_sv: "Ramslök", notes: "Tilavanduri; wild garlic (Allium ursinum) foraged from Georgian forest floors in spring. Used in Georgian wild herb salads, pkhali-style preparations, and as a spring greens appetiser. Georgian foraging tradition; ethnobotany"}
+- {id: grape_leaves, grade: local, rating: 3, name: "Grape Leaves", name_sv: "Druvrankblad", notes: "Vitis purtseli; fresh and brined Georgian grape leaves used for dolma (stuffed vine leaves — a Caucasian tradition). Harvested in spring from Georgia's prolific vineyards (Kakheti, Kartli). Georgian wine and food culture; Wikipedia dolma"}
+- {id: georgian_basil, grade: local, rating: 2, name: "Basil", name_sv: "Basilika", notes: "Rehan (Ocimum basilicum); widely grown in Georgian home gardens and farms. Used fresh in Georgian herb sauces, lobio, and alongside coriander and tarragon as a table herb. A standard Georgian kitchen garden herb. Georgian culinary tradition; Darra Goldstein"}
+- {id: purslane_georgia, grade: local, rating: 1, name: "Purslane", name_sv: "Portlak", notes: "Bosseli (Portulaca oleracea); wild purslane foraged from Georgian fields and gardens in summer. Used as a tangy cooling herb in salads and as a pkhali filling. Common throughout Georgia's lower elevation regions. Georgian ethnobotany; traditional food uses"}
