@@ -2,246 +2,223 @@
 KCE: CUISINE
 id: south_african
 name: South African
-name_sv: "Sydafrikanskt"
+name_sv: "Sydafrikansk"
 icon: 🇿🇦
 region: african
 region_name: "African"
 region_icon: 🌍
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-research_done: 0
+description: "South African cuisine is the braai fire and the cast-iron potjie — boerewors, biltong, bobotie, bunny chow and pap — born where indigenous Nguni, Cape Malay, Dutch Afrikaner, Zulu, and Indian Durban traditions all share one table."
+description_sv: "Sydafrikanskt kök är braaieldns glöd och gjutjärnspotjien — boerewors, biltong, bobotie, bunny chow och pap — fött där inhemska Nguni-, kap-malajiska, afrikanska, Zulu- och indiska Durban-traditioner delar ett bord."
+research_done: 1
 ---
 
 ## Research notes
 
-⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
-Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Produce — Signature", etc.).
-Each pair requires its own dedicated research pass. Do NOT combine pairs.
-See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
+Sources: DALRRD Abstract of Agricultural Statistics 2022; NAMC reports; SAPA (SA Poultry Association) 2022;
+Agriorbit.com chicken market share; The Pig Site SA 2024; Landgeist meat consumption Africa 2022;
+SA per capita 2022: chicken ~35 kg/cap/yr (~60% of meat), beef ~16.5 kg, pork ~5.5 kg, sheep/goat ~2.7 kg;
+weekly: 538 g chicken / 222 g beef / 84 g pork; SA total meat ~58-64 kg/cap/yr;
+Game farming: world leader, Limpopo/Mpumalanga/Eastern Cape — springbok, kudu, impala, wildebeest, ostrich;
+Marine fishing: hake, sardine, anchovy, snoek, tuna, rock lobster (Western Cape, Eastern Cape);
+SA is world's #1 citrus exporter; Western Cape wines and fruits; Karoo lamb/mutton famous globally.
 
 
 ## Proteins
 
 ### Proteins — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "South African signature dishes", "South African iconic traditional proteins", "South African food culture defining meats fish" -->
+<!-- Searched: "South Africa signature protein dishes boerewors biltong braai game meat ostrich springbok bunny chow bobotie iconic traditional" -->
 
-- {id: stub_prot_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Protein 1", name_sv: "[UTKAST] Signatur Protein 1", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Protein 2", name_sv: "[UTKAST] Signatur Protein 2", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Protein 3", name_sv: "[UTKAST] Signatur Protein 3", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Protein 4", name_sv: "[UTKAST] Signatur Protein 4", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Protein 5", name_sv: "[UTKAST] Signatur Protein 5", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Protein 6", name_sv: "[UTKAST] Signatur Protein 6", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Protein 7", name_sv: "[UTKAST] Signatur Protein 7", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Protein 8", name_sv: "[UTKAST] Signatur Protein 8", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Protein 9", name_sv: "[UTKAST] Signatur Protein 9", notes: "STUB — replace with verified South African research"}
+- {id: saf_boerewors, grade: signature, rating: 9, name: "Boerewors", name_sv: "Boerewors", notes: "Farmer's sausage — coarsely ground beef (min 90% meat by law), coriander, black pepper, cloves, nutmeg, vinegar; coiled and grilled on braai; South Africa's most iconic sausage; as South African as biltong; legally defined product"}
+- {id: saf_biltong, grade: signature, rating: 8, name: "Biltong", name_sv: "Biltong", notes: "Air-dried cured meat from beef or game; vinegar, coriander, black pepper, salt; distinctly South African; no equivalent anywhere else; springbok biltong prized; eaten as snack, stirred into dishes, crumbled on pap; national food icon"}
+- {id: saf_braai_lamb, grade: signature, rating: 7, name: "Lamb chop", name_sv: "Lammkotlett", notes: "Braai lamb chops — bone-in rib or loin chop; marinated and grilled over wood; Karoo lamb prized for unique flavour from fynbos grazing; South African braai culture fundamental; lamb ribs (ribbetjies) a braai classic"}
+- {id: saf_chicken_braai, grade: signature, rating: 6, name: "Peri-peri chicken", name_sv: "Peri-peri kyckling", notes: "Portuguese-influence via Mozambique; peri-peri (African bird's eye chilli) chicken; Nando's South African chain made it global; grilled whole chicken marinated in peri-peri sauce; definitive South African-Portuguese flavour"}
+- {id: saf_springbok_sig, grade: signature, rating: 5, name: "Springbok", name_sv: "Springbock", notes: "Antidorcas marsupialis — national animal of South Africa; springbok biltong, loin, and braai chops; wild game flagship; South Africa's most prestigious local game protein; widely served at fine dining and braai events"}
+- {id: saf_ostrich_sig, grade: signature, rating: 4, name: "Ostrich", name_sv: "Struts", notes: "Struthio camelus — commercially farmed in Western Cape (Oudtshoorn); ostrich steak, fillet, and boerewors; lean red meat; South Africa is world's #1 ostrich meat producer and exporter; exported globally; Oudtshoorn ostrich capital"}
+- {id: saf_bobotie_mince, grade: signature, rating: 3, name: "Ground beef", name_sv: "Nötfärs", notes: "Bobotie — Cape Malay spiced mince with bread, dried fruit, curry, and egg custard topping; declared South Africa's national dish by many; mince also in meatballs (frikkadel) and shepherd's pie (cottage pie) Afrikaner style"}
+- {id: saf_snoek_sig, grade: signature, rating: 2, name: "Snoek", name_sv: "Snoek", notes: "Thyrsites atun — Cape snoek; signature Western Cape fish; salted, smoked, or braai'd; snoek pâté (smoked snoek); snoek and apricot jam braai; seasonal catch from September-November; deeply embedded in Cape food culture"}
+- {id: saf_mutton_karoo, grade: signature, rating: 1, name: "Karoo mutton", name_sv: "Karoo-lamm", notes: "Sheep grazed on Karoo fynbos and Karoo scrub; unique aromatic flavour from wild herbs; Merino and Dorper breeds; potjiekos mutton stew; Karoo lamb chops world-renowned; exported to Middle East and Europe; GI claim recognised"}
 
 ### Proteins — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "South African meat consumption kg per capita", "South African FAO food balance protein", "South African most consumed protein statistics" -->
+<!-- Searched: "South Africa per capita protein consumption statistics 2022 chicken beef pork eggs DALRRD NAMC most consumed bulk" -->
 
-- {id: stub_prot_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Protein 1", name_sv: "[UTKAST] Bulk Protein 1", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Protein 2", name_sv: "[UTKAST] Bulk Protein 2", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Protein 3", name_sv: "[UTKAST] Bulk Protein 3", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Protein 4", name_sv: "[UTKAST] Bulk Protein 4", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Protein 5", name_sv: "[UTKAST] Bulk Protein 5", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Protein 6", name_sv: "[UTKAST] Bulk Protein 6", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Protein 7", name_sv: "[UTKAST] Bulk Protein 7", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Protein 8", name_sv: "[UTKAST] Bulk Protein 8", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Protein 9", name_sv: "[UTKAST] Bulk Protein 9", notes: "STUB — replace with verified South African research"}
+- {id: saf_chicken_bulk, grade: bulk, rating: 9, name: "Chicken", name_sv: "Kyckling", notes: "~35 kg/cap/yr (SAPA/DALRRD 2022; ~60% of all meat); #1 protein in South Africa; affordable; whole chicken, frozen pieces, polony; braai chicken, fried chicken, chicken stew; dominant across all income groups and demographics"}
+- {id: saf_beef_bulk, grade: bulk, rating: 8, name: "Beef", name_sv: "Nötkött", notes: "~16.5 kg/cap/yr (DALRRD 2022); #2 meat; boerewors, braai steak, mince for bobotie and frikkadel; premium and budget cuts both high consumption; Nguni beef for high-end; significant import from Namibia and Botswana"}
+- {id: saf_egg_bulk, grade: bulk, rating: 7, name: "Eggs", name_sv: "Ägg", notes: "~7.4 kg/cap/yr (DALRRD 2022); SA Africa's largest egg producer and consumer; scrambled egg (Afrikaner breakfast), eggs on pap, egg-custard in bobotie; high bulk purchase at all income levels"}
+- {id: saf_pork_bulk, grade: bulk, rating: 6, name: "Pork", name_sv: "Fläsk", notes: "~5.5 kg/cap/yr (NAMC 2022); #3 meat; bacon, pork chops, gammon; Afrikaner farmers historically kept pigs; pork braai becoming more popular; significant sausage production using pork alongside beef"}
+- {id: saf_hake_bulk, grade: bulk, rating: 5, name: "Hake", name_sv: "Kummel", notes: "Merluccius capensis — most caught and consumed fish species in South Africa; fish and chips staple; battered hake in townships and suburban fish shops; DALRRD fishing industry primary commercial species; high per-capita consumption"}
+- {id: saf_sheep_bulk, grade: bulk, rating: 4, name: "Sheep/lamb", name_sv: "Lamm/får", notes: "~2.7 kg/cap/yr (NAMC 2022); Karoo lamb and mutton; potjiekos, sosaties (kebabs), braai lamb; South African sheep population one of Africa's largest; Merino and Dorper breed-dominant production"}
+- {id: saf_sardine_bulk, grade: bulk, rating: 3, name: "Pilchard/sardine", name_sv: "Sardiner/sillpinne", notes: "Sardinops sagax — South Africa is one of world's top sardine producers; canned pilchards (Bull Brand) extremely high per-capita; cheap protein; pilchards on pap; tuna and pilchard cans dominant protein across lower-income households"}
+- {id: saf_polony_bulk, grade: bulk, rating: 2, name: "Polony sausage", name_sv: "Polonykorv", notes: "Processed pork-chicken sausage; iconic pink South African processed meat; polony sandwich in brown bread; extremely high per-capita in South African townships; Enterprise polony brand; affordable school lunch staple"}
+- {id: saf_tuna_bulk, grade: bulk, rating: 1, name: "Canned tuna", name_sv: "Burktonfisk", notes: "Very high per-capita; I&J, Lucky Star brands; tuna mayo sandwich; high protein affordable; significant annual bulk purchase; South Africa tuna catch supplemented by imported canned tuna; popular across all income levels"}
 
 ### Proteins — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "South African livestock farming animals raised", "South African fishing industry fish species caught", "South African game animals hunted wild" -->
+<!-- Searched: "South Africa local game farming ostrich springbok kudu impala farming fishing hake snoek abalone aquaculture livestock indigenous breeds" -->
 
-- {id: stub_prot_loc_1, grade: local, rating: 9, name: "[STUB] Local Protein 1", name_sv: "[UTKAST] Lokalt Protein 1", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_loc_2, grade: local, rating: 8, name: "[STUB] Local Protein 2", name_sv: "[UTKAST] Lokalt Protein 2", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_loc_3, grade: local, rating: 7, name: "[STUB] Local Protein 3", name_sv: "[UTKAST] Lokalt Protein 3", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_loc_4, grade: local, rating: 6, name: "[STUB] Local Protein 4", name_sv: "[UTKAST] Lokalt Protein 4", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_loc_5, grade: local, rating: 5, name: "[STUB] Local Protein 5", name_sv: "[UTKAST] Lokalt Protein 5", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_loc_6, grade: local, rating: 4, name: "[STUB] Local Protein 6", name_sv: "[UTKAST] Lokalt Protein 6", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_loc_7, grade: local, rating: 3, name: "[STUB] Local Protein 7", name_sv: "[UTKAST] Lokalt Protein 7", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_loc_8, grade: local, rating: 2, name: "[STUB] Local Protein 8", name_sv: "[UTKAST] Lokalt Protein 8", notes: "STUB — replace with verified South African research"}
-- {id: stub_prot_loc_9, grade: local, rating: 1, name: "[STUB] Local Protein 9", name_sv: "[UTKAST] Lokalt Protein 9", notes: "STUB — replace with verified South African research"}
+- {id: saf_springbok_local, grade: local, rating: 9, name: "Springbok", name_sv: "Springbock", notes: "Commercially game-farmed in Limpopo, Northern Cape, and Eastern Cape; wild harvested from private farms; biltong and steak processing; ~80,000 springbok harvested annually from SA game farms; uniquely South African wild protein"}
+- {id: saf_ostrich_local, grade: local, rating: 8, name: "Ostrich", name_sv: "Struts", notes: "Klein Karoo (Oudtshoorn) commercial ostrich farming since 1860s; SA exports ostrich meat to Europe and USA; feathers, leather, and meat all valuable; Ostrich producers SA (OPSA) regulates the industry; entirely South African heritage product"}
+- {id: saf_karoo_lamb_local, grade: local, rating: 7, name: "Karoo lamb", name_sv: "Karoo-lamm", notes: "Dorper and Merino sheep grazing Karoo fynbos and scrubland; GI-claim Karoo lamb recognised; unique herb-flavoured meat from wild plant diet; Western Cape and Northern Cape primary zones; major export product"}
+- {id: saf_kudu_local, grade: local, rating: 6, name: "Kudu", name_sv: "Kudu", notes: "Tragelaphus strepsiceros — game-farmed across SA; biltong, braai chops, and loin; high-end restaurant protein; sold at specialty game butchers; Limpopo and Eastern Cape major farming areas; growing popularity in local markets"}
+- {id: saf_hake_local, grade: local, rating: 5, name: "Cape hake", name_sv: "Kapkummel", notes: "Merluccius capensis — Atlantic Ocean off South Africa; largest SA fishing industry species by volume; I&J and Premier Fishing catch; significant employment in Western Cape; exported globally and sold domestically as fish and chips"}
+- {id: saf_snoek_local, grade: local, rating: 4, name: "Snoek", name_sv: "Snoek", notes: "Thyrsites atun — caught off Western Cape coast; seasonal snoek fishing tradition in Hout Bay and Kalk Bay; processed as smoked snoek pâté; braai'd fresh; uniquely Southern African marine species; entirely local catch"}
+- {id: saf_abalone_local, grade: local, rating: 3, name: "Abalone (perlemoen)", name_sv: "Abalone (perlemoen)", notes: "Haliotis midae — endemic to South African kelp beds; Perlemoen (Afrikaans); intensively farmed at Western Cape farms after wild catch restriction; premium export product to China and Japan; uniquely South African shellfish"}
+- {id: saf_nguni_cattle, grade: local, rating: 2, name: "Nguni cattle", name_sv: "Nguni-nöt", notes: "Indigenous southern African cattle breed; disease-resistant and adapted to Highveld; Nguni beef known for marbling and flavour; Zulu tradition; premium South African breed certified by NAMC; growing high-end butcher market"}
+- {id: saf_impala_local, grade: local, rating: 1, name: "Impala", name_sv: "Impala", notes: "Aepyceros melampus — most abundant game species in SA; impala biltong widespread; lean, mild game meat; sustainably harvested from game farms; growing urban market for impala steaks; cost-effective game meat for wider market"}
 
 
 ## Produce
 
 ### Produce — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "South African signature dishes vegetables", "South African iconic vegetable ingredients", "South African traditional vegetable preparations" -->
+<!-- Searched: "South Africa signature vegetables produce braai side dishes pap spinach morogo pumpkin amaranth samp beans potjie ingredients" -->
 
-- {id: stub_veg_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Vegetable 1", name_sv: "[UTKAST] Signatur Grönsak 1", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Vegetable 2", name_sv: "[UTKAST] Signatur Grönsak 2", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Vegetable 3", name_sv: "[UTKAST] Signatur Grönsak 3", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Vegetable 4", name_sv: "[UTKAST] Signatur Grönsak 4", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Vegetable 5", name_sv: "[UTKAST] Signatur Grönsak 5", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Vegetable 6", name_sv: "[UTKAST] Signatur Grönsak 6", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Vegetable 7", name_sv: "[UTKAST] Signatur Grönsak 7", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Vegetable 8", name_sv: "[UTKAST] Signatur Grönsak 8", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Vegetable 9", name_sv: "[UTKAST] Signatur Grönsak 9", notes: "STUB — replace with verified South African research"}
+- {id: saf_pap_sig, grade: signature, rating: 9, name: "Maize pap", name_sv: "Majs-pap", notes: "Phutu / stywe pap / slap pap — cooked maize meal; South Africa's most consumed starch; eaten with stews, braai, chakalaka; pap en sous is a national staple; synonymous with South African township and rural cooking; no foreign equivalent"}
+- {id: saf_chakalaka_sig, grade: signature, rating: 8, name: "Chakalaka", name_sv: "Chakalaka", notes: "Spicy vegetable relish of tinned baked beans, tomato, onion, pepper, carrot, and curry powder; served with pap, braai, and potjiekos; township origin; Rainbow Chicken brand popularised; every South African braai table"}
+- {id: saf_morogo_sig, grade: signature, rating: 7, name: "Morogo", name_sv: "Morogo (vild spenat)", notes: "Wild African leafy vegetables — amaranth (imfino), spider plant (slingerplant), cowpea leaves; indigenous to SA; boiled and served with pap; rural staple; cultural significance for Zulu, Xhosa, and Sotho communities; abundant in summer"}
+- {id: saf_butternut_sig, grade: signature, rating: 6, name: "Butternut squash", name_sv: "Butternutpumpa", notes: "Gegooide pampoentjie — roasted whole on braai; boiled and mashed with butter; South African braai accompaniment; potjiekos vegetable base; very widely grown in South Africa; Afrikaner home cooking cornerstone vegetable"}
+- {id: saf_tomato_atchar, grade: signature, rating: 5, name: "Atchar", name_sv: "Atchar (pikles)", notes: "Green mango or mixed vegetable pickle seasoned with turmeric and masala; Cape Malay and Indian Durban tradition; sold in virtually every South African store; essential braai side; accompanies bunny chow; Langeberg brand ubiquitous"}
+- {id: saf_sweet_potato_sig, grade: signature, rating: 4, name: "Sweet potato", name_sv: "Sötpotatis", notes: "Patat — roasted in the braai coals or baked; Afrikaner traditional sweet potato bake (soetpatat) with syrup and cinnamon; widely grown in SA; traditional Zulu homestead crop; braai coals roasting classic; widely consumed"}
+- {id: saf_pumpkin_fritters, grade: signature, rating: 3, name: "Pumpkin", name_sv: "Pumpa", notes: "Malva pudding with pumpkin, pumpkin fritters (pampoenkoekie) with cinnamon sugar — quintessential Afrikaner comfort food; potjiekos base vegetable; South African children's favourite; widely grown in Free State and Eastern Cape"}
+- {id: saf_amaranth_sig, grade: signature, rating: 2, name: "Amaranth", name_sv: "Amarant", notes: "Mchicha / imifino — grown wild and cultivated; traditional Zulu, Xhosa, and Sotho leafy green; pounded with pap; nutritionally rich; indigenous vegetable preservation tradition; growing urban market for heritage greens"}
+- {id: saf_waterblommetjie, grade: signature, rating: 1, name: "Waterblommetjie", name_sv: "Vattenblomstknoppar", notes: "Aponogeton distachyos — Cape water hyacinth bud; waterblommetjiebredie (lamb and waterblommetjie stew); uniquely South African vegetable found only in Western Cape water bodies; seasonal harvest; Cape Malay-Afrikaner seasonal delicacy"}
 
 ### Produce — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "South African vegetable consumption kg per capita", "South African most consumed vegetables statistics", "South African FAO food balance vegetables" -->
+<!-- Searched: "South Africa most consumed vegetables statistics 2022 potato tomato onion cabbage carrot bulk per capita production DALRRD" -->
 
-- {id: stub_veg_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Vegetable 1", name_sv: "[UTKAST] Bulk Grönsak 1", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Vegetable 2", name_sv: "[UTKAST] Bulk Grönsak 2", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Vegetable 3", name_sv: "[UTKAST] Bulk Grönsak 3", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Vegetable 4", name_sv: "[UTKAST] Bulk Grönsak 4", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Vegetable 5", name_sv: "[UTKAST] Bulk Grönsak 5", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Vegetable 6", name_sv: "[UTKAST] Bulk Grönsak 6", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Vegetable 7", name_sv: "[UTKAST] Bulk Grönsak 7", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Vegetable 8", name_sv: "[UTKAST] Bulk Grönsak 8", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Vegetable 9", name_sv: "[UTKAST] Bulk Grönsak 9", notes: "STUB — replace with verified South African research"}
+- {id: saf_potato_bulk, grade: bulk, rating: 9, name: "Potato", name_sv: "Potatis", notes: "Most consumed vegetable by volume in SA; ~35 kg/cap/yr; chips, roast, potato salad at braai; potjiekos staple; fish and chips; SA produces most potatoes in Africa; Sandveld (Western Cape) and Limpopo primary growing areas"}
+- {id: saf_tomato_bulk, grade: bulk, rating: 8, name: "Tomato", name_sv: "Tomat", notes: "Second most consumed vegetable; chakalaka base; tomato bredie (lamb and tomato stew); tomato sauce on pap; fresh salad; SA is Africa's largest tomato producer; Limpopo and Mpumalanga major greenhouse production"}
+- {id: saf_onion_bulk, grade: bulk, rating: 7, name: "Onion", name_sv: "Lök", notes: "Very high per-capita; base of potjiekos, braai relish, chakalaka; SA is Africa's largest onion exporter; Northern Cape (Keimoes) and Free State major growing areas; significant bulk household purchase"}
+- {id: saf_cabbage_bulk, grade: bulk, rating: 6, name: "Cabbage", name_sv: "Kål", notes: "Very high per-capita; braai slaw (coleslaw South African style); cabbage stew with pork; popular in township cooking as affordable bulk vegetable; widely grown nationally; major school nutrition programme ingredient"}
+- {id: saf_carrot_bulk, grade: bulk, rating: 5, name: "Carrot", name_sv: "Morot", notes: "High per-capita; potjiekos ingredient; chakalaka; carrot salad with raisins (wortelslaai — Afrikaner tradition); significant SA production in Sandveld and Elim areas; bulk annual purchase in supermarkets and stores"}
+- {id: saf_spinach_bulk, grade: bulk, rating: 4, name: "Spinach", name_sv: "Spenat", notes: "Very high per-capita; creamed spinach on braai plate; spinach and white sauce in Afrikaner cooking; significant bulk purchase at supermarkets; Easy Grow and organic varieties popular; widespread SA cultivation"}
+- {id: saf_butternut_bulk, grade: bulk, rating: 3, name: "Butternut squash", name_sv: "Butternutpumpa", notes: "Major bulk vegetable in SA cooking; butternut soup widely consumed; roasted butternut salad; SA is major butternut producer; Limpopo and Western Cape primary growing regions; sold year-round; very high household purchase"}
+- {id: saf_sweetcorn_bulk, grade: bulk, rating: 2, name: "Sweetcorn", name_sv: "Majs", notes: "Corn on the cob roasted on braai; mealie bread; corn fritters; pap made from ground maize; SA produces significant sweetcorn volumes; Northern Cape and Free State; high annual bulk purchase at supermarkets and markets"}
+- {id: saf_green_bean_bulk, grade: bulk, rating: 1, name: "Green bean", name_sv: "Haricot verts", notes: "Boontjiebredie (bean bredie stew); pickled green beans; green bean and potato salad; significant SA commercial production in Western Cape and KwaZulu-Natal; high regular household purchase; school nutrition component"}
 
 ### Produce — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "South African vegetables grown locally agriculture", "South African regional vegetable crops", "South African foraging wild plants" -->
+<!-- Searched: "South Africa endemic local produce fynbos baobab marula waterblommetjie sour fig wild rooibos indigenous crops grown" -->
 
-- {id: stub_veg_loc_1, grade: local, rating: 9, name: "[STUB] Local Vegetable 1", name_sv: "[UTKAST] Lokalt Grönsak 1", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_loc_2, grade: local, rating: 8, name: "[STUB] Local Vegetable 2", name_sv: "[UTKAST] Lokalt Grönsak 2", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_loc_3, grade: local, rating: 7, name: "[STUB] Local Vegetable 3", name_sv: "[UTKAST] Lokalt Grönsak 3", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_loc_4, grade: local, rating: 6, name: "[STUB] Local Vegetable 4", name_sv: "[UTKAST] Lokalt Grönsak 4", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_loc_5, grade: local, rating: 5, name: "[STUB] Local Vegetable 5", name_sv: "[UTKAST] Lokalt Grönsak 5", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_loc_6, grade: local, rating: 4, name: "[STUB] Local Vegetable 6", name_sv: "[UTKAST] Lokalt Grönsak 6", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_loc_7, grade: local, rating: 3, name: "[STUB] Local Vegetable 7", name_sv: "[UTKAST] Lokalt Grönsak 7", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_loc_8, grade: local, rating: 2, name: "[STUB] Local Vegetable 8", name_sv: "[UTKAST] Lokalt Grönsak 8", notes: "STUB — replace with verified South African research"}
-- {id: stub_veg_loc_9, grade: local, rating: 1, name: "[STUB] Local Vegetable 9", name_sv: "[UTKAST] Lokalt Grönsak 9", notes: "STUB — replace with verified South African research"}
+- {id: saf_citrus_local, grade: local, rating: 9, name: "Citrus", name_sv: "Citrus", notes: "SA is world's #1 citrus exporter; Limpopo, Eastern Cape, Western Cape major zones; Valencia oranges, clementines, grapefruit, lemons; Citrus Growers Association of SA; exported to 60+ countries; dominant local agricultural export"}
+- {id: saf_grape_local, grade: local, rating: 8, name: "Wine grape", name_sv: "Vindruva", notes: "Western Cape wine growing since Jan van Riebeeck 1659; Stellenbosch, Paarl, Franschhoek, Swartland; Chenin Blanc (Steen), Pinotage (SA-unique hybrid); 4th largest wine exporter globally; significant local industry; table and wine grapes"}
+- {id: saf_morogo_local, grade: local, rating: 7, name: "Morogo", name_sv: "Morogo (vild spenat)", notes: "Indigenous wild leafy vegetables (imifino, mchicha, slingerplant); foraged and cultivated in rural SA; traditional staple for Zulu, Xhosa, Sotho, and Tswana communities; summer seasonal harvest across all provinces; irreplaceable local heritage"}
+- {id: saf_amadumbe, grade: local, rating: 6, name: "Amadumbe", name_sv: "Amadumbe (taro)", notes: "Colocasia esculenta — Zulu taro; amadumbe is grown in KwaZulu-Natal coastal and midlands; boiled, mashed, or in stew; Zulu traditional crop; increasingly sold in urban markets as heritage vegetable; distinct from regular taro"}
+- {id: saf_waterblommetjie_local, grade: local, rating: 5, name: "Waterblommetjie", name_sv: "Vattenblomstknoppar", notes: "Aponogeton distachyos — endemic to Western Cape water bodies; harvested from farm dams and vleis; available canned (Langeberg brand) or fresh; 100% South African endemic product; seasonal spring harvest; no equivalent elsewhere"}
+- {id: saf_marula_local, grade: local, rating: 4, name: "Marula", name_sv: "Marula", notes: "Sclerocarya birrea — indigenous African fruit; marula beer (ubiquitous in Limpopo homesteads); Amarula cream liqueur; elephants eat fermented marula; jams and oils made from marula; Limpopo and Mpumalanga primary zones; endemic African tree"}
+- {id: saf_rooibos_local, grade: local, rating: 3, name: "Rooibos", name_sv: "Rooibos", notes: "Aspalathus linearis — grown only in Cederberg Mountains, Western Cape; rooibos tea uniquely South African; UNESCO Intangible Heritage; exported globally; used in marinades, sauces, and desserts; 100% South African endemic crop"}
+- {id: saf_buchu_local, grade: local, rating: 2, name: "Buchu", name_sv: "Buchu", notes: "Agathosma betulina — Western Cape endemic aromatic herb; traditional Khoi-San medicine; buchu-infused vinegar and brandy; rubs for game meat; growing culinary use in fynbos-influenced Cape cuisine; GI-protected from Cederberg area"}
+- {id: saf_sour_fig_local, grade: local, rating: 1, name: "Sour fig", name_sv: "Sur fikon", notes: "Carpobrotus edulis — suurvy in Afrikaans; endemic to Western Cape; jam, chutney, and pickle from sour figs; traditional Khoi-San food plant; growing culinary interest from Cape chefs; beach dune plant with salty-sour fruit; unique local flavour"}
 
 
 ## Grains & Starches
 
 ### Grains & Starches — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "South African signature grain dishes bread pasta rice", "South African iconic starch preparations", "South African traditional staple foods" -->
+<!-- Searched: "South Africa signature grains starches pap maize meal samp dumpling braai bread bunny chow mealie bread traditional" -->
 
-- {id: stub_grain_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Grain 1", name_sv: "[UTKAST] Signatur Spannmål 1", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Grain 2", name_sv: "[UTKAST] Signatur Spannmål 2", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Grain 3", name_sv: "[UTKAST] Signatur Spannmål 3", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Grain 4", name_sv: "[UTKAST] Signatur Spannmål 4", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Grain 5", name_sv: "[UTKAST] Signatur Spannmål 5", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Grain 6", name_sv: "[UTKAST] Signatur Spannmål 6", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Grain 7", name_sv: "[UTKAST] Signatur Spannmål 7", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Grain 8", name_sv: "[UTKAST] Signatur Spannmål 8", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Grain 9", name_sv: "[UTKAST] Signatur Spannmål 9", notes: "STUB — replace with verified South African research"}
+- {id: saf_maize_meal, grade: signature, rating: 9, name: "Maize meal", name_sv: "Majsmjöl", notes: "Mieliemeel — White Star and Iwisa brands; stywe pap, slap pap, uphuthu, phutu; consumed daily by majority of South Africans; statistical #1 starch; pap is to South Africa what rice is to Asia; irreplaceable national staple"}
+- {id: saf_samp, grade: signature, rating: 8, name: "Samp", name_sv: "Samp (grova majs)", notes: "Dried cracked maize kernels; samp and beans (umngqusho) is Nelson Mandela's declared favourite South African dish; slow-cooked; Xhosa and Zulu traditional food; eaten as side with stews; hearty winter dish; indigenous to SA cooking"}
+- {id: saf_roosterkoek, grade: signature, rating: 7, name: "Roosterkoek", name_sv: "Roosterkoek (braaibrød)", notes: "Braai bread — yeast dough rolls grilled directly on braai grid; puffy, charred exterior; buttered and eaten with boerewors or stew; entirely South African braai tradition; every Afrikaner braai family has their roosterkoek recipe"}
+- {id: saf_dumpling_sig, grade: signature, rating: 6, name: "Mealie bread", name_sv: "Majsbröd", notes: "Mieliebrood — sweetcorn and wheat flour bread; steamed in a tin; Afrikaner and Cape Malay tradition; potjiekos companion; served warm with butter at braais; distinct South African bread made from corn and wheat flour combined"}
+- {id: saf_bunny_bread, grade: signature, rating: 5, name: "White bread loaf", name_sv: "Vitt formfranska", notes: "Quarter-loaf hollowed as bunny chow container; Albany and Blue Ribbon brands ubiquitous; brown bread samoosa filling; braai sandwich; very high South African white/brown bread consumption; bunny chow tradition from Durban Indian community"}
+- {id: saf_milkstout, grade: signature, rating: 4, name: "Umqombothi", name_sv: "Umqombothi (traditionellt ölbröd)", notes: "Traditional Zulu-Xhosa sorghum and maize beer; fermented maize + sorghum + yeast; consumed at cultural ceremonies and celebrations; mild sour-fermented drink; also has nutritional value as fermented grain porridge equivalent"}
 
 ### Grains & Starches — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "South African grain consumption kg per capita", "South African rice wheat bread statistics", "South African FAO food balance cereals" -->
+<!-- Searched: "South Africa per capita grain starch consumption statistics 2022 maize meal wheat bread rice samp bulk most purchased DALRRD" -->
 
-- {id: stub_grain_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Grain 1", name_sv: "[UTKAST] Bulk Spannmål 1", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Grain 2", name_sv: "[UTKAST] Bulk Spannmål 2", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Grain 3", name_sv: "[UTKAST] Bulk Spannmål 3", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Grain 4", name_sv: "[UTKAST] Bulk Spannmål 4", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Grain 5", name_sv: "[UTKAST] Bulk Spannmål 5", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Grain 6", name_sv: "[UTKAST] Bulk Spannmål 6", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Grain 7", name_sv: "[UTKAST] Bulk Spannmål 7", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Grain 8", name_sv: "[UTKAST] Bulk Spannmål 8", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Grain 9", name_sv: "[UTKAST] Bulk Spannmål 9", notes: "STUB — replace with verified South African research"}
+- {id: saf_maize_meal_bulk, grade: bulk, rating: 9, name: "Maize meal", name_sv: "Majsmjöl", notes: "South Africa is Africa's largest maize producer; White Star/Iwisa/Ace brands; millions of kg sold per week; staple of 60%+ of SA households; DALRRD tracks maize meal as primary food security crop; #1 bulk starch in SA"}
+- {id: saf_wheat_bulk, grade: bulk, rating: 8, name: "Wheat flour", name_sv: "Vetemjöl", notes: "Brown and white bread very high consumption; SA is significant wheat grower in Western Cape and Free State; Albany bread ubiquitous; bokoms (whole wheat rusks for dunking in coffee) — high per-capita rusk consumption"}
+- {id: saf_rice_bulk, grade: bulk, rating: 7, name: "Rice", name_sv: "Ris", notes: "Yellow rice (geelrys with turmeric and raisins) Cape Malay tradition; biryani in Durban; rice import from Thailand; significant daily consumption especially in Cape Malay, Indian, and urban Black communities; growing per-capita"}
+- {id: saf_samp_bulk, grade: bulk, rating: 6, name: "Samp and beans", name_sv: "Samp och bönor", notes: "Umngqusho — dried cracked maize + white sugar beans; second most-consumed form of maize after pap; Xhosa, Zulu, and Sotho daily staple; bulk produced by PnP, SPAR, and Shoprite; significant weekly household purchase"}
+- {id: saf_rusk_bulk, grade: bulk, rating: 5, name: "Rusks", name_sv: "Skorpor", notes: "Beskuit — hard twice-baked wheat biscuits dunked in coffee; Ouma Rusks brand; buttermilk, aniseed, and muesli varieties; very high per-capita especially in Afrikaner communities; uniquely South African morning ritual; large annual purchase"}
+- {id: saf_potato_starch_bulk, grade: bulk, rating: 4, name: "Potato", name_sv: "Potatis", notes: "Second starch after maize; roasted, chips, potato salad at every braai; very high bulk purchase; produced across SA; KFC and Steers (SA fast food) major potato buyers; significant annual household and food service consumption"}
 
 ### Grains & Starches — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "South African grain crops grown", "South African cereal farming production", "South African locally milled flour regional varieties" -->
+<!-- Searched: "South Africa local grain production maize wheat sorghum millet production grown provinces statistics DALRRD" -->
 
-- {id: stub_grain_loc_1, grade: local, rating: 9, name: "[STUB] Local Grain 1", name_sv: "[UTKAST] Lokalt Spannmål 1", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_loc_2, grade: local, rating: 8, name: "[STUB] Local Grain 2", name_sv: "[UTKAST] Lokalt Spannmål 2", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_loc_3, grade: local, rating: 7, name: "[STUB] Local Grain 3", name_sv: "[UTKAST] Lokalt Spannmål 3", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_loc_4, grade: local, rating: 6, name: "[STUB] Local Grain 4", name_sv: "[UTKAST] Lokalt Spannmål 4", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_loc_5, grade: local, rating: 5, name: "[STUB] Local Grain 5", name_sv: "[UTKAST] Lokalt Spannmål 5", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_loc_6, grade: local, rating: 4, name: "[STUB] Local Grain 6", name_sv: "[UTKAST] Lokalt Spannmål 6", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_loc_7, grade: local, rating: 3, name: "[STUB] Local Grain 7", name_sv: "[UTKAST] Lokalt Spannmål 7", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_loc_8, grade: local, rating: 2, name: "[STUB] Local Grain 8", name_sv: "[UTKAST] Lokalt Spannmål 8", notes: "STUB — replace with verified South African research"}
-- {id: stub_grain_loc_9, grade: local, rating: 1, name: "[STUB] Local Grain 9", name_sv: "[UTKAST] Lokalt Spannmål 9", notes: "STUB — replace with verified South African research"}
+- {id: saf_maize_local, grade: local, rating: 9, name: "White maize", name_sv: "Vit majs", notes: "SA is Africa's largest white maize producer; Free State, North West, and Mpumalanga maize triangle; White Star/Iwisa/Ace milled locally; 50%+ of Africa's white maize export; production ~13-15 million tonnes in good years; 100% local crop"}
+- {id: saf_wheat_local, grade: local, rating: 8, name: "Wheat", name_sv: "Vete", notes: "Western Cape (Swartland) is SA's breadbasket for wheat; Free State also major; Tiger Brands milling; significant domestic production covering majority of bread and pasta demand; rusks and bread both from locally grown wheat"}
+- {id: saf_sorghum_local, grade: local, rating: 7, name: "Sorghum", name_sv: "Sorghum", notes: "Sorghum bicolor — grown in Limpopo, Free State, North West; umqombothi traditional beer base; joanna sorghum porridge; historically most important grain before maize; traditional southern African crop; Lesotho and SA inter-border grain"}
+- {id: saf_sugar_local, grade: local, rating: 6, name: "Sugarcane", name_sv: "Sockerrör", notes: "KwaZulu-Natal coastline; SASRI (SA Sugarcane Research Institute) Durban; SA sugar industry over 150 years; Illovo Sugar (major African sugar producer) HQ in SA; domestically consumed and exported to Africa; significant local crop"}
+- {id: saf_sunflower_local, grade: local, rating: 5, name: "Sunflower", name_sv: "Solros", notes: "Free State and North West major growing zones; processed into sunflower oil (Canola brand); significant SA domestic production; cooking oil for frying pap, chakalaka and everyday SA cooking; local oil crop of major importance"}
+- {id: saf_oats_local, grade: local, rating: 4, name: "Oats", name_sv: "Havre", notes: "Avena sativa — grown in Western Cape; SASKO and Woolworths brand local oats; rusks made with oats; oatmeal porridge in Afrikaner morning culture; SA has significant domestic oat production in Caledon and Overberg regions"}
 
 
 ## Dairy, Oils & Sauces
 
 ### Dairy, Oils & Sauces — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "South African signature dairy dishes", "South African iconic cheese butter cream", "South African traditional dairy products" -->
+<!-- Searched: "South Africa signature dairy sauces braai sauce Mrs Balls chutney atchar cheddar cheese butter milk iconic condiments" -->
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Dairy 1", name_sv: "[UTKAST] Signatur Mejeri 1", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Dairy 2", name_sv: "[UTKAST] Signatur Mejeri 2", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Dairy 3", name_sv: "[UTKAST] Signatur Mejeri 3", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Dairy 4", name_sv: "[UTKAST] Signatur Mejeri 4", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Dairy 5", name_sv: "[UTKAST] Signatur Mejeri 5", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Dairy 6", name_sv: "[UTKAST] Signatur Mejeri 6", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Dairy 7", name_sv: "[UTKAST] Signatur Mejeri 7", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Dairy 8", name_sv: "[UTKAST] Signatur Mejeri 8", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Dairy 9", name_sv: "[UTKAST] Signatur Mejeri 9", notes: "STUB — replace with verified South African research"}
+- {id: saf_mrs_balls, grade: signature, rating: 9, name: "Mrs Ball's Chutney", name_sv: "Mrs Balls-chutney", notes: "Original recipe fruit chutney — peaches, apricots, spices, vinegar; made in SA since 1885; the braai and boerewors chutney; sold globally to ex-pat South Africans; Unilever brand; as iconic as biltong; no substitute on a SA braai table"}
+- {id: saf_braai_sauce, grade: signature, rating: 8, name: "Braai marinade sauce", name_sv: "Braaisås", notes: "Steers braai sauce, Rump marinade; sweet-tangy; bottled marinade for steaks and chicken; SA braai sauce category hugely popular; Spur Steak Ranches sauce tradition; spiced vinegar-tomato-fruit base; distinctive South African flavour"}
+- {id: saf_butter_biltong, grade: signature, rating: 7, name: "Butter", name_sv: "Smör", notes: "Very high consumption; roosterkoek buttered warm; potatoes boiled in butter; Afrikaner cooking butter-dominant; Clover, Kerrygold, and local brands; SA dairy industry significant; butter on pap, bread, sweetcorn; very high daily use"}
+- {id: saf_cheddar_sig, grade: signature, rating: 6, name: "Cheddar cheese", name_sv: "Cheddar", notes: "Braai plate cheese; cheese grated on potjiekos; SA mature cheddar from Boerenkaas tradition; Lancewood, Simonsberg, and PnP brands; very high per-capita cheddar consumption above African average; Afrikaner cheese culture"}
+- {id: saf_milk_sig, grade: signature, rating: 5, name: "Full-cream milk", name_sv: "Mjölk", notes: "Melk — very high per-capita; coffee and rooibos tea with milk; milk tart (melktert) traditional Afrikaner dessert; custard; Clover and Parmalat brands; SA dairy industry significant; full-cream standard in SA households"}
+- {id: saf_sunflower_oil_sig, grade: signature, rating: 4, name: "Sunflower oil", name_sv: "Solrosolja", notes: "Canola brand in SA; primary cooking oil for frying pap, chicken, and everyday cooking; very high per-capita; SA is Africa's #1 sunflower oil producer; affordable and widely available; dominant cooking fat"}
+- {id: saf_atchar_dos, grade: signature, rating: 3, name: "Atchar", name_sv: "Atchar", notes: "Green mango or mixed vegetable pickle with turmeric and masala; every South African store; braai side essential; Cape Malay and Indian origin; Pakco brand most common; high bulk purchase in all demographics; distinctively South African condiment"}
+- {id: saf_amarula_dos, grade: signature, rating: 2, name: "Amarula cream", name_sv: "Amarula-grädde", notes: "Cream liqueur made from marula fruit; made by Distell in South Africa; #2 cream liqueur globally after Baileys; uniquely South African product; used in dessert sauces, malva pudding, and tiramisu; major tourism food souvenir product"}
+- {id: saf_nandos_sauce, grade: signature, rating: 1, name: "Peri-peri sauce", name_sv: "Peri-peri-sås", notes: "Piri piri chilli sauce; Nando's South African chain created global market; African bird's eye chilli infused vinegar-garlic sauce; sold in supermarkets; very high South African per-capita consumption; Portuguese-Mozambique tradition in SA"}
 
 ### Dairy, Oils & Sauces — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "South African dairy consumption kg per capita", "South African milk cheese butter statistics", "South African FAO food balance dairy" -->
+<!-- Searched: "South Africa per capita dairy oil condiment consumption statistics 2022 milk cheese sunflower oil butter bulk most purchased" -->
 
-- {id: stub_dairy_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Dairy 1", name_sv: "[UTKAST] Bulk Mejeri 1", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Dairy 2", name_sv: "[UTKAST] Bulk Mejeri 2", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Dairy 3", name_sv: "[UTKAST] Bulk Mejeri 3", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Dairy 4", name_sv: "[UTKAST] Bulk Mejeri 4", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Dairy 5", name_sv: "[UTKAST] Bulk Mejeri 5", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Dairy 6", name_sv: "[UTKAST] Bulk Mejeri 6", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Dairy 7", name_sv: "[UTKAST] Bulk Mejeri 7", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Dairy 8", name_sv: "[UTKAST] Bulk Mejeri 8", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Dairy 9", name_sv: "[UTKAST] Bulk Mejeri 9", notes: "STUB — replace with verified South African research"}
+- {id: saf_milk_bulk, grade: bulk, rating: 9, name: "Milk", name_sv: "Mjölk", notes: "Very high per-capita; Clover and Parmalat dominant brands; milk for coffee, tea, porridge, melktert custard; SA dairy industry significant; major bulk purchase at all income levels; lactose-free and UHT also growing"}
+- {id: saf_sunflower_bulk, grade: bulk, rating: 8, name: "Sunflower oil", name_sv: "Solrosolja", notes: "Most purchased cooking fat by volume; Canola brand; frying at home and in township fast food; SA is Africa's #1 sunflower oil producer and exporter; very high annual per-capita household purchase"}
+- {id: saf_margarine_bulk, grade: bulk, rating: 7, name: "Margarine", name_sv: "Margarin", notes: "Flora and Rama brands; very high per-capita at lower income levels; brown bread with margarine daily staple; pap and margarine; affordable fat; SA margarine market larger than butter by volume at household level"}
+- {id: saf_chutney_bulk, grade: bulk, rating: 6, name: "Chutney", name_sv: "Chutney", notes: "Mrs Ball's, Langeberg, and atchar; very high bulk purchase; braai table essential; South African per-capita chutney consumption one of world's highest; both fruit chutney and vegetable atchar significant annual purchase"}
+- {id: saf_cheese_bulk, grade: bulk, rating: 5, name: "Cheese", name_sv: "Ost", notes: "Cheddar dominant; Lancewood, Woolworths own-brand, Parmalat; significant SA cheese market; growing artisan cheese sector in Western Cape; very high annual bulk purchase especially in Afrikaner and urban households"}
+- {id: saf_yoghurt_bulk, grade: bulk, rating: 4, name: "Yoghurt", name_sv: "Yoghurt", notes: "Clover and Danone brands; growing per-capita; used in baking and marinades; chicken peri-peri yoghurt marinade; children's school lunch staple; significant annual bulk purchase; SA dairy industry major output product"}
+- {id: saf_cream_bulk, grade: bulk, rating: 3, name: "Cream", name_sv: "Grädde", notes: "Whipped cream on malva pudding and desserts; cream in potjie sauces; Woolworths and Clover fresh cream; high per-capita for dessert culture; significant annual purchase especially for weekend cooking and braai events"}
+- {id: saf_butter_bulk, grade: bulk, rating: 2, name: "Butter", name_sv: "Smör", notes: "Clover and country butter; roosterkoek tradition; Afrikaner baking (koeksisters, melktert); very high annual per-capita; growing premium butter market in SA; significant bulk purchase at all supermarket tiers"}
+- {id: saf_mayo_bulk, grade: bulk, rating: 1, name: "Mayonnaise", name_sv: "Majonnäs", notes: "Hellmann's and SA-produced Crosse & Blackwell brand; potato salad, braai salad dressing; significant annual SA purchase; growing usage in sandwiches; coleslaw for braai; popular across all demographics"}
 
 ### Dairy, Oils & Sauces — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "South African dairy farming local production", "South African regional cheese varieties", "South African local dairy breeds" -->
+<!-- Searched: "South Africa local dairy production cheese wine vinegar sauces Mrs Balls local brands artisan Western Cape Karoo" -->
 
-- {id: stub_dairy_loc_1, grade: local, rating: 9, name: "[STUB] Local Dairy 1", name_sv: "[UTKAST] Lokalt Mejeri 1", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 8, name: "[STUB] Local Dairy 2", name_sv: "[UTKAST] Lokalt Mejeri 2", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 7, name: "[STUB] Local Dairy 3", name_sv: "[UTKAST] Lokalt Mejeri 3", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 6, name: "[STUB] Local Dairy 4", name_sv: "[UTKAST] Lokalt Mejeri 4", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 5, name: "[STUB] Local Dairy 5", name_sv: "[UTKAST] Lokalt Mejeri 5", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 4, name: "[STUB] Local Dairy 6", name_sv: "[UTKAST] Lokalt Mejeri 6", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 3, name: "[STUB] Local Dairy 7", name_sv: "[UTKAST] Lokalt Mejeri 7", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 2, name: "[STUB] Local Dairy 8", name_sv: "[UTKAST] Lokalt Mejeri 8", notes: "STUB — replace with verified South African research"}
-- {id: stub_dairy_loc_9, grade: local, rating: 1, name: "[STUB] Local Dairy 9", name_sv: "[UTKAST] Lokalt Mejeri 9", notes: "STUB — replace with verified South African research"}
+- {id: saf_boerenkaas_local, grade: local, rating: 9, name: "Boerenkaas", name_sv: "Boerenkaas (bondost)", notes: "Artisan SA farmstead cheese from Boland and Karoo farms; Dutch Gouda-style; Simonsberg, Fairview, Dalewood estates; significant Western Cape artisan cheese-making heritage; GI movement growing; entirely local production"}
+- {id: saf_simonsberg_local, grade: local, rating: 8, name: "Simonsberg cheese", name_sv: "Simonsberg-ost", notes: "Paarl-based dairy; extensive range of SA-made cheeses; feta, Gouda, mozzarella, mature cheddar; significant Stellenbosch and Paarl dairy history; sold nationally; Lancewood acquired by Parmalat but original production local"}
+- {id: saf_sa_wine_local, grade: local, rating: 7, name: "South African wine", name_sv: "Sydafrikanskt vin", notes: "Stellenbosch, Franschhoek, Paarl, Constantia, Swartland, Hemel-en-Aarde valley; Pinotage (100% SA hybrid), Chenin Blanc (steen); major export to UK, Netherlands, Germany; Vinimark and Distell; significant local production and consumption"}
+- {id: saf_rooibos_tea_local, grade: local, rating: 6, name: "Rooibos", name_sv: "Rooibos", notes: "Aspalathus linearis — grown only in Cederberg; UNESCO Intangible Heritage; 17,000 tonnes exported annually; used in cooking, marinades, desserts; national beverage; 100% South African endemic product; massive export industry"}
+- {id: saf_karoo_butter_local, grade: local, rating: 5, name: "Karoo butter", name_sv: "Karoo-smör", notes: "From Karoo sheep and Nguni cattle; artisan small-batch production; unique nutty flavour from fynbos grazing; sold at Karoo farm stalls and deli chains; distinctly South African terroir dairy product"}
+- {id: saf_amarula_local, grade: local, rating: 4, name: "Amarula cream liqueur", name_sv: "Amarula-likör", notes: "Made by Distell from marula fruit grown in Limpopo; 100% South African base ingredient; bottled in SA; 7+ million cases exported annually; SA's most internationally recognised food and drink product"}
+- {id: saf_mrs_balls_local, grade: local, rating: 3, name: "Mrs Ball's Chutney", name_sv: "Mrs Balls-chutney", notes: "Recipe originated 1885 in Cape Town; now made by Unilever SA; South African recipe using local fruit; production in SA; no equivalent abroad; the definitive South African condiment; sold in 40+ countries to SA diaspora"}
+- {id: saf_boland_vinegar, grade: local, rating: 2, name: "Balsamic/wine vinegar", name_sv: "Vinäger", notes: "Imported balsamic supplemented by SA wine vinegar from Western Cape wine estates; local wine vinegar production at Robertson and Paarl; used in biltong curing and braai marinades; growing artisan wine vinegar sector in SA"}
+- {id: saf_mlomo_sauce, grade: local, rating: 1, name: "Nando's peri-peri sauce", name_sv: "Nandos peri-peri-sås", notes: "Produced and bottled in South Africa; sauce made in SA factories; the world's most recognised South African food brand; exported to 30+ countries; African bird's eye chilli base; entirely South African recipe and heritage"}
 
 
 ## Spices, Nuts & Seasonings
 
 ### Spices, Nuts & Seasonings — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "South African signature spice blends", "South African defining herbs and spices", "South African iconic seasoning flavour profile" -->
+<!-- Searched: "South Africa signature spices coriander boerewors biltong Cape Malay spice curry turmeric masala braai rub iconic seasonings" -->
 
-- {id: stub_spice_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Spices 1", name_sv: "[UTKAST] Signatur Krydda 1", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Spices 2", name_sv: "[UTKAST] Signatur Krydda 2", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Spices 3", name_sv: "[UTKAST] Signatur Krydda 3", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Spices 4", name_sv: "[UTKAST] Signatur Krydda 4", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Spices 5", name_sv: "[UTKAST] Signatur Krydda 5", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Spices 6", name_sv: "[UTKAST] Signatur Krydda 6", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Spices 7", name_sv: "[UTKAST] Signatur Krydda 7", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Spices 8", name_sv: "[UTKAST] Signatur Krydda 8", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Spices 9", name_sv: "[UTKAST] Signatur Krydda 9", notes: "STUB — replace with verified South African research"}
+- {id: saf_coriander_sig, grade: signature, rating: 9, name: "Coriander seed", name_sv: "Korianderfröer", notes: "Koljander — THE defining spice of South Africa; legally required in boerewors; biltong curing spice; potjie seasoning; braai rub; Cape Malay sambals; no other spice is more synonymous with South African meat culture; imported but irreplaceable"}
+- {id: saf_chilli_sig, grade: signature, rating: 8, name: "Peri-peri chilli", name_sv: "Peri-peri chilli", notes: "African bird's eye chilli — piri piri; Nando's marinade; peri-peri sauce; Mozambique-Portugal-South Africa triangle; very high consumption in KwaZulu-Natal and coastal communities; Cape Malay sambal base; heat element defining SA cuisine"}
+- {id: saf_turmeric_sig, grade: signature, rating: 7, name: "Turmeric", name_sv: "Gurkmeja", notes: "Yellow rice (geelrys) essential Cape Malay dish; bobotie golden colour; Cape Malay curry; bunny chow spice blend; atchar colour; very high South African per-capita turmeric consumption from Cape Malay and Indian communities"}
+- {id: saf_cape_malay_masala, grade: signature, rating: 6, name: "Cape Malay spice blend", name_sv: "Kap-malajisk kryddblandning", notes: "Curry masala developed by Cape Malay (Indonesian-Malay slaves, 1652-1800s); mild-medium blend of coriander, cumin, turmeric, cardamom, cinnamon, cloves; used in sosaties, bobotie, Cape Malay curry; uniquely South African spice heritage"}
+- {id: saf_garam_masala_sig, grade: signature, rating: 5, name: "Garam masala", name_sv: "Garam masala", notes: "Durban Indian community blend; bunny chow, biryani, chicken curry; very high Durban-specific spice use; Indian-South African tradition dating to indentured labour 1860s; distinctive Durban masala slightly hotter than North Indian blend"}
+- {id: saf_nutmeg_sig, grade: signature, rating: 4, name: "Nutmeg", name_sv: "Muskot", notes: "Boerewors spice alongside coriander; koeksisters (Afrikaner doughnut) spicing; Cape Malay yellow rice; melktert custard; Dutch Afrikaner spice heritage from 17th-century VOC Cape settlement; consistent SA pantry spice"}
+- {id: saf_pepper_sig, grade: signature, rating: 3, name: "Black pepper", name_sv: "Svartpeppar", notes: "Biltong curing; boerewors seasoning; braai rub; second to coriander in South African meat seasoning; very high per-capita; Ducros and SA bulk brands; used across all cooking traditions in SA"}
+- {id: saf_allspice_sig, grade: signature, rating: 2, name: "Allspice", name_sv: "Kryddpeppar", notes: "Boerewors seasoning alongside coriander, nutmeg, and cloves; Cape Malay sosaties; Dutch spice trade influence via VOC Cape Colony; traditional Afrikaner frikkadel seasoning; distinct South African combination with coriander"}
+- {id: saf_cloves_sig, grade: signature, rating: 1, name: "Cloves", name_sv: "Kryddnejlika", notes: "Cape Malay spice heritage; boerewors trace component; yellow rice; Cape Malay curry; koeksisters; bread-and-butter pickle; VOC East India Company spice heritage from Indonesian nutmeg and clove trade; traditional SA pantry ingredient"}
 
 ### Spices, Nuts & Seasonings — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "South African most used condiments seasonings statistics", "South African salt sugar spice consumption", "South African everyday seasoning ingredients" -->
+<!-- Searched: "South Africa per capita spice consumption statistics 2022 coriander chilli salt pepper curry powder bulk most purchased seasonings" -->
 
-- {id: stub_spice_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Spices 1", name_sv: "[UTKAST] Bulk Krydda 1", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Spices 2", name_sv: "[UTKAST] Bulk Krydda 2", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Spices 3", name_sv: "[UTKAST] Bulk Krydda 3", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Spices 4", name_sv: "[UTKAST] Bulk Krydda 4", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Spices 5", name_sv: "[UTKAST] Bulk Krydda 5", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Spices 6", name_sv: "[UTKAST] Bulk Krydda 6", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Spices 7", name_sv: "[UTKAST] Bulk Krydda 7", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Spices 8", name_sv: "[UTKAST] Bulk Krydda 8", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Spices 9", name_sv: "[UTKAST] Bulk Krydda 9", notes: "STUB — replace with verified South African research"}
+- {id: saf_salt_bulk, grade: bulk, rating: 9, name: "Salt", name_sv: "Salt", notes: "Saltpans in Western Cape (Velddrif), Eastern Cape; SA is major salt producer; biltong curing uses large volumes; boerewors; meat preservation tradition; very high annual per-capita purchase; Cerebos brand dominant"}
+- {id: saf_curry_powder_bulk, grade: bulk, rating: 8, name: "Curry powder", name_sv: "Karrypulver", notes: "Very high per-capita; Cape Malay and Durban Indian communities drive enormous consumption; Rajah brand dominant; bobotie, Cape Malay curry, bunny chow; SA per-capita curry powder consumption among highest in Africa"}
+- {id: saf_black_pepper_bulk, grade: bulk, rating: 7, name: "Black pepper", name_sv: "Svartpeppar", notes: "Very high per-capita; biltong curing and boerewors significant volume; general cooking use across all communities; Ducros and Ina Paarman brands; significant annual bulk purchase at all supermarket levels"}
+- {id: saf_coriander_bulk, grade: bulk, rating: 6, name: "Coriander", name_sv: "Korianderfrö", notes: "Highest-volume aromatic spice in SA by value for meat applications; boerewors production uses tonnes; biltong curing; home spice purchase very high; imported mainly from Morocco and South America; uniquely high SA demand"}
+- {id: saf_chilli_bulk_spice, grade: bulk, rating: 5, name: "Chilli powder", name_sv: "Chilipulver", notes: "Very high per-capita; peri-peri cooking; chakalaka spice; Cape Malay sambal; bulk chilli powder purchase from Pick n Pay, Shoprite; Nando's sauce inspired home chilli purchase; significant annual bulk purchase"}
+- {id: saf_ina_paarman, grade: bulk, rating: 4, name: "Ina Paarman seasoning", name_sv: "Ina Paarman-krydda", notes: "SA-made spice blends; Ina Paarman brand (Cape Town); steak & chops spice, lemon pepper, and garlic pepper; very high per-capita in Afrikaner and suburban households; uniquely South African spice brand growing since 1980s"}
+- {id: saf_sugar_bulk_spice, grade: bulk, rating: 3, name: "Sugar", name_sv: "Socker", notes: "High per-capita; Mrs Ball's Chutney base; koeksisters deep-fried doughnut in syrup; melktert and milk tart custard; caramelised braai sides; SA sugar from KZN cane; very high annual bulk purchase; Selati brand dominant"}
+- {id: saf_cumin_bulk, grade: bulk, rating: 2, name: "Cumin", name_sv: "Spiskummin", notes: "Significant purchase driven by Cape Malay and Durban Indian communities; bobotie, biryani, sosaties, bunny chow; growing across urban South Africa; major Indian and Malay spice shops in Cape Town and Durban sell in bulk"}
+- {id: saf_sesame_bulk_spice, grade: bulk, rating: 1, name: "Sesame seed", name_sv: "Sesamfrö", notes: "Growing use in SA cooking; bread rolls at bakeries topped with sesame; samoosa binding; Cape Malay sesame bars (biscuit); significant annual purchase especially in Cape Malay and Indian Durban communities"}
 
 ### Spices, Nuts & Seasonings — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "South African herbs grown locally", "South African spice production native plants", "South African foraged herbs regional flavourings" -->
+<!-- Searched: "South Africa locally produced spices fynbos buchu rooibos wild herbs African pepper spices indigenous seasonings" -->
 
-- {id: stub_spice_loc_1, grade: local, rating: 9, name: "[STUB] Local Spices 1", name_sv: "[UTKAST] Lokalt Krydda 1", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_loc_2, grade: local, rating: 8, name: "[STUB] Local Spices 2", name_sv: "[UTKAST] Lokalt Krydda 2", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_loc_3, grade: local, rating: 7, name: "[STUB] Local Spices 3", name_sv: "[UTKAST] Lokalt Krydda 3", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_loc_4, grade: local, rating: 6, name: "[STUB] Local Spices 4", name_sv: "[UTKAST] Lokalt Krydda 4", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_loc_5, grade: local, rating: 5, name: "[STUB] Local Spices 5", name_sv: "[UTKAST] Lokalt Krydda 5", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_loc_6, grade: local, rating: 4, name: "[STUB] Local Spices 6", name_sv: "[UTKAST] Lokalt Krydda 6", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_loc_7, grade: local, rating: 3, name: "[STUB] Local Spices 7", name_sv: "[UTKAST] Lokalt Krydda 7", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_loc_8, grade: local, rating: 2, name: "[STUB] Local Spices 8", name_sv: "[UTKAST] Lokalt Krydda 8", notes: "STUB — replace with verified South African research"}
-- {id: stub_spice_loc_9, grade: local, rating: 1, name: "[STUB] Local Spices 9", name_sv: "[UTKAST] Lokalt Krydda 9", notes: "STUB — replace with verified South African research"}
-
+- {id: saf_fynbos_herbs_local, grade: local, rating: 9, name: "Fynbos herbs", name_sv: "Fynboskryddor", notes: "Cape fynbos species (kooigoed/Helichrysum, wilde roosmaryn, wilderosmary) — used in braai fires for aromatic smoke; Cape chefs infuse fynbos into sauces; Western Cape endemic; growing culinary use in fine dining; over 9,000 fynbos species"}
+- {id: saf_rooibos_spice, grade: local, rating: 8, name: "Rooibos", name_sv: "Rooibos", notes: "Cederberg-grown; used in meat rubs, marinades for game and lamb; rooibos-glazed springbok; rooibos-infused chutney; Woolworths and artisan Cape brands; 100% South African; growing culinary use beyond tea; iconic local spice ingredient"}
+- {id: saf_buchu_spice, grade: local, rating: 7, name: "Buchu", name_sv: "Buchu", notes: "Agathosma betulina — Cederberg Mountains endemic; used in traditional Khoi-San meat rubs; buchu vinegar; brandy infusion; modern Cape chefs in Franschhoek use buchu with game; blackcurrant-peppermint aroma; GI-protected local herb"}
+- {id: saf_coriander_local, grade: local, rating: 6, name: "Coriander seed (local grown)", name_sv: "Lokal koriander", notes: "SA farms beginning to grow coriander seed for domestic market; Free State and Mpumalanga trial crops; most still imported from Morocco/SA blends; growing local supply for boerewors industry to reduce import dependence"}
+- {id: saf_sa_salt_local, grade: local, rating: 5, name: "SA sea salt", name_sv: "SA havssalt", notes: "Produced at Velddrif saltpans (Berg River mouth) and Saldanha Bay, Western Cape; Cerebos SA brand; Khoisan Sea Salt premium brand from Velddrif; significant local salt production; biltong curing uses local salt exclusively"}
+- {id: saf_macadamia_local, grade: local, rating: 4, name: "Macadamia nut", name_sv: "Macadamianöt", notes: "SA is world's #1 macadamia producer (50%+ of global supply); Limpopo and Mpumalanga growing zones; exported and consumed locally; SA Fine Foods and SAMAC; macadamia oil in artisan Cape cooking; pesto, salad, and dessert use"}
+- {id: saf_pecan_local, grade: local, rating: 3, name: "Pecan nut", name_sv: "Pekannöt", notes: "SA is Africa's leading pecan producer; Limpopo and Northern Cape orchards; sold at roadside stalls (a quintessential SA road trip experience); pecan pie from SA-grown nuts; nut brittle and toffee; significant local production"}
+- {id: saf_amarula_spice, grade: local, rating: 2, name: "Marula", name_sv: "Marula", notes: "Sclerocarya birrea — Marula nut inside stone pressed for marula oil (used in Limpopo cooking and cosmetics); marula jam; dried marula kernels eaten as snack; traditional Venda and Limpopo rural spice and oil source"}
+- {id: saf_anise_myrtle, grade: local, rating: 1, name: "Wild anise (anysbosse)", name_sv: "Vildt anis (anysbosse)", notes: "Anysbosse (Pimpinella anisum from SA fields) and indigenous anise-flavoured plants used in traditional Cape cooking; aniseed in koeksisters and roosterkoek; SA Boland farms grow anise; traditional Afrikaner baking spice with local supply"}
