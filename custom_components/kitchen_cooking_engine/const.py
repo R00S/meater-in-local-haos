@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 02 May 2026, 14:00 UTC
-Last Change: v0.8.2.32 - Fix turkish.md and colombian.md per IMPROVE_CUISINE_DATA.md
+Last Updated: 06 May 2026, 22:43 UTC
+Last Change: v0.9.0.0 - Fix MEATER cook errors: add missing doneness validators, fix recommended_doneness mismatches, cuisine protein tree lighting, language-aware tooltips
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "580"
+PANEL_VERSION = "600"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

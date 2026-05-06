@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.8.2.31 · Home Assistant 2024.1.0+
+> **Version:** 0.9.0.0 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -892,7 +892,8 @@ The ingredient screen has several sections:
 - **Ingredient tooltips** — hover over any ingredient chip (desktop) or long-press it
   (touch/mobile) to see a brief note about that ingredient — for example its flavour
   profile, typical use in the cuisine, or a usage tip. The tooltip appears after a
-  short delay and disappears when you move away or release.
+  short delay and disappears when you move away or release. Tooltips are shown in
+  the GUI language you have selected on the Welcome screen.
 
 Staple ingredients (salt, pepper, oil, etc.) are assumed available and listed below the grid
 for reference.

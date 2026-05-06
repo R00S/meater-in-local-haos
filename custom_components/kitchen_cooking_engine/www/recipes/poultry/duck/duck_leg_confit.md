@@ -8,7 +8,7 @@ meat: duck
 cut_type: Duck
 usda_safe_c: 74
 usda_safe_f: 165
-recommended_doneness: well_done
+recommended_doneness: confit
 methods:
 - oven_roast
 doneness:

@@ -8,7 +8,7 @@ meat: pig
 cut_type: Ham
 usda_safe_c: 60
 usda_safe_f: 140
-recommended_doneness: well_done
+recommended_doneness: heated_through
 methods:
 - oven_roast
 doneness:

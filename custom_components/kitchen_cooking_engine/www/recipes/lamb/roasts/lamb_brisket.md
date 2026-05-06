@@ -8,7 +8,7 @@ meat: lamb
 cut_type: Roasts
 usda_safe_c: 63
 usda_safe_f: 145
-recommended_doneness: well_done
+recommended_doneness: pulled
 methods:
 - braise
 - oven_roast

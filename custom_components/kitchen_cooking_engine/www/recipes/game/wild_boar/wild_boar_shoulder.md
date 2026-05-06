@@ -8,7 +8,7 @@ meat: wild_boar
 cut_type: Wild Boar
 usda_safe_c: 71
 usda_safe_f: 160
-recommended_doneness: well_done
+recommended_doneness: pulled
 methods:
 - braise
 - oven_roast

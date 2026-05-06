@@ -42,6 +42,11 @@ start_cook:
             - "crispy"
             - "charred"
             - "done"
+            - "thigh_optimal"
+            - "thigh_rendered"
+            - "leg_rendered"
+            - "confit"
+            - "just_cooked"
     cooking_method:
       name: Cooking Method
       description: The cooking method to use. Required.

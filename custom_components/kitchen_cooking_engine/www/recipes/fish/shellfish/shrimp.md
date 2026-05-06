@@ -8,7 +8,7 @@ meat: shellfish
 cut_type: Shellfish
 usda_safe_c: 63
 usda_safe_f: 145
-recommended_doneness: well_done
+recommended_doneness: just_cooked
 methods:
 - pan_fry
 doneness:

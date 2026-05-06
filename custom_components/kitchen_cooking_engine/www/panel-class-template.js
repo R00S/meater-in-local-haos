@@ -6065,9 +6065,17 @@ class KitchenCookingPanel extends LitElement {
       }
       if (!ings) continue;
       for (const ing of ings) {
-        const sc = proteinToSubcat[ing.id];
+        const sc = proteinToSubcat[ing.id] || ing.subcat;
         if (!sc) continue;
-        cuisineCommonProteinIds.add(ing.id);
+        // Populate cuisineCommonProteinIds with the canonical species keyword that
+        // prefix-matches recipe tree cut IDs (e.g. "cod" matches "cod_fillet").
+        // • For generic IDs already in AI_PROTEIN_TO_SUBCAT (e.g. "salmon", "beef"),
+        //   use ing.id directly — it is already the right prefix key.
+        // • For cuisine-specific IDs (e.g. "nor_prot_sig_cod"), the generator emits
+        //   ing.base_id ("cod") extracted from the name-pattern match — use that.
+        // This ensures cut badges light up even when cuisine files use scoped IDs.
+        const matchKey = proteinToSubcat[ing.id] ? ing.id : (ing.base_id || null);
+        if (matchKey) cuisineCommonProteinIds.add(matchKey);
         if (!subcatGrades[sc]) subcatGrades[sc] = new Set();
         subcatGrades[sc].add(ing.grade || 'bulk');
       }
@@ -6292,7 +6300,9 @@ class KitchenCookingPanel extends LitElement {
   _renderIngredientCheckbox(ingredient) {
     const displayName = this._ingDisplayName(ingredient);
     const valueName = (typeof ingredient === 'string') ? ingredient : (ingredient.name || ingredient);
-    const notes = (ingredient && typeof ingredient === 'object') ? ingredient.notes : null;
+    const notes = (ingredient && typeof ingredient === 'object')
+      ? (this._language === 'sv' ? (ingredient.notes_sv || ingredient.notes) : (ingredient.notes || ingredient.notes_sv))
+      : null;
     const ingId = (ingredient && typeof ingredient === 'object') ? ingredient.id : valueName;
 
     const checkbox = html`
