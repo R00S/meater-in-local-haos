@@ -43,3 +43,10 @@ from the cuisine `.md` file is shown as a tooltip bubble.
 - **IMPROVE_CUISINE_DATA.md**: added Trap 14 (cross-grade duplication — same ingredient ID appears in multiple grades), Trap 15 (disguised cross-grade duplication — same concept with different IDs), root-cause analysis of common agent failures and a pre-commit conformance checklist.
 - Version bumped to 0.8.2.22, PANEL_VERSION 511 → 512.
 - User guide updated: version header + tooltip feature documented in section 7.2.
+
+### 2026-05-06 (session 3) — Cuisine research: polynesian, portuguese
+- Researched **polynesian.md**: research_done 0 → 1; 114 items across 15 grade pairs (Proteins ×3, Produce ×3, Grains ×3, Dairy ×3, Spices ×3). Applied all IMPROVE_CUISINE_DATA.md naming conventions.
+- Researched **portuguese.md**: research_done 0 → 1; 114 items across 15 grade pairs. Applied all naming conventions.
+- Generator run after each file; PANEL_VERSION auto-incremented (→ 544).
+- Version bumped to 0.8.2.31 (CHORES).
+- Branch timeline updated; USER_GUIDE.md version header updated to 0.8.2.31.

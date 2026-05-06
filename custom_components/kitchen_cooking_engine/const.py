@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 02 May 2026, 14:00 UTC
-Last Change: v0.8.2.30 - Research Jamaican cuisine (109 items, 15 pairs)
+Last Change: v0.8.2.31 - Cuisine research: polynesian, portuguese
 """
 
 DOMAIN = "kitchen_cooking_engine"
