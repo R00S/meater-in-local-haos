@@ -116,6 +116,124 @@ def _extract_recipe_titles(content):
     return titles
 
 
+# ---------------------------------------------------------------------------
+# Protein name → subcat patterns used by build_cuisine_data().
+#
+# When a cuisine ingredient has cat="p" and its `id` is not a well-known key
+# in PROTEIN_TO_SUBCAT, we try to infer the tree subcat from the ingredient's
+# `name` field.  This lets cuisine files use file-specific IDs (e.g.
+# ua_pork_sig, vn_beef_sig) without breaking protein tree highlighting.
+#
+# Rules (ordered — first match wins, case-insensitive):
+#   • Game patterns come first to catch "wild boar" before the plain "boar" rule
+#   • Generic "fish" is last (catches any remaining fish/seafood names)
+# ---------------------------------------------------------------------------
+_PROTEIN_NAME_PATTERNS = [
+    # Game
+    (r'wild[\s\-]?boar',   'game'),
+    (r'\bvenison\b',       'game'),
+    (r'\bmoose\b',         'game'),
+    (r'\belk\b',           'game'),
+    (r'\breindeer\b',      'game'),
+    (r'\bcaribou\b',       'game'),
+    (r'\bdeer\b',          'game'),
+    (r'\bhare\b',          'game'),
+    (r'\bkangaroo\b',      'game'),
+    (r'\brabbit\b',        'game'),
+    (r'\bboar\b',          'game'),
+    (r'\bbushmeat\b',      'game'),
+    (r'\bgame\b',          'game'),    # "Wild game", "Game meat", etc.
+    (r'\blamb\b',          'lamb'),
+    (r'\bmutton\b',        'lamb'),
+    (r'\bsheep\b',         'lamb'),
+    (r'\bgoat\b',          'lamb'),
+    # Beef
+    (r'\bbeef\b',          'beef'),
+    (r'\bveal\b',          'beef'),
+    (r'\bcattle\b',        'beef'),
+    (r'\box\b',            'beef'),
+    (r'\bwagyu\b',         'beef'),
+    (r'\bangus\b',         'beef'),
+    (r'\bzebu\b',          'beef'),
+    (r'\byak\b',           'beef'),
+    # Pork
+    (r'\bpork\b',          'pork'),
+    (r'\bpig\b',           'pork'),
+    (r'\bhog\b',           'pork'),
+    (r'\bsuckling\b',      'pork'),
+    (r'\blard\b',          'pork'),
+    # Poultry
+    (r'\bchicken\b',       'poultry'),
+    (r'\bturkey\b',        'poultry'),
+    (r'\bduck\b',          'poultry'),
+    (r'\bgoose\b',         'poultry'),
+    (r'\bgeese\b',         'poultry'),
+    (r'\bquail\b',         'poultry'),
+    (r'guinea\s*fowl',     'poultry'),
+    (r'\bpartridge\b',     'poultry'),
+    (r'\bpheasant\b',      'poultry'),
+    (r'\bpigeon\b',        'poultry'),
+    (r'\bsquab\b',         'poultry'),
+    (r'\bcapon\b',         'poultry'),
+    (r'\bpoussin\b',       'poultry'),
+    (r'\bmallard\b',       'poultry'),
+    # Fish & seafood (specific species / types first, generic "fish" last)
+    (r'\bsalmon\b',        'fish'),
+    (r'\btrout\b',         'fish'),
+    (r'\bherring\b',       'fish'),
+    (r'\bmackerel\b',      'fish'),
+    (r'\bsardine',         'fish'),   # sardine / sardines
+    (r'\bancho[vy]',       'fish'),   # anchovy / anchovies
+    (r'\btuna\b',          'fish'),
+    (r'\bcod\b',           'fish'),
+    (r'\bcatfish\b',       'fish'),
+    (r'\bshrimp\b',        'fish'),
+    (r'\bprawn\b',         'fish'),
+    (r'\bcrab\b',          'fish'),
+    (r'\blobster\b',       'fish'),
+    (r'\bmussel\b',        'fish'),
+    (r'\bclam\b',          'fish'),
+    (r'\boyster\b',        'fish'),
+    (r'\boctopus\b',       'fish'),
+    (r'\bsquid\b',         'fish'),
+    (r'\bcuttlefish\b',    'fish'),
+    (r'\blangoustine\b',   'fish'),
+    (r'\bcrayfish\b',      'fish'),
+    (r'\bcrawfish\b',      'fish'),
+    (r'\bscallop\b',       'fish'),
+    (r'sea\s*bass',        'fish'),
+    (r'sea\s*bream',       'fish'),
+    (r'\bsnapper\b',       'fish'),
+    (r'\bbass\b',          'fish'),
+    (r'\bbream\b',         'fish'),
+    (r'\bcarp\b',          'fish'),
+    (r'\btilapia\b',       'fish'),
+    (r'\bperch\b',         'fish'),
+    (r'\bpike\b',          'fish'),
+    (r'\bzander\b',        'fish'),
+    (r'\bpollock\b',       'fish'),
+    (r'\bhalibut\b',       'fish'),
+    (r'\bflounder\b',      'fish'),
+    (r'\bsole\b',          'fish'),
+    (r'\bhake\b',          'fish'),
+    (r'\bhaddock\b',       'fish'),
+    (r'\beel\b',           'fish'),
+    (r'\bwolffish\b',      'fish'),
+    (r'\bwhitefish\b',     'fish'),
+    (r'\bvendace\b',       'fish'),
+    (r'\bhamachi\b',       'fish'),
+    (r'\byellowtail\b',    'fish'),
+    (r'\bhamour\b',        'fish'),
+    (r'\bkingfish\b',      'fish'),
+    (r'\bbarramundi\b',    'fish'),
+    (r'\bpikeperch\b',     'fish'),
+    (r'\bsprat\b',         'fish'),
+    (r'\bgoby\b',          'fish'),
+    (r'\bfish\b',          'fish'),   # generic — must be last
+]
+_PROTEIN_NAME_RE = [(re.compile(pat, re.IGNORECASE), sc) for pat, sc in _PROTEIN_NAME_PATTERNS]
+
+
 def build_cuisine_data(base_dir):
     """Read www/cuisines/*.md KCE:CUISINE files (ground truth for the AI recipe builder).
 
@@ -286,6 +404,16 @@ def build_cuisine_data(base_dir):
                     entry["name_sv"] = item["name_sv"]
                 if item.get("notes"):
                     entry["notes"] = item["notes"]
+                # For protein entries, infer the protein-tree subcat from the
+                # ingredient name so the JS can exclude these items from the
+                # badge area and light up the correct tree button — even when
+                # the cuisine file uses a file-specific ID (e.g. ua_pork_sig)
+                # that is not a key in AI_PROTEIN_TO_SUBCAT.
+                if current_cat == "p":
+                    for _pat, _sc in _PROTEIN_NAME_RE:
+                        if _pat.search(entry["name"]):
+                            entry["subcat"] = _sc
+                            break
                 ingredients.append(entry)
 
         if ingredients:

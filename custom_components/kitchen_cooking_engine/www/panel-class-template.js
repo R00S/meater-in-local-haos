@@ -6005,7 +6005,7 @@ class KitchenCookingPanel extends LitElement {
       );
       proteinTreeIds = new Set(
         allItems
-          .filter(i => proteinToSubcat[i.id] || allSubcatCutIds.has(i.id))
+          .filter(i => proteinToSubcat[i.id] || i.subcat || allSubcatCutIds.has(i.id))
           .map(i => i.id)
       );
     } else {
@@ -6065,7 +6065,7 @@ class KitchenCookingPanel extends LitElement {
       }
       if (!ings) continue;
       for (const ing of ings) {
-        const sc = proteinToSubcat[ing.id];
+        const sc = proteinToSubcat[ing.id] || ing.subcat;
         if (!sc) continue;
         cuisineCommonProteinIds.add(ing.id);
         if (!subcatGrades[sc]) subcatGrades[sc] = new Set();
