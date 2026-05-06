@@ -25,3 +25,27 @@ Some MEATER cooks fail to start:
 ### Session 1 (2026-05-06)
 - Discovered both bugs via scan of all 164 cut files
 - Applied all fixes
+
+### Session 2 (2026-05-06) — create chicken_thigh_bone_in.md
+
+## Session start
+
+### Output 1 — Culinary group definitions (verbatim from RECIPE_COLLECTION_TOR.md)
+
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+### Output 2 — Analysis gate rule (verbatim from RECIPE_ANALYSIS_TOR.md)
+
+> Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
+
+### Output 3 — Source integrity rule (verbatim from SOURCE_SURVEY.md)
+
+> The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
+
+### Output 4 — My understanding of this file
+
+The primary task is to create a new `chicken_thigh_bone_in.md` cut overview file to the same quality standard as existing cut files. "This is not a race" means I do not guess, approximate, or shortcut — I base all temperature data on real sources, I clearly state what is and is not yet researched, and I give an honest quality score. After the overview file is created and the generator runs successfully, the session is complete; method leaf files are a separate future task.
