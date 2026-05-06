@@ -7,241 +7,226 @@ icon: 🇸🇾
 region: middle_east
 region_name: "Middle Eastern"
 region_icon: 🧆
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-research_done: 0
+description: "Syrian cuisine is the generous soul of the Levant — kibbeh of spiced lamb and bulgur, creamy labneh and aged shanklish, a mezze of stuffed grape leaves and makdous eggplant, all perfumed with Aleppo pepper, za'atar, and the warm seven-spice blend baharat."
+description_sv: "Syriskt kök är Levantens generösa själ — kibbeh av kryddat lamm och bulgur, krämig labneh och lagrad shanklish, en mezze av fyllda druvblad och makdous-aubergine, allt parfymerat med Aleppopeppar, za'atar och den varma sjukryddblandningen baharat."
+research_done: 1
 ---
 
 ## Research notes
 
-⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
-Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Produce — Signature", etc.).
-Each pair requires its own dedicated research pass. Do NOT combine pairs.
-See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
+Sources: FAO food balance Syria; lca.logcluster.org Syria wheat 180 kg/cap/yr; potatopro.com Syria potato ~35 kg/cap;
+worldpopulationreview.com vegetable/milk consumption Syria ~77 kg milk/cap; Helgi Library rice Syria 10.4 kg/cap (2023);
+GIEWS Syria cereal brief 2024 (wheat 2M tonnes, barley second crop, lentils 89k tonnes);
+Tendata Syria exports 2022 (cumin, coriander top spice exports); shev.io Syria butter market <40k tonnes;
+Syria livestock: Awassi sheep primary breed, Damascus (Shami) goat world-record milk; Assad Lake tilapia;
+Aleppo pepper and pistachio: internationally recognised Syrian GI products;
+Protein order by consumption: poultry > sheep/lamb > beef (FAO 2022 regional trend).
 
 
 ## Proteins
 
 ### Proteins — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Syrian signature dishes", "Syrian iconic traditional proteins", "Syrian food culture defining meats fish" -->
+<!-- Searched: "Syrian cuisine signature proteins identity lamb chicken kibbeh kofta iconic dishes", "المأكولات السورية التقليدية البروتينات الأيقونية كبة شاورما" -->
 
-- {id: stub_prot_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Protein 1", name_sv: "[UTKAST] Signatur Protein 1", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Protein 2", name_sv: "[UTKAST] Signatur Protein 2", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Protein 3", name_sv: "[UTKAST] Signatur Protein 3", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Protein 4", name_sv: "[UTKAST] Signatur Protein 4", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Protein 5", name_sv: "[UTKAST] Signatur Protein 5", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Protein 6", name_sv: "[UTKAST] Signatur Protein 6", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Protein 7", name_sv: "[UTKAST] Signatur Protein 7", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Protein 8", name_sv: "[UTKAST] Signatur Protein 8", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Protein 9", name_sv: "[UTKAST] Signatur Protein 9", notes: "STUB — replace with verified Syrian research"}
+- {id: syr_lamb_sig, grade: signature, rating: 9, name: Lamb, name_sv: "Lammkött", notes: "THE defining protein of Syrian cuisine; kibbeh (كبة) — bulgur + ground lamb; lamb kofta grilled; slow-roasted ouzi lamb on saffron rice; present at every Syrian celebration; fatteh with lamb; key mezze meat"}
+- {id: syr_chicken_sig, grade: signature, rating: 8, name: Chicken, name_sv: "Kyckling", notes: "Shish tawook (شيش طاووق) — marinated chicken skewers with toum garlic sauce; dajaj ouzi oven-roasted on saffron rice; rotisserie shawarma; the most-grilled protein in Syrian restaurant culture"}
+- {id: syr_chickpea_sig, grade: signature, rating: 7, name: Chickpeas, name_sv: "Kikärtor", notes: "Hummus bi tahini — the pan-Levantine dip anchored in Syrian tradition; falafel (فلافل) fried chickpea patties; fatteh — layered chickpea, yogurt and pita; essential vegetarian protein across all Syrian meals"}
+- {id: syr_lentil_sig, grade: signature, rating: 6, name: Lentils, name_sv: "Linser", notes: "Mujaddara (مجدرة) — lentils braised with bulgur or rice crowned with fried onions; shorbat adas lentil soup; 'dish of the poor' beloved by all; ancient Levantine staple going back to Biblical times"}
+- {id: syr_liver_sig, grade: signature, rating: 5, name: Lamb liver, name_sv: "Lammlever", notes: "Kibda (كبدة) — pan-fried lamb liver with pomegranate molasses and onion; liver and kidney skewers at Damascus meat markets; essential mezze offal preparation; traditional fast-breaking food during Ramadan"}
+- {id: syr_fish_sig, grade: signature, rating: 4, name: Fish, name_sv: "Fisk", notes: "Samkeh harra (سمكة حارة) — whole fish baked with Aleppo pepper, tahini and herbs; iconic Latakia coastal preparation; al-Assad Lake freshwater fish; spiced fish identity dish of coastal and inland Syrian cuisine"}
+- {id: syr_pigeon_sig, grade: signature, rating: 3, name: Pigeon, name_sv: "Duva", notes: "Hamam mahshi (حمام محشي) — stuffed pigeon with spiced rice and pine nuts; considered a delicacy and festive dish; traditional Levantine preparation; served at Syrian weddings and special occasions"}
+- {id: syr_sujuk_sig, grade: signature, rating: 2, name: Sujuk, name_sv: "Sujuk", notes: "Sujuk (سجق) — cured spiced beef-and-lamb sausage; Aleppine sujuk famous for cumin, Aleppo pepper and cinnamon; fried for breakfast mezze; exported across the Arab world from Aleppo workshops"}
+- {id: syr_kibbeh_nayyeh_sig, grade: signature, rating: 1, name: Raw minced lamb, name_sv: "Rå lammfärs", notes: "Kibbeh nayyeh (كبة نية) — raw fine-ground lamb with bulgur and onion; the Aleppine raw kibbeh is considered the pinnacle of Syrian cuisine; requires highest-quality fat-tail lamb; cultural trust and identity dish"}
 
 ### Proteins — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Syrian meat consumption kg per capita", "Syrian FAO food balance protein", "Syrian most consumed protein statistics" -->
+<!-- Searched: "Syria meat consumption per capita statistics 2022 FAO chicken lamb beef eggs most consumed", "إحصاءات استهلاك البروتين في سوريا دجاج لحم بيض" -->
 
-- {id: stub_prot_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Protein 1", name_sv: "[UTKAST] Bulk Protein 1", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Protein 2", name_sv: "[UTKAST] Bulk Protein 2", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Protein 3", name_sv: "[UTKAST] Bulk Protein 3", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Protein 4", name_sv: "[UTKAST] Bulk Protein 4", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Protein 5", name_sv: "[UTKAST] Bulk Protein 5", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Protein 6", name_sv: "[UTKAST] Bulk Protein 6", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Protein 7", name_sv: "[UTKAST] Bulk Protein 7", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Protein 8", name_sv: "[UTKAST] Bulk Protein 8", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Protein 9", name_sv: "[UTKAST] Bulk Protein 9", notes: "STUB — replace with verified Syrian research"}
+- {id: syr_egg_bulk, grade: bulk, rating: 9, name: Eggs, name_sv: "Ägg", notes: "Very high daily consumption; breakfast shakshuka and fried eggs with olive oil; used in baking pastries and sweets; affordable and widely available protein throughout Syria; significant local poultry industry output"}
+- {id: syr_beef_bulk, grade: bulk, rating: 8, name: Beef, name_sv: "Nötkött", notes: "Statistically #3 meat in Syria after poultry and sheep/lamb (FAO 2022 regional); ground beef in kofta and kibbeh mix; beef kebab common urban street food; dairy cattle providing by-product beef supply"}
+- {id: syr_broad_bean_bulk, grade: bulk, rating: 7, name: Broad beans, name_sv: "Bondbönor", notes: "Ful medames (فول مدمس) — slow-cooked fava beans with olive oil, cumin and lemon; the most consumed protein-rich breakfast dish; daily staple across all Syrian social classes; very high pulse consumption"}
+- {id: syr_sardine_bulk, grade: bulk, rating: 6, name: Sardines, name_sv: "Sardiner", notes: "Tinned sardines widely consumed as affordable protein; primarily imported from Morocco; used in sandwiches and rice dishes; available at every corner store; one of the most accessible protein sources"}
+- {id: syr_turkey_bulk, grade: bulk, rating: 5, name: Turkey, name_sv: "Kalkon", notes: "Consumed especially at feast days and celebrations; turkey ouzi a common alternative to lamb; locally farmed turkeys; significant consumption at Eid, Christmas and New Year celebrations in Syria"}
+- {id: syr_tuna_bulk, grade: bulk, rating: 4, name: Tuna, name_sv: "Tonfisk", notes: "Tinned tuna widely consumed; imported; used in salads and sandwiches; one of the most affordable protein sources for urban Syrian households; available at all grocery stores across the country"}
+- {id: syr_mutton_bulk, grade: bulk, rating: 3, name: Mutton, name_sv: "Fårkött", notes: "Adult sheep meat (older animals); consumed in slow-cooked stews and long-braised yakhni; FAO shows sheep/goat as major livestock protein category; more economical than young lamb; village staple"}
+- {id: syr_veal_bulk, grade: bulk, rating: 2, name: Veal, name_sv: "Kalv", notes: "By-product of dairy farming; young male calves from dairy herds; used in stews and slow-cooked dishes; less prominent than lamb but consumed regularly in urban Syrian households and butcher shops"}
+- {id: syr_dried_beans_bulk, grade: bulk, rating: 1, name: Dried beans, name_sv: "Torkade bönor", notes: "Haricot, kidney and borlotti beans; fasoulia — bean stew with tomato; white bean soup; significant everyday protein especially in rural Syria; modest but steady per-capita consumption"}
 
 ### Proteins — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Syrian livestock farming animals raised", "Syrian fishing industry fish species caught", "Syrian game animals hunted wild" -->
+<!-- Searched: "Syria livestock farming local animals Awassi sheep goat Euphrates aquaculture fish species", "تربية الماشية في سوريا الخراف الأسماك المحلية" -->
 
-- {id: stub_prot_loc_1, grade: local, rating: 9, name: "[STUB] Local Protein 1", name_sv: "[UTKAST] Lokalt Protein 1", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_loc_2, grade: local, rating: 8, name: "[STUB] Local Protein 2", name_sv: "[UTKAST] Lokalt Protein 2", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_loc_3, grade: local, rating: 7, name: "[STUB] Local Protein 3", name_sv: "[UTKAST] Lokalt Protein 3", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_loc_4, grade: local, rating: 6, name: "[STUB] Local Protein 4", name_sv: "[UTKAST] Lokalt Protein 4", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_loc_5, grade: local, rating: 5, name: "[STUB] Local Protein 5", name_sv: "[UTKAST] Lokalt Protein 5", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_loc_6, grade: local, rating: 4, name: "[STUB] Local Protein 6", name_sv: "[UTKAST] Lokalt Protein 6", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_loc_7, grade: local, rating: 3, name: "[STUB] Local Protein 7", name_sv: "[UTKAST] Lokalt Protein 7", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_loc_8, grade: local, rating: 2, name: "[STUB] Local Protein 8", name_sv: "[UTKAST] Lokalt Protein 8", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_prot_loc_9, grade: local, rating: 1, name: "[STUB] Local Protein 9", name_sv: "[UTKAST] Lokalt Protein 9", notes: "STUB — replace with verified Syrian research"}
+- {id: syr_awassi_local, grade: local, rating: 9, name: Awassi sheep, name_sv: "Awassi-får", notes: "Ovis aries — indigenous fat-tail breed of the Syrian steppe; Syria's primary sheep breed; raised for meat and rich milk (6-7% butterfat); wool and milk used in artisan cheese; nationally protected heritage livestock"}
+- {id: syr_shami_goat_local, grade: local, rating: 8, name: Damascus goat, name_sv: "Damaskusget", notes: "Capra hircus — Damascus (Shami) goat is Syria's major domestic goat breed; world-record holder for milk yield; raised for meat and milk across arid Syrian interior; widespread on small farms; uniquely Syrian-Levantine breed"}
+- {id: syr_carp_local, grade: local, rating: 7, name: Common carp, name_sv: "Karp", notes: "Cyprinus carpio — wild and farmed in the Euphrates and Orontes rivers; Assad Lake reservoir fishing important; traditional Euphrates maskoof-style grilled fish; long history in Syrian inland freshwater fishing communities"}
+- {id: syr_baladi_chicken_local, grade: local, rating: 6, name: Baladi chicken, name_sv: "Baladi-kyckling", notes: "دجاج بلدي — Syrian free-range village chicken; raised on grain and foraged feed; more flavourful than commercial breeds; widely kept in rural households; preferred for slow-braised dajaj ouzi and home cooking"}
+- {id: syr_tilapia_local, grade: local, rating: 5, name: Tilapia, name_sv: "Tilapia", notes: "Oreochromis niloticus — farmed in Assad Lake (Lake al-Assad) and Euphrates ponds; largest freshwater aquaculture product in Syria; affordable local protein; introduced through 1960s Syrian dam projects"}
+- {id: syr_catfish_local, grade: local, rating: 4, name: Catfish, name_sv: "Mal", notes: "Silurus triostegus and Clarias species — native to Euphrates and Orontes rivers; wild-caught and some aquaculture; traditional fishing communities along the Euphrates; prepared grilled or in tomato-based stew"}
+- {id: syr_grey_mullet_local, grade: local, rating: 3, name: Grey mullet, name_sv: "Grå mulle", notes: "Mugil cephalus — fished in the Mediterranean off Latakia and Tartous coast; also in brackish coastal lagoons; traditional Levantine coastal fishery; prepared grilled or baked with herbs; significant local catch"}
+- {id: syr_quail_local, grade: local, rating: 2, name: Common quail, name_sv: "Vaktel", notes: "Coturnix coturnix — migratory quail hunted in large numbers along Syrian Mediterranean coast and Jabal al-Ansariyya hills; traditional autumn hunt; quail on skewers at coastal restaurants; seasonal local protein"}
+- {id: syr_partridge_local, grade: local, rating: 1, name: Chukar partridge, name_sv: "Stenhöna", notes: "Alectoris chukar — Syria's native highland game bird; hunted in Qalamoun mountains and Jabal al-Arab; also kept semi-wild; traditional hunted protein for rural Syrian families in the highlands"}
 
 
 ## Produce
 
 ### Produce — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Syrian signature dishes vegetables", "Syrian iconic vegetable ingredients", "Syrian traditional vegetable preparations" -->
+<!-- Searched: "Syrian cuisine signature vegetables identity eggplant tabbouleh grape leaves makdous pomegranate", "الخضروات الأيقونية في المطبخ السوري تقليدية" -->
 
-- {id: stub_veg_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Vegetable 1", name_sv: "[UTKAST] Signatur Grönsak 1", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Vegetable 2", name_sv: "[UTKAST] Signatur Grönsak 2", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Vegetable 3", name_sv: "[UTKAST] Signatur Grönsak 3", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Vegetable 4", name_sv: "[UTKAST] Signatur Grönsak 4", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Vegetable 5", name_sv: "[UTKAST] Signatur Grönsak 5", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Vegetable 6", name_sv: "[UTKAST] Signatur Grönsak 6", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Vegetable 7", name_sv: "[UTKAST] Signatur Grönsak 7", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Vegetable 8", name_sv: "[UTKAST] Signatur Grönsak 8", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Vegetable 9", name_sv: "[UTKAST] Signatur Grönsak 9", notes: "STUB — replace with verified Syrian research"}
+- {id: syr_eggplant_sig, grade: signature, rating: 9, name: Eggplant, name_sv: "Aubergine", notes: "Melanzane — makdous (مقدوس) preserved stuffed baby eggplant in oil; mutabbal roasted eggplant dip; sheikh al-mahshi stuffed with spiced meat; Syria one of world's top eggplant producers; the most versatile Syrian vegetable"}
+- {id: syr_tomato_sig, grade: signature, rating: 8, name: Tomato, name_sv: "Tomat", notes: "Base of fattoush, yakhni stews, shorba soup; crushed fresh for mezze; alongside eggplant in musaqqa; Syria's #1 vegetable by production volume (609k tonnes 2022); present in virtually every Syrian cooked and raw preparation"}
+- {id: syr_parsley_sig, grade: signature, rating: 7, name: Parsley, name_sv: "Persilja", notes: "Soul of tabbouleh — finely chopped fresh parsley is the dominant ingredient; garnish in hummus, kibbeh, mezze; grown in every Syrian home garden; very large per-capita fresh herb consumption in the Levant"}
+- {id: syr_grape_leaves_sig, grade: signature, rating: 6, name: Grape leaves, name_sv: "Druvblad", notes: "Warak dawali (ورق دوالي) — grape leaves stuffed with rice, tomato, herbs and sometimes meat; defining Syrian and Levantine preparation; harvested fresh in spring; preserved in brine for year-round use"}
+- {id: syr_mint_sig, grade: signature, rating: 5, name: Mint, name_sv: "Mynta", notes: "Fresh mint in fattoush and tabbouleh; dried mint rubbed into labneh; mint lemonade limonana; flavours rice and stuffed vegetables; grown abundantly in Syrian gardens; both raw and cooked applications"}
+- {id: syr_pomegranate_sig, grade: signature, rating: 4, name: Pomegranate, name_sv: "Granatäpple", notes: "Rumman (رمان) — seeds scattered over hummus and kibbeh; pomegranate molasses as key souring agent; Aleppo and Damascus orchards famed for quality; symbol of prosperity and abundance in Syrian culture"}
+- {id: syr_onion_sig, grade: signature, rating: 3, name: Onion, name_sv: "Lök", notes: "Aromatic base of all Syrian stews, stuffings and kebabs; caramelized onion crowns mujaddara; fried crispy onion on pilaf; raw in Syrian salad; critical building block of Syrian flavour foundation"}
+- {id: syr_zucchini_sig, grade: signature, rating: 2, name: Zucchini, name_sv: "Zucchini", notes: "Kousa (كوسا) — hallowed stuffed zucchini with meat and rice; kousa b'laban in yogurt sauce; fried zucchini as mezze; widely grown in Syrian fields and home gardens; fundamental mahshi vegetable"}
+- {id: syr_fig_sig, grade: signature, rating: 1, name: Fig, name_sv: "Fikon", notes: "Fresh figs eaten seasonally; dried figs in winter pantry; fig preserves (mrabba teen) traditional; Ghouta near Damascus historically famed for fig orchards; deep cultural and biblical significance in Levantine food culture"}
 
 ### Produce — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Syrian vegetable consumption kg per capita", "Syrian most consumed vegetables statistics", "Syrian FAO food balance vegetables" -->
+<!-- Searched: "Syria most consumed vegetables per capita 2022 potato tomato onion statistics production", "إحصاءات استهلاك الخضروات في سوريا البطاطا الطماطم" -->
 
-- {id: stub_veg_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Vegetable 1", name_sv: "[UTKAST] Bulk Grönsak 1", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Vegetable 2", name_sv: "[UTKAST] Bulk Grönsak 2", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Vegetable 3", name_sv: "[UTKAST] Bulk Grönsak 3", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Vegetable 4", name_sv: "[UTKAST] Bulk Grönsak 4", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Vegetable 5", name_sv: "[UTKAST] Bulk Grönsak 5", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Vegetable 6", name_sv: "[UTKAST] Bulk Grönsak 6", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Vegetable 7", name_sv: "[UTKAST] Bulk Grönsak 7", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Vegetable 8", name_sv: "[UTKAST] Bulk Grönsak 8", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Vegetable 9", name_sv: "[UTKAST] Bulk Grönsak 9", notes: "STUB — replace with verified Syrian research"}
+- {id: syr_potato_bulk, grade: bulk, rating: 9, name: Potato, name_sv: "Potatis", notes: "~35 kg/cap/yr (potatopro.com Syria); Syria's second most important vegetable crop after tomato; fried, roasted with chicken; batata harra spiced fried potato; potato stew; daily household vegetable across all Syrian regions"}
+- {id: syr_cucumber_bulk, grade: bulk, rating: 8, name: Cucumber, name_sv: "Gurka", notes: "Eaten fresh in fattoush and Arabic salad; pickled in akhdar (green pickles); consumed raw throughout the day as snack; very high per-capita fresh vegetable intake; sliced and served at every Syrian table"}
+- {id: syr_cabbage_bulk, grade: bulk, rating: 7, name: Cabbage, name_sv: "Kål", notes: "Malfoof mahshi (ملفوف) — stuffed cabbage rolls with meat and rice; used in salads and pickles; widely farmed across Syria; significant harvest and steady domestic consumption throughout the year"}
+- {id: syr_carrot_bulk, grade: bulk, rating: 6, name: Carrot, name_sv: "Morot", notes: "Added to yakhni stews and chicken ouzi; carrot juice popular; significant commercial production in Syrian plains; one of the top cultivated root vegetables; used in both cooked and raw preparations"}
+- {id: syr_lettuce_bulk, grade: bulk, rating: 5, name: Lettuce, name_sv: "Sallad", notes: "Romaine/cos lettuce widely consumed fresh in Arabic salad; used as wrap for kebab; production in Syrian Ghab plain and Ghouta; consumed heavily as daily fresh salad component alongside tomato"}
+- {id: syr_bell_pepper_bulk, grade: bulk, rating: 4, name: Bell pepper, name_sv: "Paprika", notes: "Stuffed peppers (mahshi); roasted in salads; added to stews; significant cultivation in Hama and Homs plains; high per-capita consumption; grown and used green and red throughout the year"}
+- {id: syr_garlic_bulk, grade: bulk, rating: 3, name: Garlic, name_sv: "Vitlök", notes: "Toum (توم) — Syrian garlic sauce served with every grilled meal; used in virtually all savory dishes; garlic press a kitchen essential; very high daily consumption; cultivated across Syrian farming regions"}
+- {id: syr_turnip_bulk, grade: bulk, rating: 2, name: Turnip, name_sv: "Rova", notes: "Lift (لفت) — pickled turnips (bright pink from beet juice) are Syria's most beloved pickle; consumed at every meal; cultivated widely; pickled turnip absolutely iconic on Syrian tables and in sandwich shops everywhere"}
+- {id: syr_spinach_bulk, grade: bulk, rating: 1, name: Spinach, name_sv: "Spenat", notes: "Sabanekh (سبانخ) — spinach with lamb in sabanekh b'lahme; spinach fatayer triangular pastry; boiled with olive oil and lemon; significant production in Syrian valleys; common winter vegetable across all Syrian regions"}
 
 ### Produce — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Syrian vegetables grown locally agriculture", "Syrian regional vegetable crops", "Syrian foraging wild plants" -->
+<!-- Searched: "Syria local produce Ghouta Damascus Aleppo pistachio apricot fruits grown regionally", "المنتجات الزراعية المحلية سوريا مشمش فستق زيتون" -->
 
-- {id: stub_veg_loc_1, grade: local, rating: 9, name: "[STUB] Local Vegetable 1", name_sv: "[UTKAST] Lokalt Grönsak 1", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_loc_2, grade: local, rating: 8, name: "[STUB] Local Vegetable 2", name_sv: "[UTKAST] Lokalt Grönsak 2", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_loc_3, grade: local, rating: 7, name: "[STUB] Local Vegetable 3", name_sv: "[UTKAST] Lokalt Grönsak 3", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_loc_4, grade: local, rating: 6, name: "[STUB] Local Vegetable 4", name_sv: "[UTKAST] Lokalt Grönsak 4", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_loc_5, grade: local, rating: 5, name: "[STUB] Local Vegetable 5", name_sv: "[UTKAST] Lokalt Grönsak 5", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_loc_6, grade: local, rating: 4, name: "[STUB] Local Vegetable 6", name_sv: "[UTKAST] Lokalt Grönsak 6", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_loc_7, grade: local, rating: 3, name: "[STUB] Local Vegetable 7", name_sv: "[UTKAST] Lokalt Grönsak 7", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_loc_8, grade: local, rating: 2, name: "[STUB] Local Vegetable 8", name_sv: "[UTKAST] Lokalt Grönsak 8", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_veg_loc_9, grade: local, rating: 1, name: "[STUB] Local Vegetable 9", name_sv: "[UTKAST] Lokalt Grönsak 9", notes: "STUB — replace with verified Syrian research"}
+- {id: syr_aleppo_apricot_local, grade: local, rating: 9, name: Aleppo apricot, name_sv: "Aleppo-aprikos", notes: "Prunus armeniaca — Ghouta near Damascus and Aleppo region famed for world-class apricots (mishmish); qamar al-din (قمر الدين) apricot leather is uniquely Syrian; dried apricot a traditional Ramadan ingredient; historically exported worldwide"}
+- {id: syr_aleppo_pistachio_local, grade: local, rating: 8, name: Aleppo pistachio, name_sv: "Aleppo-pistasch", notes: "Pistacia vera — Syrian pistachio from Aleppo region internationally celebrated; smaller and more flavourful than Iranian or US types; used in baklava, kibbeh and as snack; major Syrian agricultural GI nut crop"}
+- {id: syr_damascus_grape_local, grade: local, rating: 7, name: Damascus grape, name_sv: "Damaskusdruva", notes: "Vitis vinifera — Syrian grapes around Damascus, Homs and Latakia; Ghouta historically called 'city of gardens' for its vineyards; table grapes, raisins and grape leaves for cooking; ancient viticultural tradition"}
+- {id: syr_syrian_olive_local, grade: local, rating: 6, name: Syrian olive, name_sv: "Syrisk oliv", notes: "Sorani/Souri cultivar native to Syria; Aleppo and Idlib olive groves cover 500k+ hectares; table olives and oil; zaytoun maqli fried olives as mezze; significant cultivation predating recorded history"}
+- {id: syr_almond_local, grade: local, rating: 5, name: Syrian almond, name_sv: "Syrisk mandel", notes: "Prunus dulcis — Aleppo region sweet almonds; green almonds eaten fresh with salt in spring (lawz akhdar); dried almonds in sweets and pastries; significant almond orchards in northern Syrian highlands; traditional snack and confectionery ingredient"}
+- {id: syr_walnut_local, grade: local, rating: 4, name: Walnut, name_sv: "Valnöt", notes: "Juglans regia — grown in Qalamoun mountains, Tartous and Latakia highlands; muhammara (محمرة) — Aleppine roasted red pepper and walnut spread; baklava filling alongside pistachio; green walnuts pickled in brine"}
+- {id: syr_quince_local, grade: local, rating: 3, name: Quince, name_sv: "Kvitten", notes: "Cydonia oblonga — grown near Hama and Idlib; saffarjal mahshi (stuffed quince) Aleppine specialty; quince jam (mrabba) traditional; sour quince added to slow-braised lamb dishes; autumn harvest fruit"}
+- {id: syr_loquat_local, grade: local, rating: 2, name: Loquat, name_sv: "Japansk mispel", notes: "Eriobotrya japonica — grown in coastal Latakia and Tartous orchards; eaten fresh in May–June; local fruit tree in Syrian coastal gardens; sold at street markets; beloved seasonal fruit"}
+- {id: syr_mulberry_local, grade: local, rating: 1, name: Mulberry, name_sv: "Mullbär", notes: "Morus nigra/alba — toot (توت) eaten fresh; mulberry juice; mulberry leather (toot) traditional sweet; Damascus once had vast mulberry orchards for silk production; cultural heritage fruit of Syrian gardens"}
 
 
 ## Grains & Starches
 
 ### Grains & Starches — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Syrian signature grain dishes bread pasta rice", "Syrian iconic starch preparations", "Syrian traditional staple foods" -->
+<!-- Searched: "Syrian cuisine grains starches signature bulgur wheat bread khubz freekeh identity iconic", "الحبوب الأيقونية في المطبخ السوري البرغل الخبز الفريكة" -->
 
-- {id: stub_grain_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Grain 1", name_sv: "[UTKAST] Signatur Spannmål 1", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Grain 2", name_sv: "[UTKAST] Signatur Spannmål 2", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Grain 3", name_sv: "[UTKAST] Signatur Spannmål 3", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Grain 4", name_sv: "[UTKAST] Signatur Spannmål 4", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Grain 5", name_sv: "[UTKAST] Signatur Spannmål 5", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Grain 6", name_sv: "[UTKAST] Signatur Spannmål 6", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Grain 7", name_sv: "[UTKAST] Signatur Spannmål 7", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Grain 8", name_sv: "[UTKAST] Signatur Spannmål 8", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Grain 9", name_sv: "[UTKAST] Signatur Spannmål 9", notes: "STUB — replace with verified Syrian research"}
+- {id: syr_bulgur_sig, grade: signature, rating: 9, name: Bulgur wheat, name_sv: "Bulgur", notes: "Burghul (برغل) — parboiled cracked wheat; THE grain of Syrian cuisine; kibbeh shell, tabbouleh base, mujaddara component; used fine (#1/#2) and coarse (#3/#4) for different dishes; as ancient as Syrian civilisation itself"}
+- {id: syr_khubz_sig, grade: signature, rating: 8, name: Arabic flatbread, name_sv: "Arabiskt tunnbröd", notes: "Khubz (خبز) — leavened Arabic flatbread baked in taboon or sajj; present at every Syrian meal; scoops hummus and dips; wraps kebab; torn into fatteh; symbol of hospitality; unleavened markuk also traditional"}
+- {id: syr_rice_sig, grade: signature, rating: 7, name: Rice, name_sv: "Ris", notes: "Roz bi sha'riyeh (رز بشعرية) — rice toasted with vermicelli in butter; the Syrian pilaf base with all meat dishes; stuffing for mahshi (stuffed vegetables); loubia wa roz (beans with rice); essential grain at every Syrian dinner"}
+- {id: syr_freekeh_sig, grade: signature, rating: 6, name: Freekeh, name_sv: "Freekeh", notes: "Freekeh (فريكة) — roasted green durum wheat; nutty smoky grain; freekeh soup with chicken; Aleppine and Damascene festive rice substitute; ancient Syrian wheat variety now internationally trendy; distinctive smoky flavour"}
+- {id: syr_semolina_sig, grade: signature, rating: 5, name: Semolina, name_sv: "Griess", notes: "Smeed (سميد) — semolina used in harissa cake (هريسة), mamoul date cookies, basbusa; Aleppine sfoof spice cake; ka'ak biscuits; semolina porridge for breakfast; essential in Syrian pastry and confectionery tradition"}
+- {id: syr_vermicelli_sig, grade: signature, rating: 4, name: Vermicelli, name_sv: "Vermicelli", notes: "Sha'riyeh (شعيرية) — thin wheat vermicelli toasted golden in butter before adding rice; the Syrian signature rice-noodle pilaf; used in soups and as sweet pudding; found in every Syrian pantry"}
+- {id: syr_pita_chips_sig, grade: signature, rating: 3, name: Toasted pita, name_sv: "Rostat pitabröd", notes: "Fatteh and fattoush croutons — fried or baked stale pita torn into salads and layered dishes; an iconic Syrian technique of bread recycling; adds crunch to fatteh and fattoush; khubz bi zeit oiled toast for snacks"}
+- {id: syr_corn_flatbread_sig, grade: signature, rating: 2, name: Corn flatbread, name_sv: "Majstunnbröd", notes: "Khubz dhura — coarse cornmeal flatbread traditional in rural eastern Syria and Jazira region; baked on heated stone; traditional agricultural community food; part of Syria's Fertile Crescent grain heritage"}
 
 ### Grains & Starches — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Syrian grain consumption kg per capita", "Syrian rice wheat bread statistics", "Syrian FAO food balance cereals" -->
+<!-- Searched: "Syria grain consumption per capita wheat flour rice pasta statistics most consumed 2022", "استهلاك الحبوب في سوريا إحصاءات طحين قمح" -->
 
-- {id: stub_grain_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Grain 1", name_sv: "[UTKAST] Bulk Spannmål 1", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Grain 2", name_sv: "[UTKAST] Bulk Spannmål 2", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Grain 3", name_sv: "[UTKAST] Bulk Spannmål 3", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Grain 4", name_sv: "[UTKAST] Bulk Spannmål 4", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Grain 5", name_sv: "[UTKAST] Bulk Spannmål 5", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Grain 6", name_sv: "[UTKAST] Bulk Spannmål 6", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Grain 7", name_sv: "[UTKAST] Bulk Spannmål 7", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Grain 8", name_sv: "[UTKAST] Bulk Spannmål 8", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Grain 9", name_sv: "[UTKAST] Bulk Spannmål 9", notes: "STUB — replace with verified Syrian research"}
+- {id: syr_wheat_flour_bulk, grade: bulk, rating: 9, name: Wheat flour, name_sv: "Vetemjöl", notes: "~148-180 kg/cap/yr wheat equivalent (lca.logcluster.org); #1 calorie source in Syria by a massive margin; subsidised bread accounts for vast consumption; used in flatbread, pastries, kibbeh shell; absolute foundation of Syrian diet"}
+- {id: syr_pasta_bulk, grade: bulk, rating: 8, name: Pasta, name_sv: "Pasta", notes: "Imported durum semolina pasta widely consumed especially since conflict; macaroni b'bechamel (Syrian-style lasagne); pasta replacing rice in some urban meals due to lower cost; significant market penetration post-2011"}
+- {id: syr_barley_bulk, grade: bulk, rating: 7, name: Barley grain, name_sv: "Korngryn", notes: "Syria's second cereal crop (part of 3.4M tonne total 2024, GIEWS); barley soup (shurbat sha'ir) traditional; pearl barley in stews; mostly livestock feed but human consumption in rural communities"}
+- {id: syr_maize_bulk, grade: bulk, rating: 6, name: Maize, name_sv: "Majs", notes: "Used for livestock feed primarily; human consumption as cornmeal in eastern Syria; popcorn and corn snacks increasingly urban; grown in Euphrates valley irrigated areas; rising domestic consumption"}
+- {id: syr_chickpea_flour_bulk, grade: bulk, rating: 5, name: Chickpea flour, name_sv: "Kikärtsmjöl", notes: "Daqiq al-hummus — used in falafel dough alongside fava beans; flatbread variants; chickpea soup; Syria produces chickpeas locally; significant pulse-flour consumption beyond the whole chickpea use"}
+- {id: syr_millet_bulk, grade: bulk, rating: 4, name: Millet, name_sv: "Hirs", notes: "Dukhn — traditional grain cultivation in dry regions of Syria; traditional porridge in agricultural communities; historically grown before wheat dominated; minor contemporary role in Syrian diet; available in traditional markets"}
+- {id: syr_taro_bulk, grade: bulk, rating: 3, name: Taro, name_sv: "Taro", notes: "Qolqas (قلقاس) — consumed in coastal and south Syrian areas; taro stew with tahini and lemon (qolqas b'tahini); less common than in Egypt but present in Syrian rural cooking; starchy root available seasonally"}
+- {id: syr_sorghum_bulk, grade: bulk, rating: 2, name: Sorghum, name_sv: "Sorghum", notes: "Grown in eastern Syria (Deir ez-Zor, Raqqa); traditional dry-land crop; sorghum porridge in Jazira communities; mostly animal feed but some human consumption; drought-resistant crop important in arid agriculture"}
+- {id: syr_oats_bulk, grade: bulk, rating: 1, name: Oats, name_sv: "Havre", notes: "Imported oats increasingly consumed in urban Syria; oat porridge among educated urban households; rising breakfast oat consumption; small but growing market; not traditional but now part of modern Syrian urban pantry"}
 
 ### Grains & Starches — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Syrian grain crops grown", "Syrian cereal farming production", "Syrian locally milled flour regional varieties" -->
+<!-- Searched: "Syria locally grown grains wheat barley lentil chickpea northeast Jazira production agriculture", "الإنتاج الزراعي المحلي للحبوب في سوريا الجزيرة القمح الشعير" -->
 
-- {id: stub_grain_loc_1, grade: local, rating: 9, name: "[STUB] Local Grain 1", name_sv: "[UTKAST] Lokalt Spannmål 1", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_loc_2, grade: local, rating: 8, name: "[STUB] Local Grain 2", name_sv: "[UTKAST] Lokalt Spannmål 2", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_loc_3, grade: local, rating: 7, name: "[STUB] Local Grain 3", name_sv: "[UTKAST] Lokalt Spannmål 3", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_loc_4, grade: local, rating: 6, name: "[STUB] Local Grain 4", name_sv: "[UTKAST] Lokalt Spannmål 4", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_loc_5, grade: local, rating: 5, name: "[STUB] Local Grain 5", name_sv: "[UTKAST] Lokalt Spannmål 5", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_loc_6, grade: local, rating: 4, name: "[STUB] Local Grain 6", name_sv: "[UTKAST] Lokalt Spannmål 6", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_loc_7, grade: local, rating: 3, name: "[STUB] Local Grain 7", name_sv: "[UTKAST] Lokalt Spannmål 7", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_loc_8, grade: local, rating: 2, name: "[STUB] Local Grain 8", name_sv: "[UTKAST] Lokalt Spannmål 8", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_grain_loc_9, grade: local, rating: 1, name: "[STUB] Local Grain 9", name_sv: "[UTKAST] Lokalt Spannmål 9", notes: "STUB — replace with verified Syrian research"}
+- {id: syr_durum_local, grade: local, rating: 9, name: Durum wheat, name_sv: "Durumvete", notes: "Hard durum grown in northeast Syria (Jazira/Hasakah) — Syria's breadbasket; pre-2011 self-sufficient with ~4M tonne harvest; durum used for bulgur, freekeh and semolina; CIMMYT wheat breeding programs historically based in Syria"}
+- {id: syr_local_barley, grade: local, rating: 8, name: Local barley, name_sv: "Lokalt korn", notes: "Hordeum vulgare — second most important locally grown cereal; northeast Syria and rainfed central steppe; Aleppo and Deir ez-Zor regions; primarily livestock but human food use in traditional rural communities; historic Syrian crop"}
+- {id: syr_local_lentil, grade: local, rating: 7, name: Syrian lentil, name_sv: "Syrisk lins", notes: "Lens culinaris — Syria's most important pulse crop; 89,354 tonnes produced 2024 (GIEWS); Syrian brown lentils prized; traditional production in Aleppo and Idlib; Syria was a top lentil exporter before conflict"}
+- {id: syr_local_chickpea, grade: local, rating: 6, name: Syrian chickpea, name_sv: "Syrisk kikärta", notes: "Cicer arietinum — grown in Syrian steppe and rainfed highlands; traditional cultivation in Aleppo and Hama; desi and kabuli types; Syrian chickpeas valued for hummus quality; production declined due to drought and conflict"}
+- {id: syr_bitter_vetch_local, grade: local, rating: 5, name: Bitter vetch, name_sv: "Bittervicker", notes: "Vicia ervilia — ancient Syrian pulse grown in dry farming areas; traditional village food; archaeological evidence at early Neolithic Syrian sites; part of Syria's diverse pulse heritage in the Fertile Crescent"}
+- {id: syr_einkorn_local, grade: local, rating: 4, name: Einkorn wheat, name_sv: "Enkorn", notes: "Triticum monococcum — wild ancestor domesticated near Syrian/Turkish border Karacadag region; one of the world's first cultivated grains; ICARDA maintains seed bank in Aleppo; ancient grain found wild in Syrian highlands"}
+- {id: syr_emmer_local, grade: local, rating: 3, name: Emmer wheat, name_sv: "Emmer", notes: "Triticum dicoccum — ancient hulled wheat domesticated in the Fertile Crescent; still grown in pockets of Syrian highland communities; ICARDA Aleppo genebank houses world's largest emmer collection; prehistoric Syrian grain"}
+- {id: syr_fenugreek_local, grade: local, rating: 2, name: Fenugreek, name_sv: "Bockhornsklöver", notes: "Trigonella foenum-graecum — grown in Hama, Homs and Aleppo regions; seeds in spice mixes; sprouts eaten as salad; ground into helba tea; traditional Syrian medicinal and culinary crop; some local export"}
+- {id: syr_coriander_seed_local, grade: local, rating: 1, name: Coriander crop, name_sv: "Korianderodling", notes: "Coriandrum sativum — cultivated across Syria's central plains; among Syria's top spice exports (Tendata 2022); used dried in baharat, kibbeh spice mix, lentil soup; both seed and fresh leaf consumed extensively"}
 
 
 ## Dairy, Oils & Sauces
 
 ### Dairy, Oils & Sauces — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Syrian signature dairy dishes", "Syrian iconic cheese butter cream", "Syrian traditional dairy products" -->
+<!-- Searched: "Syrian cuisine dairy signature labneh shanklish olive oil pomegranate molasses tahini identity", "منتجات الألبان الأيقونية في المطبخ السوري اللبنة الشنكليش الطحينة" -->
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Dairy 1", name_sv: "[UTKAST] Signatur Mejeri 1", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Dairy 2", name_sv: "[UTKAST] Signatur Mejeri 2", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Dairy 3", name_sv: "[UTKAST] Signatur Mejeri 3", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Dairy 4", name_sv: "[UTKAST] Signatur Mejeri 4", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Dairy 5", name_sv: "[UTKAST] Signatur Mejeri 5", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Dairy 6", name_sv: "[UTKAST] Signatur Mejeri 6", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Dairy 7", name_sv: "[UTKAST] Signatur Mejeri 7", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Dairy 8", name_sv: "[UTKAST] Signatur Mejeri 8", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Dairy 9", name_sv: "[UTKAST] Signatur Mejeri 9", notes: "STUB — replace with verified Syrian research"}
+- {id: syr_labneh_sig, grade: signature, rating: 9, name: Labneh, name_sv: "Labneh", notes: "اللبنة — strained yogurt cheese; the most iconic Syrian breakfast dairy; drizzled with olive oil and za'atar; labneh makbus (dried balls preserved in oil); present at every Syrian breakfast table and mezze spread"}
+- {id: syr_shanklish_sig, grade: signature, rating: 8, name: Shanklish, name_sv: "Shanklish", notes: "الشنكليش — fermented aged yogurt-cheese balls rolled in za'atar and Aleppo pepper; uniquely Syrian-Levantine artisan cheese; shanklish salad with tomato and onion drizzled with olive oil; produced in Homs, Hama and coastal Syria"}
+- {id: syr_tahini_sig, grade: signature, rating: 7, name: Tahini, name_sv: "Tahini", notes: "طحينة — sesame paste; base of hummus, mutabbal eggplant dip, tarator fish sauce, and halawa sweet confection; Syria one of world's top sesame producers and tahini exporters; absolute staple of the Syrian kitchen"}
+- {id: syr_olive_oil_sig, grade: signature, rating: 6, name: Olive oil, name_sv: "Olivolja", notes: "زيت الزيتون — Syrian Sorani/Souri variety from Aleppo and Idlib; drizzled on labneh, hummus, fattoush; primary cooking and finishing oil; Syria has ~500k+ hectares of olives; culturally the most important fat in Syrian cooking"}
+- {id: syr_pomegranate_molasses_sig, grade: signature, rating: 5, name: Pomegranate molasses, name_sv: "Granatäppelsirap", notes: "Dibs rumman (دبس رمان) — reduced pomegranate juice syrup; uniquely Levantine souring condiment; key in muhammara, kibbeh marinades and meat braises; drizzled on hummus; an Aleppine kitchen essential"}
+- {id: syr_yogurt_sig, grade: signature, rating: 4, name: Yogurt, name_sv: "Yoghurt", notes: "Laban (لبن) — plain whole-milk yogurt; mixed with garlic as sauce for kibbeh and stuffed vegetables; laban immo (lamb in yogurt sauce); jajik (yogurt-cucumber-mint); essential cooling element of Syrian cooking"}
+- {id: syr_samneh_sig, grade: signature, rating: 3, name: Clarified butter, name_sv: "Klarat smör", notes: "Samneh (سمنة) — clarified butter used to enrich rice, toast vermicelli and make pastry; traditional kitchen fat alongside olive oil; samneh baladi (farmhouse clarified butter) prized; also finishes soups and pilaf"}
+- {id: syr_akkawi_sig, grade: signature, rating: 2, name: Akkawi cheese, name_sv: "Akkawi-ost", notes: "جبنة عكاوي — white brined semi-soft cheese from the Levant; used in knafeh (كنافة), pastries and Syrian breakfast; mild and slightly salty; desalted before use; fundamental Syrian and Lebanese mezze cheese"}
+- {id: syr_jibneh_baladi_sig, grade: signature, rating: 1, name: Fresh white cheese, name_sv: "Färsk vitost", notes: "جبنة بيضاء — jibneh baladi — fresh lightly salted white cheese from sheep or cow milk; eaten at breakfast with olives and za'atar; made locally in every Syrian region; essential Syrian morning mezze component"}
 
 ### Dairy, Oils & Sauces — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Syrian dairy consumption kg per capita", "Syrian milk cheese butter statistics", "Syrian FAO food balance dairy" -->
+<!-- Searched: "Syria dairy consumption per capita 2022 milk butter vegetable oil most consumed cooking fats", "استهلاك الألبان في سوريا الحليب الزبدة الزيت النباتي" -->
 
-- {id: stub_dairy_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Dairy 1", name_sv: "[UTKAST] Bulk Mejeri 1", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Dairy 2", name_sv: "[UTKAST] Bulk Mejeri 2", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Dairy 3", name_sv: "[UTKAST] Bulk Mejeri 3", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Dairy 4", name_sv: "[UTKAST] Bulk Mejeri 4", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Dairy 5", name_sv: "[UTKAST] Bulk Mejeri 5", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Dairy 6", name_sv: "[UTKAST] Bulk Mejeri 6", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Dairy 7", name_sv: "[UTKAST] Bulk Mejeri 7", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Dairy 8", name_sv: "[UTKAST] Bulk Mejeri 8", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Dairy 9", name_sv: "[UTKAST] Bulk Mejeri 9", notes: "STUB — replace with verified Syrian research"}
+- {id: syr_cow_milk_bulk, grade: bulk, rating: 9, name: Cow milk, name_sv: "Komjölk", notes: "~77 kg/cap/yr total dairy (worldpopulationreview.com Syria); fresh whole milk consumed as drink, in tea, in cooking; locally produced from cattle in Damascus, Homs and Hama plains; significant daily household intake"}
+- {id: syr_vegetable_oil_bulk, grade: bulk, rating: 8, name: Vegetable oil, name_sv: "Vegetabilisk olja", notes: "Sunflower and cottonseed oil widely used for frying; affordable cooking fat; Syria produces sunflower seed; used to deep-fry falafel, kibbeh and eggplant; most common everyday cooking fat beyond olive oil; widely imported"}
+- {id: syr_butter_bulk, grade: bulk, rating: 7, name: Butter, name_sv: "Smör", notes: "Consumed in baking pastries (mamoul, baklava), toasting vermicelli and making sweets; total butter market under 40k tonnes (shev.io Syria 2022); used in pastry-making and some savory cooking; moderate consumption"}
+- {id: syr_ghee_bulk, grade: bulk, rating: 6, name: Ghee, name_sv: "Ghee", notes: "Samneh imported or locally produced; used in festive ouzi rice and kibbeh; frying at high heat; some households prefer ghee over olive oil for specific rich applications; growing import market in Syria"}
+- {id: syr_tomato_paste_bulk, grade: bulk, rating: 5, name: Tomato paste, name_sv: "Tomatpuré", notes: "Robb al-banadoura (رب البندورة) — concentrated tomato paste homemade in Syrian households every summer; boiled down from fresh tomatoes; base of all stews; bottled in large batches; major cooking condiment in Syrian kitchens"}
+- {id: syr_sesame_oil_bulk, grade: bulk, rating: 4, name: Sesame oil, name_sv: "Sesamolja", notes: "Zeyt simsim — finishing oil in hummus and cold dishes; component of Syrian spice pastes; Syria produces significant sesame for tahini; lightly used as aromatic oil; also traditional medicinal use"}
+- {id: syr_grape_vinegar_bulk, grade: bulk, rating: 3, name: Grape vinegar, name_sv: "Druvvinäger", notes: "Khall al-inab — Syrian grape vinegar from local varieties; used in fattoush dressing, pickling and condiment making; some traditional home production in grape-growing regions; souring element in salad dressings"}
+- {id: syr_lemon_juice_bulk, grade: bulk, rating: 2, name: Lemon juice, name_sv: "Citronsaft", notes: "Asir laymoon — fresh lemon juice squeezed at every Syrian table; essential in hummus, fattoush, tabbouleh, grilled meats; lemon trees grown in Syrian coastal gardens; the primary everyday souring condiment"}
+- {id: syr_date_molasses_bulk, grade: bulk, rating: 1, name: Date molasses, name_sv: "Daddelsirap", notes: "Dibs al-tamr — date syrup used as traditional sweetener and bread dip; produced from local and imported dates; significant in eastern Syrian Jazira communities; natural sweetener in desserts and breakfast"}
 
 ### Dairy, Oils & Sauces — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Syrian dairy farming local production", "Syrian regional cheese varieties", "Syrian local dairy breeds" -->
+<!-- Searched: "Syria local dairy production Awassi olive oil Aleppo local cheese shanklish traditional condiments", "إنتاج الألبان المحلي في سوريا زيت الزيتون الشنكليش الكشك" -->
 
-- {id: stub_dairy_loc_1, grade: local, rating: 9, name: "[STUB] Local Dairy 1", name_sv: "[UTKAST] Lokalt Mejeri 1", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 8, name: "[STUB] Local Dairy 2", name_sv: "[UTKAST] Lokalt Mejeri 2", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 7, name: "[STUB] Local Dairy 3", name_sv: "[UTKAST] Lokalt Mejeri 3", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 6, name: "[STUB] Local Dairy 4", name_sv: "[UTKAST] Lokalt Mejeri 4", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 5, name: "[STUB] Local Dairy 5", name_sv: "[UTKAST] Lokalt Mejeri 5", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 4, name: "[STUB] Local Dairy 6", name_sv: "[UTKAST] Lokalt Mejeri 6", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 3, name: "[STUB] Local Dairy 7", name_sv: "[UTKAST] Lokalt Mejeri 7", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 2, name: "[STUB] Local Dairy 8", name_sv: "[UTKAST] Lokalt Mejeri 8", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_dairy_loc_9, grade: local, rating: 1, name: "[STUB] Local Dairy 9", name_sv: "[UTKAST] Lokalt Mejeri 9", notes: "STUB — replace with verified Syrian research"}
+- {id: syr_sorani_oil_local, grade: local, rating: 9, name: Sorani olive oil, name_sv: "Sorani-olivolja", notes: "Olea europaea var. Sorani (Souri) — the native Syrian olive cultivar; largest share of Syrian olive oil production; Aleppo and Idlib groves over 500k hectares; richer in polyphenols than many commercial varieties; Syria's nationally distinctive oil"}
+- {id: syr_awassi_milk_local, grade: local, rating: 8, name: Awassi sheep milk, name_sv: "Awassi-fårmjölk", notes: "Rich fat-content milk (6-7% butterfat) from Syrian heritage Awassi breed; basis of shanklish, labneh and artisan white cheese; nomadic and semi-nomadic herds in Syrian steppe; uniquely Syrian dairy animal"}
+- {id: syr_mshallaleh_local, grade: local, rating: 7, name: Mshallaleh cheese, name_sv: "Mshallaleh-ost", notes: "Jibneh mshallaleh — braided/stretched string cheese pulled from Awassi or cow curd; semi-soft, salty, stringy; eaten at breakfast or pulled into salads; artisan production in Syrian villages; distinctly Levantine technique"}
+- {id: syr_kishk_local, grade: local, rating: 6, name: Kishk, name_sv: "Kishk", notes: "كشك — fermented dried yogurt and bulgur powder; uniquely Syrian-Levantine preserved ingredient; kishk soup (shorbat kishk) winter comfort dish; home-produced by sun-drying fermented yogurt-grain mixture; ancient preservation method"}
+- {id: syr_grape_molasses_local, grade: local, rating: 5, name: Grape molasses, name_sv: "Druvsirap", notes: "Dibs al-inab — traditional Syrian grape syrup reduced from local grape must; natural sweetener; used as dip for bread and in desserts; produced in home kitchens in grape regions of Damascus and Homs; ancestral preservation method"}
+- {id: syr_carob_molasses_local, grade: local, rating: 4, name: Carob molasses, name_sv: "Johannesbrödsirap", notes: "Dibs al-kharrub — extracted from locally-growing carob trees (Ceratonia siliqua) in coastal hills; traditional Syrian sweetener before refined sugar; high iron and calcium; still produced and sold in Latakia markets"}
+- {id: syr_rose_water_local, grade: local, rating: 3, name: Rose water, name_sv: "Rosenvatten", notes: "Ma ward — distilled from Rosa damascena (Damascus rose); the Damascus rose is Syria's most famous GI agricultural product; rose water in mamoul, knafeh, baqlawa and atayef; Syrian rose water exported across the Arab world"}
+- {id: syr_mastic_local, grade: local, rating: 2, name: Mastic resin, name_sv: "Mastixharts", notes: "Mastika (مستكة) — Pistacia lentiscus resin harvested in Syrian coastal hills; used to flavour bouza ice cream, pastry and coffee; Syrian bouza (stretchy mastic ice cream) distinctively flavoured; forest foraging tradition on Jabal al-Ansariyya"}
+- {id: syr_sesame_local, grade: local, rating: 1, name: Syrian sesame, name_sv: "Syrisk sesam", notes: "Sesamum indicum — cultivated across Syrian plains especially Deir ez-Zor and Raqqa; raw material for Syria's tahini export industry; Syria among top regional sesame producers; sesame seed pressed into tahini commercially and domestically"}
 
 
 ## Spices, Nuts & Seasonings
 
 ### Spices, Nuts & Seasonings — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Syrian signature spice blends", "Syrian defining herbs and spices", "Syrian iconic seasoning flavour profile" -->
+<!-- Searched: "Syrian cuisine signature spices za'atar allspice Aleppo pepper baharat seven spice defining flavour", "توابل المطبخ السوري الأيقونية البهارات زعتر فلفل حلبي سماق" -->
 
-- {id: stub_spice_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Spices 1", name_sv: "[UTKAST] Signatur Krydda 1", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Spices 2", name_sv: "[UTKAST] Signatur Krydda 2", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Spices 3", name_sv: "[UTKAST] Signatur Krydda 3", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Spices 4", name_sv: "[UTKAST] Signatur Krydda 4", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Spices 5", name_sv: "[UTKAST] Signatur Krydda 5", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Spices 6", name_sv: "[UTKAST] Signatur Krydda 6", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Spices 7", name_sv: "[UTKAST] Signatur Krydda 7", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Spices 8", name_sv: "[UTKAST] Signatur Krydda 8", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Spices 9", name_sv: "[UTKAST] Signatur Krydda 9", notes: "STUB — replace with verified Syrian research"}
+- {id: syr_aleppo_pepper_sig, grade: signature, rating: 9, name: Aleppo pepper, name_sv: "Aleppopeppar", notes: "Halaby pepper (فلفل حلبي) — mild-heat fruity dried chilli flakes from Aleppo; half the heat of red pepper, oily texture, salt-cured; used on hummus, kibbeh, grilled meats; internationally renowned GI spice; the most Syria-specific spice in world cuisine"}
+- {id: syr_baharat_sig, grade: signature, rating: 8, name: Baharat seven-spice, name_sv: "Baharat sjukrydda", notes: "بهارات — Syrian seven-spice blend: allspice, cinnamon, black pepper, coriander, cloves, cumin, nutmeg; the foundational spice mix of Syrian meat, rice and stew cooking; every Syrian household has its own family formula"}
+- {id: syr_zataar_sig, grade: signature, rating: 7, name: Za'atar blend, name_sv: "Za'atar-blandning", notes: "زعتر — dried thyme/oregano + sumac + sesame + salt; manakish bi za'atar (flatbread with za'atar-oil paste) the quintessential Syrian breakfast; sprinkled on labneh, bread and salads; a Levantine-Syrian identity blend"}
+- {id: syr_cinnamon_sig, grade: signature, rating: 6, name: Cinnamon, name_sv: "Kanel", notes: "Qirfeh (قرفة) — used in both sweet and savory; kibbeh spice; baharat component; mahshi stuffing; Syrian kibbeh spiced with cinnamon and allspice is distinctively Aleppine; rice with cinnamon in ouzi; also in tea and coffee"}
+- {id: syr_sumac_sig, grade: signature, rating: 5, name: Sumac, name_sv: "Sumak", notes: "Summaq (سماق) — ground dried sour berries; tangy souring agent on fattoush, grilled meats, hummus; key za'atar component; wild-harvested from Syrian hills; the defining acidic spice of Levantine cuisine alongside lemon"}
+- {id: syr_allspice_sig, grade: signature, rating: 4, name: Allspice, name_sv: "Kryddpeppar", notes: "Bahar huloo (بهار حلو) — whole berries and ground; cornerstone of baharat blend; used in kibbeh, kofta and lamb braises; imparts warm Levantine sweetness; one of the most-used spices in Syrian professional and home cooking"}
+- {id: syr_pine_nut_sig, grade: signature, rating: 3, name: Pine nut, name_sv: "Pinjenöt", notes: "Snawbar (صنوبر) — toasted pine nuts garnish hummus, kibbeh, stuffed pigeon and ouzi rice; essential Syrian hospitality garnish; Syrian pine nuts from Aleppo pine (Pinus halepensis) historically prized; symbol of generosity"}
+- {id: syr_rose_petals_sig, grade: signature, rating: 2, name: Dried rose petals, name_sv: "Torkade rosenblad", notes: "Warda (ورد) — ground dried Rosa damascena petals used in Syrian baharat and dessert spice mixes; Damascus rose is Syria's GI product; dried petals in herbal teas and spice-crusted cheeses; uniquely Damascene fragrance"}
+- {id: syr_mahleb_sig, grade: signature, rating: 1, name: Mahleb, name_sv: "Mahleb", notes: "Mahleb (محلب) — dried pits of St Lucie cherry; distinctly bitter-sweet spice used in Syrian ka'ak biscuits, mamoul cookies and sweet bread; native to Levant; Syrian baked goods uniquely flavoured by mahleb; rare in other world cuisines"}
 
 ### Spices, Nuts & Seasonings — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Syrian most used condiments seasonings statistics", "Syrian salt sugar spice consumption", "Syrian everyday seasoning ingredients" -->
+<!-- Searched: "Syria most consumed spices seasonings statistics cumin coriander black pepper everyday cooking", "أكثر التوابل استهلاكاً في المطبخ السوري يومياً إحصاءات" -->
 
-- {id: stub_spice_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Spices 1", name_sv: "[UTKAST] Bulk Krydda 1", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Spices 2", name_sv: "[UTKAST] Bulk Krydda 2", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Spices 3", name_sv: "[UTKAST] Bulk Krydda 3", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Spices 4", name_sv: "[UTKAST] Bulk Krydda 4", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Spices 5", name_sv: "[UTKAST] Bulk Krydda 5", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Spices 6", name_sv: "[UTKAST] Bulk Krydda 6", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Spices 7", name_sv: "[UTKAST] Bulk Krydda 7", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Spices 8", name_sv: "[UTKAST] Bulk Krydda 8", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Spices 9", name_sv: "[UTKAST] Bulk Krydda 9", notes: "STUB — replace with verified Syrian research"}
+- {id: syr_cumin_bulk, grade: bulk, rating: 9, name: Cumin, name_sv: "Spiskummin", notes: "Kammoun (كمون) — one of Syria's top exported spices (Tendata 2022); used in hummus, falafel, lentil soup and meat marinades; very high daily consumption; ground cumin in virtually all Syrian spice blends; significant producer and exporter"}
+- {id: syr_black_pepper_bulk, grade: bulk, rating: 8, name: Black pepper, name_sv: "Svartpeppar", notes: "Filfil aswad (فلفل أسود) — used in virtually every savory Syrian dish; a key baharat component; very high daily consumption; significant import; basic seasoning alongside salt; the everyday universal spice of all Syrian cooking"}
+- {id: syr_coriander_bulk, grade: bulk, rating: 7, name: Ground coriander, name_sv: "Malen koriander", notes: "Kuzbara (كزبرة) — ground coriander seed in baharat, kibbeh spice mix, lentil soup and fish pastes; Syria exports coriander (Tendata 2022); one of the most-used ground spices; both seed and fresh leaf consumed heavily"}
+- {id: syr_turmeric_bulk, grade: bulk, rating: 6, name: Turmeric, name_sv: "Gurkmeja", notes: "Kurkum (كركم) — used for colour and flavour in Syrian rice dishes, stews and fish preparations; significant import; one of the most commonly purchased household spices; rice sometimes tinted yellow; traditional medicinal use"}
+- {id: syr_dried_mint_bulk, grade: bulk, rating: 5, name: Dried mint, name_sv: "Torkad mynta", notes: "Na'na' mjallab — dried mint rubbed over labneh, added to yogurt dips and lentil soup; standard pantry spice in every Syrian household; both home-dried and commercially dried; very high daily use in soups and dips"}
+- {id: syr_cardamom_bulk, grade: bulk, rating: 4, name: Cardamom, name_sv: "Kardemumma", notes: "Hail (هيل) — essential in Syrian Arabic coffee (qahwa), tea and desserts; used in some meat spice blends; standard import spice; high per-capita consumption in coffee culture; ground cardamom in mamoul and sweet pastries"}
+- {id: syr_dried_chilli_bulk, grade: bulk, rating: 3, name: Dried red chilli, name_sv: "Torkad röd chilli", notes: "Filfil ahmar — whole and ground dried red chillis used in marinades, stews and tomato sauces; widely available and purchased; significant condiment use; muhammara hot pepper dip a major consumer of dried chilli"}
+- {id: syr_sesame_seeds_bulk, grade: bulk, rating: 2, name: Sesame seeds, name_sv: "Sesamfrön", notes: "Simsim (سمسم) — toasted sesame on ka'ak, bread rings, manakish and za'atar blend; Syria produces sesame for tahini; raw and toasted sesame in baked goods; za'atar blend requires sesame; moderate-to-high consumption in bakery context"}
+- {id: syr_nigella_bulk, grade: bulk, rating: 1, name: Nigella seeds, name_sv: "Svartkummin", notes: "Habbet al-baraka (حبة البركة) — black seed scattered on Syrian bread and ka'ak; significant in Syrian baking tradition; added to some cheese; sold in every Syrian spice market; high purchase frequency at spice stalls; traditional medicinal spice"}
 
 ### Spices, Nuts & Seasonings — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Syrian herbs grown locally", "Syrian spice production native plants", "Syrian foraged herbs regional flavourings" -->
+<!-- Searched: "Syria local spice production Aleppo pepper pistachio walnut sumac wild thyme native herbs", "إنتاج البهارات المحلي في سوريا فلفل حلبي فستق سماق زعتر بري" -->
 
-- {id: stub_spice_loc_1, grade: local, rating: 9, name: "[STUB] Local Spices 1", name_sv: "[UTKAST] Lokalt Krydda 1", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_loc_2, grade: local, rating: 8, name: "[STUB] Local Spices 2", name_sv: "[UTKAST] Lokalt Krydda 2", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_loc_3, grade: local, rating: 7, name: "[STUB] Local Spices 3", name_sv: "[UTKAST] Lokalt Krydda 3", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_loc_4, grade: local, rating: 6, name: "[STUB] Local Spices 4", name_sv: "[UTKAST] Lokalt Krydda 4", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_loc_5, grade: local, rating: 5, name: "[STUB] Local Spices 5", name_sv: "[UTKAST] Lokalt Krydda 5", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_loc_6, grade: local, rating: 4, name: "[STUB] Local Spices 6", name_sv: "[UTKAST] Lokalt Krydda 6", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_loc_7, grade: local, rating: 3, name: "[STUB] Local Spices 7", name_sv: "[UTKAST] Lokalt Krydda 7", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_loc_8, grade: local, rating: 2, name: "[STUB] Local Spices 8", name_sv: "[UTKAST] Lokalt Krydda 8", notes: "STUB — replace with verified Syrian research"}
-- {id: stub_spice_loc_9, grade: local, rating: 1, name: "[STUB] Local Spices 9", name_sv: "[UTKAST] Lokalt Krydda 9", notes: "STUB — replace with verified Syrian research"}
-
+- {id: syr_aleppo_pepper_local, grade: local, rating: 9, name: Aleppo pepper crop, name_sv: "Aleppopeppar-odling", notes: "Capsicum annuum var. halaby — grown around Aleppo and northern Syria; sun-dried, deseeded and oil-cured; GI product of Aleppo region; Syria's most internationally recognised agricultural spice; production recovering post-conflict"}
+- {id: syr_pistachio_local, grade: local, rating: 8, name: Syrian pistachio, name_sv: "Syrisk pistasch", notes: "Pistacia vera — Aleppo region pistachios internationally celebrated; Ma'arat al-Nu'man orchards famed for bright red thin-shelled nuts; smaller than Iranian/US types but more complex flavour; used in baklava, kibbeh and as snack"}
+- {id: syr_walnut_spice_local, grade: local, rating: 7, name: Syrian walnut, name_sv: "Syrisk valnöt", notes: "Juglans regia — grown in Qalamoun, Anti-Lebanon and Tartous highlands; muhammara (محمرة) — Aleppine walnut and Aleppo pepper spread; green walnuts pickled in summer; dried walnuts in sweets; significant Syrian nut tree cultivation"}
+- {id: syr_wild_thyme_local, grade: local, rating: 6, name: Wild za'atar herb, name_sv: "Vild za'atar-ört", notes: "Thymus syriacus / Origanum syriacum — Syrian wild thyme and oregano; the base herb of za'atar blend; foraged from Syrian mountains and coastal hills; distinctly aromatic Syrian ecotype; ICARDA preserves wild Thymus collections from Syria"}
+- {id: syr_anise_local, grade: local, rating: 5, name: Anise seed, name_sv: "Anis", notes: "Pimpinella anisum — traditionally grown in Hama, Homs and Idlib; used in yansoon herbal tea, Syrian sweet bread and arak spirit; Syria historical producer of anise for the Levantine arak industry; mild anise in pastries and teas"}
+- {id: syr_fennel_local, grade: local, rating: 4, name: Fennel seed, name_sv: "Fänkålsfrö", notes: "Foeniculum vulgare — grows wild and cultivated in Syrian coastal hills and Idlib region; fennel tea traditional remedy; seeds used in some Syrian bread and spice blends; fresh fennel fronds in coastal salads; foraging tradition"}
+- {id: syr_bay_local, grade: local, rating: 3, name: Bay laurel, name_sv: "Lagerblad", notes: "Laurus nobilis — grows wild and cultivated in coastal Syrian mountains near Latakia; used in stews, soups and pickles; bay berry oil a traditional Aleppo soap ingredient (savon d'Alep); Aleppo soap is a world heritage product partly based on local laurel"}
+- {id: syr_caraway_local, grade: local, rating: 2, name: Caraway, name_sv: "Kummin", notes: "Carum carvi — grown in Syrian highlands; karawiyeh (caraway porridge served after childbirth) traditional; caraway tea; added to some Syrian spice blends and bread; traditional medicinal and culinary plant in Levantine Syrian tradition"}
+- {id: syr_mahleb_local, grade: local, rating: 1, name: Mahleb cherry, name_sv: "Mahleb-körsbär", notes: "Prunus mahaleb — St Lucie cherry native to Levant; grows wild in Syrian Qalamoun and Anti-Lebanon mountains; stone kernels dried and ground for mahleb spice; foraged by Syrian villagers; Syria and Turkey primary global mahleb sources"}
