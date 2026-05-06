@@ -7,241 +7,211 @@ icon: 🇹🇼
 region: east_asian
 region_name: "East Asian"
 region_icon: 🥢
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
-research_done: 0
+description: "Taiwanese cuisine is a vivid island table — braised pork belly over rice (lu rou fan), beef noodle soup, three-cup chicken fragrant with basil and sesame oil, oyster omelets from the coast and milkfish soup from Tainan, shaped by Fujianese, Hakka, Japanese and indigenous traditions."
+description_sv: "Taiwanesiskt kök är ett livfullt ö-bord — brynt fläskbuk på ris (lu rou fan), nötköttsnudelsoppa, tre-koppar-kyckling med basilika och sesamolja, ostronomelett från kusten och mjölkfisksoppa från Tainan, format av fujiananska, hakka, japanska och urbefolkningens traditioner."
+research_done: 1
 ---
 
 ## Research notes
 
-⚠️ STUB FILE — research_done: 0. All ingredients below are placeholders.
-Work through ONE grade pair at a time (e.g. "Proteins — Signature", then "Proteins — Bulk",
-then "Proteins — Local", then "Produce — Signature", etc.).
-Each pair requires its own dedicated research pass. Do NOT combine pairs.
-See IMPROVE_CUISINE_DATA.md for per-grade search strategies and the full pair list.
+Sources: Taiwan Ministry of Agriculture 2022; Taipei Times Oct 2023 (meat surpasses grains first time);
+USDA GAIN Taiwan Grain and Feed Annual 2024 (rice 42.98 kg/cap, wheat 38 kg/cap);
+CLAL.it per capita milk Taiwan 20.62 kg/yr 2022; worldpopulationreview.com veg consumption 115.6 kg/cap;
+Meat 2022: chicken 43.12 kg/cap (#1 all-time high), pork 36 kg/cap (#2), beef 7.34 kg/cap (#3 record), fish ~30-35 kg/cap;
+Taiwan aquaculture: milkfish (Tainan GI product), Pacific oyster (Chiayi/Tainan), tilapia (since 1950s), grouper (world #1 producer);
+Taiwan black pig heritage breed (Pingtung); Hsinchu rice noodles GI product; maqaw pepper Atayal indigenous spice;
+Taiwanese basil (九層塔) distinct cultivar; Taiwan Irwin mango and pineapple cake nationally iconic.
 
 
 ## Proteins
 
 ### Proteins — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Taiwanese signature dishes", "Taiwanese iconic traditional proteins", "Taiwanese food culture defining meats fish" -->
 
-- {id: stub_prot_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Protein 1", name_sv: "[UTKAST] Signatur Protein 1", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Protein 2", name_sv: "[UTKAST] Signatur Protein 2", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Protein 3", name_sv: "[UTKAST] Signatur Protein 3", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Protein 4", name_sv: "[UTKAST] Signatur Protein 4", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Protein 5", name_sv: "[UTKAST] Signatur Protein 5", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Protein 6", name_sv: "[UTKAST] Signatur Protein 6", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Protein 7", name_sv: "[UTKAST] Signatur Protein 7", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Protein 8", name_sv: "[UTKAST] Signatur Protein 8", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Protein 9", name_sv: "[UTKAST] Signatur Protein 9", notes: "STUB — replace with verified Taiwanese research"}
+- {id: twn_pork_belly_sig, grade: signature, rating: 9, name: "Pork belly", name_sv: "Sidfläsk", notes: "Lu rou fan (滷肉飯) — braised minced pork belly over rice; Taiwan's most emblematic comfort dish; gua bao steamed bun with pork belly; pork is the historic cultural cornerstone of Taiwanese protein culture"}
+- {id: twn_chicken_sig, grade: signature, rating: 8, name: Chicken, name_sv: "Kyckling", notes: "San bei ji (三杯雞) — three-cup chicken with soy sauce, sesame oil, rice wine and fresh basil; popcorn chicken (鹹酥雞) fried with basil at night markets; sesame oil chicken with ginger (麻油雞) postpartum dish; quintessential Taiwanese flavour"}
+- {id: twn_beef_shank_sig, grade: signature, rating: 7, name: Beef shank, name_sv: "Nötlägg", notes: "Beef noodle soup (牛肉麵) — slowly braised beef shank in spiced soy broth with pickled mustard greens; Taiwan's most internationally recognised dish; annual Taipei Beef Noodle Festival; defines the modern Taiwanese food identity"}
+- {id: twn_oyster_sig, grade: signature, rating: 6, name: Oyster, name_sv: "Ostron", notes: "Oyster omelet (蚵仔煎) — fresh oysters in chewy eggy batter with sweet sauce; oyster vermicelli (蚵仔麵線); iconic night market foods; Chiayi and Tainan aquaculture oysters; among the most distinctly Taiwanese dishes"}
+- {id: twn_milkfish_sig, grade: signature, rating: 5, name: Milkfish, name_sv: "Mjölkfisk", notes: "虱目魚 (Chanos chanos) — Tainan's iconic fish; milkfish soup and porridge (虱目魚粥) classic Tainan breakfast; farmed in coastal ponds since the 17th century; Taiwan's most culturally significant farmed fish; southern Taiwan GI product"}
+- {id: twn_stinky_tofu_sig, grade: signature, rating: 4, name: Stinky tofu, name_sv: "Stinkande tofu", notes: "Chou doufu (臭豆腐) — deeply fermented tofu fried until crispy; served with pickled cabbage and chilli sauce; Taiwan's most distinctive night market food; represents Taiwan's unique fermentation tradition; national street food icon"}
+- {id: twn_pork_knuckle_sig, grade: signature, rating: 3, name: Pork knuckle, name_sv: "Fläsklägg", notes: "Ti bang (蹄膀) — whole braised pork knuckle with soy and rice wine; sold at traditional buffet restaurants; also Japanese-inspired kakuni adaptation; collagen-rich preparation beloved in Taiwanese home cooking"}
+- {id: twn_squid_sig, grade: signature, rating: 2, name: Squid, name_sv: "Bläckfisk", notes: "Fried basil squid (九層塔炒魷魚) — stir-fried with Taiwanese basil and garlic; grilled squid skewers at every night market; tempura-style squid snacks; squid represents Taiwan's vibrant seafood street food culture"}
+- {id: twn_taiwanese_sausage_sig, grade: signature, rating: 1, name: Taiwanese sausage, name_sv: "Taiwanesisk korv", notes: "Xiang chang (香腸) — sweet cured pork sausage grilled at night markets; served in sticky rice sausage (大腸包小腸); distinctly sweeter than mainland Chinese sausage; iconic Taiwanese night market street food across the island"}
 
 ### Proteins — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Taiwanese meat consumption kg per capita", "Taiwanese FAO food balance protein", "Taiwanese most consumed protein statistics" -->
 
-- {id: stub_prot_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Protein 1", name_sv: "[UTKAST] Bulk Protein 1", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Protein 2", name_sv: "[UTKAST] Bulk Protein 2", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Protein 3", name_sv: "[UTKAST] Bulk Protein 3", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Protein 4", name_sv: "[UTKAST] Bulk Protein 4", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Protein 5", name_sv: "[UTKAST] Bulk Protein 5", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Protein 6", name_sv: "[UTKAST] Bulk Protein 6", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Protein 7", name_sv: "[UTKAST] Bulk Protein 7", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Protein 8", name_sv: "[UTKAST] Bulk Protein 8", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Protein 9", name_sv: "[UTKAST] Bulk Protein 9", notes: "STUB — replace with verified Taiwanese research"}
+- {id: twn_chicken_bulk, grade: bulk, rating: 9, name: Chicken, name_sv: "Kyckling", notes: "43.12 kg/cap (Taiwan Ministry of Agriculture 2022) — #1 meat in Taiwan surpassing pork for first time; breast consumption rising due to health trends; used in soups, stir-fries, night market chicken cutlet; highest daily protein consumption"}
+- {id: twn_pork_bulk, grade: bulk, rating: 8, name: Pork, name_sv: "Fläsk", notes: "36 kg/cap (2022); traditionally #1 but now #2 after chicken; pork in every form — minced, shoulder, ribs, intestines, ear; lu rou fan base protein; pork supply chain deeply embedded in Taiwanese food industry"}
+- {id: twn_eggs_bulk, grade: bulk, rating: 7, name: Eggs, name_sv: "Ägg", notes: "Very high daily consumption; tea eggs (茶葉蛋) sold at every 7-Eleven; scallion egg pancake for breakfast; oyster omelet uses egg; century eggs (皮蛋) in cold dishes; significant local poultry industry egg supply"}
+- {id: twn_fish_bulk, grade: bulk, rating: 6, name: Fish, name_sv: "Fisk", notes: "~30-35 kg/cap estimated seafood supply; tuna, mackerel, tilapia, milkfish consumed; Taiwan is major fishing nation; significant aquaculture; steamed whole fish at family tables; fish every week in Taiwanese home cooking"}
+- {id: twn_beef_bulk, grade: bulk, rating: 5, name: Beef, name_sv: "Nötkött", notes: "7.34 kg/cap (2022 record high); beef noodle soup driving demand; stir-fried beef with scallion; beef hot pot; mostly imported from Australia and US; growing acceptance after historic agricultural taboo against slaughtering work cattle"}
+- {id: twn_tofu_bulk, grade: bulk, rating: 4, name: Tofu, name_sv: "Tofu", notes: "Very high per-capita; silken tofu cold-dressed or in soup; firm tofu stir-fried; dried tofu (豆干) as snack; tofu is a daily household protein; soy-based protein consumption extremely high in Taiwan across all meal types"}
+- {id: twn_shrimp_bulk, grade: bulk, rating: 3, name: Shrimp, name_sv: "Räkor", notes: "Widely consumed; garlic stir-fry, tempura-battered, hot pot; locally farmed giant river prawn; salt-and-pepper shrimp (椒鹽蝦) night market staple; significant domestic and imported shrimp consumption throughout the year"}
+- {id: twn_clam_bulk, grade: bulk, rating: 2, name: Clam, name_sv: "Mussla", notes: "Clams with basil and garlic (蛤蜊炒九層塔) — very popular stir-fry; clam soup with ginger; Taiwanese clam aquaculture (Meretrix lusoria) on western coast tidal flats; affordable everyday protein; high consumption in coastal regions"}
+- {id: twn_duck_bulk, grade: bulk, rating: 1, name: Duck, name_sv: "Anka", notes: "Duck meat and eggs both consumed; smoked duck (煙燻鴨) specialty; salted duck egg (鹹鴨蛋) used in mooncakes and rice dumplings (zongzi); duck blood pudding in hot pot; significant farming; noticeable in night market dishes"}
 
 ### Proteins — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Taiwanese livestock farming animals raised", "Taiwanese fishing industry fish species caught", "Taiwanese game animals hunted wild" -->
 
-- {id: stub_prot_loc_1, grade: local, rating: 9, name: "[STUB] Local Protein 1", name_sv: "[UTKAST] Lokalt Protein 1", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_loc_2, grade: local, rating: 8, name: "[STUB] Local Protein 2", name_sv: "[UTKAST] Lokalt Protein 2", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_loc_3, grade: local, rating: 7, name: "[STUB] Local Protein 3", name_sv: "[UTKAST] Lokalt Protein 3", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_loc_4, grade: local, rating: 6, name: "[STUB] Local Protein 4", name_sv: "[UTKAST] Lokalt Protein 4", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_loc_5, grade: local, rating: 5, name: "[STUB] Local Protein 5", name_sv: "[UTKAST] Lokalt Protein 5", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_loc_6, grade: local, rating: 4, name: "[STUB] Local Protein 6", name_sv: "[UTKAST] Lokalt Protein 6", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_loc_7, grade: local, rating: 3, name: "[STUB] Local Protein 7", name_sv: "[UTKAST] Lokalt Protein 7", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_loc_8, grade: local, rating: 2, name: "[STUB] Local Protein 8", name_sv: "[UTKAST] Lokalt Protein 8", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_prot_loc_9, grade: local, rating: 1, name: "[STUB] Local Protein 9", name_sv: "[UTKAST] Lokalt Protein 9", notes: "STUB — replace with verified Taiwanese research"}
+- {id: twn_taiwan_black_pig_local, grade: local, rating: 9, name: Taiwan black pig, name_sv: "Svartgris", notes: "黑豬 — indigenous heritage breed; fattier and more flavourful than white Landrace; preferred by traditional families for New Year sausage and braised pork; Pingtung and southern Taiwan major breeding areas; national agricultural heritage breed"}
+- {id: twn_milkfish_local, grade: local, rating: 8, name: Milkfish, name_sv: "Mjölkfisk", notes: "Chanos chanos — farmed in shallow coastal ponds of Tainan and Chiayi since the 17th century; Taiwan's most historically significant farmed fish; milkfish pond culture is traditional Tainan agricultural heritage; significant domestic aquaculture"}
+- {id: twn_pacific_oyster_local, grade: local, rating: 7, name: Pacific oyster, name_sv: "Stillahavsostroen", notes: "Crassostrea gigas — farmed on bamboo racks in intertidal zones of Chiayi, Tainan and Yunlin; Taiwan is one of Asia's top oyster producers; raw, fried and in omelet preparations; western coastal tidal flat aquaculture tradition"}
+- {id: twn_tilapia_local, grade: local, rating: 6, name: Tilapia, name_sv: "Tilapia", notes: "吳郭魚 — Oreochromis spp.; major freshwater aquaculture product since 1950s; steamed, braised or deep-fried; named after its introducers Wu and Guo; significant production in Chiayi and Tainan ponds; affordable everyday fish"}
+- {id: twn_giant_prawn_local, grade: local, rating: 5, name: Giant river prawn, name_sv: "Jätteflodräka", notes: "Macrobrachium rosenbergii — freshwater prawn farmed in inland aquaculture ponds; prawn-catching restaurants (釣蝦場) a uniquely Taiwanese recreational-dining activity; grilled over charcoal; significant local aquaculture production"}
+- {id: twn_grouper_local, grade: local, rating: 4, name: Grouper, name_sv: "Havsabborre", notes: "石斑魚 — Epinephelus species; major premium aquaculture product; steamed Cantonese-style with ginger and soy; Taiwan is world's top grouper aquaculture producer; significant export to China and Japan; high-value local fish industry"}
+- {id: twn_silkie_local, grade: local, rating: 3, name: Silkie chicken, name_sv: "Silkeshöna", notes: "烏骨雞 — silkie with black skin and bones; used in medicinal soups with ginger and sesame oil; traditional medicine food; high price per bird; postpartum recovery soup staple; both locally raised and some imported for this use"}
+- {id: twn_abalone_local, grade: local, rating: 2, name: Abalone, name_sv: "Havsöra", notes: "鮑魚 — farmed in eastern Taiwan (Hualien, Taitung) Pacific-side clean waters; braised abalone a luxury banquet dish; significant aquaculture export value to Hong Kong and Japan; represents Taiwan's premium seafood sector"}
+- {id: twn_japanese_eel_local, grade: local, rating: 1, name: Japanese eel, name_sv: "Japansk ål", notes: "鰻魚 — Anguilla japonica; farmed in Taiwan's rivers; eel rice (鰻魚飯) at specialist restaurants; significant Taiwanese eel export to Japan for unagi; eel aquaculture historically important though numbers declining"}
 
 
 ## Produce
 
 ### Produce — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Taiwanese signature dishes vegetables", "Taiwanese iconic vegetable ingredients", "Taiwanese traditional vegetable preparations" -->
 
-- {id: stub_veg_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Vegetable 1", name_sv: "[UTKAST] Signatur Grönsak 1", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Vegetable 2", name_sv: "[UTKAST] Signatur Grönsak 2", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Vegetable 3", name_sv: "[UTKAST] Signatur Grönsak 3", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Vegetable 4", name_sv: "[UTKAST] Signatur Grönsak 4", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Vegetable 5", name_sv: "[UTKAST] Signatur Grönsak 5", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Vegetable 6", name_sv: "[UTKAST] Signatur Grönsak 6", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Vegetable 7", name_sv: "[UTKAST] Signatur Grönsak 7", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Vegetable 8", name_sv: "[UTKAST] Signatur Grönsak 8", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Vegetable 9", name_sv: "[UTKAST] Signatur Grönsak 9", notes: "STUB — replace with verified Taiwanese research"}
+- {id: twn_scallion_sig, grade: signature, rating: 9, name: Scallion, name_sv: "Salladslök", notes: "青蔥 — scallion pancake (蔥油餅) is the quintessential Taiwanese street breakfast; scallion fried rice; in virtually every dish as garnish or aromatic base; Ilan (宜蘭) famous for premium sweet scallions; high-volume daily crop"}
+- {id: twn_taiwanese_basil_sig, grade: signature, rating: 8, name: Taiwanese basil, name_sv: "Taiwanesisk basilika", notes: "九層塔 — Ocimum basilicum var.; spicy clove-like, distinctly different from Italian basil; essential in three-cup chicken, fried squid, oyster mushroom; fried into almost every night market dish; a uniquely Taiwanese herbal identity ingredient"}
+- {id: twn_taro_sig, grade: signature, rating: 7, name: Taro, name_sv: "Taro", notes: "芋頭 — taro balls (芋圓) chewy dessert; taro rice (芋頭飯); taro cake (芋頭糕) for Lunar New Year; taro bubble tea; Dajia and Fangyuan produce celebrated varieties; deeply embedded in Taiwanese food culture"}
+- {id: twn_sweet_potato_sig, grade: signature, rating: 6, name: Sweet potato, name_sv: "Sötpotatis", notes: "地瓜 — roasted sweet potatoes as street snack; sweet potato balls (地瓜球) fried chewy night market snack; stir-fried sweet potato leaves (炒地瓜葉) the most common home vegetable dish; Taiwan's historical staple now celebrated"}
+- {id: twn_bamboo_shoot_sig, grade: signature, rating: 5, name: Bamboo shoot, name_sv: "Bambugrodd", notes: "竹筍 — bamboo shoot soup with pork ribs (竹筍排骨湯) classic Taiwanese comfort soup; cold bamboo shoot salad with mayo; added to stir-fries and braised dishes; Taiwan's mountain forests provide abundant fresh and preserved shoots"}
+- {id: twn_bitter_melon_sig, grade: signature, rating: 4, name: Bitter melon, name_sv: "Bittermelon", notes: "苦瓜 — bitter melon stir-fried with eggs and fermented black bean; bitter melon cold salad; stuffed bitter melon; Taiwan pale jade variety; beloved for health properties; bitter flavour accepted as beneficial and refreshing in Taiwanese culture"}
+- {id: twn_winter_melon_sig, grade: signature, rating: 3, name: Winter melon, name_sv: "Vintergurka", notes: "冬瓜 — winter melon soup with pork ribs; winter melon tea (冬瓜茶) iconic Taiwanese cool drink sold at tea stalls; stuffed winter melon for banquets; very high summer consumption; uniquely East Asian preparation beloved in Taiwan"}
+- {id: twn_chayote_sig, grade: signature, rating: 2, name: Chayote, name_sv: "Chayote", notes: "佛手瓜 — chayote and its tender shoots (龍鬚菜 dragon whisker vegetable) stir-fried with garlic; mild crisp texture; Hsinchu and Miaoli highlands produce large quantities; beloved simple home vegetable; both gourd and shoots used"}
+- {id: twn_water_spinach_sig, grade: signature, rating: 1, name: Water spinach, name_sv: "Vattenspenat", notes: "空心菜 (kangkong) — stir-fried with garlic and fermented tofu; the most commonly ordered leafy green at Taiwanese buffet restaurants; high-heat wok technique showcases chef skill; night market and home table staple throughout the island"}
 
 ### Produce — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Taiwanese vegetable consumption kg per capita", "Taiwanese most consumed vegetables statistics", "Taiwanese FAO food balance vegetables" -->
 
-- {id: stub_veg_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Vegetable 1", name_sv: "[UTKAST] Bulk Grönsak 1", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Vegetable 2", name_sv: "[UTKAST] Bulk Grönsak 2", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Vegetable 3", name_sv: "[UTKAST] Bulk Grönsak 3", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Vegetable 4", name_sv: "[UTKAST] Bulk Grönsak 4", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Vegetable 5", name_sv: "[UTKAST] Bulk Grönsak 5", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Vegetable 6", name_sv: "[UTKAST] Bulk Grönsak 6", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Vegetable 7", name_sv: "[UTKAST] Bulk Grönsak 7", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Vegetable 8", name_sv: "[UTKAST] Bulk Grönsak 8", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Vegetable 9", name_sv: "[UTKAST] Bulk Grönsak 9", notes: "STUB — replace with verified Taiwanese research"}
+- {id: twn_cabbage_bulk, grade: bulk, rating: 9, name: Cabbage, name_sv: "Kål", notes: "#1 vegetable by production volume in Taiwan (~116 kg/cap total veg); hot pot staple; stir-fried; pickled Taiwan cabbage; Alishan highland cabbage prized; consumed daily throughout Taiwan; very high year-round domestic production"}
+- {id: twn_tomato_bulk, grade: bulk, rating: 8, name: Tomato, name_sv: "Tomat", notes: "Major autumn crop; eaten fresh dipped in ginger sugar (uniquely Taiwanese); in egg stir-fry; tomato-based stews; Pingtung and Tainan grow Taiwan's best tomatoes; widely consumed across seasons; significant production volumes"}
+- {id: twn_carrot_bulk, grade: bulk, rating: 7, name: Carrot, name_sv: "Morot", notes: "Added to hot pot, stews and braised dishes; carrot cake (蘿蔔糕) Hakka staple; very high year-round consumption; grown in Yunlin and Changhua plains; one of the top cultivated root vegetables across Taiwan"}
+- {id: twn_daikon_bulk, grade: bulk, rating: 6, name: Daikon radish, name_sv: "Daikon-rädisa", notes: "白蘿蔔 — daikon cake (蘿蔔糕) fried at breakfast stalls; daikon in beef noodle broth; pickled daikon (酸菜) alongside braised pork; significant winter vegetable crop; widely consumed in soups and braised preparations"}
+- {id: twn_eggplant_bulk, grade: bulk, rating: 5, name: Eggplant, name_sv: "Aubergine", notes: "茄子 — braised eggplant with minced pork and basil; stuffed eggplant tempura; stir-fried with garlic sauce; grown across Taiwan's plains; very high summer consumption; popular in both home cooking and night market dishes"}
+- {id: twn_cucumber_bulk, grade: bulk, rating: 4, name: Cucumber, name_sv: "Gurka", notes: "小黃瓜 — Taiwanese small cucumber eaten raw and pickled; cold smashed cucumber with sesame oil; pickled cucumber side dish; significant production in central Taiwan; very high fresh consumption especially in summer months"}
+- {id: twn_garlic_bulk, grade: bulk, rating: 3, name: Garlic, name_sv: "Vitlök", notes: "蒜頭 — used in virtually all Taiwanese savory dishes; garlic stir-fried water spinach; minced garlic on oyster vermicelli; Taiwan grows significant domestic garlic especially in Yunlin; very high daily use across all cuisine categories"}
+- {id: twn_ginger_bulk, grade: bulk, rating: 2, name: Ginger, name_sv: "Ingefära", notes: "薑 — fresh ginger in sesame oil chicken, braises and seafood; mature ginger with sesame oil for scallion sauce; significant domestic cultivation; ginger duck hot pot (薑母鴨) winter specialty; very high everyday consumption"}
+- {id: twn_mustard_greens_bulk, grade: bulk, rating: 1, name: Mustard greens, name_sv: "Senapsblad", notes: "芥菜 — pickled mustard greens (酸菜) alongside beef noodle soup; stir-fried with pork; preserved salt-fermented Hakka pickled vegetable tradition; grown across Taiwan's highland areas; fundamental accompaniment to noodle dishes"}
 
 ### Produce — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Taiwanese vegetables grown locally agriculture", "Taiwanese regional vegetable crops", "Taiwanese foraging wild plants" -->
 
-- {id: stub_veg_loc_1, grade: local, rating: 9, name: "[STUB] Local Vegetable 1", name_sv: "[UTKAST] Lokalt Grönsak 1", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_loc_2, grade: local, rating: 8, name: "[STUB] Local Vegetable 2", name_sv: "[UTKAST] Lokalt Grönsak 2", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_loc_3, grade: local, rating: 7, name: "[STUB] Local Vegetable 3", name_sv: "[UTKAST] Lokalt Grönsak 3", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_loc_4, grade: local, rating: 6, name: "[STUB] Local Vegetable 4", name_sv: "[UTKAST] Lokalt Grönsak 4", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_loc_5, grade: local, rating: 5, name: "[STUB] Local Vegetable 5", name_sv: "[UTKAST] Lokalt Grönsak 5", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_loc_6, grade: local, rating: 4, name: "[STUB] Local Vegetable 6", name_sv: "[UTKAST] Lokalt Grönsak 6", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_loc_7, grade: local, rating: 3, name: "[STUB] Local Vegetable 7", name_sv: "[UTKAST] Lokalt Grönsak 7", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_loc_8, grade: local, rating: 2, name: "[STUB] Local Vegetable 8", name_sv: "[UTKAST] Lokalt Grönsak 8", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_veg_loc_9, grade: local, rating: 1, name: "[STUB] Local Vegetable 9", name_sv: "[UTKAST] Lokalt Grönsak 9", notes: "STUB — replace with verified Taiwanese research"}
+- {id: twn_irwin_mango_local, grade: local, rating: 9, name: Irwin mango, name_sv: "Irwin-mango", notes: "愛文芒果 — Taiwan's iconic summer fruit; Tainan and Pingtung grow sweet red Irwin variety; shaved mango ice (芒果雪花冰) one of Taiwan's most famous desserts; mango soft serve; Taiwan mango season June-August a national event"}
+- {id: twn_pineapple_local, grade: local, rating: 8, name: Golden pineapple, name_sv: "Gyllene ananas", notes: "金鑽鳳梨 — Taiwan's sweet low-acid pineapple variety; pineapple cake (鳳梨酥) is THE iconic Taiwanese souvenir food; Nantou and Pingtung production; became symbol of national pride after China import ban 2021"}
+- {id: twn_wax_apple_local, grade: local, rating: 7, name: Wax apple, name_sv: "Vaxäpple", notes: "蓮霧 — Syzygium samarangense; bell-shaped crisp mildly sweet fruit; Pingtung black pearl variety premium; uniquely Taiwanese tropical fruit eaten fresh; only grown in Taiwan's southern tropical climate; cultural fruit pride"}
+- {id: twn_guava_local, grade: local, rating: 6, name: Guava, name_sv: "Guava", notes: "芭樂 — Taiwan's most popular everyday fruit; crunchy white guava dipped in plum powder and chilli; guava juice; grown year-round in central and southern Taiwan; one of the highest per-capita consumed fruits on the island"}
+- {id: twn_longan_local, grade: local, rating: 5, name: Longan, name_sv: "Longan", notes: "龍眼 — fresh longan in summer; dried longan in soups and herbal teas; longan red date tea traditional women's health drink; Nantou and Tainan major production; deeply embedded in traditional medicine and everyday consumption"}
+- {id: twn_lychee_local, grade: local, rating: 4, name: Lychee, name_sv: "Litchi", notes: "荔枝 — sweet juicy summer fruit; Nantou and Taichung major production; eaten fresh or in ice desserts; significant export fruit; highly seasonal June fruit celebrated annually; Taiwan developed several improved cultivars"}
+- {id: twn_dragon_fruit_local, grade: local, rating: 3, name: Dragon fruit, name_sv: "Drakfrukt", notes: "火龍果 — red and white flesh varieties; Changhua and Tainan production areas; drunk as juice and eaten fresh; Taiwan developed many improved cultivars; popular in smoothies; visual icon of tropical Taiwanese produce"}
+- {id: twn_starfruit_local, grade: local, rating: 2, name: Starfruit, name_sv: "Stjärnfrukt", notes: "楊桃 — Tainan and Pingtung sweet large variety; starfruit juice a traditional Taiwanese snack drink; eaten fresh or candied; significant domestic production; beloved local fruit particularly prominent in southern Taiwan"}
+- {id: twn_custard_apple_local, grade: local, rating: 1, name: Custard apple, name_sv: "Soursop", notes: "釋迦 (Buddha head fruit) — Annona squamosa; Taitung and Hualien major production; creamy sweet flesh eaten with spoon; important to indigenous Amis community; Taiwan is a top global producer and exporter of this variety"}
 
 
 ## Grains & Starches
 
 ### Grains & Starches — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Taiwanese signature grain dishes bread pasta rice", "Taiwanese iconic starch preparations", "Taiwanese traditional staple foods" -->
 
-- {id: stub_grain_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Grain 1", name_sv: "[UTKAST] Signatur Spannmål 1", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Grain 2", name_sv: "[UTKAST] Signatur Spannmål 2", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Grain 3", name_sv: "[UTKAST] Signatur Spannmål 3", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Grain 4", name_sv: "[UTKAST] Signatur Spannmål 4", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Grain 5", name_sv: "[UTKAST] Signatur Spannmål 5", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Grain 6", name_sv: "[UTKAST] Signatur Spannmål 6", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Grain 7", name_sv: "[UTKAST] Signatur Spannmål 7", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Grain 8", name_sv: "[UTKAST] Signatur Spannmål 8", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Grain 9", name_sv: "[UTKAST] Signatur Spannmål 9", notes: "STUB — replace with verified Taiwanese research"}
+- {id: twn_japonica_rice_sig, grade: signature, rating: 9, name: Japonica rice, name_sv: "Japanskt ris", notes: "蓬萊米 — short-grain sticky japonica rice; basis of lu rou fan, oyster rice, plain steamed rice at every Taiwanese meal; 42.98 kg/cap (2022 USDA GAIN); Taiwan grows premium ponlai varieties; the absolute starch foundation of Taiwanese cuisine"}
+- {id: twn_rice_noodles_sig, grade: signature, rating: 8, name: Rice noodles, name_sv: "Risnudlar", notes: "米粉 — Hsinchu rice noodles (新竹米粉) GI product famous worldwide; stir-fried rice noodles (炒米粉) with pork; oyster vermicelli soup (蚵仔麵線); fine and thick varieties; iconic Taiwanese starch used across street and home cooking"}
+- {id: twn_wheat_noodles_sig, grade: signature, rating: 7, name: Wheat noodles, name_sv: "Vetnudlar", notes: "拉麵/陽春麵 — beef noodle soup uses hand-pulled or factory wheat noodles; dan-zi noodles (擔仔麵) Tainan specialty; Hakka ban mian flat noodles; wheat noodles are the vehicle for Taiwan's most famous soup dish; high daily consumption"}
+- {id: twn_sticky_rice_sig, grade: signature, rating: 6, name: Sticky rice, name_sv: "Klibbigt ris", notes: "糯米 — zongzi (粽子) bamboo-wrapped sticky rice dumplings for Dragon Boat Festival; fan tuan (飯糰) breakfast rolls; tang yuan glutinous rice balls for Lantern Festival; sticky rice sausage (大腸包小腸); fundamental festival starch"}
+- {id: twn_scallion_pancake_sig, grade: signature, rating: 5, name: Scallion pancake, name_sv: "Lökpannkaka", notes: "蔥油餅 — flaky layered wheat flatbread with scallion; pan-fried at every Taiwanese breakfast cart; served with egg; one of the most consumed Taiwanese breakfast foods; street food icon found at every night market and morning market"}
+- {id: twn_taro_balls_sig, grade: signature, rating: 4, name: Taro starch balls, name_sv: "Tarobollsgröt", notes: "芋圓 — chewy taro starch balls for dessert soups and shaved ice; the wobbly chewy ball is one of Taiwan's most distinctive dessert textures; integral to Jiufen (九份) mountain village food identity; sweet potato balls also made this way"}
+- {id: twn_sweet_potato_starch_sig, grade: signature, rating: 3, name: Sweet potato starch, name_sv: "Sötpotatissstärkelse", notes: "地瓜粉 — thick coating for oyster omelet; used to coat fried chicken and seafood; thickens braised sauces; provides the distinctive gelatinous texture in many Taiwanese street food dishes; every Taiwanese kitchen pantry essential"}
+- {id: twn_steamed_bun_sig, grade: signature, rating: 2, name: Steamed bun, name_sv: "Ångad bulle", notes: "饅頭/包子 — steamed wheat buns consumed as breakfast and lunch; gua bao (割包) pork belly bun is an internationally famous Taiwanese icon; widespread in breakfast shops; leavened bao with various fillings are a daily Taiwanese starch"}
 
 ### Grains & Starches — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Taiwanese grain consumption kg per capita", "Taiwanese rice wheat bread statistics", "Taiwanese FAO food balance cereals" -->
 
-- {id: stub_grain_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Grain 1", name_sv: "[UTKAST] Bulk Spannmål 1", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Grain 2", name_sv: "[UTKAST] Bulk Spannmål 2", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Grain 3", name_sv: "[UTKAST] Bulk Spannmål 3", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Grain 4", name_sv: "[UTKAST] Bulk Spannmål 4", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Grain 5", name_sv: "[UTKAST] Bulk Spannmål 5", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Grain 6", name_sv: "[UTKAST] Bulk Spannmål 6", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Grain 7", name_sv: "[UTKAST] Bulk Spannmål 7", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Grain 8", name_sv: "[UTKAST] Bulk Spannmål 8", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Grain 9", name_sv: "[UTKAST] Bulk Spannmål 9", notes: "STUB — replace with verified Taiwanese research"}
+- {id: twn_wheat_flour_bulk, grade: bulk, rating: 9, name: Wheat flour, name_sv: "Vetemjöl", notes: "38 kg/cap (2022 USDA GAIN Taiwan); breads, dumplings, noodles, buns; steamed buns (饅頭), scallion pancakes, noodle manufacturing; significant import from US and Australia; rapidly closing gap with rice consumption"}
+- {id: twn_sweet_potato_bulk, grade: bulk, rating: 8, name: Sweet potato, name_sv: "Sötpotatis", notes: "High per-capita; starchy root as supplementary carbohydrate; sweet potato porridge (地瓜粥) a common everyday breakfast; historically the staple that fed Taiwan through hardship; very significant production across Yunlin and Chiayi"}
+- {id: twn_corn_starch_bulk, grade: bulk, rating: 7, name: Corn starch, name_sv: "Majsstärkelse", notes: "太白粉/玉米粉 — thickening agent in virtually all braised sauces and soups; coating for fried chicken; significant import; used in every Taiwanese kitchen daily for sauce texture and crispy coatings on fried foods"}
+- {id: twn_mung_bean_bulk, grade: bulk, rating: 6, name: Mung bean, name_sv: "Mungböna", notes: "綠豆 — mung bean ice dessert (綠豆湯) classic Taiwanese summer sweet soup; mung bean glass noodles (冬粉); mung bean cake; high daily dessert and snack consumption; significant import and some local production"}
+- {id: twn_pearl_barley_bulk, grade: bulk, rating: 5, name: Pearl barley, name_sv: "Pärlkorn", notes: "薏仁 — job's tears (coix seed); barley and coix congee (薏仁粥) popular health beverage; coix milk tea; Yi ren used in herbal soups; consumed as a health grain in beverage form; significant daily health-food consumption in Taiwan"}
+- {id: twn_taro_root_bulk, grade: bulk, rating: 4, name: Taro root, name_sv: "Tarorot", notes: "芋頭 — major starchy vegetable beyond the signature dessert use; taro chips; taro in hot pot; taro porridge; significant domestic production and consumption; Dajia taro famous Taiwanese cultivar commanding premium prices"}
+- {id: twn_lotus_seed_bulk, grade: bulk, rating: 3, name: Lotus seed, name_sv: "Lotusfrö", notes: "蓮子 — lotus seed sweet soup (蓮子湯); stuffing for mooncakes and zongzi; dried lotus in herbal stews; Baihe Township in Tainan famous for lotus production; significant seasonal starch and dessert ingredient in Taiwanese food culture"}
+- {id: twn_rice_wine_lees_bulk, grade: bulk, rating: 2, name: Rice wine, name_sv: "Risvin", notes: "米酒 — Taiwan rice wine consumed in very large volumes as cooking ingredient; sesame oil chicken requires rice wine; three-cup chicken recipe; the original state monopoly rice wine (台灣菸酒公司) is a national product; kitchen pantry essential"}
+- {id: twn_oats_bulk, grade: bulk, rating: 1, name: Oats, name_sv: "Havre", notes: "Imported oats increasingly consumed in urban Taiwan; oat porridge among health-conscious households; oat milk growing rapidly; significant rising breakfast consumption; small but growing market now part of modern Taiwanese urban pantry"}
 
 ### Grains & Starches — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Taiwanese grain crops grown", "Taiwanese cereal farming production", "Taiwanese locally milled flour regional varieties" -->
 
-- {id: stub_grain_loc_1, grade: local, rating: 9, name: "[STUB] Local Grain 1", name_sv: "[UTKAST] Lokalt Spannmål 1", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_loc_2, grade: local, rating: 8, name: "[STUB] Local Grain 2", name_sv: "[UTKAST] Lokalt Spannmål 2", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_loc_3, grade: local, rating: 7, name: "[STUB] Local Grain 3", name_sv: "[UTKAST] Lokalt Spannmål 3", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_loc_4, grade: local, rating: 6, name: "[STUB] Local Grain 4", name_sv: "[UTKAST] Lokalt Spannmål 4", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_loc_5, grade: local, rating: 5, name: "[STUB] Local Grain 5", name_sv: "[UTKAST] Lokalt Spannmål 5", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_loc_6, grade: local, rating: 4, name: "[STUB] Local Grain 6", name_sv: "[UTKAST] Lokalt Spannmål 6", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_loc_7, grade: local, rating: 3, name: "[STUB] Local Grain 7", name_sv: "[UTKAST] Lokalt Spannmål 7", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_loc_8, grade: local, rating: 2, name: "[STUB] Local Grain 8", name_sv: "[UTKAST] Lokalt Spannmål 8", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_grain_loc_9, grade: local, rating: 1, name: "[STUB] Local Grain 9", name_sv: "[UTKAST] Lokalt Spannmål 9", notes: "STUB — replace with verified Taiwanese research"}
+- {id: twn_chishang_rice_local, grade: local, rating: 9, name: Chishang rice, name_sv: "Chishang-ris", notes: "池上米 — premium japonica rice from Chishang, Taitung; GI-protected designation; grown in clean-water terraces of the Taitung Rift Valley; considered the finest Taiwanese rice; commands premium prices nationally and at export"}
+- {id: twn_hualien_rice_local, grade: local, rating: 8, name: Hualien rice, name_sv: "Hualien-ris", notes: "花蓮米 — organic and reduced-chemical rice from Hualien's clean mountain valleys; premium domestic variety; Hualien farmers pioneered organic rice cultivation in Taiwan; distinct terroir from Pacific-facing mountain valley irrigation"}
+- {id: twn_dajia_taro_local, grade: local, rating: 7, name: Dajia taro, name_sv: "Dajia-taro", notes: "大甲芋頭 — Dajia town (Taichung) famous for premium soft-textured taro; GI variety; used in top-quality taro ice cream, cakes and pastries; Dajia taro season autumn festival; nationally celebrated local crop with strong identity"}
+- {id: twn_taiwan_sweet_potato_local, grade: local, rating: 6, name: Taiwan sweet potato, name_sv: "Sötpotatis", notes: "台農地瓜 — Taiwan Agricultural Research Institute developed high-yield varieties; Yunlin and Chiayi major production; tainong 57 and 66 varieties most consumed; historically the staple that fed Taiwan through hardship; strong national agricultural identity"}
+- {id: twn_coix_seed_local, grade: local, rating: 5, name: Coix seed, name_sv: "Jobb-tårar", notes: "薏苡 — job's tears grown in central Taiwan highlands including indigenous community areas; traditional health grain; significant domestic cultivation in Nantou and Hualien; coix milk tea trend driving production increase"}
+- {id: twn_black_glutinous_rice_local, grade: local, rating: 4, name: Black glutinous rice, name_sv: "Svart klibbigt ris", notes: "黑糯米 — grown in Taiwan's mountain indigenous communities (Hualien, Nantou); used in Amis and Bunun ceremonial cooking; black rice wine and porridge; traditional aboriginal grain crop; preserved heritage variety"}
+- {id: twn_taiwan_wheat_local, grade: local, rating: 3, name: Kinmen wheat, name_sv: "Kinmen-vete", notes: "金門小麥 — Kinmen Island locally grown wheat; used in famous Kinmen sorghum-wheat spirit; small-scale local wheat revival; Taichung winter wheat some production; mostly imports but local craft flour growing in artisan niche market"}
+- {id: twn_taiwan_sesame_local, grade: local, rating: 2, name: Sesame, name_sv: "Sesam", notes: "芝麻 — black and white sesame grown in Yunlin and Tainan; raw material for premium sesame oil; Taiwan's sesame oil (麻油) industry significant; black sesame tang yuan filling; artisan sesame oil pressing still practiced and prized"}
+- {id: twn_peanut_local, grade: local, rating: 1, name: Peanut, name_sv: "Jordnöt", notes: "花生 — Yunlin and Chiayi grow significant peanut crops; smaller and sweeter than imported; used for peanut soup, peanut powder on desserts; peanut oil pressing; peanut stewed pork a traditional preparation; local agricultural staple"}
 
 
 ## Dairy, Oils & Sauces
 
 ### Dairy, Oils & Sauces — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Taiwanese signature dairy dishes", "Taiwanese iconic cheese butter cream", "Taiwanese traditional dairy products" -->
 
-- {id: stub_dairy_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Dairy 1", name_sv: "[UTKAST] Signatur Mejeri 1", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Dairy 2", name_sv: "[UTKAST] Signatur Mejeri 2", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Dairy 3", name_sv: "[UTKAST] Signatur Mejeri 3", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Dairy 4", name_sv: "[UTKAST] Signatur Mejeri 4", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Dairy 5", name_sv: "[UTKAST] Signatur Mejeri 5", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Dairy 6", name_sv: "[UTKAST] Signatur Mejeri 6", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Dairy 7", name_sv: "[UTKAST] Signatur Mejeri 7", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Dairy 8", name_sv: "[UTKAST] Signatur Mejeri 8", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Dairy 9", name_sv: "[UTKAST] Signatur Mejeri 9", notes: "STUB — replace with verified Taiwanese research"}
+- {id: twn_soy_sauce_sig, grade: signature, rating: 9, name: Soy sauce, name_sv: "Sojasås", notes: "醬油 — THE foundational seasoning of Taiwanese cooking; naturally brewed soy sauce is Taiwan's liquid salt; lu rou fan, three-cup dishes, marinades, dipping sauce; Taiwan artisan black soybean soy sauce (黑豆醬油) premium product"}
+- {id: twn_sesame_oil_sig, grade: signature, rating: 8, name: Sesame oil, name_sv: "Sesamolja", notes: "麻油 — sesame oil chicken (麻油雞) the definitive Taiwanese winter and postpartum dish; finishing oil for noodles, wontons and cold dishes; three-cup sauce component; black vs white sesame oil; ubiquitous Taiwanese kitchen finishing oil"}
+- {id: twn_soy_milk_sig, grade: signature, rating: 7, name: Soy milk, name_sv: "Sojamjölk", notes: "豆漿 — warm fresh soy milk at Taiwan's breakfast shops (早餐店) is a cultural institution; eaten sweet or savoury with scallion pancake; paired with youtiao fried dough; the most consumed Taiwanese breakfast drink; national identity food"}
+- {id: twn_oyster_sauce_sig, grade: signature, rating: 6, name: Oyster sauce, name_sv: "Ostronsås", notes: "蠔油 — used to finish stir-fried greens, braises and noodles; essential in three-cup variations; provides deep umami; highly consumed; standard kitchen condiment also in vegetarian version; essential Taiwanese pantry item"}
+- {id: twn_taiwan_rice_wine_sig, grade: signature, rating: 5, name: Rice wine, name_sv: "Risvin", notes: "米酒 — Taiwan rice wine (19% abv); essential in sesame oil chicken, three-cup chicken, seafood preparations; the original state monopoly rice wine (台灣菸酒公司) is a national product; cooking without rice wine is unimaginable in Taiwanese home cooking"}
+- {id: twn_sweet_soy_paste_sig, grade: signature, rating: 4, name: Sweet soy sauce paste, name_sv: "Söt sojapasta", notes: "醬油膏 — thick sweet soy sauce paste; drizzled on oyster omelet, scallion egg pancake, cold tofu; added to every Taiwanese street food table; uniquely high consumption as condiment form vs plain soy; ubiquitous table condiment"}
+- {id: twn_lard_sig, grade: signature, rating: 3, name: Lard, name_sv: "Ister", notes: "豬油 — rendered pork fat; traditional Taiwanese cooking fat; lard rice (豬油拌飯) with soy sauce a simple beloved home dish; lard drizzled on noodles; still used in traditional Taiwanese pastry shops and noodle stalls"}
+- {id: twn_fermented_black_bean_sig, grade: signature, rating: 2, name: Fermented black bean, name_sv: "Fermenterad svart böna", notes: "豆豉 — salted fermented black soybeans; used in bitter melon with egg, steamed pork and seafood; adds deep umami; component of Taiwanese braised sauces; ancient soy fermentation product embedded in Taiwanese cooking tradition"}
+- {id: twn_plum_sauce_sig, grade: signature, rating: 1, name: Plum sauce, name_sv: "Plommonsås", notes: "梅汁/梅醬 — sour plum sauce for dipping fried foods and as fruit condiment; plum powder on guava and tomatoes; hua mei plum candy a national snack; distinctly Taiwanese sweet-sour flavour profile across desserts and street snacks"}
 
 ### Dairy, Oils & Sauces — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Taiwanese dairy consumption kg per capita", "Taiwanese milk cheese butter statistics", "Taiwanese FAO food balance dairy" -->
 
-- {id: stub_dairy_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Dairy 1", name_sv: "[UTKAST] Bulk Mejeri 1", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Dairy 2", name_sv: "[UTKAST] Bulk Mejeri 2", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Dairy 3", name_sv: "[UTKAST] Bulk Mejeri 3", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Dairy 4", name_sv: "[UTKAST] Bulk Mejeri 4", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Dairy 5", name_sv: "[UTKAST] Bulk Mejeri 5", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Dairy 6", name_sv: "[UTKAST] Bulk Mejeri 6", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Dairy 7", name_sv: "[UTKAST] Bulk Mejeri 7", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Dairy 8", name_sv: "[UTKAST] Bulk Mejeri 8", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Dairy 9", name_sv: "[UTKAST] Bulk Mejeri 9", notes: "STUB — replace with verified Taiwanese research"}
+- {id: twn_cow_milk_bulk, grade: bulk, rating: 9, name: Cow milk, name_sv: "Komjölk", notes: "20.62 kg/cap (CLAL 2022); consumed as fresh milk, in milk tea and bubble tea base; school milk program; 85°C Bakery milk tea; Guan-shan Taitung dairy farms premium milk; rising health-trend consumption across all age groups"}
+- {id: twn_soybean_oil_bulk, grade: bulk, rating: 8, name: Soybean oil, name_sv: "Sojaolja", notes: "大豆油 — most used frying oil in Taiwan's food service industry; very high consumption at night market stalls, fried chicken, street food; significant industrial import; cheaper alternative to sesame oil for everyday high-heat cooking"}
+- {id: twn_peanut_oil_bulk, grade: bulk, rating: 7, name: Peanut oil, name_sv: "Jordnötsolja", notes: "花生油 — traditional frying oil for wok cooking; carries nutty flavour; used in traditional Taiwanese stir-fries; some domestic peanut cultivation in central Taiwan; still preferred by many traditional cooks over neutral soybean oil"}
+- {id: twn_rice_vinegar_bulk, grade: bulk, rating: 6, name: Rice vinegar, name_sv: "Risvinäger", notes: "烏醋/白醋 — black rice vinegar and white rice vinegar; used on oyster vermicelli, dumplings, cold noodles; significant import and some domestic production; extremely high condiment consumption at every meal across Taiwan"}
+- {id: twn_butter_bulk, grade: bulk, rating: 5, name: Butter, name_sv: "Smör", notes: "About 1 kg/cap; used in baking Taiwanese pastries and Western-style breads; significant import from New Zealand and US; rising consumption driven by bakery culture; 85°C bakery chain drives substantial butter volumes"}
+- {id: twn_sha_cha_sauce_bulk, grade: bulk, rating: 4, name: Sha cha sauce, name_sv: "Sha-cha-sås", notes: "沙茶醬 — Teochew-Taiwanese barbecue and hot pot sauce; made from dried shrimp, brill fish and garlic; used as hot pot dipping base; Bull Head brand iconic; uniquely Taiwanese/Teochew condiment; very high consumption in hot pot culture"}
+- {id: twn_peanut_sauce_bulk, grade: bulk, rating: 3, name: Peanut sauce, name_sv: "Jordnötssås", notes: "花生醬 — on cold noodles (涼麵), on gua bao, over oyster omelet; Taiwanese peanut sauce sweeter and thicker than Southeast Asian types; ground peanut paste at traditional markets; extremely high consumption across dish types"}
+- {id: twn_yogurt_bulk, grade: bulk, rating: 2, name: Yogurt, name_sv: "Yoghurt", notes: "Meiji and domestic brands; consumed as health food, breakfast, and in bubble tea shops; Taiwan's dairy sector growing driven by yogurt and fresh milk; slowly rising per-capita consumption especially among younger urban consumers"}
+- {id: twn_condensed_milk_bulk, grade: bulk, rating: 1, name: Condensed milk, name_sv: "Kondenserad mjölk", notes: "煉乳 — drizzled over shaved ice (刨冰), bao bing, mango ice and desserts; standard Taiwanese dessert topping; one of the most consumed dairy products in Taiwan's dessert-heavy food culture; significant import volumes"}
 
 ### Dairy, Oils & Sauces — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Taiwanese dairy farming local production", "Taiwanese regional cheese varieties", "Taiwanese local dairy breeds" -->
 
-- {id: stub_dairy_loc_1, grade: local, rating: 9, name: "[STUB] Local Dairy 1", name_sv: "[UTKAST] Lokalt Mejeri 1", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_loc_2, grade: local, rating: 8, name: "[STUB] Local Dairy 2", name_sv: "[UTKAST] Lokalt Mejeri 2", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_loc_3, grade: local, rating: 7, name: "[STUB] Local Dairy 3", name_sv: "[UTKAST] Lokalt Mejeri 3", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_loc_4, grade: local, rating: 6, name: "[STUB] Local Dairy 4", name_sv: "[UTKAST] Lokalt Mejeri 4", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_loc_5, grade: local, rating: 5, name: "[STUB] Local Dairy 5", name_sv: "[UTKAST] Lokalt Mejeri 5", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_loc_6, grade: local, rating: 4, name: "[STUB] Local Dairy 6", name_sv: "[UTKAST] Lokalt Mejeri 6", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_loc_7, grade: local, rating: 3, name: "[STUB] Local Dairy 7", name_sv: "[UTKAST] Lokalt Mejeri 7", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_loc_8, grade: local, rating: 2, name: "[STUB] Local Dairy 8", name_sv: "[UTKAST] Lokalt Mejeri 8", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_dairy_loc_9, grade: local, rating: 1, name: "[STUB] Local Dairy 9", name_sv: "[UTKAST] Lokalt Mejeri 9", notes: "STUB — replace with verified Taiwanese research"}
+- {id: twn_black_soy_sauce_local, grade: local, rating: 9, name: Black soybean soy sauce, name_sv: "Svartböna-sojasås", notes: "黑豆醬油 — artisan soy sauce brewed from black soybeans; Yunlin, Tainan and Chiayi producers; distinctly sweeter and more complex than yellow soybean soy; Taiwan's premium artisan condiment; several renowned local brands"}
+- {id: twn_black_sesame_oil_local, grade: local, rating: 8, name: Black sesame oil, name_sv: "Svart sesamolja", notes: "黑麻油 — cold-pressed black sesame oil from Yunlin sesame; darker and more intense than white sesame oil; specifically used in sesame oil chicken and ginger-sesame postpartum dishes; artisan production prized over imported"}
+- {id: twn_rice_wine_local, grade: local, rating: 7, name: Taiwan rice wine, name_sv: "Taiwanesiskt risvin", notes: "台灣米酒 — 19% rice wine produced by Taiwan Tobacco and Liquor Corporation from local rice; an iconic state product; formerly state monopoly; the standard cooking wine in every Taiwanese kitchen; historically affordable and ubiquitous"}
+- {id: twn_fruit_vinegar_local, grade: local, rating: 6, name: Fruit vinegar, name_sv: "Fruktvinäger", notes: "水果醋 — artisan vinegars (pineapple, passion fruit, guava) from Taiwan's tropical fruit; local craft production in Taichung and Nantou; health drink trend; pineapple vinegar distinctly Taiwanese; growing niche artisan market"}
+- {id: twn_plum_vinegar_local, grade: local, rating: 5, name: Plum vinegar, name_sv: "Plommonsyra", notes: "梅子醋 — made from ume sour plum grown in Nantou Xinyi Township; health drink and condiment; Xinyi Township ume production is a major local agricultural product; plum wine, vinegar and dried plum all locally produced"}
+- {id: twn_tomato_paste_local, grade: local, rating: 4, name: Tomato sauce, name_sv: "Tomatsås", notes: "蕃茄醬 — Taiwan-produced tomato ketchup; Tainan Guanzimiao area red tomato famous; sweet Taiwanese-style tomato sauce on fried foods; domestically produced tomato products from Pingtung tomatoes; staple condiment in Taiwanese street food"}
+- {id: twn_kinmen_spirit_local, grade: local, rating: 3, name: Kinmen sorghum spirit, name_sv: "Kinmen-sprit", notes: "金門高粱酒 — sorghum spirit from Kinmen Island; Taiwan's most famous hard alcohol; 58% or 38% varieties; used in some braised dishes; GI spirit; Kinmen-grown kaoliang sorghum fermented and distilled; significant cultural product"}
+- {id: twn_taiwan_chilli_paste_local, grade: local, rating: 2, name: Taiwan chilli paste, name_sv: "Taiwanesisk chilipasta", notes: "辣豆瓣醬 — Taiwan-produced chilli fermented bean paste; used in Taiwanese mapo tofu and spicy noodle sauces; distinct from Sichuan type; common at traditional markets and food manufacturers; domestically produced condiment"}
+- {id: twn_fermented_tofu_local, grade: local, rating: 1, name: Fermented tofu, name_sv: "Fermenterad tofu", notes: "豆腐乳 — red and white fermented tofu in jars; used as condiment and in stir-fries; Yilan county traditional fermented condiment tradition; small-batch artisan production; uniquely intense flavour; sold at every traditional market"}
 
 
 ## Spices, Nuts & Seasonings
 
 ### Spices, Nuts & Seasonings — Signature
-<!-- Research strategy: Ingredients used in signature dishes and iconic preparations of this cuisine. What defines its identity and flavour? Search signature dishes, traditional recipes, cultural food icons. -->
-<!-- Searched: "Taiwanese signature spice blends", "Taiwanese defining herbs and spices", "Taiwanese iconic seasoning flavour profile" -->
 
-- {id: stub_spice_sig_1, grade: signature, rating: 9, name: "[STUB] Signature Spices 1", name_sv: "[UTKAST] Signatur Krydda 1", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_sig_2, grade: signature, rating: 8, name: "[STUB] Signature Spices 2", name_sv: "[UTKAST] Signatur Krydda 2", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_sig_3, grade: signature, rating: 7, name: "[STUB] Signature Spices 3", name_sv: "[UTKAST] Signatur Krydda 3", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_sig_4, grade: signature, rating: 6, name: "[STUB] Signature Spices 4", name_sv: "[UTKAST] Signatur Krydda 4", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_sig_5, grade: signature, rating: 5, name: "[STUB] Signature Spices 5", name_sv: "[UTKAST] Signatur Krydda 5", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_sig_6, grade: signature, rating: 4, name: "[STUB] Signature Spices 6", name_sv: "[UTKAST] Signatur Krydda 6", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_sig_7, grade: signature, rating: 3, name: "[STUB] Signature Spices 7", name_sv: "[UTKAST] Signatur Krydda 7", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_sig_8, grade: signature, rating: 2, name: "[STUB] Signature Spices 8", name_sv: "[UTKAST] Signatur Krydda 8", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_sig_9, grade: signature, rating: 1, name: "[STUB] Signature Spices 9", name_sv: "[UTKAST] Signatur Krydda 9", notes: "STUB — replace with verified Taiwanese research"}
+- {id: twn_five_spice_sig, grade: signature, rating: 9, name: Five-spice powder, name_sv: "Fem-krydda", notes: "五香粉 — blend of star anise, cinnamon, cloves, Sichuan pepper and fennel; lu rou fan braising spice, fried chicken marinade, popcorn chicken coating; THE defining spice blend of Taiwanese cuisine; in every Taiwanese pantry"}
+- {id: twn_star_anise_sig, grade: signature, rating: 8, name: Star anise, name_sv: "Stjärnanis", notes: "八角 — whole star anise in braised pork belly, beef noodle broth, soy tea eggs; provides characteristic sweet licorice warmth of Taiwanese braises; Taiwan's most-used whole spice in long-cooked preparations"}
+- {id: twn_basil_spice_sig, grade: signature, rating: 7, name: Taiwanese basil, name_sv: "Taiwanesisk basilika", notes: "九層塔 — spicy clove-like holy basil; fried with three-cup chicken, squid, night market foods; adds Taiwanese character to stir-fries; grown everywhere on island; no substitute for its specific flavour in Taiwanese cooking"}
+- {id: twn_white_pepper_sig, grade: signature, rating: 6, name: White pepper, name_sv: "Vitpeppar", notes: "白胡椒 — preferred over black pepper in Taiwan for soups, rice porridge and braises; white pepper pork stomach soup (胡椒豬肚湯) iconic belly-warming dish; subtle fruity heat used where black pepper would overpower"}
+- {id: twn_cinnamon_sig, grade: signature, rating: 5, name: Cinnamon bark, name_sv: "Kanelbark", notes: "肉桂 — whole cinnamon bark in beef noodle broth spice bag and five-spice; warming braising spice for pork and beef; cinnamon sugar buns popular modern bakery item; defining warm-spice element of Taiwanese long-cooked dishes"}
+- {id: twn_sichuan_pepper_sig, grade: signature, rating: 4, name: Sichuan pepper, name_sv: "Sichuanpeppar", notes: "花椒 — numbing spice in five-spice blend and Taiwanese mala hot pot; popcorn chicken spice mix includes it; mala xiang guo spreading across Taiwan; signature numbing heat in Taiwan night market fried chicken spice blend"}
+- {id: twn_peanut_spice_sig, grade: signature, rating: 3, name: Peanut, name_sv: "Jordnöt", notes: "花生 — crushed peanut on gua bao pork belly bun; peanut powder on tang yuan; peanut soup (花生湯) dessert; peanut stewed with pork feet; peanut sauce on cold noodles; very high everyday consumption across Taiwan"}
+- {id: twn_sesame_sig, grade: signature, rating: 2, name: Sesame seeds, name_sv: "Sesamfrön", notes: "芝麻 — sesame on tang yuan, pastries and scallion pancake; black sesame soup tang yuan filling; toasted sesame in cold dish dressings; both black and white sesame widely used across sweet and savoury Taiwanese preparations"}
+- {id: twn_dried_shrimp_sig, grade: signature, rating: 1, name: Dried shrimp, name_sv: "Torkade räkor", notes: "蝦米 — dried tiny shrimp in rice noodle stir-fry, turnip cake and dumpling stuffing; component of sha cha sauce; key Taiwanese umami enhancer in savoury dishes; used more than fresh shrimp in everyday cooking contexts"}
 
 ### Spices, Nuts & Seasonings — Bulk
-<!-- Research strategy: What is consumed in the highest volumes statistically. Find official numbers: kg/capita, FAO data, national food surveys. Guesses are not good enough — find a source. -->
-<!-- Searched: "Taiwanese most used condiments seasonings statistics", "Taiwanese salt sugar spice consumption", "Taiwanese everyday seasoning ingredients" -->
 
-- {id: stub_spice_bul_1, grade: bulk, rating: 9, name: "[STUB] Bulk Spices 1", name_sv: "[UTKAST] Bulk Krydda 1", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_bul_2, grade: bulk, rating: 8, name: "[STUB] Bulk Spices 2", name_sv: "[UTKAST] Bulk Krydda 2", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_bul_3, grade: bulk, rating: 7, name: "[STUB] Bulk Spices 3", name_sv: "[UTKAST] Bulk Krydda 3", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_bul_4, grade: bulk, rating: 6, name: "[STUB] Bulk Spices 4", name_sv: "[UTKAST] Bulk Krydda 4", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_bul_5, grade: bulk, rating: 5, name: "[STUB] Bulk Spices 5", name_sv: "[UTKAST] Bulk Krydda 5", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_bul_6, grade: bulk, rating: 4, name: "[STUB] Bulk Spices 6", name_sv: "[UTKAST] Bulk Krydda 6", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_bul_7, grade: bulk, rating: 3, name: "[STUB] Bulk Spices 7", name_sv: "[UTKAST] Bulk Krydda 7", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_bul_8, grade: bulk, rating: 2, name: "[STUB] Bulk Spices 8", name_sv: "[UTKAST] Bulk Krydda 8", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_bul_9, grade: bulk, rating: 1, name: "[STUB] Bulk Spices 9", name_sv: "[UTKAST] Bulk Krydda 9", notes: "STUB — replace with verified Taiwanese research"}
+- {id: twn_garlic_spice_bulk, grade: bulk, rating: 9, name: Garlic, name_sv: "Vitlök", notes: "蒜頭 — in virtually every Taiwanese stir-fry, marinade and sauce; raw garlic in dipping sauce; fried garlic chips as garnish; Taiwan grows significant domestic garlic; highest daily consumption spice alongside ginger and scallion"}
+- {id: twn_ginger_spice_bulk, grade: bulk, rating: 8, name: Ginger, name_sv: "Ingefära", notes: "薑 — mature ginger in sesame oil chicken and duck; young ginger pickled as condiment; ginger in seafood to remove fishiness; ginger scallion sauce for poached chicken; very high daily use; domestically grown across Taiwan"}
+- {id: twn_chilli_bulk, grade: bulk, rating: 7, name: Red chilli, name_sv: "Röd chili", notes: "辣椒 — fresh red and green chilli in stir-fries, dipping sauces and marinades; chilli sauce (辣椒醬) on everything from breakfast to night market; significant domestic cultivation; very high consumption especially in southern Taiwan"}
+- {id: twn_black_pepper_bulk, grade: bulk, rating: 6, name: Black pepper, name_sv: "Svartpeppar", notes: "黑胡椒 — used in steak restaurants, pork chop rice and Western-style cooking; black pepper beef stir-fry; one of the fastest growing imported spices; standard in Western-influenced Taiwanese dishes; significant import volumes"}
+- {id: twn_dried_chilli_bulk, grade: bulk, rating: 5, name: Dried chilli, name_sv: "Torkad chili", notes: "乾辣椒 — used in braised pork and beef noodle spice bags; mala hot pot base; dried bird's eye chilli for heat; significant import; growing consumption as spicy food culture spreads through Taiwan's urban eating scene"}
+- {id: twn_salt_bulk, grade: bulk, rating: 4, name: Salt, name_sv: "Salt", notes: "鹽 — Tainan salt fields historically produced Taiwan's salt; salt-baked chicken (鹽焗雞) technique; pickling and brining; significant import of refined salt; universal basic seasoning in all Taiwanese cooking preparations"}
+- {id: twn_rock_sugar_bulk, grade: bulk, rating: 3, name: Rock sugar, name_sv: "Kristallsocker", notes: "冰糖 — amber rock sugar in braised pork belly and red-braised dishes; adds sheen and sweetness to braised sauce; pork bone soup sweetened; traditional candy sold at markets; significant everyday use in Taiwanese braised cooking"}
+- {id: twn_dried_bonito_bulk, grade: bulk, rating: 2, name: Dried bonito flakes, name_sv: "Bonitoflingor", notes: "柴魚 — katsuobushi from Japanese colonial culinary influence; used in dashi-style broths; topped on cold tofu and oyster omelets; Japanese-Taiwanese fusion seasoning; sold at every supermarket; permanently embedded in Taiwanese cooking"}
+- {id: twn_scallion_spice_bulk, grade: bulk, rating: 1, name: Fried shallot, name_sv: "Friterad schalottenlök", notes: "油蔥酥 — crispy fried shallot garnish; sprinkled on lu rou fan, noodle soups and oyster vermicelli; a uniquely Taiwanese finishing condiment purchased pre-made or home-fried; extremely high frequency of use across Taiwanese dishes"}
 
 ### Spices, Nuts & Seasonings — Local
-<!-- Research strategy: What is produced, grown, farmed, fished, hunted, or foraged in this cuisine's home region. The origin story, not the consumption volume. -->
-<!-- Searched: "Taiwanese herbs grown locally", "Taiwanese spice production native plants", "Taiwanese foraged herbs regional flavourings" -->
 
-- {id: stub_spice_loc_1, grade: local, rating: 9, name: "[STUB] Local Spices 1", name_sv: "[UTKAST] Lokalt Krydda 1", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_loc_2, grade: local, rating: 8, name: "[STUB] Local Spices 2", name_sv: "[UTKAST] Lokalt Krydda 2", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_loc_3, grade: local, rating: 7, name: "[STUB] Local Spices 3", name_sv: "[UTKAST] Lokalt Krydda 3", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_loc_4, grade: local, rating: 6, name: "[STUB] Local Spices 4", name_sv: "[UTKAST] Lokalt Krydda 4", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_loc_5, grade: local, rating: 5, name: "[STUB] Local Spices 5", name_sv: "[UTKAST] Lokalt Krydda 5", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_loc_6, grade: local, rating: 4, name: "[STUB] Local Spices 6", name_sv: "[UTKAST] Lokalt Krydda 6", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_loc_7, grade: local, rating: 3, name: "[STUB] Local Spices 7", name_sv: "[UTKAST] Lokalt Krydda 7", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_loc_8, grade: local, rating: 2, name: "[STUB] Local Spices 8", name_sv: "[UTKAST] Lokalt Krydda 8", notes: "STUB — replace with verified Taiwanese research"}
-- {id: stub_spice_loc_9, grade: local, rating: 1, name: "[STUB] Local Spices 9", name_sv: "[UTKAST] Lokalt Krydda 9", notes: "STUB — replace with verified Taiwanese research"}
-
+- {id: twn_maqaw_local, grade: local, rating: 9, name: Maqaw pepper, name_sv: "Maqaw-peppar", notes: "馬告 — Litsea cubeba; wild mountain spice berry of Taiwan's Atayal and Truku indigenous peoples; lemon-ginger-pepper aroma; used in indigenous meats, soups and marinades; only grows wild in Taiwan's high mountain forests; uniquely Taiwanese indigenous GI ingredient"}
+- {id: twn_holy_basil_local, grade: local, rating: 8, name: Holy basil cultivar, name_sv: "Basilikakultivat", notes: "本土九層塔 — Ocimum tenuiflorum cultivated across Taiwan; spicy clove-fennel flavour distinct from Italian sweet basil; grown year-round in warm climate; every night market food uses this specific cultivar; Pingtung and Yunlin major production"}
+- {id: twn_peanut_spice_local, grade: local, rating: 7, name: Peanut crop, name_sv: "Jordnötsodling", notes: "台灣花生 — Yunlin and Chiayi grow significant crops; smaller and sweeter than imported; peanut soup, peanut powder on desserts, peanut oil pressing; peanut stewed pork traditional; local agricultural staple with strong identity"}
+- {id: twn_black_sesame_local, grade: local, rating: 6, name: Black sesame crop, name_sv: "Svartsesam", notes: "黑芝麻 — black sesame varieties grown in Yunlin and Tainan; raw material for premium black sesame oil and tang yuan filling; Taiwan's traditional sesame cultivation; artisan sesame oil pressing widely practiced; both black and white seed"}
+- {id: twn_perilla_local, grade: local, rating: 5, name: Perilla, name_sv: "Perilla", notes: "紫蘇 — red and green perilla cultivated in Taiwan; used in Japanese-influenced Taiwanese pickling; perilla seeds pressed for oil; traditional aboriginal communities use wild perilla; medicinal and culinary herb in traditional medicine context"}
+- {id: twn_tangerine_peel_local, grade: local, rating: 4, name: Tangerine peel, name_sv: "Mandarinskal", notes: "陳皮 — dried aged tangerine peel; Taiwan's ponkan tangerine grown in Nantou; used in slow-braised beef, pork and duck to cut richness; significant local citrus production for TCM and cooking; long-shelf-life pantry ingredient"}
+- {id: twn_betel_leaf_local, grade: local, rating: 3, name: Betel pepper leaf, name_sv: "Betelpepparblad", notes: "荖葉 — Piper betle leaf used to wrap betel nut (檳榔); unique to Taiwan's betel nut culture; piper plants cultivated especially in eastern Taiwan and Chiayi; part of Taiwan's distinctive agricultural and cultural landscape"}
+- {id: twn_turmeric_local, grade: local, rating: 2, name: Turmeric, name_sv: "Gurkmeja", notes: "薑黃 — grown in Miaoli and Nantou highlands; used in Taiwanese curry and indigenous preparations; Hakka turmeric rice; Curcuma longa cultivation; growing health trend driving domestic production; some export to Japan"}
+- {id: twn_licorice_root_local, grade: local, rating: 1, name: Licorice root, name_sv: "Lakritsrot", notes: "甘草 — dried licorice root used in traditional Taiwanese herbal braises, tea eggs and medicinal soups; licorice powder sprinkled on plum fruit and guava in street stalls; important ingredient in Taiwan's strong TCM-food tradition"}

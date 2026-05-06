@@ -11207,8 +11207,9 @@ class KitchenCookingPanel extends LitElement {
         display: none;
         position: absolute;
         bottom: calc(100% + 6px);
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
+        right: 0;
+        width: auto;
         background: var(--card-background-color, #1c1c2e);
         color: var(--primary-text-color);
         border: 1px solid var(--divider-color);
@@ -11216,8 +11217,6 @@ class KitchenCookingPanel extends LitElement {
         padding: 8px 12px;
         font-size: 12px;
         line-height: 1.5;
-        width: 220px;
-        max-width: 90vw;
         z-index: 200;
         box-shadow: 0 4px 16px rgba(0,0,0,0.35);
         pointer-events: none;

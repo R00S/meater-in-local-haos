@@ -859,7 +859,7 @@ Recipe Builder:
 The ingredient screen has several sections:
 
 - **Cuisine / Region filter** — optionally choose one or more cuisine regions to narrow
-  ingredient suggestions. Selecting multiple regions creates fusion combinations. Over 95
+  ingredient suggestions. Selecting multiple regions creates fusion combinations. Over 100
   cuisines are available. When a cuisine is selected, a short description of that cuisine
   is shown above the ingredient grid.
 - **From Your Shelf** *(shown only when Shelf is enabled and has items)* — a highlighted
