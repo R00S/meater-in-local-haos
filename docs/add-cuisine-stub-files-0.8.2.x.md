@@ -14,12 +14,12 @@ research_done: 0 on all stubs; full 15-pair research is done in a separate branc
 4. senegalese.md (region: african)
 
 ### Status
-- [ ] puerto_rican.md — 15 pairs, research_done: 1
-- [ ] punjabi.md — 15 pairs, research_done: 1
-- [ ] russian.md — 15 pairs, research_done: 1
-- [ ] senegalese.md — 15 pairs, research_done: 1
-- [ ] Generator ran clean
-- [ ] Commit all changes
+- [x] puerto_rican.md — 15 pairs, research_done: 1
+- [x] punjabi.md — 15 pairs, research_done: 1
+- [x] russian.md — 15 pairs, research_done: 1
+- [x] senegalese.md — 15 pairs, research_done: 1
+- [x] Generator ran clean
+- [x] Commit all changes
 
 ---
 
