@@ -5,6 +5,24 @@ Create new cuisine stub files for cuisines not yet in www/cuisines/.
 Each stub gets real frontmatter + real description (not Lorem ipsum) + placeholder ingredient entries.
 research_done: 0 on all stubs; full 15-pair research is done in a separate branch (execute-improve-cuisine-data).
 
+## Session 2 — (2026-05-06)
+
+### Task: upgrade 4 existing stubs to research_done: 1
+1. puerto_rican.md (region: caribbean_region)
+2. punjabi.md (region: south_asian)
+3. russian.md (region: european)
+4. senegalese.md (region: african)
+
+### Status
+- [ ] puerto_rican.md — 15 pairs, research_done: 1
+- [ ] punjabi.md — 15 pairs, research_done: 1
+- [ ] russian.md — 15 pairs, research_done: 1
+- [ ] senegalese.md — 15 pairs, research_done: 1
+- [ ] Generator ran clean
+- [ ] Commit all changes
+
+---
+
 ## Session 1 — (2026-05-06)
 
 ### Planned stubs (4 new cuisines)
