@@ -6293,7 +6293,7 @@ class KitchenCookingPanel extends LitElement {
     const displayName = this._ingDisplayName(ingredient);
     const valueName = (typeof ingredient === 'string') ? ingredient : (ingredient.name || ingredient);
     const notes = (ingredient && typeof ingredient === 'object')
-      ? (this._language === 'sv' ? (ingredient.notes_sv || ingredient.notes) : ingredient.notes)
+      ? (this._language === 'sv' ? (ingredient.notes_sv || ingredient.notes) : (ingredient.notes || ingredient.notes_sv))
       : null;
     const ingId = (ingredient && typeof ingredient === 'object') ? ingredient.id : valueName;
 
