@@ -14,9 +14,15 @@ research_done: 0 on all stubs; full 15-pair research is done in a separate branc
 4. jordanian.md (region: middle_east)
 
 ### Status
-- [ ] swiss.md — stub created, description researched
-- [ ] irish.md — stub created, description researched
-- [ ] new_zealand.md — stub created, description researched
-- [ ] jordanian.md — stub created, description researched
-- [ ] Generator ran clean
-- [ ] Commit all changes
+- [x] swiss.md — stub created, real description researched (alpine/4-region/fondue/raclette/Rösti/Bündnerfleisch)
+- [x] irish.md — stub created, real description researched (pasture lamb/beef, dairy, Atlantic seafood, soda bread, Irish stew)
+- [x] new_zealand.md — stub created, real description researched (Māori hāngī/kūmara/kai moana, lamb, venison, Pacific coast)
+- [x] jordanian.md — stub created, real description researched (mansaf/jameed, Bedouin, Levantine, olive oil, mezze)
+- [x] Generator ran clean (102 cuisines, 12907 ingredients, PANEL_VERSION 545)
+- [x] Commit all changes
+
+### Search sources used
+- Swiss: "Swiss cuisine identity character what makes it unique traditional food culture Switzerland"
+- Irish: "Irish cuisine identity character what makes it unique traditional food culture Ireland"
+- New Zealand: "New Zealand cuisine identity character what makes it unique traditional food culture Māori Aotearoa"
+- Jordanian: "Jordanian cuisine identity character what makes it unique traditional food culture Jordan"
