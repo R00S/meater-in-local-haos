@@ -110,3 +110,49 @@ west_african, yemeni
 - [x] yemeni.md — all 15 grade pairs completed (proteins/produce/grains/dairy/spices sig+bulk+local); research_done: 1
 - [x] Generator ran clean (0 stubs in all three files; 134-135 ingredients each)
 - [x] Commit all changes
+
+---
+
+## Session 5 — (2026-05-06)
+
+### Task: Fix turkish.md and colombian.md to conform to IMPROVE_CUISINE_DATA.md + CHORES
+
+### Fixes applied to turkish.md
+- Trap 11: "Sea bass (farmed)" → "Sea bass"; "Sea bream (farmed)" → "Sea bream"
+- Trap 10: "Börek" → "Yufka", "Lahmacun" → "Lavash", "Rice pilav" → "Rice" (dish names replaced with actual ingredients)
+- Trap 3: "Fish" (vague) → "Mackerel (uskumru)"
+- Trap 14: Removed all within-category cross-grade duplicates; replaced each with a genuine non-duplicated ingredient
+  - Bulk proteins: removed chicken/eggs/red-lentils/chickpeas/hamsi/mussels; added Turkey, Mutton, Mackerel, Palamut, Veal, Sardines, Canned tuna, Offal
+  - Local proteins: removed hamsi/sea-bass; added Kalkan, Barbunya
+  - Bulk produce: removed eggplant/tomatoes/peppers/onions/spinach/cucumbers; added Carrot, Cabbage, Green beans, Peas, Celery root, Beetroot
+  - Bulk grains: removed bulgur/rice/wheat/corn; added Semolina, Oats, Maize flour, Freekeh
+  - Local grains: removed bulgur; added Einkorn wheat
+  - Bulk dairy: removed yogurt/beyaz-peynir/olive-oil/butter; added Margarine, Tulum cheese, Lor cheese, Kefir
+  - Bulk spices: removed black-pepper/red-pepper-flakes/hazelnuts; added Walnuts, Dried dill
+
+### Fixes applied to colombian.md
+- Trap 3: "Colombian chili sauce" → "Ají"; "Creole chili sauce" → "Ají criollo"; "Lime / Lemon" → "Lime"
+- Trap 10: "Corn on Cob in Sancocho" → "Corn on the cob"
+- Trap 14: Removed all within-category cross-grade duplicates; replaced each with a genuine non-duplicated ingredient
+  - Bulk proteins: removed chicken/beef/rainbow-trout; added Frozen shrimp, Sardines
+  - Local proteins: removed bocachico/capybara; added Yamú
+  - Bulk produce: removed plantain/tomato/yuca; added Avocado, Mango, Peas
+  - Local produce: removed papa-criolla/lulo/arracacha; added Pitahaya, Granadilla
+  - Bulk grains: removed white-rice
+  - Local dairy: removed arequipe-casero
+  - Bulk spices: removed cilantro/cumin/panela/garlic; added Bay leaf, Oregano, Cloves
+  - Local spices: removed guascas/achiote; added Cúrcuma
+
+### CHORES
+- Version bumped: 0.8.2.31 → 0.8.2.32
+- PANEL_VERSION: 579 → 580
+- USER_GUIDE.md: "Over 95 cuisines" → "Over 100 cuisines" (actual count: 102)
+- _openHelp anchors checked — all match current section headings, no changes needed
+
+### Status
+- [x] turkish.md — all traps resolved, 0 duplicates, 0 vague names, 0 dish names as ingredients
+- [x] colombian.md — all traps resolved, 0 duplicates, 0 vague names, 0 dish names as ingredients
+- [x] Generator ran clean (102 cuisines, 12735 ingredients, PANEL_VERSION 580)
+- [x] Version bumped to 0.8.2.32
+- [x] USER_GUIDE.md cuisine count updated
+- [x] Branch timeline updated
