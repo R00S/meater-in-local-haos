@@ -699,9 +699,15 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 
 ## 📊 Current Status
 
-**v0.8.0.2** — Development release (April 2026)
+**v0.9.0.0** — Development release (May 2026)
 
 Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.9.0.x Changes — MEATER cook fixes & cuisine ingredient improvements (May 2026)
+- ✅ **MEATER cook start failures fixed** — Added missing doneness validators (`thigh_optimal`, `just_cooked`, `confit`, `leg_rendered`, `thigh_rendered`) to `__init__.py` and `services.yaml` that were preventing whole chicken, whole turkey, whole duck, whole goose, duck leg confit, and shrimp cooks from starting
+- ✅ **40+ cut file fixes** — Fixed `recommended_doneness` mismatches where placeholder `well_done` value didn't exist in actual doneness lists, causing silent cook start failures for chicken breast and 35+ other cuts
+- ✅ **Cuisine protein tree lighting** — Fixed protein tree badges not lighting up for cuisine files using file-specific protein IDs; added pattern-based subcat mapping in generator so 1752 proteins across 102 cuisine files now correctly illuminate tree buttons
+- ✅ **Language-aware ingredient tooltips** — Fixed Swedish tooltips appearing for English users; tooltip system now shows `notes_sv` for Swedish mode and `notes` for English mode; Swedish cuisine file updated with proper field separation
 
 ### v0.8.0.x Changes — Cooked and Saved Recipes, Save for Later, AI shortcut from MEATER (April 2026)
 - ✅ **Rename: Previous Cooks → Cooked and Saved Recipes** — Badge, screen title, navigation, and all i18n strings (en + sv) updated everywhere

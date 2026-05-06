@@ -26,7 +26,7 @@ Some MEATER cooks fail to start:
 - Discovered both bugs via scan of all 164 cut files
 - Applied all fixes
 
-### Session 3 (2026-05-06) — Protein tree badge fix + Tooltip language fix
+### Session 3 (2026-05-06) — Protein tree badge fix + Tooltip language fix + RELEASE v0.9.0.0
 
 **Bug 1 — Protein tree badges not lighting up (v0.8.2.36)**
 
@@ -48,6 +48,15 @@ Fix:
 - `www/cuisines/swedish.md`: all 123 `notes:` fields renamed to `notes_sv:` — English users see no tooltip for Swedish cuisine items (correct) instead of Swedish text (wrong)
 
 Result: English users see English tooltips for all cuisine ingredients; Swedish users see Swedish tooltips for Swedish cuisine ingredients.
+
+**Version 0.9.0.0 Release (2026-05-06)**
+
+Final session update for merge to main. Summary of copilot/fix-meater-cook-error branch:
+- Fixed missing doneness validators that caused MEATER cook start failures
+- Fixed 40+ cut files with invalid `recommended_doneness` placeholders
+- Fixed protein tree lighting for cuisine ingredients with file-scoped IDs
+- Fixed tooltip language selection for cuisine ingredients
+- All fixes verified, generator run successful, version bumped to 0.9.0.0
 
 ## Session start
 
