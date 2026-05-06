@@ -6067,13 +6067,15 @@ class KitchenCookingPanel extends LitElement {
       for (const ing of ings) {
         const sc = proteinToSubcat[ing.id] || ing.subcat;
         if (!sc) continue;
-        // Only add to cuisineCommonProteinIds when the ID is a generic key in
-        // AI_PROTEIN_TO_SUBCAT (e.g. "salmon", "beef").  These prefix-match
-        // recipe tree cut IDs (e.g. "salmon_fillet"), so cut badges light up.
-        // Cuisine-specific IDs (e.g. "sv_gravlax", "ua_pork_sig") don't
-        // prefix-match tree cuts — they light the subcat button via `ing.subcat`
-        // but must NOT be added here or the cut-level highlight set becomes useless.
-        if (proteinToSubcat[ing.id]) cuisineCommonProteinIds.add(ing.id);
+        // Populate cuisineCommonProteinIds with the canonical species keyword that
+        // prefix-matches recipe tree cut IDs (e.g. "cod" matches "cod_fillet").
+        // • For generic IDs already in AI_PROTEIN_TO_SUBCAT (e.g. "salmon", "beef"),
+        //   use ing.id directly — it is already the right prefix key.
+        // • For cuisine-specific IDs (e.g. "nor_prot_sig_cod"), the generator emits
+        //   ing.base_id ("cod") extracted from the name-pattern match — use that.
+        // This ensures cut badges light up even when cuisine files use scoped IDs.
+        const matchKey = proteinToSubcat[ing.id] ? ing.id : (ing.base_id || null);
+        if (matchKey) cuisineCommonProteinIds.add(matchKey);
         if (!subcatGrades[sc]) subcatGrades[sc] = new Set();
         subcatGrades[sc].add(ing.grade || 'bulk');
       }
