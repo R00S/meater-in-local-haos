@@ -6005,7 +6005,7 @@ class KitchenCookingPanel extends LitElement {
       );
       proteinTreeIds = new Set(
         allItems
-          .filter(i => proteinToSubcat[i.id] || i.subcat || allSubcatCutIds.has(i.id))
+          .filter(i => proteinToSubcat[i.id] || allSubcatCutIds.has(i.id))
           .map(i => i.id)
       );
     } else {
@@ -6067,7 +6067,13 @@ class KitchenCookingPanel extends LitElement {
       for (const ing of ings) {
         const sc = proteinToSubcat[ing.id] || ing.subcat;
         if (!sc) continue;
-        cuisineCommonProteinIds.add(ing.id);
+        // Only add to cuisineCommonProteinIds when the ID is a generic key in
+        // AI_PROTEIN_TO_SUBCAT (e.g. "salmon", "beef").  These prefix-match
+        // recipe tree cut IDs (e.g. "salmon_fillet"), so cut badges light up.
+        // Cuisine-specific IDs (e.g. "sv_gravlax", "ua_pork_sig") don't
+        // prefix-match tree cuts — they light the subcat button via `ing.subcat`
+        // but must NOT be added here or the cut-level highlight set becomes useless.
+        if (proteinToSubcat[ing.id]) cuisineCommonProteinIds.add(ing.id);
         if (!subcatGrades[sc]) subcatGrades[sc] = new Set();
         subcatGrades[sc].add(ing.grade || 'bulk');
       }
