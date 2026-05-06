@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 02 May 2026, 14:00 UTC
-Last Change: v0.8.2.32 - Fix turkish.md and colombian.md per IMPROVE_CUISINE_DATA.md
+Last Change: v0.8.2.33 - Fix start_cook: add missing doneness names to schema, fix recommended_doneness in 43 cuts
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -172,11 +172,11 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 
 # ⚠️ VERSION — must match in ALL 3 locations on every release:
 #   1. manifest.json        → "version": "..."
-#   2. HERE (__init__.py)    → __version__ = "0.8.2.32"
+#   2. HERE (__init__.py)    → __version__ = "0.8.2.33"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.8.2.32"
+__version__ = "0.8.2.33"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
@@ -191,6 +191,8 @@ SERVICE_START_COOK_SCHEMA = vol.Schema(
             "rare", "medium_rare", "medium", "medium_well", "well_done",
             "pulled", "safe", "tender", "crisp_tender", "caramelized",
             "dark_meat_optimal", "heated_through", "crispy", "charred", "done",
+            # Whole-bird / specialty doneness levels
+            "thigh_optimal", "thigh_rendered", "leg_rendered", "confit", "just_cooked",
             # Swedish doneness levels
             "blodig", "genomstekt", "långkokt",
         ]),

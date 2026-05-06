@@ -8,7 +8,7 @@ meat: turkey
 cut_type: Turkey
 usda_safe_c: 74
 usda_safe_f: 165
-recommended_doneness: well_done
+recommended_doneness: dark_meat_optimal
 methods:
 - braise
 - oven_roast

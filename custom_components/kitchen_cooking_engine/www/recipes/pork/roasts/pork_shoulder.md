@@ -8,7 +8,7 @@ meat: pig
 cut_type: Roasts
 usda_safe_c: 63
 usda_safe_f: 145
-recommended_doneness: well_done
+recommended_doneness: pulled
 methods:
 - oven_roast
 - slow_cooker

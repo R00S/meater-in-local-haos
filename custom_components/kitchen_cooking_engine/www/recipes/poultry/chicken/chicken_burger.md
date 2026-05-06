@@ -8,7 +8,7 @@ meat: ground_poultry
 cut_type: Ground
 usda_safe_c: 74
 usda_safe_f: 165
-recommended_doneness: well_done
+recommended_doneness: safe
 methods:
 - air_fryer
 - grill

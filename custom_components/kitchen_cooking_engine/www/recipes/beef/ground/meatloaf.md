@@ -8,7 +8,7 @@ meat: cow
 cut_type: Ground
 usda_safe_c: 71
 usda_safe_f: 160
-recommended_doneness: well_done
+recommended_doneness: done
 methods:
 - oven_roast
 doneness:

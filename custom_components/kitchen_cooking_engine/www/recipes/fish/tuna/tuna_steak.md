@@ -8,7 +8,7 @@ meat: tuna
 cut_type: Tuna
 usda_safe_c: 63
 usda_safe_f: 145
-recommended_doneness: well_done
+recommended_doneness: medium_rare
 methods:
 - grill
 - pan_sear
