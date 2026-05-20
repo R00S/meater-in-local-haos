@@ -13,11 +13,11 @@ EXP_TREE cut slug '122' not found in recipe files
 ## Fix Plan
 - [x] Identify the mapping: old numeric IDs → slug names via `get_cut_by_id()` in `cooking_data.py`
 - [x] Verify cut ID 122 = `top_round_roast`, which has a recipe file at `www/recipes/beef/roasts/top_round_roast.md`
-- [ ] Add backward-compat logic in `handle_start_cook`: if `cut_id` is a numeric string, resolve it to a slug using `get_cut_by_id()` and log a deprecation warning
-- [ ] Add `get_cut_by_id` and `get_swedish_cut_by_id` to the imports from `cooking_data` and `swedish_cooking_data`
-- [ ] Update error message to suggest using a slug when numeric ID resolution fails
-- [ ] Bump version to 0.9.0.1
-- [ ] Run generator and commit all changed files
+- [x] Add backward-compat logic in `handle_start_cook`: if `cut_id` is a numeric string, resolve it to a slug using `get_cut_by_id()` and log a deprecation warning
+- [x] Add `get_cut_by_id` and `get_swedish_cut_by_id` to the imports from `cooking_data` and `swedish_cooking_data`
+- [x] Update error message to suggest using a slug when numeric ID resolution fails
+- [x] Bump version to 0.9.0.1
+- [x] Run generator (PANEL_VERSION auto-incremented 600→601)
 
 ## Session Log
 

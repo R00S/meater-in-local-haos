@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.9.0.0 - Fix MEATER cook errors: add missing doneness validators, fix recommended_doneness mismatches, cuisine protein tree lighting, language-aware tooltips
+Last Change: v0.9.0.1 - Fix start_cook service with legacy numeric cut_id (backward compat)
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -53,6 +53,10 @@ from .const import (
 )
 from .cooking_data import (
     CookingMethod,
+    get_cut_by_id as _get_cut_by_id_intl,
+)
+from .swedish_cooking_data import (
+    get_swedish_cut_by_id as _get_cut_by_id_sv,
 )
 from .api import async_register_api
 
@@ -172,11 +176,11 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 
 # ⚠️ VERSION — must match in ALL 3 locations on every release:
 #   1. manifest.json        → "version": "..."
-#   2. HERE (__init__.py)    → __version__ = "0.9.0.0"
+#   2. HERE (__init__.py)    → __version__ = "0.9.0.1"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.9.0.0"
+__version__ = "0.9.0.1"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
@@ -548,11 +552,41 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         data_source = call.data.get("data_source", DATA_SOURCE_INTERNATIONAL)
         custom_target_temp_c = call.data.get("custom_target_temp_c")
 
+        # Backward compat: if cut_id is a numeric string (legacy integer ID),
+        # resolve it to the corresponding slug via the old cooking_data lookup.
+        if cut_id and cut_id.isdigit():
+            numeric_id = int(cut_id)
+            lookup_fn = (
+                _get_cut_by_id_sv
+                if data_source == DATA_SOURCE_SWEDISH
+                else _get_cut_by_id_intl
+            )
+            old_cut = lookup_fn(numeric_id)
+            if old_cut:
+                resolved_slug = old_cut.name
+                _LOGGER.warning(
+                    "start_cook: numeric cut_id '%s' is deprecated. "
+                    "Use the slug '%s' instead. Resolving automatically for now.",
+                    cut_id, resolved_slug,
+                )
+                cut_id = resolved_slug
+            else:
+                _LOGGER.error(
+                    "start_cook: numeric cut_id '%s' is not recognised. "
+                    "Please use a slug (e.g. 'ribeye_steak') instead.",
+                    cut_id,
+                )
+                return
+
         exp_data = await hass.async_add_executor_job(
             _get_exp_cut_data, cut_id, cooking_method
         )
         if not exp_data:
-            _LOGGER.error("EXP_TREE cut slug '%s' not found in recipe files", cut_id)
+            _LOGGER.error(
+                "EXP_TREE cut slug '%s' not found in recipe files. "
+                "Check the cut_id and ensure it matches a slug in the recipe library.",
+                cut_id,
+            )
             return
         doneness_info = exp_data["doneness_temps"].get(doneness)
         if not doneness_info:
