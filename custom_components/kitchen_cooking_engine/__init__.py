@@ -53,10 +53,10 @@ from .const import (
 )
 from .cooking_data import (
     CookingMethod,
-    get_cut_by_id as _get_cut_by_id_intl,
+    get_cut_by_id as get_cut_by_id_intl,
 )
 from .swedish_cooking_data import (
-    get_swedish_cut_by_id as _get_cut_by_id_sv,
+    get_swedish_cut_by_id as get_cut_by_id_sv,
 )
 from .api import async_register_api
 
@@ -557,9 +557,9 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         if cut_id and cut_id.isdigit():
             numeric_id = int(cut_id)
             lookup_fn = (
-                _get_cut_by_id_sv
+                get_cut_by_id_sv
                 if data_source == DATA_SOURCE_SWEDISH
-                else _get_cut_by_id_intl
+                else get_cut_by_id_intl
             )
             old_cut = lookup_fn(numeric_id)
             if old_cut:
