@@ -187,7 +187,7 @@ The AI Recipe Builder works entirely through Home Assistant's conversation compo
 
 ## 📱 Android App
 
-A standalone Android app is available for controlling KCE from your phone without needing a browser.
+A standalone Android app is available for controlling your MEATER+ from your phone without needing KCE or any internet connection.
 
 **[⬇️ Download latest APK](https://github.com/R00S/meater-in-local-haos/releases/latest/download/meater-kitchen.apk)**
 
