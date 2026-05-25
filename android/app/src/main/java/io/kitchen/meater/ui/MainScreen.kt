@@ -20,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import io.kitchen.meater.BuildConfig
 import io.kitchen.meater.R
 import io.kitchen.meater.cooking.CookingSession
 import io.kitchen.meater.cooking.CookingState
@@ -44,7 +45,10 @@ fun MainScreen(
         ) {
             // Title + language toggle
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text(text = "MEATER Kitchen", style = MaterialTheme.typography.headlineMedium)
+                Column {
+                    Text(text = "MEATER Kitchen", style = MaterialTheme.typography.headlineMedium)
+                    Text(text = "v${BuildConfig.VERSION_NAME}", style = MaterialTheme.typography.bodySmall)
+                }
                 OutlinedButton(onClick = onLanguageToggle) {
                     Text(if (state.language == "sv") "EN" else "SV")
                 }

@@ -32,3 +32,10 @@ service UUID — the same way the ESP32 identifies the device.
 ## Sessions
 
 ### 2026-05-25 — fix implemented
+BLE discovery fixed: `MeaterBleScanner` now filters by service UUID, not name.
+
+### 2026-05-25 — version display + CHORES
+- Added app version (`v{versionName}`) below title on main scan screen
+- Enabled `buildConfig = true` in `build.gradle.kts` to expose `BuildConfig.VERSION_NAME`
+- Bumped version 0.10.0.3 → 0.10.0.4 (versionCode 4 → 5)
+- Updated USER_GUIDE §15 with discovery fix description and new version

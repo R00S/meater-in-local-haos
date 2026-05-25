@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.0.3 · Home Assistant 2024.1.0+
+> **Version:** 0.10.0.4 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -1399,14 +1399,17 @@ Ensure the **Measurement System** setting matches your recipe source. US recipes
 °F; Swedish recipes use dl and °C. Changing the system converts all displayed amounts in real time.
 
 
-## 15. Standalone Android App (v0.10.0.3)
+## 15. Standalone Android App (v0.10.0.4)
 
 The `android/` directory contains the standalone MEATER Kitchen APK project
 described in `docs/ANDROID_APP_TOR.md`.
 
 ### What is implemented
 
-- **BLE scanning** — discovers MEATER-named BLE devices
+- **BLE scanning** — discovers MEATER+ Block by service UUID (`a75cc7fc-…`) — same
+  identification method as the ESP32 `ble_client`; works even when the Block's name
+  is absent from the primary advertising packet; scan mode `LOW_LATENCY`
+- **Version label** — app version shown on the main screen for easier debug identification
 - **GATT connect/disconnect** — connects to the MEATER+ Block (not cloud-connected)
 - **Multi-probe support** — enumerates all MEATER service instances the Block exposes
   (up to 4 probe slots); each probe gets its own dashboard card
