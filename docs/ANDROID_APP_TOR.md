@@ -235,8 +235,8 @@ MEATER 2 uses a completely different and undocumented BLE protocol from MEATER+.
 **Status: Dead end. Excluded until protocol is documented.**
 
 **MEATER Link (UDP/protobuf)**
-MEATER Link is a separate product — a standalone WiFi LAN bridge (not the same as the MEATER+ Block). It broadcasts probe data over UDP using Google Protocol Buffers. The community has partially reverse-engineered the `.proto` schemas (reference: [ccutrer/meater-link-esp32](https://github.com/ccutrer/meater-link-esp32)), but there is no production-quality, complete local integration as of 2025. This path is interesting for a future LAN-based mode but is not required for the Android app, which connects directly to the Block via BLE.
-**Status: Partially documented community effort; not a dead end, but not needed for v0.10.x.**
+MEATER Link is a separate product — a standalone WiFi LAN bridge (not the same as the MEATER+ Block). Its local protocol (UDP/protobuf) is not verified or documented from confirmed sources. This path is not required for the Android app, which connects directly to the Block via BLE.
+**Status: Protocol not verified. Not needed for v0.10.x.**
 
 ---
 
@@ -267,7 +267,7 @@ Version is encoded in the APK `versionName` and displayed in the app's About scr
 ## 12. Out of Scope — Future Versions
 
 - **MEATER 2 probe support** — different BLE protocol, dead end until reverse-engineered (see §9.1)
-- **MEATER Link LAN mode (UDP/protobuf)** — partially documented community effort; viable future addition for a WiFi-based path
+- **MEATER Link LAN mode (UDP/protobuf)** — protocol not verified from confirmed sources; may be revisited if documented
 - iOS version
 - HA integration bridge (sending probe data back to HA)
 - AI recipe generator
