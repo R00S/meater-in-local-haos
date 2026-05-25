@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.9.0.1 - Fix start_cook service with legacy numeric cut_id (backward compat)
+Last Change: v0.10.0.4 - Fix publish-apk CI: debug-only build, add push trigger so workflow_dispatch button shows in GitHub UI
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "601"
+PANEL_VERSION = "604"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

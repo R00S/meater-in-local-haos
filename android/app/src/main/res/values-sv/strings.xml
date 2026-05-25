@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MEATER Kök</string>
+
+    <!-- Permission screen -->
+    <string name="permission_title">Bluetooth-behörighet krävs</string>
+    <string name="permission_rationale">MEATER Kök behöver Bluetooth-behörighet för att söka efter och ansluta till din MEATER+ Block. Ingen platsdata används eller lagras.</string>
+    <string name="permission_grant_button">Ge behörighet</string>
+
+    <!-- Cut selection screen -->
+    <string name="cut_selection_pick_protein">Välj proteinkategori</string>
+    <string name="cut_selection_pick_cut">Välj styckningsdetalj</string>
+    <string name="cut_selection_pick_doneness">Välj tillagningsgrad</string>
+    <string name="cut_selection_recommended">Rekommenderad</string>
+    <string name="cut_selection_back">Tillbaka</string>
+    <string name="cut_selection_cancel">Avbryt</string>
+
+    <!-- Language toggle -->
+    <string name="language_label">Språk</string>
+    <string name="language_en">English</string>
+    <string name="language_sv">Svenska</string>
+</resources>

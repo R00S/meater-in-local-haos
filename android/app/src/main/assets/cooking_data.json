@@ -1,0 +1,4545 @@
+{
+  "tree": {
+    "fish": {
+      "id": "fish",
+      "name": "Fish",
+      "icon": "🐟",
+      "color": "#4682B4",
+      "meats": [
+        {
+          "id": "salmon",
+          "name": "Salmon",
+          "cutTypes": [
+            {
+              "id": "salmon",
+              "name": "Salmon",
+              "cuts": [
+                {
+                  "id": "salmon_fillet",
+                  "name": "Salmon Fillet",
+                  "slug": "salmon_fillet",
+                  "doneness": [
+                    "medium_rare",
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Laxfilé",
+                  "recommended_doneness": "medium",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "oven_bake",
+                    "pan_sear",
+                    "sous_vide"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 2,
+                  "method_overrides": {
+                    "sous_vide": {
+                      "rest_time_min": 0,
+                      "rest_time_max": 3,
+                      "carryover_temp_c": 1
+                    }
+                  }
+                },
+                {
+                  "id": "salmon_steak",
+                  "name": "Salmon Steak",
+                  "slug": "salmon_steak",
+                  "doneness": [
+                    "medium_rare",
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Laxbiff",
+                  "recommended_doneness": "medium",
+                  "supported_methods": [
+                    "grill",
+                    "oven_bake",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 3
+                }
+              ]
+            }
+          ],
+          "name_sv": "Lax"
+        },
+        {
+          "id": "tuna",
+          "name": "Tuna",
+          "cutTypes": [
+            {
+              "id": "tuna",
+              "name": "Tuna",
+              "cuts": [
+                {
+                  "id": "tuna_steak",
+                  "name": "Tuna Steak",
+                  "slug": "tuna_steak",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ],
+                  "name_sv": "Tonfiskbiff",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 2
+                }
+              ]
+            }
+          ],
+          "name_sv": "Tonfisk"
+        },
+        {
+          "id": "white_fish",
+          "name": "White Fish",
+          "cutTypes": [
+            {
+              "id": "white_fish",
+              "name": "White Fish",
+              "cuts": [
+                {
+                  "id": "cod_fillet",
+                  "name": "Cod Fillet",
+                  "slug": "cod_fillet",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Torskfilé",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "air_fryer",
+                    "oven_bake",
+                    "oven_roast",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "haddock",
+                  "name": "Haddock Fillet",
+                  "slug": "haddock",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Kolja",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "air_fryer",
+                    "oven_roast",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "hake",
+                  "name": "Hake Fillet",
+                  "slug": "hake",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Kummel",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "oven_roast",
+                    "pan_fry",
+                    "steam"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "halibut_fillet",
+                  "name": "Halibut Fillet",
+                  "slug": "halibut_fillet",
+                  "doneness": [
+                    "medium_rare",
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Hälleflundrafilé",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "grill",
+                    "oven_roast",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "mahi_mahi",
+                  "name": "Mahi-Mahi",
+                  "slug": "mahi_mahi",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Mahi-mahi",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "sea_bass",
+                  "name": "Sea Bass",
+                  "slug": "sea_bass",
+                  "doneness": [
+                    "medium_rare",
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Havsabborre",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "grill",
+                    "oven_roast",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "swordfish",
+                  "name": "Swordfish Steak",
+                  "slug": "swordfish",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Svärdfisk",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "charcoal_grill",
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "trout",
+                  "name": "Trout Fillet",
+                  "slug": "trout",
+                  "doneness": [
+                    "medium_rare",
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Forell",
+                  "recommended_doneness": "medium",
+                  "supported_methods": [
+                    "grill",
+                    "oven_roast",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 2
+                }
+              ]
+            }
+          ],
+          "name_sv": "Vit fisk"
+        },
+        {
+          "id": "shellfish",
+          "name": "Shellfish",
+          "cutTypes": [
+            {
+              "id": "shellfish",
+              "name": "Shellfish",
+              "cuts": [
+                {
+                  "id": "langoustine",
+                  "name": "Langoustine",
+                  "slug": "langoustine",
+                  "doneness": [
+                    "tender",
+                    "well_done"
+                  ],
+                  "name_sv": "Havskräfta",
+                  "recommended_doneness": "tender",
+                  "supported_methods": [
+                    "grill",
+                    "oven_roast",
+                    "boil"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 0,
+                  "rest_time_max": 1,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "lobster_tail",
+                  "name": "Lobster Tail",
+                  "slug": "lobster_tail",
+                  "doneness": [
+                    "tender",
+                    "well_done"
+                  ],
+                  "name_sv": "Hummersvans",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "grill",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "scallops",
+                  "name": "Scallops",
+                  "slug": "scallops",
+                  "doneness": [
+                    "medium_rare",
+                    "well_done"
+                  ],
+                  "name_sv": "Pilgrimsmusslor",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 0,
+                  "rest_time_max": 0,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "shrimp",
+                  "name": "Shrimp",
+                  "slug": "shrimp",
+                  "doneness": [
+                    "just_cooked",
+                    "well_done"
+                  ],
+                  "name_sv": "Räkor",
+                  "recommended_doneness": "just_cooked",
+                  "supported_methods": [
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 0,
+                  "rest_time_max": 0,
+                  "carryover_temp_c": 1
+                }
+              ]
+            }
+          ],
+          "name_sv": "Skaldjur"
+        }
+      ],
+      "name_sv": "Fisk"
+    },
+    "vegetables": {
+      "id": "vegetables",
+      "name": "Vegetables",
+      "icon": "🥬",
+      "color": "#228B22",
+      "meats": [
+        {
+          "id": "peppers",
+          "name": "Peppers",
+          "cutTypes": [
+            {
+              "id": "peppers",
+              "name": "Peppers",
+              "cuts": [
+                {
+                  "id": "bell_peppers",
+                  "name": "Bell Peppers",
+                  "slug": "bell_peppers",
+                  "doneness": [
+                    "crisp_tender",
+                    "charred"
+                  ],
+                  "name_sv": "Paprika",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "oven_roast",
+                    "saute"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 1,
+                  "carryover_temp_c": 1
+                }
+              ]
+            }
+          ],
+          "name_sv": "Paprika"
+        },
+        {
+          "id": "squash",
+          "name": "Squash",
+          "cutTypes": [
+            {
+              "id": "squash",
+              "name": "Squash",
+              "cuts": [
+                {
+                  "id": "acorn_squash",
+                  "name": "Acorn Squash",
+                  "slug": "acorn_squash",
+                  "doneness": [
+                    "tender"
+                  ],
+                  "name_sv": "Ekolonpumpa",
+                  "supported_methods": [
+                    "oven_bake",
+                    "oven_roast"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "butternut_squash",
+                  "name": "Butternut Squash",
+                  "slug": "butternut_squash",
+                  "doneness": [
+                    "tender",
+                    "caramelized"
+                  ],
+                  "name_sv": "Butternutpumpa",
+                  "supported_methods": [
+                    "oven_roast",
+                    "pressure_cooker",
+                    "steam"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "spaghetti_squash",
+                  "name": "Spaghetti Squash",
+                  "slug": "spaghetti_squash",
+                  "doneness": [
+                    "tender"
+                  ],
+                  "name_sv": "Spagettipumpa",
+                  "supported_methods": [
+                    "oven_bake",
+                    "oven_roast"
+                  ],
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "zucchini",
+                  "name": "Zucchini",
+                  "slug": "zucchini",
+                  "doneness": [
+                    "crisp_tender",
+                    "tender"
+                  ],
+                  "name_sv": "Zucchini",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "oven_roast",
+                    "saute"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 1,
+                  "carryover_temp_c": 1
+                }
+              ]
+            }
+          ],
+          "name_sv": "Squash"
+        },
+        {
+          "id": "tomatoes",
+          "name": "Tomatoes",
+          "cutTypes": [
+            {
+              "id": "tomatoes",
+              "name": "Tomatoes",
+              "cuts": [
+                {
+                  "id": "roasted_tomatoes",
+                  "name": "Roasted Tomatoes",
+                  "slug": "roasted_tomatoes",
+                  "doneness": [
+                    "tender",
+                    "caramelized"
+                  ],
+                  "name_sv": "Rostade tomater",
+                  "supported_methods": [
+                    "air_fryer",
+                    "oven_broil",
+                    "oven_roast"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 1
+                }
+              ]
+            }
+          ],
+          "name_sv": "Tomater"
+        },
+        {
+          "id": "eggplant",
+          "name": "Eggplant",
+          "cutTypes": [
+            {
+              "id": "eggplant",
+              "name": "Eggplant",
+              "cuts": [
+                {
+                  "id": "eggplant",
+                  "name": "Eggplant / Aubergine",
+                  "slug": "eggplant",
+                  "doneness": [
+                    "tender",
+                    "charred"
+                  ],
+                  "name_sv": "Aubergine",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "oven_roast",
+                    "pan_fry",
+                    "saute"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 2
+                }
+              ]
+            }
+          ],
+          "name_sv": "Aubergine"
+        },
+        {
+          "id": "alliums",
+          "name": "Alliums",
+          "cutTypes": [
+            {
+              "id": "alliums",
+              "name": "Alliums",
+              "cuts": [
+                {
+                  "id": "caramelized_onions",
+                  "name": "Caramelized Onions",
+                  "slug": "caramelized_onions",
+                  "doneness": [
+                    "caramelized"
+                  ],
+                  "name_sv": "Karamelliserade lökar",
+                  "supported_methods": [
+                    "pan_fry",
+                    "saute"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 0,
+                  "carryover_temp_c": 0
+                },
+                {
+                  "id": "leeks",
+                  "name": "Leeks",
+                  "slug": "leeks",
+                  "doneness": [
+                    "tender",
+                    "caramelized"
+                  ],
+                  "name_sv": "Purjolök",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "saute"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 1,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "roasted_garlic",
+                  "name": "Roasted Garlic",
+                  "slug": "roasted_garlic",
+                  "doneness": [
+                    "tender",
+                    "caramelized"
+                  ],
+                  "name_sv": "Rostad vitlök",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "roasted_onion",
+                  "name": "Roasted Onion",
+                  "slug": "roasted_onion",
+                  "doneness": [
+                    "tender",
+                    "caramelized"
+                  ],
+                  "name_sv": "Rostad lök",
+                  "supported_methods": [
+                    "grill",
+                    "oven_roast",
+                    "saute"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 2
+                }
+              ]
+            }
+          ],
+          "name_sv": "Lökväxter"
+        },
+        {
+          "id": "corn",
+          "name": "Corn",
+          "cutTypes": [
+            {
+              "id": "corn",
+              "name": "Corn",
+              "cuts": [
+                {
+                  "id": "corn_on_cob",
+                  "name": "Corn on the Cob",
+                  "slug": "corn_on_cob",
+                  "doneness": [
+                    "tender",
+                    "charred"
+                  ],
+                  "name_sv": "Majskolv",
+                  "supported_methods": [
+                    "air_fryer",
+                    "boil",
+                    "grill",
+                    "oven_roast",
+                    "steam"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 1
+                }
+              ]
+            }
+          ],
+          "name_sv": "Majs"
+        },
+        {
+          "id": "root_vegetables",
+          "name": "Root Vegetables",
+          "cutTypes": [
+            {
+              "id": "root_vegetables",
+              "name": "Root Vegetables",
+              "cuts": [
+                {
+                  "id": "baked_potato",
+                  "name": "Baked Potato",
+                  "slug": "baked_potato",
+                  "doneness": [
+                    "tender"
+                  ],
+                  "name_sv": "Bakad potatis",
+                  "supported_methods": [
+                    "air_fryer",
+                    "oven_bake"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "roasted_beets",
+                  "name": "Roasted Beets",
+                  "slug": "roasted_beets",
+                  "doneness": [
+                    "tender"
+                  ],
+                  "name_sv": "Rostade rödbetor",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "roasted_carrots",
+                  "name": "Roasted Carrots",
+                  "slug": "roasted_carrots",
+                  "doneness": [
+                    "tender",
+                    "caramelized"
+                  ],
+                  "name_sv": "Rostade morötter",
+                  "supported_methods": [
+                    "air_fryer",
+                    "oven_roast",
+                    "saute"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 1
+                },
+                {
+                  "id": "roasted_parsnips",
+                  "name": "Roasted Parsnips",
+                  "slug": "roasted_parsnips",
+                  "doneness": [
+                    "tender",
+                    "caramelized"
+                  ],
+                  "name_sv": "Rostade palsternackor",
+                  "supported_methods": [
+                    "air_fryer",
+                    "oven_roast"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 1
+                },
+                {
+                  "id": "roasted_potatoes",
+                  "name": "Roasted Potatoes",
+                  "slug": "roasted_potatoes",
+                  "doneness": [
+                    "caramelized"
+                  ],
+                  "name_sv": "Rostad potatis",
+                  "supported_methods": [
+                    "air_fryer",
+                    "oven_roast"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "roasted_sweet_potato",
+                  "name": "Roasted Sweet Potato",
+                  "slug": "roasted_sweet_potato",
+                  "doneness": [
+                    "tender",
+                    "caramelized"
+                  ],
+                  "name_sv": "Rostad sötpotatis",
+                  "supported_methods": [
+                    "air_fryer",
+                    "oven_bake",
+                    "oven_roast"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                }
+              ]
+            }
+          ],
+          "name_sv": "Rotfrukter"
+        },
+        {
+          "id": "cruciferous",
+          "name": "Cruciferous",
+          "cutTypes": [
+            {
+              "id": "cruciferous",
+              "name": "Cruciferous",
+              "cuts": [
+                {
+                  "id": "cabbage",
+                  "name": "Cabbage",
+                  "slug": "cabbage",
+                  "doneness": [
+                    "crisp_tender",
+                    "tender"
+                  ],
+                  "name_sv": "Kål",
+                  "supported_methods": [
+                    "braise",
+                    "grill",
+                    "oven_roast",
+                    "saute"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 1,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "cauliflower",
+                  "name": "Cauliflower",
+                  "slug": "cauliflower",
+                  "doneness": [
+                    "tender",
+                    "caramelized"
+                  ],
+                  "name_sv": "Blomkål",
+                  "supported_methods": [
+                    "air_fryer",
+                    "oven_roast",
+                    "saute",
+                    "steam",
+                    "whole_roast"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 1
+                }
+              ]
+            }
+          ],
+          "name_sv": "Kålväxter"
+        },
+        {
+          "id": "mushrooms",
+          "name": "Mushrooms",
+          "cutTypes": [
+            {
+              "id": "mushrooms",
+              "name": "Mushrooms",
+              "cuts": [
+                {
+                  "id": "button_mushrooms",
+                  "name": "Button/Cremini Mushrooms",
+                  "slug": "button_mushrooms",
+                  "doneness": [
+                    "caramelized"
+                  ],
+                  "name_sv": "Champinjoner",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "oven_roast",
+                    "saute"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 1,
+                  "carryover_temp_c": 1
+                },
+                {
+                  "id": "portobello_mushrooms",
+                  "name": "Portobello Mushrooms",
+                  "slug": "portobello_mushrooms",
+                  "doneness": [
+                    "tender",
+                    "caramelized"
+                  ],
+                  "name_sv": "Portobellosvamp",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "oven_roast",
+                    "saute"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 2
+                }
+              ]
+            }
+          ],
+          "name_sv": "Svamp"
+        },
+        {
+          "id": "green_vegetables",
+          "name": "Green Vegetables",
+          "cutTypes": [
+            {
+              "id": "green_vegetables",
+              "name": "Green Vegetables",
+              "cuts": [
+                {
+                  "id": "asparagus",
+                  "name": "Asparagus",
+                  "slug": "asparagus",
+                  "doneness": [
+                    "crisp_tender",
+                    "tender"
+                  ],
+                  "name_sv": "Sparris",
+                  "supported_methods": [
+                    "grill",
+                    "oven_roast",
+                    "saute",
+                    "steam"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 1,
+                  "carryover_temp_c": 1
+                },
+                {
+                  "id": "broccoli",
+                  "name": "Broccoli",
+                  "slug": "broccoli",
+                  "doneness": [
+                    "crisp_tender",
+                    "tender"
+                  ],
+                  "name_sv": "Broccoli",
+                  "supported_methods": [
+                    "air_fryer",
+                    "oven_roast",
+                    "saute",
+                    "steam"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 1,
+                  "carryover_temp_c": 1
+                },
+                {
+                  "id": "brussels_sprouts",
+                  "name": "Brussels Sprouts",
+                  "slug": "brussels_sprouts",
+                  "doneness": [
+                    "tender",
+                    "caramelized"
+                  ],
+                  "name_sv": "Brysselkål",
+                  "supported_methods": [
+                    "air_fryer",
+                    "oven_roast",
+                    "pan_fry",
+                    "saute"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 2,
+                  "carryover_temp_c": 1
+                },
+                {
+                  "id": "green_beans",
+                  "name": "Green Beans",
+                  "slug": "green_beans",
+                  "doneness": [
+                    "crisp_tender",
+                    "tender"
+                  ],
+                  "name_sv": "Haricots verts",
+                  "supported_methods": [
+                    "boil",
+                    "oven_roast",
+                    "saute",
+                    "steam"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 1,
+                  "carryover_temp_c": 1
+                },
+                {
+                  "id": "spinach",
+                  "name": "Spinach",
+                  "slug": "spinach",
+                  "doneness": [
+                    "tender"
+                  ],
+                  "name_sv": "Spenat",
+                  "supported_methods": [
+                    "saute",
+                    "steam"
+                  ],
+                  "rest_time_min": 0,
+                  "rest_time_max": 0,
+                  "carryover_temp_c": 0
+                }
+              ]
+            }
+          ],
+          "name_sv": "Gröna grönsaker"
+        }
+      ],
+      "name_sv": "Grönsaker"
+    },
+    "game": {
+      "id": "game",
+      "name": "Game",
+      "icon": "🦌",
+      "color": "#2F4F4F",
+      "meats": [
+        {
+          "id": "mutton",
+          "name": "Mutton",
+          "cutTypes": [
+            {
+              "id": "mutton",
+              "name": "Mutton",
+              "cuts": [
+                {
+                  "id": "mutton_chop",
+                  "name": "Mutton Chop",
+                  "slug": "mutton_chop",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Fårkotlett",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "mutton_leg",
+                  "name": "Mutton Leg Roast",
+                  "slug": "mutton_leg",
+                  "doneness": [
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Fårlår",
+                  "recommended_doneness": "medium",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 8
+                },
+                {
+                  "id": "mutton_shoulder",
+                  "name": "Mutton Shoulder",
+                  "slug": "mutton_shoulder",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Fårskuldra",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 5,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    },
+                    "slow_cooker": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "mutton_shoulder_alt",
+                  "name": "Shoulder",
+                  "slug": "mutton_shoulder_alt",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Fårskuldra",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 5
+                }
+              ]
+            }
+          ],
+          "name_sv": "Får"
+        },
+        {
+          "id": "goat",
+          "name": "Goat",
+          "cutTypes": [
+            {
+              "id": "goat",
+              "name": "Goat",
+              "cuts": [
+                {
+                  "id": "goat_chop",
+                  "name": "Goat Chop",
+                  "slug": "goat_chop",
+                  "doneness": [
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Getkotlett",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "goat_leg",
+                  "name": "Goat Leg Roast",
+                  "slug": "goat_leg",
+                  "doneness": [
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Getlår",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 8
+                },
+                {
+                  "id": "goat_shank",
+                  "name": "Goat Shank",
+                  "slug": "goat_shank",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Getlägg",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "goat_shoulder",
+                  "name": "Goat Shoulder",
+                  "slug": "goat_shoulder",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Getskuldra",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 5,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    },
+                    "slow_cooker": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "name_sv": "Get"
+        },
+        {
+          "id": "bison",
+          "name": "Bison",
+          "cutTypes": [
+            {
+              "id": "bison",
+              "name": "Bison",
+              "cuts": [
+                {
+                  "id": "bison_burger",
+                  "name": "Bison Burger",
+                  "slug": "bison_burger",
+                  "doneness": [
+                    "well_done"
+                  ],
+                  "name_sv": "Bisonburgare",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "grill",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 2,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "bison_roast",
+                  "name": "Bison Roast",
+                  "slug": "bison_roast",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ],
+                  "name_sv": "Bisonstek",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "bison_steak",
+                  "name": "Bison Steak",
+                  "slug": "bison_steak",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well"
+                  ],
+                  "name_sv": "Bisonbiff",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "charcoal_grill",
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                }
+              ]
+            }
+          ],
+          "name_sv": "Bison"
+        },
+        {
+          "id": "wild_boar",
+          "name": "Wild Boar",
+          "cutTypes": [
+            {
+              "id": "wild_boar",
+              "name": "Wild Boar",
+              "cuts": [
+                {
+                  "id": "wild_boar_chop",
+                  "name": "Wild Boar Chop",
+                  "slug": "wild_boar_chop",
+                  "doneness": [
+                    "well_done"
+                  ],
+                  "name_sv": "Vildsvinskotlett",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 3,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "wild_boar_shoulder",
+                  "name": "Wild Boar Shoulder",
+                  "slug": "wild_boar_shoulder",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Vildsvinsskuldra",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 5
+                }
+              ]
+            }
+          ],
+          "name_sv": "Vildsvin"
+        },
+        {
+          "id": "buffalo",
+          "name": "Buffalo",
+          "cutTypes": [
+            {
+              "id": "buffalo",
+              "name": "Buffalo",
+              "cuts": [
+                {
+                  "id": "buffalo_burger",
+                  "name": "Burger",
+                  "slug": "buffalo_burger",
+                  "doneness": [
+                    "well_done"
+                  ],
+                  "name_sv": "Buffelburgare",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "grill",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 2,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "buffalo_roast",
+                  "name": "Buffalo Roast",
+                  "slug": "buffalo_roast",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ],
+                  "name_sv": "Buffelstek",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "buffalo_steak",
+                  "name": "Buffalo Steak",
+                  "slug": "buffalo_steak",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well"
+                  ],
+                  "name_sv": "Buffelbiff",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "charcoal_grill",
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                }
+              ]
+            }
+          ],
+          "name_sv": "Buffel"
+        },
+        {
+          "id": "ostrich",
+          "name": "Ostrich",
+          "cutTypes": [
+            {
+              "id": "ostrich",
+              "name": "Ostrich",
+              "cuts": [
+                {
+                  "id": "ostrich_fillet",
+                  "name": "Ostrich Fillet",
+                  "slug": "ostrich_fillet",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ],
+                  "name_sv": "Strutsfilé",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "braise",
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "ostrich_steak",
+                  "name": "Ostrich Steak",
+                  "slug": "ostrich_steak",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ],
+                  "name_sv": "Strutsfilé",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 3,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                }
+              ]
+            }
+          ],
+          "name_sv": "Struts"
+        },
+        {
+          "id": "moose",
+          "name": "Moose",
+          "cutTypes": [
+            {
+              "id": "moose",
+              "name": "Moose",
+              "cuts": [
+                {
+                  "id": "moose_roast",
+                  "name": "Moose Roast",
+                  "slug": "moose_roast",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ],
+                  "name_sv": "Älgstek",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 8
+                },
+                {
+                  "id": "moose_steak",
+                  "name": "Moose Steak",
+                  "slug": "moose_steak",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well"
+                  ],
+                  "name_sv": "Älgbiff",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                }
+              ]
+            }
+          ],
+          "name_sv": "Älg"
+        },
+        {
+          "id": "venison",
+          "name": "Venison",
+          "cutTypes": [
+            {
+              "id": "venison",
+              "name": "Venison",
+              "cuts": [
+                {
+                  "id": "venison_leg",
+                  "name": "Leg",
+                  "slug": "venison_leg",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ],
+                  "name_sv": "Hjortlår",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "venison_loin",
+                  "name": "Venison Loin",
+                  "slug": "venison_loin",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ],
+                  "name_sv": "Hjortfilé",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "oven_roast",
+                    "pan_sear",
+                    "sous_vide"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 4
+                },
+                {
+                  "id": "venison_roast",
+                  "name": "Venison Roast",
+                  "slug": "venison_roast",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ],
+                  "name_sv": "Hjortstek",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "venison_shoulder",
+                  "name": "Shoulder",
+                  "slug": "venison_shoulder",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Hjortskuldra",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 5,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    },
+                    "slow_cooker": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "venison_steak",
+                  "name": "Venison Steak",
+                  "slug": "venison_steak",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well"
+                  ],
+                  "name_sv": "Hjortbiff",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "charcoal_grill",
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                }
+              ]
+            }
+          ],
+          "name_sv": "Hjort"
+        },
+        {
+          "id": "rabbit",
+          "name": "Rabbit",
+          "cutTypes": [
+            {
+              "id": "rabbit",
+              "name": "Rabbit",
+              "cuts": [
+                {
+                  "id": "rabbit_legs",
+                  "name": "Rabbit Legs",
+                  "slug": "rabbit_legs",
+                  "doneness": [
+                    "well_done",
+                    "dark_meat_optimal",
+                    "pulled"
+                  ],
+                  "name_sv": "Kaninlår",
+                  "recommended_doneness": "dark_meat_optimal",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "rabbit_saddle",
+                  "name": "Rabbit Saddle",
+                  "slug": "rabbit_saddle",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Kaninsadel",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "oven_roast",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 3,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                }
+              ]
+            }
+          ],
+          "name_sv": "Kanin"
+        },
+        {
+          "id": "reindeer",
+          "name": "Reindeer",
+          "cutTypes": [
+            {
+              "id": "reindeer",
+              "name": "Reindeer",
+              "cuts": [
+                {
+                  "id": "reindeer_loin",
+                  "name": "Loin",
+                  "slug": "reindeer_loin",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ],
+                  "name_sv": "Renfilé",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "oven_roast",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "reindeer_roast",
+                  "name": "Reindeer Roast",
+                  "slug": "reindeer_roast",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ],
+                  "name_sv": "Renstek",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "reindeer_steak",
+                  "name": "Reindeer Steak",
+                  "slug": "reindeer_steak",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well"
+                  ],
+                  "name_sv": "Renfilé",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                }
+              ]
+            }
+          ],
+          "name_sv": "Ren"
+        },
+        {
+          "id": "kangaroo",
+          "name": "Kangaroo",
+          "cutTypes": [
+            {
+              "id": "kangaroo",
+              "name": "Kangaroo",
+              "cuts": [
+                {
+                  "id": "kangaroo_fillet",
+                  "name": "Kangaroo Fillet",
+                  "slug": "kangaroo_fillet",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ],
+                  "name_sv": "Kängurufilé",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "kangaroo_steak",
+                  "name": "Kangaroo Steak",
+                  "slug": "kangaroo_steak",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ],
+                  "name_sv": "Kängurufilé",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 3,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                }
+              ]
+            }
+          ],
+          "name_sv": "Känguru"
+        }
+      ],
+      "name_sv": "Vilt"
+    },
+    "pork": {
+      "id": "pork",
+      "name": "Pork",
+      "icon": "🐷",
+      "color": "#FFB6C1",
+      "meats": [
+        {
+          "id": "pig",
+          "name": "Pig",
+          "cutTypes": [
+            {
+              "id": "ham",
+              "name": "Ham",
+              "cuts": [
+                {
+                  "id": "cured_ham",
+                  "name": "Cured Ham (Pre-cooked)",
+                  "slug": "cured_ham",
+                  "doneness": [
+                    "heated_through"
+                  ],
+                  "name_sv": "Rökt skinka",
+                  "recommended_doneness": "heated_through",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 60,
+                  "usda_safe_f": 140,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "fresh_ham",
+                  "name": "Fresh Ham",
+                  "slug": "fresh_ham",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Färsk skinka",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 5
+                }
+              ],
+              "name_sv": "Skinka"
+            },
+            {
+              "id": "roasts",
+              "name": "Roasts",
+              "cuts": [
+                {
+                  "id": "ham",
+                  "name": "Ham",
+                  "slug": "ham",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Skinka",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 8
+                },
+                {
+                  "id": "pork_belly",
+                  "name": "Pork Belly",
+                  "slug": "pork_belly",
+                  "doneness": [
+                    "well_done",
+                    "crispy"
+                  ],
+                  "name_sv": "Sidfläsk",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "air_fryer",
+                    "braise",
+                    "grill",
+                    "oven_roast",
+                    "pan_fry",
+                    "slow_cooker",
+                    "smoker",
+                    "sous_vide"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 3,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    },
+                    "slow_cooker": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    },
+                    "sous_vide": {
+                      "rest_time_min": 0,
+                      "rest_time_max": 3,
+                      "carryover_temp_c": 1
+                    }
+                  }
+                },
+                {
+                  "id": "pork_leg",
+                  "name": "Pork Leg Roast",
+                  "slug": "pork_leg",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Fläsklägg",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 8,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    },
+                    "slow_cooker": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "pork_loin_roast",
+                  "name": "Pork Loin Roast",
+                  "slug": "pork_loin_roast",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Karréstek",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "pork_shoulder",
+                  "name": "Pork Shoulder / Boston Butt",
+                  "slug": "pork_shoulder",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Fläskbog",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "oven_roast",
+                    "slow_cooker",
+                    "smoker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 20,
+                  "rest_time_max": 45,
+                  "carryover_temp_c": 5,
+                  "method_overrides": {
+                    "slow_cooker": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                }
+              ],
+              "name_sv": "Stekar"
+            },
+            {
+              "id": "ground",
+              "name": "Ground",
+              "cuts": [
+                {
+                  "id": "ground_pork",
+                  "name": "Ground Pork",
+                  "slug": "ground_pork",
+                  "doneness": [
+                    "well_done"
+                  ],
+                  "name_sv": "Fläskfärs",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "braise",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 2,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "pork_sausage",
+                  "name": "Pork Sausage",
+                  "slug": "pork_sausage",
+                  "doneness": [
+                    "well_done"
+                  ],
+                  "name_sv": "Fläskkorv",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "grill",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 2,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                }
+              ],
+              "name_sv": "Färs"
+            },
+            {
+              "id": "other_offal",
+              "name": "Other / Offal",
+              "cuts": [
+                {
+                  "id": "cheek",
+                  "name": "Cheek",
+                  "slug": "cheek",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Kindkött",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 3,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "liver_pork",
+                  "name": "Liver",
+                  "slug": "liver_pork",
+                  "doneness": [
+                    "well_done"
+                  ],
+                  "name_sv": "Fläsklever",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "pan_fry",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 2,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "pork_cheek",
+                  "name": "Pork Cheek",
+                  "slug": "pork_cheek",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Fläskkind",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "pan_fry",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 3,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "pork_jowl",
+                  "name": "Pork Jowl / Guanciale",
+                  "slug": "pork_jowl",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Kindkött",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "pork_liver",
+                  "name": "Pork Liver",
+                  "slug": "pork_liver",
+                  "doneness": [
+                    "well_done"
+                  ],
+                  "name_sv": "Fläsklever",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "pan_fry",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 2,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "pork_tongue",
+                  "name": "Pork Tongue",
+                  "slug": "pork_tongue",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Fläsktunga",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    },
+                    "slow_cooker": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                }
+              ],
+              "name_sv": "Övrigt / Innanmäte"
+            },
+            {
+              "id": "chops_tenderloin",
+              "name": "Chops & Tenderloin",
+              "cuts": [
+                {
+                  "id": "pork_chop",
+                  "name": "Pork Chop",
+                  "slug": "pork_chop",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Fläskkotlett",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "oven_roast",
+                    "pan_fry",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 3,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "pork_loin_steak",
+                  "name": "Pork Loin Steak",
+                  "slug": "pork_loin_steak",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Karré",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 3,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "pork_shoulder_steak",
+                  "name": "Pork Shoulder Steak",
+                  "slug": "pork_shoulder_steak",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Bogskiva",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "braise",
+                    "grill",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "pork_tenderloin",
+                  "name": "Pork Tenderloin",
+                  "slug": "pork_tenderloin",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Fläskfilé",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "oven_roast",
+                    "pan_sear",
+                    "sous_vide"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 4,
+                  "method_overrides": {
+                    "sous_vide": {
+                      "rest_time_min": 0,
+                      "rest_time_max": 3,
+                      "carryover_temp_c": 1
+                    }
+                  }
+                },
+                {
+                  "id": "secreto",
+                  "name": "Secreto (Ibérico Pork)",
+                  "slug": "secreto",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Secreto",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "charcoal_grill",
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                }
+              ],
+              "name_sv": "Kotletter & Filé"
+            },
+            {
+              "id": "ribs",
+              "name": "Ribs",
+              "cuts": [
+                {
+                  "id": "baby_back_ribs",
+                  "name": "Baby Back Ribs",
+                  "slug": "baby_back_ribs",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Revbensspjäll",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "oven_roast",
+                    "smoker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "spare_ribs",
+                  "name": "Spare Ribs",
+                  "slug": "spare_ribs",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Spareribs",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "grill",
+                    "oven_roast",
+                    "smoker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "st_louis_ribs",
+                  "name": "St. Louis Style Ribs",
+                  "slug": "st_louis_ribs",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "St. Louis-revben",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "grill",
+                    "oven_roast",
+                    "smoker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 3
+                }
+              ],
+              "name_sv": "Revben"
+            }
+          ],
+          "name_sv": "Gris"
+        }
+      ],
+      "name_sv": "Fläskkött"
+    },
+    "poultry": {
+      "id": "poultry",
+      "name": "Poultry",
+      "icon": "🍗",
+      "color": "#FFD700",
+      "meats": [
+        {
+          "id": "duck",
+          "name": "Duck",
+          "cutTypes": [
+            {
+              "id": "duck",
+              "name": "Duck",
+              "cuts": [
+                {
+                  "id": "duck_breast",
+                  "name": "Duck Breast",
+                  "slug": "duck_breast",
+                  "doneness": [
+                    "medium_rare",
+                    "medium",
+                    "safe"
+                  ],
+                  "name_sv": "Andbröst",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "oven_roast",
+                    "pan_sear",
+                    "sous_vide"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 4
+                },
+                {
+                  "id": "duck_leg_confit",
+                  "name": "Duck Leg Confit",
+                  "slug": "duck_leg_confit",
+                  "doneness": [
+                    "confit"
+                  ],
+                  "name_sv": "Andlår confit",
+                  "recommended_doneness": "confit",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "whole_duck",
+                  "name": "Whole Duck",
+                  "slug": "whole_duck",
+                  "doneness": [
+                    "safe",
+                    "leg_rendered"
+                  ],
+                  "name_sv": "Hel and",
+                  "recommended_doneness": "leg_rendered",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                }
+              ]
+            }
+          ],
+          "name_sv": "And"
+        },
+        {
+          "id": "goose",
+          "name": "Goose",
+          "cutTypes": [
+            {
+              "id": "goose",
+              "name": "Goose",
+              "cuts": [
+                {
+                  "id": "goose_breast",
+                  "name": "Goose Breast",
+                  "slug": "goose_breast",
+                  "doneness": [
+                    "medium_rare",
+                    "medium",
+                    "safe"
+                  ],
+                  "name_sv": "Gåsbröst",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "oven_roast",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "goose_leg",
+                  "name": "Goose Leg",
+                  "slug": "goose_leg",
+                  "doneness": [
+                    "safe",
+                    "dark_meat_optimal"
+                  ],
+                  "name_sv": "Gåslår",
+                  "recommended_doneness": "dark_meat_optimal",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 4,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "goose_thigh",
+                  "name": "Goose Thigh",
+                  "slug": "goose_thigh",
+                  "doneness": [
+                    "safe",
+                    "dark_meat_optimal"
+                  ],
+                  "name_sv": "Gåslår",
+                  "recommended_doneness": "dark_meat_optimal",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 4,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "whole_goose",
+                  "name": "Whole Goose",
+                  "slug": "whole_goose",
+                  "doneness": [
+                    "safe",
+                    "thigh_rendered"
+                  ],
+                  "name_sv": "Hel gås",
+                  "recommended_doneness": "thigh_rendered",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 20,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 8
+                }
+              ]
+            }
+          ],
+          "name_sv": "Gås"
+        },
+        {
+          "id": "chicken",
+          "name": "Chicken",
+          "cutTypes": [
+            {
+              "id": "breast",
+              "name": "Breast",
+              "cuts": [
+                {
+                  "id": "chicken_breast",
+                  "name": "Chicken Breast",
+                  "slug": "chicken_breast",
+                  "doneness": [
+                    "safe"
+                  ],
+                  "name_sv": "Kycklingfilé",
+                  "recommended_doneness": "safe",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "oven_bake",
+                    "oven_roast",
+                    "pan_sear",
+                    "sous_vide"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 3,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "chicken_breast_bone_in",
+                  "name": "Chicken Breast (Bone-in)",
+                  "slug": "chicken_breast_bone_in",
+                  "doneness": [
+                    "safe"
+                  ],
+                  "name_sv": "Kycklingfilé med ben",
+                  "recommended_doneness": "safe",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 4
+                }
+              ],
+              "name_sv": "Bröst"
+            },
+            {
+              "id": "dark_meat",
+              "name": "Dark Meat",
+              "cuts": [
+                {
+                  "id": "chicken_leg",
+                  "name": "Chicken Leg / Drumstick",
+                  "slug": "chicken_leg",
+                  "doneness": [
+                    "safe",
+                    "dark_meat_optimal"
+                  ],
+                  "name_sv": "Kycklingklubba",
+                  "recommended_doneness": "dark_meat_optimal",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 3,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "chicken_thigh",
+                  "name": "Chicken Thigh",
+                  "slug": "chicken_thigh",
+                  "doneness": [
+                    "safe",
+                    "dark_meat_optimal"
+                  ],
+                  "name_sv": "Kycklinglår",
+                  "recommended_doneness": "dark_meat_optimal",
+                  "supported_methods": [
+                    "air_fryer",
+                    "braise",
+                    "grill",
+                    "oven_roast",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 3,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "chicken_thigh_bone_in",
+                  "name": "Chicken Thigh (Bone-in)",
+                  "slug": "chicken_thigh_bone_in",
+                  "doneness": [
+                    "safe",
+                    "dark_meat_optimal"
+                  ],
+                  "name_sv": "Kycklinglår med ben",
+                  "recommended_doneness": "dark_meat_optimal",
+                  "supported_methods": [
+                    "air_fryer",
+                    "braise",
+                    "grill",
+                    "oven_roast",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "chicken_wing",
+                  "name": "Chicken Wing",
+                  "slug": "chicken_wing",
+                  "doneness": [
+                    "safe",
+                    "dark_meat_optimal"
+                  ],
+                  "name_sv": "Kycklingvinge",
+                  "recommended_doneness": "dark_meat_optimal",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 2,
+                  "rest_time_max": 3,
+                  "carryover_temp_c": 2
+                }
+              ],
+              "name_sv": "Mörkt kött"
+            },
+            {
+              "id": "whole",
+              "name": "Whole",
+              "cuts": [
+                {
+                  "id": "whole_chicken",
+                  "name": "Whole Chicken",
+                  "slug": "whole_chicken",
+                  "doneness": [
+                    "safe",
+                    "thigh_optimal"
+                  ],
+                  "name_sv": "Hel kyckling",
+                  "recommended_doneness": "thigh_optimal",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                }
+              ],
+              "name_sv": "Hel"
+            }
+          ],
+          "name_sv": "Kyckling"
+        },
+        {
+          "id": "ground_poultry",
+          "name": "Ground Poultry",
+          "cutTypes": [
+            {
+              "id": "ground",
+              "name": "Ground",
+              "cuts": [
+                {
+                  "id": "chicken_burger",
+                  "name": "Chicken Burger",
+                  "slug": "chicken_burger",
+                  "doneness": [
+                    "safe"
+                  ],
+                  "name_sv": "Kycklingburgare",
+                  "recommended_doneness": "safe",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 2,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "ground_chicken",
+                  "name": "Ground Chicken",
+                  "slug": "ground_chicken",
+                  "doneness": [
+                    "safe"
+                  ],
+                  "name_sv": "Kycklingfärs",
+                  "recommended_doneness": "safe",
+                  "supported_methods": [
+                    "braise",
+                    "grill",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 2,
+                  "rest_time_max": 3,
+                  "carryover_temp_c": 2,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "ground_turkey",
+                  "name": "Ground Turkey",
+                  "slug": "ground_turkey",
+                  "doneness": [
+                    "safe"
+                  ],
+                  "name_sv": "Kalkonfärs",
+                  "recommended_doneness": "safe",
+                  "supported_methods": [
+                    "braise",
+                    "grill",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 2,
+                  "rest_time_max": 3,
+                  "carryover_temp_c": 2,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "turkey_burger",
+                  "name": "Turkey Burger",
+                  "slug": "turkey_burger",
+                  "doneness": [
+                    "safe"
+                  ],
+                  "name_sv": "Kalkonburgare",
+                  "recommended_doneness": "safe",
+                  "supported_methods": [
+                    "air_fryer",
+                    "grill",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 2,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                }
+              ],
+              "name_sv": "Färs"
+            }
+          ]
+        },
+        {
+          "id": "turkey",
+          "name": "Turkey",
+          "cutTypes": [
+            {
+              "id": "turkey",
+              "name": "Turkey",
+              "cuts": [
+                {
+                  "id": "turkey_breast",
+                  "name": "Turkey Breast",
+                  "slug": "turkey_breast",
+                  "doneness": [
+                    "safe"
+                  ],
+                  "name_sv": "Kalkonfilé",
+                  "recommended_doneness": "safe",
+                  "supported_methods": [
+                    "oven_roast",
+                    "smoker"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "turkey_leg",
+                  "name": "Turkey Leg",
+                  "slug": "turkey_leg",
+                  "doneness": [
+                    "safe",
+                    "dark_meat_optimal"
+                  ],
+                  "name_sv": "Kalkonklubba",
+                  "recommended_doneness": "dark_meat_optimal",
+                  "supported_methods": [
+                    "oven_roast",
+                    "smoker"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 4
+                },
+                {
+                  "id": "turkey_thigh",
+                  "name": "Turkey Thigh",
+                  "slug": "turkey_thigh",
+                  "doneness": [
+                    "safe",
+                    "dark_meat_optimal"
+                  ],
+                  "name_sv": "Kalkonlår",
+                  "recommended_doneness": "dark_meat_optimal",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "smoker"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 4
+                },
+                {
+                  "id": "whole_turkey",
+                  "name": "Whole Turkey",
+                  "slug": "whole_turkey",
+                  "doneness": [
+                    "safe",
+                    "thigh_optimal"
+                  ],
+                  "name_sv": "Hel kalkon",
+                  "recommended_doneness": "thigh_optimal",
+                  "supported_methods": [
+                    "oven_roast",
+                    "smoker"
+                  ],
+                  "usda_safe_c": 74,
+                  "usda_safe_f": 165,
+                  "rest_time_min": 20,
+                  "rest_time_max": 45,
+                  "carryover_temp_c": 8
+                }
+              ]
+            }
+          ],
+          "name_sv": "Kalkon"
+        }
+      ],
+      "name_sv": "Fågel"
+    },
+    "beef": {
+      "id": "beef",
+      "name": "Beef",
+      "icon": "🥩",
+      "color": "#8B0000",
+      "meats": [
+        {
+          "id": "cow",
+          "name": "Cow",
+          "cutTypes": [
+            {
+              "id": "roasts",
+              "name": "Roasts",
+              "cuts": [
+                {
+                  "id": "beef_tenderloin_roast",
+                  "name": "Beef Tenderloin Roast",
+                  "slug": "beef_tenderloin_roast",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well"
+                  ],
+                  "name_sv": "Oxfiléstek",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 6
+                },
+                {
+                  "id": "prime_rib",
+                  "name": "Prime Rib / Standing Rib Roast",
+                  "slug": "prime_rib",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Entrecôtestek",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 8
+                },
+                {
+                  "id": "roasting_joint",
+                  "name": "Roasting Joint",
+                  "slug": "roasting_joint",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Stekkött",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 8
+                },
+                {
+                  "id": "round_roast",
+                  "name": "Round Roast",
+                  "slug": "round_roast",
+                  "doneness": [
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Rundstek",
+                  "recommended_doneness": "medium",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "rump",
+                  "name": "Rump",
+                  "slug": "rump",
+                  "doneness": [
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Rumstek",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "grill",
+                    "oven_roast",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "rump_roast",
+                  "name": "Rump Roast",
+                  "slug": "rump_roast",
+                  "doneness": [
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Rumpstek",
+                  "recommended_doneness": "medium",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "sirloin_roast",
+                  "name": "Sirloin Roast",
+                  "slug": "sirloin_roast",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Ryggbiffsstek",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "sirloin_tip_roast",
+                  "name": "Sirloin Tip Roast",
+                  "slug": "sirloin_tip_roast",
+                  "doneness": [
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Spetsrumstek",
+                  "recommended_doneness": "medium",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "top_round_roast",
+                  "name": "Top Round Roast",
+                  "slug": "top_round_roast",
+                  "doneness": [
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Innanlårstek",
+                  "recommended_doneness": "medium",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                }
+              ],
+              "name_sv": "Stekar"
+            },
+            {
+              "id": "ground",
+              "name": "Ground",
+              "cuts": [
+                {
+                  "id": "beef_burger",
+                  "name": "Beef Burger / Ground Beef Patty",
+                  "slug": "beef_burger",
+                  "doneness": [
+                    "well_done"
+                  ],
+                  "name_sv": "Nötburgare",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "air_fryer",
+                    "charcoal_grill",
+                    "grill",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 2,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "ground_beef",
+                  "name": "Ground Beef",
+                  "slug": "ground_beef",
+                  "doneness": [
+                    "well_done"
+                  ],
+                  "name_sv": "Nötfärs",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "braise",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 2,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "meatloaf",
+                  "name": "Meatloaf",
+                  "slug": "meatloaf",
+                  "doneness": [
+                    "done"
+                  ],
+                  "name_sv": "Köttfärslimpa",
+                  "recommended_doneness": "done",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 5
+                }
+              ],
+              "name_sv": "Färs"
+            },
+            {
+              "id": "other_offal",
+              "name": "Other / Offal",
+              "cuts": [
+                {
+                  "id": "beef_liver",
+                  "name": "Beef Liver",
+                  "slug": "beef_liver",
+                  "doneness": [
+                    "medium",
+                    "well_done"
+                  ],
+                  "name_sv": "Nötlever",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "pan_fry",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 2,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "beef_tongue",
+                  "name": "Beef Tongue",
+                  "slug": "beef_tongue",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Oxtunga",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 5,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    },
+                    "slow_cooker": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                }
+              ],
+              "name_sv": "Övrigt / Innanmäte"
+            },
+            {
+              "id": "steaks",
+              "name": "Steaks",
+              "cuts": [
+                {
+                  "id": "filet_mignon",
+                  "name": "Filet Mignon / Tenderloin Steak",
+                  "slug": "filet_mignon",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Oxfilé",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "air_fryer",
+                    "charcoal_grill",
+                    "grill",
+                    "oven_roast",
+                    "pan_fry",
+                    "pan_sear",
+                    "sous_vide"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 4,
+                  "method_overrides": {
+                    "sous_vide": {
+                      "rest_time_min": 0,
+                      "rest_time_max": 3,
+                      "carryover_temp_c": 1
+                    }
+                  }
+                },
+                {
+                  "id": "flank_steak",
+                  "name": "Flank Steak",
+                  "slug": "flank_steak",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well"
+                  ],
+                  "name_sv": "Flankstek",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "charcoal_grill",
+                    "grill",
+                    "oven_roast",
+                    "pan_fry",
+                    "pan_sear",
+                    "sous_vide"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 2,
+                  "method_overrides": {
+                    "sous_vide": {
+                      "rest_time_min": 0,
+                      "rest_time_max": 3,
+                      "carryover_temp_c": 1
+                    }
+                  }
+                },
+                {
+                  "id": "flat_iron",
+                  "name": "Flat Iron Steak",
+                  "slug": "flat_iron",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Flat Iron",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "air_fryer",
+                    "charcoal_grill",
+                    "grill",
+                    "oven_roast",
+                    "pan_fry",
+                    "pan_sear",
+                    "sous_vide"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 2,
+                  "method_overrides": {
+                    "sous_vide": {
+                      "rest_time_min": 0,
+                      "rest_time_max": 3,
+                      "carryover_temp_c": 1
+                    }
+                  }
+                },
+                {
+                  "id": "hanger_steak",
+                  "name": "Hanger Steak",
+                  "slug": "hanger_steak",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ],
+                  "name_sv": "Hängare",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "charcoal_grill",
+                    "grill",
+                    "pan_fry",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "ny_strip",
+                  "name": "New York Strip",
+                  "slug": "ny_strip",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "New York Strip",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "air_fryer",
+                    "charcoal_grill",
+                    "grill",
+                    "oven_roast",
+                    "pan_fry",
+                    "pan_sear",
+                    "sous_vide"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3,
+                  "method_overrides": {
+                    "sous_vide": {
+                      "rest_time_min": 0,
+                      "rest_time_max": 3,
+                      "carryover_temp_c": 1
+                    }
+                  }
+                },
+                {
+                  "id": "picanha",
+                  "name": "Picanha",
+                  "slug": "picanha",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Picanha",
+                  "recommended_doneness": "medium",
+                  "supported_methods": [
+                    "charcoal_grill",
+                    "grill",
+                    "oven_roast",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "ribeye_steak",
+                  "name": "Ribeye Steak",
+                  "slug": "ribeye_steak",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Entrecôte",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "air_fryer",
+                    "charcoal_grill",
+                    "grill",
+                    "oven_roast",
+                    "pan_fry",
+                    "pan_sear",
+                    "sous_vide"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3,
+                  "method_overrides": {
+                    "sous_vide": {
+                      "rest_time_min": 0,
+                      "rest_time_max": 3,
+                      "carryover_temp_c": 1
+                    }
+                  }
+                },
+                {
+                  "id": "sirloin_steak",
+                  "name": "Sirloin Steak",
+                  "slug": "sirloin_steak",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Ryggbiff",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "air_fryer",
+                    "charcoal_grill",
+                    "grill",
+                    "oven_roast",
+                    "pan_fry",
+                    "pan_sear",
+                    "sous_vide"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3,
+                  "method_overrides": {
+                    "sous_vide": {
+                      "rest_time_min": 0,
+                      "rest_time_max": 3,
+                      "carryover_temp_c": 1
+                    }
+                  }
+                },
+                {
+                  "id": "skirt_steak",
+                  "name": "Skirt Steak",
+                  "slug": "skirt_steak",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ],
+                  "name_sv": "Skirt",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "charcoal_grill",
+                    "grill",
+                    "pan_fry",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 3,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "t_bone",
+                  "name": "T-Bone / Porterhouse",
+                  "slug": "t_bone",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "T-benstek",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "air_fryer",
+                    "charcoal_grill",
+                    "grill",
+                    "oven_roast",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 4
+                },
+                {
+                  "id": "tomahawk",
+                  "name": "Tomahawk Steak",
+                  "slug": "tomahawk",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Tomahawk",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "charcoal_grill",
+                    "grill",
+                    "oven_roast",
+                    "pan_sear",
+                    "sous_vide"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 5,
+                  "method_overrides": {
+                    "sous_vide": {
+                      "rest_time_min": 0,
+                      "rest_time_max": 3,
+                      "carryover_temp_c": 1
+                    }
+                  }
+                },
+                {
+                  "id": "tri_tip",
+                  "name": "Tri-Tip",
+                  "slug": "tri_tip",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Tri-tip",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "charcoal_grill",
+                    "grill",
+                    "oven_roast",
+                    "pan_sear",
+                    "smoker",
+                    "sous_vide"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 5,
+                  "method_overrides": {
+                    "sous_vide": {
+                      "rest_time_min": 0,
+                      "rest_time_max": 3,
+                      "carryover_temp_c": 1
+                    }
+                  }
+                }
+              ],
+              "name_sv": "Biffar"
+            },
+            {
+              "id": "braising_cuts",
+              "name": "Braising Cuts",
+              "cuts": [
+                {
+                  "id": "beef_shank",
+                  "name": "Beef Shank / Osso Buco",
+                  "slug": "beef_shank",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Oxlägg",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 3,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    },
+                    "slow_cooker": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "brisket",
+                  "name": "Brisket",
+                  "slug": "brisket",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Bringa",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker",
+                    "smoker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 30,
+                  "rest_time_max": 60,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "chuck_roast",
+                  "name": "Chuck Roast / Pot Roast",
+                  "slug": "chuck_roast",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Grytbiff",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 3,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "short_ribs",
+                  "name": "Short Ribs",
+                  "slug": "short_ribs",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Korta revben",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker",
+                    "smoker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 3,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                }
+              ],
+              "name_sv": "Grytbitar"
+            }
+          ],
+          "name_sv": "Nöt"
+        }
+      ],
+      "name_sv": "Nötkött"
+    },
+    "lamb": {
+      "id": "lamb",
+      "name": "Lamb",
+      "icon": "🐑",
+      "color": "#800020",
+      "meats": [
+        {
+          "id": "lamb",
+          "name": "Lamb",
+          "cutTypes": [
+            {
+              "id": "roasts",
+              "name": "Roasts",
+              "cuts": [
+                {
+                  "id": "lamb_brisket",
+                  "name": "Lamb Brisket",
+                  "slug": "lamb_brisket",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Lammbringa",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 5,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "lamb_loin_roast",
+                  "name": "Lamb Loin Roast",
+                  "slug": "lamb_loin_roast",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well"
+                  ],
+                  "name_sv": "Lammlårstek",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "lamb_neck",
+                  "name": "Lamb Neck",
+                  "slug": "lamb_neck",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Lammhals",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 5,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    },
+                    "slow_cooker": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "lamb_rib",
+                  "name": "Lamb Rib",
+                  "slug": "lamb_rib",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well"
+                  ],
+                  "name_sv": "Lammrev",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "oven_roast",
+                    "grill"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "lamb_rump",
+                  "name": "Lamb Rump",
+                  "slug": "lamb_rump",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Lammrumstek",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "grill",
+                    "oven_roast",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "leg_of_lamb",
+                  "name": "Leg of Lamb",
+                  "slug": "leg_of_lamb",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Lammlår",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "grill",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 8
+                },
+                {
+                  "id": "rack_of_lamb",
+                  "name": "Rack of Lamb",
+                  "slug": "rack_of_lamb",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well"
+                  ],
+                  "name_sv": "Lammracks",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "grill",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 15,
+                  "carryover_temp_c": 5
+                }
+              ],
+              "name_sv": "Stekar"
+            },
+            {
+              "id": "ground",
+              "name": "Ground",
+              "cuts": [
+                {
+                  "id": "lamb_shank",
+                  "name": "Shank",
+                  "slug": "lamb_shank",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Lammlägg",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 10,
+                  "rest_time_max": 20,
+                  "carryover_temp_c": 5,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    },
+                    "slow_cooker": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                },
+                {
+                  "id": "lamb_shoulder",
+                  "name": "Shoulder",
+                  "slug": "lamb_shoulder",
+                  "doneness": [
+                    "pulled"
+                  ],
+                  "name_sv": "Lammskuldra",
+                  "recommended_doneness": "pulled",
+                  "supported_methods": [
+                    "braise",
+                    "oven_roast",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 15,
+                  "rest_time_max": 30,
+                  "carryover_temp_c": 5
+                },
+                {
+                  "id": "ground_lamb",
+                  "name": "Ground Lamb",
+                  "slug": "ground_lamb",
+                  "doneness": [
+                    "well_done"
+                  ],
+                  "name_sv": "Lammfärs",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "grill",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 2,
+                  "rest_time_max": 3,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "lamb_burger",
+                  "name": "Lamb Burger",
+                  "slug": "lamb_burger",
+                  "doneness": [
+                    "well_done"
+                  ],
+                  "name_sv": "Lammburgare",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "grill",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 2,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "lamb_kofta",
+                  "name": "Kofta / Kebab",
+                  "slug": "lamb_kofta",
+                  "doneness": [
+                    "well_done"
+                  ],
+                  "name_sv": "Lammkofta",
+                  "recommended_doneness": "well_done",
+                  "supported_methods": [
+                    "grill",
+                    "oven_roast"
+                  ],
+                  "usda_safe_c": 71,
+                  "usda_safe_f": 160,
+                  "rest_time_min": 2,
+                  "rest_time_max": 3,
+                  "carryover_temp_c": 2
+                }
+              ],
+              "name_sv": "Färs"
+            },
+            {
+              "id": "chops",
+              "name": "Chops",
+              "cuts": [
+                {
+                  "id": "lamb_chops",
+                  "name": "Lamb Chops",
+                  "slug": "lamb_chops",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well",
+                    "well_done"
+                  ],
+                  "name_sv": "Lammkotlett",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 3,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "lamb_cutlet",
+                  "name": "Lamb Cutlet",
+                  "slug": "lamb_cutlet",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well"
+                  ],
+                  "name_sv": "Lammkotlett",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "grill",
+                    "pan_fry"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 3,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 2
+                },
+                {
+                  "id": "lamb_loin_chops",
+                  "name": "Lamb Loin Chops",
+                  "slug": "lamb_loin_chops",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well"
+                  ],
+                  "name_sv": "Lammlårkotlett",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "grill",
+                    "pan_sear"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 3,
+                  "rest_time_max": 5,
+                  "carryover_temp_c": 3
+                },
+                {
+                  "id": "lamb_neck_filet",
+                  "name": "Lamb Neck Filet",
+                  "slug": "lamb_neck_filet",
+                  "doneness": [
+                    "rare",
+                    "medium_rare",
+                    "medium",
+                    "medium_well"
+                  ],
+                  "name_sv": "Lammhalsfilé",
+                  "recommended_doneness": "medium_rare",
+                  "supported_methods": [
+                    "braise",
+                    "pan_sear",
+                    "slow_cooker"
+                  ],
+                  "usda_safe_c": 63,
+                  "usda_safe_f": 145,
+                  "rest_time_min": 5,
+                  "rest_time_max": 10,
+                  "carryover_temp_c": 3,
+                  "method_overrides": {
+                    "braise": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    },
+                    "slow_cooker": {
+                      "rest_time_min": 5,
+                      "rest_time_max": 15,
+                      "carryover_temp_c": 2
+                    }
+                  }
+                }
+              ],
+              "name_sv": "Kotletter"
+            }
+          ],
+          "name_sv": "Lamm"
+        }
+      ],
+      "name_sv": "Lamm"
+    }
+  },
+  "doneness": {
+    "medium_rare": {
+      "value": "medium_rare",
+      "name": "Medium Rare",
+      "icon": "🟠",
+      "description": null,
+      "temp_c": 49,
+      "temp_f": 120,
+      "safety_level": "unsafe"
+    },
+    "medium": {
+      "value": "medium",
+      "name": "Medium",
+      "icon": "🟡",
+      "description": null,
+      "temp_c": 54,
+      "temp_f": 130,
+      "safety_level": "caution"
+    },
+    "well_done": {
+      "value": "well_done",
+      "name": "Well Done",
+      "icon": "⚪",
+      "description": null,
+      "temp_c": 63,
+      "temp_f": 145,
+      "safety_level": "safe"
+    },
+    "rare": {
+      "value": "rare",
+      "name": "Rare",
+      "icon": "🔴",
+      "description": null,
+      "temp_c": 43,
+      "temp_f": 110,
+      "safety_level": "unsafe"
+    },
+    "tender": {
+      "value": "tender",
+      "name": "Tender",
+      "icon": "🥔",
+      "description": null,
+      "temp_c": 54,
+      "temp_f": 129,
+      "safety_level": "caution"
+    },
+    "just_cooked": {
+      "value": "just_cooked",
+      "name": "Just Cooked",
+      "icon": "🦐",
+      "description": null,
+      "temp_c": 49,
+      "temp_f": 120,
+      "safety_level": "unsafe"
+    },
+    "crisp_tender": {
+      "value": "crisp_tender",
+      "name": "Crisp Tender",
+      "icon": "🥦",
+      "description": null,
+      "temp_c": 85,
+      "temp_f": 185,
+      "safety_level": "safe"
+    },
+    "charred": {
+      "value": "charred",
+      "name": "Charred",
+      "icon": "🔥",
+      "description": null,
+      "temp_c": 200,
+      "temp_f": 390,
+      "safety_level": "safe"
+    },
+    "caramelized": {
+      "value": "caramelized",
+      "name": "Caramelized",
+      "icon": "🧅",
+      "description": null,
+      "temp_c": 160,
+      "temp_f": 320,
+      "safety_level": "safe"
+    },
+    "medium_well": {
+      "value": "medium_well",
+      "name": "Medium Well",
+      "icon": "🟤",
+      "description": null,
+      "temp_c": 66,
+      "temp_f": 150,
+      "safety_level": "safe"
+    },
+    "pulled": {
+      "value": "pulled",
+      "name": "Pulled",
+      "icon": "🍖",
+      "description": null,
+      "temp_c": 93,
+      "temp_f": 200,
+      "safety_level": "safe"
+    },
+    "dark_meat_optimal": {
+      "value": "dark_meat_optimal",
+      "name": "Dark Meat Optimal",
+      "icon": "🍗",
+      "description": null,
+      "temp_c": 77,
+      "temp_f": 170,
+      "safety_level": "safe"
+    },
+    "heated_through": {
+      "value": "heated_through",
+      "name": "Heated Through",
+      "icon": "♨️",
+      "description": null,
+      "temp_c": 60,
+      "temp_f": 140,
+      "safety_level": "safe"
+    },
+    "crispy": {
+      "value": "crispy",
+      "name": "Crispy",
+      "icon": "🥓",
+      "description": null,
+      "temp_c": 90,
+      "temp_f": 195,
+      "safety_level": "safe"
+    },
+    "safe": {
+      "value": "safe",
+      "name": "Safe",
+      "icon": "✅",
+      "description": null,
+      "temp_c": 74,
+      "temp_f": 165,
+      "safety_level": "safe"
+    },
+    "confit": {
+      "value": "confit",
+      "name": "Confit",
+      "icon": "🦆",
+      "description": null,
+      "temp_c": 88,
+      "temp_f": 190,
+      "safety_level": "safe"
+    },
+    "leg_rendered": {
+      "value": "leg_rendered",
+      "name": "Leg Rendered",
+      "icon": "🦆",
+      "description": null,
+      "temp_c": 82,
+      "temp_f": 180,
+      "safety_level": "safe"
+    },
+    "thigh_rendered": {
+      "value": "thigh_rendered",
+      "name": "Thigh Rendered",
+      "icon": "🦢",
+      "description": null,
+      "temp_c": 84,
+      "temp_f": 183,
+      "safety_level": "safe"
+    },
+    "thigh_optimal": {
+      "value": "thigh_optimal",
+      "name": "Thigh Optimal",
+      "icon": "🍗",
+      "description": null,
+      "temp_c": 79,
+      "temp_f": 175,
+      "safety_level": "safe"
+    },
+    "done": {
+      "value": "done",
+      "name": "Done",
+      "icon": "✓",
+      "description": null,
+      "temp_c": 71,
+      "temp_f": 160,
+      "safety_level": "safe"
+    }
+  }
+}

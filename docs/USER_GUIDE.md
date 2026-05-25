@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.9.0.0 · Home Assistant 2024.1.0+
+> **Version:** 0.10.0.3 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -71,6 +71,7 @@
 12. [Language and Measurement Settings](#12-language-and-measurement-settings)
 13. [Developer Services Reference](#13-developer-services-reference)
 14. [Troubleshooting](#14-troubleshooting)
+15. [Standalone Android App (Preview)](#15-standalone-android-app-preview)
 
 ---
 
@@ -1396,6 +1397,54 @@ Reload the integration: **Settings → Devices & Services → Kitchen Cooking En
 
 Ensure the **Measurement System** setting matches your recipe source. US recipes use cups and
 °F; Swedish recipes use dl and °C. Changing the system converts all displayed amounts in real time.
+
+
+## 15. Standalone Android App (v0.10.0.3)
+
+The `android/` directory contains the standalone MEATER Kitchen APK project
+described in `docs/ANDROID_APP_TOR.md`.
+
+### What is implemented
+
+- **BLE scanning** — discovers MEATER-named BLE devices
+- **GATT connect/disconnect** — connects to the MEATER+ Block (not cloud-connected)
+- **Multi-probe support** — enumerates all MEATER service instances the Block exposes
+  (up to 4 probe slots); each probe gets its own dashboard card
+- **Temperature decode** — tip and ambient using verified formulas from ToR §4.1
+- **Battery level** per probe
+- **Cooking engine** — full port of the KCE ETA algorithm from `sensor.py`:
+  - rate-based ETA using last 5 minutes of temperature history
+  - state machine: Idle → Cooking → Approaching → Resting → Done
+- **Android notifications** at key milestones per probe:
+  - Approaching target (within 10 °C)
+  - Target reached / time to rest
+  - Rest complete / ready to serve
+- **Cook history** — local JSON storage of completed sessions with notes
+- **Multi-probe dashboard** — Compose UI with one card per active probe
+
+### What is not yet implemented
+
+All core ToR items are now implemented. The following polish items remain:
+
+- Runtime permission UX: permission screen is implemented; a system rationale dialog
+  (shown when the user denies once) is not yet customised.
+- Signed release APK: the CI workflow currently builds a debug APK only.
+  Signed release builds require keystore setup (see `android/KEYSTORE_SETUP.md` for
+  instructions when you're ready to publish to the Play Store or distribute signed APKs).
+- Cut selection UI navigation from the WebView panel (JS → native) is wired but
+  requires testing on a real device with a live MEATER+ Block.
+- Language switching for the WebView panel (`window.KCE_ANDROID_LANGUAGE`) depends on
+  the panel JS implementing that hook (currently it reads the device locale).
+
+### Build
+
+```bash
+cd android
+./gradlew :app:assembleDebug
+```
+
+APKs are also automatically attached to GitHub Releases via the `publish-apk` workflow.
+
 
 ---
 

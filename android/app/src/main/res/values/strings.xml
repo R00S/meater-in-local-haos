@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MEATER Kitchen</string>
+
+    <!-- Permission screen -->
+    <string name="permission_title">Bluetooth Permission Required</string>
+    <string name="permission_rationale">MEATER Kitchen needs Bluetooth permission to scan for and connect to your MEATER+ Block. No location data is used or stored.</string>
+    <string name="permission_grant_button">Grant Permission</string>
+
+    <!-- Cut selection screen -->
+    <string name="cut_selection_pick_protein">Select protein</string>
+    <string name="cut_selection_pick_cut">Select cut</string>
+    <string name="cut_selection_pick_doneness">Select doneness</string>
+    <string name="cut_selection_recommended">Recommended</string>
+    <string name="cut_selection_back">Back</string>
+    <string name="cut_selection_cancel">Cancel</string>
+
+    <!-- Language toggle -->
+    <string name="language_label">Language</string>
+    <string name="language_en">English</string>
+    <string name="language_sv">Svenska</string>
+</resources>
