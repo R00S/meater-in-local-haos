@@ -1443,7 +1443,7 @@ cd android
 ./gradlew :app:assembleDebug
 ```
 
-APKs are also automatically attached to GitHub Releases via the `publish-apk` workflow.
+APKs are built on demand via the `build-apk` workflow (`workflow_dispatch` in GitHub Actions) and stored in the repo at `android/apk/`. Download the latest via the link in the main README.
 
 
 ---

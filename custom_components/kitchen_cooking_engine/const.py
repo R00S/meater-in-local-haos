@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.10.0.4 - Fix publish-apk CI: debug-only build, add push trigger so workflow_dispatch button shows in GitHub UI
+Last Change: v0.10.0.5 - Fix APK distribution: standalone build-apk workflow, APK stored in repo, README links to raw symlink
 """
 
 DOMAIN = "kitchen_cooking_engine"
