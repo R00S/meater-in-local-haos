@@ -34,7 +34,14 @@ service UUID — the same way the ESP32 identifies the device.
 ### 2026-05-25 — fix implemented
 BLE discovery fixed: `MeaterBleScanner` now filters by service UUID, not name.
 
-### 2026-05-25 — version display + CHORES
+### 2026-05-25 — fix APK download link on feature branches
+Problem: `build-apk.yml` commits the APK to the current branch, but the README
+download link was hardcoded to `raw/main/...`. So viewing the README on a feature
+branch and clicking "Download" silently pulled the old APK from `main`.
+
+Fix: workflow now rewrites the README link to `raw/<current-branch>/...` before
+committing, so the link on the feature branch always points to the APK just built.
+
 - Added app version (`v{versionName}`) below title on main scan screen
 - Enabled `buildConfig = true` in `build.gradle.kts` to expose `BuildConfig.VERSION_NAME`
 - Bumped version 0.10.0.3 → 0.10.0.4 (versionCode 4 → 5)
