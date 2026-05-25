@@ -28,26 +28,25 @@ The app shall:
 
 | Component | Description |
 |-----------|-------------|
-| **BLE Backend** | Android BLE client connecting directly to MEATER+ Block; mirrors MEATER app BLE communication path |
+| **BLE Backend** | Android BLE client connecting directly to MEATER+ Block; mirrors MEATER app BLE communication path; supports all probes the Block exposes (up to 4) |
+| **Multi-probe** | Simultaneous monitoring of all MEATER+ probes docked in the Block; each probe gets its own cooking session, cut selection, and ETA |
 | **Cooking UI** | Full MEATER path cooking panel matching KCE HAOS frontend; same protein tree, cuts, doneness, temp targets; AI recipe generator excluded; cut file recipes included |
 | **Recipe Data** | All KCE:CUT recipe files (www/recipes/) — the ground truth for the cooking tree, identical to KCE MEATER path |
-| **Cuisine Data** | All KCE:CUISINE files (www/cuisines/); Swedish and International |
 | **Languages** | English and Swedish (same strings as HAOS panel) |
 | **Cooking Algorithm** | Dynamic ETA, resting phase, carryover prediction — same algorithm as sensor.py |
-| **Notifications** | Local Android notifications at key cooking moments |
+| **Notifications** | Local Android notifications at key cooking moments, per probe |
 | **Session History** | Local storage of cook history with notes |
 
 ### 2.2 Out of Scope (v1.0)
 
 | Excluded | Reason |
 |----------|--------|
-| MEATER 2 / original MEATER probes | MEATER+ Block only for v1.0; protocol differences not yet fully mapped |
-| MEATER Link / UDP Block emulation | Not needed; app connects directly to Block via BLE |
+| MEATER 2 probe | Different, incompatible BLE protocol (different UUIDs, undocumented — see §9 research note) |
+| MEATER Link local UDP/protobuf | Different product (WiFi LAN bridge), not needed; app targets Block BLE directly |
 | AI recipe generator | Excluded by design; cut file recipes are included |
 | Home Assistant integration | App is standalone; no HA dependency |
 | Cloud connectivity | Local-only by design |
 | iOS version | Android-only for v1.0 |
-| Multi-probe support | Single MEATER+ probe for v1.0 |
 
 ---
 
@@ -79,25 +78,28 @@ This is the same constraint that the ESP32 BLE client path faced against the pro
 │  │ (MEATER+ Block  │    │ (KCE MEATER path port)   │ │
 │  │  client)        │    │                          │ │
 │  │ • GATT client   │    │ • Protein/cut tree       │ │
-│  │ • Temp decode   │◄───┤ • Doneness selection     │ │
+│  │ • Temp decode   │◄───┤ • Doneness (per probe)   │ │
 │  │ • Battery       │    │ • Live temp graph        │ │
-│  │ • Notifications │    │ • ETA display            │ │
-│  └────────┬────────┘    │ • Recipe cards (cut files│ │
-│           │             │   only, no AI generator) │ │
+│  │ • Multi-probe   │    │ • ETA display            │ │
+│  │ • Notifications │    │ • Recipe cards (cut files│ │
+│  └────────┬────────┘    │   only, no AI generator) │ │
+│           │             │ • Multi-probe dashboard  │ │
 │           │             │ • History                │ │
 │           │             └──────────────────────────┘ │
 └───────────┼─────────────────────────────────────────┘
             │ BLE (GATT)
             ▼
-┌───────────────────┐        ┌───────────────────┐
-│  MEATER+ Block    │◄──────►│  MEATER+ Probe    │
-│  (not cloud-conn.)│  BLE   │                   │
-└───────────────────┘        └───────────────────┘
+┌───────────────────┐        ┌────────────────────────┐
+│  MEATER+ Block    │◄──────►│  MEATER+ Probes (1–4)  │
+│  (not cloud-conn.)│  BLE   │                        │
+└───────────────────┘        └────────────────────────┘
 ```
 
 ### 4.1 BLE Backend
 
-The Android app acts as a BLE GATT client to the **MEATER+ Block** — the same role the official MEATER app takes. Based on protocol documentation in `halted-ble-server-dev/MEATER_BLE_PROTOCOL.md` and decompiled app code:
+The Android app acts as a BLE GATT client to the **MEATER+ Block** — the same role the official MEATER app takes. The Block manages communication with up to 4 MEATER+ probes simultaneously; the app reads all of them through the single BLE connection to the Block.
+
+Based on protocol documentation in `halted-ble-server-dev/MEATER_BLE_PROTOCOL.md` and decompiled app code:
 
 - **MEATER Service UUID**: `a75cc7fc-c956-488f-ac2a-2dbc08b63a04`
 - **Temperature Characteristic**: `7edda774-045e-4bbf-909b-45d1991a2876` (READ + NOTIFY, 8 bytes)
@@ -137,17 +139,19 @@ The Android app build pipeline will run `generate_frontend_data.py` to produce b
 | BLE-04 | App shall read battery level from battery characteristic |
 | BLE-05 | App shall handle BLE disconnection gracefully and attempt reconnection |
 | BLE-06 | App shall display connection status clearly (scanning / connected / disconnected) |
+| BLE-07 | App shall read temperature and battery data for all probes the Block exposes (up to 4) |
+| BLE-08 | App shall present a multi-probe dashboard showing all active probes simultaneously |
 
 ### 5.2 Cooking Session
 
 | # | Requirement |
 |---|-------------|
-| COOK-01 | User shall be able to select protein category, cut, and doneness level |
+| COOK-01 | User shall be able to select protein category, cut, and doneness level for each active probe independently |
 | COOK-02 | App shall display target temperature based on selection (same data as KCE) |
-| COOK-03 | App shall display live tip and ambient temperature |
-| COOK-04 | App shall calculate and display dynamic ETA using KCE cooking algorithm |
+| COOK-03 | App shall display live tip and ambient temperature for each probe |
+| COOK-04 | App shall calculate and display dynamic ETA using KCE cooking algorithm, per probe |
 | COOK-05 | App shall detect resting phase and carryover cooking |
-| COOK-06 | App shall send Android local notification when approaching target, at remove, and when rest is complete |
+| COOK-06 | App shall send Android local notification when approaching target, at remove, and when rest is complete — per probe |
 | COOK-07 | User shall be able to add notes to a cooking session |
 | COOK-08 | Sessions shall be stored locally on device |
 
@@ -205,9 +209,9 @@ The Android app is a **sibling project** within this repository. It shares:
 | Deliverable | Description |
 |-------------|-------------|
 | `android/` directory | Android app project (Kotlin, Gradle) in this repository |
-| BLE service module | `MeaterBleService.kt` — GATT client to MEATER+ Block, temp decode, notifications |
-| Cooking engine module | Port of KCE cooking algorithm (ETA, resting, doneness) to Kotlin |
-| UI module | WebView-based MEATER path panel OR Compose UI |
+| BLE service module | `MeaterBleService.kt` — GATT client to MEATER+ Block, multi-probe temp decode, notifications |
+| Cooking engine module | Port of KCE cooking algorithm (ETA, resting, doneness) to Kotlin; one engine instance per probe |
+| UI module | WebView-based MEATER path panel OR Compose UI; multi-probe dashboard |
 | Data build script | Script to bundle KCE:CUT data assets into APK |
 | README for Android | Setup, build instructions, Block cloud-disconnect guide |
 | Release APK | Distributed via GitHub Releases (publish-apk workflow); version follows KCE versioning |
@@ -221,7 +225,18 @@ The Android app is a **sibling project** within this repository. It shares:
 | BLE Block availability (must not be cloud-connected) | Document clearly; show "Disconnect Block from cloud" dialog on connect failure |
 | MEATER+ BLE protocol changes in firmware | Pin to known-good Block firmware; document tested version |
 | GATT protocol gaps (partial reverse-engineering) | Use verified formulas from Temperature.java; test against real Block |
+| Multi-probe GATT enumeration | Protocol must enumerate all probe slots exposed by Block; test with 2+ live probes |
 | WebView performance on older Android | Test on API 29; fall back to Compose if unacceptable |
+
+### 9.1 Research Note — MEATER 2 and MEATER Link
+
+**MEATER 2 probe (BLE)**
+MEATER 2 uses a completely different and undocumented BLE protocol from MEATER+. As of 2025, no community effort has successfully reverse-engineered the MEATER 2 GATT services. The UUIDs are different from MEATER+ and the encoding is unknown. This is a genuine dead end until someone captures and decodes the traffic.
+**Status: Dead end. Excluded until protocol is documented.**
+
+**MEATER Link (UDP/protobuf)**
+MEATER Link is a separate product — a standalone WiFi LAN bridge (not the same as the MEATER+ Block). It broadcasts probe data over UDP using Google Protocol Buffers. The community has partially reverse-engineered the `.proto` schemas (reference: [ccutrer/meater-link-esp32](https://github.com/ccutrer/meater-link-esp32)), but there is no production-quality, complete local integration as of 2025. This path is interesting for a future LAN-based mode but is not required for the Android app, which connects directly to the Block via BLE.
+**Status: Partially documented community effort; not a dead end, but not needed for v1.0.**
 
 ---
 
@@ -230,13 +245,14 @@ The Android app is a **sibling project** within this repository. It shares:
 The v0.10.x first release is complete when:
 
 1. ✅ App connects to a MEATER+ Block via BLE (Block not cloud-connected)
-2. ✅ Live tip and ambient temperatures display correctly
-3. ✅ User can select any cut from the full KCE cooking tree (cut files are ground truth)
-4. ✅ Dynamic ETA calculates and updates in real time
-5. ✅ Android notification fires at cooking milestones
-6. ✅ App works fully offline in English and Swedish
-7. ✅ Cook history with notes is stored locally
-8. ✅ publish-apk GitHub Action produces a signed APK on release
+2. ✅ Live tip and ambient temperatures display correctly for each probe
+3. ✅ Multi-probe dashboard shows all active probes simultaneously
+4. ✅ User can select any cut from the full KCE cooking tree per probe (cut files are ground truth)
+5. ✅ Dynamic ETA calculates and updates in real time per probe
+6. ✅ Android notification fires at cooking milestones, per probe
+7. ✅ App works fully offline in English and Swedish
+8. ✅ Cook history with notes is stored locally
+9. ✅ publish-apk GitHub Action produces a signed APK on release
 
 ---
 
@@ -250,9 +266,9 @@ Version is encoded in the APK `versionName` and displayed in the app's About scr
 
 ## 12. Out of Scope — Future Versions
 
-- MEATER 2 / MEATER Link Block protocol (UDP/protobuf)
+- **MEATER 2 probe support** — different BLE protocol, dead end until reverse-engineered (see §9.1)
+- **MEATER Link LAN mode (UDP/protobuf)** — partially documented community effort; viable future addition for a WiFi-based path
 - iOS version
-- Multi-probe support
 - HA integration bridge (sending probe data back to HA)
 - AI recipe generator
 - Cuisine / ingredient browser
