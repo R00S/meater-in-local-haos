@@ -1418,8 +1418,10 @@ described in `docs/ANDROID_APP_TOR.md`.
 - **Cut data from recipe files** — the cooking tree in the cut selection screen is parsed at
   runtime from the bundled `kitchen-cooking-panel.js` (the same auto-generated file used by
   the HAOS panel). `EXP_TREE` and `EXP_DONENESS_OPTIONS` are extracted directly — no separate
-  JSON file. Adding, removing, or changing a cut file in `www/recipes/`, running
-  `python3 generate_frontend_data.py`, and rebuilding the APK is all that is needed.
+  JSON file. When an agent adds, removes, or changes a cut file in `www/recipes/`, it
+  runs `python3 generate_frontend_data.py` as part of that task (same as for HAOS) — the
+  generator updates `www/kitchen-cooking-panel.js` and also copies it to Android assets.
+  The next APK build then automatically reflects those changes.
 - **Version label** — app version shown on the main screen for easier debug identification
 - **GATT connect/disconnect** — connects to the MEATER+ Block (not cloud-connected)
 - **Multi-probe support** — enumerates all MEATER service instances the Block exposes
