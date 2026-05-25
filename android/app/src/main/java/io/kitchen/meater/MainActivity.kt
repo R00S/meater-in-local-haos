@@ -6,11 +6,12 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import io.kitchen.meater.ui.AppScreen
+import io.kitchen.meater.ui.CookHistoryScreen
 import io.kitchen.meater.ui.CutSelectionScreen
 import io.kitchen.meater.ui.MainScreen
 import io.kitchen.meater.ui.MainViewModel
 import io.kitchen.meater.ui.PermissionScreen
-import io.kitchen.meater.ui.WebViewCookingScreen
+import io.kitchen.meater.ui.RecipeScreen
 
 class MainActivity : ComponentActivity() {
     private val viewModel: MainViewModel by viewModels()
@@ -22,7 +23,9 @@ class MainActivity : ComponentActivity() {
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 val screen = viewModel.uiState.screen
-                if (screen == AppScreen.CUT_SELECTION || screen == AppScreen.WEBVIEW_PANEL) {
+                if (screen == AppScreen.CUT_SELECTION ||
+                    screen == AppScreen.HISTORY ||
+                    screen == AppScreen.RECIPE) {
                     viewModel.backToDashboard()
                 } else {
                     isEnabled = false
@@ -76,23 +79,29 @@ class MainActivity : ComponentActivity() {
                             restMinutes = restMin
                         )
                     },
+                    onViewRecipe = { slug, cutName, cutNameSv, categoryId ->
+                        viewModel.openRecipe(
+                            probeIndex = state.cutSelectionProbeIndex,
+                            slug = slug,
+                            cutName = cutName,
+                            cutNameSv = cutNameSv,
+                            categoryId = categoryId
+                        )
+                    },
                     onCancel = { viewModel.backToDashboard() }
                 )
 
-                AppScreen.WEBVIEW_PANEL -> WebViewCookingScreen(
-                    sessions = state.sessions,
-                    language = state.language,
-                    onStartCooking = { probeIndex, cutId, doneness, targetTempC ->
-                        viewModel.startCooking(
-                            probeIndex = probeIndex,
-                            proteinCategory = "",
-                            cutId = cutId,
-                            cutDisplayName = cutId,
-                            doneness = doneness,
-                            targetTempC = targetTempC
-                        )
-                    },
-                    onStopCooking = { probeIndex -> viewModel.stopCooking(this, probeIndex) }
+                AppScreen.HISTORY -> CookHistoryScreen(
+                    useSv = state.language == "sv",
+                    onBack = { viewModel.backToDashboard() }
+                )
+
+                AppScreen.RECIPE -> RecipeScreen(
+                    slug = state.recipeCutSlug,
+                    cutName = state.recipeCutName,
+                    cutNameSv = state.recipeCutNameSv,
+                    useSv = state.language == "sv",
+                    onBack = { viewModel.backToDashboard() }
                 )
             }
         }

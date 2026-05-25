@@ -8,6 +8,8 @@ import android.bluetooth.le.ScanResult
 import android.bluetooth.le.ScanSettings
 import android.content.Context
 import android.content.pm.PackageManager
+import android.os.Handler
+import android.os.Looper
 import androidx.core.content.ContextCompat
 import io.kitchen.meater.model.BleDevice
 
@@ -17,6 +19,7 @@ class MeaterBleScanner(
 ) {
     private val adapter: BluetoothAdapter? = BluetoothAdapter.getDefaultAdapter()
     private val scanner get() = adapter?.bluetoothLeScanner
+    private val mainHandler = Handler(Looper.getMainLooper())
 
     private val callback = object : ScanCallback() {
         override fun onScanResult(callbackType: Int, result: ScanResult) {
@@ -26,27 +29,28 @@ class MeaterBleScanner(
             val address = result.device.address  // format: "XX:XX:XX:XX:XX:XX"
             // Show all BLE devices — the user picks their MEATER+ from the list.
             val displayName = name.ifEmpty { address }
-            onDeviceFound(BleDevice(name = displayName, address = address))
+            val device = BleDevice(name = displayName, address = address)
+            mainHandler.post { onDeviceFound(device) }
         }
 
         override fun onScanFailed(errorCode: Int) {
-            onError("BLE scan failed: $errorCode")
+            mainHandler.post { onError("BLE scan failed: $errorCode") }
         }
     }
 
     @SuppressLint("MissingPermission")
     fun start(context: Context) {
         if (adapter == null || scanner == null) {
-            onError("Bluetooth LE is not available on this device")
+            mainHandler.post { onError("Bluetooth LE is not available on this device") }
             return
         }
         if (!adapter.isEnabled) {
-            onError("Bluetooth is disabled")
+            mainHandler.post { onError("Bluetooth is disabled") }
             return
         }
 
         if (ContextCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED) {
-            onError("BLUETOOTH_SCAN permission not granted")
+            mainHandler.post { onError("BLUETOOTH_SCAN permission not granted") }
             return
         }
 

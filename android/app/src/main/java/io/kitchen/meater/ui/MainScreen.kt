@@ -8,8 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -59,12 +59,15 @@ fun MainScreen(
     val strNearby        = if (useSv) "Nearby BLE-enheter"      else "Nearby BLE devices"
     val strMacTitle      = if (useSv) "Anslut via MAC-adress"   else "Connect by MAC address"
     val strProbes        = if (useSv) "Prober"                  else "Probes"
-    val strFullPanel     = if (useSv) "Fullständig panel"       else "Full Panel"
+    val strFullPanel     = if (useSv) "Tillagningshistorik"   else "Cook History"
     val strAddProbe      = if (useSv) "+ Lägg till probplats"   else "+ Add probe slot"
 
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         Column(
-            modifier = Modifier.fillMaxSize().padding(16.dp),
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+                .padding(16.dp),
             verticalArrangement = Arrangement.Top
         ) {
             // Title + language toggle
@@ -144,8 +147,10 @@ fun MainScreen(
                     )
                 }
 
-                LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
-                    items(state.discoveredDevices, key = { it.address }) { device ->
+                // Plain Column — device count is always small; avoids the height-squish
+                // problem that a weighted LazyColumn causes when the screen fills up.
+                Column {
+                    state.discoveredDevices.forEach { device ->
                         DeviceRow(
                             device = device,
                             selected = state.selectedDeviceAddress == device.address,

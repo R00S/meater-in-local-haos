@@ -36,6 +36,11 @@ jobs:
           mkdir -p android/app/src/main/assets
           cp custom_components/kitchen_cooking_engine/www/kitchen-cooking-panel.js android/app/src/main/assets/kitchen-cooking-panel.js
 
+      - name: Copy recipe files to Android assets
+        run: |
+          mkdir -p android/app/src/main/assets/recipes
+          cp -r custom_components/kitchen_cooking_engine/www/recipes/. android/app/src/main/assets/recipes/
+
       - name: Build APK
         working-directory: android
         run: ./gradlew --no-daemon :app:assembleDebug

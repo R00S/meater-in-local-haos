@@ -36,6 +36,78 @@ Additionally added:
   and the Android app. Previously `cooking_data.json` was hand-crafted and missing beef & lamb;
   it now has all 7 categories.
 
+### 2026-05-25 — Fix 6 Android bugs (v0.10.0.7)
+
+All 6 issues reported after v0.10.0.6:
+
+**Bug 1 — Cannot view recipes (recipe content missing)**
+Root cause: Issue 1 was misunderstood as showing cooking data (temps/methods). Actual need: the
+KCE:CUT `.md` files contain rich recipe inspiration content (cut profiles, source recipes with
+ingredients + steps, MEATER probe placement). These were not bundled or accessible.
+
+Fix:
+- `generate_frontend_data.py`: new `_build_recipe_index()` builds a `slug → relative .md path`
+  map and injects `EXP_RECIPE_INDEX = {...}` into `kitchen-cooking-panel.js`.
+- Generator also copies `www/recipes/` tree to `android/app/src/main/assets/recipes/` at build time.
+- `build-apk.yml`: new step `cp -r www/recipes android/app/src/main/assets/recipes`.
+- New `RecipeScreen.kt`: reads `EXP_RECIPE_INDEX` from panel JS, loads `.md` files from
+  `assets/recipes/`, strips `<!-- KCE:CUT -->` frontmatter, converts markdown to HTML,
+  renders in WebView with minimal CSS.
+- `CutSelectionScreen`: "📖 View Recipes" button at the doneness step opens `RecipeScreen`.
+- `MainViewModel`: `AppScreen.RECIPE`, `openRecipe()`, recipe fields in `MainUiState`.
+- Cooking info card (USDA safe temp, rest time, carryover, methods) kept as a summary header.
+
+**Bug 2 — Flat cut tree**
+Root cause: `CookingDataRepository` flattened the full hierarchy into category → flat cuts,
+losing species and cut type levels entirely.
+
+Fix: `CookingDataRepository` now exports `Species` and `CutType` data classes. `ProteinCategory`
+has `species: List<Species>` instead of `cuts: List<Cut>`. `CutSelectionScreen` is now 4 steps:
+category → species → cut (grouped by cut type) → doneness. Species step auto-skipped for
+single-species categories.
+
+**Bug 3 — Cannot start cooks (GATT threading race)**
+Root cause: `MeaterBleService` GATT callbacks (`onConnectionStateChange`, `onServicesDiscovered`,
+`onCharacteristicChanged`, `onCharacteristicRead`) fire on the Android binder thread. They all
+wrote directly to `uiState` (Compose `mutableStateOf`). Concurrent writes from binder + main
+thread caused read-modify-write races; the `screen=DASHBOARD` state written by `startCooking()`
+could be overwritten by a concurrent temperature update carrying the old state.
+
+Fix: all `onStatus`/`onTemperature`/`onBattery`/`onDisconnected`/`onError` callbacks now
+wrapped in `Handler(Looper.getMainLooper()).post { }` — all state mutations are serialised on
+the main thread.
+
+**Bug 4 — No BLE scan results visible**
+Root cause: The device list `LazyColumn` used `Modifier.weight(1f, fill=false)` inside a
+non-scrollable `Column`. All fixed-size siblings (header, buttons, MAC field, connect button)
+were measured first; on any screen where they filled most of the viewport the weighted
+`LazyColumn` received 0 dp height — invisible even when devices were arriving.
+
+Fix: outer Column made scrollable (`verticalScroll(rememberScrollState())`); device list changed
+from `LazyColumn(weight)` to a plain `Column` (device count is always small). `LazyColumn` and
+its `lazy.items` import removed from `MainScreen.kt`.
+
+**Bug 5 — Full Panel = black screen**
+Root cause: the WebView loaded `kitchen-cooking-panel.js` which is a LitElement HA custom
+element requiring `this.hass`. Without a Home Assistant connection it renders nothing.
+
+Fix: "Full Panel" button renamed to "Cook History" (`Tillagningshistorik`). `AppScreen.WEBVIEW_PANEL`
+replaced with `AppScreen.HISTORY`. New `CookHistoryScreen.kt` renders completed cook sessions
+from `SessionHistoryRepository` (same data the probe cards already collect).
+`WebViewCookingScreen.kt` retained in repo but no longer reachable from navigation.
+
+**Bug 6 — Battery not shown**
+Root cause: `onServicesDiscovered` fired 4 GATT operations at once (2× `writeDescriptor` + 2×
+`readCharacteristic`). Android BLE only processes one GATT operation at a time; the 2nd, 3rd,
+4th calls were silently dropped. Battery CCCD write never completed → `onBattery` never called.
+
+Fix: `MeaterBleService` now has a GATT operation queue (`ArrayDeque`). All GATT ops enqueued
+with `enqueueGattOp {}`. `onDescriptorWrite` and `onCharacteristicRead` advance the queue via
+`runNextGattOp()`. Sequence per service: enableNotifications(temp) → enableNotifications(batt) →
+readCharacteristic(batt).
+
+Version bump: 0.10.0.6 → 0.10.0.7 (versionCode 7 → 8).
+
 ## Sessions
 
 ### 2026-05-25 — initial name-filter fix (v0.10.0.3 → 0.10.0.4)

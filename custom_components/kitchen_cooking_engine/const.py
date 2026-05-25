@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.10.0.6 - Android language toggle: full EN/SV switching across all native UI; bilingual cut names stored in session
+Last Change: v0.10.0.7 - Fix 6 Android bugs: recipe viewer, 4-level cut tree, GATT threading, scan layout, cook history, battery GATT queue
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "607"
+PANEL_VERSION = "608"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

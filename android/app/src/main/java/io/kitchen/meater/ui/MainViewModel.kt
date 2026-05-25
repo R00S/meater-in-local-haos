@@ -20,7 +20,8 @@ enum class AppScreen {
     SCAN,
     DASHBOARD,
     CUT_SELECTION,
-    WEBVIEW_PANEL
+    HISTORY,
+    RECIPE
 }
 
 data class MainUiState(
@@ -37,7 +38,13 @@ data class MainUiState(
     // Which probe the cut selection screen is targeting (-1 = none)
     val cutSelectionProbeIndex: Int = -1,
     // Full MAC for direct connect without scanning
-    val manualMacAddress: String = ""
+    val manualMacAddress: String = "",
+    // Recipe viewer state
+    val recipeProbeIndex: Int = -1,
+    val recipeCutSlug: String = "",
+    val recipeCutName: String = "",
+    val recipeCutNameSv: String = "",
+    val recipeCategoryId: String = ""
 )
 
 class MainViewModel : ViewModel() {
@@ -210,11 +217,36 @@ class MainViewModel : ViewModel() {
     }
 
     fun openWebViewPanel() {
-        uiState = uiState.copy(screen = AppScreen.WEBVIEW_PANEL)
+        uiState = uiState.copy(screen = AppScreen.HISTORY)
     }
 
     fun backToDashboard() {
-        uiState = uiState.copy(screen = AppScreen.DASHBOARD, cutSelectionProbeIndex = -1)
+        uiState = uiState.copy(
+            screen = AppScreen.DASHBOARD,
+            cutSelectionProbeIndex = -1,
+            recipeProbeIndex = -1,
+            recipeCutSlug = "",
+            recipeCutName = "",
+            recipeCutNameSv = "",
+            recipeCategoryId = ""
+        )
+    }
+
+    fun openRecipe(
+        probeIndex: Int,
+        slug: String,
+        cutName: String,
+        cutNameSv: String,
+        categoryId: String
+    ) {
+        uiState = uiState.copy(
+            screen = AppScreen.RECIPE,
+            recipeProbeIndex = probeIndex,
+            recipeCutSlug = slug,
+            recipeCutName = cutName,
+            recipeCutNameSv = cutNameSv,
+            recipeCategoryId = categoryId
+        )
     }
 
     // ── Cooking session management ───────────────────────────────────────────
