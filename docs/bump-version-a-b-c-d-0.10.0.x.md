@@ -28,3 +28,27 @@ Start implementation of the Android APK according to ToR and plan.
 
 **Actions:**
 - Created timeline file.
+
+### 2026-05-25 — Agent session (Android phase-1 start)
+
+**Discoveries:**
+- No `android/` project existed in repository.
+- No dedicated Android implementation plan file exists; `docs/ANDROID_APP_TOR.md` is the active scope source.
+- First build attempt failed due missing XML theme dependency (`Theme.Material3.DayNight.NoActionBar`).
+
+**Actions:**
+- Scaffolded `android/` Gradle project using `gradle init`.
+- Added `app/` Android module (Kotlin + Compose) with package `io.kitchen.meater`.
+- Implemented initial vertical slice:
+  - Compose app shell (`MainActivity`, `MainScreen`)
+  - BLE scan entry point (`MeaterBleScanner`) for MEATER-named BLE devices
+  - Local storage skeleton (`SessionHistoryRepository`)
+- Set app `versionName` to `0.10.0.0` per ToR versioning.
+- Fixed build error by adding `com.google.android.material:material` dependency.
+- Validated build: `./gradlew :app:assembleDebug` succeeded.
+
+**Status:**
+- [x] Android phase-1 foundation started and building
+- [ ] GATT connection + temperature decode
+- [ ] Multi-probe telemetry pipeline
+- [ ] KCE panel/cut-data asset bundling pipeline
