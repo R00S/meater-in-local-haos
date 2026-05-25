@@ -35,12 +35,11 @@ jobs:
         working-directory: android
         run: ./gradlew --no-daemon :app:assembleDebug
 
-      - name: Copy APK with version in filename and update symlink
+      - name: Copy APK with version in filename and update latest
         run: |
           mkdir -p android/apk
           cp android/app/build/outputs/apk/debug/app-debug.apk android/apk/meater-kitchen-${{ steps.version.outputs.name }}.apk
-          cd android/apk
-          ln -sf meater-kitchen-${{ steps.version.outputs.name }}.apk meater-kitchen-latest.apk
+          cp android/apk/meater-kitchen-${{ steps.version.outputs.name }}.apk android/apk/meater-kitchen-latest.apk
 
       - name: Commit APK to repo
         run: |
