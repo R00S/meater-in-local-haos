@@ -1,21 +1,21 @@
-name: Publish APK
+name: Publish Android APK
 
 on:
+  release:
+    types: [published]
   workflow_dispatch:
     inputs:
-      release_tag:
-        description: 'Release tag to attach the APK to (e.g. v0.10.0.0). Must already exist.'
+      tag:
+        description: 'Release tag (e.g. v0.10.0.1)'
         required: true
-        type: string
 
 jobs:
-  build-and-publish:
+  build-and-release:
+    name: Build and attach APK to release
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Set up JDK 17
@@ -24,42 +24,29 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
         with:
-          python-version: '3.11'
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('android/**/*.gradle*', 'android/**/gradle-wrapper.properties') }}
+          restore-keys: ${{ runner.os }}-gradle-
 
-      - name: Generate KCE cooking data assets for Android
-        run: |
-          cd custom_components/kitchen_cooking_engine
-          python3 generate_frontend_data.py
-
-      - name: Copy generated assets into Android project
-        run: |
-          mkdir -p android/app/src/main/assets
-          cp custom_components/kitchen_cooking_engine/www/kitchen-cooking-panel.js \
-             android/app/src/main/assets/kitchen-cooking-panel.js
-
-      - name: Make Gradle wrapper executable
+      - name: Make gradlew executable
         run: chmod +x android/gradlew
 
-      - name: Build release APK
+      - name: Build debug APK
         working-directory: android
-        run: ./gradlew assembleRelease --no-daemon
+        run: ./gradlew :app:assembleDebug --no-daemon
 
-      - name: Sign APK
-        uses: r0adkll/sign-android-release@v1
-        id: sign_app
-        with:
-          releaseDirectory: android/app/build/outputs/apk/release
-          signingKeyBase64: ${{ secrets.ANDROID_SIGNING_KEY }}
-          alias: ${{ secrets.ANDROID_KEY_ALIAS }}
-          keyStorePassword: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
-          keyPassword: ${{ secrets.ANDROID_KEY_PASSWORD }}
-
-      - name: Upload APK to GitHub Release
+      - name: Upload APK to release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.event.inputs.release_tag }}
-          files: ${{ steps.sign_app.outputs.signedReleaseFile }}
-          fail_on_unmatched_files: true
+          files: android/app/build/outputs/apk/debug/app-debug.apk
+          tag_name: ${{ github.event.release.tag_name || inputs.tag }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

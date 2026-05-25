@@ -74,3 +74,29 @@ Start implementation of the Android APK according to ToR and plan.
 - [ ] Multi-probe telemetry model and dashboard
 - [ ] KCE panel/cut-data bundling into APK
 - [ ] Cooking algorithm parity and milestone notifications
+
+
+### 2026-05-25 (second agent session) — Finish Android app + CHORES
+
+**Android ToR deliverables completed:**
+- `CookingState.kt` — state machine enum (IDLE/COOKING/APPROACHING/GOAL_REACHED/RESTING/DONE)
+- `CookingSession.kt` — per-probe data model (cut, doneness, target, ETA, history, notes)
+- `CookingEngine.kt` — full port of KCE ETA algorithm from sensor.py; rate-based using 5-min rolling history; falls back to MINUTES_PER_DEGREE_C constant
+- `NotificationHelper.kt` — milestone notifications (approaching, goal reached, rest complete) using Android NotificationChannel
+- `MeaterBleService.kt` updated — multi-probe: enumerates all MEATER service instances the Block exposes; probeIndex passed to all callbacks
+- `MainViewModel.kt` updated — multi-probe session map; state transition → notification wiring; auto-save to history on cook complete
+- `MainScreen.kt` updated — multi-probe dashboard with ProbeCard per active probe (tip, ambient, battery, state, target, ETA)
+- `SessionHistoryRepository.kt` updated — full JSON-backed serialization (save, load, updateNotes, delete)
+- `.github/workflows/publish-apk.yml` added — builds debug APK on release and attaches to GitHub Release assets
+
+**CHORES.md:**
+- Version bumped to `0.10.0.2` in `manifest.json`, `__init__.py`, `const.py`, `build.gradle.kts`
+- `docs/USER_GUIDE.md` updated with expanded Android feature list
+- Branch timeline updated
+
+**Remaining ToR items (not blocking first release):**
+- Runtime permission UX flow (BLUETOOTH_SCAN/CONNECT request dialog)
+- Cut selection UI (a full screen with protein/cut/doneness picker)
+- KCE panel WebView integration (bundling kitchen-cooking-panel.js as APK asset)
+- Language switching UI
+- Signed release APK (keystore setup)

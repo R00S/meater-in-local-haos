@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.0.1 · Home Assistant 2024.1.0+
+> **Version:** 0.10.0.2 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -1399,36 +1399,45 @@ Ensure the **Measurement System** setting matches your recipe source. US recipes
 °F; Swedish recipes use dl and °C. Changing the system converts all displayed amounts in real time.
 
 
-## 15. Standalone Android App (Preview)
+## 15. Standalone Android App (v0.10.0.2)
 
-The repository now includes an Android sibling project in:
+The `android/` directory contains the standalone MEATER Kitchen APK project
+described in `docs/ANDROID_APP_TOR.md`.
 
-- `android/`
+### What is implemented
 
-This app is the start of the standalone MEATER Kitchen APK path described in `docs/ANDROID_APP_TOR.md`.
+- **BLE scanning** — discovers MEATER-named BLE devices
+- **GATT connect/disconnect** — connects to the MEATER+ Block (not cloud-connected)
+- **Multi-probe support** — enumerates all MEATER service instances the Block exposes
+  (up to 4 probe slots); each probe gets its own dashboard card
+- **Temperature decode** — tip and ambient using verified formulas from ToR §4.1
+- **Battery level** per probe
+- **Cooking engine** — full port of the KCE ETA algorithm from `sensor.py`:
+  - rate-based ETA using last 5 minutes of temperature history
+  - state machine: Idle → Cooking → Approaching → Resting → Done
+- **Android notifications** at key milestones per probe:
+  - Approaching target (within 10 °C)
+  - Target reached / time to rest
+  - Rest complete / ready to serve
+- **Cook history** — local JSON storage of completed sessions with notes
+- **Multi-probe dashboard** — Compose UI with one card per active probe
 
-Current implemented baseline:
+### What is not yet implemented
 
-- BLE device scanning for MEATER-named devices
-- Device selection from discovered list
-- BLE GATT connect/disconnect flow
-- MEATER service/characteristic discovery
-- Temperature and battery read/notify handling
-- Tip/ambient decoding using the documented formulas from the ToR
+- Runtime permission request UX flow (BLUETOOTH_SCAN/CONNECT)
+- Cut selection UI (currently cut must be set programmatically via `startCooking()`)
+- KCE panel WebView integration (bundling kitchen-cooking-panel.js into APK assets)
+- Language switching (English/Swedish)
+- Signed release APK workflow finalization
 
-Important limitations in this preview:
-
-- Runtime permission UX flow is not finalized
-- Multi-probe orchestration is not complete
-- KCE panel/cut asset bundling into APK is not implemented yet
-- Cooking algorithm parity and milestone notifications are not complete
-
-Build command:
+### Build
 
 ```bash
 cd android
 ./gradlew :app:assembleDebug
 ```
+
+APKs are also automatically attached to GitHub Releases via the `publish-apk` workflow.
 
 
 ---

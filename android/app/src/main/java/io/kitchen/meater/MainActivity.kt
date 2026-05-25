@@ -12,6 +12,8 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        viewModel.init(this)
+
         setContent {
             MainScreen(
                 state = viewModel.uiState,

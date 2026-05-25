@@ -7,7 +7,14 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import io.kitchen.meater.ble.MeaterBleScanner
 import io.kitchen.meater.ble.MeaterBleService
+import io.kitchen.meater.cooking.CookingEngine
+import io.kitchen.meater.cooking.CookingSession
+import io.kitchen.meater.cooking.CookingState
+import io.kitchen.meater.data.SessionHistoryRepository
 import io.kitchen.meater.model.BleDevice
+import io.kitchen.meater.notification.NotificationHelper
+import java.time.Instant
+import java.util.UUID
 
 data class MainUiState(
     val isScanning: Boolean = false,
@@ -16,14 +23,17 @@ data class MainUiState(
     val connectedDeviceAddress: String? = null,
     val isConnected: Boolean = false,
     val status: String = "Ready",
-    val tipCelsius: Float? = null,
-    val ambientCelsius: Float? = null,
-    val batteryPercent: Int? = null
+
+    // Multi-probe sessions (keyed by probeIndex 0–3)
+    val sessions: Map<Int, CookingSession> = emptyMap()
 )
 
 class MainViewModel : ViewModel() {
     var uiState by mutableStateOf(MainUiState())
         private set
+
+    private var notificationHelper: NotificationHelper? = null
+    private var historyRepository: SessionHistoryRepository? = null
 
     private val scanner = MeaterBleScanner(
         onDeviceFound = { device ->
@@ -38,11 +48,17 @@ class MainViewModel : ViewModel() {
 
     private val bleService = MeaterBleService(
         onStatus = { message -> uiState = uiState.copy(status = message) },
-        onTemperature = { tip, ambient ->
-            uiState = uiState.copy(tipCelsius = tip, ambientCelsius = ambient)
+        onTemperature = { probeIndex, tipC, ambientC ->
+            handleTemperatureUpdate(probeIndex, tipC, ambientC)
         },
-        onBattery = { percent ->
-            uiState = uiState.copy(batteryPercent = percent)
+        onBattery = { probeIndex, percent ->
+            val sessions = uiState.sessions.toMutableMap()
+            val existing = sessions[probeIndex] ?: CookingSession(
+                probeIndex = probeIndex,
+                probeAddress = uiState.connectedDeviceAddress ?: ""
+            )
+            sessions[probeIndex] = existing.copy(batteryPercent = percent)
+            uiState = uiState.copy(sessions = sessions)
         },
         onDisconnected = {
             uiState = uiState.copy(
@@ -51,12 +67,16 @@ class MainViewModel : ViewModel() {
                 status = "Disconnected"
             )
         },
-        onError = { message ->
-            uiState = uiState.copy(status = message)
-        }
+        onError = { message -> uiState = uiState.copy(status = message) }
     )
 
+    fun init(context: Context) {
+        notificationHelper = NotificationHelper(context)
+        historyRepository = SessionHistoryRepository(context)
+    }
+
     fun startScan(context: Context) {
+        init(context)
         uiState = uiState.copy(
             isScanning = true,
             status = "Scanning for MEATER devices…",
@@ -81,24 +101,119 @@ class MainViewModel : ViewModel() {
             uiState = uiState.copy(
                 isConnected = false,
                 connectedDeviceAddress = null,
-                status = "Disconnected"
+                status = "Disconnected",
+                sessions = emptyMap()
             )
             return
         }
 
-        val selected = uiState.selectedDeviceAddress
-        if (selected == null) {
+        val selected = uiState.selectedDeviceAddress ?: run {
             uiState = uiState.copy(status = "Select a MEATER device first")
             return
         }
 
         scanner.stop()
         uiState = uiState.copy(isScanning = false)
+        init(context)
         bleService.connect(context, selected)
         uiState = uiState.copy(
             isConnected = true,
             connectedDeviceAddress = selected,
             status = "Connecting …"
+        )
+    }
+
+    /**
+     * Start a cooking session for a specific probe.
+     * In a full implementation the caller would drive from a cut-selection screen.
+     */
+    fun startCooking(
+        probeIndex: Int,
+        proteinCategory: String,
+        cutId: String,
+        cutDisplayName: String,
+        doneness: String,
+        targetTempC: Int,
+        restMinutes: Int = 5
+    ) {
+        val sessions = uiState.sessions.toMutableMap()
+        val existing = sessions[probeIndex] ?: CookingSession(
+            probeIndex = probeIndex,
+            probeAddress = uiState.connectedDeviceAddress ?: ""
+        )
+        sessions[probeIndex] = CookingEngine.startSession(
+            session = existing,
+            proteinCategory = proteinCategory,
+            cutId = cutId,
+            cutDisplayName = cutDisplayName,
+            doneness = doneness,
+            targetTempC = targetTempC,
+            restMinutes = restMinutes
+        )
+        uiState = uiState.copy(sessions = sessions)
+    }
+
+    fun stopCooking(context: Context, probeIndex: Int) {
+        val sessions = uiState.sessions.toMutableMap()
+        val session = sessions[probeIndex] ?: return
+        saveSessionToHistory(session)
+        sessions[probeIndex] = session.copy(state = CookingState.IDLE)
+        uiState = uiState.copy(sessions = sessions)
+    }
+
+    fun updateNotes(probeIndex: Int, notes: String) {
+        val sessions = uiState.sessions.toMutableMap()
+        sessions[probeIndex] = sessions[probeIndex]?.copy(notes = notes) ?: return
+        uiState = uiState.copy(sessions = sessions)
+    }
+
+    private fun handleTemperatureUpdate(probeIndex: Int, tipC: Float, ambientC: Float) {
+        val sessions = uiState.sessions.toMutableMap()
+        val existing = sessions[probeIndex] ?: CookingSession(
+            probeIndex = probeIndex,
+            probeAddress = uiState.connectedDeviceAddress ?: ""
+        )
+
+        val prevState = existing.state
+        val updated = CookingEngine.update(existing, tipC, ambientC)
+        sessions[probeIndex] = updated
+
+        // Fire notifications on state transitions
+        val helper = notificationHelper
+        if (helper != null) {
+            when {
+                prevState == CookingState.COOKING && updated.state == CookingState.APPROACHING ->
+                    helper.notifyApproaching(updated)
+
+                prevState != CookingState.RESTING && updated.state == CookingState.RESTING ->
+                    helper.notifyGoalReached(updated)
+
+                prevState == CookingState.RESTING && updated.state == CookingState.DONE ->
+                    helper.notifyRestComplete(updated)
+            }
+        }
+
+        // Auto-save when done
+        if (updated.state == CookingState.DONE && prevState != CookingState.DONE) {
+            saveSessionToHistory(updated)
+        }
+
+        uiState = uiState.copy(sessions = sessions)
+    }
+
+    private fun saveSessionToHistory(session: CookingSession) {
+        val repo = historyRepository ?: return
+        repo.saveSession(
+            SessionHistoryRepository.SessionRecord(
+                id = "${session.probeAddress}_${session.cookStartedAt?.epochSecond ?: 0}",
+                cutDisplayName = session.cutDisplayName,
+                doneness = session.doneness,
+                targetTempC = session.targetTempC,
+                finalTipC = session.tipCelsius,
+                cookStartedAt = session.cookStartedAt?.toString(),
+                restMinutes = session.restMinutes,
+                notes = session.notes
+            )
         )
     }
 
