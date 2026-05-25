@@ -32,7 +32,9 @@ jobs:
           echo "name=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Copy panel JS to Android assets
-        run: cp custom_components/kitchen_cooking_engine/www/kitchen-cooking-panel.js android/app/src/main/assets/kitchen-cooking-panel.js
+        run: |
+          mkdir -p android/app/src/main/assets
+          cp custom_components/kitchen_cooking_engine/www/kitchen-cooking-panel.js android/app/src/main/assets/kitchen-cooking-panel.js
 
       - name: Build APK
         working-directory: android
