@@ -23,18 +23,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 
 /**
- * Displays the KCE:CUT recipe markdown files for a given cut.
+ * Displays the KCE:CUT method-specific recipe file for a given cut + method.
  *
  * The recipe .md files are bundled in the APK as assets under assets/recipes/.
  * The EXP_RECIPE_INDEX constant (injected into kitchen-cooking-panel.js by the
- * generator) maps slug → relative path so we can find the right file.
+ * generator) maps "{slug}-{method}" → relative path so we load the right file.
  *
- * The master cut file (e.g. salmon_fillet.md) shows the cut profile in EN and SV.
- * Each method-specific file (e.g. salmon_fillet-pan_sear.md) contains source recipes
- * with ingredients and step-by-step instructions — the main content the user wants.
+ * Each method file (e.g. filet_mignon-pan_sear.md) contains source recipes with
+ * ingredients and step-by-step instructions — the content the user wants to read.
+ * The master cut profile file is NOT shown here (cut profile info is in CutSelectionScreen).
  *
- * All files are displayed concatenated in a single WebView for a smooth scroll experience.
- * The HTML comment frontmatter (<!-- KCE:CUT ... -->) is stripped before display.
+ * The HTML comment frontmatter (<!-- KCE:CUT_METHOD ... -->) is stripped before display.
  * A minimal CSS stylesheet makes the content readable.
  */
 @Composable
@@ -42,6 +41,7 @@ fun RecipeScreen(
     slug: String,
     cutName: String,
     cutNameSv: String,
+    method: String,
     useSv: Boolean,
     onBack: () -> Unit
 ) {

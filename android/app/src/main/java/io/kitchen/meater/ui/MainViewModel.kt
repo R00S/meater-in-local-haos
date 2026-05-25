@@ -44,7 +44,7 @@ data class MainUiState(
     val recipeCutSlug: String = "",
     val recipeCutName: String = "",
     val recipeCutNameSv: String = "",
-    val recipeCategoryId: String = ""
+    val recipeMethod: String = ""
 )
 
 class MainViewModel : ViewModel() {
@@ -252,7 +252,7 @@ class MainViewModel : ViewModel() {
             recipeCutSlug = "",
             recipeCutName = "",
             recipeCutNameSv = "",
-            recipeCategoryId = ""
+            recipeMethod = ""
         )
     }
 
@@ -261,7 +261,7 @@ class MainViewModel : ViewModel() {
         slug: String,
         cutName: String,
         cutNameSv: String,
-        categoryId: String
+        method: String
     ) {
         uiState = uiState.copy(
             screen = AppScreen.RECIPE,
@@ -269,7 +269,7 @@ class MainViewModel : ViewModel() {
             recipeCutSlug = slug,
             recipeCutName = cutName,
             recipeCutNameSv = cutNameSv,
-            recipeCategoryId = categoryId
+            recipeMethod = method
         )
     }
 
@@ -283,7 +283,8 @@ class MainViewModel : ViewModel() {
         cutDisplayNameSv: String = "",
         doneness: String,
         targetTempC: Int,
-        restMinutes: Int = 5
+        restMinutes: Int = 5,
+        cookingMethod: String = ""
     ) {
         val sessions = uiState.sessions.toMutableMap()
         val existing = sessions[probeIndex] ?: CookingSession(
@@ -298,7 +299,8 @@ class MainViewModel : ViewModel() {
             cutDisplayNameSv = cutDisplayNameSv,
             doneness = doneness,
             targetTempC = targetTempC,
-            restMinutes = restMinutes
+            restMinutes = restMinutes,
+            cookingMethod = cookingMethod
         )
         uiState = uiState.copy(sessions = sessions, screen = AppScreen.DASHBOARD, cutSelectionProbeIndex = -1)
     }

@@ -42,6 +42,9 @@ data class CookingSession(
     // Rest complete flag
     val restNotified: Boolean = false,
 
+    // Cooking method selected before starting (e.g. "pan_sear", "grill")
+    val cookingMethod: String = "",
+
     // Notes
     val notes: String = ""
 )

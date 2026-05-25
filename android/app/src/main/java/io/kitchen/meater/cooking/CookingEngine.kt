@@ -96,7 +96,8 @@ object CookingEngine {
         cutDisplayNameSv: String = "",
         doneness: String,
         targetTempC: Int,
-        restMinutes: Int = 5
+        restMinutes: Int = 5,
+        cookingMethod: String = ""
     ): CookingSession = session.copy(
         proteinCategory = proteinCategory,
         cutId = cutId,
@@ -105,6 +106,7 @@ object CookingEngine {
         doneness = doneness,
         targetTempC = targetTempC,
         restMinutes = restMinutes,
+        cookingMethod = cookingMethod,
         state = CookingState.COOKING,
         cookStartedAt = Instant.now(),
         etaMinutes = null,

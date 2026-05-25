@@ -79,6 +79,31 @@ class CookingDataRepository(private val context: Context) {
     val doneness: Map<String, DonenessOption>
         get() = loadOnce().second
 
+    // Recipe titles: slug → method → list of recipe titles
+    // Loaded lazily from RECIPE_TITLES_INDEX in kitchen-cooking-panel.js
+    private var cachedRecipeTitles: Map<String, Map<String, List<String>>>? = null
+
+    val recipeTitles: Map<String, Map<String, List<String>>>
+        get() = cachedRecipeTitles ?: loadRecipeTitles().also { cachedRecipeTitles = it }
+
+    private fun loadRecipeTitles(): Map<String, Map<String, List<String>>> {
+        val js = try {
+            context.assets.open("kitchen-cooking-panel.js").bufferedReader().readText()
+        } catch (_: Exception) { return emptyMap() }
+        val json = extractJsonObject(js, "RECIPE_TITLES_INDEX") ?: return emptyMap()
+        val result = mutableMapOf<String, Map<String, List<String>>>()
+        for (slug in json.keys()) {
+            val methodsObj = try { json.getJSONObject(slug) } catch (_: Exception) { continue }
+            val methodMap = mutableMapOf<String, List<String>>()
+            for (method in methodsObj.keys()) {
+                val arr = try { methodsObj.getJSONArray(method) } catch (_: Exception) { continue }
+                methodMap[method] = (0 until arr.length()).map { arr.getString(it) }
+            }
+            result[slug] = methodMap
+        }
+        return result
+    }
+
     private fun load(): Pair<List<ProteinCategory>, Map<String, DonenessOption>> {
         val js = try {
             context.assets.open("kitchen-cooking-panel.js").bufferedReader().readText()
