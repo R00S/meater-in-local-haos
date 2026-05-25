@@ -77,7 +77,10 @@ fun MainScreen(
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                 Column {
                     Text(strAppName, style = MaterialTheme.typography.headlineMedium)
-                    Text("v${BuildConfig.VERSION_NAME}", style = MaterialTheme.typography.bodySmall)
+                    val branch = BuildConfig.GIT_BRANCH
+                    val branchSuffix = if (branch != "main" && branch != "local")
+                        "  [$branch]" else ""
+                    Text("v${BuildConfig.VERSION_NAME}$branchSuffix", style = MaterialTheme.typography.bodySmall)
                 }
                 OutlinedButton(onClick = onLanguageToggle) {
                     Text(if (useSv) "EN" else "SV")

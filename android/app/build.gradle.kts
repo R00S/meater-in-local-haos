@@ -21,8 +21,16 @@ android {
         applicationId = "io.kitchen.meater"
         minSdk = 29
         targetSdk = 35
-        versionCode = 9
-        versionName = "0.10.0.8"
+        versionCode = 10
+        versionName = "0.10.0.9"
+
+        // GIT_BRANCH is injected by the build-apk.yml workflow so the version line in
+        // the app shows which branch the APK was built from (e.g. "copilot/fix-…").
+        // Falls back to "local" for developer builds.
+        buildConfigField(
+            "String", "GIT_BRANCH",
+            "\"${System.getenv("GIT_BRANCH") ?: "local"}\""
+        )
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

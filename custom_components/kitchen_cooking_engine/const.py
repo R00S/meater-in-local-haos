@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.10.0.8 - BLE scan overhaul: fix name accumulation (SCAN_RSP), one-tap connect, RSSI sort, MEATER badge
+Last Change: v0.10.0.9 - inject GIT_BRANCH into BuildConfig; show branch in version line to prevent wrong-branch confusion
 """
 
 DOMAIN = "kitchen_cooking_engine"

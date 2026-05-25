@@ -43,6 +43,8 @@ jobs:
 
       - name: Build APK
         working-directory: android
+        env:
+          GIT_BRANCH: ${{ github.ref_name }}
         run: ./gradlew --no-daemon :app:assembleDebug
 
       - name: Copy APK with version in filename and update latest
