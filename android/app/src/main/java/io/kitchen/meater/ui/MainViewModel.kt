@@ -224,6 +224,7 @@ class MainViewModel : ViewModel() {
         proteinCategory: String,
         cutId: String,
         cutDisplayName: String,
+        cutDisplayNameSv: String = "",
         doneness: String,
         targetTempC: Int,
         restMinutes: Int = 5
@@ -238,6 +239,7 @@ class MainViewModel : ViewModel() {
             proteinCategory = proteinCategory,
             cutId = cutId,
             cutDisplayName = cutDisplayName,
+            cutDisplayNameSv = cutDisplayNameSv,
             doneness = doneness,
             targetTempC = targetTempC,
             restMinutes = restMinutes

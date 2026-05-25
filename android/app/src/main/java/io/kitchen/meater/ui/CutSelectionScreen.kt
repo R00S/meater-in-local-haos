@@ -1,6 +1,5 @@
 package io.kitchen.meater.ui
 
-import android.content.Context
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -24,15 +23,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import io.kitchen.meater.R
 import io.kitchen.meater.data.CookingDataRepository
 
 /**
  * Three-step cut selection flow: protein category → cut → doneness.
- * Data comes from the bundled cooking_data.json asset (same source as the KCE HAOS panel).
- * Language is derived from the current locale (Swedish if locale language == "sv").
+ * Data comes from the bundled kitchen-cooking-panel.js asset — the same source as the
+ * KCE HAOS panel.  Cut names and doneness names are already bilingual in EXP_TREE and
+ * EXP_DONENESS_OPTIONS (from the cut files); [useSv] selects which to show.
+ * UI chrome strings mirror the I18N_STRINGS translations in the HAOS panel.
  */
 @Composable
 fun CutSelectionScreen(
@@ -41,7 +40,8 @@ fun CutSelectionScreen(
     onConfirm: (
         proteinCategory: String,
         cutId: String,
-        cutDisplayName: String,
+        cutDisplayName: String,    // English name (cut file `name`)
+        cutDisplayNameSv: String,  // Swedish name (cut file `name_sv`)
         doneness: String,
         targetTempC: Int,
         restMinutes: Int
@@ -56,16 +56,21 @@ fun CutSelectionScreen(
     var selectedCategory by remember { mutableStateOf<CookingDataRepository.ProteinCategory?>(null) }
     var selectedCut by remember { mutableStateOf<CookingDataRepository.Cut?>(null) }
 
+    // UI chrome strings — mirror I18N_STRINGS from the HAOS panel
+    val strBack       = if (useSv) "Tillbaka"              else "Back"
+    val strCancel     = if (useSv) "Avbryt"                else "Cancel"
+    val strProbe      = if (useSv) "Prob"                  else "Probe"
+    val strPickProt   = if (useSv) "Välj proteinkategori"  else "Select protein"
+    val strPickCut    = if (useSv) "Välj styckdel"         else "Select cut"
+    val strPickDone   = if (useSv) "Välj tillagningsgrad"  else "Select doneness"
+    val strRecom      = if (useSv) "Rekommenderad"         else "Recommended"
+
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
 
             // Header with back/cancel
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                val backLabel = when {
-                    selectedCut != null -> stringResource(R.string.cut_selection_back)
-                    selectedCategory != null -> stringResource(R.string.cut_selection_back)
-                    else -> stringResource(R.string.cut_selection_cancel)
-                }
+                val backLabel = if (selectedCut != null || selectedCategory != null) strBack else strCancel
                 Button(onClick = {
                     when {
                         selectedCut != null -> selectedCut = null
@@ -75,7 +80,7 @@ fun CutSelectionScreen(
                 }) { Text(backLabel) }
 
                 Text(
-                    text = "Probe ${probeIndex + 1}",
+                    text = "$strProbe ${probeIndex + 1}",
                     style = MaterialTheme.typography.titleMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -92,7 +97,7 @@ fun CutSelectionScreen(
                         style = MaterialTheme.typography.headlineSmall
                     )
                     Spacer(modifier = Modifier.height(8.dp))
-                    Text(stringResource(R.string.cut_selection_pick_doneness), style = MaterialTheme.typography.titleMedium)
+                    Text(strPickDone, style = MaterialTheme.typography.titleMedium)
                     Spacer(modifier = Modifier.height(8.dp))
                     LazyColumn {
                         items(cut.doneness) { donenessId ->
@@ -108,7 +113,8 @@ fun CutSelectionScreen(
                                     onConfirm(
                                         selectedCategory!!.id,
                                         cut.id,
-                                        if (useSv && cut.nameSv.isNotBlank()) cut.nameSv else cut.name,
+                                        cut.name,     // always store English name
+                                        cut.nameSv,   // always store Swedish name
                                         donenessId,
                                         opt.tempC,
                                         5 // default rest minutes
@@ -119,7 +125,7 @@ fun CutSelectionScreen(
                                     Text(label, style = MaterialTheme.typography.bodyLarge)
                                     if (isRecommended) {
                                         Text(
-                                            stringResource(R.string.cut_selection_recommended),
+                                            strRecom,
                                             style = MaterialTheme.typography.bodySmall,
                                             color = MaterialTheme.colorScheme.primary
                                         )
@@ -138,7 +144,7 @@ fun CutSelectionScreen(
                         style = MaterialTheme.typography.headlineSmall
                     )
                     Spacer(modifier = Modifier.height(8.dp))
-                    Text(stringResource(R.string.cut_selection_pick_cut), style = MaterialTheme.typography.titleMedium)
+                    Text(strPickCut, style = MaterialTheme.typography.titleMedium)
                     Spacer(modifier = Modifier.height(8.dp))
                     LazyColumn {
                         items(cat.cuts) { cut ->
@@ -154,7 +160,7 @@ fun CutSelectionScreen(
 
                 // Step 1 — protein category picker
                 else -> {
-                    Text(stringResource(R.string.cut_selection_pick_protein), style = MaterialTheme.typography.headlineSmall)
+                    Text(strPickProt, style = MaterialTheme.typography.headlineSmall)
                     Spacer(modifier = Modifier.height(8.dp))
                     LazyColumn {
                         items(tree) { cat ->

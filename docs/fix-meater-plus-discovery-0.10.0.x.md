@@ -50,37 +50,42 @@ Discovery still failing because Block does not advertise service UUID.
 - Added MAC filter/search text field on scan screen (partial filter + full-MAC direct connect)
 - Bumped 0.10.0.4 → 0.10.0.5 (versionCode 5 → 6)
 
-### 2026-05-25 — dedup kitchen-cooking-panel.js (v0.10.0.6 no version bump)
-Removed duplicate data from the repo per user requirement:
+### 2026-05-25 — Android language toggle fix (v0.10.0.6)
 
-- `android/app/src/main/assets/kitchen-cooking-panel.js` removed from git tracking.
-  Added to `.gitignore`. It is now a build artifact, not a committed file.
-- `generate_frontend_data.py` updated: after writing `www/kitchen-cooking-panel.js` it
-  copies it to Android assets. Running the generator keeps both in sync locally.
-- `build-apk.yml` updated: a `cp` step before Gradle copies the canonical JS to assets.
-  CI never needs to commit the file.
+Root cause identified: the EN/SV toggle button updated `uiState.language` correctly but
+nothing in the UI observed it — `ProbeCard` received `useSv` but ignored it for every label,
+and `CutSelectionScreen` used `stringResource()` which follows *Android system locale* (not
+the in-app state), so it always rendered English strings regardless.
 
-Single source of truth chain:
-  `www/recipes/*.md` → `generate_frontend_data.py` → `www/kitchen-cooking-panel.js`
-                                                      ↓ (copy, build-time only)
-                                       `android/app/src/main/assets/kitchen-cooking-panel.js`
-                                                      ↓ (parsed by CookingDataRepository)
-                                                    APK cut-selection tree
+Pattern taken from the HAOS panel (`panel-class-template.js`):
+`(lang === 'sv' && cut.name_sv) ? cut.name_sv : cut.name` — data is already bilingual in the
+cut files, passed through via `EXP_TREE`/`EXP_DONENESS_OPTIONS`. Chrome strings are translated
+by mirroring the `I18N_STRINGS` section of the same JS.
 
-Addressed three issues raised after v0.10.0.6 APK test:
+Changes (v0.10.0.5 → 0.10.0.6):
 
-1. `CookingDataRepository` rewrote to parse `EXP_TREE` and `EXP_DONENESS_OPTIONS` directly
-   from the bundled `kitchen-cooking-panel.js` (already in assets) instead of from a
-   separate `cooking_data.json`. The JS file is the authoritative compiled output of the
-   recipe markdown files — same source as the HAOS panel. `cooking_data.json` deleted.
-   Generator no longer writes it. The brace-depth extractor handles any valid JSON object
-   size from the JS source.
+- **`CookingSession.kt`** — added `cutDisplayNameSv: String = ""` so the probe card shows
+  the correct language after a toggle mid-cook.
 
-2. `generate_frontend_data.py` reverted — no longer writes `cooking_data.json` to Android
-   assets. The pipeline is: recipe files → generator → kitchen-cooking-panel.js (one file,
-   used by both HAOS and Android).
+- **`CookingEngine.kt`** — `startSession()` accepts and stores `cutDisplayNameSv`.
 
-3. `connectToAddress` now seeds probe slot 0 immediately into the sessions map (IDLE state)
-   so the user sees "Probe 1 — Select cut & start cook" as soon as they connect, without
-   waiting for temperature data. `addProbeSlot()` added to ViewModel for multi-probe setups.
-   ProbeCard button label: "Select cut & start cook" (before cut chosen) / "Change cut" (after).
+- **`MainViewModel.kt`** — `startCooking()` accepts `cutDisplayNameSv`, passes it through.
+
+- **`CutSelectionScreen.kt`** — removed all `stringResource()` / `R` imports; replaced with
+  `if (useSv) "sv text" else "en text"` using exact translations from `I18N_STRINGS`. `onConfirm`
+  now passes `cut.name` AND `cut.nameSv` separately (always, regardless of current UI language).
+
+- **`MainActivity.kt`** — updated `onConfirm` handler to accept and forward `cutDisplayNameSv`.
+
+- **`MainScreen.kt`** — `ProbeCard`: all labels (Spets/Tip, Omgivning/Ambient, Batteri/Battery,
+  Status/State, Mål/Target, Beräknad tid/ETA, state machine labels, button text) switch via
+  `useSv`. Cut name shows `cutDisplayNameSv` when Swedish. `DeviceRow` also translated.
+  Main screen chrome (app name, scan/connect buttons, section headings, hint text, probe
+  section) all switch via `useSv`.
+
+- **`USER_GUIDE.md`** — language switching moved to "implemented" list; cut selection and cook
+  start documented with bilingual step-by-step; WebView language note updated.
+
+Verification: cut names and doneness names are sourced exclusively from `EXP_TREE`/
+`EXP_DONENESS_OPTIONS` in `kitchen-cooking-panel.js` (ground truth: the cut files). No
+manual translation table. Chrome strings mirror `I18N_STRINGS` from the HAOS panel.

@@ -1415,13 +1415,20 @@ described in `docs/ANDROID_APP_TOR.md`.
   (no scan required). A **Forget** button removes the entry.
 - **Connect by MAC address** — fallback power-user field: type a full `XX:XX:XX:XX:XX:XX`
   address and connect directly without scanning.
-- **Cut data from recipe files** — the cooking tree in the cut selection screen is parsed at
-  runtime from the bundled `kitchen-cooking-panel.js` (the same auto-generated file used by
-  the HAOS panel). `EXP_TREE` and `EXP_DONENESS_OPTIONS` are extracted directly — no separate
-  JSON file. When an agent adds, removes, or changes a cut file in `www/recipes/`, it
-  runs `python3 generate_frontend_data.py` as part of that task (same as for HAOS) — the
-  generator updates `www/kitchen-cooking-panel.js` and also copies it to Android assets.
-  The next APK build then automatically reflects those changes.
+- **Language switching (EN / SV)** — tap the **SV / EN** button on the main screen to toggle
+  between English and Swedish. All native UI labels switch immediately: protein categories, cut
+  names, doneness names, and every dashboard label (Tip / Spets, Ambient / Omgivning,
+  Battery / Batteri, ETA / Beräknad tid, state names, etc.). Cut names and doneness names are
+  bilingual in the cut files and pulled from `EXP_TREE` / `EXP_DONENESS_OPTIONS` — no separate
+  translation table needed. Both names are stored when a cook is started so the probe card
+  always shows the correct language even if you toggle mid-cook.
+- **Cut selection and cook start** — tap **Välj styckdel & starta tillagning** / **Select cut &
+  start cook** on a probe card to open the three-step cut selection screen:
+  1. Pick a protein category (e.g. Nötkött / Beef)
+  2. Pick a cut (e.g. Entrecôte / Ribeye steak)
+  3. Pick a doneness level with target temperature (e.g. Medium — 57 °C)
+  The cook starts immediately and the probe card shows live progress (state, target, ETA).
+  All data comes from the cut files in `www/recipes/` via the bundled `kitchen-cooking-panel.js`.
 - **Version label** — app version shown on the main screen for easier debug identification
 - **GATT connect/disconnect** — connects to the MEATER+ Block (not cloud-connected)
 - **Multi-probe support** — enumerates all MEATER service instances the Block exposes
@@ -1449,8 +1456,8 @@ All core ToR items are now implemented. The following polish items remain:
   instructions when you're ready to publish to the Play Store or distribute signed APKs).
 - Cut selection UI navigation from the WebView panel (JS → native) is wired but
   requires testing on a real device with a live MEATER+ Block.
-- Language switching for the WebView panel (`window.KCE_ANDROID_LANGUAGE`) depends on
-  the panel JS implementing that hook (currently it reads the device locale).
+- Language switching for the **WebView panel** (`window.KCE_ANDROID_LANGUAGE`) is passed
+  from the native app on panel load; the panel JS honours it where it reads the value.
 
 ### Build
 

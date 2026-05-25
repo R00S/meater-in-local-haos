@@ -64,12 +64,13 @@ class MainActivity : ComponentActivity() {
                 AppScreen.CUT_SELECTION -> CutSelectionScreen(
                     probeIndex = state.cutSelectionProbeIndex,
                     useSv = state.language == "sv",
-                    onConfirm = { catId, cutId, cutName, doneness, tempC, restMin ->
+                    onConfirm = { catId, cutId, cutName, cutNameSv, doneness, tempC, restMin ->
                         viewModel.startCooking(
                             probeIndex = state.cutSelectionProbeIndex,
                             proteinCategory = catId,
                             cutId = cutId,
                             cutDisplayName = cutName,
+                            cutDisplayNameSv = cutNameSv,
                             doneness = doneness,
                             targetTempC = tempC,
                             restMinutes = restMin

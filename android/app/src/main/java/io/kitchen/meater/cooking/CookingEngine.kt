@@ -93,6 +93,7 @@ object CookingEngine {
         proteinCategory: String,
         cutId: String,
         cutDisplayName: String,
+        cutDisplayNameSv: String = "",
         doneness: String,
         targetTempC: Int,
         restMinutes: Int = 5
@@ -100,6 +101,7 @@ object CookingEngine {
         proteinCategory = proteinCategory,
         cutId = cutId,
         cutDisplayName = cutDisplayName,
+        cutDisplayNameSv = cutDisplayNameSv,
         doneness = doneness,
         targetTempC = targetTempC,
         restMinutes = restMinutes,

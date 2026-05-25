@@ -46,6 +46,22 @@ fun MainScreen(
     onOpenWebView: () -> Unit,
     onLanguageToggle: () -> Unit
 ) {
+    val useSv = state.language == "sv"
+
+    // UI chrome strings — mirror I18N_STRINGS from the HAOS panel
+    val strAppName       = if (useSv) "MEATER Kök"              else "MEATER Kitchen"
+    val strStartScan     = if (useSv) "Starta sökning"          else "Start Scan"
+    val strStopScan      = if (useSv) "Stoppa sökning"          else "Stop Scan"
+    val strConnect       = if (useSv) "Anslut"                  else "Connect"
+    val strDisconnect    = if (useSv) "Koppla från"             else "Disconnect"
+    val strKnownDevices  = if (useSv) "Kända enheter"           else "Known devices"
+    val strForget        = if (useSv) "Glöm"                    else "Forget"
+    val strNearby        = if (useSv) "Nearby BLE-enheter"      else "Nearby BLE devices"
+    val strMacTitle      = if (useSv) "Anslut via MAC-adress"   else "Connect by MAC address"
+    val strProbes        = if (useSv) "Prober"                  else "Probes"
+    val strFullPanel     = if (useSv) "Fullständig panel"       else "Full Panel"
+    val strAddProbe      = if (useSv) "+ Lägg till probplats"   else "+ Add probe slot"
+
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         Column(
             modifier = Modifier.fillMaxSize().padding(16.dp),
@@ -54,11 +70,11 @@ fun MainScreen(
             // Title + language toggle
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                 Column {
-                    Text("MEATER Kitchen", style = MaterialTheme.typography.headlineMedium)
+                    Text(strAppName, style = MaterialTheme.typography.headlineMedium)
                     Text("v${BuildConfig.VERSION_NAME}", style = MaterialTheme.typography.bodySmall)
                 }
                 OutlinedButton(onClick = onLanguageToggle) {
-                    Text(if (state.language == "sv") "EN" else "SV")
+                    Text(if (useSv) "EN" else "SV")
                 }
             }
 
@@ -69,13 +85,13 @@ fun MainScreen(
             // Scan / Disconnect buttons
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Button(onClick = onScanToggle, enabled = !state.isConnected) {
-                    Text(if (state.isScanning) "Stop Scan" else "Start Scan")
+                    Text(if (state.isScanning) strStopScan else strStartScan)
                 }
                 Button(
                     onClick = onConnectToggle,
                     enabled = state.selectedDeviceAddress != null || state.isConnected
                 ) {
-                    Text(if (state.isConnected) "Disconnect" else "Connect")
+                    Text(if (state.isConnected) strDisconnect else strConnect)
                 }
             }
 
@@ -83,7 +99,7 @@ fun MainScreen(
                 // Known / saved probes
                 if (state.knownProbes.isNotEmpty()) {
                     Spacer(modifier = Modifier.height(16.dp))
-                    Text("Known devices", style = MaterialTheme.typography.titleMedium)
+                    Text(strKnownDevices, style = MaterialTheme.typography.titleMedium)
                     Spacer(modifier = Modifier.height(6.dp))
                     state.knownProbes.forEach { probe ->
                         Card(
@@ -102,8 +118,8 @@ fun MainScreen(
                                     Text(probe.address, style = MaterialTheme.typography.bodySmall)
                                 }
                                 Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                                    Button(onClick = { onConnectKnownProbe(probe) }) { Text("Connect") }
-                                    TextButton(onClick = { onForgetProbe(probe.address) }) { Text("Forget") }
+                                    Button(onClick = { onConnectKnownProbe(probe) }) { Text(strConnect) }
+                                    TextButton(onClick = { onForgetProbe(probe.address) }) { Text(strForget) }
                                 }
                             }
                         }
@@ -112,13 +128,17 @@ fun MainScreen(
 
                 // Discovered BLE devices
                 Spacer(modifier = Modifier.height(16.dp))
-                Text("Nearby BLE devices", style = MaterialTheme.typography.titleMedium)
+                Text(strNearby, style = MaterialTheme.typography.titleMedium)
                 Spacer(modifier = Modifier.height(6.dp))
 
                 if (state.discoveredDevices.isEmpty() && !state.isScanning) {
                     Text(
-                        "Tap \u201cStart Scan\u201d to discover nearby devices. " +
-                            "Your MEATER+ Block will appear as \u201cMEATER+\u201d in the list.",
+                        if (useSv)
+                            "Tryck på \u201cStarta sökning\u201d för att hitta enheter i närheten. " +
+                                "Din MEATER+ Block visas som \u201cMEATER+\u201d i listan."
+                        else
+                            "Tap \u201cStart Scan\u201d to discover nearby devices. " +
+                                "Your MEATER+ Block will appear as \u201cMEATER+\u201d in the list.",
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -129,7 +149,8 @@ fun MainScreen(
                         DeviceRow(
                             device = device,
                             selected = state.selectedDeviceAddress == device.address,
-                            onSelect = { onSelectDevice(device.address) }
+                            onSelect = { onSelectDevice(device.address) },
+                            useSv = useSv
                         )
                         Spacer(modifier = Modifier.height(4.dp))
                     }
@@ -137,7 +158,7 @@ fun MainScreen(
 
                 // Direct connect by full MAC (power-user fallback)
                 Spacer(modifier = Modifier.height(12.dp))
-                Text("Connect by MAC address", style = MaterialTheme.typography.titleSmall)
+                Text(strMacTitle, style = MaterialTheme.typography.titleSmall)
                 Spacer(modifier = Modifier.height(4.dp))
                 val isFullMac = state.manualMacAddress.matches(FULL_MAC)
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -149,7 +170,7 @@ fun MainScreen(
                         singleLine = true,
                         keyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.Done)
                     )
-                    Button(onClick = onConnectManualMac, enabled = isFullMac) { Text("Connect") }
+                    Button(onClick = onConnectManualMac, enabled = isFullMac) { Text(strConnect) }
                 }
             }
 
@@ -157,8 +178,8 @@ fun MainScreen(
             if (state.isConnected) {
                 Spacer(modifier = Modifier.height(16.dp))
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                    Text("Probes", style = MaterialTheme.typography.titleMedium)
-                    OutlinedButton(onClick = onOpenWebView) { Text("Full Panel") }
+                    Text(strProbes, style = MaterialTheme.typography.titleMedium)
+                    OutlinedButton(onClick = onOpenWebView) { Text(strFullPanel) }
                 }
                 Spacer(modifier = Modifier.height(8.dp))
 
@@ -166,21 +187,20 @@ fun MainScreen(
                 state.sessions.values.sortedBy { it.probeIndex }.forEach { session ->
                     ProbeCard(
                         session = session,
-                        useSv = state.language == "sv",
+                        useSv = useSv,
                         onSelectCut = { onSelectCut(session.probeIndex) }
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                 }
 
                 // "+ Add probe" button — lets user set up another probe slot
-                // (max 4 slots per MEATER+ Block)
                 val hasRoomForMore = (0..3).any { it !in state.sessions }
                 if (hasRoomForMore) {
                     OutlinedButton(
                         onClick = onAddProbeSlot,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text("+ Add probe slot")
+                        Text(strAddProbe)
                     }
                 }
             }
@@ -190,37 +210,67 @@ fun MainScreen(
 
 @Composable
 private fun ProbeCard(session: CookingSession, useSv: Boolean, onSelectCut: () -> Unit) {
+    // UI chrome — mirror I18N_STRINGS from the HAOS panel
+    val strProbe        = if (useSv) "Prob"                             else "Probe"
+    val strSelectCut    = if (useSv) "Välj styckdel & starta tillagning" else "Select cut & start cook"
+    val strChangeCut    = if (useSv) "Byt styckdel"                     else "Change cut"
+    val strTip          = if (useSv) "Spets:"                           else "Tip:"
+    val strAmbient      = if (useSv) "Omgivning:"                       else "Ambient:"
+    val strBattery      = if (useSv) "Batteri:"                         else "Battery:"
+    val strState        = if (useSv) "Status:"                          else "State:"
+    val strTarget       = if (useSv) "Mål:"                             else "Target:"
+    val strEta          = if (useSv) "Beräknad tid:"                    else "ETA:"
+
+    // Cut display name: prefer the language-matched name stored from the cut file
+    val cutName = when {
+        session.cutDisplayName.isBlank() -> ""
+        useSv && session.cutDisplayNameSv.isNotBlank() -> session.cutDisplayNameSv
+        else -> session.cutDisplayName
+    }
+
     Card(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(12.dp)) {
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                 Text(
-                    text = "Probe ${session.probeIndex + 1}" +
-                        if (session.cutDisplayName.isNotBlank()) " \u2014 ${session.cutDisplayName}" else "",
+                    text = "$strProbe ${session.probeIndex + 1}" +
+                        if (cutName.isNotBlank()) " \u2014 $cutName" else "",
                     style = MaterialTheme.typography.titleSmall
                 )
                 Button(onClick = onSelectCut) {
                     Text(if (session.state == CookingState.IDLE && session.cutId.isBlank())
-                        "Select cut & start cook" else "Change cut")
+                        strSelectCut else strChangeCut)
                 }
             }
 
             Spacer(modifier = Modifier.height(4.dp))
-            Text("Tip:     ${session.tipCelsius?.let { "%.1f\u00b0C".format(it) } ?: "--"}")
-            Text("Ambient: ${session.ambientCelsius?.let { "%.1f\u00b0C".format(it) } ?: "--"}")
-            Text("Battery: ${session.batteryPercent?.let { "$it%" } ?: "--"}")
+            Text("$strTip     ${session.tipCelsius?.let { "%.1f\u00b0C".format(it) } ?: "--"}")
+            Text("$strAmbient ${session.ambientCelsius?.let { "%.1f\u00b0C".format(it) } ?: "--"}")
+            Text("$strBattery ${session.batteryPercent?.let { "$it%" } ?: "--"}")
 
             if (session.state != CookingState.IDLE || session.cutId.isNotBlank()) {
                 Spacer(modifier = Modifier.height(4.dp))
-                Text("State:   ${session.state.name}")
-                session.targetTempC?.let { Text("Target:  ${it}\u00b0C  (${session.doneness})") }
-                session.etaMinutes?.let { Text("ETA:     $it min") }
+                Text("$strState   ${cookingStateLabel(session.state, useSv)}")
+                session.targetTempC?.let { Text("$strTarget  ${it}\u00b0C  (${session.doneness})") }
+                session.etaMinutes?.let { Text("$strEta $it min") }
             }
         }
     }
 }
 
+/** Translate CookingState to display label — mirrors I18N_STRINGS meater section. */
+private fun cookingStateLabel(state: CookingState, useSv: Boolean): String = when (state) {
+    CookingState.IDLE         -> if (useSv) "Väntar"             else "Idle"
+    CookingState.COOKING      -> if (useSv) "Tillagas"           else "Cooking"
+    CookingState.APPROACHING  -> if (useSv) "Närmar sig målet"   else "Approaching target"
+    CookingState.GOAL_REACHED -> if (useSv) "Mål nått!"          else "Goal reached!"
+    CookingState.RESTING      -> if (useSv) "Vilar"              else "Resting"
+    CookingState.DONE         -> if (useSv) "Klar"               else "Done"
+}
+
 @Composable
-private fun DeviceRow(device: BleDevice, selected: Boolean, onSelect: () -> Unit) {
+private fun DeviceRow(device: BleDevice, selected: Boolean, onSelect: () -> Unit, useSv: Boolean) {
+    val strSelected = if (useSv) "Vald \u2713" else "Selected \u2713"
+    val strSelect   = if (useSv) "Välj"        else "Select"
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = if (selected)
@@ -235,7 +285,7 @@ private fun DeviceRow(device: BleDevice, selected: Boolean, onSelect: () -> Unit
                 Text(device.name, style = MaterialTheme.typography.bodyLarge)
                 Text(device.address, style = MaterialTheme.typography.bodySmall)
             }
-            Button(onClick = onSelect) { Text(if (selected) "Selected \u2713" else "Select") }
+            Button(onClick = onSelect) { Text(if (selected) strSelected else strSelect) }
         }
     }
 }

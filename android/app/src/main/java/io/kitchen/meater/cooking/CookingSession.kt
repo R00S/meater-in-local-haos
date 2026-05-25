@@ -15,7 +15,8 @@ data class CookingSession(
     // Selection
     val proteinCategory: String = "",
     val cutId: String = "",
-    val cutDisplayName: String = "",
+    val cutDisplayName: String = "",   // English name (ground truth: cut file `name`)
+    val cutDisplayNameSv: String = "", // Swedish name  (ground truth: cut file `name_sv`)
     val doneness: String = "",
     val targetTempC: Int? = null,
 
