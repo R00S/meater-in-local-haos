@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.10.0.7 - Fix 6 Android bugs: recipe viewer, 4-level cut tree, GATT threading, scan layout, cook history, battery GATT queue
+Last Change: v0.10.0.8 - BLE scan overhaul: fix name accumulation (SCAN_RSP), one-tap connect, RSSI sort, MEATER badge
 """
 
 DOMAIN = "kitchen_cooking_engine"

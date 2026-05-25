@@ -57,9 +57,33 @@ class MainViewModel : ViewModel() {
 
     private val scanner = MeaterBleScanner(
         onDeviceFound = { device ->
-            if (uiState.discoveredDevices.none { it.address == device.address }) {
-                uiState = uiState.copy(discoveredDevices = uiState.discoveredDevices + device)
+            // Always update the entry for this MAC — this is the key fix for MEATER+ name
+            // discovery. The Block sends an ADV_IND packet first (often with no name), then a
+            // SCAN_RSP packet with "MEATER+" as the name. We must NOT discard the second result.
+            // Approach adapted from grgcmz/BLEScanner (MIT, Giorgio Camozzi 2023): accumulate
+            // the best name seen for each MAC; always keep the latest RSSI.
+            val existing = uiState.discoveredDevices.find { it.address == device.address }
+            val updated = if (existing != null) {
+                // Keep the better name (non-MAC name wins over MAC-as-name fallback)
+                val bestName = when {
+                    device.name != device.address                    -> device.name
+                    existing.name != existing.address                -> existing.name
+                    else                                             -> device.address
+                }
+                existing.copy(
+                    name = bestName,
+                    rssi = device.rssi,
+                    isMeaterDevice = device.isMeaterDevice || existing.isMeaterDevice
+                )
+            } else {
+                device
             }
+            val others = uiState.discoveredDevices.filter { it.address != device.address }
+            // Sort: MEATER devices first, then by RSSI descending (closest first)
+            val sorted = (others + updated).sortedWith(
+                compareByDescending<BleDevice> { it.isMeaterDevice }.thenByDescending { it.rssi }
+            )
+            uiState = uiState.copy(discoveredDevices = sorted)
         },
         onError = { message ->
             uiState = uiState.copy(status = message, isScanning = false)
