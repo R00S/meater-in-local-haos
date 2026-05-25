@@ -145,3 +145,23 @@ Start implementation of the Android APK according to ToR and plan.
 - Branch timeline updated
 
 **All Android ToR items complete.** Only polish/device-testing items remain (see USER_GUIDE.md §15).
+
+
+### 2026-05-25 — Agent session (CI fix + CHORES)
+
+**Problem solved:**
+- `workflow_dispatch` "Run workflow" button was not visible in the GitHub Actions UI for `publish-apk.yml`.
+- Root cause: GitHub only shows the button when the workflow file exists on the **default branch** (`main`).
+  The workflow was only on this feature branch, so the button never appeared.
+
+**Actions:**
+- Simplified `publish-apk.yml` to debug-only build (removed signed release APK steps and keystore secrets).
+- Added `push: branches: [main] paths: [android/**]` trigger → once merged, any push to android/ on main also builds.
+- Artifact upload condition broadened from `workflow_dispatch`-only to all non-release runs.
+- `docs/USER_GUIDE.md` §Build updated: clarified CI builds debug APK only.
+- Version bumped to `0.10.0.4`.
+
+**Status:**
+- [x] CI fix committed
+- [x] CHORES.md complete (version bump, timeline, user guide)
+- [ ] Merge to main (pending PR review)

@@ -1428,8 +1428,9 @@ All core ToR items are now implemented. The following polish items remain:
 
 - Runtime permission UX: permission screen is implemented; a system rationale dialog
   (shown when the user denies once) is not yet customised.
-- Signed release APK: signing is wired up in `build.gradle.kts` and CI.
-  Follow `android/KEYSTORE_SETUP.md` to generate your keystore and set GitHub secrets.
+- Signed release APK: the CI workflow currently builds a debug APK only.
+  Signed release builds require keystore setup (see `android/KEYSTORE_SETUP.md` for
+  instructions when you're ready to publish to the Play Store or distribute signed APKs).
 - Cut selection UI navigation from the WebView panel (JS → native) is wired but
   requires testing on a real device with a live MEATER+ Block.
 - Language switching for the WebView panel (`window.KCE_ANDROID_LANGUAGE`) depends on
