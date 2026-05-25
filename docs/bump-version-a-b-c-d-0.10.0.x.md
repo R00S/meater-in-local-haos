@@ -100,3 +100,48 @@ Start implementation of the Android APK according to ToR and plan.
 - KCE panel WebView integration (bundling kitchen-cooking-panel.js as APK asset)
 - Language switching UI
 - Signed release APK (keystore setup)
+
+### 2026-05-25 (third agent session) — Finish Android ToR remaining items + CHORES
+
+**Android ToR — remaining items completed:**
+- `PermissionScreen.kt` — BLE runtime permission request (BLUETOOTH_SCAN + BLUETOOTH_CONNECT).
+  Uses `ActivityResultContracts.RequestMultiplePermissions`. On API ≤ 30 passes through immediately.
+- `CutSelectionScreen.kt` — three-step protein/cut/doneness picker.
+  Reads `cooking_data.json` asset (bundled from `EXP_TREE`/`EXP_DONENESS_OPTIONS` in the generated panel JS).
+  Supports SV/EN: shows `name_sv` when `language == "sv"`.
+- `CookingDataRepository.kt` — parses `cooking_data.json` from APK assets into typed Kotlin models.
+- `WebViewCookingScreen.kt` — embeds `kitchen-cooking-panel.js` (full KCE panel) in an Android WebView.
+  Injects `KceAndroid` JS bridge (`startCooking`, `stopCooking`).
+  Pushes live probe data via `window.kceAndroidProbeUpdate(...)` on each session update.
+  Sets `window.KCE_ANDROID_LANGUAGE` before panel init.
+- `LanguagePreference.kt` — persists EN/SV preference in SharedPreferences.
+  Defaults to device locale (`Locale.getDefault().language == "sv"` → Swedish).
+- `MainViewModel.kt` updated — `AppScreen` enum + full navigation logic.
+  Permission → Scan → Dashboard → Cut Selection → WebView panel.
+  Language toggle wired.
+- `MainActivity.kt` updated — screen router using `when (state.screen)`.
+  Back navigation via `OnBackPressedDispatcher` (replaces deprecated `onBackPressed()`).
+- `MainScreen.kt` updated — language toggle button (EN↔SV), "Select cut" / "Change cut" per probe card,
+  "Full Panel" button to open the WebView screen.
+- `build.gradle.kts` updated — `signingConfigs { release { ... } }` reads from env vars
+  (`KEYSTORE_PATH`, `KEYSTORE_PASSWORD`, `KEY_ALIAS`, `KEY_PASSWORD`) or local `keystore.properties`.
+  Release build signs only when keystore is available; debug APK always unsigned.
+- `publish-apk.yml` updated — decodes `KEYSTORE_BASE64` secret, builds both release + debug APK,
+  attaches both to GitHub Release.
+- `android/KEYSTORE_SETUP.md` added — step-by-step keystore generation and CI secret setup guide.
+- `android/.gitignore` updated — `keystore.properties`, `*.keystore`, `*.jks` excluded.
+- Assets bundled: `android/app/src/main/assets/cooking_data.json` (EXP_TREE + EXP_DONENESS_OPTIONS as JSON),
+  `android/app/src/main/assets/kitchen-cooking-panel.js` (full KCE panel, 7 MB).
+- String resources: `res/values/strings.xml` (EN), `res/values-sv/strings.xml` (SV) for all new screens.
+- `versionCode` bumped to 4, `versionName` to `0.10.0.3` in `build.gradle.kts`.
+
+**Build verified:** `./gradlew :app:assembleDebug` → `BUILD SUCCESSFUL`
+
+**CHORES.md:**
+- Version bumped to `0.10.0.3` in `manifest.json`, `__init__.py`, `const.py`
+- `generate_frontend_data.py` run → `PANEL_VERSION` 603 → 604
+- `cooking_data.json` and `kitchen-cooking-panel.js` assets regenerated from updated panel
+- `docs/USER_GUIDE.md` §15 updated to reflect complete ToR implementation
+- Branch timeline updated
+
+**All Android ToR items complete.** Only polish/device-testing items remain (see USER_GUIDE.md §15).

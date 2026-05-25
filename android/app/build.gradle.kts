@@ -1,7 +1,16 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
+}
+
+// ─── Signing config: loaded from environment or local keystore.properties ─────
+val keystorePropertiesFile = rootProject.file("keystore.properties")
+val keystoreProperties = Properties()
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(keystorePropertiesFile.inputStream())
 }
 
 android {
@@ -12,12 +21,29 @@ android {
         applicationId = "io.kitchen.meater"
         minSdk = 29
         targetSdk = 35
-        versionCode = 3
-        versionName = "0.10.0.2"
+        versionCode = 4
+        versionName = "0.10.0.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
+        }
+    }
+
+    signingConfigs {
+        create("release") {
+            // Keys come from CI secrets (env vars) or from keystore.properties for local builds.
+            // keystore.properties is gitignored — never commit the keystore or passwords.
+            storeFile = file(
+                System.getenv("KEYSTORE_PATH")
+                    ?: keystoreProperties.getProperty("storeFile", "meater-release.keystore")
+            )
+            storePassword = System.getenv("KEYSTORE_PASSWORD")
+                ?: keystoreProperties.getProperty("storePassword", "")
+            keyAlias = System.getenv("KEY_ALIAS")
+                ?: keystoreProperties.getProperty("keyAlias", "meater")
+            keyPassword = System.getenv("KEY_PASSWORD")
+                ?: keystoreProperties.getProperty("keyPassword", "")
         }
     }
 
@@ -28,6 +54,16 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            // Sign the release APK if keystore env vars are present; otherwise skip signing
+            val keystoreAvailable =
+                System.getenv("KEYSTORE_PATH") != null ||
+                keystorePropertiesFile.exists()
+            if (keystoreAvailable) {
+                signingConfig = signingConfigs.getByName("release")
+            }
+        }
+        debug {
+            isDebuggable = true
         }
     }
 

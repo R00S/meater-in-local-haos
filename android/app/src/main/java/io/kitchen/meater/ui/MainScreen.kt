@@ -13,11 +13,14 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import io.kitchen.meater.R
 import io.kitchen.meater.cooking.CookingSession
 import io.kitchen.meater.cooking.CookingState
 import io.kitchen.meater.model.BleDevice
@@ -27,7 +30,10 @@ fun MainScreen(
     state: MainUiState,
     onScanToggle: () -> Unit,
     onSelectDevice: (String) -> Unit,
-    onConnectToggle: () -> Unit
+    onConnectToggle: () -> Unit,
+    onSelectCut: (probeIndex: Int) -> Unit,
+    onOpenWebView: () -> Unit,
+    onLanguageToggle: () -> Unit
 ) {
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         Column(
@@ -36,12 +42,18 @@ fun MainScreen(
                 .padding(16.dp),
             verticalArrangement = Arrangement.Top
         ) {
-            Text(text = "MEATER Kitchen", style = MaterialTheme.typography.headlineMedium)
+            // Title + language toggle
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                Text(text = "MEATER Kitchen", style = MaterialTheme.typography.headlineMedium)
+                OutlinedButton(onClick = onLanguageToggle) {
+                    Text(if (state.language == "sv") "EN" else "SV")
+                }
+            }
+
             Spacer(modifier = Modifier.height(8.dp))
             Text(text = state.status, style = MaterialTheme.typography.bodyMedium)
             Spacer(modifier = Modifier.height(12.dp))
 
-            // Scan / Connect controls
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -57,10 +69,10 @@ fun MainScreen(
                 }
             }
 
-            // Device list (only while not connected)
+            // Device list (before connecting)
             if (!state.isConnected) {
                 Spacer(modifier = Modifier.height(16.dp))
-                Text(text = "Discovered devices", style = MaterialTheme.typography.titleMedium)
+                Text("Discovered devices", style = MaterialTheme.typography.titleMedium)
                 Spacer(modifier = Modifier.height(8.dp))
                 LazyColumn {
                     items(state.discoveredDevices, key = { it.address }) { device ->
@@ -74,20 +86,26 @@ fun MainScreen(
                 }
             }
 
-            // Multi-probe dashboard (when connected)
+            // Multi-probe dashboard
             if (state.isConnected) {
                 Spacer(modifier = Modifier.height(16.dp))
-                Text(text = "Probes", style = MaterialTheme.typography.titleMedium)
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                    Text("Probes", style = MaterialTheme.typography.titleMedium)
+                    OutlinedButton(onClick = onOpenWebView) {
+                        Text("Full Panel")
+                    }
+                }
                 Spacer(modifier = Modifier.height(8.dp))
 
                 if (state.sessions.isEmpty()) {
-                    Text(
-                        text = "Waiting for probe data…",
-                        style = MaterialTheme.typography.bodyMedium
-                    )
+                    Text("Waiting for probe data…", style = MaterialTheme.typography.bodyMedium)
                 } else {
                     state.sessions.values.sortedBy { it.probeIndex }.forEach { session ->
-                        ProbeCard(session = session)
+                        ProbeCard(
+                            session = session,
+                            useSv = state.language == "sv",
+                            onSelectCut = { onSelectCut(session.probeIndex) }
+                        )
                         Spacer(modifier = Modifier.height(8.dp))
                     }
                 }
@@ -97,31 +115,34 @@ fun MainScreen(
 }
 
 @Composable
-private fun ProbeCard(session: CookingSession) {
+private fun ProbeCard(
+    session: CookingSession,
+    useSv: Boolean,
+    onSelectCut: () -> Unit
+) {
     Card(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(12.dp)) {
-            Text(
-                text = "Probe ${session.probeIndex + 1}" +
-                    if (session.cutDisplayName.isNotBlank()) " — ${session.cutDisplayName}" else "",
-                style = MaterialTheme.typography.titleSmall
-            )
-            Spacer(modifier = Modifier.height(4.dp))
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                Text(
+                    text = "Probe ${session.probeIndex + 1}" +
+                        if (session.cutDisplayName.isNotBlank()) " — ${session.cutDisplayName}" else "",
+                    style = MaterialTheme.typography.titleSmall
+                )
+                OutlinedButton(onClick = onSelectCut) {
+                    Text(if (session.state == CookingState.IDLE) "Select cut" else "Change cut")
+                }
+            }
 
-            Text(text = "Tip:     ${session.tipCelsius?.let { "%.1f°C".format(it) } ?: "--"}")
-            Text(text = "Ambient: ${session.ambientCelsius?.let { "%.1f°C".format(it) } ?: "--"}")
-            Text(text = "Battery: ${session.batteryPercent?.let { "$it%" } ?: "--"}")
+            Spacer(modifier = Modifier.height(4.dp))
+            Text("Tip:     ${session.tipCelsius?.let { "%.1f°C".format(it) } ?: "--"}")
+            Text("Ambient: ${session.ambientCelsius?.let { "%.1f°C".format(it) } ?: "--"}")
+            Text("Battery: ${session.batteryPercent?.let { "$it%" } ?: "--"}")
 
             if (session.state != CookingState.IDLE) {
                 Spacer(modifier = Modifier.height(4.dp))
-                Text(text = "State:   ${session.state.name}")
-
-                session.targetTempC?.let { target ->
-                    Text(text = "Target:  ${target}°C  (${session.doneness})")
-                }
-
-                session.etaMinutes?.let { eta ->
-                    Text(text = "ETA:     ${eta} min")
-                }
+                Text("State:   ${session.state.name}")
+                session.targetTempC?.let { Text("Target:  ${it}°C  (${session.doneness})") }
+                session.etaMinutes?.let { Text("ETA:     $it min") }
             }
         }
     }
@@ -135,11 +156,9 @@ private fun DeviceRow(
 ) {
     Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
         Column(modifier = Modifier.weight(1f)) {
-            Text(text = device.name)
-            Text(text = device.address, style = MaterialTheme.typography.bodySmall)
-            if (selected) {
-                Text(text = "Selected", color = MaterialTheme.colorScheme.secondary)
-            }
+            Text(device.name)
+            Text(device.address, style = MaterialTheme.typography.bodySmall)
+            if (selected) Text("Selected", color = MaterialTheme.colorScheme.secondary)
         }
         Button(onClick = onSelect) {
             Text(if (selected) "Selected" else "Select")

@@ -13,19 +13,27 @@ import io.kitchen.meater.cooking.CookingState
 import io.kitchen.meater.data.SessionHistoryRepository
 import io.kitchen.meater.model.BleDevice
 import io.kitchen.meater.notification.NotificationHelper
-import java.time.Instant
-import java.util.UUID
+
+enum class AppScreen {
+    PERMISSIONS,
+    SCAN,
+    DASHBOARD,
+    CUT_SELECTION,
+    WEBVIEW_PANEL
+}
 
 data class MainUiState(
+    val screen: AppScreen = AppScreen.PERMISSIONS,
     val isScanning: Boolean = false,
     val discoveredDevices: List<BleDevice> = emptyList(),
     val selectedDeviceAddress: String? = null,
     val connectedDeviceAddress: String? = null,
     val isConnected: Boolean = false,
     val status: String = "Ready",
-
-    // Multi-probe sessions (keyed by probeIndex 0–3)
-    val sessions: Map<Int, CookingSession> = emptyMap()
+    val sessions: Map<Int, CookingSession> = emptyMap(),
+    val language: String = "en",
+    // Which probe the cut selection screen is targeting (-1 = none)
+    val cutSelectionProbeIndex: Int = -1
 )
 
 class MainViewModel : ViewModel() {
@@ -64,7 +72,8 @@ class MainViewModel : ViewModel() {
             uiState = uiState.copy(
                 isConnected = false,
                 connectedDeviceAddress = null,
-                status = "Disconnected"
+                status = "Disconnected",
+                screen = AppScreen.SCAN
             )
         },
         onError = { message -> uiState = uiState.copy(status = message) }
@@ -73,7 +82,24 @@ class MainViewModel : ViewModel() {
     fun init(context: Context) {
         notificationHelper = NotificationHelper(context)
         historyRepository = SessionHistoryRepository(context)
+        val lang = LanguagePreference.get(context)
+        uiState = uiState.copy(language = lang)
     }
+
+    // ── Permission ──────────────────────────────────────────────────────────
+
+    fun onPermissionsGranted() {
+        uiState = uiState.copy(screen = AppScreen.SCAN)
+    }
+
+    // ── Language ────────────────────────────────────────────────────────────
+
+    fun setLanguage(context: Context, lang: String) {
+        LanguagePreference.set(context, lang)
+        uiState = uiState.copy(language = lang)
+    }
+
+    // ── Scan ─────────────────────────────────────────────────────────────────
 
     fun startScan(context: Context) {
         init(context)
@@ -95,6 +121,8 @@ class MainViewModel : ViewModel() {
         uiState = uiState.copy(selectedDeviceAddress = address)
     }
 
+    // ── Connect ──────────────────────────────────────────────────────────────
+
     fun connectOrDisconnect(context: Context) {
         if (uiState.isConnected) {
             bleService.disconnect()
@@ -102,7 +130,8 @@ class MainViewModel : ViewModel() {
                 isConnected = false,
                 connectedDeviceAddress = null,
                 status = "Disconnected",
-                sessions = emptyMap()
+                sessions = emptyMap(),
+                screen = AppScreen.SCAN
             )
             return
         }
@@ -113,20 +142,32 @@ class MainViewModel : ViewModel() {
         }
 
         scanner.stop()
-        uiState = uiState.copy(isScanning = false)
         init(context)
         bleService.connect(context, selected)
         uiState = uiState.copy(
             isConnected = true,
             connectedDeviceAddress = selected,
-            status = "Connecting …"
+            status = "Connecting…",
+            screen = AppScreen.DASHBOARD
         )
     }
 
-    /**
-     * Start a cooking session for a specific probe.
-     * In a full implementation the caller would drive from a cut-selection screen.
-     */
+    // ── Cut selection navigation ─────────────────────────────────────────────
+
+    fun openCutSelection(probeIndex: Int) {
+        uiState = uiState.copy(screen = AppScreen.CUT_SELECTION, cutSelectionProbeIndex = probeIndex)
+    }
+
+    fun openWebViewPanel() {
+        uiState = uiState.copy(screen = AppScreen.WEBVIEW_PANEL)
+    }
+
+    fun backToDashboard() {
+        uiState = uiState.copy(screen = AppScreen.DASHBOARD, cutSelectionProbeIndex = -1)
+    }
+
+    // ── Cooking session management ───────────────────────────────────────────
+
     fun startCooking(
         probeIndex: Int,
         proteinCategory: String,
@@ -150,7 +191,7 @@ class MainViewModel : ViewModel() {
             targetTempC = targetTempC,
             restMinutes = restMinutes
         )
-        uiState = uiState.copy(sessions = sessions)
+        uiState = uiState.copy(sessions = sessions, screen = AppScreen.DASHBOARD, cutSelectionProbeIndex = -1)
     }
 
     fun stopCooking(context: Context, probeIndex: Int) {
@@ -178,22 +219,18 @@ class MainViewModel : ViewModel() {
         val updated = CookingEngine.update(existing, tipC, ambientC)
         sessions[probeIndex] = updated
 
-        // Fire notifications on state transitions
         val helper = notificationHelper
         if (helper != null) {
             when {
                 prevState == CookingState.COOKING && updated.state == CookingState.APPROACHING ->
                     helper.notifyApproaching(updated)
-
                 prevState != CookingState.RESTING && updated.state == CookingState.RESTING ->
                     helper.notifyGoalReached(updated)
-
                 prevState == CookingState.RESTING && updated.state == CookingState.DONE ->
                     helper.notifyRestComplete(updated)
             }
         }
 
-        // Auto-save when done
         if (updated.state == CookingState.DONE && prevState != CookingState.DONE) {
             saveSessionToHistory(updated)
         }

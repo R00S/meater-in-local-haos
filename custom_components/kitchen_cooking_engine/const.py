@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.10.0.2 - Finish Android app: multi-probe, cooking engine, notifications, publish-apk
+Last Change: v0.10.0.3 - Finish Android app ToR: permissions, cut selection UI, WebView panel, language, signed APK
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "603"
+PANEL_VERSION = "604"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

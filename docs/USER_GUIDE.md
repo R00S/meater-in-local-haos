@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.0.2 · Home Assistant 2024.1.0+
+> **Version:** 0.10.0.3 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -1399,7 +1399,7 @@ Ensure the **Measurement System** setting matches your recipe source. US recipes
 °F; Swedish recipes use dl and °C. Changing the system converts all displayed amounts in real time.
 
 
-## 15. Standalone Android App (v0.10.0.2)
+## 15. Standalone Android App (v0.10.0.3)
 
 The `android/` directory contains the standalone MEATER Kitchen APK project
 described in `docs/ANDROID_APP_TOR.md`.
@@ -1424,11 +1424,16 @@ described in `docs/ANDROID_APP_TOR.md`.
 
 ### What is not yet implemented
 
-- Runtime permission request UX flow (BLUETOOTH_SCAN/CONNECT)
-- Cut selection UI (currently cut must be set programmatically via `startCooking()`)
-- KCE panel WebView integration (bundling kitchen-cooking-panel.js into APK assets)
-- Language switching (English/Swedish)
-- Signed release APK workflow finalization
+All core ToR items are now implemented. The following polish items remain:
+
+- Runtime permission UX: permission screen is implemented; a system rationale dialog
+  (shown when the user denies once) is not yet customised.
+- Signed release APK: signing is wired up in `build.gradle.kts` and CI.
+  Follow `android/KEYSTORE_SETUP.md` to generate your keystore and set GitHub secrets.
+- Cut selection UI navigation from the WebView panel (JS → native) is wired but
+  requires testing on a real device with a live MEATER+ Block.
+- Language switching for the WebView panel (`window.KCE_ANDROID_LANGUAGE`) depends on
+  the panel JS implementing that hook (currently it reads the device locale).
 
 ### Build
 

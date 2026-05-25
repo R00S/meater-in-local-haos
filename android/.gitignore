@@ -2,3 +2,6 @@
 build
 local.properties
 **/build/
+keystore.properties
+*.keystore
+*.jks
