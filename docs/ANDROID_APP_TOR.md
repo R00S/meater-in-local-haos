@@ -2,7 +2,7 @@
 
 ## MEATER Kitchen Android App – Standalone Cooking Companion
 
-**Version:** 1.0  
+**Version:** 0.10.0.0  
 **Created:** 2026-05-25  
 **Status:** Planning  
 **Branch:** `copilot/bump-version-a-b-c-d`
@@ -11,12 +11,12 @@
 
 ## 1. Purpose
 
-Build a standalone Android application that replicates the core MEATER+ cooking experience without requiring Home Assistant or cloud connectivity.
+Build a standalone Android application that replicates the core MEATER+ cooking path KCE without requiring Home Assistant or cloud connectivity.
 
 The app shall:
-- Communicate directly with a MEATER probe via BLE (using Android's BLE stack — replacing the ESP32 BLE client role)
-- Present the full cooking UI from the Kitchen Cooking Engine (KCE) HAOS app
-- Support all meat cuts, temperatures, doneness levels, and recipes from KCE
+- Communicate directly with a MEATER+ block via BLE (using Android's BLE stack)
+- Present the full MEATER path cooking UI from the Kitchen Cooking Engine (KCE) HAOS app, except for the AI recipe generator; the recipes in the cut files are included
+- Support all meat cuts, temperatures, doneness levels, and recipes from KCE cut files — the cut files are the ground truth, exactly as with the KCE MEATER path
 - Support both English and Swedish languages
 - Work entirely offline on a local Android device
 
@@ -28,9 +28,9 @@ The app shall:
 
 | Component | Description |
 |-----------|-------------|
-| **BLE Backend** | Android BLE client connecting directly to MEATER probe; mirrors ESP32 meater+ block communication |
-| **Cooking UI** | Full cooking panel matching KCE HAOS frontend; same protein tree, cuts, doneness, temp targets |
-| **Recipe Data** | All KCE:CUT recipe files (www/recipes/) and cooking temps; same data as HAOS panel |
+| **BLE Backend** | Android BLE client connecting directly to MEATER+ Block; mirrors MEATER app BLE communication path |
+| **Cooking UI** | Full MEATER path cooking panel matching KCE HAOS frontend; same protein tree, cuts, doneness, temp targets; AI recipe generator excluded; cut file recipes included |
+| **Recipe Data** | All KCE:CUT recipe files (www/recipes/) — the ground truth for the cooking tree, identical to KCE MEATER path |
 | **Cuisine Data** | All KCE:CUISINE files (www/cuisines/); Swedish and International |
 | **Languages** | English and Swedish (same strings as HAOS panel) |
 | **Cooking Algorithm** | Dynamic ETA, resting phase, carryover prediction — same algorithm as sensor.py |
@@ -41,8 +41,9 @@ The app shall:
 
 | Excluded | Reason |
 |----------|--------|
-| MEATER 2 / original MEATER probes | MEATER+ only for v1.0; protocol differences not yet fully mapped |
-| MEATER Block emulation (UDP/protobuf) | Complex; halted in halted-udp-server-dev; not needed for direct BLE path |
+| MEATER 2 / original MEATER probes | MEATER+ Block only for v1.0; protocol differences not yet fully mapped |
+| MEATER Link / UDP Block emulation | Not needed; app connects directly to Block via BLE |
+| AI recipe generator | Excluded by design; cut file recipes are included |
 | Home Assistant integration | App is standalone; no HA dependency |
 | Cloud connectivity | Local-only by design |
 | iOS version | Android-only for v1.0 |
@@ -52,13 +53,16 @@ The app shall:
 
 ## 3. Hardware Constraint
 
-> ⚠️ **Critical**: The MEATER+ Block enforces a 1-to-1 BLE connection chain. When the Block is cloud-connected, it holds the BLE slot to the probe exclusively. The Android app can only connect to the probe when:
-> - The MEATER+ Block is powered off, OR
-> - The Block is in a disconnected/standby state (not actively relaying to cloud)
+The Android app connects to the **MEATER+ Block** via BLE, exactly as the official MEATER app does. The Block then handles communication with the probe over its own proprietary link.
 
-This means: the Android app is a **direct-to-probe** BLE client. It bypasses the Block entirely. The user must power off the Block (or ensure it is not active) when using the Android app.
+> ⚠️ **Critical**: The MEATER+ Block enforces a strict 1-to-1 BLE connection chain. When the Block is cloud-connected (WiFi active), it simultaneously holds the BLE slot to the probe — and to the phone. Only one BLE client can connect to the Block at a time.
 
-This is the same constraint as the ESP32 client path.
+This means:
+- The Android app connects to the Block (not directly to the probe)
+- The Block must **not** be connected to MEATER Cloud or any other BLE client while the app is in use
+- Disable WiFi on the Block, or ensure it is not cloud-connected, before using the app
+
+This is the same constraint that the ESP32 BLE client path faced against the probe. The app targets the Block end of the chain.
 
 ---
 
@@ -72,27 +76,28 @@ This is the same constraint as the ESP32 client path.
 │  │  BLE Backend    │    │  Cooking UI              │ │
 │  │                 │    │                          │ │
 │  │ Android BLE API │    │ WebView or Compose UI    │ │
-│  │ (replaces ESP32)│    │ (KCE cooking panel port) │ │
-│  │                 │    │                          │ │
+│  │ (MEATER+ Block  │    │ (KCE MEATER path port)   │ │
+│  │  client)        │    │                          │ │
 │  │ • GATT client   │    │ • Protein/cut tree       │ │
 │  │ • Temp decode   │◄───┤ • Doneness selection     │ │
 │  │ • Battery       │    │ • Live temp graph        │ │
 │  │ • Notifications │    │ • ETA display            │ │
-│  └────────┬────────┘    │ • Recipe cards           │ │
+│  └────────┬────────┘    │ • Recipe cards (cut files│ │
+│           │             │   only, no AI generator) │ │
 │           │             │ • History                │ │
 │           │             └──────────────────────────┘ │
 └───────────┼─────────────────────────────────────────┘
             │ BLE (GATT)
             ▼
-┌───────────────────┐
-│  MEATER+ Probe    │
-│  (direct BLE)     │
-└───────────────────┘
+┌───────────────────┐        ┌───────────────────┐
+│  MEATER+ Block    │◄──────►│  MEATER+ Probe    │
+│  (not cloud-conn.)│  BLE   │                   │
+└───────────────────┘        └───────────────────┘
 ```
 
 ### 4.1 BLE Backend
 
-Based on protocol documentation in `halted-ble-server-dev/MEATER_BLE_PROTOCOL.md` and decompiled app code:
+The Android app acts as a BLE GATT client to the **MEATER+ Block** — the same role the official MEATER app takes. Based on protocol documentation in `halted-ble-server-dev/MEATER_BLE_PROTOCOL.md` and decompiled app code:
 
 - **MEATER Service UUID**: `a75cc7fc-c956-488f-ac2a-2dbc08b63a04`
 - **Temperature Characteristic**: `7edda774-045e-4bbf-909b-45d1991a2876` (READ + NOTIFY, 8 bytes)
@@ -102,20 +107,21 @@ Based on protocol documentation in `halted-ble-server-dev/MEATER_BLE_PROTOCOL.md
 
 ### 4.2 Cooking UI
 
-The UI shall be a port/reuse of KCE panel functionality:
-- Option A: Embed KCE panel JS in a WebView with a local data bridge
-- Option B: Native Android (Kotlin/Compose) re-implementation of the KCE UI
+The UI shall be a port/reuse of the KCE MEATER path panel:
+- Option A: Embed KCE panel JS in a WebView with a local data bridge (preferred)
+- Option B: Native Android (Kotlin/Compose) re-implementation of the KCE MEATER path UI
+
+The AI recipe generator is **excluded**. Cut file recipes (from KCE:CUT files) are **included**.
 
 Option A (WebView) is preferred for v1.0 — avoids duplicating cooking data and UI logic; the KCE JS panel already works well.
 
 ### 4.3 Data Source
 
-All cooking data is consumed from the same sources as KCE:
-- `www/recipes/` KCE:CUT files → cooking tree
-- `www/cuisines/` KCE:CUISINE files → cuisine/ingredient data
-- Cooking temperatures and doneness from the same data structures
+The KCE:CUT files in `www/recipes/` are the **ground truth** for the cooking tree — identical to how the KCE MEATER path works in HAOS:
+- `www/recipes/` KCE:CUT files → cooking tree, cuts, temperatures, doneness, cut-file recipes
+- Cooking temperatures and doneness from the same data structures as KCE
 
-The Android app build pipeline will run `generate_frontend_data.py` to produce bundled JS/JSON data assets.
+The Android app build pipeline will run `generate_frontend_data.py` to produce bundled JS/JSON data assets. **Cuisine data is excluded from v1.0** (cooking path only).
 
 ---
 
@@ -125,7 +131,7 @@ The Android app build pipeline will run `generate_frontend_data.py` to produce b
 
 | # | Requirement |
 |---|-------------|
-| BLE-01 | App shall scan for and connect to a MEATER+ probe via BLE GATT |
+| BLE-01 | App shall scan for and connect to a MEATER+ Block via BLE GATT |
 | BLE-02 | App shall read and subscribe to temperature characteristic notifications |
 | BLE-03 | App shall decode tip temperature and ambient temperature using verified formulas from Temperature.java |
 | BLE-04 | App shall read battery level from battery characteristic |
@@ -145,13 +151,15 @@ The Android app build pipeline will run `generate_frontend_data.py` to produce b
 | COOK-07 | User shall be able to add notes to a cooking session |
 | COOK-08 | Sessions shall be stored locally on device |
 
-### 5.3 Recipe & Cuisine Data
+### 5.3 Recipe Data
 
 | # | Requirement |
 |---|-------------|
-| DATA-01 | App shall include all cuts and temperatures from www/recipes/ |
-| DATA-02 | App shall include all cuisine data from www/cuisines/ |
-| DATA-03 | All recipe and cuisine data shall be bundled offline (no network required) |
+| DATA-01 | App shall include all cuts and temperatures from www/recipes/ KCE:CUT files |
+| DATA-02 | KCE:CUT files are the ground truth for the cooking tree — same as KCE MEATER path |
+| DATA-03 | Cut file recipes shall be displayed in the cooking UI |
+| DATA-04 | AI recipe generator shall NOT be included |
+| DATA-05 | All recipe data shall be bundled offline (no network required) |
 
 ### 5.4 Language
 
@@ -182,9 +190,8 @@ The Android app is a **sibling project** within this repository. It shares:
 
 | Shared Asset | Location | Usage |
 |--------------|----------|-------|
-| KCE:CUT recipe files | `www/recipes/` | Cooking tree, temperatures |
-| KCE:CUISINE files | `www/cuisines/` | Cuisine ingredient data |
-| JS panel code | `www/panel-class-template.js` | UI logic (WebView option) |
+| KCE:CUT recipe files | `www/recipes/` | Cooking tree, temperatures, cut recipes |
+| JS panel code | `www/panel-class-template.js` | MEATER path UI logic (WebView option) |
 | Generated panel | `www/kitchen-cooking-panel.js` | Bundled in APK (WebView option) |
 | BLE protocol docs | `halted-ble-server-dev/MEATER_BLE_PROTOCOL.md` | BLE implementation reference |
 | Temperature.java formulas | (documented in BLE_PROTOCOL.md) | Correct decode formulas |
@@ -198,12 +205,12 @@ The Android app is a **sibling project** within this repository. It shares:
 | Deliverable | Description |
 |-------------|-------------|
 | `android/` directory | Android app project (Kotlin, Gradle) in this repository |
-| BLE service module | `MeaterBleService.kt` — GATT client, temp decode, notifications |
+| BLE service module | `MeaterBleService.kt` — GATT client to MEATER+ Block, temp decode, notifications |
 | Cooking engine module | Port of KCE cooking algorithm (ETA, resting, doneness) to Kotlin |
-| UI module | WebView-based panel OR Compose UI |
-| Data build script | Script to bundle KCE data assets into APK |
-| README for Android | Setup, build instructions, BLE pairing guide |
-| Release APK | Distributed via GitHub Releases (same repo) |
+| UI module | WebView-based MEATER path panel OR Compose UI |
+| Data build script | Script to bundle KCE:CUT data assets into APK |
+| README for Android | Setup, build instructions, Block cloud-disconnect guide |
+| Release APK | Distributed via GitHub Releases (publish-apk workflow); version follows KCE versioning |
 
 ---
 
@@ -211,35 +218,44 @@ The Android app is a **sibling project** within this repository. It shares:
 
 | Risk | Mitigation |
 |------|-----------|
-| BLE probe availability (Block must be off) | Document clearly; show "Block must be off" dialog on connect attempt failure |
-| MEATER+ BLE protocol changes in firmware | Pin to known-good probe firmware; document tested version |
-| GATT protocol gaps (partial reverse-engineering) | Use verified formulas from Temperature.java; test against real probe |
+| BLE Block availability (must not be cloud-connected) | Document clearly; show "Disconnect Block from cloud" dialog on connect failure |
+| MEATER+ BLE protocol changes in firmware | Pin to known-good Block firmware; document tested version |
+| GATT protocol gaps (partial reverse-engineering) | Use verified formulas from Temperature.java; test against real Block |
 | WebView performance on older Android | Test on API 29; fall back to Compose if unacceptable |
-| Data size growth (cuisines: 12,738 ingredients) | Bundle only cooking tree data in APK v1.0; cuisine optional download |
 
 ---
 
 ## 10. Success Criteria
 
-The v1.0 release is complete when:
+The v0.10.x first release is complete when:
 
-1. ✅ App connects to a MEATER+ probe via BLE (Block powered off)
+1. ✅ App connects to a MEATER+ Block via BLE (Block not cloud-connected)
 2. ✅ Live tip and ambient temperatures display correctly
-3. ✅ User can select any cut from the full KCE cooking tree
+3. ✅ User can select any cut from the full KCE cooking tree (cut files are ground truth)
 4. ✅ Dynamic ETA calculates and updates in real time
 5. ✅ Android notification fires at cooking milestones
 6. ✅ App works fully offline in English and Swedish
 7. ✅ Cook history with notes is stored locally
+8. ✅ publish-apk GitHub Action produces a signed APK on release
 
 ---
 
-## 11. Out of Scope — Future Versions
+## 11. Versioning
 
-- MEATER 2 / MEATER Block protocol (UDP/protobuf)
+The Android app version **follows KCE versioning** — it does not start from 1.0. The first release ships as the same version as the KCE integration at the time of release (e.g., `0.10.0.0`). Subsequent app releases increment the `d` component independently when needed.
+
+Version is encoded in the APK `versionName` and displayed in the app's About screen.
+
+---
+
+## 12. Out of Scope — Future Versions
+
+- MEATER 2 / MEATER Link Block protocol (UDP/protobuf)
 - iOS version
 - Multi-probe support
 - HA integration bridge (sending probe data back to HA)
-- AI recipe suggestions
+- AI recipe generator
+- Cuisine / ingredient browser
 
 ---
 
