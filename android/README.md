@@ -2,6 +2,8 @@
 
 This directory contains the Android APK implementation for the standalone MEATER Kitchen app from `docs/ANDROID_APP_TOR.md`.
 
+**[Download latest APK](https://github.com/R00S/meater-in-local-haos/releases/latest/download/meater-kitchen.apk)**
+
 ## Current baseline
 
 - Kotlin Android app project scaffolded with Gradle

@@ -24,53 +24,25 @@ jobs:
             ~/.gradle/wrapper
           key: gradle-${{ hashFiles('android/**/*.gradle.kts', 'android/gradle/wrapper/gradle-wrapper.properties') }}
 
-      # ── Decode keystore from GitHub secret (optional) ────────────────────
-      - name: Decode keystore
-        if: ${{ secrets.KEYSTORE_BASE64 != '' }}
-        run: |
-          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/app/meater-release.keystore
-        env:
-          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
-
-      # ── Build release APK (signed if keystore is available) ──────────────
-      - name: Build release APK
-        working-directory: android
-        env:
-          KEYSTORE_PATH: ${{ secrets.KEYSTORE_BASE64 != '' && 'app/meater-release.keystore' || '' }}
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-        run: ./gradlew --no-daemon :app:assembleRelease
-
-      # ── Build debug APK as well (always available without signing) ───────
-      - name: Build debug APK
+      - name: Build APK
         working-directory: android
         run: ./gradlew --no-daemon :app:assembleDebug
 
-      # ── Attach both APKs to the release ──────────────────────────────────
-      - name: Upload release APK
-        uses: softprops/action-gh-release@v2
+      - name: Rename APK
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk meater-kitchen.apk
+
+      - name: Attach to release
         if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
         with:
-          files: android/app/build/outputs/apk/release/app-release*.apk
+          files: meater-kitchen.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload debug APK
-        uses: softprops/action-gh-release@v2
-        if: github.event_name == 'release'
-        with:
-          files: android/app/build/outputs/apk/debug/app-debug.apk
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # ── Upload artifacts for workflow_dispatch runs ───────────────────────
-      - name: Upload APK artifacts (manual run)
+      - name: Upload artifact (manual run)
         if: github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v4
         with:
-          name: meater-kitchen-apks
-          path: |
-            android/app/build/outputs/apk/release/app-release*.apk
-            android/app/build/outputs/apk/debug/app-debug.apk
+          name: meater-kitchen
+          path: meater-kitchen.apk
           retention-days: 14
