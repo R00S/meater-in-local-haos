@@ -37,7 +37,7 @@ The app shall:
 | **Notifications** | Local Android notifications at key cooking moments, per probe |
 | **Session History** | Local storage of cook history with notes |
 
-### 2.2 Out of Scope (v1.0)
+### 2.2 Out of Scope (v0.10.x)
 
 | Excluded | Reason |
 |----------|--------|
@@ -46,7 +46,7 @@ The app shall:
 | AI recipe generator | Excluded by design; cut file recipes are included |
 | Home Assistant integration | App is standalone; no HA dependency |
 | Cloud connectivity | Local-only by design |
-| iOS version | Android-only for v1.0 |
+| iOS version | Android-only for v0.10.x |
 
 ---
 
@@ -115,7 +115,7 @@ The UI shall be a port/reuse of the KCE MEATER path panel:
 
 The AI recipe generator is **excluded**. Cut file recipes (from KCE:CUT files) are **included**.
 
-Option A (WebView) is preferred for v1.0 — avoids duplicating cooking data and UI logic; the KCE JS panel already works well.
+Option A (WebView) is preferred for v0.10.x — avoids duplicating cooking data and UI logic; the KCE JS panel already works well.
 
 ### 4.3 Data Source
 
@@ -123,7 +123,7 @@ The KCE:CUT files in `www/recipes/` are the **ground truth** for the cooking tre
 - `www/recipes/` KCE:CUT files → cooking tree, cuts, temperatures, doneness, cut-file recipes
 - Cooking temperatures and doneness from the same data structures as KCE
 
-The Android app build pipeline will run `generate_frontend_data.py` to produce bundled JS/JSON data assets. **Cuisine data is excluded from v1.0** (cooking path only).
+The Android app build pipeline will run `generate_frontend_data.py` to produce bundled JS/JSON data assets. **Cuisine data is excluded from v0.10.x** (cooking path only).
 
 ---
 
@@ -236,7 +236,7 @@ MEATER 2 uses a completely different and undocumented BLE protocol from MEATER+.
 
 **MEATER Link (UDP/protobuf)**
 MEATER Link is a separate product — a standalone WiFi LAN bridge (not the same as the MEATER+ Block). It broadcasts probe data over UDP using Google Protocol Buffers. The community has partially reverse-engineered the `.proto` schemas (reference: [ccutrer/meater-link-esp32](https://github.com/ccutrer/meater-link-esp32)), but there is no production-quality, complete local integration as of 2025. This path is interesting for a future LAN-based mode but is not required for the Android app, which connects directly to the Block via BLE.
-**Status: Partially documented community effort; not a dead end, but not needed for v1.0.**
+**Status: Partially documented community effort; not a dead end, but not needed for v0.10.x.**
 
 ---
 
