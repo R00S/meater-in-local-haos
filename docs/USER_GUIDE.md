@@ -1415,11 +1415,11 @@ described in `docs/ANDROID_APP_TOR.md`.
   (no scan required). A **Forget** button removes the entry.
 - **Connect by MAC address** — fallback power-user field: type a full `XX:XX:XX:XX:XX:XX`
   address and connect directly without scanning.
-- **Cut data from recipe files** — the cooking tree in the cut selection screen is now
-  generated directly from `www/recipes/` KCE:CUT files by `generate_frontend_data.py`.
-  All 7 categories (fish, poultry, pork, beef, lamb, game, vegetables) are present. Adding,
-  removing, or changing a cut file and re-running the generator automatically updates the
-  Android app on the next build.
+- **Cut data from recipe files** — the cooking tree in the cut selection screen is parsed at
+  runtime from the bundled `kitchen-cooking-panel.js` (the same auto-generated file used by
+  the HAOS panel). `EXP_TREE` and `EXP_DONENESS_OPTIONS` are extracted directly — no separate
+  JSON file. Adding, removing, or changing a cut file in `www/recipes/`, running
+  `python3 generate_frontend_data.py`, and rebuilding the APK is all that is needed.
 - **Version label** — app version shown on the main screen for easier debug identification
 - **GATT connect/disconnect** — connects to the MEATER+ Block (not cloud-connected)
 - **Multi-probe support** — enumerates all MEATER service instances the Block exposes

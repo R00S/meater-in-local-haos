@@ -53,6 +53,7 @@ class MainActivity : ComponentActivity() {
                     onConnectKnownProbe = { probe -> viewModel.connectKnownProbe(this, probe) },
                     onForgetProbe = { address -> viewModel.forgetProbe(address) },
                     onSelectCut = { probeIndex -> viewModel.openCutSelection(probeIndex) },
+                    onAddProbeSlot = { viewModel.addProbeSlot() },
                     onOpenWebView = { viewModel.openWebViewPanel() },
                     onLanguageToggle = {
                         val next = if (state.language == "sv") "en" else "sv"

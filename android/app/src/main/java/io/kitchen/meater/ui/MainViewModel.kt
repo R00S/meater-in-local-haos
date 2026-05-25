@@ -180,14 +180,27 @@ class MainViewModel : ViewModel() {
         bleService.connect(context, device.address)
         // Save as a known probe for future sessions
         probeRepository?.save(device)
+        // Seed probe slot 0 immediately so the user can set up a cut before
+        // the first temperature reading arrives.
+        val initialSession = CookingSession(probeIndex = 0, probeAddress = device.address)
         uiState = uiState.copy(
             isConnected = true,
             connectedDeviceAddress = device.address,
             selectedDeviceAddress = device.address,
             knownProbes = probeRepository?.loadAll() ?: uiState.knownProbes,
+            sessions = mapOf(0 to initialSession),
             status = "Connecting to ${device.name}…",
             screen = AppScreen.DASHBOARD
         )
+    }
+
+    /** Add another probe slot so multi-probe users can set up a second cut. */
+    fun addProbeSlot() {
+        val address = uiState.connectedDeviceAddress ?: return
+        val nextIndex = (0..3).firstOrNull { it !in uiState.sessions } ?: return
+        val sessions = uiState.sessions.toMutableMap()
+        sessions[nextIndex] = CookingSession(probeIndex = nextIndex, probeAddress = address)
+        uiState = uiState.copy(sessions = sessions)
     }
 
     // ── Cut selection navigation ─────────────────────────────────────────────

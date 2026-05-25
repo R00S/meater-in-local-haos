@@ -50,12 +50,21 @@ Discovery still failing because Block does not advertise service UUID.
 - Added MAC filter/search text field on scan screen (partial filter + full-MAC direct connect)
 - Bumped 0.10.0.4 → 0.10.0.5 (versionCode 5 → 6)
 
-### 2026-05-25 — show-all BLE + probe memory + cut data ground truth (v0.10.0.5 → 0.10.0.6)
-User reported only full-MAC direct-connect worked; name/OUI filtering was still unreliable.
-- `MeaterBleScanner`: removed all filtering — now shows every BLE device
-- New `ProbeRepository` (SharedPreferences) — saves known probes; "Known devices" section on scan screen
-- `MainViewModel`: `connectToAddress()` saves probe on connect, loads known probes on init
-- `MainScreen`: rewritten — known probes section, plain full device list, simple MAC field
-- `generate_frontend_data.py`: now writes `android/app/src/main/assets/cooking_data.json` from
-  `EXP_TREE`/`EXP_DONENESS_OPTIONS` — added beef, lamb; now 7 categories (was 5)
-- Bumped 0.10.0.5 → 0.10.0.6 (versionCode 6 → 7)
+### 2026-05-25 — architecture fix: panel.js as ground truth + start-cook flow (v0.10.0.6)
+Addressed three issues raised after v0.10.0.6 APK test:
+
+1. `CookingDataRepository` rewrote to parse `EXP_TREE` and `EXP_DONENESS_OPTIONS` directly
+   from the bundled `kitchen-cooking-panel.js` (already in assets) instead of from a
+   separate `cooking_data.json`. The JS file is the authoritative compiled output of the
+   recipe markdown files — same source as the HAOS panel. `cooking_data.json` deleted.
+   Generator no longer writes it. The brace-depth extractor handles any valid JSON object
+   size from the JS source.
+
+2. `generate_frontend_data.py` reverted — no longer writes `cooking_data.json` to Android
+   assets. The pipeline is: recipe files → generator → kitchen-cooking-panel.js (one file,
+   used by both HAOS and Android).
+
+3. `connectToAddress` now seeds probe slot 0 immediately into the sessions map (IDLE state)
+   so the user sees "Probe 1 — Select cut & start cook" as soon as they connect, without
+   waiting for temperature data. `addProbeSlot()` added to ViewModel for multi-probe setups.
+   ProbeCard button label: "Select cut & start cook" (before cut chosen) / "Change cut" (after).

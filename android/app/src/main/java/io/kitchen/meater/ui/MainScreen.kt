@@ -42,14 +42,13 @@ fun MainScreen(
     onConnectKnownProbe: (BleDevice) -> Unit,
     onForgetProbe: (String) -> Unit,
     onSelectCut: (probeIndex: Int) -> Unit,
+    onAddProbeSlot: () -> Unit,
     onOpenWebView: () -> Unit,
     onLanguageToggle: () -> Unit
 ) {
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(16.dp),
+            modifier = Modifier.fillMaxSize().padding(16.dp),
             verticalArrangement = Arrangement.Top
         ) {
             // Title + language toggle
@@ -67,7 +66,7 @@ fun MainScreen(
             Text(state.status, style = MaterialTheme.typography.bodyMedium)
             Spacer(modifier = Modifier.height(12.dp))
 
-            // Scan / Connect buttons
+            // Scan / Disconnect buttons
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Button(onClick = onScanToggle, enabled = !state.isConnected) {
                     Text(if (state.isScanning) "Stop Scan" else "Start Scan")
@@ -118,8 +117,8 @@ fun MainScreen(
 
                 if (state.discoveredDevices.isEmpty() && !state.isScanning) {
                     Text(
-                        "Tap \"Start Scan\" to discover nearby devices. " +
-                            "Your MEATER+ Block will appear as \"MEATER+\" in the list.",
+                        "Tap \u201cStart Scan\u201d to discover nearby devices. " +
+                            "Your MEATER+ Block will appear as \u201cMEATER+\u201d in the list.",
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -154,7 +153,7 @@ fun MainScreen(
                 }
             }
 
-            // Multi-probe dashboard (connected)
+            // ── Dashboard (connected) ─────────────────────────────────────────
             if (state.isConnected) {
                 Spacer(modifier = Modifier.height(16.dp))
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
@@ -163,13 +162,25 @@ fun MainScreen(
                 }
                 Spacer(modifier = Modifier.height(8.dp))
 
-                if (state.sessions.isEmpty()) {
-                    Text("Waiting for probe data\u2026", style = MaterialTheme.typography.bodyMedium)
-                } else {
-                    state.sessions.values.sortedBy { it.probeIndex }.forEach { session ->
-                        ProbeCard(session = session, useSv = state.language == "sv",
-                            onSelectCut = { onSelectCut(session.probeIndex) })
-                        Spacer(modifier = Modifier.height(8.dp))
+                // One card per probe slot (already in sessions map)
+                state.sessions.values.sortedBy { it.probeIndex }.forEach { session ->
+                    ProbeCard(
+                        session = session,
+                        useSv = state.language == "sv",
+                        onSelectCut = { onSelectCut(session.probeIndex) }
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                }
+
+                // "+ Add probe" button — lets user set up another probe slot
+                // (max 4 slots per MEATER+ Block)
+                val hasRoomForMore = (0..3).any { it !in state.sessions }
+                if (hasRoomForMore) {
+                    OutlinedButton(
+                        onClick = onAddProbeSlot,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text("+ Add probe slot")
                     }
                 }
             }
@@ -187,15 +198,18 @@ private fun ProbeCard(session: CookingSession, useSv: Boolean, onSelectCut: () -
                         if (session.cutDisplayName.isNotBlank()) " \u2014 ${session.cutDisplayName}" else "",
                     style = MaterialTheme.typography.titleSmall
                 )
-                OutlinedButton(onClick = onSelectCut) {
-                    Text(if (session.state == CookingState.IDLE) "Select cut" else "Change cut")
+                Button(onClick = onSelectCut) {
+                    Text(if (session.state == CookingState.IDLE && session.cutId.isBlank())
+                        "Select cut & start cook" else "Change cut")
                 }
             }
+
             Spacer(modifier = Modifier.height(4.dp))
             Text("Tip:     ${session.tipCelsius?.let { "%.1f\u00b0C".format(it) } ?: "--"}")
             Text("Ambient: ${session.ambientCelsius?.let { "%.1f\u00b0C".format(it) } ?: "--"}")
             Text("Battery: ${session.batteryPercent?.let { "$it%" } ?: "--"}")
-            if (session.state != CookingState.IDLE) {
+
+            if (session.state != CookingState.IDLE || session.cutId.isNotBlank()) {
                 Spacer(modifier = Modifier.height(4.dp))
                 Text("State:   ${session.state.name}")
                 session.targetTempC?.let { Text("Target:  ${it}\u00b0C  (${session.doneness})") }

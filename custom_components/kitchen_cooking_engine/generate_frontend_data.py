@@ -1310,23 +1310,6 @@ import {{
     
     print(f"Regenerated {panel_file}")
 
-    # Write cooking_data.json for the Android app.
-    # This makes www/recipes/ KCE:CUT files the single source of truth for
-    # both the HA panel and the Android app — run the generator after any
-    # recipe change and the Android build will automatically pick it up.
-    android_assets_dir = os.path.normpath(
-        os.path.join(base_dir, "..", "..", "android", "app", "src", "main", "assets")
-    )
-    if os.path.isdir(android_assets_dir):
-        android_tree, android_doneness = build_experimental_tree(base_dir)
-        cooking_data_path = os.path.join(android_assets_dir, "cooking_data.json")
-        with open(cooking_data_path, "w", encoding="utf-8") as f:
-            json.dump({"tree": android_tree, "doneness": android_doneness}, f, indent=2, ensure_ascii=False)
-        print(f"Wrote {cooking_data_path}")
-        print(f"  Android cooking tree: {len(android_tree)} categories")
-    else:
-        print(f"  Note: Android assets dir not found, skipping cooking_data.json")
-
     # Count Ninja Combi recipes
     try:
         base_dir = os.path.dirname(os.path.abspath(__file__))
