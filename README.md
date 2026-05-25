@@ -9,7 +9,7 @@ A free, local-first, optionally AI-assisted, kitchen cooking system for Home Ass
 
 For users of wireless temperature probes, like MEATER, INKBIRD etc, KCE provides an extensive tree of cuts and cooking methods ranging from meat and game to fish and veg. In addition to that, KCE adds knowledge and descriptions on how different meats and cuts behave and classic recipes for you to try or just read out of pure interest.
 
-This is a stable mid dev release — Core cooking engine, AI recipe builder, MEATER probe integration, ingredient tracking and cook history are all working. Phase 9 is polishing multilingual support, measurement conversion and mobile layout. Phase 10 will add shelf intelligence: recipe scanning from photos/URLs, shelf population from receipts and barcodes, and optional sync with Grocy/Mealie/HA shopping lists.
+This is a stable mid dev release — Core cooking engine, AI recipe builder, MEATER probe integration, ingredient tracking, cook history, and a standalone Android app are all working. Phase 9 polish is wrapping up. Phase 10 will add shelf intelligence: recipe scanning from photos/URLs, shelf population from receipts and barcodes, and optional sync with Grocy/Mealie/HA shopping lists.
 
 ## 📖 User Guide
 
