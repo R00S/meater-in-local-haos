@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.0.5 · Home Assistant 2024.1.0+
+> **Version:** 0.10.0.6 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -1399,22 +1399,27 @@ Ensure the **Measurement System** setting matches your recipe source. US recipes
 °F; Swedish recipes use dl and °C. Changing the system converts all displayed amounts in real time.
 
 
-## 15. Standalone Android App (v0.10.0.5)
+## 15. Standalone Android App (v0.10.0.6)
 
 The `android/` directory contains the standalone MEATER Kitchen APK project
 described in `docs/ANDROID_APP_TOR.md`.
 
 ### What is implemented
 
-- **BLE scanning — triple device detection** — a device is accepted if it matches
-  any of the following (no hardware filter; all checks happen in the scan callback):
-  - Service UUID `a75cc7fc-…` in the advertising packet (bare probe, not Block-connected)
-  - Device name starting with `"MEATER"` (Block advertises as `"MEATER+"`)
-  - MAC OUI `B8:1F:5E` or `90:21:2E` (Apption Labs Limited / Ltd, verified IEEE OUI database)
-- **MAC filter / direct-connect field** — on the scan screen a text field lets you type
-  any partial MAC (e.g. `B8:1F:5E`) to narrow the discovered list in real time; if you
-  type a full `XX:XX:XX:XX:XX:XX` address a **Connect** button appears alongside it,
-  letting you connect directly without scanning (useful when the Block is not advertising)
+- **BLE scanning — all devices** — the scan shows every nearby BLE device. The MEATER+
+  Block advertises as `"MEATER+"` and appears in the list with that name. Tap it, then press
+  **Connect**. (No filtering needed — this is the same approach used by open-source BLE scanner
+  apps such as `grgcmz/BLEScanner` and `santansarah/ble-scanner`, MIT-licensed.)
+- **Known devices** — the app remembers each MEATER+ Block once you connect. On the next
+  launch a **"Known devices"** section appears at the top with a direct **Connect** button
+  (no scan required). A **Forget** button removes the entry.
+- **Connect by MAC address** — fallback power-user field: type a full `XX:XX:XX:XX:XX:XX`
+  address and connect directly without scanning.
+- **Cut data from recipe files** — the cooking tree in the cut selection screen is now
+  generated directly from `www/recipes/` KCE:CUT files by `generate_frontend_data.py`.
+  All 7 categories (fish, poultry, pork, beef, lamb, game, vegetables) are present. Adding,
+  removing, or changing a cut file and re-running the generator automatically updates the
+  Android app on the next build.
 - **Version label** — app version shown on the main screen for easier debug identification
 - **GATT connect/disconnect** — connects to the MEATER+ Block (not cloud-connected)
 - **Multi-probe support** — enumerates all MEATER service instances the Block exposes

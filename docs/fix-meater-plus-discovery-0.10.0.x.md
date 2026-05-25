@@ -19,21 +19,22 @@ the MEATER service UUID (`a75cc7fc-…`). This also failed: the MEATER Block doe
 the service UUID in its advertising packet — it only advertises by name `"MEATER+"`. The service
 UUID is a GATT-layer detail, only visible after connecting.
 
-## Fix (v0.10.0.5)
+## Fix (v0.10.0.6)
 
-Triple-detection in the scan callback (no hardware filter — scan all, filter in software):
-
-1. **Service UUID** — bare probe advertising when not Block-connected
-2. **Name prefix "MEATER"** — Block advertising as "MEATER+" or "MEATER"
-3. **Apption Labs OUI** — MAC prefix `B8:1F:5E` (Apption Labs Limited) or `90:21:2E`
-   (Apption Labs Ltd), verified against IEEE OUI database 2026-05-25
-
-Any device matching at least one criterion appears in the discovered list.
+**Show all BLE devices** (no filter at all) — the user sees every nearby BLE device in a list and
+taps "MEATER+" themselves. This is the same approach used by open-source BLE scanner apps
+(`grgcmz/BLEScanner`, `santansarah/ble-scanner`, etc. — all MIT-licensed Kotlin/Compose apps;
+verified 2026-05-25). No borrowed code was needed; the Android scan API is identical.
 
 Additionally added:
-- **MAC search / filter field** on the scan screen — type any partial MAC (e.g. `B8:1F:5E`)
-  to narrow the discovered list; type a full `XX:XX:XX:XX:XX:XX` address to reveal a
-  "Connect directly" button that bypasses scanning entirely (useful when Block is not advertising)
+- **Known devices** section at the top of the scan screen — previously connected blocks are
+  remembered in SharedPreferences and shown with a direct "Connect" button; "Forget" removes them
+- **Connect by MAC address** field (full MAC only) remains as a power-user fallback
+- **Cut data ground truth** — `generate_frontend_data.py` now also writes
+  `android/app/src/main/assets/cooking_data.json` from `EXP_TREE` + `EXP_DONENESS_OPTIONS`.
+  The recipe files in `www/recipes/` are now the single source of truth for both the HA panel
+  and the Android app. Previously `cooking_data.json` was hand-crafted and missing beef & lamb;
+  it now has all 7 categories.
 
 ## Sessions
 
@@ -48,3 +49,13 @@ Discovery still failing because Block does not advertise service UUID.
 - OUIs verified from IEEE database: `B8:1F:5E` = Apption Labs Limited, `90:21:2E` = Apption Labs Ltd
 - Added MAC filter/search text field on scan screen (partial filter + full-MAC direct connect)
 - Bumped 0.10.0.4 → 0.10.0.5 (versionCode 5 → 6)
+
+### 2026-05-25 — show-all BLE + probe memory + cut data ground truth (v0.10.0.5 → 0.10.0.6)
+User reported only full-MAC direct-connect worked; name/OUI filtering was still unreliable.
+- `MeaterBleScanner`: removed all filtering — now shows every BLE device
+- New `ProbeRepository` (SharedPreferences) — saves known probes; "Known devices" section on scan screen
+- `MainViewModel`: `connectToAddress()` saves probe on connect, loads known probes on init
+- `MainScreen`: rewritten — known probes section, plain full device list, simple MAC field
+- `generate_frontend_data.py`: now writes `android/app/src/main/assets/cooking_data.json` from
+  `EXP_TREE`/`EXP_DONENESS_OPTIONS` — added beef, lamb; now 7 categories (was 5)
+- Bumped 0.10.0.5 → 0.10.0.6 (versionCode 6 → 7)

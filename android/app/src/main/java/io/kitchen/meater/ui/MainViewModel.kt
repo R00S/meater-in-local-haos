@@ -10,6 +10,7 @@ import io.kitchen.meater.ble.MeaterBleService
 import io.kitchen.meater.cooking.CookingEngine
 import io.kitchen.meater.cooking.CookingSession
 import io.kitchen.meater.cooking.CookingState
+import io.kitchen.meater.data.ProbeRepository
 import io.kitchen.meater.data.SessionHistoryRepository
 import io.kitchen.meater.model.BleDevice
 import io.kitchen.meater.notification.NotificationHelper
@@ -26,6 +27,7 @@ data class MainUiState(
     val screen: AppScreen = AppScreen.PERMISSIONS,
     val isScanning: Boolean = false,
     val discoveredDevices: List<BleDevice> = emptyList(),
+    val knownProbes: List<BleDevice> = emptyList(),
     val selectedDeviceAddress: String? = null,
     val connectedDeviceAddress: String? = null,
     val isConnected: Boolean = false,
@@ -34,7 +36,7 @@ data class MainUiState(
     val language: String = "en",
     // Which probe the cut selection screen is targeting (-1 = none)
     val cutSelectionProbeIndex: Int = -1,
-    // Manual MAC entry for connecting without scanning
+    // Full MAC for direct connect without scanning
     val manualMacAddress: String = ""
 )
 
@@ -44,6 +46,7 @@ class MainViewModel : ViewModel() {
 
     private var notificationHelper: NotificationHelper? = null
     private var historyRepository: SessionHistoryRepository? = null
+    private var probeRepository: ProbeRepository? = null
 
     private val scanner = MeaterBleScanner(
         onDeviceFound = { device ->
@@ -84,8 +87,10 @@ class MainViewModel : ViewModel() {
     fun init(context: Context) {
         notificationHelper = NotificationHelper(context)
         historyRepository = SessionHistoryRepository(context)
+        probeRepository = ProbeRepository(context)
         val lang = LanguagePreference.get(context)
-        uiState = uiState.copy(language = lang)
+        val known = probeRepository!!.loadAll()
+        uiState = uiState.copy(language = lang, knownProbes = known)
     }
 
     // ── Permission ──────────────────────────────────────────────────────────
@@ -107,7 +112,7 @@ class MainViewModel : ViewModel() {
         init(context)
         uiState = uiState.copy(
             isScanning = true,
-            status = "Scanning for MEATER devices…",
+            status = "Scanning for BLE devices…",
             discoveredDevices = emptyList(),
             selectedDeviceAddress = null
         )
@@ -133,16 +138,7 @@ class MainViewModel : ViewModel() {
             uiState = uiState.copy(status = "Invalid MAC — use XX:XX:XX:XX:XX:XX")
             return
         }
-        scanner.stop()
-        init(context)
-        bleService.connect(context, mac)
-        uiState = uiState.copy(
-            isConnected = true,
-            connectedDeviceAddress = mac,
-            selectedDeviceAddress = mac,
-            status = "Connecting to $mac…",
-            screen = AppScreen.DASHBOARD
-        )
+        connectToAddress(context, BleDevice(name = mac, address = mac))
     }
 
     // ── Connect ──────────────────────────────────────────────────────────────
@@ -161,17 +157,35 @@ class MainViewModel : ViewModel() {
         }
 
         val selected = uiState.selectedDeviceAddress ?: run {
-            uiState = uiState.copy(status = "Select a MEATER device first")
+            uiState = uiState.copy(status = "Select a device first")
             return
         }
+        val device = uiState.discoveredDevices.find { it.address == selected }
+            ?: BleDevice(name = selected, address = selected)
+        connectToAddress(context, device)
+    }
 
+    fun connectKnownProbe(context: Context, probe: BleDevice) {
+        connectToAddress(context, probe)
+    }
+
+    fun forgetProbe(address: String) {
+        probeRepository?.delete(address)
+        uiState = uiState.copy(knownProbes = probeRepository?.loadAll() ?: emptyList())
+    }
+
+    private fun connectToAddress(context: Context, device: BleDevice) {
         scanner.stop()
         init(context)
-        bleService.connect(context, selected)
+        bleService.connect(context, device.address)
+        // Save as a known probe for future sessions
+        probeRepository?.save(device)
         uiState = uiState.copy(
             isConnected = true,
-            connectedDeviceAddress = selected,
-            status = "Connecting…",
+            connectedDeviceAddress = device.address,
+            selectedDeviceAddress = device.address,
+            knownProbes = probeRepository?.loadAll() ?: uiState.knownProbes,
+            status = "Connecting to ${device.name}…",
             screen = AppScreen.DASHBOARD
         )
     }
@@ -284,3 +298,4 @@ class MainViewModel : ViewModel() {
         super.onCleared()
     }
 }
+

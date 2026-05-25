@@ -24,23 +24,7 @@ class MeaterBleScanner(
                 ?: result.scanRecord?.deviceName
                 ?: ""
             val address = result.device.address  // format: "XX:XX:XX:XX:XX:XX"
-
-            // Three independent ways to recognise an Apption Labs / MEATER device:
-            //   1. Service UUID in the advertising packet (bare probe when not Block-connected)
-            //   2. Device name starts with "MEATER" (Block advertises as "MEATER+")
-            //   3. MAC OUI matches a registered Apption Labs prefix (IEEE OUI database,
-            //      verified 2026-05-25: B8:1F:5E = Apption Labs Limited,
-            //                           90:21:2E = Apption Labs Ltd)
-            val advertisedUuids = result.scanRecord?.serviceUuids
-            val hasMeaterUuid = advertisedUuids?.any {
-                it.uuid == MeaterBleService.MEATER_SERVICE_UUID
-            } == true
-            val hasMeaterName = name.startsWith("MEATER", ignoreCase = true)
-            val hasApptionOui = address.startsWith("B8:1F:5E", ignoreCase = true) ||
-                                address.startsWith("90:21:2E", ignoreCase = true)
-
-            if (!hasMeaterUuid && !hasMeaterName && !hasApptionOui) return
-
+            // Show all BLE devices — the user picks their MEATER+ from the list.
             val displayName = name.ifEmpty { address }
             onDeviceFound(BleDevice(name = displayName, address = address))
         }
@@ -66,8 +50,8 @@ class MeaterBleScanner(
             return
         }
 
-        // Scan with no hardware filter so both the Block (name-only advertisement) and
-        // the probe (service UUID advertisement) are returned. Filtering happens in the callback.
+        // No hardware filter — all BLE devices are returned so the user can
+        // pick their "MEATER+" from the list.
         val settings = ScanSettings.Builder()
             .setScanMode(ScanSettings.SCAN_MODE_LOW_LATENCY)
             .build()
