@@ -52,3 +52,25 @@ Start implementation of the Android APK according to ToR and plan.
 - [ ] GATT connection + temperature decode
 - [ ] Multi-probe telemetry pipeline
 - [ ] KCE panel/cut-data asset bundling pipeline
+
+
+### 2026-05-25 — Agent session (CHORES + Android continuation)
+
+**CHORES.md completed:**
+- Version bumped to `0.10.0.1` in required integration locations (`manifest.json`, `__init__.py`, `const.py`).
+- Branch timeline updated with missing implementation details.
+- `docs/USER_GUIDE.md` updated with Android preview section and current build/feature status.
+- Existing `_openHelp(...)` anchors in `panel-class-template.js` were verified unchanged and still aligned with current User Guide headings.
+
+**Android ToR progress:**
+- Added BLE GATT implementation module: `android/app/src/main/java/io/kitchen/meater/ble/MeaterBleService.kt`.
+- Implemented MEATER service/characteristic discovery and read+notify handling for temperature and battery UUIDs.
+- Implemented temperature decode path using ToR-documented formulas.
+- Wired UI state for selecting scanned device and connect/disconnect flow.
+
+**Status:**
+- [x] CHORES.md tasks completed
+- [x] BLE scan + connect/disconnect + decode baseline in app
+- [ ] Multi-probe telemetry model and dashboard
+- [ ] KCE panel/cut-data bundling into APK
+- [ ] Cooking algorithm parity and milestone notifications

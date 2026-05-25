@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.10.0.0 - Bump minor version (B), add Android app ToR
+Last Change: v0.10.0.1 - CHORES + Android BLE GATT service progress
 """
 
 DOMAIN = "kitchen_cooking_engine"

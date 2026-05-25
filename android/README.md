@@ -1,14 +1,19 @@
 # Android App (v0.10.x baseline)
 
-This directory contains the initial Android APK implementation for the standalone MEATER Kitchen app from `docs/ANDROID_APP_TOR.md`.
+This directory contains the Android APK implementation for the standalone MEATER Kitchen app from `docs/ANDROID_APP_TOR.md`.
 
 ## Current baseline
 
 - Kotlin Android app project scaffolded with Gradle
 - Compose app shell
 - BLE scan entry point (`MeaterBleScanner`) for discovering MEATER-named BLE devices
+- BLE GATT connection service (`MeaterBleService`) with:
+  - connection/disconnection flow
+  - MEATER service/characteristic discovery
+  - temperature and battery read + notify handling
+  - tip/ambient decode based on documented formulas in ToR
 - Local session storage skeleton (`SessionHistoryRepository`)
-- App version set to `0.10.0.0` to match ToR versioning
+- App version set to `0.10.0.1` to match current branch release version
 
 ## Build prerequisites
 
@@ -24,5 +29,5 @@ cd android
 
 ## Notes
 
-- This is phase-1 foundation only.
-- GATT connection, temperature decode, multi-probe telemetry, and KCE panel asset bundling are not implemented yet.
+- This is still an early implementation.
+- Multi-probe session orchestration, cooking algorithm port, full KCE panel/cut-data bundling, and release workflow are not implemented yet.

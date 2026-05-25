@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.9.0.0 · Home Assistant 2024.1.0+
+> **Version:** 0.10.0.1 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -71,6 +71,7 @@
 12. [Language and Measurement Settings](#12-language-and-measurement-settings)
 13. [Developer Services Reference](#13-developer-services-reference)
 14. [Troubleshooting](#14-troubleshooting)
+15. [Standalone Android App (Preview)](#15-standalone-android-app-preview)
 
 ---
 
@@ -1396,6 +1397,39 @@ Reload the integration: **Settings → Devices & Services → Kitchen Cooking En
 
 Ensure the **Measurement System** setting matches your recipe source. US recipes use cups and
 °F; Swedish recipes use dl and °C. Changing the system converts all displayed amounts in real time.
+
+
+## 15. Standalone Android App (Preview)
+
+The repository now includes an Android sibling project in:
+
+- `android/`
+
+This app is the start of the standalone MEATER Kitchen APK path described in `docs/ANDROID_APP_TOR.md`.
+
+Current implemented baseline:
+
+- BLE device scanning for MEATER-named devices
+- Device selection from discovered list
+- BLE GATT connect/disconnect flow
+- MEATER service/characteristic discovery
+- Temperature and battery read/notify handling
+- Tip/ambient decoding using the documented formulas from the ToR
+
+Important limitations in this preview:
+
+- Runtime permission UX flow is not finalized
+- Multi-probe orchestration is not complete
+- KCE panel/cut asset bundling into APK is not implemented yet
+- Cooking algorithm parity and milestone notifications are not complete
+
+Build command:
+
+```bash
+cd android
+./gradlew :app:assembleDebug
+```
+
 
 ---
 

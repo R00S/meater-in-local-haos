@@ -8,9 +8,10 @@ import android.bluetooth.le.ScanResult
 import android.content.Context
 import android.content.pm.PackageManager
 import androidx.core.content.ContextCompat
+import io.kitchen.meater.model.BleDevice
 
 class MeaterBleScanner(
-    private val onDeviceFound: (name: String, address: String) -> Unit,
+    private val onDeviceFound: (BleDevice) -> Unit,
     private val onError: (String) -> Unit
 ) {
     private val adapter: BluetoothAdapter? = BluetoothAdapter.getDefaultAdapter()
@@ -20,7 +21,7 @@ class MeaterBleScanner(
         override fun onScanResult(callbackType: Int, result: ScanResult) {
             val name = result.device.name ?: result.scanRecord?.deviceName ?: return
             if (name.contains("MEATER", ignoreCase = true)) {
-                onDeviceFound(name, result.device.address)
+                onDeviceFound(BleDevice(name = name, address = result.device.address))
             }
         }
 

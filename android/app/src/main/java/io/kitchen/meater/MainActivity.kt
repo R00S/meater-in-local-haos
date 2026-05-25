@@ -21,6 +21,12 @@ class MainActivity : ComponentActivity() {
                     } else {
                         viewModel.startScan(this)
                     }
+                },
+                onSelectDevice = { address ->
+                    viewModel.selectDevice(address)
+                },
+                onConnectToggle = {
+                    viewModel.connectOrDisconnect(this)
                 }
             )
         }
