@@ -48,6 +48,8 @@ class MainActivity : ComponentActivity() {
                     },
                     onSelectDevice = { viewModel.selectDevice(it) },
                     onConnectToggle = { viewModel.connectOrDisconnect(this) },
+                    onManualMacChange = { viewModel.setManualMacAddress(it) },
+                    onConnectManualMac = { viewModel.connectManualMac(this) },
                     onSelectCut = { probeIndex -> viewModel.openCutSelection(probeIndex) },
                     onOpenWebView = { viewModel.openWebViewPanel() },
                     onLanguageToggle = {

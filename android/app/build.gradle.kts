@@ -21,8 +21,8 @@ android {
         applicationId = "io.kitchen.meater"
         minSdk = 29
         targetSdk = 35
-        versionCode = 5
-        versionName = "0.10.0.4"
+        versionCode = 6
+        versionName = "0.10.0.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

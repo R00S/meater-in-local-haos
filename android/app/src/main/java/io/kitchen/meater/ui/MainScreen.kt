@@ -10,21 +10,24 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import io.kitchen.meater.BuildConfig
-import io.kitchen.meater.R
 import io.kitchen.meater.cooking.CookingSession
 import io.kitchen.meater.cooking.CookingState
 import io.kitchen.meater.model.BleDevice
+
+private val MAC_REGEX = Regex("^([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}$")
 
 @Composable
 fun MainScreen(
@@ -32,10 +35,21 @@ fun MainScreen(
     onScanToggle: () -> Unit,
     onSelectDevice: (String) -> Unit,
     onConnectToggle: () -> Unit,
+    onManualMacChange: (String) -> Unit,
+    onConnectManualMac: () -> Unit,
     onSelectCut: (probeIndex: Int) -> Unit,
     onOpenWebView: () -> Unit,
     onLanguageToggle: () -> Unit
 ) {
+    // Devices visible in the list: all discovered, filtered by the MAC search field if non-empty.
+    val macFilter = state.manualMacAddress.trim()
+    val visibleDevices = if (macFilter.isEmpty()) {
+        state.discoveredDevices
+    } else {
+        state.discoveredDevices.filter { it.address.contains(macFilter, ignoreCase = true) }
+    }
+    val isFullMac = macFilter.matches(MAC_REGEX)
+
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         Column(
             modifier = Modifier
@@ -73,13 +87,43 @@ fun MainScreen(
                 }
             }
 
-            // Device list (before connecting)
+            // Device list + MAC search/direct-connect (before connecting)
             if (!state.isConnected) {
                 Spacer(modifier = Modifier.height(16.dp))
                 Text("Discovered devices", style = MaterialTheme.typography.titleMedium)
                 Spacer(modifier = Modifier.height(8.dp))
+
+                // MAC search field — filters the list by partial address, or connects directly
+                // when a full MAC (XX:XX:XX:XX:XX:XX) is entered and tapped.
+                OutlinedTextField(
+                    value = state.manualMacAddress,
+                    onValueChange = onManualMacChange,
+                    modifier = Modifier.fillMaxWidth(),
+                    label = { Text("Filter / enter MAC  (e.g. B8:1F:5E or full address)") },
+                    singleLine = true,
+                    keyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.Done),
+                    trailingIcon = {
+                        if (isFullMac) {
+                            Button(onClick = onConnectManualMac) {
+                                Text("Connect")
+                            }
+                        }
+                    }
+                )
+
+                Spacer(modifier = Modifier.height(8.dp))
+
+                if (macFilter.isNotEmpty() && visibleDevices.isEmpty() && state.discoveredDevices.isNotEmpty()) {
+                    Text(
+                        text = "No scanned device matches \"$macFilter\"",
+                        style = MaterialTheme.typography.bodySmall.copy(
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    )
+                }
+
                 LazyColumn {
-                    items(state.discoveredDevices, key = { it.address }) { device ->
+                    items(visibleDevices, key = { it.address }) { device ->
                         DeviceRow(
                             device = device,
                             selected = state.selectedDeviceAddress == device.address,

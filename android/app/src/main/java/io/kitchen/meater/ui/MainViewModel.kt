@@ -33,7 +33,9 @@ data class MainUiState(
     val sessions: Map<Int, CookingSession> = emptyMap(),
     val language: String = "en",
     // Which probe the cut selection screen is targeting (-1 = none)
-    val cutSelectionProbeIndex: Int = -1
+    val cutSelectionProbeIndex: Int = -1,
+    // Manual MAC entry for connecting without scanning
+    val manualMacAddress: String = ""
 )
 
 class MainViewModel : ViewModel() {
@@ -119,6 +121,28 @@ class MainViewModel : ViewModel() {
 
     fun selectDevice(address: String) {
         uiState = uiState.copy(selectedDeviceAddress = address)
+    }
+
+    fun setManualMacAddress(mac: String) {
+        uiState = uiState.copy(manualMacAddress = mac)
+    }
+
+    fun connectManualMac(context: Context) {
+        val mac = uiState.manualMacAddress.trim().uppercase()
+        if (!mac.matches(Regex("^([0-9A-F]{2}:){5}[0-9A-F]{2}$"))) {
+            uiState = uiState.copy(status = "Invalid MAC — use XX:XX:XX:XX:XX:XX")
+            return
+        }
+        scanner.stop()
+        init(context)
+        bleService.connect(context, mac)
+        uiState = uiState.copy(
+            isConnected = true,
+            connectedDeviceAddress = mac,
+            selectedDeviceAddress = mac,
+            status = "Connecting to $mac…",
+            screen = AppScreen.DASHBOARD
+        )
     }
 
     // ── Connect ──────────────────────────────────────────────────────────────

@@ -7,42 +7,44 @@ ESP32 (meater.yaml `bluetooth_proxy` + `ble_client`) can discover it.
 
 ## Root Cause
 
-`MeaterBleScanner.kt` filters discovered devices by name:
+`MeaterBleScanner.kt` originally filtered by device name:
 ```kotlin
 val name = result.device.name ?: result.scanRecord?.deviceName ?: return
 if (name.contains("MEATER", ignoreCase = true)) { ... }
 ```
-If the Block's name is not present in the advertising packet (e.g. only in scan
-response, or cached as null), both expressions are null and the device is silently
-dropped before `onDeviceFound` is called.
+If the Block's name is absent from the primary advertising packet, the device was silently dropped.
 
-The ESP32 does NOT filter by name. It identifies MEATER devices by their
-service UUID (`a75cc7fc-c956-488f-ac2a-2dbc08b63a04`), which is always present
-in the primary advertising packet (confirmed in REAL_MEATER_PROBE_CAPTURE.md).
+A second attempt (v0.10.0.4) replaced the name filter with a hardware-level `ScanFilter` on
+the MEATER service UUID (`a75cc7fc-…`). This also failed: the MEATER Block does **not** include
+the service UUID in its advertising packet — it only advertises by name `"MEATER+"`. The service
+UUID is a GATT-layer detail, only visible after connecting.
 
-## Fix
+## Fix (v0.10.0.5)
 
-Replace the software name filter with a hardware-level `ScanFilter` on the MEATER
-service UUID — the same way the ESP32 identifies the device.
+Triple-detection in the scan callback (no hardware filter — scan all, filter in software):
 
-- Add `ScanFilter` + `ScanSettings` (LOW_LATENCY) to `startScan()`
-- Remove `?: return` name guard
-- Use name if present, fall back to address for display
+1. **Service UUID** — bare probe advertising when not Block-connected
+2. **Name prefix "MEATER"** — Block advertising as "MEATER+" or "MEATER"
+3. **Apption Labs OUI** — MAC prefix `B8:1F:5E` (Apption Labs Limited) or `90:21:2E`
+   (Apption Labs Ltd), verified against IEEE OUI database 2026-05-25
+
+Any device matching at least one criterion appears in the discovered list.
+
+Additionally added:
+- **MAC search / filter field** on the scan screen — type any partial MAC (e.g. `B8:1F:5E`)
+  to narrow the discovered list; type a full `XX:XX:XX:XX:XX:XX` address to reveal a
+  "Connect directly" button that bypasses scanning entirely (useful when Block is not advertising)
 
 ## Sessions
 
-### 2026-05-25 — fix implemented
-BLE discovery fixed: `MeaterBleScanner` now filters by service UUID, not name.
+### 2026-05-25 — initial name-filter fix (v0.10.0.3 → 0.10.0.4)
+BLE discovery attempt 1: replace name filter with service UUID `ScanFilter`.
+Also: APK download link fix in build-apk.yml; version label on scan screen.
 
-### 2026-05-25 — fix APK download link on feature branches
-Problem: `build-apk.yml` commits the APK to the current branch, but the README
-download link was hardcoded to `raw/main/...`. So viewing the README on a feature
-branch and clicking "Download" silently pulled the old APK from `main`.
-
-Fix: workflow now rewrites the README link to `raw/<current-branch>/...` before
-committing, so the link on the feature branch always points to the APK just built.
-
-- Added app version (`v{versionName}`) below title on main scan screen
-- Enabled `buildConfig = true` in `build.gradle.kts` to expose `BuildConfig.VERSION_NAME`
-- Bumped version 0.10.0.3 → 0.10.0.4 (versionCode 4 → 5)
-- Updated USER_GUIDE §15 with discovery fix description and new version
+### 2026-05-25 — triple-detection + MAC filter (v0.10.0.4 → 0.10.0.5)
+Discovery still failing because Block does not advertise service UUID.
+- Removed hardware `ScanFilter` (was dropping the Block silently)
+- Added triple-detection in callback: service UUID OR name OR Apption Labs OUI
+- OUIs verified from IEEE database: `B8:1F:5E` = Apption Labs Limited, `90:21:2E` = Apption Labs Ltd
+- Added MAC filter/search text field on scan screen (partial filter + full-MAC direct connect)
+- Bumped 0.10.0.4 → 0.10.0.5 (versionCode 5 → 6)
