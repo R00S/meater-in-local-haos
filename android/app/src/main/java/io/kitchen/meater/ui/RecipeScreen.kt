@@ -50,9 +50,9 @@ fun RecipeScreen(
     val strBack  = if (useSv) "Tillbaka"      else "Back"
     val strTitle = if (useSv && cutNameSv.isNotBlank()) cutNameSv else cutName
 
-    // Load recipe content from assets; done once and cached in remember.
-    val htmlContent = remember(slug) {
-        buildRecipeHtml(context, slug, useSv)
+    // Load the method-specific recipe file; keyed on both slug and method.
+    val htmlContent = remember(slug, method) {
+        buildRecipeHtml(context, slug, method, useSv)
     }
 
     DisposableEffect(Unit) { onDispose { } }
@@ -100,59 +100,46 @@ fun RecipeScreen(
 }
 
 /**
- * Build a complete HTML document from all available recipe files for [slug].
+ * Build a complete HTML document for the specific [method] recipe file of [slug].
  *
- * Loads the master cut file and all method files, strips the HTML comment
- * frontmatter, and wraps the markdown body in styled HTML.
- * Falls back to a "no recipe" message if the asset index is missing.
+ * Loads ONLY the `{slug}-{method}.md` file from assets/recipes/ using EXP_RECIPE_INDEX.
+ * Strips the KCE:CUT_METHOD HTML comment frontmatter, then renders the markdown body.
+ * The master cut profile file is NOT included here — it is shown in CutSelectionScreen.
  */
 private fun buildRecipeHtml(
     context: android.content.Context,
     slug: String,
+    method: String,
     useSv: Boolean
 ): String {
-    // Read the recipe index from kitchen-cooking-panel.js (EXP_RECIPE_INDEX constant).
+    if (method.isBlank()) {
+        val msg = if (useSv) "<p>Ingen tillagningsmetod vald.</p>"
+                  else       "<p>No cooking method selected.</p>"
+        return wrapHtml(slug, msg)
+    }
+
     val index = loadRecipeIndex(context)
 
-    if (index.isEmpty()) {
+    val key = "$slug-$method"
+    val path = index[key]
+
+    if (path == null) {
+        val methodLabel = method.replace('_', ' ')
         val msg = if (useSv)
-            "<p>Receptfiler inte tillgängliga i den här versionen.</p>"
+            "<p>Inget recept hittades för <strong>$methodLabel</strong>.</p>"
         else
-            "<p>Recipe files are not available in this build.</p>"
+            "<p>No recipe found for <strong>$methodLabel</strong>.</p>"
         return wrapHtml(slug, msg)
     }
 
-    val sections = StringBuilder()
-
-    // 1. Master cut file
-    val masterPath = index[slug]
-    if (masterPath != null) {
-        val body = loadAndStripMd(context, masterPath)
-        if (body.isNotBlank()) sections.append(markdownToHtml(body))
-    }
-
-    // 2. Method-specific recipe files (slug-method_name)
-    val methodFiles = index.entries
-        .filter { it.key.startsWith("$slug-") }
-        .sortedBy { it.key }
-
-    methodFiles.forEach { (_, path) ->
-        val body = loadAndStripMd(context, path)
-        if (body.isNotBlank()) {
-            sections.append("<hr>")
-            sections.append(markdownToHtml(body))
-        }
-    }
-
-    if (sections.isEmpty()) {
-        val msg = if (useSv)
-            "<p>Inga receptfiler hittades för den här styckdelen.</p>"
-        else
-            "<p>No recipe files found for this cut.</p>"
+    val body = loadAndStripMd(context, path)
+    if (body.isBlank()) {
+        val msg = if (useSv) "<p>Receptfilen är tom.</p>"
+                  else       "<p>Recipe file is empty.</p>"
         return wrapHtml(slug, msg)
     }
 
-    return wrapHtml(slug, sections.toString())
+    return wrapHtml(slug, markdownToHtml(body))
 }
 
 /**

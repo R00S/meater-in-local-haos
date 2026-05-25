@@ -17,15 +17,15 @@ import io.kitchen.meater.model.BleDevice
 /**
  * BLE scanner that surfaces every nearby device so the user can pick their MEATER+ Block.
  *
- * Scanning approach adapted from grgcmz/BLEScanner (MIT, Giorgio Camozzi 2023):
- *  - Every scan result — including duplicates for the same MAC — is forwarded to [onDeviceFound].
- *    The caller (ViewModel) is responsible for de-duplication and name-accumulation.
- *  - This is critical for MEATER+: the Block sends its name in a SCAN_RSP packet, which arrives
- *    as a *second* onScanResult callback after the initial ADV_IND (often nameless) packet.
- *    If we drop duplicates here, the name is never captured.
- *  - RSSI is included so the UI can sort by signal strength.
- *  - MEATER devices are flagged by name ("MEATER") or Apption Labs OUI (B8:1F:5E / 90:21:2E,
- *    IEEE-verified 2026-05-25).
+ * Pattern copied from grgcmz/BLEScanner (MIT, Giorgio Camozzi 2023):
+ *  - [onDeviceFound] is called directly from the BLE callback thread — no Handler.post().
+ *    The caller (ViewModel) uses Compose mutableStateListOf which is thread-safe and
+ *    triggers recomposition without needing to marshal back to the main thread.
+ *  - Every scan result including duplicates is forwarded (no dedup here) so that
+ *    SCAN_RSP packets carrying the MEATER+ name are not dropped.
+ *  - @SuppressLint("MissingPermission") is placed directly on onScanResult, matching
+ *    the grgcmz/santansarah pattern — permissions are checked once before startScan.
+ *  - MEATER devices are flagged by name or Apption Labs OUI (B8:1F:5E / 90:21:2E).
  */
 class MeaterBleScanner(
     private val onDeviceFound: (BleDevice) -> Unit,
@@ -33,7 +33,6 @@ class MeaterBleScanner(
 ) {
     private val mainHandler = Handler(Looper.getMainLooper())
 
-    // Use BluetoothManager to get adapter (BluetoothAdapter.getDefaultAdapter() is deprecated)
     private fun getAdapter(context: Context): BluetoothAdapter? =
         (context.getSystemService(Context.BLUETOOTH_SERVICE) as? BluetoothManager)?.adapter
 
@@ -54,32 +53,39 @@ class MeaterBleScanner(
 
         val settings = ScanSettings.Builder()
             .setScanMode(ScanSettings.SCAN_MODE_LOW_LATENCY)
-            // Report duplicates so SCAN_RSP packets (which carry the device name) are not dropped
-            .setCallbackType(ScanSettings.CALLBACK_TYPE_ALL_MATCHES)
             .build()
 
         val cb = object : ScanCallback() {
+            // @SuppressLint placed here, matching grgcmz/BLEScanner and santansarah/ble-scanner —
+            // permissions are already verified above; annotation suppresses the IDE warning only.
+            @SuppressLint("MissingPermission")
             override fun onScanResult(callbackType: Int, result: ScanResult) {
-                // Prefer scanRecord name (no permission needed) over device.name (needs CONNECT)
-                val name = result.scanRecord?.deviceName
-                    ?: result.device.name
-                    ?: ""
                 val address = result.device.address
-                val rssi = result.rssi
+                // Use device.name (requires BLUETOOTH_CONNECT, granted at startup).
+                // scanRecord.deviceName is a secondary fallback for the rare case where
+                // CONNECT is unavailable — both reference apps use device.name directly.
+                val name = result.device.name
+                    ?: result.scanRecord?.deviceName
+                    ?: ""
                 val isMeater = name.contains("MEATER", ignoreCase = true)
                     || address.startsWith("B8:1F:5E", ignoreCase = true)
                     || address.startsWith("90:21:2E", ignoreCase = true)
-                val device = BleDevice(
-                    name = name.ifEmpty { address },
-                    address = address,
-                    rssi = rssi,
-                    isMeaterDevice = isMeater
+                // Call directly on BLE callback thread — caller uses mutableStateListOf
+                // which is thread-safe (Compose snapshot state), same as grgcmz pattern.
+                onDeviceFound(
+                    BleDevice(
+                        name = name.ifEmpty { address },
+                        address = address,
+                        rssi = result.rssi,
+                        isMeaterDevice = isMeater
+                    )
                 )
-                mainHandler.post { onDeviceFound(device) }
             }
 
             override fun onScanFailed(errorCode: Int) {
-                mainHandler.post { onError("BLE scan failed: $errorCode") }
+                // Error code 2 = SCAN_FAILED_ALREADY_STARTED: stop and restart (santansarah pattern)
+                if (errorCode == 2) { stop(); start(context) }
+                else mainHandler.post { onError("BLE scan failed: $errorCode") }
             }
         }
 

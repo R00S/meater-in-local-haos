@@ -45,6 +45,7 @@ class MainActivity : ComponentActivity() {
 
                 AppScreen.SCAN, AppScreen.DASHBOARD -> MainScreen(
                     state = state,
+                    discoveredDevices = viewModel.scannedDevices,
                     onScanToggle = {
                         if (state.isScanning) viewModel.stopScan()
                         else viewModel.startScan(this)
@@ -67,7 +68,7 @@ class MainActivity : ComponentActivity() {
                 AppScreen.CUT_SELECTION -> CutSelectionScreen(
                     probeIndex = state.cutSelectionProbeIndex,
                     useSv = state.language == "sv",
-                    onConfirm = { catId, cutId, cutName, cutNameSv, doneness, tempC, restMin ->
+                    onConfirm = { catId, cutId, cutName, cutNameSv, doneness, tempC, restMin, method ->
                         viewModel.startCooking(
                             probeIndex = state.cutSelectionProbeIndex,
                             proteinCategory = catId,
@@ -76,16 +77,17 @@ class MainActivity : ComponentActivity() {
                             cutDisplayNameSv = cutNameSv,
                             doneness = doneness,
                             targetTempC = tempC,
-                            restMinutes = restMin
+                            restMinutes = restMin,
+                            cookingMethod = method
                         )
                     },
-                    onViewRecipe = { slug, cutName, cutNameSv, categoryId ->
+                    onViewRecipe = { slug, cutName, cutNameSv, method ->
                         viewModel.openRecipe(
                             probeIndex = state.cutSelectionProbeIndex,
                             slug = slug,
                             cutName = cutName,
                             cutNameSv = cutNameSv,
-                            categoryId = categoryId
+                            method = method
                         )
                     },
                     onCancel = { viewModel.backToDashboard() }
@@ -100,6 +102,7 @@ class MainActivity : ComponentActivity() {
                     slug = state.recipeCutSlug,
                     cutName = state.recipeCutName,
                     cutNameSv = state.recipeCutNameSv,
+                    method = state.recipeMethod,
                     useSv = state.language == "sv",
                     onBack = { viewModel.backToDashboard() }
                 )

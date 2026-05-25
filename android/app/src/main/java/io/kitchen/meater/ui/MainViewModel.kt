@@ -2,6 +2,7 @@ package io.kitchen.meater.ui
 
 import android.content.Context
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
@@ -27,7 +28,6 @@ enum class AppScreen {
 data class MainUiState(
     val screen: AppScreen = AppScreen.PERMISSIONS,
     val isScanning: Boolean = false,
-    val discoveredDevices: List<BleDevice> = emptyList(),
     val knownProbes: List<BleDevice> = emptyList(),
     val selectedDeviceAddress: String? = null,
     val connectedDeviceAddress: String? = null,
@@ -51,39 +51,40 @@ class MainViewModel : ViewModel() {
     var uiState by mutableStateOf(MainUiState())
         private set
 
+    // Scan results — mutableStateListOf is Compose snapshot state, thread-safe from the BLE
+    // binder thread (grgcmz/BLEScanner pattern: no Handler.post() needed).
+    val scannedDevices = mutableStateListOf<BleDevice>()
+
     private var notificationHelper: NotificationHelper? = null
     private var historyRepository: SessionHistoryRepository? = null
     private var probeRepository: ProbeRepository? = null
 
     private val scanner = MeaterBleScanner(
         onDeviceFound = { device ->
-            // Always update the entry for this MAC — this is the key fix for MEATER+ name
-            // discovery. The Block sends an ADV_IND packet first (often with no name), then a
-            // SCAN_RSP packet with "MEATER+" as the name. We must NOT discard the second result.
-            // Approach adapted from grgcmz/BLEScanner (MIT, Giorgio Camozzi 2023): accumulate
-            // the best name seen for each MAC; always keep the latest RSSI.
-            val existing = uiState.discoveredDevices.find { it.address == device.address }
-            val updated = if (existing != null) {
-                // Keep the better name (non-MAC name wins over MAC-as-name fallback)
+            // Called from BLE binder thread — mutableStateListOf is thread-safe.
+            // Accumulate the best name seen for each MAC; keep the latest RSSI.
+            val idx = scannedDevices.indexOfFirst { it.address == device.address }
+            if (idx >= 0) {
+                val existing = scannedDevices[idx]
                 val bestName = when {
-                    device.name != device.address                    -> device.name
-                    existing.name != existing.address                -> existing.name
-                    else                                             -> device.address
+                    device.name  != device.address  -> device.name
+                    existing.name != existing.address -> existing.name
+                    else                              -> device.address
                 }
-                existing.copy(
+                scannedDevices[idx] = existing.copy(
                     name = bestName,
                     rssi = device.rssi,
                     isMeaterDevice = device.isMeaterDevice || existing.isMeaterDevice
                 )
             } else {
-                device
+                scannedDevices.add(device)
             }
-            val others = uiState.discoveredDevices.filter { it.address != device.address }
-            // Sort: MEATER devices first, then by RSSI descending (closest first)
-            val sorted = (others + updated).sortedWith(
+            // Re-sort in place: MEATER first, then by RSSI descending
+            val sorted = scannedDevices.sortedWith(
                 compareByDescending<BleDevice> { it.isMeaterDevice }.thenByDescending { it.rssi }
             )
-            uiState = uiState.copy(discoveredDevices = sorted)
+            scannedDevices.clear()
+            scannedDevices.addAll(sorted)
         },
         onError = { message ->
             uiState = uiState.copy(status = message, isScanning = false)
@@ -141,10 +142,10 @@ class MainViewModel : ViewModel() {
 
     fun startScan(context: Context) {
         init(context)
+        scannedDevices.clear()
         uiState = uiState.copy(
             isScanning = true,
             status = "Scanning for BLE devices…",
-            discoveredDevices = emptyList(),
             selectedDeviceAddress = null
         )
         scanner.start(context)
@@ -191,7 +192,7 @@ class MainViewModel : ViewModel() {
             uiState = uiState.copy(status = "Select a device first")
             return
         }
-        val device = uiState.discoveredDevices.find { it.address == selected }
+        val device = scannedDevices.find { it.address == selected }
             ?: BleDevice(name = selected, address = selected)
         connectToAddress(context, device)
     }

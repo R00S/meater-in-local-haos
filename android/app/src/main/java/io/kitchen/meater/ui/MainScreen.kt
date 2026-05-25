@@ -34,6 +34,7 @@ private val FULL_MAC = Regex("^([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}\$")
 @Composable
 fun MainScreen(
     state: MainUiState,
+    discoveredDevices: List<BleDevice>,
     onScanToggle: () -> Unit,
     onSelectDevice: (String) -> Unit,
     onConnectToggle: () -> Unit,
@@ -139,13 +140,13 @@ fun MainScreen(
                 Text(strNearby, style = MaterialTheme.typography.titleMedium)
                 Spacer(modifier = Modifier.height(6.dp))
 
-                if (state.discoveredDevices.isEmpty()) {
+                if (discoveredDevices.isEmpty()) {
                     Text(strScanHint, style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
 
                 // Sorted: MEATER first, then RSSI descending — sorting done in ViewModel
-                state.discoveredDevices.forEach { device ->
+                discoveredDevices.forEach { device ->
                     DeviceRow(
                         device = device,
                         // One-tap connect: tap the row to connect immediately

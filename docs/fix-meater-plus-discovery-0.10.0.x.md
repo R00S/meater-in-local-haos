@@ -108,9 +108,58 @@ readCharacteristic(batt).
 
 Version bump: 0.10.0.6 → 0.10.0.7 (versionCode 7 → 8).
 
-## Sessions
+### 2026-05-26 — Fix 3 issues: BLE scan, cook path, recipe display (v0.10.0.10)
 
-### 2026-05-25 — initial name-filter fix (v0.10.0.3 → 0.10.0.4)
+**Issue 1 — BLE scanning shows nothing**
+
+Root cause (identified via research of grgcmz/BLEScanner and santansarah/ble-scanner):
+Previous code wrapped every `onScanResult` result in `Handler(Looper.getMainLooper()).post {}`.
+Neither working reference app does this. grgcmz calls directly into Compose `mutableStateListOf`
+from the BLE callback thread; santansarah dispatches to a coroutine scope.
+
+Additionally, previous code accessed `result.scanRecord?.deviceName` first, then `result.device.name`
+as fallback — both reference apps use `result.device.name` directly with `@SuppressLint` on
+`onScanResult` itself (not on the outer `start()` function).
+
+Fix:
+- `MeaterBleScanner.kt`: removed `mainHandler` / `Handler.post`. `onDeviceFound` is now called
+  directly from the BLE callback thread. `@SuppressLint("MissingPermission")` moved to
+  `onScanResult` directly (matching grgcmz/santansarah pattern). `setCallbackType()` call removed
+  (both reference apps rely on the `CALLBACK_TYPE_ALL_MATCHES` default). Auto-retry on
+  `SCAN_FAILED_ALREADY_STARTED` (errorCode 2) copied from santansarah.
+- `MainViewModel.kt`: `discoveredDevices` removed from `MainUiState`. New field
+  `val scannedDevices = mutableStateListOf<BleDevice>()` on the ViewModel directly.
+  `onDeviceFound` callback mutates `scannedDevices` from BLE thread — thread-safe because
+  Compose snapshot state supports concurrent writes.
+- `MainScreen.kt`: accepts `discoveredDevices: List<BleDevice>` as a separate parameter.
+- `MainActivity.kt`: passes `viewModel.scannedDevices` to `MainScreen`.
+
+**Issue 2 — Recipes show whole cut files**
+
+Root cause: `RecipeScreen.buildRecipeHtml` concatenated the master cut profile file plus ALL
+method files, giving the user a wall of unrelated content.
+
+Fix: `RecipeScreen` now takes a `method: String` parameter and loads ONLY the
+`{slug}-{method}.md` file from `EXP_RECIPE_INDEX`. The master cut file is not loaded.
+`CutSelectionScreen` navigates here with the selected method slug.
+
+**Issue 3 — Cook path missing steps**
+
+Root cause: after selecting doneness, `onConfirm` fired immediately, skipping temperature
+fine-tuning and cooking method selection entirely.
+
+Fix: Full KCE MEATER cook path implemented in `CutSelectionScreen`:
+- Step 4: Doneness selection (stores `selectedDoneness`, does NOT call `onConfirm`)
+- Step 5: Target temperature fine-tuning (slider 35–100°C, ±1 buttons, USDA safety warning,
+  reset-to-default button)
+- Step 6: Cooking method selection (from `cut.supportedMethods`); recipe titles shown inline
+  per method when the method card is expanded; clicking a title opens `RecipeScreen`
+- Step 7: Start Cook button (enabled when doneness selected + method selected if methods exist)
+- `onConfirm` now passes `cookingMethod`; `CookingSession.cookingMethod` stores it.
+- `CookingDataRepository.recipeTitles` loaded from `RECIPE_TITLES_INDEX` in
+  `kitchen-cooking-panel.js`.
+
+Version bump: 0.10.0.9 → 0.10.0.10 (versionCode 10 → 11).
 BLE discovery attempt 1: replace name filter with service UUID `ScanFilter`.
 Also: APK download link fix in build-apk.yml; version label on scan screen.
 
