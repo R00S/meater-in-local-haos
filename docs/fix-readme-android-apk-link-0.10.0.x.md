@@ -13,5 +13,5 @@ Add APK build and attachment steps directly inside `create-test-release.yml`, so
 
 ## Status
 - [x] Root cause identified
-- [ ] Fix applied to create-test-release.yml
-- [ ] Timeline file created and committed
+- [x] Fix applied to create-test-release.yml — added Java/Gradle APK build steps before the Python steps, and added meater-kitchen.apk to the release files list
+- [x] Timeline file created and committed
