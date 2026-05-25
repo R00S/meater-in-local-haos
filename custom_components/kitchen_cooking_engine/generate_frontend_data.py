@@ -1310,6 +1310,20 @@ import {{
     
     print(f"Regenerated {panel_file}")
 
+    # Copy the generated panel JS to the Android assets directory so the Android
+    # app (CookingDataRepository) can read EXP_TREE / EXP_DONENESS_OPTIONS from it.
+    # The assets copy is git-ignored — kitchen-cooking-panel.js lives only in www/
+    # in the repo; the copy is a build artifact produced by this generator.
+    import shutil as _shutil
+    android_assets = os.path.normpath(
+        os.path.join(base_dir, "..", "..", "android", "app", "src", "main", "assets")
+    )
+    if os.path.isdir(android_assets):
+        _shutil.copy2(panel_file, os.path.join(android_assets, "kitchen-cooking-panel.js"))
+        print(f"Copied panel JS to Android assets ({android_assets})")
+    else:
+        print(f"  Note: Android assets dir not found, skipping copy to Android")
+
     # Count Ninja Combi recipes
     try:
         base_dir = os.path.dirname(os.path.abspath(__file__))

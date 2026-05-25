@@ -50,7 +50,23 @@ Discovery still failing because Block does not advertise service UUID.
 - Added MAC filter/search text field on scan screen (partial filter + full-MAC direct connect)
 - Bumped 0.10.0.4 → 0.10.0.5 (versionCode 5 → 6)
 
-### 2026-05-25 — architecture fix: panel.js as ground truth + start-cook flow (v0.10.0.6)
+### 2026-05-25 — dedup kitchen-cooking-panel.js (v0.10.0.6 no version bump)
+Removed duplicate data from the repo per user requirement:
+
+- `android/app/src/main/assets/kitchen-cooking-panel.js` removed from git tracking.
+  Added to `.gitignore`. It is now a build artifact, not a committed file.
+- `generate_frontend_data.py` updated: after writing `www/kitchen-cooking-panel.js` it
+  copies it to Android assets. Running the generator keeps both in sync locally.
+- `build-apk.yml` updated: a `cp` step before Gradle copies the canonical JS to assets.
+  CI never needs to commit the file.
+
+Single source of truth chain:
+  `www/recipes/*.md` → `generate_frontend_data.py` → `www/kitchen-cooking-panel.js`
+                                                      ↓ (copy, build-time only)
+                                       `android/app/src/main/assets/kitchen-cooking-panel.js`
+                                                      ↓ (parsed by CookingDataRepository)
+                                                    APK cut-selection tree
+
 Addressed three issues raised after v0.10.0.6 APK test:
 
 1. `CookingDataRepository` rewrote to parse `EXP_TREE` and `EXP_DONENESS_OPTIONS` directly
