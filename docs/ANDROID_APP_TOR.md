@@ -109,13 +109,22 @@ Based on protocol documentation in `halted-ble-server-dev/MEATER_BLE_PROTOCOL.md
 
 ### 4.2 Cooking UI
 
-The UI shall be a port/reuse of the KCE MEATER path panel:
-- Option A: Embed KCE panel JS in a WebView with a local data bridge (preferred)
-- Option B: Native Android (Kotlin/Compose) re-implementation of the KCE MEATER path UI
+> ⛔ **FIRM REQUIREMENT — ONE GUI, NO EXCEPTIONS**
+>
+> The cooking path UI (protein tree, cut selection, doneness, temp graph, ETA, recipe cards) **must** be rendered by embedding the KCE LitElement panel (`www/kitchen-cooking-panel.js`) inside an Android WebView with a local data bridge.
+>
+> A native Kotlin/Compose reimplementation of the cooking path UI is **explicitly forbidden**. Reasons:
+>
+> 1. **Single source of truth** — Any UI improvement made to the KCE HAOS panel is automatically available to the Android app with zero extra work. A Compose copy creates two codebases that immediately diverge.
+> 2. **History** — A full agent-day was spent attempting to match the KCE GUI in native Compose. Despite extensive instructions the result was never faithful. The only reliable way to guarantee the Android UI matches KCE is to run the exact same code.
+> 3. **This is a design constraint, not a preference** — Future agents must not introduce or restore any native Compose implementation of the cooking selection or cooking session screens.
 
 The AI recipe generator is **excluded**. Cut file recipes (from KCE:CUT files) are **included**.
 
-Option A (WebView) is preferred for v0.10.x — avoids duplicating cooking data and UI logic; the KCE JS panel already works well.
+The only accepted implementation path:
+- Embed `www/kitchen-cooking-panel.js` in an Android WebView
+- Bridge BLE data (temperatures, probe state) from Kotlin to the JS panel via `WebView.evaluateJavascript()` or `JavascriptInterface`
+- The WebView serves the panel from local assets — no CDN, no network requests
 
 ### 4.3 Data Source
 
@@ -211,7 +220,7 @@ The Android app is a **sibling project** within this repository. It shares:
 | `android/` directory | Android app project (Kotlin, Gradle) in this repository |
 | BLE service module | `MeaterBleService.kt` — GATT client to MEATER+ Block, multi-probe temp decode, notifications |
 | Cooking engine module | Port of KCE cooking algorithm (ETA, resting, doneness) to Kotlin; one engine instance per probe |
-| UI module | WebView-based MEATER path panel OR Compose UI; multi-probe dashboard |
+| UI module | WebView-based MEATER path panel (KCE LitElement panel in local WebView); multi-probe dashboard — **no native Compose cooking UI** |
 | Data build script | Script to bundle KCE:CUT data assets into APK |
 | README for Android | Setup, build instructions, Block cloud-disconnect guide |
 | Release APK | Distributed via GitHub Releases (publish-apk workflow); version follows KCE versioning |
@@ -226,7 +235,8 @@ The Android app is a **sibling project** within this repository. It shares:
 | MEATER+ BLE protocol changes in firmware | Pin to known-good Block firmware; document tested version |
 | GATT protocol gaps (partial reverse-engineering) | Use verified formulas from Temperature.java; test against real Block |
 | Multi-probe GATT enumeration | Protocol must enumerate all probe slots exposed by Block; test with 2+ live probes |
-| WebView performance on older Android | Test on API 29; fall back to Compose if unacceptable |
+| WebView performance on older Android | Test on API 29; optimise WebView initialisation — native Compose cooking UI is **not** a fallback option |
+| **Native Compose cooking UI introduced by agent** | Any agent that introduces a Compose reimplementation of the cooking path UI is violating this ToR; revert and use WebView |
 
 ### 9.1 Research Note — MEATER 2 and MEATER Link
 
@@ -272,6 +282,33 @@ Version is encoded in the APK `versionName` and displayed in the app's About scr
 - HA integration bridge (sending probe data back to HA)
 - AI recipe generator
 - Cuisine / ingredient browser
+
+---
+
+## 13. Mandatory Architectural Constraint — One GUI for KCE Meater Path
+
+This section is a hard constraint that supersedes any agent's judgment about implementation convenience.
+
+### The Rule
+
+**The cooking path UI — protein tree, cut selection, doneness selection, temperature graph, ETA, and recipe cards — must be the KCE LitElement panel running in an Android WebView. A native Kotlin/Compose reimplementation of these screens is forbidden.**
+
+### Why This Rule Exists
+
+The KCE HAOS panel (`www/kitchen-cooking-panel.js`) is the single source of truth for the cooking path GUI. It is generated from `www/panel-class-template.js` and cooking data from `www/recipes/` KCE:CUT files. When the panel is improved in HAOS, those improvements must automatically appear in the Android app — not require a second manual port.
+
+A full agent-day was spent attempting to match the KCE GUI faithfully in native Kotlin/Compose. Despite explicit step-by-step instructions, the Compose implementation was never visually or behaviourally faithful to the KCE panel. The correct lesson is: **do not duplicate — embed**.
+
+### What This Means for Future Agents
+
+- Do **not** create, restore, or expand any `CutSelectionScreen.kt`, `CookingScreen.kt`, or any Compose screen that reimplements cooking path UI elements.
+- Do **not** argue that "WebView black-screen issues" justify a Compose fallback — the black screen was a CDN/offline loading bug, not a WebView fundamental. The fix is local asset serving, not reimplementation.
+- The `WebViewCookingScreen.kt` with local asset loading is the correct path. Improve it; do not replace it.
+- If an agent introduces native Compose cooking UI regardless, a subsequent agent must revert it and restore the WebView path.
+
+### Scope Clarification
+
+This constraint applies **only to the cooking path screens**. Navigation chrome, BLE scan, probe list, history list, settings, and other non-cooking-path screens may be native Compose.
 
 ---
 
