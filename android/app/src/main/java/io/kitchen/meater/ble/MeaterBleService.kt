@@ -282,10 +282,14 @@ class MeaterBleService(
         return (u16(payload[0], payload[1]) * 10).coerceIn(0, 100)
     }
 
-    private fun toCelsius(raw: Int): Int = when {
-        raw > 0 -> (raw + 8) / 32
-        raw < 0 -> (raw - 8) / 32
-        else    -> 0
+    // Mirrors the algorithm in meater.yaml (and nathanfaber/meaterble):
+    //   tip_celsius = (x[0] + (x[1] << 8) + 8.0) / 16.0
+    // The previous /32 divisor produced exactly half the real Celsius value
+    // (e.g. boiling water tip reading ~30–47 °C instead of ~95–100 °C).
+    private fun toCelsius(raw: Int): Float = when {
+        raw > 0 -> (raw + 8) / 16f
+        raw < 0 -> (raw - 8) / 16f
+        else    -> 0f
     }
 
     private fun u16(low: Byte, high: Byte): Int =

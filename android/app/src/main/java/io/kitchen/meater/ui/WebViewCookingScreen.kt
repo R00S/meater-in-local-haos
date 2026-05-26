@@ -230,8 +230,38 @@ fun WebViewCutSelectionScreen(
                             override fun shouldInterceptRequest(
                                 view: WebView,
                                 request: WebResourceRequest
-                            ): WebResourceResponse? =
-                                assetLoader.shouldInterceptRequest(request.url)
+                            ): WebResourceResponse? {
+                                // The KCE panel's RECIPE_INDEX uses absolute HA panel URLs
+                                // like "/kitchen_cooking_engine_panel/recipes/fish/salmon/
+                                // salmon_fillet-pan_sear.md". In standalone Android there is
+                                // no HA server, so we serve those out of the bundled APK
+                                // assets at assets/recipes/... — the recipe files were
+                                // copied there by generate_frontend_data.py + the
+                                // build-apk.yml workflow.
+                                //
+                                // This MUST be intercepted (not reimplemented natively) so
+                                // the panel's own fullscreen recipe viewer renders the
+                                // markdown — per ToR §13, cook-path UI lives in the KCE
+                                // panel, not in Kotlin.
+                                val path = request.url.path ?: ""
+                                val recipePrefix = "/kitchen_cooking_engine_panel/recipes/"
+                                if (path.startsWith(recipePrefix)) {
+                                    val rel = "recipes/" + path.removePrefix(recipePrefix)
+                                    return try {
+                                        WebResourceResponse(
+                                            "text/markdown",
+                                            "utf-8",
+                                            ctx.assets.open(rel)
+                                        )
+                                    } catch (_: Exception) {
+                                        WebResourceResponse(
+                                            "text/plain", "utf-8", 404, "Not Found",
+                                            null, null
+                                        )
+                                    }
+                                }
+                                return assetLoader.shouldInterceptRequest(request.url)
+                            }
                         }
                         wv.addJavascriptInterface(
                             CutSelectionBridgeImpl(
