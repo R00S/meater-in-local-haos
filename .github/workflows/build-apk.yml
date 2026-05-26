@@ -68,6 +68,7 @@ jobs:
       - name: Update README download link for this branch
         run: |
           BRANCH="${{ github.ref_name }}"
+          VERSION="${{ steps.version.outputs.name }}"
           # Branch names contain slashes (e.g. "copilot/fix-foo"), so the path
           # between "raw/" and "/android/apk/" can span multiple segments. Match
           # any non-paren / non-space chars instead of a single path segment.
@@ -75,10 +76,18 @@ jobs:
           # (slashes in the branch are already fine since we use '|' as delimiter).
           BRANCH_ESCAPED="${BRANCH//|/\\|}"
           sed -i "s|raw/[^ )]*/android/apk/meater-kitchen-latest\.apk|raw/${BRANCH_ESCAPED}/android/apk/meater-kitchen-latest.apk|g" README.md
+          # Update the visible version label(s) between the APK_VERSION markers.
+          sed -i "s|<!--APK_VERSION-->[^<]*<!--/APK_VERSION-->|<!--APK_VERSION-->v${VERSION}<!--/APK_VERSION-->|g" README.md
+          sed -i "s|<!--APK_VERSION_PATH-->[^<]*<!--/APK_VERSION_PATH-->|<!--APK_VERSION_PATH-->${VERSION}<!--/APK_VERSION_PATH-->|g" README.md
           # Fail loudly if the link is still pointing somewhere else after the rewrite.
           if ! grep -q "raw/${BRANCH}/android/apk/meater-kitchen-latest.apk" README.md; then
             echo "::error::README download link was not rewritten to branch ${BRANCH}"
             grep -n "android/apk/meater-kitchen-latest.apk" README.md || true
+            exit 1
+          fi
+          if ! grep -q "<!--APK_VERSION-->v${VERSION}<!--/APK_VERSION-->" README.md; then
+            echo "::error::README APK version label was not updated to v${VERSION}"
+            grep -n "APK_VERSION" README.md || true
             exit 1
           fi
 
