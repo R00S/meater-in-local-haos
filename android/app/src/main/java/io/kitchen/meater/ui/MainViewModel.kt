@@ -1,6 +1,8 @@
 package io.kitchen.meater.ui
 
 import android.content.Context
+import android.os.Handler
+import android.os.Looper
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
@@ -59,6 +61,33 @@ class MainViewModel : ViewModel() {
     private var historyRepository: SessionHistoryRepository? = null
     private var probeRepository: ProbeRepository? = null
 
+    // ── Auto-reconnect state ─────────────────────────────────────────────────
+    private var appContext: Context? = null
+    private var isManualDisconnect = false
+    private var reconnectAttempts = 0
+    private val maxReconnectAttempts = 3
+    private var lastConnectedDevice: BleDevice? = null
+    private val reconnectHandler = Handler(Looper.getMainLooper())
+    private val reconnectRunnable = Runnable { attemptReconnect() }
+
+    private fun attemptReconnect() {
+        val ctx = appContext ?: run { fallBackToScan(); return }
+        val device = lastConnectedDevice ?: run { fallBackToScan(); return }
+        reconnectAttempts++
+        uiState = uiState.copy(status = "Reconnecting… ($reconnectAttempts/$maxReconnectAttempts)")
+        bleService.connect(ctx, device.address)
+    }
+
+    private fun fallBackToScan() {
+        reconnectAttempts = 0
+        uiState = uiState.copy(
+            isConnected = false,
+            connectedDeviceAddress = null,
+            status = "Connection lost",
+            screen = AppScreen.SCAN
+        )
+    }
+
     private val scanner = MeaterBleScanner(
         onDeviceFound = { device ->
             // Called from BLE binder thread — mutableStateListOf is thread-safe.
@@ -93,6 +122,18 @@ class MainViewModel : ViewModel() {
 
     private val bleService = MeaterBleService(
         onStatus = { message -> uiState = uiState.copy(status = message) },
+        onConnected = {
+            // Fires when GATT services are discovered and subscriptions are ready.
+            // For an auto-reconnect this re-establishes isConnected without
+            // changing the screen — the user stays on DASHBOARD / CUT_SELECTION.
+            reconnectAttempts = 0
+            val addr = lastConnectedDevice?.address ?: uiState.connectedDeviceAddress
+            uiState = uiState.copy(
+                isConnected = true,
+                connectedDeviceAddress = addr,
+                status = "Connected"
+            )
+        },
         onTemperature = { probeIndex, tipC, ambientC ->
             handleTemperatureUpdate(probeIndex, tipC, ambientC)
         },
@@ -106,17 +147,35 @@ class MainViewModel : ViewModel() {
             uiState = uiState.copy(sessions = sessions)
         },
         onDisconnected = {
-            uiState = uiState.copy(
-                isConnected = false,
-                connectedDeviceAddress = null,
-                status = "Disconnected",
-                screen = AppScreen.SCAN
-            )
+            reconnectHandler.removeCallbacks(reconnectRunnable)
+            if (isManualDisconnect) {
+                // User tapped Disconnect — clear everything and go to scan.
+                isManualDisconnect = false
+                reconnectAttempts = 0
+                uiState = uiState.copy(
+                    isConnected = false,
+                    connectedDeviceAddress = null,
+                    status = "Disconnected",
+                    screen = AppScreen.SCAN
+                )
+            } else if (reconnectAttempts < maxReconnectAttempts && lastConnectedDevice != null) {
+                // Involuntary disconnect (Block reconnecting to cloud, etc.).
+                // Keep the current screen — silently retry in the background.
+                uiState = uiState.copy(
+                    isConnected = false,
+                    connectedDeviceAddress = null,
+                    status = "Connection lost — reconnecting…"
+                )
+                reconnectHandler.postDelayed(reconnectRunnable, 3_000L)
+            } else {
+                fallBackToScan()
+            }
         },
         onError = { message -> uiState = uiState.copy(status = message) }
     )
 
     fun init(context: Context) {
+        appContext = context.applicationContext
         notificationHelper = NotificationHelper(context)
         historyRepository = SessionHistoryRepository(context)
         probeRepository = ProbeRepository(context)
@@ -177,6 +236,8 @@ class MainViewModel : ViewModel() {
 
     fun connectOrDisconnect(context: Context) {
         if (uiState.isConnected) {
+            isManualDisconnect = true
+            reconnectHandler.removeCallbacks(reconnectRunnable)
             bleService.disconnect()
             uiState = uiState.copy(
                 isConnected = false,
@@ -207,6 +268,9 @@ class MainViewModel : ViewModel() {
     }
 
     private fun connectToAddress(context: Context, device: BleDevice) {
+        reconnectHandler.removeCallbacks(reconnectRunnable)
+        reconnectAttempts = 0
+        lastConnectedDevice = device
         scanner.stop()
         init(context)
         bleService.connect(context, device.address)
@@ -367,6 +431,7 @@ class MainViewModel : ViewModel() {
     }
 
     override fun onCleared() {
+        reconnectHandler.removeCallbacks(reconnectRunnable)
         scanner.stop()
         bleService.disconnect()
         super.onCleared()

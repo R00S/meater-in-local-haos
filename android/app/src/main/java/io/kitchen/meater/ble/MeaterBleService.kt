@@ -31,6 +31,7 @@ import kotlin.math.min
  */
 class MeaterBleService(
     private val onStatus: (String) -> Unit,
+    private val onConnected: () -> Unit,
     private val onTemperature: (probeIndex: Int, tipCelsius: Float, ambientCelsius: Float) -> Unit,
     private val onBattery: (probeIndex: Int, percent: Int) -> Unit,
     private val onDisconnected: () -> Unit,
@@ -175,6 +176,7 @@ class MeaterBleService(
             val count = meaterServices.size
             mainHandler.post {
                 onStatus("Connected ($count probe slot${if (count != 1) "s" else ""})")
+                onConnected()
             }
             // Start keepalive pings so the link stays up while the probe is idle.
             mainHandler.postDelayed(keepaliveRunnable, KEEPALIVE_INTERVAL_MS)
