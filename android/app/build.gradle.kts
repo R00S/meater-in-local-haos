@@ -21,8 +21,8 @@ android {
         applicationId = "io.kitchen.meater"
         minSdk = 29
         targetSdk = 35
-        versionCode = 18
-        versionName = "0.10.0.17"
+        versionCode = 24
+        versionName = "0.10.1.5"
 
         // GIT_BRANCH is injected by the build-apk.yml workflow so the version line in
         // the app shows which branch the APK was built from (e.g. "copilot/fix-…").

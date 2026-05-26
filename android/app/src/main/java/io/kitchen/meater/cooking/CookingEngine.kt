@@ -19,6 +19,9 @@ object CookingEngine {
     private const val MINUTES_PER_DEGREE_C = 1.5
     private const val MAX_TEMP_HISTORY = 50
     private const val RATE_WINDOW_SECONDS = 300L   // 5 minutes
+    private const val REST_AMBIENT_MARGIN_C = 8f
+    private const val DONE_AMBIENT_MARGIN_C = 4f
+    private const val STABLE_OR_COOLING_SLOPE_C_PER_MIN = 0.1f
 
     /**
      * Process a new temperature reading and return an updated session.
@@ -37,7 +40,22 @@ object CookingEngine {
 
         val targetC = session.targetTempC
 
-        // Resting phase — check completion
+        if (session.state == CookingState.WAITING_FOR_REST_ACK) {
+            val shouldAutoStartRest =
+                targetC != null &&
+                    shouldAutoStartRest(targetC.toFloat(), tipC, ambientC)
+
+            return session.copy(
+                tipCelsius = tipC,
+                ambientCelsius = ambientC,
+                tempHistory = newHistory,
+                state = if (shouldAutoStartRest) CookingState.RESTING else CookingState.WAITING_FOR_REST_ACK,
+                etaMinutes = null,
+                restStartedAt = if (shouldAutoStartRest) now else session.restStartedAt,
+                transitionTriggeredAt = if (shouldAutoStartRest) null else (session.transitionTriggeredAt ?: now)
+            )
+        }
+
         if (session.state == CookingState.RESTING) {
             val restStart = session.restStartedAt ?: now
             val restElapsedMin = (now.epochSecond - restStart.epochSecond) / 60f
@@ -47,7 +65,22 @@ object CookingEngine {
                 tipCelsius = tipC,
                 ambientCelsius = ambientC,
                 tempHistory = newHistory,
-                state = if (done) CookingState.DONE else CookingState.RESTING
+                state = if (done) CookingState.WAITING_FOR_DONE_ACK else CookingState.RESTING,
+                transitionTriggeredAt = if (done) now else session.transitionTriggeredAt
+            )
+        }
+
+        if (session.state == CookingState.WAITING_FOR_DONE_ACK) {
+            val shouldAutoComplete =
+                shouldAutoCompleteRest(tipC, ambientC, newHistory)
+
+            return session.copy(
+                tipCelsius = tipC,
+                ambientCelsius = ambientC,
+                tempHistory = newHistory,
+                state = if (shouldAutoComplete) CookingState.DONE else CookingState.WAITING_FOR_DONE_ACK,
+                etaMinutes = null,
+                transitionTriggeredAt = if (shouldAutoComplete) null else (session.transitionTriggeredAt ?: now)
             )
         }
 
@@ -57,31 +90,23 @@ object CookingEngine {
         }
 
         val newState = when {
-            tipC >= targetC -> CookingState.GOAL_REACHED
+            tipC >= targetC -> CookingState.WAITING_FOR_REST_ACK
             tipC >= targetC - APPROACHING_THRESHOLD_C -> CookingState.APPROACHING
             else -> CookingState.COOKING
         }
 
-        val etaMin = if (newState != CookingState.GOAL_REACHED) {
+        val etaMin = if (newState != CookingState.WAITING_FOR_REST_ACK) {
             calculateEta(tipC, targetC.toFloat(), newHistory)
         } else 0
-
-        // Transition to resting when goal first reached
-        val (finalState, restStart) = when {
-            newState == CookingState.GOAL_REACHED && session.state != CookingState.GOAL_REACHED ->
-                CookingState.RESTING to now
-            newState == CookingState.GOAL_REACHED ->
-                CookingState.RESTING to (session.restStartedAt ?: now)
-            else -> newState to session.restStartedAt
-        }
 
         return session.copy(
             tipCelsius = tipC,
             ambientCelsius = ambientC,
             tempHistory = newHistory,
-            state = finalState,
-            etaMinutes = if (finalState == CookingState.COOKING || finalState == CookingState.APPROACHING) etaMin else null,
-            restStartedAt = restStart
+            state = newState,
+            etaMinutes = if (newState == CookingState.COOKING || newState == CookingState.APPROACHING) etaMin else null,
+            restStartedAt = session.restStartedAt,
+            transitionTriggeredAt = if (newState == CookingState.WAITING_FOR_REST_ACK && session.state != CookingState.WAITING_FOR_REST_ACK) now else session.transitionTriggeredAt
         )
     }
 
@@ -110,10 +135,31 @@ object CookingEngine {
         state = CookingState.COOKING,
         cookStartedAt = Instant.now(),
         etaMinutes = null,
+        fiveMinuteRemainingNotified = false,
         tempHistory = emptyList(),
         restStartedAt = null,
+        transitionTriggeredAt = null,
         restNotified = false
     )
+
+    fun acknowledgeRest(session: CookingSession): CookingSession {
+        if (session.state != CookingState.WAITING_FOR_REST_ACK) return session
+        return session.copy(
+            state = CookingState.RESTING,
+            restStartedAt = Instant.now(),
+            transitionTriggeredAt = null,
+            etaMinutes = null
+        )
+    }
+
+    fun acknowledgeDone(session: CookingSession): CookingSession {
+        if (session.state != CookingState.WAITING_FOR_DONE_ACK) return session
+        return session.copy(
+            state = CookingState.DONE,
+            transitionTriggeredAt = null,
+            etaMinutes = null
+        )
+    }
 
     /**
      * Calculate ETA in minutes.
@@ -144,5 +190,35 @@ object CookingEngine {
         }
 
         return (tempDiff * MINUTES_PER_DEGREE_C).toInt()
+    }
+
+    private fun shouldAutoStartRest(targetC: Float, tipC: Float, ambientC: Float): Boolean {
+        if (tipC < targetC) return false
+        return ambientC <= tipC + REST_AMBIENT_MARGIN_C
+    }
+
+    private fun shouldAutoCompleteRest(
+        tipC: Float,
+        ambientC: Float,
+        history: List<TempSample>
+    ): Boolean {
+        val ambientSettled = ambientC <= tipC + DONE_AMBIENT_MARGIN_C
+        val slope = temperatureSlopePerMinute(history)
+        return ambientSettled && slope <= STABLE_OR_COOLING_SLOPE_C_PER_MIN
+    }
+
+    private fun temperatureSlopePerMinute(history: List<TempSample>): Float {
+        val now = Instant.now()
+        val recentSamples = history.filter {
+            now.epochSecond - it.time.epochSecond <= RATE_WINDOW_SECONDS
+        }
+        if (recentSamples.size < 2) return 0f
+
+        val first = recentSamples.first()
+        val last = recentSamples.last()
+        val minutes = (last.time.epochSecond - first.time.epochSecond) / 60f
+        if (minutes <= 0f) return 0f
+
+        return (last.tempC - first.tempC) / minutes
     }
 }

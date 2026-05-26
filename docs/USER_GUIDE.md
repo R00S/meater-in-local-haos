@@ -1399,7 +1399,7 @@ Ensure the **Measurement System** setting matches your recipe source. US recipes
 °F; Swedish recipes use dl and °C. Changing the system converts all displayed amounts in real time.
 
 
-## 15. Standalone Android App (v0.10.0.17 — Alpha)
+## 15. Standalone Android App (v0.10.1.5 — Alpha)
 
 The `android/` directory contains the standalone MEATER Kitchen APK project
 described in `docs/ANDROID_APP_TOR.md`.
@@ -1439,13 +1439,21 @@ described in `docs/ANDROID_APP_TOR.md`.
 - **Battery level** per probe
 - **Cooking engine** — full port of the KCE ETA algorithm from `sensor.py`:
   - rate-based ETA using last 5 minutes of temperature history
-  - state machine: Idle → Cooking → Approaching → Resting → Done
+  - acknowledgement-aware state machine: Idle → Cooking → Approaching → Ready to rest →
+    Resting → Ready to serve → Done
+  - if the user does not acknowledge the cook→rest or rest→done transition immediately, the
+    APK falls back to ambient + inner-temperature heuristics to auto-advance safely
 - **Android notifications** at key milestones per probe:
-  - Approaching target (within 10 °C)
-  - Target reached / time to rest
-  - Rest complete / ready to serve
+  - Cooking started
+  - 5 minutes remaining (ETA-based)
+  - Target reached / acknowledge start of rest
+  - Rest complete / acknowledge done
+  - notifications request Android notification permission and use sound + vibration on the phone
 - **Cook history** — local JSON storage of completed sessions with notes
 - **Multi-probe dashboard** — Compose UI with one card per active probe
+- **In-app visual alerts** — the dashboard shows a prominent alert card for the latest cook event,
+  and probe cards expose persistent **Acknowledge rest** / **Acknowledge done** actions while
+  those transitions are pending
 
 ### What is not yet implemented (alpha gaps)
 

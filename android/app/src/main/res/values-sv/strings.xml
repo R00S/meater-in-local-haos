@@ -2,8 +2,8 @@
     <string name="app_name">MEATER Kök</string>
 
     <!-- Permission screen -->
-    <string name="permission_title">Bluetooth-behörighet krävs</string>
-    <string name="permission_rationale">MEATER Kök behöver Bluetooth-behörighet för att söka efter och ansluta till din MEATER+ Block. Ingen platsdata används eller lagras.</string>
+    <string name="permission_title">Behörigheter krävs</string>
+    <string name="permission_rationale">MEATER Kök behöver Bluetooth-behörighet för att söka efter och ansluta till din MEATER+ Block, samt notifieringsbehörighet för tillagningslarm med ljud och vibration. Ingen platsdata används eller lagras.</string>
     <string name="permission_grant_button">Ge behörighet</string>
 
     <!-- Cut selection screen -->

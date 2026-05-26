@@ -2,8 +2,8 @@
     <string name="app_name">MEATER Kitchen</string>
 
     <!-- Permission screen -->
-    <string name="permission_title">Bluetooth Permission Required</string>
-    <string name="permission_rationale">MEATER Kitchen needs Bluetooth permission to scan for and connect to your MEATER+ Block. No location data is used or stored.</string>
+    <string name="permission_title">Permissions Required</string>
+    <string name="permission_rationale">MEATER Kitchen needs Bluetooth permission to scan for and connect to your MEATER+ Block, plus notification permission for cook alerts with sound and vibration. No location data is used or stored.</string>
     <string name="permission_grant_button">Grant Permission</string>
 
     <!-- Cut selection screen -->

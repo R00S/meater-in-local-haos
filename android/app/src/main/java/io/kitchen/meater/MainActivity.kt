@@ -61,6 +61,9 @@ class MainActivity : ComponentActivity() {
                         onConnectKnownProbe = { probe -> viewModel.connectKnownProbe(this, probe) },
                         onForgetProbe = { address -> viewModel.forgetProbe(address) },
                         onSelectCut = { probeIndex -> viewModel.openCutSelection(probeIndex) },
+                        onDismissCookingAlert = { viewModel.dismissCookingAlert() },
+                        onAcknowledgeRest = { probeIndex -> viewModel.acknowledgeRest(probeIndex) },
+                        onAcknowledgeDone = { probeIndex -> viewModel.acknowledgeDone(probeIndex) },
                         onAddProbeSlot = { viewModel.addProbeSlot() },
                         onOpenWebView = { viewModel.openWebViewPanel() },
                         onLanguageToggle = {

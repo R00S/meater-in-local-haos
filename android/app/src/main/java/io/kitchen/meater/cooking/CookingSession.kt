@@ -31,6 +31,9 @@ data class CookingSession(
     // ETA
     val etaMinutes: Int? = null,
 
+    // Notification state
+    val fiveMinuteRemainingNotified: Boolean = false,
+
     // History (time → temp °C) for ETA rate calculation
     val tempHistory: List<TempSample> = emptyList(),
 
@@ -38,6 +41,7 @@ data class CookingSession(
     val cookStartedAt: Instant? = null,
     val restStartedAt: Instant? = null,
     val restMinutes: Int = 0,
+    val transitionTriggeredAt: Instant? = null,
 
     // Rest complete flag
     val restNotified: Boolean = false,
