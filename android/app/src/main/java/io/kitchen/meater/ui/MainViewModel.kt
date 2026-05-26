@@ -27,6 +27,19 @@ enum class AppScreen {
     RECIPE
 }
 
+enum class CookingAlertKind {
+    STARTED,
+    FIVE_MINUTES_REMAINING,
+    REST_ACK_REQUIRED,
+    DONE_ACK_REQUIRED
+}
+
+data class InAppCookingAlert(
+    val probeIndex: Int,
+    val kind: CookingAlertKind,
+    val createdAtMillis: Long = System.currentTimeMillis()
+)
+
 data class MainUiState(
     val screen: AppScreen = AppScreen.PERMISSIONS,
     val isScanning: Boolean = false,
@@ -46,7 +59,8 @@ data class MainUiState(
     val recipeCutSlug: String = "",
     val recipeCutName: String = "",
     val recipeCutNameSv: String = "",
-    val recipeMethod: String = ""
+    val recipeMethod: String = "",
+    val activeCookingAlert: InAppCookingAlert? = null
 )
 
 class MainViewModel : ViewModel() {
@@ -84,7 +98,8 @@ class MainViewModel : ViewModel() {
             isConnected = false,
             connectedDeviceAddress = null,
             status = "Connection lost",
-            screen = AppScreen.SCAN
+            screen = AppScreen.SCAN,
+            activeCookingAlert = null
         )
     }
 
@@ -156,7 +171,8 @@ class MainViewModel : ViewModel() {
                     isConnected = false,
                     connectedDeviceAddress = null,
                     status = "Disconnected",
-                    screen = AppScreen.SCAN
+                    screen = AppScreen.SCAN,
+                    activeCookingAlert = null
                 )
             } else if (reconnectAttempts < maxReconnectAttempts && lastConnectedDevice != null) {
                 // Involuntary disconnect (Block reconnecting to cloud, etc.).
@@ -244,7 +260,8 @@ class MainViewModel : ViewModel() {
                 connectedDeviceAddress = null,
                 status = "Disconnected",
                 sessions = emptyMap(),
-                screen = AppScreen.SCAN
+                screen = AppScreen.SCAN,
+                activeCookingAlert = null
             )
             return
         }
@@ -356,7 +373,7 @@ class MainViewModel : ViewModel() {
             probeIndex = probeIndex,
             probeAddress = uiState.connectedDeviceAddress ?: ""
         )
-        sessions[probeIndex] = CookingEngine.startSession(
+        val started = CookingEngine.startSession(
             session = existing,
             proteinCategory = proteinCategory,
             cutId = cutId,
@@ -367,7 +384,14 @@ class MainViewModel : ViewModel() {
             restMinutes = restMinutes,
             cookingMethod = cookingMethod
         )
-        uiState = uiState.copy(sessions = sessions, screen = AppScreen.DASHBOARD, cutSelectionProbeIndex = -1)
+        sessions[probeIndex] = started
+        notificationHelper?.notifyCookingStarted(started, uiState.language == "sv")
+        uiState = uiState.copy(
+            sessions = sessions,
+            screen = AppScreen.DASHBOARD,
+            cutSelectionProbeIndex = -1,
+            activeCookingAlert = InAppCookingAlert(probeIndex, CookingAlertKind.STARTED)
+        )
     }
 
     fun stopCooking(context: Context, probeIndex: Int) {
@@ -384,6 +408,37 @@ class MainViewModel : ViewModel() {
         uiState = uiState.copy(sessions = sessions)
     }
 
+    fun dismissCookingAlert() {
+        uiState = uiState.copy(activeCookingAlert = null)
+    }
+
+    fun acknowledgeRest(probeIndex: Int) {
+        val sessions = uiState.sessions.toMutableMap()
+        val session = sessions[probeIndex] ?: return
+        val updated = CookingEngine.acknowledgeRest(session)
+        sessions[probeIndex] = updated
+        uiState = uiState.copy(
+            sessions = sessions,
+            activeCookingAlert = uiState.activeCookingAlert
+                ?.takeUnless { it.probeIndex == probeIndex && it.kind == CookingAlertKind.REST_ACK_REQUIRED }
+        )
+    }
+
+    fun acknowledgeDone(probeIndex: Int) {
+        val sessions = uiState.sessions.toMutableMap()
+        val session = sessions[probeIndex] ?: return
+        val updated = CookingEngine.acknowledgeDone(session)
+        sessions[probeIndex] = updated
+        if (updated.state == CookingState.DONE && session.state != CookingState.DONE) {
+            saveSessionToHistory(updated)
+        }
+        uiState = uiState.copy(
+            sessions = sessions,
+            activeCookingAlert = uiState.activeCookingAlert
+                ?.takeUnless { it.probeIndex == probeIndex && it.kind == CookingAlertKind.DONE_ACK_REQUIRED }
+        )
+    }
+
     private fun handleTemperatureUpdate(probeIndex: Int, tipC: Float, ambientC: Float) {
         val sessions = uiState.sessions.toMutableMap()
         val existing = sessions[probeIndex] ?: CookingSession(
@@ -392,26 +447,54 @@ class MainViewModel : ViewModel() {
         )
 
         val prevState = existing.state
-        val updated = CookingEngine.update(existing, tipC, ambientC)
+        var updated = CookingEngine.update(existing, tipC, ambientC)
         sessions[probeIndex] = updated
 
         val helper = notificationHelper
+        var activeAlert = uiState.activeCookingAlert
         if (helper != null) {
-            when {
-                prevState == CookingState.COOKING && updated.state == CookingState.APPROACHING ->
-                    helper.notifyApproaching(updated)
-                prevState != CookingState.RESTING && updated.state == CookingState.RESTING ->
-                    helper.notifyGoalReached(updated)
-                prevState == CookingState.RESTING && updated.state == CookingState.DONE ->
-                    helper.notifyRestComplete(updated)
+            if (!updated.fiveMinuteRemainingNotified &&
+                (updated.state == CookingState.COOKING || updated.state == CookingState.APPROACHING) &&
+                (updated.etaMinutes ?: Int.MAX_VALUE) <= 5
+            ) {
+                helper.notifyFiveMinutesRemaining(updated, uiState.language == "sv")
+                updated = updated.copy(fiveMinuteRemainingNotified = true)
+                sessions[probeIndex] = updated
+                activeAlert = InAppCookingAlert(probeIndex, CookingAlertKind.FIVE_MINUTES_REMAINING)
             }
+
+            when {
+                prevState != CookingState.WAITING_FOR_REST_ACK &&
+                    updated.state == CookingState.WAITING_FOR_REST_ACK -> {
+                    helper.notifyRestRequired(updated, uiState.language == "sv")
+                    activeAlert = InAppCookingAlert(probeIndex, CookingAlertKind.REST_ACK_REQUIRED)
+                }
+                prevState != CookingState.WAITING_FOR_DONE_ACK &&
+                    updated.state == CookingState.WAITING_FOR_DONE_ACK -> {
+                    helper.notifyDoneRequired(updated, uiState.language == "sv")
+                    activeAlert = InAppCookingAlert(probeIndex, CookingAlertKind.DONE_ACK_REQUIRED)
+                }
+            }
+        }
+
+        if (updated.state == CookingState.RESTING &&
+            activeAlert?.probeIndex == probeIndex &&
+            activeAlert.kind == CookingAlertKind.REST_ACK_REQUIRED
+        ) {
+            activeAlert = null
+        }
+        if (updated.state == CookingState.DONE &&
+            activeAlert?.probeIndex == probeIndex &&
+            activeAlert.kind == CookingAlertKind.DONE_ACK_REQUIRED
+        ) {
+            activeAlert = null
         }
 
         if (updated.state == CookingState.DONE && prevState != CookingState.DONE) {
             saveSessionToHistory(updated)
         }
 
-        uiState = uiState.copy(sessions = sessions)
+        uiState = uiState.copy(sessions = sessions, activeCookingAlert = activeAlert)
     }
 
     private fun saveSessionToHistory(session: CookingSession) {
@@ -437,4 +520,3 @@ class MainViewModel : ViewModel() {
         super.onCleared()
     }
 }
-

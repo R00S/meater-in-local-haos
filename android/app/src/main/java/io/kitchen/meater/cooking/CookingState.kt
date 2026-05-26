@@ -4,7 +4,8 @@ enum class CookingState {
     IDLE,
     COOKING,
     APPROACHING,     // within 10 °C of target
-    GOAL_REACHED,
+    WAITING_FOR_REST_ACK,
     RESTING,
+    WAITING_FOR_DONE_ACK,
     DONE
 }

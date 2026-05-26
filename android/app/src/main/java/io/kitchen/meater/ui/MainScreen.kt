@@ -43,6 +43,9 @@ fun MainScreen(
     onConnectKnownProbe: (BleDevice) -> Unit,
     onForgetProbe: (String) -> Unit,
     onSelectCut: (probeIndex: Int) -> Unit,
+    onDismissCookingAlert: () -> Unit,
+    onAcknowledgeRest: (probeIndex: Int) -> Unit,
+    onAcknowledgeDone: (probeIndex: Int) -> Unit,
     onAddProbeSlot: () -> Unit,
     onOpenWebView: () -> Unit,
     onLanguageToggle: () -> Unit
@@ -90,6 +93,17 @@ fun MainScreen(
 
             Spacer(modifier = Modifier.height(8.dp))
             Text(state.status, style = MaterialTheme.typography.bodyMedium)
+            state.activeCookingAlert?.let { alert ->
+                Spacer(modifier = Modifier.height(12.dp))
+                CookingAlertCard(
+                    alert = alert,
+                    session = state.sessions[alert.probeIndex],
+                    useSv = useSv,
+                    onDismiss = onDismissCookingAlert,
+                    onAcknowledgeRest = onAcknowledgeRest,
+                    onAcknowledgeDone = onAcknowledgeDone
+                )
+            }
             Spacer(modifier = Modifier.height(12.dp))
 
             // ── Not connected ─────────────────────────────────────────────────
@@ -189,7 +203,9 @@ fun MainScreen(
                     ProbeCard(
                         session = session,
                         useSv = useSv,
-                        onSelectCut = { onSelectCut(session.probeIndex) }
+                        onSelectCut = { onSelectCut(session.probeIndex) },
+                        onAcknowledgeRest = onAcknowledgeRest,
+                        onAcknowledgeDone = onAcknowledgeDone
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                 }
@@ -206,7 +222,13 @@ fun MainScreen(
 }
 
 @Composable
-private fun ProbeCard(session: CookingSession, useSv: Boolean, onSelectCut: () -> Unit) {
+private fun ProbeCard(
+    session: CookingSession,
+    useSv: Boolean,
+    onSelectCut: () -> Unit,
+    onAcknowledgeRest: (Int) -> Unit,
+    onAcknowledgeDone: (Int) -> Unit
+) {
     // UI chrome — mirror I18N_STRINGS from the HAOS panel
     val strProbe        = if (useSv) "Prob"                             else "Probe"
     val strSelectCut    = if (useSv) "Välj styckdel & starta tillagning" else "Select cut & start cook"
@@ -217,6 +239,8 @@ private fun ProbeCard(session: CookingSession, useSv: Boolean, onSelectCut: () -
     val strState        = if (useSv) "Status:"                          else "State:"
     val strTarget       = if (useSv) "Mål:"                             else "Target:"
     val strEta          = if (useSv) "Beräknad tid:"                    else "ETA:"
+    val strAckRest      = if (useSv) "Bekräfta vila"                    else "Acknowledge rest"
+    val strAckDone      = if (useSv) "Bekräfta klar"                    else "Acknowledge done"
 
     // Cut display name: prefer the language-matched name stored from the cut file
     val cutName = when {
@@ -249,6 +273,21 @@ private fun ProbeCard(session: CookingSession, useSv: Boolean, onSelectCut: () -
                 Text("$strState   ${cookingStateLabel(session.state, useSv)}")
                 session.targetTempC?.let { Text("$strTarget  ${it}\u00b0C  (${session.doneness})") }
                 session.etaMinutes?.let { Text("$strEta $it min") }
+                when (session.state) {
+                    CookingState.WAITING_FOR_REST_ACK -> {
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Button(onClick = { onAcknowledgeRest(session.probeIndex) }) {
+                            Text(strAckRest)
+                        }
+                    }
+                    CookingState.WAITING_FOR_DONE_ACK -> {
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Button(onClick = { onAcknowledgeDone(session.probeIndex) }) {
+                            Text(strAckDone)
+                        }
+                    }
+                    else -> Unit
+                }
             }
         }
     }
@@ -259,9 +298,69 @@ private fun cookingStateLabel(state: CookingState, useSv: Boolean): String = whe
     CookingState.IDLE         -> if (useSv) "Väntar"             else "Idle"
     CookingState.COOKING      -> if (useSv) "Tillagas"           else "Cooking"
     CookingState.APPROACHING  -> if (useSv) "Närmar sig målet"   else "Approaching target"
-    CookingState.GOAL_REACHED -> if (useSv) "Mål nått!"          else "Goal reached!"
+    CookingState.WAITING_FOR_REST_ACK -> if (useSv) "Klar för vila" else "Ready to rest"
     CookingState.RESTING      -> if (useSv) "Vilar"              else "Resting"
+    CookingState.WAITING_FOR_DONE_ACK -> if (useSv) "Klar att servera" else "Ready to serve"
     CookingState.DONE         -> if (useSv) "Klar"               else "Done"
+}
+
+@Composable
+private fun CookingAlertCard(
+    alert: InAppCookingAlert,
+    session: CookingSession?,
+    useSv: Boolean,
+    onDismiss: () -> Unit,
+    onAcknowledgeRest: (Int) -> Unit,
+    onAcknowledgeDone: (Int) -> Unit
+) {
+    val cut = when {
+        session == null -> if (useSv) "Proben" else "Probe"
+        useSv && session.cutDisplayNameSv.isNotBlank() -> session.cutDisplayNameSv
+        session.cutDisplayName.isNotBlank() -> session.cutDisplayName
+        else -> if (useSv) "Prob ${alert.probeIndex + 1}" else "Probe ${alert.probeIndex + 1}"
+    }
+    val (title, body) = when (alert.kind) {
+        CookingAlertKind.STARTED -> (if (useSv) "Tillagning startad" else "Cooking started") to
+            (if (useSv) "$cut har startats." else "$cut has started.")
+        CookingAlertKind.FIVE_MINUTES_REMAINING -> (if (useSv) "5 minuter kvar" else "5 minutes remaining") to
+            (if (useSv) "$cut beräknas vara klar om cirka 5 minuter." else "$cut is estimated to be ready in about 5 minutes.")
+        CookingAlertKind.REST_ACK_REQUIRED -> (if (useSv) "Starta vilan" else "Start resting") to
+            (if (useSv) "$cut har nått måltemperaturen. Bekräfta vila." else "$cut reached target temperature. Acknowledge rest.")
+        CookingAlertKind.DONE_ACK_REQUIRED -> (if (useSv) "Vilan är klar" else "Rest complete") to
+            (if (useSv) "$cut är klar att serveras. Bekräfta att den är färdig." else "$cut is ready to serve. Acknowledge that it is done.")
+    }
+    val dismissText = if (useSv) "Senare" else "Later"
+    val ackText = when (alert.kind) {
+        CookingAlertKind.REST_ACK_REQUIRED -> if (useSv) "Bekräfta vila" else "Acknowledge rest"
+        CookingAlertKind.DONE_ACK_REQUIRED -> if (useSv) "Bekräfta klar" else "Acknowledge done"
+        else -> if (useSv) "Stäng" else "Dismiss"
+    }
+
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer)
+    ) {
+        Column(modifier = Modifier.padding(12.dp)) {
+            Text(title, style = MaterialTheme.typography.titleMedium)
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(body, style = MaterialTheme.typography.bodyMedium)
+            Spacer(modifier = Modifier.height(8.dp))
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                when (alert.kind) {
+                    CookingAlertKind.REST_ACK_REQUIRED -> Button(onClick = { onAcknowledgeRest(alert.probeIndex) }) {
+                        Text(ackText)
+                    }
+                    CookingAlertKind.DONE_ACK_REQUIRED -> Button(onClick = { onAcknowledgeDone(alert.probeIndex) }) {
+                        Text(ackText)
+                    }
+                    else -> Button(onClick = onDismiss) { Text(ackText) }
+                }
+                if (alert.kind == CookingAlertKind.REST_ACK_REQUIRED || alert.kind == CookingAlertKind.DONE_ACK_REQUIRED) {
+                    OutlinedButton(onClick = onDismiss) { Text(dismissText) }
+                }
+            }
+        }
+    }
 }
 
 @Composable
