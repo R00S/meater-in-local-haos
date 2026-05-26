@@ -219,3 +219,98 @@ reimplementation; §13's hard rule still stands.
 - `custom_components/kitchen_cooking_engine/const.py` — "Last Change" → 0.10.1.4.
 - `android/app/build.gradle.kts` — versionCode 23 / versionName 0.10.1.4.
 - `docs/fix-select-cut-start-cook-button-0.10.1.x.md` — this entry.
+
+## 2026-05-26 — v0.10.1.5
+
+### Problem
+The standalone Android APK already had basic milestone notifications, but they
+were too limited for real cooking use:
+
+- no "cook started" alert
+- no "5 minutes remaining" alert
+- no guaranteed sound/vibration path on the phone
+- no in-app visual acknowledgement flow when a cook should move from cooking
+  to resting or from resting to done
+
+The state machine also auto-transitioned immediately at target temperature and
+after the rest timer elapsed, which meant the user had no explicit chance to
+confirm "this has now gone to rest" or "this is now done".
+
+### Fix
+Add a full Android-side alert + acknowledgement flow around the existing KCE
+WebView cut-selection path and native dashboard:
+
+- Local Android notifications now fire for:
+  - cook started
+  - 5 minutes remaining
+  - target reached / acknowledge rest
+  - rest complete / acknowledge done
+- The notification channel is high-importance and vibration-enabled; each
+  notification uses sound + vibration and opens the APK when tapped.
+- The app now requests `POST_NOTIFICATIONS` at runtime (Android 13+) and
+  declares `VIBRATE` in the manifest.
+- The cooking state machine now uses acknowledgement gates:
+  - `COOKING / APPROACHING → WAITING_FOR_REST_ACK → RESTING`
+  - `RESTING → WAITING_FOR_DONE_ACK → DONE`
+- The dashboard now shows:
+  - a top in-app alert card for the latest cook event
+  - persistent **Acknowledge rest** / **Acknowledge done** buttons on the
+    relevant probe card while those transitions are pending
+- If the user does not acknowledge immediately, the APK falls back to native
+  heuristics based on **ambient + inner temperature**:
+  - cook→rest auto-starts when target has been reached and ambient collapses
+    close to the inner temperature (strong signal that the food has been taken
+    off the heat)
+  - rest→done auto-completes once rest time has elapsed and the meat is
+    thermally settled (ambient close to inner, inner stable/cooling)
+
+This keeps the cook-path GUI rule from ToR §13 intact: the KCE panel still
+owns cut selection/start; the APK framework owns Android-native notifications,
+permissions, vibration, and acknowledgement UX around the live dashboard.
+
+### Verification
+- `cd android && ./gradlew --no-daemon :app:assembleDebug` → `BUILD SUCCESSFUL`
+  after the notification/ack changes.
+- Manual code audit:
+  - `PermissionScreen.kt` now requests `POST_NOTIFICATIONS` on Android 13+.
+  - `AndroidManifest.xml` declares `POST_NOTIFICATIONS` + `VIBRATE`.
+  - `NotificationHelper.kt` posts four alert types with sound/vibration and
+    app-launch content intent.
+  - `CookingEngine.kt` now models pending acknowledgement states plus fallback
+    auto-transitions from ambient/inner temperatures.
+  - `MainScreen.kt` renders in-app alert cards and acknowledge buttons.
+
+### CHORES.md run
+- Version bumped 0.10.1.4 → 0.10.1.5 across all four locations:
+  - `custom_components/kitchen_cooking_engine/manifest.json`
+  - `custom_components/kitchen_cooking_engine/__init__.py`
+  - `custom_components/kitchen_cooking_engine/const.py`
+  - `android/app/build.gradle.kts` (`versionCode` 23 → 24)
+- `PANEL_VERSION` stays 612 — no generator run; no panel template / recipe /
+  cooking-data source changed.
+- User guide updated in `docs/USER_GUIDE.md` section 15 to describe:
+  - start / 5-minute / rest-required / done-required alerts
+  - sound + vibration
+  - acknowledgement-gated cook→rest and rest→done transitions
+  - ambient + inner-temp fallback auto-advance
+- No `_openHelp(...)` anchors in `panel-class-template.js` required changes
+  because no panel help headings were renamed.
+
+### Files changed
+- `android/app/src/main/AndroidManifest.xml`
+- `android/app/src/main/java/io/kitchen/meater/MainActivity.kt`
+- `android/app/src/main/java/io/kitchen/meater/cooking/CookingEngine.kt`
+- `android/app/src/main/java/io/kitchen/meater/cooking/CookingSession.kt`
+- `android/app/src/main/java/io/kitchen/meater/cooking/CookingState.kt`
+- `android/app/src/main/java/io/kitchen/meater/notification/NotificationHelper.kt`
+- `android/app/src/main/java/io/kitchen/meater/ui/MainScreen.kt`
+- `android/app/src/main/java/io/kitchen/meater/ui/MainViewModel.kt`
+- `android/app/src/main/java/io/kitchen/meater/ui/PermissionScreen.kt`
+- `android/app/src/main/res/values/strings.xml`
+- `android/app/src/main/res/values-sv/strings.xml`
+- `custom_components/kitchen_cooking_engine/manifest.json`
+- `custom_components/kitchen_cooking_engine/__init__.py`
+- `custom_components/kitchen_cooking_engine/const.py`
+- `android/app/build.gradle.kts`
+- `docs/USER_GUIDE.md`
+- `docs/fix-select-cut-start-cook-button-0.10.1.x.md`

@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.10.1.4 - docs(ToR): add Option 2 (bundle subset of home-assistant-frontend) as future possible route under ANDROID_APP_TOR.md §13; resync KCE/APK version after APK-only v0.10.1.3
+Last Change: v0.10.1.5 - feat(android): add in-app/system cook alerts with sound/vibrate plus acknowledgement gates for cook→rest and rest→done, with ambient+inner-temp fallback auto-transitions
 """
 
 DOMAIN = "kitchen_cooking_engine"
