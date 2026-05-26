@@ -108,7 +108,62 @@ readCharacteristic(batt).
 
 Version bump: 0.10.0.6 → 0.10.0.7 (versionCode 7 → 8).
 
-### 2026-05-26 — Fix 3 issues: BLE scan, cook path, recipe display (v0.10.0.10)
+### 2026-05-26 — Replace CutSelectionScreen with WebView panel cook path (v0.10.0.11)
+
+**Goal**
+
+One GUI codebase: the MEATER cook path in the Android app runs the **exact same
+`kitchen-cooking-panel.js`** that runs in Home Assistant — no HA server required.
+Previous `CutSelectionScreen.kt` (Kotlin/Compose reimplementation) was replaced.
+
+**Problem**
+
+`CutSelectionScreen.kt` was a manual Kotlin/Compose reimplementation of the KCE
+MEATER cook path. Every time it was updated it diverged from the panel — wrong steps,
+missing steps, different UI — because agents kept reinterpreting rather than copying.
+
+**Solution: WebView + mock hass**
+
+The Android app now acts as a *framework* that hosts the real panel JS:
+
+1. `WebViewCutSelectionScreen` (in `WebViewCookingScreen.kt`) loads
+   `kitchen-cooking-panel.js` from assets in a full-screen WebView.
+2. A minimal mock `hass` object is injected into the page **before** the custom
+   element is mounted:
+   - `callApi()` → `Promise.resolve(null)` — all API calls fail silently;
+     every try/catch in the panel handles `null` gracefully.
+   - `callService('kitchen_cooking_engine', 'start_cook', data)` → routes to
+     the `KceAndroid` JS bridge → Kotlin.
+   - `states = {}` — no HA entities; entity dropdown stays hidden.
+   - `user.language` → in-app language ("en" or "sv").
+3. The panel element is created programmatically with `hass`, `_language`,
+   `_dataSource`, `_currentPath = 'meater_experimental'`, and
+   `_showMeaterCooking = true` set **before** `appendChild()` — so the very
+   first LitElement render goes straight to the cook path; no welcome/appliance
+   screen flash.
+4. On "Start Cook" the JS bridge calls `CutSelectionBridgeImpl.onCallService()`.
+   `MainActivity.kt` enriches the bare `cut_id / doneness` data using
+   `CookingDataRepository.findCutById()` and `findCategoryIdByCutId()` (two new
+   helper methods), then calls `viewModel.startCooking()` as before.
+
+**Files changed**
+
+- `android/app/src/main/java/io/kitchen/meater/ui/WebViewCookingScreen.kt`
+  — added `WebViewCutSelectionScreen`, `buildCookPathHtml()`,
+    `CutSelectionBridgeImpl`; kept legacy `WebViewCookingScreen` / `KceBridgeImpl`
+    (still used by history path).
+- `android/app/src/main/java/io/kitchen/meater/data/CookingDataRepository.kt`
+  — added `findCutById()` and `findCategoryIdByCutId()` helpers.
+- `android/app/src/main/java/io/kitchen/meater/MainActivity.kt`
+  — `AppScreen.CUT_SELECTION` case now uses `WebViewCutSelectionScreen`;
+    `CutSelectionScreen` import removed.
+- `android/app/build.gradle.kts` — version 0.10.0.10 → 0.10.0.11 (code 12).
+
+**What KCE component version tracks**
+
+KCE manifest/`__init__.py` remain at 0.10.0.9 — this is a pure Android change.
+
+
 
 **Issue 1 — BLE scanning shows nothing**
 

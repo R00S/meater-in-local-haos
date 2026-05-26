@@ -202,6 +202,27 @@ class CookingDataRepository(private val context: Context) {
         return categories to donenessMap
     }
 
+    // ── Lookup helpers ───────────────────────────────────────────────────────
+
+    /** Returns the [Cut] whose id matches [cutId], searching the full tree. */
+    fun findCutById(cutId: String): Cut? =
+        tree.asSequence()
+            .flatMap { it.species.asSequence() }
+            .flatMap { it.cutTypes.asSequence() }
+            .flatMap { it.cuts.asSequence() }
+            .firstOrNull { it.id == cutId }
+
+    /**
+     * Returns the protein-category id that contains [cutId],
+     * or an empty string when the cut is not found.
+     */
+    fun findCategoryIdByCutId(cutId: String): String =
+        tree.firstOrNull { cat ->
+            cat.species.any { sp ->
+                sp.cutTypes.any { ct -> ct.cuts.any { c -> c.id == cutId } }
+            }
+        }?.id ?: ""
+
     /**
      * Extract the JSON object assigned to [varName] from a JS file.
      * Matches: const <varName> = { ... };

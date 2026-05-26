@@ -5,13 +5,16 @@ import androidx.activity.ComponentActivity
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Modifier
+import io.kitchen.meater.data.CookingDataRepository
 import io.kitchen.meater.ui.AppScreen
 import io.kitchen.meater.ui.CookHistoryScreen
-import io.kitchen.meater.ui.CutSelectionScreen
 import io.kitchen.meater.ui.MainScreen
 import io.kitchen.meater.ui.MainViewModel
 import io.kitchen.meater.ui.PermissionScreen
 import io.kitchen.meater.ui.RecipeScreen
+import io.kitchen.meater.ui.WebViewCutSelectionScreen
 
 class MainActivity : ComponentActivity() {
     private val viewModel: MainViewModel by viewModels()
@@ -65,29 +68,33 @@ class MainActivity : ComponentActivity() {
                     }
                 )
 
-                AppScreen.CUT_SELECTION -> CutSelectionScreen(
+                AppScreen.CUT_SELECTION -> WebViewCutSelectionScreen(
                     probeIndex = state.cutSelectionProbeIndex,
-                    useSv = state.language == "sv",
-                    onConfirm = { catId, cutId, cutName, cutNameSv, doneness, tempC, restMin, method ->
+                    language   = state.language,
+                    modifier   = Modifier.fillMaxSize(),
+                    onStartCook = { probeIndex, cutId, doneness, customTempC, method, _ ->
+                        // Enrich the bare service-data with cut display names, protein
+                        // category, rest time — all sourced from CookingDataRepository
+                        // (which reads EXP_TREE / EXP_DONENESS_OPTIONS from the same
+                        // kitchen-cooking-panel.js asset the WebView just ran).
+                        val repo       = CookingDataRepository(this)
+                        val cut        = repo.findCutById(cutId)
+                        val donenessOp = repo.doneness[doneness]
+                        val targetTempC = customTempC
+                            ?: donenessOp?.tempC
+                            ?: 65   // safe fallback (USDA poultry minimum)
+                        val category   = repo.findCategoryIdByCutId(cutId)
+                        val restMin    = cut?.restTimeMin ?: 5
                         viewModel.startCooking(
-                            probeIndex = state.cutSelectionProbeIndex,
-                            proteinCategory = catId,
-                            cutId = cutId,
-                            cutDisplayName = cutName,
-                            cutDisplayNameSv = cutNameSv,
-                            doneness = doneness,
-                            targetTempC = tempC,
-                            restMinutes = restMin,
-                            cookingMethod = method
-                        )
-                    },
-                    onViewRecipe = { slug, cutName, cutNameSv, method ->
-                        viewModel.openRecipe(
-                            probeIndex = state.cutSelectionProbeIndex,
-                            slug = slug,
-                            cutName = cutName,
-                            cutNameSv = cutNameSv,
-                            method = method
+                            probeIndex       = probeIndex,
+                            proteinCategory  = category,
+                            cutId            = cutId,
+                            cutDisplayName   = cut?.name   ?: cutId,
+                            cutDisplayNameSv = cut?.nameSv ?: "",
+                            doneness         = doneness,
+                            targetTempC      = targetTempC,
+                            restMinutes      = restMin,
+                            cookingMethod    = method
                         )
                     },
                     onCancel = { viewModel.backToDashboard() }
