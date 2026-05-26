@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.10.1.2 - fix(android): style ha-button in WebView wrapper so "Start cooking" is visible (was rendering as unstyled inline text — undefined custom element)
+Last Change: v0.10.1.4 - docs(ToR): add Option 2 (bundle subset of home-assistant-frontend) as future possible route under ANDROID_APP_TOR.md §13; resync KCE/APK version after APK-only v0.10.1.3
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -176,11 +176,11 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 
 # ⚠️ VERSION — must match in ALL 3 locations on every release:
 #   1. manifest.json        → "version": "..."
-#   2. HERE (__init__.py)    → __version__ = "0.10.1.2"
+#   2. HERE (__init__.py)    → __version__ = "0.10.1.4"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.10.1.2"
+__version__ = "0.10.1.4"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

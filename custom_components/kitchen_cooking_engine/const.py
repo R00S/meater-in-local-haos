@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.10.1.2 - fix(android): style ha-button in WebView wrapper so "Start cooking" is visible (was rendering as unstyled inline text — undefined custom element)
+Last Change: v0.10.1.4 - docs(ToR): add Option 2 (bundle subset of home-assistant-frontend) as future possible route under ANDROID_APP_TOR.md §13; resync KCE/APK version after APK-only v0.10.1.3
 """
 
 DOMAIN = "kitchen_cooking_engine"

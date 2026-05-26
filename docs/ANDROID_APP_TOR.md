@@ -310,6 +310,40 @@ A full agent-day was spent attempting to match the KCE GUI faithfully in native 
 
 This constraint applies **only to the cooking path screens**. Navigation chrome, BLE scan, probe list, history list, settings, and other non-cooking-path screens may be native Compose.
 
+### Future Possible Routes for HA Custom Elements in the WebView
+
+The current APK approach to Home Assistant custom elements (`ha-card`, `ha-button`,
+`ha-circular-progress`, `ha-menu-button`, `ha-top-app-bar-fixed`, …) used by the KCE
+panel is **per-element shimming in the APK framework** (see
+`android/app/src/main/java/io/kitchen/meater/ui/WebViewCookingScreen.kt`):
+
+- `ha-card` renders acceptably because CSS custom properties inherit through shadow
+  boundaries, so the panel's shadow-DOM styles paint the undefined element.
+- `ha-button` is registered as a real custom element (Shadow DOM + `<slot>`) inside
+  the WebView's boot IIFE before the panel module is imported, so `:host` /
+  `:host([outlined])` / `:host([disabled])` styling travels into the panel shadow tree.
+- Other `ha-*` elements are added on demand as new screens of the KCE panel are
+  surfaced in the APK.
+
+This per-element shim approach is what is **mandated today** because it keeps the APK
+small, has no external dependencies, and lets the KCE panel remain unchanged. It is
+the only acceptable approach for the cooking path UI as currently scoped.
+
+**Future possible route — bundle a subset of `home-assistant-frontend`:** A later
+architectural option, explicitly **non-binding and out of scope today**, is to bundle
+a curated subset of the real `home-assistant-frontend` (the `ha-*` custom element
+definitions) as APK assets so that `customElements.define` happens naturally for the
+full element family. This would eliminate per-element shimming as more `ha-*`
+elements appear in the panel, at the cost of additional APK size and a frontend
+build pipeline. This is recorded here only so future agents know it has been
+considered; **it must not be undertaken without an explicit user decision and an
+amendment to this section**. Until then, the per-element shim in the APK framework
+remains the rule, and `panel-class-template.js` must continue to render fine under
+both the real HA frontend (in the HAOS sidebar) and the shim layer (in the APK).
+
+For the avoidance of doubt: this future route is **not** an opening for a native
+Compose reimplementation of the cooking path UI — the §13 rule above still stands.
+
 ---
 
 *References: `halted-ble-server-dev/MEATER_BLE_PROTOCOL.md`, `halted-ble-server-dev/README.md`, `docs/TERMS_OF_REFERENCE.md`, `custom_components/kitchen_cooking_engine/www/panel-class-template.js`*
