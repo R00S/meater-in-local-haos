@@ -222,11 +222,42 @@ private fun buildCookPathHtml(language: String, probeIndex: Int): String {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <style>
+    /*
+     * HA-compatible theme variables — the KCE panel (a LitElement) reads these via
+     * CSS custom properties that pierce shadow-DOM boundaries.  Without them the panel
+     * renders invisible text on a dark background (all vars resolve to 'transparent').
+     * Values match the HA default dark theme.
+     */
+    :root {
+      --primary-background-color: #111111;
+      --secondary-background-color: #1c1c1e;
+      --primary-text-color:        #e5e5ea;
+      --secondary-text-color:      #aeaeb2;
+      --disabled-text-color:       #636366;
+      --divider-color:             #3a3a3c;
+      --card-background-color:     #1c1c1e;
+      --ha-card-background:        #1c1c1e;
+      --primary-color:             #0a84ff;
+      --accent-color:              #0a84ff;
+      --error-color:               #ff453a;
+      --warning-color:             #ffd60a;
+      --success-color:             #30d158;
+      --info-color:                #64d2ff;
+    }
     html, body {
       margin: 0; padding: 0; height: 100%;
-      background: var(--primary-background-color, #111);
+      background: var(--primary-background-color);
+      /* color inherits into LitElement shadow DOM via CSS cascade */
+      color: var(--primary-text-color);
     }
     kitchen-cooking-panel { display: block; min-height: 100vh; }
+    /* ha-card is an unknown custom element in standalone mode — give it block layout
+       so cards stack vertically rather than rendering inline. */
+    ha-card {
+      display: block;
+      background: var(--ha-card-background);
+      border-radius: 12px;
+    }
   </style>
 </head>
 <body>

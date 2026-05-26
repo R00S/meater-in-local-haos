@@ -265,3 +265,35 @@ Changes (v0.10.0.5 → 0.10.0.6):
 Verification: cut names and doneness names are sourced exclusively from `EXP_TREE`/
 `EXP_DONENESS_OPTIONS` in `kitchen-cooking-panel.js` (ground truth: the cut files). No
 manual translation table. Chrome strings mirror `I18N_STRINGS` from the HAOS panel.
+
+### 2026-05-26 — Two bugs from v0.10.0.11 (v0.10.0.12)
+
+**Bug 1 — BLE scan still finds no devices**
+
+Root cause: `BLUETOOTH_SCAN` in `AndroidManifest.xml` lacked the
+`android:usesPermissionFlags="neverForLocation"` attribute. On Android 12+ (API 31+), without
+this flag the OS behaves as if the app uses Bluetooth to derive physical location — which in
+Android 11 and below required `ACCESS_FINE_LOCATION` at runtime. Our manifest only declares
+`ACCESS_FINE_LOCATION` for `maxSdkVersion="30"` and `PermissionScreen` never requests it for
+API 31+, so the system silently delivered zero scan results with no error code.
+
+Fix: `android:usesPermissionFlags="neverForLocation"` added to `BLUETOOTH_SCAN` in
+`AndroidManifest.xml`. This declares to the OS that we never use BLE scan results to derive
+location, removing the location-permission requirement entirely on API 31+.
+
+**Bug 2 — "Select cut & start cook" renders a black screen**
+
+Root cause: `WebViewCutSelectionScreen` embeds `kitchen-cooking-panel.js` (a LitElement) in a
+standalone WebView with no HA server. The panel uses CSS custom properties
+(`--primary-text-color`, `--divider-color`, `--card-background-color`, etc.) for all colors.
+In a standalone WebView these variables are undefined — they evaluate to `transparent`/initial.
+The page background was `#111` (fallback for `--primary-background-color`) and text color
+inherited browser default (black), resulting in black text on a near-black background.
+
+Fix: `buildCookPathHtml` now sets a full set of HA dark-theme CSS variables on `:root`.
+These pierce the LitElement shadow DOM via CSS inheritance so the panel renders correctly
+without any HA server. Also added `ha-card { display: block; }` in the outer page because
+`ha-card` is an undefined custom element (renders as `display: inline` by default) inside
+a standalone WebView — making it block ensures cards stack vertically as intended.
+
+Version bump: 0.10.0.11 → 0.10.0.12 (versionCode 12 → 13).
