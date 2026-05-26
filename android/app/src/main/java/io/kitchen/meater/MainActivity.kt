@@ -5,12 +5,16 @@ import androidx.activity.ComponentActivity
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.darkColorScheme
+import io.kitchen.meater.data.CookingDataRepository
 import io.kitchen.meater.ui.AppScreen
-import io.kitchen.meater.ui.CutSelectionScreen
+import io.kitchen.meater.ui.CookHistoryScreen
 import io.kitchen.meater.ui.MainScreen
 import io.kitchen.meater.ui.MainViewModel
 import io.kitchen.meater.ui.PermissionScreen
-import io.kitchen.meater.ui.WebViewCookingScreen
+import io.kitchen.meater.ui.RecipeScreen
+import io.kitchen.meater.ui.WebViewCutSelectionScreen
 
 class MainActivity : ComponentActivity() {
     private val viewModel: MainViewModel by viewModels()
@@ -22,7 +26,9 @@ class MainActivity : ComponentActivity() {
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 val screen = viewModel.uiState.screen
-                if (screen == AppScreen.CUT_SELECTION || screen == AppScreen.WEBVIEW_PANEL) {
+                if (screen == AppScreen.CUT_SELECTION ||
+                    screen == AppScreen.HISTORY ||
+                    screen == AppScreen.RECIPE) {
                     viewModel.backToDashboard()
                 } else {
                     isEnabled = false
@@ -32,63 +38,85 @@ class MainActivity : ComponentActivity() {
         })
 
         setContent {
-            val state = viewModel.uiState
+            MaterialTheme(colorScheme = darkColorScheme()) {
+                val state = viewModel.uiState
 
-            when (state.screen) {
+                when (state.screen) {
 
-                AppScreen.PERMISSIONS -> PermissionScreen(
-                    onPermissionsGranted = { viewModel.onPermissionsGranted() }
-                )
+                    AppScreen.PERMISSIONS -> PermissionScreen(
+                        onPermissionsGranted = { viewModel.onPermissionsGranted() }
+                    )
 
-                AppScreen.SCAN, AppScreen.DASHBOARD -> MainScreen(
-                    state = state,
-                    onScanToggle = {
-                        if (state.isScanning) viewModel.stopScan()
-                        else viewModel.startScan(this)
-                    },
-                    onSelectDevice = { viewModel.selectDevice(it) },
-                    onConnectToggle = { viewModel.connectOrDisconnect(this) },
-                    onSelectCut = { probeIndex -> viewModel.openCutSelection(probeIndex) },
-                    onOpenWebView = { viewModel.openWebViewPanel() },
-                    onLanguageToggle = {
-                        val next = if (state.language == "sv") "en" else "sv"
-                        viewModel.setLanguage(this, next)
-                    }
-                )
+                    AppScreen.SCAN, AppScreen.DASHBOARD -> MainScreen(
+                        state = state,
+                        discoveredDevices = viewModel.scannedDevices,
+                        onScanToggle = {
+                            if (state.isScanning) viewModel.stopScan()
+                            else viewModel.startScan(this)
+                        },
+                        onSelectDevice = { viewModel.selectDevice(it) },
+                        onConnectToggle = { viewModel.connectOrDisconnect(this) },
+                        onManualMacChange = { viewModel.setManualMacAddress(it) },
+                        onConnectManualMac = { viewModel.connectManualMac(this) },
+                        onConnectKnownProbe = { probe -> viewModel.connectKnownProbe(this, probe) },
+                        onForgetProbe = { address -> viewModel.forgetProbe(address) },
+                        onSelectCut = { probeIndex -> viewModel.openCutSelection(probeIndex) },
+                        onAddProbeSlot = { viewModel.addProbeSlot() },
+                        onOpenWebView = { viewModel.openWebViewPanel() },
+                        onLanguageToggle = {
+                            val next = if (state.language == "sv") "en" else "sv"
+                            viewModel.setLanguage(this, next)
+                        }
+                    )
 
-                AppScreen.CUT_SELECTION -> CutSelectionScreen(
-                    probeIndex = state.cutSelectionProbeIndex,
-                    useSv = state.language == "sv",
-                    onConfirm = { catId, cutId, cutName, doneness, tempC, restMin ->
-                        viewModel.startCooking(
+                    AppScreen.CUT_SELECTION -> {
+                        // The cook path is rendered by the KCE LitElement panel in a WebView.
+                        // Per ToR §4.2 no native Compose reimplementation is permitted.
+                        val cookingRepo = CookingDataRepository(this)
+                        WebViewCutSelectionScreen(
                             probeIndex = state.cutSelectionProbeIndex,
-                            proteinCategory = catId,
-                            cutId = cutId,
-                            cutDisplayName = cutName,
-                            doneness = doneness,
-                            targetTempC = tempC,
-                            restMinutes = restMin
+                            language   = state.language,
+                            onStartCook = { probeIndex, cutId, doneness, customTempC, cookingMethod, _ ->
+                                // Enrich bare cut_id / doneness from the JS bridge with display
+                                // names and rest time from CookingDataRepository.
+                                val cut = cookingRepo.findCutById(cutId)
+                                val category = cookingRepo.findCategoryIdByCutId(cutId)
+                                val donenessOption = cookingRepo.doneness[doneness]
+                                val targetTempC = customTempC
+                                    ?: donenessOption?.tempC
+                                    ?: cut?.usdaSafeC
+                                    ?: 70
+                                viewModel.startCooking(
+                                    probeIndex       = probeIndex,
+                                    proteinCategory  = category,
+                                    cutId            = cutId,
+                                    cutDisplayName   = cut?.name ?: cutId,
+                                    cutDisplayNameSv = cut?.nameSv ?: "",
+                                    doneness         = doneness,
+                                    targetTempC      = targetTempC,
+                                    restMinutes      = cut?.restTimeMin ?: 5,
+                                    cookingMethod    = cookingMethod
+                                )
+                            },
+                            onCancel = { viewModel.backToDashboard() }
                         )
-                    },
-                    onCancel = { viewModel.backToDashboard() }
-                )
+                    }
 
-                AppScreen.WEBVIEW_PANEL -> WebViewCookingScreen(
-                    sessions = state.sessions,
-                    language = state.language,
-                    onStartCooking = { probeIndex, cutId, doneness, targetTempC ->
-                        viewModel.startCooking(
-                            probeIndex = probeIndex,
-                            proteinCategory = "",
-                            cutId = cutId,
-                            cutDisplayName = cutId,
-                            doneness = doneness,
-                            targetTempC = targetTempC
-                        )
-                    },
-                    onStopCooking = { probeIndex -> viewModel.stopCooking(this, probeIndex) }
-                )
-            }
+                    AppScreen.HISTORY -> CookHistoryScreen(
+                        useSv = state.language == "sv",
+                        onBack = { viewModel.backToDashboard() }
+                    )
+
+                    AppScreen.RECIPE -> RecipeScreen(
+                        slug = state.recipeCutSlug,
+                        cutName = state.recipeCutName,
+                        cutNameSv = state.recipeCutNameSv,
+                        method = state.recipeMethod,
+                        useSv = state.language == "sv",
+                        onBack = { viewModel.backToDashboard() }
+                    )
+                }
+            } // MaterialTheme
         }
     }
 }

@@ -10,7 +10,10 @@ import android.bluetooth.BluetoothGattDescriptor
 import android.bluetooth.BluetoothManager
 import android.content.Context
 import android.content.pm.PackageManager
+import android.os.Handler
+import android.os.Looper
 import androidx.core.content.ContextCompat
+import java.util.ArrayDeque
 import java.util.UUID
 import kotlin.math.max
 import kotlin.math.min
@@ -28,41 +31,85 @@ import kotlin.math.min
  */
 class MeaterBleService(
     private val onStatus: (String) -> Unit,
+    private val onConnected: () -> Unit,
     private val onTemperature: (probeIndex: Int, tipCelsius: Float, ambientCelsius: Float) -> Unit,
     private val onBattery: (probeIndex: Int, percent: Int) -> Unit,
     private val onDisconnected: () -> Unit,
     private val onError: (String) -> Unit
 ) {
     private var gatt: BluetoothGatt? = null
+    private val mainHandler = Handler(Looper.getMainLooper())
+
+    // ── GATT operation queue ─────────────────────────────────────────────────
+    // Android BLE only processes one GATT operation at a time.  Queue them here
+    // and call runNextGattOp() from each completion callback.
+    private val gattOpQueue = ArrayDeque<(BluetoothGatt) -> Unit>()
+    private var gattOpRunning = false
+
+    private fun enqueueGattOp(op: (BluetoothGatt) -> Unit) {
+        gattOpQueue.add(op)
+        if (!gattOpRunning) runNextGattOp()
+    }
+
+    private fun runNextGattOp() {
+        val g = gatt ?: run { gattOpRunning = false; return }
+        val op = gattOpQueue.pollFirst() ?: run { gattOpRunning = false; return }
+        gattOpRunning = true
+        op(g)
+    }
+
+    // ── BLE keepalive ────────────────────────────────────────────────────────
+    // The MEATER probe sends no GATT notifications while idle (not in meat).
+    // Without periodic GATT traffic the link supervision timeout (~1 minute on
+    // most devices) fires and Android drops the connection.  A battery read
+    // every KEEPALIVE_INTERVAL_MS is cheap and keeps the link alive.
+    private val keepaliveRunnable = object : Runnable {
+        override fun run() {
+            pingKeepalive()
+            mainHandler.postDelayed(this, KEEPALIVE_INTERVAL_MS)
+        }
+    }
+
+    @SuppressLint("MissingPermission")
+    private fun pingKeepalive() {
+        val g = gatt ?: return
+        val service = g.services.firstOrNull { it.uuid == MEATER_SERVICE_UUID } ?: return
+        val battChar = service.getCharacteristic(BATTERY_CHARACTERISTIC_UUID) ?: return
+        enqueueGattOp { it.readCharacteristic(battChar) }
+    }
+
 
     @SuppressLint("MissingPermission")
     fun connect(context: Context, deviceAddress: String) {
         val appContext = context.applicationContext
 
         if (!hasBluetoothConnectPermission(appContext)) {
-            onError("BLUETOOTH_CONNECT permission not granted")
+            mainHandler.post { onError("BLUETOOTH_CONNECT permission not granted") }
             return
         }
 
         val manager = appContext.getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
         val adapter: BluetoothAdapter = manager.adapter ?: run {
-            onError("Bluetooth adapter unavailable")
+            mainHandler.post { onError("Bluetooth adapter unavailable") }
             return
         }
 
         val device = runCatching { adapter.getRemoteDevice(deviceAddress) }.getOrNull()
         if (device == null) {
-            onError("Invalid BLE device address")
+            mainHandler.post { onError("Invalid BLE device address") }
             return
         }
 
         disconnect()
-        onStatus("Connecting to $deviceAddress …")
+        mainHandler.post { onStatus("Connecting to $deviceAddress …") }
         gatt = device.connectGatt(appContext, false, callback, BluetoothDeviceTransport.LE)
     }
 
     @SuppressLint("MissingPermission")
     fun disconnect() {
+        mainHandler.removeCallbacks(keepaliveRunnable)
+        gattOpQueue.clear()
+        gattOpRunning = false
         gatt?.disconnect()
         gatt?.close()
         gatt = null
@@ -72,23 +119,27 @@ class MeaterBleService(
         @SuppressLint("MissingPermission")
         override fun onConnectionStateChange(gatt: BluetoothGatt, status: Int, newState: Int) {
             if (status != BluetoothGatt.GATT_SUCCESS) {
-                onError("GATT connection error: $status")
-                gatt.close()
-                this@MeaterBleService.gatt = null
-                onDisconnected()
+                mainHandler.post {
+                    onError("GATT connection error: $status")
+                    gatt.close()
+                    this@MeaterBleService.gatt = null
+                    onDisconnected()
+                }
                 return
             }
 
             when (newState) {
                 BluetoothGatt.STATE_CONNECTED -> {
-                    onStatus("Connected. Discovering services …")
+                    mainHandler.post { onStatus("Connected. Discovering services …") }
                     gatt.discoverServices()
                 }
                 BluetoothGatt.STATE_DISCONNECTED -> {
-                    onStatus("Disconnected")
-                    gatt.close()
-                    this@MeaterBleService.gatt = null
-                    onDisconnected()
+                    mainHandler.post {
+                        onStatus("Disconnected")
+                        gatt.close()
+                        this@MeaterBleService.gatt = null
+                        onDisconnected()
+                    }
                 }
             }
         }
@@ -96,7 +147,7 @@ class MeaterBleService(
         @SuppressLint("MissingPermission")
         override fun onServicesDiscovered(gatt: BluetoothGatt, status: Int) {
             if (status != BluetoothGatt.GATT_SUCCESS) {
-                onError("Service discovery failed: $status")
+                mainHandler.post { onError("Service discovery failed: $status") }
                 return
             }
 
@@ -105,21 +156,39 @@ class MeaterBleService(
             val meaterServices = gatt.services.filter { it.uuid == MEATER_SERVICE_UUID }
 
             if (meaterServices.isEmpty()) {
-                onError("MEATER service not found")
+                mainHandler.post { onError("MEATER service not found") }
                 return
             }
 
-            meaterServices.forEachIndexed { probeIndex, service ->
+            // Queue all GATT operations sequentially (Android only handles one at a time).
+            meaterServices.forEachIndexed { _, service ->
                 val tempChar = service.getCharacteristic(TEMPERATURE_CHARACTERISTIC_UUID)
                 val battChar = service.getCharacteristic(BATTERY_CHARACTERISTIC_UUID)
 
-                tempChar?.let { enableNotifications(gatt, it) }
-                battChar?.let { enableNotifications(gatt, it) }
-                tempChar?.let { gatt.readCharacteristic(it) }
-                battChar?.let { gatt.readCharacteristic(it) }
+                // 1. Enable temp notifications
+                tempChar?.let { c -> enqueueGattOp { g -> enableNotifications(g, c) } }
+                // 2. Enable battery notifications
+                battChar?.let { c -> enqueueGattOp { g -> enableNotifications(g, c) } }
+                // 3. Read battery immediately (one initial value before notifications arrive)
+                battChar?.let { c -> enqueueGattOp { g -> g.readCharacteristic(c) } }
             }
 
-            onStatus("Connected (${meaterServices.size} probe slot${if (meaterServices.size != 1) "s" else ""})")
+            val count = meaterServices.size
+            mainHandler.post {
+                onStatus("Connected ($count probe slot${if (count != 1) "s" else ""})")
+                onConnected()
+            }
+            // Start keepalive pings so the link stays up while the probe is idle.
+            mainHandler.postDelayed(keepaliveRunnable, KEEPALIVE_INTERVAL_MS)
+        }
+
+        // Advance the queue after each descriptor write completes.
+        override fun onDescriptorWrite(
+            gatt: BluetoothGatt,
+            descriptor: BluetoothGattDescriptor,
+            status: Int
+        ) {
+            runNextGattOp()
         }
 
         @Deprecated("Deprecated in Java")
@@ -139,6 +208,8 @@ class MeaterBleService(
             if (status == BluetoothGatt.GATT_SUCCESS) {
                 handleCharacteristic(gatt, characteristic.uuid, characteristic.value)
             }
+            // Advance the queue regardless of success/failure.
+            runNextGattOp()
         }
     }
 
@@ -148,7 +219,11 @@ class MeaterBleService(
         characteristic: BluetoothGattCharacteristic
     ) {
         gatt.setCharacteristicNotification(characteristic, true)
-        val cccd = characteristic.getDescriptor(CLIENT_CHARACTERISTIC_CONFIG_UUID) ?: return
+        val cccd = characteristic.getDescriptor(CLIENT_CHARACTERISTIC_CONFIG_UUID) ?: run {
+            // No CCCD — nothing to write; advance the queue immediately.
+            runNextGattOp()
+            return
+        }
         cccd.value = BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE
         gatt.writeDescriptor(cccd)
     }
@@ -162,11 +237,11 @@ class MeaterBleService(
         when (uuid) {
             TEMPERATURE_CHARACTERISTIC_UUID -> {
                 val decoded = decodeTemperature(value) ?: return
-                onTemperature(probeIndex, decoded.tipCelsius, decoded.ambientCelsius)
+                mainHandler.post { onTemperature(probeIndex, decoded.tipCelsius, decoded.ambientCelsius) }
             }
             BATTERY_CHARACTERISTIC_UUID -> {
                 val percent = decodeBattery(value)
-                onBattery(probeIndex, percent)
+                mainHandler.post { onBattery(probeIndex, percent) }
             }
         }
     }
@@ -229,5 +304,7 @@ class MeaterBleService(
             UUID.fromString("2adb4877-68d8-4884-bd3c-d83853bf27b8")
         val CLIENT_CHARACTERISTIC_CONFIG_UUID: UUID =
             UUID.fromString("00002902-0000-1000-8000-00805f9b34fb")
+        /** Interval between keepalive battery reads to prevent idle link supervision timeout. */
+        const val KEEPALIVE_INTERVAL_MS = 15_000L
     }
 }

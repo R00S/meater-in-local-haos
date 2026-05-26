@@ -93,16 +93,20 @@ object CookingEngine {
         proteinCategory: String,
         cutId: String,
         cutDisplayName: String,
+        cutDisplayNameSv: String = "",
         doneness: String,
         targetTempC: Int,
-        restMinutes: Int = 5
+        restMinutes: Int = 5,
+        cookingMethod: String = ""
     ): CookingSession = session.copy(
         proteinCategory = proteinCategory,
         cutId = cutId,
         cutDisplayName = cutDisplayName,
+        cutDisplayNameSv = cutDisplayNameSv,
         doneness = doneness,
         targetTempC = targetTempC,
         restMinutes = restMinutes,
+        cookingMethod = cookingMethod,
         state = CookingState.COOKING,
         cookStartedAt = Instant.now(),
         etaMinutes = null,

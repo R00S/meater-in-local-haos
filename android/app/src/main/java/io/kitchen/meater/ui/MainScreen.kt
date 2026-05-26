@@ -8,105 +8,196 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
-import io.kitchen.meater.R
+import io.kitchen.meater.BuildConfig
 import io.kitchen.meater.cooking.CookingSession
 import io.kitchen.meater.cooking.CookingState
 import io.kitchen.meater.model.BleDevice
 
+private val FULL_MAC = Regex("^([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}\$")
+
 @Composable
 fun MainScreen(
     state: MainUiState,
+    discoveredDevices: List<BleDevice>,
     onScanToggle: () -> Unit,
     onSelectDevice: (String) -> Unit,
     onConnectToggle: () -> Unit,
+    onManualMacChange: (String) -> Unit,
+    onConnectManualMac: () -> Unit,
+    onConnectKnownProbe: (BleDevice) -> Unit,
+    onForgetProbe: (String) -> Unit,
     onSelectCut: (probeIndex: Int) -> Unit,
+    onAddProbeSlot: () -> Unit,
     onOpenWebView: () -> Unit,
     onLanguageToggle: () -> Unit
 ) {
+    val useSv = state.language == "sv"
+
+    val strAppName      = if (useSv) "MEATER Kök"             else "MEATER Kitchen"
+    val strStartScan    = if (useSv) "Starta sökning"         else "Start Scan"
+    val strStopScan     = if (useSv) "Stoppa sökning"         else "Stop Scan"
+    val strConnect      = if (useSv) "Anslut"                 else "Connect"
+    val strDisconnect   = if (useSv) "Koppla från"            else "Disconnect"
+    val strKnownDevices = if (useSv) "Kända enheter"          else "Known devices"
+    val strForget       = if (useSv) "Glöm"                   else "Forget"
+    val strNearby       = if (useSv) "BLE-enheter i närheten" else "Nearby BLE devices"
+    val strMacTitle     = if (useSv) "Anslut via MAC-adress"  else "Connect by MAC address"
+    val strProbes       = if (useSv) "Prober"                 else "Probes"
+    val strFullPanel    = if (useSv) "Tillagningshistorik"    else "Cook History"
+    val strAddProbe     = if (useSv) "+ Lägg till probplats"  else "+ Add probe slot"
+    val strScanHint     = if (useSv)
+        "Tryck \u201cStarta sökning\u201d — din MEATER+ Block visas som \u201cMEATER+\u201d. Tryck på enheten för att ansluta."
+    else
+        "Tap \u201cStart Scan\u201d — your MEATER+ Block appears as \u201cMEATER+\u201d. Tap a device to connect."
+
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .verticalScroll(rememberScrollState())
                 .padding(16.dp),
             verticalArrangement = Arrangement.Top
         ) {
-            // Title + language toggle
+            // Title bar
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text(text = "MEATER Kitchen", style = MaterialTheme.typography.headlineMedium)
+                Column {
+                    Text(strAppName, style = MaterialTheme.typography.headlineMedium)
+                    val branch = BuildConfig.GIT_BRANCH
+                    val branchSuffix = if (branch != "main" && branch != "local")
+                        "  [$branch]" else ""
+                    Text("v${BuildConfig.VERSION_NAME}$branchSuffix", style = MaterialTheme.typography.bodySmall)
+                }
                 OutlinedButton(onClick = onLanguageToggle) {
-                    Text(if (state.language == "sv") "EN" else "SV")
+                    Text(if (useSv) "EN" else "SV")
                 }
             }
 
             Spacer(modifier = Modifier.height(8.dp))
-            Text(text = state.status, style = MaterialTheme.typography.bodyMedium)
+            Text(state.status, style = MaterialTheme.typography.bodyMedium)
             Spacer(modifier = Modifier.height(12.dp))
 
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                Button(onClick = onScanToggle, enabled = !state.isConnected) {
-                    Text(if (state.isScanning) "Stop Scan" else "Start BLE Scan")
-                }
-                Button(
-                    onClick = onConnectToggle,
-                    enabled = state.selectedDeviceAddress != null || state.isConnected
-                ) {
-                    Text(if (state.isConnected) "Disconnect" else "Connect")
-                }
-            }
-
-            // Device list (before connecting)
+            // ── Not connected ─────────────────────────────────────────────────
             if (!state.isConnected) {
-                Spacer(modifier = Modifier.height(16.dp))
-                Text("Discovered devices", style = MaterialTheme.typography.titleMedium)
-                Spacer(modifier = Modifier.height(8.dp))
-                LazyColumn {
-                    items(state.discoveredDevices, key = { it.address }) { device ->
-                        DeviceRow(
-                            device = device,
-                            selected = state.selectedDeviceAddress == device.address,
-                            onSelect = { onSelectDevice(device.address) }
-                        )
-                        Spacer(modifier = Modifier.height(6.dp))
+
+                // 1. Scan button — the primary action
+                Button(
+                    onClick = onScanToggle,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(if (state.isScanning) strStopScan else strStartScan)
+                }
+
+                // 2. Known / saved probes
+                if (state.knownProbes.isNotEmpty()) {
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text(strKnownDevices, style = MaterialTheme.typography.titleMedium)
+                    Spacer(modifier = Modifier.height(6.dp))
+                    state.knownProbes.forEach { probe ->
+                        Card(
+                            modifier = Modifier.fillMaxWidth().padding(vertical = 3.dp),
+                            colors = CardDefaults.cardColors(
+                                containerColor = MaterialTheme.colorScheme.secondaryContainer
+                            )
+                        ) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(horizontal = 12.dp, vertical = 8.dp),
+                                horizontalArrangement = Arrangement.SpaceBetween
+                            ) {
+                                Column(modifier = Modifier.weight(1f)) {
+                                    Text(probe.name, style = MaterialTheme.typography.bodyLarge)
+                                    Text(probe.address, style = MaterialTheme.typography.bodySmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant)
+                                }
+                                Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                                    Button(onClick = { onConnectKnownProbe(probe) }) { Text(strConnect) }
+                                    TextButton(onClick = { onForgetProbe(probe.address) }) { Text(strForget) }
+                                }
+                            }
+                        }
                     }
+                }
+
+                // 3. Nearby BLE devices — one-tap connect (approach from grgcmz/BLEScanner MIT)
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(strNearby, style = MaterialTheme.typography.titleMedium)
+                Spacer(modifier = Modifier.height(6.dp))
+
+                if (discoveredDevices.isEmpty()) {
+                    Text(strScanHint, style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+
+                // Sorted: MEATER first, then RSSI descending — sorting done in ViewModel
+                discoveredDevices.forEach { device ->
+                    DeviceRow(
+                        device = device,
+                        // One-tap connect: tap the row to connect immediately
+                        onTap = { onSelectDevice(device.address); onConnectToggle() },
+                        useSv = useSv
+                    )
+                    Spacer(modifier = Modifier.height(4.dp))
+                }
+
+                // 4. Full-MAC fallback — last resort when scan doesn't find the device
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(strMacTitle, style = MaterialTheme.typography.titleSmall)
+                Spacer(modifier = Modifier.height(4.dp))
+                val isFullMac = state.manualMacAddress.matches(FULL_MAC)
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    OutlinedTextField(
+                        value = state.manualMacAddress,
+                        onValueChange = onManualMacChange,
+                        modifier = Modifier.weight(1f),
+                        label = { Text("XX:XX:XX:XX:XX:XX") },
+                        singleLine = true,
+                        keyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.Done)
+                    )
+                    Button(onClick = onConnectManualMac, enabled = isFullMac) { Text(strConnect) }
                 }
             }
 
-            // Multi-probe dashboard
+            // ── Connected / Dashboard ─────────────────────────────────────────
             if (state.isConnected) {
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(8.dp))
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                    Text("Probes", style = MaterialTheme.typography.titleMedium)
-                    OutlinedButton(onClick = onOpenWebView) {
-                        Text("Full Panel")
-                    }
+                    Button(onClick = onConnectToggle) { Text(strDisconnect) }
+                    OutlinedButton(onClick = onOpenWebView) { Text(strFullPanel) }
                 }
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(strProbes, style = MaterialTheme.typography.titleMedium)
                 Spacer(modifier = Modifier.height(8.dp))
 
-                if (state.sessions.isEmpty()) {
-                    Text("Waiting for probe data…", style = MaterialTheme.typography.bodyMedium)
-                } else {
-                    state.sessions.values.sortedBy { it.probeIndex }.forEach { session ->
-                        ProbeCard(
-                            session = session,
-                            useSv = state.language == "sv",
-                            onSelectCut = { onSelectCut(session.probeIndex) }
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
+                state.sessions.values.sortedBy { it.probeIndex }.forEach { session ->
+                    ProbeCard(
+                        session = session,
+                        useSv = useSv,
+                        onSelectCut = { onSelectCut(session.probeIndex) }
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                }
+
+                val hasRoomForMore = (0..3).any { it !in state.sessions }
+                if (hasRoomForMore) {
+                    OutlinedButton(onClick = onAddProbeSlot, modifier = Modifier.fillMaxWidth()) {
+                        Text(strAddProbe)
                     }
                 }
             }
@@ -115,53 +206,109 @@ fun MainScreen(
 }
 
 @Composable
-private fun ProbeCard(
-    session: CookingSession,
-    useSv: Boolean,
-    onSelectCut: () -> Unit
-) {
+private fun ProbeCard(session: CookingSession, useSv: Boolean, onSelectCut: () -> Unit) {
+    // UI chrome — mirror I18N_STRINGS from the HAOS panel
+    val strProbe        = if (useSv) "Prob"                             else "Probe"
+    val strSelectCut    = if (useSv) "Välj styckdel & starta tillagning" else "Select cut & start cook"
+    val strChangeCut    = if (useSv) "Byt styckdel"                     else "Change cut"
+    val strTip          = if (useSv) "Spets:"                           else "Tip:"
+    val strAmbient      = if (useSv) "Omgivning:"                       else "Ambient:"
+    val strBattery      = if (useSv) "Batteri:"                         else "Battery:"
+    val strState        = if (useSv) "Status:"                          else "State:"
+    val strTarget       = if (useSv) "Mål:"                             else "Target:"
+    val strEta          = if (useSv) "Beräknad tid:"                    else "ETA:"
+
+    // Cut display name: prefer the language-matched name stored from the cut file
+    val cutName = when {
+        session.cutDisplayName.isBlank() -> ""
+        useSv && session.cutDisplayNameSv.isNotBlank() -> session.cutDisplayNameSv
+        else -> session.cutDisplayName
+    }
+
     Card(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(12.dp)) {
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                 Text(
-                    text = "Probe ${session.probeIndex + 1}" +
-                        if (session.cutDisplayName.isNotBlank()) " — ${session.cutDisplayName}" else "",
+                    text = "$strProbe ${session.probeIndex + 1}" +
+                        if (cutName.isNotBlank()) " \u2014 $cutName" else "",
                     style = MaterialTheme.typography.titleSmall
                 )
-                OutlinedButton(onClick = onSelectCut) {
-                    Text(if (session.state == CookingState.IDLE) "Select cut" else "Change cut")
+                Button(onClick = onSelectCut) {
+                    Text(if (session.state == CookingState.IDLE && session.cutId.isBlank())
+                        strSelectCut else strChangeCut)
                 }
             }
 
             Spacer(modifier = Modifier.height(4.dp))
-            Text("Tip:     ${session.tipCelsius?.let { "%.1f°C".format(it) } ?: "--"}")
-            Text("Ambient: ${session.ambientCelsius?.let { "%.1f°C".format(it) } ?: "--"}")
-            Text("Battery: ${session.batteryPercent?.let { "$it%" } ?: "--"}")
+            Text("$strTip     ${session.tipCelsius?.let { "%.1f\u00b0C".format(it) } ?: "--"}")
+            Text("$strAmbient ${session.ambientCelsius?.let { "%.1f\u00b0C".format(it) } ?: "--"}")
+            Text("$strBattery ${session.batteryPercent?.let { "$it%" } ?: "--"}")
 
-            if (session.state != CookingState.IDLE) {
+            if (session.state != CookingState.IDLE || session.cutId.isNotBlank()) {
                 Spacer(modifier = Modifier.height(4.dp))
-                Text("State:   ${session.state.name}")
-                session.targetTempC?.let { Text("Target:  ${it}°C  (${session.doneness})") }
-                session.etaMinutes?.let { Text("ETA:     $it min") }
+                Text("$strState   ${cookingStateLabel(session.state, useSv)}")
+                session.targetTempC?.let { Text("$strTarget  ${it}\u00b0C  (${session.doneness})") }
+                session.etaMinutes?.let { Text("$strEta $it min") }
             }
         }
     }
 }
 
+/** Translate CookingState to display label — mirrors I18N_STRINGS meater section. */
+private fun cookingStateLabel(state: CookingState, useSv: Boolean): String = when (state) {
+    CookingState.IDLE         -> if (useSv) "Väntar"             else "Idle"
+    CookingState.COOKING      -> if (useSv) "Tillagas"           else "Cooking"
+    CookingState.APPROACHING  -> if (useSv) "Närmar sig målet"   else "Approaching target"
+    CookingState.GOAL_REACHED -> if (useSv) "Mål nått!"          else "Goal reached!"
+    CookingState.RESTING      -> if (useSv) "Vilar"              else "Resting"
+    CookingState.DONE         -> if (useSv) "Klar"               else "Done"
+}
+
 @Composable
-private fun DeviceRow(
-    device: BleDevice,
-    selected: Boolean,
-    onSelect: () -> Unit
-) {
-    Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-        Column(modifier = Modifier.weight(1f)) {
-            Text(device.name)
-            Text(device.address, style = MaterialTheme.typography.bodySmall)
-            if (selected) Text("Selected", color = MaterialTheme.colorScheme.secondary)
-        }
-        Button(onClick = onSelect) {
-            Text(if (selected) "Selected" else "Select")
+private fun DeviceRow(device: BleDevice, onTap: () -> Unit, useSv: Boolean) {
+    val strConnect = if (useSv) "Anslut" else "Connect"
+    // RSSI → human-readable signal label (same scale as BLE Scanner apps)
+    val signalLabel = when {
+        device.rssi >= -60 -> "████"    // excellent
+        device.rssi >= -70 -> "███░"    // good
+        device.rssi >= -80 -> "██░░"    // fair
+        device.rssi >= -90 -> "█░░░"    // weak
+        device.rssi > -100 -> "░░░░"    // very weak
+        else               -> "    "    // unknown (saved probe, no live RSSI)
+    }
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = if (device.isMeaterDevice)
+            CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer)
+        else
+            CardDefaults.cardColors()
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 12.dp, vertical = 8.dp),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Column(modifier = Modifier.weight(1f)) {
+                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    if (device.isMeaterDevice) {
+                        Text("🥩", style = MaterialTheme.typography.bodyLarge)
+                    }
+                    Text(device.name, style = MaterialTheme.typography.bodyLarge)
+                }
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(device.address, style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    if (device.rssi > -100) {
+                        Text(signalLabel, style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text("${device.rssi} dBm", style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    }
+                }
+            }
+            // One-tap connect: no separate select step needed
+            Button(onClick = onTap) { Text(strConnect) }
         }
     }
 }

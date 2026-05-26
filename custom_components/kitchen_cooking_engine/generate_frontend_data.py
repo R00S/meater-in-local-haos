@@ -1168,8 +1168,45 @@ def generate_js_data():
     lines.append("")
     lines.append("// MEATER doneness options — collected from KCE:CUT doneness blocks")
     lines.append(f"const EXP_DONENESS_OPTIONS = {json.dumps(exp_doneness, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// Recipe index: slug (or slug-method) → relative path under www/recipes/")
+    lines.append("// Used by the Android app to load the correct .md asset file.")
+    recipe_index = _build_recipe_index(base_dir)
+    lines.append(f"const EXP_RECIPE_INDEX = {json.dumps(recipe_index, indent=2, ensure_ascii=False)};")
 
     return "\n".join(lines)
+
+
+def _build_recipe_index(base_dir):
+    """Return {slug: relative_path, slug-method: relative_path, ...} for all KCE:CUT .md files."""
+    import re as _re
+    recipes_dir = os.path.join(base_dir, "www", "recipes")
+    index = {}
+    if not os.path.isdir(recipes_dir):
+        return index
+    for root, dirs, files in os.walk(recipes_dir):
+        dirs.sort()
+        for fname in sorted(files):
+            if not fname.endswith(".md"):
+                continue
+            fpath = os.path.join(root, fname)
+            try:
+                with open(fpath, encoding="utf-8") as fp:
+                    head = fp.read(2000)  # only need the frontmatter
+            except Exception:
+                continue
+            # Must be a KCE:CUT or KCE:CUT_METHOD file
+            if "KCE:CUT" not in head:
+                continue
+            slug_m = _re.search(r"slug:\s*(\S+)", head)
+            if not slug_m:
+                continue
+            slug = slug_m.group(1)
+            method_m = _re.search(r"method:\s*(\S+)", head)
+            key = f"{slug}-{method_m.group(1)}" if method_m else slug
+            rel = os.path.relpath(fpath, recipes_dir).replace("\\", "/")
+            index[key] = rel
+    return index
 
 
 def regenerate_panel():
@@ -1309,7 +1346,42 @@ import {{
             print(f"Updated PANEL_VERSION in const.py: {old_const_version} -> {new_version}")
     
     print(f"Regenerated {panel_file}")
-    
+
+    # Copy the generated panel JS to the Android assets directory so the Android
+    # app (CookingDataRepository) can read EXP_TREE / EXP_DONENESS_OPTIONS from it.
+    # The assets copy is git-ignored — kitchen-cooking-panel.js lives only in www/
+    # in the repo; the copy is a build artifact produced by this generator.
+    import shutil as _shutil
+    android_assets = os.path.normpath(
+        os.path.join(base_dir, "..", "..", "android", "app", "src", "main", "assets")
+    )
+    if os.path.isdir(android_assets):
+        # Write Android-specific copy with CDN import replaced by local asset.
+        # kitchen-cooking-panel.js imports LitElement from https://unpkg.com/…
+        # which requires internet access and is forbidden per ToR §4.2.
+        # The Android copy imports from ./lit-element-bundle.js instead
+        # (a bundled file tracked in git alongside this generator).
+        with open(panel_file, "r", encoding="utf-8") as _f:
+            _panel_src = _f.read()
+        _panel_android = _panel_src.replace(
+            '"https://unpkg.com/lit-element@2.4.0/lit-element.js?module"',
+            '"./lit-element-bundle.js"'
+        )
+        android_panel = os.path.join(android_assets, "kitchen-cooking-panel.js")
+        with open(android_panel, "w", encoding="utf-8") as _f:
+            _f.write(_panel_android)
+        print(f"Copied panel JS to Android assets ({android_assets}) [CDN import rewritten to local]")
+        # Also copy the recipe .md files so the Android app can display recipe content.
+        recipes_src = os.path.join(base_dir, "www", "recipes")
+        recipes_dst = os.path.join(android_assets, "recipes")
+        if os.path.isdir(recipes_src):
+            if os.path.isdir(recipes_dst):
+                _shutil.rmtree(recipes_dst)
+            _shutil.copytree(recipes_src, recipes_dst)
+            print(f"Copied recipe files to Android assets ({recipes_dst})")
+    else:
+        print(f"  Note: Android assets dir not found, skipping copy to Android")
+
     # Count Ninja Combi recipes
     try:
         base_dir = os.path.dirname(os.path.abspath(__file__))

@@ -21,8 +21,16 @@ android {
         applicationId = "io.kitchen.meater"
         minSdk = 29
         targetSdk = 35
-        versionCode = 4
-        versionName = "0.10.0.3"
+        versionCode = 18
+        versionName = "0.10.0.17"
+
+        // GIT_BRANCH is injected by the build-apk.yml workflow so the version line in
+        // the app shows which branch the APK was built from (e.g. "copilot/fix-…").
+        // Falls back to "local" for developer builds.
+        buildConfigField(
+            "String", "GIT_BRANCH",
+            "\"${System.getenv("GIT_BRANCH") ?: "local"}\""
+        )
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -76,6 +84,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     packaging {
         resources {
@@ -96,6 +105,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
     implementation("com.google.android.material:material:1.12.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+    implementation("androidx.webkit:webkit:1.12.1")
 
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")

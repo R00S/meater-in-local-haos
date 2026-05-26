@@ -31,8 +31,20 @@ jobs:
           VERSION=$(grep 'versionName' android/app/build.gradle.kts | grep -oP '"\K[^"]+')
           echo "name=$VERSION" >> $GITHUB_OUTPUT
 
+      - name: Copy panel JS to Android assets
+        run: |
+          mkdir -p android/app/src/main/assets
+          cp custom_components/kitchen_cooking_engine/www/kitchen-cooking-panel.js android/app/src/main/assets/kitchen-cooking-panel.js
+
+      - name: Copy recipe files to Android assets
+        run: |
+          mkdir -p android/app/src/main/assets/recipes
+          cp -r custom_components/kitchen_cooking_engine/www/recipes/. android/app/src/main/assets/recipes/
+
       - name: Build APK
         working-directory: android
+        env:
+          GIT_BRANCH: ${{ github.ref_name }}
         run: ./gradlew --no-daemon :app:assembleDebug
 
       - name: Copy APK with version in filename and update latest
@@ -41,10 +53,15 @@ jobs:
           cp android/app/build/outputs/apk/debug/app-debug.apk android/apk/meater-kitchen-${{ steps.version.outputs.name }}.apk
           cp android/apk/meater-kitchen-${{ steps.version.outputs.name }}.apk android/apk/meater-kitchen-latest.apk
 
+      - name: Update README download link for this branch
+        run: |
+          BRANCH="${{ github.ref_name }}"
+          sed -i "s|raw/[^/]*/android/apk/meater-kitchen-latest\.apk|raw/${BRANCH}/android/apk/meater-kitchen-latest.apk|g" README.md
+
       - name: Commit APK to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add android/apk/
+          git add android/apk/ README.md
           git commit -m "build: APK v${{ steps.version.outputs.name }}"
           git push

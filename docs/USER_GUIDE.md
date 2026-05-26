@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.0.3 · Home Assistant 2024.1.0+
+> **Version:** 0.10.0.6 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -1399,14 +1399,39 @@ Ensure the **Measurement System** setting matches your recipe source. US recipes
 °F; Swedish recipes use dl and °C. Changing the system converts all displayed amounts in real time.
 
 
-## 15. Standalone Android App (v0.10.0.3)
+## 15. Standalone Android App (v0.10.0.17 — Alpha)
 
 The `android/` directory contains the standalone MEATER Kitchen APK project
 described in `docs/ANDROID_APP_TOR.md`.
 
 ### What is implemented
 
-- **BLE scanning** — discovers MEATER-named BLE devices
+- **BLE scanning — all devices** — the scan shows every nearby BLE device. The MEATER+
+  Block advertises as `"MEATER+"` and appears in the list with that name. Tap it, then press
+  **Connect**. (No filtering needed — this is the same approach used by open-source BLE scanner
+  apps such as `grgcmz/BLEScanner` and `santansarah/ble-scanner`, MIT-licensed.)
+- **Known devices** — the app remembers each MEATER+ Block once you connect. On the next
+  launch a **"Known devices"** section appears at the top with a direct **Connect** button
+  (no scan required). A **Forget** button removes the entry.
+- **Connect by MAC address** — fallback power-user field: type a full `XX:XX:XX:XX:XX:XX`
+  address and connect directly without scanning.
+- **Language switching (EN / SV)** — tap the **SV / EN** button on the main screen to toggle
+  between English and Swedish. All native UI labels switch immediately: protein categories, cut
+  names, doneness names, and every dashboard label (Tip / Spets, Ambient / Omgivning,
+  Battery / Batteri, ETA / Beräknad tid, state names, etc.). Cut names and doneness names are
+  bilingual in the cut files and pulled from `EXP_TREE` / `EXP_DONENESS_OPTIONS` — no separate
+  translation table needed. Both names are stored when a cook is started so the probe card
+  always shows the correct language even if you toggle mid-cook.
+- **Cut selection and cook start (WebView panel)** — tap **Välj styckdel & starta tillagning** /
+  **Select cut & start cook** on a probe card to open the full KCE cooking path. The app runs
+  the **exact same `kitchen-cooking-panel.js`** that runs in Home Assistant — no HA server is
+  needed. A mock `hass` object is injected so all API calls resolve silently and `callService`
+  routes cook commands back to the native app via the `KceAndroid` JS bridge.
+  The panel is served offline via `WebViewAssetLoader` (no CDN, no network) with LitElement
+  bundled locally as `lit-element-bundle.js`. The panel opens directly at the MEATER cook path —
+  no welcome or appliance screen is shown. On confirming a cook the bridge receives
+  `cut_id / doneness / cooking_method / data_source` and hands off to the cooking engine.
+- **Version label** — app version shown on the main screen for easier debug identification
 - **GATT connect/disconnect** — connects to the MEATER+ Block (not cloud-connected)
 - **Multi-probe support** — enumerates all MEATER service instances the Block exposes
   (up to 4 probe slots); each probe gets its own dashboard card
@@ -1422,19 +1447,19 @@ described in `docs/ANDROID_APP_TOR.md`.
 - **Cook history** — local JSON storage of completed sessions with notes
 - **Multi-probe dashboard** — Compose UI with one card per active probe
 
-### What is not yet implemented
+### What is not yet implemented (alpha gaps)
 
-All core ToR items are now implemented. The following polish items remain:
+This is an **alpha-stage** app. All core ToR items are implemented; the following items
+remain before a stable release:
 
 - Runtime permission UX: permission screen is implemented; a system rationale dialog
   (shown when the user denies once) is not yet customised.
 - Signed release APK: the CI workflow currently builds a debug APK only.
   Signed release builds require keystore setup (see `android/KEYSTORE_SETUP.md` for
   instructions when you're ready to publish to the Play Store or distribute signed APKs).
-- Cut selection UI navigation from the WebView panel (JS → native) is wired but
-  requires testing on a real device with a live MEATER+ Block.
-- Language switching for the WebView panel (`window.KCE_ANDROID_LANGUAGE`) depends on
-  the panel JS implementing that hook (currently it reads the device locale).
+- End-to-end testing on a real device with a live MEATER+ Block: WebView cook path
+  UI flow and BLE connect/read cycle have not been verified on real hardware in this
+  branch.
 
 ### Build
 
