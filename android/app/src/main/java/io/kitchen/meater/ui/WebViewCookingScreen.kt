@@ -342,6 +342,35 @@ private fun buildCookPathHtml(language: String, probeIndex: Int): String {
       background: var(--ha-card-background);
       border-radius: 12px;
     }
+    /* ha-button is also undefined in standalone mode. Without styling it falls
+       back to inline text — the "Start cooking" button at the bottom of the cut
+       page looks like plain text and users miss it (the recipe-view variant only
+       happens to be findable because nothing else is near it). Style it as a
+       Material-ish primary button matching HA's defaults so it reads as a button
+       wherever the panel uses it. */
+    ha-button {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 10px 20px;
+      min-width: 64px;
+      background: var(--primary-color);
+      color: #ffffff;
+      border-radius: 8px;
+      font-size: 0.95em;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+      border: none;
+    }
+    ha-button[disabled] {
+      opacity: 0.4;
+      pointer-events: none;
+      cursor: default;
+    }
+    .action-container ha-button { min-width: 200px; }
   </style>
 </head>
 <body>

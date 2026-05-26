@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.10.1.1 - fix(android): tip/ambient temperature divisor was /32, must be /16 per meater.yaml — boiling water tip was reading half real value
+Last Change: v0.10.1.2 - fix(android): style ha-button in WebView wrapper so "Start cooking" is visible (was rendering as unstyled inline text — undefined custom element)
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "611"
+PANEL_VERSION = "612"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
