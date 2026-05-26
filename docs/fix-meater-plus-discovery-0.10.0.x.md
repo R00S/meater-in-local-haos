@@ -328,3 +328,29 @@ without any HA server. Also added `ha-card { display: block; }` in the outer pag
 a standalone WebView — making it block ensures cards stack vertically as intended.
 
 Version bump: 0.10.0.11 → 0.10.0.12 (versionCode 12 → 13).
+
+
+### 2026-05-26 — True fix for black screen (v0.10.0.14)
+
+**Root cause identified**: The previous agent fixed the wrong element name (`'kitchen-cooking-panel'` → `'kitchen-cooking-card'`) and added CSS variables, but neither addressed the actual cause.
+
+The REAL cause: `kitchen-cooking-panel.js` begins with:
+```js
+import {
+  LitElement, html, css,
+} from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
+```
+This is ES module syntax (a static `import` declaration). When the script is loaded as a
+**non-module** `<script>` tag (without `type="module"`), the browser throws:
+  `SyntaxError: Cannot use import statement outside a module`
+The entire script fails to parse. `customElements.define('kitchen-cooking-card', ...)` is
+never reached. `customElements.whenDefined(...)` never resolves. Body stays empty. Black screen.
+
+**Fix (v0.10.0.14)**:
+- `buildCookPathHtml`: `<script src="kitchen-cooking-panel.js">` → `<script type="module" src="kitchen-cooking-panel.js">`. Module context allows the static import.
+- `WebSettings`: Added `allowUniversalAccessFromFileURLs = true` so the file:// base URL can make the cross-origin HTTPS fetch to unpkg.com for LitElement. Changed `cacheMode` from `LOAD_NO_CACHE` to `LOAD_DEFAULT` so the LitElement CDN response is cached after first load.
+- DOMContentLoaded timing: module scripts are deferred (run before DOMContentLoaded per spec), so `customElements.define` runs before our DOMContentLoaded callback fires. `whenDefined` resolves immediately. Panel renders. ✓
+
+**Language toggle**: Already present on the main screen (BLE scan/connect screen) at `MainScreen.kt` lines 86-88. No change needed — this matches the user's requirement.
+
+Version bump: 0.10.0.13 → 0.10.0.14 (versionCode 14 → 15). Pure Android change.

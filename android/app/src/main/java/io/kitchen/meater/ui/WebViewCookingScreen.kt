@@ -206,7 +206,15 @@ fun WebViewCutSelectionScreen(
                             javaScriptEnabled = true
                             domStorageEnabled = true
                             allowFileAccessFromFileURLs = true
-                            cacheMode = WebSettings.LOAD_NO_CACHE
+                            // Allow the ES-module import in kitchen-cooking-panel.js to fetch
+                            // LitElement from https://unpkg.com while the page is loaded from
+                            // a file:// base URL.  Deprecated API but still functional; the
+                            // alternative (WebViewAssetLoader) requires an extra dependency.
+                            @Suppress("DEPRECATION")
+                            allowUniversalAccessFromFileURLs = true
+                            // Allow browser cache so LitElement CDN response is cached after
+                            // the first load (instead of re-fetching on every cook screen open).
+                            cacheMode = WebSettings.LOAD_DEFAULT
                         }
                         wv.webViewClient = WebViewClient()
                         wv.addJavascriptInterface(
@@ -343,7 +351,17 @@ private fun buildCookPathHtml(language: String, probeIndex: Int): String {
     });
   })();
 </script>
-<script src="kitchen-cooking-panel.js"></script>
+<!--
+  The panel uses a top-level ES-module import for LitElement:
+    import { LitElement, html, css } from "https://unpkg.com/lit-element@2.4.0/...";
+  A plain <script src="..."> tag is NOT a module context and throws SyntaxError,
+  preventing ANY code in the file from running → blank/black page.
+  type="module" enables the ES-module import, the CDN fetch succeeds, and
+  customElements.define('kitchen-cooking-card', ...) runs before DOMContentLoaded.
+  allowUniversalAccessFromFileURLs=true (set on WebSettings) allows the cross-origin
+  fetch from the file:// base URL.
+-->
+<script type="module" src="kitchen-cooking-panel.js"></script>
 </body>
 </html>
 """.trimIndent()
