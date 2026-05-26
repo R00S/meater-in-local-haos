@@ -37,3 +37,15 @@ The primary task is to create and improve cut files by adding real, verifiable r
   - Madens Verden honningmarineret laks (whole side, oven + grill)
   - Ricardo whole grilled salmon fillet (whole side, grill)
   - Barbecue Bible planked salmon and cedar-smoked wild salmon (whole side/large fillet, grill or grill+oven variants)
+
+## Requirement update (user clarification)
+
+- User clarified scope: whole salmon means an intact whole fish (bones + both sides + skin), head optional.
+- Implemented files were constrained to whole-fish sources only; fillet/side-only sources were excluded from authored leaf content.
+
+## Implementation log
+
+- Added parent cut file: `custom_components/kitchen_cooking_engine/www/recipes/fish/salmon/whole_salmon.md`.
+- Added method leaf: `custom_components/kitchen_cooking_engine/www/recipes/fish/salmon/whole_salmon-oven_bake.md`.
+- Added method leaf: `custom_components/kitchen_cooking_engine/www/recipes/fish/salmon/whole_salmon-grill.md`.
+- Grill leaf currently contains 3 verified whole-fish sources; a fourth verified whole-fish source from a distinct tradition was not reliably retrievable in-session without dropping source-quality standards.
