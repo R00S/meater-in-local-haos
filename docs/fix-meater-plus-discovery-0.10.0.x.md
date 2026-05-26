@@ -402,3 +402,20 @@ Pattern sourced from HA companion app / WallPanel companion (MIT-licensed open s
 settings. Fully local. ToR §4.2 satisfied. Build verified.
 
 Version bump: 0.10.0.15 → 0.10.0.16 (versionCode 16 → 17). Pure Android change.
+
+### 2026-05-26 — CHORES + merge preparation (v0.10.0.17)
+
+Routine maintenance:
+
+- **Version bump** (Android only): `0.10.0.16` → `0.10.0.17`, versionCode 17 → 18.
+  KCE HAOS component stays at `0.10.0.9` — no server-side changes in this branch.
+- **USER_GUIDE Section 15 updated**:
+  - Heading version updated to reflect current state (`v0.10.0.17 — Alpha`).
+  - "Cut selection and cook start" bullet rewritten: now describes the WebView-based
+    KCE panel cook path (introduced v0.10.0.11) instead of the old Kotlin/Compose
+    three-step screen that was replaced.
+  - "What is not yet implemented" section renamed to "What is not yet implemented (alpha gaps)"
+    and cleaned up: removed items that are now done (WebView wiring, language passing).
+    Remaining items: permission rationale dialog, signed APK, real-device end-to-end testing.
+- **README** Android section: added ⚠️ Alpha stage notice with link to User Guide §15.
+- **Branch timeline** (this file): updated to current state.

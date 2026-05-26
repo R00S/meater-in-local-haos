@@ -1399,7 +1399,7 @@ Ensure the **Measurement System** setting matches your recipe source. US recipes
 °F; Swedish recipes use dl and °C. Changing the system converts all displayed amounts in real time.
 
 
-## 15. Standalone Android App (v0.10.0.6)
+## 15. Standalone Android App (v0.10.0.17 — Alpha)
 
 The `android/` directory contains the standalone MEATER Kitchen APK project
 described in `docs/ANDROID_APP_TOR.md`.
@@ -1422,13 +1422,15 @@ described in `docs/ANDROID_APP_TOR.md`.
   bilingual in the cut files and pulled from `EXP_TREE` / `EXP_DONENESS_OPTIONS` — no separate
   translation table needed. Both names are stored when a cook is started so the probe card
   always shows the correct language even if you toggle mid-cook.
-- **Cut selection and cook start** — tap **Välj styckdel & starta tillagning** / **Select cut &
-  start cook** on a probe card to open the three-step cut selection screen:
-  1. Pick a protein category (e.g. Nötkött / Beef)
-  2. Pick a cut (e.g. Entrecôte / Ribeye steak)
-  3. Pick a doneness level with target temperature (e.g. Medium — 57 °C)
-  The cook starts immediately and the probe card shows live progress (state, target, ETA).
-  All data comes from the cut files in `www/recipes/` via the bundled `kitchen-cooking-panel.js`.
+- **Cut selection and cook start (WebView panel)** — tap **Välj styckdel & starta tillagning** /
+  **Select cut & start cook** on a probe card to open the full KCE cooking path. The app runs
+  the **exact same `kitchen-cooking-panel.js`** that runs in Home Assistant — no HA server is
+  needed. A mock `hass` object is injected so all API calls resolve silently and `callService`
+  routes cook commands back to the native app via the `KceAndroid` JS bridge.
+  The panel is served offline via `WebViewAssetLoader` (no CDN, no network) with LitElement
+  bundled locally as `lit-element-bundle.js`. The panel opens directly at the MEATER cook path —
+  no welcome or appliance screen is shown. On confirming a cook the bridge receives
+  `cut_id / doneness / cooking_method / data_source` and hands off to the cooking engine.
 - **Version label** — app version shown on the main screen for easier debug identification
 - **GATT connect/disconnect** — connects to the MEATER+ Block (not cloud-connected)
 - **Multi-probe support** — enumerates all MEATER service instances the Block exposes
@@ -1445,19 +1447,19 @@ described in `docs/ANDROID_APP_TOR.md`.
 - **Cook history** — local JSON storage of completed sessions with notes
 - **Multi-probe dashboard** — Compose UI with one card per active probe
 
-### What is not yet implemented
+### What is not yet implemented (alpha gaps)
 
-All core ToR items are now implemented. The following polish items remain:
+This is an **alpha-stage** app. All core ToR items are implemented; the following items
+remain before a stable release:
 
 - Runtime permission UX: permission screen is implemented; a system rationale dialog
   (shown when the user denies once) is not yet customised.
 - Signed release APK: the CI workflow currently builds a debug APK only.
   Signed release builds require keystore setup (see `android/KEYSTORE_SETUP.md` for
   instructions when you're ready to publish to the Play Store or distribute signed APKs).
-- Cut selection UI navigation from the WebView panel (JS → native) is wired but
-  requires testing on a real device with a live MEATER+ Block.
-- Language switching for the **WebView panel** (`window.KCE_ANDROID_LANGUAGE`) is passed
-  from the native app on panel load; the panel JS honours it where it reads the value.
+- End-to-end testing on a real device with a live MEATER+ Block: WebView cook path
+  UI flow and BLE connect/read cycle have not been verified on real hardware in this
+  branch.
 
 ### Build
 
