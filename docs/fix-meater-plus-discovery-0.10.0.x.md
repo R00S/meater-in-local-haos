@@ -354,3 +354,51 @@ never reached. `customElements.whenDefined(...)` never resolves. Body stays empt
 **Language toggle**: Already present on the main screen (BLE scan/connect screen) at `MainScreen.kt` lines 86-88. No change needed — this matches the user's requirement.
 
 Version bump: 0.10.0.13 → 0.10.0.14 (versionCode 14 → 15). Pure Android change.
+
+### 2026-05-26 — Local asset serving via WebViewAssetLoader (v0.10.0.16)
+
+**Problem**
+
+`allowUniversalAccessFromFileURLs = true` (deprecated Android API) was used to allow
+the ES-module import in `kitchen-cooking-panel.js` to fetch LitElement from
+`https://unpkg.com` while the page was loaded from `file:///android_asset/`.
+
+This was fragile:
+- `allowUniversalAccessFromFileURLs` does not reliably allow ES-module `import`
+  statements in all WebView/Android versions — it primarily affects XHR/fetch.
+- Required network access to unpkg.com (CDN dependency at runtime), violating ToR §4.2
+  ("no CDN, no network requests").
+- Deprecated API causing build warnings.
+
+**Fix (v0.10.0.16)**
+
+Pattern sourced from HA companion app / WallPanel companion (MIT-licensed open source).
+
+1. **Bundle LitElement locally** — `npx esbuild lit-element@2.4.0 --bundle --format=esm`
+   produces `android/app/src/main/assets/lit-element-bundle.js` (62 kB, tracked in git).
+
+2. **Rewrite CDN import in Android copy** — `generate_frontend_data.py` now replaces
+   `"https://unpkg.com/lit-element@2.4.0/lit-element.js?module"` with
+   `"./lit-element-bundle.js"` in the Android assets copy of the panel.
+   The HAOS copy (`www/kitchen-cooking-panel.js`) keeps the CDN URL unchanged.
+
+3. **`WebViewAssetLoader`** (from `androidx.webkit:webkit:1.12.1`) replaces the
+   deprecated `allowUniversalAccessFromFileURLs` flag in `WebViewCutSelectionScreen`:
+   - `WebViewAssetLoader` maps `https://appassets.androidplatform.net/assets/` to the
+     app's assets directory.
+   - `shouldInterceptRequest` routes all requests through the loader.
+   - `loadDataWithBaseURL` base URL changed from `file:///android_asset/` to
+     `https://appassets.androidplatform.net/assets/`.
+   - `type="module"` script tag resolves `kitchen-cooking-panel.js` relative to the
+     asset loader URL → intercepted and served locally → no CDN required.
+
+4. **Wire up WebViewCutSelectionScreen in MainActivity** — `AppScreen.CUT_SELECTION`
+   now calls `WebViewCutSelectionScreen` (the KCE panel in WebView) instead of the
+   old native `CutSelectionScreen` (Kotlin/Compose). The `onStartCook` callback
+   enriches the bare `cutId/doneness` data from the JS bridge using
+   `CookingDataRepository.findCutById()` / `findCategoryIdByCutId()`.
+
+**Result**: Cook path WebView renders offline with no CDN dependency. No deprecated
+settings. Fully local. ToR §4.2 satisfied. Build verified.
+
+Version bump: 0.10.0.15 → 0.10.0.16 (versionCode 16 → 17). Pure Android change.

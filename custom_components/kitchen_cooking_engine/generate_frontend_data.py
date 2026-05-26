@@ -1356,8 +1356,21 @@ import {{
         os.path.join(base_dir, "..", "..", "android", "app", "src", "main", "assets")
     )
     if os.path.isdir(android_assets):
-        _shutil.copy2(panel_file, os.path.join(android_assets, "kitchen-cooking-panel.js"))
-        print(f"Copied panel JS to Android assets ({android_assets})")
+        # Write Android-specific copy with CDN import replaced by local asset.
+        # kitchen-cooking-panel.js imports LitElement from https://unpkg.com/…
+        # which requires internet access and is forbidden per ToR §4.2.
+        # The Android copy imports from ./lit-element-bundle.js instead
+        # (a bundled file tracked in git alongside this generator).
+        with open(panel_file, "r", encoding="utf-8") as _f:
+            _panel_src = _f.read()
+        _panel_android = _panel_src.replace(
+            '"https://unpkg.com/lit-element@2.4.0/lit-element.js?module"',
+            '"./lit-element-bundle.js"'
+        )
+        android_panel = os.path.join(android_assets, "kitchen-cooking-panel.js")
+        with open(android_panel, "w", encoding="utf-8") as _f:
+            _f.write(_panel_android)
+        print(f"Copied panel JS to Android assets ({android_assets}) [CDN import rewritten to local]")
         # Also copy the recipe .md files so the Android app can display recipe content.
         recipes_src = os.path.join(base_dir, "www", "recipes")
         recipes_dst = os.path.join(android_assets, "recipes")

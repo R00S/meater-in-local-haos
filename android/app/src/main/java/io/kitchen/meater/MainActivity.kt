@@ -7,13 +7,14 @@ import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
+import io.kitchen.meater.data.CookingDataRepository
 import io.kitchen.meater.ui.AppScreen
 import io.kitchen.meater.ui.CookHistoryScreen
-import io.kitchen.meater.ui.CutSelectionScreen
 import io.kitchen.meater.ui.MainScreen
 import io.kitchen.meater.ui.MainViewModel
 import io.kitchen.meater.ui.PermissionScreen
 import io.kitchen.meater.ui.RecipeScreen
+import io.kitchen.meater.ui.WebViewCutSelectionScreen
 
 class MainActivity : ComponentActivity() {
     private val viewModel: MainViewModel by viewModels()
@@ -68,34 +69,38 @@ class MainActivity : ComponentActivity() {
                         }
                     )
 
-                    AppScreen.CUT_SELECTION -> CutSelectionScreen(
-                        probeIndex = state.cutSelectionProbeIndex,
-                        useSv      = state.language == "sv",
-                        onConfirm  = { proteinCategory, cutId, cutDisplayName, cutDisplayNameSv,
-                                       doneness, targetTempC, restMinutes, cookingMethod ->
-                            viewModel.startCooking(
-                                probeIndex       = state.cutSelectionProbeIndex,
-                                proteinCategory  = proteinCategory,
-                                cutId            = cutId,
-                                cutDisplayName   = cutDisplayName,
-                                cutDisplayNameSv = cutDisplayNameSv,
-                                doneness         = doneness,
-                                targetTempC      = targetTempC,
-                                restMinutes      = restMinutes,
-                                cookingMethod    = cookingMethod
-                            )
-                        },
-                        onViewRecipe = { slug, cutName, cutNameSv, method ->
-                            viewModel.openRecipe(
-                                probeIndex  = state.cutSelectionProbeIndex,
-                                slug        = slug,
-                                cutName     = cutName,
-                                cutNameSv   = cutNameSv,
-                                method      = method
-                            )
-                        },
-                        onCancel = { viewModel.backToDashboard() }
-                    )
+                    AppScreen.CUT_SELECTION -> {
+                        // The cook path is rendered by the KCE LitElement panel in a WebView.
+                        // Per ToR §4.2 no native Compose reimplementation is permitted.
+                        val cookingRepo = CookingDataRepository(this)
+                        WebViewCutSelectionScreen(
+                            probeIndex = state.cutSelectionProbeIndex,
+                            language   = state.language,
+                            onStartCook = { probeIndex, cutId, doneness, customTempC, cookingMethod, _ ->
+                                // Enrich bare cut_id / doneness from the JS bridge with display
+                                // names and rest time from CookingDataRepository.
+                                val cut = cookingRepo.findCutById(cutId)
+                                val category = cookingRepo.findCategoryIdByCutId(cutId)
+                                val donenessOption = cookingRepo.doneness[doneness]
+                                val targetTempC = customTempC
+                                    ?: donenessOption?.tempC
+                                    ?: cut?.usdaSafeC
+                                    ?: 70
+                                viewModel.startCooking(
+                                    probeIndex       = probeIndex,
+                                    proteinCategory  = category,
+                                    cutId            = cutId,
+                                    cutDisplayName   = cut?.name ?: cutId,
+                                    cutDisplayNameSv = cut?.nameSv ?: "",
+                                    doneness         = doneness,
+                                    targetTempC      = targetTempC,
+                                    restMinutes      = cut?.restTimeMin ?: 5,
+                                    cookingMethod    = cookingMethod
+                                )
+                            },
+                            onCancel = { viewModel.backToDashboard() }
+                        )
+                    }
 
                     AppScreen.HISTORY -> CookHistoryScreen(
                         useSv = state.language == "sv",

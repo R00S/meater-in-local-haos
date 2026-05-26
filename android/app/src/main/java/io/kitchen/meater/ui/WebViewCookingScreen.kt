@@ -1,6 +1,8 @@
 package io.kitchen.meater.ui
 
 import android.webkit.JavascriptInterface
+import android.webkit.WebResourceRequest
+import android.webkit.WebResourceResponse
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -18,6 +20,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.webkit.WebViewAssetLoader
 import io.kitchen.meater.cooking.CookingSession
 import org.json.JSONArray
 import org.json.JSONObject
@@ -202,21 +205,34 @@ fun WebViewCutSelectionScreen(
                 factory = { ctx ->
                     WebView(ctx).also { wv ->
                         webViewRef.value = wv
+
+                        // WebViewAssetLoader serves bundled assets from an https:// URL,
+                        // which is required for ES-module imports to work without granting
+                        // the deprecated allowUniversalAccessFromFileURLs permission.
+                        // Pattern from HA companion / WallPanel companion apps.
+                        val assetLoader = WebViewAssetLoader.Builder()
+                            .setDomain("appassets.androidplatform.net")
+                            .addPathHandler(
+                                "/assets/",
+                                WebViewAssetLoader.AssetsPathHandler(ctx)
+                            )
+                            .build()
+
                         with(wv.settings) {
                             javaScriptEnabled = true
                             domStorageEnabled = true
-                            allowFileAccessFromFileURLs = true
-                            // Allow the ES-module import in kitchen-cooking-panel.js to fetch
-                            // LitElement from https://unpkg.com while the page is loaded from
-                            // a file:// base URL.  Deprecated API but still functional; the
-                            // alternative (WebViewAssetLoader) requires an extra dependency.
-                            @Suppress("DEPRECATION")
-                            allowUniversalAccessFromFileURLs = true
-                            // Allow browser cache so LitElement CDN response is cached after
-                            // the first load (instead of re-fetching on every cook screen open).
+                            // No allowUniversalAccessFromFileURLs needed — page is served
+                            // from https://appassets.androidplatform.net/assets/ so all
+                            // relative module imports resolve within the same origin.
                             cacheMode = WebSettings.LOAD_DEFAULT
                         }
-                        wv.webViewClient = WebViewClient()
+                        wv.webViewClient = object : WebViewClient() {
+                            override fun shouldInterceptRequest(
+                                view: WebView,
+                                request: WebResourceRequest
+                            ): WebResourceResponse? =
+                                assetLoader.shouldInterceptRequest(request.url)
+                        }
                         wv.addJavascriptInterface(
                             CutSelectionBridgeImpl(
                                 probeIndex = probeIndex,
@@ -225,8 +241,10 @@ fun WebViewCutSelectionScreen(
                             ),
                             "KceAndroid"
                         )
+                        // Use the asset loader domain as base URL so the module script tag
+                        // resolves kitchen-cooking-panel.js via shouldInterceptRequest.
                         wv.loadDataWithBaseURL(
-                            "file:///android_asset/",
+                            "https://appassets.androidplatform.net/assets/",
                             buildCookPathHtml(language, probeIndex),
                             "text/html",
                             "utf-8",
@@ -352,14 +370,12 @@ private fun buildCookPathHtml(language: String, probeIndex: Int): String {
   })();
 </script>
 <!--
-  The panel uses a top-level ES-module import for LitElement:
-    import { LitElement, html, css } from "https://unpkg.com/lit-element@2.4.0/...";
-  A plain <script src="..."> tag is NOT a module context and throws SyntaxError,
-  preventing ANY code in the file from running → blank/black page.
-  type="module" enables the ES-module import, the CDN fetch succeeds, and
-  customElements.define('kitchen-cooking-card', ...) runs before DOMContentLoaded.
-  allowUniversalAccessFromFileURLs=true (set on WebSettings) allows the cross-origin
-  fetch from the file:// base URL.
+  kitchen-cooking-panel.js is an ES module (uses static `import` syntax).
+  type="module" is required so the browser parses it as a module context.
+  The panel imports LitElement from "./lit-element-bundle.js" (a local asset
+  rewritten by generate_frontend_data.py from the original CDN URL).
+  WebViewAssetLoader intercepts that request and serves the bundled file —
+  no network access required.
 -->
 <script type="module" src="kitchen-cooking-panel.js"></script>
 </body>
