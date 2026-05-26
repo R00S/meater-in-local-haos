@@ -12,6 +12,7 @@ recommended_doneness: medium
 methods:
 - oven_bake
 - grill
+- smoker
 doneness:
 - name: medium_rare
   target_c: 49
@@ -59,6 +60,7 @@ Hel lax betyder en intakt fiskkropp: båda sidorna sitter ihop via ryggrad och r
 
 - [Oven Bake](./whole_salmon-oven_bake.md)
 - [Grill](./whole_salmon-grill.md)
+- [Smoker](./whole_salmon-smoker.md)
 
 ## Quality score
 

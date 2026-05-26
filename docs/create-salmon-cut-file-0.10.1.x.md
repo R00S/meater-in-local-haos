@@ -49,3 +49,11 @@ The primary task is to create and improve cut files by adding real, verifiable r
 - Added method leaf: `custom_components/kitchen_cooking_engine/www/recipes/fish/salmon/whole_salmon-oven_bake.md`.
 - Added method leaf: `custom_components/kitchen_cooking_engine/www/recipes/fish/salmon/whole_salmon-grill.md`.
 - Grill leaf currently contains 3 verified whole-fish sources; a fourth verified whole-fish source from a distinct tradition was not reliably retrievable in-session without dropping source-quality standards.
+
+## 2026-05-26 (follow-up: smoked leaf request)
+
+- New task: add a smoked leaf for `whole_salmon`.
+- Re-validated scope: `whole_salmon` in this repo remains intact whole fish only (bones + both sides + skin, head optional).
+- Conducted source survey for whole-fish smoked salmon across previously-validated and additional candidate domains.
+- Outcome: no credible, authoritative whole-fish smoked-salmon source recipes were found that satisfy project integrity requirements; available hits were mostly fillet/side recipes, weak authority pages, or generic technique posts.
+- Implemented `whole_salmon-smoker.md` as a ToR-compliant placeholder stub (`No Recipes Found`) with search log, and linked `smoker` in the parent cut file.
