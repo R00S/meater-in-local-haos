@@ -191,9 +191,9 @@ A standalone Android app is available for controlling your MEATER+ from your pho
 
 > ⚠️ **Alpha stage** — core features work but the app has not yet been tested on real hardware end-to-end. Expect rough edges. See [Section 15 of the User Guide](docs/USER_GUIDE.md#15-standalone-android-app-v01001-alpha) for known gaps.
 
-**[⬇️ Download latest APK](https://github.com/R00S/meater-in-local-haos/raw/copilot/fix-select-cut-start-cook-button/android/apk/meater-kitchen-latest.apk)** — <!--APK_VERSION-->v0.10.1.3<!--/APK_VERSION-->
+**[⬇️ Download latest APK](https://github.com/R00S/meater-in-local-haos/raw/copilot/fix-select-cut-start-cook-button/android/apk/meater-kitchen-latest.apk)** — <!--APK_VERSION-->v0.10.1.5<!--/APK_VERSION-->
 
-> Tip: GitHub caches the `meater-kitchen-latest.apk` URL aggressively. If your download still shows an older version, force-refresh or use the versioned link: `android/apk/meater-kitchen-<!--APK_VERSION_PATH-->0.10.1.3<!--/APK_VERSION_PATH-->.apk`.
+> Tip: GitHub caches the `meater-kitchen-latest.apk` URL aggressively. If your download still shows an older version, force-refresh or use the versioned link: `android/apk/meater-kitchen-<!--APK_VERSION_PATH-->0.10.1.5<!--/APK_VERSION_PATH-->.apk`.
 
 > The APK is built on demand and stored in the repo. Enable "Install from unknown sources" in your Android settings before installing.
 
