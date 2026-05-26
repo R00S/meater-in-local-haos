@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.10.0.9 - inject GIT_BRANCH into BuildConfig; show branch in version line to prevent wrong-branch confusion
+Last Change: v0.10.1.0 - fix(android): rewrite CDN lit-element import to ./lit-element-bundle.js in CI APK build to eliminate WebView black screen on Select cut &amp; start cook
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "609"
+PANEL_VERSION = "610"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

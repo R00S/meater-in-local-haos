@@ -35,6 +35,18 @@ jobs:
         run: |
           mkdir -p android/app/src/main/assets
           cp custom_components/kitchen_cooking_engine/www/kitchen-cooking-panel.js android/app/src/main/assets/kitchen-cooking-panel.js
+          # Rewrite the CDN LitElement import to the bundled local asset so the panel
+          # works inside the APK WebView with no network access (mirrors the rewrite
+          # in custom_components/kitchen_cooking_engine/generate_frontend_data.py).
+          # Without this rewrite the import fails, kitchen-cooking-card is never
+          # defined and the WebView shows only the native back button (black screen).
+          sed -i 's|"https://unpkg.com/lit-element@2.4.0/lit-element.js?module"|"./lit-element-bundle.js"|g' android/app/src/main/assets/kitchen-cooking-panel.js
+          # Fail loudly if the rewrite did not happen — the panel would silently
+          # fall back to a black screen otherwise.
+          if grep -q 'unpkg.com/lit-element' android/app/src/main/assets/kitchen-cooking-panel.js; then
+            echo "::error::CDN lit-element import was not rewritten to ./lit-element-bundle.js"
+            exit 1
+          fi
 
       - name: Copy recipe files to Android assets
         run: |
