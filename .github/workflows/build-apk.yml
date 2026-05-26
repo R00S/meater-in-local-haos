@@ -68,7 +68,19 @@ jobs:
       - name: Update README download link for this branch
         run: |
           BRANCH="${{ github.ref_name }}"
-          sed -i "s|raw/[^/]*/android/apk/meater-kitchen-latest\.apk|raw/${BRANCH}/android/apk/meater-kitchen-latest.apk|g" README.md
+          # Branch names contain slashes (e.g. "copilot/fix-foo"), so the path
+          # between "raw/" and "/android/apk/" can span multiple segments. Match
+          # any non-paren / non-space chars instead of a single path segment.
+          # Escape any '|' in the branch name so it can't break the sed delimiter
+          # (slashes in the branch are already fine since we use '|' as delimiter).
+          BRANCH_ESCAPED="${BRANCH//|/\\|}"
+          sed -i "s|raw/[^ )]*/android/apk/meater-kitchen-latest\.apk|raw/${BRANCH_ESCAPED}/android/apk/meater-kitchen-latest.apk|g" README.md
+          # Fail loudly if the link is still pointing somewhere else after the rewrite.
+          if ! grep -q "raw/${BRANCH}/android/apk/meater-kitchen-latest.apk" README.md; then
+            echo "::error::README download link was not rewritten to branch ${BRANCH}"
+            grep -n "android/apk/meater-kitchen-latest.apk" README.md || true
+            exit 1
+          fi
 
       - name: Commit APK to repo
         run: |

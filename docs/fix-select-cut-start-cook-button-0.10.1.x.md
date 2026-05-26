@@ -48,13 +48,39 @@ broken APK.
 - All four version strings (manifest, `__version__`, two "Last Change" lines,
   `versionName`) match `0.10.1.0`.
 
-### Notes for future agents
-- Do **not** add a separate `cp` step before the generator — the generator's own
-  copy includes the rewrite. The workflow's manual `cp + sed` is a belt-and-braces
-  safety net for the case where `www/kitchen-cooking-panel.js` was committed but
-  the generator did not run on that machine.
-- `android/app/src/main/assets/kitchen-cooking-panel.js` is `.gitignore`d — never
-  commit it. Same for `android/app/src/main/assets/recipes/`.
-- `android/app/src/main/assets/lit-element-bundle.js` **is** committed and must
-  stay committed; it is the offline LitElement runtime served by
-  `WebViewAssetLoader` to satisfy the rewritten import.
+## 2026-05-26 (cont.) — README link not updated (CI bug)
+
+### Symptom
+After v0.10.1.0 was built and committed by CI (run 26445665583), the README
+"Download latest APK" link still pointed to
+`raw/copilot/fix-meater-plus-discovery/android/apk/meater-kitchen-latest.apk`
+on the previous branch — even though the v0.10.1.0 APK was correctly committed
+to *this* branch as `android/apk/meater-kitchen-latest.apk`. The CI job's
+"Update README download link for this branch" step ran and reported success,
+but did not actually change anything.
+
+### Root cause
+The sed pattern in `build-apk.yml` was:
+
+    s|raw/[^/]*/android/apk/meater-kitchen-latest\.apk|raw/${BRANCH}/...|g
+
+`[^/]*` matches a single path segment. Real branch names contain slashes
+(`copilot/fix-...`), so the existing URL has three slashes between `raw/` and
+`/android/`. The pattern never matched, sed exited 0 with zero substitutions,
+and `git add README.md` had no diff to commit. CI's "Commit APK" step did push
+the APK files but the README was left stale.
+
+### Fix
+- Replace `[^/]*` with `[^ )]*` in `.github/workflows/build-apk.yml` so the
+  capture spans the full branch path between `raw/` and `/android/apk/...`,
+  while stopping at the markdown link's closing `)` or any whitespace.
+- Add a post-rewrite `grep` guard that fails the workflow if the README does
+  not contain `raw/${BRANCH}/android/apk/meater-kitchen-latest.apk` afterwards.
+- Manually rewrite the link in `README.md` to point at this branch so the
+  v0.10.1.0 APK can be downloaded immediately (without waiting for another
+  CI run).
+
+### Verification
+Local dry-run with `BRANCH=copilot/fix-select-cut-start-cook-button` against a
+file containing the old `copilot/fix-meater-plus-discovery` URL produced the
+expected rewrite.
