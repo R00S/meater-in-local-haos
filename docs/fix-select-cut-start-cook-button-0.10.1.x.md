@@ -84,3 +84,81 @@ the APK files but the README was left stale.
 Local dry-run with `BRANCH=copilot/fix-select-cut-start-cook-button` against a
 file containing the old `copilot/fix-meater-plus-discovery` URL produced the
 expected rewrite.
+
+## 2026-05-26 (cont.) — v0.10.1.2 "Start cooking" fix did not actually work
+
+### Symptom
+User reported on v0.10.1.2: the "Starta tillagning" / "Start cooking" button is
+still missing at the bottom of the MEATER cut page in the APK (and below the
+recipe in the fullscreen recipe view). The page is not even scrollable past the
+recipes — there is literally nothing where the button should be.
+
+### Root cause (real, this time)
+The v0.10.1.2 fix added page-level CSS for `ha-button` in
+`buildCookPathHtml()`'s `<style>` block. That CSS lives in the **light DOM** of
+the page. The KCE panel is a LitElement which renders into a **Shadow Root**
+(`KitchenCookingPanel extends LitElement`, default render root = `ShadowRoot`).
+Page-level CSS does not pierce shadow boundaries, so the `ha-button` rule never
+applied to the `<ha-button>` instances inside the panel.
+
+`ha-button` therefore remained an *undefined* custom element. In WebView,
+undefined custom elements default to `display: inline` and bring no styling,
+making the action button effectively invisible (and useless — `?disabled`
+binds the attribute but undefined elements don't honour `disabled` either,
+and pointer-events default applies, so the click handler may not even fire).
+
+CSS custom properties (`--primary-color`, etc.) *do* inherit through shadow
+boundaries, which is why the ha-card colours work — but plain element-selector
+rules do not.
+
+### Fix (APK v0.10.1.3 — APK framework only, KCE HAOS code unchanged)
+Per user directive: HA frontend-element issues are fixed *in the APK
+framework*, not by editing `panel-class-template.js` or any other KCE source
+file. The panel must remain HA-compatible.
+
+- Remove the dead page-level `ha-button { … }` CSS from `buildCookPathHtml()`
+  in `android/app/src/main/java/io/kitchen/meater/ui/WebViewCookingScreen.kt`.
+- Register `ha-button` as a real custom element *before* the panel module is
+  imported, via `customElements.define('ha-button', HaButtonShim)` inside the
+  boot IIFE in `WebViewCookingScreen.kt`. The shim:
+  - Uses its own Shadow Root + `<slot>` so the panel's slotted text content
+    ("Starta tillagning", "Stop", "Start rest", "Complete", "Skip", …) shows
+    through.
+  - Brings `:host`, `:host([outlined])`, `:host([disabled])` styling so the
+    button is visible everywhere KCE writes `<ha-button>`, including inside
+    the panel's shadow root (`:host` CSS is part of the shim's own shadow).
+  - `pointer-events: none` on `:host([disabled])` prevents accidental clicks
+    when the panel binds `?disabled=${!this._selectedDoneness}`.
+  - Click events on slotted content bubble up to the host, so Lit's `@click`
+    listener (attached on `<ha-button>`) still fires.
+- Only `android/app/build.gradle.kts` bumps version (0.10.1.2 → 0.10.1.3,
+  versionCode 21 → 22). KCE `manifest.json`, `__init__.py`, `const.py`,
+  `panel-class-template.js`, generated `kitchen-cooking-panel.js` all stay
+  at 0.10.1.2 / PANEL_VERSION 612 — they have nothing to do with this fix.
+
+### Audit: HA custom elements the panel uses
+`grep -oE '<ha-[a-z-]+'` over `panel-class-template.js`:
+- `<ha-card>`         × 93 — works in the APK because the panel's own
+  shadow-DOM styles include `ha-card { … }`; undefined element + inherited
+  CSS vars are enough.
+- `<ha-button>`       × 11 — broken until v0.10.1.3 (this fix).
+- `<ha-circular-progress>`  × 1
+- `<ha-menu-button>`        × 1
+- `<ha-top-app-bar-fixed>`  × 1
+
+The last three are not on the MEATER cut-path screens reached by the APK
+(welcome / sidebar / loading chrome), so they don't currently affect APK
+users — but they are the next candidates if more screens are surfaced. The
+follow-up direction (per the broader requirement to "incorporate or emulate
+the HA frontend") is to grow a small registry of these element shims in the
+APK framework — not to special-case each one — and apply it from both
+WebView entry points (`WebViewCookingScreen` and `WebViewCutSelectionScreen`).
+
+### Verification
+- `cd android && ./gradlew --no-daemon :app:assembleDebug` → `BUILD
+  SUCCESSFUL` after the change (already run during initial v0.10.1.2 attempt;
+  re-run for v0.10.1.3 below).
+- Visual check on device: bottom of cut page + bottom of fullscreen recipe
+  view both show a styled blue button labelled "Starta tillagning" / "Start
+  cooking" that becomes faded/non-clickable until a doneness is picked, then
+  clicking it triggers `_startCook` via the KceAndroid bridge.
