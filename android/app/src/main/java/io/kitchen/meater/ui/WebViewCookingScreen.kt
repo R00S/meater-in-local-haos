@@ -4,12 +4,19 @@ import android.webkit.JavascriptInterface
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import io.kitchen.meater.cooking.CookingSession
 import org.json.JSONArray
@@ -165,49 +172,70 @@ fun WebViewCutSelectionScreen(
     onCancel: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val webViewRef = remember { mutableStateOf<WebView?>(null) }
+    val useSv = language == "sv"
 
-    DisposableEffect(Unit) {
-        onDispose { webViewRef.value?.destroy() }
-    }
-
-    AndroidView(
-        modifier = modifier,
-        factory = { ctx ->
-            WebView(ctx).also { wv ->
-                webViewRef.value = wv
-                with(wv.settings) {
-                    javaScriptEnabled = true
-                    domStorageEnabled = true
-                    allowFileAccessFromFileURLs = true
-                    cacheMode = WebSettings.LOAD_NO_CACHE
-                }
-                wv.webViewClient = WebViewClient()
-                wv.addJavascriptInterface(
-                    CutSelectionBridgeImpl(
-                        probeIndex = probeIndex,
-                        onStartCook = onStartCook,
-                        onCancel = onCancel
-                    ),
-                    "KceAndroid"
-                )
-                wv.loadDataWithBaseURL(
-                    "file:///android_asset/",
-                    buildCookPathHtml(language, probeIndex),
-                    "text/html",
-                    "utf-8",
-                    null
-                )
+    Column(modifier = modifier) {
+        // Native back button — the panel's own "← Back" navigates within the WebView
+        // (back to welcome), not back to the Android dashboard. This button returns to
+        // the dashboard from anywhere in the cook path.
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 8.dp, vertical = 4.dp)
+        ) {
+            Button(onClick = onCancel) {
+                Text(if (useSv) "← Tillbaka" else "← Back")
             }
         }
-    )
+
+        // key(language) forces the WebView to recreate when language changes so
+        // buildCookPathHtml is called again with the updated locale.
+        androidx.compose.runtime.key(language) {
+            val webViewRef = remember { mutableStateOf<WebView?>(null) }
+
+            DisposableEffect(Unit) {
+                onDispose { webViewRef.value?.destroy() }
+            }
+
+            AndroidView(
+                modifier = Modifier.weight(1f),
+                factory = { ctx ->
+                    WebView(ctx).also { wv ->
+                        webViewRef.value = wv
+                        with(wv.settings) {
+                            javaScriptEnabled = true
+                            domStorageEnabled = true
+                            allowFileAccessFromFileURLs = true
+                            cacheMode = WebSettings.LOAD_NO_CACHE
+                        }
+                        wv.webViewClient = WebViewClient()
+                        wv.addJavascriptInterface(
+                            CutSelectionBridgeImpl(
+                                probeIndex = probeIndex,
+                                onStartCook = onStartCook,
+                                onCancel = onCancel
+                            ),
+                            "KceAndroid"
+                        )
+                        wv.loadDataWithBaseURL(
+                            "file:///android_asset/",
+                            buildCookPathHtml(language, probeIndex),
+                            "text/html",
+                            "utf-8",
+                            null
+                        )
+                    }
+                }
+            )
+        }
+    }
 }
 
 /**
  * HTML page that:
  * 1. Defines a mock `hass` object (no server required).
  * 2. Loads the bundled kitchen-cooking-panel.js.
- * 3. Creates the <kitchen-cooking-panel> element, sets `hass` and initial state
+ * 3. Creates the <kitchen-cooking-card> element, sets `hass` and initial state
  *    *before* appending to DOM so the very first LitElement render goes straight
  *    to the MEATER cook path — no flash of the welcome/appliance screen.
  */
@@ -250,7 +278,7 @@ private fun buildCookPathHtml(language: String, probeIndex: Int): String {
       /* color inherits into LitElement shadow DOM via CSS cascade */
       color: var(--primary-text-color);
     }
-    kitchen-cooking-panel { display: block; min-height: 100vh; }
+    kitchen-cooking-card { display: block; min-height: 100vh; }
     /* ha-card is an unknown custom element in standalone mode — give it block layout
        so cards stack vertically rather than rendering inline. */
     ha-card {
@@ -294,8 +322,8 @@ private fun buildCookPathHtml(language: String, probeIndex: Int): String {
     // LitElement batches the queued updates into one first render that already
     // shows the cook path — no intermediate welcome/appliance screen visible.
     document.addEventListener('DOMContentLoaded', function() {
-      customElements.whenDefined('kitchen-cooking-panel').then(function() {
-        var panel = document.createElement('kitchen-cooking-panel');
+      customElements.whenDefined('kitchen-cooking-card').then(function() {
+        var panel = document.createElement('kitchen-cooking-card');
 
         // hass must be set before connectedCallback so callApi calls
         // get our mock (not undefined) even during the first async load.

@@ -266,7 +266,38 @@ Verification: cut names and doneness names are sourced exclusively from `EXP_TRE
 `EXP_DONENESS_OPTIONS` in `kitchen-cooking-panel.js` (ground truth: the cut files). No
 manual translation table. Chrome strings mirror `I18N_STRINGS` from the HAOS panel.
 
-### 2026-05-26 — Two bugs from v0.10.0.11 (v0.10.0.12)
+### 2026-05-26 — Fix black screen + sv/en button (v0.10.0.13)
+
+**Bug 1 — "Select cut & start cook" still black screen (not a CSS issue)**
+
+Root cause: `buildCookPathHtml` called `customElements.whenDefined('kitchen-cooking-panel')`
+and `document.createElement('kitchen-cooking-panel')`, but `kitchen-cooking-panel.js` registers
+the element as **`'kitchen-cooking-card'`** (line 11453 of panel-class-template.js:
+`customElements.define('kitchen-cooking-card', KitchenCookingPanel)`).
+
+`customElements.whenDefined('kitchen-cooking-panel')` — a Promise that never resolves because
+that name is never registered. The body stays empty. Pure black background from CSS.
+
+Fix: Changed both occurrences to `'kitchen-cooking-card'` in `buildCookPathHtml`.
+
+**Bug 2 — sv/en toggle button disappeared**
+
+Root cause: `WebViewCutSelectionScreen` was a full-screen WebView with no native overlay.
+The panel's own language selector lives on the welcome screen (which we skip by jumping
+directly to `_currentPath = 'meater_experimental'`). The sv/en toggle on `MainScreen`
+(always present) was not visible while inside the full-screen WebView.
+
+Fix: Added a thin native top bar above the WebView with a "← Back" / "← Tillbaka" button.
+Language selection stays on the main/scan screen (matching KCE's pattern where language is
+set once on the welcome screen before entering the cook path). No language toggle in the
+cook path overlay — the user sets language on the scan screen before entering the cook flow.
+
+Additionally: `key(language)` wraps the `AndroidView` so the WebView recreates if language
+changes while the screen is open (e.g. user navigates back, changes language, re-enters).
+
+Version bump: 0.10.0.12 → 0.10.0.13 (versionCode 13 → 14). Pure Android change.
+
+
 
 **Bug 1 — BLE scan still finds no devices**
 
