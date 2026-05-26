@@ -57,6 +57,27 @@ class MeaterBleService(
         op(g)
     }
 
+    // ── BLE keepalive ────────────────────────────────────────────────────────
+    // The MEATER probe sends no GATT notifications while idle (not in meat).
+    // Without periodic GATT traffic the link supervision timeout (~1 minute on
+    // most devices) fires and Android drops the connection.  A battery read
+    // every KEEPALIVE_INTERVAL_MS is cheap and keeps the link alive.
+    private val keepaliveRunnable = object : Runnable {
+        override fun run() {
+            pingKeepalive()
+            mainHandler.postDelayed(this, KEEPALIVE_INTERVAL_MS)
+        }
+    }
+
+    @SuppressLint("MissingPermission")
+    private fun pingKeepalive() {
+        val g = gatt ?: return
+        val service = g.services.firstOrNull { it.uuid == MEATER_SERVICE_UUID } ?: return
+        val battChar = service.getCharacteristic(BATTERY_CHARACTERISTIC_UUID) ?: return
+        enqueueGattOp { it.readCharacteristic(battChar) }
+    }
+
+
     @SuppressLint("MissingPermission")
     fun connect(context: Context, deviceAddress: String) {
         val appContext = context.applicationContext
@@ -85,6 +106,7 @@ class MeaterBleService(
 
     @SuppressLint("MissingPermission")
     fun disconnect() {
+        mainHandler.removeCallbacks(keepaliveRunnable)
         gattOpQueue.clear()
         gattOpRunning = false
         gatt?.disconnect()
@@ -154,6 +176,8 @@ class MeaterBleService(
             mainHandler.post {
                 onStatus("Connected ($count probe slot${if (count != 1) "s" else ""})")
             }
+            // Start keepalive pings so the link stays up while the probe is idle.
+            mainHandler.postDelayed(keepaliveRunnable, KEEPALIVE_INTERVAL_MS)
         }
 
         // Advance the queue after each descriptor write completes.
@@ -278,5 +302,7 @@ class MeaterBleService(
             UUID.fromString("2adb4877-68d8-4884-bd3c-d83853bf27b8")
         val CLIENT_CHARACTERISTIC_CONFIG_UUID: UUID =
             UUID.fromString("00002902-0000-1000-8000-00805f9b34fb")
+        /** Interval between keepalive battery reads to prevent idle link supervision timeout. */
+        const val KEEPALIVE_INTERVAL_MS = 15_000L
     }
 }
