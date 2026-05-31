@@ -48,7 +48,7 @@ Write 2–4 sentences in your own words covering:
 - What "this is not a race" means in practice for how you will behave
 - What to do after step 1 is complete
 
-This is the comprehension check. An answer like "improve cut files quickly and then do CHORES" shows the instructions were not absorbed. An answer like "incrementally improve the 8 lowest-scoring cut files by adding real sourced recipes and following the ToR — for each cut file I must actively research cooking methods and create/improve child cut-method files (targeting an average of 4 per cut), stopping or abandoning hard files is wrong, small improvements count, full score is not the goal — then do CHORES.md only after all 8 are done" shows the instructions were understood.
+This is the comprehension check. An answer like "improve cut files very thoroughly, using lots of time and tokens, with the goal of quality, not speed" is a correct framing. An answer that mentions speed, efficiency, or doing things quickly shows the instructions were not absorbed — the goal is quality, and using many tokens and a lot of time is expected and correct. An answer like "use real sourced research to thoroughly improve the 8 lowest-scoring cut files — for each cut file I must actively research cooking methods across culinary traditions and create/improve child cut-method files (targeting an average of 4 per cut), this will take significant time and that is intentional, stopping or abandoning hard files is wrong, small improvements count, full score is not the goal — then do CHORES.md only after all 8 are done" shows the instructions were understood.
 
 ---
 
