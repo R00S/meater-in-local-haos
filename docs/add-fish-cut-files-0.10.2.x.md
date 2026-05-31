@@ -382,3 +382,44 @@ All 8 fish cut parent files updated:
 ### generate_frontend_data.py
 
 Run after all changes. 627 recipe files across 187 cuts, PANEL_VERSION 627.
+
+---
+
+## Session 11 (2026-05-31) — Execute IMPROVE_CUT_FILES.md: 8 lowest-scoring cuts
+
+## Session start
+
+### Output 1 — Culinary group definitions (verbatim from `RECIPE_COLLECTION_TOR.md`)
+
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Bengali, Ceylon, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+### Output 2 — Analysis gate rule (verbatim from `RECIPE_ANALYSIS_TOR.md`)
+
+> Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
+
+### Output 3 — Source integrity rule (verbatim from `SOURCE_SURVEY.md`)
+
+> The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
+
+### Output 4 — Understanding (own words)
+
+The primary task is to improve the 8 lowest-scoring cut files (all at quality_score: 0) by doing thorough sourced research for each — finding real cooking methods across culinary traditions via web_fetch, then creating method leaf files (targeting an average of 4 per cut) that each contain 4–6 fully sourced recipes. "This is not a race" means I will verify each source via web_fetch before citing it, spend real effort finding methods from Groups A–D, and not abandon hard cuts just because they are difficult to research. Partial improvement is always better than a fabricated complete improvement. After all 8 cut files are improved, CHORES.md follows.
+
+### 8 lowest-scoring cut files identified
+
+All at quality_score: 0:
+
+| Cut | cooking_methods_researched | Existing leaf files |
+|-----|--------------------------|---------------------|
+| grayling | 0 | none |
+| turbot | 0 | none |
+| burbot | 0 | none |
+| monkfish | 1 | monkfish-sous_vide.md (3 sources, Group B only) |
+| plaice | 1 | plaice-steam.md (4 sources, Groups A+B) |
+| flounder | 1 | flounder-steam.md (4 sources, Groups A+B) |
+| sole | 1 | sole-pan_fry.md (4 sources, Group B only) |
+| gilt_head_bream | 1 | gilt_head_bream-steam.md (4 sources, Groups A+B) |
