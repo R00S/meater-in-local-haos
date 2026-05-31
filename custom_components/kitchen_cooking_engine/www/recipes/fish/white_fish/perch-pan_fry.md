@@ -158,3 +158,5 @@ Pan frying is the best method for exploiting perch’s main strengths: delicate 
 ## Summary
 
 Perch is an excellent pan-fry fish because its thin fillets brown fast and take butter, lemon and flour beautifully. Swedish, German, Finnish and Swiss/French-style sources all cluster around the same low-60s °C finish, supporting the current well_done recommendation for this delicate but very lean freshwater fish.
+
+> ✅ **CONFORMS TO TOR** — Verified 2026-05-31T08:10:00Z. 4 source recipes (SE/DE/FI/CH); cut profile is method-specific (not a copy of the parent); temperature consensus 59–61°C; probe insert step present in each recipe; all mandatory sections present. Groups A and C not represented (European perch is not a traditional ingredient in East Asian, African, or Latin American cuisines).

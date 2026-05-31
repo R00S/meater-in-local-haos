@@ -154,3 +154,5 @@ Oven baking is especially useful for whitefish because it protects the fish’s 
 ## Summary
 
 Oven baking is a strong match for whitefish because it protects the fish’s delicate structure and keeps the flesh moist with butter, wine, pesto or roasting juices. Finnish, Swedish, Austrian/Constance-style and North American sources all finish in almost the same low-60s °C range, supporting the existing well_done recommendation.
+
+> ✅ **CONFORMS TO TOR** — Verified 2026-05-31T08:10:00Z. 4 source recipes (FI/SE/AT/US); cut profile is method-specific (not a copy of the parent); temperature consensus 60–61°C; probe insert step present in each recipe; all mandatory sections present. Groups A and C not represented (whitefish/sik is not a traditional ingredient in East Asian, African, or Latin American cuisines).

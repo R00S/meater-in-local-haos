@@ -163,3 +163,5 @@ Pan searing gives arctic char something oven methods cannot: a strongly differen
 ## Summary
 
 Pan searing is a strong match for arctic char because it crisps the skin quickly while preserving the fish’s delicate, salmonid flesh. The best-supported everyday result is medium, around the mid-50s °C pull range for fillets, with hotter whole-fish versions sitting as a traditional but less common outlier.
+
+> ✅ **CONFORMS TO TOR** — Verified 2026-05-31T08:10:00Z. 4 source recipes (SE/AT/DE/FR); cut profile is method-specific (not a copy of the parent); temperature consensus 54–61°C; probe insert step present in each recipe; all mandatory sections present. Groups A and C not represented (Arctic char is not a traditional ingredient in East Asian, African, or Latin American cuisines).

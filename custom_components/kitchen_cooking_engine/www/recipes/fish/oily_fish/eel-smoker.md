@@ -135,3 +135,5 @@ Smoking changes eel more dramatically than it changes most fish. The long dry-sm
 ## Summary
 
 Smoker is a natural method for eel because it slowly renders the fish’s heavy fat load while building the signature sweet-smoky flavour. Swedish, Dutch, German and Russian sources all converge on a fully cooked finish in the mid-60s °C, making well_done the correct recommendation for this cut-method pair.
+
+> ✅ **CONFORMS TO TOR** — Verified 2026-05-31T08:10:00Z. 4 source recipes (SE/NL/DE/RU); cut profile is method-specific (not a copy of the parent); temperature consensus 64–65°C; probe insert step present in each recipe; all mandatory sections present. Group A (Japanese eel kabayaki/unaju) and Group C not represented in this leaf — future eel method leaves should include these traditions.

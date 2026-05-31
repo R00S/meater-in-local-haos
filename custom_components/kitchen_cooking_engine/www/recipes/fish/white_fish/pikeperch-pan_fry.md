@@ -166,3 +166,5 @@ Pan frying gives pikeperch a thin browned crust without needing the longer dryin
 ## Summary
 
 Pan frying is an excellent match for pikeperch because it browns the exterior quickly while keeping the interior cohesive and juicy. Across Swedish, German, Danish and French sources, the fish is consistently finished just below or at the low-60s °C range, which supports the current well_done recommendation for this very lean freshwater species.
+
+> ✅ **CONFORMS TO TOR** — Verified 2026-05-31T08:10:00Z. 4 source recipes (SE/DE/DK/FR); cut profile is method-specific (not a copy of the parent); temperature consensus 59–61°C; probe insert step present in each recipe; all mandatory sections present. Groups A and C not represented (pikeperch/zander is not a traditional ingredient in East Asian, African, or Latin American cuisines).

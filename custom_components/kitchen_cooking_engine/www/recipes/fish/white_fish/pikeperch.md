@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 5
+quality_score: 14
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -60,4 +60,19 @@ Gös (*Sander lucioperca*; tyska: Zander; franska: sandre; finska: kuha) är en 
 
 ## Quality score
 
-**Score: 5 / 20** — assessed 2026-05-31 (1 cooking method leaf researched)
+**Score: 14 / 20** — assessed 2026-05-31
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | — (done) |
+| Missing method leaf files (4 of 5 declared) | −4 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group C tradition | −1 |
+
+### Improvement priorities
+
+1. **−4** · Missing method leaf files — create the following 4 files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `pikeperch-pan_sear.md`, `pikeperch-oven_bake.md`, `pikeperch-grill.md`, `pikeperch-smoker.md`
+2. **−1** · Missing Culinary Group A tradition — add at least one Group A (East Asian) source recipe across the method leaf files
+3. **−1** · Missing Culinary Group C tradition — add at least one Group C (African/Middle Eastern/Latin American) source recipe across the method leaf files
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
