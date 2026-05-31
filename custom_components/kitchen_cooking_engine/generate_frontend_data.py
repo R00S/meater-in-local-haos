@@ -607,6 +607,7 @@ _MEAT_NAME_SV = {
     "cruciferous":    "Kålväxter",
     "tomatoes":       "Tomater",
     "corn":           "Majs",
+    "quail":          "Vaktel",
 }
 
 # Swedish names for cut_type-level groupings (cut_type display name → Swedish name)
@@ -626,6 +627,7 @@ _CUT_TYPE_NAME_SV = {
     "Breast":           "Bröst",
     "Legs":             "Ben",
     "Oily Fish":        "Fet fisk",
+    "Quail":            "Vaktel",
 }
 
 _DONENESS_ICONS = {

@@ -106,3 +106,38 @@ Source collection deferred to future sessions.
 **Fish:**
 - `www/recipes/fish/white_fish/haddock-smoker.md`
 - `www/recipes/fish/tuna/tuna_steak-smoker.md`
+
+## Session 4 (2026-05-31) — Abu-röken research; missing fish & poultry cut stubs added
+
+Research focus: abu-röken (Swedish stovetop box smoker), wok smoking, tea smoking, and traditional Scandinavian freshwater/market fish cuts not yet in the tree.
+
+**New oily fish stubs (cuts without dedicated parent files):**
+- `www/recipes/fish/oily_fish/eel.md` — ål (id=803); classic abu-röken fish, methods: grill, pan_fry, oven_bake, smoker
+
+**New white fish stubs — Scandinavian freshwater:**
+- `www/recipes/fish/white_fish/perch.md` — abborre (id=428)
+- `www/recipes/fish/white_fish/arctic_char.md` — röding (id=429)
+- `www/recipes/fish/white_fish/whitefish.md` — sik (id=434)
+- `www/recipes/fish/white_fish/pike.md` — gädda (id=435)
+- `www/recipes/fish/white_fish/flounder.md` — flundra (id=436)
+- `www/recipes/fish/white_fish/plaice.md` — rödspätta (id=437)
+- `www/recipes/fish/white_fish/grayling.md` — harr (id=438)
+- `www/recipes/fish/white_fish/burbot.md` — lake (id=439)
+- `www/recipes/fish/white_fish/pikeperch.md` — gös (id=441)
+
+**New white fish stubs — market/premium fish:**
+- `www/recipes/fish/white_fish/redfish.md` — uer/kungsfisk (id=442)
+- `www/recipes/fish/white_fish/gilt_head_bream.md` — guldspirad (id=443)
+- `www/recipes/fish/white_fish/turbot.md` — piggvar (id=444)
+- `www/recipes/fish/white_fish/sole.md` — sjötunga (id=445)
+- `www/recipes/fish/white_fish/pollock.md` — sei (id=446)
+- `www/recipes/fish/white_fish/monkfish.md` — marulk (id=447)
+
+**New poultry stub (wok/tea smoking connection):**
+- `www/recipes/poultry/quail/quail.md` — vaktel (id=355, new Meat id=35 + CutType id=355)
+
+**cooking_data.py:** Added WHITE_FISH MeatCut entries ids 428–429, 434–439, 441–447; OILY_FISH 803 (eel); QUAIL array + Meat id=35 / CutType id=355.
+
+**generate_frontend_data.py:** Added "quail"→"Vaktel" in _MEAT_NAME_SV; "Quail"→"Vaktel" in _CUT_TYPE_NAME_SV.
+
+**Generator:** Ran clean. 186 cuts across 7 categories.
