@@ -340,3 +340,45 @@ The primary task is to improve the 8 lowest-scoring cut files — all with quali
 - plaice: current methods [pan_fry, oven_bake, grill, smoker, steam] — has plaice-steam.md
 - pollock: current methods [pan_fry, oven_bake, air_fryer, smoker, grill] — has pollock-grill.md
 - monkfish: current methods [pan_sear, oven_roast, grill, braise, sous_vide] — has monkfish-sous_vide.md
+
+---
+
+## Session 10 continued (2026-05-31) — Leaf files created + parent files updated
+
+### New methods discovered and confirmed
+
+**gilt_head_bream — STEAM** (new method, not previously in cooking_data.py):
+- Confirmed real recipe URLs (web_fetch verified): thewoksoflife.com (CN), hot-thai-kitchen.com (TH), chefkoch.de (DE), ichkoche.at (AT)
+- Added `CookingMethod.STEAM` to cooking_data.py gilt_head_bream (id=443)
+- Created `gilt_head_bream-steam.md` — Groups A+B, pull 60°C, well_done
+
+**sole — PAN_FRY** (method already in cooking_data.py, first leaf file):
+- Confirmed real recipe URLs: bbcgoodfood.com (GB), chefkoch.de (DE), ricette.giallozafferano.it (IT), ichkoche.at (AT)
+- Created `sole-pan_fry.md` — all Group B Western European (sole meunière is inherently European), pull 60°C, well_done
+
+**redfish — PAN_FRY** (method already in cooking_data.py, first leaf file):
+- Confirmed real recipe URLs: chefkoch.de (DE), ichkoche.at (AT), madensverden.dk (DK), recipetineats.com (AU)
+- Created `redfish-pan_fry.md` — Groups B+D, pull 60°C, well_done
+
+### Parent files updated — cooking_methods_researched: 1
+
+All 8 fish cut parent files updated:
+- `gilt_head_bream.md`: added steam to methods list, research link, cooking_methods_researched: 1
+- `sole.md`: cooking_methods_researched: 1
+- `redfish.md`: cooking_methods_researched: 1
+- `pike.md`: cooking_methods_researched: 1 (leaf file pike-braise.md from Session 9)
+- `flounder.md`: cooking_methods_researched: 1 (leaf file flounder-steam.md from Session 9)
+- `plaice.md`: cooking_methods_researched: 1 (leaf file plaice-steam.md from Session 9)
+- `pollock.md`: cooking_methods_researched: 1 (leaf file pollock-grill.md from Session 9)
+- `monkfish.md`: cooking_methods_researched: 1 (leaf file monkfish-sous_vide.md from Session 9)
+
+### Methods deferred (insufficient confirmed sources)
+
+- **grayling pan_fry**: No grayling-specific pan-fry recipes found on confirmed whitelist sites (chefkoch.de Äsche search returned 0 results; ichkoche.at has poached and steamed grayling but not pan-fried). Deferred.
+- **quail braise**: chefkoch.de Caille aux Raisins URLs returned 404s in Session 10; main site giallozafferano.it had no braised quail. Deferred.
+- **turbot steam/braise**: Not researched — deferred to future session.
+- **burbot**: Not researched — deferred.
+
+### generate_frontend_data.py
+
+Run after all changes. 627 recipe files across 187 cuts, PANEL_VERSION 627.

@@ -60,4 +60,4 @@ Guldspirad (*Sparus aurata*; spanska/italienska: dorada/orata; franska: daurade 
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-05-31 (stub — cooking methods not yet researched)
+**Score: 0 / 20** — assessed 2026-05-31 (1 method researched: steam; leaf file exists; USDA safe temp and culinary preferred temps not yet researched)

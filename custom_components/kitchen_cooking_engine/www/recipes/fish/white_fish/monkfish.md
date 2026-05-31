@@ -34,7 +34,7 @@ doneness:
   usda_safe: true
   recommended: true
 quality_score: 0
-cooking_methods_researched: 0
+cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 2
 rest_time_max: 5
@@ -60,4 +60,4 @@ Marulk (*Lophius piscatorius*; tyska: Seeteufel; franska: lotte/baudroie; spansk
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-05-31 (stub — cooking methods not yet researched)
+**Score: 0 / 20** — assessed 2026-05-31 (1 method researched: sous_vide; leaf file exists; USDA safe temp and culinary preferred temps not yet researched)

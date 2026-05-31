@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 31 May 2026, 06:16 UTC
-Last Change: v0.10.2.0 - feat(recipes): add 24 smoker stub leaf files (beef, pork, poultry, game, lamb, fish) + oily fish cuts (herring, Baltic herring, mackerel)
+Last Change: v0.10.2.1 - feat(recipes): add white fish cooking method leaf files (gilt_head_bream steam, sole pan_fry, redfish pan_fry) + update 8 parent cut files cooking_methods_researched
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "626"
+PANEL_VERSION = "628"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

@@ -58,4 +58,4 @@ Sjötunga (*Solea solea*; tyska: Seezunge; franska: sole; holländska: tong) är
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-05-31 (stub — cooking methods not yet researched)
+**Score: 0 / 20** — assessed 2026-05-31 (1 method researched: pan_fry; leaf file exists; USDA safe temp and culinary preferred temps not yet researched)
