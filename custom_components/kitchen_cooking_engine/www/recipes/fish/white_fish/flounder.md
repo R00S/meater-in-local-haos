@@ -14,6 +14,7 @@ methods:
 - grill
 - oven_bake
 - smoker
+- steam
 doneness:
 - name: medium
   target_c: 57
@@ -55,6 +56,7 @@ Flundra (*Platichthys flesus*; tyska: Flunder; finska: kampela) är en plattfisk
 - [Grill](./flounder-grill.md)
 - [Oven Bake](./flounder-oven_bake.md)
 - [Smoker](./flounder-smoker.md)
+- [Steam](./flounder-steam.md)
 
 ## Quality score
 

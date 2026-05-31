@@ -14,6 +14,7 @@ methods:
 - oven_bake
 - grill
 - smoker
+- braise
 doneness:
 - name: medium
   target_c: 57
@@ -55,6 +56,7 @@ Gädda (*Esox lucius*; tyska: Hecht; franska: brochet; finska: hauki) är en sto
 - [Oven Bake](./pike-oven_bake.md)
 - [Grill](./pike-grill.md)
 - [Smoker](./pike-smoker.md)
+- [Braise](./pike-braise.md)
 
 ## Quality score
 

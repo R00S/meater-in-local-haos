@@ -14,6 +14,7 @@ methods:
 - oven_bake
 - grill
 - smoker
+- steam
 doneness:
 - name: medium
   target_c: 57
@@ -55,6 +56,7 @@ Rödspätta (*Pleuronectes platessa*; tyska: Scholle; danska: rødspætte; holl�
 - [Oven Bake](./plaice-oven_bake.md)
 - [Grill](./plaice-grill.md)
 - [Smoker](./plaice-smoker.md)
+- [Steam](./plaice-steam.md)
 
 ## Quality score
 

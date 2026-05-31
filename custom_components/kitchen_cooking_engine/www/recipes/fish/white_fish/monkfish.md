@@ -14,6 +14,7 @@ methods:
 - oven_roast
 - grill
 - braise
+- sous_vide
 doneness:
 - name: medium
   target_c: 57
@@ -55,6 +56,7 @@ Marulk (*Lophius piscatorius*; tyska: Seeteufel; franska: lotte/baudroie; spansk
 - [Oven Roast](./monkfish-oven_roast.md)
 - [Grill](./monkfish-grill.md)
 - [Braise](./monkfish-braise.md)
+- [Sous Vide](./monkfish-sous_vide.md)
 
 ## Quality score
 

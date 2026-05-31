@@ -14,6 +14,7 @@ methods:
 - oven_bake
 - air_fryer
 - smoker
+- grill
 doneness:
 - name: medium
   target_c: 57
@@ -55,6 +56,7 @@ Sei (*Pollachius virens*; tyska: Seelachs/Köhler; norska/danska: sei/sej; frans
 - [Oven Bake](./pollock-oven_bake.md)
 - [Air Fryer](./pollock-air_fryer.md)
 - [Smoker](./pollock-smoker.md)
+- [Grill](./pollock-grill.md)
 
 ## Quality score
 
