@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.10.1.5 - feat(android): add in-app/system cook alerts with sound/vibrate plus acknowledgement gates for cook→rest and rest→done, with ambient+inner-temp fallback auto-transitions
+Last Updated: 31 May 2026, 06:16 UTC
+Last Change: v0.10.2.0 - feat(recipes): add 24 smoker stub leaf files (beef, pork, poultry, game, lamb, fish) + oily fish cuts (herring, Baltic herring, mackerel)
 """
 
 DOMAIN = "kitchen_cooking_engine"
