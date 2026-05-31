@@ -3434,6 +3434,7 @@ WHITE_FISH = [
             CookingMethod.OVEN_BAKE,
             CookingMethod.GRILL,
             CookingMethod.CHARCOAL_GRILL,
+            CookingMethod.STEAM,
         ],
         recommended_doneness="well_done",
     ),

@@ -14,6 +14,7 @@ methods:
 - oven_bake
 - grill
 - charcoal_grill
+- steam
 doneness:
 - name: medium
   target_c: 57
@@ -33,7 +34,7 @@ doneness:
   usda_safe: true
   recommended: true
 quality_score: 0
-cooking_methods_researched: 0
+cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
 rest_time_max: 3
@@ -55,6 +56,7 @@ Guldspirad (*Sparus aurata*; spanska/italienska: dorada/orata; franska: daurade 
 - [Oven Bake](./gilt_head_bream-oven_bake.md)
 - [Grill](./gilt_head_bream-grill.md)
 - [Charcoal Grill](./gilt_head_bream-charcoal_grill.md)
+- [Steam](./gilt_head_bream-steam.md)
 
 ## Quality score
 
