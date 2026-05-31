@@ -14,6 +14,7 @@ methods:
 - oven_bake
 - oven_roast
 - pan_fry
+- smoker
 doneness:
 - name: medium
   target_c: 54
@@ -57,6 +58,7 @@ Pannstekning är en mycket vanlig beredning — den höga ledningsvärmen i pann
 - [Air Fryer](./cod_fillet-air_fryer.md)
 - [Oven Bake](./cod_fillet-oven_bake.md)
 - [Pan Fry](./cod_fillet-pan_fry.md)
+- [Smoker](./cod_fillet-smoker.md)
 ## Quality score
 
 **Score: 10 / 20** — assessed 2026-04-27

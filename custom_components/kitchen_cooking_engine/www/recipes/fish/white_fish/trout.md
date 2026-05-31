@@ -13,6 +13,7 @@ methods:
 - grill
 - oven_roast
 - pan_sear
+- smoker
 doneness:
 - name: medium_rare
   target_c: 49
@@ -69,6 +70,7 @@ Regnbågsforell (*Oncorhynchus mykiss*) och brun öring (*Salmo trutta*, svenska
 ## Research files by cooking method
 
 - [Pan Sear](./trout-pan_sear.md)
+- [Smoker](./trout-smoker.md)
 ## Quality score
 
 **Score: 8 / 20** — assessed 2026-04-26

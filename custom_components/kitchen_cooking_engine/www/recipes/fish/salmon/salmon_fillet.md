@@ -14,6 +14,7 @@ methods:
 - grill
 - oven_bake
 - pan_sear
+- smoker
 - sous_vide
 doneness:
 - name: medium_rare
@@ -67,6 +68,7 @@ Atlantisk och stillahavslax skiljer sig åt i fettfördelning — odlad atlantla
 - [Grill](./salmon_fillet-grill.md)
 - [Oven Bake](./salmon_fillet-oven_bake.md)
 - [Pan Sear](./salmon_fillet-pan_sear.md)
+- [Smoker](./salmon_fillet-smoker.md)
 - [Sous Vide](./salmon_fillet-sous_vide.md)
 ## Quality score
 
