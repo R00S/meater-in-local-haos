@@ -249,3 +249,28 @@ Created five new method leaves in `docs/recipe_research/`:
 - `fish/white_fish/whitefish-oven_bake.md`
 
 Research sources actually fetched and used included Köket.se, Chefkoch.de, ichkoche.at, Soppa365.fi, Swissmilk, Kogebog.dk, Palingkopen.nl, Alsterbro, BestRecipes24, Lake Michigan Angler, and Chef Simon. Parent cut stubs for arctic_char, pikeperch, perch, eel, and whitefish were updated from quality score 0 / researched 0 to quality score 5 / researched 1.
+
+---
+
+## Session 9 (2026-05-31) — IMPROVE_CUT_FILES: focus on finding more cooking methods
+
+### Output 1 — Culinary group definitions (verbatim from RECIPE_COLLECTION_TOR.md)
+
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+### Output 2 — Analysis gate rule (verbatim from RECIPE_ANALYSIS_TOR.md)
+
+> Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
+
+### Output 3 — Source integrity rule (verbatim from SOURCE_SURVEY.md)
+
+> The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
+
+### Output 4 — Understanding (own words)
+
+The primary task is to improve the 8 lowest-scoring cut files (all quality_score: 0 fish stubs — burbot, flounder, gilt_head_bream, grayling, monkfish, pike, plaice, pollock) by actively researching cooking methods used for each cut across culinary traditions, finding methods not yet listed, and creating fully sourced method leaf files. "This is not a race" means I will fetch every URL, verify the content before citing, not fill gaps with training-data memory, and accept that small incremental improvements are valid — stopping early because a cut is hard or has few sources would be wrong. After all 8 cuts have had their methods researched and at least some new leaf files created, I do CHORES.md.
+
