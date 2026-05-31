@@ -34,7 +34,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 18
+quality_score: 3
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -62,7 +62,7 @@ Gös (*Sander lucioperca*; tyska: Zander; franska: sandre; finska: kuha) är en 
 
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-05-31
+**Score: 3 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -70,6 +70,8 @@ Gös (*Sander lucioperca*; tyska: Zander; franska: sandre; finska: kuha) är en 
 | Missing method leaf files | — (all 6 done) |
 | Missing Culinary Group A tradition | −1 (pikeperch/zander absent from East Asian cuisines) |
 | Missing Culinary Group C tradition | −1 (pikeperch/zander absent from African/Middle Eastern/Latin American cuisines) |
+
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

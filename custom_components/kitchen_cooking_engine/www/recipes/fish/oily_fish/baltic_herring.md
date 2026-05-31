@@ -31,7 +31,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 9
+quality_score: -6
 cooking_methods_researched: 0
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -56,12 +56,14 @@ Strömming (Clupea harengus membras) är underarten av atlantisk sill som är in
 
 ## Quality score
 
-**Score: 9 / 20** — assessed 2026-05-31
+**Score: -6 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|-----------|
 | Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
 | Only one verified source per method leaf currently | −3 |
+
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

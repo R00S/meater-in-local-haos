@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 18
+quality_score: 3
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -60,7 +60,7 @@ Guldspirad (*Sparus aurata*; spanska/italienska: dorada/orata; franska: daurade 
 
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-05-31
+**Score: 3 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction | Note |
 |-----------|-----------|------|
@@ -73,4 +73,5 @@ Guldspirad (*Sparus aurata*; spanska/italienska: dorada/orata; franska: daurade 
 | Culinary Group B | 0 | DE, AT covered in steam leaf |
 | Culinary Group C | −1 | No Turkish/Arabic/Lebanese gilt-head bream pan-sear or grill recipes with verifiable URLs found yet |
 | Culinary Group D | −1 | No Scandinavian/Slavic gilt-head bream recipes with verifiable URLs found yet |
-| **TOTAL** | **−2** | |
+| Inflated score (this branch) | −15 | |
+| **TOTAL** | **−17** | |

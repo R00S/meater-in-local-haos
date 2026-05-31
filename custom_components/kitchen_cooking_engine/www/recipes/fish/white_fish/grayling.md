@@ -32,7 +32,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 0
+quality_score: -15
 cooking_methods_researched: 0
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -58,4 +58,8 @@ Harr (*Thymallus thymallus*; tyska: Äsche; franska: ombre commun; finska: harju
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-05-31 (stub — cooking methods not yet researched)
+**Score: −15 / 20** — assessed 2026-05-31 (stub — cooking methods not yet researched)
+
+| Criterion | Deduction |
+|-----------|----------|
+| Inflated score (this branch) | −15 |

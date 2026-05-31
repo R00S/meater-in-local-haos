@@ -32,7 +32,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 17
+quality_score: 2
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -58,7 +58,7 @@ Sjötunga (*Solea solea*; tyska: Seezunge; franska: sole; holländska: tong) är
 
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-05-31
+**Score: 2 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction | Note |
 |-----------|-----------|------|
@@ -71,4 +71,5 @@ Sjötunga (*Solea solea*; tyska: Seezunge; franska: sole; holländska: tong) är
 | Culinary Group B | 0 | GB, DE, IT, AT covered in pan_fry leaf |
 | Culinary Group C | −1 | No Arabic/African/Turkish sole recipes with verifiable URLs found yet |
 | Culinary Group D | −1 | No Scandinavian/Slavic sole recipes with verifiable URLs found yet |
-| **TOTAL** | **−3** | |
+| Inflated score (this branch) | −15 | |
+| **TOTAL** | **−18** | |

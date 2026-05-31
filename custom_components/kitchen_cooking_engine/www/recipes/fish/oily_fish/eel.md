@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 20
+quality_score: 5
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -60,7 +60,7 @@ Eel (primarily European eel *Anguilla anguilla* and Japanese eel *Anguilla japon
 
 ## Quality score
 
-**Score: 20 / 20** — assessed 2026-05-31
+**Score: 5 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -68,6 +68,8 @@ Eel (primarily European eel *Anguilla anguilla* and Japanese eel *Anguilla japon
 | Missing method leaf files | — (all 5 done) |
 | Missing Culinary Group A tradition | — (covered: kabayaki in eel-grill.md; Chinese wok-fried in eel-pan_fry.md; oven kabayaki in eel-oven_bake.md; Chinese 红烧 in eel-braise.md) |
 | Missing Culinary Group C tradition | — (covered: Turkish yılan balığı ızgara in eel-grill.md) |
+
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

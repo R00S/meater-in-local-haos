@@ -32,7 +32,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 15
+quality_score: 0
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -58,7 +58,7 @@ Abborre (*Perca fluviatilis*; tyska: Barsch; franska: perche) är en mager sötv
 
 ## Quality score
 
-**Score: 15 / 20** — assessed 2026-05-31
+**Score: 0 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -66,6 +66,8 @@ Abborre (*Perca fluviatilis*; tyska: Barsch; franska: perche) är en mager sötv
 | Missing method leaf files (3 of 4 declared) | −3 |
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group C tradition | −1 |
+
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

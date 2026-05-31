@@ -40,7 +40,7 @@ doneness:
   max_f: 150
   usda_safe: true
   recommended: true
-quality_score: 19
+quality_score: 4
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -66,12 +66,14 @@ Piggvar (*Scophthalmus maximus*; tyska: Steinbutt; franska: turbot; norska: pigg
 
 ## Quality score
 
-**Score: 19 / 20** — assessed 2026-05-31
+**Score: 4 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|-----------|
 | Missing Culinary Group C tradition | −1 |
 
 *Turbot is not a traditional ingredient in African, Caribbean, Arabic, Persian, or Turkish cuisines. Group C not covered.*
+
+| Inflated score (this branch) | −15 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 17
+quality_score: 2
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -60,7 +60,7 @@ Marulk (*Lophius piscatorius*; tyska: Seeteufel; franska: lotte/baudroie; spansk
 
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-05-31
+**Score: 2 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction | Note |
 |-----------|-----------|------|
@@ -73,4 +73,5 @@ Marulk (*Lophius piscatorius*; tyska: Seeteufel; franska: lotte/baudroie; spansk
 | Culinary Group B | 0 | UK, USA covered in sous_vide leaf |
 | Culinary Group C | −1 | Sous vide monkfish not documented in Arabic/African/Turkish traditions with verifiable URLs |
 | Culinary Group D | −1 | Sous vide monkfish not documented in Scandinavian/Slavic traditions with verifiable URLs |
-| **TOTAL** | **−3** | |
+| Inflated score (this branch) | −15 | |
+| **TOTAL** | **−18** | |

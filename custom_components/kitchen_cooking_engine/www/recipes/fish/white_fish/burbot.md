@@ -32,7 +32,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 18
+quality_score: 3
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -58,7 +58,7 @@ Lake (*Lota lota*; tyska: Trüsche; franska: lote; finska: made) är den enda s�
 
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-05-31
+**Score: 3 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|-----------|
@@ -66,5 +66,7 @@ Lake (*Lota lota*; tyska: Trüsche; franska: lote; finska: made) är den enda s�
 | Missing Culinary Group C tradition | −1 |
 
 Groups A (East/SE/South Asian) and C (African/Arabic/Persian/Caribbean) not represented — burbot (*Lota lota*) has no culinary tradition in tropical or sub-tropical cuisines. Group A deduction applies despite burbot existing in far-northern Siberian/Amur river systems; no accessible traditional recipe could be found. Group C deduction applies as burbot does not exist in African, Arabian, Persian, or Caribbean fisheries.
+
+| Inflated score (this branch) | −15 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

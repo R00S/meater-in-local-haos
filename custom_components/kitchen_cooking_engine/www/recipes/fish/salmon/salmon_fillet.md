@@ -42,7 +42,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 11
+quality_score: -4
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 0
@@ -72,12 +72,14 @@ Atlantisk och stillahavslax skiljer sig åt i fettfördelning — odlad atlantla
 - [Sous Vide](./salmon_fillet-sous_vide.md)
 ## Quality score
 
-**Score: 11 / 20** — assessed 2026-04-26
+**Score: -4 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Method file `salmon_fillet-pan_sear.md` copies parent cut profile | −1 |
+
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

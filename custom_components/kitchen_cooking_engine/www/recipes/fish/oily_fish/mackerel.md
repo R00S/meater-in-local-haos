@@ -32,7 +32,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 12
+quality_score: -3
 cooking_methods_researched: 0
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -58,11 +58,13 @@ Atlantisk makrill (Scomber scombrus) är en medelstora, mycket fet pelagisk fisk
 
 ## Quality score
 
-**Score: 12 / 20** — assessed 2026-05-31
+**Score: -3 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|-----------|
 | Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
+
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

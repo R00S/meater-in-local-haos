@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 18
+quality_score: 3
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -60,7 +60,7 @@ Flundra (*Platichthys flesus*; tyska: Flunder; finska: kampela) är en plattfisk
 
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-05-31
+**Score: 3 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction | Note |
 |-----------|-----------|------|
@@ -73,4 +73,5 @@ Flundra (*Platichthys flesus*; tyska: Flunder; finska: kampela) är en plattfisk
 | Culinary Group B | 0 | DE covered in steam leaf |
 | Culinary Group C | −1 | Steaming flounder with temperature data not documented in Arabic/African/Turkish traditions in verifiable online sources |
 | Culinary Group D | −1 | Steaming flounder with temperature data not documented in Scandinavian/Baltic traditions in verifiable online sources |
-| **TOTAL** | **−2** | |
+| Inflated score (this branch) | −15 | |
+| **TOTAL** | **−17** | |

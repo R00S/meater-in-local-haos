@@ -32,7 +32,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 10
+quality_score: -5
 cooking_methods_researched: 0
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -58,12 +58,14 @@ Sill (Clupea harengus) är en liten, mycket fet pelagisk fisk utbredd i Nordatla
 
 ## Quality score
 
-**Score: 10 / 20** — assessed 2026-05-31
+**Score: -5 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|-----------|
 | Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
 | Some method leaves have fewer than 4 verified sources | −2 |
+
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

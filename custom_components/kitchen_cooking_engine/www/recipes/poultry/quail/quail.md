@@ -24,7 +24,7 @@ doneness:
   max_f: 176
   usda_safe: true
   recommended: true
-quality_score: 0
+quality_score: -15
 cooking_methods_researched: 0
 quality_assessed: 2026-05-31
 rest_time_min: 3
@@ -50,4 +50,8 @@ Vaktel — främst japansk vaktel (*Coturnix japonica*, huvudsaklig odlad art gl
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-05-31 (stub — cooking methods not yet researched)
+**Score: −15 / 20** — assessed 2026-05-31 (stub — cooking methods not yet researched)
+
+| Criterion | Deduction |
+|-----------|----------|
+| Inflated score (this branch) | −15 |
