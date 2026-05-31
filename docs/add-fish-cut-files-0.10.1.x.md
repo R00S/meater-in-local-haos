@@ -21,3 +21,46 @@
 ### Output 4 — Understanding
 
 The task here is to add the new oily fish cut files and their method leaves by gathering real, verifiable recipe sources and using them to populate the MEATER recipe tree without guessing. “This is not a race” means I should prefer accurate, sourced incremental progress over rushing, fabricating, or skipping validation. After the session-start gate is complete, I should do the actual research work method by method, create the new recipe files, update the generator input, and verify the generator still runs.
+
+---
+
+## Session 1 (2026-05-26) — Research complete, files not yet created
+
+Previous agent completed full source research for all 8 method leaves. All sources verified via web_fetch. No files were created (ran out of time).
+
+**Sources identified:**
+- Herring pan_fry: madensverden.dk (Danish stegt sild), koket.se Tareq Taylor (Swedish stekt sill), chefkoch.de (German gebratene Heringe) — 3 sources
+- Herring grill: BBC Good Food Sep 2005 (grilled herrings with mustard butter) — 1 source
+- Herring oven_bake: BBC Good Food Oct 2008 (herrings rolled with mustard & pancetta, 220°C 15–20 min) — 1 source
+- Baltic herring pan_fry: koket.se strömmingsflundror — 1 source
+- Baltic herring oven_bake: koket.se strömmingslåda (225°C 20–30 min) — 1 source
+- Mackerel grill: koket.se grillad makrill — 1 source
+- Mackerel pan_fry: koket.se smörstekt makrill, Alexandra Zazzi — 1 source
+- Mackerel oven_bake: Just One Cookbook saba shioyaki (200°C), BBC Good Food chermoula (180°C) — 2 sources
+
+**Swedish names confirmed:** Sill (herring), Strömming (Baltic herring), Makrill (mackerel)
+
+## Session 2 (2026-05-31) — Files created, generator verified
+
+Created all 11 files using previous session's research:
+
+**Parent cut files created:**
+- `www/recipes/fish/oily_fish/herring.md` — quality_score: 10
+- `www/recipes/fish/oily_fish/baltic_herring.md` — quality_score: 9
+- `www/recipes/fish/oily_fish/mackerel.md` — quality_score: 12
+
+**Method leaf files created:**
+- `www/recipes/fish/oily_fish/herring-pan_fry.md` (3 sources: DK, SE, DE)
+- `www/recipes/fish/oily_fish/herring-grill.md` (1 source: BBC Good Food Sep 2005)
+- `www/recipes/fish/oily_fish/herring-oven_bake.md` (1 source: BBC Good Food Oct 2008)
+- `www/recipes/fish/oily_fish/baltic_herring-pan_fry.md` (1 source: koket.se strömmingsflundror)
+- `www/recipes/fish/oily_fish/baltic_herring-oven_bake.md` (1 source: koket.se strömmingslåda — fetched directly)
+- `www/recipes/fish/oily_fish/mackerel-grill.md` (1 source: koket.se grillad makrill — fetched directly)
+- `www/recipes/fish/oily_fish/mackerel-pan_fry.md` (1 source: koket.se smörstekt makrill)
+- `www/recipes/fish/oily_fish/mackerel-oven_bake.md` (2 sources: Just One Cookbook saba shioyaki, BBC Good Food chermoula)
+
+**cooking_data.py:** Added OILY_FISH array (ids 800–802: herring, baltic_herring, mackerel); added Meat(id=44, name="oily_fish") to fish MeatCategory; CutType(id=440, name="Oily Fish").
+
+**generate_frontend_data.py:** Added "oily_fish": "Fet fisk" to meat Swedish name dict; added "Oily Fish": "Fet fisk" to _CUT_TYPE_NAME_SV.
+
+**Generator:** Ran clean. herring, mackerel, baltic_herring, oily_fish, "Fet fisk", "Oily Fish" all present in generated panel JS.

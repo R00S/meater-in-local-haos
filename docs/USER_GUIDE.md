@@ -265,7 +265,7 @@ The setup form has five steps:
 | Beef | Steak, roast, brisket |
 | Pork | Chop, tenderloin, shoulder |
 | Poultry | Chicken, turkey, duck |
-| Fish | Salmon, tuna, white fish, shellfish (langoustine, scallops, shrimp) |
+| Fish | Salmon, tuna, white fish, oily fish (herring, Baltic herring, mackerel), shellfish (langoustine, scallops, shrimp) |
 | Lamb | Rack, leg, shoulder |
 | Game | Venison, wild boar, bison |
 | Vegetables | Root veg, green veg, alliums |
