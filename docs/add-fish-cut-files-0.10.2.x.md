@@ -191,6 +191,30 @@ Executed IMPROVE_CUT_FILES.md for 5 freshwater/oily fish stubs. Each leaf was wr
 This task is to improve five fish cut stubs by creating one real, sourced method leaf for each requested cut-method pair in `docs/recipe_research/`, with bilingual profiles and 4–6 complete saved recipes per leaf. “This is not a race” means I must verify every URL with `web_fetch`, avoid guessing missing details, and prefer honest incremental progress over unsupported completion claims. After this gate, I should research each leaf methodically, create the files from verified sources, update the parent cut scores, and validate that the repository changes are structurally correct.
 
 
+## Session 8 (2026-05-31) — Session start
+
+### Output 1 — Culinary group definitions (verbatim from RECIPE_COLLECTION_TOR.md)
+
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+### Output 2 — Analysis gate rule (verbatim from RECIPE_ANALYSIS_TOR.md)
+
+> Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
+
+### Output 3 — Source integrity rule (verbatim from SOURCE_SURVEY.md)
+
+> The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
+
+### Output 4 — My understanding of this file (own words)
+
+The primary task is to improve five freshwater/oily fish cut files (arctic_char, pikeperch, perch, eel, whitefish) by researching and creating their missing cut-method leaves. Each leaf requires 4–6 real, fetched-and-verified source recipes from diverse culinary traditions before the analysis sections may be written. "This is not a race" means I will fetch every URL before citing it, will not fill gaps with training-data memory, will work incrementally committing between cuts, and will accept that reaching small improvements on hard-to-source cuts is still valid progress. After all five cuts have at least one additional leaf each, the CHORES.md step may follow.
+
+---
+
 ## Session 7 (2026-05-31) — Session start
 
 ### Output 1 — Culinary group definitions (verbatim from RECIPE_COLLECTION_TOR.md)
