@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: -15
+quality_score: -1
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -60,8 +60,19 @@ Gädda (*Esox lucius*; tyska: Hecht; franska: brochet; finska: hauki) är en sto
 
 ## Quality score
 
-**Score: −15 / 20** — assessed 2026-05-31 (1 method researched: braise; leaf file exists; USDA safe temp and culinary preferred temps not yet researched)
+**Score: -1 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
+| Missing method leaf files (4 of 5 declared) | −4 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group C tradition | −1 |
 | Inflated score (this branch) | −15 |
+
+### Improvement priorities
+
+1. **−4** · Missing method leaf files — create `pike-pan_fry.md`, `pike-oven_bake.md`, `pike-grill.md`, `pike-smoker.md`, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
+2. **−1** · Missing Culinary Group A tradition — add at least one Group A (East Asian) source recipe across the method leaf files
+3. **−1** · Missing Culinary Group C tradition — add at least one Group C (African/Middle Eastern/Latin American) source recipe across the method leaf files
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
