@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 2
+quality_score: 12
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -60,18 +60,25 @@ Marulk (*Lophius piscatorius*; tyska: Seeteufel; franska: lotte/baudroie; spansk
 
 ## Quality score
 
-**Score: 2 / 20** — assessed 2026-05-31
+**Score: 12 / 20** — assessed 2026-05-31
 
-| Criterion | Deduction | Note |
-|-----------|-----------|------|
-| cooking_methods_researched ≥ 1 | 0 | 1 method researched (sous_vide) |
-| Leaf files present | 0 | monkfish-sous_vide.md ⚠️ PARTIAL (3 sources, Group B only) |
-| USDA safe temp evidence | 0 | Pull at bath temp (45–54°C) in sous_vide leaf |
-| Culinary preferred temps | 0 | 3 sources confirm 45–54°C FISH_MEDIUM |
-| Cut profile present | 0 | ✓ with anatomy (tail section only, central spine, probe placement) |
-| Culinary Group A | −1 | Sous vide monkfish not documented in East/SE Asian traditions with verifiable URLs |
-| Culinary Group B | 0 | UK, USA covered in sous_vide leaf |
-| Culinary Group C | −1 | Sous vide monkfish not documented in Arabic/African/Turkish traditions with verifiable URLs |
-| Culinary Group D | −1 | Sous vide monkfish not documented in Scandinavian/Slavic traditions with verifiable URLs |
-| Inflated score (this branch) | −15 | |
-| **TOTAL** | **−18** | |
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
+| Missing method leaf files (4 of 5 declared) | −4 |
+| Partial leaf file `monkfish-sous_vide.md` (3 sources, < 4) | −1 |
+| Method leaf copies parent cut profile | — (none; sous_vide profile is method-specific) |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group B tradition | — (covered: UK/USA in monkfish-sous_vide.md) |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
+
+Groups A, C, D absent — the only existing leaf (`monkfish-sous_vide.md`) covers Group B (UK/USA) only and is marked ⚠️ PARTIAL (3 sources). No East Asian, African/Arabic, or Scandinavian sous vide monkfish recipe with verifiable URLs was found. Other methods (pan_sear, oven_roast, grill, braise) have no leaves.
+
+### Improvement priorities
+
+1. **−4** · Missing method leaf files — create `monkfish-pan_sear.md`, `monkfish-oven_roast.md`, `monkfish-grill.md`, and `monkfish-braise.md`, each with 4–6 diverse source recipes.
+2. **−1** · Partial leaf `monkfish-sous_vide.md` — add a 4th verified source recipe; search Group A, C or D traditions for sous vide monkfish.
+3. **−3** · Missing Culinary Groups A, C, D — add representative source recipes across method leaves.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

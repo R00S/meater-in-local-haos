@@ -40,7 +40,7 @@ doneness:
   max_f: 150
   usda_safe: true
   recommended: true
-quality_score: 4
+quality_score: 17
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -66,14 +66,22 @@ Piggvar (*Scophthalmus maximus*; tyska: Steinbutt; franska: turbot; norska: pigg
 
 ## Quality score
 
-**Score: 4 / 20** — assessed 2026-05-31
+**Score: 17 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
-|-----------|-----------|
+|-----------|----------|
+| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
+| Missing method leaf files (2 of 4 declared) | −2 |
+| Partial leaf files (< 4 verified sources) | — (none; both present leaves ✅ CONFORMS TO TOR with 4 sources each) |
+| Method leaf copies parent cut profile | — (none; both profiles are method-specific) |
+| Missing Culinary Group A tradition | — (covered: Japanese ヒラメ/hirame proxy source in both oven_bake and pan_sear; hirame = Japanese flatfish explicitly noted as regional equivalent in source headers) |
+| Missing Culinary Group B tradition | — (covered: UK/IT in oven_bake, FR/UK in pan_sear) |
 | Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | — (covered: DK in both oven_bake and pan_sear) |
 
-*Turbot is not a traditional ingredient in African, Caribbean, Arabic, Persian, or Turkish cuisines. Group C not covered.*
+### Improvement priorities
 
-| Inflated score (this branch) | −15 |
+1. **−2** · Missing method leaf files — create `turbot-grill.md` and `turbot-sous_vide.md`, each with 4–6 diverse source recipes across culinary traditions, a method-specific cut profile, and pull temperatures from verified sources.
+2. **−1** · Missing Culinary Group C tradition — add at least one Group C (African/Middle Eastern/Turkish) source recipe across the method leaf files.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

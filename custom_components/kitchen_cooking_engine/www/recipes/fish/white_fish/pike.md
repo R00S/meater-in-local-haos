@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: -15
+quality_score: 14
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -60,8 +60,25 @@ Gädda (*Esox lucius*; tyska: Hecht; franska: brochet; finska: hauki) är en sto
 
 ## Quality score
 
-**Score: −15 / 20** — assessed 2026-05-31 (1 method researched: braise; leaf file exists; USDA safe temp and culinary preferred temps not yet researched)
+**Score: 14 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
-| Inflated score (this branch) | −15 |
+| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
+| Missing method leaf files (4 of 5 declared: pan_fry, oven_bake, grill, smoker) | −4 |
+| Partial leaf files | — (none; braise leaf ✅ CONFORMS TO TOR with 4 sources) |
+| Method leaf copies parent cut profile | — (none; braise profile is method-specific) |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group B tradition | — (covered: DE-Alsace / FR-Burgundy / DE in pike-braise.md) |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | — (covered: SE in pike-braise.md) |
+
+Groups A and C absent — braised pike is a Central/Western European tradition (*matelote*, *quenelles de brochet*); no verified East Asian, African, Arabic, or Caribbean pike recipe found. Other 4 method leaves not yet created.
+
+### Improvement priorities
+
+1. **−4** · Missing method leaf files — create `pike-pan_fry.md`, `pike-oven_bake.md`, `pike-grill.md`, and `pike-smoker.md`, each with 4–6 diverse source recipes.
+2. **−1** · Missing Culinary Group A tradition — pike (*gädda*) exists in Chinese freshwater fishing; search for Chinese or Japanese preparations.
+3. **−1** · Missing Culinary Group C tradition — search for pike in any African, Arabic, Persian, or Caribbean cooking context.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

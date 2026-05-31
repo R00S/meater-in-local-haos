@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: -15
+quality_score: 14
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -60,8 +60,25 @@ Sei (*Pollachius virens*; tyska: Seelachs/Köhler; norska/danska: sei/sej; frans
 
 ## Quality score
 
-**Score: −15 / 20** — assessed 2026-05-31 (1 method researched: grill; leaf file exists; USDA safe temp and culinary preferred temps not yet researched)
+**Score: 14 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
-| Inflated score (this branch) | −15 |
+| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
+| Missing method leaf files (4 of 5 declared: pan_fry, oven_bake, air_fryer, smoker) | −4 |
+| Partial leaf files | — (none; grill leaf ✅ CONFORMS TO TOR with 4 sources) |
+| Method leaf copies parent cut profile | — (none; grill profile is method-specific) |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group B tradition | — (covered: GB/DE in pollock-grill.md) |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | — (covered: SE/NO in pollock-grill.md) |
+
+Groups A and C absent — pollock (*sej* / *Pollachius virens*) is a North Atlantic fish; the grill leaf covers Groups B (GB/DE) and D (SE/NO) only. No East Asian or African/Arabic/Turkish pollock recipe found. Other 4 method leaves not yet created.
+
+### Improvement priorities
+
+1. **−4** · Missing method leaf files — create `pollock-pan_fry.md`, `pollock-oven_bake.md`, `pollock-air_fryer.md`, and `pollock-smoker.md`, each with 4–6 diverse source recipes.
+2. **−1** · Missing Culinary Group A tradition — Alaska pollock (*walleye pollock*) is a major fish in Japan (surimi); search for Japanese preparations using pollock directly.
+3. **−1** · Missing Culinary Group C tradition — search for pollock in any African, Arabic, or Caribbean context.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

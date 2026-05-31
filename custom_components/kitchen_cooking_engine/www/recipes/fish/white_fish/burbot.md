@@ -32,7 +32,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 3
+quality_score: 14
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -58,15 +58,26 @@ Lake (*Lota lota*; tyska: Trüsche; franska: lote; finska: made) är den enda s�
 
 ## Quality score
 
-**Score: 3 / 20** — assessed 2026-05-31
+**Score: 14 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
-|-----------|-----------|
+|-----------|----------|
+| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
+| Missing method leaf files (3 of 4 declared) | −3 |
+| Partial leaf file `burbot-pan_fry.md` (3 sources, < 4) | −1 |
+| Method leaf copies parent cut profile | — (none) |
 | Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group B tradition | — (covered: USA honest-food.net in pan_fry leaf) |
 | Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | — (covered: RU edimdoma.ru and FI laplandwildfish.fi in pan_fry leaf) |
 
-Groups A (East/SE/South Asian) and C (African/Arabic/Persian/Caribbean) not represented — burbot (*Lota lota*) has no culinary tradition in tropical or sub-tropical cuisines. Group A deduction applies despite burbot existing in far-northern Siberian/Amur river systems; no accessible traditional recipe could be found. Group C deduction applies as burbot does not exist in African, Arabian, Persian, or Caribbean fisheries.
+Groups A and C absent — burbot is a circumpolar northern fish with no culinary tradition in tropical East Asian or African/Caribbean/Arabic cuisines. No verified Japanese, Chinese, Korean, African, or Arabic burbot recipe was found in research. Deductions apply as unverified geographic claim.
 
-| Inflated score (this branch) | −15 |
+### Improvement priorities
+
+1. **−3** · Missing method leaf files — create `burbot-oven_bake.md`, `burbot-smoker.md`, and `burbot-braise.md`, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from verified sources.
+2. **−1** · Partial leaf `burbot-pan_fry.md` — add a 4th verified source recipe (additional Group B or D source preferred).
+3. **−1** · Missing Culinary Group A tradition — search for burbot recipes in northern Chinese / Amur basin cooking; add any found to a method leaf.
+4. **−1** · Missing Culinary Group C tradition — search for burbot in any African, Arabic, Persian or Caribbean context; add any found to a method leaf.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

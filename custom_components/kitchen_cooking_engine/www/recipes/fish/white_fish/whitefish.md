@@ -32,7 +32,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 0
+quality_score: 15
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -58,21 +58,25 @@ Sik (*Coregonus* spp.; finska: siika; tyska: Felchen / Renke; franska: corégone
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-05-31
+**Score: 15 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not researched | — (done) |
+| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
 | Missing method leaf files (3 of 4 declared) | −3 |
+| Partial leaf files | — (none; oven_bake leaf ✅ CONFORMS TO TOR with 4 sources) |
+| Method leaf copies parent cut profile | — (none; oven_bake profile is method-specific) |
 | Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group B tradition | — (covered: AT/US in whitefish-oven_bake.md) |
 | Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | — (covered: FI/SE in whitefish-oven_bake.md) |
 
-| Inflated score (this branch) | −15 |
+Groups A and C absent — whitefish (*sik* / *Coregonus*) is a northern freshwater fish with limited East Asian or African/Arabic culinary tradition. Deductions applied pending verification.
 
 ### Improvement priorities
 
-1. **−3** · Missing method leaf files — create the following 3 files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `whitefish-pan_fry.md`, `whitefish-grill.md`, `whitefish-smoker.md`
-2. **−1** · Missing Culinary Group A tradition — add at least one Group A (East Asian) source recipe across the method leaf files
-3. **−1** · Missing Culinary Group C tradition — add at least one Group C (African/Middle Eastern/Latin American) source recipe across the method leaf files
+1. **−3** · Missing method leaf files — create `whitefish-pan_fry.md`, `whitefish-grill.md`, and `whitefish-smoker.md`, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources.
+2. **−1** · Missing Culinary Group A tradition — search for Japanese, Chinese, or Korean whitefish preparations; *Coregonus* species exist in Siberia and the Far East.
+3. **−1** · Missing Culinary Group C tradition — search for any African, Arabic, Persian, or Caribbean whitefish preparation.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

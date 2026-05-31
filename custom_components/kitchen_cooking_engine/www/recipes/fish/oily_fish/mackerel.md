@@ -32,7 +32,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: -3
+quality_score: 7
 cooking_methods_researched: 0
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -58,16 +58,26 @@ Atlantisk makrill (Scomber scombrus) är en medelstora, mycket fet pelagisk fisk
 
 ## Quality score
 
-**Score: -3 / 20** — assessed 2026-05-31
+**Score: 7 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
-|-----------|-----------|
+|-----------|----------|
 | Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
+| Partial leaf `mackerel-grill.md` (1 source, < 4) | −1 |
+| Partial leaf `mackerel-oven_bake.md` (2 sources, < 4) | −1 |
+| Partial leaf `mackerel-pan_fry.md` (1 source, < 4) | −1 |
+| Partial leaf `mackerel-smoker.md` (3 sources, < 4) | −1 |
+| Missing Culinary Group A tradition | — (covered: Japanese saba shioyaki in mackerel-oven_bake.md) |
+| Missing Culinary Group B tradition | — (covered: Jamie Oliver UK in mackerel-smoker.md; BBC Good Food UK in mackerel-oven_bake.md) |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | — (covered: SE Köket.se in mackerel-grill.md and mackerel-pan_fry.md; SE ABU-röken in mackerel-smoker.md) |
 
-| Inflated score (this branch) | −15 |
+Group C absent — the BBC Good Food chermoula recipe uses North African spicing but is a British-sourced adaptation, not a verified Group C (African/Arabic/Turkish) primary source. No independently sourced Group C mackerel recipe with verifiable URL found. Methods survey incomplete (`cooking_methods_researched: 0`).
 
 ### Improvement priorities
 
-1. **−8** · Complete broad method-survey research; update `cooking_methods_researched` to `1` only when thorough.
-2. Expand grill leaf with Nordic whole-fish grill sources (Culinary Group D) and East Asian sources beyond Japan.
-3. Add pan_fry sources from Culinary Groups B and C.
+1. **−8** · Complete broad method-survey research; update `cooking_methods_researched` to `1` only when thorough. Research may reveal additional methods (e.g. raw preparations in Group A, traditional smoking in Group D).
+2. **−4** · All 4 existing leaves are partial — add verified sources to reach 4 per leaf: grill (+3), pan_fry (+3), oven_bake (+2), smoker (+1).
+3. **−1** · Missing Culinary Group C — add a verified Group C mackerel recipe (Turkish uskumru, Moroccan grilled mackerel, Egyptian or West African mackerel, etc.).
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

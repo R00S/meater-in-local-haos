@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: -15
+quality_score: 14
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -60,8 +60,25 @@ Uer (*Sebastes norvegicus* / *S. mentella*; tyska: Rotbarsch; norska: uer) är e
 
 ## Quality score
 
-**Score: −15 / 20** — assessed 2026-05-31 (1 method researched: pan_fry; leaf file exists; USDA safe temp and culinary preferred temps not yet researched)
+**Score: 14 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
-| Inflated score (this branch) | −15 |
+| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
+| Missing method leaf files (4 of 5 declared: pan_sear, oven_bake, grill, smoker) | −4 |
+| Partial leaf files | — (none; pan_fry leaf ✅ CONFORMS TO TOR with 4 sources) |
+| Method leaf copies parent cut profile | — (none; pan_fry profile is method-specific) |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group B tradition | — (covered: DE/AT/AU in redfish-pan_fry.md) |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | — (covered: DK in redfish-pan_fry.md) |
+
+Groups A and C absent — redfish (*Rotbarsch* / *Sebastes*) is an Atlantic/Arctic fish; pan_fry leaf covers Groups B (DE/AT/AU) and D (DK) only. No East Asian, African, Arabic, or Turkish redfish recipe found. Other 4 method leaves not yet created.
+
+### Improvement priorities
+
+1. **−4** · Missing method leaf files — create `redfish-pan_sear.md`, `redfish-oven_bake.md`, `redfish-grill.md`, and `redfish-smoker.md`, each with 4–6 diverse source recipes.
+2. **−1** · Missing Culinary Group A tradition — search for redfish in Japanese, Korean, or Chinese cooking (Pacific rockfish / *sebastes* may serve as proxy; note explicitly).
+3. **−1** · Missing Culinary Group C tradition — search for redfish in any African, Arabic, Persian, or Caribbean cooking context.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

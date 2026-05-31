@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 3
+quality_score: 14
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -60,18 +60,25 @@ Guldspirad (*Sparus aurata*; spanska/italienska: dorada/orata; franska: daurade 
 
 ## Quality score
 
-**Score: 3 / 20** — assessed 2026-05-31
+**Score: 14 / 20** — assessed 2026-05-31
 
-| Criterion | Deduction | Note |
-|-----------|-----------|------|
-| cooking_methods_researched ≥ 1 | 0 | 1 method researched (steam) |
-| Leaf files present | 0 | gilt_head_bream-steam.md ✅ CONFORMS TO TOR |
-| USDA safe temp evidence | 0 | Pull at 60°C in steam leaf (all 4 recipes) |
-| Culinary preferred temps | 0 | All 4 sources confirm 60°C well-done |
-| Cut profile present | 0 | ✓ with anatomy (shoulder muscle, probe placement) |
-| Culinary Group A | 0 | CN, TH covered in steam leaf |
-| Culinary Group B | 0 | DE, AT covered in steam leaf |
-| Culinary Group C | −1 | No Turkish/Arabic/Lebanese gilt-head bream pan-sear or grill recipes with verifiable URLs found yet |
-| Culinary Group D | −1 | No Scandinavian/Slavic gilt-head bream recipes with verifiable URLs found yet |
-| Inflated score (this branch) | −15 | |
-| **TOTAL** | **−17** | |
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
+| Missing method leaf files (4 of 5 declared) | −4 |
+| Partial leaf files | — (none; steam leaf ✅ CONFORMS TO TOR with 4 sources) |
+| Method leaf copies parent cut profile | — (none; steam profile is method-specific) |
+| Missing Culinary Group A tradition | — (covered: CN/TH in gilt_head_bream-steam.md) |
+| Missing Culinary Group B tradition | — (covered: DE/AT in gilt_head_bream-steam.md) |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
+
+Group C and D absent — steam leaf covers A (CN/TH) and B (DE/AT) only. Gilt-head bream (dorade) is widespread in Mediterranean and Middle Eastern cooking but no Group C or D source was verified for the steam method. Other method leaves (pan_sear, oven_bake, grill, charcoal_grill) are not yet created.
+
+### Improvement priorities
+
+1. **−4** · Missing method leaf files — create `gilt_head_bream-pan_sear.md`, `gilt_head_bream-oven_bake.md`, `gilt_head_bream-grill.md`, and `gilt_head_bream-charcoal_grill.md`, each with 4–6 diverse source recipes.
+2. **−1** · Missing Culinary Group C tradition — gilt-head bream (dorade royale) is a cornerstone of Moroccan and Turkish cuisine; add Group C source recipes.
+3. **−1** · Missing Culinary Group D tradition — add at least one Group D (Scandinavian/Baltic/Slavic) source recipe.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

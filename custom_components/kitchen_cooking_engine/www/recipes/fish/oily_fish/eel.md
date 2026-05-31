@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 5
+quality_score: 20
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -60,19 +60,23 @@ Eel (primarily European eel *Anguilla anguilla* and Japanese eel *Anguilla japon
 
 ## Quality score
 
-**Score: 5 / 20** — assessed 2026-05-31
+**Score: 20 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not researched | — (done) |
-| Missing method leaf files | — (all 5 done) |
+| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
+| Missing method leaf files | — (all 5 present: grill, pan_fry, oven_bake, smoker, braise) |
+| Partial leaf files (< 4 verified sources) | — (none; all 5 leaves ✅ CONFORMS TO TOR with 4 sources each) |
+| Method leaf copies parent cut profile | — (none; all profiles are method-specific) |
 | Missing Culinary Group A tradition | — (covered: kabayaki in eel-grill.md; Chinese wok-fried in eel-pan_fry.md; oven kabayaki in eel-oven_bake.md; Chinese 红烧 in eel-braise.md) |
+| Missing Culinary Group B tradition | — (covered across all leaves: BE, FR, IT, DE, NL, UK) |
 | Missing Culinary Group C tradition | — (covered: Turkish yılan balığı ızgara in eel-grill.md) |
+| Missing Culinary Group D tradition | — (covered: SE in eel-pan_fry.md; SE/NL/DE/RU in eel-smoker.md) |
 
-| Inflated score (this branch) | −15 |
+*Note: eel-smoker.md lacks Group A and C sources within that specific leaf — future improvement opportunity, but both groups are well-represented across other leaves.*
 
 ### Improvement priorities
 
-None — all criteria met.
+1. Add Group A (East Asian) and Group C (African/Middle Eastern/Turkish) sources to the smoker leaf to complete cross-method group coverage.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

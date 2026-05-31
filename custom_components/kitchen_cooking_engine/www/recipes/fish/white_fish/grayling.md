@@ -32,7 +32,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: -15
+quality_score: 4
 cooking_methods_researched: 0
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -58,8 +58,23 @@ Harr (*Thymallus thymallus*; tyska: Äsche; franska: ombre commun; finska: harju
 
 ## Quality score
 
-**Score: −15 / 20** — assessed 2026-05-31 (stub — cooking methods not yet researched)
+**Score: 4 / 20** — assessed 2026-05-31 (stub)
 
 | Criterion | Deduction |
 |-----------|----------|
-| Inflated score (this branch) | −15 |
+| Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
+| Missing method leaf files (4 of 4 declared: pan_fry, grill, smoker, oven_bake) | −4 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group B tradition | −1 |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
+
+Pure stub — no method leaves exist and cooking methods have not been researched. All four culinary groups deducted as no source evidence of any kind exists.
+
+### Improvement priorities
+
+1. **−8** · Complete broad method-survey research for grayling (*harr* / *Thymallus thymallus*) across culinary traditions; set `cooking_methods_researched: 1` only when thorough.
+2. **−4** · Create all 4 declared method leaf files, each with 4–6 diverse source recipes.
+3. **−4** · Add source recipes representing all four culinary groups across the method leaves.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

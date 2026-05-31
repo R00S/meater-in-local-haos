@@ -34,7 +34,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 3
+quality_score: 18
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -62,20 +62,24 @@ Gös (*Sander lucioperca*; tyska: Zander; franska: sandre; finska: kuha) är en 
 
 ## Quality score
 
-**Score: 3 / 20** — assessed 2026-05-31
+**Score: 18 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not researched | — (done) |
-| Missing method leaf files | — (all 6 done) |
-| Missing Culinary Group A tradition | −1 (pikeperch/zander absent from East Asian cuisines) |
-| Missing Culinary Group C tradition | −1 (pikeperch/zander absent from African/Middle Eastern/Latin American cuisines) |
+| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
+| Missing method leaf files | — (all 6 present: pan_sear, pan_fry, oven_bake, grill, smoker, sous_vide) |
+| Partial leaf files | — (none; all 6 leaves ✅ CONFORMS TO TOR with 4 sources each) |
+| Method leaf copies parent cut profile | — (none; all profiles are method-specific) |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group B tradition | — (covered across all leaves: SE/DE/FR/CZ/DK/FI/NL/UK) |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | — (covered: SE/DE/FI/DK/NL across multiple leaves) |
 
-| Inflated score (this branch) | −15 |
+Groups A and C absent — pikeperch (*Sander lucioperca* / zander) is indigenous to European and Western Asian freshwater systems and is absent from East Asian and African/Caribbean/Arabic culinary traditions. This claim has not been verified by live search of Japanese, Chinese, or Korean sources. Deductions applied pending verification.
 
 ### Improvement priorities
 
-1. **−1** · Missing Culinary Group A tradition — pikeperch is not a traditional ingredient in East Asian cuisines; deduction accepted as geographic reality
-2. **−1** · Missing Culinary Group C tradition — pikeperch is not a traditional ingredient in African, Middle Eastern, or Latin American cuisines; deduction accepted as geographic reality
+1. **−1** · Missing Culinary Group A tradition — search for pikeperch or zander in Chinese, Japanese, or Korean recipe sources; if found, add to any method leaf.
+2. **−1** · Missing Culinary Group C tradition — search for pikeperch in Turkish, Arabic, Persian or African cooking; if found, add to any method leaf.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

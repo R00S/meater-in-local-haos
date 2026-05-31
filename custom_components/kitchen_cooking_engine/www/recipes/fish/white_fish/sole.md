@@ -32,7 +32,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 2
+quality_score: 14
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -58,18 +58,26 @@ Sjötunga (*Solea solea*; tyska: Seezunge; franska: sole; holländska: tong) är
 
 ## Quality score
 
-**Score: 2 / 20** — assessed 2026-05-31
+**Score: 14 / 20** — assessed 2026-05-31
 
-| Criterion | Deduction | Note |
-|-----------|-----------|------|
-| cooking_methods_researched ≥ 1 | 0 | 1 method researched (pan_fry) |
-| Leaf files present | 0 | sole-pan_fry.md ✅ CONFORMS TO TOR |
-| USDA safe temp evidence | 0 | Pull at 60°C in pan_fry leaf (all 4 recipes) |
-| Culinary preferred temps | 0 | All 4 sources confirm 60°C well-done |
-| Cut profile present | 0 | ✓ with anatomy (flatfish structure, upper fillet, probe placement) |
-| Culinary Group A | −1 | Sole meunière is a Western European tradition; no East/SE Asian sole pan-fry recipes with verifiable URLs found yet |
-| Culinary Group B | 0 | GB, DE, IT, AT covered in pan_fry leaf |
-| Culinary Group C | −1 | No Arabic/African/Turkish sole recipes with verifiable URLs found yet |
-| Culinary Group D | −1 | No Scandinavian/Slavic sole recipes with verifiable URLs found yet |
-| Inflated score (this branch) | −15 | |
-| **TOTAL** | **−18** | |
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
+| Missing method leaf files (3 of 4 declared) | −3 |
+| Partial leaf files | — (none; pan_fry leaf ✅ CONFORMS TO TOR with 4 sources) |
+| Method leaf copies parent cut profile | — (none; pan_fry profile is method-specific) |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group B tradition | — (covered: GB/DE/IT/AT in sole-pan_fry.md) |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
+
+Groups A, C, D absent — sole pan_fry leaf covers Group B only (all 4 sources are Western European). Sole meunière is a classical Western European tradition; no verified East Asian, African/Arabic, or Scandinavian/Slavic sole recipes were found for the pan_fry method. Method leaves for pan_sear, oven_bake and grill are not yet created.
+
+### Improvement priorities
+
+1. **−3** · Missing method leaf files — create `sole-pan_sear.md`, `sole-oven_bake.md`, and `sole-grill.md`, each with 4–6 diverse source recipes.
+2. **−1** · Missing Culinary Group A tradition — sole is found in Mediterranean and North African cuisines; search for East Asian flatfish preparations using sole or an equivalent.
+3. **−1** · Missing Culinary Group C tradition — search for Turkish, Arabic or North African sole preparations.
+4. **−1** · Missing Culinary Group D tradition — sole is fished in the North Sea; search for Scandinavian/Baltic sole preparations.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

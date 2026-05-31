@@ -32,7 +32,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: -5
+quality_score: 6
 cooking_methods_researched: 0
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -58,17 +58,27 @@ Sill (Clupea harengus) är en liten, mycket fet pelagisk fisk utbredd i Nordatla
 
 ## Quality score
 
-**Score: -5 / 20** — assessed 2026-05-31
+**Score: 6 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
-|-----------|-----------|
+|-----------|----------|
 | Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
-| Some method leaves have fewer than 4 verified sources | −2 |
+| Partial leaf `herring-grill.md` (1 source, < 4) | −1 |
+| Partial leaf `herring-oven_bake.md` (1 source, < 4) | −1 |
+| Partial leaf `herring-pan_fry.md` (3 sources, < 4) | −1 |
+| Partial leaf `herring-smoker.md` (2 sources, < 4) | −1 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group B tradition | — (covered: BBC Good Food UK in herring-grill.md and herring-oven_bake.md) |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | — (covered: DK/SE/DE in herring-pan_fry.md; Nordic sources in herring-smoker.md) |
 
-| Inflated score (this branch) | −15 |
+Groups A and C absent — no verified East Asian or African/Arabic/Turkish herring recipe found across any existing leaf. Methods survey incomplete.
 
 ### Improvement priorities
 
 1. **−8** · Complete broad method-survey research for herring across culinary traditions; update `cooking_methods_researched` to `1` only when thorough.
-2. Expand pan_fry leaf with additional sources from Culinary Groups B and C (Dutch, German, Eastern European).
-3. Add at least 3 more sources across grill and oven_bake leaves.
+2. **−4** · All 4 existing leaves are partial — add verified sources to reach 4 per leaf: grill (+3), oven_bake (+3), pan_fry (+1), smoker (+2).
+3. **−1** · Missing Culinary Group A tradition — add at least one verified East Asian herring recipe (e.g. Japanese *nishin*, Korean pickled herring).
+4. **−1** · Missing Culinary Group C tradition — add at least one verified Group C source (e.g. salt herring in Caribbean or West African preserved fish traditions).
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

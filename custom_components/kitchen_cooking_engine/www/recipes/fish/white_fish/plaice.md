@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 3
+quality_score: 14
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -60,18 +60,25 @@ Rödspätta (*Pleuronectes platessa*; tyska: Scholle; danska: rødspætte; holl�
 
 ## Quality score
 
-**Score: 3 / 20** — assessed 2026-05-31
+**Score: 14 / 20** — assessed 2026-05-31
 
-| Criterion | Deduction | Note |
-|-----------|-----------|------|
-| cooking_methods_researched ≥ 1 | 0 | 1 method researched (steam) |
-| Leaf files present | 0 | plaice-steam.md ✅ CONFORMS TO TOR |
-| USDA safe temp evidence | 0 | Pull at 60°C in steam leaf (all 4 recipes) |
-| Culinary preferred temps | 0 | All 4 sources confirm 60°C well-done |
-| Cut profile present | 0 | ✓ with anatomy (fillet thickness 8–15 mm, probe placement) |
-| Culinary Group A | 0 | CN, TH, VN covered in steam leaf |
-| Culinary Group B | 0 | DE covered in steam leaf |
-| Culinary Group C | −1 | Steaming plaice with temperature data not documented in Arabic/African/Turkish traditions in verifiable online sources |
-| Culinary Group D | −1 | Steaming plaice with temperature data not documented in Scandinavian/Slavic traditions in verifiable online sources |
-| Inflated score (this branch) | −15 | |
-| **TOTAL** | **−17** | |
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
+| Missing method leaf files (4 of 5 declared) | −4 |
+| Partial leaf files | — (none; steam leaf ✅ CONFORMS TO TOR with 4 sources) |
+| Method leaf copies parent cut profile | — (none; steam profile is method-specific) |
+| Missing Culinary Group A tradition | — (covered: CN/TH/VN in plaice-steam.md) |
+| Missing Culinary Group B tradition | — (covered: DE in plaice-steam.md) |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
+
+Group C and D absent — steam leaf covers A (CN/TH/VN) and B (DE) only. Steam leaf states "Group C and D not separately required for this method" — this is an unverified assumption; deductions applied. Other method leaves (pan_fry, oven_bake, grill, smoker) are not yet created.
+
+### Improvement priorities
+
+1. **−4** · Missing method leaf files — create `plaice-pan_fry.md`, `plaice-oven_bake.md`, `plaice-grill.md`, and `plaice-smoker.md`, each with 4–6 diverse source recipes.
+2. **−1** · Missing Culinary Group C tradition — add at least one Group C source recipe across any method leaf.
+3. **−1** · Missing Culinary Group D tradition — add at least one Group D (Scandinavian/Baltic/Slavic) source recipe. Plaice (*rödspätta*) is traditional in Northern European cooking.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

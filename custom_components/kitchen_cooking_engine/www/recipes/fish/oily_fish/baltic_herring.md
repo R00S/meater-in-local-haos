@@ -31,7 +31,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: -6
+quality_score: 6
 cooking_methods_researched: 0
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -56,17 +56,27 @@ Strömming (Clupea harengus membras) är underarten av atlantisk sill som är in
 
 ## Quality score
 
-**Score: -6 / 20** — assessed 2026-05-31
+**Score: 6 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
-|-----------|-----------|
+|-----------|----------|
 | Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
-| Only one verified source per method leaf currently | −3 |
+| Partial leaf `baltic_herring-oven_bake.md` (1 source, < 4) | −1 |
+| Partial leaf `baltic_herring-pan_fry.md` (1 source, < 4) | −1 |
+| Partial leaf `baltic_herring-smoker.md` (2 sources, < 4) | −1 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group B tradition | −1 |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | — (covered: Nordic/Baltic sources across all three leaves) |
 
-| Inflated score (this branch) | −15 |
+Baltic herring (*silakka* / *strömming*) is a Baltic Sea fish with essentially no culinary tradition outside Scandinavian/Baltic/Slavic (Group D) cuisine. Groups A, B, and C are absent from all three existing leaves; those leaves note additional Group B and D sources are needed. Methods survey incomplete.
 
 ### Improvement priorities
 
-1. **−8** · Complete broad method-survey research; update `cooking_methods_researched` to `1` only when thorough.
-2. Add additional sources for both pan_fry and oven_bake — especially Culinary Groups B and D.
-3. Consider adding grill method if verified whole-fish or flundra grill sources are found.
+1. **−8** · Complete broad method-survey research for baltic herring; update `cooking_methods_researched` to `1` only when thorough.
+2. **−3** · All 3 existing leaves are partial — add verified sources to reach 4 per leaf: oven_bake (+3), pan_fry (+3), smoker (+2).
+3. **−1** · Missing Culinary Group B tradition — add at least one Western/Northern European source recipe (German, Dutch, or Polish herring preparation).
+4. **−1** · Missing Culinary Group A tradition — search for any East Asian fermented or salt-herring equivalent.
+5. **−1** · Missing Culinary Group C tradition — search for any African or Caribbean salt-herring tradition using baltic herring or equivalent.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
