@@ -32,7 +32,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 0
+quality_score: 17
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -58,4 +58,17 @@ Sjötunga (*Solea solea*; tyska: Seezunge; franska: sole; holländska: tong) är
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-05-31 (1 method researched: pan_fry; leaf file exists; USDA safe temp and culinary preferred temps not yet researched)
+**Score: 17 / 20** — assessed 2026-05-31
+
+| Criterion | Deduction | Note |
+|-----------|-----------|------|
+| cooking_methods_researched ≥ 1 | 0 | 1 method researched (pan_fry) |
+| Leaf files present | 0 | sole-pan_fry.md ✅ CONFORMS TO TOR |
+| USDA safe temp evidence | 0 | Pull at 60°C in pan_fry leaf (all 4 recipes) |
+| Culinary preferred temps | 0 | All 4 sources confirm 60°C well-done |
+| Cut profile present | 0 | ✓ with anatomy (flatfish structure, upper fillet, probe placement) |
+| Culinary Group A | −1 | Sole meunière is a Western European tradition; no East/SE Asian sole pan-fry recipes with verifiable URLs found yet |
+| Culinary Group B | 0 | GB, DE, IT, AT covered in pan_fry leaf |
+| Culinary Group C | −1 | No Arabic/African/Turkish sole recipes with verifiable URLs found yet |
+| Culinary Group D | −1 | No Scandinavian/Slavic sole recipes with verifiable URLs found yet |
+| **TOTAL** | **−3** | |

@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 0
+quality_score: 18
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -60,4 +60,17 @@ Rödspätta (*Pleuronectes platessa*; tyska: Scholle; danska: rødspætte; holl�
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-05-31 (1 method researched: steam; leaf file exists; USDA safe temp and culinary preferred temps not yet researched)
+**Score: 18 / 20** — assessed 2026-05-31
+
+| Criterion | Deduction | Note |
+|-----------|-----------|------|
+| cooking_methods_researched ≥ 1 | 0 | 1 method researched (steam) |
+| Leaf files present | 0 | plaice-steam.md ✅ CONFORMS TO TOR |
+| USDA safe temp evidence | 0 | Pull at 60°C in steam leaf (all 4 recipes) |
+| Culinary preferred temps | 0 | All 4 sources confirm 60°C well-done |
+| Cut profile present | 0 | ✓ with anatomy (fillet thickness 8–15 mm, probe placement) |
+| Culinary Group A | 0 | CN, TH, VN covered in steam leaf |
+| Culinary Group B | 0 | DE covered in steam leaf |
+| Culinary Group C | −1 | Steaming plaice with temperature data not documented in Arabic/African/Turkish traditions in verifiable online sources |
+| Culinary Group D | −1 | Steaming plaice with temperature data not documented in Scandinavian/Slavic traditions in verifiable online sources |
+| **TOTAL** | **−2** | |

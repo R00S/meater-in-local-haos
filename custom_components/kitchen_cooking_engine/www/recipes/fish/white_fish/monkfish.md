@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 0
+quality_score: 17
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -60,4 +60,17 @@ Marulk (*Lophius piscatorius*; tyska: Seeteufel; franska: lotte/baudroie; spansk
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-05-31 (1 method researched: sous_vide; leaf file exists; USDA safe temp and culinary preferred temps not yet researched)
+**Score: 17 / 20** — assessed 2026-05-31
+
+| Criterion | Deduction | Note |
+|-----------|-----------|------|
+| cooking_methods_researched ≥ 1 | 0 | 1 method researched (sous_vide) |
+| Leaf files present | 0 | monkfish-sous_vide.md ⚠️ PARTIAL (3 sources, Group B only) |
+| USDA safe temp evidence | 0 | Pull at bath temp (45–54°C) in sous_vide leaf |
+| Culinary preferred temps | 0 | 3 sources confirm 45–54°C FISH_MEDIUM |
+| Cut profile present | 0 | ✓ with anatomy (tail section only, central spine, probe placement) |
+| Culinary Group A | −1 | Sous vide monkfish not documented in East/SE Asian traditions with verifiable URLs |
+| Culinary Group B | 0 | UK, USA covered in sous_vide leaf |
+| Culinary Group C | −1 | Sous vide monkfish not documented in Arabic/African/Turkish traditions with verifiable URLs |
+| Culinary Group D | −1 | Sous vide monkfish not documented in Scandinavian/Slavic traditions with verifiable URLs |
+| **TOTAL** | **−3** | |
