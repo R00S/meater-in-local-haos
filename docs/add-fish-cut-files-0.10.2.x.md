@@ -296,3 +296,47 @@ Identified 5 new cooking methods for lowest-scoring fish cuts and created all le
 - `docs/recipe_research/fish/white_fish/monkfish-sous_vide.md` — 3 recipes (UK/UK/USA), bath 45–54°C, medium (partial TOR conformance — no non-Western sous vide sources found)
 
 All leaf files written to the single real directory (docs/recipe_research/fish/white_fish/ = custom_components/.../www/recipes/fish/white_fish/ same inode). Parent stub files updated with new methods and research links. generate_frontend_data.py run: 624 recipe files, 186 cuts, PANEL_VERSION updated.
+
+---
+
+## Session 10 (2026-05-31) — Focus: finding more cooking methods suitable for cuts
+
+### Output 1 — Culinary group definitions (verbatim from RECIPE_COLLECTION_TOR.md)
+
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+### Output 2 — Analysis gate rule (verbatim from RECIPE_ANALYSIS_TOR.md)
+
+> Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
+
+### Output 3 — Source integrity rule (verbatim from SOURCE_SURVEY.md)
+
+> The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
+
+### Output 4 — Understanding (own words)
+
+The primary task is to improve the 8 lowest-scoring cut files — all with quality_score: 0 — by actively researching what cooking methods are used for each cut across culinary traditions, finding methods not yet listed in the `methods:` frontmatter, and creating fully sourced method leaf files. The problem statement specifically calls out "finding more cooking methods suitable for the cuts," which means step (a) of the IMPROVE_CUT_FILES process is the core focus: assume the current methods lists are incomplete and investigate what real cooks in different traditions actually do with each cut. "This is not a race" means I will use web_search to discover methods, then verify with web_fetch before citing any source — fabricating or paraphrasing recipe content is wrong even when sources are sparse, and a genuine partial improvement is more valuable than a dishonest complete one. After this session's leaf files are created and parent cuts updated, CHORES.md follows.
+
+---
+
+### Method inventory — cuts to be researched this session
+
+**Cuts with no leaf files (priority):**
+- gilt_head_bream: current methods [pan_sear, oven_bake, grill, charcoal_grill] — research additional
+- turbot: current methods [pan_sear, oven_bake, grill, sous_vide] — research additional
+- sole: current methods [pan_fry, pan_sear, oven_bake, grill] — research additional
+- grayling: current methods [pan_fry, grill, smoker, oven_bake] — research additional
+- burbot: current methods [pan_fry, oven_bake, smoker, braise] — research additional
+- redfish: current methods [pan_fry, pan_sear, oven_bake, grill, smoker] — research additional
+- quail: current methods [grill, oven_roast, pan_fry, smoker] — research additional
+
+**Cuts with one leaf file (secondary):**
+- pike: current methods [pan_fry, oven_bake, grill, smoker, braise] — has pike-braise.md
+- flounder: current methods [pan_fry, grill, oven_bake, smoker, steam] — has flounder-steam.md
+- plaice: current methods [pan_fry, oven_bake, grill, smoker, steam] — has plaice-steam.md
+- pollock: current methods [pan_fry, oven_bake, air_fryer, smoker, grill] — has pollock-grill.md
+- monkfish: current methods [pan_sear, oven_roast, grill, braise, sous_vide] — has monkfish-sous_vide.md
