@@ -2895,6 +2895,7 @@ OILY_FISH = [
             CookingMethod.PAN_FRY,
             CookingMethod.GRILL,
             CookingMethod.OVEN_BAKE,
+            CookingMethod.SMOKER,
         ],
         recommended_doneness="well_done",
     ),
@@ -2913,6 +2914,7 @@ OILY_FISH = [
         supported_methods=[
             CookingMethod.PAN_FRY,
             CookingMethod.OVEN_BAKE,
+            CookingMethod.SMOKER,
         ],
         recommended_doneness="well_done",
     ),
@@ -2932,6 +2934,7 @@ OILY_FISH = [
             CookingMethod.GRILL,
             CookingMethod.PAN_FRY,
             CookingMethod.OVEN_BAKE,
+            CookingMethod.SMOKER,
         ],
         recommended_doneness="well_done",
     ),

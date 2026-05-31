@@ -13,6 +13,7 @@ methods:
 - pan_fry
 - grill
 - oven_bake
+- smoker
 doneness:
 - name: medium
   target_c: 57
@@ -53,6 +54,7 @@ Sill (Clupea harengus) är en liten, mycket fet pelagisk fisk utbredd i Nordatla
 - [Pan Fry](./herring-pan_fry.md)
 - [Grill](./herring-grill.md)
 - [Oven Bake](./herring-oven_bake.md)
+- [Smoker](./herring-smoker.md)
 
 ## Quality score
 

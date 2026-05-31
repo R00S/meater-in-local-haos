@@ -12,6 +12,7 @@ recommended_doneness: well_done
 methods:
 - pan_fry
 - oven_bake
+- smoker
 doneness:
 - name: medium
   target_c: 57
@@ -51,6 +52,7 @@ Strömming (Clupea harengus membras) är underarten av atlantisk sill som är in
 
 - [Pan Fry](./baltic_herring-pan_fry.md)
 - [Oven Bake](./baltic_herring-oven_bake.md)
+- [Smoker](./baltic_herring-smoker.md)
 
 ## Quality score
 

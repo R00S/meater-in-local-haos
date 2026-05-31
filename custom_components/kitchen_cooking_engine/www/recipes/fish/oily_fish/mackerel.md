@@ -13,6 +13,7 @@ methods:
 - grill
 - pan_fry
 - oven_bake
+- smoker
 doneness:
 - name: medium
   target_c: 57
@@ -53,6 +54,7 @@ Atlantisk makrill (Scomber scombrus) är en medelstora, mycket fet pelagisk fisk
 - [Grill](./mackerel-grill.md)
 - [Pan Fry](./mackerel-pan_fry.md)
 - [Oven Bake](./mackerel-oven_bake.md)
+- [Smoker](./mackerel-smoker.md)
 
 ## Quality score
 
