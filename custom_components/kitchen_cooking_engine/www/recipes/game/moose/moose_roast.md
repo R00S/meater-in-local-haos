@@ -38,7 +38,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 8
+quality_score: -7
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 15
@@ -66,7 +66,7 @@ Klassiska tillbehör: gräddsås, lingon, rödbetor, kokt potatis. Sondplacering
 - [Oven Roast](./moose_roast-oven_roast.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: -7 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -75,6 +75,7 @@ Klassiska tillbehör: gräddsås, lingon, rödbetor, kokt potatis. Sondplacering
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group C tradition | −1 |
 | Method file `moose_roast-oven_roast.md` copies parent cut profile | −1 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

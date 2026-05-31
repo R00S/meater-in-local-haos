@@ -22,7 +22,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 10
+quality_score: -5
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -52,13 +52,14 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 - [Slow Cooker](./lamb_shank-slow_cooker.md)
 ## Quality score
 
-**Score: 10 / 20** — assessed 2026-04-26
+**Score: -5 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |
 | Method file `lamb_shank-braise.md` copies parent cut profile | −1 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

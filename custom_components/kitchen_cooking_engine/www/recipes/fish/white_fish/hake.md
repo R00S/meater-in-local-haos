@@ -31,7 +31,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 8
+quality_score: -7
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 0
@@ -56,7 +56,7 @@ Sidans muskler är sammansatta av W-formade myotomer separerade av kollagenrika 
 - [Pan Fry](./hake-pan_fry.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-27
+**Score: -7 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -67,6 +67,7 @@ Sidans muskler är sammansatta av W-formade myotomer separerade av kollagenrika 
 | Missing Culinary Group D tradition | − pending (−1) |
 | Cut profile lacks anatomy | ✓ fixed 2026-04-27 |
 | Method file `hake-pan_fry.md` copies parent cut profile | ✓ fixed 2026-04-27 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

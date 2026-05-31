@@ -38,7 +38,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 10
+quality_score: -5
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -64,7 +64,7 @@ Renkött är mycket magert (typiskt under 2 % intramuskulärt fett) och djupt r�
 
 ## Quality score
 
-**Score: 10 / 20** — assessed 2026-04-27
+**Score: -5 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -74,6 +74,7 @@ Renkött är mycket magert (typiskt under 2 % intramuskulärt fett) och djupt r�
 | Pan sear leaf only has Group D (Nordic) sources | −2 |
 | Oven roast leaf only has 1 source | −3 |
 | No per-method temperature consensus (analysis gate not met) | −2 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

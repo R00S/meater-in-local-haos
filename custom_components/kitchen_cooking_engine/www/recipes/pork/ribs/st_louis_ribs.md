@@ -22,7 +22,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 9
+quality_score: -13
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -81,7 +81,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ## Quality score
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Score: -13 / 20**
 
 | Criterion | Points | Status |
 |-----------|--------|--------|
@@ -96,6 +96,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 | Missing Culinary Group D tradition | −1 | pending |
 | No grill leaf | − | pending |
 | No smoker leaf | − | pending |
+| Inflated score (this branch) | −15 | |
 
 ### Improvement priorities
 

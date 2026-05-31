@@ -23,7 +23,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 8
+quality_score: -7
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 2
@@ -53,7 +53,7 @@ Grill, ugn, air fryer eller panna — alla metoder kräver minst 74 °C (165 °F
 - [Pan Fry](./chicken_burger-pan_fry.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: -7 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -62,6 +62,7 @@ Grill, ugn, air fryer eller panna — alla metoder kräver minst 74 °C (165 °F
 | Missing Culinary Group B tradition | −1 |
 | Missing Culinary Group D tradition | −1 |
 | Method file `chicken_burger-air_fryer.md` copies parent cut profile | −1 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

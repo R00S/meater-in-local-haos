@@ -34,7 +34,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 17
+quality_score: 2
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 3
@@ -65,7 +65,7 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. 
 
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-04-29
+**Score: 2 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -77,6 +77,7 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. 
 | air_fryer leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
 | braise leaf | − missing (`chicken_thigh-braise.md` not yet created) |
 | pan_fry leaf | − missing (`chicken_thigh-pan_fry.md` not yet created) |
+| Inflated score (this branch) | −15 |
 
 **Deduction**: −1 (Group D) −1 (braise leaf missing) −1 (pan_fry leaf missing) = **17**
 

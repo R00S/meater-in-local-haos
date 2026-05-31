@@ -21,7 +21,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 9
+quality_score: -6
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 2
@@ -48,7 +48,7 @@ Tillagas alltid till fullt genomstekt för säkerhet och optimal smak. Innertemp
 - [Grill](./lamb_kofta-grill.md)
 ## Quality score
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Score: -6 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -59,6 +59,7 @@ Tillagas alltid till fullt genomstekt för säkerhet och optimal smak. Innertemp
 | Culinary Group B covered | − missing (−1) |
 | Culinary Group D covered | − missing (−1) |
 | Groups A, C | ✓ |
+| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods · −1 missing leaf · −1 Group B · −1 Group D = −11 → **9**
 

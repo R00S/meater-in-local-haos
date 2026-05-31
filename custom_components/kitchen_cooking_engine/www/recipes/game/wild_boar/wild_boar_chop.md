@@ -21,7 +21,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 8
+quality_score: -7
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 3
@@ -50,7 +50,7 @@ USDA rekommenderar vildfångad vildsvin till 70 °C (160 °F) internt på grund 
 - [Pan Sear](./wild_boar_chop-pan_sear.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: -7 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -59,6 +59,7 @@ USDA rekommenderar vildfångad vildsvin till 70 °C (160 °F) internt på grund 
 | Missing Culinary Group C tradition | −1 |
 | Missing Culinary Group D tradition | −1 |
 | Method file `wild_boar_chop-grill.md` copies parent cut profile | −1 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

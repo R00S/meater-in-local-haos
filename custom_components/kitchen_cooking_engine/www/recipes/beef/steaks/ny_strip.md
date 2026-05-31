@@ -59,7 +59,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 10
+quality_score: -5
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -92,7 +92,7 @@ Fettlisten längs ena kanten är ett definierande drag och smakkälla — den sm
 - [Sous Vide](./ny_strip-sous_vide.md)
 ## Quality score
 
-**Score: 10 / 20** — assessed 2026-04-27
+**Score: -5 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -101,6 +101,7 @@ Fettlisten längs ena kanten är ett definierande drag och smakkälla — den sm
 | Culinary Group A covered | − missing (−1) |
 | Culinary Group D covered | − missing (−1) |
 | Culinary Groups B, C | ✓ |
+| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods · −1 Group A · −1 Group D = −10 → 20−10 = **10**
 

@@ -38,7 +38,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 9
+quality_score: -6
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -64,7 +64,7 @@ Möra muskler (innanlår) lämpar sig för ugnsrostning och mer öm tillagning; 
 
 ## Quality score
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Score: -6 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -74,6 +74,7 @@ Möra muskler (innanlår) lämpar sig för ugnsrostning och mer öm tillagning; 
 | Braise leaf incomplete (1 of 4–6 sources) | −2 |
 | Oven roast leaf not yet a full dedicated file | −3 |
 | No per-method temperature consensus (analysis gate not met) | −3 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

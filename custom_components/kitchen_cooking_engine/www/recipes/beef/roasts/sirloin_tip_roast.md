@@ -46,7 +46,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 10
+quality_score: -5
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -68,7 +68,7 @@ Sirloin tip roast (känd som "knuckle" i UK/australisk styckning, "pointe de cul
 
 ## Quality score
 
-**Score: 10 / 20** — assessed 2026-04-27
+**Score: -5 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -78,6 +78,7 @@ Sirloin tip roast (känd som "knuckle" i UK/australisk styckning, "pointe de cul
 | Braise method leaf not yet started | −2 |
 | Oven roast leaf incomplete (only 2 of 4–6 sources) | −2 |
 | No per-method temperature consensus (analysis gate not met) | −3 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

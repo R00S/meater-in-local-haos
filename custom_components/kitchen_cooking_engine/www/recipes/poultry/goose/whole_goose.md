@@ -30,7 +30,7 @@ doneness:
   max_f: 190
   usda_safe: true
   recommended: true
-quality_score: 10
+quality_score: -5
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 20
@@ -59,13 +59,14 @@ En hel gås (typiskt 4–6 kg) är den fetaste av de vanliga stekfåglarna. Inne
 - [Oven Roast](./whole_goose-oven_roast.md)
 ## Quality score
 
-**Score: 10 / 20** — assessed 2026-04-26
+**Score: -5 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group C tradition | −1 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

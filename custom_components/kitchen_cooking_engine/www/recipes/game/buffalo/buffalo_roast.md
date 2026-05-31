@@ -38,7 +38,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 8
+quality_score: -7
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -64,7 +64,7 @@ Denna magerhet innebär att utan självbastande fett överstiger bisonstek lätt
 
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-27
+**Score: -7 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -74,6 +74,7 @@ Denna magerhet innebär att utan självbastande fett överstiger bisonstek lätt
 | Oven roast leaf has no complete source recipes (no quantities) | −3 |
 | Braise leaf incomplete (1 of 4–6 sources) | −2 |
 | No per-method temperature consensus (analysis gate not met) | −4 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

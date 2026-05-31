@@ -46,7 +46,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 9
+quality_score: -14
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -84,7 +84,7 @@ Rack: **57–63 °C** för medium-rare; bröst: **88–95 °C** för fall-från-
 
 ## Quality score
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Score: -14 / 20**
 
 | Criterion | Points | Status |
 |-----------|--------|--------|
@@ -96,6 +96,7 @@ Rack: **57–63 °C** för medium-rare; bröst: **88–95 °C** för fall-från-
 | Cooking methods not researched | −8 | pending — grill unresearched |
 | Missing Culinary Group A tradition | −1 | pending |
 | Missing Culinary Group D tradition | −1 | pending |
+| Inflated score (this branch) | −15 | |
 
 ### Improvement priorities
 

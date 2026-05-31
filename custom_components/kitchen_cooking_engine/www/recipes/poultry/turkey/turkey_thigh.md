@@ -32,7 +32,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 16
+quality_score: 1
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 10
@@ -67,7 +67,7 @@ Kalkontlår är den övre benets mörka köttssektion av kalkon, från höften t
 
 ## Quality score
 
-**Score: 16 / 20** — assessed 2026-04-29
+**Score: 1 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -82,6 +82,7 @@ Kalkontlår är den övre benets mörka köttssektion av kalkon, från höften t
 | Temperature data: culinary preferred (77–79°C) | ✓ |
 | Per-method temp data | ✓ (oven_roast leaf) |
 | oven_roast leaf copies parent cut profile | − −1 (cut profile paragraphs are near-identical to parent; method-specific context is in second paragraph only) |
+| Inflated score (this branch) | −15 |
 
 **Deduction**: −1 (Group A) −1 (Group C) −1 (Group D) −1 (oven_roast copies parent) = **16**
 

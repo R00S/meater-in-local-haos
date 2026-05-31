@@ -22,7 +22,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 14
+quality_score: -1
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 15
@@ -52,13 +52,14 @@ All methods inherit from the primary `mutton_shoulder` entry. Independent leaf f
 
 ## Quality score
 
-**Score: 14 / 20** — assessed 2026-04-27
+**Score: -1 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −0 *(inherited from mutton_shoulder; set cooking_methods_researched: 1)* |
 | Cut profile references mutton_shoulder rather than being stand-alone | −2 |
 | No independent method leaf files (relies on mutton_shoulder) | −4 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

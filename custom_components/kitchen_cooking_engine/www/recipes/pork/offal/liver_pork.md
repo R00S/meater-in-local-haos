@@ -21,7 +21,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 9
+quality_score: -14
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 2
@@ -57,7 +57,7 @@ Klassiska beredningar: brittisk *liver and onions*, tysk *Leberwurst*-teknik, no
 
 ## Quality score
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Score: -14 / 20**
 
 | Criterion | Points | Status |
 |-----------|--------|--------|
@@ -69,6 +69,7 @@ Klassiska beredningar: brittisk *liver and onions*, tysk *Leberwurst*-teknik, no
 | Cooking methods not researched | −8 | pending — set to 1 once pan_sear also researched |
 | Missing Culinary Group A tradition | −1 | pending |
 | Missing Culinary Group C tradition | −1 | pending |
+| Inflated score (this branch) | −15 | |
 
 ### Improvement priorities
 

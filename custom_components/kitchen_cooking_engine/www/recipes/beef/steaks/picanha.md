@@ -56,7 +56,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 10
+quality_score: -5
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -81,7 +81,7 @@ Picanha (*alcatra de capa* på portugisiska; *coulotte* på franska; *sirloin ca
 
 ## Quality score
 
-**Score: 10 / 20** — assessed 2026-04-27
+**Score: -5 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -93,6 +93,7 @@ Picanha (*alcatra de capa* på portugisiska; *coulotte* på franska; *sirloin ca
 | Culinary Group B covered | ✓ |
 | Culinary Group C covered | − missing |
 | Culinary Group D covered | − missing |
+| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods not researched · −1 Group C missing · −1 Group D missing = −10 → 20−10 = **10**
 

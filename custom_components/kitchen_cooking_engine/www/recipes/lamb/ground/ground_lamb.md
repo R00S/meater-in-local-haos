@@ -21,7 +21,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 8
+quality_score: -7
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 2
@@ -49,7 +49,7 @@ Tillagning tills köttet är helt genomstekt och lätt brynnat, 72–75 °C inte
 - [Pan Fry](./ground_lamb-pan_fry.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: -7 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -58,6 +58,7 @@ Tillagning tills köttet är helt genomstekt och lätt brynnat, 72–75 °C inte
 | Missing Culinary Group D tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | Method file `ground_lamb-pan_fry.md` copies parent cut profile | −1 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

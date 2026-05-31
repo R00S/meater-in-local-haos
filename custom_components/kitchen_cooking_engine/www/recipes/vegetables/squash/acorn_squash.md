@@ -19,7 +19,7 @@ doneness:
   max_f: 212
   usda_safe: true
   recommended: true
-quality_score: 10
+quality_score: -5
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 0
@@ -43,13 +43,14 @@ Ekollon-squash (*Cucurbita pepo* var. *turbinata*) ugnsbakas hel eller halverad 
 - [Oven Roast](./acorn_squash-oven_roast.md)
 ## Quality score
 
-**Score: 10 / 20** — assessed 2026-04-26
+**Score: -5 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Cut profile lacks anatomy | −1 |
 | Method file `acorn_squash-oven_bake.md` copies parent cut profile | −1 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

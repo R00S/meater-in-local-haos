@@ -31,7 +31,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 8
+quality_score: -7
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 0
@@ -58,7 +58,7 @@ Svärdsfisk tolererar direkt hög grillvärme utan att falla isär och har en h�
 - [Pan Sear](./swordfish-pan_sear.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-27
+**Score: -7 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -68,6 +68,7 @@ Svärdsfisk tolererar direkt hög grillvärme utan att falla isär och har en h�
 | Culinary Group A covered | − missing (−1) |
 | Culinary Group D covered | − missing (−1) |
 | Groups B, C | ✓ |
+| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods · −2 missing leaves · −1 Group A · −1 Group D = −12 → **8**
 

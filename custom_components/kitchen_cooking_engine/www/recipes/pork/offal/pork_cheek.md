@@ -23,7 +23,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 9
+quality_score: -6
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -50,7 +50,7 @@ Bräsering (160–170 °C, 2–3 timmar) är den definitiva metoden: kollagen sm
 - [Pan Fry](./pork_cheek-pan_fry.md)
 ## Quality score
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Score: -6 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -63,6 +63,7 @@ Bräsering (160–170 °C, 2–3 timmar) är den definitiva metoden: kollagen sm
 | Method file `pork_cheek-pan_fry.md` copies parent cut profile | ✓ fixed 2026-04-27 |
 | Method file `pork_cheek-braise.md` copies `pork_cheek-oven_roast.md` | ✓ fixed 2026-04-27 |
 | Method file `pork_cheek-braise.md` copies `pork_cheek-pan_fry.md` | ✓ fixed 2026-04-27 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

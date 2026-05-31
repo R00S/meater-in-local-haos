@@ -30,7 +30,7 @@ doneness:
   max_c: 230
   max_f: 450
   usda_safe: true
-quality_score: 9
+quality_score: -6
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 0
@@ -57,7 +57,7 @@ Aubergine (*Solanum melongena*) uppnår sin mest dramatiska transformation på l
 - [Sauté](./eggplant-saute.md)
 ## Quality score
 
-**Score: 9 / 20** — assessed 2026-04-26
+**Score: -6 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -65,6 +65,7 @@ Aubergine (*Solanum melongena*) uppnår sin mest dramatiska transformation på l
 | Missing Culinary Group D tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | Method file `eggplant-grill.md` copies parent cut profile | −1 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

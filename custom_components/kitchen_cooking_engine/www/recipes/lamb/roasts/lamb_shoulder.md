@@ -22,7 +22,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 18
+quality_score: -7
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 15
@@ -47,7 +47,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagnin
 - [Oven Roast](./lamb_shoulder-oven_roast.md)
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group A, −1 Group D remain)
+**Score: -7 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -58,6 +58,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagnin
 | Culinary Group A covered | − missing (−1) |
 | Culinary Group D covered | − missing (−1) |
 | Culinary Groups B, C | ✓ |
+| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods · −2 missing leaves · −1 Group A · −1 Group D = −12 → **8**
 

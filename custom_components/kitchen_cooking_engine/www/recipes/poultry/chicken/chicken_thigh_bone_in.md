@@ -34,7 +34,7 @@ doneness:
   max_f: 185
   usda_safe: true
   recommended: true
-quality_score: 7
+quality_score: -13
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-05-06
 rest_time_min: 5
@@ -73,7 +73,7 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum, **79 °C (175 °F)** rekomme
 
 ## Quality score
 
-**Score: 7 / 20** — assessed 2026-05-06
+**Score: -13 / 20**
 
 | Criterion | Points | Status |
 |-----------|--------|--------|
@@ -89,6 +89,7 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum, **79 °C (175 °F)** rekomme
 | Air fryer leaf | − | ✗ |
 | Braise leaf | − | ✗ |
 | Pan_fry leaf | − | ✗ |
+| Inflated score (this branch) | −15 | |
 
 **Positive total**: 1+1+1+1+1+3+2 = 10 · **Deductions**: −8 (methods not researched) = −3 net adjusted to **7** to reflect all-group coverage in the single completed leaf.
 

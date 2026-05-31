@@ -32,7 +32,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 18
+quality_score: -7
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 3
@@ -60,7 +60,7 @@ Ugnsrostning: 200–220 °C, 35–45 minuter med vändning. Innertemperatur: **7
 
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group C, −1 Group D remain)
+**Score: -7 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -74,6 +74,7 @@ Ugnsrostning: 200–220 °C, 35–45 minuter med vändning. Innertemperatur: **7
 | Culinary Group C covered | − missing |
 | Culinary Group D covered | − missing (Natasha's Kitchen assessed as Group B, no confirmed Group D source) |
 | Oven_roast cut profile method-specific | ✓ (fixed 2026-04-27) |
+| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods not researched · −1 missing grill leaf · −1 missing air_fryer leaf · −1 Group C · −1 Group D = −12 → 20−12 = **8**
 

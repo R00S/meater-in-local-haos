@@ -39,7 +39,7 @@ doneness:
   max_f: 135
   usda_safe: false
   recommended: true
-quality_score: 8
+quality_score: -7
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 0
@@ -63,7 +63,7 @@ Tonfiskbiff — vanligast blåfenad (*Thunnus thynnus*, japansk *hon maguro*), g
 - [Pan Sear](./tuna_steak-pan_sear.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: -7 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -72,6 +72,7 @@ Tonfiskbiff — vanligast blåfenad (*Thunnus thynnus*, japansk *hon maguro*), g
 | Method file `tuna_steak-grill.md` copies parent cut profile | −1 |
 | Method file `tuna_steak-pan_sear.md` copies parent cut profile | −1 |
 | Method file `tuna_steak-grill.md` copies `tuna_steak-pan_sear.md` | −1 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

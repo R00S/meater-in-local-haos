@@ -21,7 +21,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 11
+quality_score: -4
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 2
@@ -47,7 +47,7 @@ Pannstekning i smör vid hög värme är standardmetoden. Innertemperatur: **70�
 - [Pan Sear](./pork_liver-pan_sear.md)
 ## Quality score
 
-**Score: 11 / 20** — assessed 2026-04-27
+**Score: -4 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -56,6 +56,7 @@ Pannstekning i smör vid hög värme är standardmetoden. Innertemperatur: **70�
 | All method cut profiles distinct | ✓ (fixed 2026-04-27) |
 | Culinary Group C covered | − missing (−1) |
 | All other groups | ✓ |
+| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods · −1 Group C = −9 → 20−9 = **11**
 

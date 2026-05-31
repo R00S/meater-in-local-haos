@@ -53,7 +53,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 9
+quality_score: 3
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -92,12 +92,13 @@ Entrecôtestek (övre entrecôtestek i nordamerikansk styckningsnomenklatur) är
 
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-27
+**Score: 3 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group D tradition | −1 |
+| Inflated score (this branch) | −15 |
 
 ### Notes
 

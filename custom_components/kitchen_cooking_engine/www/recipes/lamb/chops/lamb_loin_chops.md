@@ -46,7 +46,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 9
+quality_score: -6
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 3
@@ -73,7 +73,7 @@ Het gjutjärns- eller tung panna, 4–5 minuter per sida, sedan vila. Sond in i 
 - [Pan Sear](./lamb_loin_chops-pan_sear.md)
 ## Quality score
 
-**Score: 9 / 20** — assessed 2026-04-26
+**Score: -6 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -81,6 +81,7 @@ Het gjutjärns- eller tung panna, 4–5 minuter per sida, sedan vila. Sond in i 
 | Missing method leaf file `lamb_loin_chops-grill.md` | −1 |
 | Missing Culinary Group A tradition | −1 |
 | Method file `lamb_loin_chops-pan_sear.md` copies parent cut profile | −1 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

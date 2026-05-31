@@ -22,7 +22,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 9
+quality_score: -6
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-28
 rest_time_min: 10
@@ -48,7 +48,7 @@ Eftervärmen är försumbar tack vare den omgivande vätskan som buffrar tempera
 - [Braise](./chuck_roast-braise.md)
 ## Quality score
 
-**Score: 9 / 20** — assessed 2026-04-28
+**Score: -6 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -59,6 +59,7 @@ Eftervärmen är försumbar tack vare den omgivande vätskan som buffrar tempera
 | Culinary Group C covered | − missing (−1) |
 | Culinary Group D covered | ✓ (Köket.se *kalops* — Swedish, added 2026-04-28) |
 | Culinary Groups A, B | ✓ |
+| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods · −2 missing leaves · −1 Group C = −11 → **9**
 

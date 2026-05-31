@@ -46,7 +46,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 8
+quality_score: -7
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 3
@@ -73,7 +73,7 @@ Sear vid hög värme, 2–3 minuter per sida. Sond in i den tjockaste muskeldele
 - [Pan Fry](./lamb_cutlet-pan_fry.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: -7 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -82,6 +82,7 @@ Sear vid hög värme, 2–3 minuter per sida. Sond in i den tjockaste muskeldele
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group C tradition | −1 |
 | Method file `lamb_cutlet-pan_fry.md` copies parent cut profile | −1 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

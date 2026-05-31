@@ -22,7 +22,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 17
+quality_score: 2
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 15
@@ -49,7 +49,7 @@ Låg-och-långsam tillagning transformerar snittet: 3–4 timmar i ugn vid 150 �
 
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-04-29
+**Score: 2 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -66,6 +66,7 @@ Låg-och-långsam tillagning transformerar snittet: 3–4 timmar i ugn vid 150 �
 | Braise leaf cut profile copies parent text | − −1 (opening paragraph near-identical to parent; method-specific analysis in second paragraph only) |
 | oven_roast leaf | − pending (no deduction per TOR — method leaf files exist) |
 | slow_cooker leaf | − pending (no deduction per TOR — method leaf files exist) |
+| Inflated score (this branch) | −15 |
 
 **Deduction**: −1 (braise leaf cut profile copies parent) = **17**
 

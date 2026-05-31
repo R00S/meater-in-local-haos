@@ -32,7 +32,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 11
+quality_score: -4
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 2
@@ -61,7 +61,7 @@ Alla tillagningsmetoder (air fryer, grill, ugn, fritering) kräver minst 74 °C 
 - [`chicken_wing-oven_roast.md`](chicken_wing-oven_roast.md) — 1 source, in-progress: Group B (Taste of Home/USA)
 ## Quality score
 
-**Score: 11 / 20** — assessed 2026-04-27
+**Score: -4 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -74,6 +74,7 @@ Alla tillagningsmetoder (air fryer, grill, ugn, fritering) kräver minst 74 °C 
 | Culinary Group B covered | ✓ (air fryer: Natasha's Kitchen, Skinnytaste; grill: Taste of Home; oven: Taste of Home) |
 | Culinary Group C covered | ✓ (air fryer: Immaculate Bites; grill: Immaculate Bites) |
 | Culinary Group D covered | − missing from all leaves |
+| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods not researched · −1 Group D missing = −9 total → 20−9 = **11**
 

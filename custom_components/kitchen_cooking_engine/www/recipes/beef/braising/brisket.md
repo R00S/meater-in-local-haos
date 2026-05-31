@@ -23,7 +23,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 19
+quality_score: 4
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 30
@@ -46,7 +46,7 @@ Nötbringa tas från bröstet och nedre delen av djurets bröstkorg och består 
 - [Oven Roast](./brisket-oven_roast.md)
 ## Quality score
 
-**Score: 19 / 20** — assessed 2026-04-29
+**Score: 4 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -63,6 +63,7 @@ Nötbringa tas från bröstet och nedre delen av djurets bröstkorg och består 
 | braise leaf | − pending (no deduction per TOR — oven_roast leaf exists) |
 | slow_cooker leaf | − pending (no deduction per TOR — oven_roast leaf exists) |
 | smoker leaf | − pending (no deduction per TOR — oven_roast leaf exists) |
+| Inflated score (this branch) | −15 |
 
 **Deduction**: −1 (Group D missing) = **19**
 

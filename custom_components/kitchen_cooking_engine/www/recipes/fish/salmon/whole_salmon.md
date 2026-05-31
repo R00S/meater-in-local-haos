@@ -39,7 +39,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 12
+quality_score: -3
 cooking_methods_researched: 0
 quality_assessed: 2026-05-26
 rest_time_min: 5
@@ -64,11 +64,12 @@ Hel lax betyder en intakt fiskkropp: båda sidorna sitter ihop via ryggrad och r
 
 ## Quality score
 
-**Score: 12 / 20** — assessed 2026-05-26
+**Score: -3 / 20**
 
 | Criterion | Deduction |
 |-----------|-----------|
 | Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

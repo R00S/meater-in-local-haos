@@ -46,7 +46,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 18
+quality_score: -7
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 10
@@ -76,7 +76,7 @@ Sear all om i het panna (1–2 minuter per sida), belägg med senap och örtkorp
 - [Oven Roast](./rack_of_lamb-oven_roast.md)
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-29 (methods survey done; oven_roast leaf profile fixed; −1 Group A, −1 Group D remain)
+**Score: -7 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -85,6 +85,7 @@ Sear all om i het panna (1–2 minuter per sida), belägg med senap och örtkorp
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group D tradition | −1 |
 | Method file `rack_of_lamb-oven_roast.md` copies parent cut profile | −1 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

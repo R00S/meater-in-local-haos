@@ -28,7 +28,7 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
-quality_score: 9
+quality_score: -6
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 0
@@ -53,7 +53,7 @@ Hel bakad sötpotatis (*Ipomoea batatas*) i konventionell ugn vid 190–200 °C 
 - [Oven Roast](./roasted_sweet_potato-oven_roast.md)
 ## Quality score
 
-**Score: 9 / 20** — assessed 2026-04-26
+**Score: -6 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -61,6 +61,7 @@ Hel bakad sötpotatis (*Ipomoea batatas*) i konventionell ugn vid 190–200 °C 
 | Missing Culinary Group B tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | Method file `roasted_sweet_potato-oven_bake.md` copies parent cut profile | −1 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

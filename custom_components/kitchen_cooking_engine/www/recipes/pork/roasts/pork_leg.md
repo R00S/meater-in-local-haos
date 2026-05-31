@@ -31,7 +31,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 8
+quality_score: -7
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 15
@@ -61,7 +61,7 @@ Bräsering eller ugnsrostning till **85–90 °C** är standardmålet för pull-
 - [Slow Cooker](./pork_leg-slow_cooker.md)
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Score: -7 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -70,6 +70,7 @@ Bräsering eller ugnsrostning till **85–90 °C** är standardmålet för pull-
 | Method file `pork_leg-braise.md` copies parent cut profile | −1 |
 | Method file `pork_leg-oven_roast.md` copies parent cut profile | −1 |
 | Method file `pork_leg-braise.md` copies `pork_leg-oven_roast.md` | −1 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

@@ -40,7 +40,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 17
+quality_score: 2
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 5
@@ -68,7 +68,7 @@ Ankbröst är ett mörkt, rikt snitt med tjockt subcutant fett. Till skillnad fr
 
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-04-29
+**Score: 2 / 20**
 
 | Criterion | Status |
 |-----------|--------|
@@ -79,6 +79,7 @@ Ankbröst är ett mörkt, rikt snitt med tjockt subcutant fett. Till skillnad fr
 | Culinary Group D tradition covered | − missing (Scandinavian/Eastern European duck breast recipes not found in accessible sources) |
 | oven_roast leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
 | sous_vide leaf | − pending (method in list; leaf not yet created) |
+| Inflated score (this branch) | −15 |
 
 **Deduction**: −1 (Group C) −1 (Group D) −1 (sous_vide leaf pending) = **17**
 

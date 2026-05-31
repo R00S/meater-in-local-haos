@@ -47,7 +47,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 10
+quality_score: -3
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -88,13 +88,14 @@ Nötrumpa skärs från rumpprimalen — toppen av bakkvarteret, vid korsningen a
 
 ## Quality score
 
-**Score: 10 / 20** — assessed 2026-04-27
+**Score: -3 / 20**
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Groups A, C | −2 (honest gaps) |
 | Groups B, D covered in pan_sear leaf | −0 |
+| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 
