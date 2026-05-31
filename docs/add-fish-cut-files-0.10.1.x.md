@@ -64,3 +64,45 @@ Created all 11 files using previous session's research:
 **generate_frontend_data.py:** Added "oily_fish": "Fet fisk" to meat Swedish name dict; added "Oily Fish": "Fet fisk" to _CUT_TYPE_NAME_SV.
 
 **Generator:** Ran clean. herring, mackerel, baltic_herring, oily_fish, "Fet fisk", "Oily Fish" all present in generated panel JS.
+
+## Session 3 (2026-05-31) — Smoker stubs created for all missing cuts
+
+Created 24 smoker stub leaf files across beef, pork, poultry, game, lamb, and fish.
+All stubs have the KCE:CUT_METHOD frontmatter (tree-registered) and a `⚠️ STATUS: STUB` marker.
+Source collection deferred to future sessions.
+
+**Beef:**
+- `www/recipes/beef/braising/brisket-smoker.md`
+- `www/recipes/beef/braising/chuck_roast-smoker.md`
+- `www/recipes/beef/braising/short_ribs-smoker.md`
+
+**Pork:**
+- `www/recipes/pork/ribs/spare_ribs-smoker.md`
+- `www/recipes/pork/ribs/st_louis_ribs-smoker.md`
+- `www/recipes/pork/chops/pork_tenderloin-smoker.md`
+- `www/recipes/pork/chops/pork_chop-smoker.md`
+- `www/recipes/pork/roasts/pork_loin_roast-smoker.md`
+- `www/recipes/pork/roasts/cured_ham-smoker.md`
+
+**Poultry:**
+- `www/recipes/poultry/chicken/whole_chicken-smoker.md`
+- `www/recipes/poultry/chicken/chicken_thigh-smoker.md`
+- `www/recipes/poultry/chicken/chicken_wing-smoker.md`
+- `www/recipes/poultry/turkey/whole_turkey-smoker.md`
+- `www/recipes/poultry/turkey/turkey_breast-smoker.md`
+- `www/recipes/poultry/duck/duck_breast-smoker.md`
+- `www/recipes/poultry/duck/whole_duck-smoker.md`
+
+**Game:**
+- `www/recipes/game/venison/venison_roast-smoker.md`
+- `www/recipes/game/wild_boar/wild_boar_shoulder-smoker.md`
+- `www/recipes/game/moose/moose_roast-smoker.md`
+- `www/recipes/game/reindeer/reindeer_roast-smoker.md`
+
+**Lamb:**
+- `www/recipes/lamb/roasts/leg_of_lamb-smoker.md`
+- `www/recipes/lamb/roasts/lamb_shoulder-smoker.md`
+
+**Fish:**
+- `www/recipes/fish/white_fish/haddock-smoker.md`
+- `www/recipes/fish/tuna/tuna_steak-smoker.md`
