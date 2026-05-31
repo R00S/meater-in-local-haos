@@ -59,7 +59,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: -4
+quality_score: 11
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -91,7 +91,7 @@ Ribeye består av ögat (longissimus), rib cap (spinalis dorsi, den rikaste och 
 - [Sous Vide](./ribeye_steak-sous_vide.md)
 ## Quality score
 
-**Score: -4 / 20**
+**Score: 11 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -99,7 +99,6 @@ Ribeye består av ögat (longissimus), rib cap (spinalis dorsi, den rikaste och 
 | All method cut profiles distinct (no copies) | ✓ (fixed 2026-04-27) |
 | Culinary Group C covered | − missing (−1) |
 | All other groups | ✓ |
-| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods not researched · −1 Group C missing = −9 → 20−9 = **11**
 

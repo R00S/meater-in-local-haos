@@ -21,7 +21,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: -4
+quality_score: 11
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -45,13 +45,12 @@ Oxlägg är den nedre delen av framlägget (foreshank) eller baklägget (hindsha
 - [Slow Cooker](./beef_shank-slow_cooker.md)
 ## Quality score
 
-**Score: -4 / 20**
+**Score: 11 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Method file `beef_shank-braise.md` copies parent cut profile | −1 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

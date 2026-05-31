@@ -30,7 +30,7 @@ doneness:
   max_f: 190
   usda_safe: true
   recommended: true
-quality_score: -7
+quality_score: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -56,7 +56,7 @@ En hel anka presenterar en tillagningsutmaning: bröstet är bäst vid 57–63 �
 - [Oven Roast](./whole_duck-oven_roast.md)
 ## Quality score
 
-**Score: -7 / 20**
+**Score: 8 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -65,7 +65,6 @@ En hel anka presenterar en tillagningsutmaning: bröstet är bäst vid 57–63 �
 | Missing Culinary Group B tradition | −1 |
 | Missing Culinary Group C tradition | −1 |
 | Method file `whole_duck-oven_roast.md` copies parent cut profile | −1 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

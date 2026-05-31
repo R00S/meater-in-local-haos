@@ -46,7 +46,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: -7
+quality_score: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 5
@@ -75,7 +75,7 @@ Den magra profilen innebär att get gynnas av kortare tillagningstider, men kult
 - [Pan Sear](./goat_chop-pan_sear.md)
 ## Quality score
 
-**Score: -7 / 20**
+**Score: 8 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -84,7 +84,6 @@ Den magra profilen innebär att get gynnas av kortare tillagningstider, men kult
 | Method file `goat_chop-grill.md` copies parent cut profile | −1 |
 | Method file `goat_chop-pan_sear.md` copies parent cut profile | −1 |
 | Method file `goat_chop-grill.md` copies `goat_chop-pan_sear.md` | −1 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

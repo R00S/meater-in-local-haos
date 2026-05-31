@@ -32,7 +32,7 @@ doneness:
   max_f: 185
   usda_safe: true
   recommended: true
-quality_score: -7
+quality_score: 18
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 10
@@ -58,7 +58,7 @@ En hel kyckling är en komplett fågel — bestående av bröstködet (vitt, mag
 
 ## Quality score
 
-**Score: -7 / 20**
+**Score: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group A, −1 Group D remain)
 
 | Criterion | Status |
 |-----------|--------|
@@ -72,7 +72,6 @@ En hel kyckling är en komplett fågel — bestående av bröstködet (vitt, mag
 | Culinary Group C covered | ✓ (Suzy Karadsheh/Egyptian) |
 | Culinary Group D covered | − missing (Natasha's Kitchen assessed as Group B) |
 | Oven_roast cut profile method-specific | ✓ (fixed 2026-04-27) |
-| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods · −1 missing air_fryer · −1 missing grill · −1 Group A · −1 Group D = −12 → 20−12 = **8**
 

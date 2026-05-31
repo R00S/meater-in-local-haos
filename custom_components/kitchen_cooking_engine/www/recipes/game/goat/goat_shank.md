@@ -22,7 +22,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 4
+quality_score: 19
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 10
@@ -48,7 +48,7 @@ Getlägg skiljer sig från lammlägg i att get i allmänhet slaktas vid äldre �
 - [Oven Roast](./goat_shank-oven_roast.md)
 ## Quality score
 
-**Score: 4 / 20**
+**Score: 19 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -63,7 +63,6 @@ Getlägg skiljer sig från lammlägg i att get i allmänhet slaktas vid äldre �
 | Temperature data: safe temp (75°C) | ✓ |
 | Temperature data: culinary preferred (88–93°C) | ✓ |
 | Per-method temperature data | ✓ (both leaves) |
-| Inflated score (this branch) | −15 |
 
 **Deduction**: −1 (Group A missing) = **19**
 

@@ -38,7 +38,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: -5
+quality_score: 10
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 3
@@ -67,7 +67,7 @@ Köttet är extremt magert och får inte tillagas bortom medium (63 °C) — ova
 - [Pan Sear](./ostrich_steak-pan_sear.md)
 ## Quality score
 
-**Score: -5 / 20**
+**Score: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -76,7 +76,6 @@ Köttet är extremt magert och får inte tillagas bortom medium (63 °C) — ova
 | Culinary Group A covered | − missing (−1) |
 | Culinary Group D covered | − missing (−1) |
 | Culinary Groups B, C | ✓ |
-| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods · −1 Group A · −1 Group D = −10 → 20−10 = **10**
 

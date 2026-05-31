@@ -23,7 +23,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: -6
+quality_score: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -56,7 +56,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 - [Smoker](./baby_back_ribs-smoker.md)
 ## Quality score
 
-**Score: -6 / 20**
+**Score: 9 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -64,7 +64,6 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group C tradition | −1 |
 | Method file `baby_back_ribs-air_fryer.md` copies parent cut profile | −1 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

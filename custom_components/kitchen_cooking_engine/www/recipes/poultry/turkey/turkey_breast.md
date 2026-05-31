@@ -22,7 +22,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: -7
+quality_score: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -45,7 +45,7 @@ Kalkonbröst kan köpas med ben (halvbröst på revbensstål, 1,5–2,5 kg) elle
 - [Oven Roast](./turkey_breast-oven_roast.md)
 ## Quality score
 
-**Score: -7 / 20**
+**Score: 8 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -54,7 +54,6 @@ Kalkonbröst kan köpas med ben (halvbröst på revbensstål, 1,5–2,5 kg) elle
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group D tradition | −1 |
 | Method file `turkey_breast-oven_roast.md` copies parent cut profile | −1 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

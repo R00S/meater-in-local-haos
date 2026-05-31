@@ -47,7 +47,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 2
+quality_score: 17
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 5
@@ -81,7 +81,7 @@ Sear i smör eller klarat smör vid hög värme — 3–4 minuter per sida — s
 
 ## Quality score
 
-**Score: 2 / 20**
+**Score: 17 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -92,7 +92,6 @@ Sear i smör eller klarat smör vid hög värme — 3–4 minuter per sida — s
 | Culinary Group C tradition covered | − missing |
 | pan_sear leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
 | charcoal_grill leaf | − pending (method in list; leaf not yet created) |
-| Inflated score (this branch) | −15 |
 
 **Deduction**: −1 (Group A) −1 (Group C) −1 (charcoal_grill leaf missing, counted as per previous assessment) = **17**
 

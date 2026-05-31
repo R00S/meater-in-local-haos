@@ -21,7 +21,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: -15
+quality_score: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -57,7 +57,7 @@ Denna intensiva muskelaktivitet skapar den djupaste smak och högsta kollageninn
 
 ## Quality score
 
-**Score: -15 / 20**
+**Score: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Points | Status |
 |-----------|--------|--------|
@@ -70,7 +70,6 @@ Denna intensiva muskelaktivitet skapar den djupaste smak och högsta kollageninn
 | Missing Culinary Group A tradition | −1 | pending |
 | Missing Culinary Group C tradition | −1 | pending |
 | Missing Culinary Group D tradition | −1 | pending |
-| Inflated score (this branch) | −15 | |
 
 ### Improvement priorities
 

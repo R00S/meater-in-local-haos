@@ -38,7 +38,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: -6
+quality_score: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 5
@@ -69,7 +69,7 @@ Kanin är mager, fettfattig och benägen att torka ut om överkokad — braiseri
 - [Oven Roast](./rabbit_legs-oven_roast.md)
 ## Quality score
 
-**Score: -6 / 20**
+**Score: 9 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -77,7 +77,6 @@ Kanin är mager, fettfattig och benägen att torka ut om överkokad — braiseri
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group C tradition | −1 |
 | Method file `rabbit_legs-braise.md` copies parent cut profile | −1 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

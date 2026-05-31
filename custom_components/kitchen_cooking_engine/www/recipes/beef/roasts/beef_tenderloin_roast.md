@@ -45,7 +45,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: -5
+quality_score: 10
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -68,14 +68,13 @@ Nötfilé (*psoas major*) löper längs ryggradens insida och utför minimalt ar
 - [Oven Roast](./beef_tenderloin_roast-oven_roast.md)
 ## Quality score
 
-**Score: -5 / 20**
+**Score: 10 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group D tradition | −1 |
 | Method file `beef_tenderloin_roast-oven_roast.md` copies parent cut profile | −1 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

@@ -23,7 +23,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: -7
+quality_score: 8
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -59,7 +59,7 @@ Koreanska revbensspjällstillagningar (galbi-jjim för brässering, galbi för g
 
 ## Quality score
 
-**Score: -7 / 20**
+**Score: 8 / 20** — assessed 2026-04-27
 
 | Criterion | Points | Status |
 |-----------|--------|--------|
@@ -71,7 +71,6 @@ Koreanska revbensspjällstillagningar (galbi-jjim för brässering, galbi för g
 | Oven roast not yet researched | −0 | pending |
 | Slow cooker not yet researched | −0 | pending |
 | Smoker not yet researched | −0 | pending |
-| Inflated score (this branch) | −15 | |
 
 ### Improvement priorities
 

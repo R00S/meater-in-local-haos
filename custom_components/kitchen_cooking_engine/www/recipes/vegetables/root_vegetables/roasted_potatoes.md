@@ -18,7 +18,7 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
-quality_score: -5
+quality_score: 10
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 0
@@ -42,7 +42,7 @@ Rostning av potatis (*Solanum tuberosum*) omvandlar rå stärkelse till en krisp
 - [Oven Roast](./roasted_potatoes-oven_roast.md)
 ## Quality score
 
-**Score: -5 / 20**
+**Score: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -53,7 +53,6 @@ Rostning av potatis (*Solanum tuberosum*) omvandlar rå stärkelse till en krisp
 | Culinary Group C covered | − missing (−1) |
 | Culinary Group D covered | − missing (−1) |
 | Groups A, B | ✓ |
-| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods · −1 Group C · −1 Group D = −10 → **10**
 

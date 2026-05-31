@@ -40,7 +40,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 4
+quality_score: 19
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 3
@@ -69,7 +69,7 @@ Fiberstrukturen innebär att skirt steak alltid måste skäras tvärs mot fibern
 
 ## Quality score
 
-**Score: 4 / 20**
+**Score: 19 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -85,7 +85,6 @@ Fiberstrukturen innebär att skirt steak alltid måste skäras tvärs mot fibern
 | Per-method temperature data | ✓ |
 | pan_fry leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
 | pan_sear leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
-| Inflated score (this branch) | −15 |
 
 **Deduction**: −1 (Group D missing) = **19**
 

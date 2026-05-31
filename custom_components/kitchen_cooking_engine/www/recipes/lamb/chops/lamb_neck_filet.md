@@ -47,7 +47,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: -6
+quality_score: 9
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -74,7 +74,7 @@ Kokar långsamt till mörhet (85–90 °C) via bräsering eller slow cooker; pan
 
 ## Quality score
 
-**Score: -6 / 20**
+**Score: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -84,7 +84,6 @@ Kokar långsamt till mörhet (85–90 °C) via bräsering eller slow cooker; pan
 | Braise leaf incomplete (1 of 4–6 sources) | −2 |
 | Pan sear and slow cooker leaves not yet populated | −4 |
 | No per-method temperature consensus (analysis gate not met) | −2 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

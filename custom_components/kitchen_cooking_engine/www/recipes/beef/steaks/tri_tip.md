@@ -58,7 +58,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: -6
+quality_score: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -92,7 +92,7 @@ Rödek är det traditionella Santa Maria-trädet; hickory och mesquite är alter
 - [Sous Vide](./tri_tip-sous_vide.md)
 ## Quality score
 
-**Score: -6 / 20**
+**Score: 9 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -100,7 +100,6 @@ Rödek är det traditionella Santa Maria-trädet; hickory och mesquite är alter
 | Missing Culinary Group A tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | Method file `tri_tip-charcoal_grill.md` copies parent cut profile | −1 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

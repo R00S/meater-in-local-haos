@@ -31,7 +31,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: -6
+quality_score: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 0
@@ -59,7 +59,7 @@ Köttet är mycket magert (under 1% fett), vitt genomgående, och mer delikat ä
 - [Pan Fry](./haddock-pan_fry.md)
 ## Quality score
 
-**Score: -6 / 20**
+**Score: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -69,7 +69,6 @@ Köttet är mycket magert (under 1% fett), vitt genomgående, och mer delikat ä
 | 2 missing leaves (air_fryer, oven_roast) | − missing (−2) |
 | Culinary Group A covered | − missing (−1) |
 | Groups B, C, D | ✓ |
-| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods · −2 missing leaves · −1 Group A = −11 → **9**
 

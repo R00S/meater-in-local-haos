@@ -31,7 +31,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 1
+quality_score: 16
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 0
@@ -62,7 +62,7 @@ Svansmuskeln är fast, vit till blekrosa, söt och delikat salt — rikare på n
 
 ## Quality score
 
-**Score: 1 / 20**
+**Score: 16 / 20** — assessed 2026-04-29
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -70,7 +70,6 @@ Svansmuskeln är fast, vit till blekrosa, söt och delikat salt — rikare på n
 | Missing Culinary Group C tradition | −1 |
 | Method leaf `langoustine-oven_roast.md` not yet built | −1 |
 | Method leaf `langoustine-boil.md` not yet built | −1 |
-| Inflated score (this branch) | −15 |
 
 **Note on Groups A and C:** Langoustines (*Nephrops norvegicus*) are not indigenous to the waters of East/Southeast/South Asia or the Arabic/African/Middle Eastern world. No traditional recipes for this species were found on verified sources for those regions after systematic search (April 2026). The deduction is recorded for transparency, but the gap reflects genuine culinary geography rather than incomplete research.
 

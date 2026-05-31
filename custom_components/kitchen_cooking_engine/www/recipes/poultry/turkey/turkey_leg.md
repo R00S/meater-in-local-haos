@@ -31,7 +31,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: -5
+quality_score: 10
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -70,7 +70,7 @@ Kalkonstjälken (trumpinnen) är det nedre segmentet av fågelns bakre extremite
 
 ## Quality score
 
-**Score: -5 / 20**
+**Score: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -79,7 +79,6 @@ Kalkonstjälken (trumpinnen) är det nedre segmentet av fågelns bakre extremite
 | smoker leaf: not yet created | ⬜ pending |
 | Cut profile complete | ✅ done |
 | Cooking methods not fully researched | ⬜ pending (smoker) |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

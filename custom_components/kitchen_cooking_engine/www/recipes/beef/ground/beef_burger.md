@@ -24,7 +24,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: -6
+quality_score: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 2
@@ -49,7 +49,7 @@ Köttburgare är formade biffar av malet nötkött, vanligast från en blandning
 - [Pan Fry](./beef_burger-pan_fry.md)
 ## Quality score
 
-**Score: -6 / 20**
+**Score: 9 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -57,7 +57,6 @@ Köttburgare är formade biffar av malet nötkött, vanligast från en blandning
 | Missing method leaf file `beef_burger-charcoal_grill.md` | −1 |
 | Missing Culinary Group D tradition | −1 |
 | Method file `beef_burger-grill.md` copies parent cut profile | −1 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

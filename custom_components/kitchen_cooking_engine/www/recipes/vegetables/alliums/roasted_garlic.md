@@ -26,7 +26,7 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
-quality_score: -6
+quality_score: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 5
@@ -49,7 +49,7 @@ Hela vitlökshuvuden (*Allium sativum*) ugnsrostade transformeras fullständigt:
 - [Oven Roast](./roasted_garlic-oven_roast.md)
 ## Quality score
 
-**Score: -6 / 20**
+**Score: 9 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -57,7 +57,6 @@ Hela vitlökshuvuden (*Allium sativum*) ugnsrostade transformeras fullständigt:
 | Missing Culinary Group D tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | Method file `roasted_garlic-oven_roast.md` copies parent cut profile | −1 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

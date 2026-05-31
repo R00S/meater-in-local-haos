@@ -29,7 +29,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: -6
+quality_score: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 0
@@ -52,7 +52,7 @@ Kammusslor (*Pecten maximus* i Europa; *Placopecten magellanicus*, Atlantisk kam
 - [Pan Sear](./scallops-pan_sear.md)
 ## Quality score
 
-**Score: -6 / 20**
+**Score: 9 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -60,7 +60,6 @@ Kammusslor (*Pecten maximus* i Europa; *Placopecten magellanicus*, Atlantisk kam
 | Missing Culinary Group C tradition | −1 |
 | Missing Culinary Group D tradition | −1 |
 | Method file `scallops-pan_sear.md` copies parent cut profile | −1 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

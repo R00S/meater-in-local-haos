@@ -31,7 +31,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: -7
+quality_score: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -58,7 +58,7 @@ Gåslår (*gåslår*, svenska; *Gänseschenkel*, tyska; *cuisse d'oie*, franska)
 - [Oven Roast](./goose_thigh-oven_roast.md)
 ## Quality score
 
-**Score: -7 / 20**
+**Score: 8 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -67,7 +67,6 @@ Gåslår (*gåslår*, svenska; *Gänseschenkel*, tyska; *cuisse d'oie*, franska)
 | Method file `goose_thigh-braise.md` copies parent cut profile | −1 |
 | Method file `goose_thigh-oven_roast.md` copies parent cut profile | −1 |
 | Method file `goose_thigh-braise.md` copies `goose_thigh-oven_roast.md` | −1 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

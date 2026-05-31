@@ -38,7 +38,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: -5
+quality_score: 10
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -64,7 +64,7 @@ Denna magerhet kräver mycket korta tillagningstider vid hög värme — 2–3 m
 
 ## Quality score
 
-**Score: -5 / 20**
+**Score: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -73,7 +73,6 @@ Denna magerhet kräver mycket korta tillagningstider vid hög värme — 2–3 m
 | Pan sear leaf incomplete (2 of 4–6 sources) | −2 |
 | Grill leaf not yet a full research file | −3 |
 | No per-method temperature consensus (analysis gate not met for pan_sear) | −3 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

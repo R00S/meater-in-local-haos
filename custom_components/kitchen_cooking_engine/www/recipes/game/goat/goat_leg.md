@@ -47,7 +47,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: -7
+quality_score: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 15
@@ -74,7 +74,7 @@ De flesta kulinariska traditioner föredrar getbenet tillagat till 75–82 °C d
 - [Oven Roast](./goat_leg-oven_roast.md)
 ## Quality score
 
-**Score: -7 / 20**
+**Score: 8 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -85,7 +85,6 @@ De flesta kulinariska traditioner föredrar getbenet tillagat till 75–82 °C d
 | Culinary Group A covered | − missing (−1) |
 | Culinary Group D covered | − missing (−1) |
 | Culinary Groups B, C | ✓ |
-| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods · −1 missing braise · −1 missing slow_cooker · −1 Group A · −1 Group D = −12 → 20−12 = **8**
 

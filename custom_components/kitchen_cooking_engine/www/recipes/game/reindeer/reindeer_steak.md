@@ -46,7 +46,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: -6
+quality_score: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -72,7 +72,7 @@ Pannstekning är den vanligaste metoden i det skandinaviska hemmaköket: smör, 
 - [Pan Sear](./reindeer_steak-pan_sear.md)
 ## Quality score
 
-**Score: -6 / 20**
+**Score: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -83,7 +83,6 @@ Pannstekning är den vanligaste metoden i det skandinaviska hemmaköket: smör, 
 | Culinary Group B covered | − missing (−1) |
 | Culinary Group C covered | − missing (−1) |
 | Culinary Group D | ✓ |
-| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods · −1 Group A · −1 Group B · −1 Group C = −11 → 20−11 = **9**
 

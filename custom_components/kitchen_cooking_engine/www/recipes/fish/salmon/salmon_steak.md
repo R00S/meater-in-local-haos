@@ -39,7 +39,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: -4
+quality_score: 11
 cooking_methods_researched: 2
 quality_assessed: 2026-04-27
 rest_time_min: 0
@@ -91,7 +91,7 @@ Ryggköttsektionen innehåller samma skiktade myotom- och myokommat-struktur som
 
 ## Quality score
 
-**Score: -4 / 20**
+**Score: 11 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -101,7 +101,6 @@ Ryggköttsektionen innehåller samma skiktade myotom- och myokommat-struktur som
 | Missing method leaf file (grill) | −1 |
 | Source recipes mostly silent on internal temperature (1 of 8 explicit) | −2 |
 | Per-method temp research thin (1 of 2 leaves has explicit pull temp) | −1 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

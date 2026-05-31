@@ -35,7 +35,7 @@ doneness:
   max_c: 95
   max_f: 203
   usda_safe: true
-quality_score: 4
+quality_score: 19
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 10
@@ -68,7 +68,7 @@ Denna fettrikedom gör det idealisk för långsam tillagning (sous vide, bräser
 
 ## Quality score
 
-**Score: 4 / 20**
+**Score: 19 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -79,7 +79,6 @@ Denna fettrikedom gör det idealisk för långsam tillagning (sous vide, bräser
 | Culinary Group C tradition covered | − missing (Middle Eastern, North African, or Caribbean pork belly is uncommon due to dietary restrictions; Group C coverage is a structural limitation for pork cuts) |
 | air_fryer leaf cut profile fixed (was copy of grill and parent) | ✓ (rewritten 2026-04-29) |
 | grill leaf cut profile | − mentions oven operations; needs rewriting (not a copy of parent, but wrongly describes oven steps in a grill leaf) |
-| Inflated score (this branch) | −15 |
 
 **Deduction**: −1 (Group C — structural limitation for pork) = **19**
 

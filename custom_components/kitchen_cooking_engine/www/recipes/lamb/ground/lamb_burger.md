@@ -21,7 +21,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: -6
+quality_score: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 2
@@ -46,7 +46,7 @@ Vid grillning eller pannstekning kräver USDA-standarden att malet lamm tillagas
 - [Grill](./lamb_burger-grill.md)
 ## Quality score
 
-**Score: -6 / 20**
+**Score: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -57,7 +57,6 @@ Vid grillning eller pannstekning kräver USDA-standarden att malet lamm tillagas
 | Culinary Group A covered | − missing (−1) |
 | Culinary Group D covered | − missing (−1) |
 | Groups B, C | ✓ |
-| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods · −1 missing leaf · −1 Group A · −1 Group D = −11 → **9**
 

@@ -21,7 +21,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: -5
+quality_score: 10
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 2
@@ -52,7 +52,7 @@ Grillning, pannstekning och ugnsrostning är de vanligaste metoderna. Alla kräv
 - [Pan Fry](./pork_sausage-pan_fry.md)
 ## Quality score
 
-**Score: -5 / 20**
+**Score: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -61,7 +61,6 @@ Grillning, pannstekning och ugnsrostning är de vanligaste metoderna. Alla kräv
 | Culinary Group A covered | − missing (−1) |
 | Culinary Group C covered | − missing (−1) |
 | Culinary Groups B, D | ✓ |
-| Inflated score (this branch) | −15 |
 
 **Deductions**: −8 methods · −1 Group A · −1 Group C = −10 → 20−10 = **10**
 

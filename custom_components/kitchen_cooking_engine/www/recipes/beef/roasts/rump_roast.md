@@ -47,7 +47,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: -4
+quality_score: 11
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -91,14 +91,13 @@ Rumpbiffstek skärs från primalen **rundbotten** — höftpartiet vid bakkvarte
 
 ## Quality score
 
-**Score: -4 / 20**
+**Score: 11 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |
 | Groups B, C, D covered in oven_roast leaf | −0 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

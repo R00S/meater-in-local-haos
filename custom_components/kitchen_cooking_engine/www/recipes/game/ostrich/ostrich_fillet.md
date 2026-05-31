@@ -39,7 +39,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: -7
+quality_score: 8
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -66,7 +66,7 @@ Köttet är djupt rött med litet fettinnehåll (under 2 %), högt järninnehål
 
 ## Quality score
 
-**Score: -7 / 20**
+**Score: 8 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -76,7 +76,6 @@ Köttet är djupt rött med litet fettinnehåll (under 2 %), högt järninnehål
 | Grill and pan_sear leaves have no complete sourced recipes | −4 |
 | Braise leaf incomplete (1 of 4–6 sources) | −2 |
 | No per-method temperature consensus (analysis gate not met) | −3 |
-| Inflated score (this branch) | −15 |
 
 ### Improvement priorities
 

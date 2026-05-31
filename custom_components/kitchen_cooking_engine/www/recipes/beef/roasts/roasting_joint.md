@@ -53,7 +53,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 4
+quality_score: 9
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 15
@@ -86,12 +86,11 @@ carryover_temp_c: 8
 
 ## Quality score
 
-**Score: 4 / 20**
+**Score: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
-| Inflated score (this branch) | −15 |
 
 ### Notes
 
