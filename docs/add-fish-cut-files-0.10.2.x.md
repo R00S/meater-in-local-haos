@@ -274,3 +274,25 @@ Research sources actually fetched and used included Köket.se, Chefkoch.de, ichk
 
 The primary task is to improve the 8 lowest-scoring cut files (all quality_score: 0 fish stubs — burbot, flounder, gilt_head_bream, grayling, monkfish, pike, plaice, pollock) by actively researching cooking methods used for each cut across culinary traditions, finding methods not yet listed, and creating fully sourced method leaf files. "This is not a race" means I will fetch every URL, verify the content before citing, not fill gaps with training-data memory, and accept that small incremental improvements are valid — stopping early because a cut is hard or has few sources would be wrong. After all 8 cuts have had their methods researched and at least some new leaf files created, I do CHORES.md.
 
+
+---
+
+## Session 9 continued (2026-05-31) — New method leaf files created
+
+Identified 5 new cooking methods for lowest-scoring fish cuts and created all leaf files:
+
+**cooking_data.py additions:**
+- Pike (id 435): added BRAISE
+- Flounder (id 436): added STEAM
+- Plaice (id 437): added STEAM
+- Pollock (id 446): added GRILL
+- Monkfish (id 447): added SOUS_VIDE
+
+**New leaf files created:**
+- `docs/recipe_research/fish/white_fish/pike-braise.md` — 4 recipes (DE/FR/SE/DE), pull 60°C, well_done
+- `docs/recipe_research/fish/white_fish/pollock-grill.md` — 4 recipes (GB/DE/SE/NO), pull 60°C, well_done
+- `docs/recipe_research/fish/white_fish/plaice-steam.md` — 4 recipes (CN/TH/VN/DE), pull 60°C, well_done
+- `docs/recipe_research/fish/white_fish/flounder-steam.md` — 4 recipes (CN/TH/VN/DE), pull 60°C, well_done
+- `docs/recipe_research/fish/white_fish/monkfish-sous_vide.md` — 3 recipes (UK/UK/USA), bath 45–54°C, medium (partial TOR conformance — no non-Western sous vide sources found)
+
+All leaf files written to the single real directory (docs/recipe_research/fish/white_fish/ = custom_components/.../www/recipes/fish/white_fish/ same inode). Parent stub files updated with new methods and research links. generate_frontend_data.py run: 624 recipe files, 186 cuts, PANEL_VERSION updated.
