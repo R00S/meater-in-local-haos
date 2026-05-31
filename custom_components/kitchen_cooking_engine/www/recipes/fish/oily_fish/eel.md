@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 15
+quality_score: 20
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -60,19 +60,17 @@ Eel (primarily European eel *Anguilla anguilla* and Japanese eel *Anguilla japon
 
 ## Quality score
 
-**Score: 14 / 20** — assessed 2026-05-31
+**Score: 20 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | — (done) |
-| Missing method leaf files (4 of 5 declared) | −4 |
-| Missing Culinary Group A tradition | −1 (eel kabayaki/unaju not covered) |
-| Missing Culinary Group C tradition | −1 |
+| Missing method leaf files | — (all 5 done) |
+| Missing Culinary Group A tradition | — (covered: kabayaki in eel-grill.md; Chinese wok-fried in eel-pan_fry.md; oven kabayaki in eel-oven_bake.md; Chinese 红烧 in eel-braise.md) |
+| Missing Culinary Group C tradition | — (covered: Turkish yılan balığı ızgara in eel-grill.md) |
 
 ### Improvement priorities
 
-1. **−4** · Missing method leaf files — create the following 4 files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `eel-grill.md`, `eel-pan_fry.md`, `eel-oven_bake.md`, `eel-braise.md`
-2. **−1** · Missing Culinary Group A tradition — add at least one Japanese or East Asian eel recipe (kabayaki, unaju, braised) across the method leaf files
-3. **−1** · Missing Culinary Group C tradition — add at least one Group C (African/Middle Eastern/Latin American) source recipe across the method leaf files
+None — all criteria met.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -34,7 +34,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 14
+quality_score: 18
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -62,19 +62,18 @@ Gös (*Sander lucioperca*; tyska: Zander; franska: sandre; finska: kuha) är en 
 
 ## Quality score
 
-**Score: 13 / 20** — assessed 2026-05-31
+**Score: 18 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | — (done) |
-| Missing method leaf files (5 of 6 declared) | −5 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
+| Missing method leaf files | — (all 6 done) |
+| Missing Culinary Group A tradition | −1 (pikeperch/zander absent from East Asian cuisines) |
+| Missing Culinary Group C tradition | −1 (pikeperch/zander absent from African/Middle Eastern/Latin American cuisines) |
 
 ### Improvement priorities
 
-1. **−5** · Missing method leaf files — create the following 5 files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `pikeperch-pan_sear.md`, `pikeperch-oven_bake.md`, `pikeperch-grill.md`, `pikeperch-smoker.md`, `pikeperch-sous_vide.md`
-2. **−1** · Missing Culinary Group A tradition — add at least one Group A (East Asian) source recipe across the method leaf files
-3. **−1** · Missing Culinary Group C tradition — add at least one Group C (African/Middle Eastern/Latin American) source recipe across the method leaf files
+1. **−1** · Missing Culinary Group A tradition — pikeperch is not a traditional ingredient in East Asian cuisines; deduction accepted as geographic reality
+2. **−1** · Missing Culinary Group C tradition — pikeperch is not a traditional ingredient in African, Middle Eastern, or Latin American cuisines; deduction accepted as geographic reality
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
