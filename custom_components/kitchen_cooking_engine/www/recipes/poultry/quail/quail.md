@@ -24,7 +24,7 @@ doneness:
   max_f: 176
   usda_safe: true
   recommended: true
-quality_score: -3
+quality_score: -15
 cooking_methods_researched: 0
 quality_assessed: 2026-05-31
 rest_time_min: 3
@@ -50,13 +50,8 @@ Vaktel — främst japansk vaktel (*Coturnix japonica*, huvudsaklig odlad art gl
 
 ## Quality score
 
-**Score: -3 / 20** — assessed 2026-05-31
+**Score: −15 / 20** — assessed 2026-05-31 (stub — cooking methods not yet researched)
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not researched | −8 |
 | Inflated score (this branch) | −15 |
-
-### Improvement priorities
-
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for quail across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1` when thorough
