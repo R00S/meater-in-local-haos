@@ -2878,6 +2878,65 @@ GROUND_POULTRY = [
 # FISH & SEAFOOD CATEGORY
 # ============================================================================
 
+OILY_FISH = [
+    MeatCut(
+        id=800,
+        name="herring",
+        name_long="Herring",
+        cut_order=1,
+        estimated_thickness_mm=15,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=2,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[FISH_MEDIUM, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.GRILL,
+            CookingMethod.OVEN_BAKE,
+        ],
+        recommended_doneness="well_done",
+    ),
+    MeatCut(
+        id=801,
+        name="baltic_herring",
+        name_long="Baltic Herring",
+        cut_order=2,
+        estimated_thickness_mm=12,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=2,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[FISH_MEDIUM, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.OVEN_BAKE,
+        ],
+        recommended_doneness="well_done",
+    ),
+    MeatCut(
+        id=802,
+        name="mackerel",
+        name_long="Mackerel",
+        cut_order=3,
+        estimated_thickness_mm=20,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=2,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[FISH_MEDIUM, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.GRILL,
+            CookingMethod.PAN_FRY,
+            CookingMethod.OVEN_BAKE,
+        ],
+        recommended_doneness="well_done",
+    ),
+]
+
 SALMON = [
     MeatCut(
         id=400,
@@ -5429,6 +5488,14 @@ MEAT_CATEGORIES = [
                 description="Shellfish and crustaceans",
                 cut_types=[
                     CutType(id=430, name="Shellfish", cuts=SHELLFISH),
+                ],
+            ),
+            Meat(
+                id=44,
+                name="oily_fish",
+                description="Oily fish varieties",
+                cut_types=[
+                    CutType(id=440, name="Oily Fish", cuts=OILY_FISH),
                 ],
             ),
         ],

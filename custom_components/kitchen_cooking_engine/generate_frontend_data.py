@@ -585,6 +585,7 @@ _MEAT_NAME_SV = {
     "white_fish":     "Vit fisk",
     "tuna":           "Tonfisk",
     "shellfish":      "Skaldjur",
+    "oily_fish":      "Fet fisk",
     "venison":        "Hjort",
     "reindeer":       "Ren",
     "moose":          "Älg",
@@ -624,6 +625,7 @@ _CUT_TYPE_NAME_SV = {
     "Whole":            "Hel",
     "Breast":           "Bröst",
     "Legs":             "Ben",
+    "Oily Fish":        "Fet fisk",
 }
 
 _DONENESS_ICONS = {
