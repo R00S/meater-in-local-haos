@@ -32,8 +32,8 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 0
-cooking_methods_researched: 0
+quality_score: 5
+cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 2
 rest_time_max: 5
@@ -58,4 +58,4 @@ Eel (primarily European eel *Anguilla anguilla* and Japanese eel *Anguilla japon
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-05-31 (stub — cooking methods not yet researched)
+**Score: 5 / 20** — assessed 2026-05-31 (1 cooking method leaf researched)

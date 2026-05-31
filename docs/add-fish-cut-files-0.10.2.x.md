@@ -141,3 +141,63 @@ Research focus: abu-röken (Swedish stovetop box smoker), wok smoking, tea smoki
 **generate_frontend_data.py:** Added "quail"→"Vaktel" in _MEAT_NAME_SV; "Quail"→"Vaktel" in _CUT_TYPE_NAME_SV.
 
 **Generator:** Ran clean. 186 cuts across 7 categories.
+
+## Session 5 (2026-05-31) — IMPROVE_CUT_FILES: 5 stubs improved with sourced method leaves
+
+Executed IMPROVE_CUT_FILES.md for 5 freshwater/oily fish stubs. Each leaf was written from real fetched sources and includes both an English `## Cut profile` section and a Swedish `## Styckesprofil` section. Four source recipes each, from diverse culinary traditions. Parent cut files updated to `quality_score: 5`, `cooking_methods_researched: 1`.
+
+**Leaf files created (docs/recipe_research/ + www/recipes/ mirrors):**
+
+- `fish/white_fish/arctic_char-pan_sear.md` — röding, pan sear
+  - Sources: Köket.se (SE), ichkoche.at (AT), Chefkoch.de (DE), Chef Simon (FR)
+  - Pull range 54–61°C; recommended_doneness: medium
+
+- `fish/white_fish/pikeperch-pan_fry.md` — gös/zander/sandre, pan fry
+  - Sources: Köket.se (SE), Chefkoch.de (DE), Kogebog.dk (DK), Chef Simon (FR)
+  - Pull range 59–61°C; recommended_doneness: well_done
+
+- `fish/white_fish/perch-pan_fry.md` — abborre/Barsch/perche, pan fry
+  - Sources: Köket.se (SE), Chefkoch.de (DE), Soppa365.fi (FI), Swissmilk (CH)
+  - Pull range 59–61°C; recommended_doneness: well_done
+
+- `fish/oily_fish/eel-smoker.md` — ål, hot smoker
+  - Sources: Alsterbro smokehouse (SE), Palingkopen.nl (NL), Chefkoch.de (DE), BestRecipes24 (RU)
+  - Pull range 64–65°C; recommended_doneness: well_done
+
+- `fish/white_fish/whitefish-oven_bake.md` — sik/siika/Felchen, oven bake
+  - Sources: Soppa365.fi (FI), Köket.se (SE), ichkoche.at (AT/CH), Lake Michigan Angler (US)
+  - Pull range 60–61°C; recommended_doneness: well_done
+
+## Session 5 (2026-05-31) — Session start
+
+### Output 1 — Culinary group definitions
+
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+### Output 2 — Analysis gate rule
+
+> Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
+
+### Output 3 — Source integrity rule
+
+> The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
+
+### Output 4 — Understanding
+
+This task is to improve five fish cut stubs by creating one real, sourced method leaf for each requested cut-method pair in `docs/recipe_research/`, with bilingual profiles and 4–6 complete saved recipes per leaf. “This is not a race” means I must verify every URL with `web_fetch`, avoid guessing missing details, and prefer honest incremental progress over unsupported completion claims. After this gate, I should research each leaf methodically, create the files from verified sources, update the parent cut scores, and validate that the repository changes are structurally correct.
+
+
+## Session 6 (2026-05-31) — Fish leaf research written
+
+Created five new method leaves in `docs/recipe_research/`:
+- `fish/white_fish/arctic_char-pan_sear.md`
+- `fish/white_fish/pikeperch-pan_fry.md`
+- `fish/white_fish/perch-pan_fry.md`
+- `fish/oily_fish/eel-smoker.md`
+- `fish/white_fish/whitefish-oven_bake.md`
+
+Research sources actually fetched and used included Köket.se, Chefkoch.de, ichkoche.at, Soppa365.fi, Swissmilk, Kogebog.dk, Palingkopen.nl, Alsterbro, BestRecipes24, Lake Michigan Angler, and Chef Simon. Parent cut stubs for arctic_char, pikeperch, perch, eel, and whitefish were updated from quality score 0 / researched 0 to quality score 5 / researched 1.

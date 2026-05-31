@@ -41,8 +41,8 @@ doneness:
   max_c: 68
   max_f: 154
   usda_safe: true
-quality_score: 0
-cooking_methods_researched: 0
+quality_score: 5
+cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
 rest_time_max: 3
@@ -68,4 +68,4 @@ Röding (*Salvelinus alpinus*; tyska: Saibling; franska: omble chevalier) är en
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-05-31 (stub — cooking methods not yet researched)
+**Score: 5 / 20** — assessed 2026-05-31 (1 cooking method leaf researched)
