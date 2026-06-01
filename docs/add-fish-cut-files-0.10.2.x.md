@@ -449,3 +449,36 @@ _(Session 11 ended at session-start gate; no new files were created.)_
 - `docs/USER_GUIDE.md` updated: version header, fish/poultry cut examples in §5.2, section 15 TOC/heading aligned.
 - Branch timeline updated (this entry).
 - `_openHelp` anchors in `panel-class-template.js` verified — all match current USER_GUIDE headings, no changes needed.
+
+---
+
+## Session 13 (2026-06-01) — IMPROVE_CUT_FILES for 1 cut file (no rescoring)
+
+## Session start
+
+### Output 1 — Culinary group definitions (verbatim from `RECIPE_COLLECTION_TOR.md`)
+
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Bengali, Ceylon, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+### Output 2 — Analysis gate rule (verbatim from `RECIPE_ANALYSIS_TOR.md`)
+
+> Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
+
+### Output 3 — Source integrity rule (verbatim from `SOURCE_SURVEY.md`)
+
+> The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
+
+### Output 4 — My understanding of this file
+
+This task is to improve cut files with real, verifiable recipe research by adding missing method leaf files and keeping each leaf tied to fetched sources. “This is not a race” means I should favor data quality and source integrity over speed, avoid guessing, and accept incremental improvements as valid progress. For this session I am doing one cut file only, and I will leave quality-score rescoring for the next agent. After this one-cut improvement is complete, CHORES.md is next.
+
+## Execution notes
+
+- Target cut: `fish/white_fish/haddock.md`.
+- Added one researched method leaf: `fish/white_fish/haddock-oven_roast.md` (4 fetched sources).
+- Updated parent cut method links to include oven-roast leaf.
+- Per user instruction, no quality-score rescoring was performed in this session.
