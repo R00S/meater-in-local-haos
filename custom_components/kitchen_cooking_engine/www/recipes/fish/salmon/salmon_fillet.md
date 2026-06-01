@@ -14,6 +14,7 @@ methods:
 - grill
 - oven_bake
 - pan_sear
+- smoker
 - sous_vide
 doneness:
 - name: medium_rare
@@ -41,9 +42,9 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 11
+quality_score: 12
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_assessed: 2026-05-31
 rest_time_min: 0
 rest_time_max: 2
 carryover_temp_c: 2
@@ -67,19 +68,27 @@ Atlantisk och stillahavslax skiljer sig åt i fettfördelning — odlad atlantla
 - [Grill](./salmon_fillet-grill.md)
 - [Oven Bake](./salmon_fillet-oven_bake.md)
 - [Pan Sear](./salmon_fillet-pan_sear.md)
+- [Smoker](./salmon_fillet-smoker.md)
 - [Sous Vide](./salmon_fillet-sous_vide.md)
 ## Quality score
 
-**Score: 11 / 20** — assessed 2026-04-26
+**Score: 12 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not researched | −8 |
-| Method file `salmon_fillet-pan_sear.md` copies parent cut profile | −1 |
+| Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
+| Missing method leaf files | — (all 6 present: air_fryer, grill, oven_bake, pan_sear, smoker, sous_vide) |
+| Partial leaf files | — (none; all 6 leaves have ≥ 5 sources each) |
+| Method leaf copies parent cut profile | — (pan_sear profile is method-specific: discusses crisping, conductive heat, carryover behaviour for salmon) |
+| Missing Culinary Group A tradition | — (covered: Tetsuya Wakuda JP in grill; Nobu Matsuhisa JP in pan_sear; Hetty McKinnon Asian in air_fryer) |
+| Missing Culinary Group B tradition | — (covered across all leaves) |
+| Missing Culinary Group C tradition | — (covered: Ottolenghi levant in grill and oven_bake; Paula Wolfert Moroccan in oven_bake; Marcus Samuelsson Ethiopian in air_fryer) |
+| Missing Culinary Group D tradition | — (covered: René Redzepi Nordic in grill; SE/FI sources in smoker) |
+
+Methods survey incomplete (`cooking_methods_researched: 0`) — the methods list may be missing traditions (e.g. cured/gravlax as a cold preparation, poached/court-bouillon, traditional Japanese teriyaki as a distinct method). Research required before setting `cooking_methods_researched: 1`.
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Method file `salmon_fillet-pan_sear.md` copies parent cut profile — rewrite `salmon_fillet-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−8** · Complete broad method-survey research for salmon fillet across culinary traditions; update the `methods:` list in the frontmatter; set `cooking_methods_researched: 1` only after thorough research.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -14,6 +14,7 @@ methods:
 - oven_bake
 - oven_roast
 - pan_fry
+- smoker
 doneness:
 - name: medium
   target_c: 54
@@ -32,9 +33,9 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 10
+quality_score: 11
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_assessed: 2026-05-31
 rest_time_min: 0
 rest_time_max: 2
 carryover_temp_c: 2
@@ -57,25 +58,27 @@ Pannstekning är en mycket vanlig beredning — den höga ledningsvärmen i pann
 - [Air Fryer](./cod_fillet-air_fryer.md)
 - [Oven Bake](./cod_fillet-oven_bake.md)
 - [Pan Fry](./cod_fillet-pan_fry.md)
+- [Smoker](./cod_fillet-smoker.md)
 ## Quality score
 
-**Score: 10 / 20** — assessed 2026-04-27
+**Score: 11 / 20** — assessed 2026-05-31
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Missing method leaf file `cod_fillet-oven_roast.md` | − pending (−1) |
-| Missing Culinary Group D tradition | − pending (−1) |
-| Method file `cod_fillet-air_fryer.md` copies parent cut profile | ✓ fixed 2026-04-27 |
-| Method file `cod_fillet-oven_bake.md` copies parent cut profile | ✓ fixed 2026-04-27 |
-| Method file `cod_fillet-pan_fry.md` copies parent cut profile | ✓ fixed 2026-04-27 |
-| Method file `cod_fillet-air_fryer.md` copies `cod_fillet-oven_bake.md` | ✓ fixed 2026-04-27 |
-| Method file `cod_fillet-air_fryer.md` copies `cod_fillet-pan_fry.md` | ✓ fixed 2026-04-27 |
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
+| Missing method leaf file `cod_fillet-oven_roast.md` | −1 |
+| Partial leaf files | — (none; all 4 present leaves have ≥ 4 sources: oven_bake ×5, pan_fry ×5, smoker ×4, air_fryer ×5) |
+| Method leaf copies parent cut profile | — (all previously identified copies have been fixed) |
+| Missing Culinary Group A tradition | — (covered: Tetsuya Wakuda JP pan_fry with yuzu butter) |
+| Missing Culinary Group B tradition | — (covered across all leaves) |
+| Missing Culinary Group C tradition | — (covered: Ottolenghi tahini/sumac in oven_bake; Samuelsson berbere in air_fryer) |
+| Missing Culinary Group D tradition | — (covered: Swedish ABU-röken tradition in smoker leaf) |
+
+Methods survey incomplete — `cooking_methods_researched: 0` means the declared methods list may be incomplete. Research may find additional methods used for cod fillet across culinary traditions.
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Missing method leaf file — create `cod_fillet-oven_roast.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
-3. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−8** · Complete broad method-survey research for cod fillet; update `cooking_methods_researched` to `1` only when thorough.
+2. **−1** · Missing method leaf file — create `cod_fillet-oven_roast.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from verified sources.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

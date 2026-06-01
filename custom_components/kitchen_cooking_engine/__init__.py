@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.10.1.5 - feat(android): add in-app/system cook alerts with sound/vibrate plus acknowledgement gates for cook→rest and rest→done, with ambient+inner-temp fallback auto-transitions
+Last Updated: 01 Jun 2026, 12:25 UTC
+Last Change: v0.10.2.2 - fix(recipes): honest from-scratch rescoring of 23 fish/poultry cut files — remove blanket −15 rows
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -176,11 +176,11 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 
 # ⚠️ VERSION — must match in ALL 3 locations on every release:
 #   1. manifest.json        → "version": "..."
-#   2. HERE (__init__.py)    → __version__ = "0.10.1.5"
+#   2. HERE (__init__.py)    → __version__ = "0.10.2.2"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.10.1.5"
+__version__ = "0.10.2.2"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

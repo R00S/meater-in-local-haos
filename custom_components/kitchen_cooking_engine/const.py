@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 06 May 2026, 22:43 UTC
-Last Change: v0.10.1.5 - feat(android): add in-app/system cook alerts with sound/vibrate plus acknowledgement gates for cook→rest and rest→done, with ambient+inner-temp fallback auto-transitions
+Last Updated: 01 Jun 2026, 12:25 UTC
+Last Change: v0.10.2.2 - fix(recipes): honest from-scratch rescoring of 23 fish/poultry cut files — remove blanket −15 rows
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "616"
+PANEL_VERSION = "630"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

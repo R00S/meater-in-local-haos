@@ -57,6 +57,7 @@ Köttet är mycket magert (under 1% fett), vitt genomgående, och mer delikat ä
 ## Research files by cooking method
 
 - [Pan Fry](./haddock-pan_fry.md)
+- [Oven Roast](./haddock-oven_roast.md)
 ## Quality score
 
 **Score: 9 / 20** — assessed 2026-04-27
