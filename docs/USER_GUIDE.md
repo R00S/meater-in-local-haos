@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.2.1 · Home Assistant 2024.1.0+
+> **Version:** 0.10.2.2 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -71,7 +71,7 @@
 12. [Language and Measurement Settings](#12-language-and-measurement-settings)
 13. [Developer Services Reference](#13-developer-services-reference)
 14. [Troubleshooting](#14-troubleshooting)
-15. [Standalone Android App (Preview)](#15-standalone-android-app-preview)
+15. [Standalone Android App (Alpha)](#15-standalone-android-app-alpha)
 
 ---
 
@@ -264,8 +264,8 @@ The setup form has five steps:
 |----------|---------|
 | Beef | Steak, roast, brisket |
 | Pork | Chop, tenderloin, shoulder |
-| Poultry | Chicken, turkey, duck |
-| Fish | Salmon, tuna, white fish, oily fish (herring, Baltic herring, mackerel), shellfish (langoustine, scallops, shrimp) |
+| Poultry | Chicken, turkey, duck, quail |
+| Fish | Salmon, tuna, white fish (cod, haddock, perch, pike, pikeperch, arctic char, whitefish, flounder, plaice, pollock, turbot, sole, redfish, monkfish, gilt head bream, and more), oily fish (herring, Baltic herring, mackerel, eel), shellfish (langoustine, scallops, shrimp) |
 | Lamb | Rack, leg, shoulder |
 | Game | Venison, wild boar, bison |
 | Vegetables | Root veg, green veg, alliums |
@@ -1399,7 +1399,7 @@ Ensure the **Measurement System** setting matches your recipe source. US recipes
 °F; Swedish recipes use dl and °C. Changing the system converts all displayed amounts in real time.
 
 
-## 15. Standalone Android App (v0.10.1.5 — Alpha)
+## 15. Standalone Android App (Alpha)
 
 The `android/` directory contains the standalone MEATER Kitchen APK project
 described in `docs/ANDROID_APP_TOR.md`.

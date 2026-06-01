@@ -423,3 +423,29 @@ All at quality_score: 0:
 | flounder | 1 | flounder-steam.md (4 sources, Groups A+B) |
 | sole | 1 | sole-pan_fry.md (4 sources, Group B only) |
 | gilt_head_bream | 1 | gilt_head_bream-steam.md (4 sources, Groups A+B) |
+
+_(Session 11 ended at session-start gate; no new files were created.)_
+
+---
+
+## Session 12 (2026-05-31) — Honest rescoring of 23 cut files
+
+**Problem discovered:** 5 stub files had blanket `−15` score-deduction rows inserted by an earlier agent session ("Fix scoring for 5 stub files"). A subsequent revert removed those rows, but 23 cut files still contained inaccurate scoring rows inherited from that pattern or had quality_score values that did not reflect the honest state of the file.
+
+**Actions:**
+- Reviewed all 23 affected cut files from scratch against the IMPROVE_CUT_FILES scoring rubric.
+- Removed blanket `−15` deduction rows where they were dishonest (stub files with no leaf research do not earn negative rows; they just earn 0 for absent items).
+- Corrected `quality_score` values in each file to match what the file actually contains (not an aspirational or deducted score).
+- Re-ran `generate_frontend_data.py` → PANEL_VERSION 628 → 629.
+
+**Files updated (23 total):**
+- `fish/oily_fish/baltic_herring.md`, `eel.md`, `herring.md`, `mackerel.md`
+- `fish/salmon/salmon_fillet.md`
+- `fish/white_fish/arctic_char.md`, `burbot.md`, `cod_fillet.md`, `flounder.md`, `gilt_head_bream.md`, `grayling.md`, `monkfish.md`, `perch.md`, `pike.md`, `pikeperch.md`, `plaice.md`, `pollock.md`, `redfish.md`, `sole.md`, `trout.md`, `turbot.md`, `whitefish.md`
+- `poultry/quail/quail.md`
+
+**CHORES.md (this session):**
+- Version bumped to `0.10.2.2` in `manifest.json`, `__init__.py`, `const.py`.
+- `docs/USER_GUIDE.md` updated: version header, fish/poultry cut examples in §5.2, section 15 TOC/heading aligned.
+- Branch timeline updated (this entry).
+- `_openHelp` anchors in `panel-class-template.js` verified — all match current USER_GUIDE headings, no changes needed.

@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 31 May 2026, 06:16 UTC
-Last Change: v0.10.2.1 - feat(recipes): add white fish cooking method leaf files (gilt_head_bream steam, sole pan_fry, redfish pan_fry) + update 8 parent cut files cooking_methods_researched
+Last Updated: 01 Jun 2026, 12:25 UTC
+Last Change: v0.10.2.2 - fix(recipes): honest from-scratch rescoring of 23 fish/poultry cut files — remove blanket −15 rows
 """
 
 DOMAIN = "kitchen_cooking_engine"
