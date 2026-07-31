@@ -19,7 +19,7 @@ from typing import Any
 from homeassistant.core import HomeAssistant
 from homeassistant.util import dt as dt_util
 
-from .const import DOMAIN
+from .const import DEFAULT_LANGUAGE, DOMAIN, SUPPORTED_LANGUAGES
 from .measurements import DEFAULT_MEASUREMENT_SYSTEM, MEASUREMENT_SYSTEMS
 
 _LOGGER = logging.getLogger(__name__)
@@ -272,16 +272,18 @@ async def async_get_cut_preference(
 
 # Language & measurement preferences
 
-DEFAULT_LANGUAGE = "en"
 
 async def async_get_language(hass: HomeAssistant) -> str:
-    """Get the user's selected UI language (e.g. 'sv', 'en')."""
+    """Get the user's selected UI language."""
     preferences = await async_load_user_preferences(hass)
-    return preferences.get("language", DEFAULT_LANGUAGE)
+    language = preferences.get("language", DEFAULT_LANGUAGE)
+    return language if language in SUPPORTED_LANGUAGES else DEFAULT_LANGUAGE
 
 
 async def async_set_language(hass: HomeAssistant, language: str) -> bool:
     """Set the user's selected UI language."""
+    if language not in SUPPORTED_LANGUAGES:
+        return False
     preferences = await async_load_user_preferences(hass)
     preferences["language"] = language
     return await async_save_user_preferences(hass, preferences)

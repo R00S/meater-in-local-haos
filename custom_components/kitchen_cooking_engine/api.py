@@ -16,6 +16,7 @@ from aiohttp import web
 from homeassistant.components.http import HomeAssistantView
 from homeassistant.core import HomeAssistant
 
+from .const import DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES
 from .measurements import DEFAULT_MEASUREMENT_SYSTEM, MEASUREMENT_SYSTEMS
 from .storage import (
     async_load_cook_history,
@@ -311,8 +312,8 @@ class LanguagePreferenceView(HomeAssistantView):
         hass = request.app["hass"]
         try:
             data = await request.json()
-            language = data.get("language", "en")
-            if language not in ("sv", "en"):
+            language = data.get("language", DEFAULT_LANGUAGE)
+            if language not in SUPPORTED_LANGUAGES:
                 return self.json({"status": "error", "message": f"Unsupported language: {language}"})
             success = await async_set_language(hass, language)
             if success:

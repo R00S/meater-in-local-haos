@@ -3,6 +3,8 @@
     "language": "sv",
     "language_name": "Svenska",
     "flag": "🇸🇪",
+    "locale": "sv-SE",
+    "order": 20,
     "version": "1.0.0"
   },
   "common": {
@@ -37,7 +39,8 @@
     "more": "fler",
     "target": "Mål",
     "na": "N/A",
-    "unknown": "Okänd"
+    "unknown": "Okänd",
+    "open_user_guide": "Öppna användarguiden"
   },
   "nav": {
     "back": "← Tillbaka",
@@ -57,7 +60,7 @@
     "select_appliance": "Välj en köksapparat för att börja",
     "ongoing_cooks": "Pågående tillagningar",
     "no_appliances": "Inga apparater konfigurerade ännu. Lägg till en i Inställningar → Enheter & Tjänster.",
-    "language_label": "🌐 Språk / Language",
+    "language_label": "🌐 Språk / Language / Sprog",
     "data_source_label": "🌍 Temperaturdata",
     "measurement_system_label": "📏 Måttsystem",
     "previous_cooks_description": "Visa och hantera dina tillagade och sparade recept",
@@ -322,6 +325,15 @@
     "finish_cook": "✅ Slutför tillagning",
     "next_step": "Nästa steg ➡️",
     "prev_step": "⬅️ Föregående",
+    "exit_cook": "Avsluta tillagningen",
+    "previous_step_title": "Föregående steg",
+    "home_title": "Gå till startsidan (tillagningen fortsätter)",
+    "save_cook": "Spara tillagning",
+    "start_cooking": "Starta tillagning",
+    "finish": "Slutför",
+    "next_step_title": "Nästa steg",
+    "serves": "Portioner",
+    "elapsed": "Förfluten tid",
     "no_instructions": "Inga instruktioner tillgängliga.",
     "start_meater_btn": "🌡️ Starta MEATER-sond",
     "meater_detach_hint": "Koppla loss sonden från receptet (sondsessionen fortsätter)"
@@ -381,16 +393,23 @@
     "no_saved_visible": "Inga poster matchar nuvarande filter."
   },
   "measurements": {
+    "tsp": "tsp",
+    "tbsp": "tbsp",
+    "cup": "cup",
     "ml": "ml",
     "cl": "cl",
     "dl": "dl",
     "l": "l",
     "g": "g",
     "kg": "kg",
+    "oz": "oz",
+    "lb": "lb",
     "temp_c": "°C",
+    "temp_f": "°F",
     "krm": "krm",
     "tsk": "tsk",
     "msk": "msk",
+    "spsk": "spsk",
     "hg": "hg"
   },
   "cooking_methods": {

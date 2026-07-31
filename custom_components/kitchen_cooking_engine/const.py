@@ -1,10 +1,13 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 31 Jul 2026
-Last Change: v0.10.2.3 - feat: add Danish recipe measurements
+Last Change: v0.10.2.4 - feat: add Danish panel and AI language
 """
 
 DOMAIN = "kitchen_cooking_engine"
+
+DEFAULT_LANGUAGE = "en"
+SUPPORTED_LANGUAGES = ("en", "sv", "da")
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
@@ -14,7 +17,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "631"
+PANEL_VERSION = "633"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

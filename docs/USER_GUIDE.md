@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.2.3 · Home Assistant 2024.1.0+
+> **Version:** 0.10.2.4 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -236,7 +236,7 @@ At the bottom of the welcome screen are three persistent settings cards:
 
 | Card | What it controls |
 |------|-----------------|
-| **🌐 Language** | Switch between English and Swedish. Changes take effect immediately. |
+| **🌐 Language** | Switch between English, Swedish, and Danish. Changes take effect immediately. |
 | **🌍 Temperature Data Source** | International (USDA) or Swedish (Livsmedelsverket / Stekguiden.se). |
 | **📏 Measurement System** | US (cups, °F), UK (ml, dl, g, °C), Swedish (krm, tsk, msk, dl, °C), or Danish (ml, tsk, spsk, dl, °C). |
 
@@ -1217,8 +1217,10 @@ All settings are on the welcome screen in the bottom settings cards.
 |--------|-------------|
 | 🇬🇧 English | All UI text in English |
 | 🇸🇪 Svenska | All UI text in Swedish |
+| 🇩🇰 Dansk | Panel UI and AI-generated recipe text in Danish |
 
-Language changes apply immediately without a page reload.
+Language changes apply immediately without a page reload. Danish uses the international
+temperature-data tree unless you explicitly select the Swedish source.
 
 **Temperature Data Source**
 

@@ -291,8 +291,8 @@ class KitchenCookingPanel extends LitElement {
     this._showFeatureNotesEditor = false; // Show feature notes editor in appliance path
     this._meaterCookRatingState = null; // MEATER cook rating state (Issue #65)
     // Phase 7: Language & Measurement system (independent selections)
-    this._language = 'en';               // UI language: 'sv' or 'en'
-    this._measurementSystem = 'se';      // Measurement: 'se', 'uk', or 'us'
+    this._language = 'en';               // UI language: 'en', 'sv', or 'da'
+    this._measurementSystem = 'se';      // Measurement: 'se', 'dk', 'uk', or 'us'
     this._hideOtherDataSource = false;   // Hide inactive data source button
     // Phase 8: Ingredient levels, shelf management, cooking modes
     this._shelfEnabled = false;
@@ -500,6 +500,51 @@ class KitchenCookingPanel extends LitElement {
     return key; // last resort: return the key
   }
 
+  _availableLanguages() {
+    if (typeof I18N_STRINGS === 'undefined') return [];
+    return Object.values(I18N_STRINGS)
+      .filter(strings => strings?._meta?.language)
+      .map(strings => strings._meta)
+      .sort((a, b) => (a.order || 999) - (b.order || 999));
+  }
+
+  _isSupportedLanguage(language) {
+    return this._availableLanguages().some(meta => meta.language === language);
+  }
+
+  _languageMeta(language = this._language || 'en') {
+    if (typeof I18N_STRINGS === 'undefined') return {};
+    return I18N_STRINGS[language]?._meta || I18N_STRINGS.en?._meta || {};
+  }
+
+  _locale() {
+    return this._languageMeta().locale || 'en-GB';
+  }
+
+  _measurementLocale() {
+    if ((this._language || 'en') !== 'en') return this._locale();
+    if (this._measurementSystem === 'dk') return 'da-DK';
+    if (this._measurementSystem === 'se') return 'sv-SE';
+    return this._locale();
+  }
+
+  _dataSourceForLanguage(language) {
+    const languageSources = {
+      en: DATA_SOURCE_INTERNATIONAL,
+      sv: DATA_SOURCE_SWEDISH,
+      da: DATA_SOURCE_INTERNATIONAL,
+    };
+    return languageSources[language] || DATA_SOURCE_INTERNATIONAL;
+  }
+
+  _localizedField(item, field, fallback = '', baseValue = undefined) {
+    if (!item) return fallback;
+    const localized = item[`${field}_${this._language || 'en'}`];
+    if (localized !== undefined && localized !== null && localized !== '') return localized;
+    const base = baseValue === undefined ? item[field] : baseValue;
+    return base !== undefined && base !== null && base !== '' ? base : fallback;
+  }
+
   /**
    * Convert a quantity+unit to the user's preferred measurement system.
    * E.g. _convertMeasure(500, 'ml') → "5 dl" (SE) or "2.1 cup" (US).
@@ -537,7 +582,7 @@ class KitchenCookingPanel extends LitElement {
             ? converted.toFixed(1).replace(/\.?0+$/, '')
             : String(Math.round(converted));
         const lang = this._language || 'en';
-        const abbr = targetUnit.symbol || (lang === 'sv' ? targetUnit.abbr_sv : targetUnit.abbr_en);
+        const abbr = targetUnit.symbol || targetUnit[`abbr_${lang}`] || targetUnit.abbr_en;
         const usesDecimalComma = ['sv', 'da'].includes(lang) || ['se', 'dk'].includes(sysId);
         const displayNum = usesDecimalComma ? numStr.replace('.', ',') : numStr;
         return `${displayNum} ${abbr}`;
@@ -659,10 +704,10 @@ class KitchenCookingPanel extends LitElement {
   async _loadLanguagePreference() {
     try {
       const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/preferences/language');
-      if (response && response.language) {
+      if (response?.language && this._isSupportedLanguage(response.language)) {
         this._language = response.language;
         if (this._hideOtherDataSource) {
-          this._dataSource = (response.language === 'sv') ? DATA_SOURCE_SWEDISH : DATA_SOURCE_INTERNATIONAL;
+          this._dataSource = this._dataSourceForLanguage(response.language);
         }
       }
     } catch (e) {
@@ -671,14 +716,21 @@ class KitchenCookingPanel extends LitElement {
   }
 
   async _saveLanguagePreference(lang) {
+    if (!this._isSupportedLanguage(lang)) return;
+    const previousLanguage = this._language;
+    const previousDataSource = this._dataSource;
     this._language = lang;
     if (this._hideOtherDataSource) {
-      this._dataSource = (lang === 'sv') ? DATA_SOURCE_SWEDISH : DATA_SOURCE_INTERNATIONAL;
+      this._dataSource = this._dataSourceForLanguage(lang);
     }
     try {
-      await this.hass.callApi('POST', 'kitchen_cooking_engine/preferences/language', { language: lang });
+      const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/preferences/language', { language: lang });
+      if (response?.status === 'error') throw new Error(response.message || 'Language preference was rejected');
     } catch (e) {
+      this._language = previousLanguage;
+      this._dataSource = previousDataSource;
       console.error('Could not save language preference:', e);
+      this.requestUpdate();
     }
   }
 
@@ -716,7 +768,7 @@ class KitchenCookingPanel extends LitElement {
   _toggleHideOtherDataSource() {
     this._hideOtherDataSource = !this._hideOtherDataSource;
     if (this._hideOtherDataSource) {
-      this._dataSource = (this._language === 'sv') ? DATA_SOURCE_SWEDISH : DATA_SOURCE_INTERNATIONAL;
+      this._dataSource = this._dataSourceForLanguage(this._language);
     }
     try {
       localStorage.setItem('kce_hide_other_data_source', String(this._hideOtherDataSource));
@@ -1044,12 +1096,16 @@ class KitchenCookingPanel extends LitElement {
     return RECIPE_INDEX;
   }
 
-  _getCutProfiles() {
+  _getCutProfiles(language = 'en') {
+    if (language === 'sv' && typeof CUT_PROFILES_SV !== 'undefined') return CUT_PROFILES_SV;
+    if (language === 'da' && typeof CUT_PROFILES_DA !== 'undefined') return CUT_PROFILES_DA;
     return CUT_PROFILES;
   }
 
-  _getCutProfilesSv() {
-    return CUT_PROFILES_SV;
+  _localizedProfile(profiles, key) {
+    if (!profiles || !key) return undefined;
+    const language = this._language || 'en';
+    return profiles[language === 'en' ? key : `${key}_${language}`] || profiles[key];
   }
 
   _getCutMethodProfiles() {
@@ -2108,7 +2164,7 @@ class KitchenCookingPanel extends LitElement {
           this.requestUpdate();
           
           // Show success message
-          this._showMessage(this._t('messages.cook_session_started_title'), `✅ ${this._t('messages.cook_session_started')}\n\n${this._t('recipe_cook.recipe_label')}: ${recipe.name}\n\n${this._t('messages.cook_session_started_detail')}`, false);
+          this._showMessage(this._t('messages.cook_session_started_title'), `✅ ${this._t('messages.cook_session_started')}\n\n${this._t('welcome.recipe_cook')}: ${recipe.name}\n\n${this._t('messages.cook_session_started_detail')}`, false);
           
           // Close Ninja Combi view to return to main panel which will show active cook
           this._showNinjaCombi = false;
@@ -2174,9 +2230,9 @@ class KitchenCookingPanel extends LitElement {
     } else {
       result = Math.round(value * 4) / 4;
     }
-    // Format: drop unnecessary .0 / .00 but keep meaningful decimals
-    const str = result % 1 === 0 ? String(result) : String(parseFloat(result.toFixed(2)));
-    return str;
+    return new Intl.NumberFormat(this._measurementLocale(), {
+      maximumFractionDigits: 2,
+    }).format(result);
   }
 
   _openRecipeInBuilder(recipe) {
@@ -2230,7 +2286,7 @@ class KitchenCookingPanel extends LitElement {
   _formatDateTime(isoString) {
     if (!isoString) return '';
     const date = new Date(isoString);
-    return date.toLocaleString();
+    return date.toLocaleString(this._locale());
   }
 
   // Phase 3.3: Render appliance management view
@@ -2904,7 +2960,7 @@ class KitchenCookingPanel extends LitElement {
             <div class="modal-overlay" @click=${this._closeAISettings}>
               <div class="modal-dialog" @click=${(e) => e.stopPropagation()}>
                 <div class="modal-header">
-                  <h2>⚙️ ${this._t('messages.ai_settings_title')}</h2>
+                  <h2>${this._t('ai_recipe.settings_title')}</h2>
                   <button class="modal-close" @click=${this._closeAISettings}>✕</button>
                 </div>
                 <div class="modal-body">
@@ -3480,7 +3536,7 @@ class KitchenCookingPanel extends LitElement {
           </div>
         </div>
         <div style="font-size: 11px; color: var(--secondary-text-color); margin-top: 6px; text-align: center;">
-          📍 Showing data from cook start${sessionStart ? ` (${new Date(sessionStart).toLocaleTimeString()})` : ''}
+          📍 Showing data from cook start${sessionStart ? ` (${new Date(sessionStart).toLocaleTimeString(this._locale())})` : ''}
         </div>
         <div style="text-align: center; margin-top: 8px;">
           <a href="${historyUrl}" target="_blank" style="color: var(--primary-color); font-size: 12px;">
@@ -3722,16 +3778,13 @@ class KitchenCookingPanel extends LitElement {
           <div class="card-content">
             <h3>${this._t('welcome.language_label')}</h3>
             <div class="button-group">
-              <button
-                class="category-btn ${this._language === 'sv' ? 'selected' : ''}"
-                @click=${() => this._saveLanguagePreference('sv')}>
-                🇸🇪 Svenska
-              </button>
-              <button
-                class="category-btn ${this._language === 'en' ? 'selected' : ''}"
-                @click=${() => this._saveLanguagePreference('en')}>
-                🇬🇧 English
-              </button>
+              ${this._availableLanguages().map(meta => html`
+                <button
+                  class="category-btn ${this._language === meta.language ? 'selected' : ''}"
+                  @click=${() => this._saveLanguagePreference(meta.language)}>
+                  ${meta.flag} ${meta.language_name}
+                </button>
+              `)}
             </div>
             <label style="display:flex;align-items:center;gap:8px;margin-top:10px;font-size:0.85em;cursor:pointer;">
               <input type="checkbox"
@@ -4168,7 +4221,7 @@ class KitchenCookingPanel extends LitElement {
               <button 
                 class="category-btn ${this._selectedCategory === key ? 'selected' : ''}" 
                 @click=${() => this._selectCategory(key)}>
-                ${cat.icon} ${(this._language === 'sv' && cat.name_sv) ? cat.name_sv : cat.name}
+                ${cat.icon} ${this._localizedField(cat, 'name')}
               </button>
             `)}
             <button 
@@ -4248,7 +4301,7 @@ class KitchenCookingPanel extends LitElement {
                 <button 
                   class="category-btn ${this._selectedMeat === meat.id ? 'selected' : ''}" 
                   @click=${() => this._selectMeat(meat.id)}>
-                  ${(this._language === 'sv' && meat.name_sv) ? meat.name_sv : meat.name}
+                  ${this._localizedField(meat, 'name')}
                 </button>
               `)}
             </div>
@@ -4266,7 +4319,7 @@ class KitchenCookingPanel extends LitElement {
                 <button 
                   class="category-btn ${this._selectedCutType === ct.id ? 'selected' : ''}" 
                   @click=${() => this._selectCutType(ct.id)}>
-                  ${(this._language === 'sv' && ct.name_sv) ? ct.name_sv : ct.name}
+                  ${this._localizedField(ct, 'name')}
                 </button>
               `)}
             </div>
@@ -4284,7 +4337,7 @@ class KitchenCookingPanel extends LitElement {
                 <button
                   class="category-btn ${this._selectedCut === cut.id ? 'selected' : ''}"
                   @click=${() => this._selectCut(cut.id)}>
-                  ${(this._language === 'sv' && cut.name_sv) ? cut.name_sv : (cut.name_long || cut.name)}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
+                  ${this._localizedField(cut, 'name', '', cut.name_long || cut.name)}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
                 </button>
               `)}
             </div>
@@ -4310,7 +4363,7 @@ class KitchenCookingPanel extends LitElement {
                   @click=${() => this._selectDoneness(opt.value)}
                   title="${opt.description || ''}">
                   <span class="icon">${opt.icon}</span>
-                  ${(this._language === 'sv' && opt.name_sv) ? opt.name_sv : opt.name}
+                  ${this._localizedField(opt, 'name')}
                   ${opt.value === recommendedDoneness ? html`<span class="star">⭐</span>` : ''}
                   ${opt.safety_level ? html`<span class="safety-dot ${opt.safety_level}" title="${opt.safety_level === 'safe' ? this._t('meater.safety_dot_safe') : opt.safety_level === 'caution' ? this._t('meater.safety_dot_caution') : this._t('meater.safety_dot_unsafe')}"></span>` : ''}
                   <span class="temp-hint">${opt.temp_c !== null && opt.temp_c !== undefined ? this._convertTemp(opt.temp_c) : ''}</span>
@@ -4426,9 +4479,7 @@ class KitchenCookingPanel extends LitElement {
               const slug = cutData && (cutData.recipe_slug || cutData.slug);
               if (!slug) return '';
               const methodProfiles = this._getCutMethodProfiles()[slug];
-              const descEn  = methodProfiles && methodProfiles[this._selectedMethod];
-              const descSv  = methodProfiles && methodProfiles[this._selectedMethod + '_sv'];
-              const desc    = (this._language === 'sv' && descSv) ? descSv : descEn;
+              const desc = this._localizedProfile(methodProfiles, this._selectedMethod);
               const titles = this._getRecipeTitles()[slug] && this._getRecipeTitles()[slug][this._selectedMethod];
               const url    = this._getRecipeIndex()[slug] && this._getRecipeIndex()[slug][this._selectedMethod];
               if (!desc && (!titles || titles.length === 0)) return '';
@@ -4506,9 +4557,7 @@ class KitchenCookingPanel extends LitElement {
     const slug = cut.recipe_slug || cut.slug;
     if (!slug) return html``;
 
-    const profileEn = this._getCutProfiles()[slug];
-    const profileSv = this._getCutProfilesSv()[slug];
-    const profile   = (this._language === 'sv' && profileSv) ? profileSv : profileEn;
+    const profile = this._getCutProfiles(this._language)[slug] || this._getCutProfiles('en')[slug];
     const recipes = this._getRecipeIndex()[slug];
     if (!profile && !recipes) return html``;
 
@@ -4524,9 +4573,7 @@ class KitchenCookingPanel extends LitElement {
 
     const sel = this._selectedResearchMethod;
     const methodProfiles = this._getCutMethodProfiles()[slug];
-    const selDescEn  = sel && methodProfiles && methodProfiles[sel];
-    const selDescSv  = sel && methodProfiles && methodProfiles[sel + '_sv'];
-    const selDesc    = (this._language === 'sv' && selDescSv) ? selDescSv : selDescEn;
+    const selDesc = sel && this._localizedProfile(methodProfiles, sel);
     const selTitles = sel && this._getRecipeTitles()[slug] && this._getRecipeTitles()[slug][sel];
     const selUrl = sel && recipes && recipes[sel];
 
@@ -4733,11 +4780,11 @@ class KitchenCookingPanel extends LitElement {
             ${isActiveCook ? html`
               <button class="recipe-nav-btn home-btn"
                 @click=${() => { this._closeRecipeFullscreen(); this._navigateToActiveCook(this._selectedEntity); }}
-                title="${this._t('welcome.active_cook')}">🏠</button>
+                title="${this._t('meater.cooking_active')}">🏠</button>
             ` : ''}
           </div>
           <div>
-            <h2>${this._fullscreenRecipeTitle || this._t('meater.recipe_label')}</h2>
+            <h2>${this._fullscreenRecipeTitle || this._t('welcome.recipe_cook')}</h2>
             ${isActiveCook ? html`
               <p class="recipe-cook-serving">${this._getStateIcon(monitorState.state)} ${monitorState.state.replace('_', ' ')}</p>
             ` : ''}
@@ -4786,7 +4833,7 @@ class KitchenCookingPanel extends LitElement {
       <ha-card style="margin-top:8px;">
         <div class="card-content">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
-            <span style="font-weight:600;font-size:0.95em;">🌡️ ${this._t('meater.active_cook_title') || 'Active Cook'}</span>
+            <span style="font-weight:600;font-size:0.95em;">🌡️ ${this._t('meater.cooking_active')}</span>
             <span style="font-size:0.82em;color:var(--secondary-text-color);">
               ${attrs.cut_display || attrs.cut || ''} ${attrs.doneness ? '· ' + attrs.doneness.replace('_', ' ') : ''}
             </span>
@@ -5644,7 +5691,10 @@ class KitchenCookingPanel extends LitElement {
       ${(this._aiSelectedCuisines || []).length > 0 ? html`
         <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
           ${(this._aiSelectedCuisines || []).map(c => {
-            const name = c.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            const cuisine = cuisineRegions.flatMap(region => region.cuisines).find(item => item.id === c);
+            const name = cuisine
+              ? this._localizedField(cuisine, 'name')
+              : c.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
             return html`<span style="background: var(--primary-color); color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.85em; display: inline-flex; align-items: center; gap: 4px;">
               ${name}
               <span style="cursor: pointer; margin-left: 2px;" @click=${() => {
@@ -5670,7 +5720,7 @@ class KitchenCookingPanel extends LitElement {
                 this.requestUpdate();
               }}
             >
-              <span style="font-weight: bold;">${region.icon} ${region.name} ${selectedInRegion.length > 0 ? `(${selectedInRegion.length})` : ''}</span>
+              <span style="font-weight: bold;">${region.icon} ${this._localizedField(region, 'name')} ${selectedInRegion.length > 0 ? `(${selectedInRegion.length})` : ''}</span>
               <span>${isExpanded ? '▼' : '▶'}</span>
             </div>
             ${isExpanded ? html`
@@ -5688,7 +5738,7 @@ class KitchenCookingPanel extends LitElement {
                         this.requestUpdate();
                       }}
                     >
-                      ${cuisine.icon} ${cuisine.name}
+                      ${cuisine.icon} ${this._localizedField(cuisine, 'name')}
                     </button>
                   `;
                 })}
@@ -5709,7 +5759,7 @@ class KitchenCookingPanel extends LitElement {
           <div style="margin: 8px 0 12px 0; padding: 10px 14px; background: var(--secondary-background-color); border-radius: 8px; border-left: 3px solid var(--primary-color);">
             ${descs.map(d => html`
               <p style="margin: 0 0 4px 0; font-size: 0.9em; color: var(--primary-text-color); line-height: 1.5;">
-                ${(this._language === 'sv' && d.description_sv) ? d.description_sv : d.description}
+                ${this._localizedField(d, 'description')}
               </p>
             `)}
           </div>
@@ -5880,7 +5930,7 @@ class KitchenCookingPanel extends LitElement {
     const hasCats = ingredients.length > 0 && ingredients[0].cat;
     if (!hasCats || categoryOrder.length === 0) {
       // Fall back to flat grid sorted alphabetically by display name
-      const sorted = [...ingredients].sort((a, b) => (this._ingDisplayName(a) || '').localeCompare(this._ingDisplayName(b) || ''));
+      const sorted = [...ingredients].sort((a, b) => (this._ingDisplayName(a) || '').localeCompare(this._ingDisplayName(b) || '', this._locale()));
       return html`
         <div class="ingredient-grid">
           ${sorted.map(ingredient => this._renderIngredientCheckbox(ingredient))}
@@ -5898,7 +5948,7 @@ class KitchenCookingPanel extends LitElement {
 
     // Sort each group alphabetically by display name
     for (const cat of Object.keys(groups)) {
-      groups[cat].sort((a, b) => (this._ingDisplayName(a) || '').localeCompare(this._ingDisplayName(b) || ''));
+      groups[cat].sort((a, b) => (this._ingDisplayName(a) || '').localeCompare(this._ingDisplayName(b) || '', this._locale()));
     }
 
     const expandedCats = this._ingredientExpandedCats || [];
@@ -6155,7 +6205,7 @@ class KitchenCookingPanel extends LitElement {
             </div>
             <div style="display: flex; flex-wrap: wrap; gap: 5px;">
               ${proteinSubcats[subcat].map(cut => {
-                const displayName = (this._language === 'sv' && cut.name_sv) ? cut.name_sv : cut.name;
+                const displayName = this._localizedField(cut, 'name');
                 // Highlight cut if any cuisine protein ID is a prefix/match of this cut's ID
                 // e.g. cuisine has "salmon" → highlights "salmon_fillet", "salmon_steak"
                 const isCuisineCommon = [...cuisineCommonProteinIds].some(
@@ -6191,8 +6241,8 @@ class KitchenCookingPanel extends LitElement {
               }}
             >
               ${isExpanded
-                ? this._t('ai_recipe.show_less') || 'Show less'
-                : `${this._t('ai_recipe.more_ingredients') || 'More'} (+${extItems.length})`}
+                ? this._t('ai_recipe.show_less')
+                : `${this._t('ai_recipe.more_ingredients')} (+${extItems.length})`}
             </button>
           ` : ''}
         `}
@@ -6209,10 +6259,13 @@ class KitchenCookingPanel extends LitElement {
         const sv = AI_INGREDIENT_NAMES_SV[ingredient.id];
         if (sv) return sv;
       }
-      // Fall back to inline name_sv (e.g. on recipe-file-derived cuts from AI_PROTEIN_SUBCATS)
-      if (ingredient.name_sv) return ingredient.name_sv;
+    } else if (this._language === 'da') {
+      if (ingredient.id && typeof AI_INGREDIENT_NAMES_DA !== 'undefined') {
+        const da = AI_INGREDIENT_NAMES_DA[ingredient.id];
+        if (da) return da;
+      }
     }
-    return ingredient.name || '';
+    return this._localizedField(ingredient, 'name');
   }
 
   /**
@@ -6277,7 +6330,7 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div style="margin-bottom: 12px; padding: 10px 12px; background: var(--secondary-background-color); border-radius: 8px; border-left: 3px solid var(--primary-color);">
         <div style="font-size: 0.85em; font-weight: 600; margin-bottom: 6px; color: var(--primary-text-color);">
-          🗄️ ${this._t('ai_recipe.from_shelf') || 'From Your Shelf'}
+          🗄️ ${this._t('ai_recipe.from_shelf')}
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 5px;">
           ${unselected.map(item => {
@@ -6315,7 +6368,7 @@ class KitchenCookingPanel extends LitElement {
     const displayName = this._ingDisplayName(ingredient);
     const valueName = (typeof ingredient === 'string') ? ingredient : (ingredient.name || ingredient);
     const notes = (ingredient && typeof ingredient === 'object')
-      ? (this._language === 'sv' ? (ingredient.notes_sv || ingredient.notes) : (ingredient.notes || ingredient.notes_sv))
+      ? this._localizedField(ingredient, 'notes')
       : null;
     const ingId = (ingredient && typeof ingredient === 'object') ? ingredient.id : valueName;
 
@@ -6428,7 +6481,7 @@ class KitchenCookingPanel extends LitElement {
               >
                 <div class="card-content">
                   <div class="style-icon">${style.icon || '🍳'}</div>
-                  <h3>${(this._language === 'sv' && style.name_sv) ? style.name_sv : style.name}</h3>
+                  <h3>${this._localizedField(style, 'name')}</h3>
                   <p>${style.description || ''}</p>
                 </div>
               </ha-card>
@@ -7435,7 +7488,7 @@ class KitchenCookingPanel extends LitElement {
       return;
     }
 
-    const cutName = (this._language === 'sv' && cut.name_sv) ? cut.name_sv : (cut.name_long || cut.name);
+    const cutName = this._localizedField(cut, 'name', '', cut.name_long || cut.name);
     const weight  = (this._meaterAiWeight || '').trim();
     const cutLabel = weight ? `${cutName} (${weight})` : cutName;
 
@@ -7719,7 +7772,7 @@ class KitchenCookingPanel extends LitElement {
     if (recipe.instructions && recipe.instructions.length > 0) {
       const si = recipe.step_ingredients || [];
       return recipe.instructions.map((instruction, idx) => ({
-        name: `Step ${idx + 1}`,
+        name: `${this._t('common.step')} ${idx + 1}`,
         instructions: instruction,
         description: instruction,
         ingredients: si[idx] || [],
@@ -7748,18 +7801,18 @@ class KitchenCookingPanel extends LitElement {
         <div class="recipe-cook-title" style="display:flex;align-items:center;gap:12px;">
           <div class="recipe-cook-nav-buttons">
             <button class="recipe-nav-btn" @click=${this._previousRecipeStep}
-              title="${isOverview ? 'Exit cook' : 'Previous step'}">
+              title="${isOverview ? this._t('recipe_cook.exit_cook') : this._t('recipe_cook.previous_step_title')}">
               ${isOverview ? '✕' : '←'}
             </button>
             <button class="recipe-nav-btn home-btn" @click=${() => this._minimizeRecipeCook()}
-              title="Go to Home screen (cook keeps running)">🏠</button>
+              title="${this._t('recipe_cook.home_title')}">🏠</button>
             ${isFinishPage ? html`
               <button class="recipe-nav-btn save-btn" @click=${this._saveRecipeCook}
                 ?disabled=${!state.easeRating || !state.resultRating}
-                title="Save cook">✓</button>
+                title="${this._t('recipe_cook.save_cook')}">✓</button>
             ` : html`
               <button class="recipe-nav-btn" @click=${this._nextRecipeStep}
-                title="${isOverview ? (steps.length > 0 ? 'Start cooking' : 'Finish') : currentStepIndex === steps.length - 1 ? 'Finish' : 'Next step'}">
+                title="${isOverview ? (steps.length > 0 ? this._t('recipe_cook.start_cooking') : this._t('recipe_cook.finish')) : currentStepIndex === steps.length - 1 ? this._t('recipe_cook.finish') : this._t('recipe_cook.next_step_title')}">
                 ${isOverview ? (steps.length > 0 ? '→' : '✓') : currentStepIndex === steps.length - 1 ? '✓' : '→'}
               </button>
             `}
@@ -7767,11 +7820,11 @@ class KitchenCookingPanel extends LitElement {
           <div>
             <h2>${recipe.name}</h2>
             <p class="recipe-cook-serving">
-              Serves: ${state.servingSize} | Elapsed: ${this._formatElapsedTime(elapsedSeconds)}
+              ${this._t('recipe_cook.serves')}: ${state.servingSize} | ${this._t('recipe_cook.elapsed')}: ${this._formatElapsedTime(elapsedSeconds)}
             </p>
           </div>
         </div>
-        <button class="help-btn recipe-cook-help-btn" @click=${() => this._openHelp('#8-recipe-cook-flow')} title="Open User Guide">?</button>
+        <button class="help-btn recipe-cook-help-btn" @click=${() => this._openHelp('#8-recipe-cook-flow')} title="${this._t('common.open_user_guide')}">?</button>
       </div>
 
       <ha-card>
@@ -7981,9 +8034,9 @@ class KitchenCookingPanel extends LitElement {
     // Get ingredients mentioned in this step (if available)
     const stepIngredients = step.ingredients || [];
 
-    // Strip "Step X:" / "Steg X:" prefix from description text
+    // Strip localized or bare numeric step prefixes from description text.
     let instructionText = step.instructions || step.description || this._t('messages.no_instructions');
-    instructionText = instructionText.replace(/^(?:Step|Steg)\s+\d+\s*:\s*/i, '');
+    instructionText = instructionText.replace(/^(?:(?:Step|Steg|Trin)\s+)?\d+\s*[:.)-]\s*/i, '');
     // Convert any remaining US measurements in the instruction text
     instructionText = this._convertIngredientText(instructionText);
 
@@ -7994,7 +8047,8 @@ class KitchenCookingPanel extends LitElement {
     const repeatActiveIngs = [];
     const inactiveIngs = [];
     const measureWords = new Set(['cups','cup','tbsp','tsp','ounce','ounces','pound','pounds','gram','grams','tablespoon','tablespoons','teaspoon','teaspoons','inch','lbs','chopped','diced','minced','sliced','finely','freshly','large','small','medium','optional','about','into','with','from','each','piece','pieces','water','drain','rinse','heat','place','minutes','adjust','taste','whole','clean','back','that','this','then','also','well','over','used','half','more','approx','skin','make',
-      /* Swedish measurement/stopwords */ 'krm','tsk','msk','dl','cl','hg','kg','hackad','tärnad','skivad','finhackad','stor','liten','valfritt','ungefär','stycken','vatten','minuter','smak','hela','efter']);
+      /* Swedish measurement/stopwords */ 'krm','tsk','msk','dl','cl','hg','kg','hackad','tärnad','skivad','finhackad','stor','liten','valfritt','ungefär','stycken','vatten','minuter','smak','hela','efter',
+      /* Danish measurement/stopwords */ 'spsk','hakket','skåret','finthakket','revet','store','lille','valgfrit','cirka','stykker','vand','minutter','smag','hele','efter','tilsæt','bland','varm','dræn','skyl','halv']);
     const escapeRegex = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     // Unicode-aware word boundary: \b doesn't work with ä,ö,å,é etc.
     // Use lookbehind/lookahead for non-letter/digit or string boundary.
