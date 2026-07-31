@@ -32,7 +32,7 @@
 - [x] Propagate labels through generated frontend data.
 - [x] Add catalog-localization regression tests.
 - [x] Regenerate and verify panel output.
-- [ ] Push branch and open upstream PR.
+- [x] Push branch and open upstream PR: https://github.com/R00S/meater-in-local-haos/pull/122
 
 ## Inventory
 
