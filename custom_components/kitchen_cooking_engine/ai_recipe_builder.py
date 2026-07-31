@@ -40,6 +40,7 @@ from .recipes.models import (
 )
 from .appliances.registry import get_registry
 from .const import DOMAIN
+from .measurements import MEASUREMENT_SYSTEMS
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -305,7 +306,7 @@ class AIRecipeBuilder:
             complexity: Recipe complexity 1-5 (1=very simple, 5=chef level)
             cuisines: Optional list of cuisine/region IDs for fusion cooking
             language: UI language code ('sv', 'en')
-            measurement_system: Measurement system ('se', 'uk', 'us')
+            measurement_system: Measurement system ('se', 'dk', 'uk', 'us')
             compulsory_ingredients: Ingredients that MUST appear in every recipe
             cooking_mode: 'A' (ignore shelf), 'B' (cook now — shelf only),
                           'C' (cook later — add shopping list step)
@@ -381,7 +382,7 @@ class AIRecipeBuilder:
             user_ingredients: Original user-selected ingredients (for ceiling)
             servings: Number of servings requested by the user
             language: UI language code ('sv', 'en')
-            measurement_system: Measurement system ('se', 'uk', 'us')
+            measurement_system: Measurement system ('se', 'dk', 'uk', 'us')
         
         Returns:
             Detailed recipe with instructions
@@ -568,7 +569,7 @@ class AIRecipeBuilder:
             complexity: Recipe complexity 1-5
             cuisines: Optional cuisine/region preferences
             language: UI language code ('sv', 'en')
-            measurement_system: Measurement system ('se', 'uk', 'us')
+            measurement_system: Measurement system ('se', 'dk', 'uk', 'us')
         
         Returns:
             Formatted prompt for OpenAI
@@ -817,7 +818,7 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
             user_ingredients: Original user-selected ingredients (for ceiling)
             servings: Number of servings requested by the user
             language: UI language code ('sv', 'en')
-            measurement_system: Measurement system ('se', 'uk', 'us')
+            measurement_system: Measurement system ('se', 'dk', 'uk', 'us')
         
         Returns:
             Formatted prompt for detailed recipe
@@ -913,7 +914,7 @@ Please provide the full detailed recipe with:
 
 Format your response as JSON:
 {{
-  "ingredients": [{self._get_example_ingredients(measurement_system)}],
+  "ingredients": [{self._get_example_ingredients(language, measurement_system)}],
   "instructions": [{self._get_example_instructions(language, measurement_system)}],
   "step_ingredients": [{self._get_example_step_ingredients(language, measurement_system)}],
   "tips": [{self._get_example_tips(language)}],
@@ -989,6 +990,18 @@ If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list
                 "Use kg for amounts ≥ 500 g. Temperatures in °C only. "
                 "Use comma as decimal separator (e.g. 0,5 dl NOT 0.5 dl; 1,5 hg NOT 1.5 hg)."
             )
+        elif measurement_system == "dk":
+            parts.append(
+                "\nCRITICAL RULE — MEASUREMENTS:\n"
+                "Use Danish recipe measurements ONLY. "
+                "Volume: ml, tsk (5 ml), spsk (15 ml), cl, dl, l. "
+                "Mass: g, kg. "
+                "NEVER use cups, tablespoons, teaspoons, msk, krm, hg, oz, lb, or fl oz. "
+                "Prefer dl for amounts of at least 0,5 dl and use kg for amounts of at least 1 kg. "
+                "Temperatures in °C only. "
+                "Use comma as decimal separator (e.g. 0,5 dl NOT 0.5 dl). "
+                "A knsp (knife-tip amount) is qualitative; preserve it as text and never assign it a numeric volume."
+            )
         elif measurement_system == "uk":
             parts.append(
                 "\nCRITICAL RULE — MEASUREMENTS:\n"
@@ -1001,22 +1014,28 @@ If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list
         return "".join(parts)
 
     @staticmethod
-    def _get_example_ingredients(measurement_system: str) -> str:
+    def _get_example_ingredients(language: str, measurement_system: str) -> str:
         """Return example ingredient strings for the JSON format hint."""
+        chicken = "kycklingbröst, tärnad" if language == "sv" else "chicken breast, diced"
+        rice = "ris" if language == "sv" else "rice"
+        oil = "olivolja" if language == "sv" else "olive oil"
+        cream = "grädde" if language == "sv" else "cream"
         if measurement_system == "se":
-            return '"5 dl ris", "400 g kycklingbröst, tärnad", "2 msk olivolja", "0,5 dl grädde"'
-        elif measurement_system == "uk":
-            return '"300 g chicken breast, diced", "400 ml rice", "2 tbsp olive oil"'
-        return '"1 lb chicken breast, diced", "2 cups rice", "2 tbsp olive oil"'
+            return f'"5 dl {rice}", "400 g {chicken}", "2 msk {oil}", "0,5 dl {cream}"'
+        if measurement_system == "dk":
+            return f'"4 dl {rice}", "400 g {chicken}", "2 spsk {oil}", "0,5 dl {cream}"'
+        if measurement_system == "uk":
+            return f'"300 g {chicken}", "400 ml {rice}", "2 tbsp {oil}"'
+        return f'"1 lb {chicken}", "2 cups {rice}", "2 tbsp {oil}"'
 
     @staticmethod
     def _get_example_instructions(language: str, measurement_system: str) -> str:
         """Return example instruction strings for the JSON format hint."""
+        system = MEASUREMENT_SYSTEMS.get(measurement_system)
+        temperature = "400°F (200°C)" if system and system.temp_unit == "F" else "200°C"
         if language == "sv":
-            return '"Steg 1: Värm ugnen till 200°C", "Steg 2: Krydda kycklingen med salt och peppar"'
-        if measurement_system == "uk":
-            return '"Step 1: Preheat oven to 200°C", "Step 2: Season chicken with salt and pepper"'
-        return '"Step 1: Preheat oven to 400°F (200°C)", "Step 2: Season chicken with salt and pepper"'
+            return f'"Steg 1: Värm ugnen till {temperature}", "Steg 2: Krydda kycklingen med salt och peppar"'
+        return f'"Step 1: Preheat oven to {temperature}", "Step 2: Season chicken with salt and pepper"'
 
     @staticmethod
     def _get_example_tips(language: str) -> str:

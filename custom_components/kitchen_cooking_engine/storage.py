@@ -20,6 +20,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.util import dt as dt_util
 
 from .const import DOMAIN
+from .measurements import DEFAULT_MEASUREMENT_SYSTEM, MEASUREMENT_SYSTEMS
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -272,7 +273,6 @@ async def async_get_cut_preference(
 # Language & measurement preferences
 
 DEFAULT_LANGUAGE = "en"
-DEFAULT_MEASUREMENT_SYSTEM = "se"
 
 async def async_get_language(hass: HomeAssistant) -> str:
     """Get the user's selected UI language (e.g. 'sv', 'en')."""
@@ -288,13 +288,16 @@ async def async_set_language(hass: HomeAssistant, language: str) -> bool:
 
 
 async def async_get_measurement_system(hass: HomeAssistant) -> str:
-    """Get the user's selected measurement system (e.g. 'se', 'uk', 'us')."""
+    """Get the user's selected measurement system."""
     preferences = await async_load_user_preferences(hass)
-    return preferences.get("measurement_system", DEFAULT_MEASUREMENT_SYSTEM)
+    system = preferences.get("measurement_system", DEFAULT_MEASUREMENT_SYSTEM)
+    return system if system in MEASUREMENT_SYSTEMS else DEFAULT_MEASUREMENT_SYSTEM
 
 
 async def async_set_measurement_system(hass: HomeAssistant, system: str) -> bool:
     """Set the user's selected measurement system."""
+    if system not in MEASUREMENT_SYSTEMS:
+        return False
     preferences = await async_load_user_preferences(hass)
     preferences["measurement_system"] = system
     return await async_save_user_preferences(hass, preferences)

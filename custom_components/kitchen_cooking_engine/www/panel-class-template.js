@@ -537,9 +537,9 @@ class KitchenCookingPanel extends LitElement {
             ? converted.toFixed(1).replace(/\.?0+$/, '')
             : String(Math.round(converted));
         const lang = this._language || 'en';
-        const abbr = lang === 'sv' ? targetUnit.abbr_sv : targetUnit.abbr_en;
-        // Swedish locale uses comma for decimal separator
-        const displayNum = lang === 'sv' ? numStr.replace('.', ',') : numStr;
+        const abbr = targetUnit.symbol || (lang === 'sv' ? targetUnit.abbr_sv : targetUnit.abbr_en);
+        const usesDecimalComma = ['sv', 'da'].includes(lang) || ['se', 'dk'].includes(sysId);
+        const displayNum = usesDecimalComma ? numStr.replace('.', ',') : numStr;
         return `${displayNum} ${abbr}`;
       }
     }
@@ -548,7 +548,7 @@ class KitchenCookingPanel extends LitElement {
 
   /**
    * Convert a temperature in °C for display in the user's measurement system.
-   * SE/UK → "70°C", US → "158°F (70°C)".
+   * SE/DK/UK → "70°C", US → "158°F (70°C)".
    */
   _convertTemp(tempC) {
     const sysId = this._measurementSystem || 'se';
@@ -573,21 +573,28 @@ class KitchenCookingPanel extends LitElement {
     const sys = MEASUREMENT_SYSTEMS[sysId];
     if (!sys || !sys.units) return text;
 
-    // Map of text patterns → unit ID in MEASUREMENT_SYSTEMS (source unit)
+    // Map text patterns to unit IDs in MEASUREMENT_SYSTEMS (source unit).
+    // Long forms come first to avoid partial matches.
     const unitPatterns = [
-      // Volume — long forms first to avoid partial matches
-      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:tablespoons?|Tablespoons?|TBSP)\b/g, unit: 'tbsp' },
-      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:teaspoons?|Teaspoons?|TSP)\b/g, unit: 'tsp' },
-      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:cups?|Cups?)\b/g, unit: 'cup' },
-      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:fl\.?\s*oz|fluid\s*ounces?)\b/gi, unit: 'fl_oz' },
-      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:tbsp)\b/g, unit: 'tbsp' },
-      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:tsp)\b/g, unit: 'tsp' },
-      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:pints?|Pints?)\b/g, unit: 'pint' },
-      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:quarts?|Quarts?)\b/g, unit: 'quart' },
-      // Mass — long forms first
-      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:pounds?|Pounds?|lbs?)\b/g, unit: 'lb' },
-      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:ounces?|Ounces?)\b/g, unit: 'oz' },
-      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:oz)\b/g, unit: 'oz' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:fluid\s*ounces?|fl\.?\s*oz)\b\.?/gi, unit: 'fl_oz' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:tablespoons?|tbsp)\b\.?/gi, unit: 'tbsp' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:teaspoons?|tsp)\b\.?/gi, unit: 'tsp' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:spiseskefulde?|spiseskeer|spiseske|spsk)\b\.?/gi, unit: 'spsk' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:matskedar?|msk)\b\.?/gi, unit: 'msk' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:teskefulde?|teskeer|teske|teskedar?|tsk)\b\.?/gi, unit: 'tsk' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:kryddmått|krm)\b\.?/gi, unit: 'krm' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:cups?)\b\.?/gi, unit: 'cup' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:pints?)\b\.?/gi, unit: 'pint' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:quarts?)\b\.?/gi, unit: 'quart' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:milliliters?|millilitres?|ml)\b\.?/gi, unit: 'ml' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:centiliters?|centilitres?|cl)\b\.?/gi, unit: 'cl' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:deciliters?|decilitres?|dl)\b\.?/gi, unit: 'dl' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:liters?|litres?|l)\b\.?/gi, unit: 'l' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:kilograms?|kg)\b\.?/gi, unit: 'kg' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:hectograms?|hg)\b\.?/gi, unit: 'hg' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:grams?|g)\b\.?/gi, unit: 'g' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:pounds?|lbs?)\b\.?/gi, unit: 'lb' },
+      { re: /\b(\d+(?:[.,]\d+)?|\d+\/\d+)\s*(?:ounces?|oz)\b\.?/gi, unit: 'oz' },
     ];
 
     // Parse fraction strings like "1/2" or "1 1/2"
@@ -602,18 +609,32 @@ class KitchenCookingPanel extends LitElement {
 
     let result = text;
 
+    const unicodeFractions = {
+      '¼': 0.25, '½': 0.5, '¾': 0.75,
+      '⅓': 1 / 3, '⅔': 2 / 3,
+      '⅛': 0.125, '⅜': 0.375, '⅝': 0.625, '⅞': 0.875,
+    };
+    result = result.replace(/(\d+)\s*([¼½¾⅓⅔⅛⅜⅝⅞])|([¼½¾⅓⅔⅛⅜⅝⅞])/g, (match, whole, compoundFraction, standaloneFraction) => {
+      const fraction = compoundFraction || standaloneFraction;
+      return String((whole ? Number(whole) : 0) + unicodeFractions[fraction]);
+    });
+
     // Handle compound fractions like "1 1/2 cups" → 1.5 cups
     result = result.replace(/(\d+)\s+(\d+\/\d+)/g, (m, whole, frac) => {
       return String(parseInt(whole) + parseFrac(frac));
     });
 
+    const convertedMeasurements = [];
     for (const { re, unit } of unitPatterns) {
       result = result.replace(re, (match, numStr) => {
         const value = parseFrac(numStr);
         if (isNaN(value) || value <= 0) return match;
-        return this._convertMeasure(value, unit);
+        const token = `\uE000${convertedMeasurements.length}\uE001`;
+        convertedMeasurements.push(this._convertMeasure(value, unit));
+        return token;
       });
     }
+    result = result.replace(/\uE000(\d+)\uE001/g, (match, index) => convertedMeasurements[Number(index)]);
 
     // Temperature conversion: "400°F" or "400 °F" → localized
     if (sys.temp_unit !== 'F') {
@@ -627,9 +648,8 @@ class KitchenCookingPanel extends LitElement {
       result = result.replace(/\s*\(\d+°C\)/g, '');
     }
 
-    // Swedish locale: convert decimal points to commas in numbers
-    // e.g. "0.5 dl" → "0,5 dl", "1.5 hg" → "1,5 hg"
-    if ((this._language || 'en') === 'sv') {
+    // Swedish and Danish recipe notation uses decimal commas.
+    if (['sv', 'da'].includes(this._language || 'en') || ['se', 'dk'].includes(sysId)) {
       result = result.replace(/(\d)\.(\d)/g, '$1,$2');
     }
 
@@ -3726,21 +3746,15 @@ class KitchenCookingPanel extends LitElement {
           <div class="card-content">
             <h3>${this._t('welcome.measurement_system_label')}</h3>
             <div class="button-group">
-              <button
-                class="category-btn ${this._measurementSystem === 'se' ? 'selected' : ''}"
-                @click=${() => this._saveMeasurementPreference('se')}>
-                ${typeof MEASUREMENT_SYSTEMS !== 'undefined' && MEASUREMENT_SYSTEMS.se ? (this._language === 'sv' ? MEASUREMENT_SYSTEMS.se.name_sv : MEASUREMENT_SYSTEMS.se.name_en) : '🇸🇪 Swedish'}
-              </button>
-              <button
-                class="category-btn ${this._measurementSystem === 'uk' ? 'selected' : ''}"
-                @click=${() => this._saveMeasurementPreference('uk')}>
-                ${typeof MEASUREMENT_SYSTEMS !== 'undefined' && MEASUREMENT_SYSTEMS.uk ? (this._language === 'sv' ? MEASUREMENT_SYSTEMS.uk.name_sv : MEASUREMENT_SYSTEMS.uk.name_en) : '🇬🇧 UK Metric'}
-              </button>
-              <button
-                class="category-btn ${this._measurementSystem === 'us' ? 'selected' : ''}"
-                @click=${() => this._saveMeasurementPreference('us')}>
-                ${typeof MEASUREMENT_SYSTEMS !== 'undefined' && MEASUREMENT_SYSTEMS.us ? (this._language === 'sv' ? MEASUREMENT_SYSTEMS.us.name_sv : MEASUREMENT_SYSTEMS.us.name_en) : '🇺🇸 US Customary'}
-              </button>
+              ${typeof MEASUREMENT_SYSTEMS !== 'undefined'
+                ? Object.values(MEASUREMENT_SYSTEMS).map(system => html`
+                    <button
+                      class="category-btn ${this._measurementSystem === system.id ? 'selected' : ''}"
+                      @click=${() => this._saveMeasurementPreference(system.id)}>
+                      ${system[`name_${this._language || 'en'}`] || system.name_en}
+                    </button>
+                  `)
+                : ''}
             </div>
             <p class="source-description" style="margin-top: 8px; font-size: 0.85em;">
               ${this._t('welcome.measurement_' + this._measurementSystem + '_description')}

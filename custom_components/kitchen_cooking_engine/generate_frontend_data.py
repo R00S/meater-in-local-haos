@@ -1146,7 +1146,7 @@ def generate_js_data():
     lines.append("// AI Recipe Builder - Swedish ingredient display names (id → Swedish)")
     lines.append(f"const AI_INGREDIENT_NAMES_SV = {json.dumps(ai_ingredient_names_sv, indent=2, ensure_ascii=False)};")
     lines.append("")
-    lines.append("// Phase 7: Measurement systems (SE, UK, US)")
+    lines.append("// Phase 7: Measurement systems (SE, DK, UK, US)")
     lines.append(f"const MEASUREMENT_SYSTEMS = {json.dumps(measurement_systems, indent=2, ensure_ascii=False)};")
     lines.append("")
     lines.append("// Phase 7: Translation strings (sv, en, ...)")

@@ -65,6 +65,7 @@
     "started_on_other_device": "Started on another device",
     "recipe_cook": "Recipe Cook",
     "measurement_se_description": "krm · tsk · msk · cl · dl · l · g · hg · kg — Temperature in °C",
+    "measurement_dk_description": "ml · tsk · spsk · cl · dl · l · g · kg — Temperature in °C",
     "measurement_uk_description": "tsp · tbsp · ml · dl · l · g · kg — Temperature in °C",
     "measurement_us_description": "tsp · tbsp · cup · fl oz · oz · lb — Temperature in °F"
   },

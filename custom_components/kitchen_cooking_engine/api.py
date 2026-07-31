@@ -16,6 +16,7 @@ from aiohttp import web
 from homeassistant.components.http import HomeAssistantView
 from homeassistant.core import HomeAssistant
 
+from .measurements import DEFAULT_MEASUREMENT_SYSTEM, MEASUREMENT_SYSTEMS
 from .storage import (
     async_load_cook_history,
     async_add_cook_to_history,
@@ -340,8 +341,8 @@ class MeasurementSystemPreferenceView(HomeAssistantView):
         hass = request.app["hass"]
         try:
             data = await request.json()
-            system = data.get("measurement_system", "se")
-            if system not in ("se", "uk", "us"):
+            system = data.get("measurement_system", DEFAULT_MEASUREMENT_SYSTEM)
+            if system not in MEASUREMENT_SYSTEMS:
                 return self.json({"status": "error", "message": f"Unsupported measurement system: {system}"})
             success = await async_set_measurement_system(hass, system)
             if success:

@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.2.2 · Home Assistant 2024.1.0+
+> **Version:** 0.10.2.3 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -238,7 +238,7 @@ At the bottom of the welcome screen are three persistent settings cards:
 |------|-----------------|
 | **🌐 Language** | Switch between English and Swedish. Changes take effect immediately. |
 | **🌍 Temperature Data Source** | International (USDA) or Swedish (Livsmedelsverket / Stekguiden.se). |
-| **📏 Measurement System** | US (cups, °F), UK (ml, dl, g, °C), or Swedish (krm, tsk, msk, dl, °C). |
+| **📏 Measurement System** | US (cups, °F), UK (ml, dl, g, °C), Swedish (krm, tsk, msk, dl, °C), or Danish (ml, tsk, spsk, dl, °C). |
 
 ---
 
@@ -1237,6 +1237,7 @@ temperature ranges are shown as default.
 | 🇺🇸 US | tsp, tbsp, cup, fl oz | oz, lb | °F |
 | 🇬🇧 UK | tsp, tbsp, ml, dl, L | g, kg | °C |
 | 🇸🇪 Swedish | krm, tsk, msk, cl, dl, L | g, hg, kg | °C |
+| 🇩🇰 Danish | ml, tsk, spsk, cl, dl, L | g, kg | °C |
 
 All ingredient amounts in AI-generated recipes and on-screen displays are automatically
 converted to the selected measurement system. This includes temperatures and ingredient
@@ -1396,7 +1397,8 @@ Reload the integration: **Settings → Devices & Services → Kitchen Cooking En
 ### Measurement conversions look wrong
 
 Ensure the **Measurement System** setting matches your recipe source. US recipes use cups and
-°F; Swedish recipes use dl and °C. Changing the system converts all displayed amounts in real time.
+°F, Swedish recipes use `dl`/`msk`, and Danish recipes use `dl`/`spsk`. Changing the system
+converts all displayed amounts in real time.
 
 
 ## 15. Standalone Android App (Alpha)
