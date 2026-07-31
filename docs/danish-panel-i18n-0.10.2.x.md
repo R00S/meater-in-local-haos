@@ -23,7 +23,7 @@
 - [x] Generalize core locale-sensitive helpers.
 - [x] Implement Danish AI recipe generation.
 - [x] Regenerate and verify panel output.
-- [ ] Push branch and open upstream PR.
+- [x] Push branch and open upstream PR: https://github.com/R00S/meater-in-local-haos/pull/121
 
 ## Implementation Notes
 
