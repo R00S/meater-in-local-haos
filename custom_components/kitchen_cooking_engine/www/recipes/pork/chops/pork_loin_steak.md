@@ -3,6 +3,7 @@ type: cut
 slug: pork_loin_steak
 name: Pork Loin Steak
 name_sv: Karré
+name_da: Kotelet uden ben
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin

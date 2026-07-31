@@ -421,7 +421,15 @@
     "smoker": "Smoker",
     "air_fryer": "Air Fryer",
     "sous_vide": "Sous Vide",
-    "slow_cooker": "Slow Cooker"
+    "slow_cooker": "Slow Cooker",
+    "boil": "Boil",
+    "braise": "Braise",
+    "charcoal_grill": "Charcoal Grill",
+    "oven_broil": "Oven Broil",
+    "pressure_cooker": "Pressure Cooker",
+    "saute": "Sauté",
+    "steam": "Steam",
+    "whole_roast": "Whole Roast"
   },
   "appliances": {
     "title": "🔧 Kitchen Appliances",

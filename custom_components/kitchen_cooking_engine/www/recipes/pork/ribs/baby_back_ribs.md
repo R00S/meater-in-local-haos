@@ -3,6 +3,7 @@ type: cut
 slug: baby_back_ribs
 name: Baby Back Ribs
 name_sv: Revbensspjäll
+name_da: Kamben
 category: pork
 meat: pig
 cut_type: Ribs

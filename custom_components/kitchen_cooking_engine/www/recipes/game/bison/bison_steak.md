@@ -3,6 +3,7 @@ type: cut
 slug: bison_steak
 name: Bison Steak
 name_sv: Bisonbiff
+name_da: Bisonbøf
 category: game
 meat: bison
 cut_type: Bison

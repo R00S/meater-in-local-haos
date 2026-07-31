@@ -3,6 +3,7 @@ type: cut
 slug: asparagus
 name: Asparagus
 name_sv: Sparris
+name_da: Asparges
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables

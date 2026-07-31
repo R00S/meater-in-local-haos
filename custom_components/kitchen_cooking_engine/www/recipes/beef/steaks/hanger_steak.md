@@ -3,6 +3,7 @@ type: cut
 slug: hanger_steak
 name: Hanger Steak
 name_sv: Hängare
+name_da: Nyretapper
 category: beef
 meat: cow
 cut_type: Steaks

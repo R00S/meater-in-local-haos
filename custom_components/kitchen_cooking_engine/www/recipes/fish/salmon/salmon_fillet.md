@@ -3,6 +3,7 @@ type: cut
 slug: salmon_fillet
 name: Salmon Fillet
 name_sv: Laxfilé
+name_da: Laksefilet
 category: fish
 meat: salmon
 cut_type: Salmon

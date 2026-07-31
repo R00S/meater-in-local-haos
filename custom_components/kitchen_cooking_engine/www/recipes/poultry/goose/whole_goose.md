@@ -3,6 +3,7 @@ type: cut
 slug: whole_goose
 name: Whole Goose
 name_sv: Hel gås
+name_da: Hel gås
 category: poultry
 meat: goose
 cut_type: Goose

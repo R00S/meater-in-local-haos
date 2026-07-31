@@ -3,6 +3,7 @@ type: cut
 slug: acorn_squash
 name: Acorn Squash
 name_sv: Ekolonpumpa
+name_da: Agernsquash
 category: vegetables
 meat: squash
 cut_type: Squash

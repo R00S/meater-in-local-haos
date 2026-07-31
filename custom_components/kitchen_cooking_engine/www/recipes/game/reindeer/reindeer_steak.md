@@ -3,6 +3,7 @@ type: cut
 slug: reindeer_steak
 name: Reindeer Steak
 name_sv: Renfilé
+name_da: Rensdyrbøf
 category: game
 meat: reindeer
 cut_type: Reindeer

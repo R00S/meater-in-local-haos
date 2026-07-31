@@ -3,6 +3,7 @@ type: cut
 slug: pork_sausage
 name: Pork Sausage
 name_sv: Fläskkorv
+name_da: Svinepølse
 category: pork
 meat: pig
 cut_type: Ground

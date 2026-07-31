@@ -3,6 +3,7 @@ type: cut
 slug: lamb_neck_filet
 name: Lamb Neck Filet
 name_sv: Lammhalsfilé
+name_da: Lammehalsfilet
 category: lamb
 meat: lamb
 cut_type: Chops

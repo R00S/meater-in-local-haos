@@ -3,6 +3,7 @@ type: cut
 slug: chicken_burger
 name: Chicken Burger
 name_sv: Kycklingburgare
+name_da: Kyllingeburger
 category: poultry
 meat: ground_poultry
 cut_type: Ground

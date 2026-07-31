@@ -3,6 +3,7 @@ type: cut
 slug: pork_shoulder_steak
 name: Pork Shoulder Steak
 name_sv: Bogskiva
+name_da: Nakkekotelet
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin

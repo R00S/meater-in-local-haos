@@ -3,6 +3,7 @@ type: cut
 slug: pork_tenderloin
 name: Pork Tenderloin
 name_sv: Fläskfilé
+name_da: Svinemørbrad
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin

@@ -4165,6 +4165,13 @@ class KitchenCookingPanel extends LitElement {
     const showMeatSelector = meats.length > 1;
     const showCutTypeSelector = cutTypes.length > 1 || (cutTypes.length === 1 && this._selectedMeat);
     const recommendedDoneness = this._getRecommendedDoneness();
+    const availableDoneness = this._getAvailableDoneness();
+    const selectedDonenessOption = availableDoneness.find(opt => opt.value === this._selectedDoneness);
+    const selectedDonenessLabel = this._localizedField(
+      selectedDonenessOption,
+      'name',
+      this._selectedDoneness ? this._selectedDoneness.replace(/_/g, ' ') : '',
+    );
     const donenessTemps = this._selectedDoneness ? this._getTargetTempForDoneness(this._selectedDoneness) : null;
     const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
     const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
@@ -4357,7 +4364,7 @@ class KitchenCookingPanel extends LitElement {
               ${this._t('meater.safety_legend')}
             </p>
             <div class="doneness-grid">
-              ${this._getAvailableDoneness().map(opt => html`
+              ${availableDoneness.map(opt => html`
                 <button 
                   class="doneness-btn ${this._selectedDoneness === opt.value ? 'selected' : ''} ${opt.value === recommendedDoneness ? 'recommended' : ''}"
                   @click=${() => this._selectDoneness(opt.value)}
@@ -4427,7 +4434,7 @@ class KitchenCookingPanel extends LitElement {
                   <button 
                     class="reset-btn"
                     @click=${() => { this._customTargetTempC = null; }}>
-                    ${this._t('meater.reset_to')} ${donenessTemps ? this._convertTemp(donenessTemps.c) : ''} (${this._selectedDoneness ? this._selectedDoneness.replace('_', ' ') : ''})
+                    ${this._t('meater.reset_to')} ${donenessTemps ? this._convertTemp(donenessTemps.c) : ''} (${selectedDonenessLabel})
                   </button>
                 </div>
               ` : ''}
@@ -5921,9 +5928,12 @@ class KitchenCookingPanel extends LitElement {
    * - Falls back to a flat alphabetical grid when no cat info is present
    */
   _renderCategorizedIngredients(ingredients) {
-    const categoryLabels = (this._language === 'sv' && typeof AI_CATEGORY_LABELS_SV !== 'undefined')
-      ? AI_CATEGORY_LABELS_SV
-      : (typeof AI_CATEGORY_LABELS !== 'undefined' ? AI_CATEGORY_LABELS : {});
+    let categoryLabels = typeof AI_CATEGORY_LABELS !== 'undefined' ? AI_CATEGORY_LABELS : {};
+    if (this._language === 'sv' && typeof AI_CATEGORY_LABELS_SV !== 'undefined') {
+      categoryLabels = AI_CATEGORY_LABELS_SV;
+    } else if (this._language === 'da' && typeof AI_CATEGORY_LABELS_DA !== 'undefined') {
+      categoryLabels = AI_CATEGORY_LABELS_DA;
+    }
     const categoryOrder = (typeof AI_CATEGORY_ORDER !== 'undefined') ? AI_CATEGORY_ORDER : [];
 
     // Check if ingredients have category info
@@ -6045,9 +6055,12 @@ class KitchenCookingPanel extends LitElement {
     const subcat = this._ingredientProteinSubcat;
     const expandedCats = this._ingredientExpandedCats || [];
     const cat = 'p';
-    const subcatLabels = (this._language === 'sv' && typeof AI_PROTEIN_SUBCAT_LABELS_SV !== 'undefined')
-      ? AI_PROTEIN_SUBCAT_LABELS_SV
-      : (typeof AI_PROTEIN_SUBCAT_LABELS !== 'undefined' ? AI_PROTEIN_SUBCAT_LABELS : {});
+    let subcatLabels = typeof AI_PROTEIN_SUBCAT_LABELS !== 'undefined' ? AI_PROTEIN_SUBCAT_LABELS : {};
+    if (this._language === 'sv' && typeof AI_PROTEIN_SUBCAT_LABELS_SV !== 'undefined') {
+      subcatLabels = AI_PROTEIN_SUBCAT_LABELS_SV;
+    } else if (this._language === 'da' && typeof AI_PROTEIN_SUBCAT_LABELS_DA !== 'undefined') {
+      subcatLabels = AI_PROTEIN_SUBCAT_LABELS_DA;
+    }
 
     // Category icons for protein sub-groups
     const subcatIcons = {

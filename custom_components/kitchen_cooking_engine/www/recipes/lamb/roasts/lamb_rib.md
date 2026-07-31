@@ -3,6 +3,7 @@ type: cut
 slug: lamb_rib
 name: Lamb Rib
 name_sv: Lammrev
+name_da: Lammeribben
 category: lamb
 meat: lamb
 cut_type: Roasts

@@ -3,6 +3,7 @@ type: cut
 slug: ground_lamb
 name: Ground Lamb
 name_sv: Lammfärs
+name_da: Hakket lammekød
 category: lamb
 meat: lamb
 cut_type: Ground

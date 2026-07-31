@@ -3,6 +3,7 @@ type: cut
 slug: tomahawk
 name: Tomahawk Steak
 name_sv: Tomahawk
+name_da: Tomahawkbøf
 category: beef
 meat: cow
 cut_type: Steaks

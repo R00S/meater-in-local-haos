@@ -3,6 +3,7 @@ type: cut
 slug: arctic_char
 name: Arctic Char
 name_sv: Röding
+name_da: Fjeldørred
 category: fish
 meat: white_fish
 cut_type: White Fish

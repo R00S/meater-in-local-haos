@@ -3,6 +3,7 @@ type: cut
 slug: gilt_head_bream
 name: Gilt-Head Bream
 name_sv: Guldspirad
+name_da: Guldbrasen
 category: fish
 meat: white_fish
 cut_type: White Fish

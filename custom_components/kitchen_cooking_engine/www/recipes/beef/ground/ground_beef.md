@@ -3,6 +3,7 @@ type: cut
 slug: ground_beef
 name: Ground Beef
 name_sv: Nötfärs
+name_da: Hakket oksekød
 category: beef
 meat: cow
 cut_type: Ground

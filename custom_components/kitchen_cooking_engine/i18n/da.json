@@ -421,7 +421,15 @@
     "smoker": "Røgeovn",
     "air_fryer": "Airfryer",
     "sous_vide": "Sous vide",
-    "slow_cooker": "Slowcooker"
+    "slow_cooker": "Slowcooker",
+    "boil": "Kogning",
+    "braise": "Braisering",
+    "charcoal_grill": "Kulgrill",
+    "oven_broil": "Grillning i ovn",
+    "pressure_cooker": "Trykkoger",
+    "saute": "Sautering",
+    "steam": "Dampning",
+    "whole_roast": "Helstegning"
   },
   "appliances": {
     "title": "🔧 Køkkenapparater",

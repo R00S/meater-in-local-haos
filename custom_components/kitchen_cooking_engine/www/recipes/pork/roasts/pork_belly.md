@@ -3,6 +3,7 @@ type: cut
 slug: pork_belly
 name: Pork Belly
 name_sv: Sidfläsk
+name_da: Svinebryst
 category: pork
 meat: pig
 cut_type: Roasts

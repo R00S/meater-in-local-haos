@@ -485,7 +485,8 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
             url_path = f"/kitchen_cooking_engine_panel/{url_prefix}/{rel}"
 
             try:
-                content = open(path, encoding="utf-8").read()
+                with open(path, encoding="utf-8") as recipe_file:
+                    content = recipe_file.read()
             except Exception:
                 continue
 
@@ -563,13 +564,13 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
 
 # Category display data (mirrors cooking_data.py MeatCategory definitions)
 _CATEGORY_META = {
-    "beef":       {"icon": "🥩", "color": "#8B0000", "name_sv": "Nötkött"},
-    "pork":       {"icon": "🐷", "color": "#FFB6C1", "name_sv": "Fläskkött"},
-    "poultry":    {"icon": "🍗", "color": "#FFD700", "name_sv": "Fågel"},
-    "fish":       {"icon": "🐟", "color": "#4682B4", "name_sv": "Fisk"},
-    "lamb":       {"icon": "🐑", "color": "#800020", "name_sv": "Lamm"},
-    "game":       {"icon": "🦌", "color": "#2F4F4F", "name_sv": "Vilt"},
-    "vegetables": {"icon": "🥬", "color": "#228B22", "name_sv": "Grönsaker"},
+    "beef":       {"icon": "🥩", "color": "#8B0000", "name_sv": "Nötkött", "name_da": "Oksekød"},
+    "pork":       {"icon": "🐷", "color": "#FFB6C1", "name_sv": "Fläskkött", "name_da": "Svinekød"},
+    "poultry":    {"icon": "🍗", "color": "#FFD700", "name_sv": "Fågel", "name_da": "Fjerkræ"},
+    "fish":       {"icon": "🐟", "color": "#4682B4", "name_sv": "Fisk", "name_da": "Fisk"},
+    "lamb":       {"icon": "🐑", "color": "#800020", "name_sv": "Lamm", "name_da": "Lammekød"},
+    "game":       {"icon": "🦌", "color": "#2F4F4F", "name_sv": "Vilt", "name_da": "Vildt"},
+    "vegetables": {"icon": "🥬", "color": "#228B22", "name_sv": "Grönsaker", "name_da": "Grøntsager"},
 }
 
 # Swedish names for meat-level groupings (meat id → Swedish name)
@@ -610,6 +611,45 @@ _MEAT_NAME_SV = {
     "quail":          "Vaktel",
 }
 
+# Danish names for meat-level groupings (meat id → Danish name)
+_MEAT_NAME_DA = {
+    "cow":              "Okse",
+    "pig":              "Gris",
+    "chicken":          "Kylling",
+    "turkey":           "Kalkun",
+    "duck":             "And",
+    "goose":            "Gås",
+    "ground_poultry":   "Hakket fjerkræ",
+    "lamb":             "Lam",
+    "salmon":           "Laks",
+    "white_fish":       "Hvid fisk",
+    "tuna":             "Tun",
+    "shellfish":        "Skaldyr",
+    "oily_fish":        "Fed fisk",
+    "venison":          "Hjort",
+    "reindeer":         "Rensdyr",
+    "moose":            "Elg",
+    "wild_boar":        "Vildsvin",
+    "rabbit":           "Kanin",
+    "ostrich":          "Struds",
+    "kangaroo":         "Kænguru",
+    "bison":            "Bison",
+    "buffalo":          "Bøffel",
+    "mutton":           "Fårekød",
+    "goat":             "Ged",
+    "root_vegetables":  "Rodfrugter",
+    "green_vegetables": "Grønne grøntsager",
+    "alliums":          "Løgfamilien",
+    "mushrooms":        "Svampe",
+    "squash":           "Squash",
+    "peppers":          "Peberfrugter",
+    "eggplant":         "Aubergine",
+    "cruciferous":      "Kål",
+    "tomatoes":         "Tomater",
+    "corn":             "Majs",
+    "quail":            "Vagtel",
+}
+
 # Swedish names for cut_type-level groupings (cut_type display name → Swedish name)
 _CUT_TYPE_NAME_SV = {
     "Steaks":           "Biffar",
@@ -628,6 +668,75 @@ _CUT_TYPE_NAME_SV = {
     "Legs":             "Ben",
     "Oily Fish":        "Fet fisk",
     "Quail":            "Vaktel",
+}
+
+# Danish names for every live cut_type-level grouping
+_CUT_TYPE_NAME_DA = {
+    "Steaks":              "Bøffer",
+    "Roasts":              "Stege",
+    "Braising Cuts":       "Udskæringer til braisering",
+    "Ground":              "Hakket kød",
+    "Other / Offal":       "Andet / indmad",
+    "Chops":               "Koteletter",
+    "Chops & Tenderloin":  "Koteletter og mørbrad",
+    "Ribs":                "Ribben",
+    "Ham":                 "Skinke",
+    "Dark Meat":           "Mørkt kød",
+    "Whole":               "Hel",
+    "Breast":              "Bryst",
+    "Oily Fish":           "Fed fisk",
+    "Quail":               "Vagtel",
+    "Tuna":                "Tun",
+    "White Fish":          "Hvid fisk",
+    "Salmon":              "Laks",
+    "Shellfish":           "Skaldyr",
+    "Venison":             "Hjort",
+    "Buffalo":             "Bøffel",
+    "Bison":               "Bison",
+    "Reindeer":            "Rensdyr",
+    "Moose":               "Elg",
+    "Mutton":              "Fårekød",
+    "Ostrich":             "Struds",
+    "Kangaroo":            "Kænguru",
+    "Rabbit":              "Kanin",
+    "Goat":                "Ged",
+    "Wild Boar":           "Vildsvin",
+    "Goose":               "Gås",
+    "Duck":                "And",
+    "Turkey":              "Kalkun",
+    "Mushrooms":           "Svampe",
+    "Green Vegetables":    "Grønne grøntsager",
+    "Tomatoes":            "Tomater",
+    "Corn":                "Majs",
+    "Alliums":             "Løgfamilien",
+    "Cruciferous":         "Kål",
+    "Peppers":             "Peberfrugter",
+    "Root Vegetables":     "Rodfrugter",
+    "Eggplant":            "Aubergine",
+    "Squash":              "Squash",
+}
+
+_DONENESS_NAME_DA = {
+    "rare": "Rød",
+    "medium_rare": "Medium rare",
+    "medium": "Medium",
+    "medium_well": "Medium well",
+    "well_done": "Gennemstegt",
+    "pulled": "Trevlemør",
+    "safe": "Gennemstegt",
+    "tender": "Mør",
+    "just_cooked": "Netop tilberedt",
+    "done": "Færdigtilberedt",
+    "heated_through": "Gennemvarmet",
+    "crispy": "Sprød",
+    "dark_meat_optimal": "Mørt mørkt kød",
+    "thigh_optimal": "Mørt lårkød",
+    "thigh_rendered": "Lår med afsmeltet fedt",
+    "leg_rendered": "Lår med afsmeltet fedt",
+    "confit": "Confiteret",
+    "caramelized": "Karamelliseret",
+    "crisp_tender": "Mør med bid",
+    "charred": "Let forkullet",
 }
 
 _DONENESS_ICONS = {
@@ -691,7 +800,8 @@ def build_experimental_tree(base_dir):
                 continue
 
             try:
-                content = open(os.path.join(root, filename), encoding="utf-8").read()
+                with open(os.path.join(root, filename), encoding="utf-8") as recipe_file:
+                    content = recipe_file.read()
             except Exception:
                 continue
 
@@ -705,7 +815,9 @@ def build_experimental_tree(base_dir):
             slug = data.get("slug") or stem
             name = data.get("name") or slug.replace("_", " ").title()
             name_sv = data.get("name_sv")
+            name_da = data.get("name_da")
             description_sv = data.get("description_sv")
+            description_da = data.get("description_da")
             rec_doneness = data.get("recommended_doneness")
             methods = data.get("methods") or []
             doneness_list = data.get("doneness") or []
@@ -748,6 +860,9 @@ def build_experimental_tree(base_dir):
                     }
                     if d.get("name_sv"):
                         entry["name_sv"] = d["name_sv"]
+                    doneness_name_da = _DONENESS_NAME_DA.get(d_name)
+                    if doneness_name_da:
+                        entry["name_da"] = doneness_name_da
                     exp_doneness[d_name] = entry
 
             # Build hierarchy
@@ -757,6 +872,7 @@ def build_experimental_tree(base_dir):
                     "id": category,
                     "name": category.title(),
                     "name_sv": meta.get("name_sv"),
+                    "name_da": meta.get("name_da"),
                     "icon": meta["icon"],
                     "color": meta["color"],
                     "_meats": {},
@@ -772,6 +888,9 @@ def build_experimental_tree(base_dir):
                 meat_sv = _MEAT_NAME_SV.get(meat)
                 if meat_sv:
                     meat_entry["name_sv"] = meat_sv
+                meat_da = _MEAT_NAME_DA.get(meat)
+                if meat_da:
+                    meat_entry["name_da"] = meat_da
                 cat["_meats"][meat] = meat_entry
 
             meat_obj = cat["_meats"][meat]
@@ -787,6 +906,9 @@ def build_experimental_tree(base_dir):
                 ct_sv = _CUT_TYPE_NAME_SV.get(cut_type_name)
                 if ct_sv:
                     ct_entry["name_sv"] = ct_sv
+                ct_da = _CUT_TYPE_NAME_DA.get(cut_type_name)
+                if ct_da:
+                    ct_entry["name_da"] = ct_da
                 meat_obj["_cut_types"][ct_id] = ct_entry
 
             cut_obj = {
@@ -797,8 +919,12 @@ def build_experimental_tree(base_dir):
             }
             if name_sv:
                 cut_obj["name_sv"] = name_sv
+            if name_da:
+                cut_obj["name_da"] = name_da
             if description_sv:
                 cut_obj["description_sv"] = description_sv
+            if description_da:
+                cut_obj["description_da"] = description_da
             if rec_doneness:
                 cut_obj["recommended_doneness"] = rec_doneness
             if methods:
@@ -832,6 +958,8 @@ def build_experimental_tree(base_dir):
             }
             if meat_obj.get("name_sv"):
                 meat_entry["name_sv"] = meat_obj["name_sv"]
+            if meat_obj.get("name_da"):
+                meat_entry["name_da"] = meat_obj["name_da"]
             meats_list.append(meat_entry)
         cat_entry = {
             "id": cat["id"],
@@ -842,6 +970,8 @@ def build_experimental_tree(base_dir):
         }
         if cat.get("name_sv"):
             cat_entry["name_sv"] = cat["name_sv"]
+        if cat.get("name_da"):
+            cat_entry["name_da"] = cat["name_da"]
         exp_tree[cat_key] = cat_entry
 
     # Second pass: collect rest/carryover overrides from KCE:CUT_METHOD leaf files
@@ -855,7 +985,8 @@ def build_experimental_tree(base_dir):
             if "-" not in stem:
                 continue
             try:
-                content = open(os.path.join(root, filename), encoding="utf-8").read()
+                with open(os.path.join(root, filename), encoding="utf-8") as recipe_file:
+                    content = recipe_file.read()
             except Exception:
                 continue
             mdata = _parse_kce_tag(content, "CUT_METHOD")
@@ -885,6 +1016,45 @@ def build_experimental_tree(base_dir):
                         cut["method_overrides"] = method_override_map[slug]
 
     return exp_tree, exp_doneness
+
+
+def build_ai_protein_subcategories(exp_tree):
+    """Build AI protein cut lists and localized category labels."""
+    protein_subcats = {}
+    labels = {}
+    labels_sv = {}
+    labels_da = {}
+    protein_categories = {"beef", "pork", "poultry", "fish", "lamb", "game"}
+
+    for cat_id, cat_data in exp_tree.items():
+        if cat_id not in protein_categories:
+            continue
+        seen_slugs = set()
+        cuts_for_cat = []
+        for meat in cat_data.get("meats", []):
+            for cut_type in meat.get("cutTypes", []):
+                for cut in cut_type.get("cuts", []):
+                    slug = cut.get("id") or cut.get("slug")
+                    if not slug or slug in seen_slugs:
+                        continue
+                    seen_slugs.add(slug)
+                    entry = {
+                        "id": slug,
+                        "name": cut.get("name", slug.replace("_", " ").title()),
+                        "cat": "p",
+                    }
+                    if cut.get("name_sv"):
+                        entry["name_sv"] = cut["name_sv"]
+                    if cut.get("name_da"):
+                        entry["name_da"] = cut["name_da"]
+                    cuts_for_cat.append(entry)
+        if cuts_for_cat:
+            protein_subcats[cat_id] = cuts_for_cat
+            labels[cat_id] = cat_data.get("name", cat_id.title())
+            labels_sv[cat_id] = cat_data.get("name_sv") or labels[cat_id]
+            labels_da[cat_id] = cat_data.get("name_da") or labels[cat_id]
+
+    return protein_subcats, labels, labels_sv, labels_da
 
 
 def generate_js_data():
@@ -917,6 +1087,7 @@ def generate_js_data():
     ai_ingredient_categories = {}
     ai_category_labels = {}
     ai_category_labels_sv = {}
+    ai_category_labels_da = {}
     ai_category_order = []
     ai_assumed_staples = []
     ai_assumed_staples_sv = []
@@ -937,19 +1108,17 @@ def generate_js_data():
         ai_ingredient_categories = getattr(ai_data_module, 'INGREDIENT_CATEGORIES', {})
         ai_category_labels = getattr(ai_data_module, 'CATEGORY_LABELS', {})
         ai_category_labels_sv = getattr(ai_data_module, 'CATEGORY_LABELS_SV', {})
+        ai_category_labels_da = getattr(ai_data_module, 'CATEGORY_LABELS_DA', {})
         ai_category_order = getattr(ai_data_module, 'CATEGORY_ORDER', [])
         ai_assumed_staples = getattr(ai_data_module, 'ASSUMED_STAPLES', [])
         ai_assumed_staples_sv = getattr(ai_data_module, 'ASSUMED_STAPLES_SV', [])
         ai_ingredient_names_sv = getattr(ai_data_module, 'INGREDIENT_NAMES_SV', {})
         ai_protein_to_subcat = getattr(ai_data_module, 'PROTEIN_TO_SUBCAT', {})
-        ai_generic_protein_ids = list(getattr(ai_data_module, 'GENERIC_PROTEIN_IDS', set()))
+        ai_generic_protein_ids = sorted(getattr(ai_data_module, 'GENERIC_PROTEIN_IDS', set()))
     except Exception as e:
         print(f"Warning: Could not load AI Recipe Builder data: {e}")
-    # Derived data; initialised before enrichment so they always exist
+    # Derived data; initialised before enrichment so it always exists
     ai_common_ingredients_flat = []
-    ai_protein_subcats = {}
-    ai_protein_subcat_labels = {}
-    ai_protein_subcat_labels_sv = {}
 
     # Load cuisine ingredients from docs/cuisines/*.md (KCE:CUISINE files) via www/cuisines symlink.
     # These files are the single source of truth for AI_CUISINE_REGIONS and AI_CUISINE_TO_REGION.
@@ -1057,35 +1226,12 @@ def generate_js_data():
         f"{len(exp_tree)} categories from KCE:CUT tags"
     )
 
-    # Build AI_PROTEIN_SUBCATS from the experimental tree.
-    # Expose protein categories (beef, pork, poultry, fish, lamb, game) as drill-down groups.
-    _protein_categories = {"beef", "pork", "poultry", "fish", "lamb", "game"}
-    for cat_id, cat_data in exp_tree.items():
-        if cat_id not in _protein_categories:
-            continue
-        seen_slugs = set()
-        cuts_for_cat = []
-        for meat in cat_data.get("meats", []):
-            for cut_type in meat.get("cutTypes", []):
-                for cut in cut_type.get("cuts", []):
-                    slug = cut.get("id") or cut.get("slug")
-                    if not slug or slug in seen_slugs:
-                        continue
-                    seen_slugs.add(slug)
-                    entry = {
-                        "id": slug,
-                        "name": cut.get("name", slug.replace("_", " ").title()),
-                        "cat": "p",
-                    }
-                    if cut.get("name_sv"):
-                        entry["name_sv"] = cut["name_sv"]
-                    cuts_for_cat.append(entry)
-        if cuts_for_cat:
-            ai_protein_subcats[cat_id] = cuts_for_cat
-            ai_protein_subcat_labels[cat_id] = cat_data.get("name", cat_id.title())
-            ai_protein_subcat_labels_sv[cat_id] = (
-                cat_data.get("name_sv") or cat_data.get("name", cat_id.title())
-            )
+    (
+        ai_protein_subcats,
+        ai_protein_subcat_labels,
+        ai_protein_subcat_labels_sv,
+        ai_protein_subcat_labels_da,
+    ) = build_ai_protein_subcategories(exp_tree)
     print(
         f"  AI_PROTEIN_SUBCATS: {sum(len(v) for v in ai_protein_subcats.values())} cuts "
         f"across {len(ai_protein_subcats)} protein categories"
@@ -1116,6 +1262,7 @@ def generate_js_data():
     lines.append(f"const AI_PROTEIN_SUBCATS = {json.dumps(ai_protein_subcats, indent=2, ensure_ascii=False)};")
     lines.append(f"const AI_PROTEIN_SUBCAT_LABELS = {json.dumps(ai_protein_subcat_labels, indent=2, ensure_ascii=False)};")
     lines.append(f"const AI_PROTEIN_SUBCAT_LABELS_SV = {json.dumps(ai_protein_subcat_labels_sv, indent=2, ensure_ascii=False)};")
+    lines.append(f"const AI_PROTEIN_SUBCAT_LABELS_DA = {json.dumps(ai_protein_subcat_labels_da, indent=2, ensure_ascii=False)};")
     lines.append("")
     lines.append("// AI Recipe Builder - Cuisine-specific Ingredients (28 per cuisine)")
     lines.append(f"const AI_CUISINE_INGREDIENTS = {json.dumps(ai_cuisine_ingredients, indent=2, ensure_ascii=False)};")
@@ -1137,6 +1284,7 @@ def generate_js_data():
     lines.append("// AI Recipe Builder - Ingredient category labels and order")
     lines.append(f"const AI_CATEGORY_LABELS = {json.dumps(ai_category_labels, indent=2, ensure_ascii=False)};")
     lines.append(f"const AI_CATEGORY_LABELS_SV = {json.dumps(ai_category_labels_sv, indent=2, ensure_ascii=False)};")
+    lines.append(f"const AI_CATEGORY_LABELS_DA = {json.dumps(ai_category_labels_da, indent=2, ensure_ascii=False)};")
     lines.append(f"const AI_CATEGORY_ORDER = {json.dumps(ai_category_order, ensure_ascii=False)};")
     lines.append("")
     lines.append("// AI Recipe Builder - Assumed staples (always available, not shown in picker)")

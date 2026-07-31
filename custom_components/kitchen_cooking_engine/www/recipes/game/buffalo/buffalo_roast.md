@@ -3,6 +3,7 @@ type: cut
 slug: buffalo_roast
 name: Buffalo Roast
 name_sv: Buffelstek
+name_da: Bøffelsteg
 category: game
 meat: buffalo
 cut_type: Buffalo

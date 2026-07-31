@@ -3,6 +3,7 @@ type: cut
 slug: langoustine
 name: Langoustine
 name_sv: Havskräfta
+name_da: Jomfruhummer
 category: fish
 meat: shellfish
 cut_type: Shellfish

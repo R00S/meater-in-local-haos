@@ -3,6 +3,7 @@ type: cut
 slug: moose_roast
 name: Moose Roast
 name_sv: Älgstek
+name_da: Elgsteg
 category: game
 meat: moose
 cut_type: Moose

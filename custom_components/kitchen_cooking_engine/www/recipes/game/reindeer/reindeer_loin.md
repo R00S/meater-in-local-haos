@@ -3,6 +3,7 @@ type: cut
 slug: reindeer_loin
 name: Loin
 name_sv: Renfilé
+name_da: Rensdyrfilet
 category: game
 meat: reindeer
 cut_type: Reindeer

@@ -3,6 +3,7 @@ type: cut
 slug: mahi_mahi
 name: Mahi-Mahi
 name_sv: Mahi-mahi
+name_da: Mahi-mahi / guldmakrel
 category: fish
 meat: white_fish
 cut_type: White Fish

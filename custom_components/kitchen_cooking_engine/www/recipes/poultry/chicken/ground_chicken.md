@@ -3,6 +3,7 @@ type: cut
 slug: ground_chicken
 name: Ground Chicken
 name_sv: Kycklingfärs
+name_da: Hakket kyllingekød
 category: poultry
 meat: ground_poultry
 cut_type: Ground

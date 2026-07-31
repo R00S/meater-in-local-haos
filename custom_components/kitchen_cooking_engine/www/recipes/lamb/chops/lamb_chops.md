@@ -3,6 +3,7 @@ type: cut
 slug: lamb_chops
 name: Lamb Chops
 name_sv: Lammkotlett
+name_da: Lammekoteletter
 category: lamb
 meat: lamb
 cut_type: Chops

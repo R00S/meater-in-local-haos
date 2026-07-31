@@ -3,6 +3,7 @@ type: cut
 slug: green_beans
 name: Green Beans
 name_sv: Haricots verts
+name_da: Grønne bønner
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables

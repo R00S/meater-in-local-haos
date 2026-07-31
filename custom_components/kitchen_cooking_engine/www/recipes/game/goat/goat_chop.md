@@ -3,6 +3,7 @@ type: cut
 slug: goat_chop
 name: Goat Chop
 name_sv: Getkotlett
+name_da: Gedekotelet
 category: game
 meat: goat
 cut_type: Goat

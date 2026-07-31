@@ -3,6 +3,7 @@ type: cut
 slug: eel
 name: Eel
 name_sv: Ål
+name_da: Ål
 category: fish
 meat: oily_fish
 cut_type: Oily Fish

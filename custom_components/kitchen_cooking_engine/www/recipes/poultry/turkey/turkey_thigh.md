@@ -3,6 +3,7 @@ type: cut
 slug: turkey_thigh
 name: Turkey Thigh
 name_sv: Kalkonlår
+name_da: Kalkunoverlår
 category: poultry
 meat: turkey
 cut_type: Turkey

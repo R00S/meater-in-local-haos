@@ -3,6 +3,7 @@ type: cut
 slug: roasted_potatoes
 name: Roasted Potatoes
 name_sv: Rostad potatis
+name_da: Ovnstegte kartofler
 category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables

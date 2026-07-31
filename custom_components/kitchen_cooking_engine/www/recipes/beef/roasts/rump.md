@@ -3,6 +3,7 @@ type: cut
 slug: rump
 name: Rump
 name_sv: Rumstek
+name_da: Rumpsteak
 category: beef
 meat: cow
 cut_type: Roasts

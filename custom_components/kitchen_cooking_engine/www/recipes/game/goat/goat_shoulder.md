@@ -3,6 +3,7 @@ type: cut
 slug: goat_shoulder
 name: Goat Shoulder
 name_sv: Getskuldra
+name_da: Gedebov
 category: game
 meat: goat
 cut_type: Goat

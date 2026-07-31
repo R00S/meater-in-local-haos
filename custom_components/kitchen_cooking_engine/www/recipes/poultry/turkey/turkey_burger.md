@@ -3,6 +3,7 @@ type: cut
 slug: turkey_burger
 name: Turkey Burger
 name_sv: Kalkonburgare
+name_da: Kalkunburger
 category: poultry
 meat: ground_poultry
 cut_type: Ground

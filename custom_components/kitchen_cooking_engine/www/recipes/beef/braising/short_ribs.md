@@ -3,6 +3,7 @@ type: cut
 slug: short_ribs
 name: Short Ribs
 name_sv: Korta revben
+name_da: Oksetværreb
 category: beef
 meat: cow
 cut_type: Braising Cuts

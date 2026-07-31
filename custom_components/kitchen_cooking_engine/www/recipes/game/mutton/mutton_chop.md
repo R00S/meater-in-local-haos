@@ -3,6 +3,7 @@ type: cut
 slug: mutton_chop
 name: Mutton Chop
 name_sv: Fårkotlett
+name_da: Fårekotelet
 category: game
 meat: mutton
 cut_type: Mutton

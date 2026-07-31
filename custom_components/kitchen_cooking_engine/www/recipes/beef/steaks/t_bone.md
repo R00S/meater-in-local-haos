@@ -3,6 +3,7 @@ type: cut
 slug: t_bone
 name: T-Bone / Porterhouse
 name_sv: T-benstek
+name_da: T-bone / porterhouse
 category: beef
 meat: cow
 cut_type: Steaks

@@ -3,6 +3,7 @@ type: cut
 slug: bell_peppers
 name: Bell Peppers
 name_sv: Paprika
+name_da: Peberfrugter
 category: vegetables
 meat: peppers
 cut_type: Peppers

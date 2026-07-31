@@ -3,6 +3,7 @@ type: cut
 slug: pork_cheek
 name: Pork Cheek
 name_sv: Fläskkind
+name_da: Svinekæbe
 category: pork
 meat: pig
 cut_type: Other / Offal

@@ -3,6 +3,7 @@ type: cut
 slug: quail
 name: Quail
 name_sv: Vaktel
+name_da: Vagtel
 category: poultry
 meat: quail
 cut_type: Quail

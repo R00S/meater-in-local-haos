@@ -3,6 +3,7 @@ type: cut
 slug: ny_strip
 name: New York Strip
 name_sv: New York Strip
+name_da: New York strip
 category: beef
 meat: cow
 cut_type: Steaks

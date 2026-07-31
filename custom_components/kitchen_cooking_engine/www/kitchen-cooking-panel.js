@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 31 Jul 2026, 17:07 CET
+ * AUTO-GENERATED: 31 Jul 2026, 18:04 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 31 Jul 2026, 17:07 CET
+// Last generated: 31 Jul 2026, 18:04 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -1814,72 +1814,86 @@ const AI_COOKING_STYLES = [
   {
     "id": "quick_and_easy",
     "name": "Quick And Easy",
-    "name_sv": "Snabbt och enkelt"
+    "name_sv": "Snabbt och enkelt",
+    "name_da": "Hurtigt og nemt"
   },
   {
     "id": "comfort_food",
     "name": "Comfort Food",
-    "name_sv": "Husmanskost"
+    "name_sv": "Husmanskost",
+    "name_da": "Hyggemad"
   },
   {
     "id": "family_friendly",
     "name": "Family Friendly",
-    "name_sv": "Familjevänligt"
+    "name_sv": "Familjevänligt",
+    "name_da": "Familievenligt"
   },
   {
     "id": "healthy",
     "name": "Healthy",
-    "name_sv": "Hälsosamt"
+    "name_sv": "Hälsosamt",
+    "name_da": "Sundt"
   },
   {
     "id": "gourmet",
     "name": "Gourmet",
-    "name_sv": "Gourmet"
+    "name_sv": "Gourmet",
+    "name_da": "Gourmet"
   },
   {
     "id": "meal_prep",
     "name": "Meal Prep",
-    "name_sv": "Förberedd mat"
+    "name_sv": "Förberedd mat",
+    "name_da": "Forberedte måltider"
   },
   {
     "id": "one_pot",
     "name": "One Pot",
-    "name_sv": "Engrytarätt"
+    "name_sv": "Engrytarätt",
+    "name_da": "Alt i én gryde"
   },
   {
     "id": "slow_cook",
     "name": "Slow Cook",
-    "name_sv": "Långkok"
+    "name_sv": "Långkok",
+    "name_da": "Langtidstilberedning"
   },
   {
     "id": "barbeque",
     "name": "Barbeque",
-    "name_sv": "Grillat"
+    "name_sv": "Grillat",
+    "name_da": "Grillmad"
   },
   {
     "id": "baking",
     "name": "Baking",
-    "name_sv": "Bakning"
+    "name_sv": "Bakning",
+    "name_da": "Bagning"
   },
   {
     "id": "low_carb",
     "name": "Low Carb",
-    "name_sv": "Lågkolhydrat"
+    "name_sv": "Lågkolhydrat",
+    "name_da": "Kulhydratfattigt"
   },
   {
     "id": "high_protein",
     "name": "High Protein",
-    "name_sv": "Proteinrikt"
+    "name_sv": "Proteinrikt",
+    "name_da": "Proteinrigt"
   },
   {
     "id": "vegetarian",
     "name": "Vegetarian",
-    "name_sv": "Vegetariskt"
+    "name_sv": "Vegetariskt",
+    "name_da": "Vegetarisk"
   },
   {
     "id": "vegan",
     "name": "Vegan",
-    "name_sv": "Veganskt"
+    "name_sv": "Veganskt",
+    "name_da": "Vegansk"
   }
 ];
 
@@ -3129,211 +3143,246 @@ const AI_PROTEIN_SUBCATS = {
       "id": "tuna_steak",
       "name": "Tuna Steak",
       "cat": "p",
-      "name_sv": "Tonfiskbiff"
+      "name_sv": "Tonfiskbiff",
+      "name_da": "Tunbøf"
     },
     {
       "id": "arctic_char",
       "name": "Arctic Char",
       "cat": "p",
-      "name_sv": "Röding"
+      "name_sv": "Röding",
+      "name_da": "Fjeldørred"
     },
     {
       "id": "burbot",
       "name": "Burbot",
       "cat": "p",
-      "name_sv": "Lake"
+      "name_sv": "Lake",
+      "name_da": "Knude"
     },
     {
       "id": "cod_fillet",
       "name": "Cod Fillet",
       "cat": "p",
-      "name_sv": "Torskfilé"
+      "name_sv": "Torskfilé",
+      "name_da": "Torskefilet"
     },
     {
       "id": "flounder",
       "name": "Flounder",
       "cat": "p",
-      "name_sv": "Flundra"
+      "name_sv": "Flundra",
+      "name_da": "Skrubbe"
     },
     {
       "id": "gilt_head_bream",
       "name": "Gilt-Head Bream",
       "cat": "p",
-      "name_sv": "Guldspirad"
+      "name_sv": "Guldspirad",
+      "name_da": "Guldbrasen"
     },
     {
       "id": "grayling",
       "name": "Grayling",
       "cat": "p",
-      "name_sv": "Harr"
+      "name_sv": "Harr",
+      "name_da": "Stalling"
     },
     {
       "id": "haddock",
       "name": "Haddock Fillet",
       "cat": "p",
-      "name_sv": "Kolja"
+      "name_sv": "Kolja",
+      "name_da": "Kullerfilet"
     },
     {
       "id": "hake",
       "name": "Hake Fillet",
       "cat": "p",
-      "name_sv": "Kummel"
+      "name_sv": "Kummel",
+      "name_da": "Kulmulefilet"
     },
     {
       "id": "halibut_fillet",
       "name": "Halibut Fillet",
       "cat": "p",
-      "name_sv": "Hälleflundrafilé"
+      "name_sv": "Hälleflundrafilé",
+      "name_da": "Helleflynderfilet"
     },
     {
       "id": "mahi_mahi",
       "name": "Mahi-Mahi",
       "cat": "p",
-      "name_sv": "Mahi-mahi"
+      "name_sv": "Mahi-mahi",
+      "name_da": "Mahi-mahi / guldmakrel"
     },
     {
       "id": "monkfish",
       "name": "Monkfish",
       "cat": "p",
-      "name_sv": "Marulk"
+      "name_sv": "Marulk",
+      "name_da": "Havtaske"
     },
     {
       "id": "perch",
       "name": "Perch",
       "cat": "p",
-      "name_sv": "Abborre"
+      "name_sv": "Abborre",
+      "name_da": "Aborre"
     },
     {
       "id": "pike",
       "name": "Pike",
       "cat": "p",
-      "name_sv": "Gädda"
+      "name_sv": "Gädda",
+      "name_da": "Gedde"
     },
     {
       "id": "pikeperch",
       "name": "Pikeperch",
       "cat": "p",
-      "name_sv": "Gös"
+      "name_sv": "Gös",
+      "name_da": "Sandart"
     },
     {
       "id": "plaice",
       "name": "Plaice",
       "cat": "p",
-      "name_sv": "Rödspätta"
+      "name_sv": "Rödspätta",
+      "name_da": "Rødspætte"
     },
     {
       "id": "pollock",
       "name": "Pollock",
       "cat": "p",
-      "name_sv": "Sei"
+      "name_sv": "Sei",
+      "name_da": "Sej"
     },
     {
       "id": "redfish",
       "name": "Redfish",
       "cat": "p",
-      "name_sv": "Uer"
+      "name_sv": "Uer",
+      "name_da": "Rødfisk"
     },
     {
       "id": "sea_bass",
       "name": "Sea Bass",
       "cat": "p",
-      "name_sv": "Havsabborre"
+      "name_sv": "Havsabborre",
+      "name_da": "Havbars"
     },
     {
       "id": "sole",
       "name": "Sole",
       "cat": "p",
-      "name_sv": "Sjötunga"
+      "name_sv": "Sjötunga",
+      "name_da": "Søtunge"
     },
     {
       "id": "swordfish",
       "name": "Swordfish Steak",
       "cat": "p",
-      "name_sv": "Svärdfisk"
+      "name_sv": "Svärdfisk",
+      "name_da": "Sværdfiskebøf"
     },
     {
       "id": "trout",
       "name": "Trout Fillet",
       "cat": "p",
-      "name_sv": "Forell"
+      "name_sv": "Forell",
+      "name_da": "Ørredfilet"
     },
     {
       "id": "turbot",
       "name": "Turbot",
       "cat": "p",
-      "name_sv": "Piggvar"
+      "name_sv": "Piggvar",
+      "name_da": "Pighvar"
     },
     {
       "id": "whitefish",
       "name": "Whitefish",
       "cat": "p",
-      "name_sv": "Sik"
+      "name_sv": "Sik",
+      "name_da": "Helt"
     },
     {
       "id": "salmon_fillet",
       "name": "Salmon Fillet",
       "cat": "p",
-      "name_sv": "Laxfilé"
+      "name_sv": "Laxfilé",
+      "name_da": "Laksefilet"
     },
     {
       "id": "salmon_steak",
       "name": "Salmon Steak",
       "cat": "p",
-      "name_sv": "Laxbiff"
+      "name_sv": "Laxbiff",
+      "name_da": "Laksebøf"
     },
     {
       "id": "whole_salmon",
       "name": "Whole Salmon",
       "cat": "p",
-      "name_sv": "Hel lax"
+      "name_sv": "Hel lax",
+      "name_da": "Hel laks"
     },
     {
       "id": "baltic_herring",
       "name": "Baltic Herring",
       "cat": "p",
-      "name_sv": "Strömming"
+      "name_sv": "Strömming",
+      "name_da": "Østersøsild"
     },
     {
       "id": "eel",
       "name": "Eel",
       "cat": "p",
-      "name_sv": "Ål"
+      "name_sv": "Ål",
+      "name_da": "Ål"
     },
     {
       "id": "herring",
       "name": "Herring",
       "cat": "p",
-      "name_sv": "Sill"
+      "name_sv": "Sill",
+      "name_da": "Sild"
     },
     {
       "id": "mackerel",
       "name": "Mackerel",
       "cat": "p",
-      "name_sv": "Makrill"
+      "name_sv": "Makrill",
+      "name_da": "Makrel"
     },
     {
       "id": "langoustine",
       "name": "Langoustine",
       "cat": "p",
-      "name_sv": "Havskräfta"
+      "name_sv": "Havskräfta",
+      "name_da": "Jomfruhummer"
     },
     {
       "id": "lobster_tail",
       "name": "Lobster Tail",
       "cat": "p",
-      "name_sv": "Hummersvans"
+      "name_sv": "Hummersvans",
+      "name_da": "Hummerhale"
     },
     {
       "id": "scallops",
       "name": "Scallops",
       "cat": "p",
-      "name_sv": "Pilgrimsmusslor"
+      "name_sv": "Pilgrimsmusslor",
+      "name_da": "Kammuslinger"
     },
     {
       "id": "shrimp",
       "name": "Shrimp",
       "cat": "p",
-      "name_sv": "Räkor"
+      "name_sv": "Räkor",
+      "name_da": "Rejer"
     }
   ],
   "beef": [
@@ -3341,181 +3390,211 @@ const AI_PROTEIN_SUBCATS = {
       "id": "beef_tenderloin_roast",
       "name": "Beef Tenderloin Roast",
       "cat": "p",
-      "name_sv": "Oxfiléstek"
+      "name_sv": "Oxfiléstek",
+      "name_da": "Hel oksemørbrad"
     },
     {
       "id": "prime_rib",
       "name": "Prime Rib / Standing Rib Roast",
       "cat": "p",
-      "name_sv": "Entrecôtestek"
+      "name_sv": "Entrecôtestek",
+      "name_da": "Højrebssteg"
     },
     {
       "id": "roasting_joint",
       "name": "Roasting Joint",
       "cat": "p",
-      "name_sv": "Stekkött"
+      "name_sv": "Stekkött",
+      "name_da": "Oksesteg"
     },
     {
       "id": "round_roast",
       "name": "Round Roast",
       "cat": "p",
-      "name_sv": "Rundstek"
+      "name_sv": "Rundstek",
+      "name_da": "Lårsteg"
     },
     {
       "id": "rump",
       "name": "Rump",
       "cat": "p",
-      "name_sv": "Rumstek"
+      "name_sv": "Rumstek",
+      "name_da": "Rumpsteak"
     },
     {
       "id": "rump_roast",
       "name": "Rump Roast",
       "cat": "p",
-      "name_sv": "Rumpstek"
+      "name_sv": "Rumpstek",
+      "name_da": "Rumpsteg"
     },
     {
       "id": "sirloin_roast",
       "name": "Sirloin Roast",
       "cat": "p",
-      "name_sv": "Ryggbiffsstek"
+      "name_sv": "Ryggbiffsstek",
+      "name_da": "Tykstegsfilet"
     },
     {
       "id": "sirloin_tip_roast",
       "name": "Sirloin Tip Roast",
       "cat": "p",
-      "name_sv": "Spetsrumstek"
+      "name_sv": "Spetsrumstek",
+      "name_da": "Klumpsteg"
     },
     {
       "id": "top_round_roast",
       "name": "Top Round Roast",
       "cat": "p",
-      "name_sv": "Innanlårstek"
+      "name_sv": "Innanlårstek",
+      "name_da": "Inderlårssteg"
     },
     {
       "id": "filet_mignon",
       "name": "Filet Mignon / Tenderloin Steak",
       "cat": "p",
-      "name_sv": "Oxfilé"
+      "name_sv": "Oxfilé",
+      "name_da": "Oksemørbradbøf"
     },
     {
       "id": "flank_steak",
       "name": "Flank Steak",
       "cat": "p",
-      "name_sv": "Flankstek"
+      "name_sv": "Flankstek",
+      "name_da": "Okseflanksteak"
     },
     {
       "id": "flat_iron",
       "name": "Flat Iron Steak",
       "cat": "p",
-      "name_sv": "Flat Iron"
+      "name_sv": "Flat Iron",
+      "name_da": "Flat iron-steak"
     },
     {
       "id": "hanger_steak",
       "name": "Hanger Steak",
       "cat": "p",
-      "name_sv": "Hängare"
+      "name_sv": "Hängare",
+      "name_da": "Nyretapper"
     },
     {
       "id": "ny_strip",
       "name": "New York Strip",
       "cat": "p",
-      "name_sv": "New York Strip"
+      "name_sv": "New York Strip",
+      "name_da": "New York strip"
     },
     {
       "id": "picanha",
       "name": "Picanha",
       "cat": "p",
-      "name_sv": "Picanha"
+      "name_sv": "Picanha",
+      "name_da": "Picanha / culotte"
     },
     {
       "id": "ribeye_steak",
       "name": "Ribeye Steak",
       "cat": "p",
-      "name_sv": "Entrecôte"
+      "name_sv": "Entrecôte",
+      "name_da": "Ribeyebøf"
     },
     {
       "id": "sirloin_steak",
       "name": "Sirloin Steak",
       "cat": "p",
-      "name_sv": "Ryggbiff"
+      "name_sv": "Ryggbiff",
+      "name_da": "Bøf af tykstegsfilet"
     },
     {
       "id": "skirt_steak",
       "name": "Skirt Steak",
       "cat": "p",
-      "name_sv": "Skirt"
+      "name_sv": "Skirt",
+      "name_da": "Skirt steak"
     },
     {
       "id": "t_bone",
       "name": "T-Bone / Porterhouse",
       "cat": "p",
-      "name_sv": "T-benstek"
+      "name_sv": "T-benstek",
+      "name_da": "T-bone / porterhouse"
     },
     {
       "id": "tomahawk",
       "name": "Tomahawk Steak",
       "cat": "p",
-      "name_sv": "Tomahawk"
+      "name_sv": "Tomahawk",
+      "name_da": "Tomahawkbøf"
     },
     {
       "id": "tri_tip",
       "name": "Tri-Tip",
       "cat": "p",
-      "name_sv": "Tri-tip"
+      "name_sv": "Tri-tip",
+      "name_da": "Tri-tip"
     },
     {
       "id": "beef_burger",
       "name": "Beef Burger / Ground Beef Patty",
       "cat": "p",
-      "name_sv": "Nötburgare"
+      "name_sv": "Nötburgare",
+      "name_da": "Hakkebøf"
     },
     {
       "id": "ground_beef",
       "name": "Ground Beef",
       "cat": "p",
-      "name_sv": "Nötfärs"
+      "name_sv": "Nötfärs",
+      "name_da": "Hakket oksekød"
     },
     {
       "id": "meatloaf",
       "name": "Meatloaf",
       "cat": "p",
-      "name_sv": "Köttfärslimpa"
+      "name_sv": "Köttfärslimpa",
+      "name_da": "Farsbrød"
     },
     {
       "id": "beef_liver",
       "name": "Beef Liver",
       "cat": "p",
-      "name_sv": "Nötlever"
+      "name_sv": "Nötlever",
+      "name_da": "Okselever"
     },
     {
       "id": "beef_tongue",
       "name": "Beef Tongue",
       "cat": "p",
-      "name_sv": "Oxtunga"
+      "name_sv": "Oxtunga",
+      "name_da": "Oksetunge"
     },
     {
       "id": "beef_shank",
       "name": "Beef Shank / Osso Buco",
       "cat": "p",
-      "name_sv": "Oxlägg"
+      "name_sv": "Oxlägg",
+      "name_da": "Okseskank / osso buco"
     },
     {
       "id": "brisket",
       "name": "Brisket",
       "cat": "p",
-      "name_sv": "Bringa"
+      "name_sv": "Bringa",
+      "name_da": "Oksespidsbryst"
     },
     {
       "id": "chuck_roast",
       "name": "Chuck Roast / Pot Roast",
       "cat": "p",
-      "name_sv": "Grytbiff"
+      "name_sv": "Grytbiff",
+      "name_da": "Oksetykkam"
     },
     {
       "id": "short_ribs",
       "name": "Short Ribs",
       "cat": "p",
-      "name_sv": "Korta revben"
+      "name_sv": "Korta revben",
+      "name_da": "Oksetværreb"
     }
   ],
   "pork": [
@@ -3523,139 +3602,162 @@ const AI_PROTEIN_SUBCATS = {
       "id": "pork_chop",
       "name": "Pork Chop",
       "cat": "p",
-      "name_sv": "Fläskkotlett"
+      "name_sv": "Fläskkotlett",
+      "name_da": "Svinekotelet"
     },
     {
       "id": "pork_loin_steak",
       "name": "Pork Loin Steak",
       "cat": "p",
-      "name_sv": "Karré"
+      "name_sv": "Karré",
+      "name_da": "Kotelet uden ben"
     },
     {
       "id": "pork_shoulder_steak",
       "name": "Pork Shoulder Steak",
       "cat": "p",
-      "name_sv": "Bogskiva"
+      "name_sv": "Bogskiva",
+      "name_da": "Nakkekotelet"
     },
     {
       "id": "pork_tenderloin",
       "name": "Pork Tenderloin",
       "cat": "p",
-      "name_sv": "Fläskfilé"
+      "name_sv": "Fläskfilé",
+      "name_da": "Svinemørbrad"
     },
     {
       "id": "secreto",
       "name": "Secreto (Ibérico Pork)",
       "cat": "p",
-      "name_sv": "Secreto"
+      "name_sv": "Secreto",
+      "name_da": "Secreto af iberisk gris"
     },
     {
       "id": "baby_back_ribs",
       "name": "Baby Back Ribs",
       "cat": "p",
-      "name_sv": "Revbensspjäll"
+      "name_sv": "Revbensspjäll",
+      "name_da": "Kamben"
     },
     {
       "id": "spare_ribs",
       "name": "Spare Ribs",
       "cat": "p",
-      "name_sv": "Spareribs"
+      "name_sv": "Spareribs",
+      "name_da": "Revelsben"
     },
     {
       "id": "st_louis_ribs",
       "name": "St. Louis Style Ribs",
       "cat": "p",
-      "name_sv": "St. Louis-revben"
+      "name_sv": "St. Louis-revben",
+      "name_da": "St. Louis-spareribs"
     },
     {
       "id": "cured_ham",
       "name": "Cured Ham (Pre-cooked)",
       "cat": "p",
-      "name_sv": "Rökt skinka"
+      "name_sv": "Rökt skinka",
+      "name_da": "Saltet, forkogt skinke"
     },
     {
       "id": "fresh_ham",
       "name": "Fresh Ham",
       "cat": "p",
-      "name_sv": "Färsk skinka"
+      "name_sv": "Färsk skinka",
+      "name_da": "Skinkesteg"
     },
     {
       "id": "ham",
       "name": "Ham",
       "cat": "p",
-      "name_sv": "Skinka"
+      "name_sv": "Skinka",
+      "name_da": "Skinke"
     },
     {
       "id": "pork_belly",
       "name": "Pork Belly",
       "cat": "p",
-      "name_sv": "Sidfläsk"
+      "name_sv": "Sidfläsk",
+      "name_da": "Svinebryst"
     },
     {
       "id": "pork_leg",
       "name": "Pork Leg Roast",
       "cat": "p",
-      "name_sv": "Fläsklägg"
+      "name_sv": "Fläsklägg",
+      "name_da": "Svineskank"
     },
     {
       "id": "pork_loin_roast",
       "name": "Pork Loin Roast",
       "cat": "p",
-      "name_sv": "Karréstek"
+      "name_sv": "Karréstek",
+      "name_da": "Svinekam / flæskesteg"
     },
     {
       "id": "pork_shoulder",
       "name": "Pork Shoulder / Boston Butt",
       "cat": "p",
-      "name_sv": "Fläskbog"
+      "name_sv": "Fläskbog",
+      "name_da": "Nakkefilet"
     },
     {
       "id": "ground_pork",
       "name": "Ground Pork",
       "cat": "p",
-      "name_sv": "Fläskfärs"
+      "name_sv": "Fläskfärs",
+      "name_da": "Hakket svinekød"
     },
     {
       "id": "pork_sausage",
       "name": "Pork Sausage",
       "cat": "p",
-      "name_sv": "Fläskkorv"
+      "name_sv": "Fläskkorv",
+      "name_da": "Svinepølse"
     },
     {
       "id": "cheek",
       "name": "Cheek",
       "cat": "p",
-      "name_sv": "Kindkött"
+      "name_sv": "Kindkött",
+      "name_da": "Kindkød"
     },
     {
       "id": "liver_pork",
       "name": "Liver",
       "cat": "p",
-      "name_sv": "Fläsklever"
+      "name_sv": "Fläsklever",
+      "name_da": "Lever"
     },
     {
       "id": "pork_cheek",
       "name": "Pork Cheek",
       "cat": "p",
-      "name_sv": "Fläskkind"
+      "name_sv": "Fläskkind",
+      "name_da": "Svinekæbe"
     },
     {
       "id": "pork_jowl",
       "name": "Pork Jowl / Guanciale",
       "cat": "p",
-      "name_sv": "Kindkött"
+      "name_sv": "Kindkött",
+      "name_da": "Guanciale / svinekæbe"
     },
     {
       "id": "pork_liver",
       "name": "Pork Liver",
       "cat": "p",
-      "name_sv": "Fläsklever"
+      "name_sv": "Fläsklever",
+      "name_da": "Svinelever"
     },
     {
       "id": "pork_tongue",
       "name": "Pork Tongue",
       "cat": "p",
-      "name_sv": "Fläsktunga"
+      "name_sv": "Fläsktunga",
+      "name_da": "Svinetunge"
     }
   ],
   "game": [
@@ -3663,193 +3765,225 @@ const AI_PROTEIN_SUBCATS = {
       "id": "venison_leg",
       "name": "Leg",
       "cat": "p",
-      "name_sv": "Hjortlår"
+      "name_sv": "Hjortlår",
+      "name_da": "Hjortekølle"
     },
     {
       "id": "venison_loin",
       "name": "Venison Loin",
       "cat": "p",
-      "name_sv": "Hjortfilé"
+      "name_sv": "Hjortfilé",
+      "name_da": "Hjortefilet"
     },
     {
       "id": "venison_roast",
       "name": "Venison Roast",
       "cat": "p",
-      "name_sv": "Hjortstek"
+      "name_sv": "Hjortstek",
+      "name_da": "Hjortesteg"
     },
     {
       "id": "venison_shoulder",
       "name": "Shoulder",
       "cat": "p",
-      "name_sv": "Hjortskuldra"
+      "name_sv": "Hjortskuldra",
+      "name_da": "Hjortebov"
     },
     {
       "id": "venison_steak",
       "name": "Venison Steak",
       "cat": "p",
-      "name_sv": "Hjortbiff"
+      "name_sv": "Hjortbiff",
+      "name_da": "Hjortebøf"
     },
     {
       "id": "buffalo_burger",
       "name": "Burger",
       "cat": "p",
-      "name_sv": "Buffelburgare"
+      "name_sv": "Buffelburgare",
+      "name_da": "Bøffelburger"
     },
     {
       "id": "buffalo_roast",
       "name": "Buffalo Roast",
       "cat": "p",
-      "name_sv": "Buffelstek"
+      "name_sv": "Buffelstek",
+      "name_da": "Bøffelsteg"
     },
     {
       "id": "buffalo_steak",
       "name": "Buffalo Steak",
       "cat": "p",
-      "name_sv": "Buffelbiff"
+      "name_sv": "Buffelbiff",
+      "name_da": "Bøffelbøf"
     },
     {
       "id": "bison_burger",
       "name": "Bison Burger",
       "cat": "p",
-      "name_sv": "Bisonburgare"
+      "name_sv": "Bisonburgare",
+      "name_da": "Bisonburger"
     },
     {
       "id": "bison_roast",
       "name": "Bison Roast",
       "cat": "p",
-      "name_sv": "Bisonstek"
+      "name_sv": "Bisonstek",
+      "name_da": "Bisonsteg"
     },
     {
       "id": "bison_steak",
       "name": "Bison Steak",
       "cat": "p",
-      "name_sv": "Bisonbiff"
+      "name_sv": "Bisonbiff",
+      "name_da": "Bisonbøf"
     },
     {
       "id": "reindeer_loin",
       "name": "Loin",
       "cat": "p",
-      "name_sv": "Renfilé"
+      "name_sv": "Renfilé",
+      "name_da": "Rensdyrfilet"
     },
     {
       "id": "reindeer_roast",
       "name": "Reindeer Roast",
       "cat": "p",
-      "name_sv": "Renstek"
+      "name_sv": "Renstek",
+      "name_da": "Rensdyrsteg"
     },
     {
       "id": "reindeer_steak",
       "name": "Reindeer Steak",
       "cat": "p",
-      "name_sv": "Renfilé"
+      "name_sv": "Renfilé",
+      "name_da": "Rensdyrbøf"
     },
     {
       "id": "moose_roast",
       "name": "Moose Roast",
       "cat": "p",
-      "name_sv": "Älgstek"
+      "name_sv": "Älgstek",
+      "name_da": "Elgsteg"
     },
     {
       "id": "moose_steak",
       "name": "Moose Steak",
       "cat": "p",
-      "name_sv": "Älgbiff"
+      "name_sv": "Älgbiff",
+      "name_da": "Elgbøf"
     },
     {
       "id": "mutton_chop",
       "name": "Mutton Chop",
       "cat": "p",
-      "name_sv": "Fårkotlett"
+      "name_sv": "Fårkotlett",
+      "name_da": "Fårekotelet"
     },
     {
       "id": "mutton_leg",
       "name": "Mutton Leg Roast",
       "cat": "p",
-      "name_sv": "Fårlår"
+      "name_sv": "Fårlår",
+      "name_da": "Fårekølle"
     },
     {
       "id": "mutton_shoulder",
       "name": "Mutton Shoulder",
       "cat": "p",
-      "name_sv": "Fårskuldra"
+      "name_sv": "Fårskuldra",
+      "name_da": "Fårebov"
     },
     {
       "id": "mutton_shoulder_alt",
       "name": "Shoulder",
       "cat": "p",
-      "name_sv": "Fårskuldra"
+      "name_sv": "Fårskuldra",
+      "name_da": "Bov"
     },
     {
       "id": "ostrich_fillet",
       "name": "Ostrich Fillet",
       "cat": "p",
-      "name_sv": "Strutsfilé"
+      "name_sv": "Strutsfilé",
+      "name_da": "Strudsefilet"
     },
     {
       "id": "ostrich_steak",
       "name": "Ostrich Steak",
       "cat": "p",
-      "name_sv": "Strutsfilé"
+      "name_sv": "Strutsfilé",
+      "name_da": "Strudsebøf"
     },
     {
       "id": "kangaroo_fillet",
       "name": "Kangaroo Fillet",
       "cat": "p",
-      "name_sv": "Kängurufilé"
+      "name_sv": "Kängurufilé",
+      "name_da": "Kængurufilet"
     },
     {
       "id": "kangaroo_steak",
       "name": "Kangaroo Steak",
       "cat": "p",
-      "name_sv": "Kängurufilé"
+      "name_sv": "Kängurufilé",
+      "name_da": "Kængurubøf"
     },
     {
       "id": "rabbit_legs",
       "name": "Rabbit Legs",
       "cat": "p",
-      "name_sv": "Kaninlår"
+      "name_sv": "Kaninlår",
+      "name_da": "Kaninlår"
     },
     {
       "id": "rabbit_saddle",
       "name": "Rabbit Saddle",
       "cat": "p",
-      "name_sv": "Kaninsadel"
+      "name_sv": "Kaninsadel",
+      "name_da": "Kaninryg"
     },
     {
       "id": "goat_chop",
       "name": "Goat Chop",
       "cat": "p",
-      "name_sv": "Getkotlett"
+      "name_sv": "Getkotlett",
+      "name_da": "Gedekotelet"
     },
     {
       "id": "goat_leg",
       "name": "Goat Leg Roast",
       "cat": "p",
-      "name_sv": "Getlår"
+      "name_sv": "Getlår",
+      "name_da": "Gedekølle"
     },
     {
       "id": "goat_shank",
       "name": "Goat Shank",
       "cat": "p",
-      "name_sv": "Getlägg"
+      "name_sv": "Getlägg",
+      "name_da": "Gedeskank"
     },
     {
       "id": "goat_shoulder",
       "name": "Goat Shoulder",
       "cat": "p",
-      "name_sv": "Getskuldra"
+      "name_sv": "Getskuldra",
+      "name_da": "Gedebov"
     },
     {
       "id": "wild_boar_chop",
       "name": "Wild Boar Chop",
       "cat": "p",
-      "name_sv": "Vildsvinskotlett"
+      "name_sv": "Vildsvinskotlett",
+      "name_da": "Vildsvinekotelet"
     },
     {
       "id": "wild_boar_shoulder",
       "name": "Wild Boar Shoulder",
       "cat": "p",
-      "name_sv": "Vildsvinsskuldra"
+      "name_sv": "Vildsvinsskuldra",
+      "name_da": "Vildsvinebov"
     }
   ],
   "lamb": [
@@ -3857,97 +3991,113 @@ const AI_PROTEIN_SUBCATS = {
       "id": "lamb_chops",
       "name": "Lamb Chops",
       "cat": "p",
-      "name_sv": "Lammkotlett"
+      "name_sv": "Lammkotlett",
+      "name_da": "Lammekoteletter"
     },
     {
       "id": "lamb_cutlet",
       "name": "Lamb Cutlet",
       "cat": "p",
-      "name_sv": "Lammkotlett"
+      "name_sv": "Lammkotlett",
+      "name_da": "Lammekotelet"
     },
     {
       "id": "lamb_loin_chops",
       "name": "Lamb Loin Chops",
       "cat": "p",
-      "name_sv": "Lammlårkotlett"
+      "name_sv": "Lammlårkotlett",
+      "name_da": "Lammerygkoteletter"
     },
     {
       "id": "lamb_neck_filet",
       "name": "Lamb Neck Filet",
       "cat": "p",
-      "name_sv": "Lammhalsfilé"
+      "name_sv": "Lammhalsfilé",
+      "name_da": "Lammehalsfilet"
     },
     {
       "id": "lamb_brisket",
       "name": "Lamb Brisket",
       "cat": "p",
-      "name_sv": "Lammbringa"
+      "name_sv": "Lammbringa",
+      "name_da": "Lammebryst"
     },
     {
       "id": "lamb_loin_roast",
       "name": "Lamb Loin Roast",
       "cat": "p",
-      "name_sv": "Lammlårstek"
+      "name_sv": "Lammlårstek",
+      "name_da": "Lammeryg"
     },
     {
       "id": "lamb_neck",
       "name": "Lamb Neck",
       "cat": "p",
-      "name_sv": "Lammhals"
+      "name_sv": "Lammhals",
+      "name_da": "Lammehals"
     },
     {
       "id": "lamb_rib",
       "name": "Lamb Rib",
       "cat": "p",
-      "name_sv": "Lammrev"
+      "name_sv": "Lammrev",
+      "name_da": "Lammeribben"
     },
     {
       "id": "lamb_rump",
       "name": "Lamb Rump",
       "cat": "p",
-      "name_sv": "Lammrumstek"
+      "name_sv": "Lammrumstek",
+      "name_da": "Lammeculotte"
     },
     {
       "id": "leg_of_lamb",
       "name": "Leg of Lamb",
       "cat": "p",
-      "name_sv": "Lammlår"
+      "name_sv": "Lammlår",
+      "name_da": "Lammekølle"
     },
     {
       "id": "rack_of_lamb",
       "name": "Rack of Lamb",
       "cat": "p",
-      "name_sv": "Lammracks"
+      "name_sv": "Lammracks",
+      "name_da": "Lammecarré"
     },
     {
       "id": "lamb_shank",
       "name": "Shank",
       "cat": "p",
-      "name_sv": "Lammlägg"
+      "name_sv": "Lammlägg",
+      "name_da": "Lammeskank"
     },
     {
       "id": "lamb_shoulder",
       "name": "Shoulder",
       "cat": "p",
-      "name_sv": "Lammskuldra"
+      "name_sv": "Lammskuldra",
+      "name_da": "Lammebov"
     },
     {
       "id": "ground_lamb",
       "name": "Ground Lamb",
       "cat": "p",
-      "name_sv": "Lammfärs"
+      "name_sv": "Lammfärs",
+      "name_da": "Hakket lammekød"
     },
     {
       "id": "lamb_burger",
       "name": "Lamb Burger",
       "cat": "p",
-      "name_sv": "Lammburgare"
+      "name_sv": "Lammburgare",
+      "name_da": "Lammeburger"
     },
     {
       "id": "lamb_kofta",
       "name": "Kofta / Kebab",
       "cat": "p",
-      "name_sv": "Lammkofta"
+      "name_sv": "Lammkofta",
+      "name_da": "Lamme-kofta"
     }
   ],
   "poultry": [
@@ -3955,139 +4105,162 @@ const AI_PROTEIN_SUBCATS = {
       "id": "goose_breast",
       "name": "Goose Breast",
       "cat": "p",
-      "name_sv": "Gåsbröst"
+      "name_sv": "Gåsbröst",
+      "name_da": "Gåsebryst"
     },
     {
       "id": "goose_leg",
       "name": "Goose Leg",
       "cat": "p",
-      "name_sv": "Gåslår"
+      "name_sv": "Gåslår",
+      "name_da": "Gåseunderlår"
     },
     {
       "id": "goose_thigh",
       "name": "Goose Thigh",
       "cat": "p",
-      "name_sv": "Gåslår"
+      "name_sv": "Gåslår",
+      "name_da": "Gåseoverlår"
     },
     {
       "id": "whole_goose",
       "name": "Whole Goose",
       "cat": "p",
-      "name_sv": "Hel gås"
+      "name_sv": "Hel gås",
+      "name_da": "Hel gås"
     },
     {
       "id": "quail",
       "name": "Quail",
       "cat": "p",
-      "name_sv": "Vaktel"
+      "name_sv": "Vaktel",
+      "name_da": "Vagtel"
     },
     {
       "id": "chicken_breast",
       "name": "Chicken Breast",
       "cat": "p",
-      "name_sv": "Kycklingfilé"
+      "name_sv": "Kycklingfilé",
+      "name_da": "Kyllingebryst"
     },
     {
       "id": "chicken_breast_bone_in",
       "name": "Chicken Breast (Bone-in)",
       "cat": "p",
-      "name_sv": "Kycklingfilé med ben"
+      "name_sv": "Kycklingfilé med ben",
+      "name_da": "Kyllingebryst med ben"
     },
     {
       "id": "chicken_leg",
       "name": "Chicken Leg / Drumstick",
       "cat": "p",
-      "name_sv": "Kycklingklubba"
+      "name_sv": "Kycklingklubba",
+      "name_da": "Kyllingeunderlår"
     },
     {
       "id": "chicken_thigh",
       "name": "Chicken Thigh",
       "cat": "p",
-      "name_sv": "Kycklinglår"
+      "name_sv": "Kycklinglår",
+      "name_da": "Kyllingeoverlår"
     },
     {
       "id": "chicken_thigh_bone_in",
       "name": "Chicken Thigh (Bone-in)",
       "cat": "p",
-      "name_sv": "Kycklinglår med ben"
+      "name_sv": "Kycklinglår med ben",
+      "name_da": "Kyllingeoverlår med ben"
     },
     {
       "id": "chicken_wing",
       "name": "Chicken Wing",
       "cat": "p",
-      "name_sv": "Kycklingvinge"
+      "name_sv": "Kycklingvinge",
+      "name_da": "Kyllingevinge"
     },
     {
       "id": "whole_chicken",
       "name": "Whole Chicken",
       "cat": "p",
-      "name_sv": "Hel kyckling"
+      "name_sv": "Hel kyckling",
+      "name_da": "Hel kylling"
     },
     {
       "id": "chicken_burger",
       "name": "Chicken Burger",
       "cat": "p",
-      "name_sv": "Kycklingburgare"
+      "name_sv": "Kycklingburgare",
+      "name_da": "Kyllingeburger"
     },
     {
       "id": "ground_chicken",
       "name": "Ground Chicken",
       "cat": "p",
-      "name_sv": "Kycklingfärs"
+      "name_sv": "Kycklingfärs",
+      "name_da": "Hakket kyllingekød"
     },
     {
       "id": "ground_turkey",
       "name": "Ground Turkey",
       "cat": "p",
-      "name_sv": "Kalkonfärs"
+      "name_sv": "Kalkonfärs",
+      "name_da": "Hakket kalkunkød"
     },
     {
       "id": "turkey_burger",
       "name": "Turkey Burger",
       "cat": "p",
-      "name_sv": "Kalkonburgare"
+      "name_sv": "Kalkonburgare",
+      "name_da": "Kalkunburger"
     },
     {
       "id": "duck_breast",
       "name": "Duck Breast",
       "cat": "p",
-      "name_sv": "Andbröst"
+      "name_sv": "Andbröst",
+      "name_da": "Andebryst"
     },
     {
       "id": "duck_leg_confit",
       "name": "Duck Leg Confit",
       "cat": "p",
-      "name_sv": "Andlår confit"
+      "name_sv": "Andlår confit",
+      "name_da": "Confiteret andelår"
     },
     {
       "id": "whole_duck",
       "name": "Whole Duck",
       "cat": "p",
-      "name_sv": "Hel and"
+      "name_sv": "Hel and",
+      "name_da": "Hel and"
     },
     {
       "id": "turkey_breast",
       "name": "Turkey Breast",
       "cat": "p",
-      "name_sv": "Kalkonfilé"
+      "name_sv": "Kalkonfilé",
+      "name_da": "Kalkunbryst"
     },
     {
       "id": "turkey_leg",
       "name": "Turkey Leg",
       "cat": "p",
-      "name_sv": "Kalkonklubba"
+      "name_sv": "Kalkonklubba",
+      "name_da": "Kalkununderlår"
     },
     {
       "id": "turkey_thigh",
       "name": "Turkey Thigh",
       "cat": "p",
-      "name_sv": "Kalkonlår"
+      "name_sv": "Kalkonlår",
+      "name_da": "Kalkunoverlår"
     },
     {
       "id": "whole_turkey",
       "name": "Whole Turkey",
       "cat": "p",
-      "name_sv": "Hel kalkon"
+      "name_sv": "Hel kalkon",
+      "name_da": "Hel kalkun"
     }
   ]
 };
@@ -4106,6 +4279,14 @@ const AI_PROTEIN_SUBCAT_LABELS_SV = {
   "game": "Vilt",
   "lamb": "Lamm",
   "poultry": "Fågel"
+};
+const AI_PROTEIN_SUBCAT_LABELS_DA = {
+  "fish": "Fisk",
+  "beef": "Oksekød",
+  "pork": "Svinekød",
+  "game": "Vildt",
+  "lamb": "Lammekød",
+  "poultry": "Fjerkræ"
 };
 
 // AI Recipe Builder - Cuisine-specific Ingredients (28 per cuisine)
@@ -124271,7 +124452,7 @@ const AI_PROTEIN_TO_SUBCAT = {
   "reindeer": "game"
 };
 // Generic protein IDs that duplicate subcat button labels — filtered from badge list
-const AI_GENERIC_PROTEIN_IDS = ["fish", "chicken", "rabbit", "pork", "turkey", "veal", "duck", "lamb", "beef", "venison", "goat"];
+const AI_GENERIC_PROTEIN_IDS = ["beef", "chicken", "duck", "fish", "goat", "lamb", "pork", "rabbit", "turkey", "veal", "venison"];
 
 // AI Recipe Builder - Ingredient category labels and order
 const AI_CATEGORY_LABELS = {
@@ -124287,6 +124468,13 @@ const AI_CATEGORY_LABELS_SV = {
   "g": "🌾 Spannmål & Stärkelse",
   "d": "🫙 Mejeriprodukter, Oljor & Såser",
   "s": "🌶️ Kryddor, Nötter & Smaksättare"
+};
+const AI_CATEGORY_LABELS_DA = {
+  "p": "🥩 Proteiner",
+  "v": "🥬 Grøntsager og frugt",
+  "g": "🌾 Kornprodukter og stivelse",
+  "d": "🫙 Mejeriprodukter, olier og saucer",
+  "s": "🌶️ Krydderier, nødder og smagsgivere"
 };
 const AI_CATEGORY_ORDER = ["p", "v", "g", "d", "s"];
 
@@ -125596,7 +125784,15 @@ const I18N_STRINGS = {
       "smoker": "Røgeovn",
       "air_fryer": "Airfryer",
       "sous_vide": "Sous vide",
-      "slow_cooker": "Slowcooker"
+      "slow_cooker": "Slowcooker",
+      "boil": "Kogning",
+      "braise": "Braisering",
+      "charcoal_grill": "Kulgrill",
+      "oven_broil": "Grillning i ovn",
+      "pressure_cooker": "Trykkoger",
+      "saute": "Sautering",
+      "steam": "Dampning",
+      "whole_roast": "Helstegning"
     },
     "appliances": {
       "title": "🔧 Køkkenapparater",
@@ -126260,7 +126456,15 @@ const I18N_STRINGS = {
       "smoker": "Smoker",
       "air_fryer": "Air Fryer",
       "sous_vide": "Sous Vide",
-      "slow_cooker": "Slow Cooker"
+      "slow_cooker": "Slow Cooker",
+      "boil": "Boil",
+      "braise": "Braise",
+      "charcoal_grill": "Charcoal Grill",
+      "oven_broil": "Oven Broil",
+      "pressure_cooker": "Pressure Cooker",
+      "saute": "Sauté",
+      "steam": "Steam",
+      "whole_roast": "Whole Roast"
     },
     "appliances": {
       "title": "🔧 Kitchen Appliances",
@@ -126924,7 +127128,15 @@ const I18N_STRINGS = {
       "smoker": "Röka",
       "air_fryer": "Airfryer",
       "sous_vide": "Sous vide",
-      "slow_cooker": "Slowcooker"
+      "slow_cooker": "Slowcooker",
+      "boil": "Koka",
+      "braise": "Bräsera",
+      "charcoal_grill": "Kolgrilla",
+      "oven_broil": "Grilla i ugn",
+      "pressure_cooker": "Tryckkokare",
+      "saute": "Sautera",
+      "steam": "Ångkoka",
+      "whole_roast": "Helsteka"
     },
     "appliances": {
       "title": "🔧 Köksapparater",
@@ -132663,6 +132875,7 @@ const EXP_TREE = {
                   "medium"
                 ],
                 "name_sv": "Tonfiskbiff",
+                "name_da": "Tunbøf",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -132674,10 +132887,12 @@ const EXP_TREE = {
                 "rest_time_max": 2,
                 "carryover_temp_c": 2
               }
-            ]
+            ],
+            "name_da": "Tun"
           }
         ],
-        "name_sv": "Tonfisk"
+        "name_sv": "Tonfisk",
+        "name_da": "Tun"
       },
       {
         "id": "white_fish",
@@ -132697,6 +132912,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Röding",
+                "name_da": "Fjeldørred",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "pan_sear",
@@ -132720,6 +132936,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Lake",
+                "name_da": "Knude",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -132742,6 +132959,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Torskfilé",
+                "name_da": "Torskefilet",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -132765,6 +132983,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Flundra",
+                "name_da": "Skrubbe",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -132788,6 +133007,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Guldspirad",
+                "name_da": "Guldbrasen",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_sear",
@@ -132811,6 +133031,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Harr",
+                "name_da": "Stalling",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -132833,6 +133054,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Kolja",
+                "name_da": "Kullerfilet",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -132854,6 +133076,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Kummel",
+                "name_da": "Kulmulefilet",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast",
@@ -132876,6 +133099,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Hälleflundrafilé",
+                "name_da": "Helleflynderfilet",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -132897,6 +133121,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Mahi-mahi",
+                "name_da": "Mahi-mahi / guldmakrel",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -132918,6 +133143,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Marulk",
+                "name_da": "Havtaske",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_sear",
@@ -132941,6 +133167,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Abborre",
+                "name_da": "Aborre",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -132963,6 +133190,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Gädda",
+                "name_da": "Gedde",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -132986,6 +133214,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Gös",
+                "name_da": "Sandart",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_sear",
@@ -133017,6 +133246,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Rödspätta",
+                "name_da": "Rødspætte",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -133040,6 +133270,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Sei",
+                "name_da": "Sej",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -133063,6 +133294,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Uer",
+                "name_da": "Rødfisk",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -133087,6 +133319,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Havsabborre",
+                "name_da": "Havbars",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -133108,6 +133341,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Sjötunga",
+                "name_da": "Søtunge",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -133130,6 +133364,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Svärdfisk",
+                "name_da": "Sværdfiskebøf",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "charcoal_grill",
@@ -133152,6 +133387,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Forell",
+                "name_da": "Ørredfilet",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "grill",
@@ -133175,6 +133411,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Piggvar",
+                "name_da": "Pighvar",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_sear",
@@ -133197,6 +133434,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Sik",
+                "name_da": "Helt",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -133210,10 +133448,12 @@ const EXP_TREE = {
                 "rest_time_max": 3,
                 "carryover_temp_c": 2
               }
-            ]
+            ],
+            "name_da": "Hvid fisk"
           }
         ],
-        "name_sv": "Vit fisk"
+        "name_sv": "Vit fisk",
+        "name_da": "Hvid fisk"
       },
       {
         "id": "salmon",
@@ -133233,6 +133473,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Laxfilé",
+                "name_da": "Laksefilet",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "air_fryer",
@@ -133265,6 +133506,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Laxbiff",
+                "name_da": "Laksebøf",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "grill",
@@ -133287,6 +133529,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Hel lax",
+                "name_da": "Hel laks",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "oven_bake",
@@ -133299,10 +133542,12 @@ const EXP_TREE = {
                 "rest_time_max": 10,
                 "carryover_temp_c": 3
               }
-            ]
+            ],
+            "name_da": "Laks"
           }
         ],
-        "name_sv": "Lax"
+        "name_sv": "Lax",
+        "name_da": "Laks"
       },
       {
         "id": "oily_fish",
@@ -133321,6 +133566,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Strömming",
+                "name_da": "Østersøsild",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -133342,6 +133588,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Ål",
+                "name_da": "Ål",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -133365,6 +133612,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Sill",
+                "name_da": "Sild",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -133387,6 +133635,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Makrill",
+                "name_da": "Makrel",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -133401,10 +133650,12 @@ const EXP_TREE = {
                 "carryover_temp_c": 2
               }
             ],
-            "name_sv": "Fet fisk"
+            "name_sv": "Fet fisk",
+            "name_da": "Fed fisk"
           }
         ],
-        "name_sv": "Fet fisk"
+        "name_sv": "Fet fisk",
+        "name_da": "Fed fisk"
       },
       {
         "id": "shellfish",
@@ -133423,6 +133674,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Havskräfta",
+                "name_da": "Jomfruhummer",
                 "recommended_doneness": "tender",
                 "supported_methods": [
                   "grill",
@@ -133444,6 +133696,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Hummersvans",
+                "name_da": "Hummerhale",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -133464,6 +133717,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Pilgrimsmusslor",
+                "name_da": "Kammuslinger",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_sear"
@@ -133483,6 +133737,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Räkor",
+                "name_da": "Rejer",
                 "recommended_doneness": "just_cooked",
                 "supported_methods": [
                   "pan_fry"
@@ -133493,13 +133748,16 @@ const EXP_TREE = {
                 "rest_time_max": 0,
                 "carryover_temp_c": 1
               }
-            ]
+            ],
+            "name_da": "Skaldyr"
           }
         ],
-        "name_sv": "Skaldjur"
+        "name_sv": "Skaldjur",
+        "name_da": "Skaldyr"
       }
     ],
-    "name_sv": "Fisk"
+    "name_sv": "Fisk",
+    "name_da": "Fisk"
   },
   "beef": {
     "id": "beef",
@@ -133526,6 +133784,7 @@ const EXP_TREE = {
                   "medium_well"
                 ],
                 "name_sv": "Oxfiléstek",
+                "name_da": "Hel oksemørbrad",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
@@ -133548,6 +133807,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Entrecôtestek",
+                "name_da": "Højrebssteg",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
@@ -133570,6 +133830,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Stekkött",
+                "name_da": "Oksesteg",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
@@ -133591,6 +133852,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Rundstek",
+                "name_da": "Lårsteg",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "braise",
@@ -133614,6 +133876,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Rumstek",
+                "name_da": "Rumpsteak",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -133637,6 +133900,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Rumpstek",
+                "name_da": "Rumpsteg",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "braise",
@@ -133661,6 +133925,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Ryggbiffsstek",
+                "name_da": "Tykstegsfilet",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
@@ -133682,6 +133947,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Spetsrumstek",
+                "name_da": "Klumpsteg",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "braise",
@@ -133704,6 +133970,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Innanlårstek",
+                "name_da": "Inderlårssteg",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "braise",
@@ -133717,7 +133984,8 @@ const EXP_TREE = {
                 "carryover_temp_c": 5
               }
             ],
-            "name_sv": "Stekar"
+            "name_sv": "Stekar",
+            "name_da": "Stege"
           },
           {
             "id": "steaks",
@@ -133735,6 +134003,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Oxfilé",
+                "name_da": "Oksemørbradbøf",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "air_fryer",
@@ -133769,6 +134038,7 @@ const EXP_TREE = {
                   "medium_well"
                 ],
                 "name_sv": "Flankstek",
+                "name_da": "Okseflanksteak",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -133803,6 +134073,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Flat Iron",
+                "name_da": "Flat iron-steak",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "air_fryer",
@@ -133836,6 +134107,7 @@ const EXP_TREE = {
                   "medium"
                 ],
                 "name_sv": "Hängare",
+                "name_da": "Nyretapper",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -133861,6 +134133,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "New York Strip",
+                "name_da": "New York strip",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "air_fryer",
@@ -133896,6 +134169,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Picanha",
+                "name_da": "Picanha / culotte",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "charcoal_grill",
@@ -133921,6 +134195,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Entrecôte",
+                "name_da": "Ribeyebøf",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "air_fryer",
@@ -133956,6 +134231,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Ryggbiff",
+                "name_da": "Bøf af tykstegsfilet",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "air_fryer",
@@ -133989,6 +134265,7 @@ const EXP_TREE = {
                   "medium"
                 ],
                 "name_sv": "Skirt",
+                "name_da": "Skirt steak",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -134014,6 +134291,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "T-benstek",
+                "name_da": "T-bone / porterhouse",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "air_fryer",
@@ -134040,6 +134318,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Tomahawk",
+                "name_da": "Tomahawkbøf",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -134073,6 +134352,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Tri-tip",
+                "name_da": "Tri-tip",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -134096,7 +134376,8 @@ const EXP_TREE = {
                 }
               }
             ],
-            "name_sv": "Biffar"
+            "name_sv": "Biffar",
+            "name_da": "Bøffer"
           },
           {
             "id": "ground",
@@ -134110,6 +134391,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Nötburgare",
+                "name_da": "Hakkebøf",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -134131,6 +134413,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Nötfärs",
+                "name_da": "Hakket oksekød",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -134157,6 +134440,7 @@ const EXP_TREE = {
                   "done"
                 ],
                 "name_sv": "Köttfärslimpa",
+                "name_da": "Farsbrød",
                 "recommended_doneness": "done",
                 "supported_methods": [
                   "oven_roast"
@@ -134168,7 +134452,8 @@ const EXP_TREE = {
                 "carryover_temp_c": 5
               }
             ],
-            "name_sv": "Färs"
+            "name_sv": "Färs",
+            "name_da": "Hakket kød"
           },
           {
             "id": "other_offal",
@@ -134183,6 +134468,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Nötlever",
+                "name_da": "Okselever",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -134202,6 +134488,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Oxtunga",
+                "name_da": "Oksetunge",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -134226,7 +134513,8 @@ const EXP_TREE = {
                 }
               }
             ],
-            "name_sv": "Övrigt / Innanmäte"
+            "name_sv": "Övrigt / Innanmäte",
+            "name_da": "Andet / indmad"
           },
           {
             "id": "braising_cuts",
@@ -134240,6 +134528,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Oxlägg",
+                "name_da": "Okseskank / osso buco",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -134271,6 +134560,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Bringa",
+                "name_da": "Oksespidsbryst",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -134292,6 +134582,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Grytbiff",
+                "name_da": "Oksetykkam",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -134319,6 +134610,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Korta revben",
+                "name_da": "Oksetværreb",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -134340,13 +134632,16 @@ const EXP_TREE = {
                 }
               }
             ],
-            "name_sv": "Grytbitar"
+            "name_sv": "Grytbitar",
+            "name_da": "Udskæringer til braisering"
           }
         ],
-        "name_sv": "Nöt"
+        "name_sv": "Nöt",
+        "name_da": "Okse"
       }
     ],
-    "name_sv": "Nötkött"
+    "name_sv": "Nötkött",
+    "name_da": "Oksekød"
   },
   "pork": {
     "id": "pork",
@@ -134371,6 +134666,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Fläskkotlett",
+                "name_da": "Svinekotelet",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -134394,6 +134690,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Karré",
+                "name_da": "Kotelet uden ben",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -134415,6 +134712,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Bogskiva",
+                "name_da": "Nakkekotelet",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -134436,6 +134734,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Fläskfilé",
+                "name_da": "Svinemørbrad",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -134466,6 +134765,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Secreto",
+                "name_da": "Secreto af iberisk gris",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "charcoal_grill",
@@ -134479,7 +134779,8 @@ const EXP_TREE = {
                 "carryover_temp_c": 3
               }
             ],
-            "name_sv": "Kotletter & Filé"
+            "name_sv": "Kotletter & Filé",
+            "name_da": "Koteletter og mørbrad"
           },
           {
             "id": "ribs",
@@ -134493,6 +134794,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Revbensspjäll",
+                "name_da": "Kamben",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "air_fryer",
@@ -134514,6 +134816,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Spareribs",
+                "name_da": "Revelsben",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "grill",
@@ -134534,6 +134837,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "St. Louis-revben",
+                "name_da": "St. Louis-spareribs",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "grill",
@@ -134547,7 +134851,8 @@ const EXP_TREE = {
                 "carryover_temp_c": 3
               }
             ],
-            "name_sv": "Revben"
+            "name_sv": "Revben",
+            "name_da": "Ribben"
           },
           {
             "id": "ham",
@@ -134561,6 +134866,7 @@ const EXP_TREE = {
                   "heated_through"
                 ],
                 "name_sv": "Rökt skinka",
+                "name_da": "Saltet, forkogt skinke",
                 "recommended_doneness": "heated_through",
                 "supported_methods": [
                   "oven_roast"
@@ -134580,6 +134886,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Färsk skinka",
+                "name_da": "Skinkesteg",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
@@ -134591,7 +134898,8 @@ const EXP_TREE = {
                 "carryover_temp_c": 5
               }
             ],
-            "name_sv": "Skinka"
+            "name_sv": "Skinka",
+            "name_da": "Skinke"
           },
           {
             "id": "roasts",
@@ -134606,6 +134914,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Skinka",
+                "name_da": "Skinke",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
@@ -134625,6 +134934,7 @@ const EXP_TREE = {
                   "crispy"
                 ],
                 "name_sv": "Sidfläsk",
+                "name_da": "Svinebryst",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
@@ -134668,6 +134978,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Fläsklägg",
+                "name_da": "Svineskank",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -134701,6 +135012,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Karréstek",
+                "name_da": "Svinekam / flæskesteg",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast",
@@ -134720,6 +135032,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Fläskbog",
+                "name_da": "Nakkefilet",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "oven_roast",
@@ -134740,7 +135053,8 @@ const EXP_TREE = {
                 }
               }
             ],
-            "name_sv": "Stekar"
+            "name_sv": "Stekar",
+            "name_da": "Stege"
           },
           {
             "id": "ground",
@@ -134754,6 +135068,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Fläskfärs",
+                "name_da": "Hakket svinekød",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -134780,6 +135095,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Fläskkorv",
+                "name_da": "Svinepølse",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -134792,7 +135108,8 @@ const EXP_TREE = {
                 "carryover_temp_c": 2
               }
             ],
-            "name_sv": "Färs"
+            "name_sv": "Färs",
+            "name_da": "Hakket kød"
           },
           {
             "id": "other_offal",
@@ -134806,6 +135123,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Kindkött",
+                "name_da": "Kindkød",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -134832,6 +135150,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Fläsklever",
+                "name_da": "Lever",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -134851,6 +135170,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Fläskkind",
+                "name_da": "Svinekæbe",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -134879,6 +135199,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Kindkött",
+                "name_da": "Guanciale / svinekæbe",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -134906,6 +135227,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Fläsklever",
+                "name_da": "Svinelever",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry",
@@ -134925,6 +135247,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Fläsktunga",
+                "name_da": "Svinetunge",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -134949,13 +135272,16 @@ const EXP_TREE = {
                 }
               }
             ],
-            "name_sv": "Övrigt / Innanmäte"
+            "name_sv": "Övrigt / Innanmäte",
+            "name_da": "Andet / indmad"
           }
         ],
-        "name_sv": "Gris"
+        "name_sv": "Gris",
+        "name_da": "Gris"
       }
     ],
-    "name_sv": "Fläskkött"
+    "name_sv": "Fläskkött",
+    "name_da": "Svinekød"
   },
   "game": {
     "id": "game",
@@ -134981,6 +135307,7 @@ const EXP_TREE = {
                   "medium"
                 ],
                 "name_sv": "Hjortlår",
+                "name_da": "Hjortekølle",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "braise",
@@ -135009,6 +135336,7 @@ const EXP_TREE = {
                   "medium"
                 ],
                 "name_sv": "Hjortfilé",
+                "name_da": "Hjortefilet",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast",
@@ -135031,6 +135359,7 @@ const EXP_TREE = {
                   "medium"
                 ],
                 "name_sv": "Hjortstek",
+                "name_da": "Hjortesteg",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "braise",
@@ -135050,6 +135379,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Hjortskuldra",
+                "name_da": "Hjortebov",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -135085,6 +135415,7 @@ const EXP_TREE = {
                   "medium_well"
                 ],
                 "name_sv": "Hjortbiff",
+                "name_da": "Hjortebøf",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -135097,10 +135428,12 @@ const EXP_TREE = {
                 "rest_time_max": 10,
                 "carryover_temp_c": 3
               }
-            ]
+            ],
+            "name_da": "Hjort"
           }
         ],
-        "name_sv": "Hjort"
+        "name_sv": "Hjort",
+        "name_da": "Hjort"
       },
       {
         "id": "buffalo",
@@ -135118,6 +135451,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Buffelburgare",
+                "name_da": "Bøffelburger",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -135139,6 +135473,7 @@ const EXP_TREE = {
                   "medium"
                 ],
                 "name_sv": "Buffelstek",
+                "name_da": "Bøffelsteg",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "braise",
@@ -135168,6 +135503,7 @@ const EXP_TREE = {
                   "medium_well"
                 ],
                 "name_sv": "Buffelbiff",
+                "name_da": "Bøffelbøf",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -135180,10 +135516,12 @@ const EXP_TREE = {
                 "rest_time_max": 10,
                 "carryover_temp_c": 3
               }
-            ]
+            ],
+            "name_da": "Bøffel"
           }
         ],
-        "name_sv": "Buffel"
+        "name_sv": "Buffel",
+        "name_da": "Bøffel"
       },
       {
         "id": "bison",
@@ -135201,6 +135539,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Bisonburgare",
+                "name_da": "Bisonburger",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -135222,6 +135561,7 @@ const EXP_TREE = {
                   "medium"
                 ],
                 "name_sv": "Bisonstek",
+                "name_da": "Bisonsteg",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
@@ -135243,6 +135583,7 @@ const EXP_TREE = {
                   "medium_well"
                 ],
                 "name_sv": "Bisonbiff",
+                "name_da": "Bisonbøf",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "charcoal_grill",
@@ -135255,10 +135596,12 @@ const EXP_TREE = {
                 "rest_time_max": 10,
                 "carryover_temp_c": 3
               }
-            ]
+            ],
+            "name_da": "Bison"
           }
         ],
-        "name_sv": "Bison"
+        "name_sv": "Bison",
+        "name_da": "Bison"
       },
       {
         "id": "reindeer",
@@ -135278,6 +135621,7 @@ const EXP_TREE = {
                   "medium"
                 ],
                 "name_sv": "Renfilé",
+                "name_da": "Rensdyrfilet",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast",
@@ -135299,6 +135643,7 @@ const EXP_TREE = {
                   "medium"
                 ],
                 "name_sv": "Renstek",
+                "name_da": "Rensdyrsteg",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
@@ -135320,6 +135665,7 @@ const EXP_TREE = {
                   "medium_well"
                 ],
                 "name_sv": "Renfilé",
+                "name_da": "Rensdyrbøf",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -135331,10 +135677,12 @@ const EXP_TREE = {
                 "rest_time_max": 10,
                 "carryover_temp_c": 3
               }
-            ]
+            ],
+            "name_da": "Rensdyr"
           }
         ],
-        "name_sv": "Ren"
+        "name_sv": "Ren",
+        "name_da": "Rensdyr"
       },
       {
         "id": "moose",
@@ -135354,6 +135702,7 @@ const EXP_TREE = {
                   "medium"
                 ],
                 "name_sv": "Älgstek",
+                "name_da": "Elgsteg",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "braise",
@@ -135376,6 +135725,7 @@ const EXP_TREE = {
                   "medium_well"
                 ],
                 "name_sv": "Älgbiff",
+                "name_da": "Elgbøf",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -135387,10 +135737,12 @@ const EXP_TREE = {
                 "rest_time_max": 10,
                 "carryover_temp_c": 3
               }
-            ]
+            ],
+            "name_da": "Elg"
           }
         ],
-        "name_sv": "Älg"
+        "name_sv": "Älg",
+        "name_da": "Elg"
       },
       {
         "id": "mutton",
@@ -135412,6 +135764,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Fårkotlett",
+                "name_da": "Fårekotelet",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -135434,6 +135787,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Fårlår",
+                "name_da": "Fårekølle",
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "oven_roast"
@@ -135452,6 +135806,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Fårskuldra",
+                "name_da": "Fårebov",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -135484,6 +135839,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Fårskuldra",
+                "name_da": "Bov",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -135496,10 +135852,12 @@ const EXP_TREE = {
                 "rest_time_max": 30,
                 "carryover_temp_c": 5
               }
-            ]
+            ],
+            "name_da": "Fårekød"
           }
         ],
-        "name_sv": "Får"
+        "name_sv": "Får",
+        "name_da": "Fårekød"
       },
       {
         "id": "ostrich",
@@ -135519,6 +135877,7 @@ const EXP_TREE = {
                   "medium"
                 ],
                 "name_sv": "Strutsfilé",
+                "name_da": "Strudsefilet",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "braise",
@@ -135548,6 +135907,7 @@ const EXP_TREE = {
                   "medium"
                 ],
                 "name_sv": "Strutsfilé",
+                "name_da": "Strudsebøf",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -135559,10 +135919,12 @@ const EXP_TREE = {
                 "rest_time_max": 5,
                 "carryover_temp_c": 2
               }
-            ]
+            ],
+            "name_da": "Struds"
           }
         ],
-        "name_sv": "Struts"
+        "name_sv": "Struts",
+        "name_da": "Struds"
       },
       {
         "id": "kangaroo",
@@ -135582,6 +135944,7 @@ const EXP_TREE = {
                   "medium"
                 ],
                 "name_sv": "Kängurufilé",
+                "name_da": "Kængurufilet",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -135603,6 +135966,7 @@ const EXP_TREE = {
                   "medium"
                 ],
                 "name_sv": "Kängurufilé",
+                "name_da": "Kængurubøf",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -135614,10 +135978,12 @@ const EXP_TREE = {
                 "rest_time_max": 5,
                 "carryover_temp_c": 2
               }
-            ]
+            ],
+            "name_da": "Kænguru"
           }
         ],
-        "name_sv": "Känguru"
+        "name_sv": "Känguru",
+        "name_da": "Kænguru"
       },
       {
         "id": "rabbit",
@@ -135637,6 +136003,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Kaninlår",
+                "name_da": "Kaninlår",
                 "recommended_doneness": "dark_meat_optimal",
                 "supported_methods": [
                   "braise",
@@ -135664,6 +136031,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Kaninsadel",
+                "name_da": "Kaninryg",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast",
@@ -135675,10 +136043,12 @@ const EXP_TREE = {
                 "rest_time_max": 5,
                 "carryover_temp_c": 2
               }
-            ]
+            ],
+            "name_da": "Kanin"
           }
         ],
-        "name_sv": "Kanin"
+        "name_sv": "Kanin",
+        "name_da": "Kanin"
       },
       {
         "id": "goat",
@@ -135699,6 +136069,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Getkotlett",
+                "name_da": "Gedekotelet",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -135721,6 +136092,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Getlår",
+                "name_da": "Gedekølle",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
@@ -135741,6 +136113,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Getlägg",
+                "name_da": "Gedeskank",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -135768,6 +136141,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Getskuldra",
+                "name_da": "Gedebov",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -135792,10 +136166,12 @@ const EXP_TREE = {
                   }
                 }
               }
-            ]
+            ],
+            "name_da": "Ged"
           }
         ],
-        "name_sv": "Get"
+        "name_sv": "Get",
+        "name_da": "Ged"
       },
       {
         "id": "wild_boar",
@@ -135813,6 +136189,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Vildsvinskotlett",
+                "name_da": "Vildsvinekotelet",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -135832,6 +136209,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Vildsvinsskuldra",
+                "name_da": "Vildsvinebov",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -135844,13 +136222,16 @@ const EXP_TREE = {
                 "rest_time_max": 30,
                 "carryover_temp_c": 5
               }
-            ]
+            ],
+            "name_da": "Vildsvin"
           }
         ],
-        "name_sv": "Vildsvin"
+        "name_sv": "Vildsvin",
+        "name_da": "Vildsvin"
       }
     ],
-    "name_sv": "Vilt"
+    "name_sv": "Vilt",
+    "name_da": "Vildt"
   },
   "vegetables": {
     "id": "vegetables",
@@ -135874,6 +136255,7 @@ const EXP_TREE = {
                   "caramelized"
                 ],
                 "name_sv": "Champinjoner",
+                "name_da": "Champignoner",
                 "supported_methods": [
                   "air_fryer",
                   "grill",
@@ -135893,6 +136275,7 @@ const EXP_TREE = {
                   "caramelized"
                 ],
                 "name_sv": "Portobellosvamp",
+                "name_da": "Portobellosvampe",
                 "supported_methods": [
                   "air_fryer",
                   "grill",
@@ -135903,10 +136286,12 @@ const EXP_TREE = {
                 "rest_time_max": 2,
                 "carryover_temp_c": 2
               }
-            ]
+            ],
+            "name_da": "Svampe"
           }
         ],
-        "name_sv": "Svamp"
+        "name_sv": "Svamp",
+        "name_da": "Svampe"
       },
       {
         "id": "green_vegetables",
@@ -135925,6 +136310,7 @@ const EXP_TREE = {
                   "tender"
                 ],
                 "name_sv": "Sparris",
+                "name_da": "Asparges",
                 "supported_methods": [
                   "grill",
                   "oven_roast",
@@ -135944,6 +136330,7 @@ const EXP_TREE = {
                   "tender"
                 ],
                 "name_sv": "Broccoli",
+                "name_da": "Broccoli",
                 "supported_methods": [
                   "air_fryer",
                   "oven_roast",
@@ -135963,6 +136350,7 @@ const EXP_TREE = {
                   "caramelized"
                 ],
                 "name_sv": "Brysselkål",
+                "name_da": "Rosenkål",
                 "supported_methods": [
                   "air_fryer",
                   "oven_roast",
@@ -135982,6 +136370,7 @@ const EXP_TREE = {
                   "tender"
                 ],
                 "name_sv": "Haricots verts",
+                "name_da": "Grønne bønner",
                 "supported_methods": [
                   "boil",
                   "oven_roast",
@@ -136000,6 +136389,7 @@ const EXP_TREE = {
                   "tender"
                 ],
                 "name_sv": "Spenat",
+                "name_da": "Spinat",
                 "supported_methods": [
                   "saute",
                   "steam"
@@ -136008,10 +136398,12 @@ const EXP_TREE = {
                 "rest_time_max": 0,
                 "carryover_temp_c": 0
               }
-            ]
+            ],
+            "name_da": "Grønne grøntsager"
           }
         ],
-        "name_sv": "Gröna grönsaker"
+        "name_sv": "Gröna grönsaker",
+        "name_da": "Grønne grøntsager"
       },
       {
         "id": "tomatoes",
@@ -136030,6 +136422,7 @@ const EXP_TREE = {
                   "caramelized"
                 ],
                 "name_sv": "Rostade tomater",
+                "name_da": "Bagte tomater",
                 "supported_methods": [
                   "air_fryer",
                   "oven_broil",
@@ -136039,10 +136432,12 @@ const EXP_TREE = {
                 "rest_time_max": 2,
                 "carryover_temp_c": 1
               }
-            ]
+            ],
+            "name_da": "Tomater"
           }
         ],
-        "name_sv": "Tomater"
+        "name_sv": "Tomater",
+        "name_da": "Tomater"
       },
       {
         "id": "corn",
@@ -136061,6 +136456,7 @@ const EXP_TREE = {
                   "charred"
                 ],
                 "name_sv": "Majskolv",
+                "name_da": "Majskolbe",
                 "supported_methods": [
                   "air_fryer",
                   "boil",
@@ -136072,10 +136468,12 @@ const EXP_TREE = {
                 "rest_time_max": 2,
                 "carryover_temp_c": 1
               }
-            ]
+            ],
+            "name_da": "Majs"
           }
         ],
-        "name_sv": "Majs"
+        "name_sv": "Majs",
+        "name_da": "Majs"
       },
       {
         "id": "alliums",
@@ -136093,6 +136491,7 @@ const EXP_TREE = {
                   "caramelized"
                 ],
                 "name_sv": "Karamelliserade lökar",
+                "name_da": "Karamelliserede løg",
                 "supported_methods": [
                   "pan_fry",
                   "saute"
@@ -136110,6 +136509,7 @@ const EXP_TREE = {
                   "caramelized"
                 ],
                 "name_sv": "Purjolök",
+                "name_da": "Porrer",
                 "supported_methods": [
                   "braise",
                   "oven_roast",
@@ -136135,6 +136535,7 @@ const EXP_TREE = {
                   "caramelized"
                 ],
                 "name_sv": "Rostad vitlök",
+                "name_da": "Bagt hvidløg",
                 "supported_methods": [
                   "oven_roast"
                 ],
@@ -136151,6 +136552,7 @@ const EXP_TREE = {
                   "caramelized"
                 ],
                 "name_sv": "Rostad lök",
+                "name_da": "Bagt løg",
                 "supported_methods": [
                   "grill",
                   "oven_roast",
@@ -136160,10 +136562,12 @@ const EXP_TREE = {
                 "rest_time_max": 2,
                 "carryover_temp_c": 2
               }
-            ]
+            ],
+            "name_da": "Løgfamilien"
           }
         ],
-        "name_sv": "Lökväxter"
+        "name_sv": "Lökväxter",
+        "name_da": "Løgfamilien"
       },
       {
         "id": "cruciferous",
@@ -136182,6 +136586,7 @@ const EXP_TREE = {
                   "tender"
                 ],
                 "name_sv": "Kål",
+                "name_da": "Kål",
                 "supported_methods": [
                   "braise",
                   "grill",
@@ -136208,6 +136613,7 @@ const EXP_TREE = {
                   "caramelized"
                 ],
                 "name_sv": "Blomkål",
+                "name_da": "Blomkål",
                 "supported_methods": [
                   "air_fryer",
                   "oven_roast",
@@ -136219,10 +136625,12 @@ const EXP_TREE = {
                 "rest_time_max": 2,
                 "carryover_temp_c": 1
               }
-            ]
+            ],
+            "name_da": "Kål"
           }
         ],
-        "name_sv": "Kålväxter"
+        "name_sv": "Kålväxter",
+        "name_da": "Kål"
       },
       {
         "id": "peppers",
@@ -136241,6 +136649,7 @@ const EXP_TREE = {
                   "charred"
                 ],
                 "name_sv": "Paprika",
+                "name_da": "Peberfrugter",
                 "supported_methods": [
                   "air_fryer",
                   "grill",
@@ -136251,10 +136660,12 @@ const EXP_TREE = {
                 "rest_time_max": 1,
                 "carryover_temp_c": 1
               }
-            ]
+            ],
+            "name_da": "Peberfrugter"
           }
         ],
-        "name_sv": "Paprika"
+        "name_sv": "Paprika",
+        "name_da": "Peberfrugter"
       },
       {
         "id": "root_vegetables",
@@ -136272,6 +136683,7 @@ const EXP_TREE = {
                   "tender"
                 ],
                 "name_sv": "Bakad potatis",
+                "name_da": "Bagt kartoffel",
                 "supported_methods": [
                   "air_fryer",
                   "oven_bake"
@@ -136288,6 +136700,7 @@ const EXP_TREE = {
                   "tender"
                 ],
                 "name_sv": "Rostade rödbetor",
+                "name_da": "Bagte rødbeder",
                 "supported_methods": [
                   "oven_roast"
                 ],
@@ -136304,6 +136717,7 @@ const EXP_TREE = {
                   "caramelized"
                 ],
                 "name_sv": "Rostade morötter",
+                "name_da": "Bagte gulerødder",
                 "supported_methods": [
                   "air_fryer",
                   "oven_roast",
@@ -136322,6 +136736,7 @@ const EXP_TREE = {
                   "caramelized"
                 ],
                 "name_sv": "Rostade palsternackor",
+                "name_da": "Bagte pastinakker",
                 "supported_methods": [
                   "air_fryer",
                   "oven_roast"
@@ -136338,6 +136753,7 @@ const EXP_TREE = {
                   "caramelized"
                 ],
                 "name_sv": "Rostad potatis",
+                "name_da": "Ovnstegte kartofler",
                 "supported_methods": [
                   "air_fryer",
                   "oven_roast"
@@ -136355,6 +136771,7 @@ const EXP_TREE = {
                   "caramelized"
                 ],
                 "name_sv": "Rostad sötpotatis",
+                "name_da": "Bagt sød kartoffel",
                 "supported_methods": [
                   "air_fryer",
                   "oven_bake",
@@ -136364,10 +136781,12 @@ const EXP_TREE = {
                 "rest_time_max": 5,
                 "carryover_temp_c": 2
               }
-            ]
+            ],
+            "name_da": "Rodfrugter"
           }
         ],
-        "name_sv": "Rotfrukter"
+        "name_sv": "Rotfrukter",
+        "name_da": "Rodfrugter"
       },
       {
         "id": "eggplant",
@@ -136386,6 +136805,7 @@ const EXP_TREE = {
                   "charred"
                 ],
                 "name_sv": "Aubergine",
+                "name_da": "Aubergine",
                 "supported_methods": [
                   "air_fryer",
                   "grill",
@@ -136397,10 +136817,12 @@ const EXP_TREE = {
                 "rest_time_max": 2,
                 "carryover_temp_c": 2
               }
-            ]
+            ],
+            "name_da": "Aubergine"
           }
         ],
-        "name_sv": "Aubergine"
+        "name_sv": "Aubergine",
+        "name_da": "Aubergine"
       },
       {
         "id": "squash",
@@ -136418,6 +136840,7 @@ const EXP_TREE = {
                   "tender"
                 ],
                 "name_sv": "Ekolonpumpa",
+                "name_da": "Agernsquash",
                 "supported_methods": [
                   "oven_bake",
                   "oven_roast"
@@ -136435,6 +136858,7 @@ const EXP_TREE = {
                   "caramelized"
                 ],
                 "name_sv": "Butternutpumpa",
+                "name_da": "Butternutsquash",
                 "supported_methods": [
                   "oven_roast",
                   "pressure_cooker",
@@ -136452,6 +136876,7 @@ const EXP_TREE = {
                   "tender"
                 ],
                 "name_sv": "Spagettipumpa",
+                "name_da": "Spaghettisquash",
                 "supported_methods": [
                   "oven_bake",
                   "oven_roast"
@@ -136469,6 +136894,7 @@ const EXP_TREE = {
                   "tender"
                 ],
                 "name_sv": "Zucchini",
+                "name_da": "Zucchini",
                 "supported_methods": [
                   "air_fryer",
                   "grill",
@@ -136479,13 +136905,16 @@ const EXP_TREE = {
                 "rest_time_max": 1,
                 "carryover_temp_c": 1
               }
-            ]
+            ],
+            "name_da": "Squash"
           }
         ],
-        "name_sv": "Squash"
+        "name_sv": "Squash",
+        "name_da": "Squash"
       }
     ],
-    "name_sv": "Grönsaker"
+    "name_sv": "Grönsaker",
+    "name_da": "Grøntsager"
   },
   "lamb": {
     "id": "lamb",
@@ -136513,6 +136942,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Lammkotlett",
+                "name_da": "Lammekoteletter",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -136535,6 +136965,7 @@ const EXP_TREE = {
                   "medium_well"
                 ],
                 "name_sv": "Lammkotlett",
+                "name_da": "Lammekotelet",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -136557,6 +136988,7 @@ const EXP_TREE = {
                   "medium_well"
                 ],
                 "name_sv": "Lammlårkotlett",
+                "name_da": "Lammerygkoteletter",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -136579,6 +137011,7 @@ const EXP_TREE = {
                   "medium_well"
                 ],
                 "name_sv": "Lammhalsfilé",
+                "name_da": "Lammehalsfilet",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "braise",
@@ -136604,7 +137037,8 @@ const EXP_TREE = {
                 }
               }
             ],
-            "name_sv": "Kotletter"
+            "name_sv": "Kotletter",
+            "name_da": "Koteletter"
           },
           {
             "id": "roasts",
@@ -136618,6 +137052,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Lammbringa",
+                "name_da": "Lammebryst",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -136648,6 +137083,7 @@ const EXP_TREE = {
                   "medium_well"
                 ],
                 "name_sv": "Lammlårstek",
+                "name_da": "Lammeryg",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
@@ -136666,6 +137102,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Lammhals",
+                "name_da": "Lammehals",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -136701,6 +137138,7 @@ const EXP_TREE = {
                   "medium_well"
                 ],
                 "name_sv": "Lammrev",
+                "name_da": "Lammeribben",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast",
@@ -136724,6 +137162,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Lammrumstek",
+                "name_da": "Lammeculotte",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -136748,6 +137187,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Lammlår",
+                "name_da": "Lammekølle",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -136770,6 +137210,7 @@ const EXP_TREE = {
                   "medium_well"
                 ],
                 "name_sv": "Lammracks",
+                "name_da": "Lammecarré",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "grill",
@@ -136782,7 +137223,8 @@ const EXP_TREE = {
                 "carryover_temp_c": 5
               }
             ],
-            "name_sv": "Stekar"
+            "name_sv": "Stekar",
+            "name_da": "Stege"
           },
           {
             "id": "ground",
@@ -136796,6 +137238,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Lammlägg",
+                "name_da": "Lammeskank",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -136828,6 +137271,7 @@ const EXP_TREE = {
                   "pulled"
                 ],
                 "name_sv": "Lammskuldra",
+                "name_da": "Lammebov",
                 "recommended_doneness": "pulled",
                 "supported_methods": [
                   "braise",
@@ -136848,6 +137292,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Lammfärs",
+                "name_da": "Hakket lammekød",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -136867,6 +137312,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Lammburgare",
+                "name_da": "Lammeburger",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -136886,6 +137332,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Lammkofta",
+                "name_da": "Lamme-kofta",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -136898,13 +137345,16 @@ const EXP_TREE = {
                 "carryover_temp_c": 2
               }
             ],
-            "name_sv": "Färs"
+            "name_sv": "Färs",
+            "name_da": "Hakket kød"
           }
         ],
-        "name_sv": "Lamm"
+        "name_sv": "Lamm",
+        "name_da": "Lam"
       }
     ],
-    "name_sv": "Lamm"
+    "name_sv": "Lamm",
+    "name_da": "Lammekød"
   },
   "poultry": {
     "id": "poultry",
@@ -136930,6 +137380,7 @@ const EXP_TREE = {
                   "safe"
                 ],
                 "name_sv": "Gåsbröst",
+                "name_da": "Gåsebryst",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast",
@@ -136950,6 +137401,7 @@ const EXP_TREE = {
                   "dark_meat_optimal"
                 ],
                 "name_sv": "Gåslår",
+                "name_da": "Gåseunderlår",
                 "recommended_doneness": "dark_meat_optimal",
                 "supported_methods": [
                   "braise",
@@ -136977,6 +137429,7 @@ const EXP_TREE = {
                   "dark_meat_optimal"
                 ],
                 "name_sv": "Gåslår",
+                "name_da": "Gåseoverlår",
                 "recommended_doneness": "dark_meat_optimal",
                 "supported_methods": [
                   "braise",
@@ -137004,6 +137457,7 @@ const EXP_TREE = {
                   "thigh_rendered"
                 ],
                 "name_sv": "Hel gås",
+                "name_da": "Hel gås",
                 "recommended_doneness": "thigh_rendered",
                 "supported_methods": [
                   "oven_roast"
@@ -137014,10 +137468,12 @@ const EXP_TREE = {
                 "rest_time_max": 30,
                 "carryover_temp_c": 8
               }
-            ]
+            ],
+            "name_da": "Gås"
           }
         ],
-        "name_sv": "Gås"
+        "name_sv": "Gås",
+        "name_da": "Gås"
       },
       {
         "id": "quail",
@@ -137035,6 +137491,7 @@ const EXP_TREE = {
                   "well_done"
                 ],
                 "name_sv": "Vaktel",
+                "name_da": "Vagtel",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
@@ -137049,10 +137506,12 @@ const EXP_TREE = {
                 "carryover_temp_c": 2
               }
             ],
-            "name_sv": "Vaktel"
+            "name_sv": "Vaktel",
+            "name_da": "Vagtel"
           }
         ],
-        "name_sv": "Vaktel"
+        "name_sv": "Vaktel",
+        "name_da": "Vagtel"
       },
       {
         "id": "chicken",
@@ -137070,6 +137529,7 @@ const EXP_TREE = {
                   "safe"
                 ],
                 "name_sv": "Kycklingfilé",
+                "name_da": "Kyllingebryst",
                 "recommended_doneness": "safe",
                 "supported_methods": [
                   "air_fryer",
@@ -137093,6 +137553,7 @@ const EXP_TREE = {
                   "safe"
                 ],
                 "name_sv": "Kycklingfilé med ben",
+                "name_da": "Kyllingebryst med ben",
                 "recommended_doneness": "safe",
                 "supported_methods": [
                   "air_fryer",
@@ -137106,7 +137567,8 @@ const EXP_TREE = {
                 "carryover_temp_c": 4
               }
             ],
-            "name_sv": "Bröst"
+            "name_sv": "Bröst",
+            "name_da": "Bryst"
           },
           {
             "id": "dark_meat",
@@ -137121,6 +137583,7 @@ const EXP_TREE = {
                   "dark_meat_optimal"
                 ],
                 "name_sv": "Kycklingklubba",
+                "name_da": "Kyllingeunderlår",
                 "recommended_doneness": "dark_meat_optimal",
                 "supported_methods": [
                   "air_fryer",
@@ -137142,6 +137605,7 @@ const EXP_TREE = {
                   "dark_meat_optimal"
                 ],
                 "name_sv": "Kycklinglår",
+                "name_da": "Kyllingeoverlår",
                 "recommended_doneness": "dark_meat_optimal",
                 "supported_methods": [
                   "air_fryer",
@@ -137165,6 +137629,7 @@ const EXP_TREE = {
                   "dark_meat_optimal"
                 ],
                 "name_sv": "Kycklinglår med ben",
+                "name_da": "Kyllingeoverlår med ben",
                 "recommended_doneness": "dark_meat_optimal",
                 "supported_methods": [
                   "air_fryer",
@@ -137188,6 +137653,7 @@ const EXP_TREE = {
                   "dark_meat_optimal"
                 ],
                 "name_sv": "Kycklingvinge",
+                "name_da": "Kyllingevinge",
                 "recommended_doneness": "dark_meat_optimal",
                 "supported_methods": [
                   "air_fryer",
@@ -137201,7 +137667,8 @@ const EXP_TREE = {
                 "carryover_temp_c": 2
               }
             ],
-            "name_sv": "Mörkt kött"
+            "name_sv": "Mörkt kött",
+            "name_da": "Mørkt kød"
           },
           {
             "id": "whole",
@@ -137216,6 +137683,7 @@ const EXP_TREE = {
                   "thigh_optimal"
                 ],
                 "name_sv": "Hel kyckling",
+                "name_da": "Hel kylling",
                 "recommended_doneness": "thigh_optimal",
                 "supported_methods": [
                   "air_fryer",
@@ -137229,10 +137697,12 @@ const EXP_TREE = {
                 "carryover_temp_c": 5
               }
             ],
-            "name_sv": "Hel"
+            "name_sv": "Hel",
+            "name_da": "Hel"
           }
         ],
-        "name_sv": "Kyckling"
+        "name_sv": "Kyckling",
+        "name_da": "Kylling"
       },
       {
         "id": "ground_poultry",
@@ -137250,6 +137720,7 @@ const EXP_TREE = {
                   "safe"
                 ],
                 "name_sv": "Kycklingburgare",
+                "name_da": "Kyllingeburger",
                 "recommended_doneness": "safe",
                 "supported_methods": [
                   "air_fryer",
@@ -137270,6 +137741,7 @@ const EXP_TREE = {
                   "safe"
                 ],
                 "name_sv": "Kycklingfärs",
+                "name_da": "Hakket kyllingekød",
                 "recommended_doneness": "safe",
                 "supported_methods": [
                   "braise",
@@ -137297,6 +137769,7 @@ const EXP_TREE = {
                   "safe"
                 ],
                 "name_sv": "Kalkonfärs",
+                "name_da": "Hakket kalkunkød",
                 "recommended_doneness": "safe",
                 "supported_methods": [
                   "braise",
@@ -137324,6 +137797,7 @@ const EXP_TREE = {
                   "safe"
                 ],
                 "name_sv": "Kalkonburgare",
+                "name_da": "Kalkunburger",
                 "recommended_doneness": "safe",
                 "supported_methods": [
                   "air_fryer",
@@ -137337,9 +137811,11 @@ const EXP_TREE = {
                 "carryover_temp_c": 2
               }
             ],
-            "name_sv": "Färs"
+            "name_sv": "Färs",
+            "name_da": "Hakket kød"
           }
-        ]
+        ],
+        "name_da": "Hakket fjerkræ"
       },
       {
         "id": "duck",
@@ -137359,6 +137835,7 @@ const EXP_TREE = {
                   "safe"
                 ],
                 "name_sv": "Andbröst",
+                "name_da": "Andebryst",
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast",
@@ -137379,6 +137856,7 @@ const EXP_TREE = {
                   "confit"
                 ],
                 "name_sv": "Andlår confit",
+                "name_da": "Confiteret andelår",
                 "recommended_doneness": "confit",
                 "supported_methods": [
                   "oven_roast"
@@ -137398,6 +137876,7 @@ const EXP_TREE = {
                   "leg_rendered"
                 ],
                 "name_sv": "Hel and",
+                "name_da": "Hel and",
                 "recommended_doneness": "leg_rendered",
                 "supported_methods": [
                   "oven_roast"
@@ -137408,10 +137887,12 @@ const EXP_TREE = {
                 "rest_time_max": 20,
                 "carryover_temp_c": 5
               }
-            ]
+            ],
+            "name_da": "And"
           }
         ],
-        "name_sv": "And"
+        "name_sv": "And",
+        "name_da": "And"
       },
       {
         "id": "turkey",
@@ -137429,6 +137910,7 @@ const EXP_TREE = {
                   "safe"
                 ],
                 "name_sv": "Kalkonfilé",
+                "name_da": "Kalkunbryst",
                 "recommended_doneness": "safe",
                 "supported_methods": [
                   "oven_roast",
@@ -137449,6 +137931,7 @@ const EXP_TREE = {
                   "dark_meat_optimal"
                 ],
                 "name_sv": "Kalkonklubba",
+                "name_da": "Kalkununderlår",
                 "recommended_doneness": "dark_meat_optimal",
                 "supported_methods": [
                   "oven_roast",
@@ -137469,6 +137952,7 @@ const EXP_TREE = {
                   "dark_meat_optimal"
                 ],
                 "name_sv": "Kalkonlår",
+                "name_da": "Kalkunoverlår",
                 "recommended_doneness": "dark_meat_optimal",
                 "supported_methods": [
                   "braise",
@@ -137490,6 +137974,7 @@ const EXP_TREE = {
                   "thigh_optimal"
                 ],
                 "name_sv": "Hel kalkon",
+                "name_da": "Hel kalkun",
                 "recommended_doneness": "thigh_optimal",
                 "supported_methods": [
                   "oven_roast",
@@ -137501,13 +137986,16 @@ const EXP_TREE = {
                 "rest_time_max": 45,
                 "carryover_temp_c": 8
               }
-            ]
+            ],
+            "name_da": "Kalkun"
           }
         ],
-        "name_sv": "Kalkon"
+        "name_sv": "Kalkon",
+        "name_da": "Kalkun"
       }
     ],
-    "name_sv": "Fågel"
+    "name_sv": "Fågel",
+    "name_da": "Fjerkræ"
   }
 };
 
@@ -137520,7 +138008,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 43,
     "temp_f": 110,
-    "safety_level": "unsafe"
+    "safety_level": "unsafe",
+    "name_da": "Rød"
   },
   "medium_rare": {
     "value": "medium_rare",
@@ -137529,7 +138018,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 49,
     "temp_f": 120,
-    "safety_level": "unsafe"
+    "safety_level": "unsafe",
+    "name_da": "Medium rare"
   },
   "medium": {
     "value": "medium",
@@ -137538,7 +138028,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 54,
     "temp_f": 130,
-    "safety_level": "caution"
+    "safety_level": "caution",
+    "name_da": "Medium"
   },
   "well_done": {
     "value": "well_done",
@@ -137547,7 +138038,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 63,
     "temp_f": 145,
-    "safety_level": "safe"
+    "safety_level": "safe",
+    "name_da": "Gennemstegt"
   },
   "tender": {
     "value": "tender",
@@ -137556,7 +138048,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 54,
     "temp_f": 129,
-    "safety_level": "caution"
+    "safety_level": "caution",
+    "name_da": "Mør"
   },
   "just_cooked": {
     "value": "just_cooked",
@@ -137565,7 +138058,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 49,
     "temp_f": 120,
-    "safety_level": "unsafe"
+    "safety_level": "unsafe",
+    "name_da": "Netop tilberedt"
   },
   "medium_well": {
     "value": "medium_well",
@@ -137574,7 +138068,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 66,
     "temp_f": 150,
-    "safety_level": "safe"
+    "safety_level": "safe",
+    "name_da": "Medium well"
   },
   "done": {
     "value": "done",
@@ -137583,7 +138078,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 71,
     "temp_f": 160,
-    "safety_level": "safe"
+    "safety_level": "safe",
+    "name_da": "Færdigtilberedt"
   },
   "pulled": {
     "value": "pulled",
@@ -137592,7 +138088,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 93,
     "temp_f": 200,
-    "safety_level": "safe"
+    "safety_level": "safe",
+    "name_da": "Trevlemør"
   },
   "heated_through": {
     "value": "heated_through",
@@ -137601,7 +138098,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 60,
     "temp_f": 140,
-    "safety_level": "safe"
+    "safety_level": "safe",
+    "name_da": "Gennemvarmet"
   },
   "crispy": {
     "value": "crispy",
@@ -137610,7 +138108,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 90,
     "temp_f": 195,
-    "safety_level": "safe"
+    "safety_level": "safe",
+    "name_da": "Sprød"
   },
   "dark_meat_optimal": {
     "value": "dark_meat_optimal",
@@ -137619,7 +138118,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 77,
     "temp_f": 170,
-    "safety_level": "safe"
+    "safety_level": "safe",
+    "name_da": "Mørt mørkt kød"
   },
   "caramelized": {
     "value": "caramelized",
@@ -137628,7 +138128,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 160,
     "temp_f": 320,
-    "safety_level": "safe"
+    "safety_level": "safe",
+    "name_da": "Karamelliseret"
   },
   "crisp_tender": {
     "value": "crisp_tender",
@@ -137637,7 +138138,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 85,
     "temp_f": 185,
-    "safety_level": "safe"
+    "safety_level": "safe",
+    "name_da": "Mør med bid"
   },
   "charred": {
     "value": "charred",
@@ -137646,7 +138148,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 200,
     "temp_f": 390,
-    "safety_level": "safe"
+    "safety_level": "safe",
+    "name_da": "Let forkullet"
   },
   "safe": {
     "value": "safe",
@@ -137655,7 +138158,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 74,
     "temp_f": 165,
-    "safety_level": "safe"
+    "safety_level": "safe",
+    "name_da": "Gennemstegt"
   },
   "thigh_rendered": {
     "value": "thigh_rendered",
@@ -137664,7 +138168,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 84,
     "temp_f": 183,
-    "safety_level": "safe"
+    "safety_level": "safe",
+    "name_da": "Lår med afsmeltet fedt"
   },
   "thigh_optimal": {
     "value": "thigh_optimal",
@@ -137673,7 +138178,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 79,
     "temp_f": 175,
-    "safety_level": "safe"
+    "safety_level": "safe",
+    "name_da": "Mørt lårkød"
   },
   "confit": {
     "value": "confit",
@@ -137682,7 +138188,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 88,
     "temp_f": 190,
-    "safety_level": "safe"
+    "safety_level": "safe",
+    "name_da": "Confiteret"
   },
   "leg_rendered": {
     "value": "leg_rendered",
@@ -137691,7 +138198,8 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 82,
     "temp_f": 180,
-    "safety_level": "safe"
+    "safety_level": "safe",
+    "name_da": "Lår med afsmeltet fedt"
   }
 };
 
@@ -142499,6 +143007,13 @@ class KitchenCookingPanel extends LitElement {
     const showMeatSelector = meats.length > 1;
     const showCutTypeSelector = cutTypes.length > 1 || (cutTypes.length === 1 && this._selectedMeat);
     const recommendedDoneness = this._getRecommendedDoneness();
+    const availableDoneness = this._getAvailableDoneness();
+    const selectedDonenessOption = availableDoneness.find(opt => opt.value === this._selectedDoneness);
+    const selectedDonenessLabel = this._localizedField(
+      selectedDonenessOption,
+      'name',
+      this._selectedDoneness ? this._selectedDoneness.replace(/_/g, ' ') : '',
+    );
     const donenessTemps = this._selectedDoneness ? this._getTargetTempForDoneness(this._selectedDoneness) : null;
     const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
     const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
@@ -142691,7 +143206,7 @@ class KitchenCookingPanel extends LitElement {
               ${this._t('meater.safety_legend')}
             </p>
             <div class="doneness-grid">
-              ${this._getAvailableDoneness().map(opt => html`
+              ${availableDoneness.map(opt => html`
                 <button 
                   class="doneness-btn ${this._selectedDoneness === opt.value ? 'selected' : ''} ${opt.value === recommendedDoneness ? 'recommended' : ''}"
                   @click=${() => this._selectDoneness(opt.value)}
@@ -142761,7 +143276,7 @@ class KitchenCookingPanel extends LitElement {
                   <button 
                     class="reset-btn"
                     @click=${() => { this._customTargetTempC = null; }}>
-                    ${this._t('meater.reset_to')} ${donenessTemps ? this._convertTemp(donenessTemps.c) : ''} (${this._selectedDoneness ? this._selectedDoneness.replace('_', ' ') : ''})
+                    ${this._t('meater.reset_to')} ${donenessTemps ? this._convertTemp(donenessTemps.c) : ''} (${selectedDonenessLabel})
                   </button>
                 </div>
               ` : ''}
@@ -144255,9 +144770,12 @@ class KitchenCookingPanel extends LitElement {
    * - Falls back to a flat alphabetical grid when no cat info is present
    */
   _renderCategorizedIngredients(ingredients) {
-    const categoryLabels = (this._language === 'sv' && typeof AI_CATEGORY_LABELS_SV !== 'undefined')
-      ? AI_CATEGORY_LABELS_SV
-      : (typeof AI_CATEGORY_LABELS !== 'undefined' ? AI_CATEGORY_LABELS : {});
+    let categoryLabels = typeof AI_CATEGORY_LABELS !== 'undefined' ? AI_CATEGORY_LABELS : {};
+    if (this._language === 'sv' && typeof AI_CATEGORY_LABELS_SV !== 'undefined') {
+      categoryLabels = AI_CATEGORY_LABELS_SV;
+    } else if (this._language === 'da' && typeof AI_CATEGORY_LABELS_DA !== 'undefined') {
+      categoryLabels = AI_CATEGORY_LABELS_DA;
+    }
     const categoryOrder = (typeof AI_CATEGORY_ORDER !== 'undefined') ? AI_CATEGORY_ORDER : [];
 
     // Check if ingredients have category info
@@ -144379,9 +144897,12 @@ class KitchenCookingPanel extends LitElement {
     const subcat = this._ingredientProteinSubcat;
     const expandedCats = this._ingredientExpandedCats || [];
     const cat = 'p';
-    const subcatLabels = (this._language === 'sv' && typeof AI_PROTEIN_SUBCAT_LABELS_SV !== 'undefined')
-      ? AI_PROTEIN_SUBCAT_LABELS_SV
-      : (typeof AI_PROTEIN_SUBCAT_LABELS !== 'undefined' ? AI_PROTEIN_SUBCAT_LABELS : {});
+    let subcatLabels = typeof AI_PROTEIN_SUBCAT_LABELS !== 'undefined' ? AI_PROTEIN_SUBCAT_LABELS : {};
+    if (this._language === 'sv' && typeof AI_PROTEIN_SUBCAT_LABELS_SV !== 'undefined') {
+      subcatLabels = AI_PROTEIN_SUBCAT_LABELS_SV;
+    } else if (this._language === 'da' && typeof AI_PROTEIN_SUBCAT_LABELS_DA !== 'undefined') {
+      subcatLabels = AI_PROTEIN_SUBCAT_LABELS_DA;
+    }
 
     // Category icons for protein sub-groups
     const subcatIcons = {
@@ -149849,7 +150370,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "633";
+const PANEL_VERSION = "635";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

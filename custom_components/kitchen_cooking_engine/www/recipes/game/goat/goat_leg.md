@@ -3,6 +3,7 @@ type: cut
 slug: goat_leg
 name: Goat Leg Roast
 name_sv: Getlår
+name_da: Gedekølle
 category: game
 meat: goat
 cut_type: Goat

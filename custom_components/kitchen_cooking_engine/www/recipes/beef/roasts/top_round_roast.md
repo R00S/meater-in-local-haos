@@ -3,6 +3,7 @@ type: cut
 slug: top_round_roast
 name: Top Round Roast
 name_sv: Innanlårstek
+name_da: Inderlårssteg
 category: beef
 meat: cow
 cut_type: Roasts

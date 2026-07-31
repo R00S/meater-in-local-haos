@@ -3,6 +3,7 @@ type: cut
 slug: venison_loin
 name: Venison Loin
 name_sv: Hjortfilé
+name_da: Hjortefilet
 category: game
 meat: venison
 cut_type: Venison

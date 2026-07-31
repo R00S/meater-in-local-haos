@@ -3,6 +3,7 @@ type: cut
 slug: ostrich_steak
 name: Ostrich Steak
 name_sv: Strutsfilé
+name_da: Strudsebøf
 category: game
 meat: ostrich
 cut_type: Ostrich

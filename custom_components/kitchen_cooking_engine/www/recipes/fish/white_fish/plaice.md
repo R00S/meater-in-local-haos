@@ -3,6 +3,7 @@ type: cut
 slug: plaice
 name: Plaice
 name_sv: Rödspätta
+name_da: Rødspætte
 category: fish
 meat: white_fish
 cut_type: White Fish

@@ -3,6 +3,7 @@ type: cut
 slug: pollock
 name: Pollock
 name_sv: Sei
+name_da: Sej
 category: fish
 meat: white_fish
 cut_type: White Fish

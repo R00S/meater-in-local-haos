@@ -3,6 +3,7 @@ type: cut
 slug: venison_steak
 name: Venison Steak
 name_sv: Hjortbiff
+name_da: Hjortebøf
 category: game
 meat: venison
 cut_type: Venison

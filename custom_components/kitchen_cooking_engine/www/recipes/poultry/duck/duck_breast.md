@@ -3,6 +3,7 @@ type: cut
 slug: duck_breast
 name: Duck Breast
 name_sv: Andbröst
+name_da: Andebryst
 category: poultry
 meat: duck
 cut_type: Duck

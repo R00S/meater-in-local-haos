@@ -3,6 +3,7 @@ type: cut
 slug: goose_breast
 name: Goose Breast
 name_sv: Gåsbröst
+name_da: Gåsebryst
 category: poultry
 meat: goose
 cut_type: Goose

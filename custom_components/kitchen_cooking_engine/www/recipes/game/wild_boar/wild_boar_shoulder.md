@@ -3,6 +3,7 @@ type: cut
 slug: wild_boar_shoulder
 name: Wild Boar Shoulder
 name_sv: Vildsvinsskuldra
+name_da: Vildsvinebov
 category: game
 meat: wild_boar
 cut_type: Wild Boar

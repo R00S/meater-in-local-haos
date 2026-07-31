@@ -3,6 +3,7 @@ type: cut
 slug: flat_iron
 name: Flat Iron Steak
 name_sv: Flat Iron
+name_da: Flat iron-steak
 category: beef
 meat: cow
 cut_type: Steaks

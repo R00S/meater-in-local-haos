@@ -7,20 +7,20 @@ imported during frontend generation without requiring Home Assistant.
 
 # Cooking styles for AI recipe generation
 COOKING_STYLES = [
-    {"id": "quick_and_easy",  "name": "Quick And Easy",   "name_sv": "Snabbt och enkelt"},
-    {"id": "comfort_food",    "name": "Comfort Food",     "name_sv": "Husmanskost"},
-    {"id": "family_friendly", "name": "Family Friendly",  "name_sv": "Familjevänligt"},
-    {"id": "healthy",         "name": "Healthy",          "name_sv": "Hälsosamt"},
-    {"id": "gourmet",         "name": "Gourmet",          "name_sv": "Gourmet"},
-    {"id": "meal_prep",       "name": "Meal Prep",        "name_sv": "Förberedd mat"},
-    {"id": "one_pot",         "name": "One Pot",          "name_sv": "Engrytarätt"},
-    {"id": "slow_cook",       "name": "Slow Cook",        "name_sv": "Långkok"},
-    {"id": "barbeque",        "name": "Barbeque",         "name_sv": "Grillat"},
-    {"id": "baking",          "name": "Baking",           "name_sv": "Bakning"},
-    {"id": "low_carb",        "name": "Low Carb",         "name_sv": "Lågkolhydrat"},
-    {"id": "high_protein",    "name": "High Protein",     "name_sv": "Proteinrikt"},
-    {"id": "vegetarian",      "name": "Vegetarian",       "name_sv": "Vegetariskt"},
-    {"id": "vegan",           "name": "Vegan",            "name_sv": "Veganskt"},
+    {"id": "quick_and_easy",  "name": "Quick And Easy",   "name_sv": "Snabbt och enkelt", "name_da": "Hurtigt og nemt"},
+    {"id": "comfort_food",    "name": "Comfort Food",     "name_sv": "Husmanskost",       "name_da": "Hyggemad"},
+    {"id": "family_friendly", "name": "Family Friendly",  "name_sv": "Familjevänligt",    "name_da": "Familievenligt"},
+    {"id": "healthy",         "name": "Healthy",          "name_sv": "Hälsosamt",         "name_da": "Sundt"},
+    {"id": "gourmet",         "name": "Gourmet",          "name_sv": "Gourmet",           "name_da": "Gourmet"},
+    {"id": "meal_prep",       "name": "Meal Prep",        "name_sv": "Förberedd mat",     "name_da": "Forberedte måltider"},
+    {"id": "one_pot",         "name": "One Pot",          "name_sv": "Engrytarätt",       "name_da": "Alt i én gryde"},
+    {"id": "slow_cook",       "name": "Slow Cook",        "name_sv": "Långkok",           "name_da": "Langtidstilberedning"},
+    {"id": "barbeque",        "name": "Barbeque",         "name_sv": "Grillat",           "name_da": "Grillmad"},
+    {"id": "baking",          "name": "Baking",           "name_sv": "Bakning",           "name_da": "Bagning"},
+    {"id": "low_carb",        "name": "Low Carb",         "name_sv": "Lågkolhydrat",      "name_da": "Kulhydratfattigt"},
+    {"id": "high_protein",    "name": "High Protein",     "name_sv": "Proteinrikt",       "name_da": "Proteinrigt"},
+    {"id": "vegetarian",      "name": "Vegetarian",       "name_sv": "Vegetariskt",       "name_da": "Vegetarisk"},
+    {"id": "vegan",           "name": "Vegan",            "name_sv": "Veganskt",          "name_da": "Vegansk"},
 ]
 
 # Common ingredients grouped by category (default when no cuisine selected).
@@ -801,6 +801,15 @@ CATEGORY_LABELS_SV = {
     "g": "🌾 Spannmål & Stärkelse",
     "d": "🫙 Mejeriprodukter, Oljor & Såser",
     "s": "🌶️ Kryddor, Nötter & Smaksättare",
+}
+
+# Danish category display labels
+CATEGORY_LABELS_DA = {
+    "p": "🥩 Proteiner",
+    "v": "🥬 Grøntsager og frugt",
+    "g": "🌾 Kornprodukter og stivelse",
+    "d": "🫙 Mejeriprodukter, olier og saucer",
+    "s": "🌶️ Krydderier, nødder og smagsgivere",
 }
 
 # Category display order

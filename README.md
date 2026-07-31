@@ -789,6 +789,7 @@ Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card
 - ✅ **Swedish measurement system** — Metric, Imperial, and Swedish (dl/msk/tsk) unit catalogs with an API endpoint; persisted per user
 - ✅ **Danish measurement system** — Celsius with ml/cl/dl/l, g/kg, tsk (5 ml), and spsk (15 ml), including Danish decimal commas and free-text conversion
 - ✅ **Danish panel language** — Dansk is available from the language selector with locale-aware dates, sorting, recipe steps, and AI recipe generation
+- ✅ **Danish catalog labels** — Categories, protein groups, cut types, all 186 cuts, doneness options, cooking methods, and cooking styles have Danish short labels
 - ✅ **Full i18n (`_t()`) coverage** — Every user-facing string in the panel template is now translated; zero hardcoded English
 - ✅ **AI recipes in the right language** — AI prompt includes an explicit language directive so recipes come back in English, Swedish, or Danish
 - ✅ **AI recipes in the right units** — Frontend sends `measurement_system` with every AI request; ingredient text is converted as a safety net
