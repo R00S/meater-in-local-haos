@@ -31,7 +31,7 @@
 - [x] Implement AI prompt support.
 - [x] Add tests and documentation.
 - [x] Regenerate and verify panel output.
-- [ ] Push branch and open upstream PR.
+- [x] Push branch and open upstream PR: https://github.com/R00S/meater-in-local-haos/pull/120
 
 ## Implementation Notes
 
