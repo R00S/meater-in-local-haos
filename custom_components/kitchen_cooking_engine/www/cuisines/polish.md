@@ -3,12 +3,14 @@ KCE: CUISINE
 id: polish
 name: Polish
 name_sv: "Polskt"
+name_da: "Polsk"
 icon: 🇵🇱
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "Polish cuisine is built on the trinity of pork, cabbage, and root vegetables, shaped by a Central European climate of harsh winters and short growing seasons. Sauerkraut (kapusta kiszona) underpins bigos — the hunter's stew simmered for days with wild mushrooms, smoked sausage, and game — while żurek (sour rye soup with hard-boiled egg) is the quintessential Easter breakfast. The national ritual of Sunday rosół (golden chicken broth) and the Christmas Eve tradition of meatless barszcz z uszkami (beetroot soup with mushroom dumplings) reveals a cuisine deeply tied to religious calendar and forest foraging."
 description_sv: "Polskt kök är byggt på triaden fläsk, kål och rotfrukter, format av ett centraleuropeiskt klimat med hårda vintrar och korta odlingssäsonger. Surkål (kapusta kiszona) utgör grunden i bigos — jägargrytan som sjudas i dagar med vildsvamp, rökt korv och vilt — medan żurek (surt rågmjölssoppa med hårdkokt ägg) är den quintessentiella påskfrukostmaten. Den nationella ritualen med söndagsrosół (gyllene kycklingbuljong) och julaftonstraditionen av köttfri barszcz z uszkami (rödbetor-soppa med svampdumplings) avslöjar ett kök djupt knutet till religiös kalender och skogsplockande."
+description_da: "Det polske køkken bygger på en treenighed af svinekød, kål og rodfrugter, formet af et centraleuropæisk klima med barske vintre og korte vækstsæsoner. Surkål (kapusta kiszona) danner grundlag for bigos — jægergryden, der simrer i dagevis med vilde svampe, røget pølse og vildt — mens żurek (sur rugsuppe med hårdkogt æg) er den helt klassiske påskemorgenmad. Det nationale søndagsritual med rosół (gylden hønsebouillon) og juleaftentraditionen med kødfri barszcz z uszkami (rødbedesuppe med svampedumplings) vidner om et køkken, der er dybt knyttet til den religiøse kalender og traditionen for at sanke i skoven."
 research_done: 1
 ---
 

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: syrian
 name: Syrian
 name_sv: "Syriskt"
+name_da: "Syrisk"
 icon: 🇸🇾
 region: middle_east
 region_name: "Middle Eastern"
 region_icon: 🧆
 description: "Syrian cuisine is the generous soul of the Levant — kibbeh of spiced lamb and bulgur, creamy labneh and aged shanklish, a mezze of stuffed grape leaves and makdous eggplant, all perfumed with Aleppo pepper, za'atar, and the warm seven-spice blend baharat."
 description_sv: "Syriskt kök är Levantens generösa själ — kibbeh av kryddat lamm och bulgur, krämig labneh och lagrad shanklish, en mezze av fyllda druvblad och makdous-aubergine, allt parfymerat med Aleppopeppar, za'atar och den varma sjukryddblandningen baharat."
+description_da: "Det syriske køkken er Levantens gavmilde sjæl — kibbeh af krydret lam og bulgur, cremet labneh og modnet shanklish samt mezze med fyldte vinblade og makdous-aubergine, alt sammen aromatiseret med Aleppo-peber, za'atar og den varmende syvkrydderiblanding baharat."
 research_done: 1
 ---
 

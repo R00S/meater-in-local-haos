@@ -3,12 +3,14 @@ KCE: CUISINE
 id: west_african
 name: West African
 name_sv: "Västafrikansk"
+name_da: "Vestafrikansk"
 icon: 🥘
 region: african
 region_name: "African"
 region_icon: 🌍
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
 description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+description_da: "Det vestafrikanske køkken omfatter madtraditionerne i Nigeria, Ghana, Senegal, Côte d'Ivoire, Mali og nabolandene; jollof-ris, suya, egusi, palmeolie og jordnøddegryder er blandt regionens internationalt mest kendte kendetegn."
 research_done: 1
 ---
 

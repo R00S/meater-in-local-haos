@@ -3,12 +3,14 @@ KCE: CUISINE
 id: greek
 name: Greek
 name_sv: "Grekiskt"
+name_da: "Græsk"
 icon: 🇬🇷
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "Greek cuisine is built on the Mediterranean trinity of olive oil, wheat, and wine, enriched by lamb, seafood, and the wild herbs of the hillsides. Feta, oregano, and the charcoal grill define its flavour — from grilled octopus at a coastal taverna to Easter lamb slow-roasted over an open fire."
 description_sv: "Grekisk matlagning bygger på Medelhavets treenighet av olivolja, vete och vin, berikad med lamm, skaldjur och vilda bergörter. Feta, oregano och träkolgrillen definierar smakerna — från grillad bläckfisk vid en kustrestaurang till långsamt ugnsstekt Påskalamm över öppen eld."
+description_da: "Det græske køkken bygger på Middelhavets treenighed af olivenolie, hvede og vin, beriget med lam, fisk og skaldyr samt bjergskråningernes vilde urter. Feta, oregano og trækulsgrillen definerer smagen — fra grillet blæksprutte på en taverna ved kysten til påskelam, der langtidssteges over åben ild."
 research_done: 1
 ---
 

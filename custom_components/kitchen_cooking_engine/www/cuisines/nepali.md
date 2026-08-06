@@ -3,12 +3,14 @@ KCE: CUISINE
 id: nepali
 name: Nepali
 name_sv: "Nepalesiskt"
+name_da: "Nepalesisk"
 icon: 🇳🇵
 region: south_asian
 region_name: "South Asian"
 region_icon: 🍛
 description: "Nepali cuisine is shaped by the Himalayas — from Terai plains to mountain highlands, it offers steamed buff momo dumplings, dal-bhat-tarkari (lentils, rice, and vegetables) eaten twice daily, fermented gundruk greens, warming timur-spiced broths, and the hearty fortification of yak butter and chhurpi cheese above the snowline."
 description_sv: "Nepalesiskt kök formas av Himalaya — från Teraislätterna till höghöjden erbjuder det ångade buffelmomo-dumplings, dal-bhat-tarkari (linser, ris och grönsaker) som äts två gånger om dagen, fermenterade gundruk-grönsaker, värmande timur-kryddade soppor och den kraftiga näringen från yak-smör och chhurpi-ost ovanför snögränsen."
+description_da: "Det nepalesiske køkken er formet af Himalaya — fra Terais sletter til bjergenes højland byder det på dampede buff momo-dumplings, dal-bhat-tarkari (linser, ris og grøntsager), der spises to gange om dagen, fermenterede gundruk-grøntsager og varmende supper krydret med timur, mens yaksmør og chhurpi-ost giver solid næring over snegrænsen."
 research_done: 1
 ---
 

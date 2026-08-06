@@ -545,6 +545,13 @@ class KitchenCookingPanel extends LitElement {
     return base !== undefined && base !== null && base !== '' ? base : fallback;
   }
 
+  _localizedRegionName(region) {
+    if (!region) return '';
+    const key = `cuisines.${region.id}`;
+    const translated = this._t(key);
+    return translated !== key ? translated : this._localizedField(region, 'name');
+  }
+
   /**
    * Convert a quantity+unit to the user's preferred measurement system.
    * E.g. _convertMeasure(500, 'ml') → "5 dl" (SE) or "2.1 cup" (US).
@@ -5668,7 +5675,7 @@ class KitchenCookingPanel extends LitElement {
       return html`<div class="loading">${this._t('ai_recipe.loading_ingredients')}</div>`;
     }
 
-    // Cuisine/region options — built from docs/cuisines/*.md (KCE:CUISINE files).
+    // Cuisine/region options — built from canonical www/cuisines/*.md files.
     // Add a new cuisine file there and it will appear here on the next release.
     const cuisineRegions = (typeof AI_CUISINE_REGIONS !== 'undefined') ? AI_CUISINE_REGIONS : [];
 
@@ -5727,7 +5734,7 @@ class KitchenCookingPanel extends LitElement {
                 this.requestUpdate();
               }}
             >
-              <span style="font-weight: bold;">${region.icon} ${this._localizedField(region, 'name')} ${selectedInRegion.length > 0 ? `(${selectedInRegion.length})` : ''}</span>
+              <span style="font-weight: bold;">${region.icon} ${this._localizedRegionName(region)} ${selectedInRegion.length > 0 ? `(${selectedInRegion.length})` : ''}</span>
               <span>${isExpanded ? '▼' : '▶'}</span>
             </div>
             ${isExpanded ? html`

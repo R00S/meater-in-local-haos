@@ -3,12 +3,14 @@ KCE: CUISINE
 id: brazilian
 name: Brazilian
 name_sv: "Brasilianskt"
+name_da: "Brasiliansk"
 icon: 🇧🇷
 region: latin_american
 region_name: "Latin American"
 region_icon: 💃
 description: "Brazilian cuisine is a vibrant tapestry woven from Indigenous, Portuguese, and African traditions. Black-bean feijoada, open-fire churrasco, Bahian moqueca with dendê oil, and everyday rice-and-beans define a culinary culture as vast and diverse as the country itself — from Amazon fish feasts to Minas cheese boards and São Paulo street tapioca."
 description_sv: "Brasilianskt kök är en livfull blandning av ursprungsbefolkningens, portugisiska och afrikanska traditioner. Svartböns-feijoada, öppen-eld-churrasco, Bahiansk moqueca med dendê-olja och den dagliga rätten ris-och-bönor definierar en kulinarisk kultur lika mångfacetterad som landet självt — från Amazonas fiskfester till Minas ostbrickor och São Paulos tapioca-stånd."
+description_da: "Det brasilianske køkken er et levende tæppe vævet af oprindelige folks, portugisiske og afrikanske traditioner. Feijoada med sorte bønner, churrasco tilberedt over åben ild, moqueca fra Bahia med dendê-olie og hverdagens ris og bønner kendetegner en madkultur, der er lige så vidtstrakt og mangfoldig som selve landet — fra fiskefester i Amazonas til osteborde i Minas og tapioca fra São Paulos gader."
 research_done: 1
 ---
 

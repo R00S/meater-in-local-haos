@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.2.5 · Home Assistant 2024.1.0+
+> **Version:** 0.10.2.6 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -863,7 +863,9 @@ The ingredient screen has several sections:
 - **Cuisine / Region filter** — optionally choose one or more cuisine regions to narrow
   ingredient suggestions. Selecting multiple regions creates fusion combinations. Over 100
   cuisines are available. When a cuisine is selected, a short description of that cuisine
-  is shown above the ingredient grid.
+  is shown above the ingredient grid. Region headings, cuisine names, and descriptions are
+  localized in English, Swedish, and Danish. Danish cuisine ingredient names currently fall
+  back to English.
 - **From Your Shelf** *(shown only when Shelf is enabled and has items)* — a highlighted
   section at the top of the ingredient grid shows items currently in your shelf (fridge,
   freezer, larder, spices). Tap any chip to instantly add that item as a selected
@@ -894,8 +896,8 @@ The ingredient screen has several sections:
 - **Ingredient tooltips** — hover over any ingredient chip (desktop) or long-press it
   (touch/mobile) to see a brief note about that ingredient — for example its flavour
   profile, typical use in the cuisine, or a usage tip. The tooltip appears after a
-  short delay and disappears when you move away or release. Tooltips are shown in
-  the GUI language you have selected on the Welcome screen.
+  short delay and disappears when you move away or release. A localized note is used when
+  the cuisine source supplies one; otherwise the source note is shown as a fallback.
 
 Staple ingredients (salt, pepper, oil, etc.) are assumed available and listed below the grid
 for reference.

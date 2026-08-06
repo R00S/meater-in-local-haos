@@ -3,12 +3,14 @@ KCE: CUISINE
 id: venezuelan
 name: Venezuelan
 name_sv: "Venezuelanskt"
+name_da: "Venezuelansk"
 icon: 🇻🇪
 region: latin_american
 region_name: "Latin American"
 region_icon: 💃
 description: "Venezuelan cuisine is built on arepas, pabellón criollo, and a sofrito of ají dulce, onion and onoto — a vivid, flavourful cooking culture shaped by the llanos, the Caribbean coast, and the Orinoco basin."
 description_sv: "Venezuelanskt kök bygger på arepas, pabellón criollo och en sofrito av ají dulce, lök och onoto — en livfull matkultur formad av llanorna, Karibiens kust och Orinocofloden."
+description_da: "Det venezuelanske køkken bygger på arepas, pabellón criollo og en sofrito af ají dulce, løg og onoto — en levende og smagfuld madkultur formet af llanos, den caribiske kyst og Orinoco-bækkenet."
 research_done: 1
 ---
 

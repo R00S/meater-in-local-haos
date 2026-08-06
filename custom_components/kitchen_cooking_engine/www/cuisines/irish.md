@@ -3,12 +3,14 @@ KCE: CUISINE
 id: irish
 name: Irish
 name_sv: "Irländskt"
+name_da: "Irsk"
 icon: 🇮🇪
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "Irish cuisine is rooted in the land and Atlantic coast — built on pasture-fed lamb and beef, exceptional dairy, oats, and the potato, with soda bread and Irish stew as cultural touchstones and wild Atlantic seafood from oysters to smoked salmon complementing the hearty farmhouse tradition."
 description_sv: "Irländskt kök har sina rötter i betet och Atlantkusten — uppbyggt kring betesuppfödd lamm och nötkött, exceptionella mejeriprodukter, havre och potatis, med sodabröd och irländsk gryta som kulturella hörnstenar och vildfångad Atlantskaldjur från ostron till rökt lax som kompletterar den rustika bondgårdstraditionen."
+description_da: "Det irske køkken har rødder i jorden og ved Atlanterhavskysten — det bygger på græsfodret lamme- og oksekød, enestående mejeriprodukter, havre og kartofler. Her er soda bread og Irish stew kulturelle pejlemærker, mens vildtfangede fisk og skaldyr fra Atlanterhavet, fra østers til røget laks, supplerer den solide landkøkkentradition."
 research_done: 1
 ---
 

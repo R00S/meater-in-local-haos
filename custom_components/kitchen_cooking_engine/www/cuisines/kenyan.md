@@ -3,12 +3,14 @@ KCE: CUISINE
 id: kenyan
 name: Kenyan
 name_sv: "Kenyaniskt"
+name_da: "Kenyansk"
 icon: 🇰🇪
 region: african
 region_name: "African"
 region_icon: 🌍
 description: "Kenyan cuisine is built around nyama choma (charcoal-roasted goat and beef), the dense starchy anchor of ugali (maize porridge), and sukuma wiki (sautéed collard greens) — all eaten communally. The Swahili coast adds coconut milk, pilau spices, and Indian Ocean influences, creating a cuisine that is both earthy and aromatic."
 description_sv: "Kenyanskt kök kretsar kring nyama choma (kolgrillat get- och nötkött), den tunga stärkelseankaret ugali (majsgröt) och sukuma wiki (stuvad grönkål) — allt äts gemensamt. Swahilikusten tillför kokosmjölk, pilaokryddor och Indiska oceanens influenser, och skapar ett kök som är både jordnära och aromatiskt."
+description_da: "Det kenyanske køkken er bygget op omkring nyama choma (kulgrillet gede- og oksekød), den solide, stivelsesrige grundpille ugali (majsgrød) og sukuma wiki (sauteret bladkål) — som alle spises i fællesskab. Swahilikysten tilfører kokosmælk, pilau-krydderier og påvirkninger fra Det Indiske Ocean og skaber et køkken, der både er jordnært og aromatisk."
 research_done: 1
 ---
 

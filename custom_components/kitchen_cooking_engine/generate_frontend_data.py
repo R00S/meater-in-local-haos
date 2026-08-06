@@ -242,7 +242,7 @@ _PROTEIN_NAME_RE = [(re.compile(pat, re.IGNORECASE), sc, bid) for pat, sc, bid i
 def build_cuisine_data(base_dir):
     """Read www/cuisines/*.md KCE:CUISINE files (ground truth for the AI recipe builder).
 
-    Files live in docs/cuisines/ (www/cuisines is a symlink to that directory).
+    Files live in www/cuisines/ (docs/cuisines is a symlink to that directory).
     Adding a new file is enough — no other file needs to be edited.
 
     File format uses standard YAML frontmatter followed by markdown sections:
@@ -252,6 +252,7 @@ def build_cuisine_data(base_dir):
         id: swedish
         name: Swedish
         name_sv: Svensk
+        name_da: Svensk
         icon: 🇸🇪
         region: nordic
         region_name: Nordic
@@ -276,9 +277,11 @@ def build_cuisine_data(base_dir):
     Returns (cuisine_ingredients, cuisine_to_region, cuisine_regions, cuisine_descriptions) where:
         cuisine_ingredients:  {cuisine_id: [{id, name, name_sv?, cat, grade, rating}, ...]}
         cuisine_to_region:    {cuisine_id: region_str}
-        cuisine_regions:      [{id, name, icon, cuisines: [{id, name, name_sv?, icon, description?, description_sv?}]}]
+        cuisine_regions:      [{id, name, icon, cuisines: [{id, name, name_sv?, name_da?, icon,
+                              description?, description_sv?, description_da?}]}]
                               — ordered by first appearance; drives AI_CUISINE_REGIONS in the JS.
-        cuisine_descriptions: {cuisine_id: {description: str, description_sv?: str}}
+        cuisine_descriptions: {cuisine_id: {description: str, description_sv?: str,
+                              description_da?: str}}
                               — flat lookup used by AI_CUISINE_DESCRIPTIONS in the JS.
     """
     _section_to_cat = {
@@ -350,12 +353,16 @@ def build_cuisine_data(base_dir):
         cuisine_entry = {"id": cuisine_id, "name": fm.get("name", cuisine_id.replace("_", " ").title())}
         if fm.get("name_sv"):
             cuisine_entry["name_sv"] = fm["name_sv"]
+        if fm.get("name_da"):
+            cuisine_entry["name_da"] = fm["name_da"]
         if fm.get("icon"):
             cuisine_entry["icon"] = fm["icon"]
         if fm.get("description"):
             cuisine_entry["description"] = fm["description"]
         if fm.get("description_sv"):
             cuisine_entry["description_sv"] = fm["description_sv"]
+        if fm.get("description_da"):
+            cuisine_entry["description_da"] = fm["description_da"]
 
         if region:
             if region not in regions_map:
@@ -372,6 +379,8 @@ def build_cuisine_data(base_dir):
             desc_entry = {"description": fm["description"]}
             if fm.get("description_sv"):
                 desc_entry["description_sv"] = fm["description_sv"]
+            if fm.get("description_da"):
+                desc_entry["description_da"] = fm["description_da"]
             cuisine_descriptions[cuisine_id] = desc_entry
 
         # Parse ingredient sections from markdown body
@@ -1120,8 +1129,8 @@ def generate_js_data():
     # Derived data; initialised before enrichment so it always exists
     ai_common_ingredients_flat = []
 
-    # Load cuisine ingredients from docs/cuisines/*.md (KCE:CUISINE files) via www/cuisines symlink.
-    # These files are the single source of truth for AI_CUISINE_REGIONS and AI_CUISINE_TO_REGION.
+    # Load cuisine data from canonical www/cuisines/*.md KCE:CUISINE files.
+    # docs/cuisines is a convenience symlink to this source directory.
     # Adding a new file is all that is needed — no other file must be edited.
     _file_cuisine_ingredients, _file_cuisine_to_region, _file_cuisine_regions, _file_cuisine_descriptions = build_cuisine_data(base_dir)
     if _file_cuisine_ingredients:
@@ -1134,7 +1143,7 @@ def generate_js_data():
             f"({sum(len(v) for v in ai_cuisine_ingredients.values())} ingredients total)"
         )
     else:
-        print("  Cuisines: no docs/cuisines/*.md files found — AI_CUISINE_INGREDIENTS will be empty")
+        print("  Cuisines: no www/cuisines/*.md files found — AI_CUISINE_INGREDIENTS will be empty")
 
     # Enrich cuisine ingredients with category from INGREDIENT_CATEGORIES map
     # (only for legacy entries without a cat field already set by build_cuisine_data)
@@ -1264,16 +1273,16 @@ def generate_js_data():
     lines.append(f"const AI_PROTEIN_SUBCAT_LABELS_SV = {json.dumps(ai_protein_subcat_labels_sv, indent=2, ensure_ascii=False)};")
     lines.append(f"const AI_PROTEIN_SUBCAT_LABELS_DA = {json.dumps(ai_protein_subcat_labels_da, indent=2, ensure_ascii=False)};")
     lines.append("")
-    lines.append("// AI Recipe Builder - Cuisine-specific Ingredients (28 per cuisine)")
+    lines.append("// AI Recipe Builder - Cuisine-specific ingredients")
     lines.append(f"const AI_CUISINE_INGREDIENTS = {json.dumps(ai_cuisine_ingredients, indent=2, ensure_ascii=False)};")
     lines.append("")
     lines.append("// AI Recipe Builder - Cuisine to Region mapping")
     lines.append(f"const AI_CUISINE_TO_REGION = {json.dumps(ai_cuisine_to_region, indent=2, ensure_ascii=False)};")
     lines.append("")
-    lines.append("// AI Recipe Builder - Region/cuisine tree (ground truth: docs/cuisines/*.md)")
+    lines.append("// AI Recipe Builder - Region/cuisine tree (ground truth: www/cuisines/*.md)")
     lines.append(f"const AI_CUISINE_REGIONS = {json.dumps(ai_cuisine_regions, indent=2, ensure_ascii=False)};")
     lines.append("")
-    lines.append("// AI Recipe Builder - Cuisine descriptions {cuisine_id: {description, description_sv?}}")
+    lines.append("// AI Recipe Builder - Cuisine descriptions {cuisine_id: {description, description_sv?, description_da?}}")
     lines.append(f"const AI_CUISINE_DESCRIPTIONS = {json.dumps(ai_cuisine_descriptions, indent=2, ensure_ascii=False)};")
     lines.append("")
     lines.append("// AI Recipe Builder - Protein ingredient → subcat key (beef/pork/poultry/fish/lamb/game)")

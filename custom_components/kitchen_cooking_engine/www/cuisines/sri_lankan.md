@@ -3,12 +3,14 @@ KCE: CUISINE
 id: sri_lankan
 name: Sri Lankan
 name_sv: "Srilankesiskt"
+name_da: "Srilankansk"
 icon: 🇱🇰
 region: south_asian
 region_name: "South Asian"
 region_icon: 🍛
 description: "Sri Lankan cuisine is the island's coconut-soaked soul food — hoppers and string hoppers with pol sambol, fish ambul thiyal soured with goraka, kottu roti chopped at midnight on a hot griddle, and dal curry enriched with coconut milk. Anchored by Ceylon cinnamon, Maldive fish, and freshly grated coconut, it fuses Buddhist vegetarian traditions with Tamil, Malay, and Dutch colonial layers."
 description_sv: "Srilankesiskt kök är öns kokosnöts-genomsyrade själsmat — hoppers och strängade hoppers med pol sambol, fish ambul thiyal syrad med goraka, kottu roti hackad på glödhet grill vid midnatt och dal curry med kokosmjölk. Förankrat i Ceylon-kanel, Maldivfisk och färskriven kokos, fusionerar det buddhistiska vegetariska traditioner med tamilska, malajiska och holländsk-koloniala lager."
+description_da: "Det srilankanske køkken er øens soulfood gennemsyret af kokos — hoppers og string hoppers med pol sambol, fish ambul thiyal syrnet med goraka, kottu roti hakket ved midnat på en varm stegeplade og dal curry beriget med kokosmælk. Med Ceylon-kanel, Maldive fish og friskrevet kokos som grundpiller forener det buddhistiske vegetariske traditioner med tamilske og malajiske traditioner samt indflydelse fra den hollandske kolonitid."
 research_done: 1
 ---
 

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 31 Jul 2026, 18:04 CET
+ * AUTO-GENERATED: 06 Aug 2026, 11:40 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 31 Jul 2026, 18:04 CET
+// Last generated: 06 Aug 2026, 11:40 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -4289,7 +4289,7 @@ const AI_PROTEIN_SUBCAT_LABELS_DA = {
   "poultry": "Fjerkræ"
 };
 
-// AI Recipe Builder - Cuisine-specific Ingredients (28 per cuisine)
+// AI Recipe Builder - Cuisine-specific ingredients
 const AI_CUISINE_INGREDIENTS = {
   "afghan": [
     {
@@ -123079,7 +123079,7 @@ const AI_CUISINE_TO_REGION = {
   "yemeni": "middle_east"
 };
 
-// AI Recipe Builder - Region/cuisine tree (ground truth: docs/cuisines/*.md)
+// AI Recipe Builder - Region/cuisine tree (ground truth: www/cuisines/*.md)
 const AI_CUISINE_REGIONS = [
   {
     "id": "south_asian",
@@ -123090,81 +123090,101 @@ const AI_CUISINE_REGIONS = [
         "id": "afghan",
         "name": "Afghan",
         "name_sv": "Afghanskt",
+        "name_da": "Afghansk",
         "icon": "🇦🇫",
         "description": "Afghan cuisine is a fragrant, hearty tradition shaped by Silk Road trade routes and mountain landscapes. Centred on lamb, long-grain rice, and fresh-baked naan, it showcases dishes like Kabuli Pulao (the national dish) and mantu dumplings, layered with cardamom, cumin, and dried mint.",
-        "description_sv": "Det afghanska köket är en doftande, kraftfull tradition formad av Sidenvägens handelsrutter och bergslandskap. Med lamm, långkornigt ris och nybakat naan i centrum presenterar köket nationalrätten Kabuli Pulao och mantudumplings, kryddade med kardemumma, spiskummin och torkad mynta."
+        "description_sv": "Det afghanska köket är en doftande, kraftfull tradition formad av Sidenvägens handelsrutter och bergslandskap. Med lamm, långkornigt ris och nybakat naan i centrum presenterar köket nationalrätten Kabuli Pulao och mantudumplings, kryddade med kardemumma, spiskummin och torkad mynta.",
+        "description_da": "Det afghanske køkken er en aromatisk og mættende madtradition formet af Silkevejens handelsruter og bjerglandskaber. Med lam, langkornede ris og friskbagt naan i centrum byder det på retter som Kabuli Pulao (nationalretten) og mantu-dumplings, tilsmagt med kardemomme, spidskommen og tørret mynte."
       },
       {
         "id": "bangladeshi",
         "name": "Bangladeshi",
         "name_sv": "Bangladesiskt",
+        "name_da": "Bangladeshisk",
         "icon": "🇧🇩",
         "description": "Bangladeshi cuisine centers on rice and freshwater fish, shaped by the fertile Bengal delta. Signature preparations include shorshe ilish (hilsa in mustard sauce), bhuna khichuri, and Dhaka-style kacchi biryani, with mustard oil, panch phoron, and turmeric defining the flavor profile.",
-        "description_sv": "Bangladesisk matkultur kretsar kring ris och sötvattensfisk, formad av det bördiga Bengaldeltats landskap. Signaturrätter som shorshe ilish, bhuna khichuri och Dhaka-stil kacchi biryani definierar köket, med senapsolja, panch phoron och gurkmeja som bärande smaker."
+        "description_sv": "Bangladesisk matkultur kretsar kring ris och sötvattensfisk, formad av det bördiga Bengaldeltats landskap. Signaturrätter som shorshe ilish, bhuna khichuri och Dhaka-stil kacchi biryani definierar köket, med senapsolja, panch phoron och gurkmeja som bärande smaker.",
+        "description_da": "Det bangladeshiske køkken har ris og ferskvandsfisk som omdrejningspunkt og er formet af det frugtbare Bengaldelta. Karakteristiske retter omfatter shorshe ilish (hilsa i sennepssauce), bhuna khichuri og kacchi biryani i Dhaka-stil, mens sennepsolie, panch phoron og gurkemeje definerer smagsprofilen."
       },
       {
         "id": "bengali",
         "name": "Bengali",
         "name_sv": "Bengaliskt",
+        "name_da": "Bengalsk",
         "icon": "🐟",
         "description": "West Bengali cuisine is a rice-and-fish civilisation centred on the Ganges delta, defined by mustard oil, panch phoron, posto (poppy seeds), and legendary freshwater fish dishes such as shorshe ilish and chingri malai curry. It is equally famous for its chhana-based sweets — roshogolla, sandesh, and mishti doi — which are central to Kolkata's culinary identity.",
-        "description_sv": "Västbengalisk mat är en ris-och-fisk-civilisation kring Gangesdeltaet, definierad av senapsolja, panch phoron, posto (vallmofrön) och legendariska sötvattensfiskar som shorshe ilish och chingri malai curry. Köket är lika känt för sina chhana-baserade sötsaker — roshogolla, sandesh och mishti doi — som är centrala för Kolkatas kulinariska identitet."
+        "description_sv": "Västbengalisk mat är en ris-och-fisk-civilisation kring Gangesdeltaet, definierad av senapsolja, panch phoron, posto (vallmofrön) och legendariska sötvattensfiskar som shorshe ilish och chingri malai curry. Köket är lika känt för sina chhana-baserade sötsaker — roshogolla, sandesh och mishti doi — som är centrala för Kolkatas kulinariska identitet.",
+        "description_da": "Det vestbengalske køkken er en madkultur bygget op omkring ris og fisk med centrum i Gangesdeltaet og kendetegnet ved sennepsolie, panch phoron, posto (valmuefrø) og legendariske retter med ferskvandsfisk såsom shorshe ilish og chingri malai curry. Det er lige så berømt for sine chhana-baserede søde specialiteter — roshogolla, sandesh og mishti doi — som er centrale for Kolkatas kulinariske identitet."
       },
       {
         "id": "indian",
         "name": "Indian",
         "name_sv": "Indiskt",
+        "name_da": "Indisk",
         "icon": "🇮🇳",
         "description": "Indian cuisine is defined by its extraordinary spice tradition, regional diversity from the Himalayas to coastal Kerala, and a heritage of slow-cooked curries, tandoor breads, aromatic biryanis, and street foods shaped by five thousand years of culinary culture.",
-        "description_sv": "Indiskt kök kännetecknas av sin extraordinära kryddtradition, regional mångfald från Himalaya till kustlandet Kerala, och ett arv av långsamt kokta curryrätter, tandooribrödбрödl, doftande biryanis och gatukök som formats under fem tusen år av kulinarisk kultur."
+        "description_sv": "Indiskt kök kännetecknas av sin extraordinära kryddtradition, regional mångfald från Himalaya till kustlandet Kerala, och ett arv av långsamt kokta curryrätter, tandooribrödбрödl, doftande biryanis och gatukök som formats under fem tusen år av kulinarisk kultur.",
+        "description_da": "Det indiske køkken er kendetegnet ved sin enestående krydderitradition, sin regionale mangfoldighed fra Himalaya til Keralas kyster og sin arv af langtidssimrede karryretter, tandoorbrød, aromatisk biryani og gademad, alt sammen formet af fem tusind års madkultur."
       },
       {
         "id": "mughlai",
         "name": "Mughlai",
         "name_sv": "Mughal-indiskt",
+        "name_da": "Mughlai (mogulindisk)",
         "icon": "👑",
         "description": "Mughlai cuisine is the refined legacy of the Mughal court — slow-cooked kormas simmered in cream and nut paste, fragrant dum biryani layered with saffron-stained rice, and the warm aromatics of cardamom, mace, and cloves that define centuries of imperial North Indian cooking.",
-        "description_sv": "Mughal-indiskt kök är det förfinade arvet från Mughalhovet — långsamt tillagade kormar i grädde och nötpasta, doftande dum-biryani lagrad med saffransrivet ris och de varma aromerna av kardemumma, muskotblomma och kryddnejlika som präglat sekler av kejserligt nordindiskt kök."
+        "description_sv": "Mughal-indiskt kök är det förfinade arvet från Mughalhovet — långsamt tillagade kormar i grädde och nötpasta, doftande dum-biryani lagrad med saffransrivet ris och de varma aromerna av kardemumma, muskotblomma och kryddnejlika som präglat sekler av kejserligt nordindiskt kök.",
+        "description_da": "Mughlai-køkkenet er den raffinerede arv fra mogulhoffet — langtidssimrede korma-retter i fløde og nøddepasta, duftende dum biryani lagt i lag med safranfarvede ris og de varme aromaer af kardemomme, muskatblomme og nelliker, som gennem århundreder har kendetegnet kejserlig nordindisk madlavning."
       },
       {
         "id": "nepali",
         "name": "Nepali",
         "name_sv": "Nepalesiskt",
+        "name_da": "Nepalesisk",
         "icon": "🇳🇵",
         "description": "Nepali cuisine is shaped by the Himalayas — from Terai plains to mountain highlands, it offers steamed buff momo dumplings, dal-bhat-tarkari (lentils, rice, and vegetables) eaten twice daily, fermented gundruk greens, warming timur-spiced broths, and the hearty fortification of yak butter and chhurpi cheese above the snowline.",
-        "description_sv": "Nepalesiskt kök formas av Himalaya — från Teraislätterna till höghöjden erbjuder det ångade buffelmomo-dumplings, dal-bhat-tarkari (linser, ris och grönsaker) som äts två gånger om dagen, fermenterade gundruk-grönsaker, värmande timur-kryddade soppor och den kraftiga näringen från yak-smör och chhurpi-ost ovanför snögränsen."
+        "description_sv": "Nepalesiskt kök formas av Himalaya — från Teraislätterna till höghöjden erbjuder det ångade buffelmomo-dumplings, dal-bhat-tarkari (linser, ris och grönsaker) som äts två gånger om dagen, fermenterade gundruk-grönsaker, värmande timur-kryddade soppor och den kraftiga näringen från yak-smör och chhurpi-ost ovanför snögränsen.",
+        "description_da": "Det nepalesiske køkken er formet af Himalaya — fra Terais sletter til bjergenes højland byder det på dampede buff momo-dumplings, dal-bhat-tarkari (linser, ris og grøntsager), der spises to gange om dagen, fermenterede gundruk-grøntsager og varmende supper krydret med timur, mens yaksmør og chhurpi-ost giver solid næring over snegrænsen."
       },
       {
         "id": "pakistani",
         "name": "Pakistani",
         "name_sv": "Pakistanskt",
+        "name_da": "Pakistansk",
         "icon": "🇵🇰",
         "description": "Pakistani cuisine is built on wheat, meat, and intense spicing. Lahori karahi (wok-fried goat or chicken with tomato and ginger), beef nihari, and seekh kebab from the tandoor define a cuisine richer in red meat, stronger in spice, and more wheat-forward than its neighbours. Ghee, fresh ginger-garlic paste, and yogurt underpin every preparation.",
-        "description_sv": "Pakistanskt kök är uppbyggt kring vete, kött och intensiv kryddning. Lahoris karahi (wokad get eller kyckling med tomat och ingefära), biff nihari och seekh-kebab från tandoren definierar ett kök som är rikare på rött kött, starkare i kryddning och mer vetebaserat än sina grannar. Ghee, färsk ingefärs-vitlökspasta och yoghurt utgör grunden i varje tillagning."
+        "description_sv": "Pakistanskt kök är uppbyggt kring vete, kött och intensiv kryddning. Lahoris karahi (wokad get eller kyckling med tomat och ingefära), biff nihari och seekh-kebab från tandoren definierar ett kök som är rikare på rött kött, starkare i kryddning och mer vetebaserat än sina grannar. Ghee, färsk ingefärs-vitlökspasta och yoghurt utgör grunden i varje tillagning.",
+        "description_da": "Det pakistanske køkken bygger på hvede, kød og intens krydring. Lahori karahi (wokstegt gedekød eller kylling med tomat og ingefær), beef nihari og seekh kebab fra tandooren kendetegner et køkken, der er rigere på rødt kød, stærkere krydret og mere hvedebaseret end nabolandenes. Ghee, pasta af frisk ingefær og hvidløg samt yoghurt ligger til grund for enhver tilberedning."
       },
       {
         "id": "punjabi",
         "name": "Punjabi",
         "name_sv": "Punjabiskt",
+        "name_da": "Punjabisk",
         "icon": "🌾",
         "description": "Punjabi cuisine — the hearty cooking of the 'Granary of India/Pakistan' — is built on tandoor heat, buffalo dairy, and bold wheat breads. From butter chicken and dal makhani to sarson da saag with makki roti, ghee, paneer, and garam masala define its rich, smoky, indulgent character.",
-        "description_sv": "Punjabiskt kök — från 'Indiens spannmålskammare' — bygger på tandurvärme, buffelmjölk och kraftiga vetebröd. Från smörkyckling och dal makhani till sarson da saag med makki roti — ghee, paneer och garam masala ger köket dess rika, rökiga karaktär."
+        "description_sv": "Punjabiskt kök — från 'Indiens spannmålskammare' — bygger på tandurvärme, buffelmjölk och kraftiga vetebröd. Från smörkyckling och dal makhani till sarson da saag med makki roti — ghee, paneer och garam masala ger köket dess rika, rökiga karaktär.",
+        "description_da": "Det punjabiske køkken — den solide madtradition fra 'Indiens/Pakistans kornkammer' — bygger på tandoorens varme, mejeriprodukter af bøffelmælk og kraftige hvedebrød. Fra butter chicken og dal makhani til sarson da saag med makki roti er det ghee, paneer og garam masala, der definerer dets fyldige, røgede og overdådige karakter."
       },
       {
         "id": "south_indian",
         "name": "South Indian",
         "name_sv": "Sydindiskt",
+        "name_da": "Sydindisk",
         "icon": "🇮🇳",
         "description": "South Indian cuisine is the crisp dosa, the steamed idli, the tangy tamarind sambar, and the fierce black pepper — a rice-lentil-coconut world spanning Tamil Nadu, Kerala, Karnataka, and Andhra Pradesh, where toddy-shop beef fry meets Brahmin coconut stew at the same banana leaf.",
-        "description_sv": "Sydindiskt kök är den knapriga dosan, den ångade idlin, den syrliga tamarind-sambarn och den intensiva svartpepparn — en ris-linser-kokosvärld som spänner från Tamil Nadu, Kerala, Karnataka och Andhra Pradesh, där beef fry möter kokosstew på samma bananblad."
+        "description_sv": "Sydindiskt kök är den knapriga dosan, den ångade idlin, den syrliga tamarind-sambarn och den intensiva svartpepparn — en ris-linser-kokosvärld som spänner från Tamil Nadu, Kerala, Karnataka och Andhra Pradesh, där beef fry möter kokosstew på samma bananblad.",
+        "description_da": "Det sydindiske køkken er den sprøde dosa, den dampede idli, den syrlige tamarind-sambar og den intense sorte peber — en verden af ris, linser og kokos, der strækker sig over Tamil Nadu, Kerala, Karnataka og Andhra Pradesh, hvor toddy-barernes beef fry møder brahminsk kokosgryde på det samme bananblad."
       },
       {
         "id": "sri_lankan",
         "name": "Sri Lankan",
         "name_sv": "Srilankesiskt",
+        "name_da": "Srilankansk",
         "icon": "🇱🇰",
         "description": "Sri Lankan cuisine is the island's coconut-soaked soul food — hoppers and string hoppers with pol sambol, fish ambul thiyal soured with goraka, kottu roti chopped at midnight on a hot griddle, and dal curry enriched with coconut milk. Anchored by Ceylon cinnamon, Maldive fish, and freshly grated coconut, it fuses Buddhist vegetarian traditions with Tamil, Malay, and Dutch colonial layers.",
-        "description_sv": "Srilankesiskt kök är öns kokosnöts-genomsyrade själsmat — hoppers och strängade hoppers med pol sambol, fish ambul thiyal syrad med goraka, kottu roti hackad på glödhet grill vid midnatt och dal curry med kokosmjölk. Förankrat i Ceylon-kanel, Maldivfisk och färskriven kokos, fusionerar det buddhistiska vegetariska traditioner med tamilska, malajiska och holländsk-koloniala lager."
+        "description_sv": "Srilankesiskt kök är öns kokosnöts-genomsyrade själsmat — hoppers och strängade hoppers med pol sambol, fish ambul thiyal syrad med goraka, kottu roti hackad på glödhet grill vid midnatt och dal curry med kokosmjölk. Förankrat i Ceylon-kanel, Maldivfisk och färskriven kokos, fusionerar det buddhistiska vegetariska traditioner med tamilska, malajiska och holländsk-koloniala lager.",
+        "description_da": "Det srilankanske køkken er øens soulfood gennemsyret af kokos — hoppers og string hoppers med pol sambol, fish ambul thiyal syrnet med goraka, kottu roti hakket ved midnat på en varm stegeplade og dal curry beriget med kokosmælk. Med Ceylon-kanel, Maldive fish og friskrevet kokos som grundpiller forener det buddhistiske vegetariske traditioner med tamilske og malajiske traditioner samt indflydelse fra den hollandske kolonitid."
       }
     ]
   },
@@ -123177,113 +123197,141 @@ const AI_CUISINE_REGIONS = [
         "id": "algerian",
         "name": "Algerian",
         "name_sv": "Algeriskt",
+        "name_da": "Algerisk",
         "icon": "🇩🇿",
         "description": "Algerian cuisine blends Berber, Arab, Ottoman, and French influences, with couscous as the UNESCO-recognised national dish, lamb as the defining protein, and a rich tradition of semolina breads, aromatic ras el hanout spice blends, and the iconic Deglet Nour dates of the Saharan south.",
-        "description_sv": "Algerisk mat är en blandning av berbisk, arabisk, osmansk och fransk matkultur, med couscous som UNESCO-erkänd nationalrätt, lamm som det viktigaste proteinet och en rik tradition av semulebröd, aromatiska ras el hanout-kryddblandningar och de ikoniska Deglet Nour-dadlarna från den saharariska södern."
+        "description_sv": "Algerisk mat är en blandning av berbisk, arabisk, osmansk och fransk matkultur, med couscous som UNESCO-erkänd nationalrätt, lamm som det viktigaste proteinet och en rik tradition av semulebröd, aromatiska ras el hanout-kryddblandningar och de ikoniska Deglet Nour-dadlarna från den saharariska södern.",
+        "description_da": "Det algeriske køkken forener berberiske, arabiske, osmanniske og franske påvirkninger med couscous som den UNESCO-anerkendte nationalret, lam som den karakteristiske kødtype samt en rig tradition for semuljebrød, aromatiske ras el hanout-krydderiblandinger og de ikoniske Deglet Nour-dadler fra det sydlige Sahara."
       },
       {
         "id": "cameroonian",
         "name": "Cameroonian",
         "name_sv": "Kamerunskt",
+        "name_da": "Camerounsk",
         "icon": "🇨🇲",
         "description": "Cameroonian cuisine reflects the country's extraordinary diversity — often called 'Africa in miniature' — blending forest, savanna, coastal and Sahel traditions. Ndolé (bitter leaf stew), poulet DG, eru, and achu define a cuisine built on bold spices, red palm oil, dried crayfish, and foraged forest ingredients.",
-        "description_sv": "Kamerunskt kök speglar landets extraordinära mångfald — ofta kallat 'Afrika i miniatyr' — och förenar skogens, savannens, kustens och Sahelns traditioner. Ndolé (besk-bladsgrytan), poulet DG, eru och achu definierar ett kök byggt på djärva kryddor, röd palmolja, torkad kräftdjurssäsong och skördade skogsrätter."
+        "description_sv": "Kamerunskt kök speglar landets extraordinära mångfald — ofta kallat 'Afrika i miniatyr' — och förenar skogens, savannens, kustens och Sahelns traditioner. Ndolé (besk-bladsgrytan), poulet DG, eru och achu definierar ett kök byggt på djärva kryddor, röd palmolja, torkad kräftdjurssäsong och skördade skogsrätter.",
+        "description_da": "Det camerounske køkken afspejler landets enestående mangfoldighed — ofte kaldet 'Afrika i miniature' — og forener traditioner fra skov, savanne, kyst og Sahel. Ndolé (gryderet med bitre blade), poulet DG, eru og achu definerer et køkken bygget på markante krydderier, rød palmeolie, tørrede krebs og sankede skovråvarer."
       },
       {
         "id": "east_african",
         "name": "East African",
         "name_sv": "Östafrikanskt",
+        "name_da": "Østafrikansk",
         "icon": "🌍",
         "description": "East African cuisine spans Ethiopia's ancient injera-and-wot tradition, Kenya and Tanzania's ugali with sukuma wiki and nyama choma, Uganda's matoke, and the spice-scented Swahili coast. Two great flavor identities meet here: Ethiopia's complex spice blends (berbere, niter kibbeh) built over millennia of Orthodox fasting culture, and the Indian Ocean coast's clove-cardamom-coconut influence radiating from Zanzibar. Teff has been cultivated in Ethiopia for 3 000+ years and provides ~61 kg per person per year; Kenya's maize ugali consumption reaches ~88 kg per person per year.",
-        "description_sv": "Östafrikanskt kök spänner från Etiopiens urgamla injera-och-wot-tradition och Kenyas/Tanzanias ugali med sukuma wiki och nyama choma, till Ugandas matoke och den kryddiga Swahilikusten. Två stora smakidentiteter möts: Etiopiens komplexa kryddblandningar (berbere, niter kibbeh) formade av ortodoxa fastetraditioner, och Indiska Oceanens kustens kanel-kardemumma-kokosmjölksinfluenser från Zanzibar. Teff har odlats i Etiopien i 3 000+ år och ger ~61 kg per person och år; Kenyas majsugali-konsumtion når ~88 kg per person och år."
+        "description_sv": "Östafrikanskt kök spänner från Etiopiens urgamla injera-och-wot-tradition och Kenyas/Tanzanias ugali med sukuma wiki och nyama choma, till Ugandas matoke och den kryddiga Swahilikusten. Två stora smakidentiteter möts: Etiopiens komplexa kryddblandningar (berbere, niter kibbeh) formade av ortodoxa fastetraditioner, och Indiska Oceanens kustens kanel-kardemumma-kokosmjölksinfluenser från Zanzibar. Teff har odlats i Etiopien i 3 000+ år och ger ~61 kg per person och år; Kenyas majsugali-konsumtion når ~88 kg per person och år.",
+        "description_da": "Det østafrikanske køkken spænder over Etiopiens ældgamle injera- og wot-tradition, Kenyas og Tanzanias ugali med sukuma wiki og nyama choma, Ugandas matoke og den krydderduftende Swahilikyst. To store smagsidentiteter mødes her: Etiopiens komplekse krydderiblandinger (berbere, niter kibbeh), udviklet gennem årtusinders ortodoks fastekultur, og Det Indiske Oceans kystkøkken, præget af nellike, kardemomme og kokos med udspring i Zanzibar. Teff er blevet dyrket i Etiopien i over 3.000 år og bidrager med ca. 61 kg pr. person om året; Kenyas forbrug af majsugali når ca. 88 kg pr. person om året."
       },
       {
         "id": "egyptian",
         "name": "Egyptian",
         "name_sv": "Egyptiskt",
+        "name_da": "Egyptisk",
         "icon": "🇪🇬",
         "description": "Egyptian cuisine is one of the world's oldest food cultures, shaped by the Nile Delta's extraordinary agricultural fertility and five millennia of Pharaonic, Greek, Roman, Arab, and Ottoman influence. The national diet is anchored by wheat — Egyptians consume ~137 kg per capita annually, among the highest in the world — and the subsidised aish baladi flatbread feeds 73 million people daily. Egypt is the world's leading date producer, grows 6.2 million tonnes of tomatoes a year, and rice production runs to 6.5 million tonnes. Ful medames (slow-cooked fava beans with olive oil, cumin, and lemon) is the de facto national dish eaten for breakfast daily. Koshari — a layered assembly of rice, lentils, pasta, and spiced tomato sauce — is Egypt's definitive street food. Meat is overwhelmingly chicken (~19 kg/cap, 2023), with red meat consumption having fallen 44% since 2018 due to price inflation. Pork is absent from mainstream Egyptian cooking due to the Muslim majority.",
-        "description_sv": "Egyptisk mat är en av världens äldsta matkulturer, formad av Nildeltats extraordinära jordbruksbördighet och fem årtusenden av faraonisk, grekisk, romersk, arabisk och osmansk påverkan. Den nationella kosten förankras av vete — egyptier konsumerar ~137 kg per capita och år, bland de högsta i världen — och det subventionerade aish baladi-flatbrödet föder 73 miljoner människor dagligen. Egypten är världens ledande daddelproducent, odlar 6,2 miljoner ton tomater per år och risproduktionen uppgår till 6,5 miljoner ton. Ful medames (långkok av bondbönor med olivolja, spiskummin och citron) är de facto nationalrätten som äts till frukost dagligen. Koshari — ett lagerbygge av ris, linser, pasta och kryddad tomatsås — är Egyptens definitiva gatumat. Kött är överväldigande kyckling (~19 kg/cap, 2023), medan rödköttskonsumtionen har minskat med 44% sedan 2018 på grund av prisinflation."
+        "description_sv": "Egyptisk mat är en av världens äldsta matkulturer, formad av Nildeltats extraordinära jordbruksbördighet och fem årtusenden av faraonisk, grekisk, romersk, arabisk och osmansk påverkan. Den nationella kosten förankras av vete — egyptier konsumerar ~137 kg per capita och år, bland de högsta i världen — och det subventionerade aish baladi-flatbrödet föder 73 miljoner människor dagligen. Egypten är världens ledande daddelproducent, odlar 6,2 miljoner ton tomater per år och risproduktionen uppgår till 6,5 miljoner ton. Ful medames (långkok av bondbönor med olivolja, spiskummin och citron) är de facto nationalrätten som äts till frukost dagligen. Koshari — ett lagerbygge av ris, linser, pasta och kryddad tomatsås — är Egyptens definitiva gatumat. Kött är överväldigande kyckling (~19 kg/cap, 2023), medan rödköttskonsumtionen har minskat med 44% sedan 2018 på grund av prisinflation.",
+        "description_da": "Det egyptiske køkken er en af verdens ældste madkulturer, formet af Nildeltaets usædvanligt frugtbare landbrugsjord og fem årtusinders faraoniske, græske, romerske, arabiske og osmanniske indflydelse. Den nationale kost er forankret i hvede — egypterne indtager ca. 137 kg pr. indbygger om året, et af verdens højeste niveauer — og det subsidierede fladbrød aish baladi brødføder 73 millioner mennesker dagligt. Egypten er verdens førende dadelproducent, dyrker 6,2 millioner ton tomater om året, og risproduktionen når 6,5 millioner ton. Ful medames (langtidstilberedte hestebønner med olivenolie, spidskommen og citron) er de facto landets nationalret og spises dagligt til morgenmad. Koshari — en lagdelt sammensætning af ris, linser, pasta og krydret tomatsauce — er Egyptens mest karakteristiske gademad. Kylling dominerer klart kødforbruget (ca. 19 kg pr. indbygger, 2023), mens forbruget af rødt kød er faldet 44 % siden 2018 på grund af prisstigninger. Svinekød er fraværende i den almindelige egyptiske madlavning på grund af det muslimske flertal."
       },
       {
         "id": "ethiopian",
         "name": "Ethiopian",
         "name_sv": "Etiopisk",
+        "name_da": "Etiopisk",
         "icon": "🇪🇹",
         "description": "Ethiopian cuisine is one of the most distinctively structured food cultures in the world, built around injera — the fermented teff flatbread that functions simultaneously as plate, utensil, and bread for every meal. Teff (Eragrostis tef) is native to the Ethiopian Highlands and consumed by over 50 million Ethiopians daily. Ethiopian Orthodox Christianity shapes the food calendar profoundly: observant Ethiopians fast approximately 140 days per year, eating strict vegan (no meat, no dairy) on those days, which has produced one of the world's richest plant-based culinary traditions alongside the meat-based feast cooking. Berbere — the foundational spice blend of toasted chilies, fenugreek, korarima, and over a dozen other spices — is the taste signature of Ethiopian food. Doro wat (slow-braised chicken in rich berbere sauce with a hard-boiled egg) is the national dish, served only at celebrations. Kitfo (minced raw beef seasoned with mitmita and niter kibbeh) is the prestige raw meat dish. Ethiopia is Africa's largest coffee producer at ~495 000 tonnes/year and its number-one honey producer at 98 000 tonnes/year, making coffee ceremony and tej (honey wine) the country's defining food-cultural rituals.",
-        "description_sv": "Etiopisk mat är en av de mest distinkt strukturerade matkulturer i världen, byggd kring injera — det fermenterade tefbrödet som simultaneously fungerar som tallrik, redskap och bröd vid varje måltid. Teff (Eragrostis tef) är inhemskt till det etiopiska höglandet och konsumeras av över 50 miljoner etiopier dagligen. Etiopisk-ortodox kristendom formar matkalendern kraftigt: troende etiopier fastar ungefär 140 dagar per år och äter strikt vegansk kost under dessa dagar, vilket har producerat en av världens rikaste växtbaserade kulinariska traditioner. Berbere — den grundläggande kryddblandningen av rostade chilier, bockhornsklöver, korarima och över ett dussin andra kryddor — är smakerssignaturen i etiopisk mat. Doro wat (långsamt bräserad kyckling i rik berberesås med ett hårdkokt ägg) är nationalrätten. Ethiopien är Afrikas största kaffeprodusent med ~495 000 ton/år och landets nummer ett honungsproducent med 98 000 ton/år."
+        "description_sv": "Etiopisk mat är en av de mest distinkt strukturerade matkulturer i världen, byggd kring injera — det fermenterade tefbrödet som simultaneously fungerar som tallrik, redskap och bröd vid varje måltid. Teff (Eragrostis tef) är inhemskt till det etiopiska höglandet och konsumeras av över 50 miljoner etiopier dagligen. Etiopisk-ortodox kristendom formar matkalendern kraftigt: troende etiopier fastar ungefär 140 dagar per år och äter strikt vegansk kost under dessa dagar, vilket har producerat en av världens rikaste växtbaserade kulinariska traditioner. Berbere — den grundläggande kryddblandningen av rostade chilier, bockhornsklöver, korarima och över ett dussin andra kryddor — är smakerssignaturen i etiopisk mat. Doro wat (långsamt bräserad kyckling i rik berberesås med ett hårdkokt ägg) är nationalrätten. Ethiopien är Afrikas största kaffeprodusent med ~495 000 ton/år och landets nummer ett honungsproducent med 98 000 ton/år.",
+        "description_da": "Det etiopiske køkken er en af verdens mest særprægede madkulturer og er bygget op omkring injera — det fermenterede teff-fladbrød, der ved hvert måltid fungerer som tallerken, spiseredskab og brød på én gang. Teff (Eragrostis tef) stammer fra det etiopiske højland og spises dagligt af over 50 millioner etiopiere. Den etiopisk-ortodokse kristendom præger madkalenderen dybt: praktiserende etiopiere faster cirka 140 dage om året og spiser helt vegansk (intet kød, ingen mejeriprodukter) på disse dage, hvilket har skabt en af verdens rigeste plantebaserede kulinariske traditioner side om side med de kødbaserede festmåltider. Berbere — den grundlæggende krydderiblanding af ristede chilier, bukkehorn, korarima og mere end et dusin andre krydderier — er det etiopiske køkkens karakteristiske smag. Doro wat (langtidsbraiseret kylling i en fyldig berbere-sauce med et hårdkogt æg) er nationalretten og serveres kun ved højtider. Kitfo (råt hakket oksekød krydret med mitmita og niter kibbeh) er en prestigefyldt ret med råt kød. Etiopien er Afrikas største kaffeproducent med ca. 495.000 ton om året og største honningproducent med 98.000 ton om året, hvilket gør kaffeceremonien og tej (honningvin) til centrale ritualer i landets madkultur."
       },
       {
         "id": "ghanaian",
         "name": "Ghanaian",
         "name_sv": "Ghanaiskt",
+        "name_da": "Ghanesisk",
         "icon": "🇬🇭",
         "description": "Ghanaian cuisine is built around rich soups and stews — groundnut soup, light soup, and palm nut soup — ladled over fermented starchy bases like fufu, banku, and kenkey. Tilapia and goat anchor the proteins, while unique West African seasonings like prekese, grains of selim, and dawadawa give Ghanaian cooking its unmistakable identity.",
-        "description_sv": "Ghanesisk matlagning bygger på rejäla soppor och grytor — jordnötssoppa, ljus soppa och palmnötssoppa — serverade med fermenterade stärkelsebaser som fufu, banku och kenkey. Tilapia och getekött är de centrala proteinerna, medan unika Västafrikanska kryddor som prekese, guineapeppar och dawadawa ger ghanesk matlagning sin omistliga identitet."
+        "description_sv": "Ghanesisk matlagning bygger på rejäla soppor och grytor — jordnötssoppa, ljus soppa och palmnötssoppa — serverade med fermenterade stärkelsebaser som fufu, banku och kenkey. Tilapia och getekött är de centrala proteinerna, medan unika Västafrikanska kryddor som prekese, guineapeppar och dawadawa ger ghanesk matlagning sin omistliga identitet.",
+        "description_da": "Det ghanesiske køkken bygger på fyldige supper og gryderetter — jordnøddesuppe, light soup og palmenøddesuppe — der øses over fermenterede stivelsesbaser som fufu, banku og kenkey. Tilapia og gedekød er de vigtigste proteinkilder, mens særlige vestafrikanske krydderier som prekese, selimpeber og dawadawa giver ghanesisk madlavning dens umiskendelige identitet."
       },
       {
         "id": "kenyan",
         "name": "Kenyan",
         "name_sv": "Kenyaniskt",
+        "name_da": "Kenyansk",
         "icon": "🇰🇪",
         "description": "Kenyan cuisine is built around nyama choma (charcoal-roasted goat and beef), the dense starchy anchor of ugali (maize porridge), and sukuma wiki (sautéed collard greens) — all eaten communally. The Swahili coast adds coconut milk, pilau spices, and Indian Ocean influences, creating a cuisine that is both earthy and aromatic.",
-        "description_sv": "Kenyanskt kök kretsar kring nyama choma (kolgrillat get- och nötkött), den tunga stärkelseankaret ugali (majsgröt) och sukuma wiki (stuvad grönkål) — allt äts gemensamt. Swahilikusten tillför kokosmjölk, pilaokryddor och Indiska oceanens influenser, och skapar ett kök som är både jordnära och aromatiskt."
+        "description_sv": "Kenyanskt kök kretsar kring nyama choma (kolgrillat get- och nötkött), den tunga stärkelseankaret ugali (majsgröt) och sukuma wiki (stuvad grönkål) — allt äts gemensamt. Swahilikusten tillför kokosmjölk, pilaokryddor och Indiska oceanens influenser, och skapar ett kök som är både jordnära och aromatiskt.",
+        "description_da": "Det kenyanske køkken er bygget op omkring nyama choma (kulgrillet gede- og oksekød), den solide, stivelsesrige grundpille ugali (majsgrød) og sukuma wiki (sauteret bladkål) — som alle spises i fællesskab. Swahilikysten tilfører kokosmælk, pilau-krydderier og påvirkninger fra Det Indiske Ocean og skaber et køkken, der både er jordnært og aromatisk."
       },
       {
         "id": "moroccan",
         "name": "Moroccan",
         "name_sv": "Marockanskt",
+        "name_da": "Marokkansk",
         "icon": "🇲🇦",
         "description": "Moroccan cuisine is a sensory feast shaped by Berber, Arab, Andalusian, and Jewish traditions — marked by fragrant ras el hanout, slow-cooked tagines with preserved lemon and olives, steamed couscous piled with seven vegetables, sweet-savoury bastilla, and the world-famous saffron from Taliouine.",
-        "description_sv": "Marockansk mat är ett sinnenas festmåltid format av berberska, arabiska, andalusiska och judiska traditioner — präglat av doftande ras el hanout, långkokt tagine med bevarad citron och oliver, ångad couscous med sju grönsaker, sötsyrlig bastilla och världsberömt saffran från Taliouine."
+        "description_sv": "Marockansk mat är ett sinnenas festmåltid format av berberska, arabiska, andalusiska och judiska traditioner — präglat av doftande ras el hanout, långkokt tagine med bevarad citron och oliver, ångad couscous med sju grönsaker, sötsyrlig bastilla och världsberömt saffran från Taliouine.",
+        "description_da": "Det marokkanske køkken er en fest for sanserne, formet af berberiske, arabiske, andalusiske og jødiske traditioner — kendetegnet ved duftende ras el hanout, langtidstilberedte taginer med syltede citroner og oliven, dampet couscous toppet med syv grøntsager, bastilla, der forener sødt og krydret, og den verdensberømte safran fra Taliouine."
       },
       {
         "id": "nigerian",
         "name": "Nigerian",
         "name_sv": "Nigerianskt",
+        "name_da": "Nigeriansk",
         "icon": "🇳🇬",
         "description": "Nigerian cuisine is one of the most diverse and boldly flavoured on the continent — built on earthy egusi (melon-seed stew), jollof rice simmered in spiced tomato, smoky suya beef skewers, palm-oil-red soups loaded with stockfish and goat, and the layered heat of ata rodo (scotch bonnet) and indigenous iru (fermented locust bean).",
-        "description_sv": "Nigerianskt kök är ett av de mest mångsidiga och djärvt smaksatta på kontinenten — byggt på jordnötsartad egusi (melonfrösoppa), jollofris tillagat i kryddig tomat, rökiga suya-nötköttspett, palmolje-röda soppor fyllda med stockfisk och get, och den lagrade hettan av ata rodo (scotch bonnet) och inhemsk iru (fermenterad karobiböna)."
+        "description_sv": "Nigerianskt kök är ett av de mest mångsidiga och djärvt smaksatta på kontinenten — byggt på jordnötsartad egusi (melonfrösoppa), jollofris tillagat i kryddig tomat, rökiga suya-nötköttspett, palmolje-röda soppor fyllda med stockfisk och get, och den lagrade hettan av ata rodo (scotch bonnet) och inhemsk iru (fermenterad karobiböna).",
+        "description_da": "Det nigerianske køkken er et af de mest mangfoldige og smagsintense på kontinentet — bygget på den jordagtige egusi (melonfrøgryde), jollof-ris simret i en krydret tomatbase, røgede suya-spyd med oksekød, supper, der er røde af palmeolie og fyldt med tørfisk og gedekød, samt den nuancerede styrke fra ata rodo (scotch bonnet) og den lokale iru (fermenterede frø fra det afrikanske johannesbrødtræ)."
       },
       {
         "id": "senegalese",
         "name": "Senegalese",
         "name_sv": "Senegalesiskt",
+        "name_da": "Senegalesisk",
         "icon": "🇸🇳",
         "description": "Senegalese cuisine is West Africa's most celebrated cooking tradition — built on thiéboudienne (fish rice, UNESCO heritage dish), yassa (lemon-marinated chicken or fish), and mafé (peanut stew), with the Atlantic's fish, groundnut oil, millet, and fermented umami condiments (yeet, netetou) at its heart.",
-        "description_sv": "Senegalesiskt kök är Västafrikas mest hyllade kulinariska tradition — byggt på thiéboudienne (fiskris, UNESCO-arv), yassa (citronmarinerad kyckling eller fisk) och mafé (jordnötsgryta), med Atlantens fisk, jordnötsolja, hirs och fermenterade umami-kryddor (yeet, netetou) som grund."
+        "description_sv": "Senegalesiskt kök är Västafrikas mest hyllade kulinariska tradition — byggt på thiéboudienne (fiskris, UNESCO-arv), yassa (citronmarinerad kyckling eller fisk) och mafé (jordnötsgryta), med Atlantens fisk, jordnötsolja, hirs och fermenterade umami-kryddor (yeet, netetou) som grund.",
+        "description_da": "Det senegalesiske køkken er Vestafrikas mest hyldede madtradition — bygget på thiéboudienne (fisk med ris, en ret optaget på UNESCOs liste over immateriel kulturarv), yassa (citronmarineret kylling eller fisk) og mafé (jordnøddegryde), med Atlanterhavets fisk, jordnøddeolie, hirse og fermenterede, umamigivende smagsgivere (yeet, netetou) som omdrejningspunkt."
       },
       {
         "id": "south_african",
         "name": "South African",
         "name_sv": "Sydafrikansk",
+        "name_da": "Sydafrikansk",
         "icon": "🇿🇦",
         "description": "South African cuisine is the braai fire and the cast-iron potjie — boerewors, biltong, bobotie, bunny chow and pap — born where indigenous Nguni, Cape Malay, Dutch Afrikaner, Zulu, and Indian Durban traditions all share one table.",
-        "description_sv": "Sydafrikanskt kök är braaieldns glöd och gjutjärnspotjien — boerewors, biltong, bobotie, bunny chow och pap — fött där inhemska Nguni-, kap-malajiska, afrikanska, Zulu- och indiska Durban-traditioner delar ett bord."
+        "description_sv": "Sydafrikanskt kök är braaieldns glöd och gjutjärnspotjien — boerewors, biltong, bobotie, bunny chow och pap — fött där inhemska Nguni-, kap-malajiska, afrikanska, Zulu- och indiska Durban-traditioner delar ett bord.",
+        "description_da": "Det sydafrikanske køkken er braai-ilden og støbejernsgryden potjie — boerewors, biltong, bobotie, bunny chow og pap — skabt dér, hvor traditioner fra Nguni- og zulufolkene, Cape Malay-samfundet, afrikaanere med hollandske rødder og Durbans indiske befolkning mødes om ét bord."
       },
       {
         "id": "tanzanian",
         "name": "Tanzanian",
         "name_sv": "Tanzaniskt",
+        "name_da": "Tanzanisk",
         "icon": "🇹🇿",
         "description": "Tanzanian cuisine is a mosaic of Swahili coast, mainland Bantu and island traditions — ugali cornmeal with nyama choma grilled meat, Zanzibar pilau spiced with cloves and cardamom, biryani from Arab traders, coconut fish curries and rich bean stews that reflect centuries of Indian Ocean commerce and diverse ethnic heritage.",
-        "description_sv": "Tanzaniskt kök är en mosaik av Swahilikusten, bantu och öarnas traditioner — majsgröt (ugali) med grillat kött (nyama choma), Zanzibar-pilau kryddad med nejlika och kardemumma, biryani från arabiska handelsmän, kokosfiskgrytor och rika bönsopor som speglar sekler av Indiska oceanens handel."
+        "description_sv": "Tanzaniskt kök är en mosaik av Swahilikusten, bantu och öarnas traditioner — majsgröt (ugali) med grillat kött (nyama choma), Zanzibar-pilau kryddad med nejlika och kardemumma, biryani från arabiska handelsmän, kokosfiskgrytor och rika bönsopor som speglar sekler av Indiska oceanens handel.",
+        "description_da": "Det tanzaniske køkken er en mosaik af traditioner fra Swahilikysten, fastlandets Bantu-folk og øerne — ugali af majsmel med det grillede kød nyama choma, Zanzibar-pilau krydret med nelliker og kardemomme, biryani fra arabiske handelsfolk, fiskekarryer med kokos og fyldige bønnegryder, som afspejler århundreders handel på Det Indiske Ocean og en mangfoldig etnisk arv."
       },
       {
         "id": "tunisian",
         "name": "Tunisian",
         "name_sv": "Tunisiskt",
+        "name_da": "Tunesisk",
         "icon": "🇹🇳",
         "description": "Tunisian cuisine is the most fiercely spiced of North Africa — harissa-fuelled stews, couscous crowned with lamb and root vegetables, brik fried pastry oozing egg and tuna, and lablabi chickpea soup eaten in early-morning steam with a torn baguette. Forged by Berber, Arab, Ottoman and French layers and bolstered by the Mediterranean, it runs hotter and brighter than Moroccan cooking: caraway and tabil spice paste go where others use ras-el-hanout, and the olive oil — Tunisia exports more per capita than any other country — pours lavishly into everything.",
-        "description_sv": "Tunisiskt kök är det mest eldigt kryddade i hela Nordafrika — harissaeldade grytor, couscous krönt med lamm och rotfrukter, den stekta briken som flödar av ägg och tonfisk, och lablabi kikärtsoppa avnjuten i tidig morgondimma med bröd. Byggt av berbiska, arabiska, osmanska och franska lager och stödd av Medelhavet löper det hetare och skarpare än marockansk matlagning: karumdill och tabil-kryddblandning ersätter ras-el-hanout, och olivoljan — Tunisien exporterar mer per capita än något annat land — hälls generöst i allt."
+        "description_sv": "Tunisiskt kök är det mest eldigt kryddade i hela Nordafrika — harissaeldade grytor, couscous krönt med lamm och rotfrukter, den stekta briken som flödar av ägg och tonfisk, och lablabi kikärtsoppa avnjuten i tidig morgondimma med bröd. Byggt av berbiska, arabiska, osmanska och franska lager och stödd av Medelhavet löper det hetare och skarpare än marockansk matlagning: karumdill och tabil-kryddblandning ersätter ras-el-hanout, och olivoljan — Tunisien exporterar mer per capita än något annat land — hälls generöst i allt.",
+        "description_da": "Det tunesiske køkken er Nordafrikas mest intenst krydrede — harissa-prægede gryderetter, couscous kronet med lam og rodfrugter, friturestegt brik fyldt med flydende æg og tun samt kikærtesuppen lablabi, der spises dampende varm tidligt om morgenen med en baguette revet i stykker. Formet af berberiske, arabiske, osmanniske og franske lag og beriget af Middelhavet er det stærkere og friskere end det marokkanske køkken: kommen og krydderpastaen tabil bruges, hvor andre bruger ras-el-hanout, og olivenolien — Tunesien eksporterer mere pr. indbygger end noget andet land — bruges gavmildt i alt."
       },
       {
         "id": "west_african",
         "name": "West African",
         "name_sv": "Västafrikansk",
+        "name_da": "Vestafrikansk",
         "icon": "🥘",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_da": "Det vestafrikanske køkken omfatter madtraditionerne i Nigeria, Ghana, Senegal, Côte d'Ivoire, Mali og nabolandene; jollof-ris, suya, egusi, palmeolie og jordnøddegryder er blandt regionens internationalt mest kendte kendetegn."
       }
     ]
   },
@@ -123296,49 +123344,61 @@ const AI_CUISINE_REGIONS = [
         "id": "american",
         "name": "American",
         "name_sv": "Amerikansk",
+        "name_da": "Amerikansk",
         "icon": "🇺🇸",
         "description": "A diverse and hearty cuisine shaped by waves of immigration and regional traditions, centred on grilled meats, BBQ, corn, wheat, and dairy. Iconic dishes include the hamburger, fried chicken, apple pie, cornbread, and Thanksgiving turkey, reflecting a melting pot of cultures across a vast continent.",
-        "description_sv": "Ett mångsidigt och rejält kök format av invandring och regionala traditioner, med fokus på grillat kött, BBQ, majs, vete och mejeriprodukter. Ikoniska rätter är hamburgare, stekt kyckling, äppelpaj, majsbröd och Thanksgiving-kalkon – en kulturell smältdegel från en vid kontinent."
+        "description_sv": "Ett mångsidigt och rejält kök format av invandring och regionala traditioner, med fokus på grillat kött, BBQ, majs, vete och mejeriprodukter. Ikoniska rätter är hamburgare, stekt kyckling, äppelpaj, majsbröd och Thanksgiving-kalkon – en kulturell smältdegel från en vid kontinent.",
+        "description_da": "Et mangfoldigt og mættende køkken formet af bølger af indvandring og regionale traditioner med fokus på grillet kød, BBQ, majs, hvede og mejeriprodukter. Ikoniske retter omfatter hamburgeren, friturestegt kylling, æbletærte, majsbrød og Thanksgiving-kalkun og afspejler en kulturel smeltedigel på tværs af det vidtstrakte land."
       },
       {
         "id": "cajun_creole",
         "name": "Cajun/Creole",
         "name_sv": "Cajun/Kreolskt",
+        "name_da": "Cajun/kreolsk",
         "icon": "🦞",
         "description": "Louisiana's two-tradition cuisine: rural Cajun (French-Acadian bayou country) and urban Creole (New Orleans). United by the Holy Trinity of onion, celery, and bell pepper; dark roux; and Gulf seafood. Crawfish étouffée, gumbo, jambalaya, and shrimp Creole are its defining dishes.",
-        "description_sv": "Louisianas tvådelade kök: lantligt cajun (franskakadiskt bayouland) och stadskreolskt (New Orleans). Förenat av den heliga triniteten av lök, selleri och paprika; mörk roux; och skaldjur från Mexikanska golfen. Kräftétouffée, gumbo, jambalaya och räkkreol är dess signaturrätter."
+        "description_sv": "Louisianas tvådelade kök: lantligt cajun (franskakadiskt bayouland) och stadskreolskt (New Orleans). Förenat av den heliga triniteten av lök, selleri och paprika; mörk roux; och skaldjur från Mexikanska golfen. Kräftétouffée, gumbo, jambalaya och räkkreol är dess signaturrätter.",
+        "description_da": "Louisianas køkken rummer to traditioner: landlig cajunmad (det fransk-acadiske bayouland) og urban kreolsk mad (New Orleans). De forenes af den hellige treenighed af løg, bladselleri og peberfrugt, mørk roux samt fisk og skaldyr fra Den Mexicanske Golf. Crawfish étouffée, gumbo, jambalaya og shrimp Creole er de retter, der kendetegner køkkenet."
       },
       {
         "id": "canadian",
         "name": "Canadian",
         "name_sv": "Kanadensiskt",
+        "name_da": "Canadisk",
         "icon": "🇨🇦",
         "description": "Canadian cuisine reflects the country's vast regional diversity — from Quebec's French-rooted comfort food (poutine, tourtière) to Maritime lobster suppers, Prairie beef and grain traditions, BC Pacific salmon, and Indigenous staples like wild rice, bannock, and bison. Maple syrup from Quebec (72% of world supply) is the defining flavour of Canadian identity.",
-        "description_sv": "Kanadensiskt kök speglar landets stora regionala mångfald — från Quebecs franskinfluerade husmanskost (poutine, tourtière) till Maritimes hummerkalas, Präriens nötkött och spannmål, BC:s Stillahavsaxel och ursprungsfolkens basmat som vildris, bannock och bison. Lönnsirap från Quebec (72% av världsproduktionen) är den definerande smaken i kanadensisk identitet."
+        "description_sv": "Kanadensiskt kök speglar landets stora regionala mångfald — från Quebecs franskinfluerade husmanskost (poutine, tourtière) till Maritimes hummerkalas, Präriens nötkött och spannmål, BC:s Stillahavsaxel och ursprungsfolkens basmat som vildris, bannock och bison. Lönnsirap från Quebec (72% av världsproduktionen) är den definerande smaken i kanadensisk identitet.",
+        "description_da": "Det canadiske køkken afspejler landets store regionale mangfoldighed — fra Quebecs franskforankrede hjemlige retter (poutine, tourtière) til hummermiddage i de canadiske Atlanterhavsprovinser, prærieprovinsernes oksekøds- og korntraditioner, stillehavslaks fra British Columbia og oprindelige folks basisfødevarer som vildris, bannock og bison. Ahornsirup fra Quebec (72 % af verdens forsyning) er den smag, der definerer canadisk identitet."
       },
       {
         "id": "hawaiian",
         "name": "Hawaiian",
         "name_sv": "Hawaiianskt",
+        "name_da": "Hawaiiansk",
         "icon": "🌺",
         "description": "Hawaiian cuisine is a multicultural crossroads where Native Hawaiian tradition (poi, kalua pork, opihi, poke), Japanese-American staples (shoyu, rice, furikake, spam musubi), Portuguese sweet bread, Filipino flavours, and the plate lunch institution merge into a singular local identity. Taro is sacred; ahi poke is iconic; and no meal is complete without two scoops of rice.",
-        "description_sv": "Hawaiianskт kok ar en multikulturell korsning dar ursprungshawaiisk tradition (poi, kalua-flask, opihi, poke), japansk-amerikanska stapelmat (shoyu, ris, furikake, spam musubi), portugisiskt sotbrod, filippinska smaker och plate lunch-institutionen sammangas till en unik lokal identitet."
+        "description_sv": "Hawaiianskт kok ar en multikulturell korsning dar ursprungshawaiisk tradition (poi, kalua-flask, opihi, poke), japansk-amerikanska stapelmat (shoyu, ris, furikake, spam musubi), portugisiskt sotbrod, filippinska smaker och plate lunch-institutionen sammangas till en unik lokal identitet.",
+        "description_da": "Det hawaiianske køkken er et multikulturelt krydsfelt, hvor traditioner fra Hawaiis oprindelige folk (poi, kalua pork, opihi, poke), japansk-amerikanske basisvarer (shoyu, ris, furikake, spam musubi), portugisisk sødt brød, filippinske smage og plate lunch-institutionen smelter sammen til en særegen lokal identitet. Taro er hellig; ahi poke er ikonisk; og intet måltid er fuldendt uden to skefulde ris."
       },
       {
         "id": "southern_us",
         "name": "Southern US",
         "name_sv": "Södra USA",
+        "name_da": "Sydstatskøkken",
         "icon": "🍗",
         "description": "Southern US cuisine is slow-smoked BBQ and buttermilk fried chicken, collard greens simmered with ham hocks, stone-ground grits with river shrimp, and biscuits slathered in sawmill gravy — a cuisine forged from Native American corn, West African technique, and European settlement across Georgia, Mississippi, the Carolinas, and Louisiana.",
-        "description_sv": "Södra USA:s kök är långsamt rökt BBQ och kärnmjölksstekt kyckling, collardgrönt kokt med skinka, grovmalda grits med räkor och kex med mjölksås — ett kök format av ursprungsamerikansk majs, västafrikansk teknik och europeisk bosättning i Georgia, Mississippi, Carolinas och Louisiana."
+        "description_sv": "Södra USA:s kök är långsamt rökt BBQ och kärnmjölksstekt kyckling, collardgrönt kokt med skinka, grovmalda grits med räkor och kex med mjölksås — ett kök format av ursprungsamerikansk majs, västafrikansk teknik och europeisk bosättning i Georgia, Mississippi, Carolinas och Louisiana.",
+        "description_da": "Det amerikanske sydstatskøkken er langsomt røget BBQ og kylling marineret i kærnemælk og friturestegt, collard greens simret med skinkeskanke, stenmalede grits med flodrejer og biscuits overhældt med sawmill gravy — et køkken formet af majs fra Amerikas oprindelige folk, vestafrikanske teknikker og europæisk bosættelse på tværs af Georgia, Mississippi, Carolina-staterne og Louisiana."
       },
       {
         "id": "tex_mex",
         "name": "Tex-Mex",
         "name_sv": "Tex-Mex",
+        "name_da": "Tex-Mex",
         "icon": "🌮",
         "description": "Tex-Mex is the bold, hearty cuisine of Texas and the US-Mexico borderlands — flour tortilla burritos, fajitas sizzling on cast iron, chili con carne, cheese-smothered enchiladas, nachos and smoky beef ribs slow-cooked over mesquite; a fusion of Mexican traditions, Spanish colonial ranching and American cowboy culture that became a global food phenomenon.",
-        "description_sv": "Tex-Mex är det kraftfulla, mättande köket från Texas och den mexikansk-amerikanska gränstrakten — mjöltortilla-burritos, fajitas fräsande på gjutjärn, chili con carne, ostbakade enchiladas, nachos och rökta nötkotletter tillagade över mesquite; en fusion av mexikanska traditioner, spanskt kolonialrancherande och amerikansk cowboytradition som blivit ett globalt matfenomen."
+        "description_sv": "Tex-Mex är det kraftfulla, mättande köket från Texas och den mexikansk-amerikanska gränstrakten — mjöltortilla-burritos, fajitas fräsande på gjutjärn, chili con carne, ostbakade enchiladas, nachos och rökta nötkotletter tillagade över mesquite; en fusion av mexikanska traditioner, spanskt kolonialrancherande och amerikansk cowboytradition som blivit ett globalt matfenomen.",
+        "description_da": "Tex-Mex er det kraftige, mættende køkken fra Texas og grænseegnene mellem USA og Mexico — burritos i hvedetortillas, fajitas sydende på støbejern, chili con carne, enchiladas dækket af ost, nachos og røgede okseribben langsomt tilberedt over mesquite; en fusion af mexicanske traditioner, spansk ranchdrift fra kolonitiden og amerikansk cowboykultur, der blev et globalt madfænomen."
       }
     ]
   },
@@ -123351,73 +123411,91 @@ const AI_CUISINE_REGIONS = [
         "id": "argentinian",
         "name": "Argentinian",
         "name_sv": "Argentinskt",
+        "name_da": "Argentinsk",
         "icon": "🇦🇷",
         "description": "Argentine cuisine is defined by its world-famous asado (barbecue), Pampas-raised beef, and the Italian-Spanish immigrant influence seen in empanadas, pizza, and pasta. Dulce de leche, Malbec wine, and chimichurri sauce are national icons.",
-        "description_sv": "Argentinskt kök präglas av det världsberömda asado (grillning), nötkött från Pampas och det italiensk-spanska invandringsarvet i empanadas, pizza och pasta. Dulce de leche, Malbecvin och chimichurrisås är nationella symboler."
+        "description_sv": "Argentinskt kök präglas av det världsberömda asado (grillning), nötkött från Pampas och det italiensk-spanska invandringsarvet i empanadas, pizza och pasta. Dulce de leche, Malbecvin och chimichurrisås är nationella symboler.",
+        "description_da": "Det argentinske køkken er kendetegnet ved sin verdensberømte asado (grillning), oksekød fra Pampas og indflydelsen fra italienske og spanske indvandrere, der ses i empanadas, pizza og pasta. Dulce de leche, Malbec-vin og chimichurri-sauce er nationalsymboler."
       },
       {
         "id": "brazilian",
         "name": "Brazilian",
         "name_sv": "Brasilianskt",
+        "name_da": "Brasiliansk",
         "icon": "🇧🇷",
         "description": "Brazilian cuisine is a vibrant tapestry woven from Indigenous, Portuguese, and African traditions. Black-bean feijoada, open-fire churrasco, Bahian moqueca with dendê oil, and everyday rice-and-beans define a culinary culture as vast and diverse as the country itself — from Amazon fish feasts to Minas cheese boards and São Paulo street tapioca.",
-        "description_sv": "Brasilianskt kök är en livfull blandning av ursprungsbefolkningens, portugisiska och afrikanska traditioner. Svartböns-feijoada, öppen-eld-churrasco, Bahiansk moqueca med dendê-olja och den dagliga rätten ris-och-bönor definierar en kulinarisk kultur lika mångfacetterad som landet självt — från Amazonas fiskfester till Minas ostbrickor och São Paulos tapioca-stånd."
+        "description_sv": "Brasilianskt kök är en livfull blandning av ursprungsbefolkningens, portugisiska och afrikanska traditioner. Svartböns-feijoada, öppen-eld-churrasco, Bahiansk moqueca med dendê-olja och den dagliga rätten ris-och-bönor definierar en kulinarisk kultur lika mångfacetterad som landet självt — från Amazonas fiskfester till Minas ostbrickor och São Paulos tapioca-stånd.",
+        "description_da": "Det brasilianske køkken er et levende tæppe vævet af oprindelige folks, portugisiske og afrikanske traditioner. Feijoada med sorte bønner, churrasco tilberedt over åben ild, moqueca fra Bahia med dendê-olie og hverdagens ris og bønner kendetegner en madkultur, der er lige så vidtstrakt og mangfoldig som selve landet — fra fiskefester i Amazonas til osteborde i Minas og tapioca fra São Paulos gader."
       },
       {
         "id": "chilean",
         "name": "Chilean",
         "name_sv": "Chilenskt",
+        "name_da": "Chilensk",
         "icon": "🇨🇱",
         "description": "Pacific Coast, Andean, Patagonian, and Mapuche influences define Chilean cuisine. A 4,300 km coastline yields world-class seafood, while central Chile's fertile valleys produce abundant vegetables and livestock.",
-        "description_sv": "Stillahavskunsten, andinska, patagonska och mapuche-influenser definierar det chilenska köket. En 4 300 km lång kust ger förstklassiga skaldjur, medan Centralchiles bördiga dalar producerar rikliga grönsaker och boskap."
+        "description_sv": "Stillahavskunsten, andinska, patagonska och mapuche-influenser definierar det chilenska köket. En 4 300 km lång kust ger förstklassiga skaldjur, medan Centralchiles bördiga dalar producerar rikliga grönsaker och boskap.",
+        "description_da": "Det chilenske køkken er præget af indflydelser fra Stillehavskysten, Andesbjergene, Patagonien og Mapuche-folket. Langs den 4.300 km lange kystlinje findes fisk og skaldyr i verdensklasse, mens det centrale Chiles frugtbare dale giver rigelige grøntsagsafgrøder og gode vilkår for husdyrhold."
       },
       {
         "id": "colombian",
         "name": "Colombian",
         "name_sv": "Colombianskt",
+        "name_da": "Colombiansk",
         "icon": "🇨🇴",
         "description": "Colombia's cuisine spans six culinary regions — Caribbean Coast, Pacific Coast, Andean, Orinoquía, Amazonia, and Insular. Iconic dishes include bandeja paisa, sancocho, and ajiaco, built on corn, plantain, beans, and bold herb-forward sauces like hogao.",
-        "description_sv": "Colombias kök sträcker sig över sex kulinariska regioner. Ikoniska rätter inkluderar bandeja paisa, sancocho och ajiaco, uppbyggda på majs, plátano, bönor och smakrika örtkryddade såser som hogao."
+        "description_sv": "Colombias kök sträcker sig över sex kulinariska regioner. Ikoniska rätter inkluderar bandeja paisa, sancocho och ajiaco, uppbyggda på majs, plátano, bönor och smakrika örtkryddade såser som hogao.",
+        "description_da": "Colombias køkken spænder over seks kulinariske regioner — den caribiske kyst, Stillehavskysten, Andesregionen, Orinoquía, Amazonia og øregionen. Ikoniske retter omfatter bandeja paisa, sancocho og ajiaco, der bygger på majs, madbanan, bønner og markante, urteprægede saucer som hogao."
       },
       {
         "id": "cuban",
         "name": "Cuban",
         "name_sv": "Kubanskt",
+        "name_da": "Cubansk",
         "icon": "🇨🇺",
         "description": "Cuban cuisine blends Spanish colonial, African, and Caribbean Taíno traditions into a simple, hearty, slow-cooked style. Mojo criollo (garlic–sour orange sauce), sofrito, and the daily pairing of rice and black beans define its identity.",
-        "description_sv": "Kubansk mat blandar spanskt kolonialt, afrikanskt och karibiskt arv. Enkel, mättande och långkokt. Mojo criollo (vitlöks- och surörangesås), sofrito samt ris med svarta bönor bildar grunden i köket."
+        "description_sv": "Kubansk mat blandar spanskt kolonialt, afrikanskt och karibiskt arv. Enkel, mättande och långkokt. Mojo criollo (vitlöks- och surörangesås), sofrito samt ris med svarta bönor bildar grunden i köket.",
+        "description_da": "Det cubanske køkken forener spanske kolonitraditioner, afrikanske traditioner og caribiske Taíno-traditioner i en enkel, mættende stil præget af langtidskogning. Mojo criollo (sauce med hvidløg og pomerans), sofrito og den daglige kombination af ris og sorte bønner kendetegner køkkenets identitet."
       },
       {
         "id": "ecuadorian",
         "name": "Ecuadorian",
         "name_sv": "Ecuadoriansk",
+        "name_da": "Ecuadoriansk",
         "icon": "🇪🇨",
         "description": "Ecuadorian cuisine spans three distinct worlds — the Pacific coast, the Andes highlands, and the Amazon. Coastal cooking centers on shrimp, fish, plantain, and coconut; Andean cooking is built on over 650 native potato varieties, corn, guinea pig, and fresh cheese; the Amazon adds yuca, river fish, and forest fruits. The refrito (onion-garlic-tomato-achiote base) and fresh ají sauce frame almost every meal. Ecuador is the world's number one shrimp exporter ($7.2B, 2023), the world's top banana exporter, and the third largest cacao exporter — yet its most iconic dish is fanesca, a Holy Week soup requiring 12 grains representing the 12 apostles.",
-        "description_sv": "Ecuadorianskt kök spänner över tre distinkta världar — Stillahavskysten, andinska höglandet och Amazonas. Kustkök centreras kring räkor, fisk, plätano och kokos; andinskt kök är byggt på över 650 inhemska potatissorter, majs, marsvin och färsk ost; Amazonas tillför yuca, flodfisk och skogsfrukt. Refritot (lök-vitlök-tomat-achiotebas) och färsk ajísås ramar in nästan varje måltid. Ecuador är världens nummer ett räkexportör ($7.2 miljarder, 2023), ledande bananexportör, och tredje störste kakaoexportör — ändå är dess mest ikoniska rätt fanesca, en påskvecka-soppa som kräver 12 spannmål för 12 apostlar."
+        "description_sv": "Ecuadorianskt kök spänner över tre distinkta världar — Stillahavskysten, andinska höglandet och Amazonas. Kustkök centreras kring räkor, fisk, plätano och kokos; andinskt kök är byggt på över 650 inhemska potatissorter, majs, marsvin och färsk ost; Amazonas tillför yuca, flodfisk och skogsfrukt. Refritot (lök-vitlök-tomat-achiotebas) och färsk ajísås ramar in nästan varje måltid. Ecuador är världens nummer ett räkexportör ($7.2 miljarder, 2023), ledande bananexportör, och tredje störste kakaoexportör — ändå är dess mest ikoniska rätt fanesca, en påskvecka-soppa som kräver 12 spannmål för 12 apostlar.",
+        "description_da": "Det ecuadorianske køkken spænder over tre forskellige verdener — Stillehavskysten, Andesbjergenes højland og Amazonas. Køkkenet ved kysten er centreret omkring rejer, fisk, madbanan og kokos; det andinske køkken bygger på over 650 oprindelige kartoffelsorter, majs, marsvin og friskost; Amazonas bidrager med yuca, flodfisk og skovfrugter. Refrito (en base af løg, hvidløg, tomat og achiote) og frisk ají-sauce danner rammen om næsten hvert måltid. Ecuador er verdens største eksportør af rejer (7,2 mia. USD i 2023), verdens største bananeksportør og verdens tredjestørste eksportør af kakao — alligevel er landets mest ikoniske ret fanesca, en suppe til den stille uge, som kræver 12 kornsorter, der repræsenterer de 12 apostle."
       },
       {
         "id": "mexican",
         "name": "Mexican",
         "name_sv": "Mexikanskt",
+        "name_da": "Mexicansk",
         "icon": "🇲🇽",
         "description": "Mexican cuisine (UNESCO Intangible Heritage) is built on the holy trinity of corn, chile, and beans — a mosaic of Indigenous and colonial flavours expressed in tacos al pastor, slow-cooked barbacoa, mole negro, tamales, and the sizzle of carne asada from north to south.",
-        "description_sv": "Mexikansk mat (UNESCO Immateriellt Kulturarv) är byggd på den heliga treenigheten majs, chile och bönor — ett mosaik av urbefolknings- och kolonialinspirerade smaker uttryckta i tacos al pastor, långkokt barbacoa, mole negro, tamales och fräsandet av carne asada från norr till söder."
+        "description_sv": "Mexikansk mat (UNESCO Immateriellt Kulturarv) är byggd på den heliga treenigheten majs, chile och bönor — ett mosaik av urbefolknings- och kolonialinspirerade smaker uttryckta i tacos al pastor, långkokt barbacoa, mole negro, tamales och fräsandet av carne asada från norr till söder.",
+        "description_da": "Det mexicanske køkken, som er optaget på UNESCOs liste over immateriel kulturarv, bygger på den hellige treenighed af majs, chile og bønner — en mosaik af smage fra oprindelige folk og kolonitiden, der kommer til udtryk i tacos al pastor, langtidstilberedt barbacoa, mole negro, tamales og sydende carne asada fra nord til syd."
       },
       {
         "id": "peruvian",
         "name": "Peruvian",
         "name_sv": "Peruanskt",
+        "name_da": "Peruviansk",
         "icon": "🇵🇪",
         "description": "Peruvian cuisine is anchored by aji amarillo — the golden chili that appears in virtually every signature dish — and by the country's breathtaking biodiversity: 3,000 potato varieties, endemic chilis, and quinoa all originate here. At the coast, ceviche (raw fish cured in lime with aji amarillo and onion) defines the culinary identity; in the highlands, the Andean pantry of freeze-dried potato (chuño), cuy (guinea pig), and alpaca shapes mountain cooking; and in Lima, successive waves of Chinese, Japanese, and African migration created Chifa and Nikkei sub-cuisines that make Peru's capital one of the world's great food cities.",
-        "description_sv": "Peruanskt kök förankras av aji amarillo — den gyllene chilin som förekommer i praktiskt taget varje signaturrät — och av landets häpnadsväckande biologiska mångfald: 3 000 potatissorter, endemiska chilifrukter och quinoa har alla sitt ursprung här. Vid kusten definierar ceviche (rå fisk kurerad i lime med aji amarillo och lök) den kulinariska identiteten; i höglandet formar andinska råvaror som frystorkad potatis (chuño), marsvin (cuy) och alpaka bergsmaten; och i Lima skapade historiska vågor av kinesisk, japansk och afrikansk invandring Chifa- och Nikkei-delköken som gör Perus huvudstad till en av världens stora matkulturer."
+        "description_sv": "Peruanskt kök förankras av aji amarillo — den gyllene chilin som förekommer i praktiskt taget varje signaturrät — och av landets häpnadsväckande biologiska mångfald: 3 000 potatissorter, endemiska chilifrukter och quinoa har alla sitt ursprung här. Vid kusten definierar ceviche (rå fisk kurerad i lime med aji amarillo och lök) den kulinariska identiteten; i höglandet formar andinska råvaror som frystorkad potatis (chuño), marsvin (cuy) och alpaka bergsmaten; och i Lima skapade historiska vågor av kinesisk, japansk och afrikansk invandring Chifa- och Nikkei-delköken som gör Perus huvudstad till en av världens stora matkulturer.",
+        "description_da": "Det peruvianske køkken er forankret i aji amarillo — den gyldne chili, som indgår i stort set alle signaturretter — og i landets betagende biodiversitet: 3.000 kartoffelsorter, endemiske chilier og quinoa har alle deres oprindelse her. Ved kysten definerer ceviche (rå fisk marineret i limesaft med aji amarillo og løg) den kulinariske identitet; i højlandet former det andinske spisekammer med frysetørret kartoffel (chuño), cuy (marsvin) og alpaka bjergkøkkenet; og i Lima skabte successive bølger af kinesisk, japansk og afrikansk migration køkkenretningerne Chifa og Nikkei, som gør Perus hovedstad til en af verdens store madbyer."
       },
       {
         "id": "venezuelan",
         "name": "Venezuelan",
         "name_sv": "Venezuelanskt",
+        "name_da": "Venezuelansk",
         "icon": "🇻🇪",
         "description": "Venezuelan cuisine is built on arepas, pabellón criollo, and a sofrito of ají dulce, onion and onoto — a vivid, flavourful cooking culture shaped by the llanos, the Caribbean coast, and the Orinoco basin.",
-        "description_sv": "Venezuelanskt kök bygger på arepas, pabellón criollo och en sofrito av ají dulce, lök och onoto — en livfull matkultur formad av llanorna, Karibiens kust och Orinocofloden."
+        "description_sv": "Venezuelanskt kök bygger på arepas, pabellón criollo och en sofrito av ají dulce, lök och onoto — en livfull matkultur formad av llanorna, Karibiens kust och Orinocofloden.",
+        "description_da": "Det venezuelanske køkken bygger på arepas, pabellón criollo og en sofrito af ají dulce, løg og onoto — en levende og smagfuld madkultur formet af llanos, den caribiske kyst og Orinoco-bækkenet."
       }
     ]
   },
@@ -123430,113 +123508,141 @@ const AI_CUISINE_REGIONS = [
         "id": "armenian",
         "name": "Armenian",
         "name_sv": "Armeniskt",
+        "name_da": "Armensk",
         "icon": "🇦🇲",
         "description": "Armenian cuisine is one of the world's oldest, rooted in the fertile Armenian Highlands and shaped by Christian traditions, mountain pastoral heritage, and Persian and Ottoman influences; its icons include UNESCO-listed lavash flatbread baked in a clay tonir oven, khorovats barbecue, slow-cooked harissa porridge, and the apricot — the national fruit whose Latin name Prunus armeniaca means 'Armenian plum'.",
-        "description_sv": "Det armeniska köket är ett av världens äldsta, med rötter i de armeniska höglanden och format av kristna traditioner, bergsmässig herdekultur samt persiska och osmanska influenser; ikoniska inslag inkluderar UNESCO-listat lavash-tunnbröd bakat i lertanur, khorovats-grillat, långkokt harissa-gröt och aprikosen — nationalfrukten vars latinska namn Prunus armeniaca betyder 'armenisk plommonträd'."
+        "description_sv": "Det armeniska köket är ett av världens äldsta, med rötter i de armeniska höglanden och format av kristna traditioner, bergsmässig herdekultur samt persiska och osmanska influenser; ikoniska inslag inkluderar UNESCO-listat lavash-tunnbröd bakat i lertanur, khorovats-grillat, långkokt harissa-gröt och aprikosen — nationalfrukten vars latinska namn Prunus armeniaca betyder 'armenisk plommonträd'.",
+        "description_da": "Det armenske køkken er et af verdens ældste, med rødder i det frugtbare armenske højland og formet af kristne traditioner, bjergenes hyrdekultur samt persisk og osmannisk indflydelse; blandt dets ikoner er det UNESCO-listede lavash-fladbrød bagt i lerovnen tonir, khorovats-grillmad, den langtidskogte harissa-grød og abrikosen — nationalfrugten, hvis latinske navn Prunus armeniaca betyder 'armensk blomme'."
       },
       {
         "id": "azerbaijani",
         "name": "Azerbaijani",
         "name_sv": "Azerbajdzjanskt",
+        "name_da": "Aserbajdsjansk",
         "icon": "🇦🇿",
         "description": "Azerbaijani cuisine is a rich tapestry of Turkic, Persian, and Russian culinary traditions shaped by centuries of Silk Road trade, celebrated for saffron-scented plov pilaf, UNESCO-recognized dolma, Caspian sturgeon and caviar, and iconic pomegranate-based narsharab sauce.",
-        "description_sv": "Det azerbajdzjanska köket är en rik blandning av turkiska, persiska och ryska kulinariska traditioner formade av Sidenvägshandeln, känt för saffransdoftande plov, UNESCO-erkänd dolma, kaspisk stör och kaviar samt den ikoniska granatäppelssåsen narsharab."
+        "description_sv": "Det azerbajdzjanska köket är en rik blandning av turkiska, persiska och ryska kulinariska traditioner formade av Sidenvägshandeln, känt för saffransdoftande plov, UNESCO-erkänd dolma, kaspisk stör och kaviar samt den ikoniska granatäppelssåsen narsharab.",
+        "description_da": "Det aserbajdsjanske køkken er et rigt vævetæppe af tyrkiske, persiske og russiske madtraditioner, formet af århundreders handel langs Silkevejen og berømt for safranduftende plov-pilaf, UNESCO-anerkendt dolma, kaspisk stør og kaviar samt den ikoniske granatæblebaserede narsharab-sauce."
       },
       {
         "id": "emirati",
         "name": "Emirati",
         "name_sv": "Emiratisk",
+        "name_da": "Emiratisk",
         "icon": "🇦🇪",
         "description": "Emirati cuisine reflects the UAE's position at the crossroads of ancient Indian Ocean trade routes, shaped by Bedouin desert traditions, Persian Gulf seafaring, and centuries of spice trade with India, Persia, and East Africa. The defining preparations are machboos (fragrant spiced rice slow-cooked with meat or fish), harees (a wheat-and-meat porridge eaten at Ramadan and Eid), and balaleet (sweet saffron vermicelli topped with a thin egg omelet, the quintessential Emirati breakfast). Loomi (dried black lime) is the defining Emirati spice — nothing else replicates its tart, smoky depth. The UAE is a world chicken-consumption leader at 55.25 kg per capita (2022), fish consumption runs to 23.1 kg/cap, and the country produces over 4 million date palms. Camel milk is commercially produced at scale by Camelicious (a government-backed operation), making the UAE the world's first major commercial camel dairy. Coffee culture is inseparable from Emirati hospitality: gahwa (cardamom-scented Arabic coffee with dates) is offered to every guest as the first act of welcome.",
-        "description_sv": "Emiratisk mat speglar UAE:s position vid korsvägarna för de forntida Indiska ocean-handelsrutter, formad av beduinökenens traditioner, Persiska viken sjöfart och sekelånga kryddhandel med Indien, Persien och Östafrika. De definierande tillagningarna är machboos (doftande kryddat ris långkokt med kött eller fisk), harees (en vete-och-kött-välling äten under Ramadan och Eid) och balaleet (söt saffransvermicellis toppat med ett tunt äggomelett, den quintessentiella emiratiska frukosten). Loomi (torkad svart limett) är det definierande emiratiska kryddet — inget annat kan replikera dess syrliga, rökiga djup. UAE är en världsledande kycklingkonsumtionsnation med 55,25 kg per capita (2022), fiskonsumtion uppgår till 23,1 kg/cap och landet producerar över 4 miljoner dadelpalmer. Kamelmjölk produceras kommersiellt i stor skala av Camelicious, vilket gör UAE till världens första stora kommersiella kamelmejeributik."
+        "description_sv": "Emiratisk mat speglar UAE:s position vid korsvägarna för de forntida Indiska ocean-handelsrutter, formad av beduinökenens traditioner, Persiska viken sjöfart och sekelånga kryddhandel med Indien, Persien och Östafrika. De definierande tillagningarna är machboos (doftande kryddat ris långkokt med kött eller fisk), harees (en vete-och-kött-välling äten under Ramadan och Eid) och balaleet (söt saffransvermicellis toppat med ett tunt äggomelett, den quintessentiella emiratiska frukosten). Loomi (torkad svart limett) är det definierande emiratiska kryddet — inget annat kan replikera dess syrliga, rökiga djup. UAE är en världsledande kycklingkonsumtionsnation med 55,25 kg per capita (2022), fiskonsumtion uppgår till 23,1 kg/cap och landet producerar över 4 miljoner dadelpalmer. Kamelmjölk produceras kommersiellt i stor skala av Camelicious, vilket gör UAE till världens första stora kommersiella kamelmejeributik.",
+        "description_da": "Det emiratiske køkken afspejler UAE's placering ved skæringspunktet mellem oldtidens handelsruter over Det Indiske Ocean og er formet af beduinernes ørkentraditioner, søfarten i Den Persiske Golf og århundreders krydderihandel med Indien, Persien og Østafrika. De kendetegnende retter er machboos (duftende, krydrede ris, der langtidskoges med kød eller fisk), harees (en hvede- og kødgrød, der spises under Ramadan og Eid) og balaleet (søde safranvermicelli toppet med en tynd omelet, indbegrebet af en emiratisk morgenmad). Loomi (tørret sort lime) er det kendetegnende emiratiske krydderi — intet andet kan genskabe dets syrlige, røgede dybde. UAE er verdensførende i kyllingeforbrug med 55,25 kg pr. indbygger (2022), fiskeforbruget er 23,1 kg pr. indbygger, og landet har over 4 millioner daddelpalmer. Kamelmælk produceres kommercielt i stor skala af Camelicious (en statsstøttet virksomhed), og dermed er UAE det første land i verden med en stor kommerciel kamelmejeriindustri. Kaffekulturen er uløseligt forbundet med emiratisk gæstfrihed: gahwa (kardemommeduftende arabisk kaffe med dadler) tilbydes enhver gæst som den første velkomstgestus."
       },
       {
         "id": "iraqi",
         "name": "Iraqi",
         "name_sv": "Irakiskt",
+        "name_da": "Irakisk",
         "icon": "🇮🇶",
         "description": "Iraqi cuisine draws on 10,000 years of Mesopotamian culinary history, built on slow-cooked lamb stews, fragrant saffron-tinted rice, the ancient grilled carp dish masgouf from the Tigris, and the universal baharat spice blend. Bread from the clay tannour oven and dried lime (loomi) are its most defining flavors.",
-        "description_sv": "Irakiskt kök bygger på 10 000 år av mesopotamisk kulinarisk historia, uppbyggt kring långsamt kokta lammgrytor, doftande saffransfärgat ris, den uråldriga grillkarpen masgouf från Tigris och den universella baharat-kryddblandningen. Bröd från lerbränd tannour-ugn och torkad lime (loomi) är dess mest definierande smaker."
+        "description_sv": "Irakiskt kök bygger på 10 000 år av mesopotamisk kulinarisk historia, uppbyggt kring långsamt kokta lammgrytor, doftande saffransfärgat ris, den uråldriga grillkarpen masgouf från Tigris och den universella baharat-kryddblandningen. Bröd från lerbränd tannour-ugn och torkad lime (loomi) är dess mest definierande smaker.",
+        "description_da": "Det irakiske køkken trækker på 10.000 års mesopotamisk madhistorie og bygger på langtidskogte lammegryder, duftende safranfarvede ris, den oldgamle ret masgouf med grillet karpe fra Tigris og den universelle krydderiblanding baharat. Brød fra tannour-lerovnen og tørret lime (loomi) er køkkenets mest kendetegnende smagsgivere."
       },
       {
         "id": "israeli",
         "name": "Israeli",
         "name_sv": "Israeliskt",
+        "name_da": "Israelsk",
         "icon": "🇮🇱",
         "description": "Israeli cuisine fuses the food traditions of Jewish diaspora from over 70 countries with the flavors of the Levant — hummus, falafel, shakshuka, and shawarma are internationally recognized. Israel leads the world in poultry consumption (~60 kg/capita), olive oil production quality, and dairy technology, and its street food culture has redefined casual Mediterranean eating.",
-        "description_sv": "Israeliskt kök blandar mattraditioner från judiska diasporan i över 70 länder med smaker från Levanten — hummus, falafel, shakshuka och shawarma är internationellt kända. Israel leder världen i fjäderfäkonsumtion (~60 kg/capita), olivoljakvalitet och mejeritechnology, och dess gatumatkultur har omdefinerat avslappnat medelhavskök."
+        "description_sv": "Israeliskt kök blandar mattraditioner från judiska diasporan i över 70 länder med smaker från Levanten — hummus, falafel, shakshuka och shawarma är internationellt kända. Israel leder världen i fjäderfäkonsumtion (~60 kg/capita), olivoljakvalitet och mejeritechnology, och dess gatumatkultur har omdefinerat avslappnat medelhavskök.",
+        "description_da": "Det israelske køkken forener madtraditioner fra den jødiske diaspora i over 70 lande med Levantens smage — hummus, falafel, shakshuka og shawarma er internationalt kendte. Israel er verdensførende inden for fjerkræforbrug (ca. 60 kg pr. indbygger), olivenolieproduktion af høj kvalitet og mejeriteknologi, og landets gadekøkkenkultur har omdefineret uformel middelhavsmad."
       },
       {
         "id": "jordanian",
         "name": "Jordanian",
         "name_sv": "Jordanskt",
+        "name_da": "Jordansk",
         "icon": "🇯🇴",
         "description": "Jordanian cuisine is anchored by mansaf — slow-cooked lamb in jameed fermented yogurt served on rice with toasted pine nuts — alongside maqluba, zarb pit barbecue, and a rich Bedouin and Levantine table of hummus, labneh, fresh herbs, olive oil, and flatbread baked on the saj.",
-        "description_sv": "Jordanskt kök kretsar kring mansaf — lamm tillagat i jameed fermenterad yoghurt serverat på ris med rostade pinjenötter — vid sidan av maqluba, zarb-grillat i jordugn och ett rikt beduinskt och levantinskt matbord med hummus, labneh, färska örter, olivolja och bröd bakat på saj."
+        "description_sv": "Jordanskt kök kretsar kring mansaf — lamm tillagat i jameed fermenterad yoghurt serverat på ris med rostade pinjenötter — vid sidan av maqluba, zarb-grillat i jordugn och ett rikt beduinskt och levantinskt matbord med hummus, labneh, färska örter, olivolja och bröd bakat på saj.",
+        "description_da": "Det jordanske køkken har mansaf som omdrejningspunkt — langtidskogt lam i den fermenterede yoghurt jameed, serveret på ris med ristede pinjekerner — sammen med maqluba, zarb-grillmad fra en jordovn og et righoldigt beduinsk og levantinsk måltid med hummus, labneh, friske krydderurter, olivenolie og fladbrød bagt på en saj."
       },
       {
         "id": "kurdish",
         "name": "Kurdish",
         "name_sv": "Kurdiskt",
+        "name_da": "Kurdisk",
         "icon": "🌿",
         "description": "Kurdish cuisine spans the mountains and valleys of Kurdistan — from Iraqi Kurdistan's slow-roasted lamb and stuffed grape leaves to the smoky tang of Turkish Kurdish kebabs, the aromatic herb-rich stews of Iran, and the hearty bulgur pilaf and yoghurt dishes shared across the highland diaspora.",
-        "description_sv": "Kurdiskt kök sträcker sig över bergs- och dallandskapen i Kurdistan — från irakskt kurdistans långsamt rostat lamm och fyllda druvblad till den rökiga smaken av turkisktkurdiska kebaber, de aromatiska örtrika grytorna från Iran och den rejäla bulgurpilaffet och yoghurträtterna som delas över de bergiga diaspora."
+        "description_sv": "Kurdiskt kök sträcker sig över bergs- och dallandskapen i Kurdistan — från irakskt kurdistans långsamt rostat lamm och fyllda druvblad till den rökiga smaken av turkisktkurdiska kebaber, de aromatiska örtrika grytorna från Iran och den rejäla bulgurpilaffet och yoghurträtterna som delas över de bergiga diaspora.",
+        "description_da": "Det kurdiske køkken spænder over Kurdistans bjerge og dale — fra langtidsstegt lam og fyldte vinblade i irakisk Kurdistan til den røgede syrlighed i kurdiske kebabretter fra Tyrkiet, de aromatiske, urterige gryderetter fra Iran samt de solide retter med bulgurpilaf og yoghurt, der deles i den kurdiske diaspora med rødder i højlandet."
       },
       {
         "id": "lebanese",
         "name": "Lebanese",
         "name_sv": "Libanesiskt",
+        "name_da": "Libanesisk",
         "icon": "🇱🇧",
         "description": "Lebanese cuisine is the jewel of the Levant — an abundant spread of mezze (hummus, fattoush, tabbouleh, kibbeh), wood-fired flatbreads, slow-roasted lamb, the sweet smoke of shawarma, and the bright freshness of herb-laden salads, all brought together with olive oil, lemon, and the warm spice of seven-spice (baharat).",
-        "description_sv": "Libanesiskt kök är Levantens juvel — ett rikt uppdukat mezze (hummus, fattoush, tabbouleh, kibbeh), stenugnsbakata tunnbröd, långsamt rostat lamm, den söta röken av shawarma och den friska örtighetens sallader, allt sammanflätat med olivolja, citron och värmen av sjukryddor (baharat)."
+        "description_sv": "Libanesiskt kök är Levantens juvel — ett rikt uppdukat mezze (hummus, fattoush, tabbouleh, kibbeh), stenugnsbakata tunnbröd, långsamt rostat lamm, den söta röken av shawarma och den friska örtighetens sallader, allt sammanflätat med olivolja, citron och värmen av sjukryddor (baharat).",
+        "description_da": "Det libanesiske køkken er Levantens juvel — et overdådigt udvalg af mezze (hummus, fattoush, tabbouleh, kibbeh), fladbrød bagt i brændefyret ovn, langtidsstegt lam, shawarmaens sødlige røg og den sprudlende friskhed i salater fulde af krydderurter, alt sammen forenet af olivenolie, citron og varmen fra syvkrydderiblandingen (baharat)."
       },
       {
         "id": "palestinian",
         "name": "Palestinian",
         "name_sv": "Palestinskt",
+        "name_da": "Palæstinensisk",
         "icon": "🇵🇸",
         "description": "Palestinian cuisine is anchored in olive oil, bread, and land. Musakhan — sumac-spiced chicken and caramelised onions baked atop taboon bread — is the national dish. Maqluba (upside-down rice), mujaddara (lentils and bulgur with golden onion), mansaf (lamb in fermented yogurt), and endless mezze built from hummus, za'atar, and labneh form a table that is deeply tied to olive orchards, mountain thyme, and centuries of communal cooking.",
-        "description_sv": "Palestinskt kök förankras i olivolja, bröd och mark. Musakhan — sumackryddad kyckling och karamelliserad lök bakat ovanpå taboonbröd — är nationalrätten. Maqluba (upp-och-nedvänt ris), mujaddara (linser och bulgur med gyllenbrun lök), mansaf (lamm i fermenterad yoghurt) och ändlösa mezze av hummus, za'atar och labneh bildar ett bord djupt kopplat till olivlundar, bergstimjan och sekler av gemensamt matlagande."
+        "description_sv": "Palestinskt kök förankras i olivolja, bröd och mark. Musakhan — sumackryddad kyckling och karamelliserad lök bakat ovanpå taboonbröd — är nationalrätten. Maqluba (upp-och-nedvänt ris), mujaddara (linser och bulgur med gyllenbrun lök), mansaf (lamm i fermenterad yoghurt) och ändlösa mezze av hummus, za'atar och labneh bildar ett bord djupt kopplat till olivlundar, bergstimjan och sekler av gemensamt matlagande.",
+        "description_da": "Det palæstinensiske køkken er forankret i olivenolie, brød og jorden. Musakhan — sumakkrydret kylling og karamelliserede løg bagt oven på taboonbrød — er nationalretten. Maqluba (ris vendt på hovedet), mujaddara (linser og bulgur med gyldenstegte løg), mansaf (lam i fermenteret yoghurt) og et væld af mezze baseret på hummus, za'atar og labneh danner tilsammen en madtradition, der er dybt knyttet til olivenlunde, bjergtimian og århundreders fælles madlavning."
       },
       {
         "id": "persian",
         "name": "Persian (Iranian)",
         "name_sv": "Persiskt (Iranskt)",
+        "name_da": "Persisk (iransk)",
         "icon": "🇮🇷",
         "description": "Persian cuisine is defined by three layers of sophistication: saffron, dried limes (limoo amani), and barberries give it a souring-aromatic identity unlike any other; the rice technique — par-boiling, steaming, creating a golden tahdig crust — elevates everyday eating to high art; and slow khorosh stews like ghormeh sabzi (herb-lamb-fenugreek) and fesenjan (walnut-pomegranate-chicken) blend sweet, sour, and herbal notes in ways developed over three millennia.",
-        "description_sv": "Persiskt kök definieras av tre lager av sofistikering: saffran, torkade limefrukter (limoo amani) och berberis ger det en syrlig-aromatisk identitet olik allt annat; ristekniken — förkokning, ångning, skapandet av en gyllenbrun tahdig-skorpa — lyfter vardagsmat till högt konsthantverk; och långsamt kokta khoresh-grytor som ghormeh sabzi (örter-lamm-bockhornsklöver) och fesenjan (valnöt-granatäpple-kyckling) blandar söta, sura och örthaltiga toner på sätt som utvecklats under tre tusen år."
+        "description_sv": "Persiskt kök definieras av tre lager av sofistikering: saffran, torkade limefrukter (limoo amani) och berberis ger det en syrlig-aromatisk identitet olik allt annat; ristekniken — förkokning, ångning, skapandet av en gyllenbrun tahdig-skorpa — lyfter vardagsmat till högt konsthantverk; och långsamt kokta khoresh-grytor som ghormeh sabzi (örter-lamm-bockhornsklöver) och fesenjan (valnöt-granatäpple-kyckling) blandar söta, sura och örthaltiga toner på sätt som utvecklats under tre tusen år.",
+        "description_da": "Det persiske køkken defineres af tre lag af raffinement: safran, tørrede limefrugter (limoo amani) og berberisbær giver det en syrlig-aromatisk identitet uden sidestykke; risteknikken — forkogning, dampning og dannelsen af en gylden tahdig-skorpe — løfter hverdagsmad til stor kunst; og langtidskogte khoresh-gryderetter som ghormeh sabzi (krydderurter, lam og bukkehornskløver) og fesenjan (valnødder, granatæble og kylling) forener søde, syrlige og urteprægede noter på måder, der er udviklet gennem tre årtusinder."
       },
       {
         "id": "syrian",
         "name": "Syrian",
         "name_sv": "Syriskt",
+        "name_da": "Syrisk",
         "icon": "🇸🇾",
         "description": "Syrian cuisine is the generous soul of the Levant — kibbeh of spiced lamb and bulgur, creamy labneh and aged shanklish, a mezze of stuffed grape leaves and makdous eggplant, all perfumed with Aleppo pepper, za'atar, and the warm seven-spice blend baharat.",
-        "description_sv": "Syriskt kök är Levantens generösa själ — kibbeh av kryddat lamm och bulgur, krämig labneh och lagrad shanklish, en mezze av fyllda druvblad och makdous-aubergine, allt parfymerat med Aleppopeppar, za'atar och den varma sjukryddblandningen baharat."
+        "description_sv": "Syriskt kök är Levantens generösa själ — kibbeh av kryddat lamm och bulgur, krämig labneh och lagrad shanklish, en mezze av fyllda druvblad och makdous-aubergine, allt parfymerat med Aleppopeppar, za'atar och den varma sjukryddblandningen baharat.",
+        "description_da": "Det syriske køkken er Levantens gavmilde sjæl — kibbeh af krydret lam og bulgur, cremet labneh og modnet shanklish samt mezze med fyldte vinblade og makdous-aubergine, alt sammen aromatiseret med Aleppo-peber, za'atar og den varmende syvkrydderiblanding baharat."
       },
       {
         "id": "turkish",
         "name": "Turkish",
         "name_sv": "Turkiskt",
+        "name_da": "Tyrkisk",
         "icon": "🇹🇷",
         "description": "Turkish cuisine is one of the world's great culinary empires — a thousand years of Ottoman palace cooking distilled into lamb kebabs over charcoal, yogurt-drenched börek, eggplant in every possible form, and breakfast spreads that require their own table. It spans the spice-garden heat of the southeastern Anatolian plains (Gaziantep is the pistachio-baklava capital of the world), the olive-oil-drenched cold mezes of the Aegean, the Black Sea anchovy obsession of Trabzon, and Istanbul's refined fish restaurants where sea bass arrive in salt crusts. Yogurt, sumac, red pepper flakes, bulgur, and a ferocious dedication to quality ingredients connect every regional variation.",
-        "description_sv": "Turkiskt kök är ett av världens stora kulinariska imperier — tusen år av osmanskt palatskok destillerat till lammkebab över kol, yoghurtdränkt börek, aubergine i alla tänkbara former och frukostbord som kräver ett eget bord. Det spänner från den kryddrika hettan i sydöstra Anatolien (Gaziantep är världens pistaschnöts- och baklaval-huvudstad), de olivoljedränkta kalla mezerna i Egeiska regionen, Trabzons hamsifixering vid Svarta havet, och Istanbuls förfinade fiskrestauranger där havsabborre anländer i saltskorpa. Yoghurt, sumak, röd paprikaflingor, bulgur och en ferocious hängivenhet till kvalitetsråvaror förbinder varje regional variation."
+        "description_sv": "Turkiskt kök är ett av världens stora kulinariska imperier — tusen år av osmanskt palatskok destillerat till lammkebab över kol, yoghurtdränkt börek, aubergine i alla tänkbara former och frukostbord som kräver ett eget bord. Det spänner från den kryddrika hettan i sydöstra Anatolien (Gaziantep är världens pistaschnöts- och baklaval-huvudstad), de olivoljedränkta kalla mezerna i Egeiska regionen, Trabzons hamsifixering vid Svarta havet, och Istanbuls förfinade fiskrestauranger där havsabborre anländer i saltskorpa. Yoghurt, sumak, röd paprikaflingor, bulgur och en ferocious hängivenhet till kvalitetsråvaror förbinder varje regional variation.",
+        "description_da": "Det tyrkiske køkken er et af verdens store kulinariske imperier — tusind års osmannisk paladskøkken fortættet til lammekebab over trækul, börek overhældt med yoghurt, aubergine i enhver tænkelig form og morgenmadsanretninger, der kræver deres eget bord. Det spænder fra den kryddermættede hede på de sydøstlige anatolske sletter (Gaziantep er verdens hovedstad for pistacienødder og baklava) og Ægæerområdets kolde mezze gennemvædet af olivenolie til Trabzons besættelse af Sortehavets ansjoser og Istanbuls raffinerede fiskerestauranter, hvor havaborre serveres i saltskorpe. Yoghurt, sumak, røde peberflager, bulgur og en kompromisløs forkærlighed for kvalitetsråvarer binder alle regionale variationer sammen."
       },
       {
         "id": "uzbek",
         "name": "Uzbek",
         "name_sv": "Uzbekiskt",
+        "name_da": "Usbekisk",
         "icon": "🇺🇿",
         "description": "Uzbek cuisine is the Silk Road made edible — a cooking tradition where lamb, cumin and rice converge into plov, the UNESCO-listed dish that defines Central Asian hospitality. To cook plov is to be Uzbek: lamb ribs and fat rendered in a kazan (cast-iron cauldron) with carrots and onion, simmered with rice to form a golden, fragrant pilaf; the national ritual of celebration, diplomacy, and morning cooking. Beyond plov lies a world of samsa (flaky lamb pastry from tandoor ovens), manti (steamed lamb dumplings), shashlik over saxaul wood, lagman noodle soup with Dungan roots, and non flatbread with a sesame-poppy stamp. Cotton was once Uzbekistan's 'white gold'; the cooking fat that replaced it was cottonseed oil — distinctive, almost smoky. The land of Alexander the Great, Tamerlane and the Silk Road caravanserai feeds on lamb, dried apricots, melon, walnuts and pomegranates.",
-        "description_sv": "Uzbekiskt kök är Sidenvägen gjord ätbar — en mattradition där lamm, spiskummin och ris möts i plov, den UNESCO-listade rätten som definierar centralasiatisk gästfrihet. Att laga plov är att vara uzbek: lammrevben och fett smälts i en kazan (gjutjärnsgrytan) med morötter och lök, sjuds med ris till en gyllene, doftande pilaf; det nationella ritualet vid firanden, diplomati och morgonmatlagning. Bortom plov finns en värld av samsa (flagigt lammgebak från tandurugnarna), manti (ångade lammdumplings), shashlik över saxaul-ved och lagman-nudelsoppa med Dungan-rötter. Bomull var en gång Uzbekistans 'vita guld'; matlagningsfettet som ersatte det var bomullsfröolja — distinkt, nästan rökig. Landet för Alexander den store, Timur och Sidenvägens karavanseraljer mättar sig på lamm, torkade aprikoser, melon, valnötter och granatäpplen."
+        "description_sv": "Uzbekiskt kök är Sidenvägen gjord ätbar — en mattradition där lamm, spiskummin och ris möts i plov, den UNESCO-listade rätten som definierar centralasiatisk gästfrihet. Att laga plov är att vara uzbek: lammrevben och fett smälts i en kazan (gjutjärnsgrytan) med morötter och lök, sjuds med ris till en gyllene, doftande pilaf; det nationella ritualet vid firanden, diplomati och morgonmatlagning. Bortom plov finns en värld av samsa (flagigt lammgebak från tandurugnarna), manti (ångade lammdumplings), shashlik över saxaul-ved och lagman-nudelsoppa med Dungan-rötter. Bomull var en gång Uzbekistans 'vita guld'; matlagningsfettet som ersatte det var bomullsfröolja — distinkt, nästan rökig. Landet för Alexander den store, Timur och Sidenvägens karavanseraljer mättar sig på lamm, torkade aprikoser, melon, valnötter och granatäpplen.",
+        "description_da": "Det usbekiske køkken er Silkevejen gjort spiselig — en madtradition, hvor lam, spidskommen og ris mødes i plov, den UNESCO-listede ret, der definerer centralasiatisk gæstfrihed. At tilberede plov er at være usbeker: lammeribben brunes, og fedtet smeltes af i en kazan (støbejernsgryde) sammen med gulerødder og løg og simrer derefter med ris til en gylden, duftende pilaf; et nationalt ritual ved fejringer, i diplomati og som morgenritual. Ud over plov findes en verden af samsa (sprødt, lagdelt bagværk med lam fra tandoorovne), manti (dampede lammedumplings), shashlik over saxaul-ved, lagman-nudelsuppe med dunganske rødder og non-fladbrød præget med sesam og valmuefrø. Bomuld var engang Uzbekistans 'hvide guld'; det madlavningsfedt, der erstattede det, var bomuldsfrøolie — karakteristisk og næsten røget. Usbekistan — Alexander den Stores, Timur Lenks og Silkevejens karavanseraiers land — lever af lam, tørrede abrikoser, melon, valnødder og granatæbler."
       },
       {
         "id": "yemeni",
         "name": "Yemeni",
         "name_sv": "Jemenitiskt",
+        "name_da": "Yemenitisk",
         "icon": "🇾🇪",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_da": "Det yemenitiske køkken er en af den arabiske verdens ældste og mest særprægede madtraditioner. Saltah, Yemens nationalret, mandi med langtidsstegt lam eller kylling, fahsa med lammebouillon, den krydrede risret zurbian og honningbrødet bint al-sahn er centrale retter, mens krydderiblandingen hawayij og det piskede bukkehornskløverskum hulba giver køkkenet dets særlige smagspræg."
       }
     ]
   },
@@ -123549,25 +123655,31 @@ const AI_CUISINE_REGIONS = [
         "id": "australian",
         "name": "Australian",
         "name_sv": "Australiensisk",
+        "name_da": "Australsk",
         "icon": "🇦🇺",
         "description": "Australian cuisine blends Indigenous bush tucker traditions with British colonial heritage and waves of Asian, Mediterranean and multicultural immigration. Known for BBQ culture — lamb chops, snags and prawns — it features bold native flavours (wattleseed, lemon myrtle, macadamia), celebrated dairy from Victoria and Tasmania, and world-leading exports of beef, lamb, grain and seafood.",
-        "description_sv": "Australiensiskt kök kombinerar ursprungsbefolkningens busktraditioner med brittiskt kolonialarv och asiatiska, mediterrana och mångkulturella influenser. Känt för sin BBQ-kultur — lammkotletter, grillkorv och räkor — och använder djärva inhemska smaker som wattleseed, citronmyrte och macadamia, med utmärkt mejeri från Victoria och Tasmanien samt världsledande export av nötkött, lamm, spannmål och skaldjur."
+        "description_sv": "Australiensiskt kök kombinerar ursprungsbefolkningens busktraditioner med brittiskt kolonialarv och asiatiska, mediterrana och mångkulturella influenser. Känt för sin BBQ-kultur — lammkotletter, grillkorv och räkor — och använder djärva inhemska smaker som wattleseed, citronmyrte och macadamia, med utmärkt mejeri från Victoria och Tasmanien samt världsledande export av nötkött, lamm, spannmål och skaldjur.",
+        "description_da": "Det australske køkken forener bush tucker-traditioner hos Australiens oprindelige folk med arven fra den britiske kolonitid og påvirkninger fra indvandring fra Asien, Middelhavslandene og mange andre dele af verden. Køkkenet er kendt for sin grillkultur — lammekoteletter, snags og rejer — og byder på markante smage fra hjemmehørende råvarer (wattleseed, lemon myrtle og macadamia), berømte mejeriprodukter fra Victoria og Tasmanien samt verdensførende eksport af oksekød, lam, korn og fisk og skaldyr."
       },
       {
         "id": "new_zealand",
         "name": "New Zealand",
         "name_sv": "Nyzeeländskt",
+        "name_da": "Newzealandsk",
         "icon": "🇳🇿",
         "description": "New Zealand cuisine is shaped by Māori hāngī earth-pit cooking, kūmara sweet potato, and a Pacific seafood larder — green-lipped mussels, pāua abalone, whitebait fritters — alongside world-class grass-fed lamb, venison, and dairy from a land that exports butter, cheese, and Sauvignon Blanc around the world.",
-        "description_sv": "Nyzeeländskt kök formas av māoriernas hāngī-jordugnslagning, kūmara sötpotatis och ett stillahavslager av skaldjur — gröna musslor, pāua havsöronssnäcka, vitfiskfritter — vid sidan av världsklassens gräsbetad lamm, viltkött och mejeri från ett land som exporterar smör, ost och Sauvignon Blanc runt om i världen."
+        "description_sv": "Nyzeeländskt kök formas av māoriernas hāngī-jordugnslagning, kūmara sötpotatis och ett stillahavslager av skaldjur — gröna musslor, pāua havsöronssnäcka, vitfiskfritter — vid sidan av världsklassens gräsbetad lamm, viltkött och mejeri från ett land som exporterar smör, ost och Sauvignon Blanc runt om i världen.",
+        "description_da": "Det newzealandske køkken er formet af Māori-folkets hāngī-madlavning i jordovn, sødkartoflen kūmara og et spisekammer af fisk og skaldyr fra Stillehavet — grønlæbede muslinger, pāua-abalone og whitebait-fritter — side om side med græsfodret lammekød, hjortekød og mejeriprodukter i verdensklasse fra et land, der eksporterer smør, ost og Sauvignon Blanc til hele verden."
       },
       {
         "id": "polynesian",
         "name": "Polynesian",
         "name_sv": "Polynesiskt",
+        "name_da": "Polynesisk",
         "icon": "🌺",
         "description": "Polynesian cuisine spans a vast ocean triangle from Hawaii to New Zealand to Easter Island, united by three pillars: the earth oven (imu/umu/hāngi), the coconut, and taro. The imu — a pit lined with hot stones and covered in banana leaves — slow-roasts kalua pig and root vegetables over hours, and defines the feast culture of luau, umu, and hāngi. Raw fish preparations (Hawaiian poke, Samoan oka, Tahitian poisson cru) celebrate the Pacific Ocean's abundance. Breadfruit (ulu) was the pre-contact starchy staple that could feed a village from a single tree, while taro (kalo) carries deep spiritual significance as the elder sibling of the Hawaiian people.",
-        "description_sv": "Polynesiskt kök sträcker sig över en enorm oceanisk triangel från Hawaii till Nya Zeeland till Påskön, förenat av tre pelare: jordugnen (imu/umu/hāngi), kokosnöten och tarot. Imu — en grop kantad med varma stenar och täckt med bananblad — tillagar långsamt kalua-gris och rotfrukter i timmar och definierar festkulturen vid luau, umu och hāngi. Råfiskrätter (hawaiiansk poke, samoansk oka, tahitisk poisson cru) hyllar Stillahavsoceanens rikedom. Brödfrukt (ulu) var den förkoloniala stärkelsebasen som kunde föda en hel by från ett enda träd, medan taro (kalo) bär djup andlig betydelse som det hawaiianska folkets äldrebror."
+        "description_sv": "Polynesiskt kök sträcker sig över en enorm oceanisk triangel från Hawaii till Nya Zeeland till Påskön, förenat av tre pelare: jordugnen (imu/umu/hāngi), kokosnöten och tarot. Imu — en grop kantad med varma stenar och täckt med bananblad — tillagar långsamt kalua-gris och rotfrukter i timmar och definierar festkulturen vid luau, umu och hāngi. Råfiskrätter (hawaiiansk poke, samoansk oka, tahitisk poisson cru) hyllar Stillahavsoceanens rikedom. Brödfrukt (ulu) var den förkoloniala stärkelsebasen som kunde föda en hel by från ett enda träd, medan taro (kalo) bär djup andlig betydelse som det hawaiianska folkets äldrebror.",
+        "description_da": "Det polynesiske køkken strækker sig over en enorm trekant i Stillehavet fra Hawaii til New Zealand og Påskeøen og forenes af tre grundpiller: jordovnen (imu/umu/hāngī), kokosnødden og taro. En imu — en grube foret med varme sten og dækket med bananblade — langtidssteger kalua-gris og rodfrugter i timevis og er definerende for festmåltidskulturen omkring luau, umu og hāngī. Rå fiskeretter (hawaiiansk poke, samoansk oka og tahitiansk poisson cru) hylder Stillehavets overflod. Brødfrugt (ulu) var før kontakten med europæerne den stivelsesrige basisfødevare, hvor et enkelt træ kunne brødføde en hel landsby, mens taro (kalo) har dyb åndelig betydning som det hawaiianske folks ældre søskende."
       }
     ]
   },
@@ -123580,153 +123692,191 @@ const AI_CUISINE_REGIONS = [
         "id": "austrian",
         "name": "Austrian",
         "name_sv": "Österrikiskt",
+        "name_da": "Østrigsk",
         "icon": "🇦🇹",
         "description": "Austrian cuisine is rooted in the Habsburg imperial tradition — Wiener Schnitzel, Tafelspitz, and Sachertorte — balanced by Alpine dairy culture, hearty dumplings, and a deep love of pastry and the Viennese coffeehouse.",
-        "description_sv": "Det österrikiska köket är rotat i den habsburgska imperiala traditionen — Wiener Schnitzel, Tafelspitz och Sachertorte — balanserat av alpint mejerikultur, kraftiga klimpar och en djup kärlek till bakverk och det wienska kaffehuset."
+        "description_sv": "Det österrikiska köket är rotat i den habsburgska imperiala traditionen — Wiener Schnitzel, Tafelspitz och Sachertorte — balanserat av alpint mejerikultur, kraftiga klimpar och en djup kärlek till bakverk och det wienska kaffehuset.",
+        "description_da": "Det østrigske køkken har rødder i den habsburgske kejserlige tradition — Wiener Schnitzel, Tafelspitz og Sachertorte — afbalanceret af Alpernes mejerikultur, solide melboller og en dyb kærlighed til bagværk og de wienske kaffehuse."
       },
       {
         "id": "balkan",
         "name": "Balkan",
         "name_sv": "Balkanskt",
+        "name_da": "Balkankøkken",
         "icon": "🏔️",
         "description": "Balkan cuisine draws on Ottoman, Mediterranean, and Central European traditions to create hearty, flavour-rich food centred on grilled meats, phyllo pastries, and preserved vegetables. Iconic dishes like ćevapi, burek, and ajvar reflect the communal cooking culture spanning Serbia, Croatia, Bosnia-Herzegovina, Montenegro, and North Macedonia.",
-        "description_sv": "Balkansk kuhinja hämtar inspiration från ottomanska, medelhavs- och mellaneuropeiska traditioner och skapar kraftfull mat med grillat kött, filodeg och inlagda grönsaker. Ikoniska rätter som ćevapi, burek och ajvar speglar regionens matkultur från Serbien, Kroatien och Bosnien-Hercegovina."
+        "description_sv": "Balkansk kuhinja hämtar inspiration från ottomanska, medelhavs- och mellaneuropeiska traditioner och skapar kraftfull mat med grillat kött, filodeg och inlagda grönsaker. Ikoniska rätter som ćevapi, burek och ajvar speglar regionens matkultur från Serbien, Kroatien och Bosnien-Hercegovina.",
+        "description_da": "Balkankøkkenet trækker på osmanniske, middelhavs- og centraleuropæiske traditioner og skaber solid, smagsrig mad med grillet kød, filodej og konserverede grøntsager i centrum. Ikoniske retter som ćevapi, burek og ajvar afspejler en madkultur præget af fælles måltider, der strækker sig over Serbien, Kroatien, Bosnien-Hercegovina, Montenegro og Nordmakedonien."
       },
       {
         "id": "basque",
         "name": "Basque",
         "name_sv": "Baskiskt",
+        "name_da": "Baskisk",
         "icon": "🏔️",
         "description": "Basque cuisine spans northern Spain (Álava, Gipuzkoa, Bizkaia) and French Iparralde, earning the world's highest density of Michelin stars per capita. It is defined by salt cod, fresh Cantabrian seafood, aged txuleta beef, pintxos bar culture, and a fierce commitment to PDO/PGI local produce.",
-        "description_sv": "Baskiskt kök spänner över norra Spanien och franska Iparralde och har världens högsta densitet av Michelin-stjärnor per capita. Det kännetecknas av saltad torsk, färsk fisk från Kantabriska havet, lagrad txuleta-biff, pintxos-barkultur och stolthet över lokala PDO/PGI-skyddade råvaror."
+        "description_sv": "Baskiskt kök spänner över norra Spanien och franska Iparralde och har världens högsta densitet av Michelin-stjärnor per capita. Det kännetecknas av saltad torsk, färsk fisk från Kantabriska havet, lagrad txuleta-biff, pintxos-barkultur och stolthet över lokala PDO/PGI-skyddade råvaror.",
+        "description_da": "Det baskiske køkken strækker sig over det nordlige Spanien (Álava, Gipuzkoa, Bizkaia) og det franske Iparralde og har verdens højeste koncentration af Michelin-stjerner pr. indbygger. Det kendetegnes af saltet torsk, friske fisk og skaldyr fra Det Cantabriske Hav, modnede txuleta-bøffer, pintxos-barkultur og et kompromisløst fokus på lokale råvarer med PDO/PGI-beskyttelse."
       },
       {
         "id": "british",
         "name": "British",
         "name_sv": "Brittiskt",
+        "name_da": "Britisk",
         "icon": "🇬🇧",
         "description": "British cuisine is defined by hearty comfort food and quality local produce — Sunday roast with Yorkshire pudding, fish and chips, shepherd's pie, and the full English breakfast. Regionally rich: Welsh lamb, Scotch beef, Cornish pasties, Scottish smoked salmon and haggis all carry PDO or PGI status. Britain's high dairy output (12.4 billion litres of milk in 2022) underpins iconic Cheddar, Stilton and clotted cream. Modern British food is deeply shaped by South Asian immigration, making chicken tikka masala a de facto national dish.",
-        "description_sv": "Brittisk mat präglas av rejäl husmanskost och lokala råvaror av hög kvalitet — söndagsstek med Yorkshire pudding, fish and chips, shepherd's pie och full engelsk frukost. Regionalt rik: Waleskt lamm, skotsk nötkött, Cornish pasties, skotsk rökt lax och haggis bär alla PDO- eller PGI-status. Storbritanniens höga mejeridoproduktion (12,4 miljarder liter mjölk 2022) är grunden för ikonisk Cheddar, Stilton och koagulerad grädde. Det moderna brittiska köket är djupt format av sydostasiatisk invandring, vilket gjort chicken tikka masala till ett de facto nationellt kök."
+        "description_sv": "Brittisk mat präglas av rejäl husmanskost och lokala råvaror av hög kvalitet — söndagsstek med Yorkshire pudding, fish and chips, shepherd's pie och full engelsk frukost. Regionalt rik: Waleskt lamm, skotsk nötkött, Cornish pasties, skotsk rökt lax och haggis bär alla PDO- eller PGI-status. Storbritanniens höga mejeridoproduktion (12,4 miljarder liter mjölk 2022) är grunden för ikonisk Cheddar, Stilton och koagulerad grädde. Det moderna brittiska köket är djupt format av sydostasiatisk invandring, vilket gjort chicken tikka masala till ett de facto nationellt kök.",
+        "description_da": "Det britiske køkken er kendetegnet ved solid, hjemlig mad og lokale råvarer af høj kvalitet — Sunday roast med Yorkshire pudding, fish and chips, shepherd's pie og full English breakfast. Det rummer stor regional variation: Welsh lamb, Scotch beef, Cornish pasties, Scottish smoked salmon og haggis har alle PDO- eller PGI-status. Storbritanniens høje mejeriproduktion (12,4 milliarder liter mælk i 2022) danner grundlag for ikoniske produkter som Cheddar, Stilton og clotted cream. Moderne britisk mad er dybt præget af sydasiatisk indvandring, hvilket har gjort chicken tikka masala til en de facto nationalret."
       },
       {
         "id": "french",
         "name": "French",
         "name_sv": "Franskt",
+        "name_da": "Fransk",
         "icon": "🇫🇷",
         "description": "French cuisine is the foundation of classical Western cooking, built on mother sauces, butter, terroir, and artisanal craft. From baguette and croissant to boeuf bourguignon and soupe à l'oignon, from Normandy's dairy richness to Provence's olive oil and herbs — France's diverse regions and world-leading cheese culture (~28 kg/capita) have shaped cooking worldwide.",
-        "description_sv": "Franskt kök är grunden för klassisk västerländsk matlagning, byggt på grundsåser, smör, terroir och hantverkstradition. Från baguette och croissant till boeuf bourguignon och soupe à l'oignon, från Normandies mejeririka traditioner till Provences olivolja och örter — Frankrikes mångfaldiga regioner och världsledande ostkultur (~28 kg/capita) har format matlagning globalt."
+        "description_sv": "Franskt kök är grunden för klassisk västerländsk matlagning, byggt på grundsåser, smör, terroir och hantverkstradition. Från baguette och croissant till boeuf bourguignon och soupe à l'oignon, från Normandies mejeririka traditioner till Provences olivolja och örter — Frankrikes mångfaldiga regioner och världsledande ostkultur (~28 kg/capita) har format matlagning globalt.",
+        "description_da": "Det franske køkken er grundlaget for klassisk vestlig madlavning og bygger på grundsaucer, smør, terroir og håndværksmæssig kunnen. Fra baguette og croissant til boeuf bourguignon og soupe à l'oignon, fra Normandiets rige mejeritradition til Provences olivenolie og krydderurter — Frankrigs mangfoldige regioner og verdensførende ostekultur (ca. 28 kg pr. indbygger) har formet madlavning verden over."
       },
       {
         "id": "georgian",
         "name": "Georgian",
         "name_sv": "Georgiskt",
+        "name_da": "Georgisk",
         "icon": "🇬🇪",
         "description": "Georgian cuisine is one of the Caucasus crossroads of Europe and Asia, defined by the lavish feast tradition (supra), walnut-based sauces, khachapuri bread, and khinkali dumplings. Blue fenugreek, Imeretian saffron (marigold petals), coriander, and khmeli suneli create aromatic profiles found nowhere else — shaped by Georgia's subtropical Black Sea coast, alpine highlands, and 8,000 years of winemaking in clay kvevri vessels.",
-        "description_sv": "Georgiskt kök är ett av Kaukasusregionens korsvägskök, definierat av den rika festtraditionen (supra), valnötsbaserade såser, khachapuribröd och khinkali-dumplings. Blå bockhornsklöver, imeretisk saffran (ringblommablad), koriander och khmeli suneli skapar aromatiska profiler som inte finns någon annanstans — format av Georgiens subtropiska Svartahavskust, alpina högland och 8 000 år av vinmaking i lerkärl (kvevri)."
+        "description_sv": "Georgiskt kök är ett av Kaukasusregionens korsvägskök, definierat av den rika festtraditionen (supra), valnötsbaserade såser, khachapuribröd och khinkali-dumplings. Blå bockhornsklöver, imeretisk saffran (ringblommablad), koriander och khmeli suneli skapar aromatiska profiler som inte finns någon annanstans — format av Georgiens subtropiska Svartahavskust, alpina högland och 8 000 år av vinmaking i lerkärl (kvevri).",
+        "description_da": "Det georgiske køkken er et af Kaukasus' madkulturelle knudepunkter mellem Europa og Asien og kendetegnes af den overdådige festtradition (supra), valnøddebaserede saucer, khachapuri-brød og khinkali-dumplings. Blå bukkehorn, imeretisk safran (kronblade af morgenfrue), koriander og khmeli suneli skaber aromatiske smagsprofiler, der ikke findes andre steder — i et køkken formet af Georgiens subtropiske kyst ved Sortehavet, alpine højland og 8.000 års vinfremstilling i lerkar kaldet kvevri."
       },
       {
         "id": "german",
         "name": "German",
         "name_sv": "Tyskt",
+        "name_da": "Tysk",
         "icon": "🇩🇪",
         "description": "German cuisine is built on hearty, practical cooking rooted in 16 federal states of regional tradition — from Bavarian Schweinshaxe and Weisswurst to Rhineland Sauerbraten and Hamburg Aalsuppe. Germany is the world's largest rye producer, Europe's largest pork producer, and the birthplace of Wurst culture with over 1,500 sausage varieties, underpinned by Europe's longest brewing heritage.",
-        "description_sv": "Tyskt kök bygger på rejäl, praktisk matlagning rotad i 16 delstaters regionala traditioner — från bayersk Schweinshaxe och Weisswurst till Rhinlands Sauerbraten och Hamburgs Aalsuppe. Tyskland är världens största rågproducent, Europas största grisproducent och ursprunget till wurstkulturen med över 1 500 korvsortiment, underbyggd av Europas längsta bryggeritradition."
+        "description_sv": "Tyskt kök bygger på rejäl, praktisk matlagning rotad i 16 delstaters regionala traditioner — från bayersk Schweinshaxe och Weisswurst till Rhinlands Sauerbraten och Hamburgs Aalsuppe. Tyskland är världens största rågproducent, Europas största grisproducent och ursprunget till wurstkulturen med över 1 500 korvsortiment, underbyggd av Europas längsta bryggeritradition.",
+        "description_da": "Det tyske køkken bygger på solid, praktisk madlavning med rødder i 16 delstaters regionale traditioner — fra bayersk Schweinshaxe og Weisswurst til Sauerbraten fra Rhinlandet og Aalsuppe fra Hamborg. Tyskland er verdens største producent af rug, Europas største producent af svinekød og Wurst-kulturens fødested med over 1.500 pølsevarianter, båret af Europas længste bryggeritradition."
       },
       {
         "id": "greek",
         "name": "Greek",
         "name_sv": "Grekiskt",
+        "name_da": "Græsk",
         "icon": "🇬🇷",
         "description": "Greek cuisine is built on the Mediterranean trinity of olive oil, wheat, and wine, enriched by lamb, seafood, and the wild herbs of the hillsides. Feta, oregano, and the charcoal grill define its flavour — from grilled octopus at a coastal taverna to Easter lamb slow-roasted over an open fire.",
-        "description_sv": "Grekisk matlagning bygger på Medelhavets treenighet av olivolja, vete och vin, berikad med lamm, skaldjur och vilda bergörter. Feta, oregano och träkolgrillen definierar smakerna — från grillad bläckfisk vid en kustrestaurang till långsamt ugnsstekt Påskalamm över öppen eld."
+        "description_sv": "Grekisk matlagning bygger på Medelhavets treenighet av olivolja, vete och vin, berikad med lamm, skaldjur och vilda bergörter. Feta, oregano och träkolgrillen definierar smakerna — från grillad bläckfisk vid en kustrestaurang till långsamt ugnsstekt Påskalamm över öppen eld.",
+        "description_da": "Det græske køkken bygger på Middelhavets treenighed af olivenolie, hvede og vin, beriget med lam, fisk og skaldyr samt bjergskråningernes vilde urter. Feta, oregano og trækulsgrillen definerer smagen — fra grillet blæksprutte på en taverna ved kysten til påskelam, der langtidssteges over åben ild."
       },
       {
         "id": "hungarian",
         "name": "Hungarian",
         "name_sv": "Ungerskt",
+        "name_da": "Ungarsk",
         "icon": "🇭🇺",
         "description": "Hungarian cuisine is built around paprika, slow-cooked meats, and sour cream — rich, hearty stews like gulyás and pörkölt define its character, shaped by the traditions of the Great Plain and Central European farming culture.",
-        "description_sv": "Ungerskt kök bygger på paprika, långkokt kött och gräddfil — rika, mustiga grytor som gulyás och pörkölt definierar köket, format av Stora Slättens traditioner och centraleuropeisk jordbrukskultur."
+        "description_sv": "Ungerskt kök bygger på paprika, långkokt kött och gräddfil — rika, mustiga grytor som gulyás och pörkölt definierar köket, format av Stora Slättens traditioner och centraleuropeisk jordbrukskultur.",
+        "description_da": "Det ungarske køkken bygger på paprika, langtidstilberedt kød og syrnet fløde. Fyldige, solide gryderetter som gulyás og pörkölt definerer dets karakter, der er formet af traditionerne fra Den Store Slette og den centraleuropæiske landbrugskultur."
       },
       {
         "id": "irish",
         "name": "Irish",
         "name_sv": "Irländskt",
+        "name_da": "Irsk",
         "icon": "🇮🇪",
         "description": "Irish cuisine is rooted in the land and Atlantic coast — built on pasture-fed lamb and beef, exceptional dairy, oats, and the potato, with soda bread and Irish stew as cultural touchstones and wild Atlantic seafood from oysters to smoked salmon complementing the hearty farmhouse tradition.",
-        "description_sv": "Irländskt kök har sina rötter i betet och Atlantkusten — uppbyggt kring betesuppfödd lamm och nötkött, exceptionella mejeriprodukter, havre och potatis, med sodabröd och irländsk gryta som kulturella hörnstenar och vildfångad Atlantskaldjur från ostron till rökt lax som kompletterar den rustika bondgårdstraditionen."
+        "description_sv": "Irländskt kök har sina rötter i betet och Atlantkusten — uppbyggt kring betesuppfödd lamm och nötkött, exceptionella mejeriprodukter, havre och potatis, med sodabröd och irländsk gryta som kulturella hörnstenar och vildfångad Atlantskaldjur från ostron till rökt lax som kompletterar den rustika bondgårdstraditionen.",
+        "description_da": "Det irske køkken har rødder i jorden og ved Atlanterhavskysten — det bygger på græsfodret lamme- og oksekød, enestående mejeriprodukter, havre og kartofler. Her er soda bread og Irish stew kulturelle pejlemærker, mens vildtfangede fisk og skaldyr fra Atlanterhavet, fra østers til røget laks, supplerer den solide landkøkkentradition."
       },
       {
         "id": "italian",
         "name": "Italian",
         "name_sv": "Italienskt",
+        "name_da": "Italiensk",
         "icon": "🇮🇹",
         "description": "Italian cuisine is the foundation of Western fine dining, built on extraordinary pasta (23 kg/capita — world's highest), San Marzano tomatoes, Parmigiano Reggiano, mozzarella di bufala, and extra-virgin olive oil. It spans 20 regions each with distinct identities: Emilia-Romagna's ragu and salumi, Rome's carbonara, Naples' pizza, Venice's risotto, and Sicily's caponata define one of the world's most copied yet distinctly authentic culinary traditions.",
-        "description_sv": "Italienskt kök är grunden för västerländsk finmatlagning, byggt på enastående pasta (23 kg/capita — världens högsta), San Marzano-tomater, Parmigiano Reggiano, mozzarella di bufala och extra vergine olivolja. Det spänner över 20 regioner med egna identiteter: Emilia-Romagnas ragù och salumi, Roms carbonara, Neapels pizza, Venedigs risotto och Siciliens caponata definierar en av världens mest kopierade men ändå distinkt äkta mattraditioner."
+        "description_sv": "Italienskt kök är grunden för västerländsk finmatlagning, byggt på enastående pasta (23 kg/capita — världens högsta), San Marzano-tomater, Parmigiano Reggiano, mozzarella di bufala och extra vergine olivolja. Det spänner över 20 regioner med egna identiteter: Emilia-Romagnas ragù och salumi, Roms carbonara, Neapels pizza, Venedigs risotto och Siciliens caponata definierar en av världens mest kopierade men ändå distinkt äkta mattraditioner.",
+        "description_da": "Det italienske køkken er grundlaget for den vestlige gourmettradition og bygger på enestående pasta (23 kg pr. indbygger — verdens højeste), San Marzano-tomater, Parmigiano Reggiano, mozzarella di bufala og ekstra jomfruolivenolie. Det spænder over 20 regioner, som hver har sin tydelige identitet: Emilia-Romagnas ragu og salumi, Roms carbonara, Napolis pizza, Venedigs risotto og Siciliens caponata definerer en af verdens mest kopierede, men samtidig umiskendeligt autentiske, kulinariske traditioner."
       },
       {
         "id": "mediterranean",
         "name": "Mediterranean",
         "name_sv": "Medelhavsmat",
+        "name_da": "Middelhavskøkken",
         "icon": "🫒",
         "description": "Mediterranean cuisine is a sun-drenched mosaic of flavours spanning southern Europe, the Levant, and North Africa — united by the golden thread of olive oil, fresh vegetables, legumes, grilled seafood and meats, and fragrant herbs including oregano, thyme, and mint.",
-        "description_sv": "Medelhavsmat är ett soldränkt mosaik av smaker som sträcker sig från södra Europa, Levanten och Nordafrika — förenat av olivolja, färska grönsaker, baljväxter, grillad fisk och kött, samt doftande örter som oregano, timjan och mynta."
+        "description_sv": "Medelhavsmat är ett soldränkt mosaik av smaker som sträcker sig från södra Europa, Levanten och Nordafrika — förenat av olivolja, färska grönsaker, baljväxter, grillad fisk och kött, samt doftande örter som oregano, timjan och mynta.",
+        "description_da": "Middelhavskøkkenet er en solbeskinnet mosaik af smage, der strækker sig over Sydeuropa, Levanten og Nordafrika — forenet af olivenolie, friske grøntsager, bælgfrugter, grillede fisk og skaldyr og grillet kød samt duftende urter som oregano, timian og mynte."
       },
       {
         "id": "polish",
         "name": "Polish",
         "name_sv": "Polskt",
+        "name_da": "Polsk",
         "icon": "🇵🇱",
         "description": "Polish cuisine is built on the trinity of pork, cabbage, and root vegetables, shaped by a Central European climate of harsh winters and short growing seasons. Sauerkraut (kapusta kiszona) underpins bigos — the hunter's stew simmered for days with wild mushrooms, smoked sausage, and game — while żurek (sour rye soup with hard-boiled egg) is the quintessential Easter breakfast. The national ritual of Sunday rosół (golden chicken broth) and the Christmas Eve tradition of meatless barszcz z uszkami (beetroot soup with mushroom dumplings) reveals a cuisine deeply tied to religious calendar and forest foraging.",
-        "description_sv": "Polskt kök är byggt på triaden fläsk, kål och rotfrukter, format av ett centraleuropeiskt klimat med hårda vintrar och korta odlingssäsonger. Surkål (kapusta kiszona) utgör grunden i bigos — jägargrytan som sjudas i dagar med vildsvamp, rökt korv och vilt — medan żurek (surt rågmjölssoppa med hårdkokt ägg) är den quintessentiella påskfrukostmaten. Den nationella ritualen med söndagsrosół (gyllene kycklingbuljong) och julaftonstraditionen av köttfri barszcz z uszkami (rödbetor-soppa med svampdumplings) avslöjar ett kök djupt knutet till religiös kalender och skogsplockande."
+        "description_sv": "Polskt kök är byggt på triaden fläsk, kål och rotfrukter, format av ett centraleuropeiskt klimat med hårda vintrar och korta odlingssäsonger. Surkål (kapusta kiszona) utgör grunden i bigos — jägargrytan som sjudas i dagar med vildsvamp, rökt korv och vilt — medan żurek (surt rågmjölssoppa med hårdkokt ägg) är den quintessentiella påskfrukostmaten. Den nationella ritualen med söndagsrosół (gyllene kycklingbuljong) och julaftonstraditionen av köttfri barszcz z uszkami (rödbetor-soppa med svampdumplings) avslöjar ett kök djupt knutet till religiös kalender och skogsplockande.",
+        "description_da": "Det polske køkken bygger på en treenighed af svinekød, kål og rodfrugter, formet af et centraleuropæisk klima med barske vintre og korte vækstsæsoner. Surkål (kapusta kiszona) danner grundlag for bigos — jægergryden, der simrer i dagevis med vilde svampe, røget pølse og vildt — mens żurek (sur rugsuppe med hårdkogt æg) er den helt klassiske påskemorgenmad. Det nationale søndagsritual med rosół (gylden hønsebouillon) og juleaftentraditionen med kødfri barszcz z uszkami (rødbedesuppe med svampedumplings) vidner om et køkken, der er dybt knyttet til den religiøse kalender og traditionen for at sanke i skoven."
       },
       {
         "id": "portuguese",
         "name": "Portuguese",
         "name_sv": "Portugisiskt",
+        "name_da": "Portugisisk",
         "icon": "🇵🇹",
         "description": "Portuguese cuisine is defined by three obsessions: salt cod (bacalhau — the 'faithful friend' with 365 recipes), olive oil of world-class quality, and fresh coriander as the national herb of mainland Europe. Where Spanish cuisine uses parsley, Portugal uses coriander extravagantly — in açorda (bread-coriander soup), in amêijoas à Bulhão Pato (clams with garlic and coriander), and in molho de coentros over grilled fish. The Age of Discovery brought piri piri from Africa, cinnamon from Sri Lanka, and tomatoes from the Americas — ingredients Portugal distributed to the world then absorbed into its own kitchen, creating a cuisine that is Mediterranean in olive oil and wine, Atlantic in its fish, and global in its spices.",
-        "description_sv": "Portugisiskt kök definieras av tre besatthetsobjekt: salt torskfisk (bacalhau — 'den trogne vännen' med 365 recept), olivolja av världsklass och färsk koriander som det kontinentala Europas nationalört. Där spansk matlagning använder persilja, använder Portugal koriander extravagant — i açorda (bröd-korianderssoppa), i amêijoas à Bulhão Pato (musslor med vitlök och koriander) och i molho de coentros över grillad fisk. Upptäcktstidens voyager förde piri piri från Afrika, kanel från Sri Lanka och tomater från Amerika — ingredienser som Portugal spred till världen och sedan absorberade in i sitt eget kök, och skapade ett kök som är medelhavsliknande i olivolja och vin, atlantiskt i sin fisk och globalt i sina kryddor."
+        "description_sv": "Portugisiskt kök definieras av tre besatthetsobjekt: salt torskfisk (bacalhau — 'den trogne vännen' med 365 recept), olivolja av världsklass och färsk koriander som det kontinentala Europas nationalört. Där spansk matlagning använder persilja, använder Portugal koriander extravagant — i açorda (bröd-korianderssoppa), i amêijoas à Bulhão Pato (musslor med vitlök och koriander) och i molho de coentros över grillad fisk. Upptäcktstidens voyager förde piri piri från Afrika, kanel från Sri Lanka och tomater från Amerika — ingredienser som Portugal spred till världen och sedan absorberade in i sitt eget kök, och skapade ett kök som är medelhavsliknande i olivolja och vin, atlantiskt i sin fisk och globalt i sina kryddor.",
+        "description_da": "Det portugisiske køkken er defineret af tre besættelser: saltet torsk (bacalhau — den 'trofaste ven' med 365 opskrifter), olivenolie i verdensklasse og frisk koriander som det europæiske fastlands nationalurt. Hvor det spanske køkken bruger persille, bruger Portugal koriander i rigelige mængder — i açorda (brød- og koriandersuppe), i amêijoas à Bulhão Pato (muslinger med hvidløg og koriander) og i molho de coentros på grillet fisk. Opdagelsestiden bragte piri piri fra Afrika, kanel fra Sri Lanka og tomater fra Amerika — ingredienser, som Portugal spredte til verden og derefter optog i sit eget køkken og dermed skabte et køkken, der er middelhavspræget i sin olivenolie og vin, atlantisk i sin fisk og globalt i sine krydderier."
       },
       {
         "id": "romanian",
         "name": "Romanian",
         "name_sv": "Rumänskt",
+        "name_da": "Rumænsk",
         "icon": "🇷🇴",
         "description": "Romanian cuisine is built on slow-cooked pork, tangy smântână (sour cream), and cornmeal mămăligă — hearty and seasonal, shaped by Carpathian pastoral traditions, Balkan vegetable culture, and the Danube and Black Sea fisheries.",
-        "description_sv": "Rumänskt kök bygger på långkokt fläsk, syrlig gräddfil (smântână) och majsgröt (mămăligă) — hjärtligt och säsongsbetonat, format av karpatiska boskapstraditioner, balkanisk grönsakskulturell och Donauns och Svarta havets fiske."
+        "description_sv": "Rumänskt kök bygger på långkokt fläsk, syrlig gräddfil (smântână) och majsgröt (mămăligă) — hjärtligt och säsongsbetonat, format av karpatiska boskapstraditioner, balkanisk grönsakskulturell och Donauns och Svarta havets fiske.",
+        "description_da": "Det rumænske køkken bygger på langtidstilberedt svinekød, syrlig smântână (syrnet fløde) og mămăligă af majsmel — et solidt, sæsonpræget køkken formet af Karpaternes hyrdetraditioner, Balkans grøntsagskultur og fiskeriet i Donau og Sortehavet."
       },
       {
         "id": "russian",
         "name": "Russian",
         "name_sv": "Ryskt",
+        "name_da": "Russisk",
         "icon": "🇷🇺",
         "description": "Russian cuisine is shaped by harsh winters and vast forests — beetroot borscht, meat-filled pelmeni, beef stroganoff in smetana, black rye bread, and foraged mushrooms define a cooking tradition built on preservation, root vegetables, dill, and generous dairy.",
-        "description_sv": "Ryskt kök formats av kalla vintrar och vidsträckta skogar — rödbetsborsjtj, köttfyllda pelmeni, biff stroganoff i smetana, mörkt rågbröd och skogsplocknadssvamp beskriver ett kök byggt på inläggning, rotfrukter, dill och riklig mejeriproduktion."
+        "description_sv": "Ryskt kök formats av kalla vintrar och vidsträckta skogar — rödbetsborsjtj, köttfyllda pelmeni, biff stroganoff i smetana, mörkt rågbröd och skogsplocknadssvamp beskriver ett kök byggt på inläggning, rotfrukter, dill och riklig mejeriproduktion.",
+        "description_da": "Det russiske køkken er formet af barske vintre og vidtstrakte skove — borscht med rødbede, kødfyldte pelmeni, bøf stroganoff i smetana, sort rugbrød og sankede svampe kendetegner en madtradition bygget på konservering, rodfrugter, dild og rigeligt med mejeriprodukter."
       },
       {
         "id": "spanish",
         "name": "Spanish",
         "name_sv": "Spanskt",
+        "name_da": "Spansk",
         "icon": "🇪🇸",
         "description": "Spanish cuisine balances bold charcuterie — led by jamón ibérico and chorizo — with Atlantic and Mediterranean seafood, all unified by a sofrito of tomato, garlic, and olive oil. Regional traditions range from Basque pintxos to Valencian paella, making Spain one of Europe's most diverse culinary nations.",
-        "description_sv": "Spanskt kök förenas av sofritton — tomat, vitlök och olivolja — och en stolthet i charkuteri som jamón ibérico och chorizo, bredvid rik seafood från Atlanten och Medelhavet. Regionala traditioner sträcker sig från baskiska pintxos till valenciansk paella."
+        "description_sv": "Spanskt kök förenas av sofritton — tomat, vitlök och olivolja — och en stolthet i charkuteri som jamón ibérico och chorizo, bredvid rik seafood från Atlanten och Medelhavet. Regionala traditioner sträcker sig från baskiska pintxos till valenciansk paella.",
+        "description_da": "Det spanske køkken balancerer smagskraftigt charcuteri — anført af jamón ibérico og chorizo — med fisk og skaldyr fra Atlanterhavet og Middelhavet, alt sammen forenet af en sofrito på tomat, hvidløg og olivenolie. Regionale traditioner spænder fra baskiske pintxos til valenciansk paella, hvilket gør Spanien til en af Europas mest mangfoldige kulinariske nationer."
       },
       {
         "id": "swiss",
         "name": "Swiss",
         "name_sv": "Schweiziskt",
+        "name_da": "Schweizisk",
         "icon": "🇨🇭",
         "description": "Swiss cuisine is an alpine mosaic of four culinary cultures — French, German, Italian, and Romansh — united by exceptional cheesemaking (Gruyère, Emmental, Raclette, Appenzeller), creamy fondue and rösti, Zürcher Geschnetzeltes veal in cream, Bircher muesli, Bündnerfleisch air-dried beef, and a world-class dairy and chocolate tradition.",
-        "description_sv": "Schweiziskt kök är ett alpint mosaik av fyra kulinariska kulturer — franska, tyska, italienska och reto-romanska — förenat av enastående osttillverkning (Gruyère, Emmental, Raclette, Appenzeller), krämig fondue och rösti, Zürcher Geschnetzeltes kalvkött i grädde, Birchermüesli, Bündnerfleisch lufttorkad nötkött och en världsklass mejeri- och chokladtradition."
+        "description_sv": "Schweiziskt kök är ett alpint mosaik av fyra kulinariska kulturer — franska, tyska, italienska och reto-romanska — förenat av enastående osttillverkning (Gruyère, Emmental, Raclette, Appenzeller), krämig fondue och rösti, Zürcher Geschnetzeltes kalvkött i grädde, Birchermüesli, Bündnerfleisch lufttorkad nötkött och en världsklass mejeri- och chokladtradition.",
+        "description_da": "Det schweiziske køkken er en alpin mosaik af fire kulinariske kulturer — fransk, tysk, italiensk og rætoromansk — forenet af enestående ostefremstilling (Gruyère, Emmental, Raclette, Appenzeller), cremet fondue og rösti, Zürcher Geschnetzeltes med kalvekød i fløde, Bircher muesli, Bündnerfleisch af lufttørret oksekød samt en mejeri- og chokoladetradition i verdensklasse."
       },
       {
         "id": "ukrainian",
         "name": "Ukrainian",
         "name_sv": "Ukrainskt",
+        "name_da": "Ukrainsk",
         "icon": "🇺🇦",
         "description": "Ukrainian cuisine is the breadbasket of the world made edible — a cooking tradition that turns beet, cabbage, pork fat and buckwheat into dishes of quiet greatness. Borshch (the garnet beet-cabbage soup with a swirl of smetana) is the national symbol, made in 77 documented regional styles; varenyky (half-moon dumplings) hold everything from potato and cheese to sour cherries; holubtsi stuff tender cabbage leaves with millet or meat; and salo — white-salted cured pig fat rubbed with garlic — is eaten on dark bread with raw onion as the truest Ukrainian snack. Ukraine grows more sunflowers and wheat than almost any nation on earth, and its cuisine reflects both — generous, filling, deeply seasonal, preserved through long winters.",
-        "description_sv": "Ukrainskt kök är världens kornbod gjord ätbar — en mattradition som förvandlar rödbetor, kål, svinister och bovete till rätter av stilla storhet. Borscht (den granatfärgade rödbets-kålsoppan med en klick smetana) är den nationella symbolen, lagad i 77 dokumenterade regionala varianter; varenyky (halvmånsdumplings) innehåller allt från potatis och ost till surört körsbär; holubtsi fyller mjuka kålblad med hirs eller kött; och salo — vitsaltat rimmat grisfett gnuggat med vitlök — äts på mörkt bröd med rå lök som det sannaste ukrainska melismålet. Ukraina odlar mer solrosor och vete än nästan något annat land, och köket speglar båda — generöst, mättande, djupt säsongsbundet och konserverat för långa vintrar."
+        "description_sv": "Ukrainskt kök är världens kornbod gjord ätbar — en mattradition som förvandlar rödbetor, kål, svinister och bovete till rätter av stilla storhet. Borscht (den granatfärgade rödbets-kålsoppan med en klick smetana) är den nationella symbolen, lagad i 77 dokumenterade regionala varianter; varenyky (halvmånsdumplings) innehåller allt från potatis och ost till surört körsbär; holubtsi fyller mjuka kålblad med hirs eller kött; och salo — vitsaltat rimmat grisfett gnuggat med vitlök — äts på mörkt bröd med rå lök som det sannaste ukrainska melismålet. Ukraina odlar mer solrosor och vete än nästan något annat land, och köket speglar båda — generöst, mättande, djupt säsongsbundet och konserverat för långa vintrar.",
+        "description_da": "Det ukrainske køkken er verdens kornkammer gjort spiseligt — en madtradition, der forvandler rødbeder, kål, svinefedt og boghvede til retter med stille storhed. Borshch (den granatrøde rødbede- og kålsuppe med en hvirvel af smetana) er det nationale symbol og tilberedes i 77 dokumenterede regionale varianter; varenyky (halvmåneformede dumplings) rummer alt fra kartoffel og ost til surkirsebær; i holubtsi fyldes møre kålblade med hirse eller kød; og salo — hvidt, saltmodnet svinefedt gnedet med hvidløg — spises på mørkt brød med rå løg som den mest rendyrkede ukrainske snack. Ukraine dyrker flere solsikker og mere hvede end næsten noget andet land i verden, og landets køkken afspejler begge dele — en generøs, mættende og dybt sæsonpræget madtradition, hvor råvarerne konserveres gennem lange vintre."
       }
     ]
   },
@@ -123739,73 +123889,91 @@ const AI_CUISINE_REGIONS = [
         "id": "burmese",
         "name": "Burmese",
         "name_sv": "Burmesiskt",
+        "name_da": "Burmesisk",
         "icon": "🇲🇲",
         "description": "Burmese cuisine blends South Asian, Southeast Asian and East Asian traditions in a style that is distinctly Myanmarese. Fish — especially catfish — dominates the diet at ~45 kg per capita per year (WorldFish/FAO), providing over 60% of animal protein. The national dish mohinga is a catfish-broth rice-noodle soup seasoned with ngapi fermented fish paste, lemongrass and turmeric. Ngapi underpins almost every Burmese dish, while lahpet (pickled tea leaves) — used in the celebrated lahpet thoke salad — is entirely unique to Myanmar. Rice is consumed at ~272 kg per capita per year (FAOSTAT 2022), one of the world's highest rates. Myanmar ranks 7th globally in rice production at ~25 million tonnes (FAO 2022).",
-        "description_sv": "Burmesisk mat blandar sydasiatiska, sydostasiatiska och ostasiatiska traditioner till ett distinkt myanmarskt kök. Fisk — framför allt mal — dominerar kosten med ca 45 kg per capita och år (WorldFish/FAO), vilket ger över 60% av animaliskt protein. Nationalrätten mohinga är en malbuljong-risnudelsoppa kryddad med ngapi (fermenterad fiskpasta), citrongräs och gurkmeja. Ngapi är grunden för nästan varje burmesisk rätt, medan lahpet (inlagda teblad) — som används i den berömda lahpet thoke-salladen — är helt unikt för Myanmar. Ris konsumeras till ca 272 kg per capita och år (FAOSTAT 2022), ett av världens högsta. Myanmar rankar 7:e globalt i risproduktion med ca 25 miljoner ton (FAO 2022)."
+        "description_sv": "Burmesisk mat blandar sydasiatiska, sydostasiatiska och ostasiatiska traditioner till ett distinkt myanmarskt kök. Fisk — framför allt mal — dominerar kosten med ca 45 kg per capita och år (WorldFish/FAO), vilket ger över 60% av animaliskt protein. Nationalrätten mohinga är en malbuljong-risnudelsoppa kryddad med ngapi (fermenterad fiskpasta), citrongräs och gurkmeja. Ngapi är grunden för nästan varje burmesisk rätt, medan lahpet (inlagda teblad) — som används i den berömda lahpet thoke-salladen — är helt unikt för Myanmar. Ris konsumeras till ca 272 kg per capita och år (FAOSTAT 2022), ett av världens högsta. Myanmar rankar 7:e globalt i risproduktion med ca 25 miljoner ton (FAO 2022).",
+        "description_da": "Det burmesiske køkken blander sydasiatiske, sydøstasiatiske og østasiatiske traditioner i en stil, der er udpræget myanmarsk. Fisk — især malle — dominerer kosten med ca. 45 kg pr. indbygger om året (WorldFish/FAO) og står for over 60 % af det animalske protein. Nationalretten mohinga er en risnudelsuppe med mallebouillon, krydret med den fermenterede fiskepasta ngapi, citrongræs og gurkemeje. Ngapi danner grundlag for næsten enhver burmesisk ret, mens lahpet (syltede teblade) — som bruges i den berømte lahpet thoke-salat — er helt enestående for Myanmar. Risforbruget er ca. 272 kg pr. indbygger om året (FAOSTAT 2022), et af verdens højeste niveauer. Myanmar er nr. 7 på verdensplan inden for risproduktion med ca. 25 millioner ton (FAO 2022)."
       },
       {
         "id": "filipino",
         "name": "Filipino",
         "name_sv": "Filippinsk",
+        "name_da": "Filippinsk",
         "icon": "🇵🇭",
         "description": "Filipino cuisine is a complex fusion tradition shaped by millennia of Austronesian indigenous foodways, Hindu-Buddhist influences from the ancient Indianized kingdoms, three centuries of Spanish colonial rule, Chinese merchant cooking, American commercial food culture, and the island geography of the Philippine archipelago (7 640 islands, 36 500 km of coastline). The four foundational flavors are sour (vinegar/suka, calamansi, tamarind), salty-umami (patis fish sauce, bagoong shrimp paste, toyo soy sauce), savory-sweet, and garlicky. Adobo — pork or chicken braised in vinegar, soy sauce, garlic, bay leaf, and black pepper — is the national dish, a pre-colonial vinegar-preservation technique codified by Spanish-era cooks. Sinigang (sour tamarind-based soup) is the other national-level dish, with pork, seafood, and vegetables. Fish and seafood dominate at ~27–30 kg/cap (the highest protein group), chicken at 15.8 kg/cap and pork at 14.1 kg/cap (2023, Helgi Library/FAOSTAT). Rice is consumed at the world's highest effective rate — 200 kg/person/year (2023 record, Helgi Library). Coconut is the defining fat medium: coconut milk (gata) enriches laing, bicol express, ginataang dishes, and desserts. The Philippines produces ~14-15 million tonnes of coconut/year (world's #2 producer), 355 000 tonnes of bangus (milkfish — the national fish), and 20+ million tonnes of rice.",
-        "description_sv": "Filippinsk mat är en komplex fusionstradition formad av millennier av austronesiska inhemska matsäder, tre sekel av spansk kolonialstyre, kinesisk handelsmansmatlagning, amerikansk kommersiell matkultur och öarnas geografi i det filippinska arkipelagen (7 640 öar, 36 500 km kustlinje). De fyra grundläggande smakerna är surt (vinäger/suka, calamansi, tamarind), salt-umami (patis fisksås, bagoong räkpasta, toyo sojasås), smakrik-sött och vitlöksaromatisk. Adobo — fläsk eller kyckling bräserat i vinäger, sojasås, vitlök, lagerblad och svartpeppar — är nationalrätten. Fisk och skaldjur dominerar med ~27-30 kg/cap (den högsta proteingruppen), kyckling 15,8 kg/cap och fläsk 14,1 kg/cap (2023, Helgi Library/FAOSTAT). Ris konsumeras i världens högsta effektiva takt — 200 kg/person/år (rekord 2023, Helgi Library)."
+        "description_sv": "Filippinsk mat är en komplex fusionstradition formad av millennier av austronesiska inhemska matsäder, tre sekel av spansk kolonialstyre, kinesisk handelsmansmatlagning, amerikansk kommersiell matkultur och öarnas geografi i det filippinska arkipelagen (7 640 öar, 36 500 km kustlinje). De fyra grundläggande smakerna är surt (vinäger/suka, calamansi, tamarind), salt-umami (patis fisksås, bagoong räkpasta, toyo sojasås), smakrik-sött och vitlöksaromatisk. Adobo — fläsk eller kyckling bräserat i vinäger, sojasås, vitlök, lagerblad och svartpeppar — är nationalrätten. Fisk och skaldjur dominerar med ~27-30 kg/cap (den högsta proteingruppen), kyckling 15,8 kg/cap och fläsk 14,1 kg/cap (2023, Helgi Library/FAOSTAT). Ris konsumeras i världens högsta effektiva takt — 200 kg/person/år (rekord 2023, Helgi Library).",
+        "description_da": "Det filippinske køkken er en kompleks fusionstradition formet af årtusinders oprindelige austronesiske madtraditioner, hinduistisk-buddhistiske påvirkninger fra oldtidens kongeriger præget af indisk kultur, tre århundreders spansk kolonistyre, kinesiske handelsmænds madtraditioner, amerikansk kommerciel madkultur og den filippinske øgruppes geografi (7.640 øer, 36.500 km kystlinje). De fire grundlæggende smagsprofiler er syrlig (eddike/suka, calamansi, tamarind), salt og umamipræget (patis-fiskesauce, bagoong-rejepasta, toyo-sojasauce), fyldig og sød samt hvidløgspræget. Adobo — svinekød eller kylling braiseret i eddike, sojasauce, hvidløg, laurbærblad og sort peber — er nationalretten; den bygger på en førkolonial konserveringsteknik med eddike, som kokke i den spanske kolonitid systematiserede. Sinigang (syrlig, tamarindbaseret suppe) er den anden ret med national status og tilberedes med svinekød, fisk og skaldyr samt grøntsager. Fisk og skaldyr dominerer med ca. 27–30 kg pr. indbygger (den største proteingruppe), efterfulgt af kylling med 15,8 kg pr. indbygger og svinekød med 14,1 kg pr. indbygger (2023, Helgi Library/FAOSTAT). Det reelle risforbrug er verdens højeste — 200 kg pr. person om året (rekord i 2023, Helgi Library). Kokos er det definerende fedtstof: kokosmælk (gata) beriger laing, bicol express, ginataang-retter og desserter. Filippinerne producerer ca. 14–15 millioner ton kokosnødder om året (nr. 2 i verden), 355.000 ton bangus (mælkefisk — nationalfisken) og over 20 millioner ton ris."
       },
       {
         "id": "indonesian",
         "name": "Indonesian",
         "name_sv": "Indonesiskt",
+        "name_da": "Indonesisk",
         "icon": "🇮🇩",
         "description": "Indonesian cuisine spans 17,000 islands and over 300 ethnic groups, united by its bold spice pastes (bumbu), fermented shrimp paste (terasi), sweet soy sauce (kecap manis), and a tradition of slow-cooked coconut curries like rendang — voted the world's most delicious dish.",
-        "description_sv": "Indonesiskt kök sträcker sig över 17 000 öar och mer än 300 folkgrupper, förenat av sina kraftfulla kryddblandningar (bumbu), fermenterad räkpasta (terasi), söt sojasås (kecap manis) och en tradition av långsamt kokade kokosnötscurries som rendang — omröstad till världens godaste maträtt."
+        "description_sv": "Indonesiskt kök sträcker sig över 17 000 öar och mer än 300 folkgrupper, förenat av sina kraftfulla kryddblandningar (bumbu), fermenterad räkpasta (terasi), söt sojasås (kecap manis) och en tradition av långsamt kokade kokosnötscurries som rendang — omröstad till världens godaste maträtt.",
+        "description_da": "Det indonesiske køkken spænder over 17.000 øer og mere end 300 etniske grupper og bindes sammen af kraftige krydderpastaer (bumbu), fermenteret rejepasta (terasi), sød sojasauce (kecap manis) og en tradition for langtidstilberedte kokoskarryretter som rendang — kåret til verdens lækreste ret."
       },
       {
         "id": "khmer",
         "name": "Khmer",
         "name_sv": "Khmerskt",
+        "name_da": "Khmer (cambodjansk)",
         "icon": "🇰🇭",
         "description": "Khmer (Cambodian) cuisine is built on the umami depth of prahok (fermented fish paste), the aromatic kroeung herb paste, and freshwater fish from the Tonle Sap and Mekong. Gentler than Thai food, richer than Vietnamese, it finds balance in coconut milk curries, sour soups, and the world-famous fragrance of Kampot pepper.",
-        "description_sv": "Khmerskt (kambodjansskt) kök bygger på umamidjupet i prahok (fermenterad fiskpasta), den aromatiska kroeung-kryddpastan och sötvattensfisk från Tonle Sap och Mekong. Mildare än thailändsk mat, rikare än vietnamesisk — det hittar balansen i kokosmjölkscurries, supsoppor och den världsberömda doften av Kampotpeppar."
+        "description_sv": "Khmerskt (kambodjansskt) kök bygger på umamidjupet i prahok (fermenterad fiskpasta), den aromatiska kroeung-kryddpastan och sötvattensfisk från Tonle Sap och Mekong. Mildare än thailändsk mat, rikare än vietnamesisk — det hittar balansen i kokosmjölkscurries, supsoppor och den världsberömda doften av Kampotpeppar.",
+        "description_da": "Khmer-køkkenet (det cambodjanske køkken) bygger på den dybe umami i prahok (fermenteret fiskepasta), den aromatiske urtepasta kroeung og ferskvandsfisk fra Tonle Sap og Mekong. Mildere end det thailandske køkken og mere fyldigt end det vietnamesiske finder det balance i karryretter med kokosmælk, syrlige supper og den verdensberømte duft af Kampot-peber."
       },
       {
         "id": "laotian",
         "name": "Laotian",
         "name_sv": "Laotiskt",
+        "name_da": "Laotisk",
         "icon": "🇱🇦",
         "description": "Laotian cuisine (ahan Lao) is defined by sticky rice eaten with every meal, the punchy funk of padaek (fermented fish paste), the bright heat of fresh chilies, and aromatic herbs — from the smoky char of ping pa (grilled fish) to the sour complexity of laap (minced meat salad) and the communal warmth of sinidat (Lao hot pot).",
-        "description_sv": "Laotiskt kök (ahan Lao) definieras av klibbigt ris som äts till varje måltid, den kraftiga fermenterade fiskpastan padaek, den friska hettan av färska chilis och aromatiska örter — från den rökiga smaken av ping pa (grillad fisk) till det syrliga djupet av laap (hackad köttsallad) och det gemensamma värmen av sinidat (laotisk fonduekastrull)."
+        "description_sv": "Laotiskt kök (ahan Lao) definieras av klibbigt ris som äts till varje måltid, den kraftiga fermenterade fiskpastan padaek, den friska hettan av färska chilis och aromatiska örter — från den rökiga smaken av ping pa (grillad fisk) till det syrliga djupet av laap (hackad köttsallad) och det gemensamma värmen av sinidat (laotisk fonduekastrull).",
+        "description_da": "Det laotiske køkken (ahan Lao) er kendetegnet ved klisterris, der spises til hvert måltid, den markante smag af den fermenterede fiskepasta padaek, den friske styrke fra friske chilier og aromatiske urter — fra den røgede grillsmag i ping pa (grillet fisk) til den syrlige kompleksitet i laap (salat med hakket kød) og det varme fællesskab omkring sinidat (laotisk hotpot)."
       },
       {
         "id": "malaysian",
         "name": "Malaysian",
         "name_sv": "Malaysiskt",
+        "name_da": "Malaysisk",
         "icon": "🇲🇾",
         "description": "Malaysian cuisine is a vibrant mosaic of Malay, Chinese, and Indian culinary traditions united by bold sambal, aromatic coconut-based rempah (spice paste), and fermented shrimp paste — from the national dish nasi lemak and slow-cooked rendang to fiery asam laksa and sizzling char kway teow.",
-        "description_sv": "Malaysisk mat är ett levande mosaik av malajiska, kinesiska och indiska kökstraditioner, förenade av kraftig sambal, aromatisk kokosnötsbaserad rempah och fermenterad räkpasta — från nationalrätten nasi lemak och långkokt rendang till het asam laksa och fräsande char kway teow."
+        "description_sv": "Malaysisk mat är ett levande mosaik av malajiska, kinesiska och indiska kökstraditioner, förenade av kraftig sambal, aromatisk kokosnötsbaserad rempah och fermenterad räkpasta — från nationalrätten nasi lemak och långkokt rendang till het asam laksa och fräsande char kway teow.",
+        "description_da": "Det malaysiske køkken er en levende mosaik af malajiske, kinesiske og indiske madtraditioner, der forenes af kraftig sambal, aromatisk kokosbaseret rempah (krydderpasta) og fermenteret rejepasta — fra nationalretten nasi lemak og langtidstilberedt rendang til stærk asam laksa og sydende char kway teow."
       },
       {
         "id": "singaporean",
         "name": "Singaporean",
         "name_sv": "Singaporeansk",
+        "name_da": "Singaporeansk",
         "icon": "🇸🇬",
         "description": "Singaporean cuisine is the world's great multicultural table — Hainanese chicken rice, coconut laksa, chilli crab, char kway teow — born where Chinese, Malay, Tamil, and Peranakan traditions fused at a crossroads port city into a uniquely Singaporean whole.",
-        "description_sv": "Singaporeanskt kök är världens stora multikulturella matbord — Hainanesisk kycklingris, kokosnötslaksa, chilikrabba, char kway teow — fött där kinesiska, malajiska, tamilska och Peranakan-traditioner smälte samman vid en korsvägsstad till ett unikt singaporeanskt kök."
+        "description_sv": "Singaporeanskt kök är världens stora multikulturella matbord — Hainanesisk kycklingris, kokosnötslaksa, chilikrabba, char kway teow — fött där kinesiska, malajiska, tamilska och Peranakan-traditioner smälte samman vid en korsvägsstad till ett unikt singaporeanskt kök.",
+        "description_da": "Det singaporeanske køkken er verdens store multikulturelle madbord — Hainanese chicken rice, coconut laksa, chilli crab og char kway teow — opstået, da kinesiske, malajiske, tamilske og peranakanske traditioner i en havneby ved handelsvejenes knudepunkt smeltede sammen til en unik singaporeansk helhed."
       },
       {
         "id": "thai",
         "name": "Thai",
         "name_sv": "Thaimat",
+        "name_da": "Thailandsk",
         "icon": "🇹🇭",
         "description": "Thai cuisine balances five fundamental flavours — sweet, sour, salty, spicy and umami — in every dish. Fragrant curry pastes built from galangal, lemongrass and kaffir lime, the holy basil chicken stir-fry pad krapao, som tam green papaya salad, pad thai rice noodles and GI-certified jasmine rice from the Thung Kula Rong Hai basin define a culinary tradition celebrated worldwide for aromatic layering and street-food vibrancy.",
-        "description_sv": "Thaimat balanserar fem grundsmaker — söt, sur, salt, stark och umami — i varje rätt. Doftande currypastar av galangal, citrongräs och kaffirlime, pad krapao med helig basilika och kyckling, grön papayasallad (som tam), pad thai och det GI-certifierade jasminriset från Thung Kula Rong Hai-bäckenet definierar en kulinarisk tradition känd för aromatisk komplexitet och gatumatsvitalitet."
+        "description_sv": "Thaimat balanserar fem grundsmaker — söt, sur, salt, stark och umami — i varje rätt. Doftande currypastar av galangal, citrongräs och kaffirlime, pad krapao med helig basilika och kyckling, grön papayasallad (som tam), pad thai och det GI-certifierade jasminriset från Thung Kula Rong Hai-bäckenet definierar en kulinarisk tradition känd för aromatisk komplexitet och gatumatsvitalitet.",
+        "description_da": "Det thailandske køkken balancerer fem grundsmage — sødt, surt, salt, stærkt og umami — i hver ret. Duftende karrypastaer baseret på galanga, citrongræs og kaffirlime, wokretten pad krapao med kylling og hellig basilikum, den grønne papayasalat som tam, risnudelretten pad thai og GI-certificeret jasminris fra Thung Kula Rong Hai-bækkenet definerer en madtradition, der hyldes verden over for sine aromatiske lag og sit pulserende gadekøkken."
       },
       {
         "id": "vietnamese",
         "name": "Vietnamese",
         "name_sv": "Vietnamesiskt",
+        "name_da": "Vietnamesisk",
         "icon": "🇻🇳",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_da": "Det vietnamesiske køkken bygger på ris, risnudler, nước mắm (fiskesauce) og et væld af friske urter og balancerer gennemgående salt, sødt og surt. Phở, bánh mì, gỏi cuốn og cá kho tộ afspejler landets regionale madtraditioner, mens svinekød er det dominerende kød, og fisk og skaldyr spiller en central rolle."
       }
     ]
   },
@@ -123818,49 +123986,61 @@ const AI_CUISINE_REGIONS = [
         "id": "cantonese",
         "name": "Cantonese",
         "name_sv": "Kantonesiskt",
+        "name_da": "Kantonesisk",
         "icon": "🥢",
         "description": "Cantonese cuisine, originating from Guangdong Province and Hong Kong, is defined by freshness, lightness, and the philosophy that high-quality ingredients need minimal intervention. Techniques like steaming, stir-frying with wok hei, and slow-simmering soups showcase natural flavours. Dim sum culture, roast meats, and silky rice noodles are its icons.",
-        "description_sv": "Kantonesiskt kök, med ursprung i Guangdong-provinsen och Hongkong, präglas av fräschhet, lätthet och filosofin att högkvalitativa råvaror behöver minimalt med tillagning. Tekniker som ångning, wok-stekning och långsam soppkokning lyfter fram naturliga smaker. Dim sum-kulturen, rostat kött och silkeslena risnudlar är dess ikoner."
+        "description_sv": "Kantonesiskt kök, med ursprung i Guangdong-provinsen och Hongkong, präglas av fräschhet, lätthet och filosofin att högkvalitativa råvaror behöver minimalt med tillagning. Tekniker som ångning, wok-stekning och långsam soppkokning lyfter fram naturliga smaker. Dim sum-kulturen, rostat kött och silkeslena risnudlar är dess ikoner.",
+        "description_da": "Det kantonesiske køkken har rødder i Guangdong-provinsen og Hongkong og er kendetegnet ved friskhed, lethed og filosofien om, at råvarer af høj kvalitet kræver minimal behandling. Teknikker som dampning, wokstegning med wok hei og langsom simring af supper fremhæver råvarernes naturlige smag. Dim sum-kulturen, stegte kødretter og silkebløde risnudler er køkkenets ikoner."
       },
       {
         "id": "chinese",
         "name": "Chinese",
         "name_sv": "Kinesiskt",
+        "name_da": "Kinesisk",
         "icon": "🇨🇳",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+        "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+        "description_da": "Det kinesiske køkken omfatter otte store regionale traditioner og spænder fra risbaserede retter i syd til hvedenudler og dumplings i nord. Teknikkerne omfatter wokstegning, dampning og langtidsbraisering, mens ingefær, hvidløg, forårsløg, sojasauce og fermenterede bønneprodukter er centrale smagsgivere. Svinekød, tofu, ferskvandsfisk og grøntsager står centralt, mens retter som Pekingand, hong shao rou og jiaozi afspejler landets store regionale variation."
       },
       {
         "id": "japanese",
         "name": "Japanese",
         "name_sv": "Japanskt",
+        "name_da": "Japansk",
         "icon": "🇯🇵",
         "description": "Japanese cuisine (washoku) is built on the umami foundation of dashi, fermented soy, and the harmony of seasonal ingredients — from delicate sashimi and sushi-grade tuna to slow-braised pork belly ramen, the crisp snap of tempura, and the deep comfort of miso soup.",
-        "description_sv": "Japanskt kök (washoku) bygger på umamigrunden av dashi, fermenterad soja och harmoni av säsongsbaserade råvaror — från delikat sashimi och sushi-maguro till långsamt braiserad fläskbuk i ramen, den krispiga tempuran och den djupa tryggheten av en skål misosoppa."
+        "description_sv": "Japanskt kök (washoku) bygger på umamigrunden av dashi, fermenterad soja och harmoni av säsongsbaserade råvaror — från delikat sashimi och sushi-maguro till långsamt braiserad fläskbuk i ramen, den krispiga tempuran och den djupa tryggheten av en skål misosoppa.",
+        "description_da": "Det japanske køkken (washoku) bygger på umamien fra dashi og fermenteret soja samt samspillet mellem årstidens råvarer — fra delikat sashimi og tun af sushikvalitet til ramen med langsomt braiseret svinebryst, tempuraens sprøde bid og misosuppens dybe, trøstende varme."
       },
       {
         "id": "korean",
         "name": "Korean",
         "name_sv": "Koreanskt",
+        "name_da": "Koreansk",
         "icon": "🇰🇷",
         "description": "Korean cuisine (hansik) is built on fermentation, bold heat, and communal sharing — from the sizzle of bulgogi and samgyeopsal on the grill to the pungent depth of kimchi and doenjang jjigae, the snap of japchae noodles, and the comforting warmth of a stone-bowl bibimbap.",
-        "description_sv": "Koreanskt kök (hansik) bygger på fermentering, kraftig hetta och gemensam njutning — från fräsandet av bulgogi och samgyeopsal på grillen till den starka djupet av kimchi och doenjang jjigae, kenigheten i japchae-nudlar och den värmande tryggheten i en bibimbap i stenpanna."
+        "description_sv": "Koreanskt kök (hansik) bygger på fermentering, kraftig hetta och gemensam njutning — från fräsandet av bulgogi och samgyeopsal på grillen till den starka djupet av kimchi och doenjang jjigae, kenigheten i japchae-nudlar och den värmande tryggheten i en bibimbap i stenpanna.",
+        "description_da": "Det koreanske køkken (hansik) bygger på fermentering, intens varme fra chili og måltider, der deles — fra sydende bulgogi og samgyeopsal på grillen til den intense dybde i kimchi og doenjang jjigae, det spændstige bid i japchae-nudler og den trøstende varme fra bibimbap serveret i en stenskål."
       },
       {
         "id": "sichuan",
         "name": "Sichuan",
         "name_sv": "Sichuansk",
+        "name_da": "Sichuansk",
         "icon": "🌶️",
         "description": "Sichuan cuisine is defined by mala — the electric numbing-heat from Sichuan peppercorn and chilli — built on doubanjiang fermented broad bean paste, the soul spice of mapo tofu, twice-cooked pork, dan dan noodles and the communal hotpot that has swept the world.",
-        "description_sv": "Sichuanskt kök definieras av mala — den elektriska domningshetta från sichuanpeppar och chilli — byggt på doubanjiang fermenterad bönpasta, själskryddan i mapo tofu, huiguorou, dan dan-nudlar och den gemensamma hotpot som erövrat världen."
+        "description_sv": "Sichuanskt kök definieras av mala — den elektriska domningshetta från sichuanpeppar och chilli — byggt på doubanjiang fermenterad bönpasta, själskryddan i mapo tofu, huiguorou, dan dan-nudlar och den gemensamma hotpot som erövrat världen.",
+        "description_da": "Det sichuanske køkken defineres af mala — den elektriske, bedøvende hede fra sichuanpeber og chili — og bygger på den fermenterede hestebønnepasta doubanjiang, som er den centrale smagsgiver i mapo tofu, svinekød tilberedt ad to omgange, dan dan-nudler og hotpotten, der deles ved bordet og har bredt sig over hele verden."
       },
       {
         "id": "taiwanese",
         "name": "Taiwanese",
         "name_sv": "Taiwanesiskt",
+        "name_da": "Taiwansk",
         "icon": "🇹🇼",
         "description": "Taiwanese cuisine is a vivid island table — braised pork belly over rice (lu rou fan), beef noodle soup, three-cup chicken fragrant with basil and sesame oil, oyster omelets from the coast and milkfish soup from Tainan, shaped by Fujianese, Hakka, Japanese and indigenous traditions.",
-        "description_sv": "Taiwanesiskt kök är ett livfullt ö-bord — brynt fläskbuk på ris (lu rou fan), nötköttsnudelsoppa, tre-koppar-kyckling med basilika och sesamolja, ostronomelett från kusten och mjölkfisksoppa från Tainan, format av fujiananska, hakka, japanska och urbefolkningens traditioner."
+        "description_sv": "Taiwanesiskt kök är ett livfullt ö-bord — brynt fläskbuk på ris (lu rou fan), nötköttsnudelsoppa, tre-koppar-kyckling med basilika och sesamolja, ostronomelett från kusten och mjölkfisksoppa från Tainan, format av fujiananska, hakka, japanska och urbefolkningens traditioner.",
+        "description_da": "Det taiwanske køkken er et farverigt økøkken — braiseret svinebryst over ris (lu rou fan), nudelsuppe med oksekød, tre-koppers-kylling duftende af basilikum og sesamolie, østersomeletter fra kysten og mælkefiskesuppe fra Tainan — formet af traditioner fra Fujian, Hakka-folket, Japan og Taiwans oprindelige folk."
       }
     ]
   },
@@ -123873,49 +124053,61 @@ const AI_CUISINE_REGIONS = [
         "id": "caribbean",
         "name": "Caribbean",
         "name_sv": "Karibisk",
+        "name_da": "Caribisk",
         "icon": "🌴",
         "description": "Caribbean cuisine spans Jamaica, Trinidad & Tobago, Barbados, Cuba, Haiti, Puerto Rico, and the Dominican Republic — shaped by African, Indigenous Taíno, European, and South Asian influences. Defining flavours come from Scotch bonnet heat, allspice-and-thyme jerk marinades, coconut milk, and rum. Iconic dishes include Jamaican jerk chicken and ackee & saltfish, Barbadian cou-cou and flying fish, and Trinidadian roti and pelau.",
-        "description_sv": "Karibisk mat spänner över Jamaica, Trinidad & Tobago, Barbados, Kuba, Haiti, Puerto Rico och Dominikanska republiken — formad av afrikanska, ursprungsbefolkningens, europeiska och sydasiatiska influenser. Karaktäristiska smaker skapas av scotch bonnet-hetta, allspice-och-tymjansmarinader, kokosmjölk och rom. Ikoniska rätter inkluderar jamaicansk jerk chicken och ackee & saltfisk, Barbadisk cou-cou med flygfisk, och Trinidadisk roti och pelau."
+        "description_sv": "Karibisk mat spänner över Jamaica, Trinidad & Tobago, Barbados, Kuba, Haiti, Puerto Rico och Dominikanska republiken — formad av afrikanska, ursprungsbefolkningens, europeiska och sydasiatiska influenser. Karaktäristiska smaker skapas av scotch bonnet-hetta, allspice-och-tymjansmarinader, kokosmjölk och rom. Ikoniska rätter inkluderar jamaicansk jerk chicken och ackee & saltfisk, Barbadisk cou-cou med flygfisk, och Trinidadisk roti och pelau.",
+        "description_da": "Det caribiske køkken spænder over Jamaica, Trinidad og Tobago, Barbados, Cuba, Haiti, Puerto Rico og Den Dominikanske Republik — formet af påvirkninger fra afrikanske kulturer, det oprindelige Taíno-folk, Europa og Sydasien. De karakteristiske smage kommer fra styrken fra Scotch bonnet-chili, jerk-marinader med allehånde og timian, kokosmælk og rom. Ikoniske retter omfatter jamaicansk jerk chicken og ackee & saltfish, barbadisk cou-cou og flying fish samt trinidadisk roti og pelau."
       },
       {
         "id": "dominican",
         "name": "Dominican",
         "name_sv": "Dominikansk",
+        "name_da": "Dominikansk",
         "icon": "🇩🇴",
         "description": "Dominican cuisine is built on La Bandera — rice, stewed red beans, and braised meat — and shaped by Taino, African, and Spanish roots. Plantain in all forms (mangú, tostones, maduros), root vegetables, and a bold sofrito-adobo-naranja agria flavor base define the cooking. The Dominican Republic has the world's highest per capita avocado consumption at ~49 kg per person annually.",
-        "description_sv": "Dominikanskt kök är byggt kring La Bandera — ris, kokta röda bönor och bräserat kött — och format av taino-, afrikanska och spanska rötter. Plätanon i alla dess former (mangú, tostones, maduros), rotfrukter och en kraftfull sofrito-adobo-naranja agria smakbas definierar matlagningen. Dominikanska republiken har världens högsta avokadokonsumtion per capita på ~49 kg per person och år."
+        "description_sv": "Dominikanskt kök är byggt kring La Bandera — ris, kokta röda bönor och bräserat kött — och format av taino-, afrikanska och spanska rötter. Plätanon i alla dess former (mangú, tostones, maduros), rotfrukter och en kraftfull sofrito-adobo-naranja agria smakbas definierar matlagningen. Dominikanska republiken har världens högsta avokadokonsumtion per capita på ~49 kg per person och år.",
+        "description_da": "Det dominikanske køkken bygger på La Bandera — ris, simrede røde bønner og braiseret kød — og er formet af Taíno-, afrikanske og spanske rødder. Madbananer i alle former (mangú, tostones, maduros), rodfrugter og en markant smagsbase af sofrito, adobo og naranja agria definerer madlavningen. Den Dominikanske Republik har med ca. 49 kg om året verdens højeste avokadoforbrug pr. indbygger."
       },
       {
         "id": "haitian",
         "name": "Haitian",
         "name_sv": "Haitianskt",
+        "name_da": "Haitisk",
         "icon": "🇭🇹",
         "description": "Haitian cuisine is defined by epis — the aromatic garlic, scallion, thyme and scotch bonnet paste that seasons almost every dish — and by contrasts: smoky griot pork crisped in sour orange marinade, pikliz pickled fire on the side, and diri ak pwa (rice and beans) as the daily anchor. African, French, and Taíno roots fuse into a cuisine of bold depth and celebration.",
-        "description_sv": "Haitianskt kök definieras av épis — den aromatiska pastan av vitlök, salladslök, timjan och scotch bonnet som kryddar nästan varje rätt — och av kontraster: rökig griot-fläsk krispigstekt i surt apelsinmarinad, pikliz picklade hetta på sidan och diri ak pwa (ris och bönor) som daglig ankare."
+        "description_sv": "Haitianskt kök definieras av épis — den aromatiska pastan av vitlök, salladslök, timjan och scotch bonnet som kryddar nästan varje rätt — och av kontraster: rökig griot-fläsk krispigstekt i surt apelsinmarinad, pikliz picklade hetta på sidan och diri ak pwa (ris och bönor) som daglig ankare.",
+        "description_da": "Det haitiske køkken defineres af epis — den aromatiske pasta af hvidløg, forårsløg, timian og scotch bonnet, som krydrer næsten hver eneste ret — og af kontraster: røget griot-svinekød sprødstegt i en marinade af bitterappelsin, pikliz som syltet ild til retten og diri ak pwa (ris og bønner) som den daglige grundpille. Afrikanske, franske og Taíno-rødder smelter sammen i et køkken med markant dybde og festlighed."
       },
       {
         "id": "jamaican",
         "name": "Jamaican",
         "name_sv": "Jamaikanskt",
+        "name_da": "Jamaicansk",
         "icon": "🇯🇲",
         "description": "Jamaican cuisine is one of the world's most distinctive and internationally celebrated — defined by jerk seasoning (allspice, Scotch bonnet, pimento wood), the national dish ackee and saltfish, oxtail stew, curried goat, and rice and peas. Jamaica is the world's leading allspice (pimento) producer, and its food culture fuses African, Taíno, European, and Indian influences into bold, aromatic, heat-forward cooking.",
-        "description_sv": "Jamaikanskt kök är ett av världens mest distinktiva och internationellt firade — definierat av jerk-kryddning (kryddpeppar, Scotch bonnet-chili, pimentoträ), nationalrätten ackee och saltfisk, oxtailgryta, currydoftad get och ris med bönor. Jamaica är världens ledande producent av kryddpeppar (pimento), och matkulturen smälter samman afrikanska, taíno, europeiska och indiska influenser till djärv, aromatisk, hetskryddad matlagning."
+        "description_sv": "Jamaikanskt kök är ett av världens mest distinktiva och internationellt firade — definierat av jerk-kryddning (kryddpeppar, Scotch bonnet-chili, pimentoträ), nationalrätten ackee och saltfisk, oxtailgryta, currydoftad get och ris med bönor. Jamaica är världens ledande producent av kryddpeppar (pimento), och matkulturen smälter samman afrikanska, taíno, europeiska och indiska influenser till djärv, aromatisk, hetskryddad matlagning.",
+        "description_da": "Det jamaicanske køkken er et af verdens mest særprægede og internationalt hyldede køkkener — defineret af jerk-krydderi (allehånde, Scotch bonnet-chili og træ fra allehåndetræet), nationalretten ackee and saltfish, oxtail stew, curried goat og rice and peas. Jamaica er verdens førende producent af allehånde (pimento), og landets madkultur forener påvirkninger fra Afrika, Taíno-folket, Europa og Indien i en kraftfuld, aromatisk madlavning med stærk chili i centrum."
       },
       {
         "id": "puerto_rican",
         "name": "Puerto Rican",
         "name_sv": "Puerto Ricanskt",
+        "name_da": "Puertoricansk",
         "icon": "🇵🇷",
         "description": "Puerto Rican cuisine fuses Spanish, African, and Taíno traditions around sofrito, adobo, and slow-roasted pork — from lechón and pernil to arroz con gandules, mofongo, and viandas (root vegetable platters), all seasoned with recao, ají dulce, and annatto.",
-        "description_sv": "Puerto Ricanskt kök smälter samman spanska, afrikanska och Taíno-traditioner kring sofrito, adobo och långstekt fläsk — från lechón och pernil till arroz con gandules, mofongo och viandas, kryddade med recao, ají dulce och annatto."
+        "description_sv": "Puerto Ricanskt kök smälter samman spanska, afrikanska och Taíno-traditioner kring sofrito, adobo och långstekt fläsk — från lechón och pernil till arroz con gandules, mofongo och viandas, kryddade med recao, ají dulce och annatto.",
+        "description_da": "Det puertoricanske køkken forener spanske, afrikanske og Taíno-traditioner omkring sofrito, adobo og langtidsstegt svinekød — fra lechón og pernil til arroz con gandules, mofongo og viandas (fade med rodfrugter), alt sammen krydret med recao, ají dulce og annatto."
       },
       {
         "id": "trinidadian",
         "name": "Trinidadian",
         "name_sv": "Trinidadiskt",
+        "name_da": "Trinidadisk",
         "icon": "🇹🇹",
         "description": "Trinidadian cuisine fuses African, South Asian, Creole and Chinese influences into one of the Caribbean's most vibrant food cultures — doubles (fried bara with curried chickpeas) eaten curbside at dawn, pelau rice slow-cooked with caramelised chicken and pigeon peas, curry goat at Sunday dinner, bake-and-shark at Maracas Beach, and callaloo of dasheen leaves and crab that traces its roots to both West Africa and the Amerindians.",
-        "description_sv": "Trinidadiskt kök smälter samman afrikanska, sydasiatiska, kreolska och kinesiska influenser i en av Karibiens mest levfulla matkulturer — doubles (stekt bara med currykikärtor) vid gatumatsvagnen i gryningen, pelau-ris tillagat med karamelliserad kyckling och duvorärtor, currygeit till söndagsmiddagen, bake-and-shark vid Maracas Beach och callaloo av dacheen-blad och krabba."
+        "description_sv": "Trinidadiskt kök smälter samman afrikanska, sydasiatiska, kreolska och kinesiska influenser i en av Karibiens mest levfulla matkulturer — doubles (stekt bara med currykikärtor) vid gatumatsvagnen i gryningen, pelau-ris tillagat med karamelliserad kyckling och duvorärtor, currygeit till söndagsmiddagen, bake-and-shark vid Maracas Beach och callaloo av dacheen-blad och krabba.",
+        "description_da": "Det trinidadiske køkken smelter afrikanske, sydasiatiske, kreolske og kinesiske påvirkninger sammen til en af Caribiens mest levende madkulturer — doubles (friturestegt bara med karrykrydrede kikærter), som spises ved vejkanten ved daggry, pelau-ris langtidskogt med karamelliseret kylling og duerærter, curry goat til søndagsmiddagen, bake-and-shark på Maracas Beach og callaloo med dasheen-blade og krabbe, hvis rødder går tilbage til både Vestafrika og Amerikas oprindelige folk."
       }
     ]
   },
@@ -123928,463 +124120,577 @@ const AI_CUISINE_REGIONS = [
         "id": "danish",
         "name": "Danish",
         "name_sv": "Danskt",
+        "name_da": "Dansk",
         "icon": "🇩🇰",
         "description": "Danish cuisine is defined by smørrebrød — open-faced rye bread sandwiches — a deep pork culture crowned by stegt flæsk as the national dish, and a centuries-old tradition of pickling, smoking, and curing cold-water fish. The New Nordic movement has elevated foraged herbs, root vegetables, and Nordic dairy to global renown.",
-        "description_sv": "Danskt kök präglas av smørrebrød — öppna rågbrödsmackor — en djup fläskkultur med stegt flæsk som nationalrätt och en lång tradition av inläggning, rökning och saltning av kallvattenfisk. Den Nya Nordiska rörelsen har lyft forageade örter, rotfrukter och nordiska mejeriprodukter till internationell berömmelse."
+        "description_sv": "Danskt kök präglas av smørrebrød — öppna rågbrödsmackor — en djup fläskkultur med stegt flæsk som nationalrätt och en lång tradition av inläggning, rökning och saltning av kallvattenfisk. Den Nya Nordiska rörelsen har lyft forageade örter, rotfrukter och nordiska mejeriprodukter till internationell berömmelse.",
+        "description_da": "Dansk madkultur er kendetegnet ved smørrebrød, en stærk tradition for svinekød med stegt flæsk som nationalret og århundreders syltning, røgning og saltning af fisk fra kolde farvande. Det nye nordiske køkken har gjort sankede urter, rodfrugter og nordiske mejeriprodukter verdenskendte."
       },
       {
         "id": "finnish",
         "name": "Finnish",
         "name_sv": "Finskt",
+        "name_da": "Finsk",
         "icon": "🇫🇮",
         "description": "Finnish cuisine is shaped by forests, lakes, and the Baltic Sea. Rye bread (ruisleipä), salmon soup (lohikeitto), and sautéed reindeer (poronkäristys) define its identity — anchored by the world's highest rye consumption per capita, wild chanterelles, and a dairy culture among Europe's most intensive.",
-        "description_sv": "Finskt kök formas av skogar, sjöar och Östersjön. Rågbröd (ruisleipä), laxsoppa (lohikeitto) och renskav (poronkäristys) definierar dess identitet — förankrad i världens högsta konsumtion av råg per capita, vilda kantareller och en mejerikultur bland Europas mest intensiva."
+        "description_sv": "Finskt kök formas av skogar, sjöar och Östersjön. Rågbröd (ruisleipä), laxsoppa (lohikeitto) och renskav (poronkäristys) definierar dess identitet — förankrad i världens högsta konsumtion av råg per capita, vilda kantareller och en mejerikultur bland Europas mest intensiva.",
+        "description_da": "Det finske køkken er formet af skove, søer og Østersøen. Rugbrød (ruisleipä), laksesuppe (lohikeitto) og sauteret rensdyrkød (poronkäristys) definerer dets identitet — forankret i verdens højeste forbrug af rug pr. indbygger, vilde kantareller og en af Europas stærkeste mejeritraditioner."
       },
       {
         "id": "icelandic",
         "name": "Icelandic",
         "name_sv": "Isländskt",
+        "name_da": "Islandsk",
         "icon": "🇮🇸",
         "description": "Icelandic cuisine is shaped by ocean, lava fields, and Arctic climate — built on cod, lamb, and skyr, preserved through centuries of smoking, drying, and fermentation, with wild herbs foraged from the tundra and fish pulled from pristine cold waters.",
-        "description_sv": "Isländskt kök formas av havet, lavalandskap och arktiskt klimat — byggt på torsk, lamm och skyr, bevarat genom rökning, torkning och jäsning, med vilda örter insamlade från tundran och fisk från rena, kalla vatten."
+        "description_sv": "Isländskt kök formas av havet, lavalandskap och arktiskt klimat — byggt på torsk, lamm och skyr, bevarat genom rökning, torkning och jäsning, med vilda örter insamlade från tundran och fisk från rena, kalla vatten.",
+        "description_da": "Det islandske køkken er formet af havet, lavamarkerne og det arktiske klima og bygger på torsk, lam og skyr samt århundredgamle traditioner for røgning, tørring og fermentering. Vilde urter sankes på tundraen, og fisk fanges i uberørte, kolde farvande."
       },
       {
         "id": "new_nordic",
         "name": "New Nordic",
         "name_sv": "Nytt nordiskt kök",
+        "name_da": "Nyt nordisk køkken",
         "icon": "🌿",
         "description": "New Nordic cuisine, codified by the 2004 manifesto from Noma and the Copenhagen chefs' collective, strips away imported spices and foreign influences to reveal the pure flavours of the northern forest, shore, and field — raw seafood, foraged herbs, aged roots, fermented dairy, smoked meats, and the bracingly clean tastes of spruce, sea buckthorn, and elderflower.",
-        "description_sv": "Det nya nordiska köket, kodifierat i 2004 års manifest från Noma och Köpenhamns kockkollektiv, rensar bort importerade kryddor och utländska influenser för att visa de rena smakerna från den nordiska skogen, kusten och åkern — rå skaldjur, plockade örter, lagrade rotsaker, fermenterade mejeriprodukter, rökt kött och den friskt rena smaken av gran, havtorn och fläder."
+        "description_sv": "Det nya nordiska köket, kodifierat i 2004 års manifest från Noma och Köpenhamns kockkollektiv, rensar bort importerade kryddor och utländska influenser för att visa de rena smakerna från den nordiska skogen, kusten och åkern — rå skaldjur, plockade örter, lagrade rotsaker, fermenterade mejeriprodukter, rökt kött och den friskt rena smaken av gran, havtorn och fläder.",
+        "description_da": "Det nye nordiske køkken, som blev kodificeret i manifestet fra 2004, udarbejdet af Noma og det københavnske kokkekollektiv, fjerner importerede krydderier og udenlandske påvirkninger for at blotlægge de rene smage fra Nordens skove, kyster og marker — rå fisk og skaldyr, sankede urter, lagrede rodfrugter, fermenterede mejeriprodukter, røget kød og de friske, rene smage af gran, havtorn og hyldeblomst."
       },
       {
         "id": "norwegian",
         "name": "Norwegian",
         "name_sv": "Norskt",
+        "name_da": "Norsk",
         "icon": "🇳🇴",
         "description": "Norwegian cuisine is shaped by the sea and the cold — Atlantic salmon, salted cod, pickled herring, and pinnekjøtt (cured lamb ribs) speak to a long tradition of preservation. Brunost (brown cheese), thick rømme (sour cream), and wild berries round out a larder built from fjord, farm, and forest.",
-        "description_sv": "Norskt kök formas av havet och kylan — atlantlax, saltad torsk, inlagd sill och pinnekjøtt (torkade lammrevbensspjäll) vittnar om en lång bevaringstradition. Brunost (brun ost), tjock rømme (gräddfil) och vilda bär kompletterar ett skafferi byggt av fjord, gård och skog."
+        "description_sv": "Norskt kök formas av havet och kylan — atlantlax, saltad torsk, inlagd sill och pinnekjøtt (torkade lammrevbensspjäll) vittnar om en lång bevaringstradition. Brunost (brun ost), tjock rømme (gräddfil) och vilda bär kompletterar ett skafferi byggt av fjord, gård och skog.",
+        "description_da": "Det norske køkken er formet af havet og kulden — atlantisk laks, saltet torsk, syltede sild og pinnekjøtt (saltede og tørrede lammeribben) vidner om en lang tradition for konservering. Brunost (brun ost), tyk rømme (syrnet fløde) og vilde bær fuldender et spisekammer baseret på råvarer fra fjord, gård og skov."
       },
       {
         "id": "swedish",
         "name": "Swedish",
         "name_sv": "Svensk",
+        "name_da": "Svensk",
         "icon": "🇸🇪",
         "description": "Swedish cuisine is husmanskost — rooted in the land's roots and water. Köttbullar in cream gravy with lingonberry and buttered potatoes, gravlax with mustard-dill sauce, Baltic herring in a dozen marinades, and the winter ritual of ärtsoppa on Thursdays. Forged by cold winters and an agricultural tradition of curing, fermenting, and pickling, it balances simple ingredients with a quiet precision that feels timeless.",
-        "description_sv": "Svensk husmanskost är förankrad i jordens rötter och vattnets rikedomar. Köttbullar i gräddsås med lingonsylt och smörkokt potatis, gravlax med hovmästarsås, inlagd sill i tolv varianter och torsdagens ärtsoppa. Kylda vintrar och en jordbrukstradition av saltning, fermentering och inläggning har format ett kök som balanserar enkla råvaror med stilla precision."
+        "description_sv": "Svensk husmanskost är förankrad i jordens rötter och vattnets rikedomar. Köttbullar i gräddsås med lingonsylt och smörkokt potatis, gravlax med hovmästarsås, inlagd sill i tolv varianter och torsdagens ärtsoppa. Kylda vintrar och en jordbrukstradition av saltning, fermentering och inläggning har format ett kök som balanserar enkla råvaror med stilla precision.",
+        "description_da": "Det svenske køkken er husmanskost — forankret i jordens rødder og vandets rigdomme. Köttbullar i flødesovs med tyttebær og smørvendte kartofler, gravlax med sennepssauce og dild, østersøsild i et dusin marinader og vinterritualet med ärtsoppa om torsdagen. Formet af kolde vintre og en landbrugstradition for saltning, fermentering og syltning balancerer det enkle råvarer med en stille præcision, der føles tidløs."
       }
     ]
   }
 ];
 
-// AI Recipe Builder - Cuisine descriptions {cuisine_id: {description, description_sv?}}
+// AI Recipe Builder - Cuisine descriptions {cuisine_id: {description, description_sv?, description_da?}}
 const AI_CUISINE_DESCRIPTIONS = {
   "afghan": {
     "description": "Afghan cuisine is a fragrant, hearty tradition shaped by Silk Road trade routes and mountain landscapes. Centred on lamb, long-grain rice, and fresh-baked naan, it showcases dishes like Kabuli Pulao (the national dish) and mantu dumplings, layered with cardamom, cumin, and dried mint.",
-    "description_sv": "Det afghanska köket är en doftande, kraftfull tradition formad av Sidenvägens handelsrutter och bergslandskap. Med lamm, långkornigt ris och nybakat naan i centrum presenterar köket nationalrätten Kabuli Pulao och mantudumplings, kryddade med kardemumma, spiskummin och torkad mynta."
+    "description_sv": "Det afghanska köket är en doftande, kraftfull tradition formad av Sidenvägens handelsrutter och bergslandskap. Med lamm, långkornigt ris och nybakat naan i centrum presenterar köket nationalrätten Kabuli Pulao och mantudumplings, kryddade med kardemumma, spiskummin och torkad mynta.",
+    "description_da": "Det afghanske køkken er en aromatisk og mættende madtradition formet af Silkevejens handelsruter og bjerglandskaber. Med lam, langkornede ris og friskbagt naan i centrum byder det på retter som Kabuli Pulao (nationalretten) og mantu-dumplings, tilsmagt med kardemomme, spidskommen og tørret mynte."
   },
   "algerian": {
     "description": "Algerian cuisine blends Berber, Arab, Ottoman, and French influences, with couscous as the UNESCO-recognised national dish, lamb as the defining protein, and a rich tradition of semolina breads, aromatic ras el hanout spice blends, and the iconic Deglet Nour dates of the Saharan south.",
-    "description_sv": "Algerisk mat är en blandning av berbisk, arabisk, osmansk och fransk matkultur, med couscous som UNESCO-erkänd nationalrätt, lamm som det viktigaste proteinet och en rik tradition av semulebröd, aromatiska ras el hanout-kryddblandningar och de ikoniska Deglet Nour-dadlarna från den saharariska södern."
+    "description_sv": "Algerisk mat är en blandning av berbisk, arabisk, osmansk och fransk matkultur, med couscous som UNESCO-erkänd nationalrätt, lamm som det viktigaste proteinet och en rik tradition av semulebröd, aromatiska ras el hanout-kryddblandningar och de ikoniska Deglet Nour-dadlarna från den saharariska södern.",
+    "description_da": "Det algeriske køkken forener berberiske, arabiske, osmanniske og franske påvirkninger med couscous som den UNESCO-anerkendte nationalret, lam som den karakteristiske kødtype samt en rig tradition for semuljebrød, aromatiske ras el hanout-krydderiblandinger og de ikoniske Deglet Nour-dadler fra det sydlige Sahara."
   },
   "american": {
     "description": "A diverse and hearty cuisine shaped by waves of immigration and regional traditions, centred on grilled meats, BBQ, corn, wheat, and dairy. Iconic dishes include the hamburger, fried chicken, apple pie, cornbread, and Thanksgiving turkey, reflecting a melting pot of cultures across a vast continent.",
-    "description_sv": "Ett mångsidigt och rejält kök format av invandring och regionala traditioner, med fokus på grillat kött, BBQ, majs, vete och mejeriprodukter. Ikoniska rätter är hamburgare, stekt kyckling, äppelpaj, majsbröd och Thanksgiving-kalkon – en kulturell smältdegel från en vid kontinent."
+    "description_sv": "Ett mångsidigt och rejält kök format av invandring och regionala traditioner, med fokus på grillat kött, BBQ, majs, vete och mejeriprodukter. Ikoniska rätter är hamburgare, stekt kyckling, äppelpaj, majsbröd och Thanksgiving-kalkon – en kulturell smältdegel från en vid kontinent.",
+    "description_da": "Et mangfoldigt og mættende køkken formet af bølger af indvandring og regionale traditioner med fokus på grillet kød, BBQ, majs, hvede og mejeriprodukter. Ikoniske retter omfatter hamburgeren, friturestegt kylling, æbletærte, majsbrød og Thanksgiving-kalkun og afspejler en kulturel smeltedigel på tværs af det vidtstrakte land."
   },
   "argentinian": {
     "description": "Argentine cuisine is defined by its world-famous asado (barbecue), Pampas-raised beef, and the Italian-Spanish immigrant influence seen in empanadas, pizza, and pasta. Dulce de leche, Malbec wine, and chimichurri sauce are national icons.",
-    "description_sv": "Argentinskt kök präglas av det världsberömda asado (grillning), nötkött från Pampas och det italiensk-spanska invandringsarvet i empanadas, pizza och pasta. Dulce de leche, Malbecvin och chimichurrisås är nationella symboler."
+    "description_sv": "Argentinskt kök präglas av det världsberömda asado (grillning), nötkött från Pampas och det italiensk-spanska invandringsarvet i empanadas, pizza och pasta. Dulce de leche, Malbecvin och chimichurrisås är nationella symboler.",
+    "description_da": "Det argentinske køkken er kendetegnet ved sin verdensberømte asado (grillning), oksekød fra Pampas og indflydelsen fra italienske og spanske indvandrere, der ses i empanadas, pizza og pasta. Dulce de leche, Malbec-vin og chimichurri-sauce er nationalsymboler."
   },
   "armenian": {
     "description": "Armenian cuisine is one of the world's oldest, rooted in the fertile Armenian Highlands and shaped by Christian traditions, mountain pastoral heritage, and Persian and Ottoman influences; its icons include UNESCO-listed lavash flatbread baked in a clay tonir oven, khorovats barbecue, slow-cooked harissa porridge, and the apricot — the national fruit whose Latin name Prunus armeniaca means 'Armenian plum'.",
-    "description_sv": "Det armeniska köket är ett av världens äldsta, med rötter i de armeniska höglanden och format av kristna traditioner, bergsmässig herdekultur samt persiska och osmanska influenser; ikoniska inslag inkluderar UNESCO-listat lavash-tunnbröd bakat i lertanur, khorovats-grillat, långkokt harissa-gröt och aprikosen — nationalfrukten vars latinska namn Prunus armeniaca betyder 'armenisk plommonträd'."
+    "description_sv": "Det armeniska köket är ett av världens äldsta, med rötter i de armeniska höglanden och format av kristna traditioner, bergsmässig herdekultur samt persiska och osmanska influenser; ikoniska inslag inkluderar UNESCO-listat lavash-tunnbröd bakat i lertanur, khorovats-grillat, långkokt harissa-gröt och aprikosen — nationalfrukten vars latinska namn Prunus armeniaca betyder 'armenisk plommonträd'.",
+    "description_da": "Det armenske køkken er et af verdens ældste, med rødder i det frugtbare armenske højland og formet af kristne traditioner, bjergenes hyrdekultur samt persisk og osmannisk indflydelse; blandt dets ikoner er det UNESCO-listede lavash-fladbrød bagt i lerovnen tonir, khorovats-grillmad, den langtidskogte harissa-grød og abrikosen — nationalfrugten, hvis latinske navn Prunus armeniaca betyder 'armensk blomme'."
   },
   "australian": {
     "description": "Australian cuisine blends Indigenous bush tucker traditions with British colonial heritage and waves of Asian, Mediterranean and multicultural immigration. Known for BBQ culture — lamb chops, snags and prawns — it features bold native flavours (wattleseed, lemon myrtle, macadamia), celebrated dairy from Victoria and Tasmania, and world-leading exports of beef, lamb, grain and seafood.",
-    "description_sv": "Australiensiskt kök kombinerar ursprungsbefolkningens busktraditioner med brittiskt kolonialarv och asiatiska, mediterrana och mångkulturella influenser. Känt för sin BBQ-kultur — lammkotletter, grillkorv och räkor — och använder djärva inhemska smaker som wattleseed, citronmyrte och macadamia, med utmärkt mejeri från Victoria och Tasmanien samt världsledande export av nötkött, lamm, spannmål och skaldjur."
+    "description_sv": "Australiensiskt kök kombinerar ursprungsbefolkningens busktraditioner med brittiskt kolonialarv och asiatiska, mediterrana och mångkulturella influenser. Känt för sin BBQ-kultur — lammkotletter, grillkorv och räkor — och använder djärva inhemska smaker som wattleseed, citronmyrte och macadamia, med utmärkt mejeri från Victoria och Tasmanien samt världsledande export av nötkött, lamm, spannmål och skaldjur.",
+    "description_da": "Det australske køkken forener bush tucker-traditioner hos Australiens oprindelige folk med arven fra den britiske kolonitid og påvirkninger fra indvandring fra Asien, Middelhavslandene og mange andre dele af verden. Køkkenet er kendt for sin grillkultur — lammekoteletter, snags og rejer — og byder på markante smage fra hjemmehørende råvarer (wattleseed, lemon myrtle og macadamia), berømte mejeriprodukter fra Victoria og Tasmanien samt verdensførende eksport af oksekød, lam, korn og fisk og skaldyr."
   },
   "austrian": {
     "description": "Austrian cuisine is rooted in the Habsburg imperial tradition — Wiener Schnitzel, Tafelspitz, and Sachertorte — balanced by Alpine dairy culture, hearty dumplings, and a deep love of pastry and the Viennese coffeehouse.",
-    "description_sv": "Det österrikiska köket är rotat i den habsburgska imperiala traditionen — Wiener Schnitzel, Tafelspitz och Sachertorte — balanserat av alpint mejerikultur, kraftiga klimpar och en djup kärlek till bakverk och det wienska kaffehuset."
+    "description_sv": "Det österrikiska köket är rotat i den habsburgska imperiala traditionen — Wiener Schnitzel, Tafelspitz och Sachertorte — balanserat av alpint mejerikultur, kraftiga klimpar och en djup kärlek till bakverk och det wienska kaffehuset.",
+    "description_da": "Det østrigske køkken har rødder i den habsburgske kejserlige tradition — Wiener Schnitzel, Tafelspitz og Sachertorte — afbalanceret af Alpernes mejerikultur, solide melboller og en dyb kærlighed til bagværk og de wienske kaffehuse."
   },
   "azerbaijani": {
     "description": "Azerbaijani cuisine is a rich tapestry of Turkic, Persian, and Russian culinary traditions shaped by centuries of Silk Road trade, celebrated for saffron-scented plov pilaf, UNESCO-recognized dolma, Caspian sturgeon and caviar, and iconic pomegranate-based narsharab sauce.",
-    "description_sv": "Det azerbajdzjanska köket är en rik blandning av turkiska, persiska och ryska kulinariska traditioner formade av Sidenvägshandeln, känt för saffransdoftande plov, UNESCO-erkänd dolma, kaspisk stör och kaviar samt den ikoniska granatäppelssåsen narsharab."
+    "description_sv": "Det azerbajdzjanska köket är en rik blandning av turkiska, persiska och ryska kulinariska traditioner formade av Sidenvägshandeln, känt för saffransdoftande plov, UNESCO-erkänd dolma, kaspisk stör och kaviar samt den ikoniska granatäppelssåsen narsharab.",
+    "description_da": "Det aserbajdsjanske køkken er et rigt vævetæppe af tyrkiske, persiske og russiske madtraditioner, formet af århundreders handel langs Silkevejen og berømt for safranduftende plov-pilaf, UNESCO-anerkendt dolma, kaspisk stør og kaviar samt den ikoniske granatæblebaserede narsharab-sauce."
   },
   "balkan": {
     "description": "Balkan cuisine draws on Ottoman, Mediterranean, and Central European traditions to create hearty, flavour-rich food centred on grilled meats, phyllo pastries, and preserved vegetables. Iconic dishes like ćevapi, burek, and ajvar reflect the communal cooking culture spanning Serbia, Croatia, Bosnia-Herzegovina, Montenegro, and North Macedonia.",
-    "description_sv": "Balkansk kuhinja hämtar inspiration från ottomanska, medelhavs- och mellaneuropeiska traditioner och skapar kraftfull mat med grillat kött, filodeg och inlagda grönsaker. Ikoniska rätter som ćevapi, burek och ajvar speglar regionens matkultur från Serbien, Kroatien och Bosnien-Hercegovina."
+    "description_sv": "Balkansk kuhinja hämtar inspiration från ottomanska, medelhavs- och mellaneuropeiska traditioner och skapar kraftfull mat med grillat kött, filodeg och inlagda grönsaker. Ikoniska rätter som ćevapi, burek och ajvar speglar regionens matkultur från Serbien, Kroatien och Bosnien-Hercegovina.",
+    "description_da": "Balkankøkkenet trækker på osmanniske, middelhavs- og centraleuropæiske traditioner og skaber solid, smagsrig mad med grillet kød, filodej og konserverede grøntsager i centrum. Ikoniske retter som ćevapi, burek og ajvar afspejler en madkultur præget af fælles måltider, der strækker sig over Serbien, Kroatien, Bosnien-Hercegovina, Montenegro og Nordmakedonien."
   },
   "bangladeshi": {
     "description": "Bangladeshi cuisine centers on rice and freshwater fish, shaped by the fertile Bengal delta. Signature preparations include shorshe ilish (hilsa in mustard sauce), bhuna khichuri, and Dhaka-style kacchi biryani, with mustard oil, panch phoron, and turmeric defining the flavor profile.",
-    "description_sv": "Bangladesisk matkultur kretsar kring ris och sötvattensfisk, formad av det bördiga Bengaldeltats landskap. Signaturrätter som shorshe ilish, bhuna khichuri och Dhaka-stil kacchi biryani definierar köket, med senapsolja, panch phoron och gurkmeja som bärande smaker."
+    "description_sv": "Bangladesisk matkultur kretsar kring ris och sötvattensfisk, formad av det bördiga Bengaldeltats landskap. Signaturrätter som shorshe ilish, bhuna khichuri och Dhaka-stil kacchi biryani definierar köket, med senapsolja, panch phoron och gurkmeja som bärande smaker.",
+    "description_da": "Det bangladeshiske køkken har ris og ferskvandsfisk som omdrejningspunkt og er formet af det frugtbare Bengaldelta. Karakteristiske retter omfatter shorshe ilish (hilsa i sennepssauce), bhuna khichuri og kacchi biryani i Dhaka-stil, mens sennepsolie, panch phoron og gurkemeje definerer smagsprofilen."
   },
   "basque": {
     "description": "Basque cuisine spans northern Spain (Álava, Gipuzkoa, Bizkaia) and French Iparralde, earning the world's highest density of Michelin stars per capita. It is defined by salt cod, fresh Cantabrian seafood, aged txuleta beef, pintxos bar culture, and a fierce commitment to PDO/PGI local produce.",
-    "description_sv": "Baskiskt kök spänner över norra Spanien och franska Iparralde och har världens högsta densitet av Michelin-stjärnor per capita. Det kännetecknas av saltad torsk, färsk fisk från Kantabriska havet, lagrad txuleta-biff, pintxos-barkultur och stolthet över lokala PDO/PGI-skyddade råvaror."
+    "description_sv": "Baskiskt kök spänner över norra Spanien och franska Iparralde och har världens högsta densitet av Michelin-stjärnor per capita. Det kännetecknas av saltad torsk, färsk fisk från Kantabriska havet, lagrad txuleta-biff, pintxos-barkultur och stolthet över lokala PDO/PGI-skyddade råvaror.",
+    "description_da": "Det baskiske køkken strækker sig over det nordlige Spanien (Álava, Gipuzkoa, Bizkaia) og det franske Iparralde og har verdens højeste koncentration af Michelin-stjerner pr. indbygger. Det kendetegnes af saltet torsk, friske fisk og skaldyr fra Det Cantabriske Hav, modnede txuleta-bøffer, pintxos-barkultur og et kompromisløst fokus på lokale råvarer med PDO/PGI-beskyttelse."
   },
   "bengali": {
     "description": "West Bengali cuisine is a rice-and-fish civilisation centred on the Ganges delta, defined by mustard oil, panch phoron, posto (poppy seeds), and legendary freshwater fish dishes such as shorshe ilish and chingri malai curry. It is equally famous for its chhana-based sweets — roshogolla, sandesh, and mishti doi — which are central to Kolkata's culinary identity.",
-    "description_sv": "Västbengalisk mat är en ris-och-fisk-civilisation kring Gangesdeltaet, definierad av senapsolja, panch phoron, posto (vallmofrön) och legendariska sötvattensfiskar som shorshe ilish och chingri malai curry. Köket är lika känt för sina chhana-baserade sötsaker — roshogolla, sandesh och mishti doi — som är centrala för Kolkatas kulinariska identitet."
+    "description_sv": "Västbengalisk mat är en ris-och-fisk-civilisation kring Gangesdeltaet, definierad av senapsolja, panch phoron, posto (vallmofrön) och legendariska sötvattensfiskar som shorshe ilish och chingri malai curry. Köket är lika känt för sina chhana-baserade sötsaker — roshogolla, sandesh och mishti doi — som är centrala för Kolkatas kulinariska identitet.",
+    "description_da": "Det vestbengalske køkken er en madkultur bygget op omkring ris og fisk med centrum i Gangesdeltaet og kendetegnet ved sennepsolie, panch phoron, posto (valmuefrø) og legendariske retter med ferskvandsfisk såsom shorshe ilish og chingri malai curry. Det er lige så berømt for sine chhana-baserede søde specialiteter — roshogolla, sandesh og mishti doi — som er centrale for Kolkatas kulinariske identitet."
   },
   "brazilian": {
     "description": "Brazilian cuisine is a vibrant tapestry woven from Indigenous, Portuguese, and African traditions. Black-bean feijoada, open-fire churrasco, Bahian moqueca with dendê oil, and everyday rice-and-beans define a culinary culture as vast and diverse as the country itself — from Amazon fish feasts to Minas cheese boards and São Paulo street tapioca.",
-    "description_sv": "Brasilianskt kök är en livfull blandning av ursprungsbefolkningens, portugisiska och afrikanska traditioner. Svartböns-feijoada, öppen-eld-churrasco, Bahiansk moqueca med dendê-olja och den dagliga rätten ris-och-bönor definierar en kulinarisk kultur lika mångfacetterad som landet självt — från Amazonas fiskfester till Minas ostbrickor och São Paulos tapioca-stånd."
+    "description_sv": "Brasilianskt kök är en livfull blandning av ursprungsbefolkningens, portugisiska och afrikanska traditioner. Svartböns-feijoada, öppen-eld-churrasco, Bahiansk moqueca med dendê-olja och den dagliga rätten ris-och-bönor definierar en kulinarisk kultur lika mångfacetterad som landet självt — från Amazonas fiskfester till Minas ostbrickor och São Paulos tapioca-stånd.",
+    "description_da": "Det brasilianske køkken er et levende tæppe vævet af oprindelige folks, portugisiske og afrikanske traditioner. Feijoada med sorte bønner, churrasco tilberedt over åben ild, moqueca fra Bahia med dendê-olie og hverdagens ris og bønner kendetegner en madkultur, der er lige så vidtstrakt og mangfoldig som selve landet — fra fiskefester i Amazonas til osteborde i Minas og tapioca fra São Paulos gader."
   },
   "british": {
     "description": "British cuisine is defined by hearty comfort food and quality local produce — Sunday roast with Yorkshire pudding, fish and chips, shepherd's pie, and the full English breakfast. Regionally rich: Welsh lamb, Scotch beef, Cornish pasties, Scottish smoked salmon and haggis all carry PDO or PGI status. Britain's high dairy output (12.4 billion litres of milk in 2022) underpins iconic Cheddar, Stilton and clotted cream. Modern British food is deeply shaped by South Asian immigration, making chicken tikka masala a de facto national dish.",
-    "description_sv": "Brittisk mat präglas av rejäl husmanskost och lokala råvaror av hög kvalitet — söndagsstek med Yorkshire pudding, fish and chips, shepherd's pie och full engelsk frukost. Regionalt rik: Waleskt lamm, skotsk nötkött, Cornish pasties, skotsk rökt lax och haggis bär alla PDO- eller PGI-status. Storbritanniens höga mejeridoproduktion (12,4 miljarder liter mjölk 2022) är grunden för ikonisk Cheddar, Stilton och koagulerad grädde. Det moderna brittiska köket är djupt format av sydostasiatisk invandring, vilket gjort chicken tikka masala till ett de facto nationellt kök."
+    "description_sv": "Brittisk mat präglas av rejäl husmanskost och lokala råvaror av hög kvalitet — söndagsstek med Yorkshire pudding, fish and chips, shepherd's pie och full engelsk frukost. Regionalt rik: Waleskt lamm, skotsk nötkött, Cornish pasties, skotsk rökt lax och haggis bär alla PDO- eller PGI-status. Storbritanniens höga mejeridoproduktion (12,4 miljarder liter mjölk 2022) är grunden för ikonisk Cheddar, Stilton och koagulerad grädde. Det moderna brittiska köket är djupt format av sydostasiatisk invandring, vilket gjort chicken tikka masala till ett de facto nationellt kök.",
+    "description_da": "Det britiske køkken er kendetegnet ved solid, hjemlig mad og lokale råvarer af høj kvalitet — Sunday roast med Yorkshire pudding, fish and chips, shepherd's pie og full English breakfast. Det rummer stor regional variation: Welsh lamb, Scotch beef, Cornish pasties, Scottish smoked salmon og haggis har alle PDO- eller PGI-status. Storbritanniens høje mejeriproduktion (12,4 milliarder liter mælk i 2022) danner grundlag for ikoniske produkter som Cheddar, Stilton og clotted cream. Moderne britisk mad er dybt præget af sydasiatisk indvandring, hvilket har gjort chicken tikka masala til en de facto nationalret."
   },
   "burmese": {
     "description": "Burmese cuisine blends South Asian, Southeast Asian and East Asian traditions in a style that is distinctly Myanmarese. Fish — especially catfish — dominates the diet at ~45 kg per capita per year (WorldFish/FAO), providing over 60% of animal protein. The national dish mohinga is a catfish-broth rice-noodle soup seasoned with ngapi fermented fish paste, lemongrass and turmeric. Ngapi underpins almost every Burmese dish, while lahpet (pickled tea leaves) — used in the celebrated lahpet thoke salad — is entirely unique to Myanmar. Rice is consumed at ~272 kg per capita per year (FAOSTAT 2022), one of the world's highest rates. Myanmar ranks 7th globally in rice production at ~25 million tonnes (FAO 2022).",
-    "description_sv": "Burmesisk mat blandar sydasiatiska, sydostasiatiska och ostasiatiska traditioner till ett distinkt myanmarskt kök. Fisk — framför allt mal — dominerar kosten med ca 45 kg per capita och år (WorldFish/FAO), vilket ger över 60% av animaliskt protein. Nationalrätten mohinga är en malbuljong-risnudelsoppa kryddad med ngapi (fermenterad fiskpasta), citrongräs och gurkmeja. Ngapi är grunden för nästan varje burmesisk rätt, medan lahpet (inlagda teblad) — som används i den berömda lahpet thoke-salladen — är helt unikt för Myanmar. Ris konsumeras till ca 272 kg per capita och år (FAOSTAT 2022), ett av världens högsta. Myanmar rankar 7:e globalt i risproduktion med ca 25 miljoner ton (FAO 2022)."
+    "description_sv": "Burmesisk mat blandar sydasiatiska, sydostasiatiska och ostasiatiska traditioner till ett distinkt myanmarskt kök. Fisk — framför allt mal — dominerar kosten med ca 45 kg per capita och år (WorldFish/FAO), vilket ger över 60% av animaliskt protein. Nationalrätten mohinga är en malbuljong-risnudelsoppa kryddad med ngapi (fermenterad fiskpasta), citrongräs och gurkmeja. Ngapi är grunden för nästan varje burmesisk rätt, medan lahpet (inlagda teblad) — som används i den berömda lahpet thoke-salladen — är helt unikt för Myanmar. Ris konsumeras till ca 272 kg per capita och år (FAOSTAT 2022), ett av världens högsta. Myanmar rankar 7:e globalt i risproduktion med ca 25 miljoner ton (FAO 2022).",
+    "description_da": "Det burmesiske køkken blander sydasiatiske, sydøstasiatiske og østasiatiske traditioner i en stil, der er udpræget myanmarsk. Fisk — især malle — dominerer kosten med ca. 45 kg pr. indbygger om året (WorldFish/FAO) og står for over 60 % af det animalske protein. Nationalretten mohinga er en risnudelsuppe med mallebouillon, krydret med den fermenterede fiskepasta ngapi, citrongræs og gurkemeje. Ngapi danner grundlag for næsten enhver burmesisk ret, mens lahpet (syltede teblade) — som bruges i den berømte lahpet thoke-salat — er helt enestående for Myanmar. Risforbruget er ca. 272 kg pr. indbygger om året (FAOSTAT 2022), et af verdens højeste niveauer. Myanmar er nr. 7 på verdensplan inden for risproduktion med ca. 25 millioner ton (FAO 2022)."
   },
   "cajun_creole": {
     "description": "Louisiana's two-tradition cuisine: rural Cajun (French-Acadian bayou country) and urban Creole (New Orleans). United by the Holy Trinity of onion, celery, and bell pepper; dark roux; and Gulf seafood. Crawfish étouffée, gumbo, jambalaya, and shrimp Creole are its defining dishes.",
-    "description_sv": "Louisianas tvådelade kök: lantligt cajun (franskakadiskt bayouland) och stadskreolskt (New Orleans). Förenat av den heliga triniteten av lök, selleri och paprika; mörk roux; och skaldjur från Mexikanska golfen. Kräftétouffée, gumbo, jambalaya och räkkreol är dess signaturrätter."
+    "description_sv": "Louisianas tvådelade kök: lantligt cajun (franskakadiskt bayouland) och stadskreolskt (New Orleans). Förenat av den heliga triniteten av lök, selleri och paprika; mörk roux; och skaldjur från Mexikanska golfen. Kräftétouffée, gumbo, jambalaya och räkkreol är dess signaturrätter.",
+    "description_da": "Louisianas køkken rummer to traditioner: landlig cajunmad (det fransk-acadiske bayouland) og urban kreolsk mad (New Orleans). De forenes af den hellige treenighed af løg, bladselleri og peberfrugt, mørk roux samt fisk og skaldyr fra Den Mexicanske Golf. Crawfish étouffée, gumbo, jambalaya og shrimp Creole er de retter, der kendetegner køkkenet."
   },
   "cameroonian": {
     "description": "Cameroonian cuisine reflects the country's extraordinary diversity — often called 'Africa in miniature' — blending forest, savanna, coastal and Sahel traditions. Ndolé (bitter leaf stew), poulet DG, eru, and achu define a cuisine built on bold spices, red palm oil, dried crayfish, and foraged forest ingredients.",
-    "description_sv": "Kamerunskt kök speglar landets extraordinära mångfald — ofta kallat 'Afrika i miniatyr' — och förenar skogens, savannens, kustens och Sahelns traditioner. Ndolé (besk-bladsgrytan), poulet DG, eru och achu definierar ett kök byggt på djärva kryddor, röd palmolja, torkad kräftdjurssäsong och skördade skogsrätter."
+    "description_sv": "Kamerunskt kök speglar landets extraordinära mångfald — ofta kallat 'Afrika i miniatyr' — och förenar skogens, savannens, kustens och Sahelns traditioner. Ndolé (besk-bladsgrytan), poulet DG, eru och achu definierar ett kök byggt på djärva kryddor, röd palmolja, torkad kräftdjurssäsong och skördade skogsrätter.",
+    "description_da": "Det camerounske køkken afspejler landets enestående mangfoldighed — ofte kaldet 'Afrika i miniature' — og forener traditioner fra skov, savanne, kyst og Sahel. Ndolé (gryderet med bitre blade), poulet DG, eru og achu definerer et køkken bygget på markante krydderier, rød palmeolie, tørrede krebs og sankede skovråvarer."
   },
   "canadian": {
     "description": "Canadian cuisine reflects the country's vast regional diversity — from Quebec's French-rooted comfort food (poutine, tourtière) to Maritime lobster suppers, Prairie beef and grain traditions, BC Pacific salmon, and Indigenous staples like wild rice, bannock, and bison. Maple syrup from Quebec (72% of world supply) is the defining flavour of Canadian identity.",
-    "description_sv": "Kanadensiskt kök speglar landets stora regionala mångfald — från Quebecs franskinfluerade husmanskost (poutine, tourtière) till Maritimes hummerkalas, Präriens nötkött och spannmål, BC:s Stillahavsaxel och ursprungsfolkens basmat som vildris, bannock och bison. Lönnsirap från Quebec (72% av världsproduktionen) är den definerande smaken i kanadensisk identitet."
+    "description_sv": "Kanadensiskt kök speglar landets stora regionala mångfald — från Quebecs franskinfluerade husmanskost (poutine, tourtière) till Maritimes hummerkalas, Präriens nötkött och spannmål, BC:s Stillahavsaxel och ursprungsfolkens basmat som vildris, bannock och bison. Lönnsirap från Quebec (72% av världsproduktionen) är den definerande smaken i kanadensisk identitet.",
+    "description_da": "Det canadiske køkken afspejler landets store regionale mangfoldighed — fra Quebecs franskforankrede hjemlige retter (poutine, tourtière) til hummermiddage i de canadiske Atlanterhavsprovinser, prærieprovinsernes oksekøds- og korntraditioner, stillehavslaks fra British Columbia og oprindelige folks basisfødevarer som vildris, bannock og bison. Ahornsirup fra Quebec (72 % af verdens forsyning) er den smag, der definerer canadisk identitet."
   },
   "cantonese": {
     "description": "Cantonese cuisine, originating from Guangdong Province and Hong Kong, is defined by freshness, lightness, and the philosophy that high-quality ingredients need minimal intervention. Techniques like steaming, stir-frying with wok hei, and slow-simmering soups showcase natural flavours. Dim sum culture, roast meats, and silky rice noodles are its icons.",
-    "description_sv": "Kantonesiskt kök, med ursprung i Guangdong-provinsen och Hongkong, präglas av fräschhet, lätthet och filosofin att högkvalitativa råvaror behöver minimalt med tillagning. Tekniker som ångning, wok-stekning och långsam soppkokning lyfter fram naturliga smaker. Dim sum-kulturen, rostat kött och silkeslena risnudlar är dess ikoner."
+    "description_sv": "Kantonesiskt kök, med ursprung i Guangdong-provinsen och Hongkong, präglas av fräschhet, lätthet och filosofin att högkvalitativa råvaror behöver minimalt med tillagning. Tekniker som ångning, wok-stekning och långsam soppkokning lyfter fram naturliga smaker. Dim sum-kulturen, rostat kött och silkeslena risnudlar är dess ikoner.",
+    "description_da": "Det kantonesiske køkken har rødder i Guangdong-provinsen og Hongkong og er kendetegnet ved friskhed, lethed og filosofien om, at råvarer af høj kvalitet kræver minimal behandling. Teknikker som dampning, wokstegning med wok hei og langsom simring af supper fremhæver råvarernes naturlige smag. Dim sum-kulturen, stegte kødretter og silkebløde risnudler er køkkenets ikoner."
   },
   "caribbean": {
     "description": "Caribbean cuisine spans Jamaica, Trinidad & Tobago, Barbados, Cuba, Haiti, Puerto Rico, and the Dominican Republic — shaped by African, Indigenous Taíno, European, and South Asian influences. Defining flavours come from Scotch bonnet heat, allspice-and-thyme jerk marinades, coconut milk, and rum. Iconic dishes include Jamaican jerk chicken and ackee & saltfish, Barbadian cou-cou and flying fish, and Trinidadian roti and pelau.",
-    "description_sv": "Karibisk mat spänner över Jamaica, Trinidad & Tobago, Barbados, Kuba, Haiti, Puerto Rico och Dominikanska republiken — formad av afrikanska, ursprungsbefolkningens, europeiska och sydasiatiska influenser. Karaktäristiska smaker skapas av scotch bonnet-hetta, allspice-och-tymjansmarinader, kokosmjölk och rom. Ikoniska rätter inkluderar jamaicansk jerk chicken och ackee & saltfisk, Barbadisk cou-cou med flygfisk, och Trinidadisk roti och pelau."
+    "description_sv": "Karibisk mat spänner över Jamaica, Trinidad & Tobago, Barbados, Kuba, Haiti, Puerto Rico och Dominikanska republiken — formad av afrikanska, ursprungsbefolkningens, europeiska och sydasiatiska influenser. Karaktäristiska smaker skapas av scotch bonnet-hetta, allspice-och-tymjansmarinader, kokosmjölk och rom. Ikoniska rätter inkluderar jamaicansk jerk chicken och ackee & saltfisk, Barbadisk cou-cou med flygfisk, och Trinidadisk roti och pelau.",
+    "description_da": "Det caribiske køkken spænder over Jamaica, Trinidad og Tobago, Barbados, Cuba, Haiti, Puerto Rico og Den Dominikanske Republik — formet af påvirkninger fra afrikanske kulturer, det oprindelige Taíno-folk, Europa og Sydasien. De karakteristiske smage kommer fra styrken fra Scotch bonnet-chili, jerk-marinader med allehånde og timian, kokosmælk og rom. Ikoniske retter omfatter jamaicansk jerk chicken og ackee & saltfish, barbadisk cou-cou og flying fish samt trinidadisk roti og pelau."
   },
   "chilean": {
     "description": "Pacific Coast, Andean, Patagonian, and Mapuche influences define Chilean cuisine. A 4,300 km coastline yields world-class seafood, while central Chile's fertile valleys produce abundant vegetables and livestock.",
-    "description_sv": "Stillahavskunsten, andinska, patagonska och mapuche-influenser definierar det chilenska köket. En 4 300 km lång kust ger förstklassiga skaldjur, medan Centralchiles bördiga dalar producerar rikliga grönsaker och boskap."
+    "description_sv": "Stillahavskunsten, andinska, patagonska och mapuche-influenser definierar det chilenska köket. En 4 300 km lång kust ger förstklassiga skaldjur, medan Centralchiles bördiga dalar producerar rikliga grönsaker och boskap.",
+    "description_da": "Det chilenske køkken er præget af indflydelser fra Stillehavskysten, Andesbjergene, Patagonien og Mapuche-folket. Langs den 4.300 km lange kystlinje findes fisk og skaldyr i verdensklasse, mens det centrale Chiles frugtbare dale giver rigelige grøntsagsafgrøder og gode vilkår for husdyrhold."
   },
   "chinese": {
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_da": "Det kinesiske køkken omfatter otte store regionale traditioner og spænder fra risbaserede retter i syd til hvedenudler og dumplings i nord. Teknikkerne omfatter wokstegning, dampning og langtidsbraisering, mens ingefær, hvidløg, forårsløg, sojasauce og fermenterede bønneprodukter er centrale smagsgivere. Svinekød, tofu, ferskvandsfisk og grøntsager står centralt, mens retter som Pekingand, hong shao rou og jiaozi afspejler landets store regionale variation."
   },
   "colombian": {
     "description": "Colombia's cuisine spans six culinary regions — Caribbean Coast, Pacific Coast, Andean, Orinoquía, Amazonia, and Insular. Iconic dishes include bandeja paisa, sancocho, and ajiaco, built on corn, plantain, beans, and bold herb-forward sauces like hogao.",
-    "description_sv": "Colombias kök sträcker sig över sex kulinariska regioner. Ikoniska rätter inkluderar bandeja paisa, sancocho och ajiaco, uppbyggda på majs, plátano, bönor och smakrika örtkryddade såser som hogao."
+    "description_sv": "Colombias kök sträcker sig över sex kulinariska regioner. Ikoniska rätter inkluderar bandeja paisa, sancocho och ajiaco, uppbyggda på majs, plátano, bönor och smakrika örtkryddade såser som hogao.",
+    "description_da": "Colombias køkken spænder over seks kulinariske regioner — den caribiske kyst, Stillehavskysten, Andesregionen, Orinoquía, Amazonia og øregionen. Ikoniske retter omfatter bandeja paisa, sancocho og ajiaco, der bygger på majs, madbanan, bønner og markante, urteprægede saucer som hogao."
   },
   "cuban": {
     "description": "Cuban cuisine blends Spanish colonial, African, and Caribbean Taíno traditions into a simple, hearty, slow-cooked style. Mojo criollo (garlic–sour orange sauce), sofrito, and the daily pairing of rice and black beans define its identity.",
-    "description_sv": "Kubansk mat blandar spanskt kolonialt, afrikanskt och karibiskt arv. Enkel, mättande och långkokt. Mojo criollo (vitlöks- och surörangesås), sofrito samt ris med svarta bönor bildar grunden i köket."
+    "description_sv": "Kubansk mat blandar spanskt kolonialt, afrikanskt och karibiskt arv. Enkel, mättande och långkokt. Mojo criollo (vitlöks- och surörangesås), sofrito samt ris med svarta bönor bildar grunden i köket.",
+    "description_da": "Det cubanske køkken forener spanske kolonitraditioner, afrikanske traditioner og caribiske Taíno-traditioner i en enkel, mættende stil præget af langtidskogning. Mojo criollo (sauce med hvidløg og pomerans), sofrito og den daglige kombination af ris og sorte bønner kendetegner køkkenets identitet."
   },
   "danish": {
     "description": "Danish cuisine is defined by smørrebrød — open-faced rye bread sandwiches — a deep pork culture crowned by stegt flæsk as the national dish, and a centuries-old tradition of pickling, smoking, and curing cold-water fish. The New Nordic movement has elevated foraged herbs, root vegetables, and Nordic dairy to global renown.",
-    "description_sv": "Danskt kök präglas av smørrebrød — öppna rågbrödsmackor — en djup fläskkultur med stegt flæsk som nationalrätt och en lång tradition av inläggning, rökning och saltning av kallvattenfisk. Den Nya Nordiska rörelsen har lyft forageade örter, rotfrukter och nordiska mejeriprodukter till internationell berömmelse."
+    "description_sv": "Danskt kök präglas av smørrebrød — öppna rågbrödsmackor — en djup fläskkultur med stegt flæsk som nationalrätt och en lång tradition av inläggning, rökning och saltning av kallvattenfisk. Den Nya Nordiska rörelsen har lyft forageade örter, rotfrukter och nordiska mejeriprodukter till internationell berömmelse.",
+    "description_da": "Dansk madkultur er kendetegnet ved smørrebrød, en stærk tradition for svinekød med stegt flæsk som nationalret og århundreders syltning, røgning og saltning af fisk fra kolde farvande. Det nye nordiske køkken har gjort sankede urter, rodfrugter og nordiske mejeriprodukter verdenskendte."
   },
   "dominican": {
     "description": "Dominican cuisine is built on La Bandera — rice, stewed red beans, and braised meat — and shaped by Taino, African, and Spanish roots. Plantain in all forms (mangú, tostones, maduros), root vegetables, and a bold sofrito-adobo-naranja agria flavor base define the cooking. The Dominican Republic has the world's highest per capita avocado consumption at ~49 kg per person annually.",
-    "description_sv": "Dominikanskt kök är byggt kring La Bandera — ris, kokta röda bönor och bräserat kött — och format av taino-, afrikanska och spanska rötter. Plätanon i alla dess former (mangú, tostones, maduros), rotfrukter och en kraftfull sofrito-adobo-naranja agria smakbas definierar matlagningen. Dominikanska republiken har världens högsta avokadokonsumtion per capita på ~49 kg per person och år."
+    "description_sv": "Dominikanskt kök är byggt kring La Bandera — ris, kokta röda bönor och bräserat kött — och format av taino-, afrikanska och spanska rötter. Plätanon i alla dess former (mangú, tostones, maduros), rotfrukter och en kraftfull sofrito-adobo-naranja agria smakbas definierar matlagningen. Dominikanska republiken har världens högsta avokadokonsumtion per capita på ~49 kg per person och år.",
+    "description_da": "Det dominikanske køkken bygger på La Bandera — ris, simrede røde bønner og braiseret kød — og er formet af Taíno-, afrikanske og spanske rødder. Madbananer i alle former (mangú, tostones, maduros), rodfrugter og en markant smagsbase af sofrito, adobo og naranja agria definerer madlavningen. Den Dominikanske Republik har med ca. 49 kg om året verdens højeste avokadoforbrug pr. indbygger."
   },
   "east_african": {
     "description": "East African cuisine spans Ethiopia's ancient injera-and-wot tradition, Kenya and Tanzania's ugali with sukuma wiki and nyama choma, Uganda's matoke, and the spice-scented Swahili coast. Two great flavor identities meet here: Ethiopia's complex spice blends (berbere, niter kibbeh) built over millennia of Orthodox fasting culture, and the Indian Ocean coast's clove-cardamom-coconut influence radiating from Zanzibar. Teff has been cultivated in Ethiopia for 3 000+ years and provides ~61 kg per person per year; Kenya's maize ugali consumption reaches ~88 kg per person per year.",
-    "description_sv": "Östafrikanskt kök spänner från Etiopiens urgamla injera-och-wot-tradition och Kenyas/Tanzanias ugali med sukuma wiki och nyama choma, till Ugandas matoke och den kryddiga Swahilikusten. Två stora smakidentiteter möts: Etiopiens komplexa kryddblandningar (berbere, niter kibbeh) formade av ortodoxa fastetraditioner, och Indiska Oceanens kustens kanel-kardemumma-kokosmjölksinfluenser från Zanzibar. Teff har odlats i Etiopien i 3 000+ år och ger ~61 kg per person och år; Kenyas majsugali-konsumtion når ~88 kg per person och år."
+    "description_sv": "Östafrikanskt kök spänner från Etiopiens urgamla injera-och-wot-tradition och Kenyas/Tanzanias ugali med sukuma wiki och nyama choma, till Ugandas matoke och den kryddiga Swahilikusten. Två stora smakidentiteter möts: Etiopiens komplexa kryddblandningar (berbere, niter kibbeh) formade av ortodoxa fastetraditioner, och Indiska Oceanens kustens kanel-kardemumma-kokosmjölksinfluenser från Zanzibar. Teff har odlats i Etiopien i 3 000+ år och ger ~61 kg per person och år; Kenyas majsugali-konsumtion når ~88 kg per person och år.",
+    "description_da": "Det østafrikanske køkken spænder over Etiopiens ældgamle injera- og wot-tradition, Kenyas og Tanzanias ugali med sukuma wiki og nyama choma, Ugandas matoke og den krydderduftende Swahilikyst. To store smagsidentiteter mødes her: Etiopiens komplekse krydderiblandinger (berbere, niter kibbeh), udviklet gennem årtusinders ortodoks fastekultur, og Det Indiske Oceans kystkøkken, præget af nellike, kardemomme og kokos med udspring i Zanzibar. Teff er blevet dyrket i Etiopien i over 3.000 år og bidrager med ca. 61 kg pr. person om året; Kenyas forbrug af majsugali når ca. 88 kg pr. person om året."
   },
   "ecuadorian": {
     "description": "Ecuadorian cuisine spans three distinct worlds — the Pacific coast, the Andes highlands, and the Amazon. Coastal cooking centers on shrimp, fish, plantain, and coconut; Andean cooking is built on over 650 native potato varieties, corn, guinea pig, and fresh cheese; the Amazon adds yuca, river fish, and forest fruits. The refrito (onion-garlic-tomato-achiote base) and fresh ají sauce frame almost every meal. Ecuador is the world's number one shrimp exporter ($7.2B, 2023), the world's top banana exporter, and the third largest cacao exporter — yet its most iconic dish is fanesca, a Holy Week soup requiring 12 grains representing the 12 apostles.",
-    "description_sv": "Ecuadorianskt kök spänner över tre distinkta världar — Stillahavskysten, andinska höglandet och Amazonas. Kustkök centreras kring räkor, fisk, plätano och kokos; andinskt kök är byggt på över 650 inhemska potatissorter, majs, marsvin och färsk ost; Amazonas tillför yuca, flodfisk och skogsfrukt. Refritot (lök-vitlök-tomat-achiotebas) och färsk ajísås ramar in nästan varje måltid. Ecuador är världens nummer ett räkexportör ($7.2 miljarder, 2023), ledande bananexportör, och tredje störste kakaoexportör — ändå är dess mest ikoniska rätt fanesca, en påskvecka-soppa som kräver 12 spannmål för 12 apostlar."
+    "description_sv": "Ecuadorianskt kök spänner över tre distinkta världar — Stillahavskysten, andinska höglandet och Amazonas. Kustkök centreras kring räkor, fisk, plätano och kokos; andinskt kök är byggt på över 650 inhemska potatissorter, majs, marsvin och färsk ost; Amazonas tillför yuca, flodfisk och skogsfrukt. Refritot (lök-vitlök-tomat-achiotebas) och färsk ajísås ramar in nästan varje måltid. Ecuador är världens nummer ett räkexportör ($7.2 miljarder, 2023), ledande bananexportör, och tredje störste kakaoexportör — ändå är dess mest ikoniska rätt fanesca, en påskvecka-soppa som kräver 12 spannmål för 12 apostlar.",
+    "description_da": "Det ecuadorianske køkken spænder over tre forskellige verdener — Stillehavskysten, Andesbjergenes højland og Amazonas. Køkkenet ved kysten er centreret omkring rejer, fisk, madbanan og kokos; det andinske køkken bygger på over 650 oprindelige kartoffelsorter, majs, marsvin og friskost; Amazonas bidrager med yuca, flodfisk og skovfrugter. Refrito (en base af løg, hvidløg, tomat og achiote) og frisk ají-sauce danner rammen om næsten hvert måltid. Ecuador er verdens største eksportør af rejer (7,2 mia. USD i 2023), verdens største bananeksportør og verdens tredjestørste eksportør af kakao — alligevel er landets mest ikoniske ret fanesca, en suppe til den stille uge, som kræver 12 kornsorter, der repræsenterer de 12 apostle."
   },
   "egyptian": {
     "description": "Egyptian cuisine is one of the world's oldest food cultures, shaped by the Nile Delta's extraordinary agricultural fertility and five millennia of Pharaonic, Greek, Roman, Arab, and Ottoman influence. The national diet is anchored by wheat — Egyptians consume ~137 kg per capita annually, among the highest in the world — and the subsidised aish baladi flatbread feeds 73 million people daily. Egypt is the world's leading date producer, grows 6.2 million tonnes of tomatoes a year, and rice production runs to 6.5 million tonnes. Ful medames (slow-cooked fava beans with olive oil, cumin, and lemon) is the de facto national dish eaten for breakfast daily. Koshari — a layered assembly of rice, lentils, pasta, and spiced tomato sauce — is Egypt's definitive street food. Meat is overwhelmingly chicken (~19 kg/cap, 2023), with red meat consumption having fallen 44% since 2018 due to price inflation. Pork is absent from mainstream Egyptian cooking due to the Muslim majority.",
-    "description_sv": "Egyptisk mat är en av världens äldsta matkulturer, formad av Nildeltats extraordinära jordbruksbördighet och fem årtusenden av faraonisk, grekisk, romersk, arabisk och osmansk påverkan. Den nationella kosten förankras av vete — egyptier konsumerar ~137 kg per capita och år, bland de högsta i världen — och det subventionerade aish baladi-flatbrödet föder 73 miljoner människor dagligen. Egypten är världens ledande daddelproducent, odlar 6,2 miljoner ton tomater per år och risproduktionen uppgår till 6,5 miljoner ton. Ful medames (långkok av bondbönor med olivolja, spiskummin och citron) är de facto nationalrätten som äts till frukost dagligen. Koshari — ett lagerbygge av ris, linser, pasta och kryddad tomatsås — är Egyptens definitiva gatumat. Kött är överväldigande kyckling (~19 kg/cap, 2023), medan rödköttskonsumtionen har minskat med 44% sedan 2018 på grund av prisinflation."
+    "description_sv": "Egyptisk mat är en av världens äldsta matkulturer, formad av Nildeltats extraordinära jordbruksbördighet och fem årtusenden av faraonisk, grekisk, romersk, arabisk och osmansk påverkan. Den nationella kosten förankras av vete — egyptier konsumerar ~137 kg per capita och år, bland de högsta i världen — och det subventionerade aish baladi-flatbrödet föder 73 miljoner människor dagligen. Egypten är världens ledande daddelproducent, odlar 6,2 miljoner ton tomater per år och risproduktionen uppgår till 6,5 miljoner ton. Ful medames (långkok av bondbönor med olivolja, spiskummin och citron) är de facto nationalrätten som äts till frukost dagligen. Koshari — ett lagerbygge av ris, linser, pasta och kryddad tomatsås — är Egyptens definitiva gatumat. Kött är överväldigande kyckling (~19 kg/cap, 2023), medan rödköttskonsumtionen har minskat med 44% sedan 2018 på grund av prisinflation.",
+    "description_da": "Det egyptiske køkken er en af verdens ældste madkulturer, formet af Nildeltaets usædvanligt frugtbare landbrugsjord og fem årtusinders faraoniske, græske, romerske, arabiske og osmanniske indflydelse. Den nationale kost er forankret i hvede — egypterne indtager ca. 137 kg pr. indbygger om året, et af verdens højeste niveauer — og det subsidierede fladbrød aish baladi brødføder 73 millioner mennesker dagligt. Egypten er verdens førende dadelproducent, dyrker 6,2 millioner ton tomater om året, og risproduktionen når 6,5 millioner ton. Ful medames (langtidstilberedte hestebønner med olivenolie, spidskommen og citron) er de facto landets nationalret og spises dagligt til morgenmad. Koshari — en lagdelt sammensætning af ris, linser, pasta og krydret tomatsauce — er Egyptens mest karakteristiske gademad. Kylling dominerer klart kødforbruget (ca. 19 kg pr. indbygger, 2023), mens forbruget af rødt kød er faldet 44 % siden 2018 på grund af prisstigninger. Svinekød er fraværende i den almindelige egyptiske madlavning på grund af det muslimske flertal."
   },
   "emirati": {
     "description": "Emirati cuisine reflects the UAE's position at the crossroads of ancient Indian Ocean trade routes, shaped by Bedouin desert traditions, Persian Gulf seafaring, and centuries of spice trade with India, Persia, and East Africa. The defining preparations are machboos (fragrant spiced rice slow-cooked with meat or fish), harees (a wheat-and-meat porridge eaten at Ramadan and Eid), and balaleet (sweet saffron vermicelli topped with a thin egg omelet, the quintessential Emirati breakfast). Loomi (dried black lime) is the defining Emirati spice — nothing else replicates its tart, smoky depth. The UAE is a world chicken-consumption leader at 55.25 kg per capita (2022), fish consumption runs to 23.1 kg/cap, and the country produces over 4 million date palms. Camel milk is commercially produced at scale by Camelicious (a government-backed operation), making the UAE the world's first major commercial camel dairy. Coffee culture is inseparable from Emirati hospitality: gahwa (cardamom-scented Arabic coffee with dates) is offered to every guest as the first act of welcome.",
-    "description_sv": "Emiratisk mat speglar UAE:s position vid korsvägarna för de forntida Indiska ocean-handelsrutter, formad av beduinökenens traditioner, Persiska viken sjöfart och sekelånga kryddhandel med Indien, Persien och Östafrika. De definierande tillagningarna är machboos (doftande kryddat ris långkokt med kött eller fisk), harees (en vete-och-kött-välling äten under Ramadan och Eid) och balaleet (söt saffransvermicellis toppat med ett tunt äggomelett, den quintessentiella emiratiska frukosten). Loomi (torkad svart limett) är det definierande emiratiska kryddet — inget annat kan replikera dess syrliga, rökiga djup. UAE är en världsledande kycklingkonsumtionsnation med 55,25 kg per capita (2022), fiskonsumtion uppgår till 23,1 kg/cap och landet producerar över 4 miljoner dadelpalmer. Kamelmjölk produceras kommersiellt i stor skala av Camelicious, vilket gör UAE till världens första stora kommersiella kamelmejeributik."
+    "description_sv": "Emiratisk mat speglar UAE:s position vid korsvägarna för de forntida Indiska ocean-handelsrutter, formad av beduinökenens traditioner, Persiska viken sjöfart och sekelånga kryddhandel med Indien, Persien och Östafrika. De definierande tillagningarna är machboos (doftande kryddat ris långkokt med kött eller fisk), harees (en vete-och-kött-välling äten under Ramadan och Eid) och balaleet (söt saffransvermicellis toppat med ett tunt äggomelett, den quintessentiella emiratiska frukosten). Loomi (torkad svart limett) är det definierande emiratiska kryddet — inget annat kan replikera dess syrliga, rökiga djup. UAE är en världsledande kycklingkonsumtionsnation med 55,25 kg per capita (2022), fiskonsumtion uppgår till 23,1 kg/cap och landet producerar över 4 miljoner dadelpalmer. Kamelmjölk produceras kommersiellt i stor skala av Camelicious, vilket gör UAE till världens första stora kommersiella kamelmejeributik.",
+    "description_da": "Det emiratiske køkken afspejler UAE's placering ved skæringspunktet mellem oldtidens handelsruter over Det Indiske Ocean og er formet af beduinernes ørkentraditioner, søfarten i Den Persiske Golf og århundreders krydderihandel med Indien, Persien og Østafrika. De kendetegnende retter er machboos (duftende, krydrede ris, der langtidskoges med kød eller fisk), harees (en hvede- og kødgrød, der spises under Ramadan og Eid) og balaleet (søde safranvermicelli toppet med en tynd omelet, indbegrebet af en emiratisk morgenmad). Loomi (tørret sort lime) er det kendetegnende emiratiske krydderi — intet andet kan genskabe dets syrlige, røgede dybde. UAE er verdensførende i kyllingeforbrug med 55,25 kg pr. indbygger (2022), fiskeforbruget er 23,1 kg pr. indbygger, og landet har over 4 millioner daddelpalmer. Kamelmælk produceres kommercielt i stor skala af Camelicious (en statsstøttet virksomhed), og dermed er UAE det første land i verden med en stor kommerciel kamelmejeriindustri. Kaffekulturen er uløseligt forbundet med emiratisk gæstfrihed: gahwa (kardemommeduftende arabisk kaffe med dadler) tilbydes enhver gæst som den første velkomstgestus."
   },
   "ethiopian": {
     "description": "Ethiopian cuisine is one of the most distinctively structured food cultures in the world, built around injera — the fermented teff flatbread that functions simultaneously as plate, utensil, and bread for every meal. Teff (Eragrostis tef) is native to the Ethiopian Highlands and consumed by over 50 million Ethiopians daily. Ethiopian Orthodox Christianity shapes the food calendar profoundly: observant Ethiopians fast approximately 140 days per year, eating strict vegan (no meat, no dairy) on those days, which has produced one of the world's richest plant-based culinary traditions alongside the meat-based feast cooking. Berbere — the foundational spice blend of toasted chilies, fenugreek, korarima, and over a dozen other spices — is the taste signature of Ethiopian food. Doro wat (slow-braised chicken in rich berbere sauce with a hard-boiled egg) is the national dish, served only at celebrations. Kitfo (minced raw beef seasoned with mitmita and niter kibbeh) is the prestige raw meat dish. Ethiopia is Africa's largest coffee producer at ~495 000 tonnes/year and its number-one honey producer at 98 000 tonnes/year, making coffee ceremony and tej (honey wine) the country's defining food-cultural rituals.",
-    "description_sv": "Etiopisk mat är en av de mest distinkt strukturerade matkulturer i världen, byggd kring injera — det fermenterade tefbrödet som simultaneously fungerar som tallrik, redskap och bröd vid varje måltid. Teff (Eragrostis tef) är inhemskt till det etiopiska höglandet och konsumeras av över 50 miljoner etiopier dagligen. Etiopisk-ortodox kristendom formar matkalendern kraftigt: troende etiopier fastar ungefär 140 dagar per år och äter strikt vegansk kost under dessa dagar, vilket har producerat en av världens rikaste växtbaserade kulinariska traditioner. Berbere — den grundläggande kryddblandningen av rostade chilier, bockhornsklöver, korarima och över ett dussin andra kryddor — är smakerssignaturen i etiopisk mat. Doro wat (långsamt bräserad kyckling i rik berberesås med ett hårdkokt ägg) är nationalrätten. Ethiopien är Afrikas största kaffeprodusent med ~495 000 ton/år och landets nummer ett honungsproducent med 98 000 ton/år."
+    "description_sv": "Etiopisk mat är en av de mest distinkt strukturerade matkulturer i världen, byggd kring injera — det fermenterade tefbrödet som simultaneously fungerar som tallrik, redskap och bröd vid varje måltid. Teff (Eragrostis tef) är inhemskt till det etiopiska höglandet och konsumeras av över 50 miljoner etiopier dagligen. Etiopisk-ortodox kristendom formar matkalendern kraftigt: troende etiopier fastar ungefär 140 dagar per år och äter strikt vegansk kost under dessa dagar, vilket har producerat en av världens rikaste växtbaserade kulinariska traditioner. Berbere — den grundläggande kryddblandningen av rostade chilier, bockhornsklöver, korarima och över ett dussin andra kryddor — är smakerssignaturen i etiopisk mat. Doro wat (långsamt bräserad kyckling i rik berberesås med ett hårdkokt ägg) är nationalrätten. Ethiopien är Afrikas största kaffeprodusent med ~495 000 ton/år och landets nummer ett honungsproducent med 98 000 ton/år.",
+    "description_da": "Det etiopiske køkken er en af verdens mest særprægede madkulturer og er bygget op omkring injera — det fermenterede teff-fladbrød, der ved hvert måltid fungerer som tallerken, spiseredskab og brød på én gang. Teff (Eragrostis tef) stammer fra det etiopiske højland og spises dagligt af over 50 millioner etiopiere. Den etiopisk-ortodokse kristendom præger madkalenderen dybt: praktiserende etiopiere faster cirka 140 dage om året og spiser helt vegansk (intet kød, ingen mejeriprodukter) på disse dage, hvilket har skabt en af verdens rigeste plantebaserede kulinariske traditioner side om side med de kødbaserede festmåltider. Berbere — den grundlæggende krydderiblanding af ristede chilier, bukkehorn, korarima og mere end et dusin andre krydderier — er det etiopiske køkkens karakteristiske smag. Doro wat (langtidsbraiseret kylling i en fyldig berbere-sauce med et hårdkogt æg) er nationalretten og serveres kun ved højtider. Kitfo (råt hakket oksekød krydret med mitmita og niter kibbeh) er en prestigefyldt ret med råt kød. Etiopien er Afrikas største kaffeproducent med ca. 495.000 ton om året og største honningproducent med 98.000 ton om året, hvilket gør kaffeceremonien og tej (honningvin) til centrale ritualer i landets madkultur."
   },
   "filipino": {
     "description": "Filipino cuisine is a complex fusion tradition shaped by millennia of Austronesian indigenous foodways, Hindu-Buddhist influences from the ancient Indianized kingdoms, three centuries of Spanish colonial rule, Chinese merchant cooking, American commercial food culture, and the island geography of the Philippine archipelago (7 640 islands, 36 500 km of coastline). The four foundational flavors are sour (vinegar/suka, calamansi, tamarind), salty-umami (patis fish sauce, bagoong shrimp paste, toyo soy sauce), savory-sweet, and garlicky. Adobo — pork or chicken braised in vinegar, soy sauce, garlic, bay leaf, and black pepper — is the national dish, a pre-colonial vinegar-preservation technique codified by Spanish-era cooks. Sinigang (sour tamarind-based soup) is the other national-level dish, with pork, seafood, and vegetables. Fish and seafood dominate at ~27–30 kg/cap (the highest protein group), chicken at 15.8 kg/cap and pork at 14.1 kg/cap (2023, Helgi Library/FAOSTAT). Rice is consumed at the world's highest effective rate — 200 kg/person/year (2023 record, Helgi Library). Coconut is the defining fat medium: coconut milk (gata) enriches laing, bicol express, ginataang dishes, and desserts. The Philippines produces ~14-15 million tonnes of coconut/year (world's #2 producer), 355 000 tonnes of bangus (milkfish — the national fish), and 20+ million tonnes of rice.",
-    "description_sv": "Filippinsk mat är en komplex fusionstradition formad av millennier av austronesiska inhemska matsäder, tre sekel av spansk kolonialstyre, kinesisk handelsmansmatlagning, amerikansk kommersiell matkultur och öarnas geografi i det filippinska arkipelagen (7 640 öar, 36 500 km kustlinje). De fyra grundläggande smakerna är surt (vinäger/suka, calamansi, tamarind), salt-umami (patis fisksås, bagoong räkpasta, toyo sojasås), smakrik-sött och vitlöksaromatisk. Adobo — fläsk eller kyckling bräserat i vinäger, sojasås, vitlök, lagerblad och svartpeppar — är nationalrätten. Fisk och skaldjur dominerar med ~27-30 kg/cap (den högsta proteingruppen), kyckling 15,8 kg/cap och fläsk 14,1 kg/cap (2023, Helgi Library/FAOSTAT). Ris konsumeras i världens högsta effektiva takt — 200 kg/person/år (rekord 2023, Helgi Library)."
+    "description_sv": "Filippinsk mat är en komplex fusionstradition formad av millennier av austronesiska inhemska matsäder, tre sekel av spansk kolonialstyre, kinesisk handelsmansmatlagning, amerikansk kommersiell matkultur och öarnas geografi i det filippinska arkipelagen (7 640 öar, 36 500 km kustlinje). De fyra grundläggande smakerna är surt (vinäger/suka, calamansi, tamarind), salt-umami (patis fisksås, bagoong räkpasta, toyo sojasås), smakrik-sött och vitlöksaromatisk. Adobo — fläsk eller kyckling bräserat i vinäger, sojasås, vitlök, lagerblad och svartpeppar — är nationalrätten. Fisk och skaldjur dominerar med ~27-30 kg/cap (den högsta proteingruppen), kyckling 15,8 kg/cap och fläsk 14,1 kg/cap (2023, Helgi Library/FAOSTAT). Ris konsumeras i världens högsta effektiva takt — 200 kg/person/år (rekord 2023, Helgi Library).",
+    "description_da": "Det filippinske køkken er en kompleks fusionstradition formet af årtusinders oprindelige austronesiske madtraditioner, hinduistisk-buddhistiske påvirkninger fra oldtidens kongeriger præget af indisk kultur, tre århundreders spansk kolonistyre, kinesiske handelsmænds madtraditioner, amerikansk kommerciel madkultur og den filippinske øgruppes geografi (7.640 øer, 36.500 km kystlinje). De fire grundlæggende smagsprofiler er syrlig (eddike/suka, calamansi, tamarind), salt og umamipræget (patis-fiskesauce, bagoong-rejepasta, toyo-sojasauce), fyldig og sød samt hvidløgspræget. Adobo — svinekød eller kylling braiseret i eddike, sojasauce, hvidløg, laurbærblad og sort peber — er nationalretten; den bygger på en førkolonial konserveringsteknik med eddike, som kokke i den spanske kolonitid systematiserede. Sinigang (syrlig, tamarindbaseret suppe) er den anden ret med national status og tilberedes med svinekød, fisk og skaldyr samt grøntsager. Fisk og skaldyr dominerer med ca. 27–30 kg pr. indbygger (den største proteingruppe), efterfulgt af kylling med 15,8 kg pr. indbygger og svinekød med 14,1 kg pr. indbygger (2023, Helgi Library/FAOSTAT). Det reelle risforbrug er verdens højeste — 200 kg pr. person om året (rekord i 2023, Helgi Library). Kokos er det definerende fedtstof: kokosmælk (gata) beriger laing, bicol express, ginataang-retter og desserter. Filippinerne producerer ca. 14–15 millioner ton kokosnødder om året (nr. 2 i verden), 355.000 ton bangus (mælkefisk — nationalfisken) og over 20 millioner ton ris."
   },
   "finnish": {
     "description": "Finnish cuisine is shaped by forests, lakes, and the Baltic Sea. Rye bread (ruisleipä), salmon soup (lohikeitto), and sautéed reindeer (poronkäristys) define its identity — anchored by the world's highest rye consumption per capita, wild chanterelles, and a dairy culture among Europe's most intensive.",
-    "description_sv": "Finskt kök formas av skogar, sjöar och Östersjön. Rågbröd (ruisleipä), laxsoppa (lohikeitto) och renskav (poronkäristys) definierar dess identitet — förankrad i världens högsta konsumtion av råg per capita, vilda kantareller och en mejerikultur bland Europas mest intensiva."
+    "description_sv": "Finskt kök formas av skogar, sjöar och Östersjön. Rågbröd (ruisleipä), laxsoppa (lohikeitto) och renskav (poronkäristys) definierar dess identitet — förankrad i världens högsta konsumtion av råg per capita, vilda kantareller och en mejerikultur bland Europas mest intensiva.",
+    "description_da": "Det finske køkken er formet af skove, søer og Østersøen. Rugbrød (ruisleipä), laksesuppe (lohikeitto) og sauteret rensdyrkød (poronkäristys) definerer dets identitet — forankret i verdens højeste forbrug af rug pr. indbygger, vilde kantareller og en af Europas stærkeste mejeritraditioner."
   },
   "french": {
     "description": "French cuisine is the foundation of classical Western cooking, built on mother sauces, butter, terroir, and artisanal craft. From baguette and croissant to boeuf bourguignon and soupe à l'oignon, from Normandy's dairy richness to Provence's olive oil and herbs — France's diverse regions and world-leading cheese culture (~28 kg/capita) have shaped cooking worldwide.",
-    "description_sv": "Franskt kök är grunden för klassisk västerländsk matlagning, byggt på grundsåser, smör, terroir och hantverkstradition. Från baguette och croissant till boeuf bourguignon och soupe à l'oignon, från Normandies mejeririka traditioner till Provences olivolja och örter — Frankrikes mångfaldiga regioner och världsledande ostkultur (~28 kg/capita) har format matlagning globalt."
+    "description_sv": "Franskt kök är grunden för klassisk västerländsk matlagning, byggt på grundsåser, smör, terroir och hantverkstradition. Från baguette och croissant till boeuf bourguignon och soupe à l'oignon, från Normandies mejeririka traditioner till Provences olivolja och örter — Frankrikes mångfaldiga regioner och världsledande ostkultur (~28 kg/capita) har format matlagning globalt.",
+    "description_da": "Det franske køkken er grundlaget for klassisk vestlig madlavning og bygger på grundsaucer, smør, terroir og håndværksmæssig kunnen. Fra baguette og croissant til boeuf bourguignon og soupe à l'oignon, fra Normandiets rige mejeritradition til Provences olivenolie og krydderurter — Frankrigs mangfoldige regioner og verdensførende ostekultur (ca. 28 kg pr. indbygger) har formet madlavning verden over."
   },
   "georgian": {
     "description": "Georgian cuisine is one of the Caucasus crossroads of Europe and Asia, defined by the lavish feast tradition (supra), walnut-based sauces, khachapuri bread, and khinkali dumplings. Blue fenugreek, Imeretian saffron (marigold petals), coriander, and khmeli suneli create aromatic profiles found nowhere else — shaped by Georgia's subtropical Black Sea coast, alpine highlands, and 8,000 years of winemaking in clay kvevri vessels.",
-    "description_sv": "Georgiskt kök är ett av Kaukasusregionens korsvägskök, definierat av den rika festtraditionen (supra), valnötsbaserade såser, khachapuribröd och khinkali-dumplings. Blå bockhornsklöver, imeretisk saffran (ringblommablad), koriander och khmeli suneli skapar aromatiska profiler som inte finns någon annanstans — format av Georgiens subtropiska Svartahavskust, alpina högland och 8 000 år av vinmaking i lerkärl (kvevri)."
+    "description_sv": "Georgiskt kök är ett av Kaukasusregionens korsvägskök, definierat av den rika festtraditionen (supra), valnötsbaserade såser, khachapuribröd och khinkali-dumplings. Blå bockhornsklöver, imeretisk saffran (ringblommablad), koriander och khmeli suneli skapar aromatiska profiler som inte finns någon annanstans — format av Georgiens subtropiska Svartahavskust, alpina högland och 8 000 år av vinmaking i lerkärl (kvevri).",
+    "description_da": "Det georgiske køkken er et af Kaukasus' madkulturelle knudepunkter mellem Europa og Asien og kendetegnes af den overdådige festtradition (supra), valnøddebaserede saucer, khachapuri-brød og khinkali-dumplings. Blå bukkehorn, imeretisk safran (kronblade af morgenfrue), koriander og khmeli suneli skaber aromatiske smagsprofiler, der ikke findes andre steder — i et køkken formet af Georgiens subtropiske kyst ved Sortehavet, alpine højland og 8.000 års vinfremstilling i lerkar kaldet kvevri."
   },
   "german": {
     "description": "German cuisine is built on hearty, practical cooking rooted in 16 federal states of regional tradition — from Bavarian Schweinshaxe and Weisswurst to Rhineland Sauerbraten and Hamburg Aalsuppe. Germany is the world's largest rye producer, Europe's largest pork producer, and the birthplace of Wurst culture with over 1,500 sausage varieties, underpinned by Europe's longest brewing heritage.",
-    "description_sv": "Tyskt kök bygger på rejäl, praktisk matlagning rotad i 16 delstaters regionala traditioner — från bayersk Schweinshaxe och Weisswurst till Rhinlands Sauerbraten och Hamburgs Aalsuppe. Tyskland är världens största rågproducent, Europas största grisproducent och ursprunget till wurstkulturen med över 1 500 korvsortiment, underbyggd av Europas längsta bryggeritradition."
+    "description_sv": "Tyskt kök bygger på rejäl, praktisk matlagning rotad i 16 delstaters regionala traditioner — från bayersk Schweinshaxe och Weisswurst till Rhinlands Sauerbraten och Hamburgs Aalsuppe. Tyskland är världens största rågproducent, Europas största grisproducent och ursprunget till wurstkulturen med över 1 500 korvsortiment, underbyggd av Europas längsta bryggeritradition.",
+    "description_da": "Det tyske køkken bygger på solid, praktisk madlavning med rødder i 16 delstaters regionale traditioner — fra bayersk Schweinshaxe og Weisswurst til Sauerbraten fra Rhinlandet og Aalsuppe fra Hamborg. Tyskland er verdens største producent af rug, Europas største producent af svinekød og Wurst-kulturens fødested med over 1.500 pølsevarianter, båret af Europas længste bryggeritradition."
   },
   "ghanaian": {
     "description": "Ghanaian cuisine is built around rich soups and stews — groundnut soup, light soup, and palm nut soup — ladled over fermented starchy bases like fufu, banku, and kenkey. Tilapia and goat anchor the proteins, while unique West African seasonings like prekese, grains of selim, and dawadawa give Ghanaian cooking its unmistakable identity.",
-    "description_sv": "Ghanesisk matlagning bygger på rejäla soppor och grytor — jordnötssoppa, ljus soppa och palmnötssoppa — serverade med fermenterade stärkelsebaser som fufu, banku och kenkey. Tilapia och getekött är de centrala proteinerna, medan unika Västafrikanska kryddor som prekese, guineapeppar och dawadawa ger ghanesk matlagning sin omistliga identitet."
+    "description_sv": "Ghanesisk matlagning bygger på rejäla soppor och grytor — jordnötssoppa, ljus soppa och palmnötssoppa — serverade med fermenterade stärkelsebaser som fufu, banku och kenkey. Tilapia och getekött är de centrala proteinerna, medan unika Västafrikanska kryddor som prekese, guineapeppar och dawadawa ger ghanesk matlagning sin omistliga identitet.",
+    "description_da": "Det ghanesiske køkken bygger på fyldige supper og gryderetter — jordnøddesuppe, light soup og palmenøddesuppe — der øses over fermenterede stivelsesbaser som fufu, banku og kenkey. Tilapia og gedekød er de vigtigste proteinkilder, mens særlige vestafrikanske krydderier som prekese, selimpeber og dawadawa giver ghanesisk madlavning dens umiskendelige identitet."
   },
   "greek": {
     "description": "Greek cuisine is built on the Mediterranean trinity of olive oil, wheat, and wine, enriched by lamb, seafood, and the wild herbs of the hillsides. Feta, oregano, and the charcoal grill define its flavour — from grilled octopus at a coastal taverna to Easter lamb slow-roasted over an open fire.",
-    "description_sv": "Grekisk matlagning bygger på Medelhavets treenighet av olivolja, vete och vin, berikad med lamm, skaldjur och vilda bergörter. Feta, oregano och träkolgrillen definierar smakerna — från grillad bläckfisk vid en kustrestaurang till långsamt ugnsstekt Påskalamm över öppen eld."
+    "description_sv": "Grekisk matlagning bygger på Medelhavets treenighet av olivolja, vete och vin, berikad med lamm, skaldjur och vilda bergörter. Feta, oregano och träkolgrillen definierar smakerna — från grillad bläckfisk vid en kustrestaurang till långsamt ugnsstekt Påskalamm över öppen eld.",
+    "description_da": "Det græske køkken bygger på Middelhavets treenighed af olivenolie, hvede og vin, beriget med lam, fisk og skaldyr samt bjergskråningernes vilde urter. Feta, oregano og trækulsgrillen definerer smagen — fra grillet blæksprutte på en taverna ved kysten til påskelam, der langtidssteges over åben ild."
   },
   "haitian": {
     "description": "Haitian cuisine is defined by epis — the aromatic garlic, scallion, thyme and scotch bonnet paste that seasons almost every dish — and by contrasts: smoky griot pork crisped in sour orange marinade, pikliz pickled fire on the side, and diri ak pwa (rice and beans) as the daily anchor. African, French, and Taíno roots fuse into a cuisine of bold depth and celebration.",
-    "description_sv": "Haitianskt kök definieras av épis — den aromatiska pastan av vitlök, salladslök, timjan och scotch bonnet som kryddar nästan varje rätt — och av kontraster: rökig griot-fläsk krispigstekt i surt apelsinmarinad, pikliz picklade hetta på sidan och diri ak pwa (ris och bönor) som daglig ankare."
+    "description_sv": "Haitianskt kök definieras av épis — den aromatiska pastan av vitlök, salladslök, timjan och scotch bonnet som kryddar nästan varje rätt — och av kontraster: rökig griot-fläsk krispigstekt i surt apelsinmarinad, pikliz picklade hetta på sidan och diri ak pwa (ris och bönor) som daglig ankare.",
+    "description_da": "Det haitiske køkken defineres af epis — den aromatiske pasta af hvidløg, forårsløg, timian og scotch bonnet, som krydrer næsten hver eneste ret — og af kontraster: røget griot-svinekød sprødstegt i en marinade af bitterappelsin, pikliz som syltet ild til retten og diri ak pwa (ris og bønner) som den daglige grundpille. Afrikanske, franske og Taíno-rødder smelter sammen i et køkken med markant dybde og festlighed."
   },
   "hawaiian": {
     "description": "Hawaiian cuisine is a multicultural crossroads where Native Hawaiian tradition (poi, kalua pork, opihi, poke), Japanese-American staples (shoyu, rice, furikake, spam musubi), Portuguese sweet bread, Filipino flavours, and the plate lunch institution merge into a singular local identity. Taro is sacred; ahi poke is iconic; and no meal is complete without two scoops of rice.",
-    "description_sv": "Hawaiianskт kok ar en multikulturell korsning dar ursprungshawaiisk tradition (poi, kalua-flask, opihi, poke), japansk-amerikanska stapelmat (shoyu, ris, furikake, spam musubi), portugisiskt sotbrod, filippinska smaker och plate lunch-institutionen sammangas till en unik lokal identitet."
+    "description_sv": "Hawaiianskт kok ar en multikulturell korsning dar ursprungshawaiisk tradition (poi, kalua-flask, opihi, poke), japansk-amerikanska stapelmat (shoyu, ris, furikake, spam musubi), portugisiskt sotbrod, filippinska smaker och plate lunch-institutionen sammangas till en unik lokal identitet.",
+    "description_da": "Det hawaiianske køkken er et multikulturelt krydsfelt, hvor traditioner fra Hawaiis oprindelige folk (poi, kalua pork, opihi, poke), japansk-amerikanske basisvarer (shoyu, ris, furikake, spam musubi), portugisisk sødt brød, filippinske smage og plate lunch-institutionen smelter sammen til en særegen lokal identitet. Taro er hellig; ahi poke er ikonisk; og intet måltid er fuldendt uden to skefulde ris."
   },
   "hungarian": {
     "description": "Hungarian cuisine is built around paprika, slow-cooked meats, and sour cream — rich, hearty stews like gulyás and pörkölt define its character, shaped by the traditions of the Great Plain and Central European farming culture.",
-    "description_sv": "Ungerskt kök bygger på paprika, långkokt kött och gräddfil — rika, mustiga grytor som gulyás och pörkölt definierar köket, format av Stora Slättens traditioner och centraleuropeisk jordbrukskultur."
+    "description_sv": "Ungerskt kök bygger på paprika, långkokt kött och gräddfil — rika, mustiga grytor som gulyás och pörkölt definierar köket, format av Stora Slättens traditioner och centraleuropeisk jordbrukskultur.",
+    "description_da": "Det ungarske køkken bygger på paprika, langtidstilberedt kød og syrnet fløde. Fyldige, solide gryderetter som gulyás og pörkölt definerer dets karakter, der er formet af traditionerne fra Den Store Slette og den centraleuropæiske landbrugskultur."
   },
   "icelandic": {
     "description": "Icelandic cuisine is shaped by ocean, lava fields, and Arctic climate — built on cod, lamb, and skyr, preserved through centuries of smoking, drying, and fermentation, with wild herbs foraged from the tundra and fish pulled from pristine cold waters.",
-    "description_sv": "Isländskt kök formas av havet, lavalandskap och arktiskt klimat — byggt på torsk, lamm och skyr, bevarat genom rökning, torkning och jäsning, med vilda örter insamlade från tundran och fisk från rena, kalla vatten."
+    "description_sv": "Isländskt kök formas av havet, lavalandskap och arktiskt klimat — byggt på torsk, lamm och skyr, bevarat genom rökning, torkning och jäsning, med vilda örter insamlade från tundran och fisk från rena, kalla vatten.",
+    "description_da": "Det islandske køkken er formet af havet, lavamarkerne og det arktiske klima og bygger på torsk, lam og skyr samt århundredgamle traditioner for røgning, tørring og fermentering. Vilde urter sankes på tundraen, og fisk fanges i uberørte, kolde farvande."
   },
   "indian": {
     "description": "Indian cuisine is defined by its extraordinary spice tradition, regional diversity from the Himalayas to coastal Kerala, and a heritage of slow-cooked curries, tandoor breads, aromatic biryanis, and street foods shaped by five thousand years of culinary culture.",
-    "description_sv": "Indiskt kök kännetecknas av sin extraordinära kryddtradition, regional mångfald från Himalaya till kustlandet Kerala, och ett arv av långsamt kokta curryrätter, tandooribrödбрödl, doftande biryanis och gatukök som formats under fem tusen år av kulinarisk kultur."
+    "description_sv": "Indiskt kök kännetecknas av sin extraordinära kryddtradition, regional mångfald från Himalaya till kustlandet Kerala, och ett arv av långsamt kokta curryrätter, tandooribrödбрödl, doftande biryanis och gatukök som formats under fem tusen år av kulinarisk kultur.",
+    "description_da": "Det indiske køkken er kendetegnet ved sin enestående krydderitradition, sin regionale mangfoldighed fra Himalaya til Keralas kyster og sin arv af langtidssimrede karryretter, tandoorbrød, aromatisk biryani og gademad, alt sammen formet af fem tusind års madkultur."
   },
   "indonesian": {
     "description": "Indonesian cuisine spans 17,000 islands and over 300 ethnic groups, united by its bold spice pastes (bumbu), fermented shrimp paste (terasi), sweet soy sauce (kecap manis), and a tradition of slow-cooked coconut curries like rendang — voted the world's most delicious dish.",
-    "description_sv": "Indonesiskt kök sträcker sig över 17 000 öar och mer än 300 folkgrupper, förenat av sina kraftfulla kryddblandningar (bumbu), fermenterad räkpasta (terasi), söt sojasås (kecap manis) och en tradition av långsamt kokade kokosnötscurries som rendang — omröstad till världens godaste maträtt."
+    "description_sv": "Indonesiskt kök sträcker sig över 17 000 öar och mer än 300 folkgrupper, förenat av sina kraftfulla kryddblandningar (bumbu), fermenterad räkpasta (terasi), söt sojasås (kecap manis) och en tradition av långsamt kokade kokosnötscurries som rendang — omröstad till världens godaste maträtt.",
+    "description_da": "Det indonesiske køkken spænder over 17.000 øer og mere end 300 etniske grupper og bindes sammen af kraftige krydderpastaer (bumbu), fermenteret rejepasta (terasi), sød sojasauce (kecap manis) og en tradition for langtidstilberedte kokoskarryretter som rendang — kåret til verdens lækreste ret."
   },
   "iraqi": {
     "description": "Iraqi cuisine draws on 10,000 years of Mesopotamian culinary history, built on slow-cooked lamb stews, fragrant saffron-tinted rice, the ancient grilled carp dish masgouf from the Tigris, and the universal baharat spice blend. Bread from the clay tannour oven and dried lime (loomi) are its most defining flavors.",
-    "description_sv": "Irakiskt kök bygger på 10 000 år av mesopotamisk kulinarisk historia, uppbyggt kring långsamt kokta lammgrytor, doftande saffransfärgat ris, den uråldriga grillkarpen masgouf från Tigris och den universella baharat-kryddblandningen. Bröd från lerbränd tannour-ugn och torkad lime (loomi) är dess mest definierande smaker."
+    "description_sv": "Irakiskt kök bygger på 10 000 år av mesopotamisk kulinarisk historia, uppbyggt kring långsamt kokta lammgrytor, doftande saffransfärgat ris, den uråldriga grillkarpen masgouf från Tigris och den universella baharat-kryddblandningen. Bröd från lerbränd tannour-ugn och torkad lime (loomi) är dess mest definierande smaker.",
+    "description_da": "Det irakiske køkken trækker på 10.000 års mesopotamisk madhistorie og bygger på langtidskogte lammegryder, duftende safranfarvede ris, den oldgamle ret masgouf med grillet karpe fra Tigris og den universelle krydderiblanding baharat. Brød fra tannour-lerovnen og tørret lime (loomi) er køkkenets mest kendetegnende smagsgivere."
   },
   "irish": {
     "description": "Irish cuisine is rooted in the land and Atlantic coast — built on pasture-fed lamb and beef, exceptional dairy, oats, and the potato, with soda bread and Irish stew as cultural touchstones and wild Atlantic seafood from oysters to smoked salmon complementing the hearty farmhouse tradition.",
-    "description_sv": "Irländskt kök har sina rötter i betet och Atlantkusten — uppbyggt kring betesuppfödd lamm och nötkött, exceptionella mejeriprodukter, havre och potatis, med sodabröd och irländsk gryta som kulturella hörnstenar och vildfångad Atlantskaldjur från ostron till rökt lax som kompletterar den rustika bondgårdstraditionen."
+    "description_sv": "Irländskt kök har sina rötter i betet och Atlantkusten — uppbyggt kring betesuppfödd lamm och nötkött, exceptionella mejeriprodukter, havre och potatis, med sodabröd och irländsk gryta som kulturella hörnstenar och vildfångad Atlantskaldjur från ostron till rökt lax som kompletterar den rustika bondgårdstraditionen.",
+    "description_da": "Det irske køkken har rødder i jorden og ved Atlanterhavskysten — det bygger på græsfodret lamme- og oksekød, enestående mejeriprodukter, havre og kartofler. Her er soda bread og Irish stew kulturelle pejlemærker, mens vildtfangede fisk og skaldyr fra Atlanterhavet, fra østers til røget laks, supplerer den solide landkøkkentradition."
   },
   "israeli": {
     "description": "Israeli cuisine fuses the food traditions of Jewish diaspora from over 70 countries with the flavors of the Levant — hummus, falafel, shakshuka, and shawarma are internationally recognized. Israel leads the world in poultry consumption (~60 kg/capita), olive oil production quality, and dairy technology, and its street food culture has redefined casual Mediterranean eating.",
-    "description_sv": "Israeliskt kök blandar mattraditioner från judiska diasporan i över 70 länder med smaker från Levanten — hummus, falafel, shakshuka och shawarma är internationellt kända. Israel leder världen i fjäderfäkonsumtion (~60 kg/capita), olivoljakvalitet och mejeritechnology, och dess gatumatkultur har omdefinerat avslappnat medelhavskök."
+    "description_sv": "Israeliskt kök blandar mattraditioner från judiska diasporan i över 70 länder med smaker från Levanten — hummus, falafel, shakshuka och shawarma är internationellt kända. Israel leder världen i fjäderfäkonsumtion (~60 kg/capita), olivoljakvalitet och mejeritechnology, och dess gatumatkultur har omdefinerat avslappnat medelhavskök.",
+    "description_da": "Det israelske køkken forener madtraditioner fra den jødiske diaspora i over 70 lande med Levantens smage — hummus, falafel, shakshuka og shawarma er internationalt kendte. Israel er verdensførende inden for fjerkræforbrug (ca. 60 kg pr. indbygger), olivenolieproduktion af høj kvalitet og mejeriteknologi, og landets gadekøkkenkultur har omdefineret uformel middelhavsmad."
   },
   "italian": {
     "description": "Italian cuisine is the foundation of Western fine dining, built on extraordinary pasta (23 kg/capita — world's highest), San Marzano tomatoes, Parmigiano Reggiano, mozzarella di bufala, and extra-virgin olive oil. It spans 20 regions each with distinct identities: Emilia-Romagna's ragu and salumi, Rome's carbonara, Naples' pizza, Venice's risotto, and Sicily's caponata define one of the world's most copied yet distinctly authentic culinary traditions.",
-    "description_sv": "Italienskt kök är grunden för västerländsk finmatlagning, byggt på enastående pasta (23 kg/capita — världens högsta), San Marzano-tomater, Parmigiano Reggiano, mozzarella di bufala och extra vergine olivolja. Det spänner över 20 regioner med egna identiteter: Emilia-Romagnas ragù och salumi, Roms carbonara, Neapels pizza, Venedigs risotto och Siciliens caponata definierar en av världens mest kopierade men ändå distinkt äkta mattraditioner."
+    "description_sv": "Italienskt kök är grunden för västerländsk finmatlagning, byggt på enastående pasta (23 kg/capita — världens högsta), San Marzano-tomater, Parmigiano Reggiano, mozzarella di bufala och extra vergine olivolja. Det spänner över 20 regioner med egna identiteter: Emilia-Romagnas ragù och salumi, Roms carbonara, Neapels pizza, Venedigs risotto och Siciliens caponata definierar en av världens mest kopierade men ändå distinkt äkta mattraditioner.",
+    "description_da": "Det italienske køkken er grundlaget for den vestlige gourmettradition og bygger på enestående pasta (23 kg pr. indbygger — verdens højeste), San Marzano-tomater, Parmigiano Reggiano, mozzarella di bufala og ekstra jomfruolivenolie. Det spænder over 20 regioner, som hver har sin tydelige identitet: Emilia-Romagnas ragu og salumi, Roms carbonara, Napolis pizza, Venedigs risotto og Siciliens caponata definerer en af verdens mest kopierede, men samtidig umiskendeligt autentiske, kulinariske traditioner."
   },
   "jamaican": {
     "description": "Jamaican cuisine is one of the world's most distinctive and internationally celebrated — defined by jerk seasoning (allspice, Scotch bonnet, pimento wood), the national dish ackee and saltfish, oxtail stew, curried goat, and rice and peas. Jamaica is the world's leading allspice (pimento) producer, and its food culture fuses African, Taíno, European, and Indian influences into bold, aromatic, heat-forward cooking.",
-    "description_sv": "Jamaikanskt kök är ett av världens mest distinktiva och internationellt firade — definierat av jerk-kryddning (kryddpeppar, Scotch bonnet-chili, pimentoträ), nationalrätten ackee och saltfisk, oxtailgryta, currydoftad get och ris med bönor. Jamaica är världens ledande producent av kryddpeppar (pimento), och matkulturen smälter samman afrikanska, taíno, europeiska och indiska influenser till djärv, aromatisk, hetskryddad matlagning."
+    "description_sv": "Jamaikanskt kök är ett av världens mest distinktiva och internationellt firade — definierat av jerk-kryddning (kryddpeppar, Scotch bonnet-chili, pimentoträ), nationalrätten ackee och saltfisk, oxtailgryta, currydoftad get och ris med bönor. Jamaica är världens ledande producent av kryddpeppar (pimento), och matkulturen smälter samman afrikanska, taíno, europeiska och indiska influenser till djärv, aromatisk, hetskryddad matlagning.",
+    "description_da": "Det jamaicanske køkken er et af verdens mest særprægede og internationalt hyldede køkkener — defineret af jerk-krydderi (allehånde, Scotch bonnet-chili og træ fra allehåndetræet), nationalretten ackee and saltfish, oxtail stew, curried goat og rice and peas. Jamaica er verdens førende producent af allehånde (pimento), og landets madkultur forener påvirkninger fra Afrika, Taíno-folket, Europa og Indien i en kraftfuld, aromatisk madlavning med stærk chili i centrum."
   },
   "japanese": {
     "description": "Japanese cuisine (washoku) is built on the umami foundation of dashi, fermented soy, and the harmony of seasonal ingredients — from delicate sashimi and sushi-grade tuna to slow-braised pork belly ramen, the crisp snap of tempura, and the deep comfort of miso soup.",
-    "description_sv": "Japanskt kök (washoku) bygger på umamigrunden av dashi, fermenterad soja och harmoni av säsongsbaserade råvaror — från delikat sashimi och sushi-maguro till långsamt braiserad fläskbuk i ramen, den krispiga tempuran och den djupa tryggheten av en skål misosoppa."
+    "description_sv": "Japanskt kök (washoku) bygger på umamigrunden av dashi, fermenterad soja och harmoni av säsongsbaserade råvaror — från delikat sashimi och sushi-maguro till långsamt braiserad fläskbuk i ramen, den krispiga tempuran och den djupa tryggheten av en skål misosoppa.",
+    "description_da": "Det japanske køkken (washoku) bygger på umamien fra dashi og fermenteret soja samt samspillet mellem årstidens råvarer — fra delikat sashimi og tun af sushikvalitet til ramen med langsomt braiseret svinebryst, tempuraens sprøde bid og misosuppens dybe, trøstende varme."
   },
   "jordanian": {
     "description": "Jordanian cuisine is anchored by mansaf — slow-cooked lamb in jameed fermented yogurt served on rice with toasted pine nuts — alongside maqluba, zarb pit barbecue, and a rich Bedouin and Levantine table of hummus, labneh, fresh herbs, olive oil, and flatbread baked on the saj.",
-    "description_sv": "Jordanskt kök kretsar kring mansaf — lamm tillagat i jameed fermenterad yoghurt serverat på ris med rostade pinjenötter — vid sidan av maqluba, zarb-grillat i jordugn och ett rikt beduinskt och levantinskt matbord med hummus, labneh, färska örter, olivolja och bröd bakat på saj."
+    "description_sv": "Jordanskt kök kretsar kring mansaf — lamm tillagat i jameed fermenterad yoghurt serverat på ris med rostade pinjenötter — vid sidan av maqluba, zarb-grillat i jordugn och ett rikt beduinskt och levantinskt matbord med hummus, labneh, färska örter, olivolja och bröd bakat på saj.",
+    "description_da": "Det jordanske køkken har mansaf som omdrejningspunkt — langtidskogt lam i den fermenterede yoghurt jameed, serveret på ris med ristede pinjekerner — sammen med maqluba, zarb-grillmad fra en jordovn og et righoldigt beduinsk og levantinsk måltid med hummus, labneh, friske krydderurter, olivenolie og fladbrød bagt på en saj."
   },
   "kenyan": {
     "description": "Kenyan cuisine is built around nyama choma (charcoal-roasted goat and beef), the dense starchy anchor of ugali (maize porridge), and sukuma wiki (sautéed collard greens) — all eaten communally. The Swahili coast adds coconut milk, pilau spices, and Indian Ocean influences, creating a cuisine that is both earthy and aromatic.",
-    "description_sv": "Kenyanskt kök kretsar kring nyama choma (kolgrillat get- och nötkött), den tunga stärkelseankaret ugali (majsgröt) och sukuma wiki (stuvad grönkål) — allt äts gemensamt. Swahilikusten tillför kokosmjölk, pilaokryddor och Indiska oceanens influenser, och skapar ett kök som är både jordnära och aromatiskt."
+    "description_sv": "Kenyanskt kök kretsar kring nyama choma (kolgrillat get- och nötkött), den tunga stärkelseankaret ugali (majsgröt) och sukuma wiki (stuvad grönkål) — allt äts gemensamt. Swahilikusten tillför kokosmjölk, pilaokryddor och Indiska oceanens influenser, och skapar ett kök som är både jordnära och aromatiskt.",
+    "description_da": "Det kenyanske køkken er bygget op omkring nyama choma (kulgrillet gede- og oksekød), den solide, stivelsesrige grundpille ugali (majsgrød) og sukuma wiki (sauteret bladkål) — som alle spises i fællesskab. Swahilikysten tilfører kokosmælk, pilau-krydderier og påvirkninger fra Det Indiske Ocean og skaber et køkken, der både er jordnært og aromatisk."
   },
   "khmer": {
     "description": "Khmer (Cambodian) cuisine is built on the umami depth of prahok (fermented fish paste), the aromatic kroeung herb paste, and freshwater fish from the Tonle Sap and Mekong. Gentler than Thai food, richer than Vietnamese, it finds balance in coconut milk curries, sour soups, and the world-famous fragrance of Kampot pepper.",
-    "description_sv": "Khmerskt (kambodjansskt) kök bygger på umamidjupet i prahok (fermenterad fiskpasta), den aromatiska kroeung-kryddpastan och sötvattensfisk från Tonle Sap och Mekong. Mildare än thailändsk mat, rikare än vietnamesisk — det hittar balansen i kokosmjölkscurries, supsoppor och den världsberömda doften av Kampotpeppar."
+    "description_sv": "Khmerskt (kambodjansskt) kök bygger på umamidjupet i prahok (fermenterad fiskpasta), den aromatiska kroeung-kryddpastan och sötvattensfisk från Tonle Sap och Mekong. Mildare än thailändsk mat, rikare än vietnamesisk — det hittar balansen i kokosmjölkscurries, supsoppor och den världsberömda doften av Kampotpeppar.",
+    "description_da": "Khmer-køkkenet (det cambodjanske køkken) bygger på den dybe umami i prahok (fermenteret fiskepasta), den aromatiske urtepasta kroeung og ferskvandsfisk fra Tonle Sap og Mekong. Mildere end det thailandske køkken og mere fyldigt end det vietnamesiske finder det balance i karryretter med kokosmælk, syrlige supper og den verdensberømte duft af Kampot-peber."
   },
   "korean": {
     "description": "Korean cuisine (hansik) is built on fermentation, bold heat, and communal sharing — from the sizzle of bulgogi and samgyeopsal on the grill to the pungent depth of kimchi and doenjang jjigae, the snap of japchae noodles, and the comforting warmth of a stone-bowl bibimbap.",
-    "description_sv": "Koreanskt kök (hansik) bygger på fermentering, kraftig hetta och gemensam njutning — från fräsandet av bulgogi och samgyeopsal på grillen till den starka djupet av kimchi och doenjang jjigae, kenigheten i japchae-nudlar och den värmande tryggheten i en bibimbap i stenpanna."
+    "description_sv": "Koreanskt kök (hansik) bygger på fermentering, kraftig hetta och gemensam njutning — från fräsandet av bulgogi och samgyeopsal på grillen till den starka djupet av kimchi och doenjang jjigae, kenigheten i japchae-nudlar och den värmande tryggheten i en bibimbap i stenpanna.",
+    "description_da": "Det koreanske køkken (hansik) bygger på fermentering, intens varme fra chili og måltider, der deles — fra sydende bulgogi og samgyeopsal på grillen til den intense dybde i kimchi og doenjang jjigae, det spændstige bid i japchae-nudler og den trøstende varme fra bibimbap serveret i en stenskål."
   },
   "kurdish": {
     "description": "Kurdish cuisine spans the mountains and valleys of Kurdistan — from Iraqi Kurdistan's slow-roasted lamb and stuffed grape leaves to the smoky tang of Turkish Kurdish kebabs, the aromatic herb-rich stews of Iran, and the hearty bulgur pilaf and yoghurt dishes shared across the highland diaspora.",
-    "description_sv": "Kurdiskt kök sträcker sig över bergs- och dallandskapen i Kurdistan — från irakskt kurdistans långsamt rostat lamm och fyllda druvblad till den rökiga smaken av turkisktkurdiska kebaber, de aromatiska örtrika grytorna från Iran och den rejäla bulgurpilaffet och yoghurträtterna som delas över de bergiga diaspora."
+    "description_sv": "Kurdiskt kök sträcker sig över bergs- och dallandskapen i Kurdistan — från irakskt kurdistans långsamt rostat lamm och fyllda druvblad till den rökiga smaken av turkisktkurdiska kebaber, de aromatiska örtrika grytorna från Iran och den rejäla bulgurpilaffet och yoghurträtterna som delas över de bergiga diaspora.",
+    "description_da": "Det kurdiske køkken spænder over Kurdistans bjerge og dale — fra langtidsstegt lam og fyldte vinblade i irakisk Kurdistan til den røgede syrlighed i kurdiske kebabretter fra Tyrkiet, de aromatiske, urterige gryderetter fra Iran samt de solide retter med bulgurpilaf og yoghurt, der deles i den kurdiske diaspora med rødder i højlandet."
   },
   "laotian": {
     "description": "Laotian cuisine (ahan Lao) is defined by sticky rice eaten with every meal, the punchy funk of padaek (fermented fish paste), the bright heat of fresh chilies, and aromatic herbs — from the smoky char of ping pa (grilled fish) to the sour complexity of laap (minced meat salad) and the communal warmth of sinidat (Lao hot pot).",
-    "description_sv": "Laotiskt kök (ahan Lao) definieras av klibbigt ris som äts till varje måltid, den kraftiga fermenterade fiskpastan padaek, den friska hettan av färska chilis och aromatiska örter — från den rökiga smaken av ping pa (grillad fisk) till det syrliga djupet av laap (hackad köttsallad) och det gemensamma värmen av sinidat (laotisk fonduekastrull)."
+    "description_sv": "Laotiskt kök (ahan Lao) definieras av klibbigt ris som äts till varje måltid, den kraftiga fermenterade fiskpastan padaek, den friska hettan av färska chilis och aromatiska örter — från den rökiga smaken av ping pa (grillad fisk) till det syrliga djupet av laap (hackad köttsallad) och det gemensamma värmen av sinidat (laotisk fonduekastrull).",
+    "description_da": "Det laotiske køkken (ahan Lao) er kendetegnet ved klisterris, der spises til hvert måltid, den markante smag af den fermenterede fiskepasta padaek, den friske styrke fra friske chilier og aromatiske urter — fra den røgede grillsmag i ping pa (grillet fisk) til den syrlige kompleksitet i laap (salat med hakket kød) og det varme fællesskab omkring sinidat (laotisk hotpot)."
   },
   "lebanese": {
     "description": "Lebanese cuisine is the jewel of the Levant — an abundant spread of mezze (hummus, fattoush, tabbouleh, kibbeh), wood-fired flatbreads, slow-roasted lamb, the sweet smoke of shawarma, and the bright freshness of herb-laden salads, all brought together with olive oil, lemon, and the warm spice of seven-spice (baharat).",
-    "description_sv": "Libanesiskt kök är Levantens juvel — ett rikt uppdukat mezze (hummus, fattoush, tabbouleh, kibbeh), stenugnsbakata tunnbröd, långsamt rostat lamm, den söta röken av shawarma och den friska örtighetens sallader, allt sammanflätat med olivolja, citron och värmen av sjukryddor (baharat)."
+    "description_sv": "Libanesiskt kök är Levantens juvel — ett rikt uppdukat mezze (hummus, fattoush, tabbouleh, kibbeh), stenugnsbakata tunnbröd, långsamt rostat lamm, den söta röken av shawarma och den friska örtighetens sallader, allt sammanflätat med olivolja, citron och värmen av sjukryddor (baharat).",
+    "description_da": "Det libanesiske køkken er Levantens juvel — et overdådigt udvalg af mezze (hummus, fattoush, tabbouleh, kibbeh), fladbrød bagt i brændefyret ovn, langtidsstegt lam, shawarmaens sødlige røg og den sprudlende friskhed i salater fulde af krydderurter, alt sammen forenet af olivenolie, citron og varmen fra syvkrydderiblandingen (baharat)."
   },
   "malaysian": {
     "description": "Malaysian cuisine is a vibrant mosaic of Malay, Chinese, and Indian culinary traditions united by bold sambal, aromatic coconut-based rempah (spice paste), and fermented shrimp paste — from the national dish nasi lemak and slow-cooked rendang to fiery asam laksa and sizzling char kway teow.",
-    "description_sv": "Malaysisk mat är ett levande mosaik av malajiska, kinesiska och indiska kökstraditioner, förenade av kraftig sambal, aromatisk kokosnötsbaserad rempah och fermenterad räkpasta — från nationalrätten nasi lemak och långkokt rendang till het asam laksa och fräsande char kway teow."
+    "description_sv": "Malaysisk mat är ett levande mosaik av malajiska, kinesiska och indiska kökstraditioner, förenade av kraftig sambal, aromatisk kokosnötsbaserad rempah och fermenterad räkpasta — från nationalrätten nasi lemak och långkokt rendang till het asam laksa och fräsande char kway teow.",
+    "description_da": "Det malaysiske køkken er en levende mosaik af malajiske, kinesiske og indiske madtraditioner, der forenes af kraftig sambal, aromatisk kokosbaseret rempah (krydderpasta) og fermenteret rejepasta — fra nationalretten nasi lemak og langtidstilberedt rendang til stærk asam laksa og sydende char kway teow."
   },
   "mediterranean": {
     "description": "Mediterranean cuisine is a sun-drenched mosaic of flavours spanning southern Europe, the Levant, and North Africa — united by the golden thread of olive oil, fresh vegetables, legumes, grilled seafood and meats, and fragrant herbs including oregano, thyme, and mint.",
-    "description_sv": "Medelhavsmat är ett soldränkt mosaik av smaker som sträcker sig från södra Europa, Levanten och Nordafrika — förenat av olivolja, färska grönsaker, baljväxter, grillad fisk och kött, samt doftande örter som oregano, timjan och mynta."
+    "description_sv": "Medelhavsmat är ett soldränkt mosaik av smaker som sträcker sig från södra Europa, Levanten och Nordafrika — förenat av olivolja, färska grönsaker, baljväxter, grillad fisk och kött, samt doftande örter som oregano, timjan och mynta.",
+    "description_da": "Middelhavskøkkenet er en solbeskinnet mosaik af smage, der strækker sig over Sydeuropa, Levanten og Nordafrika — forenet af olivenolie, friske grøntsager, bælgfrugter, grillede fisk og skaldyr og grillet kød samt duftende urter som oregano, timian og mynte."
   },
   "mexican": {
     "description": "Mexican cuisine (UNESCO Intangible Heritage) is built on the holy trinity of corn, chile, and beans — a mosaic of Indigenous and colonial flavours expressed in tacos al pastor, slow-cooked barbacoa, mole negro, tamales, and the sizzle of carne asada from north to south.",
-    "description_sv": "Mexikansk mat (UNESCO Immateriellt Kulturarv) är byggd på den heliga treenigheten majs, chile och bönor — ett mosaik av urbefolknings- och kolonialinspirerade smaker uttryckta i tacos al pastor, långkokt barbacoa, mole negro, tamales och fräsandet av carne asada från norr till söder."
+    "description_sv": "Mexikansk mat (UNESCO Immateriellt Kulturarv) är byggd på den heliga treenigheten majs, chile och bönor — ett mosaik av urbefolknings- och kolonialinspirerade smaker uttryckta i tacos al pastor, långkokt barbacoa, mole negro, tamales och fräsandet av carne asada från norr till söder.",
+    "description_da": "Det mexicanske køkken, som er optaget på UNESCOs liste over immateriel kulturarv, bygger på den hellige treenighed af majs, chile og bønner — en mosaik af smage fra oprindelige folk og kolonitiden, der kommer til udtryk i tacos al pastor, langtidstilberedt barbacoa, mole negro, tamales og sydende carne asada fra nord til syd."
   },
   "moroccan": {
     "description": "Moroccan cuisine is a sensory feast shaped by Berber, Arab, Andalusian, and Jewish traditions — marked by fragrant ras el hanout, slow-cooked tagines with preserved lemon and olives, steamed couscous piled with seven vegetables, sweet-savoury bastilla, and the world-famous saffron from Taliouine.",
-    "description_sv": "Marockansk mat är ett sinnenas festmåltid format av berberska, arabiska, andalusiska och judiska traditioner — präglat av doftande ras el hanout, långkokt tagine med bevarad citron och oliver, ångad couscous med sju grönsaker, sötsyrlig bastilla och världsberömt saffran från Taliouine."
+    "description_sv": "Marockansk mat är ett sinnenas festmåltid format av berberska, arabiska, andalusiska och judiska traditioner — präglat av doftande ras el hanout, långkokt tagine med bevarad citron och oliver, ångad couscous med sju grönsaker, sötsyrlig bastilla och världsberömt saffran från Taliouine.",
+    "description_da": "Det marokkanske køkken er en fest for sanserne, formet af berberiske, arabiske, andalusiske og jødiske traditioner — kendetegnet ved duftende ras el hanout, langtidstilberedte taginer med syltede citroner og oliven, dampet couscous toppet med syv grøntsager, bastilla, der forener sødt og krydret, og den verdensberømte safran fra Taliouine."
   },
   "mughlai": {
     "description": "Mughlai cuisine is the refined legacy of the Mughal court — slow-cooked kormas simmered in cream and nut paste, fragrant dum biryani layered with saffron-stained rice, and the warm aromatics of cardamom, mace, and cloves that define centuries of imperial North Indian cooking.",
-    "description_sv": "Mughal-indiskt kök är det förfinade arvet från Mughalhovet — långsamt tillagade kormar i grädde och nötpasta, doftande dum-biryani lagrad med saffransrivet ris och de varma aromerna av kardemumma, muskotblomma och kryddnejlika som präglat sekler av kejserligt nordindiskt kök."
+    "description_sv": "Mughal-indiskt kök är det förfinade arvet från Mughalhovet — långsamt tillagade kormar i grädde och nötpasta, doftande dum-biryani lagrad med saffransrivet ris och de varma aromerna av kardemumma, muskotblomma och kryddnejlika som präglat sekler av kejserligt nordindiskt kök.",
+    "description_da": "Mughlai-køkkenet er den raffinerede arv fra mogulhoffet — langtidssimrede korma-retter i fløde og nøddepasta, duftende dum biryani lagt i lag med safranfarvede ris og de varme aromaer af kardemomme, muskatblomme og nelliker, som gennem århundreder har kendetegnet kejserlig nordindisk madlavning."
   },
   "nepali": {
     "description": "Nepali cuisine is shaped by the Himalayas — from Terai plains to mountain highlands, it offers steamed buff momo dumplings, dal-bhat-tarkari (lentils, rice, and vegetables) eaten twice daily, fermented gundruk greens, warming timur-spiced broths, and the hearty fortification of yak butter and chhurpi cheese above the snowline.",
-    "description_sv": "Nepalesiskt kök formas av Himalaya — från Teraislätterna till höghöjden erbjuder det ångade buffelmomo-dumplings, dal-bhat-tarkari (linser, ris och grönsaker) som äts två gånger om dagen, fermenterade gundruk-grönsaker, värmande timur-kryddade soppor och den kraftiga näringen från yak-smör och chhurpi-ost ovanför snögränsen."
+    "description_sv": "Nepalesiskt kök formas av Himalaya — från Teraislätterna till höghöjden erbjuder det ångade buffelmomo-dumplings, dal-bhat-tarkari (linser, ris och grönsaker) som äts två gånger om dagen, fermenterade gundruk-grönsaker, värmande timur-kryddade soppor och den kraftiga näringen från yak-smör och chhurpi-ost ovanför snögränsen.",
+    "description_da": "Det nepalesiske køkken er formet af Himalaya — fra Terais sletter til bjergenes højland byder det på dampede buff momo-dumplings, dal-bhat-tarkari (linser, ris og grøntsager), der spises to gange om dagen, fermenterede gundruk-grøntsager og varmende supper krydret med timur, mens yaksmør og chhurpi-ost giver solid næring over snegrænsen."
   },
   "new_nordic": {
     "description": "New Nordic cuisine, codified by the 2004 manifesto from Noma and the Copenhagen chefs' collective, strips away imported spices and foreign influences to reveal the pure flavours of the northern forest, shore, and field — raw seafood, foraged herbs, aged roots, fermented dairy, smoked meats, and the bracingly clean tastes of spruce, sea buckthorn, and elderflower.",
-    "description_sv": "Det nya nordiska köket, kodifierat i 2004 års manifest från Noma och Köpenhamns kockkollektiv, rensar bort importerade kryddor och utländska influenser för att visa de rena smakerna från den nordiska skogen, kusten och åkern — rå skaldjur, plockade örter, lagrade rotsaker, fermenterade mejeriprodukter, rökt kött och den friskt rena smaken av gran, havtorn och fläder."
+    "description_sv": "Det nya nordiska köket, kodifierat i 2004 års manifest från Noma och Köpenhamns kockkollektiv, rensar bort importerade kryddor och utländska influenser för att visa de rena smakerna från den nordiska skogen, kusten och åkern — rå skaldjur, plockade örter, lagrade rotsaker, fermenterade mejeriprodukter, rökt kött och den friskt rena smaken av gran, havtorn och fläder.",
+    "description_da": "Det nye nordiske køkken, som blev kodificeret i manifestet fra 2004, udarbejdet af Noma og det københavnske kokkekollektiv, fjerner importerede krydderier og udenlandske påvirkninger for at blotlægge de rene smage fra Nordens skove, kyster og marker — rå fisk og skaldyr, sankede urter, lagrede rodfrugter, fermenterede mejeriprodukter, røget kød og de friske, rene smage af gran, havtorn og hyldeblomst."
   },
   "new_zealand": {
     "description": "New Zealand cuisine is shaped by Māori hāngī earth-pit cooking, kūmara sweet potato, and a Pacific seafood larder — green-lipped mussels, pāua abalone, whitebait fritters — alongside world-class grass-fed lamb, venison, and dairy from a land that exports butter, cheese, and Sauvignon Blanc around the world.",
-    "description_sv": "Nyzeeländskt kök formas av māoriernas hāngī-jordugnslagning, kūmara sötpotatis och ett stillahavslager av skaldjur — gröna musslor, pāua havsöronssnäcka, vitfiskfritter — vid sidan av världsklassens gräsbetad lamm, viltkött och mejeri från ett land som exporterar smör, ost och Sauvignon Blanc runt om i världen."
+    "description_sv": "Nyzeeländskt kök formas av māoriernas hāngī-jordugnslagning, kūmara sötpotatis och ett stillahavslager av skaldjur — gröna musslor, pāua havsöronssnäcka, vitfiskfritter — vid sidan av världsklassens gräsbetad lamm, viltkött och mejeri från ett land som exporterar smör, ost och Sauvignon Blanc runt om i världen.",
+    "description_da": "Det newzealandske køkken er formet af Māori-folkets hāngī-madlavning i jordovn, sødkartoflen kūmara og et spisekammer af fisk og skaldyr fra Stillehavet — grønlæbede muslinger, pāua-abalone og whitebait-fritter — side om side med græsfodret lammekød, hjortekød og mejeriprodukter i verdensklasse fra et land, der eksporterer smør, ost og Sauvignon Blanc til hele verden."
   },
   "nigerian": {
     "description": "Nigerian cuisine is one of the most diverse and boldly flavoured on the continent — built on earthy egusi (melon-seed stew), jollof rice simmered in spiced tomato, smoky suya beef skewers, palm-oil-red soups loaded with stockfish and goat, and the layered heat of ata rodo (scotch bonnet) and indigenous iru (fermented locust bean).",
-    "description_sv": "Nigerianskt kök är ett av de mest mångsidiga och djärvt smaksatta på kontinenten — byggt på jordnötsartad egusi (melonfrösoppa), jollofris tillagat i kryddig tomat, rökiga suya-nötköttspett, palmolje-röda soppor fyllda med stockfisk och get, och den lagrade hettan av ata rodo (scotch bonnet) och inhemsk iru (fermenterad karobiböna)."
+    "description_sv": "Nigerianskt kök är ett av de mest mångsidiga och djärvt smaksatta på kontinenten — byggt på jordnötsartad egusi (melonfrösoppa), jollofris tillagat i kryddig tomat, rökiga suya-nötköttspett, palmolje-röda soppor fyllda med stockfisk och get, och den lagrade hettan av ata rodo (scotch bonnet) och inhemsk iru (fermenterad karobiböna).",
+    "description_da": "Det nigerianske køkken er et af de mest mangfoldige og smagsintense på kontinentet — bygget på den jordagtige egusi (melonfrøgryde), jollof-ris simret i en krydret tomatbase, røgede suya-spyd med oksekød, supper, der er røde af palmeolie og fyldt med tørfisk og gedekød, samt den nuancerede styrke fra ata rodo (scotch bonnet) og den lokale iru (fermenterede frø fra det afrikanske johannesbrødtræ)."
   },
   "norwegian": {
     "description": "Norwegian cuisine is shaped by the sea and the cold — Atlantic salmon, salted cod, pickled herring, and pinnekjøtt (cured lamb ribs) speak to a long tradition of preservation. Brunost (brown cheese), thick rømme (sour cream), and wild berries round out a larder built from fjord, farm, and forest.",
-    "description_sv": "Norskt kök formas av havet och kylan — atlantlax, saltad torsk, inlagd sill och pinnekjøtt (torkade lammrevbensspjäll) vittnar om en lång bevaringstradition. Brunost (brun ost), tjock rømme (gräddfil) och vilda bär kompletterar ett skafferi byggt av fjord, gård och skog."
+    "description_sv": "Norskt kök formas av havet och kylan — atlantlax, saltad torsk, inlagd sill och pinnekjøtt (torkade lammrevbensspjäll) vittnar om en lång bevaringstradition. Brunost (brun ost), tjock rømme (gräddfil) och vilda bär kompletterar ett skafferi byggt av fjord, gård och skog.",
+    "description_da": "Det norske køkken er formet af havet og kulden — atlantisk laks, saltet torsk, syltede sild og pinnekjøtt (saltede og tørrede lammeribben) vidner om en lang tradition for konservering. Brunost (brun ost), tyk rømme (syrnet fløde) og vilde bær fuldender et spisekammer baseret på råvarer fra fjord, gård og skov."
   },
   "pakistani": {
     "description": "Pakistani cuisine is built on wheat, meat, and intense spicing. Lahori karahi (wok-fried goat or chicken with tomato and ginger), beef nihari, and seekh kebab from the tandoor define a cuisine richer in red meat, stronger in spice, and more wheat-forward than its neighbours. Ghee, fresh ginger-garlic paste, and yogurt underpin every preparation.",
-    "description_sv": "Pakistanskt kök är uppbyggt kring vete, kött och intensiv kryddning. Lahoris karahi (wokad get eller kyckling med tomat och ingefära), biff nihari och seekh-kebab från tandoren definierar ett kök som är rikare på rött kött, starkare i kryddning och mer vetebaserat än sina grannar. Ghee, färsk ingefärs-vitlökspasta och yoghurt utgör grunden i varje tillagning."
+    "description_sv": "Pakistanskt kök är uppbyggt kring vete, kött och intensiv kryddning. Lahoris karahi (wokad get eller kyckling med tomat och ingefära), biff nihari och seekh-kebab från tandoren definierar ett kök som är rikare på rött kött, starkare i kryddning och mer vetebaserat än sina grannar. Ghee, färsk ingefärs-vitlökspasta och yoghurt utgör grunden i varje tillagning.",
+    "description_da": "Det pakistanske køkken bygger på hvede, kød og intens krydring. Lahori karahi (wokstegt gedekød eller kylling med tomat og ingefær), beef nihari og seekh kebab fra tandooren kendetegner et køkken, der er rigere på rødt kød, stærkere krydret og mere hvedebaseret end nabolandenes. Ghee, pasta af frisk ingefær og hvidløg samt yoghurt ligger til grund for enhver tilberedning."
   },
   "palestinian": {
     "description": "Palestinian cuisine is anchored in olive oil, bread, and land. Musakhan — sumac-spiced chicken and caramelised onions baked atop taboon bread — is the national dish. Maqluba (upside-down rice), mujaddara (lentils and bulgur with golden onion), mansaf (lamb in fermented yogurt), and endless mezze built from hummus, za'atar, and labneh form a table that is deeply tied to olive orchards, mountain thyme, and centuries of communal cooking.",
-    "description_sv": "Palestinskt kök förankras i olivolja, bröd och mark. Musakhan — sumackryddad kyckling och karamelliserad lök bakat ovanpå taboonbröd — är nationalrätten. Maqluba (upp-och-nedvänt ris), mujaddara (linser och bulgur med gyllenbrun lök), mansaf (lamm i fermenterad yoghurt) och ändlösa mezze av hummus, za'atar och labneh bildar ett bord djupt kopplat till olivlundar, bergstimjan och sekler av gemensamt matlagande."
+    "description_sv": "Palestinskt kök förankras i olivolja, bröd och mark. Musakhan — sumackryddad kyckling och karamelliserad lök bakat ovanpå taboonbröd — är nationalrätten. Maqluba (upp-och-nedvänt ris), mujaddara (linser och bulgur med gyllenbrun lök), mansaf (lamm i fermenterad yoghurt) och ändlösa mezze av hummus, za'atar och labneh bildar ett bord djupt kopplat till olivlundar, bergstimjan och sekler av gemensamt matlagande.",
+    "description_da": "Det palæstinensiske køkken er forankret i olivenolie, brød og jorden. Musakhan — sumakkrydret kylling og karamelliserede løg bagt oven på taboonbrød — er nationalretten. Maqluba (ris vendt på hovedet), mujaddara (linser og bulgur med gyldenstegte løg), mansaf (lam i fermenteret yoghurt) og et væld af mezze baseret på hummus, za'atar og labneh danner tilsammen en madtradition, der er dybt knyttet til olivenlunde, bjergtimian og århundreders fælles madlavning."
   },
   "persian": {
     "description": "Persian cuisine is defined by three layers of sophistication: saffron, dried limes (limoo amani), and barberries give it a souring-aromatic identity unlike any other; the rice technique — par-boiling, steaming, creating a golden tahdig crust — elevates everyday eating to high art; and slow khorosh stews like ghormeh sabzi (herb-lamb-fenugreek) and fesenjan (walnut-pomegranate-chicken) blend sweet, sour, and herbal notes in ways developed over three millennia.",
-    "description_sv": "Persiskt kök definieras av tre lager av sofistikering: saffran, torkade limefrukter (limoo amani) och berberis ger det en syrlig-aromatisk identitet olik allt annat; ristekniken — förkokning, ångning, skapandet av en gyllenbrun tahdig-skorpa — lyfter vardagsmat till högt konsthantverk; och långsamt kokta khoresh-grytor som ghormeh sabzi (örter-lamm-bockhornsklöver) och fesenjan (valnöt-granatäpple-kyckling) blandar söta, sura och örthaltiga toner på sätt som utvecklats under tre tusen år."
+    "description_sv": "Persiskt kök definieras av tre lager av sofistikering: saffran, torkade limefrukter (limoo amani) och berberis ger det en syrlig-aromatisk identitet olik allt annat; ristekniken — förkokning, ångning, skapandet av en gyllenbrun tahdig-skorpa — lyfter vardagsmat till högt konsthantverk; och långsamt kokta khoresh-grytor som ghormeh sabzi (örter-lamm-bockhornsklöver) och fesenjan (valnöt-granatäpple-kyckling) blandar söta, sura och örthaltiga toner på sätt som utvecklats under tre tusen år.",
+    "description_da": "Det persiske køkken defineres af tre lag af raffinement: safran, tørrede limefrugter (limoo amani) og berberisbær giver det en syrlig-aromatisk identitet uden sidestykke; risteknikken — forkogning, dampning og dannelsen af en gylden tahdig-skorpe — løfter hverdagsmad til stor kunst; og langtidskogte khoresh-gryderetter som ghormeh sabzi (krydderurter, lam og bukkehornskløver) og fesenjan (valnødder, granatæble og kylling) forener søde, syrlige og urteprægede noter på måder, der er udviklet gennem tre årtusinder."
   },
   "peruvian": {
     "description": "Peruvian cuisine is anchored by aji amarillo — the golden chili that appears in virtually every signature dish — and by the country's breathtaking biodiversity: 3,000 potato varieties, endemic chilis, and quinoa all originate here. At the coast, ceviche (raw fish cured in lime with aji amarillo and onion) defines the culinary identity; in the highlands, the Andean pantry of freeze-dried potato (chuño), cuy (guinea pig), and alpaca shapes mountain cooking; and in Lima, successive waves of Chinese, Japanese, and African migration created Chifa and Nikkei sub-cuisines that make Peru's capital one of the world's great food cities.",
-    "description_sv": "Peruanskt kök förankras av aji amarillo — den gyllene chilin som förekommer i praktiskt taget varje signaturrät — och av landets häpnadsväckande biologiska mångfald: 3 000 potatissorter, endemiska chilifrukter och quinoa har alla sitt ursprung här. Vid kusten definierar ceviche (rå fisk kurerad i lime med aji amarillo och lök) den kulinariska identiteten; i höglandet formar andinska råvaror som frystorkad potatis (chuño), marsvin (cuy) och alpaka bergsmaten; och i Lima skapade historiska vågor av kinesisk, japansk och afrikansk invandring Chifa- och Nikkei-delköken som gör Perus huvudstad till en av världens stora matkulturer."
+    "description_sv": "Peruanskt kök förankras av aji amarillo — den gyllene chilin som förekommer i praktiskt taget varje signaturrät — och av landets häpnadsväckande biologiska mångfald: 3 000 potatissorter, endemiska chilifrukter och quinoa har alla sitt ursprung här. Vid kusten definierar ceviche (rå fisk kurerad i lime med aji amarillo och lök) den kulinariska identiteten; i höglandet formar andinska råvaror som frystorkad potatis (chuño), marsvin (cuy) och alpaka bergsmaten; och i Lima skapade historiska vågor av kinesisk, japansk och afrikansk invandring Chifa- och Nikkei-delköken som gör Perus huvudstad till en av världens stora matkulturer.",
+    "description_da": "Det peruvianske køkken er forankret i aji amarillo — den gyldne chili, som indgår i stort set alle signaturretter — og i landets betagende biodiversitet: 3.000 kartoffelsorter, endemiske chilier og quinoa har alle deres oprindelse her. Ved kysten definerer ceviche (rå fisk marineret i limesaft med aji amarillo og løg) den kulinariske identitet; i højlandet former det andinske spisekammer med frysetørret kartoffel (chuño), cuy (marsvin) og alpaka bjergkøkkenet; og i Lima skabte successive bølger af kinesisk, japansk og afrikansk migration køkkenretningerne Chifa og Nikkei, som gør Perus hovedstad til en af verdens store madbyer."
   },
   "polish": {
     "description": "Polish cuisine is built on the trinity of pork, cabbage, and root vegetables, shaped by a Central European climate of harsh winters and short growing seasons. Sauerkraut (kapusta kiszona) underpins bigos — the hunter's stew simmered for days with wild mushrooms, smoked sausage, and game — while żurek (sour rye soup with hard-boiled egg) is the quintessential Easter breakfast. The national ritual of Sunday rosół (golden chicken broth) and the Christmas Eve tradition of meatless barszcz z uszkami (beetroot soup with mushroom dumplings) reveals a cuisine deeply tied to religious calendar and forest foraging.",
-    "description_sv": "Polskt kök är byggt på triaden fläsk, kål och rotfrukter, format av ett centraleuropeiskt klimat med hårda vintrar och korta odlingssäsonger. Surkål (kapusta kiszona) utgör grunden i bigos — jägargrytan som sjudas i dagar med vildsvamp, rökt korv och vilt — medan żurek (surt rågmjölssoppa med hårdkokt ägg) är den quintessentiella påskfrukostmaten. Den nationella ritualen med söndagsrosół (gyllene kycklingbuljong) och julaftonstraditionen av köttfri barszcz z uszkami (rödbetor-soppa med svampdumplings) avslöjar ett kök djupt knutet till religiös kalender och skogsplockande."
+    "description_sv": "Polskt kök är byggt på triaden fläsk, kål och rotfrukter, format av ett centraleuropeiskt klimat med hårda vintrar och korta odlingssäsonger. Surkål (kapusta kiszona) utgör grunden i bigos — jägargrytan som sjudas i dagar med vildsvamp, rökt korv och vilt — medan żurek (surt rågmjölssoppa med hårdkokt ägg) är den quintessentiella påskfrukostmaten. Den nationella ritualen med söndagsrosół (gyllene kycklingbuljong) och julaftonstraditionen av köttfri barszcz z uszkami (rödbetor-soppa med svampdumplings) avslöjar ett kök djupt knutet till religiös kalender och skogsplockande.",
+    "description_da": "Det polske køkken bygger på en treenighed af svinekød, kål og rodfrugter, formet af et centraleuropæisk klima med barske vintre og korte vækstsæsoner. Surkål (kapusta kiszona) danner grundlag for bigos — jægergryden, der simrer i dagevis med vilde svampe, røget pølse og vildt — mens żurek (sur rugsuppe med hårdkogt æg) er den helt klassiske påskemorgenmad. Det nationale søndagsritual med rosół (gylden hønsebouillon) og juleaftentraditionen med kødfri barszcz z uszkami (rødbedesuppe med svampedumplings) vidner om et køkken, der er dybt knyttet til den religiøse kalender og traditionen for at sanke i skoven."
   },
   "polynesian": {
     "description": "Polynesian cuisine spans a vast ocean triangle from Hawaii to New Zealand to Easter Island, united by three pillars: the earth oven (imu/umu/hāngi), the coconut, and taro. The imu — a pit lined with hot stones and covered in banana leaves — slow-roasts kalua pig and root vegetables over hours, and defines the feast culture of luau, umu, and hāngi. Raw fish preparations (Hawaiian poke, Samoan oka, Tahitian poisson cru) celebrate the Pacific Ocean's abundance. Breadfruit (ulu) was the pre-contact starchy staple that could feed a village from a single tree, while taro (kalo) carries deep spiritual significance as the elder sibling of the Hawaiian people.",
-    "description_sv": "Polynesiskt kök sträcker sig över en enorm oceanisk triangel från Hawaii till Nya Zeeland till Påskön, förenat av tre pelare: jordugnen (imu/umu/hāngi), kokosnöten och tarot. Imu — en grop kantad med varma stenar och täckt med bananblad — tillagar långsamt kalua-gris och rotfrukter i timmar och definierar festkulturen vid luau, umu och hāngi. Råfiskrätter (hawaiiansk poke, samoansk oka, tahitisk poisson cru) hyllar Stillahavsoceanens rikedom. Brödfrukt (ulu) var den förkoloniala stärkelsebasen som kunde föda en hel by från ett enda träd, medan taro (kalo) bär djup andlig betydelse som det hawaiianska folkets äldrebror."
+    "description_sv": "Polynesiskt kök sträcker sig över en enorm oceanisk triangel från Hawaii till Nya Zeeland till Påskön, förenat av tre pelare: jordugnen (imu/umu/hāngi), kokosnöten och tarot. Imu — en grop kantad med varma stenar och täckt med bananblad — tillagar långsamt kalua-gris och rotfrukter i timmar och definierar festkulturen vid luau, umu och hāngi. Råfiskrätter (hawaiiansk poke, samoansk oka, tahitisk poisson cru) hyllar Stillahavsoceanens rikedom. Brödfrukt (ulu) var den förkoloniala stärkelsebasen som kunde föda en hel by från ett enda träd, medan taro (kalo) bär djup andlig betydelse som det hawaiianska folkets äldrebror.",
+    "description_da": "Det polynesiske køkken strækker sig over en enorm trekant i Stillehavet fra Hawaii til New Zealand og Påskeøen og forenes af tre grundpiller: jordovnen (imu/umu/hāngī), kokosnødden og taro. En imu — en grube foret med varme sten og dækket med bananblade — langtidssteger kalua-gris og rodfrugter i timevis og er definerende for festmåltidskulturen omkring luau, umu og hāngī. Rå fiskeretter (hawaiiansk poke, samoansk oka og tahitiansk poisson cru) hylder Stillehavets overflod. Brødfrugt (ulu) var før kontakten med europæerne den stivelsesrige basisfødevare, hvor et enkelt træ kunne brødføde en hel landsby, mens taro (kalo) har dyb åndelig betydning som det hawaiianske folks ældre søskende."
   },
   "portuguese": {
     "description": "Portuguese cuisine is defined by three obsessions: salt cod (bacalhau — the 'faithful friend' with 365 recipes), olive oil of world-class quality, and fresh coriander as the national herb of mainland Europe. Where Spanish cuisine uses parsley, Portugal uses coriander extravagantly — in açorda (bread-coriander soup), in amêijoas à Bulhão Pato (clams with garlic and coriander), and in molho de coentros over grilled fish. The Age of Discovery brought piri piri from Africa, cinnamon from Sri Lanka, and tomatoes from the Americas — ingredients Portugal distributed to the world then absorbed into its own kitchen, creating a cuisine that is Mediterranean in olive oil and wine, Atlantic in its fish, and global in its spices.",
-    "description_sv": "Portugisiskt kök definieras av tre besatthetsobjekt: salt torskfisk (bacalhau — 'den trogne vännen' med 365 recept), olivolja av världsklass och färsk koriander som det kontinentala Europas nationalört. Där spansk matlagning använder persilja, använder Portugal koriander extravagant — i açorda (bröd-korianderssoppa), i amêijoas à Bulhão Pato (musslor med vitlök och koriander) och i molho de coentros över grillad fisk. Upptäcktstidens voyager förde piri piri från Afrika, kanel från Sri Lanka och tomater från Amerika — ingredienser som Portugal spred till världen och sedan absorberade in i sitt eget kök, och skapade ett kök som är medelhavsliknande i olivolja och vin, atlantiskt i sin fisk och globalt i sina kryddor."
+    "description_sv": "Portugisiskt kök definieras av tre besatthetsobjekt: salt torskfisk (bacalhau — 'den trogne vännen' med 365 recept), olivolja av världsklass och färsk koriander som det kontinentala Europas nationalört. Där spansk matlagning använder persilja, använder Portugal koriander extravagant — i açorda (bröd-korianderssoppa), i amêijoas à Bulhão Pato (musslor med vitlök och koriander) och i molho de coentros över grillad fisk. Upptäcktstidens voyager förde piri piri från Afrika, kanel från Sri Lanka och tomater från Amerika — ingredienser som Portugal spred till världen och sedan absorberade in i sitt eget kök, och skapade ett kök som är medelhavsliknande i olivolja och vin, atlantiskt i sin fisk och globalt i sina kryddor.",
+    "description_da": "Det portugisiske køkken er defineret af tre besættelser: saltet torsk (bacalhau — den 'trofaste ven' med 365 opskrifter), olivenolie i verdensklasse og frisk koriander som det europæiske fastlands nationalurt. Hvor det spanske køkken bruger persille, bruger Portugal koriander i rigelige mængder — i açorda (brød- og koriandersuppe), i amêijoas à Bulhão Pato (muslinger med hvidløg og koriander) og i molho de coentros på grillet fisk. Opdagelsestiden bragte piri piri fra Afrika, kanel fra Sri Lanka og tomater fra Amerika — ingredienser, som Portugal spredte til verden og derefter optog i sit eget køkken og dermed skabte et køkken, der er middelhavspræget i sin olivenolie og vin, atlantisk i sin fisk og globalt i sine krydderier."
   },
   "puerto_rican": {
     "description": "Puerto Rican cuisine fuses Spanish, African, and Taíno traditions around sofrito, adobo, and slow-roasted pork — from lechón and pernil to arroz con gandules, mofongo, and viandas (root vegetable platters), all seasoned with recao, ají dulce, and annatto.",
-    "description_sv": "Puerto Ricanskt kök smälter samman spanska, afrikanska och Taíno-traditioner kring sofrito, adobo och långstekt fläsk — från lechón och pernil till arroz con gandules, mofongo och viandas, kryddade med recao, ají dulce och annatto."
+    "description_sv": "Puerto Ricanskt kök smälter samman spanska, afrikanska och Taíno-traditioner kring sofrito, adobo och långstekt fläsk — från lechón och pernil till arroz con gandules, mofongo och viandas, kryddade med recao, ají dulce och annatto.",
+    "description_da": "Det puertoricanske køkken forener spanske, afrikanske og Taíno-traditioner omkring sofrito, adobo og langtidsstegt svinekød — fra lechón og pernil til arroz con gandules, mofongo og viandas (fade med rodfrugter), alt sammen krydret med recao, ají dulce og annatto."
   },
   "punjabi": {
     "description": "Punjabi cuisine — the hearty cooking of the 'Granary of India/Pakistan' — is built on tandoor heat, buffalo dairy, and bold wheat breads. From butter chicken and dal makhani to sarson da saag with makki roti, ghee, paneer, and garam masala define its rich, smoky, indulgent character.",
-    "description_sv": "Punjabiskt kök — från 'Indiens spannmålskammare' — bygger på tandurvärme, buffelmjölk och kraftiga vetebröd. Från smörkyckling och dal makhani till sarson da saag med makki roti — ghee, paneer och garam masala ger köket dess rika, rökiga karaktär."
+    "description_sv": "Punjabiskt kök — från 'Indiens spannmålskammare' — bygger på tandurvärme, buffelmjölk och kraftiga vetebröd. Från smörkyckling och dal makhani till sarson da saag med makki roti — ghee, paneer och garam masala ger köket dess rika, rökiga karaktär.",
+    "description_da": "Det punjabiske køkken — den solide madtradition fra 'Indiens/Pakistans kornkammer' — bygger på tandoorens varme, mejeriprodukter af bøffelmælk og kraftige hvedebrød. Fra butter chicken og dal makhani til sarson da saag med makki roti er det ghee, paneer og garam masala, der definerer dets fyldige, røgede og overdådige karakter."
   },
   "romanian": {
     "description": "Romanian cuisine is built on slow-cooked pork, tangy smântână (sour cream), and cornmeal mămăligă — hearty and seasonal, shaped by Carpathian pastoral traditions, Balkan vegetable culture, and the Danube and Black Sea fisheries.",
-    "description_sv": "Rumänskt kök bygger på långkokt fläsk, syrlig gräddfil (smântână) och majsgröt (mămăligă) — hjärtligt och säsongsbetonat, format av karpatiska boskapstraditioner, balkanisk grönsakskulturell och Donauns och Svarta havets fiske."
+    "description_sv": "Rumänskt kök bygger på långkokt fläsk, syrlig gräddfil (smântână) och majsgröt (mămăligă) — hjärtligt och säsongsbetonat, format av karpatiska boskapstraditioner, balkanisk grönsakskulturell och Donauns och Svarta havets fiske.",
+    "description_da": "Det rumænske køkken bygger på langtidstilberedt svinekød, syrlig smântână (syrnet fløde) og mămăligă af majsmel — et solidt, sæsonpræget køkken formet af Karpaternes hyrdetraditioner, Balkans grøntsagskultur og fiskeriet i Donau og Sortehavet."
   },
   "russian": {
     "description": "Russian cuisine is shaped by harsh winters and vast forests — beetroot borscht, meat-filled pelmeni, beef stroganoff in smetana, black rye bread, and foraged mushrooms define a cooking tradition built on preservation, root vegetables, dill, and generous dairy.",
-    "description_sv": "Ryskt kök formats av kalla vintrar och vidsträckta skogar — rödbetsborsjtj, köttfyllda pelmeni, biff stroganoff i smetana, mörkt rågbröd och skogsplocknadssvamp beskriver ett kök byggt på inläggning, rotfrukter, dill och riklig mejeriproduktion."
+    "description_sv": "Ryskt kök formats av kalla vintrar och vidsträckta skogar — rödbetsborsjtj, köttfyllda pelmeni, biff stroganoff i smetana, mörkt rågbröd och skogsplocknadssvamp beskriver ett kök byggt på inläggning, rotfrukter, dill och riklig mejeriproduktion.",
+    "description_da": "Det russiske køkken er formet af barske vintre og vidtstrakte skove — borscht med rødbede, kødfyldte pelmeni, bøf stroganoff i smetana, sort rugbrød og sankede svampe kendetegner en madtradition bygget på konservering, rodfrugter, dild og rigeligt med mejeriprodukter."
   },
   "senegalese": {
     "description": "Senegalese cuisine is West Africa's most celebrated cooking tradition — built on thiéboudienne (fish rice, UNESCO heritage dish), yassa (lemon-marinated chicken or fish), and mafé (peanut stew), with the Atlantic's fish, groundnut oil, millet, and fermented umami condiments (yeet, netetou) at its heart.",
-    "description_sv": "Senegalesiskt kök är Västafrikas mest hyllade kulinariska tradition — byggt på thiéboudienne (fiskris, UNESCO-arv), yassa (citronmarinerad kyckling eller fisk) och mafé (jordnötsgryta), med Atlantens fisk, jordnötsolja, hirs och fermenterade umami-kryddor (yeet, netetou) som grund."
+    "description_sv": "Senegalesiskt kök är Västafrikas mest hyllade kulinariska tradition — byggt på thiéboudienne (fiskris, UNESCO-arv), yassa (citronmarinerad kyckling eller fisk) och mafé (jordnötsgryta), med Atlantens fisk, jordnötsolja, hirs och fermenterade umami-kryddor (yeet, netetou) som grund.",
+    "description_da": "Det senegalesiske køkken er Vestafrikas mest hyldede madtradition — bygget på thiéboudienne (fisk med ris, en ret optaget på UNESCOs liste over immateriel kulturarv), yassa (citronmarineret kylling eller fisk) og mafé (jordnøddegryde), med Atlanterhavets fisk, jordnøddeolie, hirse og fermenterede, umamigivende smagsgivere (yeet, netetou) som omdrejningspunkt."
   },
   "sichuan": {
     "description": "Sichuan cuisine is defined by mala — the electric numbing-heat from Sichuan peppercorn and chilli — built on doubanjiang fermented broad bean paste, the soul spice of mapo tofu, twice-cooked pork, dan dan noodles and the communal hotpot that has swept the world.",
-    "description_sv": "Sichuanskt kök definieras av mala — den elektriska domningshetta från sichuanpeppar och chilli — byggt på doubanjiang fermenterad bönpasta, själskryddan i mapo tofu, huiguorou, dan dan-nudlar och den gemensamma hotpot som erövrat världen."
+    "description_sv": "Sichuanskt kök definieras av mala — den elektriska domningshetta från sichuanpeppar och chilli — byggt på doubanjiang fermenterad bönpasta, själskryddan i mapo tofu, huiguorou, dan dan-nudlar och den gemensamma hotpot som erövrat världen.",
+    "description_da": "Det sichuanske køkken defineres af mala — den elektriske, bedøvende hede fra sichuanpeber og chili — og bygger på den fermenterede hestebønnepasta doubanjiang, som er den centrale smagsgiver i mapo tofu, svinekød tilberedt ad to omgange, dan dan-nudler og hotpotten, der deles ved bordet og har bredt sig over hele verden."
   },
   "singaporean": {
     "description": "Singaporean cuisine is the world's great multicultural table — Hainanese chicken rice, coconut laksa, chilli crab, char kway teow — born where Chinese, Malay, Tamil, and Peranakan traditions fused at a crossroads port city into a uniquely Singaporean whole.",
-    "description_sv": "Singaporeanskt kök är världens stora multikulturella matbord — Hainanesisk kycklingris, kokosnötslaksa, chilikrabba, char kway teow — fött där kinesiska, malajiska, tamilska och Peranakan-traditioner smälte samman vid en korsvägsstad till ett unikt singaporeanskt kök."
+    "description_sv": "Singaporeanskt kök är världens stora multikulturella matbord — Hainanesisk kycklingris, kokosnötslaksa, chilikrabba, char kway teow — fött där kinesiska, malajiska, tamilska och Peranakan-traditioner smälte samman vid en korsvägsstad till ett unikt singaporeanskt kök.",
+    "description_da": "Det singaporeanske køkken er verdens store multikulturelle madbord — Hainanese chicken rice, coconut laksa, chilli crab og char kway teow — opstået, da kinesiske, malajiske, tamilske og peranakanske traditioner i en havneby ved handelsvejenes knudepunkt smeltede sammen til en unik singaporeansk helhed."
   },
   "south_african": {
     "description": "South African cuisine is the braai fire and the cast-iron potjie — boerewors, biltong, bobotie, bunny chow and pap — born where indigenous Nguni, Cape Malay, Dutch Afrikaner, Zulu, and Indian Durban traditions all share one table.",
-    "description_sv": "Sydafrikanskt kök är braaieldns glöd och gjutjärnspotjien — boerewors, biltong, bobotie, bunny chow och pap — fött där inhemska Nguni-, kap-malajiska, afrikanska, Zulu- och indiska Durban-traditioner delar ett bord."
+    "description_sv": "Sydafrikanskt kök är braaieldns glöd och gjutjärnspotjien — boerewors, biltong, bobotie, bunny chow och pap — fött där inhemska Nguni-, kap-malajiska, afrikanska, Zulu- och indiska Durban-traditioner delar ett bord.",
+    "description_da": "Det sydafrikanske køkken er braai-ilden og støbejernsgryden potjie — boerewors, biltong, bobotie, bunny chow og pap — skabt dér, hvor traditioner fra Nguni- og zulufolkene, Cape Malay-samfundet, afrikaanere med hollandske rødder og Durbans indiske befolkning mødes om ét bord."
   },
   "south_indian": {
     "description": "South Indian cuisine is the crisp dosa, the steamed idli, the tangy tamarind sambar, and the fierce black pepper — a rice-lentil-coconut world spanning Tamil Nadu, Kerala, Karnataka, and Andhra Pradesh, where toddy-shop beef fry meets Brahmin coconut stew at the same banana leaf.",
-    "description_sv": "Sydindiskt kök är den knapriga dosan, den ångade idlin, den syrliga tamarind-sambarn och den intensiva svartpepparn — en ris-linser-kokosvärld som spänner från Tamil Nadu, Kerala, Karnataka och Andhra Pradesh, där beef fry möter kokosstew på samma bananblad."
+    "description_sv": "Sydindiskt kök är den knapriga dosan, den ångade idlin, den syrliga tamarind-sambarn och den intensiva svartpepparn — en ris-linser-kokosvärld som spänner från Tamil Nadu, Kerala, Karnataka och Andhra Pradesh, där beef fry möter kokosstew på samma bananblad.",
+    "description_da": "Det sydindiske køkken er den sprøde dosa, den dampede idli, den syrlige tamarind-sambar og den intense sorte peber — en verden af ris, linser og kokos, der strækker sig over Tamil Nadu, Kerala, Karnataka og Andhra Pradesh, hvor toddy-barernes beef fry møder brahminsk kokosgryde på det samme bananblad."
   },
   "southern_us": {
     "description": "Southern US cuisine is slow-smoked BBQ and buttermilk fried chicken, collard greens simmered with ham hocks, stone-ground grits with river shrimp, and biscuits slathered in sawmill gravy — a cuisine forged from Native American corn, West African technique, and European settlement across Georgia, Mississippi, the Carolinas, and Louisiana.",
-    "description_sv": "Södra USA:s kök är långsamt rökt BBQ och kärnmjölksstekt kyckling, collardgrönt kokt med skinka, grovmalda grits med räkor och kex med mjölksås — ett kök format av ursprungsamerikansk majs, västafrikansk teknik och europeisk bosättning i Georgia, Mississippi, Carolinas och Louisiana."
+    "description_sv": "Södra USA:s kök är långsamt rökt BBQ och kärnmjölksstekt kyckling, collardgrönt kokt med skinka, grovmalda grits med räkor och kex med mjölksås — ett kök format av ursprungsamerikansk majs, västafrikansk teknik och europeisk bosättning i Georgia, Mississippi, Carolinas och Louisiana.",
+    "description_da": "Det amerikanske sydstatskøkken er langsomt røget BBQ og kylling marineret i kærnemælk og friturestegt, collard greens simret med skinkeskanke, stenmalede grits med flodrejer og biscuits overhældt med sawmill gravy — et køkken formet af majs fra Amerikas oprindelige folk, vestafrikanske teknikker og europæisk bosættelse på tværs af Georgia, Mississippi, Carolina-staterne og Louisiana."
   },
   "spanish": {
     "description": "Spanish cuisine balances bold charcuterie — led by jamón ibérico and chorizo — with Atlantic and Mediterranean seafood, all unified by a sofrito of tomato, garlic, and olive oil. Regional traditions range from Basque pintxos to Valencian paella, making Spain one of Europe's most diverse culinary nations.",
-    "description_sv": "Spanskt kök förenas av sofritton — tomat, vitlök och olivolja — och en stolthet i charkuteri som jamón ibérico och chorizo, bredvid rik seafood från Atlanten och Medelhavet. Regionala traditioner sträcker sig från baskiska pintxos till valenciansk paella."
+    "description_sv": "Spanskt kök förenas av sofritton — tomat, vitlök och olivolja — och en stolthet i charkuteri som jamón ibérico och chorizo, bredvid rik seafood från Atlanten och Medelhavet. Regionala traditioner sträcker sig från baskiska pintxos till valenciansk paella.",
+    "description_da": "Det spanske køkken balancerer smagskraftigt charcuteri — anført af jamón ibérico og chorizo — med fisk og skaldyr fra Atlanterhavet og Middelhavet, alt sammen forenet af en sofrito på tomat, hvidløg og olivenolie. Regionale traditioner spænder fra baskiske pintxos til valenciansk paella, hvilket gør Spanien til en af Europas mest mangfoldige kulinariske nationer."
   },
   "sri_lankan": {
     "description": "Sri Lankan cuisine is the island's coconut-soaked soul food — hoppers and string hoppers with pol sambol, fish ambul thiyal soured with goraka, kottu roti chopped at midnight on a hot griddle, and dal curry enriched with coconut milk. Anchored by Ceylon cinnamon, Maldive fish, and freshly grated coconut, it fuses Buddhist vegetarian traditions with Tamil, Malay, and Dutch colonial layers.",
-    "description_sv": "Srilankesiskt kök är öns kokosnöts-genomsyrade själsmat — hoppers och strängade hoppers med pol sambol, fish ambul thiyal syrad med goraka, kottu roti hackad på glödhet grill vid midnatt och dal curry med kokosmjölk. Förankrat i Ceylon-kanel, Maldivfisk och färskriven kokos, fusionerar det buddhistiska vegetariska traditioner med tamilska, malajiska och holländsk-koloniala lager."
+    "description_sv": "Srilankesiskt kök är öns kokosnöts-genomsyrade själsmat — hoppers och strängade hoppers med pol sambol, fish ambul thiyal syrad med goraka, kottu roti hackad på glödhet grill vid midnatt och dal curry med kokosmjölk. Förankrat i Ceylon-kanel, Maldivfisk och färskriven kokos, fusionerar det buddhistiska vegetariska traditioner med tamilska, malajiska och holländsk-koloniala lager.",
+    "description_da": "Det srilankanske køkken er øens soulfood gennemsyret af kokos — hoppers og string hoppers med pol sambol, fish ambul thiyal syrnet med goraka, kottu roti hakket ved midnat på en varm stegeplade og dal curry beriget med kokosmælk. Med Ceylon-kanel, Maldive fish og friskrevet kokos som grundpiller forener det buddhistiske vegetariske traditioner med tamilske og malajiske traditioner samt indflydelse fra den hollandske kolonitid."
   },
   "swedish": {
     "description": "Swedish cuisine is husmanskost — rooted in the land's roots and water. Köttbullar in cream gravy with lingonberry and buttered potatoes, gravlax with mustard-dill sauce, Baltic herring in a dozen marinades, and the winter ritual of ärtsoppa on Thursdays. Forged by cold winters and an agricultural tradition of curing, fermenting, and pickling, it balances simple ingredients with a quiet precision that feels timeless.",
-    "description_sv": "Svensk husmanskost är förankrad i jordens rötter och vattnets rikedomar. Köttbullar i gräddsås med lingonsylt och smörkokt potatis, gravlax med hovmästarsås, inlagd sill i tolv varianter och torsdagens ärtsoppa. Kylda vintrar och en jordbrukstradition av saltning, fermentering och inläggning har format ett kök som balanserar enkla råvaror med stilla precision."
+    "description_sv": "Svensk husmanskost är förankrad i jordens rötter och vattnets rikedomar. Köttbullar i gräddsås med lingonsylt och smörkokt potatis, gravlax med hovmästarsås, inlagd sill i tolv varianter och torsdagens ärtsoppa. Kylda vintrar och en jordbrukstradition av saltning, fermentering och inläggning har format ett kök som balanserar enkla råvaror med stilla precision.",
+    "description_da": "Det svenske køkken er husmanskost — forankret i jordens rødder og vandets rigdomme. Köttbullar i flødesovs med tyttebær og smørvendte kartofler, gravlax med sennepssauce og dild, østersøsild i et dusin marinader og vinterritualet med ärtsoppa om torsdagen. Formet af kolde vintre og en landbrugstradition for saltning, fermentering og syltning balancerer det enkle råvarer med en stille præcision, der føles tidløs."
   },
   "swiss": {
     "description": "Swiss cuisine is an alpine mosaic of four culinary cultures — French, German, Italian, and Romansh — united by exceptional cheesemaking (Gruyère, Emmental, Raclette, Appenzeller), creamy fondue and rösti, Zürcher Geschnetzeltes veal in cream, Bircher muesli, Bündnerfleisch air-dried beef, and a world-class dairy and chocolate tradition.",
-    "description_sv": "Schweiziskt kök är ett alpint mosaik av fyra kulinariska kulturer — franska, tyska, italienska och reto-romanska — förenat av enastående osttillverkning (Gruyère, Emmental, Raclette, Appenzeller), krämig fondue och rösti, Zürcher Geschnetzeltes kalvkött i grädde, Birchermüesli, Bündnerfleisch lufttorkad nötkött och en världsklass mejeri- och chokladtradition."
+    "description_sv": "Schweiziskt kök är ett alpint mosaik av fyra kulinariska kulturer — franska, tyska, italienska och reto-romanska — förenat av enastående osttillverkning (Gruyère, Emmental, Raclette, Appenzeller), krämig fondue och rösti, Zürcher Geschnetzeltes kalvkött i grädde, Birchermüesli, Bündnerfleisch lufttorkad nötkött och en världsklass mejeri- och chokladtradition.",
+    "description_da": "Det schweiziske køkken er en alpin mosaik af fire kulinariske kulturer — fransk, tysk, italiensk og rætoromansk — forenet af enestående ostefremstilling (Gruyère, Emmental, Raclette, Appenzeller), cremet fondue og rösti, Zürcher Geschnetzeltes med kalvekød i fløde, Bircher muesli, Bündnerfleisch af lufttørret oksekød samt en mejeri- og chokoladetradition i verdensklasse."
   },
   "syrian": {
     "description": "Syrian cuisine is the generous soul of the Levant — kibbeh of spiced lamb and bulgur, creamy labneh and aged shanklish, a mezze of stuffed grape leaves and makdous eggplant, all perfumed with Aleppo pepper, za'atar, and the warm seven-spice blend baharat.",
-    "description_sv": "Syriskt kök är Levantens generösa själ — kibbeh av kryddat lamm och bulgur, krämig labneh och lagrad shanklish, en mezze av fyllda druvblad och makdous-aubergine, allt parfymerat med Aleppopeppar, za'atar och den varma sjukryddblandningen baharat."
+    "description_sv": "Syriskt kök är Levantens generösa själ — kibbeh av kryddat lamm och bulgur, krämig labneh och lagrad shanklish, en mezze av fyllda druvblad och makdous-aubergine, allt parfymerat med Aleppopeppar, za'atar och den varma sjukryddblandningen baharat.",
+    "description_da": "Det syriske køkken er Levantens gavmilde sjæl — kibbeh af krydret lam og bulgur, cremet labneh og modnet shanklish samt mezze med fyldte vinblade og makdous-aubergine, alt sammen aromatiseret med Aleppo-peber, za'atar og den varmende syvkrydderiblanding baharat."
   },
   "taiwanese": {
     "description": "Taiwanese cuisine is a vivid island table — braised pork belly over rice (lu rou fan), beef noodle soup, three-cup chicken fragrant with basil and sesame oil, oyster omelets from the coast and milkfish soup from Tainan, shaped by Fujianese, Hakka, Japanese and indigenous traditions.",
-    "description_sv": "Taiwanesiskt kök är ett livfullt ö-bord — brynt fläskbuk på ris (lu rou fan), nötköttsnudelsoppa, tre-koppar-kyckling med basilika och sesamolja, ostronomelett från kusten och mjölkfisksoppa från Tainan, format av fujiananska, hakka, japanska och urbefolkningens traditioner."
+    "description_sv": "Taiwanesiskt kök är ett livfullt ö-bord — brynt fläskbuk på ris (lu rou fan), nötköttsnudelsoppa, tre-koppar-kyckling med basilika och sesamolja, ostronomelett från kusten och mjölkfisksoppa från Tainan, format av fujiananska, hakka, japanska och urbefolkningens traditioner.",
+    "description_da": "Det taiwanske køkken er et farverigt økøkken — braiseret svinebryst over ris (lu rou fan), nudelsuppe med oksekød, tre-koppers-kylling duftende af basilikum og sesamolie, østersomeletter fra kysten og mælkefiskesuppe fra Tainan — formet af traditioner fra Fujian, Hakka-folket, Japan og Taiwans oprindelige folk."
   },
   "tanzanian": {
     "description": "Tanzanian cuisine is a mosaic of Swahili coast, mainland Bantu and island traditions — ugali cornmeal with nyama choma grilled meat, Zanzibar pilau spiced with cloves and cardamom, biryani from Arab traders, coconut fish curries and rich bean stews that reflect centuries of Indian Ocean commerce and diverse ethnic heritage.",
-    "description_sv": "Tanzaniskt kök är en mosaik av Swahilikusten, bantu och öarnas traditioner — majsgröt (ugali) med grillat kött (nyama choma), Zanzibar-pilau kryddad med nejlika och kardemumma, biryani från arabiska handelsmän, kokosfiskgrytor och rika bönsopor som speglar sekler av Indiska oceanens handel."
+    "description_sv": "Tanzaniskt kök är en mosaik av Swahilikusten, bantu och öarnas traditioner — majsgröt (ugali) med grillat kött (nyama choma), Zanzibar-pilau kryddad med nejlika och kardemumma, biryani från arabiska handelsmän, kokosfiskgrytor och rika bönsopor som speglar sekler av Indiska oceanens handel.",
+    "description_da": "Det tanzaniske køkken er en mosaik af traditioner fra Swahilikysten, fastlandets Bantu-folk og øerne — ugali af majsmel med det grillede kød nyama choma, Zanzibar-pilau krydret med nelliker og kardemomme, biryani fra arabiske handelsfolk, fiskekarryer med kokos og fyldige bønnegryder, som afspejler århundreders handel på Det Indiske Ocean og en mangfoldig etnisk arv."
   },
   "tex_mex": {
     "description": "Tex-Mex is the bold, hearty cuisine of Texas and the US-Mexico borderlands — flour tortilla burritos, fajitas sizzling on cast iron, chili con carne, cheese-smothered enchiladas, nachos and smoky beef ribs slow-cooked over mesquite; a fusion of Mexican traditions, Spanish colonial ranching and American cowboy culture that became a global food phenomenon.",
-    "description_sv": "Tex-Mex är det kraftfulla, mättande köket från Texas och den mexikansk-amerikanska gränstrakten — mjöltortilla-burritos, fajitas fräsande på gjutjärn, chili con carne, ostbakade enchiladas, nachos och rökta nötkotletter tillagade över mesquite; en fusion av mexikanska traditioner, spanskt kolonialrancherande och amerikansk cowboytradition som blivit ett globalt matfenomen."
+    "description_sv": "Tex-Mex är det kraftfulla, mättande köket från Texas och den mexikansk-amerikanska gränstrakten — mjöltortilla-burritos, fajitas fräsande på gjutjärn, chili con carne, ostbakade enchiladas, nachos och rökta nötkotletter tillagade över mesquite; en fusion av mexikanska traditioner, spanskt kolonialrancherande och amerikansk cowboytradition som blivit ett globalt matfenomen.",
+    "description_da": "Tex-Mex er det kraftige, mættende køkken fra Texas og grænseegnene mellem USA og Mexico — burritos i hvedetortillas, fajitas sydende på støbejern, chili con carne, enchiladas dækket af ost, nachos og røgede okseribben langsomt tilberedt over mesquite; en fusion af mexicanske traditioner, spansk ranchdrift fra kolonitiden og amerikansk cowboykultur, der blev et globalt madfænomen."
   },
   "thai": {
     "description": "Thai cuisine balances five fundamental flavours — sweet, sour, salty, spicy and umami — in every dish. Fragrant curry pastes built from galangal, lemongrass and kaffir lime, the holy basil chicken stir-fry pad krapao, som tam green papaya salad, pad thai rice noodles and GI-certified jasmine rice from the Thung Kula Rong Hai basin define a culinary tradition celebrated worldwide for aromatic layering and street-food vibrancy.",
-    "description_sv": "Thaimat balanserar fem grundsmaker — söt, sur, salt, stark och umami — i varje rätt. Doftande currypastar av galangal, citrongräs och kaffirlime, pad krapao med helig basilika och kyckling, grön papayasallad (som tam), pad thai och det GI-certifierade jasminriset från Thung Kula Rong Hai-bäckenet definierar en kulinarisk tradition känd för aromatisk komplexitet och gatumatsvitalitet."
+    "description_sv": "Thaimat balanserar fem grundsmaker — söt, sur, salt, stark och umami — i varje rätt. Doftande currypastar av galangal, citrongräs och kaffirlime, pad krapao med helig basilika och kyckling, grön papayasallad (som tam), pad thai och det GI-certifierade jasminriset från Thung Kula Rong Hai-bäckenet definierar en kulinarisk tradition känd för aromatisk komplexitet och gatumatsvitalitet.",
+    "description_da": "Det thailandske køkken balancerer fem grundsmage — sødt, surt, salt, stærkt og umami — i hver ret. Duftende karrypastaer baseret på galanga, citrongræs og kaffirlime, wokretten pad krapao med kylling og hellig basilikum, den grønne papayasalat som tam, risnudelretten pad thai og GI-certificeret jasminris fra Thung Kula Rong Hai-bækkenet definerer en madtradition, der hyldes verden over for sine aromatiske lag og sit pulserende gadekøkken."
   },
   "trinidadian": {
     "description": "Trinidadian cuisine fuses African, South Asian, Creole and Chinese influences into one of the Caribbean's most vibrant food cultures — doubles (fried bara with curried chickpeas) eaten curbside at dawn, pelau rice slow-cooked with caramelised chicken and pigeon peas, curry goat at Sunday dinner, bake-and-shark at Maracas Beach, and callaloo of dasheen leaves and crab that traces its roots to both West Africa and the Amerindians.",
-    "description_sv": "Trinidadiskt kök smälter samman afrikanska, sydasiatiska, kreolska och kinesiska influenser i en av Karibiens mest levfulla matkulturer — doubles (stekt bara med currykikärtor) vid gatumatsvagnen i gryningen, pelau-ris tillagat med karamelliserad kyckling och duvorärtor, currygeit till söndagsmiddagen, bake-and-shark vid Maracas Beach och callaloo av dacheen-blad och krabba."
+    "description_sv": "Trinidadiskt kök smälter samman afrikanska, sydasiatiska, kreolska och kinesiska influenser i en av Karibiens mest levfulla matkulturer — doubles (stekt bara med currykikärtor) vid gatumatsvagnen i gryningen, pelau-ris tillagat med karamelliserad kyckling och duvorärtor, currygeit till söndagsmiddagen, bake-and-shark vid Maracas Beach och callaloo av dacheen-blad och krabba.",
+    "description_da": "Det trinidadiske køkken smelter afrikanske, sydasiatiske, kreolske og kinesiske påvirkninger sammen til en af Caribiens mest levende madkulturer — doubles (friturestegt bara med karrykrydrede kikærter), som spises ved vejkanten ved daggry, pelau-ris langtidskogt med karamelliseret kylling og duerærter, curry goat til søndagsmiddagen, bake-and-shark på Maracas Beach og callaloo med dasheen-blade og krabbe, hvis rødder går tilbage til både Vestafrika og Amerikas oprindelige folk."
   },
   "tunisian": {
     "description": "Tunisian cuisine is the most fiercely spiced of North Africa — harissa-fuelled stews, couscous crowned with lamb and root vegetables, brik fried pastry oozing egg and tuna, and lablabi chickpea soup eaten in early-morning steam with a torn baguette. Forged by Berber, Arab, Ottoman and French layers and bolstered by the Mediterranean, it runs hotter and brighter than Moroccan cooking: caraway and tabil spice paste go where others use ras-el-hanout, and the olive oil — Tunisia exports more per capita than any other country — pours lavishly into everything.",
-    "description_sv": "Tunisiskt kök är det mest eldigt kryddade i hela Nordafrika — harissaeldade grytor, couscous krönt med lamm och rotfrukter, den stekta briken som flödar av ägg och tonfisk, och lablabi kikärtsoppa avnjuten i tidig morgondimma med bröd. Byggt av berbiska, arabiska, osmanska och franska lager och stödd av Medelhavet löper det hetare och skarpare än marockansk matlagning: karumdill och tabil-kryddblandning ersätter ras-el-hanout, och olivoljan — Tunisien exporterar mer per capita än något annat land — hälls generöst i allt."
+    "description_sv": "Tunisiskt kök är det mest eldigt kryddade i hela Nordafrika — harissaeldade grytor, couscous krönt med lamm och rotfrukter, den stekta briken som flödar av ägg och tonfisk, och lablabi kikärtsoppa avnjuten i tidig morgondimma med bröd. Byggt av berbiska, arabiska, osmanska och franska lager och stödd av Medelhavet löper det hetare och skarpare än marockansk matlagning: karumdill och tabil-kryddblandning ersätter ras-el-hanout, och olivoljan — Tunisien exporterar mer per capita än något annat land — hälls generöst i allt.",
+    "description_da": "Det tunesiske køkken er Nordafrikas mest intenst krydrede — harissa-prægede gryderetter, couscous kronet med lam og rodfrugter, friturestegt brik fyldt med flydende æg og tun samt kikærtesuppen lablabi, der spises dampende varm tidligt om morgenen med en baguette revet i stykker. Formet af berberiske, arabiske, osmanniske og franske lag og beriget af Middelhavet er det stærkere og friskere end det marokkanske køkken: kommen og krydderpastaen tabil bruges, hvor andre bruger ras-el-hanout, og olivenolien — Tunesien eksporterer mere pr. indbygger end noget andet land — bruges gavmildt i alt."
   },
   "turkish": {
     "description": "Turkish cuisine is one of the world's great culinary empires — a thousand years of Ottoman palace cooking distilled into lamb kebabs over charcoal, yogurt-drenched börek, eggplant in every possible form, and breakfast spreads that require their own table. It spans the spice-garden heat of the southeastern Anatolian plains (Gaziantep is the pistachio-baklava capital of the world), the olive-oil-drenched cold mezes of the Aegean, the Black Sea anchovy obsession of Trabzon, and Istanbul's refined fish restaurants where sea bass arrive in salt crusts. Yogurt, sumac, red pepper flakes, bulgur, and a ferocious dedication to quality ingredients connect every regional variation.",
-    "description_sv": "Turkiskt kök är ett av världens stora kulinariska imperier — tusen år av osmanskt palatskok destillerat till lammkebab över kol, yoghurtdränkt börek, aubergine i alla tänkbara former och frukostbord som kräver ett eget bord. Det spänner från den kryddrika hettan i sydöstra Anatolien (Gaziantep är världens pistaschnöts- och baklaval-huvudstad), de olivoljedränkta kalla mezerna i Egeiska regionen, Trabzons hamsifixering vid Svarta havet, och Istanbuls förfinade fiskrestauranger där havsabborre anländer i saltskorpa. Yoghurt, sumak, röd paprikaflingor, bulgur och en ferocious hängivenhet till kvalitetsråvaror förbinder varje regional variation."
+    "description_sv": "Turkiskt kök är ett av världens stora kulinariska imperier — tusen år av osmanskt palatskok destillerat till lammkebab över kol, yoghurtdränkt börek, aubergine i alla tänkbara former och frukostbord som kräver ett eget bord. Det spänner från den kryddrika hettan i sydöstra Anatolien (Gaziantep är världens pistaschnöts- och baklaval-huvudstad), de olivoljedränkta kalla mezerna i Egeiska regionen, Trabzons hamsifixering vid Svarta havet, och Istanbuls förfinade fiskrestauranger där havsabborre anländer i saltskorpa. Yoghurt, sumak, röd paprikaflingor, bulgur och en ferocious hängivenhet till kvalitetsråvaror förbinder varje regional variation.",
+    "description_da": "Det tyrkiske køkken er et af verdens store kulinariske imperier — tusind års osmannisk paladskøkken fortættet til lammekebab over trækul, börek overhældt med yoghurt, aubergine i enhver tænkelig form og morgenmadsanretninger, der kræver deres eget bord. Det spænder fra den kryddermættede hede på de sydøstlige anatolske sletter (Gaziantep er verdens hovedstad for pistacienødder og baklava) og Ægæerområdets kolde mezze gennemvædet af olivenolie til Trabzons besættelse af Sortehavets ansjoser og Istanbuls raffinerede fiskerestauranter, hvor havaborre serveres i saltskorpe. Yoghurt, sumak, røde peberflager, bulgur og en kompromisløs forkærlighed for kvalitetsråvarer binder alle regionale variationer sammen."
   },
   "ukrainian": {
     "description": "Ukrainian cuisine is the breadbasket of the world made edible — a cooking tradition that turns beet, cabbage, pork fat and buckwheat into dishes of quiet greatness. Borshch (the garnet beet-cabbage soup with a swirl of smetana) is the national symbol, made in 77 documented regional styles; varenyky (half-moon dumplings) hold everything from potato and cheese to sour cherries; holubtsi stuff tender cabbage leaves with millet or meat; and salo — white-salted cured pig fat rubbed with garlic — is eaten on dark bread with raw onion as the truest Ukrainian snack. Ukraine grows more sunflowers and wheat than almost any nation on earth, and its cuisine reflects both — generous, filling, deeply seasonal, preserved through long winters.",
-    "description_sv": "Ukrainskt kök är världens kornbod gjord ätbar — en mattradition som förvandlar rödbetor, kål, svinister och bovete till rätter av stilla storhet. Borscht (den granatfärgade rödbets-kålsoppan med en klick smetana) är den nationella symbolen, lagad i 77 dokumenterade regionala varianter; varenyky (halvmånsdumplings) innehåller allt från potatis och ost till surört körsbär; holubtsi fyller mjuka kålblad med hirs eller kött; och salo — vitsaltat rimmat grisfett gnuggat med vitlök — äts på mörkt bröd med rå lök som det sannaste ukrainska melismålet. Ukraina odlar mer solrosor och vete än nästan något annat land, och köket speglar båda — generöst, mättande, djupt säsongsbundet och konserverat för långa vintrar."
+    "description_sv": "Ukrainskt kök är världens kornbod gjord ätbar — en mattradition som förvandlar rödbetor, kål, svinister och bovete till rätter av stilla storhet. Borscht (den granatfärgade rödbets-kålsoppan med en klick smetana) är den nationella symbolen, lagad i 77 dokumenterade regionala varianter; varenyky (halvmånsdumplings) innehåller allt från potatis och ost till surört körsbär; holubtsi fyller mjuka kålblad med hirs eller kött; och salo — vitsaltat rimmat grisfett gnuggat med vitlök — äts på mörkt bröd med rå lök som det sannaste ukrainska melismålet. Ukraina odlar mer solrosor och vete än nästan något annat land, och köket speglar båda — generöst, mättande, djupt säsongsbundet och konserverat för långa vintrar.",
+    "description_da": "Det ukrainske køkken er verdens kornkammer gjort spiseligt — en madtradition, der forvandler rødbeder, kål, svinefedt og boghvede til retter med stille storhed. Borshch (den granatrøde rødbede- og kålsuppe med en hvirvel af smetana) er det nationale symbol og tilberedes i 77 dokumenterede regionale varianter; varenyky (halvmåneformede dumplings) rummer alt fra kartoffel og ost til surkirsebær; i holubtsi fyldes møre kålblade med hirse eller kød; og salo — hvidt, saltmodnet svinefedt gnedet med hvidløg — spises på mørkt brød med rå løg som den mest rendyrkede ukrainske snack. Ukraine dyrker flere solsikker og mere hvede end næsten noget andet land i verden, og landets køkken afspejler begge dele — en generøs, mættende og dybt sæsonpræget madtradition, hvor råvarerne konserveres gennem lange vintre."
   },
   "uzbek": {
     "description": "Uzbek cuisine is the Silk Road made edible — a cooking tradition where lamb, cumin and rice converge into plov, the UNESCO-listed dish that defines Central Asian hospitality. To cook plov is to be Uzbek: lamb ribs and fat rendered in a kazan (cast-iron cauldron) with carrots and onion, simmered with rice to form a golden, fragrant pilaf; the national ritual of celebration, diplomacy, and morning cooking. Beyond plov lies a world of samsa (flaky lamb pastry from tandoor ovens), manti (steamed lamb dumplings), shashlik over saxaul wood, lagman noodle soup with Dungan roots, and non flatbread with a sesame-poppy stamp. Cotton was once Uzbekistan's 'white gold'; the cooking fat that replaced it was cottonseed oil — distinctive, almost smoky. The land of Alexander the Great, Tamerlane and the Silk Road caravanserai feeds on lamb, dried apricots, melon, walnuts and pomegranates.",
-    "description_sv": "Uzbekiskt kök är Sidenvägen gjord ätbar — en mattradition där lamm, spiskummin och ris möts i plov, den UNESCO-listade rätten som definierar centralasiatisk gästfrihet. Att laga plov är att vara uzbek: lammrevben och fett smälts i en kazan (gjutjärnsgrytan) med morötter och lök, sjuds med ris till en gyllene, doftande pilaf; det nationella ritualet vid firanden, diplomati och morgonmatlagning. Bortom plov finns en värld av samsa (flagigt lammgebak från tandurugnarna), manti (ångade lammdumplings), shashlik över saxaul-ved och lagman-nudelsoppa med Dungan-rötter. Bomull var en gång Uzbekistans 'vita guld'; matlagningsfettet som ersatte det var bomullsfröolja — distinkt, nästan rökig. Landet för Alexander den store, Timur och Sidenvägens karavanseraljer mättar sig på lamm, torkade aprikoser, melon, valnötter och granatäpplen."
+    "description_sv": "Uzbekiskt kök är Sidenvägen gjord ätbar — en mattradition där lamm, spiskummin och ris möts i plov, den UNESCO-listade rätten som definierar centralasiatisk gästfrihet. Att laga plov är att vara uzbek: lammrevben och fett smälts i en kazan (gjutjärnsgrytan) med morötter och lök, sjuds med ris till en gyllene, doftande pilaf; det nationella ritualet vid firanden, diplomati och morgonmatlagning. Bortom plov finns en värld av samsa (flagigt lammgebak från tandurugnarna), manti (ångade lammdumplings), shashlik över saxaul-ved och lagman-nudelsoppa med Dungan-rötter. Bomull var en gång Uzbekistans 'vita guld'; matlagningsfettet som ersatte det var bomullsfröolja — distinkt, nästan rökig. Landet för Alexander den store, Timur och Sidenvägens karavanseraljer mättar sig på lamm, torkade aprikoser, melon, valnötter och granatäpplen.",
+    "description_da": "Det usbekiske køkken er Silkevejen gjort spiselig — en madtradition, hvor lam, spidskommen og ris mødes i plov, den UNESCO-listede ret, der definerer centralasiatisk gæstfrihed. At tilberede plov er at være usbeker: lammeribben brunes, og fedtet smeltes af i en kazan (støbejernsgryde) sammen med gulerødder og løg og simrer derefter med ris til en gylden, duftende pilaf; et nationalt ritual ved fejringer, i diplomati og som morgenritual. Ud over plov findes en verden af samsa (sprødt, lagdelt bagværk med lam fra tandoorovne), manti (dampede lammedumplings), shashlik over saxaul-ved, lagman-nudelsuppe med dunganske rødder og non-fladbrød præget med sesam og valmuefrø. Bomuld var engang Uzbekistans 'hvide guld'; det madlavningsfedt, der erstattede det, var bomuldsfrøolie — karakteristisk og næsten røget. Usbekistan — Alexander den Stores, Timur Lenks og Silkevejens karavanseraiers land — lever af lam, tørrede abrikoser, melon, valnødder og granatæbler."
   },
   "venezuelan": {
     "description": "Venezuelan cuisine is built on arepas, pabellón criollo, and a sofrito of ají dulce, onion and onoto — a vivid, flavourful cooking culture shaped by the llanos, the Caribbean coast, and the Orinoco basin.",
-    "description_sv": "Venezuelanskt kök bygger på arepas, pabellón criollo och en sofrito av ají dulce, lök och onoto — en livfull matkultur formad av llanorna, Karibiens kust och Orinocofloden."
+    "description_sv": "Venezuelanskt kök bygger på arepas, pabellón criollo och en sofrito av ají dulce, lök och onoto — en livfull matkultur formad av llanorna, Karibiens kust och Orinocofloden.",
+    "description_da": "Det venezuelanske køkken bygger på arepas, pabellón criollo og en sofrito af ají dulce, løg og onoto — en levende og smagfuld madkultur formet af llanos, den caribiske kyst og Orinoco-bækkenet."
   },
   "vietnamese": {
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_da": "Det vietnamesiske køkken bygger på ris, risnudler, nước mắm (fiskesauce) og et væld af friske urter og balancerer gennemgående salt, sødt og surt. Phở, bánh mì, gỏi cuốn og cá kho tộ afspejler landets regionale madtraditioner, mens svinekød er det dominerende kød, og fisk og skaldyr spiller en central rolle."
   },
   "west_african": {
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_da": "Det vestafrikanske køkken omfatter madtraditionerne i Nigeria, Ghana, Senegal, Côte d'Ivoire, Mali og nabolandene; jollof-ris, suya, egusi, palmeolie og jordnøddegryder er blandt regionens internationalt mest kendte kendetegn."
   },
   "yemeni": {
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+    "description_sv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
+    "description_da": "Det yemenitiske køkken er en af den arabiske verdens ældste og mest særprægede madtraditioner. Saltah, Yemens nationalret, mandi med langtidsstegt lam eller kylling, fahsa med lammebouillon, den krydrede risret zurbian og honningbrødet bint al-sahn er centrale retter, mens krydderiblandingen hawayij og det piskede bukkehornskløverskum hulba giver køkkenet dets særlige smagspræg."
   }
 };
 
@@ -125897,17 +126203,17 @@ const I18N_STRINGS = {
       "recipe_saved_for_later": "Opskriften er gemt til senere. Du finder den under Tilberedte og gemte opskrifter."
     },
     "cuisines": {
-      "nordic": "Nordisk & skandinavisk",
-      "east_asian": "Østasiatisk",
-      "southeast_asian": "Sydøstasiatisk",
-      "south_asian": "Sydasiatisk",
-      "middle_east": "Mellemøstlig",
-      "european": "Europæisk",
-      "north_american": "Nordamerikansk",
-      "latin_american": "Latinamerikansk",
-      "caribbean_region": "Caribisk",
-      "african": "Afrikansk",
-      "oceanian": "Oceanisk",
+      "nordic": "Norden",
+      "east_asian": "Østasien",
+      "southeast_asian": "Sydøstasien",
+      "south_asian": "Sydasien",
+      "middle_east": "Mellemøsten",
+      "european": "Europa",
+      "north_american": "Nordamerika",
+      "latin_american": "Latinamerika",
+      "caribbean_region": "Caribien",
+      "african": "Afrika",
+      "oceanian": "Oceanien",
       "swedish": "Svensk",
       "danish": "Dansk",
       "norwegian": "Norsk",
@@ -139387,6 +139693,13 @@ class KitchenCookingPanel extends LitElement {
     return base !== undefined && base !== null && base !== '' ? base : fallback;
   }
 
+  _localizedRegionName(region) {
+    if (!region) return '';
+    const key = `cuisines.${region.id}`;
+    const translated = this._t(key);
+    return translated !== key ? translated : this._localizedField(region, 'name');
+  }
+
   /**
    * Convert a quantity+unit to the user's preferred measurement system.
    * E.g. _convertMeasure(500, 'ml') → "5 dl" (SE) or "2.1 cup" (US).
@@ -144510,7 +144823,7 @@ class KitchenCookingPanel extends LitElement {
       return html`<div class="loading">${this._t('ai_recipe.loading_ingredients')}</div>`;
     }
 
-    // Cuisine/region options — built from docs/cuisines/*.md (KCE:CUISINE files).
+    // Cuisine/region options — built from canonical www/cuisines/*.md files.
     // Add a new cuisine file there and it will appear here on the next release.
     const cuisineRegions = (typeof AI_CUISINE_REGIONS !== 'undefined') ? AI_CUISINE_REGIONS : [];
 
@@ -144569,7 +144882,7 @@ class KitchenCookingPanel extends LitElement {
                 this.requestUpdate();
               }}
             >
-              <span style="font-weight: bold;">${region.icon} ${this._localizedField(region, 'name')} ${selectedInRegion.length > 0 ? `(${selectedInRegion.length})` : ''}</span>
+              <span style="font-weight: bold;">${region.icon} ${this._localizedRegionName(region)} ${selectedInRegion.length > 0 ? `(${selectedInRegion.length})` : ''}</span>
               <span>${isExpanded ? '▼' : '▶'}</span>
             </div>
             ${isExpanded ? html`
@@ -150370,7 +150683,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "635";
+const PANEL_VERSION = "636";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

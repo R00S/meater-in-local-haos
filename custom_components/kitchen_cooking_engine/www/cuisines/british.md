@@ -3,12 +3,14 @@ KCE: CUISINE
 id: british
 name: British
 name_sv: "Brittiskt"
+name_da: "Britisk"
 icon: 🇬🇧
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "British cuisine is defined by hearty comfort food and quality local produce — Sunday roast with Yorkshire pudding, fish and chips, shepherd's pie, and the full English breakfast. Regionally rich: Welsh lamb, Scotch beef, Cornish pasties, Scottish smoked salmon and haggis all carry PDO or PGI status. Britain's high dairy output (12.4 billion litres of milk in 2022) underpins iconic Cheddar, Stilton and clotted cream. Modern British food is deeply shaped by South Asian immigration, making chicken tikka masala a de facto national dish."
 description_sv: "Brittisk mat präglas av rejäl husmanskost och lokala råvaror av hög kvalitet — söndagsstek med Yorkshire pudding, fish and chips, shepherd's pie och full engelsk frukost. Regionalt rik: Waleskt lamm, skotsk nötkött, Cornish pasties, skotsk rökt lax och haggis bär alla PDO- eller PGI-status. Storbritanniens höga mejeridoproduktion (12,4 miljarder liter mjölk 2022) är grunden för ikonisk Cheddar, Stilton och koagulerad grädde. Det moderna brittiska köket är djupt format av sydostasiatisk invandring, vilket gjort chicken tikka masala till ett de facto nationellt kök."
+description_da: "Det britiske køkken er kendetegnet ved solid, hjemlig mad og lokale råvarer af høj kvalitet — Sunday roast med Yorkshire pudding, fish and chips, shepherd's pie og full English breakfast. Det rummer stor regional variation: Welsh lamb, Scotch beef, Cornish pasties, Scottish smoked salmon og haggis har alle PDO- eller PGI-status. Storbritanniens høje mejeriproduktion (12,4 milliarder liter mælk i 2022) danner grundlag for ikoniske produkter som Cheddar, Stilton og clotted cream. Moderne britisk mad er dybt præget af sydasiatisk indvandring, hvilket har gjort chicken tikka masala til en de facto nationalret."
 research_done: 1
 ---
 

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: southern_us
 name: Southern US
 name_sv: "Södra USA"
+name_da: "Sydstatskøkken"
 icon: 🍗
 region: north_american
 region_name: "North American"
 region_icon: 🦅
 description: "Southern US cuisine is slow-smoked BBQ and buttermilk fried chicken, collard greens simmered with ham hocks, stone-ground grits with river shrimp, and biscuits slathered in sawmill gravy — a cuisine forged from Native American corn, West African technique, and European settlement across Georgia, Mississippi, the Carolinas, and Louisiana."
 description_sv: "Södra USA:s kök är långsamt rökt BBQ och kärnmjölksstekt kyckling, collardgrönt kokt med skinka, grovmalda grits med räkor och kex med mjölksås — ett kök format av ursprungsamerikansk majs, västafrikansk teknik och europeisk bosättning i Georgia, Mississippi, Carolinas och Louisiana."
+description_da: "Det amerikanske sydstatskøkken er langsomt røget BBQ og kylling marineret i kærnemælk og friturestegt, collard greens simret med skinkeskanke, stenmalede grits med flodrejer og biscuits overhældt med sawmill gravy — et køkken formet af majs fra Amerikas oprindelige folk, vestafrikanske teknikker og europæisk bosættelse på tværs af Georgia, Mississippi, Carolina-staterne og Louisiana."
 research_done: 1
 ---
 

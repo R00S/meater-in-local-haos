@@ -3,12 +3,14 @@ KCE: CUISINE
 id: mediterranean
 name: Mediterranean
 name_sv: "Medelhavsmat"
+name_da: "Middelhavskøkken"
 icon: 🫒
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "Mediterranean cuisine is a sun-drenched mosaic of flavours spanning southern Europe, the Levant, and North Africa — united by the golden thread of olive oil, fresh vegetables, legumes, grilled seafood and meats, and fragrant herbs including oregano, thyme, and mint."
 description_sv: "Medelhavsmat är ett soldränkt mosaik av smaker som sträcker sig från södra Europa, Levanten och Nordafrika — förenat av olivolja, färska grönsaker, baljväxter, grillad fisk och kött, samt doftande örter som oregano, timjan och mynta."
+description_da: "Middelhavskøkkenet er en solbeskinnet mosaik af smage, der strækker sig over Sydeuropa, Levanten og Nordafrika — forenet af olivenolie, friske grøntsager, bælgfrugter, grillede fisk og skaldyr og grillet kød samt duftende urter som oregano, timian og mynte."
 research_done: 1
 ---
 

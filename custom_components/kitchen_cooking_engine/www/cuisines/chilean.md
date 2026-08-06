@@ -3,12 +3,14 @@ KCE: CUISINE
 id: chilean
 name: Chilean
 name_sv: "Chilenskt"
+name_da: "Chilensk"
 icon: 🇨🇱
 region: latin_american
 region_name: "Latin American"
 region_icon: 💃
 description: "Pacific Coast, Andean, Patagonian, and Mapuche influences define Chilean cuisine. A 4,300 km coastline yields world-class seafood, while central Chile's fertile valleys produce abundant vegetables and livestock."
 description_sv: "Stillahavskunsten, andinska, patagonska och mapuche-influenser definierar det chilenska köket. En 4 300 km lång kust ger förstklassiga skaldjur, medan Centralchiles bördiga dalar producerar rikliga grönsaker och boskap."
+description_da: "Det chilenske køkken er præget af indflydelser fra Stillehavskysten, Andesbjergene, Patagonien og Mapuche-folket. Langs den 4.300 km lange kystlinje findes fisk og skaldyr i verdensklasse, mens det centrale Chiles frugtbare dale giver rigelige grøntsagsafgrøder og gode vilkår for husdyrhold."
 research_done: 1
 ---
 

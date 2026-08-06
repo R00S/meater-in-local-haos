@@ -3,12 +3,14 @@ KCE: CUISINE
 id: palestinian
 name: Palestinian
 name_sv: "Palestinskt"
+name_da: "Palæstinensisk"
 icon: 🇵🇸
 region: middle_east
 region_name: "Middle East"
 region_icon: 🌙
 description: "Palestinian cuisine is anchored in olive oil, bread, and land. Musakhan — sumac-spiced chicken and caramelised onions baked atop taboon bread — is the national dish. Maqluba (upside-down rice), mujaddara (lentils and bulgur with golden onion), mansaf (lamb in fermented yogurt), and endless mezze built from hummus, za'atar, and labneh form a table that is deeply tied to olive orchards, mountain thyme, and centuries of communal cooking."
 description_sv: "Palestinskt kök förankras i olivolja, bröd och mark. Musakhan — sumackryddad kyckling och karamelliserad lök bakat ovanpå taboonbröd — är nationalrätten. Maqluba (upp-och-nedvänt ris), mujaddara (linser och bulgur med gyllenbrun lök), mansaf (lamm i fermenterad yoghurt) och ändlösa mezze av hummus, za'atar och labneh bildar ett bord djupt kopplat till olivlundar, bergstimjan och sekler av gemensamt matlagande."
+description_da: "Det palæstinensiske køkken er forankret i olivenolie, brød og jorden. Musakhan — sumakkrydret kylling og karamelliserede løg bagt oven på taboonbrød — er nationalretten. Maqluba (ris vendt på hovedet), mujaddara (linser og bulgur med gyldenstegte løg), mansaf (lam i fermenteret yoghurt) og et væld af mezze baseret på hummus, za'atar og labneh danner tilsammen en madtradition, der er dybt knyttet til olivenlunde, bjergtimian og århundreders fælles madlavning."
 research_done: 1
 ---
 

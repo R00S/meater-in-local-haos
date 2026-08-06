@@ -3,12 +3,14 @@ KCE: CUISINE
 id: kurdish
 name: Kurdish
 name_sv: "Kurdiskt"
+name_da: "Kurdisk"
 icon: 🌿
 region: middle_east
 region_name: "Middle Eastern"
 region_icon: 🧆
 description: "Kurdish cuisine spans the mountains and valleys of Kurdistan — from Iraqi Kurdistan's slow-roasted lamb and stuffed grape leaves to the smoky tang of Turkish Kurdish kebabs, the aromatic herb-rich stews of Iran, and the hearty bulgur pilaf and yoghurt dishes shared across the highland diaspora."
 description_sv: "Kurdiskt kök sträcker sig över bergs- och dallandskapen i Kurdistan — från irakskt kurdistans långsamt rostat lamm och fyllda druvblad till den rökiga smaken av turkisktkurdiska kebaber, de aromatiska örtrika grytorna från Iran och den rejäla bulgurpilaffet och yoghurträtterna som delas över de bergiga diaspora."
+description_da: "Det kurdiske køkken spænder over Kurdistans bjerge og dale — fra langtidsstegt lam og fyldte vinblade i irakisk Kurdistan til den røgede syrlighed i kurdiske kebabretter fra Tyrkiet, de aromatiske, urterige gryderetter fra Iran samt de solide retter med bulgurpilaf og yoghurt, der deles i den kurdiske diaspora med rødder i højlandet."
 research_done: 1
 ---
 

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: indian
 name: Indian
 name_sv: "Indiskt"
+name_da: "Indisk"
 icon: 🇮🇳
 region: south_asian
 region_name: "South Asian"
 region_icon: 🍛
 description: "Indian cuisine is defined by its extraordinary spice tradition, regional diversity from the Himalayas to coastal Kerala, and a heritage of slow-cooked curries, tandoor breads, aromatic biryanis, and street foods shaped by five thousand years of culinary culture."
 description_sv: "Indiskt kök kännetecknas av sin extraordinära kryddtradition, regional mångfald från Himalaya till kustlandet Kerala, och ett arv av långsamt kokta curryrätter, tandooribrödбрödl, doftande biryanis och gatukök som formats under fem tusen år av kulinarisk kultur."
+description_da: "Det indiske køkken er kendetegnet ved sin enestående krydderitradition, sin regionale mangfoldighed fra Himalaya til Keralas kyster og sin arv af langtidssimrede karryretter, tandoorbrød, aromatisk biryani og gademad, alt sammen formet af fem tusind års madkultur."
 research_done: 1
 ---
 

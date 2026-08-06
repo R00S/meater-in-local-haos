@@ -3,12 +3,14 @@ KCE: CUISINE
 id: bangladeshi
 name: Bangladeshi
 name_sv: "Bangladesiskt"
+name_da: "Bangladeshisk"
 icon: 🇧🇩
 region: south_asian
 region_name: "South Asian"
 region_icon: 🍛
 description: "Bangladeshi cuisine centers on rice and freshwater fish, shaped by the fertile Bengal delta. Signature preparations include shorshe ilish (hilsa in mustard sauce), bhuna khichuri, and Dhaka-style kacchi biryani, with mustard oil, panch phoron, and turmeric defining the flavor profile."
 description_sv: "Bangladesisk matkultur kretsar kring ris och sötvattensfisk, formad av det bördiga Bengaldeltats landskap. Signaturrätter som shorshe ilish, bhuna khichuri och Dhaka-stil kacchi biryani definierar köket, med senapsolja, panch phoron och gurkmeja som bärande smaker."
+description_da: "Det bangladeshiske køkken har ris og ferskvandsfisk som omdrejningspunkt og er formet af det frugtbare Bengaldelta. Karakteristiske retter omfatter shorshe ilish (hilsa i sennepssauce), bhuna khichuri og kacchi biryani i Dhaka-stil, mens sennepsolie, panch phoron og gurkemeje definerer smagsprofilen."
 research_done: 1
 ---
 

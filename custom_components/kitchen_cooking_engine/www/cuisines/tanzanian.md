@@ -3,12 +3,14 @@ KCE: CUISINE
 id: tanzanian
 name: Tanzanian
 name_sv: "Tanzaniskt"
+name_da: "Tanzanisk"
 icon: 🇹🇿
 region: african
 region_name: "African"
 region_icon: 🌍
 description: "Tanzanian cuisine is a mosaic of Swahili coast, mainland Bantu and island traditions — ugali cornmeal with nyama choma grilled meat, Zanzibar pilau spiced with cloves and cardamom, biryani from Arab traders, coconut fish curries and rich bean stews that reflect centuries of Indian Ocean commerce and diverse ethnic heritage."
 description_sv: "Tanzaniskt kök är en mosaik av Swahilikusten, bantu och öarnas traditioner — majsgröt (ugali) med grillat kött (nyama choma), Zanzibar-pilau kryddad med nejlika och kardemumma, biryani från arabiska handelsmän, kokosfiskgrytor och rika bönsopor som speglar sekler av Indiska oceanens handel."
+description_da: "Det tanzaniske køkken er en mosaik af traditioner fra Swahilikysten, fastlandets Bantu-folk og øerne — ugali af majsmel med det grillede kød nyama choma, Zanzibar-pilau krydret med nelliker og kardemomme, biryani fra arabiske handelsfolk, fiskekarryer med kokos og fyldige bønnegryder, som afspejler århundreders handel på Det Indiske Ocean og en mangfoldig etnisk arv."
 research_done: 1
 ---
 

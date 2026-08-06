@@ -3,12 +3,14 @@ KCE: CUISINE
 id: jordanian
 name: Jordanian
 name_sv: "Jordanskt"
+name_da: "Jordansk"
 icon: 🇯🇴
 region: middle_east
 region_name: "Middle East"
 region_icon: 🌙
 description: "Jordanian cuisine is anchored by mansaf — slow-cooked lamb in jameed fermented yogurt served on rice with toasted pine nuts — alongside maqluba, zarb pit barbecue, and a rich Bedouin and Levantine table of hummus, labneh, fresh herbs, olive oil, and flatbread baked on the saj."
 description_sv: "Jordanskt kök kretsar kring mansaf — lamm tillagat i jameed fermenterad yoghurt serverat på ris med rostade pinjenötter — vid sidan av maqluba, zarb-grillat i jordugn och ett rikt beduinskt och levantinskt matbord med hummus, labneh, färska örter, olivolja och bröd bakat på saj."
+description_da: "Det jordanske køkken har mansaf som omdrejningspunkt — langtidskogt lam i den fermenterede yoghurt jameed, serveret på ris med ristede pinjekerner — sammen med maqluba, zarb-grillmad fra en jordovn og et righoldigt beduinsk og levantinsk måltid med hummus, labneh, friske krydderurter, olivenolie og fladbrød bagt på en saj."
 research_done: 1
 ---
 

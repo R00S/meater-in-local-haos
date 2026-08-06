@@ -3,12 +3,14 @@ KCE: CUISINE
 id: haitian
 name: Haitian
 name_sv: "Haitianskt"
+name_da: "Haitisk"
 icon: 🇭🇹
 region: caribbean_region
 region_name: "Caribbean"
 region_icon: 🏝️
 description: "Haitian cuisine is defined by epis — the aromatic garlic, scallion, thyme and scotch bonnet paste that seasons almost every dish — and by contrasts: smoky griot pork crisped in sour orange marinade, pikliz pickled fire on the side, and diri ak pwa (rice and beans) as the daily anchor. African, French, and Taíno roots fuse into a cuisine of bold depth and celebration."
 description_sv: "Haitianskt kök definieras av épis — den aromatiska pastan av vitlök, salladslök, timjan och scotch bonnet som kryddar nästan varje rätt — och av kontraster: rökig griot-fläsk krispigstekt i surt apelsinmarinad, pikliz picklade hetta på sidan och diri ak pwa (ris och bönor) som daglig ankare."
+description_da: "Det haitiske køkken defineres af epis — den aromatiske pasta af hvidløg, forårsløg, timian og scotch bonnet, som krydrer næsten hver eneste ret — og af kontraster: røget griot-svinekød sprødstegt i en marinade af bitterappelsin, pikliz som syltet ild til retten og diri ak pwa (ris og bønner) som den daglige grundpille. Afrikanske, franske og Taíno-rødder smelter sammen i et køkken med markant dybde og festlighed."
 research_done: 1
 ---
 

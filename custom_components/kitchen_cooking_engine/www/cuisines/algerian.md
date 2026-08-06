@@ -3,12 +3,14 @@ KCE: CUISINE
 id: algerian
 name: Algerian
 name_sv: "Algeriskt"
+name_da: "Algerisk"
 icon: 🇩🇿
 region: african
 region_name: "African"
 region_icon: 🌍
 description: "Algerian cuisine blends Berber, Arab, Ottoman, and French influences, with couscous as the UNESCO-recognised national dish, lamb as the defining protein, and a rich tradition of semolina breads, aromatic ras el hanout spice blends, and the iconic Deglet Nour dates of the Saharan south."
 description_sv: "Algerisk mat är en blandning av berbisk, arabisk, osmansk och fransk matkultur, med couscous som UNESCO-erkänd nationalrätt, lamm som det viktigaste proteinet och en rik tradition av semulebröd, aromatiska ras el hanout-kryddblandningar och de ikoniska Deglet Nour-dadlarna från den saharariska södern."
+description_da: "Det algeriske køkken forener berberiske, arabiske, osmanniske og franske påvirkninger med couscous som den UNESCO-anerkendte nationalret, lam som den karakteristiske kødtype samt en rig tradition for semuljebrød, aromatiske ras el hanout-krydderiblandinger og de ikoniske Deglet Nour-dadler fra det sydlige Sahara."
 research_done: 1
 ---
 

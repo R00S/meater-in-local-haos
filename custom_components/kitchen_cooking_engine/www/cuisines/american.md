@@ -3,12 +3,14 @@ KCE: CUISINE
 id: american
 name: American
 name_sv: "Amerikansk"
+name_da: "Amerikansk"
 icon: 🇺🇸
 region: north_american
 region_name: "North American"
 region_icon: 🦅
 description: "A diverse and hearty cuisine shaped by waves of immigration and regional traditions, centred on grilled meats, BBQ, corn, wheat, and dairy. Iconic dishes include the hamburger, fried chicken, apple pie, cornbread, and Thanksgiving turkey, reflecting a melting pot of cultures across a vast continent."
 description_sv: "Ett mångsidigt och rejält kök format av invandring och regionala traditioner, med fokus på grillat kött, BBQ, majs, vete och mejeriprodukter. Ikoniska rätter är hamburgare, stekt kyckling, äppelpaj, majsbröd och Thanksgiving-kalkon – en kulturell smältdegel från en vid kontinent."
+description_da: "Et mangfoldigt og mættende køkken formet af bølger af indvandring og regionale traditioner med fokus på grillet kød, BBQ, majs, hvede og mejeriprodukter. Ikoniske retter omfatter hamburgeren, friturestegt kylling, æbletærte, majsbrød og Thanksgiving-kalkun og afspejler en kulturel smeltedigel på tværs af det vidtstrakte land."
 research_done: 1
 ---
 

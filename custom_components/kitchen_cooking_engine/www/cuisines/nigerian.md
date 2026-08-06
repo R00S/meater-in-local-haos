@@ -3,12 +3,14 @@ KCE: CUISINE
 id: nigerian
 name: Nigerian
 name_sv: "Nigerianskt"
+name_da: "Nigeriansk"
 icon: 🇳🇬
 region: african
 region_name: "African"
 region_icon: 🌍
 description: "Nigerian cuisine is one of the most diverse and boldly flavoured on the continent — built on earthy egusi (melon-seed stew), jollof rice simmered in spiced tomato, smoky suya beef skewers, palm-oil-red soups loaded with stockfish and goat, and the layered heat of ata rodo (scotch bonnet) and indigenous iru (fermented locust bean)."
 description_sv: "Nigerianskt kök är ett av de mest mångsidiga och djärvt smaksatta på kontinenten — byggt på jordnötsartad egusi (melonfrösoppa), jollofris tillagat i kryddig tomat, rökiga suya-nötköttspett, palmolje-röda soppor fyllda med stockfisk och get, och den lagrade hettan av ata rodo (scotch bonnet) och inhemsk iru (fermenterad karobiböna)."
+description_da: "Det nigerianske køkken er et af de mest mangfoldige og smagsintense på kontinentet — bygget på den jordagtige egusi (melonfrøgryde), jollof-ris simret i en krydret tomatbase, røgede suya-spyd med oksekød, supper, der er røde af palmeolie og fyldt med tørfisk og gedekød, samt den nuancerede styrke fra ata rodo (scotch bonnet) og den lokale iru (fermenterede frø fra det afrikanske johannesbrødtræ)."
 research_done: 1
 ---
 

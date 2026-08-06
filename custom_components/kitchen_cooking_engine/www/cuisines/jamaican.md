@@ -3,12 +3,14 @@ KCE: CUISINE
 id: jamaican
 name: Jamaican
 name_sv: "Jamaikanskt"
+name_da: "Jamaicansk"
 icon: 🇯🇲
 region: caribbean_region
 region_name: "Caribbean"
 region_icon: 🌴
 description: "Jamaican cuisine is one of the world's most distinctive and internationally celebrated — defined by jerk seasoning (allspice, Scotch bonnet, pimento wood), the national dish ackee and saltfish, oxtail stew, curried goat, and rice and peas. Jamaica is the world's leading allspice (pimento) producer, and its food culture fuses African, Taíno, European, and Indian influences into bold, aromatic, heat-forward cooking."
 description_sv: "Jamaikanskt kök är ett av världens mest distinktiva och internationellt firade — definierat av jerk-kryddning (kryddpeppar, Scotch bonnet-chili, pimentoträ), nationalrätten ackee och saltfisk, oxtailgryta, currydoftad get och ris med bönor. Jamaica är världens ledande producent av kryddpeppar (pimento), och matkulturen smälter samman afrikanska, taíno, europeiska och indiska influenser till djärv, aromatisk, hetskryddad matlagning."
+description_da: "Det jamaicanske køkken er et af verdens mest særprægede og internationalt hyldede køkkener — defineret af jerk-krydderi (allehånde, Scotch bonnet-chili og træ fra allehåndetræet), nationalretten ackee and saltfish, oxtail stew, curried goat og rice and peas. Jamaica er verdens førende producent af allehånde (pimento), og landets madkultur forener påvirkninger fra Afrika, Taíno-folket, Europa og Indien i en kraftfuld, aromatisk madlavning med stærk chili i centrum."
 research_done: 1
 ---
 

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: turkish
 name: Turkish
 name_sv: "Turkiskt"
+name_da: "Tyrkisk"
 icon: 🇹🇷
 region: middle_east
 region_name: "Middle Eastern"
 region_icon: 🧆
 description: "Turkish cuisine is one of the world's great culinary empires — a thousand years of Ottoman palace cooking distilled into lamb kebabs over charcoal, yogurt-drenched börek, eggplant in every possible form, and breakfast spreads that require their own table. It spans the spice-garden heat of the southeastern Anatolian plains (Gaziantep is the pistachio-baklava capital of the world), the olive-oil-drenched cold mezes of the Aegean, the Black Sea anchovy obsession of Trabzon, and Istanbul's refined fish restaurants where sea bass arrive in salt crusts. Yogurt, sumac, red pepper flakes, bulgur, and a ferocious dedication to quality ingredients connect every regional variation."
 description_sv: "Turkiskt kök är ett av världens stora kulinariska imperier — tusen år av osmanskt palatskok destillerat till lammkebab över kol, yoghurtdränkt börek, aubergine i alla tänkbara former och frukostbord som kräver ett eget bord. Det spänner från den kryddrika hettan i sydöstra Anatolien (Gaziantep är världens pistaschnöts- och baklaval-huvudstad), de olivoljedränkta kalla mezerna i Egeiska regionen, Trabzons hamsifixering vid Svarta havet, och Istanbuls förfinade fiskrestauranger där havsabborre anländer i saltskorpa. Yoghurt, sumak, röd paprikaflingor, bulgur och en ferocious hängivenhet till kvalitetsråvaror förbinder varje regional variation."
+description_da: "Det tyrkiske køkken er et af verdens store kulinariske imperier — tusind års osmannisk paladskøkken fortættet til lammekebab over trækul, börek overhældt med yoghurt, aubergine i enhver tænkelig form og morgenmadsanretninger, der kræver deres eget bord. Det spænder fra den kryddermættede hede på de sydøstlige anatolske sletter (Gaziantep er verdens hovedstad for pistacienødder og baklava) og Ægæerområdets kolde mezze gennemvædet af olivenolie til Trabzons besættelse af Sortehavets ansjoser og Istanbuls raffinerede fiskerestauranter, hvor havaborre serveres i saltskorpe. Yoghurt, sumak, røde peberflager, bulgur og en kompromisløs forkærlighed for kvalitetsråvarer binder alle regionale variationer sammen."
 research_done: 1
 ---
 

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: russian
 name: Russian
 name_sv: "Ryskt"
+name_da: "Russisk"
 icon: 🇷🇺
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "Russian cuisine is shaped by harsh winters and vast forests — beetroot borscht, meat-filled pelmeni, beef stroganoff in smetana, black rye bread, and foraged mushrooms define a cooking tradition built on preservation, root vegetables, dill, and generous dairy."
 description_sv: "Ryskt kök formats av kalla vintrar och vidsträckta skogar — rödbetsborsjtj, köttfyllda pelmeni, biff stroganoff i smetana, mörkt rågbröd och skogsplocknadssvamp beskriver ett kök byggt på inläggning, rotfrukter, dill och riklig mejeriproduktion."
+description_da: "Det russiske køkken er formet af barske vintre og vidtstrakte skove — borscht med rødbede, kødfyldte pelmeni, bøf stroganoff i smetana, sort rugbrød og sankede svampe kendetegner en madtradition bygget på konservering, rodfrugter, dild og rigeligt med mejeriprodukter."
 research_done: 1
 ---
 

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: taiwanese
 name: Taiwanese
 name_sv: "Taiwanesiskt"
+name_da: "Taiwansk"
 icon: 🇹🇼
 region: east_asian
 region_name: "East Asian"
 region_icon: 🥢
 description: "Taiwanese cuisine is a vivid island table — braised pork belly over rice (lu rou fan), beef noodle soup, three-cup chicken fragrant with basil and sesame oil, oyster omelets from the coast and milkfish soup from Tainan, shaped by Fujianese, Hakka, Japanese and indigenous traditions."
 description_sv: "Taiwanesiskt kök är ett livfullt ö-bord — brynt fläskbuk på ris (lu rou fan), nötköttsnudelsoppa, tre-koppar-kyckling med basilika och sesamolja, ostronomelett från kusten och mjölkfisksoppa från Tainan, format av fujiananska, hakka, japanska och urbefolkningens traditioner."
+description_da: "Det taiwanske køkken er et farverigt økøkken — braiseret svinebryst over ris (lu rou fan), nudelsuppe med oksekød, tre-koppers-kylling duftende af basilikum og sesamolie, østersomeletter fra kysten og mælkefiskesuppe fra Tainan — formet af traditioner fra Fujian, Hakka-folket, Japan og Taiwans oprindelige folk."
 research_done: 1
 ---
 

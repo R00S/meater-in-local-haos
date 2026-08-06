@@ -3,12 +3,14 @@ KCE: CUISINE
 id: cuban
 name: Cuban
 name_sv: "Kubanskt"
+name_da: "Cubansk"
 icon: 🇨🇺
 region: latin_american
 region_name: "Latin American"
 region_icon: 💃
 description: "Cuban cuisine blends Spanish colonial, African, and Caribbean Taíno traditions into a simple, hearty, slow-cooked style. Mojo criollo (garlic–sour orange sauce), sofrito, and the daily pairing of rice and black beans define its identity."
 description_sv: "Kubansk mat blandar spanskt kolonialt, afrikanskt och karibiskt arv. Enkel, mättande och långkokt. Mojo criollo (vitlöks- och surörangesås), sofrito samt ris med svarta bönor bildar grunden i köket."
+description_da: "Det cubanske køkken forener spanske kolonitraditioner, afrikanske traditioner og caribiske Taíno-traditioner i en enkel, mættende stil præget af langtidskogning. Mojo criollo (sauce med hvidløg og pomerans), sofrito og den daglige kombination af ris og sorte bønner kendetegner køkkenets identitet."
 research_done: 1
 ---
 

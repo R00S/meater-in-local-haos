@@ -3,12 +3,14 @@ KCE: CUISINE
 id: australian
 name: Australian
 name_sv: "Australiensisk"
+name_da: "Australsk"
 icon: 🇦🇺
 region: oceanian
 region_name: "Oceanian"
 region_icon: 🦘
 description: "Australian cuisine blends Indigenous bush tucker traditions with British colonial heritage and waves of Asian, Mediterranean and multicultural immigration. Known for BBQ culture — lamb chops, snags and prawns — it features bold native flavours (wattleseed, lemon myrtle, macadamia), celebrated dairy from Victoria and Tasmania, and world-leading exports of beef, lamb, grain and seafood."
 description_sv: "Australiensiskt kök kombinerar ursprungsbefolkningens busktraditioner med brittiskt kolonialarv och asiatiska, mediterrana och mångkulturella influenser. Känt för sin BBQ-kultur — lammkotletter, grillkorv och räkor — och använder djärva inhemska smaker som wattleseed, citronmyrte och macadamia, med utmärkt mejeri från Victoria och Tasmanien samt världsledande export av nötkött, lamm, spannmål och skaldjur."
+description_da: "Det australske køkken forener bush tucker-traditioner hos Australiens oprindelige folk med arven fra den britiske kolonitid og påvirkninger fra indvandring fra Asien, Middelhavslandene og mange andre dele af verden. Køkkenet er kendt for sin grillkultur — lammekoteletter, snags og rejer — og byder på markante smage fra hjemmehørende råvarer (wattleseed, lemon myrtle og macadamia), berømte mejeriprodukter fra Victoria og Tasmanien samt verdensførende eksport af oksekød, lam, korn og fisk og skaldyr."
 research_done: 1
 ---
 

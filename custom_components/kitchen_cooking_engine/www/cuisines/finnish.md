@@ -3,12 +3,14 @@ KCE: CUISINE
 id: finnish
 name: Finnish
 name_sv: "Finskt"
+name_da: "Finsk"
 icon: 🇫🇮
 region: nordic
 region_name: "Nordic"
 region_icon: ❄️
 description: "Finnish cuisine is shaped by forests, lakes, and the Baltic Sea. Rye bread (ruisleipä), salmon soup (lohikeitto), and sautéed reindeer (poronkäristys) define its identity — anchored by the world's highest rye consumption per capita, wild chanterelles, and a dairy culture among Europe's most intensive."
 description_sv: "Finskt kök formas av skogar, sjöar och Östersjön. Rågbröd (ruisleipä), laxsoppa (lohikeitto) och renskav (poronkäristys) definierar dess identitet — förankrad i världens högsta konsumtion av råg per capita, vilda kantareller och en mejerikultur bland Europas mest intensiva."
+description_da: "Det finske køkken er formet af skove, søer og Østersøen. Rugbrød (ruisleipä), laksesuppe (lohikeitto) og sauteret rensdyrkød (poronkäristys) definerer dets identitet — forankret i verdens højeste forbrug af rug pr. indbygger, vilde kantareller og en af Europas stærkeste mejeritraditioner."
 research_done: 1
 ---
 

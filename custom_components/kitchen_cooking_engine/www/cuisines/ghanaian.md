@@ -3,12 +3,14 @@ KCE: CUISINE
 id: ghanaian
 name: Ghanaian
 name_sv: "Ghanaiskt"
+name_da: "Ghanesisk"
 icon: 🇬🇭
 region: african
 region_name: "African"
 region_icon: 🌍
 description: "Ghanaian cuisine is built around rich soups and stews — groundnut soup, light soup, and palm nut soup — ladled over fermented starchy bases like fufu, banku, and kenkey. Tilapia and goat anchor the proteins, while unique West African seasonings like prekese, grains of selim, and dawadawa give Ghanaian cooking its unmistakable identity."
 description_sv: "Ghanesisk matlagning bygger på rejäla soppor och grytor — jordnötssoppa, ljus soppa och palmnötssoppa — serverade med fermenterade stärkelsebaser som fufu, banku och kenkey. Tilapia och getekött är de centrala proteinerna, medan unika Västafrikanska kryddor som prekese, guineapeppar och dawadawa ger ghanesk matlagning sin omistliga identitet."
+description_da: "Det ghanesiske køkken bygger på fyldige supper og gryderetter — jordnøddesuppe, light soup og palmenøddesuppe — der øses over fermenterede stivelsesbaser som fufu, banku og kenkey. Tilapia og gedekød er de vigtigste proteinkilder, mens særlige vestafrikanske krydderier som prekese, selimpeber og dawadawa giver ghanesisk madlavning dens umiskendelige identitet."
 research_done: 1
 ---
 

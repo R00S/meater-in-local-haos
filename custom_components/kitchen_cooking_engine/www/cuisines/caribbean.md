@@ -3,12 +3,14 @@ KCE: CUISINE
 id: caribbean
 name: Caribbean
 name_sv: "Karibisk"
+name_da: "Caribisk"
 icon: 🌴
 region: caribbean_region
 region_name: "Caribbean"
 region_icon: 🌴
 description: "Caribbean cuisine spans Jamaica, Trinidad & Tobago, Barbados, Cuba, Haiti, Puerto Rico, and the Dominican Republic — shaped by African, Indigenous Taíno, European, and South Asian influences. Defining flavours come from Scotch bonnet heat, allspice-and-thyme jerk marinades, coconut milk, and rum. Iconic dishes include Jamaican jerk chicken and ackee & saltfish, Barbadian cou-cou and flying fish, and Trinidadian roti and pelau."
 description_sv: "Karibisk mat spänner över Jamaica, Trinidad & Tobago, Barbados, Kuba, Haiti, Puerto Rico och Dominikanska republiken — formad av afrikanska, ursprungsbefolkningens, europeiska och sydasiatiska influenser. Karaktäristiska smaker skapas av scotch bonnet-hetta, allspice-och-tymjansmarinader, kokosmjölk och rom. Ikoniska rätter inkluderar jamaicansk jerk chicken och ackee & saltfisk, Barbadisk cou-cou med flygfisk, och Trinidadisk roti och pelau."
+description_da: "Det caribiske køkken spænder over Jamaica, Trinidad og Tobago, Barbados, Cuba, Haiti, Puerto Rico og Den Dominikanske Republik — formet af påvirkninger fra afrikanske kulturer, det oprindelige Taíno-folk, Europa og Sydasien. De karakteristiske smage kommer fra styrken fra Scotch bonnet-chili, jerk-marinader med allehånde og timian, kokosmælk og rom. Ikoniske retter omfatter jamaicansk jerk chicken og ackee & saltfish, barbadisk cou-cou og flying fish samt trinidadisk roti og pelau."
 research_done: 1
 ---
 

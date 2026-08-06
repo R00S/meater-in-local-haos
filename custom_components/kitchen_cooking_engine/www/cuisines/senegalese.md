@@ -3,12 +3,14 @@ KCE: CUISINE
 id: senegalese
 name: Senegalese
 name_sv: "Senegalesiskt"
+name_da: "Senegalesisk"
 icon: 🇸🇳
 region: african
 region_name: "African"
 region_icon: 🌍
 description: "Senegalese cuisine is West Africa's most celebrated cooking tradition — built on thiéboudienne (fish rice, UNESCO heritage dish), yassa (lemon-marinated chicken or fish), and mafé (peanut stew), with the Atlantic's fish, groundnut oil, millet, and fermented umami condiments (yeet, netetou) at its heart."
 description_sv: "Senegalesiskt kök är Västafrikas mest hyllade kulinariska tradition — byggt på thiéboudienne (fiskris, UNESCO-arv), yassa (citronmarinerad kyckling eller fisk) och mafé (jordnötsgryta), med Atlantens fisk, jordnötsolja, hirs och fermenterade umami-kryddor (yeet, netetou) som grund."
+description_da: "Det senegalesiske køkken er Vestafrikas mest hyldede madtradition — bygget på thiéboudienne (fisk med ris, en ret optaget på UNESCOs liste over immateriel kulturarv), yassa (citronmarineret kylling eller fisk) og mafé (jordnøddegryde), med Atlanterhavets fisk, jordnøddeolie, hirse og fermenterede, umamigivende smagsgivere (yeet, netetou) som omdrejningspunkt."
 research_done: 1
 ---
 

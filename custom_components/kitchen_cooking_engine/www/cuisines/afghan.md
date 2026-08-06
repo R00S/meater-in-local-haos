@@ -3,12 +3,14 @@ KCE: CUISINE
 id: afghan
 name: Afghan
 name_sv: "Afghanskt"
+name_da: "Afghansk"
 icon: 🇦🇫
 region: south_asian
 region_name: "South Asian"
 region_icon: 🍛
 description: "Afghan cuisine is a fragrant, hearty tradition shaped by Silk Road trade routes and mountain landscapes. Centred on lamb, long-grain rice, and fresh-baked naan, it showcases dishes like Kabuli Pulao (the national dish) and mantu dumplings, layered with cardamom, cumin, and dried mint."
 description_sv: "Det afghanska köket är en doftande, kraftfull tradition formad av Sidenvägens handelsrutter och bergslandskap. Med lamm, långkornigt ris och nybakat naan i centrum presenterar köket nationalrätten Kabuli Pulao och mantudumplings, kryddade med kardemumma, spiskummin och torkad mynta."
+description_da: "Det afghanske køkken er en aromatisk og mættende madtradition formet af Silkevejens handelsruter og bjerglandskaber. Med lam, langkornede ris og friskbagt naan i centrum byder det på retter som Kabuli Pulao (nationalretten) og mantu-dumplings, tilsmagt med kardemomme, spidskommen og tørret mynte."
 research_done: 1
 ---
 

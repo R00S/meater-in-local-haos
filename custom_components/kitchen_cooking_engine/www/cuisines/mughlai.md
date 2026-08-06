@@ -3,12 +3,14 @@ KCE: CUISINE
 id: mughlai
 name: Mughlai
 name_sv: "Mughal-indiskt"
+name_da: "Mughlai (mogulindisk)"
 icon: 👑
 region: south_asian
 region_name: "South Asian"
 region_icon: 🍛
 description: "Mughlai cuisine is the refined legacy of the Mughal court — slow-cooked kormas simmered in cream and nut paste, fragrant dum biryani layered with saffron-stained rice, and the warm aromatics of cardamom, mace, and cloves that define centuries of imperial North Indian cooking."
 description_sv: "Mughal-indiskt kök är det förfinade arvet från Mughalhovet — långsamt tillagade kormar i grädde och nötpasta, doftande dum-biryani lagrad med saffransrivet ris och de varma aromerna av kardemumma, muskotblomma och kryddnejlika som präglat sekler av kejserligt nordindiskt kök."
+description_da: "Mughlai-køkkenet er den raffinerede arv fra mogulhoffet — langtidssimrede korma-retter i fløde og nøddepasta, duftende dum biryani lagt i lag med safranfarvede ris og de varme aromaer af kardemomme, muskatblomme og nelliker, som gennem århundreder har kendetegnet kejserlig nordindisk madlavning."
 research_done: 1
 ---
 

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: pakistani
 name: Pakistani
 name_sv: "Pakistanskt"
+name_da: "Pakistansk"
 icon: 🇵🇰
 region: south_asian
 region_name: "South Asian"
 region_icon: 🍛
 description: "Pakistani cuisine is built on wheat, meat, and intense spicing. Lahori karahi (wok-fried goat or chicken with tomato and ginger), beef nihari, and seekh kebab from the tandoor define a cuisine richer in red meat, stronger in spice, and more wheat-forward than its neighbours. Ghee, fresh ginger-garlic paste, and yogurt underpin every preparation."
 description_sv: "Pakistanskt kök är uppbyggt kring vete, kött och intensiv kryddning. Lahoris karahi (wokad get eller kyckling med tomat och ingefära), biff nihari och seekh-kebab från tandoren definierar ett kök som är rikare på rött kött, starkare i kryddning och mer vetebaserat än sina grannar. Ghee, färsk ingefärs-vitlökspasta och yoghurt utgör grunden i varje tillagning."
+description_da: "Det pakistanske køkken bygger på hvede, kød og intens krydring. Lahori karahi (wokstegt gedekød eller kylling med tomat og ingefær), beef nihari og seekh kebab fra tandooren kendetegner et køkken, der er rigere på rødt kød, stærkere krydret og mere hvedebaseret end nabolandenes. Ghee, pasta af frisk ingefær og hvidløg samt yoghurt ligger til grund for enhver tilberedning."
 research_done: 1
 ---
 

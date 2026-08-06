@@ -3,12 +3,14 @@ KCE: CUISINE
 id: polynesian
 name: Polynesian
 name_sv: "Polynesiskt"
+name_da: "Polynesisk"
 icon: 🌺
 region: oceanian
 region_name: "Oceanian"
 region_icon: 🦘
 description: "Polynesian cuisine spans a vast ocean triangle from Hawaii to New Zealand to Easter Island, united by three pillars: the earth oven (imu/umu/hāngi), the coconut, and taro. The imu — a pit lined with hot stones and covered in banana leaves — slow-roasts kalua pig and root vegetables over hours, and defines the feast culture of luau, umu, and hāngi. Raw fish preparations (Hawaiian poke, Samoan oka, Tahitian poisson cru) celebrate the Pacific Ocean's abundance. Breadfruit (ulu) was the pre-contact starchy staple that could feed a village from a single tree, while taro (kalo) carries deep spiritual significance as the elder sibling of the Hawaiian people."
 description_sv: "Polynesiskt kök sträcker sig över en enorm oceanisk triangel från Hawaii till Nya Zeeland till Påskön, förenat av tre pelare: jordugnen (imu/umu/hāngi), kokosnöten och tarot. Imu — en grop kantad med varma stenar och täckt med bananblad — tillagar långsamt kalua-gris och rotfrukter i timmar och definierar festkulturen vid luau, umu och hāngi. Råfiskrätter (hawaiiansk poke, samoansk oka, tahitisk poisson cru) hyllar Stillahavsoceanens rikedom. Brödfrukt (ulu) var den förkoloniala stärkelsebasen som kunde föda en hel by från ett enda träd, medan taro (kalo) bär djup andlig betydelse som det hawaiianska folkets äldrebror."
+description_da: "Det polynesiske køkken strækker sig over en enorm trekant i Stillehavet fra Hawaii til New Zealand og Påskeøen og forenes af tre grundpiller: jordovnen (imu/umu/hāngī), kokosnødden og taro. En imu — en grube foret med varme sten og dækket med bananblade — langtidssteger kalua-gris og rodfrugter i timevis og er definerende for festmåltidskulturen omkring luau, umu og hāngī. Rå fiskeretter (hawaiiansk poke, samoansk oka og tahitiansk poisson cru) hylder Stillehavets overflod. Brødfrugt (ulu) var før kontakten med europæerne den stivelsesrige basisfødevare, hvor et enkelt træ kunne brødføde en hel landsby, mens taro (kalo) har dyb åndelig betydning som det hawaiianske folks ældre søskende."
 research_done: 1
 ---
 

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: colombian
 name: Colombian
 name_sv: "Colombianskt"
+name_da: "Colombiansk"
 icon: 🇨🇴
 region: latin_american
 region_name: "Latin American"
 region_icon: 💃
 description: "Colombia's cuisine spans six culinary regions — Caribbean Coast, Pacific Coast, Andean, Orinoquía, Amazonia, and Insular. Iconic dishes include bandeja paisa, sancocho, and ajiaco, built on corn, plantain, beans, and bold herb-forward sauces like hogao."
 description_sv: "Colombias kök sträcker sig över sex kulinariska regioner. Ikoniska rätter inkluderar bandeja paisa, sancocho och ajiaco, uppbyggda på majs, plátano, bönor och smakrika örtkryddade såser som hogao."
+description_da: "Colombias køkken spænder over seks kulinariske regioner — den caribiske kyst, Stillehavskysten, Andesregionen, Orinoquía, Amazonia og øregionen. Ikoniske retter omfatter bandeja paisa, sancocho og ajiaco, der bygger på majs, madbanan, bønner og markante, urteprægede saucer som hogao."
 research_done: 1
 ---
 

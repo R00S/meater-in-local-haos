@@ -3,12 +3,14 @@ KCE: CUISINE
 id: balkan
 name: Balkan
 name_sv: "Balkanskt"
+name_da: "Balkankøkken"
 icon: 🏔️
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "Balkan cuisine draws on Ottoman, Mediterranean, and Central European traditions to create hearty, flavour-rich food centred on grilled meats, phyllo pastries, and preserved vegetables. Iconic dishes like ćevapi, burek, and ajvar reflect the communal cooking culture spanning Serbia, Croatia, Bosnia-Herzegovina, Montenegro, and North Macedonia."
 description_sv: "Balkansk kuhinja hämtar inspiration från ottomanska, medelhavs- och mellaneuropeiska traditioner och skapar kraftfull mat med grillat kött, filodeg och inlagda grönsaker. Ikoniska rätter som ćevapi, burek och ajvar speglar regionens matkultur från Serbien, Kroatien och Bosnien-Hercegovina."
+description_da: "Balkankøkkenet trækker på osmanniske, middelhavs- og centraleuropæiske traditioner og skaber solid, smagsrig mad med grillet kød, filodej og konserverede grøntsager i centrum. Ikoniske retter som ćevapi, burek og ajvar afspejler en madkultur præget af fælles måltider, der strækker sig over Serbien, Kroatien, Bosnien-Hercegovina, Montenegro og Nordmakedonien."
 research_done: 1
 ---
 

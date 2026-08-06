@@ -3,12 +3,14 @@ KCE: CUISINE
 id: austrian
 name: Austrian
 name_sv: "Österrikiskt"
+name_da: "Østrigsk"
 icon: 🇦🇹
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "Austrian cuisine is rooted in the Habsburg imperial tradition — Wiener Schnitzel, Tafelspitz, and Sachertorte — balanced by Alpine dairy culture, hearty dumplings, and a deep love of pastry and the Viennese coffeehouse."
 description_sv: "Det österrikiska köket är rotat i den habsburgska imperiala traditionen — Wiener Schnitzel, Tafelspitz och Sachertorte — balanserat av alpint mejerikultur, kraftiga klimpar och en djup kärlek till bakverk och det wienska kaffehuset."
+description_da: "Det østrigske køkken har rødder i den habsburgske kejserlige tradition — Wiener Schnitzel, Tafelspitz og Sachertorte — afbalanceret af Alpernes mejerikultur, solide melboller og en dyb kærlighed til bagværk og de wienske kaffehuse."
 research_done: 1
 ---
 

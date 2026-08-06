@@ -3,12 +3,14 @@ KCE: CUISINE
 id: argentinian
 name: Argentinian
 name_sv: "Argentinskt"
+name_da: "Argentinsk"
 icon: 🇦🇷
 region: latin_american
 region_name: "Latin American"
 region_icon: 💃
 description: "Argentine cuisine is defined by its world-famous asado (barbecue), Pampas-raised beef, and the Italian-Spanish immigrant influence seen in empanadas, pizza, and pasta. Dulce de leche, Malbec wine, and chimichurri sauce are national icons."
 description_sv: "Argentinskt kök präglas av det världsberömda asado (grillning), nötkött från Pampas och det italiensk-spanska invandringsarvet i empanadas, pizza och pasta. Dulce de leche, Malbecvin och chimichurrisås är nationella symboler."
+description_da: "Det argentinske køkken er kendetegnet ved sin verdensberømte asado (grillning), oksekød fra Pampas og indflydelsen fra italienske og spanske indvandrere, der ses i empanadas, pizza og pasta. Dulce de leche, Malbec-vin og chimichurri-sauce er nationalsymboler."
 research_done: 1
 ---
 

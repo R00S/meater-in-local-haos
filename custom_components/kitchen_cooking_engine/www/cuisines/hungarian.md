@@ -3,12 +3,14 @@ KCE: CUISINE
 id: hungarian
 name: Hungarian
 name_sv: "Ungerskt"
+name_da: "Ungarsk"
 icon: 🇭🇺
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "Hungarian cuisine is built around paprika, slow-cooked meats, and sour cream — rich, hearty stews like gulyás and pörkölt define its character, shaped by the traditions of the Great Plain and Central European farming culture."
 description_sv: "Ungerskt kök bygger på paprika, långkokt kött och gräddfil — rika, mustiga grytor som gulyás och pörkölt definierar köket, format av Stora Slättens traditioner och centraleuropeisk jordbrukskultur."
+description_da: "Det ungarske køkken bygger på paprika, langtidstilberedt kød og syrnet fløde. Fyldige, solide gryderetter som gulyás og pörkölt definerer dets karakter, der er formet af traditionerne fra Den Store Slette og den centraleuropæiske landbrugskultur."
 research_done: 1
 ---
 

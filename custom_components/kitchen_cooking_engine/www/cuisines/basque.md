@@ -3,12 +3,14 @@ KCE: CUISINE
 id: basque
 name: Basque
 name_sv: "Baskiskt"
+name_da: "Baskisk"
 icon: 🏔️
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "Basque cuisine spans northern Spain (Álava, Gipuzkoa, Bizkaia) and French Iparralde, earning the world's highest density of Michelin stars per capita. It is defined by salt cod, fresh Cantabrian seafood, aged txuleta beef, pintxos bar culture, and a fierce commitment to PDO/PGI local produce."
 description_sv: "Baskiskt kök spänner över norra Spanien och franska Iparralde och har världens högsta densitet av Michelin-stjärnor per capita. Det kännetecknas av saltad torsk, färsk fisk från Kantabriska havet, lagrad txuleta-biff, pintxos-barkultur och stolthet över lokala PDO/PGI-skyddade råvaror."
+description_da: "Det baskiske køkken strækker sig over det nordlige Spanien (Álava, Gipuzkoa, Bizkaia) og det franske Iparralde og har verdens højeste koncentration af Michelin-stjerner pr. indbygger. Det kendetegnes af saltet torsk, friske fisk og skaldyr fra Det Cantabriske Hav, modnede txuleta-bøffer, pintxos-barkultur og et kompromisløst fokus på lokale råvarer med PDO/PGI-beskyttelse."
 research_done: 1
 ---
 

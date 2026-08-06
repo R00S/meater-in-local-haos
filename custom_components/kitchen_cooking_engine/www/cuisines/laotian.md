@@ -3,12 +3,14 @@ KCE: CUISINE
 id: laotian
 name: Laotian
 name_sv: "Laotiskt"
+name_da: "Laotisk"
 icon: 🇱🇦
 region: southeast_asian
 region_name: "Southeast Asian"
 region_icon: 🌴
 description: "Laotian cuisine (ahan Lao) is defined by sticky rice eaten with every meal, the punchy funk of padaek (fermented fish paste), the bright heat of fresh chilies, and aromatic herbs — from the smoky char of ping pa (grilled fish) to the sour complexity of laap (minced meat salad) and the communal warmth of sinidat (Lao hot pot)."
 description_sv: "Laotiskt kök (ahan Lao) definieras av klibbigt ris som äts till varje måltid, den kraftiga fermenterade fiskpastan padaek, den friska hettan av färska chilis och aromatiska örter — från den rökiga smaken av ping pa (grillad fisk) till det syrliga djupet av laap (hackad köttsallad) och det gemensamma värmen av sinidat (laotisk fonduekastrull)."
+description_da: "Det laotiske køkken (ahan Lao) er kendetegnet ved klisterris, der spises til hvert måltid, den markante smag af den fermenterede fiskepasta padaek, den friske styrke fra friske chilier og aromatiske urter — fra den røgede grillsmag i ping pa (grillet fisk) til den syrlige kompleksitet i laap (salat med hakket kød) og det varme fællesskab omkring sinidat (laotisk hotpot)."
 research_done: 1
 ---
 

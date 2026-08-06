@@ -3,12 +3,14 @@ KCE: CUISINE
 id: japanese
 name: Japanese
 name_sv: "Japanskt"
+name_da: "Japansk"
 icon: 🇯🇵
 region: east_asian
 region_name: "East Asian"
 region_icon: 🥢
 description: "Japanese cuisine (washoku) is built on the umami foundation of dashi, fermented soy, and the harmony of seasonal ingredients — from delicate sashimi and sushi-grade tuna to slow-braised pork belly ramen, the crisp snap of tempura, and the deep comfort of miso soup."
 description_sv: "Japanskt kök (washoku) bygger på umamigrunden av dashi, fermenterad soja och harmoni av säsongsbaserade råvaror — från delikat sashimi och sushi-maguro till långsamt braiserad fläskbuk i ramen, den krispiga tempuran och den djupa tryggheten av en skål misosoppa."
+description_da: "Det japanske køkken (washoku) bygger på umamien fra dashi og fermenteret soja samt samspillet mellem årstidens råvarer — fra delikat sashimi og tun af sushikvalitet til ramen med langsomt braiseret svinebryst, tempuraens sprøde bid og misosuppens dybe, trøstende varme."
 research_done: 1
 ---
 
