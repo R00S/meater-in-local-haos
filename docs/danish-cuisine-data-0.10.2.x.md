@@ -31,7 +31,7 @@
 - [x] Propagate Danish fields through the generator and panel.
 - [x] Add cuisine-localization regression tests.
 - [x] Regenerate and verify panel output.
-- [ ] Push branch and open upstream PR.
+- [x] Push branch and open upstream PR: https://github.com/R00S/meater-in-local-haos/pull/123
 
 ## Inventory
 
