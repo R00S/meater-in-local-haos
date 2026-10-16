@@ -3,6 +3,7 @@ type: cut
 slug: skirt_steak
 name: Skirt Steak
 name_sv: Skirt
+name_da: Skirt steak
 category: beef
 meat: cow
 cut_type: Steaks

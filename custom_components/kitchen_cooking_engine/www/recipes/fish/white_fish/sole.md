@@ -3,6 +3,7 @@ type: cut
 slug: sole
 name: Sole
 name_sv: Sjötunga
+name_da: Søtunge
 category: fish
 meat: white_fish
 cut_type: White Fish

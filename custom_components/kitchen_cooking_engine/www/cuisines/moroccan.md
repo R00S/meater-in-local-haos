@@ -3,12 +3,14 @@ KCE: CUISINE
 id: moroccan
 name: Moroccan
 name_sv: "Marockanskt"
+name_da: "Marokkansk"
 icon: 🇲🇦
 region: african
 region_name: "African"
 region_icon: 🌍
 description: "Moroccan cuisine is a sensory feast shaped by Berber, Arab, Andalusian, and Jewish traditions — marked by fragrant ras el hanout, slow-cooked tagines with preserved lemon and olives, steamed couscous piled with seven vegetables, sweet-savoury bastilla, and the world-famous saffron from Taliouine."
 description_sv: "Marockansk mat är ett sinnenas festmåltid format av berberska, arabiska, andalusiska och judiska traditioner — präglat av doftande ras el hanout, långkokt tagine med bevarad citron och oliver, ångad couscous med sju grönsaker, sötsyrlig bastilla och världsberömt saffran från Taliouine."
+description_da: "Det marokkanske køkken er en fest for sanserne, formet af berberiske, arabiske, andalusiske og jødiske traditioner — kendetegnet ved duftende ras el hanout, langtidstilberedte taginer med syltede citroner og oliven, dampet couscous toppet med syv grøntsager, bastilla, der forener sødt og krydret, og den verdensberømte safran fra Taliouine."
 research_done: 1
 ---
 

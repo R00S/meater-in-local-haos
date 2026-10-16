@@ -3,6 +3,7 @@ type: cut
 slug: salmon_steak
 name: Salmon Steak
 name_sv: Laxbiff
+name_da: Laksebøf
 category: fish
 meat: salmon
 cut_type: Salmon

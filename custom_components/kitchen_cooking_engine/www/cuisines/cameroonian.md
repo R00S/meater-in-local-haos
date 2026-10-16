@@ -3,12 +3,14 @@ KCE: CUISINE
 id: cameroonian
 name: Cameroonian
 name_sv: "Kamerunskt"
+name_da: "Camerounsk"
 icon: 🇨🇲
 region: african
 region_name: "African"
 region_icon: 🌍
 description: "Cameroonian cuisine reflects the country's extraordinary diversity — often called 'Africa in miniature' — blending forest, savanna, coastal and Sahel traditions. Ndolé (bitter leaf stew), poulet DG, eru, and achu define a cuisine built on bold spices, red palm oil, dried crayfish, and foraged forest ingredients."
 description_sv: "Kamerunskt kök speglar landets extraordinära mångfald — ofta kallat 'Afrika i miniatyr' — och förenar skogens, savannens, kustens och Sahelns traditioner. Ndolé (besk-bladsgrytan), poulet DG, eru och achu definierar ett kök byggt på djärva kryddor, röd palmolja, torkad kräftdjurssäsong och skördade skogsrätter."
+description_da: "Det camerounske køkken afspejler landets enestående mangfoldighed — ofte kaldet 'Afrika i miniature' — og forener traditioner fra skov, savanne, kyst og Sahel. Ndolé (gryderet med bitre blade), poulet DG, eru og achu definerer et køkken bygget på markante krydderier, rød palmeolie, tørrede krebs og sankede skovråvarer."
 research_done: 1
 ---
 

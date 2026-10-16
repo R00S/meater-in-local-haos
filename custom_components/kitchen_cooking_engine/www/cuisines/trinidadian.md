@@ -3,12 +3,14 @@ KCE: CUISINE
 id: trinidadian
 name: Trinidadian
 name_sv: "Trinidadiskt"
+name_da: "Trinidadisk"
 icon: 🇹🇹
 region: caribbean_region
 region_name: "Caribbean"
 region_icon: 🏝️
 description: "Trinidadian cuisine fuses African, South Asian, Creole and Chinese influences into one of the Caribbean's most vibrant food cultures — doubles (fried bara with curried chickpeas) eaten curbside at dawn, pelau rice slow-cooked with caramelised chicken and pigeon peas, curry goat at Sunday dinner, bake-and-shark at Maracas Beach, and callaloo of dasheen leaves and crab that traces its roots to both West Africa and the Amerindians."
 description_sv: "Trinidadiskt kök smälter samman afrikanska, sydasiatiska, kreolska och kinesiska influenser i en av Karibiens mest levfulla matkulturer — doubles (stekt bara med currykikärtor) vid gatumatsvagnen i gryningen, pelau-ris tillagat med karamelliserad kyckling och duvorärtor, currygeit till söndagsmiddagen, bake-and-shark vid Maracas Beach och callaloo av dacheen-blad och krabba."
+description_da: "Det trinidadiske køkken smelter afrikanske, sydasiatiske, kreolske og kinesiske påvirkninger sammen til en af Caribiens mest levende madkulturer — doubles (friturestegt bara med karrykrydrede kikærter), som spises ved vejkanten ved daggry, pelau-ris langtidskogt med karamelliseret kylling og duerærter, curry goat til søndagsmiddagen, bake-and-shark på Maracas Beach og callaloo med dasheen-blade og krabbe, hvis rødder går tilbage til både Vestafrika og Amerikas oprindelige folk."
 research_done: 1
 ---
 

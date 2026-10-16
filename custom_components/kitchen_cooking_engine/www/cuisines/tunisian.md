@@ -3,12 +3,14 @@ KCE: CUISINE
 id: tunisian
 name: Tunisian
 name_sv: "Tunisiskt"
+name_da: "Tunesisk"
 icon: 🇹🇳
 region: african
 region_name: "African"
 region_icon: 🌍
 description: "Tunisian cuisine is the most fiercely spiced of North Africa — harissa-fuelled stews, couscous crowned with lamb and root vegetables, brik fried pastry oozing egg and tuna, and lablabi chickpea soup eaten in early-morning steam with a torn baguette. Forged by Berber, Arab, Ottoman and French layers and bolstered by the Mediterranean, it runs hotter and brighter than Moroccan cooking: caraway and tabil spice paste go where others use ras-el-hanout, and the olive oil — Tunisia exports more per capita than any other country — pours lavishly into everything."
 description_sv: "Tunisiskt kök är det mest eldigt kryddade i hela Nordafrika — harissaeldade grytor, couscous krönt med lamm och rotfrukter, den stekta briken som flödar av ägg och tonfisk, och lablabi kikärtsoppa avnjuten i tidig morgondimma med bröd. Byggt av berbiska, arabiska, osmanska och franska lager och stödd av Medelhavet löper det hetare och skarpare än marockansk matlagning: karumdill och tabil-kryddblandning ersätter ras-el-hanout, och olivoljan — Tunisien exporterar mer per capita än något annat land — hälls generöst i allt."
+description_da: "Det tunesiske køkken er Nordafrikas mest intenst krydrede — harissa-prægede gryderetter, couscous kronet med lam og rodfrugter, friturestegt brik fyldt med flydende æg og tun samt kikærtesuppen lablabi, der spises dampende varm tidligt om morgenen med en baguette revet i stykker. Formet af berberiske, arabiske, osmanniske og franske lag og beriget af Middelhavet er det stærkere og friskere end det marokkanske køkken: kommen og krydderpastaen tabil bruges, hvor andre bruger ras-el-hanout, og olivenolien — Tunesien eksporterer mere pr. indbygger end noget andet land — bruges gavmildt i alt."
 research_done: 1
 ---
 

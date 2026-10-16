@@ -3,6 +3,7 @@ type: cut
 slug: roasted_garlic
 name: Roasted Garlic
 name_sv: Rostad vitlök
+name_da: Bagt hvidløg
 category: vegetables
 meat: alliums
 cut_type: Alliums

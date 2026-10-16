@@ -3,12 +3,14 @@ KCE: CUISINE
 id: punjabi
 name: Punjabi
 name_sv: "Punjabiskt"
+name_da: "Punjabisk"
 icon: 🌾
 region: south_asian
 region_name: "South Asian"
 region_icon: 🌶️
 description: "Punjabi cuisine — the hearty cooking of the 'Granary of India/Pakistan' — is built on tandoor heat, buffalo dairy, and bold wheat breads. From butter chicken and dal makhani to sarson da saag with makki roti, ghee, paneer, and garam masala define its rich, smoky, indulgent character."
 description_sv: "Punjabiskt kök — från 'Indiens spannmålskammare' — bygger på tandurvärme, buffelmjölk och kraftiga vetebröd. Från smörkyckling och dal makhani till sarson da saag med makki roti — ghee, paneer och garam masala ger köket dess rika, rökiga karaktär."
+description_da: "Det punjabiske køkken — den solide madtradition fra 'Indiens/Pakistans kornkammer' — bygger på tandoorens varme, mejeriprodukter af bøffelmælk og kraftige hvedebrød. Fra butter chicken og dal makhani til sarson da saag med makki roti er det ghee, paneer og garam masala, der definerer dets fyldige, røgede og overdådige karakter."
 research_done: 1
 ---
 

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: norwegian
 name: Norwegian
 name_sv: "Norskt"
+name_da: "Norsk"
 icon: 🇳🇴
 region: nordic
 region_name: "Nordic"
 region_icon: ❄️
 description: "Norwegian cuisine is shaped by the sea and the cold — Atlantic salmon, salted cod, pickled herring, and pinnekjøtt (cured lamb ribs) speak to a long tradition of preservation. Brunost (brown cheese), thick rømme (sour cream), and wild berries round out a larder built from fjord, farm, and forest."
 description_sv: "Norskt kök formas av havet och kylan — atlantlax, saltad torsk, inlagd sill och pinnekjøtt (torkade lammrevbensspjäll) vittnar om en lång bevaringstradition. Brunost (brun ost), tjock rømme (gräddfil) och vilda bär kompletterar ett skafferi byggt av fjord, gård och skog."
+description_da: "Det norske køkken er formet af havet og kulden — atlantisk laks, saltet torsk, syltede sild og pinnekjøtt (saltede og tørrede lammeribben) vidner om en lang tradition for konservering. Brunost (brun ost), tyk rømme (syrnet fløde) og vilde bær fuldender et spisekammer baseret på råvarer fra fjord, gård og skov."
 research_done: 1
 ---
 

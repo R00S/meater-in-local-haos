@@ -3,6 +3,7 @@ type: cut
 slug: moose_steak
 name: Moose Steak
 name_sv: Älgbiff
+name_da: Elgbøf
 category: game
 meat: moose
 cut_type: Moose

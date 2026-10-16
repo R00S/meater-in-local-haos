@@ -3,12 +3,14 @@ KCE: CUISINE
 id: persian
 name: Persian (Iranian)
 name_sv: "Persiskt (Iranskt)"
+name_da: "Persisk (iransk)"
 icon: 🇮🇷
 region: middle_east
 region_name: "Middle East"
 region_icon: 🌙
 description: "Persian cuisine is defined by three layers of sophistication: saffron, dried limes (limoo amani), and barberries give it a souring-aromatic identity unlike any other; the rice technique — par-boiling, steaming, creating a golden tahdig crust — elevates everyday eating to high art; and slow khorosh stews like ghormeh sabzi (herb-lamb-fenugreek) and fesenjan (walnut-pomegranate-chicken) blend sweet, sour, and herbal notes in ways developed over three millennia."
 description_sv: "Persiskt kök definieras av tre lager av sofistikering: saffran, torkade limefrukter (limoo amani) och berberis ger det en syrlig-aromatisk identitet olik allt annat; ristekniken — förkokning, ångning, skapandet av en gyllenbrun tahdig-skorpa — lyfter vardagsmat till högt konsthantverk; och långsamt kokta khoresh-grytor som ghormeh sabzi (örter-lamm-bockhornsklöver) och fesenjan (valnöt-granatäpple-kyckling) blandar söta, sura och örthaltiga toner på sätt som utvecklats under tre tusen år."
+description_da: "Det persiske køkken defineres af tre lag af raffinement: safran, tørrede limefrugter (limoo amani) og berberisbær giver det en syrlig-aromatisk identitet uden sidestykke; risteknikken — forkogning, dampning og dannelsen af en gylden tahdig-skorpe — løfter hverdagsmad til stor kunst; og langtidskogte khoresh-gryderetter som ghormeh sabzi (krydderurter, lam og bukkehornskløver) og fesenjan (valnødder, granatæble og kylling) forener søde, syrlige og urteprægede noter på måder, der er udviklet gennem tre årtusinder."
 research_done: 1
 ---
 

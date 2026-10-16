@@ -3,12 +3,14 @@ KCE: CUISINE
 id: ecuadorian
 name: Ecuadorian
 name_sv: "Ecuadoriansk"
+name_da: "Ecuadoriansk"
 icon: 🇪🇨
 region: latin_american
 region_name: "Latin America"
 region_icon: 🌎
 description: "Ecuadorian cuisine spans three distinct worlds — the Pacific coast, the Andes highlands, and the Amazon. Coastal cooking centers on shrimp, fish, plantain, and coconut; Andean cooking is built on over 650 native potato varieties, corn, guinea pig, and fresh cheese; the Amazon adds yuca, river fish, and forest fruits. The refrito (onion-garlic-tomato-achiote base) and fresh ají sauce frame almost every meal. Ecuador is the world's number one shrimp exporter ($7.2B, 2023), the world's top banana exporter, and the third largest cacao exporter — yet its most iconic dish is fanesca, a Holy Week soup requiring 12 grains representing the 12 apostles."
 description_sv: "Ecuadorianskt kök spänner över tre distinkta världar — Stillahavskysten, andinska höglandet och Amazonas. Kustkök centreras kring räkor, fisk, plätano och kokos; andinskt kök är byggt på över 650 inhemska potatissorter, majs, marsvin och färsk ost; Amazonas tillför yuca, flodfisk och skogsfrukt. Refritot (lök-vitlök-tomat-achiotebas) och färsk ajísås ramar in nästan varje måltid. Ecuador är världens nummer ett räkexportör ($7.2 miljarder, 2023), ledande bananexportör, och tredje störste kakaoexportör — ändå är dess mest ikoniska rätt fanesca, en påskvecka-soppa som kräver 12 spannmål för 12 apostlar."
+description_da: "Det ecuadorianske køkken spænder over tre forskellige verdener — Stillehavskysten, Andesbjergenes højland og Amazonas. Køkkenet ved kysten er centreret omkring rejer, fisk, madbanan og kokos; det andinske køkken bygger på over 650 oprindelige kartoffelsorter, majs, marsvin og friskost; Amazonas bidrager med yuca, flodfisk og skovfrugter. Refrito (en base af løg, hvidløg, tomat og achiote) og frisk ají-sauce danner rammen om næsten hvert måltid. Ecuador er verdens største eksportør af rejer (7,2 mia. USD i 2023), verdens største bananeksportør og verdens tredjestørste eksportør af kakao — alligevel er landets mest ikoniske ret fanesca, en suppe til den stille uge, som kræver 12 kornsorter, der repræsenterer de 12 apostle."
 research_done: 1
 ---
 

@@ -3,6 +3,7 @@ type: cut
 slug: roasting_joint
 name: Roasting Joint
 name_sv: Stekkött
+name_da: Oksesteg
 category: beef
 meat: cow
 cut_type: Roasts

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: georgian
 name: Georgian
 name_sv: "Georgiskt"
+name_da: "Georgisk"
 icon: 🇬🇪
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "Georgian cuisine is one of the Caucasus crossroads of Europe and Asia, defined by the lavish feast tradition (supra), walnut-based sauces, khachapuri bread, and khinkali dumplings. Blue fenugreek, Imeretian saffron (marigold petals), coriander, and khmeli suneli create aromatic profiles found nowhere else — shaped by Georgia's subtropical Black Sea coast, alpine highlands, and 8,000 years of winemaking in clay kvevri vessels."
 description_sv: "Georgiskt kök är ett av Kaukasusregionens korsvägskök, definierat av den rika festtraditionen (supra), valnötsbaserade såser, khachapuribröd och khinkali-dumplings. Blå bockhornsklöver, imeretisk saffran (ringblommablad), koriander och khmeli suneli skapar aromatiska profiler som inte finns någon annanstans — format av Georgiens subtropiska Svartahavskust, alpina högland och 8 000 år av vinmaking i lerkärl (kvevri)."
+description_da: "Det georgiske køkken er et af Kaukasus' madkulturelle knudepunkter mellem Europa og Asien og kendetegnes af den overdådige festtradition (supra), valnøddebaserede saucer, khachapuri-brød og khinkali-dumplings. Blå bukkehorn, imeretisk safran (kronblade af morgenfrue), koriander og khmeli suneli skaber aromatiske smagsprofiler, der ikke findes andre steder — i et køkken formet af Georgiens subtropiske kyst ved Sortehavet, alpine højland og 8.000 års vinfremstilling i lerkar kaldet kvevri."
 research_done: 1
 ---
 

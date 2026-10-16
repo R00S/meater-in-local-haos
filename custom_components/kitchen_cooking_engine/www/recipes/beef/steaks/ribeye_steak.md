@@ -3,6 +3,7 @@ type: cut
 slug: ribeye_steak
 name: Ribeye Steak
 name_sv: Entrecôte
+name_da: Ribeyebøf
 category: beef
 meat: cow
 cut_type: Steaks

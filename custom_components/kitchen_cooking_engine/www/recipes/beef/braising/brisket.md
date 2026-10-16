@@ -3,6 +3,7 @@ type: cut
 slug: brisket
 name: Brisket
 name_sv: Bringa
+name_da: Oksespidsbryst
 category: beef
 meat: cow
 cut_type: Braising Cuts

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: bengali
 name: Bengali
 name_sv: "Bengaliskt"
+name_da: "Bengalsk"
 icon: 🐟
 region: south_asian
 region_name: "South Asian"
 region_icon: 🍛
 description: "West Bengali cuisine is a rice-and-fish civilisation centred on the Ganges delta, defined by mustard oil, panch phoron, posto (poppy seeds), and legendary freshwater fish dishes such as shorshe ilish and chingri malai curry. It is equally famous for its chhana-based sweets — roshogolla, sandesh, and mishti doi — which are central to Kolkata's culinary identity."
 description_sv: "Västbengalisk mat är en ris-och-fisk-civilisation kring Gangesdeltaet, definierad av senapsolja, panch phoron, posto (vallmofrön) och legendariska sötvattensfiskar som shorshe ilish och chingri malai curry. Köket är lika känt för sina chhana-baserade sötsaker — roshogolla, sandesh och mishti doi — som är centrala för Kolkatas kulinariska identitet."
+description_da: "Det vestbengalske køkken er en madkultur bygget op omkring ris og fisk med centrum i Gangesdeltaet og kendetegnet ved sennepsolie, panch phoron, posto (valmuefrø) og legendariske retter med ferskvandsfisk såsom shorshe ilish og chingri malai curry. Det er lige så berømt for sine chhana-baserede søde specialiteter — roshogolla, sandesh og mishti doi — som er centrale for Kolkatas kulinariske identitet."
 research_done: 1
 ---
 

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: peruvian
 name: Peruvian
 name_sv: "Peruanskt"
+name_da: "Peruviansk"
 icon: 🇵🇪
 region: latin_american
 region_name: "Latin American"
 region_icon: 💃
 description: "Peruvian cuisine is anchored by aji amarillo — the golden chili that appears in virtually every signature dish — and by the country's breathtaking biodiversity: 3,000 potato varieties, endemic chilis, and quinoa all originate here. At the coast, ceviche (raw fish cured in lime with aji amarillo and onion) defines the culinary identity; in the highlands, the Andean pantry of freeze-dried potato (chuño), cuy (guinea pig), and alpaca shapes mountain cooking; and in Lima, successive waves of Chinese, Japanese, and African migration created Chifa and Nikkei sub-cuisines that make Peru's capital one of the world's great food cities."
 description_sv: "Peruanskt kök förankras av aji amarillo — den gyllene chilin som förekommer i praktiskt taget varje signaturrät — och av landets häpnadsväckande biologiska mångfald: 3 000 potatissorter, endemiska chilifrukter och quinoa har alla sitt ursprung här. Vid kusten definierar ceviche (rå fisk kurerad i lime med aji amarillo och lök) den kulinariska identiteten; i höglandet formar andinska råvaror som frystorkad potatis (chuño), marsvin (cuy) och alpaka bergsmaten; och i Lima skapade historiska vågor av kinesisk, japansk och afrikansk invandring Chifa- och Nikkei-delköken som gör Perus huvudstad till en av världens stora matkulturer."
+description_da: "Det peruvianske køkken er forankret i aji amarillo — den gyldne chili, som indgår i stort set alle signaturretter — og i landets betagende biodiversitet: 3.000 kartoffelsorter, endemiske chilier og quinoa har alle deres oprindelse her. Ved kysten definerer ceviche (rå fisk marineret i limesaft med aji amarillo og løg) den kulinariske identitet; i højlandet former det andinske spisekammer med frysetørret kartoffel (chuño), cuy (marsvin) og alpaka bjergkøkkenet; og i Lima skabte successive bølger af kinesisk, japansk og afrikansk migration køkkenretningerne Chifa og Nikkei, som gør Perus hovedstad til en af verdens store madbyer."
 research_done: 1
 ---
 

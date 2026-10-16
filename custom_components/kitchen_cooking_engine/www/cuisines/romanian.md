@@ -3,12 +3,14 @@ KCE: CUISINE
 id: romanian
 name: Romanian
 name_sv: "Rumänskt"
+name_da: "Rumænsk"
 icon: 🇷🇴
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "Romanian cuisine is built on slow-cooked pork, tangy smântână (sour cream), and cornmeal mămăligă — hearty and seasonal, shaped by Carpathian pastoral traditions, Balkan vegetable culture, and the Danube and Black Sea fisheries."
 description_sv: "Rumänskt kök bygger på långkokt fläsk, syrlig gräddfil (smântână) och majsgröt (mămăligă) — hjärtligt och säsongsbetonat, format av karpatiska boskapstraditioner, balkanisk grönsakskulturell och Donauns och Svarta havets fiske."
+description_da: "Det rumænske køkken bygger på langtidstilberedt svinekød, syrlig smântână (syrnet fløde) og mămăligă af majsmel — et solidt, sæsonpræget køkken formet af Karpaternes hyrdetraditioner, Balkans grøntsagskultur og fiskeriet i Donau og Sortehavet."
 research_done: 1
 ---
 

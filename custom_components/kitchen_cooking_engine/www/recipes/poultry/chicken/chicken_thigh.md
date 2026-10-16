@@ -3,6 +3,7 @@ type: cut
 slug: chicken_thigh
 name: Chicken Thigh
 name_sv: Kycklinglår
+name_da: Kyllingeoverlår
 category: poultry
 meat: chicken
 cut_type: Dark Meat

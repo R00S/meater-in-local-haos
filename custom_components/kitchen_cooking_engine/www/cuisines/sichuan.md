@@ -3,12 +3,14 @@ KCE: CUISINE
 id: sichuan
 name: Sichuan
 name_sv: "Sichuansk"
+name_da: "Sichuansk"
 icon: 🌶️
 region: east_asian
 region_name: "East Asian"
 region_icon: 🥢
 description: "Sichuan cuisine is defined by mala — the electric numbing-heat from Sichuan peppercorn and chilli — built on doubanjiang fermented broad bean paste, the soul spice of mapo tofu, twice-cooked pork, dan dan noodles and the communal hotpot that has swept the world."
 description_sv: "Sichuanskt kök definieras av mala — den elektriska domningshetta från sichuanpeppar och chilli — byggt på doubanjiang fermenterad bönpasta, själskryddan i mapo tofu, huiguorou, dan dan-nudlar och den gemensamma hotpot som erövrat världen."
+description_da: "Det sichuanske køkken defineres af mala — den elektriske, bedøvende hede fra sichuanpeber og chili — og bygger på den fermenterede hestebønnepasta doubanjiang, som er den centrale smagsgiver i mapo tofu, svinekød tilberedt ad to omgange, dan dan-nudler og hotpotten, der deles ved bordet og har bredt sig over hele verden."
 research_done: 1
 ---
 

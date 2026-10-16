@@ -3,12 +3,14 @@ KCE: CUISINE
 id: south_indian
 name: South Indian
 name_sv: "Sydindiskt"
+name_da: "Sydindisk"
 icon: 🇮🇳
 region: south_asian
 region_name: "South Asian"
 region_icon: 🌶️
 description: "South Indian cuisine is the crisp dosa, the steamed idli, the tangy tamarind sambar, and the fierce black pepper — a rice-lentil-coconut world spanning Tamil Nadu, Kerala, Karnataka, and Andhra Pradesh, where toddy-shop beef fry meets Brahmin coconut stew at the same banana leaf."
 description_sv: "Sydindiskt kök är den knapriga dosan, den ångade idlin, den syrliga tamarind-sambarn och den intensiva svartpepparn — en ris-linser-kokosvärld som spänner från Tamil Nadu, Kerala, Karnataka och Andhra Pradesh, där beef fry möter kokosstew på samma bananblad."
+description_da: "Det sydindiske køkken er den sprøde dosa, den dampede idli, den syrlige tamarind-sambar og den intense sorte peber — en verden af ris, linser og kokos, der strækker sig over Tamil Nadu, Kerala, Karnataka og Andhra Pradesh, hvor toddy-barernes beef fry møder brahminsk kokosgryde på det samme bananblad."
 research_done: 1
 ---
 

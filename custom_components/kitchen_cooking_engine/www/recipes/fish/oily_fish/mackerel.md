@@ -3,6 +3,7 @@ type: cut
 slug: mackerel
 name: Mackerel
 name_sv: Makrill
+name_da: Makrel
 category: fish
 meat: oily_fish
 cut_type: Oily Fish

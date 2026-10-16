@@ -3,6 +3,7 @@ type: cut
 slug: ground_pork
 name: Ground Pork
 name_sv: Fläskfärs
+name_da: Hakket svinekød
 category: pork
 meat: pig
 cut_type: Ground

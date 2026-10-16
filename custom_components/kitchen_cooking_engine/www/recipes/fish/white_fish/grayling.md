@@ -3,6 +3,7 @@ type: cut
 slug: grayling
 name: Grayling
 name_sv: Harr
+name_da: Stalling
 category: fish
 meat: white_fish
 cut_type: White Fish

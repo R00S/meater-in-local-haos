@@ -3,12 +3,14 @@ KCE: CUISINE
 id: canadian
 name: Canadian
 name_sv: "Kanadensiskt"
+name_da: "Canadisk"
 icon: 🇨🇦
 region: north_american
 region_name: "North American"
 region_icon: 🦅
 description: "Canadian cuisine reflects the country's vast regional diversity — from Quebec's French-rooted comfort food (poutine, tourtière) to Maritime lobster suppers, Prairie beef and grain traditions, BC Pacific salmon, and Indigenous staples like wild rice, bannock, and bison. Maple syrup from Quebec (72% of world supply) is the defining flavour of Canadian identity."
 description_sv: "Kanadensiskt kök speglar landets stora regionala mångfald — från Quebecs franskinfluerade husmanskost (poutine, tourtière) till Maritimes hummerkalas, Präriens nötkött och spannmål, BC:s Stillahavsaxel och ursprungsfolkens basmat som vildris, bannock och bison. Lönnsirap från Quebec (72% av världsproduktionen) är den definerande smaken i kanadensisk identitet."
+description_da: "Det canadiske køkken afspejler landets store regionale mangfoldighed — fra Quebecs franskforankrede hjemlige retter (poutine, tourtière) til hummermiddage i de canadiske Atlanterhavsprovinser, prærieprovinsernes oksekøds- og korntraditioner, stillehavslaks fra British Columbia og oprindelige folks basisfødevarer som vildris, bannock og bison. Ahornsirup fra Quebec (72 % af verdens forsyning) er den smag, der definerer canadisk identitet."
 research_done: 1
 ---
 

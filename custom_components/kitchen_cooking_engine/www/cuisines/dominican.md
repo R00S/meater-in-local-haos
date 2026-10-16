@@ -3,12 +3,14 @@ KCE: CUISINE
 id: dominican
 name: Dominican
 name_sv: "Dominikansk"
+name_da: "Dominikansk"
 icon: 🇩🇴
 region: caribbean_region
 region_name: "Caribbean"
 region_icon: 🌊
 description: "Dominican cuisine is built on La Bandera — rice, stewed red beans, and braised meat — and shaped by Taino, African, and Spanish roots. Plantain in all forms (mangú, tostones, maduros), root vegetables, and a bold sofrito-adobo-naranja agria flavor base define the cooking. The Dominican Republic has the world's highest per capita avocado consumption at ~49 kg per person annually."
 description_sv: "Dominikanskt kök är byggt kring La Bandera — ris, kokta röda bönor och bräserat kött — och format av taino-, afrikanska och spanska rötter. Plätanon i alla dess former (mangú, tostones, maduros), rotfrukter och en kraftfull sofrito-adobo-naranja agria smakbas definierar matlagningen. Dominikanska republiken har världens högsta avokadokonsumtion per capita på ~49 kg per person och år."
+description_da: "Det dominikanske køkken bygger på La Bandera — ris, simrede røde bønner og braiseret kød — og er formet af Taíno-, afrikanske og spanske rødder. Madbananer i alle former (mangú, tostones, maduros), rodfrugter og en markant smagsbase af sofrito, adobo og naranja agria definerer madlavningen. Den Dominikanske Republik har med ca. 49 kg om året verdens højeste avokadoforbrug pr. indbygger."
 research_done: 1
 ---
 

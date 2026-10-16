@@ -3,6 +3,7 @@ type: cut
 slug: chicken_thigh_bone_in
 name: Chicken Thigh (Bone-in)
 name_sv: Kycklinglår med ben
+name_da: Kyllingeoverlår med ben
 category: poultry
 meat: chicken
 cut_type: Dark Meat

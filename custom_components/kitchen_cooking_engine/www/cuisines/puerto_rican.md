@@ -3,12 +3,14 @@ KCE: CUISINE
 id: puerto_rican
 name: Puerto Rican
 name_sv: "Puerto Ricanskt"
+name_da: "Puertoricansk"
 icon: 🇵🇷
 region: caribbean_region
 region_name: "Caribbean"
 region_icon: 🏝️
 description: "Puerto Rican cuisine fuses Spanish, African, and Taíno traditions around sofrito, adobo, and slow-roasted pork — from lechón and pernil to arroz con gandules, mofongo, and viandas (root vegetable platters), all seasoned with recao, ají dulce, and annatto."
 description_sv: "Puerto Ricanskt kök smälter samman spanska, afrikanska och Taíno-traditioner kring sofrito, adobo och långstekt fläsk — från lechón och pernil till arroz con gandules, mofongo och viandas, kryddade med recao, ají dulce och annatto."
+description_da: "Det puertoricanske køkken forener spanske, afrikanske og Taíno-traditioner omkring sofrito, adobo og langtidsstegt svinekød — fra lechón og pernil til arroz con gandules, mofongo og viandas (fade med rodfrugter), alt sammen krydret med recao, ají dulce og annatto."
 research_done: 1
 ---
 

@@ -3,6 +3,7 @@ type: cut
 slug: beef_burger
 name: Beef Burger / Ground Beef Patty
 name_sv: Nötburgare
+name_da: Hakkebøf
 category: beef
 meat: cow
 cut_type: Ground

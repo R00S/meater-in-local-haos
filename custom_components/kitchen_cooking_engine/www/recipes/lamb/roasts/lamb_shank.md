@@ -3,6 +3,7 @@ type: cut
 slug: lamb_shank
 name: Shank
 name_sv: Lammlägg
+name_da: Lammeskank
 category: lamb
 meat: lamb
 cut_type: Ground

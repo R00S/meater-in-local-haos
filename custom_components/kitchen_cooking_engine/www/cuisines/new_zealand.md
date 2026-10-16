@@ -3,12 +3,14 @@ KCE: CUISINE
 id: new_zealand
 name: New Zealand
 name_sv: "Nyzeeländskt"
+name_da: "Newzealandsk"
 icon: 🇳🇿
 region: oceanian
 region_name: "Oceanian"
 region_icon: 🌏
 description: "New Zealand cuisine is shaped by Māori hāngī earth-pit cooking, kūmara sweet potato, and a Pacific seafood larder — green-lipped mussels, pāua abalone, whitebait fritters — alongside world-class grass-fed lamb, venison, and dairy from a land that exports butter, cheese, and Sauvignon Blanc around the world."
 description_sv: "Nyzeeländskt kök formas av māoriernas hāngī-jordugnslagning, kūmara sötpotatis och ett stillahavslager av skaldjur — gröna musslor, pāua havsöronssnäcka, vitfiskfritter — vid sidan av världsklassens gräsbetad lamm, viltkött och mejeri från ett land som exporterar smör, ost och Sauvignon Blanc runt om i världen."
+description_da: "Det newzealandske køkken er formet af Māori-folkets hāngī-madlavning i jordovn, sødkartoflen kūmara og et spisekammer af fisk og skaldyr fra Stillehavet — grønlæbede muslinger, pāua-abalone og whitebait-fritter — side om side med græsfodret lammekød, hjortekød og mejeriprodukter i verdensklasse fra et land, der eksporterer smør, ost og Sauvignon Blanc til hele verden."
 research_done: 1
 ---
 

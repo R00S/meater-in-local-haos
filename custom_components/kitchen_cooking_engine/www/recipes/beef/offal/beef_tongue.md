@@ -3,6 +3,7 @@ type: cut
 slug: beef_tongue
 name: Beef Tongue
 name_sv: Oxtunga
+name_da: Oksetunge
 category: beef
 meat: cow
 cut_type: Other / Offal

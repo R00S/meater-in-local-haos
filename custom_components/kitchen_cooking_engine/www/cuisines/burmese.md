@@ -3,12 +3,14 @@ KCE: CUISINE
 id: burmese
 name: Burmese
 name_sv: "Burmesiskt"
+name_da: "Burmesisk"
 icon: 🇲🇲
 region: southeast_asian
 region_name: "Southeast Asian"
 region_icon: 🌴
 description: "Burmese cuisine blends South Asian, Southeast Asian and East Asian traditions in a style that is distinctly Myanmarese. Fish — especially catfish — dominates the diet at ~45 kg per capita per year (WorldFish/FAO), providing over 60% of animal protein. The national dish mohinga is a catfish-broth rice-noodle soup seasoned with ngapi fermented fish paste, lemongrass and turmeric. Ngapi underpins almost every Burmese dish, while lahpet (pickled tea leaves) — used in the celebrated lahpet thoke salad — is entirely unique to Myanmar. Rice is consumed at ~272 kg per capita per year (FAOSTAT 2022), one of the world's highest rates. Myanmar ranks 7th globally in rice production at ~25 million tonnes (FAO 2022)."
 description_sv: "Burmesisk mat blandar sydasiatiska, sydostasiatiska och ostasiatiska traditioner till ett distinkt myanmarskt kök. Fisk — framför allt mal — dominerar kosten med ca 45 kg per capita och år (WorldFish/FAO), vilket ger över 60% av animaliskt protein. Nationalrätten mohinga är en malbuljong-risnudelsoppa kryddad med ngapi (fermenterad fiskpasta), citrongräs och gurkmeja. Ngapi är grunden för nästan varje burmesisk rätt, medan lahpet (inlagda teblad) — som används i den berömda lahpet thoke-salladen — är helt unikt för Myanmar. Ris konsumeras till ca 272 kg per capita och år (FAOSTAT 2022), ett av världens högsta. Myanmar rankar 7:e globalt i risproduktion med ca 25 miljoner ton (FAO 2022)."
+description_da: "Det burmesiske køkken blander sydasiatiske, sydøstasiatiske og østasiatiske traditioner i en stil, der er udpræget myanmarsk. Fisk — især malle — dominerer kosten med ca. 45 kg pr. indbygger om året (WorldFish/FAO) og står for over 60 % af det animalske protein. Nationalretten mohinga er en risnudelsuppe med mallebouillon, krydret med den fermenterede fiskepasta ngapi, citrongræs og gurkemeje. Ngapi danner grundlag for næsten enhver burmesisk ret, mens lahpet (syltede teblade) — som bruges i den berømte lahpet thoke-salat — er helt enestående for Myanmar. Risforbruget er ca. 272 kg pr. indbygger om året (FAOSTAT 2022), et af verdens højeste niveauer. Myanmar er nr. 7 på verdensplan inden for risproduktion med ca. 25 millioner ton (FAO 2022)."
 research_done: 1
 ---
 

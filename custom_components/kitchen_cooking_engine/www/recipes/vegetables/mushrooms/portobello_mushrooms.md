@@ -3,6 +3,7 @@ type: cut
 slug: portobello_mushrooms
 name: Portobello Mushrooms
 name_sv: Portobellosvamp
+name_da: Portobellosvampe
 category: vegetables
 meat: mushrooms
 cut_type: Mushrooms

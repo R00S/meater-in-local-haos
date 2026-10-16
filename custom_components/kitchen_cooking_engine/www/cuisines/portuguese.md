@@ -3,12 +3,14 @@ KCE: CUISINE
 id: portuguese
 name: Portuguese
 name_sv: "Portugisiskt"
+name_da: "Portugisisk"
 icon: 🇵🇹
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "Portuguese cuisine is defined by three obsessions: salt cod (bacalhau — the 'faithful friend' with 365 recipes), olive oil of world-class quality, and fresh coriander as the national herb of mainland Europe. Where Spanish cuisine uses parsley, Portugal uses coriander extravagantly — in açorda (bread-coriander soup), in amêijoas à Bulhão Pato (clams with garlic and coriander), and in molho de coentros over grilled fish. The Age of Discovery brought piri piri from Africa, cinnamon from Sri Lanka, and tomatoes from the Americas — ingredients Portugal distributed to the world then absorbed into its own kitchen, creating a cuisine that is Mediterranean in olive oil and wine, Atlantic in its fish, and global in its spices."
 description_sv: "Portugisiskt kök definieras av tre besatthetsobjekt: salt torskfisk (bacalhau — 'den trogne vännen' med 365 recept), olivolja av världsklass och färsk koriander som det kontinentala Europas nationalört. Där spansk matlagning använder persilja, använder Portugal koriander extravagant — i açorda (bröd-korianderssoppa), i amêijoas à Bulhão Pato (musslor med vitlök och koriander) och i molho de coentros över grillad fisk. Upptäcktstidens voyager förde piri piri från Afrika, kanel från Sri Lanka och tomater från Amerika — ingredienser som Portugal spred till världen och sedan absorberade in i sitt eget kök, och skapade ett kök som är medelhavsliknande i olivolja och vin, atlantiskt i sin fisk och globalt i sina kryddor."
+description_da: "Det portugisiske køkken er defineret af tre besættelser: saltet torsk (bacalhau — den 'trofaste ven' med 365 opskrifter), olivenolie i verdensklasse og frisk koriander som det europæiske fastlands nationalurt. Hvor det spanske køkken bruger persille, bruger Portugal koriander i rigelige mængder — i açorda (brød- og koriandersuppe), i amêijoas à Bulhão Pato (muslinger med hvidløg og koriander) og i molho de coentros på grillet fisk. Opdagelsestiden bragte piri piri fra Afrika, kanel fra Sri Lanka og tomater fra Amerika — ingredienser, som Portugal spredte til verden og derefter optog i sit eget køkken og dermed skabte et køkken, der er middelhavspræget i sin olivenolie og vin, atlantisk i sin fisk og globalt i sine krydderier."
 research_done: 1
 ---
 

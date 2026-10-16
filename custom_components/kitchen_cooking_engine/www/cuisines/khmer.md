@@ -3,12 +3,14 @@ KCE: CUISINE
 id: khmer
 name: Khmer
 name_sv: "Khmerskt"
+name_da: "Khmer (cambodjansk)"
 icon: 🇰🇭
 region: southeast_asian
 region_name: "Southeast Asian"
 region_icon: 🌴
 description: "Khmer (Cambodian) cuisine is built on the umami depth of prahok (fermented fish paste), the aromatic kroeung herb paste, and freshwater fish from the Tonle Sap and Mekong. Gentler than Thai food, richer than Vietnamese, it finds balance in coconut milk curries, sour soups, and the world-famous fragrance of Kampot pepper."
 description_sv: "Khmerskt (kambodjansskt) kök bygger på umamidjupet i prahok (fermenterad fiskpasta), den aromatiska kroeung-kryddpastan och sötvattensfisk från Tonle Sap och Mekong. Mildare än thailändsk mat, rikare än vietnamesisk — det hittar balansen i kokosmjölkscurries, supsoppor och den världsberömda doften av Kampotpeppar."
+description_da: "Khmer-køkkenet (det cambodjanske køkken) bygger på den dybe umami i prahok (fermenteret fiskepasta), den aromatiske urtepasta kroeung og ferskvandsfisk fra Tonle Sap og Mekong. Mildere end det thailandske køkken og mere fyldigt end det vietnamesiske finder det balance i karryretter med kokosmælk, syrlige supper og den verdensberømte duft af Kampot-peber."
 research_done: 1
 ---
 

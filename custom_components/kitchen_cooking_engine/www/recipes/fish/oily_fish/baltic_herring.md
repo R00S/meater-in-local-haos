@@ -3,6 +3,7 @@ type: cut
 slug: baltic_herring
 name: Baltic Herring
 name_sv: Strömming
+name_da: Østersøsild
 category: fish
 meat: oily_fish
 cut_type: Oily Fish

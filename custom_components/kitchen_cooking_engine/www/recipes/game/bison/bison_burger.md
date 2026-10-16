@@ -3,6 +3,7 @@ type: cut
 slug: bison_burger
 name: Bison Burger
 name_sv: Bisonburgare
+name_da: Bisonburger
 category: game
 meat: bison
 cut_type: Bison

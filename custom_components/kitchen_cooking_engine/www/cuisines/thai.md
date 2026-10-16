@@ -3,12 +3,14 @@ KCE: CUISINE
 id: thai
 name: Thai
 name_sv: "Thaimat"
+name_da: "Thailandsk"
 icon: 🇹🇭
 region: southeast_asian
 region_name: "Southeast Asian"
 region_icon: 🌴
 description: "Thai cuisine balances five fundamental flavours — sweet, sour, salty, spicy and umami — in every dish. Fragrant curry pastes built from galangal, lemongrass and kaffir lime, the holy basil chicken stir-fry pad krapao, som tam green papaya salad, pad thai rice noodles and GI-certified jasmine rice from the Thung Kula Rong Hai basin define a culinary tradition celebrated worldwide for aromatic layering and street-food vibrancy."
 description_sv: "Thaimat balanserar fem grundsmaker — söt, sur, salt, stark och umami — i varje rätt. Doftande currypastar av galangal, citrongräs och kaffirlime, pad krapao med helig basilika och kyckling, grön papayasallad (som tam), pad thai och det GI-certifierade jasminriset från Thung Kula Rong Hai-bäckenet definierar en kulinarisk tradition känd för aromatisk komplexitet och gatumatsvitalitet."
+description_da: "Det thailandske køkken balancerer fem grundsmage — sødt, surt, salt, stærkt og umami — i hver ret. Duftende karrypastaer baseret på galanga, citrongræs og kaffirlime, wokretten pad krapao med kylling og hellig basilikum, den grønne papayasalat som tam, risnudelretten pad thai og GI-certificeret jasminris fra Thung Kula Rong Hai-bækkenet definerer en madtradition, der hyldes verden over for sine aromatiske lag og sit pulserende gadekøkken."
 research_done: 1
 ---
 

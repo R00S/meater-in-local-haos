@@ -7,6 +7,7 @@ measurements.
 
 Supported measurement systems:
   - SE  (Swedish)  — krm, tsk, msk, cl, dl, l, g, hg, kg.  °C only.
+  - DK  (Danish)   — ml, tsk, spsk, cl, dl, l, g, kg.  °C only.
   - UK  (British)  — tsp, tbsp, ml, dl, l, g, kg.  °C.
   - US  (American) — tsp, tbsp, cup, fl oz, oz, lb, °F.
 
@@ -34,7 +35,7 @@ US rules (researched):
 Adding a new measurement system = adding a new MeasurementSystem entry
 to MEASUREMENT_SYSTEMS.
 
-Last Updated: 16 Mar 2026
+Last Updated: 31 Jul 2026
 """
 
 from __future__ import annotations
@@ -55,6 +56,7 @@ class MeasurementUnit:
     abbr_en: str        # English abbreviation
     type: str           # "volume" or "mass"
     to_base: float      # multiplier to convert to base unit (ml or g)
+    symbol: str | None = None  # invariant symbol for the measurement system
 
 
 # --- Volume units (base = ml) ---
@@ -62,10 +64,11 @@ class MeasurementUnit:
 UNIT_ML    = MeasurementUnit("ml",    "ml",    "ml",    "volume", 1.0)
 UNIT_CL    = MeasurementUnit("cl",    "cl",    "cl",    "volume", 10.0)
 UNIT_DL    = MeasurementUnit("dl",    "dl",    "dl",    "volume", 100.0)
-UNIT_L     = MeasurementUnit("l",     "l",     "L",     "volume", 1000.0)
-UNIT_KRM   = MeasurementUnit("krm",   "krm",   "pinch", "volume", 1.0)
-UNIT_TSK   = MeasurementUnit("tsk",   "tsk",   "tsp",   "volume", 5.0)
-UNIT_MSK   = MeasurementUnit("msk",   "msk",   "tbsp",  "volume", 15.0)
+UNIT_L     = MeasurementUnit("l",     "l",     "L",     "volume", 1000.0, "l")
+UNIT_KRM   = MeasurementUnit("krm",   "krm",   "pinch", "volume", 1.0, "krm")
+UNIT_TSK   = MeasurementUnit("tsk",   "tsk",   "tsp",   "volume", 5.0, "tsk")
+UNIT_MSK   = MeasurementUnit("msk",   "msk",   "tbsp",  "volume", 15.0, "msk")
+UNIT_SPSK  = MeasurementUnit("spsk",  "spsk",  "spsk",  "volume", 15.0, "spsk")
 UNIT_CUP   = MeasurementUnit("cup",   "cup",   "cup",   "volume", 240.0)
 UNIT_TSP   = MeasurementUnit("tsp",   "tsp",   "tsp",   "volume", 5.0)
 UNIT_TBSP  = MeasurementUnit("tbsp",  "tbsp",  "tbsp",  "volume", 15.0)
@@ -113,6 +116,22 @@ SE_MASS_PREFS: list[PreferenceRule] = [
     PreferenceRule("g",  0.0),       # anything smaller
 ]
 
+# --- DK (Danish) ---
+
+DK_VOLUME_PREFS: list[PreferenceRule] = [
+    PreferenceRule("l",    1000.0),  # >= 1 l
+    PreferenceRule("dl",   50.0),    # >= 0.5 dl
+    PreferenceRule("spsk", 15.0),    # >= 1 spsk
+    PreferenceRule("cl",   10.0),    # >= 1 cl
+    PreferenceRule("tsk",  5.0),     # >= 1 tsk
+    PreferenceRule("ml",   0.0),     # anything smaller
+]
+
+DK_MASS_PREFS: list[PreferenceRule] = [
+    PreferenceRule("kg", 1000.0),    # >= 1 kg
+    PreferenceRule("g",  0.0),       # anything else
+]
+
 # --- UK (British) ---
 
 UK_VOLUME_PREFS: list[PreferenceRule] = [
@@ -153,9 +172,10 @@ US_MASS_PREFS: list[PreferenceRule] = [
 @dataclass
 class MeasurementSystem:
     """Complete measurement system."""
-    id: str                                     # "se", "uk", or "us"
+    id: str                                     # "se", "dk", "uk", or "us"
     name_sv: str                                # Swedish display name
     name_en: str                                # English display name
+    name_da: str                                # Danish display name
     flag: str                                   # Flag emoji
     temp_unit: str                              # "C" or "F"
     show_alt_temp: bool                         # Show alternative temp in parentheses
@@ -169,6 +189,7 @@ MEASUREMENT_SYSTEM_SE = MeasurementSystem(
     id="se",
     name_sv="🇸🇪 Svenska mått",
     name_en="🇸🇪 Swedish",
+    name_da="🇸🇪 Svenske mål",
     flag="🇸🇪",
     temp_unit="C",
     show_alt_temp=False,
@@ -178,10 +199,25 @@ MEASUREMENT_SYSTEM_SE = MeasurementSystem(
     mass_units=[UNIT_G, UNIT_HG, UNIT_KG],
 )
 
+MEASUREMENT_SYSTEM_DK = MeasurementSystem(
+    id="dk",
+    name_sv="🇩🇰 Danska mått",
+    name_en="🇩🇰 Danish",
+    name_da="🇩🇰 Danske mål",
+    flag="🇩🇰",
+    temp_unit="C",
+    show_alt_temp=False,
+    volume_prefs=DK_VOLUME_PREFS,
+    mass_prefs=DK_MASS_PREFS,
+    volume_units=[UNIT_ML, UNIT_TSK, UNIT_SPSK, UNIT_CL, UNIT_DL, UNIT_L],
+    mass_units=[UNIT_G, UNIT_KG],
+)
+
 MEASUREMENT_SYSTEM_UK = MeasurementSystem(
     id="uk",
     name_sv="🇬🇧 Brittiska mått",
     name_en="🇬🇧 UK Metric",
+    name_da="🇬🇧 Britiske mål",
     flag="🇬🇧",
     temp_unit="C",
     show_alt_temp=False,
@@ -195,6 +231,7 @@ MEASUREMENT_SYSTEM_US = MeasurementSystem(
     id="us",
     name_sv="🇺🇸 Amerikanska mått",
     name_en="🇺🇸 US Customary",
+    name_da="🇺🇸 Amerikanske mål",
     flag="🇺🇸",
     temp_unit="F",
     show_alt_temp=True,      # Shows °F with (°C) in parentheses
@@ -207,6 +244,7 @@ MEASUREMENT_SYSTEM_US = MeasurementSystem(
 # Registry — easy to extend with new measurement systems
 MEASUREMENT_SYSTEMS: dict[str, MeasurementSystem] = {
     "se": MEASUREMENT_SYSTEM_SE,
+    "dk": MEASUREMENT_SYSTEM_DK,
     "uk": MEASUREMENT_SYSTEM_UK,
     "us": MEASUREMENT_SYSTEM_US,
 }
@@ -221,7 +259,7 @@ DEFAULT_MEASUREMENT_SYSTEM = "se"
 ALL_UNITS: dict[str, MeasurementUnit] = {}
 for _u in [
     UNIT_ML, UNIT_CL, UNIT_DL, UNIT_L, UNIT_KRM, UNIT_TSK, UNIT_MSK,
-    UNIT_CUP, UNIT_TSP, UNIT_TBSP, UNIT_FL_OZ, UNIT_PINT, UNIT_QUART,
+    UNIT_SPSK, UNIT_CUP, UNIT_TSP, UNIT_TBSP, UNIT_FL_OZ, UNIT_PINT, UNIT_QUART,
     UNIT_G, UNIT_HG, UNIT_KG, UNIT_OZ, UNIT_LB,
 ]:
     ALL_UNITS[_u.id] = _u
@@ -241,7 +279,7 @@ def convert_quantity(
     Args:
         value: The numeric quantity.
         from_unit_id: The source unit id (e.g. "ml", "g", "cup").
-        measurement_system: Target system id ("se", "uk", or "us").
+        measurement_system: Target system id ("se", "dk", "uk", or "us").
 
     Returns:
         Tuple of (converted_value, target_unit_id).
@@ -292,14 +330,19 @@ def format_quantity(
     else:
         num_str = str(round(converted))
 
-    display_name = target_unit.abbr_sv if language == "sv" else target_unit.abbr_en
+    if language in ("sv", "da") or measurement_system in ("se", "dk"):
+        num_str = num_str.replace(".", ",")
+
+    display_name = target_unit.symbol or (
+        target_unit.abbr_sv if language == "sv" else target_unit.abbr_en
+    )
     return f"{num_str} {display_name}"
 
 
 def convert_temperature(temp_c: float, measurement_system: str = "se") -> str:
     """Format a temperature for display in the given measurement system.
 
-    SE/UK: °C only.
+    SE/DK/UK: °C only.
     US: °F with (°C) in parentheses.
     """
     system = MEASUREMENT_SYSTEMS.get(measurement_system, MEASUREMENT_SYSTEM_SE)
@@ -322,13 +365,15 @@ def get_measurement_systems_js() -> dict[str, Any]:
         "id": "se",
         "name_sv": "🇸🇪 Svenska mått",
         "name_en": "🇸🇪 Swedish",
+        "name_da": "🇸🇪 Svenske mål",
         "flag": "🇸🇪",
         "temp_unit": "C",
         "show_alt_temp": false,
         "volume_prefs": [{"unit": "l", "min_ml": 1000}, ...],
         "mass_prefs": [{"unit": "kg", "min_g": 500}, ...],
-        "units": {"ml": {"abbr_sv": "ml", "abbr_en": "ml", "type": "volume", "to_base": 1}, ...}
+        "units": {"ml": {"symbol": "ml", "abbr_sv": "ml", "abbr_en": "ml", "type": "volume", "to_base": 1}, ...}
       },
+      "dk": { ... },
       "uk": { ... },
       "us": { ... }
     }
@@ -338,6 +383,7 @@ def get_measurement_systems_js() -> dict[str, Any]:
         units_dict = {}
         for u in system.volume_units + system.mass_units:
             units_dict[u.id] = {
+                "symbol": u.symbol or u.abbr_en,
                 "abbr_sv": u.abbr_sv,
                 "abbr_en": u.abbr_en,
                 "type": u.type,
@@ -357,6 +403,7 @@ def get_measurement_systems_js() -> dict[str, Any]:
             "id": sys_id,
             "name_sv": system.name_sv,
             "name_en": system.name_en,
+            "name_da": system.name_da,
             "flag": system.flag,
             "temp_unit": system.temp_unit,
             "show_alt_temp": system.show_alt_temp,

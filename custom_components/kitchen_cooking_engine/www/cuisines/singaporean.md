@@ -3,12 +3,14 @@ KCE: CUISINE
 id: singaporean
 name: Singaporean
 name_sv: "Singaporeansk"
+name_da: "Singaporeansk"
 icon: 🇸🇬
 region: southeast_asian
 region_name: "Southeast Asian"
 region_icon: 🌴
 description: "Singaporean cuisine is the world's great multicultural table — Hainanese chicken rice, coconut laksa, chilli crab, char kway teow — born where Chinese, Malay, Tamil, and Peranakan traditions fused at a crossroads port city into a uniquely Singaporean whole."
 description_sv: "Singaporeanskt kök är världens stora multikulturella matbord — Hainanesisk kycklingris, kokosnötslaksa, chilikrabba, char kway teow — fött där kinesiska, malajiska, tamilska och Peranakan-traditioner smälte samman vid en korsvägsstad till ett unikt singaporeanskt kök."
+description_da: "Det singaporeanske køkken er verdens store multikulturelle madbord — Hainanese chicken rice, coconut laksa, chilli crab og char kway teow — opstået, da kinesiske, malajiske, tamilske og peranakanske traditioner i en havneby ved handelsvejenes knudepunkt smeltede sammen til en unik singaporeansk helhed."
 research_done: 1
 ---
 

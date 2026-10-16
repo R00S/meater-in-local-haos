@@ -3,6 +3,7 @@ type: cut
 slug: cabbage
 name: Cabbage
 name_sv: Kål
+name_da: Kål
 category: vegetables
 meat: cruciferous
 cut_type: Cruciferous

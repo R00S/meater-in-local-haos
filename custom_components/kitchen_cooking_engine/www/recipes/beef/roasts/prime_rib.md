@@ -3,6 +3,7 @@ type: cut
 slug: prime_rib
 name: Prime Rib / Standing Rib Roast
 name_sv: Entrecôtestek
+name_da: Højrebssteg
 category: beef
 meat: cow
 cut_type: Roasts

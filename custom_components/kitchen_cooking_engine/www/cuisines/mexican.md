@@ -3,12 +3,14 @@ KCE: CUISINE
 id: mexican
 name: Mexican
 name_sv: "Mexikanskt"
+name_da: "Mexicansk"
 icon: 🇲🇽
 region: latin_american
 region_name: "Latin American"
 region_icon: 🌶️
 description: "Mexican cuisine (UNESCO Intangible Heritage) is built on the holy trinity of corn, chile, and beans — a mosaic of Indigenous and colonial flavours expressed in tacos al pastor, slow-cooked barbacoa, mole negro, tamales, and the sizzle of carne asada from north to south."
 description_sv: "Mexikansk mat (UNESCO Immateriellt Kulturarv) är byggd på den heliga treenigheten majs, chile och bönor — ett mosaik av urbefolknings- och kolonialinspirerade smaker uttryckta i tacos al pastor, långkokt barbacoa, mole negro, tamales och fräsandet av carne asada från norr till söder."
+description_da: "Det mexicanske køkken, som er optaget på UNESCOs liste over immateriel kulturarv, bygger på den hellige treenighed af majs, chile og bønner — en mosaik af smage fra oprindelige folk og kolonitiden, der kommer til udtryk i tacos al pastor, langtidstilberedt barbacoa, mole negro, tamales og sydende carne asada fra nord til syd."
 research_done: 1
 ---
 

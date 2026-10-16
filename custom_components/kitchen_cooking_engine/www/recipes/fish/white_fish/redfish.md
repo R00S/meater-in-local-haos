@@ -3,6 +3,7 @@ type: cut
 slug: redfish
 name: Redfish
 name_sv: Uer
+name_da: Rødfisk
 category: fish
 meat: white_fish
 cut_type: White Fish

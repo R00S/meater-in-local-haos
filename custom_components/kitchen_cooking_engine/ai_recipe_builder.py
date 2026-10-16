@@ -39,7 +39,8 @@ from .recipes.models import (
     MealType,
 )
 from .appliances.registry import get_registry
-from .const import DOMAIN
+from .const import DOMAIN, SUPPORTED_LANGUAGES
+from .measurements import MEASUREMENT_SYSTEMS
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -304,8 +305,8 @@ class AIRecipeBuilder:
             max_time_minutes: Optional maximum cooking time
             complexity: Recipe complexity 1-5 (1=very simple, 5=chef level)
             cuisines: Optional list of cuisine/region IDs for fusion cooking
-            language: UI language code ('sv', 'en')
-            measurement_system: Measurement system ('se', 'uk', 'us')
+            language: UI language code ('en', 'sv', 'da')
+            measurement_system: Measurement system ('se', 'dk', 'uk', 'us')
             compulsory_ingredients: Ingredients that MUST appear in every recipe
             cooking_mode: 'A' (ignore shelf), 'B' (cook now — shelf only),
                           'C' (cook later — add shopping list step)
@@ -338,13 +339,13 @@ class AIRecipeBuilder:
         # Call OpenAI via conversation integration
         try:
             self._set_status("")  # clear any stale status from a previous call
-            response = await self._call_openai(prompt)
+            response = await self._call_openai(prompt, language)
             self._set_status("✅ Response received — parsing recipes...")
             suggestions = self._parse_suggestions(response)
             
             if not suggestions:
                 _LOGGER.warning("No suggestions parsed from AI response")
-                return self._get_fallback_suggestions(ingredients)
+                return self._get_fallback_suggestions(ingredients, language)
             
             return suggestions
             
@@ -380,8 +381,8 @@ class AIRecipeBuilder:
             complexity: Recipe complexity 1-5 (used for ingredient ceiling)
             user_ingredients: Original user-selected ingredients (for ceiling)
             servings: Number of servings requested by the user
-            language: UI language code ('sv', 'en')
-            measurement_system: Measurement system ('se', 'uk', 'us')
+            language: UI language code ('en', 'sv', 'da')
+            measurement_system: Measurement system ('se', 'dk', 'uk', 'us')
         
         Returns:
             Detailed recipe with instructions
@@ -409,7 +410,7 @@ class AIRecipeBuilder:
         # Call OpenAI
         try:
             self._set_status("")  # clear any stale status from a previous call
-            response = await self._call_openai(prompt)
+            response = await self._call_openai(prompt, language)
             self._set_status("✅ Recipe details received — processing...")
             detail = self._parse_recipe_detail(response, suggestion)
             
@@ -567,8 +568,8 @@ class AIRecipeBuilder:
             max_time_minutes: Maximum cooking time
             complexity: Recipe complexity 1-5
             cuisines: Optional cuisine/region preferences
-            language: UI language code ('sv', 'en')
-            measurement_system: Measurement system ('se', 'uk', 'us')
+            language: UI language code ('en', 'sv', 'da')
+            measurement_system: Measurement system ('se', 'dk', 'uk', 'us')
         
         Returns:
             Formatted prompt for OpenAI
@@ -771,6 +772,13 @@ Please suggest 4 quite different recipes using these ingredients. For each recip
 Try to include at least 2 well-known classic recipes that people can search for online, and mark the rest as originals.
 If you have web search tools available, use them to find and verify real recipe sources.
 
+CRITICAL RULE — MACHINE VALUES:
+Keep schema-controlled values as stable English IDs regardless of recipe language:
+- "difficulty" MUST be one of "easy", "medium", or "hard".
+- "recipe_origin" MUST be "known" or "original".
+- "cuisine_type", "required_appliances", and appliance IDs MUST use canonical IDs.
+Only human-facing values such as name, description, and ingredient names are translated.
+
 Format your response as a JSON array with exactly 4 recipes:
 [
   {{
@@ -816,8 +824,8 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
             complexity: Recipe complexity 1-5 (for ingredient ceiling)
             user_ingredients: Original user-selected ingredients (for ceiling)
             servings: Number of servings requested by the user
-            language: UI language code ('sv', 'en')
-            measurement_system: Measurement system ('se', 'uk', 'us')
+            language: UI language code ('en', 'sv', 'da')
+            measurement_system: Measurement system ('se', 'dk', 'uk', 'us')
         
         Returns:
             Formatted prompt for detailed recipe
@@ -913,7 +921,7 @@ Please provide the full detailed recipe with:
 
 Format your response as JSON:
 {{
-  "ingredients": [{self._get_example_ingredients(measurement_system)}],
+  "ingredients": [{self._get_example_ingredients(language, measurement_system)}],
   "instructions": [{self._get_example_instructions(language, measurement_system)}],
   "step_ingredients": [{self._get_example_step_ingredients(language, measurement_system)}],
   "tips": [{self._get_example_tips(language)}],
@@ -923,7 +931,7 @@ Format your response as JSON:
       "temperature_c": 200,
       "temperature_f": 392,
       "duration_minutes": 25,
-      "description": "Roast chicken until golden"
+      "description": "{self._get_example_phase_description(language)}"
     }}
   ],
   "use_probe": true,
@@ -942,6 +950,10 @@ The "step_ingredients" array MUST have exactly the same number of elements as th
 Each element is a list of the ingredient names (matching entries in the "ingredients" list) that are
 used or needed in that step. This lets the app highlight which ingredients to grab for each step.
 If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list [].
+
+CRITICAL RULE — MACHINE VALUES:
+Keep phase "mode" values and appliance identifiers as canonical English IDs. Keep all numeric
+temperature fields numeric. Translate only human-facing strings, including phase descriptions.
 """
         return prompt
 
@@ -952,11 +964,13 @@ If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list
     @staticmethod
     def _build_language_directive(language: str, measurement_system: str) -> str:
         """Build the language/measurement directive to inject into AI prompts."""
-        parts = []
+        if language not in SUPPORTED_LANGUAGES:
+            raise ValueError(f"Unsupported recipe language: {language}")
+
         # Language directive — ALWAYS explicit to prevent the AI from
         # writing in the cuisine's language instead of the user's language.
-        if language == "sv":
-            parts.append(
+        language_directives = {
+            "sv": (
                 "\nCRITICAL RULE — LANGUAGE:\n"
                 "Write the ENTIRE recipe in Swedish (svenska). All text — recipe name, "
                 "description, ingredients, instructions, tips — MUST be in Swedish. "
@@ -964,18 +978,26 @@ If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list
                 "Even if the cuisine is Danish, Finnish, French, etc., the recipe text "
                 "MUST still be written in Swedish — only use the original language for "
                 "the dish name if it is a well-known proper noun."
-            )
-        else:
-            # English — still explicit to prevent the AI from writing in the
-            # cuisine's language (e.g. Danish text for Danish cuisine).
-            parts.append(
+            ),
+            "da": (
+                "\nCRITICAL RULE — LANGUAGE:\n"
+                "Write the ENTIRE recipe in Danish (dansk). All human-facing text — recipe name, "
+                "description, ingredients, instructions, phase descriptions, and tips — MUST be in Danish. "
+                "Use natural Danish culinary vocabulary. "
+                "Even if the cuisine is Swedish, Finnish, French, etc., the recipe text "
+                "MUST still be written in Danish — only use the original language for "
+                "the dish name if it is a well-known proper noun."
+            ),
+            "en": (
                 "\nCRITICAL RULE — LANGUAGE:\n"
                 "Write the ENTIRE recipe in English. All text — recipe name, "
                 "description, ingredients, instructions, tips — MUST be in English. "
                 "Even if the cuisine is Danish, Swedish, French, Japanese, etc., the recipe "
                 "text MUST still be written in English — only use the original language for "
                 "the dish name if it is a well-known proper noun."
-            )
+            ),
+        }
+        parts = [language_directives[language]]
 
         # Measurement directive
         if measurement_system == "se":
@@ -989,6 +1011,18 @@ If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list
                 "Use kg for amounts ≥ 500 g. Temperatures in °C only. "
                 "Use comma as decimal separator (e.g. 0,5 dl NOT 0.5 dl; 1,5 hg NOT 1.5 hg)."
             )
+        elif measurement_system == "dk":
+            parts.append(
+                "\nCRITICAL RULE — MEASUREMENTS:\n"
+                "Use Danish recipe measurements ONLY. "
+                "Volume: ml, tsk (5 ml), spsk (15 ml), cl, dl, l. "
+                "Mass: g, kg. "
+                "NEVER use cups, tablespoons, teaspoons, msk, krm, hg, oz, lb, or fl oz. "
+                "Prefer dl for amounts of at least 0,5 dl and use kg for amounts of at least 1 kg. "
+                "Temperatures in °C only. "
+                "Use comma as decimal separator (e.g. 0,5 dl NOT 0.5 dl). "
+                "A knsp (knife-tip amount) is qualitative; preserve it as text and never assign it a numeric volume."
+            )
         elif measurement_system == "uk":
             parts.append(
                 "\nCRITICAL RULE — MEASUREMENTS:\n"
@@ -1001,28 +1035,40 @@ If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list
         return "".join(parts)
 
     @staticmethod
-    def _get_example_ingredients(measurement_system: str) -> str:
+    def _get_example_ingredients(language: str, measurement_system: str) -> str:
         """Return example ingredient strings for the JSON format hint."""
+        terms = {
+            "en": ("chicken breast, diced", "rice", "olive oil", "cream"),
+            "sv": ("kycklingbröst, tärnad", "ris", "olivolja", "grädde"),
+            "da": ("kyllingebryst i tern", "ris", "olivenolie", "fløde"),
+        }
+        chicken, rice, oil, cream = terms.get(language, terms["en"])
         if measurement_system == "se":
-            return '"5 dl ris", "400 g kycklingbröst, tärnad", "2 msk olivolja", "0,5 dl grädde"'
-        elif measurement_system == "uk":
-            return '"300 g chicken breast, diced", "400 ml rice", "2 tbsp olive oil"'
-        return '"1 lb chicken breast, diced", "2 cups rice", "2 tbsp olive oil"'
+            return f'"5 dl {rice}", "400 g {chicken}", "2 msk {oil}", "0,5 dl {cream}"'
+        if measurement_system == "dk":
+            return f'"4 dl {rice}", "400 g {chicken}", "2 spsk {oil}", "0,5 dl {cream}"'
+        if measurement_system == "uk":
+            return f'"300 g {chicken}", "400 ml {rice}", "2 tbsp {oil}"'
+        return f'"1 lb {chicken}", "2 cups {rice}", "2 tbsp {oil}"'
 
     @staticmethod
     def _get_example_instructions(language: str, measurement_system: str) -> str:
         """Return example instruction strings for the JSON format hint."""
+        system = MEASUREMENT_SYSTEMS.get(measurement_system)
+        temperature = "400°F (200°C)" if system and system.temp_unit == "F" else "200°C"
         if language == "sv":
-            return '"Steg 1: Värm ugnen till 200°C", "Steg 2: Krydda kycklingen med salt och peppar"'
-        if measurement_system == "uk":
-            return '"Step 1: Preheat oven to 200°C", "Step 2: Season chicken with salt and pepper"'
-        return '"Step 1: Preheat oven to 400°F (200°C)", "Step 2: Season chicken with salt and pepper"'
+            return f'"Steg 1: Värm ugnen till {temperature}", "Steg 2: Krydda kycklingen med salt och peppar"'
+        if language == "da":
+            return f'"Trin 1: Forvarm ovnen til {temperature}", "Trin 2: Krydr kyllingen med salt og peber"'
+        return f'"Step 1: Preheat oven to {temperature}", "Step 2: Season chicken with salt and pepper"'
 
     @staticmethod
     def _get_example_tips(language: str) -> str:
         """Return example tip strings for the JSON format hint."""
         if language == "sv":
             return '"Tips 1: Låt köttet vila 5 minuter innan servering", "Tips 2: Använd färska örter"'
+        if language == "da":
+            return '"Tip 1: Lad kødet hvile i 5 minutter før servering", "Tip 2: Brug friske krydderurter"'
         return '"Tip 1: Let meat rest 5 minutes before serving", "Tip 2: Use fresh herbs for best flavor"'
 
     @staticmethod
@@ -1030,7 +1076,18 @@ If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list
         """Return example step_ingredients arrays for the JSON format hint."""
         if language == "sv":
             return '["olivolja"], ["kycklingbröst, tärnad", "salt", "peppar"]'
+        if language == "da":
+            return '["olivenolie"], ["kyllingebryst i tern", "salt", "peber"]'
         return '["olive oil"], ["chicken breast, diced", "salt", "pepper"]'
+
+    @staticmethod
+    def _get_example_phase_description(language: str) -> str:
+        """Return a localized phase-description example."""
+        return {
+            "en": "Roast chicken until golden",
+            "sv": "Stek kycklingen tills den är gyllene",
+            "da": "Steg kyllingen, til den er gylden",
+        }.get(language, "Roast chicken until golden")
 
     # Keywords that identify a transient / overload error from the AI service.
     # Checked both against exception messages and response text.
@@ -1156,7 +1213,7 @@ If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list
         except json.JSONDecodeError:
             return text  # not valid JSON; let the caller handle the error
 
-    async def _call_openai(self, prompt: str) -> str:
+    async def _call_openai(self, prompt: str, language: str) -> str:
         """Call the AI agent via Home Assistant conversation integration.
 
         Retries automatically on transient service errors (503 / 429 / 524 /
@@ -1175,6 +1232,7 @@ If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list
 
         Args:
             prompt: The prompt to send
+            language: Home Assistant language code for the conversation agent
 
         Returns:
             AI response text
@@ -1241,7 +1299,7 @@ If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list
                             text=prompt,
                             conversation_id=None,
                             context=None,
-                            language=None,
+                            language=language,
                             agent_id=agent_id,
                         ),
                         timeout=_CALL_TIMEOUT,
@@ -1604,7 +1662,10 @@ If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list
             # Parse step_ingredients — validate it's a list of lists aligned
             # with instructions; fall back to empty if missing or malformed.
             raw_si = data.get("step_ingredients", [])
-            instructions_list = data.get("instructions", [])
+            raw_instructions = data.get("instructions", [])
+            if not isinstance(raw_instructions, list):
+                raise ValueError("AI recipe instructions must be a JSON array")
+            instructions_list = [str(instruction) for instruction in raw_instructions]
             step_ingredients: List[List[str]] = []
             if isinstance(raw_si, list):
                 for entry in raw_si:
@@ -1659,7 +1720,8 @@ If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list
     
     def _get_fallback_suggestions(
         self,
-        ingredients: List[str]
+        ingredients: List[str],
+        language: str = "en",
     ) -> List[AIRecipeSuggestion]:
         """Get fallback suggestions when AI is unavailable.
         
@@ -1669,45 +1731,46 @@ If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list
         Returns:
             Basic fallback suggestions
         """
-        main_ingredient = ingredients[0] if ingredients else "your ingredients"
-        
+        fallback_main = {
+            "en": "your ingredients",
+            "sv": "dina ingredienser",
+            "da": "dine ingredienser",
+        }
+        main_ingredient = ingredients[0] if ingredients else fallback_main.get(language, fallback_main["en"])
+        display_main = main_ingredient.title() if language == "en" else main_ingredient
+        templates = {
+            "en": [
+                (f"Simple {display_main} Bake", f"A straightforward baked {main_ingredient} dish", 45, "oven"),
+                (f"{display_main} Stir-Fry", f"Quick and easy stir-fry with {main_ingredient}", 25, "stovetop"),
+                (f"Air-Fried {display_main}", f"Crispy {main_ingredient} with your favorite seasonings", 30, "air_fryer"),
+                (f"Slow-Cooked {display_main}", f"Tender, flavorful {main_ingredient} with minimal effort", 180, "slow_cooker"),
+            ],
+            "sv": [
+                (f"Enkel ugnsrätt med {display_main}", f"En lättlagad ugnsrätt med {main_ingredient}", 45, "oven"),
+                (f"Wok med {display_main}", f"En snabb och enkel wok med {main_ingredient}", 25, "stovetop"),
+                (f"Airfryer-rätt med {display_main}", f"Krispig {main_ingredient} med valfria kryddor", 30, "air_fryer"),
+                (f"Långkok med {display_main}", f"Mör och smakrik {main_ingredient} med liten arbetsinsats", 180, "slow_cooker"),
+            ],
+            "da": [
+                (f"Enkel ovnret med {display_main}", f"En nem ovnret med {main_ingredient}", 45, "oven"),
+                (f"Wokret med {display_main}", f"En hurtig og nem wokret med {main_ingredient}", 25, "stovetop"),
+                (f"Airfryer-ret med {display_main}", f"Sprød {main_ingredient} med dine foretrukne krydderier", 30, "air_fryer"),
+                (f"Langtidstilberedt {display_main}", f"Mør og smagfuld {main_ingredient} med minimal indsats", 180, "slow_cooker"),
+            ],
+        }
+
+        selected_templates = templates.get(language, templates["en"])
         return [
             AIRecipeSuggestion(
-                id="fallback_1",
-                name=f"Simple {main_ingredient.title()} Bake",
-                description=f"A straightforward baked {main_ingredient} dish",
-                cook_time_minutes=45,
+                id=f"fallback_{index}",
+                name=name,
+                description=description,
+                cook_time_minutes=minutes,
                 difficulty="easy",
                 main_ingredients=ingredients[:3],
-                required_appliances=["oven"],
-            ),
-            AIRecipeSuggestion(
-                id="fallback_2",
-                name=f"{main_ingredient.title()} Stir-Fry",
-                description=f"Quick and easy stir-fry with {main_ingredient}",
-                cook_time_minutes=25,
-                difficulty="easy",
-                main_ingredients=ingredients[:3],
-                required_appliances=["stovetop"],
-            ),
-            AIRecipeSuggestion(
-                id="fallback_3",
-                name=f"Air-Fried {main_ingredient.title()}",
-                description=f"Crispy {main_ingredient} with your favorite seasonings",
-                cook_time_minutes=30,
-                difficulty="easy",
-                main_ingredients=ingredients[:3],
-                required_appliances=["air_fryer"],
-            ),
-            AIRecipeSuggestion(
-                id="fallback_4",
-                name=f"Slow-Cooked {main_ingredient.title()}",
-                description=f"Tender, flavorful {main_ingredient} with minimal effort",
-                cook_time_minutes=180,
-                difficulty="easy",
-                main_ingredients=ingredients[:3],
-                required_appliances=["slow_cooker"],
-            ),
+                required_appliances=[appliance],
+            )
+            for index, (name, description, minutes, appliance) in enumerate(selected_templates, start=1)
         ]
 
 

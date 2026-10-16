@@ -3,6 +3,7 @@ type: cut
 slug: pork_chop
 name: Pork Chop
 name_sv: Fläskkotlett
+name_da: Svinekotelet
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin

@@ -3,6 +3,7 @@ type: cut
 slug: monkfish
 name: Monkfish
 name_sv: Marulk
+name_da: Havtaske
 category: fish
 meat: white_fish
 cut_type: White Fish

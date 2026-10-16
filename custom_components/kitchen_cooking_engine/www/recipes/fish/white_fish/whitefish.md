@@ -3,6 +3,7 @@ type: cut
 slug: whitefish
 name: Whitefish
 name_sv: Sik
+name_da: Helt
 category: fish
 meat: white_fish
 cut_type: White Fish

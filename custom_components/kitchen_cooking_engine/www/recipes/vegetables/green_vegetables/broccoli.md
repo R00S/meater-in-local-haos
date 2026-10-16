@@ -3,6 +3,7 @@ type: cut
 slug: broccoli
 name: Broccoli
 name_sv: Broccoli
+name_da: Broccoli
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: ukrainian
 name: Ukrainian
 name_sv: "Ukrainskt"
+name_da: "Ukrainsk"
 icon: 🇺🇦
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "Ukrainian cuisine is the breadbasket of the world made edible — a cooking tradition that turns beet, cabbage, pork fat and buckwheat into dishes of quiet greatness. Borshch (the garnet beet-cabbage soup with a swirl of smetana) is the national symbol, made in 77 documented regional styles; varenyky (half-moon dumplings) hold everything from potato and cheese to sour cherries; holubtsi stuff tender cabbage leaves with millet or meat; and salo — white-salted cured pig fat rubbed with garlic — is eaten on dark bread with raw onion as the truest Ukrainian snack. Ukraine grows more sunflowers and wheat than almost any nation on earth, and its cuisine reflects both — generous, filling, deeply seasonal, preserved through long winters."
 description_sv: "Ukrainskt kök är världens kornbod gjord ätbar — en mattradition som förvandlar rödbetor, kål, svinister och bovete till rätter av stilla storhet. Borscht (den granatfärgade rödbets-kålsoppan med en klick smetana) är den nationella symbolen, lagad i 77 dokumenterade regionala varianter; varenyky (halvmånsdumplings) innehåller allt från potatis och ost till surört körsbär; holubtsi fyller mjuka kålblad med hirs eller kött; och salo — vitsaltat rimmat grisfett gnuggat med vitlök — äts på mörkt bröd med rå lök som det sannaste ukrainska melismålet. Ukraina odlar mer solrosor och vete än nästan något annat land, och köket speglar båda — generöst, mättande, djupt säsongsbundet och konserverat för långa vintrar."
+description_da: "Det ukrainske køkken er verdens kornkammer gjort spiseligt — en madtradition, der forvandler rødbeder, kål, svinefedt og boghvede til retter med stille storhed. Borshch (den granatrøde rødbede- og kålsuppe med en hvirvel af smetana) er det nationale symbol og tilberedes i 77 dokumenterede regionale varianter; varenyky (halvmåneformede dumplings) rummer alt fra kartoffel og ost til surkirsebær; i holubtsi fyldes møre kålblade med hirse eller kød; og salo — hvidt, saltmodnet svinefedt gnedet med hvidløg — spises på mørkt brød med rå løg som den mest rendyrkede ukrainske snack. Ukraine dyrker flere solsikker og mere hvede end næsten noget andet land i verden, og landets køkken afspejler begge dele — en generøs, mættende og dybt sæsonpræget madtradition, hvor råvarerne konserveres gennem lange vintre."
 research_done: 1
 ---
 

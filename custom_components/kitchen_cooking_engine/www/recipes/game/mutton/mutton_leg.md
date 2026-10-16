@@ -3,6 +3,7 @@ type: cut
 slug: mutton_leg
 name: Mutton Leg Roast
 name_sv: Fårlår
+name_da: Fårekølle
 category: game
 meat: mutton
 cut_type: Mutton

@@ -3,6 +3,7 @@ type: cut
 slug: flounder
 name: Flounder
 name_sv: Flundra
+name_da: Skrubbe
 category: fish
 meat: white_fish
 cut_type: White Fish

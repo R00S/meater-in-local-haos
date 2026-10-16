@@ -3,12 +3,14 @@ KCE: CUISINE
 id: french
 name: French
 name_sv: "Franskt"
+name_da: "Fransk"
 icon: 🇫🇷
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "French cuisine is the foundation of classical Western cooking, built on mother sauces, butter, terroir, and artisanal craft. From baguette and croissant to boeuf bourguignon and soupe à l'oignon, from Normandy's dairy richness to Provence's olive oil and herbs — France's diverse regions and world-leading cheese culture (~28 kg/capita) have shaped cooking worldwide."
 description_sv: "Franskt kök är grunden för klassisk västerländsk matlagning, byggt på grundsåser, smör, terroir och hantverkstradition. Från baguette och croissant till boeuf bourguignon och soupe à l'oignon, från Normandies mejeririka traditioner till Provences olivolja och örter — Frankrikes mångfaldiga regioner och världsledande ostkultur (~28 kg/capita) har format matlagning globalt."
+description_da: "Det franske køkken er grundlaget for klassisk vestlig madlavning og bygger på grundsaucer, smør, terroir og håndværksmæssig kunnen. Fra baguette og croissant til boeuf bourguignon og soupe à l'oignon, fra Normandiets rige mejeritradition til Provences olivenolie og krydderurter — Frankrigs mangfoldige regioner og verdensførende ostekultur (ca. 28 kg pr. indbygger) har formet madlavning verden over."
 research_done: 1
 ---
 

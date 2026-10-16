@@ -3,6 +3,7 @@ type: cut
 slug: whole_duck
 name: Whole Duck
 name_sv: Hel and
+name_da: Hel and
 category: poultry
 meat: duck
 cut_type: Duck

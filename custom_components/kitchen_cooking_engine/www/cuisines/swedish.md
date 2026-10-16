@@ -3,12 +3,14 @@ KCE: CUISINE
 id: swedish
 name: Swedish
 name_sv: "Svensk"
+name_da: "Svensk"
 icon: 🇸🇪
 region: nordic
 region_name: "Nordic"
 region_icon: ❄️
 description: "Swedish cuisine is husmanskost — rooted in the land's roots and water. Köttbullar in cream gravy with lingonberry and buttered potatoes, gravlax with mustard-dill sauce, Baltic herring in a dozen marinades, and the winter ritual of ärtsoppa on Thursdays. Forged by cold winters and an agricultural tradition of curing, fermenting, and pickling, it balances simple ingredients with a quiet precision that feels timeless."
 description_sv: "Svensk husmanskost är förankrad i jordens rötter och vattnets rikedomar. Köttbullar i gräddsås med lingonsylt och smörkokt potatis, gravlax med hovmästarsås, inlagd sill i tolv varianter och torsdagens ärtsoppa. Kylda vintrar och en jordbrukstradition av saltning, fermentering och inläggning har format ett kök som balanserar enkla råvaror med stilla precision."
+description_da: "Det svenske køkken er husmanskost — forankret i jordens rødder og vandets rigdomme. Köttbullar i flødesovs med tyttebær og smørvendte kartofler, gravlax med sennepssauce og dild, østersøsild i et dusin marinader og vinterritualet med ärtsoppa om torsdagen. Formet af kolde vintre og en landbrugstradition for saltning, fermentering og syltning balancerer det enkle råvarer med en stille præcision, der føles tidløs."
 research_done: 1
 ---
 

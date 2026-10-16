@@ -3,6 +3,7 @@ type: cut
 slug: sirloin_steak
 name: Sirloin Steak
 name_sv: Ryggbiff
+name_da: Bøf af tykstegsfilet
 category: beef
 meat: cow
 cut_type: Steaks

@@ -3,6 +3,8 @@
     "language": "en",
     "language_name": "English",
     "flag": "🇬🇧",
+    "locale": "en-GB",
+    "order": 10,
     "version": "1.0.0"
   },
   "common": {
@@ -37,7 +39,8 @@
     "more": "more",
     "target": "Target",
     "na": "N/A",
-    "unknown": "Unknown"
+    "unknown": "Unknown",
+    "open_user_guide": "Open User Guide"
   },
   "nav": {
     "back": "← Back",
@@ -57,7 +60,7 @@
     "select_appliance": "Select an appliance to get started",
     "ongoing_cooks": "Ongoing cooks",
     "no_appliances": "No appliances configured yet. Add one in Settings → Devices & Services.",
-    "language_label": "🌐 Language / Språk",
+    "language_label": "🌐 Language / Språk / Sprog",
     "data_source_label": "🌍 Temperature Data Source",
     "measurement_system_label": "📏 Measurement System",
     "previous_cooks_description": "View and manage your cooked and saved recipes",
@@ -65,6 +68,7 @@
     "started_on_other_device": "Started on another device",
     "recipe_cook": "Recipe Cook",
     "measurement_se_description": "krm · tsk · msk · cl · dl · l · g · hg · kg — Temperature in °C",
+    "measurement_dk_description": "ml · tsk · spsk · cl · dl · l · g · kg — Temperature in °C",
     "measurement_uk_description": "tsp · tbsp · ml · dl · l · g · kg — Temperature in °C",
     "measurement_us_description": "tsp · tbsp · cup · fl oz · oz · lb — Temperature in °F"
   },
@@ -321,6 +325,15 @@
     "finish_cook": "✅ Finish Cook",
     "next_step": "Next Step ➡️",
     "prev_step": "⬅️ Previous",
+    "exit_cook": "Exit cook",
+    "previous_step_title": "Previous step",
+    "home_title": "Go to Home screen (cook keeps running)",
+    "save_cook": "Save cook",
+    "start_cooking": "Start cooking",
+    "finish": "Finish",
+    "next_step_title": "Next step",
+    "serves": "Serves",
+    "elapsed": "Elapsed",
     "no_instructions": "No instructions available.",
     "start_meater_btn": "🌡️ Start MEATER Probe",
     "meater_detach_hint": "Detach probe from this recipe (probe session keeps running)"
@@ -392,7 +405,12 @@
     "oz": "oz",
     "lb": "lb",
     "temp_c": "°C",
-    "temp_f": "°F"
+    "temp_f": "°F",
+    "krm": "krm",
+    "tsk": "tsk",
+    "msk": "msk",
+    "spsk": "spsk",
+    "hg": "hg"
   },
   "cooking_methods": {
     "oven_roast": "Oven Roast",
@@ -403,7 +421,15 @@
     "smoker": "Smoker",
     "air_fryer": "Air Fryer",
     "sous_vide": "Sous Vide",
-    "slow_cooker": "Slow Cooker"
+    "slow_cooker": "Slow Cooker",
+    "boil": "Boil",
+    "braise": "Braise",
+    "charcoal_grill": "Charcoal Grill",
+    "oven_broil": "Oven Broil",
+    "pressure_cooker": "Pressure Cooker",
+    "saute": "Sauté",
+    "steam": "Steam",
+    "whole_roast": "Whole Roast"
   },
   "appliances": {
     "title": "🔧 Kitchen Appliances",

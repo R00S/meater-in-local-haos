@@ -3,6 +3,7 @@ type: cut
 slug: beef_tenderloin_roast
 name: Beef Tenderloin Roast
 name_sv: Oxfiléstek
+name_da: Hel oksemørbrad
 category: beef
 meat: cow
 cut_type: Roasts

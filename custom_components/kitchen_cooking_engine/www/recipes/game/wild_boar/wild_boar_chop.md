@@ -3,6 +3,7 @@ type: cut
 slug: wild_boar_chop
 name: Wild Boar Chop
 name_sv: Vildsvinskotlett
+name_da: Vildsvinekotelet
 category: game
 meat: wild_boar
 cut_type: Wild Boar

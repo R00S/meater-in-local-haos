@@ -3,6 +3,7 @@ type: cut
 slug: pikeperch
 name: Pikeperch
 name_sv: Gös
+name_da: Sandart
 category: fish
 meat: white_fish
 cut_type: White Fish

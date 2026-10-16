@@ -3,6 +3,7 @@ type: cut
 slug: round_roast
 name: Round Roast
 name_sv: Rundstek
+name_da: Lårsteg
 category: beef
 meat: cow
 cut_type: Roasts

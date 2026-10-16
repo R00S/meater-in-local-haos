@@ -3,6 +3,7 @@ type: cut
 slug: venison_roast
 name: Venison Roast
 name_sv: Hjortstek
+name_da: Hjortesteg
 category: game
 meat: venison
 cut_type: Venison

@@ -3,6 +3,7 @@ type: cut
 slug: spare_ribs
 name: Spare Ribs
 name_sv: Spareribs
+name_da: Revelsben
 category: pork
 meat: pig
 cut_type: Ribs

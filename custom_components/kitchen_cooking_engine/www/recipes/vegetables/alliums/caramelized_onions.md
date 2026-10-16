@@ -3,6 +3,7 @@ type: cut
 slug: caramelized_onions
 name: Caramelized Onions
 name_sv: Karamelliserade lökar
+name_da: Karamelliserede løg
 category: vegetables
 meat: alliums
 cut_type: Alliums

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: lebanese
 name: Lebanese
 name_sv: "Libanesiskt"
+name_da: "Libanesisk"
 icon: 🇱🇧
 region: middle_east
 region_name: "Middle Eastern"
 region_icon: 🧆
 description: "Lebanese cuisine is the jewel of the Levant — an abundant spread of mezze (hummus, fattoush, tabbouleh, kibbeh), wood-fired flatbreads, slow-roasted lamb, the sweet smoke of shawarma, and the bright freshness of herb-laden salads, all brought together with olive oil, lemon, and the warm spice of seven-spice (baharat)."
 description_sv: "Libanesiskt kök är Levantens juvel — ett rikt uppdukat mezze (hummus, fattoush, tabbouleh, kibbeh), stenugnsbakata tunnbröd, långsamt rostat lamm, den söta röken av shawarma och den friska örtighetens sallader, allt sammanflätat med olivolja, citron och värmen av sjukryddor (baharat)."
+description_da: "Det libanesiske køkken er Levantens juvel — et overdådigt udvalg af mezze (hummus, fattoush, tabbouleh, kibbeh), fladbrød bagt i brændefyret ovn, langtidsstegt lam, shawarmaens sødlige røg og den sprudlende friskhed i salater fulde af krydderurter, alt sammen forenet af olivenolie, citron og varmen fra syvkrydderiblandingen (baharat)."
 research_done: 1
 ---
 

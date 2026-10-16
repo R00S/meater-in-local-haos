@@ -3,12 +3,14 @@ KCE: CUISINE
 id: korean
 name: Korean
 name_sv: "Koreanskt"
+name_da: "Koreansk"
 icon: 🇰🇷
 region: east_asian
 region_name: "East Asian"
 region_icon: 🥢
 description: "Korean cuisine (hansik) is built on fermentation, bold heat, and communal sharing — from the sizzle of bulgogi and samgyeopsal on the grill to the pungent depth of kimchi and doenjang jjigae, the snap of japchae noodles, and the comforting warmth of a stone-bowl bibimbap."
 description_sv: "Koreanskt kök (hansik) bygger på fermentering, kraftig hetta och gemensam njutning — från fräsandet av bulgogi och samgyeopsal på grillen till den starka djupet av kimchi och doenjang jjigae, kenigheten i japchae-nudlar och den värmande tryggheten i en bibimbap i stenpanna."
+description_da: "Det koreanske køkken (hansik) bygger på fermentering, intens varme fra chili og måltider, der deles — fra sydende bulgogi og samgyeopsal på grillen til den intense dybde i kimchi og doenjang jjigae, det spændstige bid i japchae-nudler og den trøstende varme fra bibimbap serveret i en stenskål."
 research_done: 1
 ---
 

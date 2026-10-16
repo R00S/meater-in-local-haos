@@ -3,6 +3,7 @@ type: cut
 slug: filet_mignon
 name: Filet Mignon / Tenderloin Steak
 name_sv: Oxfilé
+name_da: Oksemørbradbøf
 category: beef
 meat: cow
 cut_type: Steaks

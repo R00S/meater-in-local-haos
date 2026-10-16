@@ -3,6 +3,7 @@ type: cut
 slug: turbot
 name: Turbot
 name_sv: Piggvar
+name_da: Pighvar
 category: fish
 meat: white_fish
 cut_type: White Fish

@@ -3,6 +3,7 @@ type: cut
 slug: pike
 name: Pike
 name_sv: Gädda
+name_da: Gedde
 category: fish
 meat: white_fish
 cut_type: White Fish

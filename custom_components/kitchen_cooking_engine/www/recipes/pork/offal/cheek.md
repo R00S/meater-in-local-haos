@@ -3,6 +3,7 @@ type: cut
 slug: cheek
 name: Cheek
 name_sv: Kindkött
+name_da: Kindkød
 category: pork
 meat: pig
 cut_type: Other / Offal

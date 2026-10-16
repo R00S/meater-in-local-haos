@@ -3,12 +3,14 @@ KCE: CUISINE
 id: cantonese
 name: Cantonese
 name_sv: "Kantonesiskt"
+name_da: "Kantonesisk"
 icon: 🥢
 region: east_asian
 region_name: "East Asian"
 region_icon: 🏯
 description: "Cantonese cuisine, originating from Guangdong Province and Hong Kong, is defined by freshness, lightness, and the philosophy that high-quality ingredients need minimal intervention. Techniques like steaming, stir-frying with wok hei, and slow-simmering soups showcase natural flavours. Dim sum culture, roast meats, and silky rice noodles are its icons."
 description_sv: "Kantonesiskt kök, med ursprung i Guangdong-provinsen och Hongkong, präglas av fräschhet, lätthet och filosofin att högkvalitativa råvaror behöver minimalt med tillagning. Tekniker som ångning, wok-stekning och långsam soppkokning lyfter fram naturliga smaker. Dim sum-kulturen, rostat kött och silkeslena risnudlar är dess ikoner."
+description_da: "Det kantonesiske køkken har rødder i Guangdong-provinsen og Hongkong og er kendetegnet ved friskhed, lethed og filosofien om, at råvarer af høj kvalitet kræver minimal behandling. Teknikker som dampning, wokstegning med wok hei og langsom simring af supper fremhæver råvarernes naturlige smag. Dim sum-kulturen, stegte kødretter og silkebløde risnudler er køkkenets ikoner."
 research_done: 1
 ---
 

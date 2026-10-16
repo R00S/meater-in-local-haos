@@ -3,6 +3,7 @@ type: cut
 slug: whole_salmon
 name: Whole Salmon
 name_sv: Hel lax
+name_da: Hel laks
 category: fish
 meat: salmon
 cut_type: Salmon

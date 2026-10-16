@@ -3,6 +3,7 @@ type: cut
 slug: cured_ham
 name: Cured Ham (Pre-cooked)
 name_sv: Rökt skinka
+name_da: Saltet, forkogt skinke
 category: pork
 meat: pig
 cut_type: Ham

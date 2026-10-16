@@ -3,12 +3,14 @@ KCE: CUISINE
 id: uzbek
 name: Uzbek
 name_sv: "Uzbekiskt"
+name_da: "Usbekisk"
 icon: 🇺🇿
 region: middle_east
 region_name: "Middle Eastern"
 region_icon: 🧆
 description: "Uzbek cuisine is the Silk Road made edible — a cooking tradition where lamb, cumin and rice converge into plov, the UNESCO-listed dish that defines Central Asian hospitality. To cook plov is to be Uzbek: lamb ribs and fat rendered in a kazan (cast-iron cauldron) with carrots and onion, simmered with rice to form a golden, fragrant pilaf; the national ritual of celebration, diplomacy, and morning cooking. Beyond plov lies a world of samsa (flaky lamb pastry from tandoor ovens), manti (steamed lamb dumplings), shashlik over saxaul wood, lagman noodle soup with Dungan roots, and non flatbread with a sesame-poppy stamp. Cotton was once Uzbekistan's 'white gold'; the cooking fat that replaced it was cottonseed oil — distinctive, almost smoky. The land of Alexander the Great, Tamerlane and the Silk Road caravanserai feeds on lamb, dried apricots, melon, walnuts and pomegranates."
 description_sv: "Uzbekiskt kök är Sidenvägen gjord ätbar — en mattradition där lamm, spiskummin och ris möts i plov, den UNESCO-listade rätten som definierar centralasiatisk gästfrihet. Att laga plov är att vara uzbek: lammrevben och fett smälts i en kazan (gjutjärnsgrytan) med morötter och lök, sjuds med ris till en gyllene, doftande pilaf; det nationella ritualet vid firanden, diplomati och morgonmatlagning. Bortom plov finns en värld av samsa (flagigt lammgebak från tandurugnarna), manti (ångade lammdumplings), shashlik över saxaul-ved och lagman-nudelsoppa med Dungan-rötter. Bomull var en gång Uzbekistans 'vita guld'; matlagningsfettet som ersatte det var bomullsfröolja — distinkt, nästan rökig. Landet för Alexander den store, Timur och Sidenvägens karavanseraljer mättar sig på lamm, torkade aprikoser, melon, valnötter och granatäpplen."
+description_da: "Det usbekiske køkken er Silkevejen gjort spiselig — en madtradition, hvor lam, spidskommen og ris mødes i plov, den UNESCO-listede ret, der definerer centralasiatisk gæstfrihed. At tilberede plov er at være usbeker: lammeribben brunes, og fedtet smeltes af i en kazan (støbejernsgryde) sammen med gulerødder og løg og simrer derefter med ris til en gylden, duftende pilaf; et nationalt ritual ved fejringer, i diplomati og som morgenritual. Ud over plov findes en verden af samsa (sprødt, lagdelt bagværk med lam fra tandoorovne), manti (dampede lammedumplings), shashlik over saxaul-ved, lagman-nudelsuppe med dunganske rødder og non-fladbrød præget med sesam og valmuefrø. Bomuld var engang Uzbekistans 'hvide guld'; det madlavningsfedt, der erstattede det, var bomuldsfrøolie — karakteristisk og næsten røget. Usbekistan — Alexander den Stores, Timur Lenks og Silkevejens karavanseraiers land — lever af lam, tørrede abrikoser, melon, valnødder og granatæbler."
 research_done: 1
 ---
 

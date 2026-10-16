@@ -3,6 +3,7 @@ type: cut
 slug: chicken_leg
 name: Chicken Leg / Drumstick
 name_sv: Kycklingklubba
+name_da: Kyllingeunderlår
 category: poultry
 meat: chicken
 cut_type: Dark Meat

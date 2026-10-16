@@ -3,6 +3,7 @@ type: cut
 slug: hake
 name: Hake Fillet
 name_sv: Kummel
+name_da: Kulmulefilet
 category: fish
 meat: white_fish
 cut_type: White Fish

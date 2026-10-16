@@ -3,12 +3,14 @@ KCE: CUISINE
 id: cajun_creole
 name: Cajun/Creole
 name_sv: "Cajun/Kreolskt"
+name_da: "Cajun/kreolsk"
 icon: 🦞
 region: north_american
 region_name: "North American"
 region_icon: 🦅
 description: "Louisiana's two-tradition cuisine: rural Cajun (French-Acadian bayou country) and urban Creole (New Orleans). United by the Holy Trinity of onion, celery, and bell pepper; dark roux; and Gulf seafood. Crawfish étouffée, gumbo, jambalaya, and shrimp Creole are its defining dishes."
 description_sv: "Louisianas tvådelade kök: lantligt cajun (franskakadiskt bayouland) och stadskreolskt (New Orleans). Förenat av den heliga triniteten av lök, selleri och paprika; mörk roux; och skaldjur från Mexikanska golfen. Kräftétouffée, gumbo, jambalaya och räkkreol är dess signaturrätter."
+description_da: "Louisianas køkken rummer to traditioner: landlig cajunmad (det fransk-acadiske bayouland) og urban kreolsk mad (New Orleans). De forenes af den hellige treenighed af løg, bladselleri og peberfrugt, mørk roux samt fisk og skaldyr fra Den Mexicanske Golf. Crawfish étouffée, gumbo, jambalaya og shrimp Creole er de retter, der kendetegner køkkenet."
 research_done: 1
 ---
 

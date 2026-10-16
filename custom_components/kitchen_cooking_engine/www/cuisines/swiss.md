@@ -3,12 +3,14 @@ KCE: CUISINE
 id: swiss
 name: Swiss
 name_sv: "Schweiziskt"
+name_da: "Schweizisk"
 icon: 🇨🇭
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "Swiss cuisine is an alpine mosaic of four culinary cultures — French, German, Italian, and Romansh — united by exceptional cheesemaking (Gruyère, Emmental, Raclette, Appenzeller), creamy fondue and rösti, Zürcher Geschnetzeltes veal in cream, Bircher muesli, Bündnerfleisch air-dried beef, and a world-class dairy and chocolate tradition."
 description_sv: "Schweiziskt kök är ett alpint mosaik av fyra kulinariska kulturer — franska, tyska, italienska och reto-romanska — förenat av enastående osttillverkning (Gruyère, Emmental, Raclette, Appenzeller), krämig fondue och rösti, Zürcher Geschnetzeltes kalvkött i grädde, Birchermüesli, Bündnerfleisch lufttorkad nötkött och en världsklass mejeri- och chokladtradition."
+description_da: "Det schweiziske køkken er en alpin mosaik af fire kulinariske kulturer — fransk, tysk, italiensk og rætoromansk — forenet af enestående ostefremstilling (Gruyère, Emmental, Raclette, Appenzeller), cremet fondue og rösti, Zürcher Geschnetzeltes med kalvekød i fløde, Bircher muesli, Bündnerfleisch af lufttørret oksekød samt en mejeri- og chokoladetradition i verdensklasse."
 research_done: 1
 ---
 

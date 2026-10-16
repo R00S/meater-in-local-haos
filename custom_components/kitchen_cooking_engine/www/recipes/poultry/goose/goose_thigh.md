@@ -3,6 +3,7 @@ type: cut
 slug: goose_thigh
 name: Goose Thigh
 name_sv: Gåslår
+name_da: Gåseoverlår
 category: poultry
 meat: goose
 cut_type: Goose

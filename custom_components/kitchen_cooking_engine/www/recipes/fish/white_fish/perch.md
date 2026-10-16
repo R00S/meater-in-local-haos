@@ -3,6 +3,7 @@ type: cut
 slug: perch
 name: Perch
 name_sv: Abborre
+name_da: Aborre
 category: fish
 meat: white_fish
 cut_type: White Fish

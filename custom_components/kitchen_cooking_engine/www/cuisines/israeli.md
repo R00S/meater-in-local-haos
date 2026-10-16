@@ -3,12 +3,14 @@ KCE: CUISINE
 id: israeli
 name: Israeli
 name_sv: "Israeliskt"
+name_da: "Israelsk"
 icon: 🇮🇱
 region: middle_east
 region_name: "Middle East"
 region_icon: 🌙
 description: "Israeli cuisine fuses the food traditions of Jewish diaspora from over 70 countries with the flavors of the Levant — hummus, falafel, shakshuka, and shawarma are internationally recognized. Israel leads the world in poultry consumption (~60 kg/capita), olive oil production quality, and dairy technology, and its street food culture has redefined casual Mediterranean eating."
 description_sv: "Israeliskt kök blandar mattraditioner från judiska diasporan i över 70 länder med smaker från Levanten — hummus, falafel, shakshuka och shawarma är internationellt kända. Israel leder världen i fjäderfäkonsumtion (~60 kg/capita), olivoljakvalitet och mejeritechnology, och dess gatumatkultur har omdefinerat avslappnat medelhavskök."
+description_da: "Det israelske køkken forener madtraditioner fra den jødiske diaspora i over 70 lande med Levantens smage — hummus, falafel, shakshuka og shawarma er internationalt kendte. Israel er verdensførende inden for fjerkræforbrug (ca. 60 kg pr. indbygger), olivenolieproduktion af høj kvalitet og mejeriteknologi, og landets gadekøkkenkultur har omdefineret uformel middelhavsmad."
 research_done: 1
 ---
 

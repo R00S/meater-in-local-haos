@@ -3,12 +3,14 @@ KCE: CUISINE
 id: east_african
 name: East African
 name_sv: "Östafrikanskt"
+name_da: "Østafrikansk"
 icon: 🌍
 region: african
 region_name: "Africa"
 region_icon: 🌍
 description: "East African cuisine spans Ethiopia's ancient injera-and-wot tradition, Kenya and Tanzania's ugali with sukuma wiki and nyama choma, Uganda's matoke, and the spice-scented Swahili coast. Two great flavor identities meet here: Ethiopia's complex spice blends (berbere, niter kibbeh) built over millennia of Orthodox fasting culture, and the Indian Ocean coast's clove-cardamom-coconut influence radiating from Zanzibar. Teff has been cultivated in Ethiopia for 3 000+ years and provides ~61 kg per person per year; Kenya's maize ugali consumption reaches ~88 kg per person per year."
 description_sv: "Östafrikanskt kök spänner från Etiopiens urgamla injera-och-wot-tradition och Kenyas/Tanzanias ugali med sukuma wiki och nyama choma, till Ugandas matoke och den kryddiga Swahilikusten. Två stora smakidentiteter möts: Etiopiens komplexa kryddblandningar (berbere, niter kibbeh) formade av ortodoxa fastetraditioner, och Indiska Oceanens kustens kanel-kardemumma-kokosmjölksinfluenser från Zanzibar. Teff har odlats i Etiopien i 3 000+ år och ger ~61 kg per person och år; Kenyas majsugali-konsumtion når ~88 kg per person och år."
+description_da: "Det østafrikanske køkken spænder over Etiopiens ældgamle injera- og wot-tradition, Kenyas og Tanzanias ugali med sukuma wiki og nyama choma, Ugandas matoke og den krydderduftende Swahilikyst. To store smagsidentiteter mødes her: Etiopiens komplekse krydderiblandinger (berbere, niter kibbeh), udviklet gennem årtusinders ortodoks fastekultur, og Det Indiske Oceans kystkøkken, præget af nellike, kardemomme og kokos med udspring i Zanzibar. Teff er blevet dyrket i Etiopien i over 3.000 år og bidrager med ca. 61 kg pr. person om året; Kenyas forbrug af majsugali når ca. 88 kg pr. person om året."
 research_done: 1
 ---
 

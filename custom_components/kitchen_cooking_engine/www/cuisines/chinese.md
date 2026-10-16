@@ -3,12 +3,14 @@ KCE: CUISINE
 id: chinese
 name: Chinese
 name_sv: "Kinesiskt"
+name_da: "Kinesisk"
 icon: 🇨🇳
 region: east_asian
 region_name: "East Asian"
 region_icon: 🥢
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
 description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+description_da: "Det kinesiske køkken omfatter otte store regionale traditioner og spænder fra risbaserede retter i syd til hvedenudler og dumplings i nord. Teknikkerne omfatter wokstegning, dampning og langtidsbraisering, mens ingefær, hvidløg, forårsløg, sojasauce og fermenterede bønneprodukter er centrale smagsgivere. Svinekød, tofu, ferskvandsfisk og grøntsager står centralt, mens retter som Pekingand, hong shao rou og jiaozi afspejler landets store regionale variation."
 research_done: 1
 ---
 

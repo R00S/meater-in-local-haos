@@ -3,6 +3,7 @@ type: cut
 slug: pork_shoulder
 name: Pork Shoulder / Boston Butt
 name_sv: Fläskbog
+name_da: Nakkefilet
 category: pork
 meat: pig
 cut_type: Roasts

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: tex_mex
 name: Tex-Mex
 name_sv: "Tex-Mex"
+name_da: "Tex-Mex"
 icon: 🌮
 region: north_american
 region_name: "North American"
 region_icon: 🦅
 description: "Tex-Mex is the bold, hearty cuisine of Texas and the US-Mexico borderlands — flour tortilla burritos, fajitas sizzling on cast iron, chili con carne, cheese-smothered enchiladas, nachos and smoky beef ribs slow-cooked over mesquite; a fusion of Mexican traditions, Spanish colonial ranching and American cowboy culture that became a global food phenomenon."
 description_sv: "Tex-Mex är det kraftfulla, mättande köket från Texas och den mexikansk-amerikanska gränstrakten — mjöltortilla-burritos, fajitas fräsande på gjutjärn, chili con carne, ostbakade enchiladas, nachos och rökta nötkotletter tillagade över mesquite; en fusion av mexikanska traditioner, spanskt kolonialrancherande och amerikansk cowboytradition som blivit ett globalt matfenomen."
+description_da: "Tex-Mex er det kraftige, mættende køkken fra Texas og grænseegnene mellem USA og Mexico — burritos i hvedetortillas, fajitas sydende på støbejern, chili con carne, enchiladas dækket af ost, nachos og røgede okseribben langsomt tilberedt over mesquite; en fusion af mexicanske traditioner, spansk ranchdrift fra kolonitiden og amerikansk cowboykultur, der blev et globalt madfænomen."
 research_done: 1
 ---
 

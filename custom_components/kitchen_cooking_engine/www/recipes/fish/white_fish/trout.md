@@ -3,6 +3,7 @@ type: cut
 slug: trout
 name: Trout Fillet
 name_sv: Forell
+name_da: Ørredfilet
 category: fish
 meat: white_fish
 cut_type: White Fish

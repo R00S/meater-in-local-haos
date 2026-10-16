@@ -3,6 +3,7 @@ type: cut
 slug: secreto
 name: Secreto (Ibérico Pork)
 name_sv: Secreto
+name_da: Secreto af iberisk gris
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin

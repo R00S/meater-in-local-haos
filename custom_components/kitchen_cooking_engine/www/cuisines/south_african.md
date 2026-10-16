@@ -3,12 +3,14 @@ KCE: CUISINE
 id: south_african
 name: South African
 name_sv: "Sydafrikansk"
+name_da: "Sydafrikansk"
 icon: 🇿🇦
 region: african
 region_name: "African"
 region_icon: 🌍
 description: "South African cuisine is the braai fire and the cast-iron potjie — boerewors, biltong, bobotie, bunny chow and pap — born where indigenous Nguni, Cape Malay, Dutch Afrikaner, Zulu, and Indian Durban traditions all share one table."
 description_sv: "Sydafrikanskt kök är braaieldns glöd och gjutjärnspotjien — boerewors, biltong, bobotie, bunny chow och pap — fött där inhemska Nguni-, kap-malajiska, afrikanska, Zulu- och indiska Durban-traditioner delar ett bord."
+description_da: "Det sydafrikanske køkken er braai-ilden og støbejernsgryden potjie — boerewors, biltong, bobotie, bunny chow og pap — skabt dér, hvor traditioner fra Nguni- og zulufolkene, Cape Malay-samfundet, afrikaanere med hollandske rødder og Durbans indiske befolkning mødes om ét bord."
 research_done: 1
 ---
 

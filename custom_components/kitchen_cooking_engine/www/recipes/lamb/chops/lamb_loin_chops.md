@@ -3,6 +3,7 @@ type: cut
 slug: lamb_loin_chops
 name: Lamb Loin Chops
 name_sv: Lammlårkotlett
+name_da: Lammerygkoteletter
 category: lamb
 meat: lamb
 cut_type: Chops

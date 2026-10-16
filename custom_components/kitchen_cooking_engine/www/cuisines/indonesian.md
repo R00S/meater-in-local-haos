@@ -3,12 +3,14 @@ KCE: CUISINE
 id: indonesian
 name: Indonesian
 name_sv: "Indonesiskt"
+name_da: "Indonesisk"
 icon: 🇮🇩
 region: southeast_asian
 region_name: "Southeast Asian"
 region_icon: 🌴
 description: "Indonesian cuisine spans 17,000 islands and over 300 ethnic groups, united by its bold spice pastes (bumbu), fermented shrimp paste (terasi), sweet soy sauce (kecap manis), and a tradition of slow-cooked coconut curries like rendang — voted the world's most delicious dish."
 description_sv: "Indonesiskt kök sträcker sig över 17 000 öar och mer än 300 folkgrupper, förenat av sina kraftfulla kryddblandningar (bumbu), fermenterad räkpasta (terasi), söt sojasås (kecap manis) och en tradition av långsamt kokade kokosnötscurries som rendang — omröstad till världens godaste maträtt."
+description_da: "Det indonesiske køkken spænder over 17.000 øer og mere end 300 etniske grupper og bindes sammen af kraftige krydderpastaer (bumbu), fermenteret rejepasta (terasi), sød sojasauce (kecap manis) og en tradition for langtidstilberedte kokoskarryretter som rendang — kåret til verdens lækreste ret."
 research_done: 1
 ---
 

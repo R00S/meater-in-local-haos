@@ -3,12 +3,14 @@ KCE: CUISINE
 id: yemeni
 name: Yemeni
 name_sv: "Jemenitiskt"
+name_da: "Yemenitisk"
 icon: 🇾🇪
 region: middle_east
 region_name: "Middle Eastern"
 region_icon: 🧆
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
 description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+description_da: "Det yemenitiske køkken er en af den arabiske verdens ældste og mest særprægede madtraditioner. Saltah, Yemens nationalret, mandi med langtidsstegt lam eller kylling, fahsa med lammebouillon, den krydrede risret zurbian og honningbrødet bint al-sahn er centrale retter, mens krydderiblandingen hawayij og det piskede bukkehornskløverskum hulba giver køkkenet dets særlige smagspræg."
 research_done: 1
 ---
 

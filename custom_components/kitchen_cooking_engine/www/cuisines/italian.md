@@ -3,12 +3,14 @@ KCE: CUISINE
 id: italian
 name: Italian
 name_sv: "Italienskt"
+name_da: "Italiensk"
 icon: 🇮🇹
 region: european
 region_name: "European"
 region_icon: 🌍
 description: "Italian cuisine is the foundation of Western fine dining, built on extraordinary pasta (23 kg/capita — world's highest), San Marzano tomatoes, Parmigiano Reggiano, mozzarella di bufala, and extra-virgin olive oil. It spans 20 regions each with distinct identities: Emilia-Romagna's ragu and salumi, Rome's carbonara, Naples' pizza, Venice's risotto, and Sicily's caponata define one of the world's most copied yet distinctly authentic culinary traditions."
 description_sv: "Italienskt kök är grunden för västerländsk finmatlagning, byggt på enastående pasta (23 kg/capita — världens högsta), San Marzano-tomater, Parmigiano Reggiano, mozzarella di bufala och extra vergine olivolja. Det spänner över 20 regioner med egna identiteter: Emilia-Romagnas ragù och salumi, Roms carbonara, Neapels pizza, Venedigs risotto och Siciliens caponata definierar en av världens mest kopierade men ändå distinkt äkta mattraditioner."
+description_da: "Det italienske køkken er grundlaget for den vestlige gourmettradition og bygger på enestående pasta (23 kg pr. indbygger — verdens højeste), San Marzano-tomater, Parmigiano Reggiano, mozzarella di bufala og ekstra jomfruolivenolie. Det spænder over 20 regioner, som hver har sin tydelige identitet: Emilia-Romagnas ragu og salumi, Roms carbonara, Napolis pizza, Venedigs risotto og Siciliens caponata definerer en af verdens mest kopierede, men samtidig umiskendeligt autentiske, kulinariske traditioner."
 research_done: 1
 ---
 

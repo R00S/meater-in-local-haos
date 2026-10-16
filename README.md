@@ -91,7 +91,7 @@ The AI Recipe Builder generates custom recipes using AI (OpenAI or any HA conver
 
 - **30+ Common Ingredients** — Proteins (9), Vegetables (12), Grains (5), Dairy (5), plus custom ingredient input
 - **14 Cooking Styles** — Quick & Easy, Gourmet, Healthy, Comfort Food, Family Friendly, Meal Prep, One Pot, Slow Cook, Barbeque, Baking, Low Carb, High Protein, Vegetarian, Vegan
-- **70+ World Cuisines** — 11 collapsible regions: Nordic & Scandinavian, East Asian, Southeast Asian, South Asian, Middle Eastern, European, North American, Latin American, Caribbean, African, Oceanian — select multiple for fusion
+- **102 World Cuisines** — 11 collapsible regions with localized cuisine names and descriptions; select multiple for fusion
 - **Complexity Slider** — 1 (Very Simple) to 5 (Chef Level), with style-dependent defaults
 - **Portions Slider** — 1 to 8 servings
 - **4 Diverse Suggestions** — AI generates 4 quite different recipes from your selections
@@ -787,8 +787,12 @@ Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card
 
 ### v0.6.0.x Features — Phase 7: Multilingual & Measurement Systems (April 2026)
 - ✅ **Swedish measurement system** — Metric, Imperial, and Swedish (dl/msk/tsk) unit catalogs with an API endpoint; persisted per user
+- ✅ **Danish measurement system** — Celsius with ml/cl/dl/l, g/kg, tsk (5 ml), and spsk (15 ml), including Danish decimal commas and free-text conversion
+- ✅ **Danish panel language** — Dansk is available from the language selector with locale-aware dates, sorting, recipe steps, and AI recipe generation
+- ✅ **Danish catalog labels** — Categories, protein groups, cut types, all 186 cuts, doneness options, cooking methods, and cooking styles have Danish short labels
+- ✅ **Danish cuisine metadata** — All 102 cuisine names and descriptions plus 11 region headings are available in Danish
 - ✅ **Full i18n (`_t()`) coverage** — Every user-facing string in the panel template is now translated; zero hardcoded English
-- ✅ **AI recipes in the right language** — AI prompt includes a language directive so recipes come back in English or Swedish (no Danish bleed-through)
+- ✅ **AI recipes in the right language** — AI prompt includes an explicit language directive so recipes come back in English, Swedish, or Danish
 - ✅ **AI recipes in the right units** — Frontend sends `measurement_system` with every AI request; ingredient text is converted as a safety net
 - ✅ **Swedish ingredient display** — `_ingDisplayName()` helper returns Swedish name when language is `sv`; staples, categories, and cooking styles are also translated
 - ✅ **Per-step ingredient tagging** — AI recipe JSON carries an `ingredients` array per step so active ingredients are highlighted during the cook flow

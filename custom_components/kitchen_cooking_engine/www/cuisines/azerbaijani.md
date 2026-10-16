@@ -3,12 +3,14 @@ KCE: CUISINE
 id: azerbaijani
 name: Azerbaijani
 name_sv: "Azerbajdzjanskt"
+name_da: "Aserbajdsjansk"
 icon: 🇦🇿
 region: middle_east
 region_name: "Middle Eastern"
 region_icon: 🧆
 description: "Azerbaijani cuisine is a rich tapestry of Turkic, Persian, and Russian culinary traditions shaped by centuries of Silk Road trade, celebrated for saffron-scented plov pilaf, UNESCO-recognized dolma, Caspian sturgeon and caviar, and iconic pomegranate-based narsharab sauce."
 description_sv: "Det azerbajdzjanska köket är en rik blandning av turkiska, persiska och ryska kulinariska traditioner formade av Sidenvägshandeln, känt för saffransdoftande plov, UNESCO-erkänd dolma, kaspisk stör och kaviar samt den ikoniska granatäppelssåsen narsharab."
+description_da: "Det aserbajdsjanske køkken er et rigt vævetæppe af tyrkiske, persiske og russiske madtraditioner, formet af århundreders handel langs Silkevejen og berømt for safranduftende plov-pilaf, UNESCO-anerkendt dolma, kaspisk stør og kaviar samt den ikoniske granatæblebaserede narsharab-sauce."
 research_done: 1
 ---
 

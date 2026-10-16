@@ -3,6 +3,7 @@ type: cut
 slug: herring
 name: Herring
 name_sv: Sill
+name_da: Sild
 category: fish
 meat: oily_fish
 cut_type: Oily Fish

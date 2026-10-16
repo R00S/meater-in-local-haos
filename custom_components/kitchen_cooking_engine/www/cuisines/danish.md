@@ -3,12 +3,14 @@ KCE: CUISINE
 id: danish
 name: Danish
 name_sv: "Danskt"
+name_da: "Dansk"
 icon: 🇩🇰
 region: nordic
 region_name: "Nordic"
 region_icon: ❄️
 description: "Danish cuisine is defined by smørrebrød — open-faced rye bread sandwiches — a deep pork culture crowned by stegt flæsk as the national dish, and a centuries-old tradition of pickling, smoking, and curing cold-water fish. The New Nordic movement has elevated foraged herbs, root vegetables, and Nordic dairy to global renown."
 description_sv: "Danskt kök präglas av smørrebrød — öppna rågbrödsmackor — en djup fläskkultur med stegt flæsk som nationalrätt och en lång tradition av inläggning, rökning och saltning av kallvattenfisk. Den Nya Nordiska rörelsen har lyft forageade örter, rotfrukter och nordiska mejeriprodukter till internationell berömmelse."
+description_da: "Dansk madkultur er kendetegnet ved smørrebrød, en stærk tradition for svinekød med stegt flæsk som nationalret og århundreders syltning, røgning og saltning af fisk fra kolde farvande. Det nye nordiske køkken har gjort sankede urter, rodfrugter og nordiske mejeriprodukter verdenskendte."
 research_done: 1
 ---
 

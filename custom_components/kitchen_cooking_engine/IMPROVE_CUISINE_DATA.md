@@ -143,6 +143,7 @@ next agent what was already looked for and prevents duplicate work.
 | `id` | ✅ | Cuisine identifier, e.g. `swedish`, `japanese` |
 | `name` | ✅ | English display name |
 | `name_sv` | — | Swedish display name |
+| `name_da` | — | Danish display name |
 | `icon` | ✅ | Emoji flag or symbol for this cuisine (e.g. `🇸🇪`) |
 | `region` | ✅ | Region ID this cuisine belongs to (must match `region` of sibling files in the same region, e.g. `nordic`). Used for fallback ingredient lookup. |
 | `region_name` | ✅ | Human-readable region name (e.g. `Nordic`). Only the first file that declares a region sets its name. |
@@ -150,6 +151,7 @@ next agent what was already looked for and prevents duplicate work.
 | `research_done` | ✅ | `0` = draft / incomplete, `1` = all 15 pairs fully researched |
 | `description` | ✅ | 1–2 sentence English summary of the cuisine's identity and character. Shown above the ingredient tree in the GUI. |
 | `description_sv` | — | Swedish translation of `description`. Shown instead of `description` when the UI language is Swedish. |
+| `description_da` | — | Danish translation of `description`. Shown instead of `description` when the UI language is Danish. |
 
 ### Ingredient item fields
 

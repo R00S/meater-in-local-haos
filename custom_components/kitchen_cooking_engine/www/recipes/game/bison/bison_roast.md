@@ -3,6 +3,7 @@ type: cut
 slug: bison_roast
 name: Bison Roast
 name_sv: Bisonstek
+name_da: Bisonsteg
 category: game
 meat: bison
 cut_type: Bison

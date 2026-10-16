@@ -3,6 +3,7 @@ type: cut
 slug: pork_loin_roast
 name: Pork Loin Roast
 name_sv: Karréstek
+name_da: Svinekam / flæskesteg
 category: pork
 meat: pig
 cut_type: Roasts

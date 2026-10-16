@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.2.2 · Home Assistant 2024.1.0+
+> **Version:** 0.10.2.6 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -236,9 +236,9 @@ At the bottom of the welcome screen are three persistent settings cards:
 
 | Card | What it controls |
 |------|-----------------|
-| **🌐 Language** | Switch between English and Swedish. Changes take effect immediately. |
+| **🌐 Language** | Switch between English, Swedish, and Danish. Changes take effect immediately. |
 | **🌍 Temperature Data Source** | International (USDA) or Swedish (Livsmedelsverket / Stekguiden.se). |
-| **📏 Measurement System** | US (cups, °F), UK (ml, dl, g, °C), or Swedish (krm, tsk, msk, dl, °C). |
+| **📏 Measurement System** | US (cups, °F), UK (ml, dl, g, °C), Swedish (krm, tsk, msk, dl, °C), or Danish (ml, tsk, spsk, dl, °C). |
 
 ---
 
@@ -500,23 +500,23 @@ returns to the recipe list; ✕ Close dismisses the viewer entirely.
 
 #### Language support
 
-When the UI language is set to **🇸🇪 Svenska**, the MEATER+ path translates all labels,
-category names, meat names, cut-type names, cut names, and doneness names to Swedish:
+The MEATER+ path localizes structured selector labels for **🇸🇪 Svenska** and
+**🇩🇰 Dansk**. Danish short-label coverage includes every live category, meat group,
+cut-type heading, cut, doneness option, and cooking method:
 
-| Element | How the Swedish name is provided |
-|---------|----------------------------------|
-| Category names | Built-in per-category Swedish names (e.g. Beef → Nötkött) |
-| Meat names | Built-in per-meat Swedish names (e.g. cow → Nöt) |
-| Cut-type headings | Built-in per-cut-type Swedish names (e.g. Steaks → Biffar) |
-| Cut names | `name_sv:` field in the cut's `<!-- KCE:CUT … -->` tag |
-| Doneness names | `name_sv:` field in each doneness entry in the `doneness:` list |
-| UI labels (headings, buttons, messages) | Loaded from `i18n/sv.json` |
-| Cut-profile body text (Styckesprofil card) | `## Styckesprofil` section in the cut's `{slug}.md` overview file (falls back to English if absent) |
-| Method descriptions (Tillagningsmetod card) | `## Styckesprofil` section in the method's `{slug}-{method}.md` file (falls back to English if absent) |
+| Element | Localization source |
+|---------|---------------------|
+| Category, meat, and cut-type names | Built-in language maps in the frontend generator |
+| Cut names | `name_sv:` / `name_da:` fields in the cut's `<!-- KCE:CUT … -->` tag |
+| Doneness names | Built-in global language maps in the frontend generator |
+| UI labels (headings, buttons, messages) | Loaded from `i18n/<language>.json` |
+| Swedish cut-profile body text | `## Styckesprofil` in the cut overview (falls back to English if absent) |
+| Danish cut-profile body text | English fallback until Danish profile content is added |
+| Method descriptions | Localized profile section when available, otherwise English |
 
 As of v0.7.0.18, **all 164 MEATER+ cut overview files** carry a `## Styckesprofil` section, so Swedish users see a Swedish cut description for every cut. Method files fall back to English where no `## Styckesprofil` has been added yet.
 
-Any cut without a `name_sv:` field falls back to the English slug-derived name.
+Any cut without a localized name field falls back to its English name.
 
 The recipe library lives under `docs/recipe_research/`. Each file carries a
 `<!-- KCE:CUT … -->` or `<!-- KCE:CUT_METHOD … -->` tag that describes its position in the
@@ -658,6 +658,7 @@ The `## Styckesprofil` section is optional but strongly recommended — without 
 | `slug` | Lowercase, underscores, unique within the category. |
 | `name` | Human-readable name shown in the GUI (English). |
 | `name_sv` | *(optional)* Swedish name shown when UI language is Swedish. Falls back to `name` if omitted. |
+| `name_da` | *(optional)* Danish name shown when UI language is Danish. Falls back to `name` if omitted. |
 | `category` | One of: `beef`, `pork`, `poultry`, `fish`, `lamb`, `game`, `vegetables`. |
 | `meat` | Animal name in lowercase (e.g. `beef`, `salmon`, `chicken`). |
 | `cut_type` | Sub-category label shown in the GUI (e.g. `Steaks`, `Roasts`). |
@@ -669,7 +670,7 @@ The `## Styckesprofil` section is optional but strongly recommended — without 
 | `rest_time_max` | *(optional)* Maximum resting time in minutes for this cut (integer). |
 | `carryover_temp_c` | *(optional)* Expected carryover rise in °C after pulling from heat (number). |
 
-Each `doneness` entry needs: `name`, `target_c`, `target_f`, `min_c`, `min_f`, `max_c`, `max_f`, `usda_safe` (true/false). Add `recommended: true` to exactly one entry. Add `name_sv:` to provide the Swedish doneness label.
+Each `doneness` entry needs: `name`, `target_c`, `target_f`, `min_c`, `min_f`, `max_c`, `max_f`, `usda_safe` (true/false). Add `recommended: true` to exactly one entry. Standard Danish doneness slugs use built-in global labels; add new slugs to the generator's Danish doneness map.
 
 Use these Swedish culinary terms for standard doneness names (per Stekguiden.se / Gårdssällskapet):
 
@@ -862,7 +863,9 @@ The ingredient screen has several sections:
 - **Cuisine / Region filter** — optionally choose one or more cuisine regions to narrow
   ingredient suggestions. Selecting multiple regions creates fusion combinations. Over 100
   cuisines are available. When a cuisine is selected, a short description of that cuisine
-  is shown above the ingredient grid.
+  is shown above the ingredient grid. Region headings, cuisine names, and descriptions are
+  localized in English, Swedish, and Danish. Danish cuisine ingredient names currently fall
+  back to English.
 - **From Your Shelf** *(shown only when Shelf is enabled and has items)* — a highlighted
   section at the top of the ingredient grid shows items currently in your shelf (fridge,
   freezer, larder, spices). Tap any chip to instantly add that item as a selected
@@ -893,8 +896,8 @@ The ingredient screen has several sections:
 - **Ingredient tooltips** — hover over any ingredient chip (desktop) or long-press it
   (touch/mobile) to see a brief note about that ingredient — for example its flavour
   profile, typical use in the cuisine, or a usage tip. The tooltip appears after a
-  short delay and disappears when you move away or release. Tooltips are shown in
-  the GUI language you have selected on the Welcome screen.
+  short delay and disappears when you move away or release. A localized note is used when
+  the cuisine source supplies one; otherwise the source note is shown as a fallback.
 
 Staple ingredients (salt, pepper, oil, etc.) are assumed available and listed below the grid
 for reference.
@@ -1217,8 +1220,11 @@ All settings are on the welcome screen in the bottom settings cards.
 |--------|-------------|
 | 🇬🇧 English | All UI text in English |
 | 🇸🇪 Svenska | All UI text in Swedish |
+| 🇩🇰 Dansk | Panel UI, short catalog labels, and AI-generated recipe text in Danish |
 
-Language changes apply immediately without a page reload.
+Language changes apply immediately without a page reload. Danish uses the international
+temperature-data tree unless you explicitly select the Swedish source. Long-form Danish
+cut profiles and recipe research continue to fall back to English.
 
 **Temperature Data Source**
 
@@ -1237,6 +1243,7 @@ temperature ranges are shown as default.
 | 🇺🇸 US | tsp, tbsp, cup, fl oz | oz, lb | °F |
 | 🇬🇧 UK | tsp, tbsp, ml, dl, L | g, kg | °C |
 | 🇸🇪 Swedish | krm, tsk, msk, cl, dl, L | g, hg, kg | °C |
+| 🇩🇰 Danish | ml, tsk, spsk, cl, dl, L | g, kg | °C |
 
 All ingredient amounts in AI-generated recipes and on-screen displays are automatically
 converted to the selected measurement system. This includes temperatures and ingredient
@@ -1396,7 +1403,8 @@ Reload the integration: **Settings → Devices & Services → Kitchen Cooking En
 ### Measurement conversions look wrong
 
 Ensure the **Measurement System** setting matches your recipe source. US recipes use cups and
-°F; Swedish recipes use dl and °C. Changing the system converts all displayed amounts in real time.
+°F, Swedish recipes use `dl`/`msk`, and Danish recipes use `dl`/`spsk`. Changing the system
+converts all displayed amounts in real time.
 
 
 ## 15. Standalone Android App (Alpha)

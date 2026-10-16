@@ -3,6 +3,7 @@ type: cut
 slug: rack_of_lamb
 name: Rack of Lamb
 name_sv: Lammracks
+name_da: Lammecarré
 category: lamb
 meat: lamb
 cut_type: Roasts

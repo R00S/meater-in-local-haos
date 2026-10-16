@@ -3,12 +3,14 @@ KCE: CUISINE
 id: iraqi
 name: Iraqi
 name_sv: "Irakiskt"
+name_da: "Irakisk"
 icon: 🇮🇶
 region: middle_east
 region_name: "Middle East"
 region_icon: 🌙
 description: "Iraqi cuisine draws on 10,000 years of Mesopotamian culinary history, built on slow-cooked lamb stews, fragrant saffron-tinted rice, the ancient grilled carp dish masgouf from the Tigris, and the universal baharat spice blend. Bread from the clay tannour oven and dried lime (loomi) are its most defining flavors."
 description_sv: "Irakiskt kök bygger på 10 000 år av mesopotamisk kulinarisk historia, uppbyggt kring långsamt kokta lammgrytor, doftande saffransfärgat ris, den uråldriga grillkarpen masgouf från Tigris och den universella baharat-kryddblandningen. Bröd från lerbränd tannour-ugn och torkad lime (loomi) är dess mest definierande smaker."
+description_da: "Det irakiske køkken trækker på 10.000 års mesopotamisk madhistorie og bygger på langtidskogte lammegryder, duftende safranfarvede ris, den oldgamle ret masgouf med grillet karpe fra Tigris og den universelle krydderiblanding baharat. Brød fra tannour-lerovnen og tørret lime (loomi) er køkkenets mest kendetegnende smagsgivere."
 research_done: 1
 ---
 

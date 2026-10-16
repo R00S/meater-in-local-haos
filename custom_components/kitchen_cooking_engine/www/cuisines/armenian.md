@@ -3,12 +3,14 @@ KCE: CUISINE
 id: armenian
 name: Armenian
 name_sv: "Armeniskt"
+name_da: "Armensk"
 icon: 🇦🇲
 region: middle_east
 region_name: "Middle Eastern"
 region_icon: 🧆
 description: "Armenian cuisine is one of the world's oldest, rooted in the fertile Armenian Highlands and shaped by Christian traditions, mountain pastoral heritage, and Persian and Ottoman influences; its icons include UNESCO-listed lavash flatbread baked in a clay tonir oven, khorovats barbecue, slow-cooked harissa porridge, and the apricot — the national fruit whose Latin name Prunus armeniaca means 'Armenian plum'."
 description_sv: "Det armeniska köket är ett av världens äldsta, med rötter i de armeniska höglanden och format av kristna traditioner, bergsmässig herdekultur samt persiska och osmanska influenser; ikoniska inslag inkluderar UNESCO-listat lavash-tunnbröd bakat i lertanur, khorovats-grillat, långkokt harissa-gröt och aprikosen — nationalfrukten vars latinska namn Prunus armeniaca betyder 'armenisk plommonträd'."
+description_da: "Det armenske køkken er et af verdens ældste, med rødder i det frugtbare armenske højland og formet af kristne traditioner, bjergenes hyrdekultur samt persisk og osmannisk indflydelse; blandt dets ikoner er det UNESCO-listede lavash-fladbrød bagt i lerovnen tonir, khorovats-grillmad, den langtidskogte harissa-grød og abrikosen — nationalfrugten, hvis latinske navn Prunus armeniaca betyder 'armensk blomme'."
 research_done: 1
 ---
 

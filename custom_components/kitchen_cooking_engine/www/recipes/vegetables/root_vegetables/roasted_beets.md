@@ -3,6 +3,7 @@ type: cut
 slug: roasted_beets
 name: Roasted Beets
 name_sv: Rostade rödbetor
+name_da: Bagte rødbeder
 category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables

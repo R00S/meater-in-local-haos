@@ -3,6 +3,7 @@ type: cut
 slug: sirloin_tip_roast
 name: Sirloin Tip Roast
 name_sv: Spetsrumstek
+name_da: Klumpsteg
 category: beef
 meat: cow
 cut_type: Roasts

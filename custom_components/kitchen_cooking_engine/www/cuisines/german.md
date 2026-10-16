@@ -3,12 +3,14 @@ KCE: CUISINE
 id: german
 name: German
 name_sv: "Tyskt"
+name_da: "Tysk"
 icon: 🇩🇪
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "German cuisine is built on hearty, practical cooking rooted in 16 federal states of regional tradition — from Bavarian Schweinshaxe and Weisswurst to Rhineland Sauerbraten and Hamburg Aalsuppe. Germany is the world's largest rye producer, Europe's largest pork producer, and the birthplace of Wurst culture with over 1,500 sausage varieties, underpinned by Europe's longest brewing heritage."
 description_sv: "Tyskt kök bygger på rejäl, praktisk matlagning rotad i 16 delstaters regionala traditioner — från bayersk Schweinshaxe och Weisswurst till Rhinlands Sauerbraten och Hamburgs Aalsuppe. Tyskland är världens största rågproducent, Europas största grisproducent och ursprunget till wurstkulturen med över 1 500 korvsortiment, underbyggd av Europas längsta bryggeritradition."
+description_da: "Det tyske køkken bygger på solid, praktisk madlavning med rødder i 16 delstaters regionale traditioner — fra bayersk Schweinshaxe og Weisswurst til Sauerbraten fra Rhinlandet og Aalsuppe fra Hamborg. Tyskland er verdens største producent af rug, Europas største producent af svinekød og Wurst-kulturens fødested med over 1.500 pølsevarianter, båret af Europas længste bryggeritradition."
 research_done: 1
 ---
 

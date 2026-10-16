@@ -3,12 +3,14 @@ KCE: CUISINE
 id: spanish
 name: Spanish
 name_sv: "Spanskt"
+name_da: "Spansk"
 icon: 🇪🇸
 region: european
 region_name: "European"
 region_icon: 🏰
 description: "Spanish cuisine balances bold charcuterie — led by jamón ibérico and chorizo — with Atlantic and Mediterranean seafood, all unified by a sofrito of tomato, garlic, and olive oil. Regional traditions range from Basque pintxos to Valencian paella, making Spain one of Europe's most diverse culinary nations."
 description_sv: "Spanskt kök förenas av sofritton — tomat, vitlök och olivolja — och en stolthet i charkuteri som jamón ibérico och chorizo, bredvid rik seafood från Atlanten och Medelhavet. Regionala traditioner sträcker sig från baskiska pintxos till valenciansk paella."
+description_da: "Det spanske køkken balancerer smagskraftigt charcuteri — anført af jamón ibérico og chorizo — med fisk og skaldyr fra Atlanterhavet og Middelhavet, alt sammen forenet af en sofrito på tomat, hvidløg og olivenolie. Regionale traditioner spænder fra baskiske pintxos til valenciansk paella, hvilket gør Spanien til en af Europas mest mangfoldige kulinariske nationer."
 research_done: 1
 ---
 

@@ -3,6 +3,7 @@ type: cut
 slug: roasted_tomatoes
 name: Roasted Tomatoes
 name_sv: Rostade tomater
+name_da: Bagte tomater
 category: vegetables
 meat: tomatoes
 cut_type: Tomatoes

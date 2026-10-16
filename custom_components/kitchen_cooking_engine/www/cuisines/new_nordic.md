@@ -3,12 +3,14 @@ KCE: CUISINE
 id: new_nordic
 name: New Nordic
 name_sv: "Nytt nordiskt kök"
+name_da: "Nyt nordisk køkken"
 icon: 🌿
 region: nordic
 region_name: "Nordic"
 region_icon: ❄️
 description: "New Nordic cuisine, codified by the 2004 manifesto from Noma and the Copenhagen chefs' collective, strips away imported spices and foreign influences to reveal the pure flavours of the northern forest, shore, and field — raw seafood, foraged herbs, aged roots, fermented dairy, smoked meats, and the bracingly clean tastes of spruce, sea buckthorn, and elderflower."
 description_sv: "Det nya nordiska köket, kodifierat i 2004 års manifest från Noma och Köpenhamns kockkollektiv, rensar bort importerade kryddor och utländska influenser för att visa de rena smakerna från den nordiska skogen, kusten och åkern — rå skaldjur, plockade örter, lagrade rotsaker, fermenterade mejeriprodukter, rökt kött och den friskt rena smaken av gran, havtorn och fläder."
+description_da: "Det nye nordiske køkken, som blev kodificeret i manifestet fra 2004, udarbejdet af Noma og det københavnske kokkekollektiv, fjerner importerede krydderier og udenlandske påvirkninger for at blotlægge de rene smage fra Nordens skove, kyster og marker — rå fisk og skaldyr, sankede urter, lagrede rodfrugter, fermenterede mejeriprodukter, røget kød og de friske, rene smage af gran, havtorn og hyldeblomst."
 research_done: 1
 ---
 

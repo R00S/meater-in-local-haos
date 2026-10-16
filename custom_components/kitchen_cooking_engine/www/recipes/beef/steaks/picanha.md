@@ -3,6 +3,7 @@ type: cut
 slug: picanha
 name: Picanha
 name_sv: Picanha
+name_da: Picanha / culotte
 category: beef
 meat: cow
 cut_type: Steaks

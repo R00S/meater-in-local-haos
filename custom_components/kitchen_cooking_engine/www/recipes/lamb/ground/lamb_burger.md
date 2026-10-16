@@ -3,6 +3,7 @@ type: cut
 slug: lamb_burger
 name: Lamb Burger
 name_sv: Lammburgare
+name_da: Lammeburger
 category: lamb
 meat: lamb
 cut_type: Ground

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: icelandic
 name: Icelandic
 name_sv: "Isländskt"
+name_da: "Islandsk"
 icon: 🇮🇸
 region: nordic
 region_name: "Nordic"
 region_icon: ❄️
 description: "Icelandic cuisine is shaped by ocean, lava fields, and Arctic climate — built on cod, lamb, and skyr, preserved through centuries of smoking, drying, and fermentation, with wild herbs foraged from the tundra and fish pulled from pristine cold waters."
 description_sv: "Isländskt kök formas av havet, lavalandskap och arktiskt klimat — byggt på torsk, lamm och skyr, bevarat genom rökning, torkning och jäsning, med vilda örter insamlade från tundran och fisk från rena, kalla vatten."
+description_da: "Det islandske køkken er formet af havet, lavamarkerne og det arktiske klima og bygger på torsk, lam og skyr samt århundredgamle traditioner for røgning, tørring og fermentering. Vilde urter sankes på tundraen, og fisk fanges i uberørte, kolde farvande."
 research_done: 1
 ---
 

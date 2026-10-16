@@ -3,6 +3,7 @@ type: cut
 slug: burbot
 name: Burbot
 name_sv: Lake
+name_da: Knude
 category: fish
 meat: white_fish
 cut_type: White Fish

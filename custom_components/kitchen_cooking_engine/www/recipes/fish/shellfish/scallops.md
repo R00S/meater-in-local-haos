@@ -3,6 +3,7 @@ type: cut
 slug: scallops
 name: Scallops
 name_sv: Pilgrimsmusslor
+name_da: Kammuslinger
 category: fish
 meat: shellfish
 cut_type: Shellfish

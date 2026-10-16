@@ -3,12 +3,14 @@ KCE: CUISINE
 id: malaysian
 name: Malaysian
 name_sv: "Malaysiskt"
+name_da: "Malaysisk"
 icon: 🇲🇾
 region: southeast_asian
 region_name: "Southeast Asian"
 region_icon: 🌴
 description: "Malaysian cuisine is a vibrant mosaic of Malay, Chinese, and Indian culinary traditions united by bold sambal, aromatic coconut-based rempah (spice paste), and fermented shrimp paste — from the national dish nasi lemak and slow-cooked rendang to fiery asam laksa and sizzling char kway teow."
 description_sv: "Malaysisk mat är ett levande mosaik av malajiska, kinesiska och indiska kökstraditioner, förenade av kraftig sambal, aromatisk kokosnötsbaserad rempah och fermenterad räkpasta — från nationalrätten nasi lemak och långkokt rendang till het asam laksa och fräsande char kway teow."
+description_da: "Det malaysiske køkken er en levende mosaik af malajiske, kinesiske og indiske madtraditioner, der forenes af kraftig sambal, aromatisk kokosbaseret rempah (krydderpasta) og fermenteret rejepasta — fra nationalretten nasi lemak og langtidstilberedt rendang til stærk asam laksa og sydende char kway teow."
 research_done: 1
 ---
 

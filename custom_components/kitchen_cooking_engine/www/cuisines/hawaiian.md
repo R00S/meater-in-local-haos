@@ -3,12 +3,14 @@ KCE: CUISINE
 id: hawaiian
 name: Hawaiian
 name_sv: "Hawaiianskt"
+name_da: "Hawaiiansk"
 icon: 🌺
 region: north_american
 region_name: "North American"
 region_icon: 🦅
 description: "Hawaiian cuisine is a multicultural crossroads where Native Hawaiian tradition (poi, kalua pork, opihi, poke), Japanese-American staples (shoyu, rice, furikake, spam musubi), Portuguese sweet bread, Filipino flavours, and the plate lunch institution merge into a singular local identity. Taro is sacred; ahi poke is iconic; and no meal is complete without two scoops of rice."
 description_sv: "Hawaiianskт kok ar en multikulturell korsning dar ursprungshawaiisk tradition (poi, kalua-flask, opihi, poke), japansk-amerikanska stapelmat (shoyu, ris, furikake, spam musubi), portugisiskt sotbrod, filippinska smaker och plate lunch-institutionen sammangas till en unik lokal identitet."
+description_da: "Det hawaiianske køkken er et multikulturelt krydsfelt, hvor traditioner fra Hawaiis oprindelige folk (poi, kalua pork, opihi, poke), japansk-amerikanske basisvarer (shoyu, ris, furikake, spam musubi), portugisisk sødt brød, filippinske smage og plate lunch-institutionen smelter sammen til en særegen lokal identitet. Taro er hellig; ahi poke er ikonisk; og intet måltid er fuldendt uden to skefulde ris."
 research_done: 1
 ---
 

@@ -3,12 +3,14 @@ KCE: CUISINE
 id: vietnamese
 name: Vietnamese
 name_sv: "Vietnamesiskt"
+name_da: "Vietnamesisk"
 icon: 🇻🇳
 region: southeast_asian
 region_name: "Southeast Asian"
 region_icon: 🌴
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
 description_sv: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+description_da: "Det vietnamesiske køkken bygger på ris, risnudler, nước mắm (fiskesauce) og et væld af friske urter og balancerer gennemgående salt, sødt og surt. Phở, bánh mì, gỏi cuốn og cá kho tộ afspejler landets regionale madtraditioner, mens svinekød er det dominerende kød, og fisk og skaldyr spiller en central rolle."
 research_done: 1
 ---
 
