@@ -3351,6 +3351,8 @@ WHITE_FISH = [
             CookingMethod.GRILL,
             CookingMethod.SMOKER,
             CookingMethod.OVEN_BAKE,
+            CookingMethod.BOIL,
+            CookingMethod.POACH,
         ],
         recommended_doneness="well_done",
     ),

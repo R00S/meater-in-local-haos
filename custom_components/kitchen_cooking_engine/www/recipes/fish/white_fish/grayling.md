@@ -15,6 +15,8 @@ methods:
 - grill
 - smoker
 - oven_bake
+- boil
+- poach
 doneness:
 - name: medium
   target_c: 57
@@ -33,9 +35,9 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 4
-cooking_methods_researched: 0
-quality_assessed: 2026-05-31
+quality_score: 12
+cooking_methods_researched: 1
+quality_assessed: 2026-10-23
 rest_time_min: 0
 rest_time_max: 2
 carryover_temp_c: 2
@@ -52,30 +54,42 @@ Harr (*Thymallus thymallus*; tyska: Äsche; franska: ombre commun; finska: harju
 
 ## Research files by cooking method
 
-- [Pan Fry](./grayling-pan_fry.md)
-- [Grill](./grayling-grill.md)
-- [Smoker](./grayling-smoker.md)
-- [Oven Bake](./grayling-oven_bake.md)
+- [Pan Fry](./grayling-pan_fry.md) — 4 fetched sources (AT/DE/SE×2); no source states a pull temperature; same-tradition duplication (2× Swedish).
+- [Grill](./grayling-grill.md) — 2 fetched sources (UK/SE); no stated pull temperatures.
+- [Smoker](./grayling-smoker.md) — 1 fetched source (UK); explicit 55 °C core pull.
+- [Oven Bake](./grayling-oven_bake.md) — 3 fetched sources (SE×2/UK); oven settings and times only, no internal target.
+- [Boil](./grayling-boil.md) — 2 fetched sources (SE×2); qualitative endpoints only.
+- [Poach](./grayling-poach.md) — 1 fetched source (SE); qualitative endpoint only.
+
+All six declared methods now have a leaf file. None of the leaves yet meets the 4–6-source, four-distinct-tradition collection gate; every leaf carries an explicit partial-research marker.
 
 ## Quality score
 
-**Score: 4 / 20** — assessed 2026-05-31 (stub)
+**Score: 12 / 20** — assessed 2026-10-23 (from-scratch reassessment after all 6 method leaves created; supersedes 2026-05-31 stub score 4)
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
-| Missing method leaf files (4 of 4 declared: pan_fry, grill, smoker, oven_bake) | −4 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
+| Cooking methods not researched | — (done: method survey found and added `boil` + `poach` beyond the auto-populated list; negative search documented for steam, braise, saute, pressure/slow cooker, air fryer, sous vide, pan sear, oven broil, deep fry; `cooking_methods_researched: 1`) |
+| Missing method leaf files | — (none; all 6 declared methods have a leaf) |
+| Partial leaf files (< 4 verified sources): grill (2), smoker (1), oven_bake (3), boil (2), poach (1) | −5 |
+| Leaf with same-tradition duplicate sources (`grayling-pan_fry.md` has 2× Swedish of 4 sources) | −1 |
+| Method leaf copies parent cut profile | — (none; all six profiles are method-specific) |
+| Missing Culinary Group A tradition | −1 (no verified Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian or Filipino grayling recipe located; search documented in leaves, not a geographic-impossibility claim) |
+| Missing Culinary Group B tradition | — (covered: Austria/Germany in pan_fry, UK in grill/oven_bake/smoker) |
+| Missing Culinary Group C tradition | −1 (no verified African, Caribbean, Arabic, Levant, Persian or Turkish grayling recipe located; search documented, not claimed impossible) |
+| Missing Culinary Group D tradition | — (covered: Sweden in pan_fry, grill, oven_bake, boil, poach) |
+| Temperature data: safe + culinary preferred | — (research evidence present: `grayling-smoker.md` carries an explicit source-stated pull at 55 °C, and its consensus records the divergence from the 63 °C USDA line rather than resolving it) |
+| Per-method temperature data | — (smoker leaf carries per-method data; the other five leaves document per-method absence as published) |
 
-Pure stub — no method leaves exist and cooking methods have not been researched. All four culinary groups deducted as no source evidence of any kind exists.
+**Deduction**: −5 (partial leaves) −1 (same-tradition duplication) −1 (Group A) −1 (Group C) = **12 / 20**.
+
+Only one source in the whole collection states an internal temperature (55 °C, smoker). The five other leaves record recipe evidence with explicitly published absences; no temperature was invented where sources are silent.
 
 ### Improvement priorities
 
-1. **−8** · Complete broad method-survey research for grayling (*harr* / *Thymallus thymallus*) across culinary traditions; set `cooking_methods_researched: 1` only when thorough.
-2. **−4** · Create all 4 declared method leaf files, each with 4–6 diverse source recipes.
-3. **−4** · Add source recipes representing all four culinary groups across the method leaves.
+1. **−5** · Bring each partial leaf to the 4–6-source, four-distinct-tradition collection gate — starting with `grayling-smoker.md` (1 source) and `grayling-poach.md` (1 source).
+2. **−1** · Replace one of the two Swedish sources in `grayling-pan_fry.md` with a distinct tradition, or add a 5th source from a new tradition.
+3. **−1** · Culinary Group A — search Japanese/Chinese/Korean sources for grayling (*harr* / *Thymallus thymallus*) preparations; add any verified recipe to a leaf.
+4. **−1** · Culinary Group C — search Turkish/Persian/Arabic sources for grayling preparations; add any verified recipe to a leaf.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
