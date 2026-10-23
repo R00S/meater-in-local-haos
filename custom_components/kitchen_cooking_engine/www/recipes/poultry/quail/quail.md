@@ -15,6 +15,7 @@ methods:
 - oven_roast
 - pan_fry
 - smoker
+- braise
 doneness:
 - name: well_done
   target_c: 74
@@ -25,9 +26,9 @@ doneness:
   max_f: 176
   usda_safe: true
   recommended: true
-quality_score: 4
-cooking_methods_researched: 0
-quality_assessed: 2026-05-31
+quality_score: 12
+cooking_methods_researched: 1
+quality_assessed: 2026-10-23
 rest_time_min: 3
 rest_time_max: 5
 carryover_temp_c: 2
@@ -44,30 +45,37 @@ Vaktel — främst japansk vaktel (*Coturnix japonica*, huvudsaklig odlad art gl
 
 ## Research files by cooking method
 
-- [Grill](./quail-grill.md)
-- [Oven Roast](./quail-oven_roast.md)
-- [Pan Fry](./quail-pan_fry.md)
-- [Smoker](./quail-smoker.md)
+- [Grill](./quail-grill.md) — 2 fetched sources (US Group B with 150–155 °F breast endpoint; TR Group C).
+- [Oven Roast](./quail-oven_roast.md) — 5 fetched sources (CN Group A, ES/IT Group B, TR Group C, RU Group D); collection gate met, no source states a pull temperature.
+- [Pan Fry](./quail-pan_fry.md) — 2 fetched sources (TR Group C, IT Group B).
+- [Smoker](./quail-smoker.md) — 1 fetched source (US/Chinese technique); book lead (Neil Perry, *Rockpool*) recorded, not collected.
+- [Braise](./quail-braise.md) — 2 fetched sources (US/Greek and ES, both Group B); newly discovered method, registered in `cooking_data.py`.
+
+All five declared methods have a leaf file. Only `oven_roast` meets the 4–6-source collection gate; the others carry explicit partial-research markers.
 
 ## Quality score
 
-**Score: 4 / 20** — assessed 2026-05-31 (stub)
+**Score: 16 / 20** — assessed 2026-10-23 (from-scratch reassessment; supersedes 2026-05-31 stub score 4). Self-assessed at creation time (HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md Pattern 4) — treat as an initial estimate, not an independent audit.
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
-| Missing method leaf files (4 of 4 declared: grill, oven_roast, pan_fry, smoker) | −4 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
+| Cooking methods not researched | — (done: survey found and added `braise` beyond the auto-populated list; negative/uncertain areas documented in leaves — e.g. deep-fried quail exists but no `deep_fry` enum; `cooking_methods_researched: 1`) |
+| Missing method leaf files | — (none; all 5 declared methods have a leaf) |
+| Partial leaf files (< 4 verified sources): grill (2), pan_fry (2), smoker (1), braise (2) | −4 |
+| Method leaf copies parent cut profile | — (none; all five profiles are method-specific) |
+| Missing Culinary Group A tradition | — (covered: CN Xiachufang honey-glazed roast quail in oven_roast leaf) |
+| Missing Culinary Group B tradition | — (covered: US grill/smoker/braise, ES oven_roast/braise, IT oven_roast/pan_fry) |
+| Missing Culinary Group C tradition | — (covered: TR oven_roast, grill, pan_fry) |
+| Missing Culinary Group D tradition | — (covered: RU Edimdoma oven_roast) |
+| Temperature data: safe + culinary preferred | — (research evidence present: grill leaf carries an explicit source-stated endpoint at 150–155 °F / 65–68 °C breast, recorded as a divergence below the 74 °C USDA line rather than resolved) |
+| Per-method temperature data | — (grill leaf carries per-method data; the other four leaves document per-method absence as published) |
 
-Pure stub — no method leaves exist and cooking methods have not been researched. All four culinary groups deducted as no source evidence of any kind exists. Note: quail is present across all four culinary groups in reality — Group A (Japanese *uzura*, Chinese quail), Group B (French/Italian roasted quail), Group C (Moroccan quail tagine, Egyptian quail), Group D (Russian/Eastern European quail) — so all deductions are recoverable.
+**Deduction**: −4 (partial leaves: grill 2 sources, pan_fry 2, smoker 1, braise 2) = **16 / 20**. All four culinary groups and both temperature criteria pass on explicit evidence (oven_roast covers Groups A/B/C/D; the grill leaf carries the collection's one stated doneness endpoint).
 
 ### Improvement priorities
 
-1. **−8** · Complete broad method-survey research for quail across culinary traditions; set `cooking_methods_researched: 1` only when thorough.
-2. **−4** · Create all 4 declared method leaf files, each with 4–6 diverse source recipes covering culinary traditions.
-3. **−4** · Add source recipes representing all four culinary groups across the method leaves.
+1. **−4** · Bring each partial leaf to the 4–6-source gate — starting with `quail-smoker.md` (1 source; collect the Chinese 茶熏鹌鹑 primaries and the Neil Perry *Rockpool* book recipe).
+2. Expand Group A coverage beyond the single oven_roast source into other methods (grill, smoker, braise) — Japanese *uzura* and Chinese preparations are documented traditions.
+3. Add a Group C source to `quail-braise.md` (Moroccan/Egyptian quail tagine) and a Group A or D source to `quail-grill.md` and `quail-pan_fry.md`.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

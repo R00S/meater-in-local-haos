@@ -2892,6 +2892,7 @@ QUAIL = [
             CookingMethod.OVEN_ROAST,
             CookingMethod.PAN_FRY,
             CookingMethod.SMOKER,
+            CookingMethod.BRAISE,
         ],
         recommended_doneness="well_done",
     ),
