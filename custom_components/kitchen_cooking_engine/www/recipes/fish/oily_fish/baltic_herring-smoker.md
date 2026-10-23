@@ -11,77 +11,66 @@ cut_type: Oily Fish
 
 ## Cut profile
 
-Hot-smoking baltic herring (strömming) is a quintessentially Nordic tradition and the **ABU-röken** is its classic vehicle — a compact, lidded metal box with a wire rack, loaded with 1–2 tablespoons of alder sawdust (alspån) and placed over a spirit burner, gas burner, or campfire. Baltic herring is smaller and leaner than Atlantic herring (typically 15–25 cm, 40–80 g whole) and therefore cooks faster. Whole gutted fish or the traditional **strömmingsflundra** (two butterflied halves folded together around a parsley-and-butter filling) are both suitable for the ABU-röken. The folded flundra is thicker and may require the longer end of the time range. Chamber temperatures reach 90–100 °C; whole or butterflied strömming reaches internal **63 °C** in approximately 12–20 minutes. The short, high-heat exposure from the ABU-röken imparts a delicate smoke without overwhelming the fish's mild, slightly sweeter flavour compared with Atlantic herring. Alder is traditional; juniper berries are an optional aromatic addition. Carryover is negligible due to small mass. For MEATER probe placement, insert the probe along the dorsal muscle, parallel to the spine, tip at the thickest cross-section — for strömmingsflundra, place the probe into the thickest part of the folded package.
+Smoking Baltic herring (strömming) has its own Swedish name: the product is *böckling* (hot-smoked strömming or herring; the word is borrowed from Dutch, "little buck"). Larger strömming are the traditional choice for smoking — small summer fish are fried instead. Smoking here is primarily a flavour and preservation method: Swedish food-culture documentation records cold smoking at about 20 °C for 8–10 days (the oldest method) and hot smoking at 75–85 °C for a few hours, in both cases combined with salting or drying. Hot smoking coagulates the protein and gives the fish a cooked character. No fetched source states an internal pull temperature for the fish, and none is inferred here; the smoking-chamber figures above are the sources' own stated process temperatures.
 
 ## Styckesprofil
 
-Varmrökning av strömming är en nordisk kärntradition och **ABU-röken** är dess klassiska redskap — en kompakt metallbox med gallersats, fylld med 1–2 matskedar alspån och placerad över spritbrännare, gasbrännare eller öppen eld. Strömming är mindre och magrare än atlantisk sill (typiskt 15–25 cm, 40–80 g hel) och tillagas därför snabbare. Hel urtagen fisk eller den traditionella **strömmingsflundran** (två fjärilsöppnade halvor vikta mot varandra med persiljasmörsfyllning) är båda lämpliga för ABU-röken. Den hopvikta flundran är tjockare och kan kräva den övre delen av tidsspannet. Kammartemperaturen når 90–100 °C; hel eller fjärilsöppnad strömming når innertemperatur **63 °C** på ca 12–20 minuter. Den korta, het exponeringen från ABU-röken ger en delikat rök utan att övermanna fiskens milda, lätt sötare smak jämfört med atlantisk sill. Al är traditionellt; enbär är ett valfritt aromatiskt tillsats. Sond insatt längs ryggmuskeln, parallellt med ryggraden, med spetsen i tjockaste genomsnitt — för strömmingsflundra, placera sonden i tjockaste delen av det hopsatta paketet.
+Varmrökt strömming har ett eget svenskt namn: *böckling* (namnet är lånat från nederländska, "liten bock"). Större strömming är det traditionella valet för rökning — små sommarströmmingar steks i stället. Rökningen är framför allt smakförhöjande och konserverande: svensk matkulturdokumentation anger kallrökning vid ca 20 °C i 8–10 dagar (äldsta metoden) och varmrökning vid 75–85 °C under några timmar, i båda fallen kombinerat med saltning eller torkning. Varmrökning koagulerar proteinet och ger fisken kokt karaktär. Ingen hämtad källa anger innertemperatur för fisken; process-temperaturerna ovan är källornas egna angivna rökningstemperaturer.
 
 ## Source recipes
 
-### 1. ABU-röken: rökt strömming (inspired by Swedish hot-smoking tradition)
-**Inspired by**: Swedish outdoor cooking tradition with ABU-röken (compact table-top hot smoker); summarised from published Swedish outdoor cooking guides, ABU Garcia product documentation, and Swedish fishing/camping literature (widely documented in print; fetched and cross-checked 2026-05-31).
-**Serves**: 2–4 · **Prep**: 20–30 min · **Cook**: 12–20 min · **Rest**: 3 min
+### 1. Matkult.se (Institutet för språk och folkminnen material) — Konservering och tillagning: Rökning
+**Inspired by**: https://www.matkult.se/fisk/konservering-och-tillagning.html (fetched 2026-10-23). Swedish food-culture documentation site ("Matkult"), with archival photographs credited to Isof (Institute for Language and Folklore); documents historical Swedish fish preservation and cooking methods rather than a single modern recipe.
+**Serves**: — (method documentation) · **Prep**: salting/drying first (always combined with smoking) · **Cook**: hot smoke 75–85 °C for a few hours; or cold smoke ~20 °C for 8–10 days
 
-**Temperature guidance**: ABU-röken chamber reaches 90–100 °C; whole or butterflied strömming reaches internal **63 °C / 145 °F** in 12–20 min depending on size. Use internal temperature as the endpoint.
+**Ingredients** (as documented)
+- Herring or strömming (*sill eller strömming*)
+- Salt (smoking was "always combined with salting or drying")
+- Wood smoke (traditional setups: Swedish fireplaces in the south; German-style fish smokehouses spread from the late 19th century — the era in which *böckling* arose)
 
-**Ingredients**
-- 6–8 fresh whole baltic herring (strömming), gutted and cleaned
-- Coarse salt (grovsalt), 1 tsp per fish
-- 1–2 tbsp alder sawdust (alspån), fine-grade and dry
-- Optional: 3–4 dried juniper berries (enbär) added to sawdust
-
-**Method**
-1. Rinse fish under cold water. Pat dry with kitchen paper.
-2. Salt the fish inside the cavity and on the skin with coarse salt. Rest 20–30 minutes to draw surface moisture and lightly firm the flesh.
-3. Rinse off excess salt; pat dry.
-4. Spread 1–2 tablespoons of alder sawdust evenly in the ABU-röken tray. Add juniper berries if using.
-5. Place the wire rack in position. Arrange fish on the rack, skin-side down, with a little space between them.
-6. **Insert MEATER probe** along the dorsal muscle of the largest fish, tip at the thickest point.
-7. Close the lid. Place over a spirit burner, gas burner, or campfire.
-8. Smoke at approximately **90–100 °C chamber temperature** for **12–20 minutes**.
-9. **Pull at 63 °C / 145 °F**. Flesh will be opaque throughout and pull cleanly from the spine.
-10. Rest 3 minutes with the lid slightly open before serving.
-
-**Serving**: Serve warm with rye crispbread (knäckebröd), a wedge of lemon, and dill butter; or cold as a smörgåstopping with pickled cucumber.
+**Method** (as documented)
+1. Salt the fish (smoking alone does not preserve; the source states saltning, fermentering or torkning all preceded smoking).
+2. For hot smoking (*varmrökning*): smoke at **75–85 °C for a few hours** — the protein coagulates and the fish takes on a cooked character. The source gives no fish internal temperature or explicit pull point; do not infer one from the process temperature.
+3. For cold smoking (*kallrökning*): smoke at **about 20 °C for 8–10 days** — the oldest method; preserves with the aid of the preceding salting/drying.
+4. The finished hot-smoked product is *böckling* (rökt sill eller strömming). The source states no final serving temperature.
 
 ---
 
-### 2. ABU-röken: rökt strömmingsflundra (inspired by Swedish hot-smoking tradition)
-**Inspired by**: Swedish outdoor cooking tradition — strömmingsflundra variant. Documented in Swedish fishing and outdoor cooking references (fetched and cross-checked 2026-05-31).
-**Serves**: 2–4 · **Prep**: 30 min · **Cook**: 15–25 min · **Rest**: 3 min
+### 2. Susanne Jarl / Recepten.se — Strömming (ingredient page)
+**Inspired by**: https://www.recepten.se/info/stroemming.html (fetched 2026-10-23). Swedish recipe site written by Susanne Jarl (all recipes authored by the site owner).
+**Serves**: — (ingredient guidance) · **Prep**: not stated · **Cook**: not stated
 
-**Temperature guidance**: The folded strömmingsflundra is thicker than single whole fish; allow **15–25 min** in the ABU-röken at 90–100 °C chamber temperature until the thickest part reaches **63 °C / 145 °F** internal.
+**Ingredients** (as documented)
+- Strömming (Baltic herring), whole, fresh
 
-**Ingredients**
-- 4–6 fresh whole baltic herring (strömming), gutted and cleaned
-- Coarse salt
-- 20 g softened butter
-- 2 tbsp finely chopped flat-leaf parsley
-- 1 tbsp finely sliced leek (optional)
-- 1–2 tbsp alder sawdust
-
-**Method**
-1. Butterfly the herring (flundra cut): place gutted fish flat, press to open fully, remove the backbone by running a finger along it and pulling free, leaving two connected halves joined at the belly.
-2. Season with coarse salt, inside and out. Rest 20 min.
-3. Mix softened butter with parsley and leek (if using). Spread a small amount on the inside surface of one butterflied half, then fold the other half over to enclose the filling.
-4. Load ABU-röken tray with 1–2 tbsp alder sawdust. Place filled flundror skin-side down on rack.
-5. **Insert MEATER probe** through the folded side into the centre of the thickest package.
-6. Close lid. Smoke at **90–100 °C chamber temperature** for **15–25 minutes**.
-7. **Pull at 63 °C / 145 °F**.
-8. Rest 3 minutes before serving.
+**Method notes** (as documented)
+1. The source states strömming "passar bra att steka, lägga in eller röka" (suits frying, pickling or smoking).
+2. "Större strömmingar är goda att röka. Rökt strömming kallas böckling" — larger strömming are good for smoking; smoked strömming is called böckling.
+3. The source gives no smoking times, temperatures, internal temperature, or explicit pull point; do not infer any of them. It notes a food-safety caveat (dioxins/PCB in self-caught Baltic herring; national dietary advice applies).
 
 ---
 
 ## Temperature consensus
 
-| Source | Method | Smoker temp | Pull temp |
-|--------|--------|------------|-----------|
-| ABU-röken / Swedish tradition (whole) | Compact table-top hot smoker | 90–100 °C | 63 °C (145 °F) |
-| ABU-röken / Swedish tradition (flundra) | Compact table-top hot smoker | 90–100 °C | 63 °C (145 °F) |
+| Source | Stated process evidence | Internal/pull temperature |
+|---|---|---|
+| Matkult.se (SE) | Hot smoke 75–85 °C, a few hours; cold smoke ~20 °C, 8–10 days; always with salting/drying | Not stated |
+| Recepten.se (SE) | Smoking documented as a suitable method; larger fish used; no parameters | Not stated |
 
-**Consensus pull range**: **63 °C (145 °F)** — USDA safe minimum for fish. Baltic herring's small size and the ABU-röken's high chamber temperature mean the fish spends very little time at elevated temperature; pull exactly at 63 °C to retain moisture.
+The fetched sources document the smoking process temperatures but no fish internal temperature or measured final serving temperature. The75–85 °C hot-smoke chamber figure is a process setting, not a pull target, and must not be converted into one. Both sources are Swedish; the 4–6-source, four-tradition gate is not met (Groups A, B, C absent). The previous version of this leaf asserted a "12–20 min, pull at 63 °C" ABU-röken profile summarised from unspecified print literature; that unsourced claim has been removed — the numbers could not be traced to a fetchable source and violated the project's source-integrity rule.
 
-## `cooking_data.py` note
+## What makes this method special
 
-Use `DONENESS_WELL_DONE` target **63 °C**, range **60–68 °C** for `baltic_herring` × `smoker`. No medium option — hot smoking is a full-doneness method. The ABU-röken is the defining appliance for this fish × method combination.
+Hot smoking cooks and seasons Baltic herring at once: the 75–85 °C chamber is hot enough to coagulate the protein (giving böckling its cooked character) while the smoke deposits the aromatic layer that distinguishes it from plain salted fish. Because smoking was historically combined with salting, the texture is firmer than a bare fry; and because strömming is small and lean, a few hours in hot smoke is enough where salmonid fillets need longer. The method's Nordic specificity is captured by the product having its own name.
+
+## Data applied to cooking_data.py
+
+- `supported_methods`: no change proposed; `smoker` is already listed for baltic_herring.
+- `recommended_doneness`: no change proposed — no source provides explicit internal-temperature evidence.
+- No `method_temperature_ranges` override proposed — process temperatures only; no numerical doneness evidence.
+
+## Summary
+
+Smoked strömming is böckling: hot-smoked at 75–85 °C over a few hours after salting, it is a cooked, smoke-seasoned product with its own Swedish name. The fetched documentation confirms the method and its process temperatures but publishes no probe target, so this leaf supports method coverage and records the published absences.
+
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Two fetched Swedish sources (Group D ×2; same-tradition duplication) document smoking of strömming. The 4–6-source, four-tradition gate is not met. A fetchable primary böckling recipe (ingredient quantities, numbered steps) is still needed — the sources above are method/ingredient documentation, not full recipes. Continue collection before drawing analysis conclusions.

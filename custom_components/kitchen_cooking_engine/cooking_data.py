@@ -2940,6 +2940,8 @@ OILY_FISH = [
             CookingMethod.PAN_FRY,
             CookingMethod.OVEN_BAKE,
             CookingMethod.SMOKER,
+            CookingMethod.GRILL,
+            CookingMethod.BOIL,
         ],
         recommended_doneness="well_done",
     ),
