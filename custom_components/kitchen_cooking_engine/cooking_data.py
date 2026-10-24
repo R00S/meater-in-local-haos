@@ -2504,6 +2504,31 @@ CHICKEN_DARK_MEAT = [
         ],
         recommended_doneness="well_done",
     ),
+    MeatCut(
+        id=323,
+        name="chicken_thigh_bone_in",
+        name_long="Chicken Thigh (Bone-in)",
+        cut_order=4,
+        estimated_thickness_mm=35,
+        usda_safe_c=74,
+        usda_safe_f=165,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[POULTRY_SAFE, POULTRY_DARK_MEAT],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+            CookingMethod.AIR_FRYER,
+            CookingMethod.PAN_FRY,
+            CookingMethod.BRAISE,
+            CookingMethod.SMOKER,
+            CookingMethod.SLOW_COOKER,
+            CookingMethod.PRESSURE_COOKER,
+            CookingMethod.SOUS_VIDE,
+        ],
+        recommended_doneness="well_done",
+    ),
 ]
 
 # Turkey cuts
