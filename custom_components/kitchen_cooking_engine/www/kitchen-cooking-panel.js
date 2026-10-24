@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 24 Oct 2026, 10:01 CET
+ * AUTO-GENERATED: 24 Oct 2026, 19:23 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 24 Oct 2026, 10:01 CET
+// Last generated: 24 Oct 2026, 19:24 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -127921,11 +127921,19 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/haddock.md"
   },
   "hake": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/hake-oven_roast.md",
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/hake-pan_fry.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/hake-pan_sear.md",
+    "poach": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/hake-poach.md",
+    "simmer": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/hake-simmer.md",
+    "steam": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/hake-steam.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/hake.md"
   },
   "halibut_fillet": {
+    "grill": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/halibut_fillet-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/halibut_fillet-oven_roast.md",
     "pan_sear": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/halibut_fillet-pan_sear.md",
+    "steam": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/halibut_fillet-steam.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/halibut_fillet.md"
   },
   "mahi_mahi": {
@@ -128038,11 +128046,21 @@ const RECIPE_INDEX = {
   },
   "mackerel": {
     "air_fryer": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-air_fryer.md",
+    "boil": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-boil.md",
+    "braise": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-braise.md",
     "grill": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-grill.md",
     "oven_bake": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-oven_bake.md",
+    "oven_broil": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-oven_broil.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-oven_roast.md",
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-pan_fry.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-pan_sear.md",
+    "poach": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-poach.md",
+    "pressure_cooker": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-pressure_cooker.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-saute.md",
     "simmer": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-simmer.md",
+    "slow_cooker": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-slow_cooker.md",
     "smoker": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-smoker.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-sous_vide.md",
     "steam": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-steam.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel.md"
   },
@@ -128172,14 +128190,22 @@ const RECIPE_INDEX = {
   },
   "chicken_thigh_bone_in": {
     "air_fryer": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-air_fryer.md",
+    "boil": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-boil.md",
     "braise": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-braise.md",
     "grill": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-grill.md",
+    "oven_bake": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-oven_bake.md",
+    "oven_broil": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-oven_broil.md",
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-oven_roast.md",
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-pan_fry.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-pan_sear.md",
+    "poach": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-poach.md",
     "pressure_cooker": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-pressure_cooker.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-saute.md",
+    "simmer": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-simmer.md",
     "slow_cooker": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-slow_cooker.md",
     "smoker": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-smoker.md",
     "sous_vide": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-sous_vide.md",
+    "steam": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-steam.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in.md"
   },
   "chicken_wing": {
@@ -128405,7 +128431,9 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/cured_ham.md"
   },
   "ham": {
+    "braise": "/kitchen_cooking_engine_panel/recipes/pork/roasts/ham-braise.md",
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/pork/roasts/ham-oven_roast.md",
+    "slow_cooker": "/kitchen_cooking_engine_panel/recipes/pork/roasts/ham-slow_cooker.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/ham.md"
   },
   "pork_belly": {
@@ -128660,6 +128688,7 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/lamb/chops/lamb_chops.md"
   },
   "lamb_cutlet": {
+    "grill": "/kitchen_cooking_engine_panel/recipes/lamb/chops/lamb_cutlet-grill.md",
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/lamb/chops/lamb_cutlet-pan_fry.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/lamb/chops/lamb_cutlet.md"
   },
@@ -129348,12 +129377,17 @@ const CUT_METHOD_PROFILES = {
     "smoker_sv": "*Väntar på källinsamling.*"
   },
   "hake": {
-    "pan_fry": "Pan frying hake is the dominant cooking method in Iberian, North African, and British traditions. The fillet is typically dusted in seasoned flour (*merluza a la plancha*) or dipped in a light batter (*pescada frita*, fish and chips) before being fried in olive oil or neutral fat. Hake flesh is slightly softer than cod when raw — it does not withstand aggressive handling, so a gentle placement in hot fat and minimal flipping (one flip only) is standard. The flour or batter coating creates the structural protection the delicate flesh needs. Pull at 60–63 °C; the flesh should be opaque throughout with large moist flakes separating cleanly. Carryover is minimal (2–3 °C) given the lean, thin geometry.",
-    "pan_fry_sv": "Pannstekning av hake är den dominerande tillagningsmetoden i iberiska, nordafrikanska och brittiska traditioner. Filén beläggs typiskt med kryddad mjöl (*merluza a la plancha*) eller doppas i lätt smet (*pescada frita*, fish and chips) innan den steks i olivolja eller neutralt fett.\n\nHakeköttet är något mjukare än torsk rått — det tål inte aggressiv hantering, varför en varsam placering i het fett och minimal vändning (bara en vändning) är standard. Mjölet eller smeten skapar det strukturella skydd som det känsliga köttet behöver. Dra vid 60–63 °C; köttet ska vara ogenomskinligt genomgående med stora fuktiga fjäll som separerar rent. Eftertillagning är minimal (2–3 °C) given den magra, tunna geometrin. Innertemperatur: 60–63 °C."
+    "oven_roast": "The MSC recipe uses skin-on hake fillets briefly browned in an ovenproof frying pan and then finished in a hot oven. This hybrid treatment gives the skin contact heat before the enclosed oven cooks the delicate white flesh through, while the sauce Romesco adds richness to lean hake. The published oven endpoint is “just cooked through”; no internal temperature or resting period is stated, so this leaf does not infer one.",
+    "pan_fry": "Pan frying is the everyday hake method of the Iberian Atlantic, Chile and the British Isles: a\nfloured or bare fillet goes into moderate fat, cooks undisturbed on the first side so a crust can\nform, and is turned once. Hake's softness sets the technique — every fetched source either pats\nthe fish very dry or dusts it with flour, and every one of them warns against moving it before the\nfirst side has set, because the flesh tears at the seams if it is handled wet. The fillet is thin\n(around 20 mm), so the whole cook is 6–8 minutes and the fat is the only buffer against\novercooking.\n\n**Provenance note (2026-10-24).** The previous version of this leaf contained five recipes\nattributed to named cookbooks (José Andrés, Rick Stein, Paula Wolfert, Marcella Hazan, Donna Hay)\nwith MEATER probe steps and pull temperatures of 60–64 °C. None of those records could be tied to\na page or passage that was actually read, and the book attributions could not be verified, so they\nwere removed under the project's source-integrity rule rather than left in place. What follows is\nwhat could be fetched and read; the leaf is now partial where it previously looked complete.",
+    "pan_sear": "Pan searing is the single-surface cousin of pan frying, and for hake the distinction is\nmechanical rather than semantic: the fish goes into the pan **skin-side down and stays there**,\nthe skin sets and crisps against the metal, the cook bastes rather than flips repeatedly, and the\nthick loin is either finished in the same pan or moved to the oven. That sequence is what the\nthree fetched sources document. It matters for hake because the flesh is soft enough to tear at\nthe turn, so one deliberate turn (or none) protects the flake structure; the loin steak cut is\nthe only hake format thick enough to sear this way without overcooking.\n\nThe leaf is thin: three fetched sources, one of which uses the sear only as the first stage of a\nstew. None publishes an internal temperature, so no pull temperature is stated.",
+    "poach": "Poaching is the gentlest heat there is for hake. The lean, soft fillet is submerged in liquid\nheld below a rolling boil, so the surface never browns and the flesh sets evenly from the\noutside in; because hake flakes along wide myosepta, the poaching liquid also carries away the\nloose surface flakes that a hot pan would tear. The fetched sources split into two families:\n**court-bouillon poaching** in a flavoured stock (French/Irish/UK) and **sauce poaching**, where\nthe fish is laid on a finished sauce, covered, and left to cook in its steam and liquid\n(Iberian/Azorean/South African). The second family overlaps with `simmer`, which is recorded\nseparately at [hake-simmer.md](./hake-simmer.md); the split used here is whether the fish sits\nin a deep liquid bath (poach) or on a shallow sauce base (simmer).\n\nNone of the six fetched sources states an internal temperature. Every one of them gives time\nand a visual cue only, so this leaf records no pull temperature and draws no temperature\nconsensus.",
+    "simmer": "Simmering is the stew-adjacent end of hake cookery: the fillet or portion is laid on — or into —\na shallow sauce that is already at a bare simmer, covered, and finished in 5–10 minutes. It is\nthe dominant hake treatment along the Iberian Atlantic (Basque *merluza en salsa verde*, Ecuadorian\n*sudado*), in southern African potjie stews and in West African fish stews, because the sauce both\nflavours the lean flesh and protects it from direct heat. The engineering difference from\n`poach` (see [hake-poach.md](./hake-poach.md)) is depth of liquid and the presence of a sauce\nbuilt in the same pan; the difference from `braise` is that nothing is seared dry and no long\ncovered cook is involved.\n\nNo fetched source in this leaf publishes an internal temperature. Times range from 5 to 10\nminutes once the fish goes in, with visual cues (\"flaky\", \"tender\", \"cooked\") doing the work of a\nthermometer.",
+    "steam": "Hake's lean, tender flakes cook quickly in moist heat; steaming avoids a browned crust and limits direct handling of the delicate flesh. The sealed steam environment cooks the surface and centre gently, but the thin fillets can become dry or tough if left too long. The sources give time and visual endpoints, not an internal pull temperature or carryover measurement. Probe placement is best attempted from the side into the thickest portion, avoiding the tapered tail; these sources do not prescribe a probe."
   },
   "halibut_fillet": {
-    "pan_sear": "Pacific halibut (*Hippoglossus stenolepis*) and Atlantic halibut (*Hippoglossus hippoglossus*) are the largest flatfish; the fillet — cut from the meaty upper or lower side of the fish — is thick, firm, brilliant white, and lean with large, tight muscle flakes. The flesh has little connective tissue relative to its density, which gives a satisfying firm bite when properly cooked but transitions quickly to a dry, chalky texture above 60 °C. Pan searing is one of the most technically demanding preparations for halibut because the thick, lean flesh must be cooked through to approximately 58–62 °C without surface scorching; a common technique is to sear in a screaming-hot pan to set the crust, then finish in a moderate oven or with basting, treating it more like a thick beef steak than most fish. Carryover is significant — 4–5 °C for a thick fillet — so pulling early is essential.",
-    "pan_sear_sv": "Hellefisk (*Hippoglossus stenolepis*, Stillahavshellefisk; *Hippoglossus hippoglossus*, Atlantisk hellefisk) är de största flatfiskarna; fileten — skärd från de köttstarka övre eller undre sidorna av fisken — är tjock, fast, klart vit och mager med stora, täta muskelknippen. Det är ett av de absolut renaste, mest delikata vitköttade fiskarterna. Pannsearing ger bäst resultat: het panna, smör, 3–4 minuter per sida. Innertemperatur: 58–60 °C."
+    "grill": "Grilling is the method that rewards halibut's geometry. The fillet is thick and dense enough to\nsurvive a grate without a basket, and its tight flake holds together when turned once at the\nhalfway point — the opposite of a thin, fragile white fish. What the fire adds is a charred, smoky\nsurface on a fish that otherwise browns reluctantly; what it costs is control, because the window\nbetween \"just opaque\" and dry is narrow on a thick, lean fillet. Every fetched source solves that\nby leaving the fillet whole and turning it once, and none of them measures the interior: doneness\nis judged by opacity, by flake, or by time per side.\n\nThe five sources in this leaf span Moroccan-style chermoula, Thai, Korean, Cambodian and Jamaican\njerk treatments, so this is the cut's strongest culinary-group coverage of any method.",
+    "oven_roast": "Roasting a halibut fillet is the low-attention counterpart to pan searing: the thick, dense fillet\ngoes into a hot oven (375–450 °F) either bare on a tray, under a sauce, or sealed in parchment,\nand comes out in 8–22 minutes depending on thickness and whether the fish is covered. The cut\ntolerates this because its tight myotomes hold moisture far longer than a thin flatfish fillet's\nwould — but the same density means heat penetrates slowly, and every source in this leaf stacks\nthe odds in its favour by covering the fish (foil, parchment, sauce, or a lid of vegetables).\nCarryover is the reason the sources pull early in spirit even where they state no temperature:\na 1½-inch fillet keeps climbing after it leaves the oven.\n\nSix fetched recipes, across Asian-style, French-style, Indian, Italian-style, US and\nMoroccan-style treatments. **None of the six states an internal temperature**: each gives an oven\nsetting, a time and a visual cue instead (see evidence limits).",
+    "steam": "Steaming is the East Asian answer to halibut's density. The fillet sits on a plate over boiling\nwater, covered, for 8–10 minutes; the moist heat sets the surface before it can dry, and because\nthe fish is not turned or pressed, the flake structure stays intact. Halibut suits this\nparticularly well when cut no thicker than about an inch — the Cantonese source says so\nexplicitly — because steam transfers heat more slowly than a pan, and a thicker fillet would set\nat the edges before the centre. The classic finish is the Cantonese one: hot oil poured over\nginger and scallion, and a soy/rice-wine dressing.\n\nFour fetched sources (Cantonese, Chinese-Malaysian, Thai, US-Asian-inspired). None publishes an\ninternal temperature; every source uses time plus a physical test."
   },
   "mahi_mahi": {
     "pan_sear": "Pan searing mahi-mahi produces a beautifully golden, Maillard-browned crust on the firm flesh. A hot cast-iron or stainless pan with a small amount of oil (200–210 °C surface) sears the flat face of a 2–3 cm fillet in 3–4 minutes; flip for 2–3 minutes on the second side. The firm flesh holds together and does not curl or flake apart during the sear, unlike more delicate white fish. The natural moisture and moderate fat content prevent drying out at a moderate pull temperature.\n\nMEATER probe inserted from the thin end of the fillet, parallel to the flesh, into the thickest point. Pull at 58–60 °C; carryover 3–4 °C brings it to 61–63 °C. Flesh transitions from moist-and-flaky to dry and stringy above 65 °C — pull early.",
@@ -129489,15 +129523,24 @@ const CUT_METHOD_PROFILES = {
   },
   "mackerel": {
     "air_fryer": "Air-frying mackerel is a modern simplification of the pan-fry: the basket's high-velocity hot\nair renders the skin and crisps it without the sticking and splattering that mackerel's very\nhigh fat content causes in a pan. The fetched source is a minimal three-ingredient preparation\n(salt, pepper, heat) aimed at a Japanese-style breakfast: skin-on mackerel pieces scored,\nseasoned, and air-fried at 400 °F with one flip. The source states no internal temperature;\nits endpoint is the 10-minute cook. Modern appliance recipes for this cut are thin on the\nground, so this leaf rests on a single source.",
-    "grill": "Grilling is one of mackerel's finest preparations: the high fat content renders dramatically\nover direct heat, the skin blisters and crisps, and the flesh cooks in minutes while basting\nitself. The fetched sources handle the fillet or whole fish the same three ways — salt first\n(and, in the Korean and Swedish traditions, rest 20–30 minutes to firm the flesh), score the\nskin to stop buckling, and grill skin-side first over medium-high to grey-coal direct heat\nwith a single turn. All three fetched sources use visual endpoints (opaque flesh, golden or\ncharred skin); none states an internal temperature, and none is inferred here.",
-    "grill_sv": "Grillning är en av makrillens finaste beredningar: det höga fettinnehållet renderar kraftigt\növer direktvärme, skinnet blisterar och krispar, och köttet tillagas på minuter medan det\nsjälvbastar. De hämtade källorna saltar först, snittar skinnet och grillar med skinnsidan\nnedåt över medelhög direktvärme med en enda vändning. Alla tre använder visuella slutpunkter;\ningen anger innertemperatur och ingen sådan härleds här.",
+    "boil": "Published recipes use the label “boiled mackerel,” but their actual instructions span slowly boiling a whole fish, gently bringing liquid near boiling, and bringing a fish stew to a boil before reducing it to a lively simmer. The modern Korean mackerel stew explicitly uses the last sequence, so it is classified as braise/simmer rather than sustained boiling. Historical recipes establish boiled mackerel as a culinary method, though they do not identify Atlantic or Indian species or specify an internal temperature.",
+    "braise": "Korean mackerel braises layer raw fish with radish, onion and a small amount of seasoned liquid, then bring the pot to a boil and reduce to a covered simmer. This low-liquid, vegetable-supported cooking differs from plain broth simmering and does not sear the fish first. The Atlantic mackerel recipe below explicitly identifies the fish species; it gives no internal-temperature endpoint.",
+    "grill": "Grilling mackerel exposes its oily flesh to direct radiant heat, so the fish cooks quickly and benefits from a basket or careful handling. Charcoal grilling is a documented fuel/setup variant of the grill method rather than a separate enum method: its coals provide the heat source, while the same fish is cooked over a grate and turned. The sources use visual doneness cues and do not state internal temperatures.",
     "oven_bake": "Oven-baking mackerel suits both the Japanese salt-grill-adjacent preparation (saba shioyaki\nfinished under high oven heat) and the Mediterranean vegetable-tray bake: the dry convective\nheat renders the fillet's fat in place, crisping skin against a rack or vegetables while the\nflesh steams inside its own oil. The fetched sources bake at 180–200 °C for 15–30 minutes\ndepending on form (fillets vs whole fish on a potato bed). None states an internal\ntemperature; the endpoints are visual — blistered or golden skin, opaque flaking flesh — and\nno numeric endpoint is inferred here.",
     "oven_bake_sv": "Ugnsbakning av makrill passar både den japanska saltgrillsnära beredningen (saba shioyaki med\nhög ugnsvärme) och den mediterranska grönsakslågformen: den torra konvektionsvärmen renderar\nfiléns fett på plats och krispar skinnet medan köttet ångas i sin egen olja. De hämtade\nkällorna bakar vid 180–200 °C i 15–30 minuter. Ingen anger innertemperatur; härled inga siffror.",
+    "oven_broil": "Oven broiling applies strong radiant heat from above and cooks mackerel quickly, usually skin-side down on a tray close to the element. The fish's oil and skin tolerate high top heat, while the short cook helps preserve moist flesh; recipe endpoints are opaque or flaky rather than measured internal temperatures. This is a distinct oven method in the enum, not outdoor grilling.",
+    "oven_roast": "Whole mackerel roasted in an oven is cooked by dry convective heat, often with herbs and vegetables or wrapped in foil. The fish's oil helps protect the flesh, but recipes emphasize avoiding overcooking and rely on opacity, flaking or a timed roast. Species varies in the sources: Atlantic mackerel, unspecified mackerel and Spanish mackerel are not interchangeable claims, so each is named as published.",
     "pan_fry": "Pan-frying mackerel is fast and unforgiving of hesitation: the fillet's very high fat content\n(up to 20 g/100 g at autumn peak) renders on contact with a hot pan, self-basting the flesh,\nwhile the skin crisps within minutes. All three fetched sources score or salt the fish first\n(Swedish scoring, Japanese salting, Turkish flouring) and cook skin-side first over\nmedium-to-high heat with a brief second-side finish. None of the fetched sources states an\ninternal temperature; their endpoints are visual — deep golden skin, opaque flesh — and those\nendpoints are recorded here without converting them into invented numbers.",
     "pan_fry_sv": "Pannstekning av makrill är snabb och oförlåtande: filéns mycket höga fettinnehåll (upp till\n20 g/100 g vid hösttopp) renderar vid kontakt med het panna och bastar köttet, medan skinnet\nkrispar på minuter. Alla tre hämtade källor snittar eller saltar fisken först och steker med\nskinnsidan nedåt över medelhög–hög värme. Ingen av de hämtade källorna anger\ninnertemperatur; deras slutpunkter är visuella och återges här utan härledda siffror.",
+    "pan_sear": "Pan-searing mackerel uses a hot skillet and a short contact cook to brown the surface, often followed by a brief residual-heat finish rather than a long shallow-fry. The retrieved named recipe applies this to Spanish mackerel fillets and turns off the heat before flipping, so the fish finishes gently. Species-specific evidence for Atlantic/Indian mackerel remains thinner than the general mackerel pan-fry collection.",
+    "poach": "Poaching mackerel submerges whole fish or fillets in liquid held just below a simmer, or cooks the fish gently in a shallow amount of liquid in a warm oven. The low agitation protects the oily fish's tender flesh from breaking apart; sources vary from a brief court-bouillon poach to oil poaching and a covered oven method. Most pages do not state internal temperature, and a generic article's separate temperature advice is not treated as a recipe-specific target.",
+    "pressure_cooker": "Pressure cooking is documented for mackerel from quick fillet cooking to long pressure processing intended to soften bones. Unlike a conventional simmer, the cooker is sealed and the method pages explicitly use pressure-cook settings or pressure-pan whistles; their cook times therefore cannot be treated as one texture target. Most do not state an internal fish temperature or pressure level. Species is often unspecified; the Big Fat Tummy source explicitly names Bangda/Bangde, Indian mackerel.",
+    "saute": "A French sauté is a short, uncovered cook in a small amount of hot fat, turning the food once or tossing it to brown and finish through; it is distinct from a high-heat initial sear followed by another cooking method. Darina Allen's named cookbook recipe explicitly fillets the mackerel and cooks it in a single layer in butter until golden on both sides, then makes a mushroom-herb accompaniment in the same pan. This is direct evidence for the `saute` enum, although it does not state a temperature or an exact cook time and the 4–6-source diversity gate is unmet.",
     "simmer": "Simmering is the great mackerel method of East and South Asia: the fish is gently poached in a\nflavoured broth — miso-sake in Japan, spiced coconut-tamarind water in Kerala — and the oily\nflesh, which would dry under direct heat, stays silky while absorbing the liquid. Both fetched\nsources drop the fish into an already-boiling seasoned liquid and then hold it below a full\nboil (Japanese drop-lid simmering; covered Indian curry pot), and neither sears the fish\nfirst — which is why this is filed as `simmer` rather than `braise`. Both cook the fish\ncompletely; neither states an internal temperature.",
+    "slow_cooker": "Slow-cooker mackerel appears in a tomato-and-basil preparation in which the sauce cooks for hours but the fresh mackerel is grilled separately. The source does not support claiming that the fish itself is slow-cooked. Therefore, `slow_cooker` is recorded as an appliance-method lead for a mackerel dish, but not as a confirmed mackerel × slow-cooker cooking combination: the mackerel's actual heat treatment in the fetched recipe is grilling.",
     "smoker": "Hot-smoking mackerel is one of its finest preparations: the very high fat content (up to\n20 g/100 g at season peak) makes the flesh self-baste under low, smoky heat while smoke\ncompounds dissolve into the rendering surface fat and are carried deep into the muscle. The\ntwo fetched sources show the two dominant home formats — a barbecue's smoking reservoir with\nfruit wood (British), and a staged home-smoker schedule that holds the fish at a measured\ninternal temperature (American/Eastern-European). Both use whole fish or fillets from fresh\nmackerel and both treat the result as a well-done, keepable product. The old version of this\nleaf carried two \"inspired by Swedish tradition\" entries with no citable URL and invented\ninternal figures; those have been removed as source-integrity violations.",
     "smoker_sv": "Varmrökning av makrill är en av dess finaste beredningar: det mycket höga fettinnehållet gör\nköttet självbastande under låg rökvärme medan rökföreningar löser sig i det renderande\nytterfettet. De två hämtade källorna visar de två dominerande hemmaformaten — grillens\nrökreservoir med fruktträ (brittiskt) och ett stegvis rökschema med mätt\ninnertemperatur (amerikanskt/östeuropeiskt). Den tidigare versionen av detta blad innehöll\ntvå \"inspirerad av svensk tradition\"-poster utan citerbar URL och härledda temperaturer;\ndessa har tagits bort som källintegritetsöverträdelser.",
+    "sous_vide": "Sous vide cooks mackerel in a sealed bag in a controlled water bath, followed in these recipes by a short skin-side sear. Mackerel fillets are thin and oily, so the bath gives a repeatable texture while limiting direct heat exposure; the brief sear restores crisp skin. The published bath setpoints vary from 50°C to 122°F (about 50°C), and these sources do not state a fish internal temperature distinct from the bath.",
     "steam": "Steaming whole spiced mackerel in a banana-leaf parcel (*pepes*) is the Sundanese West-Javanese\nanswer to the fish's fragility: the parcel traps the aromatics against the flesh and the steam\ncooks it in 25 minutes without any risk of sticking or breaking. The fetched source then gives\nthe parcel a final grill or pan-heat blast to char the leaves — a two-stage steam-then-char\nstructure typical of pepes. Indian mackerel (ikan kembung) is the canonical fish for this\npreparation; the high fat content keeps the steamed flesh succulent, and no source states an\ninternal temperature."
   },
   "tuna_steak": {
@@ -129652,14 +129695,22 @@ const CUT_METHOD_PROFILES = {
   },
   "chicken_thigh_bone_in": {
     "air_fryer": "The air fryer is a compact high-velocity convection oven, and for bone-in, skin-on thighs\nthat means rapid rendering of the skin from above while the basket's confined airflow browns\nthe sides. The fetched recipes all exploit the same cut-specific behaviour: the bone-in thigh\nis thick enough to need a two-stage cook (skin down first to render, then skin up to crisp),\nand dark meat tolerates the aggressive finishing heat that would dry out breast. Basket\narrangement and preheating vary by source, and so — dramatically — does the stated endpoint:\nthe four fetched sources range from \"juices run clear\" with no temperature at all to a\n195 °F (91 °C) target aimed at tandoori-style tender texture.",
+    "boil": "Boiling bone-in thighs appears in recipe titles and instructions, but many soup recipes bring liquid to a boil and then reduce to a simmer; those are better categorized as simmering. One named-author chicken-stock soup explicitly directs a “simmering rolling boil” for a long cook, while a second bone-in thigh recipe says “allow to boil” after reducing the heat without describing a rolling boil. This evidence supports recording the method boundary, not treating every soup as a sustained-boil recipe.",
     "braise": "Braising is the bone-in thigh's home method across the world's cuisines: sear the skin to build\nfond and fat-render, then finish the piece gently in a measured amount of liquid so the thigh's\ncollagen converts to gelatin without the muscle drying. The bone-in, skin-on format is what\nmakes these dishes work — the femur holds the thigh together through 20–60 minutes of moist\nheat, and the skin (softened by the braise in most traditions) still contributes body to the\nsauce. All four fetched sources use the same architecture — sear, aromatics, deglaze, covered\nfinish — while diverging in cuisine and in whether anyone measures the endpoint: two state\ninternal temperatures (both US-page Caribbean/African-diaspora sources) and two cook by time\nand feel alone.",
     "grill": "Grilling a bone-in, skin-on thigh is a two-zone problem: the skin needs direct heat to render\nand blister, but the thick bone-side muscle needs time and gentler heat to reach the centre\nwithout charring the exterior. All three fetched sources solve it with structure — a hot side\nfor the initial skin-down sear and a cooler side (or a covered grill) for the finish — and all\nthree marinate or dry-brine first, because the grill's dry convective heat punishes\nunderseasoned dark meat. The bone-in format is standard in grilling traditions worldwide\nbecause the femur keeps the thigh intact over the fire and shields the joint meat from\novercooking; the fetched sources span US barbecue, Indian tandoori-style and Greek treatment.",
+    "oven_bake": "Oven-baked bone-in thighs use steady dry oven heat, usually on a sheet pan or rack, without a stovetop sear. Several sources add a brief broiler finish to crisp skin; that finishing step is noted but the main cook remains oven baking. Bone-in thighs cook longer than boneless pieces, and the collected recipes use either a thermometer endpoint or visual cues.",
+    "oven_broil": "Broiling places bone-in thighs close to a high radiant heat source, browning and crisping the skin without a prolonged oven roast. Because the skin can char before the thick joint meat finishes, the recipes use a set distance and turn the thighs or monitor internal temperature. The documented times and endpoints vary; internal targets are quoted only when the recipe page states them.",
     "oven_roast": "Bone-in, skin-on chicken thigh retains the femur bone and intact skin. The bone\ninsulates the meat at the joint end, slowing penetration of oven heat and adding\nroughly 20–30% to cook time compared to boneless thighs of the same weight. The skin,\nexposed to high dry oven heat, renders its subcutaneous fat and Maillard-browns to a\ncrisp, flavourful crust — the primary reason cooks prefer this format for oven roasting.\nDark-meat muscle fibres (soleus, biceps femoris and related upper-leg muscles) have a\nhigher fat content (6–10% vs 1–2% for breast) and more connective tissue, making them\nforgiving across a wide internal temperature range.\n\nUSDA minimum for all poultry is 74°C (165°F). Collagen in the connective tissue begins\nconverting to gelatin above 70°C; extended cooking at 74–82°C yields progressively more\nrelaxed, silky texture as the connective tissue renders. For oven roast at high heat\n(180–240°C), most mainstream sources target 74–75°C as the practical pull temperature,\nrelying on skin crispiness and visual doneness as secondary cues. Carryover from oven\nroast is typically 2–3°C, bringing the thigh to ~77°C at rest.\n\n**Probe placement**: Insert the probe horizontally from the outer exposed muscle edge,\nkeeping the tip in the geometric centre of the thickest part of the thigh, parallel to\nthe femur and at least 1 cm from the bone surface. The bone heats slower than meat and\nreads false-low if the probe tip contacts it.",
     "pan_fry": "Pan-frying a bone-in, skin-on thigh is a crust-building method: the skin goes into a hot pan\nand renders its subcutaneous fat against direct conductive heat while the muscle above it\nstays insulated. Because the femur slows heat penetration to the centre of the thickest\npart, pure stovetop pan-frying to doneness is slow, and the fetched recipes all compensate\nin some way — a brief covered steam, a covered finish in stock, or an oven finish. That\npattern is itself the finding for this cut: pan-frying bone-in thighs is typically a\nsear-plus-gentle-finish method, not a full dry-heat cook. No fetched source measures the\npan temperature; they speak in heat levels and minutes per side.",
+    "pan_sear": "Pan-searing bone-in thighs uses high skillet heat to crisp and brown skin, then continues cooking covered in the same pan with a small amount of broth. Unlike the pan-roast leaf, this fetched recipe remains on the stovetop throughout; unlike a quick pan-fry, it includes a covered moist finish for the bone-in centre. The method is a hybrid sear-and-pan-braise, with the source relying on a thermometer rather than time alone.",
+    "poach": "Poaching submerges chicken in hot liquid held below a simmer or lets it finish off heat, with less agitation than a soup simmer. Bone-in thighs can be poached whole or deboned while retaining the bones in the broth; skin and dark meat tolerate the moist method, and aromatics flavour both meat and cooking liquid. The sources vary between residual-heat cooking and a very gentle simmer; only one gives an internal endpoint.",
     "pressure_cooker": "Pressure cooking collapses the bone-in thigh's long collagen problem into minutes: under\nraised pressure the braising liquid boils above 100 °C, and 10 minutes at pressure plus a\nrelease converts the thigh's connective tissue about as effectively as an hour-long simmer.\nThe fetched Korean source (dakbokkeumtang) sears the chicken first in the pot using its\nsauté function, then pressure-cooks small bone-in pieces in a spicy gochujang sauce — the\ncut-up bone-in thigh is the canonical choice because pressure cooking shreds boneless meat\nand the bone helps pieces hold their shape. A quick release keeps the thighs from\novercooking in residual heat.\n\nThis leaf records one fetched Korean source; pressure-cooker bone-in thigh recipes exist in\nother traditions (e.g. Indian and Caribbean pressure-cooker chicken), but no second\nqualifying recipe was fetched this session, so this is partial research.",
+    "saute": "Sautéing bone-in thighs uses an uncovered hot-fat start to brown the skin, then the source recipe lowers heat and covers the pan for a slower finish. Although the technique begins with a dry-heat sauté, the final covered stage makes this a hybrid sauté-and-pan-braise, not a pure quick sauté. This distinction is preserved rather than collapsing it into the separate pan-fry leaf.",
+    "simmer": "Bone-in thighs simmered in soup or broth cook by gentle convection rather than direct pan contact. The femur and dark meat tolerate extended moist heat and enrich the cooking liquid, while low agitation helps keep the pieces intact. The soup sources bring broth up before reducing to a simmer; the stovetop source maintains a covered gentle simmer and finishes with a brief reduction and sear. Four sources use time or tenderness, while the Tea for Turmeric recipe also publishes a 165°F internal endpoint.",
     "slow_cooker": "Slow-cooker braises (dakjjim-style) exploit the bone-in thigh's tolerance for long, gentle\nmoist heat: the appliance holds roughly 85–95 °C internally on low or high settings, so the\nthigh's collagen converts to gelatin over 4–6 hours while the muscle never approaches the\ntemperatures at which breast meat dries out. The bone-in, skin-on format is explicitly\nrecommended by the fetched Korean source because the skin and bone keep the pieces intact\nthrough the long cook — though the skin turns soft and rubbery rather than crisp, and many\ncooks trim or brown it first. Vegetables (potato, carrot, onion, mushrooms) cook alongside\nthe chicken in a soy-sweet braising sauce.\n\nThis leaf records one fetched Korean source; slow-cooker bone-in thigh recipes exist in\nother traditions (e.g. Caribbean brown stew), but no second qualifying recipe was fetched\nthis session, so this is partial research.",
     "smoker": "Smoking bone-in, skin-on chicken thighs is an American barbecue practice: the thighs are\nrolled or tucked into uniform bundles so the thin flap of meat around the femur does not\novercook while the thick centre slowly comes up to temperature. Low smoker heat\n(around 120–135 °C / 250–275 °F) renders subcutaneous fat slowly and keeps the skin\nleathery rather than crisp — barbecue practice therefore finishes the thighs hot or sauced,\nor accepts soft skin. The bone-in format is preferred in barbecue because the femur\nprotects the meat from drying during the long exposure to dry convective heat and smoke.\n\nThis leaf records one fetched American barbecue source. Smoking traditions for bone-in\nthighs also exist elsewhere (e.g. European poultry smoking), but no other qualifying\nrecipe was fetched this session, so this is partial research.",
-    "sous_vide": "Sous vide is the only method where the cooking temperature *is* the serving temperature:\nbone-in, skin-on thighs sealed in a bag reach the bath's temperature and stay there, so the\ncook chooses doneness directly — 66 °C (150 °F) gives firm, juicy meat, 74 °C (165 °F)\ngives tender juicy meat, and holding 74 °C for 4–8 hours converts the collagen into\nfall-off-the-bone texture. The bone-in format is explicitly recommended by the fetched\nsource; the bone may be removed after cooking. Because the bag prevents any Maillard\nreaction, the skin is finished separately in a hot skillet — the classic two-stage\nsous-vide-plus-sear structure. Pasteurisation is achieved by time at temperature rather\nthan by a high endpoint, which is why bath charts substitute for pull temperatures here.\n\nThis leaf records one fetched source (Anova / J. Kenji López-Alt). Sous-vide thigh recipes\nfrom other traditions were not fetched this session, so this is partial research."
+    "sous_vide": "Sous vide is the only method where the cooking temperature *is* the serving temperature:\nbone-in, skin-on thighs sealed in a bag reach the bath's temperature and stay there, so the\ncook chooses doneness directly — 66 °C (150 °F) gives firm, juicy meat, 74 °C (165 °F)\ngives tender juicy meat, and holding 74 °C for 4–8 hours converts the collagen into\nfall-off-the-bone texture. The bone-in format is explicitly recommended by the fetched\nsource; the bone may be removed after cooking. Because the bag prevents any Maillard\nreaction, the skin is finished separately in a hot skillet — the classic two-stage\nsous-vide-plus-sear structure. Pasteurisation is achieved by time at temperature rather\nthan by a high endpoint, which is why bath charts substitute for pull temperatures here.\n\nThis leaf records one fetched source (Anova / J. Kenji López-Alt). Sous-vide thigh recipes\nfrom other traditions were not fetched this session, so this is partial research.",
+    "steam": "Steaming cooks the thigh above boiling water without submerging it, allowing the piece to retain its juices and drip them into a dish or broth below. Bone-in, skin-on thighs are explicitly used or permitted in the fetched Hainanese-style, Chinese, and Hawaiian home recipes. The sources' cooking times vary with whether thighs are whole, cut or deboned, and none states an internal temperature in the retrieved recipe text."
   },
   "chicken_wing": {
     "air_fryer": "The air fryer works by circulating very hot, dry air at high velocity around the food in a compact chamber. For chicken wings, this creates conditions similar to a convection oven but more intense: the rapid airflow desiccates the skin surface continuously while the small chamber allows the air temperature to recover quickly after the door is opened. The net result is a skin that crisps to near deep-fried texture without submerging in oil.\n\nThe single most effective technique for extra-crispy air-fried skin is tossing wings in a small amount of baking powder before cooking. Baking powder is alkaline; it raises the skin's surface pH, which accelerates the Maillard browning reaction and causes the skin to blister and dehydrate more aggressively. Patting wings completely dry before seasoning is equally critical — residual water must evaporate before crisping can begin.\n\nCarryover is minimal for wings (1–2 °C) because the thin bones and high surface-to-mass ratio allow heat to escape quickly after removal from the fryer. Target internal temperature: **165 °F (74 °C)** minimum; most cooks prefer **170–175 °F (77–79 °C)** for optimal texture at dark-meat temperatures.",
@@ -129958,8 +130009,10 @@ const CUT_METHOD_PROFILES = {
     "smoker_sv": "*Väntar på källinsamling.*"
   },
   "ham": {
+    "braise": "Braising is the older, wetter half of European ham cookery. A cured joint — gammon in Britain,\nKassler in Germany, ham hocks in either — is simmered in cider, beer or stock for one to three\nhours until a fork slides in, then either served from the pot or finished with a glaze in a hot\noven. Where the oven roast works by radiant heat on a scored, glazed surface, the braise works by\nliquid: it equalises salt, softens the cured muscle, and produces a cooking liquor that becomes the\ngravy. Ham takes to it well because curing has already done the tenderising that other braising\ncuts need hours of collagen breakdown for — which is also why the times here (1–3.5 hours) are\nshorter than a pork shoulder's.\n\nNone of the five fetched sources publishes an internal temperature: every one uses time plus a\ntenderness cue, and the two German sources give none at all beyond \"turn it now and then\".\n\n**Tradition note:** all five are British or German, i.e. one culinary group. The leaf records that\nplainly instead of treating five pages as five traditions.",
     "oven_roast": "Ham is the hind leg of the pig, cured with salt, smoke, or both before being sold. Unlike\nany other pork cut it arrives at the oven already transformed: curing has tightened the\nproteins, expelled moisture, and built a dense, savoury structure that raw pork leg does\nnot have. Oven roasting suits this cut because the enclosed radiant heat caramelises the\nscored fat surface and sets the glazed, lacquered crust that defines baked ham; the low,\nsteady oven temperature then heats the large dense mass to serving temperature without\ndrying out the firm interior. Carryover is modest — typically 2–4 °C — because the dense\nmass equalises heat slowly.\n\nProbe placement: insert from the thick cut end (butt end), angling the tip to the geometric\ncentre of the largest lean muscle section, at least 1 cm clear of the central bone. Ham has\nmultiple muscle groups separated by fat seams — the probe tip must not rest in a fat seam,\nwhich gives a lagging reading.",
-    "oven_roast_sv": "Skinka är grisens bakben, härdad med salt, rökning eller båda. Till skillnad från alla andra fläsksnitt anländer den till ugnen redan transformerad: härdning har dragit ihop proteinerna, expellerat fukt och byggt en tät, samarig struktur.\n\nUppvärmning till servering: 160 °C ugn, 15 min per 500 g. Innertemperatur: **68–72 °C (154–162 °F)** för genomvarm med saftighet kvar. Eftertillagning: 3–4 °C. Sond in i tjockaste köttmassan, borta från benet. Glaseringen appliceras de sista 20 minuterna."
+    "oven_roast_sv": "Skinka är grisens bakben, härdad med salt, rökning eller båda. Till skillnad från alla andra fläsksnitt anländer den till ugnen redan transformerad: härdning har dragit ihop proteinerna, expellerat fukt och byggt en tät, samarig struktur.\n\nUppvärmning till servering: 160 °C ugn, 15 min per 500 g. Innertemperatur: **68–72 °C (154–162 °F)** för genomvarm med saftighet kvar. Eftertillagning: 3–4 °C. Sond in i tjockaste köttmassan, borta från benet. Glaseringen appliceras de sista 20 minuterna.",
+    "slow_cooker": "The slow cooker is the modern British answer to a whole gammon joint. A 1.2–2 kg cured, rolled\njoint goes into a crock with water, cider or cola and cooks 4–8 hours at low power; the long moist\nheat draws out salt, keeps the dense cured muscle tender, and leaves the joint ready for a fast\nglaze under the grill or in a hot oven. The method exists because cured ham is already tender in a\nway raw pork leg is not — there are no collagen problems to solve, only an even heat-through — so\nthe slow cooker's weakness (no browning) can be repaired at the end in 7–15 minutes.\n\nTwo of the four fetched sources give an internal target: 68 °C/155 °F and 71 °C/160 °F. Both are\nabove the 63 °C USDA line for whole-muscle pork and inside the Swedish 72 °C practice recorded in\n[ham-oven_roast.md](./ham-oven_roast.md), which makes the slow cooker the cut's best-documented\nmethod for raw/cured joints after the oven.\n\n**Tradition note:** all four sources are British gammon recipes. Their agreement is therefore not\ncross-tradition evidence, and this is recorded as a limitation rather than presented as consensus."
   },
   "pork_belly": {
     "air_fryer": "Air frying pork belly achieves crackling in 25–35 minutes — faster than an oven and without the oil-splatter of deep frying. The basket's circulating superheated air (190–205 °C) attacks the scored skin from all angles simultaneously, driving moisture out of the dermis and puffing the fat cells into the characteristic crunchy blisters (svær / Kruste). The key difference from the oven: the confined air fryer basket concentrates airflow, so the skin blisters more aggressively and evenly than a flat oven tray allows. Less liquid is needed; pre-boiling is optional; total active time is lower. The main limitation is basket size — large whole belly sections must be cut into strips (5–8 cm wide) to fit.\n\nAt 200 °C: strips reach 70–75 °C internal in approximately 25 min; increase to 205–210 °C for the last 5 min if crackling is not fully blistered. MEATER probe inserted horizontally through the thickest section of meat, away from the fat seam. Carryover in air fryer is minimal (1–2 °C) — the basket cools quickly once removed. Pull at 68–70 °C for sliceable-moist; 80–85 °C for soft, yielding belly that flakes.",
@@ -130256,8 +130309,7 @@ const CUT_METHOD_PROFILES = {
     "pan_sear_sv": "Pannstekning av lammkotletter är den vanliga inomhusmetoden i UK, Europa, Sydasien och Mellanöstern. En mycket het gjutjärns- eller tung rostfri panna, 3–4 minuter per sida, sedan vilning — fettet som smälter ned i pannan skapar en naturlig sausbas.\n\nRosmarin-vitlökssmör-basting är den franska och brittiska standardmetoden. Sond in i den tjockaste muskeldelen borta från benet. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Eftertillagning: 3–4 °C. Vila täckt 5 minuter."
   },
   "lamb_cutlet": {
-    "pan_fry": "Lamb cutlets (thin, Frenched rib chops) are the most refined lamb cut — a single rib bone with the meat formed into a small medallion. They are a bistro classic in France and the UK, a restaurant staple in Australia and New Zealand, and are popular as party food throughout the Middle East and South Asia. Cooking time is very brief — 2–3 minutes per side — making them ideal for a pan with butter basting.\n\nTarget: **52–57 °C (126–135 °F)** for medium-rare. They overcook rapidly given their thin cross-section.",
-    "pan_fry_sv": "Lammfilékotletter (tunna, Frenchade ryggkotletter) är det mest förfinade lammskivesnittet — ett enskilt revbenslben med köttet format till en liten medaljon. De är ett bistroklassiker i Frankrike och UK, ett restaurangmärke i Australien och Nya Zeeland, och populärt festmat i Mellanöstern och Sydasien.\n\nSear vid hög värme, 2–3 minuter per sida. Sond in i den tjockaste muskeldelen borta från benet. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Eftertillagning: 2–3 °C. Vila täckt 3–5 minuter. Tunnare snitt (< 2 cm) kokar mer sällan än tjockare snitt."
+    "grill": "Grilling is how most of the world cooks a lamb cutlet, and the cut's thin, bone-in geometry is\nwhy: a 2 cm Frenched chop goes from raw to medium-rare over direct heat in 6–10 minutes, so the\nfire's intensity does the work a pan would do with butter, and the exposed bone and fat cap give\nthe cook something to char. The handle of bone also makes the cut easy to turn by hand, which is\nwhy every fetched source moves the chops individually rather than with tongs or a spatula.\n\nThe five sources in this leaf cover Indian, Turkish, Moroccan, Greek and Korean treatments — the\ncut's best culinary-group spread of any method — and they disagree sharply on the endpoint. Two\npublish a reading: **125 °F (52 °C)** for medium-rare in the Moroccan source and **135–145 °F\n(57–63 °C)** in the Indian one, with the Greek source adding that the reading climbs about 5 °F\nwhile resting. All three sit at or below the cut's 63 °C safe line except the top of the Indian\nrange, so the divergence is recorded rather than resolved."
   },
   "lamb_loin_chops": {
     "pan_sear": "Lamb loin chops are the T-bone of lamb — cut from the saddle, containing both the loin and the small section of tenderloin. They are larger and meatier than rib chops, with a characteristic T-shaped bone. In the UK they are sold as \"lamb chump chops\" (slightly different cut, from the rump). They are pan-seared 4–5 minutes per side to medium.\n\nTarget: **57–62 °C (135–144 °F)** for medium (slightly pink). Africanbites.com: 135–140°F (57–60°C).",
@@ -130691,21 +130743,70 @@ const RECIPE_TITLES_INDEX = {
     ]
   },
   "hake": {
+    "oven_roast": [
+      "Mitch Tonks / Marine Stewardship Council — Basque-style Hake with Garlic and Sauce Romesco"
+    ],
     "pan_fry": [
-      "Merluza a la Plancha (inspired by José Andrés)",
-      "Pan-Fried Hake with Salsa Verde (inspired by Rick Stein)",
-      "Pescada Frita (inspired by Paula Wolfert)",
-      "Merluzzo Fritto (inspired by Marcella Hazan)",
-      "Pan-Fried Hake with Salsa Verde (inspired by Donna Hay)"
+      "Merluza a la Plancha (Pan-Fried Hake) — Pilar Hernández",
+      "Fish with Spanish Green Sauce — Hank Shaw",
+      "Fresh Hake Curry (fry stage) — Dan Toombs"
+    ],
+    "pan_sear": [
+      "Lemon-Herb Wild Cape Hake Loin Steaks — The Fish Society",
+      "Pan-Roasted Hake — Jeremy Sewall and Erin Byers Murray",
+      "Hake and Potato Potjie (sear stage) — Georgia East"
+    ],
+    "poach": [
+      "Poached Hake with Honey and Soy Vinaigrette and Quick-Pickled Mushrooms — Michael Caines",
+      "Poached Hake — Reesha Chibba",
+      "Poached Hake with a Simple Tomato Sauce — Atlantis of Kilmore Quay",
+      "Fresh Hake Poached in Onion, Garlic and Tomato Sauce — Maria Lawton",
+      "Coconut Poached Hake — Food Lover's Market",
+      "Colin poché, sauce crémeuse aux herbes — WW France"
+    ],
+    "simmer": [
+      "Hake in Green Sauce (Merluza en salsa verde) — Alba Luna Meyer",
+      "Pescado en Salsa Verde (Fish in Green Sauce) — Laylita",
+      "Ecuadorian Sudado de Pescado (Fish Stew with Plantains) — Laylita",
+      "Hake and Potato Potjie (Stew) — Georgia East",
+      "Fresh Hake Curry — Dan Toombs",
+      "Nigerian Fish Stew — My Active Kitchen"
+    ],
+    "steam": [
+      "Charo Val — Steamed Hake and Vegetables",
+      "Jakub Baster — Steamed Hake with English Peas",
+      "Dominic Franks — Steamed Sticky Hake with Ginger, Soy and Garlic"
     ]
   },
   "halibut_fillet": {
+    "grill": [
+      "Grilled Halibut with Chermoula over Moroccan-spiced Couscous — Erin Berdan",
+      "Grilled Halibut with Tatsoi and Spicy Thai Chiles — Bon Appétit",
+      "Grilled Halibut, Eggplant and Baby Bok Choy with Korean Barbecue Sauce — Bon Appétit",
+      "Nhoam Trey Mhasamout (Grilled Halibut Salad) — Chanthy Yen",
+      "Jamaican Jerk Halibut with Pico de Gallo — Traeger Kitchen"
+    ],
+    "oven_roast": [
+      "Asian Baked Halibut — A Pinch of Salt Lake",
+      "Halibut en Papillote — Geoffrey Zakarian",
+      "Garam Masala Roasted Halibut in a Tomato Curry Sauce — Kevin Lynch",
+      "Baked Halibut with Wine and Herbs — Food Network Kitchen",
+      "Baked Halibut with Arugula Salsa Verde — Giada De Laurentiis",
+      "Halibut Tagine — Margot Kravette (via Food.com)"
+    ],
     "pan_sear": [
-      "Pan-Roasted Halibut with Chanterelles (inspired by Thomas Keller)",
-      "Pan-Seared Halibut with Sauce Vierge (inspired by Gordon Ramsay)",
-      "Pan-Seared Halibut with Pepper Sauce (inspired by Nobu Matsuhisa)",
-      "Pan-Fried Halibut with Brown Butter (inspired by Rick Stein)",
-      "Pan-Seared Halibut with Olive Oil and Sea Salt (inspired by Feran Adrià)"
+      "Pan-Seared Halibut (Only 4 Ingredients) — Momsdish",
+      "Quick Pan-Fried Halibut — Anjum Anand",
+      "Pan-Seared Greenland Halibut Steaks with Ginger and Scallions — Sharon Wong",
+      "Fletán a la Sartén (Pan-Seared Halibut) — Chef Merito",
+      "Pan Seared Halibut — Ann Fulton",
+      "Easy Pan Seared Halibut — Kaleigh McMordie"
+    ],
+    "steam": [
+      "Steamed Halibut with Ginger and Scallions — Sally Ling",
+      "Steamed Halibut Fillet with Chinese Rice Wine — Otto Goh",
+      "Steamed Halibut Flashed with Thai Bird-Kaffir Lime Oil — Ming Tsai",
+      "Steamed Halibut with Mushroom Broth — Coastal Seafoods"
     ]
   },
   "mahi_mahi": {
@@ -131021,20 +131122,52 @@ const RECIPE_TITLES_INDEX = {
     "air_fryer": [
       "3 Ingredient Mess-Free CRISPY Air Fryer Mackerel — Tiffy / Tiffy Cooks"
     ],
+    "braise": [
+      "Imsun and Emily Miller / Fishful Future — Korean Spicy Braised Mackerel",
+      "Hyegyoung K. Ford / Beyond Kimchee — Korean Braised Mackerel and Radish"
+    ],
     "grill": [
-      "Grillad makrill — Köket.se",
-      "Receta de caballa a la barbacoa — Pakus / Directo al Paladar",
-      "Godeungeo gui (Grilled Mackerel) — Korean Bapsang"
+      "Imma / Immaculate Bites — Whole Grilled Mackerel",
+      "Epicurious — Grilled Whole Mackerel with Lemon, Oregano, and Olives",
+      "Pakus / Directo al Paladar — Caballa a la Barbacoa",
+      "Korean Bapsang — Godeungeo Gui (Grilled Mackerel)"
     ],
     "oven_bake": [
       "Saba Shioyaki (Japanese salt-grilled mackerel) — Just One Cookbook",
       "Mackerel baked with chermoula — BBC Good Food",
       "Fırında Uskumru Tarifi — Yemek.com"
     ],
+    "oven_broil": [
+      "Bon Appétit — Broiled Mackerel with Scallions and Lemon",
+      "Seafood Nutrition Partnership / adapted from NOAA Chef Laura Rogers — Herb-Broiled Mackerel",
+      "Namiko Hirasawa Chen / Just One Cookbook — Grilled Mackerel with Shio Koji (Broiler method)"
+    ],
+    "oven_roast": [
+      "Camilla Lombard / Sea Forager — Roasted Mackerel with Garlic and Paprika",
+      "Suzy Karadsheh / The Mediterranean Dish — Mediterranean Oven-Roasted Spanish Mackerel",
+      "Diane Kochilas / The Ikaria Diet — Whole Mackerel Baked over Vegetables",
+      "Stefan / Stefan’s Gourmet Blog — Roasted Mackerel (Sgombro al Forno)"
+    ],
     "pan_fry": [
       "Smörstekt makrill med dillstuvad potatis — Köket.se (Alexandra Zazzi)",
       "ふっくらツヤツヤ！サバの照り焼き (Saba no teriyaki) — DELISH KITCHEN (Asuka Sawada)",
       "Tavada Uskumru Tarifi — Yemekte Balık Var"
+    ],
+    "poach": [
+      "Donna Deane / Los Angeles Times — Poached Mackerel with Ginger-Soy Sauce and Soba Noodles",
+      "Darina Allen / Irish Examiner — Warm Poached Mackerel with Bretonne Sauce",
+      "Simon Hulstone / Great British Chefs — Mackerel Pâté with Pickled Cucumber",
+      "Province of Newfoundland and Labrador / Seafood from Canada — Atlantic Mackerel with Lemon Stuffing",
+      "Connie Veneracion / Umami Days — Mackerel with Lemon Butter Sauce (Oil-Poached)"
+    ],
+    "pressure_cooker": [
+      "Noemie / Pressure Cooker Recipes — Mackerel Mix Up",
+      "tomo_ya / Cookpad — Miso Poached Mackerel (Japanese Pressure Cooker)",
+      "바겨사 / 10K Recipe — Steamed Mackerel Kimchi Cooked in a Pressure Cooker",
+      "HomeCook / Big Fat Tummy — Mackerels in Tomato"
+    ],
+    "saute": [
+      "Darina Allen — Sauté of Mackerel with Mushrooms and Herbs"
     ],
     "simmer": [
       "Saba Misoni (Mackerel Simmered in Miso) — Just One Cookbook",
@@ -131043,6 +131176,12 @@ const RECIPE_TITLES_INDEX = {
     "smoker": [
       "Hot Smoked Mackerel with Apple Wood — Jamie Oliver / Weber",
       "Homemade Hot Smoked Mackerel — Victor / Taste of Artisan"
+    ],
+    "sous_vide": [
+      "Sharon Chen / StreetSmart Kitchen — Sous Vide Mackerel with Spicy Cilantro Lime Dressing",
+      "Great British Chefs — How to Cook Mackerel Sous Vide",
+      "Stefan / Stefan’s Gourmet Blog — Venetian Marinated Mackerel “in Saor” Sous Vide",
+      "Per Asmussen / GastroFun — Mackerel Sous Vide"
     ],
     "steam": [
       "Pepes Ikan Kembung (Steamed & Grilled Mackerel in Banana Leaves) — Nunuk Sri Rahayu / Cook Me Indonesian"
@@ -131439,6 +131578,16 @@ const RECIPE_TITLES_INDEX = {
       "Melissa Gaman / Food Network Kitchen — Tandoori-Style Grilled Chicken",
       "Food Network Kitchen — Grilled Chicken Thighs with Israeli Couscous Salad (\"a Greek treatment\")"
     ],
+    "oven_bake": [
+      "Holly / Spend With Pennies — Crispy Baked Chicken Thighs",
+      "Nigella Lawson — Chicken, Sausage, Sage and Onion Traybake",
+      "Justin Winn / Real Simple Good — Crispy Baked Bone-In Chicken Thighs"
+    ],
+    "oven_broil": [
+      "Laura Denby / Kelley French / Taste of Home Test Kitchen — Crispy Garlic-Broiled Chicken Thighs",
+      "Deb / Deb’s Daily Dish — Marinated Broiled Chicken Thighs",
+      "Brandon / Kitchen Konfidence — Broiled Chicken Thighs"
+    ],
     "oven_roast": [
       "Crispy Herb Baked Chicken with Gravy (inspired by RecipeTin Eats)",
       "Roasted Lemon Chicken Thighs with Potatoes (inspired by The Woks of Life)",
@@ -131451,8 +131600,21 @@ const RECIPE_TITLES_INDEX = {
       "Julie Maestre / Cooked by Julie — Pan Seared Chicken Thighs",
       "LapSha (Мария) / EdimDoma — Куриные бедра с хрустящей ароматной корочкой (Chicken thighs with crispy aromatic crust)"
     ],
+    "poach": [
+      "Connie Veneracion / Umami Days — Poached Chicken Hainanese-Style",
+      "Pailin Chongchitnant / Hot Thai Kitchen — Thai Grandma’s Twice Cooked Chicken",
+      "Tiffy Cooks — Scallion Ginger Poached Chicken (With Soup!)",
+      "Laura Fuentes / Laura Fuentes — Perfectly Poached Chicken Thighs"
+    ],
     "pressure_cooker": [
       "Korean Bapsang — Pressure Cooker Dak Bokkeumtang (Korean Spicy Chicken Stew)"
+    ],
+    "simmer": [
+      "Nagi / RecipeTin Eats — Vietnamese Chicken Pho (Pho Ga)",
+      "Lisa Johnson / Cooking with Curls — Caldo de Pollo",
+      "Katya / Little Broken — Carrabba’s Copycat Chicken Soup",
+      "Izzah Cheema / Tea for Turmeric — Bone-In Chicken Thighs (Stovetop)",
+      "Sarah Hill / Real Food with Sarah — Bone-In Chicken Soup"
     ],
     "slow_cooker": [
       "Korean Bapsang — Slow Cooker Dakjjim (Korean Braised Chicken)"
@@ -131462,6 +131624,12 @@ const RECIPE_TITLES_INDEX = {
     ],
     "sous_vide": [
       "J. Kenji López-Alt / Anova Culinary Recipes — Chicken Thigh"
+    ],
+    "steam": [
+      "Ms Shi and Mr He — Hainanese Chicken Rice (Steamed Chicken)",
+      "Bima / Spicygo — Steamed Chicken Leg Chinese Style",
+      "Elaine / China Sichuan Food — Chinese Steamed Chicken",
+      "Onolicious Hawaiʻi — Steamed Ginger Chicken"
     ]
   },
   "chicken_wing": {
@@ -132186,11 +132354,26 @@ const RECIPE_TITLES_INDEX = {
     ]
   },
   "ham": {
+    "braise": [
+      "Glazed Gammon — James Mackenzie",
+      "Cider-sloshed Gammon — Abel & Cole",
+      "Kassler Pot Roast (Kasslerbraten) — MyBestGermanRecipes",
+      "GDR Kasselerbraten (braised smoked pork) — Janine Henschel",
+      "Braised Ham Hock with Maple Mustard Glaze — Lucy Parissi"
+    ],
     "oven_roast": [
       "Ugnsbakad Julskinka med Senapsgriljering (inspired by Anna och Fanny Bergenström)",
       "Jamaican Glazed Baked Ham (inspired by Angela Lawrence)",
       "Baked Glazed Ham (inspired by John Torode)",
-      "Maple Glazed Ham (inspired by Nagi Maehashi)"
+      "Maple Glazed Ham (inspired by Nagi Maehashi)",
+      "Filipino-style Pineapple-glazed Ham — Kawaling Pinoy",
+      "Gochujang-Honey Glazed Ham — Judy Joo"
+    ],
+    "slow_cooker": [
+      "Slow Cooker Honey Roast Ham — Justine Pattison",
+      "Slow Cooker Cola Ham — Ella Tarn",
+      "Slow Cooker Gammon in Cider — Sarah James",
+      "Slow Cooker Gammon (Honey Glazed Ham) — Julia Frey"
     ]
   },
   "pork_belly": {
@@ -132763,10 +132946,19 @@ const RECIPE_TITLES_INDEX = {
     ]
   },
   "lamb_cutlet": {
+    "grill": [
+      "Indian Lamb Chops — Jennifer Pallian",
+      "Grilled Lamb Chops with Ezme, Yoghurt and Cumin Salt — Ottolenghi",
+      "Grilled Chermoula Lamb Chops — Peay Vineyards",
+      "Greek Grilled Lamb Chops (Paidakia Arnisia Stin Skara) — Mia Kouppa",
+      "Korean Lamb Chops with Grilled Scallions — Shared Appetite"
+    ],
     "pan_fry": [
-      "Lammekotelet (Danish pan-fried lamb cutlets) (inspired by Madensverden.dk)",
-      "Lamb Cutlets with Herbed Breadcrumbs (inspired by BBC Good Food)",
-      "Costolette di agnello impanate (Italian breaded lamb cutlets) (inspired by Giallozafferano.it)"
+      "Tandoori Lamb Chops — Tanvi Srivastava",
+      "Dad's Pan-Fried Lamb Chops: The Chinese Restaurant Way — Daddy Lau",
+      "Pirzola: How to Prepare Succulent Lamb Chops — Bodrum",
+      "Pan-Fried Lamb Chops with Mint Vinaigrette — Irena Macri",
+      "Pan-Fried Lamb Chops — Vered DeLeeuw"
     ]
   },
   "lamb_loin_chops": {
@@ -133765,6 +133957,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "oven_roast",
                   "pan_fry",
+                  "pan_sear",
+                  "poach",
+                  "simmer",
                   "steam"
                 ],
                 "usda_safe_c": 63,
@@ -133788,7 +133983,8 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "oven_roast",
-                  "pan_sear"
+                  "pan_sear",
+                  "steam"
                 ],
                 "usda_safe_c": 63,
                 "usda_safe_f": 145,
@@ -134319,20 +134515,28 @@ const EXP_TREE = {
                 "name": "Mackerel",
                 "slug": "mackerel",
                 "doneness": [
-                  "medium",
                   "well_done"
                 ],
                 "name_sv": "Makrill",
                 "name_da": "Makrel",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
+                  "air_fryer",
+                  "boil",
+                  "braise",
                   "grill",
-                  "pan_fry",
                   "oven_bake",
-                  "smoker",
+                  "oven_broil",
+                  "oven_roast",
+                  "pan_fry",
+                  "pan_sear",
+                  "poach",
+                  "pressure_cooker",
+                  "saute",
                   "simmer",
-                  "steam",
-                  "air_fryer"
+                  "smoker",
+                  "sous_vide",
+                  "steam"
                 ],
                 "usda_safe_c": 63,
                 "usda_safe_f": 145,
@@ -135054,14 +135258,22 @@ const EXP_TREE = {
                 "recommended_doneness": "dark_meat_optimal",
                 "supported_methods": [
                   "air_fryer",
+                  "boil",
                   "braise",
                   "grill",
+                  "oven_bake",
+                  "oven_broil",
                   "oven_roast",
                   "pan_fry",
+                  "pan_sear",
+                  "poach",
                   "pressure_cooker",
+                  "saute",
+                  "simmer",
                   "slow_cooker",
                   "smoker",
-                  "sous_vide"
+                  "sous_vide",
+                  "steam"
                 ],
                 "usda_safe_c": 74,
                 "usda_safe_f": 165,
@@ -136018,7 +136230,9 @@ const EXP_TREE = {
                 "name_da": "Skinke",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
-                  "oven_roast"
+                  "oven_roast",
+                  "slow_cooker",
+                  "braise"
                 ],
                 "usda_safe_c": 63,
                 "usda_safe_f": 145,
@@ -139088,11 +139302,21 @@ const EXP_RECIPE_INDEX = {
   "herring-smoker": "fish/oily_fish/herring-smoker.md",
   "herring": "fish/oily_fish/herring.md",
   "mackerel-air_fryer": "fish/oily_fish/mackerel-air_fryer.md",
+  "mackerel-boil": "fish/oily_fish/mackerel-boil.md",
+  "mackerel-braise": "fish/oily_fish/mackerel-braise.md",
   "mackerel-grill": "fish/oily_fish/mackerel-grill.md",
   "mackerel-oven_bake": "fish/oily_fish/mackerel-oven_bake.md",
+  "mackerel-oven_broil": "fish/oily_fish/mackerel-oven_broil.md",
+  "mackerel-oven_roast": "fish/oily_fish/mackerel-oven_roast.md",
   "mackerel-pan_fry": "fish/oily_fish/mackerel-pan_fry.md",
+  "mackerel-pan_sear": "fish/oily_fish/mackerel-pan_sear.md",
+  "mackerel-poach": "fish/oily_fish/mackerel-poach.md",
+  "mackerel-pressure_cooker": "fish/oily_fish/mackerel-pressure_cooker.md",
+  "mackerel-saute": "fish/oily_fish/mackerel-saute.md",
   "mackerel-simmer": "fish/oily_fish/mackerel-simmer.md",
+  "mackerel-slow_cooker": "fish/oily_fish/mackerel-slow_cooker.md",
   "mackerel-smoker": "fish/oily_fish/mackerel-smoker.md",
+  "mackerel-sous_vide": "fish/oily_fish/mackerel-sous_vide.md",
   "mackerel-steam": "fish/oily_fish/mackerel-steam.md",
   "mackerel": "fish/oily_fish/mackerel.md",
   "salmon_fillet-air_fryer": "fish/salmon/salmon_fillet-air_fryer.md",
@@ -139145,9 +139369,17 @@ const EXP_RECIPE_INDEX = {
   "haddock-pan_fry": "fish/white_fish/haddock-pan_fry.md",
   "haddock-smoker": "fish/white_fish/haddock-smoker.md",
   "haddock": "fish/white_fish/haddock.md",
+  "hake-oven_roast": "fish/white_fish/hake-oven_roast.md",
   "hake-pan_fry": "fish/white_fish/hake-pan_fry.md",
+  "hake-pan_sear": "fish/white_fish/hake-pan_sear.md",
+  "hake-poach": "fish/white_fish/hake-poach.md",
+  "hake-simmer": "fish/white_fish/hake-simmer.md",
+  "hake-steam": "fish/white_fish/hake-steam.md",
   "hake": "fish/white_fish/hake.md",
+  "halibut_fillet-grill": "fish/white_fish/halibut_fillet-grill.md",
+  "halibut_fillet-oven_roast": "fish/white_fish/halibut_fillet-oven_roast.md",
   "halibut_fillet-pan_sear": "fish/white_fish/halibut_fillet-pan_sear.md",
+  "halibut_fillet-steam": "fish/white_fish/halibut_fillet-steam.md",
   "halibut_fillet": "fish/white_fish/halibut_fillet.md",
   "mahi_mahi-pan_sear": "fish/white_fish/mahi_mahi-pan_sear.md",
   "mahi_mahi": "fish/white_fish/mahi_mahi.md",
@@ -139277,6 +139509,7 @@ const EXP_RECIPE_INDEX = {
   "lamb_chops-grill": "lamb/chops/lamb_chops-grill.md",
   "lamb_chops-pan_sear": "lamb/chops/lamb_chops-pan_sear.md",
   "lamb_chops": "lamb/chops/lamb_chops.md",
+  "lamb_cutlet-grill": "lamb/chops/lamb_cutlet-grill.md",
   "lamb_cutlet-pan_fry": "lamb/chops/lamb_cutlet-pan_fry.md",
   "lamb_cutlet": "lamb/chops/lamb_cutlet.md",
   "lamb_loin_chops-pan_sear": "lamb/chops/lamb_loin_chops-pan_sear.md",
@@ -139376,7 +139609,9 @@ const EXP_RECIPE_INDEX = {
   "cured_ham-oven_roast": "pork/roasts/cured_ham-oven_roast.md",
   "cured_ham-smoker": "pork/roasts/cured_ham-smoker.md",
   "cured_ham": "pork/roasts/cured_ham.md",
+  "ham-braise": "pork/roasts/ham-braise.md",
   "ham-oven_roast": "pork/roasts/ham-oven_roast.md",
+  "ham-slow_cooker": "pork/roasts/ham-slow_cooker.md",
   "ham": "pork/roasts/ham.md",
   "pork_belly-air_fryer": "pork/roasts/pork_belly-air_fryer.md",
   "pork_belly-braise": "pork/roasts/pork_belly-braise.md",
@@ -139417,14 +139652,22 @@ const EXP_RECIPE_INDEX = {
   "chicken_thigh-smoker": "poultry/chicken/chicken_thigh-smoker.md",
   "chicken_thigh": "poultry/chicken/chicken_thigh.md",
   "chicken_thigh_bone_in-air_fryer": "poultry/chicken/chicken_thigh_bone_in-air_fryer.md",
+  "chicken_thigh_bone_in-boil": "poultry/chicken/chicken_thigh_bone_in-boil.md",
   "chicken_thigh_bone_in-braise": "poultry/chicken/chicken_thigh_bone_in-braise.md",
   "chicken_thigh_bone_in-grill": "poultry/chicken/chicken_thigh_bone_in-grill.md",
+  "chicken_thigh_bone_in-oven_bake": "poultry/chicken/chicken_thigh_bone_in-oven_bake.md",
+  "chicken_thigh_bone_in-oven_broil": "poultry/chicken/chicken_thigh_bone_in-oven_broil.md",
   "chicken_thigh_bone_in-oven_roast": "poultry/chicken/chicken_thigh_bone_in-oven_roast.md",
   "chicken_thigh_bone_in-pan_fry": "poultry/chicken/chicken_thigh_bone_in-pan_fry.md",
+  "chicken_thigh_bone_in-pan_sear": "poultry/chicken/chicken_thigh_bone_in-pan_sear.md",
+  "chicken_thigh_bone_in-poach": "poultry/chicken/chicken_thigh_bone_in-poach.md",
   "chicken_thigh_bone_in-pressure_cooker": "poultry/chicken/chicken_thigh_bone_in-pressure_cooker.md",
+  "chicken_thigh_bone_in-saute": "poultry/chicken/chicken_thigh_bone_in-saute.md",
+  "chicken_thigh_bone_in-simmer": "poultry/chicken/chicken_thigh_bone_in-simmer.md",
   "chicken_thigh_bone_in-slow_cooker": "poultry/chicken/chicken_thigh_bone_in-slow_cooker.md",
   "chicken_thigh_bone_in-smoker": "poultry/chicken/chicken_thigh_bone_in-smoker.md",
   "chicken_thigh_bone_in-sous_vide": "poultry/chicken/chicken_thigh_bone_in-sous_vide.md",
+  "chicken_thigh_bone_in-steam": "poultry/chicken/chicken_thigh_bone_in-steam.md",
   "chicken_thigh_bone_in": "poultry/chicken/chicken_thigh_bone_in.md",
   "chicken_wing-air_fryer": "poultry/chicken/chicken_wing-air_fryer.md",
   "chicken_wing-grill": "poultry/chicken/chicken_wing-grill.md",
@@ -151147,7 +151390,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "638";
+const PANEL_VERSION = "644";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

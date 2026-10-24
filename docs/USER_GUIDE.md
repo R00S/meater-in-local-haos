@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.2.6 · Home Assistant 2024.1.0+
+> **Version:** 0.10.2.10 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -305,7 +305,14 @@ ranges from the selected data source.
 | Slow Cooker | 8–12 h moist heat |
 | Braise | Covered pot with liquid |
 | Steam | Moist direct steam |
-| and more... | |
+| Poach | Gentle submerged cooking (65–85 °C liquid) |
+| Simmer | Submerged cooking just below a boil |
+| Boil | Rolling boil, for stocks and cured cuts |
+| Oven Broil | Top-element/grill-element heat |
+| Sauté | Quick stovetop tossing in a little fat |
+
+The methods offered for a given cut are limited to those listed in that cut's research file,
+so most cuts show only a handful of the rows above.
 
 After selecting all five, a **Review and Start** summary appears. Confirm to begin monitoring.
 
@@ -466,8 +473,10 @@ recipes** button returns to the list, and **✕ Close** closes the viewer.
 associated research file. Tapping a method pill opens that file the same way: description
 paragraph first, then individual recipe title buttons, then a single-recipe view on tap.
 
-The research files contain 4–6 source recipes drawn from globally diverse published
-cookbooks and food websites, with non-Western sources actively prioritised. Traditions
+A complete research file holds 4–6 source recipes drawn from globally diverse published
+cookbooks and food websites, with non-Western sources actively prioritised. Files that have
+not yet reached that gate say so in their closing line (`⚠️ PARTIAL RESEARCH`) and present
+fewer recipes; their temperature analysis is provisional. Traditions
 represented include Thai, Vietnamese, Indian, West African, Nigerian/Caribbean, Egyptian,
 Turkish, Greek, Japanese, Chinese, Persian, Middle Eastern, Korean, and Australian
 alongside European traditions. Each file lists:
@@ -514,11 +523,11 @@ cut-type heading, cut, doneness option, and cooking method:
 | Danish cut-profile body text | English fallback until Danish profile content is added |
 | Method descriptions | Localized profile section when available, otherwise English |
 
-As of v0.7.0.18, **all 164 MEATER+ cut overview files** carry a `## Styckesprofil` section, so Swedish users see a Swedish cut description for every cut. Method files fall back to English where no `## Styckesprofil` has been added yet.
+As of v0.10.2.10, **all 186 MEATER+ cut overview files** carry a `## Styckesprofil` section, so Swedish users see a Swedish cut description for every cut. Method files fall back to English where no `## Styckesprofil` has been added yet.
 
 Any cut without a localized name field falls back to its English name.
 
-The recipe library lives under `docs/recipe_research/`. Each file carries a
+The recipe library lives under `custom_components/kitchen_cooking_engine/www/recipes/`. Each file carries a
 `<!-- KCE:CUT … -->` or `<!-- KCE:CUT_METHOD … -->` tag that describes its position in the
 meat hierarchy, cooking temperatures, and supported methods.
 A `## Cut profile` body section provides the English cut description; a sibling
@@ -532,8 +541,8 @@ the developer does not need to run the generator locally before creating a relea
 
 To add a new cut:
 
-1. Create `docs/recipe_research/<category>/<cut>/{slug}.md` with a `<!-- KCE:CUT … -->` tag.
-2. Optionally add `{slug}-{method}.md` files for each cooking method.
+1. Create `custom_components/kitchen_cooking_engine/www/recipes/<category>/<cut_type>/{slug}.md` with a `<!-- KCE:CUT … -->` tag.
+2. Optionally add `{slug}-{method}.md` files in the same directory for each cooking method.
 3. Push the files and trigger a test release — the generator runs automatically.
 
 To add a new cooking method to an **existing** cut (including entirely new methods not yet
@@ -588,7 +597,7 @@ A maintainer will pick it up.
 
 Place the file at:
 ```
-docs/recipe_research/<category>/<animal>/{slug}.md
+custom_components/kitchen_cooking_engine/www/recipes/<category>/<cut_type>/{slug}.md
 ```
 
 The file must start with a `<!-- KCE:CUT … -->` YAML block. Example for a new cut:
@@ -689,8 +698,10 @@ For non-standard doneness slugs (e.g. fish or vegetables) choose a descriptive S
 
 Place the file at:
 ```
-docs/recipe_research/<category>/<animal>/{slug}-{method}.md
+custom_components/kitchen_cooking_engine/www/recipes/<category>/<cut_type>/{slug}-{method}.md
 ```
+
+For example, a hake leaf belongs in `fish/white_fish/`, while a bone-in chicken thigh leaf belongs in `poultry/chicken/`. The parent cut overview lists its method leaves under **Research files by cooking method**.
 
 The file must start with a `<!-- KCE:CUT_METHOD … -->` YAML block:
 
@@ -723,13 +734,11 @@ The remaining file structure:
 
 ## Cut profile
 
-Repeat or adapt the cut description from the overview file in English. Include the recommended
-pull temperature and expected rise after resting.
+Write 3–6 sentences explaining the cut’s anatomy and why this cooking method suits or challenges it. Describe the cut-specific physical result and carryover behavior; keep source-derived temperature conclusions in the consensus section below.
 
 ## Styckesprofil
 
-Upprepa eller anpassa styckningsbeskrivningen från översiktsfilen på svenska. Inkludera
-rekommenderad pull-temperatur och förväntad temperaturstegring efter vila.
+Skriv 3–6 meningar om styckets anatomi och hur tillagningsmetoden passar eller utmanar det. Beskriv metodens fysiska resultat och eftervärme; lägg källbelagda temperaturresultat i konsensusavsnittet nedan.
 
 ## Source recipes
 
@@ -742,9 +751,8 @@ rekommenderad pull-temperatur och förväntad temperaturstegring efter vila.
 
 **Method**
 1. ...
-2. Insert MEATER probe. Pull at **XX °C (XX °F)**.
-3. Rest Y minutes.
-Final serving temperature: **XX °C / XX °F**.
+2. If the source publishes a probe temperature, quote it accurately; otherwise state **no internal temperature stated** and preserve its actual doneness cue. Do not add a source-absent probe step.
+3. Record the source’s rest time or note that it is not stated. Do not invent pull temperatures or final temperatures.
 
 ---
 
@@ -756,40 +764,32 @@ Final serving temperature: **XX °C / XX °F**.
 |-----------|------------------------|--------------------|
 | … | … | … |
 
-(Followed by 2–4 sentences: the full observed range in °C, how it maps to the
-doneness options, what drives the variation, and which doneness key fits.
-Treat divergence between traditions as the finding, not as an error.)
+Follow with 2–4 sentences stating the source-reported temperature range (or that none is reported), mapping any observed values to the cut’s doneness options, explaining variation, and identifying the best-supported recommendation. Do not draw consensus conclusions until the collection gate below passes.
 
 ## What makes this method special
 
-3–6 sentences on what this cooking method does to this specific cut —
-physics and flavour chemistry, not preferences.
+After the collection gate passes, write 3–6 sentences on the physics and flavour chemistry of this method applied to this cut.
 
 ## Data applied to cooking_data.py
 
-- `supported_methods` gains: …
-- `recommended_doneness`: …
-- No `method_temperature_ranges` override needed — …
+After the collection gate passes, list actionable method/doneness changes supported by the collected evidence. Do not use incomplete collections to set engine temperature values.
 
 ## Summary
 
-2–4 sentences a non-expert can picture, readable in about 10 seconds.
-Say whether the method suits the cut and what the cook gains or sacrifices.
+After the collection gate passes, write 2–4 plain-language sentences explaining the result and whether the method suits the cut.
 
-> ✅ **CONFORMS TO TOR** — Verified YYYY-MM-DD. (End of file once the 4–6-source
-gate and the checks above pass.)
-> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** (End of file when fewer than 4
-verified sources exist — say exactly how many and what is missing.)
+> ✅ **CONFORMS TO TOR** — Verified YYYY-MM-DD. Use only after the 4–6-source, distinct-tradition gate and all required checks pass.
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** State the verified source count and what remains missing. Keep analysis conclusions provisional or omit them until the gate passes.
 ```
 
 **Recipe sourcing rules — please read before contributing**
 
 - **Cite real, verifiable sources.** Every recipe entry must include the publication name, a URL, and the date you accessed it (or the book title, author, and page number for print sources).
 - **Do not fabricate.** Do not invent recipes, temperatures, or sources. If you cannot find a real source for a method, omit that entry. A page you cannot fetch is a lead, not a source — record it as such or drop it.
-- **Diversity is valued.** Aim for 4–6 recipes per file (the collection gate), from different countries and culinary traditions, not just English-language sites. No two sources should share the same national or regional culinary tradition. If you can verify fewer than 4, that is acceptable — but label the file `⚠️ PARTIAL RESEARCH` instead of padding it.
+- **Diversity is valued.** Collect 4–6 fully verified recipes per file from distinct national or regional culinary traditions. If fewer than 4 qualifying sources are verified, label the file `⚠️ PARTIAL RESEARCH`; do not pad the collection or present analysis as complete.
 - **Temperature data must come from the source.** Record the pull temperature and resting target as stated in the recipe, not what you think is correct. **If a source states no internal temperature, write exactly that** — never convert a visual cue ("opaque throughout", "juices run clear") into an estimated figure.
 - **One cut × one method per file.** If a recipe combines methods (sear-then-braise, steam-then-grill), file it under its dominant stage and note the rest explicitly.
-- **MEATER placement note.** Each recipe should end with a brief note on where to insert the probe in that specific cut.
+- **Probe placement note.** Give a method/cut-specific MEATER placement note when useful; do not imply the source instructed probing if it did not.
 
 The full collection and analysis standards live in
 `custom_components/kitchen_cooking_engine/www/recipes/RECIPE_COLLECTION_TOR.md` and

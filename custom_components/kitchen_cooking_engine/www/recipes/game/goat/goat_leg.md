@@ -25,7 +25,6 @@ doneness:
   max_c: 57
   max_f: 135
   usda_safe: false
-  recommended: true
 - name: medium
   target_c: 60
   target_f: 140
@@ -50,6 +49,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+  recommended: true
 quality_score: 8
 cooking_methods_researched: 0 # Survey 2026-10-24 found +2 methods (grill, pressure_cooker, both registered with leaves), but enum inventory still has plausible unverified leads (smoker, sous_vide, boil/steam for bone-in leg pieces) — stays 0 until collected or ruled out.
 quality_assessed: 2026-10-24

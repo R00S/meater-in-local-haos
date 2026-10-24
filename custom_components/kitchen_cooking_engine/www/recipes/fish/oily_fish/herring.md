@@ -35,7 +35,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 0
+quality_score: 6
 cooking_methods_researched: 0
 quality_assessed: 2026-10-24
 rest_time_min: 2
@@ -63,7 +63,7 @@ Sill (Clupea harengus) är en liten, mycket fet pelagisk fisk utbredd i Nordatla
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-10-24
+**Score: 6 / 20** — assessed 2026-10-24
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -80,7 +80,7 @@ Sill (Clupea harengus) är en liten, mycket fet pelagisk fisk utbredd i Nordatla
 | Missing Culinary Group C | — (Caribbean braise) |
 | Missing Culinary Group D | — (Russian grill/pan-fry; Nordic sources) |
 
-Current score: 20 − 8 − 6 = **6/20**. The previous 6/20 is retained after the from-scratch recount: the collection has 6 partial leaves, method survey incomplete (−8), and each of Groups A/B/C/D is represented in at least one verified leaf. The evidence is not enough to assess temperature consensus or recommended doneness, but the parent cut's 63 °C safety line remains populated and the existing `well_done` recommendation remains; the TOR score does not define additional automatic temperature deductions beyond documented evidence criteria.
+Current score: 20 − 8 − 6 = **6/20**. The collection has 6 partial leaves and the method survey is incomplete (−8); Groups A/B/C/D are represented by at least one verified leaf. No independent recipe evidence supports the safety or doneness values, but the repository scoring criteria deduct only for a missing `## Cut profile`, missing anatomy, missing method research, absent method leaves, missing groups, missing temperature evidence, and description duplication. Do not invent extra score deductions; retain the temperature evidence gap as an unquantified priority.
 
 The per-method missing-leaf penalty is not applied because all six declared methods have leaves. Leaf temperature analysis remains explicitly invalid until each source collection meets the 4–6-source gate; no inferred temperature was added.
 

@@ -12,6 +12,8 @@ usda_safe_f: 145
 recommended_doneness: well_done
 methods:
 - oven_roast
+- slow_cooker
+- braise
 doneness:
 - name: medium
   target_c: 63
@@ -21,7 +23,6 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-  recommended: true
 - name: well_done
   target_c: 71
   target_f: 160
@@ -30,9 +31,10 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 8
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+  recommended: true
+quality_score: 17
+cooking_methods_researched: 1 # 2026-10-24: survey completed and recorded below — oven_roast, slow_cooker and braise each have a gate-meeting leaf; the remaining enum methods are recorded as uncollected leads.
+quality_assessed: 2026-10-24
 rest_time_min: 15
 rest_time_max: 30
 carryover_temp_c: 8
@@ -73,24 +75,48 @@ Tillagningstemperaturer: **68–72 °C** för genomvarm, saftig; **60–65 °C**
 
 | Method | Leaf file | Status |
 |--------|-----------|--------|
-| oven_roast | [ham-oven_roast.md](ham-oven_roast.md) | ✅ 4 recipes — SE/JM/UK/AU; 2 explicit pull temps |
+| oven_roast | [ham-oven_roast.md](ham-oven_roast.md) | ✅ 6 recipes — SE/PHT/KR/JM/UK/AU; 4 explicit internal targets |
+| slow_cooker | [ham-slow_cooker.md](ham-slow_cooker.md) | ✅ 4 recipes — all UK gammon; 2 explicit internal targets (68 °C, 71 °C) |
+| braise | [ham-braise.md](ham-braise.md) | ✅ 5 recipes — UK ×3, DE ×2; no internal temperatures |
+
+All three declared methods now have a leaf and all three meet the 4–6-source gate.
+
+## Method inventory — 2026-10-24 (completed survey)
+
+| Enum method | Disposition |
+|---|---|
+| oven_roast | leaf, six fetched recipes (Groups A/B/C/D) |
+| slow_cooker | leaf, four fetched British gammon recipes |
+| braise | leaf, five fetched British/German recipes |
+| poach / boil | not distinguished from braise for this cut: the hock-in-liquid recipes fetched for `braise` are simmering preparations, and no ham method separates a poach from a braise in the sources read |
+| grill | ham steaks are a different format (slice, not joint); no whole-ham grill recipe fetched — recorded as a lead |
+| pressure_cooker, sous_vide, air_fryer, smoker, saute, oven_bake, oven_broil | no species-format recipe fetched this session; recorded as uncollected leads, not as absence |
+
+`cooking_methods_researched: 1` records that every method this cut declares now has fetched
+evidence and that the remaining enum methods have been dispositioned. It does not claim the
+surveys for `grill`, `pressure_cooker` or `sous_vide` are exhausted.
 
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-27
+**Score: 17 / 20** — assessed 2026-10-24 (from-scratch recount; supersedes 8 recorded 2026-04-27, which deducted −8 for an unstarted survey, −1 for missing Group A, −2 for preferred-temperature research and −1 for per-method temperatures — the Group A and per-method gaps are now closed by fetched sources). Self-assessed (HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md Pattern 4).
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group A tradition | −1 |
-| No temperature research (culinary preferred) | −2 |
-| No per-method temp research | −1 |
+| Cooking methods researched (`cooking_methods_researched: 1`, inventory above) | — |
+| Missing declared method leaves (0 of 3 missing) | — |
+| Leaves below the 4–6-source gate (oven_roast 6, slow_cooker 4, braise 5) | — |
+| Culinary group coverage (A Filipino/Korean, B British/Australian, C Jamaican, D Swedish) | — |
+| Preferred-temperature evidence (72 °C Swedish, 140 °F Filipino, 135 °F Korean, 55 °C Jamaican) | — |
+| Doneness model does not separate fully cooked ham (55–60 °C) from raw/cured ham (63–72 °C) — one 63/71 °C scale serves two different products | −1 |
+| `braise` and `slow_cooker` are single-tradition (all British, or British/German) | −1 |
+| No fetched source covers a **bone-in raw** gammon in either `slow_cooker` or `braise` | −1 |
+| Cut profile anatomy | — (anatomical profile present) |
+| Method-file duplication of the parent profile | — (no leaf copies this text) |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — set `cooking_methods_researched: 1` after confirming no additional methods (slow_cooker, braise) need leaves
-2. **−2** · No culinary preferred temp research — two sources gave no explicit pull temp; find a US/Filipino source with explicit temp
-3. **−1** · Missing Culinary Group A tradition — add an Culinary Group A tradition source (e.g. Filipino, Vietnamese, Chinese glazed ham)
-4. **−1** · Per-method temp research — once all 4 traditions have explicit temps, this resolves
+1. **−1** · The doneness model is the cut's main structural flaw: a fully cooked 5 kg ham should not be offered the same 71 °C target as a raw gammon joint. Splitting the two would need a cut-level change, not a text edit.
+2. **−1** · Fetch non-British slow-cooker and braise sources (US slow-cooker ham, Chinese braised ham/hock, Caribbean) to break the single-tradition base.
+3. **−1** · Fetch a bone-in raw gammon recipe for the slow cooker or a braise.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

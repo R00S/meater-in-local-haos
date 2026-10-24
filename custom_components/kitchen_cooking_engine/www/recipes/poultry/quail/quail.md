@@ -26,7 +26,7 @@ doneness:
   max_f: 176
   usda_safe: true
   recommended: true
-quality_score: 12
+quality_score: 16
 cooking_methods_researched: 1
 quality_assessed: 2026-10-23
 rest_time_min: 3

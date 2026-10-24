@@ -9,135 +9,118 @@ cut_type: White Fish
 -->
 # Hake × Pan Fry — Recipe Temperature Research
 
+## Tree position
+
+| Field | Value |
+|-------|-------|
+| Category | `fish` |
+| Cut type folder | `white_fish/` |
+| Cut slug | `hake` |
+| Method slug | `pan_fry` |
+| File | `hake-pan_fry.md` |
+| Full path | `docs/recipe_research/fish/white_fish/hake-pan_fry.md` |
+
 ## Cut profile
 
-Pan frying hake is the dominant cooking method in Iberian, North African, and British traditions. The fillet is typically dusted in seasoned flour (*merluza a la plancha*) or dipped in a light batter (*pescada frita*, fish and chips) before being fried in olive oil or neutral fat. Hake flesh is slightly softer than cod when raw — it does not withstand aggressive handling, so a gentle placement in hot fat and minimal flipping (one flip only) is standard. The flour or batter coating creates the structural protection the delicate flesh needs. Pull at 60–63 °C; the flesh should be opaque throughout with large moist flakes separating cleanly. Carryover is minimal (2–3 °C) given the lean, thin geometry.
+Pan frying is the everyday hake method of the Iberian Atlantic, Chile and the British Isles: a
+floured or bare fillet goes into moderate fat, cooks undisturbed on the first side so a crust can
+form, and is turned once. Hake's softness sets the technique — every fetched source either pats
+the fish very dry or dusts it with flour, and every one of them warns against moving it before the
+first side has set, because the flesh tears at the seams if it is handled wet. The fillet is thin
+(around 20 mm), so the whole cook is 6–8 minutes and the fat is the only buffer against
+overcooking.
 
-## Styckesprofil
-
-Pannstekning av hake är den dominerande tillagningsmetoden i iberiska, nordafrikanska och brittiska traditioner. Filén beläggs typiskt med kryddad mjöl (*merluza a la plancha*) eller doppas i lätt smet (*pescada frita*, fish and chips) innan den steks i olivolja eller neutralt fett.
-
-Hakeköttet är något mjukare än torsk rått — det tål inte aggressiv hantering, varför en varsam placering i het fett och minimal vändning (bara en vändning) är standard. Mjölet eller smeten skapar det strukturella skydd som det känsliga köttet behöver. Dra vid 60–63 °C; köttet ska vara ogenomskinligt genomgående med stora fuktiga fjäll som separerar rent. Eftertillagning är minimal (2–3 °C) given den magra, tunna geometrin. Innertemperatur: 60–63 °C.
+**Provenance note (2026-10-24).** The previous version of this leaf contained five recipes
+attributed to named cookbooks (José Andrés, Rick Stein, Paula Wolfert, Marcella Hazan, Donna Hay)
+with MEATER probe steps and pull temperatures of 60–64 °C. None of those records could be tied to
+a page or passage that was actually read, and the book attributions could not be verified, so they
+were removed under the project's source-integrity rule rather than left in place. What follows is
+what could be fetched and read; the leaf is now partial where it previously looked complete.
 
 ## Source recipes
 
-### 1. Merluza a la Plancha (inspired by José Andrés)
-**Inspired by**: José Andrés, *Tapas: A Taste of Spain in America* (Clarkson Potter, 2005)  
-**Serves**: 2 · **Prep**: 5 min · **Cook**: 8–10 min · **Rest**: 2 min
+### 1. Merluza a la Plancha (Pan-Fried Hake) — Pilar Hernández
+**Inspired by**: Chilean Food & Garden; https://www.chileanfoodandgarden.com/sauteed-white-fish/ (fetched 2026-10-24). Chilean; the page names hake (*merluza*) first among the fish that work.
+
+**Serves**: 4 · **Prep**: 5 minutes · **Cook**: 6 minutes · **Rest**: not stated
 
 **Ingredients**
-- 2 hake fillets, skin-on, 180–220 g each (or 4 small hake steaks)
-- Fine sea salt (*sal marina*)
-- Freshly ground black pepper
-- 30 ml (2 tbsp) good-quality Spanish extra virgin olive oil (*Arbequina* or *Hojiblanca* preferred)
-- 2 garlic cloves, thinly sliced
-- 15 ml (1 tbsp) fresh flat-leaf parsley, finely chopped
-- Lemon wedges, to serve
+- 4 clean hake fillets (or cod/catfish)
+- Oil for the pan; salt and pepper
+- Optional *aliño completo* (dried oregano, cumin, cilantro, garlic, pepper and salt)
+- Parsley and lemon, to serve
 
 **Method**
-1. Score the skin 2–3 times with a sharp knife. Season generously with salt and pepper on both sides.
-2. Heat a large, heavy plancha (*plancha* — flat iron griddle plate) or heavy cast-iron skillet over high heat until very hot.
-3. Add olive oil; let it heat until a wisp of smoke appears.
-4. Place hake skin-side down. Insert the MEATER probe from the thick end into the centre of the flesh.
-5. Cook skin-side down without moving for 5–6 minutes — *a la plancha* is defined by single-surface contact.
-6. Add garlic slices; let sizzle until golden.
-7. Flip hake; cook flesh-side down for 2–3 minutes.
-8. **Pull at 60–62 °C (140–144 °F).** Andrés' Basque standard: fully cooked, large moist flakes, the skin crisped, the garlic-olive oil perfuming the fish.
-9. Rest 2 minutes. Scatter parsley; serve with lemon. Final serving temperature: **62–65 °C / 144–149 °F** (fully cooked, Spanish standard).
+1. Heat a non-stick pan over medium heat for 2–3 minutes.
+2. Pat the fish thoroughly dry with paper towels and add about 1 tbsp oil to the hot pan.
+3. Add the fillets without overlapping and season with salt, pepper and the optional aliño.
+4. Cook 3 minutes **without moving**. Turn with a spatula, season and cook 2–3 minutes more, until cooked and easily flaking.
+5. Serve immediately, or cover to keep warm; finish with parsley and lemon.
+
+**Probe and endpoint**: no probe step and no internal temperature. Published cue: "until cooked and easily flakes"; the page notes timing depends on thickness.
 
 ---
 
-### 2. Pan-Fried Hake with Salsa Verde (inspired by Rick Stein)
-**Inspired by**: Rick Stein, *Rick Stein's Spain* (BBC Books, 2011)  
-**Serves**: 2 · **Prep**: 15 min · **Cook**: 7–8 min · **Rest**: 2 min
+### 2. Fish with Spanish Green Sauce — Hank Shaw
+**Inspired by**: Honest Food; https://honest-food.net/spanish-green-sauce-for-fish/ (fetched 2026-10-24). US; the fish list explicitly includes hake.
+
+**Serves**: 4 · **Prep**: not stated · **Cook**: about 10 minutes · **Rest**: not stated (browned fish is held in a 200 °F oven)
 
 **Ingredients**
-- 2 skin-on hake fillets, 180–200 g each
-- Sea salt and freshly ground black pepper
-- 30 ml (2 tbsp) olive oil
-- **Salsa verde** (Spanish version): 20 g flat-leaf parsley, finely chopped; 2 garlic cloves, minced; 30 g capers, rinsed and roughly chopped; 15 ml (1 tbsp) Sherry vinegar; 60 ml (¼ cup) extra virgin olive oil; sea salt
+- 1 lb skinless, boneless fish (cusk, hake or cod)
+- Salt and black pepper; flour for dusting
+- ¼ cup olive oil, divided
+- 1 yellow or white onion, minced; 3 garlic cloves, minced; ¼ tsp cayenne (optional)
+- ¾ cup white wine; 1 cup fish or chicken stock
+- 1 cup finely minced parsley, fennel fronds, dill, chervil or cilantro; lemon juice
 
 **Method**
-1. Mix salsa verde ingredients; set aside at room temperature.
-2. Season hake on both sides; score skin if needed.
-3. Heat a heavy frying pan over high heat. Add olive oil.
-4. Place hake skin-side down. Press briefly. Insert the MEATER probe from the thick end into the centre of the flesh.
-5. Cook skin-side down 4–5 minutes until skin is crisp.
-6. Flip; cook 2–3 minutes.
-7. **Pull at 60–62 °C (140–144 °F).** Stein's Spain-inspired standard: "hake is one of the most delicate of white fish and needs barely more heat than the minimum to cook through."
-8. Rest 2 minutes. Spoon salsa verde over. Final serving temperature: **62–64 °C / 144–147 °F** (just cooked, moist, Spanish-British standard).
+1. Salt and pepper the fish. Set a cooling rack over a baking sheet in a 200 °F oven.
+2. Cook the onion gently in 1 tbsp oil until golden and translucent, not brown; turn off the heat.
+3. Heat the remaining oil in a large sauté pan over medium-high heat. Dust the fish with flour and **fry until browned on both sides, about four minutes per side**. Move the browned fish to the rack in the oven.
+4. Add the onion, then the garlic, to the fish pan and cook a minute or two.
+5. Add the wine and boil a minute or two; add the stock and boil down a couple of minutes. Season, add the herbs and cayenne, cook 1 minute and turn off the heat.
+6. Add pepper and lemon juice, and spoon the sauce over the fish.
+
+**Probe and endpoint**: no probe step and no internal temperature. The 200 °F oven is a holding oven, not a cooking stage; the page's only timing is 4 minutes per side over medium-high heat.
 
 ---
 
-### 3. Pescada Frita (inspired by Paula Wolfert)
-**Inspired by**: Paula Wolfert, *The Cooking of the Eastern Mediterranean* (HarperCollins, 1994)  
-**Serves**: 4 · **Prep**: 15 min (+30 min marinade) · **Cook**: 8–10 min · **Rest**: 2 min
+### 3. Fresh Hake Curry (fry stage) — Dan Toombs
+**Inspired by**: The Curry Guy / Great Curry Recipes; https://greatcurryrecipes.net/2012/04/17/hake-curry/ (fetched 2026-10-24). UK-published Indian-restaurant-style recipe.
+
+**Serves**: 4 · **Prep**: not stated · **Cook**: browning stage plus sauce · **Rest**: not stated
 
 **Ingredients**
-- 4 hake fillets or steaks, 150–180 g each
-- 3 garlic cloves, minced
-- 20 g fresh flat-leaf parsley, finely chopped
-- 30 ml (2 tbsp) fresh lemon juice
-- Fine salt and freshly ground black pepper
-- 80 g plain flour
-- Olive oil, for frying (enough for shallow fry, 1–2 cm depth)
-- Lemon wedges, to serve
+- 500 g skinless, boneless hake fillets
+- 5 tbsp plain flour; 3 tbsp corn oil
+- (Full curry ingredients are recorded in [hake-simmer.md](./hake-simmer.md).)
 
 **Method**
-1. Mix garlic, parsley and lemon juice into a marinade. Coat hake; marinate 30 minutes.
-2. Remove from marinade; pat dry.
-3. Season with salt and pepper; dredge in flour, shaking off excess.
-4. Heat olive oil in a wide frying pan to approximately 170 °C (340 °F) — hot enough to immediately sizzle, not so hot as to burn the flour coating.
-5. Add hake. Insert the MEATER probe from the thick end into the centre of the flesh.
-6. Fry 4–5 minutes per side, turning once, until deep golden-brown on both sides.
-7. **Pull at 62–64 °C (144–147 °F).** Wolfert's Portuguese standard: fully cooked, with the flour coating golden and crisp, the flesh large-flaked and moist.
-8. Drain on a wire rack. Rest 2 minutes. Serve with lemon. Final serving temperature: **64–66 °C / 147–151 °F** (fully cooked, Portuguese standard).
+1. Cut the hake into 2-inch chunks and dust with flour.
+2. Heat the oil in a large frying pan over medium-high heat and **brown the fish in batches on all sides, cooking only about 50%**; remove.
+3. Finish the fish in the blended sauce, about 2 minutes, until heated through.
+
+**Probe and endpoint**: no probe step and no internal temperature. This is fry-then-sauce evidence: the pan stage is real, but the source deliberately undercooks the fish at this point.
 
 ---
 
-### 4. Merluzzo Fritto (inspired by Marcella Hazan)
-**Inspired by**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)  
-**Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
+## Evidence limits
 
-**Ingredients**
-- 4 hake fillets, skinless, 150–180 g each
-- Fine sea salt and freshly ground black pepper
-- 60 g plain flour
-- 2 eggs, beaten
-- 80 g fine breadcrumbs
-- Vegetable oil for shallow frying
-- Lemon wedges, to serve
+Three fetched sources, all naming hake explicitly: Chile, US and UK-published Indian-restaurant style. None publishes an internal temperature, and only one gives a per-side time (4 minutes per side); the Chilean source uses 3 + 2–3 minutes and the UK source gives no per-side time at all. The flour-dusting is common to two of three. Three sources do not meet the 4–6-source gate, and the previous leaf's apparent five-source completeness was not real.
 
-**Method**
-1. Season hake on both sides with salt and pepper.
-2. Set up breading station: flour, beaten egg, breadcrumbs. Dredge each fillet in flour, then egg, then breadcrumbs, pressing firmly.
-3. Heat vegetable oil (1.5–2 cm depth) in a wide frying pan over medium-high heat to 170–180 °C.
-4. Add breaded fillets. Insert the MEATER probe from the thick end into the centre of one fillet.
-5. Fry 4 minutes per side until deep golden-brown.
-6. **Pull at 62–64 °C (144–147 °F).** Hazan's Italian standard: fully cooked, the breadcrumb coating golden and crunchy, the flesh inside moist and flaking.
-7. Drain on wire rack. Rest 2 minutes. Serve with lemon. Final serving temperature: **64–66 °C / 147–151 °F** (fully cooked, Italian fritto standard).
+## What makes this method special
 
----
+Pan frying gives hake what poaching cannot: a browned, slightly crisp surface that stands up to lemon and fat-based sauces, in under ten minutes. The flour dust is functional, not decorative — it dries the surface, limits sticking on a soft fillet and gives the crust something to form on. The method's weakness is control: with a 20 mm fillet in a hot pan there is a very short window between "easily flakes" (Chilean cue) and dry, which is precisely why the source that cares about a temperature uses a holding oven instead of a longer pan cook.
 
-### 5. Pan-Fried Hake with Salsa Verde (inspired by Donna Hay)
-**Inspired by**: Donna Hay, *Fresh and Light* (HarperCollins Australia, 2012)  
-**Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
+## Data applied to cooking_data.py
 
-**Ingredients**
-- 2 hake fillets, skin-on, 180–200 g each
-- Sea salt flakes and freshly cracked black pepper
-- 15 ml (1 tbsp) olive oil
-- 20 g unsalted butter
-- **Simple salsa verde**: 20 g flat-leaf parsley; 10 g basil; 1 garlic clove; 30 ml (2 tbsp) olive oil; 15 ml (1 tbsp) lemon juice; salt and pepper
+- `supported_methods`: `pan_fry` was already registered and stays registered; the evidence now behind it is three fetched recipes rather than five unverifiable book records.
+- `recommended_doneness`: no change — no fetched source states a temperature.
+- No `method_temperature_ranges` override.
 
-**Method**
-1. Blend salsa verde ingredients to a rough, slightly chunky sauce. Set aside.
-2. Season hake on both sides with salt and pepper.
-3. Heat a non-stick or heavy pan over high heat. Add olive oil.
-4. Place hake skin-side down. Press briefly. Insert the MEATER probe from the thick end into the centre of the flesh.
-5. Cook skin-side down 5 minutes until skin is golden and crisp.
-6. Flip. Add butter; cook 2–3 minutes.
-7. **Pull at 62 °C (144 °F).** Hay's standard: "just cooked through, large moist flakes."
-8. Rest 2 minutes. Spoon salsa verde over. Final serving temperature: **64–65 °C / 147–149 °F** (fully cooked, Australian-European standard).
+## Summary
 
----
+Pan-fried hake is a short, hot, mostly undisturbed cook in a little fat: dry or flour the fillet, set it down, leave it 3–4 minutes, turn once and finish in 2–3 minutes to a flake cue. Three fetched sources now support it, none with an internal temperature; the five cookbook records that previously supplied pull temperatures were removed because they could not be verified.
+
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Three fetched, hake-specific sources (CL, US, UK-Indian); the 4–6-source gate is not met. No source publishes an internal temperature, so no pull temperature is stated. Rebuilt 2026-10-24 after five unverifiable cookbook records were removed.

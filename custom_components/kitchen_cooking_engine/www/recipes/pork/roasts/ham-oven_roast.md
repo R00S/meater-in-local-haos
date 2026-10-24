@@ -140,16 +140,59 @@ Uppvärmning till servering: 160 °C ugn, 15 min per 500 g. Innertemperatur: **6
 
 ---
 
+### 5. Filipino-style Pineapple-glazed Ham — Kawaling Pinoy
+**Inspired by**: Kawaling Pinoy; https://www.kawalingpinoy.com/filipino-style-pineapple-glazed-ham/ (fetched 2026-10-24). Philippines; Filipino Christmas/Noche Buena ham. **Fully cooked** bone-in smoked ham.
+**Serves**: 12 · **Prep**: 10 min · **Cook**: 50–60 min poach + 1–1½ hr oven · **Rest**: 10–15 min
+
+**Ingredients**
+- 1 fully cooked bone-in ham, about 7–8 lb (3.2–3.6 kg)
+- 6 cups pineapple juice; 3 cups Sprite or 7-Up; 2 cups dark beer
+- 1 cup brown sugar; 2 tbsp salt; whole cloves
+- Pineapple glaze: 2 cups poaching liquid; 1 cup crushed pineapple; ¾ cup brown sugar; ¼ cup yellow mustard
+
+**Method**
+1. Combine the pineapple juice, beer, soda, sugar and salt in a deep pot. Add the ham and 5–6 cloves, bring to the boil, cover, reduce the heat and cook 50–60 minutes.
+2. Remove the ham and reserve about 2 cups of the poaching liquid. Simmer it with the crushed pineapple, brown sugar and mustard until thickened.
+3. Heat the oven to 350 °F (175 °C). Score the fat in diamonds and stud the intersections with cloves.
+4. Brush with about three-quarters of the glaze and roast 1–1½ hours, basting every 15–20 minutes, **until the internal temperature reaches 140 °F (60 °C)**.
+5. Raise the oven to 400 °F (205 °C) for the final 5 minutes to brown. Rest 10–15 minutes and serve with the remaining glaze.
+
+**Probe and endpoint**: explicit internal target — 140 °F (60 °C) for a fully cooked ham being reheated and glazed. The ham is poached before roasting, so the oven stage is a heat-through and caramelisation.
+
+---
+
+### 6. Gochujang-Honey Glazed Ham — Judy Joo
+**Inspired by**: Judy Joo; https://www.judyjoo.com/recipes/gochujang-honey-glazed-ham-102/ (fetched 2026-10-24). Korean-inspired glaze. **Fully cooked** smoked bone-in butt half.
+**Serves**: 12 · **Prep**: 15 min + 1 hr tempering · **Cook**: 1 hr covered + about 1½ hr glazed · **Rest**: not stated
+
+**Ingredients**
+- 1 bone-in, fully cooked smoked ham, butt half, 8–9 lb (3.6–4 kg)
+- 1 cup gochujang; ¾ cup honey, plus more to taste; 6 tbsp cola
+
+**Method**
+1. Take the ham out of the fridge an hour before cooking. Heat the oven to 325 °F (165 °C); line a roasting pan with foil, fit a rack and add enough water to cover the pan bottom.
+2. Dry the ham, score the surface in a crisscross pattern, set it flat-side down on the rack and cover loosely with heavy-duty foil. Bake 1 hour, adding water if needed.
+3. Whisk the gochujang, honey and cola; adjust the honey to taste.
+4. Remove the foil, brush on half a cup of glaze, working it into the cuts.
+5. Bake, brushing with glaze every 15 minutes, **until a thermometer in the thickest part registers 135 °F (57 °C)**, about 1½ hours. Tent if it browns too fast.
+6. Brush generously with glaze and serve.
+
+**Probe and endpoint**: explicit internal target — 135 °F (57 °C) in the thickest part, for a fully cooked ham being reheated.
+
+---
+
 ## Temperature consensus
 
 | Tradition | Ham type | Explicit pull temp in recipe | Oven temp |
 |-----------|----------|------------------------------|-----------|
-| Swedish (Northern) | Cured, lightly salted (raw) | **72 °C / 162 °F** | 175 °C / 347 °F |
-| Jamaican (Southern) | Fully cooked, ready-to-serve | **55 °C / 130 °F** | 165 °C / 325 °F |
-| British (Western) | Raw smoked gammon | Not given (visual doneness) | 160–200 °C / 320–392 °F |
-| Australian (Western) | Fully cooked, smoked | Not given (visual doneness) | 160 °C / 320 °F |
+| Swedish (Group D) | Cured, lightly salted (raw) | **72 °C / 162 °F** | 175 °C / 347 °F |
+| Filipino (Group A) | Fully cooked, bone-in, poached then glazed | **140 °F / 60 °C** | 350 °F then 400 °F |
+| Korean-inspired (Group A) | Fully cooked, smoked butt half | **135 °F / 57 °C** | 325 °F / 165 °C |
+| Jamaican (Group C) | Fully cooked, ready-to-serve | **55 °C / 130 °F** | 165 °C / 325 °F |
+| British (Group B) | Raw smoked gammon | Not given (visual doneness) | 160–200 °C / 320–392 °F |
+| Australian (Group B) | Fully cooked, smoked | Not given (visual doneness) | 160 °C / 320 °F |
 
-Two of four sources give explicit pull temperatures. The split is entirely by ham type, not by tradition: fully cooked ham is heated to 55–60 °C (serving temperature only); raw/cured ham that must be fully cooked to a safe temperature targets 72–75 °C. The two Culinary Group B sources (British and Australian) do not give explicit thermometer targets — both assess doneness visually by glaze colour and set.
+Four of six sources give an explicit internal target. The split is by ham type, not by tradition: fully cooked ham is heated to 55–60 °C (135–140 °F, serving temperature only); raw or lightly cured ham that must be fully cooked targets 72 °C / 162 °F. The two sources that give no thermometer target (British gammon, Australian leg ham) assess doneness visually by glaze colour and set. The two Filipino/Korean additions close the cut's missing Culinary Group A: both are fully cooked hams with explicit readings, which is also the strongest temperature evidence in the leaf.
 
 ## What makes this method special
 
@@ -160,10 +203,10 @@ Oven roasting is the universal method for ham because ham's cured structure does
 - `usda_safe_c: 63` — USDA minimum for fresh/raw pork (145 °F). For fully cooked ham, USDA/FDA guideline is reheating to 60 °C / 140 °F.
 - `recommended_doneness: well_done` — appropriate; ham is served fully cooked across all traditions.
 - No `method_temperature_ranges` override identified from this research.
-- `cooking_methods_researched: 1` — confirmed: oven_roast is the primary method for ham. Slow_cooker variants exist but oven_roast is the dominant culinary tradition.
+- `cooking_methods_researched: 1` — confirmed: oven_roast is the primary method for ham, and the two methods the earlier text dismissed as "variants" are now documented: [slow_cooker](./ham-slow_cooker.md) (four fetched British gammon recipes, two with internal targets) and [braise](./ham-braise.md) (five fetched British/German recipes). All three are registered.
 
 ## Summary
 
 Baked ham divides into two categories with different temperature targets: fully cooked (ready-to-serve) ham, which needs only to be heated to serving temperature (55–60 °C) while the glaze caramelises; and raw or lightly cured ham (UK gammon, Swedish julskinka), which must reach 63–72 °C to be safe and fully cooked. In both cases the glaze — always sweet (maple, sugar, fruit jam) with a tangy counterpoint (mustard, citrus, cloves) — is applied in the final 15–45 minutes at elevated heat. Two of four fetched sources give explicit thermometer targets; two rely on visual doneness. The probe is most valuable for raw gammon where undercooking is a safety risk.
 
-> ✅ CONFORMS TO TOR — 4 sources fetched and verified; 2 with explicit pull temperatures; probe insert step present in all 4 methods; format follows TOR standard.
+> ✅ CONFORMS TO TOR — 6 sources fetched and verified; 4 with explicit internal targets (Swedish 72 °C, Filipino 140 °F, Korean 135 °F, Jamaican 55 °C); probe/probe-target steps present in those 4; format follows TOR standard.

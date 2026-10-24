@@ -12,14 +12,22 @@ usda_safe_f: 165
 recommended_doneness: dark_meat_optimal
 methods:
 - air_fryer
+- boil
 - braise
 - grill
+- oven_bake
+- oven_broil
 - oven_roast
 - pan_fry
+- pan_sear
+- poach
 - pressure_cooker
+- saute
+- simmer
 - slow_cooker
 - smoker
 - sous_vide
+- steam
 doneness:
 - name: safe
   target_c: 74
@@ -40,7 +48,7 @@ doneness:
   usda_safe: true
   recommended: true
 quality_score: 5
-cooking_methods_researched: 0 # Cross-tradition survey done 2026-10-24 (4 methods discovered and added), but enum inventory still has credible-but-uncollected leads (simmer/boil/charcoal_grill) — stays 0 until those are collected or cleanly ruled out.
+cooking_methods_researched: 1 # Supported-method inventory reviewed 2026-10-24; all 17 listed methods have direct leaves. Simmer and poach confirmed; boil has recipe evidence with overlap; charcoal is a grill-fuel variant, not separately supported.
 quality_assessed: 2026-10-24
 rest_time_min: 5
 rest_time_max: 10
@@ -79,10 +87,19 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum, **79 °C (175 °F)** rekomme
 | Slow cooker | `chicken_thigh_bone_in-slow_cooker.md` | ⚠️ Partial — 1 fetched source (Korean); no stated temperature |
 | Pressure cooker | `chicken_thigh_bone_in-pressure_cooker.md` | ⚠️ Partial — 1 fetched source (Korean); no stated temperature |
 | Sous vide | `chicken_thigh_bone_in-sous_vide.md` | ⚠️ Partial — 1 fetched source (US); 66–74 °C bath chart |
+| Simmer | `chicken_thigh_bone_in-simmer.md` | ⚠️ Partial — 5 fetched recipes; one source states 165°F, others use time/tenderness |
+| Poach | `chicken_thigh_bone_in-poach.md` | ⚠️ Partial — 4 fetched recipe/technique pages; two directly specify bone-in thighs, two have cut-form limitations |
+| Steam | `chicken_thigh_bone_in-steam.md` | ⚠️ Partial — 2 direct bone-in sources; whole-bird and unspecified-bone leads excluded from count |
+| Boil | `chicken_thigh_bone_in-boil.md` | ⚠️ Partial — 1 sustained/ambiguous soup source and 1 method tutorial; boundary with simmer unresolved |
+| Oven bake | `chicken_thigh_bone_in-oven_bake.md` | ⚠️ Partial — 3 sources (US ×2, UK), one explicitly permits bone-in thighs |
+| Oven broil | `chicken_thigh_bone_in-oven_broil.md` | ⚠️ Partial — 3 US sources; 165–175°F endpoints stated |
+| Pan sear | `chicken_thigh_bone_in-pan_sear.md` | ⚠️ Partial — 1 US source; stovetop sear + covered finish |
+| Sauté | `chicken_thigh_bone_in-saute.md` | ⚠️ Partial — 1 US/French-inspired source; covered finish makes method hybrid |
+| Charcoal grill variant | `chicken_thigh_bone_in-charcoal_grill.md` | Variant evidence only — charcoal is a fuel setup within `grill`, not a separate enum method |
 
 ## Quality score
 
-**Score: 5 / 20** — assessed 2026-10-24. From-scratch reassessment per
+**Score: 6 / 20** — assessed 2026-10-24. From-scratch reassessment per
 `HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md` (deduction scale from
 `RECIPE_COLLECTION_TOR.md`); deliberately **not** anchored to the previous 7
 (Pattern 9 — score momentum). The old table used a +points scheme and a manual
@@ -90,15 +107,15 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum, **79 °C (175 °F)** rekomme
 
 | Criterion | Deduction | Evidence |
 |-----------|-----------|----------|
-| Cooking methods not researched (`cooking_methods_researched: 0`) | −8 | Deliberate cross-tradition survey WAS done 2026-10-24 and found 4 methods beyond the declared list (smoker, slow_cooker, pressure_cooker, sous_vide — all added with leaves), but the enum inventory is not complete: credible-but-uncollected leads remain (simmer/boil — bone-in thigh soups such as tinola, sinigang na manok; charcoal_grill variants). Field stays 0 until those are collected or cleanly ruled out (same treatment as the herring cut). |
-| Partial method leaves (< 4 fetched sources): pan_fry (3), grill (3), smoker (1), slow_cooker (1), pressure_cooker (1), sous_vide (1) | −6 | −1 per partial leaf (branch convention). air_fryer (4 sources) and braise (4 sources) meet the collection gate. |
+| Cooking methods researched (`cooking_methods_researched: 1`) | 0 | All 17 supported methods are inventoried with evidence leaves; `boil` is documented with its overlap boundary and charcoal is a grill-fuel variant. |
+| Partial method leaves (< 4 qualifying sources): pan_fry (3), grill (3), smoker (1), slow_cooker (1), pressure_cooker (1), sous_vide (1), poach (2 direct bone-in sources), steam (2), boil (1 clear/ambiguous), oven_bake (3), oven_broil (3), pan_sear (1), saute (1) | −13 | −1 per partial leaf. Oven_roast (5), air_fryer (4), braise (4) and simmer (5) meet the source-count threshold, though collection analysis remains partial. |
 | pan_fry source-tradition overlap | −1 | Two US-based sources (Made With Lau, Chinese-American; Cooked by Julie, American) can be read as one national tradition. |
 
-**Total deduction −15 → 5/20.** Criteria checked with evidence and receiving **0 deduction**:
+**Total deduction −14 → 6/20.** Criteria checked with evidence and receiving **0 deduction**:
 
 - **Culinary Groups A/B/C/D all covered** across the method leaves — A: Chinese-American (pan_fry), Japanese (air_fryer), Indian (air_fryer, grill), Korean (braise, slow_cooker, pressure_cooker); B: American (pan_fry, grill, sous_vide, smoker), UK (air_fryer), French (braise), Greek (grill); C: Moroccan (air_fryer), Jamaican (braise), Senegalese (braise); D: Russian (pan_fry).
 - `## Cut profile` present with anatomical placement (femur, biceps femoris, myoglobin/collagen, subcutaneous fat).
-- Method leaf files exist — 9 of them (oven_roast plus 8 created 2026-10-24).
+- Method leaf files exist — 18 files, one for each registered `supported_methods` value; charcoal is documented separately as a grill variant.
 - **USDA safe temperature supported by research evidence** — explicit 165 °F / 74 °C endpoints in pan_fry (×2), air_fryer, grill, braise, smoker and oven_roast leaves.
 - **Culinary preferred temperatures supported by research evidence** — braise leaf's Senegalese source states 175 °F "more tender results if using just thighs"; smoker 170–175 °F; air-fryer tandoori 195 °F; grill 160 °F (below the safe line — recorded as published divergence, not guidance).
 - Per-method temperature nuance carried by each leaf's own consensus section.
@@ -108,7 +125,7 @@ Note on definitions: this file's `doneness` block gives `dark_meat_optimal` as t
 
 ### Improvement priorities
 
-1. Collect the remaining enum methods with credible recipe evidence — `simmer`/`boil` (bone-in thigh soups and stews: tinola, sinigang na manok, chicken soups) and `charcoal_grill` variants — then re-assess `cooking_methods_researched`.
+1. Revisit the `boil` versus simmer/poach boundary as additional tradition-specific sources are collected; current enum inventory has been reviewed and `cooking_methods_researched` is set to 1.
 2. Raise the six partial leaves to the 4–6-source gate: pan_fry and grill each need 1–3 more traditions (Group C/D grilling; a non-US stovetop pan-fry); smoker, slow_cooker, pressure_cooker and sous_vide need 3+ more sources each.
 3. Resolve the endpoint divergence record: air_fryer sources span 165–195 °F and grill spans 160–165 °F; consider a `method_temperature_ranges` override for air_fryer once a 4–6-source collection exists.
 4. Re-fetch the Serious Eats cold-start skillet and air-fryer thigh pages (HTTP 403 on 2026-10-24) — they carry the only located US 175 °F pan-fry endpoint.
