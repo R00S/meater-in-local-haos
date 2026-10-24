@@ -52,10 +52,10 @@ Sik (*Coregonus* spp.; finska: siika; tyska: Felchen / Renke; franska: corégone
 
 ## Research files by cooking method
 
-- [Pan Fry](./whitefish-pan_fry.md)
+- Pan Fry — no research file yet
 - [Oven Bake](./whitefish-oven_bake.md)
-- [Grill](./whitefish-grill.md)
-- [Smoker](./whitefish-smoker.md)
+- Grill — no research file yet
+- Smoker — no research file yet
 
 ## Quality score
 

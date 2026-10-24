@@ -53,10 +53,10 @@ Flundra (*Platichthys flesus*; tyska: Flunder; finska: kampela) är en plattfisk
 
 ## Research files by cooking method
 
-- [Pan Fry](./flounder-pan_fry.md)
-- [Grill](./flounder-grill.md)
-- [Oven Bake](./flounder-oven_bake.md)
-- [Smoker](./flounder-smoker.md)
+- Pan Fry — no research file yet
+- Grill — no research file yet
+- Oven Bake — no research file yet
+- Smoker — no research file yet
 - [Steam](./flounder-steam.md)
 
 ## Quality score

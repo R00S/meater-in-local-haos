@@ -53,9 +53,9 @@ Sjötunga (*Solea solea*; tyska: Seezunge; franska: sole; holländska: tong) är
 ## Research files by cooking method
 
 - [Pan Fry](./sole-pan_fry.md)
-- [Pan Sear](./sole-pan_sear.md)
-- [Oven Bake](./sole-oven_bake.md)
-- [Grill](./sole-grill.md)
+- Pan Sear — no research file yet
+- Oven Bake — no research file yet
+- Grill — no research file yet
 
 ## Quality score
 

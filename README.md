@@ -725,7 +725,7 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 
 **v0.9.0.0** — Development release (May 2026)
 
-Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional. See [STATUS.md](STATUS.md) for full progress tracking.
+Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional.
 
 ### v0.9.0.x Changes — MEATER cook fixes & cuisine ingredient improvements (May 2026)
 - ✅ **MEATER cook start failures fixed** — Added missing doneness validators (`thigh_optimal`, `just_cooked`, `confit`, `leg_rendered`, `thigh_rendered`) to `__init__.py` and `services.yaml` that were preventing whole chicken, whole turkey, whole duck, whole goose, duck leg confit, and shrimp cooks from starting
@@ -850,7 +850,6 @@ Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card
 - ✅ **Cook history** — Log, review, and restart previous cooks
 - ✅ **View Assist** — Blueprint for voice navigation to cooking panel
 
-See [STATUS.md](STATUS.md) for detailed project status.
 
 ---
 

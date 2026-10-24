@@ -62,8 +62,8 @@ Piggvar (*Scophthalmus maximus*; tyska: Steinbutt; franska: turbot; norska: pigg
 
 - [Pan Sear](./turbot-pan_sear.md)
 - [Oven Bake](./turbot-oven_bake.md)
-- [Grill](./turbot-grill.md)
-- [Sous Vide](./turbot-sous_vide.md)
+- Grill — no research file yet
+- Sous Vide — no research file yet
 
 ## Quality score
 

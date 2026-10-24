@@ -28,6 +28,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+  recommended: true
 - name: crispy
   target_c: 90
   target_f: 195

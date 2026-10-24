@@ -24,6 +24,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+  recommended: true
 quality_score: 8
 cooking_methods_researched: 0 # Survey 2026-10-24 found +2 methods (oven_bake, simmer, both registered with leaves), but enum inventory still has plausible unverified leads (braise, saute, air_fryer, sous_vide, and dumpling-bound mince preparations) — stays 0 until collected or ruled out.
 quality_assessed: 2026-10-24

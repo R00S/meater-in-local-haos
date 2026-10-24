@@ -54,10 +54,10 @@ Uer (*Sebastes norvegicus* / *S. mentella*; tyska: Rotbarsch; norska: uer) är e
 ## Research files by cooking method
 
 - [Pan Fry](./redfish-pan_fry.md)
-- [Pan Sear](./redfish-pan_sear.md)
-- [Oven Bake](./redfish-oven_bake.md)
-- [Grill](./redfish-grill.md)
-- [Smoker](./redfish-smoker.md)
+- Pan Sear — no research file yet
+- Oven Bake — no research file yet
+- Grill — no research file yet
+- Smoker — no research file yet
 
 ## Quality score
 

@@ -23,13 +23,17 @@
  */
 
 // Maps MEATER cooking method slugs to the nearest AI cooking style id.
-// Best-effort; any unrecognised slug falls back to 'comfort_food'.
+// One entry per live `methods:` slug in the recipe tree; tests/test_catalog_localization.py
+// enforces that coverage. Any unrecognised slug falls back to 'comfort_food'.
 const MEATER_METHOD_TO_AI_STYLE = {
-  oven_roast: 'comfort_food', oven_bake: 'comfort_food', slow_roast: 'slow_cook',
-  grill: 'barbeque', bbq: 'barbeque', charcoal_grill: 'barbeque',
-  pan_fry: 'quick_and_easy', pan_sear: 'quick_and_easy',
-  smoke: 'barbeque', slow_cooker: 'slow_cook', braise: 'slow_cook',
-  deep_fry: 'quick_and_easy', air_fry: 'quick_and_easy',
+  oven_roast: 'comfort_food', oven_bake: 'comfort_food', whole_roast: 'comfort_food',
+  grill: 'barbeque', charcoal_grill: 'barbeque', smoker: 'barbeque',
+  pan_fry: 'quick_and_easy', pan_sear: 'quick_and_easy', saute: 'quick_and_easy',
+  air_fryer: 'quick_and_easy', oven_broil: 'quick_and_easy',
+  slow_cooker: 'slow_cook', braise: 'slow_cook',
+  sous_vide: 'gourmet',
+  steam: 'healthy', poach: 'healthy',
+  simmer: 'one_pot', boil: 'one_pot', pressure_cooker: 'one_pot',
 };
 
 // Sentinel string used to flag history entries saved for later without cooking.

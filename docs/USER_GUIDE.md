@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.2.11 · Home Assistant 2024.1.0+
+> **Version:** 0.10.2.12 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -290,9 +290,10 @@ from USDA or Livsmedelsverket data depending on your data source setting.
 ⚠️ Doneness values shown for beef steaks as an example. Each cut has its own calibrated
 ranges from the selected data source. A cut only offers the doneness levels its research
 file defines, and **55 of the 186 cuts define a single one** — mackerel is Well-Done only,
-shanks and brisket are Pulled only — so the selector shows just that one button. The
-ranges are not comparable across cuts: 63 °C is Well-Done for mackerel and Medium for a beef
-steak.
+shanks and brisket are Pulled only — so the selector shows just that one button. Where a cut
+offers several, the level its research file marks as preferred is preselected and carries
+the ⭐. The ranges are not comparable across cuts: 63 °C is Well-Done for mackerel and
+Medium for a beef steak.
 
 **5️⃣ Cooking Method**
 | Method | Description |
@@ -585,8 +586,21 @@ Recipe Builder's suggestions stage.
    to the AI as part of the request so it can tailor cooking times and quantities.
 4. Tap **🤖 Get AI Recipe Suggestions**.
 5. KCE navigates to the AI Recipe Builder and immediately requests recipe suggestions with
-   the cut name, weight, and cooking method pre-filled as ingredients. The cooking style
-   is automatically selected based on the chosen method (e.g. Grill → BBQ, Braise → Slow Cook).
+   the cut name, weight, and cooking method pre-filled as ingredients. The cooking style is
+   chosen automatically from the cooking method:
+
+   | Method | Cooking style |
+   |--------|---------------|
+   | Oven Roast, Oven Bake, Whole Roast | Comfort Food |
+   | Grill, Charcoal Grill, Smoker | Barbeque |
+   | Pan Sear, Pan Fry, Sauté, Air Fryer, Oven Broil | Quick And Easy |
+   | Slow Cooker, Braise | Slow Cook |
+   | Sous Vide | Gourmet |
+   | Steam, Poach | Healthy |
+   | Simmer, Boil, Pressure Cooker | One Pot |
+
+   Every method a cut can offer is covered; you can still change the style by hand on the
+   suggestions screen.
 6. Up to three recipe suggestions appear. Tap **Start Cooking This Recipe** to load the full
    recipe, or **💾 Save for Later** on the overview page to store it for later.
 
@@ -673,8 +687,13 @@ och förväntad stegring efter vila.
 ## Research files by cooking method
 
 - [Pan Sear](./my_cut_slug-pan_sear.md)
-- [Grill](./my_cut_slug-grill.md)
+- Grill — no research file yet
 ```
+
+A method listed under `methods:` but not yet researched is written as plain text
+(`- Grill — no research file yet`) instead of a link, so the overview never points at a file
+that does not exist. The method itself stays in `methods:` — the panel offers it and uses the
+cut's doneness temperatures for it.
 
 The `## Styckesprofil` section is optional but strongly recommended — without it, English text is shown to Swedish users.
 
@@ -697,7 +716,7 @@ The `## Styckesprofil` section is optional but strongly recommended — without 
 | `rest_time_max` | *(optional)* Maximum resting time in minutes for this cut (integer). |
 | `carryover_temp_c` | *(optional)* Expected carryover rise in °C after pulling from heat (number). |
 
-Each `doneness` entry needs: `name`, `target_c`, `target_f`, `min_c`, `min_f`, `max_c`, `max_f`, `usda_safe` (true/false). Add `recommended: true` to exactly one entry. Standard Danish doneness slugs use built-in global labels; add new slugs to the generator's Danish doneness map.
+Each `doneness` entry needs: `name`, `target_c`, `target_f`, `min_c`, `min_f`, `max_c`, `max_f`, `usda_safe` (true/false). Add `recommended: true` to the entry whose `name` matches `recommended_doneness` — that is the level the panel preselects and marks with a ⭐ — and only to that entry, plus optionally to further entries that are `usda_safe: true` (poultry legs and goose are flagged both `safe` and an `…_optimal` band). Standard Danish doneness slugs use built-in global labels; add new slugs to the generator's Danish doneness map.
 
 Use these Swedish culinary terms for standard doneness names (per Stekguiden.se / Gårdssällskapet):
 

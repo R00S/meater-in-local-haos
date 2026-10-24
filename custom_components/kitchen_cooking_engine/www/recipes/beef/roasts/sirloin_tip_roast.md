@@ -22,7 +22,6 @@ doneness:
   max_c: 57
   max_f: 135
   usda_safe: false
-  recommended: true
 - name: medium
   target_c: 60
   target_f: 140
@@ -31,6 +30,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
+  recommended: true
 - name: medium_well
   target_c: 66
   target_f: 150

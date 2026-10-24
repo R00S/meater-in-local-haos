@@ -53,9 +53,9 @@ Abborre (*Perca fluviatilis*; tyska: Barsch; franska: perche) är en mager sötv
 ## Research files by cooking method
 
 - [Pan Fry](./perch-pan_fry.md)
-- [Grill](./perch-grill.md)
-- [Oven Bake](./perch-oven_bake.md)
-- [Smoker](./perch-smoker.md)
+- Grill — no research file yet
+- Oven Bake — no research file yet
+- Smoker — no research file yet
 
 ## Quality score
 

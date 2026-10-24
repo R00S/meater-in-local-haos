@@ -53,10 +53,10 @@ Gädda (*Esox lucius*; tyska: Hecht; franska: brochet; finska: hauki) är en sto
 
 ## Research files by cooking method
 
-- [Pan Fry](./pike-pan_fry.md)
-- [Oven Bake](./pike-oven_bake.md)
-- [Grill](./pike-grill.md)
-- [Smoker](./pike-smoker.md)
+- Pan Fry — no research file yet
+- Oven Bake — no research file yet
+- Grill — no research file yet
+- Smoker — no research file yet
 - [Braise](./pike-braise.md)
 
 ## Quality score

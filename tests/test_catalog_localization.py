@@ -15,6 +15,12 @@ COMPONENT_DIR = ROOT / "custom_components" / "kitchen_cooking_engine"
 RECIPE_DIR = COMPONENT_DIR / "www" / "recipes"
 I18N_DIR = COMPONENT_DIR / "i18n"
 GENERATED_PANEL = COMPONENT_DIR / "www" / "kitchen-cooking-panel.js"
+PANEL_TEMPLATE = COMPONENT_DIR / "www" / "panel-class-template.js"
+METHOD_STYLE_MAP_RE = re.compile(
+    r"const MEATER_METHOD_TO_AI_STYLE = \{(.*?)\n\};",
+    re.DOTALL,
+)
+METHOD_STYLE_ENTRY_RE = re.compile(r"([a-z_]+):\s*'([a-z_]+)'")
 
 
 def load_module(name: str, path: Path):
@@ -183,6 +189,46 @@ class CatalogLocalizationTests(unittest.TestCase):
                 re.MULTILINE,
             ),
         )
+
+    def test_meater_method_style_map_covers_live_methods(self) -> None:
+        """Every live method must map to an AI cooking style that actually exists."""
+        source = PANEL_TEMPLATE.read_text(encoding="utf-8")
+        match = METHOD_STYLE_MAP_RE.search(source)
+        self.assertIsNotNone(match, "panel template is missing MEATER_METHOD_TO_AI_STYLE")
+        mapping = dict(METHOD_STYLE_ENTRY_RE.findall(match.group(1)))
+        style_ids = {style["id"] for style in self.ai_data.COOKING_STYLES}
+
+        methods = {
+            method
+            for _path, data in self.overviews
+            for method in data.get("methods", [])
+        }
+        self.assertEqual(sorted(methods - set(mapping)), [])
+        self.assertEqual(sorted(set(mapping) - methods), [])
+        self.assertEqual(sorted(set(mapping.values()) - style_ids), [])
+
+    def test_recommended_doneness_carries_the_recommended_flag(self) -> None:
+        """The flagged band is the cut's own recommended level; other flags are safety markers."""
+        unflagged = []
+        extra = []
+        for path, data in self.overviews:
+            recommended = data.get("recommended_doneness")
+            if not recommended:
+                continue
+            flagged = [
+                band
+                for band in data.get("doneness") or []
+                if band.get("recommended")
+            ]
+            if recommended not in [band.get("name") for band in flagged]:
+                unflagged.append(f"{path.name}: {recommended}")
+            extra.extend(
+                f"{path.name}: {band.get('name')}"
+                for band in flagged
+                if band.get("name") != recommended and not band.get("usda_safe")
+            )
+        self.assertEqual(unflagged, [])
+        self.assertEqual(extra, [])
 
     def test_all_live_cooking_methods_are_translated(self) -> None:
         methods = {

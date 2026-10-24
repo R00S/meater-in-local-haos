@@ -22,7 +22,6 @@ doneness:
   max_c: 60
   max_f: 140
   usda_safe: false
-  recommended: true
 - name: well_done
   target_c: 63
   target_f: 145
@@ -31,6 +30,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
+  recommended: true
 quality_score: 19
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29

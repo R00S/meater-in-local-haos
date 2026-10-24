@@ -53,10 +53,10 @@ Guldspirad (*Sparus aurata*; spanska/italienska: dorada/orata; franska: daurade 
 
 ## Research files by cooking method
 
-- [Pan Sear](./gilt_head_bream-pan_sear.md)
-- [Oven Bake](./gilt_head_bream-oven_bake.md)
-- [Grill](./gilt_head_bream-grill.md)
-- [Charcoal Grill](./gilt_head_bream-charcoal_grill.md)
+- Pan Sear — no research file yet
+- Oven Bake — no research file yet
+- Grill — no research file yet
+- Charcoal Grill — no research file yet
 - [Steam](./gilt_head_bream-steam.md)
 
 ## Quality score

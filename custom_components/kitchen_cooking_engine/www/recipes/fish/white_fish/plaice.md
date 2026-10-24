@@ -53,10 +53,10 @@ Rödspätta (*Pleuronectes platessa*; tyska: Scholle; danska: rødspætte; holl�
 
 ## Research files by cooking method
 
-- [Pan Fry](./plaice-pan_fry.md)
-- [Oven Bake](./plaice-oven_bake.md)
-- [Grill](./plaice-grill.md)
-- [Smoker](./plaice-smoker.md)
+- Pan Fry — no research file yet
+- Oven Bake — no research file yet
+- Grill — no research file yet
+- Smoker — no research file yet
 - [Steam](./plaice-steam.md)
 
 ## Quality score

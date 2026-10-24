@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 24 Oct 2026, 21:46 CET
+ * AUTO-GENERATED: 24 Oct 2026, 22:11 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 24 Oct 2026, 21:46 CET
+// Last generated: 24 Oct 2026, 22:11 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -139884,13 +139884,17 @@ const COOKING_METHODS = [
  */
 
 // Maps MEATER cooking method slugs to the nearest AI cooking style id.
-// Best-effort; any unrecognised slug falls back to 'comfort_food'.
+// One entry per live `methods:` slug in the recipe tree; tests/test_catalog_localization.py
+// enforces that coverage. Any unrecognised slug falls back to 'comfort_food'.
 const MEATER_METHOD_TO_AI_STYLE = {
-  oven_roast: 'comfort_food', oven_bake: 'comfort_food', slow_roast: 'slow_cook',
-  grill: 'barbeque', bbq: 'barbeque', charcoal_grill: 'barbeque',
-  pan_fry: 'quick_and_easy', pan_sear: 'quick_and_easy',
-  smoke: 'barbeque', slow_cooker: 'slow_cook', braise: 'slow_cook',
-  deep_fry: 'quick_and_easy', air_fry: 'quick_and_easy',
+  oven_roast: 'comfort_food', oven_bake: 'comfort_food', whole_roast: 'comfort_food',
+  grill: 'barbeque', charcoal_grill: 'barbeque', smoker: 'barbeque',
+  pan_fry: 'quick_and_easy', pan_sear: 'quick_and_easy', saute: 'quick_and_easy',
+  air_fryer: 'quick_and_easy', oven_broil: 'quick_and_easy',
+  slow_cooker: 'slow_cook', braise: 'slow_cook',
+  sous_vide: 'gourmet',
+  steam: 'healthy', poach: 'healthy',
+  simmer: 'one_pot', boil: 'one_pot', pressure_cooker: 'one_pot',
 };
 
 // Sentinel string used to flag history entries saved for later without cooking.
@@ -151396,7 +151400,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "646";
+const PANEL_VERSION = "647";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

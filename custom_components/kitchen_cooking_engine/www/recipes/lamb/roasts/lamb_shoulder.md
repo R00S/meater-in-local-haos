@@ -23,6 +23,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
+  recommended: true
 quality_score: 18
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29

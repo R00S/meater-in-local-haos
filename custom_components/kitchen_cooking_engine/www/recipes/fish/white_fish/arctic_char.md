@@ -62,10 +62,10 @@ Röding (*Salvelinus alpinus*; tyska: Saibling; franska: omble chevalier) är en
 ## Research files by cooking method
 
 - [Pan Sear](./arctic_char-pan_sear.md)
-- [Grill](./arctic_char-grill.md)
-- [Oven Bake](./arctic_char-oven_bake.md)
-- [Smoker](./arctic_char-smoker.md)
-- [Sous Vide](./arctic_char-sous_vide.md)
+- Grill — no research file yet
+- Oven Bake — no research file yet
+- Smoker — no research file yet
+- Sous Vide — no research file yet
 
 ## Quality score
 

@@ -53,9 +53,9 @@ Lake (*Lota lota*; tyska: Trüsche; franska: lote; finska: made) är den enda s�
 ## Research files by cooking method
 
 - [Pan Fry](./burbot-pan_fry.md)
-- [Oven Bake](./burbot-oven_bake.md)
-- [Smoker](./burbot-smoker.md)
-- [Braise](./burbot-braise.md)
+- Oven Bake — no research file yet
+- Smoker — no research file yet
+- Braise — no research file yet
 
 ## Quality score
 

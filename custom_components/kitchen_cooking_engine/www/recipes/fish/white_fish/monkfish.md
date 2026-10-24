@@ -53,10 +53,10 @@ Marulk (*Lophius piscatorius*; tyska: Seeteufel; franska: lotte/baudroie; spansk
 
 ## Research files by cooking method
 
-- [Pan Sear](./monkfish-pan_sear.md)
-- [Oven Roast](./monkfish-oven_roast.md)
-- [Grill](./monkfish-grill.md)
-- [Braise](./monkfish-braise.md)
+- Pan Sear — no research file yet
+- Oven Roast — no research file yet
+- Grill — no research file yet
+- Braise — no research file yet
 - [Sous Vide](./monkfish-sous_vide.md)
 
 ## Quality score

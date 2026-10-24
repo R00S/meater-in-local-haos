@@ -53,10 +53,10 @@ Sei (*Pollachius virens*; tyska: Seelachs/Köhler; norska/danska: sei/sej; frans
 
 ## Research files by cooking method
 
-- [Pan Fry](./pollock-pan_fry.md)
-- [Oven Bake](./pollock-oven_bake.md)
-- [Air Fryer](./pollock-air_fryer.md)
-- [Smoker](./pollock-smoker.md)
+- Pan Fry — no research file yet
+- Oven Bake — no research file yet
+- Air Fryer — no research file yet
+- Smoker — no research file yet
 - [Grill](./pollock-grill.md)
 
 ## Quality score
