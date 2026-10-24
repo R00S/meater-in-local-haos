@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 24 Oct 2026
-Last Change: v0.10.2.12 - fixes: AI style map, dead method links, doneness recommendation flags
+Last Change: v0.10.2.13 - feat: Isle of Man cuisine data; CHORES (version bump, branch history, user guide)
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -17,7 +17,7 @@ SUPPORTED_LANGUAGES = ("en", "sv", "da")
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "647"
+PANEL_VERSION = "649"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
