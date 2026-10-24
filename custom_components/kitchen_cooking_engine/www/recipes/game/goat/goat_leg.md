@@ -12,7 +12,9 @@ usda_safe_f: 145
 recommended_doneness: well_done
 methods:
 - braise
+- grill
 - oven_roast
+- pressure_cooker
 - slow_cooker
 doneness:
 - name: medium_rare
@@ -49,8 +51,8 @@ doneness:
   max_f: 170
   usda_safe: true
 quality_score: 8
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-27
+cooking_methods_researched: 0 # Survey 2026-10-24 found +2 methods (grill, pressure_cooker, both registered with leaves), but enum inventory still has plausible unverified leads (smoker, sous_vide, boil/steam for bone-in leg pieces) — stays 0 until collected or ruled out.
+quality_assessed: 2026-10-24
 rest_time_min: 15
 rest_time_max: 30
 carryover_temp_c: 8
@@ -72,27 +74,40 @@ De flesta kulinariska traditioner föredrar getbenet tillagat till 75–82 °C d
 
 ## Research files by cooking method
 
-- [Oven Roast](./goat_leg-oven_roast.md)
+- [Oven Roast](./goat_leg-oven_roast.md) — ✅ gate met, 4 fetched sources (DE, GR, RU, IN/PK); guidance 70–74 °C; integrity-repaired 2026-10-24
+- [Braise](./goat_leg-braise.md) — ⚠️ partial, 3 fetched sources (JM curry goat, MX birria, EC seco de chivo)
+- [Slow Cooker](./goat_leg-slow_cooker.md) — ⚠️ partial, 2 fetched sources (JM, IN)
+- [Grill](./goat_leg-grill.md) — ⚠️ partial, 2 fetched sources (JM indirect charcoal, US butterflied 135–140 °F) — **new method 2026-10-24**
+- [Pressure Cooker](./goat_leg-pressure_cooker.md) — ⚠️ partial, 1 fetched source (Caribbean Instant Pot) — **new method 2026-10-24**
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-27
+**Score: 8 / 20** — assessed 2026-10-24. From-scratch reassessment on the deduction
+scale (no anchoring to the previous number — inflation doc Patterns 4 and 9; the number
+happens to coincide but the basis is different: the old table deducted for missing leaves
+under a different rule and counted Group A/D gaps that are now closed).
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Oven roast cut profile method-specific | ✓ (fixed 2026-04-27) |
-| Braise leaf missing | − missing (−1) |
-| Slow cooker leaf missing | − missing (−1) |
-| Culinary Group A covered | − missing (−1) |
-| Culinary Group D covered | − missing (−1) |
-| Culinary Groups B, C | ✓ |
+| Criterion | Deduction | Evidence |
+|-----------|-----------|----------|
+| Cooking methods not researched (`cooking_methods_researched: 0`) | −8 | Survey 2026-10-24 found and registered 2 methods beyond the declared list (grill, pressure_cooker), but the enum inventory is not complete: smoker, sous_vide and boil/steam preparations for bone-in leg pieces remain plausible and unverified. Field stays 0 until collected or cleanly ruled out. |
+| Partial leaves (< 4 fetched sources): braise (3), slow_cooker (2), grill (2), pressure_cooker (1) | −4 | −1 per partial leaf (branch convention). oven_roast (4 sources) meets the gate. |
 
-**Deductions**: −8 methods · −1 missing braise · −1 missing slow_cooker · −1 Group A · −1 Group D = −12 → 20−12 = **8**
+**Total deduction −12 → 8/20.** Criteria checked with evidence and receiving **0 deduction**:
+
+- **Culinary Groups A/B/C/D all covered** — A: Indian-Pakistani raan (oven_roast), Indian slow-cooker curry (slow_cooker); B: German (oven_roast), Greek (oven_roast), US (grill), Mexican (braise); C: Jamaican/Caribbean (braise ×2, slow_cooker, grill, pressure_cooker); D: Russian (oven_roast). The 2026-04-27 Group A and D gaps are closed.
+- `## Cut profile` present with anatomical placement (femur, biceps femoris, semimembranosus, semitendinosus, quadriceps femoris).
+- Method leaf files exist — 5 of them (braise and slow_cooker created 2026-10-24, grill and pressure_cooker new methods).
+- **USDA safe temperature supported by research evidence** — oven_roast leaf carries explicit internal guidance (≈70 °C Greek goat guidance; 160–165 °F fork-tender guidance in the raan source); the grill leaf's 135–140 °F pull is recorded as published below-safe divergence.
+- **Culinary preferred temperatures supported by research evidence** — measured guidance lands 70–74 °C (well_done band) for long-roast practice; the US grill source publishes a 57–60 °C medium-rare target as deliberate divergence. Both are recorded as published.
+- Per-method temperature nuance carried by each leaf's own consensus section.
+- No description copy-paste: every leaf's `## Cut profile` is method-specific.
+
+**Source-integrity repair (2026-10-24):** the previous `goat_leg-oven_roast.md` contained invented pull/final temperatures ("Verify 80 °C", "Pull at 80–82 °C", "Final temperature: 82–85 °C", a synthesised pull-range table) that no source published, a transcription of "asun" that did not match the fetched African Bites page at all (the real page boils smoked goat pieces, broils and stir-fries them — not a leg roast), and the seco de chivo stovetop braise misfiled as oven roast. All invented temperatures are removed; the fabricated asun record is removed (real page recorded as a lead for another method); seco de chivo now lives in `goat_leg-braise.md`.
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
-2. **−1 each** · Missing `goat_leg-braise.md`, `goat_leg-slow_cooker.md`
-3. **−1 each** · Groups A, D missing
+1. **Reconcile the doneness recommendation**: the frontmatter says `recommended_doneness: well_done` while the `doneness` block marks `medium_rare` as `recommended: true`. The oven-roast evidence supports well-done; the grill evidence shows a real medium-rare tradition. Decide deliberately.
+2. Verify or rule out remaining enum methods — smoker, sous_vide, boil/steam for leg pieces — then re-assess `cooking_methods_researched`.
+3. Raise the four partial leaves to the 4–6-source gate: pressure_cooker (+3), grill (+2), slow_cooker (+2), braise (+1).
+4. Resolve the grill-leaf doneness split (Caribbean tenderness vs US 135–140 °F medium-rare) with more traditions before any `method_temperature_ranges` override is committed.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -5114,6 +5114,8 @@ GOAT = [
             CookingMethod.OVEN_ROAST,
             CookingMethod.BRAISE,
             CookingMethod.SLOW_COOKER,
+            CookingMethod.GRILL,
+            CookingMethod.PRESSURE_COOKER,
         ],
         recommended_doneness="well_done",
     ),
