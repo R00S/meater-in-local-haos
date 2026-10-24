@@ -734,8 +734,8 @@ rekommenderad pull-temperatur och förväntad temperaturstegring efter vila.
 ## Source recipes
 
 ### 1. Author / Publication — Recipe title
-**Source**: Publication name; URL (fetched YYYY-MM-DD)
-**Serves**: 2 · **Prep**: 10 min · **Cook**: 20 min
+**Inspired by**: https://example.com/recipe-page (fetched YYYY-MM-DD)
+**Serves**: 2 · **Prep**: 10 min · **Cook**: 20 min · **Rest**: 5 min
 
 **Ingredients**
 - ...
@@ -744,26 +744,57 @@ rekommenderad pull-temperatur och förväntad temperaturstegring efter vila.
 1. ...
 2. Insert MEATER probe. Pull at **XX °C (XX °F)**.
 3. Rest Y minutes.
-*Final resting temperature: XX–XX °C (XX–XX °F).*
+Final serving temperature: **XX °C / XX °F**.
 
 ---
 
 ### 2. ...
 
-## Temperature summary
+## Temperature consensus
 
-| Doneness | Pull temp | Final (after rest) |
-|----------|-----------|-------------------|
-| Medium-rare | 52–54 °C (126–129 °F) | 55–57 °C (131–135 °F) |
+| Tradition | Preferred doneness name | Final serving temp |
+|-----------|------------------------|--------------------|
+| … | … | … |
+
+(Followed by 2–4 sentences: the full observed range in °C, how it maps to the
+doneness options, what drives the variation, and which doneness key fits.
+Treat divergence between traditions as the finding, not as an error.)
+
+## What makes this method special
+
+3–6 sentences on what this cooking method does to this specific cut —
+physics and flavour chemistry, not preferences.
+
+## Data applied to cooking_data.py
+
+- `supported_methods` gains: …
+- `recommended_doneness`: …
+- No `method_temperature_ranges` override needed — …
+
+## Summary
+
+2–4 sentences a non-expert can picture, readable in about 10 seconds.
+Say whether the method suits the cut and what the cook gains or sacrifices.
+
+> ✅ **CONFORMS TO TOR** — Verified YYYY-MM-DD. (End of file once the 4–6-source
+gate and the checks above pass.)
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** (End of file when fewer than 4
+verified sources exist — say exactly how many and what is missing.)
 ```
 
 **Recipe sourcing rules — please read before contributing**
 
 - **Cite real, verifiable sources.** Every recipe entry must include the publication name, a URL, and the date you accessed it (or the book title, author, and page number for print sources).
-- **Do not fabricate.** Do not invent recipes, temperatures, or sources. If you cannot find a real source for a method, omit that entry.
-- **Diversity is valued.** Aim for 3–5 recipes per file. Prioritise sources from different countries and culinary traditions, not just English-language sites.
-- **Temperature data must come from the source.** Record the pull temperature and resting target as stated in the recipe, not what you think is correct.
+- **Do not fabricate.** Do not invent recipes, temperatures, or sources. If you cannot find a real source for a method, omit that entry. A page you cannot fetch is a lead, not a source — record it as such or drop it.
+- **Diversity is valued.** Aim for 4–6 recipes per file (the collection gate), from different countries and culinary traditions, not just English-language sites. No two sources should share the same national or regional culinary tradition. If you can verify fewer than 4, that is acceptable — but label the file `⚠️ PARTIAL RESEARCH` instead of padding it.
+- **Temperature data must come from the source.** Record the pull temperature and resting target as stated in the recipe, not what you think is correct. **If a source states no internal temperature, write exactly that** — never convert a visual cue ("opaque throughout", "juices run clear") into an estimated figure.
+- **One cut × one method per file.** If a recipe combines methods (sear-then-braise, steam-then-grill), file it under its dominant stage and note the rest explicitly.
 - **MEATER placement note.** Each recipe should end with a brief note on where to insert the probe in that specific cut.
+
+The full collection and analysis standards live in
+`custom_components/kitchen_cooking_engine/www/recipes/RECIPE_COLLECTION_TOR.md` and
+`RECIPE_ANALYSIS_TOR.md`; the quality-score rules for cut overview files are in the same
+directory.
 
 ---
 

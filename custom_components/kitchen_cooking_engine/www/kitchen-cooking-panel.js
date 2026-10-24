@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 23 Oct 2026, 07:51 CET
+ * AUTO-GENERATED: 24 Oct 2026, 10:01 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 23 Oct 2026, 07:51 CET
+// Last generated: 24 Oct 2026, 10:01 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -127906,6 +127906,12 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/gilt_head_bream.md"
   },
   "grayling": {
+    "boil": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/grayling-boil.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/grayling-grill.md",
+    "oven_bake": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/grayling-oven_bake.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/grayling-pan_fry.md",
+    "poach": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/grayling-poach.md",
+    "smoker": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/grayling-smoker.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/grayling.md"
   },
   "haddock": {
@@ -128006,6 +128012,8 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/salmon/whole_salmon.md"
   },
   "baltic_herring": {
+    "boil": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/baltic_herring-boil.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/baltic_herring-grill.md",
     "oven_bake": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/baltic_herring-oven_bake.md",
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/baltic_herring-pan_fry.md",
     "smoker": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/baltic_herring-smoker.md",
@@ -128020,17 +128028,22 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/eel.md"
   },
   "herring": {
+    "braise": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/herring-braise.md",
     "grill": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/herring-grill.md",
     "oven_bake": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/herring-oven_bake.md",
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/herring-pan_fry.md",
+    "pressure_cooker": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/herring-pressure_cooker.md",
     "smoker": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/herring-smoker.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/herring.md"
   },
   "mackerel": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-air_fryer.md",
     "grill": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-grill.md",
     "oven_bake": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-oven_bake.md",
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-pan_fry.md",
+    "simmer": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-simmer.md",
     "smoker": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-smoker.md",
+    "steam": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel-steam.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/oily_fish/mackerel.md"
   },
   "tuna_steak": {
@@ -128057,6 +128070,11 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/shellfish/shrimp.md"
   },
   "quail": {
+    "braise": "/kitchen_cooking_engine_panel/recipes/poultry/quail/quail-braise.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes/poultry/quail/quail-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/poultry/quail/quail-oven_roast.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes/poultry/quail/quail-pan_fry.md",
+    "smoker": "/kitchen_cooking_engine_panel/recipes/poultry/quail/quail-smoker.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/quail/quail.md"
   },
   "duck_breast": {
@@ -128153,7 +128171,15 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh.md"
   },
   "chicken_thigh_bone_in": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-air_fryer.md",
+    "braise": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-braise.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-grill.md",
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-oven_roast.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-pan_fry.md",
+    "pressure_cooker": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-pressure_cooker.md",
+    "slow_cooker": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-slow_cooker.md",
+    "smoker": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-smoker.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in-sous_vide.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_thigh_bone_in.md"
   },
   "chicken_wing": {
@@ -128555,7 +128581,11 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_chop.md"
   },
   "goat_leg": {
+    "braise": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_leg-braise.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_leg-grill.md",
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_leg-oven_roast.md",
+    "pressure_cooker": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_leg-pressure_cooker.md",
+    "slow_cooker": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_leg-slow_cooker.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_leg.md"
   },
   "goat_shank": {
@@ -128687,7 +128717,10 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/lamb/roasts/rack_of_lamb.md"
   },
   "ground_lamb": {
+    "grill": "/kitchen_cooking_engine_panel/recipes/lamb/ground/ground_lamb-grill.md",
+    "oven_bake": "/kitchen_cooking_engine_panel/recipes/lamb/ground/ground_lamb-oven_bake.md",
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/lamb/ground/ground_lamb-pan_fry.md",
+    "simmer": "/kitchen_cooking_engine_panel/recipes/lamb/ground/ground_lamb-simmer.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/lamb/ground/ground_lamb.md"
   },
   "lamb_burger": {
@@ -129041,7 +129074,7 @@ const CUT_PROFILES = {
   "lamb_shoulder": "Lamb shoulder comprises the scapula, humerus, and associated muscles — primarily the *supraspinatus*, *infraspinatus*, *triceps brachii*, and *deltoideus*. These are heavily worked muscles, fattier and with more connective tissue than the leg, because the shoulder carries the weight of the front of the animal. The higher collagen density and better fat distribution make it the preferred shoulder cut for slow cooking: gelatin conversion transforms the tough fibres into silky, spoonable meat. The shoulder can be bone-in (whole shoulder, most flavourful) or bone-out (butterflied, faster cooking, easier carving). Typical weight: 1.5–3 kg bone-in.",
   "leg_of_lamb": "Leg of lamb is the quintessential festive roast throughout the Mediterranean, Middle East, British Isles, Australia, and New Zealand. A bone-in leg typically weighs 2–3 kg and is roasted at 160–175 °C with a garlic-herb rub, either to medium-pink (internal 54–60 °C) or slow-roasted to fall-apart (80–90 °C). The choice between these two approaches is the fundamental split in leg of lamb cooking.\n\n**Temperature guide** (from The Mediterranean Dish, fetched 2026-04-24):\n- Rare: 52 °C (125 °F) — 15 min/lb\n- Medium-rare: 54–57 °C (130–135 °F) — 20 min/lb\n- Medium: 57–63 °C (135–145 °F) — 25 min/lb\n- Well-done: 68–74 °C (155–165 °F) — 30 min/lb\n- Falling apart: 80 °C (175 °F) — 40 min/lb (slow 6 hours+)\n\n\nLeg of lamb is the quintessential festive roast throughout the Mediterranean, Middle East, British Isles, Australia, and New Zealand. A bone-in leg typically weighs 2–3 kg and is roasted at 160–175 °C with a garlic-herb rub, either to medium-pink (internal 54–60 °C) or slow-roasted to fall-apart (80–90 °C). The choice between these two approaches is the fundamental split in leg of lamb cooking.\n- Rare: 52 °C (125 °F) — 15 min/lb\n- Medium-rare: 54–57 °C (130–135 °F) — 20 min/lb\n- Medium: 57–63 °C (135–145 °F) — 25 min/lb\n- Well-done: 68–74 °C (155–165 °F) — 30 min/lb\n- Falling apart: 80 °C (175 °F) — 40 min/lb (slow 6 hours+)",
   "rack_of_lamb": "Rack of lamb (the rib section with 7–8 French-trimmed rib bones) is one of the most prestigious and visually dramatic roasting cuts in European and North American cooking. A Frenched rack of lamb, coated in a herb crust (persillade or Dijon-breadcrumb), seared in a pan, then roasted in a hot oven 20–25 minutes, is a classic dinner-party centrepiece.\n\nBecause the meat is from the loin and has very little connective tissue, rack of lamb must be treated like a premium steak and never overcooked.\n\n\nTarget internal temperature: **52–57 °C (126–135 °F)** for medium-rare (the universal preference). Pull at 50–52 °C.",
-  "ground_lamb": "Ground (minced) lamb is used in countless traditions — from Middle Eastern kibbeh and North African merguez to Greek moussaka, Indian keema, and Turkish Akçaabat köfte. Pan-frying ground lamb requires thorough cooking (ground meat has higher bacterial contamination risk than whole cuts). The aromatics sautéed with the mince are as important as the meat itself.\n\n\nTarget internal temperature: **74 °C (165 °F)** for food-safe ground lamb.",
+  "ground_lamb": "Ground (minced) lamb is used in countless traditions — from Middle Eastern kibbeh and North African merguez to Greek moussaka, Indian keema, and Turkish Adana kebab.\n\n**Anatomy**: ground lamb is not one muscle but the carcass's trim — typically shoulder, breast, flank and leg trimmings — passed through a grinder plate and usually set at 15–25 % fat. What defines the cut is the grind itself: mincing destroys the muscle structure that gives whole cuts their temperature gradient, multiplies the surface area many times over, and (in commercially minced meat) distributes surface bacteria through the whole mass. That is why ground lamb carries a higher contamination risk than whole cuts and must be cooked completely — no pink centre. It is also why the aromatics sautéed with the mince (onion, garlic, and each tradition's spice canon) are as important to the finished dish as the meat itself, and why fat content governs the result: lean mince dries in minutes, while 15–25 % fat keeps it moist and self-basting.\n\n**Temperature targets**: USDA safe internal for ground meats is **71 °C / 160 °F** — the value registered in this file's frontmatter and in `cooking_data.py`. (The earlier claim here of \"74 °C (165 °F) for food-safe ground lamb\" contradicted both and has been corrected 2026-10-24.) The single measured source in this collection cooks its keema filling to **72 °C / 161 °F**, just above the safe line. No fetched source treats ground lamb as a pink-cooking meat; `well_done` (71 °C target) is the only doneness target supported by evidence.",
   "lamb_burger": "Lamb burger is a patty made from ground (minced) lamb — primarily shoulder and neck trimmings — with a typical fat content of 15–25%, noticeably higher than ground beef. The higher fat content produces a very juicy patty that is more forgiving of slight overcooking, but also causes more fat drip on the grill. Ground lamb has a characteristic sweet-gamey flavour that pairs well with bold aromatics: garlic, cumin, harissa, mint, za'atar, feta. Because grinding distributes surface bacteria throughout the mass, the USDA minimum safe temperature is 71 °C (160 °F) for all ground meat including lamb.",
   "lamb_kofta": "Lamb kofta (also spelled köfte, kefta, kafta, kufta) is a preparation of ground lamb mixed with finely minced onion, fresh herbs (parsley, mint, coriander), and warm spices (cumin, coriander seed, cinnamon, allspice, black pepper). It is shaped onto flat metal skewers — a technique that requires the mixture to be kneaded firmly until it becomes cohesive and sticky, so the kofta doesn't fall off the skewer. Fat content is typically 15–20%; the fat renders during grilling and keeps the kofta moist.\n\nKofta is widespread across Turkish, Iranian, Levantine, North African, Pakistani, and Afghan culinary traditions. Because it is ground meat, the USDA minimum safe temperature is 71 °C (160 °F). At this temperature, well-made kofta is still juicy from the fat content.",
   "beef_shank": "Beef shank is the lower portion of the front (foreshank) or hind (hindshank) leg, structurally one of the most aggressively-worked muscles in the carcass: the constant motion of walking and standing builds dense bundles of muscle fibre wrapped in thick sheets of connective tissue, with a substantial central marrow bone running through cross-cut steaks (the *osso buco* preparation). Raw shank is among the toughest cuts in the animal; braised slowly for 3–4 hours at 85–95 °C, the connective tissue dissolves into rich gelatin, the marrow renders into the sauce, and the muscle becomes pull-apart tender. The bone-in cross-cut section holds shape because the connective-tissue ring around the muscle keeps it bound during the cook. Carryover is negligible — the surrounding liquid buffers temperature swings.",
@@ -129231,7 +129264,7 @@ const CUT_PROFILES_SV = {
   "lamb_shoulder": "Lammaxel är *supraspinatus*, *infraspinatus*, *triceps brachii* och *deltoideus*-musklerna — hårt arbetade, fettare och med mer bindväv än benet. Det är ett quintessentiellt lågt-och-långsamt-snitt: kollagenrik, smakrik och bäst bräserat eller ugnsrostat till pull-apart-mörhet.\n\nInnertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagning: försumbar (fuktig bräsering). Sond in i tjockaste muskeldelen, borta från skulderbladsben. Populära beredningar: australisk pulled lamb, mexicansk barbacoa-stil, brittisk slow-roast shoulder med rosmarin och vitlök.",
   "leg_of_lamb": "Lammben är den quintessentiella festrostningen globalt. Ugnsrostning vid 160–175 °C med vitlöks-örtmarinad, antingen till medium-rosa eller genomstekt beroende på kulinarisk tradition. Spetsa köttet med vitlöksklyftor och ingnid ytan med rosmarin-olja-salt är standardteknik.\n\nInnertemperatur: **57–65 °C (135–149 °F)** för medium-rare till medium; **70–74 °C** för genomstekt (mellanösternsk). Eftertillagning: 4–6 °C. Sond in i tjockaste köttmassan, borta från lårbenet. Vila täckt 15–20 minuter. Tillagningstid: 20–25 minuter per 500 g + 20 minuter extra.",
   "rack_of_lamb": "Rack of lamb (rev-sektionen med 7–8 frenserade revbensben) är ett av de mest prestigefyllda rostningsstycken. En Frenchad rack, belagd med örtkorpa, är ett imponerande festmåltidsstycke. Ugnsrostning ger mest kontrollerade resultat.\n\nSear all om i het panna (1–2 minuter per sida), belägg med senap och örtkorpa (*persillade*), rosta i ugn vid 200–220 °C tills sonden visar måltemperaturen. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare. Eftertillagning: 4–5 °C. Sond in i *longissimus dorsi*-muskeln borta från benet. Vila 5–8 minuter täckt.",
-  "ground_lamb": "Malet lamm används i otaliga traditioner — kibbeh, merguez, moussaka, keema, köfte. Pannstekning kräver fullständig genomkokning. Det höga fettinnehållet i malet lamm (15–25 %) gör beredningen mer smakrik och fuktig men ökar stänk i pannan.\n\nTillagning tills köttet är helt genomstekt och lätt brynnat, 72–75 °C internt. Innertemperatur: **72–75 °C (162–167 °F)** för USDA-säkert malet lamm. Eftertillagning: 2–3 °C. Sond in i tjockaste delen av biff eller köttfärsklump. Gäller för alla former av kokt malet lamm (löst, biffar, köfte).",
+  "ground_lamb": "Malet lamm används i otaliga traditioner — kibbeh, merguez, moussaka, keema, köfte. Pannstekning kräver fullständig genomkokning. Det höga fettinnehållet i malet lamm (15–25 %) gör beredningen mer smakrik och fuktig men ökar stänk i pannan.\n\nTillagning tills köttet är helt genomstekt och lätt brynnat. Innertemperatur: **71 °C (160 °F)** enligt USDA för malet kött (det tidigare påstådda 72–75 °C stämde inte med filens eget data och rättades 2026-10-24). Eftertillagning: 2–3 °C. Sond in i tjockaste delen av biff eller köttfärsklump. Gäller för alla former av malet lamm (löst, biffar, köfte).",
   "lamb_burger": "Lammburgare är en biff gjord av malet lamm — primärt skuldra och hals-trimmings — med typiskt fettinnehåll på 15–25 %, märkbart högre än malet nötkött. Det höga fettinnehållet ger en mycket saftig biff som är mer tolerant mot lätt överkokning, men orsakar också mer fettdroppning på grillen.\n\nVid grillning eller pannstekning kräver USDA-standarden att malet lamm tillagas till 72 °C (160 °F) för livsmedelssäkerhet. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond horisontellt från sidan in mot biffens mitt.",
   "lamb_kofta": "Lammköfte (även stavat *köfte*, *kefta*, *kafta*, *kufta*) är en beredning av malet lamm blandat med finhackat lök, färska örter (persilja, mynta, koriander) och varma kryddor (spiskummin, korianderfrö, kanel, kryddpeppar, svartpeppar). Det formas på platta metallspett.\n\nTillagas alltid till fullt genomstekt för säkerhet och optimal smak. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond insatt längsvis från änden in till mitten av spettet. Vila 3–5 minuter täckt. Tjocklek 3–4 cm; grilltid 3–4 minuter per sida.",
   "beef_shank": "Oxlägg är den nedre delen av framlägget (foreshank) eller baklägget (hindshank), en av slaktkroppens mest bearbetade muskler: det ständiga rörelsearbetet vid gång och stående bygger täta muskelfiberbuntar inbäddade i tjocka lager bindväv, med ett markant märgben centralt i tvärsnittsbiffen (*osso buco*-snittet). Rått oxlägg är en av djurets segaste styckningsdetaljer; brässeras det långsamt i 3–4 timmar vid 85–95 °C löser sig bindväven till rik gelatin, märgen smälter ner i såsen och muskelköttet blir mjukt och trådigt. Den benskivade formen håller ihop under tillagningen tack vare bindvävsringen kring muskelköttet. Temperaturstegringen efter tillagning är försumbar — den omgivande vätskan buffrar temperatursvängningar.",
@@ -129293,6 +129326,18 @@ const CUT_METHOD_PROFILES = {
   "gilt_head_bream": {
     "steam": "Gilt-head bream (*Sparus aurata*) has white, firm, moist flesh with a delicate sweet flavour and a fat content of 3–5 g per 100 g. Steaming whole fish preserves every drop of natural moisture and allows aromatic flavours — ginger, lemon, fennel, lemongrass — to perfume the flesh gently from the outside. The round, oval body shape (typically 300–600 g sold whole) is ideal for whole-fish steaming over a bamboo steamer, steam oven, or steam rack in a wok. Unlike flatfish, bream needs 12–20 minutes of steam depending on size; scoring the flesh helps heat penetrate to the bone. Steaming is common in Chinese and Southeast Asian kitchens (Chinese Cantonese \"qing zheng yu\", Thai \"pla neung\"), and increasingly in German-speaking Europe via steam ovens (*Dampfgarer*). The skin cooks but does not crisp, yielding a silky texture. Probe placement: insert into the thickest part of the back just behind the head into the shoulder muscle, angling toward the centre spine.",
     "steam_sv": "Guldspirad (*Sparus aurata*) har vitt, fast, fuktigt kött med delikat söt smak och 3–5 g fett per 100 g. Ångkokning av hel fisk bevarar all naturlig fuktighet och låter aromater — ingefära, citron, fänkål, citrongräs — varsamt genomdofta köttet utifrån. Den ovala, runda formen (typiskt 300–600 g hel) är idealisk för hel-fisk-ångkokning i bambukorg, ångugn eller ångkorg i wok. Till skillnad från plattfiskar behöver havsruda 12–20 minuter ånga beroende på storlek; skårning av köttet hjälper värmen tränga igenom till benet. Ångkokning är vanlig i kinesiska och sydostasiatiska kök (kantonesisk \"qing zheng yu\", thailändsk \"pla neung\") och alltmer i tyskt hem- och restaurangkök via ångugnar. Huden kocker men krispas inte, vilket ger en silkeslen textur. Sond placeras i tjockaste ryggdelen precis bakom huvudet in i axelmuskeln, riktad mot centrumet."
+  },
+  "grayling": {
+    "boil": "European grayling (*Thymallus thymallus*; Swedish *harr*) is a lean freshwater salmonid with delicate flesh and small whole-fish portions. Pelles Fiske's recipe cuts cleaned, scaled fish into thick pieces and boils them in seasoned water, a direct preparation suited to lakeside cooking when equipment and ingredients are limited. The source gives a qualitative endpoint—flesh releasing from the bones—but no water temperature, cooking duration, thermometer target, or resting guidance. As small pieces are removed from boiling liquid, carryover is likely limited, but the source does not measure it; no numerical value is assigned.",
+    "grill": "European grayling (*Thymallus thymallus*, Swedish *harr*, German *Äsche*) is a lean, fine-textured river salmonid whose delicate flesh suits fast, dry radiant heat. Grilling is documented both as whole-fish ember cookery in the Nordic tradition and as filleted fish finished skin-side on a hot plancha or barbecue in professional Anglophone kitchens. The small typical size (roughly 300–400 g whole) means the fish cooks through in minutes, so the retrieved recipes use short times and visual endpoints rather than probe targets. None of the source pages reviewed for this leaf states an internal pull temperature, so none is inferred here; carryover for a small whole fish or thin fillet is expected to be modest but the sources do not quantify it.",
+    "grill_sv": "Europeisk harr (*Thymallus thymallus*) är en mager, finstrukturerad flodlaxfisk vars ömtåliga kött passar för snabb, torr strålvärme. Grillning är dokumenterad både som hel fisk över glöd i nordisk tradition och som filé som grillas med skinnet nedåt på het plancha i professionellt brittiskt kök. Den lilla storleken (ca 300–400 g hel) gör att fisken blir klar på minuter, så recepten använder korta tider och visuella slutpunkter. Ingen källa anger innertemperatur; ingen sådan härleds här.",
+    "oven_bake": "European grayling (*Thymallus thymallus*, Swedish *harr*, German *Äsche*) is a lean, delicate river salmonid that dries out quickly under sustained heat, so oven preparations for it rely on protective coverings — wrapped ham, an aromatic salt crust, or a covered baking dish — rather than exposed roasting. Oven baking suits grayling because it is hands-off for serving several people at once and because a crust or parcel buffers the lean flesh from the dry oven air. The fetched recipes cover a Swedish baked-fillet tradition (frozen harr fillet layered with air-dried ham) and a British salt-crust whole-fish tradition. The sources state oven settings and times, not internal pull temperatures; no internal target is inferred where the source is silent.",
+    "oven_bake_sv": "Europeisk harr (*Thymallus thymallus*) är en mager, ömtålig flodlaxfisk som torkar fort vid utsatt värme, därför bygger ugnsrecepten på skyddande ytor — lindad skinka, aromatisk saltkrusta eller täckt form — snarare än naken rostning. Ugn passar harr för att tillaga flera portioner samtidigt och för att krustan eller paketet skärmar det magra köttet. De hämtade recepten omfattar svensk ugnsbakad harrfilé (fryst harr insvept i lufttorkad skinka) och brittisk hel fisk i saltkrusta. Källorna anger ugnstemperatur och tid, inte innertemperatur; ingen sådan härleds.",
+    "pan_fry": "European grayling (*Thymallus thymallus*, Swedish *harr*, German *Äsche*) is a lean, delicate freshwater salmonid; recipes usually cook it whole or as a skin-on fillet. Pan-frying is documented in Alpine and northern Swedish preparations, often with butter, flour, bacon or a light sauce. Because the fish is small and its flesh is delicate, the retrieved recipes use short cooking times and visual doneness cues rather than a probe. The source pages reviewed for this leaf do not state an internal pull temperature, so none is inferred here. Carryover is expected to be small for a small whole fish, but the cited recipes do not quantify it.",
+    "pan_fry_sv": "Europeisk harr (*Thymallus thymallus*, tyska *Äsche*) är en mager och ömtålig laxfisk från sötvatten. Recepten tillagar den hel eller som filé med skinn. Pannstekning är dokumenterad i alpina och norrländska svenska tillagningar, ofta med smör, mjöl, bacon eller en lätt sås. Eftersom fisken är liten och köttet ömtåligt använder de hämtade recepten korta tider och visuella tecken på färdighet, inte termometer. De granskade källorna anger ingen innertemperatur; därför anges ingen påhittad dragtemperatur. Källorna kvantifierar inte eftervärmen.",
+    "poach": "European grayling (*Thymallus thymallus*; Swedish *harr*) is a small, lean salmonid with fine, fragile flesh. The court-bouillon preparation documented by Mats Sjöstrand gently cooks the whole fish in a strained, seasoned aromatic liquid after it has nearly returned to a boil. The technique suits delicate fish because it avoids direct pan contact and browning; the source gives no internal temperature or measured final endpoint. A whole small fish may have modest carryover, but the recipe does not quantify it and this leaf assigns no numeric carryover value.",
+    "smoker": "European grayling (*Thymallus thymallus*, Swedish *harr*, German *Äsche*) is a lean, delicate river salmonid whose low fat content makes it less forgiving in a smoker than trout or salmon, but its small whole-fish size (typically 200–400 g) allows a short hot-smoke session rather than a long cure-and-smoke. Hot smoking on a cedar plank or in a stovetop box smoker (*abu-röken*, *Tischräucherofen*) is documented for grayling in both professional British and Scandinavian practice. The method's value here is aromatic: smoke and wood volatiles season flesh that is mild to begin with, while a short cook protects the moisture the lean flesh lacks reserves to lose. One fetched source states an explicit core temperature; the other collected evidence does not, and no temperature is invented where the source is silent.",
+    "smoker_sv": "Europeisk harr (*Thymallus thymallus*) är en mager, ömtålig flodlaxfisk. Det låga fettinnehållet gör den mindre tålig i röka än öring eller lax, men den lilla storleken (200–400 g) medger en kort varmrökning snarare än en lång saltning. Varmrökning på cederplanka eller i röklåda (*abu-röken*) är dokumenterad både i brittiskt professionellt kök och skandinavisk tradition. Metodens värde är aromatiskt: rök kryddar ett milda kött, och en kort tillagning skyddar den fuktighet det magra köttet saknar reserv för att tappa. En hämtad källa anger uttryckligen en körd temperatur; övriga tiger, och ingen temperatur påhittas där källan tiger."
   },
   "haddock": {
     "oven_roast": "Oven roasting haddock is a gentle dry-heat method that protects this thin, lean fillet better than aggressive pan heat when the fish is cooked in a sauced tray, crumb crust, or vegetable bed. The fillet is usually 1–2 cm thick and quickly shifts from translucent to opaque; that transition window is short and overcooking causes immediate moisture loss and small dry flakes. Probe placement should be lateral from the thick edge so the tip lands at the geometric center of the thickest part.",
@@ -129407,12 +129452,16 @@ const CUT_METHOD_PROFILES = {
     "oven_bake_sv": "Ugnsbakning av hel lax bygger på konvektionsvärme runt fisken samtidigt som ånga i bukhålan och fett från skinnet dämpar uttorkning. Den tjocka skulder/ryggdelen blir klar senare än stjärtköttet, så tillagningen är en tydlig temperaturgradient. Folie/parceltillagning används ofta för hel lax vid servering till många eftersom fukten hålls kvar och urbening efter vila blir enklare. Jämfört med öppen, hård ugnsrostning ger dessa metoder mjukare eftervärme."
   },
   "baltic_herring": {
-    "oven_bake": "Oven-baking Baltic herring (strömming) is most commonly done in a layered \"strömmingslåda\" (Baltic herring casserole) where butterflied flundror are folded around a parsley-and-leek filling, placed in an ovenproof dish, covered in a mustard cream sauce, topped with breadcrumbs, and baked until set and golden. The oven temperature is high (225 °C) and the baking time is 20–30 minutes. The casserole format means the fish cooks in a moist, covered environment — the cream baste and fish fat prevent drying. No source cites a thermometer endpoint; the visual cues are a golden breadcrumb top and fully set cream. At that point the fish inside reaches approximately 70–75 °C due to the moist cooking environment and longer bake time than dry-heat methods.",
-    "oven_bake_sv": "Ugnsbakning av strömming görs vanligast i en skiktad \"strömmingslåda\" där fjärilsöppnade flundror är fällda kring en persilje- och purjolöksfyllning, placerade i ugnsform, täckta med en senapsgräddsås, strödda med ströbröd och gräddade tills de är satta och gyllenbruna. Ugnstemperaturen är hög (225 °C) och gräddningstiden är 20–30 minuter. Lådformatet innebär att fisken tillagas i en fuktig, täckt miljö — gräddbasten och fiskfettet förhindrar uttorkning. Ingen källa anger termometeravläsning; de visuella tecknen är ett gyllenbrun ströbrödstäcke och fullt satt grädde. Vid det stadiet når fisken inuti ca 70–75 °C pga den fuktiga tillagningmiljön och den längre gräddningstiden jämfört med torrvärmsmetoder.",
-    "pan_fry": "Pan-frying Baltic herring (strömming) is one of the defining techniques of the Nordic kitchen. The classic preparation is \"strömmingsflundra\" — two butterflied halves from the same fish folded together around a parsley-and-onion filling, then fried in butter. The result is a compact, self-basting parcel with a crispy exterior. Because Baltic herring is very small (typically 40–80 g whole), a pair of flundror weighs only 80–160 g and cooks in 3–5 minutes per side over medium heat. All sources use visual and time cues; no thermometer endpoint is given. At visual doneness (golden brown, flesh opaque throughout, beginning to pull from the folded edge) the internal temperature is approximately 63–68 °C.",
-    "pan_fry_sv": "Stekning av strömming är en av de definierande teknikerna i det nordiska köket. Den klassiska beredningen är \"strömmingsflundra\" — två fjärilsöppnade halvor från samma fisk fällda ihop kring en persilje- och lökfyllning, sedan stekt i smör. Resultatet är ett kompakt, självbastande paket med krispigt yttre. Eftersom strömming är mycket liten (typiskt 40–80 g hel), väger ett par flundror bara 80–160 g och tillagas på 3–5 minuter per sida vid medelvärme. Alla källor använder visuella tecken och tid; ingen termometeravläsning ges. Vid visuell färdighet (gyllenbrun, ogenomskinligt kött rakt igenom, börjar dra sig vid den vikta kanten) är innertemperaturen ca 63–68 °C.",
-    "smoker": "Hot-smoking baltic herring (strömming) is a quintessentially Nordic tradition and the **ABU-röken** is its classic vehicle — a compact, lidded metal box with a wire rack, loaded with 1–2 tablespoons of alder sawdust (alspån) and placed over a spirit burner, gas burner, or campfire. Baltic herring is smaller and leaner than Atlantic herring (typically 15–25 cm, 40–80 g whole) and therefore cooks faster. Whole gutted fish or the traditional **strömmingsflundra** (two butterflied halves folded together around a parsley-and-butter filling) are both suitable for the ABU-röken. The folded flundra is thicker and may require the longer end of the time range. Chamber temperatures reach 90–100 °C; whole or butterflied strömming reaches internal **63 °C** in approximately 12–20 minutes. The short, high-heat exposure from the ABU-röken imparts a delicate smoke without overwhelming the fish's mild, slightly sweeter flavour compared with Atlantic herring. Alder is traditional; juniper berries are an optional aromatic addition. Carryover is negligible due to small mass. For MEATER probe placement, insert the probe along the dorsal muscle, parallel to the spine, tip at the thickest cross-section — for strömmingsflundra, place the probe into the thickest part of the folded package.",
-    "smoker_sv": "Varmrökning av strömming är en nordisk kärntradition och **ABU-röken** är dess klassiska redskap — en kompakt metallbox med gallersats, fylld med 1–2 matskedar alspån och placerad över spritbrännare, gasbrännare eller öppen eld. Strömming är mindre och magrare än atlantisk sill (typiskt 15–25 cm, 40–80 g hel) och tillagas därför snabbare. Hel urtagen fisk eller den traditionella **strömmingsflundran** (två fjärilsöppnade halvor vikta mot varandra med persiljasmörsfyllning) är båda lämpliga för ABU-röken. Den hopvikta flundran är tjockare och kan kräva den övre delen av tidsspannet. Kammartemperaturen når 90–100 °C; hel eller fjärilsöppnad strömming når innertemperatur **63 °C** på ca 12–20 minuter. Den korta, het exponeringen från ABU-röken ger en delikat rök utan att övermanna fiskens milda, lätt sötare smak jämfört med atlantisk sill. Al är traditionellt; enbär är ett valfritt aromatiskt tillsats. Sond insatt längs ryggmuskeln, parallellt med ryggraden, med spetsen i tjockaste genomsnitt — för strömmingsflundra, placera sonden i tjockaste delen av det hopsatta paketet."
+    "boil": "Boiling is the documented historical everyday method for salted Baltic herring (salt strömming): the fish was cooked in its own brine-spiked liquid, and the broth was never wasted — often mixed with milk and drunk to the meal, or thickened with barley flour and milk into a *redning* (\"smältning\"). Root vegetables and potatoes could boil in the same pot, with the salted fish laid on top. The method suits salted rather than fresh fish: the salt firm the flesh so it holds together in liquid, and the cooking liquid becomes sauce and drink. This method was not in the auto-populated `methods:` list for baltic_herring; it is added on the basis of the fetched archival documentation below. The source states no temperatures, durations, or internal pull point; none is inferred.",
+    "boil_sv": "Kokning är den dokumenterade historiska vardagsmetoden för saltad strömming: fisken koktes i spadet, som aldrig slängdes — ofta blandades mjölk i spadet och drack till maten, eller så gjordes en redning av kornmjöl och mjölk (\"smältning\"). Rotfrukter och potatis kunde koka i samma kastrull med den salta fisken ovanpå. Metoden passar saltad snarare än färsk fisk: saltet ger köttet konsistens så det håller ihop i vätskan. Metoden fanns inte i den automatiska `methods:`-listan; den läggs till på grundval av det hämtade arkivmaterialet. Källan anger ingen temperatur, tid eller innertemperatur.",
+    "grill": "Grilling Baltic herring (strömming) is documented in Swedish food culture as two archival techniques: *glödstekt* — the fish laid directly on glowing embers (sometimes wrapped in newspaper in later times) — and *halstrad*, small fresh fish skewered on a stick over an open fire. Both were outdoor, fishing-trip preparations: freshly caught small fish grilled whole made an immediate meal at the water. The tiny fish (40–80 g) tolerates the intense radiant heat only because the cook time is minutes; the historic methods used no thermometer and no stated endpoint beyond the fish being cooked through. This method was not in the auto-populated `methods:` list for baltic_herring; it is added on the basis of the fetched archival documentation below. No fetched source states an internal pull temperature; none is inferred.",
+    "grill_sv": "Grillning av strömming dokumenteras i svensk matkultur som två arkivtekniker: *glödstekt* — fisken lades helt enkelt på glöden (i senare tid ibland insvept i tidningspapper) — och *halstrad*, små nyfångade fiskar på pinne över öppen eld. Båda var utomhusberedningar vid fiske: färsk småfisk grillad hel gav en omedelbar måltid vid vattnet. Den lilla fisken (40–80 g) tål den heta strålningen bara för att tiden mäts i minuter; de historiska metoderna använde ingen termometer. Metoden fanns inte i den automatiska `methods:`-listan; den läggs till på grundval av det hämtade arkivmaterialet. Ingen källa anger innertemperatur.",
+    "oven_bake": "Oven-baking Baltic herring (strömming) centers on the \"strömmingslåda\" — the classic Swedish casserole where butterflied flundror are folded around a herb filling, set in a buttered dish, covered with seasoned cream (mustard cream or caviar cream) and baked at 225 °C for 15–30 minutes until the top is golden and the cream is set. The moist, cream-covered environment protects the lean, fine flesh; the casserole format also scales well for the julbord/smörgåsbord table. A simpler oven variant folds plain flundror and bakes them uncovered at 225 °C for about 10 minutes. All fetched sources state oven settings, times and visual endpoints (golden top, set cream); none states an internal pull temperature, and none is inferred here.",
+    "oven_bake_sv": "Ugnsbakning av strömming kretsar kring strömmingslådan — fjärilsöppnade flundror med örtfyllning i smord form, täckta med smaksatt grädde (senaps- eller kaviargrädde) och gräddade vid 225 °C i 15–30 minuter tills toppen är gyllenbrun och grädden satt. Den fuktiga, gräddtäckta miljön skyddar det magra, fina köttet. En enklare variant gräddar nakna flundror i ugn vid 225 °C ca 10 minuter. Alla hämtade källor anger ugnstemperatur, tid och visuella slutpunkter; ingen anger innertemperatur.",
+    "pan_fry": "Pan-frying is the defining stovetop method for Baltic herring (*strömming*, *silakka*): fillets or butterflied \"flundror\" (pairs of fillets folded around a herb filling) are dredged in coarse rye flour or breadcrumbs and fried quickly in butter. The fish is small (40–80 g whole; fillets cook in 2–4 minutes per side), lean for a herring, and its fine flesh sets fast — the classic failure mode is sticking and tearing rather than drying. Rye-flour dredging (Swedish *rågmjöl*) is the traditional crust: it crisps in butter without the sealing effect of fine breadcrumbs. All fetched sources use time and visual endpoints; none states an internal pull temperature, and none is inferred here.",
+    "pan_fry_sv": "Pannstekning är den definierande stekmetoden för strömming: filéer eller strömmingsflundror (filépar vikta kring örtfyllning) dredgas i grovt rågmjöl eller ströbröd och steks snabbt i smör. Fisken är liten (40–80 g hel) och magrare än sill; det klassiska misslyckandet är att fisken fastnar och går sönder, inte att den torkar. Rågmjölspanering är traditionell. Alla hämtade källor använder tids- och visuella slutpunkter; ingen anger innertemperatur och ingen sådan härleds.",
+    "smoker": "Smoking Baltic herring (strömming) has its own Swedish name: the product is *böckling* (hot-smoked strömming or herring; the word is borrowed from Dutch, \"little buck\"). Larger strömming are the traditional choice for smoking — small summer fish are fried instead. Smoking here is primarily a flavour and preservation method: Swedish food-culture documentation records cold smoking at about 20 °C for 8–10 days (the oldest method) and hot smoking at 75–85 °C for a few hours, in both cases combined with salting or drying. Hot smoking coagulates the protein and gives the fish a cooked character. No fetched source states an internal pull temperature for the fish, and none is inferred here; the smoking-chamber figures above are the sources' own stated process temperatures.",
+    "smoker_sv": "Varmrökt strömming har ett eget svenskt namn: *böckling* (namnet är lånat från nederländska, \"liten bock\"). Större strömming är det traditionella valet för rökning — små sommarströmmingar steks i stället. Rökningen är framför allt smakförhöjande och konserverande: svensk matkulturdokumentation anger kallrökning vid ca 20 °C i 8–10 dagar (äldsta metoden) och varmrökning vid 75–85 °C under några timmar, i båda fallen kombinerat med saltning eller torkning. Varmrökning koagulerar proteinet och ger fisken kokt karaktär. Ingen hämtad källa anger innertemperatur för fisken; process-temperaturerna ovan är källornas egna angivna rökningstemperaturer."
   },
   "eel": {
     "braise": "Braised eel is one of the great underrepresented culinary traditions: *paling in 't groen* (eel braised in green herb sauce) is the national dish of Flanders; *matelote d'anguille* is a cornerstone of classical French Burgundian cuisine; 红烧鳗鱼 (*hóngshāo mán yú*, red-braised eel) is a celebrated Chinese family dish; and *anguille en matelote* has Italian, Polish and German variants. Braising suits eel particularly well because the fat-rich, collagen-bearing flesh responds to moist heat by surrendering its collagen into the surrounding liquid, creating a naturally gelatinous sauce, while the fat simultaneously enriches the braising liquid. Unlike meat braising where a long, high-temperature braise (85–95 °C) is needed to break down hard muscle fibres, eel's fish collagen softens at much lower temperatures (55–65 °C). As a result, most eel braises use a gentle simmer of 80–90 °C liquid temperature for 15–30 minutes rather than the multi-hour braises used for beef or pork. The target internal temperature of the eel itself will therefore be in the range of 65–72 °C — higher than lean pan-fried fish, lower than a long meat braise. Probe placement: insert lengthwise from the cut end of a section into the centre of the thickest flesh portion. Carryover in a braising liquid is negligible — the surrounding liquid buffers temperature change and the fish cools slowly.",
@@ -129427,24 +129476,29 @@ const CUT_METHOD_PROFILES = {
     "smoker_sv": "Ål är en av de fetaste fiskarna i hela cooking engine, med kollagenrikt kött och tjockt skinn som förändras kraftigt av rökning. Varmrökning passar ål särskilt väl eftersom den långa, milda värmen smälter ut fett, sätter köttet och gör skinnet lättare att dra av eller tugga beroende på tradition. Till skillnad från mager vit fisk tjänar ål på en tydlig tork- och rökfas innan den räknas som färdig. Eftervärmen efter rökningen är måttlig, men köttet mjuknar vidare under vilan efteråt."
   },
   "herring": {
-    "grill": "Grilling herring exploits the fish's naturally high fat content — the oil self-bastes the flesh over direct heat and drips to create aromatic smoke that flavours the skin. The fish is scored 2–3 times on each flank before grilling to allow heat penetration and prevent curling. Herring are typically grilled whole (gutted, head on or off) or as butterflied fillets. Grilling time is 3–4 minutes per side over medium-high direct heat. A compound butter (mustard, herb) is the classic British accompaniment, applied immediately after grilling. No source cites a probe temperature; visual cues (opaque throughout, skin charred and pulling away) indicate doneness. At that visual point the internal temperature is approximately 63–68 °C.",
-    "grill_sv": "Grillning av sill utnyttjar fiskens naturligt höga fettinnehåll — oljan bastar köttet under direktvärmen och droppar för att skapa aromatisk rök som ger smak åt skinnet. Fisken snittas 2–3 gånger per sida innan grillning för att tillåta värmeinträngning och förhindra böjning. Sill grillas typiskt hel (rensad, med eller utan huvud) eller som flundra. Grilltid är 3–4 minuter per sida vid medelhög–hög direktvärme. Sammansatt smör (senap, örter) är det klassiska brittiska tillbehöret, applicerat direkt efter grillning. Ingen källa anger sondtemperatur; visuella tecken (ogenomskinlig rakt igenom, skinn grillat och dragandes) indikerar färdighet. Vid det visuella stadiet är innertemperaturen ca 63–68 °C.",
-    "oven_bake": "Oven-baking herring is well-suited to the \"rolled\" or \"roulade\" preparation where butterflied fillets are stuffed with a flavouring (mustard, herbs, pancetta) and rolled, then baked in a hot oven. The high oven temperature (200–220 °C) crisps the outer surface while the interior steams in its own fat. Cooking time is short — 15–20 minutes — reflecting the small size and high fat content. No source cites a thermometer endpoint; the visual cue is a set, opaque, pulling exterior. At visual doneness the internal temperature of rolled herring is approximately 63–68 °C. Oven baking is less common than pan-frying for herring in Nordic cuisines, but is the more convenient whole-fish or rolled-fillet method for domestic cooking across British and Scandinavian traditions.",
-    "oven_bake_sv": "Ugnsbakning av sill passar väl för den \"rullade\" eller \"roulade\"-tillagningen där flundrade filéer är fyllda med smaksättning (senap, örter, pancetta) och rullade, sedan gräddade i het ugn. Den höga ugnstemperaturen (200–220 °C) krispar den yttre ytan medan insidan ångas i sitt eget fett. Tillagningstiden är kort — 15–20 minuter — som återspeglar den lilla storleken och höga fettinnehållet. Ingen källa anger termometeravläsning; det visuella tecknet är ett satt, ogenomskinligt, dragande yttre. Vid visuell färdighet är innertemperaturen i rullade sillar ca 63–68 °C. Ugnsbakning är mindre vanlig än stekning för sill i nordiska kök, men är den mer praktiska metoden för hela fiskar eller rullade filéer i brittiska och skandinaviska traditioner.",
-    "pan_fry": "Pan-frying herring uses a thin coating of seasoned rye flour or plain flour to protect the skin and create a crispy crust. The high fat content of herring means the pan requires minimal added fat — a small knob of butter or a thin film of oil is sufficient. The fish is typically butterflied (flundra/flundra-style) or used whole (gutted), and cooks in 3–4 minutes per side over medium-high heat. The classic Nordic accompaniment is pickled beetroot and onion. No authoritative source for pan-fried herring cites a thermometer endpoint; all rely on visual cues (opaque flesh pulling from bone, crisped skin). Recommended pull temperature of 63 °C (145 °F) aligns with USDA safe minimum and the visual description of \"fully opaque throughout, beginning to flake.\"",
-    "pan_fry_sv": "Stekning av sill använder en tunn beläggning av kryddad rågmjöl eller vanligt mjöl för att skydda skinnet och skapa en krispig yta. Sillens höga fettinnehåll innebär att pannan behöver minimalt tillsatt fett — en liten klick smör eller ett tunt lager olja räcker. Fisken är typiskt flundrad (fjärilsöppnad) eller används hel (rensad), och tillagar på 3–4 minuter per sida vid medelhög värme. Det klassiska nordiska tillbehöret är inlagd rödbeta och lök. Inga auktoritativa källor för stekt sill anger termometeravläsning; alla förlitar sig på visuella tecken (ogenomskinligt kött som drar sig från ben, krispigt skinn). Rekommenderat dragtemperatur på 63 °C (145 °F) överensstämmer med USDA-minimigräns och den visuella beskrivningen av \"helt ogenomskinlig, börjar flaga.\"",
-    "smoker": "Hot-smoking herring is a traditional Nordic method that exploits the fish's high fat content to produce deeply flavoured, golden-skinned fish ready to eat as is. The classic Swedish tool is the **ABU-röken** — a compact, lidded metal box with a wire rack and a sawdust tray — placed over a spirit burner, gas burner, or open fire. The box is loaded with 1–2 tablespoons of alder (al) sawdust; the lid is closed, and the heat turns the sawdust to smoke that circulates around the fish. Chamber temperatures reach approximately 90–100 °C; at that level whole gutted herring (15–20 cm) reaches a safe internal temperature of 63 °C in 15–25 minutes. The fish are used gutted whole, or butterflied (the classic Nordic \"flundra\" cut), optionally with a short dry-brine or light salting beforehand to firm the flesh and form a light pellicle. Alder is the dominant wood choice in all Scandinavian sources; juniper berries are an optional addition for an aromatic accent. The result is a pale-golden to amber-skinned fish with firm, moist flesh and a mild, clean smoke character. Carryover is negligible due to small mass. For MEATER probe placement, insert the probe along the dorsal muscle behind the head, parallel to the spine, with the tip at the thickest cross-section.",
-    "smoker_sv": "Varmrökning av sill är en traditionell nordisk metod som utnyttjar fiskens höga fettinnehåll för att producera djupt smakrik, gyllengyllen fisk. Det klassiska svenska redskapet är **ABU-röken** — en kompakt, lådstyrd metallbox med ett gallerinsats och ett sågspånsbricka — placerad över spritbrännare, gasbrännare eller öppen eld. Lådan fylls med 1–2 matskedar alspån; locket stängs och värmen förvandlar spånet till rök som cirkulerar kring fisken. Kammartemperaturen når ca 90–100 °C; på den nivån når hel rensad sill (15–20 cm) en säker innertemperatur på 63 °C på 15–25 minuter. Fisken används hel urtagen eller som flundra, valfritt med kort torrning eller lätt saltning för att fastna köttet och bilda en lätt yta. Al är det dominerande trävalget i alla skandinaviska källor; enbär är ett valfritt tillsats för en aromatisk accent. Resultatet är en blekvit till bärnstensgul fisk med fast, saftigt kött och mild, ren rökkaraktär. Sond insatt längs ryggmuskeln bakom huvudet, parallellt med ryggraden, med spetsen i tjockaste genomsnitt."
+    "braise": "This Caribbean preparation braises already-smoked, salted herring flakes briefly in a tomato, onion, pepper and herb sauce after rehydration. The source uses the traditional *red herring* form, so this leaf records a cooked smoked-fish preparation rather than implying that it applies to fresh herring. The fish needs only a short simmer to take on the sauce; the recipe does not state a core temperature or a measured endpoint. The title method is supported by an award-winning Caribbean food writer's published recipe, though more sources are needed before making broader claims.",
+    "grill": "Grilling herring exploits the fish's naturally high fat content — the oil self-bastes the flesh over direct heat and drips to create aromatic smoke that flavours the skin. Herring are typically grilled whole (gutted, head on or off), scored 2–3 times per flank to prevent curling and let heat penetrate, or grilled as butterflied fillets. The fetched sources document three traditions: the British hot-grill (broiler) with compound mustard butter, Japanese whole-fish salt-grilling (*shioyaki*, 塩焼き), and Russian Don-region charcoal-grilling of fresh or thawed fish. All use qualitative endpoints; none states an internal pull temperature, and none is inferred here.",
+    "grill_sv": "Grillning av sill utnyttjar fiskens höga fettinnehåll — oljan bastar köttet under direktvärmen och ger aromatisk rök åt skinnet. Sill grillas hel (rensad), snittad 2–3 gånger per sida för att förhindra böjning, eller som flundra. De hämtade källorna dokumenterar två grillformer: den brittiska heta grillen med senaps-smör efter tillagning, och den japanska saltsgrillade hela fisken (*shioyaki*, 塩焼き). Båda använder visuella slutpunkter; ingen anger innertemperatur.",
+    "oven_bake": "Oven-baking herring is well-suited to the \"rolled\" preparation where butterflied fillets are stuffed with a flavouring (mustard, herbs, pancetta) and rolled, then baked in a hot oven. The high oven temperature (200–220 °C) crisps the outer surface while the interior steams in its own fat; cooking time is short (15–20 minutes), reflecting the small size and high fat content. Oven baking is less common than pan-frying for herring in Nordic cuisines, but is the convenient rolled-fillet method for domestic cooking in British and Scandinavian traditions. The fetched sources give oven settings, times and visual endpoints; none states an internal pull temperature, and none is inferred here.",
+    "oven_bake_sv": "Ugnsbakning av sill passar för den rullade beredningen där flundrade filéer fylls med smaksättning (senap, örter, pancetta) och rullas, sedan gräddas i het ugn. Den höga ugnstemperaturen (200–220 °C) krispar ytan medan insidan ångas i sitt eget fett; tiden är kort (15–20 minuter). Ugnsbakning är mindre vanlig än stekning för sill i nordiska kök men är den praktiska rullade metoden i brittisk och skandinavisk hemlagning. De hämtade källorna anger ugn, tid och visuella slutpunkter; ingen anger innertemperatur.",
+    "pan_fry": "Pan-frying herring spans several forms: rye- or breadcrumb-coated paired fillets in Swedish cooking, whole fresh Don-region herring dusted with flour, and whole salted or fresh fish in Japanese home recipes. The small, oily fish cooks rapidly on a hot pan; the fetched recipes describe browned or crisp skin and fully cooked flesh without reporting probe temperatures. No inferred internal-temperature figures are retained: distinguish the sources' visual endpoints from the separate USDA safe-minimum guidance rather than pretending the recipes published measured temperatures.",
+    "pan_fry_sv": "Stekning av sill använder en tunn beläggning av kryddad rågmjöl eller vanligt mjöl för att skydda skinnet och skapa en krispig yta. Sillens höga fettinnehåll innebär att pannan behöver minimalt tillsatt fett — en liten klick smör eller ett tunt lager olja räcker. Fisken är typiskt flundrad (fjärilsöppnad) eller används hel (rensad), och tillagar på 3–4 minuter per sida vid medelhög värme. Det klassiska nordiska tillbehöret är inlagd rödbeta och lök. De hämtade recepten anger inga termometeravläsningar. Deras visuella slutpunkter hålls skilda från USDA:s separata säkerhetsråd; härled inga temperaturer från utseendet.",
+    "pressure_cooker": "This Japanese home-cooking recipe uses fresh herring, cut crosswise into sections, simmered under pressure in a seasoned liquid. The pressure-cooker method is chosen to soften the smaller bones and season the fish; the author says the method makes it easier to eat the fish bone-in, but explicitly notes that the thickest bones remain firm. The recipe runs for 40 minutes at pressure, then allows the cooker to cool and pressure to release before opening. It reports no internal temperature, measured endpoint, or rest temperature.",
+    "smoker": "Herring's high fat content (10–20% by season) makes it one of the classic hot-smoking fish: the fat protects the flesh through long, low smoke phases and carries smoke-soluble aromatics into the meat. The fetched source documents a three-phase cabinet protocol — a dry phase to form the pellicle, a long cool smoke phase, and a hot finishing phase to a measured internal endpoint — and is one of the rare recipe families in this collection that states an internal pull temperature explicitly. The Swedish compact-box tradition (ABU-röken) is well documented culturally but no fetchable quantified recipe could be located in this session; the previous version of this leaf carried an invented ABU-röken recipe with fabricated times and a 63 °C pull. Those unsourced numbers have been removed — the tradition is real, the specifics were not citable.",
+    "smoker_sv": "Sills höga fettinnehåll (10–20 % beroende på säsong) gör den till en klassisk varmrökningsfisk: fettet skyddar köttet genom långa, låga rökfaser och bär rökaromat in i köttet. Den hämtade källan dokumenterar en trefasig skåprotokoll — torkfas, lång kallrökningsfas, och het slutfas till mättad innertemperatur — och är en av de få receptfamiljerna i samlingen som anger en uttrycklig dragtemperatur. Den svenska röklåde-traditionen (ABU-röken) är kulturellt väldokumenterad men ingen hämtbar kvantifierad receptkälla kunde hittas i denna session; den tidigare versionen av detta blad bar på ett påhittat ABU-röken-recept med fabricerade tider och 63 °C dragning. De osourcade siffrorna har tagits bort — traditionen är riktig, detaljerna gick inte att citera."
   },
   "mackerel": {
-    "grill": "Grilling mackerel is one of its finest preparations: the high fat content renders dramatically over direct heat, the skin blisters and crisps, and the flesh cooks quickly while remaining moist. The fillets are scored through the skin 2–3 times to allow heat penetration and to prevent the skin from buckling. Grilling is done over high direct heat — gas grill, charcoal, or a grill pan — typically 3–4 minutes skin-side down first, then 1–2 minutes flesh-side. Mackerel is also grilled whole (gutted, scored). No culinary source cites a probe temperature for grilled mackerel; all use visual cues: skin charred and set, flesh opaque throughout with no translucency. At visual doneness the internal temperature is approximately 63–70 °C.",
-    "grill_sv": "Grillning av makrill är en av dess finaste beredningar: det höga fettinnehållet smälter dramatiskt vid direktvärmen, skinnet blåser upp och krispar, och köttet tillagas snabbt och saftigt. Filéerna snittas genom skinnet 2–3 gånger för att tillåta värmeinträngning och förhindra att skinnet buktar. Grillning sker vid hög direktvärme — gasgrill, kolgrill eller grillpanna — typiskt 3–4 minuter med skinnsidan nedåt först, sedan 1–2 minuter köttssidan. Makrill grillas också hel (rensad, snittad). Ingen kulinarisk källa anger sondtemperatur för grillad makrill; alla använder visuella tecken: skinn grillat och satt, kött ogenomskinligt rakt igenom utan genomskinlighet. Vid visuell färdighet är innertemperaturen ca 63–70 °C.",
-    "oven_bake": "Oven-baking mackerel works especially well for two very different world traditions: the Japanese salt-grilling preparation (saba shioyaki) done under an oven broil or at high oven heat, and the Moroccan-spiced (chermoula) whole or fillet oven bake. Both traditions bake at 180–220 °C for 15–25 minutes depending on fillet thickness. In saba shioyaki the fish is salted 15–30 minutes before cooking to draw out moisture and firm the flesh. In the chermoula preparation a herb-spice marinade (parsley, coriander, cumin, paprika, lemon) is rubbed over the fish and it is baked in an open dish. No source cites a thermometer endpoint; all use visual cues (opaque throughout, flaking at the thickest point, skin blistered). At visual doneness the internal temperature is approximately 63–70 °C.",
-    "oven_bake_sv": "Ugnsbakning av makrill fungerar särskilt bra för två mycket olika världstraditioner: den japanska saltgrillningsberedningen (saba shioyaki) gjord under ugnsgrill eller vid hög ugnstemperatur, och den marockanska kryddade (chermoula) hel- eller filéugnsbakningen. Bägge traditioner bakar vid 180–220 °C i 15–25 minuter beroende på filéens tjocklek. I saba shioyaki saltas fisken 15–30 minuter innan tillagning för att dra ut fukt och fastna köttet. I chermoula-beredningen gnids en örtkryddblandning (persilja, koriander, spiskummin, paprika, citron) in i fisken och den bakas i en öppen form. Ingen källa anger termometeravläsning; alla använder visuella tecken (ogenomskinlig rakt igenom, flagnar vid tjockaste punkten, skinn blåst). Vid visuell färdighet är innertemperaturen ca 63–70 °C.",
-    "pan_fry": "Pan-frying mackerel over high heat in butter is the Swedish west-coast classic. The fillet is fried skin-side down first in a very hot pan with butter until the skin is deep golden and crispy, then flipped for a brief 1–2 minutes on the flesh side. The high fat content means the fish largely self-bastes; the butter adds flavour and colour. The Swedish tradition (smörstekt makrill) pairs the fish with dill-stewed potatoes. No source cites a thermometer endpoint; visual cues (deeply golden skin, opaque flesh throughout) indicate doneness. At that visual point the internal temperature is approximately 63–68 °C.",
-    "pan_fry_sv": "Pannstekning av makrill vid hög värme i smör är den svenska västkustklassikern. Filén steks med skinnsidan nedåt först i en mycket het panna med smör tills skinnet är djupt gyllent och krispigt, sedan vänds den för kort stekning 1–2 minuter på köttsidan. Det höga fettinnehållet innebär att fisken i stor utsträckning självbastar; smöret tillför smak och färg. Den svenska traditionen (smörstekt makrill) parar fisken med dillstuvad potatis. Ingen källa anger termometeravläsning; visuella tecken (djupt gyllenbrun hud, ogenomskinligt kött rakt igenom) indikerar färdighet. Vid det visuella stadiet är innertemperaturen ca 63–68 °C.",
-    "smoker": "Hot-smoking mackerel is one of its finest preparations, and mackerel's very high fat content (up to 20 g/100 g at season peak) makes it ideal for hot-smoking — the rendering fat self-bastes the flesh and carries smoke compounds deep into the muscle. The classic Swedish format is the **ABU-röken** (compact table-top hot smoker: a lidded metal box with alder sawdust tray and wire rack, placed over a spirit burner or campfire), but mackerel is also hot-smoked on a barbecue using a smoking reservoir or foil parcel of woodchips, as demonstrated by Jamie Oliver in collaboration with Weber. Mackerel is used whole (gutted) or as butterflied fillets (skin on). Whole Atlantic mackerel (typically 25–35 cm, 200–400 g) takes 20–35 minutes in the ABU-röken at approximately 90–100 °C chamber temperature to reach internal 63 °C. Fillet pairs (butterflied) are faster — 15–25 minutes. Alder is the traditional Scandinavian wood choice; apple wood is the preferred choice in British sources (Jamie Oliver/Weber). No culinary source specifies a probe temperature for mackerel × smoker; all use visual cues (golden skin, firm flesh, opaque throughout), but at visual doneness the internal temperature is consistently approximately 63–68 °C. The USDA safe minimum for fish is 63 °C / 145 °F. Probe placement: insert the probe along the dorsal muscle of the thickest fish (or the thickest section of the butterflied fillet), parallel to the spine, tip clear of bone.",
-    "smoker_sv": "Varmrökning av makrill är en av dess finaste beredningar; makrillens mycket höga fettinnehåll (upp till 20 g/100 g vid säsongstopp) gör den idealisk för varmrökning — det smältande fettet bastar köttet och för rökföreningar djupt in i muskulaturen. Det klassiska svenska formatet är **ABU-röken** (kompakt bordsröklåda med alspånsfack och gallerinsats, placerad över spritbrännare eller eld), men makrill varmröks också på en grill med rökreservoar eller folie-rökpaket, som demonstrerat av Jamie Oliver i samarbete med Weber. Makrill används hel (urtagen) eller som fjärilsfilé (med skinn). Hel atlantisk makrill (typiskt 25–35 cm, 200–400 g) tar 20–35 minuter i ABU-röken vid ca 90–100 °C kammartemperatur för att nå innertemperatur 63 °C. Fjärilsfilépar är snabbare — 15–25 minuter. Al är det traditionella skandinaviska trävalget; äppelträ är det föredragna i brittiska källor. Sond insatt längs ryggmuskeln i tjockaste fisken (eller tjockaste delen av fjärilsfilén), parallellt med ryggraden, med spetsen fri från ben."
+    "air_fryer": "Air-frying mackerel is a modern simplification of the pan-fry: the basket's high-velocity hot\nair renders the skin and crisps it without the sticking and splattering that mackerel's very\nhigh fat content causes in a pan. The fetched source is a minimal three-ingredient preparation\n(salt, pepper, heat) aimed at a Japanese-style breakfast: skin-on mackerel pieces scored,\nseasoned, and air-fried at 400 °F with one flip. The source states no internal temperature;\nits endpoint is the 10-minute cook. Modern appliance recipes for this cut are thin on the\nground, so this leaf rests on a single source.",
+    "grill": "Grilling is one of mackerel's finest preparations: the high fat content renders dramatically\nover direct heat, the skin blisters and crisps, and the flesh cooks in minutes while basting\nitself. The fetched sources handle the fillet or whole fish the same three ways — salt first\n(and, in the Korean and Swedish traditions, rest 20–30 minutes to firm the flesh), score the\nskin to stop buckling, and grill skin-side first over medium-high to grey-coal direct heat\nwith a single turn. All three fetched sources use visual endpoints (opaque flesh, golden or\ncharred skin); none states an internal temperature, and none is inferred here.",
+    "grill_sv": "Grillning är en av makrillens finaste beredningar: det höga fettinnehållet renderar kraftigt\növer direktvärme, skinnet blisterar och krispar, och köttet tillagas på minuter medan det\nsjälvbastar. De hämtade källorna saltar först, snittar skinnet och grillar med skinnsidan\nnedåt över medelhög direktvärme med en enda vändning. Alla tre använder visuella slutpunkter;\ningen anger innertemperatur och ingen sådan härleds här.",
+    "oven_bake": "Oven-baking mackerel suits both the Japanese salt-grill-adjacent preparation (saba shioyaki\nfinished under high oven heat) and the Mediterranean vegetable-tray bake: the dry convective\nheat renders the fillet's fat in place, crisping skin against a rack or vegetables while the\nflesh steams inside its own oil. The fetched sources bake at 180–200 °C for 15–30 minutes\ndepending on form (fillets vs whole fish on a potato bed). None states an internal\ntemperature; the endpoints are visual — blistered or golden skin, opaque flaking flesh — and\nno numeric endpoint is inferred here.",
+    "oven_bake_sv": "Ugnsbakning av makrill passar både den japanska saltgrillsnära beredningen (saba shioyaki med\nhög ugnsvärme) och den mediterranska grönsakslågformen: den torra konvektionsvärmen renderar\nfiléns fett på plats och krispar skinnet medan köttet ångas i sin egen olja. De hämtade\nkällorna bakar vid 180–200 °C i 15–30 minuter. Ingen anger innertemperatur; härled inga siffror.",
+    "pan_fry": "Pan-frying mackerel is fast and unforgiving of hesitation: the fillet's very high fat content\n(up to 20 g/100 g at autumn peak) renders on contact with a hot pan, self-basting the flesh,\nwhile the skin crisps within minutes. All three fetched sources score or salt the fish first\n(Swedish scoring, Japanese salting, Turkish flouring) and cook skin-side first over\nmedium-to-high heat with a brief second-side finish. None of the fetched sources states an\ninternal temperature; their endpoints are visual — deep golden skin, opaque flesh — and those\nendpoints are recorded here without converting them into invented numbers.",
+    "pan_fry_sv": "Pannstekning av makrill är snabb och oförlåtande: filéns mycket höga fettinnehåll (upp till\n20 g/100 g vid hösttopp) renderar vid kontakt med het panna och bastar köttet, medan skinnet\nkrispar på minuter. Alla tre hämtade källor snittar eller saltar fisken först och steker med\nskinnsidan nedåt över medelhög–hög värme. Ingen av de hämtade källorna anger\ninnertemperatur; deras slutpunkter är visuella och återges här utan härledda siffror.",
+    "simmer": "Simmering is the great mackerel method of East and South Asia: the fish is gently poached in a\nflavoured broth — miso-sake in Japan, spiced coconut-tamarind water in Kerala — and the oily\nflesh, which would dry under direct heat, stays silky while absorbing the liquid. Both fetched\nsources drop the fish into an already-boiling seasoned liquid and then hold it below a full\nboil (Japanese drop-lid simmering; covered Indian curry pot), and neither sears the fish\nfirst — which is why this is filed as `simmer` rather than `braise`. Both cook the fish\ncompletely; neither states an internal temperature.",
+    "smoker": "Hot-smoking mackerel is one of its finest preparations: the very high fat content (up to\n20 g/100 g at season peak) makes the flesh self-baste under low, smoky heat while smoke\ncompounds dissolve into the rendering surface fat and are carried deep into the muscle. The\ntwo fetched sources show the two dominant home formats — a barbecue's smoking reservoir with\nfruit wood (British), and a staged home-smoker schedule that holds the fish at a measured\ninternal temperature (American/Eastern-European). Both use whole fish or fillets from fresh\nmackerel and both treat the result as a well-done, keepable product. The old version of this\nleaf carried two \"inspired by Swedish tradition\" entries with no citable URL and invented\ninternal figures; those have been removed as source-integrity violations.",
+    "smoker_sv": "Varmrökning av makrill är en av dess finaste beredningar: det mycket höga fettinnehållet gör\nköttet självbastande under låg rökvärme medan rökföreningar löser sig i det renderande\nytterfettet. De två hämtade källorna visar de två dominerande hemmaformaten — grillens\nrökreservoir med fruktträ (brittiskt) och ett stegvis rökschema med mätt\ninnertemperatur (amerikanskt/östeuropeiskt). Den tidigare versionen av detta blad innehöll\ntvå \"inspirerad av svensk tradition\"-poster utan citerbar URL och härledda temperaturer;\ndessa har tagits bort som källintegritetsöverträdelser.",
+    "steam": "Steaming whole spiced mackerel in a banana-leaf parcel (*pepes*) is the Sundanese West-Javanese\nanswer to the fish's fragility: the parcel traps the aromatics against the flesh and the steam\ncooks it in 25 minutes without any risk of sticking or breaking. The fetched source then gives\nthe parcel a final grill or pan-heat blast to char the leaves — a two-stage steam-then-char\nstructure typical of pepes. Indian mackerel (ikan kembung) is the canonical fish for this\npreparation; the high fat content keeps the steamed flesh succulent, and no source states an\ninternal temperature."
   },
   "tuna_steak": {
     "grill": "Grilling tuna steak over a gas or charcoal grill produces a slightly different result than pan searing: the open grate allows drip smoke to contribute flavour, and the dry radiant heat creates char marks on the surface without the oil-bath environment of a pan. The grate must be very clean, very hot, and well-oiled before the tuna goes on — tuna sticks aggressively to a dirty or cool grate and will tear apart.\n\nTypical approach: grate at 250–270 °C, 1–2 minutes per side for rare (38–45 °C centre). For a 3 cm steak, 90 seconds per side over the hottest zone. MEATER probe from the side, aimed at the geometric centre. Pull at 38–42 °C for rare (cold-raw centre) or 50–55 °C for medium-rare (lightly warmed centre). Always rest 2–3 min and slice across the grain for presentation. Carryover: 3–5 °C from a hot grate.",
@@ -129471,6 +129525,18 @@ const CUT_METHOD_PROFILES = {
   "shrimp": {
     "pan_fry": "Shrimp (called prawns in British, Australian, and much of Asian-English usage) are the most widely consumed shellfish globally; the species most commonly used for pan frying include tiger prawns (*Penaeus monodon*), white leg shrimp (*Litopenaeus vannamei*), spot prawns (*Pandalus platyceros*), and Gulf shrimp (*Farfantepenaeus aztecus*). The edible flesh is the tail muscle, which contracts rapidly under heat and curls the tail from the characteristic C-shape of a live shrimp to a tighter O-shape when overcooked. Pan frying over high heat produces a caramelised exterior on the natural sugars in the shell or flesh, and in shell-on preparations the shell acts as a protective layer. The protein in shrimp begins to denature around 50 °C and is fully set at 60 °C; the culinary window for moist, tender shrimp is extremely narrow, typically 3–4 minutes total cook time for medium prawns in a very hot pan. Carryover is 2–3 °C.",
     "pan_fry_sv": "Räkor (kallade *prawns* i brittisk, australiensisk och stor del av asiatisk-engelsk användning) är de mest konsumerade skaldjuren globalt; de arter som vanligast används för pannstekning inkluderar tigergarnaler (*Penaeus monodon*), vitbensräkor (*Litopenaeus vannamei*), prickräkor (*Pandalus platyceros*) och gulfräkor (*Farfantepenaeus aztecus*).\n\nDet ätliga köttet är svansmuskeln, som drar ihop sig snabbt under värme och curlar svansen från den karakteristiska C-formen hos en levande räka till en tightare O-form när de är genomkokta. Pannstekning över hög värme producerar en karameliserad yta på de naturliga sockerarterna i skalet eller köttet, och i skal-på-beredningar fungerar skalet som ett skyddslager. Proteinet i räkor börjar denaturera runt 50 °C och är fullständigt satt vid 60 °C; det kulinariska fönstret för fuktiga, möra räkor är extremt smalt — typiskt 3–4 minuter total tillagningstid för medelstora räkor i en mycket het panna. Eftertillagning: 2–3 °C. Innertemperatur: 60 °C (USDA 63 °C)."
+  },
+  "quail": {
+    "braise": "Quail is a lean white-meat game bird, and unlike collagen-rich cuts it is usually considered poor material for long wet cooking — yet braising is a documented quail method across Mediterranean and European traditions, where the birds are browned first and then gently simmered in wine, stock or vegetables until just tender. The method suits the cut when the goal is infused, saucy flesh rather than crisp skin: the short braise (15–90 minutes depending on wild versus farmed birds) keeps the breast from drying if it is not overdone, and the braising liquid becomes the sauce. This method was not in the auto-populated `methods:` list for quail; it is added on the basis of the fetched sources below. Neither fetched source states an internal pull temperature; none is inferred.",
+    "braise_sv": "Vaktel är en mager vitmässig spel fågel och anses ofta olämplig för lång våttillagning — men stekning/braisering är dokumenterat i medelhavs- och europeisk tradition, där fåglarna brunas först och sedan sjuds mjukt i vin, buljong eller grönsaker. Metoden passar när målet är smakrik, såsig fågel snarare än krispigt skinn: den korta braisen (15–90 minuter beroende på vild eller tam) skyddar bröstet om den inte överkokas. Metoden fanns inte i den automatiska `methods:`-listan; den läggs till på grundval av de hämtade källorna. Ingen källa anger innertemperatur.",
+    "grill": "Quail are small (100–200 g), lean game birds whose thin breast meat and thin bones make direct radiant heat both the fastest and the riskiest method: a charcoal fire browns the skin in minutes, but the window between juicy and dry is narrow because there is little fat and no collagen buffer. Grilling suits the cut when the birds are spatchcocked or butterflied (as in the American Southwestern preparation below) or grilled whole over embers (as in the Turkish tradition), because flattening evens out the extreme breast-to-leg geometry of a 150 g bird. The fetched sources use visual and textural endpoints — skin colour, leg joints loosening — and one states an internal temperature; no pull value is invented where a source is silent. Carryover on a small split bird is small.",
+    "grill_sv": "Vaktel är en liten (100–200 g) mager spel fågel där tunt bröstkött och tunna ben gör direkt strålvärme både snabbast och riskfylldast: glöd bränner skinnet på minuter men fönstret mellan saftigt och torrt är smalt. Grillning passar fågeln när den är fjärilsöppnad (amerikansk sydvästberedning) eller hel över glöd (turkisk tradition), eftersom utplattning utjämnar fågelns extremt olika bröst- och lårgeometri. Källorna använder visuella och taktila slutpunkter — skinnfärg, att lårlederna lossnar — och en anger innertemperatur.",
+    "oven_roast": "Quail (Japanese quail *Coturnix japonica* and common quail *Coturnix coturnix*) are tiny game birds of 100–200 g served one to two per person, with thin, easily pierced breast meat and thin bones. Oven roasting is the most universally documented quail method: the small body roasts through in 20–50 minutes depending on stuffing, glaze and oven temperature, while high heat (180–200 °C in the sources below) browns a skin with very little subcutinal fat to render. The method suits the cut because a whole bird can be plated individually and the oven frees the cook from the minute-by-minute attention a grill demands; the risk is drying, since the lean breast crosses from done to dry quickly. None of the fetched sources states an internal pull temperature — endpoints are glaze colour, clear juices, or stated times — so no pull value is inferred here. Carryover for a 100–200 g bird is modest; the Turkish source rests the bird 5 minutes.",
+    "oven_roast_sv": "Vaktel (*Coturnix japonica* / *Coturnix coturnix*) är en liten spel fågel på 100–200 g med tunt bröstkött och tunna ben. Ugnstekning är den mest universellt dokumenterade metoden: fågeln blir klar på 20–50 minuter beroende på fyllning och glasyr, medan hög värme (180–200 °C i källorna) ger yta på ett skinn med lite underhudsfett. Metoden passar eftersom hel fågel serveras individuellt och ugnen frigör kocken från ständig uppsikt; risken är att den magra fågeln torkar. Ingen källa anger innertemperatur — slutpunkterna är glasyrfärg, klar saft eller angiven tid.",
+    "pan_fry": "Quail's tiny 100–200 g frame and thin breast make stovetop cooking a study in heat management: a heavy pan gives a fast, even sear over the whole flattened surface, then gentle covered cooking or basting carries the interior through without the drying a hard sear alone would cause. Pan-frying suits the cut because it produces the browned skin and pan juices that the lean bird lacks the fat to generate by itself, and because the cook can regulate heat minute by minute. The fetched Turkish and Italian sources both use a two-stage shape — high-heat sear, then covered/basted gentle cooking — and both state times and visual endpoints rather than internal temperatures; none is inferred here.",
+    "pan_fry_sv": "Vaktelns lilla (100–200 g) ram och tunna bröst gör stekningen till en övning i värmehantering: en tung panna ger snabb, jämn yta, följt av mjuk täckt tillagning som bär igenom innertemperaturen utan att uttorka. Pannstekning passar eftersom den ger det brunade skinn och steksky som den magra fågeln saknar fett till själv, och eftersom kocken kan reglera värmen minut för minuta. De hämtade turkiska och italienska källorna använder båda tvåstegsformen — hård stekning, sedan mjuk tillagning — och anger tider och visuella slutpunkter, inte innertemperatur.",
+    "smoker": "Quail's small size and low fat make it a natural hot-smoking subject in Asian wok-smoking and tea-smoking traditions — the bird smokes through in 15–20 minutes, far shorter than the multi-hour sessions used for red meat, and its mild flesh takes tea, rice and sugar smoke aromatics readily. Smoking suits the cut because the smoke chamber's moist, moderate heat (unlike a grill's direct radiation) cooks the lean breast gently while seasoning it; the classic Chinese banquet preparation (茶熏鹌鹑) par-cooks before smoking, while Western adaptations finish the bird in an oven or grill to crisp the skin. The fetched source states times and finishing temperatures for the oven stage but no internal pull temperature; none is inferred.",
+    "smoker_sv": "Vaktelns lilla storlek och låga fett halt gör den till ett naturligt ämne för varmrökning i asiatisk wok- och teröknings-tradition — fågeln röks igenom på 15–20 minuter, långt kortare än rött kött, och det milda köttet tar te-, ris- och sockerrökaromat väl. Rökning passar eftersom den fuktiga, måttliga värmen (i motsats till grillens strålning) tillagar det magra bröstet mjukt samtidigt som det kryddas; den klassiska kinesiska bankettberedningen (茶熏鹌鹑) förkokar före rökning, medan västerländska anpassningar slutför i ugn eller på grill. Den hämtade källan anger tider och ugnstemperatur för slutfasen men ingen innertemperatur."
   },
   "duck_breast": {
     "oven_roast": "Oven-finishing duck breast after an initial stovetop fat-render is the most controlled way to hit medium-rare without overshooting. The pan-start renders the thick subcutaneous fat cap slowly over 10–12 minutes; the oven then provides gentle, even ambient heat to bring the muscle to temperature without any surface-temperature spikes. A moderate oven (175–180 °C / 350–355 °F) allows a 6–10 minute finish window — more forgiving than the frantic stovetop. The oven also keeps the rendered fat liquid and basting the skin from above, producing a lacquer-like finish.\n\nThe critical difference from pure pan-sear: the oven method allows cooking multiple breasts simultaneously to the same temperature, making it the professional kitchen default when cooking for groups. Carryover is 3–5 °C from the oven environment; pull at 52–54 °C to land at 57–60 °C (medium-rare) after a 5-minute rest.\n\nTarget internal temperature: **135–145 °F (57–63 °C)** — medium-rare, pull at 130 °F and rest; carryover brings it to target. For well-done (USDA), pull at 160 °F for a final resting temp of 165 °F.",
@@ -129585,7 +129651,15 @@ const CUT_METHOD_PROFILES = {
     "smoker_sv": "*Väntar på källinsamling.*"
   },
   "chicken_thigh_bone_in": {
-    "oven_roast": "Bone-in, skin-on chicken thigh retains the femur bone and intact skin. The bone\ninsulates the meat at the joint end, slowing penetration of oven heat and adding\nroughly 20–30% to cook time compared to boneless thighs of the same weight. The skin,\nexposed to high dry oven heat, renders its subcutaneous fat and Maillard-browns to a\ncrisp, flavourful crust — the primary reason cooks prefer this format for oven roasting.\nDark-meat muscle fibres (soleus, biceps femoris and related upper-leg muscles) have a\nhigher fat content (6–10% vs 1–2% for breast) and more connective tissue, making them\nforgiving across a wide internal temperature range.\n\nUSDA minimum for all poultry is 74°C (165°F). Collagen in the connective tissue begins\nconverting to gelatin above 70°C; extended cooking at 74–82°C yields progressively more\nrelaxed, silky texture as the connective tissue renders. For oven roast at high heat\n(180–240°C), most mainstream sources target 74–75°C as the practical pull temperature,\nrelying on skin crispiness and visual doneness as secondary cues. Carryover from oven\nroast is typically 2–3°C, bringing the thigh to ~77°C at rest.\n\n**Probe placement**: Insert the probe horizontally from the outer exposed muscle edge,\nkeeping the tip in the geometric centre of the thickest part of the thigh, parallel to\nthe femur and at least 1 cm from the bone surface. The bone heats slower than meat and\nreads false-low if the probe tip contacts it."
+    "air_fryer": "The air fryer is a compact high-velocity convection oven, and for bone-in, skin-on thighs\nthat means rapid rendering of the skin from above while the basket's confined airflow browns\nthe sides. The fetched recipes all exploit the same cut-specific behaviour: the bone-in thigh\nis thick enough to need a two-stage cook (skin down first to render, then skin up to crisp),\nand dark meat tolerates the aggressive finishing heat that would dry out breast. Basket\narrangement and preheating vary by source, and so — dramatically — does the stated endpoint:\nthe four fetched sources range from \"juices run clear\" with no temperature at all to a\n195 °F (91 °C) target aimed at tandoori-style tender texture.",
+    "braise": "Braising is the bone-in thigh's home method across the world's cuisines: sear the skin to build\nfond and fat-render, then finish the piece gently in a measured amount of liquid so the thigh's\ncollagen converts to gelatin without the muscle drying. The bone-in, skin-on format is what\nmakes these dishes work — the femur holds the thigh together through 20–60 minutes of moist\nheat, and the skin (softened by the braise in most traditions) still contributes body to the\nsauce. All four fetched sources use the same architecture — sear, aromatics, deglaze, covered\nfinish — while diverging in cuisine and in whether anyone measures the endpoint: two state\ninternal temperatures (both US-page Caribbean/African-diaspora sources) and two cook by time\nand feel alone.",
+    "grill": "Grilling a bone-in, skin-on thigh is a two-zone problem: the skin needs direct heat to render\nand blister, but the thick bone-side muscle needs time and gentler heat to reach the centre\nwithout charring the exterior. All three fetched sources solve it with structure — a hot side\nfor the initial skin-down sear and a cooler side (or a covered grill) for the finish — and all\nthree marinate or dry-brine first, because the grill's dry convective heat punishes\nunderseasoned dark meat. The bone-in format is standard in grilling traditions worldwide\nbecause the femur keeps the thigh intact over the fire and shields the joint meat from\novercooking; the fetched sources span US barbecue, Indian tandoori-style and Greek treatment.",
+    "oven_roast": "Bone-in, skin-on chicken thigh retains the femur bone and intact skin. The bone\ninsulates the meat at the joint end, slowing penetration of oven heat and adding\nroughly 20–30% to cook time compared to boneless thighs of the same weight. The skin,\nexposed to high dry oven heat, renders its subcutaneous fat and Maillard-browns to a\ncrisp, flavourful crust — the primary reason cooks prefer this format for oven roasting.\nDark-meat muscle fibres (soleus, biceps femoris and related upper-leg muscles) have a\nhigher fat content (6–10% vs 1–2% for breast) and more connective tissue, making them\nforgiving across a wide internal temperature range.\n\nUSDA minimum for all poultry is 74°C (165°F). Collagen in the connective tissue begins\nconverting to gelatin above 70°C; extended cooking at 74–82°C yields progressively more\nrelaxed, silky texture as the connective tissue renders. For oven roast at high heat\n(180–240°C), most mainstream sources target 74–75°C as the practical pull temperature,\nrelying on skin crispiness and visual doneness as secondary cues. Carryover from oven\nroast is typically 2–3°C, bringing the thigh to ~77°C at rest.\n\n**Probe placement**: Insert the probe horizontally from the outer exposed muscle edge,\nkeeping the tip in the geometric centre of the thickest part of the thigh, parallel to\nthe femur and at least 1 cm from the bone surface. The bone heats slower than meat and\nreads false-low if the probe tip contacts it.",
+    "pan_fry": "Pan-frying a bone-in, skin-on thigh is a crust-building method: the skin goes into a hot pan\nand renders its subcutaneous fat against direct conductive heat while the muscle above it\nstays insulated. Because the femur slows heat penetration to the centre of the thickest\npart, pure stovetop pan-frying to doneness is slow, and the fetched recipes all compensate\nin some way — a brief covered steam, a covered finish in stock, or an oven finish. That\npattern is itself the finding for this cut: pan-frying bone-in thighs is typically a\nsear-plus-gentle-finish method, not a full dry-heat cook. No fetched source measures the\npan temperature; they speak in heat levels and minutes per side.",
+    "pressure_cooker": "Pressure cooking collapses the bone-in thigh's long collagen problem into minutes: under\nraised pressure the braising liquid boils above 100 °C, and 10 minutes at pressure plus a\nrelease converts the thigh's connective tissue about as effectively as an hour-long simmer.\nThe fetched Korean source (dakbokkeumtang) sears the chicken first in the pot using its\nsauté function, then pressure-cooks small bone-in pieces in a spicy gochujang sauce — the\ncut-up bone-in thigh is the canonical choice because pressure cooking shreds boneless meat\nand the bone helps pieces hold their shape. A quick release keeps the thighs from\novercooking in residual heat.\n\nThis leaf records one fetched Korean source; pressure-cooker bone-in thigh recipes exist in\nother traditions (e.g. Indian and Caribbean pressure-cooker chicken), but no second\nqualifying recipe was fetched this session, so this is partial research.",
+    "slow_cooker": "Slow-cooker braises (dakjjim-style) exploit the bone-in thigh's tolerance for long, gentle\nmoist heat: the appliance holds roughly 85–95 °C internally on low or high settings, so the\nthigh's collagen converts to gelatin over 4–6 hours while the muscle never approaches the\ntemperatures at which breast meat dries out. The bone-in, skin-on format is explicitly\nrecommended by the fetched Korean source because the skin and bone keep the pieces intact\nthrough the long cook — though the skin turns soft and rubbery rather than crisp, and many\ncooks trim or brown it first. Vegetables (potato, carrot, onion, mushrooms) cook alongside\nthe chicken in a soy-sweet braising sauce.\n\nThis leaf records one fetched Korean source; slow-cooker bone-in thigh recipes exist in\nother traditions (e.g. Caribbean brown stew), but no second qualifying recipe was fetched\nthis session, so this is partial research.",
+    "smoker": "Smoking bone-in, skin-on chicken thighs is an American barbecue practice: the thighs are\nrolled or tucked into uniform bundles so the thin flap of meat around the femur does not\novercook while the thick centre slowly comes up to temperature. Low smoker heat\n(around 120–135 °C / 250–275 °F) renders subcutaneous fat slowly and keeps the skin\nleathery rather than crisp — barbecue practice therefore finishes the thighs hot or sauced,\nor accepts soft skin. The bone-in format is preferred in barbecue because the femur\nprotects the meat from drying during the long exposure to dry convective heat and smoke.\n\nThis leaf records one fetched American barbecue source. Smoking traditions for bone-in\nthighs also exist elsewhere (e.g. European poultry smoking), but no other qualifying\nrecipe was fetched this session, so this is partial research.",
+    "sous_vide": "Sous vide is the only method where the cooking temperature *is* the serving temperature:\nbone-in, skin-on thighs sealed in a bag reach the bath's temperature and stay there, so the\ncook chooses doneness directly — 66 °C (150 °F) gives firm, juicy meat, 74 °C (165 °F)\ngives tender juicy meat, and holding 74 °C for 4–8 hours converts the collagen into\nfall-off-the-bone texture. The bone-in format is explicitly recommended by the fetched\nsource; the bone may be removed after cooking. Because the bag prevents any Maillard\nreaction, the skin is finished separately in a hot skillet — the classic two-stage\nsous-vide-plus-sear structure. Pasteurisation is achieved by time at temperature rather\nthan by a high endpoint, which is why bath charts substitute for pull temperatures here.\n\nThis leaf records one fetched source (Anova / J. Kenji López-Alt). Sous-vide thigh recipes\nfrom other traditions were not fetched this session, so this is partial research."
   },
   "chicken_wing": {
     "air_fryer": "The air fryer works by circulating very hot, dry air at high velocity around the food in a compact chamber. For chicken wings, this creates conditions similar to a convection oven but more intense: the rapid airflow desiccates the skin surface continuously while the small chamber allows the air temperature to recover quickly after the door is opened. The net result is a skin that crisps to near deep-fried texture without submerging in oil.\n\nThe single most effective technique for extra-crispy air-fried skin is tossing wings in a small amount of baking powder before cooking. Baking powder is alkaline; it raises the skin's surface pH, which accelerates the Maillard browning reaction and causes the skin to blister and dehydrate more aggressively. Patting wings completely dry before seasoning is equally critical — residual water must evaporate before crisping can begin.\n\nCarryover is minimal for wings (1–2 °C) because the thin bones and high surface-to-mass ratio allow heat to escape quickly after removal from the fryer. Target internal temperature: **165 °F (74 °C)** minimum; most cooks prefer **170–175 °F (77–79 °C)** for optimal texture at dark-meat temperatures.",
@@ -130093,8 +130167,11 @@ const CUT_METHOD_PROFILES = {
     "pan_sear_sv": "Pannstekning av getkotletter är primärt en sydasiatisk (*tawa gosht*) och mellanösternsk metod — kotletterna marineras i yoghurt och kryddor, sedan sears de hårt på en flat järngrillplatta (*tawa*) eller tung gjutjärnspanna. Yoghurtmarinaden skapar en lätt kol-svartnad skorpa som är djupt smakfull.\n\nHet gjutjärns- eller tung rostfri panna, medel-hög värme, 3–4 minuter per sida. Avsluta i ugn vid 160 °C vid behov för tjockare kotletter. Get tolererar och gynnas av något högre sluttemperaturer (68–74 °C) — bindväven har mjuknat vid dessa temperaturer. Innertemperatur: **68–74 °C** (155–165 °F). Eftertillagning: 3–4 °C."
   },
   "goat_leg": {
-    "oven_roast": "Whole roasted goat leg is a festive preparation in Germany (Ziegenkeule), Greece (katsiki sto fourno), the Caribbean, South and West Africa, and across the Middle East. The meat has moderate fat and benefits from marinating (especially in buttermilk, yoghurt, or wine) to reduce gaminess. Slow oven roasting at 160–200 °C for 2–3 hours gives the best result.\n\nTarget internal temperature: **75–82 °C (167–180 °F)** for fully cooked, moist goat.",
-    "oven_roast_sv": "Hel rostad getlägg är en festlig beredning i Tyskland (*Ziegenkeule*), Grekland (*katsiki sto fourno*), Karibien, Syd- och Västafrika och i hela Mellanöstern. Köttet har måttligt fett och gynnas av marinering (speciellt i kärnmjölk, yoghurt eller vin) för att minska viltighet.\n\nLångsam ugnsstekning vid 160–200 °C i 2–3 timmar ger bäst resultat. Innertemperatur: **75–82 °C (167–180 °F)** för genomstekt med fuktighet kvar. Eftertillagning: 3–5 °C. Sondplacering: stick in i den tjockaste köttdelen (lårmuskulaturen), borta från lårbenet."
+    "braise": "Braising is the dominant world treatment for goat leg, and for a reason rooted in the cut:\nthe leg's connective tissue is abundant and the muscle is leaner than lamb's, so hours of\ngentle moist heat convert collagen to gelatin while the assertive fat mellows into the sauce.\nAll three fetched sources cut the leg into bone-in pieces (or use it in chunks), brown it,\nthen simmer it for 2–2½ hours in a flavoured liquid — curry (Jamaican), chile paste and\nchicha (Ecuadorian), ancho marinade and tomato broth (Mexican). Not one states an internal\ntemperature: in every tradition the endpoint is \"very tender\", which for this cut means\nwell above the poultry-style safe line, in the 80+ °C region where collagen has fully\nmelted. No numeric endpoint is invented here.",
+    "grill": "Grilling a whole goat leg is the Caribbean answer to the cut: an oil-and-herb marinade worked\ninto deep slits, hours of indirect charcoal heat with a rosemary-brush baste, then a brief\ndirect finish for colour. The method treats the leg like a small whole roast — tied to hold\nits shape, cooked 2–3 hours at barbecue temperatures (135–150 °C) — and the fat that renders\nreturns as smoke. The two fetched sources disagree, however, about where the leg is done: the\nCaribbean source cooks to tenderness with no stated temperature, while a US source pulls a\nbutterflied leg at **135–140 °F (57–60 °C) for medium rare** — below the cut file's 63 °C\nsafe line. That divergence is the leaf's central finding.",
+    "oven_roast": "Whole roasted goat leg is festive cooking in Germany (Ziegenkeule), Greece (katsiki-style\nroasts), South Asia (raan), the Caribbean and Russia. The cut is lean-ish and collagen-heavy,\nso every fetched source protects it the same way — a long covered or foil-wrapped phase at\nmoderate heat (130–200 °C) for 2–3½ hours, then an uncovered finish for colour. Acid or\ndairy marinades (buttermilk, yoghurt, lemon) precede nearly all of them to temper gaminess.\nTwo of the four fetched sources publish internal-temperature guidance (≈70 °C for goat, and\n160–165 °F general fork-tender guidance); the others cook to time and bone separation.\n\n**Source-integrity note (2026-10-24):** the previous version of this leaf recorded invented\npull and final-temperature steps (\"Verify 80 °C\", \"Pull at 80–82 °C\", \"Final temperature:\n82–85 °C\", a summary table of pull ranges) that no source published — all removed. It also\ncarried an \"asun\" recipe that did not match the fetched African Bites page at all (the real\npage is boiled smoked goat pieces, broiled and stir-fried — not a leg roast) and a seco de\nchivo stovetop braise misfiled under oven roast. The fabricated asun record is removed (the\nreal page is recorded as a lead for a different method); seco de chivo has moved to\n`goat_leg-braise.md`.",
+    "pressure_cooker": "Pressure cooking compresses goat leg's multi-hour braise into minutes: browned bone-in leg\npieces go into a sealed pot with curry aromatics and stock, cook 40 minutes at high pressure,\nand release naturally — the raised-pressure environment converts collagen as effectively as\n2–3 hours of simmering. This is the Caribbean curry-goat tradition's weeknight adaptation and\nit fits the cut exactly: goat leg's toughness is a time problem that pressure solves without\ndrying the meat. The one fetched source uses cubed bone-in goat and states no internal\ntemperature; the endpoint is the pressure program plus a final reduction.",
+    "slow_cooker": "The slow cooker is the modern home of goat-leg curry: bone-in leg pieces spend 4–5 hours in a\nsealed moist environment just under simmering, which is exactly the regime the cut's collagen\ndemands — and the appliance's sealed lid does what the Caribbean and Indian braising pot's lid\ndoes, without any attention. Both fetched sources use bone-in goat from the leg region cut\ninto pieces (Caribbean curry goat; Indian goat curry where the author notes \"typically we get\ngoat leg cut into pieces\"), both season heavily and cook to tenderness, and neither states an\ninternal temperature. The result is braise-equivalent: fall-apart meat in a spiced sauce."
   },
   "goat_shank": {
     "braise": "Braising is the definitive method for goat shank — the only method that reliably converts its dense collagen to gelatin. The shank goes into a braising vessel with aromatic vegetables, liquid (stock, wine, beer, or water), and spices covering the lower two-thirds of the shank. Covered, low oven (160–170 °C / 325 °F) for 2.5–3 hours; or stovetop simmer; or slow cooker on LOW for 6–8 hours.\n\nTarget: 88–93 °C internal AND sustained time at that temperature — temperature alone is insufficient; the collagen needs 1–1.5 hours at 88 °C or above to fully hydrolyse. MEATER probe horizontally through the thickest muscle, parallel to the bone. The shank is done when the meat pulls away from the bone easily; the braising liquid will have concentrated into a rich, gelatin-thickened sauce.",
@@ -130244,8 +130321,10 @@ const CUT_METHOD_PROFILES = {
     "oven_roast_sv": "Ugnsstekning av frenchad rack of lamb är en tvåstegsmetod: sear fettkappan och köttytorna i het ugnsfast panna (2–3 min per sida), lägg sedan racket bensidan ned i 200–220 °C ugn i 15–20 minuter. En örtkorpa (*persillade* — senap + ströbröd + örter) appliceras innan ugnen för ett aromrikt ytskikt. Innertemperatur: **52–57 °C (126–135 °F)** för medium-rare. Eftertillagning: 4–6 °C. Dra vid 50–52 °C. Sond längs loin-muskeln (*longissimus dorsi*) borta från benet. Vila 5–8 minuter täckt."
   },
   "ground_lamb": {
-    "pan_fry": "Ground (minced) lamb is used in countless traditions — from Middle Eastern kibbeh and North African merguez to Greek moussaka, Indian keema, and Turkish Akçaabat köfte. Pan-frying ground lamb requires thorough cooking (ground meat has higher bacterial contamination risk than whole cuts). The aromatics sautéed with the mince are as important as the meat itself.\n\nTarget internal temperature: **74 °C (165 °F)** for food-safe ground lamb.",
-    "pan_fry_sv": "Malet lamm används i otaliga traditioner — från mellanösternsk kibbeh och nordafrikansk merguez till grekisk moussaka, indisk keema och turkisk köfte. Pannstekning av malet lamm kräver fullständig genomkokning (malet kött har högre kontaminationsrisk än hela snitt).\n\nAromaterna — lök, vitlök, spiskummin, koriander, kanel och mynta — är lika viktiga som tekniken. Tillagning tills köttet är helt genomstekt och lätt brynnat, ≈ 75 °C internt. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond i tjockaste delen av köttblandningen eller biff."
+    "grill": "Grilling ground lamb means shaping it onto skewers — the kebab family (Adana, kafta) — and\ntaking it over charcoal, where the mince's high fat content drips, flares and returns as\nsmoke-crust. The fetched source is the canonical Turkish form: hand-mixed spiced mince\npressed onto skewers, grilled over medium-high charcoal and turned until charred outside.\nThe cut's grinding makes the meat cohesive enough to hold a skewer and risky enough that the\ncooked-through rule of ground meat applies. **Boundary note:** grilled lamb *burgers* and\nnamed *kofta* preparations have their own cut files (`lamb_burger`, `lamb_kofta`) in this\ndataset; this leaf covers skewered grilled lamb mince as such.",
+    "oven_bake": "Ground lamb's second great life is as the savoury layer inside baked dishes — moussaka,\nkibbeh bil sanieh, shepherd's pie — where the mince is first browned and simmered on the\nstovetop, then baked inside a casserole (béchamel, bulgur crust, mashed potato). The oven\nphase is not where the meat cooks: it is where the assembled dish sets and the meat sauce's\nflavours meld under a topping. This two-stage structure is why none of these traditions\nmeasures the meat's internal temperature — by the time the casserole bakes, the mince has\nlong passed every safe threshold. The one fetched source is Greek moussaka; a Turkish\nkıymalı patates record (previously misfiled under pan_fry) is retained below as a lead.",
+    "pan_fry": "Pan-frying ground lamb is a two-beat technique in both fetched sources: a hard sear to brown\nthe mince (or shaped cutlets) and drive off surface moisture — the Maillard step that\nseparates grey mince from savoury mince — followed by a gentler covered phase to cook the\ninterior through. Because grinding distributes surface bacteria through the meat, both the\nfood-safety logic and the sources demand the mince be cooked *completely*, not pink. The\nfetched sources differ in form (Russian shaped cutlets of home-ground lamb-and-beef vs Indian\nkeema filling browned loose) but share the sear-then-cover architecture, and one of them\npublishes the collection's only stated internal endpoint for this cut.\n\n**Source-integrity note (2026-10-24):** the previous version of this leaf recorded three\nrecipes \"via web search 2026-04-24\" with invented probe steps (\"Insert probe … Verify 74 °C\n(165 °F)\", \"Final temperature: 74–76 °C\"). Re-fetching showed: the Nefisyemektarifleri page\nis an **oven-baked** layered potato-and-mince dish with mince of unspecified species (not a\npan-fry, not verified lamb); the IndianHealthyRecipes URL now resolves to a **keema naan**\nrecipe, not the transcribed peas curry; and the BBC Good Food moussaka page is\nsubscription-walled and its recipe text unverifiable. All three records and their invented\ntemperatures were removed; the two sources below replace them.",
+    "simmer": "Simmering ground lamb is the Indian keema method: the mince is browned in the aromatic base,\nthen covered and gently simmered with water, tomatoes and peas until tender and the sauce\nreduces. Unlike a whole cut, ground lamb needs no collagen conversion — the simmer exists to\nblend flavours and drive off moisture to the desired consistency, and to guarantee the\nmince's centre is completely cooked. The fetched source cooks covered 30–60 minutes and\nfinishes uncovered to thicken; it states no internal temperature."
   },
   "lamb_burger": {
     "grill": "Grilling lamb burgers requires managing the high fat content: lamb fat drips onto the grill and causes flare-ups that can char the exterior before the interior is cooked through. Use a two-zone grill or medium-direct heat (not maximum), with the grill lid closed between flips to trap heat. Patties should be 1.5–2 cm thick for even cooking; thicker patties require indirect heat after the initial sear.\n\nCook 4–5 minutes per side at medium-high heat (about 200 °C at grate), flipping once. MEATER probe inserted from the side of the patty into the geometric centre. Target: 71 °C (160 °F) for ground meat food safety. Carryover: 3–5 °C. Pull at 66–68 °C to rest to 71 °C.",
@@ -130570,6 +130649,33 @@ const RECIPE_TITLES_INDEX = {
       "Kalt gedämpfte Goldbrasse in Liebstöckelfond mit Kürbissalat (Cold-Steam Gilt-Head Bream with Lovage Fond) — ichkoche.at"
     ]
   },
+  "grayling": {
+    "boil": [
+      "Pelles Fiske — Kokt harr i bit",
+      "Mats Sjöstrand / Flugfiskemagasinet Rackelhanen — harr kokt i court-bouillon"
+    ],
+    "grill": [
+      "Chef Phil Yeomans / Andrej Cooks Fish — European Grayling Part 2 (plancha)",
+      "Pelles Fiske — Harr på macka"
+    ],
+    "oven_bake": [
+      "Pelles Fiske — Pelles skinkharr",
+      "Pernilla Persson / Pelles Fiske — Pernillas vitlöksharr",
+      "The Big Fat Mushroom Hunter — Salt Baked Grayling"
+    ],
+    "pan_fry": [
+      "Gebratene Äsche mit Zitronen-Kräuterbutter — Angeln.at",
+      "Gebratene Äsche — Bobby Bräuer / 7hauben",
+      "Smörstekt harr på Jämtlandsvis — Birgitta Höglund",
+      "Harr med bacon — Mats Sjöstrand / Rackelhane"
+    ],
+    "poach": [
+      "Mats Sjöstrand / Flugfiskemagasinet Rackelhanen — harr i court-bouillon"
+    ],
+    "smoker": [
+      "Chef Phil Yeomans / Andrej Cooks Fish — European Grayling Part 1 (cedar plank)"
+    ]
+  },
   "haddock": {
     "oven_roast": [
       "Oven-Baked Crispy Panko-Crusted Haddock — Hamiltons Fish (UK)",
@@ -130830,15 +130936,25 @@ const RECIPE_TITLES_INDEX = {
     ]
   },
   "baltic_herring": {
+    "boil": [
+      "Matkult.se (Institutet för språk och folkminnen material) — Tillagning: kokt salt fisk"
+    ],
+    "grill": [
+      "Matkult.se (Institutet för språk och folkminnen material) — Glödstekt eller halstrad"
+    ],
     "oven_bake": [
-      "Strömmingslåda — Köket.se"
+      "Köket.se — Strömmingslåda",
+      "Köket.se — Strömmingslåda med kaviargrädde",
+      "Marthaförbundet (Martha.fi) — Strömmingsflundror (oven variant)"
     ],
     "pan_fry": [
-      "Strömmingsflundror — Köket.se"
+      "Köket.se — Stekta strömmingsflundror",
+      "Marthaförbundet (Martha.fi) — Strömmingsflundror",
+      "Tillmiddag.se — Stekt strömming med potatismos"
     ],
     "smoker": [
-      "ABU-röken: rökt strömming (inspired by Swedish hot-smoking tradition)",
-      "ABU-röken: rökt strömmingsflundra (inspired by Swedish hot-smoking tradition)"
+      "Matkult.se (Institutet för språk och folkminnen material) — Konservering och tillagning: Rökning",
+      "Susanne Jarl / Recepten.se — Strömming (ingredient page)"
     ]
   },
   "eel": {
@@ -130874,37 +130990,62 @@ const RECIPE_TITLES_INDEX = {
     ]
   },
   "herring": {
+    "braise": [
+      "Chris De La Rosa / CaribbeanPot.com — Stewed Red Herrings (smoked herring)"
+    ],
     "grill": [
-      "Grilled herrings with mustard butter — BBC Good Food"
+      "Grilled herrings with mustard butter — BBC Good Food",
+      "cocomin23 / Cookpad JP — ニシンの姿焼き（塩焼き）(Whole grilled salted herring)",
+      "ЮсяЮся / EdimDoma — Сельдь гриль (charcoal-grilled fresh fish; herring variant)"
     ],
     "oven_bake": [
-      "Herrings rolled with mustard and pancetta — BBC Good Food"
+      "Herrings rolled with mustard and pancetta — BBC Good Food",
+      "Sindirella / EdimDoma — Сельдь, запечённая в вине с травами и чесноком",
+      "James Beard Foundation — Baked Spiced Herring"
     ],
     "pan_fry": [
       "Stegt sild i rugmel (Danish fried herring in rye flour) — Madens Verden",
-      "Stekt sill med rågmjöl (Swedish fried herring in rye flour) — Koket.se / Tareq Taylor",
-      "Gebratene Heringe in Mehl (German pan-fried herring in flour) — Chefkoch.de"
+      "Stekt sill med potatismos, lingon och brynt smör — Köket.se / Tareq Taylor",
+      "М. Е. / EdimDoma — Донская селедка жареная (Don-region pan-fried herring)",
+      "Gebratene Heringe in Mehl (German pan-fried herring in flour) — Chefkoch.de",
+      "HIROGARU / Cookpad JP — にしんのムニエル・マスタードソースのせ"
+    ],
+    "pressure_cooker": [
+      "がまおーじの母 / Cookpad JP — 圧力鍋でにしんの煮付け (Pressure-cooked simmered herring)"
     ],
     "smoker": [
-      "ABU-röken: rökt sill (inspired by Swedish hot-smoking tradition)",
-      "Hot Smoked Herring (inspired by MySmoker.ca)"
+      "MySmoker Manufacturing — Hot Smoked Herring"
     ]
   },
   "mackerel": {
+    "air_fryer": [
+      "3 Ingredient Mess-Free CRISPY Air Fryer Mackerel — Tiffy / Tiffy Cooks"
+    ],
     "grill": [
-      "Grillad makrill — Köket.se"
+      "Grillad makrill — Köket.se",
+      "Receta de caballa a la barbacoa — Pakus / Directo al Paladar",
+      "Godeungeo gui (Grilled Mackerel) — Korean Bapsang"
     ],
     "oven_bake": [
       "Saba Shioyaki (Japanese salt-grilled mackerel) — Just One Cookbook",
-      "Mackerel baked with chermoula — BBC Good Food"
+      "Mackerel baked with chermoula — BBC Good Food",
+      "Fırında Uskumru Tarifi — Yemek.com"
     ],
     "pan_fry": [
-      "Smörstekt makrill med dillstuvad potatis — Köket.se (Alexandra Zazzi)"
+      "Smörstekt makrill med dillstuvad potatis — Köket.se (Alexandra Zazzi)",
+      "ふっくらツヤツヤ！サバの照り焼き (Saba no teriyaki) — DELISH KITCHEN (Asuka Sawada)",
+      "Tavada Uskumru Tarifi — Yemekte Balık Var"
+    ],
+    "simmer": [
+      "Saba Misoni (Mackerel Simmered in Miso) — Just One Cookbook",
+      "Mackerel Fish Curry (Ayala Curry) — Shalini / Something's Cooking"
     ],
     "smoker": [
-      "ABU-röken: rökt makrill (inspired by Swedish hot-smoking tradition)",
-      "Hot Smoked Mackerel with Apple Wood — Weber Barbecue (inspired by Jamie Oliver)",
-      "Varmrökt makrill i röklåda — Swedish recipe (inspired by Swedish outdoor cooking guides)"
+      "Hot Smoked Mackerel with Apple Wood — Jamie Oliver / Weber",
+      "Homemade Hot Smoked Mackerel — Victor / Taste of Artisan"
+    ],
+    "steam": [
+      "Pepes Ikan Kembung (Steamed & Grilled Mackerel in Banana Leaves) — Nunuk Sri Rahayu / Cook Me Indonesian"
     ]
   },
   "tuna_steak": {
@@ -130964,6 +131105,30 @@ const RECIPE_TITLES_INDEX = {
       "Prawns with Harissa and Preserved Lemon (inspired by Yotam Ottolenghi)",
       "Pan-Fried King Prawns with Ginger and Spring Onion (inspired by Rick Stein)",
       "Chilli and Lime Sautéed Prawns (inspired by Donna Hay)"
+    ]
+  },
+  "quail": {
+    "braise": [
+      "Hank Shaw — Greek Braised Quail",
+      "Pakus / Directo al Paladar — Codornices guisadas al vino"
+    ],
+    "grill": [
+      "Hank Shaw — BBQ Quail, Southwest Style",
+      "Nefis Yemek Tarifleri — Mangalda Bıldırcın"
+    ],
+    "oven_roast": [
+      "Валерия / Edimdoma — Маринованные перепела в вине, запечённые с овощами и беконом",
+      "Liliana Fuchs / Directo al Paladar — Codornices asadas glaseadas al whisky",
+      "Renata Briano / GialloZafferano blog — Quaglie al forno con pancetta e patate",
+      "美君厨房 / Xiachufang — 蜜汁烤鹌鹑（烤箱版）(Honey-glazed roast quail, oven version)",
+      "Zeynep Ayar / Yemek.com — Fırında Bıldırcın"
+    ],
+    "pan_fry": [
+      "Zeynep Ayar / Yemek.com — Tavada Bıldırcın",
+      "lemieloverie / GialloZafferano blog — Quaglie in padella"
+    ],
+    "smoker": [
+      "Cynthia Gold / Tea Journey — Tea Smoked Quail"
     ]
   },
   "duck_breast": {
@@ -131257,12 +131422,46 @@ const RECIPE_TITLES_INDEX = {
     ]
   },
   "chicken_thigh_bone_in": {
+    "air_fryer": [
+      "Emily Teel (reviewed by Suzy Karadsheh) / The Mediterranean Dish — Air Fryer Chicken Thighs with Ras el Hanout",
+      "umejan / Cookpad Japan — ノンフライヤーでローストチキンレッグ (Roast chicken leg in a non-fryer / air fryer)",
+      "Samuel Goldsmith / BBC Good Food — Air fryer chicken thighs",
+      "Debby / A Feast for the Eyes — Air Fryer Tandoori Chicken Thighs"
+    ],
+    "braise": [
+      "Audrey Le Goff / Pardon Your French — Braised Chicken Thighs with Garlic and Onion",
+      "Hyosun Ro / Korean Bapsang — Jjimdak (Korean Braised Chicken)",
+      "Imma / Immaculate Bites — Jamaican Brown Stew Chicken",
+      "Imma / Immaculate Bites — Yassa Chicken (Poulet au Yassa)"
+    ],
+    "grill": [
+      "Michael Symon / Food Network Magazine — Grilled Chicken Thighs with Blackberry BBQ Sauce",
+      "Melissa Gaman / Food Network Kitchen — Tandoori-Style Grilled Chicken",
+      "Food Network Kitchen — Grilled Chicken Thighs with Israeli Couscous Salad (\"a Greek treatment\")"
+    ],
     "oven_roast": [
       "Crispy Herb Baked Chicken with Gravy (inspired by RecipeTin Eats)",
       "Roasted Lemon Chicken Thighs with Potatoes (inspired by The Woks of Life)",
       "Baked Chicken Thighs with Spiced Tomato Rub (inspired by The Mediterranean Dish)",
       "Ugnsstekta kycklinglår (Oven-Roasted Chicken Thighs) (inspired by Köket.se)",
       "Rosemary Roast Chicken Thighs, New Potatoes, Asparagus & Garlic (inspired by BBC Good Food)"
+    ],
+    "pan_fry": [
+      "Daddy Lau / Made With Lau — Dad's Pan-Fried Chicken Thighs",
+      "Julie Maestre / Cooked by Julie — Pan Seared Chicken Thighs",
+      "LapSha (Мария) / EdimDoma — Куриные бедра с хрустящей ароматной корочкой (Chicken thighs with crispy aromatic crust)"
+    ],
+    "pressure_cooker": [
+      "Korean Bapsang — Pressure Cooker Dak Bokkeumtang (Korean Spicy Chicken Stew)"
+    ],
+    "slow_cooker": [
+      "Korean Bapsang — Slow Cooker Dakjjim (Korean Braised Chicken)"
+    ],
+    "smoker": [
+      "Susie Bulloch / Hey Grill Hey — Smoked Chicken Thighs"
+    ],
+    "sous_vide": [
+      "J. Kenji López-Alt / Anova Culinary Recipes — Chicken Thigh"
     ]
   },
   "chicken_wing": {
@@ -132394,10 +132593,27 @@ const RECIPE_TITLES_INDEX = {
     ]
   },
   "goat_leg": {
+    "braise": [
+      "Jamaican Curry Goat — Chris De La Rosa / CaribbeanPot.com",
+      "Birria de Chivo (Mexican Goat Stew) — Chef's Pencil",
+      "Seco de Chivo (Ecuadorian Braised Goat Stew) — Laylita's Recipes"
+    ],
+    "grill": [
+      "Succulent Grilled Leg of Goat — Chris De La Rosa / CaribbeanPot.com",
+      "Grilled Leg of Goat — Erin Scott / Yummy Supper"
+    ],
     "oven_roast": [
-      "Ziegenkeule im Römertopf (inspired by Chefkoch.de)",
-      "Asun Goat (inspired by African Bites)",
-      "Seco de Chivo (Ecuadorian goat leg braised whole) (inspired by Laylita.com)"
+      "Ziegenkeule im Römertopf — Chefkoch.de community recipe",
+      "Greek roasted goat leg — Efthimis \"Makos\" Koukakis / The Hungry Bites",
+      "Козья нога, запеченная в духовке (Goat leg baked in the oven) — Сибирячка / iamcook.ru",
+      "Roast Leg of Goat (Raan) — Nosheen Babar / Untold Recipes By Nosheen"
+    ],
+    "pressure_cooker": [
+      "Instant Pot Curry Goat — The Sophisticated Caveman"
+    ],
+    "slow_cooker": [
+      "Ultimate Slow Cooker (CrockPot) Curry Goat — Chris De La Rosa / CaribbeanPot.com",
+      "Slow Cooker Goat Curry — Ashley / My Heart Beets"
     ]
   },
   "goat_shank": {
@@ -132663,10 +132879,18 @@ const RECIPE_TITLES_INDEX = {
     ]
   },
   "ground_lamb": {
+    "grill": [
+      "Adana Kebab (Turkish Ground Lamb Kebabs) — Faith Gorsky / An Edible Mosaic"
+    ],
+    "oven_bake": [
+      "Traditional Greek Moussaka with Eggplant — Suzy Karadsheh / The Mediterranean Dish"
+    ],
     "pan_fry": [
-      "Kıymalı Patates (Turkish lamb mince with potato) (inspired by Nefisyemektarifleri.com)",
-      "Keema (Indian spiced minced lamb) (inspired by IndianHealthyRecipes.com)",
-      "Lamb Mince Moussaka (inspired by BBC Good Food)"
+      "Котлеты из баранины и говядины (Lamb and beef cutlets) — Нина Минина-Р / iamcook.ru",
+      "Keema Naan filling — Swasthi Shreekanth / Indian Healthy Recipes"
+    ],
+    "simmer": [
+      "Lamb Keema Matar (Minced Meat Curry with Peas) — Shari / My Fancy Pantry"
     ]
   },
   "lamb_burger": {
@@ -133495,7 +133719,9 @@ const EXP_TREE = {
                   "pan_fry",
                   "grill",
                   "smoker",
-                  "oven_bake"
+                  "oven_bake",
+                  "boil",
+                  "poach"
                 ],
                 "usda_safe_c": 63,
                 "usda_safe_f": 145,
@@ -134029,7 +134255,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "pan_fry",
                   "oven_bake",
-                  "smoker"
+                  "smoker",
+                  "grill",
+                  "boil"
                 ],
                 "usda_safe_c": 63,
                 "usda_safe_f": 145,
@@ -134076,7 +134304,9 @@ const EXP_TREE = {
                   "pan_fry",
                   "grill",
                   "oven_bake",
-                  "smoker"
+                  "smoker",
+                  "braise",
+                  "pressure_cooker"
                 ],
                 "usda_safe_c": 63,
                 "usda_safe_f": 145,
@@ -134099,7 +134329,10 @@ const EXP_TREE = {
                   "grill",
                   "pan_fry",
                   "oven_bake",
-                  "smoker"
+                  "smoker",
+                  "simmer",
+                  "steam",
+                  "air_fryer"
                 ],
                 "usda_safe_c": 63,
                 "usda_safe_f": 145,
@@ -134282,7 +134515,8 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "pan_fry",
-                  "smoker"
+                  "smoker",
+                  "braise"
                 ],
                 "usda_safe_c": 74,
                 "usda_safe_f": 165,
@@ -134823,7 +135057,11 @@ const EXP_TREE = {
                   "braise",
                   "grill",
                   "oven_roast",
-                  "pan_fry"
+                  "pan_fry",
+                  "pressure_cooker",
+                  "slow_cooker",
+                  "smoker",
+                  "sous_vide"
                 ],
                 "usda_safe_c": 74,
                 "usda_safe_f": 165,
@@ -136766,7 +137004,9 @@ const EXP_TREE = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "braise",
+                  "grill",
                   "oven_roast",
+                  "pressure_cooker",
                   "slow_cooker"
                 ],
                 "usda_safe_c": 63,
@@ -137548,7 +137788,9 @@ const EXP_TREE = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "grill",
-                  "pan_fry"
+                  "oven_bake",
+                  "pan_fry",
+                  "simmer"
                 ],
                 "usda_safe_c": 71,
                 "usda_safe_f": 160,
@@ -138826,6 +139068,8 @@ const EXP_RECIPE_INDEX = {
   "tri_tip-smoker": "beef/steaks/tri_tip-smoker.md",
   "tri_tip-sous_vide": "beef/steaks/tri_tip-sous_vide.md",
   "tri_tip": "beef/steaks/tri_tip.md",
+  "baltic_herring-boil": "fish/oily_fish/baltic_herring-boil.md",
+  "baltic_herring-grill": "fish/oily_fish/baltic_herring-grill.md",
   "baltic_herring-oven_bake": "fish/oily_fish/baltic_herring-oven_bake.md",
   "baltic_herring-pan_fry": "fish/oily_fish/baltic_herring-pan_fry.md",
   "baltic_herring-smoker": "fish/oily_fish/baltic_herring-smoker.md",
@@ -138836,15 +139080,20 @@ const EXP_RECIPE_INDEX = {
   "eel-pan_fry": "fish/oily_fish/eel-pan_fry.md",
   "eel-smoker": "fish/oily_fish/eel-smoker.md",
   "eel": "fish/oily_fish/eel.md",
+  "herring-braise": "fish/oily_fish/herring-braise.md",
   "herring-grill": "fish/oily_fish/herring-grill.md",
   "herring-oven_bake": "fish/oily_fish/herring-oven_bake.md",
   "herring-pan_fry": "fish/oily_fish/herring-pan_fry.md",
+  "herring-pressure_cooker": "fish/oily_fish/herring-pressure_cooker.md",
   "herring-smoker": "fish/oily_fish/herring-smoker.md",
   "herring": "fish/oily_fish/herring.md",
+  "mackerel-air_fryer": "fish/oily_fish/mackerel-air_fryer.md",
   "mackerel-grill": "fish/oily_fish/mackerel-grill.md",
   "mackerel-oven_bake": "fish/oily_fish/mackerel-oven_bake.md",
   "mackerel-pan_fry": "fish/oily_fish/mackerel-pan_fry.md",
+  "mackerel-simmer": "fish/oily_fish/mackerel-simmer.md",
   "mackerel-smoker": "fish/oily_fish/mackerel-smoker.md",
+  "mackerel-steam": "fish/oily_fish/mackerel-steam.md",
   "mackerel": "fish/oily_fish/mackerel.md",
   "salmon_fillet-air_fryer": "fish/salmon/salmon_fillet-air_fryer.md",
   "salmon_fillet-grill": "fish/salmon/salmon_fillet-grill.md",
@@ -138885,6 +139134,12 @@ const EXP_RECIPE_INDEX = {
   "flounder": "fish/white_fish/flounder.md",
   "gilt_head_bream-steam": "fish/white_fish/gilt_head_bream-steam.md",
   "gilt_head_bream": "fish/white_fish/gilt_head_bream.md",
+  "grayling-boil": "fish/white_fish/grayling-boil.md",
+  "grayling-grill": "fish/white_fish/grayling-grill.md",
+  "grayling-oven_bake": "fish/white_fish/grayling-oven_bake.md",
+  "grayling-pan_fry": "fish/white_fish/grayling-pan_fry.md",
+  "grayling-poach": "fish/white_fish/grayling-poach.md",
+  "grayling-smoker": "fish/white_fish/grayling-smoker.md",
   "grayling": "fish/white_fish/grayling.md",
   "haddock-oven_roast": "fish/white_fish/haddock-oven_roast.md",
   "haddock-pan_fry": "fish/white_fish/haddock-pan_fry.md",
@@ -138948,7 +139203,11 @@ const EXP_RECIPE_INDEX = {
   "goat_chop-grill": "game/goat/goat_chop-grill.md",
   "goat_chop-pan_sear": "game/goat/goat_chop-pan_sear.md",
   "goat_chop": "game/goat/goat_chop.md",
+  "goat_leg-braise": "game/goat/goat_leg-braise.md",
+  "goat_leg-grill": "game/goat/goat_leg-grill.md",
   "goat_leg-oven_roast": "game/goat/goat_leg-oven_roast.md",
+  "goat_leg-pressure_cooker": "game/goat/goat_leg-pressure_cooker.md",
+  "goat_leg-slow_cooker": "game/goat/goat_leg-slow_cooker.md",
   "goat_leg": "game/goat/goat_leg.md",
   "goat_shank-braise": "game/goat/goat_shank-braise.md",
   "goat_shank-oven_roast": "game/goat/goat_shank-oven_roast.md",
@@ -139025,7 +139284,10 @@ const EXP_RECIPE_INDEX = {
   "lamb_neck_filet-braise": "lamb/chops/lamb_neck_filet-braise.md",
   "lamb_neck_filet-slow_cooker": "lamb/chops/lamb_neck_filet-slow_cooker.md",
   "lamb_neck_filet": "lamb/chops/lamb_neck_filet.md",
+  "ground_lamb-grill": "lamb/ground/ground_lamb-grill.md",
+  "ground_lamb-oven_bake": "lamb/ground/ground_lamb-oven_bake.md",
   "ground_lamb-pan_fry": "lamb/ground/ground_lamb-pan_fry.md",
+  "ground_lamb-simmer": "lamb/ground/ground_lamb-simmer.md",
   "ground_lamb": "lamb/ground/ground_lamb.md",
   "lamb_burger-grill": "lamb/ground/lamb_burger-grill.md",
   "lamb_burger": "lamb/ground/lamb_burger.md",
@@ -139154,7 +139416,15 @@ const EXP_RECIPE_INDEX = {
   "chicken_thigh-oven_roast": "poultry/chicken/chicken_thigh-oven_roast.md",
   "chicken_thigh-smoker": "poultry/chicken/chicken_thigh-smoker.md",
   "chicken_thigh": "poultry/chicken/chicken_thigh.md",
+  "chicken_thigh_bone_in-air_fryer": "poultry/chicken/chicken_thigh_bone_in-air_fryer.md",
+  "chicken_thigh_bone_in-braise": "poultry/chicken/chicken_thigh_bone_in-braise.md",
+  "chicken_thigh_bone_in-grill": "poultry/chicken/chicken_thigh_bone_in-grill.md",
   "chicken_thigh_bone_in-oven_roast": "poultry/chicken/chicken_thigh_bone_in-oven_roast.md",
+  "chicken_thigh_bone_in-pan_fry": "poultry/chicken/chicken_thigh_bone_in-pan_fry.md",
+  "chicken_thigh_bone_in-pressure_cooker": "poultry/chicken/chicken_thigh_bone_in-pressure_cooker.md",
+  "chicken_thigh_bone_in-slow_cooker": "poultry/chicken/chicken_thigh_bone_in-slow_cooker.md",
+  "chicken_thigh_bone_in-smoker": "poultry/chicken/chicken_thigh_bone_in-smoker.md",
+  "chicken_thigh_bone_in-sous_vide": "poultry/chicken/chicken_thigh_bone_in-sous_vide.md",
   "chicken_thigh_bone_in": "poultry/chicken/chicken_thigh_bone_in.md",
   "chicken_wing-air_fryer": "poultry/chicken/chicken_wing-air_fryer.md",
   "chicken_wing-grill": "poultry/chicken/chicken_wing-grill.md",
@@ -139188,6 +139458,11 @@ const EXP_RECIPE_INDEX = {
   "goose_thigh": "poultry/goose/goose_thigh.md",
   "whole_goose-oven_roast": "poultry/goose/whole_goose-oven_roast.md",
   "whole_goose": "poultry/goose/whole_goose.md",
+  "quail-braise": "poultry/quail/quail-braise.md",
+  "quail-grill": "poultry/quail/quail-grill.md",
+  "quail-oven_roast": "poultry/quail/quail-oven_roast.md",
+  "quail-pan_fry": "poultry/quail/quail-pan_fry.md",
+  "quail-smoker": "poultry/quail/quail-smoker.md",
   "quail": "poultry/quail/quail.md",
   "ground_turkey-braise": "poultry/turkey/ground_turkey-braise.md",
   "ground_turkey-grill": "poultry/turkey/ground_turkey-grill.md",
@@ -150872,7 +151147,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "637";
+const PANEL_VERSION = "638";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
