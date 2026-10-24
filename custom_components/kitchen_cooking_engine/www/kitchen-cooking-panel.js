@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 24 Oct 2026, 19:23 CET
+ * AUTO-GENERATED: 24 Oct 2026, 21:46 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 24 Oct 2026, 19:24 CET
+// Last generated: 24 Oct 2026, 21:46 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -126287,6 +126287,8 @@ const I18N_STRINGS = {
       "pressure_cooker": "Trykkoger",
       "saute": "Sautering",
       "steam": "Dampning",
+      "poach": "Pochering",
+      "simmer": "Simring",
       "whole_roast": "Helstegning"
     },
     "appliances": {
@@ -126959,6 +126961,8 @@ const I18N_STRINGS = {
       "pressure_cooker": "Pressure Cooker",
       "saute": "Sauté",
       "steam": "Steam",
+      "poach": "Poach",
+      "simmer": "Simmer",
       "whole_roast": "Whole Roast"
     },
     "appliances": {
@@ -127631,6 +127635,8 @@ const I18N_STRINGS = {
       "pressure_cooker": "Tryckkokare",
       "saute": "Sautera",
       "steam": "Ångkoka",
+      "poach": "Pochera",
+      "simmer": "Sjuda",
       "whole_roast": "Helsteka"
     },
     "appliances": {
@@ -151390,7 +151396,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "644";
+const PANEL_VERSION = "646";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

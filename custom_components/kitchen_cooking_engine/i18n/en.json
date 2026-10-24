@@ -429,6 +429,8 @@
     "pressure_cooker": "Pressure Cooker",
     "saute": "Sauté",
     "steam": "Steam",
+    "poach": "Poach",
+    "simmer": "Simmer",
     "whole_roast": "Whole Roast"
   },
   "appliances": {

@@ -190,7 +190,11 @@ class CatalogLocalizationTests(unittest.TestCase):
             for _path, data in self.overviews
             for method in data.get("methods", [])
         }
-        self.assertEqual(len(methods), 17)
+        # 17 methods were live when this guard was written. The 0.10.2.x research pass
+        # registered `poach` and `simmer` on real cuts (hake, mackerel and others), and
+        # both were added to all three i18n files with this bump — keep this in step with
+        # the cut files rather than letting an untranslated method reach the panel.
+        self.assertEqual(len(methods), 19)
         for path in sorted(I18N_DIR.glob("*.json")):
             translations = json.loads(path.read_text(encoding="utf-8"))
             with self.subTest(language=path.stem):

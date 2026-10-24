@@ -429,6 +429,8 @@
     "pressure_cooker": "Trykkoger",
     "saute": "Sautering",
     "steam": "Dampning",
+    "poach": "Pochering",
+    "simmer": "Simring",
     "whole_roast": "Helstegning"
   },
   "appliances": {

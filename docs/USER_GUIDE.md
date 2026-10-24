@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.2.10 · Home Assistant 2024.1.0+
+> **Version:** 0.10.2.11 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -288,7 +288,11 @@ from USDA or Livsmedelsverket data depending on your data source setting.
 | Pulled | 88–96 °C / 190–205 °F |
 
 ⚠️ Doneness values shown for beef steaks as an example. Each cut has its own calibrated
-ranges from the selected data source.
+ranges from the selected data source. A cut only offers the doneness levels its research
+file defines, and **55 of the 186 cuts define a single one** — mackerel is Well-Done only,
+shanks and brisket are Pulled only — so the selector shows just that one button. The
+ranges are not comparable across cuts: 63 °C is Well-Done for mackerel and Medium for a beef
+steak.
 
 **5️⃣ Cooking Method**
 | Method | Description |
@@ -310,6 +314,8 @@ ranges from the selected data source.
 | Boil | Rolling boil, for stocks and cured cuts |
 | Oven Broil | Top-element/grill-element heat |
 | Sauté | Quick stovetop tossing in a little fat |
+| Pressure Cooker | Sealed high-pressure steam (electric or stovetop) |
+| Whole Roast | Roast the bird or joint whole on the bone |
 
 The methods offered for a given cut are limited to those listed in that cut's research file,
 so most cuts show only a handful of the rows above.
@@ -486,6 +492,11 @@ alongside European traditions. Each file lists:
 - MEATER probe placement instructions
 - Pull temperature guidance
 
+Most published recipes do not state an internal temperature — fish, poultry and vegetable
+sources in particular — so a file says so plainly when none of its sources do, and the
+temperature you cook to comes from the cut's doneness setting instead. Treat a file's
+recipe list as evidence of what the dish looks like, not as a second temperature source.
+
 #### Example
 
 After selecting **Lamb Shank** in the Lamb → Roasts category, the Cut Profile card shows
@@ -523,7 +534,7 @@ cut-type heading, cut, doneness option, and cooking method:
 | Danish cut-profile body text | English fallback until Danish profile content is added |
 | Method descriptions | Localized profile section when available, otherwise English |
 
-As of v0.10.2.10, **all 186 MEATER+ cut overview files** carry a `## Styckesprofil` section, so Swedish users see a Swedish cut description for every cut. Method files fall back to English where no `## Styckesprofil` has been added yet.
+As of v0.10.2.11, **all 186 MEATER+ cut overview files** carry a `## Styckesprofil` section, so Swedish users see a Swedish cut description for every cut. Method files fall back to English where no `## Styckesprofil` has been added yet.
 
 Any cut without a localized name field falls back to its English name.
 
@@ -550,7 +561,14 @@ known to the system):
 
 1. Add the method slug to the cut's `<!-- KCE:CUT … -->` `methods:` list.
 2. Optionally create `{slug}-{method}.md` research file for that method.
-3. No changes to `cooking_data.py` or any other file are required.
+3. Add the method's label to `cooking_methods` in `i18n/en.json`, `i18n/sv.json` and
+   `i18n/da.json` when the slug is new to the whole library (existing slugs such as
+   `grill` or `steam` are already there). Skipping this does not break the panel: the
+   button still appears, but in the Svenska and Dansk interfaces it shows the de-slugged
+   English name (`Poach`, `Simmer`) instead of a translation. `tests/test_catalog_localization.py`
+   fails on a missing label, so the gap is caught before release.
+4. No changes to `cooking_data.py` are required for the MEATER+ path; it is driven by the
+   cut files. Only the AI recipe builder's cooking-style mapping lives in the panel.
 
 #### Getting AI recipe suggestions for a cut
 
