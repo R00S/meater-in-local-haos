@@ -4434,6 +4434,8 @@ LAMB_GROUND = [
         supported_methods=[
             CookingMethod.PAN_FRY,
             CookingMethod.GRILL,
+            CookingMethod.OVEN_BAKE,
+            CookingMethod.SIMMER,
         ],
         recommended_doneness="well_done",
     ),
