@@ -2921,6 +2921,8 @@ OILY_FISH = [
             CookingMethod.GRILL,
             CookingMethod.OVEN_BAKE,
             CookingMethod.SMOKER,
+            CookingMethod.BRAISE,
+            CookingMethod.PRESSURE_COOKER,
         ],
         recommended_doneness="well_done",
     ),

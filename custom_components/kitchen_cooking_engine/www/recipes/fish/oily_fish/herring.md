@@ -15,6 +15,8 @@ methods:
 - grill
 - oven_bake
 - smoker
+- braise
+- pressure_cooker
 doneness:
 - name: medium
   target_c: 57
@@ -33,9 +35,9 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 6
+quality_score: 0
 cooking_methods_researched: 0
-quality_assessed: 2026-05-31
+quality_assessed: 2026-10-24
 rest_time_min: 2
 rest_time_max: 5
 carryover_temp_c: 2
@@ -56,30 +58,36 @@ Sill (Clupea harengus) är en liten, mycket fet pelagisk fisk utbredd i Nordatla
 - [Grill](./herring-grill.md)
 - [Oven Bake](./herring-oven_bake.md)
 - [Smoker](./herring-smoker.md)
+- [Braise](./herring-braise.md)
+- [Pressure Cooker](./herring-pressure_cooker.md)
 
 ## Quality score
 
-**Score: 6 / 20** — assessed 2026-05-31
+**Score: 0 / 20** — assessed 2026-10-24
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
-| Partial leaf `herring-grill.md` (1 source, < 4) | −1 |
-| Partial leaf `herring-oven_bake.md` (1 source, < 4) | −1 |
-| Partial leaf `herring-pan_fry.md` (3 sources, < 4) | −1 |
-| Partial leaf `herring-smoker.md` (2 sources, < 4) | −1 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | — (covered: BBC Good Food UK in herring-grill.md and herring-oven_bake.md) |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | — (covered: DK/SE/DE in herring-pan_fry.md; Nordic sources in herring-smoker.md) |
+| Cooking methods not fully researched (`cooking_methods_researched: 0`) | −8 |
+| Partial leaf `herring-grill.md` (3 fetched recipes, below 4–6) | −1 |
+| Partial leaf `herring-oven_bake.md` (3 fetched recipes, below 4–6) | −1 |
+| Partial leaf `herring-pan_fry.md` (3 fetched recipes, below 4–6; two inaccessible URLs retained only as leads) | −1 |
+| Partial leaf `herring-smoker.md` (1 fetched recipe, below 4–6) | −1 |
+| Partial leaf `herring-braise.md` (1 fetched recipe, below 4–6) | −1 |
+| Partial leaf `herring-pressure_cooker.md` (1 fetched recipe, below 4–6) | −1 |
+| Missing method leaves | — (`braise` and `pressure_cooker` leaves created and registered this session) |
+| Missing Culinary Group A across cut leaves | — (Cookpad JP in grill and pan_fry) |
+| Missing Culinary Group B | — (UK sources in grill/oven bake; Swedish pan-fry) |
+| Missing Culinary Group C | — (Caribbean braise) |
+| Missing Culinary Group D | — (Russian grill/pan-fry; Nordic sources) |
 
-Groups A and C absent — no verified East Asian or African/Arabic/Turkish herring recipe found across any existing leaf. Methods survey incomplete.
+Current score: 20 − 8 − 6 = **6/20**. The previous 6/20 is retained after the from-scratch recount: the collection has 6 partial leaves, method survey incomplete (−8), and each of Groups A/B/C/D is represented in at least one verified leaf. The evidence is not enough to assess temperature consensus or recommended doneness, but the parent cut's 63 °C safety line remains populated and the existing `well_done` recommendation remains; the TOR score does not define additional automatic temperature deductions beyond documented evidence criteria.
+
+The per-method missing-leaf penalty is not applied because all six declared methods have leaves. Leaf temperature analysis remains explicitly invalid until each source collection meets the 4–6-source gate; no inferred temperature was added.
 
 ### Improvement priorities
 
-1. **−8** · Complete broad method-survey research for herring across culinary traditions; update `cooking_methods_researched` to `1` only when thorough.
-2. **−4** · All 4 existing leaves are partial — add verified sources to reach 4 per leaf: grill (+3), oven_bake (+3), pan_fry (+1), smoker (+2).
-3. **−1** · Missing Culinary Group A tradition — add at least one verified East Asian herring recipe (e.g. Japanese *nishin*, Korean pickled herring).
-4. **−1** · Missing Culinary Group C tradition — add at least one verified Group C source (e.g. salt herring in Caribbean or West African preserved fish traditions).
+1. **−8** · Continue the broad method survey across traditions and methods; keep `cooking_methods_researched: 0` until the survey is genuinely thorough.
+2. **−6** · All six method leaves are partial; expand verified collections toward 4–6 sources from distinct traditions per leaf.
+3. Expand source collections and seek independently sourced safety and culinary temperature evidence. These are research gaps, not additional quantified score deductions under the criteria applied above; do not infer temperatures or analyze a leaf before it passes the 4–6-source gate.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
