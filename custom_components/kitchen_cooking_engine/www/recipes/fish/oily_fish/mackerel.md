@@ -15,6 +15,9 @@ methods:
 - pan_fry
 - oven_bake
 - smoker
+- simmer
+- steam
+- air_fryer
 doneness:
 - name: medium
   target_c: 57
@@ -33,9 +36,9 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 7
-cooking_methods_researched: 0
-quality_assessed: 2026-05-31
+quality_score: 5
+cooking_methods_researched: 0 # Survey 2026-10-24 found +3 methods (simmer, steam, air_fryer, all registered with leaves), but enum inventory still has plausible unverified leads (poach, braise, pressure_cooker, sous_vide, boil) — stays 0 until collected or ruled out.
+quality_assessed: 2026-10-24
 rest_time_min: 2
 rest_time_max: 5
 carryover_temp_c: 2
@@ -52,33 +55,44 @@ Atlantisk makrill (Scomber scombrus) är en medelstora, mycket fet pelagisk fisk
 
 ## Research files by cooking method
 
-- [Grill](./mackerel-grill.md)
-- [Pan Fry](./mackerel-pan_fry.md)
-- [Oven Bake](./mackerel-oven_bake.md)
-- [Smoker](./mackerel-smoker.md)
+- [Grill](./mackerel-grill.md) — ⚠️ partial, 3 fetched sources (SE, ES, KR)
+- [Pan Fry](./mackerel-pan_fry.md) — ⚠️ partial, 3 fetched sources (SE, JP, TR)
+- [Oven Bake](./mackerel-oven_bake.md) — ⚠️ partial, 3 fetched sources (JP, UK, TR)
+- [Smoker](./mackerel-smoker.md) — ⚠️ partial, 2 fetched sources (UK, US/Eastern-European; 63 °C stated endpoint)
+- [Simmer](./mackerel-simmer.md) — ⚠️ partial, 2 fetched sources (JP miso-nikomi, IN ayala curry) — **new method 2026-10-24**
+- [Steam](./mackerel-steam.md) — ⚠️ partial, 1 fetched source (ID pepes kembung) — **new method 2026-10-24**
+- [Air Fryer](./mackerel-air_fryer.md) — ⚠️ partial, 1 fetched source — **new method 2026-10-24**
 
 ## Quality score
 
-**Score: 7 / 20** — assessed 2026-05-31
+**Score: 5 / 20** — assessed 2026-10-24. From-scratch reassessment on the deduction
+scale (no anchoring to the previous 7 — inflation doc Patterns 4 and 9). The 2026-05-31
+table also credited `mackerel-smoker.md` with 3 sources, two of which were uncited
+"inspired by Swedish tradition" composites with invented internal temperatures; those
+were removed in the 2026-10-24 source-integrity repair, so the repaired collection is
+smaller but every remaining source is fetched and citable.
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
-| Partial leaf `mackerel-grill.md` (1 source, < 4) | −1 |
-| Partial leaf `mackerel-oven_bake.md` (2 sources, < 4) | −1 |
-| Partial leaf `mackerel-pan_fry.md` (1 source, < 4) | −1 |
-| Partial leaf `mackerel-smoker.md` (3 sources, < 4) | −1 |
-| Missing Culinary Group A tradition | — (covered: Japanese saba shioyaki in mackerel-oven_bake.md) |
-| Missing Culinary Group B tradition | — (covered: Jamie Oliver UK in mackerel-smoker.md; BBC Good Food UK in mackerel-oven_bake.md) |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | — (covered: SE Köket.se in mackerel-grill.md and mackerel-pan_fry.md; SE ABU-röken in mackerel-smoker.md) |
+| Criterion | Deduction | Evidence |
+|-----------|-----------|----------|
+| Cooking methods not researched (`cooking_methods_researched: 0`) | −8 | Survey 2026-10-24 found and registered 3 methods beyond the declared list (simmer — JP miso-nikomi + IN curry; steam — ID pepes; air_fryer), but the enum inventory is not complete: poach, braise (sear-then-braise form), pressure_cooker, sous_vide and boil all have plausible recipes that were not verified this session. Field stays 0 until they are collected or cleanly ruled out. |
+| Partial leaves (< 4 fetched sources): pan_fry (3), grill (3), oven_bake (3), smoker (2), simmer (2), steam (1), air_fryer (1) | −7 | −1 per partial leaf (branch convention). All 7 leaves are partial. |
 
-Group C absent — the BBC Good Food chermoula recipe uses North African spicing but is a British-sourced adaptation, not a verified Group C (African/Arabic/Turkish) primary source. No independently sourced Group C mackerel recipe with verifiable URL found. Methods survey incomplete (`cooking_methods_researched: 0`).
+**Total deduction −15 → 5/20.** Criteria checked with evidence and receiving **0 deduction**:
+
+- **Culinary Groups A/B/C/D all covered** across the leaves — A: Japanese (pan_fry, oven_bake, simmer), Korean (grill), Indian (simmer), Indonesian (steam); B: British (oven_bake, smoker), Spanish (grill), US/Eastern-European (smoker); C: Turkish (pan_fry, oven_bake — genuine Group C primaries, fixing the 2026-05-31 gap); D: Swedish (pan_fry, grill).
+- Method leaf files exist — 7 of them.
+- **USDA safe temperature supported by research evidence** — `mackerel-smoker.md`'s Taste of Artisan source states an explicit 63 °C / 145 °F internal endpoint held 30 minutes.
+- **Culinary preferred temperatures supported by research evidence** for the `well_done` key (the measured 63 °C endpoint plus convergent full-doneness practice in every source). **Flagged**: the `medium` doneness option (57 °C) has zero fetched-source support and is listed in the priorities below.
+- Per-method temperature nuance carried by each leaf's own consensus section (all record measured/absent endpoints per method without inference).
+- No description copy-paste: every leaf's `## Cut profile` is method-specific.
+
+Note on definitions: the `doneness` block's `medium` and `well_done` values match the global `FISH_MEDIUM` / `FISH_WELL_DONE` ranges in `cooking_data.py`; no mismatch found.
 
 ### Improvement priorities
 
-1. **−8** · Complete broad method-survey research; update `cooking_methods_researched` to `1` only when thorough. Research may reveal additional methods (e.g. raw preparations in Group A, traditional smoking in Group D).
-2. **−4** · All 4 existing leaves are partial — add verified sources to reach 4 per leaf: grill (+3), pan_fry (+3), oven_bake (+2), smoker (+1).
-3. **−1** · Missing Culinary Group C — add a verified Group C mackerel recipe (Turkish uskumru, Moroccan grilled mackerel, Egyptian or West African mackerel, etc.).
+1. Verify or rule out the remaining enum methods — poach (court-bouillon), braise (sear-then-braise), pressure_cooker, sous_vide, boil — then re-assess `cooking_methods_researched`.
+2. Raise the leaves to the 4–6-source gate, starting with the thinnest: steam (+3), air_fryer (+3), smoker (+2), simmer (+2), then pan_fry/grill/oven_bake (+1 each).
+3. Resolve the `medium` doneness option: no fetched source cooks mackerel below full doneness. Either locate genuine medium/rare mackerel practice (e.g. seared tataki, sous vide) as research evidence, or retire the option.
+4. Deepen Group C beyond Turkey — find a mackerel-specific Moroccan, Egyptian or West African primary (the Cooking With Alia charmoula bake names "any whole fish", so it is a lead, not a source).
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

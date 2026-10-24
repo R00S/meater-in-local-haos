@@ -11,100 +11,109 @@ cut_type: Oily Fish
 
 ## Cut profile
 
-Hot-smoking mackerel is one of its finest preparations, and mackerel's very high fat content (up to 20 g/100 g at season peak) makes it ideal for hot-smoking — the rendering fat self-bastes the flesh and carries smoke compounds deep into the muscle. The classic Swedish format is the **ABU-röken** (compact table-top hot smoker: a lidded metal box with alder sawdust tray and wire rack, placed over a spirit burner or campfire), but mackerel is also hot-smoked on a barbecue using a smoking reservoir or foil parcel of woodchips, as demonstrated by Jamie Oliver in collaboration with Weber. Mackerel is used whole (gutted) or as butterflied fillets (skin on). Whole Atlantic mackerel (typically 25–35 cm, 200–400 g) takes 20–35 minutes in the ABU-röken at approximately 90–100 °C chamber temperature to reach internal 63 °C. Fillet pairs (butterflied) are faster — 15–25 minutes. Alder is the traditional Scandinavian wood choice; apple wood is the preferred choice in British sources (Jamie Oliver/Weber). No culinary source specifies a probe temperature for mackerel × smoker; all use visual cues (golden skin, firm flesh, opaque throughout), but at visual doneness the internal temperature is consistently approximately 63–68 °C. The USDA safe minimum for fish is 63 °C / 145 °F. Probe placement: insert the probe along the dorsal muscle of the thickest fish (or the thickest section of the butterflied fillet), parallel to the spine, tip clear of bone.
+Hot-smoking mackerel is one of its finest preparations: the very high fat content (up to
+20 g/100 g at season peak) makes the flesh self-baste under low, smoky heat while smoke
+compounds dissolve into the rendering surface fat and are carried deep into the muscle. The
+two fetched sources show the two dominant home formats — a barbecue's smoking reservoir with
+fruit wood (British), and a staged home-smoker schedule that holds the fish at a measured
+internal temperature (American/Eastern-European). Both use whole fish or fillets from fresh
+mackerel and both treat the result as a well-done, keepable product. The old version of this
+leaf carried two "inspired by Swedish tradition" entries with no citable URL and invented
+internal figures; those have been removed as source-integrity violations.
 
 ## Styckesprofil
 
-Varmrökning av makrill är en av dess finaste beredningar; makrillens mycket höga fettinnehåll (upp till 20 g/100 g vid säsongstopp) gör den idealisk för varmrökning — det smältande fettet bastar köttet och för rökföreningar djupt in i muskulaturen. Det klassiska svenska formatet är **ABU-röken** (kompakt bordsröklåda med alspånsfack och gallerinsats, placerad över spritbrännare eller eld), men makrill varmröks också på en grill med rökreservoar eller folie-rökpaket, som demonstrerat av Jamie Oliver i samarbete med Weber. Makrill används hel (urtagen) eller som fjärilsfilé (med skinn). Hel atlantisk makrill (typiskt 25–35 cm, 200–400 g) tar 20–35 minuter i ABU-röken vid ca 90–100 °C kammartemperatur för att nå innertemperatur 63 °C. Fjärilsfilépar är snabbare — 15–25 minuter. Al är det traditionella skandinaviska trävalget; äppelträ är det föredragna i brittiska källor. Sond insatt längs ryggmuskeln i tjockaste fisken (eller tjockaste delen av fjärilsfilén), parallellt med ryggraden, med spetsen fri från ben.
+Varmrökning av makrill är en av dess finaste beredningar: det mycket höga fettinnehållet gör
+köttet självbastande under låg rökvärme medan rökföreningar löser sig i det renderande
+ytterfettet. De två hämtade källorna visar de två dominerande hemmaformaten — grillens
+rökreservoir med fruktträ (brittiskt) och ett stegvis rökschema med mätt
+innertemperatur (amerikanskt/östeuropeiskt). Den tidigare versionen av detta blad innehöll
+två "inspirerad av svensk tradition"-poster utan citerbar URL och härledda temperaturer;
+dessa har tagits bort som källintegritetsöverträdelser.
 
 ## Source recipes
 
-### 1. ABU-röken: rökt makrill (inspired by Swedish hot-smoking tradition)
-**Inspired by**: Swedish outdoor cooking tradition with ABU-röken; summarised from Swedish outdoor cooking guides, ABU Garcia product documentation, and Swedish fishing literature (fetched and cross-checked 2026-05-31).
-**Serves**: 2–3 · **Prep**: 30 min · **Cook**: 20–35 min · **Rest**: 3–5 min
+### 1. Hot Smoked Mackerel with Apple Wood — Jamie Oliver / Weber
+**Inspired by**: https://www.jamieoliver.com/recipes/mackerel/hot-smoked-mackerel/ (fetched 2026-05-31). Jamie Oliver / Weber collaboration; British barbecue tradition. Barbecue with smoking reservoir, applewood chips.
 
-**Temperature guidance**: ABU-röken chamber reaches 90–100 °C. Whole gutted mackerel (200–300 g) reaches internal **63 °C / 145 °F** in approximately **20–35 minutes** depending on size and heat source. Butterflied fillets reach 63 °C in 15–25 min.
-
-**Ingredients**
-- 2–4 fresh whole mackerel, gutted and cleaned (or as butterflied fillets, skin on)
-- Coarse salt (grovsalt), 1 tbsp per whole fish
-- 2 tbsp alder sawdust (alspån), fine-grade and dry
-- Optional: 4–5 dried juniper berries or a sprig of thyme for aromatics
-
-**Method**
-1. Rinse fish thoroughly. Pat completely dry with kitchen paper.
-2. Rub the inside cavity and skin generously with coarse salt. Rest 30 minutes at room temperature — the salt draws out surface moisture and firms the flesh for better smoke adhesion.
-3. Rinse off excess salt; pat dry again. The surface should feel slightly tacky.
-4. Spread 2 tablespoons of alder sawdust evenly in the ABU-röken tray. Add juniper berries or thyme on top of the sawdust if using.
-5. Place the wire rack in position. Lay mackerel skin-side down on the rack, with space between each fish.
-6. **Insert MEATER probe** along the dorsal muscle of the largest fish, parallel to the spine, with the tip at the thickest cross-section.
-7. Close the lid. Place over a spirit burner (spritbrännare), gas burner, or direct campfire flame.
-8. Smoke at approximately **90–100 °C chamber temperature** for **20–35 minutes** (whole) or **15–25 minutes** (butterflied fillets).
-9. **Pull at 63 °C / 145 °F** internal. At this point the flesh will be completely opaque, firm, and pull cleanly from the backbone. Skin will be deep golden to amber.
-10. Rest 3–5 minutes with the lid cracked before serving.
-
-**Serving**: Serve warm with new potatoes (färskpotatis), lemon, and a dill-mustard sauce; or cold the next day with rye crispbread and pickled cucumber.
-
----
-
-### 2. Hot Smoked Mackerel with Apple Wood — Weber Barbecue (inspired by Jamie Oliver)
-**Inspired by**: Jamie Oliver / Weber — https://www.jamieoliver.com/recipes/mackerel/hot-smoked-mackerel/ (fetched 2026-05-31). Weber barbecue with smoking reservoir, applewood chips.
-**Serves**: 2 · **Prep**: 15 min · **Cook**: 10 min (on smoker reservoir) · **Rest**: 2 min
-
-**Temperature guidance (from recipe)**: Barbecue preheated high for 15 min, then reduced to **medium-low**. Mackerel fillets smoked over the wood-chip reservoir for approximately **10 minutes**, skin-side up. Source gives no internal temperature — uses visual doneness (opaque, firm). At visual doneness the internal temperature is approximately **63–68 °C (145–154 °F)**.
+**Serves**: 2 · **Prep**: 15 min · **Cook**: ~10 min (on the smoker reservoir) · **Rest**: 2 min
 
 **Ingredients**
 - 2 × 80 g mackerel fillets, from sustainable sources
 - 1 handful of applewood chips (soaked 30 min)
 - Coarse sea salt
-- 1 lemon (½ to season, ½ to grill alongside)
+- 1 lemon (1/2 to season, 1/2 to grill alongside)
 
 **Method**
-1. Soak applewood chips for 30 minutes. Drain.
-2. Set up barbecue with the smoking reservoir on one side, grill grate on the other. Place drained woodchips in the smoking reservoir.
-3. Preheat barbecue on **high heat × 15 minutes** (until smoking reservoir starts smoking), then reduce to **medium-low**.
-4. Season mackerel fillets all over with sea salt.
-5. Place mackerel on the **smoker reservoir** (not over direct heat), skin-side up.
-6. **Insert MEATER probe** into the thickest part of the fillet, parallel to the flesh surface, tip at the centre.
-7. Close the lid. Hot-smoke for approximately **10 minutes**.
-8. **Pull at 63 °C / 145 °F** (flesh opaque throughout, no translucency). Recipe uses visual cue ("just cooked through"); at that point internal is ~63–68 °C.
-9. Rest 2 minutes. Serve with grilled lemon, potatoes, baby beets, and horseradish-yoghurt dressing.
+1. Soak the applewood chips for 30 minutes. Drain.
+2. Set up the barbecue with the smoking reservoir on one side and the grill grate on the other. Place the drained woodchips in the smoking reservoir.
+3. Preheat the barbecue on **high heat for 15 minutes** (until the reservoir starts smoking), then reduce to **medium-low**.
+4. Season the mackerel fillets all over with sea salt.
+5. Place the mackerel on the **smoker reservoir** (not over direct heat), skin-side up.
+6. Close the lid. Hot-smoke approximately **10 minutes**.
+7. Serve with grilled lemon, potatoes, baby beets and horseradish-yoghurt dressing.
+
+**Probe and endpoint**: no probe step in the recipe; its endpoint is visual ("just cooked through"). **no internal temperature stated**.
 
 ---
 
-### 3. Varmrökt makrill i röklåda — Swedish recipe (inspired by Swedish outdoor cooking guides)
-**Inspired by**: Swedish outdoor cooking and fishing guides; varmrökt makrill i röklåda; fetched and cross-checked 2026-05-31.
-**Serves**: 2–4 · **Prep**: 30–60 min (brine) · **Cook**: 30–45 min · **Rest**: 3–5 min
+### 2. Homemade Hot Smoked Mackerel — Victor / Taste of Artisan
+**Inspired by**: https://tasteofartisan.com/hot-smoked-mackerel/ (fetched 2026-10-24). Victor, Taste of Artisan; the page labels its cuisine "American, Eastern European". Whole mackerel, gutted, heads removed; brined, pellicle-dried, three-stage smoke schedule.
 
-**Temperature guidance**: Smoker (röklåda) chamber temperature **80–100 °C**; target internal **63–65 °C (145–149 °F)** for safe, juicy mackerel. At 65 °C the fish is firm, moist, and pulls cleanly from the bone.
+**Serves**: 8 · **Prep**: 20 min listed (+1–2 h brine, 2 h drying) · **Cook**: 4 h listed (schedule says 4–5 h) · **Rest**: not specified (ice-bath chilling described)
 
 **Ingredients**
-- 2–4 whole mackerel, gutted and cleaned
-- 10% brine: 1 dl salt per litre of water (10 g/100 ml), or generous dry-salt for 30 min
-- Alder sawdust (alspån), 2–3 tbsp
+- 4 whole mackerel, gutted, rinsed, heads removed
+- **Brine**: 1/2 gallon water at 60F; 1.2 lbs salt (about 2 cups); 1/2 lb brown sugar; 1 Tbsp Cure #1; 3 Tbsp lemon juice; 1/2 Tbsp garlic powder; 1/2 Tbsp onion powder; 1/2 Tbsp white pepper; 1 tsp ground allspice
 
 **Method**
-1. Place mackerel in a 10% brine (1 dl salt per litre water) for **30–60 minutes**, or rub generously with coarse salt and rest 30 minutes.
-2. Rinse thoroughly, pat dry. Rest on a rack until the surface is slightly tacky (pellicle).
-3. Load 2–3 tbsp alspån in the smoker tray. Place rack over tray.
-4. Lay mackerel on the rack, skin-side down.
-5. **Insert MEATER probe** along the dorsal muscle, tip at the thickest part.
-6. Close lid. Place over gas burner or campfire.
-7. Smoke at **80–100 °C chamber temperature** × **30–45 minutes** until internal = **63–65 °C (145–149 °F)**.
-8. Rest 3–5 minutes. Serve lukewarm with new potatoes and lemon, or cold on crispbread.
+1. Whisk the water and remaining brine ingredients until the salt and sugar dissolve.
+2. Put the fish in a suitably sized deep pan, cover with brine, and weigh the fish down so it stays submerged. Brine at room temperature **1–2 hours**.
+3. Remove the fish, rinse under cold running water, and dry in a drafty area **2 hours** to develop the pellicle.
+4. Smoke in three stages:
+   1. **30–60 minutes at 86F (30C)** with light smoke.
+   2. Gradually raise to **122F (50C)** and apply heavy smoke for **30–45 minutes**.
+   3. Raise to **176F (80C)** with light smoke; let the fish reach an internal temperature of **145F (63C)** and **hold it there for at least 30 minutes**. Continue smoking until the desired colour is achieved.
+5. Total smoking is estimated at about 4–5 hours. Serve hot or chill: for chilling, place the fish in a bag in ice water until it reaches **50F (10C)**, then refrigerate (article guidance: 38F / 3C).
+
+**Probe and endpoint**: the recipe's schedule specifies an internal target — **Pull at 63°C** (145F), held at least 30 minutes (the page does not name a probe but the schedule is internal-temperature-driven).
+Final serving temperature: **63°C / 145°F** (as stated by the source; the 30-minute hold at 63 °C is a pasteurisation hold, not a rest).
 
 ---
 
 ## Temperature consensus
 
-| Source | Country | Smoker temp | Pull temp |
-|--------|---------|------------|-----------|
-| ABU-röken / Swedish tradition (whole) | SE | 90–100 °C | 63 °C (145 °F) |
-| Jamie Oliver / Weber (fillet) | UK | medium-low (est. 150–180 °C grill side) | ~63–68 °C visual |
-| Swedish outdoor cooking guide (whole) | SE | 80–100 °C | 63–65 °C (145–149 °F) |
+| Tradition | Preferred doneness name | Final serving temp |
+|-----------|------------------------|--------------------|
+| British (Jamie Oliver / Weber, applewood reservoir) | "just cooked through" — visual | Not stated |
+| American / Eastern European (Taste of Artisan, staged smoke) | "reach 145F (63C) and hold" | 63 °C / 145 °F |
 
-**Consensus pull range**: **63–68 °C (145–154 °F)**. All sources converge on full doneness for hot-smoked mackerel — the smoke treatment is inherently a well-done method. USDA minimum 63 °C. Pull at 63 °C for moist results; 65–68 °C for firmer, more traditional texture.
+The observed range across the fetched sources where temperatures are stated is a single value:
+**63 °C / 145 °F** — exactly the USDA safe minimum for fish and the cut file's `well_done`
+target. The British source is silent and visual. This is the collection's only measured
+endpoint for mackerel, and it lands on the safe floor rather than above it: the Taste of
+Artisan schedule's goal is pasteurisation-by-hold (30 minutes at 63 °C) plus colour
+development, not a higher texture temperature. The divergence within the method is structural
+(staged 30 → 50 → 80 °C chamber ramp vs single medium-low reservoir), not in doneness goal.
+The `medium` doneness option in the cut file has no support from any smoked-mackerel source.
 
-## `cooking_data.py` note
+## What makes this method special
 
-Use `DONENESS_WELL_DONE` target **63 °C**, range **60–68 °C** for `mackerel` × `smoker`. No medium option — hot smoking is a full-doneness method.
+Smoking is the one method that transforms mackerel from a fragile same-day fish into a keeper:
+the low staged heat renders fat without squeezing it out, the pellicle formed by drying gives
+smoke a surface to bond to, and the fat carries guaiacol-type compounds inward where lean fish
+would only taste of surface smoke. The cut's fat content is why mackerel is a classic smoking
+fish in the first place. The measured source shows the safety architecture clearly — brine,
+dry, ramp, then hold at 63 °C — which no quick-cook method for this cut requires.
+
+## Data applied to cooking_data.py
+
+- `supported_methods`: no change proposed; `smoker` is already listed for mackerel.
+- `recommended_doneness`: `well_done` (63 °C / 145 °F) is directly supported — the only measured source targets exactly 145F with a 30-minute hold.
+- No `method_temperature_ranges` override needed — the stated endpoint equals the existing `well_done` target.
+
+## Summary
+
+Hot smoking suits mackerel better than almost any other cut: its fat carries smoke deep into the flesh and the finished fish keeps for days. The one measured source pulls and holds at exactly 145 °F — the safe floor — while the British source trusts visual doneness. It is a strong match and the collection's only temperature-bearing method so far.
+
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Two fetched recipes (Groups B ×2 — British and American/Eastern-European) with full ingredients and methods; the 4–6-source threshold and full tradition-diversity gate are not met. The two composite "Swedish tradition" entries from the previous version (no citable URL, invented internal figures) were removed on 2026-10-24 as source-integrity violations.
