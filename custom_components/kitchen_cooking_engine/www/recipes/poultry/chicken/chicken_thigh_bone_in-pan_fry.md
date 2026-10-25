@@ -145,6 +145,35 @@ Final serving temperature: **74°C / 165°F** (the source's stated endpoint; no 
 
 ---
 
+### 4. Aliya LeeKong — North African-Spiced Chicken Thighs with Oranges, Marcona Almonds & Summer Vegetables
+**Inspired by**: http://www.aliyaleekong.com/blog/north-african-spiced-chicken-thighs-with-oranges-marcona-almonds-summer-vegetables (fetched 2026-10-25). Aliya LeeKong; North African (ras el hanout) tradition — Group C. Ingredient line: **"2 lbs chicken thighs, skin-on with bone (4 to 6 thighs)."**
+
+**Serves**: 4 to 6 · **Prep**: not stated (+15 min salting for the vegetables) · **Cook**: 3–4 min + 2 min sear, then 20–25 min oven finish · **Rest**: not stated
+
+**Ingredients**
+- 4 or 5 zucchini or summer squash, julienned
+- 1½–1¾ tsp salt
+- 2 lbs chicken thighs, skin-on with bone (4 to 6 thighs)
+- 2 tsp paprika; 2 tsp ground toasted cumin; ½ tsp cinnamon; ¼ tsp turmeric; ½ tsp ground ginger; 2 tsp ground black pepper; ¼ tsp cayenne; pinch saffron
+- 1 tsp unsalted butter; 2 tsp vegetable oil
+- 1 onion, julienned or finely chopped; 2 garlic cloves, minced
+- ¼ cup raw unsalted marcona almonds, toasted
+- Small bunch of thyme
+- 5 or 6 thin orange slices (about 1/4 of an orange); 1 tsp orange zest
+- Salt to taste
+
+**Method**
+1. Preheat the oven to **400 °F** with the rack on the top shelf.
+2. Julienne the zucchini, toss with ½–¾ tsp salt and let sit 15 minutes, then wring out the moisture.
+3. Bring the thighs to room temperature. Mix the paprika, cumin, cinnamon, turmeric, ginger, pepper, cayenne, saffron and 1 tsp salt; season the thighs on both sides.
+4. Heat a large pan over **medium-high**. Add the butter and oil and lay the thighs **skin-side down**. Cook **3–4 minutes** until the skin is crisp, keeping the heat from climbing so the spices do not burn. Flip and cook **2 minutes** more. Remove to a plate.
+5. Reduce to medium, pour off the excess fat, add the onion and garlic with salt and cook a minute. Off the heat, toss in the zucchini, almonds and thyme. Layer the orange slices around the pan and set the thighs on top; sprinkle with orange zest.
+6. Bake on the top rack **20–25 minutes, until the juices run clear out of the chicken.**
+
+**Probe and endpoint**: no probe step. **no internal temperature stated** — the endpoint is "until the juices run clear"; the author notes the thighs can be crisped again briefly in a sauté pan if the vegetables release moisture.
+
+---
+
 ## Temperature consensus
 
 | Tradition | Preferred doneness name | Final serving temp |
@@ -152,17 +181,19 @@ Final serving temperature: **74°C / 165°F** (the source's stated endpoint; no 
 | Chinese-American (Made With Lau) | "165°F at the thickest part" (FAQ thermometer guidance) | 74 °C / 165 °F |
 | American (Cooked by Julie) | "until internal temperature reaches 165 degrees F" | 74 °C / 165 °F |
 | Russian (EdimDoma) | Not stated — golden crust in pan, then 35–45 min oven finish | Not stated |
+| North African (Aliya LeeKong) | Not stated — "until the juices run clear", then oven finish | Not stated |
 
-The observed range across the fetched sources is a single stated value — 74 °C / 165 °F —
-with one silent source. Both stating sources land exactly on the USDA safe line
-(`safe` doneness band, 74 °C / 165 °F), and neither expresses the higher dark-meat target
-that other methods in this collection show (the braise leaf's Senegalese source pulls thighs
-at 75 °C/80 °C equivalent and the air-fryer leaf records a 195 °F endpoint). The variation
-here is therefore not in stated numbers but in technique: every fetched source protects the
-centre of the bone-in cut with a gentle covered or oven finish rather than trusting dry pan
-heat alone. `recommended_doneness` for this method on current evidence: `safe` (74 °C /
-165 °F) is the only documented target, though it is likely that unmeasured home practice for
-dark meat sits higher.
+The observed range across the fetched sources where a temperature is stated is a single value —
+**74 °C / 165 °F** — with two silent sources. Both stating sources land exactly on the USDA safe
+line (`safe` doneness band, 74 °C / 165 °F), and neither expresses the higher dark-meat target that
+other methods in this collection show (the braise leaf's Senegalese source pulls thighs at
+75 °C/80 °C equivalent and the air-fryer leaf records a 195 °F endpoint). The variation here is
+therefore not in stated numbers but in technique: every fetched source protects the centre of the
+bone-in cut with a gentle covered or oven finish rather than trusting dry pan heat alone. The two
+silent sources both use the classic visual test — golden crust, then "juices run clear" or a long
+oven finish — which is practice for full doneness, not a measured figure. `recommended_doneness`
+for this method on current evidence: `safe` (74 °C / 165 °F) is the only documented target, though
+it is likely that unmeasured home practice for dark meat sits higher.
 
 ## What makes this method special
 
@@ -183,6 +214,6 @@ directly in the same skillet.
 
 ## Summary
 
-Pan-frying gives bone-in thighs their deepest crust, but the bone forces every fetched recipe to finish gently — covered steam, covered stock or oven — to cook the centre through. Both sources that state a target say 165 °F, while one Russian source stays silent after a pan-and-oven sequence. The method suits the cut well when paired with its finishing step; the temperature record is too thin to claim anything beyond the USDA floor.
+Pan-frying gives bone-in thighs their deepest crust, but the bone forces every fetched recipe to finish gently — covered steam, covered stock or oven — to cook the centre through. Both sources that state a target say 165 °F, while the Russian and North African sources stay silent after a pan-and-oven sequence and trust a visual test. The method suits the cut well when paired with its finishing step; the temperature record is too thin to claim anything beyond the USDA floor.
 
-> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Three fetched recipes (Groups A, B, D) document pan-frying bone-in thighs; the 4–6-source threshold is not met. A fourth lead — Serious Eats' cold-start skillet technique for skin-on thighs (stated 175 °F endpoint) — could not be fetched this session (HTTP 403) and is recorded as an uncollected lead, not as source data.
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Four fetched recipes (Groups A, B, C, D) document pan-frying bone-in thighs, so the 4–6-source threshold is now met — but the tradition-diversity gate is not cleanly met: two of the four sources are US-based (Made With Lau, Chinese-American; Cooked by Julie, American) and can be read as one national tradition. The leaf is kept partial on that basis and the cut file retains its `pan_fry` source-tradition-overlap deduction. The North African source (Aliya LeeKong, Group C, bone-in skin-on) was added 2026-10-25. A further lead — Serious Eats' cold-start skillet technique for skin-on thighs (stated 175 °F endpoint) — could not be fetched (HTTP 403 on 2026-10-24) and is recorded as an uncollected lead, not as source data. A Japanese teriyaki thigh was checked 2026-10-25 and rejected: Sudachi's recipe is explicitly *boneless*, wrong cut form.

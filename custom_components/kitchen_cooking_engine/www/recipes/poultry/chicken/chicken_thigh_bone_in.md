@@ -47,9 +47,9 @@ doneness:
   max_f: 185
   usda_safe: true
   recommended: true
-quality_score: 5
+quality_score: 8
 cooking_methods_researched: 1 # Supported-method inventory reviewed 2026-10-24; all 17 listed methods have direct leaves. Simmer and poach confirmed; boil has recipe evidence with overlap; charcoal is a grill-fuel variant, not separately supported.
-quality_assessed: 2026-10-24
+quality_assessed: 2026-10-25
 rest_time_min: 5
 rest_time_max: 10
 carryover_temp_c: 3
@@ -79,10 +79,10 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum, **79 °C (175 °F)** rekomme
 | Method | Leaf file | Status |
 |--------|-----------|--------|
 | Oven roast | `chicken_thigh_bone_in-oven_roast.md` | ✅ Done — 5 real sources, all 4 culinary groups covered |
-| Grill | `chicken_thigh_bone_in-grill.md` | ⚠️ Partial — 3 fetched sources (US barbecue 160 °F, Indian tandoori, Greek 165 °F) |
-| Air fryer | `chicken_thigh_bone_in-air_fryer.md` | ✅ Done — 4 fetched sources (Moroccan, Japanese, UK, Indian tandoori); endpoints 165–195 °F |
+| Grill | `chicken_thigh_bone_in-grill.md` | ✅ Done — 4 fetched sources (US barbecue 160 °F, Indian tandoori, Greek 165 °F, Jamaican jerk 165 °F); 4 distinct national traditions |
+| Air fryer | `chicken_thigh_bone_in-air_fryer.md` | ✅ Done — 4 fetched sources (Moroccan, Japanese, UK, Indian tandoori); endpoints 165–195 °F; conforms-to-TOR marker added 2026-10-25 |
 | Braise | `chicken_thigh_bone_in-braise.md` | ✅ Done — 4 fetched sources (French, Korean, Jamaican, Senegalese); 175 °F thigh preference stated |
-| Pan fry | `chicken_thigh_bone_in-pan_fry.md` | ⚠️ Partial — 3 fetched sources (Chinese-American, American, Russian) |
+| Pan fry | `chicken_thigh_bone_in-pan_fry.md` | ⚠️ Partial — 4 fetched sources (Chinese-American, American, Russian, North African); source-count gate met 2026-10-25 but tradition-diversity is not (two US-based) |
 | Smoker | `chicken_thigh_bone_in-smoker.md` | ⚠️ Partial — 1 fetched source (US barbecue); 165 → 170–175 °F two-stage endpoint |
 | Slow cooker | `chicken_thigh_bone_in-slow_cooker.md` | ⚠️ Partial — 1 fetched source (Korean); no stated temperature |
 | Pressure cooker | `chicken_thigh_bone_in-pressure_cooker.md` | ⚠️ Partial — 1 fetched source (Korean); no stated temperature |
@@ -99,21 +99,27 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum, **79 °C (175 °F)** rekomme
 
 ## Quality score
 
-**Score: 6 / 20** — assessed 2026-10-24. From-scratch reassessment per
-`HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md` (deduction scale from
-`RECIPE_COLLECTION_TOR.md`); deliberately **not** anchored to the previous 7
-(Pattern 9 — score momentum). The old table used a +points scheme and a manual
-"net adjusted to 7" fudge that the deduction scale does not support.
+**Score: 8 / 20** — reassessed 2026-10-25, up from 6 on 2026-10-24. (The frontmatter had said
+`quality_score: 5` while that table computed 6 — a stale-number mismatch, the same defect fixed in
+mackerel on 2026-10-24; frontmatter and body now agree.) The deduction scale is unchanged and no
+leaf was credited for anything it does not hold: the score rose because `grill` left the partial set
+after gaining its fourth tradition (Jamaican jerk) and `pan_fry` reached four sources (North
+African), not because the scale was relaxed. `pan_fry` was deliberately **not** marked conformant —
+two of its four sources are US-based, so the strict tradition-diversity gate is still unmet and the
+−1 overlap deduction stands. Context: this file was reassessed from scratch on 2026-10-24 per
+`HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md`, deliberately not anchored to the previous 7 (Pattern 9
+— score momentum), because the old table used a +points scheme and a manual "net adjusted to 7"
+fudge that the deduction scale does not support.
 
 | Criterion | Deduction | Evidence |
 |-----------|-----------|----------|
 | Cooking methods researched (`cooking_methods_researched: 1`) | 0 | All 17 supported methods are inventoried with evidence leaves; `boil` is documented with its overlap boundary and charcoal is a grill-fuel variant. |
-| Partial method leaves (< 4 qualifying sources): pan_fry (3), grill (3), smoker (1), slow_cooker (1), pressure_cooker (1), sous_vide (1), poach (2 direct bone-in sources), steam (2), boil (1 clear/ambiguous), oven_bake (3), oven_broil (3), pan_sear (1), saute (1) | −13 | −1 per partial leaf. Oven_roast (5), air_fryer (4), braise (4) and simmer (5) meet the source-count threshold, though collection analysis remains partial. |
-| pan_fry source-tradition overlap | −1 | Two US-based sources (Made With Lau, Chinese-American; Cooked by Julie, American) can be read as one national tradition. |
+| Partial method leaves (below the 4-source gate): smoker (1), slow_cooker (1), pressure_cooker (1), sous_vide (1), poach (2 direct bone-in sources), steam (2), boil (1 clear/ambiguous), oven_bake (3), oven_broil (3), pan_sear (1), saute (1) | −11 | −1 per partial leaf. Oven_roast (5), air_fryer (4), braise (4), simmer (5), grill (4, completed 2026-10-25) and pan_fry (4, source-count met 2026-10-25) meet the source-count threshold, though collection analysis remains partial. |
+| pan_fry source-tradition overlap | −1 | Two US-based sources (Made With Lau, Chinese-American; Cooked by Julie, American) can be read as one national tradition, so pan_fry stays ⚠️ partial despite reaching four sources; the North African source added 2026-10-25 widens Groups but does not remove the US redundancy. |
 
-**Total deduction −14 → 6/20.** Criteria checked with evidence and receiving **0 deduction**:
+**Total deduction −12 → 8/20.** Criteria checked with evidence and receiving **0 deduction**:
 
-- **Culinary Groups A/B/C/D all covered** across the method leaves — A: Chinese-American (pan_fry), Japanese (air_fryer), Indian (air_fryer, grill), Korean (braise, slow_cooker, pressure_cooker); B: American (pan_fry, grill, sous_vide, smoker), UK (air_fryer), French (braise), Greek (grill); C: Moroccan (air_fryer), Jamaican (braise), Senegalese (braise); D: Russian (pan_fry).
+- **Culinary Groups A/B/C/D all covered** across the method leaves — A: Chinese-American (pan_fry), Japanese (air_fryer), Indian (air_fryer, grill), Korean (braise, slow_cooker, pressure_cooker); B: American (pan_fry, grill, sous_vide, smoker), UK (air_fryer), French (braise), Greek (grill); C: Moroccan (air_fryer), Jamaican (braise, grill jerk), Senegalese (braise), North African (pan_fry, added 2026-10-25); D: Russian (pan_fry).
 - `## Cut profile` present with anatomical placement (femur, biceps femoris, myoglobin/collagen, subcutaneous fat).
 - Method leaf files exist — 18 files, one for each registered `supported_methods` value; charcoal is documented separately as a grill variant.
 - **USDA safe temperature supported by research evidence** — explicit 165 °F / 74 °C endpoints in pan_fry (×2), air_fryer, grill, braise, smoker and oven_roast leaves.
@@ -126,7 +132,7 @@ Note on definitions: this file's `doneness` block gives `dark_meat_optimal` as t
 ### Improvement priorities
 
 1. Revisit the `boil` versus simmer/poach boundary as additional tradition-specific sources are collected; current enum inventory has been reviewed and `cooking_methods_researched` is set to 1.
-2. Raise the six partial leaves to the 4–6-source gate: pan_fry and grill each need 1–3 more traditions (Group C/D grilling; a non-US stovetop pan-fry); smoker, slow_cooker, pressure_cooker and sous_vide need 3+ more sources each.
+2. Raise the remaining twelve partial leaves to the 4–6-source gate. `pan_fry` needs one non-US source to both hit 4 sources and clear the −1 tradition-overlap deduction (a Group C stovetop pan-fry — a Japanese teriyaki thigh was checked 2026-10-25 and rejected: Sudachi's recipe is explicitly *boneless*, wrong cut form). `oven_bake` and `oven_broil` (3 each) need one more tradition. `smoker`, `slow_cooker`, `pressure_cooker`, `sous_vide`, `pan_sear`, `saute` (1 source each) and `poach`, `steam`, `boil` (2, 2, 1 clear) need 2–5 more sources each. `grill` was completed 2026-10-25 (Jamaican jerk, Group C) and is off this list.
 3. Resolve the endpoint divergence record: air_fryer sources span 165–195 °F and grill spans 160–165 °F; consider a `method_temperature_ranges` override for air_fryer once a 4–6-source collection exists.
 4. Re-fetch the Serious Eats cold-start skillet and air-fryer thigh pages (HTTP 403 on 2026-10-24) — they carry the only located US 175 °F pan-fry endpoint.
 

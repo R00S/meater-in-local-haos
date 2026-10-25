@@ -187,3 +187,12 @@ between pieces) and softening skin after cooking (remove immediately).
 ## Summary
 
 Air-frying bone-in thighs delivers oven-roast-quality crisp skin in half the time, using a skin-down-to-skin-up flip and high heat the dark meat absorbs without drying. It suits the cut exceptionally well — the fetched sources treat it as the convenient weeknight equivalent of roasting. The temperature record is the collection's most divergent: 165 °F and 195 °F targets sit far apart, so cooks must choose their texture goal deliberately.
+
+> ✅ **CONFORMS TO TOR** — Verified 2026-10-25 (marker added; this leaf already met the gate but
+> carried no status line). All mandatory sections present in correct order. Four fetched, citable
+> source recipes from four distinct national traditions — Moroccan/North African (Group C),
+> Japanese (A), British (B), Indian tandoori (A) — each a bone-in, skin-on thigh preparation with
+> full ingredients and numbered steps and an explicit endpoint line. Numeric endpoints span
+> 165–195 °F as published and are recorded per source, not reconciled. Temperature consensus table
+> covers all four sources and states the range plus the method's divergence; What makes this method
+> special and Data applied to cooking_data.py are present and actionable. Summary ≤4 sentences.

@@ -24,12 +24,13 @@ cut_type: Dark Meat
 
 Grilling a bone-in, skin-on thigh is a two-zone problem: the skin needs direct heat to render
 and blister, but the thick bone-side muscle needs time and gentler heat to reach the centre
-without charring the exterior. All three fetched sources solve it with structure — a hot side
-for the initial skin-down sear and a cooler side (or a covered grill) for the finish — and all
-three marinate or dry-brine first, because the grill's dry convective heat punishes
-underseasoned dark meat. The bone-in format is standard in grilling traditions worldwide
-because the femur keeps the thigh intact over the fire and shields the joint meat from
-overcooking; the fetched sources span US barbecue, Indian tandoori-style and Greek treatment.
+without charring the exterior. All four fetched sources solve it with structure — a hot side
+for the initial skin-down sear and a cooler side (or a covered grill) for the finish, or a
+whole-grill medium heat with frequent turning — and all four marinate or dry-brine first,
+because the grill's dry convective heat punishes underseasoned dark meat. The bone-in format
+is standard in grilling traditions worldwide because the femur keeps the thigh intact over the
+fire and shields the joint meat from overcooking; the fetched sources span US barbecue, Indian
+tandoori-style, Greek and Jamaican jerk treatment.
 
 ## Source recipes
 
@@ -140,6 +141,42 @@ Final serving temperature: **74°C / 165°F** (as stated by the source; rest at 
 
 ---
 
+### 4. Stephanie Kay / Stephanie Kay Nutrition — Grilled Jamaican Jerk Chicken
+**Inspired by**: https://kaynutrition.com/grilled-jerk-chicken/ (fetched 2026-10-25). Stephanie Kay, Stephanie Kay Nutrition; Jamaican/Caribbean tradition (Group C). The author states that classic jerk "calls for bone-in, skin-on cuts of chicken as they provide the deepest and richest flavors." Ingredient line: **"8 pieces skin-on, bone-in, chicken thighs and drumsticks (about 2.5lbs)."**
+
+**Serves**: 8 · **Prep**: 2 h (incl. 1–2 h marinating) · **Cook**: 30 min · **Rest**: 10 min
+
+**Ingredients**
+- 8 pieces skin-on, bone-in chicken thighs and drumsticks (about 2.5 lbs)
+- 1 small onion, roughly chopped
+- 2 scallions, ends removed and roughly chopped
+- 2 cloves garlic
+- 1–2 scotch bonnets or habanero peppers, stem and seeds removed
+- 1 1/2 teaspoon ground allspice
+- 1/2 tablespoon dried thyme
+- 1 teaspoon ground cinnamon
+- 1/2 teaspoon ground nutmeg
+- 1/4 teaspoon ground cloves
+- 1 teaspoon black pepper
+- 1/2 teaspoon sea salt
+- 3 tablespoon soy sauce
+- 1 lime, juiced
+- Olive oil, for the grill
+- Scallions and limes to serve
+
+**Method**
+1. Combine all the ingredients except the chicken in a blender or food processor and blend on high until a thick marinade forms.
+2. Place the chicken pieces in a large bowl or bag, cover with marinade and refrigerate a minimum of 1–2 hours, preferably overnight.
+3. Take the chicken out of the fridge at least 30 minutes before cooking so it comes to room temperature.
+4. Preheat a grill to **medium-high heat** and lightly brush with oil to stop the chicken sticking.
+5. Place the chicken **skin-side down** over **medium heat** and cook **25 to 35 minutes, turning often, until cooked through (internal temperature of 165°F)**.
+6. Transfer to a plate and rest **10 minutes**. Dress with scallions and extra lime wedges to serve.
+
+**Probe and endpoint**: the source states a numeric internal endpoint — **"until cooked through (internal temperature of 165°F)"** — **Pull at 74°C** (165°F).
+Final serving temperature: **74°C / 165°F** (as stated by the source; 10-minute rest, no carryover figure given).
+
+---
+
 ## Temperature consensus
 
 | Tradition | Preferred doneness name | Final serving temp |
@@ -147,37 +184,60 @@ Final serving temperature: **74°C / 165°F** (as stated by the source; rest at 
 | US barbecue (Michael Symon / Food Network) | "until the stated internal temperature is reached" — 160 °F | 71 °C / 160 °F |
 | Indian tandoori-style (Food Network Kitchen) | "cooked through" — time-based, 25–30 min | Not stated |
 | Greek treatment (Food Network Kitchen) | "instant-read … reads 165 degrees F" | 74 °C / 165 °F |
+| Jamaican jerk (Stephanie Kay) | "cooked through (internal temperature of 165°F)" | 74 °C / 165 °F |
 
-The full observed range across the fetched sources is 71–74 °C (160–165 °F), with one source
-silent on temperature. The variation is small in degrees but meaningful in policy: the US
-barbecue source pulls at 71 °C / 160 °F — below the USDA poultry minimum — while the
-Greek-treatment source pulls at exactly the 74 °C / 165 °F safe line with an instant-read
-probe. Both numeric targets land in the `safe` band; neither expresses the higher
-`dark_meat_optimal` target that this collection's braise, air-fryer and smoker sources show.
-The divergence here is grill craft (carryover and rest are assumed to close the gap in the
-barbecue source, which gives no rest instruction at all) rather than texture philosophy.
-On current evidence `safe` (74 °C / 165 °F) is the best-represented target for this method,
-but the barbecue tradition sitting below it is a strong, deliberate practice worth noting.
+The full observed range across the fetched sources where a temperature is stated is
+**71–74 °C (160–165 °F)**, with one source (Indian tandoori-style) silent on temperature and
+relying on time. The variation is small in degrees but meaningful in policy: the US barbecue
+source pulls at 71 °C / 160 °F — below the USDA poultry minimum — while the Greek-treatment and
+Jamaican jerk sources both pull at exactly 74 °C / 165 °F, the safe line, with a probe (Greek) or
+a stated target (Jamaican). Three of the four numeric targets land on the `safe` band and one sits
+under it; none expresses the higher `dark_meat_optimal` (79 °C / 175 °F) that this collection's
+braise, air-fryer and smoker sources show. The divergence here is grill craft — the barbecue source
+assumes carryover and gives no rest instruction at all, while the Jamaican source rests 10 minutes
+and still names 165 °F as the pull point — rather than texture philosophy. On current evidence
+`safe` (74 °C / 165 °F) is the best-represented target for this method, but the barbecue tradition
+sitting below it is a strong, deliberate practice worth noting.
 
 ## What makes this method special
 
 Grilling is the only method that simultaneously subjects the skin to intense radiant and
 convective heat while leaving the cook full control of heat zoning — which is exactly what a
 bone-in thigh needs, since the skin-side wants 200 °C+ contact and the bone-side centre wants
-gentle time. The fetched sources all use two-zone or covered structures to exploit this, and
-all marinate first (yogurt, lemon-herb, or dry rub) because the fire's dry heat concentrates
-seasoning on the surface. Flare-ups from rendering subcutaneous fat are the cut-specific
-hazard, which is why the sources sear briefly over the hot zone and finish covered over the
-cool one.
+gentle time. The fetched sources all use two-zone or covered structures, or a whole-grill medium
+heat with frequent turning, to exploit this, and all marinate first (yogurt, lemon-herb, dry rub,
+or a wet jerk paste of allspice and scotch bonnet) because the fire's dry heat concentrates
+seasoning on the surface. Flare-ups from rendering subcutaneous fat are the cut-specific hazard,
+which is why the sources sear briefly over the hot zone and finish covered over the cool one, or
+turn often over a single medium fire. The Jamaican source adds a distinct variable: the jerk
+tradition's pimento-wood smoke and its bone-in requirement are about the fat and marrow carrying
+flavour into the meat, not just heat transfer.
 
 ## Data applied to cooking_data.py
 
 - `supported_methods`: no change proposed; `grill` is already listed for this cut.
-- `recommended_doneness`: no change proposed — the fetched numeric endpoints (71 °C and 74 °C) both sit in the `safe` band and do not displace `dark_meat_optimal`.
-- No `method_temperature_ranges` override needed — no source states an endpoint outside the existing bands.
+- `recommended_doneness`: no change proposed — the fetched numeric endpoints (71 °C, 74 °C, 74 °C) sit in or just below the `safe` band and do not displace `dark_meat_optimal`.
+- No `method_temperature_ranges` override needed — no source states an endpoint outside the existing bands; the 160 °F barbecue divergence is recorded in the leaf.
 
 ## Summary
 
-Grilling suits bone-in thighs well: the two-zone fire crisps the skin while the covered finish walks the thick bone-side muscle to temperature. The fetched sources show a real disagreement at the endpoint — barbecue practice pulls at 160 °F, Greek-style at 165 °F — and one tandoori-style source trusts time entirely. The method's texture is the collection's best after pan-frying, but the temperature record needs more traditions before any target is safe to generalise.
+Grilling suits bone-in thighs well: the two-zone fire crisps the skin while the covered finish
+walks the thick bone-side muscle to temperature. The fetched sources show a real disagreement at
+the endpoint — US barbecue practice pulls at 160 °F, Greek-style and Jamaican jerk both at
+165 °F, and the tandoori-style source trusts time entirely. The method's texture is the
+collection's best after pan-frying, and the bone-in format is chosen deliberately in the jerk and
+barbecue traditions for the fat and marrow flavour the bone carries.
 
-> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Three fetched recipes (Groups A and B) document grilling bone-in, skin-on thighs; the 4–6-source threshold and full tradition-diversity gate are not met. One source's 160 °F endpoint is published below the USDA minimum and is recorded as divergence, not guidance.
+> ✅ **CONFORMS TO TOR** — Verified 2026-10-25. All mandatory sections present in correct order.
+> Four fetched, citable source recipes from four distinct national/regional traditions (American,
+> Indian, Greek, Jamaican); the 4-source and tradition-diversity gates are met. Culinary Groups A,
+> B and C are represented in this leaf (Group D is covered at the cut level via the Russian pan_fry
+> source, not here). Each source has full ingredients with quantities and numbered method steps,
+> and an explicit probe/endpoint line stating honestly whether a temperature is published. Cut
+> profile is method-specific and carries no invented temperatures. Temperature consensus table
+> covers all four sources and states the observed 71–74 °C range with one published absence, mapping
+> the targets to `safe`/`dark_meat_optimal` without inference. What makes this method special
+> addresses the two-zone heat physics and the cut-specific flare-up hazard. Data applied bullet list
+> is actionable and declines an override. Summary is ≤4 sentences and does not restate the table.
+> One source's 160 °F endpoint is published below the USDA minimum and is recorded as divergence,
+> not guidance.
