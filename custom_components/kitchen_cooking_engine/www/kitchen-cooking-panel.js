@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 24 Oct 2026, 23:44 CET
+ * AUTO-GENERATED: 25 Oct 2026, 01:09 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 24 Oct 2026, 23:44 CET
+// Last generated: 25 Oct 2026, 01:10 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -130482,14 +130482,14 @@ const CUT_METHOD_PROFILES = {
     "oven_bake_sv": "Ugnsbakning av hel lax bygger på konvektionsvärme runt fisken samtidigt som ånga i bukhålan och fett från skinnet dämpar uttorkning. Den tjocka skulder/ryggdelen blir klar senare än stjärtköttet, så tillagningen är en tydlig temperaturgradient. Folie/parceltillagning används ofta för hel lax vid servering till många eftersom fukten hålls kvar och urbening efter vila blir enklare. Jämfört med öppen, hård ugnsrostning ger dessa metoder mjukare eftervärme."
   },
   "baltic_herring": {
-    "boil": "Boiling is the documented historical everyday method for salted Baltic herring (salt strömming): the fish was cooked in its own brine-spiked liquid, and the broth was never wasted — often mixed with milk and drunk to the meal, or thickened with barley flour and milk into a *redning* (\"smältning\"). Root vegetables and potatoes could boil in the same pot, with the salted fish laid on top. The method suits salted rather than fresh fish: the salt firm the flesh so it holds together in liquid, and the cooking liquid becomes sauce and drink. This method was not in the auto-populated `methods:` list for baltic_herring; it is added on the basis of the fetched archival documentation below. The source states no temperatures, durations, or internal pull point; none is inferred.",
-    "boil_sv": "Kokning är den dokumenterade historiska vardagsmetoden för saltad strömming: fisken koktes i spadet, som aldrig slängdes — ofta blandades mjölk i spadet och drack till maten, eller så gjordes en redning av kornmjöl och mjölk (\"smältning\"). Rotfrukter och potatis kunde koka i samma kastrull med den salta fisken ovanpå. Metoden passar saltad snarare än färsk fisk: saltet ger köttet konsistens så det håller ihop i vätskan. Metoden fanns inte i den automatiska `methods:`-listan; den läggs till på grundval av det hämtade arkivmaterialet. Källan anger ingen temperatur, tid eller innertemperatur.",
-    "grill": "Grilling Baltic herring (strömming) is documented in Swedish food culture as two archival techniques: *glödstekt* — the fish laid directly on glowing embers (sometimes wrapped in newspaper in later times) — and *halstrad*, small fresh fish skewered on a stick over an open fire. Both were outdoor, fishing-trip preparations: freshly caught small fish grilled whole made an immediate meal at the water. The tiny fish (40–80 g) tolerates the intense radiant heat only because the cook time is minutes; the historic methods used no thermometer and no stated endpoint beyond the fish being cooked through. This method was not in the auto-populated `methods:` list for baltic_herring; it is added on the basis of the fetched archival documentation below. No fetched source states an internal pull temperature; none is inferred.",
-    "grill_sv": "Grillning av strömming dokumenteras i svensk matkultur som två arkivtekniker: *glödstekt* — fisken lades helt enkelt på glöden (i senare tid ibland insvept i tidningspapper) — och *halstrad*, små nyfångade fiskar på pinne över öppen eld. Båda var utomhusberedningar vid fiske: färsk småfisk grillad hel gav en omedelbar måltid vid vattnet. Den lilla fisken (40–80 g) tål den heta strålningen bara för att tiden mäts i minuter; de historiska metoderna använde ingen termometer. Metoden fanns inte i den automatiska `methods:`-listan; den läggs till på grundval av det hämtade arkivmaterialet. Ingen källa anger innertemperatur.",
+    "boil": "Boiling/simmering Baltic herring in liquid is the documented everyday method on both sides of the Gulf of Bothnia: Swedish tradition boils *salt strömming* (barrel-salted fish) in its own brine-spiked liquid and never wastes the broth — often mixed with milk and drunk to the meal, or thickened with barley flour and milk into a *redning* (\"smältning\"); Finnish tradition cooks fresh *silakka* into *silakkakeitto*, a clear or milk-thickened soup where potatoes, swede or vegetables boil in the same pot and the fish is laid in near the end. The salt-first step in the Swedish practice (and in some Finnish soups) firms the flesh so the small fish hold together in liquid; the cooking liquid becomes sauce, soup and drink. No fetched source states an internal pull temperature; none is inferred.",
+    "boil_sv": "Kokning/sjudning av strömming i vätska är den dokumenterade vardagsmetoden på båda sidor om Bottenviken: svensk tradition kokar *salt strömming* (fatlagd fisk) i spadet, som aldrig slängs — ofta blandas mjölk i spadet och dracks till maten, eller så görs en redning av kornmjöl och mjölk (\"smältning\"); finländsk tradition lagar färsk *silakka* till *silakkakeitto*, en klar eller mjölksjuden soppa där potatis, lanttu eller grönsaker kokar i samma kastrull och fisken läggs i mot slutet. Salt-steget (i svensk praxis och i vissa finska soppor) ger köttet konsistens så det håller ihop i vätskan. Ingen källa anger innertemperatur.",
+    "grill": "Grilling Baltic herring (strömming, Finnish *silakka*) is documented in Swedish food culture as two archival techniques: *glödstekt* — the fish laid directly on glowing embers (sometimes wrapped in newspaper in later times) — and *halstrad*, small fresh fish skewered on a stick over an open fire. Modern recipes keep the same geometry: whole, gutted fish with the backbone left in, salted briefly, laid on an oiled grill rack (*halster*) over high heat or embers and turned once. The tiny fish (40–80 g) tolerates intense radiant heat only because the cook time is minutes; the historic methods used no thermometer and no stated endpoint beyond the fish being cooked through. This method was not in the auto-populated `methods:` list for baltic_herring; it is added on the basis of the fetched documentation below. No fetched source states an internal pull temperature; none is inferred.",
+    "grill_sv": "Grillning av strömming dokumenteras i svensk matkultur som två arkivtekniker: *glödstekt* — fisken lades helt enkelt på glöden (i senare tid ibland insvept i tidningspapper) — och *halstrad*, små nyfångade fiskar på pinne över öppen eld. Moderna recept behåller samma geometri: hel rensad fisk med ryggbenet kvar, kort saltad, på oljad halster över hög värme eller glöd, vänd en gång. Den lilla fisken (40–80 g) tål den heta strålningen bara för att tiden mäts i minuter; de historiska metoderna använde ingen termometer. Metoden fanns inte i den automatiska `methods:`-listan; den läggs till på grundval av det hämtade materialet. Ingen källa anger innertemperatur.",
     "oven_bake": "Oven-baking Baltic herring (strömming) centers on the \"strömmingslåda\" — the classic Swedish casserole where butterflied flundror are folded around a herb filling, set in a buttered dish, covered with seasoned cream (mustard cream or caviar cream) and baked at 225 °C for 15–30 minutes until the top is golden and the cream is set. The moist, cream-covered environment protects the lean, fine flesh; the casserole format also scales well for the julbord/smörgåsbord table. A simpler oven variant folds plain flundror and bakes them uncovered at 225 °C for about 10 minutes. All fetched sources state oven settings, times and visual endpoints (golden top, set cream); none states an internal pull temperature, and none is inferred here.",
     "oven_bake_sv": "Ugnsbakning av strömming kretsar kring strömmingslådan — fjärilsöppnade flundror med örtfyllning i smord form, täckta med smaksatt grädde (senaps- eller kaviargrädde) och gräddade vid 225 °C i 15–30 minuter tills toppen är gyllenbrun och grädden satt. Den fuktiga, gräddtäckta miljön skyddar det magra, fina köttet. En enklare variant gräddar nakna flundror i ugn vid 225 °C ca 10 minuter. Alla hämtade källor anger ugnstemperatur, tid och visuella slutpunkter; ingen anger innertemperatur.",
-    "pan_fry": "Pan-frying is the defining stovetop method for Baltic herring (*strömming*, *silakka*): fillets or butterflied \"flundror\" (pairs of fillets folded around a herb filling) are dredged in coarse rye flour or breadcrumbs and fried quickly in butter. The fish is small (40–80 g whole; fillets cook in 2–4 minutes per side), lean for a herring, and its fine flesh sets fast — the classic failure mode is sticking and tearing rather than drying. Rye-flour dredging (Swedish *rågmjöl*) is the traditional crust: it crisps in butter without the sealing effect of fine breadcrumbs. All fetched sources use time and visual endpoints; none states an internal pull temperature, and none is inferred here.",
-    "pan_fry_sv": "Pannstekning är den definierande stekmetoden för strömming: filéer eller strömmingsflundror (filépar vikta kring örtfyllning) dredgas i grovt rågmjöl eller ströbröd och steks snabbt i smör. Fisken är liten (40–80 g hel) och magrare än sill; det klassiska misslyckandet är att fisken fastnar och går sönder, inte att den torkar. Rågmjölspanering är traditionell. Alla hämtade källor använder tids- och visuella slutpunkter; ingen anger innertemperatur och ingen sådan härleds.",
+    "pan_fry": "Pan-frying is the defining stovetop method for Baltic herring (*strömming*, *silakka*): fillets or butterflied \"flundror\" (pairs of fillets folded around a filling) are dredged in coarse rye flour or breadcrumbs and fried quickly in butter. The fish is small (40–80 g whole; fillets cook in 2–4 minutes per side), lean for a herring, and its fine flesh sets fast — the classic failure mode is sticking and tearing rather than drying. Rye-flour dredging (Swedish *rågmjöl*) is the traditional crust: it crisps in butter without the sealing effect of fine breadcrumbs. Across the whole collection every fetched source uses time and visual endpoints; none states an internal pull temperature, and none is inferred here.",
+    "pan_fry_sv": "Pannstekning är den definierande stekmetoden för strömming: filéer eller strömmingsflundror (filépar vikta kring fyllning) dredgas i grovt rågmjöl eller ströbröd och steks snabbt i smör. Fisken är liten (40–80 g hel) och magrare än sill; det klassiska misslyckandet är att fisken fastnar och går sönder, inte att den torkar. Rågmjölspanering är traditionell. I hela materialet använder alla hämtade källor tids- och visuella slutpunkter; ingen anger innertemperatur och ingen sådan härleds.",
     "smoker": "Smoking Baltic herring (strömming) has its own Swedish name: the product is *böckling* (hot-smoked strömming or herring; the word is borrowed from Dutch, \"little buck\"). Larger strömming are the traditional choice for smoking — small summer fish are fried instead. Smoking here is primarily a flavour and preservation method: Swedish food-culture documentation records cold smoking at about 20 °C for 8–10 days (the oldest method) and hot smoking at 75–85 °C for a few hours, in both cases combined with salting or drying. Hot smoking coagulates the protein and gives the fish a cooked character. No fetched source states an internal pull temperature for the fish, and none is inferred here; the smoking-chamber figures above are the sources' own stated process temperatures.",
     "smoker_sv": "Varmrökt strömming har ett eget svenskt namn: *böckling* (namnet är lånat från nederländska, \"liten bock\"). Större strömming är det traditionella valet för rökning — små sommarströmmingar steks i stället. Rökningen är framför allt smakförhöjande och konserverande: svensk matkulturdokumentation anger kallrökning vid ca 20 °C i 8–10 dagar (äldsta metoden) och varmrökning vid 75–85 °C under några timmar, i båda fallen kombinerat med saltning eller torkning. Varmrökning koagulerar proteinet och ger fisken kokt karaktär. Ingen hämtad källa anger innertemperatur för fisken; process-temperaturerna ovan är källornas egna angivna rökningstemperaturer."
   },
@@ -132034,10 +132034,16 @@ const RECIPE_TITLES_INDEX = {
   },
   "baltic_herring": {
     "boil": [
-      "Matkult.se (Institutet för språk och folkminnen material) — Tillagning: kokt salt fisk"
+      "Matkult.se (Institutet för språk och folkminnen material) — Tillagning: kokt salt fisk",
+      "Martat.fi (Finnish Martha Association) — Kirkas silakkakeitto",
+      "Isoäidin reseptillä (1909 cookbook reproduction) — Silakkakeitto",
+      "Pro Kala (Finnish fish-industry recipe site) — Silakka-pastakeitto"
     ],
     "grill": [
-      "Matkult.se (Institutet för språk och folkminnen material) — Glödstekt eller halstrad"
+      "Matkult.se (Institutet för språk och folkminnen material) — Glödstekt eller halstrad",
+      "Köket.se — Sotig strömming på grillen",
+      "Lisa Elmqvist (Stockholm fish merchant) — Halstrad strömming",
+      "What's Up Yukon (Sydney Keddy) — Rosemary grilled herring"
     ],
     "oven_bake": [
       "Köket.se — Strömmingslåda",
@@ -132047,7 +132053,9 @@ const RECIPE_TITLES_INDEX = {
     "pan_fry": [
       "Köket.se — Stekta strömmingsflundror",
       "Marthaförbundet (Martha.fi) — Strömmingsflundror",
-      "Tillmiddag.se — Stekt strömming med potatismos"
+      "Tillmiddag.se — Stekt strömming med potatismos",
+      "Fishbox / Delia Online — Herring in Oatmeal",
+      "Lecker.de (Bauer Media Group) — Gebratene Heringe"
     ],
     "smoker": [
       "Matkult.se (Institutet för språk och folkminnen material) — Konservering och tillagning: Rökning",
@@ -152390,7 +152398,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "649";
+const PANEL_VERSION = "650";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

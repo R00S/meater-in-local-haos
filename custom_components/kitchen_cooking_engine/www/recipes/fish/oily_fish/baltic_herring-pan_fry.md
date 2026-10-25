@@ -11,11 +11,11 @@ cut_type: Oily Fish
 
 ## Cut profile
 
-Pan-frying is the defining stovetop method for Baltic herring (*strömming*, *silakka*): fillets or butterflied "flundror" (pairs of fillets folded around a herb filling) are dredged in coarse rye flour or breadcrumbs and fried quickly in butter. The fish is small (40–80 g whole; fillets cook in 2–4 minutes per side), lean for a herring, and its fine flesh sets fast — the classic failure mode is sticking and tearing rather than drying. Rye-flour dredging (Swedish *rågmjöl*) is the traditional crust: it crisps in butter without the sealing effect of fine breadcrumbs. All fetched sources use time and visual endpoints; none states an internal pull temperature, and none is inferred here.
+Pan-frying is the defining stovetop method for Baltic herring (*strömming*, *silakka*): fillets or butterflied "flundror" (pairs of fillets folded around a filling) are dredged in coarse rye flour or breadcrumbs and fried quickly in butter. The fish is small (40–80 g whole; fillets cook in 2–4 minutes per side), lean for a herring, and its fine flesh sets fast — the classic failure mode is sticking and tearing rather than drying. Rye-flour dredging (Swedish *rågmjöl*) is the traditional crust: it crisps in butter without the sealing effect of fine breadcrumbs. Across the whole collection every fetched source uses time and visual endpoints; none states an internal pull temperature, and none is inferred here.
 
 ## Styckesprofil
 
-Pannstekning är den definierande stekmetoden för strömming: filéer eller strömmingsflundror (filépar vikta kring örtfyllning) dredgas i grovt rågmjöl eller ströbröd och steks snabbt i smör. Fisken är liten (40–80 g hel) och magrare än sill; det klassiska misslyckandet är att fisken fastnar och går sönder, inte att den torkar. Rågmjölspanering är traditionell. Alla hämtade källor använder tids- och visuella slutpunkter; ingen anger innertemperatur och ingen sådan härleds.
+Pannstekning är den definierande stekmetoden för strömming: filéer eller strömmingsflundror (filépar vikta kring fyllning) dredgas i grovt rågmjöl eller ströbröd och steks snabbt i smör. Fisken är liten (40–80 g hel) och magrare än sill; det klassiska misslyckandet är att fisken fastnar och går sönder, inte att den torkar. Rågmjölspanering är traditionell. I hela materialet använder alla hämtade källor tids- och visuella slutpunkter; ingen anger innertemperatur och ingen sådan härleds.
 
 ## Source recipes
 
@@ -80,19 +80,71 @@ Pannstekning är den definierande stekmetoden för strömming: filéer eller str
 
 ---
 
+### 4. Fishbox / Delia Online — Herring in Oatmeal
+**Inspired by**: https://www.fishbox.co.uk/recipes/herring-in-oatmeal/ (fetched 2026-10-24). UK seafood retailer Fishbox reproducing a Delia Online recipe; the page calls herring "silver darlings" and dates the oatmeal crust as traditional Scottish. Species note: the source says *herring* (Atlantic herring, *Clupea harengus*), not Baltic herring specifically — included as the Scottish tradition for the same species the cut profile notes "cooks in broadly the same manner".
+**Serves**: 2 · **Prep**: 13 min · **Cook**: 7 min (3 + 2–3 min) · **Rest**: not stated
+
+**Ingredients**
+- 2 herring fillets
+- Salt and ground black pepper
+- 2 heaped tbsp plain flour, on a plate
+- 1 egg, beaten, in a bowl
+- 75 g coarse oatmeal, on a plate
+- 2 tbsp vegetable oil
+- Boiled new potatoes or side salad, to serve
+
+**Method**
+1. Season the herring fillets flesh side up; season the flour.
+2. Dip both sides of the fillets into the seasoned flour, then into the beaten egg, then into the oatmeal, ensuring each fillet has a thick coating.
+3. Heat the vegetable oil in a frying pan over high heat.
+4. Fry the fillets flesh side down first for 3 minutes, until crispy; turn and cook the skin side a further 2–3 minutes. The source gives no internal temperature or explicit pull point; do not infer one.
+5. Lift onto kitchen towel to drain excess oil. The source states no final serving temperature. Serve with boiled new potatoes and/or a side salad.
+
+---
+
+### 5. Lecker.de (Bauer Media Group) — Gebratene Heringe
+**Inspired by**: https://www.lecker.de/gebratene-heringe-111.html (fetched 2026-10-24). German recipe platform; unattributed house recipe. Species note: "grüne Heringe" (green/fresh herring) = *Clupea harengus*; the source does not distinguish the Baltic subspecies.
+**Serves**: not stated (6 herrings à 250 g) · **Prep**: part of 75 min total · **Cook**: 5–6 min per side · **Rest**: not stated
+
+**Ingredients**
+- 1 kg waxy potatoes
+- Salt
+- 6 kitchen-ready green herrings (à 250 g)
+- 2 tbsp lemon juice
+- 3 onions (or other)
+- 100 g smoked streaky bacon
+- ¼ l clear broth (instant)
+- 3–4 tbsp wine vinegar
+- White pepper
+- 6 tbsp oil
+- approx. 2 tbsp flour
+- 1 bunch flat-leaf parsley
+- Lemon slices, to garnish
+
+**Method**
+1. Boil the washed potatoes in salted water approx. 20 minutes; drain, peel while warm and let cool. Trim fins and tails off the herrings.
+2. Wash and pat dry the fish; sprinkle with lemon juice. Slice the potatoes; dice the onions; dice the bacon and render it crisp, then briefly sweat the onions with it.
+3. Bring the broth to a boil with the potato-onion mix, take off the heat, season strongly with vinegar, salt and pepper, add part of the oil, pour over the potatoes and leave covered at least 30 minutes.
+4. Pat the herrings dry, season with salt and pepper, turn in flour and knock off excess. Heat the remaining oil in a pan and fry the herrings **5–6 minutes per side**. The source gives no internal temperature or explicit pull point; do not infer one.
+5. Serve the fried herrings with parsley and lemon slices alongside the lukewarm potato salad. The source states no final serving temperature.
+
+---
+
 ## Temperature consensus
 
 | Source | Stated doneness evidence | Internal/pull temperature |
 |---|---|---|
 | Köket.se (SE) | 3–4 min per side in butter | Not stated |
-| Marthaförbundet (FI) | 3–4 min per side (or oven 225 °C ~10 min) | Not stated |
+| Marthaförbundet (FI-Swedish) | 3–4 min per side (or oven 225 °C ~10 min) | Not stated |
 | Tillmiddag.se (SE) | 2–3 min per side, skin-side first | Not stated |
+| Fishbox / Delia Online (Scottish) | 3 min flesh side + 2–3 min skin side | Not stated |
+| Lecker.de (DE) | 5–6 min per side in oil | Not stated |
 
-The fetched sources give times and visual cues only. No source states an internal or final serving temperature, so no temperature range, doneness band, or `recommended_doneness` key can be derived from this leaf; the earlier version of this leaf's "approximately 63–68 °C at visual doneness" figure was inference, not source data, and has been removed. Tradition coverage: Sweden (2 sources) and Finland-Swedish (1) — two of the three sources share the Swedish national tradition, a documented duplication (Baltic herring cookery is essentially confined to the Baltic region). Culinary Groups A, B and C are not represented.
+The full observed range of stated cook times is **2–6 minutes per side**, driven by fillet vs. whole-gutted fish, coating (rye flour vs. oatmeal crust), and pan heat — not by any doneness temperature. No source states an internal or final serving temperature, so no temperature range, doneness band, or `recommended_doneness` key can be derived from this leaf; the earlier version of this leaf's "approximately 63–68 °C at visual doneness" figure was inference, not source data, and remains removed. Tradition coverage: Swedish ×2 (documented same-tradition duplication), Finland-Swedish, Scottish, German — **Culinary Group B is now covered** (sources 4–5); Groups A and C remain unrepresented. The German *Brathering* tradition (herring floured, pan-fried, then laid warm into a sour marinade — thomassixt.com/recipe/brathering/ and en.wikipedia.org/wiki/Brathering, both fetched 2026-10-24) is a further German pan-fry-then-pickle use of the method recorded here as tradition context, not as a source recipe: its pages document the technique but no quantified frying step.
 
 ## What makes this method special
 
-Pan-frying sets the rye-flour crust in butter within minutes while the thin fillet cooks through almost instantly — conductive heat at the skin, no thermal gradient worth measuring. The flundra fold doubles the thickness and protects the filling side, which is why the paired parcels get the longer end of the time range. The method's failure mode is mechanical (sticking, tearing) rather than thermal; the crust, not a probe, is the cook's signal.
+Pan-frying sets the flour or oatmeal crust in fat within minutes while the thin fillet cooks through almost instantly — conductive heat at the skin, no thermal gradient worth measuring. The flundra fold doubles the thickness and protects the filling side, which is why the paired parcels get the longer end of the time range. The German sources show the same short fry feeding a second process (the sour marinade), which is why pan-fried herring times cluster so tightly: the pan step only needs to set crust and firm the flesh. The method's failure mode is mechanical (sticking, tearing) rather than thermal; the crust, not a probe, is the cook's signal.
 
 ## Data applied to cooking_data.py
 
@@ -102,6 +154,6 @@ Pan-frying sets the rye-flour crust in butter within minutes while the thin fill
 
 ## Summary
 
-Pan-fried strömming is a two-to-four-minute rye-dredged butter fry where crisp crust and intact fillets matter more than any probe target. The three fetched Nordic sources agree closely on technique and times and none publishes an internal temperature, so this leaf supports method coverage and records the published absences.
+Pan-fried strömming is a two-to-six-minute dredged fry — rye flour in the Baltic tradition, oatmeal crust in the Scottish — where crisp crust and intact fillets matter more than any probe target. The five fetched sources span Swedish, Finland-Swedish, Scottish and German traditions and agree closely on technique while none publishes an internal temperature, so this leaf supports method coverage and records the published absences.
 
-> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Three fetched sources (SE ×2, FI ×1) document pan-fried strömming; same-tradition duplication is documented above, the 4–6-source four-tradition gate is not met, and no source gives a pull temperature. Continue collection (Estonian/Latvian/Finnish-language sources would add distinct traditions) before drawing analysis conclusions.
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Five fetched source recipes (SE ×2, FI-Swedish, Scottish, German) document pan-fried herring; the source-count gate is met, but the strict distinct-tradition gate fails on the documented Swedish duplication, two sources use Atlantic herring without specifying the Baltic subspecies (recorded per source), and no source gives a pull temperature. Continue collection (Estonian/Latvian-language sources would add distinct traditions) before drawing analysis conclusions.

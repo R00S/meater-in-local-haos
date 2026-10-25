@@ -11,11 +11,11 @@ cut_type: Oily Fish
 
 ## Cut profile
 
-Grilling Baltic herring (strömming) is documented in Swedish food culture as two archival techniques: *glödstekt* — the fish laid directly on glowing embers (sometimes wrapped in newspaper in later times) — and *halstrad*, small fresh fish skewered on a stick over an open fire. Both were outdoor, fishing-trip preparations: freshly caught small fish grilled whole made an immediate meal at the water. The tiny fish (40–80 g) tolerates the intense radiant heat only because the cook time is minutes; the historic methods used no thermometer and no stated endpoint beyond the fish being cooked through. This method was not in the auto-populated `methods:` list for baltic_herring; it is added on the basis of the fetched archival documentation below. No fetched source states an internal pull temperature; none is inferred.
+Grilling Baltic herring (strömming, Finnish *silakka*) is documented in Swedish food culture as two archival techniques: *glödstekt* — the fish laid directly on glowing embers (sometimes wrapped in newspaper in later times) — and *halstrad*, small fresh fish skewered on a stick over an open fire. Modern recipes keep the same geometry: whole, gutted fish with the backbone left in, salted briefly, laid on an oiled grill rack (*halster*) over high heat or embers and turned once. The tiny fish (40–80 g) tolerates intense radiant heat only because the cook time is minutes; the historic methods used no thermometer and no stated endpoint beyond the fish being cooked through. This method was not in the auto-populated `methods:` list for baltic_herring; it is added on the basis of the fetched documentation below. No fetched source states an internal pull temperature; none is inferred.
 
 ## Styckesprofil
 
-Grillning av strömming dokumenteras i svensk matkultur som två arkivtekniker: *glödstekt* — fisken lades helt enkelt på glöden (i senare tid ibland insvept i tidningspapper) — och *halstrad*, små nyfångade fiskar på pinne över öppen eld. Båda var utomhusberedningar vid fiske: färsk småfisk grillad hel gav en omedelbar måltid vid vattnet. Den lilla fisken (40–80 g) tål den heta strålningen bara för att tiden mäts i minuter; de historiska metoderna använde ingen termometer. Metoden fanns inte i den automatiska `methods:`-listan; den läggs till på grundval av det hämtade arkivmaterialet. Ingen källa anger innertemperatur.
+Grillning av strömming dokumenteras i svensk matkultur som två arkivtekniker: *glödstekt* — fisken lades helt enkelt på glöden (i senare tid ibland insvept i tidningspapper) — och *halstrad*, små nyfångade fiskar på pinne över öppen eld. Moderna recept behåller samma geometri: hel rensad fisk med ryggbenet kvar, kort saltad, på oljad halster över hög värme eller glöd, vänd en gång. Den lilla fisken (40–80 g) tål den heta strålningen bara för att tiden mäts i minuter; de historiska metoderna använde ingen termometer. Metoden fanns inte i den automatiska `methods:`-listan; den läggs till på grundval av det hämtade materialet. Ingen källa anger innertemperatur.
 
 ## Source recipes
 
@@ -35,26 +35,83 @@ Grillning av strömming dokumenteras i svensk matkultur som två arkivtekniker: 
 
 ---
 
+### 2. Köket.se — Sotig strömming på grillen
+**Inspired by**: https://www.koket.se/sotig-stromming-pa-grillen (fetched 2026-10-24). Swedish recipe platform (TV4's Köket.se); house recipe, no individual author named. "Sotare" is the sooty, hard-grilled strömming of the outdoor tradition.
+**Serves**: 4 · **Prep**: a few hours' salting (cold) · **Cook**: 3–4 min per side · **Rest**: not stated
+
+**Ingredients**
+- 1 kg strömming with the backbone left in
+- 1.5 dl coarse salt
+- 1 bunch dill, chopped
+- Oil, for the grill rack
+
+**Method**
+1. Layer the strömming and salt in a bowl; leave cold for a couple of hours.
+2. Brush a halster (grill rack) with oil, lay in the fish and grill 3–4 minutes per side. The source gives no internal temperature or explicit pull point; do not infer one from the stated time.
+3. Layer the finished strömming generously with dill.
+4. Serve with boiled new potatoes. The source states no final serving temperature.
+
+---
+
+### 3. Lisa Elmqvist (Stockholm fish merchant) — Halstrad strömming
+**Inspired by**: https://shop.lisaelmqvist.se/recepies/recepie/239/ (fetched 2026-10-24). Recipe from the long-running Stockholm fishmonger Lisa Elmqvist (Östermalmshallen); house recipe.
+**Serves**: 4 · **Prep**: about 1 h salting · **Cook**: 4–5 min per side over embers · **Rest**: not stated
+
+**Ingredients**
+- 1 kg whole fresh strömming (*pinfärsk*)
+- 1 dl coarse salt (or ½ dl fine salt)
+- For the potato bed: 800 g cold boiled new potatoes, 1 pepper, 250 g fresh spinach, 1½ tsp white pepper, 1½ tbsp white wine vinegar, 5 tbsp neutral oil, ½ tsp salt, 1 dl olives
+
+**Method**
+1. Clean the strömming but leave the backbone in. Rinse and put it in a plastic bag with the salt; shake. Refrigerate about 1 hour, turning a few times so the fish salts evenly.
+2. Rinse off the salt and let the fish drain on kitchen paper. Lay the strömming tightly in a row on a halster and grill over embers 4–5 minutes per side. The source also states it works to halstra in a hot frying pan with a little oil or on a rack. The source gives no internal temperature or explicit pull point; do not infer one.
+3. Prepare the bed: slice the cold potatoes; the pepper is grilled cut-side up at 200 °C for 15 minutes, then peeled and cut into strips; wash and tear the spinach. Whisk salt, pepper and vinegar, then the oil, into a vinaigrette and dress the bed.
+4. Serve the grilled strömming on the potato bed with boiled new potatoes, dill or chives, sour cream or cold butter. The source states no final serving temperature.
+
+---
+
+### 4. What's Up Yukon (Sydney Keddy) — Rosemary grilled herring
+**Inspired by**: https://whatsupyukon.com/recipes/entrees/rosemary-grilled-herring/ (fetched 2026-10-24). Canadian outdoor/lifestyle publication (Yukon); recipe by Sydney Keddy (Oland). Species note: the source says *herring* without specifying the subspecies; included as the North American (Group B) whole-fish grilling tradition for the same species.
+**Serves**: 4 · **Prep**: 20 min marinating · **Cook**: 3 min + 3 min · **Rest**: not stated
+
+**Ingredients**
+- 8 whole herring, gutted
+- 2 tbsp olive oil
+- ½ tsp dried rosemary
+- Pinch red pepper flakes
+- Juice of ½ lemon
+- Salt and pepper to taste
+
+**Method**
+1. Toss the herring with olive oil, dried rosemary, red pepper flakes, lemon juice, salt and pepper. Cover and refrigerate 20 minutes while heating the grill.
+2. Heat the grill to high. Place the herring on the grill and cook 3 minutes; flip and cook 3 more minutes. The source gives no internal temperature or explicit pull point; do not infer one from the stated time.
+3. Remove and serve drizzled with lemon juice and olive oil. The source states no final serving temperature. (Source tips: rinse the herring before seasoning; season inside the body cavity too.)
+
+---
+
 ## Temperature consensus
 
 | Source | Stated doneness evidence | Internal/pull temperature |
 |---|---|---|
-| Matkult.se (SE) | Archival practice: on embers or on a stick over open fire; "until done" | Not stated |
+| Matkult.se (SE, archival) | On embers or on a stick over open fire; "until done" | Not stated |
+| Köket.se (SE) | 3–4 min per side on oiled halster | Not stated |
+| Lisa Elmqvist (SE) | 4–5 min per side over embers (or hot pan/rack) | Not stated |
+| What's Up Yukon (CA) | 3 min + 3 min on a high grill | Not stated |
 
-One fetched source documents the method as established Swedish national culinary tradition (an acceptable source type per the Collection ToR), but it is method documentation, not a quantified recipe: no quantities, times, or temperatures. The 4–6-source, four-tradition gate is not met (Group D only). No temperature range or `recommended_doneness` key can be derived.
+The full observed range of stated grill times is **3–5 minutes per side** (plus the unquantified archival practice). All four sources agree on the endpoint being visual — skin crisped, flesh opaque — and none states an internal or final serving temperature, so no temperature range or `recommended_doneness` key can be derived from this leaf. Tradition coverage: Swedish ×3 (one of them archival method documentation) and North American ×1 (Group B) — same-tradition duplication is documented rather than hidden. Culinary Groups A and C are not represented.
 
 ## What makes this method special
 
-Cooking directly on embers or over an open flame is the most primal heat application for this fish: intense radiant heat sears the skin and cooks the small body in minutes, with smoke from dripping fat contributing flavour that no indoor method reproduces. The technique's elegance is its zero equipment — the fish's own skin is the cooking vessel. The trade-off is total exposure: there is no lid, no cream blanket, and no margin, which is why the archival record pairs it with small, fresh fish cooked and eaten at once.
+Cooking directly on embers or over a high grill is the most intense heat application for this fish: radiant heat sears the skin and cooks the small body in minutes, with smoke from dripping fat contributing flavour that no indoor method reproduces. The salt-first step in both modern Swedish recipes (1–2 h in coarse salt) firms the small fish so it survives the grill rack without tearing — the same function the archival stick served. The technique's elegance is its zero equipment; the trade-off is total exposure: no lid, no sauce blanket, no margin, which is why every fetched source pairs the method with small, fresh fish cooked and eaten at once.
 
 ## Data applied to cooking_data.py
 
-- `supported_methods` gains: `grill` (newly discovered method for baltic_herring — archival Swedish documentation verifies glödstekt/halstrad practice).
+- `supported_methods` gains: `grill` (newly discovered method for baltic_herring — archival Swedish documentation and three fetched recipes verify glödstekt/halstrad practice).
 - `recommended_doneness`: no change proposed — no source provides explicit internal-temperature evidence.
 - No `method_temperature_ranges` override proposed — no numerical evidence.
 
 ## Summary
 
-Grilled strömming is the fisherman's preparation: whole small fish straight onto embers or on a stick over open fire, cooked in minutes and eaten immediately. The archival documentation confirms the method's authenticity and cultural role but carries no measured data, so this leaf adds method coverage and a documented tradition, not a temperature recommendation.
+Grilled strömming is the fisherman's preparation: whole small fish salted briefly, then straight onto embers or a hot grill for three to five minutes a side and eaten immediately. The four fetched sources — archival Swedish practice, two modern Swedish recipes and one Canadian — agree on the technique and the visual endpoint but publish no measured data, so this leaf adds method coverage and documented traditions, not a temperature recommendation.
 
-> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** One fetched Swedish source (Group D) documents the glödstekt/halstrad tradition. The 4–6-source gate is not met and the source is method documentation rather than a quantified recipe. Search for modern quantified grilled-strömming recipes (e.g. contemporary Swedish outdoor-cooking sources) before drawing analysis conclusions.
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Four fetched sources (SE ×3 incl. archival method documentation, CA ×1) cover the glödstekt/halstrad tradition. The 4–6-source gate is met in count but the distinct-tradition gate fails on the Swedish duplication, and no source gives a pull temperature. Search for quantified Estonian/Latvian/Finnish grilled-silakka recipes before drawing analysis conclusions.
