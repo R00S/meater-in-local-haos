@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 25 Oct 2026
-Last Change: v0.10.2.16 - improve chicken_thigh_bone_in cut (grill leaf completed, pan_fry to 4 sources, air_fryer marker added, rescore 8/20); CHORES (version bump, branch history, user guide)
+Last Change: v0.10.2.17 - improve herring cut (pan_fry leaf completed to 4 traditions, rescore 7/20, method-survey gap documented); CHORES (version bump, branch history, user guide)
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -17,7 +17,7 @@ SUPPORTED_LANGUAGES = ("en", "sv", "da")
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "656"
+PANEL_VERSION = "657"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

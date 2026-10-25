@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 25 Oct 2026, 09:05 CET
+ * AUTO-GENERATED: 25 Oct 2026, 09:33 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 25 Oct 2026, 09:05 CET
+// Last generated: 25 Oct 2026, 09:33 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -132113,7 +132113,8 @@ const RECIPE_TITLES_INDEX = {
       "Stekt sill med potatismos, lingon och brynt smör — Köket.se / Tareq Taylor",
       "М. Е. / EdimDoma — Донская селедка жареная (Don-region pan-fried herring)",
       "Gebratene Heringe in Mehl (German pan-fried herring in flour) — Chefkoch.de",
-      "HIROGARU / Cookpad JP — にしんのムニエル・マスタードソースのせ"
+      "HIROGARU / Cookpad JP — にしんのムニエル・マスタードソースのせ",
+      "Gutti Winther / Seafood from the Faroe Islands — Fried herring on rye bread"
     ],
     "pressure_cooker": [
       "がまおーじの母 / Cookpad JP — 圧力鍋でにしんの煮付け (Pressure-cooked simmered herring)"
@@ -152408,7 +152409,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "656";
+const PANEL_VERSION = "657";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
