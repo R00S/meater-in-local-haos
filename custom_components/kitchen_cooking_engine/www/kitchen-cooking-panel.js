@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 25 Oct 2026, 01:15 CET
+ * AUTO-GENERATED: 25 Oct 2026, 07:49 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 25 Oct 2026, 01:15 CET
+// Last generated: 25 Oct 2026, 07:49 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -130518,10 +130518,10 @@ const CUT_METHOD_PROFILES = {
     "smoker_sv": "Sills höga fettinnehåll (10–20 % beroende på säsong) gör den till en klassisk varmrökningsfisk: fettet skyddar köttet genom långa, låga rökfaser och bär rökaromat in i köttet. Den hämtade källan dokumenterar en trefasig skåprotokoll — torkfas, lång kallrökningsfas, och het slutfas till mättad innertemperatur — och är en av de få receptfamiljerna i samlingen som anger en uttrycklig dragtemperatur. Den svenska röklåde-traditionen (ABU-röken) är kulturellt väldokumenterad men ingen hämtbar kvantifierad receptkälla kunde hittas i denna session; den tidigare versionen av detta blad bar på ett påhittat ABU-röken-recept med fabricerade tider och 63 °C dragning. De osourcade siffrorna har tagits bort — traditionen är riktig, detaljerna gick inte att citera."
   },
   "mackerel": {
-    "air_fryer": "Air-frying mackerel is a modern simplification of the pan-fry: the basket's high-velocity hot\nair renders the skin and crisps it without the sticking and splattering that mackerel's very\nhigh fat content causes in a pan. The fetched source is a minimal three-ingredient preparation\n(salt, pepper, heat) aimed at a Japanese-style breakfast: skin-on mackerel pieces scored,\nseasoned, and air-fried at 400 °F with one flip. The source states no internal temperature;\nits endpoint is the 10-minute cook. Modern appliance recipes for this cut are thin on the\nground, so this leaf rests on a single source.",
+    "air_fryer": "Air-frying mackerel is a modern simplification of the pan-fry: the basket's high-velocity hot\nair renders the skin and crisps it without the sticking and splattering that mackerel's very\nhigh fat content causes in a pan. Four fetched traditions now document it: a\nJapanese-style breakfast preparation (Tiffy Cooks), a British fillet guide (Feast Glorious\nFeast), a Nigerian/American spiced-steak marinade (Cooking With Claudy) and a South Indian\nmasala whole-fish fry (Kannamma Cooks). The three fish forms differ — skin-on pieces, fillets,\ncut steaks and whole gashed fish — and so do the basket temperatures (390–400 °F / 199–204 °C)\nand times (8–20 min). Only the Nigerian/American source states an internal temperature\n(145 °F / 63 °C); the others trust time and appearance, and that absence is recorded here\nrather than filled in.",
     "boil": "Published recipes use the label “boiled mackerel,” but their actual instructions span slowly boiling a whole fish, gently bringing liquid near boiling, and bringing a fish stew to a boil before reducing it to a lively simmer. The modern Korean mackerel stew explicitly uses the last sequence, so it is classified as braise/simmer rather than sustained boiling. Historical recipes establish boiled mackerel as a culinary method, though they do not identify Atlantic or Indian species or specify an internal temperature.",
-    "braise": "Korean mackerel braises layer raw fish with radish, onion and a small amount of seasoned liquid, then bring the pot to a boil and reduce to a covered simmer. This low-liquid, vegetable-supported cooking differs from plain broth simmering and does not sear the fish first. The Atlantic mackerel recipe below explicitly identifies the fish species; it gives no internal-temperature endpoint.",
-    "grill": "Grilling mackerel exposes its oily flesh to direct radiant heat, so the fish cooks quickly and benefits from a basket or careful handling. Charcoal grilling is a documented fuel/setup variant of the grill method rather than a separate enum method: its coals provide the heat source, while the same fish is cooked over a grate and turned. The sources use visual doneness cues and do not state internal temperatures.",
+    "braise": "A braise cooks mackerel in a small amount of liquid under a lid, so the fish is finished by\nconducted heat from a sauce it sits in rather than by radiant heat or a water bath. That matters\nfor this cut in three ways: the fat renders into the sauce and flavours it, the acid in Korean\ngochujang/soy sauces and in Vietnamese caramel and Italian tomato cuts the richness, and the fish\nis thin enough that it is done long before the accompanying vegetables or the sauce reduction —\nwhich is why every source in this collection either layers the fish above the vegetables or adds\nit late, and why the liquid is measured to come part-way up the fish rather than cover it.\nSources come from three traditions here (Korean ×2, Italian, Vietnamese); the Italian source is a\nshallow covered sauce-cook rather than a true submerge-braise, and is recorded as such.",
+    "grill": "Grilling mackerel puts its oily skin and fat layer directly against radiant heat, so the\nsurface crisps and renders within minutes while the flesh behind it steams in its own fat.\nThat speed is the method's defining constraint: mackerel is thin, so an extra two minutes per\nside dries it rather than improving it, and every fetched source answers with short, counted\ntimes (2–3 minutes a side for fillets, 5–7 for whole fish) and a visual test at the bone. The\nfat also means the grill needs no oil on the fish itself beyond a light brush, and it means\nthe skin is the deliverable — the sources consistently grill skin-side down first to protect\nit. Charcoal is a fuel/setup variant of this method, not a separate one: two of the five\nsources specify coals and the rest use gas or a grill pan.",
     "oven_bake": "Oven-baking mackerel suits both the Japanese salt-grill-adjacent preparation (saba shioyaki\nfinished under high oven heat) and the Mediterranean vegetable-tray bake: the dry convective\nheat renders the fillet's fat in place, crisping skin against a rack or vegetables while the\nflesh steams inside its own oil. The fetched sources bake at 180–200 °C for 15–30 minutes\ndepending on form (fillets vs whole fish on a potato bed). None states an internal\ntemperature; the endpoints are visual — blistered or golden skin, opaque flaking flesh — and\nno numeric endpoint is inferred here.",
     "oven_bake_sv": "Ugnsbakning av makrill passar både den japanska saltgrillsnära beredningen (saba shioyaki med\nhög ugnsvärme) och den mediterranska grönsakslågformen: den torra konvektionsvärmen renderar\nfiléns fett på plats och krispar skinnet medan köttet ångas i sin egen olja. De hämtade\nkällorna bakar vid 180–200 °C i 15–30 minuter. Ingen anger innertemperatur; härled inga siffror.",
     "oven_broil": "Oven broiling applies strong radiant heat from above and cooks mackerel quickly, usually skin-side down on a tray close to the element. The fish's oil and skin tolerate high top heat, while the short cook helps preserve moist flesh; recipe endpoints are opaque or flaky rather than measured internal temperatures. This is a distinct oven method in the enum, not outdoor grilling.",
@@ -132124,17 +132124,23 @@ const RECIPE_TITLES_INDEX = {
   },
   "mackerel": {
     "air_fryer": [
-      "3 Ingredient Mess-Free CRISPY Air Fryer Mackerel — Tiffy / Tiffy Cooks"
+      "3 Ingredient Mess-Free CRISPY Air Fryer Mackerel — Tiffy / Tiffy Cooks",
+      "How to Air Fry Mackerel Fillets — Feast Glorious Feast",
+      "Air Fryer Mackerel — Claudy / Cooking With Claudy",
+      "Air Fried Mackerel Fish Fry – South Indian Style — Suguna Vinodh / Kannamma Cooks"
     ],
     "braise": [
       "Imsun and Emily Miller / Fishful Future — Korean Spicy Braised Mackerel",
-      "Hyegyoung K. Ford / Beyond Kimchee — Korean Braised Mackerel and Radish"
+      "Hyegyoung K. Ford / Beyond Kimchee — Korean Braised Mackerel and Radish",
+      "Gennaro Contaldo / BBC Food — Sgombro alla Pizzaiola",
+      "Nguyen Thanh Mai / Cookpad — Cá Thu Kho Tộ (Braised Mackerel in Clay Pot)"
     ],
     "grill": [
       "Imma / Immaculate Bites — Whole Grilled Mackerel",
-      "Epicurious — Grilled Whole Mackerel with Lemon, Oregano, and Olives",
       "Pakus / Directo al Paladar — Caballa a la Barbacoa",
-      "Korean Bapsang — Godeungeo Gui (Grilled Mackerel)"
+      "Korean Bapsang — Godeungeo Gui (Grilled Mackerel)",
+      "Sophie Pham / Delightful Plate — Grilled Mackerel Fillets with Asian Spices",
+      "Epicurious — Grilled Whole Mackerel with Lemon, Oregano, and Olives"
     ],
     "oven_bake": [
       "Saba Shioyaki (Japanese salt-grilled mackerel) — Just One Cookbook",
@@ -152398,7 +152404,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "652";
+const PANEL_VERSION = "654";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
