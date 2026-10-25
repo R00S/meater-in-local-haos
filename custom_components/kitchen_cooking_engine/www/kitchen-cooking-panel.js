@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 25 Oct 2026, 08:04 CET
+ * AUTO-GENERATED: 25 Oct 2026, 09:05 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 25 Oct 2026, 08:04 CET
+// Last generated: 25 Oct 2026, 09:05 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -130693,7 +130693,7 @@ const CUT_METHOD_PROFILES = {
     "air_fryer": "The air fryer is a compact high-velocity convection oven, and for bone-in, skin-on thighs\nthat means rapid rendering of the skin from above while the basket's confined airflow browns\nthe sides. The fetched recipes all exploit the same cut-specific behaviour: the bone-in thigh\nis thick enough to need a two-stage cook (skin down first to render, then skin up to crisp),\nand dark meat tolerates the aggressive finishing heat that would dry out breast. Basket\narrangement and preheating vary by source, and so — dramatically — does the stated endpoint:\nthe four fetched sources range from \"juices run clear\" with no temperature at all to a\n195 °F (91 °C) target aimed at tandoori-style tender texture.",
     "boil": "Boiling bone-in thighs appears in recipe titles and instructions, but many soup recipes bring liquid to a boil and then reduce to a simmer; those are better categorized as simmering. One named-author chicken-stock soup explicitly directs a “simmering rolling boil” for a long cook, while a second bone-in thigh recipe says “allow to boil” after reducing the heat without describing a rolling boil. This evidence supports recording the method boundary, not treating every soup as a sustained-boil recipe.",
     "braise": "Braising is the bone-in thigh's home method across the world's cuisines: sear the skin to build\nfond and fat-render, then finish the piece gently in a measured amount of liquid so the thigh's\ncollagen converts to gelatin without the muscle drying. The bone-in, skin-on format is what\nmakes these dishes work — the femur holds the thigh together through 20–60 minutes of moist\nheat, and the skin (softened by the braise in most traditions) still contributes body to the\nsauce. All four fetched sources use the same architecture — sear, aromatics, deglaze, covered\nfinish — while diverging in cuisine and in whether anyone measures the endpoint: two state\ninternal temperatures (both US-page Caribbean/African-diaspora sources) and two cook by time\nand feel alone.",
-    "grill": "Grilling a bone-in, skin-on thigh is a two-zone problem: the skin needs direct heat to render\nand blister, but the thick bone-side muscle needs time and gentler heat to reach the centre\nwithout charring the exterior. All three fetched sources solve it with structure — a hot side\nfor the initial skin-down sear and a cooler side (or a covered grill) for the finish — and all\nthree marinate or dry-brine first, because the grill's dry convective heat punishes\nunderseasoned dark meat. The bone-in format is standard in grilling traditions worldwide\nbecause the femur keeps the thigh intact over the fire and shields the joint meat from\novercooking; the fetched sources span US barbecue, Indian tandoori-style and Greek treatment.",
+    "grill": "Grilling a bone-in, skin-on thigh is a two-zone problem: the skin needs direct heat to render\nand blister, but the thick bone-side muscle needs time and gentler heat to reach the centre\nwithout charring the exterior. All four fetched sources solve it with structure — a hot side\nfor the initial skin-down sear and a cooler side (or a covered grill) for the finish, or a\nwhole-grill medium heat with frequent turning — and all four marinate or dry-brine first,\nbecause the grill's dry convective heat punishes underseasoned dark meat. The bone-in format\nis standard in grilling traditions worldwide because the femur keeps the thigh intact over the\nfire and shields the joint meat from overcooking; the fetched sources span US barbecue, Indian\ntandoori-style, Greek and Jamaican jerk treatment.",
     "oven_bake": "Oven-baked bone-in thighs use steady dry oven heat, usually on a sheet pan or rack, without a stovetop sear. Several sources add a brief broiler finish to crisp skin; that finishing step is noted but the main cook remains oven baking. Bone-in thighs cook longer than boneless pieces, and the collected recipes use either a thermometer endpoint or visual cues.",
     "oven_broil": "Broiling places bone-in thighs close to a high radiant heat source, browning and crisping the skin without a prolonged oven roast. Because the skin can char before the thick joint meat finishes, the recipes use a set distance and turn the thighs or monitor internal temperature. The documented times and endpoints vary; internal targets are quoted only when the recipe page states them.",
     "oven_roast": "Bone-in, skin-on chicken thigh retains the femur bone and intact skin. The bone\ninsulates the meat at the joint end, slowing penetration of oven heat and adding\nroughly 20–30% to cook time compared to boneless thighs of the same weight. The skin,\nexposed to high dry oven heat, renders its subcutaneous fat and Maillard-browns to a\ncrisp, flavourful crust — the primary reason cooks prefer this format for oven roasting.\nDark-meat muscle fibres (soleus, biceps femoris and related upper-leg muscles) have a\nhigher fat content (6–10% vs 1–2% for breast) and more connective tissue, making them\nforgiving across a wide internal temperature range.\n\nUSDA minimum for all poultry is 74°C (165°F). Collagen in the connective tissue begins\nconverting to gelatin above 70°C; extended cooking at 74–82°C yields progressively more\nrelaxed, silky texture as the connective tissue renders. For oven roast at high heat\n(180–240°C), most mainstream sources target 74–75°C as the practical pull temperature,\nrelying on skin crispiness and visual doneness as secondary cues. Carryover from oven\nroast is typically 2–3°C, bringing the thigh to ~77°C at rest.\n\n**Probe placement**: Insert the probe horizontally from the outer exposed muscle edge,\nkeeping the tip in the geometric centre of the thickest part of the thigh, parallel to\nthe femur and at least 1 cm from the bone surface. The bone heats slower than meat and\nreads false-low if the probe tip contacts it.",
@@ -132588,7 +132588,8 @@ const RECIPE_TITLES_INDEX = {
     "grill": [
       "Michael Symon / Food Network Magazine — Grilled Chicken Thighs with Blackberry BBQ Sauce",
       "Melissa Gaman / Food Network Kitchen — Tandoori-Style Grilled Chicken",
-      "Food Network Kitchen — Grilled Chicken Thighs with Israeli Couscous Salad (\"a Greek treatment\")"
+      "Food Network Kitchen — Grilled Chicken Thighs with Israeli Couscous Salad (\"a Greek treatment\")",
+      "Stephanie Kay / Stephanie Kay Nutrition — Grilled Jamaican Jerk Chicken"
     ],
     "oven_bake": [
       "Holly / Spend With Pennies — Crispy Baked Chicken Thighs",
@@ -132610,7 +132611,8 @@ const RECIPE_TITLES_INDEX = {
     "pan_fry": [
       "Daddy Lau / Made With Lau — Dad's Pan-Fried Chicken Thighs",
       "Julie Maestre / Cooked by Julie — Pan Seared Chicken Thighs",
-      "LapSha (Мария) / EdimDoma — Куриные бедра с хрустящей ароматной корочкой (Chicken thighs with crispy aromatic crust)"
+      "LapSha (Мария) / EdimDoma — Куриные бедра с хрустящей ароматной корочкой (Chicken thighs with crispy aromatic crust)",
+      "Aliya LeeKong — North African-Spiced Chicken Thighs with Oranges, Marcona Almonds & Summer Vegetables"
     ],
     "poach": [
       "Connie Veneracion / Umami Days — Poached Chicken Hainanese-Style",
@@ -152406,7 +152408,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "655";
+const PANEL_VERSION = "656";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
