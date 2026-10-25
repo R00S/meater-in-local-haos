@@ -109,3 +109,11 @@ These four pages establish a real mackerel sous-vide method across US, UK, Venet
 ## Summary
 
 Sous vide is a verified method for mackerel fillets, with fetched recipes using 15–20 minute baths at 50°C/122°F and a short skin-side sear. The recipes document bath setpoints only; none gives a separate internal temperature. Four sources are recorded; tradition diversity remains partial because one source lacks a named author/tradition and species is unstated in each.
+
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Four fetched sources (US, UK, Venetian,
+> Danish) with bath setpoints clustering at 50 °C / 122 °F, but the mandatory
+> `## What makes this method special` and `## Data applied to cooking_data.py` sections are absent,
+> tradition diversity is incomplete (the Great British Chefs page names neither author nor regional
+> cuisine), and no source states an internal temperature distinct from the bath. Marker added
+> 2026-10-25: the cut file already counted this leaf as partial, but the leaf itself carried no
+> status line.
