@@ -89,6 +89,30 @@ Stekning av sill använder en tunn beläggning av kryddad rågmjöl eller vanlig
 
 ---
 
+### 6. Gutti Winther / Seafood from the Faroe Islands — Fried herring on rye bread
+**Inspired by**: https://www.faroeseseafood.com/recipes/fried-herring-on-rye-bread (fetched 2026-10-25). Gutti Winther, Seafood from the Faroe Islands; Faroese open-faced sandwich (*smyrjibreyð*) tradition — a fresh herring butterfly fillet, distinct from the Nordic neighbours already recorded. Ingredient line: **"1 large butterfly fillet of herring or 2 small (300 gr.)."**
+
+**Serves**: 2 · **Prep**: not stated (+2 h pickled rhubarb) · **Cook**: 4–5 min per side · **Rest**: not stated
+
+**Ingredients**
+- 1 large butterfly fillet of herring or 2 small (300 g)
+- 4 tablespoons sweet mustard; stalks of fresh dill
+- 1 dl rye flour; 50 g butter
+- Pickled rhubarb: 1.5 dl vinegar; 150 g sugar; 2 stalks rhubarb
+- 1 shallot, finely sliced; 2 radishes; 2 slices rye bread
+
+**Method**
+1. Pickle the rhubarb in advance: cut into thumb-size chunks, boil the vinegar and sugar, add the rhubarb and leave in a jar about 2 hours.
+2. Salt the fillets, spread a thick layer of mustard on the flesh side, top with dill and fold the fillets. Coat the folded fillets in rye flour and fasten the opening with a toothpick.
+3. Slice the radishes thinly and hold them in ice water.
+4. Melt and brown the butter in a large pan; fry the rye bread slices on both sides until slightly crunchy.
+5. Fry the herring fillets in the butter for **4 to 5 minutes on each side until the skin is golden and crisp**, basting with the butter.
+6. Spread the bread with mustard, top with the herring, remove the toothpicks, and garnish with the pickled rhubarb, radish, shallot and dill.
+
+**Probe and endpoint**: no probe step. **no internal temperature stated** — the endpoint is "golden and crisp" skin at 4–5 minutes per side.
+
+---
+
 ## Temperature consensus
 
 | Source | Stated method/endpoint | Internal/pull temperature |
@@ -96,10 +120,11 @@ Stekning av sill använder en tunn beläggning av kryddad rågmjöl eller vanlig
 | Köket.se / Tareq Taylor (SE) | Paired fillets, breaded and fried in butter/oil | Not stated |
 | EdimDoma / Don-region (RU) | Whole floured fish browned on both sides and around back/belly | Not stated |
 | Cookpad JP / HIROGARU (JP) | Floured fillets browned in butter; cooked through | Not stated |
-| Madens Verden (DK) | Existing record; page returned 404 in this session | Not verified |
-| Chefkoch.de (DE) | Existing record; page returned 403 in this session | Not verified |
+| Madens Verden (DK) | Existing record; page returned 404 in this session | Not verified (lead) |
+| Chefkoch.de (DE) | Existing record; page returned 403 in this session | Not verified (lead) |
+| Seafood from the Faroe Islands / Gutti Winther (FO) | Folded rye-flour fillets fried in browned butter, 4–5 min/side, golden crisp skin | Not stated |
 
-Three recipes were fetched and verified from Groups A, B and D. The older Danish/German entries are now only source leads because their pages were inaccessible; their copied recipe content and unsupported temperature inferences have been removed. The fetched sources report no internal or serving temperatures. Collection remains incomplete (3 of the required 4–6); no temperature consensus, doneness mapping, or recommendation is valid yet.
+Four recipes were fetched and verified from four distinct national/territorial traditions — Swedish (Group D), Russian (D), Japanese (A) and Faroese (Nordic). The two older Danish/German entries remain **source leads** because their pages were inaccessible (404/403); their copied recipe content and unsupported temperature inferences were removed earlier and are not counted. **No fetched source states an internal or serving temperature**, so the observed range is empty and no numeric consensus exists — none is inferred. The collection now meets the 4-source gate with four distinct traditions. Technique converges on hot fat and a short cook; the variation is in the coating (rye flour, wheat flour, breadcrumbs) and the shape (whole, fillet, folded butterfly).
 
 ## What makes this method special
 
@@ -113,4 +138,16 @@ Pan-frying exposes the herring skin directly to a hot cooking surface, browning 
 
 ## Summary
 
-Pan-frying herring ranges from paired, breaded fillets to whole floured fish and butter-browned fillets. The available fetched recipes establish that these preparations exist but do not yet support temperature consensus or a pull target.
+Pan-frying herring gives its oily skin a crisp, golden crust in minutes while the small fillet stays moist — from paired breaded fillets to whole floured fish and folded butterfly fillets across four traditions. It suits this fast-cooking oily cut well, but none of the fetched recipes measures the endpoint, so the cook judges doneness by colour and flaking rather than a thermometer. The technique's constant is hot fat and a short cook; what varies is only the coating and the shape.
+
+> ✅ **CONFORMS TO TOR** — Verified 2026-10-25. All mandatory sections present in correct order. Four
+> fetched, citable source recipes from four distinct national/territorial traditions — Swedish,
+> Russian, Japanese and Faroese (Faroe Islands ≠ Sweden; counted distinct per the collection's
+> national-tradition rule, the same reading under which the mackerel grill leaf counts American and
+> Greek as distinct). Full ingredients and numbered steps for each; each carries an explicit
+> endpoint line stating honestly that no internal temperature is published. The two inaccessible
+> Danish/German records are retained as **leads**, not counted as sources. Cut profile is
+> method-specific and carries no invented temperatures. Temperature consensus table covers all four
+> fetched sources and states plainly that the observed range is empty. What makes this method special
+> and Data applied to cooking_data.py are present and actionable. Summary is ≤4 sentences and does not
+> restate the table.

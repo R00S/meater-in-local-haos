@@ -35,9 +35,9 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 6
+quality_score: 7
 cooking_methods_researched: 0
-quality_assessed: 2026-10-24
+quality_assessed: 2026-10-25
 rest_time_min: 2
 rest_time_max: 5
 carryover_temp_c: 2
@@ -54,7 +54,7 @@ Sill (Clupea harengus) är en liten, mycket fet pelagisk fisk utbredd i Nordatla
 
 ## Research files by cooking method
 
-- [Pan Fry](./herring-pan_fry.md)
+- [Pan Fry](./herring-pan_fry.md) — ✅ Done — 4 fetched sources (Swedish, Russian, Japanese, Faroese), 4 distinct national traditions; no source states a temperature (completed 2026-10-25)
 - [Grill](./herring-grill.md)
 - [Oven Bake](./herring-oven_bake.md)
 - [Smoker](./herring-smoker.md)
@@ -63,14 +63,13 @@ Sill (Clupea harengus) är en liten, mycket fet pelagisk fisk utbredd i Nordatla
 
 ## Quality score
 
-**Score: 6 / 20** — assessed 2026-10-24
+**Score: 7 / 20** — reassessed 2026-10-25 (was 6 on 2026-10-24); deduction scale unchanged
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not fully researched (`cooking_methods_researched: 0`) | −8 |
 | Partial leaf `herring-grill.md` (3 fetched recipes, below 4–6) | −1 |
 | Partial leaf `herring-oven_bake.md` (3 fetched recipes, below 4–6) | −1 |
-| Partial leaf `herring-pan_fry.md` (3 fetched recipes, below 4–6; two inaccessible URLs retained only as leads) | −1 |
 | Partial leaf `herring-smoker.md` (1 fetched recipe, below 4–6) | −1 |
 | Partial leaf `herring-braise.md` (1 fetched recipe, below 4–6) | −1 |
 | Partial leaf `herring-pressure_cooker.md` (1 fetched recipe, below 4–6) | −1 |
@@ -80,13 +79,13 @@ Sill (Clupea harengus) är en liten, mycket fet pelagisk fisk utbredd i Nordatla
 | Missing Culinary Group C | — (Caribbean braise) |
 | Missing Culinary Group D | — (Russian grill/pan-fry; Nordic sources) |
 
-Current score: 20 − 8 − 6 = **6/20**. The collection has 6 partial leaves and the method survey is incomplete (−8); Groups A/B/C/D are represented by at least one verified leaf. No independent recipe evidence supports the safety or doneness values, but the repository scoring criteria deduct only for a missing `## Cut profile`, missing anatomy, missing method research, absent method leaves, missing groups, missing temperature evidence, and description duplication. Do not invent extra score deductions; retain the temperature evidence gap as an unquantified priority.
+Current score: 20 − 8 − 5 = **7/20** (reassessed 2026-10-25; `pan_fry` left the partial set after gaining a 4th distinct-tradition source — Faroese — and is now ✅ conformant). The collection has 5 partial leaves and the method survey is still incomplete (−8); Groups A/B/C/D are represented by at least one verified leaf. No independent recipe evidence supports the safety or doneness values, but the repository scoring criteria deduct only for a missing `## Cut profile`, missing anatomy, missing method research, absent method leaves, missing groups, missing temperature evidence, and description duplication. Do not invent extra score deductions; retain the temperature evidence gap as an unquantified priority.
 
 The per-method missing-leaf penalty is not applied because all six declared methods have leaves. Leaf temperature analysis remains explicitly invalid until each source collection meets the 4–6-source gate; no inferred temperature was added.
 
 ### Improvement priorities
 
-1. **−8** · Continue the broad method survey across traditions and methods; keep `cooking_methods_researched: 0` until the survey is genuinely thorough.
+1. **−8** · Continue the broad method survey across traditions and methods; keep `cooking_methods_researched: 0` until the survey is genuinely thorough. This is the largest single deduction and is deliberately left in place: to clear it the survey must establish that the six declared methods (`pan_fry`, `grill`, `oven_bake`, `smoker`, `braise`, `pressure_cooker`) are the complete supported set — which means checking, with fetched evidence, whether the other enum methods (e.g. `poach`, `simmer`, `steam`, `sous_vide`, `boil`, `pan_sear`) are or are not used for herring. If any is genuinely used it must be added to `methods:` and given its own leaf, which adds partial-leaf deductions until those collections also reach 4–6 sources. Do not set `cooking_methods_researched: 1` merely to raise the score (Patterns 7/9).
 2. **−6** · All six method leaves are partial; expand verified collections toward 4–6 sources from distinct traditions per leaf.
 3. Expand source collections and seek independently sourced safety and culinary temperature evidence. These are research gaps, not additional quantified score deductions under the criteria applied above; do not infer temperatures or analyze a leaf before it passes the 4–6-source gate.
 
