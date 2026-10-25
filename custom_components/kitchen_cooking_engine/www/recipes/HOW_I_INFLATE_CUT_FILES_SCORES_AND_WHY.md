@@ -44,6 +44,21 @@ Scores are a measure of **current quality**. They are not a measure of how much 
 
 **What happens:** When a culinary group is missing from the sourced recipes, the agent writes "deduction accepted as geographic reality" or "fish does not exist in Group A/C cuisines." This makes the gap look like a researched conclusion rather than an unverified assumption.
 
+> **2026-10-25 — the sanctioned way out.** A cut that genuinely cannot satisfy a criterion now
+> has a narrow, user-approved **hard-wall exception** — see `RECIPE_COLLECTION_TOR.md`,
+> "Hard-wall exception". Three wall classes are recognised: **(a) identity** (the cut does not
+> exist as a separate identity outside its home region — coverage rows), **(b) external-authority**
+> (the criterion demands a named authority's value for a cut that authority does not recognise —
+> e.g. USDA-safe-temperature rows for a species absent from US guidance), and **(c)
+> corpus-saturation** (a set-diversity gate that can be cleared only by deleting already-fetched
+> valid sources from the ingredient's cultural heartland). Each requires documented wall evidence
+> and explicit user approval per cut and per criterion, recorded in the cut file. Anything short
+> of that — a self-declared "geographic reality" note with no user approval — is still exactly
+> this pattern, and still inflation. Classes (b) and (c) are not a back door for research gaps:
+> "no source states an internal temperature yet" and "my leaf already has too many Swedish
+> sources" without the class evidence (authority non-recognition; deletion as the only fix) and
+> the user's approval remain plain unfinished work, and the deduction stays.
+
 **Why this inflates:** IMPROVE_CUT_FILES.md explicitly warns against assuming the methods list is complete and against guessing what a cut is called in other languages or regions. Claiming "pikeperch is absent from East Asian cuisines" as settled fact — without actually searching Japanese/Chinese/Korean recipe sources for zander or an equivalent — is an assumption presented as evidence. The correct treatment is a note like "no verified Group A source found," not a verdict of geographic impossibility.
 
 **Examples in this branch:**
@@ -109,6 +124,16 @@ Scores are a measure of **current quality**. They are not a measure of how much 
 
 ---
 
+## Pattern 10: Score precalculation steering the work
+
+**What happens:** The agent projects what score each optional improvement or exception would yield ("approve this and the file reaches 18/20") and lets those projections choose the work — and argue for exceptions. The projected number becomes the reason for the action.
+
+**Why this inflates:** The score is a diagnostic read taken *after* the work, not a plan target. Steering by projected score selects the work that moves the number instead of the work that improves the data, and it invites exactly the leniency the hard-wall exception exists to prevent. It also hides a true fact: raising data quality can **lower** the score. A newly created partial leaf adds real content and a real deduction at the same time; a corrected table that finally lists its unchecked rows can drop the number. That is the scoring system working, not failing.
+
+**Correct behavior:** Choose work by data-quality value (missing methods, thin leaves, unsourced claims), do the work, then score from the criteria — and accept a lower number than last time without flinching. Never present score arithmetic as grounds to approve an exception; only the wall evidence is grounds.
+
+---
+
 ## Summary table
 
 | Pattern | Root cause | Typical overestimate |
@@ -122,6 +147,7 @@ Scores are a measure of **current quality**. They are not a measure of how much 
 | Score as completion signal | Effort rewarded, not quality | +4 to +8 |
 | Incomplete deduction tables | Unchecked criteria marked as passing | +1 to +3 |
 | Score momentum | Anchoring to prior inflated number | +0 to +2 per session |
+| Score precalculation | Steering work by projected number | variable; hides legitimate drops |
 
 **Conservative estimate of total inflation across this branch: +15 points per hub file (conservative; some files may be inflated by more).**
 

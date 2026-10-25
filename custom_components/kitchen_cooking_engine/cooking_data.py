@@ -2979,6 +2979,9 @@ OILY_FISH = [
             CookingMethod.SMOKER,
             CookingMethod.GRILL,
             CookingMethod.BOIL,
+            # 2026-10-25: braise added — Baltic herring stewed in sauce is
+            # documented across RU/LV/EE traditions (baltic_herring-braise.md).
+            CookingMethod.BRAISE,
         ],
         recommended_doneness="well_done",
     ),

@@ -130,6 +130,27 @@ Pannstekning är den definierande stekmetoden för strömming: filéer eller str
 
 ---
 
+### 6. AniaGotuje.pl — Śledź Bałtycki smażony (Pan-fried Baltic herring)
+**Inspired by**: https://aniagotuje.pl/przepis/sledz-baltycki-smazony (fetched 2026-10-25). Polish recipe site AniaGotuje.pl (Anna). Species note: the title and description explicitly name *śledź bałtycki* (Baltic herring) and recommend it for frying — species-explicit for this cut, unlike the Atlantic-herring sources above.
+**Serves**: 3 · **Prep**: 10 min · **Cook**: 1 min per side (the page's header states 20 min frying total — both figures are as published) · **Rest**: not stated
+
+**Ingredients**
+- 500 g Baltic herring, about 7 fish (already cleaned)
+- Vegetable oil, for frying
+- 2 tbsp wheat flour
+- ½ tsp salt
+- ½ tsp pepper
+- 1 tsp dried garlic
+- To serve: lemon juice and fresh herbs, e.g. oregano
+
+**Method**
+1. Rinse the cleaned fish in cold water; optionally trim the fins. Dry thoroughly with paper towel.
+2. Season with salt, pepper and dried garlic; coat each fish in flour.
+3. Heat a frying pan and add oil. Fry the herring **1 minute on each side**; the page also allows a brief extra fry on the belly side. The source gives no internal temperature or explicit pull point; do not infer one from the stated time.
+4. Serve with lemon juice and fresh herbs. The source states no final serving temperature.
+
+---
+
 ## Temperature consensus
 
 | Source | Stated doneness evidence | Internal/pull temperature |
@@ -139,8 +160,9 @@ Pannstekning är den definierande stekmetoden för strömming: filéer eller str
 | Tillmiddag.se (SE) | 2–3 min per side, skin-side first | Not stated |
 | Fishbox / Delia Online (Scottish) | 3 min flesh side + 2–3 min skin side | Not stated |
 | Lecker.de (DE) | 5–6 min per side in oil | Not stated |
+| AniaGotuje.pl (PL) | 1 min per side (+ brief belly fry), flour-dusted whole fish | Not stated |
 
-The full observed range of stated cook times is **2–6 minutes per side**, driven by fillet vs. whole-gutted fish, coating (rye flour vs. oatmeal crust), and pan heat — not by any doneness temperature. No source states an internal or final serving temperature, so no temperature range, doneness band, or `recommended_doneness` key can be derived from this leaf; the earlier version of this leaf's "approximately 63–68 °C at visual doneness" figure was inference, not source data, and remains removed. Tradition coverage: Swedish ×2 (documented same-tradition duplication), Finland-Swedish, Scottish, German — **Culinary Group B is now covered** (sources 4–5); Groups A and C remain unrepresented. The German *Brathering* tradition (herring floured, pan-fried, then laid warm into a sour marinade — thomassixt.com/recipe/brathering/ and en.wikipedia.org/wiki/Brathering, both fetched 2026-10-24) is a further German pan-fry-then-pickle use of the method recorded here as tradition context, not as a source recipe: its pages document the technique but no quantified frying step.
+The full observed range of stated cook times is **1–6 minutes per side**, driven by fillet vs. whole-gutted fish (the Polish source fries small whole fish barely a minute a side), coating (rye flour vs. oatmeal crust), and pan heat — not by any doneness temperature. No source states an internal or final serving temperature, so no temperature range, doneness band, or `recommended_doneness` key can be derived from this leaf; the earlier version of this leaf's "approximately 63–68 °C at visual doneness" figure was inference, not source data, and remains removed. Tradition coverage: Swedish ×2 (documented same-tradition duplication), Finland-Swedish, Scottish, German, Polish — **Culinary Group B is covered** (sources 4–5); Groups A and C remain unrepresented. Three further pan-fry recipes were fetched 2026-10-25 but not collected: the leaf is at the 6-source collection window and cannot hold more without deleting fetched sources — recorded here as uncollected leads, not as source data: Õhtuleht.ee "kuldkollaseks praetud räimed" (EE, egg-and-flour coated fillets, no stated time), piekrasteszivis.lv "Ceptas reņģes" (LV, 2 kg egg-and-flour whole fish, no stated time), finecooking.ru "Жареная салака" (RU, 500 g flour-coated, "until golden"). The German *Brathering* tradition (herring floured, pan-fried, then laid warm into a sour marinade — thomassixt.com/recipe/brathering/ and en.wikipedia.org/wiki/Brathering, both fetched 2026-10-24) is a further German pan-fry-then-pickle use of the method recorded here as tradition context, not as a source recipe: its pages document the technique but no quantified frying step.
 
 ## What makes this method special
 
@@ -154,6 +176,6 @@ Pan-frying sets the flour or oatmeal crust in fat within minutes while the thin 
 
 ## Summary
 
-Pan-fried strömming is a two-to-six-minute dredged fry — rye flour in the Baltic tradition, oatmeal crust in the Scottish — where crisp crust and intact fillets matter more than any probe target. The five fetched sources span Swedish, Finland-Swedish, Scottish and German traditions and agree closely on technique while none publishes an internal temperature, so this leaf supports method coverage and records the published absences.
+Pan-fried strömming is a two-to-six-minute dredged fry — rye flour in the Baltic tradition, oatmeal crust in the Scottish — where crisp crust and intact fillets matter more than any probe target. The six fetched sources span Swedish, Finland-Swedish, Scottish, German and Polish traditions and agree closely on technique while none publishes an internal temperature, so this leaf supports method coverage and records the published absences.
 
-> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Five fetched source recipes (SE ×2, FI-Swedish, Scottish, German) document pan-fried herring; the source-count gate is met, but the strict distinct-tradition gate fails on the documented Swedish duplication, two sources use Atlantic herring without specifying the Baltic subspecies (recorded per source), and no source gives a pull temperature. Continue collection (Estonian/Latvian-language sources would add distinct traditions) before drawing analysis conclusions.
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Six fetched source recipes (SE ×2, FI-Swedish, Scottish, German, Polish) document pan-fried herring; the source-count gate is met at the 6-source window, but the strict distinct-tradition gate still fails on the documented Swedish duplication. That gate row is covered by the user-approved corpus-saturation exception (2026-10-25, recorded in `baltic_herring.md`): the only fix would be deleting an already-fetched Swedish primary source, and all fetched sources are kept in place. Two sources use Atlantic herring without specifying the Baltic subspecies (recorded per source), and no source gives a pull temperature.

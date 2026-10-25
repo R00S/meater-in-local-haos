@@ -89,6 +89,46 @@ Grillning av strömming dokumenteras i svensk matkultur som två arkivtekniker: 
 
 ---
 
+### 5. Balti Jaama Turg — Grillitud räimed gremolata ja sibula-paprikasalatiga (Grilled Baltic herring with gremolata and onion-pepper salad)
+**Inspired by**: https://www.astri.ee/bjt/retseptid/retsept/grillitud-raimed-gremolata-ja-sibula-paprikasalatiga/ (fetched 2026-10-25). Recipe page of Balti Jaama Turg (Baltic Station Market, Tallinn). Species note: *räim* = Baltic herring — the Estonian name in the cut file's verified name pool.
+**Serves**: 4–5 · **Prep**: not stated · **Cook**: about 5 min per side · **Rest**: not stated
+
+**Ingredients**
+- 500 g herring fillets
+- Salt, amount not stated
+- For the gremolata: large handful parsley (2 dl), 5 tbsp olive oil, zest and juice of ½ lemon, 1 garlic clove, salt and black pepper
+- For the salad: 250 g small peppers, 10–15 green onion stalks, 2 tbsp olive oil, 1 head lettuce
+
+**Method**
+1. Finely chop the parsley. Mix with olive oil, lemon zest and juice, and grated garlic; season with salt and pepper. Set aside.
+2. Heat the grill. Halve and seed the peppers; cut the onion stalks in half. Toss with olive oil.
+3. Grill the peppers over medium heat, turning occasionally, about 8 minutes. Add the onions and grill a few minutes until golden.
+4. Tear the lettuce and mix with the grilled vegetables; season and dress with half the gremolata.
+5. Sprinkle the herring with salt, place it in a fish-grill basket and grill **about 5 minutes on each side**. The source gives no internal temperature or explicit pull point; do not infer one from the stated time.
+6. Serve with the salad and the remaining gremolata. The source states no final serving temperature.
+
+---
+
+### 6. EdimDoma — Салака на гриле (Baltic herring on the grill)
+**Inspired by**: https://www.edimdoma.ru/retsepty/75659-salaka-gril-sladkaya-rybka (fetched 2026-10-25). Russian recipe community Едим Дома (EdimDoma). Species note: *салака* = *Clupea harengus membras* (Baltic herring) — verified via ru.wikipedia.org/wiki/Салака (fetched 2026-10-25). Note: the fish is marinated 1–1½ hours before grilling; this is a short fresh-fish marinade, not a pickled product.
+**Serves**: not stated · **Prep**: 1–1½ h marinating · **Cook**: "a few minutes" (page total 1 h 30 min incl. marinade) · **Rest**: not stated
+
+**Ingredients**
+- 1 kg salaka
+- 2 tbsp lemon juice
+- 2 ml unrefined vegetable oil, as printed on the page
+- Salt, to taste
+- Mixed peppercorns, to taste
+
+**Method**
+1. Clean, rinse, gut, and remove the head and dorsal fin. Add salt, spices, lemon juice and oil. Marinate 1–1½ hours.
+2. Put the fish on a well-heated, lightly oiled grill grate and close it.
+3. Wait until the coals are covered with grey ash and there is no open flame. The page gives no numerical heat setting or cooking duration.
+4. Turn the fish frequently and brush with vegetable oil while cooking.
+5. Check the thickest part with a knife: the fish is done when the meat separates easily from the bone. The source gives no internal temperature or explicit pull point; do not infer one. Serve hot. The source states no final serving temperature.
+
+---
+
 ## Temperature consensus
 
 | Source | Stated doneness evidence | Internal/pull temperature |
@@ -97,12 +137,14 @@ Grillning av strömming dokumenteras i svensk matkultur som två arkivtekniker: 
 | Köket.se (SE) | 3–4 min per side on oiled halster | Not stated |
 | Lisa Elmqvist (SE) | 4–5 min per side over embers (or hot pan/rack) | Not stated |
 | What's Up Yukon (CA) | 3 min + 3 min on a high grill | Not stated |
+| Balti Jaama Turg (EE) | About 5 min per side in a fish-grill basket | Not stated |
+| EdimDoma (RU) | "A few minutes" on grey-ashed coals; knife test at the thickest part | Not stated |
 
-The full observed range of stated grill times is **3–5 minutes per side** (plus the unquantified archival practice). All four sources agree on the endpoint being visual — skin crisped, flesh opaque — and none states an internal or final serving temperature, so no temperature range or `recommended_doneness` key can be derived from this leaf. Tradition coverage: Swedish ×3 (one of them archival method documentation) and North American ×1 (Group B) — same-tradition duplication is documented rather than hidden. Culinary Groups A and C are not represented.
+The full observed range of stated grill times is **3–5 minutes per side** (plus the unquantified archival practice and the Russian source's "a few minutes"). All six sources agree on the endpoint being visual or tactile — skin crisped, flesh opaque, meat separating from the bone — and none states an internal or final serving temperature, so no temperature range or `recommended_doneness` key can be derived from this leaf. Tradition coverage: Swedish ×3 (one of them archival method documentation), North American ×1 (Group B), Estonian ×1, Russian ×1 — same-tradition duplication is documented rather than hidden. Culinary Groups A and C are not represented.
 
 ## What makes this method special
 
-Cooking directly on embers or over a high grill is the most intense heat application for this fish: radiant heat sears the skin and cooks the small body in minutes, with smoke from dripping fat contributing flavour that no indoor method reproduces. The salt-first step in both modern Swedish recipes (1–2 h in coarse salt) firms the small fish so it survives the grill rack without tearing — the same function the archival stick served. The technique's elegance is its zero equipment; the trade-off is total exposure: no lid, no sauce blanket, no margin, which is why every fetched source pairs the method with small, fresh fish cooked and eaten at once.
+Cooking directly on embers or over a high grill is the most intense heat application for this fish: radiant heat sears the skin and cooks the small body in minutes, with smoke from dripping fat contributing flavour that no indoor method reproduces. The Estonian source's fish-grill basket is the modern answer to the archival stick — both hold the small fish together over the fire. The salt-first step in both modern Swedish recipes (1–2 h in coarse salt) firms the small fish so it survives the grill rack without tearing — the same function the archival stick served. The technique's elegance is its zero equipment; the trade-off is total exposure: no lid, no sauce blanket, no margin, which is why every fetched source pairs the method with small, fresh fish cooked and eaten at once.
 
 ## Data applied to cooking_data.py
 
@@ -112,6 +154,6 @@ Cooking directly on embers or over a high grill is the most intense heat applica
 
 ## Summary
 
-Grilled strömming is the fisherman's preparation: whole small fish salted briefly, then straight onto embers or a hot grill for three to five minutes a side and eaten immediately. The four fetched sources — archival Swedish practice, two modern Swedish recipes and one Canadian — agree on the technique and the visual endpoint but publish no measured data, so this leaf adds method coverage and documented traditions, not a temperature recommendation.
+Grilled strömming is the fisherman's preparation: whole small fish salted briefly, then straight onto embers or a hot grill for three to five minutes a side and eaten immediately. The six fetched sources — archival Swedish practice, two modern Swedish recipes, Canadian, Estonian and Russian — agree on the technique and the visual endpoint but publish no measured data, so this leaf adds method coverage and documented traditions, not a temperature recommendation.
 
-> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Four fetched sources (SE ×3 incl. archival method documentation, CA ×1) cover the glödstekt/halstrad tradition. The 4–6-source gate is met in count but the distinct-tradition gate fails on the Swedish duplication, and no source gives a pull temperature. Search for quantified Estonian/Latvian/Finnish grilled-silakka recipes before drawing analysis conclusions.
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Six fetched sources (SE ×3 incl. archival method documentation, CA, EE, RU) cover the glödstekt/halstrad tradition. The source-count gate is met at the 6-source window, but the distinct-tradition gate still fails on the Swedish duplication. That gate row is covered by the user-approved corpus-saturation exception (2026-10-25, recorded in `baltic_herring.md`): the only fix would be deleting an already-fetched Swedish primary source, and all fetched sources are kept in place. No source gives a pull temperature. Estonian and Russian grilled-silakka/salaka recipes were searched and added 2026-10-25.

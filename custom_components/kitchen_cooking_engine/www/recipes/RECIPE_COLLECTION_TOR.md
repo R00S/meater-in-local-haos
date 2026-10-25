@@ -503,6 +503,10 @@ scoring is working correctly.
   Frontmatter values auto-populated from `cooking_data.py` are not research.
 - Do **not** treat 20/20 as the goal.  Reaching 20/20 on every file is neither
   required nor expected.  Many cuts may never reach it.
+- Do **not** use projected scores to choose between optional improvements, and do
+  not treat a score drop after genuine improvement as a failure.  A new partial
+  leaf adds content and a deduction together; an honest re-check can lower the
+  number.  Improve the data first, then score from the criteria.
 - **Do** use the `### Improvement priorities` list in each file to find the
   highest-value action for that specific cut.
 - **Do** focus improvement work on the lowest-scoring files first — the floor
@@ -644,6 +648,84 @@ And append this section at the end of the cut file:
 profile is updated.*
 ```
 
+### Hard-wall exception (user-approved; the only sanctioned way past an unearnable deduction)
+
+Some cuts are structurally unable to satisfy every criterion. The clearest case is a regional
+identity the rest of the world does not distinguish: Baltic herring is *strömming*, *silakka*,
+*räim*, *salaka* or *śledź bałtycki* around the Baltic (all names verified 2026-10-25), but
+outside that region the fish is filed under generic *sill*/herring and no separate cut identity
+exists to source. For such a cut, a missing Culinary Group deduction is **unearnable**: no
+amount of additional research can ever clear it, so the cut is permanently parked at the bottom
+of the work queue and repeated passes only churn the same documented gap.
+
+The exception is deliberately narrow. It applies **only** when all of the following hold:
+
+1. **The wall is structural, not a work gap.** The deduction can never be earned back by
+   research. Three wall classes are recognised; a criterion is eligible only through one of
+   them, and only for the exact rows that class demonstrably blocks:
+
+   - **(a) Identity wall** — the cut identity does not exist in the relevant cuisine (the
+     clearest case: a regional identity the rest of the world does not distinguish). Example:
+     Baltic herring is *strömming*/*silakka*/*räim*/*salaka*/*śledź bałtycki* around the Baltic
+     and is filed under generic *sill*/herring everywhere else, so no separate cut identity
+     exists to source. Missing-Culinary-Group rows are the typical target.
+   - **(b) External-authority wall** — the criterion is defined in terms of a named external
+     authority's guidance (e.g. "USDA safe internal temperature") and that authority does not
+     recognise the cut at all: no row, category or species identity for it anywhere in that
+     authority's publications, in a jurisdiction where the ingredient is not culinarily native.
+     Generic guidance for a broader category ("finfish", "fish") is not the authority's guidance
+     *for this cut*; the criterion as written demands the cut's own value. Temperature rows for
+     ingredients whose own culinary traditions publish only non-numeric doneness cues are the
+     typical target.
+   - **(c) Corpus-saturation wall** — the criterion demands a set-diversity condition over a
+     leaf's sources (e.g. the source-selection gate "no two sources may share the same national
+     or regional tradition") that could be satisfied **only by deleting already-fetched, valid
+     primary sources**, because (i) the ingredient's verified name pool is confined to a small
+     set of traditions, (ii) the duplicates already in the leaf are legitimate primary sources
+     from the ingredient's cultural heartland, and (iii) the gate text is a gate — it is passed
+     or not passed, never "mostly passed", and never reinterpreted to fit the corpus. The target
+     is the same-tradition-duplication rows of leaves whose source sets are already frozen in.
+
+   "We have not found a source yet", "the source is hard to fetch", "this pass is short on time",
+   and "the fish is niche" are **not** walls — they are unfinished research, and the deduction
+   stays. Criteria controlled by the agent's own work (`cooking_methods_researched`, method
+   leaves and their source **counts**, description duplication, cut profile quality) remain
+   **never** eligible on their own: source counts are always research work. Classes (b) and (c)
+   can reach a temperature or diversity row only with the evidence that class demands — never on
+   the strength of the agent's own unfinished work.
+2. **The wall is demonstrated, not asserted.** The cut file must document the evidence: the
+   names the ingredient carries in each region (looked up in a real source — **never guessed**),
+   and what searches in the relevant cuisines actually showed (e.g. Japanese *nishin* is a
+   different Pacific species; Caribbean herring traditions use the smoked product). A bare
+   "geographic reality" verdict without this evidence remains score inflation (Pattern 3 in
+   `HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md`) and is **not** an exception.
+3. **The user approves it.** The agent **asks** the user — it may never approve the exception
+   itself. The request states: the cut, the exact criteria and deduction rows sought, the
+   evidence of the wall, and the score with and without the exception. Silence is not approval;
+   a refused request changes nothing.
+
+When (and only when) the user approves, document the exception **in the cut file's
+`## Quality score` section**:
+
+- an `**Exception (user-approved {ISO date}):**` line naming the exact criteria it covers
+  (e.g. "Missing Culinary Group A and C only"), with the wall evidence summarized above it;
+- the affected deduction rows rewritten as `— (user-approved exception; wall documented above)`
+  — the rows **stay in the table** and are never silently deleted;
+- the score recomputed with the exception applied, shown alongside the without-exception score
+  (e.g. `**Score: 8 / 20** (with user-approved exception; 6 / 20 without it)`).
+
+Scope and lifetime:
+
+- The exception is **per cut file and per criterion**. It transfers to no other cut, no other
+  group, and no other criterion, and it is never a blanket waiver of the scoring table.
+- If a credible source that breaks the wall is ever found, the exception is revoked for that
+  criterion, normal scoring resumes, and the cut file note records the revocation.
+- The exception exists so later passes stop re-litigating a settled question — **not** so the
+  file looks better than it is. Do not use it to chase 20/20 (Pattern 6): a low score with a
+  documented, user-approved wall is still an honest score.
+- Without an approval in hand, the deduction stands exactly as written. An agent-written note
+  claiming the wall, with no user approval, has zero scoring effect.
+
 ### Recurring task
 
 Grading cut files is a **recurring improvement task**. Whenever a new method
@@ -653,4 +735,6 @@ file score must be recalculated and updated.
 **Use low scores as a work queue.** Sort all cut files by `quality_score`
 ascending — the files at the bottom of the list are the ones that need
 attention.  Improve the lowest-scoring files first.  Do not adjust criteria
-or add leniency exceptions to raise scores artificially.
+or add leniency exceptions to raise scores artificially. The **only** sanctioned
+way past a deduction is the user-approved hard-wall exception above — and it is
+never applied by the agent alone.

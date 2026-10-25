@@ -117,6 +117,54 @@ Kokning/sjudning av strömming i vätska är den dokumenterade vardagsmetoden p�
 
 ---
 
+### 5. Kalanduse teabekeskus — Räime-klimbisupp (Baltic herring and dumpling soup)
+**Inspired by**: https://www.kalateave.ee/et/kala-tarbimine/retseptid (fetched 2026-10-25). Estonian Fisheries Information Centre (Kalanduse teabekeskus) recipe collection. Species note: *räim* = Baltic herring — the Estonian name in the cut file's verified name pool.
+**Serves**: not stated · **Prep**: not stated · **Cook**: broth about 50 min + 10 min + a few min for the fish · **Rest**: soup stands 30–60 min at 60–70 °C before serving
+
+**Ingredients**
+- 1 kg uncleaned fresh herring or herring fillets
+- 1 kg stock fish (bullhead or perch) or fish-soup assortment
+- 6 medium potatoes
+- 1 medium carrot
+- 1 onion
+- Chopped dill/herbs, bay leaf, pepper, salt (amounts not stated)
+- Dumplings: 2 eggs, 1 tbsp butter, flour and milk (amounts not stated), salt and sugar (amounts not stated)
+
+**Method**
+1. If using whole stock fish, remove gills (and the head from bullhead or perch); rinse. Start the fish or soup assortment in cold water. Skim, add quartered onion, bay leaf, pepper and salt; simmer about 50 minutes, skimming occasionally.
+2. Clean the herring, remove the backbones while keeping each fish intact along the back, and cut into pieces.
+3. Grate the carrot and dice the potatoes.
+4. Make the dumpling batter by mixing beaten egg with softened butter, then adding milk and flour gradually until the batter holds on a spoon. Season with salt and sugar; herbs optional.
+5. Strain the stock, add carrot and potato, and boil another 10 minutes.
+6. Shape small dumplings with two wet teaspoons and add them to the hot stock.
+7. Add the herring pieces and chopped herbs. The page says the soup is ready when the dumplings rise to the surface — the stated doneness cue. The source gives no internal temperature or explicit pull point for the fish; do not infer one.
+8. Leave the soup on a warm stove 30–60 minutes at 60–70 °C for the flavours to meld (this is a soup-holding step, not a fish endpoint).
+
+---
+
+### 6. nra.lv — Reņģu zupa (Baltic herring soup)
+**Inspired by**: https://nra.lv/maja/170041-gardeziem-smalkas-renges.htm (fetched 2026-10-25). Latvian newspaper Neatkarīgā Rīta Avīze (nra.lv) food article "Garšīgām smalkas reņģes". Species note: *reņģe* = Baltic herring, *Clupea harengus membras* — verified via University of Latvia natural-history source priede.bf.lu.lv (fetched 2026-10-25).
+**Serves**: not stated · **Prep**: not stated · **Cook**: not stated · **Rest**: not stated
+
+**Ingredients**
+- 200 g herring
+- 1 carrot
+- 1 onion
+- 1 tbsp butter
+- 400 g potatoes
+- 1 bay leaf
+- 100 g sour cream
+- Salt, pepper, herbs and lemon (amounts not stated)
+- 1 l water
+
+**Method**
+1. Chop the onion and fry it in butter in a pot. Add 1 litre water and bring to a boil. Add grated carrot, peeled and diced potatoes, and salt; continue cooking.
+2. Shortly before the vegetables are done, add the remaining seasonings and the cleaned herring.
+3. Cook briefly, taking care not to let the fish fall apart. Remove the fish, debone it, return it to the soup with chopped herbs, and heat through again. The source gives no internal temperature or explicit pull point; do not infer one.
+4. Serve with sour cream and a lemon slice. The source states no final serving temperature.
+
+---
+
 ## Temperature consensus
 
 | Source | Stated doneness evidence | Internal/pull temperature |
@@ -125,8 +173,10 @@ Kokning/sjudning av strömming i vätska är den dokumenterade vardagsmetoden p�
 | Martat.fi (FI) | Broth boiled ~10 min; fish steeped in hot broth after heat off | Not stated |
 | Isoäidin reseptillä (FI, 1909) | Simmer gently under lid until potatoes and fish soften | Not stated |
 | Pro Kala (FI) | Fish added last, cooked on gentle heat a few min, "do not boil" | Not stated |
+| Kalanduse teabekeskus (EE) | Fish added near the end; ready when dumplings rise; soup held 60–70 °C | Not stated |
+| nra.lv (LV) | Fish cooked briefly in the vegetable broth; "take care not to let it fall apart" | Not stated |
 
-No fetched source states an internal or final serving temperature. The observed process window is qualitative: the fish goes into liquid that is at or near boiling and is cooked "until soft", "a few minutes on gentle heat", or by standing off the heat — every source explicitly warns against vigorous boiling once the fish is in (Pro Kala verbatim: *älä keitä, ettei kala hajoa*). No temperature range or `recommended_doneness` key can be derived. Tradition coverage: Swedish archival ×1, Finnish ×3 (documented same-tradition duplication; Finland-Swedish and Finnish are both Group D) — Culinary Groups A, B and C are not represented in this leaf.
+No fetched source states an internal or final serving temperature. The observed process window is qualitative: the fish goes into liquid that is at or near boiling and is cooked "until soft", "a few minutes on gentle heat", or by standing off the heat — every source explicitly warns against vigorous boiling once the fish is in (Pro Kala verbatim: *älä keitä, ettei kala hajoa*; nra.lv: take care not to let the fish fall apart). No temperature range or `recommended_doneness` key can be derived. The 60–70 °C figure in the Estonian source is a soup-holding step after cooking, not a fish doneness target. Tradition coverage: Swedish archival ×1, Finnish ×3 (documented same-tradition duplication), Estonian ×1, Latvian ×1 — four distinct traditions of the Baltic name pool. Culinary Groups A, B and C are not represented in this leaf.
 
 ## What makes this method special
 
@@ -140,6 +190,6 @@ Boiling/simmering strömming is the zero-waste one-pot method: the fish seasons 
 
 ## Summary
 
-Boiled or simmered strömming is the everyday preparation on both sides of the Gulf of Bothnia: barrel-salted fish or fresh silakka cooked gently in broth with potatoes and vegetables, the liquid reused as soup, sauce or drink. The four fetched sources agree that the fish must never boil hard once it is in the liquid and that the endpoint is soft flesh, but none publishes a temperature, so this leaf adds method coverage and documented traditions, not a temperature recommendation.
+Boiled or simmered strömming is the everyday preparation across the Baltic: barrel-salted fish or fresh silakka/räim/reņģe cooked gently in broth with potatoes and vegetables, the liquid reused as soup, sauce or drink. The six fetched sources agree that the fish must never boil hard once it is in the liquid and that the endpoint is soft flesh or dumplings rising, but none publishes a fish temperature, so this leaf adds method coverage and documented traditions, not a temperature recommendation.
 
-> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Four fetched sources (SE archival method documentation, FI ×3) cover the kokt saltströmming / silakkakeitto tradition. The 4–6-source gate is met in count but the distinct-tradition gate fails on the Finnish duplication (three Group D sources), and no source gives a pull temperature. Search for Estonian (*keedetud räim*) or Latvian boiled-herring sources to widen the tradition spread before drawing analysis conclusions.
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Six fetched sources (SE archival method documentation, FI ×3, EE, LV) cover the kokt saltströmming / silakkakeitto tradition. The source-count gate is met at the 6-source window, but the distinct-tradition gate still fails on the Finnish duplication. That gate row is covered by the user-approved corpus-saturation exception (2026-10-25, recorded in `baltic_herring.md`): the only fix would be deleting an already-fetched Finnish primary source, and all fetched sources are kept in place. No source gives a pull temperature. Estonian and Latvian boiled-herring sources were searched and added 2026-10-25.
