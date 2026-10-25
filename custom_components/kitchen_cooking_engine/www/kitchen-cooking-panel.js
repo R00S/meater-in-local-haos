@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 25 Oct 2026, 07:49 CET
+ * AUTO-GENERATED: 25 Oct 2026, 08:04 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 25 Oct 2026, 07:49 CET
+// Last generated: 25 Oct 2026, 08:04 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -130522,12 +130522,12 @@ const CUT_METHOD_PROFILES = {
     "boil": "Published recipes use the label “boiled mackerel,” but their actual instructions span slowly boiling a whole fish, gently bringing liquid near boiling, and bringing a fish stew to a boil before reducing it to a lively simmer. The modern Korean mackerel stew explicitly uses the last sequence, so it is classified as braise/simmer rather than sustained boiling. Historical recipes establish boiled mackerel as a culinary method, though they do not identify Atlantic or Indian species or specify an internal temperature.",
     "braise": "A braise cooks mackerel in a small amount of liquid under a lid, so the fish is finished by\nconducted heat from a sauce it sits in rather than by radiant heat or a water bath. That matters\nfor this cut in three ways: the fat renders into the sauce and flavours it, the acid in Korean\ngochujang/soy sauces and in Vietnamese caramel and Italian tomato cuts the richness, and the fish\nis thin enough that it is done long before the accompanying vegetables or the sauce reduction —\nwhich is why every source in this collection either layers the fish above the vegetables or adds\nit late, and why the liquid is measured to come part-way up the fish rather than cover it.\nSources come from three traditions here (Korean ×2, Italian, Vietnamese); the Italian source is a\nshallow covered sauce-cook rather than a true submerge-braise, and is recorded as such.",
     "grill": "Grilling mackerel puts its oily skin and fat layer directly against radiant heat, so the\nsurface crisps and renders within minutes while the flesh behind it steams in its own fat.\nThat speed is the method's defining constraint: mackerel is thin, so an extra two minutes per\nside dries it rather than improving it, and every fetched source answers with short, counted\ntimes (2–3 minutes a side for fillets, 5–7 for whole fish) and a visual test at the bone. The\nfat also means the grill needs no oil on the fish itself beyond a light brush, and it means\nthe skin is the deliverable — the sources consistently grill skin-side down first to protect\nit. Charcoal is a fuel/setup variant of this method, not a separate one: two of the five\nsources specify coals and the rest use gas or a grill pan.",
-    "oven_bake": "Oven-baking mackerel suits both the Japanese salt-grill-adjacent preparation (saba shioyaki\nfinished under high oven heat) and the Mediterranean vegetable-tray bake: the dry convective\nheat renders the fillet's fat in place, crisping skin against a rack or vegetables while the\nflesh steams inside its own oil. The fetched sources bake at 180–200 °C for 15–30 minutes\ndepending on form (fillets vs whole fish on a potato bed). None states an internal\ntemperature; the endpoints are visual — blistered or golden skin, opaque flaking flesh — and\nno numeric endpoint is inferred here.",
-    "oven_bake_sv": "Ugnsbakning av makrill passar både den japanska saltgrillsnära beredningen (saba shioyaki med\nhög ugnsvärme) och den mediterranska grönsakslågformen: den torra konvektionsvärmen renderar\nfiléns fett på plats och krispar skinnet medan köttet ångas i sin egen olja. De hämtade\nkällorna bakar vid 180–200 °C i 15–30 minuter. Ingen anger innertemperatur; härled inga siffror.",
+    "oven_bake": "Oven-baking mackerel suits both the Japanese salt-grill-adjacent preparation (saba shioyaki\nfinished under high oven heat) and the European tray bake — Mediterranean chermoula, Turkish\nfish-on-potatoes, Swedish fillets under a breadcrumb-and-seed crust: the dry convective heat\nrenders the fillet's fat in place, crisping skin against a rack or vegetables while the flesh\nsteams inside its own oil. Four fetched sources bake at 175–200 °C for 15–30 minutes depending on\nform (rack-mounted fillets, fillets under a crust, or whole fish on a potato bed). **One of them\nstates a measured internal endpoint — 52 °C (Swedish)** — and the other three publish none. That\nsingle figure sits well below the USDA fish minimum and below this cut's `well_done` band, and the\ndivergence is recorded rather than smoothed over.",
+    "oven_bake_sv": "Ugnsbakning av makrill passar både den japanska saltgrillsnära beredningen (saba shioyaki med hög\nugnsvärme) och den europeiska lågformen — medelhavsinspirerad chermoula, turkisk fisk på potatis,\nsvenska filéer under bröd- och frötäcke: den torra konvektionsvärmen renderar filéns fett på plats\noch krispar skinnet medan köttet ångas i sin egen olja. Fyra hämtade källor bakar vid 175–200 °C i\n15–30 minuter. **En av dem anger en mätt innertemperatur — 52 °C (svensk)** — och de övriga tre\nanger ingen. Siffran ligger klart under USA:s minimitemperatur för fisk och under det här snittets\n`well_done`-band; avvikelsen redovisas i stället för att jämnas ut.",
     "oven_broil": "Oven broiling applies strong radiant heat from above and cooks mackerel quickly, usually skin-side down on a tray close to the element. The fish's oil and skin tolerate high top heat, while the short cook helps preserve moist flesh; recipe endpoints are opaque or flaky rather than measured internal temperatures. This is a distinct oven method in the enum, not outdoor grilling.",
     "oven_roast": "Whole mackerel roasted in an oven is cooked by dry convective heat, often with herbs and vegetables or wrapped in foil. The fish's oil helps protect the flesh, but recipes emphasize avoiding overcooking and rely on opacity, flaking or a timed roast. Species varies in the sources: Atlantic mackerel, unspecified mackerel and Spanish mackerel are not interchangeable claims, so each is named as published.",
-    "pan_fry": "Pan-frying mackerel is fast and unforgiving of hesitation: the fillet's very high fat content\n(up to 20 g/100 g at autumn peak) renders on contact with a hot pan, self-basting the flesh,\nwhile the skin crisps within minutes. All three fetched sources score or salt the fish first\n(Swedish scoring, Japanese salting, Turkish flouring) and cook skin-side first over\nmedium-to-high heat with a brief second-side finish. None of the fetched sources states an\ninternal temperature; their endpoints are visual — deep golden skin, opaque flesh — and those\nendpoints are recorded here without converting them into invented numbers.",
-    "pan_fry_sv": "Pannstekning av makrill är snabb och oförlåtande: filéns mycket höga fettinnehåll (upp till\n20 g/100 g vid hösttopp) renderar vid kontakt med het panna och bastar köttet, medan skinnet\nkrispar på minuter. Alla tre hämtade källor snittar eller saltar fisken först och steker med\nskinnsidan nedåt över medelhög–hög värme. Ingen av de hämtade källorna anger\ninnertemperatur; deras slutpunkter är visuella och återges här utan härledda siffror.",
+    "pan_fry": "Pan-frying mackerel is fast and unforgiving of hesitation: the fillet's very high fat content\n(up to 20 g/100 g at autumn peak) renders on contact with a hot pan, self-basting the flesh,\nwhile the skin crisps within minutes. Four fetched sources now document the method across all\nfour culinary groups, and each handles the raw fillet differently — Swedish scoring and\nbutter-basting, Japanese salting then a soy-mirin glaze, Turkish flouring with an oven finish,\nand Scottish three-stage coating in flour, egg and pinmeal oats. All four cook skin-side down\nfirst over medium-to-high heat with a short second-side finish. None states an internal\ntemperature; their endpoints are visual — deep golden skin, opaque flesh, crisp crust — and those\nendpoints are recorded here without converting them into invented numbers.",
+    "pan_fry_sv": "Pannstekning av makrill är snabb och oförlåtande: filéns mycket höga fettinnehåll (upp till\n20 g/100 g vid hösttopp) renderar vid kontakt med het panna och bastar köttet, medan skinnet\nkrispar på minuter. Fyra hämtade källor dokumenterar metoden i alla fyra kulinariska grupperna,\noch var och en hanterar den råa filén olika — svensk snittning och smörbasting, japansk saltning\nföljd av soja-mirin-glasyr, turkisk mjöling med ugnsavslutning samt skotsk trestegspanering i mjöl,\nägg och havregryn. Alla fyra steker med skinnsidan nedåt först och avslutar kort på köttsidan.\nIngen anger innertemperatur; deras slutpunkter är visuella och återges här utan härledda siffror.",
     "pan_sear": "Pan-searing mackerel uses a hot skillet and a short contact cook to brown the surface, often followed by a brief residual-heat finish rather than a long shallow-fry. The retrieved named recipe applies this to Spanish mackerel fillets and turns off the heat before flipping, so the fish finishes gently. Species-specific evidence for Atlantic/Indian mackerel remains thinner than the general mackerel pan-fry collection.",
     "poach": "Poaching mackerel submerges whole fish or fillets in liquid held just below a simmer, or cooks the fish gently in a shallow amount of liquid in a warm oven. The low agitation protects the oily fish's tender flesh from breaking apart; sources vary from a brief court-bouillon poach to oil poaching and a covered oven method. Most pages do not state internal temperature, and a generic article's separate temperature advice is not treated as a recipe-specific target.",
     "pressure_cooker": "Pressure cooking is documented for mackerel from quick fillet cooking to long pressure processing intended to soften bones. Unlike a conventional simmer, the cooker is sealed and the method pages explicitly use pressure-cook settings or pressure-pan whistles; their cook times therefore cannot be treated as one texture target. Most do not state an internal fish temperature or pressure level. Species is often unspecified; the Big Fat Tummy source explicitly names Bangda/Bangde, Indian mackerel.",
@@ -132145,7 +132145,8 @@ const RECIPE_TITLES_INDEX = {
     "oven_bake": [
       "Saba Shioyaki (Japanese salt-grilled mackerel) — Just One Cookbook",
       "Mackerel baked with chermoula — BBC Good Food",
-      "Fırında Uskumru Tarifi — Yemek.com"
+      "Fırında Uskumru Tarifi — Yemek.com",
+      "Ugnsbakad makrill med ärtkräm och dillslungad potatis — Allt om Mat (Anna Wendt)"
     ],
     "oven_broil": [
       "Bon Appétit — Broiled Mackerel with Scallions and Lemon",
@@ -132161,7 +132162,8 @@ const RECIPE_TITLES_INDEX = {
     "pan_fry": [
       "Smörstekt makrill med dillstuvad potatis — Köket.se (Alexandra Zazzi)",
       "ふっくらツヤツヤ！サバの照り焼き (Saba no teriyaki) — DELISH KITCHEN (Asuka Sawada)",
-      "Tavada Uskumru Tarifi — Yemekte Balık Var"
+      "Tavada Uskumru Tarifi — Yemekte Balık Var",
+      "James Morton's Oatmeal-Fried Mackerel — The Wordrobe (from *Shetland*)"
     ],
     "poach": [
       "Donna Deane / Los Angeles Times — Poached Mackerel with Ginger-Soy Sauce and Soba Noodles",
@@ -152404,7 +152406,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "654";
+const PANEL_VERSION = "655";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
