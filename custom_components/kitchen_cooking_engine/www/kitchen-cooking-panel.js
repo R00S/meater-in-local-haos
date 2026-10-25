@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 25 Oct 2026, 09:33 CET
+ * AUTO-GENERATED: 25 Oct 2026, 10:42 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 25 Oct 2026, 09:33 CET
+// Last generated: 25 Oct 2026, 10:42 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -130507,10 +130507,10 @@ const CUT_METHOD_PROFILES = {
   },
   "herring": {
     "braise": "This Caribbean preparation braises already-smoked, salted herring flakes briefly in a tomato, onion, pepper and herb sauce after rehydration. The source uses the traditional *red herring* form, so this leaf records a cooked smoked-fish preparation rather than implying that it applies to fresh herring. The fish needs only a short simmer to take on the sauce; the recipe does not state a core temperature or a measured endpoint. The title method is supported by an award-winning Caribbean food writer's published recipe, though more sources are needed before making broader claims.",
-    "grill": "Grilling herring exploits the fish's naturally high fat content — the oil self-bastes the flesh over direct heat and drips to create aromatic smoke that flavours the skin. Herring are typically grilled whole (gutted, head on or off), scored 2–3 times per flank to prevent curling and let heat penetrate, or grilled as butterflied fillets. The fetched sources document three traditions: the British hot-grill (broiler) with compound mustard butter, Japanese whole-fish salt-grilling (*shioyaki*, 塩焼き), and Russian Don-region charcoal-grilling of fresh or thawed fish. All use qualitative endpoints; none states an internal pull temperature, and none is inferred here.",
-    "grill_sv": "Grillning av sill utnyttjar fiskens höga fettinnehåll — oljan bastar köttet under direktvärmen och ger aromatisk rök åt skinnet. Sill grillas hel (rensad), snittad 2–3 gånger per sida för att förhindra böjning, eller som flundra. De hämtade källorna dokumenterar två grillformer: den brittiska heta grillen med senaps-smör efter tillagning, och den japanska saltsgrillade hela fisken (*shioyaki*, 塩焼き). Båda använder visuella slutpunkter; ingen anger innertemperatur.",
-    "oven_bake": "Oven-baking herring is well-suited to the \"rolled\" preparation where butterflied fillets are stuffed with a flavouring (mustard, herbs, pancetta) and rolled, then baked in a hot oven. The high oven temperature (200–220 °C) crisps the outer surface while the interior steams in its own fat; cooking time is short (15–20 minutes), reflecting the small size and high fat content. Oven baking is less common than pan-frying for herring in Nordic cuisines, but is the convenient rolled-fillet method for domestic cooking in British and Scandinavian traditions. The fetched sources give oven settings, times and visual endpoints; none states an internal pull temperature, and none is inferred here.",
-    "oven_bake_sv": "Ugnsbakning av sill passar för den rullade beredningen där flundrade filéer fylls med smaksättning (senap, örter, pancetta) och rullas, sedan gräddas i het ugn. Den höga ugnstemperaturen (200–220 °C) krispar ytan medan insidan ångas i sitt eget fett; tiden är kort (15–20 minuter). Ugnsbakning är mindre vanlig än stekning för sill i nordiska kök men är den praktiska rullade metoden i brittisk och skandinavisk hemlagning. De hämtade källorna anger ugn, tid och visuella slutpunkter; ingen anger innertemperatur.",
+    "grill": "Grilling herring exploits the fish's naturally high fat content — the oil self-bastes the flesh over direct heat and drips to create aromatic smoke that flavours the skin. Herring are typically grilled whole (gutted, head on or off), scored 2–3 times per flank to prevent curling and let heat penetrate, or grilled as butterflied fillets. The fetched sources document four traditions: the British hot-grill (broiler) with compound mustard butter, Japanese whole-fish salt-grilling (*shioyaki*, 塩焼き), Russian Don-region charcoal-grilling of fresh or thawed fish, and the Egyptian *rangah* — hot-smoked herring re-grilled over a dry pan or under the oven grill, an Eid dish. The Egyptian source is the only Group C representative, and it starts from already-smoked fish rather than fresh; that difference is recorded here rather than smoothed over. All four use qualitative endpoints; none states an internal pull temperature, and none is inferred here.",
+    "grill_sv": "Grillning av sill utnyttjar fiskens höga fettinnehåll — oljan bastar köttet under direktvärmen och ger aromatisk rök åt skinnet. Sill grillas hel (rensad), snittad 2–3 gånger per sida för att förhindra böjning, eller som flundra. De hämtade källorna dokumenterar fyra grillformer: den brittiska heta grillen med senaps-smör efter tillagning, den japanska saltsgrillade hela fisken (*shioyaki*, 塩焼き), rysk kolgrillning av färsk eller tinad fisk, och den egyptiska *rangah* — rökt sill som grillas igen på torr panna eller under ugnens grill. Alla använder visuella slutpunkter; ingen anger innertemperatur.",
+    "oven_bake": "Oven-baking herring is well-suited to the \"rolled\" preparation where butterflied fillets are stuffed with a flavouring (mustard, herbs, pancetta) and rolled, then baked in a hot oven. The high oven temperature (200–220 °C) crisps the outer surface while the interior steams in its own fat; cooking time is short (15–20 minutes), reflecting the small size and high fat content. Oven baking is less common than pan-frying for herring in Nordic cuisines, but is the convenient rolled-fillet method for domestic cooking in British and Scandinavian traditions. Four fetched sources now cover it: the British rolled fillet wrapped in pancetta, Russian whole fish baked in wine with herbs and garlic, a US-published spice-and-wine bake cooled in its liquid, and the Swedish *ugnsstekt sill* — herring baked in cream under a layer of browned onion. The Swedish dish is built on desalted salt-herring fillets rather than fresh fish and is served as husmanskost with boiled potatoes; that different starting product is recorded here rather than glossed over. All four give oven settings, times and visual endpoints; none states an internal pull temperature, and none is inferred here.",
+    "oven_bake_sv": "Ugnsbakning av sill passar för den rullade beredningen där flundrade filéer fylls med smaksättning (senap, örter, pancetta) och rullas, sedan gräddas i het ugn. Den höga ugnstemperaturen (200–220 °C) krispar ytan medan insidan ångas i sitt eget fett; tiden är kort (15–20 minuter). Ugnsbakning är mindre vanlig än stekning för sill i nordiska kök men är den praktiska rullade metoden i brittisk och skandinavisk hemlagning. Fyra hämtade källor täcker nu metoden: den brittiska rullade pancettafilén, rysk hel fisk ugnsbakad i vin med örter och vitlök, en amerikanskt publicerad kryddad vinbakad fisk som svalnar i sin lag, och den svenska *ugnsstekta sillen* — sill gräddad i grädde under ett lager brynt lök, gjord på urvattnad saltsill. Alla anger ugn, tid och visuella slutpunkter; ingen anger innertemperatur.",
     "pan_fry": "Pan-frying herring spans several forms: rye- or breadcrumb-coated paired fillets in Swedish cooking, whole fresh Don-region herring dusted with flour, and whole salted or fresh fish in Japanese home recipes. The small, oily fish cooks rapidly on a hot pan; the fetched recipes describe browned or crisp skin and fully cooked flesh without reporting probe temperatures. No inferred internal-temperature figures are retained: distinguish the sources' visual endpoints from the separate USDA safe-minimum guidance rather than pretending the recipes published measured temperatures.",
     "pan_fry_sv": "Stekning av sill använder en tunn beläggning av kryddad rågmjöl eller vanligt mjöl för att skydda skinnet och skapa en krispig yta. Sillens höga fettinnehåll innebär att pannan behöver minimalt tillsatt fett — en liten klick smör eller ett tunt lager olja räcker. Fisken är typiskt flundrad (fjärilsöppnad) eller används hel (rensad), och tillagar på 3–4 minuter per sida vid medelhög värme. Det klassiska nordiska tillbehöret är inlagd rödbeta och lök. De hämtade recepten anger inga termometeravläsningar. Deras visuella slutpunkter hålls skilda från USDA:s separata säkerhetsråd; härled inga temperaturer från utseendet.",
     "pressure_cooker": "This Japanese home-cooking recipe uses fresh herring, cut crosswise into sections, simmered under pressure in a seasoned liquid. The pressure-cooker method is chosen to soften the smaller bones and season the fish; the author says the method makes it easier to eat the fish bone-in, but explicitly notes that the thickest bones remain firm. The recipe runs for 40 minutes at pressure, then allows the cooker to cool and pressure to release before opening. It reports no internal temperature, measured endpoint, or rest temperature.",
@@ -132101,12 +132101,14 @@ const RECIPE_TITLES_INDEX = {
     "grill": [
       "Grilled herrings with mustard butter — BBC Good Food",
       "cocomin23 / Cookpad JP — ニシンの姿焼き（塩焼き）(Whole grilled salted herring)",
-      "ЮсяЮся / EdimDoma — Сельдь гриль (charcoal-grilled fresh fish; herring variant)"
+      "ЮсяЮся / EdimDoma — Сельдь гриль (charcoal-grilled fresh fish; herring variant)",
+      "طريقة عمل الرنجة المشوية — Cairo24 (chef Nona, \"البلدي يوكل\", PNC Food)"
     ],
     "oven_bake": [
       "Herrings rolled with mustard and pancetta — BBC Good Food",
       "Sindirella / EdimDoma — Сельдь, запечённая в вине с травами и чесноком",
-      "James Beard Foundation — Baked Spiced Herring"
+      "James Beard Foundation — Baked Spiced Herring",
+      "Glashyttesill — Per Morberg, Köket.se (TV4 \"Vad blir det för mat\")"
     ],
     "pan_fry": [
       "Stegt sild i rugmel (Danish fried herring in rye flour) — Madens Verden",
@@ -152409,7 +152411,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "657";
+const PANEL_VERSION = "658";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
