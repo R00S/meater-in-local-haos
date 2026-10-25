@@ -13,19 +13,23 @@ cut_type: Oily Fish
 
 Pan-frying mackerel is fast and unforgiving of hesitation: the fillet's very high fat content
 (up to 20 g/100 g at autumn peak) renders on contact with a hot pan, self-basting the flesh,
-while the skin crisps within minutes. All three fetched sources score or salt the fish first
-(Swedish scoring, Japanese salting, Turkish flouring) and cook skin-side first over
-medium-to-high heat with a brief second-side finish. None of the fetched sources states an
-internal temperature; their endpoints are visual — deep golden skin, opaque flesh — and those
+while the skin crisps within minutes. Four fetched sources now document the method across all
+four culinary groups, and each handles the raw fillet differently — Swedish scoring and
+butter-basting, Japanese salting then a soy-mirin glaze, Turkish flouring with an oven finish,
+and Scottish three-stage coating in flour, egg and pinmeal oats. All four cook skin-side down
+first over medium-to-high heat with a short second-side finish. None states an internal
+temperature; their endpoints are visual — deep golden skin, opaque flesh, crisp crust — and those
 endpoints are recorded here without converting them into invented numbers.
 
 ## Styckesprofil
 
 Pannstekning av makrill är snabb och oförlåtande: filéns mycket höga fettinnehåll (upp till
 20 g/100 g vid hösttopp) renderar vid kontakt med het panna och bastar köttet, medan skinnet
-krispar på minuter. Alla tre hämtade källor snittar eller saltar fisken först och steker med
-skinnsidan nedåt över medelhög–hög värme. Ingen av de hämtade källorna anger
-innertemperatur; deras slutpunkter är visuella och återges här utan härledda siffror.
+krispar på minuter. Fyra hämtade källor dokumenterar metoden i alla fyra kulinariska grupperna,
+och var och en hanterar den råa filén olika — svensk snittning och smörbasting, japansk saltning
+följd av soja-mirin-glasyr, turkisk mjöling med ugnsavslutning samt skotsk trestegspanering i mjöl,
+ägg och havregryn. Alla fyra steker med skinnsidan nedåt först och avslutar kort på köttsidan.
+Ingen anger innertemperatur; deras slutpunkter är visuella och återges här utan härledda siffror.
 
 ## Source recipes
 
@@ -103,6 +107,33 @@ innertemperatur; deras slutpunkter är visuella och återges här utan härledda
 
 ---
 
+### 4. James Morton's Oatmeal-Fried Mackerel — The Wordrobe (from *Shetland*)
+**Inspired by**: https://thewordrobe.com/james-mortons-oatmeal-fried-mackerel/ (fetched 2026-10-25). James Morton with Tom Morton, extracted from the cookbook *Shetland*; Scottish tradition — the author calls it "a Scots classic". Full ingredient quantities and a seven-step method are published.
+
+**Serves**: 4 (2 fillets each) · **Prep**: not stated (filleting, three-stage coating) · **Cook**: "a couple of minutes on each side" · **Rest**: not stated (cooked fish held in a low oven)
+
+**Ingredients**
+- 4 mackerel or 8 mackerel fillets
+- 150 g (1¼ cups) pinhead oatmeal
+- 2 medium eggs
+- Plain (all-purpose) flour, for dusting
+- Table salt
+- 1 lemon
+- At least 100 g (3½ oz) butter
+
+**Method**
+1. Gut and fillet the mackerel. Pat the flesh dry with kitchen paper.
+2. Set out four plates: flour seasoned with a large pinch of salt; the eggs broken, salted and beaten with a fork; the oatmeal, also seasoned; and a clear fourth plate.
+3. Dunk a fillet in the flour and shake off the excess, then into the egg, turning so both sides are covered; hold it up by the tail end to let the excess drip off.
+4. Dunk in the seasoned oatmeal, pat off the excess and set aside on the fourth plate.
+5. Preheat a heavy-based frying pan — preferably cast iron — over **medium heat**. Add half the butter; if it spits and turns brown straight away, take the pan off the heat for a minute or two.
+6. Fry the prepared mackerel, four at a time if possible, for **a couple of minutes on each side**, until light golden brown and crisp. If some of the oats look dry, add more butter.
+7. Hold the cooked fish on a baking tray in a low oven while the rest fry. Serve with lemon straight away.
+
+**Probe and endpoint**: no probe step. **no internal temperature stated** — the endpoint is "light golden brown and crisp" at about two minutes a side.
+
+---
+
 ## Temperature consensus
 
 | Tradition | Preferred doneness name | Final serving temp |
@@ -110,35 +141,54 @@ innertemperatur; deras slutpunkter är visuella och återges här utan härledda
 | Swedish (Köket.se / Alexandra Zazzi) | "ogenomskinligt rakt igenom" (opaque throughout) | Not stated |
 | Japanese (DELISH KITCHEN, saba teriyaki) | "cooked through" (yaki-toru) | Not stated |
 | Turkish (Yemekte Balık Var, tavada uskumru) | Not stated — pan 2–3 min/side, then oven finish | Not stated |
+| Scottish (James Morton, oatmeal-fried) | "light golden brown and crisp" | Not stated |
 
-No fetched pan-fry source states an internal or final serving temperature. The observed range
-in °C is therefore **not measurable from this collection**, and nothing is inferred: the older
-version of this leaf converted the visual endpoint into "approximately 63–68 °C", which no
-source published — that inference has been removed as a source-integrity violation. What the
-sources do show is convergence on **full doneness** (opaque, cooked through) in three
-unrelated traditions, which is consistent with the cut file's `well_done` doneness key
-(63 °C / 145 °F) but does not independently evidence its numeric value. A `medium` doneness
-target is not exercised by any fetched pan-fry source.
+No fetched pan-fry source states an internal or final serving temperature. The observed range in
+°C is therefore **not measurable from this collection**, and nothing is inferred: the older version
+of this leaf converted the visual endpoint into "approximately 63–68 °C", which no source
+published — that inference was removed as a source-integrity violation on 2026-10-24. What the four
+sources do show is convergence on **full doneness** (opaque, cooked through, crust set) across four
+unrelated traditions, which is consistent with the cut file's `well_done` key (63 °C / 145 °F) but
+does not independently evidence its numeric value. A `medium` doneness target is exercised by no
+fetched pan-fry source. The one structural divergence is the Turkish source's oven finish: it moves
+the fish off the pan before it is done, which is a heat-management choice, not a doneness claim.
 
 ## What makes this method special
 
 Pan-frying is the fastest route to mackerel's signature contrast — shattering crisp skin over
-barely-set, fat-laced flesh — because the fillet's own rendered oil conducts heat into the
-flesh side while the skin fries against the metal. The fat content means no basting is needed,
-but it also means the window between done and dry is measured in tens of seconds, which is why
-every fetched source uses a two-stage heat (high to colour, then low/medium through) or a
-short oven finish. The Turkish source's flour coating and the Japanese source's soy-mirin
-glaze both exploit the same physics: anything added to the surface must be applied in the last
-moments or it burns before the flesh sets.
+barely-set, fat-laced flesh — because the fillet's own rendered oil conducts heat into the flesh
+side while the skin fries against the metal. The fat content means no basting is needed, but it also
+means the window between done and dry is measured in tens of seconds, which is why every fetched
+source uses a two-stage heat (high to colour, then low/medium through), a short oven finish, or a
+coating that insulates the flesh. The coatings are the clearest illustration of the physics: the
+Turkish flour-and-cornflour dust, the Japanese soy-mirin glaze and the Scottish flour-egg-oat crust
+all stand between the oil and the flesh, and all three must be applied so that they colour at the
+same rate the interior sets — the Scottish author's instruction to pull the pan off the heat when
+the butter browns too fast is the same problem stated as a kitchen warning.
 
 ## Data applied to cooking_data.py
 
 - `supported_methods`: no change proposed; `pan_fry` is already listed for mackerel.
-- `recommended_doneness`: no change proposed — no fetched source states a numeric endpoint; `well_done` (63 °C) remains consistent with the sources' convergent full-doneness practice.
+- `recommended_doneness`: no change proposed — no fetched source states a numeric endpoint; `well_done` (63 °C) remains consistent with the four sources' convergent full-doneness practice.
 - No `method_temperature_ranges` override needed — no measured endpoint exists to override with.
 
 ## Summary
 
-Pan-frying gives mackerel its crispest skin and shortest cook, in Swedish, Japanese and Turkish forms that all finish the fish completely. It suits the oily cut perfectly, though the margin between rendered and dried is thin. None of the fetched recipes measures the endpoint, so this method contributes technique evidence and full-doneness practice, not temperatures.
+Pan-frying gives mackerel its crispest skin and shortest cook: the fillet fries in its own rendered
+fat while the skin turns deep golden in minutes. Four traditions converge on the same idea from
+different directions — butter-basting, glazing, flouring and an oat crust — and all of them finish
+the fish completely rather than leaving it translucent at the bone. The method suits this oily cut
+almost perfectly; the cook's only real risk is the narrow margin before the flesh dries, which the
+recipes answer with short counted times and a visual test rather than a temperature.
 
-> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Three fetched recipes (Groups A, C, D) with full ingredients and methods; the 4–6-source threshold is not met and no source states an internal temperature. Inferred temperature figures from the previous version of this leaf were removed on 2026-10-24 (source-integrity repair).
+> ✅ **CONFORMS TO TOR** — Verified 2026-10-25. All mandatory sections present in correct order. Four
+> fetched, citable source recipes from four distinct culinary traditions, one in each group —
+> Swedish (Group D), Japanese (A), Turkish (C) and Scottish (B) — with full ingredients and
+> quantities and numbered method steps. Each source carries an explicit probe/endpoint line stating
+> honestly that no internal temperature is published. Cut profile is method-specific and carries no
+> temperatures; the Swedish *Styckesprofil* is updated to match. Temperature consensus table covers
+> all four sources and states that the observed range is empty while mapping the convergent
+> practice to `well_done` as practice, not measurement. What makes this method special addresses
+> heat transfer and coating physics. Data applied bullet list is actionable and declines an
+> override. Summary is ≤4 sentences and does not restate the table. The 2026-10-24 note that removed
+> this leaf's invented "63–68 °C" conversion still stands.
