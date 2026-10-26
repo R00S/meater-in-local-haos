@@ -1713,6 +1713,13 @@ PORK_CHOPS = [
             CookingMethod.PAN_FRY,
             CookingMethod.GRILL,
             CookingMethod.BRAISE,
+            # Method survey 2026-10-26 (enum-wide, fetched sources for this exact cut):
+            # oven_roast (4 src: US/DE/DK/PL), air_fryer (4 src: US-UK/UK/DE/HK),
+            # sous_vide (3 src: US x2/DE), oven_broil (2 src: US x2).
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.AIR_FRYER,
+            CookingMethod.SOUS_VIDE,
+            CookingMethod.OVEN_BROIL,
         ],
         recommended_doneness="well_done",
     ),
