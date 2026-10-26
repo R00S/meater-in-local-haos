@@ -491,9 +491,16 @@ Every **cut file** (the `{cut_name}.md` without a method suffix) carries a
 
 > **The score is a diagnostic tool, not a target.**
 
-The purpose of this scoring system is to **identify flaws** so that the worst
-files can be found and improved first.  A low score is the point — it means the
-scoring is working correctly.
+The purpose of this scoring system is to **identify flaws**, so that the places
+where the most recoverable data is missing can be found.  A low score is not a
+failure — it means the scoring is working correctly.
+
+**This score is not how work is chosen.** The working queue is the generated
+potential ledger (`CUT_POTENTIAL.md`), which lists each cut's enumerated gaps,
+their evidence, and what closing them yields.  Selection by potential and
+selection by score disagree on purpose: a cut with twenty sources and four known
+holes has more potential than a cut with eight sources and none, whatever the
+two numbers say.
 
 **What this means in practice:**
 
@@ -507,10 +514,15 @@ scoring is working correctly.
   not treat a score drop after genuine improvement as a failure.  A new partial
   leaf adds content and a deduction together; an honest re-check can lower the
   number.  Improve the data first, then score from the criteria.
-- **Do** use the `### Improvement priorities` list in each file to find the
-  highest-value action for that specific cut.
-- **Do** focus improvement work on the lowest-scoring files first — the floor
-  matters more than the ceiling.
+- **Do** use the `## Data state and gaps` ledger in each file to find the
+  highest-value action for that specific cut — every entry carries its evidence,
+  its effort and what closing it yields.
+- **Do** choose work from the potential queue, not from the score.  A cut with no
+  enumerated gaps is not a priority however low it scores; a cut with many gaps is
+  a priority however high it scores.
+- **Do** treat the collection as unfinished indefinitely.  It is finished when we
+  can no longer tell human-written recipes from AI-generated ones — not when a
+  number reaches its ceiling, and never sooner because the work went faster.
 
 Future agents: if you find yourself adjusting criteria to make scores look
 better, you are working against the purpose of this system.  Harsh, accurate
