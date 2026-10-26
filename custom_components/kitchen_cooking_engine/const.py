@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 26 Oct 2026
-Last Change: v0.10.2.23 - improve secreto cut (oven_roast, braise and sous_vide discovered; six leaves now, pan_sear rewritten to five counted sources with each source's own doneness cue quoted; sous_vide gives the cut's first fully measured corpus at 55–62 °C; rescore 8→11/20); CHORES (version bump, branch history, user guide, panel regen)
+Last Change: v0.10.2.24 - improve bison_steak cut (sous_vide discovered, charcoal_grill leaf created — four leaves now; grill/pan_sear rewritten for source integrity with two invented pull temps retracted and a disputed Chefkoch pair excluded from evidence; Groups A+B+C+D covered; rescore 8→12/20); CHORES (version bump, branch history, user guide, panel regen)
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -17,7 +17,7 @@ SUPPORTED_LANGUAGES = ("en", "sv", "da")
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "664"
+PANEL_VERSION = "665"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
