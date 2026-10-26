@@ -2083,8 +2083,16 @@ PORK_HAM = [
         ],
         supported_methods=[
             CookingMethod.OVEN_ROAST,
+            # 2026-10-26 (twenty-first cut-improvement pass): smoker declared from
+            # three fetched double-smoked-ham records (250 F / 300 F / 225 F, all
+            # reheats of an already-cooked ham). The stub leaf that already existed
+            # for this method had never been registered.
+            CookingMethod.SMOKER,
         ],
-        recommended_doneness="well_done",
+        # Was "well_done", which this cut does not define — its only band is
+        # heated_through (57-63 C). Corrected 2026-10-26; it now matches the
+        # recipe hub and the fetched corpus (140 F / 60 C).
+        recommended_doneness="heated_through",
     ),
 ]
 

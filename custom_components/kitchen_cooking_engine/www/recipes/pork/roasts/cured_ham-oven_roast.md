@@ -11,118 +11,151 @@ cut_type: Ham
 
 ## Cut profile
 
-Cured ham (skinke in Danish; Schinken in German/Austrian) for the oven roast method encompasses both pre-boiled glazed ham and straight-to-oven versions. The classic approach is to boil a mild-cured or smoked ham first (removing excess salt and pre-cooking the meat), then score the rind and glaze it in a hot oven until caramelised. Low-and-slow oven variants skip the boiling and use very low temperatures (80°C oven) to achieve even, juicy results. Target internal temperature for safe, juicy cured ham: **70–75 °C** — the curing keeps the meat safe at slightly lower temps than fresh pork, but 75 °C is the standard target for glazed results.
-
-Target internal temperatures (oven roast):
-- Juicy, glazed: **70–75 °C (158–167 °F)**
-- Very low-and-slow: **75 °C** (when oven is held at 80 °C)
-
-## Styckesprofil
-
-Härdad skinka (*skinke* danska; *Schinken* tyska) för ugnsrostning inkluderar både förkokt glaserad skinka och direkt-till-ugn-versioner. Det klassiska tillvägagångssättet: koka en milt härdad eller rökt skinka först (ta bort överskottssalt och förkoka), sedan avsluta i 200–220 °C ugn med söt-salt glasering.
-
-Innertemperatur: **68–75 °C (154–167 °F)** för varm, saftig härdad skinka. Eftertillagning: 3–4 °C. Sond in i tjockaste köttmassan (*biceps femoris*), borta från benets kärna. Vila 15 minuter täckt.
+A cured ham is the pig's **hind leg** — the muscles around the femur, with the skin and a
+subcutaneous fat layer still on it — that has been cured in brine or dry salt and usually smoked.
+That single fact governs the oven method: the meat is already **cooked and safe** before it goes
+in, so the oven is not doing cookery, it is doing two other jobs — bringing the interior up to a
+pleasant eating temperature and caramelising a sugar glaze on the outside. The fat layer under
+the skin is the method's other structural feature: it insulates the meat from the oven's air and
+gives the glaze something to sit on, which is why three of these four sources score it and stud
+it with cloves. Carryover is modest but deliberate — one US source pulls at **135 °F to land at
+140 °F**, and that is the whole temperature story of this cut: everything in the corpus aims at
+the same 140 °F plateau, except the Danish record, which publishes no internal temperature at all
+and judges the ham by whether the glaze has gone golden.
 
 ## Source recipes
 
-### 1. Glaseret Skinke (Danish glazed ham) (inspired by Madens Verden)
-**Inspired by**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/glaseret-skinke/ (fetched 2026-04-24). *"Simple glazing with brown sugar and mustard." 4.8/5, 56 ratings.*
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 35 min boil + 30 min rest + 12–15 min oven
-
-**Temperature guidance (from recipe)**: Boil 1 kg ham approximately 35 minutes; rest in water 30 min; oven 200°C fan × 12–15 min until glaze is golden. "Take care it doesn't get too dark."
+### 1. Madens Verden (Holger Rørby Madsen, Denmark) — Glaseret skinke med sennep og brun farin
+**Inspired by**: https://madensverden.dk/glaseret-skinke/ (fetched 2026-10-26). Madens Verden (Danish recipe site), 4.8/5 from 56 votes. Danish smørrebrød-and-holiday tradition — **Culinary Group D** source. **Integrity note**: the previous version of this leaf recorded this page with an inserted "MEATER probe" step and a **70–75 °C pull**; the fetched page publishes **no internal temperature and no probe step at all**. Its guidance is visual ("færdig, når glaseringen er blevet gylden") and that is how it is recorded now.
+**Serves**: 4 · **Prep**: 15 min · **Cook**: 35 min boil + 30 min resting in the water + 12–15 min oven · **Rest**: 10 min
 
 **Ingredients**
-- 1 kg røget skinke (smoked ham)
-- 3 tbsp brun farin (brown sugar)
-- 1 tbsp sennep (mustard)
-
-**Method**
-1. Boil ham as directed on the packaging; a 1 kg smoked ham typically boils approximately 35 minutes. Rest in the water (pot off heat) for approximately 30 minutes.
-2. Lift ham from water; remove the net. Optionally score the surface in a diamond pattern. Remove fat layer if preferred before glazing.
-3. Preheat oven to **200°C fan (varmluft)**.
-4. Mix brown sugar and mustard together; spread thoroughly over the ham.
-5. Place on baking paper in an oven-proof dish.
-6. Insert MEATER probe into the thickest part, tip at centre away from bone.
-7. **Bake 12–15 minutes** until glaze is golden and caramelised.
-8. **Pull at 70–75 °C (158–167 °F)** — the pre-boiling means it is already cooked through; oven is for glazing only.
-9. Final serving temperature: **70–75 °C / 158–167 °F** (golden glaze, juicy inside).
-
----
-
-### 2. Schinken aus dem Ofen mit Honig-Senf-Kruste (inspired by Chefkoch)
-**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/1084701214303107/Schinken-aus-dem-Ofen-mit-Honig-Senf-Kruste.html (fetched 2026-04-24). *"A must for every festive table." Boil 2 hrs, then oven with red wine + honey-mustard glaze.*
-**Serves**: 6 · **Prep**: 10 min · **Cook**: 2 hr boil + 1 hr oven
-
-**Temperature guidance (from recipe)**: 175°C × 45 min with red wine; brush honey-mustard glaze; increase to 200°C until crust is crispy; rest 10 min in turned-off oven.
-
-**Ingredients**
-- 1.5 kg mild-cured ham (Schinken gepökelter) with rind, boneless
-- 1 onion, 1 bay leaf, 3 cloves
-- 300 ml red wine
-- 1 tbsp honey
+- 1 kg smoked ham (*røget skinke*), in its net
+- 3 tbsp brown sugar (*brun farin*)
 - 1 tbsp mustard
 
 **Method**
-1. Cover ham with cold water in a pot. Spike the onion with cloves + bay leaf; add to pot. Heat gently; simmer at low heat approximately **2 hours** until nearly tender. Cool in the broth.
-2. Lift ham from broth; score rind in a grid pattern. Place in a roasting dish with the red wine.
-3. Roast at **175°C × approx. 1 hour**, basting frequently with the red wine.
-4. After 45 minutes, mix honey and mustard; brush all over the ham.
-5. Increase oven to **200°C** until crust is beautifully crispy.
-6. Insert MEATER probe into the thickest part. **Pull at 72–75 °C (162–167 °F).**
-7. Rest 10 minutes in the turned-off oven.
-8. Tip: reserve the ham broth for soup. Serve with mustard, coleslaw and farmhouse bread.
-9. Final serving temperature: **72–75 °C / 162–167 °F** (crispy-glazed crust, juicy meat).
+1. Boil the ham as instructed on its packaging — a normal 1 kg smoked ham typically needs **about 35 minutes** (the page's FAQ rounds this to "about 40 minutes at low heat", a small internal inconsistency worth noting).
+2. Take the pot off the heat and let the ham **rest in the water about 30 minutes** (the FAQ says 20 — again the page differs with itself).
+3. Lift the ham out, remove the net, and optionally score the top in a diamond pattern. The source suggests removing the fat layer before glazing if you prefer.
+4. Preheat the oven to **200 °C fan (varmluft)** — conventionally about 220 °C.
+5. Stir the brown sugar and mustard together and coat the ham thoroughly; stand it on baking paper in an ovenproof dish.
+6. Bake **12–15 minutes**, until the glaze is golden and glossy. The source's warning: watch it closely at the end, because a very dark glaze turns bitter.
+7. There is **no probe step and no internal temperature** in this record. The source judges the ham by the colour of the glaze.
+8. Rest **about 10 minutes** before carving across the grain. Final serving temperature: **not stated by the source**.
+9. The page's own note for pre-cooked hams: if the ham is labelled *kogt og røget* (cooked and smoked), it is already heat-treated — follow the packet's reheating instructions and use the 12–15 minutes only to glaze.
 
 ---
 
-### 3. Schinkenkrustenbraten bei Niedrigtemperatur (inspired by Chefkoch)
-**Inspired by**: Chefkoch.de; https://www.chefkoch.de/rezepte/3667681552238222/Schinkenkrustenbraten-bei-Niedrigtemperatur-gegart.html (fetched 2026-04-24). *Very low oven 80°C → 75°C core; vegetables braised in port wine and stock as sauce base.*
-**Serves**: 6 · **Prep**: 30 min · **Cook**: ~6.5–7 hr
-
-**Temperature guidance (from recipe)**: Oven 80°C top/bottom heat; cook in open roasting dish until internal temperature reaches **75°C** (approximately 6–7 hours). ⚠️ No pre-boiling — cook from raw throughout.
+### 2. Sip and Feast (James Delmage, US) — Brown Sugar Glazed Spiral Ham
+**Inspired by**: https://www.sipandfeast.com/brown-sugar-glazed-spiral-ham/ (fetched 2026-10-26). Sip and Feast (US food site), 5/5 from 15 votes. US Italian-American holiday tradition — **Culinary Group B** source.
+**Serves**: 12 · **Prep**: 5 min · **Cook**: 2 h 15 min · **Rest**: not stated
 
 **Ingredients**
-- 1 700 g cured pork roast (Schinkenkrustenbraten, gepökelt) with rind
-- 150 g each: celeriac, carrot, leek, shallots (all coarsely chopped)
-- 2 tbsp medium-hot mustard, paprika paste, tomato paste
-- 150 ml port wine
-- 500 ml vegetable stock
-- Peppercorns, allspice, bay leaves (coarsely crushed); salt; oil for browning
+- 1 pre-cooked spiral ham, 3.2–4.5 kg (7–10 lb)
+- **Glaze**: 3 tbsp coarse-grain Dijon mustard; ¾ cup orange juice; 1 cup packed brown sugar; ½ cup honey; 1 tbsp soy sauce; 1 tsp ground cinnamon; ½ tsp ground cloves
+- Optional slurry: 1 tbsp cornstarch + 2 tbsp water
 
 **Method**
-1. Brown vegetables and shallots in hot fat in a roasting pan for 5 min. Stir in mustard, paprika paste and tomato paste; roast briefly to develop aromatics.
-2. Deglaze with port wine; reduce completely. Add stock + spices; bring to boil; simmer 5 min. Remove from heat.
-3. Score ham rind in diamonds. Sear ham on all sides except the rind in a hot pan.
-4. Place ham on vegetable bed; insert meat thermometer.
-5. Cook uncovered in oven at **80°C top/bottom heat** until core = **75°C** (approx. 6–7 hrs). Do not cover.
-6. Insert MEATER probe into the thickest part, tip at centre. Monitor; pull at **75 °C (167 °F)**.
-7. Optionally run under grill briefly to pop and crisp the rind at the end.
-8. Rest 5 minutes. Final serving temperature: **75 °C / 167 °F** (tender, uniformly cooked, juicy).
+1. Preheat the oven to **325 °F (163 °C)** with the rack at the middle level. Remove the plastic button/disc from the base of the ham and set it flat-side down in a large roasting pan.
+2. Insert an oven-safe thermometer into the ham, taking care that it does not touch the bone.
+3. Cover tightly with foil and bake **12–15 minutes per pound**, until the internal temperature reaches **140 °F (60 °C)** — about 90 minutes for a typical spiral ham.
+4. Meanwhile make the glaze: bring all the glaze ingredients to a boil in a saucepan, reduce to a simmer, and thicken with the cornstarch slurry if it is too thin. Cool.
+5. **Pull at 60 °C (140 °F)** — the source's own figure, and the corpus's standard for a pre-cooked ham.
+6. Raise the oven to **425 °F (218 °C)**, remove the foil, and brush half the glaze over the ham, working it between the slices.
+7. Bake **uncovered 15–20 minutes** more, until browned and caramelised.
+8. Final serving temperature: **not stated beyond the 140 °F**; serve with the remaining glaze on the side.
+
+---
+
+### 3. Spend With Pennies (Holly Nilsson, US) — How to Cook a Spiral Ham
+**Inspired by**: https://www.spendwithpennies.com/how-to-cook-a-spiral-ham/ (fetched 2026-10-26). Spend With Pennies (US home-cooking site), 4.99/5 from 266 votes. US holiday-ham tradition — **Culinary Group B** source. **Pull-versus-final note**: this is the record in the corpus that separates the two numbers explicitly.
+**Serves**: 10 · **Prep**: 5 min · **Cook**: ~2 h · **Rest**: 15 min
+
+**Ingredients**
+- 1 spiral ham, 3.6–4.5 kg (8–10 lb), pre-cooked
+- Optional glaze: ⅔ cup brown sugar; ¼ cup orange or pineapple juice; 2 tbsp Dijon mustard
+
+**Method**
+1. Preheat the oven to **325 °F (163 °C)**. Remove the packaging and the small plastic disc on the underside of the bone.
+2. Put the ham in a shallow roasting pan cut-side down and **cover with foil**. (The source notes uncovered gives a crisper exterior and needs the longer end of the time range.)
+3. Bake **12–15 minutes per pound**, until it reaches **140 °F (60 °C)**.
+4. If glazing, add the glaze in the **last 20 minutes** and leave the ham uncovered to finish — the source's reason is that glaze added earlier burns.
+5. **Pull at 57 °C (135 °F)** — *"I usually remove it around 135°F and keep an eye on the thermometer to ensure it reaches 140°F."* This is the corpus's only explicit carryover instruction for this cut.
+6. Rest **at least 15 minutes** before cutting, spooning the pan juices over. Final serving temperature: **60 °C / 140 °F** (stated).
+7. The page also gives a crock-pot route (lowest setting, glaze brushed on, a little water or apple juice) but without a full recipe card; recorded in the hub as a queued `slow_cooker` lead rather than as a source.
+
+---
+
+### 4. Kawaling Pinoy (Lalaine Manalo, Philippines) — Filipino-style Pineapple-glazed Ham (*hamon*)
+**Inspired by**: https://www.kawalingpinoy.com/filipino-style-pineapple-glazed-ham/ (fetched 2026-10-26). Kawaling Pinoy (Filipino food site), 4.2/5 from 50 votes. Filipino *Noche Buena* tradition — **Culinary Group A** source. **Two-stage flag**: this is the only record in the corpus that **poaches** the ham before baking it, which is what makes it the Group A anchor: the poaching liquid (pineapple juice, lemon-lime soda, beer) is the flavour, and the oven is only there to caramelise.
+**Serves**: 12 · **Prep**: 15 min · **Cook**: 50–60 min poach + 1–1½ h bake · **Rest**: 10–15 min
+
+**Ingredients**
+- 1 fully cooked bone-in ham, about 3.2–3.6 kg (7–8 lb) — the source advises **against** spiral-cut for this two-stage method, as it dries out
+- **Poaching liquid**: 6 cups pineapple juice; 3 cups Sprite or 7-Up; 2 cups dark beer; 1 cup brown sugar; 2 tbsp salt; 5–6 whole cloves
+- **Pineapple glaze**: 2 cups of the reserved poaching liquid; 1 cup crushed pineapple (packed in juice); ¾ cup brown sugar; ¼ cup yellow mustard
+
+**Method**
+1. In a deep pot combine the pineapple juice, beer, soda, sugar and salt and stir until dissolved. Add the ham and 5–6 cloves, making sure it is fully submerged.
+2. Bring to a boil over medium heat, then cover, lower the heat and cook **50–60 minutes**. Drain the ham, reserving about **2 cups** of the poaching liquid.
+3. For the glaze, combine the reserved liquid, crushed pineapple, brown sugar and mustard in a saucepan over medium heat; stir until the sugar dissolves and cook until reduced and thickened.
+4. Preheat the oven to **350 °F (177 °C)**. Score the surface fat in a diamond pattern about ¼ inch deep and 1 inch apart, and press cloves into the intersections.
+5. Brush the ham liberally with **¾ of the glaze**, put it on a rack in a roasting pan and bake **1–1½ hours, until the internal temperature reaches 140 °F (60 °C)**, basting every 15–20 minutes with the remaining glaze.
+6. **Pull at 60 °C (140 °F)** — the source's own figure. Its warning: the sweet glaze burns quickly, so tent loosely with foil if it browns before the ham is heated through.
+7. In the **last 5 minutes** raise the oven to **400 °F (204 °C)** to brown.
+8. Rest **10–15 minutes** covered with foil, then brush with the pan juices and slice. Final serving temperature: **not stated beyond the 140 °F**.
+9. Food-safety note from the page for leftovers: reheat to **165 °F** (74 °C), loosely foiled, in a 350 °F oven for 8–10 minutes per pound.
 
 ---
 
 ## Temperature consensus
 
-| Source | Method | Pull temp |
-|--------|--------|-----------|
-| Madens Verden (DK) | Boil + 200°C glaze | 70–75 °C |
-| Chefkoch Honig-Senf (DE) | Boil + 175→200°C | 72–75 °C |
-| Chefkoch Niedrigtemperatur (DE) | 80°C × 6.5 hr | 75 °C |
+| Source | Tradition | Oven | Published internal temperature |
+|---|---|---|---|
+| Madens Verden (DK) | Danish boil-then-glaze | **200 °C fan**, 12–15 min | **None** — judged by glaze colour |
+| Sip and Feast (US) | US spiral ham | **325 °F** covered, then **425 °F** glaze | **140 °F (60 °C)** |
+| Spend With Pennies (US) | US spiral ham, pulled early | **325 °F** covered 12–15 min/lb | **pull 135 °F** → **140 °F final** |
+| Kawaling Pinoy (PH) | Filipino poach-then-bake *hamon* | poach 50–60 min, **350 °F** bake, **400 °F** finish | **140 °F (60 °C)** |
 
-**Consensus pull range**: 70–75 °C (158–167 °F). Curing salts lower the pathogen risk, hence cured ham can be served at lower temperatures than fresh pork without safety concerns, but 75 °C is used as the universal safe target.
+Three of four sources converge on exactly **140 °F (60 °C)**, which is also the cut's registry
+value (`usda_safe_c: 60`) — an unusually clean agreement for this corpus. The fourth, the Danish
+record, publishes no number and judges the ham by its glaze, and that divergence is real rather
+than sloppy: a 1 kg smoked ham that has already boiled for 35 minutes is at serving temperature
+before it enters the oven, so the 12–15 minutes at 200 °C fan genuinely cannot overcook it — the
+oven is only caramelising sugar. Spend With Pennies adds the one piece of probe craft the corpus
+otherwise lacks: **pull at 135 °F and let carryover finish at 140 °F**, which is the difference
+between a ham that is hot and a ham that has dried at the edges. `recommended_doneness` for this
+method: **`heated_through`** (the cut's own label, 60 °C), and every measured row supports it.
 
-## `cooking_data.py` note
+## What makes this method special
 
-Use `DONENESS_MEDIUM_WELL` (or `DONENESS_WELL_DONE`) target 75 °C, range 70–80 °C for `cured_ham` × `oven_roast`.
-> All previous content has been removed because it was corrupt (bullet-point summaries, not full collected recipes). This leaf must be recreated using credible human-written sources only. Do not use any prior version of this file — treat it as blank.
+An oven "roasts" a cured ham in name only. The meat is already cooked, so there is no Maillard
+reaction to chase in the interior and no collagen to break down; the oven's whole job is a
+surface treatment, which is why every source treats **time and colour** as the primary signals and
+temperature as a safety confirmation. That changes the craft entirely: the risks are a glaze that
+burns before the centre is hot (all four sources warn about it, and two tell you to tent with
+foil), and edges that dry out because the ham is lean-cured and already at temperature. The
+structural feature that helps is the **rind and its fat layer** — it insulates, it holds the
+scoring pattern, and it is what the cloves are pressed into. The sources divide on how much work
+to do before the oven: the Danish record boils first to draw salt and heat the meat through, the
+Filipino record poaches in a sweet-sour liquid for flavour and then bakes, and the two US records
+go straight from packet to foil-covered pan, which is why they are the only ones that need a
+temperature target — they are the only ones where the oven is doing the heating.
 
-## Tree position
+## Data applied to cooking_data.py
 
-| Field | Value |
-|-------|-------|
-| Category | `pork` |
-| Cut type folder | `roasts/` |
-| Cut slug | `cured_ham` |
-| Method slug | `oven_roast` |
-| File | `cured_ham-oven_roast.md` |
-| Full path | `docs/recipe_research/pork/roasts/cured_ham-oven_roast.md` |
+- `supported_methods`: `oven_roast` **already registered** for cured_ham — no change; this leaf replaces one whose records carried invented pulls.
+- `recommended_doneness`: **`heated_through`**, target 60 °C, range 57–63 °C — unchanged, and now supported by three published 140 °F figures.
+- No `method_temperature_ranges` override: the corpus's whole spread is 57–60 °C at removal, which is inside the existing band.
+
+## Summary
+
+A pre-cooked cured ham is reheated, not roasted: 325 °F covered at 12–15 minutes per pound to
+140 °F, then a blast at 425 °F with a sugar glaze for the last 15–20 minutes. Pull at 135 °F and
+let the rest carry it to 140. The Danish route boils a smaller smoked ham first and gives it only
+12–15 minutes of glazing heat; the Filipino route poaches in pineapple juice, soda and beer and
+then bakes to the same 140 °F. Score the rind, stud it with cloves, and watch the glaze — it
+burns long before the ham is dry.
+
+> ✅ **CONFORMS TO TOR** — Verified 2026-10-26. Four fully saved source recipes from three distinct national traditions (Denmark, United States ×2, Philippines); the 4–6-source count gate and the distinct-tradition gate are both met. Every recipe carries attribution with fetch date, serves/prep/cook/rest, quantities, numbered steps and an explicit temperature statement — including the Danish record, whose statement is that it publishes **none**. Culinary Groups covered: A (Philippines), B (US), D (Denmark). Integrity work this leaf carries: the file it replaces gave all three of its sources the same invented **70–75 °C pull** and inserted MEATER probe steps into a Danish recipe that has neither, and it kept two Chefkoch records that now return **403** (re-checked 2026-10-26). Those records are retracted; the only carried-over text is the Danish recipe's own content, re-read from the live page. Failed fetches this pass: chefkoch.de (403, twice), cookingwithria.com (recipe body not captured). Leaf rewritten 2026-10-26.
