@@ -11,9 +11,9 @@ This is the queue improvement passes work from. It replaces the legacy `quality_
 | Measure | Value |
 |---------|-------|
 | cuts with a hub file | 187 |
-| cuts with at least one concrete gap | 90 |
-| cuts with no concrete gap found | 97 |
-| cuts carrying an authored ledger | 1 |
+| cuts with at least one concrete gap | 89 |
+| cuts with no concrete gap found | 98 |
+| cuts carrying an authored ledger | 2 |
 | authored ledgers that conflict with the files | 0 |
 | hub slugs missing from the registry | 2 |
 
@@ -23,26 +23,26 @@ Hub files with no registry entry: `langoustine`, `whole_salmon`
 
 | # | Cut | Potential | Concrete gaps | Leaves | Sources | Silent sources |
 |---|-----|-----------|---------------|--------|---------|----------------|
-| 1 | `arctic_char` | 8 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:smoker, hub_method_without_leaf:sous_vide | 1 | 4 | 0 |
-| 2 | `flounder` | 8 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
-| 3 | `gilt_head_bream` | 8 | hub_method_without_leaf:charcoal_grill, hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_sear | 1 | 4 | 0 |
-| 4 | `langoustine` | 8 | hub_method_without_leaf:boil, hub_method_without_leaf:oven_roast, hub_without_registry_entry, leaf_without_any_temperature | 1 | 6 | 0 |
-| 5 | `monkfish` | 8 | hub_method_without_leaf:braise, hub_method_without_leaf:grill, hub_method_without_leaf:oven_roast, hub_method_without_leaf:pan_sear | 1 | 3 | 0 |
-| 6 | `pike` | 8 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
-| 7 | `plaice` | 8 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
-| 8 | `pollock` | 8 | hub_method_without_leaf:air_fryer, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
-| 9 | `redfish` | 8 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_sear, hub_method_without_leaf:smoker | 1 | 4 | 0 |
-| 10 | `chicken_thigh` | 7 | hub_method_without_leaf:braise, hub_method_without_leaf:pan_fry, orphan_leaf | 4 | 12 | 0 |
-| 11 | `chuck_roast` | 7 | hub_method_without_leaf:oven_roast, hub_method_without_leaf:slow_cooker, orphan_leaf | 2 | 6 | 0 |
-| 12 | `lamb_shoulder` | 7 | hub_method_without_leaf:braise, hub_method_without_leaf:slow_cooker, orphan_leaf | 2 | 3 | 0 |
-| 13 | `whole_chicken` | 7 | hub_method_without_leaf:air_fryer, hub_method_without_leaf:grill, orphan_leaf | 2 | 4 | 0 |
-| 14 | `wild_boar_shoulder` | 7 | hub_method_without_leaf:braise, hub_method_without_leaf:slow_cooker, orphan_leaf | 2 | 3 | 0 |
-| 15 | `burbot` | 6 | hub_method_without_leaf:braise, hub_method_without_leaf:oven_bake, hub_method_without_leaf:smoker | 1 | 3 | 0 |
-| 16 | `mutton_shoulder_alt` | 6 | hub_method_without_leaf:braise, hub_method_without_leaf:oven_roast, hub_method_without_leaf:slow_cooker | 0 | 0 | 0 |
-| 17 | `perch` | 6 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:smoker | 1 | 4 | 0 |
-| 18 | `sole` | 6 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_sear | 1 | 4 | 0 |
-| 19 | `whitefish` | 6 | hub_method_without_leaf:grill, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
-| 20 | `chicken_thigh_bone_in` | 6 | leaf_without_any_temperature, orphan_leaf | 18 | 52 | 0 |
+| 1 | `flounder` | 8 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
+| 2 | `gilt_head_bream` | 8 | hub_method_without_leaf:charcoal_grill, hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_sear | 1 | 4 | 0 |
+| 3 | `langoustine` | 8 | hub_method_without_leaf:boil, hub_method_without_leaf:oven_roast, hub_without_registry_entry, leaf_without_any_temperature | 1 | 6 | 0 |
+| 4 | `monkfish` | 8 | hub_method_without_leaf:braise, hub_method_without_leaf:grill, hub_method_without_leaf:oven_roast, hub_method_without_leaf:pan_sear | 1 | 3 | 0 |
+| 5 | `pike` | 8 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
+| 6 | `plaice` | 8 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
+| 7 | `pollock` | 8 | hub_method_without_leaf:air_fryer, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
+| 8 | `redfish` | 8 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_sear, hub_method_without_leaf:smoker | 1 | 4 | 0 |
+| 9 | `chicken_thigh` | 7 | hub_method_without_leaf:braise, hub_method_without_leaf:pan_fry, orphan_leaf | 4 | 12 | 0 |
+| 10 | `chuck_roast` | 7 | hub_method_without_leaf:oven_roast, hub_method_without_leaf:slow_cooker, orphan_leaf | 2 | 6 | 0 |
+| 11 | `lamb_shoulder` | 7 | hub_method_without_leaf:braise, hub_method_without_leaf:slow_cooker, orphan_leaf | 2 | 3 | 0 |
+| 12 | `whole_chicken` | 7 | hub_method_without_leaf:air_fryer, hub_method_without_leaf:grill, orphan_leaf | 2 | 4 | 0 |
+| 13 | `wild_boar_shoulder` | 7 | hub_method_without_leaf:braise, hub_method_without_leaf:slow_cooker, orphan_leaf | 2 | 3 | 0 |
+| 14 | `burbot` | 6 | hub_method_without_leaf:braise, hub_method_without_leaf:oven_bake, hub_method_without_leaf:smoker | 1 | 3 | 0 |
+| 15 | `mutton_shoulder_alt` | 6 | hub_method_without_leaf:braise, hub_method_without_leaf:oven_roast, hub_method_without_leaf:slow_cooker | 0 | 0 | 0 |
+| 16 | `perch` | 6 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:smoker | 1 | 4 | 0 |
+| 17 | `sole` | 6 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_sear | 1 | 4 | 0 |
+| 18 | `whitefish` | 6 | hub_method_without_leaf:grill, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
+| 19 | `chicken_thigh_bone_in` | 6 | leaf_without_any_temperature, orphan_leaf | 18 | 52 | 0 |
+| 20 | `ground_moose` | 6 | leaf_without_any_temperature, recorded_unsafe_source | 4 | 16 | 11 |
 
 ## Conflicts between authored ledgers and the files
 
@@ -54,7 +54,6 @@ No authored ledger contradicts its files yet.
 
 | Cut | Tier | Authored snapshot | Derived facts | Concrete gaps |
 |-----|------|-------------------|---------------|---------------|
-| `arctic_char` | derived only | — | leaves=1, sources=4, silent_sources=0, silent_leaves=0, methods=pan_sear | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:smoker, hub_method_without_leaf:sous_vide |
 | `flounder` | derived only | — | leaves=1, sources=4, silent_sources=0, silent_leaves=0, methods=steam | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker |
 | `gilt_head_bream` | derived only | — | leaves=1, sources=4, silent_sources=0, silent_leaves=0, methods=steam | hub_method_without_leaf:charcoal_grill, hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_sear |
 | `langoustine` | derived only | — | leaves=1, sources=6, silent_sources=0, silent_leaves=1, methods=grill | hub_method_without_leaf:boil, hub_method_without_leaf:oven_roast, hub_without_registry_entry, leaf_without_any_temperature |
@@ -145,6 +144,7 @@ No authored ledger contradicts its files yet.
 | `pork_leg` | derived only | — | leaves=3, sources=12, silent_sources=0, silent_leaves=0, methods=braise,oven_roast,slow_cooker | hub_registry_method_drift |
 | `whole_salmon` | derived only | — | leaves=3, sources=7, silent_sources=0, silent_leaves=0, methods=grill,oven_bake,smoker | hub_without_registry_entry |
 | `acorn_squash` | derived only | — | leaves=2, sources=8, silent_sources=0, silent_leaves=0, methods=oven_bake,oven_roast | — |
+| `arctic_char` | authored+derived | leaves=5, methods=grill,oven_bake,pan_sear,smoker,sous_vide, silent=0, silent_leaves=0, sources=22 | leaves=5, sources=22, silent_sources=0, silent_leaves=0, methods=grill,oven_bake,pan_sear,smoker,sous_vide | — |
 | `asparagus` | derived only | — | leaves=4, sources=16, silent_sources=0, silent_leaves=0, methods=grill,oven_roast,saute,steam | — |
 | `baby_back_ribs` | derived only | — | leaves=4, sources=15, silent_sources=0, silent_leaves=0, methods=air_fryer,grill,oven_roast,smoker | — |
 | `baked_potato` | derived only | — | leaves=2, sources=8, silent_sources=0, silent_leaves=0, methods=air_fryer,oven_bake | — |
@@ -246,7 +246,9 @@ No authored ledger contradicts its files yet.
 
 Not a statement that these cuts are finished - only that no contradiction or declared hole is visible in the files. A pass that searches one of these and finds something should add the gap with its evidence.
 
-`acorn_squash`, `asparagus`, `baby_back_ribs`, `baked_potato`, `baltic_herring`, `beef_liver`, `beef_shank`, `beef_tenderloin_roast`, `beef_tongue`, `bell_peppers`, `bison_burger`, `bison_roast`, `bison_steak`, `broccoli`, `brussels_sprouts`, `buffalo_burger`, `buffalo_roast`, `butternut_squash`, `caramelized_onions`, `chicken_burger`, `cured_ham`, `duck_leg_confit`, `eel`, `filet_mignon`, `flank_steak`, `flat_iron`, `fresh_ham`, `goat_chop`, `goat_shoulder`, `goose_breast`, `goose_leg`, `goose_thigh`, `green_beans`, `ground_beef`, `ground_pork`, `ham`, `kangaroo_fillet`, `kangaroo_steak`, `lamb_chops`, `lamb_cutlet`, `lamb_loin_roast`, `lamb_neck`, `lamb_neck_filet`, `leeks`, `meatloaf`, `moose_steak`, `mutton_chop`, `mutton_leg`, `mutton_shoulder`, `ny_strip`, `ostrich_steak`, `picanha`, `pikeperch`, `pork_belly`, `pork_liver`, `pork_loin_steak`, `pork_sausage`, `pork_shoulder`, `pork_shoulder_steak`, `pork_tongue`, `portobello_mushrooms`, `prime_rib`, `rabbit_legs`, `rabbit_saddle`, `reindeer_loin`, `reindeer_steak`, `ribeye_steak`, `roasted_beets`, `roasted_carrots`, `roasted_garlic`, `roasted_onion`, `roasted_parsnips`, `roasted_potatoes`, `roasted_sweet_potato`, `roasting_joint`, `salmon_fillet`, `scallops`, `sea_bass`, `shrimp`, `sirloin_roast`, `sirloin_steak`, `skirt_steak`, `spaghetti_squash`, `spinach`, `swordfish`, `t_bone`, `tomahawk`, `tri_tip`, `turkey_breast`, `turkey_burger`, `turkey_leg`, `venison_leg`, `venison_shoulder`, `whole_goose`, `whole_turkey`, `wild_boar_chop`, `zucchini`
+`beef_shank`, `ground_beef`, `meatloaf`, `beef_liver`, `beef_tongue`, `beef_tenderloin_roast`, `prime_rib`, `roasting_joint`, `sirloin_roast`, `filet_mignon`, `flank_steak`, `flat_iron`, `ny_strip`, `picanha`, `ribeye_steak`, `sirloin_steak`, `skirt_steak`, `t_bone`, `tomahawk`, `tri_tip`, `baltic_herring`, `eel`, `salmon_fillet`, `scallops`, `shrimp`, `arctic_char` (authored ledger: 5 open — byline_unverified, duplicate_tradition, group_A_thin, smoke_vs_safety_conflict, source_shortfall), `pikeperch`, `sea_bass`, `swordfish`, `bison_burger`, `bison_roast`, `bison_steak`, `buffalo_burger`, `buffalo_roast`, `goat_chop`, `goat_shoulder`, `kangaroo_fillet`, `kangaroo_steak`, `moose_steak`, `mutton_chop`, `mutton_leg`, `mutton_shoulder`, `ostrich_steak`, `rabbit_legs`, `rabbit_saddle`, `reindeer_loin`, `reindeer_steak`, `venison_leg`, `venison_shoulder`, `wild_boar_chop`, `lamb_chops`, `lamb_cutlet`, `lamb_neck_filet`, `lamb_loin_roast`, `lamb_neck`, `pork_loin_steak`, `pork_shoulder_steak`, `ground_pork`, `pork_sausage`, `fresh_ham`, `pork_liver`, `pork_tongue`, `baby_back_ribs`, `cured_ham`, `ham`, `pork_belly`, `pork_shoulder`, `chicken_burger`, `duck_leg_confit`, `goose_breast`, `goose_leg`, `goose_thigh`, `whole_goose`, `turkey_breast`, `turkey_burger`, `turkey_leg`, `whole_turkey`, `caramelized_onions`, `leeks`, `roasted_garlic`, `roasted_onion`, `asparagus`, `broccoli`, `brussels_sprouts`, `green_beans`, `spinach`, `portobello_mushrooms`, `bell_peppers`, `baked_potato`, `roasted_beets`, `roasted_carrots`, `roasted_parsnips`, `roasted_potatoes`, `roasted_sweet_potato`, `acorn_squash`, `butternut_squash`, `spaghetti_squash`, `zucchini`
+
+Cuts marked *authored ledger: N open* contradict nothing in their files, but a previous pass wrote those gaps down with evidence. They are work, not finished cuts — read the cut file's `## Data state and gaps` section before choosing.
 
 ## What this file cannot see
 

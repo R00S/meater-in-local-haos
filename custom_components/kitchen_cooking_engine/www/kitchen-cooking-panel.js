@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 27 Oct 2026, 00:18 CET
+ * AUTO-GENERATED: 27 Oct 2026, 00:34 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 27 Oct 2026, 00:18 CET
+// Last generated: 27 Oct 2026, 00:35 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -128889,7 +128889,11 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/IMPROVE_CUT_FILES.md"
   },
   "arctic_char": {
+    "grill": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/arctic_char-grill.md",
+    "oven_bake": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/arctic_char-oven_bake.md",
     "pan_sear": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/arctic_char-pan_sear.md",
+    "smoker": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/arctic_char-smoker.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/arctic_char-sous_vide.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/arctic_char.md"
   },
   "burbot": {
@@ -130187,7 +130191,7 @@ const CUT_PROFILES = {
 
 // Swedish cut profile texts — from ## Styckesprofil sections in research files
 const CUT_PROFILES_SV = {
-  "arctic_char": "Röding (*Salvelinus alpinus*; tyska: Saibling; franska: omble chevalier) är en kallvattensalmonid nära besläktad med lax och öring, med fast, fjälligt rosa-orange kött och måttlig fetthalt (5–10 g/100 g). Röding är en premiumfisk i Skandinavien, Island, Kanada och Alperna (Österrike, Schweiz) och anses ha en renare, något sötare smak än lax. Den lämpar sig väl för pannstekning (skinnsida ned i smör), grillning, ugnsbakning, varmrökning i röklåda (abu-röken) och sous vide. Sond placeras i tjockaste delen av filén, fri från pinbenen.",
+  "arctic_char": "Röding (*Salvelinus alpinus*; tyska: Saibling; franska: omble chevalier) är en kallvattensalmonid nära besläktad med lax och öring, med fast, fjälligt rosa-orange kött och måttlig fetthalt (5–10 g/100 g). Röding är en premiumfisk i Skandinavien, Island, Kanada och Alperna (Österrike, Schweiz) och anses ha en renare, något sötare smak än lax. Den lämpar sig väl för pannstekning (skinnsida ned i smör), grillning, ugnsbakning, varmrökning i röklåda (abu-röken) och sous vide. Sond placeras i tjockaste delen av filén, fri från pinbenen.\n\nDe 22 källorna bakom bladen fördelar sig så här: **19 anger en innertemperatur för fisken, 3 gör det\ninte** — två av dem anger bara ugns- eller rök temperatur, en anger ingen temperatur alls — och siffrorna\nklustrar i två register snarare än i en enda glidande skala. Filémetoderna drar lågt (ugn 42–52 °C,\npanna 54–61 °C, grillad filé 45 °C) medan helfiskmetoderna går högre (50–54 °C på grill, 55/60 °C i den\ntyska källan, 61 °C i den österrikiska pannan). De tre källorna utan innertemperatur är de som lagas på känn: japansk\nkolgrillad saltfisk, kanadensisk ugnsbakning bedömd på flakighet, och den svenska röklådsartikeln som anger\n60–80 °C i röken och tio minuter men ingen innertemperatur.",
   "burbot": "Lake (*Lota lota*; tyska: Trüsche; franska: lote; finska: made) är den enda sötvattensmedlemmen av torskfamiljen (Gadiformes). Utbredd i norra Europa, Finland, Ryssland, och Nordamerika. Kallas ibland \"sötvattenstorsk\". Kroppen har en karakteristisk struktur: tjocka, runda ländstycken ovanför revbenen (20–30 mm) som övergår i en tunn, ålliknande svanskropp (5–10 mm) — dessa sektioner tillagas i olika hastigheter och hanteras separat i praktiken. Köttet är extremt magert (under 1 g fett/100 g), kritvitt, fast och torskliknande i textur och smak. Levern är stor och rik på D-vitamin — en delikatess i Skandinavien, Finland och Ryssland. Skinnet är segt och fjällfritt; traditionell teknik är att skära runt huvudet och dra av skinnet som en strumpa med tång. Lake är bäst på vintern (under is). Vanliga beredningar: pannstekning av filé i smör (tjocka ländstycken steks som torsk; den tunna svansen är bäst för fritering eller fiskbiffar), ugnsbakning, bräsering och lakesoppa (*lakelohi*). Varmrökning i röklåda (abu-röken, savustuslaatikko) förekommer. Sond placeras i tjockaste delen av länden, från tjocksidan, parallellt med ryggraden.",
   "cod_fillet": "Atlantisk torsk (*Gadus morhua*) är skärd från fisksidorna; köttet är fast, klart vitt rått och mjölkvitt kokt, med stora fuktiga fjäll separerade av tunna lager bindväv. Torsk är mager (under 1% fett), vilket innebär att den inte har internt fett för att ge självbastande skydd under höghets-tillagning; den naturliga fuktigheten och gelatinet i bindväven är de primära källorna till upplevd saftighet.\n\nPannstekning är en mycket vanlig beredning — den höga ledningsvärmen i pannan producerar en gyllenbrun skorpa på den tunna, mjöl- eller ströbrödsbelagda ytan medan insidan tillagar varsamt. Battrerad torsk (fish and chips) använder battern som isolering; enkel pannstekt torsk förlitar sig på en lätt beläggning av kryddad mjöl eller det nakna köttet. Eftertillagning är minimal (2–3 °C) given den magra sammansättningen; köttet övergår snabbt från fuktigt-och-fjälligt till torrt-och-smulande ovanför 65 °C. Innertemperatur: 60–63 °C.",
   "flounder": "Flundra (*Platichthys flesus*; tyska: Flunder; finska: kampela) är en plattfisk utbredd i Nordsjön, Östersjön och Atlantkusten. Fetthalten är låg (1–2 g/100 g) med vitt, milt, lätt sött kött. Fisken tillagas typiskt hel (rensad, fjällad) med båda sidor intakta. Den platta formen gör den ideal för röklådan (abu-röken) — fisken lägger sig plant och röks jämnt. Stekning hel i smör med mjölpanering (*Müllerin*-metoden) är klassisk i tysk och skandinavisk matlagning. Sond placeras från kanten in i tjockaste del av överfilén, fri från mittenbenet.",
@@ -130379,8 +130383,16 @@ const CUT_PROFILES_SV = {
 // Cut × method profile texts: {cut_slug: {method_slug: description}}
 const CUT_METHOD_PROFILES = {
   "arctic_char": {
+    "grill": "Arctic char is a small-bodied salmonid — a market whole fish runs 400 g to 1 kg, a fillet 150–200 g —\nand grilling it splits cleanly into two different problems depending on which form is put on the grate.\nA **fillet** is thin, moderate in fat (5–10 g/100 g) and has a skin that crisps well over direct heat; it\nneeds two or three minutes a side and nothing else. A **whole fish** has to survive long enough for the\ncavity and the backbone to heat through, so the four Nordic records here all cook it stuffed, in a\nbasket or *halster*, over **indirect** heat with the lid down, and only finish it over the coals.\n\nThat structural difference is what the temperature spread in this leaf reflects, and it is the useful\nfinding: the records are not disagreeing about char, they are measuring two different objects. The\nSwedish fillet method (Tasteline) pulls at **45 °C**, the whole-fish methods cluster at **50–54 °C**, and\nthe German whole-fish record names **55 °C as still glassy and 60 °C as done**. A single grilled-char\nband that averaged those numbers would describe no actual recipe, so the band below is stated as two\nrows rather than one.\n\nChar also carries a real risk that salmon does not: it is small enough that a whole fish reaches serving\ntemperature in about fifteen minutes, which leaves no window to correct a mistake. The probe goes into\nthe thickest part of the back, beside the backbone — every whole-fish record here that names a probe\nplacement names that spot.",
+    "grill_sv": "Röding är en liten laxfisk — en hel marknadsfisk väger 400 g till 1 kg, en filé 150–200 g — och grillning\ndelar sig därför i två olika problem beroende på form. En **filé** är tunn, måttligt fet (5–10 g/100 g) och\nhar ett skinn som blir krispigt över direkt värme; den behöver två–tre minuter per sida och inget mer. En\n**hel fisk** måste hinna bli genomvarm ända in till benet, så de fyra nordiska källorna här tillagar den\nfylld, i halster, över **indirekt** värme med lock och avslutar först över kolen.\n\nDet är den skillnaden temperaturerna i det här bladet speglar: filémetoden (Tasteline) drar vid **45 °C**,\nhelfiskmetoderna ligger på **50–54 °C**, och den tyska helfiskkällan anger **55 °C som fortfarande glasig\noch 60 °C som färdig**. Sonden sätts i den tjockaste delen av ryggen, intill ryggbenet.",
+    "oven_bake": "Oven baking is the gentlest thing that can happen to an arctic char fillet, and the five records here\nagree on that more than they agree on any number: **four of the five bake at or below 175 °C**, and two\nof them at 75 °C and 100 °C. That is not a stylistic coincidence. Char flesh is fine-grained and low in\nconnective tissue, so there is nothing to break down and no benefit from a hard oven; what an oven can do\nthat a pan cannot is hold a wide, even temperature while the fillet sits still, which lets a 150 g fillet\nreach serving temperature with almost no gradient from edge to centre.\n\nThe method therefore turns on one variable the pan and grill leaves do not have: **oven air temperature,\nnot just the fish's target**. At 75 °C a fillet needs about 40 minutes and cannot overshoot quickly; at\n175 °C it needs 12–15 minutes and will. Both practices are represented here, and the recorded pull\ntemperatures land in a tight 42–52 °C whichever oven setting is used — which is the leaf's real finding:\n**Nordic oven baking is a low-temperature method with a low-temperature target, and the oven setting is\nthe control, not the timer.**",
+    "oven_bake_sv": "Ugnsbakning är det mildaste som kan hända en rödingfilé, och de fem källorna här är mer eniga om det än\nom någon siffra: **fyra av fem gräddar vid 175 °C eller lägre**, två av dem vid 75 °C och 100 °C. Det är\ningen slump. Rödingens kött är finkornigt och fattigt på bindväv, så det finns inget att bryta ner och\ningen vinst med het ugn; det ugnen kan som pannan inte kan är att hålla en jämn temperatur medan filén\nligger stilla. Metoden styrs därför av **ugnstemperaturen, inte bara av fiskens måltemperatur**: vid 75 °C\ntar filén cirka 40 minuter och kan inte skena, vid 175 °C tar den 12–15 minuter och kan det.",
     "pan_sear": "Arctic char is a cold-water salmonid with firmer, finer-grained flesh than salmon and a cleaner flavour than most farmed trout. The skin crisps exceptionally well in a pan, while the moderate fat content keeps the flesh moist during short, direct cooking. Pan searing suits the cut because it can fully crisp the skin before the centre overcooks, especially when the fish is cooked mostly skin-side down. Carryover is modest on fillets, usually only a couple of degrees, so the fish should be pulled just before the flakes fully set through the thickest part.",
-    "pan_sear_sv": "Röding är en kallvattenslaxfisk med fastare och finare kött än lax samt renare smak än mycket odlad öring. Skinnet blir mycket krispigt i panna, medan den måttliga fetthalten hjälper köttet att förbli saftigt vid kort, direkt tillagning. Pannstekning passar därför mycket bra eftersom skinnet kan bli färdigt innan kärnan överkokar, särskilt när fisken tillagas nästan helt på skinnsidan. Eftervärmen är liten i filéer, oftast bara ett par grader, så fisken bör tas av strax innan flagorna sätter sig helt i den tjockaste delen."
+    "pan_sear_sv": "Röding är en kallvattenslaxfisk med fastare och finare kött än lax samt renare smak än mycket odlad öring. Skinnet blir mycket krispigt i panna, medan den måttliga fetthalten hjälper köttet att förbli saftigt vid kort, direkt tillagning. Pannstekning passar därför mycket bra eftersom skinnet kan bli färdigt innan kärnan överkokar, särskilt när fisken tillagas nästan helt på skinnsidan. Eftervärmen är liten i filéer, oftast bara ett par grader, så fisken bör tas av strax innan flagorna sätter sig helt i den tjockaste delen.",
+    "smoker": "Smoking is the traditional Scandinavian fate of a char, and the reason is anatomical: char carries 5–10 g\nof fat per 100 g, enough for the flesh to survive a long, dry, salty process without becoming leather, but\nnot so much that it behaves like salmon. The small size is the other half of the story — a 400–800 g whole\nfish finishes in the smoke in the same time a salmon fillet takes to *start* — which is why the Swedish\nguidance here talks about ten minutes in a box smoker and the Canadian recipe about five hours in a\ncabinet.\n\nThat difference is not a disagreement about char; it is the difference between two things both called\n\"smoking\". A box smoker (*röklåda*, *abu-rök*) burns a spirit burner under a tray of chips and cooks the\nfish in about ten minutes at 60–80 °C; an electric cabinet holds 65–77 °C for hours and dries and cures the\nflesh on the way. The two produce different products from the same fish, and they do not share a target\ntemperature — which is exactly why this leaf cannot yet state a band.",
+    "smoker_sv": "Rökning är rödingens traditionella öde i Skandinavien, och skälet är anatomiskt: röding har 5–10 g fett per\n100 g, tillräckligt för att köttet ska klara en lång, torr och salt process utan att bli läder, men inte så\nmycket att den beter sig som lax. Den lilla storleken är andra halvan — en hel fisk på 400–800 g blir klar i\nröken på samma tid som en laxfilé behöver för att *börja* — vilket är varför den svenska vägledningen talar\nom tio minuter i röklåda och det kanadensiska receptet om fem timmar i ett rökskåp.\n\nDet är inte oenighet om röding; det är skillnaden mellan två saker som båda kallas rökning. En röklåda\nbränner en spritbrännare under spån och tillagar fisken på cirka tio minuter vid 60–80 °C; ett elektriskt\nrökskåp håller 65–77 °C i timmar och torkar och konserverar köttet på vägen.",
+    "sous_vide": "Sous vide is the only method in this cut where the bath temperature *is* the final temperature, and char\nis the case where that property matters most: the published kitchen temperatures for char (42–52 °C) sit\nbetween rare and medium, which is exactly the zone an oven or a pan crosses in under a minute and a water\nbath holds indefinitely. Every record here therefore states a **bath temperature**, not a pull\ntemperature, and the useful question becomes what each bath setting *does to the texture* rather than how\nfar above or below a target it lands.\n\nThe corpus answers that question twice, from opposite ends. The sous vide literature's char chart —\nbuilt by the same author who wrote the standard fish tables — maps 40 °C to \"slightly warmed\" and 60 °C to\n\"firm and even chewy\", with 48.9 °C as \"lightly flaky\". The restaurant record (Marin, 48 °C) and the\nFrench home record (52 °C) both land inside that map, which is a real cross-check between a\ntechnique reference and independent kitchens. The outlier is equally instructive: the one professional\nrecipe that uses **72 °C** does so because the fish is about to be **shredded into a brandade and fried**,\ni.e. the temperature is chosen to destroy the texture on purpose.\n\nThe safety caveat is the one thing every sous vide char source has to say: these temperatures are far\nbelow pasteurisation, so the fish has to be of a quality the cook would eat raw. That is stated by the\nchart author explicitly and is implicit in the restaurant and magazine recipes, which both assume\nsashimi-grade fish.",
+    "sous_vide_sv": "Sous vide är den enda metoden i det här snittet där badtemperaturen *är* den färdiga temperaturen, och\nröding är fallet där det betyder mest: de publicerade kökstemperaturerna för röding (42–52 °C) ligger\nmellan rare och medium, alltså exakt det intervall en ugn eller en panna passerar på under en minut men\nsom ett vattenbad håller hur länge som helst. Varje källa här anger därför en **badtemperatur**, inte en\ntemperatur att dra vid.\n\nKorpusen svarar på samma fråga två gånger, från olika håll. Sous vide-litteraturens tabell för röding\nmappar 40 °C till \"bara uppvärmd\" och 60 °C till \"fast och till och med seg\", med 48,9 °C som \"lätt\nflikig\". Restaurangkällan (Marin, 48 °C) och den franska hemkällan (52 °C) ligger båda inom den kartan,\nvilket är en riktig korsverifiering mellan en teknikreferens och oberoende kök. Undantaget är lika\ninstruktivt: det enda professionella receptet med **72 °C** gör det eftersom fisken ska **mosas till en\nbrandade och friteras** — temperaturen är vald för att förstöra texturen med avsikt.\n\nSäkerhetsinvändningen är det varje sous vide-källa för röding måste säga: dessa temperaturer ligger långt\nunder pastörisering, så fisken måste hålla råvarukvalitet."
   },
   "burbot": {
     "pan_fry": "Burbot (*Lota lota*) is the only freshwater member of the cod family (Gadiformes). The fish has a distinctive body shape: a thick, rounded loin above the ribcage that transitions into a thin, eel-like tapering tail. These two sections have different thicknesses and behave differently under dry heat — thick loins (20–30 mm) fry up exactly like Atlantic codfish; the thin tail sections (5–10 mm) cook in seconds and are best given shorter heat or reserved for shallow-fry or fish cakes. The flesh is brilliantly white, extremely lean (under 1 g fat per 100 g), and firm. The liver is the most prized part of the fish — enormous by proportion and rich in Vitamin D — and is typically cooked separately (see below). The skin is tough and scaled-free but must be removed before frying; the traditional technique is \"stocking removal\": score around the head and pull the skin off in one piece with pliers. Pan-frying in fat (butter, oil, or lard) is the primary cooking method across all traditions where burbot is eaten. Flour dredging before pan-frying is near-universal. Probe placement: insert into the thickest loin section, from the thick side, parallel to the spine, avoiding the central backbone.",
@@ -131748,11 +131760,37 @@ const CUT_METHOD_PROFILES = {
 // Recipe titles per cut × method: {cut_slug: {method_slug: [title, ...]}}
 const RECIPE_TITLES_INDEX = {
   "arctic_char": {
+    "grill": [
+      "Grillad röding med Västerbottenspesto — Tasteline (Sweden)",
+      "Grillad röding med somriga smaker och hollandaise — Köket.se / Jessica Ortman (Sweden)",
+      "Grillad röding med syrad romgräddsås och primörer — Allt om Mat / Petra Lindstrand (Sweden)",
+      "Saibling grillen — eat.de / Michael (recipe) and Nadine (text) (Germany)",
+      "いわなの塩焼き (iwana salt-grill) — MAFF うちの郷土料理, 鈴木正文 (Japan)"
+    ],
+    "oven_bake": [
+      "Ugnsbakad röding med \"sauce au trois caviars\" — Arla (Sweden)",
+      "Ugnsbakad röding à la Catarina König — Johan Lidby Vinhandel (Sweden)",
+      "Bakad röding med pressad savojkål — Allt om Mat / Tom Sjöstedt (Sweden)",
+      "Klassisk röding med fluffigt mos, lingon och brynt smör — Matfiskodlarna (Sweden)",
+      "Baked Arctic Char with Orange Gremolata — Skipper Otto (Canada)"
+    ],
     "pan_sear": [
       "Skinnstekt röding med råstekt sparris — Köket.se",
       "Gebratener Saibling — ichkoche.at",
       "Auf der Haut gebratenes Filet vom Saibling — Chefkoch.de",
       "Omble chevalier et sa sauce au cresson — Chef Simon / Mimm"
+    ],
+    "smoker": [
+      "Maui Hickory Smoked Arctic Char — Bradley Smoker (Canada)",
+      "Varmröka fisk, enkelt och gott — Bengt Keatler Olsson, Svenskt Fiske (Sweden)",
+      "Smoking Fish at Home (FNH-00325) — University of Alaska Fairbanks, Cooperative Extension Service (United States)",
+      "Smoked Salmon: Key Temperatures — ThermoWorks blog, citing Harold McGee (United States)"
+    ],
+    "sous_vide": [
+      "How to Sous Vide Arctic Char — Jason Logsdon, Amazing Food Made Easy (United States)",
+      "Omble chevalier de nos rivières — chef Valentin Marin, Restaurant Lamartine (France)",
+      "Arctic Char Brandade — Sous-Vide Magazine (United States)",
+      "Pavé d'omble chevalier à l'oseille, cuisson sous-vide — Cuisine Passion (France)"
     ]
   },
   "burbot": {
@@ -140768,7 +140806,11 @@ const EXP_RECIPE_INDEX = {
   "tuna_steak-pan_sear": "fish/tuna/tuna_steak-pan_sear.md",
   "tuna_steak-smoker": "fish/tuna/tuna_steak-smoker.md",
   "tuna_steak": "fish/tuna/tuna_steak.md",
+  "arctic_char-grill": "fish/white_fish/arctic_char-grill.md",
+  "arctic_char-oven_bake": "fish/white_fish/arctic_char-oven_bake.md",
   "arctic_char-pan_sear": "fish/white_fish/arctic_char-pan_sear.md",
+  "arctic_char-smoker": "fish/white_fish/arctic_char-smoker.md",
+  "arctic_char-sous_vide": "fish/white_fish/arctic_char-sous_vide.md",
   "arctic_char": "fish/white_fish/arctic_char.md",
   "burbot-pan_fry": "fish/white_fish/burbot-pan_fry.md",
   "burbot": "fish/white_fish/burbot.md",
@@ -152855,7 +152897,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "673";
+const PANEL_VERSION = "674";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

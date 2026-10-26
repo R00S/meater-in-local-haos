@@ -129,6 +129,7 @@ class Cut:
     speculative: dict[str, str] = field(default_factory=dict)
     authored_state: dict[str, str] = field(default_factory=dict)
     authored_gap_ids: list[str] = field(default_factory=list)
+    authored_gap_status: dict[str, str] = field(default_factory=dict)
     authored_has_ledger: bool = False
     conflicts: list[str] = field(default_factory=list)
 
@@ -246,11 +247,16 @@ def read_leaf(path: Path, slug: str) -> Leaf:
     return leaf
 
 
-def read_authored_ledger(text: str) -> tuple[bool, dict[str, str], list[str]]:
-    """Return (has_ledger, snapshot_state, gap_ids) from the cut's ledger section."""
+def read_authored_ledger(text: str) -> tuple[bool, dict[str, str], list[str], dict[str, str]]:
+    """Return (has_ledger, snapshot_state, gap_ids, gap_status) from the ledger section.
+
+    The status cell matters: a gap a pass wrote down as `open` or `blocked` is concrete
+    work even when no file contradicts another, and a queue that reported such a cut as
+    having no gap would contradict the cut's own words.
+    """
     heading = LEDGER_HEADING_RE.search(text)
     if heading is None:
-        return False, {}, []
+        return False, {}, [], {}
 
     section = text[heading.end():]
     next_heading = re.search(r"^##\s+", section, re.MULTILINE)
@@ -266,16 +272,22 @@ def read_authored_ledger(text: str) -> tuple[bool, dict[str, str], list[str]]:
                 state[key.strip()] = value.strip()
 
     gap_ids: list[str] = []
+    gap_status: dict[str, str] = {}
     for line in section.splitlines():
         if not line.strip().startswith("|"):
             continue
         cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
         if not cells:
             continue
-        first = cells[0].strip("`").strip()
-        if re.fullmatch(r"[a-z][a-z0-9_]{3,}", first) and first not in {"gap", "id"}:
-            gap_ids.append(first)
-    return True, state, gap_ids
+        first = cells[0].replace("`", "").strip()
+        # Gap ids are written by hand: `group_A_absent`, `source_shortfall` (smoker), etc.
+        # Accept uppercase and an optional parenthetical qualifier, or half the ledger vanishes.
+        match = re.fullmatch(r"([a-z][A-Za-z0-9_]{3,})\s*(?:\(.*\))?", first)
+        if match and match.group(1) not in {"gap", "id"}:
+            gap_ids.append(match.group(1))
+            if len(cells) > 1:
+                gap_status[match.group(1)] = cells[1].strip("*_ ").lower()
+    return True, state, gap_ids, gap_status
 
 
 def build_cuts() -> list[Cut]:
@@ -321,7 +333,12 @@ def build_cuts() -> list[Cut]:
             cut.registry_recommended = getattr(entity, "recommended_doneness", "") or ""
             cut.registry_usda_c = str(getattr(entity, "usda_safe_c", ""))
 
-        cut.authored_has_ledger, cut.authored_state, cut.authored_gap_ids = read_authored_ledger(text)
+        (
+            cut.authored_has_ledger,
+            cut.authored_state,
+            cut.authored_gap_ids,
+            cut.authored_gap_status,
+        ) = read_authored_ledger(text)
         cuts.append(cut)
     return cuts
 
@@ -572,8 +589,31 @@ def render(cuts: list[Cut], top: int) -> str:
             "finds something should add the gap with its evidence."
         )
         lines.append("")
-        lines.append(", ".join(f"`{slug}`" for slug in quiet))
+        annotated: list[str] = []
+        for cut in cuts:
+            if cut.slug not in quiet:
+                continue
+            open_gaps = sorted(
+                gap_id
+                for gap_id, status in cut.authored_gap_status.items()
+                if status.startswith(("open", "blocked"))
+            )
+            if open_gaps:
+                annotated.append(
+                    f"`{cut.slug}` (authored ledger: {len(open_gaps)} open — "
+                    f"{', '.join(open_gaps)})"
+                )
+            else:
+                annotated.append(f"`{cut.slug}`")
+        lines.append(", ".join(annotated))
         lines.append("")
+        if any("(authored ledger:" in item for item in annotated):
+            lines.append(
+                "Cuts marked *authored ledger: N open* contradict nothing in their files, but a "
+                "previous pass wrote those gaps down with evidence. They are work, not finished "
+                "cuts — read the cut file's `## Data state and gaps` section before choosing."
+            )
+            lines.append("")
 
     lines.append("## What this file cannot see")
     lines.append("")
