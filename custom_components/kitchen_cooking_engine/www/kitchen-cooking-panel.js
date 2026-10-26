@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 26 Oct 2026, 00:23 CET
+ * AUTO-GENERATED: 26 Oct 2026, 07:23 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 26 Oct 2026, 00:23 CET
+// Last generated: 26 Oct 2026, 07:23 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -128978,7 +128978,12 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/sole.md"
   },
   "swordfish": {
+    "braise": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/swordfish-braise.md",
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/swordfish-charcoal_grill.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/swordfish-grill.md",
+    "oven_bake": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/swordfish-oven_bake.md",
     "pan_sear": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/swordfish-pan_sear.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/swordfish-sous_vide.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/swordfish.md"
   },
   "trout": {
@@ -129398,7 +129403,13 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/chops/pork_chop.md"
   },
   "pork_loin_steak": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes/pork/chops/pork_loin_steak-air_fryer.md",
+    "braise": "/kitchen_cooking_engine_panel/recipes/pork/chops/pork_loin_steak-braise.md",
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes/pork/chops/pork_loin_steak-charcoal_grill.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes/pork/chops/pork_loin_steak-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/pork/chops/pork_loin_steak-oven_roast.md",
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/pork/chops/pork_loin_steak-pan_fry.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes/pork/chops/pork_loin_steak-sous_vide.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/chops/pork_loin_steak.md"
   },
   "pork_shoulder_steak": {
@@ -129966,7 +129977,7 @@ const CUT_PROFILES = {
   "redfish": "Redfish, also called ocean perch or Norway haddock (*Sebastes norvegicus* / *Sebastes mentella*, Swedish: uer / rödfisk / havskatt, German: Rotbarsch, Norwegian: uer, French: sébaste), is a deep-water rockfish (family Scorpaenidae) found widely in the North Atlantic. It is one of the most commercially important fish in Scandinavia and Germany, sold year-round in fillets at fish counters throughout the region. The flesh is pink to white, moderately firm, mildly flavoured, with a fat content of 3–5 g per 100 g — slightly richer than cod but still lean. Redfish fillets are typically thin (10–20 mm) and cook quickly. The skin is bright red-orange but is usually removed before sale. Pan-frying in butter or oil with a light coating is the classic preparation in Scandinavian and German home cooking. Oven-baking (*Rotbarschfilet im Ofen*) is also very popular in Germany. Hot smoking redfish fillets in a stovetop box smoker (*abu-röken*, *Tischräucherofen*) is a traditional Northern European method. Grilling is suitable for thicker portions. Probe placement: insert into the thickest cross-section of the fillet.",
   "sea_bass": "European sea bass (*Dicentrarchus labrax*, Italian: branzino/spigola, Turkish: levrek,\nSwedish: havsabborre) is a prized lean white fish with moderately firm, flaky white flesh\nand a thin but distinctly flavoured skin that renders beautifully crisp in a hot pan.\nPan searing is its most iconic preparation, particularly in Mediterranean cuisine.\nBecause the flesh is lean (< 3 % fat), it cooks extremely quickly and dries out if\novercooked. The standard technique is skin-side down first, pressing gently to prevent\ncurling, cooking 80–90 % through on the skin side, then flipping for a brief 30–60-second\nfinish. Internal temperature is the most reliable doneness indicator: the flesh transitions\nfrom translucent to opaque at approximately 55–58 °C and is fully cooked at 60–63 °C\n(USDA minimum for finfish: 63 °C / 145 °F). Many professional cooks pull at 58–60 °C.\nA MEATER probe in thin fillets must be inserted from the edge (laterally) rather than\nfrom above; in thicker whole or butterflied fish it is inserted into the thickest shoulder.",
   "sole": "European sole (*Solea solea*, Swedish: sjötunga / tunga, German: Seezunge, French: sole commune, Dutch: tong) is a flatfish of the family Soleidae, found in the Eastern Atlantic and Mediterranean. It is also known as Dover sole (the UK designation for *Solea solea*) and is one of the most celebrated and expensive fish in European fine dining. The flesh is very white, extremely delicate, mildly sweet, with a low fat content (1–2 g per 100 g) and a fine, slightly firmer texture than flounder or plaice. Sole is sold whole (200–500 g) or as very thin fillets; the dark upper skin and white lower skin are traditionally removed before cooking whole fish. Pan-frying whole in clarified butter and lemon (*sole meunière* / *Seezunge Müllerin Art*) is the most famous preparation — a cornerstone of French and classical European cuisine. Grilling whole on a very hot grill with butter and herbs is traditional in Normandy and Belgium. Oven-baking with butter and white wine (*sole bonne femme*) is another classic French method. Unlike many flatfish, sole is not commonly smoked due to its extreme delicacy and expense. Probe placement: insert from the thickest edge into the upper fillet, clear of the central spine.",
-  "swordfish": "Swordfish (*Xiphias gladius*, Italian: pesce spada, Turkish: kılıçbalığı, Swedish: svärdfisk, Spanish: pez espada) is a large, apex-predator, open-ocean fish found across tropical and temperate seas. Its flesh is uniquely dense, compact, and non-flaking — unlike the laminar flake structure of most fish, swordfish flesh is organised in coarse, meaty segments similar in texture to tuna or veal, which means it holds together under direct high heat instead of breaking apart. The flesh is white-to-pale-pink when raw, turning creamy-white and opaque when cooked. Fat content is moderate and distributed throughout, making it more forgiving than lean white fish.\n\nRetail swordfish comes as cross-cut steaks (2–3 cm thick) containing the characteristic central grey-brown blood line, which is edible but stronger in flavour; it can be cut away if preferred. Internal temperature targets: pull at 52–57 °C for medium-rare (slightly translucent centre, preferred by Italian/Mediterranean cooks); 57–60 °C for medium. USDA minimum: 63 °C (145 °F).",
+  "swordfish": "Swordfish (*Xiphias gladius*, Italian: pesce spada, Turkish: kılıçbalığı, Swedish: svärdfisk, Spanish: pez espada) is a large, apex-predator, open-ocean fish found across tropical and temperate seas. Its flesh is uniquely dense, compact, and non-flaking — unlike the laminar flake structure of most fish, swordfish flesh is organised in coarse, meaty segments similar in texture to tuna or veal, which means it holds together under direct high heat instead of breaking apart. The flesh is white-to-pale-pink when raw, turning creamy-white and opaque when cooked. Fat content is moderate and distributed throughout, making it more forgiving than lean white fish.\n\nRetail swordfish comes as cross-cut steaks (2–3 cm thick) containing the characteristic central grey-brown blood line, which is edible but stronger in flavour; it can be cut away if preferred. Internal temperature targets: pull at 52–57 °C for medium-rare (slightly translucent centre, preferred by Italian/Mediterranean cooks); 57–60 °C for medium. USDA minimum: 63 °C (145 °F).\n\nPer-method application of the temperature evidence (each leaf carries its own consensus):\n\n- **Pan sear** (5 sources): European cluster 52–60 °C, American band 54–63 °C — pull 54–57 °C fast, colour-judged.\n- **Grill** (4 sources): 54–63 °C observed; thermometer-guided pull 54 °C, time-guided sources cook \"through\".\n- **Charcoal grill** (4 sources): measured cluster 54–58 °C (SnS 54–57 °C, Sixt 55–58 °C), retail voice 63 °C.\n- **Oven bake** (4 sources): only measured band 60–63 °C (Greek *plaki*); others timed 15–25 min, \"cooked through\".\n- **Braise** (4 sources): only measured value 60 °C (Chinese red braise); moist-heat endpoints are texture-based.\n- **Sous vide** (5 sources): bath cluster 54.4–55.5 °C, outliers 49 °C and 59 °C — full observed span 49–59 °C.",
   "trout": "Rainbow trout (*Oncorhynchus mykiss*) and brown trout (*Salmo trutta*, Swedish: forell,\nNorwegian: ørret, German: Forelle, Italian: trota) are among the most widely cooked fresh-\nwater fish in Northern Europe and North America. The flesh is delicate, flaky, and mildly\nflavoured with a slightly nutty quality; colour ranges from white to orange-pink depending\non diet. Trout fillets are typically thin (1–2 cm), which means they cook very quickly in a\npan — 3–5 minutes per side at medium-high heat. The skin crisps beautifully in butter or\nolive oil. The key risk is overcooking: lean, thin trout flesh dries out rapidly past 65 °C.\nInternal doneness is the same as for other finfish: 60–63 °C (140–145 °F, USDA minimum)\nfor fully cooked flesh that is just opaque. The MEATER probe must be inserted from the\nthickest edge (lateral insertion) in thin fillets, or through the shoulder of a whole fish.",
   "turbot": "Turbot (*Scophthalmus maximus*, Swedish: piggvar, German: Steinbutt, French: turbot, Dutch: tarbot, Norwegian: piggvar) is a large, diamond-shaped flatfish of the family Scophthalmidae and one of the most prized and expensive food fish in Europe. It is found in the North Sea, Baltic Sea, and North Atlantic and is both wild-caught and farmed (mainly in Spain, France, and Norway). The flesh is brilliant white, very firm, lean (1–2 g fat per 100 g), and richly flavoured — considered by many chefs to be the finest European flatfish. Turbot is sold whole (2–8 kg) or as thick portioned fillets; the thick, gelatinous skin and bones are rich in collagen and add flavour when the fish is cooked on the bone. Pan-searing thick turbot fillets or steaks in butter until golden is the classic restaurant preparation (*turbot meunière*). Oven-roasting whole or portioned on the bone in butter is traditional in French and British fine dining. Grilling over charcoal is popular in Spain (*rodaballo a la parrilla*). Sous vide at 52–54 °C produces luxurious, silky results. Probe placement: insert from the thickest edge of the fillet or steak into the centre, avoiding the central bone on whole fish.",
   "whitefish": "Whitefish (*Coregonus* spp., Swedish: sik, Finnish: siika, German: Felchen / Renke / Maräne, French: corégone / lavaret, Norwegian: sik) is a group of lean, fine-textured freshwater and brackish-water salmonid fish of the subfamily Coregoninae. Key species include European whitefish (*Coregonus lavaretus* — widely distributed in Scandinavia, the Alpine lakes, and the Baltic), vendace (*Coregonus albula* — Swedish: siklöja, Finnish: muikku), and North American lake whitefish (*Coregonus clupeaformis*). Whitefish has a mild, clean flavour, low fat content (2–5 g per 100 g), and delicate white flesh that flakes easily. The thin skin is edible and crisps well in a pan. Sik is a highly prized table fish in Scandinavia (especially Finland and Sweden), where it is routinely pan-fried (*sikafilé* in Finland), hot-smoked in stovetop box smokers (*abu-röken* / *röklåda* in Sweden, *savustuslaatikko* in Finland), grilled whole, or oven-baked. Cold-smoked whitefish (*sikafilé kylmäsavustettu*) is a Finnish specialty. In German-speaking Alpine regions, Felchen and Renke from Lake Constance and Bavarian lakes are pan-fried or lightly smoked. Probe placement: insert into the thickest cross-section of the fillet or, for whole fish, behind the shoulder. Small specimens cook in 3–4 minutes per side; larger fillets 5–7 minutes.",
@@ -130437,8 +130448,18 @@ const CUT_METHOD_PROFILES = {
     "pan_fry_sv": "Sjötunga (*Solea solea*, Dover sole) har kritvitt, ytterst delikat kött med mild söt smak och lågt fettinnehåll (1–2 g/100 g). Pannstekning hel sjötunga eller sjötungefileter i klarat smör (*sole meunière* / *Seezunge Müllerin Art*) är den mest berömda beredningen i europeisk finmatlagning — ett av det franska kökets signaturrätter. Tekniken är enkel: huden avlägsnas, fisken pudras med mjöl, steks i smör tills gyllenbrun och avslutas med beurre noisette (nötterbrun smör) och citron. Mjölet bildar en tunn knaprig skorpa som förseglar det delikata köttet. Sjötunga säljs vanligtvis hel (200–500 g) med både mörk och vit hud borttagen före tillagning. Eftersom köttet är mycket tunt och fisken plan är tillagningstiden mycket kort — 2–4 minuter per sida. Sond placeras från tjockaste kanten (nära bröstfenans sida) in i överfilén, parallellt med benet, utan att träffa mittenbenet."
   },
   "swordfish": {
+    "braise": "Braising cooks swordfish in a shallow bath of sauce at gentle heat — the opposite bet to the\nsear: instead of protecting the outside with crust, the liquid protects the inside from\novershooting. The fetched sources span four traditions of the same idea — Sicilian *alla\nghiotta* (sear briefly, then finish covered in tomato-olive-caper sauce), Madeiran/Portuguese\n*estufado* (fish stewed 20 minutes on a vegetable-tomato-wine base), Chinese red braising\n(sweet-savoury soy-sugar glaze, here executed sous vide at a constant bath temperature) and\nMoroccan *chermoula* stew (fish baked over a spiced vegetable bed). Swordfish's firm, steak-like\nflesh is what makes the method viable at all: 20–35 minutes of moist heat would turn a flaking\nwhite fish to mush but leaves swordfish in thick, moist flakes. The gentle window means the\ncut's usual overcook risk is inverted — undercooking and timing are the issues, not chalkiness.\nOnly one of four sources states a temperature (60 °C / 140 °F).",
+    "braise_sv": "Bräsering tillagar svärdisk i en grund sås på mild värme — motsatsen till stekning: i\nstället för att skydda uteytan med skorpa skyddar vätskan insidan från att överskjuda.\nKällorna spänner fyra traditioner av samma idé: sicilianska *alla ghiotta* (korta steka,\nsedan täckt i tomat-oliv-kaparsås), madeiransk/portugisisk *estufado* (fisk stuvad 20\nminuter på tomat-vin-bas), kinesisk röd brasering (sötstark soss, här med konstant\nsousvide-bad) och marockansk *chermoula*-gryta (fisk bakad över kryddad grönsakssäng).\nDet täta köttet gör metoden möjlig: 20–35 minuter fukt vore trasigt för flaggfisk, men\nsvärdisk blir kvar i tjocka, saftiga flagor. Enda mätta källan anger 60 °C (140 °F).",
+    "charcoal_grill": "The charcoal-specific variant of grilling: swordfish over a settled coal bed, where radiant\nheat from glowing embers combines with airborne smoke compounds that no gas burner produces.\nTwo forms dominate the fetched sources — Turkish *izgara* kebabs on skewers held 10–13 cm\n(4–5 in) above the coals for ~8 minutes, and whole steaks seared 4–7 minutes per side over a\ntwo-zone coal bed (US kettle setups) or a screaming-hot grate (German *Glut* technique).\nSwordfish's dense, non-flaking flesh is what makes the skewer form possible: the cubes stay\non the metal and take the frequent turning without shedding. The charcoal sources publish\nmore temperature data than the general-grill set: 130–135 °F (54–57 °C) from the US kettle\nrecipe, 55–58 °C from the German pro cook, 145 °F (63 °C) from the Canadian retailer — the\nsame medium/well-done split seen across the cut.",
+    "charcoal_grill_sv": "Varianten av grillning som sker över glödande kol: svärdisk får strålevärme underifrån plus\nrökfenoler som gasgrill aldrig ger. Två former dominerar: turkiska *izgara*-spett hållna\n10–13 cm över glöden i ~8 minuter, och hela steaks som steks 4–7 minuter per sida över ett\ntvåzonskolbädd. Det täta, icke-flaggande köttet gör spettformen möjlig — bitarna stannar på\nmetallen. Termometerdata: 54–57 °C (US), 55–58 °C (tysk proffskok), 63 °C (kanadensisk\ndetaljist) — samma medium/well-done-split som i resten av snittet.",
+    "grill": "Grilling is swordfish's most international method: the steak's dense, non-flaking flesh\nlifts across grates and skewers without breaking, so it takes direct radiant heat and\nheavy char marks that would destroy a laminar white fish. Retail steaks (2–3 cm / 1–1½ in)\ngrill in 3–7 minutes per side over high heat; the whole risk window is the transition from\ntranslucent centre to chalky dryness, which happens fast once the core passes ~60 °C. The\nfetched sources split between two endpoints: the thermometer-guided American approach pulls\nat 130 °F (54 °C) and rests to ~140 °F, while the Trinidadian and Saveur kebab sources cook\nby char and opacity (\"cooked through\", 3–5 min per side) with no probe at all. Kebab-style\ngrilling on chunks (India, Caribbean, Turkey) shortens the exposure per piece; whole steaks\n(Germany, US) need the grate two-zone or move-to-indirect finish.",
+    "grill_sv": "Grillning är svärdiskens mest internationella metod: köttets täta, icke-flaggande struktur\nhåller ihop över risten och på spett, vilket en vanlig vitfisk inte gör. Steaks på 2–3 cm\ngrillas 3–7 minuter per sida på hög värme; risken är övergången från genomskinlig mitt till\nkallig torrhet, som sker snabbt över ~60 °C. De amerikanska termometerstyrda källorna drar\nvid 54 °C och vilar till ~60 °C; de karibiska och indiska spett-recepten garar efter färg och\ngenomskinlighet utan termometer.",
+    "oven_bake": "Oven baking surrounds the steak with air instead of a pan surface or a flame: the fetched\nsources use three distinct configurations — an all-in-one sheet-pan bake with a breadcrumb\ncrust (Italian), a two-stage sear-then-roast (Russian), a topping-glazed fast bake under a\ntoaster oven's top heat (Japanese-style), and a saucy covered bake where the fish poaches in\nits own tomato-onion base (Greek *plaki*). All land in the same 15–25 minute window at\n204–220 °C (400–425 °F), except the Russian two-stage which roasts only 10 minutes after a\n2-minute-per-side sear. The method's virtue for swordfish is evenness: no side is closer to\nthe heat than the centre by much, so the dense flesh cooks uniformly — its risk is the\nopposite of the grill's, a slow approach to opacity with no crust to distract the cook from\novercooking. Only one of four sources publishes an internal temperature.",
+    "oven_bake_sv": "Ugnsbakning omger steaken med luft i stället för yta eller låga: de hämtade källorna\nanvänder tre konfigurationer — allt-i-ett plåtbakning med ströbrödskorpa (italiensk), en\ntvåstegs stekning följd av ugn (rysansk), en snabb glaserad bakning under grillelement\n(japansk stil) och en safig täckt bakning där fisken sjäder i sin tomatlökssås (grekisk\n*plaki*). Alla landar i 15–25 minuter vid 204–220 °C. Metodens fördel för svärdisk är\njämnhet; risken är att steg för steg närma sig opacitet utan skorpa att distrahera.",
     "pan_sear": "Swordfish (*Xiphias gladius*, Italian: pesce spada, Turkish: kılıçbalığı, Swedish: svärdfisk,\nSpanish: pez espada) is a large, meaty, open-ocean fish with compact, dense, steak-like flesh\nand a mild, slightly sweet flavour. Unlike most white fish, swordfish has very firm, non-flaky\nflesh similar in texture to tuna or veal — it can be cooked like a beefsteak. This makes it\nparticularly well suited to pan-searing, griddling and grilling at high heat.\n\nSwordfish steaks are typically 2–3 cm thick and contain a moderate amount of fat distributed\nthroughout the flesh, making them more forgiving than leaner white fish. They sear in a very\nhot pan for 1–3 minutes per side — overcooking is the primary risk, as the flesh dries and\nbecomes chalky above 65 °C. The BBC Good Food tradition specifically warns against cooking\nfor more than 1 minute per side on a very hot griddle, watching for the flesh to transition\nfrom translucent to pale cream (*cuisson*). Italian and Mediterranean cooks favour a\nslightly more moderate approach: 3–4 minutes per side over medium-high heat with olive oil.\n\nThe MEATER probe should be inserted from the side of the steak into the centre of the flesh.\nInternal temperature targets: pull at 52–57 °C (125–135 °F) for medium-rare (still slightly\ntranslucent at the very centre, preferred by Italian and Mediterranean cooks); 57–60 °C\n(135–140 °F) for medium (just opaque throughout). USDA minimum for finfish is 63 °C (145 °F).",
-    "pan_sear_sv": "Svärdfisk (*Xiphias gladius*, italiensk: pesce spada, turkisk: kılıçbalığı, svenska: svärdfisk, spansk: pez espada) är en stor, köttrik havsfisk med kompakt, tät, biff-liknande kött och mild, lätt söt smak. Till skillnad från de flesta vitfiskar flinkar inte svärdisk — det är ett tätt, fast kött som skärs i skivor och tillagas som en biff. Pannsearing ger bäst resultat: het panna, 3–4 minuter per sida. Innertemperatur: 57–63 °C."
+    "pan_sear_sv": "Svärdfisk (*Xiphias gladius*, italiensk: pesce spada, turkisk: kılıçbalığı, svenska: svärdfisk, spansk: pez espada) är en stor, köttrik havsfisk med kompakt, tät, biff-liknande kött och mild, lätt söt smak. Till skillnad från de flesta vitfiskar flinkar inte svärdisk — det är ett tätt, fast kött som skärs i skivor och tillagas som en biff. Pannsearing ger bäst resultat: het panna, 3–4 minuter per sida. Innertemperatur: 57–63 °C.",
+    "sous_vide": "Sous vide holds swordfish at one exact temperature from edge to centre for 20–45 minutes,\nthen most sources finish with a 1–2 minute sear for surface flavour. The fetched sources\nform a tight cluster at 54.4–55.5 °C (130–132 °F) — the American consensus for \"medium,\nfirm but juicy\" — with two deliberate outliers: a German home cook at 59 °C for 20 minutes\nfollowed by a hard cast-iron crisping, and an American source bathing at 49 °C (120 °F)\nfor 45 minutes for \"lightly flaky and firm\". Swordfish is a good sous vide subject precisely\nbecause its dense, uniform flesh has no flaking layers to fall apart during the long hold,\nand because its overcook failure mode (chalkiness above ~60 °C) is exactly what a\ntemperature-locked bath eliminates. The wet-bag texture before searing is the trade: no\ncrust unless you add one afterwards.",
+    "sous_vide_sv": "Sous vide håller svärdisk på exakt en temperatur kant till kant i 20–45 minuter; de flesta\nkällorna avslutar med 1–2 minuters stekning för ytsmak. Hämtade källor klusterar vid\n54,4–55,5 °C (amerikansk konsensus om medium, saftig), med två avvikare: en tysk hemmakok\npå 59 °C i 20 minuter följd av hård stekning i gjutjärn, och en amerikansk källa på 49 °C\ni 45 minuter. Svärdisk passar metoden eftersom det täta köttet håller ihop under det långa\nbadet och eftersom överkokningsrisken (kalligt över ~60 °C) är exakt vad ett temperaturlåst\nbad eliminerar. Kompromissen är ytan: ingen skorpa utan efterföljande stekning."
   },
   "trout": {
     "pan_sear": "Rainbow trout (*Oncorhynchus mykiss*) and brown trout (*Salmo trutta*, Swedish: forell,\nNorwegian: ørret, German: Forelle, Italian: trota) are among the most widely cooked fresh-\nwater fish in Northern Europe and North America. The flesh is delicate, flaky, and mildly\nflavoured with a slightly nutty quality; colour ranges from white to orange-pink depending\non diet. Trout fillets are typically thin (1–2 cm), which means they cook very quickly in a\npan — 3–5 minutes per side at medium-high heat. The skin crisps beautifully in butter or\nolive oil. The key risk is overcooking: lean, thin trout flesh dries out rapidly past 65 °C.\nInternal doneness is the same as for other finfish: 60–63 °C (140–145 °F, USDA minimum)\nfor fully cooked flesh that is just opaque. The MEATER probe must be inserted from the\nthickest edge (lateral insertion) in thin fillets, or through the shoulder of a whole fish.",
@@ -130973,8 +130994,20 @@ const CUT_METHOD_PROFILES = {
     "smoker_sv": "*Väntar på källinsamling.*"
   },
   "pork_loin_steak": {
-    "pan_fry": "Pan frying is the primary method for pork loin steak: hot pan, butter baste, same technique as a pork chop. The lean, uniform cross-section sears evenly without hotspots. Begin with a dry, hot pan (180–200 °C) and a small amount of oil to prevent sticking; once the first face is seared (1.5–2 min), flip, add butter and garlic, and baste continuously for 1.5–2 minutes. The butter baste compensates for the low intramuscular fat and adds richness.\n\nBecause the cut is lean, pull early: 61–63 °C for a very slightly pink, moist interior; carryover will bring it to 63–65 °C. At 70 °C the loin steak becomes noticeably dry. MEATER probe from the side of the steak, aimed at the geometric centre. Carryover: 2–4 °C.\n## Styckesprofil\n\nPannstekning av fläskloin-stek: het panna, smörbastning, samma teknik som fläskkotlett. Det magra, enhetliga tvärsnittet sears jämnt utan varma punkter.\n\nBörja med torr, het panna (180–200 °C) och lite olja för att förhindra fastsnande. 3–4 minuter per sida, sista minuten bastning med smör och vitlök. Innertemperatur: **63–65 °C (145–149 °F)** USDA; **70 °C** genomstekt. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till mitten av steaken. Vila 5 minuter.",
-    "pan_fry_sv": "Pannstekning av fläskloin-stek: het panna, smörbastning, samma teknik som fläskkotlett. Det magra, enhetliga tvärsnittet sears jämnt utan varma punkter.\n\nBörja med torr, het panna (180–200 °C) och lite olja för att förhindra fastsnande. 3–4 minuter per sida, sista minuten bastning med smör och vitlök. Innertemperatur: **63–65 °C (145–149 °F)** USDA; **70 °C** genomstekt. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till mitten av steaken. Vila 5 minuter."
+    "air_fryer": "An air fryer is a small convection oven: a fan drives hot air around all faces of the steak\nsimultaneously, so the surface dries and browns faster than in a still oven while the centre\nclimbs steadily — the same enveloping evenness as `oven_roast` with a shorter clock. For a\nlean, uniform 2–3 cm loin steak the method's virtue is that it needs no pre-sear and no\nturning: four of five sources cook in one uninterrupted basket cycle (one flips once at the\nhalfway point), at 200–204 °C (400 °F) basket temperature, for 8–14 minutes depending on\nthickness. The observed numeric endpoints are narrow — 60.4–63 °C (140–145 °F) — because the\nappliance's fast air is unforgiving and its enthusiasts probe: the two sources that state a\ntemperature both pull slightly below the USDA line and let carryover finish the job. The risk\nis the cut's standing risk amplified: the moving air that browns the surface also wicks\nmoisture from the lean fibres, so an extra cycle past the probe reading dries it visibly.",
+    "air_fryer_sv": "En airfryer är en liten konventionsugn: en fläkt driver het luft runt alla ytor samtidigt, så\nytan torkar och brunas snabbare än i en stilla ugn medan centran klättrar stadigt. För en\nmager, enhetlig 2,5–3,5 cm loin-steke är fördelen att ingen förstekning och ingen vändning\nkrävs: fyra av fem källor lagar i ett enda avbrottsfri korgscykel (en vänder en gång), vid\n200–204 °C korgstemperatur, i 8–14 minuter beroende på tjocklek. De observerade slutpunkterna\när smala — 60,4–63 °C — eftersom apparatens snabba luft är obarmhärtig och dess användare\nsondar: de två källor som anger temperatur drar bort lite under USDA-linjen och låter\neftervärmen klara resten.",
+    "braise": "Braising surrounds the steak with a shallow, simmering liquid: the meat is seared for crust\nfirst, then held below a boil in sauce until connective tissue — of which this cut has very\nlittle — and time do what dry heat cannot. The fetched sources use two configurations: an\nAmerican skillet braise where the chops simmer 45–60 minutes in a broth-brown-sugar-balsamic\nsauce (stovetop covered, or 163 °C/325 °F oven), and a Chinese *hóngshāo* red-braise where\nthin chops are starch-coated, fried at 160 °C and then simmered 1–2 minutes in a soy-ginger\nglaze. The method is atypical for a lean loin steak — the long wet cook that rescues shoulder\nor belly will dry out a uniform white-muscle steak if pushed — which is why the American\nsource's window (45–60 min) reads long for this cut and the Chinese source keeps its simmer\nto minutes. No source states an internal temperature; both endpoints are time-and-sauce\njudged. Carryover is negligible in liquid.",
+    "braise_sv": "Bräsering omger steaken med en grund, sjudande vätska: köttet steks först för skorpans skull\noch hålls sedan under kokning i sås tills bindväv — som detta stycke har mycket lite av — och\ntiden gör det torra värme inte kan. De hämtade källorna använder två konfigurationer: en\namerikansk pannbräsering där kotletterna simmar 45–60 minuter i en buljong-socker-balsamico-\nsås (täckt spis, eller ugn 163 °C), och en kinesisk *hóngshāo* där tunt skivade stycken\nstärks, friteras vid 160 °C och sjuds 1–2 minuter i en soja-ingefärssås. Metoden är atypisk\nför en mager loin-steke; ingen källa anger innertemperatur.",
+    "charcoal_grill": "A charcoal grill adds two things a gas flame or a pan cannot give this cut: smoke, and a two-\nzone fire layout that separates crust-building direct heat from gentle indirect finishing. The\nfetched recipe — an exact match for this cut, explicitly boneless pork loin chops an inch\nthick, brined — works medium coals with the lid open, sears at a 45-degree angle for\ncrosshatch marks, and finishes over indirect heat to a stated 60 °C (140 °F) target before a\n10-minute rest; the fetched Kingsford technique guide adds the missing chamber numbers,\n375–400 °F (190–204 °C) two-zone setups probing at 63 °C (145 °F). For a lean, uniform\n2–3 cm steak the brine step in the primary source matters more here than in any indoor\nmethod: smoke and moving dry air together pull moisture fast, and the salt-sugar soak is the\ncountermeasure. Carryover of 2–4 °C applies after the rest.",
+    "charcoal_grill_sv": "En kolgrill tillför två saker som gaslåga eller panna inte kan ge detta stycke: rök, och en\nzonindelad eld som skiljer direkt värme för skorpan från indirekt avslutning. Den hämtade\nreceptet — en exakt träff för stycket, uttryckligen benfria loin-kotletter en tum tjocka,\nlagade — arbetar med medium kol med locket öppet, steks i 45-gradersvinkel för\nrutmönster och avslutas över indirekt värme mot målet 60 °C före 10 minuters vila; den\nhämtade Kingsford-teknikguiden kompletterar med kammarvärden 375–400 °F och son-mål på\n63 °C. För en mager, enhetlig 2,5–3,5 cm steke betyder lagningen mer här än i någon inomhus-\nmetod: rök och torr, rörig luft drar fukt snabbt, och saltsockerlakningen är motmedlet.",
+    "grill": "Grilling exposes the steak to radiant and convective heat from below with no pan wall and no\nliquid: the sources sear over direct heat (flat-top BBQ, open grill, charcoal) and four of\nfive finish by moving the meat to indirect heat or lowering the flame, because a 2–3 cm lean\nloin steak colours fast and dries fast if the fire stays high. The observed endpoints run\n60–71 °C — the widest span of any leaf on this cut — which reflects the method's real-world\nvariability: lid open or closed, direct or indirect, thickness 2.5–4 cm, and traditions that\njudge doneness by timer, by feel, or by probe. The cut's uniform cross-section means it sits\nflat on the grate and cooks without the hotspots a bone-in chop introduces; the risk is\nexposure, since nothing shields the surface once the fat cap renders.",
+    "grill_sv": "Grilling blottlägger steaken för strål- och konvektionsvärme underifrån, utan pannvägg och\nutan vätska: källorna steks över direkt värme (flat-top, öppen grill, kol) och fyra av fem\navslutar genom att flytta köttet till indirekt värme eller sänka lågan, eftersom en 2,5–3,5 cm\nmager loin-steke färgas snabbt och torkar snabbt om lågan står kvar. De observerade\nslutpunkterna löper 60–71 °C — den bredaste spännvidden av alla blad för detta stycke.\nStyckets enhetliga tvärsnitt ligger platt på risten utan de heta punkter ett ben ger; risken\när blottläggning, inget skyddar ytan när fettkanten har renderats.",
+    "oven_roast": "Oven roasting surrounds the steak with still or fan-driven hot air: no pan contact, no liquid,\nno turning, and an even approach to temperature from every face at once. The fetched sources\nrun 200–228 °C (400–450 °F) for 15–20 minutes, two of them seasoning the raw steak straight\nonto a sheet pan and two building a bed (potatoes, or a sheet-pan vegetable spread) beneath it.\nFor a lean, uniform 2–3 cm loin steak the method's virtue is passivity — the flat cut sits\nlevel, cooks without hotspots, and needs no handling — while its risk is the familiar one:\ndry air moves moisture off the surface faster than a pan's fat film does, so the window between\nroasted and dried is the method's own. The one Spanish source finishes the chops under the\ngrill setting after the potatoes, an extra-browning step the American sources get from sheer\noven heat instead. Carryover of 2–4 °C applies as with every method for this cut.",
+    "oven_roast_sv": "Ugnsrostning omger steaken med stilla eller varmluftsdriven het luft: ingen pannkontakt, ingen\nvätska, ingen vändning, och en jämn uppvärmning från alla ytor samtidigt. De hämtade källorna\nkör 200–228 °C i 15–20 minuter, två av dem kryddar rå steaken direkt på en bakplåt och två\nbygger ett bädd (potatis eller grönsaksspread) under köttet. För en mager, enhetlig\n2,5–3,5 cm loin-steke är fördelen passiviteten — det platta stycket ligger plant, tillagas\nutan heta punkter och kräver ingen hantering — medan risken är den bekanta: torr luft\ntransporterar fuktighet bort från ytan snabbare än pannans fettfilm, så fönstret mellan\nrostat och uttorkat är metodens eget. Eftervärmen på 2–4 °C gäller som för varje metod för\ndetta stycke.",
+    "pan_fry": "Pan frying is the native method for this cut: a lean, uniform cross-section from the\n*longissimus dorsi* has no connective tissue to break down and no bone to conduct heat\nunevenly, so all it needs is direct conductive heat fast enough to brown the surface before\nthe centre dries. The fetched sources run 1.5–4 minutes per side in butter or oil at\nmedium-high to high heat, three of the five baste with butter, and the observed pull band is\n62–65 °C — the lean white-muscle flesh gives very little warning between juicy and dry, so\nthe window is short and the carryover (2–4 °C) matters more than on a fattier chop. The\nmethod suits the cut's shape: a flat 2–3 cm steak lies flush in the pan and colours evenly\nedge to edge.",
+    "pan_fry_sv": "Pannstekning är den ursprungliga metoden för detta stycke: ett mager, enhetligt tvärsnitt från\n*longissimus dorsi* saknar bindväv att bryta ner och ben som leder värma ojämnt, så allt som\nkrävs är direkt värmetransfer snabb nog att bruna ytan innan centran torkar. De hämtade\nkällorna kör 1,5–4 minuter per sida i smör eller olja på medelhög till hög värme, tre av fem\nbastar med smör, och den observerade urtagsspännvidden är 62–65 °C. Metoden passar styckets\nform: en platt 2,5–3,5 cm steke ligger platt i pannan och färgas jämnt från kant till kant.",
+    "sous_vide": "Sous vide removes heat as a variable: the steak is sealed and held in a water bath at a fixed\ntemperature until the entire cross-section reaches that exact degree, then seared for seconds\nin a ripping-hot pan to build crust the bath never could. For a lean, uniform loin steak this\nis the most controllable method available — the bath windows in the fetched sources cluster at\n57–64 °C (135–147 °F) for 45 minutes to 4 hours, and because there is no overshoot above the\nbath temperature, the dryness risk that defines every fast method for this cut simply does not\nexist until the sear. Carryover is negligible (the meat leaves the bath already at target), so\nthe sear must be brief: every source caps it at 30–60 seconds per side. The method's cost is\ntexture rather than safety — long holds past the enzymatic window can turn the lean muscle\nmushy, which is why the sources pair short-to-moderate times with their lower baths.",
+    "sous_vide_sv": "Sous vide tar bort värmen som variabel: steaken förseglas och hålls i ett vattenbad på fast\ntemperatur hela vägen till exakt målgrad, sedan bränns den i hett panna i sekunder för att\nbygga en skorpa badet aldrig kan ge. För en mager, enhetlig loin-steke är detta den mest\nstyrbara metoden som finns — badfönstren i de hämtade källorna klusterar vid 57–64 °C i 45\nminuter till 4 timmar, och eftersom inget kan gå över badtemperaturen finns den torkningsrisk\nsom definierar alla snabba metoder för detta stycke inte förrän stekningen. Eftervärmen är\nförsumbar, så stekningen måste vara kort: varje källa begränsar den till 30–60 sekunder per\nsida."
   },
   "pork_shoulder_steak": {
     "pan_fry": "Pan frying is the ideal method for pork shoulder steak: medium-high heat (180–200 °C pan surface), enough fat or oil to ensure contact over the irregular steak surface, and 3–4 minutes per side. The heavy marbling of the collar means the fat renders during cooking, basting the muscle from the inside and keeping it juicy even at 70 °C — a temperature at which a leaner loin chop would begin to dry.\n\nThe *Schopfsteak* (Austrian) and *nakkesteak* (Danish) are both cooked identically: hot pan, moderate heat, single flip, rest briefly. Because of the fat content, the steak withstands a slightly higher internal temperature without drying: 65–68 °C gives a juicy pink interior; 70–72 °C is fully cooked and still moist. MEATER probe from the side of the steak into the geometric centre. Carryover: 3–4 °C.",
@@ -131922,10 +131955,43 @@ const RECIPE_TITLES_INDEX = {
     ]
   },
   "swordfish": {
+    "braise": [
+      "Caroline's Cooking — Sicilian Swordfish with Olives and Capers (Pesce Spada alla Ghiotta)",
+      "Portuguese Cooking (Ana) — Peixe Espada Estufado de Madeira (Black Scabbard Stew of Madeira)",
+      "Anova Culinary (Chef Nicole Poirier, San Francisco) — Sous Vide Red Braised Swordfish Steak",
+      "The Delicious Crescent (Roxana Begum PhD, RD) — Moroccan Fish Stew With Chermoula"
+    ],
+    "charcoal_grill": [
+      "Yummy Istanbul — Izgara Kılıç Kebabı (Turkish Char-Grilled Swordfish Shish Kebab)",
+      "SnS Grills — Best Swordfish Recipe: Grilled Swordfish with Lemon Caper Butter Sauce",
+      "North Coast Seafoods — Simple Grilled Swordfish Recipe",
+      "Thomas Sixt — Schwertfischfilet grillen: einfach und saftig"
+    ],
+    "grill": [
+      "Saveur — Grilled Swordfish Kebabs (machli kebab)",
+      "Girl With The Iron Cast — Marinated Grilled Swordfish with Olive Chimichurri",
+      "Steven Raichlen, Barbecue Bible — Trinidadian Grilled Swordfish",
+      "Weber Grill Original (DE) — Schwertfisch-Offensive mit Tomaten-Paprika-Sauce und Oliven"
+    ],
+    "oven_bake": [
+      "Lidia — Baked Swordfish (Lidia Bastianich)",
+      "Tokyo Recipes by Nadia (Emi Matsuyama) — Запечённая рыба-меч с мисо, майонезом и сыром (Baked Swordfish with Miso, Mayonnaise and Cheese)",
+      "Povar.ru (Marina Nemets) — Меч-рыба в духовке (Swordfish in the Oven)",
+      "The Mediterranean Dish (Suzy Karadsheh) — Greek Fish with Tomatoes and Onions (Psari Plaki)"
+    ],
     "pan_sear": [
       "Griddled Swordfish with Pineapple & Chilli Salsa (inspired by BBC Good Food)",
       "Seared Swordfish with Mango Salsa (inspired by BBC Good Food)",
-      "Pesce Spada in Padella con Capperi e Olive / Pan-Seared Swordfish with Capers and Olives (inspired by Giallozafferano)"
+      "Pesce Spada in Padella con Capperi e Olive / Pan-Seared Swordfish with Capers and Olives (inspired by Giallozafferano)",
+      "Epicurious — Pan-Roasted Swordfish Steaks with Mixed-Peppercorn Butter",
+      "Spain on a Fork — Pan Grilled Swordfish (Emperador a la Plancha)"
+    ],
+    "sous_vide": [
+      "Anova Culinary (Emily Farris & Jeff Akin) — Sous Vide Swordfish",
+      "Anova Culinary (Chef Jen Carroll, Philadelphia) — Olive Oil Sous Vide Swordfish",
+      "Amazing Food Made Easy (Jason Logsdon) — Sous Vide Swordfish",
+      "Went Here 8 This — Sous Vide Swordfish with Grapefruit and Shallot Sauce",
+      "eatdrinkcooking (toko) — crispy swordfish – krosser Schwertfisch, sous-vide"
     ]
   },
   "trout": {
@@ -133325,10 +133391,46 @@ const RECIPE_TITLES_INDEX = {
     ]
   },
   "pork_loin_steak": {
+    "air_fryer": [
+      "RecipeTeacher — Best Damn Air Fryer Pork Chops",
+      "BBC Food — Pork chops in air fryer",
+      "Australian Pork — Air Fryer Pork Loin Chops",
+      "Prairie Fresh (credited to the National Pork Board) — Air-Fried Korean-Style Pork Chops"
+    ],
+    "braise": [
+      "Valerie's Kitchen — Skillet Braised Pork Chops",
+      "China Sichuan Food — Red-braised Pork Chops (红烧猪排)"
+    ],
+    "charcoal_grill": [
+      "DadCooksDinner — Grilled Boneless Pork Loin Chops, Brined and Honey Glazed",
+      "Kingsford — How to Grill Pork Chops (technique guide)"
+    ],
+    "grill": [
+      "Andy Cooks — Crispy Skin Pork Chop",
+      "My Korean Kitchen — Chargrilled Korean Style BBQ Pork Chops",
+      "Let's Cook Some Food — Grilled Jerk Pork Chops",
+      "Mama Maggie's Kitchen — Grilled Pork Chops Adobo (Chuletas Adobadas)",
+      "Tasting Table — Grilled Tandoori Pork Chop Recipe"
+    ],
+    "oven_roast": [
+      "Tastes of Lizzy T — Easy Baked Pork Loin Chops",
+      "Food Network Kitchen — Baked Pork Chops",
+      "Creme de la Crumb — Sheet Pan Pork Chops with Potatoes and Broccoli",
+      "Bon Viveur — Chuletas de cerdo al horno con patatas"
+    ],
     "pan_fry": [
-      "Pandestegning af koteletter (adapted for loin steak) (inspired by Madens Verden)",
-      "Schweinskotelett Grundrezept (adapted for boneless loin steak) (inspired by ichkoche.at)",
-      "Chuleta de cerdo a la plancha (inspired by Directo al Paladar)"
+      "Madens Verden — Pandestegning af koteletter (pan-fried pork chops, technique applied to loin steak)",
+      "ichkoche.at — Schweinskotelett Grundrezept (adapted for boneless loin steak)",
+      "Directo al Paladar — Chuleta de cerdo a la plancha",
+      "Just One Cookbook — Tonteki トンテキ (Mie-style garlic-soy pork)",
+      "Hint of Healthy — Pan seared pork loin steaks"
+    ],
+    "sous_vide": [
+      "Anova Culinary — Sous Vide Pork Rib Chop",
+      "Two Kooks in the Kitchen — Sous Vide Pork Chops (Vietnamese-Style)",
+      "A Duck's Oven — Sous Vide Pork Chops (Boneless or Bone-In)",
+      "StreetSmart Kitchen — Foolproof Sous Vide Pork Chops",
+      "Great British Chefs (Luke Holder) — Barbecued sous vide pork chop with borlotti beans and candied tomato"
     ]
   },
   "pork_shoulder_steak": {
@@ -135288,7 +135390,10 @@ const EXP_TREE = {
                 "supported_methods": [
                   "charcoal_grill",
                   "grill",
-                  "pan_sear"
+                  "pan_sear",
+                  "oven_bake",
+                  "braise",
+                  "sous_vide"
                 ],
                 "usda_safe_c": 63,
                 "usda_safe_f": 145,
@@ -137119,8 +137224,12 @@ const EXP_TREE = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "air_fryer",
+                  "braise",
+                  "charcoal_grill",
                   "grill",
-                  "pan_fry"
+                  "oven_roast",
+                  "pan_fry",
+                  "sous_vide"
                 ],
                 "usda_safe_c": 63,
                 "usda_safe_f": 145,
@@ -140447,7 +140556,12 @@ const EXP_RECIPE_INDEX = {
   "sea_bass": "fish/white_fish/sea_bass.md",
   "sole-pan_fry": "fish/white_fish/sole-pan_fry.md",
   "sole": "fish/white_fish/sole.md",
+  "swordfish-braise": "fish/white_fish/swordfish-braise.md",
+  "swordfish-charcoal_grill": "fish/white_fish/swordfish-charcoal_grill.md",
+  "swordfish-grill": "fish/white_fish/swordfish-grill.md",
+  "swordfish-oven_bake": "fish/white_fish/swordfish-oven_bake.md",
   "swordfish-pan_sear": "fish/white_fish/swordfish-pan_sear.md",
+  "swordfish-sous_vide": "fish/white_fish/swordfish-sous_vide.md",
   "swordfish": "fish/white_fish/swordfish.md",
   "trout-pan_sear": "fish/white_fish/trout-pan_sear.md",
   "trout-smoker": "fish/white_fish/trout-smoker.md",
@@ -140599,7 +140713,13 @@ const EXP_RECIPE_INDEX = {
   "pork_chop-pan_sear": "pork/chops/pork_chop-pan_sear.md",
   "pork_chop-smoker": "pork/chops/pork_chop-smoker.md",
   "pork_chop": "pork/chops/pork_chop.md",
+  "pork_loin_steak-air_fryer": "pork/chops/pork_loin_steak-air_fryer.md",
+  "pork_loin_steak-braise": "pork/chops/pork_loin_steak-braise.md",
+  "pork_loin_steak-charcoal_grill": "pork/chops/pork_loin_steak-charcoal_grill.md",
+  "pork_loin_steak-grill": "pork/chops/pork_loin_steak-grill.md",
+  "pork_loin_steak-oven_roast": "pork/chops/pork_loin_steak-oven_roast.md",
   "pork_loin_steak-pan_fry": "pork/chops/pork_loin_steak-pan_fry.md",
+  "pork_loin_steak-sous_vide": "pork/chops/pork_loin_steak-sous_vide.md",
   "pork_loin_steak": "pork/chops/pork_loin_steak.md",
   "pork_shoulder_steak-pan_fry": "pork/chops/pork_shoulder_steak-pan_fry.md",
   "pork_shoulder_steak": "pork/chops/pork_shoulder_steak.md",
@@ -152435,7 +152555,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "659";
+const PANEL_VERSION = "661";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

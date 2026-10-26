@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 25 Oct 2026
-Last Change: v0.10.2.19 - improve baltic_herring cut (new braise method, five leaves widened to 4–6 sources with EE/LV/PL/RU, 52°C strömming temperature evidence, rescore 19/20 with approved exceptions #1–#3); CHORES (version bump, branch history, user guide)
+Last Updated: 26 Oct 2026
+Last Change: v0.10.2.20 - improve pork_loin_steak cut (four methods discovered: oven_roast/sous_vide/charcoal_grill/braise; seven leaves now, pan_fry widened to 5 sources; Groups A+C covered; rescore 8→14/20), building on the swordfish pass (18/20); CHORES (version bump, branch history, user guide, panel regen)
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -17,7 +17,7 @@ SUPPORTED_LANGUAGES = ("en", "sv", "da")
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "659"
+PANEL_VERSION = "661"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
