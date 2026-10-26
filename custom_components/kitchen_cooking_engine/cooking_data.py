@@ -4931,6 +4931,12 @@ BUFFALO = [
         ],
         supported_methods=[
             CookingMethod.OVEN_ROAST,
+            # 2026-10-26 (twenty-first cut-improvement pass): braise was declared
+            # in the recipe hub but never registered here; braise and smoker both
+            # now have fetched source leaves (3 each). Braised/smoked roasts are
+            # texture-done at ~93 C, well above these doneness bands.
+            CookingMethod.BRAISE,
+            CookingMethod.SMOKER,
         ],
         recommended_doneness="medium_rare",
     ),
