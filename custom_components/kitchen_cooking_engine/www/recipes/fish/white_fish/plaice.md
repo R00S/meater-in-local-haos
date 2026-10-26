@@ -54,7 +54,7 @@ Rödspätta (*Pleuronectes platessa*; tyska: Scholle; danska: rødspætte; holl�
 ## Research files by cooking method
 
 - Pan Fry — no research file yet
-- Oven Bake — no research file yet
+- [Oven Bake](./plaice-oven_bake.md)
 - Grill — no research file yet
 - Smoker — no research file yet
 - [Steam](./plaice-steam.md)
@@ -83,3 +83,19 @@ Group C and D absent — steam leaf covers A (CN/TH/VN) and B (DE) only. Steam l
 3. **−1** · Missing Culinary Group D tradition — add at least one Group D (Scandinavian/Baltic/Slavic) source recipe. Plaice (*rödspätta*) is traditional in Northern European cooking.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+
+## Data state and gaps
+
+<!-- ledger-state: leaves=2 sources=8 silent=0 silent_leaves=0 methods=oven_bake,steam -->
+
+State on 2026-10-26: two leaves (steam, oven_bake), eight source records, four of them naming an internal
+temperature, all of them Nordic. The cut declares five methods and has data for two.
+
+| gap | status | evidence | effort | yield |
+|---|---|---|---|---|
+| `hub_method_without_leaf:grill` | open | hub declares `grill`; no `plaice-grill.md` exists | M | plaice is grilled whole in Sweden and Denmark; four records with a probe would close it |
+| `hub_method_without_leaf:pan_fry` | open | hub declares `pan_fry`; no leaf. This is the classic treatment (breaded, in butter) and the corpus clearly has material | S | likely the cheapest leaf in the cut: `panerad rödspätta` is a standard Swedish and Danish dish |
+| `hub_method_without_leaf:smoker` | open | hub declares `smoker`; no leaf, and no plaice-smoking record was found this pass | M | uncertain; flatfish smoking may not exist as a tradition, which would make this a searched-negative rather than a leaf |
+| `duplicate_tradition` (oven_bake) | open | `plaice-oven_bake.md` - four of four records Nordic (SE x3, DK x1) | S | a German *Scholle*, Dutch *schol* or British plaice record with a temperature |
+| `well_done_unsupported` | open | hub recommends `well_done` (63 °C); every record in the oven_bake leaf tops out at 52 °C, and Tasteline's house rule is 50-52 °C | M | a doneness decision for flatfish generally, not just plaice: nothing in this cut evidences 63 °C |
+| `leaf_without_any_temperature` (steam) | unverified this pass | `plaice-steam.md` was not re-read in this pass; it was not part of the research here | S | read it and record its state, or leave the gap open knowingly |

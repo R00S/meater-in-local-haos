@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 27 Oct 2026, 00:34 CET
+ * AUTO-GENERATED: 27 Oct 2026, 00:47 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 27 Oct 2026, 00:35 CET
+// Last generated: 27 Oct 2026, 00:47 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -128951,6 +128951,7 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/mahi_mahi.md"
   },
   "monkfish": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/monkfish-oven_roast.md",
     "sous_vide": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/monkfish-sous_vide.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/monkfish.md"
   },
@@ -128972,6 +128973,7 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/pikeperch.md"
   },
   "plaice": {
+    "oven_bake": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/plaice-oven_bake.md",
     "steam": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/plaice-steam.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/white_fish/plaice.md"
   },
@@ -130454,6 +130456,8 @@ const CUT_METHOD_PROFILES = {
     "pan_sear_sv": "Pannsearing av mahi-mahi ger en vackert guldbryn, Maillard-brynnad krusta på det fasta köttet. En het gjutjärns- eller rostfrihetspanna med en liten mängd olja (200–210 °C yttemperatur) sears den plana sidan av en 2–3 cm filé på 3–4 minuter; vänd för 2–3 minuter. Innertemperatur: 60–63 °C. Mahi-mahi är känslig för överkokad — det torra vita köttet torkar snabbt över 65 °C."
   },
   "monkfish": {
+    "oven_roast": "Monkfish (*Lophius piscatorius*, Swedish: marulk, Danish: havtaske, French: lotte, Spanish: rape) is not a\nflat fish but a thick one: the tail is a solid cylinder of dense, boneless muscle with almost no fat and a\nlot of water, and it behaves more like a fillet of veal than like cod. That structure is why oven roasting\nsuits it — a 300–400 g tail piece holds its shape on a tray and can be brought up slowly without falling\napart — and why the four records here all use **low ovens and low targets**: 50 °C, 100 °C, 150 °C and a\n47–58 °C reference band, for core temperatures of 46–52 °C.\n\nThe common step is a crust. Monkfish has no skin worth crisping, so three of the four records give it a\nsurface before the oven — flour, sesame seeds, a salt bed — because the meat itself will not brown. The\nother half of the method is the rest: monkfish at 50 °C is springy and sliceable, and it firms noticeably\nas it cools, which is why the Swedish records treat 46–52 °C as the whole usable window and warn that a\n55 °C tail eats like chicken breast.",
+    "oven_roast_sv": "Marulk (*Lophius piscatorius*, danska: havtaske, franska: lotte, spanska: rape) är inte platt utan tjock:\nstjärten är en solid cylinder av tät, benfri muskel med nästan inget fett och mycket vatten, och den beter\nsig mer som en kalvfilé än som torsk. Det är därför ugnsrostning passar — en bit på 300–400 g håller formen\npå en plåt och kan värmas långsamt utan att falla sönder — och därför använder alla fyra källorna här **låg\nugnsvärme och låga mål**: 50 °C, 100 °C, 150 °C och ett referensspann på 47–58 °C, för kärntemperaturer på\n46–52 °C.\n\nDet gemensamma steget är en yta. Marulk har inget skinn värt att krispa, så tre av fyra källor ger den\npanering — mjöl, sesamfrön, saltbädd — eftersom köttet inte bryner sig själv.",
     "sous_vide": "Monkfish tail has an unusually dense, meaty texture that resembles shellfish — it is often called \"the poor man's lobster.\" This same denseness means it is also the white fish most prone to becoming rubbery if overcooked: the collagen-rich tissue firms rapidly above 55°C. Sous vide is the ideal method for monkfish because it eliminates this risk entirely — the precise bath temperature guarantees the fish reaches the target without overshooting. At 45–54°C, monkfish flesh is silky, moist and succulent; above 60°C it begins to tighten and lose its distinguishing texture. The meaty body also absorbs bag seasonings exceptionally well (spices, herbs, aromatics). Sous vide monkfish is firmly established in professional UK kitchens and growing in popularity among serious home cooks.",
     "sous_vide_sv": "Marulkstjärt har en ovanligt tät, köttliknande textur som liknar skaldjur — den kallas ofta \"fattigmannens hummer\". Samma täthet innebär att det är den vitfisk som lättast blir gummiaktig om den överkokats: det kollagenrika vävnaden stramar åt snabbt över 55°C. Sous vide är den idealiska metoden för marulk eftersom den eliminerar denna risk helt — den exakta badtemperaturen garanterar att fisken når målet utan att överskrida det. Vid 45–54°C är marulksköttet silkigt, fuktigt och saftigt; över 60°C börjar det strama åt och förlora sin karakteristiska textur. Den köttiga kroppen absorberar också påsekrydderiet exceptionellt väl (kryddor, örter, aromatika). Sous vide marulk är fast etablerat i professionella brittiska kök och växer i popularitet bland seriösa hemkockar."
   },
@@ -130480,6 +130484,8 @@ const CUT_METHOD_PROFILES = {
     "sous_vide_sv": "Sous vide är en precisionsmetod som passar gös väl, eftersom fiskens magra, kompakta kött gynnas enormt av den absoluta temperaturkontrollen som ett cirkulerande vattenbad erbjuder. Till skillnad från fet lax, där badtemperaturen kan sättas så lågt som 48–52 °C för att utnyttja proteintexturdifferenser, tenderar gös vid dessa temperaturer mot en obehaglig mjuk, blöt konsistens — bristen på intramuskulärt fett innebär att det inte finns något som bär den lågtemperaturstruktur som myofibrillärproteinerna bildar. Det kulinariska konsensuset för sous vide-gös i skandinaviska och franska finmatslagningskök är en badtemperatur på 55–57 °C, vilket ger en jämnt fast, saftig filé med fullständig ogenomskinlighet genomgående.\n\n**Obs om MEATER-sond**: Sonden kan inte placeras under den förseglade påsens tillagning. Cirkulatorns temperatur är kokningsmålet. Efter att fisken tagits ut ur påsen kan sonden omedelbart användas för att verifiera att kärnan är inom 1–2 °C från badtemperaturen."
   },
   "plaice": {
+    "oven_bake": "Plaice (*Pleuronectes platessa*, Swedish: rödspätta, Danish: rødspætte, German: Scholle) is a flatfish,\nand flatness is the whole reason oven baking suits it: a whole fish is only 3–5 cm thick through the\nthickest part of the back, so there is no gradient to manage and no reason to sear it for colour before it\ngoes in. The four records here bake whole fish at 210–225 °C for 15–20 minutes, or hold a pan-seared fish\nat 80 °C to finish — and every one of them does the same small physical thing first, **slitting the dark\nskin along the backbone** so the fish does not curl up in the heat. That detail appears in the Danish and\nSwedish records independently, and it is the method's real technique: a flatfish that curls lifts its\nthickest part out of contact with the tray.\n\nThe skin is also the reason oven baking is contested for this fish. Plaice skin is thin and does not crisp\nin an oven the way it does in butter in a pan, so the Swedish records split: two bake it plain and pull the\nskin off at the table, and one sears it first and finishes in a very low oven purely to serve four people\nfrom one pan.",
+    "oven_bake_sv": "Rödspätta (*Pleuronectes platessa*, danska: rødspætte, tyska: Scholle) är en plattfisk, och plattformen är\nhela skälet till att ugnsbakning passar: en hel fisk är bara 3–5 cm tjock över ryggen, så det finns ingen\ntemperaturgradient att hantera och ingen anledning att bryna den för färgens skull. De fyra källorna här\nugnsbakar hel fisk vid 210–225 °C i 15–20 minuter, eller håller en pannbrynt fisk i 80 °C ugn för att bli\nklar. Alla gör dessutom samma lilla fysiska sak först: **de snittar längs ryggbenet** så att fisken inte\nkrullar sig i värmen — en krullad plattfisk lyfter sin tjockaste del från plåten.",
     "steam": "Plaice is a popular flatfish in Northern European kitchens, prized for its delicate white flesh and thin, even profile. Steaming is the gentlest possible cooking method for this delicate fish: it cooks through quickly (8–15 minutes for a whole or portioned fish), retains all natural moisture, and allows the clean, sweet flavour of the plaice to shine without any added fat. The thin flat shape is actually ideal for steamers — heat penetrates evenly from all sides, and the fish can lie completely flat in the steaming vessel. Steamed plaice pairs naturally with light aromatics (ginger, spring onion, lemongrass) or simple garden vegetables (courgette, red pepper). This method is common across Chinese, Thai, Vietnamese, and German cuisines.",
     "steam_sv": "Rödspätta är en populär plattfisk i nordeuropeiska kök, uppskattad för sin delikata vita fiskkött och tunna, jämna form. Ångkokning är den skonsamma möjliga tillagningsmetoden för denna känsliga fisk: den tillagas genomgående snabbt (8–15 minuter för en hel eller portionerad fisk), behåller all naturlig fuktighet och låter rödspättans rena, söta smak stråla utan tillsatt fett. Den tunna platta formen är faktiskt idealisk för ångkokare — värmen tränger in jämnt från alla sidor, och fisken kan ligga helt plant i ångkärlet. Ångkokt rödspätta passar naturligt med lätta aromatika (ingefära, salladslök, citrongräs) eller enkla trädgårdsgrönsaker (zucchini, röd paprika). Denna metod är vanlig i kinesiska, thailändska, vietnamesiska och tyska kök."
   },
@@ -131963,6 +131969,12 @@ const RECIPE_TITLES_INDEX = {
     ]
   },
   "monkfish": {
+    "oven_roast": [
+      "Ugnsbakad marulksfilé med potatispuré — Köket.se / Martin Persson (Sweden)",
+      "Ugnsbakad marulk med citronsmör — Mårtenssons Kök (Sweden)",
+      "Sandefjordsås och marulk — Lagat & Klart / Andreas Domeij (Sweden/Norway)",
+      "Kärntemperatur för olika fiskarter — godfisk.nu, citing Svenskfisk (Sweden)"
+    ],
     "sous_vide": [
       "How to Cook Monkfish Sous Vide — Great British Chefs",
       "Monkfish Wrapped in Parma Ham with Red Wine Jus, Lemon Sabayon and Cockles — Great British Chefs (Chris Horridge)",
@@ -132024,6 +132036,12 @@ const RECIPE_TITLES_INDEX = {
     ]
   },
   "plaice": {
+    "oven_bake": [
+      "Ugnsstekt rödspätta med skogschampinjoner och kapris — Tina Nordström (Sweden)",
+      "Rödspätta — Tasteline ingredient guide (Sweden)",
+      "Helstekt rödspätta med pepparrotssmör och rödbetor — Allt om Mat / Mitt kök, Annika Broman (Sweden)",
+      "Hel rødspætte i ovn — Holger Rørby Madsen, Madens Verden (Denmark)"
+    ],
     "steam": [
       "Chinese Steamed Whole Fish — The Woks of Life",
       "Pla Kapong Neung Manao (Thai Steamed Fish with Lime) — 196 Flavors",
@@ -140848,6 +140866,7 @@ const EXP_RECIPE_INDEX = {
   "halibut_fillet": "fish/white_fish/halibut_fillet.md",
   "mahi_mahi-pan_sear": "fish/white_fish/mahi_mahi-pan_sear.md",
   "mahi_mahi": "fish/white_fish/mahi_mahi.md",
+  "monkfish-oven_roast": "fish/white_fish/monkfish-oven_roast.md",
   "monkfish-sous_vide": "fish/white_fish/monkfish-sous_vide.md",
   "monkfish": "fish/white_fish/monkfish.md",
   "perch-pan_fry": "fish/white_fish/perch-pan_fry.md",
@@ -140861,6 +140880,7 @@ const EXP_RECIPE_INDEX = {
   "pikeperch-smoker": "fish/white_fish/pikeperch-smoker.md",
   "pikeperch-sous_vide": "fish/white_fish/pikeperch-sous_vide.md",
   "pikeperch": "fish/white_fish/pikeperch.md",
+  "plaice-oven_bake": "fish/white_fish/plaice-oven_bake.md",
   "plaice-steam": "fish/white_fish/plaice-steam.md",
   "plaice": "fish/white_fish/plaice.md",
   "pollock-grill": "fish/white_fish/pollock-grill.md",
@@ -152897,7 +152917,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "674";
+const PANEL_VERSION = "675";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

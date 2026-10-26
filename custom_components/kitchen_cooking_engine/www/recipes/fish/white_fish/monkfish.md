@@ -54,7 +54,7 @@ Marulk (*Lophius piscatorius*; tyska: Seeteufel; franska: lotte/baudroie; spansk
 ## Research files by cooking method
 
 - Pan Sear — no research file yet
-- Oven Roast — no research file yet
+- [Oven Roast](./monkfish-oven_roast.md)
 - Grill — no research file yet
 - Braise — no research file yet
 - [Sous Vide](./monkfish-sous_vide.md)
@@ -83,3 +83,19 @@ Groups A, C, D absent — the only existing leaf (`monkfish-sous_vide.md`) cover
 3. **−3** · Missing Culinary Groups A, C, D — add representative source recipes across method leaves.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+
+## Data state and gaps
+
+<!-- ledger-state: leaves=2 sources=7 silent=0 silent_leaves=0 methods=oven_roast,sous_vide -->
+
+State on 2026-10-26: two leaves (sous_vide, oven_roast), seven source records, five naming an internal
+temperature. The cut declares five methods and has data for two.
+
+| gap | status | evidence | effort | yield |
+|---|---|---|---|---|
+| `hub_method_without_leaf:pan_sear` | open | hub declares `pan_sear`; no leaf. Spanish *rape a la plancha* and Italian *coda di rospo in padella* were fetched this pass and publish no internal temperature, only times (5 min + residual heat; 10 min turning once) | M | a pan-sear leaf would be a silent-method leaf unless a source with a probe is found; the technique evidence is already collected and is recorded here rather than written into a leaf |
+| `hub_method_without_leaf:grill` | open | hub declares `grill`; no leaf. One Swedish record found (vivavinomat.se: 4 min per side to about 42 °C, then rest) but not fetched | S | a grill leaf with four records; the 42 °C rest-then-rise pattern is worth capturing |
+| `hub_method_without_leaf:braise` | open | hub declares `braise`; no leaf. Monkfish is braised in French *lotte* cookery and in Spanish *caldereta*, neither fetched this pass | M | a braise leaf; note that the cut also declares `sous_vide`, so braise must earn its place against it |
+| `duplicate_tradition` (oven_roast) | open | `monkfish-oven_roast.md` - four of four records Swedish or Swedish-Norwegian | M | a French, Spanish or Italian *lotte* / *rape* oven record with a temperature |
+| `well_done_unsupported` | open | hub recommends `well_done` (63 °C); the four oven_roast records pull at 46-52 °C and the Svenskfisk band tops out at 58 °C | M | same doneness question as the other white fish in this category |
+| `pan_sear_silent_sources` | recorded | directoalpaladar.com (ES) - 5 min, then heat off and finish in residual warmth, no temperature; agrodolce.it (IT) - no more than 10 minutes, turned once, no temperature | - | two verified technique records waiting for a leaf, if a leaf below the four-source minimum is acceptable |

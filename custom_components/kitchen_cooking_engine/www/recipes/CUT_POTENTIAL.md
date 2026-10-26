@@ -13,7 +13,7 @@ This is the queue improvement passes work from. It replaces the legacy `quality_
 | cuts with a hub file | 187 |
 | cuts with at least one concrete gap | 89 |
 | cuts with no concrete gap found | 98 |
-| cuts carrying an authored ledger | 2 |
+| cuts carrying an authored ledger | 6 |
 | authored ledgers that conflict with the files | 0 |
 | hub slugs missing from the registry | 2 |
 
@@ -26,19 +26,19 @@ Hub files with no registry entry: `langoustine`, `whole_salmon`
 | 1 | `flounder` | 8 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
 | 2 | `gilt_head_bream` | 8 | hub_method_without_leaf:charcoal_grill, hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_sear | 1 | 4 | 0 |
 | 3 | `langoustine` | 8 | hub_method_without_leaf:boil, hub_method_without_leaf:oven_roast, hub_without_registry_entry, leaf_without_any_temperature | 1 | 6 | 0 |
-| 4 | `monkfish` | 8 | hub_method_without_leaf:braise, hub_method_without_leaf:grill, hub_method_without_leaf:oven_roast, hub_method_without_leaf:pan_sear | 1 | 3 | 0 |
-| 5 | `pike` | 8 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
-| 6 | `plaice` | 8 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
-| 7 | `pollock` | 8 | hub_method_without_leaf:air_fryer, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
-| 8 | `redfish` | 8 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_sear, hub_method_without_leaf:smoker | 1 | 4 | 0 |
-| 9 | `chicken_thigh` | 7 | hub_method_without_leaf:braise, hub_method_without_leaf:pan_fry, orphan_leaf | 4 | 12 | 0 |
-| 10 | `chuck_roast` | 7 | hub_method_without_leaf:oven_roast, hub_method_without_leaf:slow_cooker, orphan_leaf | 2 | 6 | 0 |
-| 11 | `lamb_shoulder` | 7 | hub_method_without_leaf:braise, hub_method_without_leaf:slow_cooker, orphan_leaf | 2 | 3 | 0 |
-| 12 | `whole_chicken` | 7 | hub_method_without_leaf:air_fryer, hub_method_without_leaf:grill, orphan_leaf | 2 | 4 | 0 |
-| 13 | `wild_boar_shoulder` | 7 | hub_method_without_leaf:braise, hub_method_without_leaf:slow_cooker, orphan_leaf | 2 | 3 | 0 |
-| 14 | `burbot` | 6 | hub_method_without_leaf:braise, hub_method_without_leaf:oven_bake, hub_method_without_leaf:smoker | 1 | 3 | 0 |
-| 15 | `mutton_shoulder_alt` | 6 | hub_method_without_leaf:braise, hub_method_without_leaf:oven_roast, hub_method_without_leaf:slow_cooker | 0 | 0 | 0 |
-| 16 | `perch` | 6 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:smoker | 1 | 4 | 0 |
+| 4 | `pike` | 8 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
+| 5 | `pollock` | 8 | hub_method_without_leaf:air_fryer, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
+| 6 | `redfish` | 8 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_sear, hub_method_without_leaf:smoker | 1 | 4 | 0 |
+| 7 | `chicken_thigh` | 7 | hub_method_without_leaf:braise, hub_method_without_leaf:pan_fry, orphan_leaf | 4 | 12 | 0 |
+| 8 | `chuck_roast` | 7 | hub_method_without_leaf:oven_roast, hub_method_without_leaf:slow_cooker, orphan_leaf | 2 | 6 | 0 |
+| 9 | `lamb_shoulder` | 7 | hub_method_without_leaf:braise, hub_method_without_leaf:slow_cooker, orphan_leaf | 2 | 3 | 0 |
+| 10 | `whole_chicken` | 7 | hub_method_without_leaf:air_fryer, hub_method_without_leaf:grill, orphan_leaf | 2 | 4 | 0 |
+| 11 | `wild_boar_shoulder` | 7 | hub_method_without_leaf:braise, hub_method_without_leaf:slow_cooker, orphan_leaf | 2 | 3 | 0 |
+| 12 | `burbot` | 6 | hub_method_without_leaf:braise, hub_method_without_leaf:oven_bake, hub_method_without_leaf:smoker | 1 | 3 | 0 |
+| 13 | `monkfish` | 6 | hub_method_without_leaf:braise, hub_method_without_leaf:grill, hub_method_without_leaf:pan_sear | 2 | 7 | 0 |
+| 14 | `mutton_shoulder_alt` | 6 | hub_method_without_leaf:braise, hub_method_without_leaf:oven_roast, hub_method_without_leaf:slow_cooker | 0 | 0 | 0 |
+| 15 | `perch` | 6 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:smoker | 1 | 4 | 0 |
+| 16 | `plaice` | 6 | hub_method_without_leaf:grill, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 2 | 8 | 0 |
 | 17 | `sole` | 6 | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_sear | 1 | 4 | 0 |
 | 18 | `whitefish` | 6 | hub_method_without_leaf:grill, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker | 1 | 4 | 0 |
 | 19 | `chicken_thigh_bone_in` | 6 | leaf_without_any_temperature, orphan_leaf | 18 | 52 | 0 |
@@ -57,10 +57,8 @@ No authored ledger contradicts its files yet.
 | `flounder` | derived only | — | leaves=1, sources=4, silent_sources=0, silent_leaves=0, methods=steam | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker |
 | `gilt_head_bream` | derived only | — | leaves=1, sources=4, silent_sources=0, silent_leaves=0, methods=steam | hub_method_without_leaf:charcoal_grill, hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_sear |
 | `langoustine` | derived only | — | leaves=1, sources=6, silent_sources=0, silent_leaves=1, methods=grill | hub_method_without_leaf:boil, hub_method_without_leaf:oven_roast, hub_without_registry_entry, leaf_without_any_temperature |
-| `monkfish` | derived only | — | leaves=1, sources=3, silent_sources=0, silent_leaves=0, methods=sous_vide | hub_method_without_leaf:braise, hub_method_without_leaf:grill, hub_method_without_leaf:oven_roast, hub_method_without_leaf:pan_sear |
-| `pike` | derived only | — | leaves=1, sources=4, silent_sources=0, silent_leaves=0, methods=braise | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker |
-| `plaice` | derived only | — | leaves=1, sources=4, silent_sources=0, silent_leaves=0, methods=steam | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker |
-| `pollock` | derived only | — | leaves=1, sources=4, silent_sources=0, silent_leaves=0, methods=grill | hub_method_without_leaf:air_fryer, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker |
+| `pike` | authored+derived | leaves=1, methods=braise, silent=0, silent_leaves=0, sources=4 | leaves=1, sources=4, silent_sources=0, silent_leaves=0, methods=braise | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker |
+| `pollock` | authored+derived | leaves=1, methods=grill, silent=0, silent_leaves=0, sources=4 | leaves=1, sources=4, silent_sources=0, silent_leaves=0, methods=grill | hub_method_without_leaf:air_fryer, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker |
 | `redfish` | derived only | — | leaves=1, sources=4, silent_sources=0, silent_leaves=0, methods=pan_fry | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_sear, hub_method_without_leaf:smoker |
 | `chicken_thigh` | derived only | — | leaves=4, sources=12, silent_sources=0, silent_leaves=0, methods=air_fryer,grill,oven_roast,smoker | hub_method_without_leaf:braise, hub_method_without_leaf:pan_fry, orphan_leaf |
 | `chuck_roast` | derived only | — | leaves=2, sources=6, silent_sources=0, silent_leaves=0, methods=braise,smoker | hub_method_without_leaf:oven_roast, hub_method_without_leaf:slow_cooker, orphan_leaf |
@@ -71,8 +69,10 @@ No authored ledger contradicts its files yet.
 | `chicken_thigh_bone_in` | derived only | — | leaves=18, sources=52, silent_sources=0, silent_leaves=7, methods=air_fryer,boil,braise,charcoal_grill,grill,oven_bake,oven_broil,oven_roast,pan_fry,pan_sear,poach,pressure_cooker,saute,simmer,slow_cooker,smoker,sous_vide,steam | leaf_without_any_temperature, orphan_leaf |
 | `ground_moose` | authored+derived | leaves=4, methods=grill,oven_bake,pan_fry,simmer, silent=11, silent_leaves=1, sources=16 | leaves=4, sources=16, silent_sources=11, silent_leaves=1, methods=grill,oven_bake,pan_fry,simmer | leaf_without_any_temperature, recorded_unsafe_source |
 | `mackerel` | derived only | — | leaves=18, sources=54, silent_sources=0, silent_leaves=9, methods=air_fryer,boil,braise,charcoal_grill,grill,oven_bake,oven_broil,oven_roast,pan_fry,pan_sear,poach,pressure_cooker,saute,simmer,slow_cooker,smoker,sous_vide,steam | leaf_without_any_temperature, orphan_leaf |
+| `monkfish` | authored+derived | leaves=2, methods=oven_roast,sous_vide, silent=0, silent_leaves=0, sources=7 | leaves=2, sources=7, silent_sources=0, silent_leaves=0, methods=oven_roast,sous_vide | hub_method_without_leaf:braise, hub_method_without_leaf:grill, hub_method_without_leaf:pan_sear |
 | `mutton_shoulder_alt` | derived only | — | leaves=0, sources=0, silent_sources=0, silent_leaves=0, methods=none | hub_method_without_leaf:braise, hub_method_without_leaf:oven_roast, hub_method_without_leaf:slow_cooker |
 | `perch` | derived only | — | leaves=1, sources=4, silent_sources=0, silent_leaves=0, methods=pan_fry | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:smoker |
+| `plaice` | authored+derived | leaves=2, methods=oven_bake,steam, silent=0, silent_leaves=0, sources=8 | leaves=2, sources=8, silent_sources=0, silent_leaves=0, methods=oven_bake,steam | hub_method_without_leaf:grill, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker |
 | `sole` | derived only | — | leaves=1, sources=4, silent_sources=0, silent_leaves=0, methods=pan_fry | hub_method_without_leaf:grill, hub_method_without_leaf:oven_bake, hub_method_without_leaf:pan_sear |
 | `whitefish` | derived only | — | leaves=1, sources=4, silent_sources=0, silent_leaves=0, methods=oven_bake | hub_method_without_leaf:grill, hub_method_without_leaf:pan_fry, hub_method_without_leaf:smoker |
 | `chicken_breast` | derived only | — | leaves=4, sources=16, silent_sources=0, silent_leaves=0, methods=air_fryer,grill,oven_bake,pan_sear | hub_method_without_leaf:oven_roast, hub_method_without_leaf:sous_vide, hub_registry_method_drift |

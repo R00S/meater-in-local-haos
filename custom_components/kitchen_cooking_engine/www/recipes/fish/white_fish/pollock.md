@@ -83,3 +83,19 @@ Groups A and C absent — pollock (*sej* / *Pollachius virens*) is a North Atlan
 3. **−1** · Missing Culinary Group C tradition — search for pollock in any African, Arabic, or Caribbean context.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+
+## Data state and gaps
+
+<!-- ledger-state: leaves=1 sources=4 silent=0 silent_leaves=0 methods=grill -->
+
+State on 2026-10-26: one leaf (grill) with four records. The cut declares five methods; four have no leaf.
+This pass researched `oven_bake`, verified one recipe and one reference table, and hit four fetch failures,
+so no leaf was written - two records do not meet the collection minimum.
+
+| gap | status | evidence | effort | yield |
+|---|---|---|---|---|
+| `hub_method_without_leaf:oven_bake` | open, research started | **one verified recipe**: 56kilo.se (Åse) "Saftig ugnsbakad kolja" - 600 g pollock fillet, 0.75 dl salt per litre brined 20-30 min, **170 °C until the core is 46-48 °C, 8-12 minutes**. **One verified reference**: godfisk.nu (citing svenskfisk.se) - white fish "such as cod, pollock and saithe" **about 52 °C**, +4 °C for a whole fish. **Four fetch failures**: hemmakoket.se (snippet 50 °C at 175 °C), sjofolket.se (48-50 °C at 160 °C), ica.se (52 °C at 160 °C, 5-8 min) and alltags-rezepte.de returned no readable recipe body | S | three of the four failed sources already state a number in their search snippet; getting the body from any two of them closes the leaf |
+| `hub_method_without_leaf:pan_fry` | open | hub declares `pan_fry`; no leaf | M | pollock is the cheap white fish of northern Europe and pans well; a four-record leaf should be reachable |
+| `hub_method_without_leaf:air_fryer` | open | hub declares `air_fryer`; no leaf and no record found | M | this is a modern method with thin published evidence; likely to end as a searched-negative or a two-record leaf |
+| `hub_method_without_leaf:smoker` | open | hub declares `smoker`; no leaf | M | smoked pollock/saithe is a Norwegian tradition; not researched this pass |
+| `oven_bake_range_conflict` | recorded | the verified recipe pulls at 46-48 °C while the reference table says about 52 °C for this species | S | a real disagreement to settle with two more records rather than by choosing one |

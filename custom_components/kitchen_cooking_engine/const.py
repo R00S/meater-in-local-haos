@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 26 Oct 2026
-Last Change: v0.10.2.29 - CHORES: the user guide's contribution template caught up with the new instructions - a `## Data state and gaps` ledger section with its `<!-- ledger-state: ... -->` snapshot in the cut template, provenance marks on every method step, the lead-versus-source and machine-text rules in the sourcing list, and a pointer to the generated queue instead of a score
+Last Change: v0.10.2.30 - four cuts from the potential queue: new oven_bake leaf for plaice (4 records, 42-52 C, all Nordic) and oven_roast leaf for monkfish (4 records, 46-52 C from ovens at 50-150 C), plus researched-and-recorded ledgers for pike and pollock where the collection minimum could not be met - their verified numbers and fetch failures are written into the gap tables instead of a thin leaf; CHORES (version bump, branch history, panel regen)
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -17,7 +17,7 @@ SUPPORTED_LANGUAGES = ("en", "sv", "da")
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "674"
+PANEL_VERSION = "675"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

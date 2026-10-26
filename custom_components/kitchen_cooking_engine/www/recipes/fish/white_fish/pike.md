@@ -83,3 +83,20 @@ Groups A and C absent — braised pike is a Central/Western European tradition (
 3. **−1** · Missing Culinary Group C tradition — search for pike in any African, Arabic, Persian, or Caribbean cooking context.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+
+## Data state and gaps
+
+<!-- ledger-state: leaves=1 sources=4 silent=0 silent_leaves=0 methods=braise -->
+
+State on 2026-10-26: one leaf (braise) with four records. The cut declares five methods; four have no leaf.
+This pass researched `oven_bake` and could not reach the collection minimum, so no leaf was written and the
+verified evidence is recorded here instead - the alternative was a leaf built from two records, which the
+analysis gate forbids.
+
+| gap | status | evidence | effort | yield |
+|---|---|---|---|---|
+| `hub_method_without_leaf:oven_bake` | open, research started | **one verified recipe**: johansmat.se "Ugnsbakad hel gädda med vitvinssås" - whole 1 kg pike, herbs and lemon in the belly, sealed foil, **175 °C about 45 minutes, to 54 °C next to the bone**. **One verified technique record**: tasteline.com "Foliebakad gädda" - **275 °C** oven, and cooking time calculated from the fish's back width (30 min for 4 cm, +5 min per extra cm), with no internal temperature at all. **Two fetch failures**: kokaihop.se (snippet states 52 °C at the thickest point) and koket.se (225 °C whole pike) returned no readable recipe body | S | two more verified pike oven records would close this leaf; both leads above are one fetch away from being countable |
+| `hub_method_without_leaf:pan_fry` | open | hub declares `pan_fry`; no leaf. Leads found: norrmejerier.se "Stekt gäddfilé med ansjovissås" and martha.fi (2 min per side in butter) | S | the most likely next leaf: pike pan-fried in butter is standard in Sweden and Finland |
+| `hub_method_without_leaf:grill` | open | hub declares `grill`; no leaf and no record found this pass | M | unknown; pike is more often smoked or fried than grilled, so this may end as a searched-negative |
+| `hub_method_without_leaf:smoker` | open | hub declares `smoker`; no leaf. Pike is smoked in Sweden and Finland, but no record was fetched | M | a smoked-pike leaf; the same 60-80 °C box-smoker pattern as the other freshwater fish in this collection |
+| `pike_bone_structure` | recorded | not derivable by the sweep: pike is exceptionally bony, and both verified records are written around that (whole fish in foil, flesh lifted off the bones after cooking) | - | a method that assumes fillets (pan_fry, air_fryer) needs a deboning note in its profile |
