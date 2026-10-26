@@ -1683,10 +1683,17 @@ PORK_CHOPS = [
         rest_time_max=5,
         carryover_temp_c=3,
         temperature_ranges=[PORK_MEDIUM, PORK_WELL_DONE],
-        supported_methods=[
+        supported_methods=[  # 2026-10-26 method survey: oven_roast, sous_vide,
+            # charcoal_grill, braise discovered and registered with fetched leaves;
+            # pan_sear, oven_broil, smoker, steam, slow_cooker, pressure_cooker
+            # remain surveyed single-source leads (queued in the branch timeline).
             CookingMethod.PAN_FRY,
             CookingMethod.GRILL,
             CookingMethod.AIR_FRYER,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.SOUS_VIDE,
+            CookingMethod.CHARCOAL_GRILL,
+            CookingMethod.BRAISE,
         ],
         recommended_doneness="well_done",
     ),
