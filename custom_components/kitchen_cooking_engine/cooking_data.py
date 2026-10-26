@@ -3187,6 +3187,12 @@ WHITE_FISH = [
             CookingMethod.PAN_SEAR,
             CookingMethod.GRILL,
             CookingMethod.CHARCOAL_GRILL,
+            # 2026-10-25: oven_bake, braise and sous_vide added — each verified by
+            # four-plus fetched sources across distinct traditions
+            # (swordfish-oven_bake.md, swordfish-braise.md, swordfish-sous_vide.md).
+            CookingMethod.OVEN_BAKE,
+            CookingMethod.BRAISE,
+            CookingMethod.SOUS_VIDE,
         ],
         recommended_doneness="well_done",
     ),

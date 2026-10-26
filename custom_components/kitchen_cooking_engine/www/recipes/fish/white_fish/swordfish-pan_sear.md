@@ -159,30 +159,100 @@ ricette.giallozafferano.it/Pesce-spada-in-padella.html (fetched 2026-04-24)
 
 ---
 
+### 4. Epicurious — Pan-Roasted Swordfish Steaks with Mixed-Peppercorn Butter
+**Inspired by**: https://www.epicurious.com/recipes/food/views/pan-roasted-swordfish-steaks-with-mixed-peppercorn-butter-232695 (fetched 2026-10-25). Epicurious (Condé Nast); recipe first printed August 2005.
+**Serves**: 4 · **Prep**: 10 min · **Cook**: ~15 min (3 min stovetop + 8–10 min oven) · **Rest**: while sauce is made
+
+**Ingredients**
+- 4 tbsp unsalted butter, room temperature
+- 2 tsp finely chopped parsley; ½ tsp finely grated lemon zest; ½ tsp freshly ground mixed pepper; 1 garlic clove, finely chopped; kosher salt
+- 1 tbsp extra-virgin olive oil
+- 4 6-oz. swordfish fillets (1 in. thick)
+
+**Method**
+1. Heat the oven to **400 °F (204 °C)**. Mash the butter with the parsley, lemon zest, mixed pepper and garlic; season with salt; set aside.
+2. Heat the olive oil in a large heavy ovenproof skillet over medium-high. Season the fillets with salt and mixed pepper.
+3. Cook until browned underneath, **about 3 minutes**. Turn the fillets over and transfer the skillet to the oven.
+4. Roast **8–10 minutes**, until just cooked through.
+5. The source states the ideal internal temperature is **between 130 °F (54 °C, medium rare) and 145 °F (63 °C, well done)** and to remove the fish "just shy of your desired doneness" because it keeps cooking off the heat. **Pull at 54–63 °C (130–145 °F)**, per the source's own band; for this cut's culinary practice, **pull at 54–57 °C**.
+6. Rest the fish while you melt the reserved butter mixture in the same skillet, scraping up the browned bits; pour the sauce over the fish. Final serving temperature: **not stated by the source** (carryover applies).
+
+---
+
+### 5. Spain on a Fork — Pan Grilled Swordfish (Emperador a la Plancha)
+**Inspired by**: https://spainonafork.com/grilled-swordfish/ (fetched 2026-10-25). Spain on a Fork (Albert Bevia); Spanish *a la plancha* tradition — "in Spain, most fish dishes are cooked a la plancha, which means to cook on a hot surface with little or no oil."
+**Serves**: 2 · **Prep**: 10 min · **Cook**: 10 min · **Rest**: not stated
+
+**Ingredients**
+- 2 fillets of swordfish
+- 2 tbsp extra-virgin Spanish olive oil
+- 1 clove garlic, minced; ½ lemon; fresh parsley; sea salt
+
+**Method**
+1. Mash the minced garlic to a paste in a mortar; work in a generous pinch of chopped parsley and sea salt; stir in a generous tablespoon of the olive oil.
+2. Pre-heat a non-stick frying pan over medium heat until very hot.
+3. Rub a little olive oil over each fillet; add to the hot pan.
+4. After **about 3 minutes**, flip to cook the uncooked side; **about 2 minutes more** and the fillets should be perfectly cooked.
+5. The source publishes no internal temperature; the endpoint is the 3+2-minute hot-pan timing. House guidance (not the source's): probe from the side into the centre — **pull at 54–57 °C (130–135 °F)**.
+6. Plate; spoon the mortar sauce over each fillet; garnish with lemon wedges and parsley. Final serving temperature: **not stated by the source**.
+
+---
+
 ## Temperature consensus
 
 | Source | Pull temperature | Tradition / method |
 |--------|----------------|-------------------|
-| BBC Good Food — Pineapple Salsa (British/Tropical) | 52–57 °C | 1 min each side on very hot griddle |
-| BBC Good Food — Mango Salsa (British/Caribbean) | 57–60 °C | 3 min each side on hot griddle |
+| BBC Good Food — Pineapple Salsa (British) | 52–57 °C | 1 min each side on very hot griddle |
+| BBC Good Food — Mango Salsa (British) | 57–60 °C | 3 min each side on hot griddle |
 | Giallozafferano (Italian/Sicilian) | 55–58 °C | 3–4 min + 2–3 min on medium-high heat |
+| Epicurious (American) | 54–63 °C (130–145 °F stated band) | 3 min stovetop + 8–10 min oven, pull just shy of target |
+| Spain on a Fork (Spanish) | not stated | 3 + 2 min on a very hot plancha |
 
-**Consensus pull**: **55–58 °C (131–136 °F)** for swordfish — this fish is best served
-medium-rare to medium, not fully cooked. The USDA minimum of 63 °C (145 °F) produces dry,
-chalky flesh in swordfish; the accepted culinary standard is lower, similar to tuna. All
-three traditions agree that the flesh should be just set, no longer translucent, still moist.
+Four of the five sources publish numbers: the full observed range is **52–63 °C (125–145 °F)**
+— 52–57 °C and 57–60 °C from the two British griddle recipes, 55–58 °C from the Italian
+source, and the American source's wide 130–145 °F (54–63 °C) band with an explicit "pull just
+shy and let carryover finish" instruction; the Spanish *plancha* source gives time only
+(3+2 minutes) and no temperature. Mapped to `cooking_data.py`, the European cluster sits in
+`FISH_MEDIUM` (52–57 °C) and `FISH_MEDIUM`'s upper edge / `FISH_WELL_DONE`'s lower edge
+(57–60 °C), while the American band spans both and ends at `FISH_WELL_DONE` (63 °C). The
+divergence is convention, not disagreement: every source wants the flesh just set, no longer
+translucent and still moist, but the British and Italian cooks stop at a colour change on a
+fast pan while the American source works to a thermometer number in a slower oven finish.
+`recommended_doneness` for this method: **`medium` (57 °C, practical range 52–60 °C)** — the
+centre of the European cluster and the representative coding value — with the USDA-aligned
+`well_done` 63 °C noted as the strong American/safety tradition sitting outside it.
 
-**Representative coding value**: **57 °C (135 °F)** as the nominal pull, practical range
-52–60 °C. Use MEATER "just cooked" target of 57°C; note USDA recommends 63°C.
+## What makes this method special
 
-## Notes for cooking_data.py
+Pan searing hits swordfish with conductive heat from a single flat surface at 200 °C-plus,
+producing the fastest browning of any method here — a Maillard crust forms in 3–4 minutes
+while the centre is still cool, which is what gives the steak its caramelised exterior and
+the kitchen its aroma. The cut can take it because its flesh is dense and moderately fatty:
+the flat-cut steak lies stable in the pan, the muscle segments don't flake apart under the
+spatula, and the intramuscular fat bastes the crust from within. The physics also explains
+the universal warning across sources: heat enters only through the two faces, so the centre
+lags far behind the surface — once the crust is set, every extra minute drives the middle
+steeply upward, and the same dense flesh that makes the sear possible turns chalky above
+~60 °C. The Italian moderate-heat variant trades crust depth for a wider margin; the British
+very-hot 1-minute variant bets everything on timing.
 
-- `doneness`: `just_cooked` (medium, just barely set, still very moist)
-- `pull_temp_c`: 57
-- `pull_temp_range_c`: [52, 60]
-- `safety_level`: note that USDA minimum is 63 °C; 57 °C is accepted culinary practice
-- Swordfish is treated like a steak — medium-rare (52°C) to medium (57°C) is normal.
-- The MEATER probe must be inserted from the side/edge into the centre of the steak.
-- Very high heat / short time (BBC approach) vs medium-high / slightly longer (Italian
-  approach) both result in the same target range.
-- Trim and discard any bloodline (dark red/brown flesh) before cooking.
+## Data applied to cooking_data.py
+
+- `supported_methods` gains: `pan_sear` — already present for swordfish (id 423); no code change needed for this leaf.
+- `recommended_doneness`: no change proposed — cut-level stays `well_done`; this leaf's method recommendation (`medium`, 57 °C, range 52–60 °C) is recorded above for the next scoring pass.
+- No `method_temperature_ranges` override needed — the observed 52–63 °C span sits inside the existing `FISH_MEDIUM`/`FISH_WELL_DONE` bands.
+- Probe placement: MEATER probe inserted from the side/edge into the centre of the steak; trim and discard the bloodline before cooking.
+- Safety note: USDA minimum for finfish is 63 °C (145 °F); the 52–60 °C culinary practice documented here is accepted convention, not the safety line.
+
+## Summary
+
+Pan searing treats a swordfish steak like a piece of meat: a very hot pan, three or four
+minutes a side, and a browned crust around a centre that is still soft. It is a very good
+match — the firm, non-flaking flesh is one of the few fish structures that survives hard
+handling and fast browning — and the five sources agree the fish should come off just set
+and moist, whether they judge by colour (the British and Italian cooks) or by thermometer
+(the American). The one thing the method punishes is hesitation: the difference between a
+perfectly pink-centred swordfish and a dry one is about ten degrees and a minute or two.
+Choose it for crust and speed; have a probe ready if the stakes matter.
+
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Widened 2026-10-25 from three to five fully saved source recipes (added Epicurious, American, and Spain on a Fork, Spanish); the 4–6-source count passes, every recipe carries attribution, serves/prep/cook line, quantities, numbered steps, a probe/endpoint line and a stated pull temperature (all five publish temperatures — none inferred), and the consensus table covers all five. The distinct-tradition gate fails on one count only: two of the five sources are British (BBC Good Food ×2, the same publisher and national tradition — labelled British/tropical and British/Caribbean by their flavour profiles, but one tradition for the gate). Both are retained rather than deleted: they are the leaf's earliest, most temperature-explicit primary sources and the gate is recorded as failed instead of passed by removing valid data. Culinary Groups covered here: B (US, UK, Italy, Spain); Groups A, C and D are leaf-level gaps, covered at cut level by the grill, charcoal-grill, braise and oven-bake leaves.
