@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 26 Oct 2026
-Last Change: v0.10.2.26 - improve three cuts in one pass: buffalo_roast (oven_roast filled from zero sources, smoker discovered, braise registered at last — 8→11/20), cured_ham (smoker stub replaced, invented 70–75 °C pulls retracted, Filipino and Danish sources added, registry recommended_doneness corrected from a band the cut does not define — 8→17/20) and goat_chop (both fabricated leaves rebuilt, oven_broil discovered; records that the corpus contradicts the cut's well_done recommendation — 8→13/20); CHORES (version bump, branch history, user guide, panel regen)
+Last Change: v0.10.2.27 - add a minced cut to moose (new `ground_moose`, ground-meat safety at 71 °C rather than its siblings' 63 °C), then improve the three lowest-scoring cut files: ground_moose (4 leaves from 16 fetched recipes; braise replaced by simmer after the corpus showed sauces and *hautua* — 8→15/20), goose_thigh (both leaves rewritten; three German sources put the done point at 80 °C, so the registry now recommends `dark_meat_optimal` instead of an undefined band and confit is recorded as an unregistered method — 8→15/20) and kangaroo_steak (both leaves rebuilt from seven Australian records; the only pull temperature in the corpus is 50–52 °C, below the registry's 52–57 °C band and left open for a doneness pass — 8→12/20); CHORES (version bump, branch history, user guide, panel regen)
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -176,11 +176,11 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 
 # ⚠️ VERSION — must match in ALL 3 locations on every release:
 #   1. manifest.json        → "version": "..."
-#   2. HERE (__init__.py)    → __version__ = "0.10.2.26"
+#   2. HERE (__init__.py)    → __version__ = "0.10.2.27"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.10.2.26"
+__version__ = "0.10.2.27"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
