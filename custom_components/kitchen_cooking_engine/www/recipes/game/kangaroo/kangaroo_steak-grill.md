@@ -9,99 +9,100 @@ cut_type: Kangaroo
 -->
 # Kangaroo Steak × Grill — Recipe Temperature Research
 
-## Tree position
-
-| Field | Value |
-|-------|-------|
-| Category | `game` |
-| Cut type folder | `kangaroo/` |
-| Cut slug | `kangaroo_steak` |
-| Method slug | `grill` |
-| File | `kangaroo_steak-grill.md` |
-| Full path | `docs/recipe_research/game/kangaroo/kangaroo_steak-grill.md` |
-
 ## Cut profile
 
-Kangaroo rump steak and loin fillet are the preferred cuts for grilling. The extreme leanness (under 2% fat) means the grill must be preheated to very high temperature and cooking time must be short — typically 2–3 minutes per side over direct high heat. Any longer and the meat dries and hardens. Marinating in oil before grilling is widely recommended to prevent sticking and to add a surface barrier against moisture loss.
+On a barbecue, the kangaroo steak's leanness turns into an advantage: a very hot grate puts a
+crust on the outside in two to three minutes, which is all the cooking a 2 cm steak of this meat
+can take before it tightens. The Australian sources treat the barbecue as the default cooking
+appliance rather than a weekend special — one of them opens by pointing out that grilling
+kangaroo is bound up with national barbecue culture — and they all preheat hard, oil the grates,
+and cook in minutes.
 
-Target internal temperature: **52–55 °C (126–131 °F)** for medium-rare. Pull at 50 °C to account for carry-over on the grill.
-
-## Styckesprofil
-
-Känguru-rumpstek och loin-filé är de föredragna snitten för grillning. Den extrema magreten (under 2 % fett) innebär att grillen måste förvärmas till mycket hög temperatur och tillagningstiden vara kort — typiskt 2–3 minuter per sida över direkt hög värme. Längre tid ger torrt, hårt kött.
-
-Marinering i olja före grillning rekommenderas i stor utsträckning för att förhindra fastsnande och tillföra ett yta-barriär mot fuktförlust. Innertemperatur: **52–55 °C (126–131 °F)** för medium-rare. Dra vid 50 °C för att ta hänsyn till eftertillagning. Välgenomstekt avråds starkt.
+The numeric evidence on this leaf is **weaker than on the pan**: none of the three records
+publishes an internal temperature. What they do publish is grate temperature (**375–400 °F /
+190–200 °C**) and three different timings (2–3 min/side; 3–4 min/side; 40 min indirect + 3 min/side
+for a whole smoked fillet). The one number that would matter — the pull temperature — is absent,
+which is why the cut's band has to be carried by the pan-sear leaf's 50–52 °C citation and by
+generic game guidance.
 
 ## Source recipes
 
-### 1. Gegrilltes Kängurusteak auf australische Art (inspired by Chefkoch.de)
-**Inspired by**: Chefkoch.de search results; https://www.chefkoch.de/rs/s0/kaenguru/Rezepte.html (fetched 2026-04-24)
-*Translation: Grilled kangaroo steak Australian style — referenced on Chefkoch.de as a niche but well-established recipe category.*
+### 1. Grillhound (Australia) — Kangaroo on a BBQ
+**Inspired by**: https://grillhound.com.au/blogs/news/kangaroo-on-a-bbq (fetched 2026-10-26). Grillhound (Australian barbecue retailer blog), by Myles McLean, published 2024-05-25. Australian barbecue tradition — **Culinary Group B** (Australasian) source.
+**Serves**: 4 · **Prep**: 1 h marinade (or overnight) · **Cook**: 4–6 min
 
-**Ingredients** (adapted from the Chefkoch kangaroo steak pepper recipe with grill adaptation)
-- 2 kangaroo rump steaks, approx. 200 g each
-- 2 tbsp olive oil
-- 1 tsp ground black pepper
-- 1 tsp smoked paprika
-- ½ tsp garlic powder
-- Salt to taste
+**Ingredients**
+- Kangaroo steaks, fillets or loin — deep red, sinew trimmed away
+- Olive oil · garlic · fresh rosemary and thyme · a splash of red wine or balsamic vinegar
+- Salt and pepper
 
 **Method**
-1. Combine oil, pepper, paprika, and garlic. Rub onto steaks and leave to marinate for 30–45 minutes at room temperature.
-2. Preheat grill (charcoal or gas) to high, about 230–260 °C (450–500 °F) at grate level. Oil the grill grates.
-3. Grill steaks over direct high heat for **2–3 minutes** per side without moving.
-4. Insert probe. **Pull at 50–52 °C (122–126 °F)** for rare to medium-rare.
-5. Rest off the grill for 4–5 minutes before serving.
-*Final resting temperature: 53–56 °C (127–133 °F).*
+1. Trim any sinew (it is what makes the meat tough) and season.
+2. Marinate in oil, garlic, herbs and wine or vinegar for **at least an hour, overnight if possible**. The oil keeps the meat moist; the acid lightly breaks down the fibres.
+3. **Preheat the barbecue to medium-high, targeting 375–400 °F (190–200 °C)**; clean and oil the grates.
+4. Grill **about 2–3 minutes per side**, until a golden-brown sear forms.
+5. Rest before serving.
+
+*Internal temperature: none published — **grate temperature is the number given instead**. This is
+the only record in the cut that states a specific grill temperature.*
 
 ---
 
-### 2. Grilled kangaroo rump (inspired by Australian Kangaroo Industry Association)
-**Inspired by**: Kangaroo Industry Association of Australia cooking guidelines; https://www.kangaroo.org.au/pages/cooking (Australian national standard)
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min
+### 2. Craig Cooks (Australia) — BBQ Kangaroo
+**Inspired by**: https://craigcooks.com.au/bbq-kangaroo/ (fetched 2026-10-26). Craig Cooks, published 2016-01-31; the recipe is adapted from Mark Bayliss (Unilever Food Solutions) via the Kangaroo Industry Association recipe book. Australian industry tradition — **Culinary Group B** source.
+**Serves**: 4 · **Prep**: 2–3 h cure + chips soaking · **Cook**: ~40 min indirect + 6 min direct
 
 **Ingredients**
-- 4 kangaroo rump steaks (180–200 g each)
-- 3 tbsp macadamia oil
-- 2 tbsp lemon juice
-- 1 tbsp Worcestershire sauce
-- 1 clove garlic, minced
-- Salt and black pepper
+- Kangaroo fillets · **equal quantities salt and brown sugar** for the cure
+- Hickory chips soaked in red wine
+- Nectarine (or fig) relish: 300 g nectarines, 1 tbsp lime juice, 100 g caster sugar, 60 ml white wine vinegar, ½ red onion, 1 tbsp ground coriander, 3 star anise
 
 **Method**
-1. Combine macadamia oil, lemon juice, Worcestershire sauce, and garlic. Marinate steaks for 30 minutes.
-2. Preheat BBQ/grill to high. Remove steaks from marinade, season with salt and pepper.
-3. Grill 2–3 min per side over direct heat.
-4. **Pull at 52 °C (126 °F)** and rest 5 minutes minimum.
-*Final resting temperature: 55–57 °C (131–135 °F).*
+1. Cure the fillets in equal parts salt and brown sugar for **2–3 hours** — "this dries out the outside but the inside remains moist".
+2. Soak hickory chips in red wine; simmer the relish ingredients for ½ hour.
+3. Set up the barbecue for **indirect cooking**: coals on one side, smoking box on the coals, roo on the other side away from the fire. Cover and leave **about 40 minutes**.
+4. Finish **directly over the coals for about 3 minutes each side**.
+5. The target texture: "a bit crispy on the outside and tender in the middle".
+
+*Internal temperature: none published. This is the outlier method on the leaf — a long, smoky,
+indirect cook followed by a direct sear — and it is the only record that treats a kangaroo fillet
+as something that can take 40 minutes of smoke at all.*
 
 ---
 
-### 3. Kangaroo with bush spices on the BBQ (inspired by The Essential Ingredient)
-**Inspired by**: The Essential Ingredient cooking classes Sydney; https://www.theessentialingredient.com.au/blogs/recipes/kangaroo (Australian cooking school)
-**Serves**: 2 · **Prep**: 10 min · **Cook**: 6 min
+### 3. K-ROO (Australia) — BBQ Kangaroo Steaks with Mexican-Style Sweetcorn
+**Inspired by**: https://k-roo.com.au/recipes/bbq-kangaroo-steaks-mexican-style-sweetcorn/ (fetched 2026-10-26). K-ROO (Australian kangaroo-meat producer), recipe page. Australian commercial/home tradition — **Culinary Group B** source.
+**Serves**: 4 · **Prep**: 10 min · **Cook**: 20 min
 
 **Ingredients**
-- 2 kangaroo backstrap fillets (150 g each)
-- 1 tbsp lemon myrtle leaf powder
-- 1 tsp native mountain pepper
-- 1 tsp ground wattleseed
-- 2 tbsp olive oil
-- Sea salt
+- 4 K-ROO marinated kangaroo steaks
+- 4 large potatoes, sliced 5 mm · olive oil spray
+- 2 corn cobs, halved · 2 tbsp aioli · 2 tbsp grated parmesan · 1 lime
+- Green salad: baby leaves, ½ red onion, ½ cucumber, cherry tomatoes, olive oil, lemon juice
 
 **Method**
-1. Mix lemon myrtle, mountain pepper, and wattleseed with oil. Coat fillets and rest 10 minutes.
-2. Hot grill, direct heat. Season with sea salt just before cooking.
-3. Grill 2 minutes per side. **Pull at 50–52 °C (122–126 °F)**.
-4. Rest 4 minutes. Slice across the grain and serve with warrigal greens salad.
-*Final resting temperature: 53–55 °C (127–131 °F).*
+1. **Heat a barbecue to medium-high.**
+2. Boil the corn 3–4 minutes, drain, spray with oil and char on the grill, turning every 2–3 minutes; finish with aioli, parmesan and lime.
+3. Cook the potato slices on the hot plate, turning every 2–3 minutes, until golden.
+4. **Place the steaks on the grill and cook 3–4 minutes on each side for medium rare.**
+5. **Rest under foil 10 minutes** before serving.
+
+*Internal temperature: none published. The 10-minute foil rest is the longest on this leaf and
+matches the producer's packet instructions in the pan-sear leaf, which suggests it is a
+brand-level standard rather than a chef's preference.*
 
 ---
 
 ## Temperature summary
 
-| Doneness | Pull temp | Final (after rest) |
-|----------|-----------|-------------------|
-| Rare | 46–50 °C (115–122 °F) | 50–53 °C (122–127 °F) |
-| Medium-rare | 50–52 °C (122–126 °F) | 53–56 °C (127–133 °F) |
-| Medium | Not recommended | — |
+| Source | Published target | Grate / setup | Timing | Tradition |
+|--------|------------------|---------------|--------|-----------|
+| Grillhound | **none** | 375–400 °F (190–200 °C), medium-high | 2–3 min/side | Australian |
+| Craig Cooks (KIA recipe) | **none** | indirect with hickory smoke, then direct | 40 min + 3 min/side | Australian |
+| K-ROO | **none** | medium-high barbecue | 3–4 min/side, rest 10 min | Australian |
+
+**Conclusion for this leaf:** three sources, no internal temperatures, one grate temperature. The
+grill leaf's contribution to the cut is the **setup** — preheat to 190–200 °C, oil the grates, cook
+in minutes, rest under foil — plus the one genuinely different technique in the corpus (the
+Kangaroo Industry Association's cured, smoked, then seared fillet). All three sources are
+Australian, so this leaf fails the distinct-tradition gate and adds no new culinary group.
