@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 26 Oct 2026
-Last Change: v0.10.2.25 - improve buffalo_burger cut (air_fryer and smoker discovered and registered for id 632 — four leaves now; grill/pan_fry rewritten after retracting the identical invented 70–72 °C pull its old records gave every source, including beef patty pages and a Chefkoch page that now 403s; Group A documented as a negative search; rescore 8→16/20); CHORES (version bump, branch history, user guide, panel regen)
+Last Change: v0.10.2.26 - improve three cuts in one pass: buffalo_roast (oven_roast filled from zero sources, smoker discovered, braise registered at last — 8→11/20), cured_ham (smoker stub replaced, invented 70–75 °C pulls retracted, Filipino and Danish sources added, registry recommended_doneness corrected from a band the cut does not define — 8→17/20) and goat_chop (both fabricated leaves rebuilt, oven_broil discovered; records that the corpus contradicts the cut's well_done recommendation — 8→13/20); CHORES (version bump, branch history, user guide, panel regen)
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -17,7 +17,7 @@ SUPPORTED_LANGUAGES = ("en", "sv", "da")
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "666"
+PANEL_VERSION = "667"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
