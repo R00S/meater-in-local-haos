@@ -9,247 +9,200 @@ cut_type: Bison
 -->
 # Bison Steak × Grill — Recipe Temperature Research
 
-## Tree position
-
-| Field | Value |
-|-------|-------|
-| Category | `game` |
-| Cut type folder | `bison/` |
-| Cut slug | `bison_steak` |
-| Method slug | `grill` |
-| File | `bison_steak-grill.md` |
-| Full path | `docs/recipe_research/game/bison/bison_steak-grill.md` |
-
 ## Cut profile
 
-Grilling bison steak is the quintessential North American preparation and one of the few methods where the lean profile of bison is an advantage: the minimal external fat cap means no large flare-ups from dripping fat. Use direct high heat (230–260 °C / 450–500 °F) with the grill preheated and grates oiled. At 2.5–3 cm thickness, 3–4 minutes per side produces medium-rare.
-
-The most important grill technique for bison: **do not leave the steak unattended**. The narrow window between medium-rare and overdone (roughly 57–63 °C) can be passed in under two minutes at grill temperatures. A meat thermometer or MEATER probe is strongly recommended. The MEATER probe is inserted from the thin edge of the steak, aimed at the geometric centre, away from any bone. Pull at 52 °C to rest to 55–57 °C medium-rare. Carryover from a very hot grill: 3–5 °C.
-
-The critical temperature rule for bison steak is the most frequently repeated piece of culinary
-consensus in all traditions: bison must always be served rare to medium-rare and must never be
-taken past medium. The lean muscle fibres of bison, deprived of intramuscular fat that would
-lubricate the texture, become dry, chalky, and develop a distinctly unpleasant liver-like
-off-flavour when cooked beyond 65 °C. This off-note — noted explicitly in German, American,
-and French bison cooking literature — is caused by the oxidation of the comparatively high
-iron content in the lean, myoglobin-rich muscle at elevated temperatures. The pull temperature
-for a grilled bison steak is therefore 57–60 °C (medium-rare), and never above 63 °C.
-
-On the grill, bison steak performs best over direct, high heat — charcoal (Holzkohlegrill) is
-frequently recommended in German and North American traditions because the intense radiant
-heat of charcoal sears the exterior rapidly, creating Maillard crust without the interior
-overcooking. Gas grill or cast-iron griddle are also acceptable. Because of the leanness,
-marinating overnight is common in German tradition: the marinade provides moisture and
-flavour compounds that compensate for the lack of intramuscular fat. Resting is universally
-recommended (5 minutes minimum) to allow the muscle fibres to relax and reabsorb juices.
-Slow low-temperature cooking (Niedrigtemperatur) is explicitly warned against for bison steak
-by German sources — while it works for collagen-rich beef cuts, for lean bison steak it
-concentrates the liver-like off-note and dries the meat. The pan-sear + brief oven finish
-at 80 °C (as described in two German sources below) is the one acceptable exception, because
-the sear provides Maillard flavour and the short oven time (25 min at 80 °C) simply holds
-the meat at medium without further cooking.
+Grilling bison steak over a gas or open grill is the cut's default presentation in North
+America, and the fetched corpus is unusually explicit about the one thing that matters: the
+meat is lean, the window is narrow, and the temperature schools disagree by a full doneness
+step on the very same words. The purveyor's guide and the two BBQ blogs all grill at very high
+heat (500–650 °F / 260–340 °C) with the lid closed or open, 4–7 minutes total, one or many
+flips — but when they write "medium-rare" they mean different numbers: the Texas BBQ site
+pulls at **120–125 °F**, the Utah BBQ site pulls at **145 °F for medium** and calls 135 °F
+medium-rare, and the South Dakota purveyor splits them at **135 °F medium-rare / 145 °F
+medium**, measured before resting. The two cross-tradition sources on this page — a Thai
+marinade and a Nigerian skewer street-food, both published by one Canadian bison producer's
+international recipe library — grill over medium-high direct heat (400–450 °F) and stop at the
+verbal "medium-rare" or "a few minutes of rest", neither probing at all. What all five share
+is process: simple seasoning or a short marinade, high direct heat, quick turns or a single
+flip, a real rest, and a hard ceiling at medium — "do not overcook" is stated by four of the
+five in nearly those words.
 
 ## Styckesprofil
 
-Grillning av bisonsteak är den nordamerikanska quintessens-beredningen och en av de få metoder där bisonens magra profil är en fördel: det minimala yttre fettlocket ger inga flammor från droppande fett. Använd direkt hög värme (230–260 °C / 450–500 °F) med grillen föruppvärmd och gallret olját.
-
-Vid 2,5–3 cm tjocklek ger 3–4 minuter per sida medium-rare. Viktigaste grillregeln för bison: dra 5–8 °C lägre än för nötkött — bison överkokkas snabbare, har kortare eftertillagning och straffar hårt för överkokning. Innertemperatur: **54–57 °C (130–135 °F)**. Dra vid 50–52 °C. Eftertillagning: 4–5 °C.
+Grillning av bisonstek över gas- eller öppen grill är snittets standardpresentation i Nord­amerika,
+och det hämtade materialet är ovanligt tydligt om det enda som spelar roll: köttet är magert,
+fönstret är smalt, och temperaturskolorna är oeniga med ett helt doneness-steg på exakt samma
+ord. Purvarguiden och de två BBQ-bloggarna grillar allihop på mycket hög värme (500–650 °F /
+260–340 °C) med lock stängt eller öppet, 4–7 minuter totalt, en eller många vändningar — men
+när de skriver "medium-rare" menar de olika tal: den texanska BBQ-sidan plockar vid
+**120–125 °F**, den utahska BBQ-sidan plockar vid **145 °F för medium** och kallar 135 °F
+medium-rare, och southdakotaguiden delar dem på **135 °F medium-rare / 145 °F medium**, mätt
+före vila. De två tvärkulturella källorna på denna sida — en thailändsk marinad och en
+nigeriansk spett-gatmat, båda publicerade av en kanadensisk bisonproducents internationella
+receptbibliotek — grillar över medelhög direkt värme (400–450 °F) och stannar vid verbala
+"medium-rare" respektive "några minuters vila", utan att mäta alls. Det alla fem delar är
+processen: enkel kryddning eller kort marinad, hög direkt värme, snabba vändningar eller en
+vändning, en riktig vila, och ett hårt tak vid medium — "koka inte över" sägs av fyra av fem i
+nästan exakt dessa ord.
 
 ## Source recipes
 
-### 1. Gegrilltes Bison-Filet-Steak in süß-scharfer Bier-Chili-Marinade (inspired by Daskochrezept.de)
-**Inspired by**: Daskochrezept.de community recipe;
-daskochrezept.de/rezepte/gegrilltes-bison-filet-steak-suess-scharfer-bier-chili-marinade
-(fetched 2026-06-08)
-**Serves**: 4 · **Prep**: overnight marination · **Cook**: 6–10 min · **Rest**: 5 min
+### 1. Wild Idea Buffalo — Basic Cooking: Bison Steaks (Jill, United States)
+**Inspired by**: https://wildideabuffalo.com/blogs/recipes/bison-steak-basic-cooking-instructions (fetched 2026-10-26). Wild Idea Buffalo (US grass-fed bison purveyor, South Dakota), "A Note from Jill", published 2024-07-24. US purveyor-cooking tradition. **Multi-method flag**: the page covers gas grilling, char grilling and pan searing; this record is its **gas-grilling** section (the char section is in the charcoal_grill leaf, the pan section in the pan_sear leaf — one source, three method rows, never counted twice in one leaf).
+**Serves**: not stated · **Prep**: 2 h tempering · **Cook**: by thickness · **Rest**: 5 min
 
 **Ingredients**
-- 1 bison fillet (ca. 1 kg), trimmed and pat dry
-- 4 slices à 250 g
-- 3 garlic cloves, finely chopped
-- 1 onion, finely chopped
-- 2–3 cm fresh ginger, grated
-- Juice of 2 limes
-- 250 ml beer (pale lager or ale)
-- 2 tbsp sugar
-- 2 tbsp Worcestershire sauce
-- 1 tbsp Dijon mustard
-- 2 tbsp neutral oil
-- 2–3 tbsp chipotle pepper sauce
-- Chili powder to taste
+- Wild Idea bison steaks (tenderloin, ribeye, New York, top sirloin, bone-in ribeye, T-bone, porterhouse etc.)
+- Olive oil; salt; pepper or seasonings of choice
 
 **Method**
-1. Parieren (trim) the bison fillet if necessary (or ask the butcher). Wash and pat dry. Cut
-   into 4 slices of approximately 250 g each.
-2. Finely chop the garlic and onion, grate the ginger, and squeeze the limes. In a large bowl,
-   mix the beer, sugar, lime juice, onions, garlic, Worcestershire sauce, mustard, oil, ginger
-   and chipotle pepper sauce until the marinade reaches a creamy consistency. Adjust seasoning
-   and add chili powder to taste.
-3. Marinate the steaks in the liquid overnight in the refrigerator. Best method: place the
-   steaks in a resealable freezer bag, pour in the marinade, squeeze out the air before sealing,
-   and knead lightly so the marinade reaches all sides.
-4. The next day: remove the bison steaks from the refrigerator at least 3 hours before grilling
-   so the meat reaches room temperature. Bringing the steaks to room temperature is essential —
-   it ensures tender, even cooking.
-5. Insert the MEATER probe horizontally through the side of the steak into the geometric centre,
-   ensuring both ambient and meat sensors are correctly positioned.
-6. Grill the steaks over charcoal (Holzkohlegrill) on high direct heat. Depending on thickness,
-   grill 3–5 minutes per side, turning 2–3 times total. Test doneness by pressing the meat
-   with tongs (firm resistance = medium, slight give = medium-rare, soft = rare). Bison should
-   always be eaten rare to at most medium-rare. **Do not cook slowly at low temperature
-   (Niedrigtemperatur) — with bison, this ruins the flavour and produces a liver-like taste.**
-7. **Pull at 57–60 °C (135–140 °F)** for medium-rare. Remove from grill immediately.
-8. Rest for approximately 5 minutes loosely wrapped in aluminium foil so the meat relaxes and
-   develops its full flavour. Even without extra sauces, the meat will be incredibly tender and
-   juicy. Herb butter or sweet-spicy sauce pairs well; grilled vegetables or baked potatoes are
-   good sides.
-9. Final serving temperature: **57–60 °C / 135–140 °F** (rare to medium-rare — never beyond
-   medium).
+1. Rinse the steaks and pat dry; rub with olive oil, salt and pepper. Loosely cover and rest at room temperature **two hours** before cooking. (Freezer trick: 5–10 minutes in the freezer after tempering evens the gradient.)
+2. **Gas grilling**: clean the grate; preheat to **high heat, 500 °F**, lid closed; brush the grate with oil; grill with the lid closed.
+3. Times by thickness, turning every 1½ minutes: ½" steaks 1½ min per side + 30 s per side (medium-rare); 1" 1½ min per side then 1 min per side; 1½" 1½ min per side repeated then 30 s per side or on the edges; thicker +1 min per ½" per side.
+4. Remove to a plate, cover with foil, rest **5 minutes** before carving.
+5. **Internal temperatures before resting: Rare 125 °F / Medium Rare 135 °F / Medium 145 °F** (stated). Standing rule: "cook them no more than medium."
+6. **Pull at 135 °F (57 °C)** for medium-rare (stated chart value, before rest). Final serving temperature: **not stated by the source** (chart is explicitly before rest).
 
 ---
 
-### 2. Steak with Chimichurri Sauce (inspired by BBC Good Food)
-**Inspired by**: BBC Good Food, *bbcgoodfood.com/recipes/steak-chimichurri-sauce*
-(fetched 2026-06-08; from Good Food magazine, June 2012)
-**Serves**: 2 · **Prep**: 5 min · **Cook**: 5–6 min · **Rest**: a few min
+### 2. Hey Grill Hey — Grilled Bison Steak with Compound Resting Butter (Susie Bulloch, United States)
+**Inspired by**: https://heygrillhey.com/grilled-bison-steak/ (fetched 2026-10-26). Hey Grill Hey (US BBQ blog), by Susie Bulloch, published 2021-09-20. US barbecue tradition.
+**Serves**: not stated · **Prep**: 10 min · **Cook**: 4–8 min by doneness · **Rest**: with compound butter
 
 **Ingredients**
-- 2 × 125 g rib-eye or sirloin steaks
-- Remaining ½ tbsp olive oil (for rubbing)
-- Salt and pepper
-- Fries and salad to serve
-
-**For the chimichurri**
-- Small bunch parsley, roughly chopped
-- ½ tsp oregano (fresh or dried)
-- 2 garlic cloves
-- 1 shallot, chopped
-- ½ tsp chilli flakes
-- 2 tbsp olive oil
-- Juice of ½ lemon
-- 2 tsp red wine vinegar
-- Salt and pepper
+- Bison ribeye steaks, about 1" thick, consistent in thickness
+- Beef rub (salt, pepper, garlic powder base) or equal parts salt, pepper and garlic powder — or just flaky salt and cracked pepper
+- **Horseradish compound resting butter** (butter, herbs, horseradish)
 
 **Method**
-1. To make the chimichurri: blitz the parsley, oregano, garlic, shallot and chilli flakes in a
-   food processor, or chop very finely by hand. Add 2 tbsp olive oil, the lemon juice, vinegar
-   and seasoning. Pulse to combine to a saucy consistency. Set aside.
-2. Rub the remaining ½ tbsp olive oil and a little seasoning into the steaks on both sides.
-3. Insert the MEATER probe horizontally through the side of the steak into the geometric centre,
-   ensuring both ambient and meat sensors are correctly positioned.
-4. Heat a griddle pan or frying pan over high heat until very hot. Cook the steaks for 2–3
-   minutes on each side, or until done to your liking. For a 125 g rib-eye at this thickness,
-   2 min per side produces rare; 3 min per side produces medium-rare.
-5. **Pull at approximately 57 °C (135 °F)** for medium-rare. (Pull temperature not explicitly
-   stated in the original recipe; 57 °C is the standard for medium-rare at this steak thickness
-   and cooking method.)
-6. Rest the steaks for a few minutes. Spoon over the chimichurri sauce and serve with fries
-   and salad.
-7. Final serving temperature: **approximately 57 °C / 135 °F** (medium-rare; applicable to
-   bison rib-eye or sirloin at 125 g portion size).
+1. Season the steaks on all sides. The source's method rule: "bison is flavorful yet lean, so a long and low cook is not forgiving — cooking at high heat and **flipping often (about every 30 seconds)** is going to be the best method."
+2. Preheat the **gas grill or charcoal grill to High heat (~650 °F)**; put the steaks directly on the grates.
+3. Cook around **6–7 minutes for a medium steak** with the frequent flipping. The source's time guide at 650 °F: Rare (125 °F) 4 min; Medium-rare (135 °F) 5 min; Medium (145 °F) 6½ min; Medium-well (155 °F) 8 min.
+4. "I do not recommend cooking bison past medium" — the stated pull is **145 °F for medium**; bison "should not be overcooked".
+5. Rest the steaks with a dollop of the compound butter and serve. Optional: hickory chips on the charcoal (or a foil pouch on gas) for a little smoke.
+6. **Pull per the source's chart: 135 °F (57 °C) for medium-rare, 145 °F (63 °C) for medium** (stated). Final serving temperature: **not stated by the source**.
 
 ---
 
-### 3. Bisonsteak auf Paprika (inspired by Chefkoch.de)
-**Inspired by**: Community recipe, Chefkoch.de;
-chefkoch.de/rezepte/2841491436191027/Bisonsteak-auf-Paprika.html (fetched 2026-06-08)
-**Serves**: 2 · **Prep**: 30 min · **Cook**: 25 min · **Oven**: 80 °C
+### 3. Vindulge — Easy Grilled Bison Steaks (Mary Cressler, United States)
+**Inspired by**: https://www.vindulge.com/grilled-bison-steaks/ (fetched 2026-10-26). Vindulge (US live-fire cooking blog), by Mary Cressler, published 2025-09-11. US barbecue tradition. **Technique note**: the source explicitly rejects the room-temperature rule ("You do NOT need to let the steaks come to room temperature for an hour") and prefers an uncovered overnight dry brine instead.
+**Serves**: not stated (ribeye or NY strip) · **Prep**: 10 min (+ overnight dry brine optional) · **Cook**: 6 min · **Rest**: 10 min
 
 **Ingredients**
-- 2 bison entrecôte à 250 g
-- 1 red bell pepper (Paprika), finely diced
-- 1 young red onion, finely chopped
-- 1 red chilli, sliced into rings
-- 3 cm fresh ginger, finely chopped
-- 2 tsp Tasmanian Leatherwood honey
-- 4 tbsp neutral oil
-- 1 tsp Maggi liquid seasoning
-- 1 tsp freshly ground pepper
-- Salt to taste
+- Bison ribeye or NY strip steaks ("bison steaks tend to be thin"; the source names Honest Bison as a supplier)
+- SPG rub: equal parts kosher salt, coarse black pepper, granulated garlic (no sugar rubs — they burn at high heat)
+- **Sage brown butter**: butter, sage leaves (stems usable for infusion); Maldon salt and crushed fried sage to finish
 
 **Method**
-1. Preheat the oven to 80 °C (top/bottom heat).
-2. Cut the bell pepper into fine cubes and the chilli into rings. Finely chop the onion and
-   the ginger.
-3. Heat 2 tbsp oil in a pan over medium heat and sweat the vegetables (onion, pepper, chilli,
-   ginger) until soft. Season with the honey, pepper and Maggi. Transfer to a flat ovenproof
-   form and place in the 80 °C oven to keep warm.
-4. Heat the remaining 2 tbsp oil in a heavy pan over very high heat. Sear the bison entrecôte
-   steaks sharply on both sides until a deep Maillard crust has formed.
-5. Insert the MEATER probe horizontally through the side of the steak into the geometric centre,
-   ensuring both ambient and meat sensors are correctly positioned.
-6. Place the seared steaks on top of the vegetables in the oven form. Return to the 80 °C oven
-   for 25 minutes for medium doneness.
-7. **Pull at 60 °C (140 °F)** after the 25-minute hold at 80 °C (the recipe describes this
-   as "medium"). The 80 °C oven hold is a gentle finish only — the sear provides both the
-   crust and most of the cooking energy.
-8. Final serving temperature: **60 °C / 140 °F** (medium — described as correct result of
-   25 min at 80 °C after searing).
+1. Season liberally on all sides (dry-brine uncovered in the fridge the day before if there is time). Do not temper.
+2. Make the sage brown butter: butter + sage over medium heat, light boil then simmer **8 minutes**; strain; crumble the crispy leaves.
+3. Prepare the grill for **direct grilling at 500 °F** — the source uses **lump charcoal** (gas works the same: get it to 500 °F); let the coals go red and warm the grate.
+4. Grill the steaks over direct heat **3 minutes until a crust develops, flip, 3 minutes more**. "Do not walk away."
+5. Remove when the internal temperature reaches **120–125 °F (49–52 °C)** on an instant-read. **Rest 10 minutes**, then slice against the grain; pour the brown butter over; finish with Maldon salt and fried sage.
+6. The source's key tip: serve bison **rare (120–130 °F) or at most medium-rare (130–140 °F)**; "We do not recommend cooking bison any higher than 140 degrees", and account for **+5 °F carryover**. Overcooked bison "will get tough and gamey".
+7. **Pull at 120–125 °F (49–52 °C)** (stated). Final serving temperature: **125–130 °F / 52–54 °C** (stated range including the +5 °F carryover).
 
 ---
 
-### 4. Bisonsteak in Rosmarin (inspired by Chefkoch.de)
-**Inspired by**: Community recipe, Chefkoch.de;
-chefkoch.de/rezepte/2841471436190764/Bisonsteak-in-Rosmarin.html (fetched 2026-06-08)
-**Serves**: 1 · **Prep**: 15 min · **Cook**: 30 min · **Oven**: 80 °C
+### 4. Noble Premium Bison — Thai Crying Tiger Bison (Maddie & Kiki; Canadian producer's recipe library)
+**Inspired by**: https://noblepremiumbison.com/cooking/recipes/thai-crying-tiger-bison/ (fetched 2026-10-26). Noble Premium Bison (Canadian bison producer) official recipe library; recipe created by "Maddie & Kiki, Canada's Favourite Female Grillmasters". **Tradition flag**: the recipe is Thai (*Crying Tiger*, *Nam Jim Jeaw*) — **Culinary Group A** source for this cut — published by a Canadian producer's international library; recorded as a Thai-tradition recipe with the publisher named, not as a Thai primary source. **Cut-form flag**: the cut is Noble's **round steak**, marinated and grilled whole then sliced thin.
+**Serves**: 2 · **Prep**: 15 min (+ overnight marinating) · **Cook**: 6–8 min · **Rest**: 6–8 min
 
 **Ingredients**
-- 250 g bison entrecôte
-- 2 sprigs fresh rosemary
-- 5 tbsp Robusta extra-virgin olive oil
+- 226 g (8 oz) bison round steak
+- 1 tbsp EACH hoisin sauce and soy sauce; zest and juice of 1 lime
+- **Nam Jim Jeaw**: ¼ cup lime juice; 1 tbsp EACH hoisin and fish sauce; ½ tsp toasted rice powder; 1 tsp ground Thai chili; 1 tbsp agave honey; 2 green onions, sliced; 3–4 red Thai chilis, sliced
+- To serve: fresh lettuce, mint, cucumber slices, white rice
 
 **Method**
-1. Preheat the oven to 80 °C (top/bottom heat). Pull the rosemary needles from the sprigs and
-   roughly chop them.
-2. Put 4 tbsp olive oil and the chopped rosemary into a flat ovenproof baking dish. Place the
-   dish in the preheated 80 °C oven to warm the oil and infuse with rosemary.
-3. Heat the remaining 1 tbsp oil in a heavy cast-iron pan over very high heat until just
-   smoking. Sear the bison entrecôte sharply on both sides to form a deep crust.
-4. Insert the MEATER probe horizontally through the side of the steak into the geometric centre,
-   ensuring both ambient and meat sensors are correctly positioned.
-5. Remove the baking dish from the oven. Place the seared steak in the warm rosemary oil and
-   turn to coat all sides.
-6. Return the dish to the 80 °C oven for 25 minutes for medium doneness.
-7. **Pull at 60 °C (140 °F)** after the 25-minute hold at 80 °C (the recipe describes this
-   as "medium"). As in Source 3, the oven is a gentle resting and holding step rather than
-   a primary cooking method.
-8. Final serving temperature: **60 °C / 140 °F** (medium — consistent with Source 3; both
-   recipes use identical sear + 25 min at 80 °C technique).
+1. Prick the steak all over with a fork. Bag it with the hoisin, soy sauce and lime zest and juice; refrigerate **overnight**.
+2. Preheat the grill to **medium-high (400–450 °F)**; grill over direct heat **3–4 minutes per side for medium-rare**.
+3. Rest **6–8 minutes**, then slice thinly. Whisk the sauce together while the meat rests.
+4. Serve the sliced steak with the Nam Jim Jeaw, lettuce, mint, cucumber and rice.
+5. The source publishes **no internal temperature**; its doneness words are "medium-rare" on a 3–4 min/side direct cook. House guidance (not the source's): probe before slicing — **Pull at 54 °C (130 °F)**. Final serving temperature: **not stated by the source**.
+
+---
+
+### 5. Noble Premium Bison — Nigerian Bison Suya (Maddie & Kiki; Canadian producer's recipe library)
+**Inspired by**: https://noblepremiumbison.com/cooking/recipes/nigerian-bison-suya/ (fetched 2026-10-26). Noble Premium Bison official recipe library; created by "Maddie & Kiki, Canada's Favourite Female Grillmasters". **Tradition flag**: the recipe is Nigerian/West African *Suya* — **Culinary Group C** source for this cut — published by the same Canadian library and the same recipe-development pair as source 4; the pairing is recorded and both rows are flagged rather than counted as two independent test kitchens. **Cut-form flag**: the cut is **round steak or steak cubes on skewers**.
+**Serves**: 5–6 skewers · **Prep**: 15 min (+1 h marinating) · **Cook**: 6–8 min · **Rest**: a few minutes
+
+**Ingredients**
+- 226 g (8 oz) bison round steak or steak cubes
+- 3 tbsp avocado oil
+- Fresh cucumber, onion, tomato and cabbage, sliced (to serve)
+- **Suya (Yaji) spice mix**: 3 tbsp peanut butter powder; 1 tbsp ground ginger; 1 tbsp smoked paprika; 1–2 tsp cayenne; 1 tbsp onion powder; 1 tbsp garlic powder; ½ tbsp chicken bouillon powder
+
+**Method**
+1. Combine the Yaji spice mix. Toss the bison cubes with the avocado oil and all of the spice mix until coated.
+2. Cover and refrigerate **1 hour** (or longer). Skewer on metal skewers.
+3. Preheat the grill to **medium-high (400–450 °F)**; grill **3–4 minutes per side**.
+4. Rest a few minutes; serve with cucumber, tomato, onion and cabbage.
+5. The source publishes **no internal temperature**; its endpoint is 3–4 min per side on skewers. House guidance (not the source's): cubes carry no meaningful probe — cook to the source's "tender perfection" cue. Final serving temperature: **not stated by the source**.
 
 ---
 
 ## Temperature consensus
 
-| Source | Pull temperature | Method |
-|--------|----------------|--------|
-| Daskochrezept.de (Germany) | 57–60 °C | Charcoal grill, 3–5 min/side; rare to medium-rare |
-| BBC Good Food (UK) | ~57 °C | Griddle/pan, 2–3 min/side; medium-rare |
-| Chefkoch.de — Bisonsteak auf Paprika (Germany) | 60 °C | Pan sear + 25 min at 80 °C oven; medium |
-| Chefkoch.de — Bisonsteak in Rosmarin (Germany) | 60 °C | Pan sear + 25 min at 80 °C oven; medium |
+| Source | Tradition | Stated doneness evidence | Internal/pull temperature |
+|---|---|---|---|
+| Wild Idea Buffalo (US) | US gas grill, 500 °F, lid closed | times by thickness, turn every 1.5 min | **125/135/145 °F (52/57/63 °C)** chart before rest |
+| Hey Grill Hey (US) | US BBQ, gas or charcoal, 650 °F | flip every 30 s; 4–8 min by doneness | **125/135/145/155 °F (52/57/63/68 °C)** chart; "not past medium" |
+| Vindulge (US) | US live-fire, lump charcoal, 500 °F | 3+3 min direct; 10 min rest | **pull 120–125 °F (49–52 °C)**; serve rare 120–130 / MR 130–140; never above 140 °F |
+| Noble/Thai Crying Tiger (A) | Thai marinade, 400–450 °F direct | 3–4 min/side "medium-rare"; 6–8 min rest | Not stated |
+| Noble/Nigerian Suya (C) | Nigerian skewer street-food, 400–450 °F | 3–4 min/side on skewers | Not stated |
 
-**Consensus pull**: **57–60 °C (135–140 °F)** for rare to medium-rare; **60 °C (140 °F)**
-maximum for medium. All four sources agree that bison steak must not be taken past medium
-under any circumstances. The lean muscle fibres develop a liver-like off-flavour above
-approximately 63–65 °C. Slow low-temperature cooking (Niedrigtemperatur) is explicitly
-contraindicated for bison steak by German tradition.
+Three of five sources publish numbers, and they span **120–145 °F (49–63 °C)** for the same
+doneness words — the largest honest divergence in this cut's corpus. The three US temperature
+charts are three schools: Vindulge's low-pull school (pull 120–125 °F, +5 carryover, serve
+rare-to-medium-rare), Wild Idea's chart-middle (medium-rare 135 °F before rest), and Hey
+Grill Hey's high chart (medium-rare 135 °F, medium 145 °F, with its own "not past medium"
+warning). The two cross-tradition sources publish no numbers and their 3–4 min/side direct
+cooks at 400–450 °F are consistent with the medium-rare window of any of the three charts.
+The agreement is structural rather than numerical: high direct heat, a short cook, a real
+rest, and an absolute ceiling at medium — the lean-meat rule that the cut's whole corpus
+shares. **Tie-break**: of the three measured rows, the middle value for medium-rare is
+**135 °F (57 °C)** (Wild Idea and Hey Grill Hey agree; Vindulge's 120–125 °F pull is the
+deliberate rare school, recorded as such rather than averaged away). **Applied target**:
+**57 °C (135 °F) for medium-rare** at the probe, with the 49–52 °C low-pull school recorded
+as the corpus's persistent dissent. **Temperature used in cooking_data.py: 57 °C within the
+existing `medium_rare` band**. `recommended_doneness` for this method: **`medium_rare`** —
+every measured chart lands medium-rare at 52–57 °C and every source forbids going past
+medium; the two verbal rows say "medium-rare" in as many words.
 
-**Representative coding value**: **60 °C (140 °F)** as the nominal pull for medium-rare
-(allowing a 3 °C carryover to ~60 °C serving), with a practical range of 57–63 °C.
-Rare: 52–54 °C. Medium-rare: 57–60 °C. Do not exceed 63 °C.
+## What makes this method special
 
-## Notes for cooking_data.py
+The grill is where bison's leanness is both the selling point and the trap. The selling point:
+a thin fat cap means a lean steak can take the aggressive direct heat a crust needs without the
+flare-ups a marbled beef ribeye throws — all five sources grill hotter than most beef recipes
+would dare. The trap: with no fat reserve, the same heat drives the interior through
+medium-rare in the time it takes to check a phone, which is why the technique notes here are
+so specific and so contradictory in the details — flip every thirty seconds (Hey Grill Hey) or
+flip once after three minutes (Vindulge), temper two hours (Wild Idea) or don't temper at all
+and dry-brine overnight (Vindulge). The temperature spread is the honest core of this leaf:
+three US charts give "medium-rare" as 120, 135 and 135 °F respectively, and the difference is
+not sloppiness but two conventions — pull-temperature cooking (120–125 °F pull, carryover
+does the rest) versus finished-temperature cooking (135 °F measured as done). The Thai and
+Nigerian recipes add what the US corpus lacks entirely: marinades whose sugar and soy lacquer
+the lean surface during a 3–4 minute direct cook, and a serving style — thin slices with a
+fiery dipping sauce, or spiced skewers with raw vegetables — that treats bison as a vehicle
+for strong flavour rather than as a steak to be eaten plain.
 
-- `doneness`: `medium_rare`
-- `pull_temp_c`: 60
-- `pull_temp_range_c`: [57, 63]
-- `safety_level`: `medium_rare` (bison is a whole-muscle cut; surface pathogens destroyed
-  by the sear)
-- Bison steak MUST NOT be cooked past medium-rare (63 °C). Above this temperature the lean
-  muscle develops an iron-oxidation off-flavour described as "liver-like" in multiple German
-  and North American sources.
-- Niedrigtemperatur (sustained low-temperature cooking) is contraindicated for bison steak.
-  The pan-sear + short 80 °C oven hold (Sources 3 and 4) is acceptable only because the
-  total internal temperature does not exceed 60 °C.
-- Bring bison steaks to room temperature before grilling (minimum 1 hour, ideally 3 hours
-  per Source 1) — the lean muscle cooks unevenly if cold.
-- Rest grilled bison steak a minimum of 5 minutes before serving.
+## Data applied to cooking_data.py
+
+- `supported_methods`: `grill` **already registered** for bison_steak — no change needed; this is the rewritten, gate-checked declared-method leaf (the previous version mixed in pan-sear/oven-hold sources and a beef recipe — see the integrity note in the hub's rescore).
+- `recommended_doneness` (method key for grill): **`medium_rare`** — 57 °C applied target from the middle measured row; the 49–52 °C low-pull school recorded as divergence; consistent with the cut level.
+- No `method_temperature_ranges` override needed — the measured values (49–63 °C across three charts) all sit inside the existing doneness bands' span.
+
+## Summary
+
+Grilling bison steak is a 4–8 minute high-heat cook with a hard ceiling at medium, and the
+three measured sources disagree about what their shared words mean: "medium-rare" appears as
+120–125 °F at one site, 135 °F at two others, and the difference is pull-temperature versus
+finished-temperature convention rather than carelessness. The applied middle is 135 °F (57 °C)
+at the probe, with the rare school preserved as a real dissent. The Thai and Nigerian recipes
+show the cut's other life — marinated, sliced thin, served with a screaming dipping sauce or
+on skewers — and both stop at medium-rare without a thermometer. Whichever chart you follow,
+flip with attention, rest properly, and stop at medium: every source on this page says so.
+
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Five fetched source recipes — the 4–6-source count gate is met, but the distinct-tradition gate fails on the three US sources (US ×3, Thailand-tradition recipe, Nigerian-tradition recipe — the last two published by one Canadian library and one recipe-development pair, flagged in-line and not counted as independent kitchens). Temperature evidence: three sources publish charts (125/135/145 °F; 125/135/145/155 °F; pull 120–125 °F) quoted verbatim; the two silent sources say so in their rows with their verbal cue preserved and their pulls marked house guidance. Integrity work this leaf carries: the previous version of this file counted a BBC Good Food **beef** chimichurri recipe as a bison source and filed two pan-sear/oven-hold Chefkoch recipes and the Daskochrezept charcoal recipe here; those records are retired — the beef recipe to a not-counted mention in the hub, the Chefkoch pair to the pan_sear leaf with conflict flags, and Daskochrezept to the charcoal_grill leaf with a corrected fetched record. Honest fix (open agent work, not a wall): fetch one to two further grilled-bison-steak recipes from outside the US (a German, Nordic, Canadian or Australian source) to clear the distinct row. Uncounted leads kept out of the gate: Frontier Natural Meats' grill guide (fetch returned no readable text), National Bison Association's social-media grill post (informal), Grillocracy's tri-tip (recorded in the hub's leads with its cut-form flag), Tank Cooks' video (video-only). Culinary Groups covered here: A (Thai Crying Tiger), B (US ×3), C (Nigerian Suya). Leaf rewritten 2026-10-26; its previous pre-ToR version retired with the integrity notes above.

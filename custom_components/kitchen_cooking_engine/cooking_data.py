@@ -4721,6 +4721,10 @@ BISON = [
             CookingMethod.PAN_SEAR,
             CookingMethod.GRILL,
             CookingMethod.CHARCOAL_GRILL,
+            # Method survey 2026-10-26 (enum-wide, fetched sources for this exact cut):
+            # sous_vide (4 src: US x3/NL — measured 120-132 F baths). Reverse-sear/oven_roast
+            # and smoker queued as leads; wet methods return only stew/cube forms for bison.
+            CookingMethod.SOUS_VIDE,
         ],
         recommended_doneness="medium_rare",
     ),
