@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 26 Oct 2026
-Last Change: v0.10.2.22 - improve sea_bass cut (steam and salt-crust oven_bake discovered; five leaves now, pan_sear rewritten so each source's own doneness cue is quoted; Groups A+B+C+D covered; rescore 8→16/20); CHORES (version bump, branch history, user guide, panel regen)
+Last Change: v0.10.2.23 - improve secreto cut (oven_roast, braise and sous_vide discovered; six leaves now, pan_sear rewritten to five counted sources with each source's own doneness cue quoted; sous_vide gives the cut's first fully measured corpus at 55–62 °C; rescore 8→11/20); CHORES (version bump, branch history, user guide, panel regen)
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -176,11 +176,11 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 
 # ⚠️ VERSION — must match in ALL 3 locations on every release:
 #   1. manifest.json        → "version": "..."
-#   2. HERE (__init__.py)    → __version__ = "0.10.2.22"
+#   2. HERE (__init__.py)    → __version__ = "0.10.2.23"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.10.2.22"
+__version__ = "0.10.2.23"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

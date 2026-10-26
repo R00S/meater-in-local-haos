@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 26 Oct 2026, 11:33 CET
+ * AUTO-GENERATED: 26 Oct 2026, 17:39 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 26 Oct 2026, 11:33 CET
+// Last generated: 26 Oct 2026, 17:39 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -129436,7 +129436,12 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/chops/pork_tenderloin.md"
   },
   "secreto": {
+    "braise": "/kitchen_cooking_engine_panel/recipes/pork/chops/secreto-braise.md",
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes/pork/chops/secreto-charcoal_grill.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes/pork/chops/secreto-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/pork/chops/secreto-oven_roast.md",
     "pan_sear": "/kitchen_cooking_engine_panel/recipes/pork/chops/secreto-pan_sear.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes/pork/chops/secreto-sous_vide.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/chops/secreto.md"
   },
   "fresh_ham": {
@@ -131058,8 +131063,18 @@ const CUT_METHOD_PROFILES = {
     "sous_vide_sv": "Fläskfilé är en idealisk kandidat för sous vide: det magra köttet har ingen fettbuffert, varför även lätt överkokning i en konventionell panna märks, medan ett 58 °C bad ger jämna, perfekt rosa resultat från kant till kant.\n\nSous vide-parametrar: **58–60 °C** i 1–2 timmar (hel filé); sear sedan snabbt i skrikhet panna 1 minut per sida för yta. Innertemperatur: **58–60 °C** med pasteurisering via tid och temperatur. USDA-standard: **63 °C**, 3 minuters vila. Eftertillagning: försumbar (sous vide). Sond insatt längsvis."
   },
   "secreto": {
-    "pan_sear": "Pan searing is the traditional preparation for secreto: a dry, very hot iron griddle (*plancha*) or cast-iron skillet, no oil, no salt before cooking. The abundant intramuscular fat renders immediately on contact with the hot surface, creating its own cooking fat within 30 seconds. Key technique: de-chill the secreto 1–2 hours before cooking so it sears rather than steams; salt only after cooking; one flip only; rest 1–2 min then season generously with sea salt and perhaps smoked paprika.\n\nBecause the cut is thin (1–2 cm), internal temperature rises fast: 2–3 minutes per side achieves 63–65 °C (pink). Carryover: 2–3 °C. MEATER probe at the thickest end, inserted along the length of the cut parallel to the surface. Target: 63–65 °C for pink interior, 68–72 °C for fully cooked.",
-    "pan_sear_sv": "Pannstekning är den traditionella beredningen för secreto: en torr, mycket het järngriddle (*plancha*) eller gjutjärnspanna, ingen olja, inget salt före tillagning. Det rikliga intramuskulära fettet smälter ned omedelbart vid kontakt med den heta ytan och skapar sin eget tillagningsfett.\n\nTillagningstid: 3–4 minuter per sida vid hög värme; vila 5 minuter täckt. Innertemperatur: **60–65 °C (140–149 °F)** för medium (spansk preferens). Eftertillagning: 2–3 °C. Sond insatt längsvis parallellt med den tunna filén in till mitten."
+    "braise": "Braising is the outlier method for the *secreto*, and every fetched source knows it: none of\nthe three braises the cut whole as a steak. The two Spanish sources cut it into strips or dice\nfirst, turning the thin marbled sheet into stew pieces that can survive liquid — a *guiso* with\na stroganoff sauce (strips seared, then ten minutes covered in broth, brandy, mustard and\ntomato before the cream goes in) and a *guisado* with peas and paprika (dice browned with the\nsofrito, fifteen minutes covered in stock and wine, then the peas cooked in uncovered). The\nthird source — an international home blog — keeps the piece closer to whole but still fillet-\nthin, searing it a minute or two a side and finishing it two to three minutes in a simmering\norange-brandy sauce. The shared logic is that the secreto's coarse seam fat gives body to a\nsauce and its lean muscle tolerates only a *short* wet phase: the Spanish stew's own author\nnotes the cut \"is tender meat that can be cooked in a cazuela in the usual way\" and used a\npressure pot only for speed. No source in this leaf publishes an internal temperature; the\nendpoint in all three is a thickened sauce and cooked-through small pieces.",
+    "braise_sv": "Braisering är undantagsmetoden för *secreto*, och varje hämtad källa vet det: ingen av de tre\nbrasar hel bit som biff. De spanska källorna skär först i strimlar eller tärningar och gör därmed\ndet tunna marmorerade bladet till grytbitar som tål vätska — en *guiso* med stroganoffssås\n(strimlor brynas, sedan tio minuter täckt i buljong, brandy, senap och tomat innan grädden\ngår i) och en *guisado* med ärtor och paprika (tärningar brunas med såfritton, femton minuter\ntäckt i buljong och vin, sedan ärtorna kokas utan lock). Den tredje källan — en internationell\nmatblogg — håller biten närmare hel men ändå filé-tunn, bryner den en minut eller två per sida\noch blir klar på två till tre minuter i en puttrande apelsin-brandysås. Den gemensamma logiken\när att secreto:s grova fett ger kropp åt såsen medan den magra muskeln bara tål en *kort* våt\nfas: den spanska grytans egen författare noterar att snittet \"är mört kött som kan lagas i\ngryta på vanligt sätt\" och använde tryckkokare bara för hastighets skull. Ingen källa i detta\nblad anger innertemperatur; slutpunkten i alla tre är en tjocknande sås och genomkokta småbitar.",
+    "charcoal_grill": "Charcoal is where the *secreto* earns its reputation as \"the Wagyu of pork\": the coarse seam\nfat renders onto live coals and comes back as smoke, and the cut's thin geometry means the\nwhole cook is measured in flips rather than minutes on one side. The three fetched sources\nshare one rule and disagree on everything else. The rule is heat management — the coals must\nbe established and flameless before the meat goes on (whitish ash, grate raised well above the\nfire), because dripping seam fat causes flare-ups that char the crust before the interior is\ndone. The disagreement is endpoint and cadence: the US charcoal source works at about 450 °F\nand flips **every minute**, four to five minutes total, resting five minutes to a medium\nfinish; the Spanish butcher blog gives its Iberian pork a general \"about 10 minutes per side\"\nover whitish coals at grate height and salts **after** cooking; the Dutch open-fire braai\nsource sears briefly over direct embers, finishes over indirect heat \"to the desired doneness\",\nrests, and shaves hard cheese over the sliced meat. Only one of the three publishes an\ninternal temperature, and it is the kamado source: **65 °C (149 °F)** at the core, checked\nwith an instant-read thermometer.",
+    "charcoal_grill_sv": "Kol är där *secreto* förtjänar sitt rykte som \"grisens wagyu\": det grova fettet renderas på\nlevande kol och kommer tillbaka som rök, och snittets tunna geometri gör att hela tillagningen\nmäts i vändningar snarare än minuter på en sida. De tre hämtade källorna delar en regel och\när oeniga om allt annat. Regeln är värme­hanteringen — kolen måste vara etablerade och lågfria\ninnan köttet läggs på (vitaktig aska, galler högt över elden), eftersom droppande fett orsakar\nflare-ups som bränner skorpan innan insidan är klar. Oenigheten gäller slutpunkt och takt: den\namerikanska kolkällan jobbar vid cirka 450 °F och vänder **varje minut**, fyra till fem minuter\ntotalt, fem minuters vila till medium; den spanska slaktarbloggen ger sitt iberiska gris \"cirka\n10 minuter per sida\" över vitaktiga kol på gallerhöjd och saltar **efter**; den nederländska\nöppen-eld-källan bränner kort över direkt glöd, blir klar över indirekt värme \"till önskad\ngrad\", vilar och rivar hårdost över det skivade köttet. Bara en av de tre anger innertemperatur,\noch det är kamado-källan: **65 °C** i kärnan, kontrollerad med snabbläsande termometer.",
+    "grill": "Grilling plays to the *secreto*'s only structural advantage: it is a thin, wide, heavily\nmarbled sheet, so direct flame renders its coarse fat seams in the first minutes and crisps\nthe edges before the interior can overtake it. The four fetched sources agree on the heat and\nsplit on the endpoint. The US purveyor's guide grills over medium-high (400–450 °F) direct\nheat for 2–3 minutes a side and pulls at **135–140 °F**, resting to a stated **145 °F** —\nthe only numbered instruction in the corpus. The Belgian source runs a gas barbecue at\n180 °C, 2–3 minutes a side plus 5 minutes indirect, and calls the target *à point* (medium).\nThe Norwegian source grills 5–6 minutes and wants it \"medium / slightly pink in the middle\".\nThe Spanish source — the cut's home tradition — cooks it \"until well done\" and says so\nexplicitly: pork should be eaten well cooked. What all four share is process rather than\ntemperature: high direct heat, a single turn with tongs, a short rest, and thin slicing\nagainst the grain. The fat flares over open flame, so two of the sources solve the geometry\ndifferently — the Belgian one finishes indirect, the Spanish one warns to cook the piece\nthrough before turning it.",
+    "grill_sv": "Grillning gynnar *secreto*s enda strukturella fördel: det är ett tunt, brett, mycket\nmarmorerat blad, så direkt låga renderar de grova fettstrimlorna under de första minuterna\noch krispkanterna innan insidan hinner bli torr. De fyra hämtade källorna är eniga om värmen\noch delar sig om slutpunkten. Den amerikanska leverantörens guide grillar över medelhög värme\n(400–450 °F) direkt i 2–3 minuter per sida och plockar vid **135–140 °F**, vilar till en angiven\n**145 °F** — den enda numeriska instruktionen i materialet. Den belgiska källan kör gasgrill på\n180 °C, 2–3 minuter per sida plus 5 minuter indirekt, och kallar målet *à point* (medium). Den\nnorska källan grillar 5–6 minuter och vill ha det \"medium / lätt rosa i mitten\". Den spanska\nkällan — snittets hemmatradition — tillagar det \"tills det är väl genomstekt\" och säger det\nuttryckligen: gris ska ätas väl tillagat. Det alla fyra delar är processen snarare än\ntemperaturen: hög direkt värma, en vändning med tång, kort vila och tunna skivor mot fiber.",
+    "oven_roast": "The oven is where the *secreto* stops being a steak and becomes a roast: the three fetched\nsources all take thicker pieces than the plancha sheet of the pan_sear leaf — the two Spanish\ntray roasts use 1 kg cut into 3–4 pieces (roughly 250–330 g each), and the Japanese source\nbutterfliesthe cut open and rebuilds it as a tied roulade — and then give it 50–60 minutes\nof dry heat at 180–200 °C. That is a completely different endpoint from the two-minute\nplancha cook: every source in this corpus lands the meat thoroughly well done, judging by\ncolour (\"golden but not burnt\") and by cutting the thickest piece, never by probe. The two\nSpanish sources put the meat on a potato-and-onion bed that does the thermal work of a roasting\nrack — it lifts the secreto off the tray, catches the rendered seam fat, and keeps the thin\nbelly edges from burning — and one of them deglazes the tray with beer to keep the roast\nbraising in its own drippings. The Japanese source instead stuffs the opened sheet with\njulienned vegetables and jamón ibérico, ties it, and roasts it upright in geometry, deglazing\nthe tray with white wine at the end. No source in this leaf publishes an internal temperature.",
+    "oven_roast_sv": "Ugnen är där *secreto* slutar vara en biff och blir en stek: de tre hämtade källorna använder\nalla tjockare bitar än planchabladet i pan_sear-bladet — de spanska ugnsformerna använder 1 kg\nskuret i 3–4 bitar (cirka 250–330 g vardera), och den japanska källan fjärilar upp snittet och\nbygger om det som en uppbunden roulade — och ger dem sedan 50–60 minuters torrvärme vid\n180–200 °C. Det är en helt annan slutpunkt än tvåminutersplanchan: varje källa i materialet\nlandar köttet väl genomstekt, bedömt på färg (\"gyllene men inte bränt\") och genom att skära i\ndet tjockaste stycket — aldrig med sond. De spanska källorna lägger köttet på en säng av\npotatis och lök som gör rostningens termiska arbete — den lyfter secreto från plåten, fångar\ndet renderade fettet och skyddar de tunna bukkantarna — och en av dem deglaserar plåten med\nöl. Den japanska källan fyller i stället det uppskurna bladet med juliennade grönsaker och\njamón ibérico, binder det och rostar det i ny geometri, med vindeglasering sist. Ingen källa i\ndetta blad anger innertemperatur.",
+    "pan_sear": "Pan searing — *a la plancha* in the cut's own tradition — is the method the Spanish sources\ntreat as the default for this cut: a thin, irregular sheet of heavily marbled shoulder-belly\nmuscle laid on a very hot plancha or grill plate for a few minutes per side, turned exactly\nonce, rested briefly, and salted **after** cooking. The five fetched sources agree on the\nphysics and disagree about the endpoint. The Spanish plancha recipes never mention an\ninternal temperature at all: Directo al Paladar judges the piece by its cut edge (*canto*) and\nremoves it \"when it is to our liking, juicy and crunchy\", while the Coren vermouth recipe\npasses thin fillets over the plancha for barely 90 seconds per side. The Swiss-German source\nis the only one that publishes a number, and it is deliberately low: **55–60 °C (131–140 °F)**\n\"rosa / medium rare\", cooked 2–4 minutes per side in cast iron and finished with citrus\ninstead of salt. The German source cuts the meat into pieces, sears it in smoking-hot oil and\nrests it in an 80 °C oven; the Swiss-French source sears 3–3½ minutes per side and rests five\nminutes on a rack. The structural constant across all five: salt late (or not at all during\ncooking), high heat briefly, one turn only, rest before slicing against the grain — the fat\nseams of the *secreto* render in the first minute and a half, and every minute past that costs\njuice rather than food safety.",
+    "pan_sear_sv": "Planchastekning — *a la plancha* på snittets eget språk — är den metod de spanska källorna\nbehandlar som standard för detta stycke: ett tunt, oregelbundet blad av mycket marmorerad\nskulder-buk-muskel på en mycket het plancha eller grillplatta ett par minuter per sida, vänd\nexakt en gång, vilat kort och saltat **efter** stekningen. De fem hämtade källorna är eniga om\nfysiken men oeniga om slutpunkten. De spanska plancharecepten nämner aldrig någon\ninnertemperatur: Directo al Paladar bedömer biten på dess kant (*canto*) och tar bort den \"när\nden är som vi vill ha den, saftig och krispig\", medan Corens vermouthrecept vänder tunna fileer\ni knappt 90 sekunder per sida. Den schweizisk-tyska källan är den enda som anger ett tal, och\ndet är medvetet lågt: **55–60 °C** \"rosa / medium rare\", stekt 2–4 minuter per sida i gjutjärn\noch färdig med citrus i stället för salt. Den tyska källan skär köttet i bitar, bryner det i\nrykande het olja och vilar det i 80 °C ugn; den schweizisk-franska bryner 3–3½ minuter per\nsida och vilar fem minuter på galler. Den strukturella konstanten i alla fem: salta sent\n(eller inte alls under tillagningen), hög värme kort, en vändning bara, vila före uppskärning\nmot fiber — fettstrimlorna renderas i första minuten, och varje minut därefter kostar saft\nsnarare än livsmedelssäkerhet.",
+    "sous_vide": "Sous vide is the *secreto*'s only fully measured method: all three fetched sources publish\ntheir bath temperature and time, and none of them wants the cut well done. The spread is\n**55–62 °C (131–144 °F) for 2–24 hours** — the US purveyor's cut-specific setting of 131 °F\nfor 2 hours, the Dutch blog's deliberate long cook of 57 °C for 24 hours (\"the meat will be\nfully pasteurized… pink pork is absolutely fine\"), and the Italian food-school recipe's 62 °C\nfor 3 hours. Because these holds are long relative to the cut's 1–2 cm sheet geometry, the\nbath setting *is* the core temperature: there is no meaningful gradient left to manage, which\nis exactly why two of the three sources then insist on a hard finishing sear — one minute per\nside in a screaming pan or on a grill — to put back the crust the bag cannot make. The\ngeometry of the cut is the hidden argument for the method: a thin, wide, heavily marbled sheet\nis the hardest cut to cook evenly in a pan (its two-minute window) and the easiest to cook\nevenly in a bath (no window at all), and the seam fat that flares over charcoal renders\ngently into the bag instead. One of the three sources explicitly refuses the cut's traditional\nendpoint: \"we did not include information for well-done pork, as we do not recommend this for\nIbérico.\"",
+    "sous_vide_sv": "Sous vide är *secreto*s enda helt mätta metod: alla tre hämtade källor anger badtemperatur och\ntid, och ingen av dem vill ha snittet genomstekt. Spridningen är **55–62 °C (131–144 °F) i\n2–24 timmar** — den amerikanska leverantörens snittspecifika inställning 131 °F i 2 timmar, den\nnederländska bloggens medvetna långkok på 57 °C i 24 timmar (\"köttet blir helt pasteuriserat…\nrosa gris är fullständigt i ordning\"), och den italienska matskolans recept på 62 °C i 3\ntimmar. Eftersom dessa hålltider är långa jämfört med snittets 1–2 cm bladgeometri *är*\nbadinställningen kärntemperaturen: ingen meningsfull gradient kvar att hantera, och precis\ndärför kräver två av de tre källorna en hård avslutande stekning — en minut per sida i rykande\npanna eller på grill — för att lägga tillbaka skorpan baggen inte kan ge. Snittets geometri är\ndet dolda argumentet för metoden: ett tunt, brett, mycket marmorerat blad är det svåraste att\njämna tillaga i panna (dess tvåminutersfönster) och det lättaste i bad (inget fönster alls),\noch fettstrimlorna som fladdrar över kol renderas varsamt i påsen i stället. En av de tre\nkällorna avvisar uttryckligen snittets traditionella slutpunkt: \"vi tog inte med information\nför välkokt gris, eftersom vi inte rekommenderar det för ibérico.\""
   },
   "fresh_ham": {
     "oven_roast": "A fresh (uncured, unsmoked) ham is the entire hind leg of a pig — bone-in, skin-on, with the femur and aitchbone running through the centre and a thick layer of subcutaneous fat under the rind. Anatomically distinct from cured (julskinka) or smoked ham preparations: the muscle has its full natural moisture, the rind is supple rather than salted-firm, and the fat has not been altered by brine. Roasting requires a long, moderate-temperature cook (140–160 °C) that drives the centre to safe temperature without overcooking the surface meat under the fat. Carryover is significant — 4–6 °C in a 4–6 kg leg — because the bone, fat and dense muscle store heat well. Rest 30–45 minutes loosely tented before carving.",
@@ -133558,10 +133573,39 @@ const RECIPE_TITLES_INDEX = {
     ]
   },
   "secreto": {
+    "braise": [
+      "OkDiario — Guiso de secreto ibérico con salsa strogonoff (Francisco María, Spain)",
+      "Katy (Para hincar el diente) — Secreto guisado con guisantes (Spain)",
+      "Helen's blog (helenscchin) — Pork in orange sauce (*Secreto Ibérico a la Naranja*) (English-language home blog)"
+    ],
+    "charcoal_grill": [
+      "Fogo Charcoal — Secreto Iberico, the best piece of pork you will ever try (Sebastian Bussert, United States)",
+      "Big Green Egg — Riso con chutney di peperoni e secreto iberico alla griglia (Italy)",
+      "Braaimaster — Blumenkohl mit Sanddornbeeren | Secreto Ibérico | Kartoffeln in Salzkruste (Netherlands; South African braai technique)"
+    ],
+    "grill": [
+      "La Barbacoa Perfecta — Receta de Secreto ibérico (Jorge Castro, Spain)",
+      "Kai Gourmet — How to Grill Iberico Pork Secreto for Tender, Flavorful Results (United States)",
+      "Barbecook — Duroc secreto on the BBQ (Belgium, French-language)",
+      "Vinmonopolet — Grillet secreto iberico med salvie og manchego-saus (Norway)"
+    ],
+    "oven_roast": [
+      "Recetas de ¡Escándalo! — Secreto ibérico de cerdo al horno con patatas asadas y cebolla, ¡de 10! (Spain)",
+      "Recetas con Sazón (Susanna Brullet) — Secreto ibérico al horno con patatas (Spain)",
+      "Suehiro-ya (iberikobuta.com) — Ibérico pork secreto stuffed with jamón ibérico, mushrooms and vegetables (Japan)"
+    ],
     "pan_sear": [
-      "Secreto de cerdo a la plancha (inspired by Directo al Paladar)",
-      "Secreto vom Ibericoschwein (inspired by Chefkoch.de)",
-      "Pandestegning reference (adapted from svinekotelet technique) (inspired by Madensverden.dk)"
+      "Directo al Paladar — Receta de secreto de cerdo a la plancha con trucos para que te quede crujiente y jugoso (Pakus, Spain)",
+      "Chefkoch.de — Secreto vom Ibericoschwein, \"Carco's schnelle Marinade\" (user Carco, Germany)",
+      "LUMA Delikatessen (Alex Bidault) — Secreto aux pommes de terre sautées et aux cèpes (Switzerland)",
+      "Coren — Secreto de cerdo Selecta en salsa de vermouth (Spain)",
+      "meat4you — Rosa gebratenes Iberico Secreto mit Feigen-Chilisauce und Minze (Switzerland)",
+      "Madensverden — Pandestegning af koteletter (Denmark) — NOT COUNTED (different cut; technique reference only)"
+    ],
+    "sous_vide": [
+      "Il Giornale del Cibo — Secreto iberico, cos'è e come si cucina: la ricetta del secreto iberico cotto a bassa temperatura (Gisella Salvati, Italy)",
+      "Campo Grande — The Ultimate Guide to Sous Vide Ibérico Pork (United States)",
+      "Stefan's Gourmet — Iberico Secreto Sous-Vide with Celeriac Fondant Sous-Vide (Netherlands)"
     ]
   },
   "fresh_ham": {
@@ -137393,9 +137437,12 @@ const EXP_TREE = {
                 "name_da": "Secreto af iberisk gris",
                 "recommended_doneness": "well_done",
                 "supported_methods": [
+                  "braise",
                   "charcoal_grill",
                   "grill",
-                  "pan_sear"
+                  "oven_roast",
+                  "pan_sear",
+                  "sous_vide"
                 ],
                 "usda_safe_c": 63,
                 "usda_safe_f": 145,
@@ -140831,7 +140878,12 @@ const EXP_RECIPE_INDEX = {
   "pork_tenderloin-smoker": "pork/chops/pork_tenderloin-smoker.md",
   "pork_tenderloin-sous_vide": "pork/chops/pork_tenderloin-sous_vide.md",
   "pork_tenderloin": "pork/chops/pork_tenderloin.md",
+  "secreto-braise": "pork/chops/secreto-braise.md",
+  "secreto-charcoal_grill": "pork/chops/secreto-charcoal_grill.md",
+  "secreto-grill": "pork/chops/secreto-grill.md",
+  "secreto-oven_roast": "pork/chops/secreto-oven_roast.md",
   "secreto-pan_sear": "pork/chops/secreto-pan_sear.md",
+  "secreto-sous_vide": "pork/chops/secreto-sous_vide.md",
   "secreto": "pork/chops/secreto.md",
   "ground_pork-braise": "pork/ground/ground_pork-braise.md",
   "ground_pork-pan_fry": "pork/ground/ground_pork-pan_fry.md",
@@ -152656,7 +152708,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "663";
+const PANEL_VERSION = "664";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
