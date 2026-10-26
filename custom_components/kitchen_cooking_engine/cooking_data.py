@@ -4916,7 +4916,11 @@ MOOSE = [
             CookingMethod.PAN_FRY,
             CookingMethod.GRILL,
             CookingMethod.OVEN_BAKE,
-            CookingMethod.BRAISE,
+            # Was BRAISE when the cut was created; the twenty-second pass's sixteen
+            # fetched recipes showed sauces and Finnish *hautua* (covered simmering)
+            # rather than a sealed-pot braise of a large cut, so the method is
+            # registered as SIMMER. Braise is kept as a queued lead, not declared.
+            CookingMethod.SIMMER,
         ],
         recommended_doneness="well_done",
     ),
