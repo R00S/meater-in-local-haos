@@ -4950,6 +4950,12 @@ BUFFALO = [
         supported_methods=[
             CookingMethod.GRILL,
             CookingMethod.PAN_FRY,
+            # 2026-10-26 (twentieth cut-improvement pass): air_fryer and smoker
+            # declared from fetched sources — four US air-fryer bison-burger
+            # recipes (370-400 F, 7-13 min) and two smoker records (US pellet
+            # 225 F held at 140 F for 12 min; Canadian charcoal smoker to 65 C).
+            CookingMethod.AIR_FRYER,
+            CookingMethod.SMOKER,
         ],
         recommended_doneness="well_done",
     ),
