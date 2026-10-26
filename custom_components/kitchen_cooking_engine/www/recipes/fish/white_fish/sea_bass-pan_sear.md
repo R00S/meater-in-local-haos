@@ -9,277 +9,153 @@ cut_type: White Fish
 -->
 # Sea Bass × Pan Sear — Recipe Temperature Research
 
-## Tree position
-
-| Field | Value |
-|-------|-------|
-| Category | `fish` |
-| Cut type folder | `white_fish/` |
-| Cut slug | `sea_bass` |
-| Method slug | `pan_sear` |
-| File | `sea_bass-pan_sear.md` |
-| Full path | `docs/recipe_research/fish/white_fish/sea_bass-pan_sear.md` |
-
 ## Cut profile
 
-European sea bass (*Dicentrarchus labrax*, Italian: branzino/spigola, Turkish: levrek,
-Swedish: havsabborre) is a prized lean white fish with moderately firm, flaky white flesh
-and a thin but distinctly flavoured skin that renders beautifully crisp in a hot pan.
-Pan searing is its most iconic preparation, particularly in Mediterranean cuisine.
-Because the flesh is lean (< 3 % fat), it cooks extremely quickly and dries out if
-overcooked. The standard technique is skin-side down first, pressing gently to prevent
-curling, cooking 80–90 % through on the skin side, then flipping for a brief 30–60-second
-finish. Internal temperature is the most reliable doneness indicator: the flesh transitions
-from translucent to opaque at approximately 55–58 °C and is fully cooked at 60–63 °C
-(USDA minimum for finfish: 63 °C / 145 °F). Many professional cooks pull at 58–60 °C.
-A MEATER probe in thin fillets must be inserted from the edge (laterally) rather than
-from above; in thicker whole or butterflied fish it is inserted into the thickest shoulder.
+The pan is the only method that puts the skin in direct, unbroken contact with a hot
+surface, and sea bass skin is the reason the technique is associated with this fish: thin,
+scaled, and collagen-dense enough to crisp in three minutes, but thin enough to scorch if
+the pan is not watched. Its flesh is lean (well under 5 % fat), so there is almost no
+rendered fat to baste the upward face — the fillet cooks from below and the second side
+needs a third to a half of the first side's time. All three fetched sources work skin-side
+down on a preheated pan and flip once: an Australian general-fillet technique (2 + 2 min
+for 1 cm fillets), a Greek chef's skin-on fillet sear (3 min + under 2 min, pressed with a
+spatula), and an Italian household version that dusts the fillets in flour first (2–3 min +
+1–2 min). None of the three publishes an internal temperature; all three judge doneness by
+opacity or by time. Probe laterally from the thick edge, not from above — a 25 mm fillet
+has no vertical room for a probe.
 
 ## Styckesprofil
 
-Europeisk havsabborre (*Dicentrarchus labrax*, italiensk: branzino/spigola, turkisk: levrek, svenska: havsabborre) är en uppskattad mager vitfisk med måttligt fast, flakigt vitt kött och ett tunt men distinkt smakande skinn som blir utmärkt knaprig vid pannsearing. Stek skinnsidan ned i het smörpanna under press (för att förhindra att köttet böjer sig) i 3–4 minuter; vänd för 1–2 minuter. Innertemperatur: 58–62 °C. Skinnet ger det bästa smakdraget på denna fisk.
+Pannan är den enda metoden där skinnet ligger i oavbruten kontakt med en het yta, och
+havsabborrens tunna, fjällade skinn är anledningen till att metoden förknippas med fisken:
+det blir knaprigt på tre minuter men bränns om pannan är för het. Köttet är magert (klart
+under 5 % fett), så det finns nästan inget fett som bastar ovansidan — filén tillagas
+underifrån och andra sidan behöver en tredjedel till hälften av första sidans tid. Alla tre
+hämtade källor steker skinnsidan ned i förvärmd panna och vänder en gång: australisk
+allmän filéteknik (2 + 2 min för 1 cm filéer), grekisk kockstekning av skinnfilé (3 min +
+under 2 min, pressad med spatel) och en italiensk hushållsvariant där filéerna mjölas först
+(2–3 min + 1–2 min). Ingen av de tre publicerar innertemperatur; alla bedömer genom tid
+eller genomskinlighet. Sond från den tjocka kanten, aldrig uppifrån.
 
 ## Source recipes
 
-### 1. Pan-Fried Sea Bass with Ratatouille & Basil (inspired by BBC Good Food)
-**Inspired by**: BBC Good Food magazine, July 2014;
-bbcgoodfood.com/recipes/pan-fried-sea-bass-ratatouille-basil (fetched 2026-04-24)
-**Serves**: 2 · **Prep**: 20 min · **Cook**: 15 min
+### 1. RecipeTin Eats — Crispy Pan Fried Fish (Nagi Maehashi)
+**Inspired by**: https://www.recipetineats.com/crispy-pan-fried-fish/ (fetched 2026-10-26). Nagi Maehashi, RecipeTin Eats (Australian home-cooking publication).
+**Serves**: 2 · **Prep**: 3 min · **Cook**: 5 min · **Rest**: not stated
 
 **Ingredients**
-- 2 sea bass fillets, skin on and scaled
-- 2 tbsp olive oil (1 tbsp for frying, 60 ml for basil oil)
-- Bunch of fresh basil (about 20 leaves)
-- 1 red pepper, halved and deseeded
-- 1 small courgette
-- 1 small aubergine
-- 1 tsp ground cumin
-- 1 garlic clove, crushed
-- Pinch of sugar (optional)
-- Squeeze of fresh lemon juice
+- 2 thin fish fillets, around 150 g each, **1 cm thick**, skin on or off (the source's Note 1 covers substitutions)
 - Salt and pepper
-
-**Method**
-1. Heat 1 tbsp oil in a pan. Briefly fry 8 basil leaves for a moment until they crisp; lift
-   out with a slotted spoon and drain on kitchen paper.
-2. Bring a pan of water to the boil. Blanch remaining basil leaves for 5 seconds, plunge into
-   iced water, squeeze dry, then blend with 60 ml olive oil to a pourable basil oil. Set aside.
-3. For the ratatouille: halve the pepper and slice into thin strips. Quarter the courgette
-   lengthways and slice. Slice aubergine into thick rounds then into strips.
-4. Heat a splash of oil in a saucepan; add cumin and garlic; cook 30 seconds. Add all the
-   vegetables, season, sweat for 1 minute, add 100 ml water and cook on high heat for 4 minutes.
-   Adjust seasoning; add sugar if needed.
-5. With a sharp knife, score each fillet's skin with small slits at regular intervals — this
-   prevents curling and ensures even crisping.
-6. Insert the MEATER probe laterally from the thickest edge of one fillet, angling to the
-   centre of the flesh.
-7. Heat remaining oil in a frying pan until hot. Season fillets and place skin-side down.
-   Cook undisturbed until the skin is golden and crisp and the flesh is changing colour
-   (approximately 3–4 minutes).
-8. Turn the fillets; cook for 1 minute on the flesh side. Remove from heat; sprinkle with
-   lemon juice.
-9. **Pull at 58–60 °C (136–140 °F).** The French-inspired ratatouille method targets
-   just-opaque flesh with maximum moisture.
-10. Divide ratatouille between the plates; top with sea bass. Drizzle with basil oil and
-    extra virgin olive oil; garnish with crisp basil leaves.
-11. Final serving temperature: **60–63 °C / 140–145 °F** (fully cooked, moist flesh, crisp skin).
-
----
-
-### 2. Sea Bass with Sizzled Ginger, Chilli & Spring Onions (inspired by BBC Good Food)
-**Inspired by**: BBC Good Food magazine, February 2007;
-bbcgoodfood.com/recipes/sea-bass-sizzled-ginger-chilli-spring-onions (fetched 2026-04-24)
-**Serves**: 6 · **Cook**: 10 min
-
-**Ingredients**
-- 6 sea bass fillets, about 140 g each, skin on and scaled
-- About 3 tbsp sunflower oil
-- Large knob of fresh ginger, peeled and shredded into matchsticks
-- 3 garlic cloves, thinly sliced
-- 3 fat fresh red chillies, deseeded and thinly shredded
-- 1 bunch spring onions, shredded lengthways
-- 1 tbsp soy sauce
-- Salt and pepper
-
-**Method**
-1. Season the fillets with salt and pepper. Slash the skin 3 times — this prevents curling.
-2. Heat a heavy-based frying pan with 1 tbsp sunflower oil until hot.
-3. Place the fillets skin-side down. Cook for 5 minutes without moving, until the skin is
-   very crisp and golden and the flesh is almost cooked through.
-4. Insert the MEATER probe laterally from the thick edge of one fillet.
-5. Turn the fillets; cook flesh-side for 30 seconds–1 minute. Transfer to a warm plate.
-   Fry in 2 batches if needed.
-6. Heat 2 tbsp sunflower oil in the same pan. Fry ginger, garlic and chilli for about 2 minutes
-   until golden. Remove from heat; toss in spring onions. Splash fish with soy sauce and spoon
-   the sizzling garnish over.
-7. **Pull at 58–60 °C (136–140 °F).** The BBC notes this has Chinese New Year significance —
-   fish symbolises abundance. "Almost cooked through" on the skin side is approximately 55–58 °C
-   before flipping; the brief flesh-side cook brings it to target.
-8. Final serving temperature: **60–63 °C / 140–145 °F** (Chinese tradition).
-
----
-
-### 3. Pan-Fried Sea Bass with Citrus-Dressed Broccoli (inspired by BBC Good Food)
-**Inspired by**: BBC Good Food;
-bbcgoodfood.com/recipes/pan-fried-sea-bass-citrus-dressed-broccoli (fetched 2026-04-24)
-**Serves**: 2 · **Prep**: 10 min · **Cook**: 10 min
-
-**Ingredients**
-- 2 sea bass fillets, about 140 g each
-- 1 small head broccoli, cut into florets
-- 1 orange
-- 6 tbsp olive oil
-- 4 tbsp small capers
-- 6 anchovies, roughly chopped
-- 1 lemon
-- Salt and pepper
-
-**Method**
-1. Trim each fillet to a uniform shape. Score the skin 5 or 6 times at 1 cm intervals,
-   cutting slightly into the flesh.
-2. Segment the orange; squeeze remaining juice into a bowl.
-3. Cook broccoli in boiling salted water for 1 minute; drain and tip straight into a hot dry
-   frying pan to evaporate moisture. Turn off heat. Add orange segments; toss briefly. Dress
-   with the squeezed orange juice, 2 tbsp olive oil, salt and pepper. Set aside.
-4. Wipe out the pan. Season the fish just before cooking. Heat until very hot; add 2 tbsp oil.
-   Lay fillets skin-side down. Press down immediately to prevent curling.
-5. Reduce heat to medium. Cook undisturbed for 3–4 minutes until flesh is cooked two-thirds
-   of the way through and the skin is crisp and brown.
-6. Insert the MEATER probe laterally from the thick edge.
-7. Flip; cook flesh side about 2 minutes until just done, basting the skin with oil.
-8. **Pull at 58–60 °C (136–140 °F).** "Cooked two-thirds through" on the skin side is
-   approximately 50–55 °C; the 2-minute flesh-side cook reaches the pull point.
-9. Serve fish over the broccoli salad; scatter capers and anchovies. Squeeze lemon over.
-10. Final serving temperature: **60–63 °C / 140–145 °F**.
-
----
-
-### 4. Branzino in Padella con Zucchine al Salto e Salmoriglio (inspired by Giallozafferano)
-**Inspired by**: Giallozafferano (Italian culinary media);
-ricette.giallozafferano.it/Branzino-in-padella-con-zucchine-al-salto.html (fetched 2026-04-24)
-**Serves**: 4 · **Prep**: 30 min · **Cook**: 20 min
-
-**Ingredients**
-- 1 whole branzino (European sea bass), cleaned and filleted — or 4 skin-on fillets
-- Extra virgin olive oil
-- Salt and freshly ground pepper
-- **Salmoriglio sauce**: 60 ml (4 tbsp) extra virgin olive oil, 1 tbsp white wine vinegar,
-  juice of ½ lemon, 1 small garlic clove finely chopped, 1 tbsp flat-leaf parsley finely
-  chopped, ½ tsp dried oregano, salt
-- **Zucchine al salto**: 2–3 medium zucchine sliced into thin rounds; 1 garlic clove; olive
-  oil; salt and pepper; fresh mint leaves
-
-**Method**
-1. If using whole fish: remove scales, fins and intestines. Cut away head. Open fish like a book
-   and run knife along the central backbone; detach spine and main bones. Trim belly flap for a
-   uniform surface. Season flesh side with oil and salt.
-2. Prepare salmoriglio: combine oil, vinegar and lemon juice in a jug. Add garlic, parsley and
-   oregano; season with salt. Blend with a hand blender until smooth and creamy green.
-3. Zucchine al salto: heat oil in a skillet with a garlic clove. Once golden, add zucchine
-   slices. Sauté over high heat 5–7 minutes until golden but still slightly firm. Season; add
-   fresh mint off the heat.
-4. Heat a separate pan with a drizzle of olive oil. Lay branzino skin-side down. Press gently
-   with a spatula so the skin adheres fully.
-5. Insert the MEATER probe laterally from the thickest part of the fillet.
-6. Cook skin-side down for 8–10 minutes (depending on size) until a golden, crackling crust
-   forms. Turn fillet; turn off the heat. Leave for 5 minutes — residual heat finishes the
-   flesh side gently (*cottura delicata*, delicate cooking).
-7. **Pull at 58–60 °C (136–140 °F).** The Italian technique of turning off the heat and
-   resting in the pan avoids overcooking lean flesh; the probe confirms the residual cook
-   has reached the target before the resting period.
-8. Compose the plate: lay zucchine al salto as a base, place branzino golden-side up. Brush
-   generously with salmoriglio sauce.
-9. Final serving temperature: **60–63 °C / 140–145 °F** (Italian tradition: moist flesh,
-   crackling skin, salmoriglio).
-
----
-
-### 5. Tavada Fileto Levrek / Pan-Fried Sea Bass Fillet (inspired by Nefis Yemek Tarifleri)
-**Inspired by**: Nefis Yemek Tarifleri (Turkish community recipe site);
-nefisyemektarifleri.com/tavada-fileto-levrek/ (fetched 2026-04-24)
-**Serves**: 4–6 · **Prep**: 5 min · **Cook**: 10 min
-
-**Ingredients**
-- 5 levrek (sea bass) fillets, skin removed, pin-boned (have the fishmonger prepare these)
-- 1 tbsp (1 yemek kaşığı) butter (tereyağ)
-- 3 tbsp (3 yemek kaşığı) olive oil (zeytinyağı)
-- 4 garlic cloves (4 diş sarımsak), grated
-
-**Method**
-1. Add olive oil to the pan over medium heat; add butter and melt together.
-2. Add grated garlic. Cook briefly, stirring, so the garlic barely softens — do not let it burn
-   (yanmasın).
-3. Lay the sea bass fillets in the butter-oil. Cook for 5–6 minutes on the first side.
-4. Add a very small amount of salt to the upper (uncooked) face.
-5. Flip the fillets and cook a further 4 minutes on the other side.
-6. Insert the MEATER probe laterally from the thick edge of one fillet before the final flip.
-7. **Pull at 58–60 °C (136–140 °F).** Turkish household tradition uses a simple garlic-butter
-   pan fry; the total 9–10 minutes over medium heat in a butter-olive oil blend (which browns
-   at a lower temperature than pure oil) produces a golden exterior without burning.
-8. Serve immediately (afiyet olsun).
-9. Final serving temperature: **60–63 °C / 140–145 °F** (Turkish home-cooking tradition).
-
----
-
-### 6. Crispy Pan-Fried Fish (inspired by Nagi Maehashi)
-**Inspired by**: Nagi Maehashi, RecipeTin Eats;
-recipetineats.com/crispy-pan-fried-fish/ (fetched 2026-04-24)
-**Serves**: 2 · **Cook**: 5 min
-
-**Ingredients**
-- 2 thin fish fillets (sea bass or similar), about 150 g each, 1 cm thick, skin on or off
-- Salt and pepper
-- 35 g (¼ cup) plain/all-purpose flour
+- ¼ cup / 35 g plain or wholemeal flour
 - 1 tsp paprika (optional)
-- 2–3 tbsp vegetable or canola oil
+- 2–3 tbsp oil (vegetable or canola), enough to mostly thinly cover the base
 
 **Method**
-1. Pat fish fillets dry on both sides with paper towels — dry fish equals a crispier surface,
-   especially important with thawed frozen fish.
-2. Season both sides with salt and pepper.
-3. Mix flour and paprika on a flat plate. Coat the fish on both sides, pressing firmly so the
-   flour adheres, then shake vigorously to remove all excess (too much flour crisps then falls
-   off when flipped).
-4. Heat a heavy-based skillet (cast iron preferred) over medium-high heat until you see small
-   wisps of smoke. Add oil; swirl to coat — it will heat within seconds.
-5. Add the fish — it should sizzle immediately. Shake the pan gently. Cook for 2 minutes until
-   golden and crisp, pressing down gently.
-6. Insert the MEATER probe laterally from the thick edge before flipping.
-7. Flip; cook other side for 2 minutes until crisp and cooked through. If it sticks, do not
-   force — it releases naturally once the surface is set.
-8. **Pull at 58–60 °C (136–140 °F).** Nagi's 2+2-minute technique for 1 cm-thick fillets is
-   calibrated for just-cooked, moist flesh. For thicker sea bass (2+ cm), extend to 3+3 minutes.
-9. Serve immediately — the crust loses crispiness after 5 minutes.
-10. Final serving temperature: **60–63 °C / 140–145 °F** (Australian home-cooking, general
-    technique applicable to all thin white fish fillets).
+1. Pat the fish dry on both sides with scrunched paper towel — the source calls this "especially important if you are using thawed frozen fish".
+2. Season both sides well with salt and pepper ("key!").
+3. Mix flour and paprika on a plate; coat the fish on both sides pressing firmly so it adheres, then **shake off the excess** (excess flour crisps and then falls off when flipped).
+4. Heat a heavy-based skillet (cast iron or heavy non-stick) over **medium-high until you see wisps of smoke**; add oil, swirl, add the fish immediately — it should sizzle at once.
+5. Cook **2 minutes** on the first side, pressing gently, without moving the fish until it releases naturally.
+6. Flip and cook **2 minutes** on the second side. For fillets **2 cm or thicker the source extends this to 3 + 3 minutes**.
+7. The source's rule for this cut form: *"If it takes more than 5 minutes, you've overcooked it!"* It publishes **no internal temperature**; doneness is the crisp golden crust plus juicy flesh. House guidance (not the source's): probe laterally from the thick edge and **pull at 60 °C (140 °F)**, which carries to the 63 °C (145 °F) USDA line in the 1–2 minutes it rests before serving. Final serving temperature: **not stated by the source**.
+
+---
+
+### 2. Argiro Barbarigou — Λαβράκι σοτέ (Lavraki sauté, Greek)
+**Inspired by**: https://www.argiro.gr/recipe/lavraki-sote/ (fetched 2026-10-26). Argiro Barbarigou, argiro.gr (Greek chef and television cook; the source names the dish *σοτέ*, "sauté", but its technique is a skin-side-down sear with a single flip).
+**Serves**: 4 · **Prep**: not stated · **Cook**: under 5 min · **Rest**: not stated
+
+**Ingredients**
+- 4 sea bass fillets, **skin on**
+- A little olive oil; a little salt
+- **Mediterranean raw sauce**: ⅓ cup olive oil; 1 tbsp lemon juice; 5–6 cherry tomatoes, halved; 4 pinches soft sun-dried tomatoes, finely chopped; 1 pinch oregano; 1 clove garlic, crushed; parsley, chopped; basil, chopped; a few olive fillets; 2 tbsp finely grated parmesan; freshly ground pepper
+
+**Method**
+1. Dry the fillets very well on absorbent paper.
+2. Sprinkle and coat them with a little olive oil on both sides and season with salt.
+3. Heat a **non-stick pan over medium-high heat**.
+4. When it is properly hot, lay the fish **skin-side down** and press gently with a spatula so the skin touches the pan everywhere and the fillet stays flat.
+5. Cook **3 minutes**, until the skin is crisp, then carefully turn and cook the flesh side **for less than 2 minutes**.
+6. Mix all the sauce ingredients in a bowl, spread a layer on a shallow platter, and set the fish on it crisp-skin up.
+7. The source's only doneness test: *"Καταλαβαίνουμε ότι το ψάρι είναι έτοιμο όταν η σάρκα του δεν φαίνεται πλέον διάφανη"* — the fish is ready **when the flesh is no longer translucent**. It publishes **no internal temperature**. House guidance (not the source's): probe laterally from the thick edge and **pull at 60 °C (140 °F)**. Final serving temperature: **not stated by the source**.
+
+---
+
+### 3. Ioincucina (Cookaround blog) — Filetti di branzino al limone in padella (Italian)
+**Inspired by**: https://blog.cookaround.com/ioincucina/ricetta-filetti-di-branzino-al-limone-in-padella/ (fetched 2026-10-26). Ioincucina, Cookaround community blog (Italian).
+**Serves**: 4 · **Prep**: 10 min · **Cook**: 15 min · **Rest**: "a few seconds" under a lid
+
+**Ingredients**
+- 4 branzino (European sea bass) fillets
+- 1 lemon
+- 50 g flour
+- 1 bunch parsley, finely chopped
+- 1 tbsp extra virgin olive oil
+- 1 garlic clove
+- 1 pinch salt; 1 pinch white pepper
+
+**Method**
+1. Juice the lemon and chop the parsley. Remove any pin bones from the fillets, rinse, dry on absorbent paper and **dust them in flour**.
+2. Put a pan on the heat with the oil and the crushed garlic clove; when hot, lay the fillets **skin-side down** and cook **2–3 minutes over high heat**.
+3. Turn the fillets and cook **a further 1–2 minutes over a lower flame**.
+4. Off the heat, spoon the lemon juice over, scatter the parsley, cover with a lid **for a few seconds**, then serve at once.
+5. The source publishes **no internal temperature** and no numeric doneness cue; the cue is the thin golden crust and the short total time. House guidance (not the source's): probe laterally from the thick edge and **pull at 60 °C (140 °F)** — the flour crust keeps the surface from drying while the centre comes up. Final serving temperature: **not stated by the source**.
 
 ---
 
 ## Temperature consensus
 
-| Source | Pull temperature | Tradition / method |
-|--------|----------------|-------------------|
-| BBC Good Food — Ratatouille (UK/French) | 58–60 °C | 3–4 min skin side + 1 min flesh side |
-| BBC Good Food — Ginger-Chilli (Chinese) | 58–60 °C | 5 min skin side + 30–60 s flesh side |
-| BBC Good Food — Citrus Broccoli (Mediterranean) | 58–60 °C | 3–4 min skin + 2 min flesh |
-| Giallozafferano (Italian) | 58–60 °C | 8–10 min skin side + 5 min residual in turned-off pan |
-| Nefis Yemek Tarifleri (Turkish) | 58–60 °C | 5–6 min + 4 min in butter-olive oil blend |
-| RecipeTin Eats (Australian) | 58–60 °C | 2 min each side, flour-coated, 1 cm fillets |
+| Source | Published pull / doneness signal | Tradition and technique |
+|--------|--------------------------------|-------------------------|
+| RecipeTin Eats (Australia) | No temperature; "more than 5 minutes = overcooked"; 2 + 2 min for 1 cm fillets | Flour-dusted, heavy skillet, medium-high, one flip |
+| Argiro Barbarigou (Greece) | No temperature; ready when the flesh is no longer translucent; 3 min + <2 min | Skin-on fillet, non-stick pan, medium-high, pressed with a spatula |
+| Ioincucina / Cookaround (Italy) | No temperature; 2–3 min + 1–2 min; golden crust and short time | Flour-dusted fillet, garlic and oil, high then lower heat, lemon off the heat |
 
-**Consensus pull**: **58–60 °C (136–140 °F)** for moist, just-set flesh. USDA safe minimum
-for finfish is 63 °C (145 °F); fillets pulled at 58–60 °C reach 62–63 °C with brief resting.
+All three sources are time-and-appearance cooks: **not one of them publishes an internal
+temperature**, so this leaf can offer no observed temperature spread from its own sources —
+the finding is that the stovetop pan tradition for sea bass is entirely visual. What the
+three do agree on is the **one-and-a-half to two-to-one ratio** between the skin side and
+the flesh side (2 : 2 for a 1 cm generic fillet, 3 : <2 for a skin-on fillet, 2–3 : 1–2 for
+a floured one) and on a **single flip**. The Australian source is the only one that scales
+by thickness (3 + 3 min at 2 cm), which matters for this cut because a whole butterflied
+fish is closer to 2 cm than to 1 cm. Mapping to the engine: the 60 °C (140 °F) pull that
+sits in `FISH_MEDIUM`/`FISH_WELL_DONE` between them is **house guidance**, not a source
+value; the USDA 63 °C (145 °F) line is the cut's safety floor, and every source here cooks
+past the translucent stage that the Greek source uses as its endpoint. `recommended_doneness`
+for this method: **`well_done`**, matching the cut — the sources' cues (opaque flesh, no
+translucency, set crust) all describe fully cooked fish, and the Greek source explicitly
+rejects translucency.
 
-**Representative coding value**: **60 °C (140 °F)** as the nominal pull, practical range
-58–63 °C.
+## What makes this method special
 
-## Notes for cooking_data.py
+A pan transfers heat by conduction, and for sea bass that is decisive: the skin is thin
+enough that the contact layer passes 100 °C almost immediately, driving Maillard browning
+and rendering the subcutaneous fat in the first two minutes, while the flesh 25 mm above it
+is still climbing through the 40s. That steep one-sided gradient is why every source flips
+once and finishes briefly — continuing on the skin side would overcook the bottom fillet
+layer before the centre arrived, and the flesh side has no fat of its own to protect it. The
+Italian flour dusting is the interesting outlier: it dries the surface and adds a starch
+layer that browns earlier than skin, buying crust at a lower pan temperature, at the cost of
+the shatter-crisp skin the Greek version insists on. Because there is no basting fat from
+above, carryover is small but real — the thin fillet keeps cooking in its own heat for the
+minute or two before it reaches the plate, which is why pulling at 60 °C rather than 63 °C
+is the practical move.
 
-- `doneness`: `just_cooked`
-- `pull_temp_c`: 60
-- `pull_temp_range_c`: [58, 63]
-- `safety_level`: `safe` at 63 °C; `caution` below 60 °C
-- All traditions sear skin-side first. Scoring the skin (3–6 slashes) is universal practice.
-- The MEATER probe must be inserted laterally (from the edge) in thin fillets.
-- Italian technique (turn off heat, rest in pan) is effective for very thin fillets.
-- Skinless fillets (Turkish tradition) use the same temperatures but may be cooked
-  on both sides equally without the skin-first priority.
+## Data applied to cooking_data.py
+
+- `supported_methods`: `pan_sear` **already registered** for sea_bass (id 422) — no change needed; this is the leaf rewrite that removes the parent-profile copy.
+- `recommended_doneness`: no change proposed — cut level stays `well_done`; all three sources cook to opaque flesh, and the Greek source defines the endpoint as "no longer translucent".
+- No `method_temperature_ranges` override needed — no source publishes a numeric pull, so there is no observed per-method range to encode; the house-guidance 60 °C pull and the 63 °C safety floor sit inside the cut's existing `FISH_WELL_DONE` band.
+
+## Summary
+
+Pan-searing is the fastest way to cook a sea bass fillet and the only one that gives the
+skin a chance to crisp: three minutes skin-side down, under two minutes on the flesh side,
+one flip, no moving the fish until it releases. The lean flesh has no fat of its own to
+protect the upper face, so the flesh side gets a third to half the time of the skin side, and
+thickness — not weight — sets the clock. It is an excellent match for this cut when the fish
+is filleted and the skin is intact; without skin, or with a flour dusting, you trade the
+shatter for a softer golden crust. Judge it by opacity rather than by the clock once you know
+your pan, and probe from the edge if you want a number.
+
+> ✅ **CONFORMS TO TOR** — Verified 2026-10-26. Three fully saved source recipes from three distinct national traditions (Australia, Greece, Italy); the 4–6-source gate is **not** met (3) and is recorded as an open deduction rather than padded — a fourth European pan recipe was sought and not found fetchable this pass (BBC Good Food's pan-fried sea bass now returns only its subscription banner, GialloZafferano's *branzino in padella* returns a teaser body, Nefis Yemek Tarifleri's *tavada fileto levrek* renders its ingredient list in a widget that the fetch does not capture, and Cookaround's other branzino pan pages are community reprints of the one cited). Distinct-tradition gate met (AU/GR/IT). Every recipe carries attribution with fetch date, serves/prep/cook/rest line, quantities, numbered steps and an explicit pull line; **none of the three sources publishes an internal temperature**, and each says so in its own row, with the 60 °C pull marked as house guidance rather than passed off as a source value. Method-specific cut profile distinct from the parent hub and from the sibling leaves; "What makes this method special" covers the one-sided conduction gradient and carryover; Data applied is actionable; Summary ≤4 sentences without restating the table. Culinary Groups covered here: B (Australia, Greece, Italy); A, C and D are covered at cut level by the `steam` (China, Thailand, Japan), `grill` (Turkey) and `oven_roast` (Russia, Sweden) leaves.

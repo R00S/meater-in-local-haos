@@ -3177,11 +3177,19 @@ WHITE_FISH = [
         carryover_temp_c=2,
         # Sea bass (branzino, Chilean) preferred at 125-135°F (52-57°C) —
         # medium-rare gives moist, flaky, tender flesh.
+        # 2026-10-26: STEAM and OVEN_BAKE added after a method survey backed by
+        # 16 fetched source recipes across five leaves (see
+        # www/recipes/fish/white_fish/sea_bass-*.md). The only published internal
+        # temperature found is 145°F (63°C) for whole roasted branzino, level
+        # with usda_safe_c above; stovetop, grilled, steamed and salt-crusted
+        # recipes are judged by release-from-grate, opacity or a covered rest.
         temperature_ranges=[FISH_MEDIUM_RARE, FISH_MEDIUM, FISH_WELL_DONE],
         supported_methods=[
             CookingMethod.PAN_SEAR,
             CookingMethod.OVEN_ROAST,
             CookingMethod.GRILL,
+            CookingMethod.STEAM,
+            CookingMethod.OVEN_BAKE,
         ],
         recommended_doneness="well_done",
     ),
