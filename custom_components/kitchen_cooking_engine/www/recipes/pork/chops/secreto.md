@@ -11,9 +11,12 @@ usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
 methods:
+- braise
 - charcoal_grill
 - grill
+- oven_roast
 - pan_sear
+- sous_vide
 doneness:
 - name: medium
   target_c: 63
@@ -32,9 +35,9 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 8
-cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-27
+quality_score: 11
+cooking_methods_researched: 1 # Enum-wide survey 2026-10-26, fetched sources for this exact cut. Confirmed+leafed: pan_sear, grill, charcoal_grill, oven_roast, braise, sous_vide. Queued leads (widening before leafing): air_fryer (recetasairfryernuria.com plancha-style air-fryer page; Cookpad "Secreto Ibérico en Airfryer"), slow_cooker (Cookpad "Secreto de cerdo en Crockpot"), smoker (informal social posts only: smoked at 250 °F to 125 °F internal, then grilled to 135 °F), pressure_cooker (Katy's guisado uses a pressure pot as a braise variant — no separate pressure-cooker recipe found). Documented negatives 2026-10-26: steam, poach, simmer, boil, saute — no cut-specific recipes found in the traditions searched; oven_bake/oven_broil treated as oven_roast variants for this cut (Recetas con Sazón's grill-function finish is recorded inside oven_roast).
+quality_assessed: 2026-10-26
 rest_time_min: 5
 rest_time_max: 10
 carryover_temp_c: 3
@@ -45,6 +48,16 @@ carryover_temp_c: 3
 
 The *secreto* (Spanish: "secret") is cut from the junction between the shoulder blade and the belly of the Iberian pig — the *serratus ventralis* and *subscapularis* muscles in the deepest layer of the shoulder, running diagonally. It is called "secret" because it is hidden beneath the outer shoulder and was historically an undiscovered, unadvertised cut consumed by the butcher. Standard dimensions: roughly 30–40 cm long × 5–8 cm wide × 1–2 cm thick; irregular in shape, covered with coarse intramuscular fat seams. In Iberian-breed pigs specifically, the fat carries acorn-derived oleic acids and the characteristic *bellota* aroma. Non-Iberian secreto has similar structure but milder flavour.
 
+### Per-method temperature application (researched 2026-10-26)
+
+| Method | Leaf | Sources | Observed numerical evidence | Measured band | Gate status |
+|---|---|---|---|---|---|
+| Pan sear | [pan_sear](./secreto-pan_sear.md) | 5 | 55–60 °C "rosa / medium rare" (CH); four sources silent | 55–60 °C | ⚠️ distinct row open (ES ×2, CH ×2) |
+| Grill | [grill](./secreto-grill.md) | 4 | 135–140 °F pull → 145 °F served (US) | 57–63 °C | ✅ CONFORMS (4 traditions) |
+| Charcoal grill | [charcoal_grill](./secreto-charcoal_grill.md) | 3 | 65 °C kamado core target (IT) | 65 °C | ⚠️ count row open |
+| Oven roast | [oven_roast](./secreto-oven_roast.md) | 3 | none — 50–60 min colour endpoints at 180–200 °C | — (house 68 °C) | ⚠️ count + distinct open (ES ×2) |
+| Braise | [braise](./secreto-braise.md) | 3 | none — strips/dice simmered minutes in sauce | — (no probe in tradition) | ⚠️ count + distinct open (ES ×2) |
+| Sous vide | [sous_vide](./secreto-sous_vide.md) | 3 | 55 °C/2 h (US), 57 °C/24 h (NL), 62 °C/3 h (IT) | 55–62 °C (bath = core) | ⚠️ count row open |
 
 ## Styckesprofil
 
@@ -54,27 +67,41 @@ Köttet är extremt marmorerat med distinkt intramuskulärt fett och en unik fj�
 
 ## Research files by cooking method
 
-- [Pan Sear](./secreto-pan_sear.md)
+- [Braise](./secreto-braise.md) — 3 sources (ES ×2, international home blog); ⚠️ count + distinct open
+- [Charcoal Grill](./secreto-charcoal_grill.md) — 3 sources (US, IT, NL-braai technique); ⚠️ count open
+- [Grill](./secreto-grill.md) — 4 sources (ES, US, BE, NO); ✅ both gates met
+- [Oven Roast](./secreto-oven_roast.md) — 3 sources (ES ×2, JP); ⚠️ count + distinct open
+- [Pan Sear](./secreto-pan_sear.md) — 5 sources (ES ×2, DE, CH ×2); ⚠️ distinct row open
+- [Sous Vide](./secreto-sous_vide.md) — 3 sources (IT, US, NL); ⚠️ count open
+
 ## Quality score
 
-**Score: 8 / 20** — assessed 2026-04-27
+**Score: 11 / 20** — assessed 2026-10-26 (was 8 on 2026-04-27)
 
 | Criterion | Status |
 |-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Pan sear cut profile method-specific | ✓ (fixed 2026-04-27) |
-| charcoal_grill leaf missing | − missing (−1) |
-| grill leaf missing | − missing (−1) |
-| Culinary Group A covered | − missing (−1) |
-| Culinary Group C covered | − missing (−1) |
-| Culinary Groups B, D | ✓ |
+| Cooking methods not researched | ✓ fixed 2026-10-26 (enum-wide survey, `cooking_methods_researched: 1`) |
+| Culinary Group A covered | ⚠️ thin — JP in oven_roast **only** (1 of 6 leaves); single-leaf coverage is not whole-cut coverage — − **−1** |
+| Culinary Group B covered | ✓ (ES, US, BE, DE, CH, IT, NL across all six leaves) |
+| Culinary Group C covered | − missing — the braai technique in charcoal_grill is recorded as technique origin for a modern-European plate and not counted as Group C | − **−1** |
+| Culinary Group D covered | ✓ (NO in grill) |
+| `## Cut profile` + anatomy | ✓ (*serratus ventralis* / *subscapularis*, seam-fat structure) |
+| Method leaf files exist | ✓ (6 leaves, was 1) |
+| Safe temperature research evidence | ✓ (explicit pull line in every leaf; house guidance marked where sources publish none) |
+| Preferred-temperature research evidence | ✓ (55–60 °C pan_sear; 57–60→63 °C grill; 65 °C charcoal; 55–62 °C sous_vide) |
+| Per-method temperature data | ✓ (table in Cut profile above) |
+| Leaf files below the 4-source count (charcoal_grill 3, oven_roast 3, braise 3, sous_vide 3) | − **−4** |
+| Leaf files failing the distinct-tradition gate (binary): pan_sear (ES ×2, CH ×2), oven_roast (ES ×2), braise (ES ×2 + ambiguous attribution) | − **−3** |
 
-**Deductions**: −8 methods · −2 missing leaves · −1 Group A · −1 Group C = −12 → **8**
+**Deductions**: −1 Group A thin · −1 Group C · −4 source counts · −3 distinct-tradition rows = −9 → **11**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
-2. **−1 each** · Missing `secreto-charcoal_grill.md`, `secreto-grill.md`
-3. **−1 each** · Groups A, C missing
+1. **−1 each** · Raise `charcoal_grill`, `oven_roast`, `braise` and `sous_vide` to the 4-source count — one further fetched source per leaf (Portuguese *grelhado*/German grill for charcoal; Portuguese *assado* or a German/Scandinavian oven source; Portuguese *estufado* or Greek *stifado* for braise; a Spanish/German precision-cooking page — dehesium.com is a preserved lead — for sous_vide)
+2. **−1 each** · Clear the three distinct-tradition rows: one non-Spanish, non-Swiss plancha source (pan_sear), one non-Spanish oven source (oven_roast), one unambiguous non-Spanish braise source (braise)
+3. **−1** · Group C source for the cut anywhere (a true South-African *braai* secreto plate, or Moroccan/Turkish/Caribbean treatment) — the −1 stands as documented gap until a source is fetched
+4. **−1** · Group A depth — a second method carrying a Japanese/Korean/Chinese/Thai source (currently only the oven_roast roulade)
+5. Queued method leads to widen next pass: `air_fryer` (recetasairfryernuria.com, Cookpad), `slow_cooker` (Cookpad Crockpot), `smoker` (informal social posts), `pressure_cooker` (none separate from braise)
+6. Cut-level doneness decision queued for one deliberate pass: the measured 55–62 °C cluster is now three leaves strong (sous_vide ×3 measured, pan_sear 55–60 °C, grill 57–60 °C pull) against a whole-cut `well_done` default; method keys already read `medium` for grill, charcoal_grill and sous_vide. Not changed piecemeal.
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

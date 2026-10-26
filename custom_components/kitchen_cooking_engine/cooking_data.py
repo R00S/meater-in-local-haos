@@ -1739,6 +1739,12 @@ PORK_CHOPS = [
             CookingMethod.PAN_SEAR,
             CookingMethod.GRILL,
             CookingMethod.CHARCOAL_GRILL,
+            # Method survey 2026-10-26 (enum-wide, fetched sources for this exact cut):
+            # oven_roast (3 src: ES x2/JP), braise (3 src: ES x2/international home blog),
+            # sous_vide (3 src: IT/US/NL — measured 55-62 C baths).
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.BRAISE,
+            CookingMethod.SOUS_VIDE,
         ],
         recommended_doneness="well_done",
     ),
