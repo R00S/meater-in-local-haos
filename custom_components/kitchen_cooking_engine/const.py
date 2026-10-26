@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 26 Oct 2026
-Last Change: v0.10.2.28 - complete the arctic char cut's method coverage: new leaves for grill, oven bake, sous vide and smoker from eighteen newly fetched records (22 records across five leaves), with the fillet-versus-whole-fish split in the temperature evidence recorded rather than averaged into one band and the smoker leaf left below the four-source minimum with its searches and two rejected candidates written down; the potential sweep now reports authored open gaps alongside derived ones; CHORES (version bump, branch history, panel regen)
+Last Change: v0.10.2.29 - CHORES: the user guide's contribution template caught up with the new instructions - a `## Data state and gaps` ledger section with its `<!-- ledger-state: ... -->` snapshot in the cut template, provenance marks on every method step, the lead-versus-source and machine-text rules in the sourcing list, and a pointer to the generated queue instead of a score
 """
 
 DOMAIN = "kitchen_cooking_engine"
