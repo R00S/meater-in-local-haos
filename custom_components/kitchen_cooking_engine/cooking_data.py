@@ -5178,6 +5178,12 @@ GOAT = [
         supported_methods=[
             CookingMethod.PAN_SEAR,
             CookingMethod.GRILL,
+            # 2026-10-26 (twenty-first cut-improvement pass): oven_broil declared
+            # from fetched records (an Indian-style broiler-only chop at 145 F and
+            # a US bake-then-broil chop). The cut stays medium_rare in its bands;
+            # note that the whole fetched corpus (130-145 F) contradicts the
+            # well_done recommendation below - queued for a doneness pass.
+            CookingMethod.OVEN_BROIL,
         ],
         recommended_doneness="well_done",
     ),
