@@ -110,6 +110,27 @@ smeten i stället för att förväntas komma från köttet. I det hämtade mater
 - [Oven Bake](./ground_moose-oven_bake.md) — 4 sources (CA, US, FI, SE); ✅ count + distinct met; carries the 150 °F vs 160 °F contradiction
 - [Simmer](./ground_moose-simmer.md) — 4 sources (SE ×3, FI); ⚠️ distinct row open; 10-minute meatball braise to 6-hour moose ragù
 
+## Data state and gaps
+
+<!-- ledger-state: leaves=4 sources=16 silent=11 silent_leaves=1 methods=grill,oven_bake,pan_fry,simmer -->
+
+State on 2026-10-26: four leaves, sixteen source records, eleven of them declaring that they publish
+no internal temperature, one leaf with no temperature anywhere in its records, two source records
+carrying doneness advice that is unsafe for ground meat.
+
+| gap | status | evidence | effort | yield |
+|---|---|---|---|---|
+| `leaf_without_any_temperature` | open | `ground_moose-simmer.md` - four records, none publishes a °C target | M | the cut's simmer method has no measurement at all; a Nordic or Baltic source that probes would be the first number on it |
+| `recorded_unsafe_source` | open | `ground_moose-grill.md` ("rare to medium rare", "medium doneness"), `ground_moose-oven_bake.md` (150 °F) | S | re-check the three pages for updates; if unchanged, keep them excluded and say so |
+| `group_A_absent` | searched-negative | "minced moose curry", "hirvenjauheliha curry", "котлеты из лосятины соус" - no citable Group A record using moose mince | - | none; a moose-specific South Asian or East Asian recipe does not appear to exist in a citable form |
+| `group_C_absent` | searched-negative | "moose mince tagine", "elk kefta", "ground moose berbere" - nothing citable | - | none |
+| `braise_unresolved` | open | the cut declares `simmer`, not `braise`; a sealed-pot moose-mince ragù was found only in Finnish oven forms | M | would justify re-adding `braise` as its own method with evidence |
+| `system_backlog:confit` | not applicable | confit is a goose/duck method; recorded here only because the same pass discovered it on `goose_thigh` | L | - |
+
+Not derivable by the sweep, recorded here so the next pass inherits it: the eleven silent records are
+eight Nordic/Russian pan-fry and simmer records plus two Nordic oven records and one grill record; the
+corpus for this cut measures temperatures only in the North American burger and meatloaf records.
+
 ## Quality score
 
 **Score: 15 / 20** — assessed 2026-10-26 (was 8 when the cut was created the same day, with no leaves)
