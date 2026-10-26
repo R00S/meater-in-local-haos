@@ -2759,7 +2759,10 @@ GOOSE = [
             CookingMethod.OVEN_ROAST,
             CookingMethod.BRAISE,
         ],
-        recommended_doneness="well_done",
+        # Was "well_done", which this cut does not define — its bands are `safe` and
+        # `dark_meat_optimal` (POULTRY_SAFE / POULTRY_DARK_MEAT). Corrected 2026-10-26;
+        # the fetched corpus puts goose thigh at 75-85 C with 80 C as the practical point.
+        recommended_doneness="dark_meat_optimal",
     ),
     MeatCut(
         id=348,
