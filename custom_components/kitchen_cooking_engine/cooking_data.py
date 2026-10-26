@@ -4894,6 +4894,32 @@ MOOSE = [
         ],
         recommended_doneness="medium_rare",
     ),
+    # Added 2026-10-26 (user request): moose had whole-muscle cuts only (steak,
+    # roast) while every other minced meat in the project is selectable. Minced
+    # game is ground meat, so the safety target is the ground-meat one (71 C /
+    # 160 F), NOT the 63 C / 145 F whole-muscle target used by moose_steak and
+    # moose_roast: grinding distributes surface bacteria through the mass, and
+    # that is why the only doneness band offered here is well_done.
+    MeatCut(
+        id=642,
+        name="ground_moose",
+        name_long="Minced Moose",
+        cut_order=3,
+        estimated_thickness_mm=20,
+        usda_safe_c=71,  # Ground meat must be 160 F
+        usda_safe_f=160,
+        rest_time_min=2,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[DONENESS_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.GRILL,
+            CookingMethod.OVEN_BAKE,
+            CookingMethod.BRAISE,
+        ],
+        recommended_doneness="well_done",
+    ),
 ]
 
 BUFFALO = [

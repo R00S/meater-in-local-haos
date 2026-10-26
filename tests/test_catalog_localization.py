@@ -80,7 +80,8 @@ class CatalogLocalizationTests(unittest.TestCase):
         cls.generated_panel = GENERATED_PANEL.read_text(encoding="utf-8")
 
     def test_canonical_cut_names_have_danish_parity(self) -> None:
-        self.assertEqual(len(self.overviews), 186)
+        # 187 after ground_moose (Minced Moose) was added on 2026-10-26.
+        self.assertEqual(len(self.overviews), 187)
         missing = [
             str(path.relative_to(ROOT))
             for path, data in self.overviews
@@ -98,7 +99,8 @@ class CatalogLocalizationTests(unittest.TestCase):
         self.assertEqual(len(meats), 35)
         self.assertEqual(len(cut_types), 48)
         self.assertEqual(len({cut_type["name"] for cut_type in cut_types}), 42)
-        self.assertEqual(len(cuts), 186)
+        # 187 after ground_moose (Minced Moose) was added on 2026-10-26.
+        self.assertEqual(len(cuts), 187)
 
         for collection in (categories, meats, cut_types, cuts):
             self.assertTrue(all(item.get("name_da") for item in collection))
@@ -133,7 +135,8 @@ class CatalogLocalizationTests(unittest.TestCase):
         )
 
         protein_cuts = [cut for cuts in self.protein_subcats.values() for cut in cuts]
-        self.assertEqual(len(protein_cuts), 159)
+        # 160 after ground_moose (Minced Moose) was added on 2026-10-26.
+        self.assertEqual(len(protein_cuts), 160)
         self.assertTrue(all(cut.get("name_da") for cut in protein_cuts))
         self.assertEqual(set(self.protein_labels_da), set(self.protein_subcats))
         self.assertTrue(all(self.protein_labels_da.values()))

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 26 Oct 2026, 22:12 CET
+ * AUTO-GENERATED: 26 Oct 2026, 23:07 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 26 Oct 2026, 22:12 CET
+// Last generated: 26 Oct 2026, 23:07 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -3872,6 +3872,13 @@ const AI_PROTEIN_SUBCATS = {
       "cat": "p",
       "name_sv": "Kängurufilé",
       "name_da": "Kængurubøf"
+    },
+    {
+      "id": "ground_moose",
+      "name": "Minced Moose",
+      "cat": "p",
+      "name_sv": "Älgfärs",
+      "name_da": "Hakket elgkød"
     },
     {
       "id": "moose_roast",
@@ -129666,6 +129673,9 @@ const RECIPE_INDEX = {
     "pan_sear": "/kitchen_cooking_engine_panel/recipes/game/kangaroo/kangaroo_steak-pan_sear.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/game/kangaroo/kangaroo_steak.md"
   },
+  "ground_moose": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/game/moose/ground_moose.md"
+  },
   "moose_roast": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/game/moose/moose_roast-oven_roast.md",
     "smoker": "/kitchen_cooking_engine_panel/recipes/game/moose/moose_roast-smoker.md",
@@ -130110,6 +130120,7 @@ const CUT_PROFILES = {
   "goat_shoulder": "Goat shoulder (Swedish *getskuldra* / *getbog*) is the upper foreleg — heavily worked, dense with collagen and intramuscular fat. Like the lamb shoulder, it is a quintessentially low-and-slow cut: tough beyond chewing if cooked to medium-rare, but transformed by long, wet cooking into fork-tender, gelatin-rich meat that pulls in long strands. Internal temperature is necessary but insufficient: the cut needs time at 88–93 °C internal for 2–3 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, away from bone or large connective sheets.",
   "kangaroo_fillet": "The kangaroo fillet (also called backstrap or loin fillet) is the longissimus dorsi muscle running along each side of the spine of the *Macropus* species. It is the most prized kangaroo cut: consistently the most tender due to the spine-parallel muscle orientation and low load-bearing, with a fine grain and deep crimson colour from elevated myoglobin and iron content. Fat content is exceptionally low (under 1.5%), which makes the backstrap the leanest of all common red meat cuts. That same leanness demands very short cooking times at high heat — 2–3 minutes per side in a very hot pan or over a high direct grill — to produce a caramelised exterior while keeping the interior rare to medium-rare. Beyond medium, the tight fibres seize entirely and the meat becomes liver-textured and dry. Unlike the kangaroo rump steak (which can handle slightly longer cooking due to higher collagen content), the backstrap/fillet must be pulled quickly; carryover is typically only 2–4°C / 4–7°F due to the very thin, lean profile. Kangaroo fillet is widely used in Australian bush-to-table cuisine, and is available in specialty game meat shops across Europe and Southeast Asia.",
   "kangaroo_steak": "Kangaroo (*Macropus* spp.) steak, most commonly from the hindquarter/rump or loin fillet, is one of the leanest red meats available — typically less than 2% fat. The meat is deep crimson, with a slightly gamy, iron-rich flavour. Because of its extreme leanness, kangaroo must be cooked hot and fast to prevent drying: pan-searing for 2–3 minutes per side over high heat achieves a seared crust while keeping the interior rare to medium-rare. Cooking beyond medium results in a dry, liver-textured product.\n\n\nTarget internal temperature: **54–57 °C (130–135 °F)** for medium-rare. Many Australian cooks pull at 50–52 °C for a warm-red centre. Well-done is strongly discouraged.",
+  "ground_moose": "Minced moose (*älgfärs*, *hakket elgkød*) is the moose equivalent of ground beef: loin,\nhaunch and shoulder trim put through a grinder, sold loose or formed into patties, meatballs\nand burger shapes. It is even leaner than the whole-muscle cuts it comes from — moose carries\nalmost no intramuscular fat, so mince is typically blended with pork fat, cream, or stock to\nkeep it from crumbling, which is why Nordic mince recipes so often pair it with cream, egg and\npotato flour rather than treating it as a plain burger.\n\n**This is ground meat, not a whole muscle, and the temperature rule changes with that.** The\nwhole-muscle moose cuts in this project target 63 °C / 145 °F, because bacteria stay on the\nsurface of an intact steak. Grinding spreads that surface through the mass, so the USDA\nground-meat minimum applies: **71 °C / 160 °F**, and there is no rare or medium-rare option\nhere the way there is for a moose steak. Carryover is small (1–2 °C) because a thin patty or a\nloose pan of mince transfers heat quickly, so pull at the target rather than below it.\n\nLean game mince also dries fast once it passes the safety point: the same rule that makes rare\nmoose steak good makes well-done moose mince dry, so fat or liquid has to be built into the\nmixture rather than relied on from the meat.",
   "moose_roast": "Moose (*Alces alces*) — called älg in Swedish, elg in Norwegian, and Elch in German — is the largest deer species in the Northern Hemisphere. The hindquarter roast (haunch/shoulder) has deep, dark red meat with minimal fat and a distinctive game flavour. Moose roast is best cooked slowly: high initial heat to develop a crust, then low, slow oven roasting (125–160 °C) with basting, aiming for a core temperature that gives a pink but safe result. The Swedish tradition uses cream and lingonberry as accompaniments.\n\n\nTarget internal temperature: **60–65 °C (140–149 °F)** for medium (pink centre); **70 °C (158 °F)** for fully cooked. The Swedish national tradition prefers 60–65 °C.",
   "moose_steak": "Moose steak (Elchsteak / älgbiff) is cut from the loin or haunch. It is very lean with a rich, earthy flavour. Grilling over high heat for a short time is the traditional Nordic approach; the meat should be seared quickly and pulled at medium-rare to prevent dryness. Marinating in oil and acidic components (wine, vinegar, lemon) before grilling is standard practice.\n\n\nTarget internal temperature: **57–62 °C (135–144 °F)** for medium-rare to medium.",
   "rabbit_legs": "Rabbit (*Oryctolagus cuniculus*) legs (front and hind) are the most commonly braised cut. The hind legs carry more meat and are the prime braising cut; the front legs are often included for flavour. Rabbit is lean, low in fat, and prone to drying if overcooked — braising in wine, stock, or cream keeps the meat moist while allowing the connective tissue to break down.\n\nThe French tradition (lapin aux pruneaux, lapin à la moutarde) is the most internationally recognised; German, Italian, and British traditions also have strong recipes. Braising time: 45–75 minutes. The meat should be fork-tender and pulling away from the bone.\n\n\nTarget internal temperature: **74–77 °C (165–175 °F)** — rabbit, like chicken, should be cooked through. Fork-tender braised rabbit reads 74–80 °C.",
@@ -130300,6 +130311,7 @@ const CUT_PROFILES_SV = {
   "goat_shoulder": "Getaxel (*getskuldra* / *getbog*, svenska) är den övre frambenet — hårt arbetat, tätt med kollagen och intramuskulärt fett. Som lammaxeln är det ett quintessentiellt lågt-och-långsamt-snitt: för segt att äta om det tillagas till medium-rare, men förvandlat av lång, fuktig tillagning till gaffelömt, gelatin-rikt kött.\n\nInnertemperaturen är nödvändig men otillräcklig: snittet behöver tid vid 88–93 °C i 2–3 timmar efter att ha nått den temperaturen. Sond horisontellt genom den tjockaste delen av muskeln, borta från ben eller stora bindvävsark. Innertemperatur: **88–93 °C** (190–199 °F). Eftertillagning: försumbar.",
   "kangaroo_fillet": "Känguru-filé (ryggsträng eller *loin fillet*) är *longissimus dorsi*-muskeln längs var sida av ryggraden på *Macropus*-arterna. Det är det mest uppskattade känguru-snittet: konsekvent mörast tack vare låg belastning, fin fiber och djup karmosinröd färg från förhöjt myoglobin- och järninnehåll. Fettinnehållet är exceptionellt lågt (under 1,5 %).\n\nDenna magerhet kräver mycket korta tillagningstider vid hög värme — 2–3 minuter per sida i en mycket het panna eller grill — för att producera en karameliserad yta och hålla insidan rare till medium-rare. Utöver medium låser de täta fibrerna och köttet blir torrt. Innertemperatur: **52–55 °C** (126–131 °F). Eftertillagning: 2–4 °C.",
   "kangaroo_steak": "Känguru (*Macropus* spp.) stek — vanligast från rumpen eller loin-filén — är ett av världens magraste röda kött (typiskt under 2 % fett), djupt karmosinrött med lätt viltaktig, järnrik smak. Den extrema magreten kräver hett och snabbt tillagning — pannstekning i 2–3 minuter per sida vid hög värme ger searad skorpa med rare till medium-rare inre.\n\nAlla tillagningsmetoder (grill, panna, ugn) kräver kortare tider och lägre sluttemperaturer jämfört med nötkött. Innertemperatur: **54–57 °C (130–135 °F)** för medium-rare. Välgenomstekt avråds starkt — kött som överstiger 63 °C torkar ut och förlorar sin karakteristiska konsistens.",
+  "ground_moose": "Älgfärs (*hakket elgkød*) är motsvarigheten till nötfärs: rygg, bakdel och bog körda genom\nkvarn, sålda lösa eller formade till biffar, köttbullar och burgare. Färsen är ännu magrare än\nhela musklerna — älg har nästan inget intramuskulärt fett — så den blandas typiskt med\nfläskfett, grädde eller buljong för att inte smula sönder, vilket är varför nordiska\nfärsrecept så ofta kombinerar den med grädde, ägg och potatismjöl.\n\n**Detta är malet kött, inte en hel muskel, och temperaturregeln ändras med det.**\nHelmuskelsnitten i projektet siktar på 63 °C / 145 °F eftersom bakterierna sitter på ytan av\nen intakt stek. Malningen fördelar ytan genom hela massan, så USDA:s gräns för malet kött\ngäller: **71 °C / 160 °F**, och det finns ingen rare- eller medium-rare-möjlighet här på samma\nsätt som för en älgbiff. Eftertillagningen är liten (1–2 °C) eftersom en tunn biff eller lös\nfärs i panna överför värme snabbt — dra vid måltemperaturen, inte under den.\n\nMager viltfärs torkar dessutom fort när den passerat säkerhetspunkten: samma regel som gör\nälgbiffen god vid rare gör älgfärsen torr vid well done, så fett eller vätska måste byggas in i\nsmeten i stället för att förväntas komma från köttet.",
   "moose_roast": "Ugnsrostad älgstek kräver omsorg på grund av magreten och viltsmakens känslighet för överkokning. Hög inledande värme för skorpa, sedan låg ugn (125–160 °C) med regelbunden pensling. Den svenska traditionen rostar älg till 60–65 °C inre temperatur — rosa, saftig och med mild viltsmak.\n\nKlassiska tillbehör: gräddsås, lingon, rödbetor, kokt potatis. Sondplacering: stick in i den tjockaste köttmassan, borta från ben. Innertemperatur: **60–65 °C (140–149 °F)** för medium (rosa mitt); **70 °C** för genomstekt. Eftertillagning: 4–6 °C. Dra stek 5–6 °C under måltemperatur och vila täckt i 15–20 minuter.",
   "moose_steak": "Älgstek (*Elchsteak* / älgbiff) skärs från ryggen eller haunch. Mycket magert med rik, jordig viltsmak. Grillning vid hög värme under kort tid är det traditionella nordiska tillvägagångssättet. Marinering i olja och syrliga komponenter (vin, vinäger, citron) rekommenderas för att mjuka upp fibern och tillföra fukt.\n\nTillagningstid: 3–4 minuter per sida vid direkt hög värme. Innertemperatur: **57–62 °C (135–144 °F)** för medium-rare till medium. Eftertillagning: 3–4 °C. Dra alltid tidigt — älg straffar hårt för överkokning: vid 68 °C börjar köttet torka och vid 74 °C är det tufft och torrliknande.",
   "rabbit_legs": "Kanin (*Oryctolagus cuniculus*) lår (fram och bak) är det vanligaste bräserade snittet. Bakbenen bär mer kött och är det primära braiseringsnittet. Slow cooker-metoden — LÅG i 6–7 timmar — ger identiska resultat med minimal tillsyn. Tillsätt vin, fond, lök, morötter, rosmarin och vitlök.\n\nKanin är mager, fettfattig och benägen att torka ut om överkokad — braiseringsvätska är avgörande för att förhindra uttorkning. Innertemperatur: **75–82 °C (167–180 °F)** för fullt genomstekt. Eftertillagning: noll (slow cooker). Sond i den tjockaste köttmassan i bakbenet.",
@@ -138723,6 +138735,28 @@ const EXP_TREE = {
             "name": "Moose",
             "cuts": [
               {
+                "id": "ground_moose",
+                "name": "Minced Moose",
+                "slug": "ground_moose",
+                "doneness": [
+                  "well_done"
+                ],
+                "name_sv": "Älgfärs",
+                "name_da": "Hakket elgkød",
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill",
+                  "oven_bake",
+                  "braise"
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160,
+                "rest_time_min": 2,
+                "rest_time_max": 5,
+                "carryover_temp_c": 2
+              },
+              {
                 "id": "moose_roast",
                 "name": "Moose Roast",
                 "slug": "moose_roast",
@@ -140827,6 +140861,7 @@ const EXP_RECIPE_INDEX = {
   "kangaroo_steak-grill": "game/kangaroo/kangaroo_steak-grill.md",
   "kangaroo_steak-pan_sear": "game/kangaroo/kangaroo_steak-pan_sear.md",
   "kangaroo_steak": "game/kangaroo/kangaroo_steak.md",
+  "ground_moose": "game/moose/ground_moose.md",
   "moose_roast-oven_roast": "game/moose/moose_roast-oven_roast.md",
   "moose_roast-smoker": "game/moose/moose_roast-smoker.md",
   "moose_roast": "game/moose/moose_roast.md",
@@ -152786,7 +152821,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "667";
+const PANEL_VERSION = "668";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
