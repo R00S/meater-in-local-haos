@@ -35,7 +35,7 @@ doneness:
   max_f: 150
   usda_safe: true
   recommended: true
-quality_score: 18
+improvement_potential: 18
 cooking_methods_researched: 1 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-10-25
 rest_time_min: 0
@@ -74,9 +74,9 @@ Svärdsfisk tolererar direkt hög grillvärme utan att falla isär och har en h�
 - [Oven Bake](./swordfish-oven_bake.md)
 - [Braise](./swordfish-braise.md)
 - [Sous Vide](./swordfish-sous_vide.md)
-## Quality score
+## Improvement potential
 
-**Score: 18 / 20** — assessed 2026-10-25 (from-scratch rescore after the 2026-10-25 collection pass: method survey discovered three methods beyond the declared list, six method leaves now exist — five of them written this session from 26 fetched sources — all four Culinary Groups are covered by fetched evidence, and cut-specific 145 °F evidence supports the USDA row. Supersedes the 2026-04-27 score 8. Every row below is re-derived from the criteria against evidence, not carried over (HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md Patterns 4, 9, 10). The two remaining points are lost on the distinct-tradition gate — real source-set duplication, agent work remaining, not a wall.)
+**Improvement potential: 18 / 20** — assessed 2026-10-25 (from-scratch re-read after the 2026-10-25 collection pass: method survey discovered three methods beyond the declared list, six method leaves now exist — five of them written this session from 26 fetched sources — all four Culinary Groups are covered by fetched evidence, and cut-specific 145 °F evidence supports the USDA row. Supersedes the 2026-04-27 number 8. Every row below is re-derived from the criteria against evidence, not carried over (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Patterns 4, 9, 10). The two remaining points are lost on the distinct-tradition gate — real source-set duplication, agent work remaining, not a wall.)
 
 | Criterion | Deduction |
 |-----------|----------|

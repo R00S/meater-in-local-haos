@@ -37,7 +37,7 @@ doneness:
   max_c: 95
   max_f: 203
   usda_safe: true
-quality_score: 19
+improvement_potential: 19
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 10
@@ -68,9 +68,9 @@ Denna fettrikedom gör det idealisk för långsam tillagning (sous vide, bräser
 - [Smoker](./pork_belly-smoker.md)
 - [Sous Vide](./pork_belly-sous_vide.md)
 
-## Quality score
+## Improvement potential
 
-**Score: 19 / 20** — assessed 2026-04-29
+**Improvement potential: 19 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -89,4 +89,4 @@ Denna fettrikedom gör det idealisk för långsam tillagning (sous vide, bräser
 1. **−1** · Group C missing — Group C tradition largely avoids pork; this gap may be permanent
 2. Fix `pork_belly-grill.md` cut profile — currently describes oven/braise operations ("positioned flat in the oven", "boils the belly first"); rewrite to describe grilling-specific technique
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

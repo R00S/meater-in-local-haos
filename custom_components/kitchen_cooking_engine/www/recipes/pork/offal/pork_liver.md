@@ -23,7 +23,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 11
+improvement_potential: 11
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 2
@@ -47,9 +47,9 @@ Pannstekning i smör vid hög värme är standardmetoden. Innertemperatur: **70�
 
 - [Pan Fry](./pork_liver-pan_fry.md)
 - [Pan Sear](./pork_liver-pan_sear.md)
-## Quality score
+## Improvement potential
 
-**Score: 11 / 20** — assessed 2026-04-27
+**Improvement potential: 11 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -66,4 +66,4 @@ Pannstekning i smör vid hög värme är standardmetoden. Innertemperatur: **70�
 1. **−8** · Cooking methods not researched
 2. **−1** · Group C tradition missing — find a Moroccan, Turkish, Lebanese, or African pork/liver recipe
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

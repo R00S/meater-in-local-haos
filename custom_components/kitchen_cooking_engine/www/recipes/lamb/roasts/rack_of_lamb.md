@@ -47,7 +47,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 18
+improvement_potential: 18
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 10
@@ -75,9 +75,9 @@ Sear all om i het panna (1–2 minuter per sida), belägg med senap och örtkorp
 ## Research files by cooking method
 
 - [Oven Roast](./rack_of_lamb-oven_roast.md)
-## Quality score
+## Improvement potential
 
-**Score: 18 / 20** — assessed 2026-04-29 (methods survey done; oven_roast leaf profile fixed; −1 Group A, −1 Group D remain)
+**Improvement potential: 18 / 20** — assessed 2026-04-29 (methods survey done; oven_roast leaf profile fixed; −1 Group A, −1 Group D remain)
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -94,4 +94,4 @@ Sear all om i het panna (1–2 minuter per sida), belägg med senap och örtkorp
 3. **−2** · Missing Culinary Group A and Culinary Group D tradition(s) — add Culinary Group A and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 4. **−1** · Method file `rack_of_lamb-oven_roast.md` copies parent cut profile — rewrite `rack_of_lamb-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -41,7 +41,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 19
+improvement_potential: 19
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 3
@@ -68,9 +68,9 @@ Fiberstrukturen innebär att skirt steak alltid måste skäras tvärs mot fibern
 - [Pan Fry](./skirt_steak-pan_fry.md)
 - [Pan Sear](./skirt_steak-pan_sear.md)
 
-## Quality score
+## Improvement potential
 
-**Score: 19 / 20** — assessed 2026-04-29
+**Improvement potential: 19 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -93,4 +93,4 @@ Fiberstrukturen innebär att skirt steak alltid måste skäras tvärs mot fibern
 
 1. **−1** · Missing Culinary Group D tradition — add a Scandinavian, Polish, Russian, or Baltic recipe to one of the leaf files. Skirt steak is not a traditional Group D cut; the closest equivalent is thin beef *biffstek* (Swedish), but that typically uses thicker cuts. Further probing needed.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

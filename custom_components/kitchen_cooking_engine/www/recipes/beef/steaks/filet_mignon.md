@@ -60,7 +60,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 10
+improvement_potential: 10
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 5
@@ -87,9 +87,9 @@ Filet mignon skärs från den smala änden (lilla änden) av nötfilén — den 
 - [Pan Fry](./filet_mignon-pan_fry.md)
 - [Pan Sear](./filet_mignon-pan_sear.md)
 - [Sous Vide](./filet_mignon-sous_vide.md)
-## Quality score
+## Improvement potential
 
-**Score: 10 / 20** — assessed 2026-04-26
+**Improvement potential: 10 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -103,4 +103,4 @@ Filet mignon skärs från den smala änden (lilla änden) av nötfilén — den 
 2. **−1** · Method file `filet_mignon-air_fryer.md` copies parent cut profile — rewrite `filet_mignon-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 3. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

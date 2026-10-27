@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 15
+improvement_potential: 15
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -57,9 +57,9 @@ Sik (*Coregonus* spp.; finska: siika; tyska: Felchen / Renke; franska: corégone
 - Grill — no research file yet
 - Smoker — no research file yet
 
-## Quality score
+## Improvement potential
 
-**Score: 15 / 20** — assessed 2026-05-31
+**Improvement potential: 15 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -80,4 +80,4 @@ Groups A and C absent — whitefish (*sik* / *Coregonus*) is a northern freshwat
 2. **−1** · Missing Culinary Group A tradition — search for Japanese, Chinese, or Korean whitefish preparations; *Coregonus* species exist in Siberia and the Far East.
 3. **−1** · Missing Culinary Group C tradition — search for any African, Arabic, Persian, or Caribbean whitefish preparation.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

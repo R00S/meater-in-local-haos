@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 14
+improvement_potential: 14
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -57,9 +57,9 @@ Lake (*Lota lota*; tyska: Trüsche; franska: lote; finska: made) är den enda s�
 - Smoker — no research file yet
 - Braise — no research file yet
 
-## Quality score
+## Improvement potential
 
-**Score: 14 / 20** — assessed 2026-05-31
+**Improvement potential: 14 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -81,4 +81,4 @@ Groups A and C absent — burbot is a circumpolar northern fish with no culinary
 3. **−1** · Missing Culinary Group A tradition — search for burbot recipes in northern Chinese / Amur basin cooking; add any found to a method leaf.
 4. **−1** · Missing Culinary Group C tradition — search for burbot in any African, Arabic, Persian or Caribbean context; add any found to a method leaf.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

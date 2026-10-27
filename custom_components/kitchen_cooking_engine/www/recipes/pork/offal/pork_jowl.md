@@ -24,7 +24,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -55,9 +55,9 @@ Färsk fläskkäk bräseras som fläskkind, till **85–90 °C (185–194 °F)**
 
 - [Braise](pork_jowl-braise.md) — 3 sources (all Culinary Group B; Groups A, C, D needed)
 
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Improvement potential: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Points | Status |
 |-----------|--------|--------|
@@ -76,4 +76,4 @@ Färsk fläskkäk bräseras som fläskkind, till **85–90 °C (185–194 °F)**
 1. **−8** · Cooking methods not researched — research the **grill** method for Korean-style hangjeongsal (항정살 / pork neck-jowl muscle grilled over charcoal); attempted sources (all 404): koreanbapsang.com, kimchimari.com, beyondkimchee.com, aeriskitchen.com, maangchi.com. Try: omnivorescookbook.com, seonkyounglongest.com (use browser search), or any Korean food magazine site. Once a grill leaf is created and both braise and grill methods are covered, set `cooking_methods_researched: 1`.
 2. **−3** · Missing Groups A, C, D — for braise: Group A (Chinese 红烧猪脸 hong shao zhu mian — red-braised pork face, try thewoksoflife or omnivorescookbook), Group C (Filipino pork cheek adobo — panlasangpinoy or pinoycookingrecipes), Group D (Czech dušená vepřová líčka — apetitonline.cz; or Lithuanian kiaulienos skruostai — receptai.lt)
 
-*Score will increase toward ~14/20 once Groups A, C, and D sources are added to the braise leaf, and toward ~17/20 once a grill leaf is created.*
+*Number will increase toward ~14/20 once Groups A, C, and D sources are added to the braise leaf, and toward ~17/20 once a grill leaf is created.*

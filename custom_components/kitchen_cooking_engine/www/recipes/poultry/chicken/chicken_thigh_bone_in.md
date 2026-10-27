@@ -47,7 +47,7 @@ doneness:
   max_f: 185
   usda_safe: true
   recommended: true
-quality_score: 8
+improvement_potential: 8
 cooking_methods_researched: 1 # Supported-method inventory reviewed 2026-10-24; all 17 listed methods have direct leaves. Simmer and poach confirmed; boil has recipe evidence with overlap; charcoal is a grill-fuel variant, not separately supported.
 quality_assessed: 2026-10-25
 rest_time_min: 5
@@ -97,18 +97,18 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum, **79 °C (175 °F)** rekomme
 | Sauté | `chicken_thigh_bone_in-saute.md` | ⚠️ Partial — 1 US/French-inspired source; covered finish makes method hybrid |
 | Charcoal grill variant | `chicken_thigh_bone_in-charcoal_grill.md` | Variant evidence only — charcoal is a fuel setup within `grill`, not a separate enum method |
 
-## Quality score
+## Improvement potential
 
-**Score: 8 / 20** — reassessed 2026-10-25, up from 6 on 2026-10-24. (The frontmatter had said
-`quality_score: 5` while that table computed 6 — a stale-number mismatch, the same defect fixed in
+**Improvement potential: 8 / 20** — reassessed 2026-10-25, up from 6 on 2026-10-24. (The frontmatter had said
+`improvement_potential: 5` while that table computed 6 — a stale-number mismatch, the same defect fixed in
 mackerel on 2026-10-24; frontmatter and body now agree.) The deduction scale is unchanged and no
-leaf was credited for anything it does not hold: the score rose because `grill` left the partial set
+leaf was credited for anything it does not hold: the number rose because `grill` left the partial set
 after gaining its fourth tradition (Jamaican jerk) and `pan_fry` reached four sources (North
 African), not because the scale was relaxed. `pan_fry` was deliberately **not** marked conformant —
 two of its four sources are US-based, so the strict tradition-diversity gate is still unmet and the
 −1 overlap deduction stands. Context: this file was reassessed from scratch on 2026-10-24 per
-`HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md`, deliberately not anchored to the previous 7 (Pattern 9
-— score momentum), because the old table used a +points scheme and a manual "net adjusted to 7"
+`HOW_I_INFLATE_CUT_FILES_AND_WHY.md`, deliberately not anchored to the previous 7 (Pattern 9
+— number momentum), because the old table used a +points scheme and a manual "net adjusted to 7"
 fudge that the deduction scale does not support.
 
 | Criterion | Deduction | Evidence |
@@ -136,4 +136,4 @@ Note on definitions: this file's `doneness` block gives `dark_meat_optimal` as t
 3. Resolve the endpoint divergence record: air_fryer sources span 165–195 °F and grill spans 160–165 °F; consider a `method_temperature_ranges` override for air_fryer once a 4–6-source collection exists.
 4. Re-fetch the Serious Eats cold-start skillet and air-fryer thigh pages (HTTP 403 on 2026-10-24) — they carry the only located US 175 °F pan-fry endpoint.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

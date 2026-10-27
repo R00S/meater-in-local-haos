@@ -33,7 +33,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 16
+improvement_potential: 16
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 10
@@ -66,9 +66,9 @@ Kalkontlår är den övre benets mörka köttssektion av kalkon, från höften t
 | braise | turkey_thigh-braise.md | pending (method confirmed applicable; tasteofhome.com source already in oven_roast leaf is technically an oven braise) |
 | smoker | turkey_thigh-smoker.md | pending (method applicable for turkey dark meat; dedicated turkey thigh smoker recipes not accessible — no dedicated URLs found across 40+ probes; confirmed applicable from heygrillhey.com/smoked-turkey-legs/ and smokedbbqsource.com/smoked-turkey-legs/ at 175°F) |
 
-## Quality score
+## Improvement potential
 
-**Score: 16 / 20** — assessed 2026-04-29
+**Improvement potential: 16 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -94,4 +94,4 @@ Kalkontlår är den övre benets mörka köttssektion av kalkon, från höften t
 4. Create `turkey_thigh-braise.md` — tasteofhome.com/recipes/braised-turkey-thighs/ is already accessible and confirms Group B; need 3+ more sources.
 5. Create `turkey_thigh-smoker.md` — applicable method; need 4+ accessible sources.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

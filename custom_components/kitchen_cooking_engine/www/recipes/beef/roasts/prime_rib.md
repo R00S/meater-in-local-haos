@@ -54,7 +54,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-28
 rest_time_min: 15
@@ -75,9 +75,9 @@ Prime rib (även kallat stående revbenstek) skärs från ribprimalen (revben 6�
 ## Research files by cooking method
 
 - [Oven Roast](./prime_rib-oven_roast.md)
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-28
+**Improvement potential: 9 / 20** — assessed 2026-04-28
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -92,4 +92,4 @@ Prime rib (även kallat stående revbenstek) skärs från ribprimalen (revben 6�
 1. **−8** · Cooking methods not researched
 2. **−3** · Groups A, C, D missing — 30+ URL probes on 2026-04-28: thewoksoflife.com, koreanbapsang.com, justonecookbook.com, koket.se (revbensstek, entrecotestek, rostbiff, hel-entrecote), ica.se (revbensstek), tasteline.com, arla.se — all 404. Prime rib as a standing rib roast concept is strongly Anglo-American; other traditions use rib cuts differently (Korean kalbi = grilled; Chinese = braised; Scandinavian rostbiff = small piece, no temp data).
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

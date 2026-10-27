@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 14
+improvement_potential: 14
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -57,9 +57,9 @@ Sjötunga (*Solea solea*; tyska: Seezunge; franska: sole; holländska: tong) är
 - Oven Bake — no research file yet
 - Grill — no research file yet
 
-## Quality score
+## Improvement potential
 
-**Score: 14 / 20** — assessed 2026-05-31
+**Improvement potential: 14 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -81,4 +81,4 @@ Groups A, C, D absent — sole pan_fry leaf covers Group B only (all 4 sources a
 3. **−1** · Missing Culinary Group C tradition — search for Turkish, Arabic or North African sole preparations.
 4. **−1** · Missing Culinary Group D tradition — sole is fished in the North Sea; search for Scandinavian/Baltic sole preparations.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

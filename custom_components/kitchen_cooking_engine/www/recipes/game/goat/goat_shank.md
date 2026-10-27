@@ -24,7 +24,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-quality_score: 19
+improvement_potential: 19
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 10
@@ -48,9 +48,9 @@ Getlägg skiljer sig från lammlägg i att get i allmänhet slaktas vid äldre �
 
 - [Braise](./goat_shank-braise.md)
 - [Oven Roast](./goat_shank-oven_roast.md)
-## Quality score
+## Improvement potential
 
-**Score: 19 / 20** — assessed 2026-04-29
+**Improvement potential: 19 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -73,4 +73,4 @@ Getlägg skiljer sig från lammlägg i att get i allmänhet slaktas vid äldre �
 1. **−1** · Missing Culinary Group A tradition — add an Indian, Pakistani, South Asian, or East Asian goat shank recipe to one of the leaf files. Goat (*bakra/bakri*) is very common in South Asian cuisines; Indian *gosht/mutton* stews often use shank. spiceupthecurry.com/swasthi.com are good targets when accessible.
 2. Create `goat_shank-slow_cooker.md` — applicable method (same role as braise); no accessible sources probed yet.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

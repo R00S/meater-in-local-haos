@@ -33,7 +33,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 11
+improvement_potential: 11
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 2
@@ -60,9 +60,9 @@ Alla tillagningsmetoder (air fryer, grill, ugn, fritering) kräver minst 74 °C 
 - [`chicken_wing-air_fryer.md`](chicken_wing-air_fryer.md) — 4 sources: Group A (Pailin/Thai), Group B (Natasha's Kitchen/USA, Skinnytaste/USA), Group C (Immaculate Bites/Cameroonian)
 - [`chicken_wing-grill.md`](chicken_wing-grill.md) — 2 sources, in-progress: Group B (Taste of Home/USA), Group C (Immaculate Bites/Cameroonian)
 - [`chicken_wing-oven_roast.md`](chicken_wing-oven_roast.md) — 1 source, in-progress: Group B (Taste of Home/USA)
-## Quality score
+## Improvement potential
 
-**Score: 11 / 20** — assessed 2026-04-27
+**Improvement potential: 11 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -85,4 +85,4 @@ Alla tillagningsmetoder (air fryer, grill, ugn, fritering) kräver minst 74 °C 
 3. **grill leaf in-progress** — add Group A and Group D sources to reach 4+ sources
 4. **oven_roast leaf in-progress** — add Groups A, C, D sources to reach 4+ sources
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

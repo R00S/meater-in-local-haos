@@ -32,7 +32,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 8
+improvement_potential: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 15
@@ -60,9 +60,9 @@ Bräsering eller ugnsrostning till **85–90 °C** är standardmålet för pull-
 - [Braise](./pork_leg-braise.md)
 - [Oven Roast](./pork_leg-oven_roast.md)
 - [Slow Cooker](./pork_leg-slow_cooker.md)
-## Quality score
+## Improvement potential
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Improvement potential: 8 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -80,4 +80,4 @@ Bräsering eller ugnsrostning till **85–90 °C** är standardmålet för pull-
 4. **−1** · Method file `pork_leg-oven_roast.md` copies parent cut profile — rewrite `pork_leg-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 5. **−1** · Missing Culinary Group C tradition(s) — add Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

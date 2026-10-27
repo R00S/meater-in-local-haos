@@ -24,7 +24,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-quality_score: 10
+improvement_potential: 10
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 15
@@ -49,9 +49,9 @@ Dessa egenskaper gör bogen idealisk för bräsering och slow cooking — metode
 - [Oven Roast](./venison_shoulder-oven_roast.md) — stub; oven roast recipes not yet sourced
 - [Slow Cooker](./venison_shoulder-slow_cooker.md) — stub; slow cooker recipes not yet sourced
 
-## Quality score
+## Improvement potential
 
-**Score: 10 / 20** — assessed 2026-04-27
+**Improvement potential: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -69,4 +69,4 @@ Dessa egenskaper gör bogen idealisk för bräsering och slow cooking — metode
 3. **−2** · No temperature consensus — add more sources; once 4+ per method, write analysis sections
 4. **−1** · Braise leaf incomplete — add 2–4 more braise sources from Groups A and C
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

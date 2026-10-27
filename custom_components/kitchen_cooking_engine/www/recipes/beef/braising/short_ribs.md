@@ -25,7 +25,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-quality_score: 8
+improvement_potential: 8
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -59,9 +59,9 @@ Koreanska revbensspjällstillagningar (galbi-jjim för brässering, galbi för g
 | Slow cooker | `short_ribs-slow_cooker.md` | ⬜ Not yet created |
 | Smoker | `short_ribs-smoker.md` | ⬜ Not yet created |
 
-## Quality score
+## Improvement potential
 
-**Score: 8 / 20** — assessed 2026-04-27
+**Improvement potential: 8 / 20** — assessed 2026-04-27
 
 | Criterion | Points | Status |
 |-----------|--------|--------|
@@ -80,5 +80,5 @@ Koreanska revbensspjällstillagningar (galbi-jjim för brässering, galbi för g
 2. **High** · Create `short_ribs-slow_cooker.md` — 4–6 source recipes from slow cooker traditions
 3. **Medium** · Create `short_ribs-smoker.md` — 4–6 BBQ/smoke traditions (Texas, Kansas City, Korean)
 
-*Score will increase to ~16/20 once the three remaining method leaves are complete.*
+*Number will increase to ~16/20 once the three remaining method leaves are complete.*
 

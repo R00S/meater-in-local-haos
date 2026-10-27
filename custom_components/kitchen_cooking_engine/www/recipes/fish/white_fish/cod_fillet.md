@@ -34,7 +34,7 @@ doneness:
   max_f: 150
   usda_safe: true
   recommended: true
-quality_score: 11
+improvement_potential: 11
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -60,9 +60,9 @@ Pannstekning är en mycket vanlig beredning — den höga ledningsvärmen i pann
 - [Oven Bake](./cod_fillet-oven_bake.md)
 - [Pan Fry](./cod_fillet-pan_fry.md)
 - [Smoker](./cod_fillet-smoker.md)
-## Quality score
+## Improvement potential
 
-**Score: 11 / 20** — assessed 2026-05-31
+**Improvement potential: 11 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -82,4 +82,4 @@ Methods survey incomplete — `cooking_methods_researched: 0` means the declared
 1. **−8** · Complete broad method-survey research for cod fillet; update `cooking_methods_researched` to `1` only when thorough.
 2. **−1** · Missing method leaf file — create `cod_fillet-oven_roast.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from verified sources.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 26 Oct 2026
-Last Change: v0.10.2.31 - revert of the potential-queue system: IMPROVE_CUT_FILES.md, RECIPE_COLLECTION_TOR.md, HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md, CHORES.md and the user guide are restored byte-for-byte from 762b9c34 (the commit before the rewrite), and the sweep and its generated queue are removed; research data and leaves written during that period are kept
+Last Change: v0.10.2.32 - the cut metric is renamed to improvement potential: the number itself is unchanged (20 = nothing left to earn, lower = more potential) and only its name changed, across IMPROVE_CUT_FILES.md, RECIPE_COLLECTION_TOR.md, the renamed HOW_I_INFLATE_CUT_FILES_AND_WHY.md, the user guide and all 187 cut hubs (field `improvement_potential`, section `## Improvement potential`); no hub number was recomputed
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -17,7 +17,7 @@ SUPPORTED_LANGUAGES = ("en", "sv", "da")
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "677"
+PANEL_VERSION = "678"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

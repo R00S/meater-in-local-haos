@@ -31,7 +31,7 @@ doneness:
   max_f: 190
   usda_safe: true
   recommended: true
-quality_score: 8
+improvement_potential: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -55,9 +55,9 @@ En hel anka presenterar en tillagningsutmaning: bröstet är bäst vid 57–63 �
 ## Research files by cooking method
 
 - [Oven Roast](./whole_duck-oven_roast.md)
-## Quality score
+## Improvement potential
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Improvement potential: 8 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -73,4 +73,4 @@ En hel anka presenterar en tillagningsutmaning: bröstet är bäst vid 57–63 �
 2. **−3** · Missing Culinary Group A, Culinary Group B and Culinary Group C tradition(s) — add Culinary Group A, Culinary Group B and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
 3. **−1** · Method file `whole_duck-oven_roast.md` copies parent cut profile — rewrite `whole_duck-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -42,7 +42,7 @@ doneness:
   max_c: 68
   max_f: 154
   usda_safe: true
-quality_score: 14
+improvement_potential: 14
 cooking_methods_researched: 1
 quality_assessed: 2026-10-26
 rest_time_min: 0
@@ -144,9 +144,9 @@ article; the
 fillet-versus-whole-fish split in the numbers is a property of the fish's size, not of the sources'
 opinions, and should not be averaged into one band.
 
-## Quality score
+## Improvement potential
 
-**Score: 14 / 20** — assessed 2026-05-31
+**Improvement potential: 14 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -167,4 +167,4 @@ Groups A and C absent — arctic char is a cold-water salmonid native to Arctic/
 2. **−1** · Missing Culinary Group A tradition — arctic char is farmed in Iceland and Canada; search for Japanese, Korean or Chinese preparations.
 3. **−1** · Missing Culinary Group C tradition — search for African, Arabic, Persian or Caribbean arctic char preparations.
 
-*The four leaves created on 2026-10-26 (`grill`, `oven_bake`, `smoker`, `sous_vide`) are not yet folded into this assessment; the deductions above describe the file as it stood on 2026-05-31, when only the `pan_sear` leaf existed. The score is re-derived from the rubric the next time this cut is worked.*
+*The four leaves created on 2026-10-26 (`grill`, `oven_bake`, `smoker`, `sous_vide`) are not yet folded into this assessment; the deductions above describe the file as it stood on 2026-05-31, when only the `pan_sear` leaf existed. The number is re-derived from the rubric the next time this cut is worked.*

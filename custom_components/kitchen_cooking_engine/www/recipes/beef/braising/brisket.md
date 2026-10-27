@@ -25,7 +25,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-quality_score: 19
+improvement_potential: 19
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 30
@@ -46,9 +46,9 @@ Nötbringa tas från bröstet och nedre delen av djurets bröstkorg och består 
 ## Research files by cooking method
 
 - [Oven Roast](./brisket-oven_roast.md)
-## Quality score
+## Improvement potential
 
-**Score: 19 / 20** — assessed 2026-04-29
+**Improvement potential: 19 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -75,4 +75,4 @@ Nötbringa tas från bröstet och nedre delen av djurets bröstkorg och består 
 3. Create `brisket-smoker.md` — Texas BBQ smoked brisket is THE iconic preparation; sources readily available on heygrillhey.com, smokedbbqsource.com, amazingribs.com.
 4. Create `brisket-slow_cooker.md` — slow cooker brisket widely available on North American recipe sites.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

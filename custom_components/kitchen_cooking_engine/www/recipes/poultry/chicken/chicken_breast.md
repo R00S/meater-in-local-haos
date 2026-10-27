@@ -27,7 +27,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 18
+improvement_potential: 18
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 3
@@ -53,9 +53,9 @@ Pannstekning: het panna, 5–7 minuter per sida; ugnsrostning: 200–220 °C, 18
 - [Grill](./chicken_breast-grill.md)
 - [Oven Bake](./chicken_breast-oven_bake.md)
 - [Pan Sear](./chicken_breast-pan_sear.md)
-## Quality score
+## Improvement potential
 
-**Score: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group B, −1 Group D remain)
+**Improvement potential: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group B, −1 Group D remain)
 
 | Criterion | Status |
 |-----------|--------|
@@ -75,4 +75,4 @@ Pannstekning: het panna, 5–7 minuter per sida; ugnsrostning: 200–220 °C, 18
 2. **−1 each** · Missing `chicken_breast-oven_roast.md`, `chicken_breast-sous_vide.md`
 3. **−1 each** · Groups B, D missing
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

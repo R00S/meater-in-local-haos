@@ -24,7 +24,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-quality_score: 18
+improvement_potential: 18
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 15
@@ -47,9 +47,9 @@ Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagnin
 ## Research files by cooking method
 
 - [Oven Roast](./lamb_shoulder-oven_roast.md)
-## Quality score
+## Improvement potential
 
-**Score: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group A, −1 Group D remain)
+**Improvement potential: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group A, −1 Group D remain)
 
 | Criterion | Status |
 |-----------|--------|
@@ -69,4 +69,4 @@ Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagnin
 2. **−1 each** · Missing `lamb_shoulder-braise.md`, `lamb_shoulder-slow_cooker.md`
 3. **−1 each** · Groups A, D missing
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

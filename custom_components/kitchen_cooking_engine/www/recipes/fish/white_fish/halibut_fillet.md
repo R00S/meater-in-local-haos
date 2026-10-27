@@ -41,7 +41,7 @@ doneness:
   max_f: 150
   usda_safe: true
   recommended: true
-quality_score: 15
+improvement_potential: 15
 cooking_methods_researched: 1 # 2026-10-24: survey completed and recorded below; grill, oven_roast, pan_sear and steam all have leaves built on fetched sources. Remaining enum methods recorded as leads, not silently dropped.
 quality_assessed: 2026-10-24
 rest_time_min: 0
@@ -80,9 +80,9 @@ All four declared methods have a leaf and all four meet the 4–6-source collect
 
 `cooking_data.py` was corrected in the same pass: `steam` stays registered because its leaf now exists, while `slow_cooker` and `pressure_cooker` — registered without any evidence, leaf or cut-file entry — were removed. Panel and engine now list the same four methods.
 
-## Quality score
+## Improvement potential
 
-**Score: 15 / 20** — assessed 2026-10-24 (from-scratch recount; supersedes the 8 recorded 2026-04-26, which deducted −8 for an unstarted survey, −2 for two missing leaves, −1 for a missing Group C and −1 for a copied profile — all four now resolved). Self-assessed (HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md Pattern 4) — an initial estimate, not an audit.
+**Improvement potential: 15 / 20** — assessed 2026-10-24 (from-scratch recount; supersedes the 8 recorded 2026-04-26, which deducted −8 for an unstarted survey, −2 for two missing leaves, −1 for a missing Group C and −1 for a copied profile — all four now resolved). Self-assessed (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Pattern 4) — an initial estimate, not an audit.
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -103,4 +103,4 @@ All four declared methods have a leaf and all four meet the 4–6-source collect
 3. **−1** · Diversify publishers away from the two magazine kitchens that supply most of the current sources.
 4. **−1** · The 145 °F / 130–135 °F split needs a third measured tradition before any band can be preferred.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -32,7 +32,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -57,9 +57,9 @@ Gåsben är stora, sega, intensivt smakrika snitt rika på bindväv. Innertemper
 
 - [Braise](./goose_leg-braise.md)
 - [Oven Roast](./goose_leg-oven_roast.md)
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-26
+**Improvement potential: 9 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -74,4 +74,4 @@ Gåsben är stora, sega, intensivt smakrika snitt rika på bindväv. Innertemper
 2. **−2** · Missing Culinary Group B and Culinary Group C tradition(s) — add Culinary Group B and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
 3. **−1** · Method file `goose_leg-braise.md` copies parent cut profile — rewrite `goose_leg-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

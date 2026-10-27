@@ -165,7 +165,7 @@ without a crust burning on the lean surface.
 
 ## Data applied to cooking_data.py
 
-- `supported_methods`: `charcoal_grill` **already registered** for bison_steak — no change needed; this is the leaf the hub's scorecard had been deducting as missing.
+- `supported_methods`: `charcoal_grill` **already registered** for bison_steak — no change needed; this is the leaf the hub's deduction table had been deducting as missing.
 - `recommended_doneness` (method key for charcoal_grill): **`medium_rare`** — 52–57 °C measured/verbal consensus; consistent with the cut level.
 - No `method_temperature_ranges` override needed — the two published values (52 °C tip; 125/135/145 °F chart) sit inside the existing doneness bands; no new range is justified.
 

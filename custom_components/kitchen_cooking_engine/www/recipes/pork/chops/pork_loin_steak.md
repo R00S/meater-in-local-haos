@@ -36,7 +36,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 14
+improvement_potential: 14
 cooking_methods_researched: 1 # Method survey 2026-10-26 (enum-wide sweep across culinary traditions): 3 declared methods confirmed (pan_fry, grill, air_fryer) and 4 discovered + registered with leaves (oven_roast, sous_vide, charcoal_grill, braise). Queued single-source leads with fetched evidence but below this pass's leaf bar — pan_sear (RecipeTeacher), oven_broil (America's Test Kitchen), smoker (AmazingRibs), steam (Anova steam oven), slow_cooker (The Country Cook — cut form not confirmed loin), pressure_cooker (Pressure Cooking Today — no temperature) — documented in the branch timeline. Negative searches: poach and saute returned no fetchable cut-specific recipe; simmer only behind a 403 (Allrecipes).
 quality_assessed: 2026-10-26
 rest_time_min: 3
@@ -79,9 +79,9 @@ Pannstekning: 3–4 minuter per sida i smör vid hög värme. Innertemperatur: *
 
 Survey leads **not yet leafed** (queued, evidence in the branch timeline): `pan_sear`, `oven_broil`, `smoker`, `steam`, `slow_cooker`, `pressure_cooker` — each has one fetched recipe with the cut-form caveat noted there. Negative searches this pass: `poach`, `saute` (no fetchable cut-specific recipe), `simmer` (only a 403).
 
-## Quality score
+## Improvement potential
 
-**Score: 14 / 20** — assessed 2026-10-26 (from-scratch rescore after the 2026-10-26 collection pass: method survey completed and `cooking_methods_researched` set to 1; four discovered methods registered with new leaves; the two previously missing declared-method leaves written; pan_fry widened from 3 to 5 sources with full analysis sections; all four culinary groups now covered by fetched evidence. Supersedes the 2026-04-27 score 8. Every row below is re-derived from the criteria against evidence, not carried over (HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md Patterns 4, 8, 9, 10). The two remaining deduction classes are source-count and same-tradition duplication — both agent work, no wall claimed.)
+**Improvement potential: 14 / 20** — assessed 2026-10-26 (from-scratch recount after the 2026-10-26 collection pass: method survey completed and `cooking_methods_researched` set to 1; four discovered methods registered with new leaves; the two previously missing declared-method leaves written; pan_fry widened from 3 to 5 sources with full analysis sections; all four culinary groups now covered by fetched evidence. Supersedes the 2026-04-27 number 8. Every row below is re-derived from the criteria against evidence, not carried over (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Patterns 4, 8, 9, 10). The two remaining deduction classes are source-count and same-tradition duplication — both agent work, no wall claimed.)
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -108,4 +108,4 @@ Survey leads **not yet leafed** (queued, evidence in the branch timeline): `pan_
 2. **−2** · Raise `braise` from 2 sources to 4 and `charcoal_grill` from 1+guide to 4 (Korean, Argentine, South African or Japanese charcoal traditions are the plausible homes).
 3. **Queue** · Leaf the six surveyed single-source leads (`pan_sear`, `oven_broil`, `smoker`, `steam`, `slow_cooker`, `pressure_cooker`), widening each to the 4-source gate as it is written.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

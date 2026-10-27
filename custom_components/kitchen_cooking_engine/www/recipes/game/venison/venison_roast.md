@@ -39,7 +39,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -64,9 +64,9 @@ Innertemperatur: **60–65 °C** (140–149 °F) för medium (rosa mitt) — ska
 ## Research files by cooking method
 
 - [Oven Roast](./venison_roast-oven_roast.md)
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Improvement potential: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -87,4 +87,4 @@ Innertemperatur: **60–65 °C** (140–149 °F) för medium (rosa mitt) — ska
 3. **−1** · Group A tradition missing
 4. **−1** · Group C tradition missing
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

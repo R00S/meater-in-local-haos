@@ -24,7 +24,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-28
 rest_time_min: 10
@@ -48,9 +48,9 @@ Eftervärmen är försumbar tack vare den omgivande vätskan som buffrar tempera
 ## Research files by cooking method
 
 - [Braise](./chuck_roast-braise.md)
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-28
+**Improvement potential: 9 / 20** — assessed 2026-04-28
 
 | Criterion | Status |
 |-----------|--------|
@@ -70,4 +70,4 @@ Eftervärmen är försumbar tack vare den omgivande vätskan som buffrar tempera
 2. **−1 each** · Missing `chuck_roast-oven_roast.md`, `chuck_roast-slow_cooker.md`
 3. **−1** · Group C missing — 20+ URL probes on 2026-04-28 found no accessible Group C braised whole chuck recipe; Persian ghormeh sabzi (196flavors.com) uses cubed stew meat, not whole chuck; Moroccan tagine recipes redirect to homepage; Turkish güveç URLs not found. Group C braised whole-piece beef recipes appear to be uncommon in online English/accessible sources.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

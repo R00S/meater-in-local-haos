@@ -32,7 +32,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 16
+improvement_potential: 16
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 0
@@ -61,9 +61,9 @@ Svansmuskeln är fast, vit till blekrosa, söt och delikat salt — rikare på n
 
 - [Grill](./langoustine-grill.md)
 
-## Quality score
+## Improvement potential
 
-**Score: 16 / 20** — assessed 2026-04-29
+**Improvement potential: 16 / 20** — assessed 2026-04-29
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -81,4 +81,4 @@ Svansmuskeln är fast, vit till blekrosa, söt och delikat salt — rikare på n
 3. **−1** · Missing Culinary Group A tradition — monitor for new sources; langoustine is occasionally used in Japanese and Italian-influenced fusion restaurants in Japan (imported product)
 4. **−1** · Missing Culinary Group C tradition — monitor for new sources; langoustine does occur in Mediterranean coastal regions of Turkey and Tunisia
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

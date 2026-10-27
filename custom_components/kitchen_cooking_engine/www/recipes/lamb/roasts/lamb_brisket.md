@@ -24,7 +24,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-quality_score: 17
+improvement_potential: 17
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 15
@@ -49,9 +49,9 @@ Låg-och-långsam tillagning transformerar snittet: 3–4 timmar i ugn vid 150 �
 - `lamb_brisket-oven_roast.md` — leaf pending (method confirmed applicable; stuffed/rolled slow-roasted breast is a traditional British and French preparation)
 - `lamb_brisket-slow_cooker.md` — leaf pending (method confirmed applicable; 100+ URL probes across 3 sessions found no accessible dedicated lamb breast slow cooker recipes)
 
-## Quality score
+## Improvement potential
 
-**Score: 17 / 20** — assessed 2026-04-29
+**Improvement potential: 17 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -77,4 +77,4 @@ Låg-och-långsam tillagning transformerar snittet: 3–4 timmar i ugn vid 150 �
 2. Create `lamb_brisket-oven_roast.md` — stuffed/rolled slow-roasted lamb breast is a real British and French preparation; need 4+ accessible sources. Probed sources so far: see gap log in `lamb_brisket-braise.md`.
 3. Create `lamb_brisket-slow_cooker.md` — method applicable in principle; 100+ URL probes across 3 sessions yielded no accessible dedicated lamb breast slow cooker recipes. Further search needed.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

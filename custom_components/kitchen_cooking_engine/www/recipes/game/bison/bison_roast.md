@@ -38,7 +38,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -98,9 +98,9 @@ Nyckeln: låg ugnstemperatur (max 135 °C), fuktskyddande marinad eller pensling
 ## Research files by cooking method
 
 - [Oven Roast](./bison_roast-oven_roast.md)
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-26
+**Improvement potential: 9 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -114,4 +114,4 @@ Nyckeln: låg ugnstemperatur (max 135 °C), fuktskyddande marinad eller pensling
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
 2. **−3** · Missing Culinary Group A, Culinary Group C and Culinary Group D tradition(s) — add Culinary Group A, Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

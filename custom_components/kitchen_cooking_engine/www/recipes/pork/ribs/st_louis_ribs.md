@@ -24,7 +24,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -81,9 +81,9 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 | Grill | *not yet created* | ⬜ |
 | Smoker | *not yet created* | ⬜ |
 
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Improvement potential: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Points | Status |
 |-----------|--------|--------|
@@ -104,4 +104,4 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 1. **−8** · Cooking methods not researched — research grill (direct vs indirect) and smoker methods for St. Louis ribs; create leaf files; then set `cooking_methods_researched: 1`
 2. **−2** · Missing Groups C and D — add Caribbean, West African, or North African oven rib source to `st_louis_ribs-oven_roast.md`; add German/Polish/Slavic oven rib source
 
-*Score will increase toward ~14/20 once Groups C and D are covered.*
+*Number will increase toward ~14/20 once Groups C and D are covered.*

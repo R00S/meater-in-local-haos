@@ -39,7 +39,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 8
+improvement_potential: 8
 cooking_methods_researched: 1 # Supported-method inventory reviewed 2026-10-24: all 16 enum methods have research leaves; slow-cooker search found only sauce cooked slowly with mackerel grilled; charcoal is a grill fuel/setup variant.
 quality_assessed: 2026-10-25
 rest_time_min: 2
@@ -78,9 +78,9 @@ Atlantisk makrill (Scomber scombrus) är en medelstora, mycket fet pelagisk fisk
 - [Slow Cooker](./mackerel-slow_cooker.md) — no direct slow-cooked fish source found; existing lead slow-cooks sauce and grills fish
 - [Charcoal Grill](./mackerel-charcoal_grill.md) — charcoal documented as grill fuel/setup variant, not separate method
 
-## Quality score
+## Improvement potential
 
-**Score: 8 / 20** — reassessed 2026-10-25 (second pass that day), up from 6 and from 4 on
+**Improvement potential: 8 / 20** — reassessed 2026-10-25 (second pass that day), up from 6 and from 4 on
 2026-10-24. Four leaves now meet the 4–6-source / four-distinct-tradition gate (grill,
 air_fryer, pan_fry, oven_bake) and braise holds four sources across three traditions. The deduction
 scale is unchanged and no leaf was credited for anything it does not hold. Context for the earlier
@@ -113,4 +113,4 @@ Note on definitions: after the retirement the `doneness` block carries only `wel
 4. Deepen Group C beyond Turkey — find a mackerel-specific Moroccan, Egyptian or West African primary (the Cooking With Alia charmoula bake names "any whole fish", so it is a lead, not a source).
 5. The doneness question is open again in a way it was not on 2026-10-24: a measured **52 °C** mackerel bake exists (oven_bake, Swedish). It does not revive the retired `medium` (57 °C) band — 52 °C is lower still and under the safe floor — but a second corroborating measured sub-63 °C source (Nordic or Japanese) would justify *offering* a soft-bake option instead of quietly overriding `well_done`.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

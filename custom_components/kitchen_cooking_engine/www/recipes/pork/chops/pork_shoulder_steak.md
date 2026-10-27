@@ -36,7 +36,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 14
+improvement_potential: 14
 cooking_methods_researched: 1 # Enum-wide survey of every CookingMethod against fetched sources for this exact cut, completed 2026-10-26. Confirmed+leafed: pan_fry, grill, braise, oven_roast, air_fryer, sous_vide, oven_broil. Queued single-source leads (widening before leafing): pan_sear (eat.de braten already in pan_fry; LUMA Delikatessen CH has ambiguous cut form), charcoal_grill (Smithfield churrasco US, White On Rice Vietnamese-style US), smoker (Blackberry Babe's low-slow charcoal is leafed under grill), slow_cooker (The Greek Foodie publishes a slow-cooker variation of its braise), pressure_cooker (none found for this cut). Documented negatives 2026-10-26: steam (Thai Betagro steamed-pork-neck page returns server error; Chinese steamed-pork results are ground patty, not steak), poach, simmer (no cut-specific recipe found in any tradition searched).
 quality_assessed: 2026-10-26
 rest_time_min: 5
@@ -77,9 +77,9 @@ Pannstekning: medel-hög värme, 3–4 minuter per sida. Innertemperatur: **70�
 - [Pan Fry](./pork_shoulder_steak-pan_fry.md) — 4 sources (DE, US, Korean-style, NO); ✅ both gates met (rewritten 2026-10-26, pre-ToR version retired)
 - [Sous Vide](./pork_shoulder_steak-sous_vide.md) — 3 sources (US ×2, DE); ⚠️ count + distinct open
 
-## Quality score
+## Improvement potential
 
-**Score: 14 / 20** — assessed 2026-10-26
+**Improvement potential: 14 / 20** — assessed 2026-10-26
 
 | Criterion | Status |
 |-----------|--------|
@@ -105,4 +105,4 @@ Pannstekning: medel-hög värme, 3–4 minuter per sida. Innertemperatur: **70�
 3. **−1 each** · One fifth unambiguous-country air-fryer source and one seventh-country braise source — both attribution/dupe questions disappear
 4. Queued leads to widen next pass: `pan_sear` (LUMA CH, ambiguous cut form), `charcoal_grill` (Smithfield, White On Rice), `slow_cooker` (Greek Foodie variation), `pressure_cooker` (none found), `steam`/`poach`/`simmer` documented negatives
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

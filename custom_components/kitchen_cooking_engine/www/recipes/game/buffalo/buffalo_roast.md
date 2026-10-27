@@ -40,7 +40,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 11
+improvement_potential: 11
 cooking_methods_researched: 1 # Survey re-run 2026-10-26 on fetched pages. Declared + leafed: oven_roast (rewritten, was zero recipes), braise (rewritten, 1 → 3), smoker (discovered this pass and registered in cooking_data.py id 651, which had listed only oven_roast). Queued leads (need sources before declaring): slow_cooker (Food Network's pot roast gives an 8-hour low slow-cooker option inside a braise recipe; Back in Time Bison Ranch's chuck method is "best done in a crock pot" — no standalone slow-cooker bison-roast recipe fetched yet), pressure_cooker (beckandbulow fetches a full Instant Pot bison pot roast, 1 hour high pressure — a second source is needed for a leaf), sous_vide (Bison Ridge Farms states it became their preferred method and links out to a separate recipe not yet fetched), reverse_sear (JH Buffalo's reverse-seared prime rib is a real record, currently filed inside oven_roast because it is an oven method with a 450 °F finish). Documented searched-negative 2026-10-26: Culinary Groups A, C and D — no fetchable bison or water-buffalo roast recipe was found in South/Southeast/East Asian, African/Levantine/Persian or Nordic/Baltic/Slavic traditions; a Moroccan "bison tagine" search returned zero results.
 quality_assessed: 2026-10-26
 rest_time_min: 10
@@ -113,9 +113,9 @@ den tjockaste muskeldelen, borta från ben och fettfickor.
 - [Oven Roast](./buffalo_roast-oven_roast.md) — 3 sources (US ×3); ⚠️ count + distinct rows open; carries the measured 125 → 135 °F carryover and the only separate rare track
 - [Smoker](./buffalo_roast-smoker.md) — 3 sources (US ×3); ⚠️ count + distinct rows open; carries the wrap-at-145-vs-165 °F split
 
-## Quality score
+## Improvement potential
 
-**Score: 11 / 20** — assessed 2026-10-26 (was 8 on 2026-04-27)
+**Improvement potential: 11 / 20** — assessed 2026-10-26 (was 8 on 2026-04-27)
 
 | Criterion | Status |
 |-----------|--------|
@@ -159,4 +159,4 @@ instruction pages without ingredient quantities.
 4. Queued leaves: `pressure_cooker` (beckandbulow's Instant Pot bison pot roast is fully fetched and needs one companion source), `slow_cooker` (an 8-hour crock-pot bison chuck recipe), `sous_vide` (Bison Ridge Farms links to its own sous-vide recipe — unfetched).
 5. Data gap worth a future schema pass: braised and smoked roasts finish at 91–99 °C, which no existing doneness band covers. The leaves record the house 93 °C figure; the engine cannot yet express it.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

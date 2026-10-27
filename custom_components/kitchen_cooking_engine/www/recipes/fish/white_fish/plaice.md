@@ -34,7 +34,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 14
+improvement_potential: 14
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -59,9 +59,9 @@ Rödspätta (*Pleuronectes platessa*; tyska: Scholle; danska: rødspætte; holl�
 - Smoker — no research file yet
 - [Steam](./plaice-steam.md)
 
-## Quality score
+## Improvement potential
 
-**Score: 14 / 20** — assessed 2026-05-31
+**Improvement potential: 14 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -82,7 +82,7 @@ Group C and D absent — steam leaf covers A (CN/TH/VN) and B (DE) only. Steam l
 2. **−1** · Missing Culinary Group C tradition — add at least one Group C source recipe across any method leaf.
 3. **−1** · Missing Culinary Group D tradition — add at least one Group D (Scandinavian/Baltic/Slavic) source recipe. Plaice (*rödspätta*) is traditional in Northern European cooking.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*
 
 ## Data state and gaps
 

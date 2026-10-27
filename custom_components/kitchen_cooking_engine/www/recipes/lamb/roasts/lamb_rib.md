@@ -47,7 +47,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -83,9 +83,9 @@ Rack: **57–63 °C** för medium-rare; bröst: **88–95 °C** för fall-från-
 | Oven Roast | `lamb_rib-oven_roast.md` | ⚠️ In progress — 2 sources (Group B + C); needs Groups A + D |
 | Grill | *not yet created* | ⬜ |
 
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Improvement potential: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Points | Status |
 |-----------|--------|--------|
@@ -103,4 +103,4 @@ Rack: **57–63 °C** för medium-rare; bröst: **88–95 °C** för fall-från-
 1. **−8** · Cooking methods not researched — research grill method (rack of lamb on grill / BBQ); add `lamb_rib-grill.md`; then set `cooking_methods_researched: 1`
 2. **−2** · Missing Culinary Groups A and D — add Group A (Korean/Japanese rack of lamb) and Group D (Scandinavian lammkarre) sources to `lamb_rib-oven_roast.md`
 
-*Score will increase toward ~14/20 once Groups A and D sources are added and the grill leaf is created.*
+*Number will increase toward ~14/20 once Groups A and D sources are added and the grill leaf is created.*

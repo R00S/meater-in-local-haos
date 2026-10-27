@@ -34,7 +34,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 12
+improvement_potential: 12
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -59,9 +59,9 @@ Marulk (*Lophius piscatorius*; tyska: Seeteufel; franska: lotte/baudroie; spansk
 - Braise — no research file yet
 - [Sous Vide](./monkfish-sous_vide.md)
 
-## Quality score
+## Improvement potential
 
-**Score: 12 / 20** — assessed 2026-05-31
+**Improvement potential: 12 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -82,7 +82,7 @@ Groups A, C, D absent — the only existing leaf (`monkfish-sous_vide.md`) cover
 2. **−1** · Partial leaf `monkfish-sous_vide.md` — add a 4th verified source recipe; search Group A, C or D traditions for sous vide monkfish.
 3. **−3** · Missing Culinary Groups A, C, D — add representative source recipes across method leaves.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*
 
 ## Data state and gaps
 

@@ -35,7 +35,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 12
+improvement_potential: 12
 cooking_methods_researched: 1
 quality_assessed: 2026-10-23
 rest_time_min: 0
@@ -63,9 +63,9 @@ Harr (*Thymallus thymallus*; tyska: Äsche; franska: ombre commun; finska: harju
 
 All six declared methods now have a leaf file. None of the leaves yet meets the 4–6-source, four-distinct-tradition collection gate; every leaf carries an explicit partial-research marker.
 
-## Quality score
+## Improvement potential
 
-**Score: 12 / 20** — assessed 2026-10-23 (from-scratch reassessment after all 6 method leaves created; supersedes 2026-05-31 stub score 4)
+**Improvement potential: 12 / 20** — assessed 2026-10-23 (from-scratch reassessment after all 6 method leaves created; supersedes 2026-05-31 stub number 4)
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -92,4 +92,4 @@ Only one source in the whole collection states an internal temperature (55 °C, 
 3. **−1** · Culinary Group A — search Japanese/Chinese/Korean sources for grayling (*harr* / *Thymallus thymallus*) preparations; add any verified recipe to a leaf.
 4. **−1** · Culinary Group C — search Turkish/Persian/Arabic sources for grayling preparations; add any verified recipe to a leaf.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

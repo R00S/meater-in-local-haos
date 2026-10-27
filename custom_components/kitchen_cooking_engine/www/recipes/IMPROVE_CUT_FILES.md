@@ -1,6 +1,19 @@
 This is a set of instruction for the agent to conduct when the user refers to this file, the agents may never edit this file unless specificly intructed to do that
 __________________
 
+## The number in a cut file is improvement potential, not a score
+
+Every cut file carries a number in its frontmatter (`improvement_potential:`) and in a section at the end
+of the document (`## Improvement potential`). It is the same 0–20 count the rubric has always produced,
+read the other way round: **20 means nothing left has been found to earn, and every point below 20 is
+potential — work that is still there to do.** A file at 8/20 has more potential than a file at 18/20.
+A number that drops is not a failure: the assessment found more potential, or the work added content
+whose gaps are now visible.
+
+Never work to move the number. Do the research, then read the number off the criteria to see what is
+left — a high number is a claim that there is little left, and after real research that claim is the one
+to distrust, not the goal.
+
 ## SESSION START — MANDATORY GATE. DO NOT SKIP. DO NOT TOUCH ANY CUT FILE UNTIL ALL FOUR OUTPUTS BELOW ARE WRITTEN TO YOUR BRANCH TIMELINE FILE.
 
 Open your branch timeline file (`docs/<branch-name-without-prefix>-<A.B.C.x>.md`) and add a section headed `## Session start` containing the following four items. Each item must be written **before** you look at a single cut file. You have to do this even if a former agent have already done it in the file.
@@ -48,7 +61,7 @@ Write 2–4 sentences in your own words covering:
 - What "this is not a race" means in practice for how you will behave
 - What to do after step 1 is complete
 
-This is the comprehension check. An answer like "improve cut files very thoroughly, using lots of time and tokens, with the goal of quality, not speed" is a correct framing. An answer that mentions speed, efficiency, or doing things quickly shows the instructions were not absorbed — the goal is quality, and using many tokens and a lot of time is expected and correct. An answer like "use real sourced research to thoroughly improve the 8 lowest-scoring cut files — for each cut file I must actively research cooking methods across culinary traditions and create/improve child cut-method files (targeting an average of 4 per cut), this will take significant time and that is intentional, stopping or abandoning hard files is wrong, small improvements count, full score is not the goal — then do CHORES.md only after all 8 are done" shows the instructions were understood.
+This is the comprehension check. An answer like "improve cut files very thoroughly, using lots of time and tokens, with the goal of quality, not speed" is a correct framing. An answer that mentions speed, efficiency, or doing things quickly shows the instructions were not absorbed — the goal is quality, and using many tokens and a lot of time is expected and correct. An answer like "use real sourced research to thoroughly improve the 8 cut files with the most improvement potential — for each cut file I must actively research cooking methods across culinary traditions and create/improve child cut-method files (targeting an average of 4 per cut), this will take significant time and that is intentional, stopping or abandoning hard files is wrong, small improvements count, a full 20 is not the goal — then do CHORES.md only after all 8 are done" shows the instructions were understood.
 
 ---
 
@@ -56,7 +69,7 @@ This is the comprehension check. An answer like "improve cut files very thorough
 
 ---
 
-1. improve the 8 lowest scoring cut files in docs/recipe_research. For each cut file, creating and improving its child cut-method files is a **core, mandatory part of the task — not optional, not "if needed"**. The following sub-steps are required for every cut file you work on:
+1. improve the 8 cut files with the most improvement potential in docs/recipe_research. For each cut file, creating and improving its child cut-method files is a **core, mandatory part of the task — not optional, not "if needed"**. The following sub-steps are required for every cut file you work on:
 
    **a. Research cooking methods for the cut.** Do not assume the `methods:` list in the frontmatter is complete. Actively research what cooking methods are used for this cut across culinary traditions. Use web_fetch and real sources. Only set `cooking_methods_researched: 1` after you have done thorough research — if it is `0`, that means this research has not been done yet and it is your job to do it. Read `RECIPE_COLLECTION_TOR.md` section on method discovery: every serious research session should discover methods not yet listed.
 
@@ -64,7 +77,7 @@ This is the comprehension check. An answer like "improve cut files very thorough
 
    **c. Update the cut file's `methods:` list** to reflect all confirmed methods after your research.
 
-   Be very careful with the data integrity, no shortcuts, read the SURVEY and ToR files in the recipe dir and follow them, batching jobs and assuming or guessing may hurt the data quality we are trying to improve. Commit between cut files and then continue with the next one without stopping. IMPORTANT: This is not a race to get high scores, just impoving them a bit but not reaching 20 is fine. Not being maticulate in the research corrupts the data and as well as the scoring system itself, in practice destroying our system instead of improving it. It is an incremental task that will be applied to each cut file many times. Seing full score as doneness is wrong, this will just lead to us having to update the scoring system. Do not abandon started attempt because they are hard, time is not a factor here and the hard files are the most important to improve, small improvements are also improvements. Also adhere to the definition of the culinary groups, dont quess. Dont be conserned if the task does seam to or in fact grows, it will. For example, if you find a new cooking method for the cut or even for the whole system, add it, that significantly improves the quality of our data. Another example, finding only recipes from 2-3 culinary groups is not a reasen to abandon it, its still an incremental improvement that enhances the quality of our data. An example of degrading our data, lowering the quality instead of increasing it (which is the goal of this task) is to guess what a cut or method is called in languages or regions instead of looking it up. If cooking method researched is set to 0, it means that the quality of the research is unknown, there may be missing methods for that cut. Dont set it to 1 unless thorough reserch is done.
+   Be very careful with the data integrity, no shortcuts, read the SURVEY and ToR files in the recipe dir and follow them, batching jobs and assuming or guessing may hurt the data quality we are trying to improve. Commit between cut files and then continue with the next one without stopping. IMPORTANT: This is not a race to get a high number, just impoving the data a bit and not reaching 20 is fine. Not being maticulate in the research corrupts the data and as well as the improvement-potential system itself, in practice destroying our system instead of improving it. It is an incremental task that will be applied to each cut file many times. Seing a full 20 as doneness is wrong, this will just lead to us having to update the rubric. Do not abandon started attempt because they are hard, time is not a factor here and the hard files are the most important to improve, small improvements are also improvements. Also adhere to the definition of the culinary groups, dont quess. Dont be conserned if the task does seam to or in fact grows, it will. For example, if you find a new cooking method for the cut or even for the whole system, add it, that significantly improves the quality of our data. Another example, finding only recipes from 2-3 culinary groups is not a reasen to abandon it, its still an incremental improvement that enhances the quality of our data. An example of degrading our data, lowering the quality instead of increasing it (which is the goal of this task) is to guess what a cut or method is called in languages or regions instead of looking it up. If cooking method researched is set to 0, it means that the quality of the research is unknown, there may be missing methods for that cut. Dont set it to 1 unless thorough reserch is done.
 
 Going back to this document for quidelines several times during the process is good practice, agents are prone to talk them out of keeping quality at a higher priority than efficiency.
 

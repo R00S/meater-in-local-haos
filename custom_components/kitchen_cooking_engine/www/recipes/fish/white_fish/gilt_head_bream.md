@@ -34,7 +34,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 14
+improvement_potential: 14
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -59,9 +59,9 @@ Guldspirad (*Sparus aurata*; spanska/italienska: dorada/orata; franska: daurade 
 - Charcoal Grill — no research file yet
 - [Steam](./gilt_head_bream-steam.md)
 
-## Quality score
+## Improvement potential
 
-**Score: 14 / 20** — assessed 2026-05-31
+**Improvement potential: 14 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -82,4 +82,4 @@ Group C and D absent — steam leaf covers A (CN/TH) and B (DE/AT) only. Gilt-he
 2. **−1** · Missing Culinary Group C tradition — gilt-head bream (dorade royale) is a cornerstone of Moroccan and Turkish cuisine; add Group C source recipes.
 3. **−1** · Missing Culinary Group D tradition — add at least one Group D (Scandinavian/Baltic/Slavic) source recipe.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

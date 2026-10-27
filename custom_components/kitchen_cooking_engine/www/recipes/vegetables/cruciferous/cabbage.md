@@ -30,7 +30,7 @@ doneness:
   max_f: 212
   usda_safe: true
   recommended: true
-quality_score: 10
+improvement_potential: 10
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 0
@@ -54,9 +54,9 @@ Kål (*Brassica oleracea* var. *capitata*) bräserad är en av de mest globalt s
 - [Grill](./cabbage-grill.md)
 - [Oven Roast](./cabbage-oven_roast.md)
 - [Sauté](./cabbage-saute.md)
-## Quality score
+## Improvement potential
 
-**Score: 10 / 20** — assessed 2026-04-26
+**Improvement potential: 10 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -70,4 +70,4 @@ Kål (*Brassica oleracea* var. *capitata*) bräserad är en av de mest globalt s
 2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
 3. **−1** · Method file `cabbage-braise.md` copies parent cut profile — rewrite `cabbage-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

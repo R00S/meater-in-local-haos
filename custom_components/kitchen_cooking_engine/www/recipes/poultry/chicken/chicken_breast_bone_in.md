@@ -24,7 +24,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -59,9 +59,9 @@ Ugnsrostning: 200–220 °C, 35–45 minuter. Innertemperatur: **74 °C (165 °F
 | Grill | *not yet created* | ⬜ |
 | Air fryer | *not yet created* | ⬜ |
 
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Improvement potential: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Points | Status |
 |-----------|--------|--------|
@@ -82,4 +82,4 @@ Ugnsrostning: 200–220 °C, 35–45 minuter. Innertemperatur: **74 °C (165 °F
 1. **−8** · Cooking methods not researched — research grill and air fryer methods for bone-in breast; add leaves; then set `cooking_methods_researched: 1`
 2. **−2** · Missing Groups A and D — add recipes from Asian and Scandinavian/Slavic traditions to `chicken_breast_bone_in-oven_roast.md`; grill and air_fryer leaves should also cover these traditions
 
-*Score will increase toward ~14/20 once Groups A and D are covered.*
+*Number will increase toward ~14/20 once Groups A and D are covered.*

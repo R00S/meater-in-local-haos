@@ -23,7 +23,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 10
+improvement_potential: 10
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 2
@@ -52,9 +52,9 @@ Grillning, pannstekning och ugnsrostning är de vanligaste metoderna. Alla kräv
 
 - [Grill](./pork_sausage-grill.md)
 - [Pan Fry](./pork_sausage-pan_fry.md)
-## Quality score
+## Improvement potential
 
-**Score: 10 / 20** — assessed 2026-04-27
+**Improvement potential: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -72,4 +72,4 @@ Grillning, pannstekning och ugnsrostning är de vanligaste metoderna. Alla kräv
 2. **−1** · Group A tradition missing — find a Japanese, Chinese, Korean, or SE Asian pork sausage recipe
 3. **−1** · Group C tradition missing — find an African, Arabic, or Levantine pork or halal sausage recipe
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

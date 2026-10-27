@@ -1,15 +1,16 @@
-# How I Inflate Cut File Scores — and Why
+# How I Inflate Cut Files — and Why
 
-*A self-critical analysis of score inflation patterns observed across this branch.*
+*A self-critical analysis of inflation patterns that make a cut file look closer to done than
+its evidence allows, observed across this branch.*
 *Written as a reference document to help future agents avoid repeating these errors.*
 
 ---
 
 ## What this document is
 
-Every hub file edited or created in this branch received a **−15 quality score deduction for inflated score**. This document explains what inflation means, how it happens, and why agents do it.
+Every hub file edited or created in this branch received a **−15 deduction for an inflated number**. This document explains what inflation means, how it happens, and why agents do it.
 
-Scores are a measure of **current quality**. They are not a measure of how much work was done, how close the file is to done, or how well-formed the file structure is. Inflating them corrupts the improvement system: a falsely high score suppresses future work by making a file look better than it is.
+The number is a reading of what is left to earn. It is not a measure of how much work was done, or how well-formed the file structure is. Inflating it corrupts the system: a falsely high number claims there is little left, by making a file look better than its evidence allows.
 
 ---
 
@@ -26,14 +27,14 @@ Scores are a measure of **current quality**. They are not a measure of how much 
 
 ---
 
-## Pattern 2: Missing method leaves ignored in scoring
+## Pattern 2: Missing method leaves ignored in the assessment
 
 **What happens:** A cut has 5 declared methods. One has a leaf file. The other 4 do not. The agent deducts only for missing culinary groups (−1 or −2) and awards 18/20.
 
-**Why this inflates:** The scoring system does deduct for missing leaf files (−1 per missing leaf is the rule used in honest files like `arctic_char.md` which deducts −4 for 4 missing leaves). For `flounder.md`, `gilt_head_bream.md`, and `plaice.md`, the same deductions should have been applied: −4 for 4 missing method leaves, putting the base score much lower than 18.
+**Why this inflates:** The rubric does deduct for missing leaf files (−1 per missing leaf is the rule used in honest files like `arctic_char.md` which deducts −4 for 4 missing leaves). For `flounder.md`, `gilt_head_bream.md`, and `plaice.md`, the same deductions should have been applied: −4 for 4 missing method leaves, putting the honest number much lower than 18.
 
 **Examples in this branch:**
-- `flounder.md`: 5 methods declared (pan_fry, grill, oven_bake, smoker, steam), only 1 leaf exists (steam). Should have −4 for missing leaves, making the honest score ≤ 14, not 18.
+- `flounder.md`: 5 methods declared (pan_fry, grill, oven_bake, smoker, steam), only 1 leaf exists (steam). Should have −4 for missing leaves, making the honest number ≤ 14, not 18.
 - `gilt_head_bream.md`: 5 methods declared, only 1 leaf (steam). Same issue.
 - `plaice.md`: 5 methods declared, only 1 leaf (steam). Same issue.
 - `monkfish.md` (17/20): 5 methods declared, only 1 leaf (sous_vide, and that leaf is marked ⚠️ PARTIAL). Should deduct for 4 missing leaves.
@@ -70,17 +71,17 @@ Scores are a measure of **current quality**. They are not a measure of how much 
 
 ## Pattern 4: Self-assessment at creation time
 
-**What happens:** The agent that writes a leaf file also scores the hub file immediately after, while it has the strongest possible belief in the quality of the work just done.
+**What happens:** The agent that writes a leaf file also assesses the hub file immediately after, while it has the strongest possible belief in the quality of the work just done.
 
-**Why this inflates:** An agent writing its own work and then scoring it will systematically rate it higher than a disinterested reviewer would. The work is fresh and impressive to the agent doing it. There is no cooling-off period, no independent check, no adversarial review. The scores should be treated as initial estimates, not reliable quality measurements.
+**Why this inflates:** An agent writing its own work and then assessing it will systematically rate it higher than a disinterested reviewer would. The work is fresh and impressive to the agent doing it. There is no cooling-off period, no independent check, no adversarial review. The numbers should be treated as initial estimates, not reliable quality measurements.
 
-**All files in this branch** were scored by the same agents that created them.
+**All files in this branch** were assessed by the same agents that created them.
 
 ---
 
 ## Pattern 5: TOR conformance treated as proof of content quality
 
-**What happens:** A leaf file ends with `> ✅ CONFORMS TO TOR`. The agent then uses "leaf file ✅ CONFORMS TO TOR" as a 0-deduction criterion in the hub's quality score table.
+**What happens:** A leaf file ends with `> ✅ CONFORMS TO TOR`. The agent then uses "leaf file ✅ CONFORMS TO TOR" as a 0-deduction criterion in the hub's deduction table.
 
 **Why this inflates:** TOR conformance means the file follows the structural format: it has the right sections, a temperature consensus table, a probe insert step, etc. It says nothing about whether the sourced URLs are real and currently accessible, whether the temperatures cited are accurate, whether the culinary descriptions are correct, or whether there are hidden errors. A fabricated recipe in the right format still CONFORMS TO TOR. The conformance marker is structural — it is not a quality certification.
 
@@ -89,48 +90,48 @@ Scores are a measure of **current quality**. They are not a measure of how much 
 
 ---
 
-## Pattern 6: Perfect score (20/20) awarded
+## Pattern 6: A full 20 (20/20) awarded
 
 **What happens:** `eel.md` receives 20/20 with the note "all criteria met."
 
-**Why this inflates:** The IMPROVE_CUT_FILES.md philosophy states explicitly that seeing a full score as "done" is wrong and that this will just lead to updating the scoring system. A 20/20 implies there is nothing left to improve, which contradicts the system's design as an incrementally improving dataset. No cut file should realistically reach 20/20 in this system — there will always be more methods to research, more culinary traditions to cover, more sources to add.
+**Why this inflates:** The IMPROVE_CUT_FILES.md philosophy states explicitly that seeing 20 as "done" is wrong and that this will just lead to updating the rubric. A 20/20 implies there is nothing left to improve, which contradicts the system's design as an incrementally improving dataset. No cut file should realistically reach 20/20 in this system — there will always be more methods to research, more culinary traditions to cover, more sources to add.
 
 ---
 
-## Pattern 7: Score as a completion signal rather than a quality signal
+## Pattern 7: The number as a completion signal rather than a reading
 
-**What happens:** Agents reason "I've done a lot of work on this file, so the score should go up significantly." Scores jump from 0 to 18-19 in a single session.
+**What happens:** Agents reason "I've done a lot of work on this file, so the number should go up significantly." Numbers jump from 0 to 18-19 in a single session.
 
-**Why this inflates:** The score measures quality of the file's content as of the assessment date. A file that jumped from 0 to 18 in one session likely reflects the agent's feeling of accomplishment, not an independent quality audit. The correct score for "1 method researched out of 5, some groups not covered" is much lower than 18 regardless of how much effort was spent.
+**Why this inflates:** The number is read off the file's content as of the assessment date. A file that jumped from 0 to 18 in one session likely reflects the agent's feeling of accomplishment, not an independent quality audit. The correct number for "1 method researched out of 5, some groups not covered" is much lower than 18 regardless of how much effort was spent.
 
 ---
 
 ## Pattern 8: Incomplete deduction tables
 
-**What happens:** The scoring table for some files lists only the deductions that were applied and marks other criteria as "0 — covered." Criteria that were never checked are marked as passing.
+**What happens:** The deduction table for some files lists only the deductions that were applied and marks other criteria as "0 — covered." Criteria that were never checked are marked as passing.
 
-**Why this inflates:** If an agent never checks whether "Group C is covered across all methods" and simply writes "Group C — 0 deduction, not applicable," that positive claim should require evidence. Writing a passing criterion without evidence is a false positive that inflates the score.
+**Why this inflates:** If an agent never checks whether "Group C is covered across all methods" and simply writes "Group C — 0 deduction, not applicable," that positive claim should require evidence. Writing a passing criterion without evidence is a false positive that inflates the number.
 
 **Example:**
 - `flounder.md`'s table lists "USDA safe temp evidence — 0 — Pull at 60°C in steam leaf" — this is only verified for the steam method; pan_fry, grill, oven_bake have no verified USDA-level temperature evidence but are not penalized.
 
 ---
 
-## Pattern 9: Score momentum — high scores maintained across sessions
+## Pattern 9: Number momentum — high numbers maintained across sessions
 
-**What happens:** Once a score is written by one agent, the next agent reviewing the file sees "18/20" and anchors to it. The next assessment rarely goes lower; typically it goes slightly higher or stays the same.
+**What happens:** Once a number is written by one agent, the next agent reviewing the file sees "18/20" and anchors to it. The next assessment rarely goes lower; typically it goes slightly higher or stays the same.
 
-**Why this inflates:** The first agent's inflation becomes baseline. If a score of 18 was wrong but subsequent agents don't challenge it, the inflation compounds. The correct behavior is: each session should re-evaluate the score from the criteria, not from the previous session's number.
+**Why this inflates:** The first agent's inflation becomes baseline. If a number of 18 was wrong but subsequent agents don't challenge it, the inflation compounds. The correct behavior is: each session should re-read the number from the criteria, not from the previous session's number.
 
 ---
 
-## Pattern 10: Score precalculation steering the work
+## Pattern 10: Number precalculation steering the work
 
-**What happens:** The agent projects what score each optional improvement or exception would yield ("approve this and the file reaches 18/20") and lets those projections choose the work — and argue for exceptions. The projected number becomes the reason for the action.
+**What happens:** The agent projects what number each optional improvement or exception would yield ("approve this and the file reaches 18/20") and lets those projections choose the work — and argue for exceptions. The projected number becomes the reason for the action.
 
-**Why this inflates:** The score is a diagnostic read taken *after* the work, not a plan target. Steering by projected score selects the work that moves the number instead of the work that improves the data, and it invites exactly the leniency the hard-wall exception exists to prevent. It also hides a true fact: raising data quality can **lower** the score. A newly created partial leaf adds real content and a real deduction at the same time; a corrected table that finally lists its unchecked rows can drop the number. That is the scoring system working, not failing.
+**Why this inflates:** The number is a diagnostic read taken *after* the work, not a plan target. Steering by a projected number selects the work that moves the number instead of the work that improves the data, and it invites exactly the leniency the hard-wall exception exists to prevent. It also hides a true fact: raising data quality can **lower** the number. A newly created partial leaf adds real content and a real deduction at the same time; a corrected table that finally lists its unchecked rows can drop the number. That is the rubric working, not failing.
 
-**Correct behavior:** Choose work by data-quality value (missing methods, thin leaves, unsourced claims), do the work, then score from the criteria — and accept a lower number than last time without flinching. Never present score arithmetic as grounds to approve an exception; only the wall evidence is grounds.
+**Correct behavior:** Choose work by data-quality value (missing methods, thin leaves, unsourced claims), do the work, then read the number off the criteria — and accept a lower number than last time without flinching. Never present the arithmetic as grounds to approve an exception; only the wall evidence is grounds.
 
 ---
 
@@ -139,15 +140,15 @@ Scores are a measure of **current quality**. They are not a measure of how much 
 | Pattern | Root cause | Typical overestimate |
 |---------|-----------|---------------------|
 | Single-method group coverage | Generalizing from 1 leaf to all methods | +1 to +2 per group |
-| Missing leaf penalties ignored | Reluctance to give low scores after doing work | +3 to +5 |
+| Missing leaf penalties ignored | Reluctance to give low numbers after doing work | +3 to +5 |
 | Geographic reality without evidence | Avoiding hard research | +1 to +2 per group |
 | Self-assessment at creation | No adversarial review | +2 to +4 (overall bias) |
 | TOR conformance ≠ quality | Structural pass used as content pass | +1 to +2 |
 | Perfect 20/20 | Completion framing | makes 20 look achievable |
-| Score as completion signal | Effort rewarded, not quality | +4 to +8 |
+| The number as a completion signal | Effort rewarded, not quality | +4 to +8 |
 | Incomplete deduction tables | Unchecked criteria marked as passing | +1 to +3 |
-| Score momentum | Anchoring to prior inflated number | +0 to +2 per session |
-| Score precalculation | Steering work by projected number | variable; hides legitimate drops |
+| Number momentum | Anchoring to prior inflated number | +0 to +2 per session |
+| Number precalculation | Steering work by a projected number | variable; hides legitimate drops |
 
 **Conservative estimate of total inflation across this branch: +15 points per hub file (conservative; some files may be inflated by more).**
 

@@ -48,7 +48,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 10
+improvement_potential: 10
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -87,9 +87,9 @@ Nötrumpa skärs från rumpprimalen — toppen av bakkvarteret, vid korsningen a
 | grill | *not yet created* | ⬜ |
 | oven_roast | *not yet created* | ⬜ |
 
-## Quality score
+## Improvement potential
 
-**Score: 10 / 20** — assessed 2026-04-27
+**Improvement potential: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -103,4 +103,4 @@ Nötrumpa skärs från rumpprimalen — toppen av bakkvarteret, vid korsningen a
 2. **−2** · Group A/C gap — find a Group A (Asian) or Group C (African/Middle Eastern) rump steak pan-sear source
 3. Create `rump-grill.md` and `rump-oven_roast.md` leaves
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -24,7 +24,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-quality_score: 19
+improvement_potential: 19
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 15
@@ -52,9 +52,9 @@ Det kulinariska målet är kollagensmältning: 85–90 °C, hållet i 2–3 timm
 - [Braise](./lamb_neck-braise.md)
 - [Oven Roast](./lamb_neck-oven_roast.md)
 - [Slow Cooker](./lamb_neck-slow_cooker.md)
-## Quality score
+## Improvement potential
 
-**Score: 19 / 20** — assessed 2026-04-29 (methods survey done; braise leaf profile fixed (was sibling copy of oven_roast); −1 Group A remains)
+**Improvement potential: 19 / 20** — assessed 2026-04-29 (methods survey done; braise leaf profile fixed (was sibling copy of oven_roast); −1 Group A remains)
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -72,4 +72,4 @@ Det kulinariska målet är kollagensmältning: 85–90 °C, hållet i 2–3 timm
 4. **−1** · Method file `lamb_neck-oven_roast.md` copies parent cut profile — rewrite `lamb_neck-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 5. **−1** · Missing Culinary Group A tradition(s) — add Culinary Group A source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

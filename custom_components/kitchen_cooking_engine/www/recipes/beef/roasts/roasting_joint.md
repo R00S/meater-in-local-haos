@@ -54,7 +54,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 15
@@ -85,9 +85,9 @@ carryover_temp_c: 8
 |--------|-----------|--------|
 | oven_roast | [roasting_joint-oven_roast.md](roasting_joint-oven_roast.md) | ✅ 4 recipes — Groups B, C, D; Group A gap noted |
 
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Improvement potential: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -99,4 +99,4 @@ carryover_temp_c: 8
 - 4 source recipes with explicit pull temperatures across Groups B, C, D
 - Group A gap: oven-roasting whole beef joints is not a documented tradition in confirmed reachable South/East/SE Asian recipe sources
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

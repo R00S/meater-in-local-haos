@@ -31,7 +31,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 8
+improvement_potential: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -59,9 +59,9 @@ Innertemperatur: **68–72 °C (154–162 °F)** för genomstekt, saftig loin. U
 ## Research files by cooking method
 
 - [Oven Roast](./pork_loin_roast-oven_roast.md)
-## Quality score
+## Improvement potential
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Improvement potential: 8 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -78,4 +78,4 @@ Innertemperatur: **68–72 °C (154–162 °F)** för genomstekt, saftig loin. U
 3. **−2** · Missing Culinary Group A and Culinary Group C tradition(s) — add Culinary Group A and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
 4. **−1** · Method file `pork_loin_roast-oven_roast.md` copies parent cut profile — rewrite `pork_loin_roast-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

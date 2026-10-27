@@ -39,7 +39,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 10
+improvement_potential: 10
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -63,9 +63,9 @@ Denna magerhet kräver mycket korta tillagningstider vid hög värme — 2–3 m
 - [Pan Sear](./kangaroo_fillet-pan_sear.md) — 2 sources collected (Groups B and D; Groups A and C needed)
 - [Grill](./kangaroo_fillet-grill.md) — stub; uses same recipes as pan_sear (both methods documented at kangaroowings.au source)
 
-## Quality score
+## Improvement potential
 
-**Score: 10 / 20** — assessed 2026-04-27
+**Improvement potential: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -82,4 +82,4 @@ Denna magerhet kräver mycket korta tillagningstider vid hög värme — 2–3 m
 3. **−2** · Pan sear leaf incomplete — add 2–4 more sources from Groups A and C
 4. **−1 each** · Missing Groups A and C — find South/SE Asian and Middle Eastern/African kangaroo recipes
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

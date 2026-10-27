@@ -481,46 +481,54 @@ file becomes required here.
 
 ---
 
-## Cut file quality scoring
+## Cut file improvement potential
 
-Every **cut file** (the `{cut_name}.md` without a method suffix) carries a
-`quality_score` field in its `<!-- KCE:CUT` front-matter block and a
-`## Quality score` section at the end of the document.
+Every **cut file** (the `{cut_name}.md` without a method suffix) carries an
+`improvement_potential` field in its `<!-- KCE:CUT` front-matter block and an
+`## Improvement potential` section at the end of the document.
+
+**The number is improvement potential, not a score.** It is the same 0–20 count
+the rubric has always produced, read the other way round: **20 means nothing
+left has been found to earn, and every point below 20 is potential — work that
+is still there to do.** A file at 8/20 has more potential than a file at 18/20.
+A deduction therefore moves the number *down*, which means *more* potential,
+not less.
 
 ### Purpose — flaw detection, not achievement
 
-> **The score is a diagnostic tool, not a target.**
+> **The number is a diagnostic reading, not a target.**
 
-The purpose of this scoring system is to **identify flaws** so that the worst
-files can be found and improved first.  A low score is the point — it means the
-scoring is working correctly.
+The purpose of this rubric is to **identify flaws** so that the files with the
+most potential can be found and improved first.  A low number is the point — it
+means the assessment is working correctly.
 
 **What this means in practice:**
 
-- Do **not** soften or remove a criterion because files score lower as a result.
+- Do **not** soften or remove a criterion because the number comes out lower as a result.
   Accurate detection of a real gap is more valuable than a higher number.
 - Do **not** add credit for data that has not been genuinely researched.
   Frontmatter values auto-populated from `cooking_data.py` are not research.
 - Do **not** treat 20/20 as the goal.  Reaching 20/20 on every file is neither
   required nor expected.  Many cuts may never reach it.
-- Do **not** use projected scores to choose between optional improvements, and do
-  not treat a score drop after genuine improvement as a failure.  A new partial
-  leaf adds content and a deduction together; an honest re-check can lower the
-  number.  Improve the data first, then score from the criteria.
+- Do **not** use projected numbers to choose between optional improvements, and do
+  not treat a drop in the number after genuine improvement as a failure.  A new
+  partial leaf adds content and a deduction together; an honest re-check can
+  lower the number.  Improve the data first, then read the number off the criteria.
 - **Do** use the `### Improvement priorities` list in each file to find the
   highest-value action for that specific cut.
-- **Do** focus improvement work on the lowest-scoring files first — the floor
-  matters more than the ceiling.
+- **Do** focus improvement work on the files with the lowest numbers first —
+  the floor matters more than the ceiling.
 
-Future agents: if you find yourself adjusting criteria to make scores look
+Future agents: if you find yourself adjusting criteria to make numbers look
 better, you are working against the purpose of this system.  Harsh, accurate
-scoring is correct behaviour.
+assessment is correct behaviour.
 
 ### Scale
 
-**Base: 20 points.** Deductions are subtracted from 20.  A stub file with no
-research content will score around 3/20.  That is not a bug — it is an accurate
-reflection of the file's state.
+**Base: 20 points, where 20 is the absence of potential.** Deductions are
+subtracted from 20, so each one lowers the number and raises the potential.  A
+stub file with no research content sits around 3/20.  That is not a bug — it is
+an accurate reflection of the file's state.
 
 ### Culinary group coverage (assessed across *all* method leaf files for the cut)
 
@@ -601,7 +609,7 @@ Two separate deductions apply:
   than copying a sibling method file — it means the method file contains no
   method-specific analysis at all.
 
-### Scoring summary table
+### Deduction summary table
 
 | Criterion | Possible deduction |
 |-----------|--------------------|
@@ -620,13 +628,13 @@ Two separate deductions apply:
 | Method file copies sibling method description (per file, max 2) | −1 each |
 | Method file copies parent cut profile (per file, no limit) | −1 each |
 | **Maximum total deduction** | **−27 + number of method files** |
-| **Minimum score** | **varies** |
+| **Lowest number** | **varies** |
 
-### How the score is written into the cut file
+### How the number is written into the cut file
 
 Add to the `<!-- KCE:CUT` block:
 ```yaml
-quality_score: 17
+improvement_potential: 17
 cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 ```
@@ -634,9 +642,9 @@ quality_assessed: 2026-04-26
 And append this section at the end of the cut file:
 
 ```markdown
-## Quality score
+## Improvement potential
 
-**Score: 17 / 20** — assessed 2026-04-26
+**Improvement potential: 17 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|-----------|
@@ -644,8 +652,8 @@ And append this section at the end of the cut file:
 | Cut profile lacks anatomy | −1 |
 | Per-method temp data missing | −1 |
 
-*Score is recalculated each time a new method leaf is added or the cut
-profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or
+the cut profile is updated.*
 ```
 
 ### Hard-wall exception (user-approved; the only sanctioned way past an unearnable deduction)
@@ -697,44 +705,44 @@ The exception is deliberately narrow. It applies **only** when all of the follow
    names the ingredient carries in each region (looked up in a real source — **never guessed**),
    and what searches in the relevant cuisines actually showed (e.g. Japanese *nishin* is a
    different Pacific species; Caribbean herring traditions use the smoked product). A bare
-   "geographic reality" verdict without this evidence remains score inflation (Pattern 3 in
-   `HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md`) and is **not** an exception.
+   "geographic reality" verdict without this evidence remains number inflation (Pattern 3 in
+   `HOW_I_INFLATE_CUT_FILES_AND_WHY.md`) and is **not** an exception.
 3. **The user approves it.** The agent **asks** the user — it may never approve the exception
    itself. The request states: the cut, the exact criteria and deduction rows sought, the
-   evidence of the wall, and the score with and without the exception. Silence is not approval;
+   evidence of the wall, and the number with and without the exception. Silence is not approval;
    a refused request changes nothing.
 
 When (and only when) the user approves, document the exception **in the cut file's
-`## Quality score` section**:
+`## Improvement potential` section**:
 
 - an `**Exception (user-approved {ISO date}):**` line naming the exact criteria it covers
   (e.g. "Missing Culinary Group A and C only"), with the wall evidence summarized above it;
 - the affected deduction rows rewritten as `— (user-approved exception; wall documented above)`
   — the rows **stay in the table** and are never silently deleted;
-- the score recomputed with the exception applied, shown alongside the without-exception score
-  (e.g. `**Score: 8 / 20** (with user-approved exception; 6 / 20 without it)`).
+- the number recomputed with the exception applied, shown alongside the without-exception number
+  (e.g. `**Improvement potential: 8 / 20** (with user-approved exception; 6 / 20 without it)`).
 
 Scope and lifetime:
 
 - The exception is **per cut file and per criterion**. It transfers to no other cut, no other
-  group, and no other criterion, and it is never a blanket waiver of the scoring table.
+  group, and no other criterion, and it is never a blanket waiver of the deduction table.
 - If a credible source that breaks the wall is ever found, the exception is revoked for that
-  criterion, normal scoring resumes, and the cut file note records the revocation.
+  criterion, normal assessment resumes, and the cut file note records the revocation.
 - The exception exists so later passes stop re-litigating a settled question — **not** so the
-  file looks better than it is. Do not use it to chase 20/20 (Pattern 6): a low score with a
-  documented, user-approved wall is still an honest score.
+  file looks better than it is. Do not use it to chase 20/20 (Pattern 6): a low number with a
+  documented, user-approved wall is still an honest reading.
 - Without an approval in hand, the deduction stands exactly as written. An agent-written note
-  claiming the wall, with no user approval, has zero scoring effect.
+  claiming the wall, with no user approval, has zero effect on the number.
 
 ### Recurring task
 
 Grading cut files is a **recurring improvement task**. Whenever a new method
-leaf is added or an existing leaf's tradition coverage is improved, the cut
-file score must be recalculated and updated.
+leaf is added or an existing leaf's tradition coverage is improved, the number
+must be recalculated and updated.
 
-**Use low scores as a work queue.** Sort all cut files by `quality_score`
+**Use low numbers as a work queue.** Sort all cut files by `improvement_potential`
 ascending — the files at the bottom of the list are the ones that need
-attention.  Improve the lowest-scoring files first.  Do not adjust criteria
-or add leniency exceptions to raise scores artificially. The **only** sanctioned
-way past a deduction is the user-approved hard-wall exception above — and it is
-never applied by the agent alone.
+attention.  Improve the files with the lowest numbers first.  Do not adjust
+criteria or add leniency exceptions to move numbers artificially. The **only**
+sanctioned way past a deduction is the user-approved hard-wall exception above —
+and it is never applied by the agent alone.

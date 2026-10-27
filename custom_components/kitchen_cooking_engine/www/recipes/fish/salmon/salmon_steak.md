@@ -40,7 +40,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 11
+improvement_potential: 11
 cooking_methods_researched: 2
 quality_assessed: 2026-04-27
 rest_time_min: 0
@@ -90,9 +90,9 @@ Ryggköttsektionen innehåller samma skiktade myotom- och myokommat-struktur som
 | oven_bake | [salmon_steak-oven_bake.md](salmon_steak-oven_bake.md) | ✅ 4 sources (2 Northern + 2 Western); 1 explicit pull temp (≈ 60 °C) |
 | grill | *not yet created* | ⬜ |
 
-## Quality score
+## Improvement potential
 
-**Score: 11 / 20** — assessed 2026-04-27
+**Improvement potential: 11 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -109,4 +109,4 @@ Ryggköttsektionen innehåller samma skiktade myotom- och myokommat-struktur som
 2. **−2** · Find sources that give explicit thermometer targets — recipe collections that target instrumented home cooks (e.g. ChefSteps, Serious Eats) are more likely to publish them
 3. **−2** · Add Eastern (e.g. Japanese teriyaki of a *salmon steak* specifically, not a fillet) and Southern (Mediterranean / Middle Eastern) sources — note that searches show fillet has displaced steak in these traditions, so this gap may be a legitimate "no data" finding rather than a fixable deduction
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

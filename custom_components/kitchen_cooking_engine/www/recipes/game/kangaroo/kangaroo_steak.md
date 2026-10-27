@@ -39,7 +39,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: true
-quality_score: 12
+improvement_potential: 12
 cooking_methods_researched: 1 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-10-26
 rest_time_min: 3
@@ -114,9 +114,9 @@ medium-rare-band (52–57 °C) — en verklig avvikelse som är dokumenterad, in
 - [Grill](./kangaroo_steak-grill.md) — 3 sources (AU ×3); ⚠️ count + distinct open; carries the only grate temperature (190–200 °C) and the Kangaroo Industry Association's smoked-then-seared fillet
 - [Pan Sear](./kangaroo_steak-pan_sear.md) — 4 sources (AU ×4); ⚠️ distinct row open; carries the only published pull temperature (50–52 °C, cited) and the hand-firmness doneness test
 
-## Quality score
+## Improvement potential
 
-**Score: 12 / 20** — assessed 2026-10-26 (was 8 on 2026-04-26)
+**Improvement potential: 12 / 20** — assessed 2026-10-26 (was 8 on 2026-04-26)
 
 | Criterion | Status |
 |-----------|--------|
@@ -159,4 +159,4 @@ medium-rare-band (52–57 °C) — en verklig avvikelse som är dokumenterad, in
 4. **Doneness pass** · Reconcile 50–52 °C (cited Australian practice) with the registry's
    52–57 °C medium-rare band
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

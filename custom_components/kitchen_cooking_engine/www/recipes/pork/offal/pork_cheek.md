@@ -25,7 +25,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -50,9 +50,9 @@ Bräsering (160–170 °C, 2–3 timmar) är den definitiva metoden: kollagen sm
 - [Braise](./pork_cheek-braise.md)
 - [Oven Roast](./pork_cheek-oven_roast.md)
 - [Pan Fry](./pork_cheek-pan_fry.md)
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Improvement potential: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -72,4 +72,4 @@ Bräsering (160–170 °C, 2–3 timmar) är den definitiva metoden: kollagen sm
 2. **−1** · Missing method leaf file — create `pork_cheek-slow_cooker.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
 3. **−2** · Missing Culinary Group A and Culinary Group C tradition(s) — add Culinary Group A and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

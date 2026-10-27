@@ -42,7 +42,7 @@ doneness:
   max_f: 150
   usda_safe: true
   recommended: true
-quality_score: 16
+improvement_potential: 16
 cooking_methods_researched: 1 # 2026-10-26: enum-wide survey done with 16 fetched sources across five leaves. Confirmed and leafed: pan_sear, grill, oven_roast, steam, oven_bake. Queued leads (error single-source, no leaf yet): charcoal_grill (the Turkish mangal and Greek κάρβουνα recipes are currently counted inside the `grill` leaf with their fuel flagged per row), poach (no fetchable cut-specific recipe found), air_fryer, sous_vide, pan_fry (the flour-dusted pan recipes live in `pan_sear`), smoker, oven_broil. Documented negatives: pressure_cooker, slow_cooker, braise (only sauce-braised branzino fillets, no whole-fish braise), saute (same technique family as pan_sear).
 quality_assessed: 2026-10-26
 rest_time_min: 0
@@ -109,9 +109,9 @@ than on thermometers.
 - [Steam](./sea_bass-steam.md) — the East Asian whole-fish method
 - [Oven Bake](./sea_bass-oven_bake.md) — whole fish sealed in a salt crust
 
-## Quality score
+## Improvement potential
 
-**Score: 16 / 20** — assessed 2026-10-26
+**Improvement potential: 16 / 20** — assessed 2026-10-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -134,4 +134,4 @@ than on thermometers.
 3. **`steam` quantity gate** · Xiachufang publishes no amounts and Cookpad Japan publishes 少々; a Chinese-language or Japanese source with full quantities would clear that shortfall.
 4. **Queued methods not yet leafed** · `charcoal_grill` (recipes currently inside `grill`, fuel flagged per row), `poach`, `air_fryer`, `sous_vide`, `pan_fry` (recipes currently inside `pan_sear`), `smoker`, `oven_broil`. Each widens before it is declared — declaring a method without a leaf fails the missing-leaf criterion.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

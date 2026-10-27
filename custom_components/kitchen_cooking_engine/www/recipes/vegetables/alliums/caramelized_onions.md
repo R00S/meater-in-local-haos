@@ -19,7 +19,7 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 0
@@ -41,9 +41,9 @@ Karameliserade lökar via pannstekning avser stilen där skivad eller halvad lö
 
 - [Pan Fry](./caramelized_onions-pan_fry.md)
 - [Sauté](./caramelized_onions-saute.md)
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-26
+**Improvement potential: 9 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -59,4 +59,4 @@ Karameliserade lökar via pannstekning avser stilen där skivad eller halvad lö
 3. **−1** · Method file `caramelized_onions-pan_fry.md` copies parent cut profile — rewrite `caramelized_onions-pan_fry.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 4. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

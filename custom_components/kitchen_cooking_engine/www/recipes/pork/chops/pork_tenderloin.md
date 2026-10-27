@@ -34,7 +34,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 8
+improvement_potential: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 5
@@ -65,9 +65,9 @@ Pannstekning, grillning, ugnsrostning och sous vide ger alla bra resultat. Alla 
 - [Oven Roast](./pork_tenderloin-oven_roast.md)
 - [Pan Sear](./pork_tenderloin-pan_sear.md)
 - [Sous Vide](./pork_tenderloin-sous_vide.md)
-## Quality score
+## Improvement potential
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Improvement potential: 8 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -85,4 +85,4 @@ Pannstekning, grillning, ugnsrostning och sous vide ger alla bra resultat. Alla 
 4. **−1** · Method file `pork_tenderloin-grill.md` copies parent cut profile — rewrite `pork_tenderloin-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 5. **−1** · Method file `pork_tenderloin-pan_sear.md` copies parent cut profile — rewrite `pork_tenderloin-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

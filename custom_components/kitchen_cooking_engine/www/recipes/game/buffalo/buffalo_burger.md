@@ -25,7 +25,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 16
+improvement_potential: 16
 cooking_methods_researched: 1 # Method survey completed 2026-10-26 on fetched pages only. Declared + leafed: grill, pan_fry (both rewritten), air_fryer and smoker (both discovered this pass and registered in cooking_data.py id 632). Queued leads (widening before declaring): charcoal_grill (Wrågården's "glöden gråvit" ember grill and Basil and Bubbly's "use a charcoal grill instead of a gas grill" are both notes inside other leaves; BBQGuys' charcoal/cast-iron buffalo burger returns 403), oven_bake (Healthy Delicious fetches: 2+2 min cast-iron sear then 300 °F oven 4–8 min for medium-rare — a real sear-then-oven record, needs 2–3 more sources before it earns a leaf), reverse_sear (With the Woodruffs describes it as a finish on its smoker recipe). Documented searched-negative 2026-10-26: Culinary Group A — carabeef/carabao and Indian/Nepali buffalo-mince patty recipes return only social-media posts, no fetchable recipe.
 quality_assessed: 2026-10-26
 rest_time_min: 2
@@ -114,9 +114,9 @@ därför `well_done` som enda band. Innertemperatur: **71 °C (160 °F)**. Efter
 - [Pan Fry](./buffalo_burger-pan_fry.md) — 3 sources (US ×2, Swedish farm producer); ⚠️ count below 4; records the press/no-press disagreement (smash vs gentle sear)
 - [Smoker](./buffalo_burger-smoker.md) — 2 sources (US pellet, Canadian charcoal); ⚠️ count below 4; carries the pasteurisation-hold protocol (140 °F / 12 min)
 
-## Quality score
+## Improvement potential
 
-**Score: 16 / 20** — assessed 2026-10-26 (was 8 on 2026-04-26)
+**Improvement potential: 16 / 20** — assessed 2026-10-26 (was 8 on 2026-04-26)
 
 | Criterion | Status |
 |-----------|--------|
@@ -136,7 +136,7 @@ därför `well_done` som enda band. Innertemperatur: **71 °C (160 °F)**. Efter
 
 **Deductions**: −1 Group A · −1 pan_fry count · −1 smoker count · −1 air_fryer distinct = −4 → **16**
 
-### Integrity work recorded this pass (why the old score's rows were wrong)
+### Integrity work recorded this pass (why the old number's rows were wrong)
 
 Both pre-ToR leaves gave **every one of their sources the same pull of 70–72 °C (158–162 °F)**,
 presented as the sources' own numbers. Fresh fetches show that figure belongs to none of them:
@@ -164,4 +164,4 @@ pull/final statement is quoted in the grill leaf but excluded from the gate); Tr
 5. Queued leaves to declare next pass: `charcoal_grill` (Wrågården's ember grill + Basil and Bubbly's charcoal preference noted in-line; BBQGuys 403) and `oven_bake` (Healthy Delicious' sear-then-300 °F-home-oven record needs company before it earns a leaf).
 6. Doneness: the cut is settled at `well_done`/71 °C by USDA ground-meat rules. The corpus's minority preference for 63–65 °C is recorded in every leaf; any future change should come from a doneness pass with pasteurisation tables, not from preference alone.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

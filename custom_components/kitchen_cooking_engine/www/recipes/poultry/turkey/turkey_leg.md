@@ -32,7 +32,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 10
+improvement_potential: 10
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -69,9 +69,9 @@ Kalkonstjälken (trumpinnen) är det nedre segmentet av fågelns bakre extremite
 | oven_roast | turkey_leg-oven_roast.md | ✅ 4 sources (Groups B, C, D×2; Group A gap noted) |
 | smoker | *not yet created* | ⬜ africanbites.com/smoked-turkey-legs/ is a ready source (Group C) |
 
-## Quality score
+## Improvement potential
 
-**Score: 10 / 20** — assessed 2026-04-27
+**Improvement potential: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -86,4 +86,4 @@ Kalkonstjälken (trumpinnen) är det nedre segmentet av fågelns bakre extremite
 1. Create `turkey_leg-smoker.md` — africanbites.com/smoked-turkey-legs/ is a ready Group C source; need 3 more sources
 2. Find Group A source — Filipino/Thai/Indonesian turkey recipe for oven_roast leaf
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

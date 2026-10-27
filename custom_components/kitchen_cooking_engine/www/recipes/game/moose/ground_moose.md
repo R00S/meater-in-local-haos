@@ -25,7 +25,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 15
+improvement_potential: 15
 cooking_methods_researched: 1 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-10-26
 rest_time_min: 2
@@ -131,9 +131,9 @@ Not derivable by the sweep, recorded here so the next pass inherits it: the elev
 eight Nordic/Russian pan-fry and simmer records plus two Nordic oven records and one grill record; the
 corpus for this cut measures temperatures only in the North American burger and meatloaf records.
 
-## Quality score
+## Improvement potential
 
-**Score: 15 / 20** — assessed 2026-10-26 (was 8 when the cut was created the same day, with no leaves)
+**Improvement potential: 15 / 20** — assessed 2026-10-26 (was 8 when the cut was created the same day, with no leaves)
 
 | Criterion | Status |
 |-----------|--------|
@@ -181,4 +181,4 @@ corpus for this cut measures temperatures only in the North American burger and 
 4. Doneness is settled at `well_done` / 71 °C and the band is defensible; the open question is
    whether the two unsafe sources should be re-checked for updates rather than left as recorded
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

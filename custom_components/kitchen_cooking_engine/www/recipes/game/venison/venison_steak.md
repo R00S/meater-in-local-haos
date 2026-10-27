@@ -48,7 +48,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 17
+improvement_potential: 17
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 5
@@ -80,9 +80,9 @@ Sear i smör eller klarat smör vid hög värme — 3–4 minuter per sida — s
 - [Grill](./venison_steak-grill.md)
 - [Pan Sear](./venison_steak-pan_sear.md)
 
-## Quality score
+## Improvement potential
 
-**Score: 17 / 20** — assessed 2026-04-29
+**Improvement potential: 17 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -101,4 +101,4 @@ Sear i smör eller klarat smör vid hög värme — 3–4 minuter per sida — s
 1. **−1 each** · Groups A and C missing — add sources from Japanese/Korean/Chinese or Middle Eastern/African venison traditions to an existing or new leaf
 2. Create `venison_steak-charcoal_grill.md` — method in list, leaf pending
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

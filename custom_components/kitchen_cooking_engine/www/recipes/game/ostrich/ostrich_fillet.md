@@ -40,7 +40,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 8
+improvement_potential: 8
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -65,9 +65,9 @@ Köttet är djupt rött med litet fettinnehåll (under 2 %), högt järninnehål
 - [Grill](./ostrich_fillet-grill.md) — stub; proper sourced recipes not yet found
 - [Pan Sear](./ostrich_fillet-pan_sear.md) — stub; proper sourced recipes not yet found
 
-## Quality score
+## Improvement potential
 
-**Score: 8 / 20** — assessed 2026-04-27
+**Improvement potential: 8 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -85,4 +85,4 @@ Köttet är djupt rött med litet fettinnehåll (under 2 %), högt järninnehål
 3. **−2** · Braise leaf incomplete — add 3–5 more braise sources from diverse traditions
 4. **−1 each** · Missing Groups A, B, C — find Asian, European, and South African/African recipes
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -48,7 +48,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 11
+improvement_potential: 11
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -90,9 +90,9 @@ Rumpbiffstek skärs från primalen **rundbotten** — höftpartiet vid bakkvarte
 | braise | *not yet created* | ⬜ |
 | slow_cooker | *not yet created* | ⬜ |
 
-## Quality score
+## Improvement potential
 
-**Score: 11 / 20** — assessed 2026-04-27
+**Improvement potential: 11 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -107,4 +107,4 @@ Rumpbiffstek skärs från primalen **rundbotten** — höftpartiet vid bakkvarte
 3. Create `rump_roast-braise.md` leaf (pot-roast style, BBC / Moroccan / Polish / Chinese)
 4. Create `rump_roast-slow_cooker.md` leaf
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

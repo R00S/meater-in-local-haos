@@ -55,7 +55,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 11
+improvement_potential: 11
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 15
@@ -94,9 +94,9 @@ Innertemperatur: **57–65 °C (135–149 °F)** för medium-rare till medium; *
 
 - [Grill](./leg_of_lamb-grill.md)
 - [Oven Roast](./leg_of_lamb-oven_roast.md)
-## Quality score
+## Improvement potential
 
-**Score: 11 / 20** — assessed 2026-04-26
+**Improvement potential: 11 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -108,4 +108,4 @@ Innertemperatur: **57–65 °C (135–149 °F)** för medium-rare till medium; *
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
 2. **−1** · Missing Culinary Group A tradition(s) — add Culinary Group A source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

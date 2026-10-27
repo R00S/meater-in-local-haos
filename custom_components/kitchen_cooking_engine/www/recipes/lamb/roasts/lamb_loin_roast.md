@@ -46,7 +46,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 13
+improvement_potential: 13
 cooking_methods_researched: 1 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -71,9 +71,9 @@ Ugnsrostning: sear i en het panna, sedan avsluta i 180–200 °C ugn. Vid 2–3 
 
 - [`lamb_loin_roast-oven_roast.md`](lamb_loin_roast-oven_roast.md) — 3 verified sources: Group B × 2 (Great British Chefs / Paul Heathcote, Gourmet Traveller AU), Group D × 1 (ICA.se). Groups A and C not covered — see coverage note in leaf.
 
-## Quality score
+## Improvement potential
 
-**Score: 13 / 20** — assessed 2026-04-27
+**Improvement potential: 13 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -95,4 +95,4 @@ Ugnsrostning: sear i en het panna, sedan avsluta i 180–200 °C ugn. Vid 2–3 
 
 1. **Leaf sources** — find a 4th verified oven_roast lamb loin source from a French, New Zealand, North American, or Eastern European culinary tradition.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

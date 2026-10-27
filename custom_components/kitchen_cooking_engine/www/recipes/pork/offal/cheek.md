@@ -23,7 +23,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -57,9 +57,9 @@ Denna intensiva muskelaktivitet skapar den djupaste smak och högsta kollageninn
 | Braise | `cheek-braise.md` | ⚠️ In progress — 1 Group B source, needs A/C/D |
 | Slow cooker | *not yet created* | ⬜ |
 
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Improvement potential: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Points | Status |
 |-----------|--------|--------|
@@ -78,4 +78,4 @@ Denna intensiva muskelaktivitet skapar den djupaste smak och högsta kollageninn
 1. **−8** · Cooking methods not researched — research slow_cooker method for pork cheek; add leaf file; then set `cooking_methods_researched: 1`
 2. **−3** · Missing Groups A, C, D — add source recipes from Asian (e.g. Chinese red-braised pork cheek), C (e.g. Moroccan-spiced braised cheek), D (e.g. Scandinavian slow-braised cheek)
 
-*Score will increase toward ~14/20 once Groups A, C, and D sources are added.*
+*Number will increase toward ~14/20 once Groups A, C, and D sources are added.*

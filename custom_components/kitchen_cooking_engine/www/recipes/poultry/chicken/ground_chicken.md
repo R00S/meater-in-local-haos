@@ -24,7 +24,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 2
@@ -52,9 +52,9 @@ Tillaga vid spissimmer eller ugn 160–170 °C, rör om regelbundet. Innertemper
 - [Braise](./ground_chicken-braise.md)
 - [Grill](./ground_chicken-grill.md)
 - [Pan Fry](./ground_chicken-pan_fry.md)
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-26
+**Improvement potential: 9 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -69,4 +69,4 @@ Tillaga vid spissimmer eller ugn 160–170 °C, rör om regelbundet. Innertemper
 2. **−2** · Missing Culinary Group B and Culinary Group D tradition(s) — add Culinary Group B and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 3. **−1** · Method file `ground_chicken-braise.md` copies parent cut profile — rewrite `ground_chicken-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

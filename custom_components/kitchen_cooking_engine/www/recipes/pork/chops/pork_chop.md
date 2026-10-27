@@ -34,7 +34,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 12
+improvement_potential: 12
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 3
@@ -65,9 +65,9 @@ Innertemperatur: **58–63 °C (136–145 °F)** för sous vide. Med pasteuriser
 - [Oven Roast](./pork_chop-oven_roast.md)
 - [Pan Fry](./pork_chop-pan_fry.md)
 - [Pan Sear](./pork_chop-pan_sear.md)
-## Quality score
+## Improvement potential
 
-**Score: 12 / 20** — assessed 2026-04-26
+**Improvement potential: 12 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|-----------|
@@ -77,4 +77,4 @@ Innertemperatur: **58–63 °C (136–145 °F)** för sous vide. Med pasteuriser
 
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

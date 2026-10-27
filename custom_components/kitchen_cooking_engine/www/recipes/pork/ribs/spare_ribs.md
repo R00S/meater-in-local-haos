@@ -24,7 +24,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-quality_score: 8
+improvement_potential: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -47,9 +47,9 @@ De kräver längre tillagningstid än baby back ribs (3–5 timmar låg-och-lån
 ## Research files by cooking method
 
 - [Oven Roast](./spare_ribs-oven_roast.md)
-## Quality score
+## Improvement potential
 
-**Score: 8 / 20** — assessed 2026-04-27
+**Improvement potential: 8 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -69,4 +69,4 @@ De kräver längre tillagningstid än baby back ribs (3–5 timmar låg-och-lån
 2. **−1 each** · Missing `spare_ribs-grill.md`, `spare_ribs-smoker.md`
 3. **−1 each** · Groups A, C missing
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

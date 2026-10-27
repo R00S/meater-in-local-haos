@@ -24,7 +24,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-quality_score: 14
+improvement_potential: 14
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 15
@@ -52,9 +52,9 @@ Se primär dokumentation i `docs/recipe_research/game/mutton/mutton_shoulder.md`
 
 All methods inherit from the primary `mutton_shoulder` entry. Independent leaf files are not created here to avoid data duplication. Any cut-specific research (not covered by `mutton_shoulder`) would be added here.
 
-## Quality score
+## Improvement potential
 
-**Score: 14 / 20** — assessed 2026-04-27
+**Improvement potential: 14 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -68,4 +68,4 @@ All methods inherit from the primary `mutton_shoulder` entry. Independent leaf f
 2. **−4** · No independent leaf files — if a distinct culinary identity is found for the "Shoulder" entry (e.g., a tradition where "shoulder" is treated differently from "mutton shoulder"), add independent leaf files
 3. **−2** · Cut profile is a cross-reference — add a stand-alone cut profile if this entry is kept
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

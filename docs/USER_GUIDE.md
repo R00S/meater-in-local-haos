@@ -830,8 +830,8 @@ After the collection gate passes, write 2–4 plain-language sentences explainin
 
 The full collection and analysis standards live in
 `custom_components/kitchen_cooking_engine/www/recipes/RECIPE_COLLECTION_TOR.md` and
-`RECIPE_ANALYSIS_TOR.md`; the quality-score rules for cut overview files are in the same
-directory.
+`RECIPE_ANALYSIS_TOR.md`; the improvement-potential rules for cut overview files are in the
+same directory.
 
 ---
 

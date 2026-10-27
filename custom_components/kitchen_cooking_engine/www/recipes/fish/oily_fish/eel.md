@@ -34,7 +34,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 20
+improvement_potential: 20
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -59,9 +59,9 @@ Eel (primarily European eel *Anguilla anguilla* and Japanese eel *Anguilla japon
 - [Smoker](./eel-smoker.md)
 - [Braise](./eel-braise.md)
 
-## Quality score
+## Improvement potential
 
-**Score: 20 / 20** — assessed 2026-05-31
+**Improvement potential: 20 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -80,4 +80,4 @@ Eel (primarily European eel *Anguilla anguilla* and Japanese eel *Anguilla japon
 
 1. Add Group A (East Asian) and Group C (African/Middle Eastern/Turkish) sources to the smoker leaf to complete cross-method group coverage.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

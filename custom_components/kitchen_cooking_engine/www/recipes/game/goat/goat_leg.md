@@ -50,7 +50,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 8
+improvement_potential: 8
 cooking_methods_researched: 0 # Survey 2026-10-24 found +2 methods (grill, pressure_cooker, both registered with leaves), but enum inventory still has plausible unverified leads (smoker, sous_vide, boil/steam for bone-in leg pieces) — stays 0 until collected or ruled out.
 quality_assessed: 2026-10-24
 rest_time_min: 15
@@ -79,9 +79,9 @@ De flesta kulinariska traditioner föredrar getbenet tillagat till 75–82 °C d
 - [Slow Cooker](./goat_leg-slow_cooker.md) — ⚠️ partial, 2 fetched sources (JM, IN)
 - [Grill](./goat_leg-grill.md) — ⚠️ partial, 2 fetched sources (JM indirect charcoal, US butterflied 135–140 °F) — **new method 2026-10-24**
 - [Pressure Cooker](./goat_leg-pressure_cooker.md) — ⚠️ partial, 1 fetched source (Caribbean Instant Pot) — **new method 2026-10-24**
-## Quality score
+## Improvement potential
 
-**Score: 8 / 20** — assessed 2026-10-24. From-scratch reassessment on the deduction
+**Improvement potential: 8 / 20** — assessed 2026-10-24. From-scratch reassessment on the deduction
 scale (no anchoring to the previous number — inflation doc Patterns 4 and 9; the number
 happens to coincide but the basis is different: the old table deducted for missing leaves
 under a different rule and counted Group A/D gaps that are now closed).
@@ -110,4 +110,4 @@ under a different rule and counted Group A/D gaps that are now closed).
 3. Raise the four partial leaves to the 4–6-source gate: pressure_cooker (+3), grill (+2), slow_cooker (+2), braise (+1).
 4. Resolve the grill-leaf doneness split (Caribbean tenderness vs US 135–140 °F medium-rare) with more traditions before any `method_temperature_ranges` override is committed.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

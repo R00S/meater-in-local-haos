@@ -32,7 +32,7 @@ doneness:
   max_f: 150
   usda_safe: true
   recommended: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 0
@@ -55,9 +55,9 @@ Innertemperatur: **60–63 °C (140–145 °F)**. Eftertillagning: 2–3 °C. Dr
 ## Research files by cooking method
 
 - [Pan Sear](./mahi_mahi-pan_sear.md)
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Improvement potential: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -76,4 +76,4 @@ Innertemperatur: **60–63 °C (140–145 °F)**. Eftertillagning: 2–3 °C. Dr
 2. **−1 each** · Missing `mahi_mahi-air_fryer.md`, `mahi_mahi-grill.md`
 3. **−1** · Group D missing
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

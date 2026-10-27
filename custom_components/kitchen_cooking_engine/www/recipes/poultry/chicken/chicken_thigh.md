@@ -35,7 +35,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 17
+improvement_potential: 17
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 3
@@ -64,9 +64,9 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. 
 - [Grill](./chicken_thigh-grill.md)
 - [Oven Roast](./chicken_thigh-oven_roast.md)
 
-## Quality score
+## Improvement potential
 
-**Score: 17 / 20** — assessed 2026-04-29
+**Improvement potential: 17 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -87,4 +87,4 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. 
 2. Create `chicken_thigh-pan_fry.md` — pan-fried chicken thighs widely available
 3. **−1** · Group D missing — add a Scandinavian, Polish, or Eastern European chicken thigh recipe
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

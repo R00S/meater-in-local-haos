@@ -31,7 +31,7 @@ doneness:
   max_f: 150
   usda_safe: true
   recommended: true
-quality_score: 19
+improvement_potential: 19
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 0
@@ -55,9 +55,9 @@ Det segmenterade ytterskalet (skalet) är ett inbyggt värmeskydd som skyddar k�
 
 - [Grill](./lobster_tail-grill.md)
 - [Oven Roast](./lobster_tail-oven_roast.md)
-## Quality score
+## Improvement potential
 
-**Score: 19 / 20** — assessed 2026-04-29
+**Improvement potential: 19 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -79,4 +79,4 @@ Det segmenterade ytterskalet (skalet) är ett inbyggt värmeskydd som skyddar k�
 
 1. **−1** · Missing Culinary Group C tradition — add a Middle Eastern, Moroccan, Caribbean, or Turkish lobster tail recipe to the grill or oven_roast leaf. Lobster is found in the Mediterranean and Red Sea; Turkish *ızgara ıstakoz* (grilled lobster) exists as a tradition. 20+ probes on 2026-04-27 and 2026-04-29 found no accessible Group C lobster tail recipe.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

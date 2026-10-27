@@ -43,7 +43,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 12
+improvement_potential: 12
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -71,9 +71,9 @@ Atlantisk och stillahavslax skiljer sig åt i fettfördelning — odlad atlantla
 - [Pan Sear](./salmon_fillet-pan_sear.md)
 - [Smoker](./salmon_fillet-smoker.md)
 - [Sous Vide](./salmon_fillet-sous_vide.md)
-## Quality score
+## Improvement potential
 
-**Score: 12 / 20** — assessed 2026-05-31
+**Improvement potential: 12 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -92,4 +92,4 @@ Methods survey incomplete (`cooking_methods_researched: 0`) — the methods list
 
 1. **−8** · Complete broad method-survey research for salmon fillet across culinary traditions; update the `methods:` list in the frontmatter; set `cooking_methods_researched: 1` only after thorough research.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

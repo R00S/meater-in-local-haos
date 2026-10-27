@@ -39,7 +39,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -63,9 +63,9 @@ Möra muskler (innanlår) lämpar sig för ugnsrostning och mer öm tillagning; 
 - [Braise](./venison_leg-braise.md) — 1 source collected (Group D German; Groups A, B, C needed)
 - [Oven Roast](./venison_leg-oven_roast.md) — cross-references venison_roast-oven_roast.md; 1–2 Group B sources known, more needed
 
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Improvement potential: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -83,4 +83,4 @@ Möra muskler (innanlår) lämpar sig för ugnsrostning och mer öm tillagning; 
 3. **−2** · Braise leaf incomplete — add 3–5 more sources from diverse traditions
 4. **−1 each** · Missing Groups A, B, C — find recipes from diverse culinary traditions
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -33,7 +33,7 @@ doneness:
   max_f: 185
   usda_safe: true
   recommended: true
-quality_score: 18
+improvement_potential: 18
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 10
@@ -57,9 +57,9 @@ En hel kyckling är en komplett fågel — bestående av bröstködet (vitt, mag
 
 - [`whole_chicken-oven_roast.md`](whole_chicken-oven_roast.md) — 4 sources: Group B (Jessica Gavin/American, BBC Good Food/British, Natasha's Kitchen/Ukrainian-American counted as Group B), Group C (Suzy Karadsheh/Egyptian)
 
-## Quality score
+## Improvement potential
 
-**Score: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group A, −1 Group D remain)
+**Improvement potential: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group A, −1 Group D remain)
 
 | Criterion | Status |
 |-----------|--------|
@@ -83,4 +83,4 @@ En hel kyckling är en komplett fågel — bestående av bröstködet (vitt, mag
 3. **−1** · Group A tradition missing — find a Chinese, Japanese, Korean, or Indian whole-chicken recipe
 4. **−1** · Group D tradition missing — find a Swedish, Polish, Baltic, or Slavic whole-chicken recipe
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

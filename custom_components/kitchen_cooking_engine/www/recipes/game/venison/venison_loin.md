@@ -40,7 +40,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-28
 rest_time_min: 5
@@ -71,9 +71,9 @@ Pannstekning vid hög värme är den viktigaste metoden: 3–4 minuter per sida 
 - [Pan Sear](./venison_loin-pan_sear.md) — 4 sources: Group B (2× British, 1× German), in-progress (Groups A/C/D missing)
 - [Oven Roast](./venison_loin-oven_roast.md) — 🔄 in progress (2 sources: Group B British, Group A Indian)
 
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-28
+**Improvement potential: 9 / 20** — assessed 2026-04-28
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -89,4 +89,4 @@ Pannstekning vid hög värme är den viktigaste metoden: 3–4 minuter per sida 
 3. **−1** · Missing Culinary Group C tradition — no Group C sources in any leaf; venison loin is uncommon in African/Middle Eastern/Caribbean cuisine; extensive search conducted
 4. **−1** · Missing Culinary Group D tradition — no Group D sources in any leaf; Swedish temperature data cited in cut profile but no full recipe from a Group D source found yet
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -35,7 +35,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 11
+improvement_potential: 11
 cooking_methods_researched: 1 # Enum-wide survey 2026-10-26, fetched sources for this exact cut. Confirmed+leafed: pan_sear, grill, charcoal_grill, oven_roast, braise, sous_vide. Queued leads (widening before leafing): air_fryer (recetasairfryernuria.com plancha-style air-fryer page; Cookpad "Secreto Ibérico en Airfryer"), slow_cooker (Cookpad "Secreto de cerdo en Crockpot"), smoker (informal social posts only: smoked at 250 °F to 125 °F internal, then grilled to 135 °F), pressure_cooker (Katy's guisado uses a pressure pot as a braise variant — no separate pressure-cooker recipe found). Documented negatives 2026-10-26: steam, poach, simmer, boil, saute — no cut-specific recipes found in the traditions searched; oven_bake/oven_broil treated as oven_roast variants for this cut (Recetas con Sazón's grill-function finish is recorded inside oven_roast).
 quality_assessed: 2026-10-26
 rest_time_min: 5
@@ -74,9 +74,9 @@ Köttet är extremt marmorerat med distinkt intramuskulärt fett och en unik fj�
 - [Pan Sear](./secreto-pan_sear.md) — 5 sources (ES ×2, DE, CH ×2); ⚠️ distinct row open
 - [Sous Vide](./secreto-sous_vide.md) — 3 sources (IT, US, NL); ⚠️ count open
 
-## Quality score
+## Improvement potential
 
-**Score: 11 / 20** — assessed 2026-10-26 (was 8 on 2026-04-27)
+**Improvement potential: 11 / 20** — assessed 2026-10-26 (was 8 on 2026-04-27)
 
 | Criterion | Status |
 |-----------|--------|
@@ -104,4 +104,4 @@ Köttet är extremt marmorerat med distinkt intramuskulärt fett och en unik fj�
 5. Queued method leads to widen next pass: `air_fryer` (recetasairfryernuria.com, Cookpad), `slow_cooker` (Cookpad Crockpot), `smoker` (informal social posts), `pressure_cooker` (none separate from braise)
 6. Cut-level doneness decision queued for one deliberate pass: the measured 55–62 °C cluster is now three leaves strong (sous_vide ×3 measured, pan_sear 55–60 °C, grill 57–60 °C pull) against a whole-cut `well_done` default; method keys already read `medium` for grill, charcoal_grill and sous_vide. Not changed piecemeal.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

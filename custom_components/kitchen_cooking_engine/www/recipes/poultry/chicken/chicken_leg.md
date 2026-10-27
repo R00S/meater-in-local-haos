@@ -33,7 +33,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 18
+improvement_potential: 18
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 3
@@ -59,9 +59,9 @@ Ugnsrostning: 200–220 °C, 35–45 minuter med vändning. Innertemperatur: **7
 
 - [`chicken_leg-oven_roast.md`](chicken_leg-oven_roast.md) — 4 sources: Group A (Swasthi Shreekanth/Indian), Group B (Jessica Gavin/American, BBC Good Food/British), Group D (Natasha's Kitchen/Ukrainian-American counted as Group B in prior assessment)
 
-## Quality score
+## Improvement potential
 
-**Score: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group C, −1 Group D remain)
+**Improvement potential: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group C, −1 Group D remain)
 
 | Criterion | Status |
 |-----------|--------|
@@ -85,4 +85,4 @@ Ugnsrostning: 200–220 °C, 35–45 minuter med vändning. Innertemperatur: **7
 3. **−1** · Group C tradition missing — find an African, Arabic, or Caribbean drumstick recipe
 4. **−1** · Group D tradition missing — find a Swedish, Polish, Baltic, or Slavic/Ukrainian drumstick recipe
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

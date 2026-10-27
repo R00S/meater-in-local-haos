@@ -57,7 +57,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 10
+improvement_potential: 10
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -80,9 +80,9 @@ Picanha is the most prized cut in Brazilian *churrasco* culture, where it is oft
 
 Picanha (*alcatra de capa* på portugisiska; *coulotte* på franska; *sirloin cap* eller *rump cap* på engelska) skärs från toppen av rumpprimalen, mellan höftbenet och kotlettens start. Anatomiskt består den av *biceps femoris*-muskeln täckt av ett tjockt subcutant fettlager — fettlisten är styckdelens definierande drag och hålls alltid intakt. Det är det mest firade snittet i brasiliansk *churrasco*-kultur. Innertemperatur: 52–57 °C medium-rare. Eftertillagning: 2–4 °C.
 
-## Quality score
+## Improvement potential
 
-**Score: 10 / 20** — assessed 2026-04-27
+**Improvement potential: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -103,4 +103,4 @@ Picanha (*alcatra de capa* på portugisiska; *coulotte* på franska; *sirloin ca
 2. **−1** · Group C tradition missing — find a Moroccan, Turkish, Lebanese, or other Group C picanha-adjacent recipe
 3. **−1** · Group D tradition missing — find a Polish, Swedish, or other Group D recipe using rump cap or sirloin cap cut
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

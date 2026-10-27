@@ -56,7 +56,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -89,9 +89,9 @@ Standardmetod: sear fettlocket nedåt i het torr panna tills renderat, sedan sea
 | Grill | *not yet created* | ⬜ |
 | Pan Sear | *not yet created* | ⬜ |
 
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Improvement potential: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Points | Status |
 |-----------|--------|--------|
@@ -110,4 +110,4 @@ Standardmetod: sear fettlocket nedåt i het torr panna tills renderat, sedan sea
 1. **−8** · Cooking methods not researched — research grill method and pan_sear method; add leaf files; then set `cooking_methods_researched: 1`
 2. **−3** · Missing Culinary Groups A, C, D — add source recipes from Group A (Korean spiced lamb rump), Group C (Moroccan harissa lamb rump), Group D (Scandinavian juniper lamb rump) to existing or new leaf files
 
-*Score will increase toward ~14/20 once Groups A, C, and D sources are added to the oven_roast leaf.*
+*Number will increase toward ~14/20 once Groups A, C, and D sources are added to the oven_roast leaf.*

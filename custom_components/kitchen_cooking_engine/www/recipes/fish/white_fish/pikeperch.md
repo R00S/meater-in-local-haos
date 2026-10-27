@@ -35,7 +35,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 18
+improvement_potential: 18
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -61,9 +61,9 @@ Gös (*Sander lucioperca*; tyska: Zander; franska: sandre; finska: kuha) är en 
 - [Smoker](./pikeperch-smoker.md)
 - [Sous Vide](./pikeperch-sous_vide.md)
 
-## Quality score
+## Improvement potential
 
-**Score: 18 / 20** — assessed 2026-05-31
+**Improvement potential: 18 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -83,4 +83,4 @@ Groups A and C absent — pikeperch (*Sander lucioperca* / zander) is indigenous
 1. **−1** · Missing Culinary Group A tradition — search for pikeperch or zander in Chinese, Japanese, or Korean recipe sources; if found, add to any method leaf.
 2. **−1** · Missing Culinary Group C tradition — search for pikeperch in Turkish, Arabic, Persian or African cooking; if found, add to any method leaf.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

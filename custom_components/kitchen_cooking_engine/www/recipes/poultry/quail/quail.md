@@ -26,7 +26,7 @@ doneness:
   max_f: 176
   usda_safe: true
   recommended: true
-quality_score: 16
+improvement_potential: 16
 cooking_methods_researched: 1
 quality_assessed: 2026-10-23
 rest_time_min: 3
@@ -53,9 +53,9 @@ Vaktel — främst japansk vaktel (*Coturnix japonica*, huvudsaklig odlad art gl
 
 All five declared methods have a leaf file. Only `oven_roast` meets the 4–6-source collection gate; the others carry explicit partial-research markers.
 
-## Quality score
+## Improvement potential
 
-**Score: 16 / 20** — assessed 2026-10-23 (from-scratch reassessment; supersedes 2026-05-31 stub score 4). Self-assessed at creation time (HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md Pattern 4) — treat as an initial estimate, not an independent audit.
+**Improvement potential: 16 / 20** — assessed 2026-10-23 (from-scratch reassessment; supersedes 2026-05-31 stub number 4). Self-assessed at creation time (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Pattern 4) — treat as an initial estimate, not an independent audit.
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -78,4 +78,4 @@ All five declared methods have a leaf file. Only `oven_roast` meets the 4–6-so
 2. Expand Group A coverage beyond the single oven_roast source into other methods (grill, smoker, braise) — Japanese *uzura* and Chinese preparations are documented traditions.
 3. Add a Group C source to `quail-braise.md` (Moroccan/Egyptian quail tagine) and a Group A or D source to `quail-grill.md` and `quail-pan_fry.md`.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

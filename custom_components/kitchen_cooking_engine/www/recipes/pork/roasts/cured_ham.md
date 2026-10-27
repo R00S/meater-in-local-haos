@@ -23,7 +23,7 @@ doneness:
   max_f: 145
   usda_safe: true
   recommended: true
-quality_score: 17
+improvement_potential: 17
 cooking_methods_researched: 1 # Survey completed 2026-10-26 on fetched pages. Declared + leafed: oven_roast (rewritten, 4 sources) and smoker (stub replaced, 3 sources, newly registered in cooking_data.py). Queued leads (need full recipe text before declaring): slow_cooker (Spend With Pennies' crock-pot ham was fetched but its card did not render — glaze quantities missing; Kawaling Pinoy links to its own slow-cooker pineapple ham, unfetched), boil/poach as a standalone method (the Danish record boils a smoked ham 35-40 min before glazing and the Filipino record poaches 50-60 min — both are currently recorded inside the oven_roast leaf as first stages rather than as a separate leaf), grill (no fetched record), air_fryer (ham steaks only — a different cut form). Documented searched-negative 2026-10-26: Culinary Group C — a Caribbean Christmas ham search returned only thisbagogirl.com, whose recipe bakes an UNCURED fresh ham to 145 F (a different product), so it is not counted; cookingwithria.com (Trinidad) was fetched and its recipe body did not render.
 quality_assessed: 2026-10-26
 rest_time_min: 10
@@ -93,9 +93,9 @@ minuter täckt.
 - [Oven Roast](./cured_ham-oven_roast.md) — 4 sources (Denmark, US ×2, Philippines); ✅ count + distinct met; covers Groups A, B and D
 - [Smoker](./cured_ham-smoker.md) — 3 sources (US ×3); ⚠️ count + distinct rows open; carries the 140 °F vs 120 °F divergence
 
-## Quality score
+## Improvement potential
 
-**Score: 17 / 20** — assessed 2026-10-26 (was 8 on 2026-04-26)
+**Improvement potential: 17 / 20** — assessed 2026-10-26 (was 8 on 2026-04-26)
 
 | Criterion | Status |
 |-----------|--------|
@@ -137,4 +137,4 @@ a band the cut does not define (its only range is `heated_through`, 57–63 °C)
 3. **−1** · Add a third method leaf: `slow_cooker` is the cheapest (Spend With Pennies' crock-pot ham needs only its card re-fetched, and Kawaling Pinoy publishes its own slow-cooker pineapple ham), with `boil` as a possible fourth given that both the Danish and Filipino records already contain a full boil/poach stage.
 4. The 120 °F finish in smoking-meat.com should be revisited if this cut ever gets a pasteurisation-style doneness pass — it is a legitimate reheat temperature for an already-cooked ham but sits well below the registry's floor.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

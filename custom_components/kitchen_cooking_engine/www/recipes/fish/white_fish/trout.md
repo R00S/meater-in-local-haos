@@ -41,7 +41,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 8
+improvement_potential: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -72,9 +72,9 @@ Regnbågsforell (*Oncorhynchus mykiss*) och brun öring (*Salmo trutta*, svenska
 
 - [Pan Sear](./trout-pan_sear.md)
 - [Smoker](./trout-smoker.md)
-## Quality score
+## Improvement potential
 
-**Score: 8 / 20** — assessed 2026-05-31
+**Improvement potential: 8 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -96,4 +96,4 @@ Group A absent — no East Asian (Japanese, Chinese, Korean, Thai, Vietnamese) t
 3. **−1** · Method leaf `trout-pan_sear.md` copies parent cut profile — rewrite the cut profile section with method-specific analysis: Maillard crust on trout skin, basting with brown butter, timing for thin fillets vs. thick.
 4. **−1** · Missing Culinary Group A tradition — add at least one verified East Asian trout recipe (Japanese *nijimasu*, Korean trout, Thai trout, etc.).
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

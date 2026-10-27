@@ -23,7 +23,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 2
@@ -57,9 +57,9 @@ Klassiska beredningar: brittisk *liver and onions*, tysk *Leberwurst*-teknik, no
 | Pan Fry | `liver_pork-pan_fry.md` | ⚠️ In progress — 2 sources (Groups B + D); needs Groups A + C |
 | Pan Sear | *not yet created* | ⬜ (see `pork_liver-pan_sear.md` for cross-reference sources) |
 
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Improvement potential: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Points | Status |
 |-----------|--------|--------|
@@ -77,4 +77,4 @@ Klassiska beredningar: brittisk *liver and onions*, tysk *Leberwurst*-teknik, no
 1. **−8** · Cooking methods not researched — add Group A (Chinese stir-fried pork liver) and Group C (Lebanese/Moroccan sautéed liver) to `liver_pork-pan_fry.md`; then create `liver_pork-pan_sear.md`; then set `cooking_methods_researched: 1`
 2. **−2** · Missing Culinary Groups A and C — add source recipes from Asian (thewoksoflife.com — stir-fried pork liver) and C (marocmama.com or cheftariq.com — North African or Arabic preparation)
 
-*Score will increase toward ~14/20 once Groups A and C sources are added to the pan_fry leaf.*
+*Number will increase toward ~14/20 once Groups A and C sources are added to the pan_fry leaf.*

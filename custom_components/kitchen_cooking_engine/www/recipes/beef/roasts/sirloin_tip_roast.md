@@ -47,7 +47,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 10
+improvement_potential: 10
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -67,9 +67,9 @@ Sirloin tip roast (känd som "knuckle" i UK/australisk styckning, "pointe de cul
 
 - [Oven Roast](./sirloin_tip_roast-oven_roast.md) — 2 sources collected (Groups B only; Groups A, C, D still needed)
 
-## Quality score
+## Improvement potential
 
-**Score: 10 / 20** — assessed 2026-04-27
+**Improvement potential: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -87,4 +87,4 @@ Sirloin tip roast (känd som "knuckle" i UK/australisk styckning, "pointe de cul
 3. **−2** · Oven roast leaf incomplete — find Group A (Asian), Group C (Middle Eastern/African), Group D (Scandinavian/Russian) oven-roasted beef recipes for this cut
 4. **−1 each** · Missing Culinary Groups A, C, D — at least one recipe per group across all method leaf files
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

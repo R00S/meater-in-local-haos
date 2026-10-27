@@ -35,7 +35,7 @@ doneness:
   max_f: 150
   usda_safe: true
   recommended: true
-quality_score: 11
+improvement_potential: 11
 cooking_methods_researched: 1 # 2026-10-24: all six declared methods now have leaves built on fetched sources; enum-wide disposition recorded below. Nothing in the fetched set states an internal temperature.
 quality_assessed: 2026-10-24
 rest_time_min: 0
@@ -81,9 +81,9 @@ All six declared methods now have a leaf. None of the fetched sources in any lea
 
 `cooking_methods_researched: 1` is set on the strength of that disposition, not because every method has been exhausted: the six declared methods each carry fetched evidence, and the uncollected methods are recorded as leads rather than silently dropped.
 
-## Quality score
+## Improvement potential
 
-**Score: 11 / 20** — assessed 2026-10-24 (from-scratch recount; supersedes the 7 recorded earlier the same day, which deducted −4 for missing leaves that now exist and did not deduct for the total absence of temperature evidence). Self-assessed (HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md Pattern 4) — an initial estimate, not an independent audit.
+**Improvement potential: 11 / 20** — assessed 2026-10-24 (from-scratch recount; supersedes the 7 recorded earlier the same day, which deducted −4 for missing leaves that now exist and did not deduct for the total absence of temperature evidence). Self-assessed (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Pattern 4) — an initial estimate, not an independent audit.
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -107,4 +107,4 @@ The deduction for "no temperature evidence" is applied deliberately: the cut's `
 4. **−1** · Culinary Group D: hake is fished throughout the North Atlantic and Baltic; no Danish/Swedish/Polish hake recipe has been fetched yet.
 5. Watch item: `hake.md` declares six methods and `cooking_data.py` now registers the same six, so panel and engine agree; keep them in step when a method is added.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

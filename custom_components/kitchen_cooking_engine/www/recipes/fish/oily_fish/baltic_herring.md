@@ -35,7 +35,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 19
+improvement_potential: 19
 cooking_methods_researched: 1
 quality_assessed: 2026-10-25
 rest_time_min: 2
@@ -67,9 +67,9 @@ Strömming (Clupea harengus membras) är underarten av atlantisk sill som är in
 
 Method survey completed 2026-10-23, re-verified 2026-10-24, extended 2026-10-25: archival documentation (Matkult.se) records the historical Swedish thermal inventory (stekning, ugnsbakning, rökning, glödstekt/halstrad, kokning) plus non-thermal preservation (salting, pickling, fermenting surströmming, drying) which are not thermal enum methods. The 2026-10-24 pass searched further traditions and found none beyond the five; the 2026-10-25 eastern-Baltic pass (RU/LV/EE sources) then found **braising/stewing in sauce** — documented across Russian and Latvian traditions — as a sixth thermal method, with a leaf and a `cooking_data.py` entry now in place. All six declared methods have a leaf.
 
-## Quality score
+## Improvement potential
 
-**Score: 19 / 20** with the user-approved hard-wall exceptions #1–#3 (**10 / 20** raw without them) — assessed 2026-10-25 (from-scratch rescore after the 2026-10-25 collection pass: sixth method `braise` discovered and registered, all six leaves widened with EE/LV/PL/RU sources, and the first cut-specific temperature evidence — the 52 °C target naming strömming — verified and written into the cut profile. Supersedes the earlier 2026-10-25 score 8/6, the 2026-10-23 score 3, and the 2026-05-31 score 6. Every row below is re-derived from the criteria against evidence, not carried over (HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md Patterns 4, 8, 9, 10). The score rises to 19 because two temperature rows were **earned by fetched evidence** and the source-count row improved through real collection — the remaining −1 is agent work, not a wall.)
+**Improvement potential: 19 / 20** with the user-approved hard-wall exceptions #1–#3 (**10 / 20** raw without them) — assessed 2026-10-25 (from-scratch recount after the 2026-10-25 collection pass: sixth method `braise` discovered and registered, all six leaves widened with EE/LV/PL/RU sources, and the first cut-specific temperature evidence — the 52 °C target naming strömming — verified and written into the cut profile. Supersedes the earlier 2026-10-25 number 8/6, the 2026-10-23 number 3, and the 2026-05-31 number 6. Every row below is re-derived from the criteria against evidence, not carried over (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Patterns 4, 8, 9, 10). The number rises to 19 because two temperature rows were **earned by fetched evidence** and the source-count row improved through real collection — the remaining −1 is agent work, not a wall.)
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -100,7 +100,7 @@ Method survey completed 2026-10-23, re-verified 2026-10-24, extended 2026-10-25:
 
 **Exception #3 (user-approved 2026-10-25):** distinct-tradition gate rows for all six leaves — those rows are waived; the leaves keep their partial markers until a source set exists that passes the gate without deletion.
 
-All three exceptions are per cut file and per criterion: they waive nothing else in the table, and each is revoked for its criterion when a verified wall-breaking source appears (a fresh-Baltic-herring Group A or C recipe revokes #1; a US-authority species entry for strömming revokes #2; a passable non-duplicate source set revokes #3) — then normal scoring resumes and this note records the revocation.
+All three exceptions are per cut file and per criterion: they waive nothing else in the table, and each is revoked for its criterion when a verified wall-breaking source appears (a fresh-Baltic-herring Group A or C recipe revokes #1; a US-authority species entry for strömming revokes #2; a passable non-duplicate source set revokes #3) — then normal assessment resumes and this note records the revocation.
 
 ### Improvement priorities
 
@@ -110,4 +110,4 @@ All three exceptions are per cut file and per criterion: they waive nothing else
 4. ~~USDA safe-temperature row~~ — **closed 2026-10-25 by exception #2**; reopen only if a US-authority species entry for strömming appears (auto-revokes), or if the project decides the row should cite a non-US authority for regional cuts (criterion change, not an agent call).
 5. ~~Distinct-tradition gate~~ — **closed 2026-10-25 by exception #3**; leaves keep their partial markers, and the exception auto-revokes only if a gate-passing source set becomes possible without deleting fetched heartland sources.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

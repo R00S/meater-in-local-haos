@@ -40,7 +40,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 12
+improvement_potential: 12
 cooking_methods_researched: 0
 quality_assessed: 2026-05-26
 rest_time_min: 5
@@ -63,9 +63,9 @@ Hel lax betyder en intakt fiskkropp: båda sidorna sitter ihop via ryggrad och r
 - [Grill](./whole_salmon-grill.md)
 - [Smoker](./whole_salmon-smoker.md)
 
-## Quality score
+## Improvement potential
 
-**Score: 12 / 20** — assessed 2026-05-26
+**Improvement potential: 12 / 20** — assessed 2026-05-26
 
 | Criterion | Deduction |
 |-----------|-----------|

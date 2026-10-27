@@ -32,7 +32,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 8
+improvement_potential: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 20
@@ -59,9 +59,9 @@ En hel kalkon presenterar samma utmaning som hel kyckling men i stor skala. Inne
 ## Research files by cooking method
 
 - [Oven Roast](./whole_turkey-oven_roast.md)
-## Quality score
+## Improvement potential
 
-**Score: 8 / 20** — assessed 2026-04-26
+**Improvement potential: 8 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -77,4 +77,4 @@ En hel kalkon presenterar samma utmaning som hel kyckling men i stor skala. Inne
 2. **−1** · Missing method leaf file — create `whole_turkey-smoker.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
 3. **−3** · Missing Culinary Group A, Culinary Group C and Culinary Group D tradition(s) — add Culinary Group A, Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

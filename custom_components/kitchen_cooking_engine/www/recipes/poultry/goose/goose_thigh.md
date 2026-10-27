@@ -32,7 +32,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 15
+improvement_potential: 15
 cooking_methods_researched: 1 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-10-26
 rest_time_min: 10
@@ -101,9 +101,9 @@ kortare med grill-final) kräver i stället att skinnet prickas, torkas och salt
 - [Braise](./goose_thigh-braise.md) — 4 sources (DE ×4); ⚠️ distinct row open; carries the cut's numeric evidence (75–85 °C, 80 °C practical) and the low-temperature 80 °C variant
 - [Oven Roast](./goose_thigh-oven_roast.md) — 4 sources (UK, PL, DE, US); ✅ count + distinct met; technique-only — no source publishes a leg temperature for this method
 
-## Quality score
+## Improvement potential
 
-**Score: 15 / 20** — assessed 2026-10-26 (was 8 on 2026-04-26)
+**Improvement potential: 15 / 20** — assessed 2026-10-26 (was 8 on 2026-04-26)
 
 | Criterion | Status |
 |-----------|--------|
@@ -149,4 +149,4 @@ missing method on this cut.
 3. **−1** · Braise distinct row: one non-German braised goose-leg source (Swedish *gåslår i ugn*
    or Danish *gåselår* would fix it and would also widen Group D's internal diversity)
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

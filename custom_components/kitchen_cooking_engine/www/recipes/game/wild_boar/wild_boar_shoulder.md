@@ -24,7 +24,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-quality_score: 8
+improvement_potential: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 15
@@ -49,9 +49,9 @@ Bräsera med rödvin, vildfond, enbär, rosmarin, lök och morötter i täckt ug
 ## Research files by cooking method
 
 - [Oven Roast](./wild_boar_shoulder-oven_roast.md)
-## Quality score
+## Improvement potential
 
-**Score: 8 / 20** — assessed 2026-04-27
+**Improvement potential: 8 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -71,4 +71,4 @@ Bräsera med rödvin, vildfond, enbär, rosmarin, lök och morötter i täckt ug
 2. **−1 each** · Missing `wild_boar_shoulder-braise.md`, `wild_boar_shoulder-slow_cooker.md`
 3. **−1 each** · Groups A, C missing
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

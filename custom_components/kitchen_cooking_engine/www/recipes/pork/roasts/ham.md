@@ -32,7 +32,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 17
+improvement_potential: 17
 cooking_methods_researched: 1 # 2026-10-24: survey completed and recorded below — oven_roast, slow_cooker and braise each have a gate-meeting leaf; the remaining enum methods are recorded as uncollected leads.
 quality_assessed: 2026-10-24
 rest_time_min: 15
@@ -96,9 +96,9 @@ All three declared methods now have a leaf and all three meet the 4–6-source g
 evidence and that the remaining enum methods have been dispositioned. It does not claim the
 surveys for `grill`, `pressure_cooker` or `sous_vide` are exhausted.
 
-## Quality score
+## Improvement potential
 
-**Score: 17 / 20** — assessed 2026-10-24 (from-scratch recount; supersedes 8 recorded 2026-04-27, which deducted −8 for an unstarted survey, −1 for missing Group A, −2 for preferred-temperature research and −1 for per-method temperatures — the Group A and per-method gaps are now closed by fetched sources). Self-assessed (HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md Pattern 4).
+**Improvement potential: 17 / 20** — assessed 2026-10-24 (from-scratch recount; supersedes 8 recorded 2026-04-27, which deducted −8 for an unstarted survey, −1 for missing Group A, −2 for preferred-temperature research and −1 for per-method temperatures — the Group A and per-method gaps are now closed by fetched sources). Self-assessed (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Pattern 4).
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -119,4 +119,4 @@ surveys for `grill`, `pressure_cooker` or `sous_vide` are exhausted.
 2. **−1** · Fetch non-British slow-cooker and braise sources (US slow-cooker ham, Chinese braised ham/hock, Caribbean) to break the single-tradition base.
 3. **−1** · Fetch a bone-in raw gammon recipe for the slow cooker or a braise.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

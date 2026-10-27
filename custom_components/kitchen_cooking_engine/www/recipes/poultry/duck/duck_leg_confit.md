@@ -22,7 +22,7 @@ doneness:
   max_f: 200
   usda_safe: true
   recommended: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -53,9 +53,9 @@ Anklägg confit (*confit de canard*) avser specifikt anklägg med ben och skinn 
 |--------|-----------|--------|
 | Oven roast (confit) | `duck_leg_confit-oven_roast.md` | ⚠️ In progress — 2 Group B sources, needs A/C/D |
 
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Improvement potential: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Points | Status |
 |-----------|--------|--------|
@@ -74,4 +74,4 @@ Anklägg confit (*confit de canard*) avser specifikt anklägg med ben och skinn 
 1. **−8** · Cooking methods not researched — research whether methods beyond `oven_roast` (e.g. air fryer confit, sous vide confit) have credible recipes; if so add them to `cooking_data.py` and create leaf files; then set `cooking_methods_researched: 1`
 2. **−3** · Missing Groups A, C, D — add source recipes from Asian, African/Arab, and Scandinavian/Slavic traditions to `duck_leg_confit-oven_roast.md`; note that duck confit is a French technique with limited direct equivalents outside Group B
 
-*Score will increase toward ~15/20 once the three missing culinary tradition groups are researched.*
+*Number will increase toward ~15/20 once the three missing culinary tradition groups are researched.*

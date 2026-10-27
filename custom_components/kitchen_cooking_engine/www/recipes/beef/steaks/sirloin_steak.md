@@ -60,7 +60,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 11
+improvement_potential: 11
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 5
@@ -86,9 +86,9 @@ Sirloin-biffen skärs från sirloin-primalen, som ligger mellan short loin (där
 - [Pan Fry](./sirloin_steak-pan_fry.md)
 - [Pan Sear](./sirloin_steak-pan_sear.md)
 - [Sous Vide](./sirloin_steak-sous_vide.md)
-## Quality score
+## Improvement potential
 
-**Score: 11 / 20** — assessed 2026-04-27
+**Improvement potential: 11 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -106,4 +106,4 @@ Sirloin-biffen skärs från sirloin-primalen, som ligger mellan short loin (där
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
 2. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

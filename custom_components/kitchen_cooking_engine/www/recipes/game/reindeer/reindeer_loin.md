@@ -39,7 +39,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 10
+improvement_potential: 10
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -63,9 +63,9 @@ Renkött är mycket magert (typiskt under 2 % intramuskulärt fett) och djupt r�
 - [Pan Sear](./reindeer_loin-pan_sear.md) — cross-references reindeer_steak-pan_sear.md (renfilé recipes); 2 Group D sources, Groups A/B/C needed
 - [Oven Roast](./reindeer_loin-oven_roast.md) — cross-references reindeer_roast-oven_roast.md; 1 Group D source, more needed
 
-## Quality score
+## Improvement potential
 
-**Score: 10 / 20** — assessed 2026-04-27
+**Improvement potential: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -83,4 +83,4 @@ Renkött är mycket magert (typiskt under 2 % intramuskulärt fett) och djupt r�
 3. **−1 each** · Missing Groups A, B, C — find recipes from South/East Asian, Western European/Australian, and African/Middle Eastern traditions
 4. Once 4+ sources per method: write temperature consensus analysis sections
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

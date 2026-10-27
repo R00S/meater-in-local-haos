@@ -58,7 +58,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -87,9 +87,9 @@ T-bone skärs från den korta länden, framför entrecôten. Tjockleken är typi
 - [Grill](./t_bone-grill.md)
 - [Oven Roast](./t_bone-oven_roast.md)
 - [Pan Sear](./t_bone-pan_sear.md)
-## Quality score
+## Improvement potential
 
-**Score: 10 / 20** — assessed 2026-04-27
+**Improvement potential: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -104,10 +104,10 @@ T-bone skärs från den korta länden, framför entrecôten. Tjockleken är typi
 
 **Deductions**: −8 methods not researched · −1 Group A · −1 Group C · −1 Group D = −11 → Hmm that's 9 not 10. Wait, let me recount original deductions:
 
-Original: −8 (methods) −1 (A) −1 (C) −1 (D) −1 (air_fryer copies parent) −1 (grill copies oven_roast) −1 (grill copies pan_sear) = −14 → score 6.
-After fixes: −8 (methods) −1 (A) −1 (C) −1 (D) = −11 → score 9.
+Original: −8 (methods) −1 (A) −1 (C) −1 (D) −1 (air_fryer copies parent) −1 (grill copies oven_roast) −1 (grill copies pan_sear) = −14 → number 6.
+After fixes: −8 (methods) −1 (A) −1 (C) −1 (D) = −11 → number 9.
 
-**Revised score: 9 / 20**
+**Revised improvement potential: 9 / 20**
 
 **Deductions**: −8 methods not researched · −1 Group A missing · −1 Group C missing · −1 Group D missing
 
@@ -118,4 +118,4 @@ After fixes: −8 (methods) −1 (A) −1 (C) −1 (D) = −11 → score 9.
 3. **−1** · Group C tradition missing — find a Moroccan, Turkish, Lebanese, or other Group C steak recipe
 4. **−1** · Group D tradition missing — find a Polish, Swedish, Russian, or other Group D steak recipe
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

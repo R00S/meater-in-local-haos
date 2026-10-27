@@ -34,7 +34,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-quality_score: 14
+improvement_potential: 14
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -59,9 +59,9 @@ Gädda (*Esox lucius*; tyska: Hecht; franska: brochet; finska: hauki) är en sto
 - Smoker — no research file yet
 - [Braise](./pike-braise.md)
 
-## Quality score
+## Improvement potential
 
-**Score: 14 / 20** — assessed 2026-05-31
+**Improvement potential: 14 / 20** — assessed 2026-05-31
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -82,7 +82,7 @@ Groups A and C absent — braised pike is a Central/Western European tradition (
 2. **−1** · Missing Culinary Group A tradition — pike (*gädda*) exists in Chinese freshwater fishing; search for Chinese or Japanese preparations.
 3. **−1** · Missing Culinary Group C tradition — search for pike in any African, Arabic, Persian, or Caribbean cooking context.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*
 
 ## Data state and gaps
 

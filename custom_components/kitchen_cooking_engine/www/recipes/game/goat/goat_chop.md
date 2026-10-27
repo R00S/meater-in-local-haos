@@ -48,7 +48,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 13
+improvement_potential: 13
 cooking_methods_researched: 1 # Survey completed 2026-10-26 on fetched pages. Declared + leafed: grill and pan_sear (both rewritten after their old records failed verification) and oven_broil (discovered this pass, registered in cooking_data.py). Queued leads (no full recipe fetched yet): braise/curry (goat chops cooked in curry are mostly shoulder/leg pieces rather than chops — sinfullyspicy and Yummy Medley both use mixed goat meat), tandoor (no fetchable recipe), smoker (none fetched for chops specifically). Documented searched-negative 2026-10-26: Culinary Group C (African/Caribbean) — the "jerk goat chops" search returned only social-media posts and videos, and the Caribbean Pot site surfaced only its homepage rather than a recipe; Culinary Group D — no Nordic/Baltic goat-chop recipe found at all.
 quality_assessed: 2026-10-26
 rest_time_min: 5
@@ -119,9 +119,9 @@ tjockaste muskeldelen, borta från benet och från fettkanten.
 - [Oven Broil](./goat_chop-oven_broil.md) — 2 sources (both Group B, one Indian-style seasoning); ⚠️ count + distinct rows open
 - [Pan Sear](./goat_chop-pan_sear.md) — 3 sources (US ×2, Pakistan); ⚠️ count below 4; carries the dry-brine rule and the 5 °F-under pull
 
-## Quality score
+## Improvement potential
 
-**Score: 13 / 20** — assessed 2026-10-26 (was 8 on 2026-04-26)
+**Improvement potential: 13 / 20** — assessed 2026-10-26 (was 8 on 2026-04-26)
 
 | Criterion | Status |
 |-----------|--------|
@@ -149,7 +149,7 @@ recipe, and a Caribbean Pot URL that pointed at the site's homepage; the pan_sea
 unresolved Indian Healthy Recipes URL, a Laylita *seco de chivo* stew whose "75–80 °C chop pull"
 was invented, and an African Bites *asun* page for a different dish. Every record in both leaves
 carried the same **72–74 °C pull**, both leaves' profiles were near-copies of the hub's, and the
-hub's own scorecard had already flagged the copying. All of it is retracted; nothing in the three
+hub's own deduction table had already flagged the copying. All of it is retracted; nothing in the three
 current leaves is inherited. The hub's claim that goat loin is "best at medium to well-done
 (68–74 °C)" was likewise unsourced — the corpus says the opposite and that is now recorded above.
 
@@ -159,10 +159,10 @@ guide without ingredient quantities.
 
 ### Improvement priorities
 
-1. **Doneness pass (no score effect, highest value):** both the hub and `cooking_data.py` recommend `well_done` (68–77 °C) while all six fetched sources cook to 54–63 °C. The engine currently tells users to ruin this cut. Either the recommendation moves to `medium` with the USDA 145 °F whole-cut floor as its ceiling, or the corpus needs a source that actually cooks goat chops grey — none was found.
+1. **Doneness pass (no number effect, highest value):** both the hub and `cooking_data.py` recommend `well_done` (68–77 °C) while all six fetched sources cook to 54–63 °C. The engine currently tells users to ruin this cut. Either the recommendation moves to `medium` with the USDA 145 °F whole-cut floor as its ceiling, or the corpus needs a source that actually cooks goat chops grey — none was found.
 2. **−1** · Culinary Group C: a real African or Caribbean goat-chop recipe. South African *braai* chops and Jamaican jerk chops are the obvious routes; both searches surfaced video only.
 3. **−1** · Culinary Group D: essentially a Europe-shaped gap — goat chops are not a Nordic/Baltic dish.
 4. **−1 each** · One more record per leaf would clear all three count rows; the cheapest is a fourth grilled chop from Italy, Greece or Turkey (all three are documented goat-chop countries, and the Puglian recipe came from a book excerpt that likely has siblings).
 5. Queued leaves: `braise` (mixed-cut goat curries are fetched but no chop-specific braise), `tandoor`, `smoker`.
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

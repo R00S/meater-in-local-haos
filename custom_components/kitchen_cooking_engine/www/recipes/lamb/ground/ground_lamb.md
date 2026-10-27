@@ -25,7 +25,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 8
+improvement_potential: 8
 cooking_methods_researched: 0 # Survey 2026-10-24 found +2 methods (oven_bake, simmer, both registered with leaves), but enum inventory still has plausible unverified leads (braise, saute, air_fryer, sous_vide, and dumpling-bound mince preparations) — stays 0 until collected or ruled out.
 quality_assessed: 2026-10-24
 rest_time_min: 2
@@ -55,9 +55,9 @@ Tillagning tills köttet är helt genomstekt och lätt brynnat. Innertemperatur:
 - [Grill](./ground_lamb-grill.md) — ⚠️ partial, 1 fetched source (TR Adana kebab on charcoal)
 - [Oven Bake](./ground_lamb-oven_bake.md) — ⚠️ partial, 1 fetched source (GR moussaka) + 1 unverified lead (TR kıymalı patates) — **new method 2026-10-24**
 - [Simmer](./ground_lamb-simmer.md) — ⚠️ partial, 1 fetched source (IN keema matar) — **new method 2026-10-24**
-## Quality score
+## Improvement potential
 
-**Score: 8 / 20** — assessed 2026-10-24. From-scratch reassessment on the deduction
+**Improvement potential: 8 / 20** — assessed 2026-10-24. From-scratch reassessment on the deduction
 scale (no anchoring to the previous number — inflation doc Patterns 4 and 9). The four
 fixes the 2026-04-26 table listed (missing grill leaf, Group D, anatomy, pan_fry profile
 copy) are all done; the number coincides only because the old table's −4 of leaf-level
@@ -87,4 +87,4 @@ fixes is replaced by −4 of partial-leaf deductions.
 3. Deepen the temperature record: the collection has exactly one measured ground-lamb endpoint (72 °C). Sources with explicit targets (or explicit pink-mince practice, if any tradition has it) are the highest-value additions.
 4. Collect the labelled leads: the redirected Swasthi keema-curry page and the Turkish kıymalı patates bake (once lamb mince is verifiable).
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -48,7 +48,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -73,9 +73,9 @@ Kokar långsamt till mörhet (85–90 °C) via bräsering eller slow cooker; pan
 - [Pan Sear](./lamb_neck_filet-pan_sear.md) — stub; pan sear recipes not yet sourced
 - [Slow Cooker](./lamb_neck_filet-slow_cooker.md) — stub; slow cooker recipes not yet sourced
 
-## Quality score
+## Improvement potential
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Improvement potential: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -92,4 +92,4 @@ Kokar långsamt till mörhet (85–90 °C) via bräsering eller slow cooker; pan
 2. **−2** · Braise leaf incomplete — add 3–5 more sources from Groups A, C, D traditions
 3. **−1 each** · Missing Groups A, C, D — find recipes from East/South Asian, African/Middle Eastern, and Scandinavian traditions
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

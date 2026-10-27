@@ -54,7 +54,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 9
+improvement_potential: 9
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -91,9 +91,9 @@ Entrecôtestek (övre entrecôtestek i nordamerikansk styckningsnomenklatur) är
 |--------|-----------|--------|
 | oven_roast | [sirloin_roast-oven_roast.md](sirloin_roast-oven_roast.md) | ✅ 3 recipes — Groups B, C; Groups A and D gaps noted |
 
-## Quality score
+## Improvement potential
 
-**Score: 8 / 20** — assessed 2026-04-27
+**Improvement potential: 8 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -107,4 +107,4 @@ Entrecôtestek (övre entrecôtestek i nordamerikansk styckningsnomenklatur) är
 - Group A gap: oven-roasting a whole sirloin joint is not a documented tradition in confirmed reachable South/East/SE Asian recipe sources
 - Group D gap: madensverden.dk *langtidsstegt oksefilet* cut identity unconfirmed; not assigned here
 
-*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*
