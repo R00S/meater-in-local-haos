@@ -491,8 +491,9 @@ Every **cut file** (the `{cut_name}.md` without a method suffix) carries an
 the rubric has always produced, read the other way round: **20 means nothing
 left has been found to earn, and every point below 20 is potential — work that
 is still there to do.** A file at 8/20 has more potential than a file at 18/20.
-A deduction therefore moves the number *down*, which means *more* potential,
-not less.
+Put the other way round: **the potential falls as the number rises.** A
+deduction therefore moves the number *down*, which means *more* potential, not
+less.
 
 ### Purpose — flaw detection, not achievement
 
@@ -571,7 +572,21 @@ has been reviewed and corrected.
 
 ### Method sub-files
 
+Every method listed in a cut's `methods:` block is owed its own leaf. The list is not a wish list and
+not decoration: a declared method whose leaf does not exist is work that exists in the tree.
+
 - **−3** if no `{cut_name}-{method}.md` leaf files exist at all for the cut.
+
+**Four leaves is the floor, not a target.** Four leaves clears the minimum this system accepts; it does
+not close the cut and it does not mean the method survey is finished. A cut with several culinary
+traditions behind it often supports five, six or eight methods — if the corpus supports six and the cut
+has four leaves, two are owed, and the cut's own improvement list must say so. **Do not stop at four
+because four is the number in this file.** Four is where the minimum ends and the research begins.
+
+**Declaring a method is never the deduction.** Nothing here charges the file for naming work: the rows
+fire on missing evidence, not on discovered methods, and a leaf is what answers a method — its sources,
+its numbers, its coverage. Leaving a confirmed method off `methods:` so the file looks finished is a
+false statement about the cut, and it is the one defect the number cannot see.
 
 ### Temperature data
 

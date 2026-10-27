@@ -143,7 +143,7 @@ corpus for this cut measures temperatures only in the North American burger and 
 | Culinary Group C covered | ⚠️ missing — no African, Caribbean, Levantine or Persian record — − **−1** |
 | Culinary Group D covered | ✓ (Swedish ×5, Danish, Finnish ×2, Russian across pan_fry, oven_bake and simmer) |
 | `## Cut profile` + anatomy | ✓ (ground-vs-whole-muscle distinction stated, and the corpus's temperature failures tabulated) |
-| Method leaf files exist | ✓ (4 leaves, one per confirmed method; average 4 per cut met) |
+| Method leaf files exist | ✓ (4 leaves, one per confirmed method; four-leaf floor met, not a ceiling) |
 | Safe temperature research evidence | ✓ (every leaf states what its sources do and do not publish; the USDA 71 °C floor is cited to the source that states it and separated from the 150 °F and "rare" instructions that contradict it) |
 | Preferred-temperature research evidence | ✓ (the cut's own finding: this corpus has no preferred-temperature tradition for mince — three numbers in sixteen recipes, two of them unsafe) |
 | Per-method temperature data | ✓ (table in Cut profile above) |

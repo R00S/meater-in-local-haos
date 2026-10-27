@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 26 Oct 2026
-Last Change: v0.10.2.32 - the cut metric is renamed to improvement potential: the number itself is unchanged (20 = nothing left to earn, lower = more potential) and only its name changed, across IMPROVE_CUT_FILES.md, RECIPE_COLLECTION_TOR.md, the renamed HOW_I_INFLATE_CUT_FILES_AND_WHY.md, the user guide and all 187 cut hubs (field `improvement_potential`, section `## Improvement potential`); no hub number was recomputed
+Last Change: v0.10.2.33 - wording only: the potential direction is stated outright (the potential falls as the number rises), the four-leaf rule is rewritten as a floor instead of a target (IMPROVE_CUT_FILES step b, RECIPE_COLLECTION_TOR method sub-files), and discovering a method or a cut now names the leaf or cut file it owes; no deduction, criterion or number changed
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -176,11 +176,11 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 
 # ⚠️ VERSION — must match in ALL 3 locations on every release:
 #   1. manifest.json        → "version": "..."
-#   2. HERE (__init__.py)    → __version__ = "0.10.2.32"
+#   2. HERE (__init__.py)    → __version__ = "0.10.2.33"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.10.2.32"
+__version__ = "0.10.2.33"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

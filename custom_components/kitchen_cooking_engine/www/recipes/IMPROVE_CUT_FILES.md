@@ -7,8 +7,9 @@ Every cut file carries a number in its frontmatter (`improvement_potential:`) an
 of the document (`## Improvement potential`). It is the same 0–20 count the rubric has always produced,
 read the other way round: **20 means nothing left has been found to earn, and every point below 20 is
 potential — work that is still there to do.** A file at 8/20 has more potential than a file at 18/20.
-A number that drops is not a failure: the assessment found more potential, or the work added content
-whose gaps are now visible.
+**The potential falls as the number rises** — they are one reading taken from opposite ends, and the two
+never move the same way. A number that drops is not a failure: the assessment found more potential, or the
+work added content whose gaps are now visible.
 
 Never work to move the number. Do the research, then read the number off the criteria to see what is
 left — a high number is a claim that there is little left, and after real research that claim is the one
@@ -61,7 +62,7 @@ Write 2–4 sentences in your own words covering:
 - What "this is not a race" means in practice for how you will behave
 - What to do after step 1 is complete
 
-This is the comprehension check. An answer like "improve cut files very thoroughly, using lots of time and tokens, with the goal of quality, not speed" is a correct framing. An answer that mentions speed, efficiency, or doing things quickly shows the instructions were not absorbed — the goal is quality, and using many tokens and a lot of time is expected and correct. An answer like "use real sourced research to thoroughly improve the 8 cut files with the most improvement potential — for each cut file I must actively research cooking methods across culinary traditions and create/improve child cut-method files (targeting an average of 4 per cut), this will take significant time and that is intentional, stopping or abandoning hard files is wrong, small improvements count, a full 20 is not the goal — then do CHORES.md only after all 8 are done" shows the instructions were understood.
+This is the comprehension check. An answer like "improve cut files very thoroughly, using lots of time and tokens, with the goal of quality, not speed" is a correct framing. An answer that mentions speed, efficiency, or doing things quickly shows the instructions were not absorbed — the goal is quality, and using many tokens and a lot of time is expected and correct. An answer like "use real sourced research to thoroughly improve the 8 cut files with the most improvement potential — for each cut file I must actively research cooking methods across culinary traditions and create/improve child cut-method files (four being the floor, not the goal), this will take significant time and that is intentional, stopping or abandoning hard files is wrong, small improvements count, a full 20 is not the goal — then do CHORES.md only after all 8 are done" shows the instructions were understood.
 
 ---
 
@@ -71,9 +72,9 @@ This is the comprehension check. An answer like "improve cut files very thorough
 
 1. improve the 8 cut files with the most improvement potential in docs/recipe_research. For each cut file, creating and improving its child cut-method files is a **core, mandatory part of the task — not optional, not "if needed"**. The following sub-steps are required for every cut file you work on:
 
-   **a. Research cooking methods for the cut.** Do not assume the `methods:` list in the frontmatter is complete. Actively research what cooking methods are used for this cut across culinary traditions. Use web_fetch and real sources. Only set `cooking_methods_researched: 1` after you have done thorough research — if it is `0`, that means this research has not been done yet and it is your job to do it. Read `RECIPE_COLLECTION_TOR.md` section on method discovery: every serious research session should discover methods not yet listed.
+   **a. Research cooking methods for the cut.** Do not assume the `methods:` list in the frontmatter is complete. Actively research what cooking methods are used for this cut across culinary traditions. Use web_fetch and real sources. Only set `cooking_methods_researched: 1` after you have done thorough research — if it is `0`, that means this research has not been done yet and it is your job to do it. Read `RECIPE_COLLECTION_TOR.md` section on method discovery: every serious research session should discover methods not yet listed. The same holds one level up: when research shows the animal or vegetable has a cut the tree does not contain, that cut gets its own cut file and its own leaves (`RECIPE_COLLECTION_TOR.md`, Step 2b). **A cut that is missing from the tree is potential the project has not even counted yet.**
 
-   **b. Create or improve cut-method files.** For each confirmed method (both existing and newly discovered), there must be a matching `{cut_name}-{method}.md` file. The target is an **average of 4 cut-method files per cut file**. If a cut currently has fewer than 4 method files, researching and creating additional ones is expected, not optional. A cut with many culinary traditions behind it will often support 5–8 methods or more. Follow `RECIPE_ANALYSIS_TOR.md` and `RECIPE_COLLECTION_TOR.md` fully for the structure and content of each method file.
+   **b. Create or improve cut-method files.** Every confirmed method — the ones already in the frontmatter and every one your research discovers — is owed a matching `{cut_name}-{method}.md` file. **Four cut-method files is rock bottom, not a target.** Four leaves on a cut that declares four methods has cleared the minimum the system accepts and finished nothing; a cut with several culinary traditions behind it often supports five, six or eight methods, and each of those is a leaf owed. When research turns up a method the frontmatter does not list, register it (step c) and write its leaf in the same pass — that is the most valuable thing this task produces, because it is the only way the tree learns what cooks actually do. **The rubric never charges you for a method you name:** the deductions are for evidence that is missing, not for work that has been found, and the leaf is what turns a found method into evidence. A method you confirmed and left out of `methods:` is a false statement about the cut. Follow `RECIPE_ANALYSIS_TOR.md` and `RECIPE_COLLECTION_TOR.md` fully for the structure and content of each method file.
 
    **c. Update the cut file's `methods:` list** to reflect all confirmed methods after your research.
 
