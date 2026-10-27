@@ -13,6 +13,7 @@ recommended_doneness: pulled
 methods:
 - braise
 - oven_roast
+- oven_broil
 - slow_cooker
 - smoker
 doneness:
@@ -25,9 +26,9 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-improvement_potential: 8
+improvement_potential: 19
 cooking_methods_researched: 1
-quality_assessed: 2026-04-27
+quality_assessed: 2026-10-27
 rest_time_min: 10
 rest_time_max: 20
 carryover_temp_c: 3
@@ -54,31 +55,55 @@ Koreanska revbensspjällstillagningar (galbi-jjim för brässering, galbi för g
 
 | Method | Leaf file | Status |
 |--------|-----------|--------|
-| Braise | `short_ribs-braise.md` | ✅ Complete — 5 recipes, CONFORMS TO TOR |
-| Oven roast | `short_ribs-oven_roast.md` | ⬜ Not yet created |
-| Slow cooker | `short_ribs-slow_cooker.md` | ⬜ Not yet created |
-| Smoker | `short_ribs-smoker.md` | ⬜ Not yet created |
+| Braise | [short_ribs-braise.md](./short_ribs-braise.md) | ✅ Complete — 5 recipes, CONFORMS TO TOR (2026-04-27) |
+| Oven roast | [short_ribs-oven_roast.md](./short_ribs-oven_roast.md) | ⚠️ Partial — 5 records, 4 with numbers, **distinct-tradition gate not met** (2026-10-27) |
+| Oven broil | — | ⬜ Owed. Discovered 2026-10-27: Korean LA galbi is a 2–3 minute oven-broiler method, fetched but not yet written up as its own leaf |
+| Slow cooker | — | ⬜ Owed |
+| Smoker | — | ⬜ Owed |
 
 ## Improvement potential
 
-**Improvement potential: 8 / 20** — assessed 2026-04-27
+**Improvement potential: 19 / 20** — assessed 2026-10-27 (supersedes the 2026-04-27 number 8, which was
+computed from an ad-hoc table rather than the TOR criteria: it counted "+2 braise researched" and "+3 leaf has
+5 sources" as credits and never charged the missing culinary group. That table was not the rubric, and this
+one is.)
 
-| Criterion | Points | Status |
-|-----------|--------|--------|
-| Braise method researched (1 of 4 methods) | +2 | ✅ Done |
-| Braise leaf has 5 diverse source recipes | +3 | ✅ Done |
-| Cut profile written (not a placeholder) | +1 | ✅ Done |
-| Culinary Group B tradition covered (braise leaf) | +1 | ✅ Done |
-| Asian tradition covered (braise leaf) | +1 | ✅ Done |
-| Oven roast not yet researched | −0 | pending |
-| Slow cooker not yet researched | −0 | pending |
-| Smoker not yet researched | −0 | pending |
+| Criterion | Points | Evidence |
+|-----------|--------|----------|
+| Cooking methods not researched (`cooking_methods_researched: 1`) | — | survey re-run 2026-10-27: braise, oven-roast, oven-broil (new), slow-cooker, smoker all confirmed from fetched recipes |
+| Missing Culinary Group A | — | Chinese-American braise record (Woks of Life) |
+| Missing Culinary Group B | — | Australian, US ×3, German, Italian records |
+| Missing Culinary Group C | **−1** | no African, Caribbean, Arabic, Levantine or Persian short rib record in any leaf |
+| Missing Culinary Group D | — | Swedish ×2 and Ukrainian records |
+| `## Cut profile` missing / placeholder / lacks anatomy | — | anatomy written: intercostal + serratus ventralis, bone, English vs flanken cut |
+| No method leaf files exist | — | two exist (braise, oven_roast) |
+| Safe-temperature evidence | — | USDA 63 °C is far below the 88–96 °C band every source publishes; the band is evidenced |
+| Preferred-temperature evidence | — | braise 88–94 °C, oven-roast 90–96 °C |
+| Per-method temperature data | — | separate bands and sources per leaf |
+| Description duplication | — | oven_roast profile is method-specific, not copied from the hub or the braise leaf |
+
+**Points: −1 Group C → 19.**
+
+**What the number cannot see.** Three leaves this cut declares are still owed — `oven_broil`, `slow_cooker`,
+`smoker` — and TOR has no row that charges a declared-but-unwritten leaf, so 19 is honest against the table
+and dishonest as a description of the work. Those three are the top of the improvement list below, and they
+are why the number is not to be read as "nearly done".
+
+### Data state and gaps
+
+| gap | status | evidence | effort | yield |
+|---|---|---|---|---|
+| `leaf_without_number` (oven_roast) | open | 2 of 5 oven records publish no internal temperature and judge by time | S | find one more oven record that probes |
+| `duplicate_tradition` (oven_roast) | open | US ×2, German, Italian all Group B; only the Ukrainian record is Group D | M | a Korean oven galbi (already half-found) or a Chinese oven braise would add Group A |
+| `group_C_absent` | searched-negative | "short ribs tagine", "beef ribs chermoula", "galbi Moroccan" — nothing citable for this cut | — | none found; record stays open |
+| `unwritten_leaf:oven_broil` | open | mykoreankitchen.com LA galbi (Korean, 200 °C broil, 2–3 min a side, no internal target) fetched 2026-10-27 | M | needs 3 more broiler records (Japanese *yakiniku*-style, Filipino, US) |
+| `unwritten_leaf:slow_cooker` | open | not researched this pass | M | 4 records from distinct traditions |
+| `unwritten_leaf:smoker` | open | not researched this pass | M | Texas + one other smoke tradition |
 
 ### Improvement priorities
 
-1. **High** · Create `short_ribs-oven_roast.md` — 4–6 source recipes from diverse traditions covering dry-roasting short ribs (e.g. Korean kalbi-jjim oven variant, American Sunday roast style, German *Rinderbraten* approach)
-2. **High** · Create `short_ribs-slow_cooker.md` — 4–6 source recipes from slow cooker traditions
-3. **Medium** · Create `short_ribs-smoker.md` — 4–6 BBQ/smoke traditions (Texas, Kansas City, Korean)
+1. **−1** · Group C: this is the only row the table charges, and the honest outcome may be a searched-negative plus a user-approved wall — the cut is a European/North American barbecue identity.
+2. **Owed leaves** · `oven_broil` (one lead already fetched), `slow_cooker`, `smoker`. Each needs 4 records from distinct traditions; the floor for this cut is four leaves and it does not yet have four.
+3. **Oven-roast diversity** · replace the second US record with a non-Group-B source when one can be fetched.
 
-*Number will increase to ~16/20 once the three remaining method leaves are complete.*
-
+*Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*
