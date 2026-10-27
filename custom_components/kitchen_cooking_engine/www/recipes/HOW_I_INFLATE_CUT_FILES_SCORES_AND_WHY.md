@@ -5,25 +5,6 @@
 
 ---
 
-## ⚠️ Read this before you use anything below
-
-**The 20-point score described on this page is a legacy measure, and it is not a target.** It is kept
-because the inflation patterns it documents are real and still worth recognising — not because the number
-is something to raise, quote, or work towards.
-
-The working signal is now **potential for improvement**, written per cut as a `## Data state and gaps`
-ledger and collected in the generated queue `CUT_POTENTIAL.md`. Work is chosen by enumerated gaps and
-what closing them yields; a pass ends when the gaps are closed, recorded as searched-negative, or blocked.
-
-`quality_score` in a cut's frontmatter is frozen. Do not read it, update it, quote it, or reason about it.
-A pass report describes data state — sources, silences, contradictions, provenance — never a delta.
-
-Why the distinction matters: a score is a verdict on the past, and an agent will optimise the verdict. A
-gap is an instruction for the future, and the only way to satisfy it is to go and find the evidence. When
-the two disagree, the ledger wins and this rubric is the thing that is wrong.
-
----
-
 ## What this document is
 
 Every hub file edited or created in this branch received a **−15 quality score deduction for inflated score**. This document explains what inflation means, how it happens, and why agents do it.

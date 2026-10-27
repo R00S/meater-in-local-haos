@@ -1,27 +1,5 @@
-This is a set of instructions for the agent to conduct when the user refers to this file, the agents may never edit this file unless specificly intructed to.
+This is a set of instruction for the agent to conduct when the user refers to this file, the agents may never edit this file unless specificly intructed to do that
 __________________
-
-## READ THIS FIRST — WHAT WE ARE DOING
-
-We are building a corpus of **human-written, verifiable recipe data** for cooking temperatures. That is
-the work. It is not a score, and there is no score to raise.
-
-The working signal is **potential for improvement**: how much verifiable human data exists that we have
-not captured yet, plus how much of what we have captured is unverified, silent, or contradicts itself.
-A cut with twenty sources and four known holes has *more* potential than a cut with eight sources and no
-holes. Choose work by that, and finish by closing, disproving or scheduling the holes.
-
-**There is no "done".** A cut, a leaf, a pass and the collection itself are never finished, because the
-collection is only finished when we can no longer tell whether the recipes we find are human-written or
-AI-generated. We are nowhere near that, so the corpus keeps growing and speed buys nothing. Do not try to
-get closer to done by working faster; the only thing speed produces is thinner evidence.
-
-**What you must never do:** quote a score, compute a score, try to raise a score, report that a number
-went up, or choose your work because a cut is "low". `quality_score` in the cut frontmatter is a
-**legacy field**. It is frozen, it is not maintained, and it must not be read, updated, quoted or reasoned
-about. If you catch yourself thinking "this will lift the cut to 15", you have left the task.
-
----
 
 ## SESSION START — MANDATORY GATE. DO NOT SKIP. DO NOT TOUCH ANY CUT FILE UNTIL ALL FOUR OUTPUTS BELOW ARE WRITTEN TO YOUR BRANCH TIMELINE FILE.
 
@@ -31,12 +9,15 @@ Open your branch timeline file (`docs/<branch-name-without-prefix>-<A.B.C.x>.md`
 
 ### Output 1 — Culinary group definitions (verbatim from `RECIPE_COLLECTION_TOR.md`)
 
-Open `RECIPE_COLLECTION_TOR.md` and find the "Culinary group coverage" table under section `### Culinary group coverage`. Copy all four rows word-for-word into your timeline file.
+Open `docs/recipe_research/RECIPE_COLLECTION_TOR.md` and find the "Culinary group coverage" table under section `### Culinary group coverage`. Copy all four rows word-for-word into your timeline file. The correct rows are:
 
-**The file is the authority, not this one.** This instruction file has previously carried a paraphrase that
-read "Thai, Vietnamese, Indian" in the Group A row; the source file reads "Thai, Vietnamese, Bengali,
-Ceylon, Indian". Copy what is in `RECIPE_COLLECTION_TOR.md` at the time you run the pass, and if it
-disagrees with anything here, the source file wins and you note the disagreement in your timeline.
+```
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+```
 
 Any paraphrase or wrong country detail is instant evidence the file was not read. The timeline entry must be verbatim.
 
@@ -44,7 +25,7 @@ Any paraphrase or wrong country detail is instant evidence the file was not read
 
 ### Output 2 — Analysis gate rule (verbatim from `RECIPE_ANALYSIS_TOR.md`)
 
-Open `RECIPE_ANALYSIS_TOR.md` and find the paragraph near the top that starts "Analysis begins only after…". Copy the exact two sentences word-for-word:
+Open `docs/recipe_research/RECIPE_ANALYSIS_TOR.md` and find the paragraph near the top that starts "Analysis begins only after…". Copy the exact two sentences word-for-word:
 
 > Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
 
@@ -54,7 +35,7 @@ The exact threshold number (4–6) must appear in your timeline entry. A wrong n
 
 ### Output 3 — Source integrity rule (verbatim from `SOURCE_SURVEY.md`)
 
-Open `SOURCE_SURVEY.md` and find the bolded project rule near the top. Copy the exact two sentences word-for-word:
+Open `docs/recipe_research/SOURCE_SURVEY.md` and find the bolded project rule near the top. Copy the exact two sentences word-for-word:
 
 > The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
 
@@ -62,17 +43,12 @@ Open `SOURCE_SURVEY.md` and find the bolded project rule near the top. Copy the 
 
 ### Output 4 — Your understanding of this file (your own words)
 
-Write 3–5 sentences in your own words covering:
+Write 2–4 sentences in your own words covering:
+- What the primary task is (what you will do to the 50 cut files)
+- What "this is not a race" means in practice for how you will behave
+- What to do after step 1 is complete
 
-- What the primary task is, stated in terms of **data and evidence**, not in terms of a score
-- What "potential for improvement" means to you concretely, and what would make you choose one cut over another
-- What "this is not a race" means, and why the collection cannot be finished by working fast
-- What you will do after the cut work is done
-
-An answer framed as "raise the lowest scores, create enough leaves to hit the target, get as close to 20
-as possible" proves the file was not absorbed. An answer like "find where verifiable human data exists
-that we have not captured, capture it with its provenance, record honestly where it does not exist, and
-leave the next pass a list of exactly what is still missing" is correct.
+This is the comprehension check. An answer like "improve cut files very thoroughly, using lots of time and tokens, with the goal of quality, not speed" is a correct framing. An answer that mentions speed, efficiency, or doing things quickly shows the instructions were not absorbed — the goal is quality, and using many tokens and a lot of time is expected and correct. An answer like "use real sourced research to thoroughly improve the 8 lowest-scoring cut files — for each cut file I must actively research cooking methods across culinary traditions and create/improve child cut-method files (targeting an average of 4 per cut), this will take significant time and that is intentional, stopping or abandoning hard files is wrong, small improvements count, full score is not the goal — then do CHORES.md only after all 8 are done" shows the instructions were understood.
 
 ---
 
@@ -80,112 +56,16 @@ leave the next pass a list of exactly what is still missing" is correct.
 
 ---
 
-## THE TASK
+1. improve the 8 lowest scoring cut files in docs/recipe_research. For each cut file, creating and improving its child cut-method files is a **core, mandatory part of the task — not optional, not "if needed"**. The following sub-steps are required for every cut file you work on:
 
-### 1. Choose work by potential, not by score
+   **a. Research cooking methods for the cut.** Do not assume the `methods:` list in the frontmatter is complete. Actively research what cooking methods are used for this cut across culinary traditions. Use web_fetch and real sources. Only set `cooking_methods_researched: 1` after you have done thorough research — if it is `0`, that means this research has not been done yet and it is your job to do it. Read `RECIPE_COLLECTION_TOR.md` section on method discovery: every serious research session should discover methods not yet listed.
 
-Work the cuts at the top of the generated queue: `www/recipes/CUT_POTENTIAL.md`. That file is **generated
-by the measurement sweep and is never hand-edited** — you read it, you do not write it. It lists each cut's
-enumerated gaps, their effort, and what each would yield.
+   **b. Create or improve cut-method files.** For each confirmed method (both existing and newly discovered), there must be a matching `{cut_name}-{method}.md` file. The target is an **average of 4 cut-method files per cut file**. If a cut currently has fewer than 4 method files, researching and creating additional ones is expected, not optional. A cut with many culinary traditions behind it will often support 5–8 methods or more. Follow `RECIPE_ANALYSIS_TOR.md` and `RECIPE_COLLECTION_TOR.md` fully for the structure and content of each method file.
 
-- Highest unblocked potential first; among equals, the cheapest evidence per unit of effort first
-- A cut with no enumerated gaps is **not** a priority, however low its legacy score looks
-- A cut with many enumerated gaps **is** a priority, however high its legacy score looks
-- The file is regenerated by `measure_cut_potential.py`, which `CHORES.md` runs. If it is missing or
-  clearly stale, run that script yourself before choosing work — do not guess a queue from a score.
-- Where the queue disagrees with what you can see in a cut, trust the file you just read and record the
-  gap. The sweep reads structure, not meaning.
+   **c. Update the cut file's `methods:` list** to reflect all confirmed methods after your research.
 
-### 2. For each cut: build the gap ledger, then close gaps
-
-**a. Write the ledger into the cut file** as a `## Data state and gaps` section. Each entry needs
-`evidence` (file + line, URL, or the literal queries you ran), `effort` (S/M/L), and `yield` (what data
-closing it produces).
-
-Start the section with a snapshot line so the sweep can check your claims against the files later:
-
-```
-<!-- ledger-state: leaves=4 sources=16 silent=11 silent_leaves=1 methods=grill,oven_bake,pan_fry,simmer -->
-```
-
-The sweep reports a conflict when those numbers stop matching the files, and a conflicting ledger is
-itself a gap. Writing the snapshot is not optional: without it, the next pass cannot tell whether the
-ledger is current, and a stale ledger is worse than no ledger at all.
-
-A worked example lives in `game/moose/ground_moose.md`.
-
-Gap ids the sweep emits (reuse these names so entries line up): `hub_recommended_not_in_hub_bands`,
-`hub_method_without_leaf`, `orphan_leaf`, `leaf_without_any_temperature`, `recorded_unsafe_source`,
-`inferred_mention_near_numbers`, `authored_ledger_stale`, `usda_mismatch`, `hub_registry_method_drift`,
-`hub_without_registry_entry`. Anything the sweep cannot see gets your own id, and should say why the
-machine cannot see it. Registry `temperature_ranges` are zone labels, not doneness bands — do not report
-one as the other.
-
-Types of gap to look for:
-
-| Gap | How to see it |
-|---|---|
-| `registry_method_drift` | registry `supported_methods`, the frontmatter `methods:`, and the actual leaf files disagree |
-| `silent_leaf` | a leaf whose sources publish **no** temperature at all |
-| `unsafe_source` | a source whose published doneness advice contradicts a safe target |
-| `source_shortfall` | a leaf below 4 readable sources |
-| `duplicate_tradition` | every source in a leaf from one tradition |
-| `missing_group` | a culinary group with no record anywhere in the cut |
-| `unreachable_source` | a cited URL that no longer resolves |
-| `method_unregistered` | a method the corpus uses that the engine cannot express |
-| `provenance_inferred` | method steps you wrote that the page did not contain |
-
-**b. Research the methods honestly.** Do not assume the `methods:` list is complete, and do not treat
-finding a method as optional extra work. The method set is derived, not declared: registry methods, the
-frontmatter list and the leaf files must all agree, and any difference is a gap.
-
-**c. Every confirmed method gets a leaf.** If a method is used by **two or more cuts**, it is not cut work
-— write it to the system backlog with the list of cuts it unblocks and its true cost (enum value, info
-entry, panel support, AI mapping). Record it in the ledger as `blocked_by`. This is how discoveries stop
-being silently skipped.
-
-**d. Mark provenance on every method step.** `verbatim` (the page's own words, translated), `paraphrase`
-(the page's meaning, restructured), or `inferred` (your reasoning from elsewhere on the page, or from
-general technique). **An `inferred` step may never carry a number, a time or a temperature.** A leaf with
-more than a couple of `inferred` steps is not finished.
-
-**e. Human-source rule.** Every counted record must be attributable to a named human — an author, a
-restaurant, a publication, a named home cook. Treat as **contamination** anything that reads as
-machine-generated: templated proportions, generic "this dish is a celebration of…" prose, mirror-image
-recipes across unrelated sites, suspiciously modern ingredient lists in "traditional" dishes, missing
-weights or times, or a page with no verifiable author. Excluded records go in the leaf as
-`source_quality: suspected_ai` with the reason, are **never counted** toward the source minimum, and never
-contribute a temperature to the cut's band.
-
-**f. Update the registry** so the engine and the data agree, with a dated comment saying why.
-
-### 3. When a cut's pass is finished
-
-When its enumerated gaps are **(a) closed**, **(b) recorded as searched-negative** with the exact queries
-used, or **(c) escalated as blocked**. Nothing else ends a pass. A number moving is not a reason to stop,
-and a number not moving is not a reason to keep going.
-
-### 4. Report data state, never a delta
-
-End the cut with a plain description of what is now known and what is still unknown — for example:
-"four leaves, sixteen sources, eight of them silent on temperature, two publishing unsafe advice, one
-registry field corrected, confit blocked on a system change". Do not headline the pass with a score, a
-delta, or a comparison to a previous pass.
-
-### 5. Then do CHORES.md
-
-Not before. See that file.
-
----
-
-## WORDS YOU MUST NOT USE ABOUT THIS WORK
-
-`score` · `scoring` · `points` · `deduction` · `x/20` · `up from` · `improved to` · `target score` · `done`
-
-Replace them with: `state`, `gaps`, `potential`, `evidence`, `searched-negative`, `blocked`, `unverified`,
-`provenance`.
-
-The reason is not cosmetic. "Deduction" tells an agent what to avoid being caught for. "Unexploited
-evidence" tells it what to go and find. Wording decides behaviour long before any rule does.
+   Be very careful with the data integrity, no shortcuts, read the SURVEY and ToR files in the recipe dir and follow them, batching jobs and assuming or guessing may hurt the data quality we are trying to improve. Commit between cut files and then continue with the next one without stopping. IMPORTANT: This is not a race to get high scores, just impoving them a bit but not reaching 20 is fine. Not being maticulate in the research corrupts the data and as well as the scoring system itself, in practice destroying our system instead of improving it. It is an incremental task that will be applied to each cut file many times. Seing full score as doneness is wrong, this will just lead to us having to update the scoring system. Do not abandon started attempt because they are hard, time is not a factor here and the hard files are the most important to improve, small improvements are also improvements. Also adhere to the definition of the culinary groups, dont quess. Dont be conserned if the task does seam to or in fact grows, it will. For example, if you find a new cooking method for the cut or even for the whole system, add it, that significantly improves the quality of our data. Another example, finding only recipes from 2-3 culinary groups is not a reasen to abandon it, its still an incremental improvement that enhances the quality of our data. An example of degrading our data, lowering the quality instead of increasing it (which is the goal of this task) is to guess what a cut or method is called in languages or regions instead of looking it up. If cooking method researched is set to 0, it means that the quality of the research is unknown, there may be missing methods for that cut. Dont set it to 1 unless thorough reserch is done.
 
 Going back to this document for quidelines several times during the process is good practice, agents are prone to talk them out of keeping quality at a higher priority than efficiency.
+
+2. When done with 1 (not before) do CHORES.md
