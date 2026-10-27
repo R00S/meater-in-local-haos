@@ -10,7 +10,23 @@ cut_type: Tomatoes
 # Roasted Tomatoes × Air Fryer — Recipe Temperature Research
 
 ## Cut profile
-Tomatoes (*Solanum lycopersicum*) in the air fryer roast in 8–15 minutes depending on size and target: cherry tomatoes burst and caramelise in 8–10 minutes at 200 °C; halved plum tomatoes take 12–15 minutes to collapse and blister. The circulating air dehydrates the surface faster than a conventional oven, producing crisper, slightly wrinkled edges with concentrated sweetness. Air-fried tomatoes are particularly useful as fast toppings for pasta, pizza, bruschetta, or eggs. Pull temperature for burst cherry tomatoes (serving as-is) is 82–88 °C (180–190 °F); for halved plum tomatoes intended as a sauce base, 88–95 °C (190–203 °F). A MEATER probe is most practical in a larger tomato; for cherry tomatoes, rely on appearance (bursting, blistered) and time, or insert in the largest specimen. Carryover is negligible.
+
+The air fryer is a small, violently circulating oven: a 200 °C basket with a fan that strips the boundary
+layer off the food, so the cut face of a tomato loses its surface water in minutes rather than tens of
+minutes. For this cut that is the whole story. The pericarp dries and concentrates before the locule gel has
+time to boil out, which is why an air-fried half tastes sweeter and holds its shape better than the same half
+in a fan oven at the same temperature. It also means the window is short and one-sided: the exposed face
+can blacken while the skin side is still firm.
+
+Compared with [oven roast](./roasted_tomatoes-oven_roast.md) (30–90 minutes, all-round heat, jammy collapse)
+and [oven broil](./roasted_tomatoes-oven_broil.md) (5–15 minutes, radiant heat from above only), the air
+fryer is the middle case — 8–15 minutes of moving hot air that cooks the whole half, not just the top. That
+makes it the best of the three for a sauce base and the worst for a delicate topping, which the crumb of a
+*gratinati* would burn.
+
+Probe placement: insert horizontally through the skin into the pericarp of the largest half, not into the
+locule gel — the gel is mostly water and reads several degrees below the flesh around it. Carryover is
+negligible because the mass is small and the water content high.
 
 ## Styckesprofil
 
