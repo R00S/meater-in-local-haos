@@ -4890,10 +4890,21 @@ MOOSE = [
             DONENESS_RARE,
             DONENESS_MEDIUM_RARE,
             DONENESS_MEDIUM,
+            # Added 2026-10-27 from the moose-roast leaves: the Norwegian source
+            # (godt.no elgstek) calls 70 C "gjennomstekt" and the German Chefkoch
+            # Elchbraten 68 C "more cooked", while the cut stopped at medium (63 C).
+            # Without a well-done band the engine cannot express what two of the
+            # four fetched oven-roast traditions actually do.
+            DONENESS_WELL_DONE,
         ],
         supported_methods=[
             CookingMethod.OVEN_ROAST,
             CookingMethod.BRAISE,
+            # Declared 2026-10-27: both are real methods for this cut and were
+            # missing from the list. Leaves are owed (see the cut file's gap
+            # table) — declaring a found method is not the same as documenting it.
+            CookingMethod.SLOW_COOKER,
+            CookingMethod.SMOKER,
         ],
         recommended_doneness="medium_rare",
     ),
