@@ -688,23 +688,7 @@ och förväntad stegring efter vila.
 
 - [Pan Sear](./my_cut_slug-pan_sear.md)
 - Grill — no research file yet
-
-## Data state and gaps
-
-<!-- ledger-state: leaves=1 sources=4 silent=1 silent_leaves=0 methods=pan_sear,grill -->
-
-| gap | status | evidence | effort | yield |
-|---|---|---|---|---|
-| `hub_method_without_leaf` | open | `grill` is declared under `methods:` but has no leaf file | M | four grill records with a probe temperature |
 ```
-
-The `## Data state and gaps` section is what a later contributor reads first, so it is worth writing
-carefully. Each row needs `evidence` (a file and line, a URL, or the literal search queries you ran),
-`effort` (`S`/`M`/`L`) and `yield` (what data closing the gap would produce). Use `open`, `blocked`,
-`searched-negative` or `recorded, not a defect` in the status column. The `<!-- ledger-state: … -->`
-snapshot above the table must match the files as they are when you write it — running
-`measure_cut_potential.py` reports a conflict when the numbers stop matching, and a conflicting ledger
-counts as a gap in its own right.
 
 A method listed under `methods:` but not yet researched is written as plain text
 (`- Grill — no research file yet`) instead of a link, so the overview never points at a file
@@ -806,7 +790,6 @@ Skriv 3–6 meningar om styckets anatomi och hur tillagningsmetoden passar eller
 1. ...
 2. If the source publishes a probe temperature, quote it accurately; otherwise state **no internal temperature stated** and preserve its actual doneness cue. Do not add a source-absent probe step.
 3. Record the source’s rest time or note that it is not stated. Do not invent pull temperatures or final temperatures.
-4. Mark every step ***verbatim*** (the page’s own words, translated), ***paraphrase*** (the page’s meaning, restructured) or ***inferred*** (your own reasoning from elsewhere). An ***inferred*** step may never carry a number, a time or a temperature.
 
 ---
 
@@ -844,21 +827,11 @@ After the collection gate passes, write 2–4 plain-language sentences explainin
 - **Temperature data must come from the source.** Record the pull temperature and resting target as stated in the recipe, not what you think is correct. **If a source states no internal temperature, write exactly that** — never convert a visual cue ("opaque throughout", "juices run clear") into an estimated figure.
 - **One cut × one method per file.** If a recipe combines methods (sear-then-braise, steam-then-grill), file it under its dominant stage and note the rest explicitly.
 - **Probe placement note.** Give a method/cut-specific MEATER placement note when useful; do not imply the source instructed probing if it did not.
-- **Do not write what cannot be cited.** A page you cannot fetch is a lead, not a source: record it in the
-  gap ledger with the URL and what blocked it, so the next person does not repeat the attempt.
-- **Treat machine-written recipe text as contamination.** A page with no verifiable author, templated
-  proportions and generic prose is recorded as `source_quality: suspected_ai`, is never counted toward the
-  four-source minimum, and never contributes a temperature.
-
-Which cut to work on next is not a judgement call: `measure_cut_potential.py` writes
-`www/recipes/CUT_POTENTIAL.md`, listing each cut's checkable gaps and any conflict between an authored
-ledger and the files. Read that, not a score. `quality_score` in a cut's frontmatter is a frozen legacy
-field — it is not maintained, not read by the panel, and must not be used to choose work.
 
 The full collection and analysis standards live in
 `custom_components/kitchen_cooking_engine/www/recipes/RECIPE_COLLECTION_TOR.md` and
-`RECIPE_ANALYSIS_TOR.md`; the wording and gap-ledger conventions are in `IMPROVE_CUT_FILES.md` in the
-same directory.
+`RECIPE_ANALYSIS_TOR.md`; the quality-score rules for cut overview files are in the same
+directory.
 
 ---
 

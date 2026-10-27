@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 27 Oct 2026, 00:47 CET
+ * AUTO-GENERATED: 27 Oct 2026, 01:06 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 27 Oct 2026, 00:47 CET
+// Last generated: 27 Oct 2026, 01:06 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -128879,9 +128879,6 @@ const I18N_STRINGS = {
 
 // Recipe research index: cut_slug → { method_slug: url_path }
 const RECIPE_INDEX = {
-  "CUT_POTENTIAL": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/CUT_POTENTIAL.md"
-  },
   "HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY": {
     "overview": "/kitchen_cooking_engine_panel/recipes/HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md"
   },
@@ -152917,7 +152914,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "675";
+const PANEL_VERSION = "677";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

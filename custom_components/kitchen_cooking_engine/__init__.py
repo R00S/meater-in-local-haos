@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 26 Oct 2026
-Last Change: v0.10.2.30 - four cuts from the potential queue: new oven_bake leaf for plaice (4 records, 42-52 C, all Nordic) and oven_roast leaf for monkfish (4 records, 46-52 C from ovens at 50-150 C), plus researched-and-recorded ledgers for pike and pollock where the collection minimum could not be met - their verified numbers and fetch failures are written into the gap tables instead of a thin leaf; CHORES (version bump, branch history, panel regen)
+Last Change: v0.10.2.31 - revert of the potential-queue system: IMPROVE_CUT_FILES.md, RECIPE_COLLECTION_TOR.md, HOW_I_INFLATE_CUT_FILES_SCORES_AND_WHY.md, CHORES.md and the user guide are restored byte-for-byte from 762b9c34 (the commit before the rewrite), and the sweep and its generated queue are removed; research data and leaves written during that period are kept
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -176,11 +176,11 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 
 # ⚠️ VERSION — must match in ALL 3 locations on every release:
 #   1. manifest.json        → "version": "..."
-#   2. HERE (__init__.py)    → __version__ = "0.10.2.30"
+#   2. HERE (__init__.py)    → __version__ = "0.10.2.31"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.10.2.30"
+__version__ = "0.10.2.31"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
