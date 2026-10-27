@@ -74,7 +74,7 @@ En hel kyckling är en komplett fågel — bestående av bröstködet (vitt, mag
 | Culinary Group D covered | − missing (Natasha's Kitchen assessed as Group B) |
 | Oven_roast cut profile method-specific | ✓ (fixed 2026-04-27) |
 
-**Deductions**: −8 methods · −1 missing air_fryer · −1 missing grill · −1 Group A · −1 Group D = −12 → 20−12 = **8**
+**Points**: −8 methods · −1 missing air_fryer · −1 missing grill · −1 Group A · −1 Group D = −12 → 20−12 = **8**
 
 ### Improvement priorities
 

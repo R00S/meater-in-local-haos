@@ -67,7 +67,7 @@ Hel lax betyder en intakt fiskkropp: båda sidorna sitter ihop via ryggrad och r
 
 **Improvement potential: 12 / 20** — assessed 2026-05-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|-----------|
 | Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
 

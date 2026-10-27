@@ -488,18 +488,18 @@ Every **cut file** (the `{cut_name}.md` without a method suffix) carries an
 `## Improvement potential` section at the end of the document.
 
 **The number is improvement potential, not a score.** It is the same 0–20 count
-the rubric has always produced, read the other way round: **20 means nothing
+the criteria have always produced, read the other way round: **20 means nothing
 left has been found to earn, and every point below 20 is potential — work that
 is still there to do.** A file at 8/20 has more potential than a file at 18/20.
-Put the other way round: **the potential falls as the number rises.** A
-deduction therefore moves the number *down*, which means *more* potential, not
+Put the other way round: **the potential falls as the number rises.** A gap
+therefore moves the number *down*, which means *more* potential, not
 less.
 
 ### Purpose — flaw detection, not achievement
 
 > **The number is a diagnostic reading, not a target.**
 
-The purpose of this rubric is to **identify flaws** so that the files with the
+The purpose of this table is to **name the gaps** so that the files with the
 most potential can be found and improved first.  A low number is the point — it
 means the assessment is working correctly.
 
@@ -513,7 +513,7 @@ means the assessment is working correctly.
   required nor expected.  Many cuts may never reach it.
 - Do **not** use projected numbers to choose between optional improvements, and do
   not treat a drop in the number after genuine improvement as a failure.  A new
-  partial leaf adds content and a deduction together; an honest re-check can
+  partial leaf adds content and a gap together; an honest re-check can
   lower the number.  Improve the data first, then read the number off the criteria.
 - **Do** use the `### Improvement priorities` list in each file to find the
   highest-value action for that specific cut.
@@ -526,10 +526,11 @@ assessment is correct behaviour.
 
 ### Scale
 
-**Base: 20 points, where 20 is the absence of potential.** Deductions are
-subtracted from 20, so each one lowers the number and raises the potential.  A
-stub file with no research content sits around 3/20.  That is not a bug — it is
-an accurate reflection of the file's state.
+**Base: 20 points, where 20 is the absence of potential.** Each gap takes points
+off 20, so every row below lowers the number and raises the potential. **Read
+each −N as N points the file has not earned — N points of potential, never a
+penalty.** A stub file with no research content sits around 3/20.  That is not a
+bug — it is an accurate reflection of the file's state.
 
 ### Culinary group coverage (assessed across *all* method leaf files for the cut)
 
@@ -542,7 +543,7 @@ Recipes must represent all four culinary groups.  Definitions:
 | **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
 | **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
 
-**Deduction: −1 per missing culinary group** (maximum −4).
+**−1 per missing culinary group** (maximum four).
 
 ### Cut profile quality
 
@@ -550,11 +551,11 @@ Recipes must represent all four culinary groups.  Definitions:
 - **−1** if `## Cut profile` section exists but is a placeholder (content is a
   stub note such as "Placeholder — research not yet completed" with no real
   text). Placeholders are a special case: the gap is acknowledged, so the
-  deduction is lighter than for a completely absent section.
+  gap is lighter than for a completely absent section.
 - **−1** if `## Cut profile` exists with real content but lacks anatomical
   placement — where on the animal the cut comes from, what muscle or structure
   it is, what defines it (marbling, connective tissue, leanness, typical use).
-  Anatomy is always applicable; this deduction applies universally to profiles
+  Anatomy is always applicable; this row applies universally to profiles
   with real content.
 
 ### Appropriate cooking method research
@@ -583,7 +584,7 @@ traditions behind it often supports five, six or eight methods — if the corpus
 has four leaves, two are owed, and the cut's own improvement list must say so. **Do not stop at four
 because four is the number in this file.** Four is where the minimum ends and the research begins.
 
-**Declaring a method is never the deduction.** Nothing here charges the file for naming work: the rows
+**Declaring a method is never counted against the file.** Nothing here charges it for naming work: the rows
 fire on missing evidence, not on discovered methods, and a leaf is what answers a method — its sources,
 its numbers, its coverage. Leaving a confirmed method off `methods:` so the file looks finished is a
 false statement about the cut, and it is the one defect the number cannot see.
@@ -606,12 +607,12 @@ mention).
 - **−2** if culinary preferred temperatures are not researched per method
   independently (i.e. the cut file body states a single global target with no
   per-method nuance, and the method leaf files also lack per-method temperature
-  ranges). No deduction if either the cut file or the method leaf files already
+  ranges). No row applies if either the cut file or the method leaf files already
   carry per-method data.
 
 ### Description uniqueness
 
-Two separate deductions apply:
+Two separate gaps are counted here:
 
 - **−1** per method leaf file whose `## Cut profile` or opening description is
   a copy-paste or near-identical reuse of **another method leaf file** for the
@@ -624,9 +625,9 @@ Two separate deductions apply:
   than copying a sibling method file — it means the method file contains no
   method-specific analysis at all.
 
-### Deduction summary table
+### The gaps, and the points they represent
 
-| Criterion | Possible deduction |
+| Criterion | Points |
 |-----------|--------------------|
 | Cooking methods not researched (`cooking_methods_researched: 0`) | −8 |
 | Missing Culinary Group A tradition | −1 |
@@ -642,7 +643,7 @@ Two separate deductions apply:
 | Per-method temp data missing (cut + method files both) | −2 |
 | Method file copies sibling method description (per file, max 2) | −1 each |
 | Method file copies parent cut profile (per file, no limit) | −1 each |
-| **Maximum total deduction** | **−27 + number of method files** |
+| **Most a file can fall short of 20** | **−27 + number of method files** |
 | **Lowest number** | **varies** |
 
 ### How the number is written into the cut file
@@ -661,7 +662,7 @@ And append this section at the end of the cut file:
 
 **Improvement potential: 17 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|-----------|
 | Missing Culinary Group D tradition | −1 |
 | Cut profile lacks anatomy | −1 |
@@ -671,19 +672,19 @@ And append this section at the end of the cut file:
 the cut profile is updated.*
 ```
 
-### Hard-wall exception (user-approved; the only sanctioned way past an unearnable deduction)
+### Hard-wall exception (user-approved; the only sanctioned way past unearnable points)
 
 Some cuts are structurally unable to satisfy every criterion. The clearest case is a regional
 identity the rest of the world does not distinguish: Baltic herring is *strömming*, *silakka*,
 *räim*, *salaka* or *śledź bałtycki* around the Baltic (all names verified 2026-10-25), but
 outside that region the fish is filed under generic *sill*/herring and no separate cut identity
-exists to source. For such a cut, a missing Culinary Group deduction is **unearnable**: no
+exists to source. For such a cut, a missing Culinary Group point is **unearnable**: no
 amount of additional research can ever clear it, so the cut is permanently parked at the bottom
 of the work queue and repeated passes only churn the same documented gap.
 
 The exception is deliberately narrow. It applies **only** when all of the following hold:
 
-1. **The wall is structural, not a work gap.** The deduction can never be earned back by
+1. **The wall is structural, not a work gap.** The point can never be earned back by
    research. Three wall classes are recognised; a criterion is eligible only through one of
    them, and only for the exact rows that class demonstrably blocks:
 
@@ -710,7 +711,7 @@ The exception is deliberately narrow. It applies **only** when all of the follow
      is the same-tradition-duplication rows of leaves whose source sets are already frozen in.
 
    "We have not found a source yet", "the source is hard to fetch", "this pass is short on time",
-   and "the fish is niche" are **not** walls — they are unfinished research, and the deduction
+   and "the fish is niche" are **not** walls — they are unfinished research, and the point
    stays. Criteria controlled by the agent's own work (`cooking_methods_researched`, method
    leaves and their source **counts**, description duplication, cut profile quality) remain
    **never** eligible on their own: source counts are always research work. Classes (b) and (c)
@@ -723,7 +724,7 @@ The exception is deliberately narrow. It applies **only** when all of the follow
    "geographic reality" verdict without this evidence remains number inflation (Pattern 3 in
    `HOW_I_INFLATE_CUT_FILES_AND_WHY.md`) and is **not** an exception.
 3. **The user approves it.** The agent **asks** the user — it may never approve the exception
-   itself. The request states: the cut, the exact criteria and deduction rows sought, the
+   itself. The request states: the cut, the exact criteria and rows sought, the
    evidence of the wall, and the number with and without the exception. Silence is not approval;
    a refused request changes nothing.
 
@@ -732,7 +733,7 @@ When (and only when) the user approves, document the exception **in the cut file
 
 - an `**Exception (user-approved {ISO date}):**` line naming the exact criteria it covers
   (e.g. "Missing Culinary Group A and C only"), with the wall evidence summarized above it;
-- the affected deduction rows rewritten as `— (user-approved exception; wall documented above)`
+- the affected rows rewritten as `— (user-approved exception; wall documented above)`
   — the rows **stay in the table** and are never silently deleted;
 - the number recomputed with the exception applied, shown alongside the without-exception number
   (e.g. `**Improvement potential: 8 / 20** (with user-approved exception; 6 / 20 without it)`).
@@ -740,18 +741,18 @@ When (and only when) the user approves, document the exception **in the cut file
 Scope and lifetime:
 
 - The exception is **per cut file and per criterion**. It transfers to no other cut, no other
-  group, and no other criterion, and it is never a blanket waiver of the deduction table.
+  group, and no other criterion, and it is never a blanket waiver of the table.
 - If a credible source that breaks the wall is ever found, the exception is revoked for that
   criterion, normal assessment resumes, and the cut file note records the revocation.
 - The exception exists so later passes stop re-litigating a settled question — **not** so the
   file looks better than it is. Do not use it to chase 20/20 (Pattern 6): a low number with a
   documented, user-approved wall is still an honest reading.
-- Without an approval in hand, the deduction stands exactly as written. An agent-written note
+- Without an approval in hand, the row stands exactly as written. An agent-written note
   claiming the wall, with no user approval, has zero effect on the number.
 
 ### Recurring task
 
-Grading cut files is a **recurring improvement task**. Whenever a new method
+Reading a cut file is a **recurring improvement task**. Whenever a new method
 leaf is added or an existing leaf's tradition coverage is improved, the number
 must be recalculated and updated.
 
@@ -759,5 +760,5 @@ must be recalculated and updated.
 ascending — the files at the bottom of the list are the ones that need
 attention.  Improve the files with the lowest numbers first.  Do not adjust
 criteria or add leniency exceptions to move numbers artificially. The **only**
-sanctioned way past a deduction is the user-approved hard-wall exception above —
+sanctioned way to clear a row is the user-approved hard-wall exception above —
 and it is never applied by the agent alone.

@@ -63,7 +63,7 @@ Uer (*Sebastes norvegicus* / *S. mentella*; tyska: Rotbarsch; norska: uer) är e
 
 **Improvement potential: 14 / 20** — assessed 2026-05-31
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
 | Missing method leaf files (4 of 5 declared: pan_sear, oven_bake, grill, smoker) | −4 |

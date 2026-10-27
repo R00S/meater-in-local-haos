@@ -67,7 +67,7 @@ All six declared methods now have a leaf file. None of the leaves yet meets the 
 
 **Improvement potential: 12 / 20** — assessed 2026-10-23 (from-scratch reassessment after all 6 method leaves created; supersedes 2026-05-31 stub number 4)
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: method survey found and added `boil` + `poach` beyond the auto-populated list; negative search documented for steam, braise, saute, pressure/slow cooker, air fryer, sous vide, pan sear, oven broil, deep fry; `cooking_methods_researched: 1`) |
 | Missing method leaf files | — (none; all 6 declared methods have a leaf) |
@@ -81,7 +81,7 @@ All six declared methods now have a leaf file. None of the leaves yet meets the 
 | Temperature data: safe + culinary preferred | — (research evidence present: `grayling-smoker.md` carries an explicit source-stated pull at 55 °C, and its consensus records the divergence from the 63 °C USDA line rather than resolving it) |
 | Per-method temperature data | — (smoker leaf carries per-method data; the other five leaves document per-method absence as published) |
 
-**Deduction**: −5 (partial leaves) −1 (same-tradition duplication) −1 (Group A) −1 (Group C) = **12 / 20**.
+**Points**: −5 (partial leaves) −1 (same-tradition duplication) −1 (Group A) −1 (Group C) = **12 / 20**.
 
 Only one source in the whole collection states an internal temperature (55 °C, smoker). The five other leaves record recipe evidence with explicitly published absences; no temperature was invented where sources are silent.
 

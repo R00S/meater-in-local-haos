@@ -84,7 +84,7 @@ All four declared methods have a leaf and all four meet the 4–6-source collect
 
 **Improvement potential: 15 / 20** — assessed 2026-10-24 (from-scratch recount; supersedes the 8 recorded 2026-04-26, which deducted −8 for an unstarted survey, −2 for two missing leaves, −1 for a missing Group C and −1 for a copied profile — all four now resolved). Self-assessed (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Pattern 4) — an initial estimate, not an audit.
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods researched (`cooking_methods_researched: 1`, inventory above) | — |
 | Missing declared method leaves (0 of 4 missing) | — |

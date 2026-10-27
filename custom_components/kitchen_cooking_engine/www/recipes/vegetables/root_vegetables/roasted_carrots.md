@@ -56,7 +56,7 @@ Morötter (*Daucus carota*) sauterade i het panna — kinesiska wokade matchstic
 
 **Improvement potential: 9 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group D tradition | −1 |

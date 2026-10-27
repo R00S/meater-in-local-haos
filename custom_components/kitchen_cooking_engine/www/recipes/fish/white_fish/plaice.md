@@ -63,7 +63,7 @@ Rödspätta (*Pleuronectes platessa*; tyska: Scholle; danska: rødspætte; holl�
 
 **Improvement potential: 14 / 20** — assessed 2026-05-31
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
 | Missing method leaf files (4 of 5 declared) | −4 |
@@ -74,7 +74,7 @@ Rödspätta (*Pleuronectes platessa*; tyska: Scholle; danska: rødspætte; holl�
 | Missing Culinary Group C tradition | −1 |
 | Missing Culinary Group D tradition | −1 |
 
-Group C and D absent — steam leaf covers A (CN/TH/VN) and B (DE) only. Steam leaf states "Group C and D not separately required for this method" — this is an unverified assumption; deductions applied. Other method leaves (pan_fry, oven_bake, grill, smoker) are not yet created.
+Group C and D absent — steam leaf covers A (CN/TH/VN) and B (DE) only. Steam leaf states "Group C and D not separately required for this method" — this is an unverified assumption; points applied. Other method leaves (pan_fry, oven_bake, grill, smoker) are not yet created.
 
 ### Improvement priorities
 

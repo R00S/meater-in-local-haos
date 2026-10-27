@@ -87,7 +87,7 @@ Fiberstrukturen innebär att skirt steak alltid måste skäras tvärs mot fibern
 | pan_fry leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
 | pan_sear leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
 
-**Deduction**: −1 (Group D missing) = **19**
+**Points**: −1 (Group D missing) = **19**
 
 ### Improvement priorities
 

@@ -150,7 +150,7 @@ corpus for this cut measures temperatures only in the North American burger and 
 | Source counts (4 per leaf) | ✓ (4 / 4 / 4 / 4) |
 | Leaf files failing the distinct-tradition gate (binary): pan_fry (Group D ×4), grill (CA ×3), simmer (SE ×3 + FI) | − **−3** |
 
-**Deductions**: −1 Group A · −1 Group C · −3 distinct-tradition rows = −5 → **15**
+**Points**: −1 Group A · −1 Group C · −3 distinct-tradition rows = −5 → **15**
 
 ### Integrity notes recorded this pass
 

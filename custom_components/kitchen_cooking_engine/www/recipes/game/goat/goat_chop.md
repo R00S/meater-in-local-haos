@@ -139,7 +139,7 @@ tjockaste muskeldelen, borta från benet och från fettkanten.
 | Leaves below the 4-source count gate (grill 3, pan_sear 3, oven_broil 2) | **−3** |
 | Leaf failing the distinct-tradition gate — `oven_broil` | **−1** |
 
-**Deductions**: −1 Group C · −1 Group D · −1 leaf target · −3 source counts · −1 distinct = −7 → **13**
+**Points**: −1 Group C · −1 Group D · −1 leaf target · −3 source counts · −1 distinct = −7 → **13**
 
 ### Integrity work recorded this pass
 
@@ -149,7 +149,7 @@ recipe, and a Caribbean Pot URL that pointed at the site's homepage; the pan_sea
 unresolved Indian Healthy Recipes URL, a Laylita *seco de chivo* stew whose "75–80 °C chop pull"
 was invented, and an African Bites *asun* page for a different dish. Every record in both leaves
 carried the same **72–74 °C pull**, both leaves' profiles were near-copies of the hub's, and the
-hub's own deduction table had already flagged the copying. All of it is retracted; nothing in the three
+hub's own table had already flagged the copying. All of it is retracted; nothing in the three
 current leaves is inherited. The hub's claim that goat loin is "best at medium to well-done
 (68–74 °C)" was likewise unsourced — the corpus says the opposite and that is now recorded above.
 

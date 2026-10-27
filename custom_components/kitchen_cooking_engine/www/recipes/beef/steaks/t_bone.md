@@ -102,14 +102,14 @@ T-bone skärs från den korta länden, framför entrecôten. Tjockleken är typi
 | Culinary Group C covered | − missing |
 | Culinary Group D covered | − missing |
 
-**Deductions**: −8 methods not researched · −1 Group A · −1 Group C · −1 Group D = −11 → Hmm that's 9 not 10. Wait, let me recount original deductions:
+**Points**: −8 methods not researched · −1 Group A · −1 Group C · −1 Group D = −11 → Hmm that's 9 not 10. Wait, let me recount original points:
 
 Original: −8 (methods) −1 (A) −1 (C) −1 (D) −1 (air_fryer copies parent) −1 (grill copies oven_roast) −1 (grill copies pan_sear) = −14 → number 6.
 After fixes: −8 (methods) −1 (A) −1 (C) −1 (D) = −11 → number 9.
 
 **Revised improvement potential: 9 / 20**
 
-**Deductions**: −8 methods not researched · −1 Group A missing · −1 Group C missing · −1 Group D missing
+**Points**: −8 methods not researched · −1 Group A missing · −1 Group C missing · −1 Group D missing
 
 ### Improvement priorities
 

@@ -51,7 +51,7 @@ Koka i kryddad vätska 1,5–2 timmar; skala sedan skinnet av. Innertemperatur: 
 
 **Improvement potential: 10 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group C tradition | −1 |

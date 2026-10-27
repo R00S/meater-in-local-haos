@@ -59,7 +59,7 @@ Pannstekning i smör vid hög värme är standardmetoden. Innertemperatur: **70�
 | Culinary Group C covered | − missing (−1) |
 | All other groups | ✓ |
 
-**Deductions**: −8 methods · −1 Group C = −9 → 20−9 = **11**
+**Points**: −8 methods · −1 Group C = −9 → 20−9 = **11**
 
 ### Improvement priorities
 

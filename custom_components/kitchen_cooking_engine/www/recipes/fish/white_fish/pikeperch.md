@@ -65,7 +65,7 @@ Gös (*Sander lucioperca*; tyska: Zander; franska: sandre; finska: kuha) är en 
 
 **Improvement potential: 18 / 20** — assessed 2026-05-31
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
 | Missing method leaf files | — (all 6 present: pan_sear, pan_fry, oven_bake, grill, smoker, sous_vide) |
@@ -76,7 +76,7 @@ Gös (*Sander lucioperca*; tyska: Zander; franska: sandre; finska: kuha) är en 
 | Missing Culinary Group C tradition | −1 |
 | Missing Culinary Group D tradition | — (covered: SE/DE/FI/DK/NL across multiple leaves) |
 
-Groups A and C absent — pikeperch (*Sander lucioperca* / zander) is indigenous to European and Western Asian freshwater systems and is absent from East Asian and African/Caribbean/Arabic culinary traditions. This claim has not been verified by live search of Japanese, Chinese, or Korean sources. Deductions applied pending verification.
+Groups A and C absent — pikeperch (*Sander lucioperca* / zander) is indigenous to European and Western Asian freshwater systems and is absent from East Asian and African/Caribbean/Arabic culinary traditions. This claim has not been verified by live search of Japanese, Chinese, or Korean sources. Points applied pending verification.
 
 ### Improvement priorities
 

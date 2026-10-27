@@ -101,7 +101,7 @@ Ribeye består av ögat (longissimus), rib cap (spinalis dorsi, den rikaste och 
 | Culinary Group C covered | − missing (−1) |
 | All other groups | ✓ |
 
-**Deductions**: −8 methods not researched · −1 Group C missing = −9 → 20−9 = **11**
+**Points**: −8 methods not researched · −1 Group C missing = −9 → 20−9 = **11**
 
 ### Improvement priorities
 

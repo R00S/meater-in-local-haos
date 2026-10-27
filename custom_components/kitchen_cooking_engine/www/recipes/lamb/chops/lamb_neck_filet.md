@@ -77,7 +77,7 @@ Kokar långsamt till mörhet (85–90 °C) via bräsering eller slow cooker; pan
 
 **Improvement potential: 9 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group C tradition | −1 |

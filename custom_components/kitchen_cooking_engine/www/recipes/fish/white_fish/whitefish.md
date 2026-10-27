@@ -61,7 +61,7 @@ Sik (*Coregonus* spp.; finska: siika; tyska: Felchen / Renke; franska: corégone
 
 **Improvement potential: 15 / 20** — assessed 2026-05-31
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
 | Missing method leaf files (3 of 4 declared) | −3 |
@@ -72,7 +72,7 @@ Sik (*Coregonus* spp.; finska: siika; tyska: Felchen / Renke; franska: corégone
 | Missing Culinary Group C tradition | −1 |
 | Missing Culinary Group D tradition | — (covered: FI/SE in whitefish-oven_bake.md) |
 
-Groups A and C absent — whitefish (*sik* / *Coregonus*) is a northern freshwater fish with limited East Asian or African/Arabic culinary tradition. Deductions applied pending verification.
+Groups A and C absent — whitefish (*sik* / *Coregonus*) is a northern freshwater fish with limited East Asian or African/Arabic culinary tradition. Points applied pending verification.
 
 ### Improvement priorities
 

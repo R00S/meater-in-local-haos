@@ -55,7 +55,7 @@ Rostning av potatis (*Solanum tuberosum*) omvandlar rå stärkelse till en krisp
 | Culinary Group D covered | − missing (−1) |
 | Groups A, B | ✓ |
 
-**Deductions**: −8 methods · −1 Group C · −1 Group D = −10 → **10**
+**Points**: −8 methods · −1 Group C · −1 Group D = −10 → **10**
 
 ### Improvement priorities
 

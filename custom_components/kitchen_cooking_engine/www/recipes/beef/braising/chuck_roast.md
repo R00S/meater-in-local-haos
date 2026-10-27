@@ -62,7 +62,7 @@ Eftervärmen är försumbar tack vare den omgivande vätskan som buffrar tempera
 | Culinary Group D covered | ✓ (Köket.se *kalops* — Swedish, added 2026-04-28) |
 | Culinary Groups A, B | ✓ |
 
-**Deductions**: −8 methods · −2 missing leaves · −1 Group C = −11 → **9**
+**Points**: −8 methods · −2 missing leaves · −1 Group C = −11 → **9**
 
 ### Improvement priorities
 

@@ -58,7 +58,7 @@ Innertemperatur: **75–80 °C (167–176 °F)** för genomstekt, saftig bog; **
 
 **Improvement potential: 10 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |

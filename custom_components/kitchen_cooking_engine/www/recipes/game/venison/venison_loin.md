@@ -75,7 +75,7 @@ Pannstekning vid hög värme är den viktigaste metoden: 3–4 minuter per sida 
 
 **Improvement potential: 9 / 20** — assessed 2026-04-28
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | sous_vide leaf missing | −1 |

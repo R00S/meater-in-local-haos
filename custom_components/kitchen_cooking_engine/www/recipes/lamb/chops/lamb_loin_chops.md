@@ -76,7 +76,7 @@ Het gjutjärns- eller tung panna, 4–5 minuter per sida, sedan vila. Sond in i 
 
 **Improvement potential: 9 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing method leaf file `lamb_loin_chops-grill.md` | −1 |

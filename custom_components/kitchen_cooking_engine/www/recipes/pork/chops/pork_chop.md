@@ -69,7 +69,7 @@ Innertemperatur: **58–63 °C (136–145 °F)** för sous vide. Med pasteuriser
 
 **Improvement potential: 12 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|-----------|
 | Cooking methods not researched | −8 |
 

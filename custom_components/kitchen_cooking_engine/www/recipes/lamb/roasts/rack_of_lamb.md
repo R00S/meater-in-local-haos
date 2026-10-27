@@ -79,7 +79,7 @@ Sear all om i het panna (1–2 minuter per sida), belägg med senap och örtkorp
 
 **Improvement potential: 18 / 20** — assessed 2026-04-29 (methods survey done; oven_roast leaf profile fixed; −1 Group A, −1 Group D remain)
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing method leaf file `rack_of_lamb-grill.md` | −1 |

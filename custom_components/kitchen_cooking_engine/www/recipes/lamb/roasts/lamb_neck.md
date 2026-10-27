@@ -56,7 +56,7 @@ Det kulinariska målet är kollagensmältning: 85–90 °C, hållet i 2–3 timm
 
 **Improvement potential: 19 / 20** — assessed 2026-04-29 (methods survey done; braise leaf profile fixed (was sibling copy of oven_roast); −1 Group A remains)
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |

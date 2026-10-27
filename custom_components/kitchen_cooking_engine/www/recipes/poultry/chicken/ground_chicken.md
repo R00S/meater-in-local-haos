@@ -56,7 +56,7 @@ Tillaga vid spissimmer eller ugn 160–170 °C, rör om regelbundet. Innertemper
 
 **Improvement potential: 9 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group B tradition | −1 |

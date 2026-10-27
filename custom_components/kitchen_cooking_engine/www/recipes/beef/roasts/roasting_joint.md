@@ -89,7 +89,7 @@ carryover_temp_c: 8
 
 **Improvement potential: 9 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
 

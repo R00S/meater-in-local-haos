@@ -48,7 +48,7 @@ Kalkonbröst kan köpas med ben (halvbröst på revbensstål, 1,5–2,5 kg) elle
 
 **Improvement potential: 8 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing method leaf file `turkey_breast-smoker.md` | −1 |

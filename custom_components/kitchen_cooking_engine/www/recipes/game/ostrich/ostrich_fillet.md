@@ -69,7 +69,7 @@ Köttet är djupt rött med litet fettinnehåll (under 2 %), högt järninnehål
 
 **Improvement potential: 8 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group B tradition | −1 |

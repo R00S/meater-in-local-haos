@@ -56,7 +56,7 @@ All methods inherit from the primary `mutton_shoulder` entry. Independent leaf f
 
 **Improvement potential: 14 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −0 *(inherited from mutton_shoulder; set cooking_methods_researched: 1)* |
 | Cut profile references mutton_shoulder rather than being stand-alone | −2 |

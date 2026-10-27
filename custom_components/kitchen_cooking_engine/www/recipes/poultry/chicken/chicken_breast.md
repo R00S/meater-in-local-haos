@@ -67,7 +67,7 @@ Pannstekning: het panna, 5–7 minuter per sida; ugnsrostning: 200–220 °C, 18
 | Culinary Group D covered | − missing (−1) |
 | Culinary Groups A, C | ✓ |
 
-**Deductions**: −8 methods · −2 missing leaves · −1 Group B · −1 Group D = −12 → **8**
+**Points**: −8 methods · −2 missing leaves · −1 Group B · −1 Group D = −12 → **8**
 
 ### Improvement priorities
 

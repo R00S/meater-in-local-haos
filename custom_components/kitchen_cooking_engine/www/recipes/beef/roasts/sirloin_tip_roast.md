@@ -71,7 +71,7 @@ Sirloin tip roast (känd som "knuckle" i UK/australisk styckning, "pointe de cul
 
 **Improvement potential: 10 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group C tradition | −1 |

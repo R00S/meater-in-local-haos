@@ -66,10 +66,10 @@ Låg-och-långsam tillagning transformerar snittet: 3–4 timmar i ugn vid 150 �
 | Temperature data: culinary preferred (85–93°C) | ✓ |
 | Per-method temperature in braise leaf | ✓ |
 | Braise leaf cut profile copies parent text | − −1 (opening paragraph near-identical to parent; method-specific analysis in second paragraph only) |
-| oven_roast leaf | − pending (no deduction per TOR — method leaf files exist) |
-| slow_cooker leaf | − pending (no deduction per TOR — method leaf files exist) |
+| oven_roast leaf | − pending (no points per TOR — method leaf files exist) |
+| slow_cooker leaf | − pending (no points per TOR — method leaf files exist) |
 
-**Deduction**: −1 (braise leaf cut profile copies parent) = **17**
+**Points**: −1 (braise leaf cut profile copies parent) = **17**
 
 ### Improvement priorities
 

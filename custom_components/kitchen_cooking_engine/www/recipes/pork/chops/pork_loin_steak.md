@@ -81,9 +81,9 @@ Survey leads **not yet leafed** (queued, evidence in the branch timeline): `pan_
 
 ## Improvement potential
 
-**Improvement potential: 14 / 20** — assessed 2026-10-26 (from-scratch recount after the 2026-10-26 collection pass: method survey completed and `cooking_methods_researched` set to 1; four discovered methods registered with new leaves; the two previously missing declared-method leaves written; pan_fry widened from 3 to 5 sources with full analysis sections; all four culinary groups now covered by fetched evidence. Supersedes the 2026-04-27 number 8. Every row below is re-derived from the criteria against evidence, not carried over (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Patterns 4, 8, 9, 10). The two remaining deduction classes are source-count and same-tradition duplication — both agent work, no wall claimed.)
+**Improvement potential: 14 / 20** — assessed 2026-10-26 (from-scratch recount after the 2026-10-26 collection pass: method survey completed and `cooking_methods_researched` set to 1; four discovered methods registered with new leaves; the two previously missing declared-method leaves written; pan_fry widened from 3 to 5 sources with full analysis sections; all four culinary groups now covered by fetched evidence. Supersedes the 2026-04-27 number 8. Every row below is re-derived from the criteria against evidence, not carried over (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Patterns 4, 8, 9, 10). The two remaining gap classes are source-count and same-tradition duplication — both agent work, no wall claimed.)
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (seven-method survey completed 2026-10-26; enum-wide sweep with documented negative searches and queued leads in the frontmatter comment; `cooking_methods_researched: 1`) |
 | Missing method leaf files | — (none among the 7 declared methods; the six single-source survey leads are documented as queued above and are not declared, so this row counts declared methods honestly) |
@@ -98,7 +98,7 @@ Survey leads **not yet leafed** (queued, evidence in the branch timeline): `pan_
 | Temperature data: culinary preferred temps supported by research evidence | — (covered: pan_fry 62–65 °C cluster, grill 60–71 °C span, sous_vide 60–64 °C primary baths, charcoal_grill 60–63 °C targets — per-method bands from fetched sources) |
 | Per-method temp data missing | — (the cut profile body above now carries the per-method application table; every leaf carries its own temperature consensus) |
 
-**Deduction**: −2 (source counts) −4 (tradition-gate duplication) = **14 / 20**.
+**Points**: −2 (source counts) −4 (tradition-gate duplication) = **14 / 20**.
 
 **Remaining wall evidence — none claimed.** All six failed rows are ordinary incomplete collection, not hard walls: the US-heavy corpora for air_fryer, oven_roast, sous_vide and charcoal_grill are what these English-language appliance/precision-cooking ecosystems publish, but non-US sources for every one of them are plainly fetchable (a Filipino or Korean air-fryer chop, a European oven-chop, a French/Dutch/Japanese sous-vide publication, an Argentine *asado* or Korean *gogigui* charcoal source), and braise needs two more traditions. None of these rows carries a user-approved exception; all are open work.
 

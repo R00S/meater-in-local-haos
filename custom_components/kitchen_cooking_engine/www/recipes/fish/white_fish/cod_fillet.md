@@ -64,7 +64,7 @@ Pannstekning är en mycket vanlig beredning — den höga ledningsvärmen i pann
 
 **Improvement potential: 11 / 20** — assessed 2026-05-31
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
 | Missing method leaf file `cod_fillet-oven_roast.md` | −1 |

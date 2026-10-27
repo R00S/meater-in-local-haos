@@ -57,18 +57,17 @@ Tillagning tills köttet är helt genomstekt och lätt brynnat. Innertemperatur:
 - [Simmer](./ground_lamb-simmer.md) — ⚠️ partial, 1 fetched source (IN keema matar) — **new method 2026-10-24**
 ## Improvement potential
 
-**Improvement potential: 8 / 20** — assessed 2026-10-24. From-scratch reassessment on the deduction
-scale (no anchoring to the previous number — inflation doc Patterns 4 and 9). The four
+**Improvement potential: 8 / 20** — assessed 2026-10-24. From-scratch reassessment on the scale (no anchoring to the previous number — inflation doc Patterns 4 and 9). The four
 fixes the 2026-04-26 table listed (missing grill leaf, Group D, anatomy, pan_fry profile
 copy) are all done; the number coincides only because the old table's −4 of leaf-level
-fixes is replaced by −4 of partial-leaf deductions.
+fixes is replaced by −4 of partial-leaf gaps.
 
-| Criterion | Deduction | Evidence |
+| Criterion | Points | Evidence |
 |-----------|-----------|----------|
 | Cooking methods not researched (`cooking_methods_researched: 0`) | −8 | Survey 2026-10-24 found and registered 2 methods beyond the declared list (oven_bake — GR moussaka; simmer — IN keema matar), but the enum inventory is not complete: braise, saute, air_fryer, sous_vide and dumpling-bound mince preparations (manti, khinkali) remain plausible and unverified. Field stays 0 until collected or cleanly ruled out. |
 | Partial leaves (< 4 fetched sources): pan_fry (2), grill (1), oven_bake (1), simmer (1) | −4 | −1 per partial leaf (branch convention). All 4 leaves are partial. |
 
-**Total deduction −12 → 8/20.** Criteria checked with evidence and receiving **0 deduction**:
+**Total −12 → 8/20.** Criteria checked with evidence and receiving **0 points**:
 
 - **Culinary Groups A/B/C/D all covered** — A: Indian keema (pan_fry filling, simmer); B: Greek moussaka (oven_bake); C: Turkish Adana kebab (grill); D: Russian kotlety (pan_fry). The 2026-04-26 Group D gap is closed.
 - `## Cut profile` now carries anatomy (trim origins, grinder mechanics, 15–25 % fat, contamination logic) — the old −1 is retired.

@@ -98,7 +98,7 @@ Innertemperatur: **57–65 °C (135–149 °F)** för medium-rare till medium; *
 
 **Improvement potential: 11 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |

@@ -53,7 +53,7 @@ Malt kalkon tillverkas av malning av mörkt kött, vitt kött eller en blandning
 
 **Improvement potential: 9 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Method file `ground_turkey-braise.md` copies parent cut profile | −1 |

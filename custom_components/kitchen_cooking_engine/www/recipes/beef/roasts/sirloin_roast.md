@@ -95,7 +95,7 @@ Entrecôtestek (övre entrecôtestek i nordamerikansk styckningsnomenklatur) är
 
 **Improvement potential: 8 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group D tradition | −1 |

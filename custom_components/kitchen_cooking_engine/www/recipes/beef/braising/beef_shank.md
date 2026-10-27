@@ -49,7 +49,7 @@ Oxlägg är den nedre delen av framlägget (foreshank) eller baklägget (hindsha
 
 **Improvement potential: 11 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Method file `beef_shank-braise.md` copies parent cut profile | −1 |

@@ -59,7 +59,7 @@ En hel anka presenterar en tillagningsutmaning: bröstet är bäst vid 57–63 �
 
 **Improvement potential: 8 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |

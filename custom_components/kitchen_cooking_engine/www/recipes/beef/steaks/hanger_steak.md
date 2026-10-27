@@ -69,7 +69,7 @@ Hängarbiff över levande träkol tillsätter en viktig dimension till detta red
 
 **Improvement potential: 10 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Method file `hanger_steak-charcoal_grill.md` copies parent cut profile | −1 |

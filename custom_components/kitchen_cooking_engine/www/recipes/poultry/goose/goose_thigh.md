@@ -120,7 +120,7 @@ kortare med grill-final) kräver i stället att skinnet prickas, torkas och salt
 | Source counts (4 per leaf) | ✓ (4 / 4) |
 | Leaf files failing the distinct-tradition gate (binary): braise (DE ×4) | − **−1** |
 
-**Deductions**: −1 Group A · −1 Group C · −2 leaf target · −1 braise distinct = −5 → **15**
+**Points**: −1 Group A · −1 Group C · −2 leaf target · −1 braise distinct = −5 → **15**
 
 ### Registry correction recorded this pass
 

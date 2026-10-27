@@ -56,7 +56,7 @@ Fårkött gynnas av kraftfulla braiseringsvätskor som vin, yoghurt och kryddade
 
 **Improvement potential: 11 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Method file `mutton_shoulder-braise.md` copies parent cut profile | −1 |

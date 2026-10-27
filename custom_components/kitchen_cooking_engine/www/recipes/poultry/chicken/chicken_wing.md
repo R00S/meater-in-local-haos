@@ -76,7 +76,7 @@ Alla tillagningsmetoder (air fryer, grill, ugn, fritering) kräver minst 74 °C 
 | Culinary Group C covered | ✓ (air fryer: Immaculate Bites; grill: Immaculate Bites) |
 | Culinary Group D covered | − missing from all leaves |
 
-**Deductions**: −8 methods not researched · −1 Group D missing = −9 total → 20−9 = **11**
+**Points**: −8 methods not researched · −1 Group D missing = −9 total → 20−9 = **11**
 
 ### Improvement priorities
 

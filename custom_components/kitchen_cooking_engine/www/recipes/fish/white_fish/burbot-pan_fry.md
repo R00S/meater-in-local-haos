@@ -122,9 +122,9 @@ Lake (*Lota lota*) är den enda sötvattensmedlemmen av torskfamiljen. Fisken ha
 **3 of target 4–6 sources saved.**
 
 Culinary group coverage:
-- Group A (East/SE/South Asian): **Not found.** Burbot (*Lota lota*) is circumpolar across northern latitudes — it does not occur in the tropical and subtropical waters of the culinary regions in Group A (Japan, China south of the Amur basin, SE Asia, India). While burbot exists in the Amur/Siberian river system, no accessible traditional Chinese or Japanese burbot recipe could be identified in this research session. Group A deduction applies.
+- Group A (East/SE/South Asian): **Not found.** Burbot (*Lota lota*) is circumpolar across northern latitudes — it does not occur in the tropical and subtropical waters of the culinary regions in Group A (Japan, China south of the Amur basin, SE Asia, India). While burbot exists in the Amur/Siberian river system, no accessible traditional Chinese or Japanese burbot recipe could be identified in this research session. Group A point applies.
 - Group B (North American/Western European): **Covered** — honest-food.net (USA, English).
-- Group C (African/Arabic/Persian/Caribbean): **Not applicable.** Burbot does not exist in any African, Arabian, Persian, or Caribbean fishery and has no established culinary tradition in these regions. Group C deduction applies.
+- Group C (African/Arabic/Persian/Caribbean): **Not applicable.** Burbot does not exist in any African, Arabian, Persian, or Caribbean fishery and has no established culinary tradition in these regions. Group C point applies.
 - Group D (Scandinavian/Slavic): **Covered** — edimdoma.ru (Russia) and laplandwildfish.fi (Finland).
 
 Per RECIPE_ANALYSIS_TOR.md: analysis below is based on 3 sources from 2 culinary groups. All 3 sources converge on the same method profile and temperature. Conclusions are treated as preliminary; a 4th source (Group A if accessible, or additional Group B/D) should be added when found.

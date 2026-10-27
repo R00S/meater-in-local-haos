@@ -67,7 +67,7 @@ Renkött är mycket magert (typiskt under 2 % intramuskulärt fett) och djupt r�
 
 **Improvement potential: 10 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group B tradition | −1 |

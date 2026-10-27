@@ -134,7 +134,7 @@ därför `well_done` som enda band. Innertemperatur: **71 °C (160 °F)**. Efter
 | Leaf below the 4-source count gate — `smoker` (2) | **−1** |
 | Leaf failing the distinct-tradition gate (binary) — `air_fryer` (US ×4) | **−1** |
 
-**Deductions**: −1 Group A · −1 pan_fry count · −1 smoker count · −1 air_fryer distinct = −4 → **16**
+**Points**: −1 Group A · −1 pan_fry count · −1 smoker count · −1 air_fryer distinct = −4 → **16**
 
 ### Integrity work recorded this pass (why the old number's rows were wrong)
 

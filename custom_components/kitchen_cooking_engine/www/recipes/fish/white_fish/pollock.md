@@ -63,7 +63,7 @@ Sei (*Pollachius virens*; tyska: Seelachs/Köhler; norska/danska: sei/sej; frans
 
 **Improvement potential: 14 / 20** — assessed 2026-05-31
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
 | Missing method leaf files (4 of 5 declared: pan_fry, oven_bake, air_fryer, smoker) | −4 |

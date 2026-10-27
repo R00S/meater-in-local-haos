@@ -81,7 +81,7 @@ Ankbröst är ett mörkt, rikt snitt med tjockt subcutant fett. Till skillnad fr
 | oven_roast leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
 | sous_vide leaf | − pending (method in list; leaf not yet created) |
 
-**Deduction**: −1 (Group C) −1 (Group D) −1 (sous_vide leaf pending) = **17**
+**Points**: −1 (Group C) −1 (Group D) −1 (sous_vide leaf pending) = **17**
 
 ### Improvement priorities
 

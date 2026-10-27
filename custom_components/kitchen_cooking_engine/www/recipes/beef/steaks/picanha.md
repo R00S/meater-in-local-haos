@@ -95,7 +95,7 @@ Picanha (*alcatra de capa* på portugisiska; *coulotte* på franska; *sirloin ca
 | Culinary Group C covered | − missing |
 | Culinary Group D covered | − missing |
 
-**Deductions**: −8 methods not researched · −1 Group C missing · −1 Group D missing = −10 → 20−10 = **10**
+**Points**: −8 methods not researched · −1 Group C missing · −1 Group D missing = −10 → 20−10 = **10**
 
 ### Improvement priorities
 

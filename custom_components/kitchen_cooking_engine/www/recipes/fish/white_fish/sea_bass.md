@@ -113,7 +113,7 @@ than on thermometers.
 
 **Improvement potential: 16 / 20** — assessed 2026-10-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | none — survey done, `cooking_methods_researched: 1` |
 | Missing method leaf files (grill, oven_roast were declared without leaves) | none — 5 leaves now exist |

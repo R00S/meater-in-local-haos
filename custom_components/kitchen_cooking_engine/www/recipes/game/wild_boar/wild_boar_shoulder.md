@@ -63,7 +63,7 @@ Bräsera med rödvin, vildfond, enbär, rosmarin, lök och morötter i täckt ug
 | Culinary Group C covered | − missing (−1) |
 | Culinary Groups B, D | ✓ |
 
-**Deductions**: −8 methods · −1 missing braise · −1 missing slow_cooker · −1 Group A · −1 Group C = −12 → 20−12 = **8**
+**Points**: −8 methods · −1 missing braise · −1 missing slow_cooker · −1 Group A · −1 Group C = −12 → 20−12 = **8**
 
 ### Improvement priorities
 

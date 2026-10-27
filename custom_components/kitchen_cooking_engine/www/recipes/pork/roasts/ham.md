@@ -100,7 +100,7 @@ surveys for `grill`, `pressure_cooker` or `sous_vide` are exhausted.
 
 **Improvement potential: 17 / 20** — assessed 2026-10-24 (from-scratch recount; supersedes 8 recorded 2026-04-27, which deducted −8 for an unstarted survey, −1 for missing Group A, −2 for preferred-temperature research and −1 for per-method temperatures — the Group A and per-method gaps are now closed by fetched sources). Self-assessed (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Pattern 4).
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods researched (`cooking_methods_researched: 1`, inventory above) | — |
 | Missing declared method leaves (0 of 3 missing) | — |

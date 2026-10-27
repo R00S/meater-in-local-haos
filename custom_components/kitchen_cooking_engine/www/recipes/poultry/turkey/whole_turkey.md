@@ -63,7 +63,7 @@ En hel kalkon presenterar samma utmaning som hel kyckling men i stor skala. Inne
 
 **Improvement potential: 8 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing method leaf file `whole_turkey-smoker.md` | −1 |

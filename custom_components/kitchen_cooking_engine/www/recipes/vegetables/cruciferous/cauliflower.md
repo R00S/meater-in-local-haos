@@ -60,7 +60,7 @@ Blomkål (*Brassica oleracea* var. *botrytis*) är ett tätt klustring av omogna
 
 **Improvement potential: 10 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Cut profile lacks anatomy | −1 |

@@ -51,7 +51,7 @@ USDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertempe
 
 **Improvement potential: 11 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Method file `ground_pork-braise.md` copies parent cut profile | −1 |

@@ -84,7 +84,7 @@ Kalkontlår är den övre benets mörka köttssektion av kalkon, från höften t
 | Per-method temp data | ✓ (oven_roast leaf) |
 | oven_roast leaf copies parent cut profile | − −1 (cut profile paragraphs are near-identical to parent; method-specific context is in second paragraph only) |
 
-**Deduction**: −1 (Group A) −1 (Group C) −1 (Group D) −1 (oven_roast copies parent) = **16**
+**Points**: −1 (Group A) −1 (Group C) −1 (Group D) −1 (oven_roast copies parent) = **16**
 
 ### Improvement priorities
 

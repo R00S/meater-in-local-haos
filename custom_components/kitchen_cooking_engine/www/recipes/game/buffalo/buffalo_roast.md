@@ -132,7 +132,7 @@ den tjockaste muskeldelen, borta från ben och fettfickor.
 | Leaves below the 4-source count gate (braise 3, oven_roast 3, smoker 3) | **−3** |
 | Leaves failing the distinct-tradition gate (braise, oven_roast, smoker — all US) | **−3** |
 
-**Deductions**: −1 Group A · −1 Group C · −1 Group D · −3 source counts · −3 distinct rows = −9 → **11**
+**Points**: −1 Group A · −1 Group C · −1 Group D · −3 source counts · −3 distinct rows = −9 → **11**
 
 ### Integrity work recorded this pass
 

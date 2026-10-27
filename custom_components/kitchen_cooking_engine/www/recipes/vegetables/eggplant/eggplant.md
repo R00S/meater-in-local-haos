@@ -60,7 +60,7 @@ Aubergine (*Solanum melongena*) uppnår sin mest dramatiska transformation på l
 
 **Improvement potential: 9 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group D tradition | −1 |

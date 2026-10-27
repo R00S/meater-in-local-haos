@@ -63,7 +63,7 @@ Innertemperatur: **68–72 °C (154–162 °F)** för genomstekt, saftig loin. U
 
 **Improvement potential: 8 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing method leaf file `pork_loin_roast-slow_cooker.md` | −1 |

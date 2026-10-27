@@ -51,7 +51,7 @@ En grillad kalkonburger är en 150–180 g formad biff gjord av grovmalt kalkont
 
 **Improvement potential: 10 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |

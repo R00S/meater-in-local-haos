@@ -88,7 +88,7 @@ Fettet behöver tid att smälta ned — att placera kotletterna på sidan för a
 
 **Improvement potential: 11 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Method file `lamb_chops-grill.md` copies parent cut profile | −1 |

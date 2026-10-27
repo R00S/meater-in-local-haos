@@ -96,7 +96,7 @@ Pannstekning: medel-hög värme, 3–4 minuter per sida. Innertemperatur: **70�
 | Leaf files below the 4-source count (sous_vide 3, oven_broil 2) | − **−2** |
 | Leaf files failing the distinct-tradition gate (binary): air_fryer (dual US/UK label judgment), braise (US ×2 publications), sous_vide (US ×2), oven_broil (US ×2) | − **−4** |
 
-**Deductions**: −2 source counts · −4 distinct-tradition rows = −6 → **14**
+**Points**: −2 source counts · −4 distinct-tradition rows = −6 → **14**
 
 ### Improvement priorities
 

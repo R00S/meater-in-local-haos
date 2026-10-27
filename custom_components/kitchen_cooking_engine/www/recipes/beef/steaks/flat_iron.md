@@ -90,7 +90,7 @@ Flat iron steak tas från infraspinatus i skulderbladet, separerad från det cen
 
 **Improvement potential: 11 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Method file `flat_iron-air_fryer.md` copies parent cut profile | −1 |

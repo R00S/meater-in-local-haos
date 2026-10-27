@@ -58,7 +58,7 @@ Sparris (*Asparagus officinalis*) sauterad i het panna är den snabbaste beredni
 
 **Improvement potential: 9 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group D tradition | −1 |

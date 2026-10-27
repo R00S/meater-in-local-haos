@@ -78,7 +78,7 @@ Innertemperatur: **60–65 °C** (140–149 °F) för medium (rosa mitt) — ska
 | Culinary Group C covered | − missing (−1) |
 | Culinary Groups B, D | ✓ |
 
-**Deductions**: −8 methods · −1 missing braise · −1 Group A · −1 Group C = −11 → 20−11 = **9**
+**Points**: −8 methods · −1 missing braise · −1 Group A · −1 Group C = −11 → 20−11 = **9**
 
 ### Improvement priorities
 

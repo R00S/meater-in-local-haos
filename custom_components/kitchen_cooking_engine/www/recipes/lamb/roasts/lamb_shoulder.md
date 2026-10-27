@@ -61,7 +61,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagnin
 | Culinary Group D covered | − missing (−1) |
 | Culinary Groups B, C | ✓ |
 
-**Deductions**: −8 methods · −2 missing leaves · −1 Group A · −1 Group D = −12 → **8**
+**Points**: −8 methods · −2 missing leaves · −1 Group A · −1 Group D = −12 → **8**
 
 ### Improvement priorities
 

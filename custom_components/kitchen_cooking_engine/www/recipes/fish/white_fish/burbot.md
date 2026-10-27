@@ -61,7 +61,7 @@ Lake (*Lota lota*; tyska: Trüsche; franska: lote; finska: made) är den enda s�
 
 **Improvement potential: 14 / 20** — assessed 2026-05-31
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
 | Missing method leaf files (3 of 4 declared) | −3 |
@@ -72,7 +72,7 @@ Lake (*Lota lota*; tyska: Trüsche; franska: lote; finska: made) är den enda s�
 | Missing Culinary Group C tradition | −1 |
 | Missing Culinary Group D tradition | — (covered: RU edimdoma.ru and FI laplandwildfish.fi in pan_fry leaf) |
 
-Groups A and C absent — burbot is a circumpolar northern fish with no culinary tradition in tropical East Asian or African/Caribbean/Arabic cuisines. No verified Japanese, Chinese, Korean, African, or Arabic burbot recipe was found in research. Deductions apply as unverified geographic claim.
+Groups A and C absent — burbot is a circumpolar northern fish with no culinary tradition in tropical East Asian or African/Caribbean/Arabic cuisines. No verified Japanese, Chinese, Korean, African, or Arabic burbot recipe was found in research. Points apply as unverified geographic claim.
 
 ### Improvement priorities
 

@@ -129,7 +129,7 @@ Den mörka röda färgen speglar hög myoglobinhalt. Behandla som ett extremt ma
 | Leaf files below the 4-source count or carrying fewer than 4 verifiable sources (pan_sear: 5 records but only 2 verifiable — 3 preserved Chefkoch pages now 403, 2 of them self-contradictory) | − **−1** |
 | Leaf files failing the distinct-tradition gate (binary): pan_sear (DE ×3, US ×2), grill (US ×3), charcoal_grill (US ×2), sous_vide (US ×3) | − **−4** |
 
-**Deductions**: −1 Group A thin · −1 Group C thin · −1 Group D thin · −1 pan_sear verifiability · −4 distinct-tradition rows = −8 → **12**
+**Points**: −1 Group A thin · −1 Group C thin · −1 Group D thin · −1 pan_sear verifiability · −4 distinct-tradition rows = −8 → **12**
 
 ### Integrity work recorded this pass (why some rows moved)
 

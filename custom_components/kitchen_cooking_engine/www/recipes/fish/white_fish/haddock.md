@@ -72,7 +72,7 @@ Köttet är mycket magert (under 1% fett), vitt genomgående, och mer delikat ä
 | Culinary Group A covered | − missing (−1) |
 | Groups B, C, D | ✓ |
 
-**Deductions**: −8 methods · −2 missing leaves · −1 Group A = −11 → **9**
+**Points**: −8 methods · −2 missing leaves · −1 Group A = −11 → **9**
 
 ### Improvement priorities
 

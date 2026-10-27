@@ -82,7 +82,7 @@ Denna fettrikedom gör det idealisk för långsam tillagning (sous vide, bräser
 | air_fryer leaf cut profile fixed (was copy of grill and parent) | ✓ (rewritten 2026-04-29) |
 | grill leaf cut profile | − mentions oven operations; needs rewriting (not a copy of parent, but wrongly describes oven steps in a grill leaf) |
 
-**Deduction**: −1 (Group C — structural limitation for pork) = **19**
+**Points**: −1 (Group C — structural limitation for pork) = **19**
 
 ### Improvement priorities
 

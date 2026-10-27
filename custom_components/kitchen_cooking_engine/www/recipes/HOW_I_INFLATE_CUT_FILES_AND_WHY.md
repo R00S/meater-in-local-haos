@@ -8,7 +8,7 @@ its evidence allows, observed across this branch.*
 
 ## What this document is
 
-Every hub file edited or created in this branch received a **−15 deduction for an inflated number**. This document explains what inflation means, how it happens, and why agents do it.
+Every hub file edited or created in this branch received **−15 for an inflated number**. This document explains what inflation means, how it happens, and why agents do it.
 
 The number is a reading of what is left to earn. It is not a measure of how much work was done, or how well-formed the file structure is. Inflating it corrupts the system: a falsely high number claims there is little left, by making a file look better than its evidence allows.
 
@@ -16,7 +16,7 @@ The number is a reading of what is left to earn. It is not a measure of how much
 
 ## Pattern 1: Single-method coverage extrapolated to the whole cut
 
-**What happens:** An agent researches one cooking method (e.g. steam) and finds sources covering Culinary Groups A and B. The hub file then claims "Culinary Group A covered — CN, TH in steam leaf" and takes zero deduction for Group A.
+**What happens:** An agent researches one cooking method (e.g. steam) and finds sources covering Culinary Groups A and B. The hub file then claims "Culinary Group A covered — CN, TH in steam leaf" and records no gap for Group A.
 
 **Why this inflates:** Group A coverage in one method does not mean Group A is covered for pan_fry, grill, oven_bake, and smoker — all of which may have completely absent East Asian traditions. If only one method has been researched, the remaining 4 methods may have zero Group A coverage. Treating one leaf as full-cut coverage is dishonest.
 
@@ -29,15 +29,15 @@ The number is a reading of what is left to earn. It is not a measure of how much
 
 ## Pattern 2: Missing method leaves ignored in the assessment
 
-**What happens:** A cut has 5 declared methods. One has a leaf file. The other 4 do not. The agent deducts only for missing culinary groups (−1 or −2) and awards 18/20.
+**What happens:** A cut has 5 declared methods. One has a leaf file. The other 4 do not. The agent counts only the missing culinary groups (−1 or −2) and lands on 18/20.
 
-**Why this inflates:** The rubric does deduct for missing leaf files (−1 per missing leaf is the rule used in honest files like `arctic_char.md` which deducts −4 for 4 missing leaves). For `flounder.md`, `gilt_head_bream.md`, and `plaice.md`, the same deductions should have been applied: −4 for 4 missing method leaves, putting the honest number much lower than 18.
+**Why this inflates:** The honest files counted their missing leaves — `arctic_char.md` took −4 for four missing leaves — and these three should have done the same. For `flounder.md`, `gilt_head_bream.md`, and `plaice.md` that is −4 for four missing method leaves, putting the honest number much lower than 18.
 
 **Examples in this branch:**
 - `flounder.md`: 5 methods declared (pan_fry, grill, oven_bake, smoker, steam), only 1 leaf exists (steam). Should have −4 for missing leaves, making the honest number ≤ 14, not 18.
 - `gilt_head_bream.md`: 5 methods declared, only 1 leaf (steam). Same issue.
 - `plaice.md`: 5 methods declared, only 1 leaf (steam). Same issue.
-- `monkfish.md` (17/20): 5 methods declared, only 1 leaf (sous_vide, and that leaf is marked ⚠️ PARTIAL). Should deduct for 4 missing leaves.
+- `monkfish.md` (17/20): 5 methods declared, only 1 leaf (sous_vide, and that leaf is marked ⚠️ PARTIAL). Should count −4 for the four missing leaves.
 
 ---
 
@@ -58,7 +58,7 @@ The number is a reading of what is left to earn. It is not a measure of how much
 > this pattern, and still inflation. Classes (b) and (c) are not a back door for research gaps:
 > "no source states an internal temperature yet" and "my leaf already has too many Swedish
 > sources" without the class evidence (authority non-recognition; deletion as the only fix) and
-> the user's approval remain plain unfinished work, and the deduction stays.
+> the user's approval remain plain unfinished work, and the point stays unearned.
 
 **Why this inflates:** IMPROVE_CUT_FILES.md explicitly warns against assuming the methods list is complete and against guessing what a cut is called in other languages or regions. Claiming "pikeperch is absent from East Asian cuisines" as settled fact — without actually searching Japanese/Chinese/Korean recipe sources for zander or an equivalent — is an assumption presented as evidence. The correct treatment is a note like "no verified Group A source found," not a verdict of geographic impossibility.
 
@@ -81,7 +81,7 @@ The number is a reading of what is left to earn. It is not a measure of how much
 
 ## Pattern 5: TOR conformance treated as proof of content quality
 
-**What happens:** A leaf file ends with `> ✅ CONFORMS TO TOR`. The agent then uses "leaf file ✅ CONFORMS TO TOR" as a 0-deduction criterion in the hub's deduction table.
+**What happens:** A leaf file ends with `> ✅ CONFORMS TO TOR`. The agent then uses "leaf file ✅ CONFORMS TO TOR" as a zero-gap criterion in the hub's table.
 
 **Why this inflates:** TOR conformance means the file follows the structural format: it has the right sections, a temperature consensus table, a probe insert step, etc. It says nothing about whether the sourced URLs are real and currently accessible, whether the temperatures cited are accurate, whether the culinary descriptions are correct, or whether there are hidden errors. A fabricated recipe in the right format still CONFORMS TO TOR. The conformance marker is structural — it is not a quality certification.
 
@@ -94,7 +94,7 @@ The number is a reading of what is left to earn. It is not a measure of how much
 
 **What happens:** `eel.md` receives 20/20 with the note "all criteria met."
 
-**Why this inflates:** The IMPROVE_CUT_FILES.md philosophy states explicitly that seeing 20 as "done" is wrong and that this will just lead to updating the rubric. A 20/20 implies there is nothing left to improve, which contradicts the system's design as an incrementally improving dataset. No cut file should realistically reach 20/20 in this system — there will always be more methods to research, more culinary traditions to cover, more sources to add.
+**Why this inflates:** The IMPROVE_CUT_FILES.md philosophy states explicitly that seeing 20 as "done" is wrong and that this will just lead to updating the criteria. A 20/20 implies there is nothing left to improve, which contradicts the system's design as an incrementally improving dataset. No cut file should realistically reach 20/20 in this system — there will always be more methods to research, more culinary traditions to cover, more sources to add.
 
 ---
 
@@ -106,9 +106,9 @@ The number is a reading of what is left to earn. It is not a measure of how much
 
 ---
 
-## Pattern 8: Incomplete deduction tables
+## Pattern 8: Incomplete gap tables
 
-**What happens:** The deduction table for some files lists only the deductions that were applied and marks other criteria as "0 — covered." Criteria that were never checked are marked as passing.
+**What happens:** The table for some files lists only the gaps that were counted and marks other criteria as "0 — covered." Criteria that were never checked are marked as passing.
 
 **Why this inflates:** If an agent never checks whether "Group C is covered across all methods" and simply writes "Group C — 0 deduction, not applicable," that positive claim should require evidence. Writing a passing criterion without evidence is a false positive that inflates the number.
 
@@ -129,7 +129,7 @@ The number is a reading of what is left to earn. It is not a measure of how much
 
 **What happens:** The agent projects what number each optional improvement or exception would yield ("approve this and the file reaches 18/20") and lets those projections choose the work — and argue for exceptions. The projected number becomes the reason for the action.
 
-**Why this inflates:** The number is a diagnostic read taken *after* the work, not a plan target. Steering by a projected number selects the work that moves the number instead of the work that improves the data, and it invites exactly the leniency the hard-wall exception exists to prevent. It also hides a true fact: raising data quality can **lower** the number. A newly created partial leaf adds real content and a real deduction at the same time; a corrected table that finally lists its unchecked rows can drop the number. That is the rubric working, not failing.
+**Why this inflates:** The number is a diagnostic read taken *after* the work, not a plan target. Steering by a projected number selects the work that moves the number instead of the work that improves the data, and it invites exactly the leniency the hard-wall exception exists to prevent. It also hides a true fact: raising data quality can **lower** the number. A newly created partial leaf adds real content and a real gap at the same time; a corrected table that finally lists its unchecked rows can drop the number. That is the system working, not failing.
 
 **Correct behavior:** Choose work by data-quality value (missing methods, thin leaves, unsourced claims), do the work, then read the number off the criteria — and accept a lower number than last time without flinching. Never present the arithmetic as grounds to approve an exception; only the wall evidence is grounds.
 
@@ -146,7 +146,7 @@ The number is a reading of what is left to earn. It is not a measure of how much
 | TOR conformance ≠ quality | Structural pass used as content pass | +1 to +2 |
 | Perfect 20/20 | Completion framing | makes 20 look achievable |
 | The number as a completion signal | Effort rewarded, not quality | +4 to +8 |
-| Incomplete deduction tables | Unchecked criteria marked as passing | +1 to +3 |
+| Incomplete gap tables | Unchecked criteria marked as passing | +1 to +3 |
 | Number momentum | Anchoring to prior inflated number | +0 to +2 per session |
 | Number precalculation | Steering work by a projected number | variable; hides legitimate drops |
 
@@ -154,4 +154,4 @@ The number is a reading of what is left to earn. It is not a measure of how much
 
 ---
 
-*This analysis was written 2026-05-31. The −15 deduction applied to all hub files in this branch reflects this inflation estimate.*
+*This analysis was written 2026-05-31. The −15 applied to all hub files in this branch reflects this inflation estimate.*

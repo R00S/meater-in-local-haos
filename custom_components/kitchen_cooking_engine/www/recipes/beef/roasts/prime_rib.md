@@ -79,7 +79,7 @@ Prime rib (även kallat stående revbenstek) skärs från ribprimalen (revben 6�
 
 **Improvement potential: 9 / 20** — assessed 2026-04-28
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |

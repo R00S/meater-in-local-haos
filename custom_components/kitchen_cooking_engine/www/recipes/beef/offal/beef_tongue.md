@@ -49,7 +49,7 @@ Nöttungue (*Bos taurus* lingvalmuskel) är en enda tät cylindrisk muskel som a
 
 **Improvement potential: 11 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Method file `beef_tongue-braise.md` copies parent cut profile | −1 |

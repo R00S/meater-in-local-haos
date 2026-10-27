@@ -44,7 +44,7 @@ Hel rödbeta (*Beta vulgaris*) ugnsrostad fortfarande i skalet vid 190–200 °C
 
 **Improvement potential: 9 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |

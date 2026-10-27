@@ -76,7 +76,7 @@ Fårbenets starka smak kräver kraftfull kryddning — spiskummin, kardemumma, i
 
 **Improvement potential: 10 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group C tradition | −1 |

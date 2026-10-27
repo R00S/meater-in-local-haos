@@ -113,7 +113,7 @@ minuter täckt.
 | Leaf below the 4-source count gate — `smoker` (3) | **−1** |
 | Leaf failing the distinct-tradition gate — `smoker` (US ×3) | **−1** |
 
-**Deductions**: −1 Group C · −1 leaf target · −1 smoker count · −1 smoker distinct = −4 → **17**
+**Points**: −1 Group C · −1 leaf target · −1 smoker count · −1 smoker distinct = −4 → **17**
 
 ### Integrity work recorded this pass
 

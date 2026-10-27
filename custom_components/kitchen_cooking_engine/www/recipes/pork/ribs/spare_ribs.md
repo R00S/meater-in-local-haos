@@ -61,7 +61,7 @@ De kräver längre tillagningstid än baby back ribs (3–5 timmar låg-och-lån
 | Culinary Group C covered | − missing (−1) |
 | Culinary Groups B, D | ✓ |
 
-**Deductions**: −8 methods · −2 missing leaves · −1 Group A · −1 Group C = −12 → **8**
+**Points**: −8 methods · −2 missing leaves · −1 Group A · −1 Group C = −12 → **8**
 
 ### Improvement priorities
 

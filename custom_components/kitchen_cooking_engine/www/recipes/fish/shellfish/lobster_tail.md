@@ -73,7 +73,7 @@ Det segmenterade ytterskalet (skalet) är ett inbyggt värmeskydd som skyddar k�
 | Temperature data: culinary preferred (57–62°C) | ✓ |
 | Per-method temperature data | ✓ (both leaves) |
 
-**Deduction**: −1 (Group C missing) = **19**
+**Points**: −1 (Group C missing) = **19**
 
 ### Improvement priorities
 

@@ -75,7 +75,7 @@ Atlantisk och stillahavslax skiljer sig åt i fettfördelning — odlad atlantla
 
 **Improvement potential: 12 / 20** — assessed 2026-05-31
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
 | Missing method leaf files | — (all 6 present: air_fryer, grill, oven_bake, pan_sear, smoker, sous_vide) |

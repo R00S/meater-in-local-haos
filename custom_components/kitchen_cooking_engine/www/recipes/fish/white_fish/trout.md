@@ -76,7 +76,7 @@ Regnbågsforell (*Oncorhynchus mykiss*) och brun öring (*Salmo trutta*, svenska
 
 **Improvement potential: 8 / 20** — assessed 2026-05-31
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
 | Missing method leaf files (2 of 4 declared: grill, oven_roast) | −2 |

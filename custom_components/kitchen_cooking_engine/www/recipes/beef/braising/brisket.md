@@ -62,11 +62,11 @@ Nötbringa tas från bröstet och nedre delen av djurets bröstkorg och består 
 | Temperature data: safe temp confirmed | ✓ |
 | Temperature data: culinary preferred (88–93°C) | ✓ |
 | Per-method temperature in oven_roast leaf | ✓ |
-| braise leaf | − pending (no deduction per TOR — oven_roast leaf exists) |
-| slow_cooker leaf | − pending (no deduction per TOR — oven_roast leaf exists) |
-| smoker leaf | − pending (no deduction per TOR — oven_roast leaf exists) |
+| braise leaf | − pending (no points per TOR — oven_roast leaf exists) |
+| slow_cooker leaf | − pending (no points per TOR — oven_roast leaf exists) |
+| smoker leaf | − pending (no points per TOR — oven_roast leaf exists) |
 
-**Deduction**: −1 (Group D missing) = **19**
+**Points**: −1 (Group D missing) = **19**
 
 ### Improvement priorities
 

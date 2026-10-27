@@ -64,7 +64,7 @@ Grillning, pannstekning och ugnsrostning är de vanligaste metoderna. Alla kräv
 | Culinary Group C covered | − missing (−1) |
 | Culinary Groups B, D | ✓ |
 
-**Deductions**: −8 methods · −1 Group A · −1 Group C = −10 → 20−10 = **10**
+**Points**: −8 methods · −1 Group A · −1 Group C = −10 → 20−10 = **10**
 
 ### Improvement priorities
 

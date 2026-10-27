@@ -53,7 +53,7 @@ Innertemperaturen är nödvändig men otillräcklig: snittet behöver tid vid 88
 
 **Improvement potential: 11 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Method file `goat_shoulder-braise.md` copies parent cut profile | −1 |

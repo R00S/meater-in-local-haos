@@ -68,7 +68,7 @@ Innertemperatur: **60–63 °C (140–145 °F)**. Eftertillagning: 2–3 °C. Dr
 | Culinary Group D covered | − missing (−1) |
 | Groups A, B, C | ✓ |
 
-**Deductions**: −8 methods · −2 missing leaves · −1 Group D = −11 → **9**
+**Points**: −8 methods · −2 missing leaves · −1 Group D = −11 → **9**
 
 ### Improvement priorities
 

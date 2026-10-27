@@ -66,7 +66,7 @@ Getlägg skiljer sig från lammlägg i att get i allmänhet slaktas vid äldre �
 | Temperature data: culinary preferred (88–93°C) | ✓ |
 | Per-method temperature data | ✓ (both leaves) |
 
-**Deduction**: −1 (Group A missing) = **19**
+**Points**: −1 (Group A missing) = **19**
 
 ### Improvement priorities
 

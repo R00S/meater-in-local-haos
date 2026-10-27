@@ -93,7 +93,7 @@ Köttet är extremt marmorerat med distinkt intramuskulärt fett och en unik fj�
 | Leaf files below the 4-source count (charcoal_grill 3, oven_roast 3, braise 3, sous_vide 3) | − **−4** |
 | Leaf files failing the distinct-tradition gate (binary): pan_sear (ES ×2, CH ×2), oven_roast (ES ×2), braise (ES ×2 + ambiguous attribution) | − **−3** |
 
-**Deductions**: −1 Group A thin · −1 Group C · −4 source counts · −3 distinct-tradition rows = −9 → **11**
+**Points**: −1 Group A thin · −1 Group C · −4 source counts · −3 distinct-tradition rows = −9 → **11**
 
 ### Improvement priorities
 

@@ -53,7 +53,7 @@ Dessa egenskaper gör bogen idealisk för bräsering och slow cooking — metode
 
 **Improvement potential: 10 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group C tradition | −1 |

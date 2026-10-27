@@ -78,7 +78,7 @@ Köttet är extremt magert och får inte tillagas bortom medium (63 °C) — ova
 | Culinary Group D covered | − missing (−1) |
 | Culinary Groups B, C | ✓ |
 
-**Deductions**: −8 methods · −1 Group A · −1 Group D = −10 → 20−10 = **10**
+**Points**: −8 methods · −1 Group A · −1 Group D = −10 → 20−10 = **10**
 
 ### Improvement priorities
 

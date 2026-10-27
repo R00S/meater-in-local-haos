@@ -94,7 +94,7 @@ Sear i smör eller klarat smör vid hög värme — 3–4 minuter per sida — s
 | pan_sear leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
 | charcoal_grill leaf | − pending (method in list; leaf not yet created) |
 
-**Deduction**: −1 (Group A) −1 (Group C) −1 (charcoal_grill leaf missing, counted as per previous assessment) = **17**
+**Points**: −1 (Group A) −1 (Group C) −1 (charcoal_grill leaf missing, counted as per previous assessment) = **17**
 
 ### Improvement priorities
 

@@ -63,7 +63,7 @@ Eel (primarily European eel *Anguilla anguilla* and Japanese eel *Anguilla japon
 
 **Improvement potential: 20 / 20** — assessed 2026-05-31
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
 | Missing method leaf files | — (all 5 present: grill, pan_fry, oven_bake, smoker, braise) |

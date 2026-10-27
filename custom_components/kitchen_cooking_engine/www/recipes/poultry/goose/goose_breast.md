@@ -69,7 +69,7 @@ Gåsbröst är ett rikt, djupt smakrikt mörkt kött med ett kraftigt fettlager.
 
 **Improvement potential: 9 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group B tradition | −1 |

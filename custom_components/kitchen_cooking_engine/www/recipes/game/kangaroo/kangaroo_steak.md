@@ -133,7 +133,7 @@ medium-rare-band (52–57 °C) — en verklig avvikelse som är dokumenterad, in
 | Source counts (4 per leaf) | grill has 3 verifiable sources — − **−1** |
 | Leaf files failing the distinct-tradition gate (binary): pan_sear (AU ×4), grill (AU ×3) | − **−2** |
 
-**Deductions**: −1 Group A · −1 Group C · −1 Group D · −2 leaf target · −1 grill source count · −2 distinct rows = −8 → **12**
+**Points**: −1 Group A · −1 Group C · −1 Group D · −2 leaf target · −1 grill source count · −2 distinct rows = −8 → **12**
 
 ### Integrity notes recorded this pass
 

@@ -62,7 +62,7 @@ Tillagas alltid till fullt genomstekt för säkerhet och optimal smak. Innertemp
 | Culinary Group D covered | − missing (−1) |
 | Groups A, C | ✓ |
 
-**Deductions**: −8 methods · −1 missing leaf · −1 Group B · −1 Group D = −11 → **9**
+**Points**: −8 methods · −1 missing leaf · −1 Group B · −1 Group D = −11 → **9**
 
 ### Improvement priorities
 

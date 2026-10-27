@@ -60,7 +60,7 @@ Vid grillning eller pannstekning kräver USDA-standarden att malet lamm tillagas
 | Culinary Group D covered | − missing (−1) |
 | Groups B, C | ✓ |
 
-**Deductions**: −8 methods · −1 missing leaf · −1 Group A · −1 Group D = −11 → **9**
+**Points**: −8 methods · −1 missing leaf · −1 Group A · −1 Group D = −11 → **9**
 
 ### Improvement priorities
 

@@ -91,7 +91,7 @@ Nötrumpa skärs från rumpprimalen — toppen av bakkvarteret, vid korsningen a
 
 **Improvement potential: 10 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Groups A, C | −2 (honest gaps) |

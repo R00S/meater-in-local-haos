@@ -85,7 +85,7 @@ All six declared methods now have a leaf. None of the fetched sources in any lea
 
 **Improvement potential: 11 / 20** — assessed 2026-10-24 (from-scratch recount; supersedes the 7 recorded earlier the same day, which deducted −4 for missing leaves that now exist and did not deduct for the total absence of temperature evidence). Self-assessed (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Pattern 4) — an initial estimate, not an independent audit.
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods researched (`cooking_methods_researched: 1`, survey table above) | — |
 | Missing declared method leaves (0 of 6 missing) | — |
@@ -97,7 +97,7 @@ All six declared methods now have a leaf. None of the fetched sources in any lea
 | Cut profile anatomy | — (anatomical profile present) |
 | Method-file duplication of the parent profile | — (no leaf copies this parent text) |
 
-The deduction for "no temperature evidence" is applied deliberately: the cut's `doneness` block and pull sentence are inherited guidance, not fetched hake evidence, and the 2026-10-24 sweep found no page that states an internal endpoint for this species.
+The point for "no temperature evidence" is applied deliberately: the cut's `doneness` block and pull sentence are inherited guidance, not fetched hake evidence, and the 2026-10-24 sweep found no page that states an internal endpoint for this species.
 
 ### Improvement priorities
 

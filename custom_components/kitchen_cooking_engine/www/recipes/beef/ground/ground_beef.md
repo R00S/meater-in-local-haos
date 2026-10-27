@@ -49,7 +49,7 @@ Malet nötkött (köttfärs) framställs av nötmalning, vanligast från fransys
 
 **Improvement potential: 9 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Method file `ground_beef-braise.md` copies parent cut profile | −1 |

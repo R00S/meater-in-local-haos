@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 26 Oct 2026
-Last Change: v0.10.2.33 - wording only: the potential direction is stated outright (the potential falls as the number rises), the four-leaf rule is rewritten as a floor instead of a target (IMPROVE_CUT_FILES step b, RECIPE_COLLECTION_TOR method sub-files), and discovering a method or a cut now names the leaf or cut file it owes; no deduction, criterion or number changed
+Last Change: v0.10.2.34 - the mark-scheme vocabulary goes too: 'rubric' -> 'criteria', 'Grading' -> 'Reading', table 'Deduction' columns and 'Deductions:' labels -> 'Points', 'Maximum total deduction' -> 'most a file can fall short', and one gloss in both instruction files defining every -N as N points the file has not earned, i.e. N points of potential; no number changed
 """
 
 DOMAIN = "kitchen_cooking_engine"

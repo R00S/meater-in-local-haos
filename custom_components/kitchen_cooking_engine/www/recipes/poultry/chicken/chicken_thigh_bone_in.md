@@ -101,23 +101,23 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum, **79 °C (175 °F)** rekomme
 
 **Improvement potential: 8 / 20** — reassessed 2026-10-25, up from 6 on 2026-10-24. (The frontmatter had said
 `improvement_potential: 5` while that table computed 6 — a stale-number mismatch, the same defect fixed in
-mackerel on 2026-10-24; frontmatter and body now agree.) The deduction scale is unchanged and no
+mackerel on 2026-10-24; frontmatter and body now agree.) The scale is unchanged and no
 leaf was credited for anything it does not hold: the number rose because `grill` left the partial set
 after gaining its fourth tradition (Jamaican jerk) and `pan_fry` reached four sources (North
 African), not because the scale was relaxed. `pan_fry` was deliberately **not** marked conformant —
 two of its four sources are US-based, so the strict tradition-diversity gate is still unmet and the
-−1 overlap deduction stands. Context: this file was reassessed from scratch on 2026-10-24 per
+−1 overlap point stands. Context: this file was reassessed from scratch on 2026-10-24 per
 `HOW_I_INFLATE_CUT_FILES_AND_WHY.md`, deliberately not anchored to the previous 7 (Pattern 9
 — number momentum), because the old table used a +points scheme and a manual "net adjusted to 7"
-fudge that the deduction scale does not support.
+fudge that the scale does not support.
 
-| Criterion | Deduction | Evidence |
+| Criterion | Points | Evidence |
 |-----------|-----------|----------|
 | Cooking methods researched (`cooking_methods_researched: 1`) | 0 | All 17 supported methods are inventoried with evidence leaves; `boil` is documented with its overlap boundary and charcoal is a grill-fuel variant. |
 | Partial method leaves (below the 4-source gate): smoker (1), slow_cooker (1), pressure_cooker (1), sous_vide (1), poach (2 direct bone-in sources), steam (2), boil (1 clear/ambiguous), oven_bake (3), oven_broil (3), pan_sear (1), saute (1) | −11 | −1 per partial leaf. Oven_roast (5), air_fryer (4), braise (4), simmer (5), grill (4, completed 2026-10-25) and pan_fry (4, source-count met 2026-10-25) meet the source-count threshold, though collection analysis remains partial. |
 | pan_fry source-tradition overlap | −1 | Two US-based sources (Made With Lau, Chinese-American; Cooked by Julie, American) can be read as one national tradition, so pan_fry stays ⚠️ partial despite reaching four sources; the North African source added 2026-10-25 widens Groups but does not remove the US redundancy. |
 
-**Total deduction −12 → 8/20.** Criteria checked with evidence and receiving **0 deduction**:
+**Total −12 → 8/20.** Criteria checked with evidence and receiving **0 points**:
 
 - **Culinary Groups A/B/C/D all covered** across the method leaves — A: Chinese-American (pan_fry), Japanese (air_fryer), Indian (air_fryer, grill), Korean (braise, slow_cooker, pressure_cooker); B: American (pan_fry, grill, sous_vide, smoker), UK (air_fryer), French (braise), Greek (grill); C: Moroccan (air_fryer), Jamaican (braise, grill jerk), Senegalese (braise), North African (pan_fry, added 2026-10-25); D: Russian (pan_fry).
 - `## Cut profile` present with anatomical placement (femur, biceps femoris, myoglobin/collagen, subcutaneous fat).
@@ -132,7 +132,7 @@ Note on definitions: this file's `doneness` block gives `dark_meat_optimal` as t
 ### Improvement priorities
 
 1. Revisit the `boil` versus simmer/poach boundary as additional tradition-specific sources are collected; current enum inventory has been reviewed and `cooking_methods_researched` is set to 1.
-2. Raise the remaining twelve partial leaves to the 4–6-source gate. `pan_fry` needs one non-US source to both hit 4 sources and clear the −1 tradition-overlap deduction (a Group C stovetop pan-fry — a Japanese teriyaki thigh was checked 2026-10-25 and rejected: Sudachi's recipe is explicitly *boneless*, wrong cut form). `oven_bake` and `oven_broil` (3 each) need one more tradition. `smoker`, `slow_cooker`, `pressure_cooker`, `sous_vide`, `pan_sear`, `saute` (1 source each) and `poach`, `steam`, `boil` (2, 2, 1 clear) need 2–5 more sources each. `grill` was completed 2026-10-25 (Jamaican jerk, Group C) and is off this list.
+2. Raise the remaining twelve partial leaves to the 4–6-source gate. `pan_fry` needs one non-US source to both hit 4 sources and clear the −1 tradition-overlap point (a Group C stovetop pan-fry — a Japanese teriyaki thigh was checked 2026-10-25 and rejected: Sudachi's recipe is explicitly *boneless*, wrong cut form). `oven_bake` and `oven_broil` (3 each) need one more tradition. `smoker`, `slow_cooker`, `pressure_cooker`, `sous_vide`, `pan_sear`, `saute` (1 source each) and `poach`, `steam`, `boil` (2, 2, 1 clear) need 2–5 more sources each. `grill` was completed 2026-10-25 (Jamaican jerk, Group C) and is off this list.
 3. Resolve the endpoint divergence record: air_fryer sources span 165–195 °F and grill spans 160–165 °F; consider a `method_temperature_ranges` override for air_fryer once a 4–6-source collection exists.
 4. Re-fetch the Serious Eats cold-start skillet and air-fryer thigh pages (HTTP 403 on 2026-10-24) — they carry the only located US 175 °F pan-fry endpoint.
 

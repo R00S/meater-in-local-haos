@@ -73,7 +73,7 @@ Innertemperatur: **65–72 °C (149–162 °F)** för fullt genomstekt och safti
 
 **Improvement potential: 8 / 20** — assessed 2026-04-26
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |

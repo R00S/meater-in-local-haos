@@ -85,7 +85,7 @@ Pannstekning är den vanligaste metoden i det skandinaviska hemmaköket: smör, 
 | Culinary Group C covered | − missing (−1) |
 | Culinary Group D | ✓ |
 
-**Deductions**: −8 methods · −1 Group A · −1 Group B · −1 Group C = −11 → 20−11 = **9**
+**Points**: −8 methods · −1 Group A · −1 Group B · −1 Group C = −11 → 20−11 = **9**
 
 ### Improvement priorities
 

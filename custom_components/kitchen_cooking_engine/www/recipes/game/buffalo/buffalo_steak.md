@@ -88,7 +88,7 @@ Köttet (*carabeef*) är magert, mörkrött och fast, med en smak liknande mager
 | Culinary Group D covered | − missing (−1) |
 | Culinary Groups A, B | ✓ |
 
-**Deductions**: −8 methods · −1 missing charcoal grill leaf · −1 Group C · −1 Group D = −11 → 20−11 = **9**
+**Points**: −8 methods · −1 missing charcoal grill leaf · −1 Group C · −1 Group D = −11 → 20−11 = **9**
 
 ### Improvement priorities
 

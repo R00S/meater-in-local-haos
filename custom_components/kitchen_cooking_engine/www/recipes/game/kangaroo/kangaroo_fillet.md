@@ -67,7 +67,7 @@ Denna magerhet kräver mycket korta tillagningstider vid hög värme — 2–3 m
 
 **Improvement potential: 10 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group C tradition | −1 |

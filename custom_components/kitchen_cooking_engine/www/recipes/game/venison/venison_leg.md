@@ -67,7 +67,7 @@ Möra muskler (innanlår) lämpar sig för ugnsrostning och mer öm tillagning; 
 
 **Improvement potential: 9 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
+| Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group B tradition | −1 |

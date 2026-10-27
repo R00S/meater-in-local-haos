@@ -79,7 +79,7 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. 
 | braise leaf | − missing (`chicken_thigh-braise.md` not yet created) |
 | pan_fry leaf | − missing (`chicken_thigh-pan_fry.md` not yet created) |
 
-**Deduction**: −1 (Group D) −1 (braise leaf missing) −1 (pan_fry leaf missing) = **17**
+**Points**: −1 (Group D) −1 (braise leaf missing) −1 (pan_fry leaf missing) = **17**
 
 ### Improvement priorities
 
