@@ -4820,9 +4820,22 @@ REINDEER = [
             DONENESS_RARE,
             DONENESS_MEDIUM_RARE,
             DONENESS_MEDIUM,
+            # Added 2026-10-27 from the reindeer-roast leaves: the NJFF scale
+            # (the Norwegian hunters' and anglers' association, which is the
+            # authority Norwegian game cooks actually use) publishes 70 C as
+            # medium-plus and 75 C as fully cooked. Without this band the engine
+            # could not express the top half of that scale.
+            DONENESS_WELL_DONE,
         ],
         supported_methods=[
             CookingMethod.OVEN_ROAST,
+            # Declared 2026-10-27: both are real methods for this cut and were
+            # missing. Braise is confirmed by matprat.no's "reinsdyrstek i gryte"
+            # (125 C, 2-3 h, 60-65 C); smoking is the Finnish/Norwegian savuporo /
+            # røkt reinsdyr tradition. Leaves are owed for both — see the cut
+            # file's gap table.
+            CookingMethod.BRAISE,
+            CookingMethod.SMOKER,
         ],
         recommended_doneness="medium_rare",
     ),

@@ -22,15 +22,36 @@ cut_type: Reindeer
 
 ## Cut profile
 
-Reindeer roast (renstek) is a traditional Sami and Scandinavian festive dish. The round/topside (innanlår) or saddle is the most common cut. The Scandinavian method: sear in a hot pan, then finish in a very low oven (100–125 °C) with the probe inserted to achieve precise doneness without risk of overcooking the lean meat. The traditional accompaniment is cream sauce with lingonberries.
+The reindeer roast is the boned and rolled round — the topside (*innanlår*) or the silverside, sometimes the saddle —
+and it is the festive joint of the Sámi and Scandinavian north. The muscle is fine-grained and very dark, and it
+is the leanest red meat in this catalogue: 1–2 % fat, no marbling to speak of, and a thin layer of silverskin
+that shrinks and can pucker the roast if it is not trimmed. That leanness is exactly why the oven roast, not
+the braise, is the method of the north: a low oven (100–125 °C) brings the whole joint up slowly enough that
+the outside never outruns the centre, and the surface stays moist because the roast is small and the oven is
+barely hotter than the target.
 
-Target internal temperature: **57–62 °C (135–144 °F)** for medium. Pull at 55 °C and rest.
+Oven roasting a cut this lean also sets the failure mode. There is no fat to render, so the only moisture the
+roast has is its own; above about 70 °C the fibres contract hard and give it up, and the joint goes grey and
+dry within a few degrees. Every Nordic source therefore stops well short of beef well-done, and the Norwegian
+scale still offers 75 °C for anyone who wants it — a number no Swedish or Finnish source would accept.
+
+Carryover on an uncovered reindeer roast is 4–7 °C over a 15–20-minute rest, and it is larger than on a beef
+roast of the same size because the joint is small and the crust thin. Probe from the thick end into the centre
+of the largest muscle, clear of the silverskin cap and of the seam where the topside separates from the
+silverside.
 
 ## Styckesprofil
 
-Renstek (*renstek*) är en traditionell samisk och skandinavisk festrätt. Innanlåret (innanlår) eller sadeln är de vanligaste snitten. Skandinavisk metod: sear i en het panna, sedan avsluta i en mycket låg ugn (100–125 °C) med sonden insatt för att uppnå exakt tillagning utan risk för överkokning av det magra köttet.
+Rensteken är den urbenta och ihopbundna rundan — innanlåret eller ytterlåret, ibland sadeln — och den är den
+festliga steken i det samiska och skandinaviska norr. Muskeln är finfibrig och mycket mörk, och det är det
+magraste röda köttet i den här katalogen: 1–2 % fett, ingen marmorering att tala om och en tunn silverhinna
+som krymper och kan dra ihop steken om den inte trimsas. Just magerheten är skälet till att ugnsrostning, inte
+bräsering, är norrlandets metod: en låg ugn (100–125 °C) värmer hela steken långsamt nog att ytan aldrig hinner
+före mitten, och ytan hålls fuktig eftersom steken är liten och ugnen knappt varmare än måltemperaturen.
 
-Klassiska tillbehör: rensålt smör, lingon, pressgurka, rostad potatis, kokt kål. Innertemperatur: **57–62 °C (135–144 °F)** för medium (rosa mitt); **68 °C** för medium-well. Eftertillagning: 4–5 °C. Sond in i den tjockaste köttmassan, borta från ben. Dra steken 5–6 °C under mål och vila täckt 15 minuter.
+Eftervärme på en ostekt renstek är 4–7 °C under 15–20 minuters vila — mer än på en nötstek av samma storlek
+eftersom steken är liten och skorpan tunn. Sond från den tjocka änden in i mitten av den största muskeln, fritt
+från silverhinnan och från skarven mellan innanlår och ytterlår.
 
 ## Source recipes
 
@@ -79,62 +100,79 @@ Klassiska tillbehör: rensålt smör, lingon, pressgurka, rostad potatis, kokt k
 
 ---
 
-### 2. Renstek (Swedish reindeer roast) (inspired by Tasteline.com)
-**Inspired by**: Tasteline.com; https://www.tasteline.com/recept/renstek/ (fetched 2026-04-24 — page present, note: some recipe slugs return 404, but category page confirms recipe exists)
-**Serves**: 4 · **Prep**: 20 min · **Cook**: 2 hrs
-
-*The traditional Tasteline.com approach for reindeer roast.*
+### 2. Finnish — Poronpaisti (inspired by HS.fi, Helsingin Sanomat)
+**Inspired by**: https://www.hs.fi/ruoka/reseptit/art-2000002566952.html
+**Serves**: 8 · **Prep**: 20 min · **Cook**: 4 hr 30 min · **Rest**: 20 min
 
 **Ingredients**
-- 1–1.2 kg reindeer roast (renstek — shoulder or topside)
-- 2 tbsp butter
+- 3–4 kg bone-in reindeer roast (*poronpaisti*)
+- 25 g butter
+- 2 tbsp oil
+- 2 tbsp black peppercorns, crushed
+- 2 tbsp juniper berries (*katajanmarja*), crushed
+- 1 tbsp coarse salt
+- For the sauce: 250 ml roasting juices, 1½ tbsp plain flour, 100 ml cream, 1 tbsp cranberry jelly,
+  black pepper, 1–2 tbsp cold butter in cubes
+
+**Method**
+1. Wipe the roast and tie it into shape with butcher's string. Heat the fat in a pan and brown the roast on
+   every side.
+2. Crush the peppercorns, juniper berries and salt and rub the mixture onto the surface.
+3. **Push a roasting thermometer into the thickest part of the roast.** Put it on a rack in a 150 °C oven
+   with a roasting tin underneath; pour water into the tin.
+4. After half an hour lower the oven to **100 °C**. Total cooking time about four hours; the finished roast
+   reads **65–70 °C**.
+5. **Pull at 65 °C** (149 °F) for a pink centre, or 70 °C (158 °F) for the fully cooked joint the source
+   describes.
+6. Cover with foil and rest 20 minutes.
+7. Make the sauce from the strained juices, flour, cream and cranberry jelly, finishing with cold butter.
+   Final serving temperature: **68–71 °C / 154–160 °F** (just pink).
+
+---
+
+### 3. Norwegian — Reinsdyrstek (inspired by NJFF, Norges Jeger- og Fiskerforbund)
+**Inspired by**: https://www.njff.no/mat/reinsdyrstek
+**Serves**: 4 · **Prep**: 15 min · **Cook**: 1 hr 30 min–2 hr · **Rest**: 15–20 min
+
+**Ingredients**
+- 1.5 kg tied reindeer roast (*surret reinsdyrstek*)
 - 1 tsp salt
-- 1 tsp black pepper
-- 2 juniper berries, crushed
-- 200 ml cream or game stock
-- Lingonberry jam to serve
-
-**Method**
-1. Preheat oven to 160 °C. Sear roast in butter all sides in an oven-safe pan.
-2. Add cream or stock, juniper, salt, and pepper. Cover.
-3. Insert probe. Roast 1.5–2 hours until probe reads **58–60 °C (136–140 °F)** for medium.
-4. Rest 15 minutes. Slice thinly and serve with lingonberry jam, boiled potatoes, and cream sauce.
-*Final resting temperature: 61–64 °C (142–147 °F).*
-
----
-
-### 3. Renstek i ovnen (Norwegian oven roast) (inspired by Matprat.no)
-**Inspired by**: Matprat.no; https://www.matprat.no/oppskrifter/gjester/renstek/ (web search 2026-04-24)
-**Serves**: 6 · **Prep**: 15 min + 2 hrs marinade · **Cook**: 2 hrs
-
-*Norwegian festive reindeer roast — marinated in red wine with root vegetables.*
-
-**Ingredients**
-- 1.5 kg reindeer haunch or topside roast
-- 500 ml dry red wine
-- 2 onions, quartered
-- 2 carrots, sliced
-- 4 juniper berries
-- 2 bay leaves
-- 2 sprigs rosemary
+- 1 tsp pepper
 - 2 tbsp butter
-- 200 ml reindeer or game stock
-- Salt and pepper
+- 1 onion, in wedges
+- 500 ml water
+- To serve: 4 carrots, 1 tbsp butter, 250 g mushrooms, 1 broccoli, potato purée, creamed game sauce,
+  stirred lingonberries
 
 **Method**
-1. Marinate reindeer in wine and aromatics 2 hours to overnight.
-2. Preheat oven to 160 °C. Drain meat; sear in butter all over. Place in roasting pan with vegetables.
-3. Add stock and some marinade wine. Cover with foil.
-4. Roast 1.5–2 hours. Insert probe. **Pull at 58–60 °C (136–140 °F)** for medium.
-5. Rest 10–15 minutes. Serve with cloudberry sauce and boiled potatoes.
-*Final resting temperature: 61–63 °C (142–145 °F).*
+1. Heat the oven to 125 °C.
+2. Rub the roast with salt and pepper and brown it quickly on all sides in a hot pan with butter.
+3. **Insert a roasting thermometer into the thickest part**, put the roast in a roasting tin with the onion
+   wedges and the water, and set it on the middle shelf.
+4. The source's own scale: **55 °C** barely done, **58–62 °C** medium, **70 °C** medium-plus,
+   **75 °C** fully cooked.
+5. **Pull at 62 °C** (144 °F) for medium — the top of the source's medium band — and rest 15–20 minutes
+   before carving.
+6. Serve with potato purée, buttered carrots, broccoli, fried mushrooms and stirred lingonberries.
+   Final serving temperature: **65–66 °C / 149–151 °F** (medium).
 
 ---
 
-## Temperature summary (Köket.se/innertemperatur-viltkott)
+## Temperature consensus
 
-| Doneness | Renfilé | Ren stekdetaljer |
-|----------|---------|-----------------|
-| Rare | 52 °C (126 °F) | 55 °C (131 °F) |
-| Medium | 57 °C (135 °F) | 62 °C (144 °F) |
-| Well done | 65 °C (149 °F) | 68 °C (154 °F) |
+| Tradition | Source | Oven | Pull temperature | Final serving temp |
+|-----------|--------|------|------------------|--------------------|
+| Swedish | Köket.se, *Reninnanlår à la Norrland* | low oven, barded | **60 °C** | 63–64 °C |
+| Finnish | HS.fi, *Poronpaisti* | 150 °C → 100 °C | **65–70 °C** | 68–71 °C |
+| Norwegian | NJFF, *Reinsdyrstek* | 125 °C | **58–62 °C** medium, 70 °C medium-plus, 75 °C fully cooked | 65–66 °C |
+
+The numeric spread is **60–75 °C**, and the widest single scale is the Norwegian one, which offers four bands
+from 55 °C to 75 °C for the same joint. That is the most useful finding in this leaf: reindeer is not a meat
+with a consensus temperature, it is a meat with a consensus *technique* (sear, very low oven, thermometer) and
+a cultural argument about where to stop. The Swedish source stops at 60 °C and calls it done; the Finnish one
+roasts four hours to 65–70 °C and calls 70 °C the finished joint; the Norwegian body that speaks for hunters
+publishes 75 °C as "fully cooked" while recommending 58–62 °C for the table.
+
+For a probe user the practical target is 60–62 °C pulled, resting to 64–66 °C. Above 70 °C the roast loses the
+quality that makes it worth cooking at all, which is why the 75 °C band exists as a preference rather than a
+recommendation.
