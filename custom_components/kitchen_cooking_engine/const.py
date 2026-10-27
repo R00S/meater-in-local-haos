@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 26 Oct 2026
-Last Change: v0.10.2.34 - the mark-scheme vocabulary goes too: 'rubric' -> 'criteria', 'Grading' -> 'Reading', table 'Deduction' columns and 'Deductions:' labels -> 'Points', 'Maximum total deduction' -> 'most a file can fall short', and one gloss in both instruction files defining every -N as N points the file has not earned, i.e. N points of potential; no number changed
+Last Updated: 27 Oct 2026
+Last Change: v0.10.2.35 - three cut passes done as data work, not number work: tomato oven-broil leaf, anatomy and two declared methods; moose-roast braise leaf written and its oven-roast leaf rebuilt from four fetched pages; reindeer-roast leaf rebuilt from three fetched pages and its braise/smoker methods declared; well-done bands added for moose and reindeer roast; PANEL_VERSION 678 -> 679 with two new recipe files indexed
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -17,7 +17,7 @@ SUPPORTED_LANGUAGES = ("en", "sv", "da")
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "678"
+PANEL_VERSION = "679"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 26 Oct 2026
-Last Change: v0.10.2.34 - the mark-scheme vocabulary goes too: 'rubric' -> 'criteria', 'Grading' -> 'Reading', table 'Deduction' columns and 'Deductions:' labels -> 'Points', 'Maximum total deduction' -> 'most a file can fall short', and one gloss in both instruction files defining every -N as N points the file has not earned, i.e. N points of potential; no number changed
+Last Updated: 27 Oct 2026
+Last Change: v0.10.2.35 - three cut passes done as data work, not number work: tomato oven-broil leaf, anatomy and two declared methods; moose-roast braise leaf written and its oven-roast leaf rebuilt from four fetched pages; reindeer-roast leaf rebuilt from three fetched pages and its braise/smoker methods declared; well-done bands added for moose and reindeer roast; PANEL_VERSION 678 -> 679 with two new recipe files indexed
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -176,11 +176,11 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 
 # ⚠️ VERSION — must match in ALL 3 locations on every release:
 #   1. manifest.json        → "version": "..."
-#   2. HERE (__init__.py)    → __version__ = "0.10.2.34"
+#   2. HERE (__init__.py)    → __version__ = "0.10.2.35"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.10.2.34"
+__version__ = "0.10.2.35"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
