@@ -40,6 +40,42 @@ Open `docs/recipe_research/SOURCE_SURVEY.md` and find the bolded project rule ne
 > The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
 
 ---
+### New improvement potential system
+This is a measurement of how much improvement potential there is to cut files. It is not intended as guidelines for how to improve the cut files, but to rate the files after they are created or improved. The higher the number, the higher potential of improvemnt and thus the files to improve first. So if you are an agent about to improve cut files. Just find the one with the highest number, improve it and return to this paragraph file AFTER you are done with the file to find out how to rate it. 
+
+Base rating and thresholds: 
+- Meat: 3455/8
+- Fish and Poultry: 3350/4
+- Anything else: 3282/2
+
+Source of trush is the directory structure of meater-in-local-haos/custom_components/kitchen_cooking_engine/www/recipes and the cut files and the cut method files.
+- Under recipes folder there are categories, they can be animals, groups of animals or groups of other ingredients. I doesnt contain files, the name and position in the tree is the information itself.
+- Under the categories are ingredients level, it can be parts (cuts) of an animal or a specific animal or veg if the category it recides within is a group. It contains the cut files and the leafs (cut-method files)
+- Cut files are the ones where the improvement potential resides. They contain genral cooking information and prominent recipes of human origin (never ai created) for the cut. <cut name>.md>
+- Cut+method leafs are cooking methods for the cut. "<cut name>-<cooking method name>.md". They include specific information on how to cook that file and recipes. 
+
+Reductions:
+The reductions are the number that will be deducted if the conditions below are fullfilled. For each instance up to the threshold, that number is deducted. For each instance between the threshold and twice the threshold deduct half that number and for each instance above twice the threshold value deduct 1/4 of the Reduction number.
+* For each cut file (not cut-method leafs). There is in the directory every cut fule gets a reduction of 128
+* For each finished cut-method leaf for the cut file, that cut file gets a reduction of 96.
+* For each discovered and created stub, but not yet finished cut-method file, the cut file gets a reduction of 8.
+* For each human verified recipe in the cut files, the cut file gets a reduction of 64. An extra bonus of 32 per culinary group (abcd) there are recipes from.
+* For each human verified recipe in any of the cut-method leafs of a cut file, that cut file gets a reduction of 32. An extra bonus of 32 per culinary group (abcd) there are recipes from.
+* For verified culinary prefered temps of the cut - 64
+* For safe temps - 32
+* For description how the meat behaves and fat renders at different temps for the cut - 96. (max once per language)
+* For description how the meat behaves and fat renders at different temps for the cut-method leaf - 32. (max once per language)
+* For specific descrition of the cut-methos and trations that method is common in 32. (max once per language)
+* Prefered temps for each cut-method file for the cut with discussion on why its specific for that method - 32. (max once per language)
+
+
+  
+
+
+
+
+
+**- 
 
 ### Output 4 — Your understanding of this file (your own words)
 
