@@ -2034,6 +2034,28 @@ PORK_RIBS = [
         ],
         recommended_doneness="well_done",
     ),
+    MeatCut(
+        id=223,
+        name="tjocka_revben",
+        name_long="Tjocka Revben (Thick Front Ribs / Bone-in Belly Ribs)",
+        cut_order=4,
+        estimated_thickness_mm=50,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=10,
+        rest_time_max=15,
+        carryover_temp_c=3,
+        temperature_ranges=[DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+            CookingMethod.BRAISE,
+            CookingMethod.SMOKER,
+            CookingMethod.SLOW_COOKER,
+            CookingMethod.SOUS_VIDE,
+        ],
+        recommended_doneness="well_done",
+    ),
 ]
 
 PORK_HAM = [
