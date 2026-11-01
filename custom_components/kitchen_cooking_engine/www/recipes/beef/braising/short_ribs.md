@@ -57,8 +57,8 @@ Koreanska revbensspjällstillagningar (galbi-jjim för brässering, galbi för g
 |--------|-----------|--------|
 | Braise | [short_ribs-braise.md](./short_ribs-braise.md) | ✅ Complete — 5 recipes, CONFORMS TO TOR (2026-04-27) |
 | Oven roast | [short_ribs-oven_roast.md](./short_ribs-oven_roast.md) | ⚠️ Partial — 5 records, 4 with numbers, **distinct-tradition gate not met** (2026-10-27) |
-| Oven broil | — | ⬜ Owed. Discovered 2026-10-27: Korean LA galbi is a 2–3 minute oven-broiler method, fetched but not yet written up as its own leaf |
-| Slow cooker | — | ⬜ Owed |
+| Oven broil | [short_ribs-oven_broil.md](./short_ribs-oven_broil.md) | ⚠️ Partial — 3 sources (A: Chinese, Korean; B: American), **distinct-tradition gate not met**, no source states an internal temperature (2026-11-01) |
+| Slow cooker | [short_ribs-slow_cooker.md](./short_ribs-slow_cooker.md) | ✅ Collection gate met — 5 sources (A ×2, B, C, D), no source states an internal temperature (2026-11-01) |
 | Smoker | [short_ribs-smoker.md](./short_ribs-smoker.md) | ⚠️ Partial — 5 recipes (B/B/C/D), Group A missing, 3 numeric endpoints (2026-11-01) |
 
 ## Improvement potential
