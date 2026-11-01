@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.2.27 · Home Assistant 2024.1.0+
+> **Version:** 0.10.2.38 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -695,7 +695,7 @@ A method listed under `methods:` but not yet researched is written as plain text
 that does not exist. The method itself stays in `methods:` — the panel offers it and uses the
 cut's doneness temperatures for it.
 
-The `## Styckesprofil` section is optional but strongly recommended — without it, English text is shown to Swedish users.
+The `## Styckesprofil` section is optional on a cut overview but strongly recommended — without it, English text is shown to Swedish users. Both sections are lifted straight into the panel by `generate_frontend_data.py`, so write real, method-specific descriptions at the moment the file is created, before any recipe collection; never let a placeholder or a copied sibling description stand in for them. In a method research file, `## Cut profile` and `## Styckesprofil` are both required.
 
 **Required `KCE:CUT` fields**
 
@@ -788,7 +788,7 @@ Skriv 3–6 meningar om styckets anatomi och hur tillagningsmetoden passar eller
 
 **Method**
 1. ...
-2. If the source publishes a probe temperature, quote it accurately; otherwise state **no internal temperature stated** and preserve its actual doneness cue. Do not add a source-absent probe step.
+2. If the source publishes a probe temperature, quote it accurately; otherwise write **Pull temperature: not stated by source.** and preserve its actual doneness cue in that step. Do not add a source-absent probe step and never invent a number.
 3. Record the source’s rest time or note that it is not stated. Do not invent pull temperatures or final temperatures.
 
 ---
@@ -801,7 +801,7 @@ Skriv 3–6 meningar om styckets anatomi och hur tillagningsmetoden passar eller
 |-----------|------------------------|--------------------|
 | … | … | … |
 
-Follow with 2–4 sentences stating the source-reported temperature range (or that none is reported), mapping any observed values to the cut’s doneness options, explaining variation, and identifying the best-supported recommendation. Do not draw consensus conclusions until the collection gate below passes.
+Follow with 2–4 sentences stating the source-reported temperature range (or that none is reported), mapping any observed values to the cut’s doneness options, explaining variation, and identifying the best-supported recommendation. Do not draw consensus conclusions until the collection gate below passes. **Analysis opens only when the leaf holds at least 3 numeric sources** — fewer than 3 numeric sources and the analysis sections stay unwritten. Sources that state no temperature still count toward the 4–6 collection requirement and toward source diversity; they are never converted or estimated into a number, they are excluded from the range, and they are listed under a `### Non-numeric comparators` block beneath the table in the source’s own words.
 
 ## What makes this method special
 
@@ -815,7 +815,7 @@ After the collection gate passes, list actionable method/doneness changes suppor
 
 After the collection gate passes, write 2–4 plain-language sentences explaining the result and whether the method suits the cut.
 
-> ✅ **CONFORMS TO TOR** — Verified YYYY-MM-DD. Use only after the 4–6-source, distinct-tradition gate and all required checks pass.
+> ✅ **CONFORMS TO TOR** — Verified YYYY-MM-DD. Use only after the 4–6-source collection is complete, the leaf holds at least 3 numeric sources, and all required checks pass.
 > ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** State the verified source count and what remains missing. Keep analysis conclusions provisional or omit them until the gate passes.
 ```
 
@@ -824,14 +824,19 @@ After the collection gate passes, write 2–4 plain-language sentences explainin
 - **Cite real, verifiable sources.** Every recipe entry must include the publication name, a URL, and the date you accessed it (or the book title, author, and page number for print sources).
 - **Do not fabricate.** Do not invent recipes, temperatures, or sources. If you cannot find a real source for a method, omit that entry. A page you cannot fetch is a lead, not a source — record it as such or drop it.
 - **Diversity is valued.** Collect 4–6 fully verified recipes per file from distinct national or regional culinary traditions. If fewer than 4 qualifying sources are verified, label the file `⚠️ PARTIAL RESEARCH`; do not pad the collection or present analysis as complete.
-- **Temperature data must come from the source.** Record the pull temperature and resting target as stated in the recipe, not what you think is correct. **If a source states no internal temperature, write exactly that** — never convert a visual cue ("opaque throughout", "juices run clear") into an estimated figure.
+- **Temperature data must come from the source.** Record the pull temperature and resting target as stated in the recipe, not what you think is correct. **If a source states no internal temperature, write exactly that** — never convert a visual cue ("opaque throughout", "juices run clear") into an estimated figure. A source with no temperature is still a valid source: save it in full, mark it `**Pull temperature: not stated by source.**`, and count it toward the 4–6 collection — it just carries no number into the range.
+- **Search in the language the cuisine is written in.** English queries return westernised, diaspora-facing versions of a tradition. Decide the language first, translate the cut and method terms from a real lookup, and check the fetched page is actually in that language. Record the language and terms used in the leaf's search log, and never claim a culinary group is absent after searching only in English.
+- **Record cross-language cut names.** Every name the research turns up for this cut in another language goes into the cut file's language index — looked up in a real source, never guessed, each row carrying what the source says the name is. That index is what the next pass searches from.
 - **One cut × one method per file.** If a recipe combines methods (sear-then-braise, steam-then-grill), file it under its dominant stage and note the rest explicitly.
 - **Probe placement note.** Give a method/cut-specific MEATER placement note when useful; do not imply the source instructed probing if it did not.
 
 The full collection and analysis standards live in
 `custom_components/kitchen_cooking_engine/www/recipes/RECIPE_COLLECTION_TOR.md` and
-`RECIPE_ANALYSIS_TOR.md`; the improvement-potential rules for cut overview files are in the
-same directory.
+`RECIPE_ANALYSIS_TOR.md`. The cut-file research flow is described in `CUT_FILE_RESEARCH_TOR.md`
+(a session-start gate plus per-cut sub-steps), its hub is `IMPROVE_CUT_FILES.md`, the
+improvement-potential reading for cut overview files is defined in
+`IMPROVEMENT_POTENTIAL_SYSTEM.md`, and source-integrity rules are in `SOURCE_SURVEY.md` — all
+in the same directory.
 
 ---
 

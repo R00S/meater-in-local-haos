@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 31 Oct 2026
-Last Change: v0.10.2.37 - revisit tjocka revben anatomy, correct source and completeness claims, and register pressure cooking
+Last Updated: 1 Nov 2026
+Last Change: v0.10.2.38 - in-language tjocka revben research pass: steam, air fryer and charcoal grill leaves added, smoker and sous-vide analyses written, cross-language cut names re-verified, reading recomputed to -33
 """
 
 DOMAIN = "kitchen_cooking_engine"
