@@ -664,7 +664,9 @@ assessment is correct behaviour.
 
 The bases, category thresholds, reductions and threshold tiers are specified in
 `IMPROVEMENT_POTENTIAL_SYSTEM.md` under “New improvement potential system”. Apply thresholds
-separately to each reduction type. Round the final reading to a whole number;
+separately to each reduction type, and apply each threshold per cut-method leaf rather than
+against counts pooled across the cut's leaves. Each language present in a file — English,
+Swedish, or Danish — takes its own deduction. Round the final reading to a whole number;
 negative readings are allowed. Do not apply the former 0–20 calculation to a new
 assessment.
 
