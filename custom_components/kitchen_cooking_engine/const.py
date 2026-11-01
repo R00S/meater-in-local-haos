@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 31 Oct 2026
-Last Change: v0.10.2.36 - new cut "tjocka_revben" (front pork rib rack with belly meat, bone-in, no skin) created and researched under the restructured IMPROVE_CUT_FILES flow: oven_roast, grill and braise leaves completed from four fetched culinary traditions each, smoker (3 sources), slow_cooker (1) and sous_vide (2) leaves opened and honestly marked collection-incomplete with the analysis gate withheld; cut registered in cooking_data.py (id 223, six methods); improvement-potential reading recorded in the cut file
+Last Change: v0.10.2.37 - revisit tjocka revben anatomy, correct source and completeness claims, and register pressure cooking
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -17,7 +17,7 @@ SUPPORTED_LANGUAGES = ("en", "sv", "da")
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "680"
+PANEL_VERSION = "682"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

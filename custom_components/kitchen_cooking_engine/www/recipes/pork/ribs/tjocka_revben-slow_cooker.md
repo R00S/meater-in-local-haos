@@ -9,35 +9,15 @@ cut_type: Ribs
 -->
 # Tjocka Revben × Slow Cooker — Recipe Temperature Research
 
-> ⚠️ **STATUS: COLLECTION INCOMPLETE — 1 fully saved source; the ToR gate requires 4–6 before analysis**
+> ⚠️ **STATUS: COLLECTION INCOMPLETE — 2 documented sources, neither fully satisfies the ToR gate; 4–6 are required before analysis**
 >
-> The collection phase for this leaf has **1** fetched source (UK). Per `RECIPE_ANALYSIS_TOR.md`,
+> The collection phase for this leaf has **2** fetched sources (UK and SE). Per `RECIPE_ANALYSIS_TOR.md`,
 > the Temperature consensus, Data applied and Summary sections are withheld until the 4–6 gate is
 > met. This is unfinished research, not a wall: the missing sources are agent work owed on this cut.
 
 ## Cut profile
 
-The slow cooker is the enclosed-wet-heat cousin of the braise leaf for this cut: tjocka revben's
-collagen-rich belly layer and cracked rib bones go in with liquid and spices and hold on low heat
-until the meat yields, then — in the one fetched source — the ribs are finished under an oven grill
-or barbecue to re-crisp a surface the slow cooker can only soften. The cut suits the vessel for the
-same reason it suits the pot: hours below a boil convert collagen fully without any risk of drying,
-and the rendered belly fat floats into the stock instead of scorching. The weakness is the surface:
-nothing in a slow cooker browns, which is why every honest slow-cooker rib method ends with a
-high-heat finish. Probe placement into the thickest meat is of limited use — the vessel holds a
-constant temperature and the source works to time and tenderness. Carryover is negligible: the ribs
-leave a liquid environment and go straight to the finishing heat or the plate.
-
-## Styckesprofil
-
-Slow cooker är bräseringens kusin för detta stycke: det kollagenrika magköttet och de knäckta
-revbenen läggs med vätska och kryddor på låg värme tills köttet viker sig — och avslutas i den
-enda hämtade källan under grillugn eller BBQ för att återvinna ytans krispighet, som bara mjukas
-upp i grytan. Stycket passar kärlen av samma skäl som grytan: timmar under kokpunkt mörar helt utan
-risken att torka, och det renderade fettet flyter upp i buljongen i stället för att brännas.
-Svagheten är ytan: inget brunar i slow cooker, därför avslutas metodens ärliga version alltid med
-högvärme. Sondtemperaturen säger lite — kärlen håller konstant temperatur och källan arbetar med
-tid och mörhet.
+Slow cooking applies long, enclosed moist heat to this bone-in, meat-covered front-rib cut. The Swedish Christmas source finishes the ribs under the oven grill for colour; the British recipe uses meaty pork ribs but does not specify which part of the rack, so it is an anatomical lead rather than proof of an exact match. Check doneness in the thick meat away from bone; the sources give times, not measured internal endpoints. Carryover after the cooking and finishing stages is not documented.
 
 ## Source recipes
 
@@ -56,15 +36,33 @@ tid och mörhet.
 2. **Slow cook on Low for 8–9 hours** until very tender but not completely falling off the bone. Insert the MEATER probe from the side into the thickest part, away from bone, once the ribs are submerged — the source works to time, not to a temperature.
 3. Heat the oven to **220 °C** (200 °C fan / gas 7). Lift the ribs out with tongs — handle carefully, the meat is very tender — baste with the remaining barbecue sauce and lay on a foil-lined tray.
 4. Cook **20–30 minutes** until the outside starts to crisp; alternatively finish on the barbecue, turning from time to time until piping hot throughout.
-5. **Pull at 88–93 °C** (190–199 °F) — the source states no internal temperature; its endpoint is "very tender but not completely falling off the bone" after 8–9 h on Low plus a crisping finish, and this pull band is the ToR's house band for collagen-converted ribs.
+5. **Pull temperature: not stated by source.** Its endpoint is very tender but not completely falling off the bone, followed by crisping.
 6. Final serving temperature: **not stated by source** — serve after the crisping finish.
+
+---
+
+### 2. Swedish (Linda, Lindas Mathörna) — Julens godaste revbensspjäll
+**Inspired by**: https://lindasmathorna.se/juligaste-revbenspjallen-i-slowcookern/ (read 2026-11-01). The source specifies *tjocka revben* and identifies the recipe as from Linda's slow-cooking cookbook.
+**Serves**: 6–8 on a Christmas buffet · **Prep**: not stated · **Cook**: low 7–8 h or high 5–6 h, plus 10 min finish · **Rest**: not stated
+
+**Ingredients**
+- 1.5 kg tjocka revben
+- 1.5 tbsp ground ginger, 0.5 tbsp coriander, 1 tbsp garlic powder, 1 tsp onion powder
+- 0.5 dl chilli sauce, 2 dl apple juice, 0.5 tbsp salt, black pepper to taste
+- Glaze: 1 garlic clove, 1 tbsp tomato purée, 2 tbsp Japanese soy sauce, 1 tbsp rapeseed oil, 2 tbsp honey, 2 tsp grated ginger, 1 tsp cinnamon
+
+**Method**
+1. Mix dry spices, salt and pepper; rub on the ribs and place in the slow cooker.
+2. Pour apple juice and chilli sauce over the ribs. Cook on low 7–8 hours or high 5–6 hours.
+3. Heat oven grill to 250 °C. Bring the glaze ingredients briefly to a boil, then brush onto ribs in an oven dish.
+4. Grill in the oven for 10 minutes for surface colour. After cooking, insert a probe into the thickest meat, avoiding bone and fat pockets, if checking temperature. **Pull temperature: not stated by source.**
+5. **Final serving temperature: not stated by source.** The source does not give a rest time.
 
 ---
 
 ## Collection status and search log
 
-**Have:** 1 fetched source — British (BBC Good Food). **Need:** at least three further traditions to
-meet the 4–6 gate.
+**Have:** British meaty ribs (cut specificity uncertain) and Swedish cut-exact Christmas ribs. Neither has the numerical endpoint fields required for a fully collected recipe. Further distinct traditions and source-stated endpoints are needed.
 
 Traditions attempted this session and why they failed (recorded so the next pass does not repeat the
 dead ends):
@@ -76,11 +74,9 @@ dead ends):
 - **Australian (RecipeTin Eats)** — no slow-cooker pork-ribs recipe exists on the site (searched);
   its slow-cooker content is beef.
 - **Swedish**: no slow-cooker recipe for this cut found in confirmed-working Swedish sources this
-  session (the slow cooker is not part of the cut's documented tradition; Svenskt Kött's cut page
-  does not list it).
+  session (this was the earlier search result; Linda’s cut-exact Christmas recipe above and [Anders’s carnitas](https://ikoketmedanders.se/carnitas-pa-tjocka-revben-i-crock-pot/) now disprove the suggestion that no Swedish source could be found).
 
-Slow cooking is real for this cut (the fetched British source and the American article's existence
-prove it) but the corpus from distinct traditions has not been collected. No analysis is written
+Slow cooking is confirmed for this cut by the Swedish source above but the corpus from distinct traditions has not been collected. No analysis is written
 until that gap is closed.
 
-> ⚠️ **COLLECTION INCOMPLETE — 1 of 4–6 sources. Analysis sections withheld per ToR gate.**
+> ⚠️ **COLLECTION INCOMPLETE — not yet 4–6 fully collected sources. Analysis sections withheld per ToR gate.**

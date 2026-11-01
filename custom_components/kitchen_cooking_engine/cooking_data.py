@@ -2053,8 +2053,9 @@ PORK_RIBS = [
             CookingMethod.SMOKER,
             CookingMethod.SLOW_COOKER,
             CookingMethod.SOUS_VIDE,
+            CookingMethod.PRESSURE_COOKER,
         ],
-        recommended_doneness="well_done",
+        recommended_doneness="pulled",
     ),
 ]
 

@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 31 Oct 2026
-Last Change: v0.10.2.36 - new cut "tjocka_revben" (front pork rib rack with belly meat, bone-in, no skin) created and researched under the restructured IMPROVE_CUT_FILES flow: oven_roast, grill and braise leaves completed from four fetched culinary traditions each, smoker (3 sources), slow_cooker (1) and sous_vide (2) leaves opened and honestly marked collection-incomplete with the analysis gate withheld; cut registered in cooking_data.py (id 223, six methods); improvement-potential reading recorded in the cut file
+Last Change: v0.10.2.37 - revisit tjocka revben anatomy, correct source and completeness claims, and register pressure cooking
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -176,11 +176,11 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 
 # ⚠️ VERSION — must match in ALL 3 locations on every release:
 #   1. manifest.json        → "version": "..."
-#   2. HERE (__init__.py)    → __version__ = "0.10.2.36"
+#   2. HERE (__init__.py)    → __version__ = "0.10.2.37"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.10.2.36"
+__version__ = "0.10.2.37"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

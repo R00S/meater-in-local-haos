@@ -9,7 +9,7 @@ cut_type: Ribs
 -->
 # Tjocka Revben × Sous Vide — Recipe Temperature Research
 
-> ⚠️ **STATUS: COLLECTION INCOMPLETE — 2 fully saved sources; the ToR gate requires 4–6 before analysis**
+> ⚠️ **STATUS: COLLECTION INCOMPLETE — 2 documented sources, not all fully collected; the ToR gate requires 4–6 before analysis**
 >
 > The collection phase for this leaf has **2** fetched sources (Chinese-dim-sum-style, and a
 > long-cook modernist BBQ cook). Per `RECIPE_ANALYSIS_TOR.md`, the Temperature consensus, Data
@@ -23,11 +23,7 @@ technique explicitly (its tillagningssätt list includes *Sous-vide*), yet the f
 is the thinnest of all the methods on this cut — modernist rib cooking gravitates to baby backs and
 St. Louis racks, and the sources that do exist disagree radically about temperature: one cooks
 cross-cut rib pieces at 75 °C for five hours in the dim-sum style, the other holds whole racks at
-65 °C for 36 hours for a Southern-style bark-and-glaze finish. Both work because a sealed bath holds
-the cut's thick belly layer at an exact, uniform temperature for as long as collagen conversion
-needs, with zero surface drying — the failure mode the oven and grill must constantly manage. The
-bath also pasteurises at temperatures well below any oven's "done" cue, which is why the time axis
-matters more than the temperature axis in this method. Probe placement is per the ToR's sous vide
+65 °C for 36 hours for a Southern-style bark-and-glaze finish. Both work because a sealed bath controls the water temperature for long cooking with limited evaporation — the failure mode the oven and grill must constantly manage. Food safety depends on the full time–temperature process and thickness; a bath setting by itself does not establish pasteurisation. Probe placement is per the ToR's sous vide
 exception: no probe during the sealed cook — the circulator temperature is the cook target, and the
 bag liquid or a post-bath check verifies. Carryover does not apply: the bag is opened at the target
 and finished by sear, broil, smoke or oven, which is where any residual climb happens.
@@ -62,7 +58,7 @@ målet och avslutas med sotning, grillpanna, rök eller ugn.
 2. Smash the black beans to a paste; stir in the soy sauce, chiles, ginger, garlic, cornstarch, mirin, sesame oil and sugar; coat the rib pieces well.
 3. Seal in a zipper-lock or vacuum bag (water immersion or moist setting); cook **5 hours**.
 4. **Pull at 75 °C** (167 °F) — stated by the source as the bath temperature; the bag is opened at the target.
-5. Final serving temperature: **75 °C / 167 °F** (stated bath endpoint) — pour the ribs and their sauce straight into a serving bowl; the source's stated serving cue is the brothy sauce begging for steamed rice.
+5. Final serving temperature: **not stated by source** (75 °C is the bath setting, not a measured serving temperature) — pour the ribs and their sauce straight into a serving bowl; the source's stated serving cue is the brothy sauce begging for steamed rice.
 
 ---
 
@@ -71,7 +67,7 @@ målet och avslutas med sotning, grillpanna, rök eller ugn.
 **Serves**: 4 · **Prep**: 40 min · **Cook**: 36 h at 65 °C + finishing · **Rest**: ice bath, then up to 2 days refrigerated in bag
 
 **Ingredients**
-- Baby Back ribs **or St. Louis Style ribs**, one rack per bag (the source's stated options; St. Louis is the spare-rib-derived cut that matches this cut's identity)
+- Baby Back ribs **or St. Louis Style ribs**, one rack per bag (the source's stated options; St. Louis is a trimmed spare-rib-derived comparator, not a proven exact match to the Swedish cut)
 - **Rub**: 30 g paprika, 150 g soft brown sugar, 5 g black pepper, 40 g kosher salt, 15 g chilli powder, 15 g onion powder, 15 g garlic powder
 - Yellow mustard or a little olive oil, to make the rub stick
 - Honey, for the finishing glaze (or the reduced bag liquid, or favourite BBQ sauce)

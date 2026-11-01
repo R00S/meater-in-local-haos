@@ -9,9 +9,9 @@ cut_type: Ribs
 -->
 # Tjocka Revben × Smoke — Recipe Temperature Research
 
-> ⚠️ **STATUS: COLLECTION INCOMPLETE — 3 fully saved sources; the ToR gate requires 4–6 before analysis**
+> ⚠️ **STATUS: COLLECTION INCOMPLETE — 3 documented sources, not all fully collected; the ToR gate requires 4–6 before analysis**
 >
-> The collection phase for this leaf has **3** fetched sources (SE, AU, US). Per `RECIPE_ANALYSIS_TOR.md`,
+> The collection phase for this leaf has **3** fetched sources (SE, AU, US), including comparisons whose exact cut identity and endpoint fields are not established. Per `RECIPE_ANALYSIS_TOR.md`,
 > the Temperature consensus, Data applied and Summary sections are withheld until the 4–6 gate is met.
 > The search log below records which further traditions were attempted this session. This is unfinished
 > research, not a wall: the missing sources are agent work owed on this cut.
@@ -21,7 +21,7 @@ cut_type: Ribs
 Smoking is the method most often named when tjocka revben is cooked outside Sweden, and the method
 where the cut's own BBQ tradition lives: the cracked, meaty front racks take a long stay in thin blue
 smoke far better than the thin Swedish retail ribs do, because the thick belly layer carries smoke
-flavour deep and renders slowly at pit temperature. All three fetched sources work low and slow —
+flavour deep and renders slowly at pit temperature. The three fetched sources describe cooking low and slow —
 107–130 °C — with hardwood (apple, hickory, oak), and all three treat the smoke as the primary
 seasoning, with rub and (optionally) sauce layered around it. The cut's uneven thickness is managed
 by placement relative to the fire rather than by turning: the Swedish source positions the rack over
@@ -84,7 +84,7 @@ den svenska källan vilar30 minuter.
 2. Add the soaked wood chips to the hot coals and heat until smoking; grill the ribs **turning once until starting to colour (1 hour)**.
 3. **Wrap in foil** and cook, topping up coal and wood chips as necessary, **until tender and the meat falls off the bone (1½–2 hours)**. Insert the MEATER probe from the side into the thickest rack, away from bone, once wrapped.
 4. Meanwhile combine the barbecue sauce ingredients with 2 tsp water and let the flavours develop 30–35 minutes.
-5. **Pull at 90–95 °C** (194–203 °F) — the source states no internal temperature; its endpoint is "tender and meat falls off the bone" after 2½–3 hours at 120 °C, and this pull band is the ToR's house band for collagen-converted ribs, matched by the Swedish source's stated figures in this leaf.
+5. **Pull temperature: not stated by source.** The source describes tender meat falling off the bone after 2½–3 hours at 120 °C.
 6. Final serving temperature: **not stated by source** — unwrap, brush thickly with the sauce mixture and serve hot with the Vietnamese-style coleslaw.
 
 ---
@@ -115,7 +115,7 @@ den svenska källan vilar30 minuter.
 
 ## Collection status and search log
 
-**Have:** 3 fetched sources — Swedish (Grilltips, cut-exact), Australian (Papi Chulo via Gourmet
+**Have:** 3 fetched sources (not all meet numeric endpoint requirements) — Swedish (Grilltips, cut-exact), Australian (Papi Chulo via Gourmet
 Traveller), American (Meathead). **Need:** at least one further tradition to meet the 4–6 gate.
 
 Traditions attempted this session and why they failed (recorded so the next pass does not repeat the
