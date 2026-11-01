@@ -54,18 +54,20 @@ Harr (*Thymallus thymallus*; tyska: Äsche; franska: ombre commun; finska: harju
 
 ## Research files by cooking method
 
-- [Pan Fry](./grayling-pan_fry.md) — 4 fetched sources (AT/DE/SE×2); no source states a pull temperature; same-tradition duplication (2× Swedish).
+- [Pan Fry](./grayling-pan_fry.md) — 6 fetched sources (AT/DE ×2 = Group B; SE×2/RU/PL = Group D); no source states a pull temperature; Groups A and C absent, and the Polish source states neither timings nor quantities.
 - [Grill](./grayling-grill.md) — 2 fetched sources (UK/SE); no stated pull temperatures.
 - [Smoker](./grayling-smoker.md) — 1 fetched source (UK); explicit 55 °C core pull.
-- [Oven Bake](./grayling-oven_bake.md) — 3 fetched sources (SE×2/UK); oven settings and times only, no internal target.
+- [Oven Bake](./grayling-oven_bake.md) — 4 fetched sources (SE×2/RU = Group D, UK = Group B); oven settings and times only, no internal target.
 - [Boil](./grayling-boil.md) — 2 fetched sources (SE×2); qualitative endpoints only.
 - [Poach](./grayling-poach.md) — 1 fetched source (SE); qualitative endpoint only.
 
-All six declared methods now have a leaf file. None of the leaves yet meets the 4–6-source, four-distinct-tradition collection gate; every leaf carries an explicit partial-research marker.
+All six declared methods now have a leaf file. Two leaves (`pan_fry`, `oven_bake`) meet the 4–6-source count but no leaf yet meets the four-distinct-tradition gate, so every leaf still carries an explicit partial-research marker. Groups A and C remain absent from the whole cut.
 
 ## Improvement potential
 
 1774
+
+_Sources were added on 2026-11-01 (`pan_fry` 4 → 6, `oven_bake` 3 → 4) without a new reading. The number is a reading of finished work and no leaf here is finished — all six are still below the four-distinct-tradition gate — so a re-rating now would mix two accounting bases rather than measure anything. The next reading is owed when a leaf clears the gate._
 
 Historical readings: 12 / 20 (former 0–20 system, assessed 2026-10-23; not comparable with the new scale).
 

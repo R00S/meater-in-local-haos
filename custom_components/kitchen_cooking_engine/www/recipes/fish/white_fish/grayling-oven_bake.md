@@ -82,6 +82,29 @@ Europeisk harr (*Thymallus thymallus*) är en mager, ömtålig flodlaxfisk som t
 
 ---
 
+### 4. Russian (Дикое Качество, Yekaterinburg) — Хариус в фолие
+**Inspired by**: https://dikoekachestvo.ru/retsepty/gotovim_rybu/kharius-v-folge/ (fetched 2026-11-01). A fish supplier's recipe page: whole grayling in a double layer of foil with lemon, bay and olive oil, baked at 170 °C and then flashed under the grill for a crust.
+**Serves**: not stated (2 fish) · **Prep**: 30 min marinade · **Cook**: about 20 min at 170 °C + 5–6 min grill · **Rest**: not stated
+
+**Ingredients**
+- 2 grayling, gutted, gills removed
+- 2 tsp fresh lemon juice
+- 2 bay leaves
+- 2 tbsp olive oil
+- Salt and ground pepper
+- To finish the sauce: a little white wine and a knob of butter
+
+**Method**
+1. Gut, remove the gills and rinse the fish; dry thoroughly, checking that no blood remains inside.
+2. Rub with pepper and coarse salt, sprinkle with lemon juice and olive oil, lay a bay leaf on each fish and leave 30 minutes under film.
+3. Wrap each fish in a double layer of foil, sealing tightly, and bake at **170 °C for about 20 minutes**.
+4. Open the foil, switch on the grill if available and **grill 5–6 minutes** until a crust forms; without a grill, finish in the ordinary oven mode.
+5. Reduce the juices from the foil with white wine and butter into a sauce; serve with boiled potatoes and fresh vegetables.
+
+Notes: the page gives an oven temperature and a separate grill stage but no internal temperature at either stage. Its foil-plus-grill structure is the same two-stage shape as the Swedish ham-wrapped recipe.
+
+---
+
 ## Temperature consensus
 
 | Source | Stated doneness evidence | Internal/pull temperature |
@@ -89,8 +112,9 @@ Europeisk harr (*Thymallus thymallus*) är en mager, ömtålig flodlaxfisk som t
 | Pelles Fiske (skinkharr) | 225 °C, about 15 min; ham crisp and fish done | Not stated |
 | Pernilla Persson / Pelles Fiske (vitlöksharr) | Baked until cooked through; no setting or time | Not stated |
 | The Big Fat Mushroom Hunter | 220 °C, 35–40 min in a packed salt crust | Not stated |
+| Дикое Качество (RU) | 170 °C, about 20 min in foil, then 5–6 min under the grill | Not stated |
 
-The fetched sources give oven settings and times only. The two Swedish recipes are from one national tradition (the second adds a named home contributor but no distinct regional tradition), so the required four-distinct-tradition gate is not met; British and Swedish evidence is present, Groups A and C are not. No internal or final serving temperature is stated anywhere in the collection, so no temperature range, doneness band, or recommended doneness key can be derived from this leaf. The salt-crust variant belongs to `oven_bake` and is not a separate enum method.
+The fetched sources give oven settings and times only. Four sources now cover Groups B (England) and D (Sweden ×2, Russia), so the 4–6-source count is met while the four-distinct-tradition gate is not; Groups A and C are absent. No internal or final serving temperature is stated anywhere in the collection, so no temperature range, doneness band, or recommended doneness key can be derived from this leaf. The salt-crust variant belongs to `oven_bake` and is not a separate enum method.
 
 ## What makes this method special
 
@@ -100,4 +124,4 @@ Oven baking surrounds grayling with moderate dry heat, which suits a lean fish o
 
 Oven baking suits grayling when the fish is shielded — ham, garlic-and-herb stuffing, or a fennel salt crust keep the lean flesh moist while the oven does the work for a crowd. The verified Swedish and British sources confirm the method's culinary relevance but supply only oven settings and times, so this leaf supports method coverage, not a probe target.
 
-> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Three fetched sources (Sweden Group D ×2, England Group B) document grayling baked wrapped in ham, garlic-stuffed, and in a salt crust. The 4–6-source, four-distinct-tradition gate is not met (two sources share the Swedish tradition) and no source gives an internal pull temperature. Continue collection before drawing analysis conclusions or calling this leaf complete.
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Four fetched sources (Sweden Group D ×2, Russia Group D, England Group B) document grayling baked wrapped in ham, garlic-stuffed, in a fennel salt crust and in foil with a grill finish. The 4–6-source count is met but the four-distinct-tradition gate is not, and no source gives an internal pull temperature. Continue collection before drawing analysis conclusions or calling this leaf complete.

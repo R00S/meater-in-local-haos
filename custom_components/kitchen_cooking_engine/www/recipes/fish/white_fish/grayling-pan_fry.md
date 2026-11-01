@@ -104,6 +104,46 @@ Europeisk harr (*Thymallus thymallus*, tyska *Äsche*) är en mager och ömtåli
 
 ---
 
+### 5. Russian (1000.menu, author "Teena") — Хариус жареный
+**Inspired by**: https://1000.menu/cooking/19359-xarius-jarenyi (fetched 2026-11-01). Russian recipe site; whole gutted grayling salted and peppered for 40–45 minutes, dredged in flour and fried in hot vegetable oil.
+**Serves**: 4 · **Prep**: 40–45 min salting · **Cook**: 4–7 min per side · **Rest**: not stated
+
+**Ingredients**
+- 4 grayling, gutted and scaled
+- Salt and ground black pepper
+- Wheat flour, for dredging
+- Vegetable oil, for frying
+
+**Method**
+1. Scale, gut and rinse the fish; heads, tails and fins may be left on (the recipe suggests keeping removed parts for fish soup).
+2. Salt and pepper generously and leave to marinate 40–45 minutes.
+3. Heat vegetable oil in a frying pan. Dredge each fish in flour and lay it in the hot pan.
+4. **Fry 4–7 minutes per side** until golden; the recipe states that the time depends on the size of the fish.
+5. Serve with or without a garnish, optionally with chopped herbs or a sauce.
+
+Notes: no internal temperature and no visual doneness cue beyond the crust; the time range is explicitly size-dependent.
+
+### 6. Polish (DoradcaSmaku.pl) — Lipień z tymiankiem
+**Inspired by**: https://www.doradcasmaku.pl/przepis-lipien-z-tymiankiem-25475 (fetched 2026-11-01). A very short Polish reader-submitted recipe: *lipień* is the Polish name for grayling.
+**Serves**: not stated · **Prep**: not stated · **Cook**: not stated · **Rest**: not stated
+
+**Ingredients**
+- Grayling (*lipień*), quantity not stated
+- Thyme, for the cavity
+- Salt
+- Flour, for dusting
+- Olive oil and butter, for frying
+
+**Method**
+1. Scale the fish and cut it into pieces; salt them.
+2. Put thyme in the belly of each piece.
+3. Dust with flour.
+4. Fry in olive oil with a little butter added. The page gives no timing and no doneness statement.
+
+Notes: the page is a stub — no quantities, no times, no endpoint. It is recorded as evidence that Polish practice pans grayling with thyme in oil and butter, not as a measured recipe. This is exactly the sort of thin source that must not be dressed up with invented detail.
+
+---
+
 ## Temperature consensus
 
 | Source | Stated doneness evidence | Internal/pull temperature |
@@ -112,15 +152,17 @@ Europeisk harr (*Thymallus thymallus*, tyska *Äsche*) är en mager och ömtåli
 | 7hauben / Bobby Bräuer | 4 min per side, then 3–4 min while basting | Not stated |
 | Birgitta Höglund | Brief pan-fry followed by simmering in sauce | Not stated |
 | Rackelhane / Mats Sjöstrand | 4 min per side | Not stated |
+| 1000.menu (RU) | 4–7 min per side in vegetable oil, size-dependent | Not stated |
+| DoradcaSmaku (PL) | Fried in olive oil with butter; no time given | Not stated |
 
-The sources provide times and cooking descriptions but no internal-temperature data. They do not establish a temperature range or a recommended doneness key; none is inferred. This leaf records recipe evidence only and is not sufficient to justify a new `cooking_data.py` temperature recommendation.
+Six sources now span Culinary Groups B (Austrian, German) and D (Swedish ×2, Russian, Polish), and none of them gives an internal-temperature datum: four state times only, one states that its time depends on fish size, and one states nothing at all. They do not establish a temperature range or a recommended doneness key, and none is inferred. The Polish source is recorded at its actual strength — a four-line page with no quantities or timings — because dressing it up would corrupt the evidence.
 
 ## What makes this method special
 
-Pan-frying puts the small fish in direct contact with hot fat, browning the skin quickly while the interior cooks over a short interval. The Jämtland recipe adds a brief simmer in cream and goat whey cheese, whereas the Austrian and Swedish bacon preparations keep the pan-fried crust more exposed. The recipes therefore document several regional expressions of pan-cooked grayling, but they do not quantify internal temperatures. Their stated times are source-specific and should not be converted into a common probe target.
+Pan-frying puts the small fish in direct contact with hot fat, browning the skin quickly while the interior cooks over a short interval. The Jämtland recipe adds a brief simmer in cream and goat whey cheese, whereas the Austrian, German and Russian preparations keep the pan-fried crust exposed, and the Polish version adds thyme inside the belly. The recipes therefore document several regional expressions of pan-cooked grayling, but they do not quantify internal temperatures. Their stated times are source-specific and should not be converted into a common probe target.
 
 ## Summary
 
-Pan-frying gives grayling a quickly browned exterior while keeping the delicate fish preparation simple. The retrieved recipes document Austrian and Swedish approaches, but none states an internal pull temperature, so they support the method’s culinary relevance rather than a temperature setting for the app.
+Pan-frying gives grayling a quickly browned exterior while keeping the delicate fish preparation simple. Six fetched recipes document Austrian, German, Swedish, Russian and Polish approaches, but none states an internal pull temperature, so they support the method's culinary relevance rather than a temperature setting for the app.
 
-> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Four source pages were fetched and contain recipe methods, but this is not a verified 4–6-source, four-distinct-tradition collection; some quantities are unstated and no source gives an internal pull temperature. Continue research before drawing analysis conclusions or calling this leaf complete.
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Six fetched source pages (Groups B: Austrian, German; D: Swedish ×2, Russian, Polish) meet the 4–6-source count but not the four-distinct-tradition gate — Groups A and C are absent. Some quantities are unstated, the Polish source states neither timings nor quantities, and no source gives an internal pull temperature. Continue research before drawing analysis conclusions or calling this leaf complete.
