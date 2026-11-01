@@ -4,6 +4,12 @@
 its evidence allows, observed across this branch.*
 *Written as a reference document to help future agents avoid repeating these errors.*
 
+**Historical scale:** The examples and arithmetic below describe the former 0–20
+system, where lower numbers meant more potential. The current system in
+`IMPROVEMENT_POTENTIAL_SYSTEM.md` has the opposite direction: higher means more potential.
+Retain the lessons about evidence and data integrity, but do not use the old
+numbers or arithmetic to assess or order cuts under the new system.
+
 ---
 
 ## What this document is
@@ -60,7 +66,7 @@ The number is a reading of what is left to earn. It is not a measure of how much
 > sources" without the class evidence (authority non-recognition; deletion as the only fix) and
 > the user's approval remain plain unfinished work, and the point stays unearned.
 
-**Why this inflates:** IMPROVE_CUT_FILES.md explicitly warns against assuming the methods list is complete and against guessing what a cut is called in other languages or regions. Claiming "pikeperch is absent from East Asian cuisines" as settled fact — without actually searching Japanese/Chinese/Korean recipe sources for zander or an equivalent — is an assumption presented as evidence. The correct treatment is a note like "no verified Group A source found," not a verdict of geographic impossibility.
+**Why this inflates:** `CUT_FILE_RESEARCH_TOR.md` explicitly warns against assuming the methods list is complete and against guessing what a cut is called in other languages or regions. Claiming "pikeperch is absent from East Asian cuisines" as settled fact — without actually searching Japanese/Chinese/Korean recipe sources for zander or an equivalent — is an assumption presented as evidence. The correct treatment is a note like "no verified Group A source found," not a verdict of geographic impossibility.
 
 **Examples in this branch:**
 - `pikeperch.md` (18/20): "Missing Group A tradition — pikeperch/zander absent from East Asian cuisines — deduction accepted as geographic reality." No Japanese, Chinese, or Korean source was searched.

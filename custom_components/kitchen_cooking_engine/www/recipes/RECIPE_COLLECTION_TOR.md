@@ -487,38 +487,44 @@ Every **cut file** (the `{cut_name}.md` without a method suffix) carries an
 `improvement_potential` field in its `<!-- KCE:CUT` front-matter block and an
 `## Improvement potential` section at the end of the document.
 
-**The number is improvement potential, not a score.** It is the same 0–20 count
-the criteria have always produced, read the other way round: **20 means nothing
-left has been found to earn, and every point below 20 is potential — work that
-is still there to do.** A file at 8/20 has more potential than a file at 18/20.
-Put the other way round: **the potential falls as the number rises.** A gap
-therefore moves the number *down*, which means *more* potential, not
-less.
+The current measurement is defined in **`IMPROVEMENT_POTENTIAL_SYSTEM.md`, “New improvement
+potential system”**. A higher number means more improvement potential; select the
+highest readings first. Apply its category bases, thresholds and reductions after
+improving a file. The former 0–20 readings use the opposite direction and must not
+be compared or combined with readings under the new system. Assess the cut files
+under the new system before ordering the queue; preserve existing assessments and
+user-approved exceptions when recording the new reading.
+
+**The system rates work; it never directs it.** The reading selects which cut file
+to open next and is computed only after that file's work is finished. During the
+research itself do not consult it and do not let it decide what to research,
+create, omit or write: research conduct is governed solely by this ToR,
+`RECIPE_ANALYSIS_TOR.md`, `SOURCE_SURVEY.md` and the traps in
+`HOW_I_INFLATE_CUT_FILES_AND_WHY.md`, under neither the new system nor the former
+0–20 scoring.
 
 ### Purpose — flaw detection, not achievement
 
 > **The number is a diagnostic reading, not a target.**
 
-The purpose of this table is to **name the gaps** so that the files with the
-most potential can be found and improved first.  A low number is the point — it
-means the assessment is working correctly.
+The purpose of this measurement is to **name the gaps** so that the files with the
+most potential can be found and improved first. A high number indicates more
+potential under the new system; the number is a measurement, not a target.
 
 **What this means in practice:**
 
-- Do **not** soften or remove a criterion because the number comes out lower as a result.
-  Accurate detection of a real gap is more valuable than a higher number.
+- Do **not** soften or remove a criterion to make the number look better.
+  Accurate assessment is more valuable than a misleading reading.
 - Do **not** add credit for data that has not been genuinely researched.
   Frontmatter values auto-populated from `cooking_data.py` are not research.
-- Do **not** treat 20/20 as the goal.  Reaching 20/20 on every file is neither
-  required nor expected.  Many cuts may never reach it.
-- Do **not** use projected numbers to choose between optional improvements, and do
-  not treat a drop in the number after genuine improvement as a failure.  A new
-  partial leaf adds content and a gap together; an honest re-check can
-  lower the number.  Improve the data first, then read the number off the criteria.
+- Do **not** treat any reading as a goal or as proof that a cut is finished.
+- Do **not** use projected numbers to choose between optional improvements. Improve
+  the data first, then read the number off the new system; it measures potential
+  and does not replace research, source verification or the collection gate.
 - **Do** use the `### Improvement priorities` list in each file to find the
   highest-value action for that specific cut.
-- **Do** focus improvement work on the files with the lowest numbers first —
-  the floor matters more than the ceiling.
+- **Do** focus improvement work on the files with the highest numbers under the
+  new system first.
 
 Future agents: if you find yourself adjusting criteria to make numbers look
 better, you are working against the purpose of this system.  Harsh, accurate
@@ -526,13 +532,13 @@ assessment is correct behaviour.
 
 ### Scale
 
-**Base: 20 points, where 20 is the absence of potential.** Each gap takes points
-off 20, so every row below lowers the number and raises the potential. **Read
-each −N as N points the file has not earned — N points of potential, never a
-penalty.** A stub file with no research content sits around 3/20.  That is not a
-bug — it is an accurate reflection of the file's state.
+The bases, category thresholds, reductions and threshold tiers are specified in
+`IMPROVEMENT_POTENTIAL_SYSTEM.md` under “New improvement potential system”. Apply thresholds
+separately to each reduction type. Round the final reading to a whole number;
+negative readings are allowed. Do not apply the former 0–20 calculation to a new
+assessment.
 
-### Culinary group coverage (assessed across *all* method leaf files for the cut)
+### Culinary group coverage (assessed separately for the cut file and each method leaf)
 
 Recipes must represent all four culinary groups.  Definitions:
 
@@ -543,26 +549,26 @@ Recipes must represent all four culinary groups.  Definitions:
 | **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
 | **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
 
-**−1 per missing culinary group** (maximum four).
+Count recipe reductions and the once-per-group bonus separately for the cut file
+itself and for each individual method leaf, as specified in the new system. Do not
+pool the leaves: a group represented in several leaves counts separately in each,
+and a group found in one method does not establish coverage for another.
+
+For measurement, a verified recipe means verified as human-created. Trust prior
+agents' verification of existing recipes; changed internet content or sandbox
+access is not grounds to invalidate it. New recipes and source details still
+require real-source verification; this does not permit fabrication.
 
 ### Cut profile quality
 
-- **−3** if `## Cut profile` section is missing entirely (no heading at all).
-- **−1** if `## Cut profile` section exists but is a placeholder (content is a
-  stub note such as "Placeholder — research not yet completed" with no real
-  text). Placeholders are a special case: the gap is acknowledged, so the
-  gap is lighter than for a completely absent section.
-- **−1** if `## Cut profile` exists with real content but lacks anatomical
-  placement — where on the animal the cut comes from, what muscle or structure
-  it is, what defines it (marbling, connective tissue, leanness, typical use).
-  Anatomy is always applicable; this row applies universally to profiles
-  with real content.
+The cut profile should give anatomical placement — where on the animal the cut
+comes from, what muscle or structure it is, and what defines it (marbling,
+connective tissue, leanness, typical use). A missing or placeholder profile is
+unfinished work. Apply only the reductions specified by the new system.
 
 ### Appropriate cooking method research
 
-- **−8** if `cooking_methods_researched: 0` in the cut frontmatter.
-
-This field tracks whether someone has deliberately researched what cooking methods are
+The `cooking_methods_researched` field tracks whether someone has deliberately researched what cooking methods are
 appropriate for this cut across culinary traditions — not just accepted whatever list was
 auto-populated from `cooking_data.py`.  Research means: checking multiple culinary sources
 to confirm which methods suit the cut's connective-tissue content, fat distribution, and
@@ -576,18 +582,19 @@ has been reviewed and corrected.
 Every method listed in a cut's `methods:` block is owed its own leaf. The list is not a wish list and
 not decoration: a declared method whose leaf does not exist is work that exists in the tree.
 
-- **−3** if no `{cut_name}-{method}.md` leaf files exist at all for the cut.
-
 **Four leaves is the floor, not a target.** Four leaves clears the minimum this system accepts; it does
 not close the cut and it does not mean the method survey is finished. A cut with several culinary
 traditions behind it often supports five, six or eight methods — if the corpus supports six and the cut
 has four leaves, two are owed, and the cut's own improvement list must say so. **Do not stop at four
 because four is the number in this file.** Four is where the minimum ends and the research begins.
 
-**Declaring a method is never counted against the file.** Nothing here charges it for naming work: the rows
-fire on missing evidence, not on discovered methods, and a leaf is what answers a method — its sources,
-its numbers, its coverage. Leaving a confirmed method off `methods:` so the file looks finished is a
-false statement about the cut, and it is the one defect the number cannot see.
+Discover and declare confirmed methods honestly, and create or improve their leaves.
+A discovered method is valuable information: register it and write its leaf,
+whatever the current reading says.
+The new system distinguishes finished leaves from created stubs. For measurement,
+a finished leaf has most of the parts making it useful in the GUI and concluded
+recipe research, as defined in `IMPROVEMENT_POTENTIAL_SYSTEM.md`. This does not change the
+collection or analysis gates or invalidate user-approved exceptions.
 
 ### Temperature data
 
@@ -600,79 +607,39 @@ method leaf file that contains source recipes with explicit pull temperatures
 explicitly discusses specific pull or safe temperatures (not just a passing °C
 mention).
 
-- **−3** if USDA safe internal temperature is not supported by research evidence
-  as defined above.
-- **−4** if culinary preferred temperatures (doneness targets) are not supported
-  by research evidence as defined above.
-- **−2** if culinary preferred temperatures are not researched per method
-  independently (i.e. the cut file body states a single global target with no
-  per-method nuance, and the method leaf files also lack per-method temperature
-  ranges). No row applies if either the cut file or the method leaf files already
-  carry per-method data.
+Apply the new system's separate reductions for verified culinary preferred
+and safe temperatures, and for each method-specific preferred-temperature
+discussion. Do not present unsourced frontmatter values as verified research.
 
 ### Description uniqueness
 
-Two separate gaps are counted here:
+Each method leaf must explain what that *specific method* does to this
+*specific cut*. Copying a sibling or parent description instead is unfinished
+method-specific research. Apply only the reductions specified by the new system.
 
-- **−1** per method leaf file whose `## Cut profile` or opening description is
-  a copy-paste or near-identical reuse of **another method leaf file** for the
-  same cut (maximum −2 across this sub-criterion). Each method must explain what
-  that *specific method* does to this *specific cut*.
+### Recording the reading
 
-- **−1** per method leaf file whose `## Cut profile` text is a copy-paste or
-  near-identical reuse of the **parent cut file's** `## Cut profile` text (no
-  upper limit). Using the generic cut overview as a method description is worse
-  than copying a sibling method file — it means the method file contains no
-  method-specific analysis at all.
+Keep `improvement_potential` in the cut frontmatter and document the new-system
+reading in its `## Improvement potential` section. The recorded reading is the
+number itself: a whole number, written without commentary, arithmetic or
+justification. Preserve previous assessments as historical readings, clearly
+marked as the former 0–20 system; do not compare their numbers with the new scale.
 
-### The gaps, and the points they represent
+The system lives in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and is read at rating time, after the
+work. Compute the number only from verified content; an unfinished leaf,
+unverified recipe or unsupported temperature must not be represented as
+completed evidence.
 
-| Criterion | Points |
-|-----------|--------------------|
-| Cooking methods not researched (`cooking_methods_researched: 0`) | −8 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| No `## Cut profile` section | −3 |
-| Cut profile is a placeholder | −1 |
-| Cut profile lacks anatomy | −1 |
-| No method leaf files exist | −3 |
-| No safe temperature data | −3 |
-| No culinary preferred temps | −4 |
-| Per-method temp data missing (cut + method files both) | −2 |
-| Method file copies sibling method description (per file, max 2) | −1 each |
-| Method file copies parent cut profile (per file, no limit) | −1 each |
-| **Most a file can fall short of 20** | **−27 + number of method files** |
-| **Lowest number** | **varies** |
+### Hard-wall exceptions (user-approved)
 
-### How the number is written into the cut file
+Approved exceptions remain in force within their approved scope. They let work
+move on to other recipes when score walls are hit, instead of repeatedly
+revisiting settled walls. Do not reopen or discard them during reassessment.
+Where their numerical effect under the new system is not defined, document that
+separately; do not invent an adjustment or let it block work on other recipes.
 
-Add to the `<!-- KCE:CUT` block:
-```yaml
-improvement_potential: 17
-cooking_methods_researched: 0
-quality_assessed: 2026-04-26
-```
-
-And append this section at the end of the cut file:
-
-```markdown
-## Improvement potential
-
-**Improvement potential: 17 / 20** — assessed 2026-04-26
-
-| Criterion | Points |
-|-----------|-----------|
-| Missing Culinary Group D tradition | −1 |
-| Cut profile lacks anatomy | −1 |
-| Per-method temp data missing | −1 |
-
-*Improvement potential is recalculated each time a new method leaf is added or
-the cut profile is updated.*
-```
-
-### Hard-wall exception (user-approved; the only sanctioned way past unearnable points)
+The procedure and 0–20 examples below are retained from the former system as the
+record of the existing exception rules, not as a new-system calculation.
 
 Some cuts are structurally unable to satisfy every criterion. The clearest case is a regional
 identity the rest of the world does not distinguish: Baltic herring is *strömming*, *silakka*,
@@ -753,12 +720,9 @@ Scope and lifetime:
 ### Recurring task
 
 Reading a cut file is a **recurring improvement task**. Whenever a new method
-leaf is added or an existing leaf's tradition coverage is improved, the number
-must be recalculated and updated.
+leaf is added or an existing leaf's tradition coverage is improved, recalculate
+and update the reading under the new system.
 
-**Use low numbers as a work queue.** Sort all cut files by `improvement_potential`
-ascending — the files at the bottom of the list are the ones that need
-attention.  Improve the files with the lowest numbers first.  Do not adjust
-criteria or add leniency exceptions to move numbers artificially. The **only**
-sanctioned way to clear a row is the user-approved hard-wall exception above —
-and it is never applied by the agent alone.
+**Use high numbers as a work queue.** Assess the cuts under the new system before
+sorting `improvement_potential` descending. Former 0–20 readings are not
+comparable and must not be mixed into that queue.
