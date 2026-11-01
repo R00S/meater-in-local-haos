@@ -9,7 +9,9 @@ cut_type: Ribs
 -->
 # Tjocka Revben × Pressure Cooker — Recipe Temperature Research
 
-> ⚠️ **COLLECTION INCOMPLETE:** three recipes from three traditions (Swedish = D, Japanese = A, Levantine-spiced = C), none of which states a numeric internal temperature. Culinary Group B is still absent and the endpoint fields are empty, so analysis stays withheld. Do not substitute an invented temperature.
+> ⚠️ **COLLECTION COMPLETE (4 sources, Groups A/B/C/D) · ANALYSIS WITHHELD — 1 of 4 sources states a numeric endpoint; the analysis gate revised 2026-11-01 needs 3.**
+>
+> The American Posh Journal source (B) filled Group B and is the leaf's only numeric endpoint (185–190 °F); the Swedish, Japanese and Levantine sources judge doneness by time and texture and are kept as comparators, never converted to numbers. Closing the gate needs two further sources that state an internal temperature.
 
 ## Cut profile
 
@@ -82,6 +84,28 @@ Tjocka revben are meat-covered front pork ribs, sold bone-in. A pressure cooker 
 ---
 
 
+
+### 4. American (Posh Journal, Rika) — Instant Pot Ribs
+**Inspired by**: Rika, Posh Journal; https://poshjournal.com/instant-pot-ribs (fetched 2026-11-01). *Named author, page labelled Cuisine: American. Cut term is generic "1 rack pork ribs", but the pressure time is split explicitly — 25 min for baby back, 30–35 min for "regular spare ribs" — so the source itself distinguishes the meatier rack.*
+**Serves**: 3 · **Prep**: 10 min · **Cook**: 25–35 min at pressure + 3 min broil · **Rest**: 5 min natural (baby back) or full natural release (spare)
+
+**Ingredients**
+- 1 rack pork ribs (about 2.5 pounds)
+- **Memphis-style dry rub**: 1 tbsp paprika; 2 tsp brown sugar (up to 2 tbsp if liked sweet); 2 tsp each chilli powder, ground cumin, garlic powder; 1½ tsp onion powder; ¼ tsp ancho chilli powder; ½ tsp each cayenne, ground mustard, ground ginger, black pepper, dried oregano; 2 tsp sea salt (or 2½ tsp coarse kosher salt)
+- Liquid smoke, optional — 1 tbsp
+- Water — ¾–1 cup
+
+**Method**
+1. Rinse and dry the ribs, peel off the membrane, and cut the rack into three pieces so it fits the pot.
+2. Mix the rub ingredients and coat every side of the ribs.
+3. Pour the water plus the liquid smoke into the cooker and set in the trivet or steamer basket; the ribs sit on it and **must not touch the water**.
+4. Lid on, valve SEAL, **PRESSURE COOK, HIGH: 25 minutes for baby back ribs or 30–35 minutes for regular spare ribs.** Natural release 5 minutes (baby back) or fully (spare), then vent.
+5. Arrange on a rack under the broiler and cook until crisp, about 3 minutes. Insert the MEATER probe from the side into the thickest piece, away from bone, before the ribs go under the broiler.
+6. **Pull at 85–87 °C** (185–190 °F) — stated by the source in its final step: *"When the internal temperature reaches 185-190°F, cooking is complete and ribs are ready to serve with or without BBQ sauce."* The same figure closes the Ninja Foodi air-crisp variant (400 °F set-point).
+7. Final serving temperature: **not stated by source**.
+
+---
+
 ## Collection status and search log
 
-Three sources are documented across Groups A, C and D, but none meets the ToR's numeric endpoint fields, so none can be counted as fully collected for the analysis gate. The Swedish source's two conflicting pressure settings remain visible until clarified. Group B is still missing, and the Japanese and Levantine sources use spare ribs and a half rack respectively rather than a proven front-rib cut.
+**Updated 2026-11-01: four sources across Groups A, B, C and D** — Swedish (D), Japanese (A), Levantine-spiced (C) and American Posh Journal (B). The 4–6 source count is met and **Group B is now filled**, closing that gap. Numeric endpoints: **1 of 4** (the American source, 185–190 °F). The Swedish source's two conflicting pressure settings remain visible until clarified, and the Japanese and Levantine sources use spare ribs and a half rack respectively rather than a proven front-rib cut. The earlier sentence saying no source could count as fully collected was written under the old all-sources-numeric reading of the gate; under the 2026-11-01 gate, a source that states no temperature is collected and marked as a comparator.

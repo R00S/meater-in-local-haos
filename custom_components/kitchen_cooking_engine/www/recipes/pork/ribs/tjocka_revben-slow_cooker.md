@@ -9,11 +9,13 @@ cut_type: Ribs
 -->
 # Tjocka Revben × Slow Cooker — Recipe Temperature Research
 
-> ⚠️ **STATUS: COLLECTION INCOMPLETE — 3 documented sources; Groups A, B and D present, Group C still missing, no source states an internal temperature**
+> ⚠️ **COLLECTION COMPLETE (4 sources) · ANALYSIS WITHHELD — only 1 of 4 sources states a numeric endpoint; the analysis gate revised 2026-11-01 needs 3**
 >
-> The collection phase for this leaf has **3** fetched sources (British, Swedish, Chinese-tradition). Per `RECIPE_ANALYSIS_TOR.md`,
-> the Temperature consensus, Data applied and Summary sections are withheld until the 4–6 gate is
-> met. This is unfinished research, not a wall: the missing sources are agent work owed on this cut.
+> Collection is at target (British meaty ribs, Swedish cut-exact, Chinese-tradition, American
+> numeric), Groups A/B/D present, Group C unfilled and logged as a gap. Per `RECIPE_ANALYSIS_TOR.md`
+> as revised 2026-11-01, a non-numeric source is excluded from the range rather than from the leaf,
+> so this leaf holds just 1 numeric source against a gate of 3 and its analysis sections stay
+> withheld. Closing the gate needs a second and third source that state an internal temperature.
 
 ## Cut profile
 
@@ -80,9 +82,30 @@ Slow cooking applies long, enclosed moist heat to this bone-in, meat-covered fro
 ---
 
 
+
+### 5. American (101 Cooking For Two, Dan Mikesell) — Slow Cooker Baby Back Ribs
+**Inspired by**: Dan Mikesell ("DrDan"), 101 Cooking For Two; https://www.101cookingfortwo.com/crock-pot-baby-back-ribs/ (fetched 2026-11-01). *Named home-cook author with a tested, timed method. Cut term: baby back ribs — the loin-side rack — while the page itself notes "Spare ribs or St. Louis ribs also work, but may need trimming to fit"; stored as a comparator on that basis.*
+**Serves**: not stated (1 rack, 3–4 lb) · **Prep**: 10 min · **Cook**: 7–8 h LOW or 3–4 h HIGH, then broil · **Rest**: not stated
+
+**Ingredients**
+- 1 rack baby back ribs, 3–4 pounds (spare ribs or St. Louis ribs also work, per the source)
+- Pork dry rub — the source's simple version or a favourite
+- BBQ sauce — for brushing before broiling
+- Liquid smoke, optional — the source recommends Wright's brand
+
+**Method**
+1. Peel the membrane off the bone side, cut the rack in half so it fits, add the liquid smoke if using, and rub all over.
+2. Stand the ribs around the sides of the crock pot, **meat side facing the centre**.
+3. Cook **7–8 hours on LOW** or **3–4 hours on HIGH**, until fork-tender; the source allows 1–2 hours more for two racks or a tightly packed pot. Insert the MEATER probe from the side into the thickest meat, away from bone, at load time.
+4. Finish under the broiler with BBQ sauce for a sticky, caramelised crust. The source's fallback, if the pot will not get hot enough, is a **300 °F (150 °C)** oven finish — an appliance figure.
+5. **Pull at 93–96 °C** (200–205 °F) — stated by the source as the usual doneness ("usually 200°–205°F"), with **88 °C (190 °F)** given as the minimum target and the instruction to check the thickest meat without touching bone.
+6. Final serving temperature: **not stated by source** — sauce, broil, serve.
+
+---
+
 ## Collection status and search log
 
-**Have:** British meaty ribs (cut specificity uncertain, B), Swedish cut-exact Christmas ribs (D) and Chinese-tradition slow-cooker ribs (A). None has the numerical endpoint fields required for a fully collected recipe, and Group C is still unrepresented: the one Caribbean slow-cooker jerk rib page found (Savory Thoughts) is written for **beef** ribs and only notes that pork also works, which is a substitution and therefore not admissible as a pork-rib source.
+**Have (updated 2026-11-01): 4 fetched sources — British meaty ribs (cut specificity uncertain, B), Swedish cut-exact Christmas ribs (D), Chinese-tradition slow-cooker ribs (A), and American 101 Cooking For Two (B, numeric 200–205 °F).** The 4–6 source count is now met. Numeric endpoints: **1 of 4**. Groups A/B/D present; **Group C still unfilled** — this pass searched for it in the relevant languages and the rejections are recorded below.
 
 Traditions attempted this session and why they failed (recorded so the next pass does not repeat the
 dead ends):
@@ -96,7 +119,7 @@ dead ends):
 - **Swedish**: no slow-cooker recipe for this cut found in confirmed-working Swedish sources this
   session (this was the earlier search result; Linda’s cut-exact Christmas recipe above and [Anders’s carnitas](https://ikoketmedanders.se/carnitas-pa-tjocka-revben-i-crock-pot/) now disprove the suggestion that no Swedish source could be found).
 
-Slow cooking is confirmed for this cut by the Swedish source above but the corpus from distinct traditions has not been collected. No analysis is written
-until that gap is closed.
+Slow cooking is confirmed for this cut by the Swedish source above; what is missing is not sources but
+**numeric endpoints** — the collection gate is met and the analysis gate (3 numeric sources) is not.
 
-> ⚠️ **COLLECTION INCOMPLETE — not yet 4–6 fully collected sources. Analysis sections withheld per ToR gate.**
+> ⚠️ **SOURCE COUNT MET (4); ANALYSIS WITHHELD — the leaf holds 1 numeric endpoint and the analysis gate (2026-11-01) needs 3. Group C also remains unfilled. Both are open research items, not walls.**

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 01 Nov 2026, 06:10 CET
+ * AUTO-GENERATED: 01 Nov 2026, 08:47 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 01 Nov 2026, 06:10 CET
+// Last generated: 01 Nov 2026, 08:47 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -129294,13 +129294,16 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/ribs/st_louis_ribs.md"
   },
   "tjocka_revben": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes/pork/ribs/tjocka_revben-air_fryer.md",
     "braise": "/kitchen_cooking_engine_panel/recipes/pork/ribs/tjocka_revben-braise.md",
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes/pork/ribs/tjocka_revben-charcoal_grill.md",
     "grill": "/kitchen_cooking_engine_panel/recipes/pork/ribs/tjocka_revben-grill.md",
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/pork/ribs/tjocka_revben-oven_roast.md",
     "pressure_cooker": "/kitchen_cooking_engine_panel/recipes/pork/ribs/tjocka_revben-pressure_cooker.md",
     "slow_cooker": "/kitchen_cooking_engine_panel/recipes/pork/ribs/tjocka_revben-slow_cooker.md",
     "smoker": "/kitchen_cooking_engine_panel/recipes/pork/ribs/tjocka_revben-smoker.md",
     "sous_vide": "/kitchen_cooking_engine_panel/recipes/pork/ribs/tjocka_revben-sous_vide.md",
+    "steam": "/kitchen_cooking_engine_panel/recipes/pork/ribs/tjocka_revben-steam.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/ribs/tjocka_revben.md"
   },
   "ground_pork": {
@@ -130924,15 +130927,21 @@ const CUT_METHOD_PROFILES = {
     "smoker_sv": "*Väntar på källinsamling.*"
   },
   "tjocka_revben": {
+    "air_fryer": "An air fryer is a small convection oven: violently moving dry heat browns the surface and renders the fat of a meat-covered rack far faster than an oven does, which is exactly why every source below manages the thick cover by wrapping or lowering the temperature partway through rather than holding one setting. The cut's own thickness is the risk here — the German source warns that air-fryer ribs do not fall off the bone, and the Chinese source's advice is to add time when the rack carries a thick layer of meat — so the method suits portioned or cracked pieces better than an unsplit front rack. Four traditions are represented — Chinese, German, Brazilian and Korean — and the Korean source is the only one that names the cut precisely (쪽갈비). No source in any language states a core temperature; every °C figure below is a machine set-point, and the four set-points differ (180, 190, 200 °C), which is the real finding for this method. Carryover is not measured by any source, but a small chamber recovers heat quickly after the basket opens, so it should not be assumed to be zero.",
+    "air_fryer_sv": "En airfryer är en liten varmluftsugn: kraftigt rörig, torr värme bräner ytan och smälter fettet i ett kötrikt spjäll snabbare än en ugn gör, och just därför hanterar varje källa det tjocka köttlagret genom att svepa in eller sänka tempot halvvägs — ingen håller ett enda program hela tiden. Styckets ojämna tjocklek är risken: den tyska källan varnar för att airfryer-ribben inte lossar från benet, och den kinesiska källans råd är att lägga till tid när spjället har ett tjockt lager kött. Fyra traditioner är representerade — kinesisk, tysk, brasiliansk och koreansk — och den koreanska källan är den enda som namnger stycket exakt (쪽갈비). Ingen källa anger kärntemperatur på något språk; varje °C-figur nedan är ett maskinprogram, och de fyra programmen skiljer sig (180, 190, 200 °C) — det är den egentliga iakttagelsen för metoden. Eftervärmen mäts inte av någon källa.",
     "braise": "Braising cooks pork ribs in liquid in a covered vessel. Related rib recipes below use different-sized pieces and different liquids; they do not establish the exact Swedish front cutting line. Moist heat and time can soften connective tissue, but neither identical cooking times nor identical results for a thicker cut are established. Carryover is not measured in these sources.",
+    "charcoal_grill": "Charcoal grilling gives these ribs two things at once: a dry, radiant heat that sets the surface, and smoke from the fuel itself, which the thick meat cover absorbs more readily than the thin retail rack does. All three sources set the charcoal to one side and cook the meat indirectly, which is the practical answer to this cut's uneven thickness — a thick front rack over direct coals dries at the thin end before the thick end is done. This method with this cut is documented in three traditions: German *Dicke Rippe* on briquettes (the only source that names this cut and states a core temperature), the South African *braai*, and Korean charcoal *돼지갈비*. Fuel is what separates this leaf from the `grill` leaf: those sources mostly name a gas or unspecified outdoor grill, while everything here names charcoal, briquettes or firewood. Carryover is small at these endpoints and is not measured by any source.",
+    "charcoal_grill_sv": "Kolgrillning ger de här revbenen två saker samtidigt: en torr, strålande värme som sätter ytan, och röken från bränslet självt, som det tjocka köttlagret absorberar snabbare än det tynna detaljhandelsspjället. Alla tre källor lägger kolen åt ett håll och tillagar indirekt — det praktiska svaret på styckets ojämna tjocklek, eftersom ett tjockt främre spjäll över direkt glöd torkar i den tunna änden innan den tjocka är klar. Metoden med det här stycket är dokumenterad i tre traditioner: tysk *Dicke Rippe* på briketter (den enda källan som namnger stycket och anger kärntemperatur), den sydafrikanska *braai:n* och koreansk koldgrillad *돼지갈비*. Bränslet är det som skiljer det här bladet från `grill`-bladet: de källorna anger oftast gasol eller ospecificerad utegrill, medan allt här namnger kol, briketter eller ved. Eftervärmen är liten vid dessa ändpunkter och mäts inte.",
     "grill": "Grilling exposes the meat-covered front pork ribs to direct or indirect heat. The cut-exact Swedish recipe grills individual ribs with a coconut marinade; the other retained recipes use ribs whose exact correspondence is uncertain. Thick and thin sections can cook differently, and fat dripping over fire can cause flare-ups. The sources do not quantify carryover.",
     "oven_roast": "Oven roasting exposes the meat-covered front pork ribs to enclosed heat. The exact-cut Swedish recipe uses a hot oven and turns the slab before separating the ribs; other retained recipes use related ribs whose cutting lines are not established. Covering and glazing differ among those comparisons. Carryover after roasting is not measured by the cited sources.",
     "pressure_cooker": "Tjocka revben are meat-covered front pork ribs, sold bone-in. A pressure cooker uses moist heat under pressure, followed in this recipe by an oven glaze; the source specifies the cut but not the internal temperature. The ribs can be whole and cracked or cut into pieces. Carryover after pressure release and oven finishing is not measured by the recipe.",
     "slow_cooker": "Slow cooking applies long, enclosed moist heat to this bone-in, meat-covered front-rib cut. The Swedish Christmas source finishes the ribs under the oven grill for colour; the British recipe uses meaty pork ribs but does not specify which part of the rack, so it is an anatomical lead rather than proof of an exact match. Check doneness in the thick meat away from bone; the sources give times, not measured internal endpoints. Carryover after the cooking and finishing stages is not documented.",
     "smoker": "Smoking is the method most often named when tjocka revben is cooked outside Sweden, and the method\nwhere the cut's own BBQ tradition lives: the cracked, meaty front racks take a long stay in thin blue\nsmoke far better than the thin Swedish retail ribs do, because the thick belly layer carries smoke\nflavour deep and renders slowly at pit temperature. The three fetched sources describe cooking low and slow —\n107–130 °C — with hardwood (apple, hickory, oak), and all three treat the smoke as the primary\nseasoning, with rub and (optionally) sauce layered around it. The cut's uneven thickness is managed\nby placement relative to the fire rather than by turning: the Swedish source positions the rack over\na drip pan with a deflector, the Australian source turns once during the first hour, and the American\nsource refuses to flip at all. Probe placement: from the side into the thickest belly-side meat, away\nfrom bone and away from the cracked bone ends; note the American source's warning that on ribs the\nbones distort probe readings and the bend test is the pitmaster's real instrument. Carryover is\nsmall-to-moderate at these endpoints; the Swedish source rests 30 minutes, the American source rests\nafter saucing.",
     "smoker_sv": "Rökning är metoden där tjocka revben har sin BBQ-tradition: de knäckta, köttrika framre spjälten tål\nlänge i tunn blå rök betre än de tynna svenska detaljhandelsspjälten, eftersom det tjocka köttlagret\nbär röksmaken djupt och renderar långsamt vid gropstemperatur. Samtliga tre hämtade källor arbetar\nlågt och långsamt — 107–130 °C — med fruktträ (äpple, hickory, ek). Ojämna tjockleken hanteras genom\nplacering i förhållande till elden, inte genom att vända. Sond in från sidan i tjockaste köttmassan,\nborta från ben och knäckta benändar; observera den amerikanska källans varning att ben stör\nsondavläsningen på ribben — böjtestet är den riktiga instrumentet. Eftervärmen är liten till måttlig;\nden svenska källan vilar30 minuter.",
-    "sous_vide": "Sous vide is the one method for tjocka revben where the Swedish meat board's own cut page names the\ntechnique explicitly (its tillagningssätt list includes *Sous-vide*), yet the fetched recipe corpus\nis the thinnest of all the methods on this cut — modernist rib cooking gravitates to baby backs and\nSt. Louis racks, and the sources that do exist disagree radically about temperature: one cooks\ncross-cut rib pieces at 75 °C for five hours in the dim-sum style, the other holds whole racks at\n65 °C for 36 hours for a Southern-style bark-and-glaze finish. Both work because a sealed bath controls the water temperature for long cooking with limited evaporation — the failure mode the oven and grill must constantly manage. Food safety depends on the full time–temperature process and thickness; a bath setting by itself does not establish pasteurisation. Probe placement is per the ToR's sous vide\nexception: no probe during the sealed cook — the circulator temperature is the cook target, and the\nbag liquid or a post-bath check verifies. Carryover does not apply: the bag is opened at the target\nand finished by sear, broil, smoke or oven, which is where any residual climb happens.",
-    "sous_vide_sv": "Sous vide är den enda metod där den svenska köttbranschens egen styckessida namnger tekniken\nuttryckligen (*Sous-vide*), men den hämtade reseptkorpusen är tunnast av alla metoder på detta\nstycke. Källorna motsäger sig radikalt om temperatur: ett tillagar korsskurna ribbitar vid 75 °C i\nfem timmar i dim sum-stil, det andra håller hela spjäll vid 65 °C i36 timmar för BBQ-avslut. Båda\nfungerar eftersom ett förseglat bad håller det tjocka magköttlagret på exakt temperatur hur länge\nsom helst utan ytattorkning. Sond placering enligt ToRs sous vide-undantag: ingen sond under det\nförseglade badet — cirkulatorns temperatur är målet. Eftervärmen gäller inte; påsningen öppnas vid\nmålet och avslutas med sotning, grillpanna, rök eller ugn."
+    "sous_vide": "Sous vide is the method for tjocka revben that the Swedish meat board's own cut page names explicitly\n(in its tillagningssätt list, *Sous-vide*), and since the 2026-11-01 in-language pass the corpus has\ncaught up: four fetched sources from the Chinese dim-sum, modernist BBQ, Swedish and German\ntraditions, all four stating their bath temperature. They agree on the technique and disagree about\nhow it is used: one cooks cross-cut rib pieces at 75 °C for five hours in the dim-sum style, the\nothers hold whole racks as low as 63 °C for up to 36 hours for a bark-and-glaze finish. A sealed\nbath controls the water temperature for long cooking with limited evaporation — the failure mode the\noven and grill must constantly manage. Food safety depends on the full time–temperature process and thickness; a bath setting by itself does not establish pasteurisation. Probe placement is per the ToR's sous vide\nexception: no probe during the sealed cook — the circulator temperature is the cook target, and the\nbag liquid or a post-bath check verifies. Carryover does not apply: the bag is opened at the target\nand finished by sear, broil, smoke or oven, which is where any residual climb happens.",
+    "sous_vide_sv": "Sous vide är den metod som den svenska köttbranschens egen styckessida namnger uttryckligen\n(*Sous-vide*), och efter den engångs-språkliga genomgången 2026-11-01 har reseptkorpusen följt med:\nfyra hämtade källor ur dim sum-, modernistisk BBQ-, svensk och tysk tradition, samtliga med angivet\nbadtemperatur. De är eniga om tekniken och skiljer sig i användningen: ett tillagar korsskurna\nribbitar vid 75 °C i fem timmar i dim sum-stil, de andra håller hela spjäll ner till 63 °C i upp\ntill 36 timmar för BBQ-avslut. Ett förseglat bad håller det tjocka magköttlagret på exakt\ntemperatur hur länge som helst utan ytattorkning. Sond placering enligt ToRs sous vide-undantag: ingen sond under det\nförseglade badet — cirkulatorns temperatur är målet. Eftervärmen gäller inte; påsningen öppnas vid\nmålet och avslutas med sotning, grillpanna, rök eller ugn.",
+    "steam": "Steaming cooks these ribs in vapour at atmospheric pressure, in a covered pot or basket sitting above the water, so the meat is heated by condensing steam rather than by fat or braising liquid — moisture stays inside the cut, and the collagen in the thick front meat cover softens without the cooking liquid diluting the seasoning. This method meets this cut in Chinese cooking, where the front rack is explicitly the piece to steam: one source below is written for 猪前排 (front ribs) and says so, and the naming research for this cut records 前排 as the first choice for steaming and for children. Four traditions are represented — Chinese, Japanese, Thai and Vietnamese — each with its own steamer and its own cut word, and each judges doneness by time and by how the meat releases from the bone rather than by a probe. The sources do not measure carryover; a plate lifted from a steamer cools quickly, so carryover should be small, but no source quantifies it.",
+    "steam_sv": "Ånga lagar de här revbenen med vattenånga i en täckt korg ovanför vattnet — köttet får värme genom kondensation, så fuktigheten stannar i stycket och kollagenet i det tjocka köttlagret mjuknar utan att kokbuljongen spädar ut kryddningen. Metoden och stycket möts i det kinesiska köket, där främre spjäll är just det man ångar: en av källorna är skriven för 猪前排 (främre revben), och namnresearchen för det här stycket anger 前排 som förstahandsval vid ångning. Fyra traditioner är representerade — kinesisk, japansk, thailändsk och vietnamesisk — och alla avgör mognaden efter tid och efter hur köttet släpper från benet, inte efter sond. Källorna mäter inte eftervärme; en tallrik ur ångaren svalnar snabbt, så eftervärmen bör vara liten, men ingen källa anger något."
   },
   "ground_pork": {
     "braise": "Ground pork (minced pork) is made by grinding pork shoulder, belly, or a blend of primal trimmings. Standard ground pork is typically 70–80% lean with 20–30% fat; the higher fat content gives it a juicy, cohesive texture when cooked and makes it more forgiving than ground beef or turkey. Ground pork is the basis of countless preparations worldwide — from Italian ragù and Swedish köttbullar to Chinese dumplings and Mexican chorizo. Because grinding distributes any surface bacteria throughout the mass, the USDA minimum safe internal temperature is 71°C (160°F). Carryover is negligible.",
@@ -133059,39 +133068,73 @@ const RECIPE_TITLES_INDEX = {
     ]
   },
   "tjocka_revben": {
+    "air_fryer": [
+      "Chinese (美食天下, 阳光明媚99) — 酱香烤排骨【空气炸锅版】",
+      "German (tastybits.de, Jannik Degner) — BBQ-Spareribs aus dem Airfryer",
+      "Brazilian (TudoGostoso) — Costelinha de porco na airfryer",
+      "Korean (Naver blog, 테체후) — 양념 쪽갈비 에어프라이어 구이"
+    ],
     "braise": [
       "Chinese-American (The Woks of Life) — 1-2-3-4-5 Ribs",
       "Italian (Un Cuoco in Camicia, Giallozafferano blog) — Costine brasate al vino rosso",
       "Mexican (La Piña en la Cocina, Rosie Torres) — Pork Ribs With Cactus in Salsa Verde",
-      "Polish (CookINPolish) — Spare Ribs and Sauerkraut"
+      "Polish (CookINPolish) — Spare Ribs and Sauerkraut",
+      "Kenyan (Healthy Living Kenya, \"kahonge\") — Beer-braised BBQ pork ribs",
+      "American (The Chaotic Table, Stephanie) — Braised Pork Ribs"
+    ],
+    "charcoal_grill": [
+      "German (BBQ-County.de, Tobias) — Dicke Rippe gegrillt",
+      "South African (KarooBraai™) — Braaied Pork Spare Ribs",
+      "Korean (Naver blog, 시골댁 안주인) — 캠핑 바베큐 숯불 양념 돼지갈비구이"
     ],
     "grill": [
       "Swedish (Svenskt Kött) — Grillade tjocka spjäll med jordnötssås",
       "Finnish (Gloria ruoka ja viini, chef Jouni Toivonen) — Todella hitaat ribsit",
       "South African (Taste Magazine SA, Strone & Ashleigh Henry) — Cherry-and-ginger BBQ spareribs",
-      "British (BBC Good Food, Good Food team) — Sizzling spare ribs with BBQ sauce"
+      "British (BBC Good Food, Good Food team) — Sizzling spare ribs with BBQ sauce",
+      "Thai (Simply Suwanee) — ซี่โครงหมูย่าง / Thai grilled BBQ pork spare ribs",
+      "German (Grillfürst, Benny) — Spareribs grillen: butterzart in 2 Stunden"
     ],
     "oven_roast": [
       "Swedish (Svenskt Kött) — Tjocka revbensspjäll i ugn",
       "German (ChefKoch.de, \"Bio-Bine\") — Spareribs aus dem Backofen",
       "Australian (RecipeTin Eats, Nagi Maehashi) — Oven Pork Ribs with Barbecue Sauce",
-      "Russian (Edimdoma, \"Апрель\") — Свиные ребрышки со специями и яблочным соком"
+      "Russian (Edimdoma, \"Апрель\") — Свиные ребрышки со специями и яблочным соком",
+      "Japanese (Cookpad, きのこや) — ほりにしでシンプルなスペアリブ焼き",
+      "South African (Food & Home Entertaining, recipe by SA Pork) — Sweet & sour BBQ pork ribs"
     ],
     "pressure_cooker": [
-      "Swedish (Åse, 56kilo) — Honung- och ananasglaserade tjocka revben"
+      "Swedish (Åse, 56kilo) — Honung- och ananasglaserade tjocka revben",
+      "Japanese (Just One Cookbook, Namiko Hirasawa Chen) — Instant Pot honey spare ribs",
+      "Levantine-spiced (frightful kitchen) — Pomegranate and sumac pork ribs",
+      "American (Posh Journal, Rika) — Instant Pot Ribs"
     ],
     "slow_cooker": [
       "British (BBC Good Food, Good Food team) — Slow cooker ribs",
-      "Swedish (Linda, Lindas Mathörna) — Julens godaste revbensspjäll"
+      "Swedish (Linda, Lindas Mathörna) — Julens godaste revbensspjäll",
+      "Chinese tradition (Caroline's Cooking) — Chinese spare ribs in the slow cooker",
+      "American (101 Cooking For Two, Dan Mikesell) — Slow Cooker Baby Back Ribs"
     ],
     "smoker": [
       "Swedish (Grilltips.se, Conny Arvidsson) — Barbecue grillade tjocka revben",
       "Australian (Gourmet Traveller, Papi Chulo, Manly NSW) — Smoked pork ribs with barbecue sauce",
-      "American (Meathead's AmazingRibs.com) — Meathead's Last Meal Smoked Pork Ribs"
+      "American (Meathead's AmazingRibs.com) — Meathead's Last Meal Smoked Pork Ribs",
+      "Indian (Usha's Kitchen, Usha Martin) — Indian spiced ribs, 2:2:1 method",
+      "Levantine-spiced (Hark BBQ, Alana Alderson) — Middle Eastern pork ribs with pomegranate BBQ sauce",
+      "Non-numeric comparators"
     ],
     "sous_vide": [
       "Chinese-American (Anova Culinary, Carolyn Jung) — Sous Vide Chinese Black Bean Spare Ribs",
-      "Modernist BBQ, \"JC\" (Anova Culinary, Shanghai & England) — JC's Perfect 36h BBQ Pork Ribs"
+      "Modernist BBQ, \"JC\" (Anova Culinary, Shanghai & England) — JC's Perfect 36h BBQ Pork Ribs",
+      "Swedish (Matnjutaren, Andreas Andersson) — Revben sous vide",
+      "German (Sizzlebrothers, Johannes Böttcher) — Spareribs Sous Vide: Perfekt gegarte Rippchen",
+      "Non-numeric comparators"
+    ],
+    "steam": [
+      "Chinese (美食天下, 空客) — 蒜蓉豆豉蒸排骨",
+      "Japanese (LEE 2026年5月号, ワタナベマキ) — スペアリブとアスパラガスの塩麹蒸し",
+      "Thai (ครัวบ้านพิม, พิม) — ซี่โครงหมูนึ่งเต้าเจี้ยว",
+      "Vietnamese (Bếp Trưởng Á Âu, Nguyễn Richard) — Sườn lợn hấp hạt kê"
     ]
   },
   "ground_pork": {
@@ -137224,7 +137267,10 @@ const EXP_TREE = {
                   "smoker",
                   "slow_cooker",
                   "sous_vide",
-                  "pressure_cooker"
+                  "pressure_cooker",
+                  "steam",
+                  "air_fryer",
+                  "charcoal_grill"
                 ],
                 "usda_safe_c": 63,
                 "usda_safe_f": 145,
@@ -141283,13 +141329,16 @@ const EXP_RECIPE_INDEX = {
   "st_louis_ribs-oven_roast": "pork/ribs/st_louis_ribs-oven_roast.md",
   "st_louis_ribs-smoker": "pork/ribs/st_louis_ribs-smoker.md",
   "st_louis_ribs": "pork/ribs/st_louis_ribs.md",
+  "tjocka_revben-air_fryer": "pork/ribs/tjocka_revben-air_fryer.md",
   "tjocka_revben-braise": "pork/ribs/tjocka_revben-braise.md",
+  "tjocka_revben-charcoal_grill": "pork/ribs/tjocka_revben-charcoal_grill.md",
   "tjocka_revben-grill": "pork/ribs/tjocka_revben-grill.md",
   "tjocka_revben-oven_roast": "pork/ribs/tjocka_revben-oven_roast.md",
   "tjocka_revben-pressure_cooker": "pork/ribs/tjocka_revben-pressure_cooker.md",
   "tjocka_revben-slow_cooker": "pork/ribs/tjocka_revben-slow_cooker.md",
   "tjocka_revben-smoker": "pork/ribs/tjocka_revben-smoker.md",
   "tjocka_revben-sous_vide": "pork/ribs/tjocka_revben-sous_vide.md",
+  "tjocka_revben-steam": "pork/ribs/tjocka_revben-steam.md",
   "tjocka_revben": "pork/ribs/tjocka_revben.md",
   "cured_ham-oven_roast": "pork/roasts/cured_ham-oven_roast.md",
   "cured_ham-smoker": "pork/roasts/cured_ham-smoker.md",
@@ -153080,7 +153129,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "682";
+const PANEL_VERSION = "683";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

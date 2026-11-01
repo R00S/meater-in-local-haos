@@ -17,6 +17,9 @@ methods:
 - slow_cooker
 - sous_vide
 - pressure_cooker
+- steam
+- air_fryer
+- charcoal_grill
 doneness:
 - name: pulled
   target_c: 93
@@ -27,8 +30,8 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-improvement_potential: 1159
-cooking_methods_researched: 0
+improvement_potential: -33
+cooking_methods_researched: 1
 quality_assessed: 2026-11-01
 rest_time_min: 10
 rest_time_max: 15
@@ -57,21 +60,21 @@ An index kept for future passes; the two sections below hold the evidence, the q
 | D | Danish | *revelsben* | breast/rib slices, one bone per slice, skinless | named comparator |
 | D | German | *Dicke Rippe*, *Brustspitze*, *Brustspitzribs* | item 5 of the German scheme, the rib ends with more connective tissue and cartilage | named comparator |
 | D | Austrian | *Schweinebrust* | the same item 5, under a breast name | named comparator |
-| D | Finnish | *luinen kylki* | "not ribs": rib-bearing flank with more meat left on the bone than spare ribs | named comparator |
-| D | Polish | *żeberka grube*, *żeberka paski* | forequarter rib item vs narrow-cut belly ribs | comparator |
+| D | Finnish | *luinen kylki*, *grillikylki* | "not ribs": rib-bearing flank with more meat left on the bone than spare ribs (Poppamies); *grillikylki* is the retail label for the same zone, sold bone-in ("luullinen") or boneless and, at Lihajakalakauppa, skinless ("nahka poistettu") | named comparator, retail and trade terms differ |
+| D | Polish | *żeberka grube* (= *żeberka trójkąty*), *żeberka paski*, *mostek* | *żeberka grube* from the forequarter ("przody wieprzowe"); *żeberka paski* the narrow-cut belly rib strip; *mostek* = brisket/sternum, in the normative scheme absorbed into *boczek*, not a front-rib name | comparator, strongest Polish lead is *żeberka grube* |
 | D | Norwegian | *ribbe* | side meat on an animal, generally | **not a match** |
 | B | US English | *spare ribs*, *St. Louis*, *baby back* | belly-side rack, a trimmed belly rack, and a loin-side rack | comparator |
 | B | British / Irish English | *spare ribs*, *meaty pork ribs* | no separate front-rib item | generic only |
-| A | Chinese | 排骨 (umbrella), 前排, 小排, 肋排, 腩排 | 小排 = front ribs 5–6, spine off, hard sternum kept, thick meat with white cartilage | **closest named match found** |
+| | A | Chinese | 前排 = the 4 front ribs near neck and foreleg, cartilage-heavy; 软边前排 = its soft-edged sub-type with more and larger cartilage; 排骨 (umbrella), 前排, 小排, 肋排, 腩排 | 小排 = front ribs 5–6, spine off, hard sternum kept, thick meat with white cartilage |
 | A | Japanese | スペアリブ, 肩スペアリブ, バラスペアリブ, バックリブ | shoulder-end rib with "肉に厚み"; back rib is the loin side and leaner | named comparator, strongest Asian lead |
-| A | Korean | 갈비, 쪽갈비, 등갈비, 마구리 | front ribs #1–5; 쪽갈비 the belly-adjacent lower rib; 등갈비 baby back; 마구리 tips | named comparator |
+| A | Korean | 갈비, 쪽갈비, 등갈비, 마구리 | front ribs #1–5, **legally defined as trimmed of subcutaneous fat** (식약처 별표 2); 쪽갈비 = the front ribs, no legal name, sold off the bone in single-rib pieces; 등갈비 baby back; 마구리 tips | named comparator, fat cover absent by standard |
 | A | Vietnamese | sườn non, sườn già, dẻ sườn | thick meat with little bone and cartilage vs big bony ribs; position not stated | comparator (no location) |
 | A | Thai | ซี่โครงหมูอ่อน, ซี่โครงหมูติดกระดูก | spine-adjacent rib is the premium one; belly ribs are fattier and cheaper | **reverse polarity** |
 | A | Indonesian | iga babi | ribs, cut into pieces | generic only |
-| C | South African English / Afrikaans | *Thick Rib* / *Dikrib*; *Lies*; *Bors*; *Ribbetjie* | thick rib chops cut close to the neck end, separate from belly and breast | **named African comparator, sold as chops** |
-| C | Brazilian Portuguese | *costela*, *costela de barriga* | belly ribs called "spare ribs", larger and meatier than baby back | generic, belly-oriented |
+| C | South African English / Afrikaans | *Thick Rib* / *Dikrib*; *Lies*; *Bors*; *Ribbetjie* | thick rib numbered cut 1, cut close to the neck end, separate from 7 *Lies* (belly) and 8 *Bors* (breast, from which spareribs are cut) | **named African comparator, sold as chops** |
+| — | Brazilian Portuguese | *costela*, *costela de barriga* | belly ribs called "spare ribs", larger and meatier than baby back | **outside groups A–D**; coverage only |
 | C | Angolan / Mozambican Portuguese | *entrecosto*, *costeleta* | between-ribs; rib chop | generic only |
-| C | Spanish (Colombia and others) | *costilla*, *costilla de pecho*, *costilla campesina* | named in the national cut manual; definitions unreadable | **unverified** |
+| — | Spanish (Colombia and others) | *costilla*, *costilla de pecho*, *costilla campesina* | named in the national cut manual; definitions unreadable | **outside groups A–D**; unverified |
 | C | Jamaican English | *spare ribs*, *rack* | British-derived primals; no front-rib name | generic only |
 | C | Nigerian / Kenyan / Zimbabwean English | *ribs*, *spare ribs*, *back ribs* | generic | generic only |
 
@@ -108,9 +111,9 @@ The same question pays off unevenly here. In East Asia the front rib carrying a 
 
 **Temperature behaviour (verified 2026-10-31):** the fetched Swedish guidance for this exact cut disagrees with itself, and the disagreement is recorded rather than merged. Svenskt Kött's cut page states the well-done internal temperature is **70 °C** and that traditional Swedish cooking is high heat with sage or dried ginger for a resistant texture, or pre-boil in broth/salted water (~45 min, to 70 °C) then glaze, or slow roast/grill under lid until "saftiga, eftergivna och hopfallande". Its own oven recipe pulls at **80 °C**. The Swedish BBQ school, represented by Grilltips.se's tjocka-revben method, states the cut is *"egentligen klara redan vid75 °C, men det är först vid90 °C som fettet smälter"* and cooks to **90–95 °C** with a documented comment-thread disagreement (pull at 70 °C vs 90–93 °C), while American low-and-slow guidance (Meathead) works at a 107 °C pit and accepts ~93 °C (200 °F) probe readings only as a collagen-conversion signal, preferring the bend test. These are different cooking and texture goals; the source’s description of fat melting at 90 °C should not be read as an exclusive physical melting point or as a universal guarantee of texture. USDA-style safe guidance for pork (63 °C /145 °F) sits below every culinary endpoint recorded for this cut, as it does for the sibling rib cuts.
 
-**Method survey:** exact-cut Swedish sources support oven roast, grill, smoker, slow cooker, sous vide (method listed on the Svenskt Kött cut page) and pressure cooker. Braising is represented by related pork rib recipes whose exact cutting-line match still needs verification. Each method has a leaf; four leaves now hold the 4–6 sources collection asks for and three are short, and only Smoke has cleared the three-numeric analysis gate. Air-fryer, steamed *paigu* and fried-riblet leads still need cut-specific verification.
+**Method survey (updated 2026-11-01, in-language pass):** ten methods now have leaves. Exact-cut Swedish sources support oven roast, grill, smoker, slow cooker, sous vide (method listed on the Svenskt Kött cut page) and pressure cooker; braising is represented by related pork rib recipes whose exact cutting-line match still needs verification. The in-language pass added three methods that had had no leaf at all — **steam** (Chinese 猪前排 steaming is the first choice named for the front rack), **air fryer** (Chinese, German, Brazilian and Korean recipes, all appliance set-points and no core temperatures) and **charcoal grill** (kept separate from `grill`, which holds gas and unspecified outdoor grills; the German charcoal source is the only one that both names *Dicke Rippe* and states a core temperature). Deep-frying was found in Chinese sources (炸排骨-style riblets) but **not registered**: the `CookingMethod` enum has no `deep_fry` value, so the finding is recorded here rather than stretched onto `pan_fry`.
 
-**Culinary-group coverage after the regional pass (2026-11-01):** the leaves now carry recipes from all four groups, distributed as follows — Oven Roast A/B/C/D, Grill A/B/C/D, Braise A/B/C/D, Smoke A/B/C/D, Slow Cooker A/B/D, Pressure Cooker A/C/D, Sous Vide A/B. The remaining holes are honest ones: no African, Caribbean or Levantine **sous-vide** rib recipe exists in the fetched corpus, and no Group B **pressure-cooker** rib recipe was verified. Two candidate sources were rejected rather than stretched: a Caribbean slow-cooker jerk rib page written for beef ribs (a substitution, not a pork cut) and a South African retail "pork ribs" page that turned out to be a pre-sauced product instruction.
+**Culinary-group coverage after the in-language pass (2026-11-01):** across ten leaves the distribution is — Oven Roast A/B/C/D, Grill A/B/C/D, Braise A/B/C/D, Smoke A/B/C/D, Slow Cooker A/B/D, Pressure Cooker A/B/C/D, Sous Vide A/B/D, Steam A only, Air Fryer A/B, Charcoal Grill A/B/C. The remaining holes are honest ones and each is logged in its leaf: no African, Caribbean or Levantine **sous-vide** rib recipe exists in the fetched corpus; **steam** is Group A only, because the other three groups publish steam only as a stage inside another method rather than as a recipe's method; **air fryer** has no Group C or D source, and its Brazilian recipe is stored for coverage but counted outside A–D, since no group definition includes South America; **charcoal grill** has no Group D source. Rejected candidates are recorded rather than stretched: a Caribbean slow-cooker jerk rib page written for beef ribs, a South African retail "pork ribs" page that was a pre-sauced product instruction, an Afrikaans *dikrib* stovetop recipe filed by its own site under beef with no species stated, a Taiwan charcoal rib column printing no ingredient quantities, and three 下厨房 pages behind a sliding captcha.
 
 ## Styckesprofil
 
@@ -120,26 +123,30 @@ Tjocka revben är den främre delen av grisens revbenkorg: de tjocka framre revb
 
 ## Research files by cooking method
 
-- [Oven Roast](./tjocka_revben-oven_roast.md) — includes a cut-exact Swedish recipe; other cuts and numeric endpoints require verification.
-- [Grill](./tjocka_revben-grill.md) — includes a cut-exact Swedish recipe; other cuts and numeric endpoints require verification.
-- [Braise](./tjocka_revben-braise.md) — related rib recipes; their exact cutting lines and numeric endpoints require verification.
-- [Smoke](./tjocka_revben-smoker.md) — cut-exact Swedish smoking plus four further traditions; the 4–6 source count and the 3-numeric gate are both met, so its analysis sections may now be written.
-- [Slow Cooker](./tjocka_revben-slow_cooker.md) — a cut-exact Swedish recipe and a British comparator; numeric endpoints and further traditions are needed.
-- [Sous Vide](./tjocka_revben-sous_vide.md) — two comparative sources; exact cutting lines and endpoints remain to be verified.
-- [Pressure Cooker](./tjocka_revben-pressure_cooker.md) — one cut-exact Swedish recipe with conflicting appliance settings; collection incomplete.
+- [Oven Roast](./tjocka_revben-oven_roast.md) — 6 sources, 2 numeric; collection complete, analysis withheld at the 3-numeric gate, and the leaf is at its source ceiling.
+- [Grill](./tjocka_revben-grill.md) — 6 sources, 2 numeric; collection complete, analysis withheld at the 3-numeric gate, at the source ceiling.
+- [Braise](./tjocka_revben-braise.md) — 6 sources, 1 numeric; collection complete, analysis withheld; two further numeric sources are owed.
+- [Smoke](./tjocka_revben-smoker.md) — 5 sources, 4 numeric; **analysis written** 2026-11-01, range 88–96 °C inside `DONENESS_PULLED`.
+- [Slow Cooker](./tjocka_revben-slow_cooker.md) — 4 sources, 1 numeric; collection complete, analysis withheld.
+- [Sous Vide](./tjocka_revben-sous_vide.md) — 4 sources, 4 numeric; **analysis written** 2026-11-01, bath range 63–75 °C with a `method_temperature_ranges` override instruction left for a deliberate code decision.
+- [Pressure Cooker](./tjocka_revben-pressure_cooker.md) — 4 sources, 1 numeric; Group B filled by an American source this pass; analysis withheld.
+- [Steam](./tjocka_revben-steam.md) — **new leaf, 2026-11-01** — 4 sources, 0 numeric (Group A only); every endpoint is a time-and-texture cue.
+- [Air Fryer](./tjocka_revben-air_fryer.md) — **new leaf, 2026-11-01** — 4 sources, 0 numeric; every °C figure is an appliance set-point, and the set-points disagree (180/190/200 °C).
+- [Charcoal Grill](./tjocka_revben-charcoal_grill.md) — **new leaf, 2026-11-01** — 3 sources, 1 numeric; created short of the 4-source floor with a Group D gap, both logged.
 
-Leaves are measured against the gate as revised on 2026-11-01: collection asks for 4–6 fully saved sources, analysis opens at three sources stating a numeric internal temperature, and a source that states no temperature is kept as a comparator instead of being excluded or converted. By that rule Oven Roast (6 sources), Grill (5), Braise (5) and Smoke (5) have met the collection count, while Slow Cooker (3), Pressure Cooker (3) and Sous Vide (2) are still short. On numbers, Smoke holds 4, Oven Roast 2, Sous Vide 2, Grill 1, and Braise, Slow Cooker and Pressure Cooker hold none — so Smoke is the first leaf whose analysis sections may be written, and the rest keep collecting.
+Leaves are measured against the gate as revised on 2026-11-01: collection asks for 4–6 fully saved sources, analysis opens at three sources stating a numeric internal temperature, and a source that states no temperature is kept as a comparator instead of being excluded or converted. Nine of the ten leaves now meet the collection count; Charcoal Grill was created at 3 and is the one leaf short. On numbers, Smoke holds 4, Sous Vide 4, Oven Roast 2, Grill 2, and Braise, Slow Cooker, Pressure Cooker and Charcoal Grill hold 1 each — so **Smoke and Sous Vide are the two leaves whose analysis sections are written**, and the other eight keep collecting. Steam and Air Fryer hold none, which is a property of those methods rather than of their sources: neither an air fryer's display nor a steamer's timer is a probe, and the traditions that steam and air-fry ribs do not publish core temperatures.
 
-The pattern is a property of the corpus, not a gap in the search: outside Europe and North America these traditions judge doneness by time and fork-tenderness rather than by a probe. Of the twenty-nine sources stored across the seven leaves, nine state a numeric internal temperature (Swedish, Japanese, Thai, Indian, Levantine and American), while the other twenty state their own cues in their own words. No analysis section has been written in this pass.
+The pattern is a property of the corpus, not a gap in the search: outside Europe and North America these traditions judge doneness by time and fork-tenderness rather than by a probe. Of the forty-six sources stored across the ten leaves, sixteen state a numeric internal temperature or cook-target temperature (Swedish, Japanese, Thai, Korean, Indian, Levantine, German, Chinese, Brazilian and American traditions among them), while the other thirty state their own cues in their own words — and every search that looked for a core temperature in a language that does not publish one is recorded in the relevant leaf's search log, so the absence is documented rather than assumed.
 ## Improvement potential
 
-1159
+-33
 
-Historical readings: 2503 (new system, recorded 2026-11-01, superseded).
+Historical readings: 2503 (new system, recorded 2026-11-01, superseded), 1159 (confirmed-threshold reading, recorded 2026-11-01, superseded by the in-language pass of the same day, which added three leaves and two analysed leaves). Negative readings are permitted by the system.
 
 ### Improvement priorities
 
 1. Verify each non-Swedish recipe's bone, meat coverage and position; preserve uncertain matches as comparisons rather than treating names as proof.
-2. Find additional human-created recipes from distinct traditions for each method, including numeric source-stated endpoints where available. Do not invent endpoints to meet the gate. The 2026-11-01 pass closed the group-coverage hole; what remains is endpoint density, and the honest state is that most traditions do not publish one.
-3. Investigate air frying, steaming and frying using cut-specific evidence, and register methods only when supported by a suitable recipe.
-4. Investigate the named comparators — *Dicke Rippe* / *Brustspitze* (German), *Schweinebrust* (Austrian), *revelsben* (Danish), *luinen kylki* (Finnish), *żeberka* (Polish), *小排* / *前排* (Chinese), *肩スペアリブ* (Japanese), *쪽갈비* (Korean), *Thick Rib* / *Dikrib* (South African) — for recipes and specifications; none is yet proven identical to the Swedish cut, and Chinese *小排* is the most promising because it is both named and cooked as a dish in its own right.
+2. Find additional numeric endpoints where the traditions that publish them exist (German, Swedish, American, Korean), and accept honestly where they do not. Do not invent endpoints to reach the gate. Oven Roast and Grill sit at the 6-source ceiling with 2 numeric each, so reaching the gate on those two would mean **replacing** a source — a decision that needs the user's approval.
+3. Decide whether deep-frying deserves a `deep_fry` enum value: Chinese sources fry this cut's riblets, the method has a real tradition behind it, and the current enum has no value to register it under. Air frying and steaming are now researched and registered.
+4. Investigate the named comparators — *Dicke Rippe* / *Brustspitze* (German), *Schweinebrust* (Austrian), *revelsben* (Danish), *luinen kylki* / *grillikylki* (Finnish), *żeberka grube* (Polish), *小排* / *前排* / *软边前排* (Chinese), *肩スペア리ブ* (Japanese), *쪽갈비* (Korean), *Thick Rib* / *Dikrib* (South African) — for recipes and specifications; none is yet proven identical to the Swedish cut, and Chinese *小排* remains the most promising because it is both named and cooked as a dish in its own right.
+5. Charcoal Grill is the one leaf under the 4-source floor and has no Group D source; a Scandinavian or Slavic charcoal rib recipe with full ingredients would close both at once.

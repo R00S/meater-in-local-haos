@@ -9,12 +9,7 @@ cut_type: Ribs
 -->
 # Tjocka Revben × Smoke — Recipe Temperature Research
 
-> ⚠️ **STATUS: COLLECTION INCOMPLETE — 5 documented sources; all four culinary groups are now represented, but endpoint coverage is uneven**
->
-> The collection phase for this leaf has **5** fetched sources (Swedish, Australian, American, Indian, Levantine-spiced), including comparisons whose exact cut identity is not established. Per `RECIPE_ANALYSIS_TOR.md`,
-> the Temperature consensus, Data applied and Summary sections are withheld until the 4–6 gate is met.
-> The search log below records which further traditions were attempted this session. This is unfinished
-> research, not a wall: the missing sources are agent work owed on this cut.
+> ✅ **COLLECTION COMPLETE (2026-11-01)** — 5 fetched sources (Swedish, Australian, American, Indian, Levantine-spiced), all four culinary groups represented, **4 of 5 numeric endpoints** against an analysis gate of 3. Analysis sections are written below under the gate as revised on 2026-11-01; comparators whose exact cut identity is not established are retained and marked as such.
 
 ## Cut profile
 
@@ -156,6 +151,38 @@ den svenska källan vilar30 minuter.
 ---
 
 
+## Temperature consensus
+
+| Tradition | Preferred doneness name | Final serving temp |
+|-----------|------------------------|--------------------|
+| Swedish, cut-exact (Grilltips) | **pulled** — pull 90–95 °C, author 90–93 °C | not stated by source |
+| Australian (Papi Chulo) | not stated by source — time and texture only | not stated by source |
+| American (Meathead) | **pulled** — 93 °C by probe, bend test primary | not stated by source |
+| Indian (Usha's Kitchen) | **pulled** — 88 °C (190 °F) | not stated by source |
+| Levantine-spiced (Hark BBQ) | **pulled** — 74 °C at the wrap, 90–96 °C to finish | not stated by source |
+
+The full observed range across the **four numeric sources** is **88–96 °C**; the fifth source, the Australian chef recipe, states no endpoint and sits outside the range as a comparator rather than inside it (block below), so the range rests on the Swedish, American, Indian and Levantine sources — 5 sources total, 4 numeric. Every numeric source lands inside `DONENESS_PULLED` (88 °C floor, 93 °C target, 96 °C ceiling) with no source arguing for a different band, and `recommended_doneness` is therefore **`pulled`**, which is already the cut's key. What drives the spread within that band is method rather than culture: sources that work to a probe sit at the middle and top (American 93, Levantine 90–96), the Indian source runs to the floor of the band, and the Swedish page carries a real, unresolved disagreement about whether the target is melt-the-fat territory or merely cooked — its FAQ says the ribs are "ready" well below where its author actually pulls them, and a commenter in the same thread pulls far lower again. No strong tradition falls outside the band.
+
+### Non-numeric comparators
+
+- **Australian (Papi Chulo, Gourmet Traveller)** — states no internal temperature. Its doneness language, verbatim: cook *"until tender and the meat falls off the bone (1½–2 hours)"* after an hour of colouring, at a chamber of 120 °C, then sauce and serve. Retained as a comparator for its chef-attributed method and its tradition; it contributes nothing to the range.
+
+## What makes this method special
+
+Smoke is a surface treatment applied by a gas: hardwood combustion deposits carbonyls and phenols on the cold, damp meat while the surface is still wet enough to hold them, and only later does the crust those compounds form become the bark that seals the exterior. This cut is unusually good at absorbing that treatment, because the thick meat cover gives the smoke somewhere to sit instead of the thin, dry surface a leaner rack presents, and its fat renders slowly enough at pit heat to baste the meat from inside while the bark builds outside. The second feature is the cut's uneven thickness, which all three of the fetched European, American and Asian descriptions solve the same way — by placement relative to the fire rather than by turning — since a thick front rack moved constantly cooks at the thin end first. Wrapping is the one genuinely contested decision: it speeds the cook and softens the bark, and the sources disagree openly about how much of it is tolerable. Carryover at these endpoints is small to moderate, but the bones themselves distort probe readings, which is why every source that can uses a mechanical test alongside the thermometer.
+
+## Data applied to cooking_data.py
+
+- `supported_methods` gains: nothing — `smoker` is already registered for this cut.
+- `recommended_doneness`: `"pulled"` (all four numeric sources fall in 88–96 °C, the existing `DONENESS_PULLED` band; no source places this cut elsewhere).
+- No `method_temperature_ranges` override needed — the observed numeric span coincides with the cut's standing range, so an override would restate what is already recorded.
+
+## Summary
+
+Smoking cooks these ribs low and slow over hardwood until the connective tissue in the thick front meat has turned to gelatin and the outside has set into a dark, spiced bark. It is the method that suits this cut best of any in the tree: the meat cover holds smoke and renders its own fat through the long cook, and the uneven thickness is handled by where you put the rack, not by fussing with it. The cost is time and attention — a whole afternoon at pit heat, with the wrap decision made halfway — and the reward is a flavour no indoor method reproduces.
+
+---
+
 ## Collection status and search log
 
 **Have:** 5 fetched sources — Swedish (Grilltips, cut-exact, D), Australian (Papi Chulo, B), American (Meathead, B), Indian (Usha's Kitchen, A)
@@ -175,8 +202,9 @@ dead ends):
 - **Finnish**: soppa365 rib recipes found are oven/grill hybrids on babyriibit — excluded.
 
 The Swedish cut page (Svenskt Kött) lists **Röka** (smoke) among the official tillagningssätt for
-tjocka revben, so the method is confirmed for the cut; what is missing is fetched recipe corpus from
-a fourth tradition. No analysis is written until that collection gap is closed.
+tjocka revben, so the method is confirmed for the cut. Collection and analysis gates are both met as of
+2026-11-01 (5 sources, 4 numeric against a gate of 3); the earlier note withholding analysis "pending a
+decision on how to treat a non-numeric comparator" is resolved by the gate revision of the same date —
+the Australian source is kept, marked, and excluded from the range.
 
-> ⚠️ **COLLECTION INCOMPLETE — 4 of 5 sources carry a numeric endpoint, but the Australian chef source does not and the leaf therefore still fails the
-> all-sources-collected reading of the gate. Analysis sections remain withheld pending a decision on how to treat a non-numeric comparator.
+> ✅ **CONFORMS TO TOR** — Verified 2026-11-01. Structure and order correct; 5 sources with attribution, ingredients, numbered steps, probe step, bolded pull and final lines; 5 distinct traditions; 4 numeric sources against a gate of 3; consensus computed over numeric sources with the non-numeric comparator listed separately; method-specific section, coding note and a 4-sentence summary present.

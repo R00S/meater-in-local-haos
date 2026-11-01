@@ -128,6 +128,30 @@ Braising cooks pork ribs in liquid in a covered vessel. Related rib recipes belo
 ---
 
 
+
+### 6. American (The Chaotic Table, Stephanie) — Braised Pork Ribs
+**Inspired by**: Stephanie, The Chaotic Table; https://thechaotictable.com/braised-pork-ribs/ (fetched 2026-11-01). *Named author; a covered Dutch-oven braise with six ingredients. Cut term: "pork spare ribs".*
+**Serves**: 6 · **Prep**: 15 min · **Cook**: 2 h 30 min covered · **Rest**: not stated
+
+**Ingredients**
+- 3–4 pounds pork spare ribs
+- 2 tablespoons yellow mustard
+- ¼ cup barbecue spice rub
+- 2½ cups barbecue sauce, divided
+- ½ cup apple juice
+- ¼ cup honey
+
+**Method**
+1. Heat the oven to **350 °F (175 °C)** — appliance temperature. Peel the membrane off with a paper towel and cut the rack into individual ribs.
+2. Rub the mustard over the meat, coat with the barbecue rub, and settle the ribs into a braising pan or large Dutch oven.
+3. Stir 2 cups of the sauce with the apple juice and honey; pour the mixture over the ribs.
+4. **Cover and bake 2½ hours until fork-tender.** Insert the MEATER probe from the side into the thickest piece, away from bone, before the lid goes on; the source insists it stays covered, because covering traps the moisture and keeps the ribs from drying out.
+5. Brush the remaining barbecue sauce over the top and serve.
+6. **Pull at 91 °C** (195 °F) — stated by the source in its own FAQ: *"If you want to check for an internal temperature of 195°F."* The source's primary cue, given first, is fork-tenderness with the meat pulling from the bone.
+7. Final serving temperature: **not stated by source**.
+
+---
+
 ## Collection status and search log
 
-> ⚠️ **COLLECTION INCOMPLETE — analysis withheld.** Five attributed recipes are preserved above and all four culinary groups are present (Chinese = A, Italian and Mexican = B, Polish = D, Kenyan = C). None of the five states a numeric internal temperature: every one ends on a time-and-texture cue. Since the collection gate requires source-stated numeric endpoints, no consensus or summary is written, and adding numbers here would be invention.
+> ⚠️ **SOURCE COUNT MET (6 of 6); ANALYSIS WITHHELD — 1 of 6 sources states a numeric endpoint and the analysis gate (2026-11-01) needs 3.** All four culinary groups are present (Chinese = A, Italian and Mexican = B, Polish = D, Kenyan = C). The five earlier sources all end on a time-and-texture cue, which under the 2026-11-01 gate makes them collected comparators rather than failures; the American braise added this pass is the leaf's first numeric source. Two further numeric braise sources are owed — and note that a German, Chinese, Portuguese, Swedish and Danish search for a braise recipe printing a core temperature found nothing fetchable, so those traditions are recorded as corpus findings.

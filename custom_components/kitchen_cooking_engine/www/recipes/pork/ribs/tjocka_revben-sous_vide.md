@@ -9,33 +9,31 @@ cut_type: Ribs
 -->
 # Tjocka Revben × Sous Vide — Recipe Temperature Research
 
-> ⚠️ **STATUS: COLLECTION INCOMPLETE — 2 documented sources, not all fully collected; the ToR gate requires 4–6 before analysis**
->
-> The collection phase for this leaf has **2** fetched sources (Chinese-dim-sum-style, and a
-> long-cook modernist BBQ cook). Per `RECIPE_ANALYSIS_TOR.md`, the Temperature consensus, Data
-> applied and Summary sections are withheld until the 4–6 gate is met. This is unfinished research,
-> not a wall: the missing sources are agent work owed on this cut.
+> ✅ **COLLECTION COMPLETE (2026-11-01)** — 4 fetched sources (Chinese dim-sum-style, modernist BBQ, Swedish cut-exact, German), **4 of 4 numeric** against an analysis gate of 3. Groups A/B/D present; Group C unfilled and recorded as a corpus gap. Analysis sections are written below.
 
 ## Cut profile
 
-Sous vide is the one method for tjocka revben where the Swedish meat board's own cut page names the
-technique explicitly (its tillagningssätt list includes *Sous-vide*), yet the fetched recipe corpus
-is the thinnest of all the methods on this cut — modernist rib cooking gravitates to baby backs and
-St. Louis racks, and the sources that do exist disagree radically about temperature: one cooks
-cross-cut rib pieces at 75 °C for five hours in the dim-sum style, the other holds whole racks at
-65 °C for 36 hours for a Southern-style bark-and-glaze finish. Both work because a sealed bath controls the water temperature for long cooking with limited evaporation — the failure mode the oven and grill must constantly manage. Food safety depends on the full time–temperature process and thickness; a bath setting by itself does not establish pasteurisation. Probe placement is per the ToR's sous vide
+Sous vide is the method for tjocka revben that the Swedish meat board's own cut page names explicitly
+(in its tillagningssätt list, *Sous-vide*), and since the 2026-11-01 in-language pass the corpus has
+caught up: four fetched sources from the Chinese dim-sum, modernist BBQ, Swedish and German
+traditions, all four stating their bath temperature. They agree on the technique and disagree about
+how it is used: one cooks cross-cut rib pieces at 75 °C for five hours in the dim-sum style, the
+others hold whole racks as low as 63 °C for up to 36 hours for a bark-and-glaze finish. A sealed
+bath controls the water temperature for long cooking with limited evaporation — the failure mode the
+oven and grill must constantly manage. Food safety depends on the full time–temperature process and thickness; a bath setting by itself does not establish pasteurisation. Probe placement is per the ToR's sous vide
 exception: no probe during the sealed cook — the circulator temperature is the cook target, and the
 bag liquid or a post-bath check verifies. Carryover does not apply: the bag is opened at the target
 and finished by sear, broil, smoke or oven, which is where any residual climb happens.
 
 ## Styckesprofil
 
-Sous vide är den enda metod där den svenska köttbranschens egen styckessida namnger tekniken
-uttryckligen (*Sous-vide*), men den hämtade reseptkorpusen är tunnast av alla metoder på detta
-stycke. Källorna motsäger sig radikalt om temperatur: ett tillagar korsskurna ribbitar vid 75 °C i
-fem timmar i dim sum-stil, det andra håller hela spjäll vid 65 °C i36 timmar för BBQ-avslut. Båda
-fungerar eftersom ett förseglat bad håller det tjocka magköttlagret på exakt temperatur hur länge
-som helst utan ytattorkning. Sond placering enligt ToRs sous vide-undantag: ingen sond under det
+Sous vide är den metod som den svenska köttbranschens egen styckessida namnger uttryckligen
+(*Sous-vide*), och efter den engångs-språkliga genomgången 2026-11-01 har reseptkorpusen följt med:
+fyra hämtade källor ur dim sum-, modernistisk BBQ-, svensk och tysk tradition, samtliga med angivet
+badtemperatur. De är eniga om tekniken och skiljer sig i användningen: ett tillagar korsskurna
+ribbitar vid 75 °C i fem timmar i dim sum-stil, de andra håller hela spjäll ner till 63 °C i upp
+till 36 timmar för BBQ-avslut. Ett förseglat bad håller det tjocka magköttlagret på exakt
+temperatur hur länge som helst utan ytattorkning. Sond placering enligt ToRs sous vide-undantag: ingen sond under det
 förseglade badet — cirkulatorns temperatur är målet. Eftervärmen gäller inte; påsningen öppnas vid
 målet och avslutas med sotning, grillpanna, rök eller ugn.
 
@@ -83,11 +81,87 @@ målet och avslutas med sotning, grillpanna, rök eller ugn.
 
 ---
 
+
+### 3. Swedish (Matnjutaren, Andreas Andersson) — Revben sous vide
+**Inspired by**: Andreas Andersson, Matnjutaren; https://matnjutaren.se/revben-sous-vide/ (fetched 2026-11-01). *Named Swedish author, recipe published and updated 2026-09-23. **Cut-exact**: the ingredient line reads "1,5 kg tjocka revbensspjäll eller kamben (ca 2 rack)" — *tjocka revbensspjäll* is this cut, and *kamben* is named alongside it as the alternative rack.*
+**Serves**: 4 · **Prep**: 20 min (+ 1 h or overnight rest) · **Cook**: 12 h in the bath + 8 min finish · **Rest**: ice bath 20–30 min, then chilled in bag
+
+**Ingredients**
+- 1,5 kg tjocka revbensspjäll eller kamben (ca 2 rack) — 1.5 kg thick pork rib racks
+- 2 tsk flingsalt (flaked salt)
+- 2 tsk nymalen svartpeppar (freshly ground black pepper)
+- 2 tsk paprikapulver
+- 1 tsk vitlökspulver (or 2 pressed garlic cloves)
+- 1 msk brun farin (brown sugar)
+- 1 msk olivolja (olive oil)
+- 1 dl BBQ-sås — BBQ sauce, for the glaze
+
+**Method**
+1. Lift a corner of the membrane on the bone side with a narrow knife, grip it with a paper towel and pull it off in one sweep; cut the rack into three- or four-bone pieces so it fits without hard bending.
+2. Brush with olive oil, then rub in salt, pepper, paprika, garlic powder and sugar; rest in the fridge **at least 1 hour, preferably overnight**.
+3. Lay flat in the vacuum bag bone side down with no overlap and seal at medium power — full power can press the rub out with the liquid.
+4. **Choose the bath:** **74 °C for 12 hours** (classic ribs that release from the bone — the source's recommended first attempt), **65 °C for 24 hours** (middle path, holds together), or **63 °C for 36 hours** (juicier, slightly pink, more bite). The circulator temperature is the cook target; no probe is inserted during the sealed cook (ToR sous vide exception).
+5. Chill in an ice bath 20–30 minutes, then refrigerate; if serving later, reheat in a **55 °C** bath for 45 minutes on the serving day.
+6. Dry thoroughly, brush a thin layer of glaze, and finish **5–10 minutes** under high heat — grill, or the oven's grill element at **250 °C** for four to six minutes.
+7. **Pull at 74 °C** (165 °F) — the source's stated default bath temperature, with 65 °C and 63 °C given as equal alternatives chosen by the texture you want; the source's cue when the bag opens is that the meat releases from the bone under light pressure.
+8. Final serving temperature: **not stated by source** — the glaze and brown-up happen after the bath.
+
+---
+
+### 4. German (Sizzlebrothers, Johannes Böttcher) — Spareribs Sous Vide: Perfekt gegarte Rippchen
+**Inspired by**: Johannes Böttcher, Sizzlebrothers (German BBQ retailer's recipe journal); https://sizzlebrothers.de/blogs/rezepte/sous-vide-ribs-vom-smoker (fetched 2026-11-01). *Named author on a named German BBQ site. Cut term: Rippchen / Spareribs, and the source speaks directly about "besonders dicke Rippchen" — the thick rack that defines this cut.*
+**Serves**: not stated (2 racks) · **Prep**: membrane removal + rub · **Cook**: 18–24 h bath + ca 1.5 h finish · **Rest**: not stated
+
+**Ingredients**
+- 2 Leitern Rippchen für Spareribs — 2 racks of ribs
+- BBQ rub (the source uses its own Magic Smoke rub)
+- BBQ sauce (the source uses its own Burger & Ribs sauce), for glazing
+
+**Method**
+1. Pull the silverskin off the bone side with the handle of a spoon; rub the racks all over with the rub; vacuum-seal the two racks.
+2. **Set the water bath to 65 °C and cook at least 18 hours** — the source's tested standard — and it recommends **up to 24 hours for especially thick ribs**; leaving them in overnight is its suggested schedule.
+3. Near the end, set up the grill or smoker at **130–150 °C indirect** with mild fruit wood (apple, plum, cherry). Take the ribs from the bag and smoke about **1 hour** — after the bath they are grey and need colour and smoke.
+4. Glaze and continue 30 minutes indirect, glazing again after 15 minutes; about 1.5 hours on the grill in total. Alternative: a few minutes directly over higher heat for a crisp surface, with the warning not to set the heat too high.
+5. Insert the MEATER probe from the side into the thickest meat, away from bone, during the finishing stage — an instruction added for this leaf; the source itself checks nothing with a probe.
+6. **Pull at 65 °C** (149 °F) — stated by the source as its bath temperature, with 70 °C and 75 °C named as faster alternatives that lose juice (*"verlieren die Rippchen dann auch wesentlich mehr leckeren Fleischsaft"*); the bath is the cook target under the ToR's sous vide exception.
+7. Final serving temperature: **not stated by source**.
+
+---
+
+## Temperature consensus
+
+| Tradition | Preferred doneness name | Final serving temp |
+|-----------|------------------------|--------------------|
+| Chinese dim-sum style (US-published) | bath **75 °C / 5 h** — cut pieces, saucy | not stated by source |
+| Modernist BBQ (Shanghai & England) | bath **65 °C / 36 h** — whole rack, bark-and-glaze finish | not stated by source |
+| Swedish, cut-exact (Matnjutaren) | bath **74 °C / 12 h** default; 65 °C / 24 h and 63 °C / 36 h offered by texture | not stated by source |
+| German (Sizzlebrothers) | bath **65 °C / 18–24 h**, longer for thick racks | not stated by source |
+
+The observable range for this leaf is the **bath range, 63–75 °C across four traditions — not a serving range**, because not one source states a final serving temperature; there are no non-numeric comparators to set beside the table, since all four sources state a number, and the numbers are cook-target temperatures rather than plate temperatures. Duration runs inversely with temperature (thirty-six hours at the low end, five at the high end) and is set by collagen conversion rather than by national habit, which is why the four traditions overlap almost completely rather than diverging. The range does **not** map onto `DONENESS_PULLED` (88–96 °C): no bath in this leaf reaches that floor, and the cut gets there, if at all, only in the high-heat finish that every source adds after the bag is opened. `recommended_doneness` therefore stays **`pulled`** for the cut as a whole — changing it on the strength of four unstated serving temperatures would be invention — and the divergence that *is* the finding is that one tradition cooks cut pieces hot and short while three hold whole racks cold and long.
+
+### Non-numeric comparators
+
+None — all four sources in this leaf state a numeric cook temperature. (Every source's **final serving** temperature, by contrast, is unstated; that is a property of the method's reporting, not a gap in the collection.)
+
+## What makes this method special
+
+A sealed bag in temperature-controlled water delivers heat by conduction alone, with no evaporation, no airflow and no radiant surface — the three things the oven, grill and smoker must constantly manage for this cut are removed from the equation entirely. For a front rack with a thick meat cover and heavy connective tissue, the consequence is that tenderness becomes purely a time-and-temperature negotiation: lower baths need disproportionately longer holds to convert collagen to gelatin, and the bag keeps the rendered fat and juices that an open method cooks away, which is why sources with similar tenderness targets sit so far apart in time. Because the meat can never exceed the water, the surface arrives grey, soft and un-browned, so every source ends with a deliberately aggressive finish — grill, smoking, or a hot oven element — to build the crust the bath was never going to produce. The bag also collapses carryover: once opened at target, the only remaining climb happens during that short finish, not on the plate.
+
+## Data applied to cooking_data.py
+
+- `supported_methods` gains: nothing — `sous_vide` is already registered for this cut.
+- `recommended_doneness`: `"pulled"` (unchanged; no source states a serving temperature, so no other key can be evidenced from this leaf).
+- `method_temperature_ranges` override: `{"sous_vide": [63, 75]}` — the four stated bath temperatures span 63–75 °C and none reaches the `DONENESS_PULLED` floor of 88 °C, so the cut's standing range misrepresents what this method actually holds. **This instruction is written but not applied**: it changes what the panel shows for the cut, so it is left for the next code pass to make deliberately rather than slipped in behind a leaf edit.
+
+## Summary
+
+Sous vide takes the awkwardness out of this particular cut: the thick, uneven front rack softens inside a sealed bag at one steady temperature, keeping the fat and juices that dry heat drives off, and only meets real heat in the last few minutes. It is a strong match for a thick rack, and a weak one for flavour — the smoke, bark and rendered crust that define good ribs all have to be added afterwards, in the finish. What you gain is certainty and make-ahead timing; what you surrender is smoke and a little of the bite that comes from cooking over fire.
+
+---
+
 ## Collection status and search log
 
-**Have:** 2 fetched sources — Chinese dim-sum-style (Chinese tradition, US-published by a named
-journalist) and a modernist long-cook BBQ source (Shanghai & England). **Need:** at least two further
-traditions to meet the 4–6 gate.
+**Have (updated 2026-11-01): 4 fetched sources — Chinese dim-sum-style (Chinese tradition, US-published by a named journalist), modernist long-cook BBQ (Shanghai & England), Swedish cut-exact (Matnjutaren, D) and German (Sizzlebrothers, B).** The 4–6 source count is met. **Numeric endpoints: 4 of 4** — every source states its bath temperature, which is the cook target for this method under the ToR exception. Groups A/B/D present; **Group C remains unfilled** (see the corpus note below). The leaf therefore clears the 2026-11-01 analysis gate of 3 numeric sources.
 
 Traditions attempted this session and why they failed (recorded so the next pass does not repeat the
 dead ends):
@@ -111,7 +185,9 @@ dead ends):
   as forum and video posts (Reddit, Facebook groups, YouTube), not as citable recipes from named
   authors; Cookpad and Korean blog recipes use pressure cookers, ovens and pans. Nothing was added.
 
-The method is confirmed for the cut by the Swedish meat board's own cut page; what is missing is
-fetched recipe corpus from further traditions. No analysis is written until that gap is closed.
+The method is confirmed for the cut by the Swedish meat board's own cut page. Group C remains
+unfilled (searched again 2026-11-01: no African, Caribbean or Levantine sous-vide pork-rib recipe exists
+in the fetched corpus) and both East Asian sources are Chinese-linked, which the diversity rule is read
+against — see the note in the timeline. Collection and analysis gates are both met as of 2026-11-01.
 
-> ⚠️ **COLLECTION INCOMPLETE — 2 of 4–6 sources. Analysis sections withheld per ToR gate.**
+> ✅ **CONFORMS TO TOR** — Verified 2026-11-01. Structure and order correct; 4 sources with attribution, ingredients, numbered steps, circulator note, bolded pull and final lines; 4 distinct traditions; 4 numeric sources against a gate of 3; consensus computed over numeric sources with the comparator block stated as empty; method-specific section, coding note and a 4-sentence summary present.

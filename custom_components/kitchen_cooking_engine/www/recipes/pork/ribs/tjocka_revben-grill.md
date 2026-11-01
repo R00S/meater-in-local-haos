@@ -117,6 +117,31 @@ Grilling exposes the meat-covered front pork ribs to direct or indirect heat. Th
 ---
 
 
+
+### 6. German (Grillfürst, Benny) — Spareribs grillen: butterzart in 2 Stunden
+**Inspired by**: Benny (author and product tester), Grillfürst; https://www.grillfuerst.de/magazin/grillrezepte/spareribs-grillen/ (fetched 2026-11-01). *Named author, German BBQ outlet, page updated 2026-10-27. **Cut term and its limit kept visible:** the source defines these as belly ribs — "Spareribs sind die Bauchrippen vom Schwein" — and separates this cut explicitly: "die Dicke Rippe ist die Brust des Schweins". Stored as a comparator, never as this cut. The page also gives method-by-method chamber figures for gas grill, charcoal, smoker, oven and air fryer; the steps below follow its gas/charcoal version.*
+**Serves**: not stated (2 racks) · **Prep**: 2 h marinating (better overnight) · **Cook**: ca 2–3 h · **Rest**: 5 min open before the final glaze
+
+**Ingredients**
+- Spareribs / Rippchen, 2 racks (baby back also accepted by the source, at 2 hours rather than 2½–3)
+- **BBQ rub**, enough to coat all sides
+- 2 bulbs garlic, halved crosswise
+- Rosemary sprigs
+- Beer, 500 ml (for the foil packet)
+- **Glasur**: 150 ml BBQ sauce + 50 ml sweet chilli sauce
+
+**Method**
+1. Rinse the racks cold, pat dry, and push a spoon handle under the membrane to peel it off in one piece.
+2. Press the rub onto the racks (flat hand, so it adheres), wrap tightly, and refrigerate **at least 2 hours, better overnight**; take them out 30 minutes before grilling.
+3. Preheat to **80–100 °C** chamber temperature; fill the smoker box with dry chips — *"Auf dem Holzkohlegrill kommen die Räucherchunks direkt in die Glut."* Set the ribs bone side down in the indirect zone, lid closed, and smoke about **25 minutes**, opening the lid as rarely as possible.
+4. Lay out a double sheet of wide foil, put the halved garlic and rosemary in the middle, set the grill tray on the garlic as a riser, transfer the smoked ribs to the tray, fold the foil up with the front left open, pour the beer in beneath the tray, then seal the packet.
+5. Turn the grill to **150–200 °C** and cook the packet **1½ hours** — the ribs tenderise in beer, garlic and rosemary steam. Insert the MEATER probe from the side into the thickest meat, away from bone, during this stage.
+6. Mix the glaze. Lift the ribs out onto the indirect zone and glaze thinly with the lid closed, repeating two or three times; the source is explicit that the sauce is added last because sugar burns. Let them stand **5 minutes** open before the final coat.
+7. **Pull at 85 °C** (185 °F) at the earliest, and at **90–95 °C** (194–203 °F) if you want the meat to release from the bone — stated by the source: *"Fertig sind die Rippchen bei jeder Methode ab 85 °C Kerntemperatur. Bei 90 bis 95 °C löst sich das Fleisch fast von selbst vom Knochen."*
+8. Final serving temperature: **not stated by source**.
+
+---
+
 ## Collection status and search log
 
-> ⚠️ **COLLECTION INCOMPLETE — analysis withheld.** Five attributed recipes are preserved above and all four culinary groups are present (Swedish and Finnish = D, British = B, South African = C, Thai = A). Only the Thai source states a numeric internal temperature (165 °F); the Swedish cut-exact recipe, the Finnish braise-then-grill, the South African simmer-then-braai and the BBC barbecue recipe all judge doneness by time and texture. The collection gate therefore cannot be met without inventing endpoints, so no consensus or summary is written.
+> ⚠️ **SOURCE COUNT MET (6 of 6); ANALYSIS WITHHELD — 2 of 6 sources state a numeric endpoint (Thai 165 °F; German 85 °C rising to 90–95 °C) and the analysis gate (2026-11-01) needs 3.** All four culinary groups are present (Swedish and Finnish = D, British and German = B, South African = C, Thai = A). The German source adds a second numeric *and* the leaf's clearest cut comparison: it calls its ribs belly ribs and names *Dicke Rippe* as a different piece — the distinction this cut file is built on. A third numeric source is owed; note that the leaf is at its 6-source ceiling, so a further numeric source would have to replace a non-numeric one, which is not done without the user's approval.
