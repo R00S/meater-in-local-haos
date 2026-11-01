@@ -91,11 +91,7 @@ måltemperaturen en biffstemperatur och inte en bräseringstemperatur: 58–70 �
 
 ## Improvement potential
 
-**Points: −2 → 18.**
-
-**What the number cannot see.** Two declared methods (`slow_cooker`, `smoker`) have no usable leaf: the
-smoker file is a stub and the slow-cooker leaf does not exist. The table has no row for a declared-but-unwritten
-leaf, so this number describes the evidence that exists, not the work that remains.
+18
 
 ### Data state and gaps
 

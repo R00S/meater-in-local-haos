@@ -48,6 +48,8 @@ USDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertempe
 - [Pan Fry](./ground_pork-pan_fry.md)
 ## Improvement potential
 
+11
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

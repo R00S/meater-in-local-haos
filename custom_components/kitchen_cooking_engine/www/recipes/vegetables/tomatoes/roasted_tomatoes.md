@@ -72,12 +72,6 @@ Tomater (*Solanum lycopersicum*) i airfryern rostas på 8–15 minuter beroende 
 produced by a table that charged −8 for an unstarted method survey and −1 for a missing leaf while never
 looking at the two leaves that already existed).
 
-**Points: −1 Group D → 19.**
-
-**What the number cannot see.** Two leaves are owed (`grill`, `pan_fry`) and the oven-broil leaf contains no
-temperature at all. The table has no row for a declared-but-unwritten leaf, so this number describes the
-evidence that exists, not the work that remains.
-
 ### Data state and gaps
 
 | gap | status | evidence | effort | yield |

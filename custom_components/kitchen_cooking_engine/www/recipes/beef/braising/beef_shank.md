@@ -46,6 +46,8 @@ Oxlägg är den nedre delen av framlägget (foreshank) eller baklägget (hindsha
 - [Slow Cooker](./beef_shank-slow_cooker.md)
 ## Improvement potential
 
+11
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

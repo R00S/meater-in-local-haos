@@ -60,6 +60,8 @@ Ugnsrostning: 200–220 °C, 35–45 minuter med vändning. Innertemperatur: **7
 
 ## Improvement potential
 
+18
+
 ### Improvement priorities
 
 1. Cooking methods not researched — survey all cooking methods for chicken legs/drumsticks; update `methods:` list; set `cooking_methods_researched: 1`

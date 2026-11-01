@@ -48,6 +48,8 @@ De kräver längre tillagningstid än baby back ribs (3–5 timmar låg-och-lån
 - [Oven Roast](./spare_ribs-oven_roast.md)
 ## Improvement potential
 
+8
+
 ### Improvement priorities
 
 1. Cooking methods not researched

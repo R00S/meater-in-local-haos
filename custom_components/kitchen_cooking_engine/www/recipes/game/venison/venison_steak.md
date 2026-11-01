@@ -80,6 +80,8 @@ Sear i smör eller klarat smör vid hög värme — 3–4 minuter per sida — s
 
 ## Improvement potential
 
+17
+
 ### Improvement priorities
 
 1. Groups A and C missing — add sources from Japanese/Korean/Chinese or Middle Eastern/African venison traditions to an existing or new leaf

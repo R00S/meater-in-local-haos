@@ -50,6 +50,8 @@ Bräsera med rödvin, vildfond, enbär, rosmarin, lök och morötter i täckt ug
 - [Oven Roast](./wild_boar_shoulder-oven_roast.md)
 ## Improvement potential
 
+8
+
 ### Improvement priorities
 
 1. Cooking methods not researched

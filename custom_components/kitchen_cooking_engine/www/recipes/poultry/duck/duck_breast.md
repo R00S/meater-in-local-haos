@@ -67,6 +67,8 @@ Ankbröst är ett mörkt, rikt snitt med tjockt subcutant fett. Till skillnad fr
 
 ## Improvement potential
 
+17
+
 ### Improvement priorities
 
 1. Groups C and D missing — add sources from Moroccan/Middle Eastern or Scandinavian/Eastern European duck breast preparations

@@ -67,6 +67,8 @@ Köttet är djupt rött med litet fettinnehåll (under 2 %), högt järninnehål
 
 ## Improvement potential
 
+8
+
 ### Improvement priorities
 
 1. Grill and pan_sear leaves empty — find properly sourced ostrich fillet recipes with full ingredient quantities for the quick-cook methods

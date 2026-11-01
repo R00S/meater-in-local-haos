@@ -72,6 +72,8 @@ Pannstekning vid hög värme är den viktigaste metoden: 3–4 minuter per sida 
 
 ## Improvement potential
 
+9
+
 ### Improvement priorities
 
 1. Cooking methods not researched — pan_sear and oven_roast are confirmed methods. sous_vide is declared but not yet verified via source research. Conduct a proper survey of all methods used for this cut and set `cooking_methods_researched: 1` only after that is done.

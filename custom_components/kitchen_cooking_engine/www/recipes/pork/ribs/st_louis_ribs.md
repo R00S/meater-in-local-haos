@@ -83,6 +83,8 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ## Improvement potential
 
+9
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research grill (direct vs indirect) and smoker methods for St. Louis ribs; create leaf files; then set `cooking_methods_researched: 1`

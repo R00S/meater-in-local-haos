@@ -52,6 +52,8 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 - [Slow Cooker](./lamb_shank-slow_cooker.md)
 ## Improvement potential
 
+10
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

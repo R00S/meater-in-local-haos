@@ -59,6 +59,8 @@ Klassiska beredningar: brittisk *liver and onions*, tysk *Leberwurst*-teknik, no
 
 ## Improvement potential
 
+9
+
 ### Improvement priorities
 
 1. Cooking methods not researched — add Group A (Chinese stir-fried pork liver) and Group C (Lebanese/Moroccan sautéed liver) to `liver_pork-pan_fry.md`; then create `liver_pork-pan_sear.md`; then set `cooking_methods_researched: 1`

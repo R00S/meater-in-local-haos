@@ -62,6 +62,8 @@ Tonfiskbiff — vanligast blåfenad (*Thunnus thynnus*, japansk *hon maguro*), g
 - [Pan Sear](./tuna_steak-pan_sear.md)
 ## Improvement potential
 
+8
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

@@ -56,6 +56,8 @@ Det segmenterade ytterskalet (skalet) är ett inbyggt värmeskydd som skyddar k�
 - [Oven Roast](./lobster_tail-oven_roast.md)
 ## Improvement potential
 
+19
+
 ### Improvement priorities
 
 1. Missing Culinary Group C tradition — add a Middle Eastern, Moroccan, Caribbean, or Turkish lobster tail recipe to the grill or oven_roast leaf. Lobster is found in the Mediterranean and Red Sea; Turkish *ızgara ıstakoz* (grilled lobster) exists as a tradition. 20+ probes on 2026-04-27 and 2026-04-29 found no accessible Group C lobster tail recipe.

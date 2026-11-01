@@ -77,6 +77,8 @@ Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med lån
 - [Sous Vide](./flank_steak-sous_vide.md)
 ## Improvement potential
 
+10
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

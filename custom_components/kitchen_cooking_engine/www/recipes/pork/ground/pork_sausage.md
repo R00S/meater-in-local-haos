@@ -52,6 +52,8 @@ Grillning, pannstekning och ugnsrostning är de vanligaste metoderna. Alla kräv
 - [Pan Fry](./pork_sausage-pan_fry.md)
 ## Improvement potential
 
+10
+
 ### Improvement priorities
 
 1. Cooking methods not researched

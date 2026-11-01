@@ -98,6 +98,8 @@ surveys for `grill`, `pressure_cooker` or `sous_vide` are exhausted.
 
 ## Improvement potential
 
+17
+
 ### Improvement priorities
 
 1. The doneness model is the cut's main structural flaw: a fully cooked 5 kg ham should not be offered the same 71 °C target as a raw gammon joint. Splitting the two would need a cut-level change, not a text edit.

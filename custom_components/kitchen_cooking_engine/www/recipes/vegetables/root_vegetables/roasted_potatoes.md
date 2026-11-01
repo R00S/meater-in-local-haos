@@ -42,6 +42,8 @@ Rostning av potatis (*Solanum tuberosum*) omvandlar rå stärkelse till en krisp
 - [Oven Roast](./roasted_potatoes-oven_roast.md)
 ## Improvement potential
 
+10
+
 ### Improvement priorities
 
 1. Cooking methods not researched

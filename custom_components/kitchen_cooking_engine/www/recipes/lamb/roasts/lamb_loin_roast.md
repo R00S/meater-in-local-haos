@@ -73,6 +73,8 @@ Ugnsrostning: sear i en het panna, sedan avsluta i 180–200 °C ugn. Vid 2–3 
 
 ## Improvement potential
 
+13
+
 ### Improvement priorities
 
 1. **Leaf sources** — find a 4th verified oven_roast lamb loin source from a French, New Zealand, North American, or Eastern European culinary tradition.

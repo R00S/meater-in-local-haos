@@ -49,6 +49,8 @@ Getlägg skiljer sig från lammlägg i att get i allmänhet slaktas vid äldre �
 - [Oven Roast](./goat_shank-oven_roast.md)
 ## Improvement potential
 
+19
+
 ### Improvement priorities
 
 1. Missing Culinary Group A tradition — add an Indian, Pakistani, South Asian, or East Asian goat shank recipe to one of the leaf files. Goat (*bakra/bakri*) is very common in South Asian cuisines; Indian *gosht/mutton* stews often use shank. spiceupthecurry.com/swasthi.com are good targets when accessible.

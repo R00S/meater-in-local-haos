@@ -103,6 +103,8 @@ kortare med grill-final) kräver i stället att skinnet prickas, torkas och salt
 
 ## Improvement potential
 
+15
+
 ### Registry correction recorded this pass
 
 `goose_thigh` in `cooking_data.py` declared `recommended_doneness="well_done"`, a band this cut

@@ -56,6 +56,8 @@ Innertemperatur: **60–63 °C (140–145 °F)**. Eftertillagning: 2–3 °C. Dr
 - [Pan Sear](./mahi_mahi-pan_sear.md)
 ## Improvement potential
 
+9
+
 ### Improvement priorities
 
 1. Cooking methods not researched

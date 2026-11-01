@@ -91,6 +91,8 @@ slow cooker.
 
 ## Improvement potential
 
+11
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research remaining methods; set `cooking_methods_researched: 1`

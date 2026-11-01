@@ -79,6 +79,8 @@ Pannstekning: medel-hög värme, 3–4 minuter per sida. Innertemperatur: **70�
 
 ## Improvement potential
 
+14
+
 ### Improvement priorities
 
 1. Fetch one sous-vide pork-neck/shoulder-steak source from outside the US (European or Japanese precision-cooking publication) — clears one count row and one distinct row

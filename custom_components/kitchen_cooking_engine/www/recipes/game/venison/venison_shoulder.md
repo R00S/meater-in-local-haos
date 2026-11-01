@@ -51,6 +51,8 @@ Dessa egenskaper gör bogen idealisk för bräsering och slow cooking — metode
 
 ## Improvement potential
 
+10
+
 ### Improvement priorities
 
 1. Oven roast leaf empty — find venison shoulder oven roast recipes with full ingredient quantities

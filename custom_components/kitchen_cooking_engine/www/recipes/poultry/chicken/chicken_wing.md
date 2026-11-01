@@ -61,6 +61,8 @@ Alla tillagningsmetoder (air fryer, grill, ugn, fritering) kräver minst 74 °C 
 - [`chicken_wing-oven_roast.md`](chicken_wing-oven_roast.md) — 1 source, in-progress: Group B (Taste of Home/USA)
 ## Improvement potential
 
+11
+
 ### Improvement priorities
 
 1. Cooking methods not researched — do a proper survey of all cooking methods for chicken wings; update `methods:` list and set `cooking_methods_researched: 1` only after that survey

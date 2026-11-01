@@ -52,6 +52,8 @@ Det kulinariska målet är kollagensmältning: 85–90 °C, hållet i 2–3 timm
 - [Slow Cooker](./lamb_neck-slow_cooker.md)
 ## Improvement potential
 
+19
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

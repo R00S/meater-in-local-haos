@@ -58,6 +58,8 @@ En hel kyckling är en komplett fågel — bestående av bröstködet (vitt, mag
 
 ## Improvement potential
 
+18
+
 ### Improvement priorities
 
 1. Cooking methods not researched — survey all methods for whole chicken; update `methods:` list; set `cooking_methods_researched: 1`

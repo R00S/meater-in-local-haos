@@ -47,6 +47,8 @@ Nötbringa tas från bröstet och nedre delen av djurets bröstkorg och består 
 - [Oven Roast](./brisket-oven_roast.md)
 ## Improvement potential
 
+19
+
 ### Improvement priorities
 
 1. Group D tradition missing — add a Scandinavian, Polish, Russian, or Ukrainian oven-roasted brisket source to the oven_roast leaf. Note: in Scandinavian tradition, *bringa/oxbringa* is more often boiled or simmered (*pepparrotskött*) than oven-roasted; may need to accept this gap.

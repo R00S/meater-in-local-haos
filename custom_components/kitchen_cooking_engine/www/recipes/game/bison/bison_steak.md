@@ -112,6 +112,8 @@ Den mörka röda färgen speglar hög myoglobinhalt. Behandla som ett extremt ma
 
 ## Improvement potential
 
+12
+
 ### Integrity work recorded this pass (why some rows moved)
 
 The pre-ToR leaves contained corrupted source records: the Daskochrezept charcoal recipe was

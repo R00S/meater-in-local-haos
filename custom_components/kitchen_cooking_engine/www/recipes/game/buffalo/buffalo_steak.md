@@ -75,6 +75,8 @@ Köttet (*carabeef*) är magert, mörkrött och fast, med en smak liknande mager
 - [Pan Sear](./buffalo_steak-pan_sear.md)
 ## Improvement potential
 
+9
+
 ### Improvement priorities
 
 1. Cooking methods not researched

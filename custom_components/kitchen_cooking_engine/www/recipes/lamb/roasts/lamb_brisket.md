@@ -51,6 +51,8 @@ Låg-och-långsam tillagning transformerar snittet: 3–4 timmar i ugn vid 150 �
 
 ## Improvement potential
 
+17
+
 ### Improvement priorities
 
 1. Braise leaf cut profile copies parent — rewrite the `## Cut profile` section of `lamb_brisket-braise.md` so the opening paragraph is method-specific (what braising does to this cut, not just what the cut is)

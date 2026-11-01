@@ -93,6 +93,8 @@ exhausted.
 
 ## Improvement potential
 
+17
+
 ### Improvement priorities
 
 1. The recommendation and the evidence disagree: either find a source that recommends 54 °C for cutlets or move `recommended_doneness` up to medium. This is a cut-level decision, not a text edit.

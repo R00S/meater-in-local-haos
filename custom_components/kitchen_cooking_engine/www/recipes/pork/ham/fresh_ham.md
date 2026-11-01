@@ -54,6 +54,8 @@ Tillaga i ugn vid 160–175 °C, ca 20–25 min per 500 g. Innertemperatur: **75
 - [Oven Roast](./fresh_ham-oven_roast.md)
 ## Improvement potential
 
+10
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

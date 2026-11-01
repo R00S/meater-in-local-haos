@@ -55,6 +55,8 @@ En hel anka presenterar en tillagningsutmaning: bröstet är bäst vid 57–63 �
 - [Oven Roast](./whole_duck-oven_roast.md)
 ## Improvement potential
 
+8
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

@@ -133,6 +133,8 @@ corpus for this cut measures temperatures only in the North American burger and 
 
 ## Improvement potential
 
+15
+
 ### Integrity notes recorded this pass
 
 - Two leaves (pan_fry, simmer) contain **no temperature at all** across eight sources. That is a

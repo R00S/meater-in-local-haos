@@ -54,6 +54,8 @@ All methods inherit from the primary `mutton_shoulder` entry. Independent leaf f
 
 ## Improvement potential
 
+14
+
 ### Improvement priorities
 
 1. **System issue** · This duplicate entry should be reviewed — if `mutton_shoulder` and `mutton_shoulder_alt` are truly the same cut, the alt entry may be removable from cooking_data.py

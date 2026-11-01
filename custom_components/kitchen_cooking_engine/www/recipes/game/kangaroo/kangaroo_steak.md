@@ -116,6 +116,8 @@ medium-rare-band (52–57 °C) — en verklig avvikelse som är dokumenterad, in
 
 ## Improvement potential
 
+12
+
 ### Integrity notes recorded this pass
 
 - `quitelike.com`'s peppered kangaroo steaks page was fetched and **rejected**: the body carries only

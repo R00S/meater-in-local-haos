@@ -71,6 +71,8 @@ Kalkonstjälken (trumpinnen) är det nedre segmentet av fågelns bakre extremite
 
 ## Improvement potential
 
+10
+
 ### Improvement priorities
 
 1. Create `turkey_leg-smoker.md` — africanbites.com/smoked-turkey-legs/ is a ready Group C source; need 3 more sources

@@ -65,6 +65,8 @@ Denna magerhet kräver mycket korta tillagningstider vid hög värme — 2–3 m
 
 ## Improvement potential
 
+10
+
 ### Improvement priorities
 
 1. No per-method temperature consensus — add 2–4 more source recipes to pan_sear leaf then write analysis sections

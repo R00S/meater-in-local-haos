@@ -57,6 +57,8 @@ Färsk fläskkäk bräseras som fläskkind, till **85–90 °C (185–194 °F)**
 
 ## Improvement potential
 
+9
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research the **grill** method for Korean-style hangjeongsal (항정살 / pork neck-jowl muscle grilled over charcoal); attempted sources (all 404): koreanbapsang.com, kimchimari.com, beyondkimchee.com, aeriskitchen.com, maangchi.com. Try: omnivorescookbook.com, seonkyounglongest.com (use browser search), or any Korean food magazine site. Once a grill leaf is created and both braise and grill methods are covered, set `cooking_methods_researched: 1`.

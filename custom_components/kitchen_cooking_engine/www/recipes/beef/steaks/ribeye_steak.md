@@ -91,6 +91,8 @@ Ribeye består av ögat (longissimus), rib cap (spinalis dorsi, den rikaste och 
 - [Sous Vide](./ribeye_steak-sous_vide.md)
 ## Improvement potential
 
+11
+
 ### Improvement priorities
 
 1. Cooking methods not researched

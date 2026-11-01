@@ -67,6 +67,8 @@ Piggvar (*Scophthalmus maximus*; tyska: Steinbutt; franska: turbot; norska: pigg
 
 ## Improvement potential
 
+17
+
 ### Improvement priorities
 
 1. Missing method leaf files — create `turbot-grill.md` and `turbot-sous_vide.md`, each with 4–6 diverse source recipes across culinary traditions, a method-specific cut profile, and pull temperatures from verified sources.

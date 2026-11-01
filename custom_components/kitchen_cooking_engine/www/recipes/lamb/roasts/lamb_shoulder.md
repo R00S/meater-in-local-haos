@@ -48,6 +48,8 @@ Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagnin
 - [Oven Roast](./lamb_shoulder-oven_roast.md)
 ## Improvement potential
 
+18
+
 ### Improvement priorities
 
 1. Cooking methods not researched

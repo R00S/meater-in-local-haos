@@ -69,6 +69,8 @@ Sirloin tip roast (känd som "knuckle" i UK/australisk styckning, "pointe de cul
 
 ## Improvement potential
 
+10
+
 ### Improvement priorities
 
 1. No per-method temperature consensus — add 2–4 more source recipes to `sirloin_tip_roast-oven_roast.md` (need Groups A, C, D) then write analysis sections

@@ -43,6 +43,8 @@ Hel bakad potatis (*Solanum tuberosum*) i konventionell ugn är arketypen av lå
 - [Oven Bake](./baked_potato-oven_bake.md)
 ## Improvement potential
 
+9
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

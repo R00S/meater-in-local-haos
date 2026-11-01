@@ -59,6 +59,8 @@ Innertemperatur: **68–72 °C (154–162 °F)** för genomstekt, saftig loin. U
 - [Oven Roast](./pork_loin_roast-oven_roast.md)
 ## Improvement potential
 
+8
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

@@ -68,6 +68,8 @@ Kalkontlår är den övre benets mörka köttssektion av kalkon, från höften t
 
 ## Improvement potential
 
+16
+
 ### Improvement priorities
 
 1. Rewrite oven_roast leaf cut profile — opening paragraph near-identical to parent; needs method-specific analysis of what oven-roasting does to this cut

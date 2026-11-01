@@ -49,6 +49,8 @@ Tillagas alltid till fullt genomstekt för säkerhet och optimal smak. Innertemp
 - [Grill](./lamb_kofta-grill.md)
 ## Improvement potential
 
+9
+
 ### Improvement priorities
 
 1. Cooking methods not researched

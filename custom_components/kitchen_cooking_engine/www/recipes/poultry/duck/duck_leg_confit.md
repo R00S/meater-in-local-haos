@@ -55,6 +55,8 @@ Anklägg confit (*confit de canard*) avser specifikt anklägg med ben och skinn 
 
 ## Improvement potential
 
+9
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research whether methods beyond `oven_roast` (e.g. air fryer confit, sous vide confit) have credible recipes; if so add them to `cooking_data.py` and create leaf files; then set `cooking_methods_researched: 1`

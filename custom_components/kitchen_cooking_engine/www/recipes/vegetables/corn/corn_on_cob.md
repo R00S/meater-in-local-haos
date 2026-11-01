@@ -57,6 +57,8 @@ Majs på kolven (*Zea mays*) kokt är den enklaste och mest globalt vanliga till
 - [Steam](./corn_on_cob-steam.md)
 ## Improvement potential
 
+10
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

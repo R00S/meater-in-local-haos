@@ -95,6 +95,8 @@ minuter täckt.
 
 ## Improvement potential
 
+17
+
 ### Integrity work recorded this pass
 
 The oven-roast leaf it replaces had given **all three of its sources the same 70–75 °C pull** and

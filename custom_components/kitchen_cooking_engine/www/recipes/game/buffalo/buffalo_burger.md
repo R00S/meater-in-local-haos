@@ -116,6 +116,8 @@ därför `well_done` som enda band. Innertemperatur: **71 °C (160 °F)**. Efter
 
 ## Improvement potential
 
+16
+
 ### Integrity work recorded this pass (why the old number's rows were wrong)
 
 Both pre-ToR leaves gave **every one of their sources the same pull of 70–72 °C (158–162 °F)**,

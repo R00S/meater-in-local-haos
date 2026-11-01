@@ -94,6 +94,8 @@ Innertemperatur: **57–65 °C (135–149 °F)** för medium-rare till medium; *
 - [Oven Roast](./leg_of_lamb-oven_roast.md)
 ## Improvement potential
 
+11
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

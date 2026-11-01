@@ -93,6 +93,8 @@ Entrecôtestek (övre entrecôtestek i nordamerikansk styckningsnomenklatur) är
 
 ## Improvement potential
 
+9
+
 ### Notes
 
 - `cooking_methods_researched: 1` — oven_roast confirmed as the primary method

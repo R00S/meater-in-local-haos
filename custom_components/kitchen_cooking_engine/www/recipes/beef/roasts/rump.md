@@ -89,6 +89,8 @@ Nötrumpa skärs från rumpprimalen — toppen av bakkvarteret, vid korsningen a
 
 ## Improvement potential
 
+10
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research grill and oven_roast methods; set `cooking_methods_researched: 1`

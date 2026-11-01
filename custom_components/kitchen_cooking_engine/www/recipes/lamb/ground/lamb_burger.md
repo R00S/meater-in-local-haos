@@ -47,6 +47,8 @@ Vid grillning eller pannstekning kräver USDA-standarden att malet lamm tillagas
 - [Grill](./lamb_burger-grill.md)
 ## Improvement potential
 
+9
+
 ### Improvement priorities
 
 1. Cooking methods not researched

@@ -51,6 +51,8 @@ Bräsering (160–170 °C, 2–3 timmar) är den definitiva metoden: kollagen sm
 - [Pan Fry](./pork_cheek-pan_fry.md)
 ## Improvement potential
 
+9
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

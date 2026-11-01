@@ -59,6 +59,8 @@ Denna intensiva muskelaktivitet skapar den djupaste smak och högsta kollageninn
 
 ## Improvement potential
 
+9
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research slow_cooker method for pork cheek; add leaf file; then set `cooking_methods_researched: 1`

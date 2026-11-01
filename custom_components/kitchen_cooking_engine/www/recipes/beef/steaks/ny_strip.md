@@ -92,6 +92,8 @@ Fettlisten längs ena kanten är ett definierande drag och smakkälla — den sm
 - [Sous Vide](./ny_strip-sous_vide.md)
 ## Improvement potential
 
+10
+
 ### Improvement priorities
 
 1. Cooking methods not researched

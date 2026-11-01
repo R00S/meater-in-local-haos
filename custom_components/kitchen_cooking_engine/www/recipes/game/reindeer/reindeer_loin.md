@@ -65,6 +65,8 @@ Renkött är mycket magert (typiskt under 2 % intramuskulärt fett) och djupt r�
 
 ## Improvement potential
 
+10
+
 ### Improvement priorities
 
 1. Oven roast leaf has only 1 source — add 3–5 more oven_roast reindeer loin sources from diverse traditions

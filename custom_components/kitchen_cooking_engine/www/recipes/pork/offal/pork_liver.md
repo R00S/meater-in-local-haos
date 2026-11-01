@@ -48,6 +48,8 @@ Pannstekning i smör vid hög värme är standardmetoden. Innertemperatur: **70�
 - [Pan Sear](./pork_liver-pan_sear.md)
 ## Improvement potential
 
+11
+
 ### Improvement priorities
 
 1. Cooking methods not researched

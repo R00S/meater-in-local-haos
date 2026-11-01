@@ -85,6 +85,8 @@ Rack: **57–63 °C** för medium-rare; bröst: **88–95 °C** för fall-från-
 
 ## Improvement potential
 
+9
+
 ### Improvement priorities
 
 1. Cooking methods not researched — research grill method (rack of lamb on grill / BBQ); add `lamb_rib-grill.md`; then set `cooking_methods_researched: 1`

@@ -65,6 +65,8 @@ Hel lax betyder en intakt fiskkropp: båda sidorna sitter ihop via ryggrad och r
 
 ## Improvement potential
 
+12
+
 ### Improvement priorities
 
 1. Complete broad method-survey research for whole salmon across culinary traditions and update `cooking_methods_researched` to `1` only when complete.

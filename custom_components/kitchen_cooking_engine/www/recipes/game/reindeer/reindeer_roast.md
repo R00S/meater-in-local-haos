@@ -90,11 +90,7 @@ kompakt och går mycket snabbare per kilo. Sond från den tjocka änden in i mit
 
 ## Improvement potential
 
-**Points: −3 → 17.**
-
-**What the number cannot see.** Two declared methods (`braise`, `smoker`) have no usable leaf, and the
-oven-roast leaf has three records where the gate asks for four. The table has no row for either, so this
-number describes the evidence that exists, not the work that remains.
+17
 
 ### Data state and gaps
 

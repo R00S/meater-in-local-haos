@@ -69,6 +69,8 @@ Fiberstrukturen innebär att skirt steak alltid måste skäras tvärs mot fibern
 
 ## Improvement potential
 
+19
+
 ### Improvement priorities
 
 1. Missing Culinary Group D tradition — add a Scandinavian, Polish, Russian, or Baltic recipe to one of the leaf files. Skirt steak is not a traditional Group D cut; the closest equivalent is thin beef *biffstek* (Swedish), but that typically uses thicker cuts. Further probing needed.

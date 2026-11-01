@@ -72,6 +72,8 @@ Pannstekning är den vanligaste metoden i det skandinaviska hemmaköket: smör, 
 - [Pan Sear](./reindeer_steak-pan_sear.md)
 ## Improvement potential
 
+9
+
 ### Improvement priorities
 
 1. Cooking methods not researched

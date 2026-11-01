@@ -69,6 +69,8 @@ Denna fettrikedom gör det idealisk för långsam tillagning (sous vide, bräser
 
 ## Improvement potential
 
+19
+
 ### Improvement priorities
 
 1. Group C missing — Group C tradition largely avoids pork; this gap may be permanent

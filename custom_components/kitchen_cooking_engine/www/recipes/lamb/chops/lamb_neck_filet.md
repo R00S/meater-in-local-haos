@@ -75,6 +75,8 @@ Kokar långsamt till mörhet (85–90 °C) via bräsering eller slow cooker; pan
 
 ## Improvement potential
 
+9
+
 ### Improvement priorities
 
 1. Pan sear and slow cooker leaves empty — find recipes with full ingredient quantities

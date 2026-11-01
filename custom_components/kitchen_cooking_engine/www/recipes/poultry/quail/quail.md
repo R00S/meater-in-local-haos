@@ -55,6 +55,8 @@ All five declared methods have a leaf file. Only `oven_roast` meets the 4–6-so
 
 ## Improvement potential
 
+16
+
 ### Improvement priorities
 
 1. Bring each partial leaf to the 4–6-source gate — starting with `quail-smoker.md` (1 source; collect the Chinese 茶熏鹌鹑 primaries and the Neil Perry *Rockpool* book recipe).
