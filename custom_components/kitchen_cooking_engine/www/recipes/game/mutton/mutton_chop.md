@@ -55,7 +55,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-improvement_potential: 9
+improvement_potential: 2671
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 5
@@ -84,14 +84,9 @@ Fårköttets röda fiber och täta muskelstruktur tål höga temperaturer utan a
 - [Pan Sear](./mutton_chop-pan_sear.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-26
+2671
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Method file `mutton_chop-grill.md` copies parent cut profile | −1 |
-| Method file `mutton_chop-pan_sear.md` copies parent cut profile | −1 |
-| Method file `mutton_chop-grill.md` copies `mutton_chop-pan_sear.md` | −1 |
+Historical readings: 9 / 20 (former 0–20 system, assessed 2026-04-26; not comparable with the new scale).
 
 ### Improvement priorities
 

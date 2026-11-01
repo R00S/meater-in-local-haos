@@ -24,7 +24,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-improvement_potential: 8
+improvement_potential: 2398
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 2
@@ -54,15 +54,9 @@ Grill, ugn, air fryer eller panna — alla metoder kräver minst 74 °C (165 °F
 - [Pan Fry](./chicken_burger-pan_fry.md)
 ## Improvement potential
 
-**Improvement potential: 8 / 20** — assessed 2026-04-26
+2398
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Method file `chicken_burger-air_fryer.md` copies parent cut profile | −1 |
+Historical readings: 8 / 20 (former 0–20 system, assessed 2026-04-26; not comparable with the new scale).
 
 ### Improvement priorities
 

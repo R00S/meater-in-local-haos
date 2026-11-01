@@ -56,7 +56,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-improvement_potential: 9
+improvement_potential: 2583
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -91,19 +91,9 @@ Standardmetod: sear fettlocket nedåt i het torr panna tills renderat, sedan sea
 
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-27
+2583
 
-| Criterion | Points | Status |
-|-----------|--------|--------|
-| Cut profile written (not a placeholder) | +1 | ✅ Done |
-| Culinary Group B tradition covered (oven_roast leaf) | +1 | ✅ Done (Corrigan, Kitchin, Koffmann) |
-| Oven roast leaf has source recipes with safe temps | +3 | ✅ Done (55–60 °C explicit pull from Corrigan) |
-| Culinary preferred temp research present | +4 | ✅ Done (oven_roast leaf) |
-| Per-method temp research present | +2 | ✅ Done — oven_roast leaf |
-| Cooking methods not researched | −8 | pending — grill and pan_sear still unresearched |
-| Missing Culinary Group A tradition | −1 | pending |
-| Missing Culinary Group C tradition | −1 | pending |
-| Missing Culinary Group D tradition | −1 | pending |
+Historical readings: 9 / 20 (former 0–20 system, assessed 2026-04-27; not comparable with the new scale).
 
 ### Improvement priorities
 

@@ -34,7 +34,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-improvement_potential: 8
+improvement_potential: 1583
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 5
@@ -67,15 +67,9 @@ Pannstekning, grillning, ugnsrostning och sous vide ger alla bra resultat. Alla 
 - [Sous Vide](./pork_tenderloin-sous_vide.md)
 ## Improvement potential
 
-**Improvement potential: 8 / 20** — assessed 2026-04-26
+1583
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Cut profile lacks anatomy | −1 |
-| Method file `pork_tenderloin-grill.md` copies parent cut profile | −1 |
-| Method file `pork_tenderloin-pan_sear.md` copies parent cut profile | −1 |
-| Method file `pork_tenderloin-grill.md` copies `pork_tenderloin-pan_sear.md` | −1 |
+Historical readings: 8 / 20 (former 0–20 system, assessed 2026-04-26; not comparable with the new scale).
 
 ### Improvement priorities
 

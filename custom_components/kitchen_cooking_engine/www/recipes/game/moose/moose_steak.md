@@ -47,7 +47,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-improvement_potential: 9
+improvement_potential: 2639
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 5
@@ -76,14 +76,9 @@ Tillagningstid: 3–4 minuter per sida vid direkt hög värme. Innertemperatur: 
 - [Pan Sear](./moose_steak-pan_sear.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-26
+2639
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Method file `moose_steak-grill.md` copies parent cut profile | −1 |
+Historical readings: 9 / 20 (former 0–20 system, assessed 2026-04-26; not comparable with the new scale).
 
 ### Improvement priorities
 

@@ -25,7 +25,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-improvement_potential: 8
+improvement_potential: 2303
 cooking_methods_researched: 0 # Survey 2026-10-24 found +2 methods (oven_bake, simmer, both registered with leaves), but enum inventory still has plausible unverified leads (braise, saute, air_fryer, sous_vide, and dumpling-bound mince preparations) — stays 0 until collected or ruled out.
 quality_assessed: 2026-10-24
 rest_time_min: 2
@@ -57,27 +57,9 @@ Tillagning tills köttet är helt genomstekt och lätt brynnat. Innertemperatur:
 - [Simmer](./ground_lamb-simmer.md) — ⚠️ partial, 1 fetched source (IN keema matar) — **new method 2026-10-24**
 ## Improvement potential
 
-**Improvement potential: 8 / 20** — assessed 2026-10-24. From-scratch reassessment on the scale (no anchoring to the previous number — inflation doc Patterns 4 and 9). The four
-fixes the 2026-04-26 table listed (missing grill leaf, Group D, anatomy, pan_fry profile
-copy) are all done; the number coincides only because the old table's −4 of leaf-level
-fixes is replaced by −4 of partial-leaf gaps.
+2303
 
-| Criterion | Points | Evidence |
-|-----------|-----------|----------|
-| Cooking methods not researched (`cooking_methods_researched: 0`) | −8 | Survey 2026-10-24 found and registered 2 methods beyond the declared list (oven_bake — GR moussaka; simmer — IN keema matar), but the enum inventory is not complete: braise, saute, air_fryer, sous_vide and dumpling-bound mince preparations (manti, khinkali) remain plausible and unverified. Field stays 0 until collected or cleanly ruled out. |
-| Partial leaves (< 4 fetched sources): pan_fry (2), grill (1), oven_bake (1), simmer (1) | −4 | −1 per partial leaf (branch convention). All 4 leaves are partial. |
-
-**Total −12 → 8/20.** Criteria checked with evidence and receiving **0 points**:
-
-- **Culinary Groups A/B/C/D all covered** — A: Indian keema (pan_fry filling, simmer); B: Greek moussaka (oven_bake); C: Turkish Adana kebab (grill); D: Russian kotlety (pan_fry). The 2026-04-26 Group D gap is closed.
-- `## Cut profile` now carries anatomy (trim origins, grinder mechanics, 15–25 % fat, contamination logic) — the old −1 is retired.
-- Method leaf files exist — 4 of them (grill created and oven_bake/simmer registered 2026-10-24).
-- **USDA safe temperature supported by research evidence** — the Swasthi keema-filling source states an explicit **72 °C / 161 °F** doneness figure; the profile's incorrect 74 °C / 165 °F claim was corrected to the registered 71 °C / 160 °F ground-meat standard.
-- **Culinary preferred temperatures supported by research evidence** — the only doneness target (`well_done` 71 °C) is exercised by the measured 72 °C source and by every source's complete-cooking practice.
-- Per-method temperature nuance carried by each leaf's own consensus section.
-- No description copy-paste: `ground_lamb-pan_fry.md`'s profile was rewritten method-specific (the old −1 is retired) and every leaf's `## Cut profile` is now distinct.
-
-**Source-integrity repair (2026-10-24):** the old `ground_lamb-pan_fry.md` recorded three recipes "via web search" with invented probe/final temperatures ("Verify 74 °C", "Final temperature: 74–76 °C"). Re-fetching showed the Nefisyemektarifleri record is an oven-baked dish with mince of unspecified species, the IndianHealthyRecipes /keema/ URL now serves a different recipe, and the BBC Good Food moussaka page is subscription-walled. All three records and their invented temperatures were removed; replacements are fetched pages, with the two redirected/unverifiable ones retained as labelled leads.
+Historical readings: 8 / 20 (former 0–20 system, assessed 2026-10-24; not comparable with the new scale).
 
 ### Improvement priorities
 

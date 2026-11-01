@@ -35,7 +35,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-improvement_potential: 12
+improvement_potential: 1966
 cooking_methods_researched: 1
 quality_assessed: 2026-10-23
 rest_time_min: 0
@@ -65,25 +65,9 @@ All six declared methods now have a leaf file. None of the leaves yet meets the 
 
 ## Improvement potential
 
-**Improvement potential: 12 / 20** — assessed 2026-10-23 (from-scratch reassessment after all 6 method leaves created; supersedes 2026-05-31 stub number 4)
+1966
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | — (done: method survey found and added `boil` + `poach` beyond the auto-populated list; negative search documented for steam, braise, saute, pressure/slow cooker, air fryer, sous vide, pan sear, oven broil, deep fry; `cooking_methods_researched: 1`) |
-| Missing method leaf files | — (none; all 6 declared methods have a leaf) |
-| Partial leaf files (< 4 verified sources): grill (2), smoker (1), oven_bake (3), boil (2), poach (1) | −5 |
-| Leaf with same-tradition duplicate sources (`grayling-pan_fry.md` has 2× Swedish of 4 sources) | −1 |
-| Method leaf copies parent cut profile | — (none; all six profiles are method-specific) |
-| Missing Culinary Group A tradition | −1 (no verified Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian or Filipino grayling recipe located; search documented in leaves, not a geographic-impossibility claim) |
-| Missing Culinary Group B tradition | — (covered: Austria/Germany in pan_fry, UK in grill/oven_bake/smoker) |
-| Missing Culinary Group C tradition | −1 (no verified African, Caribbean, Arabic, Levant, Persian or Turkish grayling recipe located; search documented, not claimed impossible) |
-| Missing Culinary Group D tradition | — (covered: Sweden in pan_fry, grill, oven_bake, boil, poach) |
-| Temperature data: safe + culinary preferred | — (research evidence present: `grayling-smoker.md` carries an explicit source-stated pull at 55 °C, and its consensus records the divergence from the 63 °C USDA line rather than resolving it) |
-| Per-method temperature data | — (smoker leaf carries per-method data; the other five leaves document per-method absence as published) |
-
-**Points**: −5 (partial leaves) −1 (same-tradition duplication) −1 (Group A) −1 (Group C) = **12 / 20**.
-
-Only one source in the whole collection states an internal temperature (55 °C, smoker). The five other leaves record recipe evidence with explicitly published absences; no temperature was invented where sources are silent.
+Historical readings: 12 / 20 (former 0–20 system, assessed 2026-10-23; not comparable with the new scale).
 
 ### Improvement priorities
 

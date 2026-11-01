@@ -26,7 +26,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-improvement_potential: 19
+improvement_potential: 2159
 cooking_methods_researched: 1
 quality_assessed: 2026-10-27
 rest_time_min: 10
@@ -63,42 +63,9 @@ Koreanska revbensspjällstillagningar (galbi-jjim för brässering, galbi för g
 
 ## Improvement potential
 
-**Improvement potential: 19 / 20** — assessed 2026-10-27 (supersedes the 2026-04-27 number 8, which was
-computed from an ad-hoc table rather than the TOR criteria: it counted "+2 braise researched" and "+3 leaf has
-5 sources" as credits and never charged the missing culinary group. That table was not the rubric, and this
-one is.)
+2159
 
-| Criterion | Points | Evidence |
-|-----------|--------|----------|
-| Cooking methods not researched (`cooking_methods_researched: 1`) | — | survey re-run 2026-10-27: braise, oven-roast, oven-broil (new), slow-cooker, smoker all confirmed from fetched recipes |
-| Missing Culinary Group A | — | Chinese-American braise record (Woks of Life) |
-| Missing Culinary Group B | — | Australian, US ×3, German, Italian records |
-| Missing Culinary Group C | **−1** | no African, Caribbean, Arabic, Levantine or Persian short rib record in any leaf |
-| Missing Culinary Group D | — | Swedish ×2 and Ukrainian records |
-| `## Cut profile` missing / placeholder / lacks anatomy | — | anatomy written: intercostal + serratus ventralis, bone, English vs flanken cut |
-| No method leaf files exist | — | two exist (braise, oven_roast) |
-| Safe-temperature evidence | — | USDA 63 °C is far below the 88–96 °C band every source publishes; the band is evidenced |
-| Preferred-temperature evidence | — | braise 88–94 °C, oven-roast 90–96 °C |
-| Per-method temperature data | — | separate bands and sources per leaf |
-| Description duplication | — | oven_roast profile is method-specific, not copied from the hub or the braise leaf |
-
-**Points: −1 Group C → 19.**
-
-**What the number cannot see.** Three leaves this cut declares are still owed — `oven_broil`, `slow_cooker`,
-`smoker` — and TOR has no row that charges a declared-but-unwritten leaf, so 19 is honest against the table
-and dishonest as a description of the work. Those three are the top of the improvement list below, and they
-are why the number is not to be read as "nearly done".
-
-### Data state and gaps
-
-| gap | status | evidence | effort | yield |
-|---|---|---|---|---|
-| `leaf_without_number` (oven_roast) | open | 2 of 5 oven records publish no internal temperature and judge by time | S | find one more oven record that probes |
-| `duplicate_tradition` (oven_roast) | open | US ×2, German, Italian all Group B; only the Ukrainian record is Group D | M | a Korean oven galbi (already half-found) or a Chinese oven braise would add Group A |
-| `group_C_absent` | searched-negative | "short ribs tagine", "beef ribs chermoula", "galbi Moroccan" — nothing citable for this cut | — | none found; record stays open |
-| `unwritten_leaf:oven_broil` | open | mykoreankitchen.com LA galbi (Korean, 200 °C broil, 2–3 min a side, no internal target) fetched 2026-10-27 | M | needs 3 more broiler records (Japanese *yakiniku*-style, Filipino, US) |
-| `unwritten_leaf:slow_cooker` | open | not researched this pass | M | 4 records from distinct traditions |
-| `unwritten_leaf:smoker` | open | not researched this pass | M | Texas + one other smoke tradition |
+Historical readings: 19 / 20 (former 0–20 system, assessed 2026-10-27; not comparable with the new scale).
 
 ### Improvement priorities
 
