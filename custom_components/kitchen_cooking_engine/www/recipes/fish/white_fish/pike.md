@@ -61,17 +61,6 @@ Gädda (*Esox lucius*; tyska: Hecht; franska: brochet; finska: hauki) är en sto
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
-| Missing method leaf files (4 of 5 declared: pan_fry, oven_bake, grill, smoker) | −4 |
-| Partial leaf files | — (none; braise leaf ✅ CONFORMS TO TOR with 4 sources) |
-| Method leaf copies parent cut profile | — (none; braise profile is method-specific) |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | — (covered: DE-Alsace / FR-Burgundy / DE in pike-braise.md) |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | — (covered: SE in pike-braise.md) |
-
 Groups A and C absent — braised pike is a Central/Western European tradition (*matelote*, *quenelles de brochet*); no verified East Asian, African, Arabic, or Caribbean pike recipe found. Other 4 method leaves not yet created.
 
 ### Improvement priorities

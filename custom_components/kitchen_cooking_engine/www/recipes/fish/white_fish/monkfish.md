@@ -61,17 +61,6 @@ Marulk (*Lophius piscatorius*; tyska: Seeteufel; franska: lotte/baudroie; spansk
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
-| Missing method leaf files (4 of 5 declared) | −4 |
-| Partial leaf file `monkfish-sous_vide.md` (3 sources, < 4) | −1 |
-| Method leaf copies parent cut profile | — (none; sous_vide profile is method-specific) |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | — (covered: UK/USA in monkfish-sous_vide.md) |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-
 Groups A, C, D absent — the only existing leaf (`monkfish-sous_vide.md`) covers Group B (UK/USA) only and is marked ⚠️ PARTIAL (3 sources). No East Asian, African/Arabic, or Scandinavian sous vide monkfish recipe with verifiable URLs was found. Other methods (pan_sear, oven_roast, grill, braise) have no leaves.
 
 ### Improvement priorities

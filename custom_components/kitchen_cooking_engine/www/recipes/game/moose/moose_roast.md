@@ -91,18 +91,6 @@ måltemperaturen en biffstemperatur och inte en bräseringstemperatur: 58–70 �
 
 ## Improvement potential
 
-| Criterion | Points | Evidence |
-|-----------|--------|----------|
-| Cooking methods not researched (`cooking_methods_researched: 0`) | — | survey 2026-10-27: braise and oven roast confirmed with eight fetched recipes; **slow cooker and smoker confirmed** and now declared (`girlheartfood.com` slow-cooker moose roast; 20-hour smoked moose pot roast) |
-| Missing Culinary Group B | — | Canadian (BC) Dutch-oven braise; German cream-braised *Elchbraten* |
-| Missing Culinary Group D | — | Swedish, Norwegian and Finnish leaves |
-| `## Cut profile` … lacks anatomy | — | anatomy rewritten 2026-10-27: haunch muscle groups, silver seams, 1–3 % fat, bone |
-| No method leaf files exist | — | two leaves exist |
-| Safe-temperature evidence | — | Canadian source applies the 145 °F / 63 °C whole-muscle floor; the cut's `usda_safe_c` is that value |
-| Preferred-temperature evidence | — | 58–70 °C across four traditions in two leaves |
-| Per-method temperature data | — | oven roast 58–70 °C; braise 63–70 °C — different bands, recorded separately |
-| Description duplication | — | both leaf profiles rewritten method-specific 2026-10-27; the oven-roast profile had been a verbatim copy of this hub's |
-
 **Points: −2 → 18.**
 
 **What the number cannot see.** Two declared methods (`slow_cooker`, `smoker`) have no usable leaf: the
@@ -125,6 +113,6 @@ leaf, so this number describes the evidence that exists, not the work that remai
 1. **Owed leaf** · `slow_cooker` — the method is confirmed by two Canadian pages; the leaf would add a fourth
    method and a North American cooking style not yet covered.
 2. **Stub leaf** · `smoker` — either four written sources or removal of the stub.
-3. **−2 groups** · genuinely absent traditions; recorded as searched-negative rather than claimed as walls.
+3. genuinely absent traditions; recorded as searched-negative rather than claimed as walls.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

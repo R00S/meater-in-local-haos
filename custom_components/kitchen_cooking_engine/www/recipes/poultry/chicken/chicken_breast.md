@@ -54,20 +54,10 @@ Pannstekning: het panna, 5–7 minuter per sida; ugnsrostning: 200–220 °C, 18
 - [Pan Sear](./chicken_breast-pan_sear.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Air fryer cut profile method-specific | ✓ (fixed 2026-04-27) |
-| oven_roast leaf missing | − missing (−1) |
-| sous_vide leaf missing | − missing (−1) |
-| Culinary Group B covered | − missing (−1) |
-| Culinary Group D covered | − missing (−1) |
-| Culinary Groups A, C | ✓ |
-
 ### Improvement priorities
 
 1. Cooking methods not researched
-2. **−1 each** · Missing `chicken_breast-oven_roast.md`, `chicken_breast-sous_vide.md`
-3. **−1 each** · Groups B, D missing
+2. Missing `chicken_breast-oven_roast.md`, `chicken_breast-sous_vide.md`
+3. Groups B, D missing
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

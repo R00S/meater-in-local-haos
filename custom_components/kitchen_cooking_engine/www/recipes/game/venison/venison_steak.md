@@ -80,19 +80,9 @@ Sear i smör eller klarat smör vid hög värme — 3–4 minuter per sida — s
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods researched | ✓ — survey completed 2026-04-29 (charcoal_grill, grill, pan_sear confirmed; venison steak is a quick-cook cut, slow methods not applicable) |
-| Culinary Group B tradition covered | ✓ (BBC Good Food — British; multiple European sources across leaves) |
-| Culinary Group D tradition covered | ✓ (Scandinavian tradition covered in pan_sear leaf) |
-| Culinary Group A tradition covered | − missing (venison steak uncommon as standalone cut in East/South Asian cuisines) |
-| Culinary Group C tradition covered | − missing |
-| pan_sear leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
-| charcoal_grill leaf | − pending (method in list; leaf not yet created) |
-
 ### Improvement priorities
 
-1. **−1 each** · Groups A and C missing — add sources from Japanese/Korean/Chinese or Middle Eastern/African venison traditions to an existing or new leaf
+1. Groups A and C missing — add sources from Japanese/Korean/Chinese or Middle Eastern/African venison traditions to an existing or new leaf
 2. Create `venison_steak-charcoal_grill.md` — method in list, leaf pending
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

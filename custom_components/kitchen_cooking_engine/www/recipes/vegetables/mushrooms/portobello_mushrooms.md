@@ -55,12 +55,6 @@ Portabello-svampar (*Agaricus bisporus* — samma art som champinjoner, odlade t
 - [Sauté](./portobello_mushrooms-saute.md)
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Cut profile lacks anatomy | −1 |
-| Method file `portobello_mushrooms-air_fryer.md` copies parent cut profile | −1 |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

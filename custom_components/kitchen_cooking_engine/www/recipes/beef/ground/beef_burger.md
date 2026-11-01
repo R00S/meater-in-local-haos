@@ -49,13 +49,6 @@ Köttburgare är formade biffar av malet nötkött, vanligast från en blandning
 - [Pan Fry](./beef_burger-pan_fry.md)
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing method leaf file `beef_burger-charcoal_grill.md` | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Method file `beef_burger-grill.md` copies parent cut profile | −1 |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

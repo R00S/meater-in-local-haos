@@ -49,20 +49,10 @@ Tillagas alltid till fullt genomstekt för säkerhet och optimal smak. Innertemp
 - [Grill](./lamb_kofta-grill.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Cut profile anatomy | ✓ (fixed 2026-04-27) |
-| Grill cut profile method-specific | ✓ (fixed 2026-04-27) |
-| oven_roast leaf missing | − missing (−1) |
-| Culinary Group B covered | − missing (−1) |
-| Culinary Group D covered | − missing (−1) |
-| Groups A, C | ✓ |
-
 ### Improvement priorities
 
 1. Cooking methods not researched
 2. Missing `lamb_kofta-oven_roast.md`
-3. **−1 each** · Groups B, D missing
+3. Groups B, D missing
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -68,24 +68,10 @@ Kalkontlår är den övre benets mörka köttssektion av kalkon, från höften t
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods researched | ✓ — survey completed 2026-04-29: oven_roast ✓, braise ✓, smoker ✓ applicable (dark meat, high fat); grill not confirmed with accessible source |
-| Culinary Group B tradition covered | ✓ (Taste of Home — American) |
-| Culinary Group A tradition covered | − missing (turkey thigh uncommon as standalone cut in Group A cuisines; 80+ URL probes across 3 sessions found no accessible Group A source) |
-| Culinary Group C tradition covered | − missing (no standalone turkey thigh recipes found in Group C accessible sources) |
-| Culinary Group D tradition covered | − missing (no standalone turkey thigh recipes found in Group D accessible sources; cut is almost exclusively North American as a standalone product) |
-| Cut profile written with anatomy | ✓ |
-| Method leaf files exist | ✓ (oven_roast leaf with 1 source) |
-| Temperature data: safe (74°C) | ✓ |
-| Temperature data: culinary preferred (77–79°C) | ✓ |
-| Per-method temp data | ✓ (oven_roast leaf) |
-| oven_roast leaf copies parent cut profile | − −1 (cut profile paragraphs are near-identical to parent; method-specific context is in second paragraph only) |
-
 ### Improvement priorities
 
 1. Rewrite oven_roast leaf cut profile — opening paragraph near-identical to parent; needs method-specific analysis of what oven-roasting does to this cut
-2. **−1 each** · Missing Group A, C, D coverage — 80+ probes across 3 sessions found no accessible standalone turkey thigh recipes outside North America. Turkey thigh is almost exclusively a North American product as a standalone cut; other traditions cook the whole bird.
+2. Missing Group A, C, D coverage — 80+ probes across 3 sessions found no accessible standalone turkey thigh recipes outside North America. Turkey thigh is almost exclusively a North American product as a standalone cut; other traditions cook the whole bird.
 3. Expand oven_roast leaf to 4+ sources — only 1 source currently; additional Group B sources may exist on other accessible sites not yet probed.
 4. Create `turkey_thigh-braise.md` — tasteofhome.com/recipes/braised-turkey-thighs/ is already accessible and confirms Group B; need 3+ more sources.
 5. Create `turkey_thigh-smoker.md` — applicable method; need 4+ accessible sources.

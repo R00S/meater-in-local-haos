@@ -87,11 +87,6 @@ number: the 2026-05-31 table credited `mackerel-smoker.md` with 3 sources, two o
 the 2026-10-24 source-integrity repair, so the repaired collection is smaller but every remaining
 source is fetched and citable.
 
-| Criterion | Points | Evidence |
-|-----------|-----------|----------|
-| Cooking methods researched (`cooking_methods_researched: 1`) | 0 | All 16 supported enum methods have a research leaf; slow-cooker was investigated and no direct fish-cooking recipe was verified. Charcoal remains a grill setup rather than a separate method. |
-| Partial method leaves / incomplete source-diversity gates | −12 | −1 per registered method leaf that remains partial: smoker (2), simmer (2), steam (1), sous_vide (4 but tradition gate partial), pressure_cooker (4 but species/source limits), braise (4 sources but 3 traditions — two are Korean), poach (5 but qualification limits), boil (historical/ambiguous), oven_roast (4 but tradition/species limits), oven_broil (3), pan_sear (1), saute (1). Grill (5 sources, 4 traditions), air_fryer (4), pan_fry (4, one per group) and oven_bake (4, one per group) no longer deduct. |
-
 - **Culinary Groups A/B/C/D all covered** across the leaves — A: Japanese (pan_fry, oven_bake, simmer), Korean (grill), Indian (simmer), Indonesian (steam); B: British (oven_bake, smoker), Spanish (grill), US/Eastern-European (smoker); C: Turkish (pan_fry, oven_bake — genuine Group C primaries, fixing the 2026-05-31 gap); D: Swedish (pan_fry, grill).
 - Method inventory includes 18 mackerel research files: 16 supported enum leaves, one investigated but unsupported slow-cooker lead, and one charcoal-grill variant.
 - **USDA safe temperature supported by research evidence** — `mackerel-smoker.md`'s Taste of Artisan source states an explicit 63 °C / 145 °F internal endpoint held 30 minutes, and `mackerel-air_fryer.md`'s Cooking With Claudy source states 145 °F. One fetched source **knowingly sits below that floor**: `mackerel-oven_bake.md`'s Swedish Allt om Mat recipe pulls the fillets at **52 °C**. It is recorded in the leaf, not adopted into the registry, and the cut's doneness block is unchanged — a single sub-safe recipe is a tradition finding, not a target.

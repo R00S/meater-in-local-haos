@@ -64,17 +64,6 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. 
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods researched | ✓ — survey completed 2026-04-29 (air_fryer, braise, grill, oven_roast, pan_fry all confirmed applicable; braise and pan_fry leaves not yet created) |
-| Culinary Group A tradition covered | ✓ (covered across existing leaves) |
-| Culinary Group B tradition covered | ✓ (Natasha's Kitchen — American/Ukrainian; other North American sources) |
-| Culinary Group C tradition covered | ✓ (covered across existing leaves) |
-| Culinary Group D tradition covered | − missing (Scandinavian/Eastern European chicken thigh recipes not accessible in existing leaves) |
-| air_fryer leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
-| braise leaf | − missing (`chicken_thigh-braise.md` not yet created) |
-| pan_fry leaf | − missing (`chicken_thigh-pan_fry.md` not yet created) |
-
 ### Improvement priorities
 
 1. Create `chicken_thigh-braise.md` — braised chicken thighs widely available on Natasha's Kitchen, BBC Good Food, multiple accessible sites

@@ -83,18 +83,6 @@ All six declared methods now have a leaf. None of the fetched sources in any lea
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods researched (`cooking_methods_researched: 1`, survey table above) | — |
-| Missing declared method leaves (0 of 6 missing) | — |
-| Partial leaves (pan_fry 3 sources, pan_sear 3, steam 3, oven_roast 1) | −4 |
-| No Culinary Group A primary (the UK-published Indian-restaurant curry is a UK adaptation; no Indian/Pakistani/East Asian hake primary fetched) | −1 |
-| No Culinary Group D tradition fetched | −1 |
-| No source-published internal temperature anywhere in the six leaves | −2 |
-| Preferred-temperature bands (52–57 °C medium, 60–63 °C well done) unsupported by any fetched source | −1 |
-| Cut profile anatomy | — (anatomical profile present) |
-| Method-file duplication of the parent profile | — (no leaf copies this parent text) |
-
 The point for "no temperature evidence" is applied deliberately: the cut's `doneness` block and pull sentence are inherited guidance, not fetched hake evidence, and the 2026-10-24 sweep found no page that states an internal endpoint for this species.
 
 ### Improvement priorities

@@ -85,17 +85,6 @@ Rack: **57–63 °C** för medium-rare; bröst: **88–95 °C** för fall-från-
 
 ## Improvement potential
 
-| Criterion | Points | Status |
-|-----------|--------|--------|
-| Cut profile written (not a placeholder) | +1 | ✅ Done |
-| Culinary Group B tradition covered (oven_roast leaf) | +1 | ✅ Done (Chapman, GBC) |
-| Oven roast leaf has source recipes with safe temps | +3 | ✅ Done (52–55 °C pull from Chapman) |
-| Culinary preferred temp research present | +4 | ✅ Done (oven_roast leaf) |
-| Per-method temp research present | +2 | ✅ Done — oven_roast leaf |
-| Cooking methods not researched | −8 | pending — grill unresearched |
-| Missing Culinary Group A tradition | −1 | pending |
-| Missing Culinary Group D tradition | −1 | pending |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research grill method (rack of lamb on grill / BBQ); add `lamb_rib-grill.md`; then set `cooking_methods_researched: 1`

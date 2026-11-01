@@ -66,14 +66,6 @@ Köttet är extremt magert och får inte tillagas bortom medium (63 °C) — ova
 - [Pan Sear](./ostrich_steak-pan_sear.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| All method cut profiles distinct | ✓ (fixed 2026-04-27) |
-| Culinary Group A covered | − missing (−1) |
-| Culinary Group D covered | − missing (−1) |
-| Culinary Groups B, C | ✓ |
-
 ### Improvement priorities
 
 1. Cooking methods not researched

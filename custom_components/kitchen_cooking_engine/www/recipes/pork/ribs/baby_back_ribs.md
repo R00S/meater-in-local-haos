@@ -56,13 +56,6 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 - [Smoker](./baby_back_ribs-smoker.md)
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Method file `baby_back_ribs-air_fryer.md` copies parent cut profile | −1 |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

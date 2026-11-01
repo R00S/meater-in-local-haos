@@ -60,19 +60,10 @@ Köttet är mycket magert (under 1% fett), vitt genomgående, och mer delikat ä
 - [Oven Roast](./haddock-oven_roast.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Cut profile anatomy | ✓ (fixed 2026-04-27) |
-| Pan fry cut profile method-specific | ✓ (fixed 2026-04-27) |
-| 2 missing leaves (air_fryer, oven_roast) | − missing (−2) |
-| Culinary Group A covered | − missing (−1) |
-| Groups B, C, D | ✓ |
-
 ### Improvement priorities
 
 1. Cooking methods not researched
-2. **−1 each** · Missing `haddock-air_fryer.md`, `haddock-oven_roast.md`
+2. Missing `haddock-air_fryer.md`, `haddock-oven_roast.md`
 3. Group A missing
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

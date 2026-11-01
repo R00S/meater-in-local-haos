@@ -55,19 +55,6 @@ All five declared methods have a leaf file. Only `oven_roast` meets the 4–6-so
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | — (done: survey found and added `braise` beyond the auto-populated list; negative/uncertain areas documented in leaves — e.g. deep-fried quail exists but no `deep_fry` enum; `cooking_methods_researched: 1`) |
-| Missing method leaf files | — (none; all 5 declared methods have a leaf) |
-| Partial leaf files (< 4 verified sources): grill (2), pan_fry (2), smoker (1), braise (2) | −4 |
-| Method leaf copies parent cut profile | — (none; all five profiles are method-specific) |
-| Missing Culinary Group A tradition | — (covered: CN Xiachufang honey-glazed roast quail in oven_roast leaf) |
-| Missing Culinary Group B tradition | — (covered: US grill/smoker/braise, ES oven_roast/braise, IT oven_roast/pan_fry) |
-| Missing Culinary Group C tradition | — (covered: TR oven_roast, grill, pan_fry) |
-| Missing Culinary Group D tradition | — (covered: RU Edimdoma oven_roast) |
-| Temperature data: safe + culinary preferred | — (research evidence present: grill leaf carries an explicit source-stated endpoint at 150–155 °F / 65–68 °C breast, recorded as a divergence below the 74 °C USDA line rather than resolved) |
-| Per-method temperature data | — (grill leaf carries per-method data; the other four leaves document per-method absence as published) |
-
 ### Improvement priorities
 
 1. Bring each partial leaf to the 4–6-source gate — starting with `quail-smoker.md` (1 source; collect the Chinese 茶熏鹌鹑 primaries and the Neil Perry *Rockpool* book recipe).

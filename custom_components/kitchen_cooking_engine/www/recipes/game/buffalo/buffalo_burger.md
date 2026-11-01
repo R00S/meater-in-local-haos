@@ -116,18 +116,6 @@ därför `well_done` som enda band. Innertemperatur: **71 °C (160 °F)**. Efter
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | ✓ fixed 2026-10-26 (survey on fetched pages; `grill` and `pan_fry` confirmed, `air_fryer` and `smoker` discovered and registered in `cooking_data.py` id 632; leads and searched-negatives recorded in the frontmatter comment) |
-| Culinary Group B covered | ✓ (US across all four leaves; Canada in smoker) |
-| Culinary Group C covered | ✓ (Levantine bison kafta in grill — the only Group C record, form-flagged) |
-| Culinary Group D covered | ✓ (Swedish farm producer in grill and pan_fry) |
-| `## Cut profile` + anatomy | ✓ (rewritten: ground-meat anatomy, fat-ratio and binders, species ambiguity, pasteurisation reasoning; the old "adding fat prevents dryness" claim is replaced by what the sources actually do) |
-| Method leaf files exist | ✓ (4 leaves, was 2; every declared method has a leaf) |
-| Safe temperature research evidence | ✓ (explicit pull line in all four leaves; sources' own values quoted verbatim; house guidance marked wherever a source publishes none) |
-| Preferred-temperature research evidence | ✓ (the corpus's 63–71 °C split documented method by method, verbatim, instead of averaged) |
-| Per-method temperature data | ✓ (table in Cut profile above) |
-
 ### Integrity work recorded this pass (why the old number's rows were wrong)
 
 Both pre-ToR leaves gave **every one of their sources the same pull of 70–72 °C (158–162 °F)**,

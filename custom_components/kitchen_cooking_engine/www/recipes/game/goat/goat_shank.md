@@ -49,20 +49,6 @@ Getlägg skiljer sig från lammlägg i att get i allmänhet slaktas vid äldre �
 - [Oven Roast](./goat_shank-oven_roast.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods researched | ✓ — survey completed 2026-04-29 (braise and oven_roast confirmed primary; slow_cooker added as applicable — same collagen-conversion role as braise; no other methods primary for this high-collagen cut) |
-| Culinary Group B tradition covered | ✓ (Diana Henry — British; Hugh Fearnley-Whittingstall — British; Maricel Presilla — Latin American) |
-| Culinary Group C tradition covered | ✓ (Ottolenghi/Tamimi — Levantine, both leaves) |
-| Culinary Group D tradition covered | ✓ (Tina Nordström — Swedish/Nordic, both leaves) |
-| Culinary Group A tradition covered | − missing (thewoksoflife.com 404; swasthi.com domain for sale; spiceupthecurry.com 404; koreanbapsang.com 404; 15+ probes found no accessible Indian, East Asian, or SE Asian goat shank recipe) |
-| Cut profile written with anatomy | ✓ |
-| Braise leaf with 4 sources | ✓ (cut profile is method-specific — previous assessment of copying was incorrect) |
-| Oven roast leaf with 4 sources | ✓ (cut profile is method-specific — previous assessment of copying was incorrect) |
-| Temperature data: safe temp (75°C) | ✓ |
-| Temperature data: culinary preferred (88–93°C) | ✓ |
-| Per-method temperature data | ✓ (both leaves) |
-
 ### Improvement priorities
 
 1. Missing Culinary Group A tradition — add an Indian, Pakistani, South Asian, or East Asian goat shank recipe to one of the leaf files. Goat (*bakra/bakri*) is very common in South Asian cuisines; Indian *gosht/mutton* stews often use shank. spiceupthecurry.com/swasthi.com are good targets when accessible.

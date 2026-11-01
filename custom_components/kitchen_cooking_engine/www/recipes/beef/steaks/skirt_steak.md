@@ -69,21 +69,6 @@ Fiberstrukturen innebär att skirt steak alltid måste skäras tvärs mot fibern
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods researched | ✓ — survey completed 2026-04-29 (charcoal_grill, grill, pan_fry, pan_sear confirmed; methods list complete — skirt steak is a high-heat quick-cook cut, slow methods are not applicable) |
-| Culinary Group A tradition covered | ✓ (Barbara Tropp — Chinese-American wok, pan_fry leaf; Nobu Matsuhisa — Japanese, pan_fry and pan_sear leaves) |
-| Culinary Group B tradition covered | ✓ (Diana Kennedy, Bobby Flay, Francis Mallmann, Felicity Cloake — across all leaves) |
-| Culinary Group C tradition covered | ✓ (Yotam Ottolenghi — Middle Eastern/North African, grill and pan_fry leaves; Marcus Samuelsson — Ethiopian, pan_sear leaf) |
-| Culinary Group D tradition covered | − missing (tasteline.com, receptai.lt — both returned masked 404; skirt steak is an American/Latin American cut not traditional in Group D cuisines) |
-| Cut profile written with anatomy | ✓ |
-| All 4 method leaf files with 5 sources each | ✓ |
-| Temperature data: safe temp (63°C minimum) | ✓ |
-| Temperature data: culinary preferred (52–57°C) | ✓ |
-| Per-method temperature data | ✓ |
-| pan_fry leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
-| pan_sear leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
-
 ### Improvement priorities
 
 1. Missing Culinary Group D tradition — add a Scandinavian, Polish, Russian, or Baltic recipe to one of the leaf files. Skirt steak is not a traditional Group D cut; the closest equivalent is thin beef *biffstek* (Swedish), but that typically uses thicker cuts. Further probing needed.

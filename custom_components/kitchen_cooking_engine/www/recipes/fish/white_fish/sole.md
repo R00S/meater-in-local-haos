@@ -59,17 +59,6 @@ Sjötunga (*Solea solea*; tyska: Seezunge; franska: sole; holländska: tong) är
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
-| Missing method leaf files (3 of 4 declared) | −3 |
-| Partial leaf files | — (none; pan_fry leaf ✅ CONFORMS TO TOR with 4 sources) |
-| Method leaf copies parent cut profile | — (none; pan_fry profile is method-specific) |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | — (covered: GB/DE/IT/AT in sole-pan_fry.md) |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-
 Groups A, C, D absent — sole pan_fry leaf covers Group B only (all 4 sources are Western European). Sole meunière is a classical Western European tradition; no verified East Asian, African/Arabic, or Scandinavian/Slavic sole recipes were found for the pan_fry method. Method leaves for pan_sear, oven_bake and grill are not yet created.
 
 ### Improvement priorities

@@ -83,20 +83,6 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ## Improvement potential
 
-| Criterion | Points | Status |
-|-----------|--------|--------|
-| Cut profile written (not a placeholder) | +1 | ✅ Done |
-| Culinary Group A tradition covered (oven_roast leaf) | +1 | ✅ Done |
-| Culinary Group B tradition covered (oven_roast leaf) | +1 | ✅ Done |
-| Oven_roast leaf has source recipes with safe temps | +3 | ✅ Done |
-| Culinary preferred temp research present | +4 | ✅ Done (low-and-slow 88–93 °C) |
-| Per-method temp research present | +2 | ✅ Done — oven_roast leaf |
-| Cooking methods not researched | −8 | pending |
-| Missing Culinary Group C tradition | −1 | pending |
-| Missing Culinary Group D tradition | −1 | pending |
-| No grill leaf | − | pending |
-| No smoker leaf | − | pending |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research grill (direct vs indirect) and smoker methods for St. Louis ribs; create leaf files; then set `cooking_methods_researched: 1`

@@ -51,18 +51,6 @@ Bräsering (160–170 °C, 2–3 timmar) är den definitiva metoden: kollagen sm
 - [Pan Fry](./pork_cheek-pan_fry.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Missing method leaf file `pork_cheek-slow_cooker.md` | − pending (−1) |
-| Missing Culinary Group A tradition | − pending (−1) |
-| Missing Culinary Group C tradition | − pending (−1) |
-| Method file `pork_cheek-braise.md` copies parent cut profile | ✓ fixed 2026-04-27 |
-| Method file `pork_cheek-oven_roast.md` copies parent cut profile | ✓ fixed 2026-04-27 |
-| Method file `pork_cheek-pan_fry.md` copies parent cut profile | ✓ fixed 2026-04-27 |
-| Method file `pork_cheek-braise.md` copies `pork_cheek-oven_roast.md` | ✓ fixed 2026-04-27 |
-| Method file `pork_cheek-braise.md` copies `pork_cheek-pan_fry.md` | ✓ fixed 2026-04-27 |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

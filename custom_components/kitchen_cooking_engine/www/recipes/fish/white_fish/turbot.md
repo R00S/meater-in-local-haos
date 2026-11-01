@@ -67,17 +67,6 @@ Piggvar (*Scophthalmus maximus*; tyska: Steinbutt; franska: turbot; norska: pigg
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
-| Missing method leaf files (2 of 4 declared) | −2 |
-| Partial leaf files (< 4 verified sources) | — (none; both present leaves ✅ CONFORMS TO TOR with 4 sources each) |
-| Method leaf copies parent cut profile | — (none; both profiles are method-specific) |
-| Missing Culinary Group A tradition | — (covered: Japanese ヒラメ/hirame proxy source in both oven_bake and pan_sear; hirame = Japanese flatfish explicitly noted as regional equivalent in source headers) |
-| Missing Culinary Group B tradition | — (covered: UK/IT in oven_bake, FR/UK in pan_sear) |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | — (covered: DK in both oven_bake and pan_sear) |
-
 ### Improvement priorities
 
 1. Missing method leaf files — create `turbot-grill.md` and `turbot-sous_vide.md`, each with 4–6 diverse source recipes across culinary traditions, a method-specific cut profile, and pull temperatures from verified sources.

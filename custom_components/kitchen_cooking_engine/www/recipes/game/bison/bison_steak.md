@@ -112,16 +112,6 @@ Den mörka röda färgen speglar hög myoglobinhalt. Behandla som ett extremt ma
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | ✓ fixed 2026-10-26 (enum-wide survey, `cooking_methods_researched: 1`; 3 declared methods confirmed + `sous_vide` discovered; leads and searched-negatives recorded in the frontmatter comment) |
-| Culinary Group B covered | ✓ (US, DE, NL across all four leaves) |
-| `## Cut profile` + anatomy | ✓ (corrupted duplicate paragraph removed this pass; the liver-note claim is now cited to the fetched Daskochrezept page; pull range corrected to the corpus's measured 49–57 °C) |
-| Method leaf files exist | ✓ (4 leaves, was 2; every confirmed method has a leaf) |
-| Safe temperature research evidence | ✓ (explicit pull line in every leaf; sources' own values quoted verbatim; house guidance marked wherever a source publishes none) |
-| Preferred-temperature research evidence | ✓ (measured 49–63 °C spread documented across all four leaves; the 120-vs-135 °F school split recorded as the cut's main divergence) |
-| Per-method temperature data | ✓ (table in Cut profile above) |
-
 ### Integrity work recorded this pass (why some rows moved)
 
 The pre-ToR leaves contained corrupted source records: the Daskochrezept charcoal recipe was
@@ -144,9 +134,9 @@ Madens-style general chop-pan techniques do not apply here.
 
 ### Improvement priorities
 
-1. **−1 each** · Clear the four distinct-tradition rows with one non-US source per leaf: a Nordic/French/Canadian cast-iron recipe (pan_sear), a German or Nordic grill recipe (grill), a Canadian/Nordic live-fire recipe (charcoal_grill), a European precision-cooking page (sous_vide)
+1. Clear the four distinct-tradition rows with one non-US source per leaf: a Nordic/French/Canadian cast-iron recipe (pan_sear), a German or Nordic grill recipe (grill), a Canadian/Nordic live-fire recipe (charcoal_grill), a European precision-cooking page (sous_vide)
 2. Widen `pan_sear` to four verifiable sources (Highlands Ranch Foodie and MyChicagoSteak are fetched leads; a Chefkoch mirror/cache for the disputed pair would also settle the 54-vs-60 °C conflict one way or the other)
-3. **−1 each** · Group depth: a second leaf carrying each thin group — e.g. Noble's miso-butter ribeye (A) in pan_sear, a second Suya-adjacent source (C) in charcoal_grill, a Nordic cast-iron source (D) in pan_sear (Reddit's Swedish "Bisonbiff + gjutjärn" thread is an uncounted lead)
+3. Group depth: a second leaf carrying each thin group — e.g. Noble's miso-butter ribeye (A) in pan_sear, a second Suya-adjacent source (C) in charcoal_grill, a Nordic cast-iron source (D) in pan_sear (Reddit's Swedish "Bisonbiff + gjutjärn" thread is an uncounted lead)
 4. Queued method leads to widen next pass: `oven_roast`/reverse_sear (Primal Bison guide; Grillocracy tri-tip oven finish), `smoker` (informal posts), `braise` (highlandsranchfoodie's porter stew with sirloin steak pieces)
 5. Doneness is settled at `medium_rare` (54 °C target) and supported by the corpus; the low-pull (49–52 °C) versus finished (57 °C) school split is recorded in each leaf for a future doneness pass if the whole cut ever needs re-derivation
 

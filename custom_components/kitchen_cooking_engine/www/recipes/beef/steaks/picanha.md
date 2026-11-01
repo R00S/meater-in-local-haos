@@ -82,17 +82,6 @@ Picanha (*alcatra de capa* på portugisiska; *coulotte* på franska; *sirloin ca
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods researched (full survey) | − **NOT DONE** |
-| Cut profile written with anatomy | ✓ (fixed 2026-04-27) |
-| All declared method leaves exist | ✓ (charcoal_grill, grill, oven_roast, pan_sear) |
-| Method cut profiles distinct (no copies) | ✓ (all fixed 2026-04-27) |
-| Culinary Group A covered | ✓ (charcoal_grill leaf: Brazilian/South American is closest to Group B, but Group A may be covered elsewhere) |
-| Culinary Group B covered | ✓ |
-| Culinary Group C covered | − missing |
-| Culinary Group D covered | − missing |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — survey all cooking methods appropriate for picanha; update `methods:` list; set `cooking_methods_researched: 1`

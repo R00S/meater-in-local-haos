@@ -51,22 +51,6 @@ Låg-och-långsam tillagning transformerar snittet: 3–4 timmar i ugn vid 150 �
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods researched | ✓ — survey completed 2026-04-29 (braise, oven_roast, slow_cooker confirmed; smoker exists in American BBQ but no accessible dedicated sources; grill not a primary method) |
-| Culinary Group A tradition covered | ✓ (Woks of Life — Cantonese) |
-| Culinary Group B tradition covered | ✓ (Forager Chef — American/French) |
-| Culinary Group C tradition covered | ✓ (Selin Kiazim — Turkish-Cypriot) |
-| Culinary Group D tradition covered | ✓ (ICA.se — Swedish) |
-| Cut profile written | ✓ |
-| Braise leaf exists with 4 sources | ✓ |
-| Temperature data: safe temp (85–93°C confirmed) | ✓ |
-| Temperature data: culinary preferred (85–93°C) | ✓ |
-| Per-method temperature in braise leaf | ✓ |
-| Braise leaf cut profile copies parent text | − −1 (opening paragraph near-identical to parent; method-specific analysis in second paragraph only) |
-| oven_roast leaf | − pending (no points per TOR — method leaf files exist) |
-| slow_cooker leaf | − pending (no points per TOR — method leaf files exist) |
-
 ### Improvement priorities
 
 1. Braise leaf cut profile copies parent — rewrite the `## Cut profile` section of `lamb_brisket-braise.md` so the opening paragraph is method-specific (what braising does to this cut, not just what the cut is)

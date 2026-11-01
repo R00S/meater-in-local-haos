@@ -51,15 +51,6 @@ Dessa egenskaper gör bogen idealisk för bräsering och slow cooking — metode
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Braise leaf incomplete (2 of 4–6 sources) | −1 |
-| Oven roast leaf not yet populated | −3 |
-| Slow cooker leaf not yet populated | −2 |
-| No per-method temperature consensus (analysis gate not met) | −2 |
-
 ### Improvement priorities
 
 1. Oven roast leaf empty — find venison shoulder oven roast recipes with full ingredient quantities

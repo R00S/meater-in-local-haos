@@ -61,17 +61,6 @@ Sei (*Pollachius virens*; tyska: Seelachs/Köhler; norska/danska: sei/sej; frans
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
-| Missing method leaf files (4 of 5 declared: pan_fry, oven_bake, air_fryer, smoker) | −4 |
-| Partial leaf files | — (none; grill leaf ✅ CONFORMS TO TOR with 4 sources) |
-| Method leaf copies parent cut profile | — (none; grill profile is method-specific) |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | — (covered: GB/DE in pollock-grill.md) |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | — (covered: SE/NO in pollock-grill.md) |
-
 Groups A and C absent — pollock (*sej* / *Pollachius virens*) is a North Atlantic fish; the grill leaf covers Groups B (GB/DE) and D (SE/NO) only. No East Asian or African/Arabic/Turkish pollock recipe found. Other 4 method leaves not yet created.
 
 ### Improvement priorities

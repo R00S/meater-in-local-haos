@@ -73,17 +73,6 @@ Regnbågsforell (*Oncorhynchus mykiss*) och brun öring (*Salmo trutta*, svenska
 - [Smoker](./trout-smoker.md)
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
-| Missing method leaf files (2 of 4 declared: grill, oven_roast) | −2 |
-| Partial leaf files | — (none; pan_sear has 5 sources, smoker has 4 sources) |
-| Method leaf `trout-pan_sear.md` copies parent cut profile | −1 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | — (covered: BBC Good Food UK / Chefkoch.de DE / Giallozafferano IT in pan_sear; DE/NA in smoker) |
-| Missing Culinary Group C tradition | — (covered: Suzy Karadsheh Palestinian-American in pan_sear) |
-| Missing Culinary Group D tradition | — (covered: Matprat.no NO in pan_sear; FI/DK in smoker) |
-
 Group A absent — no East Asian (Japanese, Chinese, Korean, Thai, Vietnamese) trout recipe found across existing leaves. Methods survey incomplete. `trout-pan_sear.md` has a generic trout cut profile identical to the parent hub file rather than a pan_sear-specific profile.
 
 ### Improvement priorities

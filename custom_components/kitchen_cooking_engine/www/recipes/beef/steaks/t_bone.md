@@ -88,17 +88,6 @@ T-bone skärs från den korta länden, framför entrecôten. Tjockleken är typi
 - [Pan Sear](./t_bone-pan_sear.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods researched (full survey) | − **NOT DONE** |
-| Cut profile written with anatomy | ✓ (fixed 2026-04-27) |
-| All declared method leaves exist | ✓ (air_fryer, charcoal_grill, grill, oven_roast, pan_sear) |
-| Method cut profiles distinct (no copies) | ✓ (all fixed 2026-04-27) |
-| Culinary Group A covered | − missing |
-| Culinary Group B covered | ✓ |
-| Culinary Group C covered | − missing |
-| Culinary Group D covered | − missing |
-
 Original: −8 (methods) −1 (A) −1 (C) −1 (D) −1 (air_fryer copies parent) −1 (grill copies oven_roast) −1 (grill copies pan_sear) = −14 → number 6.
 After fixes: −8 (methods) −1 (A) −1 (C) −1 (D) = −11 → number 9.
 

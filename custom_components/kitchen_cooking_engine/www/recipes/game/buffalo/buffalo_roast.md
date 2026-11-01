@@ -115,16 +115,6 @@ den tjockaste muskeldelen, borta från ben och fettfickor.
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | ✓ fixed 2026-10-26 (survey on fetched pages; `oven_roast` and `braise` confirmed and rewritten, `smoker` discovered and registered — id 651 had listed **only** `oven_roast`, so `braise` had been declared in the hub without ever being registered; leads recorded in the frontmatter comment) |
-| Culinary Group B covered | ✓ (US across all three leaves, including Lakota Indigenous cookery) |
-| `## Cut profile` + anatomy | ✓ (rewritten around the absence of marbling, the collagen sheath, and the premium-vs-working sub-cut fork; the unsourced "135 °C maximum" and "reverse searing gives the best result" claims from the old oven leaf are gone) |
-| Method leaf files exist | ✓ (3 leaves, was 2 — and the oven leaf went from **zero** source recipes to three) |
-| Safe temperature research evidence | ✓ (explicit pull lines in all three leaves; every published value quoted verbatim; the braise and smoker leaves state plainly that the sources publish no internal temperature and mark their own numbers as house guidance) |
-| Preferred-temperature research evidence | ✓ (the premium-cut 52–54 °C consensus and the working-cut 91–99 °C target are both documented, and the leaf text notes the registry bands only apply to the former) |
-| Per-method temperature data | ✓ (table in Cut profile above) |
-
 ### Integrity work recorded this pass
 
 The oven-roast leaf it replaces contained **no source recipes at all** — a "collection not yet
@@ -144,9 +134,9 @@ instruction pages without ingredient quantities.
 
 ### Improvement priorities
 
-1. **−1 each** · Groups A, C and D: fetchable non-North-American bison or water-buffalo roast recipes. The Group C search returned literally nothing for "bison tagine"; a Levantine/Persian braise of buffalo chuck or an Indian *nihari*-style buffalo roast would be the realistic routes.
-2. **−1 each** · Widen all three leaves past three sources — the fastest route is one more US recipe per leaf, which clears the count rows without touching the distinct rows.
-3. **−1 each** · The three distinct rows: one Canadian (very plausible — Canadian bison ranching is large and mostly unexplored in this corpus), German or Nordic roast record per leaf would clear them.
+1. Groups A, C and D: fetchable non-North-American bison or water-buffalo roast recipes. The Group C search returned literally nothing for "bison tagine"; a Levantine/Persian braise of buffalo chuck or an Indian *nihari*-style buffalo roast would be the realistic routes.
+2. Widen all three leaves past three sources — the fastest route is one more US recipe per leaf, which clears the count rows without touching the distinct rows.
+3. The three distinct rows: one Canadian (very plausible — Canadian bison ranching is large and mostly unexplored in this corpus), German or Nordic roast record per leaf would clear them.
 4. Queued leaves: `pressure_cooker` (beckandbulow's Instant Pot bison pot roast is fully fetched and needs one companion source), `slow_cooker` (an 8-hour crock-pot bison chuck recipe), `sous_vide` (Bison Ridge Farms links to its own sous-vide recipe — unfetched).
 5. Data gap worth a future schema pass: braised and smoked roasts finish at 91–99 °C, which no existing doneness band covers. The leaves record the house 93 °C figure; the engine cannot yet express it.
 

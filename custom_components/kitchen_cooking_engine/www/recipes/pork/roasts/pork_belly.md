@@ -69,16 +69,6 @@ Denna fettrikedom gör det idealisk för långsam tillagning (sous vide, bräser
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods researched | ✓ — survey completed 2026-04-29 (all 8 methods confirmed: air_fryer, braise, grill, oven_roast, pan_fry, slow_cooker, smoker, sous_vide — methods list is exhaustive for pork belly; leaf files exist for all 8) |
-| Culinary Group A tradition covered | ✓ (Chinese bak kwa / BBQ pork belly; covered across leaves) |
-| Culinary Group B tradition covered | ✓ (multiple UK, American, Danish, German sources) |
-| Culinary Group D tradition covered | ✓ (Scandinavian/Danish flæskesteg tradition; multiple leaves) |
-| Culinary Group C tradition covered | − missing (Middle Eastern, North African, or Caribbean pork belly is uncommon due to dietary restrictions; Group C coverage is a structural limitation for pork cuts) |
-| air_fryer leaf cut profile fixed (was copy of grill and parent) | ✓ (rewritten 2026-04-29) |
-| grill leaf cut profile | − mentions oven operations; needs rewriting (not a copy of parent, but wrongly describes oven steps in a grill leaf) |
-
 ### Improvement priorities
 
 1. Group C missing — Group C tradition largely avoids pork; this gap may be permanent

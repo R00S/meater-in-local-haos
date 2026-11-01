@@ -59,18 +59,6 @@ Denna intensiva muskelaktivitet skapar den djupaste smak och högsta kollageninn
 
 ## Improvement potential
 
-| Criterion | Points | Status |
-|-----------|--------|--------|
-| Cut profile written (not a placeholder) | +1 | ✅ Done |
-| Culinary Group B tradition covered (braise leaf) | +1 | ✅ Done |
-| Braise leaf has source recipes with safe temps | +3 | ✅ Done |
-| Culinary preferred temp research present | +4 | ✅ Done |
-| Per-method temp research present | +2 | ✅ Done — braise leaf |
-| Cooking methods not researched | −8 | pending |
-| Missing Culinary Group A tradition | −1 | pending |
-| Missing Culinary Group C tradition | −1 | pending |
-| Missing Culinary Group D tradition | −1 | pending |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research slow_cooker method for pork cheek; add leaf file; then set `cooking_methods_researched: 1`

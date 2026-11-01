@@ -61,18 +61,6 @@ Alla tillagningsmetoder (air fryer, grill, ugn, fritering) kräver minst 74 °C 
 - [`chicken_wing-oven_roast.md`](chicken_wing-oven_roast.md) — 1 source, in-progress: Group B (Taste of Home/USA)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods researched (full survey) | − **NOT DONE** — methods list inherited from placeholder, not verified |
-| Cut profile written with anatomy | ✓ (fixed 2026-04-27) |
-| Air fryer leaf exists with 4 sources | ✓ |
-| Grill leaf exists (in-progress) | ✓ (2 sources, Group D missing) |
-| Oven roast leaf exists (in-progress) | ✓ (1 source, Groups A/C/D missing) |
-| Culinary Group A covered | ✓ (air fryer: Pailin/Thai) |
-| Culinary Group B covered | ✓ (air fryer: Natasha's Kitchen, Skinnytaste; grill: Taste of Home; oven: Taste of Home) |
-| Culinary Group C covered | ✓ (air fryer: Immaculate Bites; grill: Immaculate Bites) |
-| Culinary Group D covered | − missing from all leaves |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — do a proper survey of all cooking methods for chicken wings; update `methods:` list and set `cooking_methods_researched: 1` only after that survey

@@ -103,17 +103,6 @@ kortare med grill-final) kräver i stället att skinnet prickas, torkas och salt
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | ✓ fixed 2026-10-26 (both declared methods confirmed against eight fetched recipes; `cooking_methods_researched: 1`; **`confit` discovered but not registered** — see below) |
-| Culinary Group B covered | ✓ (British/French and US records in oven_roast) |
-| Culinary Group D covered | ✓ (German ×5, Polish) |
-| `## Cut profile` + anatomy | ✓ (rewritten: the 74-vs-80 °C argument and the band table are now explicit) |
-| Safe temperature research evidence | ✓ (the 80 °C done point is cited to three sources including a public broadcaster; the 74 °C minimum is kept as the separate `safe` band rather than dropped) |
-| Preferred-temperature research evidence | ✓ (the 75–79 / 80–85 °C split is recorded, and the roast leaf states honestly that no leg temperature exists for that method) |
-| Per-method temperature data | ✓ (table in Cut profile above) |
-| Source counts (4 per leaf) | ✓ (4 / 4) |
-
 ### Registry correction recorded this pass
 
 `goose_thigh` in `cooking_data.py` declared `recommended_doneness="well_done"`, a band this cut
@@ -136,7 +125,7 @@ missing method on this cut.
    four French sources already identified), and `smoker` (Wildfowl's pulled goose legs and Idaho
    Fish & Game's smoked goose; the Wildfowl page is paywalled and Idaho's is breast-focused, so
    both need verification before they can be counted)
-2. **−1 each** · Groups A and C — searched and not found on this pass; record the searched-negatives
+2. Groups A and C — searched and not found on this pass; record the searched-negatives
    if a second attempt also fails
 3. Braise distinct row: one non-German braised goose-leg source (Swedish *gåslår i ugn*
    or Danish *gåselår* would fix it and would also widen Group D's internal diversity)

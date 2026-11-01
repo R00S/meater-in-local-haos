@@ -82,18 +82,6 @@ All four declared methods have a leaf and all four meet the 4–6-source collect
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods researched (`cooking_methods_researched: 1`, inventory above) | — |
-| Missing declared method leaves (0 of 4 missing) | — |
-| Leaves below the 4–6-source gate (grill 5, oven_roast 6, pan_sear 6, steam 4) | — |
-| No Culinary Group D tradition (Nordic/Baltic/Slavic halibut recipe not fetched) | −1 |
-| Three of four leaves publish no internal temperature at all (grill, oven_roast, steam) | −2 |
-| Publisher concentration: three of five grill sources are Bon Appétit, three of six oven-roast sources are Food Network | −1 |
-| Temperature divergence left unreconciled (145 °F vs 130–135 °F) with no measured third tradition | −1 |
-| Cut profile anatomy | — (anatomical profile present) |
-| Method-file duplication of the parent profile | — (pan_sear re-profiled this pass) |
-
 ### Improvement priorities
 
 1. Fetch measured sources for grill, oven_roast and steam; at present only pan-searing has a published reading.

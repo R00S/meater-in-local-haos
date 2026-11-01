@@ -66,12 +66,6 @@ Hängarbiff över levande träkol tillsätter en viktig dimension till detta red
 - [Pan Sear](./hanger_steak-pan_sear.md)
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Method file `hanger_steak-charcoal_grill.md` copies parent cut profile | −1 |
-| Method file `hanger_steak-pan_fry.md` copies `hanger_steak-pan_sear.md` | −1 |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

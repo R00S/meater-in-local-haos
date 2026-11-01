@@ -86,12 +86,6 @@ slicing direction the primary determinant of tenderness in the finished roast.
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group A tradition | −1 |
-| Groups B, C, D covered in oven_roast leaf | −0 |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research remaining methods; set `cooking_methods_researched: 1`

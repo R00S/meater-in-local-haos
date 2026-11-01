@@ -52,14 +52,6 @@ Grillning, pannstekning och ugnsrostning är de vanligaste metoderna. Alla kräv
 - [Pan Fry](./pork_sausage-pan_fry.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| All method cut profiles distinct | ✓ (fixed 2026-04-27) |
-| Culinary Group A covered | − missing (−1) |
-| Culinary Group C covered | − missing (−1) |
-| Culinary Groups B, D | ✓ |
-
 ### Improvement priorities
 
 1. Cooking methods not researched

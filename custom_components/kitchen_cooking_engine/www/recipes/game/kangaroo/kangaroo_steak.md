@@ -116,15 +116,6 @@ medium-rare-band (52–57 °C) — en verklig avvikelse som är dokumenterad, in
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | ✓ fixed 2026-10-26 (both declared methods confirmed against seven fetched Australian sources; `cooking_methods_researched: 1`; no additional method discovered — smoking exists only as a finish inside the grill leaf) |
-| Culinary Group B covered | ✓ (Australasian — every source in both leaves) |
-| `## Cut profile` + anatomy | ✓ (rewritten: leanness mechanism, the 50–52 vs 52–57 °C discrepancy, and the timing spread all stated) |
-| Safe temperature research evidence | ✓ (every leaf states what its sources publish and what they do not; the one number is flagged as second-hand) |
-| Preferred-temperature research evidence | ✓ (50–52 °C recorded against the registry's 52–57 °C band, with the conflict left open for a doneness pass) |
-| Per-method temperature data | ✓ (table in Cut profile above) |
-
 ### Integrity notes recorded this pass
 
 - `quitelike.com`'s peppered kangaroo steaks page was fetched and **rejected**: the body carries only
@@ -143,7 +134,7 @@ medium-rare-band (52–57 °C) — en verklig avvikelse som är dokumenterad, in
    haunch steaks — both are leads, not yet verified
 2. Grill source count: a fourth verified Australian grill record; the Facebook and TikTok
    records found this pass are not citable
-3. **−1 each** · Groups A, C and D — for D this is a genuine searched-negative; for A the route
+3. Groups A, C and D — for D this is a genuine searched-negative; for A the route
    would be a non-Australian source using kangaroo in a South-East Asian preparation (Indonesia and
    Japan both import kangaroo meat), which needs verification before it can be claimed
 4. **Doneness pass** · Reconcile 50–52 °C (cited Australian practice) with the registry's

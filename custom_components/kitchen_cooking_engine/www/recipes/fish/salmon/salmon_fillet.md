@@ -72,17 +72,6 @@ Atlantisk och stillahavslax skiljer sig åt i fettfördelning — odlad atlantla
 - [Sous Vide](./salmon_fillet-sous_vide.md)
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
-| Missing method leaf files | — (all 6 present: air_fryer, grill, oven_bake, pan_sear, smoker, sous_vide) |
-| Partial leaf files | — (none; all 6 leaves have ≥ 5 sources each) |
-| Method leaf copies parent cut profile | — (pan_sear profile is method-specific: discusses crisping, conductive heat, carryover behaviour for salmon) |
-| Missing Culinary Group A tradition | — (covered: Tetsuya Wakuda JP in grill; Nobu Matsuhisa JP in pan_sear; Hetty McKinnon Asian in air_fryer) |
-| Missing Culinary Group B tradition | — (covered across all leaves) |
-| Missing Culinary Group C tradition | — (covered: Ottolenghi levant in grill and oven_bake; Paula Wolfert Moroccan in oven_bake; Marcus Samuelsson Ethiopian in air_fryer) |
-| Missing Culinary Group D tradition | — (covered: René Redzepi Nordic in grill; SE/FI sources in smoker) |
-
 Methods survey incomplete (`cooking_methods_researched: 0`) — the methods list may be missing traditions (e.g. cured/gravlax as a cold preparation, poached/court-bouillon, traditional Japanese teriyaki as a distinct method). Research required before setting `cooking_methods_researched: 1`.
 
 ### Improvement priorities

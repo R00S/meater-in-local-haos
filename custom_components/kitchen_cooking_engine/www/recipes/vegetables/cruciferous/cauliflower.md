@@ -57,12 +57,6 @@ Blomkål (*Brassica oleracea* var. *botrytis*) är ett tätt klustring av omogna
 - [Whole Roast](./cauliflower-whole_roast.md)
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Cut profile lacks anatomy | −1 |
-| Method file `cauliflower-saute.md` copies parent cut profile | −1 |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

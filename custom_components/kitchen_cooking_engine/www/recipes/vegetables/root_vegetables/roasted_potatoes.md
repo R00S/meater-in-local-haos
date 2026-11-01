@@ -42,19 +42,9 @@ Rostning av potatis (*Solanum tuberosum*) omvandlar rå stärkelse till en krisp
 - [Oven Roast](./roasted_potatoes-oven_roast.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Cut profile anatomy | ✓ (fixed 2026-04-27) |
-| Air fryer cut profile method-specific | ✓ (fixed 2026-04-27) |
-| Oven roast cut profile method-specific | ✓ (fixed 2026-04-27) |
-| Culinary Group C covered | − missing (−1) |
-| Culinary Group D covered | − missing (−1) |
-| Groups A, B | ✓ |
-
 ### Improvement priorities
 
 1. Cooking methods not researched
-2. **−1 each** · Groups C, D missing
+2. Groups C, D missing
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

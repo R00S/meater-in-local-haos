@@ -146,17 +146,6 @@ opinions, and should not be averaged into one band.
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
-| Missing method leaf files (4 of 5 declared) | −4 |
-| Partial leaf files | — (none; pan_sear leaf ✅ CONFORMS TO TOR with 4 sources) |
-| Method leaf copies parent cut profile | — (none; pan_sear profile is method-specific) |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | — (covered: AT/DE/FR in arctic_char-pan_sear.md) |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | — (covered: SE in arctic_char-pan_sear.md) |
-
 Groups A and C absent — arctic char is a cold-water salmonid native to Arctic/subarctic waters with no established culinary tradition in East Asian or African/Caribbean/Arabic cuisines. Points applied pending verification.
 
 ### Improvement priorities

@@ -61,17 +61,6 @@ Flundra (*Platichthys flesus*; tyska: Flunder; finska: kampela) är en plattfisk
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
-| Missing method leaf files (4 of 5 declared) | −4 |
-| Partial leaf files | — (none; steam leaf ✅ CONFORMS TO TOR with 4 sources) |
-| Method leaf copies parent cut profile | — (none; steam profile is method-specific) |
-| Missing Culinary Group A tradition | — (covered: CN/TH/VN in flounder-steam.md) |
-| Missing Culinary Group B tradition | — (covered: DE in flounder-steam.md) |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-
 Group C and D absent — steam leaf covers A (CN/TH/VN) and B (DE) only. No verified African, Arabic, Turkish or Scandinavian/Slavic flounder steaming recipe found. Group A/B coverage is real but limited to the steam method only.
 
 ### Improvement priorities

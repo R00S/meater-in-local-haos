@@ -59,17 +59,6 @@ Klassiska beredningar: brittisk *liver and onions*, tysk *Leberwurst*-teknik, no
 
 ## Improvement potential
 
-| Criterion | Points | Status |
-|-----------|--------|--------|
-| Cut profile written (not a placeholder) | +1 | ✅ Done |
-| Culinary Group B tradition covered (pan_fry leaf) | +1 | ✅ Done (Hazan, Group B) |
-| Pan fry leaf has source recipes with safe temps | +3 | ✅ Done (60–63 °C pull) |
-| Culinary preferred temp research present | +4 | ✅ Done (pan_fry leaf) |
-| Per-method temp research present | +2 | ✅ Done — pan_fry leaf |
-| Cooking methods not researched | −8 | pending — set to 1 once pan_sear also researched |
-| Missing Culinary Group A tradition | −1 | pending |
-| Missing Culinary Group C tradition | −1 | pending |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — add Group A (Chinese stir-fried pork liver) and Group C (Lebanese/Moroccan sautéed liver) to `liver_pork-pan_fry.md`; then create `liver_pork-pan_sear.md`; then set `cooking_methods_researched: 1`

@@ -67,19 +67,9 @@ Ankbröst är ett mörkt, rikt snitt med tjockt subcutant fett. Till skillnad fr
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods researched | ✓ — survey completed 2026-04-29 (pan_sear, oven_roast, sous_vide confirmed; pan_sear is the primary method; oven_roast follows stovetop fat-render; sous_vide is widely used in professional and modern home cooking) |
-| Culinary Group A tradition covered | ✓ (covered in pan_sear leaf) |
-| Culinary Group B tradition covered | ✓ (BBC Good Food, French tradition) |
-| Culinary Group C tradition covered | − missing (Moroccan duck pastilla and similar dishes use duck but not standalone breast; no accessible Group C duck breast recipe found) |
-| Culinary Group D tradition covered | − missing (Scandinavian/Eastern European duck breast recipes not found in accessible sources) |
-| oven_roast leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
-| sous_vide leaf | − pending (method in list; leaf not yet created) |
-
 ### Improvement priorities
 
-1. **−1 each** · Groups C and D missing — add sources from Moroccan/Middle Eastern or Scandinavian/Eastern European duck breast preparations
+1. Groups C and D missing — add sources from Moroccan/Middle Eastern or Scandinavian/Eastern European duck breast preparations
 2. Create `duck_breast-sous_vide.md` — method in list, leaf pending; sous vide duck breast is widely covered on seriouseats.com (when accessible)
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

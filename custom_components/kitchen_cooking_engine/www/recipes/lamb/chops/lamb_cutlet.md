@@ -93,18 +93,6 @@ exhausted.
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods researched (`cooking_methods_researched: 1`, inventory above) | — |
-| Missing declared method leaves (0 of 2 missing) | — |
-| Leaves below the 4–6-source gate (grill 5, pan_fry 5) | — |
-| Culinary Group A (Indian, Cantonese) and Group C (Turkish, Moroccan) | — |
-| No Culinary Group D tradition (Nordic/Baltic lamb cutlet recipe not fetched) | −1 |
-| Recommended doneness `medium_rare` (54 °C) sits below every fetched reading (57 °C; 63–66 °C) | −1 |
-| Published endpoints span 125–150 °F across the two leaves with no measured third tradition to reconcile them | −1 |
-| Cut profile anatomy | — (anatomical profile present) |
-| Method-file duplication of the parent profile (pan_fry re-profiled 2026-10-24) | — |
-
 ### Improvement priorities
 
 1. The recommendation and the evidence disagree: either find a source that recommends 54 °C for cutlets or move `recommended_doneness` up to medium. This is a cut-level decision, not a text edit.

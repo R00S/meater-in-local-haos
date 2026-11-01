@@ -48,20 +48,10 @@ Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagnin
 - [Oven Roast](./lamb_shoulder-oven_roast.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Oven roast cut profile method-specific | ✓ (fixed 2026-04-27) |
-| braise leaf missing | − missing (−1) |
-| slow_cooker leaf missing | − missing (−1) |
-| Culinary Group A covered | − missing (−1) |
-| Culinary Group D covered | − missing (−1) |
-| Culinary Groups B, C | ✓ |
-
 ### Improvement priorities
 
 1. Cooking methods not researched
-2. **−1 each** · Missing `lamb_shoulder-braise.md`, `lamb_shoulder-slow_cooker.md`
-3. **−1 each** · Groups A, D missing
+2. Missing `lamb_shoulder-braise.md`, `lamb_shoulder-slow_cooker.md`
+3. Groups A, D missing
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

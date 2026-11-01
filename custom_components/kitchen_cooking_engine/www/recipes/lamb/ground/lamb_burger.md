@@ -47,20 +47,10 @@ Vid grillning eller pannstekning kräver USDA-standarden att malet lamm tillagas
 - [Grill](./lamb_burger-grill.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Cut profile anatomy | ✓ (fixed 2026-04-27) |
-| Grill cut profile method-specific | ✓ (fixed 2026-04-27) |
-| pan_fry leaf missing | − missing (−1) |
-| Culinary Group A covered | − missing (−1) |
-| Culinary Group D covered | − missing (−1) |
-| Groups B, C | ✓ |
-
 ### Improvement priorities
 
 1. Cooking methods not researched
 2. Missing `lamb_burger-pan_fry.md`
-3. **−1 each** · Groups A, D missing
+3. Groups A, D missing
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

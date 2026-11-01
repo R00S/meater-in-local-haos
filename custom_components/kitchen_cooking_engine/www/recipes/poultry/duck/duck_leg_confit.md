@@ -55,18 +55,6 @@ Anklägg confit (*confit de canard*) avser specifikt anklägg med ben och skinn 
 
 ## Improvement potential
 
-| Criterion | Points | Status |
-|-----------|--------|--------|
-| Cut profile written (not a placeholder) | +1 | ✅ Done |
-| Culinary Group B tradition covered (oven_roast leaf) | +1 | ✅ Done |
-| Oven_roast leaf has source recipes with safe temps | +3 | ✅ Done |
-| Culinary preferred temp research present | +4 | ✅ Done |
-| Per-method temp research present | +2 | ✅ Done — oven_roast leaf |
-| Cooking methods not researched | −8 | pending |
-| Missing Culinary Group A tradition | −1 | pending |
-| Missing Culinary Group C tradition | −1 | pending |
-| Missing Culinary Group D tradition | −1 | pending |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research whether methods beyond `oven_roast` (e.g. air fryer confit, sous vide confit) have credible recipes; if so add them to `cooking_data.py` and create leaf files; then set `cooking_methods_researched: 1`

@@ -99,19 +99,6 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum, **79 °C (175 °F)** rekomme
 
 ## Improvement potential
 
-`improvement_potential: 5` while that table computed 6 — a stale-number mismatch, the same defect fixed in
-mackerel on 2026-10-24; frontmatter and body now agree.) The scale is unchanged and no
-leaf was credited for anything it does not hold: the number rose because `grill` left the partial set
-after gaining its fourth tradition (Jamaican jerk) and `pan_fry` reached four sources (North
-African), not because the scale was relaxed. `pan_fry` was deliberately **not** marked conformant —
-two of its four sources are US-based, so the strict tradition-diversity gate is still unmet and the
-
-| Criterion | Points | Evidence |
-|-----------|-----------|----------|
-| Cooking methods researched (`cooking_methods_researched: 1`) | 0 | All 17 supported methods are inventoried with evidence leaves; `boil` is documented with its overlap boundary and charcoal is a grill-fuel variant. |
-| Partial method leaves (below the 4-source gate): smoker (1), slow_cooker (1), pressure_cooker (1), sous_vide (1), poach (2 direct bone-in sources), steam (2), boil (1 clear/ambiguous), oven_bake (3), oven_broil (3), pan_sear (1), saute (1) | −11 | −1 per partial leaf. Oven_roast (5), air_fryer (4), braise (4), simmer (5), grill (4, completed 2026-10-25) and pan_fry (4, source-count met 2026-10-25) meet the source-count threshold, though collection analysis remains partial. |
-| pan_fry source-tradition overlap | −1 | Two US-based sources (Made With Lau, Chinese-American; Cooked by Julie, American) can be read as one national tradition, so pan_fry stays ⚠️ partial despite reaching four sources; the North African source added 2026-10-25 widens Groups but does not remove the US redundancy. |
-
 - **Culinary Groups A/B/C/D all covered** across the method leaves — A: Chinese-American (pan_fry), Japanese (air_fryer), Indian (air_fryer, grill), Korean (braise, slow_cooker, pressure_cooker); B: American (pan_fry, grill, sous_vide, smoker), UK (air_fryer), French (braise), Greek (grill); C: Moroccan (air_fryer), Jamaican (braise, grill jerk), Senegalese (braise), North African (pan_fry, added 2026-10-25); D: Russian (pan_fry).
 - `## Cut profile` present with anatomical placement (femur, biceps femoris, myoglobin/collagen, subcutaneous fat).
 - Method leaf files exist — 18 files, one for each value registered in the cut's `methods:` list; charcoal is documented separately as a grill variant.

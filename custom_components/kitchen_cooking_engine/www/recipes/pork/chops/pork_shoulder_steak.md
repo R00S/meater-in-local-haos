@@ -79,24 +79,11 @@ Pannstekning: medel-hög värme, 3–4 minuter per sida. Innertemperatur: **70�
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | ✓ fixed 2026-10-26 (enum-wide survey, `cooking_methods_researched: 1`) |
-| Culinary Group A covered | ✓ (Thai *nam tok* grill, Korean-style grill & pan fry, HK air fryer) |
-| Culinary Group B covered | ✓ (DE, US, IT, GR, UK) |
-| Culinary Group C covered | ✓ (South African braai source in `grill`) |
-| Culinary Group D covered | ✓ (NO, DK, PL sources) |
-| `## Cut profile` + anatomy | ✓ (neck muscles *longissius colli*, marbling) |
-| Method leaf files exist | ✓ (7 leaves, was 1) |
-| Safe temperature research evidence | ✓ (pull steps in pan_fry, grill, oven_roast, air_fryer, oven_broil) |
-| Preferred-temperature research evidence | ✓ (65 °C, 80–82 °C, 145–195 °F, 145–170 °F, 195–200 °F across leaves) |
-| Per-method temperature data | ✓ (table in Cut profile above) |
-
 ### Improvement priorities
 
-1. **−1 each** · Fetch one sous-vide pork-neck/shoulder-steak source from outside the US (European or Japanese precision-cooking publication) — clears one count row and one distinct row
-2. **−1 each** · Fetch two to four broil sources from outside the US — clears the oven_broil count and distinct rows
-3. **−1 each** · One fifth unambiguous-country air-fryer source and one seventh-country braise source — both attribution/dupe questions disappear
+1. Fetch one sous-vide pork-neck/shoulder-steak source from outside the US (European or Japanese precision-cooking publication) — clears one count row and one distinct row
+2. Fetch two to four broil sources from outside the US — clears the oven_broil count and distinct rows
+3. One fifth unambiguous-country air-fryer source and one seventh-country braise source — both attribution/dupe questions disappear
 4. Queued leads to widen next pass: `pan_sear` (LUMA CH, ambiguous cut form), `charcoal_grill` (Smithfield, White On Rice), `slow_cooker` (Greek Foodie variation), `pressure_cooker` (none found), `steam`/`poach`/`simmer` documented negatives
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

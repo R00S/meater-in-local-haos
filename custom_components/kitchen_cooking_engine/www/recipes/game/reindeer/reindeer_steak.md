@@ -72,19 +72,9 @@ Pannstekning är den vanligaste metoden i det skandinaviska hemmaköket: smör, 
 - [Pan Sear](./reindeer_steak-pan_sear.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Cut profile anatomy | ✓ (fixed 2026-04-27) |
-| Grill cut profile method-specific | ✓ (fixed 2026-04-27) |
-| Culinary Group A covered | − missing (−1) |
-| Culinary Group B covered | − missing (−1) |
-| Culinary Group C covered | − missing (−1) |
-| Culinary Group D | ✓ |
-
 ### Improvement priorities
 
 1. Cooking methods not researched
-2. **−1 each** · Group A, B, C traditions missing — find Asian, Western European, and Middle Eastern/African reindeer or venison recipes
+2. Group A, B, C traditions missing — find Asian, Western European, and Middle Eastern/African reindeer or venison recipes
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

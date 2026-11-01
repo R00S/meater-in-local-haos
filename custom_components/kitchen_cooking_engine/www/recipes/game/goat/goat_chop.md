@@ -121,17 +121,6 @@ tjockaste muskeldelen, borta från benet och från fettkanten.
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | ✓ fixed 2026-10-26 (survey on fetched pages; `grill` and `pan_sear` confirmed and rewritten, `oven_broil` discovered and registered in `cooking_data.py`) |
-| Culinary Group A covered | ✓ (Pakistani *chaap* in grill and pan_sear; Indian-style broiled chops in oven_broil) |
-| Culinary Group B covered | ✓ (Italy in grill; US across all three leaves) |
-| `## Cut profile` + anatomy | ✓ (rewritten: loin/rib anatomy, the thin fat layer, why this is a fast cut and not a braise cut, and the recorded doneness mismatch) |
-| Method leaf files exist | ✓ (3 leaves, was 2; the oven_broil leaf is new) |
-| Safe temperature research evidence | ✓ (explicit pull lines in all three leaves; every published value quoted verbatim; house guidance marked where a source publishes none) |
-| Preferred-temperature research evidence | ✓ (the corpus's 54–63 °C spread documented method by method, including the source that labels 145 °F "medium-rare") |
-| Per-method temperature data | ✓ (table in Cut profile above) |
-
 ### Integrity work recorded this pass
 
 Both pre-ToR leaves were **fabricated and mutual copies**: the grill leaf's three records were a
@@ -153,7 +142,7 @@ guide without ingredient quantities.
 1. **Doneness pass (no number effect, highest value):** both the hub and `cooking_data.py` recommend `well_done` (68–77 °C) while all six fetched sources cook to 54–63 °C. The engine currently tells users to ruin this cut. Either the recommendation moves to `medium` with the USDA 145 °F whole-cut floor as its ceiling, or the corpus needs a source that actually cooks goat chops grey — none was found.
 2. Culinary Group C: a real African or Caribbean goat-chop recipe. South African *braai* chops and Jamaican jerk chops are the obvious routes; both searches surfaced video only.
 3. Culinary Group D: essentially a Europe-shaped gap — goat chops are not a Nordic/Baltic dish.
-4. **−1 each** · One more record per leaf would clear all three count rows; the cheapest is a fourth grilled chop from Italy, Greece or Turkey (all three are documented goat-chop countries, and the Puglian recipe came from a book excerpt that likely has siblings).
+4. One more record per leaf would clear all three count rows; the cheapest is a fourth grilled chop from Italy, Greece or Turkey (all three are documented goat-chop countries, and the Puglian recipe came from a book excerpt that likely has siblings).
 5. Queued leaves: `braise` (mixed-cut goat curries are fetched but no chop-specific braise), `tandoor`, `smoker`.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

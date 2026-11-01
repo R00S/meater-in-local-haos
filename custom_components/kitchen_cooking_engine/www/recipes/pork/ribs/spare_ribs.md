@@ -48,20 +48,10 @@ De kräver längre tillagningstid än baby back ribs (3–5 timmar låg-och-lån
 - [Oven Roast](./spare_ribs-oven_roast.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Oven roast cut profile method-specific | ✓ (fixed 2026-04-27) |
-| grill leaf missing | − missing (−1) |
-| smoker leaf missing | − missing (−1) |
-| Culinary Group A covered | − missing (−1) |
-| Culinary Group C covered | − missing (−1) |
-| Culinary Groups B, D | ✓ |
-
 ### Improvement priorities
 
 1. Cooking methods not researched
-2. **−1 each** · Missing `spare_ribs-grill.md`, `spare_ribs-smoker.md`
-3. **−1 each** · Groups A, C missing
+2. Missing `spare_ribs-grill.md`, `spare_ribs-smoker.md`
+3. Groups A, C missing
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

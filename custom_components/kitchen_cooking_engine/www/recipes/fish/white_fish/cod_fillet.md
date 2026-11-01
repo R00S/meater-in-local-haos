@@ -61,17 +61,6 @@ Pannstekning är en mycket vanlig beredning — den höga ledningsvärmen i pann
 - [Smoker](./cod_fillet-smoker.md)
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
-| Missing method leaf file `cod_fillet-oven_roast.md` | −1 |
-| Partial leaf files | — (none; all 4 present leaves have ≥ 4 sources: oven_bake ×5, pan_fry ×5, smoker ×4, air_fryer ×5) |
-| Method leaf copies parent cut profile | — (all previously identified copies have been fixed) |
-| Missing Culinary Group A tradition | — (covered: Tetsuya Wakuda JP pan_fry with yuzu butter) |
-| Missing Culinary Group B tradition | — (covered across all leaves) |
-| Missing Culinary Group C tradition | — (covered: Ottolenghi tahini/sumac in oven_bake; Samuelsson berbere in air_fryer) |
-| Missing Culinary Group D tradition | — (covered: Swedish ABU-röken tradition in smoker leaf) |
-
 Methods survey incomplete — `cooking_methods_researched: 0` means the declared methods list may be incomplete. Research may find additional methods used for cod fillet across culinary traditions.
 
 ### Improvement priorities

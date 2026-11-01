@@ -58,23 +58,10 @@ En hel kyckling är en komplett fågel — bestående av bröstködet (vitt, mag
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods researched (full survey) | − **NOT DONE** |
-| Cut profile written with anatomy | ✓ (fixed 2026-04-27) |
-| Oven roast leaf exists with 4 sources | ✓ |
-| Air fryer leaf | − missing |
-| Grill leaf | − missing |
-| Culinary Group A covered | − missing |
-| Culinary Group B covered | ✓ (Jessica Gavin, BBC Good Food) |
-| Culinary Group C covered | ✓ (Suzy Karadsheh/Egyptian) |
-| Culinary Group D covered | − missing (Natasha's Kitchen assessed as Group B) |
-| Oven_roast cut profile method-specific | ✓ (fixed 2026-04-27) |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — survey all methods for whole chicken; update `methods:` list; set `cooking_methods_researched: 1`
-2. **−1 each** · Air fryer and grill leaves missing — create with verified sources
+2. Air fryer and grill leaves missing — create with verified sources
 3. Group A tradition missing — find a Chinese, Japanese, Korean, or Indian whole-chicken recipe
 4. Group D tradition missing — find a Swedish, Polish, Baltic, or Slavic whole-chicken recipe
 

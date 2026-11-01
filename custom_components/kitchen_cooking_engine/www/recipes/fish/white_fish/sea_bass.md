@@ -111,20 +111,6 @@ than on thermometers.
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | none — survey done, `cooking_methods_researched: 1` |
-| Missing method leaf files (grill, oven_roast were declared without leaves) | none — 5 leaves now exist |
-| Missing Culinary Group A | none — China, Thailand, Japan |
-| Missing Culinary Group B | none — Italy, Greece, US, Australia |
-| Missing Culinary Group C | none — Turkey |
-| Missing Culinary Group D | none — Russia, Sweden |
-| No safe / preferred temperature data | none — 145 °F / 63 °C published by a fetched source, level with `usda_safe_c` |
-| Per-method temperature data missing | none — the table above plus per-leaf consensus |
-| Method file copies parent cut profile | none — `pan_sear` rewritten with its own profile |
-| Source count below 4 in a leaf (branch convention) | −1 × 4 (`pan_sear` 3, `grill` 3, `steam` 3, `oven_bake` 3) |
-| Distinct-tradition gate failed in a leaf | none — every leaf's sources are from distinct traditions |
-
 ### Improvement priorities
 
 1. Four leaves sit at three sources each. The fix is ordinary fetch work, not a wall: `grill` needs a fourth grill-tradition source (an Italian *alla griglia* or a US gas-grill recipe), `steam` a fourth steaming tradition (Korean *jjim* or Vietnamese *hấp*), `pan_sear` a fourth European pan source, and `oven_bake` a French *loup au sel* or US salt-baked fish.

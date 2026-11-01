@@ -81,24 +81,11 @@ Survey leads **not yet leafed** (queued, evidence in the branch timeline): `pan_
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | — (seven-method survey completed 2026-10-26; enum-wide sweep with documented negative searches and queued leads in the frontmatter comment; `cooking_methods_researched: 1`) |
-| Missing method leaf files | — (none among the 7 declared methods; the six single-source survey leads are documented as queued above and are not declared, so this row counts declared methods honestly) |
-| Method leaf copies parent cut profile | — (none; all seven profiles are method-specific) |
-| Missing Culinary Group A tradition | — (**covered**: Japanese tonteki in pan_fry; Korean BBQ and Indian tandoori in grill; Chinese red-braise in braise) |
-| Missing Culinary Group B tradition | — (covered: Denmark, Austria, Spain, UK in pan_fry; Australia, Mexico in grill; US across four leaves) |
-| Missing Culinary Group C tradition | — (**covered**: Caribbean/Jamaican jerk in grill) |
-| Missing Culinary Group D tradition | — (covered: Danish two-phase butter baste in pan_fry) |
-| Temperature data: USDA safe temperature supported by cut-specific research evidence | — (covered: oven_roast's three sources state 145 °F for this exact cut; air_fryer states 145 °F with a 140 °F pull; grill states 70 °C; pan_fry's Danish/Austrian/Spanish sources state 62–65 °C cores — all fetched) |
-| Temperature data: culinary preferred temps supported by research evidence | — (covered: pan_fry 62–65 °C cluster, grill 60–71 °C span, sous_vide 60–64 °C primary baths, charcoal_grill 60–63 °C targets — per-method bands from fetched sources) |
-| Per-method temp data missing | — (the cut profile body above now carries the per-method application table; every leaf carries its own temperature consensus) |
-
 **Remaining wall evidence — none claimed.** All six failed rows are ordinary incomplete collection, not hard walls: the US-heavy corpora for air_fryer, oven_roast, sous_vide and charcoal_grill are what these English-language appliance/precision-cooking ecosystems publish, but non-US sources for every one of them are plainly fetchable (a Filipino or Korean air-fryer chop, a European oven-chop, a French/Dutch/Japanese sous-vide publication, an Argentine *asado* or Korean *gogigui* charcoal source), and braise needs two more traditions. None of these rows carries a user-approved exception; all are open work.
 
 ### Improvement priorities
 
-1. **−1 each** · Break the US duplication in `sous_vide` (US ×4), `oven_roast` (US ×3), `air_fryer` (US ×2) and `charcoal_grill` — fetch one or two sources from continental Europe / East Asia / Latin America per leaf.
+1. Break the US duplication in `sous_vide` (US ×4), `oven_roast` (US ×3), `air_fryer` (US ×2) and `charcoal_grill` — fetch one or two sources from continental Europe / East Asia / Latin America per leaf.
 2. Raise `braise` from 2 sources to 4 and `charcoal_grill` from 1+guide to 4 (Korean, Argentine, South African or Japanese charcoal traditions are the plausible homes).
 3. **Queue** · Leaf the six surveyed single-source leads (`pan_sear`, `oven_broil`, `smoker`, `steam`, `slow_cooker`, `pressure_cooker`), widening each to the 4-source gate as it is written.
 

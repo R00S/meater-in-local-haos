@@ -90,17 +90,6 @@ kompakt och går mycket snabbare per kilo. Sond från den tjocka änden in i mit
 
 ## Improvement potential
 
-| Criterion | Points | Evidence |
-|-----------|--------|----------|
-| Cooking methods not researched (`cooking_methods_researched: 0`) | — | survey 2026-10-27: oven roast confirmed with three fetched recipes; **braise and smoker confirmed** and declared (matprat *reinsdyrstek i gryte*; the *savuporo* tradition) |
-| Missing Culinary Group D | — | Swedish, Norwegian and Finnish leaves |
-| `## Cut profile` … lacks anatomy | — | anatomy written 2026-10-27: which muscle groups, silverskin cap, 1–2 % fat, bone-in vs rolled shape |
-| No method leaf files exist | — | one leaf exists |
-| Safe-temperature evidence | — | the leaf's pulls (60–70 °C) bracket the cut's 63 °C floor; NJFF's 62 °C medium is the closest published value |
-| Preferred-temperature evidence | — | 55–75 °C on the NJFF scale alone, 60–70 °C across three traditions |
-| Per-method temperature data | — | oven roast 58–70 °C; no per-method data for the two newly declared methods yet |
-| Description duplication | — | the leaf profile was a verbatim copy of this hub's and is now method-specific (rewritten 2026-10-27) |
-
 **Points: −3 → 17.**
 
 **What the number cannot see.** Two declared methods (`braise`, `smoker`) have no usable leaf, and the

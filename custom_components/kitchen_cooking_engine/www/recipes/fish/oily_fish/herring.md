@@ -63,17 +63,6 @@ Sill (Clupea harengus) är en liten, mycket fet pelagisk fisk utbredd i Nordatla
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not fully researched (`cooking_methods_researched: 0`) | −8 |
-| Partial leaf `herring-smoker.md` (1 fetched recipe, below 4–6) | −1 |
-| Partial leaf `herring-braise.md` (1 fetched recipe, below 4–6) | −1 |
-| Missing method leaves | — (all six declared methods have a leaf) |
-| Missing Culinary Group A across cut leaves | — (Cookpad JP in grill and pan_fry) |
-| Missing Culinary Group B | — (UK sources in grill/oven bake; Swedish pan-fry) |
-| Missing Culinary Group C | — (Egyptian grilled *rangah*; Caribbean braise) |
-| Missing Culinary Group D | — (Russian grill/pan-fry; Nordic sources) |
-
 The per-method missing-leaf penalty is not applied because all six declared methods have leaves. Leaf temperature analysis remains explicitly invalid until each source collection meets the 4–6-source gate; no inferred temperature was added.
 
 ### Improvement priorities

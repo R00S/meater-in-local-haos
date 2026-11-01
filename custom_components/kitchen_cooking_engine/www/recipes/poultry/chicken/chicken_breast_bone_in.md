@@ -61,20 +61,6 @@ Ugnsrostning: 200–220 °C, 35–45 minuter. Innertemperatur: **74 °C (165 °F
 
 ## Improvement potential
 
-| Criterion | Points | Status |
-|-----------|--------|--------|
-| Cut profile written (not a placeholder) | +1 | ✅ Done |
-| Culinary Group B tradition covered (oven_roast leaf) | +1 | ✅ Done |
-| Culinary Group C tradition covered (oven_roast leaf) | +1 | ✅ Done |
-| Oven_roast leaf has source recipes with safe temps | +3 | ✅ Done |
-| Culinary preferred temp research present | +4 | ✅ Done |
-| Per-method temp research present | +2 | ✅ Done — oven_roast leaf |
-| Cooking methods not researched | −8 | pending |
-| Missing Culinary Group A tradition | −1 | pending |
-| Missing Culinary Group D tradition | −1 | pending |
-| No grill leaf | − | pending |
-| No air fryer leaf | − | pending |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research grill and air fryer methods for bone-in breast; add leaves; then set `cooking_methods_researched: 1`

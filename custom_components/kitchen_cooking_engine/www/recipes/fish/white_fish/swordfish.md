@@ -75,20 +75,6 @@ Svärdsfisk tolererar direkt hög grillvärme utan att falla isär och har en h�
 - [Sous Vide](./swordfish-sous_vide.md)
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | — (six thermal methods researched; `oven_bake`, `braise`, `sous_vide` discovered and registered 2026-10-25; `cooking_methods_researched: 1`) |
-| Missing method leaf files | — (none; all 6 declared methods have a leaf) |
-| Partial leaf files — source count below 4 | — (none; pan_sear 5, grill 4, charcoal_grill 4, oven_bake 4, braise 4, sous_vide 5) |
-| Method leaf copies parent cut profile | — (none; all six profiles are method-specific) |
-| Missing Culinary Group A tradition | — (**covered**: Indian machli kebab in grill; Japanese-style topping bake in oven_bake; Chinese red braise in braise) |
-| Missing Culinary Group B tradition | — (covered: US, UK, Italy, Spain, Germany, Greece, Canada across five leaves) |
-| Missing Culinary Group C tradition | — (**covered**: Trinidadian (grill), Turkish (charcoal_grill), Moroccan (braise)) |
-| Missing Culinary Group D tradition | — (**covered**: Russian two-stage oven bake in oven_bake) |
-| Temperature data: USDA safe temperature supported by cut-specific research evidence | — (covered 2026-10-25: FDA seafood page — which names swordfish — states 145 °F for seafood, fetched 2026-10-25; North Coast Seafoods and Epicurious both state 145 °F for swordfish specifically) |
-| Temperature data: culinary preferred temps supported by research evidence | — (covered: 52–60 °C pan-sear cluster, 54–58 °C charcoal cluster, 54.4–55.5 °C sous-vide cluster, all from fetched sources) |
-| Per-method temp data missing | — (the cut profile body above now carries the per-method application; every leaf carries its own temperature consensus) |
-
 **Remaining wall evidence — none claimed.** The two failed gate rows are ordinary incomplete collection, not hard walls: pan_sear keeps two BBC Good Food recipes (same publisher, one tradition) because both are the leaf's most temperature-explicit primary sources and deleting valid data to pass a metric would degrade it — the honest fix is a future non-British widening; sous_vide's corpus retrieved this session was four American sources plus one German, and a Dutch/French query returned zero results — the honest fix is a future search for UK/European sous-vide sources. Neither row carries a user-approved exception; both are open work.
 
 ### Improvement priorities

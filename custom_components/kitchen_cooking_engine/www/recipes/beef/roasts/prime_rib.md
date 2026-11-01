@@ -76,14 +76,6 @@ Prime rib (även kallat stående revbenstek) skärs från ribprimalen (revben 6�
 - [Oven Roast](./prime_rib-oven_roast.md)
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Method file `prime_rib-oven_roast.md` copies parent cut profile | ✓ fixed 2026-04-28 |
-
 ### Improvement priorities
 
 1. Cooking methods not researched

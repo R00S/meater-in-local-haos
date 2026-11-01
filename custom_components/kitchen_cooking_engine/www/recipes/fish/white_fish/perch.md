@@ -59,17 +59,6 @@ Abborre (*Perca fluviatilis*; tyska: Barsch; franska: perche) är en mager sötv
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
-| Missing method leaf files (3 of 4 declared) | −3 |
-| Partial leaf files | — (none; pan_fry leaf ✅ CONFORMS TO TOR with 4 sources) |
-| Method leaf copies parent cut profile | — (none; pan_fry profile is method-specific) |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | — (covered: DE/CH in perch-pan_fry.md) |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | — (covered: SE/FI in perch-pan_fry.md) |
-
 Groups A and C absent — European perch (*abborre* / *Perca fluviatilis*) is a Northern European freshwater fish with no established culinary tradition in East Asian or African/Caribbean/Arabic cuisines. Points applied pending verification.
 
 ### Improvement priorities

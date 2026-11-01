@@ -61,17 +61,6 @@ Uer (*Sebastes norvegicus* / *S. mentella*; tyska: Rotbarsch; norska: uer) är e
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
-| Missing method leaf files (4 of 5 declared: pan_sear, oven_bake, grill, smoker) | −4 |
-| Partial leaf files | — (none; pan_fry leaf ✅ CONFORMS TO TOR with 4 sources) |
-| Method leaf copies parent cut profile | — (none; pan_fry profile is method-specific) |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | — (covered: DE/AT/AU in redfish-pan_fry.md) |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | — (covered: DK in redfish-pan_fry.md) |
-
 Groups A and C absent — redfish (*Rotbarsch* / *Sebastes*) is an Atlantic/Arctic fish; pan_fry leaf covers Groups B (DE/AT/AU) and D (DK) only. No East Asian, African, Arabic, or Turkish redfish recipe found. Other 4 method leaves not yet created.
 
 ### Improvement priorities

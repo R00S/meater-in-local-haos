@@ -93,11 +93,6 @@ Entrecôtestek (övre entrecôtestek i nordamerikansk styckningsnomenklatur) är
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-
 ### Notes
 
 - `cooking_methods_researched: 1` — oven_roast confirmed as the primary method

@@ -60,23 +60,10 @@ Ugnsrostning: 200–220 °C, 35–45 minuter med vändning. Innertemperatur: **7
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods researched (full survey) | − **NOT DONE** |
-| Cut profile written with anatomy | ✓ (fixed 2026-04-27) |
-| Oven roast leaf exists with 4 sources | ✓ |
-| Grill leaf | − missing |
-| Air fryer leaf | − missing |
-| Culinary Group A covered | ✓ (oven_roast: Swasthi/Indian) |
-| Culinary Group B covered | ✓ (oven_roast: Jessica Gavin, BBC Good Food) |
-| Culinary Group C covered | − missing |
-| Culinary Group D covered | − missing (Natasha's Kitchen assessed as Group B, no confirmed Group D source) |
-| Oven_roast cut profile method-specific | ✓ (fixed 2026-04-27) |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — survey all cooking methods for chicken legs/drumsticks; update `methods:` list; set `cooking_methods_researched: 1`
-2. **−1 each** · Grill and air fryer leaves missing — create `chicken_leg-grill.md` and `chicken_leg-air_fryer.md` with verified sources
+2. Grill and air fryer leaves missing — create `chicken_leg-grill.md` and `chicken_leg-air_fryer.md` with verified sources
 3. Group C tradition missing — find an African, Arabic, or Caribbean drumstick recipe
 4. Group D tradition missing — find a Swedish, Polish, Baltic, or Slavic/Ukrainian drumstick recipe
 

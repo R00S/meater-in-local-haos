@@ -87,17 +87,6 @@ Sirloin-biffen skärs från sirloin-primalen, som ligger mellan short loin (där
 - [Sous Vide](./sirloin_steak-sous_vide.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Missing Culinary Group D tradition | − pending (−1) |
-| Method file `sirloin_steak-air_fryer.md` copies parent cut profile | ✓ fixed 2026-04-27 |
-| Method file `sirloin_steak-oven_roast.md` copies parent cut profile | ✓ fixed 2026-04-27 |
-| Method file `sirloin_steak-pan_fry.md` copies parent cut profile | ✓ fixed 2026-04-27 |
-| Method file `sirloin_steak-pan_sear.md` copies parent cut profile | ✓ fixed 2026-04-27 |
-| Method file `sirloin_steak-air_fryer.md` copies `sirloin_steak-oven_roast.md` | ✓ fixed 2026-04-27 |
-| Method file `sirloin_steak-air_fryer.md` copies `sirloin_steak-pan_fry.md` | ✓ fixed 2026-04-27 |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

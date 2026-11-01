@@ -56,19 +56,10 @@ Innertemperatur: **60–63 °C (140–145 °F)**. Eftertillagning: 2–3 °C. Dr
 - [Pan Sear](./mahi_mahi-pan_sear.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Cut profile anatomy | ✓ (fixed 2026-04-27) |
-| Pan sear cut profile method-specific | ✓ (fixed 2026-04-27) |
-| 2 missing leaves (air_fryer, grill) | − missing (−2) |
-| Culinary Group D covered | − missing (−1) |
-| Groups A, B, C | ✓ |
-
 ### Improvement priorities
 
 1. Cooking methods not researched
-2. **−1 each** · Missing `mahi_mahi-air_fryer.md`, `mahi_mahi-grill.md`
+2. Missing `mahi_mahi-air_fryer.md`, `mahi_mahi-grill.md`
 3. Group D missing
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

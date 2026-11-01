@@ -65,16 +65,6 @@ Innertemperatur: **60–65 °C** (140–149 °F) för medium (rosa mitt) — ska
 - [Oven Roast](./venison_roast-oven_roast.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Cut profile anatomy | ✓ (fixed 2026-04-27) |
-| Oven_roast cut profile method-specific | ✓ (fixed 2026-04-27) |
-| Braise leaf missing | − missing (−1) |
-| Culinary Group A covered | − missing (−1) |
-| Culinary Group C covered | − missing (−1) |
-| Culinary Groups B, D | ✓ |
-
 ### Improvement priorities
 
 1. Cooking methods not researched

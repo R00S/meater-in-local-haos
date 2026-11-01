@@ -49,20 +49,10 @@ Eftervärmen är försumbar tack vare den omgivande vätskan som buffrar tempera
 - [Braise](./chuck_roast-braise.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Braise cut profile method-specific | ✓ (fixed 2026-04-27) |
-| oven_roast leaf missing | − missing (−1) |
-| slow_cooker leaf missing | − missing (−1) |
-| Culinary Group C covered | − missing (−1) |
-| Culinary Group D covered | ✓ (Köket.se *kalops* — Swedish, added 2026-04-28) |
-| Culinary Groups A, B | ✓ |
-
 ### Improvement priorities
 
 1. Cooking methods not researched
-2. **−1 each** · Missing `chuck_roast-oven_roast.md`, `chuck_roast-slow_cooker.md`
+2. Missing `chuck_roast-oven_roast.md`, `chuck_roast-slow_cooker.md`
 3. Group C missing — 20+ URL probes on 2026-04-28 found no accessible Group C braised whole chuck recipe; Persian ghormeh sabzi (196flavors.com) uses cubed stew meat, not whole chuck; Moroccan tagine recipes redirect to homepage; Turkish güveç URLs not found. Group C braised whole-piece beef recipes appear to be uncommon in online English/accessible sources.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

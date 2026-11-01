@@ -92,15 +92,6 @@ Ryggköttsektionen innehåller samma skiktade myotom- och myokommat-struktur som
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not fully researched (2 of 3) | −3 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Missing method leaf file (grill) | −1 |
-| Source recipes mostly silent on internal temperature (1 of 8 explicit) | −2 |
-| Per-method temp research thin (1 of 2 leaves has explicit pull temp) | −1 |
-
 ### Improvement priorities
 
 1. Add the third method leaf file (grill) — Northern (Swedish gravad/grillad lax) and Western (BBQ) sources should be findable

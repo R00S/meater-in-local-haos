@@ -133,18 +133,6 @@ corpus for this cut measures temperatures only in the North American burger and 
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | ✓ fixed 2026-10-26 (four methods confirmed from sixteen fetched recipes; `cooking_methods_researched: 1`; `braise` replaced by `simmer` after the corpus showed sauces and *hautua* rather than a sealed-pot braise) |
-| Culinary Group B covered | ✓ (Canadian ×3 and US ×2 across grill and oven_bake) |
-| Culinary Group D covered | ✓ (Swedish ×5, Danish, Finnish ×2, Russian across pan_fry, oven_bake and simmer) |
-| `## Cut profile` + anatomy | ✓ (ground-vs-whole-muscle distinction stated, and the corpus's temperature failures tabulated) |
-| Method leaf files exist | ✓ (4 leaves, one per confirmed method; four-leaf floor met, not a ceiling) |
-| Safe temperature research evidence | ✓ (every leaf states what its sources do and do not publish; the USDA 71 °C floor is cited to the source that states it and separated from the 150 °F and "rare" instructions that contradict it) |
-| Preferred-temperature research evidence | ✓ (the cut's own finding: this corpus has no preferred-temperature tradition for mince — three numbers in sixteen recipes, two of them unsafe) |
-| Per-method temperature data | ✓ (table in Cut profile above) |
-| Source counts (4 per leaf) | ✓ (4 / 4 / 4 / 4) |
-
 ### Integrity notes recorded this pass
 
 - Two leaves (pan_fry, simmer) contain **no temperature at all** across eight sources. That is a
@@ -161,11 +149,11 @@ corpus for this cut measures temperatures only in the North American burger and 
 
 ### Improvement priorities
 
-1. **−1 each** · Groups A and C: the honest route is not to invent a moose curry — it is to look
+1. Groups A and C: the honest route is not to invent a moose curry — it is to look
    for North American Indigenous and settler mince traditions (Group B already covered) and for
    Russian/Siberian minority cuisines that fall inside Group D, and to accept that a moose-specific
    Group A or C source may simply not exist in a citable form. Record searched-negatives if so.
-2. **−1 each** · Distinct-tradition rows: pan_fry needs one non-Nordic source (a German or
+2. Distinct-tradition rows: pan_fry needs one non-Nordic source (a German or
    Canadian cast-iron färsbiff), grill needs a non-Canadian burger record, simmer needs one
    non-Nordic long-cook mince sauce
 3. Queued method leads: `braise` (a sealed-pot moose-mince ragù would justify re-adding it

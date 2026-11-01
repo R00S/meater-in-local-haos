@@ -61,17 +61,6 @@ Guldspirad (*Sparus aurata*; spanska/italienska: dorada/orata; franska: daurade 
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
-| Missing method leaf files (4 of 5 declared) | −4 |
-| Partial leaf files | — (none; steam leaf ✅ CONFORMS TO TOR with 4 sources) |
-| Method leaf copies parent cut profile | — (none; steam profile is method-specific) |
-| Missing Culinary Group A tradition | — (covered: CN/TH in gilt_head_bream-steam.md) |
-| Missing Culinary Group B tradition | — (covered: DE/AT in gilt_head_bream-steam.md) |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-
 Group C and D absent — steam leaf covers A (CN/TH) and B (DE/AT) only. Gilt-head bream (dorade) is widespread in Mediterranean and Middle Eastern cooking but no Group C or D source was verified for the steam method. Other method leaves (pan_sear, oven_bake, grill, charcoal_grill) are not yet created.
 
 ### Improvement priorities

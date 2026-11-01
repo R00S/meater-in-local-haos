@@ -98,19 +98,6 @@ surveys for `grill`, `pressure_cooker` or `sous_vide` are exhausted.
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods researched (`cooking_methods_researched: 1`, inventory above) | — |
-| Missing declared method leaves (0 of 3 missing) | — |
-| Leaves below the 4–6-source gate (oven_roast 6, slow_cooker 4, braise 5) | — |
-| Culinary group coverage (A Filipino/Korean, B British/Australian, C Jamaican, D Swedish) | — |
-| Preferred-temperature evidence (72 °C Swedish, 140 °F Filipino, 135 °F Korean, 55 °C Jamaican) | — |
-| Doneness model does not separate fully cooked ham (55–60 °C) from raw/cured ham (63–72 °C) — one 63/71 °C scale serves two different products | −1 |
-| `braise` and `slow_cooker` are single-tradition (all British, or British/German) | −1 |
-| No fetched source covers a **bone-in raw** gammon in either `slow_cooker` or `braise` | −1 |
-| Cut profile anatomy | — (anatomical profile present) |
-| Method-file duplication of the parent profile | — (no leaf copies this text) |
-
 ### Improvement priorities
 
 1. The doneness model is the cut's main structural flaw: a fully cooked 5 kg ham should not be offered the same 71 °C target as a raw gammon joint. Splitting the two would need a cut-level change, not a text edit.

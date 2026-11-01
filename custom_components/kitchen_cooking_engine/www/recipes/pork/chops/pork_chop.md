@@ -65,10 +65,6 @@ Innertemperatur: **58–63 °C (136–145 °F)** för sous vide. Med pasteuriser
 - [Pan Sear](./pork_chop-pan_sear.md)
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|-----------|
-| Cooking methods not researched | −8 |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

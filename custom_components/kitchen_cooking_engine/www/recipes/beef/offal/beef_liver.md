@@ -54,11 +54,6 @@ Nötlever är det hepatiska organet — en stor, lobformad, mörk chokladfärgad
 - [Pan Sear](./beef_liver-pan_sear.md)
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| pan_sear leaf: Group A and C still missing | noted but not deducted at cut level |
-
 *Note: Gaps for "copies parent cut profile" and "copies each other" that appeared in the 2026-04-26 assessment have been removed — the current leaf profiles are distinct and method-specific (pan_fry: European onion-based technique; pan_sear: South Asian/African/South American minimalist searing). Group C is now covered via the AfricanBites source in pan_fry (Imma Adamu, West African/Afro-Caribbean). pan_sear leaf still lacks Groups A and C in its own sources, but this is not a cut-level point.*
 
 ### Improvement priorities

@@ -76,21 +76,10 @@ Köttet är extremt marmorerat med distinkt intramuskulärt fett och en unik fj�
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | ✓ fixed 2026-10-26 (enum-wide survey, `cooking_methods_researched: 1`) |
-| Culinary Group B covered | ✓ (ES, US, BE, DE, CH, IT, NL across all six leaves) |
-| Culinary Group D covered | ✓ (NO in grill) |
-| `## Cut profile` + anatomy | ✓ (*serratus ventralis* / *subscapularis*, seam-fat structure) |
-| Method leaf files exist | ✓ (6 leaves, was 1) |
-| Safe temperature research evidence | ✓ (explicit pull line in every leaf; house guidance marked where sources publish none) |
-| Preferred-temperature research evidence | ✓ (55–60 °C pan_sear; 57–60→63 °C grill; 65 °C charcoal; 55–62 °C sous_vide) |
-| Per-method temperature data | ✓ (table in Cut profile above) |
-
 ### Improvement priorities
 
-1. **−1 each** · Raise `charcoal_grill`, `oven_roast`, `braise` and `sous_vide` to the 4-source count — one further fetched source per leaf (Portuguese *grelhado*/German grill for charcoal; Portuguese *assado* or a German/Scandinavian oven source; Portuguese *estufado* or Greek *stifado* for braise; a Spanish/German precision-cooking page — dehesium.com is a preserved lead — for sous_vide)
-2. **−1 each** · Clear the three distinct-tradition rows: one non-Spanish, non-Swiss plancha source (pan_sear), one non-Spanish oven source (oven_roast), one unambiguous non-Spanish braise source (braise)
+1. Raise `charcoal_grill`, `oven_roast`, `braise` and `sous_vide` to the 4-source count — one further fetched source per leaf (Portuguese *grelhado*/German grill for charcoal; Portuguese *assado* or a German/Scandinavian oven source; Portuguese *estufado* or Greek *stifado* for braise; a Spanish/German precision-cooking page — dehesium.com is a preserved lead — for sous_vide)
+2. Clear the three distinct-tradition rows: one non-Spanish, non-Swiss plancha source (pan_sear), one non-Spanish oven source (oven_roast), one unambiguous non-Spanish braise source (braise)
 3. Group C source for the cut anywhere (a true South-African *braai* secreto plate, or Moroccan/Turkish/Caribbean treatment) — the −1 stands as documented gap until a source is fetched
 4. Group A depth — a second method carrying a Japanese/Korean/Chinese/Thai source (currently only the oven_roast roulade)
 5. Queued method leads to widen next pass: `air_fryer` (recetasairfryernuria.com, Cookpad), `slow_cooker` (Cookpad Crockpot), `smoker` (informal social posts), `pressure_cooker` (none separate from braise)

@@ -69,21 +69,6 @@ Method survey completed 2026-10-23, re-verified 2026-10-24, extended 2026-10-25:
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | — (six thermal methods researched; `braise` discovered and registered 2026-10-25; `cooking_methods_researched: 1`) |
-| Missing method leaf files | — (none; all 6 declared methods have a leaf) |
-| Partial leaf files — source count below 4: braise (3) | −1 |
-| Leaf files failing the distinct-tradition gate (binary — no leaf passes; documented same-tradition duplication): pan_fry (SE ×2 of 6), oven_bake (SE ×2 of 6), grill (SE ×3 of 6), boil (FI ×3 of 6), smoker (SE ×2 of 4), braise (RU ×2 of 3) | — (user-approved exception #3; wall documented below) |
-| Method leaf copies parent cut profile | — (none; all six profiles are method-specific) |
-| Missing Culinary Group A tradition | — (user-approved exception #1; wall documented below) |
-| Missing Culinary Group B tradition | — (**covered**: Scottish herring-in-oatmeal and German gebratene Heringe/Brathering in pan_fry, Canadian grilled herring in grill) |
-| Missing Culinary Group C tradition | — (user-approved exception #1; wall documented below) |
-| Missing Culinary Group D tradition | — (covered: SE/FI/EE/LV/RU sources across all six leaves) |
-| Temperature data: USDA safe temperature not supported by cut-specific research evidence | — (user-approved exception #2; wall documented below) |
-| Temperature data: culinary preferred temps supported by research evidence | — (**covered 2026-10-25**: 52 °C target naming strömming explicitly — Kokaihop Magasin fish list and Kungsberga's fish table listing Sill/Strömming at 52 °C with the pull-2–4 °C-earlier rule; both fetched 2026-10-25 and written into the cut profile body above) |
-| Per-method temp data missing | — (the cut profile body now carries per-method application of the 52 °C target — pan/grill/oven get ≈50 °C pull, smoker chamber figures flagged as process-only, boil/braise textural; every leaf carries its own temperature consensus) |
-
 **Wall evidence #1 — identity (Groups A and C; verified 2026-10-25, per `RECIPE_COLLECTION_TOR.md` "Hard-wall exception"):** the fish carries distinct culinary identities only around the Baltic — *strömming* (SV), *silakka* (FI), *räim* (EE), *salaka* (RU, verified *Clupea harengus membras*, ru.wikipedia.org/wiki/Салака and inaturalist.org taxa page, fetched 2026-10-25), *reņģe* (LV, verified via priede.bf.lu.lv), *śledź bałtycki* (PL) — while East Asian sources cook Pacific herring (*nishin*, *Clupea pallasii*, a different species) and Group C traditions (e.g. Caribbean) use the smoked/imported product rather than fresh Baltic herring. No source recipe for this exact cut was verified outside the Baltic region in the 2026-10-24 or 2026-10-25 searches.
 
 **Exception #1 (user-approved 2026-10-25):** Missing Culinary Group A and C only — those two rows above are waived.

@@ -95,17 +95,6 @@ minuter täckt.
 
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | ✓ fixed 2026-10-26 (survey on fetched pages; `oven_roast` confirmed and rewritten, `smoker` discovered — its leaf had been a bare stub and the method was never registered — both now in `cooking_data.py`) |
-| Culinary Group A covered | ✓ (Filipino *hamon*, poach-then-bake, in oven_roast) |
-| Culinary Group B covered | ✓ (US ×2 in oven_roast, US ×3 in smoker) |
-| Culinary Group D covered | ✓ (Danish glazed ham in oven_roast) |
-| `## Cut profile` + anatomy | ✓ (rewritten around the hind-leg muscle group, the rind-and-fat layer, and the fact that this is a reheat cut; the old profile's "70–75 °C" target was unsourced and is replaced by the corpus's 140 °F) |
-| Safe temperature research evidence | ✓ (explicit pull lines in both leaves; three published 140 °F figures quoted verbatim; the Danish record states plainly that it publishes none) |
-| Preferred-temperature research evidence | ✓ (140 °F plateau documented independently by three sources across two methods, with the 120 °F outlier analysed rather than averaged) |
-| Per-method temperature data | ✓ (table in Cut profile above) |
-
 ### Integrity work recorded this pass
 
 The oven-roast leaf it replaces had given **all three of its sources the same 70–75 °C pull** and

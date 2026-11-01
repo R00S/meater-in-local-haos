@@ -75,16 +75,6 @@ Köttet (*carabeef*) är magert, mörkrött och fast, med en smak liknande mager
 - [Pan Sear](./buffalo_steak-pan_sear.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| Cut profile anatomy | ✓ (fixed 2026-04-27) |
-| Grill cut profile method-specific | ✓ (fixed 2026-04-27) |
-| Charcoal grill leaf missing | − missing (−1) |
-| Culinary Group C covered | − missing (−1) |
-| Culinary Group D covered | − missing (−1) |
-| Culinary Groups A, B | ✓ |
-
 ### Improvement priorities
 
 1. Cooking methods not researched

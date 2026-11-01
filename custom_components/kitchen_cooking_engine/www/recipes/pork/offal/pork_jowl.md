@@ -57,18 +57,6 @@ Färsk fläskkäk bräseras som fläskkind, till **85–90 °C (185–194 °F)**
 
 ## Improvement potential
 
-| Criterion | Points | Status |
-|-----------|--------|--------|
-| Cut profile written (not a placeholder) | +1 | ✅ Done |
-| Culinary Group B tradition covered (braise leaf) | +1 | ✅ Done |
-| Braise leaf has source recipes with safe temps | +3 | ✅ Done |
-| Culinary preferred temp research present | +4 | ✅ Done |
-| Per-method temp research present | +2 | ✅ Done — braise leaf |
-| Cooking methods not researched | −8 | pending |
-| Missing Culinary Group A tradition | −1 | pending |
-| Missing Culinary Group C tradition | −1 | pending |
-| Missing Culinary Group D tradition | −1 | pending |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research the **grill** method for Korean-style hangjeongsal (항정살 / pork neck-jowl muscle grilled over charcoal); attempted sources (all 404): koreanbapsang.com, kimchimari.com, beyondkimchee.com, aeriskitchen.com, maangchi.com. Try: omnivorescookbook.com, seonkyounglongest.com (use browser search), or any Korean food magazine site. Once a grill leaf is created and both braise and grill methods are covered, set `cooking_methods_researched: 1`.

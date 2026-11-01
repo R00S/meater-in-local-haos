@@ -92,14 +92,6 @@ Fettlisten längs ena kanten är ett definierande drag och smakkälla — den sm
 - [Sous Vide](./ny_strip-sous_vide.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods not researched | − **NOT DONE** (−8) |
-| All method cut profiles distinct (no copies) | ✓ (fixed 2026-04-27) |
-| Culinary Group A covered | − missing (−1) |
-| Culinary Group D covered | − missing (−1) |
-| Culinary Groups B, C | ✓ |
-
 ### Improvement priorities
 
 1. Cooking methods not researched

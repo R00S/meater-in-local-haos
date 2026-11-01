@@ -56,20 +56,6 @@ Det segmenterade ytterskalet (skalet) är ett inbyggt värmeskydd som skyddar k�
 - [Oven Roast](./lobster_tail-oven_roast.md)
 ## Improvement potential
 
-| Criterion | Status |
-|-----------|--------|
-| Cooking methods researched | ✓ — survey completed 2026-04-29 (grill and oven_roast confirmed as the two primary MEATER-appropriate methods for lobster tail; broil is subsumed under oven_roast; steaming and boiling are not MEATER-relevant methods as probe placement is impractical) |
-| Culinary Group A tradition covered | ✓ (Nobu Matsuhisa — Japanese, grill leaf) |
-| Culinary Group B tradition covered | ✓ (Raichlen, Ramsay, Robuchon, Zonfrillo, Keller, Nordström, Stein, Ripert) |
-| Culinary Group D tradition covered | ✓ (Tina Nordström — Swedish/Nordic, oven_roast leaf) |
-| Culinary Group C tradition covered | − missing (Moroccan, Caribbean, Middle Eastern, North African lobster tail recipes not accessible: marocmama.com redirects to homepage, cheftariq.com 404, all other probed Group C URLs 404) |
-| Cut profile written with anatomy | ✓ |
-| Grill leaf with 5 sources | ✓ (cut profile is method-specific — previous assessment of copying was incorrect) |
-| Oven roast leaf with 4 sources | ✓ (cut profile is method-specific — previous assessment of copying was incorrect) |
-| Temperature data: safe temp (63°C) | ✓ |
-| Temperature data: culinary preferred (57–62°C) | ✓ |
-| Per-method temperature data | ✓ (both leaves) |
-
 ### Improvement priorities
 
 1. Missing Culinary Group C tradition — add a Middle Eastern, Moroccan, Caribbean, or Turkish lobster tail recipe to the grill or oven_roast leaf. Lobster is found in the Mediterranean and Red Sea; Turkish *ızgara ıstakoz* (grilled lobster) exists as a tradition. 20+ probes on 2026-04-27 and 2026-04-29 found no accessible Group C lobster tail recipe.

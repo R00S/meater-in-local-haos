@@ -72,19 +72,6 @@ Tomater (*Solanum lycopersicum*) i airfryern rostas på 8–15 minuter beroende 
 produced by a table that charged −8 for an unstarted method survey and −1 for a missing leaf while never
 looking at the two leaves that already existed).
 
-| Criterion | Points | Evidence |
-|-----------|--------|----------|
-| Cooking methods not researched (`cooking_methods_researched: 1`) | — | survey re-run 2026-10-27: air fryer, oven roast, oven broil confirmed; **grill and pan fry discovered** and declared, leaves owed |
-| Missing Culinary Group A | — | Thai and Indian air-fryer records |
-| Missing Culinary Group B | — | Mexican, Italian, US, Italian-American records |
-| Missing Culinary Group C | — | Turkish, Moroccan, Lebanese oven records |
-| `## Cut profile` … lacks anatomy | — | anatomy added 2026-10-27: skin, pericarp, locules, gel, and what each does under heat |
-| No method leaf files exist | — | three leaves exist; two more are owed by the methods declared this pass |
-| Safe-temperature evidence | — | not a USDA-controlled product; no safe-temp row applies |
-| Preferred-temperature evidence | — | 86–95 °C across air-fryer and oven-roast records |
-| Per-method temperature data | — | separate bands per leaf |
-| Description duplication | — | `air_fryer` profile rewritten to be method-specific 2026-10-27; sibling leaves distinct |
-
 **Points: −1 Group D → 19.**
 
 **What the number cannot see.** Two leaves are owed (`grill`, `pan_fry`) and the oven-broil leaf contains no

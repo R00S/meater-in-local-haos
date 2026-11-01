@@ -87,10 +87,6 @@ carryover_temp_c: 8
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Missing Culinary Group A tradition | −1 |
-
 ### Notes
 
 - `cooking_methods_researched: 1` — oven_roast confirmed as the correct method; braising is not appropriate for roasting joints (no collagen to dissolve)

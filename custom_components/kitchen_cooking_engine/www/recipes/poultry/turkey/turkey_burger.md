@@ -48,12 +48,6 @@ En grillad kalkonburger är en 150–180 g formad biff gjord av grovmalt kalkont
 - [Pan Fry](./turkey_burger-pan_fry.md)
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group A tradition | −1 |
-| Method file `turkey_burger-grill.md` copies parent cut profile | −1 |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`

@@ -89,12 +89,6 @@ Nötrumpa skärs från rumpprimalen — toppen av bakkvarteret, vid korsningen a
 
 ## Improvement potential
 
-| Criterion | Points |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Groups A, C | −2 (honest gaps) |
-| Groups B, D covered in pan_sear leaf | −0 |
-
 ### Improvement priorities
 
 1. Cooking methods not researched — research grill and oven_roast methods; set `cooking_methods_researched: 1`
