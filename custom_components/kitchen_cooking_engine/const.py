@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 1 Nov 2026
-Last Change: v0.10.2.38 - in-language tjocka revben research pass: steam, air fryer and charcoal grill leaves added, smoker and sous-vide analyses written, cross-language cut names re-verified, reading recomputed to -33
+Last Change: v0.10.2.39 - recipe source of truth: cut and method data now read only from www/recipes/ (cooking_data.py and swedish_cooking_data.py removed, panel COOKING_METHODS generated from recipe files, PANEL_VERSION 686); cured ham moved to pork/ham, virginia_ham dropped; deferred items logged in docs/TO_FIX_LATER.md
 """
 
 DOMAIN = "kitchen_cooking_engine"

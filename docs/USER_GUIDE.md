@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.2.38 · Home Assistant 2024.1.0+
+> **Version:** 0.10.2.39 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -539,9 +539,10 @@ As of v0.10.2.11, **all 186 MEATER+ cut overview files** carry a `## Styckesprof
 
 Any cut without a localized name field falls back to its English name.
 
-The recipe library lives under `custom_components/kitchen_cooking_engine/www/recipes/`. Each file carries a
-`<!-- KCE:CUT … -->` or `<!-- KCE:CUT_METHOD … -->` tag that describes its position in the
-meat hierarchy, cooking temperatures, and supported methods.
+The recipe library lives under `custom_components/kitchen_cooking_engine/www/recipes/` and is the only source for cut and
+cooking-method data: the integration and the panel read the cut lists, methods and doneness levels from these files, so
+no separate Python table needs editing. Each file carries a `<!-- KCE:CUT … -->` or `<!-- KCE:CUT_METHOD … -->` tag that
+describes its position in the meat hierarchy, cooking temperatures, and supported methods.
 A `## Cut profile` body section provides the English cut description; a sibling
 `## Styckesprofil` section provides the Swedish translation shown when the UI is set to Svenska.
 
@@ -807,7 +808,7 @@ Follow with 2–4 sentences stating the source-reported temperature range (or th
 
 After the collection gate passes, write 3–6 sentences on the physics and flavour chemistry of this method applied to this cut.
 
-## Data applied to cooking_data.py
+## Data applied to the cut's recipe file
 
 After the collection gate passes, list actionable method/doneness changes supported by the collected evidence. Do not use incomplete collections to set engine temperature values.
 
