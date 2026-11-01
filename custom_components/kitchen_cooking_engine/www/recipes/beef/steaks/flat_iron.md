@@ -126,8 +126,6 @@ Flat iron steak tas från infraspinatus i skulderbladet, separerad från det cen
 
 ### Improvement priorities
 
-### Improvement priorities
-
 1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
 2. Method file `flat_iron-air_fryer.md` copies parent cut profile — rewrite `flat_iron-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
