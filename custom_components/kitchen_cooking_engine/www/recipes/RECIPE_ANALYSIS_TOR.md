@@ -1,6 +1,10 @@
 > **Source of truth (read first):** `cooking_data.py` and `swedish_cooking_data.py` were deleted.
 > Cuts, methods and doneness live in the cut file's `KCE:CUT` block (and `KCE:CUT_METHOD` tags) in `www/recipes/`.
-> Do NOT recreate Python cooking data. The `## Data applied to cooking_data.py` heading below is a legacy
+> **A Python cooking-data file is generated output, not a source:** if one exists anywhere — an installed
+> release, a build artefact, a future export — it is produced from the cut files and must never be hand-edited,
+> hand-extended or used to register a method, because the next run overwrites it. To change the data, edit the
+> cut file and regenerate.
+> Do NOT recreate Python cooking data by hand. The `## Data applied to cooking_data.py` heading below is a legacy
 > section name kept on existing research files; in it, record the edits made to the recipe files.
 
 # Terms of Reference — Recipe Analysis

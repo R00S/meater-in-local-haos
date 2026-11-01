@@ -1,7 +1,7 @@
 # Terms of Reference — Recipe Collection
 
 > **Companion document**: [`RECIPE_ANALYSIS_TOR.md`](RECIPE_ANALYSIS_TOR.md) covers
-> temperature consensus, `cooking_data.py` coding, verification, and the analysis
+> temperature consensus, recipe-file updates, verification, and the analysis
 > sections that follow the source recipes in each leaf file.
 
 ## Purpose
@@ -31,7 +31,7 @@ similar, not because recipes for each method are scarce.
 
 A leaf is NOT a synthesis document. It is a **saved collection of primary source
 recipes** that happen to share the same cut and method. The temperature consensus
-and `cooking_data.py` note are byproducts of that collection, not the goal.
+and the analysis notes are byproducts of that collection, not the goal.
 
 ---
 
@@ -54,10 +54,19 @@ docs/recipe_research/
 
 ### Source of truth
 
-The authoritative tree is `custom_components/kitchen_cooking_engine/cooking_data.py`
-in the `main` branch. **Every `MeatCategory` → `CutType` → `MeatCut.supported_methods`
-combination is a required leaf.** This branch must eventually contain one fully
-populated leaf file for every such combination.
+The authoritative tree is **the cut files under this directory** (`www/recipes/`).
+A cut's `KCE:CUT` frontmatter block carries its category, its cut type, its
+`methods:` list, its doneness levels and its safe temperatures. **Every method
+listed in a cut file's `methods:` is a required leaf.** This branch must
+eventually contain one fully populated leaf file for every such combination.
+
+Nothing in Python is a source of truth. The former `cooking_data.py` and
+`swedish_cooking_data.py` were deleted; the cut files replaced them, and
+`generate_frontend_data.py` reads the cut files to build the panel data. Any
+Python cooking-data file, wherever one still exists — an installed release, a
+build artefact, a future export — is **generated output**: never edit it by
+hand, never add a cut or a method to it, because the next run overwrites it. To
+change what the engine knows, edit the cut file and regenerate.
 
 - **Category** = `MeatCategory.name` (e.g. `beef`, `pork`, `poultry`, `fish`,
   `lamb`, `game`, `vegetables`)
@@ -71,7 +80,7 @@ populated leaf file for every such combination.
 
 ### Folder slug mapping
 
-| Cut Type name in cooking_data.py | Folder in repo |
+| Cut Type name in the cut frontmatter | Folder in repo |
 |----------------------------------|---------------|
 | Steaks | `steaks/` |
 | Roasts | `roasts/` |
@@ -106,14 +115,14 @@ populated leaf file for every such combination.
 
 ### Adding new leaves
 
-The base tree (501 leaves) comes from `cooking_data.py`. **This is a floor,
+The base tree (501 leaves) is what the cut files' `methods:` lists record. **This is a floor,
 not a ceiling.**
 
 > ⚠️ **Every search session will find new leaves. This is expected and normal.**
 >
 > A protein does not have one cut. It has many cuts.  
 > A cut does not have one cooking method. It has many cooking methods.  
-> The entries in `cooking_data.py` are a starting point based on the most
+> The method lists in the cut files are a starting point based on the most
 > obvious combinations — they are **not** a complete inventory of what real
 > recipes exist in the world. Assume that for every protein you research,
 > you will discover cut × method combinations that are not yet registered.
@@ -124,26 +133,26 @@ not a ceiling.**
 > oxtail, and more. Each of those cuts is cooked by pan-sear, grill, charcoal
 > grill, oven roast, oven bake, sous vide, air fryer, broil, braise, or smoker
 > across different traditions. A "starting point" of 3 methods per cut does not
-> mean only 3 methods exist. **Never stop at what `cooking_data.py` currently
+> mean only 3 methods exist. **Never stop at what the cut file currently
 > lists.**
 
 Every serious research session will discover cut × method combinations that
-real cooks actually use but that are not yet registered in `cooking_data.py`.
+real cooks actually use but that are not yet registered in the cut file.
 A single protein can have a dozen or more distinct cuts, each of which may
 support five, eight, or more cooking methods across different culinary
 traditions.
 
 **When you find a real recipe for a cut × method combination that is not yet
-in the base tree, you are expected to create the leaf and add the entry to
-`cooking_data.py`.** This is normal research work, not an exception.
+in the base tree, you are expected to create the leaf and register the method in
+the cut file's `methods:` list.** This is normal research work, not an exception.
 
 The conditions are:
 
 1. A real, human-created recipe exists for this cut × method combination with
    clear temperature data and culinary significance.
 2. The combination does not yet have a leaf file in the repo.
-3. You add a matching entry to `cooking_data.py` (`supported_methods`) so that
-   the leaf is registered in the engine.
+3. You add the method to the cut file's `methods:` list so that the leaf is
+   registered in the engine.
 
 Do **not** create a leaf file for a combination that exists only in theory.
 A leaf exists because a real recipe for it exists, not because the method is
@@ -179,13 +188,13 @@ If that is the case:
 - Conclusion: No credible human-created recipe found.
 ```
 
-3. Do **not** remove the corresponding `supported_methods` entry from
-   `cooking_data.py` without a separate explicit decision — that is a code
-   change with wider impact and requires its own PR.
+3. Do **not** remove the method from the cut file's `methods:` list without a
+   separate explicit decision — that changes what the engine and the panel see
+   and requires its own decision.
 
 ### Base tree count
 
-The base tree derived from `cooking_data.py` contains **501 leaves** across
+The base tree recorded across the cut files contains **501 leaves** across
 7 categories. This number will grow as research sessions discover real recipes
 for cut × method combinations not yet registered. **501 is a minimum, not a
 target ceiling.** Expect the true count to be significantly higher once all
@@ -491,10 +500,10 @@ optional extra.
 Use this protocol every time you are tasked with creating leaves for a cut that
 has not yet been fully researched.
 
-### Step 1 — Check what cooking_data.py currently lists
+### Step 1 — Check what the cut file currently lists
 
-Open `cooking_data.py` and locate the `MeatCut` entry for this cut. Note every
-method in `supported_methods`. These are the leaves already registered in the
+Open the cut's `{slug}.md` and read `methods:` in its `KCE:CUT` block. Note every
+method it lists. These are the leaves already registered in the
 engine — but they are **not necessarily complete, and almost certainly not**.
 
 > ⚠️ **Treat the current `supported_methods` as a minimum starting hint, not
@@ -503,7 +512,7 @@ engine — but they are **not necessarily complete, and almost certainly not**.
 
 ### Step 2 — Research ALL real-world cooking methods for this cut
 
-> ⚠️ **Expect to find more methods than what `cooking_data.py` lists.** For
+> ⚠️ **Expect to find more methods than the cut file lists.** For
 > every cut you research, assume the real list is longer. A lean white fish
 > fillet is poached, steamed, en papillote, salt-baked, smoked, pan-fried,
 > oven-baked, air-fried, and grilled across different traditions. An entry with
@@ -511,7 +520,7 @@ engine — but they are **not necessarily complete, and almost certainly not**.
 > it is evidence that 3 were obvious enough to register without research.
 > **The whole purpose of this research work is to find the rest.**
 
-Do not stop at what `cooking_data.py` currently lists. Research the cut across
+Do not stop at what the cut file currently lists. Research the cut across
 culinary traditions to find every cooking method for which **credible,
 human-created recipes exist**. Ask:
 
@@ -528,14 +537,14 @@ searched and found no credible recipe.**
 ### Step 2b — Research ALL real-world cuts for this protein
 
 The protein (beef, salmon, pork, etc.) may have cuts that are not yet
-registered in `cooking_data.py` at all. A protein category does not have one
+registered in the tree at all. A protein category does not have one
 or two cuts. It has many. Beef alone has 15+ common cuts. Salmon has fillet,
 steak, belly, collar, and whole. Shellfish includes scallops, shrimp, lobster
 tail, crab, clams, oysters, and more — each a distinct cut with its own
 supported methods.
 
 If you encounter a real recipe for a cut × method that has no entry in
-`cooking_data.py`, add both the `MeatCut` entry and the leaf file. This is
+the tree, create the cut file and the leaf file. This is
 as expected as finding a new method for an existing cut.
 
 When you create the new `{slug}.md` cut file, write its GUI-visible parts in the
@@ -547,22 +556,22 @@ file created without them is a stub that looks finished to the end user.
 ### Step 3 — For every method you find real recipes for
 
 1. If the method is already in `supported_methods`: create the leaf file for it.
-2. If the method is **not** in `supported_methods`: add it to `cooking_data.py`
+2. If the method is **not** in `methods:`: add it to the cut file's `methods:` list
    first, then create the leaf file.
 
-Do not create a leaf without the corresponding `cooking_data.py` entry, and do
-not add a `cooking_data.py` entry without the leaf.
+Do not create a leaf without registering its method in the cut file, and do not
+register a method without its leaf.
 
 ### Step 4 — Document the method inventory before writing any leaf
 
 As the first act of your research session, write down:
-- Which methods are already in `cooking_data.py`
+- Which methods are already in the cut file's `methods:` list
 - Which additional methods you found during Step 2 (expect to find some)
 - Which new cuts you found during Step 2b (expect to find some)
 - Which methods (if any) produced no credible recipe after thorough search
 
 Only then begin writing leaves. If you found no new methods and no new cuts
-beyond what `cooking_data.py` already lists, that is a sign the research was
+beyond what the cut file already lists, that is a sign the research was
 not thorough enough — go back and look again before concluding.
 
 ---
@@ -601,12 +610,11 @@ see [`RECIPE_ANALYSIS_TOR.md`](RECIPE_ANALYSIS_TOR.md).
 ## File tree covered
 
 Every `Category → Cut Type → Cut → Cooking Method` combination present in
-`custom_components/kitchen_cooking_engine/cooking_data.py` on the `main` branch
-**requires exactly one leaf file** in this branch. The full base tree is
+the cut files' `KCE:CUT` frontmatter **requires exactly one leaf file** in this branch. The full base tree is
 **501 leaves**. Completion order is not mandated; this ToR only defines the
 standard each leaf must meet when it is written.
 
-When a new leaf is added to `cooking_data.py` on main, a corresponding leaf
+When a method is added to a cut file's `methods:` list, a corresponding leaf
 file becomes required here.
 
 ---
@@ -646,7 +654,7 @@ potential under the new system; the number is a measurement, not a target.
 - Do **not** soften or remove a criterion to make the number look better.
   Accurate assessment is more valuable than a misleading reading.
 - Do **not** add credit for data that has not been genuinely researched.
-  Frontmatter values auto-populated from `cooking_data.py` are not research.
+  Frontmatter values that no source supports are not research.
 - Do **not** treat any reading as a goal or as proof that a cut is finished.
 - Do **not** use projected numbers to choose between optional improvements. Improve
   the data first, then read the number off the new system; it measures potential
@@ -702,7 +710,7 @@ unfinished work. Apply only the reductions specified by the new system.
 
 The `cooking_methods_researched` field tracks whether someone has deliberately researched what cooking methods are
 appropriate for this cut across culinary traditions — not just accepted whatever list was
-auto-populated from `cooking_data.py`.  Research means: checking multiple culinary sources
+copied from a template.  Research means: checking multiple culinary sources
 to confirm which methods suit the cut's connective-tissue content, fat distribution, and
 thickness, and verifying that the `methods:` list reflects that investigation.
 
@@ -732,7 +740,7 @@ collection or analysis gates or invalidate user-approved exceptions.
 
 Temperature criteria require **research evidence** — the presence of values in
 the `<!-- KCE:CUT` frontmatter block alone does **not** satisfy these criteria.
-Those values are auto-populated from `cooking_data.py` and may be present even
+Those values can sit in the frontmatter with no research behind them and may be present even
 in a file with zero research content.  Research evidence means: at least one
 method leaf file that contains source recipes with explicit pull temperatures
 (the "Pull at X°C" step in the recipe format), OR the cut profile body
