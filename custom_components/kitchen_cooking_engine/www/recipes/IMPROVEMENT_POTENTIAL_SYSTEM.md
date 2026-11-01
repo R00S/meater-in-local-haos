@@ -28,7 +28,7 @@ Apply the threshold separately to each reduction type, not across all instances 
 * For safe temps - 32
 * For description how the meat behaves and fat renders at different temps for the cut - 96. (max once per language)
 * For description how the meat behaves and fat renders at different temps for the cut-method leaf - 32. (max once per language)
-* For specific descrition of the cut-methos and trations that method is common in 32. (max once per language)
+* For a specific description of the cut-method, and of the traditions that method is common in — 32 for each leaf that carries that description. (max once per leaf per language)
 * Prefered temps for each cut-method file for the cut with discussion on why its specific for that method - 32. (max once per language)
 
 ### Measurement clarifications
@@ -38,5 +38,6 @@ Apply the threshold separately to each reduction type, not across all instances 
 - **User-approved exceptions** remain in force within their approved scope. Their purpose is to let work move on to other recipes when score walls are hit, rather than repeatedly revisiting settled walls. Preserve them; do not reopen or discard them during reassessment. Where their numerical effect under the new system is not defined, document that separately rather than inventing an adjustment or blocking work on other recipes.
 - **Base and threshold.** `Meat: 3455/8` means a **base rating of 3455** with a **threshold of 8** for that category, and likewise `3350/4` and `3282/2`. The number after the slash is a threshold, not a divisor.
 - **Thresholds are per leaf.** Each reduction type is tiered inside one cut-method leaf at a time, never against a count pooled across the cut's leaves. One leaf's instances do not use up another leaf's allowance.
+- **Leaf-scoped description row.** The reduction for a specific description of the cut-method and the traditions that method is common in is assessed per cut-method leaf: every leaf carrying such a description takes it, once per language. It is not a cut-level row and is never counted once for the whole cut.
 - **Languages count separately.** Where a cut file or a leaf carries the same material in more than one language — English, Swedish, or Danish where present — each language takes the reduction separately. One language never covers another.
 - **Final reading:** subtract the applicable reductions from the category base, then round the final result to a whole number. Negative readings are allowed; do not clamp them to zero. No reading means the cut is permanently finished.
