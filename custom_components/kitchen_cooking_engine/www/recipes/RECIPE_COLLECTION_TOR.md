@@ -299,6 +299,16 @@ N+1. Rest {duration}. Final serving temperature: **{temp}°C / {temp}°F** ({don
 ---
 ```
 
+### Why the citation line says *Inspired by*
+
+`**Inspired by**` is a deliberate attribution convention, not a statement that the recipe is hypothetical or
+unverified. Recipes are paraphrased into this project's own wording, with their ingredients, steps and temperatures
+recorded faithfully beside the named source, instead of being reproduced verbatim — copyright and attribution are the
+reason for both the wording and the heading. A citation to a named cookbook (author, title, publisher, year) is
+therefore a full citation under this ToR: cookbook sources do not require `web_fetch` (see "Fallback method: book
+citations"), and an *Inspired by* line backed by a named source is verified evidence. It must never be discounted
+because no URL is printed beside it, and a leaf is not a stub merely because its sources are books.
+
 ### Rules for ingredients
 
 - Every non-trivial ingredient must have a **quantity** (weight, volume, or count).

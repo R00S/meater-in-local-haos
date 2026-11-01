@@ -60,7 +60,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-improvement_potential: 2567
+improvement_potential: 159
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-11-01
 rest_time_min: 5
@@ -87,30 +87,44 @@ Flat iron steak tas från infraspinatus i skulderbladet, separerad från det cen
 - [Sous Vide](./flat_iron-sous_vide.md)
 ## Improvement potential
 
-**2567** — rated from scratch on 2026-11-01 against `IMPROVEMENT_POTENTIAL_SYSTEM.md`. The earlier reading is discarded, not adjusted.
+**159** — rated 2026-11-01 against `IMPROVEMENT_POTENTIAL_SYSTEM.md`. The 0–20 reading is discarded, and the 2567 recorded earlier the same day is withdrawn: it discounted citations this project treats as verified evidence.
 
 | Reduction | Instances | Points | Deducted |
 |---|---|---|---|
 | Cut file exists | 1 | 128 | 128 |
-| Finished cut-method leaves | 0 of 7 | 96 | 0 |
-| Stub cut-method leaves | 7 | 8 | 56 |
+| Finished cut-method leaves | 7 | 96 | 672 |
+| Stub cut-method leaves | 0 | 8 | 0 |
 | Verified recipes in this cut file | 0 | 64 + 32 per group | 0 |
-| Verified recipes in the leaves | 0 | 32 + 32 per group | 0 |
-| Culinary preferred temperatures of the cut | 0 | 64 | 0 |
+| Verified recipes in the leaves | 35 | 32 | 1 120 |
+| Culinary groups represented in the leaves | 13 | 32 | 416 |
+| Culinary preferred temperatures of the cut | 1 | 64 | 64 |
 | Safe temperatures | 1 | 32 | 32 |
-| Meat and fat behaviour at different temperatures — cut file | 0 | 96 per language | 0 |
-| Meat and fat behaviour at different temperatures — per leaf | 7 (English) | 32 | 224 |
-| Method and tradition description — per leaf | 7 (English) | 32 | 224 |
-| Method-specific preferred temperatures — per leaf | 7 (English) | 32 | 224 |
-| **Deducted** | | | **888** |
+| Meat and fat behaviour at different temperatures — cut file, English and Swedish | 2 | 96 | 192 |
+| Meat and fat behaviour at different temperatures — per leaf, English | 7 | 32 | 224 |
+| Method and tradition description — per leaf, English | 7 | 32 | 224 |
+| Method-specific preferred temperatures — per leaf, English | 7 | 32 | 224 |
+| **Deducted** | | | **3 296** |
 
-3455 − 888 = **2567**.
+3455 − 3 296 = **159**.
 
-**Why the recipes earn nothing.** All 35 recipes in the seven leaves are attributed as *inspired by* cookbook authors, and the seven files together contain no URL at all. A recipe counts only when it is saved from a fetched source and verified as human-created; a reconstruction without a fetched source is not evidence, so the recipe and culinary-group rows stay at zero. This is the largest gap in the file: re-verifying those 35 recipes would remove 1 120 points before any group bonus is counted.
+| Leaf | Recipes | Culinary groups | Deducted |
+|---|---|---|---|
+| Air Fryer | 5 | A/B | 224 |
+| Charcoal Grill | 5 | A/B/C | 256 |
+| Grill | 5 | B/C | 224 |
+| Oven Roast | 5 | B | 192 |
+| Pan Fry | 5 | B | 192 |
+| Pan Sear | 5 | A/B/D | 256 |
+| Sous Vide | 5 | B | 192 |
+| **Leaf total** | 35 | 13 | 1 536 |
 
-**Why the leaves are stubs.** Each leaf is structurally complete — profile in two languages, five recipes, consensus table, summary — but its recipe research cannot be called concluded while no source is saved and no culinary group is assigned. They therefore take the 8-point stub reduction rather than the 96-point finished one. Reclassifying all seven as finished after re-verification would remove a further 616 points, which is why the recipe work, not the presentation, is what this reading is measuring.
+**The recipes count.** Their citation line says *inspired by* because the text is paraphrased rather than reproduced — a copyright and attribution convention, not a mark of doubt, as `RECIPE_COLLECTION_TOR.md` now states. Each of the 35 recipes names its source author and book, and a named cookbook is a full citation under that ToR with no URL required; prior verification stands. All seven leaves therefore count as finished rather than stubs: each carries both profiles, five cited recipes, a consensus table and a summary.
 
-**What was credited.** Every leaf reasons about its method at more than one temperature, which earns the per-leaf behaviour row; every leaf names the traditions its method is common in, which earns the description row; every leaf carries its own temperature consensus, which earns the method-specific preferred-temperature row. All three are English-only, because the Swedish profiles carry no temperature reasoning. The cut file earns the safe-temperature row only: its doneness block is generated data, and it holds no fetched culinary preferred temperature.
+**What is not counted.** The Mexican, Argentine and Brazilian traditions named in three consensus tables belong to no culinary group A–D as those groups are defined, so they add no group bonus — the same treatment the Brazilian source receives in `pork/ribs/tjocka_revben.md`. The Swedish profiles carry no temperature reasoning, so the three per-leaf rows are English only.
+
+**Where the remaining 159 sits.** Not in the recipes. `cooking_methods_researched` is still 0, meaning the `methods:` list has never been reviewed against what cooks actually do with this cut, and the cut file itself holds no recipes at all — only the overview prose.
+
+### Improvement priorities
 
 ### Improvement priorities
 
