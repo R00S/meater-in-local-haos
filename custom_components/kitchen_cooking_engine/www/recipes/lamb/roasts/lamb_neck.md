@@ -37,9 +37,7 @@ carryover_temp_c: 5
 
 Lamb neck comprises the cervical vertebrae and associated muscles — primarily the *longissimus colli*, *semispinalis*, *multifidus*, and *trapezius* layers. These are heavily worked postural muscles, densely threaded with connective tissue seams and interspersed fat pockets. The neck is the most collagen-rich section of the lamb; it is structurally similar to osso buco but smaller, and can be purchased as a whole neck for pot-roasting or cross-cut (*lamb neck slices*) for braising. The high collagen load means it needs sustained time at 88–93 °C internal to fully convert connective tissue to gelatin, releasing the characteristic unctuous quality that defines well-braised lamb neck. MEATER probe into the thickest cross-section of neck meat, away from the vertebrae.
 
-
 Target internal temperature: **85–90 °C (185–194 °F)** for full braised tenderness.
-
 
 ## Styckesprofil
 
@@ -54,8 +52,6 @@ Det kulinariska målet är kollagensmältning: 85–90 °C, hållet i 2–3 timm
 - [Slow Cooker](./lamb_neck-slow_cooker.md)
 ## Improvement potential
 
-**Improvement potential: 19 / 20** — assessed 2026-04-29 (methods survey done; braise leaf profile fixed (was sibling copy of oven_roast); −1 Group A remains)
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -66,10 +62,10 @@ Det kulinariska målet är kollagensmältning: 85–90 °C, hållet i 2–3 timm
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Method file `lamb_neck-braise.md` copies `lamb_neck-oven_roast.md` — rewrite `lamb_neck-braise.md`'s cut profile — it must describe what the oven roast method does to this cut, not repeat another method's prose
-3. **−1** · Method file `lamb_neck-braise.md` copies parent cut profile — rewrite `lamb_neck-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Method file `lamb_neck-oven_roast.md` copies parent cut profile — rewrite `lamb_neck-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-5. **−1** · Missing Culinary Group A tradition(s) — add Culinary Group A source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Method file `lamb_neck-braise.md` copies `lamb_neck-oven_roast.md` — rewrite `lamb_neck-braise.md`'s cut profile — it must describe what the oven roast method does to this cut, not repeat another method's prose
+3. Method file `lamb_neck-braise.md` copies parent cut profile — rewrite `lamb_neck-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. Method file `lamb_neck-oven_roast.md` copies parent cut profile — rewrite `lamb_neck-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+5. Missing Culinary Group A tradition(s) — add Culinary Group A source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

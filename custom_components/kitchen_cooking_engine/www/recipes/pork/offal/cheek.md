@@ -59,8 +59,6 @@ Denna intensiva muskelaktivitet skapar den djupaste smak och högsta kollageninn
 
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-27
-
 | Criterion | Points | Status |
 |-----------|--------|--------|
 | Cut profile written (not a placeholder) | +1 | ✅ Done |
@@ -75,7 +73,6 @@ Denna intensiva muskelaktivitet skapar den djupaste smak och högsta kollageninn
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research slow_cooker method for pork cheek; add leaf file; then set `cooking_methods_researched: 1`
-2. **−3** · Missing Groups A, C, D — add source recipes from Asian (e.g. Chinese red-braised pork cheek), C (e.g. Moroccan-spiced braised cheek), D (e.g. Scandinavian slow-braised cheek)
+1. Cooking methods not researched — research slow_cooker method for pork cheek; add leaf file; then set `cooking_methods_researched: 1`
+2. Missing Groups A, C, D — add source recipes from Asian (e.g. Chinese red-braised pork cheek), C (e.g. Moroccan-spiced braised cheek), D (e.g. Scandinavian slow-braised cheek)
 
-*Number will increase toward ~14/20 once Groups A, C, and D sources are added.*

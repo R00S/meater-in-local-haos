@@ -83,8 +83,6 @@ Tjocka revben are meat-covered front pork ribs, sold bone-in. A pressure cooker 
 
 ---
 
-
-
 ### 4. American (Posh Journal, Rika) — Instant Pot Ribs
 **Inspired by**: Rika, Posh Journal; https://poshjournal.com/instant-pot-ribs (fetched 2026-11-01). *Named author, page labelled Cuisine: American. Cut term is generic "1 rack pork ribs", but the pressure time is split explicitly — 25 min for baby back, 30–35 min for "regular spare ribs" — so the source itself distinguishes the meatier rack.*
 **Serves**: 3 · **Prep**: 10 min · **Cook**: 25–35 min at pressure + 3 min broil · **Rest**: 5 min natural (baby back) or full natural release (spare)

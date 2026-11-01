@@ -59,8 +59,6 @@ Sik (*Coregonus* spp.; finska: siika; tyska: Felchen / Renke; franska: corégone
 
 ## Improvement potential
 
-**Improvement potential: 15 / 20** — assessed 2026-05-31
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
@@ -76,8 +74,8 @@ Groups A and C absent — whitefish (*sik* / *Coregonus*) is a northern freshwat
 
 ### Improvement priorities
 
-1. **−3** · Missing method leaf files — create `whitefish-pan_fry.md`, `whitefish-grill.md`, and `whitefish-smoker.md`, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources.
-2. **−1** · Missing Culinary Group A tradition — search for Japanese, Chinese, or Korean whitefish preparations; *Coregonus* species exist in Siberia and the Far East.
-3. **−1** · Missing Culinary Group C tradition — search for any African, Arabic, Persian, or Caribbean whitefish preparation.
+1. Missing method leaf files — create `whitefish-pan_fry.md`, `whitefish-grill.md`, and `whitefish-smoker.md`, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources.
+2. Missing Culinary Group A tradition — search for Japanese, Chinese, or Korean whitefish preparations; *Coregonus* species exist in Siberia and the Far East.
+3. Missing Culinary Group C tradition — search for any African, Arabic, Persian, or Caribbean whitefish preparation.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

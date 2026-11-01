@@ -54,7 +54,6 @@ Venison roast refers primarily to the haunch (hind leg, *femur* and surrounding 
 
 The muscles are very lean — even less marbled than beef from the same primal positions — with a deep red colour (high myoglobin), and a characteristic earthy, slightly sweet game flavour. The lack of intramuscular fat means venison dries out more readily than beef at equivalent temperatures; the optimal internal temperature range (55–60 °C for a pink result) is lower than most other roasts.
 
-
 ## Styckesprofil
 
 Viltstek avser primärt haunchen (bakbenet, *femur* och omgivande muskler: *biceps femoris*, *semimembranosus*, *semitendinosus* och *quadriceps*) och sadeln (*longissimus dorsi* och *psoas*-musklerna, med ben). Båda är de bästa ugnsrostningsstyckena från rå- och kronhjort.
@@ -66,8 +65,6 @@ Innertemperatur: **60–65 °C** (140–149 °F) för medium (rosa mitt) — ska
 - [Oven Roast](./venison_roast-oven_roast.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | − **NOT DONE** (−8) |
@@ -78,13 +75,11 @@ Innertemperatur: **60–65 °C** (140–149 °F) för medium (rosa mitt) — ska
 | Culinary Group C covered | − missing (−1) |
 | Culinary Groups B, D | ✓ |
 
-**Points**: −8 methods · −1 missing braise · −1 Group A · −1 Group C = −11 → 20−11 = **9**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
-2. **−1** · Missing `venison_roast-braise.md` — create with verified sources
-3. **−1** · Group A tradition missing
-4. **−1** · Group C tradition missing
+1. Cooking methods not researched
+2. Missing `venison_roast-braise.md` — create with verified sources
+3. Group A tradition missing
+4. Group C tradition missing
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

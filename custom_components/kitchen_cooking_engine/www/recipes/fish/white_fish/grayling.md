@@ -69,13 +69,11 @@ All six declared methods now have a leaf file. Two leaves (`pan_fry`, `oven_bake
 
 _Sources were added on 2026-11-01 (`pan_fry` 4 → 6, `oven_bake` 3 → 4) without a new reading. The number is a reading of finished work and no leaf here is finished — all six are still below the four-distinct-tradition gate — so a re-rating now would mix two accounting bases rather than measure anything. The next reading is owed when a leaf clears the gate._
 
-Historical readings: 12 / 20 (former 0–20 system, assessed 2026-10-23; not comparable with the new scale).
-
 ### Improvement priorities
 
-1. **−5** · Bring each partial leaf to the 4–6-source, four-distinct-tradition collection gate — starting with `grayling-smoker.md` (1 source) and `grayling-poach.md` (1 source).
-2. **−1** · Replace one of the two Swedish sources in `grayling-pan_fry.md` with a distinct tradition, or add a 5th source from a new tradition.
-3. **−1** · Culinary Group A — search Japanese/Chinese/Korean sources for grayling (*harr* / *Thymallus thymallus*) preparations; add any verified recipe to a leaf.
-4. **−1** · Culinary Group C — search Turkish/Persian/Arabic sources for grayling preparations; add any verified recipe to a leaf.
+1. Bring each partial leaf to the 4–6-source, four-distinct-tradition collection gate — starting with `grayling-smoker.md` (1 source) and `grayling-poach.md` (1 source).
+2. Replace one of the two Swedish sources in `grayling-pan_fry.md` with a distinct tradition, or add a 5th source from a new tradition.
+3. Culinary Group A — search Japanese/Chinese/Korean sources for grayling (*harr* / *Thymallus thymallus*) preparations; add any verified recipe to a leaf.
+4. Culinary Group C — search Turkish/Persian/Arabic sources for grayling preparations; add any verified recipe to a leaf.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -68,8 +68,6 @@ Kalkontlår är den övre benets mörka köttssektion av kalkon, från höften t
 
 ## Improvement potential
 
-**Improvement potential: 16 / 20** — assessed 2026-04-29
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods researched | ✓ — survey completed 2026-04-29: oven_roast ✓, braise ✓, smoker ✓ applicable (dark meat, high fat); grill not confirmed with accessible source |
@@ -84,11 +82,9 @@ Kalkontlår är den övre benets mörka köttssektion av kalkon, från höften t
 | Per-method temp data | ✓ (oven_roast leaf) |
 | oven_roast leaf copies parent cut profile | − −1 (cut profile paragraphs are near-identical to parent; method-specific context is in second paragraph only) |
 
-**Points**: −1 (Group A) −1 (Group C) −1 (Group D) −1 (oven_roast copies parent) = **16**
-
 ### Improvement priorities
 
-1. **−1** · Rewrite oven_roast leaf cut profile — opening paragraph near-identical to parent; needs method-specific analysis of what oven-roasting does to this cut
+1. Rewrite oven_roast leaf cut profile — opening paragraph near-identical to parent; needs method-specific analysis of what oven-roasting does to this cut
 2. **−1 each** · Missing Group A, C, D coverage — 80+ probes across 3 sessions found no accessible standalone turkey thigh recipes outside North America. Turkey thigh is almost exclusively a North American product as a standalone cut; other traditions cook the whole bird.
 3. Expand oven_roast leaf to 4+ sources — only 1 source currently; additional Group B sources may exist on other accessible sites not yet probed.
 4. Create `turkey_thigh-braise.md` — tasteofhome.com/recipes/braised-turkey-thighs/ is already accessible and confirms Group B; need 3+ more sources.

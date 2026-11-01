@@ -45,9 +45,7 @@ carryover_temp_c: 8
 
 Pork leg (*Schweinshaxe*, German/Austrian — actually this is hock/shank; *stinco di maiale*, Italian; *pernil*, Caribbean/Filipino; *jamón fresco*, Spanish) refers to two distinct retail cuts in different markets: (1) the whole fresh leg (4–8 kg), used for *pernil* and Spanish-style roasting; (2) the hock/shank — the lower joint of the leg where the *tibia/fibula* meet the ankle, heavily worked, collagen-dense, and the quintessential braise cut. The hock muscle is primarily composed of *flexor digitorum profundus* and *extensor* layers bound in thick collagen sheets. Both cuts need prolonged cooking to develop tenderness: whole leg roasts at 65–75 °C over 3–5 hours (low-and-slow); hock braised to 88–95 °C over 2–3 hours. MEATER probe into the thickest muscle mass, away from the bone.
 
-
 Target internal temperature: **75–80 °C (167–176 °F)** for sliceable, tender; **85–90 °C (185–194 °F)** for pull-apart.
-
 
 ## Styckesprofil
 
@@ -64,14 +62,12 @@ Bräsering eller ugnsrostning till **85–90 °C** är standardmålet för pull-
 
 2143
 
-Historical readings: 8 / 20 (former 0–20 system, assessed 2026-04-26; not comparable with the new scale).
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Method file `pork_leg-braise.md` copies `pork_leg-oven_roast.md` — rewrite `pork_leg-braise.md`'s cut profile — it must describe what the oven roast method does to this cut, not repeat another method's prose
-3. **−1** · Method file `pork_leg-braise.md` copies parent cut profile — rewrite `pork_leg-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Method file `pork_leg-oven_roast.md` copies parent cut profile — rewrite `pork_leg-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-5. **−1** · Missing Culinary Group C tradition(s) — add Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Method file `pork_leg-braise.md` copies `pork_leg-oven_roast.md` — rewrite `pork_leg-braise.md`'s cut profile — it must describe what the oven roast method does to this cut, not repeat another method's prose
+3. Method file `pork_leg-braise.md` copies parent cut profile — rewrite `pork_leg-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. Method file `pork_leg-oven_roast.md` copies parent cut profile — rewrite `pork_leg-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+5. Missing Culinary Group C tradition(s) — add Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

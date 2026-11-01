@@ -83,8 +83,6 @@ All six declared methods now have a leaf. None of the fetched sources in any lea
 
 ## Improvement potential
 
-**Improvement potential: 11 / 20** — assessed 2026-10-24 (from-scratch recount; supersedes the 7 recorded earlier the same day, which deducted −4 for missing leaves that now exist and did not deduct for the total absence of temperature evidence). Self-assessed (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Pattern 4) — an initial estimate, not an independent audit.
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods researched (`cooking_methods_researched: 1`, survey table above) | — |
@@ -101,10 +99,10 @@ The point for "no temperature evidence" is applied deliberately: the cut's `done
 
 ### Improvement priorities
 
-1. **−4** · Four of six leaves are below the 4–6-source gate; `oven_roast` has a single source. Fetch more species-specific recipes (North African, Latin American, Nordic) rather than adding non-hake "any white fish" pages.
-2. **−3** · Temperature record: no fetched hake source publishes a pull temperature. Either find measured sources or keep the doneness bands marked as inherited.
-3. **−1** · Culinary Group A: look for Indian/Pakistani (e.g. hake/pink perch style), East Asian or Filipino hake recipes as primaries.
-4. **−1** · Culinary Group D: hake is fished throughout the North Atlantic and Baltic; no Danish/Swedish/Polish hake recipe has been fetched yet.
+1. Four of six leaves are below the 4–6-source gate; `oven_roast` has a single source. Fetch more species-specific recipes (North African, Latin American, Nordic) rather than adding non-hake "any white fish" pages.
+2. Temperature record: no fetched hake source publishes a pull temperature. Either find measured sources or keep the doneness bands marked as inherited.
+3. Culinary Group A: look for Indian/Pakistani (e.g. hake/pink perch style), East Asian or Filipino hake recipes as primaries.
+4. Culinary Group D: hake is fished throughout the North Atlantic and Baltic; no Danish/Swedish/Polish hake recipe has been fetched yet.
 5. Watch item: `hake.md` declares six methods and `cooking_data.py` now registers the same six, so panel and engine agree; keep them in step when a method is added.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

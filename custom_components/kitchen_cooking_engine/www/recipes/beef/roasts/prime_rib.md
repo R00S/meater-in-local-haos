@@ -67,7 +67,6 @@ carryover_temp_c: 8
 
 Prime rib (also called standing rib roast) is cut from the rib primal (ribs 6–12), comprising the longissimus dorsi and surrounding muscles, with a generous fat cap and the rib bones attached. It is one of the most marbled subprimal sections of the animal — the rib muscles do relatively little work, and the high intramuscular fat content self-bastes during roasting, keeping the interior moist across a wide temperature range. Oven roasting is the canonical method for prime rib because the sustained, even heat of an enclosed oven allows the large mass (typically 2.5–5 kg) to heat evenly from edge to centre while the exterior fat cap renders and browns. Carryover is substantial for a prime rib — the large, dense mass retains heat efficiently, and internal temperature continues to rise for 15–30 minutes after removal; this must be accounted for in the pull temperature.
 
-
 ## Styckesprofil
 
 Prime rib (även kallat stående revbenstek) skärs från ribprimalen (revben 6–12), den mest marmorerade delen av nötdjuret. Den "primala" beteckningen syftar på den anatomiska klassificeringen av ribprimalen — inte på USDA:s betygssystem (Prime-köttet är ett separat begrepp). Prime rib säljs med benen fästade (stående revbenstek) eller urbenad (ribbyfé); benfasta stekar är mer smakrika eftersom benet leder värme och skyddar angränsande kött. Det primära muskelet — *longissimus dorsi* — är en stor, relativt lite belastad muskel med regelbunden marmorering och en skyddande fettlins. *Spinalis dorsi* (den "Scotch cap" som löper längs krönet) är ännu mer marmorerad och är den mest eftertraktade biten.
@@ -76,8 +75,6 @@ Prime rib (även kallat stående revbenstek) skärs från ribprimalen (revben 6�
 
 - [Oven Roast](./prime_rib-oven_roast.md)
 ## Improvement potential
-
-**Improvement potential: 9 / 20** — assessed 2026-04-28
 
 | Criterion | Points |
 |-----------|----------|
@@ -89,7 +86,7 @@ Prime rib (även kallat stående revbenstek) skärs från ribprimalen (revben 6�
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
-2. **−3** · Groups A, C, D missing — 30+ URL probes on 2026-04-28: thewoksoflife.com, koreanbapsang.com, justonecookbook.com, koket.se (revbensstek, entrecotestek, rostbiff, hel-entrecote), ica.se (revbensstek), tasteline.com, arla.se — all 404. Prime rib as a standing rib roast concept is strongly Anglo-American; other traditions use rib cuts differently (Korean kalbi = grilled; Chinese = braised; Scandinavian rostbiff = small piece, no temp data).
+1. Cooking methods not researched
+2. Groups A, C, D missing — 30+ URL probes on 2026-04-28: thewoksoflife.com, koreanbapsang.com, justonecookbook.com, koket.se (revbensstek, entrecotestek, rostbiff, hel-entrecote), ica.se (revbensstek), tasteline.com, arla.se — all 404. Prime rib as a standing rib roast concept is strongly Anglo-American; other traditions use rib cuts differently (Korean kalbi = grilled; Chinese = braised; Scandinavian rostbiff = small piece, no temp data).
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

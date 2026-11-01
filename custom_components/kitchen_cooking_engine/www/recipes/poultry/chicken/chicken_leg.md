@@ -48,7 +48,6 @@ The chicken leg comprises the thigh (femur bone and surrounding muscle) and the 
 
 The drumstick has a single bone (tibia/fibula) with a club-shaped muscle mass around it. The bone conducts heat and can make the innermost meat near the joint run slightly below the surface temperature. The MEATER probe is inserted from the meaty end along the bone axis, into the largest muscle mass, avoiding the bone itself.
 
-
 ## Styckesprofil
 
 Kycklinglägg består av låret (lårben och omgivande muskel) och trommelstocken (skenben och omgivande muskel). I detaljhandeln avser *trommelstock* specifikt den nedre sektionen nedan knäleden.
@@ -60,8 +59,6 @@ Ugnsrostning: 200–220 °C, 35–45 minuter med vändning. Innertemperatur: **7
 - [`chicken_leg-oven_roast.md`](chicken_leg-oven_roast.md) — 4 sources: Group A (Swasthi Shreekanth/Indian), Group B (Jessica Gavin/American, BBC Good Food/British), Group D (Natasha's Kitchen/Ukrainian-American counted as Group B in prior assessment)
 
 ## Improvement potential
-
-**Improvement potential: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group C, −1 Group D remain)
 
 | Criterion | Status |
 |-----------|--------|
@@ -76,13 +73,11 @@ Ugnsrostning: 200–220 °C, 35–45 minuter med vändning. Innertemperatur: **7
 | Culinary Group D covered | − missing (Natasha's Kitchen assessed as Group B, no confirmed Group D source) |
 | Oven_roast cut profile method-specific | ✓ (fixed 2026-04-27) |
 
-**Points**: −8 methods not researched · −1 missing grill leaf · −1 missing air_fryer leaf · −1 Group C · −1 Group D = −12 → 20−12 = **8**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — survey all cooking methods for chicken legs/drumsticks; update `methods:` list; set `cooking_methods_researched: 1`
+1. Cooking methods not researched — survey all cooking methods for chicken legs/drumsticks; update `methods:` list; set `cooking_methods_researched: 1`
 2. **−1 each** · Grill and air fryer leaves missing — create `chicken_leg-grill.md` and `chicken_leg-air_fryer.md` with verified sources
-3. **−1** · Group C tradition missing — find an African, Arabic, or Caribbean drumstick recipe
-4. **−1** · Group D tradition missing — find a Swedish, Polish, Baltic, or Slavic/Ukrainian drumstick recipe
+3. Group C tradition missing — find an African, Arabic, or Caribbean drumstick recipe
+4. Group D tradition missing — find a Swedish, Polish, Baltic, or Slavic/Ukrainian drumstick recipe
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

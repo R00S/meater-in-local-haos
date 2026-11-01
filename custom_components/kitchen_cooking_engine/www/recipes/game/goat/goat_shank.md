@@ -37,7 +37,6 @@ carryover_temp_c: 5
 
 The goat shank (*getlägg*, Swedish; *jarrete de cabra*, Spanish; *kuzu kolu*, Turkish; *paaya*, Urdu) is the lower portion of the leg — the *radius/ulna* (fore) or *tibia/fibula* (hind) segments and the surrounding musculature. The shank muscles are among the most heavily worked in the carcass; they are dense, tight-fibred, and packed with collagen-rich connective tissue and bone marrow. Goat shank is leaner than lamb shank but has the same collagen density and braise requirement: prolonged moist heat at 88–93 °C internal for 1.5–2 hours to fully convert collagen to gelatin. A single shank serves one person. The bone marrow enriches braising liquid significantly. MEATER probe horizontally through the thickest part of the muscle, parallel to the bone.
 
-
 ## Styckesprofil
 
 Getlägg (*getlägg*, svenska; *jarrete de cabra*, spanska; *kuzu kolu*, turkiska; *paaya*, urdu) är den nedre delen av benet — *radius/ulna* (fram) eller *tibia/fibula* (bak) och omgivande muskulatur. Skaftmusklerna är bland de mest hårt arbetade i slaktkroppen: täta, hårt fibriga och packade med kollagenrik bindväv och benmärg.
@@ -49,8 +48,6 @@ Getlägg skiljer sig från lammlägg i att get i allmänhet slaktas vid äldre �
 - [Braise](./goat_shank-braise.md)
 - [Oven Roast](./goat_shank-oven_roast.md)
 ## Improvement potential
-
-**Improvement potential: 19 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -66,11 +63,9 @@ Getlägg skiljer sig från lammlägg i att get i allmänhet slaktas vid äldre �
 | Temperature data: culinary preferred (88–93°C) | ✓ |
 | Per-method temperature data | ✓ (both leaves) |
 
-**Points**: −1 (Group A missing) = **19**
-
 ### Improvement priorities
 
-1. **−1** · Missing Culinary Group A tradition — add an Indian, Pakistani, South Asian, or East Asian goat shank recipe to one of the leaf files. Goat (*bakra/bakri*) is very common in South Asian cuisines; Indian *gosht/mutton* stews often use shank. spiceupthecurry.com/swasthi.com are good targets when accessible.
+1. Missing Culinary Group A tradition — add an Indian, Pakistani, South Asian, or East Asian goat shank recipe to one of the leaf files. Goat (*bakra/bakri*) is very common in South Asian cuisines; Indian *gosht/mutton* stews often use shank. spiceupthecurry.com/swasthi.com are good targets when accessible.
 2. Create `goat_shank-slow_cooker.md` — applicable method (same role as braise); no accessible sources probed yet.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

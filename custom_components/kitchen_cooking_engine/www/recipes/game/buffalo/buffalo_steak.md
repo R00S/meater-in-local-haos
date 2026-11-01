@@ -63,7 +63,6 @@ carryover_temp_c: 3
 
 Water buffalo steak is cut from the same primal positions as beef (loin, rib, rump) — the *longissimus dorsi*, *biceps femoris*, and *psoas major* are the main steak muscles. The meat is similar in structure to lean beef: deep red, slightly sweeter than standard bovine beef, with lower intramuscular fat. Because it is leaner than grain-fed beef, it cooks faster and becomes tough above 70 °C. Medium-rare to medium (57–63 °C) is the recommended range across all culinary traditions using this cut.
 
-
 ## Styckesprofil
 
 > **Kontextanmärkning**: I detta projekt avser *buffalo* **vattenbuffel** (*Bubalus bubalis* — carabao på Filippinerna, bhaisa i Indien) snarare än amerikansk bison. Vattenbuffel är det mest ätna stora idisslaren i Asien med mycket stor produktion i Indien, Kina, Pakistan, Filippinerna och Vietnam.
@@ -76,8 +75,6 @@ Köttet (*carabeef*) är magert, mörkrött och fast, med en smak liknande mager
 - [Pan Sear](./buffalo_steak-pan_sear.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | − **NOT DONE** (−8) |
@@ -88,13 +85,11 @@ Köttet (*carabeef*) är magert, mörkrött och fast, med en smak liknande mager
 | Culinary Group D covered | − missing (−1) |
 | Culinary Groups A, B | ✓ |
 
-**Points**: −8 methods · −1 missing charcoal grill leaf · −1 Group C · −1 Group D = −11 → 20−11 = **9**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
-2. **−1** · Missing `buffalo_steak-charcoal_grill.md`
-3. **−1** · Group C tradition missing
-4. **−1** · Group D tradition missing
+1. Cooking methods not researched
+2. Missing `buffalo_steak-charcoal_grill.md`
+3. Group C tradition missing
+4. Group D tradition missing
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

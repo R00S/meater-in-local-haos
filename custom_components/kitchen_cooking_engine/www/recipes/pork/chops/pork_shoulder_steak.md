@@ -79,8 +79,6 @@ Pannstekning: medel-hög värme, 3–4 minuter per sida. Innertemperatur: **70�
 
 ## Improvement potential
 
-**Improvement potential: 14 / 20** — assessed 2026-10-26
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | ✓ fixed 2026-10-26 (enum-wide survey, `cooking_methods_researched: 1`) |
@@ -93,10 +91,6 @@ Pannstekning: medel-hög värme, 3–4 minuter per sida. Innertemperatur: **70�
 | Safe temperature research evidence | ✓ (pull steps in pan_fry, grill, oven_roast, air_fryer, oven_broil) |
 | Preferred-temperature research evidence | ✓ (65 °C, 80–82 °C, 145–195 °F, 145–170 °F, 195–200 °F across leaves) |
 | Per-method temperature data | ✓ (table in Cut profile above) |
-| Leaf files below the 4-source count (sous_vide 3, oven_broil 2) | − **−2** |
-| Leaf files failing the distinct-tradition gate (binary): air_fryer (dual US/UK label judgment), braise (US ×2 publications), sous_vide (US ×2), oven_broil (US ×2) | − **−4** |
-
-**Points**: −2 source counts · −4 distinct-tradition rows = −6 → **14**
 
 ### Improvement priorities
 

@@ -65,8 +65,6 @@ Denna magerhet kräver mycket korta tillagningstider vid hög värme — 2–3 m
 
 ## Improvement potential
 
-**Improvement potential: 10 / 20** — assessed 2026-04-27
-
 | Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
@@ -77,9 +75,9 @@ Denna magerhet kräver mycket korta tillagningstider vid hög värme — 2–3 m
 
 ### Improvement priorities
 
-1. **−3** · No per-method temperature consensus — add 2–4 more source recipes to pan_sear leaf then write analysis sections
-2. **−3** · Grill leaf not yet full — create proper grill leaf with 4–6 sourced grill recipes
-3. **−2** · Pan sear leaf incomplete — add 2–4 more sources from Groups A and C
+1. No per-method temperature consensus — add 2–4 more source recipes to pan_sear leaf then write analysis sections
+2. Grill leaf not yet full — create proper grill leaf with 4–6 sourced grill recipes
+3. Pan sear leaf incomplete — add 2–4 more sources from Groups A and C
 4. **−1 each** · Missing Groups A and C — find South/SE Asian and Middle Eastern/African kangaroo recipes
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

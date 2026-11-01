@@ -61,8 +61,6 @@ Guldspirad (*Sparus aurata*; spanska/italienska: dorada/orata; franska: daurade 
 
 ## Improvement potential
 
-**Improvement potential: 14 / 20** — assessed 2026-05-31
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
@@ -78,8 +76,8 @@ Group C and D absent — steam leaf covers A (CN/TH) and B (DE/AT) only. Gilt-he
 
 ### Improvement priorities
 
-1. **−4** · Missing method leaf files — create `gilt_head_bream-pan_sear.md`, `gilt_head_bream-oven_bake.md`, `gilt_head_bream-grill.md`, and `gilt_head_bream-charcoal_grill.md`, each with 4–6 diverse source recipes.
-2. **−1** · Missing Culinary Group C tradition — gilt-head bream (dorade royale) is a cornerstone of Moroccan and Turkish cuisine; add Group C source recipes.
-3. **−1** · Missing Culinary Group D tradition — add at least one Group D (Scandinavian/Baltic/Slavic) source recipe.
+1. Missing method leaf files — create `gilt_head_bream-pan_sear.md`, `gilt_head_bream-oven_bake.md`, `gilt_head_bream-grill.md`, and `gilt_head_bream-charcoal_grill.md`, each with 4–6 diverse source recipes.
+2. Missing Culinary Group C tradition — gilt-head bream (dorade royale) is a cornerstone of Moroccan and Turkish cuisine; add Group C source recipes.
+3. Missing Culinary Group D tradition — add at least one Group D (Scandinavian/Baltic/Slavic) source recipe.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

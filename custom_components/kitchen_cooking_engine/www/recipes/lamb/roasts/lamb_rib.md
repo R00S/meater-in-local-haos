@@ -85,8 +85,6 @@ Rack: **57–63 °C** för medium-rare; bröst: **88–95 °C** för fall-från-
 
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-27
-
 | Criterion | Points | Status |
 |-----------|--------|--------|
 | Cut profile written (not a placeholder) | +1 | ✅ Done |
@@ -100,7 +98,6 @@ Rack: **57–63 °C** för medium-rare; bröst: **88–95 °C** för fall-från-
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research grill method (rack of lamb on grill / BBQ); add `lamb_rib-grill.md`; then set `cooking_methods_researched: 1`
-2. **−2** · Missing Culinary Groups A and D — add Group A (Korean/Japanese rack of lamb) and Group D (Scandinavian lammkarre) sources to `lamb_rib-oven_roast.md`
+1. Cooking methods not researched — research grill method (rack of lamb on grill / BBQ); add `lamb_rib-grill.md`; then set `cooking_methods_researched: 1`
+2. Missing Culinary Groups A and D — add Group A (Korean/Japanese rack of lamb) and Group D (Scandinavian lammkarre) sources to `lamb_rib-oven_roast.md`
 
-*Number will increase toward ~14/20 once Groups A and D sources are added and the grill leaf is created.*

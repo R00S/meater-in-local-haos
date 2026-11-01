@@ -80,7 +80,6 @@ Atlantisk makrill (Scomber scombrus) är en medelstora, mycket fet pelagisk fisk
 
 ## Improvement potential
 
-**Improvement potential: 8 / 20** — reassessed 2026-10-25 (second pass that day), up from 6 and from 4 on
 2026-10-24. Four leaves now meet the 4–6-source / four-distinct-tradition gate (grill,
 air_fryer, pan_fry, oven_bake) and braise holds four sources across three traditions. The scale is unchanged and no leaf was credited for anything it does not hold. Context for the earlier
 number: the 2026-05-31 table credited `mackerel-smoker.md` with 3 sources, two of which were uncited
@@ -92,8 +91,6 @@ source is fetched and citable.
 |-----------|-----------|----------|
 | Cooking methods researched (`cooking_methods_researched: 1`) | 0 | All 16 supported enum methods have a research leaf; slow-cooker was investigated and no direct fish-cooking recipe was verified. Charcoal remains a grill setup rather than a separate method. |
 | Partial method leaves / incomplete source-diversity gates | −12 | −1 per registered method leaf that remains partial: smoker (2), simmer (2), steam (1), sous_vide (4 but tradition gate partial), pressure_cooker (4 but species/source limits), braise (4 sources but 3 traditions — two are Korean), poach (5 but qualification limits), boil (historical/ambiguous), oven_roast (4 but tradition/species limits), oven_broil (3), pan_sear (1), saute (1). Grill (5 sources, 4 traditions), air_fryer (4), pan_fry (4, one per group) and oven_bake (4, one per group) no longer deduct. |
-
-**Total −12 → 8/20.** Criteria checked with evidence and receiving **0 points**:
 
 - **Culinary Groups A/B/C/D all covered** across the leaves — A: Japanese (pan_fry, oven_bake, simmer), Korean (grill), Indian (simmer), Indonesian (steam); B: British (oven_bake, smoker), Spanish (grill), US/Eastern-European (smoker); C: Turkish (pan_fry, oven_bake — genuine Group C primaries, fixing the 2026-05-31 gap); D: Swedish (pan_fry, grill).
 - Method inventory includes 18 mackerel research files: 16 supported enum leaves, one investigated but unsupported slow-cooker lead, and one charcoal-grill variant.

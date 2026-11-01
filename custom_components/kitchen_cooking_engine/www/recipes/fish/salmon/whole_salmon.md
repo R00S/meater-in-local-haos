@@ -65,14 +65,12 @@ Hel lax betyder en intakt fiskkropp: båda sidorna sitter ihop via ryggrad och r
 
 ## Improvement potential
 
-**Improvement potential: 12 / 20** — assessed 2026-05-26
-
 | Criterion | Points |
 |-----------|-----------|
 | Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
 
 ### Improvement priorities
 
-1. **−8** · Complete broad method-survey research for whole salmon across culinary traditions and update `cooking_methods_researched` to `1` only when complete.
+1. Complete broad method-survey research for whole salmon across culinary traditions and update `cooking_methods_researched` to `1` only when complete.
 2. Expand coverage with additional whole-fish sources in Culinary Groups A and C.
 3. Add more method leaves only when verified whole-fish sources (not fillet/side-only) are found.

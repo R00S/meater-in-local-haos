@@ -54,9 +54,7 @@ carryover_temp_c: 4
 
 Duck breast is a dark, rich cut with a thick layer of subcutaneous fat beneath a scored skin. Unlike chicken breast, duck breast is best cooked to medium-rare (135–145 °F / 57–63 °C), where the meat remains pink, juicy, and tender. The oven-roast method typically follows a stovetop fat-rendering sear: the breast starts skin-side down in a cold or lightly warmed oven-safe pan to slowly render the fat cap, then transfers to a moderate oven to finish gently and evenly without overshooting the internal temperature.
 
-
 Target internal temperature: **135–145 °F (57–63 °C)** — medium-rare, pull at 130 °F and rest; carryover brings it to target. For well-done (USDA), pull at 160 °F for a final resting temp of 165 °F.
-
 
 ## Styckesprofil
 
@@ -69,8 +67,6 @@ Ankbröst är ett mörkt, rikt snitt med tjockt subcutant fett. Till skillnad fr
 
 ## Improvement potential
 
-**Improvement potential: 17 / 20** — assessed 2026-04-29
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods researched | ✓ — survey completed 2026-04-29 (pan_sear, oven_roast, sous_vide confirmed; pan_sear is the primary method; oven_roast follows stovetop fat-render; sous_vide is widely used in professional and modern home cooking) |
@@ -80,8 +76,6 @@ Ankbröst är ett mörkt, rikt snitt med tjockt subcutant fett. Till skillnad fr
 | Culinary Group D tradition covered | − missing (Scandinavian/Eastern European duck breast recipes not found in accessible sources) |
 | oven_roast leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
 | sous_vide leaf | − pending (method in list; leaf not yet created) |
-
-**Points**: −1 (Group C) −1 (Group D) −1 (sous_vide leaf pending) = **17**
 
 ### Improvement priorities
 

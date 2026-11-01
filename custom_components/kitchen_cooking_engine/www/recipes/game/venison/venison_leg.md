@@ -65,8 +65,6 @@ Möra muskler (innanlår) lämpar sig för ugnsrostning och mer öm tillagning; 
 
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-27
-
 | Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
@@ -78,9 +76,9 @@ Möra muskler (innanlår) lämpar sig för ugnsrostning och mer öm tillagning; 
 
 ### Improvement priorities
 
-1. **−3** · Oven roast leaf not a dedicated file — create venison_leg-oven_roast.md with 4–6 sources specifically for venison leg oven roasting
-2. **−3** · No temperature consensus — add more sources; once 4+ sources per method, write analysis sections
-3. **−2** · Braise leaf incomplete — add 3–5 more sources from diverse traditions
+1. Oven roast leaf not a dedicated file — create venison_leg-oven_roast.md with 4–6 sources specifically for venison leg oven roasting
+2. No temperature consensus — add more sources; once 4+ sources per method, write analysis sections
+3. Braise leaf incomplete — add 3–5 more sources from diverse traditions
 4. **−1 each** · Missing Groups A, B, C — find recipes from diverse culinary traditions
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

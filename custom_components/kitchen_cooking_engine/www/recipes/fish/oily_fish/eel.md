@@ -63,8 +63,6 @@ Eel (primarily European eel *Anguilla anguilla* and Japanese eel *Anguilla japon
 
 870
 
-Historical readings: 20 / 20 (former 0–20 system, assessed 2026-05-31; not comparable with the new scale).
-
 ### Improvement priorities
 
 1. Add Group A (East Asian) and Group C (African/Middle Eastern/Turkish) sources to the smoker leaf to complete cross-method group coverage.

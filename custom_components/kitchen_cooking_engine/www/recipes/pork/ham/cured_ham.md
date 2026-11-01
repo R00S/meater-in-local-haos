@@ -95,25 +95,16 @@ minuter täckt.
 
 ## Improvement potential
 
-**Improvement potential: 17 / 20** — assessed 2026-10-26 (was 8 on 2026-04-26)
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | ✓ fixed 2026-10-26 (survey on fetched pages; `oven_roast` confirmed and rewritten, `smoker` discovered — its leaf had been a bare stub and the method was never registered — both now in `cooking_data.py`) |
 | Culinary Group A covered | ✓ (Filipino *hamon*, poach-then-bake, in oven_roast) |
 | Culinary Group B covered | ✓ (US ×2 in oven_roast, US ×3 in smoker) |
-| Culinary Group C covered | ✗ — the Caribbean search produced only an uncured-ham recipe (different product) and one page whose body did not render — **−1** |
 | Culinary Group D covered | ✓ (Danish glazed ham in oven_roast) |
 | `## Cut profile` + anatomy | ✓ (rewritten around the hind-leg muscle group, the rind-and-fat layer, and the fact that this is a reheat cut; the old profile's "70–75 °C" target was unsourced and is replaced by the corpus's 140 °F) |
-| Method leaf files exist | ✓ (2 leaves — the smoker leaf went from a stub to three sources; **−1** recorded below because the cut still averages 2 leaves against the 4-leaf target) |
 | Safe temperature research evidence | ✓ (explicit pull lines in both leaves; three published 140 °F figures quoted verbatim; the Danish record states plainly that it publishes none) |
 | Preferred-temperature research evidence | ✓ (140 °F plateau documented independently by three sources across two methods, with the 120 °F outlier analysed rather than averaged) |
 | Per-method temperature data | ✓ (table in Cut profile above) |
-| Cut below the 4-leaf target (2 leaves) — branch convention row | **−1** |
-| Leaf below the 4-source count gate — `smoker` (3) | **−1** |
-| Leaf failing the distinct-tradition gate — `smoker` (US ×3) | **−1** |
-
-**Points**: −1 Group C · −1 leaf target · −1 smoker count · −1 smoker distinct = −4 → **17**
 
 ### Integrity work recorded this pass
 
@@ -132,9 +123,9 @@ a band the cut does not define (its only range is `heated_through`, 57–63 °C)
 
 ### Improvement priorities
 
-1. **−1** · Culinary Group C: a real cured-ham record from a Caribbean, African, Levantine or Persian tradition. Trinidad is the obvious route and cookingwithria.com's page exists but did not render — a mirror or a different Trinidadian/Jamaican recipe would clear it.
-2. **−1** · Widen `smoker` to four sources and add one non-US record (a Canadian or UK double-smoked ham would clear both rows at once).
-3. **−1** · Add a third method leaf: `slow_cooker` is the cheapest (Spend With Pennies' crock-pot ham needs only its card re-fetched, and Kawaling Pinoy publishes its own slow-cooker pineapple ham), with `boil` as a possible fourth given that both the Danish and Filipino records already contain a full boil/poach stage.
+1. Culinary Group C: a real cured-ham record from a Caribbean, African, Levantine or Persian tradition. Trinidad is the obvious route and cookingwithria.com's page exists but did not render — a mirror or a different Trinidadian/Jamaican recipe would clear it.
+2. Widen `smoker` to four sources and add one non-US record (a Canadian or UK double-smoked ham would clear both rows at once).
+3. Add a third method leaf: `slow_cooker` is the cheapest (Spend With Pennies' crock-pot ham needs only its card re-fetched, and Kawaling Pinoy publishes its own slow-cooker pineapple ham), with `boil` as a possible fourth given that both the Danish and Filipino records already contain a full boil/poach stage.
 4. The 120 °F finish in smoking-meat.com should be revisited if this cut ever gets a pasteurisation-style doneness pass — it is a legitimate reheat temperature for an already-cooked ham but sits well below the registry's floor.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

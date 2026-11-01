@@ -37,9 +37,7 @@ carryover_temp_c: 5
 
 Mutton shoulder is a heavily worked, intensely flavoured cut from an older animal (12 months or more). The extra age means deeper flavour but also denser connective tissue, requiring longer braising times than lamb — typically 2.5–3.5 hours on the stovetop or 3–4 hours in the oven. When braised low and slow, the shoulder yields incredibly rich, yielding meat that is the centrepiece of Indian korma, Turkish tandır, and Italian stuffed shoulder (spalla) traditions. Mutton benefits from full-bodied braising liquids — wine, yoghurt, spiced stocks — that can stand up to its assertive flavour. The MEATER probe is inserted through the thickest muscle of the shoulder, well away from the shoulder blade bone.
 
-
 Target internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bone; mutton shoulder may need 90–95 °C due to the older animal's denser tissue.
-
 
 ## Styckesprofil
 
@@ -54,8 +52,6 @@ Fårkött gynnas av kraftfulla braiseringsvätskor som vin, yoghurt och kryddade
 - [Slow Cooker](./mutton_shoulder-slow_cooker.md)
 ## Improvement potential
 
-**Improvement potential: 11 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -63,7 +59,7 @@ Fårkött gynnas av kraftfulla braiseringsvätskor som vin, yoghurt och kryddade
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Method file `mutton_shoulder-braise.md` copies parent cut profile — rewrite `mutton_shoulder-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Method file `mutton_shoulder-braise.md` copies parent cut profile — rewrite `mutton_shoulder-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

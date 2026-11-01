@@ -93,11 +93,8 @@ Standardmetod: sear fettlocket nedåt i het torr panna tills renderat, sedan sea
 
 2551
 
-Historical readings: 9 / 20 (former 0–20 system, assessed 2026-04-27; not comparable with the new scale).
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research grill method and pan_sear method; add leaf files; then set `cooking_methods_researched: 1`
-2. **−3** · Missing Culinary Groups A, C, D — add source recipes from Group A (Korean spiced lamb rump), Group C (Moroccan harissa lamb rump), Group D (Scandinavian juniper lamb rump) to existing or new leaf files
+1. Cooking methods not researched — research grill method and pan_sear method; add leaf files; then set `cooking_methods_researched: 1`
+2. Missing Culinary Groups A, C, D — add source recipes from Group A (Korean spiced lamb rump), Group C (Moroccan harissa lamb rump), Group D (Scandinavian juniper lamb rump) to existing or new leaf files
 
-*Number will increase toward ~14/20 once Groups A, C, and D sources are added to the oven_roast leaf.*

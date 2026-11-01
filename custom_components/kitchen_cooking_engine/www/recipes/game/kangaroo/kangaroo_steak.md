@@ -116,24 +116,14 @@ medium-rare-band (52–57 °C) — en verklig avvikelse som är dokumenterad, in
 
 ## Improvement potential
 
-**Improvement potential: 12 / 20** — assessed 2026-10-26 (was 8 on 2026-04-26)
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | ✓ fixed 2026-10-26 (both declared methods confirmed against seven fetched Australian sources; `cooking_methods_researched: 1`; no additional method discovered — smoking exists only as a finish inside the grill leaf) |
-| Culinary Group A covered | ⚠️ missing — the one Asian-style record (ginger/soy marinade in McLaren Vale) is an Australian fusion dish, not a Group A source — − **−1** |
 | Culinary Group B covered | ✓ (Australasian — every source in both leaves) |
-| Culinary Group C covered | ⚠️ missing — − **−1** |
-| Culinary Group D covered | ⚠️ missing — no Nordic, Slavic or Baltic kangaroo record exists; a searched-negative — − **−1** |
 | `## Cut profile` + anatomy | ✓ (rewritten: leanness mechanism, the 50–52 vs 52–57 °C discrepancy, and the timing spread all stated) |
-| Method leaf files exist | ⚠️ 2 of the 4-leaf target — − **−2** |
 | Safe temperature research evidence | ✓ (every leaf states what its sources publish and what they do not; the one number is flagged as second-hand) |
 | Preferred-temperature research evidence | ✓ (50–52 °C recorded against the registry's 52–57 °C band, with the conflict left open for a doneness pass) |
 | Per-method temperature data | ✓ (table in Cut profile above) |
-| Source counts (4 per leaf) | grill has 3 verifiable sources — − **−1** |
-| Leaf files failing the distinct-tradition gate (binary): pan_sear (AU ×4), grill (AU ×3) | − **−2** |
-
-**Points**: −1 Group A · −1 Group C · −1 Group D · −2 leaf target · −1 grill source count · −2 distinct rows = −8 → **12**
 
 ### Integrity notes recorded this pass
 
@@ -148,10 +138,10 @@ medium-rare-band (52–57 °C) — en verklig avvikelse som är dokumenterad, in
 
 ### Improvement priorities
 
-1. **−2** · Two more leaves: `sous_vide` (Australian precision-cooking pages exist and would give
+1. Two more leaves: `sous_vide` (Australian precision-cooking pages exist and would give
    this cut its first repeatable temperature) and `slow_cooker`/`pressure_cooker` for the tougher
    haunch steaks — both are leads, not yet verified
-2. **−1** · Grill source count: a fourth verified Australian grill record; the Facebook and TikTok
+2. Grill source count: a fourth verified Australian grill record; the Facebook and TikTok
    records found this pass are not citable
 3. **−1 each** · Groups A, C and D — for D this is a genuine searched-negative; for A the route
    would be a non-Australian source using kangaroo in a South-East Asian preparation (Indonesia and

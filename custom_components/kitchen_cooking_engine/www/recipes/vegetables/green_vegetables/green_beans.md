@@ -43,7 +43,6 @@ carryover_temp_c: 1
 
 Green beans (*Phaseolus vulgaris* and *Vigna unguiculata* — runner beans, French haricots verts, yard-long beans) boiled is the classic preparation in French haute cuisine, American home cooking, and the base technique in almost every global kitchen that uses fresh green beans. The target for boiled green beans is bright-green and tender-crisp: 78–82 °C (172–180 °F) inside the bean. Overcooked beans turn army-green, drab and mushy at 88+ °C. The classic French technique is to boil rapidly in a large quantity of salted water (blanching) for 3–5 minutes, then shock in ice water (*refresh*) to stop cooking and fix the bright green. MEATER probe: insert horizontally through the side of the longest/thickest bean at the mid-point; the probe must be in the water and not reading ambient air.
 
-
 ## Styckesprofil
 
 Gröna bönor (*Phaseolus vulgaris* och *Vigna unguiculata* — brytbönor, franska haricots verts, långa bönor) kokade är den klassiska beredningen i fransk haute cuisine, amerikansk husmanskost och asiatisk matlagning. Koka i saltat vatten i 3–6 minuter. Klar när genomstekta men fortfarande krispiga.
@@ -56,8 +55,6 @@ Gröna bönor (*Phaseolus vulgaris* och *Vigna unguiculata* — brytbönor, fran
 - [Steam](./green_beans-steam.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -67,9 +64,9 @@ Gröna bönor (*Phaseolus vulgaris* och *Vigna unguiculata* — brytbönor, fran
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
-3. **−1** · Method file `green_beans-boil.md` copies parent cut profile — rewrite `green_beans-boil.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+3. Method file `green_beans-boil.md` copies parent cut profile — rewrite `green_beans-boil.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

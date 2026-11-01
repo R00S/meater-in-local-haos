@@ -69,8 +69,6 @@ Sirloin tip roast (känd som "knuckle" i UK/australisk styckning, "pointe de cul
 
 ## Improvement potential
 
-**Improvement potential: 10 / 20** — assessed 2026-04-27
-
 | Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
@@ -82,9 +80,9 @@ Sirloin tip roast (känd som "knuckle" i UK/australisk styckning, "pointe de cul
 
 ### Improvement priorities
 
-1. **−3** · No per-method temperature consensus — add 2–4 more source recipes to `sirloin_tip_roast-oven_roast.md` (need Groups A, C, D) then write analysis sections
-2. **−2** · Braise method leaf not started — create `sirloin_tip_roast-braise.md` with 4–6 sourced braised beef recipes from diverse traditions (German schmorbraten confirmed as Group D source)
-3. **−2** · Oven roast leaf incomplete — find Group A (Asian), Group C (Middle Eastern/African), Group D (Scandinavian/Russian) oven-roasted beef recipes for this cut
+1. No per-method temperature consensus — add 2–4 more source recipes to `sirloin_tip_roast-oven_roast.md` (need Groups A, C, D) then write analysis sections
+2. Braise method leaf not started — create `sirloin_tip_roast-braise.md` with 4–6 sourced braised beef recipes from diverse traditions (German schmorbraten confirmed as Group D source)
+3. Oven roast leaf incomplete — find Group A (Asian), Group C (Middle Eastern/African), Group D (Scandinavian/Russian) oven-roasted beef recipes for this cut
 4. **−1 each** · Missing Culinary Groups A, C, D — at least one recipe per group across all method leaf files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

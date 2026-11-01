@@ -44,7 +44,6 @@ carryover_temp_c: 2
 
 Lobster tail is the tail segment of a lobster (*Homarus americanus* — American/Maine lobster; *Homarus gammarus* — European/Breton lobster; or *Panulirus argus* — Caribbean spiny lobster) separated from the body and claws. The edible flesh is the large tail muscle (*pleopod* and *telson* musculature), which is firm, white-to-pale-pink, sweet, and rich in natural glutamates. The segmented exoskeleton (shell) is a built-in heat shield that protects the flesh from overcooking and acts as a flavour-retaining vessel. Standard tail dimensions for cooking: 170–280 g (6–10 oz) spiny lobster tails, 3–5 cm thick at the broadest cross-section. Overcooking is the primary risk — muscle proteins tighten sharply above 62 °C; the pull window for moist, sweet meat is 58–62 °C. USDA minimum for lobster is 63 °C (145 °F).
 
-
 ## Styckesprofil
 
 Hummersvans är svanssegmentet av en hummer (*Homarus americanus* — amerikansk/Maine-hummer; *Homarus gammarus* — europeisk/bretonsk hummer; eller *Panulirus argus* — karibisk spinhummer) separerat från kroppen och klorna. Det ätliga köttet är den stora svansmuskeln (*pleopod*- och *telson*-muskulatur), som är fast, vit till blekrosa, söt och rik på naturliga glutamater.
@@ -56,8 +55,6 @@ Det segmenterade ytterskalet (skalet) är ett inbyggt värmeskydd som skyddar k�
 - [Grill](./lobster_tail-grill.md)
 - [Oven Roast](./lobster_tail-oven_roast.md)
 ## Improvement potential
-
-**Improvement potential: 19 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -73,10 +70,8 @@ Det segmenterade ytterskalet (skalet) är ett inbyggt värmeskydd som skyddar k�
 | Temperature data: culinary preferred (57–62°C) | ✓ |
 | Per-method temperature data | ✓ (both leaves) |
 
-**Points**: −1 (Group C missing) = **19**
-
 ### Improvement priorities
 
-1. **−1** · Missing Culinary Group C tradition — add a Middle Eastern, Moroccan, Caribbean, or Turkish lobster tail recipe to the grill or oven_roast leaf. Lobster is found in the Mediterranean and Red Sea; Turkish *ızgara ıstakoz* (grilled lobster) exists as a tradition. 20+ probes on 2026-04-27 and 2026-04-29 found no accessible Group C lobster tail recipe.
+1. Missing Culinary Group C tradition — add a Middle Eastern, Moroccan, Caribbean, or Turkish lobster tail recipe to the grill or oven_roast leaf. Lobster is found in the Mediterranean and Red Sea; Turkish *ızgara ıstakoz* (grilled lobster) exists as a tradition. 20+ probes on 2026-04-27 and 2026-04-29 found no accessible Group C lobster tail recipe.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

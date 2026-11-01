@@ -76,31 +76,23 @@ Köttet är extremt marmorerat med distinkt intramuskulärt fett och en unik fj�
 
 ## Improvement potential
 
-**Improvement potential: 11 / 20** — assessed 2026-10-26 (was 8 on 2026-04-27)
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | ✓ fixed 2026-10-26 (enum-wide survey, `cooking_methods_researched: 1`) |
-| Culinary Group A covered | ⚠️ thin — JP in oven_roast **only** (1 of 6 leaves); single-leaf coverage is not whole-cut coverage — − **−1** |
 | Culinary Group B covered | ✓ (ES, US, BE, DE, CH, IT, NL across all six leaves) |
-| Culinary Group C covered | − missing — the braai technique in charcoal_grill is recorded as technique origin for a modern-European plate and not counted as Group C | − **−1** |
 | Culinary Group D covered | ✓ (NO in grill) |
 | `## Cut profile` + anatomy | ✓ (*serratus ventralis* / *subscapularis*, seam-fat structure) |
 | Method leaf files exist | ✓ (6 leaves, was 1) |
 | Safe temperature research evidence | ✓ (explicit pull line in every leaf; house guidance marked where sources publish none) |
 | Preferred-temperature research evidence | ✓ (55–60 °C pan_sear; 57–60→63 °C grill; 65 °C charcoal; 55–62 °C sous_vide) |
 | Per-method temperature data | ✓ (table in Cut profile above) |
-| Leaf files below the 4-source count (charcoal_grill 3, oven_roast 3, braise 3, sous_vide 3) | − **−4** |
-| Leaf files failing the distinct-tradition gate (binary): pan_sear (ES ×2, CH ×2), oven_roast (ES ×2), braise (ES ×2 + ambiguous attribution) | − **−3** |
-
-**Points**: −1 Group A thin · −1 Group C · −4 source counts · −3 distinct-tradition rows = −9 → **11**
 
 ### Improvement priorities
 
 1. **−1 each** · Raise `charcoal_grill`, `oven_roast`, `braise` and `sous_vide` to the 4-source count — one further fetched source per leaf (Portuguese *grelhado*/German grill for charcoal; Portuguese *assado* or a German/Scandinavian oven source; Portuguese *estufado* or Greek *stifado* for braise; a Spanish/German precision-cooking page — dehesium.com is a preserved lead — for sous_vide)
 2. **−1 each** · Clear the three distinct-tradition rows: one non-Spanish, non-Swiss plancha source (pan_sear), one non-Spanish oven source (oven_roast), one unambiguous non-Spanish braise source (braise)
-3. **−1** · Group C source for the cut anywhere (a true South-African *braai* secreto plate, or Moroccan/Turkish/Caribbean treatment) — the −1 stands as documented gap until a source is fetched
-4. **−1** · Group A depth — a second method carrying a Japanese/Korean/Chinese/Thai source (currently only the oven_roast roulade)
+3. Group C source for the cut anywhere (a true South-African *braai* secreto plate, or Moroccan/Turkish/Caribbean treatment) — the −1 stands as documented gap until a source is fetched
+4. Group A depth — a second method carrying a Japanese/Korean/Chinese/Thai source (currently only the oven_roast roulade)
 5. Queued method leads to widen next pass: `air_fryer` (recetasairfryernuria.com, Cookpad), `slow_cooker` (Cookpad Crockpot), `smoker` (informal social posts), `pressure_cooker` (none separate from braise)
 6. Cut-level doneness decision queued for one deliberate pass: the measured 55–62 °C cluster is now three leaves strong (sous_vide ×3 measured, pan_sear 55–60 °C, grill 57–60 °C pull) against a whole-cut `well_done` default; method keys already read `medium` for grill, charcoal_grill and sous_vide. Not changed piecemeal.
 

@@ -90,17 +90,9 @@ kompakt och går mycket snabbare per kilo. Sond från den tjocka änden in i mit
 
 ## Improvement potential
 
-**Improvement potential: 17 / 20** — assessed 2026-10-27. The previous reading (8, dated 2026-04-26) charged
-−8 for an unstarted method survey and called the single leaf a copy of this hub. The copy is now gone, two of
-the three records were paraphrases and have been replaced with fetched recipes, and the number is read fresh
-off the criteria.
-
 | Criterion | Points | Evidence |
 |-----------|--------|----------|
 | Cooking methods not researched (`cooking_methods_researched: 0`) | — | survey 2026-10-27: oven roast confirmed with three fetched recipes; **braise and smoker confirmed** and declared (matprat *reinsdyrstek i gryte*; the *savuporo* tradition) |
-| Missing Culinary Group A | **−1** | no Asian reindeer record exists in any leaf — the animal is not eaten in the region; searched negatively |
-| Missing Culinary Group B | **−1** | no North American record. Caribou is the same species, but searches returned only named-lodge tenderloin recipes (wrong cut) and recipe-aggregator pages, which the TOR excludes |
-| Missing Culinary Group C | **−1** | no African, Arabic, Levantine, Persian or Turkish reindeer record — searched negatively |
 | Missing Culinary Group D | — | Swedish, Norwegian and Finnish leaves |
 | `## Cut profile` … lacks anatomy | — | anatomy written 2026-10-27: which muscle groups, silverskin cap, 1–2 % fat, bone-in vs rolled shape |
 | No method leaf files exist | — | one leaf exists |

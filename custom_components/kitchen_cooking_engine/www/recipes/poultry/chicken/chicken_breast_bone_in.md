@@ -61,8 +61,6 @@ Ugnsrostning: 200–220 °C, 35–45 minuter. Innertemperatur: **74 °C (165 °F
 
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-27
-
 | Criterion | Points | Status |
 |-----------|--------|--------|
 | Cut profile written (not a placeholder) | +1 | ✅ Done |
@@ -79,7 +77,6 @@ Ugnsrostning: 200–220 °C, 35–45 minuter. Innertemperatur: **74 °C (165 °F
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research grill and air fryer methods for bone-in breast; add leaves; then set `cooking_methods_researched: 1`
-2. **−2** · Missing Groups A and D — add recipes from Asian and Scandinavian/Slavic traditions to `chicken_breast_bone_in-oven_roast.md`; grill and air_fryer leaves should also cover these traditions
+1. Cooking methods not researched — research grill and air fryer methods for bone-in breast; add leaves; then set `cooking_methods_researched: 1`
+2. Missing Groups A and D — add recipes from Asian and Scandinavian/Slavic traditions to `chicken_breast_bone_in-oven_roast.md`; grill and air_fryer leaves should also cover these traditions
 
-*Number will increase toward ~14/20 once Groups A and D are covered.*

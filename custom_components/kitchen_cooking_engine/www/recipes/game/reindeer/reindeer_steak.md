@@ -60,7 +60,6 @@ carryover_temp_c: 3
 
 Reindeer (*Rangifer tarandus*) is the traditional game meat of Sápmi (Lapland), northern Finland, Norway, and Sweden. The fillet (renfilé) and backstrap (sadel) are the premium steak cuts — structurally equivalent to the beef tenderloin and striploin respectively, cut from the *psoas major* and *longissimus dorsi*. Reindeer meat is very lean, deep red, and has a delicate sweet-earthy flavour milder than moose or red deer. Because of its leanness it cooks faster than beef of equivalent thickness and has a narrow safe window: medium-rare (55–57 °C / 131–135 °F) is the Nordic standard. Above 65 °C the meat becomes dry and tough.
 
-
 ## Styckesprofil
 
 Ren (*Rangifer tarandus*) är det traditionella viltköttet i Sápmi (Lappland), norra Finland, Norge och Sverige. Filén (renfilé) och sadelryggen är de bästa steaksnitten — strukturellt ekvivalenta med nötbiff respektive striploin, skurna från *psoas major* och *longissimus*.
@@ -73,8 +72,6 @@ Pannstekning är den vanligaste metoden i det skandinaviska hemmaköket: smör, 
 - [Pan Sear](./reindeer_steak-pan_sear.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | − **NOT DONE** (−8) |
@@ -85,11 +82,9 @@ Pannstekning är den vanligaste metoden i det skandinaviska hemmaköket: smör, 
 | Culinary Group C covered | − missing (−1) |
 | Culinary Group D | ✓ |
 
-**Points**: −8 methods · −1 Group A · −1 Group B · −1 Group C = −11 → 20−11 = **9**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
+1. Cooking methods not researched
 2. **−1 each** · Group A, B, C traditions missing — find Asian, Western European, and Middle Eastern/African reindeer or venison recipes
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -48,7 +48,6 @@ Chicken wings consist of three sections: the drumette (the single-bone upper sec
 
 Because dark-meat chicken is safe at 165 °F (74 °C) but more palatable (less chewy, more tender) at 170–175 °F (77–79 °C), most cooks target the upper end of the safe range. The thin bones conduct heat quickly; carryover is minimal (1–2 °C).
 
-
 ## Styckesprofil
 
 Kycklingvingar består av tre sektioner: trommelstocken (enkelbenet övre sektionen, anatomiskt humerus), plattingen/vingetten (tvåbenets mittsektion, radius och ulna) och spetsen (distal vingspets). Trommelstockar och plattar är de ätbara sektionerna; spetsen kastas vanligtvis men kan användas för buljong.
@@ -62,8 +61,6 @@ Alla tillagningsmetoder (air fryer, grill, ugn, fritering) kräver minst 74 °C 
 - [`chicken_wing-oven_roast.md`](chicken_wing-oven_roast.md) — 1 source, in-progress: Group B (Taste of Home/USA)
 ## Improvement potential
 
-**Improvement potential: 11 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods researched (full survey) | − **NOT DONE** — methods list inherited from placeholder, not verified |
@@ -76,12 +73,10 @@ Alla tillagningsmetoder (air fryer, grill, ugn, fritering) kräver minst 74 °C 
 | Culinary Group C covered | ✓ (air fryer: Immaculate Bites; grill: Immaculate Bites) |
 | Culinary Group D covered | − missing from all leaves |
 
-**Points**: −8 methods not researched · −1 Group D missing = −9 total → 20−9 = **11**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — do a proper survey of all cooking methods for chicken wings; update `methods:` list and set `cooking_methods_researched: 1` only after that survey
-2. **−1** · Group D tradition missing — find Swedish, Polish, Baltic or Slavic/Ukrainian chicken wing recipe; add to any leaf file (air_fryer, grill, or oven_roast)
+1. Cooking methods not researched — do a proper survey of all cooking methods for chicken wings; update `methods:` list and set `cooking_methods_researched: 1` only after that survey
+2. Group D tradition missing — find Swedish, Polish, Baltic or Slavic/Ukrainian chicken wing recipe; add to any leaf file (air_fryer, grill, or oven_roast)
 3. **grill leaf in-progress** — add Group A and Group D sources to reach 4+ sources
 4. **oven_roast leaf in-progress** — add Groups A, C, D sources to reach 4+ sources
 

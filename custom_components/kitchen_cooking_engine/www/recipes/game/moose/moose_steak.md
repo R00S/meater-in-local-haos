@@ -60,9 +60,7 @@ carryover_temp_c: 3
 
 Moose steak (Elchsteak / älgbiff) is cut from the loin or haunch. It is very lean with a rich, earthy flavour. Grilling over high heat for a short time is the traditional Nordic approach; the meat should be seared quickly and pulled at medium-rare to prevent dryness. Marinating in oil and acidic components (wine, vinegar, lemon) before grilling is standard practice.
 
-
 Target internal temperature: **57–62 °C (135–144 °F)** for medium-rare to medium.
-
 
 ## Styckesprofil
 
@@ -78,12 +76,10 @@ Tillagningstid: 3–4 minuter per sida vid direkt hög värme. Innertemperatur: 
 
 2735
 
-Historical readings: 9 / 20 (former 0–20 system, assessed 2026-04-26; not comparable with the new scale).
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing Culinary Group A and Culinary Group C tradition(s) — add Culinary Group A and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Method file `moose_steak-grill.md` copies parent cut profile — rewrite `moose_steak-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Missing Culinary Group A and Culinary Group C tradition(s) — add Culinary Group A and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. Method file `moose_steak-grill.md` copies parent cut profile — rewrite `moose_steak-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

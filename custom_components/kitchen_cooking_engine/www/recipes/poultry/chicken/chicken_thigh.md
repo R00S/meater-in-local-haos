@@ -48,9 +48,7 @@ carryover_temp_c: 3
 
 Chicken thighs are a forgiving, flavourful dark-meat cut. Their higher fat content makes them well-suited to the air fryer's rapid circulating heat, which renders the fat and crisps the skin beautifully without drying the meat out. Bone-in skin-on thighs take longer than boneless but deliver the crispiest skin. Dark meat benefits from cooking above the USDA minimum to 175 °F (79 °C), where collagen fully converts to gelatin.
 
-
 Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)** preferred for dark meat
-
 
 ## Styckesprofil
 
@@ -66,8 +64,6 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. 
 
 ## Improvement potential
 
-**Improvement potential: 17 / 20** — assessed 2026-04-29
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods researched | ✓ — survey completed 2026-04-29 (air_fryer, braise, grill, oven_roast, pan_fry all confirmed applicable; braise and pan_fry leaves not yet created) |
@@ -79,12 +75,10 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. 
 | braise leaf | − missing (`chicken_thigh-braise.md` not yet created) |
 | pan_fry leaf | − missing (`chicken_thigh-pan_fry.md` not yet created) |
 
-**Points**: −1 (Group D) −1 (braise leaf missing) −1 (pan_fry leaf missing) = **17**
-
 ### Improvement priorities
 
 1. Create `chicken_thigh-braise.md` — braised chicken thighs widely available on Natasha's Kitchen, BBC Good Food, multiple accessible sites
 2. Create `chicken_thigh-pan_fry.md` — pan-fried chicken thighs widely available
-3. **−1** · Group D missing — add a Scandinavian, Polish, or Eastern European chicken thigh recipe
+3. Group D missing — add a Scandinavian, Polish, or Eastern European chicken thigh recipe
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

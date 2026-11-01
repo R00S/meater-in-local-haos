@@ -37,9 +37,7 @@ carryover_temp_c: 2
 
 Ground chicken braised in liquid is a moist-heat method that keeps the lean meat from drying out and develops a flavourful sauce simultaneously. Because ground poultry is mixed throughout with bacteria (unlike whole muscle), every part of the meat must reach safe temperature. Braising is forgiving — the surrounding liquid prevents the meat from going above 212 °F (100 °C), but interior temp still easily exceeds 165 °F (74 °C) with adequate cooking time.
 
-
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry; visual: no pink inside
-
 
 ## Styckesprofil
 
@@ -54,8 +52,6 @@ Tillaga vid spissimmer eller ugn 160–170 °C, rör om regelbundet. Innertemper
 - [Pan Fry](./ground_chicken-pan_fry.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -65,8 +61,8 @@ Tillaga vid spissimmer eller ugn 160–170 °C, rör om regelbundet. Innertemper
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing Culinary Group B and Culinary Group D tradition(s) — add Culinary Group B and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Method file `ground_chicken-braise.md` copies parent cut profile — rewrite `ground_chicken-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Missing Culinary Group B and Culinary Group D tradition(s) — add Culinary Group B and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. Method file `ground_chicken-braise.md` copies parent cut profile — rewrite `ground_chicken-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

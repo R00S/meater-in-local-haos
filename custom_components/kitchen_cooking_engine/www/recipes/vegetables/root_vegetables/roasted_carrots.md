@@ -42,7 +42,6 @@ carryover_temp_c: 1
 
 Carrots (*Daucus carota*) sautéed in a hot pan — whether as Chinese stir-fried matchsticks, Japanese *kimpira gobo*-style glazed rounds, Indian tempering with spices, or French *carottes glacées* — develop a sweet, lightly caramelised character while retaining their structural texture. Carrots should be cut thinly (coins, matchsticks, julienne) for sautéing — 3–5 mm thick — so the centre cooks through before the surface over-colours. Pull temperature: 82–88 °C (180–190 °F) for tender-crisp glazed carrots. MEATER probe inserted along the long axis of the thickest piece (or into the densest pile).
 
-
 ## Styckesprofil
 
 Morötter (*Daucus carota*) sauterade i het panna — kinesiska wokade matchsticks, japanska *kimpira gobo*-glassade rundlar, indisk tempering eller franska *carottes glacées* — ger karameliserade, söta morötter. Sautera i 6–10 minuter. Klar när gyllenbrun och genomstekt.
@@ -56,13 +55,11 @@ Morötter (*Daucus carota*) sauterade i het panna — kinesiska wokade matchstic
 
 2306
 
-Historical readings: 9 / 20 (former 0–20 system, assessed 2026-04-26; not comparable with the new scale).
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
-3. **−1** · Method file `roasted_carrots-saute.md` copies parent cut profile — rewrite `roasted_carrots-saute.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+3. Method file `roasted_carrots-saute.md` copies parent cut profile — rewrite `roasted_carrots-saute.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

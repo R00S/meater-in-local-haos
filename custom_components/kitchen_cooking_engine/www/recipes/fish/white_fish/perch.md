@@ -59,8 +59,6 @@ Abborre (*Perca fluviatilis*; tyska: Barsch; franska: perche) är en mager sötv
 
 ## Improvement potential
 
-**Improvement potential: 15 / 20** — assessed 2026-05-31
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
@@ -76,8 +74,8 @@ Groups A and C absent — European perch (*abborre* / *Perca fluviatilis*) is a 
 
 ### Improvement priorities
 
-1. **−3** · Missing method leaf files — create `perch-grill.md`, `perch-oven_bake.md`, and `perch-smoker.md`, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources.
-2. **−1** · Missing Culinary Group A tradition — search for East Asian perch preparations; Chinese *luyu* freshwater perch is a distinct species but research needed.
-3. **−1** · Missing Culinary Group C tradition — search for any African, Arabic, Persian, or Caribbean perch preparation.
+1. Missing method leaf files — create `perch-grill.md`, `perch-oven_bake.md`, and `perch-smoker.md`, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources.
+2. Missing Culinary Group A tradition — search for East Asian perch preparations; Chinese *luyu* freshwater perch is a distinct species but research needed.
+3. Missing Culinary Group C tradition — search for any African, Arabic, Persian, or Caribbean perch preparation.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

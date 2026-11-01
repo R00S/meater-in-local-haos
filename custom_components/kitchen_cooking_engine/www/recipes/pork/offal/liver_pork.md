@@ -59,8 +59,6 @@ Klassiska beredningar: brittisk *liver and onions*, tysk *Leberwurst*-teknik, no
 
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-27
-
 | Criterion | Points | Status |
 |-----------|--------|--------|
 | Cut profile written (not a placeholder) | +1 | ✅ Done |
@@ -74,7 +72,6 @@ Klassiska beredningar: brittisk *liver and onions*, tysk *Leberwurst*-teknik, no
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — add Group A (Chinese stir-fried pork liver) and Group C (Lebanese/Moroccan sautéed liver) to `liver_pork-pan_fry.md`; then create `liver_pork-pan_sear.md`; then set `cooking_methods_researched: 1`
-2. **−2** · Missing Culinary Groups A and C — add source recipes from Asian (thewoksoflife.com — stir-fried pork liver) and C (marocmama.com or cheftariq.com — North African or Arabic preparation)
+1. Cooking methods not researched — add Group A (Chinese stir-fried pork liver) and Group C (Lebanese/Moroccan sautéed liver) to `liver_pork-pan_fry.md`; then create `liver_pork-pan_sear.md`; then set `cooking_methods_researched: 1`
+2. Missing Culinary Groups A and C — add source recipes from Asian (thewoksoflife.com — stir-fried pork liver) and C (marocmama.com or cheftariq.com — North African or Arabic preparation)
 
-*Number will increase toward ~14/20 once Groups A and C sources are added to the pan_fry leaf.*

@@ -53,9 +53,7 @@ carryover_temp_c: 5
 
 Goose breast is a rich, deeply flavoured dark meat with a substantial fat layer, similar in character to duck breast but larger and more assertively flavoured. Like duck breast, it is often served medium-rare to medium (145–155 °F / 63–68 °C) by many European chefs, though USDA guidelines require 165 °F (74 °C). The oven-roast method for goose breast mirrors duck breast technique: stovetop fat rendering followed by oven finishing. Goose breast dries out at high oven temperatures, so a moderate 350–375 °F oven with careful temperature monitoring is essential.
 
-
 Target internal temperature: **145–155 °F (63–68 °C)** — medium; pull at 140 °F and rest. USDA safe minimum: 165 °F (74 °C) — pull at 160 °F and rest.
-
 
 ## Styckesprofil
 
@@ -67,8 +65,6 @@ Gåsbröst är ett rikt, djupt smakrikt mörkt kött med ett kraftigt fettlager.
 - [Pan Sear](./goose_breast-pan_sear.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -78,8 +74,8 @@ Gåsbröst är ett rikt, djupt smakrikt mörkt kött med ett kraftigt fettlager.
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing Culinary Group B and Culinary Group C tradition(s) — add Culinary Group B and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Method file `goose_breast-oven_roast.md` copies parent cut profile — rewrite `goose_breast-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Missing Culinary Group B and Culinary Group C tradition(s) — add Culinary Group B and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. Method file `goose_breast-oven_roast.md` copies parent cut profile — rewrite `goose_breast-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

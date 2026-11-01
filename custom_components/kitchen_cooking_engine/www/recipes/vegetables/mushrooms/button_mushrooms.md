@@ -34,7 +34,6 @@ carryover_temp_c: 1
 
 Button mushrooms (*Agaricus bisporus*, immature white form) are roughly 92 % water held in a sponge-like network of chitin-rich fungal cell walls. On a hot grill the surface water flashes off in seconds, the cap caramelises and the mushroom collapses to perhaps two-thirds its raw volume. The grill imparts charred Maillard browning concentrated where the gills or cap touch the bars. Threading mushrooms onto skewers (or using a grill basket) is the only way to keep them from rolling and falling through. Carryover is small but real — about 2–3 °C — because the dehydrated cap insulates the moist interior. Brushing with oil before grilling is essential; mushrooms will stick badly to bare grates.
 
-
 ## Styckesprofil
 
 Champinjoner (*Agaricus bisporus*, omogen vit form) på het grill: ytvattnet avdunstar snabbt och de naturliga sockerarterna och proteinerna karameliseras i Maillard-reaktion. Grilla hela eller halverade i 4–6 minuter per sida. Klar när gyllenbrun med grillränder.
@@ -49,13 +48,11 @@ Champinjoner (*Agaricus bisporus*, omogen vit form) på het grill: ytvattnet avd
 
 2066
 
-Historical readings: 9 / 20 (former 0–20 system, assessed 2026-04-26; not comparable with the new scale).
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
-3. **−1** · Method file `button_mushrooms-grill.md` copies parent cut profile — rewrite `button_mushrooms-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+3. Method file `button_mushrooms-grill.md` copies parent cut profile — rewrite `button_mushrooms-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

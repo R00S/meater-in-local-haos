@@ -55,8 +55,6 @@ All five declared methods have a leaf file. Only `oven_roast` meets the 4–6-so
 
 ## Improvement potential
 
-**Improvement potential: 16 / 20** — assessed 2026-10-23 (from-scratch reassessment; supersedes 2026-05-31 stub number 4). Self-assessed at creation time (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Pattern 4) — treat as an initial estimate, not an independent audit.
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: survey found and added `braise` beyond the auto-populated list; negative/uncertain areas documented in leaves — e.g. deep-fried quail exists but no `deep_fry` enum; `cooking_methods_researched: 1`) |
@@ -70,11 +68,9 @@ All five declared methods have a leaf file. Only `oven_roast` meets the 4–6-so
 | Temperature data: safe + culinary preferred | — (research evidence present: grill leaf carries an explicit source-stated endpoint at 150–155 °F / 65–68 °C breast, recorded as a divergence below the 74 °C USDA line rather than resolved) |
 | Per-method temperature data | — (grill leaf carries per-method data; the other four leaves document per-method absence as published) |
 
-**Points**: −4 (partial leaves: grill 2 sources, pan_fry 2, smoker 1, braise 2) = **16 / 20**. All four culinary groups and both temperature criteria pass on explicit evidence (oven_roast covers Groups A/B/C/D; the grill leaf carries the collection's one stated doneness endpoint).
-
 ### Improvement priorities
 
-1. **−4** · Bring each partial leaf to the 4–6-source gate — starting with `quail-smoker.md` (1 source; collect the Chinese 茶熏鹌鹑 primaries and the Neil Perry *Rockpool* book recipe).
+1. Bring each partial leaf to the 4–6-source gate — starting with `quail-smoker.md` (1 source; collect the Chinese 茶熏鹌鹑 primaries and the Neil Perry *Rockpool* book recipe).
 2. Expand Group A coverage beyond the single oven_roast source into other methods (grill, smoker, braise) — Japanese *uzura* and Chinese preparations are documented traditions.
 3. Add a Group C source to `quail-braise.md` (Moroccan/Egyptian quail tagine) and a Group A or D source to `quail-grill.md` and `quail-pan_fry.md`.
 

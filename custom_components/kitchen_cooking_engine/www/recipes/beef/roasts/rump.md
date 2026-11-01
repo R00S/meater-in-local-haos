@@ -89,8 +89,6 @@ Nötrumpa skärs från rumpprimalen — toppen av bakkvarteret, vid korsningen a
 
 ## Improvement potential
 
-**Improvement potential: 10 / 20** — assessed 2026-04-27
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -99,8 +97,8 @@ Nötrumpa skärs från rumpprimalen — toppen av bakkvarteret, vid korsningen a
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research grill and oven_roast methods; set `cooking_methods_researched: 1`
-2. **−2** · Group A/C gap — find a Group A (Asian) or Group C (African/Middle Eastern) rump steak pan-sear source
+1. Cooking methods not researched — research grill and oven_roast methods; set `cooking_methods_researched: 1`
+2. Group A/C gap — find a Group A (Asian) or Group C (African/Middle Eastern) rump steak pan-sear source
 3. Create `rump-grill.md` and `rump-oven_roast.md` leaves
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

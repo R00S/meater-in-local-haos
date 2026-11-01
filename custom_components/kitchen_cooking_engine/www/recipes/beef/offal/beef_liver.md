@@ -44,7 +44,6 @@ carryover_temp_c: 2
 
 Beef liver is the hepatic organ — a large, lobed, dark-chocolate-coloured mass of hepatocyte tissue with an extremely fine, smooth texture and a thin connective-tissue capsule (*Glisson's capsule*). It is one of the most nutrient-dense foods available: extremely high in iron (haem iron), vitamin A, B12, zinc, and copper. The intense metallic flavour, characteristic of the high iron and bile compound content, is reduced by soaking in milk for 30–60 minutes before cooking — a near-universal preparatory step in European traditions. Retail beef liver is sold as thin slices (6–10 mm), which is the correct format for pan frying. Fat content is very low; the thin slices have minimal carryover (1–2 °C) and must be pulled before the centre passes 65 °C to avoid chalky grey-brown dry meat.
 
-
 ## Styckesprofil
 
 Nötlever är det hepatiska organet — en stor, lobformad, mörk chokladfärgad massa som filtrerar blod och lagrar glykogen. Strukturellt är det en kompakt körtelvävnad med tätt packade celler, liten mängd fett och hög halt järn, A-vitamin och B12. Smaken är kraftig, järnig och djup — karaktäristisk för organkött och uppskattad i europeisk husmanskost men otillgänglig för dem som inte är vana vid den. Nötlever är tunnare och mildare än kalvlever (det föredragna valet i fin matlagning) och kräver snabb, hög värme för att undvika övertillagning. Skär bort alla synliga ådror och membran före tillagning.
@@ -55,8 +54,6 @@ Nötlever är det hepatiska organet — en stor, lobformad, mörk chokladfärgad
 - [Pan Sear](./beef_liver-pan_sear.md)
 ## Improvement potential
 
-**Improvement potential: 12 / 20** — assessed 2026-04-28
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -66,7 +63,7 @@ Nötlever är det hepatiska organet — en stor, lobformad, mörk chokladfärgad
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
 2. **pan_sear leaf** — missing Group A (South/East Asian) and Group C (Arabic/African/Caribbean) sources specifically within the pan_sear leaf; Group A (Madhur Jaffrey) is in pan_fry not pan_sear
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

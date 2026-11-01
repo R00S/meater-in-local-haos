@@ -54,10 +54,8 @@ and carryover is 2–3°C, so the cut demands close monitoring. Stuffed or rolle
 saddle (farce or ballotine style) can tolerate a slightly lower oven and longer
 time because the stuffing moderates heat transfer into the loin.
 
-
 inside. The saddle is lean enough that it needs a hot oven (190–200°C) to brown
 and carryover is 2–3°C, so the cut demands close monitoring. Stuffed or rolled
-
 
 ## Styckesprofil
 
@@ -71,8 +69,6 @@ Innertemperatur: **65–72 °C (149–162 °F)** för fullt genomstekt och safti
 - [Pan Sear](./rabbit_saddle-pan_sear.md)
 ## Improvement potential
 
-**Improvement potential: 8 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -83,8 +79,8 @@ Innertemperatur: **65–72 °C (149–162 °F)** för fullt genomstekt och safti
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−3** · Missing Culinary Group A, Culinary Group C and Culinary Group D tradition(s) — add Culinary Group A, Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Method file `rabbit_saddle-oven_roast.md` copies parent cut profile — rewrite `rabbit_saddle-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Missing Culinary Group A, Culinary Group C and Culinary Group D tradition(s) — add Culinary Group A, Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. Method file `rabbit_saddle-oven_roast.md` copies parent cut profile — rewrite `rabbit_saddle-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

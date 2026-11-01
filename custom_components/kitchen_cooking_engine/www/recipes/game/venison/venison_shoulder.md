@@ -51,8 +51,6 @@ Dessa egenskaper gör bogen idealisk för bräsering och slow cooking — metode
 
 ## Improvement potential
 
-**Improvement potential: 10 / 20** — assessed 2026-04-27
-
 | Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
@@ -64,9 +62,9 @@ Dessa egenskaper gör bogen idealisk för bräsering och slow cooking — metode
 
 ### Improvement priorities
 
-1. **−3** · Oven roast leaf empty — find venison shoulder oven roast recipes with full ingredient quantities
-2. **−2** · Slow cooker leaf empty — find venison shoulder slow cooker recipes
-3. **−2** · No temperature consensus — add more sources; once 4+ per method, write analysis sections
-4. **−1** · Braise leaf incomplete — add 2–4 more braise sources from Groups A and C
+1. Oven roast leaf empty — find venison shoulder oven roast recipes with full ingredient quantities
+2. Slow cooker leaf empty — find venison shoulder slow cooker recipes
+3. No temperature consensus — add more sources; once 4+ per method, write analysis sections
+4. Braise leaf incomplete — add 2–4 more braise sources from Groups A and C
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -57,8 +57,6 @@ Färsk fläskkäk bräseras som fläskkind, till **85–90 °C (185–194 °F)**
 
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-27
-
 | Criterion | Points | Status |
 |-----------|--------|--------|
 | Cut profile written (not a placeholder) | +1 | ✅ Done |
@@ -73,7 +71,6 @@ Färsk fläskkäk bräseras som fläskkind, till **85–90 °C (185–194 °F)**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research the **grill** method for Korean-style hangjeongsal (항정살 / pork neck-jowl muscle grilled over charcoal); attempted sources (all 404): koreanbapsang.com, kimchimari.com, beyondkimchee.com, aeriskitchen.com, maangchi.com. Try: omnivorescookbook.com, seonkyounglongest.com (use browser search), or any Korean food magazine site. Once a grill leaf is created and both braise and grill methods are covered, set `cooking_methods_researched: 1`.
-2. **−3** · Missing Groups A, C, D — for braise: Group A (Chinese 红烧猪脸 hong shao zhu mian — red-braised pork face, try thewoksoflife or omnivorescookbook), Group C (Filipino pork cheek adobo — panlasangpinoy or pinoycookingrecipes), Group D (Czech dušená vepřová líčka — apetitonline.cz; or Lithuanian kiaulienos skruostai — receptai.lt)
+1. Cooking methods not researched — research the **grill** method for Korean-style hangjeongsal (항정살 / pork neck-jowl muscle grilled over charcoal); attempted sources (all 404): koreanbapsang.com, kimchimari.com, beyondkimchee.com, aeriskitchen.com, maangchi.com. Try: omnivorescookbook.com, seonkyounglongest.com (use browser search), or any Korean food magazine site. Once a grill leaf is created and both braise and grill methods are covered, set `cooking_methods_researched: 1`.
+2. Missing Groups A, C, D — for braise: Group A (Chinese 红烧猪脸 hong shao zhu mian — red-braised pork face, try thewoksoflife or omnivorescookbook), Group C (Filipino pork cheek adobo — panlasangpinoy or pinoycookingrecipes), Group D (Czech dušená vepřová líčka — apetitonline.cz; or Lithuanian kiaulienos skruostai — receptai.lt)
 
-*Number will increase toward ~14/20 once Groups A, C, and D sources are added to the braise leaf, and toward ~17/20 once a grill leaf is created.*

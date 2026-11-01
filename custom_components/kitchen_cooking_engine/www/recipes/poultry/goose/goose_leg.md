@@ -45,9 +45,7 @@ carryover_temp_c: 4
 
 Goose legs are large, tough, highly flavoured cuts rich in connective tissue and intramuscular fat. Braising — browning the legs in fat, then cooking them submerged or partially submerged in aromatic liquid at low heat for 2–3 hours — is the optimal method for transforming this tough cut into fork-tender, fall-off-the-bone meat. The collagen-rich connective tissue converts to gelatin above 160 °F, but the most tender, succulent results come at 175–185 °F (79–85 °C) after extended braising. USDA minimum for poultry is 165 °F. Unlike duck confit, braising adds moisture; the braising liquid becomes a rich, gelatin-laden sauce.
 
-
 Target internal temperature: **175–185 °F (79–85 °C)** — well above USDA minimum; extended time at this temperature melts collagen and produces best texture. Minimum safe: 165 °F (74 °C).
-
 
 ## Styckesprofil
 
@@ -59,8 +57,6 @@ Gåsben är stora, sega, intensivt smakrika snitt rika på bindväv. Innertemper
 - [Oven Roast](./goose_leg-oven_roast.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -70,8 +66,8 @@ Gåsben är stora, sega, intensivt smakrika snitt rika på bindväv. Innertemper
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing Culinary Group B and Culinary Group C tradition(s) — add Culinary Group B and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Method file `goose_leg-braise.md` copies parent cut profile — rewrite `goose_leg-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Missing Culinary Group B and Culinary Group C tradition(s) — add Culinary Group B and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. Method file `goose_leg-braise.md` copies parent cut profile — rewrite `goose_leg-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -43,7 +43,6 @@ carryover_temp_c: 2
 
 Sea scallops (*Pecten maximus* in Europe; *Placopecten magellanicus*, the Atlantic sea scallop, in North America) are the large adductor muscle that opens and closes the bivalve shell. The flesh is cream-white, sweet, and extremely tender with almost no connective tissue; it is composed mainly of striated muscle fibres held in a dense but delicate matrix. Pan searing is the defining method for large sea scallops because extreme heat produces rapid caramelisation of the natural sugars on the flat cut surfaces — the golden-brown crust contrasts dramatically with the cool, almost raw centre that is the mark of a well-executed scallop. Overcooking tightens the fibres sharply and produces a rubbery, squeaky texture. The critical requirements are: completely dry exterior, a blazing pan, and a very short cook time. Carryover is significant relative to the small mass — 3–5 °C — so pull early.
 
-
 ## Styckesprofil
 
 Kammusslor (*Pecten maximus* i Europa; *Placopecten magellanicus*, Atlantisk kamussla, i Nordamerika) är den stora adduktormuskeln som öppnar och stänger den tvåklaffiga skalen. Köttet är krämvitt, sött och extremt mört med nästan obefintlig bindväv. Pannsearing är den enda rätta metoden: extremt het torr gjutjärnspanna, liten mängd smör + neutralt fett, 90 sekunder per sida utan rörelse. Innertemperatur: 54–57 °C. Eftertillagning: 1–2 °C. Torka av och salta precis innan searingen — fukt dödar krustabilningen.
@@ -52,8 +51,6 @@ Kammusslor (*Pecten maximus* i Europa; *Placopecten magellanicus*, Atlantisk kam
 
 - [Pan Sear](./scallops-pan_sear.md)
 ## Improvement potential
-
-**Improvement potential: 9 / 20** — assessed 2026-04-26
 
 | Criterion | Points |
 |-----------|----------|
@@ -64,8 +61,8 @@ Kammusslor (*Pecten maximus* i Europa; *Placopecten magellanicus*, Atlantisk kam
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing Culinary Group C and Culinary Group D tradition(s) — add Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Method file `scallops-pan_sear.md` copies parent cut profile — rewrite `scallops-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Missing Culinary Group C and Culinary Group D tradition(s) — add Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. Method file `scallops-pan_sear.md` copies parent cut profile — rewrite `scallops-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

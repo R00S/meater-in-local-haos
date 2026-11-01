@@ -81,8 +81,6 @@ Slow cooking applies long, enclosed moist heat to this bone-in, meat-covered fro
 
 ---
 
-
-
 ### 5. American (101 Cooking For Two, Dan Mikesell) — Slow Cooker Baby Back Ribs
 **Inspired by**: Dan Mikesell ("DrDan"), 101 Cooking For Two; https://www.101cookingfortwo.com/crock-pot-baby-back-ribs/ (fetched 2026-11-01). *Named home-cook author with a tested, timed method. Cut term: baby back ribs — the loin-side rack — while the page itself notes "Spare ribs or St. Louis ribs also work, but may need trimming to fit"; stored as a comparator on that basis.*
 **Serves**: not stated (1 rack, 3–4 lb) · **Prep**: 10 min · **Cook**: 7–8 h LOW or 3–4 h HIGH, then broil · **Rest**: not stated

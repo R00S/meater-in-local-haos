@@ -82,8 +82,6 @@ All four declared methods have a leaf and all four meet the 4–6-source collect
 
 ## Improvement potential
 
-**Improvement potential: 15 / 20** — assessed 2026-10-24 (from-scratch recount; supersedes the 8 recorded 2026-04-26, which deducted −8 for an unstarted survey, −2 for two missing leaves, −1 for a missing Group C and −1 for a copied profile — all four now resolved). Self-assessed (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Pattern 4) — an initial estimate, not an audit.
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods researched (`cooking_methods_researched: 1`, inventory above) | — |
@@ -98,9 +96,9 @@ All four declared methods have a leaf and all four meet the 4–6-source collect
 
 ### Improvement priorities
 
-1. **−2** · Fetch measured sources for grill, oven_roast and steam; at present only pan-searing has a published reading.
-2. **−1** · Culinary Group D: halibut (*hellefisk*) is fished and eaten in Norway, Iceland and Greenland; no Nordic recipe has been fetched yet.
-3. **−1** · Diversify publishers away from the two magazine kitchens that supply most of the current sources.
-4. **−1** · The 145 °F / 130–135 °F split needs a third measured tradition before any band can be preferred.
+1. Fetch measured sources for grill, oven_roast and steam; at present only pan-searing has a published reading.
+2. Culinary Group D: halibut (*hellefisk*) is fished and eaten in Norway, Iceland and Greenland; no Nordic recipe has been fetched yet.
+3. Diversify publishers away from the two magazine kitchens that supply most of the current sources.
+4. The 145 °F / 130–135 °F split needs a third measured tradition before any band can be preferred.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

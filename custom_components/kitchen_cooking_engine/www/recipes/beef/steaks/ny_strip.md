@@ -75,7 +75,6 @@ The New York strip steak (also called strip loin, sirloin strip, Kansas City str
 
 The strip is leaner than the ribeye but more forgiving than the tenderloin; its moderate marbling provides enough self-basting to prevent drying in most cooking methods. Carryover is 3–5 °C for a thick-cut strip steak.
 
-
 ## Styckesprofil
 
 New York strip-biffen (även kallad strip loin, sirloin strip, Kansas City strip, eller *contre-filet* på franska) skärs från den korta länden på nötkroppens — *longissimus dorsi*-muskeln på ryggradens bakre sida, bakom entrecôteprimalen och framför entrecôten. Det är en enmuskel-biff med måttlig marmorering, fastare konsistens än entrecôte (muskeln arbetar något mer), och uttalad nötssmak.
@@ -93,8 +92,6 @@ Fettlisten längs ena kanten är ett definierande drag och smakkälla — den sm
 - [Sous Vide](./ny_strip-sous_vide.md)
 ## Improvement potential
 
-**Improvement potential: 10 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | − **NOT DONE** (−8) |
@@ -103,13 +100,11 @@ Fettlisten längs ena kanten är ett definierande drag och smakkälla — den sm
 | Culinary Group D covered | − missing (−1) |
 | Culinary Groups B, C | ✓ |
 
-**Points**: −8 methods · −1 Group A · −1 Group D = −10 → 20−10 = **10**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
-2. **−1** · Group A tradition missing — find a Japanese, Korean, or Chinese strip steak recipe
-3. **−1** · Group D tradition missing — find a Polish, Swedish, or Baltic strip steak recipe
+1. Cooking methods not researched
+2. Group A tradition missing — find a Japanese, Korean, or Chinese strip steak recipe
+3. Group D tradition missing — find a Polish, Swedish, or Baltic strip steak recipe
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*
 

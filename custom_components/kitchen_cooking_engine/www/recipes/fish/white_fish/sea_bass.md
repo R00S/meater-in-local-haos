@@ -111,8 +111,6 @@ than on thermometers.
 
 ## Improvement potential
 
-**Improvement potential: 16 / 20** — assessed 2026-10-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | none — survey done, `cooking_methods_researched: 1` |
@@ -129,7 +127,7 @@ than on thermometers.
 
 ### Improvement priorities
 
-1. **−4** · Four leaves sit at three sources each. The fix is ordinary fetch work, not a wall: `grill` needs a fourth grill-tradition source (an Italian *alla griglia* or a US gas-grill recipe), `steam` a fourth steaming tradition (Korean *jjim* or Vietnamese *hấp*), `pan_sear` a fourth European pan source, and `oven_bake` a French *loup au sel* or US salt-baked fish.
+1. Four leaves sit at three sources each. The fix is ordinary fetch work, not a wall: `grill` needs a fourth grill-tradition source (an Italian *alla griglia* or a US gas-grill recipe), `steam` a fourth steaming tradition (Korean *jjim* or Vietnamese *hấp*), `pan_sear` a fourth European pan source, and `oven_bake` a French *loup au sel* or US salt-baked fish.
 2. **No temperature evidence in four of five leaves** · Only `oven_roast` carries a published internal temperature. Adding sources that state one (US publications routinely print 145 °F) would let the per-method rows stop relying on house guidance.
 3. **`steam` quantity gate** · Xiachufang publishes no amounts and Cookpad Japan publishes 少々; a Chinese-language or Japanese source with full quantities would clear that shortfall.
 4. **Queued methods not yet leafed** · `charcoal_grill` (recipes currently inside `grill`, fuel flagged per row), `poach`, `air_fryer`, `sous_vide`, `pan_fry` (recipes currently inside `pan_sear`), `smoker`, `oven_broil`. Each widens before it is declared — declaring a method without a leaf fails the missing-leaf criterion.

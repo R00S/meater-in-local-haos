@@ -61,8 +61,6 @@ Gädda (*Esox lucius*; tyska: Hecht; franska: brochet; finska: hauki) är en sto
 
 ## Improvement potential
 
-**Improvement potential: 14 / 20** — assessed 2026-05-31
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
@@ -78,9 +76,9 @@ Groups A and C absent — braised pike is a Central/Western European tradition (
 
 ### Improvement priorities
 
-1. **−4** · Missing method leaf files — create `pike-pan_fry.md`, `pike-oven_bake.md`, `pike-grill.md`, and `pike-smoker.md`, each with 4–6 diverse source recipes.
-2. **−1** · Missing Culinary Group A tradition — pike (*gädda*) exists in Chinese freshwater fishing; search for Chinese or Japanese preparations.
-3. **−1** · Missing Culinary Group C tradition — search for pike in any African, Arabic, Persian, or Caribbean cooking context.
+1. Missing method leaf files — create `pike-pan_fry.md`, `pike-oven_bake.md`, `pike-grill.md`, and `pike-smoker.md`, each with 4–6 diverse source recipes.
+2. Missing Culinary Group A tradition — pike (*gädda*) exists in Chinese freshwater fishing; search for Chinese or Japanese preparations.
+3. Missing Culinary Group C tradition — search for pike in any African, Arabic, Persian, or Caribbean cooking context.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*
 

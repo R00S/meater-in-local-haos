@@ -47,10 +47,8 @@ carryover_temp_c: 3
 
 A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.
 
-
 Target internal temperatures (air fryer):
 - Juicy/slightly pink: **63–65 °C (145–149 °F)**
-
 
 ## Styckesprofil
 
@@ -67,14 +65,12 @@ Innertemperatur: **58–63 °C (136–145 °F)** för sous vide. Med pasteuriser
 - [Pan Sear](./pork_chop-pan_sear.md)
 ## Improvement potential
 
-**Improvement potential: 12 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|-----------|
 | Cooking methods not researched | −8 |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

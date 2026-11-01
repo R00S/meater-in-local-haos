@@ -75,14 +75,12 @@ Leg of lamb is the quintessential festive roast throughout the Mediterranean, Mi
 - Well-done: 68–74 °C (155–165 °F) — 30 min/lb
 - Falling apart: 80 °C (175 °F) — 40 min/lb (slow 6 hours+)
 
-
 Leg of lamb is the quintessential festive roast throughout the Mediterranean, Middle East, British Isles, Australia, and New Zealand. A bone-in leg typically weighs 2–3 kg and is roasted at 160–175 °C with a garlic-herb rub, either to medium-pink (internal 54–60 °C) or slow-roasted to fall-apart (80–90 °C). The choice between these two approaches is the fundamental split in leg of lamb cooking.
 - Rare: 52 °C (125 °F) — 15 min/lb
 - Medium-rare: 54–57 °C (130–135 °F) — 20 min/lb
 - Medium: 57–63 °C (135–145 °F) — 25 min/lb
 - Well-done: 68–74 °C (155–165 °F) — 30 min/lb
 - Falling apart: 80 °C (175 °F) — 40 min/lb (slow 6 hours+)
-
 
 ## Styckesprofil
 
@@ -96,8 +94,6 @@ Innertemperatur: **57–65 °C (135–149 °F)** för medium-rare till medium; *
 - [Oven Roast](./leg_of_lamb-oven_roast.md)
 ## Improvement potential
 
-**Improvement potential: 11 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -105,7 +101,7 @@ Innertemperatur: **57–65 °C (135–149 °F)** för medium-rare till medium; *
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Missing Culinary Group A tradition(s) — add Culinary Group A source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Missing Culinary Group A tradition(s) — add Culinary Group A source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

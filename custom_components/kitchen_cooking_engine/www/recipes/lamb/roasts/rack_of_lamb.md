@@ -62,9 +62,7 @@ Rack of lamb (the rib section with 7–8 French-trimmed rib bones) is one of the
 
 Because the meat is from the loin and has very little connective tissue, rack of lamb must be treated like a premium steak and never overcooked.
 
-
 Target internal temperature: **52–57 °C (126–135 °F)** for medium-rare (the universal preference). Pull at 50–52 °C.
-
 
 ## Styckesprofil
 
@@ -77,8 +75,6 @@ Sear all om i het panna (1–2 minuter per sida), belägg med senap och örtkorp
 - [Oven Roast](./rack_of_lamb-oven_roast.md)
 ## Improvement potential
 
-**Improvement potential: 18 / 20** — assessed 2026-04-29 (methods survey done; oven_roast leaf profile fixed; −1 Group A, −1 Group D remain)
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -89,9 +85,9 @@ Sear all om i het panna (1–2 minuter per sida), belägg med senap och örtkorp
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Missing method leaf file — create `rack_of_lamb-grill.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
-3. **−2** · Missing Culinary Group A and Culinary Group D tradition(s) — add Culinary Group A and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
-4. **−1** · Method file `rack_of_lamb-oven_roast.md` copies parent cut profile — rewrite `rack_of_lamb-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Missing method leaf file — create `rack_of_lamb-grill.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
+3. Missing Culinary Group A and Culinary Group D tradition(s) — add Culinary Group A and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+4. Method file `rack_of_lamb-oven_roast.md` copies parent cut profile — rewrite `rack_of_lamb-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

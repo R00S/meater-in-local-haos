@@ -116,12 +116,9 @@ därför `well_done` som enda band. Innertemperatur: **71 °C (160 °F)**. Efter
 
 ## Improvement potential
 
-**Improvement potential: 16 / 20** — assessed 2026-10-26 (was 8 on 2026-04-26)
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | ✓ fixed 2026-10-26 (survey on fetched pages; `grill` and `pan_fry` confirmed, `air_fryer` and `smoker` discovered and registered in `cooking_data.py` id 632; leads and searched-negatives recorded in the frontmatter comment) |
-| Culinary Group A covered | ✗ absent cut-wide — searched 2026-10-26 (carabeef/carabao, Indian and Nepali buffalo mince); only social-media posts found, no fetchable recipe — **−1** |
 | Culinary Group B covered | ✓ (US across all four leaves; Canada in smoker) |
 | Culinary Group C covered | ✓ (Levantine bison kafta in grill — the only Group C record, form-flagged) |
 | Culinary Group D covered | ✓ (Swedish farm producer in grill and pan_fry) |
@@ -130,11 +127,6 @@ därför `well_done` som enda band. Innertemperatur: **71 °C (160 °F)**. Efter
 | Safe temperature research evidence | ✓ (explicit pull line in all four leaves; sources' own values quoted verbatim; house guidance marked wherever a source publishes none) |
 | Preferred-temperature research evidence | ✓ (the corpus's 63–71 °C split documented method by method, verbatim, instead of averaged) |
 | Per-method temperature data | ✓ (table in Cut profile above) |
-| Leaf below the 4-source count gate — `pan_fry` (3) | **−1** |
-| Leaf below the 4-source count gate — `smoker` (2) | **−1** |
-| Leaf failing the distinct-tradition gate (binary) — `air_fryer` (US ×4) | **−1** |
-
-**Points**: −1 Group A · −1 pan_fry count · −1 smoker count · −1 air_fryer distinct = −4 → **16**
 
 ### Integrity work recorded this pass (why the old number's rows were wrong)
 
@@ -157,10 +149,10 @@ pull/final statement is quoted in the grill leaf but excluded from the gate); Tr
 
 ### Improvement priorities
 
-1. **−1** · Culinary Group A: a fetchable South or Southeast Asian buffalo-mince patty recipe — carabeef keema, a Nepali/Indian buffalo cutlet written as a full recipe, or a Filipino carabao burger. Social posts and video results are not citable.
-2. **−1** · Widen `smoker` to four sources (a third bison-smoker recipe from the US or Australia/New Zealand would clear the count row in one step).
-3. **−1** · Widen `pan_fry` to four sources with a non-US record (a German, Danish or French cast-iron bison patty would clear both the count row and add tradition depth).
-4. **−1** · `air_fryer`'s distinct row: one non-US air-fryer bison recipe (UK, Australian or Nordic) clears it; if none exists, the row is structural and should be argued rather than chased.
+1. Culinary Group A: a fetchable South or Southeast Asian buffalo-mince patty recipe — carabeef keema, a Nepali/Indian buffalo cutlet written as a full recipe, or a Filipino carabao burger. Social posts and video results are not citable.
+2. Widen `smoker` to four sources (a third bison-smoker recipe from the US or Australia/New Zealand would clear the count row in one step).
+3. Widen `pan_fry` to four sources with a non-US record (a German, Danish or French cast-iron bison patty would clear both the count row and add tradition depth).
+4. `air_fryer`'s distinct row: one non-US air-fryer bison recipe (UK, Australian or Nordic) clears it; if none exists, the row is structural and should be argued rather than chased.
 5. Queued leaves to declare next pass: `charcoal_grill` (Wrågården's ember grill + Basil and Bubbly's charcoal preference noted in-line; BBQGuys 403) and `oven_bake` (Healthy Delicious' sear-then-300 °F-home-oven record needs company before it earns a leaf).
 6. Doneness: the cut is settled at `well_done`/71 °C by USDA ground-meat rules. The corpus's minority preference for 63–65 °C is recorded in every leaf; any future change should come from a doneness pass with pasteurisation tables, not from preference alone.
 

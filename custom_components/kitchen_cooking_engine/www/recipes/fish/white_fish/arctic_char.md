@@ -146,8 +146,6 @@ opinions, and should not be averaged into one band.
 
 ## Improvement potential
 
-**Improvement potential: 14 / 20** — assessed 2026-05-31
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
@@ -163,8 +161,8 @@ Groups A and C absent — arctic char is a cold-water salmonid native to Arctic/
 
 ### Improvement priorities
 
-1. **−4** · Missing method leaf files — create `arctic_char-grill.md`, `arctic_char-oven_bake.md`, `arctic_char-smoker.md`, and `arctic_char-sous_vide.md`, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources.
-2. **−1** · Missing Culinary Group A tradition — arctic char is farmed in Iceland and Canada; search for Japanese, Korean or Chinese preparations.
-3. **−1** · Missing Culinary Group C tradition — search for African, Arabic, Persian or Caribbean arctic char preparations.
+1. Missing method leaf files — create `arctic_char-grill.md`, `arctic_char-oven_bake.md`, `arctic_char-smoker.md`, and `arctic_char-sous_vide.md`, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources.
+2. Missing Culinary Group A tradition — arctic char is farmed in Iceland and Canada; search for Japanese, Korean or Chinese preparations.
+3. Missing Culinary Group C tradition — search for African, Arabic, Persian or Caribbean arctic char preparations.
 
 *The four leaves created on 2026-10-26 (`grill`, `oven_bake`, `smoker`, `sous_vide`) are not yet folded into this assessment; the points above describe the file as it stood on 2026-05-31, when only the `pan_sear` leaf existed. The number is re-derived from the criteria the next time this cut is worked.*

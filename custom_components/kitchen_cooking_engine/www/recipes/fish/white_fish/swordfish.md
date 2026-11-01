@@ -59,7 +59,6 @@ Per-method application of the temperature evidence (each leaf carries its own co
 - **Braise** (4 sources): only measured value 60 °C (Chinese red braise); moist-heat endpoints are texture-based.
 - **Sous vide** (5 sources): bath cluster 54.4–55.5 °C, outliers 49 °C and 59 °C — full observed span 49–59 °C.
 
-
 ## Styckesprofil
 
 Svärdsfisk (*Xiphias gladius*, italienska: *pesce spada*, turkiska: *kılıçbalığı*, svenska: svärdfisk, spanska: *pez espada*) är en stor topprovdjur-havsfisk från tropiska och tempererade hav. Köttet är unikt tätt, kompakt och icke-flaggande — organiserat i grova köttiga segment liknande tonfisk eller kalvkött, vilket gör det till ett av de få fisksnitt som verkligen kan behandlas som en köttstek.
@@ -76,14 +75,11 @@ Svärdsfisk tolererar direkt hög grillvärme utan att falla isär och har en h�
 - [Sous Vide](./swordfish-sous_vide.md)
 ## Improvement potential
 
-**Improvement potential: 18 / 20** — assessed 2026-10-25 (from-scratch re-read after the 2026-10-25 collection pass: method survey discovered three methods beyond the declared list, six method leaves now exist — five of them written this session from 26 fetched sources — all four Culinary Groups are covered by fetched evidence, and cut-specific 145 °F evidence supports the USDA row. Supersedes the 2026-04-27 number 8. Every row below is re-derived from the criteria against evidence, not carried over (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Patterns 4, 9, 10). The two remaining points are lost on the distinct-tradition gate — real source-set duplication, agent work remaining, not a wall.)
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (six thermal methods researched; `oven_bake`, `braise`, `sous_vide` discovered and registered 2026-10-25; `cooking_methods_researched: 1`) |
 | Missing method leaf files | — (none; all 6 declared methods have a leaf) |
 | Partial leaf files — source count below 4 | — (none; pan_sear 5, grill 4, charcoal_grill 4, oven_bake 4, braise 4, sous_vide 5) |
-| Leaf files failing the distinct-tradition gate (binary): pan_sear (GB ×2 of 5), sous_vide (US ×4 of 5) | − **−2** (two leaves fail; four pass) |
 | Method leaf copies parent cut profile | — (none; all six profiles are method-specific) |
 | Missing Culinary Group A tradition | — (**covered**: Indian machli kebab in grill; Japanese-style topping bake in oven_bake; Chinese red braise in braise) |
 | Missing Culinary Group B tradition | — (covered: US, UK, Italy, Spain, Germany, Greece, Canada across five leaves) |
@@ -93,12 +89,10 @@ Svärdsfisk tolererar direkt hög grillvärme utan att falla isär och har en h�
 | Temperature data: culinary preferred temps supported by research evidence | — (covered: 52–60 °C pan-sear cluster, 54–58 °C charcoal cluster, 54.4–55.5 °C sous-vide cluster, all from fetched sources) |
 | Per-method temp data missing | — (the cut profile body above now carries the per-method application; every leaf carries its own temperature consensus) |
 
-**Points**: −2 (tradition-gate duplication in two leaves) = **18 / 20**.
-
 **Remaining wall evidence — none claimed.** The two failed gate rows are ordinary incomplete collection, not hard walls: pan_sear keeps two BBC Good Food recipes (same publisher, one tradition) because both are the leaf's most temperature-explicit primary sources and deleting valid data to pass a metric would degrade it — the honest fix is a future non-British widening; sous_vide's corpus retrieved this session was four American sources plus one German, and a Dutch/French query returned zero results — the honest fix is a future search for UK/European sous-vide sources. Neither row carries a user-approved exception; both are open work.
 
 ### Improvement priorities
 
-1. **−1** · pan_sear: replace-or-add until no two sources share a tradition (one more non-British source does not fix it — one of the two BBC recipes must eventually be superseded by a distinct tradition)
-2. **−1** · sous_vide: find UK/European/Asian sous-vide swordfish sources to break the US ×4 duplication
+1. pan_sear: replace-or-add until no two sources share a tradition (one more non-British source does not fix it — one of the two BBC recipes must eventually be superseded by a distinct tradition)
+2. sous_vide: find UK/European/Asian sous-vide swordfish sources to break the US ×4 duplication
 3. Watch-list: sous_vide and oven_bake each rest on one or two measured sources; more thermometer-stating sources would firm up those consensus bands

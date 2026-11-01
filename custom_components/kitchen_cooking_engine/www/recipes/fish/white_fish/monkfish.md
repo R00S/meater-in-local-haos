@@ -61,8 +61,6 @@ Marulk (*Lophius piscatorius*; tyska: Seeteufel; franska: lotte/baudroie; spansk
 
 ## Improvement potential
 
-**Improvement potential: 12 / 20** — assessed 2026-05-31
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
@@ -78,9 +76,9 @@ Groups A, C, D absent — the only existing leaf (`monkfish-sous_vide.md`) cover
 
 ### Improvement priorities
 
-1. **−4** · Missing method leaf files — create `monkfish-pan_sear.md`, `monkfish-oven_roast.md`, `monkfish-grill.md`, and `monkfish-braise.md`, each with 4–6 diverse source recipes.
-2. **−1** · Partial leaf `monkfish-sous_vide.md` — add a 4th verified source recipe; search Group A, C or D traditions for sous vide monkfish.
-3. **−3** · Missing Culinary Groups A, C, D — add representative source recipes across method leaves.
+1. Missing method leaf files — create `monkfish-pan_sear.md`, `monkfish-oven_roast.md`, `monkfish-grill.md`, and `monkfish-braise.md`, each with 4–6 diverse source recipes.
+2. Partial leaf `monkfish-sous_vide.md` — add a 4th verified source recipe; search Group A, C or D traditions for sous vide monkfish.
+3. Missing Culinary Groups A, C, D — add representative source recipes across method leaves.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*
 

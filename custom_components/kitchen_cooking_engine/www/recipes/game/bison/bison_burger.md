@@ -42,7 +42,6 @@ Food safety regulations in most countries classify ground meat as a high-risk pr
 
 A MEATER probe inserted sideways into a patty gives reliable internal readings even for thin cuts, provided it is placed horizontally through the thickest part of the patty, keeping the tip and ambient sensor both clear of the grill grates.
 
-
 ## Styckesprofil
 
 Bisonburgerbiffar är gjorda av malet bisonkött, vanligtvis från skulder, fransyska eller bakkvarter — samma primärsnitt som används för nöthamburgare. Bison är märkbart magrare än nötkött, ofta med bara 2–7 % fett beroende på malning, jämfört med 15–25 % för standard hamburgerfärs. Den lägre fetthalten innebär att bisonburgare kokar fortare och torkar ut vid lägre temperatur. Innertemperatur: 71 °C (för säkerhet). Tillagnings tid: kortare än nötkött.
@@ -53,8 +52,6 @@ Bisonburgerbiffar är gjorda av malet bisonkött, vanligtvis från skulder, fran
 - [Pan Fry](./bison_burger-pan_fry.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -64,8 +61,8 @@ Bisonburgerbiffar är gjorda av malet bisonkött, vanligtvis från skulder, fran
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing Culinary Group A and Culinary Group C tradition(s) — add Culinary Group A and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Method file `bison_burger-grill.md` copies parent cut profile — rewrite `bison_burger-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Missing Culinary Group A and Culinary Group C tradition(s) — add Culinary Group A and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. Method file `bison_burger-grill.md` copies parent cut profile — rewrite `bison_burger-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

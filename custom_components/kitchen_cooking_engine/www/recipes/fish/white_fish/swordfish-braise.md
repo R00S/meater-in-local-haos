@@ -58,7 +58,6 @@ svärdisk blir kvar i tjocka, saftiga flagor. Enda mätta källan anger 60 °C (
 ---
 
 ### 2. Portuguese Cooking (Ana) — Peixe Espada Estufado de Madeira (Black Scabbard Stew of Madeira)
-**Inspired by**: https://portuguesecooking.com/1999/04/20/black-scabbard-stew-of-madeira/ (fetched 2026-10-25). Portuguese Cooking (Ana); Madeiran-Portuguese recipe, page states "Fresh swordfish or tuna is sometimes substituted" for black scabbard — swordfish is an accepted substitution within the tradition.
 **Serves**: 6 · **Prep**: ~15 min · **Cook**: ~25 min · **Rest**: not stated
 
 **Ingredients**

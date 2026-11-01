@@ -59,7 +59,6 @@ Temperature guide (from Köket.se, Sweden — accessed 2026-04-27):
 - Rådjur/hjort ytterfilé & filé: rare 52 °C, medium 57 °C, well done 65 °C
 - Stekdetaljer: 55/62/68 °C
 
-
 ## Styckesprofil
 
 Viltrygghbiff (ryggsträng, sadel eller haunche-stek) från rådjur eller kronhjort är det magra snittet från ryggsmuskulaturen längs ryggraden. Köttet är mycket magert, djupt rödbrunt och har en rik viltartig smak uppskattad i hela europeisk matlagning.
@@ -73,8 +72,6 @@ Pannstekning vid hög värme är den viktigaste metoden: 3–4 minuter per sida 
 
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-28
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -84,9 +81,9 @@ Pannstekning vid hög värme är den viktigaste metoden: 3–4 minuter per sida 
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — pan_sear and oven_roast are confirmed methods. sous_vide is declared but not yet verified via source research. Conduct a proper survey of all methods used for this cut and set `cooking_methods_researched: 1` only after that is done.
-2. **−1** · sous_vide leaf missing — `venison_loin-sous_vide.md` not yet created; requires 4–6 diverse source recipes with method-specific cut profile and temperature data
-3. **−1** · Missing Culinary Group C tradition — no Group C sources in any leaf; venison loin is uncommon in African/Middle Eastern/Caribbean cuisine; extensive search conducted
-4. **−1** · Missing Culinary Group D tradition — no Group D sources in any leaf; Swedish temperature data cited in cut profile but no full recipe from a Group D source found yet
+1. Cooking methods not researched — pan_sear and oven_roast are confirmed methods. sous_vide is declared but not yet verified via source research. Conduct a proper survey of all methods used for this cut and set `cooking_methods_researched: 1` only after that is done.
+2. sous_vide leaf missing — `venison_loin-sous_vide.md` not yet created; requires 4–6 diverse source recipes with method-specific cut profile and temperature data
+3. Missing Culinary Group C tradition — no Group C sources in any leaf; venison loin is uncommon in African/Middle Eastern/Caribbean cuisine; extensive search conducted
+4. Missing Culinary Group D tradition — no Group D sources in any leaf; Swedish temperature data cited in cut profile but no full recipe from a Group D source found yet
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

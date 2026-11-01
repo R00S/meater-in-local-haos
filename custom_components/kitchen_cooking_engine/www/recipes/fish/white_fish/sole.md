@@ -59,8 +59,6 @@ Sjötunga (*Solea solea*; tyska: Seezunge; franska: sole; holländska: tong) är
 
 ## Improvement potential
 
-**Improvement potential: 14 / 20** — assessed 2026-05-31
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
@@ -76,9 +74,9 @@ Groups A, C, D absent — sole pan_fry leaf covers Group B only (all 4 sources a
 
 ### Improvement priorities
 
-1. **−3** · Missing method leaf files — create `sole-pan_sear.md`, `sole-oven_bake.md`, and `sole-grill.md`, each with 4–6 diverse source recipes.
-2. **−1** · Missing Culinary Group A tradition — sole is found in Mediterranean and North African cuisines; search for East Asian flatfish preparations using sole or an equivalent.
-3. **−1** · Missing Culinary Group C tradition — search for Turkish, Arabic or North African sole preparations.
-4. **−1** · Missing Culinary Group D tradition — sole is fished in the North Sea; search for Scandinavian/Baltic sole preparations.
+1. Missing method leaf files — create `sole-pan_sear.md`, `sole-oven_bake.md`, and `sole-grill.md`, each with 4–6 diverse source recipes.
+2. Missing Culinary Group A tradition — sole is found in Mediterranean and North African cuisines; search for East Asian flatfish preparations using sole or an equivalent.
+3. Missing Culinary Group C tradition — search for Turkish, Arabic or North African sole preparations.
+4. Missing Culinary Group D tradition — sole is fished in the North Sea; search for Scandinavian/Baltic sole preparations.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -54,8 +54,6 @@ All methods inherit from the primary `mutton_shoulder` entry. Independent leaf f
 
 ## Improvement potential
 
-**Improvement potential: 14 / 20** — assessed 2026-04-27
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −0 *(inherited from mutton_shoulder; set cooking_methods_researched: 1)* |
@@ -65,7 +63,7 @@ All methods inherit from the primary `mutton_shoulder` entry. Independent leaf f
 ### Improvement priorities
 
 1. **System issue** · This duplicate entry should be reviewed — if `mutton_shoulder` and `mutton_shoulder_alt` are truly the same cut, the alt entry may be removable from cooking_data.py
-2. **−4** · No independent leaf files — if a distinct culinary identity is found for the "Shoulder" entry (e.g., a tradition where "shoulder" is treated differently from "mutton shoulder"), add independent leaf files
-3. **−2** · Cut profile is a cross-reference — add a stand-alone cut profile if this entry is kept
+2. No independent leaf files — if a distinct culinary identity is found for the "Shoulder" entry (e.g., a tradition where "shoulder" is treated differently from "mutton shoulder"), add independent leaf files
+3. Cut profile is a cross-reference — add a stand-alone cut profile if this entry is kept
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

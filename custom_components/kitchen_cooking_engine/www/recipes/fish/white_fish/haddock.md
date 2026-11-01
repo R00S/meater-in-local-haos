@@ -48,7 +48,6 @@ produces dry, rubbery fish. The MEATER probe must be inserted laterally (from th
 edge) in thin fillets. Flouring the fillets before frying (as in the German and British
 traditions) creates a protective crust that helps moisture retention and even browning.
 
-
 ## Styckesprofil
 
 Kolja (*Melanogrammus aeglefinus*, norska: hyse/kolje, tyska: Schellfisch, svenska: kolja) är en mager vitfärgad kallvattens gadid-fisk nära besläktad med torsk. Den har en mild, lätt söt smak och fast men finskiktad kött med en ren fjällig struktur när kokt. Filéerna är typiskt 1–2 cm tjocka med en karakteristisk laterallinje och fina pinnben som vanligtvis tas bort i detaljhandelsfiléer.
@@ -61,8 +60,6 @@ Köttet är mycket magert (under 1% fett), vitt genomgående, och mer delikat ä
 - [Oven Roast](./haddock-oven_roast.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | − **NOT DONE** (−8) |
@@ -72,12 +69,10 @@ Köttet är mycket magert (under 1% fett), vitt genomgående, och mer delikat ä
 | Culinary Group A covered | − missing (−1) |
 | Groups B, C, D | ✓ |
 
-**Points**: −8 methods · −2 missing leaves · −1 Group A = −11 → **9**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
+1. Cooking methods not researched
 2. **−1 each** · Missing `haddock-air_fryer.md`, `haddock-oven_roast.md`
-3. **−1** · Group A missing
+3. Group A missing
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

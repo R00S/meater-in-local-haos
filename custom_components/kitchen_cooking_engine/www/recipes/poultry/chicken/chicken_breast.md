@@ -40,7 +40,6 @@ carryover_temp_c: 3
 
 Chicken breast is the *pectoralis major* muscle — the largest muscle of the bird, positioned on the sternum. Because domesticated chickens rarely fly or flap vigorously, this muscle has almost no connective tissue or intramuscular fat. It is white meat: lower myoglobin content, lighter colour, leaner composition, and a more delicate flavour than dark meat. Typical uncooked weight: 170–280 g per single breast (boneless, skinless). Thicker breasts often have an uneven cross-section that creates doneness gradients — the thick end overcooks before the thin end is safe. The USDA minimum safe temperature is 74 °C (165 °F); at this temperature white meat is cooked through but not dry if pulled immediately.
 
-
 ## Styckesprofil
 
 Kycklingbröst är *pectoralis major*-muskeln — den största muskeln hos fågeln, positionerad på bröstet. Extremt magert (< 2 % fett), mört och snabbkokat, men benäget att torka ut om överkokat.
@@ -55,8 +54,6 @@ Pannstekning: het panna, 5–7 minuter per sida; ugnsrostning: 200–220 °C, 18
 - [Pan Sear](./chicken_breast-pan_sear.md)
 ## Improvement potential
 
-**Improvement potential: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group B, −1 Group D remain)
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | − **NOT DONE** (−8) |
@@ -67,11 +64,9 @@ Pannstekning: het panna, 5–7 minuter per sida; ugnsrostning: 200–220 °C, 18
 | Culinary Group D covered | − missing (−1) |
 | Culinary Groups A, C | ✓ |
 
-**Points**: −8 methods · −2 missing leaves · −1 Group B · −1 Group D = −12 → **8**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
+1. Cooking methods not researched
 2. **−1 each** · Missing `chicken_breast-oven_roast.md`, `chicken_breast-sous_vide.md`
 3. **−1 each** · Groups B, D missing
 

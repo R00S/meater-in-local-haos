@@ -52,9 +52,7 @@ carryover_temp_c: 2
 
 Ostrich (*Struthio camelus*) steak is produced primarily in South Africa, Namibia, and increasingly in France, Belgium, and Germany. Despite being a bird, ostrich meat is red, very low in fat, and treated culinarily exactly like beef or venison. Fan fillet (outerfilé) and top loin are the main steak cuts. The meat is extremely lean and must not be overcooked: medium-rare (54–57 °C) is the South African standard. Above 70 °C the meat becomes tough and liver-like.
 
-
 Target internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pull at 52 °C and rest.
-
 
 ## Styckesprofil
 
@@ -68,8 +66,6 @@ Köttet är extremt magert och får inte tillagas bortom medium (63 °C) — ova
 - [Pan Sear](./ostrich_steak-pan_sear.md)
 ## Improvement potential
 
-**Improvement potential: 10 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | − **NOT DONE** (−8) |
@@ -78,12 +74,10 @@ Köttet är extremt magert och får inte tillagas bortom medium (63 °C) — ova
 | Culinary Group D covered | − missing (−1) |
 | Culinary Groups B, C | ✓ |
 
-**Points**: −8 methods · −1 Group A · −1 Group D = −10 → 20−10 = **10**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
-2. **−1** · Group A tradition missing — find a Japanese, Chinese, or SE Asian ostrich recipe
-3. **−1** · Group D tradition missing — find a European (French/Belgian/Scandinavian) ostrich recipe with temperature data
+1. Cooking methods not researched
+2. Group A tradition missing — find a Japanese, Chinese, or SE Asian ostrich recipe
+3. Group D tradition missing — find a European (French/Belgian/Scandinavian) ostrich recipe with temperature data
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

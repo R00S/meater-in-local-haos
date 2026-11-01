@@ -92,8 +92,6 @@ Rumpbiffstek skärs från primalen **rundbotten** — höftpartiet vid bakkvarte
 
 ## Improvement potential
 
-**Improvement potential: 11 / 20** — assessed 2026-04-27
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -102,8 +100,8 @@ Rumpbiffstek skärs från primalen **rundbotten** — höftpartiet vid bakkvarte
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research remaining methods (braise, slow_cooker); set `cooking_methods_researched: 1`
-2. **−1** · Group A gap — add a Group A source to oven_roast leaf or a new method leaf
+1. Cooking methods not researched — research remaining methods (braise, slow_cooker); set `cooking_methods_researched: 1`
+2. Group A gap — add a Group A source to oven_roast leaf or a new method leaf
 3. Create `rump_roast-braise.md` leaf (pot-roast style, BBC / Moroccan / Polish / Chinese)
 4. Create `rump_roast-slow_cooker.md` leaf
 

@@ -116,8 +116,6 @@ Grilling exposes the meat-covered front pork ribs to direct or indirect heat. Th
 
 ---
 
-
-
 ### 6. German (Grillfürst, Benny) — Spareribs grillen: butterzart in 2 Stunden
 **Inspired by**: Benny (author and product tester), Grillfürst; https://www.grillfuerst.de/magazin/grillrezepte/spareribs-grillen/ (fetched 2026-11-01). *Named author, German BBQ outlet, page updated 2026-10-27. **Cut term and its limit kept visible:** the source defines these as belly ribs — "Spareribs sind die Bauchrippen vom Schwein" — and separates this cut explicitly: "die Dicke Rippe ist die Brust des Schweins". Stored as a comparator, never as this cut. The page also gives method-by-method chamber figures for gas grill, charcoal, smoker, oven and air fryer; the steps below follow its gas/charcoal version.*
 **Serves**: not stated (2 racks) · **Prep**: 2 h marinating (better overnight) · **Cook**: ca 2–3 h · **Rest**: 5 min open before the final glaze

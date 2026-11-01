@@ -73,7 +73,6 @@ carryover_temp_c: 2
 
 The flat iron steak is taken from the infraspinatus muscle of the beef shoulder blade, separated from the central band of tough gristle that runs through the full top blade. Because the infraspinatus performs relatively little work, it retains outstanding intramuscular fat for a non-loin cut, producing deeply beefy, slightly buttery flavour comparable to ribeye at a fraction of the cost. Individual steaks are typically 200–350 g and 2–3 cm thick — a dimension that fits the air fryer's compact hot-air cabinet well. The air fryer's high-velocity convection at 200–205 °C dries the surface rapidly and drives the Maillard reaction without a dedicated grill or stovetop. Carryover is moderate, typically 2–3 °C after leaving the basket, so pulling 3 °C below the intended serving temperature is standard practice.
 
-
 ## Styckesprofil
 
 Flat iron steak tas från infraspinatus i skulderbladet, separerad från det centrala gristle-bandet som löper genom top blade. Eftersom infraspinatus arbetar lite behåller den enastående intramuskulärt fett för ett icke-ländsnitt, vilket ger djup nötig, något smörig smak jämförbar med ribeye till en bråkdel av priset. Individuella biffar är typiskt 200–350 g och 2–3 cm tjocka – en storlek som passar air fryerns kompakta varmluftsskåp väl. Air fryerns hög-hastighetskonvektion vid 200–205 °C torkar ytan snabbt och driver Maillard-reaktionen utan dedikerad grill eller spis. Eftervärmen är måttlig, vanligtvis 2–3 °C efter uttag från korgen, så att dra 3 °C under avsedd serveringstemperatur är standard.
@@ -90,11 +89,9 @@ Flat iron steak tas från infraspinatus i skulderbladet, separerad från det cen
 
 -33
 
-Historical readings: 11 / 20 (former 0–20 system, assessed 2026-04-26; not comparable with the new scale).
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Method file `flat_iron-air_fryer.md` copies parent cut profile — rewrite `flat_iron-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Method file `flat_iron-air_fryer.md` copies parent cut profile — rewrite `flat_iron-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

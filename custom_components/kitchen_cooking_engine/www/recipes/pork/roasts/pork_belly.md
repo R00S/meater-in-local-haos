@@ -50,7 +50,6 @@ carryover_temp_c: 3
 
 Pork belly (*svinekam* / *flæskesteg*, Danish; *Schweinebauch*, German; *pancetta tesa*, Italian; *lardo*, cured Italian; *bak kwa*, Chinese) is the ventral thoracic wall — the layered structure of skin, subcutaneous fat, *serratus ventralis* muscle, more fat, intercostal fat, and the *transversus abdominis* muscle layers. This layered structure is the defining anatomical feature: alternating lean muscle and fat sheets running in a horizontal laminar pattern across the cross-section. Skin-on pork belly has a thick dermis (*svær* / *Schwarte*) that — when properly scored and salted — blisters and crackles into one of the most texturally complex foods in all of cooking. Belly fat content is high (20–35%), making it one of the most forgiving pork cuts — it retains moisture at wide temperature ranges (65–80 °C).
 
-
 ## Styckesprofil
 
 Fläskbuk (*svinekam* / *flæskesteg* danska; *Schweinebauch* tyska; *pancetta tesa* italienska) är den ventrala bröstkorgsväggen — den skiktade strukturen av hud, subcutant fett, interkostalsmuskler och intramuskulärt fett. Det är det fetaste snittet av grisen.
@@ -70,8 +69,6 @@ Denna fettrikedom gör det idealisk för långsam tillagning (sous vide, bräser
 
 ## Improvement potential
 
-**Improvement potential: 19 / 20** — assessed 2026-04-29
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods researched | ✓ — survey completed 2026-04-29 (all 8 methods confirmed: air_fryer, braise, grill, oven_roast, pan_fry, slow_cooker, smoker, sous_vide — methods list is exhaustive for pork belly; leaf files exist for all 8) |
@@ -82,11 +79,9 @@ Denna fettrikedom gör det idealisk för långsam tillagning (sous vide, bräser
 | air_fryer leaf cut profile fixed (was copy of grill and parent) | ✓ (rewritten 2026-04-29) |
 | grill leaf cut profile | − mentions oven operations; needs rewriting (not a copy of parent, but wrongly describes oven steps in a grill leaf) |
 
-**Points**: −1 (Group C — structural limitation for pork) = **19**
-
 ### Improvement priorities
 
-1. **−1** · Group C missing — Group C tradition largely avoids pork; this gap may be permanent
+1. Group C missing — Group C tradition largely avoids pork; this gap may be permanent
 2. Fix `pork_belly-grill.md` cut profile — currently describes oven/braise operations ("positioned flat in the oven", "boils the belly first"); rewrite to describe grilling-specific technique
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

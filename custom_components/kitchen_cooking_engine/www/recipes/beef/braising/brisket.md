@@ -38,7 +38,6 @@ carryover_temp_c: 5
 
 Beef brisket is taken from the breast and lower chest of the animal, comprising two muscles — the flat (*pectoralis profundus*) and the point (*pectoralis superficialis*) — that together support much of the animal's standing weight. The flat is a large, lean slab of dense muscle; the point (also called the deckle) lies over and across the flat, separated by a fat seam, and is more heavily marbled. Both muscles are extremely collagen-dense from a lifetime of supporting the animal's weight. Collagen begins softening at around 70 °C but fully converts to gelatin only with prolonged cooking at or above 85–90 °C. At gelatin conversion, the brisket transforms from a tough, chewy slab to a silky, pull-apart masterpiece.
 
-
 ## Styckesprofil
 
 Nötbringa tas från bröstet och nedre delen av djurets bröstkorg och består av två muskler — det platta stycket (*pectoralis profundus*) och spetsen (*pectoralis superficialis*) — som tillsammans bär en stor del av djurets vikt. Det platta stycket är en stor, mager och tät muskelskiva; spetsen (även kallad *deckle*) ligger ovanpå och över det platta stycket, separerade av ett fettlager, och är kraftigare marmorerad. Båda musklerna är extremt kollagenrika efter ett liv av att bära djurets tyngd. Kollagen börjar mjukna vid ungefär 70 °C men omvandlas fullständigt till gelatin först efter lång tillagning vid 85–90 °C eller högre. Vid gelatinomvandlingen förvandlas bringan från en seg, tuggig skiva till ett silkeslent mästerverk som faller isär.
@@ -47,8 +46,6 @@ Nötbringa tas från bröstet och nedre delen av djurets bröstkorg och består 
 
 - [Oven Roast](./brisket-oven_roast.md)
 ## Improvement potential
-
-**Improvement potential: 19 / 20** — assessed 2026-04-29
 
 | Criterion | Status |
 |-----------|--------|
@@ -66,11 +63,9 @@ Nötbringa tas från bröstet och nedre delen av djurets bröstkorg och består 
 | slow_cooker leaf | − pending (no points per TOR — oven_roast leaf exists) |
 | smoker leaf | − pending (no points per TOR — oven_roast leaf exists) |
 
-**Points**: −1 (Group D missing) = **19**
-
 ### Improvement priorities
 
-1. **−1** · Group D tradition missing — add a Scandinavian, Polish, Russian, or Ukrainian oven-roasted brisket source to the oven_roast leaf. Note: in Scandinavian tradition, *bringa/oxbringa* is more often boiled or simmered (*pepparrotskött*) than oven-roasted; may need to accept this gap.
+1. Group D tradition missing — add a Scandinavian, Polish, Russian, or Ukrainian oven-roasted brisket source to the oven_roast leaf. Note: in Scandinavian tradition, *bringa/oxbringa* is more often boiled or simmered (*pepparrotskött*) than oven-roasted; may need to accept this gap.
 2. Create `brisket-braise.md` — stovetop braised brisket (not oven-braised) is its own category; pot-au-feu (French), *pepparrotskött* (Swedish), Romanian *piept de vită* are candidates.
 3. Create `brisket-smoker.md` — Texas BBQ smoked brisket is THE iconic preparation; sources readily available on heygrillhey.com, smokedbbqsource.com, amazingribs.com.
 4. Create `brisket-slow_cooker.md` — slow cooker brisket widely available on North American recipe sites.

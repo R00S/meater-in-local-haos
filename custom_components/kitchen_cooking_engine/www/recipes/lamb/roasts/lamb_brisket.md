@@ -51,8 +51,6 @@ Låg-och-långsam tillagning transformerar snittet: 3–4 timmar i ugn vid 150 �
 
 ## Improvement potential
 
-**Improvement potential: 17 / 20** — assessed 2026-04-29
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods researched | ✓ — survey completed 2026-04-29 (braise, oven_roast, slow_cooker confirmed; smoker exists in American BBQ but no accessible dedicated sources; grill not a primary method) |
@@ -69,11 +67,9 @@ Låg-och-långsam tillagning transformerar snittet: 3–4 timmar i ugn vid 150 �
 | oven_roast leaf | − pending (no points per TOR — method leaf files exist) |
 | slow_cooker leaf | − pending (no points per TOR — method leaf files exist) |
 
-**Points**: −1 (braise leaf cut profile copies parent) = **17**
-
 ### Improvement priorities
 
-1. **−1** · Braise leaf cut profile copies parent — rewrite the `## Cut profile` section of `lamb_brisket-braise.md` so the opening paragraph is method-specific (what braising does to this cut, not just what the cut is)
+1. Braise leaf cut profile copies parent — rewrite the `## Cut profile` section of `lamb_brisket-braise.md` so the opening paragraph is method-specific (what braising does to this cut, not just what the cut is)
 2. Create `lamb_brisket-oven_roast.md` — stuffed/rolled slow-roasted lamb breast is a real British and French preparation; need 4+ accessible sources. Probed sources so far: see gap log in `lamb_brisket-braise.md`.
 3. Create `lamb_brisket-slow_cooker.md` — method applicable in principle; 100+ URL probes across 3 sessions yielded no accessible dedicated lamb breast slow cooker recipes. Further search needed.
 

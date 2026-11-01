@@ -36,11 +36,9 @@ carryover_temp_c: 2
 
 Pork sausage is a processed meat product made from finely minced or coarsely ground pork, seasoned with salt, pepper, herbs and spices, and encased in natural pig intestine or synthetic collagen casing. Fat content is typically 20–30%, essential for juiciness and flavour development. Fresh sausages require cooking to a minimum internal temperature of 71°C (160°F); pre-cooked or smoked sausages require only reheating to serving temperature (60–65°C). The casing is the critical monitoring challenge: if it ruptures early, moisture and fat escape and the sausage dries out. Probing from one end into the centre avoids puncturing the casing mid-body. Carryover is 2–3°C.
 
-
 Target internal temperatures (grill):
 - Fully cooked/safe: **71–75 °C (160–167 °F)**
 - ⚠️ Do not pull before 71 °C — pork sausage must be fully cooked
-
 
 ## Styckesprofil
 
@@ -54,8 +52,6 @@ Grillning, pannstekning och ugnsrostning är de vanligaste metoderna. Alla kräv
 - [Pan Fry](./pork_sausage-pan_fry.md)
 ## Improvement potential
 
-**Improvement potential: 10 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | − **NOT DONE** (−8) |
@@ -64,12 +60,10 @@ Grillning, pannstekning och ugnsrostning är de vanligaste metoderna. Alla kräv
 | Culinary Group C covered | − missing (−1) |
 | Culinary Groups B, D | ✓ |
 
-**Points**: −8 methods · −1 Group A · −1 Group C = −10 → 20−10 = **10**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
-2. **−1** · Group A tradition missing — find a Japanese, Chinese, Korean, or SE Asian pork sausage recipe
-3. **−1** · Group C tradition missing — find an African, Arabic, or Levantine pork or halal sausage recipe
+1. Cooking methods not researched
+2. Group A tradition missing — find a Japanese, Chinese, Korean, or SE Asian pork sausage recipe
+3. Group C tradition missing — find an African, Arabic, or Levantine pork or halal sausage recipe
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

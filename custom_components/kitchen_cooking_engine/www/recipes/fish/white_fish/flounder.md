@@ -61,8 +61,6 @@ Flundra (*Platichthys flesus*; tyska: Flunder; finska: kampela) är en plattfisk
 
 ## Improvement potential
 
-**Improvement potential: 14 / 20** — assessed 2026-05-31
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
@@ -78,8 +76,8 @@ Group C and D absent — steam leaf covers A (CN/TH/VN) and B (DE) only. No veri
 
 ### Improvement priorities
 
-1. **−4** · Missing method leaf files — create `flounder-pan_fry.md`, `flounder-grill.md`, `flounder-oven_bake.md`, and `flounder-smoker.md`, each with 4–6 diverse source recipes.
-2. **−1** · Missing Culinary Group C tradition — add at least one Group C source recipe across any method leaf.
-3. **−1** · Missing Culinary Group D tradition — add at least one Group D (Scandinavian/Baltic/Slavic) source recipe across any method leaf.
+1. Missing method leaf files — create `flounder-pan_fry.md`, `flounder-grill.md`, `flounder-oven_bake.md`, and `flounder-smoker.md`, each with 4–6 diverse source recipes.
+2. Missing Culinary Group C tradition — add at least one Group C source recipe across any method leaf.
+3. Missing Culinary Group D tradition — add at least one Group D (Scandinavian/Baltic/Slavic) source recipe across any method leaf.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

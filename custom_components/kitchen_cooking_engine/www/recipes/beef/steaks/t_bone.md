@@ -73,7 +73,6 @@ The T-bone steak is defined by the T-shaped lumbar vertebra that separates two a
 
 T-bone is cut from the short loin, anterior to the sirloin. Thickness is typically 2.5–4 cm; a *porterhouse* is cut from the same region but thicker and with a larger fillet portion. The MEATER probe is always placed in the striploin portion, away from the bone, for the most reliable temperature reading.
 
-
 ## Styckesprofil
 
 T-bone-biffen definieras av det T-formade ländkotan som separerar två anatomiskt distinkta muskler: det större *striploin* (*longissimus dorsi*) på benets långa sida, och det mindre *filén* (*psoas major*) på den korta sidan. Detta är T-bonens definierande strukturella drag — den levererar två olika matupplevelser i en biff, men skapar en tillagningsutmaning: filén tillagas snabbare och torkar ut ovanför 60 °C, medan stripen tål något högre temperaturer. Benet i sig fungerar som en termisk isolator, vilket innebär att köttet omedelbart intill benet ligger 3–5 °C efter den öppna muskeln.
@@ -89,8 +88,6 @@ T-bone skärs från den korta länden, framför entrecôten. Tjockleken är typi
 - [Pan Sear](./t_bone-pan_sear.md)
 ## Improvement potential
 
-**Improvement potential: 10 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods researched (full survey) | − **NOT DONE** |
@@ -102,20 +99,14 @@ T-bone skärs från den korta länden, framför entrecôten. Tjockleken är typi
 | Culinary Group C covered | − missing |
 | Culinary Group D covered | − missing |
 
-**Points**: −8 methods not researched · −1 Group A · −1 Group C · −1 Group D = −11 → Hmm that's 9 not 10. Wait, let me recount original points:
-
 Original: −8 (methods) −1 (A) −1 (C) −1 (D) −1 (air_fryer copies parent) −1 (grill copies oven_roast) −1 (grill copies pan_sear) = −14 → number 6.
 After fixes: −8 (methods) −1 (A) −1 (C) −1 (D) = −11 → number 9.
 
-**Revised improvement potential: 9 / 20**
-
-**Points**: −8 methods not researched · −1 Group A missing · −1 Group C missing · −1 Group D missing
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — survey all cooking methods for T-bone; update `methods:` list; set `cooking_methods_researched: 1`
-2. **−1** · Group A tradition missing — find a Japanese, Korean, Chinese, or other Group A T-bone/steak recipe
-3. **−1** · Group C tradition missing — find a Moroccan, Turkish, Lebanese, or other Group C steak recipe
-4. **−1** · Group D tradition missing — find a Polish, Swedish, Russian, or other Group D steak recipe
+1. Cooking methods not researched — survey all cooking methods for T-bone; update `methods:` list; set `cooking_methods_researched: 1`
+2. Group A tradition missing — find a Japanese, Korean, Chinese, or other Group A T-bone/steak recipe
+3. Group C tradition missing — find a Moroccan, Turkish, Lebanese, or other Group C steak recipe
+4. Group D tradition missing — find a Polish, Swedish, Russian, or other Group D steak recipe
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

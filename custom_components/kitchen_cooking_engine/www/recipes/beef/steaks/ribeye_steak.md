@@ -75,7 +75,6 @@ The ribeye steak is cut from the *longissimus dorsi* muscle of the rib primal (r
 
 The ribeye is composed of the eye muscle (*longissimus*), the rib cap (*spinalis dorsi*, the richest and most prized portion), and the rib intercostal (finger meat). The rib cap, separated by an internal fat seam, cooks slightly faster than the eye. The MEATER probe should enter from the side and travel to the centre of the eye muscle, avoiding the internal fat seam and any bone.
 
-
 ## Styckesprofil
 
 Ribeye-biffen skärs från longissimus dorsi i revbensprimalen (revben 6–12), en muskel som arbetar lite och därför utvecklar exceptionellt intramuskulärt fett (marmorering) genom hela ådringen. Marmoreringen är det som definierar ribeye – fettfickorna flyter under värme och basar muskeln inifrån, vilket ger en rikedom och självbasande karaktär som inget annat vanligt biffsnitt kan matcha. Den ben-in-versionen (côte de bœuf / cowboy ribeye) behåller mer smak under tillagningen och kräver mer exakt sondplacering för att läsa ögat snarare än området nära benet.
@@ -92,8 +91,6 @@ Ribeye består av ögat (longissimus), rib cap (spinalis dorsi, den rikaste och 
 - [Sous Vide](./ribeye_steak-sous_vide.md)
 ## Improvement potential
 
-**Improvement potential: 11 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | − **NOT DONE** (−8) |
@@ -101,11 +98,9 @@ Ribeye består av ögat (longissimus), rib cap (spinalis dorsi, den rikaste och 
 | Culinary Group C covered | − missing (−1) |
 | All other groups | ✓ |
 
-**Points**: −8 methods not researched · −1 Group C missing = −9 → 20−9 = **11**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
-2. **−1** · Group C tradition missing — add a Moroccan, Turkish, Lebanese, or other Group C ribeye/beef steak recipe
+1. Cooking methods not researched
+2. Group C tradition missing — add a Moroccan, Turkish, Lebanese, or other Group C ribeye/beef steak recipe
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

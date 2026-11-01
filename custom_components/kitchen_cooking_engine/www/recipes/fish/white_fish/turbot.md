@@ -67,8 +67,6 @@ Piggvar (*Scophthalmus maximus*; tyska: Steinbutt; franska: turbot; norska: pigg
 
 ## Improvement potential
 
-**Improvement potential: 17 / 20** — assessed 2026-05-31
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
@@ -82,7 +80,7 @@ Piggvar (*Scophthalmus maximus*; tyska: Steinbutt; franska: turbot; norska: pigg
 
 ### Improvement priorities
 
-1. **−2** · Missing method leaf files — create `turbot-grill.md` and `turbot-sous_vide.md`, each with 4–6 diverse source recipes across culinary traditions, a method-specific cut profile, and pull temperatures from verified sources.
-2. **−1** · Missing Culinary Group C tradition — add at least one Group C (African/Middle Eastern/Turkish) source recipe across the method leaf files.
+1. Missing method leaf files — create `turbot-grill.md` and `turbot-sous_vide.md`, each with 4–6 diverse source recipes across culinary traditions, a method-specific cut profile, and pull temperatures from verified sources.
+2. Missing Culinary Group C tradition — add at least one Group C (African/Middle Eastern/Turkish) source recipe across the method leaf files.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

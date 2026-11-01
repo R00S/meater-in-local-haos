@@ -67,8 +67,6 @@ Köttet är djupt rött med litet fettinnehåll (under 2 %), högt järninnehål
 
 ## Improvement potential
 
-**Improvement potential: 8 / 20** — assessed 2026-04-27
-
 | Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
@@ -80,9 +78,9 @@ Köttet är djupt rött med litet fettinnehåll (under 2 %), högt järninnehål
 
 ### Improvement priorities
 
-1. **−4** · Grill and pan_sear leaves empty — find properly sourced ostrich fillet recipes with full ingredient quantities for the quick-cook methods
-2. **−3** · No temperature consensus — add more sources; once 4+ sources collected, write analysis sections
-3. **−2** · Braise leaf incomplete — add 3–5 more braise sources from diverse traditions
+1. Grill and pan_sear leaves empty — find properly sourced ostrich fillet recipes with full ingredient quantities for the quick-cook methods
+2. No temperature consensus — add more sources; once 4+ sources collected, write analysis sections
+3. Braise leaf incomplete — add 3–5 more braise sources from diverse traditions
 4. **−1 each** · Missing Groups A, B, C — find Asian, European, and South African/African recipes
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -83,8 +83,6 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-27
-
 | Criterion | Points | Status |
 |-----------|--------|--------|
 | Cut profile written (not a placeholder) | +1 | ✅ Done |
@@ -101,7 +99,6 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research grill (direct vs indirect) and smoker methods for St. Louis ribs; create leaf files; then set `cooking_methods_researched: 1`
-2. **−2** · Missing Groups C and D — add Caribbean, West African, or North African oven rib source to `st_louis_ribs-oven_roast.md`; add German/Polish/Slavic oven rib source
+1. Cooking methods not researched — research grill (direct vs indirect) and smoker methods for St. Louis ribs; create leaf files; then set `cooking_methods_researched: 1`
+2. Missing Groups C and D — add Caribbean, West African, or North African oven rib source to `st_louis_ribs-oven_roast.md`; add German/Polish/Slavic oven rib source
 
-*Number will increase toward ~14/20 once Groups C and D are covered.*

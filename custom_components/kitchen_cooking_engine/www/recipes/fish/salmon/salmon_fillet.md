@@ -56,7 +56,6 @@ carryover_temp_c: 2
 
 Salmon fillet comes from the side of the fish, running the full length of the body from behind the head to the tail, with the pin bones removed. The flesh is divided into distinct fat-layered muscle segments (myotomes) separated by connective tissue (myocommata); that connective tissue softens and gives the characteristic flaking texture when the protein reaches its set point. Atlantic and Pacific salmon differ in fat distribution — farmed Atlantic salmon is uniformly rich, while wild sockeye and king salmon have denser, more mineral flesh. Pan searing suits salmon because the high conductive heat of a stainless or cast-iron pan rapidly crisps the skin (if skin-on) and caramelises the exposed flesh, producing textural contrast between crust and interior. Carryover in a seared salmon fillet is modest — 2–3 °C — because the thin geometry dissipates heat quickly, so accurate pull timing is essential to avoid overcooking.
 
-
 ## Styckesprofil
 
 Laxfilé kommer från sidan av fisken, längs hela kroppens längd från bakom huvudet till stjärten, med pinnbenen borttagna. Köttet är indelat i distinkta fettskiktade muskelsegment (myotomer) separerade av bindväv (myokommat); den bindväven mjuknar och ger den karakteristiska fjälliga texturen när proteinet når sin sättningspunkt.
@@ -73,8 +72,6 @@ Atlantisk och stillahavslax skiljer sig åt i fettfördelning — odlad atlantla
 - [Sous Vide](./salmon_fillet-sous_vide.md)
 ## Improvement potential
 
-**Improvement potential: 12 / 20** — assessed 2026-05-31
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not fully researched yet (`cooking_methods_researched: 0`) | −8 |
@@ -90,6 +87,6 @@ Methods survey incomplete (`cooking_methods_researched: 0`) — the methods list
 
 ### Improvement priorities
 
-1. **−8** · Complete broad method-survey research for salmon fillet across culinary traditions; update the `methods:` list in the frontmatter; set `cooking_methods_researched: 1` only after thorough research.
+1. Complete broad method-survey research for salmon fillet across culinary traditions; update the `methods:` list in the frontmatter; set `cooking_methods_researched: 1` only after thorough research.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

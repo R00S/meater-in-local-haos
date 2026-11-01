@@ -115,24 +115,15 @@ den tjockaste muskeldelen, borta från ben och fettfickor.
 
 ## Improvement potential
 
-**Improvement potential: 11 / 20** — assessed 2026-10-26 (was 8 on 2026-04-27)
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | ✓ fixed 2026-10-26 (survey on fetched pages; `oven_roast` and `braise` confirmed and rewritten, `smoker` discovered and registered — id 651 had listed **only** `oven_roast`, so `braise` had been declared in the hub without ever being registered; leads recorded in the frontmatter comment) |
-| Culinary Group A covered | ✗ absent cut-wide — searched 2026-10-26, nothing fetchable — **−1** |
 | Culinary Group B covered | ✓ (US across all three leaves, including Lakota Indigenous cookery) |
-| Culinary Group C covered | ✗ absent cut-wide — a "bison tagine" search returned no results at all — **−1** |
-| Culinary Group D covered | ✗ absent cut-wide — no Nordic/Baltic/Slavic bison roast recipe found — **−1** |
 | `## Cut profile` + anatomy | ✓ (rewritten around the absence of marbling, the collagen sheath, and the premium-vs-working sub-cut fork; the unsourced "135 °C maximum" and "reverse searing gives the best result" claims from the old oven leaf are gone) |
 | Method leaf files exist | ✓ (3 leaves, was 2 — and the oven leaf went from **zero** source recipes to three) |
 | Safe temperature research evidence | ✓ (explicit pull lines in all three leaves; every published value quoted verbatim; the braise and smoker leaves state plainly that the sources publish no internal temperature and mark their own numbers as house guidance) |
 | Preferred-temperature research evidence | ✓ (the premium-cut 52–54 °C consensus and the working-cut 91–99 °C target are both documented, and the leaf text notes the registry bands only apply to the former) |
 | Per-method temperature data | ✓ (table in Cut profile above) |
-| Leaves below the 4-source count gate (braise 3, oven_roast 3, smoker 3) | **−3** |
-| Leaves failing the distinct-tradition gate (braise, oven_roast, smoker — all US) | **−3** |
-
-**Points**: −1 Group A · −1 Group C · −1 Group D · −3 source counts · −3 distinct rows = −9 → **11**
 
 ### Integrity work recorded this pass
 

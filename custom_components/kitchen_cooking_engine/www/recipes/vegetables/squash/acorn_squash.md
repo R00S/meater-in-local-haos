@@ -33,7 +33,6 @@ carryover_temp_c: 2
 
 Acorn squash (*Cucurbita pepo* var. *turbinata*) oven-baked whole or halved at 180–200 °C is a classic American autumn preparation. Halved and seed-scooped, then baked cut-face-down (30–40 min) or cut-face-up with a filling (35–50 min). Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe inserted through the skin into the thickest part of the flesh wall.
 
-
 ## Styckesprofil
 
 Ekollon-squash (*Cucurbita pepo* var. *turbinata*) ugnsbakas hel eller halverad vid 180–200 °C. Halverad och urholkad, sedan bakad med snittytan ned. 40–50 minuter. Klar när köttet är genomstekt och lätt brynt vid kanterna.
@@ -44,8 +43,6 @@ Ekollon-squash (*Cucurbita pepo* var. *turbinata*) ugnsbakas hel eller halverad 
 - [Oven Roast](./acorn_squash-oven_roast.md)
 ## Improvement potential
 
-**Improvement potential: 10 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -54,8 +51,8 @@ Ekollon-squash (*Cucurbita pepo* var. *turbinata*) ugnsbakas hel eller halverad 
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
-3. **−1** · Method file `acorn_squash-oven_bake.md` copies parent cut profile — rewrite `acorn_squash-oven_bake.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+3. Method file `acorn_squash-oven_bake.md` copies parent cut profile — rewrite `acorn_squash-oven_bake.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

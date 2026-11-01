@@ -48,7 +48,6 @@ A whole chicken is a complete bird — comprising breast meat (white, lean *pect
 
 Techniques to manage this differential include: starting the bird breast-side down, trussing to compact the bird and slow the breast, using a high-temperature start to colour the skin before reducing heat, and inserting the probe into the thigh (the slowest-cooking part) rather than the breast. Carryover for a whole 1.5–2 kg bird is 4–7 °C in the breast and 3–5 °C in the thigh.
 
-
 ## Styckesprofil
 
 En hel kyckling är en komplett fågel — bestående av bröstködet (vitt, magert *pectoralis major*), låren (*biceps femoris* och omgivande mörkt kött), trumpinnarna, vingarna och ryggraden, alla förbundna av skinn. Innertemperatur: 74 °C (bröst), 80 °C (lår). Eftertillagning: 4–6 °C.
@@ -58,8 +57,6 @@ En hel kyckling är en komplett fågel — bestående av bröstködet (vitt, mag
 - [`whole_chicken-oven_roast.md`](whole_chicken-oven_roast.md) — 4 sources: Group B (Jessica Gavin/American, BBC Good Food/British, Natasha's Kitchen/Ukrainian-American counted as Group B), Group C (Suzy Karadsheh/Egyptian)
 
 ## Improvement potential
-
-**Improvement potential: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group A, −1 Group D remain)
 
 | Criterion | Status |
 |-----------|--------|
@@ -74,13 +71,11 @@ En hel kyckling är en komplett fågel — bestående av bröstködet (vitt, mag
 | Culinary Group D covered | − missing (Natasha's Kitchen assessed as Group B) |
 | Oven_roast cut profile method-specific | ✓ (fixed 2026-04-27) |
 
-**Points**: −8 methods · −1 missing air_fryer · −1 missing grill · −1 Group A · −1 Group D = −12 → 20−12 = **8**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — survey all methods for whole chicken; update `methods:` list; set `cooking_methods_researched: 1`
+1. Cooking methods not researched — survey all methods for whole chicken; update `methods:` list; set `cooking_methods_researched: 1`
 2. **−1 each** · Air fryer and grill leaves missing — create with verified sources
-3. **−1** · Group A tradition missing — find a Chinese, Japanese, Korean, or Indian whole-chicken recipe
-4. **−1** · Group D tradition missing — find a Swedish, Polish, Baltic, or Slavic whole-chicken recipe
+3. Group A tradition missing — find a Chinese, Japanese, Korean, or Indian whole-chicken recipe
+4. Group D tradition missing — find a Swedish, Polish, Baltic, or Slavic whole-chicken recipe
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

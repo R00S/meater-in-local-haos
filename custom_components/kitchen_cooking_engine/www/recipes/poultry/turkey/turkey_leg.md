@@ -71,8 +71,6 @@ Kalkonstjälken (trumpinnen) är det nedre segmentet av fågelns bakre extremite
 
 ## Improvement potential
 
-**Improvement potential: 10 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | oven_roast leaf: 4 sources, Groups B, C, D | ✅ done |

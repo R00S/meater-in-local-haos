@@ -36,7 +36,6 @@ carryover_temp_c: 2
 
 Lamb burger is a patty made from ground (minced) lamb — primarily shoulder and neck trimmings — with a typical fat content of 15–25%, noticeably higher than ground beef. The higher fat content produces a very juicy patty that is more forgiving of slight overcooking, but also causes more fat drip on the grill. Ground lamb has a characteristic sweet-gamey flavour that pairs well with bold aromatics: garlic, cumin, harissa, mint, za'atar, feta. Because grinding distributes surface bacteria throughout the mass, the USDA minimum safe temperature is 71 °C (160 °F) for all ground meat including lamb.
 
-
 ## Styckesprofil
 
 Lammburgare är en biff gjord av malet lamm — primärt skuldra och hals-trimmings — med typiskt fettinnehåll på 15–25 %, märkbart högre än malet nötkött. Det höga fettinnehållet ger en mycket saftig biff som är mer tolerant mot lätt överkokning, men orsakar också mer fettdroppning på grillen.
@@ -48,8 +47,6 @@ Vid grillning eller pannstekning kräver USDA-standarden att malet lamm tillagas
 - [Grill](./lamb_burger-grill.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | − **NOT DONE** (−8) |
@@ -60,12 +57,10 @@ Vid grillning eller pannstekning kräver USDA-standarden att malet lamm tillagas
 | Culinary Group D covered | − missing (−1) |
 | Groups B, C | ✓ |
 
-**Points**: −8 methods · −1 missing leaf · −1 Group A · −1 Group D = −11 → **9**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
-2. **−1** · Missing `lamb_burger-pan_fry.md`
+1. Cooking methods not researched
+2. Missing `lamb_burger-pan_fry.md`
 3. **−1 each** · Groups A, D missing
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

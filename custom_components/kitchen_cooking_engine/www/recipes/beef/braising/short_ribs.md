@@ -65,8 +65,6 @@ Koreanska revbensspjällstillagningar (galbi-jjim för brässering, galbi för g
 
 1319
 
-Historical readings: 19 / 20 (former 0–20 system, assessed 2026-10-27; not comparable with the new scale), 1807 (new system, assessed 2026-10-27, before the two owed leaves existed).
-
 ### Reading, 2026-11-01 (base 3455, threshold 8, meat)
 
 | Row | Applied | Deduction |

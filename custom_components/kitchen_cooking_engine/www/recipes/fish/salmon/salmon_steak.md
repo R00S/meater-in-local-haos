@@ -92,8 +92,6 @@ Ryggköttsektionen innehåller samma skiktade myotom- och myokommat-struktur som
 
 ## Improvement potential
 
-**Improvement potential: 11 / 20** — assessed 2026-04-27
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not fully researched (2 of 3) | −3 |
@@ -105,8 +103,8 @@ Ryggköttsektionen innehåller samma skiktade myotom- och myokommat-struktur som
 
 ### Improvement priorities
 
-1. **−3** · Add the third method leaf file (grill) — Northern (Swedish gravad/grillad lax) and Western (BBQ) sources should be findable
-2. **−2** · Find sources that give explicit thermometer targets — recipe collections that target instrumented home cooks (e.g. ChefSteps, Serious Eats) are more likely to publish them
-3. **−2** · Add Eastern (e.g. Japanese teriyaki of a *salmon steak* specifically, not a fillet) and Southern (Mediterranean / Middle Eastern) sources — note that searches show fillet has displaced steak in these traditions, so this gap may be a legitimate "no data" finding rather than a fixable gap
+1. Add the third method leaf file (grill) — Northern (Swedish gravad/grillad lax) and Western (BBQ) sources should be findable
+2. Find sources that give explicit thermometer targets — recipe collections that target instrumented home cooks (e.g. ChefSteps, Serious Eats) are more likely to publish them
+3. Add Eastern (e.g. Japanese teriyaki of a *salmon steak* specifically, not a fillet) and Southern (Mediterranean / Middle Eastern) sources — note that searches show fillet has displaced steak in these traditions, so this gap may be a legitimate "no data" finding rather than a fixable gap
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

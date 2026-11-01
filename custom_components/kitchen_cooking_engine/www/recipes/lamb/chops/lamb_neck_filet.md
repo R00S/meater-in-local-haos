@@ -75,8 +75,6 @@ Kokar långsamt till mörhet (85–90 °C) via bräsering eller slow cooker; pan
 
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-27
-
 | Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
@@ -88,8 +86,8 @@ Kokar långsamt till mörhet (85–90 °C) via bräsering eller slow cooker; pan
 
 ### Improvement priorities
 
-1. **−4** · Pan sear and slow cooker leaves empty — find recipes with full ingredient quantities
-2. **−2** · Braise leaf incomplete — add 3–5 more sources from Groups A, C, D traditions
+1. Pan sear and slow cooker leaves empty — find recipes with full ingredient quantities
+2. Braise leaf incomplete — add 3–5 more sources from Groups A, C, D traditions
 3. **−1 each** · Missing Groups A, C, D — find recipes from East/South Asian, African/Middle Eastern, and Scandinavian traditions
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

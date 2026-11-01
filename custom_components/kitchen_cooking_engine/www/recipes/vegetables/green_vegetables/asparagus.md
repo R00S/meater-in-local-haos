@@ -43,7 +43,6 @@ carryover_temp_c: 1
 
 Asparagus (*Asparagus officinalis*) sautéed in a hot pan is the fastest preparation: 4–6 minutes over medium-high to high heat, producing tender-crisp spears with a lightly browned stem and vivid green colour. The pan must be large enough to hold all spears in a single layer, and the oil or butter must be hot before the asparagus goes in — otherwise the spears will steam rather than sauté. Pull temperature: 78–83 °C (172–181 °F) for tender-crisp asparagus, still with some bite. MEATER probe inserted along the long axis of the thickest spear.
 
-
 ## Styckesprofil
 
 Sparris (*Asparagus officinalis*) sauterad i het panna är den snabbaste beredningen: 4–6 minuter vid medel-hög till hög värme, vilket ger tender-crispy sparrisar med lätt brynnad yta. Klar när knäcks rent vid böjning och lätt gyllenbrun.
@@ -56,8 +55,6 @@ Sparris (*Asparagus officinalis*) sauterad i het panna är den snabbaste beredni
 - [Steam](./asparagus-steam.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -67,9 +64,9 @@ Sparris (*Asparagus officinalis*) sauterad i het panna är den snabbaste beredni
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
-3. **−1** · Method file `asparagus-saute.md` copies parent cut profile — rewrite `asparagus-saute.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+3. Method file `asparagus-saute.md` copies parent cut profile — rewrite `asparagus-saute.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

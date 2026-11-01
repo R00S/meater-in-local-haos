@@ -65,8 +65,6 @@ Renkött är mycket magert (typiskt under 2 % intramuskulärt fett) och djupt r�
 
 ## Improvement potential
 
-**Improvement potential: 10 / 20** — assessed 2026-04-27
-
 | Criterion | Points |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
@@ -78,8 +76,8 @@ Renkött är mycket magert (typiskt under 2 % intramuskulärt fett) och djupt r�
 
 ### Improvement priorities
 
-1. **−3** · Oven roast leaf has only 1 source — add 3–5 more oven_roast reindeer loin sources from diverse traditions
-2. **−2** · Pan sear leaf only Group D — add Group A, B, C sources to the pan sear leaf
+1. Oven roast leaf has only 1 source — add 3–5 more oven_roast reindeer loin sources from diverse traditions
+2. Pan sear leaf only Group D — add Group A, B, C sources to the pan sear leaf
 3. **−1 each** · Missing Groups A, B, C — find recipes from South/East Asian, Western European/Australian, and African/Middle Eastern traditions
 4. Once 4+ sources per method: write temperature consensus analysis sections
 

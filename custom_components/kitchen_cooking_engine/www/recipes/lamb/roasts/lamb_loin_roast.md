@@ -73,8 +73,6 @@ Ugnsrostning: sear i en het panna, sedan avsluta i 180–200 °C ugn. Vid 2–3 
 
 ## Improvement potential
 
-**Improvement potential: 13 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods researched | ✓ — oven_roast confirmed as only applicable method (loin is too lean for braise/slow-cook) |

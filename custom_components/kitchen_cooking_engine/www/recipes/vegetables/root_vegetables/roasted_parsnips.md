@@ -41,7 +41,6 @@ carryover_temp_c: 1
 
 Parsnips (*Pastinaca sativa*) in the air fryer become golden, caramelised and crispy at the tips in 16–20 minutes at 190–200 °C — faster than oven roasting (25–30 minutes). Parsnips have a high natural sugar content (≈ 12 g/100 g — significantly higher than carrots) and caramelise readily. They should be cut into batons or long wedges, oil-coated and placed in a single layer. Pull temperature: 86–90 °C (187–194 °F) for caramelised, fluffy-interior parsnips. MEATER probe inserted along the long axis of the thickest baton.
 
-
 ## Styckesprofil
 
 Palsternacka (*Pastinaca sativa*) i airfryern blir gyllenbrun, karameliserad och krispig vid topparna på 16–20 minuter vid 190–200 °C — snabbare än ugnsstekning. Skär i klyftor, olja. Klar när gyllenbrun och genomstekt med karameliserade kanter.
@@ -52,8 +51,6 @@ Palsternacka (*Pastinaca sativa*) i airfryern blir gyllenbrun, karameliserad och
 - [Oven Roast](./roasted_parsnips-oven_roast.md)
 ## Improvement potential
 
-**Improvement potential: 10 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -62,8 +59,8 @@ Palsternacka (*Pastinaca sativa*) i airfryern blir gyllenbrun, karameliserad och
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
-3. **−1** · Method file `roasted_parsnips-air_fryer.md` copies parent cut profile — rewrite `roasted_parsnips-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+3. Method file `roasted_parsnips-air_fryer.md` copies parent cut profile — rewrite `roasted_parsnips-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

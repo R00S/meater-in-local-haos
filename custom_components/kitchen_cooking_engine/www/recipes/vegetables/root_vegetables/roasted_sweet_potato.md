@@ -42,7 +42,6 @@ carryover_temp_c: 2
 
 Whole baked sweet potato (*Ipomoea batatas*) in the conventional oven at 190–200 °C achieves a deeply caramelised, slightly wrinkled skin and a soft, jammy interior in 50–70 minutes depending on size. The low-and-slow heat allows the amylase enzymes in the sweet potato to convert starches to sugars, producing an intensely sweet result (particularly with Japanese *satsuma-imo* varieties). Pull temperature: 96–98 °C (205–208 °F) at the thickest centre. MEATER probe along long axis into the geometric centre.
 
-
 ## Styckesprofil
 
 Hel bakad sötpotatis (*Ipomoea batatas*) i konventionell ugn vid 190–200 °C uppnår en djupt karameliserad, lätt skrumpna yta och mjuk, syltliknande insida på 50–70 minuter. Klar när insidan är 98–100 °C och sötpotatisskalet är knaprig och karameliserad.
@@ -54,8 +53,6 @@ Hel bakad sötpotatis (*Ipomoea batatas*) i konventionell ugn vid 190–200 °C 
 - [Oven Roast](./roasted_sweet_potato-oven_roast.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -65,9 +62,9 @@ Hel bakad sötpotatis (*Ipomoea batatas*) i konventionell ugn vid 190–200 °C 
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
-3. **−1** · Method file `roasted_sweet_potato-oven_bake.md` copies parent cut profile — rewrite `roasted_sweet_potato-oven_bake.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Missing Culinary Group B tradition(s) — add Culinary Group B source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+3. Method file `roasted_sweet_potato-oven_bake.md` copies parent cut profile — rewrite `roasted_sweet_potato-oven_bake.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. Missing Culinary Group B tradition(s) — add Culinary Group B source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

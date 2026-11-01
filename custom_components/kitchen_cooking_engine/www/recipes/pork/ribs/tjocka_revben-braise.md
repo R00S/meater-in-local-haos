@@ -127,8 +127,6 @@ Braising cooks pork ribs in liquid in a covered vessel. Related rib recipes belo
 
 ---
 
-
-
 ### 6. American (The Chaotic Table, Stephanie) — Braised Pork Ribs
 **Inspired by**: Stephanie, The Chaotic Table; https://thechaotictable.com/braised-pork-ribs/ (fetched 2026-11-01). *Named author; a covered Dutch-oven braise with six ingredients. Cut term: "pork spare ribs".*
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 2 h 30 min covered · **Rest**: not stated

@@ -49,21 +49,17 @@ The tail muscle is firm, white to pale pink, sweet, and delicately briny — ric
 
 Primary cooking methods across culinary traditions: grilling (split or whole), oven-baking/gratinating, and boiling. Pan-frying (tails only, shelled) is also practised, particularly in French and Italian restaurant cooking. Langoustines are not traditionally consumed in East or Southeast Asian cuisines or in Arabic/Middle Eastern/North African cuisines — the species does not occur in those waters.
 
-
 ## Styckesprofil
 
 Havskräfta (*Nephrops norvegicus*) — även kallad sjøkreps (norska), jomfruhummer (danska), langoustine (franska) eller scampi (italienska) — är ett litet hummerliknande kräftdjur som lever i nordöstra Atlanten (från Island och Norge söderut till Marocko) och västra Medelhavet. Skottland svarar för mer än 60 % av den europeiska fångsten; Irland, Norge och Danmark är de övriga huvudproducenterna. De ätliga delarna är svansmuskeln (primär) och det lilla kököttet (sekundärt). Total kroppslängd inklusive klor är typiskt 10–25 cm; svansen ensam 5–12 cm. Färgen levande är blekrosa-orange; skalet övergår till klarorange-rött vid upphettning.
 
 Svansmuskeln är fast, vit till blekrosa, söt och delikat salt — rikare på naturliga glutamater än räkor men mildare än hummer. Det segmenterade skalet fungerar som ett smakbevarande kärl och värmeskydd. Muskelproteinerna denaturerar snabbt: det söta fönstret är smalt, ungefär 52–57 °C. Ovanför 58 °C stramar köttet märkbart; ovanför 63 °C blir det gummiartat och torrt. Eftertillagning efter att ha lyfts från värmen är ungefär 2 °C. USDA-minimum för skaldjur är 63 °C (145 °F). Innertemperatur: 52–57 °C (tender/mör); 63 °C (well done/USDA).
 
-
 ## Research files by cooking method
 
 - [Grill](./langoustine-grill.md)
 
 ## Improvement potential
-
-**Improvement potential: 16 / 20** — assessed 2026-04-29
 
 | Criterion | Points |
 |-----------|----------|
@@ -76,9 +72,9 @@ Svansmuskeln är fast, vit till blekrosa, söt och delikat salt — rikare på n
 
 ### Improvement priorities
 
-1. **−1** · Method leaf `langoustine-oven_roast.md` not yet built — create leaf with verified sources for Italian *scampi al forno*, French *langoustines gratinées* traditions
-2. **−1** · Method leaf `langoustine-boil.md` not yet built — create leaf with verified sources for Scandinavian/British boiling tradition
-3. **−1** · Missing Culinary Group A tradition — monitor for new sources; langoustine is occasionally used in Japanese and Italian-influenced fusion restaurants in Japan (imported product)
-4. **−1** · Missing Culinary Group C tradition — monitor for new sources; langoustine does occur in Mediterranean coastal regions of Turkey and Tunisia
+1. Method leaf `langoustine-oven_roast.md` not yet built — create leaf with verified sources for Italian *scampi al forno*, French *langoustines gratinées* traditions
+2. Method leaf `langoustine-boil.md` not yet built — create leaf with verified sources for Scandinavian/British boiling tradition
+3. Missing Culinary Group A tradition — monitor for new sources; langoustine is occasionally used in Japanese and Italian-influenced fusion restaurants in Japan (imported product)
+4. Missing Culinary Group C tradition — monitor for new sources; langoustine does occur in Mediterranean coastal regions of Turkey and Tunisia
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

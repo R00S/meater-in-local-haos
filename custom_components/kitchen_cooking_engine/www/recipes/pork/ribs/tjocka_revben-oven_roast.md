@@ -143,7 +143,6 @@ Oven roasting exposes the meat-covered front pork ribs to enclosed heat. The exa
 
 ---
 
-
 ## Collection status and search log
 
 > ⚠️ **COLLECTION COMPLETE (6 sources, Groups A/B/C/D) · ANALYSIS WITHHELD — 2 of 6 sources state a numeric endpoint; the analysis gate revised 2026-11-01 needs 3.**

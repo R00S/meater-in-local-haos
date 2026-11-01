@@ -73,7 +73,6 @@ carryover_temp_c: 4
 
 Filet mignon is cut from the narrow end (small end) of the beef tenderloin — the psoas major muscle, which runs alongside the spine and does virtually no work during the animal's life. It is the most tender cut in the carcass, with almost no intramuscular fat (marbling) or connective tissue, making it both delicate and vulnerable to drying out. The air fryer circulates very hot air around the steak at high velocity, creating convection browning on the exterior while cooking the interior — the result is a decent Maillard crust without the smoke of a grill or the fat-pooling effect of a skillet. Because filet mignon is exceptionally lean, the air fryer's hot-air convection is forgiving compared to direct-contact methods. Carryover is minimal but present — the small, round geometry of a filet mignon dissipates heat quickly after removal from the enclosed air fryer basket.
 
-
 ## Styckesprofil
 
 Filet mignon skärs från den smala änden (lilla änden) av nötfilén — den minst belastade muskeln i djurkroppen och den absolut möraste biten av nötkött. Luftfryer-tillagning av filet mignon utsätter den för intensivt cirkulerad het luft — praktiskt taget en kompakt konvektionsugn. Filetens extrema mörhet och låga fettinnehåll gör den känslig för överkokad: eftertillagning (2–4 °C) måste beaktas, och sonden bör tas ut vid 3–4 °C under slutmålet. Maillardytan från airfryern är sämre än från pansearing; ett snabbt avslutande i smörpanna efter airfryer-tillagning förbättrar resultatet väsentligt.
@@ -89,8 +88,6 @@ Filet mignon skärs från den smala änden (lilla änden) av nötfilén — den 
 - [Sous Vide](./filet_mignon-sous_vide.md)
 ## Improvement potential
 
-**Improvement potential: 10 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -99,8 +96,8 @@ Filet mignon skärs från den smala änden (lilla änden) av nötfilén — den 
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Method file `filet_mignon-air_fryer.md` copies parent cut profile — rewrite `filet_mignon-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-3. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Method file `filet_mignon-air_fryer.md` copies parent cut profile — rewrite `filet_mignon-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+3. Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

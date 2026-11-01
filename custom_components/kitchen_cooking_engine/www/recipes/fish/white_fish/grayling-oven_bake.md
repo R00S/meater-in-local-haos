@@ -61,7 +61,6 @@ Europeisk harr (*Thymallus thymallus*) är en mager, ömtålig flodlaxfisk som t
 ---
 
 ### 3. The Big Fat Mushroom Hunter — Salt Baked Grayling
-**Inspired by**: https://thebigfatmushroomhunter.wordpress.com/2013/04/20/salt-baked-grayling/ (fetched 2026-10-23). English angler/forager/cook blog; whole grayling in a fennel salt crust.
 **Serves**: not stated · **Prep**: salt-crust mixing and stuffing · **Cook**: 35–40 min at 220 °C · **Rest**: not stated
 
 **Ingredients**

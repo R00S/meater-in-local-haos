@@ -98,8 +98,6 @@ surveys for `grill`, `pressure_cooker` or `sous_vide` are exhausted.
 
 ## Improvement potential
 
-**Improvement potential: 17 / 20** — assessed 2026-10-24 (from-scratch recount; supersedes 8 recorded 2026-04-27, which deducted −8 for an unstarted survey, −1 for missing Group A, −2 for preferred-temperature research and −1 for per-method temperatures — the Group A and per-method gaps are now closed by fetched sources). Self-assessed (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Pattern 4).
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods researched (`cooking_methods_researched: 1`, inventory above) | — |
@@ -115,8 +113,8 @@ surveys for `grill`, `pressure_cooker` or `sous_vide` are exhausted.
 
 ### Improvement priorities
 
-1. **−1** · The doneness model is the cut's main structural flaw: a fully cooked 5 kg ham should not be offered the same 71 °C target as a raw gammon joint. Splitting the two would need a cut-level change, not a text edit.
-2. **−1** · Fetch non-British slow-cooker and braise sources (US slow-cooker ham, Chinese braised ham/hock, Caribbean) to break the single-tradition base.
-3. **−1** · Fetch a bone-in raw gammon recipe for the slow cooker or a braise.
+1. The doneness model is the cut's main structural flaw: a fully cooked 5 kg ham should not be offered the same 71 °C target as a raw gammon joint. Splitting the two would need a cut-level change, not a text edit.
+2. Fetch non-British slow-cooker and braise sources (US slow-cooker ham, Chinese braised ham/hock, Caribbean) to break the single-tradition base.
+3. Fetch a bone-in raw gammon recipe for the slow cooker or a braise.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

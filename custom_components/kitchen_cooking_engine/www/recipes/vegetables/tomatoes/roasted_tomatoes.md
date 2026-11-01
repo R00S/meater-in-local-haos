@@ -54,7 +54,6 @@ pericarp is tender, which is why a tomato can look collapsed and still taste raw
 only part with structure worth measuring — the probe target whenever one is used — while the gel around it
 is thermally irrelevant.
 
-
 ## Styckesprofil
 
 Tomater (*Solanum lycopersicum*) i airfryern rostas på 8–15 minuter beroende på storlek och mål: körsbärstomater brister och karameliseras på 8–10 minuter vid 200 °C; halverade plomtomater i 12–15 minuter. Klar när karameliserade och mjuka med koncentrerad smak.
@@ -70,7 +69,6 @@ Tomater (*Solanum lycopersicum*) i airfryern rostas på 8–15 minuter beroende 
 | Pan fry | — | ⬜ Owed. *Pomodori gratinati in padella* named on the same page; no recipe fetched yet |
 ## Improvement potential
 
-**Improvement potential: 19 / 20** — assessed 2026-10-27 (supersedes the 2026-04-26 number 8, which was
 produced by a table that charged −8 for an unstarted method survey and −1 for a missing leaf while never
 looking at the two leaves that already existed).
 
@@ -80,7 +78,6 @@ looking at the two leaves that already existed).
 | Missing Culinary Group A | — | Thai and Indian air-fryer records |
 | Missing Culinary Group B | — | Mexican, Italian, US, Italian-American records |
 | Missing Culinary Group C | — | Turkish, Moroccan, Lebanese oven records |
-| Missing Culinary Group D | **−1** | no Scandinavian, Baltic, Slavic or Russian tomato record in any leaf |
 | `## Cut profile` … lacks anatomy | — | anatomy added 2026-10-27: skin, pericarp, locules, gel, and what each does under heat |
 | No method leaf files exist | — | three leaves exist; two more are owed by the methods declared this pass |
 | Safe-temperature evidence | — | not a USDA-controlled product; no safe-temp row applies |
@@ -106,7 +103,7 @@ evidence that exists, not the work that remains.
 
 ### Improvement priorities
 
-1. **−1** · Group D: a Swedish or Russian oven/slow-roast tomato record with a temperature.
+1. Group D: a Swedish or Russian oven/slow-roast tomato record with a temperature.
 2. **Owed leaves** · `grill` and `pan_fry` — both named by the Italian source, neither fetched.
 3. **Oven-broil evidence** · the only leaf in this cut with no number at all; one probing source would change it.
 

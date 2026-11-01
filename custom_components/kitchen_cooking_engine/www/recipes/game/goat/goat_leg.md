@@ -65,7 +65,6 @@ Whole goat leg (*Capra hircus*) is the hind limb, comprising the femur and the m
 
 Goat leg is a defining ingredient in Caribbean (curried goat), West African (pepper soup, oven-roasted), Greek (katsiki sto fourno), and Middle Eastern (whole roast with spices) festive cooking.
 
-
 ## Styckesprofil
 
 Hel getlägg (*Capra hircus*) är baklemmen, bestående av lårbenet och de stora musklerna: *biceps femoris*, *semimembranosus*, *semitendinosus* och *quadriceps femoris*. Till skillnad från lammbenet — som kan serveras rosa vid 60–65 °C — har getbenet mer bindväv och en mer kraftfull, viltig fettprofil.
@@ -81,7 +80,6 @@ De flesta kulinariska traditioner föredrar getbenet tillagat till 75–82 °C d
 - [Pressure Cooker](./goat_leg-pressure_cooker.md) — ⚠️ partial, 1 fetched source (Caribbean Instant Pot) — **new method 2026-10-24**
 ## Improvement potential
 
-**Improvement potential: 8 / 20** — assessed 2026-10-24. From-scratch reassessment on the scale (no anchoring to the previous number — inflation doc Patterns 4 and 9; the number
 happens to coincide but the basis is different: the old table deducted for missing leaves
 under a different rule and counted Group A/D gaps that are now closed).
 
@@ -89,8 +87,6 @@ under a different rule and counted Group A/D gaps that are now closed).
 |-----------|-----------|----------|
 | Cooking methods not researched (`cooking_methods_researched: 0`) | −8 | Survey 2026-10-24 found and registered 2 methods beyond the declared list (grill, pressure_cooker), but the enum inventory is not complete: smoker, sous_vide and boil/steam preparations for bone-in leg pieces remain plausible and unverified. Field stays 0 until collected or cleanly ruled out. |
 | Partial leaves (< 4 fetched sources): braise (3), slow_cooker (2), grill (2), pressure_cooker (1) | −4 | −1 per partial leaf (branch convention). oven_roast (4 sources) meets the gate. |
-
-**Total −12 → 8/20.** Criteria checked with evidence and receiving **0 points**:
 
 - **Culinary Groups A/B/C/D all covered** — A: Indian-Pakistani raan (oven_roast), Indian slow-cooker curry (slow_cooker); B: German (oven_roast), Greek (oven_roast), US (grill), Mexican (braise); C: Jamaican/Caribbean (braise ×2, slow_cooker, grill, pressure_cooker); D: Russian (oven_roast). The 2026-04-27 Group A and D gaps are closed.
 - `## Cut profile` present with anatomical placement (femur, biceps femoris, semimembranosus, semitendinosus, quadriceps femoris).

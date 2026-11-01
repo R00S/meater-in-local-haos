@@ -42,7 +42,6 @@ carryover_temp_c: 2
 
 Butternut squash (*Cucurbita moschata*) in a pressure cooker cooks in 8–12 minutes at high pressure (cubed), producing very soft, fully cooked flesh suitable for soups and purées. Pull temperature (measured via MEATER before sealing, or in the depressurised pot): 95–98 °C (203–208 °F). MEATER probe into the thickest cube before closing the lid.
 
-
 ## Styckesprofil
 
 Butternut-squash (*Cucurbita moschata*) i tryckkokare tillagas på 8–12 minuter vid högtryck (tärnad), vilket ger mycket mjukt, fullt tillagat kött lämpat för soppor och pureer. Klar när fullständigt genomstekt och lätt att mosa.
@@ -54,8 +53,6 @@ Butternut-squash (*Cucurbita moschata*) i tryckkokare tillagas på 8–12 minute
 - [Steam](./butternut_squash-steam.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -65,9 +62,9 @@ Butternut-squash (*Cucurbita moschata*) i tryckkokare tillagas på 8–12 minute
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
-3. **−1** · Method file `butternut_squash-pressure_cooker.md` copies parent cut profile — rewrite `butternut_squash-pressure_cooker.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+3. Method file `butternut_squash-pressure_cooker.md` copies parent cut profile — rewrite `butternut_squash-pressure_cooker.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

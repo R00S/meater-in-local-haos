@@ -63,7 +63,6 @@ Internal doneness is the same as for other finfish: 60–63 °C (140–145 °F, 
 for fully cooked flesh that is just opaque. The MEATER probe must be inserted from the
 thickest edge (lateral insertion) in thin fillets, or through the shoulder of a whole fish.
 
-
 ## Styckesprofil
 
 Regnbågsforell (*Oncorhynchus mykiss*) och brun öring (*Salmo trutta*, svenska: forell, norska: ørret, tyska: Forelle, italienska: trota) är bland de mest kokta sötvattensfiskarna i norra Europa och Nordamerika. Köttet är delikat, med ett milt sötvattensmak och en rosa till vit kötttjäll. Pannsearing av forell — hela fisken eller filé med skinn — ger knaprig yta och saftig insida. Skinnsidan ned i het smörpanna i 3–4 minuter; vänd för 2 minuter. Innertemperatur: 58–62 °C.
@@ -73,8 +72,6 @@ Regnbågsforell (*Oncorhynchus mykiss*) och brun öring (*Salmo trutta*, svenska
 - [Pan Sear](./trout-pan_sear.md)
 - [Smoker](./trout-smoker.md)
 ## Improvement potential
-
-**Improvement potential: 8 / 20** — assessed 2026-05-31
 
 | Criterion | Points |
 |-----------|----------|
@@ -91,9 +88,9 @@ Group A absent — no East Asian (Japanese, Chinese, Korean, Thai, Vietnamese) t
 
 ### Improvement priorities
 
-1. **−8** · Complete broad method-survey research for trout across culinary traditions; update `cooking_methods_researched` to `1` only when thorough.
-2. **−2** · Missing method leaf files — create `trout-grill.md` and `trout-oven_roast.md`, each with 4–6 diverse source recipes.
-3. **−1** · Method leaf `trout-pan_sear.md` copies parent cut profile — rewrite the cut profile section with method-specific analysis: Maillard crust on trout skin, basting with brown butter, timing for thin fillets vs. thick.
-4. **−1** · Missing Culinary Group A tradition — add at least one verified East Asian trout recipe (Japanese *nijimasu*, Korean trout, Thai trout, etc.).
+1. Complete broad method-survey research for trout across culinary traditions; update `cooking_methods_researched` to `1` only when thorough.
+2. Missing method leaf files — create `trout-grill.md` and `trout-oven_roast.md`, each with 4–6 diverse source recipes.
+3. Method leaf `trout-pan_sear.md` copies parent cut profile — rewrite the cut profile section with method-specific analysis: Maillard crust on trout skin, basting with brown butter, timing for thin fillets vs. thick.
+4. Missing Culinary Group A tradition — add at least one verified East Asian trout recipe (Japanese *nijimasu*, Korean trout, Thai trout, etc.).
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

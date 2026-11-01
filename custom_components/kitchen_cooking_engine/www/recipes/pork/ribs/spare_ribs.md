@@ -37,7 +37,6 @@ carryover_temp_c: 3
 
 Spare ribs (*revelsben*/*kamben* in Danish; *Spareribs* in German/Austrian; *costillas* in Spanish) are the lower belly ribs (sternum-adjacent), larger and flatter than baby back ribs, with considerably more intermuscular fat and connective tissue between and around the rib bones. The primary muscles are the *serratus ventralis* and intercostal layers; unlike baby backs (which are *longissimus dorsi* muscle adjacent), spare ribs derive their eating quality from fat and collagen conversion rather than lean muscle. The higher fat content makes them more forgiving than baby backs: they resist drying out even at the higher temperatures needed for collagen conversion.
 
-
 ## Styckesprofil
 
 Spareribs (*revelsben*/*kamben* danska; *Spareribs* tyska/österrikiska; *costillas* spanska) är de nedre magerevbenen (sternum-angränsande), större och plattare än baby back ribs, med avsevärt mer intramuskulärt fett och bindväv.
@@ -49,8 +48,6 @@ De kräver längre tillagningstid än baby back ribs (3–5 timmar låg-och-lån
 - [Oven Roast](./spare_ribs-oven_roast.md)
 ## Improvement potential
 
-**Improvement potential: 8 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | − **NOT DONE** (−8) |
@@ -61,11 +58,9 @@ De kräver längre tillagningstid än baby back ribs (3–5 timmar låg-och-lån
 | Culinary Group C covered | − missing (−1) |
 | Culinary Groups B, D | ✓ |
 
-**Points**: −8 methods · −2 missing leaves · −1 Group A · −1 Group C = −12 → **8**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
+1. Cooking methods not researched
 2. **−1 each** · Missing `spare_ribs-grill.md`, `spare_ribs-smoker.md`
 3. **−1 each** · Groups A, C missing
 

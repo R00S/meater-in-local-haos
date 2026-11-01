@@ -36,7 +36,6 @@ carryover_temp_c: 5
 
 Beef tongue (*Bos taurus* lingual muscle) is a single dense cylindrical muscle wrapped in a thick, papillae-covered skin. The muscle itself is rich in collagen and intramuscular fat; the skin is inedible and must be peeled after cooking — the standard method is to braise the whole tongue at 85–95 °C until the collagen converts to gelatin, then peel the skin while the tongue is still warm. Cooking times of 3–4 hours for a 1.5–2 kg tongue are standard. Carryover is essentially zero (the surrounding liquid buffers the temperature) but the tongue retains heat well after removal — the skin must be peeled within 5 minutes of lifting from the braise or it cools and tightens. Pull is timed by the texture of the muscle: a paring knife should slide in with no resistance.
 
-
 ## Styckesprofil
 
 Nöttungue (*Bos taurus* lingvalmuskel) är en enda tät cylindrisk muskel som arbetar konstant under djurets liv — ungefär lika belastad som hjärtmuskeln, men strukturellt mer lik en benmuskel. Den är tätt insvept i ett tjockt, grovt hudlager som måste avlägsnas efter tillagning; det underliggande köttet är fint fibrerat, marmorerat och extremt kollagenrikt. Korrekt tillagad (bräserad i 3–4 timmar tills innertemperaturen når 85–90 °C) är tungan silkeslent mör med en smak som liknar nötkindsmuskeln. Det yttre skinnet skalar lätt av strax efter kokning medan tungan fortfarande är varm.
@@ -47,8 +46,6 @@ Nöttungue (*Bos taurus* lingvalmuskel) är en enda tät cylindrisk muskel som a
 - [Slow Cooker](./beef_tongue-slow_cooker.md)
 ## Improvement potential
 
-**Improvement potential: 11 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -56,7 +53,7 @@ Nöttungue (*Bos taurus* lingvalmuskel) är en enda tät cylindrisk muskel som a
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Method file `beef_tongue-braise.md` copies parent cut profile — rewrite `beef_tongue-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Method file `beef_tongue-braise.md` copies parent cut profile — rewrite `beef_tongue-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

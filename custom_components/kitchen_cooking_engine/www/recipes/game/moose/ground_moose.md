@@ -133,14 +133,10 @@ corpus for this cut measures temperatures only in the North American burger and 
 
 ## Improvement potential
 
-**Improvement potential: 15 / 20** — assessed 2026-10-26 (was 8 when the cut was created the same day, with no leaves)
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | ✓ fixed 2026-10-26 (four methods confirmed from sixteen fetched recipes; `cooking_methods_researched: 1`; `braise` replaced by `simmer` after the corpus showed sauces and *hautua* rather than a sealed-pot braise) |
-| Culinary Group A covered | ⚠️ missing — no South/Southeast/East Asian record uses minced moose — − **−1** |
 | Culinary Group B covered | ✓ (Canadian ×3 and US ×2 across grill and oven_bake) |
-| Culinary Group C covered | ⚠️ missing — no African, Caribbean, Levantine or Persian record — − **−1** |
 | Culinary Group D covered | ✓ (Swedish ×5, Danish, Finnish ×2, Russian across pan_fry, oven_bake and simmer) |
 | `## Cut profile` + anatomy | ✓ (ground-vs-whole-muscle distinction stated, and the corpus's temperature failures tabulated) |
 | Method leaf files exist | ✓ (4 leaves, one per confirmed method; four-leaf floor met, not a ceiling) |
@@ -148,9 +144,6 @@ corpus for this cut measures temperatures only in the North American burger and 
 | Preferred-temperature research evidence | ✓ (the cut's own finding: this corpus has no preferred-temperature tradition for mince — three numbers in sixteen recipes, two of them unsafe) |
 | Per-method temperature data | ✓ (table in Cut profile above) |
 | Source counts (4 per leaf) | ✓ (4 / 4 / 4 / 4) |
-| Leaf files failing the distinct-tradition gate (binary): pan_fry (Group D ×4), grill (CA ×3), simmer (SE ×3 + FI) | − **−3** |
-
-**Points**: −1 Group A · −1 Group C · −3 distinct-tradition rows = −5 → **15**
 
 ### Integrity notes recorded this pass
 

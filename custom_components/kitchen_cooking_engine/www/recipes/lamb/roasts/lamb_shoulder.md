@@ -37,7 +37,6 @@ carryover_temp_c: 5
 
 Lamb shoulder comprises the scapula, humerus, and associated muscles — primarily the *supraspinatus*, *infraspinatus*, *triceps brachii*, and *deltoideus*. These are heavily worked muscles, fattier and with more connective tissue than the leg, because the shoulder carries the weight of the front of the animal. The higher collagen density and better fat distribution make it the preferred shoulder cut for slow cooking: gelatin conversion transforms the tough fibres into silky, spoonable meat. The shoulder can be bone-in (whole shoulder, most flavourful) or bone-out (butterflied, faster cooking, easier carving). Typical weight: 1.5–3 kg bone-in.
 
-
 ## Styckesprofil
 
 Lammaxel är *supraspinatus*, *infraspinatus*, *triceps brachii* och *deltoideus*-musklerna — hårt arbetade, fettare och med mer bindväv än benet. Det är ett quintessentiellt lågt-och-långsamt-snitt: kollagenrik, smakrik och bäst bräserat eller ugnsrostat till pull-apart-mörhet.
@@ -49,8 +48,6 @@ Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagnin
 - [Oven Roast](./lamb_shoulder-oven_roast.md)
 ## Improvement potential
 
-**Improvement potential: 18 / 20** — assessed 2026-04-29 (methods survey done; −1 Group A, −1 Group D remain)
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | − **NOT DONE** (−8) |
@@ -61,11 +58,9 @@ Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagnin
 | Culinary Group D covered | − missing (−1) |
 | Culinary Groups B, C | ✓ |
 
-**Points**: −8 methods · −2 missing leaves · −1 Group A · −1 Group D = −12 → **8**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
+1. Cooking methods not researched
 2. **−1 each** · Missing `lamb_shoulder-braise.md`, `lamb_shoulder-slow_cooker.md`
 3. **−1 each** · Groups A, D missing
 

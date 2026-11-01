@@ -61,8 +61,6 @@ Uer (*Sebastes norvegicus* / *S. mentella*; tyska: Rotbarsch; norska: uer) är e
 
 ## Improvement potential
 
-**Improvement potential: 14 / 20** — assessed 2026-05-31
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
@@ -78,8 +76,8 @@ Groups A and C absent — redfish (*Rotbarsch* / *Sebastes*) is an Atlantic/Arct
 
 ### Improvement priorities
 
-1. **−4** · Missing method leaf files — create `redfish-pan_sear.md`, `redfish-oven_bake.md`, `redfish-grill.md`, and `redfish-smoker.md`, each with 4–6 diverse source recipes.
-2. **−1** · Missing Culinary Group A tradition — search for redfish in Japanese, Korean, or Chinese cooking (Pacific rockfish / *sebastes* may serve as proxy; note explicitly).
-3. **−1** · Missing Culinary Group C tradition — search for redfish in any African, Arabic, Persian, or Caribbean cooking context.
+1. Missing method leaf files — create `redfish-pan_sear.md`, `redfish-oven_bake.md`, `redfish-grill.md`, and `redfish-smoker.md`, each with 4–6 diverse source recipes.
+2. Missing Culinary Group A tradition — search for redfish in Japanese, Korean, or Chinese cooking (Pacific rockfish / *sebastes* may serve as proxy; note explicitly).
+3. Missing Culinary Group C tradition — search for redfish in any African, Arabic, Persian, or Caribbean cooking context.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

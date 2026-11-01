@@ -93,8 +93,6 @@ exhausted.
 
 ## Improvement potential
 
-**Improvement potential: 17 / 20** — assessed 2026-10-24 (from-scratch recount; supersedes 8 recorded 2026-04-26, which deducted −8 for an unstarted survey, −1 for a missing grill leaf, −2 for missing Groups A and C, and −1 for a copied profile — all four now resolved). Self-assessed (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Pattern 4).
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods researched (`cooking_methods_researched: 1`, inventory above) | — |
@@ -109,9 +107,9 @@ exhausted.
 
 ### Improvement priorities
 
-1. **−1** · The recommendation and the evidence disagree: either find a source that recommends 54 °C for cutlets or move `recommended_doneness` up to medium. This is a cut-level decision, not a text edit.
-2. **−1** · Reconcile the 125–150 °F spread with a measured source from a third tradition (e.g. a US test-kitchen page with a probe target).
-3. **−1** · Culinary Group D is unrepresented; no Nordic or Baltic cutlet recipe has been fetched.
+1. The recommendation and the evidence disagree: either find a source that recommends 54 °C for cutlets or move `recommended_doneness` up to medium. This is a cut-level decision, not a text edit.
+2. Reconcile the 125–150 °F spread with a measured source from a third tradition (e.g. a US test-kitchen page with a probe target).
+3. Culinary Group D is unrepresented; no Nordic or Baltic cutlet recipe has been fetched.
 4. Note: the parent's "butter basting" and the pan-fry leaf's butter-free record do not match; either find a basting source or amend the profile sentence.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

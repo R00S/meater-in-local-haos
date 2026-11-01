@@ -38,7 +38,6 @@ carryover_temp_c: 3
 
 Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the small dense jaw muscle — roughly 80–120 g per cheek — composed of tightly interleaved fast-twitch fibres permeated by a dense collagen network built up through the animal's constant chewing. This makes it one of the toughest muscles on the pig at rest but one of the most flavourful and texturally rewarding when properly cooked. Intramuscular fat is distributed in thin sheets between the muscle bundles, basting the meat from within during long cooking. Depending on method: braising and slow cooking dissolve the collagen fully into gelatin, producing a spoon-tender or pull-apart result (91–94 °C); oven roasting in shallow liquid gives a caramelised crust with a fork-tender interior (91–93 °C); pan frying with butterflied cheeks creates a quick-crusted result at a lower internal temperature (65–67 °C) where the collagen hasn't converted but the fine-grained fibre structure remains bouncy rather than rubbery. The cut weighs 80–120 g per cheek, making precise probe placement critical.
 
-
 ## Styckesprofil
 
 Fläskkind (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) är den täta käkmuskeln på ca 80–120 g sammansatt av tätt sammanflätade fibrer genomsyrade av ett kollagennät. Det är det mest kollagenrika snittet av fläsk.
@@ -51,8 +50,6 @@ Bräsering (160–170 °C, 2–3 timmar) är den definitiva metoden: kollagen sm
 - [Oven Roast](./pork_cheek-oven_roast.md)
 - [Pan Fry](./pork_cheek-pan_fry.md)
 ## Improvement potential
-
-**Improvement potential: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -68,8 +65,8 @@ Bräsering (160–170 °C, 2–3 timmar) är den definitiva metoden: kollagen sm
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Missing method leaf file — create `pork_cheek-slow_cooker.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
-3. **−2** · Missing Culinary Group A and Culinary Group C tradition(s) — add Culinary Group A and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Missing method leaf file — create `pork_cheek-slow_cooker.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
+3. Missing Culinary Group A and Culinary Group C tradition(s) — add Culinary Group A and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

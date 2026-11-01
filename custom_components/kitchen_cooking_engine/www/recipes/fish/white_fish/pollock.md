@@ -61,8 +61,6 @@ Sei (*Pollachius virens*; tyska: Seelachs/Köhler; norska/danska: sei/sej; frans
 
 ## Improvement potential
 
-**Improvement potential: 14 / 20** — assessed 2026-05-31
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (done: `cooking_methods_researched: 1`) |
@@ -78,9 +76,9 @@ Groups A and C absent — pollock (*sej* / *Pollachius virens*) is a North Atlan
 
 ### Improvement priorities
 
-1. **−4** · Missing method leaf files — create `pollock-pan_fry.md`, `pollock-oven_bake.md`, `pollock-air_fryer.md`, and `pollock-smoker.md`, each with 4–6 diverse source recipes.
-2. **−1** · Missing Culinary Group A tradition — Alaska pollock (*walleye pollock*) is a major fish in Japan (surimi); search for Japanese preparations using pollock directly.
-3. **−1** · Missing Culinary Group C tradition — search for pollock in any African, Arabic, or Caribbean context.
+1. Missing method leaf files — create `pollock-pan_fry.md`, `pollock-oven_bake.md`, `pollock-air_fryer.md`, and `pollock-smoker.md`, each with 4–6 diverse source recipes.
+2. Missing Culinary Group A tradition — Alaska pollock (*walleye pollock*) is a major fish in Japan (surimi); search for Japanese preparations using pollock directly.
+3. Missing Culinary Group C tradition — search for pollock in any African, Arabic, or Caribbean context.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*
 

@@ -73,7 +73,6 @@ carryover_temp_c: 3
 
 The sirloin steak is cut from the sirloin primal, which sits between the short loin (where the NY strip originates) and the round. Top sirloin is the most common steak cut from this primal — it is a firm, relatively lean steak with a bold beefy flavour from the greater muscle activity of this region of the carcass. Compared to the NY strip, top sirloin has less marbling and a slightly coarser grain, making it less forgiving of overcooking; compared to the round, it is noticeably more tender. Pan searing suits sirloin well because the high heat compensates for the reduced marbling by creating a flavourful crust — the Maillard reaction is the primary flavour contribution to a seared top sirloin. The cap muscle (*picanha* region of the sirloin cap) is sometimes separated and considered a distinct cut; this leaf concerns the main top sirloin steak. Carryover is 4–5 °C.
 
-
 ## Styckesprofil
 
 Sirloin-biffen skärs från sirloin-primalen, som ligger mellan short loin (där NY strip kommer ifrån) och round. Top sirloin är det vanligaste biffsnittet från detta primal – en fast, relativt mager biff med kraftig nötig smak från den högre muskelaktiviteten i denna del av slaktkroppen. Jämfört med NY strip har top sirloin mindre marmorering och grövre ådring, vilket gör den mindre förlåtande för överkokning; jämfört med round är den tydligt mörare. Pan-searing passar sirloin väl eftersom den höga värmen kompenserar för den lägre marmoreringen genom att ge en smakrik skorpa – Maillard-reaktionen är det huvudsakliga smakbidraget till en searad top sirloin. Cap-muskeln (picanha-regionen av sirloin cap) separeras ibland och ses som ett eget snitt; detta blad avser den huvudsakliga top sirloin-biffen. Eftervärmen är 4–5 °C.
@@ -88,8 +87,6 @@ Sirloin-biffen skärs från sirloin-primalen, som ligger mellan short loin (där
 - [Sous Vide](./sirloin_steak-sous_vide.md)
 ## Improvement potential
 
-**Improvement potential: 11 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | − **NOT DONE** (−8) |
@@ -103,7 +100,7 @@ Sirloin-biffen skärs från sirloin-primalen, som ligger mellan short loin (där
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

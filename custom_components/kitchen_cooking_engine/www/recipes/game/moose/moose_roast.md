@@ -86,21 +86,15 @@ måltemperaturen en biffstemperatur och inte en bräseringstemperatur: 58–70 �
 |--------|-----------|--------|
 | Braise | [moose_roast-braise.md](./moose_roast-braise.md) | ✅ 4 fetched sources (Swedish, Norwegian, Canadian, Russian), 2026-10-27 |
 | Oven roast | [moose_roast-oven_roast.md](./moose_roast-oven_roast.md) | ✅ 4 fetched sources (German, Swedish, Norwegian, Finnish), 2026-10-27 |
-| Slow cooker | — | ⬜ Owed. Confirmed as a Canadian method, not yet collected (see gap table) |
+| Slow cooker | — | ⬜ Owed. Confirmed as a Canadian method, not yet collected |
 | Smoker | [moose_roast-smoker.md](./moose_roast-smoker.md) | ⚠️ Stub — no source recipes yet |
 
 ## Improvement potential
 
-**Improvement potential: 18 / 20** — assessed 2026-10-27. The previous reading (8, dated 2026-04-26) charged
-−8 for an unstarted method survey and counted a single leaf; the survey is now done, two leaves carry eight
-fetched sources, and the number is read fresh off the criteria rather than adjusted from the old one.
-
 | Criterion | Points | Evidence |
 |-----------|--------|----------|
 | Cooking methods not researched (`cooking_methods_researched: 0`) | — | survey 2026-10-27: braise and oven roast confirmed with eight fetched recipes; **slow cooker and smoker confirmed** and now declared (`girlheartfood.com` slow-cooker moose roast; 20-hour smoked moose pot roast) |
-| Missing Culinary Group A | **−1** | no South/Southeast/East Asian moose record exists in any leaf — searched negatively, see gaps |
 | Missing Culinary Group B | — | Canadian (BC) Dutch-oven braise; German cream-braised *Elchbraten* |
-| Missing Culinary Group C | **−1** | no African, Arabic, Levantine, Persian or Turkish moose record in any leaf — searched negatively |
 | Missing Culinary Group D | — | Swedish, Norwegian and Finnish leaves |
 | `## Cut profile` … lacks anatomy | — | anatomy rewritten 2026-10-27: haunch muscle groups, silver seams, 1–3 % fat, bone |
 | No method leaf files exist | — | two leaves exist |

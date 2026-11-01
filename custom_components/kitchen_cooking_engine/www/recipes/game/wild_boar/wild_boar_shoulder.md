@@ -39,7 +39,6 @@ Wild boar shoulder (*Sus scrofa*) is the anterior limb and associated muscles, p
 
 The flavour of wild boar shoulder is more intense and gamey than farmed pork, with notes of forest herbs and earthiness from the animal's varied diet. The high collagen content makes it unsuitable for quick, high-heat methods — it is exclusively a slow-roast or braise cut. Minimum collagen conversion temperature: 80+ °C; optimal pull for fall-apart texture: 85–92 °C.
 
-
 ## Styckesprofil
 
 Vildsvinsbog (*Sus scrofa*) är frambenet och associerade muskler med täta bindvävsskikt och intramuskulärt fett. Vildsvin utvecklar avsevärt mer bindväv än tamgris på grund av aktivt liv i det vilda; detta kräver längre braiseringstider.
@@ -51,8 +50,6 @@ Bräsera med rödvin, vildfond, enbär, rosmarin, lök och morötter i täckt ug
 - [Oven Roast](./wild_boar_shoulder-oven_roast.md)
 ## Improvement potential
 
-**Improvement potential: 8 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | − **NOT DONE** (−8) |
@@ -63,11 +60,9 @@ Bräsera med rödvin, vildfond, enbär, rosmarin, lök och morötter i täckt ug
 | Culinary Group C covered | − missing (−1) |
 | Culinary Groups B, D | ✓ |
 
-**Points**: −8 methods · −1 missing braise · −1 missing slow_cooker · −1 Group A · −1 Group C = −12 → 20−12 = **8**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
+1. Cooking methods not researched
 2. **−1 each** · Missing `wild_boar_shoulder-braise.md`, `wild_boar_shoulder-slow_cooker.md`
 3. **−1 each** · Groups A, C missing
 

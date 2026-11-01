@@ -64,7 +64,6 @@ carryover_temp_c: 2
 
 Flank steak is a flat, thin muscle cut from the abdominal wall of the animal (the flank primal), with long, coarse muscle fibres running visibly along its length. The cut is lean, relatively tough, and has minimal intramuscular fat — it lacks the marbling of a ribeye but compensates with bold, beefy flavour. Charcoal grilling is the quintessential method for flank steak: the high, direct radiant heat from glowing embers creates a rapid, intense Maillard crust across the wide flat surface before the interior has time to overcook. Flank steak must be cooked quickly over very high heat and sliced thinly across the grain for tenderness — cooking it slowly defeats the purpose. Carryover is minimal in a thin flank steak, but because it is typically cooked over extremely high heat, the brief internal temperature rise after removal from the grill can bring the steak from medium-rare to medium if not watched carefully.
 
-
 ## Styckesprofil
 
 Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med långa, grova fibrer som löper synligt längs hela längden. Snittet är magert, relativt tufft och har lite intramuskulårt fett – det saknar ribeyens marmorering men kompenserar med kraftig, nötig smak. Kolgrillning är den klassiska metoden för flank steak: den höga, direkta strålningsvärmen från glödande kol ger en snabb, intensiv Maillard-skorpa över den breda ytan innan insidan hinner överkokas. Flank steak måste tillagas snabbt över mycket hög värme och skivas tunt mot ådringen för att bli mör – långsam tillagning motverkar syftet. Eftervärmen är minimal i en tunn flank steak, men eftersom den oftast tillagas över extrem värme kan den korta temperaturökningen efter uttag föra biffen från medium-rare till medium om man inte är uppmärksam.
@@ -78,8 +77,6 @@ Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med lån
 - [Sous Vide](./flank_steak-sous_vide.md)
 ## Improvement potential
 
-**Improvement potential: 10 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -88,8 +85,8 @@ Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med lån
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Method file `flank_steak-charcoal_grill.md` copies parent cut profile — rewrite `flank_steak-charcoal_grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-3. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Method file `flank_steak-charcoal_grill.md` copies parent cut profile — rewrite `flank_steak-charcoal_grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+3. Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

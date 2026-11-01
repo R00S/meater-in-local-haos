@@ -91,8 +91,6 @@ slow cooker.
 
 ## Improvement potential
 
-**Improvement potential: 11 / 20** — assessed 2026-04-27
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -101,8 +99,8 @@ slow cooker.
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research remaining methods; set `cooking_methods_researched: 1`
-2. **−1** · Group A gap — add a Group A source to oven_roast leaf
+1. Cooking methods not researched — research remaining methods; set `cooking_methods_researched: 1`
+2. Group A gap — add a Group A source to oven_roast leaf
 3. Create `round_roast-braise.md` and `round_roast-slow_cooker.md` leaves
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

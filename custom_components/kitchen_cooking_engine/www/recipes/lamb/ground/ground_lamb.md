@@ -42,7 +42,6 @@ Ground (minced) lamb is used in countless traditions — from Middle Eastern kib
 
 **Temperature targets**: USDA safe internal for ground meats is **71 °C / 160 °F** — the value registered in this file's frontmatter and in `cooking_data.py`. (The earlier claim here of "74 °C (165 °F) for food-safe ground lamb" contradicted both and has been corrected 2026-10-24.) The single measured source in this collection cooks its keema filling to **72 °C / 161 °F**, just above the safe line. No fetched source treats ground lamb as a pink-cooking meat; `well_done` (71 °C target) is the only doneness target supported by evidence.
 
-
 ## Styckesprofil
 
 Malet lamm används i otaliga traditioner — kibbeh, merguez, moussaka, keema, köfte. Pannstekning kräver fullständig genomkokning. Det höga fettinnehållet i malet lamm (15–25 %) gör beredningen mer smakrik och fuktig men ökar stänk i pannan.
@@ -58,8 +57,6 @@ Tillagning tills köttet är helt genomstekt och lätt brynnat. Innertemperatur:
 ## Improvement potential
 
 2495
-
-Historical readings: 8 / 20 (former 0–20 system, assessed 2026-10-24; not comparable with the new scale).
 
 ### Improvement priorities
 

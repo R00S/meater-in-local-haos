@@ -65,9 +65,7 @@ Because venison is so lean, it must be cooked hot and fast to prevent drying. Pa
 
 The European tradition across the UK, Germany, Scandinavia and Italy pairs venison with acidic or fruity sauces (blackberry, lingonberry, cloudberry, redcurrant, balsamic) that cut the richness of the meat. Nordic cooks often finish fillets in the oven at low heat (125°C) after searing, using a thermometer to hit exactly 60°C. UK and North American cooks tend to pan-fry direct.
 
-
 Target internal temperature: pull at **54–57°C (130–135°F)** for medium-rare. Venison dries out rapidly above 65°C and should never be cooked to well-done.
-
 
 ## Styckesprofil
 
@@ -82,8 +80,6 @@ Sear i smör eller klarat smör vid hög värme — 3–4 minuter per sida — s
 
 ## Improvement potential
 
-**Improvement potential: 17 / 20** — assessed 2026-04-29
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods researched | ✓ — survey completed 2026-04-29 (charcoal_grill, grill, pan_sear confirmed; venison steak is a quick-cook cut, slow methods not applicable) |
@@ -93,8 +89,6 @@ Sear i smör eller klarat smör vid hög värme — 3–4 minuter per sida — s
 | Culinary Group C tradition covered | − missing |
 | pan_sear leaf cut profile fixed (was copy of parent) | ✓ (rewritten 2026-04-29) |
 | charcoal_grill leaf | − pending (method in list; leaf not yet created) |
-
-**Points**: −1 (Group A) −1 (Group C) −1 (charcoal_grill leaf missing, counted as per previous assessment) = **17**
 
 ### Improvement priorities
 

@@ -44,9 +44,7 @@ carryover_temp_c: 5
 
 A whole duck presents a significant cooking challenge: the breast meat is best at medium-rare (135–145 °F) while the legs and thighs need higher temperatures (165–175 °F) to break down their tougher connective tissue. This conflict is resolved either by accepting slightly overcooked breast in exchange for properly done legs, or by using a low-and-slow approach that slowly renders the abundant subcutaneous fat while keeping the breast moist. The USDA minimum for whole poultry is 165 °F measured in the thigh. Whole ducks weigh 4–6 lb (1.8–2.7 kg) on average and carry far more fat than chicken — that fat must be rendered out to achieve crackling skin.
 
-
 Target internal temperature: **165 °F (74 °C) in the thigh** — USDA minimum for whole poultry. Breast will be well-done at this point; accept this or use the low-and-slow method which keeps breast juicier.
-
 
 ## Styckesprofil
 
@@ -56,8 +54,6 @@ En hel anka presenterar en tillagningsutmaning: bröstet är bäst vid 57–63 �
 
 - [Oven Roast](./whole_duck-oven_roast.md)
 ## Improvement potential
-
-**Improvement potential: 8 / 20** — assessed 2026-04-26
 
 | Criterion | Points |
 |-----------|----------|
@@ -69,8 +65,8 @@ En hel anka presenterar en tillagningsutmaning: bröstet är bäst vid 57–63 �
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−3** · Missing Culinary Group A, Culinary Group B and Culinary Group C tradition(s) — add Culinary Group A, Culinary Group B and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Method file `whole_duck-oven_roast.md` copies parent cut profile — rewrite `whole_duck-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Missing Culinary Group A, Culinary Group B and Culinary Group C tradition(s) — add Culinary Group A, Culinary Group B and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. Method file `whole_duck-oven_roast.md` copies parent cut profile — rewrite `whole_duck-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

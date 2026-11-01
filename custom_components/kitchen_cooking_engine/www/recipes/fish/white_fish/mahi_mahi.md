@@ -45,7 +45,6 @@ carryover_temp_c: 2
 
 Mahi-mahi (*Coryphaena hippurus*), also called dolphinfish or dorado, is a large tropical and subtropical pelagic fish found in open warm waters worldwide. The fillets are firm, moist, and moderately lean with a distinctive large-flake texture and a mild, slightly sweet flavour profile. The skin is tough with iridescent scales and is not typically eaten — most preparations use skinless fillets. Average fillet thickness: 2–3 cm. The flesh holds together well under heat, more so than thin white fish fillets, making it suitable for grilling, pan searing, and baking. The flesh dries out above 65 °C; the optimal internal temperature is 60–63 °C for moist, flaky results.
 
-
 ## Styckesprofil
 
 Mahi-mahi (*Coryphaena hippurus*), även kallad dolfinfisk eller dorado, är en stor tropisk och subtropisk pelagisk havsfisk med fast, fuktig och måttligt mager köttkonsistens, karakteristisk storflaggig textur och mild, lätt söt smak. Skinnet är hårt med iriserade fjäll och äts vanligen inte — de flesta beredningar använder skinnfri filé. Genomsnittlig filétjocklek: 2–3 cm. Köttet håller ihop bra under värme, robustare än de flesta havs-vitfiskar.
@@ -57,8 +56,6 @@ Innertemperatur: **60–63 °C (140–145 °F)**. Eftertillagning: 2–3 °C. Dr
 - [Pan Sear](./mahi_mahi-pan_sear.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods not researched | − **NOT DONE** (−8) |
@@ -68,12 +65,10 @@ Innertemperatur: **60–63 °C (140–145 °F)**. Eftertillagning: 2–3 °C. Dr
 | Culinary Group D covered | − missing (−1) |
 | Groups A, B, C | ✓ |
 
-**Points**: −8 methods · −2 missing leaves · −1 Group D = −11 → **9**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
+1. Cooking methods not researched
 2. **−1 each** · Missing `mahi_mahi-air_fryer.md`, `mahi_mahi-grill.md`
-3. **−1** · Group D missing
+3. Group D missing
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

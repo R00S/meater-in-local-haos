@@ -82,8 +82,6 @@ Picanha (*alcatra de capa* på portugisiska; *coulotte* på franska; *sirloin ca
 
 ## Improvement potential
 
-**Improvement potential: 10 / 20** — assessed 2026-04-27
-
 | Criterion | Status |
 |-----------|--------|
 | Cooking methods researched (full survey) | − **NOT DONE** |
@@ -95,12 +93,10 @@ Picanha (*alcatra de capa* på portugisiska; *coulotte* på franska; *sirloin ca
 | Culinary Group C covered | − missing |
 | Culinary Group D covered | − missing |
 
-**Points**: −8 methods not researched · −1 Group C missing · −1 Group D missing = −10 → 20−10 = **10**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — survey all cooking methods appropriate for picanha; update `methods:` list; set `cooking_methods_researched: 1`
-2. **−1** · Group C tradition missing — find a Moroccan, Turkish, Lebanese, or other Group C picanha-adjacent recipe
-3. **−1** · Group D tradition missing — find a Polish, Swedish, or other Group D recipe using rump cap or sirloin cap cut
+1. Cooking methods not researched — survey all cooking methods appropriate for picanha; update `methods:` list; set `cooking_methods_researched: 1`
+2. Group C tradition missing — find a Moroccan, Turkish, Lebanese, or other Group C picanha-adjacent recipe
+3. Group D tradition missing — find a Polish, Swedish, or other Group D recipe using rump cap or sirloin cap cut
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

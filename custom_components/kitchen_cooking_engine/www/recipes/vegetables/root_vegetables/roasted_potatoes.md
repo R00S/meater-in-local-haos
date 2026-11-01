@@ -32,7 +32,6 @@ carryover_temp_c: 2
 
 Roasting potatoes (*Solanum tuberosum*) converts raw starch to a crisp, caramelised exterior and fluffy interior. The potato's cell structure determines roasting success: high-starch varieties (Maris Piper, Russet, King Edward, Desirée) have more amylose-rich starch granules that swell dramatically and burst on parboiling, producing a rough, "chuffed" exterior surface that absorbs fat and crisps intensely. Waxy varieties (Charlotte, Jersey Royal, fingerling) have more amylopectin, retain their shape better, but produce less crisp results. The Maillard reaction at the potato surface (starting around 150 °C) creates the characteristic golden-brown crust; starch gelatinisation at the interior requires reaching 95–100 °C core temperature.
 
-
 ## Styckesprofil
 
 Rostning av potatis (*Solanum tuberosum*) omvandlar rå stärkelse till en krispig, karameliserad exteriör och fluffig insida. Potatisens cellstruktur avgör rostningsframgång: hög-stärkelsepotatis (Russet, King Edward) ger bäst resultat. Klar när 98–100 °C inuti och gyllenknaprig utanpå.
@@ -42,8 +41,6 @@ Rostning av potatis (*Solanum tuberosum*) omvandlar rå stärkelse till en krisp
 - [Air Fryer](./roasted_potatoes-air_fryer.md)
 - [Oven Roast](./roasted_potatoes-oven_roast.md)
 ## Improvement potential
-
-**Improvement potential: 10 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
@@ -55,11 +52,9 @@ Rostning av potatis (*Solanum tuberosum*) omvandlar rå stärkelse till en krisp
 | Culinary Group D covered | − missing (−1) |
 | Groups A, B | ✓ |
 
-**Points**: −8 methods · −1 Group C · −1 Group D = −10 → **10**
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
+1. Cooking methods not researched
 2. **−1 each** · Groups C, D missing
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

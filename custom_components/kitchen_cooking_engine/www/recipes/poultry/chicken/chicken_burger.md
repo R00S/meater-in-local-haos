@@ -37,9 +37,7 @@ carryover_temp_c: 2
 
 Ground chicken burgers are formed patties made from minced chicken, typically 85–93% lean. Because ground poultry must be cooked to a higher internal temperature than whole muscle, and because the meat is lean and prone to drying out, adding binders (egg, breadcrumbs, or cooked rice) helps retain moisture. The air fryer circulates hot air to brown the exterior without deep frying.
 
-
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry
-
 
 ## Styckesprofil
 
@@ -56,12 +54,10 @@ Grill, ugn, air fryer eller panna — alla metoder kräver minst 74 °C (165 °F
 
 2494
 
-Historical readings: 8 / 20 (former 0–20 system, assessed 2026-04-26; not comparable with the new scale).
-
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−3** · Missing Culinary Group A, Culinary Group B and Culinary Group D tradition(s) — add Culinary Group A, Culinary Group B and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Method file `chicken_burger-air_fryer.md` copies parent cut profile — rewrite `chicken_burger-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Missing Culinary Group A, Culinary Group B and Culinary Group D tradition(s) — add Culinary Group A, Culinary Group B and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. Method file `chicken_burger-air_fryer.md` copies parent cut profile — rewrite `chicken_burger-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

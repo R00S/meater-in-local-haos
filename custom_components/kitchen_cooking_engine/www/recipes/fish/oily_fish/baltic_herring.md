@@ -69,8 +69,6 @@ Method survey completed 2026-10-23, re-verified 2026-10-24, extended 2026-10-25:
 
 ## Improvement potential
 
-**Improvement potential: 19 / 20** with the user-approved hard-wall exceptions #1–#3 (**10 / 20** raw without them) — assessed 2026-10-25 (from-scratch recount after the 2026-10-25 collection pass: sixth method `braise` discovered and registered, all six leaves widened with EE/LV/PL/RU sources, and the first cut-specific temperature evidence — the 52 °C target naming strömming — verified and written into the cut profile. Supersedes the earlier 2026-10-25 number 8/6, the 2026-10-23 number 3, and the 2026-05-31 number 6. Every row below is re-derived from the criteria against evidence, not carried over (HOW_I_INFLATE_CUT_FILES_AND_WHY.md Patterns 4, 8, 9, 10). The number rises to 19 because two temperature rows were **earned by fetched evidence** and the source-count row improved through real collection — the remaining −1 is agent work, not a wall.)
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | — (six thermal methods researched; `braise` discovered and registered 2026-10-25; `cooking_methods_researched: 1`) |
@@ -85,8 +83,6 @@ Method survey completed 2026-10-23, re-verified 2026-10-24, extended 2026-10-25:
 | Temperature data: USDA safe temperature not supported by cut-specific research evidence | — (user-approved exception #2; wall documented below) |
 | Temperature data: culinary preferred temps supported by research evidence | — (**covered 2026-10-25**: 52 °C target naming strömming explicitly — Kokaihop Magasin fish list and Kungsberga's fish table listing Sill/Strömming at 52 °C with the pull-2–4 °C-earlier rule; both fetched 2026-10-25 and written into the cut profile body above) |
 | Per-method temp data missing | — (the cut profile body now carries per-method application of the 52 °C target — pan/grill/oven get ≈50 °C pull, smoker chamber figures flagged as process-only, boil/braise textural; every leaf carries its own temperature consensus) |
-
-**Points**: −1 (braise source count) = **19 / 20** with the user-approved exceptions #1–#3 (**10 / 20** raw without them: −1 braise count, −6 tradition gate (6 leaves × −1), −2 Groups A/C, −1 USDA row (the value this row carried before exception #2) — preferred-temperature and per-method rows are earned by fetched evidence, not excepted).
 
 **Wall evidence #1 — identity (Groups A and C; verified 2026-10-25, per `RECIPE_COLLECTION_TOR.md` "Hard-wall exception"):** the fish carries distinct culinary identities only around the Baltic — *strömming* (SV), *silakka* (FI), *räim* (EE), *salaka* (RU, verified *Clupea harengus membras*, ru.wikipedia.org/wiki/Салака and inaturalist.org taxa page, fetched 2026-10-25), *reņģe* (LV, verified via priede.bf.lu.lv), *śledź bałtycki* (PL) — while East Asian sources cook Pacific herring (*nishin*, *Clupea pallasii*, a different species) and Group C traditions (e.g. Caribbean) use the smoked/imported product rather than fresh Baltic herring. No source recipe for this exact cut was verified outside the Baltic region in the 2026-10-24 or 2026-10-25 searches.
 
@@ -104,7 +100,7 @@ All three exceptions are per cut file and per criterion: they waive nothing else
 
 ### Improvement priorities
 
-1. **−1** · `braise` to the 4-source gate (3 sources today) — an Estonian (*hautatud räim*; the DIGAR newspaper-archive lead `Hautatud räim hapukoorekastmes` needs its recipe text fetched), Finnish or Polish braised-herring source closes this. This is the only remaining point and it is agent work — source counts are never exception-eligible.
+1. `braise` to the 4-source gate (3 sources today) — an Estonian (*hautatud räim*; the DIGAR newspaper-archive lead `Hautatud räim hapukoorekastmes` needs its recipe text fetched), Finnish or Polish braised-herring source closes this. This is the only remaining point and it is agent work — source counts are never exception-eligible.
 2. **Evidence depth for the 52 °C target** — both fetched pages share upstream provenance (the Kungsberga guide compiles partly from the same kokaihop.se tillagningstemperaturer list). An independent second lineage (e.g. Livsmedelsverket, a Swedish cookbook, or a Finnish *silakka* doneness source) would put the preferred-temperature row beyond doubt. The row already passes as fetched; this hardens it.
 3. ~~Culinary Groups A and C~~ — **closed 2026-10-25 by exception #1**; reopen only on a verified Group A or C source recipe for fresh Baltic herring (*strömming/silakka/räim/salaka/reņģe*), which auto-revokes the exception.
 4. ~~USDA safe-temperature row~~ — **closed 2026-10-25 by exception #2**; reopen only if a US-authority species entry for strömming appears (auto-revokes), or if the project decides the row should cite a non-US authority for regional cuts (criterion change, not an agent call).

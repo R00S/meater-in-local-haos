@@ -38,7 +38,6 @@ carryover_temp_c: 2
 
 Ground beef burgers are formed patties of minced beef, most commonly from a blend of chuck (for flavour) and sirloin or brisket (for binding), with fat content typically 15–25 % by weight. Unlike whole-muscle cuts, a burger patty has no internal connective tissue structure — the grind has already disrupted muscle fibres — so the cooking challenge is heat penetration through the patty's cross-section rather than collagen conversion. The direct-heat grill creates a fierce Maillard crust on both flat faces, which is the primary flavour mechanism; the fat content keeps the interior moist even at higher internal temperatures. Carryover in a burger patty is minimal — the thin geometry dissipates heat quickly once removed from the grill — but genuine carryover occurs in thicker restaurant-style patties, making the pull-from-grill moment slightly earlier than the final target.
 
-
 ## Styckesprofil
 
 Köttburgare är formade biffar av malet nötkött, vanligast från en blandning av fransyska (för smak) och innanlår eller bringa (för bindning), med ett fettinnehåll på typiskt 15–25 % av vikten. Till skillnad från hela muskelstycken har en burgarbiff ingen inre bindvävsstruktur — malningen har redan brutit upp muskelfibrerna — så utmaningen vid tillagningen är värmepenetration genom biffens tvärsnitt snarare än kollagenomvandling. Direkt värme på grillen skapar en kraftig maillardyta på båda platta sidorna, vilket är den primära smakmekanismen; fettinnehållet håller insidan saftig även vid högre innertemperaturer. Eftertillagning i en burgarbiff är minimal — den tunna geometrin avger värme snabbt när den tas från grillen — men genuint carryover sker i tjockare restaurangformats-biffar, vilket gör det lämpligt att ta av från grillen något innan slutmålet.
@@ -50,8 +49,6 @@ Köttburgare är formade biffar av malet nötkött, vanligast från en blandning
 - [Pan Fry](./beef_burger-pan_fry.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -61,9 +58,9 @@ Köttburgare är formade biffar av malet nötkött, vanligast från en blandning
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−1** · Missing method leaf file — create `beef_burger-charcoal_grill.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
-3. **−1** · Method file `beef_burger-grill.md` copies parent cut profile — rewrite `beef_burger-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Missing method leaf file — create `beef_burger-charcoal_grill.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
+3. Method file `beef_burger-grill.md` copies parent cut profile — rewrite `beef_burger-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

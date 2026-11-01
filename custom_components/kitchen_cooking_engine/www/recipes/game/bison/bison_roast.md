@@ -79,7 +79,6 @@ juices. A mozzarella-mustard herb crust, applied before the oven phase, is a dis
 German preparation that acts as an insulating layer and baste, partially compensating for
 the low fat content.
 
-
 65–68 °C for a roast compared to around 63 °C for a steak.
 but agree on a pull temperature of approximately 60–63 °C (medium). The high-heat tradition
 (200 °C, 45–60 minutes for a 1 kg joint) produces a crisper exterior but requires careful
@@ -87,7 +86,6 @@ attention because the meat approaches the pull temperature quickly. The low-heat
 (80–90 °C, 90–120 minutes) relies on the oven temperature being close to the desired internal
 not a braise candidate: the collagen content is insufficient to benefit from the 85–95 °C
 ruined at those temperatures. The correct window is medium (60–65 °C), where the muscle is
-
 
 ## Styckesprofil
 
@@ -100,8 +98,6 @@ Nyckeln: låg ugnstemperatur (max 135 °C), fuktskyddande marinad eller pensling
 - [Oven Roast](./bison_roast-oven_roast.md)
 ## Improvement potential
 
-**Improvement potential: 9 / 20** — assessed 2026-04-26
-
 | Criterion | Points |
 |-----------|----------|
 | Cooking methods not researched | −8 |
@@ -111,7 +107,7 @@ Nyckeln: låg ugnstemperatur (max 135 °C), fuktskyddande marinad eller pensling
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−3** · Missing Culinary Group A, Culinary Group C and Culinary Group D tradition(s) — add Culinary Group A, Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. Missing Culinary Group A, Culinary Group C and Culinary Group D tradition(s) — add Culinary Group A, Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*
