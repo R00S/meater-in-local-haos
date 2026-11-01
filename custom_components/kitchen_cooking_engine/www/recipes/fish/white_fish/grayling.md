@@ -35,9 +35,9 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-improvement_potential: 1774
+improvement_potential: 1702
 cooking_methods_researched: 1
-quality_assessed: 2026-10-23
+quality_assessed: 2026-11-01
 rest_time_min: 0
 rest_time_max: 2
 carryover_temp_c: 2
@@ -56,24 +56,46 @@ Harr (*Thymallus thymallus*; tyska: Äsche; franska: ombre commun; finska: harju
 
 - [Pan Fry](./grayling-pan_fry.md) — 6 fetched sources (AT/DE ×2 = Group B; SE×2/RU/PL = Group D); no source states a pull temperature; Groups A and C absent, and the Polish source states neither timings nor quantities.
 - [Grill](./grayling-grill.md) — 2 fetched sources (UK/SE); no stated pull temperatures.
-- [Smoker](./grayling-smoker.md) — 1 fetched source (UK); explicit 55 °C core pull.
+- [Smoker](./grayling-smoker.md) — 2 fetched sources (UK Group B, numeric 55 °C core; RU Group D, non-numeric).
 - [Oven Bake](./grayling-oven_bake.md) — 4 fetched sources (SE×2/RU = Group D, UK = Group B); oven settings and times only, no internal target.
 - [Boil](./grayling-boil.md) — 2 fetched sources (SE×2); qualitative endpoints only.
-- [Poach](./grayling-poach.md) — 1 fetched source (SE); qualitative endpoint only.
+- [Poach](./grayling-poach.md) — 2 fetched sources (SE×2, Group D); one states 55 °C, one qualitative.
 
-All six declared methods now have a leaf file. Two leaves (`pan_fry`, `oven_bake`) meet the 4–6-source count but no leaf yet meets the four-distinct-tradition gate, so every leaf still carries an explicit partial-research marker. Groups A and C remain absent from the whole cut.
+All six declared methods now have a leaf file. Two leaves (`pan_fry`, `oven_bake`) meet the 4–6-source count but no leaf yet meets the four-distinct-tradition gate, so every leaf still carries an explicit partial-research marker. Groups A and C remain absent from the whole cut — a finding with in-language searches behind it in every leaf.
 
 ## Improvement potential
 
-1774
+**1702** — rated 2026-11-01 against `IMPROVEMENT_POTENTIAL_SYSTEM.md`. The 0–20 reading is discarded.
 
-_Sources were added on 2026-11-01 (`pan_fry` 4 → 6, `oven_bake` 3 → 4) without a new reading. The number is a reading of finished work and no leaf here is finished — all six are still below the four-distinct-tradition gate — so a re-rating now would mix two accounting bases rather than measure anything. The next reading is owed when a leaf clears the gate._
+| Row | Applied | Deduction |
+|---|---|---|
+| The cut file itself | 1 cut file | 128 |
+| Finished leaves | none — all six carry `⚠️ PARTIAL RESEARCH` | 0 |
+| Stub leaves | all six | 6 × 8 = 48 |
+| Recipes in the cut file | none in this file | 0 |
+| Recipes in leaves | pan_fry 6 · oven_bake 4 · grill 2 · boil 2 · poach 2 · smoker 2 = 18 | 544 |
+| Culinary groups per leaf | pan_fry 2 · grill 2 · oven_bake 2 · boil 1 · poach 1 · smoker 2 = 10 | 320 |
+| Culinary preferred temperatures for the cut | 55 °C is the endpoint both the poach and the smoker sources state, against a 63 °C safe line | 64 |
+| Safe temperatures | `usda_safe_c` 63, discussed explicitly in the smoker consensus | 32 |
+| Behaviour/fat-render reasoning for the cut | the English profile names one temperature (65 °C) and the Swedish one names none; neither reasons across temperatures nor states that no data exists | 0 |
+| Leaf behaviour rows, English | boil and poach state explicitly that no source quantifies carryover; the other four neither reason across temperatures nor declare an absence | 2 × 32 = 64 |
+| Leaf behaviour rows, Swedish | grill and smoker state the absence in Swedish | 2 × 32 = 64 |
+| Leaf method-and-tradition description | English in all six; Swedish in grill, oven_bake, pan_fry and smoker — boil and poach carry no Swedish profile | 10 × 32 = 320 |
+| Leaf method-specific preferred temperatures | poach and smoker carry a source-derived band with reasoning; the other four hold only appliance settings or nothing | 2 × 32 = 64 |
+| **Total** | | **1 648** |
+| **Reading** | 3350 − 1 648 | **1702** |
+
+The recipe row is tiered, because this is a fish and the threshold is 4 rather than 8: pan_fry's six recipes take four at the full 32 and two at half, 160 rather than 192. Its two groups and every other leaf's counts sit inside the threshold and are not tiered.
+
+**What moved since the last reading.** `smoker` gained a second source — a Russian fishing-club field account from Krasnoyarsk that salts, air-dries for a day and hot-smokes this exact fish over aspen shavings, judging doneness by the dorsal fin. It is Group D, which the leaf lacked, and non-numeric, so it is stored as a comparator and the range still rests on the single UK source. Two candidates were rejected and are logged in the leaf rather than quietly dropped: one page declares its own origin as AI-generated and so is not human-created, and a German public-broadcaster smoking guide that never mentions Äsche and explicitly advises against smoking lean fish.
+
+**Why the reading barely moved.** Adding a source that no leaf can turn into a finished leaf changes very little under this system, and that is the honest result: the number is dominated by the six stub reductions and by a corpus in which no leaf can clear the four-distinct-tradition gate. Groups A and C are absent from every leaf — a finding that now has in-language searches behind it in pan_fry, oven_bake, grill, boil, poach and smoker, which is what separates a documented wall from an unverified assumption.
 
 ### Improvement priorities
 
-1. Bring each partial leaf to the 4–6-source, four-distinct-tradition collection gate — starting with `grayling-smoker.md` (1 source) and `grayling-poach.md` (1 source).
-2. Replace one of the two Swedish sources in `grayling-pan_fry.md` with a distinct tradition, or add a 5th source from a new tradition.
-3. Culinary Group A — search Japanese/Chinese/Korean sources for grayling (*harr* / *Thymallus thymallus*) preparations; add any verified recipe to a leaf.
-4. Culinary Group C — search Turkish/Persian/Arabic sources for grayling preparations; add any verified recipe to a leaf.
+1. **Four leaves sit at two sources each** — `grill`, `boil`, `poach` and `smoker` — and each needs two more from traditions it does not hold. `pan_fry` (6) and `oven_bake` (4) have the count but not the diversity, so adding to them first buys the least.
+2. **`grayling-pan_fry.md` holds two Swedish sources.** Replace one with a distinct tradition, or add a fifth source from a new one; the count gate is met and the diversity gate is not.
+3. **Culinary Group A** — absent from every leaf, with in-language searches already logged in pan_fry, oven_bake, grill, boil, poach and smoker. *Thymallus thymallus* is a European river fish, so this may be a structural wall rather than a work gap; that claim would need a demonstrated search in Japanese, Chinese and Korean for *harr*/grayling before it could be proposed as an exception, and an exception needs the user's approval.
+4. **Culinary Group C** — absent from every leaf for the same reason, with the same evidence owed: an in-language search across Turkish, Persian and Arabic sources for grayling preparations before any wall is claimed.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

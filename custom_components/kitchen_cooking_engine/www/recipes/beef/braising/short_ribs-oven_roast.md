@@ -167,6 +167,26 @@ fibrer som avgör mörheten.
 
 ---
 
+### 6. 骨付き牛カルビのオーブン焼き (inspired by ちっと, Cookpad Japan)
+**Inspired by**: https://cookpad.com/jp/recipes/18176958 (fetched 2026-11-01; Japanese home cooking, Group A; published 2011-12-19)
+**Serves**: 4 · **Prep**: 5 min · **Cook**: 1 hr · **Rest**: not stated
+
+**Ingredients**
+- 2–3 kg (4.4–6.6 lb) bone-in beef short ribs, cross-cut (骨付きカルビ; the author specifies US-imported)
+- 18 g (1 tbsp) salt, rubbed in generously
+- 2 lemons
+- 5 small red onions (紫玉ねぎ)
+
+**Method**
+1. Pack the ribs snugly on a roasting tray and rub the salt over all of them. The author's own instruction is to season until it reads as "slightly too salty".
+2. Halve the lemons and squeeze them hard over the meat. Discard the seeds — the source warns they bring bitterness.
+3. Tuck the red onions and the squeezed lemon peels into the gaps between the ribs.
+4. Cover the tray with aluminium foil and roast in an oven preheated to about 200 °C for 1 hour, turning the ribs once partway through.
+5. **Pull temperature: not stated by source.** Doneness is judged by cutting a piece off and eating it, and the source's own tip is that the time changes a great deal with thickness — the ribs used here were about 5 cm thick.
+6. Final serving temperature: **not stated by source**.
+
+---
+
 ## Temperature consensus
 
 | Tradition | Source | Oven | Published internal target | Oven-to-plate strategy |
@@ -176,12 +196,13 @@ fibrer som avgör mörheten.
 | German | Die Frau am Grill | 120 °C | **90 °C (194 °F)** | roast on rack, glazed at 120 °C |
 | Ukrainian | NV.ua | 140 °C | **≥90 °C (194 °F)**; 87 °C named as collagen melt point | sauce layers, 30-minute finish |
 | Italian | Smeg | 135 °C → 250 °C | none published | baking-paper cover, turbo finish |
+| Japanese | ちっと / Cookpad Japan | ~200 °C, covered | none published | foil-covered roast, single turn, 1 h |
 
-Four of the five sources are Group B (US ×2, German, Italian) and one is Group D (Ukrainian); nothing in
-the fetched set is Group A or Group C, and the US pair is the same tradition twice. **This leaf is
-therefore below the distinct-tradition gate and is marked partial rather than conformant** — the numbers
-are solid, the diversity is not. The obvious missing records are a Korean oven galbi (a real oven method,
-found but not yet written up as `oven_broil`) and a Chinese *hongshao niurou* oven variant.
+Five of the six sources are Group B (US ×2, German, Italian), one is Group D (Ukrainian) and — since the
+Japanese record was added 2026-11-01 — one is Group A. **This leaf remains below the distinct-tradition
+gate and stays marked partial rather than conformant**, for a reason worth naming precisely: the US pair is
+the same tradition twice, and the Japanese source is non-numeric, so it widens the diversity without
+widening the range. The obvious missing record is a Chinese oven rib, and Group C is absent entirely.
 
 The published numbers cluster tightly at **90–96 °C (194–205 °F)** — the same band as the braise leaf,
 which is the useful finding of this pass: the method changes the oven air temperature by 15–100 °C and the
@@ -198,12 +219,13 @@ built separately, because there is no liquid for the meat to exchange with.
 
 ## Summary
 
-Five oven-roasted short rib records were fetched: two American, one German, one Ukrainian and one Italian.
-Four publish an internal temperature and all four land at 90–96 °C, identical to the braise leaf's band, and
-one of them states the 87 °C collagen-melt point explicitly. Two publish no number and judge by time. The
-leaf is marked partial because four of the five records are Group B and two of those are the same tradition.
+Six oven-roasted short rib records were fetched: two American, one German, one Ukrainian, one Italian and one
+Japanese. Four publish an internal temperature and all four land at 90–96 °C, identical to the braise leaf's
+band, and one of them states the 87 °C collagen-melt point explicitly. The Japanese record states none and
+judges doneness by cutting a piece off and eating it. The leaf is marked partial because the two American
+records are the same tradition twice — the one gate the six sources still cannot clear.
 
-> ⚠️ **PARTIAL RESEARCH — DOES NOT FULLY CONFORM TO TOR.** Five sources, four with numbers, but the
-> distinct-tradition gate is not met: US ×2, German, Italian (Group B) plus one Ukrainian (Group D), with no
-> Group A or Group C record. Naming the gap is the point; padding the leaf with a sixth American blog would
-> not close it.
+> ⚠️ **PARTIAL RESEARCH — DOES NOT FULLY CONFORM TO TOR.** Six sources, four with numbers, but the
+> distinct-tradition gate is not met: US ×2, German, Italian (Group B), Ukrainian (Group D) and Japanese
+> (Group A) leave one duplicate tradition standing and no Group C record at all. Naming the gap is the
+> point; padding the leaf with a third American blog would not close it.

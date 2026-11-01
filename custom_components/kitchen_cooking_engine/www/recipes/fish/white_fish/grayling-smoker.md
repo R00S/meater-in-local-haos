@@ -43,6 +43,28 @@ Europeisk harr (*Thymallus thymallus*) är en mager, ömtålig flodlaxfisk. Det 
 
 ---
 
+### 2. Копчение хариуса (inspired by Рыболовный клуб «Тугун», Красноярск)
+**Inspired by**: https://www.bylkov.ru/publ/20-1-0-698 (fetched 2026-11-01; Russian fishing-club field account, Group D; non-numeric)
+**Serves**: not stated — the batch described is 12–16 fish · **Prep**: salting 8–10 h or overnight, then air-drying about a day · **Cook**: about 1 h in the smoker · **Rest**: 10 min in the smoker, then cooling on parchment
+
+**Ingredients**
+- Whole medium grayling (хариус), about 200 g each; 12–16 per load — the source's own sizing
+- Coarse salt, enough to rub inside each fish (about one portion for a 200 g fish; double for a large one)
+- Aspen shavings (осиновая стружка) for the smoke, with thin apple, plum, bird-cherry, willow or juniper branches as optional additions
+- No other seasoning is given; the source names no sugar, spice or brine
+
+**Method**
+1. Gut and rinse the fish, let the water drain, then rub the inside with coarse salt.
+2. Cure in a cool place 8–10 hours, or overnight. The source's field note: in summer, gut and salt at least once every two hours on the water, keep the fish cold, do not rinse between saltings, and always rinse when the cure ends.
+3. Air-dry the fish, ideally in a breezy spot under gauze, about a day — eight hours is enough to dry it well.
+4. Load the smoker: stones on the bottom for airflow, shavings pressed down, a drip tray, the lower rack with fish on long hooks and an upper rack on short hooks.
+5. Close the lid and light the gas. The source warns against too much flame — the fish would bake rather than smoke. Thirty minutes in, open the lid: if it is full of smoke and steam the process is running; let the pressure escape five seconds and close again.
+6. Check after another half hour. The source judges doneness by eye, or by pulling the dorsal fin — if it separates easily the fish is done. **Pull temperature: not stated by source.**
+7. Switch off the heat, let the fish cool in the smoker ten minutes, then lift the racks out, transfer to parchment and cool completely before wrapping and refrigerating.
+8. Final serving temperature: **not stated by source**.
+
+---
+
 ## Temperature consensus
 
 | Source | Stated doneness evidence | Internal/pull temperature |
@@ -50,6 +72,21 @@ Europeisk harr (*Thymallus thymallus*) är en mager, ömtålig flodlaxfisk. Det 
 | Chef Phil Yeomans / Andrej Cooks Fish | Smoked on cedar plank at 200–250 °C for about 5 min | Core 55 °C stated |
 
 Only one directly fetched recipe source is available for this method. It supplies an explicit core temperature of 55 °C (131 °F), which sits below the USDA safe internal temperature of 63 °C (145 °F) recorded for fish — a divergence worth recording rather than resolving, since the source is a professional chef's stated endpoint. One source cannot satisfy the required 4–6 recipes from distinct culinary traditions, so no `recommended_doneness` key follows from this leaf alone.
+
+The second source, added 2026-11-01, is the Russian field account above: a full salt-then-dry-then-smoke procedure for this exact fish, but it publishes no temperature and judges doneness by the dorsal fin and by eye. It is therefore stored as a comparator, not folded into the range — the table above still rests on the single numeric UK source, and the leaf stays at two sources of the required four to six.
+
+### Non-numeric comparators
+
+| Source | Stated doneness evidence | Internal/pull temperature |
+|---|---|---|
+| Рыболовный клуб «Тугун» (Russia) | Dorsal fin separates easily; judged by eye after about 30 min of smoke | not stated by source |
+
+### Collection status and search log (2026-11-01)
+
+- **Have:** 2 fetched sources — UK (chef, numeric 55 °C) and Russia (field account, non-numeric). Numeric: 1. Both collection and analysis gates remain open; the leaf needs four to six sources and three numeric ones.
+- **Rejected candidate, logged rather than used:** stalkerfish.com, «Хариус горячего копчения» — the page itself links its origin as «Рецепт от ИИ Chat GPT». A source that declares itself AI-generated is not human-created and fails source selection outright; it was not saved as a recipe.
+- **Rejected candidate, wrong cut:** ndr.de «Fisch räuchern im Tischräucherofen» — a general public-broadcaster guide that names trout, char, salmon, eel, herring, mackerel, plaice and flatfish, and explicitly advises against smoking lean fish such as perch and zander. It never mentions Äsche, so it does not use this method for this cut.
+- **Searched:** Russian (хариус горячего копчения) — found the two pages above; German (Äsche räuchern Tischräucherofen) — trout-focused results only; both searches run in-language per `RECIPE_COLLECTION_TOR.md`.
 
 ## What makes this method special
 

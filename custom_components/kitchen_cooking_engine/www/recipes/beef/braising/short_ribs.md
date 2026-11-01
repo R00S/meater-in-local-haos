@@ -26,7 +26,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-improvement_potential: 1319
+improvement_potential: 1287
 cooking_methods_researched: 1
 quality_assessed: 2026-11-01
 rest_time_min: 10
@@ -56,40 +56,46 @@ Koreanska revbensspjällstillagningar (galbi-jjim för brässering, galbi för g
 | Method | Leaf file | Status |
 |--------|-----------|--------|
 | Braise | [short_ribs-braise.md](./short_ribs-braise.md) | ✅ Complete — 5 recipes, CONFORMS TO TOR (2026-04-27) |
-| Oven roast | [short_ribs-oven_roast.md](./short_ribs-oven_roast.md) | ⚠️ Partial — 5 records, 4 with numbers, **distinct-tradition gate not met** (2026-10-27) |
+| Oven roast | [short_ribs-oven_roast.md](./short_ribs-oven_roast.md) | ⚠️ Partial — 6 records, 4 with numbers, Groups A/B/D, **distinct-tradition gate not met** (2026-11-01) |
 | Oven broil | [short_ribs-oven_broil.md](./short_ribs-oven_broil.md) | ⚠️ Partial — 3 sources (A: Chinese, Korean; B: American), **distinct-tradition gate not met**, no source states an internal temperature (2026-11-01) |
 | Slow cooker | [short_ribs-slow_cooker.md](./short_ribs-slow_cooker.md) | ✅ Collection gate met — 5 sources (A ×2, B, C, D), no source states an internal temperature (2026-11-01) |
 | Smoker | [short_ribs-smoker.md](./short_ribs-smoker.md) | ⚠️ Partial — 5 recipes (B/B/C/D), Group A missing, 3 numeric endpoints (2026-11-01) |
 
 ## Improvement potential
 
-1319
-
-### Reading, 2026-11-01 (base 3455, threshold 8, meat)
+**1287** — rated 2026-11-01 against `IMPROVEMENT_POTENTIAL_SYSTEM.md`. The 0–20 reading is discarded.
 
 | Row | Applied | Deduction |
 |---|---|---|
 | The cut file itself | 1 cut file | 128 |
-| Finished leaves | `braise`, `slow_cooker` | 2 × 96 = 192 |
+| Finished leaves | `braise`, `slow_cooker` — both `✅ CONFORMS` | 2 × 96 = 192 |
 | Leaves collected but not finished | `oven_roast`, `oven_broil`, `smoker` | 3 × 8 = 24 |
 | Recipes in the cut file | none in this file | 0 |
-| Recipes in leaves (32 each + 32 per culinary group per leaf) | braise 5 / 3 groups = 256 · slow_cooker 5 / 4 = 288 · smoker 5 / 3 = 256 · oven_roast 5 / 2 = 224 · oven_broil 3 / 2 = 160 | 1184 |
-| Culinary preferred temperatures for the cut | `pulled` block | 64 |
+| Recipes in leaves | braise 5 · slow_cooker 5 · smoker 5 · oven_roast 6 · oven_broil 3 = 24 | 24 × 32 = 768 |
+| Culinary groups per leaf | braise 3 (A/B/D) · slow_cooker 4 (A/B/C/D) · smoker 3 (B/C/D) · oven_roast 3 (A/B/D) · oven_broil 2 (A/B) = 15 | 15 × 32 = 480 |
+| Culinary preferred temperatures for the cut | `pulled` 88–96, target 93 — corroborated by three leaf consensuses | 64 |
 | Safe temperatures | `usda_safe_c` 63 | 32 |
-| Leaf behaviour/fat-render reasoning, per language | braise, slow_cooker, oven_broil, smoker × EN + SV | 256 |
-| Leaf method-and-tradition description, per leaf per language | same four leaves × EN + SV | 256 |
-| Behaviour/fat-render reasoning for the cut itself | the cut profile mentions collagen and fat but reasons about no temperature, in either language | 0 |
-| Method-specific preferred temperatures per leaf | no leaf states one this pass; the slow-cooker and broiler leaves found none in their sources | 0 |
-| **Total** | | **2136** |
-| **Reading** | 3455 − 2136 | **1319** |
+| Behaviour/fat-render reasoning for the cut | the cut profile names collagen and fat but reasons about no temperature in either language | 0 |
+| Leaf behaviour rows, English | braise, oven_roast, slow_cooker, smoker — `oven_broil` states neither multiple temperatures nor an absence | 4 × 32 = 128 |
+| Leaf behaviour rows, Swedish | same four leaves | 4 × 32 = 128 |
+| Leaf method-and-tradition description | English only, in braise, oven_broil, slow_cooker, smoker; no Swedish profile names a tradition and `smoker` has no such section at all | 4 × 32 = 128 |
+| Leaf method-specific preferred temperatures | braise, oven_roast, smoker carry a source-derived consensus band and the reasoning behind it, in English only | 3 × 32 = 96 |
+| **Total** | | **2 168** |
+| **Reading** | 3455 − 2 168 | **1287** |
 
-Two rows were counted conservatively and are worth naming: `oven_roast` is credited with only the two culinary groups verified by reading it this pass (B, D), and its own profile and behaviour rows are not credited at all because this pass did not audit them.
+Every count stays inside the threshold of 8, so no tiering applies anywhere in this reading.
+
+**What moved since the last reading.** `oven_roast` gained a sixth source this session — 骨付き牛カルビのオーブン焼き, a Japanese home-cooking record (Cookpad Japan, fetched 2026-11-01) that roasts 2–3 kg of cross-cut bone-in ribs covered in foil at about 200 °C for an hour, turning once, and judges doneness by cutting a piece off and eating it. It is non-numeric, so it is stored with both temperature lines marked `not stated by source` and does not widen the range; it does carry Group A, which the leaf had no record of, and it takes the leaf from five sources to six.
+
+**What that did not change.** The leaf stays partial for a reason worth stating precisely: the two American records are the same tradition twice, and the distinct-tradition gate is a gate — it is passed or not passed. Adding a seventh record from another Group B kitchen would not close it; a Chinese oven rib would, and Group C is absent from the whole leaf.
+
+**Where the remaining 1287 sits.** Three leaves are one gate away rather than many: `smoker` needs a Group A record, `oven_roast` needs a non-American Group B tradition or a Group C one, and `oven_broil` holds only three sources in total. None of the three can reach their gates by adding more of what they already have.
 
 ### Improvement priorities
 
-1. **`oven_broil` coverage** — three sources across two groups is the thinnest leaf in the cut. A Japanese, Korean or Chinese *thick*-cut broil/grill recipe would add a third group; the current Chinese and Korean sources are both Group A.
-2. **Group A for `smoker`** — still absent. 만개의레시피 and similar Korean recipe sites remain the place to look; the existing negative is a search result, not a wall.
-3. **`oven_roast` diversity and audit** — a Japanese Cookpad source was fetched this pass (`骨付き牛カルビのオーブン焼き`, 200 °C covered 1 h, salt/lemon/red onion) and is Group A, but it has not been written into the leaf yet; doing so would lift that leaf's group count and let its profile rows be credited.
-4. **Braise leaf** — it conforms, but the smoker band (93–98 °C) has still not been compared with the braise band (88–94 °C) and the disagreement recorded.
+1. **`oven_broil` coverage** — three sources across two groups remains the thinnest leaf in the cut, and it is now the only one that cannot reach four groups by adding a single record: it needs both a second Group B tradition and a Group C one. The Chinese and Korean records are both Group A.
+2. **Group A for `smoker`** — still absent, and this is now the leaf's only gate: it holds five sources, three groups and three numeric endpoints, so one East Asian record closes it. 만개의레시피 and similar Korean recipe sites remain the place to look; the existing negative is a search result, not a wall.
+3. **`oven_roast` needs a tradition it does not have** — six sources now, with the Japanese record written in on 2026-11-01, but the two American records are one tradition counted twice. A Chinese oven rib would clear the distinct-tradition gate; a seventh Group B record would not.
+4. **Braise versus smoker band** — `braise` conforms, but the smoker band (93–98 °C) has still not been compared with the braise band (88–94 °C) and the disagreement recorded. Both leaves already hold the numbers; only the comparison is owed.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*
