@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 1 Nov 2026
-Last Change: v0.10.3.1 - improvement potential system clarified (base/threshold reading, per-leaf thresholds, leaf-scoped description row, per-language deductions, temperature reasoning required for the behaviour rows); fourteen cut files re-rated from scratch under the locked rules
+Last Change: v0.10.3.2 - research files no longer reference the deleted cooking_data.py
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -17,7 +17,7 @@ SUPPORTED_LANGUAGES = ("en", "sv", "da")
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "686"
+PANEL_VERSION = "687"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

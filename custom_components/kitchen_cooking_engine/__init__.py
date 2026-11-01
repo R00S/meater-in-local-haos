@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 1 Nov 2026
-Last Change: v0.10.3.1 - improvement potential system clarified (base/threshold reading, per-leaf thresholds, leaf-scoped description row, per-language deductions, temperature reasoning required for the behaviour rows); fourteen cut files re-rated from scratch under the locked rules
+Last Change: v0.10.3.2 - research files no longer reference the deleted cooking_data.py
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -170,11 +170,11 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
 
 # ⚠️ VERSION — must match in ALL 3 locations on every release:
 #   1. manifest.json        → "version": "..."
-#   2. HERE (__init__.py)    → __version__ = "0.10.3.1"
+#   2. HERE (__init__.py)    → __version__ = "0.10.3.2"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.10.3.1"
+__version__ = "0.10.3.2"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
