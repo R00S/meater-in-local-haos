@@ -9,9 +9,9 @@ cut_type: Ribs
 -->
 # Tjocka Revben × Smoke — Recipe Temperature Research
 
-> ⚠️ **STATUS: COLLECTION INCOMPLETE — 3 documented sources, not all fully collected; the ToR gate requires 4–6 before analysis**
+> ⚠️ **STATUS: COLLECTION INCOMPLETE — 5 documented sources; all four culinary groups are now represented, but endpoint coverage is uneven**
 >
-> The collection phase for this leaf has **3** fetched sources (SE, AU, US), including comparisons whose exact cut identity and endpoint fields are not established. Per `RECIPE_ANALYSIS_TOR.md`,
+> The collection phase for this leaf has **5** fetched sources (Swedish, Australian, American, Indian, Levantine-spiced), including comparisons whose exact cut identity is not established. Per `RECIPE_ANALYSIS_TOR.md`,
 > the Temperature consensus, Data applied and Summary sections are withheld until the 4–6 gate is met.
 > The search log below records which further traditions were attempted this session. This is unfinished
 > research, not a wall: the missing sources are agent work owed on this cut.
@@ -113,10 +113,54 @@ den svenska källan vilar30 minuter.
 
 ---
 
+### 4. Indian (Usha's Kitchen, Usha Martin) — Indian spiced ribs, 2:2:1 method
+**Inspired by**: Usha's Kitchen; https://ushaskitchen.com/recipe/indian-spiced-baby-back-ribs/ (read 2026-11-01). *An Indian-spiced dry rub and tamarind barbecue sauce cooked by the 2:2:1 method; the source states a 190 °F internal target, which is high for baby backs and matches a thick, meaty rack rather than a lean one.*
+**Serves**: 6 · **Prep**: 20 min · **Cook**: 5 h · **Rest**: yes, unspecified
+
+**Ingredients**
+- 6 lb baby back pork ribs
+- 4 tbsp Curry Starter (*the author's spice paste*); 1 tbsp olive oil, as binder
+- 2 tbsp Keema Spice Blend, for the rub; olive oil spray
+- **Sauce**: 2 tbsp Keema Spice Blend; ¼ cup water; 2 tbsp tomato paste; 1 tbsp tamarind concentrate; 1 tbsp butter; ¼ cup dark brown sugar; ¾ cup water
+
+**Method**
+1. Blend the Curry Starter with the olive oil to a smooth binder; set half aside for the sauce.
+2. Build the sauce: fry the remaining starter with the spice blend, add ¼ cup water and simmer until it separates, then the tomato paste, tamarind, butter, sugar and ¾ cup water; simmer to thickness.
+3. Apply the binder, then a light coat of the rub.
+4. Cook at **250 °F** by 2:2:1 — 2 hours uncovered over indirect heat with a moisture pan, 2 hours wrapped in foil, 1 hour at **225 °F** brushed with the sauce.
+5. Insert the MEATER probe from the side into the thickest part of the rack, away from bone, once the rub has set.
+6. **Pull at 190 °F (88 °C)** — the source's stated internal temperature, with the meat pulling easily from the bone.
+7. Final serving temperature: **not stated by source** — rest before slicing.
+
+---
+
+### 5. Levantine-spiced (Hark BBQ, Alana Alderson) — Middle Eastern pork ribs with pomegranate BBQ sauce
+**Inspired by**: Hark BBQ; https://harkbbq.com/blogs/recipes/middle-eastern-pork-ribs-with-pomegranate-bbq-sauce (read 2026-11-01). *Aleppo pepper, sumac and pomegranate molasses on an offset smoker; the only Group C source found that states two internal checkpoints.*
+**Serves**: 4 · **Prep**: 20 min · **Cook**: 4–6 h · **Rest**: a few minutes
+
+**Ingredients**
+- 1 rack pork ribs
+- **Rub**: 2 tbsp brown sugar; 1½ tbsp each ground coriander, ground cumin and Aleppo pepper; 1½ tsp kosher salt; ½ tsp each ground cinnamon, ground fennel and black pepper
+- **Sauce**: 90 g tomato paste; 3 tbsp blackstrap molasses; 2 tsp paprika; 2 tbsp olive oil; 2 sprigs thyme; ½ cup pomegranate molasses; ¼ cup brown sugar; 1 tbsp each garlic and onion powder; 1 tbsp sumac; 1 tbsp sea salt; 1 bay leaf; 1 cinnamon stick; ½ cup pomegranate juice; ½ tbsp Aleppo pepper
+- Butter and honey, for the wrap
+
+**Method**
+1. Bring an offset smoker to a steady **250 °F (121 °C)**.
+2. Remove the membrane from the bone side, brush with olive oil and apply the rub; rest 15–20 minutes until the surface looks wet.
+3. Smoke bone side down **3–4 hours**, until the internal temperature is about **165 °F (74 °C)**.
+4. Wrap in two sheets of foil with butter and honey; return to the smoker **1–2 hours**, until **195–205 °F (90–96 °C)**.
+5. Probe from the side into the thickest meat, away from bone, at each checkpoint; the source gives both numbers explicitly.
+6. **Pull at 195–205 °F (90–96 °C)** — the source's stated finishing window.
+7. Final serving temperature: **not stated by source** — rest briefly, slice between the bones, glaze every 10 minutes over the last 30 minutes.
+
+---
+
+
 ## Collection status and search log
 
-**Have:** 3 fetched sources (not all meet numeric endpoint requirements) — Swedish (Grilltips, cut-exact), Australian (Papi Chulo via Gourmet
-Traveller), American (Meathead). **Need:** at least one further tradition to meet the 4–6 gate.
+**Have:** 5 fetched sources — Swedish (Grilltips, cut-exact, D), Australian (Papi Chulo, B), American (Meathead, B), Indian (Usha's Kitchen, A)
+and Levantine-spiced (Hark BBQ, C). Numeric endpoints exist for the Swedish (90–95 °C), American (93 °C), Indian (190 °F) and Levantine
+(165 °F then 195–205 °F) sources; the Australian source is time-and-texture only. Groups A–D are now all present.
 
 Traditions attempted this session and why they failed (recorded so the next pass does not repeat the
 dead ends):
@@ -134,4 +178,5 @@ The Swedish cut page (Svenskt Kött) lists **Röka** (smoke) among the official 
 tjocka revben, so the method is confirmed for the cut; what is missing is fetched recipe corpus from
 a fourth tradition. No analysis is written until that collection gap is closed.
 
-> ⚠️ **COLLECTION INCOMPLETE — 3 of 4–6 sources. Analysis sections withheld per ToR gate.**
+> ⚠️ **COLLECTION INCOMPLETE — 4 of 5 sources carry a numeric endpoint, but the Australian chef source does not and the leaf therefore still fails the
+> all-sources-collected reading of the gate. Analysis sections remain withheld pending a decision on how to treat a non-numeric comparator.

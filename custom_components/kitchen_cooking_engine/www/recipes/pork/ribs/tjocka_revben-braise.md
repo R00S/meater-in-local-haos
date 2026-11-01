@@ -104,6 +104,30 @@ Braising cooks pork ribs in liquid in a covered vessel. Related rib recipes belo
 
 ---
 
+### 5. Kenyan (Healthy Living Kenya, "kahonge") — Beer-braised BBQ pork ribs
+**Inspired by**: Healthy Living Kenya; https://healthylivingkenya.wordpress.com/2014/12/24/beer-braised-bbq-pork-ribs/ (read 2026-11-01). *Spare ribs seared with cumin and brown sugar, deglazed with beer and braised two hours in a pot or at 180 °C; served with ugali and sukuma wiki. No internal temperature is stated.*
+**Serves**: not stated · **Prep**: season hours ahead, up to a day · **Cook**: 2 h · **Rest**: not stated
+
+**Ingredients**
+- About 1 kg pork spare ribs
+- ¼ tsp salt; about 4 grinds black pepper; 1 tbsp ground cumin; 1 tbsp brown sugar; 1 tbsp crushed garlic; 1 tbsp finely chopped red onion
+- 2 tbsp coconut oil; 2 tbsp chopped tomato; 1 cup beer
+- 1 bunch dania (*coriander*); 1 green bell pepper; stock or water
+- **Sauce**: 1 tsp crushed garlic; 2 tbsp chopped dania; 2 tbsp chopped tomato; ¼ cup ketchup; a few dashes soy sauce; a few dashes Worcestershire sauce; about 4 tbsp honey
+
+**Method**
+1. Season the ribs hours before cooking, preferably the day before, with salt, pepper, cumin and brown sugar.
+2. Bring the ribs to room temperature for about an hour. Heat the coconut oil in a heavy pot and sear the meat about 4 minutes per side.
+3. Brown the garlic, ginger, dania stalks, tomato, onion and chilli; add the beer and deglaze, boiling about 5 minutes until reduced by half.
+4. Add stock or water, then the pork, and cook **2 hours on low heat, or in the oven at 180 °C**.
+5. Insert the MEATER probe from the side into the thickest rib, away from bone, before the long cook; the source gives no target temperature.
+6. Simmer the sauce ingredients about 10 minutes, using some of the rib cooking liquid to loosen it.
+7. **Pull temperature: not stated by source** — doneness is by the two-hour braise and texture.
+8. Final serving temperature: **not stated by source** — slather the ribs with the sauce or serve it alongside, with ugali and sukuma wiki.
+
+---
+
+
 ## Collection status and search log
 
-> ⚠️ **COLLECTION INCOMPLETE — analysis withheld.** Four attributed recipes are preserved above, but one or more do not state the numerical pull and final serving temperatures required for the ToR collection gate. Earlier analysis and the conformance marker were removed because they treated estimated targets as completed source data. Several non-Swedish sources specify generic spare ribs, not the precise Swedish front cutting line; they are useful comparisons, not proven exact equivalents. Recheck the cut and complete source-specific endpoints before analysis.
+> ⚠️ **COLLECTION INCOMPLETE — analysis withheld.** Five attributed recipes are preserved above and all four culinary groups are present (Chinese = A, Italian and Mexican = B, Polish = D, Kenyan = C). None of the five states a numeric internal temperature: every one ends on a time-and-texture cue. Since the collection gate requires source-stated numeric endpoints, no consensus or summary is written, and adding numbers here would be invention.

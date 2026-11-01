@@ -9,9 +9,9 @@ cut_type: Ribs
 -->
 # Tjocka Revben × Slow Cooker — Recipe Temperature Research
 
-> ⚠️ **STATUS: COLLECTION INCOMPLETE — 2 documented sources, neither fully satisfies the ToR gate; 4–6 are required before analysis**
+> ⚠️ **STATUS: COLLECTION INCOMPLETE — 3 documented sources; Groups A, B and D present, Group C still missing, no source states an internal temperature**
 >
-> The collection phase for this leaf has **2** fetched sources (UK and SE). Per `RECIPE_ANALYSIS_TOR.md`,
+> The collection phase for this leaf has **3** fetched sources (British, Swedish, Chinese-tradition). Per `RECIPE_ANALYSIS_TOR.md`,
 > the Temperature consensus, Data applied and Summary sections are withheld until the 4–6 gate is
 > met. This is unfinished research, not a wall: the missing sources are agent work owed on this cut.
 
@@ -60,9 +60,29 @@ Slow cooking applies long, enclosed moist heat to this bone-in, meat-covered fro
 
 ---
 
+### 3. Chinese tradition (Caroline's Cooking) — Chinese spare ribs in the slow cooker
+**Inspired by**: Caroline's Cooking; https://www.carolinescooking.com/chinese-spare-ribs-slow-cooker/ (read 2026-11-01). *Char siu-style hoisin, soy and honey ribs cooked as individual ribs in the slow cooker, then broiled; the source prefers St Louis-style ribs as "probably best suited". No internal temperature is stated.*
+**Serves**: 2–3 · **Prep**: 5 min · **Cook**: 6–7 h · **Rest**: not stated
+
+**Ingredients**
+- 1.2 lb St Louis-style pork ribs, about half a rack
+- 2 tbsp hoisin sauce; 2 tbsp honey; 1 tbsp soy sauce; 1 tbsp rice wine
+- 1 tsp Chinese five spice powder; ½ tsp grated ginger; ½ tsp grated garlic
+
+**Method**
+1. Cut the ribs between the bones into individual ribs and lay them in a single layer in the slow cooker.
+2. Mix the hoisin, honey, soy, rice wine, five spice, ginger and garlic and pour over; turn to coat, leaving a thin layer of sauce and a small puddle around the ribs.
+3. Cook on **low for 6–7 hours**, until tender but not falling off the bone.
+4. Insert a probe from the side into the thickest rib, away from bone, if checking; the source gives no target.
+5. Reduce the sauce in a small pan and pour a little over the ribs; broil a couple of minutes to caramelise.
+6. **Pull temperature: not stated by source.** Final serving temperature: **not stated by source** — serve with the remaining sauce.
+
+---
+
+
 ## Collection status and search log
 
-**Have:** British meaty ribs (cut specificity uncertain) and Swedish cut-exact Christmas ribs. Neither has the numerical endpoint fields required for a fully collected recipe. Further distinct traditions and source-stated endpoints are needed.
+**Have:** British meaty ribs (cut specificity uncertain, B), Swedish cut-exact Christmas ribs (D) and Chinese-tradition slow-cooker ribs (A). None has the numerical endpoint fields required for a fully collected recipe, and Group C is still unrepresented: the one Caribbean slow-cooker jerk rib page found (Savory Thoughts) is written for **beef** ribs and only notes that pork also works, which is a substitution and therefore not admissible as a pork-rib source.
 
 Traditions attempted this session and why they failed (recorded so the next pass does not repeat the
 dead ends):

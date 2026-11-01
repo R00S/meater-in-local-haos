@@ -102,6 +102,14 @@ dead ends):
   no Swedish sous-vide recipe for this cut was found in confirmed-working sources this session.
 - **Great British Chefs / other European**: searched this session; no sous-vide ribs recipe for this
   cut found.
+- **Group C searched this session (2026-11-01)**: no African, Caribbean or Levantine sous-vide pork-rib recipe
+  was found. The Caribbean sources publish jerk ribs for the grill, oven or slow cooker only
+  (Kevin Is Cooking, CaribbeanPot, Simply Trini Cooking), and South African sources publish braai and
+  potjie methods. Sous vide appears to be absent from those traditions' rib repertoire, which is a
+  corpus gap rather than a missing search.
+- **Group A beyond the Chinese dim-sum source**: Japanese and Korean sous-vide rib material exists only
+  as forum and video posts (Reddit, Facebook groups, YouTube), not as citable recipes from named
+  authors; Cookpad and Korean blog recipes use pressure cookers, ovens and pans. Nothing was added.
 
 The method is confirmed for the cut by the Swedish meat board's own cut page; what is missing is
 fetched recipe corpus from further traditions. No analysis is written until that gap is closed.

@@ -99,6 +99,51 @@ Oven roasting exposes the meat-covered front pork ribs to enclosed heat. The exa
 
 ---
 
+### 5. Japanese (Cookpad, きのこや) — ほりにしでシンプルなスペアリブ焼き
+**Inspired by**: Cookpad Japan, author きのこや; https://cookpad.com/jp/recipes/24935187 (read 2026-11-01). *Bone-in スペアリブ, dry-rubbed by salt percentage, seared then finished at 120 °C; the only Japanese rib recipe found that states a core temperature.*
+**Serves**: 2 · **Prep**: 15 min + overnight in the fridge · **Cook**: ca 1 h 15 min · **Rest**: not stated
+
+**Ingredients**
+- 600 g スペアリブ (bone-in pork spare ribs)
+- 13–15 g ほりにし (*a Japanese spice blend that is 46 % salt*), of which 6 g for the dry rub
+- Olive oil, a generous amount (the leftover oil is poured over the vegetables)
+- 小ジャガイモ, ニンジン, パプリカ, ネギ (baby potatoes, carrot, paprika, leek) — enough to fill the tray
+
+**Method**
+1. Work out the salt: the blend is 46 % salt, so 600 × 1 ÷ 46 ≈ 13 — 13–15 g is the pleasant salt level for 600 g of meat.
+2. Sprinkle 6 g of the blend over the ribs as the dry rub; keep the rest for the table, since the spice aroma stands better without further heating.
+3. Cover and refrigerate overnight. Take out 30–60 minutes before cooking to come to room temperature, and score the membrane on the bone side.
+4. Heat a generous amount of olive oil in a frying pan and sear both sides over high heat; tip the leftover oil over the vegetables.
+5. Arrange meat and vegetables on an oven tray and bake **1 hour at 120 °C**.
+6. Measure the core temperature: 「骨に近い中心が71度以上ならOK」 — near the bone, 71 °C or above is done.
+7. **Pull at 71 °C** (160 °F) minimum, measured near the bone — the source's stated threshold; the author's own bake measured 80 °C (176 °F) and she notes she would shorten the time next time.
+8. Final serving temperature: **not stated by source** — the measured 80 °C is a core reading at the end of the bake, not a serving-temperature claim.
+
+---
+
+### 6. South African (Food & Home Entertaining, recipe by SA Pork) — Sweet & sour BBQ pork ribs
+**Inspired by**: Food & Home Entertaining (South Africa), recipe by SA Pork; https://www.foodandhome.co.za/recipes/sweet-sour-bbq-pork-ribs (read 2026-11-01). *Pork belly ribs, overnight rub, covered roast at 180 °C, then grilled or braaied to a charred glaze. No internal temperature is stated.*
+**Serves**: 4 · **Prep**: 30 min + overnight · **Cook**: 1½–2 h + 15–20 min · **Rest**: not stated
+
+**Ingredients**
+- 2 kg pork belly ribs
+- 5 garlic cloves, finely grated; 1 tbsp fresh rosemary, chopped; 2 tbsp brown sugar; 2 tbsp rice vinegar; 1 tbsp salt; 1½ tsp cayenne pepper; 2 cups water
+- **BBQ sauce**: 2 tbsp peanut oil; 2 garlic cloves, grated; 2 tbsp ginger, grated; ½ cup dry sherry or red wine; ½ cup hoisin sauce; ½ cup tomato sauce; 1 tbsp sesame oil; 1 tsp smoked paprika (the method also stirs in sweet chilli sauce and soy sauce, which the ingredient list omits)
+- Fresh coriander, 2 sliced red chillies, 1 tbsp toasted sesame seeds, to serve
+
+**Method**
+1. Place the ribs in a deep roasting tray large enough to hold them.
+2. Combine the garlic, rosemary, brown sugar, vinegar, salt and cayenne; rub all over the ribs; cover and refrigerate overnight.
+3. Preheat the oven to **180 °C**. Pour the water into the tray, re-cover with foil and roast **1½–2 hours** until soft and tender, checking at 1½ hours.
+4. Make the sauce: heat the peanut oil, fry the garlic and ginger 2 minutes, add the sherry and simmer, then the hoisin, tomato sauce, sweet chilli, soy, sesame oil and paprika. Stir in ¼ cup of the roasting juices and simmer about 10 minutes.
+5. Insert the MEATER probe from the side into the thickest meat, away from bone and away from the rib ends; the source gives no target temperature.
+6. Heat the oven grill or prepare medium braai coals. Strain off the roasting juices, brush the ribs generously and grill **15–20 minutes** until well caramelised and charry, turning and basting.
+7. **Pull temperature: not stated by source** — the stated endpoint is "soft and tender", a texture cue.
+8. Final serving temperature: **not stated by source** — scatter coriander, chilli and sesame seeds and serve.
+
+---
+
+
 ## Collection status and search log
 
-> ⚠️ **COLLECTION INCOMPLETE — analysis withheld.** Four attributed recipes are preserved above, but one or more do not state the numerical pull and final serving temperatures required for the ToR collection gate. Earlier analysis and the conformance marker were removed because they treated estimated targets as completed source data. Several non-Swedish sources specify generic spare ribs, not the precise Swedish front cutting line; they are useful comparisons, not proven exact equivalents. Recheck the cut and complete source-specific endpoints before analysis.
+> ⚠️ **COLLECTION INCOMPLETE — analysis withheld.** Six attributed recipes are preserved above and all four culinary groups are now present (Swedish and Russian = D, German and Australian = B, Japanese = A, South African = C). Only the Swedish cut page and the Japanese Cookpad recipe state a numeric core temperature; the German, Australian, Russian and South African sources judge doneness by time and texture. Because the collection gate requires source-stated numeric endpoints and most of this leaf has none, no consensus or summary is written. The non-Swedish cuts are generic spare or belly ribs, useful comparisons rather than proven equivalents.

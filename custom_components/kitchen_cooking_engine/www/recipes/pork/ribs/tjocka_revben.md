@@ -47,6 +47,34 @@ Tjocka revben is the Swedish cut from the front of the pork rib cage, with subst
 - Danish [revelsben](https://www.danishcrownprofessional.com/da-dk/produkter/bryst/revelsben-1-bens-i-skiver/) is sold as skinless bone-in breast roast in one-bone slices. German butcher [Dirk Ludwig](https://www.der-ludwig.de/grill-bbq/bbq-spareribs/spareribs-brustspitze/) describes *Brustspitzribs* / *Dicke Rippe* as the lower rib section. Both are anatomically useful leads; neither source proves an exact Swedish cutting-line match. Verify skin, bone and front location on individual recipes.
 - Beef **prime rib** is a beef rib roast, not a translation of this pork cut ([Beef Checkoff](https://www.beefitswhatsfordinner.com/cuts/cut/2851/rib-primal)). Pork baby back is from the loin, while St. Louis is a trimmed spare-rib preparation; neither name alone proves the thick Swedish cut.
 
+### Names for this cut in other languages — reference index
+
+An index kept for future passes; the two sections below hold the evidence, the quotations and the caveats. "Status" says how far a name can be trusted as a description of *this* cut, not whether the term exists.
+
+| Group | Language / region | Name | What the source says it is | Status |
+|---|---|---|---|---|
+| D | Swedish | *tjocka revben*, *tjocka revbensspjäll*, *knäckt* | front ribs with a thick meat cover, sold whole or cracked; *tunna revben* behind it, *kamben* above | **this cut** |
+| D | Danish | *revelsben* | breast/rib slices, one bone per slice, skinless | named comparator |
+| D | German | *Dicke Rippe*, *Brustspitze*, *Brustspitzribs* | item 5 of the German scheme, the rib ends with more connective tissue and cartilage | named comparator |
+| D | Austrian | *Schweinebrust* | the same item 5, under a breast name | named comparator |
+| D | Finnish | *luinen kylki* | "not ribs": rib-bearing flank with more meat left on the bone than spare ribs | named comparator |
+| D | Polish | *żeberka grube*, *żeberka paski* | forequarter rib item vs narrow-cut belly ribs | comparator |
+| D | Norwegian | *ribbe* | side meat on an animal, generally | **not a match** |
+| B | US English | *spare ribs*, *St. Louis*, *baby back* | belly-side rack, a trimmed belly rack, and a loin-side rack | comparator |
+| B | British / Irish English | *spare ribs*, *meaty pork ribs* | no separate front-rib item | generic only |
+| A | Chinese | 排骨 (umbrella), 前排, 小排, 肋排, 腩排 | 小排 = front ribs 5–6, spine off, hard sternum kept, thick meat with white cartilage | **closest named match found** |
+| A | Japanese | スペアリブ, 肩スペアリブ, バラスペアリブ, バックリブ | shoulder-end rib with "肉に厚み"; back rib is the loin side and leaner | named comparator, strongest Asian lead |
+| A | Korean | 갈비, 쪽갈비, 등갈비, 마구리 | front ribs #1–5; 쪽갈비 the belly-adjacent lower rib; 등갈비 baby back; 마구리 tips | named comparator |
+| A | Vietnamese | sườn non, sườn già, dẻ sườn | thick meat with little bone and cartilage vs big bony ribs; position not stated | comparator (no location) |
+| A | Thai | ซี่โครงหมูอ่อน, ซี่โครงหมูติดกระดูก | spine-adjacent rib is the premium one; belly ribs are fattier and cheaper | **reverse polarity** |
+| A | Indonesian | iga babi | ribs, cut into pieces | generic only |
+| C | South African English / Afrikaans | *Thick Rib* / *Dikrib*; *Lies*; *Bors*; *Ribbetjie* | thick rib chops cut close to the neck end, separate from belly and breast | **named African comparator, sold as chops** |
+| C | Brazilian Portuguese | *costela*, *costela de barriga* | belly ribs called "spare ribs", larger and meatier than baby back | generic, belly-oriented |
+| C | Angolan / Mozambican Portuguese | *entrecosto*, *costeleta* | between-ribs; rib chop | generic only |
+| C | Spanish (Colombia and others) | *costilla*, *costilla de pecho*, *costilla campesina* | named in the national cut manual; definitions unreadable | **unverified** |
+| C | Jamaican English | *spare ribs*, *rack* | British-derived primals; no front-rib name | generic only |
+| C | Nigerian / Kenyan / Zimbabwean English | *ribs*, *spare ribs*, *back ribs* | generic | generic only |
+
 ### The same cut idea in other languages
 
 US butchery is the weakest comparison because it has no named item here. German-speaking, Danish and Finnish butchery splits the carcass closer to the Swedish pattern, and each has a *named* retail item for this piece — better evidence than an English label:
@@ -82,6 +110,8 @@ The same question pays off unevenly here. In East Asia the front rib carrying a 
 
 **Method survey:** exact-cut Swedish sources support oven roast, grill, smoker, slow cooker, sous vide (method listed on the Svenskt Kött cut page) and pressure cooker. Braising is represented by related pork rib recipes whose exact cutting-line match still needs verification. Each method has a leaf, but all seven are incomplete under the collection and analysis gate. Air-fryer, steamed *paigu* and fried-riblet leads still need cut-specific verification.
 
+**Culinary-group coverage after the regional pass (2026-11-01):** the leaves now carry recipes from all four groups, distributed as follows — Oven Roast A/B/C/D, Grill A/B/C/D, Braise A/B/C/D, Smoke A/B/C/D, Slow Cooker A/B/D, Pressure Cooker A/C/D, Sous Vide A/B. The remaining holes are honest ones: no African, Caribbean or Levantine **sous-vide** rib recipe exists in the fetched corpus, and no Group B **pressure-cooker** rib recipe was verified. Two candidate sources were rejected rather than stretched: a Caribbean slow-cooker jerk rib page written for beef ribs (a substitution, not a pork cut) and a South African retail "pork ribs" page that turned out to be a pre-sauced product instruction.
+
 ## Styckesprofil
 
 Tjocka revben är den främre delen av grisens revbenkorg: de tjocka framre revbenen med ett kraftigt lager magkött kvar, ben-in och **utan hud**, oftast "knäckta" så spjället portjoneras lätt (Svenskt Kött; SV Wikipedia). Det är ett eget stycke, skilt från det som sitter bakom: de bakre revbenen blir tunna revben ("även kallade 'spare ribs'"), medan kamben/baby back sitter uppe mot länden. Amerikanska spare ribs kommer från sidan, men styckningsgräns och mängden kvarlämnat kött kan skilja sig; de är inte automatiskt samma detalj. Strukturen är fett, kollagen och knäckta ben: mörhet3/3, marmorering3/3 på Svenskt Köts egen skala. Erstattningsdetalj: bogblad.
@@ -98,7 +128,7 @@ Tjocka revben är den främre delen av grisens revbenkorg: de tjocka framre revb
 - [Sous Vide](./tjocka_revben-sous_vide.md) — two comparative sources; exact cutting lines and endpoints remain to be verified.
 - [Pressure Cooker](./tjocka_revben-pressure_cooker.md) — one cut-exact Swedish recipe with conflicting appliance settings; collection incomplete.
 
-All seven leaves remain **collection incomplete**; no temperature consensus or completion claim is made.
+All seven leaves remain **collection incomplete**; no temperature consensus or completion claim is made. The regional pass did not change that, and it sharpened the reason: outside Europe and North America, rib recipes overwhelmingly judge doneness by time and fork-tenderness rather than by a probe. Of the roughly thirty sources now stored across the seven leaves, only about eight state a numeric internal temperature, and those are concentrated in Swedish, Japanese, Thai, Indian, Levantine and American sources. That is a property of the corpus, not a gap in the search, and it is why no analysis section has been written.
 ## Improvement potential
 
 2503
@@ -106,6 +136,6 @@ All seven leaves remain **collection incomplete**; no temperature consensus or c
 ### Improvement priorities
 
 1. Verify each non-Swedish recipe's bone, meat coverage and position; preserve uncertain matches as comparisons rather than treating names as proof.
-2. Find additional human-created recipes from distinct traditions for each method, including numeric source-stated endpoints where available. Do not invent endpoints to meet the gate.
+2. Find additional human-created recipes from distinct traditions for each method, including numeric source-stated endpoints where available. Do not invent endpoints to meet the gate. The 2026-11-01 pass closed the group-coverage hole; what remains is endpoint density, and the honest state is that most traditions do not publish one.
 3. Investigate air frying, steaming and frying using cut-specific evidence, and register methods only when supported by a suitable recipe.
 4. Investigate the named comparators — *Dicke Rippe* / *Brustspitze* (German), *Schweinebrust* (Austrian), *revelsben* (Danish), *luinen kylki* (Finnish), *żeberka* (Polish), *小排* / *前排* (Chinese), *肩スペアリブ* (Japanese), *쪽갈비* (Korean), *Thick Rib* / *Dikrib* (South African) — for recipes and specifications; none is yet proven identical to the Swedish cut, and Chinese *小排* is the most promising because it is both named and cooked as a dish in its own right.

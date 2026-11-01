@@ -95,6 +95,28 @@ Grilling exposes the meat-covered front pork ribs to direct or indirect heat. Th
 
 ---
 
+### 5. Thai (Simply Suwanee) — ซี่โครงหมูย่าง / Thai grilled BBQ pork spare ribs
+**Inspired by**: Simply Suwanee; https://www.simplysuwanee.com/thai-pork-spare-ribs/ (read 2026-11-01). *Thai marinade of fish sauce, oyster sauce, sweet dark soy, garlic and coriander root; grilled medium-low and the only Thai rib recipe found that states a numeric internal temperature.*
+**Serves**: 4 · **Prep**: 20 min + 4 h or overnight · **Cook**: 50–60 min · **Rest**: not stated
+
+**Ingredients**
+- 3 lb pork spare ribs (the source recommends St Louis-style or loin back ribs)
+- ½–1 tsp ground white pepper; 2 tbsp roughly chopped garlic; ¼ cup minced coriander stems (or 3 coriander roots)
+- 2 tbsp fish sauce; 3 tbsp oyster sauce; 3 tbsp sweet dark soy sauce; 1 tbsp sugar; 2 tsp lime juice or rice vinegar
+- 2 tsp oil, for brushing the grill
+
+**Method**
+1. Pound or blend the fish sauce, oyster sauce, sweet dark soy, sugar, garlic, coriander, white pepper and lime juice into a rough paste.
+2. Separate the racks if needed, wash and pat dry, and remove the membrane. Coat the ribs in the marinade, cover and refrigerate at least **4 hours or overnight**.
+3. Turn the ribs to recoat and sit at room temperature 30–45 minutes. Preheat the grill to medium-low 10 minutes ahead.
+4. Grill over medium-low, turning and basting with the reserved marinade; move darkening pieces to indirect heat.
+5. Insert the MEATER probe from the side into the thickest rib, away from bone, once the surface has set.
+6. **Pull at 165 °F (74 °C)** — the source's stated internal temperature, reached after about **25–30 minutes per side**.
+7. Final serving temperature: **not stated by source** — serve hot with sticky rice and nam jim jaew.
+
+---
+
+
 ## Collection status and search log
 
-> ⚠️ **COLLECTION INCOMPLETE — analysis withheld.** Four attributed recipes are preserved above, but one or more do not state the numerical pull and final serving temperatures required for the ToR collection gate. Earlier analysis and the conformance marker were removed because they treated estimated targets as completed source data. Several non-Swedish sources specify generic spare ribs, not the precise Swedish front cutting line; they are useful comparisons, not proven exact equivalents. Recheck the cut and complete source-specific endpoints before analysis.
+> ⚠️ **COLLECTION INCOMPLETE — analysis withheld.** Five attributed recipes are preserved above and all four culinary groups are present (Swedish and Finnish = D, British = B, South African = C, Thai = A). Only the Thai source states a numeric internal temperature (165 °F); the Swedish cut-exact recipe, the Finnish braise-then-grill, the South African simmer-then-braai and the BBC barbecue recipe all judge doneness by time and texture. The collection gate therefore cannot be met without inventing endpoints, so no consensus or summary is written.
