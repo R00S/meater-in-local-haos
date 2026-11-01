@@ -27,7 +27,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-improvement_potential: 2503
+improvement_potential: 1159
 cooking_methods_researched: 0
 quality_assessed: 2026-11-01
 rest_time_min: 10
@@ -108,7 +108,7 @@ The same question pays off unevenly here. In East Asia the front rib carrying a 
 
 **Temperature behaviour (verified 2026-10-31):** the fetched Swedish guidance for this exact cut disagrees with itself, and the disagreement is recorded rather than merged. Svenskt Kött's cut page states the well-done internal temperature is **70 °C** and that traditional Swedish cooking is high heat with sage or dried ginger for a resistant texture, or pre-boil in broth/salted water (~45 min, to 70 °C) then glaze, or slow roast/grill under lid until "saftiga, eftergivna och hopfallande". Its own oven recipe pulls at **80 °C**. The Swedish BBQ school, represented by Grilltips.se's tjocka-revben method, states the cut is *"egentligen klara redan vid75 °C, men det är först vid90 °C som fettet smälter"* and cooks to **90–95 °C** with a documented comment-thread disagreement (pull at 70 °C vs 90–93 °C), while American low-and-slow guidance (Meathead) works at a 107 °C pit and accepts ~93 °C (200 °F) probe readings only as a collagen-conversion signal, preferring the bend test. These are different cooking and texture goals; the source’s description of fat melting at 90 °C should not be read as an exclusive physical melting point or as a universal guarantee of texture. USDA-style safe guidance for pork (63 °C /145 °F) sits below every culinary endpoint recorded for this cut, as it does for the sibling rib cuts.
 
-**Method survey:** exact-cut Swedish sources support oven roast, grill, smoker, slow cooker, sous vide (method listed on the Svenskt Kött cut page) and pressure cooker. Braising is represented by related pork rib recipes whose exact cutting-line match still needs verification. Each method has a leaf, but all seven are incomplete under the collection and analysis gate. Air-fryer, steamed *paigu* and fried-riblet leads still need cut-specific verification.
+**Method survey:** exact-cut Swedish sources support oven roast, grill, smoker, slow cooker, sous vide (method listed on the Svenskt Kött cut page) and pressure cooker. Braising is represented by related pork rib recipes whose exact cutting-line match still needs verification. Each method has a leaf; four leaves now hold the 4–6 sources collection asks for and three are short, and only Smoke has cleared the three-numeric analysis gate. Air-fryer, steamed *paigu* and fried-riblet leads still need cut-specific verification.
 
 **Culinary-group coverage after the regional pass (2026-11-01):** the leaves now carry recipes from all four groups, distributed as follows — Oven Roast A/B/C/D, Grill A/B/C/D, Braise A/B/C/D, Smoke A/B/C/D, Slow Cooker A/B/D, Pressure Cooker A/C/D, Sous Vide A/B. The remaining holes are honest ones: no African, Caribbean or Levantine **sous-vide** rib recipe exists in the fetched corpus, and no Group B **pressure-cooker** rib recipe was verified. Two candidate sources were rejected rather than stretched: a Caribbean slow-cooker jerk rib page written for beef ribs (a substitution, not a pork cut) and a South African retail "pork ribs" page that turned out to be a pre-sauced product instruction.
 
@@ -123,15 +123,19 @@ Tjocka revben är den främre delen av grisens revbenkorg: de tjocka framre revb
 - [Oven Roast](./tjocka_revben-oven_roast.md) — includes a cut-exact Swedish recipe; other cuts and numeric endpoints require verification.
 - [Grill](./tjocka_revben-grill.md) — includes a cut-exact Swedish recipe; other cuts and numeric endpoints require verification.
 - [Braise](./tjocka_revben-braise.md) — related rib recipes; their exact cutting lines and numeric endpoints require verification.
-- [Smoke](./tjocka_revben-smoker.md) — cut-exact Swedish smoking plus comparative sources; collection incomplete.
+- [Smoke](./tjocka_revben-smoker.md) — cut-exact Swedish smoking plus four further traditions; the 4–6 source count and the 3-numeric gate are both met, so its analysis sections may now be written.
 - [Slow Cooker](./tjocka_revben-slow_cooker.md) — a cut-exact Swedish recipe and a British comparator; numeric endpoints and further traditions are needed.
 - [Sous Vide](./tjocka_revben-sous_vide.md) — two comparative sources; exact cutting lines and endpoints remain to be verified.
 - [Pressure Cooker](./tjocka_revben-pressure_cooker.md) — one cut-exact Swedish recipe with conflicting appliance settings; collection incomplete.
 
-All seven leaves remain **collection incomplete**; no temperature consensus or completion claim is made. The regional pass did not change that, and it sharpened the reason: outside Europe and North America, rib recipes overwhelmingly judge doneness by time and fork-tenderness rather than by a probe. Of the roughly thirty sources now stored across the seven leaves, only about eight state a numeric internal temperature, and those are concentrated in Swedish, Japanese, Thai, Indian, Levantine and American sources. That is a property of the corpus, not a gap in the search, and it is why no analysis section has been written.
+Leaves are measured against the gate as revised on 2026-11-01: collection asks for 4–6 fully saved sources, analysis opens at three sources stating a numeric internal temperature, and a source that states no temperature is kept as a comparator instead of being excluded or converted. By that rule Oven Roast (6 sources), Grill (5), Braise (5) and Smoke (5) have met the collection count, while Slow Cooker (3), Pressure Cooker (3) and Sous Vide (2) are still short. On numbers, Smoke holds 4, Oven Roast 2, Sous Vide 2, Grill 1, and Braise, Slow Cooker and Pressure Cooker hold none — so Smoke is the first leaf whose analysis sections may be written, and the rest keep collecting.
+
+The pattern is a property of the corpus, not a gap in the search: outside Europe and North America these traditions judge doneness by time and fork-tenderness rather than by a probe. Of the twenty-nine sources stored across the seven leaves, nine state a numeric internal temperature (Swedish, Japanese, Thai, Indian, Levantine and American), while the other twenty state their own cues in their own words. No analysis section has been written in this pass.
 ## Improvement potential
 
-2503
+1159
+
+Historical readings: 2503 (new system, recorded 2026-11-01, superseded).
 
 ### Improvement priorities
 
