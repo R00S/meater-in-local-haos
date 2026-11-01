@@ -10,15 +10,17 @@
 █   UI CODE (buttons, graph, layout, behavior):                                █
 █     → Edit: www/panel-class-template.js                                      █
 █                                                                              █
-█   COOKING DATA (meats, cuts, temperatures, doneness):                        █
-█     → Edit: cooking_data.py (International) or swedish_cooking_data.py       █
+█   COOKING DATA (cuts, methods, doneness, temperatures, AI recipes):          █
+█     → Edit: www/recipes/**/*.md  (KCE:CUT / KCE:CUT_METHOD tags)           █
+█     → NO cooking_data.py / swedish_cooking_data.py exist. Do NOT recreate  █
+█       them, and do not add a Python copy of recipe data anywhere.            █
 █     → NEVER put cooking data in the JS template!                             █
 █                                                                              █
 █   AUTO-GENERATED (combines UI + data):                                       █
 █     → www/kitchen-cooking-panel.js ← DO NOT EDIT THIS DIRECTLY               █
 █                                                                              █
 █   WORKFLOW:                                                                  █
-█   □ 1. Edit the appropriate SOURCE file (template.js OR cooking_data.py)    █
+█   □ 1. Edit the appropriate SOURCE file (template.js OR www/recipes/*.md)   █
 █   □ 2. Run: python3 generate_frontend_data.py                                █
 █   □ 3. Commit ALL changed files                                              █
 █                                                                              █
@@ -57,7 +59,7 @@
 ## Quick Commands
 
 ```bash
-# After editing panel-class-template.js OR cooking_data.py, regenerate:
+# After editing panel-class-template.js OR www/recipes/*.md, regenerate:
 cd custom_components/kitchen_cooking_engine
 python3 generate_frontend_data.py
 
@@ -71,8 +73,9 @@ grep "const PANEL_VERSION" custom_components/kitchen_cooking_engine/www/kitchen-
 | I want to change... | Source of Truth | Then run |
 |---------------------|-----------------|----------|
 | UI buttons, graph, layout, behavior | `www/panel-class-template.js` | `python3 generate_frontend_data.py` |
-| Meat/cut names, temperatures, doneness | `cooking_data.py` | `python3 generate_frontend_data.py` |
-| Swedish meat data | `swedish_cooking_data.py` | `python3 generate_frontend_data.py` |
+| Cut names, methods, temperatures, doneness | `www/recipes/**/*.md` (`KCE:CUT` tag) | `python3 generate_frontend_data.py` |
+| Per-method cut overrides (rest time, carryover) | `www/recipes/**/<cut>-<method>.md` (`KCE:CUT_METHOD`) | `python3 generate_frontend_data.py` |
+| AI recipe data (ingredients, cuisines, recipes) | `www/recipes/**/*.md` (recipe files) and cuisine files | `python3 generate_frontend_data.py` |
 | Sensor attributes | `sensor.py` | - |
 | Services | `sensor.py` + `services.yaml` | - |
 | Config options | `config_flow.py` | - |
@@ -101,11 +104,10 @@ This is a Home Assistant custom integration for kitchen temperature cooking (MEA
 ### Backend (Python) - Sources of Truth
 | File | Purpose |
 |------|---------|
-| `cooking_data.py` | **SOURCE OF TRUTH** - International meat/cut/temp data |
-| `swedish_cooking_data.py` | **SOURCE OF TRUTH** - Swedish meat/cut/temp data |
-| `sensor.py` | Cooking session sensor entity |
-| `const.py` | Constants including PANEL_VERSION |
-| `generate_frontend_data.py` | Generates JS from template + data |
+| `www/recipes/**/*.md` | **SOURCE OF TRUTH** - cuts (`KCE:CUT`), per-method overrides (`KCE:CUT_METHOD`), recipes, Swedish and Danish text |
+| `www/recipes/` cuisine files | **SOURCE OF TRUTH** - AI cuisine and recipe data |
+| `generate_frontend_data.py` | **Only** tool that builds EXP_TREE, cooking methods, and the panel JS. Run it after any recipe edit |
+| `const.py` | Constants including PANEL_VERSION (auto-written by the generator) |
 | `__init__.py` | Integration setup, panel registration |
 
 ### Frontend (JavaScript)
@@ -260,7 +262,7 @@ This caused a TypeError crash and a failed release.
 A missing recipe card is honest. A wrong recipe card is deceptive.
 
 **Before adding ANY entry:**
-1. Read `swedish_cooking_data.py` — find the exact `name=` field for the cut
+1. Read the cut's `KCE:CUT` block in `www/recipes/` — find the exact `name:` field for the cut
 2. Check `docs/recipe_research/` — verify a recipe file for that **exact species** exists
 3. If no file exists, do NOT add a mapping
 

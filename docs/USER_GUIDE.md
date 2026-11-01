@@ -568,8 +568,8 @@ known to the system):
    button still appears, but in the Svenska and Dansk interfaces it shows the de-slugged
    English name (`Poach`, `Simmer`) instead of a translation. `tests/test_catalog_localization.py`
    fails on a missing label, so the gap is caught before release.
-4. No changes to `cooking_data.py` are required for the MEATER+ path; it is driven by the
-   cut files. Only the AI recipe builder's cooking-style mapping lives in the panel.
+4. No Python data file needs changing for the MEATER+ path; it is driven by the
+   cut files in `www/recipes/`. Only the AI recipe builder's cooking-style mapping lives in the panel.
 
 #### Getting AI recipe suggestions for a cut
 

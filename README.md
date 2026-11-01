@@ -613,12 +613,10 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 │       ├── __init__.py            # Integration setup
 │       ├── config_flow.py         # Configuration UI (multi-appliance)
 │       ├── const.py               # Constants
-│       ├── cooking_data.py        # International cooking data (USDA)
-│       ├── swedish_cooking_data.py # Swedish cooking data (Livsmedelsverket)
 │       ├── measurements.py        # Measurement unit catalog (metric/imperial/Swedish)
 │       ├── ninja_combi_data.py    # Ninja Combi recipes (with metric)
 │       ├── ai_recipe_builder.py   # AI recipe generation engine
-│       ├── ai_recipe_data.py      # AI ingredients, cuisines, styles data
+│       ├── ai_recipe_data.py      # AI ingredient & style definitions (see note)
 │       ├── sensor.py              # Cooking session sensor entity
 │       ├── storage.py             # Cook history persistence
 │       ├── api.py                 # REST API endpoints

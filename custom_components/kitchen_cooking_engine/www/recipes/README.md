@@ -9,7 +9,7 @@ For every leaf:
    America's Test Kitchen, ThermoWorks blog, Gordon Ramsay, Heston Blumenthal,
    Samin Nosrat, Hank Shaw, and equivalent regional/national authorities).
 2. Recorded the internal temperature each recipe targets for the best
-   **taste and texture** (not safety — safety data lives in `cooking_data.py`
+   **taste and texture** (not safety — safety data lives in the cut's `KCE:CUT` block
    `usda_safe_c` / `usda_safe_f`).
 3. Evaluated the consensus and set `recommended_doneness` on the `MeatCut`.
 

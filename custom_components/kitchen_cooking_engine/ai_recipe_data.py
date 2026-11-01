@@ -1,6 +1,10 @@
 """
 AI Recipe Builder Static Data
 
+NOTE FOR AGENTS / MAINTAINERS: this is the current source for AI ingredients and
+cooking styles only. Cut, method and recipe data are NOT here: they live in
+www/recipes/**/*.md. Do NOT add cut or temperature data to this file.
+
 This file contains the static data for the AI Recipe Builder that can be
 imported during frontend generation without requiring Home Assistant.
 """

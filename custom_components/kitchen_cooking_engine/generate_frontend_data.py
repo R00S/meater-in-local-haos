@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# NOTE FOR AGENTS / MAINTAINERS: cooking data does NOT live in Python.
+# Cuts, cooking methods, doneness and temperatures come from
+# www/recipes/**/*.md (KCE:CUT / KCE:CUT_METHOD). cooking_data.py and
+# swedish_cooking_data.py were deleted; do NOT recreate them.
 """
 Generate frontend cooking data from backend Python files.
 
@@ -571,7 +575,8 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
     return recipe_index, cut_profiles, cut_profiles_sv, cut_method_profiles, recipe_titles
 
 
-# Category display data (mirrors cooking_data.py MeatCategory definitions)
+# Category display data (icons/colours/translations). Which categories exist comes
+# from the KCE:CUT recipe files; this only adds display metadata.
 _CATEGORY_META = {
     "beef":       {"icon": "🥩", "color": "#8B0000", "name_sv": "Nötkött", "name_da": "Oksekød"},
     "pork":       {"icon": "🐷", "color": "#FFB6C1", "name_sv": "Fläskkött", "name_da": "Svinekød"},
@@ -779,8 +784,8 @@ def build_experimental_tree(base_dir):
 
     Reads every ``<!-- KCE:CUT ... -->`` tagged cut overview file and assembles
     the same JSON structure that MEAT_CATEGORIES uses, so the experimental
-    MEATER path can be driven entirely by the cut files — no cooking_data.py
-    import needed.
+    MEATER path is driven entirely by the KCE:CUT recipe files. Do not add a
+    Python data module for cuts; edit the recipe files instead.
 
     Returns:
         exp_tree: {category_id: {id, name, icon, color, meats: [...]}}
@@ -1370,6 +1375,25 @@ def _build_recipe_index(base_dir):
     return index
 
 
+def collect_cooking_methods(base_dir):
+    """Return the sorted set of cooking methods listed in KCE:CUT recipe files.
+
+    The ``methods:`` lists in the recipe files are the only source of truth;
+    the runtime validates ``start_cook`` against the same lists.
+    """
+    recipe_dir = os.path.join(base_dir, "www", "recipes")
+    found = set()
+    for root, _dirs, files in os.walk(recipe_dir):
+        for filename in files:
+            if not filename.endswith(".md"):
+                continue
+            with open(os.path.join(root, filename), encoding="utf-8") as f:
+                data = _parse_kce_tag(f.read(), "CUT")
+            if data:
+                found.update(str(m) for m in (data.get("methods") or []))
+    return sorted(found)
+
+
 def regenerate_panel():
     """Regenerate the panel JS file with fresh data from backend.
     
@@ -1444,21 +1468,12 @@ import {{
     new_content += 'const DATA_SOURCE_INTERNATIONAL = "international";\n'
     new_content += 'const DATA_SOURCE_SWEDISH = "swedish";\n\n'
     new_content += generate_js_data()
-    new_content += "\n\n// Cooking methods\n"
-    new_content += """const COOKING_METHODS = [
-  { value: "oven_roast", name: "Oven Roast" },
-  { value: "oven_bake", name: "Oven Bake" },
-  { value: "pan_sear", name: "Pan Sear" },
-  { value: "pan_fry", name: "Pan Fry" },
-  { value: "grill", name: "Grill" },
-  { value: "smoker", name: "Smoker" },
-  { value: "braise", name: "Braise" },
-  { value: "air_fryer", name: "Air Fryer" },
-  { value: "sous_vide", name: "Sous Vide" },
-  { value: "slow_cooker", name: "Slow Cooker" },
-];
-
-"""
+    new_content += "\n\n// Cooking methods (derived from the methods: lists in KCE:CUT recipe files)\n"
+    method_values = collect_cooking_methods(base_dir)
+    new_content += "const COOKING_METHODS = " + json.dumps(
+        [{"value": m, "name": m.replace("_", " ").title()} for m in method_values],
+        indent=2, ensure_ascii=False,
+    ) + ";\n"
     new_content += class_code
 
     # Update panel version in JS - increment from const.py version

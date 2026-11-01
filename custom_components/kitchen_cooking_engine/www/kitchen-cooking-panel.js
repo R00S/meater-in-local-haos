@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 01 Nov 2026, 17:14 CET
+ * AUTO-GENERATED: 01 Nov 2026, 18:19 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 01 Nov 2026, 17:14 CET
+// Last generated: 01 Nov 2026, 18:19 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -141574,20 +141574,85 @@ const EXP_RECIPE_INDEX = {
   "roasted_tomatoes": "vegetables/tomatoes/roasted_tomatoes.md"
 };
 
-// Cooking methods
+// Cooking methods (derived from the methods: lists in KCE:CUT recipe files)
 const COOKING_METHODS = [
-  { value: "oven_roast", name: "Oven Roast" },
-  { value: "oven_bake", name: "Oven Bake" },
-  { value: "pan_sear", name: "Pan Sear" },
-  { value: "pan_fry", name: "Pan Fry" },
-  { value: "grill", name: "Grill" },
-  { value: "smoker", name: "Smoker" },
-  { value: "braise", name: "Braise" },
-  { value: "air_fryer", name: "Air Fryer" },
-  { value: "sous_vide", name: "Sous Vide" },
-  { value: "slow_cooker", name: "Slow Cooker" },
+  {
+    "value": "air_fryer",
+    "name": "Air Fryer"
+  },
+  {
+    "value": "boil",
+    "name": "Boil"
+  },
+  {
+    "value": "braise",
+    "name": "Braise"
+  },
+  {
+    "value": "charcoal_grill",
+    "name": "Charcoal Grill"
+  },
+  {
+    "value": "grill",
+    "name": "Grill"
+  },
+  {
+    "value": "oven_bake",
+    "name": "Oven Bake"
+  },
+  {
+    "value": "oven_broil",
+    "name": "Oven Broil"
+  },
+  {
+    "value": "oven_roast",
+    "name": "Oven Roast"
+  },
+  {
+    "value": "pan_fry",
+    "name": "Pan Fry"
+  },
+  {
+    "value": "pan_sear",
+    "name": "Pan Sear"
+  },
+  {
+    "value": "poach",
+    "name": "Poach"
+  },
+  {
+    "value": "pressure_cooker",
+    "name": "Pressure Cooker"
+  },
+  {
+    "value": "saute",
+    "name": "Saute"
+  },
+  {
+    "value": "simmer",
+    "name": "Simmer"
+  },
+  {
+    "value": "slow_cooker",
+    "name": "Slow Cooker"
+  },
+  {
+    "value": "smoker",
+    "name": "Smoker"
+  },
+  {
+    "value": "sous_vide",
+    "name": "Sous Vide"
+  },
+  {
+    "value": "steam",
+    "name": "Steam"
+  },
+  {
+    "value": "whole_roast",
+    "name": "Whole Roast"
+  }
 ];
-
 /**
  * Kitchen Cooking Panel - UI Class Template
  * 
@@ -153129,7 +153194,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "684";
+const PANEL_VERSION = "686";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

@@ -117,8 +117,7 @@ These were specified in the ToR but not yet implemented:
 |------|---------|-------|
 | `www/panel-class-template.js` | **UI source code** (all frontend logic) | ✅ Edit this |
 | `www/kitchen-cooking-panel.js` | Auto-generated from template + data | ❌ Never edit |
-| `cooking_data.py` | International meat/cut/temp data | ✅ Edit for data |
-| `swedish_cooking_data.py` | Swedish meat/cut/temp data | ✅ Edit for data |
+| `www/recipes/**/*.md` | **Sole source** for cuts (`KCE:CUT`), per-method overrides (`KCE:CUT_METHOD`), recipes, and cooking methods | ✅ Edit for all cooking data |
 | `ninja_combi_data.py` | Ninja Combi recipes (with metric) | ✅ Edit for data |
 | `ai_recipe_builder.py` | AI recipe generation logic | ✅ Edit for AI |
 | `ai_recipe_data.py` | AI ingredient & style definitions | ✅ Edit for AI data |
@@ -151,7 +150,7 @@ These were specified in the ToR but not yet implemented:
 ## Build Workflow
 
 ```bash
-# After editing panel-class-template.js OR cooking_data.py:
+# After editing panel-class-template.js OR any www/recipes/*.md file:
 cd custom_components/kitchen_cooking_engine
 python3 generate_frontend_data.py
 

@@ -51,13 +51,6 @@ from .const import (
     SERVICE_START_MULTI_APPLIANCE_COOK,
     SERVICE_START_SIMPLE_PROBE_COOK,
 )
-from .cooking_data import (
-    CookingMethod,
-    get_cut_by_id as get_cut_by_id_intl,
-)
-from .swedish_cooking_data import (
-    get_swedish_cut_by_id as get_cut_by_id_sv,
-)
 from .api import async_register_api
 
 _LOGGER = logging.getLogger(__name__)
@@ -145,6 +138,7 @@ def _get_exp_cut_data(slug: str, cooking_method: str | None = None) -> dict | No
         "rest_time_max": data.get("rest_time_max") or 10,
         "carryover_temp_c": data.get("carryover_temp_c") or 3,
         "doneness_temps": doneness_temps,
+        "methods": list(data.get("methods") or []),
     }
 
     # Overlay method-specific overrides when a leaf file exists
@@ -200,7 +194,9 @@ SERVICE_START_COOK_SCHEMA = vol.Schema(
             # Swedish doneness levels
             "blodig", "genomstekt", "långkokt",
         ]),
-        vol.Required("cooking_method"): vol.In([m.value for m in CookingMethod]),
+        # Method must be one of the cut's `methods:` in its KCE:CUT recipe file.
+        # Validated in handle_start_cook; no hand-kept method list here.
+        vol.Required("cooking_method"): cv.string,
         # Optional: data source for temperature recommendations
         vol.Optional("data_source", default=DATA_SOURCE_INTERNATIONAL): vol.In([
             DATA_SOURCE_INTERNATIONAL,
@@ -552,32 +548,6 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         data_source = call.data.get("data_source", DATA_SOURCE_INTERNATIONAL)
         custom_target_temp_c = call.data.get("custom_target_temp_c")
 
-        # Backward compat: if cut_id is a numeric string (legacy integer ID),
-        # resolve it to the corresponding slug via the old cooking_data lookup.
-        if cut_id and cut_id.isdigit():
-            numeric_id = int(cut_id)
-            lookup_fn = (
-                get_cut_by_id_sv
-                if data_source == DATA_SOURCE_SWEDISH
-                else get_cut_by_id_intl
-            )
-            old_cut = lookup_fn(numeric_id)
-            if old_cut:
-                resolved_slug = old_cut.name
-                _LOGGER.warning(
-                    "start_cook: numeric cut_id '%s' is deprecated. "
-                    "Use the slug '%s' instead. Resolving automatically for now.",
-                    cut_id, resolved_slug,
-                )
-                cut_id = resolved_slug
-            else:
-                _LOGGER.error(
-                    "start_cook: numeric cut_id '%s' is not recognised. "
-                    "Please use a slug (e.g. 'ribeye_steak') instead.",
-                    cut_id,
-                )
-                return
-
         exp_data = await hass.async_add_executor_job(
             _get_exp_cut_data, cut_id, cooking_method
         )
@@ -586,6 +556,13 @@ async def _async_register_services(hass: HomeAssistant) -> None:
                 "EXP_TREE cut slug '%s' not found in recipe files. "
                 "Check the cut_id and ensure it matches a slug in the recipe library.",
                 cut_id,
+            )
+            return
+        if cooking_method not in exp_data["methods"]:
+            _LOGGER.error(
+                "Cooking method '%s' is not listed for cut '%s' in its recipe file "
+                "(methods: %s).",
+                cooking_method, cut_id, ", ".join(exp_data["methods"]),
             )
             return
         doneness_info = exp_data["doneness_temps"].get(doneness)

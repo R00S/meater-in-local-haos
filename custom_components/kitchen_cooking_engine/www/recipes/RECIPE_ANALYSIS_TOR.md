@@ -1,3 +1,8 @@
+> **Source of truth (read first):** `cooking_data.py` and `swedish_cooking_data.py` were deleted.
+> Cuts, methods and doneness live in the cut file's `KCE:CUT` block (and `KCE:CUT_METHOD` tags) in `www/recipes/`.
+> Do NOT recreate Python cooking data. The `## Data applied to cooking_data.py` heading below is a legacy
+> section name kept on existing research files; in it, record the edits made to the recipe files.
+
 # Terms of Reference — Recipe Analysis
 
 > **Companion document**: [`RECIPE_COLLECTION_TOR.md`](RECIPE_COLLECTION_TOR.md) covers
@@ -7,7 +12,7 @@
 ## Purpose
 
 This document defines the standard for **analysing collected source recipes** and
-converting the temperature findings into the `cooking_data.py` coding decisions
+converting the temperature findings into the recipe-data decisions (the cut's `KCE:CUT` block and `KCE:CUT_METHOD` tags)
 that drive the cooking engine.
 
 Analysis begins only after the collection phase (4–6 fully saved source recipes
@@ -56,7 +61,7 @@ A markdown table:
 Followed by 2–4 sentences that:
 1. State the **full observed range** in °C — from the lowest to the highest
    final serving temperature seen across the sources.
-2. Map the range to the `cooking_data.py` doneness options and explain which
+2. Map the range to the doneness options in the cut's `KCE:CUT` block and explain which
    traditions land in which doneness band.
 3. Explain what drives the variation (texture goal, cultural convention,
    carryover assumptions, pull-temp vs. serving-temp convention). Do **not**
@@ -89,7 +94,7 @@ A short bullet list:
 ```
 
 This section is not a re-statement of consensus. It is the direct instruction
-to the person (or agent) who will update `cooking_data.py` next.
+to the person (or agent) who will update the recipe files next.
 
 ---
 
@@ -104,7 +109,7 @@ to the person (or agent) who will update `cooking_data.py` next.
    method suits this cut, what the cook gains or sacrifices, and what the key
    takeaway is for someone choosing between methods.
 
-Do not repeat numbers from the consensus table. Do not mention `cooking_data.py`.
+Do not repeat numbers from the consensus table. Do not mention the legacy Python data files; they no longer exist.
 The summary stands alone.
 
 ---
@@ -146,7 +151,7 @@ draw conclusions from it. Work through each step **in order**. If a step fails,
 - [ ] File is named `{cut_name}-{cooking_method}.md`
 - [ ] All mandatory sections are present in the correct order:
   Cut profile → Source recipes → Temperature consensus →
-  What makes this method special → Data applied to cooking_data.py → Summary
+  What makes this method special → Data applied (recipe data) → Summary
 - [ ] File covers exactly one cut × one method
 
 ### Verification Step 2 — Confirm each source recipe is fully collected (GATE)
@@ -194,7 +199,7 @@ non-numeric sources it holds. Record the count in the leaf's
 - [ ] Text states how many sources the leaf holds, how many are numeric, and that the
       range rests on the numeric ones
 - [ ] Text states the full observed range in °C
-- [ ] Text maps the range to `cooking_data.py` doneness options
+- [ ] Text maps the range to the cut's `KCE:CUT` doneness options
 - [ ] Divergence is treated as the finding, not as an error to resolve
 - [ ] `recommended_doneness` key is identified with rationale from the numeric sources
 
@@ -209,9 +214,9 @@ non-numeric sources it holds. Record the count in the leaf's
 
 ### Verification Step 6 — Confirm method coverage for the cut
 
-- [ ] All methods in `cooking_data.py` `supported_methods` have a leaf file
+- [ ] All methods in the cut's `KCE:CUT` `methods:` list have a leaf file
 - [ ] Research has been done for methods NOT yet in `supported_methods`
-- [ ] Any discovered missing method is either added to `cooking_data.py` or
+- [ ] Any discovered missing method is either added to the cut's `KCE:CUT` `methods:` list or
   documented as having no credible recipe
 
 ---
@@ -223,7 +228,7 @@ Before the analysis portion of a leaf is finalised:
 - [ ] Temperature consensus table covers all **numeric** sources; non-numeric sources are
       listed separately as comparators and excluded from the range
 - [ ] Full observed range (°C) is stated in the narrative
-- [ ] Range is mapped to `cooking_data.py` doneness options
+- [ ] Range is mapped to the cut's `KCE:CUT` doneness options
 - [ ] `recommended_doneness` key is identified with rationale
 - [ ] `## What makes this method special` is 3–6 sentences on physics/chemistry
 - [ ] `## Data applied to cooking_data.py` is a direct, actionable bullet list
