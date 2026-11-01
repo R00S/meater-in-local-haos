@@ -37,7 +37,7 @@ doneness:
   max_c: 95
   max_f: 203
   usda_safe: true
-improvement_potential: 19
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 10
@@ -69,7 +69,7 @@ Denna fettrikedom gör det idealisk för långsam tillagning (sous vide, bräser
 
 ## Improvement potential
 
-19
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

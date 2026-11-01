@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-improvement_potential: 14
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -58,6 +58,8 @@ Lake (*Lota lota*; tyska: Trüsche; franska: lote; finska: made) är den enda s�
 - Braise — no research file yet
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 Groups A and C absent — burbot is a circumpolar northern fish with no culinary tradition in tropical East Asian or African/Caribbean/Arabic cuisines. No verified Japanese, Chinese, Korean, African, or Arabic burbot recipe was found in research. Points apply as unverified geographic claim.
 

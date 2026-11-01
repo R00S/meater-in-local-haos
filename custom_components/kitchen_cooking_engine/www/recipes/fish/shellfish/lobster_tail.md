@@ -31,7 +31,7 @@ doneness:
   max_f: 150
   usda_safe: true
   recommended: true
-improvement_potential: 19
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 0
@@ -56,7 +56,7 @@ Det segmenterade ytterskalet (skalet) är ett inbyggt värmeskydd som skyddar k�
 - [Oven Roast](./lobster_tail-oven_roast.md)
 ## Improvement potential
 
-19
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

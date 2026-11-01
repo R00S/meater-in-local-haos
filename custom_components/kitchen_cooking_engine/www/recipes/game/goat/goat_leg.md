@@ -50,7 +50,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-improvement_potential: 8
+improvement_potential: unrated
 cooking_methods_researched: 0 # Survey 2026-10-24 found +2 methods (grill, pressure_cooker, both registered with leaves), but enum inventory still has plausible unverified leads (smoker, sous_vide, boil/steam for bone-in leg pieces) — stays 0 until collected or ruled out.
 quality_assessed: 2026-10-24
 rest_time_min: 15
@@ -79,6 +79,8 @@ De flesta kulinariska traditioner föredrar getbenet tillagat till 75–82 °C d
 - [Grill](./goat_leg-grill.md) — ⚠️ partial, 2 fetched sources (JM indirect charcoal, US butterflied 135–140 °F) — **new method 2026-10-24**
 - [Pressure Cooker](./goat_leg-pressure_cooker.md) — ⚠️ partial, 1 fetched source (Caribbean Instant Pot) — **new method 2026-10-24**
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 happens to coincide but the basis is different: the old table deducted for missing leaves
 under a different rule and counted Group A/D gaps that are now closed).

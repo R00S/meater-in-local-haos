@@ -35,7 +35,7 @@ doneness:
   max_f: 150
   usda_safe: true
   recommended: true
-improvement_potential: 18
+improvement_potential: unrated
 cooking_methods_researched: 1 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-10-25
 rest_time_min: 0
@@ -74,6 +74,8 @@ Svärdsfisk tolererar direkt hög grillvärme utan att falla isär och har en h�
 - [Braise](./swordfish-braise.md)
 - [Sous Vide](./swordfish-sous_vide.md)
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 **Remaining wall evidence — none claimed.** The two failed gate rows are ordinary incomplete collection, not hard walls: pan_sear keeps two BBC Good Food recipes (same publisher, one tradition) because both are the leaf's most temperature-explicit primary sources and deleting valid data to pass a metric would degrade it — the honest fix is a future non-British widening; sous_vide's corpus retrieved this session was four American sources plus one German, and a Dutch/French query returned zero results — the honest fix is a future search for UK/European sous-vide sources. Neither row carries a user-approved exception; both are open work.
 

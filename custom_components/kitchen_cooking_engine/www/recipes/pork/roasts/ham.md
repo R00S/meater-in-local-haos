@@ -32,7 +32,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-improvement_potential: 17
+improvement_potential: unrated
 cooking_methods_researched: 1 # 2026-10-24: survey completed and recorded below — oven_roast, slow_cooker and braise each have a gate-meeting leaf; the remaining enum methods are recorded as uncollected leads.
 quality_assessed: 2026-10-24
 rest_time_min: 15
@@ -98,7 +98,7 @@ surveys for `grill`, `pressure_cooker` or `sous_vide` are exhausted.
 
 ## Improvement potential
 
-17
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

@@ -33,7 +33,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-improvement_potential: 18
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 3
@@ -60,7 +60,7 @@ Ugnsrostning: 200–220 °C, 35–45 minuter med vändning. Innertemperatur: **7
 
 ## Improvement potential
 
-18
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

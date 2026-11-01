@@ -36,7 +36,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-improvement_potential: 14
+improvement_potential: unrated
 cooking_methods_researched: 1 # Method survey 2026-10-26 (enum-wide sweep across culinary traditions): 3 declared methods confirmed (pan_fry, grill, air_fryer) and 4 discovered + registered with leaves (oven_roast, sous_vide, charcoal_grill, braise). Queued single-source leads with fetched evidence but below this pass's leaf bar — pan_sear (RecipeTeacher), oven_broil (America's Test Kitchen), smoker (AmazingRibs), steam (Anova steam oven), slow_cooker (The Country Cook — cut form not confirmed loin), pressure_cooker (Pressure Cooking Today — no temperature) — documented in the branch timeline. Negative searches: poach and saute returned no fetchable cut-specific recipe; simmer only behind a 403 (Allrecipes).
 quality_assessed: 2026-10-26
 rest_time_min: 3
@@ -80,6 +80,8 @@ Pannstekning: 3–4 minuter per sida i smör vid hög värme. Innertemperatur: *
 Survey leads **not yet leafed** (queued, evidence in the branch timeline): `pan_sear`, `oven_broil`, `smoker`, `steam`, `slow_cooker`, `pressure_cooker` — each has one fetched recipe with the cut-form caveat noted there. Negative searches this pass: `poach`, `saute` (no fetchable cut-specific recipe), `simmer` (only a 403).
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 **Remaining wall evidence — none claimed.** All six failed rows are ordinary incomplete collection, not hard walls: the US-heavy corpora for air_fryer, oven_roast, sous_vide and charcoal_grill are what these English-language appliance/precision-cooking ecosystems publish, but non-US sources for every one of them are plainly fetchable (a Filipino or Korean air-fryer chop, a European oven-chop, a French/Dutch/Japanese sous-vide publication, an Argentine *asado* or Korean *gogigui* charcoal source), and braise needs two more traditions. None of these rows carries a user-approved exception; all are open work.
 

@@ -32,7 +32,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-improvement_potential: 8
+improvement_potential: unrated
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 20
@@ -59,7 +59,7 @@ En hel kalkon presenterar samma utmaning som hel kyckling men i stor skala. Inne
 - [Oven Roast](./whole_turkey-oven_roast.md)
 ## Improvement potential
 
-8
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

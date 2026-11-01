@@ -27,7 +27,7 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
-improvement_potential: 9
+improvement_potential: unrated
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 5
@@ -49,7 +49,7 @@ Hela vitlökshuvuden (*Allium sativum*) ugnsrostade transformeras fullständigt:
 - [Oven Roast](./roasted_garlic-oven_roast.md)
 ## Improvement potential
 
-9
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

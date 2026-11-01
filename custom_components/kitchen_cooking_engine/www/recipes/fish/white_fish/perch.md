@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-improvement_potential: 15
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -58,6 +58,8 @@ Abborre (*Perca fluviatilis*; tyska: Barsch; franska: perche) är en mager sötv
 - Smoker — no research file yet
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 Groups A and C absent — European perch (*abborre* / *Perca fluviatilis*) is a Northern European freshwater fish with no established culinary tradition in East Asian or African/Caribbean/Arabic cuisines. Points applied pending verification.
 

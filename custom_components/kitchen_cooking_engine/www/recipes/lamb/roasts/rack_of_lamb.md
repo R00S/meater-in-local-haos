@@ -47,7 +47,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-improvement_potential: 18
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 10
@@ -75,7 +75,7 @@ Sear all om i het panna (1–2 minuter per sida), belägg med senap och örtkorp
 - [Oven Roast](./rack_of_lamb-oven_roast.md)
 ## Improvement potential
 
-18
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

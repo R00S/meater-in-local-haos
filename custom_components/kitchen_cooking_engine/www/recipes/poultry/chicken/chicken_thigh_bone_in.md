@@ -47,7 +47,7 @@ doneness:
   max_f: 185
   usda_safe: true
   recommended: true
-improvement_potential: 8
+improvement_potential: unrated
 cooking_methods_researched: 1 # Supported-method inventory reviewed 2026-10-24; all 17 listed methods have direct leaves. Simmer and poach confirmed; boil has recipe evidence with overlap; charcoal is a grill-fuel variant, not separately supported.
 quality_assessed: 2026-10-25
 rest_time_min: 5
@@ -98,6 +98,8 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum, **79 °C (175 °F)** rekomme
 | Charcoal grill variant | `chicken_thigh_bone_in-charcoal_grill.md` | Variant evidence only — charcoal is a fuel setup within `grill`, not a separate enum method |
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 - **Culinary Groups A/B/C/D all covered** across the method leaves — A: Chinese-American (pan_fry), Japanese (air_fryer), Indian (air_fryer, grill), Korean (braise, slow_cooker, pressure_cooker); B: American (pan_fry, grill, sous_vide, smoker), UK (air_fryer), French (braise), Greek (grill); C: Moroccan (air_fryer), Jamaican (braise, grill jerk), Senegalese (braise), North African (pan_fry, added 2026-10-25); D: Russian (pan_fry).
 - `## Cut profile` present with anatomical placement (femur, biceps femoris, myoglobin/collagen, subcutaneous fat).

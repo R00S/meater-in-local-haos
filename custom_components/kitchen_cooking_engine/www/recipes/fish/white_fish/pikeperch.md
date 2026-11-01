@@ -35,7 +35,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-improvement_potential: 18
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -62,6 +62,8 @@ Gös (*Sander lucioperca*; tyska: Zander; franska: sandre; finska: kuha) är en 
 - [Sous Vide](./pikeperch-sous_vide.md)
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 Groups A and C absent — pikeperch (*Sander lucioperca* / zander) is indigenous to European and Western Asian freshwater systems and is absent from East Asian and African/Caribbean/Arabic culinary traditions. This claim has not been verified by live search of Japanese, Chinese, or Korean sources. Points applied pending verification.
 

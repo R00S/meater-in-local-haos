@@ -35,7 +35,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-improvement_potential: 10
+improvement_potential: unrated
 cooking_methods_researched: 0
 quality_assessed: 2026-10-25
 rest_time_min: 2
@@ -62,6 +62,8 @@ Sill (Clupea harengus) är en liten, mycket fet pelagisk fisk utbredd i Nordatla
 - [Pressure Cooker](./herring-pressure_cooker.md) — ✅ Done — 4 fetched sources (Japanese, Korean, Russian, United States), 4 distinct national traditions, Groups A/B/D; no source states a temperature; no Group C source found for this method (completed 2026-10-25)
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 The per-method missing-leaf penalty is not applied because all six declared methods have leaves. Leaf temperature analysis remains explicitly invalid until each source collection meets the 4–6-source gate; no inferred temperature was added.
 

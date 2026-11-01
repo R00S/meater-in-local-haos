@@ -51,7 +51,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-improvement_potential: 10
+improvement_potential: unrated
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 5
@@ -77,7 +77,7 @@ Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med lån
 - [Sous Vide](./flank_steak-sous_vide.md)
 ## Improvement potential
 
-10
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

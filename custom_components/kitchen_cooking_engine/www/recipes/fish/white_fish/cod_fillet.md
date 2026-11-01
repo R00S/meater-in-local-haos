@@ -34,7 +34,7 @@ doneness:
   max_f: 150
   usda_safe: true
   recommended: true
-improvement_potential: 11
+improvement_potential: unrated
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -60,6 +60,8 @@ Pannstekning är en mycket vanlig beredning — den höga ledningsvärmen i pann
 - [Pan Fry](./cod_fillet-pan_fry.md)
 - [Smoker](./cod_fillet-smoker.md)
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 Methods survey incomplete — `cooking_methods_researched: 0` means the declared methods list may be incomplete. Research may find additional methods used for cod fillet across culinary traditions.
 

@@ -42,7 +42,7 @@ doneness:
   max_f: 150
   usda_safe: true
   recommended: true
-improvement_potential: 16
+improvement_potential: unrated
 cooking_methods_researched: 1 # 2026-10-26: enum-wide survey done with 16 fetched sources across five leaves. Confirmed and leafed: pan_sear, grill, oven_roast, steam, oven_bake. Queued leads (error single-source, no leaf yet): charcoal_grill (the Turkish mangal and Greek κάρβουνα recipes are currently counted inside the `grill` leaf with their fuel flagged per row), poach (no fetchable cut-specific recipe found), air_fryer, sous_vide, pan_fry (the flour-dusted pan recipes live in `pan_sear`), smoker, oven_broil. Documented negatives: pressure_cooker, slow_cooker, braise (only sauce-braised branzino fillets, no whole-fish braise), saute (same technique family as pan_sear).
 quality_assessed: 2026-10-26
 rest_time_min: 0
@@ -111,7 +111,7 @@ than on thermometers.
 
 ## Improvement potential
 
-16
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

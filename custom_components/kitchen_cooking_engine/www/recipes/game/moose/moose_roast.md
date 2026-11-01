@@ -41,7 +41,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-improvement_potential: 18
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-10-27
 rest_time_min: 15
@@ -91,7 +91,7 @@ måltemperaturen en biffstemperatur och inte en bräseringstemperatur: 58–70 �
 
 ## Improvement potential
 
-18
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Data state and gaps
 

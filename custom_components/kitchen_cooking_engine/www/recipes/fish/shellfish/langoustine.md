@@ -32,7 +32,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-improvement_potential: 16
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 0
@@ -60,6 +60,8 @@ Svansmuskeln är fast, vit till blekrosa, söt och delikat salt — rikare på n
 - [Grill](./langoustine-grill.md)
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 **Note on Groups A and C:** Langoustines (*Nephrops norvegicus*) are not indigenous to the waters of East/Southeast/South Asia or the Arabic/African/Middle Eastern world. No traditional recipes for this species were found on verified sources for those regions after systematic search (April 2026). The point is recorded for transparency, but the gap reflects genuine culinary geography rather than incomplete research.
 

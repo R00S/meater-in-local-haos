@@ -24,7 +24,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-improvement_potential: 18
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 15
@@ -48,7 +48,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagnin
 - [Oven Roast](./lamb_shoulder-oven_roast.md)
 ## Improvement potential
 
-18
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

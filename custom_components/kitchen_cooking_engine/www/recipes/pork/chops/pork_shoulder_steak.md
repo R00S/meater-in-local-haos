@@ -36,7 +36,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-improvement_potential: 14
+improvement_potential: unrated
 cooking_methods_researched: 1 # Enum-wide survey of every CookingMethod against fetched sources for this exact cut, completed 2026-10-26. Confirmed+leafed: pan_fry, grill, braise, oven_roast, air_fryer, sous_vide, oven_broil. Queued single-source leads (widening before leafing): pan_sear (eat.de braten already in pan_fry; LUMA Delikatessen CH has ambiguous cut form), charcoal_grill (Smithfield churrasco US, White On Rice Vietnamese-style US), smoker (Blackberry Babe's low-slow charcoal is leafed under grill), slow_cooker (The Greek Foodie publishes a slow-cooker variation of its braise), pressure_cooker (none found for this cut). Documented negatives 2026-10-26: steam (Thai Betagro steamed-pork-neck page returns server error; Chinese steamed-pork results are ground patty, not steak), poach, simmer (no cut-specific recipe found in any tradition searched).
 quality_assessed: 2026-10-26
 rest_time_min: 5
@@ -79,7 +79,7 @@ Pannstekning: medel-hög värme, 3–4 minuter per sida. Innertemperatur: **70�
 
 ## Improvement potential
 
-14
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

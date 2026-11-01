@@ -34,7 +34,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-improvement_potential: 14
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -60,6 +60,8 @@ Guldspirad (*Sparus aurata*; spanska/italienska: dorada/orata; franska: daurade 
 - [Steam](./gilt_head_bream-steam.md)
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 Group C and D absent — steam leaf covers A (CN/TH) and B (DE/AT) only. Gilt-head bream (dorade) is widespread in Mediterranean and Middle Eastern cooking but no Group C or D source was verified for the steam method. Other method leaves (pan_sear, oven_bake, grill, charcoal_grill) are not yet created.
 

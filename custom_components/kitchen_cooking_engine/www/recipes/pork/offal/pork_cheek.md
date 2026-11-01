@@ -25,7 +25,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-improvement_potential: 9
+improvement_potential: unrated
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -51,7 +51,7 @@ Bräsering (160–170 °C, 2–3 timmar) är den definitiva metoden: kollagen sm
 - [Pan Fry](./pork_cheek-pan_fry.md)
 ## Improvement potential
 
-9
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

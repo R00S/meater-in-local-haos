@@ -35,7 +35,7 @@ doneness:
   max_f: 150
   usda_safe: true
   recommended: true
-improvement_potential: 11
+improvement_potential: unrated
 cooking_methods_researched: 1 # 2026-10-24: all six declared methods now have leaves built on fetched sources; enum-wide disposition recorded below. Nothing in the fetched set states an internal temperature.
 quality_assessed: 2026-10-24
 rest_time_min: 0
@@ -82,6 +82,8 @@ All six declared methods now have a leaf. None of the fetched sources in any lea
 `cooking_methods_researched: 1` is set on the strength of that disposition, not because every method has been exhausted: the six declared methods each carry fetched evidence, and the uncollected methods are recorded as leads rather than silently dropped.
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 The point for "no temperature evidence" is applied deliberately: the cut's `doneness` block and pull sentence are inherited guidance, not fetched hake evidence, and the 2026-10-24 sweep found no page that states an internal endpoint for this species.
 

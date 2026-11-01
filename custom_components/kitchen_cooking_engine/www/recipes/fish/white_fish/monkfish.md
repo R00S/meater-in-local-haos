@@ -34,7 +34,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-improvement_potential: 12
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -60,6 +60,8 @@ Marulk (*Lophius piscatorius*; tyska: Seeteufel; franska: lotte/baudroie; spansk
 - [Sous Vide](./monkfish-sous_vide.md)
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 Groups A, C, D absent — the only existing leaf (`monkfish-sous_vide.md`) covers Group B (UK/USA) only and is marked ⚠️ PARTIAL (3 sources). No East Asian, African/Arabic, or Scandinavian sous vide monkfish recipe with verifiable URLs was found. Other methods (pan_sear, oven_roast, grill, braise) have no leaves.
 

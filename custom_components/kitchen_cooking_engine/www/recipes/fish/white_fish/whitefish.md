@@ -33,7 +33,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-improvement_potential: 15
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -58,6 +58,8 @@ Sik (*Coregonus* spp.; finska: siika; tyska: Felchen / Renke; franska: corégone
 - Smoker — no research file yet
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 Groups A and C absent — whitefish (*sik* / *Coregonus*) is a northern freshwater fish with limited East Asian or African/Arabic culinary tradition. Points applied pending verification.
 

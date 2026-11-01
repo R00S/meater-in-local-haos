@@ -23,7 +23,7 @@ doneness:
   max_f: 145
   usda_safe: true
   recommended: true
-improvement_potential: 17
+improvement_potential: unrated
 cooking_methods_researched: 1 # Survey completed 2026-10-26 on fetched pages. Declared + leafed: oven_roast (rewritten, 4 sources) and smoker (stub replaced, 3 sources, newly registered in the cut file). Queued leads (need full recipe text before declaring): slow_cooker (Spend With Pennies' crock-pot ham was fetched but its card did not render — glaze quantities missing; Kawaling Pinoy links to its own slow-cooker pineapple ham, unfetched), boil/poach as a standalone method (the Danish record boils a smoked ham 35-40 min before glazing and the Filipino record poaches 50-60 min — both are currently recorded inside the oven_roast leaf as first stages rather than as a separate leaf), grill (no fetched record), air_fryer (ham steaks only — a different cut form). Documented searched-negative 2026-10-26: Culinary Group C — a Caribbean Christmas ham search returned only thisbagogirl.com, whose recipe bakes an UNCURED fresh ham to 145 F (a different product), so it is not counted; cookingwithria.com (Trinidad) was fetched and its recipe body did not render.
 quality_assessed: 2026-10-26
 rest_time_min: 10
@@ -95,7 +95,7 @@ minuter täckt.
 
 ## Improvement potential
 
-17
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Integrity work recorded this pass
 

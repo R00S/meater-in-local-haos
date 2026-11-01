@@ -25,7 +25,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-improvement_potential: 15
+improvement_potential: unrated
 cooking_methods_researched: 1 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-10-26
 rest_time_min: 2
@@ -133,7 +133,7 @@ corpus for this cut measures temperatures only in the North American burger and 
 
 ## Improvement potential
 
-15
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Integrity notes recorded this pass
 

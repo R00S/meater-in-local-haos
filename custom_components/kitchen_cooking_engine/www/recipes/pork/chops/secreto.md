@@ -35,7 +35,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-improvement_potential: 11
+improvement_potential: unrated
 cooking_methods_researched: 1 # Enum-wide survey 2026-10-26, fetched sources for this exact cut. Confirmed+leafed: pan_sear, grill, charcoal_grill, oven_roast, braise, sous_vide. Queued leads (widening before leafing): air_fryer (recetasairfryernuria.com plancha-style air-fryer page; Cookpad "Secreto Ibérico en Airfryer"), slow_cooker (Cookpad "Secreto de cerdo en Crockpot"), smoker (informal social posts only: smoked at 250 °F to 125 °F internal, then grilled to 135 °F), pressure_cooker (Katy's guisado uses a pressure pot as a braise variant — no separate pressure-cooker recipe found). Documented negatives 2026-10-26: steam, poach, simmer, boil, saute — no cut-specific recipes found in the traditions searched; oven_bake/oven_broil treated as oven_roast variants for this cut (Recetas con Sazón's grill-function finish is recorded inside oven_roast).
 quality_assessed: 2026-10-26
 rest_time_min: 5
@@ -76,7 +76,7 @@ Köttet är extremt marmorerat med distinkt intramuskulärt fett och en unik fj�
 
 ## Improvement potential
 
-11
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

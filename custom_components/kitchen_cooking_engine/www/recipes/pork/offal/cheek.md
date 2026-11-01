@@ -23,7 +23,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-improvement_potential: 9
+improvement_potential: unrated
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -59,7 +59,7 @@ Denna intensiva muskelaktivitet skapar den djupaste smak och högsta kollageninn
 
 ## Improvement potential
 
-9
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

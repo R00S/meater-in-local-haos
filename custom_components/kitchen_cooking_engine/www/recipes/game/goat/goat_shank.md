@@ -24,7 +24,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-improvement_potential: 19
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 10
@@ -49,7 +49,7 @@ Getlägg skiljer sig från lammlägg i att get i allmänhet slaktas vid äldre �
 - [Oven Roast](./goat_shank-oven_roast.md)
 ## Improvement potential
 
-19
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

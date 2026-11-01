@@ -31,7 +31,7 @@ doneness:
   max_f: 190
   usda_safe: true
   recommended: true
-improvement_potential: 8
+improvement_potential: unrated
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -55,7 +55,7 @@ En hel anka presenterar en tillagningsutmaning: bröstet är bäst vid 57–63 �
 - [Oven Roast](./whole_duck-oven_roast.md)
 ## Improvement potential
 
-8
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

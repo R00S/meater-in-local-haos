@@ -49,7 +49,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-improvement_potential: 12
+improvement_potential: unrated
 cooking_methods_researched: 1 # Enum-wide survey 2026-10-26, fetched sources for this exact whole-muscle steak cut. Confirmed+leafed: pan_sear, grill, charcoal_grill, sous_vide (the last discovered this pass, 4 measured sources). Queued leads (widening before leafing): oven_roast/reverse_sear (Primal Bison's "How To Reverse Sear a Bison Steak"; Grillocracy's tri-tip 300 °F oven finish; Vindulge's reverse-sear note), smoker (informal smoke-then-sear posts only: GrillSergeantUSA 225 °F smoke to 110 °F then charcoal vortex sear), braise (highlandsranchfoodie's porter stew uses sirloin steak pieces — queued as a steak-form braise lead), air_fryer (searched 2026-10-26; video/social results only, no fetchable recipe). Documented searched-negative 2026-10-26 for the whole-steak form: slow_cooker, pressure_cooker, simmer, poach, steam, boil — bison appears there only as stew meat, cubes, chuck roast or short ribs (Northstar stew, Noble Irish Stew on cubes, Miller slow-cooker roast), i.e. other cut forms, not this cut.
 quality_assessed: 2026-10-26
 rest_time_min: 5
@@ -112,7 +112,7 @@ Den mörka röda färgen speglar hög myoglobinhalt. Behandla som ett extremt ma
 
 ## Improvement potential
 
-12
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Integrity work recorded this pass (why some rows moved)
 

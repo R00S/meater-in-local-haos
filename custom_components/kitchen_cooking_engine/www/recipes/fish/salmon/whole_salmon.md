@@ -40,7 +40,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-improvement_potential: 12
+improvement_potential: unrated
 cooking_methods_researched: 0
 quality_assessed: 2026-05-26
 rest_time_min: 5
@@ -65,7 +65,7 @@ Hel lax betyder en intakt fiskkropp: båda sidorna sitter ihop via ryggrad och r
 
 ## Improvement potential
 
-12
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

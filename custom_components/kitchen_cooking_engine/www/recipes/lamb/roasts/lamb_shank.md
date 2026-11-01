@@ -24,7 +24,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-improvement_potential: 10
+improvement_potential: unrated
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -52,7 +52,7 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 - [Slow Cooker](./lamb_shank-slow_cooker.md)
 ## Improvement potential
 
-10
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

@@ -43,7 +43,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-improvement_potential: 12
+improvement_potential: unrated
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -71,6 +71,8 @@ Atlantisk och stillahavslax skiljer sig åt i fettfördelning — odlad atlantla
 - [Smoker](./salmon_fillet-smoker.md)
 - [Sous Vide](./salmon_fillet-sous_vide.md)
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 Methods survey incomplete (`cooking_methods_researched: 0`) — the methods list may be missing traditions (e.g. cured/gravlax as a cold preparation, poached/court-bouillon, traditional Japanese teriyaki as a distinct method). Research required before setting `cooking_methods_researched: 1`.
 

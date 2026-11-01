@@ -47,7 +47,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-improvement_potential: 17
+improvement_potential: unrated
 cooking_methods_researched: 1 # 2026-10-24: survey completed and recorded below — grill and pan_fry each have a gate-meeting leaf; remaining enum methods dispositioned as leads.
 quality_assessed: 2026-10-24
 rest_time_min: 3
@@ -93,7 +93,7 @@ exhausted.
 
 ## Improvement potential
 
-17
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

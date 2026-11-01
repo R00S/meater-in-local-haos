@@ -39,7 +39,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-improvement_potential: 8
+improvement_potential: unrated
 cooking_methods_researched: 1 # Supported-method inventory reviewed 2026-10-24: all 16 enum methods have research leaves; slow-cooker search found only sauce cooked slowly with mackerel grilled; charcoal is a grill fuel/setup variant.
 quality_assessed: 2026-10-25
 rest_time_min: 2
@@ -79,6 +79,8 @@ Atlantisk makrill (Scomber scombrus) är en medelstora, mycket fet pelagisk fisk
 - [Charcoal Grill](./mackerel-charcoal_grill.md) — charcoal documented as grill fuel/setup variant, not separate method
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 2026-10-24. Four leaves now meet the 4–6-source / four-distinct-tradition gate (grill,
 air_fryer, pan_fry, oven_bake) and braise holds four sources across three traditions. The scale is unchanged and no leaf was credited for anything it does not hold. Context for the earlier

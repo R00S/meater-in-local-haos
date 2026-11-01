@@ -40,7 +40,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-improvement_potential: 11
+improvement_potential: unrated
 cooking_methods_researched: 2
 quality_assessed: 2026-04-27
 rest_time_min: 0
@@ -92,7 +92,7 @@ Ryggköttsektionen innehåller samma skiktade myotom- och myokommat-struktur som
 
 ## Improvement potential
 
-11
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

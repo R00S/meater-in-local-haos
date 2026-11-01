@@ -35,7 +35,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-improvement_potential: 17
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 3
@@ -64,7 +64,7 @@ Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. 
 
 ## Improvement potential
 
-17
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

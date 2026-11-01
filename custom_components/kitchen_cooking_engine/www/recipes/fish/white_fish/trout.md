@@ -41,7 +41,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-improvement_potential: 8
+improvement_potential: unrated
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -72,6 +72,8 @@ Regnbågsforell (*Oncorhynchus mykiss*) och brun öring (*Salmo trutta*, svenska
 - [Pan Sear](./trout-pan_sear.md)
 - [Smoker](./trout-smoker.md)
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 Group A absent — no East Asian (Japanese, Chinese, Korean, Thai, Vietnamese) trout recipe found across existing leaves. Methods survey incomplete. `trout-pan_sear.md` has a generic trout cut profile identical to the parent hub file rather than a pan_sear-specific profile.
 

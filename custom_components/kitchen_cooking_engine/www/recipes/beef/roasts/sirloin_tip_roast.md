@@ -47,7 +47,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-improvement_potential: 10
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -69,7 +69,7 @@ Sirloin tip roast (känd som "knuckle" i UK/australisk styckning, "pointe de cul
 
 ## Improvement potential
 
-10
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

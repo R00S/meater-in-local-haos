@@ -33,7 +33,7 @@ doneness:
   max_f: 185
   usda_safe: true
   recommended: true
-improvement_potential: 18
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-04-29
 rest_time_min: 10
@@ -58,7 +58,7 @@ En hel kyckling är en komplett fågel — bestående av bröstködet (vitt, mag
 
 ## Improvement potential
 
-18
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

@@ -35,7 +35,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-improvement_potential: 19
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-10-25
 rest_time_min: 2
@@ -68,6 +68,8 @@ Strömming (Clupea harengus membras) är underarten av atlantisk sill som är in
 Method survey completed 2026-10-23, re-verified 2026-10-24, extended 2026-10-25: archival documentation (Matkult.se) records the historical Swedish thermal inventory (stekning, ugnsbakning, rökning, glödstekt/halstrad, kokning) plus non-thermal preservation (salting, pickling, fermenting surströmming, drying) which are not thermal enum methods. The 2026-10-24 pass searched further traditions and found none beyond the five; the 2026-10-25 eastern-Baltic pass (RU/LV/EE sources) then found **braising/stewing in sauce** — documented across Russian and Latvian traditions — as a sixth thermal method, with a leaf and a `cooking_data.py` entry now in place. All six declared methods have a leaf.
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 **Wall evidence #1 — identity (Groups A and C; verified 2026-10-25, per `RECIPE_COLLECTION_TOR.md` "Hard-wall exception"):** the fish carries distinct culinary identities only around the Baltic — *strömming* (SV), *silakka* (FI), *räim* (EE), *salaka* (RU, verified *Clupea harengus membras*, ru.wikipedia.org/wiki/Салака and inaturalist.org taxa page, fetched 2026-10-25), *reņģe* (LV, verified via priede.bf.lu.lv), *śledź bałtycki* (PL) — while East Asian sources cook Pacific herring (*nishin*, *Clupea pallasii*, a different species) and Group C traditions (e.g. Caribbean) use the smoked/imported product rather than fresh Baltic herring. No source recipe for this exact cut was verified outside the Baltic region in the 2026-10-24 or 2026-10-25 searches.
 

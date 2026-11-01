@@ -31,7 +31,7 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
-improvement_potential: 19
+improvement_potential: unrated
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-10-27
 rest_time_min: 0
@@ -68,6 +68,8 @@ Tomater (*Solanum lycopersicum*) i airfryern rostas på 8–15 minuter beroende 
 | Grill | — | ⬜ Owed. *Pomodori grigliati* named on the Italian source page fetched 2026-10-27; no recipe fetched yet |
 | Pan fry | — | ⬜ Owed. *Pomodori gratinati in padella* named on the same page; no recipe fetched yet |
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 produced by a table that charged −8 for an unstarted method survey and −1 for a missing leaf while never
 looking at the two leaves that already existed).

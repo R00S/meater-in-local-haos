@@ -34,7 +34,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-improvement_potential: 14
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -60,6 +60,8 @@ Rödspätta (*Pleuronectes platessa*; tyska: Scholle; danska: rødspætte; holl�
 - [Steam](./plaice-steam.md)
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 Group C and D absent — steam leaf covers A (CN/TH/VN) and B (DE) only. Steam leaf states "Group C and D not separately required for this method" — this is an unverified assumption; points applied. Other method leaves (pan_fry, oven_bake, grill, smoker) are not yet created.
 

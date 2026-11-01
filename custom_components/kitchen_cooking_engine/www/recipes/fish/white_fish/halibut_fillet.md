@@ -41,7 +41,7 @@ doneness:
   max_f: 150
   usda_safe: true
   recommended: true
-improvement_potential: 15
+improvement_potential: unrated
 cooking_methods_researched: 1 # 2026-10-24: survey completed and recorded below; grill, oven_roast, pan_sear and steam all have leaves built on fetched sources. Remaining enum methods recorded as leads, not silently dropped.
 quality_assessed: 2026-10-24
 rest_time_min: 0
@@ -82,7 +82,7 @@ All four declared methods have a leaf and all four meet the 4–6-source collect
 
 ## Improvement potential
 
-15
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

@@ -24,7 +24,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-improvement_potential: 14
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-04-27
 rest_time_min: 15
@@ -54,7 +54,7 @@ All methods inherit from the primary `mutton_shoulder` entry. Independent leaf f
 
 ## Improvement potential
 
-14
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

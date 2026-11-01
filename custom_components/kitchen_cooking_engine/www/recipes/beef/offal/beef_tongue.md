@@ -23,7 +23,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-improvement_potential: 11
+improvement_potential: unrated
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 15
@@ -46,7 +46,7 @@ Nöttungue (*Bos taurus* lingvalmuskel) är en enda tät cylindrisk muskel som a
 - [Slow Cooker](./beef_tongue-slow_cooker.md)
 ## Improvement potential
 
-11
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

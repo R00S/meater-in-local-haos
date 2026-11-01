@@ -26,7 +26,7 @@ doneness:
   max_f: 176
   usda_safe: true
   recommended: true
-improvement_potential: 16
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-10-23
 rest_time_min: 3
@@ -55,7 +55,7 @@ All five declared methods have a leaf file. Only `oven_roast` meets the 4–6-so
 
 ## Improvement potential
 
-16
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 

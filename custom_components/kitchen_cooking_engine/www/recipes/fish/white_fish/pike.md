@@ -34,7 +34,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-improvement_potential: 14
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 0
@@ -60,6 +60,8 @@ Gädda (*Esox lucius*; tyska: Hecht; franska: brochet; finska: hauki) är en sto
 - [Braise](./pike-braise.md)
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 Groups A and C absent — braised pike is a Central/Western European tradition (*matelote*, *quenelles de brochet*); no verified East Asian, African, Arabic, or Caribbean pike recipe found. Other 4 method leaves not yet created.
 

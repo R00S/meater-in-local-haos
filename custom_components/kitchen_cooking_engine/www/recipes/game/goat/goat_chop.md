@@ -48,7 +48,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-improvement_potential: 13
+improvement_potential: unrated
 cooking_methods_researched: 1 # Survey completed 2026-10-26 on fetched pages. Declared + leafed: grill and pan_sear (both rewritten after their old records failed verification) and oven_broil (discovered this pass, registered in the cut file). Queued leads (no full recipe fetched yet): braise/curry (goat chops cooked in curry are mostly shoulder/leg pieces rather than chops — sinfullyspicy and Yummy Medley both use mixed goat meat), tandoor (no fetchable recipe), smoker (none fetched for chops specifically). Documented searched-negative 2026-10-26: Culinary Group C (African/Caribbean) — the "jerk goat chops" search returned only social-media posts and videos, and the Caribbean Pot site surfaced only its homepage rather than a recipe; Culinary Group D — no Nordic/Baltic goat-chop recipe found at all.
 quality_assessed: 2026-10-26
 rest_time_min: 5
@@ -121,7 +121,7 @@ tjockaste muskeldelen, borta från benet och från fettkanten.
 
 ## Improvement potential
 
-13
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Integrity work recorded this pass
 

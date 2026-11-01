@@ -42,7 +42,7 @@ doneness:
   max_c: 68
   max_f: 154
   usda_safe: true
-improvement_potential: 14
+improvement_potential: unrated
 cooking_methods_researched: 1
 quality_assessed: 2026-10-26
 rest_time_min: 0
@@ -145,6 +145,8 @@ fillet-versus-whole-fish split in the numbers is a property of the fish's size, 
 opinions, and should not be averaged into one band.
 
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 Groups A and C absent — arctic char is a cold-water salmonid native to Arctic/subarctic waters with no established culinary tradition in East Asian or African/Caribbean/Arabic cuisines. Points applied pending verification.
 

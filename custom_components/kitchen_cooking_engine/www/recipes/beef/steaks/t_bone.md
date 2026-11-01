@@ -58,7 +58,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-improvement_potential: 9
+improvement_potential: unrated
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 5
@@ -87,6 +87,8 @@ T-bone skärs från den korta länden, framför entrecôten. Tjockleken är typi
 - [Oven Roast](./t_bone-oven_roast.md)
 - [Pan Sear](./t_bone-pan_sear.md)
 ## Improvement potential
+
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 Original: −8 (methods) −1 (A) −1 (C) −1 (D) −1 (air_fryer copies parent) −1 (grill copies oven_roast) −1 (grill copies pan_sear) = −14 → number 6.
 After fixes: −8 (methods) −1 (A) −1 (C) −1 (D) = −11 → number 9.

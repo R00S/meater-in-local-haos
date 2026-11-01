@@ -25,7 +25,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-improvement_potential: 16
+improvement_potential: unrated
 cooking_methods_researched: 1 # Method survey completed 2026-10-26 on fetched pages only. Declared + leafed: grill, pan_fry (both rewritten), air_fryer and smoker (both discovered this pass and registered in the cut file id 632). Queued leads (widening before declaring): charcoal_grill (Wrågården's "glöden gråvit" ember grill and Basil and Bubbly's "use a charcoal grill instead of a gas grill" are both notes inside other leaves; BBQGuys' charcoal/cast-iron buffalo burger returns 403), oven_bake (Healthy Delicious fetches: 2+2 min cast-iron sear then 300 °F oven 4–8 min for medium-rare — a real sear-then-oven record, needs 2–3 more sources before it earns a leaf), reverse_sear (With the Woodruffs describes it as a finish on its smoker recipe). Documented searched-negative 2026-10-26: Culinary Group A — carabeef/carabao and Indian/Nepali buffalo-mince patty recipes return only social-media posts, no fetchable recipe.
 quality_assessed: 2026-10-26
 rest_time_min: 2
@@ -116,7 +116,7 @@ därför `well_done` som enda band. Innertemperatur: **71 °C (160 °F)**. Efter
 
 ## Improvement potential
 
-16
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Integrity work recorded this pass (why the old number's rows were wrong)
 

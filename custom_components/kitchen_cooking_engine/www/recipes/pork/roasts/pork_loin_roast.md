@@ -31,7 +31,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-improvement_potential: 8
+improvement_potential: unrated
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 10
@@ -59,7 +59,7 @@ Innertemperatur: **68–72 °C (154–162 °F)** för genomstekt, saftig loin. U
 - [Oven Roast](./pork_loin_roast-oven_roast.md)
 ## Improvement potential
 
-8
+Not yet rated under the current system — read the criteria in `IMPROVEMENT_POTENTIAL_SYSTEM.md` and record a reading before using this file to order the queue.
 
 ### Improvement priorities
 
