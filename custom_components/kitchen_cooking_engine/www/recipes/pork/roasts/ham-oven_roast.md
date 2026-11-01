@@ -198,13 +198,6 @@ Four of six sources give an explicit internal target. The split is by ham type, 
 
 Oven roasting is the universal method for ham because ham's cured structure does not require the collagen-dissolving extended moist braise that raw braising cuts need — the curing has already done that work. What the oven provides is: (1) caramelisation of the sweet glaze at 180–225 °C, converting sugars and building the mahogany crust that defines baked ham visually; (2) rendering of the scored surface fat into the glaze, basting the surface from within through the score lines; and (3) controlled, even heat that brings a 3–6 kg joint to the correct internal temperature without over-drying the already-firm interior. The MEATER probe is particularly useful here because the difference between a good result (55–72 °C internal) and a dried-out one (85 °C+) can be as little as 10–15 minutes in a hot oven.
 
-## Data applied to cooking_data.py
-
-- `usda_safe_c: 63` — USDA minimum for fresh/raw pork (145 °F). For fully cooked ham, USDA/FDA guideline is reheating to 60 °C / 140 °F.
-- `recommended_doneness: well_done` — appropriate; ham is served fully cooked across all traditions.
-- No `method_temperature_ranges` override identified from this research.
-- `cooking_methods_researched: 1` — confirmed: oven_roast is the primary method for ham, and the two methods the earlier text dismissed as "variants" are now documented: [slow_cooker](./ham-slow_cooker.md) (four fetched British gammon recipes, two with internal targets) and [braise](./ham-braise.md) (five fetched British/German recipes). All three are registered.
-
 ## Summary
 
 Baked ham divides into two categories with different temperature targets: fully cooked (ready-to-serve) ham, which needs only to be heated to serving temperature (55–60 °C) while the glaze caramelises; and raw or lightly cured ham (UK gammon, Swedish julskinka), which must reach 63–72 °C to be safe and fully cooked. In both cases the glaze — always sweet (maple, sugar, fruit jam) with a tangy counterpoint (mustard, citrus, cloves) — is applied in the final 15–45 minutes at elevated heat. Two of four fetched sources give explicit thermometer targets; two rely on visual doneness. The probe is most valuable for raw gammon where undercooking is a safety risk.

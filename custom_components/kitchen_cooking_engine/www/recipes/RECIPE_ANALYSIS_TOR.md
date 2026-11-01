@@ -4,8 +4,9 @@
 > release, a build artefact, a future export — it is produced from the cut files and must never be hand-edited,
 > hand-extended or used to register a method, because the next run overwrites it. To change the data, edit the
 > cut file and regenerate.
-> Do NOT recreate Python cooking data by hand. The `## Data applied to cooking_data.py` heading below is a legacy
-> section name kept on existing research files; in it, record the edits made to the recipe files.
+> Do NOT recreate Python cooking data by hand, and do not add a section that describes edits to one: the old
+> `## Data applied to cooking_data.py` section has been removed from every research file. What a method needs from
+> the cut is already expressed by the leaf itself and the cut file's own `methods:` list.
 
 # Terms of Reference — Recipe Analysis
 
@@ -79,26 +80,8 @@ Followed by 2–4 sentences that:
 
 3–6 sentences. Explain what this cooking *method* does to this *cut* that
 makes it distinct from other methods. Focus on the physics and flavour
-chemistry, not on preferences. This section informs why a different
-`method_temperature_ranges` override may or may not be needed.
-
----
-
-### `## Data applied to cooking_data.py`
-
-A short bullet list:
-
-```markdown
-- `supported_methods` gains: `method_1`, `method_2`, …
-- `recommended_doneness`: `"doneness_key"` ({rationale in ≤10 words})
-- No `method_temperature_ranges` override needed — {reason}
-  OR
-- `method_temperature_ranges` override: `{"method": [range_1, range_2, …]}`
-  — {reason}
-```
-
-This section is not a re-statement of consensus. It is the direct instruction
-to the person (or agent) who will update the recipe files next.
+chemistry, not on preferences. This section informs whether the cut
+file's doneness levels need a method-specific note.
 
 ---
 
@@ -210,7 +193,6 @@ non-numeric sources it holds. Record the count in the leaf's
 ### Verification Step 5 — Confirm summary and coding note
 
 - [ ] `## What makes this method special` is present (3–6 sentences)
-- [ ] `## Data applied to cooking_data.py` bullet list is present and actionable
 - [ ] `## Summary` is present, ≤4 sentences, explains cut-method fit
 - [ ] Summary does not merely restate the consensus numbers
 - [ ] No synthesised composite recipe exists
@@ -219,7 +201,7 @@ non-numeric sources it holds. Record the count in the leaf's
 ### Verification Step 6 — Confirm method coverage for the cut
 
 - [ ] All methods in the cut's `KCE:CUT` `methods:` list have a leaf file
-- [ ] Research has been done for methods NOT yet in `supported_methods`
+- [ ] Research has been done for methods NOT yet in the cut's `methods:` list
 - [ ] Any discovered missing method is either added to the cut's `KCE:CUT` `methods:` list or
   documented as having no credible recipe
 
@@ -235,7 +217,6 @@ Before the analysis portion of a leaf is finalised:
 - [ ] Range is mapped to the cut's `KCE:CUT` doneness options
 - [ ] `recommended_doneness` key is identified with rationale
 - [ ] `## What makes this method special` is 3–6 sentences on physics/chemistry
-- [ ] `## Data applied to cooking_data.py` is a direct, actionable bullet list
 - [ ] `## Summary` is ≤4 sentences and explains cut-method fit in plain language
 - [ ] Summary does not restate consensus numbers
 - [ ] `✅ CONFORMS TO TOR` marker is appended with an ISO-8601 timestamp

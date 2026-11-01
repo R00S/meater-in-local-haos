@@ -129,7 +129,7 @@ svärdisk blir kvar i tjocka, saftiga flagor. Enda mätta källan anger 60 °C (
 Only the red-braise source publishes a number: a constant **60 °C (140 °F)** — the single
 observed value for this leaf, sitting at the bottom edge of `FISH_WELL_DONE` (60–66 °C). The
 other three sources stop at time plus texture ("covered and low", "about 20 minutes",
-"opaque and flaky"), all of which describe cooked-through fish. Mapped to `cooking_data.py`,
+"opaque and flaky"), all of which describe cooked-through fish. Mapped to the cut file,
 the whole observed picture is `well_done` at ~60 °C — notably gentler than a 63 °C seared
 well-done, because a moist-heat medium carries heat evenly with no crust driving the centre
 higher. The variation across sources is about *method of finishing* (stovetop covered, oven
@@ -151,12 +151,6 @@ on the submerged flesh, so flavour comes from the sauce diffusing in rather than
 diffusing out — which is why every tradition here pairs the fish with a strongly seasoned
 braise base. The trade is texture identity: braise gives up the firm, chewy steak bite that
 pan and grill methods are chosen for.
-
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `braise` — **newly discovered method for swordfish**, verified by four fetched sources across Italian, Portuguese, Chinese and Moroccan traditions; add `CookingMethod.BRAISE` to swordfish (id 423) `supported_methods`.
-- `recommended_doneness`: no change proposed — cut-level stays `well_done`, which this leaf's single measured band (60 °C) and every source's endpoint support.
-- No `method_temperature_ranges` override needed — the observed 60 °C sits inside the existing `FISH_WELL_DONE` range; the three untimed sources contribute no value to encode.
 
 ## Summary
 

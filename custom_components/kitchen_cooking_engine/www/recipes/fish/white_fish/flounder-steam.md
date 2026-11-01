@@ -151,12 +151,6 @@ All four sources converge on 60°C pull. The wide range of steam times (3–30 m
 
 Steaming is arguably the optimal method for flounder: the fish's extreme thinness means it would overcook instantly in a pan or hot oven, but in a steamer the gentle, even heat yields perfectly moist flesh every time. The method spans cultures — from Chinese New Year ceremony fish to Vietnamese daily home cooking to German steam-oven meal prep — all arriving at the same pull temperature, all using aromatic garnish to complement the neutral flesh. The MEATER probe is especially valuable here because steam-cooked fish has no colour change to indicate doneness on the outside.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `steam`
-- `recommended_doneness`: `"well_done"` (60°C pull, lean flatfish, fully opaque is the cross-cultural target)
-- No `method_temperature_ranges` override needed — `FISH_WELL_DONE` (min 60°C) matches
-
 ## Summary
 
 Steaming is widely used for flounder across Chinese, Vietnamese, Thai and German traditions. All four sources pull at 60°C, use aromatic additions to perfume the delicate flesh, and serve immediately. The extreme flatness of flounder is an advantage — steam reaches the centre quickly regardless of method.

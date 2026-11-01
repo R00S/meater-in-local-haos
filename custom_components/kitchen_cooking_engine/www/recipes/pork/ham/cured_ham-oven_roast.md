@@ -143,12 +143,6 @@ Filipino record poaches in a sweet-sour liquid for flavour and then bakes, and t
 go straight from packet to foil-covered pan, which is why they are the only ones that need a
 temperature target — they are the only ones where the oven is doing the heating.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `oven_roast` **already registered** for cured_ham — no change; this leaf replaces one whose records carried invented pulls.
-- `recommended_doneness`: **`heated_through`**, target 60 °C, range 57–63 °C — unchanged, and now supported by three published 140 °F figures.
-- No `method_temperature_ranges` override: the corpus's whole spread is 57–60 °C at removal, which is inside the existing band.
-
 ## Summary
 
 A pre-cooked cured ham is reheated, not roasted: 325 °F covered at 12–15 minutes per pound to

@@ -158,11 +158,6 @@ The observed range is **50–57 °C (122–135 °F)**, an exceptionally narrow b
 ## What makes this method special
 Oven roasting a whole beef tenderloin achieves something no other method can: a uniformly rosy interior from edge to near-edge, with a caramelised Maillard exterior, across a 1.2–2 kg muscle in 25–60 minutes. The gentle oven heat, whether applied before or after a stovetop sear, allows the temperature gradient through the lean muscle to equalise slowly — the reverse-sear method (low oven first) achieves the flattest possible gradient, so even the outer millimetres are pink rather than grey. The leanness of the tenderloin means the Maillard crust must be maximised in the sear stage, since fat does not render into the pan and contribute auto-basting; the sear is the only opportunity for surface flavour development. Carryover is particularly important for this cut — pulling 5–7 °C below the final target is not optional.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `oven_roast`, `grill`, `pan_sear`, `sous_vide`, `charcoal_grill`
-- `recommended_doneness`: `"medium_rare"` (universal cross-cultural consensus at 50–57 °C; no tradition targets anything else for whole tenderloin)
-- No `method_temperature_ranges` override needed — the default medium-rare band (52–57 °C) applies; pull temperature of 46–50 °C should be communicated to users via probe alert setting
-
 ## Summary
 Beef tenderloin roast is the one cut-method combination where there is essentially no cultural disagreement: every tradition from the USA to Japan, France, and the Middle East targets medium-rare at 50–57 °C, because the extreme leanness and premium price of the muscle make any higher doneness a culinary error. Oven roasting, particularly the reverse-sear variant, delivers the flattest possible temperature gradient through the lean muscle, maximising the uniformly rosy interior that defines a properly cooked whole tenderloin. Pull temperature of 46–50 °C is critical — carryover of 5–7 °C is inevitable and must be planned for.
 

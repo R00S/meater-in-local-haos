@@ -158,15 +158,6 @@ concentrated, slightly chewy top and a juicy base — the opposite gradient to a
 water out evenly from all sides. It is the fastest way to make a tomato taste cooked, and the least
 forgiving: the window between "cheese browned" and "topping black" is about two minutes at 15 cm.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` already contains `oven_broil` for `roasted_tomatoes` — no change required.
-- **Doneness targets are not supported by this leaf.** `tender` (90–100 °C) and `caramelized` (150–175 °C)
-  describe internal states no broiling source measures. Leave them as inherited guidance and mark the gap,
-  rather than deleting a coding value on the strength of four blogs.
-- MEATER probe note: for a large beefsteak half a probe can be inserted horizontally into the pericarp, but
-  the useful measurement is surface browning, not core temperature.
-
 ## Summary
 
 Four broiled-tomato sources were fetched — two US, one Italian-American, one Italian — and not one publishes

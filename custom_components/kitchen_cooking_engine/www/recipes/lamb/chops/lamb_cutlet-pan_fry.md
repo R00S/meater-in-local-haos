@@ -171,12 +171,6 @@ chops on their fat caps first and why the Greek source cooks the fat edge separa
 chops. The method's weakness is that everything happens in five minutes: the marinade has to carry
 the flavour, because there is no time to build one in the pan.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `pan_fry` was already registered and stays registered; the evidence behind it is now five fetched recipes instead of three dead URLs.
-- `recommended_doneness`: no change. The cut's `medium_rare` (54 °C) sits below both fetched readings (57 °C and 63–66 °C), so the gap is recorded rather than used to move the recommendation.
-- No `method_temperature_ranges` override on two measured sources.
-
 ## Summary
 
 Pan-fried lamb cutlets cook in 2–5 minutes a side in a pre-heated heavy pan, usually after a

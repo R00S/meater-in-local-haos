@@ -187,14 +187,3 @@ Grillen måste förvärmas till max (230–260 °C). Köttet bör oljeborsttas o
 **Consensus pull**: 54–57°C (130–135°F) for medium-rare across all traditions.
 
 **Representative coding value**: 55°C (131°F)
-
-## Notes for cooking_data.py
-
-- `doneness`: `"medium_rare"`
-- `pull_temp_c`: 55
-- `pull_temp_range_c`: [52, 68]
-- `safety_level`: `"wild_game"`
-- Keep grill lid open — venison overcooks rapidly under trapped heat
-- Rest 5–10 minutes minimum after pulling; carry-over adds 3–5°C
-- Backstrap/loin should be grilled whole; cut into medallions after resting
-- Pairs with port, redcurrant, chimichurri, green peppercorn or berry sauces

@@ -150,7 +150,6 @@ den svenska källan vilar30 minuter.
 
 ---
 
-
 ## Temperature consensus
 
 | Tradition | Preferred doneness name | Final serving temp |
@@ -170,12 +169,6 @@ The full observed range across the **four numeric sources** is **88–96 °C**; 
 ## What makes this method special
 
 Smoke is a surface treatment applied by a gas: hardwood combustion deposits carbonyls and phenols on the cold, damp meat while the surface is still wet enough to hold them, and only later does the crust those compounds form become the bark that seals the exterior. This cut is unusually good at absorbing that treatment, because the thick meat cover gives the smoke somewhere to sit instead of the thin, dry surface a leaner rack presents, and its fat renders slowly enough at pit heat to baste the meat from inside while the bark builds outside. The second feature is the cut's uneven thickness, which all three of the fetched European, American and Asian descriptions solve the same way — by placement relative to the fire rather than by turning — since a thick front rack moved constantly cooks at the thin end first. Wrapping is the one genuinely contested decision: it speeds the cook and softens the bark, and the sources disagree openly about how much of it is tolerable. Carryover at these endpoints is small to moderate, but the bones themselves distort probe readings, which is why every source that can uses a mechanical test alongside the thermometer.
-
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: nothing — `smoker` is already registered for this cut.
-- `recommended_doneness`: `"pulled"` (all four numeric sources fall in 88–96 °C, the existing `DONENESS_PULLED` band; no source places this cut elsewhere).
-- No `method_temperature_ranges` override needed — the observed numeric span coincides with the cut's standing range, so an override would restate what is already recorded.
 
 ## Summary
 

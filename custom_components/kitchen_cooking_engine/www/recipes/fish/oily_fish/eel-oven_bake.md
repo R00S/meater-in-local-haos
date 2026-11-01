@@ -137,12 +137,6 @@ The observed pull range is **64–67°C**. Italian, German and Belgian oven baki
 
 Oven baking is the most traditional eel preparation in Italy, where the fish is the star of the Christmas Eve feast. The method allows whole or large-section eel to be cooked evenly without charring, and the pan juices from the eel's rendered fat become the base for aromatic sauces. Unlike grilling, the oven method produces a less smoky, more subtle flavour — the eel's natural richness and the aromatics in the baking dish take centre stage.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `oven_bake`
-- `recommended_doneness`: `"well_done"` (all sources finish at 64–67 °C)
-- No `method_temperature_ranges` override needed — the standard well_done fish band covers oven-baked eel
-
 ## Summary
 
 Oven baking is the dominant eel method in Italian cuisine and a well-established preparation in Germany and Belgium. Italian, German, Belgian and Japanese sources all finish at 64–67 °C, with the Japanese oven-adapted kabayaki running slightly higher due to the caramelised tare. Well_done is the correct recommendation across all oven-baked eel traditions.

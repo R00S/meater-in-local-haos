@@ -155,11 +155,6 @@ The observed range is **54–65 °C (129–149 °F)**. Four of five traditions c
 ## What makes this method special
 Charcoal grilling is the canonical method for flank steak because the cut requires the fastest, most intense possible heat to develop a crust before the thin, lean cross-section is overcooked. The radiant infrared heat from glowing charcoal embers is the most intense cooking heat available domestically and in outdoor cooking — significantly hotter than gas grill grates — and this intensity is exactly what a thin, flat, flavourful-but-lean flank steak needs. The hardwood smoke aromatics complement the beefy flavour of flank steak more than they do the milder flavour of a tenderloin cut. The mandatory rest and cross-grain slicing are as important as the cook — a flank steak improperly sliced with the grain becomes nearly unchewable regardless of doneness.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `charcoal_grill`, `grill`, `pan_sear`, `pan_fry`, `oven_roast`, `sous_vide`
-- `recommended_doneness`: `"medium_rare"` (54–60 °C consensus across steakhouse, Argentine, Middle Eastern, and Japanese traditions)
-- No `method_temperature_ranges` override needed — default medium_rare band applies
-
 ## Summary
 Charcoal-grilled flank steak is served medium-rare at 54–60 °C across four of five culinary traditions surveyed, with the Tex-Mex carne asada tradition deliberately targeting medium at 62–65 °C. The charcoal grill is the ideal method for this lean, flat cut because its intensity creates a crust before the interior overcooks — a critical requirement for a steak with no fat buffer. Slicing thinly against the grain is not optional: it is the technique that makes flank steak edible at any temperature.
 

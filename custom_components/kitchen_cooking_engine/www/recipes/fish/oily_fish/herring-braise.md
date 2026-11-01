@@ -54,12 +54,6 @@ Only one fully fetched recipe is available, and it uses smoked rather than fresh
 
 The braise begins with smoked herring that is rehydrated and desalted, then adds it late to a liquid already carrying softened onion, pepper, herbs and tomato. The short simmer lets the fish lend smoke and salt to the sauce without pretending it needs a long cook as a fresh cut would. Scotch bonnet and lime add heat and acidity, while the smoked fish's strong flavour stands up to the aromatic vegetable base. The source provides no probe endpoint, so this leaf records method evidence rather than temperature guidance.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `braise` (one fetched, human-created Caribbean smoked-herring recipe confirms the method).
-- `recommended_doneness`: no change proposed — source has no internal or final serving temperature.
-- No `method_temperature_ranges` override proposed — one recipe supplies a simmer duration only.
-
 ## Summary
 
 Braising turns rehydrated smoked herring into a quick, savoury component of a pepper-and-tomato sauce. It is a strong match for preserved red herring, but the single Caribbean recipe does not yet justify a general herring temperature target or broad method consensus.

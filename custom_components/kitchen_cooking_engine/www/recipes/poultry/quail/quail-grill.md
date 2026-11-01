@@ -77,12 +77,6 @@ The US source is the only one of the two with a thermometer endpoint: 65–68 °
 
 Direct radiant heat crisps quail skin faster than any other method and adds smoke-adjacent flavour from rendered fat dripping on coals, but the lean 150 g body has almost no thermal reserve — two-zone grilling (Shaw) exists precisely to decouple browning from through-cooking, and the Turkish whole-bird version leans on constant attention instead. The spatchcock geometry matters: it equalises breast and leg distances to the fire so one bird finishes together. Shaw's sauce glazes during the cook, protecting the surface while building lacquer.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `grill` is already listed for quail.
-- `recommended_doneness`: no change proposed — one source's 65–68 °C endpoint contradicts the recorded 74 °C but a single chef source is insufficient evidence to move a poultry safety default.
-- No `method_temperature_ranges` override proposed — revisit if 2+ more temperature-bearing sources are collected.
-
 ## Summary
 
 Grilling quail gives crisp lacquered skin and the fastest cook, at the cost of the narrowest drying margin of any method. One US source pulls the breast at 65–68 °C and one Turkish source trusts the eye; the leaf records the method's shape and the safety-guidance divergence but cannot yet support a temperature recommendation.

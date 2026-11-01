@@ -113,12 +113,6 @@ Three fetched sources, all naming hake explicitly: Chile, US and UK-published In
 
 Pan frying gives hake what poaching cannot: a browned, slightly crisp surface that stands up to lemon and fat-based sauces, in under ten minutes. The flour dust is functional, not decorative — it dries the surface, limits sticking on a soft fillet and gives the crust something to form on. The method's weakness is control: with a 20 mm fillet in a hot pan there is a very short window between "easily flakes" (Chilean cue) and dry, which is precisely why the source that cares about a temperature uses a holding oven instead of a longer pan cook.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `pan_fry` was already registered and stays registered; the evidence now behind it is three fetched recipes rather than five unverifiable book records.
-- `recommended_doneness`: no change — no fetched source states a temperature.
-- No `method_temperature_ranges` override.
-
 ## Summary
 
 Pan-fried hake is a short, hot, mostly undisturbed cook in a little fat: dry or flour the fillet, set it down, leave it 3–4 minutes, turn once and finish in 2–3 minutes to a flake cue. Three fetched sources now support it, none with an internal temperature; the five cookbook records that previously supplied pull temperatures were removed because they could not be verified.

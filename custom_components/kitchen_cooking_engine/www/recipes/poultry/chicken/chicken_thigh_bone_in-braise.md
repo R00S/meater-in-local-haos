@@ -215,12 +215,6 @@ liquid that would overcook a boneless piece. The cost is skin: braised skin soft
 fetched sources either accept that (French, Korean), brown hard first (Jamaican, Senegalese),
 or build the sauce from the drippings so nothing is lost.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `braise` is already listed for this cut.
-- `recommended_doneness`: `dark_meat_optimal` (79 °C / 175 °F) is supported for this method — the one measuring source explicitly prefers 175 °F for thighs.
-- No `method_temperature_ranges` override needed — the stated thigh-preference target (75–80 °C) falls inside the existing `dark_meat_optimal` range.
-
 ## Summary
 
 Braising is the bone-in thigh's most natural match: sear for flavour, then let the thigh's collagen melt into the sauce over a gentle covered finish. The four fetched sources span French, Korean, Jamaican and Senegalese kitchens and agree on architecture while two of them explicitly prefer dark meat taken to 175 °F for tenderness. This is the method where the cut's optimal doneness is published rather than assumed — and the only one in this collection where a source states a thigh-specific temperature preference.

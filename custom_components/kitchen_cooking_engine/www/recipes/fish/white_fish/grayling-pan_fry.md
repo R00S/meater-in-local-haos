@@ -119,12 +119,6 @@ The sources provide times and cooking descriptions but no internal-temperature d
 
 Pan-frying puts the small fish in direct contact with hot fat, browning the skin quickly while the interior cooks over a short interval. The Jämtland recipe adds a brief simmer in cream and goat whey cheese, whereas the Austrian and Swedish bacon preparations keep the pan-fried crust more exposed. The recipes therefore document several regional expressions of pan-cooked grayling, but they do not quantify internal temperatures. Their stated times are source-specific and should not be converted into a common probe target.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `pan_fry` is already listed for grayling.
-- `recommended_doneness`: no change proposed; these recipes do not provide explicit internal-temperature evidence.
-- No `method_temperature_ranges` override proposed from this incomplete temperature evidence.
-
 ## Summary
 
 Pan-frying gives grayling a quickly browned exterior while keeping the delicate fish preparation simple. The retrieved recipes document Austrian and Swedish approaches, but none states an internal pull temperature, so they support the method’s culinary relevance rather than a temperature setting for the app.

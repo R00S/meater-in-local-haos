@@ -125,12 +125,6 @@ means the assertive goat aroma stays in the pot and the sauce, which is why both
 sources are heavily spiced curries rather than plain preparations. The trade-off is the same
 as any braise: no crust, and a doneness endpoint defined by feel.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `slow_cooker` is already listed for this cut.
-- `recommended_doneness`: no change proposed — neither source states an internal temperature; tenderness endpoints imply well-done practice but supply no number.
-- No `method_temperature_ranges` override needed — no measured endpoint exists to override with.
-
 ## Summary
 
 Slow cooking turns goat-leg pieces into fork-tender curry with no attention, over four to five hours of sealed gentle heat. It is an excellent structural match for the cut's collagen, in both Caribbean and Indian forms. Both sources cook to feel rather than temperature, so this method records technique and tradition only.

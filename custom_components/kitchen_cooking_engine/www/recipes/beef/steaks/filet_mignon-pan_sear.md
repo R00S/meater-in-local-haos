@@ -147,11 +147,6 @@ The observed range is **49–57 °C (120–135 °F)**. The core consensus — Am
 ## What makes this method special
 Pan searing at very high heat (dry or near-dry pan) produces the most intense, darkest Maillard crust of any stovetop method — the very dry contact surface between the steak face and the superheated metal creates a narrow zone of extreme dehydration and browning without pooled fat moderating the temperature. For lean filet mignon, this crust is the primary flavour contribution — the interior has little flavour to give. The rapid-flip technique (Kenji's method) distributes crust development across both faces simultaneously and reduces the temperature gradient between surface and centre, producing more even medium-rare throughout. Butter basting adds dairy browning that the lean exterior cannot produce from rendered fat.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `pan_sear`, `pan_fry`, `grill`, `charcoal_grill`, `oven_roast`, `sous_vide`, `air_fryer`
-- `recommended_doneness`: `"medium_rare"` (52–57 °C for standard beef; 49–52 °C for Wagyu)
-- No `method_temperature_ranges` override needed — default medium_rare band applies
-
 ## Summary
 Pan-seared filet mignon is the classic indoor preparation of the cut — hot, dry pan contact produces the darkest Maillard crust of any stovetop method, compensating for the absence of intrinsic fat flavour in the lean psoas major. Five traditions across the USA, France, Britain, Japan, and Australia all target medium-rare at 49–57 °C, with the Wagyu Japanese tradition at the rare end and the American and Australian traditions at the upper medium-rare end. Precise temperature management is more critical for filet mignon than any other steak because the lean, fine-grained muscle transitions from perfect to dry and grey across a narrow window.
 

@@ -176,12 +176,6 @@ Five of the six fetched recipes name hake explicitly (Great British Chefs, On Th
 
 Poaching is the only hake method in this collection where the fish never meets hot fat. That matters for a fillet this lean and this soft: there is no crust to set the surface, so the cook has to rely on the liquid temperature and a short clock instead — and every source compensates with a strongly flavoured broth or sauce (soy and honey, coconut and lemongrass, tomato and paprika, herb cream). Court-bouillon poaching also gives a second product, the cooking liquor, which the French source turns into the sauce itself. The cost is that poached hake has no browning at all, so it depends on the sauce for contrast.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains `poach`: five explicitly hake-named recipes plus one ambiguous French one confirm it.
-- `recommended_doneness`: no change — no fetched source states a temperature.
-- No `method_temperature_ranges` override: there is no temperature evidence to override with.
-
 ## Summary
 
 Poached hake divides into court-bouillon poaching in a deep flavoured bath (2–15 minutes depending on the source and the vessel) and sauce poaching on a shallow base (5–15 minutes covered). Six fetched sources, five of them hake-specific, meet the collection count; none supplies an internal temperature, so the leaf records method and timing evidence only.

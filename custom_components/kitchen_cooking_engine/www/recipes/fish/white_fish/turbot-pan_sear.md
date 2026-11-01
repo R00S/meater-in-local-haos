@@ -173,13 +173,6 @@ The data shows a clear gradient: French and British restaurant traditions target
 
 Pan-searing is the definitive restaurant method for turbot and the technique around which the fish's legendary status in European haute cuisine is built. The exceptionally firm flesh — firmer than any other European flatfish — holds together perfectly under high-heat searing, and the thick profile means the skin can be rendered fully crisp while the interior cooks gently. Unlike thinner flatfish (plaice, sole) that risk drying out, turbot forgives a minute or two of extra searing time on a thick fillet. The black upper skin of turbot is unique: it protects the delicate flesh during searing and peels away cleanly after cooking, carrying concentrated flavour compounds developed by the Maillard reaction. In French haute cuisine, *turbot sauté au beurre* is considered the Platonic ideal of pan-seared fish — the test dish in which every element (heat control, butter quality, timing, restraint) must be perfect. Chef Simon's warning that "eating overcooked turbot is without any interest — it is a culinary crime" is widely cited in European culinary education. The pan-then-oven hybrid approach (GBC and Madensverden) solves the practical challenge of cooking thick fillets evenly without burning the crust, and is the preferred technique for restaurant service. The MEATER probe is uniquely valuable with turbot because its extreme quality makes the difference between 54°C and 63°C a commercially meaningful distinction.
 
-## Data applied to cooking_data.py
-
-- `pan_sear` is already in `supported_methods` for turbot (id=444) — **no change to cooking_data.py needed**
-- `recommended_doneness`: `"well_done"` (conservative, 60°C pull) already set — matches home-cook and Nordic sources
-- French and British restaurant preference for medium (54–56°C) is documented here and in the temperature ranges; `FISH_MEDIUM` range (52–57°C) is already present
-- Probe placement note confirmed: lateral edge of fillet to geometric centre
-
 ## Summary
 
 Pan-searing is turbot's signature restaurant method across French, British, Japanese, and Danish cooking traditions. All four sources use the same fundamental technique — high-heat sear skin-side (or presentation-side) down, optional oven finish for thick portions — but differ in final target temperature and finishing style. French and British restaurant chefs converge on 54–56°C (medium) for exceptional texture; Japanese and Danish home cooking goes to 60°C (well-done). The culinary case for the MEATER probe is compelling: turbot is an expensive, unforgiving fish where a 5–10°C difference separates world-class results from a dry, expensive mistake.

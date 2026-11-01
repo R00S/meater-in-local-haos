@@ -185,20 +185,6 @@ flesh comes up to temperature. The MEATER probe matters most for the open-dish m
 (2 of 4 sources) where there is no steam protection and the back-flesh can tip into
 well-done in the last few minutes.
 
-## Data applied to cooking_data.py
-
-- `usda_safe_c: 63` — unchanged; matches the FDA / USDA safe minimum for finfish (145 °F)
-  and matches the salmon_fillet value already in `cooking_data.py`.
-- `recommended_doneness: medium` — unchanged; the one explicit pull temp found
-  (CuisineAZ ≈ 60 °C) sits at medium / well-done boundary; all four recipes warn
-  visually against overcooking.
-- No `method_temperature_ranges` override identified from this research: oven-bake of
-  a steak uses the same internal target as oven-bake of a fillet; the difference is
-  surface technique (folding belly flaps, using a papillote), not internal temperature.
-- `cooking_methods_researched: 2` (combined with the pan_sear leaf) — confirmed:
-  oven_bake is a primary method for salmon steak across both Northern and Western
-  European traditions.
-
 ## Summary
 
 Oven-baking salmon steaks is a moderate-heat, time-driven preparation across all four

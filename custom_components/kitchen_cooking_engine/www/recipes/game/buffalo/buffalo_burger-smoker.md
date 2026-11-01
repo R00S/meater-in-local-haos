@@ -122,12 +122,6 @@ ground patty, because the cook already lasts an hour. It is also the one context
 thermometer is not optional — at 225 °F a bison patty goes from 140 °F to 160 °F faster than
 the cook expects, and there is no crust colour to read.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `smoker` is **not registered** for buffalo_burger — **added** this pass, with the dated comment in `cooking_data.py`.
-- `recommended_doneness`: `well_done` — the engine's 71 °C target stays; the sources' 60 °C + 12 min hold and 65 °C endpoint are recorded as published protocols, and neither justifies adding a rarer band to a ground-meat cut.
-- No `method_temperature_ranges` override needed. A lower band for this method would advertise 60 °C without the twelve-minute hold that makes it safe, so the override is deliberately declined.
-
 ## Summary
 
 Smoking a bison burger means 45–60 minutes at roughly 225 °F on a thick, built-up patty — bacon

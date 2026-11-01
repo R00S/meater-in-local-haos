@@ -148,12 +148,6 @@ meat is warmed or cooked through but never stewed to shreds — this cut has no 
 collagen to reward patience, and the braise is about flavour transfer into the sauce, not
 tenderness extraction from the meat.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `braise` — **newly discovered method for secreto**, verified by three fetched sources (Spain ×2, one international home blog); add `CookingMethod.BRAISE` to secreto (id 204) `supported_methods`.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`, which this leaf's three through-cooked stew forms support.
-- No `method_temperature_ranges` override needed — no source states a doneness temperature; the only thermal settings are pan and simmer levels that govern the liquid, not the meat.
-
 ## Summary
 
 Braising a *secreto* means cutting it into strips or dice first — the two Spanish *guiso* sources make it stew meat for a fifteen-minute wet phase, while the international home blog sears thin fillets and lacquers them two to three minutes in an orange-brandy sauce. None of the three probes the meat and all cook it through, so the method confirms the cut's `well_done` default rather than challenging it. The secreto's coarse seam fat is the point: it gives the sauces body, and the short wet phase keeps the lean muscle from drying. Keep the simmer to minutes, thicken the sauce, and serve the meat in or under it.

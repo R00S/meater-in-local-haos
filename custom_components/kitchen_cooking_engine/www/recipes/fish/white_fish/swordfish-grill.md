@@ -143,12 +143,6 @@ fetched source either works in a tight 3–7 minutes-per-side band or leans on a
 Charcoal adds volatile smoke phenols on top of the crust; gas gives cleaner heat and more
 even gradients — the difference the sources taste but rarely measure.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `grill` — already present for swordfish (id 423); no code change needed for this leaf.
-- `recommended_doneness`: no change — `well_done` retained; the US 54–57 °C medium practice is recorded in this leaf, not promoted to the cut default.
-- No `method_temperature_ranges` override needed — the single stated range (54–63 °C) sits inside the existing `FISH_MEDIUM`/`FISH_WELL_DONE` bands, and the remaining sources publish no temperature to encode.
-
 ## Summary
 
 Grilling turns a swordfish steak into something closer to a barbecued chop: high direct

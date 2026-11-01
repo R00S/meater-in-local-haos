@@ -157,12 +157,6 @@ The observed pull range is **59-61°C**. All four traditions are working toward 
 
 Pan frying gives pikeperch a thin browned crust without needing the longer drying exposure of the oven. A light flour coat protects the lean surface proteins and helps the fish release from the pan before the flakes break. Because the fillets are relatively thick and structured, they tolerate turning better than perch while still benefiting from quick cooking. Sauce pairings matter here because the method creates flavour through browning, but the fish itself contributes little fat.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `pan_fry`
-- `recommended_doneness`: `"well_done"` (all sources finish near 63°C)
-- No `method_temperature_ranges` override needed — the standard well_done fish band already matches the observed pan-fried pikeperch finish
-
 ## Summary
 
 Pan frying is an excellent match for pikeperch because it browns the exterior quickly while keeping the interior cohesive and juicy. Across Swedish, German, Danish and French sources, the fish is consistently finished just below or at the low-60s °C range, which supports the current well_done recommendation for this very lean freshwater species.

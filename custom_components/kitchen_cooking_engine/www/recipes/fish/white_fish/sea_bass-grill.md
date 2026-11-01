@@ -112,7 +112,7 @@ bogen bakom huvudet.
 
 The finding here is a negative one and it is consistent across three traditions: **no
 fetched grilling source for this cut publishes an internal temperature**, so the leaf's
-observed range is empty and no `method_temperature_ranges` override can be justified from
+observed range is empty and no method-specific temperature band can be justified from
 evidence. What the sources substitute is a **mechanical** doneness test — the fish releasing
 from the grate — which is in fact a better signal than time for a whole fish of unknown
 thickness, and the Turkish source states it as a rule ("if it does not come away, it is not
@@ -138,12 +138,6 @@ and the Turkish source makes that the central instruction. The Greek habit of tu
 grate rather than the fish spreads the load across both faces without risking torn skin, and
 the oil layer — applied before grilling and again at each turn — is doing double duty as
 release agent and heat-transfer medium.
-
-## Data applied to cooking_data.py
-
-- `supported_methods`: `grill` **already registered** for sea_bass (id 422) — no change needed; this is the missing declared-method leaf.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`; every source cooks to opaque flesh and the release-from-grate test.
-- No `method_temperature_ranges` override needed — no source publishes a numeric pull for grilled whole sea bass, so there is no observed range to encode; the house-guidance 60 °C pull and 63 °C floor sit inside the cut's existing `FISH_WELL_DONE` band.
 
 ## Summary
 

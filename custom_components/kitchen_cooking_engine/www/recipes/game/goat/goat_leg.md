@@ -107,6 +107,6 @@ under a different rule and counted Group A/D gaps that are now closed).
 1. **Reconcile the doneness recommendation**: the frontmatter says `recommended_doneness: well_done` while the `doneness` block marks `medium_rare` as `recommended: true`. The oven-roast evidence supports well-done; the grill evidence shows a real medium-rare tradition. Decide deliberately.
 2. Verify or rule out remaining enum methods — smoker, sous_vide, boil/steam for leg pieces — then re-assess `cooking_methods_researched`.
 3. Raise the four partial leaves to the 4–6-source gate: pressure_cooker (+3), grill (+2), slow_cooker (+2), braise (+1).
-4. Resolve the grill-leaf doneness split (Caribbean tenderness vs US 135–140 °F medium-rare) with more traditions before any `method_temperature_ranges` override is committed.
+4. Resolve the grill-leaf doneness split (Caribbean tenderness vs US 135–140 °F medium-rare) with more traditions before any method-specific temperature band is committed.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

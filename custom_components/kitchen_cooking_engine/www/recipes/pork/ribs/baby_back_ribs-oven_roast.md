@@ -144,7 +144,3 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 | Chefkoch.de (DE) | 150 °C foil × 2.5–3 hr + broil | 90–95 °C |
 
 **Consensus pull range**: 88–95 °C (190–203 °F). The low-and-slow foil method (150 °C × 1–3 hr) is the dominant approach across all traditions; higher-temp finish is used for glazing only.
-
-## `cooking_data.py` note
-
-Use `DONENESS_WELL_DONE` target 90 °C, range 88–95 °C for `baby_back_ribs` × `oven_roast`. No medium/rare options — collagen requires sustained heat to render and below 80 °C ribs remain tough.

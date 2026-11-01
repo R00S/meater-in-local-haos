@@ -150,12 +150,6 @@ All four European traditions consistently finish braised pike in the 62–63°C 
 
 Braising is among the few ways to cook whole bone-in pike without its complex skeleton becoming a hazard — the slow, wet cook softens the smaller pin bones so they can be felt and removed as the fish is served. The wine-based cooking liquid dissolves collagen, extracting flavour from the bones and skin, and concentrates into a naturally body sauce that pairs the pungency of freshwater fish with the acidity and depth of Alsatian Riesling or French Burgundy red wine. Cream or egg-yolk liaisons bring richness back to an otherwise very lean protein.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `braise`
-- `recommended_doneness`: `"well_done"` (62–63°C pull across all sources; braised lean fish requires full opacity)
-- No `method_temperature_ranges` override needed — `FISH_WELL_DONE` (target 63°C) matches observed pull range
-
 ## Summary
 
 Braising is the signature European method for pike, born from the river-fishing kitchens of Alsace and Burgundy and echoed in the Swedish tradition of finishing fillets in cream sauces. Across all four source recipes the fish is cooked to full opacity in liquid, consistently pulling at 62–63°C, which aligns precisely with the `well_done` range already defined for this cut. The moist-heat environment keeps the lean flesh from drying even when fully cooked.

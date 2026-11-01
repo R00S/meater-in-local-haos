@@ -155,16 +155,11 @@ Pannsearing vid högsta möjliga spishetstemperatur (240–280 °C i en kolstål
 | Spanish plancha (José Andrés) | Medium-rare | 57 °C / 135 °F |
 | Nordic (René Redzepi) | Medium-rare | 57 °C / 135 °F |
 
-The observed pull-temperature range is 52–53 °C (126–127 °F), reflecting the aggressive carryover associated with a screaming-hot pan. All five traditions target medium-rare as the final serving temperature; the Japanese wafu presentation runs slightly rare-leaning at 55 °C (131 °F) to match the cleaner ponzu-and-daikon accompaniment that suits a more translucent centre. The consensus maps to `medium_rare` in cooking_data.py. The `recommended_doneness` key is `medium_rare`.
+The observed pull-temperature range is 52–53 °C (126–127 °F), reflecting the aggressive carryover associated with a screaming-hot pan. All five traditions target medium-rare as the final serving temperature; the Japanese wafu presentation runs slightly rare-leaning at 55 °C (131 °F) to match the cleaner ponzu-and-daikon accompaniment that suits a more translucent centre. The consensus maps to `medium_rare` in the cut file. The `recommended_doneness` key is `medium_rare`.
 
 ## What makes this method special
 
 Pan searing at maximum heat concentrates all the energy of the method in the first few minutes, driving the most intense Maillard reaction possible on a flat surface: caramelised proteins and browning sugars produce a crust with bitterness, depth and caramel notes that no gentler method achieves. The flat iron's fat content is a specific asset here — the intramuscular fat flows into the hot pan and joins the butter-basting cycle, creating a self-basting internal mechanism while the exterior crust forms. The cook must work precisely with a probe because the temperature window is narrow: at 260–280 °C pan surface temperatures the core can rise 10 °C in under 90 seconds. The frequent-flip technique (Kenji's method) reduces the grey band beneath the crust by distributing heat evenly, while the single-flip restaurant approach (Ramsay) prioritises crust depth on each face. Both are valid approaches for the flat iron's thickness.
-
-## Data applied to cooking_data.py
-- `supported_methods` gains/includes: `pan_sear`
-- `recommended_doneness`: `"medium_rare"` (maximum Maillard crust complements the cut's marbling at 57 °C)
-- No method_temperature_ranges override needed
 
 ## Summary
 

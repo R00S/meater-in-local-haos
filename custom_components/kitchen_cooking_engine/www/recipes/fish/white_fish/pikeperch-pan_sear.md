@@ -145,12 +145,6 @@ The observed pull range is **58–60°C**. All four traditions emphasise a singl
 
 Pan searing produces something oven baking cannot: a deeply blistered, crackling pikeperch skin. Because the fillet is laid entirely skin-side down for most of the cook, the Maillard reaction and moisture loss are both concentrated on the skin surface, where they are desirable. The flesh side remains cushioned from direct heat and effectively braises in the butter vapour. The probe tip sitting in the geometric centre of the flesh is essential here because the temperature gradient from skin to flesh is steeper than in any other pikeperch method.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `pan_sear`
-- `recommended_doneness`: `"well_done"` (all sources finish in the low 60s °C)
-- No `method_temperature_ranges` override needed — the standard well_done fish band already matches the observed skin-seared pikeperch finish
-
 ## Summary
 
 Pan searing is the showpiece method for pikeperch across Scandinavian, German, and French cooking. Swedish, Finnish, German, and French sources all converge on a pull temperature of 58–60 °C, with carryover resting the fish to a moist well_done finish. The technique is primarily a skin-texture technique, and the probe positioned in the fillet centre prevents the common mistake of over-cooking while chasing full skin crispness.

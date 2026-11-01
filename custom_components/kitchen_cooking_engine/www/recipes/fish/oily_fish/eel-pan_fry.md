@@ -140,12 +140,6 @@ The observed pull range is **64–67°C**. European traditions converge on 64–
 
 Pan frying is the most accessible everyday eel method and has the widest geographic tradition. The flour or breadcrumb coating used in Belgian, German and Swedish cooking absorbs the rendered subcutaneous fat and produces a golden crust that contrasts with the rich interior. In Chinese cooking, the wok's intense heat creates a different but equally compelling exterior: smoky, caramelised soy glaze over firm flesh. Eel's fat content means it can tolerate the moderately long pan time needed to brown all sides of a cylindrical section without drying out.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `pan_fry`
-- `recommended_doneness`: `"well_done"` (all sources finish at 64–67 °C; eel fat makes well_done the correct finish)
-- No `method_temperature_ranges` override needed — the existing well_done fish band covers pan-fried eel
-
 ## Summary
 
 Pan frying is the everyday workhorse method for eel across Belgium, Netherlands, Germany, Sweden, and China. European traditions use flour or breadcrumb coatings and finish at 64–65 °C; the Chinese wok method runs slightly hotter at 67 °C. All are well_done preparations that fully render the fat and produce a rich, satisfying result.

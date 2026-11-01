@@ -192,12 +192,6 @@ structure to the moist heat until it can be pulled apart. The Greek source's ref
 underdone safety-wise, it is texturally unfinished. What the method costs is the steak's
 identity — by the end it is falling-apart meat in sauce, not a slice you can pick up.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `braise` **already registered** for pork_shoulder_steak (id 203) — no change needed; this is the missing declared-method leaf.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`; this leaf's only measured band (90–93 °C) sits inside and above the existing `PORK_WELL_DONE` range (68–77 °C target band ends at 77 °C), which is a tension worth noting: the published Greek target is higher than the cut-level band's maximum. Encoding it as a method override would be a defensible future change once a second source publishes a braising temperature; with one source, the range is documented here instead of coded.
-- No `method_temperature_ranges` override written — single-source evidence, documented above.
-
 ## Summary
 
 Braising cooks a pork shoulder steak in a covered oven surrounded by liquid for one and a

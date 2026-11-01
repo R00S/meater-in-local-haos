@@ -127,12 +127,6 @@ The observed pull range is **64–65°C**. All four smoking traditions finish pi
 
 Smoking transforms pikeperch from a mild-flavoured table fish into a delicacy with a complex, wood-scented profile. The lean flesh absorbs smoke aromas more cleanly than fatty fish, where excess fat can carry bitter compounds. The Swedish box-smoker tradition (*abu-röken*) made whole smoked pikeperch a weekend ritual in Scandinavian outdoor cooking. Unlike eel or mackerel, pikeperch holds its white, flaky texture after smoking and can be served warm or chilled equally well.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `smoker`
-- `recommended_doneness`: `"well_done"` (all sources finish above 63°C)
-- No `method_temperature_ranges` override needed — the standard well_done fish band covers hot-smoked pikeperch
-
 ## Summary
 
 Hot smoking is a celebrated tradition for pikeperch in Sweden, Germany, the Netherlands, and Finland. All four traditions converge on a 64–65 °C pull temperature, slightly above the standard fish minimum, to ensure the dense shoulder section of whole fish is completely set and the smoke character has fully developed.

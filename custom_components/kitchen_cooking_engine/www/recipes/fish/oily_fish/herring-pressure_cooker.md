@@ -131,12 +131,6 @@ Tryckkokning av sill görs framför allt för att mjuka upp benen. En sluten kok
 
 A pressure cooker holds its contents at roughly 115–121 °C instead of 100 °C, and that extra 15–20 °C is what attacks herring's bones: collagen in the fine intramuscular bones and the backbone hydrolyses into gelatin, so the fish goes from fiddly to fork-tender without the flesh being cooked to mush by long boiling at ambient pressure. Herring's high fat content helps here — the rendered oil keeps the flesh lubricated while the connective tissue breaks down, and both the Russian and American sources add extra oil (a full cup in the Russian pot, a tablespoon or two per jar in the American) which also limits oxidation of that fat during storage. The four sources map the technique's range: 15 minutes softens the fine bones in a Korean pressure rice cooker, 40 minutes in a Japanese simmer softens them but leaves the thickest bones firm, and a full hour to 100 minutes produces a jar-stable product whose bones can be chewed outright. The Russian recipe sidesteps the question entirely by removing the large bones before cooking. What no tradition does is measure the fish.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `pressure_cooker` is already listed for herring.
-- `recommended_doneness`: no change proposed — no source provides internal-temperature evidence, and bone softening is not a probe target.
-- No `method_temperature_ranges` override proposed — the collected sources give times, pressures and bone-texture endpoints only.
-
 ## Summary
 
 Pressure cooking is the method that makes herring's bones edible: the sealed pot pushes the cooking temperature well past boiling, the collagen in the small bones turns to gelatin, and a fish normally eaten around the skeleton can be eaten through it. That makes it an excellent match for this cut, and a better one than long simmering, which dries the flesh before the bones give way. The cost is control — the flesh is soft, and the sources disagree by a factor of six on how long it should stay under pressure, from a fifteen-minute Korean batch to a hundred-minute canned jar, so the cook is choosing a texture rather than following a rule. Judge it by the bones, and pull early rather than late.

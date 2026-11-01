@@ -149,7 +149,7 @@ four is therefore **63–72 °C (145–162 °F)** at the serving point, with thr
 at medium. **Tie-break**: the medium school prevails 3-to-1 on the source count and holds the
 only measured data, so the Spanish well-done row is recorded as the outlier rather than
 averaged in. **Applied target**: 63 °C at the serving point, achieved by pulling at 57–60 °C
-where a probe is used. **Temperature used in cooking_data.py: 63 °C (`PORK_MEDIUM` band)**.
+where a probe is used. **Temperature used in the cut file: 63 °C**.
 `recommended_doneness` for this method: **`medium`** — measured pull plus two medium
 descriptions; the cut-level `well_done` is not proposed for change in this leaf alone (see
 Data applied).
@@ -170,12 +170,6 @@ foreigners does. The chimichurri and manchego-sauce pairings in the two European
 doing the same job as the US source's chimichurri and charred-lemon suggestions: acidity and
 herbs to cut the rendered fat, which is the real richness of this cut once the flame has done
 its work.
-
-## Data applied to cooking_data.py
-
-- `supported_methods`: `grill` **already registered** for secreto (id 204) — no change needed; this is the previously missing declared-method leaf.
-- `recommended_doneness` (method key for grill): **`medium`** — pull 57–60 °C, serve 63 °C (measured), corroborated by two verbal medium descriptions. At cut level: **no change proposed in this leaf alone** — the cut stays `well_done` until the measured 55–65 °C cluster across all six leaves is weighed in a single pass; this leaf records its evidence for that decision.
-- No `method_temperature_ranges` override needed — the single measured range (57–60 °C pull) already sits inside the engine's generic pork medium band; the verbal rows contribute no numeric range.
 
 ## Summary
 

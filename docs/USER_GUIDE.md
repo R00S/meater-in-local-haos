@@ -808,10 +808,6 @@ Follow with 2–4 sentences stating the source-reported temperature range (or th
 
 After the collection gate passes, write 3–6 sentences on the physics and flavour chemistry of this method applied to this cut.
 
-## Data applied to the cut's recipe file
-
-After the collection gate passes, list actionable method/doneness changes supported by the collected evidence. Do not use incomplete collections to set engine temperature values.
-
 ## Summary
 
 After the collection gate passes, write 2–4 plain-language sentences explaining the result and whether the method suits the cut.

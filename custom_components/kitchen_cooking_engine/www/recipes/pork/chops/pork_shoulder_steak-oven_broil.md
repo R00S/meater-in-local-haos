@@ -103,12 +103,6 @@ range and one of them measures while the other does not. What the method buys is
 grill's crust with an oven's consistency; what it costs is the evenness of `oven_roast`,
 since the half of the steak facing away from the element is always the last thing done.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `oven_broil` — **newly discovered method for pork_shoulder_steak**, verified by two fetched sources (both US, one with the cut form explicitly unspecified); add `CookingMethod.OVEN_BROIL` to pork_shoulder_steak (id 203) `supported_methods`.
-- `recommended_doneness`: no change proposed — one published value (145 °F) that the cut-level `well_done` band already covers; the source's "medium" label for that value is recorded, not adopted.
-- No `method_temperature_ranges` override needed — two US sources, one measured value: too thin an evidence base to encode.
-
 ## Summary
 
 Broiling cooks a pork shoulder steak under a close element for about 12–15 minutes,

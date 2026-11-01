@@ -144,12 +144,6 @@ makes the result recognisably baked ham. Salt is the other variable: two sources
 plain water or cola specifically to pull salt out, so the liquid is doing chemistry as well as heat
 transfer.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` keeps `slow_cooker`: it was already registered on this branch and now has a leaf and four fetched sources behind it.
-- `recommended_doneness`: no change. The cut recommends `well_done` (71 °C), which matches the 71 °C source and sits just above the 68 °C source.
-- No `method_temperature_ranges` override on four sources from one tradition.
-
 ## Summary
 
 Slow-cooking a gammon joint is a 4–8 hour moist cook at low power followed by a fast glaze; two of

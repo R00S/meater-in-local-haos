@@ -248,13 +248,3 @@ Pannsteksningstiden: 3–4 minuter per sida i smör vid hög värme. Sond insatt
 **Consensus pull**: 54–57°C (130–135°F) for medium-rare. Nordic tradition runs slightly higher (60°C/140°F). Italian tradition pulls lower with longer rest.
 
 **Representative coding value**: 55°C (131°F)
-
-## Notes for cooking_data.py
-
-- `doneness`: `"medium_rare"`
-- `pull_temp_c`: 55
-- `pull_temp_range_c`: [52, 68]
-- `safety_level`: `"wild_game"` — venison is safe at medium-rare; no parasitic concerns for farmed/inspected deer
-- Pull at 52–55°C for rare-medium-rare; 58–60°C for medium; above 65°C the meat dries rapidly
-- Rest time: 5–10 minutes minimum; carry-over adds 3–5°C
-- Pairs with fruity/acidic sauces: blackberry, lingonberry, redcurrant, balsamic

@@ -123,7 +123,7 @@ guide closes the question with a policy statement — no well-done guidance for 
 **Tie-break**: three measured sources, all below or at the cut's `medium` band — none supports
 `well_done`. **Applied target**: 55–62 °C bath with a hard finishing sear; the single most
 defensible house setting is **57 °C (135 °F) for 2–24 h**, the middle of the band and the only
-one carrying an explicit pasteurization justification. **Temperature used in cooking_data.py:
+one carrying an explicit pasteurization justification. **Temperature used in the cut file:
 55–62 °C, recorded as sous-vide bath settings (bath = core at these holds)**. `recommended_
 doneness` for this method: **`medium`** — the measured band sits at the low edge of the cut's
 `medium` doneness band (60–66 °C) and two of three sources name medium-rare; the cut-level
@@ -146,12 +146,6 @@ three: the bag cannot make a crust, and without the one-minute blast the cut's f
 as greasy rather than crisp. The long-cook school (24 h at 57 °C) adds one more thing the
 fast methods cannot offer: pasteurization as an explicit, cited safety argument for pink pork,
 replacing the well-done convention with time-at-temperature instead of temperature alone.
-
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `sous_vide` — **newly discovered method for secreto**, verified by three fetched sources (Italy, United States, Netherlands); add `CookingMethod.SOUS_VIDE` to secreto (id 204) `supported_methods`.
-- `recommended_doneness` (method key for sous_vide): **`medium`** — measured bath band 55–62 °C with all three sources below/at medium and two naming medium-rare; a `medium_rare` band does not exist in the cut's `doneness` list, so the evidence is recorded against `medium` rather than opening a new band here. At cut level: **no change proposed in this leaf alone** — the 55–62 °C cluster (this leaf + pan_sear's 55–60 °C source + grill's 57–60 °C pull) is now three leaves strong and is flagged for a single-pass cut-level doneness decision.
-- No `method_temperature_ranges` override needed — the bath settings are the meat temperatures themselves and sit inside/at the edge of the existing `PORK_MEDIUM` band; the 84 °C vegetable setting (source 3) is explicitly not a meat value and is not encoded.
 
 ## Summary
 

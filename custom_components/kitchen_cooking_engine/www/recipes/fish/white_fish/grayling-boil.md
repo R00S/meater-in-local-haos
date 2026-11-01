@@ -66,12 +66,6 @@ The two directly fetched Swedish sources describe endpoints rather than thermome
 
 Boiling transfers heat through seasoned water, cooking small pieces evenly without browning their delicate surfaces. This can be practical for freshly caught harr at a riverbank, but it sacrifices the browned skin and concentrated flavours produced by pan-frying or grilling. The recipe endpoints are qualitative; temperature and carryover should not be inferred.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `boil` (species-specific Pelles Fiske harr recipe verified).
-- `recommended_doneness`: no change proposed; no source provides an internal or final serving temperature.
-- No `method_temperature_ranges` override proposed — collected sources provide no numerical doneness evidence.
-
 ## Summary
 
 Boiling cooks grayling pieces gently in seasoned water and offers an uncomplicated lakeside preparation. It avoids the crust and smoke of dry-heat methods, and the only verified endpoints are qualitative, so this evidence establishes culinary use but not a temperature recommendation.

@@ -189,12 +189,6 @@ the fish until the first side has formed a crust. The starch dust in the BBC and
 recipes is a workaround for the same problem the halibut has in every pan — a wet, low-fat surface
 that will not brown on its own.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` keeps `pan_sear` (already registered): six fetched recipes now back it.
-- `recommended_doneness`: no change proposed. The fetched readings split between 145 °F (well done) and 130–135 °F (medium); the cut's existing recommendation of `well_done` is consistent with the Momsdish source and with the USDA line of 145 °F, so it is left as is and the divergence is recorded here.
-- No `method_temperature_ranges` override on six sources.
-
 ## Summary
 
 Pan-seared halibut is a 3–5 minute-per-side cook in a hot, lightly oiled or buttered pan, usually

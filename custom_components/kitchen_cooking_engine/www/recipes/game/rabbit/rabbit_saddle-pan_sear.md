@@ -192,14 +192,6 @@ French uses some form of it. Because the saddle has almost no collagen, there is
 no benefit from longer, lower-temperature methods — the only variables are crust
 development and internal doneness.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `pan_sear`
-- `recommended_doneness`: `"well_done"` (71°C — USDA-safe, broadest tradition
-  consensus; French/British *rosé* style falls in `"medium"` at 63°C)
-- No `method_temperature_ranges` override needed — standard `PORK_MEDIUM` (63°C)
-  and `PORK_WELL_DONE` (71°C) ranges cover the full observed spread
-
 ## Summary
 
 Pan searing is the defining method for rabbit saddle: the intense direct heat

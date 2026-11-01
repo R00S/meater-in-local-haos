@@ -355,20 +355,6 @@ less shattering skin but a more forgiving time window.
 
 ---
 
-## Data applied to cooking_data.py
-
-- `supported_methods` should include `oven_roast` — confirmed by 5 sources across 4
-  culinary groups; this is the most universally documented method for bone-in chicken
-  thigh.
-- `recommended_doneness` for this method: `"safe"` (74°C / 165°F) — all five sources
-  either state 74–75°C explicitly or use visual cues consistent with that range. No
-  source targeting high-heat oven roast advocates 79°C (175°F) for this format.
-- No `method_temperature_ranges` override needed for `oven_roast` — the standard
-  `safe` doneness band (74–77°C) captures all source consensus. The bone-in format
-  does not shift the target temperature; it only extends the cook time vs. boneless.
-
----
-
 ## Summary
 
 Bone-in chicken thigh is ideally suited to high-heat oven roasting: the fat-rich dark

@@ -148,11 +148,6 @@ Avsluta under grillelementet för knäppande svål. Innertemperatur: **80–88 �
 - Set target 65°C for Danish-style juicy roast
 - Set target 72–75°C for German-style Krustenbraten
 
-## `cooking_data.py` note
-
-Use `DONENESS_MEDIUM` target 65 °C (Danish style) and `DONENESS_WELL_DONE` target 75 °C (German style) for `pork_belly` × `oven_roast`.
-> All previous content has been removed because it was corrupt (bullet-point summaries, not full collected recipes). This leaf must be recreated using credible human-written sources only. Do not use any prior version of this file — treat it as blank.
-
 ## Tree position
 
 | Field | Value |

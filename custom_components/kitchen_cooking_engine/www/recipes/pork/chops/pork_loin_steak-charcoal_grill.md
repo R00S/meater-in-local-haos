@@ -99,12 +99,6 @@ glaze applied during the final flips contributes sugar that browns quickly at gr
 temperatures — hence the source's constant rotation and its explicit "lid open" instruction
 for charcoal, keeping flare-ups off the honey.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `charcoal_grill` — **newly discovered method for pork_loin_steak**, verified by one fully collected exact-cut recipe plus one fetched technique guide carrying its own temperature figures; add `CookingMethod.CHARCOAL_GRILL` to pork_loin_steak (id 202) `supported_methods`.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`; this leaf's measured band (60–63 °C) sits inside the existing `PORK_MEDIUM` range (60–66 °C).
-- No `method_temperature_ranges` override needed — both stated targets fall inside `PORK_MEDIUM`, and the 375–400 °F figure is chamber temperature, not a doneness range.
-
 ## Summary
 
 A charcoal grill gives a brined pork loin steak smoke and crosshatch char while a two-zone

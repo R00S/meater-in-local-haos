@@ -165,7 +165,3 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet (USDA-sta
 | Directo al Paladar (ES) | 180 °C × 20 min | 88–93 °C |
 
 **Consensus pull range**: 88–95 °C (190–203 °F). Most sources converge on 88–93 °C for tender-but-sliceable ribs; 93–95 °C gives full fall-off-the-bone texture.
-
-## `cooking_data.py` note
-
-Use `DONENESS_WELL_DONE` with target 90 °C and range 88–95 °C for `baby_back_ribs` × `air_fryer`. No medium or rare options for ribs — collagen does not render below 80 °C and tender texture requires the higher end.

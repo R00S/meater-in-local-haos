@@ -167,12 +167,6 @@ The six fetched sources set their ovens at **180–225 °C** and diverge more th
 
 The strömmingslåda bakes the fish under a cream blanket: the casserole's moist environment keeps the lean flesh from drying while the exposed crumb-and-cream top gratinates, which is why a 225 °C oven can run 30 minutes on a fish that would be ruined by 10 minutes of dry heat. The rolled-flundra packing also protects the flesh. The uncovered variant is effectively a fast dry roast and takes a third of the time — the difference is entirely the protective medium.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `oven_bake` is already listed for baltic_herring.
-- `recommended_doneness`: no change proposed — no source provides explicit internal-temperature evidence.
-- No `method_temperature_ranges` override proposed — collected sources provide oven settings, times and visual endpoints only.
-
 ## Summary
 
 Oven-baked strömming runs from a 7-minute uncovered citrus tray to the 30-minute cream-covered strömmingslåda — the moist cover is what buys the long, forgiving window for a lean little fish, while uncovered whole fish bake faster than the time to brown an onion. The six fetched sources from five Baltic-region traditions agree on the shape of the method and publish no probe targets, so this leaf supports method coverage and records the published absences.

@@ -121,12 +121,6 @@ own, a high-heat broil to set the sugar. The braise stage is the other distincti
 the ham with stock keeps it from drying during the hours of smoke, which is the same logic as the
 oven leaf's foil, arrived at from the other direction.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `smoker` was **not registered** for cured_ham even though a stub leaf existed — **added** this pass, with the dated comment in `cooking_data.py`.
-- `recommended_doneness`: **`heated_through`**, target 60 °C — two of three records publish 140 °F.
-- No `method_temperature_ranges` override: the 49–60 °C spread is a reheat-and-char argument, not a doneness band, and the 120 °F row is recorded in text rather than as a range.
-
 ## Summary
 
 Double-smoking a cured ham is three or four hours at 225–250 °F to an internal 140 °F, with the

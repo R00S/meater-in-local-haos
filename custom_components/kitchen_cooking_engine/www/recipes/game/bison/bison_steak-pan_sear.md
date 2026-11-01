@@ -154,7 +154,7 @@ medium / "DO NOT cook past medium-well". **Tie-break**: of the two verifiable me
 spread is 49 vs 57 °C for the same word; the applied target takes the finished-temperature
 school's **57 °C (135 °F)** (same as the grill leaf's middle row, and the reading that does
 not depend on measuring carryover) with the 49 °C low-pull school recorded as the corpus's
-persistent dissent. **Temperature used in cooking_data.py: 57 °C within the existing
+persistent dissent. **Temperature used in the cut file: 57 °C within the existing
 `medium_rare` band**. `recommended_doneness` for this method: **`medium_rare`** — both
 measured rows and the preserved 54 °C reading land rare-to-medium-rare; nothing supports
 medium or beyond.
@@ -178,12 +178,6 @@ this project's source rule exists. The pan is also the method where the "never p
 rule is stated most bluntly ("DO NOT cook past medium-well", "do not overcook"), because a
 skillet gives the lean meat the fastest path from perfect to dry of any method in this cut's
 corpus.
-
-## Data applied to cooking_data.py
-
-- `supported_methods`: `pan_sear` **already registered** for bison_steak — no change needed; this is the rewritten integrity-clean version of the declared-method leaf.
-- `recommended_doneness` (method key for pan_sear): **`medium_rare`** — 57 °C applied target from the verifiable finished-temperature school; 49 °C low-pull school and the disputed 54/60 °C German readings recorded, not encoded.
-- No `method_temperature_ranges` override needed — the verifiable values sit inside the existing `medium_rare` band's span, and encoding disputed or unverifiable numbers would misrepresent them.
 
 ## Summary
 

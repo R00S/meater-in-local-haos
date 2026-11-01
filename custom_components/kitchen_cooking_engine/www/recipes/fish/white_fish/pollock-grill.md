@@ -150,12 +150,6 @@ All four sources land on 60°C as the pull point. Grilling a lean white fish lik
 
 Grilling gives pollock a charred exterior that contrasts with its mild, slightly sweet flesh. Because pollock has more flavour than cod, it can carry strong grill accompaniments — bacon, wild garlic, fennel, tropical fruit — without being overwhelmed. The key technical constraint is the fish's leanness: unlike salmon, pollock has no subcutaneous fat to self-baste, so protective coatings (crust, marinade, cured meat wrap) are essential for every tradition that grills it successfully.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `grill`
-- `recommended_doneness`: `"well_done"` (60°C pull across all sources; lean flesh)
-- No `method_temperature_ranges` override needed — `FISH_WELL_DONE` (min 60°C) matches observed pull range
-
 ## Summary
 
 Grilling suits pollock well because the fish's firm texture holds together over direct heat and its mild-assertive flavour pairs well with the smokiness of a grill. UK, German, Swedish and Norwegian recipes all pull the fish at 60°C, using protective coatings or wrappings to prevent the lean flesh from drying before the centre is done. This confirms the `well_done` doneness recommendation for grilled pollock.

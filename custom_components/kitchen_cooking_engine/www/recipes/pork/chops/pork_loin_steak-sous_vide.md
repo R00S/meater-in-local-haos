@@ -155,12 +155,6 @@ The full observed numerical range is **60–64 °C (140–147 °F)** across the 
 
 Sous vide flips the usual risk profile of this cut: instead of fighting an overshooting heat source, the cook fixes the endpoint in advance and the water guarantees it edge to edge, so the entire 2–3 cm cross-section finishes at one exact temperature with zero gradient. That uniformity is uniquely valuable for a lean, uniform steak — there is no overcooked ring, no undercooked centre, and the moisture the fibres would otherwise lose to a hot pan stays bound until the final sear. The sear then becomes the whole remaining craft: with the meat already at target and no carryover to hide behind, 30–60 seconds per side in a cast-iron pan (every source agrees on this) is all that builds the Maillard crust, and a second longer starts undoing the bath's work. The method also decouples seasoning and serving — salt and aromatics diffuse during the hold, and the bag juices become a sauce base in two of the five recipes — which is why the technique suits a cut that otherwise gives flavour only from its short time in contact with fat.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `sous_vide` — **newly discovered method for pork_loin_steak**, verified by five fetched sources; add `CookingMethod.SOUS_VIDE` to pork_loin_steak (id 202) `supported_methods`.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`; this leaf's `medium` band (60–62 °C primary baths) sits inside the existing `PORK_MEDIUM` range (60–66 °C).
-- No `method_temperature_ranges` override needed — all primary baths fall inside `PORK_MEDIUM`, and the optional ladders are published doneness options rather than method-specific requirements.
-
 ## Summary
 
 Sous vide holds a pork loin steak at an exact temperature — the sources cluster at 60–62 °C for 45 minutes to a few hours — so the whole steak finishes uniformly juicy and only the final 30–60 second sear provides crust. It is the most forgiving method this lean, fast-drying cut can meet, because nothing can overshoot and the centre is never behind the surface. What you give up is the pan's or grill's built-in flavour development during cooking: all the browning happens at the end, and long holds past a couple of hours soften the texture without adding anything. Choose it when precision and juiciness matter most, and keep the sear brutally short.

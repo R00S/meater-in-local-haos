@@ -79,12 +79,6 @@ The two fetched sources span Group C (TR) and Group B (IT). Their cook times div
 
 Pan-frying puts the whole small bird in conductive contact with fat, browning the skin on the stovetop where the cook controls the rate directly; the Turkish variant finishes in trapped steam, the Italian variant effectively braises under a lid after the sear. Both exploit the same physics — sear hard for flavour, then throttle heat so the thin breast finishes without squeezing out its moisture — and both would be ruined by a constant hard fry. The pancetta wrap in the Italian version substitutes external fat basting for the bird's own meager reserves.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `pan_fry` is already listed for quail.
-- `recommended_doneness`: no change proposed; no source provides explicit internal-temperature evidence.
-- No `method_temperature_ranges` override proposed — collected sources provide times and visual endpoints only.
-
 ## Summary
 
 Pan-frying quail means a hard sear followed by gentle covered cooking — it delivers browned skin and pan juices the lean bird cannot make on its own. The Turkish and Italian sources confirm the method's shape across two traditions but state no probe targets, so this leaf supports method coverage rather than a temperature recommendation.

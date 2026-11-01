@@ -149,12 +149,6 @@ Korean pear — from carbonising before the middle reaches temperature. What the
 for a neck steak is speed with crust; what it costs is evenness, which is why every source
 here either probes or times to a specific window rather than cooking by colour alone.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `pan_fry` **already registered** for pork_shoulder_steak (id 203) — no change needed; this rewrite replaces a three-source pre-ToR leaf with a four-source leaf that meets both collection gates.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`, which this leaf's measured evidence (65 °C "cooked through"; 145 °F floor, 160–165 °F accepted) supports directly.
-- No `method_temperature_ranges` override needed — the observed 63–74 °C spread sits inside the cut's existing `PORK_MEDIUM`/`PORK_WELL_DONE` ranges, and encoding it would duplicate the cut-level bands.
-
 ## Summary
 
 Pan frying cooks a pork shoulder steak in about four minutes per side in a hot skillet, and

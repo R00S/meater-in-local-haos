@@ -219,12 +219,6 @@ doneness in its own tradition) rather than on the well-done convention. The rest
 non-negotiable in every source: 1–5 minutes on a rack or in a warm oven, so the muscle
 reabsorbs what the sear pushed out.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `pan_sear` **already registered** for secreto (id 204) — no change needed; this is the rewritten, gate-verified declared-method leaf (the previous version carried three sources and no analysis sections).
-- `recommended_doneness`: no change proposed — cut level stays `well_done`; this leaf's single measured source (55–60 °C) argues for a rosa band but is one counted source against a whole-cut well-done convention, so the divergence is recorded instead of encoded.
-- No `method_temperature_ranges` override needed — the one published value (55–60 °C) is a chef's ideal window, and the four silent sources contribute no numeric range; encoding the 80 °C resting oven (source 2) as a meat range would misattribute it.
-
 ## Summary
 
 Pan searing is the home method for *secreto*: very hot plancha, one turn, minutes per side,

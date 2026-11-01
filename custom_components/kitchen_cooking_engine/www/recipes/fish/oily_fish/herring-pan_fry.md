@@ -130,12 +130,6 @@ Four recipes were fetched and verified from four distinct national/territorial t
 
 Pan-frying exposes the herring skin directly to a hot cooking surface, browning the exterior while the small, oily fillets cook quickly. The Swedish source pairs rye flour and breadcrumbs with butter and oil, the Don-region recipe fries whole fish in flour, and the Japanese recipe uses a butter-browned floured fillet. Their equipment and endpoints differ, and none publishes probe temperatures; these observations describe the collected methods, not a completed consensus.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `pan_fry` is already listed for herring.
-- `recommended_doneness`: no change proposed — the collection gate is incomplete and the fetched recipes give no internal-temperature target.
-- No `method_temperature_ranges` override proposed — there is not yet a valid 4–6-source collection for this method.
-
 ## Summary
 
 Pan-frying herring gives its oily skin a crisp, golden crust in minutes while the small fillet stays moist — from paired breaded fillets to whole floured fish and folded butterfly fillets across four traditions. It suits this fast-cooking oily cut well, but none of the fetched recipes measures the endpoint, so the cook judges doneness by colour and flaking rather than a thermometer. The technique's constant is hot fat and a short cook; what varies is only the coating and the shape.
@@ -149,5 +143,5 @@ Pan-frying herring gives its oily skin a crisp, golden crust in minutes while th
 > Danish/German records are retained as **leads**, not counted as sources. Cut profile is
 > method-specific and carries no invented temperatures. Temperature consensus table covers all four
 > fetched sources and states plainly that the observed range is empty. What makes this method special
-> and Data applied to cooking_data.py are present and actionable. Summary is ≤4 sentences and does not
+> is present and actionable. Summary is ≤4 sentences and does not
 > restate the table.

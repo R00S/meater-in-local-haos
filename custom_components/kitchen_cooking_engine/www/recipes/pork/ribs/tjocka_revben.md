@@ -128,7 +128,7 @@ Tjocka revben är den främre delen av grisens revbenkorg: de tjocka framre revb
 - [Braise](./tjocka_revben-braise.md) — 6 sources, 1 numeric; collection complete, analysis withheld; two further numeric sources are owed.
 - [Smoke](./tjocka_revben-smoker.md) — 5 sources, 4 numeric; **analysis written** 2026-11-01, range 88–96 °C inside `DONENESS_PULLED`.
 - [Slow Cooker](./tjocka_revben-slow_cooker.md) — 4 sources, 1 numeric; collection complete, analysis withheld.
-- [Sous Vide](./tjocka_revben-sous_vide.md) — 4 sources, 4 numeric; **analysis written** 2026-11-01, bath range 63–75 °C with a `method_temperature_ranges` override instruction left for a deliberate code decision.
+- [Sous Vide](./tjocka_revben-sous_vide.md) — 4 sources, 4 numeric; **analysis written** 2026-11-01, bath range 63–75 °C with a method-specific temperature band instruction left for a deliberate code decision.
 - [Pressure Cooker](./tjocka_revben-pressure_cooker.md) — 4 sources, 1 numeric; Group B filled by an American source this pass; analysis withheld.
 - [Steam](./tjocka_revben-steam.md) — **new leaf, 2026-11-01** — 4 sources, 0 numeric (Group A only); every endpoint is a time-and-texture cue.
 - [Air Fryer](./tjocka_revben-air_fryer.md) — **new leaf, 2026-11-01** — 4 sources, 0 numeric; every °C figure is an appliance set-point, and the set-points disagree (180/190/200 °C).

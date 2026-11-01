@@ -151,12 +151,6 @@ shared craft point is browning before the liquid goes in: every recipe sears fir
 Sherman record gives it the most time (15 minutes) because the liquid that follows carries
 smoke-adjacent cedar and sage rather than a wine reduction.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `braise` **already registered** for buffalo_roast — no change; the leaf goes from 1 source to 3.
-- `recommended_doneness`: no change (the cut stays `medium_rare`); the leaf records explicitly that the label is not meaningful for this method and that the probe target is a house 93 °C fork-tender figure.
-- No `method_temperature_ranges` override: adding a 90–95 °C band to `cooking_data.py` would be a new doneness concept for the whole engine, so it is recorded here as the reason a braise-specific band is missing rather than invented locally.
-
 ## Summary
 
 Braise a bison roast in a covered pot after a hard sear, at anywhere from 180 °F for eight hours

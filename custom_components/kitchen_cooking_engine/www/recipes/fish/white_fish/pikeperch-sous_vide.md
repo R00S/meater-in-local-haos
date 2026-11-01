@@ -129,12 +129,6 @@ The observed bath temperature range is **55–57°C**. This is significantly hig
 
 Sous vide solves the hardest problem in cooking pikeperch: the fish is lean enough that even a small temperature overshoot in a pan or oven drives it from moist to dry instantly. By fixing the bath at 55–57 °C, the fillet equilibrates to exactly that temperature and cannot overcook regardless of time (within reason). The method produces the most consistent result across all pikeperch preparations and is standard in Scandinavian and French fine-dining kitchens where the fish is prized as a centrepiece protein. Because the probe cannot be used inside the sealed bag, the circulator temperature setting is the proxy for doneness — set-and-forget precision that no other method provides.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `sous_vide`
-- `recommended_doneness`: `"well_done"` (bath temp 55–57 °C fully sets lean pikeperch; maps to well_done on the fish scale)
-- No `method_temperature_ranges` override needed — the well_done fish band (60–68 °C final) technically exceeds the bath temperature, but for sous vide the bath temperature IS the final temperature. The engine should display the bath temperature as the target; existing behaviour is acceptable.
-
 ## Summary
 
 Sous vide is the most controlled method for pikeperch and the standard in high-end Scandinavian and French restaurant kitchens. Nordic, German, French and British traditions all use a bath temperature of 55–57 °C, significantly higher than for salmon but lower than conventional cooking methods, to exploit the precision temperature control for this delicate lean fish. Because the probe cannot be used inside the sealed bag, the circulator temperature replaces the internal temperature measurement.

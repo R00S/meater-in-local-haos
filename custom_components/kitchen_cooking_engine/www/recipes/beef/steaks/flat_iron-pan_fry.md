@@ -156,16 +156,11 @@ Pannstekning, i europeisk kulinarisk tradition, innebär vanligtvis en måttligt
 | Austrian (Kurt Gutenbrunner) | Medium-rare | 57 °C / 135 °F |
 | Australian (Stephanie Alexander) | Medium-rare | 57 °C / 135 °F |
 
-All five traditions converge on medium-rare (57 °C / 135 °F) as the preferred final serving temperature, pulled at 53–54 °C (127–130 °F). The Italian tagliata preparation pulls slightly earlier at 53 °C to preserve a more aggressively pink interior at the classic *al sangue* presentation. The full range maps precisely to `medium_rare` in cooking_data.py. The `recommended_doneness` key is `medium_rare`.
+All five traditions converge on medium-rare (57 °C / 135 °F) as the preferred final serving temperature, pulled at 53–54 °C (127–130 °F). The Italian tagliata preparation pulls slightly earlier at 53 °C to preserve a more aggressively pink interior at the classic *al sangue* presentation. The full range maps precisely to `medium_rare` in the cut file. The `recommended_doneness` key is `medium_rare`.
 
 ## What makes this method special
 
 Pan frying at moderate-to-high heat allows the cook to control crust development and internal temperature simultaneously, adjusting the flame in real time as the probe climbs. The butter-basting technique common to French, British and Austrian kitchens — tilting the pan and spooning hot aromatic butter over the face of the steak while it cooks — accelerates the Maillard reaction on the upper face without requiring a flip, and infuses herbs and garlic aromatics directly into the crust. The flat iron's natural fat content provides an internal source of moisture even as the surface caramelises. Unlike a high-heat sear, pan frying allows a moderate gradual temperature rise that produces less of a grey band beneath the crust, and the fond left in the pan forms the base for classic bistro sauces. This method produces a deeply caramelised, flavour-rich crust and a juicy interior — a combination that made flat iron steak a staple of European restaurant service.
-
-## Data applied to cooking_data.py
-- `supported_methods` gains/includes: `pan_fry`
-- `recommended_doneness`: `"medium_rare"` (butter-basted marbling produces the juiciest result at 57 °C)
-- No method_temperature_ranges override needed
 
 ## Summary
 

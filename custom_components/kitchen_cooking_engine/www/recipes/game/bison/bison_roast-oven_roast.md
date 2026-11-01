@@ -208,20 +208,3 @@ with a maximum serving temperature of 65 °C after rest.
 range of 60–65 °C. This is higher than the bison steak pull (57–60 °C) because a roast
 does not carryover as quickly per gram of mass as a thin steak, and the pull-at-60-then-rest
 approach in Source 2 lands at 62–63 °C serving temperature.
-
-## Notes for cooking_data.py
-
-- `doneness`: `medium`
-- `pull_temp_c`: 63
-- `pull_temp_range_c`: [60, 65]
-- `safety_level`: `medium` (whole-muscle; surface pathogens destroyed by searing; internal
-  at 60–63 °C is above the minimum safe temperature for beef/bison)
-- Bison roast must not exceed 65 °C internal temperature. Above this threshold the lean
-  muscle dries out and develops the same iron-oxidation off-flavour ("liver-like") noted for
-  bison steak.
-- Both sources sear first before oven cooking, regardless of oven temperature. The sear
-  creates the Maillard crust that cannot form at low oven temperatures.
-- Rest is mandatory: minimum 10 minutes after pulling. The low-heat recipe (90 °C oven)
-  exploits residual oven heat by resting the roast in the switched-off oven.
-- Slow braising (85–95 °C sustained hold for collagen conversion) is contraindicated for
-  bison roast — the lean muscle is ruined at those temperatures.

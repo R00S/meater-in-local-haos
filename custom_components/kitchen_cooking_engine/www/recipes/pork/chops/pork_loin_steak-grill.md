@@ -153,12 +153,6 @@ The full observed numerical range is **60–71 °C** — three of five sources p
 
 Grilling cooks the steak with radiant heat from below and, when the lid closes, a convective oven's worth of hot air around it — a steeper surface-to-centre gradient than any indoor method, so the exterior advances faster than the centre and the timing risk concentrates at the grate surface. For a lean, uniform loin steak that gradient is the whole game: the direct phase builds the charred, smoke-touched crust no pan can duplicate, and the indirect phase (used by four of five sources) lets the centre reach temperature without incinerating the surface. The fat cap and skin, where present, must be rendered deliberately before the lean meat is done — the Australian source solves this by giving the skin its own slow 20–25 minute render standing upright, then blasting the flesh at high heat for seconds. Marinades matter more here than in the pan because the open flame dehydrates the surface: sugar- and fruit-based Caribbean and Korean glazes, yogurt-based Indian tandoori, and Chilean-Mexican adobo each lay down a protective, browning layer that also buffers the thin surface against scorching.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `grill` — already listed in the hub's declared `methods:` and in `cooking_data.py` for id 202; this leaf is its first fetched source set, so no code change.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`; this leaf's observed 60–71 °C span covers both `PORK_MEDIUM` and `PORK_WELL_DONE` and needs no new key.
-- No `method_temperature_ranges` override needed — the measured endpoints (60/70/71 °C) all fall inside the existing `PORK_MEDIUM` (60–66 °C) and `PORK_WELL_DONE` (68–77 °C) ranges.
-
 ## Summary
 
 Grilling gives a pork loin steak direct-fire char and a smoky crust while the centre climbs to wherever the tradition says doneness lives — the three measuring sources here land anywhere from 60 to 71 °C. It suits the cut's flat, even shape, which sits flush on the grate and cooks without hotspots, and the best results split the cook into a hard direct phase for surface and a gentler indirect phase for the centre. What you gain over the pan is smoke and flame character; what you give up is control, since the open fire dries the lean surface quickly and thickness decides everything. Move to indirect heat early, probe rather than clock it, and rest the steak before slicing.

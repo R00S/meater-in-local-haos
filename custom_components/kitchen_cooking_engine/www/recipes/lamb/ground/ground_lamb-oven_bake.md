@@ -111,12 +111,6 @@ the earlier browning-plus-simmer is where the actual meat cookery happens — wh
 why no baked-dish tradition measures the meat. For this cut, oven baking is less a cooking
 method for the lamb than a finishing method for a dish built on it.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `oven_bake` (one fetched, human-created Greek recipe baking a ground-lamb casserole confirms the method).
-- `recommended_doneness`: no change proposed — the source states no internal temperature; the mince is fully cooked before baking, consistent with `well_done`.
-- No `method_temperature_ranges` override needed — no measured endpoint exists to override with.
-
 ## Summary
 
 Oven baking gives ground lamb its casserole life — browned, spiced meat sauce set under béchamel in the Greek canon. The method suits the cut's fat and flavour well, though the meat itself is cooked on the stovetop before the dish ever enters the oven. One source supports the method; the misfiled Turkish record is corrected and kept as a lead.

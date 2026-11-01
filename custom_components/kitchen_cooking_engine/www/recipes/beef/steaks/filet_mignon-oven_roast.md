@@ -150,11 +150,6 @@ The observed range is **49–57 °C (120–135 °F)**. The tight clustering of A
 ## What makes this method special
 The sear-then-oven method creates a deliberate two-stage heat transfer: a brief stovetop sear at very high temperature (above 180 °C pan surface) achieves the Maillard reaction in the outer 2–3 mm, while the oven provides gentle, even heat to bring the interior to the target without further external browning. This is the only method that precisely controls both surface flavour development (sear duration) and interior temperature (oven time) as independent variables. The reverse-sear variant eliminates carryover almost entirely — because the oven temperature matches the target internal temperature, there is no heat reservoir driving carryover once the steak is removed.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `oven_roast`, `pan_sear`, `grill`, `charcoal_grill`, `sous_vide`, `air_fryer`, `pan_fry`
-- `recommended_doneness`: `"medium_rare"` (52–57 °C; universal consensus for standard beef; 49–52 °C for Wagyu)
-- No `method_temperature_ranges` override needed — default medium_rare band applies
-
 ## Summary
 Filet mignon oven roast combines a stovetop sear (for Maillard crust) with a gentle oven finish (for even interior temperature), solving the problem of cooking a very lean, delicate cut without burning the exterior before the interior reaches medium-rare. Every tradition from the USA to France, Britain, and Japan targets 49–57 °C as the final serving temperature — the narrowest possible range for any beef cut. The reverse-sear variant delivers the most precise temperature control and is especially suited to the small, uniform cross-section of a filet medallion.
 

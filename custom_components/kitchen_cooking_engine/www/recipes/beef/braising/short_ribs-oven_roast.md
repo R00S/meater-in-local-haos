@@ -196,15 +196,6 @@ band where collagen hydrolyses. The uncovered finish is the only dry-heat moment
 and the glaze, not on the centre. Compared with braising, the flavour is more concentrated and the sauce is
 built separately, because there is no liquid for the meat to exchange with.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` already contains `oven_roast` for `short_ribs` — no change required.
-- `recommended_doneness`: `pulled` (88–96 °C) — the four published numbers (90, 90, 93–96 °C) sit inside it;
-  no override needed.
-- A discovered method is registered in the hub, not here: Korean LA galbi is an oven-broiler method
-  (`oven_broil`), fetched from mykoreankitchen.com this pass and left as an owed leaf rather than merged
-  into this one, because a 2–3 minute broil with no internal target is a different method.
-
 ## Summary
 
 Five oven-roasted short rib records were fetched: two American, one German, one Ukrainian and one Italian.

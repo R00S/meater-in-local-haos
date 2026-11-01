@@ -163,12 +163,6 @@ to develop much of its own crust. The method's cost is the same as its benefit: 
 side and no pan to hold heat, the endpoint is decided by attention, and the published targets show
 how differently cooks read "medium-rare".
 
-## Data applied to cooking_data.py
-
-- `supported_methods` keeps `grill` (already registered): five fetched recipes now back it.
-- `recommended_doneness`: no change. The cut recommends `medium_rare` (54 °C), which sits between the 52 °C Moroccan reading and the 57–63 °C Indian range; the divergence is recorded rather than used to move the recommendation.
-- No `method_temperature_ranges` override on five sources with a 20 °F spread.
-
 ## Summary
 
 Grilled lamb cutlets are a 3–5 minute-per-side cook over direct heat, turned by hand and usually

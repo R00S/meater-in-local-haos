@@ -193,11 +193,6 @@ The observed range across all five traditions is **88–93 °C (190–200 °F)**
 ## What makes this method special
 Oven roasting envelops the brisket in consistent, ambient dry heat, which extracts moisture slowly and concentrates the collagen-to-gelatin conversion across the full mass of the cut. Unlike stovetop braising, where the bottom of the meat touches the heat source directly, oven heat attacks from all sides simultaneously, producing more even collagen conversion through the flat and point. The low oven temperature (140–165 °C) keeps the surface from desiccating or forming a rigid crust before the interior reaches the collagen-conversion window — a covered vessel traps steam from the meat itself, creating a self-basting microenvironment without requiring large quantities of braising liquid. The result is a deeply flavoured, gelatinous, sliceable or pull-apart texture that neither a pressure cooker (too fast, less flavour development) nor a slow cooker (insufficient browning opportunity) replicates exactly.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `oven_roast`, `braise`, `slow_cooker`, `smoker`
-- `recommended_doneness`: `"well_done"` (collagen conversion requires 88–93 °C — no tradition targets anything lower)
-- No `method_temperature_ranges` override needed for `oven_roast` — the well-done band (≥85 °C) correctly captures the 88–93 °C target range; the default MEATER alert can be set at 91 °C as a practical midpoint
-
 ## Summary
 Beef brisket is one of the most collagen-dense cuts in the animal; oven roasting at 150–165 °C over 3–8 hours converts that collagen to gelatin, transforming a notoriously tough muscle into something silky and sliceable. Every culinary tradition that uses brisket — American, Ashkenazi Jewish, British, Korean, and Middle Eastern — lands in a narrow 88–93 °C window, confirming that the physics of collagen conversion, not cultural preference, defines the endpoint. The variation within that window (sliceable at 88–90 °C vs. pull-apart at 91–93 °C) is a textural choice, not a doneness disagreement.
 

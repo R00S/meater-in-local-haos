@@ -156,16 +156,11 @@ Flat iron steak tas från infraspinatus i skulderbladet, separerad från det cen
 | Korean (Maangchi) | Medium | 60 °C / 140 °F |
 | Mexican (Rick Bayless) | Medium-rare | 57 °C / 135 °F |
 
-The observed pull-temperature range is 54–57 °C (130–135 °F), with final serving temperatures of 57–60 °C (135–140 °F). Four of the five traditions converge on medium-rare (57 °C / 135 °F) as the ideal final temperature; the Korean recipe runs warmer at 60 °C (140 °F) because the sugary galbi-style marinade benefits from a more fully set interior. The full range maps cleanly to the `medium_rare` key in cooking_data.py. The recommended `recommended_doneness` key is `medium_rare`.
+The observed pull-temperature range is 54–57 °C (130–135 °F), with final serving temperatures of 57–60 °C (135–140 °F). Four of the five traditions converge on medium-rare (57 °C / 135 °F) as the ideal final temperature; the Korean recipe runs warmer at 60 °C (140 °F) because the sugary galbi-style marinade benefits from a more fully set interior. The full range maps cleanly to the `medium_rare` key in the cut file. The recommended `recommended_doneness` key is `medium_rare`.
 
 ## What makes this method special
 
 The air fryer's high-velocity convection circulates air at 200–205 °C around the steak's entire surface simultaneously, producing a dry, Maillard-browned crust without a dedicated grill or the smoke of stovetop searing. The compact chamber accumulates heat rapidly, shortening the cook window and making active probe monitoring essential — the gap between 54 °C and 63 °C can close in under two minutes at full power. Steak elevation in the perforated basket allows air to circulate beneath as well as above, achieving even browning on both faces with a single flip. The flat iron's 2–3 cm thickness is well-matched to the air fryer's thermal penetration: thinner steaks overcook before the exterior browns, while cuts thicker than 4 cm may need a warm-oven finishing stage. Compared with pan-searing, the air fryer produces a slightly less intense Maillard crust but significantly less smoke and splatter, making it practical for home kitchens without range hoods.
-
-## Data applied to cooking_data.py
-- `supported_methods` gains/includes: `air_fryer`
-- `recommended_doneness`: `"medium_rare"` (rich marbling suits juicy, rosy interior best at this method's rapid heat)
-- No method_temperature_ranges override needed
 
 ## Summary
 

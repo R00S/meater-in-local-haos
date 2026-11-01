@@ -139,12 +139,6 @@ All four sources converge on 60°C pull. The different breading/coating techniqu
 
 Pan-frying is the dominant everyday cooking method for redfish across Northern Europe and beyond, because the fish's moderate fat content (3–5 g/100 g) and firm-but-not-tough texture stand up well to high-heat frying without drying out as fast as leaner fish. The flavour is mild enough that it takes background flavours (butter nuttiness, breadcrumb crunch, lemon brightness) very readily, making it versatile across cooking traditions. The three-style variation — breaded German/Austrian, Scandinavian skin-fry, and Australian flour-only — illustrates how different national traditions have developed distinct textural results from the same underlying technique. The MEATER probe is particularly useful for breaded fish because the coating hides the true state of the flesh; experienced cooks still overcook breaded redfish regularly by judging only the crumb colour.
 
-## Data applied to cooking_data.py
-
-- `pan_fry` is already in `supported_methods` for redfish (id=442) — no change to cooking_data.py needed
-- `recommended_doneness`: `"well_done"` (60°C pull, all sources agree)
-- No `method_temperature_ranges` override needed — `FISH_WELL_DONE` (min 60°C, target 63°C) matches
-
 ## Summary
 
 Pan-frying is the unambiguous primary cooking method for redfish in its home waters of the North Atlantic. The German/Austrian breaded tradition, the Danish skin-fry, and the Australian crispy-fry all target the same internal temperature of 60°C and all finish in under 12 minutes. The MEATER probe solves the single biggest challenge of the breaded variants: knowing when the flesh inside the coating is done without destroying the crust.

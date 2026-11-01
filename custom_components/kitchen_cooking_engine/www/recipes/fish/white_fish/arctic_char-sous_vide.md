@@ -155,12 +155,6 @@ under pastörisering, så fisken måste hålla råvarukvalitet.
 
 Char is a fish whose best texture lives in a temperature range that conventional cooking treats as a mistake: 42–52 °C is "raw" to an oven and "perfect" to a char cook, and the difference between the two is a probe and a minute. Sous vide removes the minute. The cost is that it also removes the safety margin — char at 48 °C for 20 minutes has received a fraction of the thermal lethality of a 63 °C oven bake — so the method is inseparable from the quality of the fish. Every source in this leaf says so in some form, and two of them say it outright.
 
-## Data applied to `cooking_data.py`
-
-- `supported_methods` already includes `sous_vide`; no registry change needed for this leaf.
-- No `method_temperature_ranges` override. A sous vide range would be a *bath* range, not a serving range, and the engine models serving targets; recording 40–60 °C as a serving band would misstate what the numbers mean. The bath temperatures live in this leaf.
-- `recommended_doneness` stays `medium` (54 °C), which is the top of the fillet-serving window this leaf supports.
-
 ## Summary
 
 Four records: a technique chart covering **40–60 °C in five labelled texture steps (25–45 min)**, a French restaurant at **48 °C / 20 min**, a French home cook at **52 °C / 20 min**, and one professional **72 °C / 60 min** recipe that only exists because the fish is shredded afterwards. The serving window the corpus supports is **48–55 °C**, the safety caveat is universal (no pasteurisation; sashimi-grade fish required), and no source gives a time-by-thickness.

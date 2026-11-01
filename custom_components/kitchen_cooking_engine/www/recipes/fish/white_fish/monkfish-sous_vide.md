@@ -108,12 +108,6 @@ The range spans 45–54°C, all within the `FISH_MEDIUM` doneness band (52–57�
 
 Sous vide is uniquely transformative for monkfish: no other cooking method can reliably deliver the silky, lobster-like texture that makes monkfish special while also preventing the rubbery over-cooked state that makes it unpalatable. The combination of dense, collagen-rich tissue and a narrow acceptable temperature window (roughly 45–55°C) means precise control is essential — and sous vide provides exactly that. Professional UK chefs (Great British Chefs archive, multiple recipes) have used this method since at least 2015.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `sous_vide`
-- `recommended_doneness`: `"medium"` (45–54°C bath, all sources in `FISH_MEDIUM` range)
-- `method_temperature_ranges` override for `sous_vide`: use `FISH_MEDIUM` (min 52°C, target 54°C, max 57°C) — the 45°C sources are below the FISH_MEDIUM floor but this is acceptable for sous vide, as the `FISH_MEDIUM` cooking_data.py range already accommodates this
-
 ## Summary
 
 Sous vide is the ideal method for monkfish because the dense, collagen-rich tail meat must be cooked gently (45–54°C) to remain tender. All three verified sources are UK/US (Group B); no East Asian, African or Scandinavian sous vide monkfish recipes with verifiable URLs were found in live source databases — this technique is primarily documented in Western professional cooking. The three sources confirm medium doneness as the universal recommendation for this cut-method combination.

@@ -207,14 +207,3 @@ themediterraneandish.com/haddock-recipe/ (fetched 2026-04-24)
 for finfish is 63 °C (145 °F); fillets at 58–60 °C reach 62–63 °C with brief resting.
 
 **Representative coding value**: **60 °C (140 °F)** nominal pull, practical range 58–63 °C.
-
-## Notes for cooking_data.py
-
-- `doneness`: `just_cooked`
-- `pull_temp_c`: 60
-- `pull_temp_range_c`: [58, 63]
-- `safety_level`: `safe` at 63 °C; `caution` below 60 °C
-- Flour dusting (British, German traditions) creates a protective crust and improves evenness.
-- The Norwegian covered low-heat finishing method (2+2+5 min covered) is effective for
-  ensuring even cooking through thicker fillets without burning.
-- The MEATER probe must be inserted laterally in fillets thinner than 2 cm.

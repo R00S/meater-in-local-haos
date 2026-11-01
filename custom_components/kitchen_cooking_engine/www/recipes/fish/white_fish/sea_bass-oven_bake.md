@@ -140,12 +140,6 @@ anything — so every tradition invents a proxy: the Spanish tail-pull, the Ital
 lift-the-skin test, the Russian rest before breaking. It is also the only method here that
 would actively ruin the fish if the scales were removed first.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` **gains `oven_bake`** for sea_bass (id 422) — a discovered method with three fetched cut-appropriate sources; the registry edit is recorded in the hub's survey comment.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`.
-- No `method_temperature_ranges` override needed — no source publishes a numeric internal temperature for salt-baked sea bass, so no observed range exists to encode; the 60–63 °C house-guidance check sits inside the cut's existing `FISH_WELL_DONE` band.
-
 ## Summary
 
 Baking sea bass in a crust of coarse salt cooks it in its own trapped vapour, which is why the

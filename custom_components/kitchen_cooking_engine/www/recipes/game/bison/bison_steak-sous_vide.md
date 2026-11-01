@@ -145,7 +145,7 @@ you'll risk overcooking". **Tie-break**: four measured sources, three of them ho
 for a rare-to-medium-rare result; the median of the house settings (128, 130, 131, 132) is
 **130–131 °F (54–55 °C)**. **Applied target**: **55 °C (131 °F) for 1.5–4 h** — the middle of
 the measured band, the setting the two medium-rare sources agree on, with 120–128 °F recorded
-as the rare school's deliberate alternative. **Temperature used in cooking_data.py: 55 °C bath
+as the rare school's deliberate alternative. **Temperature used in the cut file: 55 °C bath
 (bath = core at these holds), inside the existing `medium_rare` band**. `recommended_doneness`
 for this method: **`medium_rare`** — the whole measured band, including its low end, is aimed
 at rare-to-medium-rare, and every source forbids medium-well and beyond.
@@ -166,12 +166,6 @@ divergence worth recording is the rare-versus-medium-rare argument inside the US
 letting the rest finish the walk to 55 °C. The thickness rule from the Maine source is the
 practical footnote: sous vide wants steaks of at least an inch — thinner cuts lose their
 advantage to the sear.
-
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `sous_vide` — **newly discovered method for bison_steak**, verified by four fetched sources (United States ×3, Netherlands); add `CookingMethod.SOUS_VIDE` to bison_steak in `cooking_data.py` `supported_methods`.
-- `recommended_doneness` (method key for sous_vide): **`medium_rare`** — the measured bath band 49–55 °C and the unanimous no-medium-well rule; consistent with the cut level.
-- No `method_temperature_ranges` override needed — the bath settings sit inside the existing `medium_rare` band's span; the 39.5 °C warm-aging stage is an enzyme technique, not a meat target, and is not encoded as one.
 
 ## Summary
 

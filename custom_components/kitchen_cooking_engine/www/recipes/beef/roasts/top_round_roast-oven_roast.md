@@ -161,11 +161,6 @@ compensates for the cut's low intramuscular fat, which would otherwise produce a
 Slicing against the grain after resting is essential; unlike short ribs, top round has no long
 collagen strands to dissolve — its texture comes entirely from not over-heating the muscle fibres.
 
-## Data applied to cooking_data.py
-
-The current `medium_rare` target of **54 °C / 130 °F** and `medium` target of **60 °C / 140 °F**
-are within the verified pull-temperature range (54–65 °C). No change needed.
-
 ## Summary
 
 Four verified oven-roast sources from three culinary groups (B: British ×2; C: West African /

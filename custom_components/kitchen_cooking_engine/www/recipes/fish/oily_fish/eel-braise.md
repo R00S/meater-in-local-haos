@@ -157,12 +157,6 @@ The observed pull range is **68–72°C**. This is higher than for pan-fried, ov
 
 Braising is the only method that produces a genuine sauce from the eel itself. The eel's collagen dissolves into the braising liquid, making it naturally gelatinous; the rendered fat enriches it further. *Paling in 't groen* produces a vivid green sauce that exists nowhere else in European cooking. *Matelote d'anguille* is among Escoffier's foundational fish dishes. Chinese 红烧 (hóngshāo, red-braising) is one of the most versatile and beloved Chinese cooking techniques, and eel (*mán yú*) is among its most celebrated subjects. Braising also makes eel accessible to cooks without specialist grilling or smoking equipment.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `braise`
-- `recommended_doneness`: `"well_done"` (all sources finish at 68–72 °C; the braising process renders eel's fat fully and is expected to be well_done)
-- No `method_temperature_ranges` override needed — the existing well_done fish band covers braised eel, though probe readings in a liquid braise will be close to the equilibrium temperature of the surrounding sauce rather than showing carryover
-
 ## Summary
 
 Braising is one of the oldest and most important eel cooking traditions. Belgian *paling in 't groen* (Group A by geographic proximity; Flemish national dish), French *matelote d'anguille*, Chinese 红烧鳗鱼 (Group A), and Italian *anguille in umido* all finish at 68–72 °C. The braising method maximises the flavour contribution of eel's unique collagen-and-fat profile by turning both into the sauce.

@@ -69,12 +69,6 @@ The two fetched sources give times and visual/qualitative endpoints only. No int
 
 Grilling exposes grayling to intense radiant heat, crisping the skin and adding smoke-adjacent flavour while the interior stays moist for only a narrow time window — the delicate, lean flesh dries quickly once overcooked. The plancha variant deliberately finishes skin-side up after the skin is set and scorched, protecting the flesh from direct contact; the Swedish ember variant grills the whole fish and flakes it immediately onto crispbread. Neither source quantifies internal temperature, so stated times remain source-specific and must not be converted into a common probe target.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `grill` is already listed for grayling.
-- `recommended_doneness`: no change proposed; no source provides explicit internal-temperature evidence.
-- No `method_temperature_ranges` override proposed — collected sources provide no numerical doneness evidence.
-
 ## Summary
 
 Grilling grayling gives crisp, scorched skin and a short, high-heat cook that flatters the delicate flesh if it is watched minute by minute. One British professional-kitchen source and one Swedish ember tradition confirm the method's culinary relevance, but neither states a probe target, so this leaf supports method coverage rather than a temperature recommendation.

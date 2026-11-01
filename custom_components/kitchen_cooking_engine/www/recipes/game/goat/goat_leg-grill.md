@@ -119,12 +119,6 @@ butterflying in the US source are two answers to the same problem — a leg is t
 evenly over fire without help. What the fire adds over any indoor method is smoke and crust;
 what it costs is control, which is why the two sources' doneness philosophies diverge so far.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `grill` (two fetched, human-created recipes grilling goat leg confirm the method).
-- `recommended_doneness`: no change proposed — the two sources express opposite targets (measured 57–60 °C medium-rare vs unmeasured well-done tenderness); no single recommendation is supportable yet.
-- `method_temperature_ranges` candidate: if `grill` is added, the measured 57–60 °C practice suggests the `medium_rare` band should remain available for this method; no override committed on 2 sources.
-
 ## Summary
 
 Grilling a goat leg gives the cut its best crust and a smoke character no indoor method matches, in both a Caribbean slow-indirect form and an American butterflied medium-rare form. The two traditions disagree fundamentally about doneness — one to tenderness, one to 135–140 °F pink — and that disagreement is real, not noise. It suits the cut well for cooks who manage fire; the temperature record needs more traditions before recommending either target.

@@ -49,7 +49,7 @@ doneness:
   usda_safe: true
   recommended: true
 improvement_potential: 13
-cooking_methods_researched: 1 # Survey completed 2026-10-26 on fetched pages. Declared + leafed: grill and pan_sear (both rewritten after their old records failed verification) and oven_broil (discovered this pass, registered in cooking_data.py). Queued leads (no full recipe fetched yet): braise/curry (goat chops cooked in curry are mostly shoulder/leg pieces rather than chops — sinfullyspicy and Yummy Medley both use mixed goat meat), tandoor (no fetchable recipe), smoker (none fetched for chops specifically). Documented searched-negative 2026-10-26: Culinary Group C (African/Caribbean) — the "jerk goat chops" search returned only social-media posts and videos, and the Caribbean Pot site surfaced only its homepage rather than a recipe; Culinary Group D — no Nordic/Baltic goat-chop recipe found at all.
+cooking_methods_researched: 1 # Survey completed 2026-10-26 on fetched pages. Declared + leafed: grill and pan_sear (both rewritten after their old records failed verification) and oven_broil (discovered this pass, registered in the cut file). Queued leads (no full recipe fetched yet): braise/curry (goat chops cooked in curry are mostly shoulder/leg pieces rather than chops — sinfullyspicy and Yummy Medley both use mixed goat meat), tandoor (no fetchable recipe), smoker (none fetched for chops specifically). Documented searched-negative 2026-10-26: Culinary Group C (African/Caribbean) — the "jerk goat chops" search returned only social-media posts and videos, and the Caribbean Pot site surfaced only its homepage rather than a recipe; Culinary Group D — no Nordic/Baltic goat-chop recipe found at all.
 quality_assessed: 2026-10-26
 rest_time_min: 5
 rest_time_max: 10

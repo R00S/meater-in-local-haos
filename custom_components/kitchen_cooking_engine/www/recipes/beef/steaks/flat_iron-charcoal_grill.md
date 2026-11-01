@@ -142,16 +142,11 @@ Individuella flat iron-biffar med 2–3 cm tjocklek är idealiska för direkt tr
 | Korean (Maangchi) | Medium | 60 °C / 140 °F |
 | Brazilian churrasco (Guga) | Medium-rare | 57 °C / 135 °F |
 
-The observed pull-temperature range across all five recipes is 52–57 °C (126–135 °F), reflecting the variable carryover that charcoal's intense radiant heat produces. Four traditions converge on medium-rare (57 °C / 135 °F) as the final serving temperature; the Korean bulgogi recipe runs slightly warmer at 60 °C (140 °F) to allow the caramelised marinade glaze to set. The consensus maps cleanly to `medium_rare` in cooking_data.py. The `recommended_doneness` key is `medium_rare`.
+The observed pull-temperature range across all five recipes is 52–57 °C (126–135 °F), reflecting the variable carryover that charcoal's intense radiant heat produces. Four traditions converge on medium-rare (57 °C / 135 °F) as the final serving temperature; the Korean bulgogi recipe runs slightly warmer at 60 °C (140 °F) to allow the caramelised marinade glaze to set. The consensus maps cleanly to `medium_rare` in the cut file. The `recommended_doneness` key is `medium_rare`.
 
 ## What makes this method special
 
 Charcoal imparts three simultaneous effects unavailable on a gas or electric grill: radiant heat from glowing embers drives fast Maillard browning; combustion volatiles from the charcoal and any added wood chunks deposit aromatic smoke compounds on the crust; and rendered intramuscular fat dripping onto the coals briefly flares, creating localised pyrolysis products that add the complex, char-forward flavour signature of asado, braai and churrasco. The flat iron's strong marbling provides a continuous supply of drip fat, ensuring repeated flavour-building flare cycles throughout the cook. The 2–3 cm thickness is the ideal range for a single-zone direct cook: thick enough to build a deeply charred exterior, thin enough that the centre reaches medium-rare before the crust burns. Compared to gas grilling, charcoal typically adds 10–15 minutes of setup but delivers a meaningfully more complex flavour profile.
-
-## Data applied to cooking_data.py
-- `supported_methods` gains/includes: `charcoal_grill`
-- `recommended_doneness`: `"medium_rare"` (marbling renders best; smoke and char complement a rosy interior)
-- No method_temperature_ranges override needed
 
 ## Summary
 

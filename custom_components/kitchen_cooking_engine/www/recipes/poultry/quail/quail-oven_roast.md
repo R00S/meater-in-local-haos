@@ -158,12 +158,6 @@ The five sources span culinary Groups A (CN), B (ES, IT), C (TR) and D (RU) — 
 
 Roasting surrounds the small bird with dry convective heat that browns a skin with minimal fat, while the short cook window makes glazing (honey, maple, wine) the practical lever for colour and surface moisture — two of the sources roast in three glazing stages precisely to protect the lean breast. Stuffed and bacon-wrapped variants (Russian, Italian) trade skin crispness for basting and insulation, extending the cook to 40–50 minutes without drying the meat. Because the whole bird is under 200 g, thermal gradients are small and carryover minimal; the failure mode is overshoot, not under-resting.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `oven_roast` is already listed for quail.
-- `recommended_doneness`: no change proposed — no source provides explicit internal-temperature evidence; the recorded `well_done` (74 °C) stands on USDA guidance, not on this collection.
-- No `method_temperature_ranges` override proposed — oven settings and times only, with no numerical doneness evidence.
-
 ## Summary
 
 Oven roasting is quail's universal method: 180–200 °C, 20–50 minutes, with glazing or wrapping as the drying counter-measure. The five verified sources cover all four culinary groups and agree on method shape while diverging on time and finish, so the leaf is collection-complete but supplies no probe target.

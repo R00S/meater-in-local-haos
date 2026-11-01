@@ -90,12 +90,6 @@ with its aromatics so none of the fat-soluble flavour escapes, and the flesh coo
 this is close to an ideal structural match — no sticking, no breaking, no drying — and the
 two-stage finish recovers some of the aroma that plain steaming lacks.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `steam` (one fetched, human-created Indonesian recipe steaming whole spiced mackerel confirms the method).
-- `recommended_doneness`: no change proposed — the source states no internal temperature.
-- No `method_temperature_ranges` override needed — no measured endpoint exists to override with.
-
 ## Summary
 
 Steaming spiced whole mackerel in banana leaves keeps the fragile fish intact and moist while the parcel concentrates the aromatics. The Indonesian pepes form adds a final leaf-char for smoky aroma, making it the mildest yet most aromatic method in this collection. One source supports the method; temperature claims must wait for sources that measure.

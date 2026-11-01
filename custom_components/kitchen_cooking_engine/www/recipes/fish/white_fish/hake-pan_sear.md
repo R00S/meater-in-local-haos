@@ -107,12 +107,6 @@ Three fetched sources; only two are standalone sear recipes, and one of those (S
 
 A hake loin is thick enough to take a crust, and the skin is the only part of the fillet that can hold one. Sealing the skin side first also stabilises the portion: a seared skin holds the flake structure together through the baste or the oven finish, which is exactly the handling problem that makes plain pan-frying hake delicate. Basting with butter carries heat to the top surface without a second turn, and the oven finish (Splendid Table) solves the thickness problem that a 20 mm fillet does not have but a loin steak does.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains `pan_sear`: two standalone sear recipes plus one stage-only source.
-- `recommended_doneness`: no change — no fetched source states a temperature.
-- No `method_temperature_ranges` override.
-
 ## Summary
 
 Pan searing is recorded here as a genuine but thinly evidenced method for hake: skin-side down, sear 2–3 minutes, baste or oven-finish 2–5 minutes. Three fetched sources, none with an internal temperature.

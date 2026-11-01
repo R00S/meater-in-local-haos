@@ -98,12 +98,6 @@ No fetched source states an internal or final serving temperature. The observed 
 
 Braising is the only method in this cut's inventory that protects the fish with a liquid medium instead of exposing it: the sauce (vegetable-and-tomato in the Russian stews, cream in the Latvian) buffers the lean flesh from overshooting and carries flavour into it at the same time. That makes it the most forgiving method for a fish whose pan-fried failure mode is mechanical (sticking, tearing) and whose grilled failure mode is exposure — here the cook window is measured in tens of minutes and the endpoint is a texture. The eastern-Baltic specificity is notable: both Russian sources work from a vegetable bed with the fish laid on top and never stirred (iamcook verbatim: *не помешивая*), a technique that keeps the small fish intact in the sauce.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `braise` (newly discovered method for baltic_herring — two Russian stovetop stew recipes and one Latvian cream braise verify the method; registered in `cooking_data.py` this session).
-- `recommended_doneness`: no change proposed — no source provides explicit internal-temperature evidence.
-- No `method_temperature_ranges` override proposed — sources give times, heat levels and one oven setting (200 °C), no doneness evidence.
-
 ## Summary
 
 Braised Baltic herring is the eastern-Baltic gentle method: fish laid over stewed vegetables or onion, cooked covered or in cream sauce until flaking, with a 10–25 minute window and no probe anywhere in the sources. The three fetched recipes (Russian ×2, Latvian) confirm the method and document the shared technique of never stirring the fish once it is in the sauce, but publish no temperatures, so this leaf adds method coverage and documented traditions rather than a temperature recommendation.

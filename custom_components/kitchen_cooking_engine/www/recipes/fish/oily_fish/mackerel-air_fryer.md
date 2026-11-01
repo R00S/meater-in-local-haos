@@ -164,12 +164,6 @@ Indian/Nigerian oil-based spice pastes show the two ways cooks exploit the same 
 the surface as a heat-transfer and flavour vehicle. The cost is the butter basting and pan
 deglazing that the Swedish pan-fry tradition relies on.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed — `air_fryer` is already listed for mackerel.
-- `recommended_doneness`: `well_done` (63 °C / 145 °F) — directly supported by the African/American source's stated 145 °F endpoint.
-- No `method_temperature_ranges` override needed — the only measured endpoint equals the existing `well_done` target, and no source cooks mackerel below it in an air fryer.
-
 ## Summary
 
 Air-frying is the clean, modern stand-in for the pan-fry: hot circulated air crisps the skin and drops most of the rendered fat away, in 8–20 minutes depending on whether the fish is filleted, cut into steaks or left whole. It suits this oily cut well for weeknight cooking, and the spiced Indian and Nigerian marinades show it takes strong seasoning without losing the fish. The one measured source pulls at 145 °F, the safe floor, so the method's target is identical to every other mackerel method collected so far.

@@ -182,12 +182,6 @@ that absorbs the goat's assertive flavour instead of wasting it. Unlike lamb leg
 rarely served pink in these traditions; the long braise both tenderises and tempers the gaminess
 that acid marinades (chicha, lime wash, vinegar-chile paste) begin addressing.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `braise` is already listed for this cut.
-- `recommended_doneness`: no change proposed — no fetched source states an internal temperature; the tenderness-based endpoint supports long-cooked well-done practice but supplies no number.
-- No `method_temperature_ranges` override needed — no measured endpoint exists to override with.
-
 ## Summary
 
 Braising is goat leg's home method: bone-in pieces seared and simmered for hours until the connective tissue gives way, in curry, chile-beer and ancho-tomato forms across three continents. It is the best structural match for the cut, and the world's goat-leg cooking agrees on tenderness as the endpoint. None of it is measured, so this method contributes tradition and technique, not temperatures.

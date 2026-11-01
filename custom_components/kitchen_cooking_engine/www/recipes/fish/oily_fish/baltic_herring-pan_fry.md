@@ -168,12 +168,6 @@ The full observed range of stated cook times is **1–6 minutes per side**, driv
 
 Pan-frying sets the flour or oatmeal crust in fat within minutes while the thin fillet cooks through almost instantly — conductive heat at the skin, no thermal gradient worth measuring. The flundra fold doubles the thickness and protects the filling side, which is why the paired parcels get the longer end of the time range. The German sources show the same short fry feeding a second process (the sour marinade), which is why pan-fried herring times cluster so tightly: the pan step only needs to set crust and firm the flesh. The method's failure mode is mechanical (sticking, tearing) rather than thermal; the crust, not a probe, is the cook's signal.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `pan_fry` is already listed for baltic_herring.
-- `recommended_doneness`: no change proposed — no source provides explicit internal-temperature evidence.
-- No `method_temperature_ranges` override proposed — collected sources provide times and visual endpoints only.
-
 ## Summary
 
 Pan-fried strömming is a two-to-six-minute dredged fry — rye flour in the Baltic tradition, oatmeal crust in the Scottish — where crisp crust and intact fillets matter more than any probe target. The six fetched sources span Swedish, Finland-Swedish, Scottish, German and Polish traditions and agree closely on technique while none publishes an internal temperature, so this leaf supports method coverage and records the published absences.

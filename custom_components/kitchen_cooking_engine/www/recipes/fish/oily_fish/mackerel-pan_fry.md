@@ -166,12 +166,6 @@ all stand between the oil and the flesh, and all three must be applied so that t
 same rate the interior sets — the Scottish author's instruction to pull the pan off the heat when
 the butter browns too fast is the same problem stated as a kitchen warning.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `pan_fry` is already listed for mackerel.
-- `recommended_doneness`: no change proposed — no fetched source states a numeric endpoint; `well_done` (63 °C) remains consistent with the four sources' convergent full-doneness practice.
-- No `method_temperature_ranges` override needed — no measured endpoint exists to override with.
-
 ## Summary
 
 Pan-frying gives mackerel its crispest skin and shortest cook: the fillet fries in its own rendered

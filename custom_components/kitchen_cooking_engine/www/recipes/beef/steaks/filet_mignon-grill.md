@@ -152,11 +152,6 @@ The observed range is **54–60 °C (129–140 °F)**, with four of five traditi
 ## What makes this method special
 A gas grill provides consistent, adjustable heat across a wide cooking zone, enabling both the direct-heat sear and indirect-heat finishing in a single cook session with minimal intervention. For filet mignon, the two-zone setup is particularly valuable: the direct zone creates the necessary Maillard crust on a lean cut that has no fat to self-baste, while the indirect zone allows the interior temperature to rise gently to the target without surface carbonisation. Gas grill flavour is cleaner and more neutral than charcoal — the steak's flavour is not supplemented by smoke aromatics, making seasoning and any finishing butter or sauce the primary flavour contributors.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `grill`, `charcoal_grill`, `pan_sear`, `air_fryer`, `oven_roast`, `sous_vide`, `pan_fry`
-- `recommended_doneness`: `"medium_rare"` (54–57 °C consensus across American, British, and Catalan traditions)
-- No `method_temperature_ranges` override needed — default medium_rare band applies
-
 ## Summary
 Gas-grilled filet mignon is the most controllable high-heat outdoor method for this delicate cut — the adjustable, clean heat of a gas grill allows precise two-zone management without the charcoal smoke variable. Four of five traditions across America, Britain, and Catalonia target medium-rare at 54–57 °C, with the Korean tradition slightly higher at 57–60 °C. The absence of fat or connective tissue in filet mignon makes temperature accuracy more important than for any other beef cut.
 

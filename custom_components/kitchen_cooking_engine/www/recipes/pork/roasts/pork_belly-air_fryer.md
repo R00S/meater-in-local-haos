@@ -226,12 +226,6 @@ weeknight use with a fraction of the time and no complex setup. Overnight rind d
 and deep scoring matter far more than cook time adjustments; skipping either step
 produces a chewy rind regardless of temperature.
 
-## Data applied to cooking_data.py
-- `recommended_doneness`: `"well_done"` (70–80°C; all traditions target well done)
-- No `method_temperature_ranges` override needed — the default `well_done` range
-  (71°C) covers the full air-fryer consensus; the `crispy` range is not relevant
-  here as air-frying does not produce the deep-rendered confit texture
-
 ## Summary
 Air frying delivers crispy pork belly in under 35 minutes — a practical shortcut
 versus the 2–8 hour oven roast. Overnight rind drying and deep scoring are

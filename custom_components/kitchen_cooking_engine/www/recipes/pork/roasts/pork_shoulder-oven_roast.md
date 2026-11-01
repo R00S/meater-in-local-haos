@@ -155,11 +155,6 @@ Ugnsrostning: 160–200 °C i 2–4 timmar. Innertemperatur: **75–80 °C (167�
 7. Rest 10–15 minutes before carving. Serve with arroz con gandules, tostones, and lime wedges, drizzled with pan drippings.
 *Final temperature: 80–85 °C (176–185 °F).*
 
-## `cooking_data.py` note
-
-Use `DONENESS_MEDIUM_WELL` target 75 °C, range 72–85 °C for `pork_shoulder` × `oven_roast`.
-> All previous content has been removed because it was corrupt (bullet-point summaries, not full collected recipes). This leaf must be recreated using credible human-written sources only. Do not use any prior version of this file — treat it as blank.
-
 ## Tree position
 
 | Field | Value |

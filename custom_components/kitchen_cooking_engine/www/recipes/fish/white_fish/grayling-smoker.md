@@ -55,12 +55,6 @@ Only one directly fetched recipe source is available for this method. It supplie
 
 Hot smoking on a cedar plank cooks grayling with convective heat and wood smoke simultaneously, so the flesh takes on aromatic compounds while barely exceeding a gentle poach in thermal severity — a 55 °C core keeps the lean, fine-textured flesh moist where a dry-heat method would already risk flaking it dry. Pre-charring the leeks and lemon adds bitter-sweet contrast to the smoke. Because the plank buffers direct heat, the cook window is wider than grilling, but the lean flesh still has little tolerance for overshoot.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `smoker` is already listed for grayling.
-- `recommended_doneness`: no change proposed — a single source's 55 °C endpoint is insufficient evidence to move the recorded `well_done` recommendation.
-- No `method_temperature_ranges` override proposed — one qualitative/one-temperature source is insufficient for a range; revisit if further sources are collected.
-
 ## Summary
 
 Smoking grayling on a cedar plank seasons the mild flesh with wood smoke while a short cook keeps it moist — a good match for a lean fish that dries quickly under harsher heat. The one verified professional source pulls at 55 °C, below the recorded safe-temperature line, which makes the method promising for the temperature model but under-evidenced today.

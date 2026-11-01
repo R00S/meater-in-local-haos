@@ -506,7 +506,7 @@ Open the cut's `{slug}.md` and read `methods:` in its `KCE:CUT` block. Note ever
 method it lists. These are the leaves already registered in the
 engine — but they are **not necessarily complete, and almost certainly not**.
 
-> ⚠️ **Treat the current `supported_methods` as a minimum starting hint, not
+> ⚠️ **Treat the current `methods:` as a minimum starting hint, not
 > as the full picture.** The number of methods listed (even if there are 5 or
 > more) does not mean those are the only methods used by real cooks for this cut.
 
@@ -516,7 +516,7 @@ engine — but they are **not necessarily complete, and almost certainly not**.
 > every cut you research, assume the real list is longer. A lean white fish
 > fillet is poached, steamed, en papillote, salt-baked, smoked, pan-fried,
 > oven-baked, air-fried, and grilled across different traditions. An entry with
-> 3 methods in `supported_methods` is not evidence that only 3 methods exist —
+> 3 methods in `methods:` is not evidence that only 3 methods exist —
 > it is evidence that 3 were obvious enough to register without research.
 > **The whole purpose of this research work is to find the rest.**
 
@@ -530,7 +530,7 @@ human-created recipes exist**. Ask:
 - What methods are used in restaurant kitchens vs. home kitchens?
 - What methods appear in respected food media (Serious Eats, ATK, ThermoWorks)?
 
-**A method missing from `supported_methods` is not proof it does not exist —
+**A method missing from `methods:` is not proof it does not exist —
 it is a gap that requires investigation. Assume the gap is real until you have
 searched and found no credible recipe.**
 
@@ -555,7 +555,7 @@ file created without them is a stub that looks finished to the end user.
 
 ### Step 3 — For every method you find real recipes for
 
-1. If the method is already in `supported_methods`: create the leaf file for it.
+1. If the method is already in `methods:`: create the leaf file for it.
 2. If the method is **not** in `methods:`: add it to the cut file's `methods:` list
    first, then create the leaf file.
 

@@ -128,12 +128,6 @@ steak that still holds a knife line (US) — and their 10 °C bath spread is the
 choice. What the method costs is everything the bath cannot do: no crust, no smoke, no
 reduction, which is why every source ends with a hard, fast browning step outside the bag.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `sous_vide` — **newly discovered method for pork_shoulder_steak**, verified by three fetched sources (two US, one German); add `CookingMethod.SOUS_VIDE` to pork_shoulder_steak (id 203) `supported_methods`.
-- `recommended_doneness`: no change proposed — no source publishes a pull temperature; cut level stays `well_done` by default, explicitly recorded as an absence rather than a finding.
-- No `method_temperature_ranges` override needed — bath settings are not meat-doneness ranges, and encoding them as such would misrepresent all three sources.
-
 ## Summary
 
 Sous vide cooks a pork shoulder steak fully immersed at a fixed bath temperature — four

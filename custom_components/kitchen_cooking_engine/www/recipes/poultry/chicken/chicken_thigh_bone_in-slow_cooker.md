@@ -86,12 +86,6 @@ One fetched recipe establishes the method, and it publishes no internal temperat
 
 The slow cooker holds the thigh in a sealed moist-heat environment near simmering temperature for hours, so the result is controlled collagen conversion with essentially no browning unless the meat is seared first. The bone-in, skin-on piece survives the long cook intact where boneless pieces would shred, and the surrounding vegetables absorb rendered fat and soy-sweet braising liquid. The trade-off is entirely textural: no crust, soft skin, and a doneness endpoint defined by time rather than temperature.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `slow_cooker` (one fetched, human-created Korean recipe explicitly recommending bone-in, skin-on thighs confirms the method).
-- `recommended_doneness`: no change proposed — the source states no internal temperature.
-- No `method_temperature_ranges` override needed — no measured endpoint exists to override with.
-
 ## Summary
 
 Slow cooking turns bone-in thighs into spoon-tender braised meat in a soy-sweet sauce, using the cut's collagen as an asset over a 4–6 hour gentle simmer. It is an excellent match for the cut's forgiving nature, but it sacrifices all crust and gives only time-based doneness. One Korean source supports the method; temperature claims must wait for sources that measure.

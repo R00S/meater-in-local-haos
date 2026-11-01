@@ -149,7 +149,6 @@ Sondplacering kräver omsorg på grund av ribeyens interna fettstruktur. För et
 
 ---
 
-
 ## Temperature consensus
 
 | Tradition | Chef / Source | Preferred doneness | Pull temperature | Final serving temp |
@@ -168,15 +167,8 @@ Pan searing transfers heat to the ribeye by direct conduction rather than hot ai
 
 The two dominant technique variants documented in the source recipes (rapid-flip / Kenji vs single-flip / Ramsay and Pépin) produce measurably different outcomes. Rapid-flip prevents the formation of a thick grey band immediately below one face by distributing heat symmetrically across both faces simultaneously; it also slows overall core temperature rise, making the cook more controllable. Single-flip with active butter-basting focuses intense heat on one face, builds a thicker, darker crust on the seared side, and relies on rendered-butter basting of the upper face to maintain moisture. Both are appropriate for the ribeye's marbled structure; the choice affects crust character more than interior doneness.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` should include `pan_sear` — confirmed appropriate by all five traditions; it is the most-referenced indoor method for ribeye across all culinary traditions surveyed.
-- `recommended_doneness`: `"medium_rare"` — consensus of four out of five traditions; the Wagyu outlier targets rare but is a special-product preparation, not a general doneness recommendation.
-- Pull temperature for MEATER: **49–54 °C** depending on thickness and flip technique. For a standard 2.5–3 cm boneless ribeye using a single-flip method with butter basting, the MEATER pull target is the **lower end of medium-rare** (52 °C / 126 °F) because 3–5 °C of carryover will bring the final temperature to 55–57 °C. For a rapid-flip approach the pull target is slightly lower (49–52 °C) because carryover is less.
-- No `method_temperature_ranges` override needed — the standard medium-rare band (`min: 52, target: 54, max: 57`) aligns with the mainstream consensus; the Wagyu rare preparation falls under `rare` doneness which exists in the doneness options.
-
 ## Summary
 
 Pan searing is the definitive indoor method for ribeye: the extreme conductive heat of a preheated cast-iron or carbon-steel pan drives the Maillard reaction across the fat-rich exterior, producing a deeply caramelised crust that the cut's intramuscular fat enriches from within — a combination no leaner steak can replicate in a pan. Four mainstream traditions (American, British/French restaurant, French classical, Australian) agree on medium-rare as the target, with final serving temperatures clustered at 52–58 °C; the Japanese A5 Wagyu preparation targets rare (46–49 °C) for fat-preservation reasons specific to ultra-high marbling. For standard ribeye the MEATER pull target is 49–54 °C, with carryover of 3–5 °C bringing the result to medium-rare without overshooting.
 
-> ✅ **CONFORMS TO TOR** — Verified 2026-04-27. All mandatory sections present in correct order. Five source recipes from distinct culinary traditions (American, British/French restaurant, French classical, Japanese, Australian). Each recipe has full ingredients with quantities, numbered method steps, explicit probe insertion instruction, bolded pull temperature in °C and °F, and bolded final serving temperature. Cut profile is method-specific and does not repeat the parent cut index. Temperature consensus table covers all five sources with analysis. What makes this method special addresses physics and flavour chemistry. Data applied to cooking_data.py is actionable. Summary ≤4 sentences.
+> ✅ **CONFORMS TO TOR** — Verified 2026-04-27. All mandatory sections present in correct order. Five source recipes from distinct culinary traditions (American, British/French restaurant, French classical, Japanese, Australian). Each recipe has full ingredients with quantities, numbered method steps, explicit probe insertion instruction, bolded pull temperature in °C and °F, and bolded final serving temperature. Cut profile is method-specific and does not repeat the parent cut index. Temperature consensus table covers all five sources with analysis. What makes this method special addresses physics and flavour chemistry. Summary ≤4 sentences.

@@ -121,7 +121,7 @@ fudge that the scale does not support.
 
 - **Culinary Groups A/B/C/D all covered** across the method leaves — A: Chinese-American (pan_fry), Japanese (air_fryer), Indian (air_fryer, grill), Korean (braise, slow_cooker, pressure_cooker); B: American (pan_fry, grill, sous_vide, smoker), UK (air_fryer), French (braise), Greek (grill); C: Moroccan (air_fryer), Jamaican (braise, grill jerk), Senegalese (braise), North African (pan_fry, added 2026-10-25); D: Russian (pan_fry).
 - `## Cut profile` present with anatomical placement (femur, biceps femoris, myoglobin/collagen, subcutaneous fat).
-- Method leaf files exist — 18 files, one for each registered `supported_methods` value; charcoal is documented separately as a grill variant.
+- Method leaf files exist — 18 files, one for each value registered in the cut's `methods:` list; charcoal is documented separately as a grill variant.
 - **USDA safe temperature supported by research evidence** — explicit 165 °F / 74 °C endpoints in pan_fry (×2), air_fryer, grill, braise, smoker and oven_roast leaves.
 - **Culinary preferred temperatures supported by research evidence** — braise leaf's Senegalese source states 175 °F "more tender results if using just thighs"; smoker 170–175 °F; air-fryer tandoori 195 °F; grill 160 °F (below the safe line — recorded as published divergence, not guidance).
 - Per-method temperature nuance carried by each leaf's own consensus section.
@@ -133,7 +133,7 @@ Note on definitions: this file's `doneness` block gives `dark_meat_optimal` as t
 
 1. Revisit the `boil` versus simmer/poach boundary as additional tradition-specific sources are collected; current enum inventory has been reviewed and `cooking_methods_researched` is set to 1.
 2. Raise the remaining twelve partial leaves to the 4–6-source gate. `pan_fry` needs one non-US source to both hit 4 sources and clear the −1 tradition-overlap point (a Group C stovetop pan-fry — a Japanese teriyaki thigh was checked 2026-10-25 and rejected: Sudachi's recipe is explicitly *boneless*, wrong cut form). `oven_bake` and `oven_broil` (3 each) need one more tradition. `smoker`, `slow_cooker`, `pressure_cooker`, `sous_vide`, `pan_sear`, `saute` (1 source each) and `poach`, `steam`, `boil` (2, 2, 1 clear) need 2–5 more sources each. `grill` was completed 2026-10-25 (Jamaican jerk, Group C) and is off this list.
-3. Resolve the endpoint divergence record: air_fryer sources span 165–195 °F and grill spans 160–165 °F; consider a `method_temperature_ranges` override for air_fryer once a 4–6-source collection exists.
+3. Resolve the endpoint divergence record: air_fryer sources span 165–195 °F and grill spans 160–165 °F; consider a method-specific temperature band for air_fryer once a 4–6-source collection exists.
 4. Re-fetch the Serious Eats cold-start skillet and air-fryer thigh pages (HTTP 403 on 2026-10-24) — they carry the only located US 175 °F pan-fry endpoint.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*

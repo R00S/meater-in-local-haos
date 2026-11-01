@@ -140,12 +140,6 @@ Malaysian sources both use the closed-steamer carryover (2–3 minutes off the h
 equivalent of a rest. It is also the fastest route to a dressed dish: aromatics and soy go on the
 plate, not in the pan.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` keeps `steam` (already registered on this branch, previously with no leaf): four fetched recipes now back it.
-- `recommended_doneness`: no change — no fetched source states a temperature.
-- No `method_temperature_ranges` override.
-
 ## Summary
 
 Steamed halibut is an 8–10 minute, covered, single-layer cook finished with hot oil and a soy or

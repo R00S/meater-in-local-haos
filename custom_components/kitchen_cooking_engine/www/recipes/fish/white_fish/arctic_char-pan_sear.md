@@ -154,12 +154,6 @@ The observed pull range is **54-61°C**. The fillet-based French, Swedish and Ge
 
 Pan searing gives arctic char something oven methods cannot: a strongly differentiated texture between crisp skin and softly set flesh. Because the fish is moderately fatty but not as fatty as salmon, the pan can render and crisp the skin without flooding the flesh with excess oil. The method also makes very small timing changes matter; one extra minute can move the fish from translucent and silky to firm and flaky. That sensitivity is why probe placement and low carryover matter more here than in richer, thicker salmon cuts.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `pan_sear`
-- `recommended_doneness`: `"medium"` (most fillet sources land there)
-- No `method_temperature_ranges` override needed — the existing medium band already covers the mainstream pan-seared char outcome
-
 ## Summary
 
 Pan searing is a strong match for arctic char because it crisps the skin quickly while preserving the fish’s delicate, salmonid flesh. The best-supported everyday result is medium, around the mid-50s °C pull range for fillets, with hotter whole-fish versions sitting as a traditional but less common outlier.

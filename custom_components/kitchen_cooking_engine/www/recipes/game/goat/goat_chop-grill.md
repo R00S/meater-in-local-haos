@@ -133,12 +133,6 @@ What all three share is that the grill is used at high heat for a very short tim
 them trusts the clock: the signals are finger pressure, a fork, or a thermometer pulled 5 °F under
 target. The flare-up risk from rendering fat is the one hazard two of them name explicitly.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `grill` **already registered** for goat_chop — no change; this leaf is a rewrite of one whose records were fabricated (see the marker below).
-- `recommended_doneness` (method key): **`medium_rare`**, matching the corpus's 54–57 °C pulls for thin chops.
-- No `method_temperature_ranges` override: the published 54–57 °C values sit inside the existing `medium_rare` band.
-
 ## Summary
 
 Grill goat chops hot and fast — 2–4 minutes a side on a 2.5 cm chop — over a two-zone fire so the

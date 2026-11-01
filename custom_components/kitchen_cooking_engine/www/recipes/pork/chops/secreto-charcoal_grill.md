@@ -125,7 +125,7 @@ meat sit on one side longer than sixty seconds, while the Spanish technique refe
 preserved in the pan_sear leaf's corpus gives Iberian pork a general ten minutes per side
 over coals — a completely different philosophy of the same fire. **Tie-break**: a single
 measured source cannot be tied; **Applied target**: the stated 65 °C stands as this method's
-target by default of being the only published value. **Temperature used in cooking_data.py:
+target by default of being the only published value. **Temperature used in the cut file:
 65 °C (between `PORK_MEDIUM` and `PORK_WELL_DONE`, recorded as the kamado source's stated
 core target)**. `recommended_doneness` for this method: **`medium`** — the single measured
 value and both verbal sources' steak-style treatment cluster at medium-to-medium-well; the
@@ -148,12 +148,6 @@ onto the coals, creating intense smoky aroma"), searing briefly over direct embe
 to indirect heat to finish — the fire-side version of the Belgian gas source's indirect finish
 in the grill leaf. The shared lesson across all three: with this cut, the fire is managed for
 the fat, and the meat is judged by crust and rest.
-
-## Data applied to cooking_data.py
-
-- `supported_methods`: `charcoal_grill` **already registered** for secreto (id 204) — no change needed; this is the previously missing declared-method leaf.
-- `recommended_doneness` (method key for charcoal_grill): **`medium`** — the single stated core target (65 °C) and the two steak-style verbal endpoints cluster at medium-to-medium-well. At cut level: **no change proposed in this leaf alone**.
-- No `method_temperature_ranges` override needed — the single published value (65 °C) sits inside the existing pork bands' span and is recorded as the kamado source's stated target rather than as a narrow method range.
 
 ## Summary
 

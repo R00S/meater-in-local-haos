@@ -178,12 +178,6 @@ and intramuscular fat of the bone-in thigh keep it succulent well past the breas
 threshold. The main failure mode the sources guard against is crowding (single layer, space
 between pieces) and softening skin after cooking (remove immediately).
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `air_fryer` is already listed for this cut.
-- `recommended_doneness`: no change proposed — the numeric sources bracket `safe` (74 °C) and above-band (91 °C) endpoints; `dark_meat_optimal` (79 °C) remains the best central representation.
-- `method_temperature_ranges` candidate: `{"air_fryer": [74, 79, 91]}` is worth considering later — this method's fetched endpoints span the widest range in the collection and include the only above-band target — but with two of four sources silent, no override is committed now.
-
 ## Summary
 
 Air-frying bone-in thighs delivers oven-roast-quality crisp skin in half the time, using a skin-down-to-skin-up flip and high heat the dark meat absorbs without drying. It suits the cut exceptionally well — the fetched sources treat it as the convenient weeknight equivalent of roasting. The temperature record is the collection's most divergent: 165 °F and 195 °F targets sit far apart, so cooks must choose their texture goal deliberately.
@@ -195,4 +189,4 @@ Air-frying bone-in thighs delivers oven-roast-quality crisp skin in half the tim
 > full ingredients and numbered steps and an explicit endpoint line. Numeric endpoints span
 > 165–195 °F as published and are recorded per source, not reconciled. Temperature consensus table
 > covers all four sources and states the range plus the method's divergence; What makes this method
-> special and Data applied to cooking_data.py are present and actionable. Summary ≤4 sentences.
+> special is present and actionable. Summary ≤4 sentences.

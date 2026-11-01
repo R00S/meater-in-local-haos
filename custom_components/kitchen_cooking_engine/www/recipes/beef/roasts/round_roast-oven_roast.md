@@ -133,11 +133,6 @@ searing) while the large, uniform interior heats evenly to 54–65 °C. Unlike b
 meat suitable for carved table service or cold-cut sandwiches. The low fat content means carryover
 is critical to monitor — especially in high-start methods.
 
-## Data applied to cooking_data.py
-
-No changes needed. The `medium_rare: 54 °C / 130 °F` pull target and `medium: 60 °C / 140 °F`
-are both within the verified range. USDA minimum of 63 °C applies.
-
 ## Summary
 
 Four verified oven-roast sources from three culinary groups (B: British ×2; C: West African /

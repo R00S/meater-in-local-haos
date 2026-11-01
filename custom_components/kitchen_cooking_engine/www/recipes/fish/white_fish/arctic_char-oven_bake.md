@@ -164,12 +164,6 @@ Baked arctic char fillet, as published:
 
 Oven baking is the only method in this cut where the cook can be careless about timing and still hit the number, and the records use that freedom differently: Sjöstedt uses it to reach a cold-service 52 °C without a gradient, König to stop at 42 °C before a warm sauce goes on, Matfiskodlarna to hit 48 °C for a plain dinner. Because the fish is never in contact with a hot surface, there is no crust to trade against the centre — the target is the only decision, which is why every one of these recipes states it and none of them states a sear.
 
-## Data applied to `cooking_data.py`
-
-- `supported_methods` already includes `oven_bake`; no registry change needed for this leaf.
-- No `method_temperature_ranges` override: the `medium_rare` band (46–52 °C) in the hub already contains 45–50, 48 and 52, and the 42 °C record sits one degree below its floor, where it is better recorded than coded.
-- `recommended_doneness` stays `medium`.
-
 ## Summary
 
 Five records, four with a number: **42 °C, 45–50 °C, 48 °C and 52 °C**, from ovens at 150 °C fan, 100 °C, 175 °C and 75 °C respectively, plus one Canadian 204 °C bake that judges by flake. The agreement among four unrelated Swedish institutions on a 42–52 °C window for a baked char fillet is the most consistent temperature evidence anywhere in this cut; the absence of any non-Nordic number is the method's clearest gap.

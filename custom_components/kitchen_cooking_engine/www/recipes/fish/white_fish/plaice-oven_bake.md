@@ -138,12 +138,6 @@ krullar sig i värmen — en krullad plattfisk lyfter sin tjockaste del från pl
 
 Oven baking is the least interventionist way to cook a flatfish, and the records treat it that way: butter, salt, a slit along the bone, and a short blast of heat. What it cannot do is crisp the skin, which is why one Swedish record sears first and then uses the oven as a warm holding box — a hybrid that exists for serving logistics rather than for the fish. The method's real technical content is the slit: without it the fish cups upward, the thickest part leaves the tray, and the top of the back cooks while the bone stays cold.
 
-## Data applied to `cooking_data.py`
-
-- `supported_methods` in the hub already includes `oven_bake`; the leaf confirms it rather than adding it.
-- **No `method_temperature_ranges` override.** Two numbers (48 and 50–52 °C) support a low band, but the leaf is one tradition short of the gate, so promoting them into the engine would outrun the evidence.
-- The hub's `recommended_doneness: well_done` (63 °C) is now visibly unsupported by any record in this leaf and is recorded in the hub's gap table as an open question, not changed here.
-
 ## Summary
 
 Four records, two with a number: **48 °C at the bone from a Swedish chef's 225 °C bake, and 50–52 °C as Tasteline's house rule** for plaice however it is cooked. Two Danish and Swedish records bake whole plaice at 210–225 °C or hold it at 80 °C and publish no internal temperature at all, judging by feel and time. All four are Nordic, which is the leaf's clearest gap, and all four slit the backbone first so the fish does not curl.

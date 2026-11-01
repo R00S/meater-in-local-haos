@@ -145,12 +145,6 @@ The observed pull range is **60-61°C**. Whole-fish Scandinavian sources and fil
 
 Oven baking is especially useful for whitefish because it protects the fish’s delicate flakes from aggressive turning and pan contact. Sauce, pesto, butter or wine create a humid micro-environment that slows moisture loss in this relatively lean salmonid. The method also scales well from small fillets to large whole fish, unlike pan frying which becomes awkward with larger specimens. In short, the oven is the most forgiving way to cook whitefish while preserving its mild sweetness.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `oven_bake`
-- `recommended_doneness`: `"well_done"` (all sources finish around 63°C final)
-- No `method_temperature_ranges` override needed — the standard well_done fish range already matches the baked whitefish evidence
-
 ## Summary
 
 Oven baking is a strong match for whitefish because it protects the fish’s delicate structure and keeps the flesh moist with butter, wine, pesto or roasting juices. Finnish, Swedish, Austrian/Constance-style and North American sources all finish in almost the same low-60s °C range, supporting the existing well_done recommendation.

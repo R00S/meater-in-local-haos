@@ -203,11 +203,6 @@ The observed range is **88–96 °C (190–205 °F)**. All traditions sit firmly
 ## What makes this method special
 Braising submerges or partially immerses the chuck in liquid throughout the cook, keeping the surrounding temperature exactly at the boiling point of water (~100 °C) regardless of oven temperature — making it almost impossible to overcook the exterior while waiting for the interior to reach target, unlike dry-heat methods. The liquid carries dissolved gelatin and fat droplets continuously past the meat's surface, basting it internally and building the sauce simultaneously; no dry method produces this self-thickening effect. The Maillard crust formed in the initial sear contributes a depth of flavour that survives dissolution into the braise liquid, emerging as the umami backbone of the finished sauce. Braising also suppresses the Maillard reaction on the meat's surface during the long cook (steam and liquid prevent browning), so all the flavour formed at the start is preserved rather than driven off.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `braise`, `slow_cooker`, `oven_roast`, `pressure_cooker`
-- `recommended_doneness`: `"well_done"` (collagen conversion requires sustained high internal temperature — all five traditions confirm 88–96 °C)
-- No `method_temperature_ranges` override needed — the `well_done` band (≥85 °C) correctly captures the 88–96 °C braising target
-
 ## Summary
 Chuck roast is the quintessential braising cut — its extraordinary collagen content, which makes it unchewably tough when roasted quickly, becomes its greatest asset when submerged in liquid and held at high internal temperature for hours. Every major culinary tradition that uses chuck arrives at the same 88–96 °C destination, varying only in whether the final texture should be spoonable, strand-pullable, or fully shredded. Braising is uniquely suited to this cut because the liquid environment solves the dry-heat problem of achieving uniform heat penetration through a dense, fat-seamed muscle.
 

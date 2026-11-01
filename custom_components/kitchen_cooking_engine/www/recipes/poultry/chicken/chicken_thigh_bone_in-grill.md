@@ -213,12 +213,6 @@ turn often over a single medium fire. The Jamaican source adds a distinct variab
 tradition's pimento-wood smoke and its bone-in requirement are about the fat and marrow carrying
 flavour into the meat, not just heat transfer.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `grill` is already listed for this cut.
-- `recommended_doneness`: no change proposed — the fetched numeric endpoints (71 °C, 74 °C, 74 °C) sit in or just below the `safe` band and do not displace `dark_meat_optimal`.
-- No `method_temperature_ranges` override needed — no source states an endpoint outside the existing bands; the 160 °F barbecue divergence is recorded in the leaf.
-
 ## Summary
 
 Grilling suits bone-in thighs well: the two-zone fire crisps the skin while the covered finish

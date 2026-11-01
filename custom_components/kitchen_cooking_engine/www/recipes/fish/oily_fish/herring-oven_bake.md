@@ -130,12 +130,6 @@ Ugnsbakning av sill passar för den rullade beredningen där flundrade filéer f
 
 The rolled format gives herring two protective layers (its own skin-out roll plus pancetta) while the hot oven crisps the exposed fat — the interior effectively steams in rendered herring oil, which is why a 220 °C oven cannot dry it the way it would a lean fish. The method trades the pan's contact crust for an evenly crisped wrap and hands-off scaling for a crowd. The Swedish cream bake shows the other face of the same oven: with the fish laid in a dish and the cream added halfway through, the oven works as a gentle braise, so a fish that was salted and cured finishes soft rather than crisp and the onion and cream carry the salt.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `oven_bake` is already listed for herring.
-- `recommended_doneness`: no change proposed — no source provides explicit internal-temperature evidence.
-- No `method_temperature_ranges` override proposed — collected sources provide oven settings and times only.
-
 ## Summary
 
 A hot oven gives herring two useful things at once: a browned, crisp exterior — through a pancetta wrap or a dry skin — and an interior that steams in its own fat, so the small fish stays moist where a pan would risk drying it. That makes baking a good and forgiving match for this cut: the bake is short, hands-off, and scales to a crowd in a single dish. The trade is the pan's contact crust, and the collected dishes swing between a crisp rolled fillet and a soft cream-baked salt herring, so the cook should decide which of those two results they want before choosing the oven.

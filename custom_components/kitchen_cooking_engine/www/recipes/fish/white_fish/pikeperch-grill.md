@@ -134,12 +134,6 @@ The observed pull range is **60–62°C**. All four traditions — Scandinavian,
 
 Grilling gives pikeperch the most flavour complexity of any direct-heat method because the char from the grate, the smoke, and the Maillard browning of the skin all combine. The tight, structured flesh means the fillets and whole fish hold their shape on the grate where a more delicate white fish would fall through the bars or break apart on turning. The Croatian and Serbian tradition of grilling pikeperch (*smudj*) from the Danube and Sava rivers is among the oldest culinary traditions for this species in Europe.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `grill`
-- `recommended_doneness`: `"well_done"` (all sources finish at or near 63°C)
-- No `method_temperature_ranges` override needed — the standard well_done fish band covers grilled pikeperch
-
 ## Summary
 
 Grilling is a natural method for pikeperch across its entire European range. Swedish, German, French, and Croatian sources all agree on a pull temperature of 60–62 °C with a well_done finish. The fish's firm flesh and crisp-capable skin make it one of the best lean freshwater fish for direct-fire cooking.

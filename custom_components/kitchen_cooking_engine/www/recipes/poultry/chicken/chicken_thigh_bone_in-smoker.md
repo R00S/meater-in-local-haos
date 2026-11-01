@@ -73,12 +73,6 @@ One fetched recipe establishes the method, but a single source cannot produce a 
 
 Smoking surrounds the thigh with low-temperature convective air and wood smoke for 45–75 minutes, so the subcutaneous fat renders gradually while smoke compounds (guaiacol, syringol) deposit on the moist surface. Unlike oven roasting, the skin never sees enough direct heat to crisp, which is why this source rolls the thighs and finishes them sauced rather than expecting crackling. The bone-in cut benefits from the long gentle cook: collagen converts steadily without the outer muscle drying, and the femur buffers the thickest part of the thigh. The one fetched source nonetheless ends at 170–175 °F — above the poultry minimum — because pulled pork-style dark-meat texture is the goal.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `smoker` (one fetched, human-created US barbecue recipe with explicit two-stage internal endpoint confirms the method for this cut).
-- `recommended_doneness`: no change proposed — one source's 170–175 °F endpoint is consistent with the existing `dark_meat_optimal` band, but one source cannot establish a cross-tradition recommendation.
-- No `method_temperature_ranges` override needed — the single fetched endpoint falls inside the existing `dark_meat_optimal` range (74–85 °C).
-
 ## Summary
 
 Smoking gives bone-in thighs a slow, gentle render and deep smoke flavour at the cost of crisp skin, which barbecue practice compensates for with a sauce finish. It suits the cut's collagen and fat well, and the fetched source deliberately overshoots the poultry minimum for tender dark meat. The method is well matched to thighs, but this leaf rests on one US source and needs more traditions before any temperature claim is general.

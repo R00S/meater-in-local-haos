@@ -166,19 +166,3 @@ Bisonburgerbiffar är gjorda av malet bisonkött, vanligtvis från skulder, fran
 **Representative coding value**:
 - `well_done` / food-safe: **71 °C / 160 °F** pull (USDA ground meat standard)
 - `medium`: **65 °C / 149 °F** pull (gourmet compromise; below USDA standard — note in UI)
-
-## Notes for cooking_data.py
-
-- `doneness`: `"well_done"` (primary; ground meat food safety)
-- `pull_temp_c`: `71` (USDA/BBC consensus for ground meat — cooked through)
-- `pull_temp_f`: `160`
-- `finish_temp_c`: `72`
-- `finish_temp_f`: `162`
-- Secondary doneness `"medium"`: pull `65 °C / 149 °F` — display a food safety advisory in the UI for ground meat
-- Bison-specific notes:
-  - Very lean meat (2–7% fat); recommend blending to ~10–15% fat for best texture
-  - Benefits from binding agents (egg, mustard, ketchup) to hold patty together
-  - Do not overwork the mince; handle minimally when shaping
-  - MEATER probe placement: insert sideways into the thickest part of the patty, keeping both probe tip and ambient sensor clear of grill grates
-- Method: direct high heat (charcoal grill, gas grill, or cast-iron pan); 2–5 min per side depending on thickness
-- Rest: 2–4 minutes after pulling

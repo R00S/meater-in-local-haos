@@ -117,7 +117,7 @@ detaljist) — samma medium/well-done-split som i resten av snittet.
 
 Three of the four charcoal sources publish numbers: **54 °C to 63 °C** full observed pull
 range, clustering at 54–58 °C (the two professional/technique sources, SnS and Sixt) with
-the Canadian retailer at 63 °C. Mapped to `cooking_data.py`, the cluster sits in
+the Canadian retailer at 63 °C. Mapped to the cut file, the cluster sits in
 `FISH_MEDIUM` (54 °C target) and the retailer value in `FISH_WELL_DONE` (63 °C). The driver
 is who the source serves: technique-led grillers target juicy-and-set and read the centre
 with a thermometer; retail-facing guidance quotes the safety line. `recommended_doneness`
@@ -138,12 +138,6 @@ once the crust is set, moving off the coals buys the few minutes the centre need
 54–58 °C without pushing past 60 °C into dryness. Skewered cubes (the Turkish form) multiply
 the exposed surface area and shorten every exposure to seconds per turn, which is why that
 tradition needs no thermometer at all.
-
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `charcoal_grill` — already present for swordfish (id 423); no code change needed for this leaf.
-- `recommended_doneness`: no change proposed — cut-level stays `well_done`; the measured 54–58 °C cluster for this method is recorded here for the next scoring pass.
-- No `method_temperature_ranges` override needed — both stated windows (54–57 °C, 55–58 °C) and the 63 °C retail value fall inside the existing `FISH_MEDIUM`/`FISH_WELL_DONE` bands.
 
 ## Summary
 

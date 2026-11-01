@@ -109,11 +109,6 @@ Standardteknik: djup ritsning av svålen, salt i ritsorna, ugn 180–200 °C i 1
 
 **Consensus pull range**: **60–65 °C (140–149 °F)** for juicy, slightly rosy pork loin; up to 72°C for traditional fully-cooked (firmer) texture.
 
-## `cooking_data.py` note
-
-Use `DONENESS_MEDIUM` target 63 °C, range 60–72 °C for `pork_loin_roast` × `oven_roast`.
-> All previous content has been removed because it was corrupt (bullet-point summaries, not full collected recipes). This leaf must be recreated using credible human-written sources only. Do not use any prior version of this file — treat it as blank.
-
 ## Tree position
 
 | Field | Value |

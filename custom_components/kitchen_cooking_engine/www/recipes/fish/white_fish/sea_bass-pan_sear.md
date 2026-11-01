@@ -141,12 +141,6 @@ above, carryover is small but real — the thin fillet keeps cooking in its own 
 minute or two before it reaches the plate, which is why pulling at 60 °C rather than 63 °C
 is the practical move.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `pan_sear` **already registered** for sea_bass (id 422) — no change needed; this is the leaf rewrite that removes the parent-profile copy.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`; all three sources cook to opaque flesh, and the Greek source defines the endpoint as "no longer translucent".
-- No `method_temperature_ranges` override needed — no source publishes a numeric pull, so there is no observed per-method range to encode; the house-guidance 60 °C pull and the 63 °C safety floor sit inside the cut's existing `FISH_WELL_DONE` band.
-
 ## Summary
 
 Pan-searing is the fastest way to cook a sea bass fillet and the only one that gives the

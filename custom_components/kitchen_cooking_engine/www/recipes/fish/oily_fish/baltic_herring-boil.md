@@ -182,12 +182,6 @@ No fetched source states an internal or final serving temperature. The observed 
 
 Boiling/simmering strömming is the zero-waste one-pot method: the fish seasons the broth, the broth feeds the soup, the sauce or the drink, and potatoes or vegetables cook alongside. The salt-first step — barrel salting in the Swedish practice, a short coarse-salt soak in some Finnish soups — firms the flesh so the small fish survive immersion without disintegration, and it shifts seasoning into the fish before cooking. The shared rule across all four sources is gentle heat after the fish enters the liquid: boiling breaks the flaking flesh apart, so the endpoint is texture ("soft"), not temperature. Unlike pan-frying or smoking, boiling produces no crust or smoke layer; the payoff is the broth economy and the soft, fully cooked texture suited to everyday and smörgåsbord-era boiled-fish courses.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `boil` (newly discovered method for baltic_herring — archival Swedish documentation verifies kokt saltströmming practice; three Finnish soup recipes verify the simmered-soup form).
-- `recommended_doneness`: no change proposed — no source provides explicit internal-temperature evidence.
-- No `method_temperature_ranges` override proposed — no numerical evidence.
-
 ## Summary
 
 Boiled or simmered strömming is the everyday preparation across the Baltic: barrel-salted fish or fresh silakka/räim/reņģe cooked gently in broth with potatoes and vegetables, the liquid reused as soup, sauce or drink. The six fetched sources agree that the fish must never boil hard once it is in the liquid and that the endpoint is soft flesh or dumplings rising, but none publishes a fish temperature, so this leaf adds method coverage and documented traditions, not a temperature recommendation.

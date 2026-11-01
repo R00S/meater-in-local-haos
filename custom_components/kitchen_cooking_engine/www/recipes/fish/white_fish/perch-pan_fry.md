@@ -149,12 +149,6 @@ The observed pull range is **59-61°C**. Despite different sauces and accompanim
 
 Pan frying is the best method for exploiting perch’s main strengths: delicate sweetness, very fine flakes, and thin fillets that brown almost instantly. The flour or meunière coating protects the flesh, promotes even browning, and gives the butter something to cling to. Because the fillets are so thin, the method is less about long heat penetration and more about controlling the last minute before dryness. That is why basing or sauce service matters so much in perch recipes from around Europe.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `pan_fry`
-- `recommended_doneness`: `"well_done"` (all sources finish in the low 60s°C)
-- No `method_temperature_ranges` override needed — the existing well_done fish band matches the observed perch outcomes
-
 ## Summary
 
 Perch is an excellent pan-fry fish because its thin fillets brown fast and take butter, lemon and flour beautifully. Swedish, German, Finnish and Swiss/French-style sources all cluster around the same low-60s °C finish, supporting the current well_done recommendation for this delicate but very lean freshwater fish.

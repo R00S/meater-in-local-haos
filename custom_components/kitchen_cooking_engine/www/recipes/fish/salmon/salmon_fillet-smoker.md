@@ -171,7 +171,3 @@ Varmrökt laxfilé är ett av de mest utövade användningarna av den kompakta b
 | Minmadopskrift.dk | DK | Røgeovn | 60–70 °C | n/a (time-based) |
 
 **Consensus pull range**: **63 °C / 145 °F** (USDA minimum for fish, fully opaque, large flakes). Swedish style optionally pulled at **50–57 °C** for a softer, moister varmrökt texture. Hot smoking is a full-doneness method — no medium-rare option in the smoker cooking path.
-
-## `cooking_data.py` note
-
-Use `DONENESS_WELL_DONE` target **63 °C**, range **60–68 °C** for `salmon_fillet` × `smoker`. No medium-rare or medium option — hot smoking is a full-doneness method. The 50 °C Köket.se endpoint is a culinary preference outside the standard cooking path.

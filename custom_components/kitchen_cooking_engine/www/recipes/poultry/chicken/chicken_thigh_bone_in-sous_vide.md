@@ -96,12 +96,6 @@ keeps the thigh's shape during long holds. The necessary compensating step is th
 bagged skin comes out pale and rubbery and must be crisped in a hot skillet, making this the
 most two-stage method for this cut.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `sous_vide` (one fetched, human-created recipe explicitly recommending bone-in, skin-on thighs confirms the method).
-- `recommended_doneness`: no change proposed — the source's 66–74 °C chart is a bath menu, not a cross-tradition serving consensus.
-- No `method_temperature_ranges` override needed — the bath chart already sits inside the cut's existing `dark_meat_optimal` band (74–85 °C) at its upper end.
-
 ## Summary
 
 Sous vide gives bone-in thighs precisely chosen doneness with zero overshoot, trading away all crust for a mandatory skillet finish. It is arguably the most controllable method for this forgiving cut, especially for the collagen-heavy 74 °C long-hold texture. The single US source's chart is the only temperature evidence so far, so no general target can be claimed.

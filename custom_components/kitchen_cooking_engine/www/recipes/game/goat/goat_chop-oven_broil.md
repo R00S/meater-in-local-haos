@@ -107,12 +107,6 @@ Indian dry rub is a marinade that works overnight and caramelises under the flam
 is laid on top as a protective crust that would scorch if it went under the broiler any earlier.
 Both records agree on one practical point: a rack or a baking sheet with a lip, never a deep pan.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `oven_broil` is **not registered** for goat_chop — **added** this pass, with the dated comment in `cooking_data.py`. (`CookingMethod.OVEN_BROIL` already exists in the enum and is used by other cuts.)
-- `recommended_doneness` (method key): **`medium`** — the one published value is 145 °F, the top of that band.
-- No `method_temperature_ranges` override: 63 °C is inside the cut's existing `medium` range, and the second record's likely overshoot is a method warning rather than a band.
-
 ## Summary
 
 Broiling is the fastest way to cook a goat chop at home: ten minutes four inches under a hot

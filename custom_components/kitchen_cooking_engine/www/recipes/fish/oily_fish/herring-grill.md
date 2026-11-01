@@ -110,12 +110,6 @@ Grillning av sill utnyttjar fiskens höga fettinnehåll — oljan bastar köttet
 
 Direct radiant heat renders herring's abundant subcutaneous fat as it cooks, effectively basting the flesh while dripping oil flares into the smoke that flavours the skin — a self-reinforcing cycle that suits this oily fish better than lean species. Scoring is structural: without it the skin contracts and curls the fish away from the heat. The Japanese salt-grill variant uses pre-salting and standing time to draw surface moisture before grilling; the Don-region recipe accepts optional marinading or plain fish and uses coals. The Egyptian *rangah* shows the opposite case: the fish arrives already smoked, so grilling is purely a surface step — a dry pan with no added fat, a few minutes a side, until the skin lifts — which makes the grill double as the way the fish is opened and cleaned for the salad.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `grill` is already listed for herring.
-- `recommended_doneness`: no change proposed — no source provides explicit internal-temperature evidence.
-- No `method_temperature_ranges` override proposed — collected sources provide times and visual endpoints only.
-
 ## Summary
 
 Grilling blisters herring's skin and lets its own rendered fat baste the flesh, so a very fatty fish comes out crisp outside and moist inside within minutes — a strong match for this cut, and the reason scoring the flanks matters more here than on a lean fish. The British, Japanese, Russian and Egyptian sources reach that same physical result on entirely different equipment, from a domestic hot grill to a bare dry pan, which suggests the method tolerates substitution well. What none of them offers is a probe target: every cook judges by char, opacity, and the skin lifting away from the flesh. So grill herring by watching the surface and pulling early rather than waiting for a number that no tradition supplies.

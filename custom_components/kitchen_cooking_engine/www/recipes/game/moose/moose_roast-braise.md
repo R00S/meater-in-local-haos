@@ -209,18 +209,6 @@ dissolved solids that brown into the sauce, and the pot liquor becomes the sauce
 traditions above. What braising does *not* need to do here is hydrolyse collagen, which is why the targets sit
 at 63–70 °C instead of the 88–96 °C a beef short rib demands.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` already lists `CookingMethod.BRAISE` — four traditions confirm it; no change.
-- **Gap found**: the cut's `temperature_ranges` stop at `DONENESS_MEDIUM` (57–63 °C), but two sources
-  name **70 °C** as fully cooked and one serves 65 °C as medium. `DONENESS_WELL_DONE` (68–77 °C) is added to
-  `moose_roast` so a braised roast has a reachable target; without it the engine cannot express what the
-  Norwegian and Swedish sources actually do.
-- `recommended_doneness` stays `medium_rare` for the *steak-like* oven-roast method; for braise the practical
-  band is `medium` (65 °C) to `well_done` (70 °C).
-- `carryover_temp_c` is 8 on the cut, which is a dry-oven figure. In a covered pot the observed carryover is
-  3–5 °C, recorded in this leaf's frontmatter (`carryover_temp_c: 4`).
-
 ## Summary
 
 Braising suits the moose roast because its 1–3 % fat leaves nothing to protect it from dry oven air, and a

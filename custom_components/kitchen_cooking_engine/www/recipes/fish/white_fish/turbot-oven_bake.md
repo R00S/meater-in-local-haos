@@ -182,14 +182,6 @@ The only divergence is between restaurant tronçons (GBC, 5 min, ~56°C) and who
 
 Oven baking is the democratic counterpart to pan-searing for turbot: it demands less technique, less active attention, and less risk of burning a premium fish, making it the dominant home-cooking method across northern Europe. A whole turbot baked in the oven is a showpiece dish — the large diamond shape, presented at the table still in its foil packet or on the baking tray, has the ceremonial quality of a carved roast. In Scandinavian cooking, the foil-baked whole turbot (*dampet pighvar*) is a traditional dinner-party centrepiece. In Italian coastal cooking, *rombo al forno* with seasonal vegetables is the everyday version of the same philosophy: simplicity allows the fish's naturally sweet, firm flesh to dominate. The 200°C standard appears in all four traditions without exception — this is the point at which a whole fish bakes without steaming but without burning, the crust sets, and the flesh conducts heat evenly to the centre in 25–40 minutes. The MEATER probe transforms the oven bake method for whole fish: the traditional doneness test (skin peeling, bone pressing) requires opening the oven and handling the hot fish, which collapses the steam in a foil packet or disturbs a skin that took 25 minutes to crisp. Probing from the start means the fish can be pulled at exact temperature without any interruption.
 
-## Data applied to cooking_data.py
-
-- `oven_bake` is already in `supported_methods` for turbot (id=444) — **no change to cooking_data.py needed**
-- `recommended_doneness`: `"well_done"` (60°C pull, 62°C final) already set — matches all three home-cooking sources
-- Michelin restaurant context (GBC tronçons) targets medium (56°C) — documented here; the `FISH_MEDIUM` range already covers this
-- All four sources use 200°C as the baking temperature — the standard oven temperature for whole flatfish in European and Japanese cooking
-- En papillote / foil-bake method (madensverden) produces identical final temperature to open-dish bake but requires ~5–10 minutes longer for equivalent size
-
 ## Summary
 
 Oven baking is turbot's primary home-cooking method across British, Italian, Japanese, and Danish traditions. All four sources use 200°C as the standard baking temperature. Whole fish require 25–40 minutes depending on size and method (foil vs. open); bone-in tronçons require only 5–8 minutes at the same temperature. The consensus final temperature is 60°C for whole fish (well-done, fully opaque); restaurant tronçons are taken slightly lower (56°C). The MEATER probe eliminates the need for intrusive doneness tests on a sealed foil packet or freshly-crisped skin.

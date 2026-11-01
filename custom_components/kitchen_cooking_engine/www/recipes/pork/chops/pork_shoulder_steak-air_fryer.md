@@ -146,12 +146,6 @@ pooling to baste with, so an un-oiled surface dries fast, which is why two sourc
 oiling the meat itself a rule rather than a step. What it buys is the pan's speed with
 the oven's evenness and none of the smoke.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `air_fryer` — **newly discovered method for pork_shoulder_steak**, verified by four fetched sources from four publishers; add `CookingMethod.AIR_FRYER` to pork_shoulder_steak (id 203) `supported_methods`.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`; the measured source's published 63–71 °C band straddles the cut's `PORK_MEDIUM`/`PORK_WELL_DONE` boundary but its own doneness labels put 71 °C at "well done".
-- No `method_temperature_ranges` override needed — one measured source is too thin an evidence base to encode; the band is documented above instead.
-
 ## Summary
 
 The air fryer cooks a pork shoulder steak at 180–200 °C for 8–15 minutes, and the four

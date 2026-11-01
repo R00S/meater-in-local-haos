@@ -122,12 +122,6 @@ Indian spice-paste roasting both build a clean braising liquid before the fish e
 For a cut that overcooks in seconds in a pan, the simmer's gentle, bounded heat is the most
 forgiving method in this collection.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `simmer` (two fetched, human-created recipes from Japanese and Indian traditions confirm the method for this cut).
-- `recommended_doneness`: no change proposed — neither source states an internal temperature; both cook completely, consistent with `well_done`.
-- No `method_temperature_ranges` override needed — no measured endpoint exists to override with.
-
 ## Summary
 
 Simmering turns mackerel's fragility into an advantage: the fish poaches gently in miso broth or spiced curry, staying silky where dry heat would break it. Japanese and Indian kitchens converge on the same architecture — seasoned liquid first, fish in last, time-based finish. It is arguably the best structural match for the cut, though both sources leave the endpoint unmeasured.

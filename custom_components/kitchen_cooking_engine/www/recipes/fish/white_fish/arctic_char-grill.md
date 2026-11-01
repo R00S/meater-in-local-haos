@@ -173,12 +173,6 @@ Grilled arctic char, as published:
 
 Grilling is where char's size becomes an asset: the fish is small enough to cook over live fire without the skin burning before the centre sets, which is why the Nordic records can afford indirect heat and a lid. It is also the least forgiving method in this cut. The gap between 45 °C and 60 °C is fifteen degrees and roughly three or four minutes on a whole fish, so a char on a grill has less margin than a salmon fillet or a steak, and the two Swedish whole-fish records both use the probe as a decision point mid-cook rather than at the end.
 
-## Data applied to `cooking_data.py`
-
-- `supported_methods` already includes `grill`; no registry change needed for this leaf.
-- No `method_temperature_ranges` override: the existing `medium` band (52–57 °C) contains three of the four published numbers, and the fillet outlier at 45 °C is better recorded here than promoted into the cut's band.
-- `recommended_doneness` stays `medium`.
-
 ## Summary
 
 Five records, four of them publishing a temperature: **45 °C for a direct-grilled fillet, 50–54 °C for a stuffed whole fish over indirect heat, and 55–60 °C named as the glassy-to-done transition** by the one German source that describes a spectrum. The Japanese entry documents a charcoal salt-grill tradition in the same genus with no temperature at all — evidence for Group A coverage, not a datum. Pull placement is consistent wherever it is stated: thickest part of the back, beside the backbone.

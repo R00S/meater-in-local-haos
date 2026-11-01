@@ -128,11 +128,6 @@ Ugnsrostning med svål: 180–200 °C, 1,5–2 timmar, avsluta under grillelemen
 
 **Consensus pull range**: 78–88 °C (172–190 °F). Higher is fine for fall-apart texture (up to 90°C).
 
-## `cooking_data.py` note
-
-Use `DONENESS_WELL_DONE` target 82 °C, range 75–90 °C for `pork_belly` × `braise`.
-> All previous content has been removed because it was corrupt (bullet-point summaries, not full collected recipes). This leaf must be recreated using credible human-written sources only. Do not use any prior version of this file — treat it as blank.
-
 ## Tree position
 
 | Field | Value |

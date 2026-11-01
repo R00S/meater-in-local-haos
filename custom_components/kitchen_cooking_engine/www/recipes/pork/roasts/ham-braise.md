@@ -168,12 +168,6 @@ pieces, joints too salty to roast — better than an oven does, because the liqu
 while it cooks. What it cannot do is produce the lacquered crust that defines baked ham, so four of
 the five sources add a hot oven or grill finish.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` keeps `braise`: registered on this branch, now with a leaf and five fetched sources.
-- `recommended_doneness`: no change. No source states a temperature, and the cut's existing `well_done` recommendation is unaffected.
-- No `method_temperature_ranges` override.
-
 ## Summary
 
 Braised ham is a 1–3.5 hour simmer in cider, beer or stock, usually followed by a glaze in a hot

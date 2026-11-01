@@ -152,11 +152,6 @@ The observed range is **51–57 °C (124–135 °F)**, with the French and Briti
 ## What makes this method special
 Pan frying in clarified butter or oil produces full-surface conduction on both flat faces — the broadest possible Maillard crust for a medallion shape. Butter basting (adding whole butter during the cook and tilting the pan to pour it over the steak repeatedly) adds a flavour layer of dairy proteins and milk sugars browning at the pan surface that no other method replicates. For filet mignon, this butter layer is critical to flavour because the lean meat has no fat of its own to caramelise. The pan-fry method is also the most controllable for small, round medallions: the cook can monitor the probe, baste, and adjust heat as a single integrated action with complete visibility into the cooking process.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `pan_fry`, `pan_sear`, `grill`, `charcoal_grill`, `oven_roast`, `sous_vide`, `air_fryer`
-- `recommended_doneness`: `"medium_rare"` (51–57 °C; pan-fry tradition slightly biased toward the rare end compared to grill)
-- No `method_temperature_ranges` override needed — default medium_rare band applies
-
 ## Summary
 Pan-fried filet mignon with butter basting is the classic French bistro preparation of the cut — it delivers a full-contact Maillard crust and the dairy-sweet flavour of browned butter on a cut that would otherwise taste mild without significant added fat. All five traditions from France, America, Britain, Japan, and Australia target medium-rare in the 51–57 °C range, with French and British sources favouring the rarer end. The butter basting step is not optional for full flavour — it compensates for the absence of intramuscular fat in the psoas major.
 

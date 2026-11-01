@@ -147,10 +147,6 @@ Above 63 °C, lean cuts (topside, silverside, eye of round) dry out significantl
 
 Oven roasting is the original and dominant method for large British and Northern European beef joints. The combination of dry ambient heat and the fat-basting action of a rendered fat cap produces a crust (Maillard) and an evenly cooked interior that braising cannot replicate. The resting step is not optional for lean joints — it allows juice redistribution that would otherwise pool on the cutting board and deprive the meat of moisture. The ultra-low Danish method (80 °C oven) produces an exceptionally even pink interior with no grey band, but requires 4+ hours and precise timing.
 
-## Data applied to cooking_data.py
-
-Current `medium_rare` target of **54 °C / 130 °F** in the system frontmatter is at the high end of the pull range but within the final-serve consensus. For lean roasting joints (topside, silverside), the system should remain at medium_rare as recommended doneness. The USDA safe minimum of 63 °C is confirmed across all sources.
-
 ## Summary
 
 Four verified oven-roast sources from three culinary traditions (Australian, French, Creole/West African, Danish) confirm a serving temperature range of 50–57 °C for roasting joints. Medium-rare (52–55 °C) is the dominant preference worldwide for quality cuts; leaner cuts become dry above 60 °C. Group A (Asian) has no confirmed tradition of oven-roasting a whole beef joint available in this project's verified site list.

@@ -144,7 +144,3 @@ Varmrökt forell är en av de starkaste och mest utövade traditionerna med den 
 | Camerons Products | NA | Stovetop smoker | medium burner | ~63–66 °C at 15–20 min/450 g |
 
 **Consensus pull range**: **63–68 °C (145–154 °F)** for fully cooked hot-smoked trout. All sources use visual doneness (dorsal fin pulls free; flesh opaque throughout) as the primary cue; MEATER probe at 63 °C replicates this reliably. Hot smoking is a full-doneness method — no rare option.
-
-## `cooking_data.py` note
-
-Use `DONENESS_WELL_DONE` target **63 °C**, range **60–68 °C** for `trout` × `smoker`. No medium option — hot smoking is a full-doneness method.

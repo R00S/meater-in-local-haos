@@ -166,12 +166,6 @@ before collagen melts), and the South African *caveman* method removing the grat
 that forgives all three, which is exactly why every tradition here cooks neck steaks
 harder than it would cook loin.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `grill` **already registered** for pork_shoulder_steak (id 203) — no change needed; this is the missing declared-method leaf.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`, which both measured sources (80–82 °C through-cooked; 145 °F floor with preferred window above) support directly.
-- No `method_temperature_ranges` override needed — the observed 63–91 °C evidence spans both cut-level bands rather than falling outside them, and the differing meanings of the endpoints are documented above rather than encoded as one range.
-
 ## Summary
 
 Grilling a pork shoulder steak means direct heat for a thin German-style steak (10–16

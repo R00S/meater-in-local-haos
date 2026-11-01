@@ -128,12 +128,6 @@ is why both fetched sources finish covered: the lid holds steam that cooks every
 through while the browning already happened. For shaped cutlets the sear sets the crust before
 the covered phase; for loose mince it is simply stirred and browned in batches.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `pan_fry` is already listed for this cut.
-- `recommended_doneness`: `well_done` (71 °C / 160 °F) is supported — the one measured source cooks its filling to 72 °C / 161 °F, just above the safe line, and no source serves ground lamb pink.
-- No `method_temperature_ranges` override needed — the stated endpoint falls inside the existing `well_done` range (68–77 °C).
-
 ## Summary
 
 Pan-frying ground lamb is a sear-and-cover operation that builds savoury browned crust while guaranteeing the mince cooks completely — the one absolute this cut demands. Russian cutlets and Indian keema show the same architecture in two forms, and the keema source supplies the collection's only measured endpoint at 72 °C. The method is the cut's default for good reason: maximum browning, minimum risk.

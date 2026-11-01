@@ -140,12 +140,6 @@ fish poaching in tomato-onion liquid while the top bakes. The mayonnaise-miso gl
 Japanese-style bake serves the same physics from the other side: an insulating, fat-rich
 layer that browns on top while keeping the centre from drying during the short hot bake.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `oven_bake` — **newly discovered method for swordfish**, verified by four fetched sources; add `CookingMethod.OVEN_BAKE` to swordfish (id 423) `supported_methods`.
-- `recommended_doneness`: no change proposed — cut-level stays `well_done`, which this leaf's only measured band (60–63 °C) supports directly.
-- No `method_temperature_ranges` override needed — the single observed band sits inside the existing `FISH_WELL_DONE` range, and the three untimed sources give no value to encode.
-
 ## Summary
 
 Baking cooks a swordfish steak evenly in surround heat — 15–25 minutes at around 200–220 °C

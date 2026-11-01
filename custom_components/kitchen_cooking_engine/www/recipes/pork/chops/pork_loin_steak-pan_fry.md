@@ -148,12 +148,6 @@ The full observed numerical range is **62–65 °C** — three of five sources s
 
 A pan is the fastest heat-transfer path this cut will ever meet: butter-conducted conductive heat moves roughly an order of magnitude faster than oven air, so the surface reaches Maillard temperatures while the centre is still climbing — which is exactly what a lean, connective-tissue-free steak needs, since it has no collagen to hide behind and every degree of overshoot shows as dryness. The baste that three of five sources use compensates for the cut's low intramuscular fat by carrying flavored fat over the top surface during the short cook, adding richness the muscle cannot supply itself. The two-phase Danish heat pattern (hard sear, then gentler finish) and the Spanish single-blast contact time are two solutions to the same physics problem: get colour fast, get the centre to 63–65 °C before the water in the fibres cooks out. The failure mode is mechanical as well as thermal — a thin, sugar- or flour-coated surface (as in the Japanese tonteki) sticks if the pan is moved too early, which is why every source leaves the steak undisturbed for the first minutes.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: no change — `pan_fry` already registered for pork_loin_steak (id 202).
-- `recommended_doneness`: no change proposed — cut level stays `well_done`; this leaf's `medium` band (62–65 °C) sits inside the existing `PORK_MEDIUM` range (60–66 °C) and needs no new key.
-- No `method_temperature_ranges` override needed — the observed 62–65 °C band fits inside `PORK_MEDIUM`, and no source argues for a higher or lower pan-specific band.
-
 ## Summary
 
 Pan frying gives a pork loin steak a browned, butter-rich crust while the centre stays in a narrow moist band — the five sources all stop between 62 and 65 °C, or simply count minutes until golden. It is the best match of all the methods here: the cut is flat, lean and uniform, so it cooks as evenly in a pan as anywhere and takes browning without overcooking if you keep the heat high and the time short. The risk is the opposite of a slow method — there is no buffer, so a distracted minute or two turns juicy flesh dry. Use a probe if you want certainty; use the baste if you want flavour the lean muscle cannot provide.

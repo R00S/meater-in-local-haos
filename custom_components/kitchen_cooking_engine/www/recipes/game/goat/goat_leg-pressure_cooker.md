@@ -88,12 +88,6 @@ fond, aromatics and tomato paste build the sauce before the lid closes. The natu
 matters more for goat than for most meats: a quick release would wring the moisture back out
 of the muscle fibres the pressure just relaxed.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `pressure_cooker` (one fetched, human-created recipe pressure-cooking cubed bone-in goat confirms the method).
-- `recommended_doneness`: no change proposed — the source states no internal temperature.
-- No `method_temperature_ranges` override needed — no measured endpoint exists to override with.
-
 ## Summary
 
 Pressure cooking gives goat-leg pieces braised tenderness in under an hour, with a seared curry sauce built in the same pot. It is a strong structural match for the cut's connective tissue and the clear weeknight form of Caribbean curry goat. One source supports the method; no temperature evidence exists yet.

@@ -111,7 +111,3 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 | ichkoche.at (AT) | Indirect heat | 140–160 °C | 88–93 °C |
 
 **Consensus pull range**: 88–95 °C (190–203 °F). True smoking at 110–120 °C takes 3.5–6 hours; higher-temp indirect cooking at 140–160 °C can be done in 60–90 minutes but produces less smoke ring. Both converge on the same pull temperature.
-
-## `cooking_data.py` note
-
-Use `DONENESS_WELL_DONE` target 90 °C, range 88–95 °C for `baby_back_ribs` × `smoker`. No medium/rare options — collagen rendering requires sustained heat at or above 88 °C.

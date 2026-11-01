@@ -129,12 +129,6 @@ of the US instinct to sear at medium-high throughout, and it is what a 40 %-pork
 afford — a pure lean bison patty cooked at half heat would steam rather than brown, which is
 the honest limit of that row's transferability.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `pan_fry` **already registered** for buffalo_burger — no change; this leaf is a rewrite of a leaf whose records carried invented measurements.
-- `recommended_doneness`: no change — `well_done`, target 71 °C, and the two measured rows bracket it at 70–71 °C.
-- No `method_temperature_ranges` override needed. The smash variant's sub-two-minute cook is a technique note, not a narrower band.
-
 ## Summary
 
 Pan-frying a bison burger means supplying the fat yourself and then leaving the patty alone:

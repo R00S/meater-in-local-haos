@@ -106,12 +106,6 @@ would only taste of surface smoke. The cut's fat content is why mackerel is a cl
 fish in the first place. The measured source shows the safety architecture clearly — brine,
 dry, ramp, then hold at 63 °C — which no quick-cook method for this cut requires.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `smoker` is already listed for mackerel.
-- `recommended_doneness`: `well_done` (63 °C / 145 °F) is directly supported — the only measured source targets exactly 145F with a 30-minute hold.
-- No `method_temperature_ranges` override needed — the stated endpoint equals the existing `well_done` target.
-
 ## Summary
 
 Hot smoking suits mackerel better than almost any other cut: its fat carries smoke deep into the flesh and the finished fish keeps for days. The one measured source pulls and holds at exactly 145 °F — the safe floor — while the British source trusts visual doneness. It is a strong match and the collection's only temperature-bearing method so far.

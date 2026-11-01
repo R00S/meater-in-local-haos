@@ -157,11 +157,6 @@ The observed range is **54–62 °C (129–144 °F)**. The American/British clus
 ## What makes this method special
 Gas grill heat is ideal for flank steak because the controllable, consistent heat across a wide cooking surface allows the cook to use the entire flat face of the steak at once. Unlike charcoal, gas heat can be turned down instantly — reducing the risk of taking a thin steak from medium-rare to well-done in seconds. The two-zone setup is the key technique: the direct zone creates the sear on both faces, and the indirect zone provides a safe harbour where the probe can catch up to the target without surface burning. For marinated flank steaks, the gas grill's cleaner flavour profile allows the marinade aromatics to be the dominant flavour, without charcoal smoke competition.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `grill`, `charcoal_grill`, `pan_sear`, `pan_fry`, `oven_roast`, `sous_vide`
-- `recommended_doneness`: `"medium_rare"` (54–60 °C for steakhouse traditions; medium at 59–62 °C for carne asada / Korean)
-- No `method_temperature_ranges` override needed — default medium_rare band applies
-
 ## Summary
 Gas-grilled flank steak achieves a controllable, clean-heat sear that is the reliable domestic alternative to charcoal for this thin, lean cut. The American and British traditions target medium-rare at 54–60 °C, while the Mexican and Korean traditions favour medium at 59–62 °C — a genuine cultural difference in how grilled beef is served when it accompanies sauces, tortillas, or rice. Slicing thinly across the grain remains the mandatory finishing step regardless of tradition.
 

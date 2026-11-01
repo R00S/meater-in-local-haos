@@ -91,12 +91,6 @@ here. The mixing discipline matters more than in any other method: overworked mi
 tight on the skewer, and the grated onion in the fetched recipe carries both flavour and
 moisture into the interior.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `grill` (one fetched, human-created Turkish recipe grilling skewered ground lamb confirms the method).
-- `recommended_doneness`: no change proposed — the source states no internal temperature.
-- No `method_temperature_ranges` override needed — no measured endpoint exists to override with.
-
 ## Summary
 
 Grilling ground lamb on skewers is the kebab tradition's core technique: spiced mince, charcoal, and a charred crust that no pan matches. It suits the cut's fat content superbly, though the ground-meat safety rule still demands the centre be cooked through. One Turkish source supports the method; no temperature evidence exists yet.

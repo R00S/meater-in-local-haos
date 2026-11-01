@@ -151,16 +151,11 @@ Sous vide producerar jämn tillagning från kant till kant som ingen annan metod
 | American tech (ChefSteps) | 55–57 °C / 131–135 °F | 57 °C / 135 °F |
 | Modernist Cuisine (Myhrvold) | 55–58 °C / 131–136 °F | 57 °C / 135 °F |
 
-All five sources target a post-sear final serving temperature of 57 °C (135 °F), corresponding to medium-rare; the variation in bath temperature (55–58 °C) reflects differing sear intensities — cooks using briefer, hotter sears set the bath lower to compensate for more aggressive carryover. The full range maps to `medium_rare` in cooking_data.py. The `recommended_doneness` key is `medium_rare`.
+All five sources target a post-sear final serving temperature of 57 °C (135 °F), corresponding to medium-rare; the variation in bath temperature (55–58 °C) reflects differing sear intensities — cooks using briefer, hotter sears set the bath lower to compensate for more aggressive carryover. The full range maps to `medium_rare` in the cut file. The `recommended_doneness` key is `medium_rare`.
 
 ## What makes this method special
 
 Sous vide is the only method that guarantees complete edge-to-edge even doneness: every millimetre of the steak's cross-section reaches exactly the circulator temperature and no more, producing a uniformly pink, juicy interior without any grey band at the edge. This is especially valuable for the flat iron because its irregular thickness (thicker at the centre, tapering at the edges) means traditional methods always overcook one end; sous vide eliminates this. The sealed bag also traps all cooking juices and rendered fat, allowing them to be deglazed into a sauce. The key limitation is that a probe cannot be used during the sealed-bag cook — the circulator temperature is the target — but post-bath probe verification is strongly recommended before the finishing sear to confirm thermal equilibrium was reached. Cook times between 45 minutes and 4 hours are safe for a 2–3 cm flat iron, but the 1–2-hour window produces the best combination of food-safety pasteurisation, even doneness and good texture.
-
-## Data applied to cooking_data.py
-- `supported_methods` gains/includes: `sous_vide`
-- `recommended_doneness`: `"medium_rare"` (even edge-to-edge doneness showcases the cut's marbling perfectly)
-- No method_temperature_ranges override needed
 
 ## Summary
 

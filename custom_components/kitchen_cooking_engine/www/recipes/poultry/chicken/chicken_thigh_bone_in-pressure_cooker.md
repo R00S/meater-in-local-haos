@@ -98,12 +98,6 @@ on the sauté function is the only browning the cut gets; everything after it is
 The quick release matters for dark meat: without it, the residual heat would push the thigh
 well past the point of tenderness into mushiness.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `pressure_cooker` (one fetched, human-created Korean recipe using small bone-in thigh pieces confirms the method).
-- `recommended_doneness`: no change proposed — the source states no internal temperature.
-- No `method_temperature_ranges` override needed — no measured endpoint exists to override with.
-
 ## Summary
 
 Pressure cooking gives bone-in thighs long-braised tenderness in about ten minutes at pressure, with a sear first for flavour and a quick release to protect texture. It is a strong match for the cut's connective tissue, but the result is a sauced stew component rather than a crusty one. One Korean source supports the method; no temperature target can be claimed yet.

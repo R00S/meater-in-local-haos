@@ -108,11 +108,6 @@ Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagnin
 
 **Consensus pull range**: 90–95 °C (194–203 °F). All sources agree; lower smoker temp (100–110°C) takes 16–18 hrs for an 8 kg piece; higher smoker temp (120–130°C) takes 7–10 hrs for 2.5 kg. MEATER probe makes the plateau phase manageable.
 
-## `cooking_data.py` note
-
-Use `DONENESS_WELL_DONE` target 93 °C, range 90–95 °C for `pork_shoulder` × `smoker`.
-> All previous content has been removed because it was corrupt (bullet-point summaries, not full collected recipes). This leaf must be recreated using credible human-written sources only. Do not use any prior version of this file — treat it as blank.
-
 ## Tree position
 
 | Field | Value |

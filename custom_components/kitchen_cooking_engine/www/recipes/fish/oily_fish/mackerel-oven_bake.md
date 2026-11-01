@@ -171,12 +171,6 @@ is the forgiving option — a wide tray and slower heat give a several-minute ma
 but the Swedish figure is a reminder that "forgiving" is a texture choice, not a safety guarantee:
 the same recipe would read 63 °C after another two or three minutes without the crust burning.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `oven_bake` is already listed for mackerel.
-- `recommended_doneness`: **unchanged, `well_done` (63 °C / 145 °F)** — one Swedish source states 52 °C, which is below the USDA fish minimum and outside every band in the cut file; adopting it would set the panel's target under the safe floor on the strength of a single recipe. The figure is recorded here and in the consensus table instead.
-- No `method_temperature_ranges` override needed — there is no *safe* measured endpoint to override with. The 52 °C point is documented, not adopted; a future `method_temperature_ranges` entry would need at least one corroborating measured source and an explicit product decision to offer a sub-63 °C mackerel bake.
-
 ## Summary
 
 Oven-baking mackerel trades the pan's crust for evenness and capacity: skin crisps on a rack, or

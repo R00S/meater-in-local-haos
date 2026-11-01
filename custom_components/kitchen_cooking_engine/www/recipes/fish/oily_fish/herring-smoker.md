@@ -52,12 +52,6 @@ One fetched source states an explicit internal pull temperature of 60 °C (140 �
 
 Three-phase hot smoking decouples the three things a single hot smoke conflates: pellicle formation (dry, no smoke, 40 °C — the tacky surface that makes smoke adhere), flavour deposition (long cool smoke at 50 °C), and through-cooking (short hot finish to a measured core). Herring's fat carries the smoke aromatics deep into the flesh and prevents the drying that a lean fish would suffer over four hours; the measured 60 °C finish keeps the texture buttery rather than flaky-dry. This is one of the few methods in the whole collection where the source publishes a probe endpoint.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `smoker` is already listed for herring.
-- `recommended_doneness`: no change proposed — one source's 60 °C endpoint is below the 63 °C recorded safe line; insufficient evidence to move a fish safety default, but the divergence is documented here for future leaves.
-- No `method_temperature_ranges` override proposed — one temperature-bearing source is insufficient for a range; revisit if 2+ more sources are collected.
-
 ## Summary
 
 Hot-smoked herring is a three-phase cabinet cook that ends at a measured 60 °C core — one of the rare recipes in this collection that publishes a probe target at all. The single Canadian source is temperature-rich but tradition-poor, so this leaf establishes a real pull-temperature anchor for the cut while leaving the diversity gate open.

@@ -187,12 +187,6 @@ Six fetched recipes; four put raw or briefly seared hake into a sauce (Basque ×
 
 Simmering suits hake because the sauce does the work the fish cannot do for itself: a lean fillet gives up moisture fast in dry heat, but in a covered pan the sauce keeps the surface wet and the gentle heat sets the flesh before it can dry. It is also the only method here that produces a complete dish from one pan — sauce, fish and often the starch (potatoes, plantains) all in the same vessel. The risk is mechanical: hake separates along its seams, so a vigorous simmer breaks the portions up, which is why every source lowers the heat and covers the pan.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains `simmer`: four direct raw-in-sauce recipes confirm it.
-- `recommended_doneness`: no change — no fetched source states a temperature.
-- No `method_temperature_ranges` override: no temperature evidence.
-
 ## Summary
 
 Simmered hake is a fast, covered, sauce-first method: build the base, lay the fish on it, and cook 5–10 minutes to a visual flake cue. Six fetched sources across Basque, Ecuadorian, South African, Nigerian and UK-Indian practice, none of which publishes an internal temperature.

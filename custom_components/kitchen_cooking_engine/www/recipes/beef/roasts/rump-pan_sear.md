@@ -171,11 +171,6 @@ Rump is particularly well-suited to the **French butter-baste technique** (Bercy
 "rumpstek à la Bercy") where the melting butter picks up rendered beef fat and herb flavour and
 is continuously spooned over the steak during the final minutes.
 
-## Data applied to cooking_data.py
-
-The current `medium_rare: 54°C / 130°F` and `medium: 60°C / 140°F` are confirmed by the BBC
-Good Food probe temperatures for rump steak. No change needed.
-
 ## Summary
 
 Four verified pan_sear sources for rump steak: three from British culinary tradition (Group B,

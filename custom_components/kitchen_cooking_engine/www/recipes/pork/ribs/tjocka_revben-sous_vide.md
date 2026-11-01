@@ -81,7 +81,6 @@ målet och avslutas med sotning, grillpanna, rök eller ugn.
 
 ---
 
-
 ### 3. Swedish (Matnjutaren, Andreas Andersson) — Revben sous vide
 **Inspired by**: Andreas Andersson, Matnjutaren; https://matnjutaren.se/revben-sous-vide/ (fetched 2026-11-01). *Named Swedish author, recipe published and updated 2026-09-23. **Cut-exact**: the ingredient line reads "1,5 kg tjocka revbensspjäll eller kamben (ca 2 rack)" — *tjocka revbensspjäll* is this cut, and *kamben* is named alongside it as the alternative rack.*
 **Serves**: 4 · **Prep**: 20 min (+ 1 h or overnight rest) · **Cook**: 12 h in the bath + 8 min finish · **Rest**: ice bath 20–30 min, then chilled in bag
@@ -146,12 +145,6 @@ None — all four sources in this leaf state a numeric cook temperature. (Every 
 ## What makes this method special
 
 A sealed bag in temperature-controlled water delivers heat by conduction alone, with no evaporation, no airflow and no radiant surface — the three things the oven, grill and smoker must constantly manage for this cut are removed from the equation entirely. For a front rack with a thick meat cover and heavy connective tissue, the consequence is that tenderness becomes purely a time-and-temperature negotiation: lower baths need disproportionately longer holds to convert collagen to gelatin, and the bag keeps the rendered fat and juices that an open method cooks away, which is why sources with similar tenderness targets sit so far apart in time. Because the meat can never exceed the water, the surface arrives grey, soft and un-browned, so every source ends with a deliberately aggressive finish — grill, smoking, or a hot oven element — to build the crust the bath was never going to produce. The bag also collapses carryover: once opened at target, the only remaining climb happens during that short finish, not on the plate.
-
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: nothing — `sous_vide` is already registered for this cut.
-- `recommended_doneness`: `"pulled"` (unchanged; no source states a serving temperature, so no other key can be evidenced from this leaf).
-- `method_temperature_ranges` override: `{"sous_vide": [63, 75]}` — the four stated bath temperatures span 63–75 °C and none reaches the `DONENESS_PULLED` floor of 88 °C, so the cut's standing range misrepresents what this method actually holds. **This instruction is written but not applied**: it changes what the panel shows for the cut, so it is left for the next code pass to make deliberately rather than slipped in behind a leaf edit.
 
 ## Summary
 

@@ -162,12 +162,6 @@ give per-side counts rather than a range. The slashing and scoring that three so
 not decoration: it lets rendered fat and marinade reach the interior and gives the heat a path
 past the insulating skin.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change — `grill` is already listed for mackerel; `charcoal_grill` remains a documented fuel/setup variant of the same method, not a separate enum entry.
-- `recommended_doneness`: unchanged, `well_done` — every source cooks to full doneness by visual test; none measures a temperature.
-- No `method_temperature_ranges` override needed — no grilled source states an internal target, so an override would be invented data; the cut-level `well_done` band applies until a measured grill source is collected.
-
 ## Summary
 
 Grilling is mackerel's fastest and most characteristic dry-heat treatment: hot radiant heat crisps

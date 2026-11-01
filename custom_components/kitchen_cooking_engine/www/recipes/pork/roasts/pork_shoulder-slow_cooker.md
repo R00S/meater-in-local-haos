@@ -117,11 +117,6 @@ Sond in i tjockaste köttmassan, borta från skulderbladsben. Innertemperatur: *
 
 **Consensus pull range**: 90–95 °C (194–203 °F) for pulled pork texture. All sources agree: below 85°C the meat won't pull.
 
-## `cooking_data.py` note
-
-Use `DONENESS_WELL_DONE` target 93 °C, range 90–95 °C for `pork_shoulder` × `slow_cooker`.
-> All previous content has been removed because it was corrupt (bullet-point summaries, not full collected recipes). This leaf must be recreated using credible human-written sources only. Do not use any prior version of this file — treat it as blank.
-
 ## Tree position
 
 | Field | Value |

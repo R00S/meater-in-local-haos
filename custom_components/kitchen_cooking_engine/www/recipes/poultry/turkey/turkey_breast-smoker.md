@@ -26,7 +26,3 @@ cut_type: Turkey
 ## Temperature consensus
 
 *Pending source collection.*
-
-## `cooking_data.py` note
-
-*Pending analysis.*

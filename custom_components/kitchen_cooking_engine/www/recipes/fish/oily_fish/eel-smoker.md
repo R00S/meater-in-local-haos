@@ -126,12 +126,6 @@ The observed pull range is **64-65°C**. All four smoking traditions treat eel a
 
 Smoking changes eel more dramatically than it changes most fish. The long dry-smoke phase evaporates surface moisture, tightens the skin, and concentrates the natural fats before the hotter phase melts those fats through the flesh. Unlike pan-fried eel, smoked eel gains much of its finished texture during the post-smoke rest, when the rendered fat redistributes and the skin softens. The method is therefore both a preservation technique and a texture-building technique.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `smoker`
-- `recommended_doneness`: `"well_done"` (all sources finish above 63°C)
-- No `method_temperature_ranges` override needed — the existing well_done fish range already covers traditional hot-smoked eel
-
 ## Summary
 
 Smoker is a natural method for eel because it slowly renders the fish’s heavy fat load while building the signature sweet-smoky flavour. Swedish, Dutch, German and Russian sources all converge on a fully cooked finish in the mid-60s °C, making well_done the correct recommendation for this cut-method pair.

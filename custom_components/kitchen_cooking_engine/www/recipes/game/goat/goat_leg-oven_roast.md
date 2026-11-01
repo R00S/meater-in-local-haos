@@ -208,12 +208,6 @@ why times run 2.5–3.5 hours even at moderate oven settings. Marinades do doubl
 dairy or acid tenderising the surface and tempering the goat's assertive flavour compounds
 before the long cook mellow them further.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `oven_roast` is already listed for this cut.
-- `recommended_doneness`: `well_done` is supported for this method — the two guidance figures (70 °C, 160–165 °F) both fall in the `well_done` band, and no fetched source roasts goat leg pink.
-- No `method_temperature_ranges` override needed — the stated guidance falls inside the existing `well_done` range (68–77 °C).
-
 ## Summary
 
 Oven roasting suits whole goat leg well: covered slow heat tenderises the collagen-heavy cut, and an uncovered finish supplies the crust and glaze. Four traditions — German, Greek, Russian, South Asian — converge on the same two-phase architecture and on well-done results. The only measured guidance (70–74 °C) supports the file's well-done recommendation for this method; the invented pull figures of the previous version are gone.

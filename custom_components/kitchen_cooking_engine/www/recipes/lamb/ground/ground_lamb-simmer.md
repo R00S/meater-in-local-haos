@@ -94,12 +94,6 @@ pan-fry's dry crust: a loose, spoonable curry whose fat has emulsified into the 
 the cut, the simmer trades crust for integration; the peas and yogurt in the fetched source
 are classic counters to lamb's richness.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `simmer` (one fetched, human-created Indian recipe simmering browned ground lamb confirms the method).
-- `recommended_doneness`: no change proposed — the source states no internal temperature.
-- No `method_temperature_ranges` override needed — no measured endpoint exists to override with.
-
 ## Summary
 
 Simmering ground lamb builds keema: browned mince gently stewed with spices and peas until the sauce clings. It trades the pan-fry's crust for a depth of flavour only slow liquid cooking gives, and it suits the cut completely. One source supports the method; no temperature evidence exists in it.

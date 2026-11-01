@@ -144,12 +144,6 @@ closes to 20–35 minutes and the endpoint becomes colour. What the method gives
 crust that defines its siblings — the American source has to reach for the broiler to get
 one back.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `oven_roast` — **newly discovered method for pork_shoulder_steak**, verified by four fetched sources from four countries; add `CookingMethod.OVEN_ROAST` to pork_shoulder_steak (id 203) `supported_methods`.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`, directly supported by the only measured band (145–170 °F).
-- No `method_temperature_ranges` override needed — the single observed band sits inside the existing `PORK_WELL_DONE` range (68–77 °C target band; the source's 63 °C floor overlaps `PORK_MEDIUM`, its 77 °C ceiling is the band maximum), and the three untimed sources give no further values to encode.
-
 ## Summary
 
 Oven roasting cooks a pork shoulder steak in surround heat — 175–200 °C for 20–35 minutes

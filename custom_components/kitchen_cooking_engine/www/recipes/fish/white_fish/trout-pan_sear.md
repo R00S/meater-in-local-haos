@@ -243,17 +243,3 @@ of resting, meeting the safe minimum.
 
 **Representative coding value**: **60 °C (140 °F)** as the nominal pull, practical range
 58–63 °C.
-
-## Notes for cooking_data.py
-
-- `doneness`: `just_cooked`
-- `pull_temp_c`: 60
-- `pull_temp_range_c`: [58, 63]
-- `safety_level`: `safe` at 63 °C; `caution` below 60 °C
-- The dorsal-fin-loosening test (Norwegian tradition) is a reliable manual doneness check
-  that correlates with 58–62 °C internal at the backbone.
-- All traditions except the Italian one cook skin-side first to develop a crispy skin.
-- Flour dusting (German, Mediterranean) creates a protective barrier that reduces the risk
-  of the delicate flesh overcooking at the surface.
-- The MEATER probe must be inserted laterally in thin fillets; top-down insertion in a fillet
-  thinner than 2 cm will push through both surfaces.

@@ -179,12 +179,6 @@ the fish — foil, parchment, a sauce, or a lid of vegetables — because a bare
 of this leaf: for halibut, "oven roast" in practice means "oven roast under cover", and the cover
 is what makes the 8–22 minute range workable.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` keeps `oven_roast` (already registered): six fetched, species-specific recipes back it.
-- `recommended_doneness`: no change — no fetched source states a temperature.
-- No `method_temperature_ranges` override.
-
 ## Summary
 
 Oven-roasted halibut is a covered bake at 375–450 °F for 8–22 minutes depending on thickness and

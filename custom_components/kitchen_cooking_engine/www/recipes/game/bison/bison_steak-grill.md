@@ -165,7 +165,7 @@ shares. **Tie-break**: of the three measured rows, the middle value for medium-r
 **135 °F (57 °C)** (Wild Idea and Hey Grill Hey agree; Vindulge's 120–125 °F pull is the
 deliberate rare school, recorded as such rather than averaged away). **Applied target**:
 **57 °C (135 °F) for medium-rare** at the probe, with the 49–52 °C low-pull school recorded
-as the corpus's persistent dissent. **Temperature used in cooking_data.py: 57 °C within the
+as the corpus's persistent dissent. **Temperature used in the cut file: 57 °C within the
 existing `medium_rare` band**. `recommended_doneness` for this method: **`medium_rare`** —
 every measured chart lands medium-rare at 52–57 °C and every source forbids going past
 medium; the two verbal rows say "medium-rare" in as many words.
@@ -187,12 +187,6 @@ Nigerian recipes add what the US corpus lacks entirely: marinades whose sugar an
 the lean surface during a 3–4 minute direct cook, and a serving style — thin slices with a
 fiery dipping sauce, or spiced skewers with raw vegetables — that treats bison as a vehicle
 for strong flavour rather than as a steak to be eaten plain.
-
-## Data applied to cooking_data.py
-
-- `supported_methods`: `grill` **already registered** for bison_steak — no change needed; this is the rewritten, gate-checked declared-method leaf (the previous version mixed in pan-sear/oven-hold sources and a beef recipe — see the integrity note in the hub's rescore).
-- `recommended_doneness` (method key for grill): **`medium_rare`** — 57 °C applied target from the middle measured row; the 49–52 °C low-pull school recorded as divergence; consistent with the cut level.
-- No `method_temperature_ranges` override needed — the measured values (49–63 °C across three charts) all sit inside the existing doneness bands' span.
 
 ## Summary
 

@@ -138,16 +138,11 @@ Flat iron steak kommer från infraspinatus i skulderbladet, en position som krä
 | Spanish/Basque (José Pizarro) | Medium-rare | 57 °C / 135 °F |
 | Israeli/Levantine (Ottolenghi) | Medium-rare | 57 °C / 135 °F |
 
-All five traditions converge on medium-rare (57 °C / 135 °F) as the preferred final serving temperature, with a consistent pull point of 54 °C (130 °F) allowing 2–3 °C of carryover. Gas grilling's consistent heat produces tighter temperature control than charcoal, resulting in less variation in pull temperature across cultures. The consensus maps precisely to the `medium_rare` key in cooking_data.py. The `recommended_doneness` key is `medium_rare`.
+All five traditions converge on medium-rare (57 °C / 135 °F) as the preferred final serving temperature, with a consistent pull point of 54 °C (130 °F) allowing 2–3 °C of carryover. Gas grilling's consistent heat produces tighter temperature control than charcoal, resulting in less variation in pull temperature across cultures. The consensus maps precisely to the `medium_rare` key in the cut file. The `recommended_doneness` key is `medium_rare`.
 
 ## What makes this method special
 
 Gas grilling provides the high-temperature dry heat needed for rapid Maillard browning — typically 220–260 °C at grate level — while offering instant adjustability unavailable with charcoal: the cook can throttle down to a gentler medium zone in seconds if the probe climbs too fast. The flat iron's 2–3 cm profile is perfectly sized for direct gas grilling: in roughly 8–10 minutes total the exterior browns deeply while the interior reaches medium-rare without requiring a two-zone cook. Fat rendering from the flat iron's marbling drips onto the burner flame-tamers, producing flavourful smoke and a mild char note that somewhat approximates charcoal character. Gas grilling is also forgiving enough that marinated or spice-rubbed steaks — as seen in the Chermoula, Za'atar and Romesco recipes — cook reliably without the flare-up risks of sugar-laden charcoal cooks.
-
-## Data applied to cooking_data.py
-- `supported_methods` gains/includes: `grill`
-- `recommended_doneness`: `"medium_rare"` (consistent heat control and strong marbling make 57 °C the natural target)
-- No method_temperature_ranges override needed
 
 ## Summary
 

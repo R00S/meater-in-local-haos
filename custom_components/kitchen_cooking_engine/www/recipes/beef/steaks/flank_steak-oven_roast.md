@@ -161,11 +161,6 @@ The observed range is **53–62 °C (127–144 °F)**. The dominant consensus is
 ## What makes this method special
 Oven roasting a flank steak (the "London Broil" method) achieves a moderate, even browning across both wide faces of the steak in an enclosed environment that retains moisture better than an open grill. The high-temperature oven (220–260 °C) approximates the browning speed of a grill without the open-air moisture loss, producing a steak that is browned on both faces but notably more moist than the same cut cooked on an outdoor grill. The stovetop pre-sear is essential to achieve Maillard browning before the oven's convective heat can complete the cook — without the sear, an oven alone produces a grey, steamed exterior. For marinated flank steaks, the oven's enclosed environment allows the marinade aromatics to develop more completely during the final stage.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `oven_roast`, `grill`, `charcoal_grill`, `pan_sear`, `pan_fry`, `sous_vide`
-- `recommended_doneness`: `"medium_rare"` (53–59 °C consensus across American, French, and Middle Eastern traditions)
-- No `method_temperature_ranges` override needed — default medium_rare band applies
-
 ## Summary
 Oven-roasted flank steak (London Broil) is the indoor equivalent of the charcoal-grilled method, achieving similar browning and doneness through high-oven convective heat and an initial sear. The American and French traditions firmly target medium-rare at 53–59 °C, while the Korean tradition prefers medium at 59–62 °C. As with all flank steak preparations, slicing against the grain is the defining technique that transforms a tough, coarse muscle into an edible, enjoyable cut.
 

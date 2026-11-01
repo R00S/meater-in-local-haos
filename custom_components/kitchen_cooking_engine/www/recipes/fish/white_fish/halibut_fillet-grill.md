@@ -148,12 +148,6 @@ Five fetched sources across Moroccan-style, Thai, Korean, Cambodian and Jamaican
 
 Halibut grills well for a structural reason: the fillet is thick and its myotomes run long, so a single turn at the halfway point does not tear it, and the dense flesh holds juices through the charring stage. The five sources all build flavour *outside* the fish — a chermoula, a Thai chilli-lime sauce, a Korean barbecue glaze, a Cambodian lemongrass dressing, a jerk marinade — because halibut itself is bland and lean. The uniform risk is overshoot: 4–7 minutes a side is the whole cook, and no source uses a thermometer to police it.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` keeps `grill` (already registered): five fetched, species-specific recipes now back it.
-- `recommended_doneness`: no change — no fetched source states a temperature.
-- No `method_temperature_ranges` override.
-
 ## Summary
 
 Grilled halibut is a short, high-heat, single-turn cook — 4–5 minutes per side, or about 5–7 minutes total for a thinner fillet — finished on visual cues ("just opaque", "flakes easily"). Five fetched sources across Groups A, B and C; none publishes an internal temperature.

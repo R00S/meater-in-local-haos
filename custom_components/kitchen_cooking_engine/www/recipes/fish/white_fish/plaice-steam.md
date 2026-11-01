@@ -152,12 +152,6 @@ All four sources converge on 60°C as the pull point. Steaming times vary widely
 
 Steaming is uniquely suited to plaice because the fish's thin, flat geometry allows steam to penetrate evenly from every direction simultaneously, resulting in perfectly cooked, moist flesh with no dry surface. The method is used across Chinese, Thai, Vietnamese and German traditions — all agreeing that delicate white flatfish benefit from the gentleness of steam more than any other cooking method. The probe's role is critical here: unlike roasting or frying, there is no Maillard crust to signal doneness visually, so temperature is the only reliable indicator.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `steam`
-- `recommended_doneness`: `"well_done"` (60°C pull, lean flatfish, fully opaque is the target across all cultures)
-- No `method_temperature_ranges` override needed — `FISH_WELL_DONE` (min 60°C) matches
-
 ## Summary
 
 Steaming is a highly appropriate method for plaice across diverse culinary traditions. Chinese, Thai, Vietnamese and German recipes all pull at 60°C, use aromatics to perfume the flesh, and serve immediately with the cooking liquid as sauce. The flat profile of plaice is a significant advantage in steaming — heat arrives uniformly, and the cooking time is short regardless of method.

@@ -151,11 +151,6 @@ The observed range is **57–70 °C (135–158 °F)**. This breadth genuinely re
 ## What makes this method special
 The direct-heat grill is the highest-heat cooking surface available to most cooks, producing intense Maillard browning on both flat faces of the patty simultaneously during the cook — no other method generates quite the same combination of charred exterior crust and smoky fat drip-flare flavour. The gaps in the grill grate allow fat to drip and ignite momentarily, creating brief flame contact that deposits aromatic pyrolysis products on the patty surface (the characteristic "grilled" flavour). The open-air environment means moisture escapes freely, concentrating exterior flavour. The patty geometry — thin relative to surface area — means both the Maillard crust and the internal temperature are reached in minutes, making the grill uniquely efficient for ground beef.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `grill`, `charcoal_grill`, `pan_fry`, `air_fryer`, `oven_bake`
-- `recommended_doneness`: `"medium"` (60–65 °C — broadest cross-cultural consensus; note food-safety guidelines target well_done at 71 °C)
-- No `method_temperature_ranges` override needed — the default medium band applies; users requiring food-safety compliance should set MEATER alert to 71 °C
-
 ## Summary
 Grilled beef burgers span the widest doneness range of any single cut-method combination — from Nobu's Wagyu medium-rare at 57 °C to Mallmann's Argentine *jugoso* at 70 °C — reflecting genuine cultural disagreement about whether premium ground beef should be treated like steak (rare/medium-rare) or like ground meat (well-done). The direct-heat grill delivers the defining charred Maillard crust and smoke-drip flavour that makes this the canonical burger method. The practical middle ground across the non-Wagyu traditions is medium at 60–65 °C, balancing flavour retention and food safety.
 

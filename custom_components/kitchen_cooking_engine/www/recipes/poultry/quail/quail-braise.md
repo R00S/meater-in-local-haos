@@ -86,12 +86,6 @@ The two fetched sources span Group B (Greek adaptation in a US publication and S
 
 Braising trades quail's crisp skin for deeply seasoned, spoon-tender flesh: the browned surface contributes Maillard compounds to the braising liquid, which reduces into the sauce, while the sub-simmer cooking environment keeps the lean breast from the drying that dry heat risks. The catch is that quail has little collagen to convert, so the tenderisation window is short — overshoot turns the breast mealy, which is why the Spanish source cooks just 15 minutes and rests off heat. The method's value is flavour transport (wine, lemon, olives, soy) into mild flesh.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `braise` (newly discovered method for quail — two fetched, human-created recipes from distinct traditions verify it).
-- `recommended_doneness`: no change proposed — no source provides explicit internal-temperature evidence.
-- No `method_temperature_ranges` override proposed — collected sources provide times and texture endpoints only.
-
 ## Summary
 
 Braising quail browns the birds, then gently simmers them in wine and aromatics until spoon-tender — a saucy, flavour-infused alternative to dry heat that suits the mild flesh if the short tenderisation window is respected. Two verified sources confirm the method across Greek and Spanish traditions but state no probe targets, so this leaf adds method coverage, not a temperature recommendation.

@@ -137,12 +137,6 @@ second time. Salt timing is the one point the sources differ on in a way that is
 temperature: Benjamin Lee salts an hour ahead at a measured rate, Roaming Bison dry-brines for
 24–36 hours, and Taste of Montana simply rubs and goes.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `smoker` is **not registered** for buffalo_roast — **added** this pass, with the dated comment in `cooking_data.py`.
-- `recommended_doneness`: recorded as the cut default (`medium_rare`) purely so the registry stays consistent — the leaf states plainly that the band is meaningless for this method and that the probe targets are the 74 °C wrap and the 91–99 °C finish.
-- No `method_temperature_ranges` override: a 91–99 °C "pulled" band does not exist in the engine's doneness vocabulary, and inventing one locally would be a schema change rather than a data edit. Recorded as a gap.
-
 ## Summary
 
 Smoking a bison chuck roast is a 6–8 hour cook at 200–275 °F that ends not at a doneness band but

@@ -156,11 +156,6 @@ The observed range is **52–57 °C (126–135 °F)** — a narrow band with ess
 ## What makes this method special
 Charcoal grilling delivers two mechanisms that no other method combines: intense direct infrared radiation from glowing embers (which achieves faster Maillard browning than gas flames or pans) and hardwood smoke aromatic deposition. For filet mignon, the smoke dimension is particularly valuable because the cut's mild flavour absorbs the volatile aromatic compounds of the charcoal wood, adding depth that the lean muscle tissue cannot produce internally. The two-zone fire setup — direct heat for sear, indirect for gentle finish — is essential for a thick filet mignon to prevent the exterior from carbonising before the interior reaches medium-rare. The radiant heat from charcoal also produces a more evenly distributed crust than gas grill flame ports, which can leave ungrilled gaps between the bars.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `charcoal_grill`, `grill`, `pan_sear`, `air_fryer`, `oven_roast`, `sous_vide`, `pan_fry`
-- `recommended_doneness`: `"medium_rare"` (52–57 °C; universal across American, Argentine, Japanese, and Middle Eastern traditions)
-- No `method_temperature_ranges` override needed for `charcoal_grill` — default medium_rare band applies
-
 ## Summary
 Filet mignon on a charcoal grill achieves the most flavourful expression of this lean, mild cut by adding smoky aromatic complexity from the charcoal wood to the Maillard crust. Every tradition in this leaf — American, Argentine, Japanese, and Middle Eastern — targets medium-rare at 52–57 °C, reflecting the universal understanding that the tenderloin's leanness cannot survive higher temperatures without flavour loss. The two-zone charcoal setup is essential technique for thick filet mignon to avoid charring the exterior while the centre catches up.
 

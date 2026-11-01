@@ -181,18 +181,6 @@ structural point is heat transfer: at 100–125 °C the oven is barely above the
 the roast approaches its pull point asymptotically — the last three degrees take as long as the first thirty,
 which is why every source tells you to use a thermometer rather than a clock.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` already lists `CookingMethod.OVEN_ROAST` — confirmed by all four traditions.
-- **Evidence for `DONENESS_WELL_DONE`**: the Norwegian source names 70 °C as fully cooked and the German one
-  68 °C; the cut currently offers only rare / medium-rare / medium (max 63 °C). The braise leaf adds 65 °C and
-  70 °C targets. `DONENESS_WELL_DONE` (68–77 °C) is added to `moose_roast`.
-- The cut's `recommended_doneness` stays `medium_rare` (54 °C), but note that **no source here pulls below
-  58 °C** — the coding default is colder than every tradition in this leaf. That discrepancy is recorded, not
-  silently resolved.
-- `carryover_temp_c: 8` on the cut is consistent with the 5–8 °C observed on an uncovered roast; the braise
-  leaf records 4 °C for a lidded pot.
-
 ## Summary
 
 Four oven-roast traditions pull a moose roast between 58 and 70 °C, and the 12-degree spread is cultural, not

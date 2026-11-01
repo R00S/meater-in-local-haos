@@ -150,16 +150,11 @@ Omvänd searing-metoden lämpar sig särskilt väl för flat iron eftersom den u
 | Italian (Marcella Hazan) | Medium-rare | 57 °C / 135 °F |
 | British (Nigel Slater) | Medium-rare | 57 °C / 135 °F |
 
-All five traditions converge on medium-rare (57 °C / 135 °F) as the final serving temperature, with pull temperatures ranging from 50–56 °C (122–133 °F) depending on whether a finishing sear follows the oven stage. The two-stage reverse-sear recipes pull from the oven at 50–54 °C and read their final probe temperature after searing; single-stage high-heat oven recipes pull at 54 °C. The full range maps to the `medium_rare` key in cooking_data.py. The `recommended_doneness` key is `medium_rare`.
+All five traditions converge on medium-rare (57 °C / 135 °F) as the final serving temperature, with pull temperatures ranging from 50–56 °C (122–133 °F) depending on whether a finishing sear follows the oven stage. The two-stage reverse-sear recipes pull from the oven at 50–54 °C and read their final probe temperature after searing; single-stage high-heat oven recipes pull at 54 °C. The full range maps to the `medium_rare` key in the cut file. The `recommended_doneness` key is `medium_rare`.
 
 ## What makes this method special
 
 Oven roasting — particularly the reverse-sear approach — produces edge-to-edge even doneness that no other method matches: the gentle low heat (100–135 °C) brings the entire thickness of the steak uniformly to temperature before the crust is formed, eliminating the grey, overcooked band beneath the crust that high-heat methods produce. This is especially valuable for the flat iron because the cut's strong marbling can mask uneven cooking visually; the probe ensures the target is hit regardless. The high-heat direct oven method (220–230 °C) with a preliminary stovetop sear is the classical European approach and delivers a deep, caramelised crust with excellent flavour from the Maillard reaction, with the oven environment maintaining gentle heat throughout the cook. Both methods result in minimal moisture loss because the oven's humid environment — compared to a screaming-hot pan — limits evaporation while the interior sets.
-
-## Data applied to cooking_data.py
-- `supported_methods` gains/includes: `oven_roast`
-- `recommended_doneness`: `"medium_rare"` (even edge-to-edge doneness showcases the cut's marbling)
-- No method_temperature_ranges override needed
 
 ## Summary
 

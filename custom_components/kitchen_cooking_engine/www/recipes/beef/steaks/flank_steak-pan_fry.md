@@ -155,11 +155,6 @@ The observed range is **53–59 °C (127–138 °F)** — one of the tightest co
 ## What makes this method special
 Pan frying a flank steak in a cast-iron or steel skillet produces the broadest possible Maillard contact area on both flat faces — significantly more complete browning than a grill, which leaves the gaps between the bars unseared. The solid pan surface also allows the cook to observe the sear progression in real time and respond to the probe reading with immediate heat adjustment. Butter basting during the final minutes of cooking adds a layer of dairy Maillard products — caramelised milk proteins that no direct-heat method produces — elevating the flavour of an otherwise plain lean steak. The pan's retained heat makes the flip timing critical: the second side of a cast-iron pan-fried flank steak often cooks faster than the first.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `pan_fry`, `pan_sear`, `grill`, `charcoal_grill`, `oven_roast`, `sous_vide`
-- `recommended_doneness`: `"medium_rare"` (53–59 °C; universal agreement across five traditions)
-- No `method_temperature_ranges` override needed — default medium_rare band applies
-
 ## Summary
 Pan-fried flank steak achieves the most complete Maillard browning surface of any flank steak cooking method, as the solid pan contact covers every millimetre of both flat faces. All five traditions from the USA, Britain, France, Japan, and a cross-BBQ American tradition converge on medium-rare at 53–59 °C — the tightest consensus in the flank steak method set. Slicing against the grain is mandatory regardless of the cooking method used.
 

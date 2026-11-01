@@ -150,11 +150,6 @@ The observed range is **52–60 °C (126–140 °F)**. The sous vide method make
 ## What makes this method special
 Sous vide is uniquely suited to filet mignon because it eliminates the central challenge of cooking a dense, uniform, lean cylinder: the temperature gradient. In any conventional cooking method, the outer layer of a filet mignon reaches the target temperature before the centre — the sous vide bath equalises the temperature across the entire cross-section simultaneously, producing a perfectly uniform colour from surface to centre that is impossible to replicate by pan, grill, or oven. The trade-off is the absence of texture variety: sous vide filet mignon has no natural gradient between a crisp exterior and a softer interior — the sear must be aggressively brief and intense to create that contrast artificially. The sealing environment also retains 100% of the juices that would otherwise be lost during cooking, making a sous vide filet mignon noticeably juicier than the same cut cooked by any other method.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `sous_vide`, `pan_sear`, `pan_fry`, `grill`, `charcoal_grill`, `oven_roast`, `air_fryer`
-- `recommended_doneness`: `"medium_rare"` (54–57 °C for standard beef; 52–54 °C for Wagyu; 58–60 °C for Keller-style medium)
-- No `method_temperature_ranges` override needed — default medium_rare band applies; note that sous vide bath temperature *is* the target, not a pull temperature
-
 ## Summary
 Sous vide is the only cooking method for filet mignon that guarantees a perfectly uniform edge-to-centre doneness — the bath temperature sets the final result, eliminating the temperature gradient that is an inevitable feature of every other method. The five traditions in this leaf span 52–60 °C, reflecting that sous vide makes temperature choices explicit rather than implicit, and chefs from Keller (58 °C) to Tetsuya (52 °C) deliberately choose different bath temperatures for different results. The finishing sear is mandatory to create the Maillard crust the sealed bag cannot produce.
 

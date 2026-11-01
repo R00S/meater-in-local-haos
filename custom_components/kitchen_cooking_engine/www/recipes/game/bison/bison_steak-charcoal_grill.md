@@ -140,7 +140,7 @@ verbal rule consistent with either. **Tie-break**: the two measured rows differ 
 step (52 vs 57 °C for medium-rare); the split is cultural — the Swedish source's "lättstekt"
 (lightly cooked) filé tradition versus the US purveyor's chart — and both sit below medium.
 **Applied target**: 52–57 °C (126–135 °F) for medium-rare over charcoal, house pull **54 °C
-(130 °F)** between the two published values. **Temperature used in cooking_data.py: 54 °C
+(130 °F)** between the two published values. **Temperature used in the cut file: 54 °C
 house pull within the existing `medium_rare` band (52–57 °C)**. `recommended_doneness` for
 this method: **`medium_rare`** — both measured rows and both verbal rows land rare-to-medium-
 rare; nothing in the corpus supports medium or beyond on live fire.
@@ -162,12 +162,6 @@ wood smoke and the fire's own heat alternate), while Wild Idea manipulates the f
 source adds the one number and the one Nordic idea: a breeder's **52 °C** and *lättstekt* —
 lightly cooked filé, finished beside the embers rather than over them so the heat evens out
 without a crust burning on the lean surface.
-
-## Data applied to cooking_data.py
-
-- `supported_methods`: `charcoal_grill` **already registered** for bison_steak — no change needed; this is the leaf the hub's table had been deducting as missing.
-- `recommended_doneness` (method key for charcoal_grill): **`medium_rare`** — 52–57 °C measured/verbal consensus; consistent with the cut level.
-- No `method_temperature_ranges` override needed — the two published values (52 °C tip; 125/135/145 °F chart) sit inside the existing doneness bands; no new range is justified.
 
 ## Summary
 

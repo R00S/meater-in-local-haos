@@ -159,11 +159,6 @@ The observed range is **50–60 °C (122–140 °F)**. The tight clustering of A
 ## What makes this method special
 Prime rib is the ideal candidate for the reverse-sear method because its size (2.5–5 kg) makes even temperature distribution through the mass a genuine engineering challenge — a conventional high-heat roast would cook the outer 3 cm before heat reached the centre. The low oven creates a nearly flat temperature gradient that allows the entire eye muscle to reach the target doneness simultaneously, while the high-heat finish stage achieves the fat rendering and Maillard browning in the final minutes without overcooking the edge. The bone-in format slows heat penetration near the bones (bone is a poor heat conductor), creating a zone of slightly cooler, slower-cooked meat around each rib that many connoisseurs specifically prize. The self-basting fat cap renders continuously throughout the low-heat stage, continuously moistening the exterior.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `oven_roast`, `smoker`, `sous_vide`
-- `recommended_doneness`: `"medium_rare"` (50–57 °C consensus across American, French, and cross-Atlantic traditions; British endpoint slightly higher but overlapping)
-- No `method_temperature_ranges` override needed — the default medium_rare band (52–57 °C) covers the primary consensus; French tradition users should target the rare band
-
 ## Summary
 Prime rib oven roast is the defining large-format beef preparation, with a near-universal cross-cultural consensus at medium-rare (50–57 °C) across American, British, French, and Texas pit traditions. The reverse-sear method (very low oven followed by a high-heat crust finish) is the modern technique that best solves the size problem of prime rib — ensuring a uniform rosy interior from bone to edge. The substantial carryover in a large bone-in roast makes the pull temperature several degrees below the final serving temperature, and the 30-minute rest is not optional.
 

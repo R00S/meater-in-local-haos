@@ -166,11 +166,6 @@ The observed range spans **54–60 °C (129–140 °F)**. The tightest cluster s
 ## What makes this method special
 Sous vide uniquely separates the temperature target from the time target for flank steak: in any other method, reaching 54 °C takes seconds and leaves no time for fibre relaxation, but in a water bath, the steak can hold at 54 °C for two hours, allowing enzymatic and structural changes that no pan or grill can replicate. The result is a cut that is tender from the inside out, not just from slicing technique. The sealed-bag environment also prevents the moisture loss that makes high-heat methods so time-critical for lean flank — the bag retains every drop of juice. The post-bath sear is technically optional (though universally recommended for crust and flavour): the cook is already done by the time the steak hits the pan.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `sous_vide`, `grill`, `charcoal_grill`, `pan_sear`, `pan_fry`, `oven_roast`
-- `recommended_doneness`: `"medium_rare"` (54–57 °C for most traditions; Keller/Chang at 57–60 °C)
-- No `method_temperature_ranges` override needed — default medium_rare band covers the observed range
-
 ## Summary
 Sous vide is the best method for achieving consistent tenderness in flank steak because the extended hold at a precise temperature relaxes the coarse muscle fibres without the moisture loss that ruins this lean cut at high heat. The five traditions converge on 54–57 °C for 1.5–3 hours, with the key variable being time rather than temperature — longer holds at 54–55 °C produce the same result as shorter holds at 57 °C. All traditions finish with a brief post-bath sear for crust, and all slice against the grain.
 

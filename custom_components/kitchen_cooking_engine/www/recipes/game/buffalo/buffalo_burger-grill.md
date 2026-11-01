@@ -158,12 +158,6 @@ the mixing bowl. Carryover is small here and one source quantifies it — 155 °
 over the rest — which is worth knowing because it is exactly the allowance that lets a lean
 patty come off the fire still juicy.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `grill` **already registered** for buffalo_burger — no change; this leaf is a rewrite of a leaf whose records carried invented measurements (see the retraction note in the hub).
-- `recommended_doneness`: no change — `well_done`, target 71 °C; the two measured rows bracket it (70–71 °C).
-- No `method_temperature_ranges` override needed. The published values sit inside `DONENESS_WELL_DONE`; the Hey Grill Hey carryover figure (155 → 160 °F) is a probe-timing note, not a band change.
-
 ## Summary
 
 Grilling a bison burger is a short, hot cook with one turn: 400–450 °F, 5–6 minutes a side,

@@ -133,7 +133,7 @@ bad eliminerar. Kompromissen är ytan: ingen skorpa utan efterföljande stekning
 | eatdrinkcooking (Germany) | German home cook | Bath 20 min, then hard cast-iron crisping | **59 °C (138 °F)** |
 
 All five sources publish temperatures — full observed pull range **49–59 °C**, with three of
-five clustered at **54.4–55.5 °C**. Mapped to `cooking_data.py`: the cluster sits squarely in
+five clustered at **54.4–55.5 °C**. Mapped to the cut file: the cluster sits squarely in
 `FISH_MEDIUM` (54 °C target), the German 59 °C near the top of medium, and the 120 °F source
 below every defined band — recorded as rare-leaning American practice (its own FAQ offers
 55.5 °C as the firmer alternative). The spread is driven by the two ways sous vide is sold:
@@ -156,12 +156,6 @@ volatile aromatic (lemon, herbs, butter) in contact with the flesh instead of dr
 as steam. What it cannot do is brown: Maillard flavour must be added afterwards with a
 1–2 minute sear (four of five sources do), which is why the German source's two-phase
 "sous vide then screaming cast iron" approach exists.
-
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `sous_vide` — **newly discovered method for swordfish**, verified by five fetched sources; add `CookingMethod.SOUS_VIDE` to swordfish (id 423) `supported_methods`.
-- `recommended_doneness`: no change proposed — cut-level stays `well_done`; this method's measured 54.4–55.5 °C cluster is recorded here as method-level evidence for the next scoring pass.
-- No `method_temperature_ranges` override needed — three of five sources sit inside the existing `FISH_MEDIUM` band; the 49 °C and 59 °C sources are documented outliers, not a separate band.
 
 ## Summary
 

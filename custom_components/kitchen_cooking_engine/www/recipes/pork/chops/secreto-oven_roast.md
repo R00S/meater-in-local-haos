@@ -146,12 +146,6 @@ range: once butterflied and stuffed, secreto behaves like a fine-dining roast, i
 basting the jamón-and-mushroom filling from inside the tied roll, and the cook's own tray
 sauce — white wine boiled down on the roasting sheet — replaces the Spanish potato liquor.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `oven_roast` — **newly discovered method for secreto**, verified by three fetched sources (Spain ×2, Japan); add `CookingMethod.OVEN_ROAST` to secreto (id 204) `supported_methods`.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`, and this leaf is the corpus's strongest support for it (three unanimous 50–60 minute cooks, zero pink endpoints).
-- No `method_temperature_ranges` override needed — no source states a meat temperature; the oven settings (180–200 °C) govern the air, not the meat, and encoding them as a meat range would misattribute them.
-
 ## Summary
 
 Oven roasting a *secreto* means thicker pieces, a potato bed and an hour at 180–200 °C — a

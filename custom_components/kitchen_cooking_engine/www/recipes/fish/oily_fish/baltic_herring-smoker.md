@@ -98,12 +98,6 @@ The four fetched sources document the smoking process temperatures but no fish i
 
 Hot smoking cooks and seasons Baltic herring at once: the 75–85 °C chamber is hot enough to coagulate the protein (giving böckling its cooked character) while the smoke deposits the aromatic layer that distinguishes it from plain salted fish. Because smoking was historically combined with salting, the texture is firmer than a bare fry; and because strömming is small and lean, a few hours in hot smoke is enough where salmonid fillets need longer. The method's Nordic specificity is captured by the product having its own name.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `smoker` is already listed for baltic_herring.
-- `recommended_doneness`: no change proposed — no source provides explicit internal-temperature evidence.
-- No `method_temperature_ranges` override proposed — process temperatures only; no numerical doneness evidence.
-
 ## Summary
 
 Smoked strömming is böckling: hot-smoked at 70–85 °C over a few hours after salting, it is a cooked, smoke-seasoned product with its own Swedish name — and the Estonian and Russian sources show the same brine-then-smoke pattern with overlapping chamber windows. The fetched documentation confirms the method and its process temperatures but publishes no probe target, so this leaf supports method coverage and records the published absences.

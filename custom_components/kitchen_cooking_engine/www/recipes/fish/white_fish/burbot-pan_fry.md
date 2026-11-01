@@ -145,13 +145,6 @@ All 3 sources agree on a well-done internal target of ~63°C / 145°F. No source
 
 Pan-frying burbot is one of freshwater fishing's most underrated experiences: the thick loin, handled correctly, is indistinguishable from Atlantic codfish in texture but has a sweeter, more delicate flavour. The key technique — flour coating + hot pan — is identical across three cultures separated by thousands of kilometres. The Russian tradition adds the onion fried in the same fat (a natural jus), while the Finnish tradition uses the whole fish including liver in formed patties, maximising yield and showcasing the organ-meat culture of Lapland winter fishing. The North American tradition treats burbot as a game fish whose image is rising; Hank Shaw's "thick loins fry exactly like codfish" framing is exactly right. All three traditions agree that fat is non-negotiable for this lean fish: whether butter (Finnish/Russian) or quality oil (American). The liver preparation — water-bath steaming in Russia, blended into patties in Finland, seared on toast in North America — shows consistent cross-cultural appreciation for burbot liver as a premium side product. The probe is particularly useful with burbot because the thick loin and thin tail sections on the same fillet cook at very different rates: insert only into the thick loin and remove the thin tail first (or deep-fry the tail separately for a crispier result).
 
-## Data applied to cooking_data.py
-
-- `pan_fry` is already in `supported_methods` for burbot (id=439) — no change needed
-- `recommended_doneness`: `"well_done"` — confirmed by all 3 sources; no tradition serves burbot rare or medium
-- `FISH_WELL_DONE` (min 60°C, target 63°C, max 66°C) matches all pull temperatures
-- No `method_temperature_ranges` override needed for `pan_fry`
-
 ## Summary
 
 Pan-frying is the primary and most universal cooking method for burbot across all traditions where the fish is eaten. The thick loin section fries exactly like Atlantic codfish: flour-coated, in butter or oil, until golden and flaking at 63°C. The liver is always treated as a prized secondary product and prepared separately. All 3 confirmed sources (Russian, Finnish, North American) agree on well-done doneness and golden-crust technique. Groups A and C have no burbot culinary tradition. A 4th source from an additional tradition would complete the collection and confirm the consensus, but the current data strongly supports the `pan_fry` / `well_done` / 63°C conclusion.

@@ -206,12 +206,6 @@ produces this cut's best crust at the price of an extra finishing step, and the 
 (fond) it leaves behind are the starting point for the pan sauces several sources build
 directly in the same skillet.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `pan_fry` is already listed for this cut.
-- `recommended_doneness`: no change proposed — the two fetched temperature-bearing sources both state 74 °C / 165 °F only, which is the existing USDA-safe floor, not a dark-meat preference target.
-- No `method_temperature_ranges` override needed — no source states a measured endpoint above the existing `dark_meat_optimal` band.
-
 ## Summary
 
 Pan-frying gives bone-in thighs their deepest crust, but the bone forces every fetched recipe to finish gently — covered steam, covered stock or oven — to cook the centre through. Both sources that state a target say 165 °F, while the Russian and North African sources stay silent after a pan-and-oven sequence and trust a visual test. The method suits the cut well when paired with its finishing step; the temperature record is too thin to claim anything beyond the USDA floor.

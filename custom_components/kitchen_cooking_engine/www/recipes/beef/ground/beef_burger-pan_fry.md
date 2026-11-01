@@ -158,11 +158,6 @@ The observed range is **60–68 °C (140–154 °F)**, with the bulk of sources 
 ## What makes this method special
 A hot, heavy skillet transfers heat to the patty via solid conduction, producing a broad, flat Maillard crust across the full bottom face on contact — a more uniformly browned surface than a grill's parallel bars can achieve. The fat rendering from the patty pools in the pan and continuously bastes the lower crust, contributing a gentle frying action on the underside. Unlike a grill, there is no drip-and-flare mechanism, so the pan-fried burger lacks smoke-derived flavour but compensates with a crisper, more consistent outer crust. Cast-iron skillets retain heat so effectively that the pan-frying continues briefly after the patty is removed, meaning removal timing is critical for precise temperature control.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `pan_fry`, `grill`, `charcoal_grill`, `air_fryer`, `oven_bake`
-- `recommended_doneness`: `"medium"` (60–65 °C — consensus across all five traditions; note food-safety guidelines target well_done at 71 °C)
-- No `method_temperature_ranges` override needed — default medium band applies
-
 ## Summary
 Pan-fried beef burgers occupy the same medium doneness territory as grilled burgers but with a tighter temperature range (60–68 °C vs. the broader 57–70 °C for grilled), reflecting the more controllable, even heat of a heavy skillet. All five sources from different national traditions converge on medium as the target, with the key variable being the specific skillet material and fat used rather than target temperature. The solid-surface contact Maillard crust is the defining quality of the pan-fried burger — broader and more even than a grill can produce.
 

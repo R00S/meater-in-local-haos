@@ -149,12 +149,6 @@ All four sources converge on 60°C pull. Cooking time variation (4–10 min tota
 
 *Sole meunière* is widely regarded as the founding recipe of classical French cuisine in the common imagination — Julia Child famously described her first sole meunière in Rouen as a revelation. The combination of flour-dusted sole, foaming butter, and lemon is perfectly calibrated to the fish: the flour creates a golden crust that concentrates the delicate surface flavour while the interior stays moist. Brown butter (*beurre noisette*) adds a nutty depth that complements sole's subtle sweetness without overwhelming it. The whole technique is completed in one pan in under 10 minutes. Pan-frying is the dominant and most celebrated method for sole across all four European cooking traditions examined here; each country's version is distinctive in its specific ratios and finishing, but the core technique is identical. The MEATER probe is especially useful with sole because the very thin flesh and flat shape make it difficult to judge doneness by pressing alone.
 
-## Data applied to cooking_data.py
-
-- `pan_fry` is already in `supported_methods` for sole (id=445) — no change to cooking_data.py needed
-- `recommended_doneness`: `"well_done"` (60°C pull, all sources agree)
-- No `method_temperature_ranges` override needed — `FISH_WELL_DONE` (min 60°C, target 63°C) matches
-
 ## Summary
 
 Pan-frying in butter (*meunière* style) is the definitive cooking method for sole across British, German, Italian, and Austrian traditions. All four sources use the same principle — flour, foaming butter, lemon — and all target a 60°C pull where the flesh is just cooked through and beginning to pull away from the bone. The method is fast, elegant, and unforgiving of overcooking; the MEATER probe is the ideal guard against the dry, tough result that ruins this premium fish.

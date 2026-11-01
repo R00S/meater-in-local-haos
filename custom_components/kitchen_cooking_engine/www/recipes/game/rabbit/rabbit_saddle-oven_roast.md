@@ -207,15 +207,6 @@ cut. For stuffed preparations, oven roasting is the default method in every
 European tradition precisely because the stuffing's moisture moderates the interior
 temperature while the oven browns the exterior uniformly.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `oven_roast`
-- `recommended_doneness`: `"well_done"` (71°C — USDA-safe; observed range
-  65–70°C maps to `"medium"` through `"well_done"`)
-- No `method_temperature_ranges` override needed — `PORK_MEDIUM` (63°C) and
-  `PORK_WELL_DONE` (71°C) cover the full observed range for both plain and
-  stuffed saddle
-
 ## Summary
 
 Oven roasting gives the rabbit saddle a uniformly golden exterior without the

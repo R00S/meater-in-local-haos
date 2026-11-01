@@ -188,20 +188,6 @@ side rule of thumb for 1.5–2 cm thickness, and none gives an explicit thermome
 target, so the probe is what bridges the gap between "looks cooked" and "is at the
 intended doneness band".
 
-## Data applied to cooking_data.py
-
-- `usda_safe_c: 63` — unchanged; matches the FDA / USDA safe minimum for finfish (145 °F)
-  and matches the salmon_fillet value in `cooking_data.py`.
-- `recommended_doneness: medium` — unchanged; consistent with the salmon_fillet recommended
-  doneness and with the visual finish ("just opaque, moist") implied by the four pan-sear
-  sources, which all warn against overcooking.
-- No `method_temperature_ranges` override identified from this research: pan-sear of a
-  steak uses the same internal target as pan-sear of a fillet; the difference is in
-  surface technique (skin-side time, fold of belly flaps), not internal temperature.
-- `cooking_methods_researched: 1` — confirmed: pan_sear is a primary method for salmon
-  steak across Northern and Western European traditions (the cuts are sold pre-portioned
-  for exactly this preparation in Sweden and France).
-
 ## Summary
 
 Pan-searing salmon steaks is, across all four fetched sources, a fast, time-driven

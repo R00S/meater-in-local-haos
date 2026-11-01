@@ -146,15 +146,10 @@ Filet mignon skärs från den smala änden (lilla änden) av nötfilén — den 
 | Australian (RecipeTin Eats) | Medium-rare | 55–58 °C (131–136 °F) |
 | Korean (Maangchi) | Medium | 57–60 °C (135–140 °F) |
 
-The observed range is **54–60 °C (129–140 °F)**. The tight 54–58 °C cluster across four traditions confirms medium-rare as the near-universal target for filet mignon regardless of cooking method. The Korean endpoint at 57–60 °C represents a deliberate preference for medium in a context where the soy-sugar marinade's flavour integrates better at slightly higher temperatures. All sources are within the `medium_rare` to `medium` range in cooking_data.py. `recommended_doneness` is `medium_rare` as the broadest consensus.
+The observed range is **54–60 °C (129–140 °F)**. The tight 54–58 °C cluster across four traditions confirms medium-rare as the near-universal target for filet mignon regardless of cooking method. The Korean endpoint at 57–60 °C represents a deliberate preference for medium in a context where the soy-sugar marinade's flavour integrates better at slightly higher temperatures. All sources are within the `medium_rare` to `medium` range in the cut file. `recommended_doneness` is `medium_rare` as the broadest consensus.
 
 ## What makes this method special
 The air fryer applies convective hot air at 200–230 °C in an enclosed, low-volume chamber, producing surface browning via Maillard reaction through convective heat transfer rather than direct conduction or radiant heat. For filet mignon specifically, the enclosed, even heat distribution of the air fryer is advantageous: the steak cooks with relatively uniform heat from all sides, reducing the edge-overcooking that a single-surface pan sear can cause. The steak never sits in pooled fat, which means the exterior stays drier and crispier than a butter-basted pan method; the trade-off is the absence of the butter-basting flavour layer. Air fryer steaks require minimal attention — no flipping management, no fat temperature monitoring — making this the most accessible high-heat steak method.
-
-## Data applied to cooking_data.py
-- `supported_methods` includes: `air_fryer`, `pan_sear`, `grill`, `charcoal_grill`, `oven_roast`, `sous_vide`, `pan_fry`
-- `recommended_doneness`: `"medium_rare"` (54–58 °C cross-cultural consensus; Korean tradition targets medium at 57–60 °C but is an outlier)
-- No `method_temperature_ranges` override needed for `air_fryer` — default medium_rare band applies
 
 ## Summary
 Air fryer filet mignon is a practical indoor alternative to pan searing that produces a respectable Maillard crust via hot-air convection with minimal hands-on attention. The target temperature across all five traditions is firmly medium-rare at 54–58 °C — identical to the pan sear and grill targets for this cut — because filet mignon's leanness and premium quality make higher doneness a quality loss in every culinary tradition. The only notable outlier is the Korean tradition, which deliberately targets medium to harmonise with a soy-sugar marinade.

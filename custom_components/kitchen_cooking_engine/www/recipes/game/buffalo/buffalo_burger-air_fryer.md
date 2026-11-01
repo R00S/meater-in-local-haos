@@ -160,12 +160,6 @@ tells you the appliance's real variable is the basket's airflow and load rather 
 dial — one source notes its small basket fits a single burger while its air-fryer oven takes
 three, and the times are quoted for one machine.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `air_fryer` is **not registered** for buffalo_burger — **added** this pass, with the dated comment in `cooking_data.py`.
-- `recommended_doneness`: `well_done` for the method, matching the cut — the 63 °C rows are preferences, not evidence against the USDA floor for ground meat.
-- No `method_temperature_ranges` override needed: the published 63–71 °C window is already the union of `medium` and `well_done`, and the engine's `well_done` target of 71 °C is inside it.
-
 ## Summary
 
 Air-frying a bison burger works because moving 370–400 °F air browns both faces without a turn

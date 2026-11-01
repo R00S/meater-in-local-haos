@@ -136,7 +136,3 @@ Varmrökt torskfilé är en välkänd beredning i Skandinavien, Danmark och UK; 
 | Swedish outdoor tradition | SE | ABU-röken / röklåda | 90–100 °C | ~63 °C at 20–30 min |
 
 **Consensus pull range**: **63 °C / 145 °F** (USDA minimum for fish). Simply Meat Smoking targets 140 °F / 60 °C; all others target 145 °F / 63 °C or use visual cues that correspond to ~63–66 °C. For lean cod, precision matters — pull at 63 °C and rest immediately; do not hold above 68 °C as the flesh dries rapidly.
-
-## `cooking_data.py` note
-
-Use `DONENESS_WELL_DONE` target **63 °C**, range **60–68 °C** for `cod_fillet` × `smoker`. No medium option — hot smoking is a full-doneness method. The lean character of cod means the upper end (68 °C) risks dry, crumbly texture; pull at 63 °C for best results.

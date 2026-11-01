@@ -58,12 +58,6 @@ Only one fetched recipe source is available for this method. Its endpoint langua
 
 Tea-smoking cooks quail in aromatic smoke at moderate heat rather than dry radiant heat, so the lean breast picks up flavour while staying moist — the smoke mixture (tea, rice, brown sugar, cinnamon) generates both the volatile aromatics and the steam that moderates chamber temperature. The Chinese banquet tradition par-cooks before smoking; the Western adaptation here reverses that, using the oven as a controlled finish to crisp skin the closed chamber will never dry. The two-stage smoke/finish structure gives the cook explicit control over doneness despite the absence of a stated pull temperature.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `smoker` is already listed for quail.
-- `recommended_doneness`: no change proposed — one source with a subjective endpoint is insufficient evidence.
-- No `method_temperature_ranges` override proposed — one qualitative source is insufficient for a range.
-
 ## Summary
 
 Tea-smoking quail seasons the mild flesh with tea-and-sugar smoke while a gentle chamber protects the lean breast — a strong match for the cut, especially with a controlled oven finish for the skin. The one verified source documents the technique end to end but with no probe target, so this leaf establishes method coverage only.

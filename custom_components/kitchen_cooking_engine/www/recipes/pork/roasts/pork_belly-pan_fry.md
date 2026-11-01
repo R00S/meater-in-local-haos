@@ -135,11 +135,6 @@ Innertemperatur: **80–88 °C (176–190 °F)** för genomstekt, saftig fläskb
 
 **Consensus pull range**: 72–80 °C (162–176 °F) for food safety; crispy visual appearance is the practical doneness indicator for sliced pork belly pan fry.
 
-## `cooking_data.py` note
-
-Use `DONENESS_WELL_DONE` target 75 °C, range 72–80 °C for `pork_belly` × `pan_fry`.
-> All previous content has been removed because it was corrupt (bullet-point summaries, not full collected recipes). This leaf must be recreated using credible human-written sources only. Do not use any prior version of this file — treat it as blank.
-
 ## Tree position
 
 | Field | Value |

@@ -128,12 +128,6 @@ The observed pull range is **65–68°C**. The Japanese kabayaki tradition uses 
 
 Grilling activates eel's fat in a way no other method does: the heat renders subcutaneous fat into the flesh from both outside and inside simultaneously, while the grill surface crisps the exterior. In Japanese kabayaki, this fat-rendering is deliberately managed through the steaming step, which disperses the liquefied fat evenly through the flesh before the final glaze passes. In European grilling, the same fat self-bastes the sections during cooking, producing a rich, robust character that pairs naturally with acidic sauces (mustard, lemon, sumac). Grilled eel is also the best use case for the MEATER probe's lengthwise insertion technique along the body axis.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `grill`
-- `recommended_doneness`: `"well_done"` (all sources finish at 65–68 °C; eel's fat makes well_done the correct and desirable finish)
-- No `method_temperature_ranges` override needed — the existing well_done fish band covers grilled eel
-
 ## Summary
 
 Grilling is one of the most important eel methods globally. Japanese kabayaki (Group A), Dutch, German and Turkish (Group C) sources all finish at 65–68 °C, confirming well_done as the correct recommendation. The fat content of eel is the key structural difference from lean white fish: it allows extended direct-heat exposure without drying, making grilling an exceptional match for this species.

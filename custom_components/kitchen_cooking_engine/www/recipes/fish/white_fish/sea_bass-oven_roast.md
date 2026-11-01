@@ -167,12 +167,6 @@ problem, front-loading the browning and letting the oven finish the centre gentl
 Italian potato bed is doing thermal work as well as flavour work: it lifts the fish off the
 tray, moderates the bottom heat, and keeps the belly from overcooking.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `oven_roast` **already registered** for sea_bass (id 422) — no change needed; this is the missing declared-method leaf.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`, and this leaf is the strongest evidence for it (145 °F / 63 °C published by the one measured source).
-- No `method_temperature_ranges` override needed — the single published value (63 °C) sits exactly inside the cut's existing `FISH_WELL_DONE` band, and the three time-based sources add no numeric range that would justify narrowing or shifting the generic oven band.
-
 ## Summary
 
 Roasting is the most forgiving way to cook a whole sea bass: 20 to 35 minutes at 180–205 °C,

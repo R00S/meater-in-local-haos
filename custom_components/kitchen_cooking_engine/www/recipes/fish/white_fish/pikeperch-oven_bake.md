@@ -145,12 +145,6 @@ The observed pull range is **61–62°C**. All four traditions finish pikeperch 
 
 Oven baking allows pikeperch to be cooked whole — the most impressive presentation — and to be surrounded with aromatic vegetables, wine, and butter that baste the flesh passively as it cooks. The method is the main route for Czech, Slovak, and Polish pikeperch preparations, where the fish is treated as a centrepiece and served from the dish it was roasted in. A temperature probe eliminates the guesswork around whole-fish doneness, particularly when the fish is over 1 kg.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `oven_bake`
-- `recommended_doneness`: `"well_done"` (all sources finish at or near 63°C)
-- No `method_temperature_ranges` override needed — the standard well_done fish band covers oven-baked pikeperch
-
 ## Summary
 
 Oven baking is the versatile, low-intervention pikeperch method used from Sweden to the Czech Republic. Swedish, German, French and Czech sources all converge on 61–62 °C pull with well_done as the natural finish for this lean freshwater fish. The method shines most in whole-fish presentations where the probe removes all uncertainty about the dense shoulder section reaching safe temperature.

@@ -96,12 +96,6 @@ The fetched sources give oven settings and times only. The two Swedish recipes a
 
 Oven baking surrounds grayling with moderate dry heat, which suits a lean fish only when something buffers the surface: the ham-wrapped fillet bastes in rendered fat, the garlic-stuffed whole fish steams inside its own skin, and the salt crust seals the fish against a wall of superheated salt that effectively double-steams it. The crust and parcel variants therefore behave more like a moist-heat cook than an exposed roast, which is why a 220–225 °C oven can run for 35–40 minutes without drying the flesh. None of the sources quantifies internal temperature or carryover, so times remain source-specific.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: no change proposed; `oven_bake` is already listed for grayling.
-- `recommended_doneness`: no change proposed; no source provides explicit internal-temperature evidence.
-- No `method_temperature_ranges` override proposed — collected sources provide oven settings and times only, with no numerical doneness evidence.
-
 ## Summary
 
 Oven baking suits grayling when the fish is shielded — ham, garlic-and-herb stuffing, or a fennel salt crust keep the lean flesh moist while the oven does the work for a crowd. The verified Swedish and British sources confirm the method's culinary relevance but supply only oven settings and times, so this leaf supports method coverage, not a probe target.

@@ -144,12 +144,6 @@ The one thing that can be said without overreaching: **the only char-specific nu
 
 Smoking is the one method in this cut where the fat content is the technique rather than a side effect. Char's 5–10 % fat is what lets it take hours of dry heat and salt without turning to leather, which is why the Nordic sources list it first among the fish worth smoking. It is also the method where the corpus is thinnest: a tradition this old, this regional, and this poorly documented in numbers — Swedish home smoking is taught by hand, not by probe.
 
-## Data applied to `cooking_data.py`
-
-- `supported_methods` already includes `smoker`; no registry change needed.
-- **No `method_temperature_ranges` override**, deliberately. With two char records and one of them silent, there is no defensible band for this method, and the cut's `medium` band is a serving target, not a smoke target.
-- The cut's `recommended_doneness` is unaffected by this leaf.
-
 ## Summary
 
 Two verified char-smoking records, one of them silent on temperature, plus two general fish-smoking authorities. **Bradley Smoker (Canada) takes char to 54–60 °C internal over five hours of 66–77 °C smoke for a keeping product; Svenskt Fiske (Sweden) hot-smokes char at 60–80 °C ambient for about ten minutes in a box smoker and publishes no internal temperature; the Alaska Cooperative Extension requires ≥71 °C internal for hot-smoked fish as a safety matter.** The leaf is one record short of the project's collection minimum and says so; five searches and two rejected candidates are recorded above so the next pass can pick up the thread.

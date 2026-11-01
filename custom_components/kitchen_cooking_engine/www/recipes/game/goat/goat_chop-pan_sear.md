@@ -131,12 +131,6 @@ grey band. The Pakistani record adds the fourth idea from a different tradition 
 the chop first, brown it last — and it is worth knowing that this is a legitimate way to get a
 tender, charred goat chop in a pan, not a shortcut.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `pan_sear` **already registered** for goat_chop — no change; this leaf is a rewrite of a fabricated one.
-- `recommended_doneness` (method key): **`medium_rare`** (52–57 °C) for single chops, `medium` for double chops.
-- No `method_temperature_ranges` override: both published values sit inside `medium_rare`.
-
 ## Summary
 
 Pan-sear goat chops in cast iron: render the fat side first in a cold or medium pan, then two

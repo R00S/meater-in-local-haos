@@ -136,12 +136,6 @@ The full observed numerical range is **60.4–63 °C (140–145 °F)** — only 
 
 An air fryer concentrates the oven's convective mechanism into a tiny chamber, so the same air that browns the surface is also in constant motion across it — Maillard development happens quickly and on all faces at once, which is why four of five sources skip pre-searing entirely and one basket cycle is enough. For this cut that means edge-to-edge evenness with no hands-on work, but the moving air is a desiccant: the lean, low-intramuscular-fat loin has little internal fat to lubricate the fibres, so the margin between golden and dried-out is smaller than in a pan, where fat and basting counteract moisture loss. The two probe-stating sources both solve this by pulling at or below the USDA line (140–145 °F) and trusting carryover rather than time, and the two time-only sources compensate with a lower 200 °C basket and shorter cycles. The appliance's fixed temperature grid (200 °C / 400 °F in every source) leaves thickness as the only real variable, which is exactly the variable a uniform 2–3 cm loin steak controls best.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: no change — `air_fryer` is already registered for pork_loin_steak (id 202); this leaf is its first fetched source set.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`; this leaf's measured band (60.4–63 °C) sits inside the existing `PORK_MEDIUM` range (60–66 °C).
-- No `method_temperature_ranges` override needed — both measured endpoints fall inside `PORK_MEDIUM`, and the untimed sources give no value to encode.
-
 ## Summary
 
 An air fryer bakes a pork loin steak on all sides at once — 8–14 minutes at around 200 °C, no searing, no turning — and the two sources that probe pull it off at 140–145 °F, juicier than the appliance's reputation suggests. It is a good match for this cut because the steak is uniform and lean, so the even fast air cooks it edge to edge with almost no babysitting. The trade-off is that the same fan that browns also dries, and this cut has no fat to fall back on, so timing by probe rather than by clock matters more here than in a pan. Rest it a few minutes and it behaves like a pan-seared steak with a fraction of the attention.

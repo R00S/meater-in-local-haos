@@ -82,12 +82,6 @@ Observed pull range is **59–61°C (138–142°F)**. Across casserole, crumbed,
 
 Oven roasting is especially useful for haddock because it allows moisture buffering from toppings, oil, or vegetables while still giving controlled doneness in a thin fillet. Unlike pan-frying, the oven format supports one-pan vegetable pairings and crusted applications with less breakage risk when turning.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` confirms: `oven_roast`
-- Practical pull target from sources: **59–61°C**, with short carryover into the low 60s.
-- No method-specific doneness override required; this remains consistent with the fish baseline.
-
 ## Summary
 
 Oven-roasted haddock is consistently treated as a quick, controlled bake where the fish should be pulled just as the center sets. Four fetched sources across UK, Germany, Scandinavian-style, and Mediterranean-style preparations converge on a pull window near 59–61°C with brief carryover.

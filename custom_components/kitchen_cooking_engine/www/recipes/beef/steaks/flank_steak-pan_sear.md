@@ -161,11 +161,6 @@ The observed range spans **52–62 °C (126–144 °F)**. The French bistro trad
 ## What makes this method special
 Pan searing gives flank steak the fastest possible crust without additional fat pooling — a cast-iron pan at high heat transfers far more energy per second than a grill grate, and the full flat contact surface means the entire steak face browns simultaneously rather than just where it touches grill bars. For a thin, lean cut that is close to ruined at 60 °C, speed matters: the faster the crust forms, the less the interior has been cooked beyond the target. The lack of ambient heat (no oven, no grill surround) means removal from the pan halts cooking almost immediately, keeping carryover minimal — pull temperature and final serving temperature are very close. The absence of fat in the muscle also means the cook must provide fat in some other form — butter basting, anchovy butter, or marinade caramelisation — to achieve the richness that the muscle itself cannot supply.
 
-## Data applied to cooking_data.py
-- `supported_methods` includes: `pan_sear`, `grill`, `charcoal_grill`, `pan_fry`, `oven_roast`, `sous_vide`
-- `recommended_doneness`: `"medium_rare"` (54–57 °C; French bistro sits lower at 52–55 °C)
-- No `method_temperature_ranges` override needed — default medium_rare band applies
-
 ## Summary
 Pan-seared flank steak achieves the fastest, most even crust of any indoor method — the entire flat face browns simultaneously on a screaming-hot cast-iron surface. The French bistro tradition insists on vivid rare (52–55 °C) to keep the lean fibres tender, while American and Korean traditions accept medium (57–62 °C) because accompaniments carry the flavour. The critical discipline for all traditions is the same: do not exceed 60 °C, and always slice thinly across the grain.
 

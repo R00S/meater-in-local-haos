@@ -141,15 +141,6 @@ a solid cylinder with no bones and no flaky seams, it can be held at 50 °C for 
 to arrive, and it will not dry out or fall apart on the way. That is also why the method rewards a crust
 before the oven: the meat gives the cook nothing to look at, so the surface has to say when it is done.
 
-## Data applied to `cooking_data.py`
-
-- `supported_methods` already lists `oven_roast`; the leaf confirms it.
-- **No `method_temperature_ranges` override.** The four numbers agree tightly, but they are one tradition;
-  the band is recorded here rather than coded.
-- The hub's `recommended_doneness: well_done` (63 °C) is contradicted by every record in this leaf — no
-  source takes monkfish above 58 °C and one calls 55 °C chicken-like. Recorded in the hub's gap table as an
-  open question rather than changed in this pass.
-
 ## Summary
 
 Four records, four numbers: **50 °C in a 50 °C oven (Köket.se), 46 °C with a stated 45–50 °C range (Lagat

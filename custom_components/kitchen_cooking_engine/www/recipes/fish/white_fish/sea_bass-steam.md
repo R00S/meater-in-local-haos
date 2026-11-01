@@ -141,12 +141,6 @@ scallion, or a lime-garlic sauce stirred together while the fish steams. The cos
 steamed sea bass skin is slack and pale, not crisp, so this is the method for people who want
 the flesh and not the crust.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` **gains `steam`** for sea_bass (id 422) — a discovered method with three fetched cut-appropriate sources; the registry edit is recorded in the hub's survey comment.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`; all three sources cook to opaque, flaking flesh.
-- No `method_temperature_ranges` override needed — no source publishes a numeric internal temperature for steamed sea bass, so no observed range exists to encode; the 58–60 °C house pulls are designed to land on the cut's existing `FISH_WELL_DONE` band after the covered rest.
-
 ## Summary
 
 Steaming is the gentlest way to cook this fish and the most forgiving of a whole one: 8 to 12

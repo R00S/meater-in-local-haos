@@ -212,7 +212,7 @@ Four of the five sources publish numbers: the full observed range is **52–63 �
 — 52–57 °C and 57–60 °C from the two British griddle recipes, 55–58 °C from the Italian
 source, and the American source's wide 130–145 °F (54–63 °C) band with an explicit "pull just
 shy and let carryover finish" instruction; the Spanish *plancha* source gives time only
-(3+2 minutes) and no temperature. Mapped to `cooking_data.py`, the European cluster sits in
+(3+2 minutes) and no temperature. Mapped to the cut file, the European cluster sits in
 `FISH_MEDIUM` (52–57 °C) and `FISH_MEDIUM`'s upper edge / `FISH_WELL_DONE`'s lower edge
 (57–60 °C), while the American band spans both and ends at `FISH_WELL_DONE` (63 °C). The
 divergence is convention, not disagreement: every source wants the flesh just set, no longer
@@ -235,14 +235,6 @@ lags far behind the surface — once the crust is set, every extra minute drives
 steeply upward, and the same dense flesh that makes the sear possible turns chalky above
 ~60 °C. The Italian moderate-heat variant trades crust depth for a wider margin; the British
 very-hot 1-minute variant bets everything on timing.
-
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `pan_sear` — already present for swordfish (id 423); no code change needed for this leaf.
-- `recommended_doneness`: no change proposed — cut-level stays `well_done`; this leaf's method recommendation (`medium`, 57 °C, range 52–60 °C) is recorded above for the next scoring pass.
-- No `method_temperature_ranges` override needed — the observed 52–63 °C span sits inside the existing `FISH_MEDIUM`/`FISH_WELL_DONE` bands.
-- Probe placement: MEATER probe inserted from the side/edge into the centre of the steak; trim and discard the bloodline before cooking.
-- Safety note: USDA minimum for finfish is 63 °C (145 °F); the 52–60 °C culinary practice documented here is accepted convention, not the safety line.
 
 ## Summary
 

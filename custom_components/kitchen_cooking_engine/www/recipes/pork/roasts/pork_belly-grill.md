@@ -226,13 +226,6 @@ with scissors, and wrapping in leaves is a complete cultural ritual. Filipino
 caramelised skin. Across all traditions, the grill is chosen for its heat intensity,
 smoke contribution, and char character — not for any unique temperature effect.
 
-## Data applied to cooking_data.py
-- `supported_methods` gains: `grill`
-- `recommended_doneness`: `"well_done"` (71–78°C; all grilling traditions for
-  thin-sliced pork belly target this band)
-- No `method_temperature_ranges` override needed — the standard `well_done` range
-  (71–84°C) covers the full observed spectrum; all sources land well within this band
-
 ## Summary
 Grilling pork belly in thin slices delivers char, smoke, and rendered fat in under
 fifteen minutes — the fastest possible path to a deeply flavoured, fully rendered

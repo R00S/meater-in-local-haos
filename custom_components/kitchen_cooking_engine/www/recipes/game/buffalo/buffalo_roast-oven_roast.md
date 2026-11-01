@@ -134,12 +134,6 @@ has "no fat at all" and needs both a lower temperature and much more time. Carry
 both premium-cut records — one measured at +5 °C over 20 minutes — which is why every one of them
 pulls well below its serving target and none of them slices immediately.
 
-## Data applied to cooking_data.py
-
-- `supported_methods`: `oven_roast` **already registered** for buffalo_roast — no change; this leaf replaces a file that held **zero** source recipes.
-- `recommended_doneness`: no change to the cut — `medium_rare` (52–57 °C) is where two of three measured rows land.
-- No `method_temperature_ranges` override needed: the published 52–63 °C spread is `medium_rare` plus the `medium` boundary; the round's 63 °C is a sub-cut note, not a band change.
-
 ## Summary
 
 Oven-roasting bison means a low oven (225–300 °F), a short high-heat burst before or after, and a

@@ -154,11 +154,6 @@ mismatch of whole-bird roasting.
 The **start-high, reduce-heat** approach (200°C → 180°C or 400°F → 325°F) used by both Africanbites
 and BBC/Apetit ensures good skin crisping while finishing to safe internal temperature.
 
-## Data applied to cooking_data.py
-
-The current `safe: 74°C / 165°F` target is confirmed. No change needed. The preference note
-(79–82°C for dark meat) could be added as a future extended doneness option.
-
 ## Summary
 
 Four verified oven-roast sources for turkey leg: Czech (Group D, BBC/Apetit), British (Group B,

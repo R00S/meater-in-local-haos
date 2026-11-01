@@ -159,12 +159,6 @@ All four sources converge on 60°C pull. The wide range of cooking times (9–18
 
 Steaming is the ideal method for gilt-head bream when you want the clean, sweet natural flavour of the fish at the forefront. The flesh is already flavourful and moist — steaming adds nothing that competes with it, while also adding nothing that masks it. Aromatic layers (ginger and scallion in the Cantonese style; lemongrass and lime in the Thai style; coriander and celery in the German version; lovage and apple in the Austrian) are carried by steam and sit on the surface rather than penetrating the flesh — a more delicate effect than braise or oven-bake. Gilt-head bream's rounded body shape means every side is equidistant from the steam source, giving even cooking without the need to turn the fish. The result is silky, moist, just-flaking flesh with no risk of the dry overbaking that can happen at high oven temperatures. The MEATER probe in the thick shoulder muscle is the definitive check: colour and firmness are unreliable indicators for a steamed whole fish.
 
-## Data applied to cooking_data.py
-
-- Added `CookingMethod.STEAM` to `supported_methods` for gilt_head_bream (id=443)
-- `recommended_doneness`: `"well_done"` (60°C pull, lean-to-medium-fat round fish, all sources target fully opaque)
-- No `method_temperature_ranges` override needed — `FISH_WELL_DONE` (min 60°C, target 63°C) matches
-
 ## Summary
 
 Steaming gilt-head bream is a living tradition in Chinese and Thai kitchens, where the sweet flavour of premium sea fish is celebrated by keeping the cooking method as clean as possible. The same principle is applied in German and Austrian fine dining via steam ovens. All four sources arrive at 60°C internal pull temperature, confirming that the well-done range is the universal target. The round-bodied bream is well suited to whole-fish steaming, where the MEATER probe confirms the thickest point — the shoulder behind the head — has reached full temperature.

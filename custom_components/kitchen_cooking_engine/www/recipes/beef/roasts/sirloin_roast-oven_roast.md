@@ -130,10 +130,6 @@ Sondplacering: från änden, vinklad mot det geometriska centrumet av den magra 
 
 Oven roasting a sirloin joint concentrates the umami compounds in the outer crust (Maillard reaction) while gentle heat preserves the lean interior's moisture. The fat cap, positioned uppermost, bastes the surface as it renders. Unlike short ribs or chuck, no collagen breakdown is required; the sirloin roast only needs the interior to reach 44–60 °C.
 
-## Data applied to cooking_data.py
-
-The current `medium_rare` target of **54 °C / 130 °F** in the system frontmatter is within the verified consensus range (50–60 °C). No change needed. The `recommended_doneness: medium_rare` is correct for this cut and method. USDA minimum of 63 °C applies as the safety floor but all culinary sources prefer 50–60 °C.
-
 ## Summary
 
 Three verified oven-roast sources from two culinary groups (B: French, Australian; C: Creole/West African) confirm a pull temperature range of 44–60 °C for sirloin roast. Groups A and D gaps noted — no verified sources found for those traditions on this specific cut and method.

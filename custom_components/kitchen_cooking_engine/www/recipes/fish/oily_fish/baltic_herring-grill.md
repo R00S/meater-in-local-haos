@@ -146,12 +146,6 @@ The full observed range of stated grill times is **3–5 minutes per side** (plu
 
 Cooking directly on embers or over a high grill is the most intense heat application for this fish: radiant heat sears the skin and cooks the small body in minutes, with smoke from dripping fat contributing flavour that no indoor method reproduces. The Estonian source's fish-grill basket is the modern answer to the archival stick — both hold the small fish together over the fire. The salt-first step in both modern Swedish recipes (1–2 h in coarse salt) firms the small fish so it survives the grill rack without tearing — the same function the archival stick served. The technique's elegance is its zero equipment; the trade-off is total exposure: no lid, no sauce blanket, no margin, which is why every fetched source pairs the method with small, fresh fish cooked and eaten at once.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `grill` (newly discovered method for baltic_herring — archival Swedish documentation and three fetched recipes verify glödstekt/halstrad practice).
-- `recommended_doneness`: no change proposed — no source provides explicit internal-temperature evidence.
-- No `method_temperature_ranges` override proposed — no numerical evidence.
-
 ## Summary
 
 Grilled strömming is the fisherman's preparation: whole small fish salted briefly, then straight onto embers or a hot grill for three to five minutes a side and eaten immediately. The six fetched sources — archival Swedish practice, two modern Swedish recipes, Canadian, Estonian and Russian — agree on the technique and the visual endpoint but publish no measured data, so this leaf adds method coverage and documented traditions, not a temperature recommendation.

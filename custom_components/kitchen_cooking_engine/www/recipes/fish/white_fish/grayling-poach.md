@@ -73,7 +73,7 @@ Poaching cooks grayling in a gently moving aromatic liquid rather than by direct
 
 - `methods:` already lists `poach`; two Swedish court-bouillon preparations now verify it for this species.
 - `recommended_doneness`: no change proposed; source has no internal or final serving temperature.
-- No `method_temperature_ranges` override proposed — one qualitative source is insufficient for a temperature setting.
+- No method-specific temperature band proposed — one qualitative source is insufficient for a temperature setting.
 
 ## Summary
 

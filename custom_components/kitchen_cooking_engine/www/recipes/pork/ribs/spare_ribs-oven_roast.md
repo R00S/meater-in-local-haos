@@ -137,7 +137,3 @@ Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertil
 | Chefkoch.de (DE) | 150 °C foil × 2.5–3 hr + broil | 90–95 °C |
 
 **Consensus pull range**: 88–95 °C (190–203 °F). Foil-wrapped low-and-slow (150 °C) is the dominant approach across all four traditions; high-heat or broil finish is used only for glazing.
-
-## `cooking_data.py` note
-
-Use `DONENESS_WELL_DONE` target 90 °C, range 88–95 °C for `spare_ribs` × `oven_roast`. No medium/rare options.

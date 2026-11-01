@@ -116,12 +116,6 @@ lacquers thin starch-coated chops during their brief finish. The method's real v
 cut is flavour transfer and forgiveness in the short window, not the long cook its name
 implies.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `braise` — **newly discovered method for pork_loin_steak**, verified by two fetched sources; add `CookingMethod.BRAISE` to pork_loin_steak (id 202) `supported_methods`.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`; this leaf publishes no measured temperature to base a method-level key on.
-- No `method_temperature_ranges` override needed — no source states a doneness temperature; encoding the 160 °C frying-oil setting as a meat range would misrepresent it.
-
 ## Summary
 
 Braising cooks a pork loin steak in simmering sauce — the American source for the better part

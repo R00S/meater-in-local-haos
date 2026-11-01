@@ -186,10 +186,6 @@ Rumpbiffstek (nordamerikanskt begrepp) skärs från rundbotten-primalen — höf
 
 Dry oven heat is ideal for the lean rump/round muscle because it does not need collagen-dissolving temperatures — it only needs the interior to reach 54–65 °C. The Maillard crust formed at high initial temperatures (or from a stovetop sear) provides flavour depth that the lean muscle lacks on its own. Unlike braising, oven-roasting preserves the firm-textured sliceability that makes leftover rump roast useful for cold cuts and sandwiches.
 
-## Data applied to cooking_data.py
-
-The system's current `medium_rare` target of **54 °C / 130 °F** is at the lower edge of the verified pull-temperature range (54–65 °C). The Creole and Finnish sources both pull at 54–60 °C; the BBC "medium" target of 65 °C is consistent if one adds the ~5 °C post-sear carryover to reach a 60–65 °C final carving temperature. No change to the existing `cooking_data.py` values is needed — the `medium_rare: 54 °C` target is defensible as a probe-pull target when resting 15–30 minutes is intended.
-
 ## Summary
 
 Four verified oven-roast sources from three culinary groups (B: British ×2; C: West African / Southern Creole; D: Finnish) confirm a pull temperature range of 54–65 °C for rump/round/topside beef. Group A gap noted — no verified oven-roast source for South/East/SE Asian traditions was found in reachable sites. The current system target of 54 °C for medium-rare is at the low end of the range and appropriate for probe-and-rest use.

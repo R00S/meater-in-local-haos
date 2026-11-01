@@ -124,7 +124,7 @@ leaf, so this number describes the evidence that exists, not the work that remai
 | `unwritten_leaf:slow_cooker` | open | girlheartfood.com "Slow Cooker Moose Roast and Vegetables" (high 5–6 h / low 8–10 h); bcoutdoorsmagazine.com crockpot moose roast | M | 4 Canadian/US slow-cooker records |
 | `stub_leaf:smoker` | open | a 20-hour smoked moose pot roast exists (FrozenSmoke BBQ); no written recipe fetched yet | M | 4 smoked-moose records, if four written sources can be found |
 | `recommended_doneness` | recorded | the cut's default is `medium_rare` 54 °C, but **no fetched source pulls below 58 °C** | S | decide whether to move the default to 60–62 °C |
-| `well_done_band` | open | Norwegian and German sources name 68–70 °C as fully cooked; `cooking_data.py` has no `well_done` band for this cut (added 2026-10-27 alongside these leaves) | — | engine can now express what the sources do |
+| `well_done_band` | open | Norwegian and German sources name 68–70 °C as fully cooked; the cut file has no `well_done` band for this cut (added 2026-10-27 alongside these leaves) | — | engine can now express what the sources do |
 
 ### Improvement priorities
 

@@ -130,12 +130,6 @@ The full observed numerical range is **63 °C (145 °F)** from three of four sou
 
 Roasting surrounds the steak with dry moving air, which behaves nothing like a pan: heat arrives by convection from every direction at once, so the centre and the surface approach temperature nearly together and the exterior browns without ever contacting fat. For this cut that is a genuine trade — the flat, uniform loin cooks with perfect evenness and zero hands-on time, but the dry atmosphere wicks moisture from the exposed surface exactly where the cut has the least intramuscular fat to spare, which is why three of four sources either build a vegetable bed under the meat (releasing steam into the pan) or coat the chops in oil and a breadcrumb shell (a sacrificial moisture barrier). The Spanish source's grill-setting finish exists for the same reason: oven heat alone browns slowly in still air, so the last minutes borrow a broiler's direct radiant heat to colour the top that the potatoes' steam has kept pale. Breading, bed or bare — every configuration is a workaround for the same physics: even heat, thirsty air.
 
-## Data applied to cooking_data.py
-
-- `supported_methods` gains: `oven_roast` — **newly discovered method for pork_loin_steak**, verified by four fetched sources; add `CookingMethod.OVEN_ROAST` to pork_loin_steak (id 202) `supported_methods`.
-- `recommended_doneness`: no change proposed — cut level stays `well_done`; this leaf's measured 63 °C sits at the top of `PORK_MEDIUM` (60–66 °C).
-- No `method_temperature_ranges` override needed — the single measured value (63 °C) falls inside the existing `PORK_MEDIUM` range, and the untimed Spanish source gives no value to encode.
-
 ## Summary
 
 Oven roasting cooks a pork loin steak hands-off — 15–20 minutes at 200–228 °C — and the three sources that probe all pull it at 145 °F, the USDA-aligned line, showing how little this method's traditions disagree about doneness. It suits the cut's flat, even shape, which roasts uniformly with no turning and no hotspots, and the vegetable bed or breadcrumb coating some sources use keeps the lean surface from drying in the open air. What you gain is simplicity and capacity for a full tray at once; what you give up is crust development and the flavour that fat contact brings. Probe rather than clock it, and rest the steak before slicing.
