@@ -310,9 +310,15 @@ N+1. Rest {duration}. Final serving temperature: **{temp}°C / {temp}°F** ({don
     sealed-bag cook. The method must state that the circulator temperature is
     the cook target and note when post-bath temperature verification can be done.
 - The **pull temperature** must be a dedicated numbered step, bolded:
-  `**Pull at N°C** (N°F)`. It must not be buried in a prose sentence.
+  `**Pull at N°C** (N°F)`. It must not be buried in a prose sentence. **When the source
+  states no temperature — which is normal in traditions that judge doneness by time and
+  texture — the step is written `**Pull temperature: not stated by source.**`** Retain the
+  source's own cue ("25 min per side until the bone shows", "until fork-tender") in that
+  step. Never estimate, convert or supply a number the source does not contain; a guessed
+  endpoint is fabricated data and is treated as forbidden in the analysis ToR.
 - The **final serving temperature** after rest must be bolded:
-  `Final serving temperature: **N°C / N°F** ({doneness name})`.
+  `Final serving temperature: **N°C / N°F** ({doneness name})` — or
+  `Final serving temperature: **not stated by source**` for a source that gives none.
 - Cultural terminology should be preserved and briefly explained inline in
   *italics* on first use.
 - A `---` horizontal rule must follow every recipe.
@@ -578,8 +584,12 @@ Before the collection portion of a leaf is committed, verify:
 - [ ] Each recipe has a full ingredient list with quantities for every non-trivial item
 - [ ] Each recipe has numbered method steps (not bullet points)
 - [ ] Each recipe has an explicit probe insert step (or sous vide circulator note)
-- [ ] Each recipe has a bolded `**Pull at N°C**` step
-- [ ] Each recipe has a bolded `Final serving temperature: **N°C / N°F**` line
+- [ ] Each recipe has a bolded pull step — `**Pull at N°C**` or, where the source states
+      none, `**Pull temperature: not stated by source.**`
+- [ ] Each recipe has a bolded `Final serving temperature: **N°C / N°F**` line (or the
+      explicit `not stated by source` marker)
+- [ ] Numeric sources counted and logged — the analysis gate needs at least 3
+      (`RECIPE_ANALYSIS_TOR.md`, Purpose)
 - [ ] A `---` horizontal rule follows each recipe
 - [ ] No synthesised composite recipe exists in the file
 
