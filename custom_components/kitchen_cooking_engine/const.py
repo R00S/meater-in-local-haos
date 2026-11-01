@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 1 Nov 2026
-Last Change: v0.10.4.0 - improvement potential system clarified (base/threshold reading, per-leaf thresholds, leaf-scoped description row, per-language deductions, temperature reasoning required for the behaviour rows); fourteen cut files re-rated from scratch under the locked rules
+Last Change: v0.10.3.1 - improvement potential system clarified (base/threshold reading, per-leaf thresholds, leaf-scoped description row, per-language deductions, temperature reasoning required for the behaviour rows); fourteen cut files re-rated from scratch under the locked rules
 """
 
 DOMAIN = "kitchen_cooking_engine"
