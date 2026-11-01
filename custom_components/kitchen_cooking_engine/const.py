@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 1 Nov 2026
-Last Change: v0.10.2.39 - recipe source of truth: cut and method data now read only from www/recipes/ (cooking_data.py and swedish_cooking_data.py removed, panel COOKING_METHODS generated from recipe files, PANEL_VERSION 686); cured ham moved to pork/ham, virginia_ham dropped; deferred items logged in docs/TO_FIX_LATER.md
+Last Change: v0.10.3.0 - umbrella IMPROVE_CUT_FILES.md replaces the monolithic version (queues 2 cut files per pass, points at CUT_FILE_RESEARCH_TOR, RECIPE_COLLECTION_TOR, RECIPE_ANALYSIS_TOR, SOURCE_SURVEY, IMPROVEMENT_POTENTIAL_SYSTEM); PR #124 merged with main (d71146d2)
 """
 
 DOMAIN = "kitchen_cooking_engine"
