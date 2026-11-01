@@ -60,7 +60,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-improvement_potential: 159
+improvement_potential: -1
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-11-01
 rest_time_min: 5
@@ -87,7 +87,7 @@ Flat iron steak tas från infraspinatus i skulderbladet, separerad från det cen
 - [Sous Vide](./flat_iron-sous_vide.md)
 ## Improvement potential
 
-**159** — rated 2026-11-01 against `IMPROVEMENT_POTENTIAL_SYSTEM.md`. The 0–20 reading is discarded, and the 2567 recorded earlier the same day is withdrawn: it discounted citations this project treats as verified evidence.
+**−1** — rated 2026-11-01 against `IMPROVEMENT_POTENTIAL_SYSTEM.md`, applying its rows verbatim. The 0–20 reading is discarded, and the 2567 recorded earlier the same day is withdrawn.
 
 | Reduction | Instances | Points | Deducted |
 |---|---|---|---|
@@ -100,12 +100,15 @@ Flat iron steak tas från infraspinatus i skulderbladet, separerad från det cen
 | Culinary preferred temperatures of the cut | 1 | 64 | 64 |
 | Safe temperatures | 1 | 32 | 32 |
 | Meat and fat behaviour at different temperatures — cut file, English and Swedish | 2 | 96 | 192 |
-| Meat and fat behaviour at different temperatures — per leaf, English | 7 | 32 | 224 |
-| Method and tradition description — per leaf, English | 7 | 32 | 224 |
-| Method-specific preferred temperatures — per leaf, English | 7 | 32 | 224 |
-| **Deducted** | | | **3 296** |
+| Meat and fat behaviour at different temperatures — leaf rows, English | 7 | 32 | 224 |
+| Meat and fat behaviour at different temperatures — leaf rows, Swedish | 5 | 32 | 160 |
+| Method and tradition description — leaf rows, English | 7 | 32 | 224 |
+| Method and tradition description — leaf rows, Swedish | 0 | 32 | 0 |
+| Method-specific preferred temperatures — leaf rows, English | 7 | 32 | 224 |
+| Method-specific preferred temperatures — leaf rows, Swedish | 0 | 32 | 0 |
+| **Deducted** | | | **3 456** |
 
-3455 − 3 296 = **159**.
+3455 − 3 456 = **−1**. Negative readings are allowed by the system and this one is not clamped.
 
 | Leaf | Recipes | Culinary groups | Deducted |
 |---|---|---|---|
@@ -118,11 +121,13 @@ Flat iron steak tas från infraspinatus i skulderbladet, separerad från det cen
 | Sous Vide | 5 | B | 192 |
 | **Leaf total** | 35 | 13 | 1 536 |
 
-**The recipes count.** Their citation line says *inspired by* because the text is paraphrased rather than reproduced — a copyright and attribution convention, not a mark of doubt, as `RECIPE_COLLECTION_TOR.md` now states. Each of the 35 recipes names its source author and book, and a named cookbook is a full citation under that ToR with no URL required; prior verification stands. All seven leaves therefore count as finished rather than stubs: each carries both profiles, five cited recipes, a consensus table and a summary.
+**The recipes count.** The citation line says *inspired by* because the text is paraphrased rather than reproduced — a copyright and attribution convention, not a mark of doubt, now written down in `RECIPE_COLLECTION_TOR.md`. Each of the 35 recipes names its source author and book, and a named cookbook is a full citation under that ToR with no URL required; `IMPROVEMENT_POTENTIAL_SYSTEM.md` says to trust prior agents' verification, so none of it is discounted. All seven leaves are therefore finished, not stubs: each carries both profiles, five cited recipes, a consensus table and a summary.
 
-**What is not counted.** The Mexican, Argentine and Brazilian traditions named in three consensus tables belong to no culinary group A–D as those groups are defined, so they add no group bonus — the same treatment the Brazilian source receives in `pork/ribs/tjocka_revben.md`. The Swedish profiles carry no temperature reasoning, so the three per-leaf rows are English only.
+**The language rows, measured rather than assumed.** English earns all three leaf rows in all seven leaves. Swedish earns the behaviour row in five — charcoal grill, grill, oven roast, pan fry and pan sear each reason about more than one temperature (for example 240–280 °C pan, 4–5 °C carryover and a 52–53 °C pull in pan sear). Air fryer and sous vide state one temperature each in Swedish, so they do not. No Swedish profile names the traditions its method is common in, and none discusses preferred temperatures method-specifically, so those two Swedish rows stay at zero.
 
-**Where the remaining 159 sits.** Not in the recipes. `cooking_methods_researched` is still 0, meaning the `methods:` list has never been reviewed against what cooks actually do with this cut, and the cut file itself holds no recipes at all — only the overview prose.
+**The group count.** Korean and Japanese name Group A; American, British, Italian, French, Spanish/Basque and Australian name Group B; North African and Israeli/Levantine name Group C; Nordic names Group D. Mexican is North American and therefore Group B, where B is already present, so it adds no group. Argentine and Brazilian are named in no group definition, which is the same treatment the Brazilian source receives in `pork/ribs/tjocka_revben.md`; they are not counted rather than assigned by guess.
+
+**What −1 does not mean.** It is what the rows add up to, not a claim that the file is complete. The method survey is still unstarted — `cooking_methods_researched` is 0 — and the cut file holds no recipes of its own. Neither gap has a row in this system, so neither shows in the number; they remain in the priorities below.
 
 ### Improvement priorities
 

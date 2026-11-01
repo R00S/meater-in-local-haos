@@ -30,7 +30,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-improvement_potential: 95
+improvement_potential: -193
 cooking_methods_researched: 1
 quality_assessed: 2026-11-01
 rest_time_min: 10
@@ -138,7 +138,7 @@ Leaves are measured against the gate as revised on 2026-11-01: collection asks f
 The pattern is a property of the corpus, not a gap in the search: outside Europe and North America these traditions judge doneness by time and fork-tenderness rather than by a probe. Of the forty-six sources stored across the ten leaves, sixteen state a numeric internal temperature or cook-target temperature (Swedish, Japanese, Thai, Korean, Indian, Levantine, German, Chinese, Brazilian and American traditions among them), while the other thirty state their own cues in their own words — and every search that looked for a core temperature in a language that does not publish one is recorded in the relevant leaf's search log, so the absence is documented rather than assumed.
 ## Improvement potential
 
-**95** — rated from scratch on 2026-11-01 against `IMPROVEMENT_POTENTIAL_SYSTEM.md`. The earlier reading is discarded, not adjusted.
+**−193** — rated 2026-11-01 against `IMPROVEMENT_POTENTIAL_SYSTEM.md`, applying its rows verbatim. The 0–20 reading is discarded, and the 95 recorded earlier the same day is withdrawn because it left the Swedish leaf rows out.
 
 | Reduction | Instances | Points | Deducted |
 |---|---|---|---|
@@ -150,12 +150,15 @@ The pattern is a property of the corpus, not a gap in the search: outside Europe
 | Culinary preferred temperatures of the cut | 1 | 64 | 64 |
 | Safe temperatures | 1 | 32 | 32 |
 | Meat and fat behaviour at different temperatures — cut file, English and Swedish | 2 | 96 | 192 |
-| Meat and fat behaviour at different temperatures — Smoke and Sous Vide, English | 2 | 32 | 64 |
-| Method and tradition description — Smoke and Sous Vide | 2 | 32 | 64 |
-| Method-specific preferred temperatures — Smoke and Sous Vide | 2 | 32 | 64 |
-| **Deducted** | | | **3 360** |
+| Meat and fat behaviour at different temperatures — leaf rows, English | 2 | 32 | 64 |
+| Meat and fat behaviour at different temperatures — leaf rows, Swedish | 4 | 32 | 128 |
+| Method and tradition description — leaf rows, English | 2 | 32 | 64 |
+| Method and tradition description — leaf rows, Swedish | 5 | 32 | 160 |
+| Method-specific preferred temperatures — leaf rows, English | 2 | 32 | 64 |
+| Method-specific preferred temperatures — leaf rows, Swedish | 0 | 32 | 0 |
+| **Deducted** | | | **3 648** |
 
-3455 − 3 360 = **95**.
+3455 − 3 648 = **−193**. Negative readings are allowed by the system and this one is not clamped.
 
 | Leaf | Recipes | Culinary groups | Deducted |
 |---|---|---|---|
@@ -173,9 +176,9 @@ The pattern is a property of the corpus, not a gap in the search: outside Europe
 
 Every leaf stays inside the threshold of 8 on both recipe and group counts, so each instance takes the full 32 points and no tiering applies.
 
-**What the number says.** The file is close to complete by this measure: ten leaves, forty-six fetched sources, four groups wherever the corpus allows them, and a cut-level temperature discussion in both languages. The 95 that remains sits almost entirely in the eight leaves whose analysis is withheld — they take 8 points each as stubs, not 96, because each still owes the numeric endpoints its own gate names.
+**The language rows, measured rather than assumed.** English takes the three leaf rows in Smoke and Sous Vide, the two leaves whose analysis is written. Swedish takes the behaviour row in four: air fryer (set-points 180/190/200 °C and the explicit statement that no source gives a core temperature), smoke (107–130 °C pit), sous vide (63 °C and 75 °C baths) and steam (explicitly no temperature data in any source). Charcoal grill is excluded from that row because its Swedish profile reports carryover as unmeasured without reasoning about temperature at all. Swedish takes the description row in five leaves — air fryer, charcoal grill, smoke, sous vide and steam each name the traditions their method is documented in. No Swedish leaf carries a method-specific preferred-temperature discussion; Smoke and Sous Vide have their consensus sections in English only.
 
-**One consequence worth stating plainly.** Finishing those eight leaves as Smoke and Sous Vide are finished would convert each from 8 points to 96 and add their behaviour, description and preferred-temperature rows — roughly 1 470 points — which would take this reading below zero. That is a property of the tiering, not a reason to leave the work undone, and the reading is a queue position rather than a target.
+**Why the reading is negative.** The rows add up past the base because ten leaves of fetched, grouped recipes earn 2 496 points by themselves. That is the system working as written, not a reward: the eight leaves whose analysis is withheld still take the 8-point stub reduction, and their missing work has no row that can express it once their recipes are counted.
 
 ### Improvement priorities
 
