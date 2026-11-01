@@ -37,19 +37,41 @@ European grayling (*Thymallus thymallus*; Swedish *harr*) is a small, lean salmo
 4. Let the liquid nearly return to a boil, skim it, then lower the heat and simmer the fish gently until cooked. The source does not state a duration, internal temperature, or explicit pull point.
 5. For a larger fish intended to be served cold, cool it in the broth. The source does not give a final serving temperature.
 
+### 2. Swedish (Köket.se, "Halv åtta hos mig", Helge) — harr kokt i kryddspad
+**Inspired by**: Köket.se (Sweden); https://www.koket.se/fyrklover-i-de-nordiska-fargerna (fetched 2026-11-01). *Whole 350 g harr cooked with whole trout in a spiced court-bouillon (salt, white and allspice peppercorns, bay, clove, onion, parsley stalks) for 3 minutes on the heat and then 8–10 minutes off the heat with the lid on. States 55 °C at the thickest point as the doneness point. Köket.se notes that the recipe comes from an amateur cooking programme and that the site cannot vouch for it — recorded with that caveat.*
+**Serves**: 4 (as part of a starter) · **Prep**: broth simmered 10 min · **Cook**: 3 min on heat + 8–10 min off · **Rest**: not stated
+
+**Ingredients**
+- 350 g whole grayling
+- About 1 litre water, enough to cover
+- 1 tsp salt, 4 white peppercorns, 4 allspice berries, 1 bay leaf, 1 whole clove
+- ½ yellow onion, in wedges; 2 parsley stalks, crushed
+
+**Method**
+1. Remove the head, rinse the fish and lay it in a low pan. Measure water to cover, then lift the fish out.
+2. Add the spices and onion to the water, boil and simmer 10 min under a lid.
+3. Put the fish in. After 3 minutes turn the heat off and leave the fish in the spad, "swaying" in it, for about 8–10 minutes under a lid.
+4. **Measure the thickest point: the fish is done at 55 °C.** If needed, raise the heat for a couple of minutes and measure again.
+5. Lift out, remove skin and bones, and cool. The strained spad is kept as fish stock.
+
 ---
 
 ## Temperature consensus
 
-Only one directly fetched recipe source is available for this method, and it does not provide an internal or final serving temperature. Its stated endpoint is gentle simmering after the liquid nearly returns to a boil; no numerical temperature range or doneness band can be inferred. This one Swedish source cannot satisfy the required 4–6 recipes from distinct culinary traditions, so no temperature recommendation follows.
+| Source | Stated doneness evidence | Internal temperature |
+|---|---|---|
+| Rackelhane / Mats Sjöstrand | Strained court-bouillon brought back to the boil, then a gentle simmer | not stated |
+| Köket.se ("Halv åtta hos mig") | Whole 350 g harr, 3 min on the heat, then 8–10 min off the heat under a lid | 55 °C at the thickest point |
+
+Both fetched sources are Swedish, so one culinary group (D) is represented twice and the four-group rule is unmet. One of the two states a number: **55 °C (131 °F)** at the thickest point, which sits well below the 63 °C safe temperature recorded for fish in the cut frontmatter. The divergence is recorded rather than resolved — an amateur-programme recipe is the weaker of the two, and it is the only one that names a figure. No recommendation follows from two same-group sources.
 
 ## What makes this method special
 
 Poaching cooks grayling in a gently moving aromatic liquid rather than by direct dry heat, limiting browning while seasoning the flesh. It is a suitable way to preserve the fish's delicate texture and, in the source's larger-fish variant, the fish cools in its broth for service cold. The page does not quantify the temperature endpoint or carryover.
 
-## Data applied to cooking_data.py
+## Analysis notes
 
-- `supported_methods` gains: `poach` (species-specific grayling court-bouillon preparation verified).
+- `methods:` already lists `poach`; two Swedish court-bouillon preparations now verify it for this species.
 - `recommended_doneness`: no change proposed; source has no internal or final serving temperature.
 - No `method_temperature_ranges` override proposed — one qualitative source is insufficient for a temperature setting.
 
@@ -57,4 +79,4 @@ Poaching cooks grayling in a gently moving aromatic liquid rather than by direct
 
 Court-bouillon poaching lets grayling cook in an aromatic liquid without the browned crust of frying or grilling. It suits the fish's delicate flesh, but the available recipe documents only a qualitative simmering endpoint, not a probe target.
 
-> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** One fetched Swedish source describes harr poached in court-bouillon; it gives no internal temperature and does not meet the 4–6 source/diversity threshold. Continue collection before drawing analysis conclusions.
+> ⚠️ **PARTIAL RESEARCH — NOT CONFORMS TO TOR.** Two fetched Swedish sources describe harr poached in court-bouillon; one states 55 °C at the thickest point and the other gives no temperature. Both are Group D, so the 4–6-source and four-distinct-tradition gates are unmet. Continue collection before drawing analysis conclusions.
