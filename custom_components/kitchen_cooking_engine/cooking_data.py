@@ -1845,38 +1845,6 @@ PORK_ROASTS = [
         ],
         recommended_doneness="well_done",
     ),
-    MeatCut(
-        id=215,
-        name="virginia_ham",
-        name_long="Virginia Ham",
-        cut_order=5,
-        estimated_thickness_mm=100,
-        usda_safe_c=60,
-        usda_safe_f=140,
-        rest_time_min=10,
-        rest_time_max=20,
-        carryover_temp_c=5,
-        temperature_ranges=[
-            TemperatureRange(
-                id=216,
-                name="heated_through",
-                description="Heated through",
-                target_temp_c=60,
-                target_temp_f=140,
-                min_temp_c=57,
-                min_temp_f=135,
-                max_temp_c=63,
-                max_temp_f=145,
-                usda_safe=True,
-                is_meater_recommended=True,
-                safety_level="safe",
-            ),
-        ],
-        supported_methods=[
-            CookingMethod.OVEN_ROAST,
-        ],
-        recommended_doneness="well_done",
-    ),
     # Additional pork roasts from frontend merge
     MeatCut(
         id=213,

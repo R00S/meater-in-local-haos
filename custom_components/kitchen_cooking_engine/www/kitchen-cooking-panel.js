@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 01 Nov 2026, 08:47 CET
+ * AUTO-GENERATED: 01 Nov 2026, 17:14 CET
  * Data generated from www/recipes/ KCE:CUT files and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from www/recipes/ KCE:CUT files, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 01 Nov 2026, 08:47 CET
+// Last generated: 01 Nov 2026, 17:14 CET
 
 // Ninja Combi recipes
 const NINJA_COMBI_RECIPES = [
@@ -3508,20 +3508,6 @@ const AI_PROTEIN_SUBCATS = {
       "name_da": "Svinetunge"
     },
     {
-      "id": "cured_ham",
-      "name": "Cured Ham (Pre-cooked)",
-      "cat": "p",
-      "name_sv": "Rökt skinka",
-      "name_da": "Saltet, forkogt skinke"
-    },
-    {
-      "id": "fresh_ham",
-      "name": "Fresh Ham",
-      "cat": "p",
-      "name_sv": "Färsk skinka",
-      "name_da": "Skinkesteg"
-    },
-    {
       "id": "ham",
       "name": "Ham",
       "cat": "p",
@@ -3631,6 +3617,20 @@ const AI_PROTEIN_SUBCATS = {
       "cat": "p",
       "name_sv": "Fläskkorv",
       "name_da": "Svinepølse"
+    },
+    {
+      "id": "cured_ham",
+      "name": "Cured Ham (Pre-cooked)",
+      "cat": "p",
+      "name_sv": "Rökt skinka",
+      "name_da": "Saltet, forkogt skinke"
+    },
+    {
+      "id": "fresh_ham",
+      "name": "Fresh Ham",
+      "cat": "p",
+      "name_sv": "Färsk skinka",
+      "name_da": "Skinkesteg"
     }
   ],
   "fish": [
@@ -129190,11 +129190,6 @@ const RECIPE_INDEX = {
     "slow_cooker": "/kitchen_cooking_engine_panel/recipes/pork/offal/pork_tongue-slow_cooker.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/offal/pork_tongue.md"
   },
-  "cured_ham": {
-    "oven_roast": "/kitchen_cooking_engine_panel/recipes/pork/roasts/cured_ham-oven_roast.md",
-    "smoker": "/kitchen_cooking_engine_panel/recipes/pork/roasts/cured_ham-smoker.md",
-    "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/cured_ham.md"
-  },
   "ham": {
     "braise": "/kitchen_cooking_engine_panel/recipes/pork/roasts/ham-braise.md",
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/pork/roasts/ham-oven_roast.md",
@@ -129315,6 +129310,11 @@ const RECIPE_INDEX = {
     "grill": "/kitchen_cooking_engine_panel/recipes/pork/ground/pork_sausage-grill.md",
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/pork/ground/pork_sausage-pan_fry.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/ground/pork_sausage.md"
+  },
+  "cured_ham": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/pork/ham/cured_ham-oven_roast.md",
+    "smoker": "/kitchen_cooking_engine_panel/recipes/pork/ham/cured_ham-smoker.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes/pork/ham/cured_ham.md"
   },
   "fresh_ham": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/pork/ham/fresh_ham-oven_roast.md",
@@ -130079,7 +130079,6 @@ const CUT_PROFILES = {
   "pork_jowl": "Pork jowl is the cheek and jaw area of the pig, encompassing both the buccinator (the same muscle as `cheek`/`pork_cheek`) and the surrounding subcutaneous fat and skin. It is most commonly prepared in one of two ways: (1) **cured as guanciale** — salt-cured and dried for 3–4 weeks, the classic Italian cured-meat preparation used in pasta all'amatriciana and carbonara; or (2) **braised or slow-cooked fresh** — the uncured jowl, which is almost entirely composed of fat and skin with some intercostal muscle, makes an extraordinarily rich braise or oven-roast when cooked to 88–96 °C / 190–205 °F.\n\n**Anatomy and structure**: the jowl is loosely defined in different butchery traditions. In American BBQ, \"pork jowl\" typically refers to the entire facial fat plate — a large, flat, heavily fatty slab (400–800 g) used for smoking or braising. In Italian tradition, guanciale is a smaller cured lobe. In Korean and Chinese cooking, pork jowl (항정살 / 猪颈肉) refers specifically to the neck-jowl muscle, a more lean, firm muscle grilled at high heat. The fat-to-lean ratio in uncured fresh jowl is very high compared to belly.\n\n**Temperature target (braised/slow-cooked)**: the `pulled` doneness target (88–96 °C, target 93 °C) is correct. At this temperature the collagen has fully converted to gelatin and the subcutaneous fat has rendered, producing the characteristic silky-unctuous texture. Below 82 °C the fat remains waxy and the skin does not soften.\n\n**Temperature target (grilled — Korean style)**: when the neck-jowl muscle is grilled as individual portions, the target is well-done at 71 °C / 160 °F as the USDA requires for pork.\n\n**Probe placement (braise)**: insert from one end of the jowl, tip at the geometric centre of the thickest meat (not into a fat pocket). In a braise vessel with multiple pieces, insert into the largest. For flat BBQ-style slabs, insert horizontally from the side.",
   "pork_liver": "Pork liver is a large, bilobed organ weighing 1–1.5 kg whole (commonly pre-sliced into 6–12 mm portions in retail). It is milder, slightly sweeter, and more delicate in texture than beef liver — a paler chestnut-brown rather than deep mahogany, with finer-grained hepatocyte structure and a thinner outer capsule. The lower mineral-iron intensity means pork liver tolerates assertive aromatics (onions, sage, juniper, allspice, capers) exceptionally well. Because it contains virtually no connective tissue or intramuscular fat, it cooks entirely by direct heat applied to its surfaces: the goal is a hard, rapid sear to develop a caramelised exterior while leaving the centre pink and just safe. Overcooking above 75 °C produces a dry, grainy, aggressively mineral-tasting result. The traditional European preparation — brief milk soak to mellow the iron, dust in flour, sear in fat — applies across French, Italian, British, and Scandinavian traditions alike.",
   "pork_tongue": "Pork tongue is the smaller, more delicate sibling of beef tongue — typically 250–400 g per tongue versus 1.5–2 kg for beef. The structure is identical: a single dense lingual muscle wrapped in a thick, papillae-covered skin that must be peeled after cooking. The smaller mass means a shorter braise (60–90 minutes rather than 3–4 hours) and a milder, sweeter flavour. Pork tongue is fundamental to many traditions — Mexican *lengua de cerdo*, Chinese cha-shu pig tongue, French *langue de porc sauce ravigote*, Polish *ozór wieprzowy*. The peel-while-warm rule still applies, and the tongue is best sliced thin and either dressed with a sharp vinaigrette or warmed in a piquant sauce. Carryover is essentially zero (the surrounding liquid buffers temperature).",
-  "cured_ham": "A cured ham is the pig's **hind leg** — the group of muscles around the femur (principally the\n*biceps femoris*, *semitendinosus* and *semimembranosus*), left whole, cured in brine or dry salt,\nusually smoked, and sold with the **rind and a layer of subcutaneous fat** still on. The curing\nis what defines the cut structurally: salt has drawn water out, the proteins are partly\ndenatured, and the meat is **already cooked and safe** before it reaches the kitchen. In the\nspiral-sliced form that dominates the English-language corpus, the leg has then been cut in one\ncontinuous spiral, so it is simultaneously a whole joint and a stack of slices.\n\nThat combination — already cooked, bone-in, rind-on, pre-sliced — makes this the only cut in the\nproject where the probe is confirming a **reheat** rather than measuring doneness. Every fetched\nrecord in both leaves targets the same plateau, **140 °F (60 °C)**, which is also the registry's\n`usda_safe_c`; the one source that pulls lower (120 °F, smoking-meat.com) does so because the ham\nis fully cooked and the endpoint it is judging is the crispness of the outer slices. Carryover is\ndeliberate but small: one US source pulls at **135 °F specifically to land at 140 °F**, and rests\nare 10–20 minutes.\n\nThe rind and fat layer are the method's working parts. They insulate the meat from oven or smoker\nair, they hold the diamond scoring that lets a glaze reach the surface, and they are what whole\ncloves are pressed into. A ham with the fat trimmed away behaves like a lean roast and dries at\nthe edges — which is why the two-stage records (boil-then-glaze, poach-then-bake) both exist:\nthey heat the interior in liquid first and use dry heat only for the crust.\n\n**Cut-form caution.** Two records in the corpus concern hams that are not this cut: a Caribbean\nChristmas ham baked from an **uncured** fresh leg to 145 °F, and ham *steaks*. Neither is used as\nevidence here. This hub covers the cured, pre-cooked, rind-on joint.",
   "ham": "Ham is the hind leg of the pig — the biceps femoris and surrounding muscles of the upper\nrear limb — cured with salt, smoke, or both before being sold. Unlike any other pork cut,\nham does not arrive raw: curing transforms it into a shelf-stable product with a firm,\ndense texture, a pronounced savoury-sweet flavour, and a characteristic mahogany rind\nonce cooked. The cut runs from the aitch bone (hip socket) down to and including the shank.\n\nTwo primary forms are sold for oven roasting:\n- **Fully cooked (ready-to-serve) ham** — already pasteurised during commercial smoking/curing.\n  The oven is used solely to heat it through (55–63 °C / 130–145 °F) and caramelise a glaze.\n- **Raw/uncooked ham (UK gammon, Nordic julskinka, Filipino fresh ham)** — must reach USDA\n  minimum 63 °C / 145 °F; Swedish practice specifies 72 °C / 162 °F for safety.\n\nThe bone runs along the centre of the shank end. Probe placement: insert from the thick cut\nend (butt end), angle to the geometric centre of the largest lean muscle section, clear of the\ncentral bone. Multiple muscle groups are separated by fat seams — avoid resting the tip in a\nfat seam.\n\nGlazing is universal across all traditions: sweet (maple syrup, brown sugar, honey, pineapple\njuice, fruit jam) balanced with a tangy counterpoint (mustard, citrus) and warm spice (cloves,\nallspice, cinnamon). The glaze is applied in the final 15–45 minutes at elevated heat (200–225 °C)\nand basted repeatedly to build a lacquered crust over the scored fat.",
   "pork_belly": "Pork belly (*svinekam* / *flæskesteg*, Danish; *Schweinebauch*, German; *pancetta tesa*, Italian; *lardo*, cured Italian; *bak kwa*, Chinese) is the ventral thoracic wall — the layered structure of skin, subcutaneous fat, *serratus ventralis* muscle, more fat, intercostal fat, and the *transversus abdominis* muscle layers. This layered structure is the defining anatomical feature: alternating lean muscle and fat sheets running in a horizontal laminar pattern across the cross-section. Skin-on pork belly has a thick dermis (*svær* / *Schwarte*) that — when properly scored and salted — blisters and crackles into one of the most texturally complex foods in all of cooking. Belly fat content is high (20–35%), making it one of the most forgiving pork cuts — it retains moisture at wide temperature ranges (65–80 °C).",
   "pork_leg": "Pork leg (*Schweinshaxe*, German/Austrian — actually this is hock/shank; *stinco di maiale*, Italian; *pernil*, Caribbean/Filipino; *jamón fresco*, Spanish) refers to two distinct retail cuts in different markets: (1) the whole fresh leg (4–8 kg), used for *pernil* and Spanish-style roasting; (2) the hock/shank — the lower joint of the leg where the *tibia/fibula* meet the ankle, heavily worked, collagen-dense, and the quintessential braise cut. The hock muscle is primarily composed of *flexor digitorum profundus* and *extensor* layers bound in thick collagen sheets. Both cuts need prolonged cooking to develop tenderness: whole leg roasts at 65–75 °C over 3–5 hours (low-and-slow); hock braised to 88–95 °C over 2–3 hours. MEATER probe into the thickest muscle mass, away from the bone.\n\n\nTarget internal temperature: **75–80 °C (167–176 °F)** for sliceable, tender; **85–90 °C (185–194 °F)** for pull-apart.",
@@ -130096,6 +130095,7 @@ const CUT_PROFILES = {
   "tjocka_revben": "Tjocka revben is the Swedish cut from the front of the pork rib cage, with substantial meat attached, sold bone-in and, for this entry, without skin. It is often sold *knäckt* (cracked to help portion it). Swedish sources distinguish it from posterior *tunna revben* and upper, loin-side *kamben*; similar English names alone do not establish equivalence. See [Svenskt Kött's glossary](https://svensktkott.se/om-kott/styckdetaljer/amerikanska-styckningsdetaljer-pa-svenska/) and [cut page](https://svensktkott.se/om-kott/styckdetaljer/gris/revbensspjall/).",
   "ground_pork": "Ground pork (minced pork) is made by grinding pork shoulder, belly, or a blend of primal trimmings. Standard ground pork is typically 70–80% lean with 20–30% fat; the higher fat content gives it a juicy, cohesive texture when cooked and makes it more forgiving than ground beef or turkey. Ground pork is the basis of countless preparations worldwide — from Italian ragù and Swedish köttbullar to Chinese dumplings and Mexican chorizo. Because grinding distributes any surface bacteria throughout the mass, the USDA minimum safe internal temperature is 71°C (160°F). Carryover is negligible.",
   "pork_sausage": "Pork sausage is a processed meat product made from finely minced or coarsely ground pork, seasoned with salt, pepper, herbs and spices, and encased in natural pig intestine or synthetic collagen casing. Fat content is typically 20–30%, essential for juiciness and flavour development. Fresh sausages require cooking to a minimum internal temperature of 71°C (160°F); pre-cooked or smoked sausages require only reheating to serving temperature (60–65°C). The casing is the critical monitoring challenge: if it ruptures early, moisture and fat escape and the sausage dries out. Probing from one end into the centre avoids puncturing the casing mid-body. Carryover is 2–3°C.\n\n\nTarget internal temperatures (grill):\n- Fully cooked/safe: **71–75 °C (160–167 °F)**\n- ⚠️ Do not pull before 71 °C — pork sausage must be fully cooked",
+  "cured_ham": "A cured ham is the pig's **hind leg** — the group of muscles around the femur (principally the\n*biceps femoris*, *semitendinosus* and *semimembranosus*), left whole, cured in brine or dry salt,\nusually smoked, and sold with the **rind and a layer of subcutaneous fat** still on. The curing\nis what defines the cut structurally: salt has drawn water out, the proteins are partly\ndenatured, and the meat is **already cooked and safe** before it reaches the kitchen. In the\nspiral-sliced form that dominates the English-language corpus, the leg has then been cut in one\ncontinuous spiral, so it is simultaneously a whole joint and a stack of slices.\n\nThat combination — already cooked, bone-in, rind-on, pre-sliced — makes this the only cut in the\nproject where the probe is confirming a **reheat** rather than measuring doneness. Every fetched\nrecord in both leaves targets the same plateau, **140 °F (60 °C)**, which is also the registry's\n`usda_safe_c`; the one source that pulls lower (120 °F, smoking-meat.com) does so because the ham\nis fully cooked and the endpoint it is judging is the crispness of the outer slices. Carryover is\ndeliberate but small: one US source pulls at **135 °F specifically to land at 140 °F**, and rests\nare 10–20 minutes.\n\nThe rind and fat layer are the method's working parts. They insulate the meat from oven or smoker\nair, they hold the diamond scoring that lets a glaze reach the surface, and they are what whole\ncloves are pressed into. A ham with the fat trimmed away behaves like a lean roast and dries at\nthe edges — which is why the two-stage records (boil-then-glaze, poach-then-bake) both exist:\nthey heat the interior in liquid first and use dry heat only for the crust.\n\n**Cut-form caution.** Two records in the corpus concern hams that are not this cut: a Caribbean\nChristmas ham baked from an **uncured** fresh leg to 145 °F, and ham *steaks*. Neither is used as\nevidence here. This hub covers the cured, pre-cooked, rind-on joint.",
   "fresh_ham": "A fresh (uncured, unsmoked) ham is the entire hind leg of a pig — bone-in, skin-on, with the femur and aitchbone running through the centre and a thick layer of subcutaneous fat under the rind. Anatomically distinct from cured (julskinka) or smoked ham preparations: the muscle has its full natural moisture, the rind is supple rather than salted-firm, and the fat has not been altered by brine. Roasting requires a long, moderate-temperature cook (140–160 °C) that drives the centre to safe temperature without overcooking the surface meat under the fat. Carryover is significant — 4–6 °C in a 4–6 kg leg — because the bone, fat and dense muscle store heat well. Rest 30–45 minutes loosely tented before carving.",
   "baltic_herring": "Baltic herring (Clupea harengus membras) is the subspecies of Atlantic herring native to the Baltic Sea. It is smaller and leaner than Atlantic herring but cooks in broadly the same manner: gutted whole or as butterflied \"flundra\" (butterfly-opened fillet). The classic Swedish preparation is strömmingsflundra — two butterflied halves folded together around a filling of parsley and leek, then baked or pan-fried. The smaller size (typically 15–25 cm, 40–80 g whole) means cooking times are very short. Probe placement, if used, targets the thickest part of the joined fillets. Recipe sources for this cut do not state probe temperatures; visual cues (opaque flesh, set skin) and time are used, and carryover is minimal. Baltic herring is the defining fish of the Nordic region and Scandinavian cuisine in particular.\n\n**Temperature evidence (verified 2026-10-25):** two fetched Swedish temperature guides give an explicit internal-temperature target naming this species. Kokaihop Magasin's fish list states *\"52 grader är den perfekta temperaturen för fisk, oavsett om det är torsk, lax, lake, strömming, marulk, rödspätta eller sej\"* — 52 °C as the perfect temperature for fish, with strömming named explicitly. Kungsberga's Viking temperature guide (compiled by Harald) lists **Sill/Strömming in the 52 °C group** of its fish table, and states that its table values are *final* temperatures: pull the fish 2–4 °C earlier — which matches this cut's `carryover_temp_c: 2`. Provenance is recorded honestly: the Kungsberga guide states it compiles from recepten.se, recept.com and the same kokaihop.se tillagningstemperaturer list, so the two pages are one Swedish guidance lineage, not two independent traditions. Both are doneness guidance for the species, not recipe pull-steps — **no source recipe for this cut states a probe temperature**. The 52 °C culinary target sits below the generic finfish safety line (63 °C / 145 °F); both are recorded without merging: US guidance publishes no species entry for Baltic herring/strömming as a cut (external-authority wall — exception #2 in the quality score), and generic finfish 63 °C guidance is not guidance for this cut. Per method: the 52 °C final (≈50 °C pull) applies as published to pan-fried, baked and grilled fish; the smoker leaf's 75–85 °C / 70–80 °C / 90–110 °C chamber figures remain process settings, not pull targets; boil and braise sources publish textural endpoints only.",
   "eel": "Eel (primarily European eel *Anguilla anguilla* and Japanese eel *Anguilla japonica*) is an elongated, highly oily freshwater and catadromous fish with a fat content of 15–25 g per 100 g — among the richest of any edible fish. For hot cooking the eel is typically used gutted and skinned whole, or butterflied (split along the back, backbone removed). The thick, fatty flesh is self-basting and forgiving of higher heat, but benefits from cooking to at least 63 °C to denature the collagen and render the fat fully. Raw eel blood contains ichthyotoxin (*ichthyohämotoxin*) which is destroyed by cooking above 58 °C — the fish is always served cooked, never raw. The skin is tough and rubbery when not crisped; hot smoking or grilling renders it pleasantly chewy. Eel is central to Japanese cuisine (*unagi kabayaki* — butterflied, grilled over charcoal with sweet soy glaze), Dutch cuisine (hot-smoked eel, *gerookte paling*), German and Polish cuisine, and is the iconic fish in Scandinavian stovetop box smoking (*abu-röken* / *röklåda*). Smoked eel was once the signature product of Swedish box smokers sold under the ABU brand. In Belgium *paling in 't groen* (eel in green herb sauce) is a classic Flemish dish. In England, jellied eels are a traditional East London street food. Probe placement: insert lengthwise along the body into the thickest cross-section behind the head.",
@@ -130271,7 +130271,6 @@ const CUT_PROFILES_SV = {
   "pork_jowl": "Fläskkäk / fläskkind är kind- och käkpartiet av grisen, som inkluderar både *buccinator* (samma muskel som `cheek`/`pork_cheek`) och det omgivande subcutana fettet och skinnet. Det tillagas vanligast på ett av två sätt: (1) **härdad som guanciale** — saltad och torkad in 3–4 veckor; (2) **tillagad färsk** — bräserad, pannstekt eller ugnsrostad.\n\nFärsk fläskkäk bräseras som fläskkind, till **85–90 °C (185–194 °F)** för spoon-tender. Eftertillagning: försumbar. Sond in i tjockaste köttmassan. Bryn i panna innan bräsering för optimal smakutveckling.",
   "pork_liver": "Fläsklever är ett stort, tvålobs organ som väger 1–1,5 kg hel (vanligtvis förskuret i 6–12 mm portioner). Det är mildare, lite sötare och mer delikat i textur än nötlever — en ljusare kastanjebrun snarare än djup mahogny, med en tunnare kapsel.\n\nPannstekning i smör vid hög värme är standardmetoden. Innertemperatur: **70–75 °C (158–167 °F)** för genomstekt. Eftertillagning: 2–3 °C. Sond insatt horisontellt in till mitten av skivan. Servera omedelbart. Klassiska beredningar: brittisk *liver and onions*, tysk *Leber Berliner Art*, nordisk *leverpannkaka*.",
   "pork_tongue": "Fläsktunga är den lille, mer delikate syskon till nöttunga — typiskt 250–400 g per tunga jämfört med 1,5–2 kg för nötkött. Strukturen är identisk: en enda tät lingual muskel lindad i ett tjockt, papill-täckt skin som måste skalas av efter tillagning.\n\nKoka i kryddad vätska 1,5–2 timmar; skala sedan skinnet av. Innertemperatur: **85–92 °C (185–198 °F)** för fullt genomstekt med mjuk konsistens. Eftertillagning: försumbar (kokt). Sond in i den tjockaste mittdelen av tungan. Kan sedan pannstekas, pressas eller kalls som pålägg.",
-  "cured_ham": "En härdad skinka är grisens **bakben** — muskelgruppen kring lårbenet (*biceps femoris*,\n*semitendinosus*, *semimembranosus*), hel, saltad eller lagad i saltlake, vanligen rökt och såld\nmed **svål och underhudsfett** kvar. Härdningen definierar snittet strukturellt: saltet har dragit\nut vatten, proteinerna är delvis denaturerade och köttet är **redan tillagat och säkert** innan\ndet når köket. I den spiral-skurna form som dominerar materialet är benet sedan skuret i en\nsammanhängande spiral, så det är på samma gång en hel stek och en stapel skivor.\n\nDet gör detta till projektets enda snitt där sonden bekräftar en **uppvärmning** i stället för att\nmäta doneness. Varje hämtat recept i båda bladen siktar på samma platå, **60 °C (140 °F)**, som\nockså är registrets `usda_safe_c`; den enda källan som drar lägre (49 °C, smoking-meat.com) gör det\neftersom skinkan redan är färdig och slutpunkten den bedömer är den yttre skivans krispighet.\nEftertillagning: 5 °C över 10–20 minuters vila; en källa drar vid 57 °C just för att landa på\n60 °C.\n\nSvålen och fettlagret är metodens arbetsdelar: de isolerar mot ugns- eller rökluft, de håller\nrutmönstret som glasyren fäster i, och de är där kryddnejlikorna trycks in. Innertemperatur:\n**60 °C (140 °F)**. Sond i den tjockaste köttmassan, borta från lårbenets kärna. Vila 10–20\nminuter täckt.",
   "ham": "Skinka är grisens bakben — *biceps femoris* och omgivande muskler i det övre bakbenet — härdad med salt, rökning eller båda. Till skillnad från alla andra fläsksnitt anländer härdad skinka inte rå: härdning omvandlar den till en hållbar produkt med karakteristisk salt-söt smakprofil.\n\nTillagningstemperaturer: **68–72 °C** för genomvarm, saftig; **60–65 °C** för varm men fortfarande djupt rosa (tunnare skärning). Eftertillagning: 3–4 °C. Sond in i tjockaste köttmassan, borta från lårbenets kärna. Vila 15 minuter täckt.",
   "pork_belly": "Fläskbuk (*svinekam* / *flæskesteg* danska; *Schweinebauch* tyska; *pancetta tesa* italienska) är den ventrala bröstkorgsväggen — den skiktade strukturen av hud, subcutant fett, interkostalsmuskler och intramuskulärt fett. Det är det fetaste snittet av grisen.\n\nDenna fettrikedom gör det idealisk för långsam tillagning (sous vide, bräsering, rök) som smälter ned fettet och bindväven till silkig textur, men också för hög-temperatur-rosting där svålen karameliserar till kris. Innertemperatur: **80–88 °C** för genomstekt (ugn/grill); **72–78 °C** för sous vide.",
   "pork_leg": "Fläsklåg (*Schweinshaxe* tyska/österrikiska; *stinco di maiale* italienska; *pernil* karibisk/filippinsksvenska; *jamón fresco* spanska) avser två distinkta detaljhandelsnitt i olika marknader: (1) den **bakre läggsteken** (tjockare, mer köttig; 800–1200 g); (2) det **främre knogstycket** (*Eisbein*, tunnare hud, kortare).\n\nBräsering eller ugnsrostning till **85–90 °C** är standardmålet för pull-apart. Eftertillagning: 3–4 °C (ugnsrostning); försumbar (bräsering). Sond in i tjockaste köttmassan, borta från benet.",
@@ -130288,6 +130287,7 @@ const CUT_PROFILES_SV = {
   "tjocka_revben": "Tjocka revben är den främre delen av grisens revbenkorg: de tjocka framre revbenen med ett kraftigt lager magkött kvar, ben-in och **utan hud**, oftast \"knäckta\" så spjället portjoneras lätt (Svenskt Kött; SV Wikipedia). Det är ett eget stycke, skilt från det som sitter bakom: de bakre revbenen blir tunna revben (\"även kallade 'spare ribs'\"), medan kamben/baby back sitter uppe mot länden. Amerikanska spare ribs kommer från sidan, men styckningsgräns och mängden kvarlämnat kött kan skilja sig; de är inte automatiskt samma detalj. Strukturen är fett, kollagen och knäckta ben: mörhet3/3, marmorering3/3 på Svenskt Köts egen skala. Erstattningsdetalj: bogblad.\n\n**Temperaturbeteende (verifierat2026-10-31):** den svenska vägledningen för detta stycke säger emot sig själv, och motsägelsen registreras i stället för att slås samman. Svenskt Kött anger70 °C som genomstekt innertemperatur (traditionellt hög värme med salvia/torkad ingefära, eller förkok45 min i buljong till70 °C före glasering, eller långsam stekning tills köttet \"hopfallande\"); deras eget ugnssrek drar vid80 °C. Den svenska BBQ-skolan (Grilltips) anger att stycket är \"klara redan vid75 °C, men först vid90 °C smälter fettet\" och lagar till90–95 °C, med dokumenterad kommentarsstrid (dra vid70 °C kontra90–93 °C), medan amerikansk låg-och-långsam-vägledning (Meathead) arbetar vid107 °C grop och accepterar~93 °C som kollagensignal hellre än termometer. Källorna beskriver olika tillagningsmål; uppgiften om fett vid 90 °C är inte en generell smältpunkt eller en garanti för en viss konsistens. USDA-säkerhet för fläsk (63 °C /145 °F) ligger under alla kulinariska ändpunkter för detta stycke, precis som för syskonstycena.",
   "ground_pork": "Malet fläsk (malet fläskkött) är gjort av malt bogfläsk, mage eller blandade primär-trimmings. Standard malet fläsk är typiskt 70–80 % magert med 20–30 % fett. Det höga fettinnehållet ger en saftig, sammanhängande textur vid tillagning och gör det mer tolerant mot lätt överkokning.\n\nUSDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond in i tjockaste delen av biff eller köttfärskula. Används i diverse köttbullar, sausageblandningar, köfte och löst kokat i saucer.",
   "pork_sausage": "Fläskkorv är en förädlad köttprodukt gjord av finhackat eller grovmalet fläsk, kryddat med salt, peppar, örter och kryddor, och inneslutet i naturliga svinintestiner eller syntetiska kollagenhöljen. Fettinnehållet är typiskt 20–30 %, nödvändigt för saftighet.\n\nGrillning, pannstekning och ugnsrostning är de vanligaste metoderna. Alla kräver att korven når minst 72 °C (160 °F) internt. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond insatt längsvis från änden in till mitten. Vila 3–5 minuter täckt.",
+  "cured_ham": "En härdad skinka är grisens **bakben** — muskelgruppen kring lårbenet (*biceps femoris*,\n*semitendinosus*, *semimembranosus*), hel, saltad eller lagad i saltlake, vanligen rökt och såld\nmed **svål och underhudsfett** kvar. Härdningen definierar snittet strukturellt: saltet har dragit\nut vatten, proteinerna är delvis denaturerade och köttet är **redan tillagat och säkert** innan\ndet når köket. I den spiral-skurna form som dominerar materialet är benet sedan skuret i en\nsammanhängande spiral, så det är på samma gång en hel stek och en stapel skivor.\n\nDet gör detta till projektets enda snitt där sonden bekräftar en **uppvärmning** i stället för att\nmäta doneness. Varje hämtat recept i båda bladen siktar på samma platå, **60 °C (140 °F)**, som\nockså är registrets `usda_safe_c`; den enda källan som drar lägre (49 °C, smoking-meat.com) gör det\neftersom skinkan redan är färdig och slutpunkten den bedömer är den yttre skivans krispighet.\nEftertillagning: 5 °C över 10–20 minuters vila; en källa drar vid 57 °C just för att landa på\n60 °C.\n\nSvålen och fettlagret är metodens arbetsdelar: de isolerar mot ugns- eller rökluft, de håller\nrutmönstret som glasyren fäster i, och de är där kryddnejlikorna trycks in. Innertemperatur:\n**60 °C (140 °F)**. Sond i den tjockaste köttmassan, borta från lårbenets kärna. Vila 10–20\nminuter täckt.",
   "fresh_ham": "En färsk (ej härdad, ej rökt) skinka är grisens hela bakben — med ben, skinnet kvar, med lårben och bäckenlben genom mitten och ett tjockt lager subcutant fett under svålen. Anatomiskt distinkt från härdad (julskinka) eller rökt skinka.\n\nTillaga i ugn vid 160–175 °C, ca 20–25 min per 500 g. Innertemperatur: **75–80 °C (167–176 °F)** för fullt genomstekt. Eftertillagning: 4–5 °C. Sond in i tjockaste köttmassan (*biceps femoris*), borta från lårbenets kärna. Vila täckt 15–20 minuter.",
   "baltic_herring": "Strömming (Clupea harengus membras) är underarten av atlantisk sill som är inhemsk i Östersjön. Den är mindre och magrare än atlantisk sill men tillagas i stort sett på samma sätt: hel rensad eller som strömmingsflundra (fjärilsöppnad filé). Den klassiska svenska beredningen är strömmingsflundra — två sammanfällda halvor med fyllning av persilja och purjolök, sedan gräddade eller stekta. Den mindre storleken (typiskt 15–25 cm, 40–80 g hel) innebär mycket korta tillagningstider. Sond placeras, om den används, i tjockaste partiet av de hopsatta filéerna. Receptkällor för detta stycke anger ingen sondtemperatur; visuella tecken (ogenomskinligt kött, satt skinn) och tid används, och eftervärmen är minimal. Strömming är den definierande fisken i det nordiska köket och i synnerhet den svenska mattraditionen.\n\n**Temperaturbevis (verifierat 2026-10-25):** två hämtade svenska temperaturguider anger ett explicit mål för arten. Kokaihop: *\"52 grader är den perfekta temperaturen för fisk … strömming …\"*. Kungsbergas temperaturguide listar **Sill/Strömming i 52 °C-gruppen** och anger att tabellvärdena är sluttemperaturer — ta ut fisken 2–4 °C tidigare, vilket stämmer med filens `carryover_temp_c: 2`. Båda sidorna har gemensamt ursprung (Kungsberga kompilerar delvis från samma kokaihop.se-tillagningstemperaturer) och räknas som en svensk vägledningskedja, inte två oberoende traditioner. Båda är donenessvägledning för arten, inte receptsteg — **ingen receptkälla för detta stycke anger sondtemperatur**. 52 °C-målet ligger under den generiska säkerhetslinjen för fisk (63 °C / 145 °F); båda registreras utan att slås samman: amerikansk vägledning har ingen artpost för strömming som stycke (extern myndighetsvägg — undantag #2), och generisk fiskvägledning gäller inte detta stycke. Per metod: 52 °C sluttemperatur (≈50 °C uttag) gäller publicerat för stekt, ugnstekt och grillad fisk; rökarens kamertemperaturer förblir processinställningar; kok- och bräserkällor anger bara texturändpunkter.",
   "eel": "Ål (*Anguilla anguilla* — europeisk ål; *Anguilla japonica* — japansk ål) är en avlång, mycket fet sötvattensfisk (fetthalt 15–25 g/100 g) som lagas gutted och skinnad hel eller fjärilsöppnad (ryggraden borttagd). Det tjocka, fettrika köttet är självbastar och förlåtande mot hög värme, men behöver nå minst 63 °C för att kollagenet ska brytas ned och fettet smälta. Råålblod innehåller ichthyotoxin som bryts ned vid tillagning. Skinnet är segt och gummiartat om det inte krispas upp — varmrökning och grillning ger behaglig tuggighet. Å är central i japansk matlagning (*unagi kabayaki* — fjärilsöppnad, grillad med söt sojaglasyr), holländsk matlagning (varmrökt paling), tysk och polsk matlagning samt det ikoniska valet för skandinavisk lådbrökning (*abu-röken* / *röklåda*). Rökt ål var signaturprodukten för ABU:s röklåda. I Belgien är *paling in 't groen* (ål i grön örtsås) ett klassiskt flamländskt recept. Sond placeras längsvis in i kroppen till tjockaste tvärsnittet bakom huvudet.",
@@ -130780,10 +130780,6 @@ const CUT_METHOD_PROFILES = {
     "slow_cooker": "Pork tongue cooked in an electric slow cooker is the same long-braise preparation as the stove-top method, executed in a sealed environment that holds the cooking liquid steady at 85–95 °C without monitoring. Because the tongue is small (250–400 g per tongue), the cook time is shorter than for beef tongue — 5–6 hours on Low or 3 hours on High is standard for a batch of 6 tongues. The peel-while-warm rule still applies; the skin must come off within 5–10 minutes of lifting from the cooker. Carryover is zero — the tongue stays at cooker temperature until removed. Sear the tongue base briefly in a hot skillet first if you want a deeper-flavoured stock, but it is optional.",
     "slow_cooker_sv": "Fläsktunga tillagad i en elektrisk slow cooker är samma lång-bräseringsmetod som spis-metoden, utförd i en förseglad miljö som håller tillagningsvätskan stabil vid 85–95 °C utan tillsyn.\n\nSlow cooker: LÅG i 6–7 timmar med kryddad fond och aromater. Innertemperatur: **85–92 °C (185–198 °F)** för fullt genomstekt. Eftertillagning: noll (slow cooker). Sond in i den tjockaste mittdelen av tungan. Skala skinnet av genast medan tungan fortfarande är varm."
   },
-  "cured_ham": {
-    "oven_roast": "A cured ham is the pig's **hind leg** — the muscles around the femur, with the skin and a\nsubcutaneous fat layer still on it — that has been cured in brine or dry salt and usually smoked.\nThat single fact governs the oven method: the meat is already **cooked and safe** before it goes\nin, so the oven is not doing cookery, it is doing two other jobs — bringing the interior up to a\npleasant eating temperature and caramelising a sugar glaze on the outside. The fat layer under\nthe skin is the method's other structural feature: it insulates the meat from the oven's air and\ngives the glaze something to sit on, which is why three of these four sources score it and stud\nit with cloves. Carryover is modest but deliberate — one US source pulls at **135 °F to land at\n140 °F**, and that is the whole temperature story of this cut: everything in the corpus aims at\nthe same 140 °F plateau, except the Danish record, which publishes no internal temperature at all\nand judges the ham by whether the glaze has gone golden.",
-    "smoker": "Smoking a cured ham is the corpus's clearest example of a method whose name promises more than it\ndelivers: the ham is **already cured and already smoked**, so \"double smoked\" means adding a\nsecond, thinner layer of wood smoke while reheating it. The cut is the pig's **hind leg** — cured\naround the femur, rind on, with a fat layer under the skin — and in the spiral-sliced form that\ndominates this leaf, the leg has been cut into a continuous spiral so the smoke and glaze can\nreach every slice. That cut is what the method exploits: the slices fan open, smoke deposits on\nsurfaces that would otherwise be interior, and the glaze runs down between them. Carryover is\nsmall and the sources treat it as such: two pull at 140 °F and one calls 120 °F its finish, and\nnone of them is chasing a doneness — they are chasing a surface."
-  },
   "ham": {
     "braise": "Braising is the older, wetter half of European ham cookery. A cured joint — gammon in Britain,\nKassler in Germany, ham hocks in either — is simmered in cider, beer or stock for one to three\nhours until a fork slides in, then either served from the pot or finished with a glaze in a hot\noven. Where the oven roast works by radiant heat on a scored, glazed surface, the braise works by\nliquid: it equalises salt, softens the cured muscle, and produces a cooking liquor that becomes the\ngravy. Ham takes to it well because curing has already done the tenderising that other braising\ncuts need hours of collagen breakdown for — which is also why the times here (1–3.5 hours) are\nshorter than a pork shoulder's.\n\nNone of the five fetched sources publishes an internal temperature: every one uses time plus a\ntenderness cue, and the two German sources give none at all beyond \"turn it now and then\".\n\n**Tradition note:** all five are British or German, i.e. one culinary group. The leaf records that\nplainly instead of treating five pages as five traditions.",
     "oven_roast": "Ham is the hind leg of the pig, cured with salt, smoke, or both before being sold. Unlike\nany other pork cut it arrives at the oven already transformed: curing has tightened the\nproteins, expelled moisture, and built a dense, savoury structure that raw pork leg does\nnot have. Oven roasting suits this cut because the enclosed radiant heat caramelises the\nscored fat surface and sets the glazed, lacquered crust that defines baked ham; the low,\nsteady oven temperature then heats the large dense mass to serving temperature without\ndrying out the firm interior. Carryover is modest — typically 2–4 °C — because the dense\nmass equalises heat slowly.\n\nProbe placement: insert from the thick cut end (butt end), angling the tip to the geometric\ncentre of the largest lean muscle section, at least 1 cm clear of the central bone. Ham has\nmultiple muscle groups separated by fat seams — the probe tip must not rest in a fat seam,\nwhich gives a lagging reading.",
@@ -130954,6 +130950,10 @@ const CUT_METHOD_PROFILES = {
     "grill_sv": "Grillning av fläskkorv över direkt värme är den klassiska beredningen för sommargrill, *braai* och gatukök globalt. Nyckelutmaningen är att förhindra att höljet brister innan insidan når säker temperatur: ett uppflammande eller för hög värme förkolnar höljet.\n\nMetod: medel indirekt värme (ca 180 °C) eller tvåzonsupplägg med grillocket stängt. Tillagningstid: 15–20 minuter med regelbunden vändning. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond insatt längsvis från änden in till mitten av korven. Vila 3–5 minuter.",
     "pan_fry": "Pan frying pork sausages on the stove provides a more controlled environment than grilling: the covered pan traps steam during the initial cooking phase, helping the interior reach safe temperature without burning the casing exterior. The standard technique is to place sausages in a cold pan with a small amount of water (2–3 tablespoons), bring to a gentle simmer covered for 5–7 minutes to cook through, then remove the lid and continue over medium heat to brown the casing in the rendered fat. This steam-then-fry sequence virtually eliminates casing rupture and produces evenly cooked, juicy sausages.\n\nAn alternative: start over medium-low heat in a thin film of oil, turning every 2–3 minutes for 15–20 minutes total. The low heat lets the fat render gradually through the intact casing, producing a deeply browned exterior. Probe from one end only, into the centre, avoiding the casing mid-body. Target: 71–75 °C (160–167 °F). Carryover: 2–3 °C.",
     "pan_fry_sv": "Pannstekning av fläskkorv ger en mer kontrollerad miljö än grillning: ett täckt lock fångar ånga under den inledande tillagningsfasen och hjälper insidan nå säker temperatur utan att bränna höljets utsida.\n\nStandardteknik: lägg korvar i kall panna med lite vatten (3–4 msk), täck och koka 8–10 minuter tills vätskan avdunstar; ta bort locket och brun vid medel värme ytterligare 5–8 minuter. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond längsvis in till mitten."
+  },
+  "cured_ham": {
+    "oven_roast": "A cured ham is the pig's **hind leg** — the muscles around the femur, with the skin and a\nsubcutaneous fat layer still on it — that has been cured in brine or dry salt and usually smoked.\nThat single fact governs the oven method: the meat is already **cooked and safe** before it goes\nin, so the oven is not doing cookery, it is doing two other jobs — bringing the interior up to a\npleasant eating temperature and caramelising a sugar glaze on the outside. The fat layer under\nthe skin is the method's other structural feature: it insulates the meat from the oven's air and\ngives the glaze something to sit on, which is why three of these four sources score it and stud\nit with cloves. Carryover is modest but deliberate — one US source pulls at **135 °F to land at\n140 °F**, and that is the whole temperature story of this cut: everything in the corpus aims at\nthe same 140 °F plateau, except the Danish record, which publishes no internal temperature at all\nand judges the ham by whether the glaze has gone golden.",
+    "smoker": "Smoking a cured ham is the corpus's clearest example of a method whose name promises more than it\ndelivers: the ham is **already cured and already smoked**, so \"double smoked\" means adding a\nsecond, thinner layer of wood smoke while reheating it. The cut is the pig's **hind leg** — cured\naround the femur, rind on, with a fat layer under the skin — and in the spiral-sliced form that\ndominates this leaf, the leg has been cut into a continuous spiral so the smoke and glaze can\nreach every slice. That cut is what the method exploits: the slices fan open, smoke deposits on\nsurfaces that would otherwise be interior, and the glaze runs down between them. Carryover is\nsmall and the sources treat it as such: two pull at 140 °F and one calls 120 °F its finish, and\nnone of them is chasing a doneness — they are chasing a surface."
   },
   "fresh_ham": {
     "oven_roast": "A fresh (uncured, unsmoked) ham is the entire hind leg of a pig — bone-in, skin-on, with the femur and aitchbone running through the centre and a thick layer of subcutaneous fat under the rind. Anatomically distinct from cured (julskinka) or smoked ham preparations: the muscle has its full natural moisture, the rind is supple rather than salted-firm, and the fat has not been altered by brine. Roasting requires a long, moderate-temperature cook (140–160 °C) that drives the centre to safe temperature without overcooking the surface meat under the fat. Carryover is significant — 4–6 °C in a 4–6 kg leg — because the bone, fat and dense muscle store heat well. Rest 30–45 minutes loosely tented before carving.",
@@ -132713,19 +132713,6 @@ const RECIPE_TITLES_INDEX = {
       "Slow-Cooker Saltkokt Grisetunga (inspired by Magnus Nilsson)"
     ]
   },
-  "cured_ham": {
-    "oven_roast": [
-      "Madens Verden (Holger Rørby Madsen, Denmark) — Glaseret skinke med sennep og brun farin",
-      "Sip and Feast (James Delmage, US) — Brown Sugar Glazed Spiral Ham",
-      "Spend With Pennies (Holly Nilsson, US) — How to Cook a Spiral Ham",
-      "Kawaling Pinoy (Lalaine Manalo, Philippines) — Filipino-style Pineapple-glazed Ham (*hamon*)"
-    ],
-    "smoker": [
-      "Meat Church (Matt Pittman, US) — Glazed Double Smoked Ham with Apple Cherry Habanero Bourbon Glaze",
-      "Hey Grill Hey (Susie Bulloch, US) — Twice Smoked Ham with Brown Sugar Honey Glaze",
-      "Smoking-Meat.com (Jeff Phillips, US) — Double Smoked Holiday Ham Glazed with Maple Syrup"
-    ]
-  },
   "ham": {
     "braise": [
       "Glazed Gammon — James Mackenzie",
@@ -133160,6 +133147,19 @@ const RECIPE_TITLES_INDEX = {
       "Sprøde pølser på pande (inspired by Madens Verden)",
       "Bratwurst in der Pfanne (inspired by ichkoche.at)",
       "Bratwurst in der Pfanne (inspired by Chefkoch.de)"
+    ]
+  },
+  "cured_ham": {
+    "oven_roast": [
+      "Madens Verden (Holger Rørby Madsen, Denmark) — Glaseret skinke med sennep og brun farin",
+      "Sip and Feast (James Delmage, US) — Brown Sugar Glazed Spiral Ham",
+      "Spend With Pennies (Holly Nilsson, US) — How to Cook a Spiral Ham",
+      "Kawaling Pinoy (Lalaine Manalo, Philippines) — Filipino-style Pineapple-glazed Ham (*hamon*)"
+    ],
+    "smoker": [
+      "Meat Church (Matt Pittman, US) — Glazed Double Smoked Ham with Apple Cherry Habanero Bourbon Glaze",
+      "Hey Grill Hey (Susie Bulloch, US) — Twice Smoked Ham with Brown Sugar Honey Glaze",
+      "Smoking-Meat.com (Jeff Phillips, US) — Double Smoked Holiday Ham Glazed with Maple Syrup"
     ]
   },
   "fresh_ham": {
@@ -136839,54 +136839,6 @@ const EXP_TREE = {
             "name_da": "Andet / indmad"
           },
           {
-            "id": "ham",
-            "name": "Ham",
-            "cuts": [
-              {
-                "id": "cured_ham",
-                "name": "Cured Ham (Pre-cooked)",
-                "slug": "cured_ham",
-                "doneness": [
-                  "heated_through"
-                ],
-                "name_sv": "Rökt skinka",
-                "name_da": "Saltet, forkogt skinke",
-                "recommended_doneness": "heated_through",
-                "supported_methods": [
-                  "oven_roast",
-                  "smoker"
-                ],
-                "usda_safe_c": 60,
-                "usda_safe_f": 140,
-                "rest_time_min": 10,
-                "rest_time_max": 20,
-                "carryover_temp_c": 5
-              },
-              {
-                "id": "fresh_ham",
-                "name": "Fresh Ham",
-                "slug": "fresh_ham",
-                "doneness": [
-                  "medium",
-                  "well_done"
-                ],
-                "name_sv": "Färsk skinka",
-                "name_da": "Skinkesteg",
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "oven_roast"
-                ],
-                "usda_safe_c": 63,
-                "usda_safe_f": 145,
-                "rest_time_min": 15,
-                "rest_time_max": 30,
-                "carryover_temp_c": 5
-              }
-            ],
-            "name_sv": "Skinka",
-            "name_da": "Skinke"
-          },
-          {
             "id": "roasts",
             "name": "Roasts",
             "cuts": [
@@ -137336,6 +137288,54 @@ const EXP_TREE = {
             ],
             "name_sv": "Färs",
             "name_da": "Hakket kød"
+          },
+          {
+            "id": "ham",
+            "name": "Ham",
+            "cuts": [
+              {
+                "id": "cured_ham",
+                "name": "Cured Ham (Pre-cooked)",
+                "slug": "cured_ham",
+                "doneness": [
+                  "heated_through"
+                ],
+                "name_sv": "Rökt skinka",
+                "name_da": "Saltet, forkogt skinke",
+                "recommended_doneness": "heated_through",
+                "supported_methods": [
+                  "oven_roast",
+                  "smoker"
+                ],
+                "usda_safe_c": 60,
+                "usda_safe_f": 140,
+                "rest_time_min": 10,
+                "rest_time_max": 20,
+                "carryover_temp_c": 5
+              },
+              {
+                "id": "fresh_ham",
+                "name": "Fresh Ham",
+                "slug": "fresh_ham",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "name_sv": "Färsk skinka",
+                "name_da": "Skinkesteg",
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145,
+                "rest_time_min": 15,
+                "rest_time_max": 30,
+                "carryover_temp_c": 5
+              }
+            ],
+            "name_sv": "Skinka",
+            "name_da": "Skinke"
           }
         ],
         "name_sv": "Gris",
@@ -140698,16 +140698,6 @@ const EXP_DONENESS_OPTIONS = {
     "safety_level": "safe",
     "name_da": "Færdigtilberedt"
   },
-  "heated_through": {
-    "value": "heated_through",
-    "name": "Heated Through",
-    "icon": "♨️",
-    "description": null,
-    "temp_c": 60,
-    "temp_f": 140,
-    "safety_level": "safe",
-    "name_da": "Gennemvarmet"
-  },
   "crispy": {
     "value": "crispy",
     "name": "Crispy",
@@ -140717,6 +140707,16 @@ const EXP_DONENESS_OPTIONS = {
     "temp_f": 195,
     "safety_level": "safe",
     "name_da": "Sprød"
+  },
+  "heated_through": {
+    "value": "heated_through",
+    "name": "Heated Through",
+    "icon": "♨️",
+    "description": null,
+    "temp_c": 60,
+    "temp_f": 140,
+    "safety_level": "safe",
+    "name_da": "Gennemvarmet"
   },
   "tender": {
     "value": "tender",
@@ -141300,6 +141300,9 @@ const EXP_RECIPE_INDEX = {
   "pork_sausage-grill": "pork/ground/pork_sausage-grill.md",
   "pork_sausage-pan_fry": "pork/ground/pork_sausage-pan_fry.md",
   "pork_sausage": "pork/ground/pork_sausage.md",
+  "cured_ham-oven_roast": "pork/ham/cured_ham-oven_roast.md",
+  "cured_ham-smoker": "pork/ham/cured_ham-smoker.md",
+  "cured_ham": "pork/ham/cured_ham.md",
   "fresh_ham-oven_roast": "pork/ham/fresh_ham-oven_roast.md",
   "fresh_ham": "pork/ham/fresh_ham.md",
   "cheek-braise": "pork/offal/cheek-braise.md",
@@ -141340,9 +141343,6 @@ const EXP_RECIPE_INDEX = {
   "tjocka_revben-sous_vide": "pork/ribs/tjocka_revben-sous_vide.md",
   "tjocka_revben-steam": "pork/ribs/tjocka_revben-steam.md",
   "tjocka_revben": "pork/ribs/tjocka_revben.md",
-  "cured_ham-oven_roast": "pork/roasts/cured_ham-oven_roast.md",
-  "cured_ham-smoker": "pork/roasts/cured_ham-smoker.md",
-  "cured_ham": "pork/roasts/cured_ham.md",
   "ham-braise": "pork/roasts/ham-braise.md",
   "ham-oven_roast": "pork/roasts/ham-oven_roast.md",
   "ham-slow_cooker": "pork/roasts/ham-slow_cooker.md",
@@ -153129,7 +153129,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "683";
+const PANEL_VERSION = "684";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

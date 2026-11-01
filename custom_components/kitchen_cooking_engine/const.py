@@ -17,7 +17,7 @@ SUPPORTED_LANGUAGES = ("en", "sv", "da")
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "683"
+PANEL_VERSION = "684"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
