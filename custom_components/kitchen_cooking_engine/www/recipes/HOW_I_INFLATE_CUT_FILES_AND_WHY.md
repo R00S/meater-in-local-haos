@@ -141,6 +141,18 @@ The number is a reading of what is left to earn. It is not a measure of how much
 
 ---
 
+## Pattern 11: English-only searching presented as cuisine coverage
+
+**What happens:** A leaf or a cut file needs Group A or Group C (or D) sources. The agent searches in English, gets international or diaspora versions of the dish — or an English-language page from a non-English site — stores the recipe under that tradition's name, and records the culinary group as covered. When English searching finds nothing, the group is recorded as absent instead.
+
+**Why this inflates:** Culinary-group coverage is a claim about what cooks *in that tradition* do. Those cooks publish in Japanese, Chinese, Thai, Hindi, Kannada, Swahili, Arabic, Brazilian Portuguese — and an English query is answered disproportionately by people writing for readers **outside** the tradition, whose substituted ingredients, converted temperatures and renamed cuts are precisely why the recipe is in English. The stored source then does double duty: it counts as tradition coverage while describing the tradition's international variant, so the row is earned by evidence that never touched the tradition. The defect repeats one level down: a regional cuisine searched only in the country's national/official language (Cantonese cooking via Mandarin terms; Karnataka cooking via Hindi instead of Kannada) yields the capital-city or cosmopolitan version rather than the regional one the row claims to cover. Absence claims are worse than coverage claims, because "no Group A source exists for this cut" produced by English-only searching is Pattern 3 wearing a new hat — an unverified assumption reported as a researched conclusion.
+
+**The fix:** `RECIPE_COLLECTION_TOR.md`, "Search in the language the cuisine is written in" — decide the language of the tradition first, translate the cut and method terms from a real lookup, search in that language, treat English results for a non-English tradition as a sign the query is wrong, and log the language and terms in the leaf's search log. `RECIPE_COLLECTION_TOR.md`, "Names for this cut in other languages", is where those looked-up names are kept.
+
+**Added:** 2026-11-01, after a review of the research instructions found no rule governing the language of the search. No per-file examples recorded — the failure is invisible in the file itself, because a westernised recipe stored under a tradition looks exactly like an authentic one; it only shows up when the search terms are examined.
+
+---
+
 ## Summary table
 
 | Pattern | Root cause | Typical overestimate |
@@ -155,6 +167,7 @@ The number is a reading of what is left to earn. It is not a measure of how much
 | Incomplete gap tables | Unchecked criteria marked as passing | +1 to +3 |
 | Number momentum | Anchoring to prior inflated number | +0 to +2 per session |
 | Number precalculation | Steering work by a projected number | variable; hides legitimate drops |
+| English-only searching | Query language never fixed to the cuisine | group marked covered on diaspora sources; false absence claims |
 
 **Conservative estimate of total inflation across this branch: +15 points per hub file (conservative; some files may be inflated by more).**
 

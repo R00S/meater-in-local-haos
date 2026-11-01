@@ -223,6 +223,13 @@ Sites that connect but return homepage, profile, GDPR gate, or a different recip
 
 Use this matrix to select culturally diverse sources for each leaf file.
 
+> **Pair every tradition with its language, not only its site.** Search in the
+> language that tradition's cooks publish in; an English query returns
+> international or diaspora adaptations instead of the authentic recipe. See
+> `RECIPE_COLLECTION_TOR.md`, "Search in the language the cuisine is written in",
+> for the full rule, and "Names for this cut in other languages" for the cut
+> names to search with.
+
 | Tradition | Best source(s) |
 |-----------|---------------|
 | British / English | bbcgoodfood.com (via IA), nigella.com |
@@ -401,6 +408,16 @@ Search: web_search site:cookpad.com/id {nama resep}
    The Food Lab 2015, Le Guide Culinaire 1903, etc.) do not require web_fetch.
    Cite the author, book title, publisher, and year. Book citations are immune
    to network blocking and are the gold standard for provenance.
+
+6. **Search in the language the cuisine is written in.** English queries for a
+   non-English tradition return international/diaspora adaptations — the wrong
+   evidence for Group A, C and D coverage — and the same applies within a
+   country, where a regional cuisine searched only in the national language
+   (Cantonese in Mandarin terms, Karnataka in Hindi instead of Kannada) returns
+   the cosmopolitan version. Fix the query language before changing any
+   criterion. Full rule: `RECIPE_COLLECTION_TOR.md`, "Search in the language the
+   cuisine is written in". Never claim a group is absent after searching only in
+   English.
 
 ---
 

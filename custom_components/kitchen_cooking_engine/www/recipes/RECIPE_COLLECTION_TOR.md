@@ -198,6 +198,20 @@ proteins have been fully researched across culinary traditions.
 Every leaf file must open with these two sections, in this order, before any
 analysis sections.
 
+> **Write the description first.** `## Cut profile` is not internal notes.
+> `custom_components/kitchen_cooking_engine/generate_frontend_data.py` extracts it
+> into `CUT_METHOD_PROFILES`, and `## Styckesprofil` into the Swedish `*_SV`
+> equivalents, which the Home Assistant panel renders for the end user — it is the
+> first thing a person reads about this cut and this method. The same is true one
+> level up: a cut file's `## Cut profile` / `## Styckesprofil` is shown for the
+> cut, and where a cut has no overview file, the leaf's profile is used as the
+> cut's description. So when a cut file or leaf is **created**, write a real 3–6
+> sentence description **before** the collection work, and never leave a
+> placeholder, an empty section, or a copied sibling profile standing while the
+> research continues. A description deferred is user-visible unfinished work in
+> the GUI — it is the part of the file the end user actually sees, and it is
+> finished long before the research that happens behind it.
+
 ### `# {Cut} × {Method} — Recipe Temperature Research`
 
 Top-level title only.
@@ -368,6 +382,104 @@ recall of "what a recipe roughly contains" is not an acceptable source for new w
 
 ---
 
+## Search in the language the cuisine is written in
+
+**The rule: build the search in the language the cooks of that tradition actually
+publish in — not in English, and not automatically in a country's official
+language either, when the cuisine belongs to a regional one.**
+
+An English query is answered mostly by English-language pages: international,
+diaspora and "westernised" versions of a dish written for readers abroad —
+ingredients swapped for what a foreign supermarket stocks, temperatures
+converted, cut names replaced by the nearest American or British one. For a
+Group B tradition that is native material, because English-language food media
+*is* one of its traditions. For Groups A, C and D it is the wrong evidence: the
+leaf would then record how somebody **outside** the tradition cooks the dish as
+though it were the tradition's own practice.
+
+The same failure happens one level down, where the language of the country is
+not the language of the cuisine. A cuisine belonging to a region whose language
+differs from the national or official one — Cantonese cooking searched only with
+Mandarin terms, or Karnataka cooking searched only in Hindi instead of Kannada —
+yields the cosmopolitan, capital-city or differently-inflected version of the
+dish instead of the regional one. The recipe is real, it is authentic to *a*
+reader, and it still does not cover the row it was stored under. Treat "which
+language I searched in" as part of the evidence, never as an implementation
+detail.
+
+**Procedure**
+
+1. Before searching, decide which language(s) that tradition's recipes are
+   published in — usually more than one, and not always the national one.
+   `SOURCE_SURVEY.md`, "Recommended source matrix by cuisine / language",
+   pairs a tradition with a site; pair it with the language as well.
+2. Translate the **cut** name and the **method** name into that language from a
+   real lookup — the cut name especially. Guessing a foreign cut name is
+   explicitly named as data degradation in `CUT_FILE_RESEARCH_TOR.md`, and the
+   looked-up names already live in the cut file's language index (next section).
+3. Search with those native terms, then fetch the page and check that it is
+   written in the target language and is about the dish you set out to find.
+4. **English results for a non-English tradition are a warning sign, not a
+   result.** If the pages keep coming back Anglo-American or diaspora-adapted,
+   the query is wrong — change the terms, not the criterion and not the culinary
+   group being covered.
+5. Log the search language and the actual terms in the leaf's
+   `## Collection status and search log`, so a later agent can see the search was
+   conducted in-language rather than assumed.
+6. **Absence claims need an in-language search behind them.** "No Group A source
+   exists for this cut" is a demonstrated result only after searching in the
+   languages of Group A; an English-only search that finds nothing demonstrates
+   nothing. This is what separates wall evidence under "Hard-wall exceptions"
+   below from an unverified assumption (Pattern 3 in
+   `HOW_I_INFLATE_CUT_FILES_AND_WHY.md`).
+
+This rule also applies to method discovery and to cut discovery (Steps 2 and 2b
+below): the method a tradition uses for this cut is named in that tradition's
+language too.
+
+---
+
+## Names for this cut in other languages
+
+**The rule: every name the research turns up for this cut in another language is
+written into the cut file — looked up in a real source, never guessed, each with
+what the source says it is.**
+
+Names are the search keys for the next pass (the section above), the evidence
+behind an identity-wall exception, and the thing that stops an agent claiming a
+translation it invented. A name you cannot cite is not a name.
+
+Where it goes, in `{cut_name}.md`:
+
+1. `### Names for this cut in other languages — reference index` — a table, one
+   row per name, with the columns:
+   `| Group | Language / region | Name | What the source says it is | Status |`
+   The `Group` is the culinary group (A/B/C/D) the language belongs to.
+2. `Status` uses this closed vocabulary — the status is the point of the table:
+   - `this cut` — the source's cutting lines match this cut
+   - `named comparator` — a named cut of another tradition, anatomically useful,
+     not proven identical
+   - `comparator` — position or cutting lines not stated by the source
+   - `generic only` — an umbrella term ("ribs", *costilla*) with no cutting line
+   - `reverse polarity` — the same body region valued the opposite way (e.g. the
+     premium Thai rib is the one nearest the spine)
+   - `not a match` — reads like a translation but describes something else
+   - `unverified` — the name is attested but the definition could not be read
+   A short qualifier after a comma is allowed (`generic, belly-oriented`); do
+   not invent additional statuses.
+3. The evidence — quotations, URLs, and the caveats about skin, bone and cutting
+   lines — stays in prose sections beneath the index, in the cut file. The index
+   is the summary; the prose underneath is the citation. Names never live only
+   in a leaf: a leaf that leans on a cross-language equivalence names the term
+   and points at the cut file's index, and must not assert an equivalence the
+   cut file does not carry.
+
+Worked example: `pork/ribs/tjocka_revben.md`. A cut whose names have never been
+researched is missing this section, and that is unfinished research, not an
+optional extra.
+
+---
+
 ## How to research a cut
 
 Use this protocol every time you are tasked with creating leaves for a cut that
@@ -420,6 +532,12 @@ If you encounter a real recipe for a cut × method that has no entry in
 `cooking_data.py`, add both the `MeatCut` entry and the leaf file. This is
 as expected as finding a new method for an existing cut.
 
+When you create the new `{slug}.md` cut file, write its GUI-visible parts in the
+same act: the `## Cut profile` / `## Styckesprofil` description (the text the
+panel shows for the cut — see "Mandatory collection sections") and, from the
+research you just did, the "Names for this cut in other languages" index. A cut
+file created without them is a stub that looks finished to the end user.
+
 ### Step 3 — For every method you find real recipes for
 
 1. If the method is already in `supported_methods`: create the leaf file for it.
@@ -449,7 +567,9 @@ Before the collection portion of a leaf is committed, verify:
 
 - [ ] File is named `{cut_name}-{cooking_method}.md`
 - [ ] File covers exactly one cut × one method (no combined-method content)
-- [ ] `## Cut profile` is present and contains no temperatures
+- [ ] `## Cut profile` is present, contains no temperatures, and was written for
+      this file when it was created (real description, no placeholder, not copied
+      from a sibling leaf)
 - [ ] 4–6 source recipes are present
 - [ ] Each source has a verifiable citation (URL or bibliographic reference)
 - [ ] Each source comes from a different culinary tradition (no two from the same)
