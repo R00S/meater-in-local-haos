@@ -26,7 +26,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-improvement_potential: 2287
+improvement_potential: 1807
 cooking_methods_researched: 1
 quality_assessed: 2026-10-27
 rest_time_min: 10
@@ -41,7 +41,7 @@ Short ribs are cut from the lower portion of the beef rib cage — either the ch
 
 The bone runs along the underside of each rib section; in the English cut (bone-in cross-cut pieces), the bone and surrounding marrow are visible in cross-section. English-cut short ribs are the standard braising and slow-cooker format. Flanken-cut short ribs slice across multiple bones into thin strips — the Korean galbi format — and are suited to quick grilling rather than long braising. Boneless short ribs are sometimes sold as "beef spare ribs"; they cook similarly to bone-in but finish slightly faster because the bone acts as a heat buffer.
 
-Korean short rib preparations (galbi-jjim for braising, galbi for grilling) treat the cut as a secondary category in `cooking_data.py` under the name `short_ribs` with method `grill`. The temperatures and methods differ substantially from the Western braising tradition: bone-in short ribs for galbi are sliced thinly across the ribs and marinated overnight in a soy-pear-sesame brine before grilling to medium-rare, which corresponds to a different doneness target than the braised pulled preparation.
+Korean short rib preparations (galbi-jjim for braising, galbi for grilling) cook the same cut to a different target and by different methods than the Western braising tradition. Galbi is thin-sliced across the bone and grilled to medium-rare; galbi-jjim is braised to tenderness: bone-in short ribs for galbi are sliced thinly across the ribs and marinated overnight in a soy-pear-sesame brine before grilling to medium-rare, which corresponds to a different doneness target than the braised pulled preparation.
 
 ## Styckesprofil
 
@@ -49,7 +49,7 @@ Revbensspjäll skärs från den nedre delen av nötdjurets revbenskorg — antin
 
 Benet löper längs undersidan av varje revbensdel; i det engelska snittet (benfasta tvärsnittsdelar) syns benet och det omgivande märget i tvärsnittet. Engelskt snittade revbensspjäll är standardformatet för brässering och slow cooker. Flanken-snittade revbensspjäll skär tvärs över flera ben i tunna strimlor — det koreanska galbi-formatet — och lämpar sig för snabb grillning snarare än lång brässering. Benfria revbensspjäll säljs ibland som "nötspareribs"; de tillagas på liknande sätt som med ben men blir klara något snabbare eftersom benet fungerar som värmebuffert.
 
-Koreanska revbensspjällstillagningar (galbi-jjim för brässering, galbi för grillning) behandlar styckdelen som en sekundär kategori i `cooking_data.py` under namnet `short_ribs` med metoden `grill`. Temperaturerna och metoderna skiljer sig väsentligt från den västerländska bräseringstraditionen: benfasta revbensspjäll för galbi skärs tunt tvärs över revbenen och marineras över natten i en soja-päron-sesamlake innan de grillas till medium-rare, vilket motsvarar ett annat mörhetsmål än den bräserade, isärpullsade varianten.
+Koreanska revbensspjällstillagningar (galbi-jjim för brässering, galbi för grillning) tillagar samma styckdel mot ett annat mål och med andra metoder än den västerländska bräseringstraditionen. Galbi skärs tunt tvärs benet och grillas till medium-rare; galbi-jjim bräseras till möra: benfasta revbensspjäll för galbi skärs tunt tvärs över revbenen och marineras över natten i en soja-päron-sesamlake innan de grillas till medium-rare, vilket motsvarar ett annat mörhetsmål än den bräserade, isärpullsade varianten.
 
 ## Research files by cooking method
 
@@ -59,18 +59,19 @@ Koreanska revbensspjällstillagningar (galbi-jjim för brässering, galbi för g
 | Oven roast | [short_ribs-oven_roast.md](./short_ribs-oven_roast.md) | ⚠️ Partial — 5 records, 4 with numbers, **distinct-tradition gate not met** (2026-10-27) |
 | Oven broil | — | ⬜ Owed. Discovered 2026-10-27: Korean LA galbi is a 2–3 minute oven-broiler method, fetched but not yet written up as its own leaf |
 | Slow cooker | — | ⬜ Owed |
-| Smoker | — | ⬜ Owed |
+| Smoker | [short_ribs-smoker.md](./short_ribs-smoker.md) | ⚠️ Partial — 5 recipes (B/B/C/D), Group A missing, 3 numeric endpoints (2026-11-01) |
 
 ## Improvement potential
 
-2287
+1807
 
 Historical readings: 19 / 20 (former 0–20 system, assessed 2026-10-27; not comparable with the new scale).
 
 ### Improvement priorities
 
-1. **−1** · Group C: this is the only row the table charges, and the honest outcome may be a searched-negative plus a user-approved wall — the cut is a European/North American barbecue identity.
-2. **Owed leaves** · `oven_broil` (one lead already fetched), `slow_cooker`, `smoker`. Each needs 4 records from distinct traditions; the floor for this cut is four leaves and it does not yet have four.
-3. **Oven-roast diversity** · replace the second US record with a non-Group-B source when one can be fetched.
+1. **Group A** — find a Korean, Japanese or Chinese smoked short rib recipe with full ingredient quantities. 만개의레시피 and similar Korean recipe sites are the first place to look; the current negative is a search result, not a wall.
+2. **Owed leaves** — `oven_broil`, `slow_cooker`. The cut declares five methods and holds three leaves; each owed leaf needs 4–6 sources from distinct traditions.
+3. **Oven-roast diversity** — replace the second US record in `short_ribs-oven_roast.md` with a non-Group-B source when one can be fetched.
+4. **Braise leaf** — it conforms, but the newest smoker band (93–98 °C) should be compared with the braise band and any disagreement recorded.
 
 *Improvement potential is recalculated each time a new method leaf is added or the cut profile is updated.*
