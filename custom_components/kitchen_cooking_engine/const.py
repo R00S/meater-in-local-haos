@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 1 Nov 2026
-Last Change: v0.10.3.0 - umbrella IMPROVE_CUT_FILES.md replaces the monolithic version (queues 2 cut files per pass, points at CUT_FILE_RESEARCH_TOR, RECIPE_COLLECTION_TOR, RECIPE_ANALYSIS_TOR, SOURCE_SURVEY, IMPROVEMENT_POTENTIAL_SYSTEM); PR #124 merged with main (d71146d2)
+Last Change: v0.10.4.0 - improvement potential system clarified (base/threshold reading, per-leaf thresholds, leaf-scoped description row, per-language deductions, temperature reasoning required for the behaviour rows); fourteen cut files re-rated from scratch under the locked rules
 """
 
 DOMAIN = "kitchen_cooking_engine"

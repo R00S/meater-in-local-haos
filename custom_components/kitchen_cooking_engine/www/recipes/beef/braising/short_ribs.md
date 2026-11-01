@@ -26,7 +26,7 @@ doneness:
   max_f: 205
   usda_safe: true
   recommended: true
-improvement_potential: 2159
+improvement_potential: 2287
 cooking_methods_researched: 1
 quality_assessed: 2026-10-27
 rest_time_min: 10
@@ -63,7 +63,7 @@ Koreanska revbensspjällstillagningar (galbi-jjim för brässering, galbi för g
 
 ## Improvement potential
 
-2159
+2287
 
 Historical readings: 19 / 20 (former 0–20 system, assessed 2026-10-27; not comparable with the new scale).
 

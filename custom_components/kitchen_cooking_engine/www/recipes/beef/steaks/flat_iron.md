@@ -60,7 +60,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-improvement_potential: 575
+improvement_potential: -33
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 5
@@ -88,7 +88,7 @@ Flat iron steak tas från infraspinatus i skulderbladet, separerad från det cen
 - [Sous Vide](./flat_iron-sous_vide.md)
 ## Improvement potential
 
-575
+-33
 
 Historical readings: 11 / 20 (former 0–20 system, assessed 2026-04-26; not comparable with the new scale).
 

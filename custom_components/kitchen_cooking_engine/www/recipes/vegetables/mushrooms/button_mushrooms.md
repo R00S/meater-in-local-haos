@@ -21,7 +21,7 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
-improvement_potential: 2130
+improvement_potential: 2066
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 0
@@ -47,7 +47,7 @@ Champinjoner (*Agaricus bisporus*, omogen vit form) på het grill: ytvattnet avd
 - [Sauté](./button_mushrooms-saute.md)
 ## Improvement potential
 
-2130
+2066
 
 Historical readings: 9 / 20 (former 0–20 system, assessed 2026-04-26; not comparable with the new scale).
 

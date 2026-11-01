@@ -56,7 +56,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-improvement_potential: 2583
+improvement_potential: 2551
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 rest_time_min: 10
@@ -91,7 +91,7 @@ Standardmetod: sear fettlocket nedåt i het torr panna tills renderat, sedan sea
 
 ## Improvement potential
 
-2583
+2551
 
 Historical readings: 9 / 20 (former 0–20 system, assessed 2026-04-27; not comparable with the new scale).
 

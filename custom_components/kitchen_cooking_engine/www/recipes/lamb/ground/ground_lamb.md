@@ -25,7 +25,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-improvement_potential: 2303
+improvement_potential: 2495
 cooking_methods_researched: 0 # Survey 2026-10-24 found +2 methods (oven_bake, simmer, both registered with leaves), but enum inventory still has plausible unverified leads (braise, saute, air_fryer, sous_vide, and dumpling-bound mince preparations) — stays 0 until collected or ruled out.
 quality_assessed: 2026-10-24
 rest_time_min: 2
@@ -57,7 +57,7 @@ Tillagning tills köttet är helt genomstekt och lätt brynnat. Innertemperatur:
 - [Simmer](./ground_lamb-simmer.md) — ⚠️ partial, 1 fetched source (IN keema matar) — **new method 2026-10-24**
 ## Improvement potential
 
-2303
+2495
 
 Historical readings: 8 / 20 (former 0–20 system, assessed 2026-10-24; not comparable with the new scale).
 

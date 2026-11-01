@@ -29,7 +29,7 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
-improvement_potential: 2290
+improvement_potential: 2306
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 0
@@ -54,7 +54,7 @@ Morötter (*Daucus carota*) sauterade i het panna — kinesiska wokade matchstic
 - [Sauté](./roasted_carrots-saute.md)
 ## Improvement potential
 
-2290
+2306
 
 Historical readings: 9 / 20 (former 0–20 system, assessed 2026-04-26; not comparable with the new scale).
 

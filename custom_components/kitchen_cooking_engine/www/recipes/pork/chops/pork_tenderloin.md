@@ -34,7 +34,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-improvement_potential: 1583
+improvement_potential: 1423
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-26
 rest_time_min: 5
@@ -67,7 +67,7 @@ Pannstekning, grillning, ugnsrostning och sous vide ger alla bra resultat. Alla 
 - [Sous Vide](./pork_tenderloin-sous_vide.md)
 ## Improvement potential
 
-1583
+1423
 
 Historical readings: 8 / 20 (former 0–20 system, assessed 2026-04-26; not comparable with the new scale).
 

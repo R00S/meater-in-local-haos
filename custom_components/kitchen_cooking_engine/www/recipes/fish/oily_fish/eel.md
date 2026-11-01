@@ -34,7 +34,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-improvement_potential: 1158
+improvement_potential: 870
 cooking_methods_researched: 1
 quality_assessed: 2026-05-31
 rest_time_min: 2
@@ -61,7 +61,7 @@ Eel (primarily European eel *Anguilla anguilla* and Japanese eel *Anguilla japon
 
 ## Improvement potential
 
-1158
+870
 
 Historical readings: 20 / 20 (former 0–20 system, assessed 2026-05-31; not comparable with the new scale).
 

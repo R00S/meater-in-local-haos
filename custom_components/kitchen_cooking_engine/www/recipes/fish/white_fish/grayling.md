@@ -35,7 +35,7 @@ doneness:
   max_f: 154
   usda_safe: true
   recommended: true
-improvement_potential: 1966
+improvement_potential: 1838
 cooking_methods_researched: 1
 quality_assessed: 2026-10-23
 rest_time_min: 0
@@ -65,7 +65,7 @@ All six declared methods now have a leaf file. None of the leaves yet meets the 
 
 ## Improvement potential
 
-1966
+1838
 
 Historical readings: 12 / 20 (former 0–20 system, assessed 2026-10-23; not comparable with the new scale).
 
