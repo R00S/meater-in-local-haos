@@ -783,8 +783,8 @@ def build_experimental_tree(base_dir):
     """Build the EXP_TREE and EXP_DONENESS_OPTIONS from KCE:CUT tags.
 
     Reads every ``<!-- KCE:CUT ... -->`` tagged cut overview file and assembles
-    the same JSON structure that MEAT_CATEGORIES uses, so the experimental
-    MEATER path is driven entirely by the KCE:CUT recipe files. Do not add a
+    the EXP_TREE structure (categories > meats > cut types > cuts), so the
+    MEATER+ path is driven entirely by the KCE:CUT recipe files. Do not add a
     Python data module for cuts; edit the recipe files instead.
 
     Returns:
@@ -956,7 +956,7 @@ def build_experimental_tree(base_dir):
 
             meat_obj["_cut_types"][ct_id]["cuts"].append(cut_obj)
 
-    # Flatten private _meats/_cut_types dicts to lists (matching MEAT_CATEGORIES shape)
+    # Flatten private _meats/_cut_types dicts to lists (EXP_TREE shape)
     exp_tree = {}
     for cat_key, cat in cats.items():
         meats_list = []
