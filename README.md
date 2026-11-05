@@ -42,7 +42,7 @@ Build a smart cooking engine for your kitchen appliances:
 ## 🌡️ Supported Wireless Probe Hardware
 
 > ⭐ **Quickest path — Local MEATER+ without extra hardware**
-> Install **[Emkraan/homeassistant-meater](https://github.com/Emkraan/homeassistant-meater)** from HACS. It reads the MEATER+ probe directly via BLE — no ESP32 or cloud account required.
+> Install **[Emkraan/homeassistant-meater](https://github.com/Emkraan/homeassistant-meater)** from the Marketplace, or from HACS on Home Assistant 2026.10 and older. It reads the MEATER+ probe directly via BLE — no ESP32 or cloud account required.
 > ✅ No cloud required &nbsp;·&nbsp; ✅ No extra hardware &nbsp;·&nbsp; ✅ All sensors available (tip, ambient, battery)
 > → See the **[HACS integrations](#hacs-integrations)** table below for entity names.
 >
@@ -209,14 +209,38 @@ A standalone Android app is available for controlling your MEATER+ from your pho
 
 ---
 
-## 🏗️ Installation via HACS
+## 🏗️ Installation
+
+[![Open your Home Assistant instance and open a repository in the Marketplace.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=R00S&repository=meater-in-local-haos&category=integration)
+
+The badge opens the Marketplace in your own Home Assistant, or HACS on Home Assistant 2026.10 and older. If **Kitchen Cooking Engine** is not listed in your instance yet, the badge cannot install it: add the repository with **Add from link** using the URL in the steps below, then select **Install**.
 
 ### Prerequisites
 
 - Home Assistant 2024.1.0 or newer
-- [HACS](https://hacs.xyz/) installed and configured
+- Home Assistant 2026.11 or newer: the built-in Marketplace, which needs no installation
+- Home Assistant 2026.10 or older: [HACS](https://hacs.xyz/) installed and configured
 
-### Step 1: Add Custom Repository
+### Step 1: Install the Integration (Home Assistant 2026.11 and newer — Marketplace)
+
+1. Go to **Settings** → **Marketplace**.
+2. The first time you open it, read the community-content notice and select **I understand the risks and agree**.
+3. Search for **Kitchen Cooking Engine**. If it is listed, open it and select **Install**.
+4. If it is not listed, select **Add from link** in the upper-right corner, enter:
+   ```
+   https://github.com/R00S/meater-in-local-haos
+   ```
+   then select **Add**. Adding a repository from a link needs a GitHub connection; the Marketplace shows a code and a link to GitHub the first time.
+5. Open the **Kitchen Cooking Engine** repository and select **Install**.
+6. When Home Assistant can load the integration immediately, its setup page opens. Otherwise a repair under **Settings** → **System** → **Repairs** asks for a restart, and can restart Home Assistant for you.
+
+Updates appear under **Settings** → **Updates**. Restart Home Assistant after installing one; a repair reminds you and can do it for you.
+
+### Step 1 (legacy): Install the Integration (Home Assistant 2026.10 and older — HACS)
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=R00S&repository=meater-in-local-haos&category=integration)
+
+HACS is replaced by the built-in Marketplace in Home Assistant 2026.11. On 2026.10 and older the link above opens HACS; on 2026.11 and newer it opens the Marketplace. The HACS steps for older versions:
 
 1. Open Home Assistant
 2. Go to **HACS** → **Integrations**
@@ -228,15 +252,11 @@ A standalone Android app is available for controlling your MEATER+ from your pho
    ```
 6. Select **Integration** as the category
 7. Click **Add**
+8. In HACS → Integrations, click **+ Explore & Download Repositories**
+9. Search for **Kitchen Cooking Engine**, click on it, then click **Download**
+10. **Restart Home Assistant**
 
-### Step 2: Install the Integration
-
-1. In HACS → Integrations, click **+ Explore & Download Repositories**
-2. Search for **Kitchen Cooking Engine**
-3. Click on it and then click **Download**
-4. **Restart Home Assistant**
-
-### Step 3: Configure the Integration
+### Step 2: Configure the Integration
 
 1. Go to **Settings** → **Devices & Services**
 2. Click **+ Add Integration**
@@ -254,7 +274,7 @@ A standalone Android app is available for controlling your MEATER+ from your pho
 
 > **Note:** No `configuration.yaml` editing is required! The integration is fully configured through the UI.
 
-### Step 4: Access the Cooking Panel
+### Step 3: Access the Cooking Panel
 
 After installation, a **"Cooking"** entry will appear in your Home Assistant sidebar. Click it to access the cooking interface.
 
@@ -273,7 +293,7 @@ The sidebar panel provides:
 
 ### Manual Installation (Alternative)
 
-If you prefer not to use HACS:
+If you prefer not to use the Marketplace or HACS:
 
 1. Download the `custom_components/kitchen_cooking_engine` folder from this repository
 2. Copy it to your Home Assistant's `config/custom_components/` directory
@@ -583,7 +603,7 @@ Other supported phrases:
 
 ### Quick Setup
 
-1. Install **Browser Mod** via HACS
+1. Install **Browser Mod** from the Marketplace (HACS on Home Assistant 2026.10 and older)
 2. Import the included automation blueprint
 3. Say "**start cooking**" to your View Assist device
 
@@ -664,7 +684,7 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 3. **Add to Home Assistant**:
    - The ESP32 will connect to your MEATER+ probe via BLE
    - Temperature sensors appear automatically in Home Assistant
-   - Install Kitchen Cooking Engine via HACS
+   - Install Kitchen Cooking Engine from the Marketplace (or HACS on Home Assistant 2026.10 and older)
    - Configure with your MEATER temperature sensor
 
 ### Finding Your MEATER MAC Address

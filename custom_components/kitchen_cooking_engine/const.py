@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 1 Nov 2026
-Last Change: v0.10.3.3 - the legacy 0-20 scoring system is removed and two cuts are re-rated
+Last Updated: 5 Nov 2026
+Last Change: v0.10.3.4 - Marketplace install docs for Home Assistant 2026.11, HACS steps kept for older versions
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -17,7 +17,7 @@ SUPPORTED_LANGUAGES = ("en", "sv", "da")
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "688"
+PANEL_VERSION = "689"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

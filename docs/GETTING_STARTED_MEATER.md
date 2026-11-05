@@ -9,7 +9,7 @@
 ## What you need
 
 - Home Assistant (2024.1.0 or newer)
-- HACS installed
+- The built-in **Marketplace** (Home Assistant 2026.11 and newer) or **HACS** (2026.10 and older)
 - **Any temperature probe already connected to Home Assistant** as a `sensor.*` entity — for example:
   - A MEATER or MEATER+ probe via the official [MEATER integration](https://www.home-assistant.io/integrations/meater/)
   - A Bluetooth temperature probe exposed via a Bluetooth proxy
@@ -22,6 +22,18 @@ your probe integration creates.
 
 ## Step 1 — Install Kitchen Cooking Engine
 
+**Home Assistant 2026.11 and newer (Marketplace):**
+
+1. Go to **Settings → Marketplace** and accept the community-content notice the first time.
+2. Search for **Kitchen Cooking Engine** and select **Install** if it is listed.
+3. If it is not listed, select **Add from link**, enter
+   `https://github.com/R00S/meater-in-local-haos`, and select **Add**. This needs a GitHub
+   connection; the Marketplace walks you through it.
+4. Open the **Kitchen Cooking Engine** repository and select **Install**.
+5. If a repair says a restart is needed, restart Home Assistant.
+
+**Home Assistant 2026.10 and older (HACS):**
+
 1. In HACS, go to **Integrations** → **⋮ menu** → **Custom repositories**.
 2. Add `https://github.com/R00S/meater-in-local-haos` with category **Integration**.
 3. Find **Kitchen Cooking Engine** and click **Download**.
@@ -31,7 +43,7 @@ your probe integration creates.
 
 ## Step 2 — Add your temperature probe
 
-1. Go to **Settings → Devices & Services → Add Integration**.
+1. Go to **Settings → Devices & Services → Add Integration** (or use the setup page that opened after installation).
 2. Search for **Kitchen Cooking Engine** and select it.
 3. Choose **MEATER+ Temperature Probe**.
 4. Fill in:
