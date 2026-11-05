@@ -1,0 +1,8 @@
+# GitHub's source archives are `git archive` output and honour export-ignore.
+# Home Assistant's Marketplace (2026.11+) refuses an archive that expands past
+# 100 MiB, and the committed APK build outputs in android/apk/ alone are ~493 MB.
+# They are Android release artefacts, never read by the integration at runtime.
+# They stay in the repository and in clones; only archive exports omit them.
+android/apk/   export-ignore
+android/apk/** export-ignore
+*.apk         export-ignore
