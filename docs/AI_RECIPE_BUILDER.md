@@ -430,4 +430,4 @@ For issues, questions, or feature requests:
 - **Integration**: Kitchen Cooking Engine v0.3.5.0
 - **AI Provider**: OpenAI (GPT-3.5-turbo, GPT-4)
 - **Platform**: Home Assistant
-- **License**: MIT (check repository for details)
+- **License**: see [LICENSE](../LICENSE) and [LICENSING.md](../LICENSING.md) — code and culinary research are licensed separately

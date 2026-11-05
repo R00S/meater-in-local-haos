@@ -864,4 +864,11 @@ If you find this project useful, consider buying me a coffee!
 
 ## 📄 License
 
-See repository license file.
+This project has **two separate scopes**, and the code license does not extend to the culinary research:
+
+- **Code** — the integration, panel, generators, tests and Android app are released under the **BSD 3-Clause License** (SPDX: `BSD-3-Clause`): see [LICENSE](LICENSE). Copyright (c) 2026 R00S. That license covers the code only.
+- **Culinary research data** — the cut files, cut-method leaves, cuisine profiles and recipe research under `www/recipes/`, `www/cuisines/` and `docs/recipe_research/` are **not covered by the code license, not GPL, and not open source**. They are human-created research owned by R00S, and until further notice they may not be licensed, taken out of this project's context, redistributed or modified.
+
+Forking the code for development or preservation **is** allowed under the BSD 3-Clause License — keep this dual-licensing statement clear in the fork's README, and keep the culinary research inside the context of this Home Assistant integration.
+
+Full statement, plus attribution for the recipes and traditions this research draws on: **[LICENSING.md](LICENSING.md)**.

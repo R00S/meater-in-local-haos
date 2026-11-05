@@ -1,5 +1,14 @@
 # Recipe Research — Temperature Reference Library
 
+> **License:** this research collection is **not covered by the code license
+> (BSD-3-Clause), not GPL, and not open source**. It is
+> human-created culinary research owned by R00S; until further notice it may not be
+> licensed, taken out of this project's context, redistributed or modified. The
+> project's code license covers code only. Forks for development or preservation are
+> allowed, but must keep the dual-licensing statement clear and keep this research
+> inside the context of the KCE Home Assistant integration. See
+> [LICENSING.md](../../../../LICENSING.md).
+
 Each file in this tree covers one **leaf**: a specific `cut × cooking_method` combination.
 
 ## Methodology
