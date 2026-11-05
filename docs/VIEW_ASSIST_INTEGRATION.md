@@ -32,10 +32,12 @@ The cooking panel will automatically open on your View Assist device.
 
 ### 1. Install View Assist Integration
 
-1. Open HACS → Integrations
-2. Search for "**View Assist**"
-3. Install the View Assist integration
-4. Restart Home Assistant
+1. On Home Assistant 2026.11 and newer, go to **Settings → Marketplace** and search for
+   "**View Assist**". On 2026.10 and older, open **HACS → Integrations** and search there.
+   If it is not listed in the Marketplace catalog, add its repository with **Add from link**
+   (in HACS, use **Custom repositories** instead).
+2. Install the View Assist integration.
+3. Restart Home Assistant if the install asks for it.
 
 ### 2. Install View Assist Companion App
 

@@ -9,7 +9,7 @@
 ## What you need
 
 - Home Assistant (2024.1.0 or newer)
-- HACS installed
+- The built-in **Marketplace** (Home Assistant 2026.11 and newer) or **HACS** (2026.10 and older)
 - A conversation integration already set up in HA — one of:
   - **OpenAI** (`conversation.openai_*`)
   - **Ollama** (`conversation.ollama_*`)
@@ -23,6 +23,18 @@ Then come back here.
 
 ## Step 1 — Install Kitchen Cooking Engine
 
+**Home Assistant 2026.11 and newer (Marketplace):**
+
+1. Go to **Settings → Marketplace** and accept the community-content notice the first time.
+2. Search for **Kitchen Cooking Engine** and select **Install** if it is listed.
+3. If it is not listed, select **Add from link**, enter
+   `https://github.com/R00S/meater-in-local-haos`, and select **Add**. This needs a GitHub
+   connection; the Marketplace walks you through it.
+4. Open the **Kitchen Cooking Engine** repository and select **Install**.
+5. If a repair says a restart is needed, restart Home Assistant.
+
+**Home Assistant 2026.10 and older (HACS):**
+
 1. In HACS, go to **Integrations** → **⋮ menu** → **Custom repositories**.
 2. Add `https://github.com/R00S/meater-in-local-haos` with category **Integration**.
 3. Find **Kitchen Cooking Engine** and click **Download**.
@@ -32,7 +44,7 @@ Then come back here.
 
 ## Step 2 — Add an appliance
 
-Go to **Settings → Devices & Services → Add Integration → Kitchen Cooking Engine**.
+Go to **Settings → Devices & Services → Add Integration → Kitchen Cooking Engine** (or use the setup page that opened after installation).
 
 Choose the appliance you cook on:
 

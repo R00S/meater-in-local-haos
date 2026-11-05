@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.3.3 · Home Assistant 2024.1.0+
+> **Version:** 0.10.3.4 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -100,7 +100,29 @@ generation, which uses whichever conversation agent you have configured in Home 
 
 ## 2. Installation
 
-### Via HACS (recommended)
+### Via the Marketplace (Home Assistant 2026.11 and newer, recommended)
+
+[![Open your Home Assistant instance and open a repository in the Marketplace.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=R00S&repository=meater-in-local-haos&category=integration)
+
+If the badge does not open the repository because your Marketplace does not list it yet, use **Add from link** below, then select **Install**.
+
+1. Go to **Settings → Marketplace**. The first time, accept the community-content notice.
+2. Search for **Kitchen Cooking Engine** and select **Install** if it is listed.
+3. If it is not listed, select **Add from link** in the upper-right corner, enter
+   `https://github.com/R00S/meater-in-local-haos`, and select **Add**. This needs a GitHub
+   connection; the Marketplace walks you through GitHub device sign-in the first time.
+4. Open the **Kitchen Cooking Engine** repository and select **Install**.
+5. When Home Assistant can load the integration immediately, its setup page opens. Otherwise
+   restart Home Assistant — a repair under **Settings → System → Repairs** offers to do it —
+   then go to **Settings → Devices & Services → Add Integration**.
+
+Updates appear under **Settings → Updates**. Restart Home Assistant after installing one.
+
+### Via HACS (Home Assistant 2026.10 and older)
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=R00S&repository=meater-in-local-haos&category=integration)
+
+Home Assistant 2026.11 replaced HACS with the built-in Marketplace. On 2026.10 and older:
 
 1. In HACS, go to **Integrations** → **⋮ menu** → **Custom repositories**.
 2. Add `https://github.com/R00S/meater-in-local-haos` with category **Integration**.
@@ -115,8 +137,8 @@ generation, which uses whichever conversation agent you have configured in Home 
 
 ### First run
 
-After restarting, go to **Settings → Devices & Services → Add Integration** and search for
-**Kitchen Cooking Engine**. Add at least one appliance (see [Section 3](#3-adding-appliances-first-time-setup)).
+After the integration is installed (and Home Assistant restarted, if it asked for one), go to
+**Settings → Devices & Services → Add Integration** and search for **Kitchen Cooking Engine**. Add at least one appliance (see [Section 3](#3-adding-appliances-first-time-setup)).
 
 The panel is automatically registered in the HA sidebar as **Kitchen Cooking Engine**.
 The JS resource is also auto-registered as a Lovelace module, so you can embed the panel
@@ -145,13 +167,13 @@ Select **Temperature Probe** when you have any wireless meat thermometer whose s
 | Probe / Brand | How it connects to HA | Tip entity (enter this) | Ambient entity | Battery entity |
 |--------------|----------------------|------------------------|----------------|----------------|
 | **MEATER / MEATER+** | [MEATER](https://www.home-assistant.io/integrations/meater/) integration (cloud) | `sensor.*_internal` | `sensor.*_ambient` | ❌ |
-| **MEATER / MEATER+ (local BLE)** | [homeassistant-meater](https://github.com/Emkraan/homeassistant-meater) HACS (local BLE) | `sensor.*_tip_temp` | `sensor.*_ambient_temp` | ✅ `sensor.*_battery` |
+| **MEATER / MEATER+ (local BLE)** | [homeassistant-meater](https://github.com/Emkraan/homeassistant-meater) Marketplace/HACS (local BLE) | `sensor.*_tip_temp` | `sensor.*_ambient_temp` | ✅ `sensor.*_battery` |
 | **INKBIRD IBT-2X / 4XS / 6XS** | [INKBIRD](https://www.home-assistant.io/integrations/inkbird/) integration (local BLE) | `sensor.*_probe_1` … `_probe_N` | ❌ | ⚠️ model-dependent |
 | **Rubicson / ToGrill OEM rebrands** | [ToGrill](https://www.home-assistant.io/integrations/togrill/) integration (local BLE) | `sensor.*_temperature` | ❌ | ✅ `sensor.*_battery` |
 | **Govee H5191 / 5181–5198** | [Govee BLE](https://www.home-assistant.io/integrations/govee_ble/) integration (local BLE) | `sensor.*_probe_N_temperature` | ❌ | ✅ |
 | **ThermoWorks Smoke** | [ThermoWorks Smoke](https://www.home-assistant.io/integrations/thermoworks_smoke/) (WiFi, °F only) | `sensor.*_probe_1/2` | ❌ | ❌ |
 | **ThermoPro TempSpike (TP960 / TP962 / TP970)** | [ThermoPro](https://www.home-assistant.io/integrations/thermopro/) integration (local BLE) | `sensor.*_temperature` — check HA device page after discovery | ❌ | ✅ |
-| **Combustion Inc** | [homeassistant-combustion](https://github.com/legrego/homeassistant-combustion) HACS (local BLE) | `sensor.*_core_temperature` | `sensor.*_ambient_temperature` | ❌ binary |
+| **Combustion Inc** | [homeassistant-combustion](https://github.com/legrego/homeassistant-combustion) Marketplace/HACS (local BLE) | `sensor.*_core_temperature` | `sensor.*_ambient_temperature` | ❌ binary |
 | **iGrill / Weber Pulse** | [esphome-igrill](https://github.com/bendikwa/esphome-igrill) via ESP32 | `sensor.*_temp_probe_1` … `_4` | ❌ | ✅ `sensor.*_battery` |
 | **Unbranded / generic BLE probes** | ESPHome `ble_client` via ESP32 | Custom sensor name | Custom sensor name | Optional |
 
@@ -1413,7 +1435,7 @@ This means the JS module failed to load or a JavaScript error crashed the LitEle
 Steps to fix:
 
 1. **Hard-reload** — Ctrl+Shift+R (Windows/Linux) or Cmd+Shift+R (Mac) to clear the browser cache.
-2. **Restart Home Assistant** — a HACS update may not have applied fully.
+2. **Restart Home Assistant** — a Marketplace or HACS update may not have applied fully.
 3. **Check browser console** (F12 → Console) for error messages and report them as a GitHub issue.
 4. **Clear site data** — DevTools → Application → Storage → Clear site data (clears `sessionStorage`).
 
@@ -1432,7 +1454,7 @@ This usually means a JavaScript error crashed the LitElement render. Check the b
 console (F12) for error messages. Common causes:
 
 - Stale cache — hard-reload with Ctrl+Shift+R / Cmd+Shift+R.
-- HACS update not fully applied — restart Home Assistant.
+- Marketplace/HACS update not fully applied — restart Home Assistant.
 - Corrupt `sessionStorage` — open browser DevTools → Application → Storage → Clear site data.
 
 ### No appliances shown on the welcome screen
