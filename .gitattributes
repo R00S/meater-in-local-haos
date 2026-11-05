@@ -1,0 +1,14 @@
+# Keep Android build artefacts out of GitHub's generated source archives.
+#
+# HA's Marketplace aborts any download above 100 MiB, and android/apk holds 17
+# APKs (~492 MiB uncompressed, ~205 MiB compressed) -- practically the whole
+# 218 MiB tag archive -- so installs from the built-in Marketplace failed.
+# Excluding the folder drops the archive to ~12 MiB.
+#
+# export-ignore only filters `git archive` output (GitHub's "Download ZIP" and
+# the archives the Marketplace fetches). A `git clone` still gets everything.
+# NOTE: archives are built from the tree of the ref, so only tags cut after this
+# commit are small. Tags from before it stay 218 MiB.
+android/       export-ignore
+android/**     export-ignore
+*.apk          export-ignore
