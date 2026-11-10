@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.10.3.4 · Home Assistant 2024.1.0+
+> **Version:** 0.10.3.5 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -396,6 +396,13 @@ Once a cook is started:
 - **ETA** — dynamically recalculated based on the temperature curve.
 - **🏠** — minimise to welcome screen (cook keeps running in the background).
 - **⏹** — stop the cook without completing or saving.
+
+**Surviving a Home Assistant restart**
+
+An active probe cook is restored when Home Assistant restarts: the session, start time,
+target, notes, temperature history and a running rest timer all come back. Home Assistant
+saves this data at shutdown and every 15 minutes, so a graceful restart resumes exactly,
+while a hard crash can lose up to 15 minutes of session timing.
 
 **Adjust Temperature on the Fly**
 
