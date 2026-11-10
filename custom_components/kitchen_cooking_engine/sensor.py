@@ -18,6 +18,7 @@ from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.event import async_track_state_change_event, async_track_time_interval
+from homeassistant.helpers.restore_state import ExtraStoredData, RestoreEntity
 from homeassistant.util import dt as dt_util
 
 from .const import (
@@ -160,7 +161,18 @@ async def async_setup_entry(
     async_add_entities(entities)
 
 
-class CookingSessionSensor(SensorEntity):
+class _CookingSessionRestoreData(ExtraStoredData):
+    """Session snapshot persisted so an in-progress cook survives a restart."""
+
+    def __init__(self, data: dict[str, Any]) -> None:
+        self._data = data
+
+    def as_dict(self) -> dict[str, Any]:
+        """Return the snapshot as a JSON-serializable dict."""
+        return self._data
+
+
+class CookingSessionSensor(SensorEntity, RestoreEntity):
     """Sensor representing a cooking session."""
 
     _attr_has_entity_name = True
@@ -353,8 +365,60 @@ class CookingSessionSensor(SensorEntity):
 
         return attrs
 
+    @property
+    def extra_restore_state_data(self) -> _CookingSessionRestoreData | None:
+        """Return the session state that must survive a Home Assistant restart."""
+        if self._state == STATE_IDLE:
+            return None
+
+        return _CookingSessionRestoreData(
+            {
+                "state": self._state,
+                "protein": self._protein,
+                "cut": self._cut,
+                "cut_display": self._cut_display,
+                "cut_id": self._cut_id,
+                "doneness": self._doneness,
+                "cooking_method": self._cooking_method,
+                "target_temp_c": self._target_temp_c,
+                "target_temp_f": self._target_temp_f,
+                "min_temp_c": self._min_temp_c,
+                "min_temp_f": self._min_temp_f,
+                "max_temp_c": self._max_temp_c,
+                "max_temp_f": self._max_temp_f,
+                "rest_time_min": self._rest_time_min,
+                "rest_time_max": self._rest_time_max,
+                "usda_safe": self._usda_safe,
+                "carryover_temp_c": self._carryover_temp_c,
+                "custom_target_temp_c": self._custom_target_temp_c,
+                "data_source": self._data_source,
+                "notes": self._cook_notes,
+                "session_start": (
+                    self._session_start.isoformat() if self._session_start else None
+                ),
+                "rest_start": (
+                    self._rest_start.isoformat() if self._rest_start else None
+                ),
+                "progress": self._progress,
+                "peak_temp_c": self._peak_temp_c,
+                "final_temp_after_rest": self._final_temp_after_rest,
+                "five_min_alert_fired": self._five_min_alert_fired,
+                "light_original_state": self._light_original_state,
+                "temp_history": self._full_cook_history[-TEMP_HISTORY_MAX_SAMPLES:],
+                "multi_cook_session_id": self._multi_cook_session_id,
+                "active_appliances": self._active_appliances,
+                "primary_appliance": self._primary_appliance,
+                "secondary_appliances": self._secondary_appliances,
+            }
+        )
+
     async def async_added_to_hass(self) -> None:
         """Register callbacks when entity is added."""
+        await super().async_added_to_hass()
+
+        # Restore an in-progress cook after a Home Assistant restart
+        restored = await self._async_restore_session_state()
+
         # Track temperature sensor changes
         if self._temp_sensor:
             self.async_on_remove(
@@ -387,6 +451,9 @@ class CookingSessionSensor(SensorEntity):
 
         # Get initial values
         await self._async_update_sensors()
+
+        if restored:
+            self.async_write_ha_state()
 
     async def async_will_remove_from_hass(self) -> None:
         """Clean up when entity is removed."""
@@ -483,6 +550,112 @@ class CookingSessionSensor(SensorEntity):
                     self._battery_level = float(state.state)
                 except ValueError:
                     pass
+
+    async def _async_restore_session_state(self) -> bool:
+        """Restore the cooking session saved before the last restart."""
+        last_data = await self.async_get_last_extra_data()
+        if last_data is None:
+            return False
+
+        data = last_data.as_dict()
+        state = data.get("state")
+        if state not in (
+            STATE_COOKING,
+            STATE_APPROACHING,
+            STATE_GOAL_REACHED,
+            STATE_RESTING,
+            STATE_COMPLETE,
+        ):
+            return False
+        if data.get("target_temp_c") is None:
+            # A session without a target temperature cannot be resumed.
+            return False
+
+        def _as_datetime(value: Any, *, aware: bool) -> datetime | None:
+            """Parse a stored ISO timestamp, matching the in-memory convention."""
+            if not isinstance(value, str):
+                return None
+            parsed = dt_util.parse_datetime(value)
+            if parsed is None:
+                return None
+            if aware:
+                return parsed if parsed.tzinfo else parsed.replace(tzinfo=dt_util.UTC)
+            return parsed.replace(tzinfo=None)
+
+        self._state = state
+        self._protein = data.get("protein")
+        self._cut = data.get("cut")
+        self._cut_display = data.get("cut_display") or data.get("cut")
+        self._cut_id = data.get("cut_id")
+        self._doneness = data.get("doneness")
+        self._cooking_method = data.get("cooking_method")
+        self._target_temp_c = data.get("target_temp_c")
+        self._target_temp_f = data.get("target_temp_f")
+        self._min_temp_c = data.get("min_temp_c")
+        self._min_temp_f = data.get("min_temp_f")
+        self._max_temp_c = data.get("max_temp_c")
+        self._max_temp_f = data.get("max_temp_f")
+        self._rest_time_min = data.get("rest_time_min") or 0
+        self._rest_time_max = data.get("rest_time_max") or 0
+        self._usda_safe = bool(data.get("usda_safe", False))
+        self._carryover_temp_c = data.get("carryover_temp_c") or 0
+        self._custom_target_temp_c = data.get("custom_target_temp_c")
+        self._data_source = data.get("data_source")
+        self._cook_notes = data.get("notes") or ""
+        self._progress = data.get("progress") or 0.0
+        self._peak_temp_c = data.get("peak_temp_c")
+        self._final_temp_after_rest = data.get("final_temp_after_rest")
+        self._five_min_alert_fired = bool(data.get("five_min_alert_fired", False))
+        self._light_original_state = data.get("light_original_state")
+        self._multi_cook_session_id = data.get("multi_cook_session_id")
+        self._active_appliances = data.get("active_appliances") or []
+        self._primary_appliance = data.get("primary_appliance")
+        self._secondary_appliances = data.get("secondary_appliances") or []
+        self._session_start = _as_datetime(data.get("session_start"), aware=False)
+        self._rest_start = _as_datetime(data.get("rest_start"), aware=True)
+
+        # Rebuild the temperature history used for ETA and the temperature graph
+        self._temp_history.clear()
+        self._full_cook_history.clear()
+        for entry in data.get("temp_history") or []:
+            if not isinstance(entry, dict):
+                continue
+            entry_time = _as_datetime(entry.get("time"), aware=False)
+            try:
+                tip_temp = float(entry.get("tip_temp"))
+            except (TypeError, ValueError):
+                continue
+            if entry_time is None:
+                continue
+            self._full_cook_history.append(
+                {
+                    "time": entry.get("time"),
+                    "tip_temp": tip_temp,
+                    "ambient_temp": entry.get("ambient_temp"),
+                }
+            )
+            self._temp_history.append({"time": entry_time, "temp": tip_temp})
+
+        if self._state == STATE_RESTING:
+            self._start_rest_timer()
+
+        _LOGGER.info(
+            "Restored cooking session: %s (%s) - state %s",
+            self._cut_display,
+            self._doneness,
+            self._state,
+        )
+        return True
+
+    def _start_rest_timer(self) -> None:
+        """Arm the periodic rest countdown timer."""
+        if self._rest_timer_unsub:
+            self._rest_timer_unsub()
+        self._rest_timer_unsub = async_track_time_interval(
+            self._hass,
+            self._async_rest_timer_tick,
+            timedelta(seconds=30),  # Check every 30 seconds
+        )
 
     def _update_cooking_state(self) -> None:
         """Update cooking state based on current temperature."""
@@ -1059,11 +1232,7 @@ class CookingSessionSensor(SensorEntity):
         self._fire_event(EVENT_REST_START)
         
         # Start timer to track rest time
-        self._rest_timer_unsub = async_track_time_interval(
-            self._hass,
-            self._async_rest_timer_tick,
-            timedelta(seconds=30),  # Check every 30 seconds
-        )
+        self._start_rest_timer()
         
         self.async_write_ha_state()
 
